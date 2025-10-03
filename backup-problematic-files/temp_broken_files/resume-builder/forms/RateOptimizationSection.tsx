@@ -30,11 +30,3 @@ export const RateOptimizationSection:React.FC<RateOptimizationSectionProps> = ({
 
       <Card>;
         <CardContent className="pt-4">;"
-
-
-
-
-
-
-
-

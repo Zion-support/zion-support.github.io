@@ -12,8 +12,8 @@ const MultiAgentOrchestrationPlatforms2025 = () => {
       </div>
 
       <img 
-        src="/images/multiagent-orchestration-2025.jpg" 
-        alt="Multi-Agent Orchestration Platform" 
+        src="/images/multiagent-orchestration-2025.jpg"
+        alt="Multi-Agent Orchestration Platform"
         className="w-full rounded-lg shadow-lg mb-8"
       />
 

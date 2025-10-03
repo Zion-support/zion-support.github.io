@@ -68,7 +68,6 @@ export default function AITrends2026FutureEnterpriseTransformation() {
         {/* Top Trends */}
         <div className="mb-12">"
           <h2 className="text-3xl font-bold text-white mb-8">Top AI Trends Shaping 2026</h2>"
-          
           <div className="space-y-8">"
             {/* Trend 1 */}
             <div className="bg-white/5 backdrop-blur-lg rounded-xl p-8 border border-white/10">"
@@ -240,7 +239,6 @@ export default function AITrends2026FutureEnterpriseTransformation() {
         {/* Industry Impact */}
         <div className="mb-12">"
           <h2 className="text-3xl font-bold text-white mb-8">Industry Impact and Applications</h2>"
-          
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">"
             <div className="bg-gradient-to-r from-blue-500/20 to-cyan-500/20 backdrop-blur-sm rounded-xl p-6 border border-blue-500/30">"
               <h3 className="text-xl font-bold text-blue-400 mb-4">🏦 Financial Services</h3>"
@@ -307,7 +305,6 @@ export default function AITrends2026FutureEnterpriseTransformation() {
         {/* Implementation Roadmap */}
         <div className="mb-12">"
           <h2 className="text-3xl font-bold text-white mb-8">Implementation Roadmap for 2026</h2>"
-          
           <div className="space-y-6">"
             <div className="flex items-start gap-4">"
               <div className="bg-cyan-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm">Q1</div>"

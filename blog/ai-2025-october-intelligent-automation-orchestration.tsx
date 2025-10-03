@@ -281,13 +281,13 @@ export default function IntelligentAutomationOrchestration2025() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <a 
-                    href="/contact" 
+                    href="/contact"
                     className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center"
                   >
                     Start Your Automation Journey
                   </a>
                   <a 
-                    href="/case-studies/financial-services-automation-2025" 
+                    href="/case-studies/financial-services-automation-2025"
                     className="bg-white/10 hover:bg-white/20 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 border border-indigo-400/30 text-center"
                   >
                     View Case Studies

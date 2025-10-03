@@ -355,7 +355,7 @@ const AI2025OctoberAutonomousCloudFinOpsCostIntelligence = () => {
               </ol>
               
               <a 
-                href="/contact" 
+                href="/contact"
                 className="inline-block bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-400 hover:to-blue-500 text-white font-bold py-3 px-8 rounded-xl transition-all duration-300"
               >
                 Schedule FinOps Assessment →

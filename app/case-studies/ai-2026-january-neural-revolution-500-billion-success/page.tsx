@@ -79,7 +79,6 @@ export default function January2026NeuralRevolution500BSuccessPage() {
 
             <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 mb-12">"
               <h2 className="text-3xl font-bold text-white mb-6">The Client: Fortune 100 Global Conglomerate</h2>"
-              
               <div className="grid md:grid-cols-2 gap-6 mb-8">"
                 <div className="bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-xl p-6 border border-blue-500/30">"
                   <h3 className="text-xl font-bold text-white mb-4">📊 Company Profile</h3>"
@@ -106,7 +105,6 @@ export default function January2026NeuralRevolution500BSuccessPage() {
 
             <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 mb-12">"
               <h2 className="text-3xl font-bold text-white mb-6">The Ultimate Neural Revolution Implementation</h2>"
-              
               <div className="space-y-8">"
                 <div className="bg-gradient-to-r from-purple-500/20 to-indigo-500/20 rounded-xl p-6 border border-purple-500/30">"
                   <h3 className="text-2xl font-bold text-white mb-4">Phase 1: Neural Architecture Foundation (Weeks 1-4)</h3>"
@@ -184,7 +182,6 @@ export default function January2026NeuralRevolution500BSuccessPage() {
 
             <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 mb-12">"
               <h2 className="text-3xl font-bold text-white mb-6">Detailed Success Metrics</h2>"
-              
               <div className="grid md:grid-cols-3 gap-6">"
                 <div className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-xl p-6 border border-green-500/30">"
                   <h3 className="text-xl font-bold text-white mb-4">💰 Financial Transformation</h3>"

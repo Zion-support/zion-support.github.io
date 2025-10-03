@@ -355,13 +355,13 @@ export default function IntelligentIncidentResponseRevolution2025() {
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <a 
-                    href="/contact" 
+                    href="/contact"
                     className="px-8 py-4 bg-gradient-to-r from-rose-500 to-orange-500 text-white font-bold rounded-xl hover:from-rose-600 hover:to-orange-600 transition-all transform hover:scale-105"
                   >
                     Request Incident Response AI Demo
                   </a>
                   <a 
-                    href="/case-studies" 
+                    href="/case-studies"
                     className="px-8 py-4 bg-white/10 text-white font-bold rounded-xl hover:bg-white/20 transition-all backdrop-blur-sm"
                   >
                     View AIOps Success Stories

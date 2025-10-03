@@ -35,13 +35,13 @@ export default function AIMetaCognitiveRevolution2026() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
-                href="#revolutionary-breakthrough" 
+                href="#revolutionary-breakthrough"
                 className="bg-gradient-to-r from-purple-500 to-cyan-600 hover:from-purple-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
               >
                 Explore the Revolution
               </a>
               <a 
-                href="/contact" 
+                href="/contact"
                 className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
               >
                 Get Early Access
@@ -214,14 +214,14 @@ export default function AIMetaCognitiveRevolution2026() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
-              href="/contact" 
+              href="/contact"
               className="bg-gradient-to-r from-purple-500 to-cyan-600 hover:from-purple-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 flex items-center justify-center gap-2"
             >
               <Brain className="w-5 h-5" />
               <span>Get Early Access</span>
             </a>
             <a 
-              href="/case-studies" 
+              href="/case-studies"
               className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2"
             >
               <span>View Success Stories</span>

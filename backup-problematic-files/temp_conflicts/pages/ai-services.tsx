@@ -56,8 +56,6 @@ const aiServices = [;
                 <ul className="space-y-2 text-gray-300 text-sm">;"
 </ul>"
                     <li key={i} className="flex items-start gap-2"><Check className="w-4 h-4 mt-0.5 text-emerald-400" /> <span>{i}</span></li>;"
-
-
         </section>;"
         <section className="py-20 px-4 sm:px-6 lg:px-8">;"
 </section>"
@@ -90,15 +88,9 @@ const aiServices = [;
                       <li key={featureIndex} className="flex items-center text-gray-300">;"
 </li>"
                         <Star className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />;"
-
-
-
                     whileHover={{ x: 5 ;}}"
                     className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold group-hover:text-cyan-300 transition-colors";"
                     Learn More <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />;"
-
-
-
           <div className="max-w-4xl mx-auto text-center">;"
               transition={{ duration: 0.8;, delay: 0.4 ;}}
               <p className="text-xl text-gray-400 mb-8">;"
@@ -110,7 +102,3 @@ const aiServices = [;
 </motion>
                 </motion.button>;
                   className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500 hover:text-white transition-all duration-300";"
-
-
-
-

@@ -337,7 +337,7 @@ export default function RealTimePersonalization2025() {
                     implementation roadmap—absolutely free.
                   </p>
                   <a 
-                    href="/contact" 
+                    href="/contact"
                     className="bg-white text-rose-600 px-8 py-3 rounded-lg font-semibold hover:bg-rose-50 transition-colors inline-block"
                   >
                     Get Your Free Assessment →

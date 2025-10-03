@@ -298,7 +298,7 @@ export default function AIGovernanceComplianceAutomation2025() {
               and building customer trust.
             </p>
             <a 
-              href="/contact" 
+              href="/contact"
               className="inline-block bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-400 hover:to-orange-500 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-amber-500/50"
             >
               Schedule a Governance Assessment

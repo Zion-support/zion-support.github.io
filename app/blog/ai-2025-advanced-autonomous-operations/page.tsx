@@ -58,7 +58,6 @@ export default function AI2025AdvancedAutonomousOperations() {
         {/* Main Content */}
         <div className="max-w-4xl mx-auto">"
           <div className="prose prose-lg prose-invert max-w-none">"
-            
             <section className="mb-12">"
               <h2 className="text-3xl font-bold text-white mb-6">The Autonomous Operations Breakthrough</h2>"
               <p className="text-xl text-gray-300 mb-6">"
@@ -75,7 +74,6 @@ export default function AI2025AdvancedAutonomousOperations() {
 
             <section className="mb-12">"
               <h2 className="text-3xl font-bold text-white mb-6">Revolutionary Technology Stack</h2>"
-              
               <div className="grid md:grid-cols-2 gap-8 mb-8">"
                 <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">"
                   <h3 className="text-2xl font-bold text-white mb-4">🧠 Cognitive Process Automation</h3>"
@@ -139,7 +137,6 @@ export default function AI2025AdvancedAutonomousOperations() {
 
             <section className="mb-12">"
               <h2 className="text-3xl font-bold text-white mb-6">Fortune 500 Success Stories</h2>"
-              
               <div className="bg-gradient-to-r from-green-500/10 to-emerald-500/10 backdrop-blur-lg rounded-2xl p-8 border border-green-500/20 mb-8">"
                 <h3 className="text-2xl font-bold text-green-400 mb-4">🏢 Global Manufacturing Giant</h3>"
                 <div className="grid md:grid-cols-3 gap-6 mb-6">"
@@ -212,7 +209,6 @@ export default function AI2025AdvancedAutonomousOperations() {
 
             <section className="mb-12">"
               <h2 className="text-3xl font-bold text-white mb-6">Implementation Roadmap</h2>"
-              
               <div className="space-y-6">"
                 <div className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10">"
                   <div className="flex items-center gap-4 mb-4">"
@@ -264,21 +260,21 @@ export default function AI2025AdvancedAutonomousOperations() {
             </section>
 
             {/* CTA Section */}
-            <div className="bg-gradient-to-r from-blue-500/20 to-purple-500/20 backdrop-blur-lg rounded-2xl p-8 border border-blue-500/30 text-center">"
-              <h2 className="text-3xl font-bold text-white mb-4">Ready to Transform Your Operations?</h2>"
-              <p className="text-xl text-gray-300 mb-8">"
+            <div className="bg-gradient-to-r from-blue-500/20 to-purple-500/20 backdrop-blur-lg rounded-2xl p-8 border border-blue-500/30 text-center">
+              <h2 className="text-3xl font-bold text-white mb-4">Ready to Transform Your Operations?</h2>
+              <p className="text-xl text-gray-300 mb-8">
                 Join the autonomous operations revolution and achieve 99.9% operational autonomy 
                 with proven ROI and implementation support.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">"
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a 
-                  href="/[^"]*"
+                  href="/contact"
                   className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
                 >
                   Get Started Today
                 </a>
                 <a 
-                  href="/[^"]*"
+                  href="/case-studies/autonomous-operations"
                   className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
                 >
                   View Case Study

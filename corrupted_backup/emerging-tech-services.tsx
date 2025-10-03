@@ -1,5 +1,4 @@
 import type { NextPage } from \'next\'; import { Helmet } from \'react-helmet-async\'; import { useState } from \'react\'; import { EMERGING_TECH_SERVICES_2027 } from \"../src/data/emergingTechServices2027\";"
-
 const \"EmergingTechServices\": NextPag e = () => { const [selectedCategory,setSelectedCategory] = useState<string>(\'all\')const [searchTerm,setSearchTerm] =;'
   }
   useState(\'');'
@@ -56,7 +55,6 @@ const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase
 const sortedServices = [...filteredServices].sort((a,b) => { switch (sortBy) { case \'price\':;'
   }
   return a.price.localeCompare(b.price); case \'rating\': return b.rating - a.rating; case \'popular\': return b.popular ? 1 : -1; \"default\": return a.name.localeCompare(b.name)} });"
-
 const getCategoryColor = (\"categoryId\": string) => {;"
   }
   const category = categories.find(cat => { return cat.id === categoryId); } return category ? category.color : \'from-gray-500 to-gray-600\'};'

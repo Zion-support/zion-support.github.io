@@ -82,7 +82,7 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" } ExportToCSVP
   quotes: QuoteRequest[];
 filename?: string 
 }export const ExportToCSV = ({
-  quotes, filename = "quote-requests" 
+  quotes, filename = "quote-requests"
 }: ExportToCSVProps) => {
   const handleExport = () => {
   //Define CSV Headers const headers = [ 'IDTalent NameRequester NameRequester EmailProject NameProject SummaryBudgetTimeline';

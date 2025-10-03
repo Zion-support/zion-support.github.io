@@ -34,13 +34,10 @@ export function ApiKeysManager() {;
   const [selectedScopes, setSelectedScopes] = useState<ApiKeyScope[]>([]),;
 "
     <Card className="bg-zinc-900 border-zinc-800 text-white">;"
-
       <CardHeader>;
         <CardTitle className="text-xl flex items-center">;"
           <Key className="mr-2" size={20} /> API Keys;"
-
         <CardDescription className="text-zinc-400">;"
-
       <CardContent>;
         <div className="flex justify-between items-center mb-6">;"
 </div>"
@@ -52,12 +49,10 @@ export function ApiKeysManager() {;
             <DialogTrigger asChild>;
               <Button variant="default">Create New API Key;"
             <DialogContent className="bg-zinc-900 border-zinc-800 text-white">;"
-
               <DialogHeader>;
 
                 <DialogTitle>Create API Key;"
                 <DialogDescription className="text-zinc-400">;"
-
               <div className="space-y-4 py-4">;"
                 <div className="space-y-2">;"
                   <Label htmlFor="key-name">Key Name;"
@@ -126,15 +121,12 @@ export function ApiKeysManager() {;
 
                     <DropdownMenuTrigger asChild>;
                       <Button variant="ghost" size="icon" aria-label="More options">;"
-
                         <MoreVertical size={16} />;
 
                     <DropdownMenuContent align="end" className="bg-zinc-900 border-zinc-800 text-white">;"
-
                       <DropdownMenuItem;
                         onClick={() => setShowRegenerateConfirm(key.id)}
                         <RefreshCw size={14} className="mr-2" /> Regenerate;"
-
                         onClick={() => setShowDeleteConfirm(key.id)}
 
                     <Badge ;
@@ -157,15 +149,12 @@ export function ApiKeysManager() {;
         open={showRegenerateConfirm !== null} ;
         onOpenChange={(open) => !open && setShowRegenerateConfirm(null)}
         <AlertDialogContent className="bg-zinc-900 border-zinc-800 text-white">;"
-
           <AlertDialogHeader>;
 
             <AlertDialogTitle>Regenerate API Key?;"
             <AlertDialogDescription className="text-zinc-400">;"
-
           <AlertDialogFooter>;
             <AlertDialogCancel className="bg-transparent text-white hover:bg-zinc-800 border-zinc-700">;"
-
             <AlertDialogAction ;
               onClick={() => showRegenerateConfirm && handleRegenerateKey(showRegenerateConfirm)}
 
@@ -227,11 +216,9 @@ pr-12325
 </div>)"
 }</h3> <div className="flex items-center space-x-2 mt-1">) : (<Badge variant=" secondary"className="bg-red-900 text-white border-red-800">Revoked) ";"
 }</div> </div> </div> <DropdownMenu> <DropdownMenuTrigger asChild>   <DropdownMenuContent align=" end"className="bg-zinc-900 border-zinc-800 text-white"> <DropdownMenuItem onClick={;"
-
 }> <RefreshCw size= {;"
   14 ";""
 }className="mr-2"/> Regenerate  <DropdownMenuItem onClick={;"
-
 }> <X size= {;"
 }className="mr-2"/> Revoke    </div> <Badge key= {;"
 }) ) ";""

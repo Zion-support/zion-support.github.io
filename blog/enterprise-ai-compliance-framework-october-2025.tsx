@@ -348,13 +348,13 @@ export default function EnterpriseAIComplianceFrameworkOctober2025() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
-              href="/contact" 
+              href="/contact"
               className="bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-400 hover:to-orange-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-amber-500/50 transform hover:-translate-y-1"
             >
               Get Compliance Assessment
             </a>
             <a 
-              href="/case-studies" 
+              href="/case-studies"
               className="border-2 border-amber-500 text-amber-400 hover:bg-amber-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               View Compliance Success Stories

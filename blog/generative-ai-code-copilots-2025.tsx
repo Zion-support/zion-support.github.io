@@ -170,7 +170,7 @@ const GenerativeAICodeCopilots2025: React.FC = () => {
             implement a tailored solution that integrates seamlessly with your existing development workflow.
           </p>
           <a 
-            href="/contact" 
+            href="/contact"
             className="inline-block bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold py-3 px-8 rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300"
           >
             Schedule Developer Productivity Assessment →

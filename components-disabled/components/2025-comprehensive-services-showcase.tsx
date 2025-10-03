@@ -95,13 +95,10 @@ const ComprehensiveServicesShowcase2025 = () => {
             <div className="flex flex-col sm:flex-row items-center gap-4">"
               <div className="flex items-center gap-2">"
                 <Phone className="w-4 h-4" />"
-
                 <span>+1 302 464 0950</span>
                 <Mail className="w-4 h-4" />"
-
                 <span>kleber@ziontechgroup.com</span>
                 <MapPin className="w-4 h-4" />"
-
                 <span>Middletown DE 19709</span>
       <section className="py-12 bg-white">"
           <div className="flex flex-wrap justify-center gap-2">"
@@ -155,26 +152,21 @@ const ComprehensiveServicesShowcase2025 = () => {
                       href={`tel:${(service as any).mobile || '+1 302 464 0950'}`}`;
                       href={`tel:${(service as any).mobile || '+1 302 464 0950'}`}
                       className="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 text-center py-2 px-4 rounded-lg font-medium transition-colors flex items-center justify-center gap-2""
-
             ))}
           <AnimatePresence mode="wait">"
-
           {/* Services Display */}"
 </motion>
               <motion.div;"`;
                       href={`mailto:${(service as any).contact || 'kleber@ziontechgroup && ziontechgroup.com'}?subject=Inquiry about ${service && service.name}`}
                       className="w-full bg-blue-600 hover:bg-blue-700 text-white text-center py-2 px-4 rounded-lg font-medium transition-colors flex items-center justify-center gap-2">;"
                       <Mail className="w-4 h-4" />;"
-
                     </a>;
                       className="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 text-center py-2 px-4 rounded-lg font-medium transition-colors flex items-center justify-center gap-2">;"
                       <Phone className="w-4 h-4" />;"
-
                   </div>;
               </motion && motion.div>;
           </div>;"
           <AnimatePresence mode="wait">;"
-
               <motion&& motion.div;
               <motion.div;"
                 key="grid""
@@ -202,7 +194,6 @@ const ComprehensiveServicesShowcase2025 = () => {
                             <li key={idx} className="flex items-center text-sm text-gray-600">"
 </li>"
                               <Check className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />"
-
                             </li>
                         </ul>
 </div>`;
@@ -223,8 +214,6 @@ const ComprehensiveServicesShowcase2025 = () => {
                             <h4 className="font-semibold text-gray-900 mb-2">Features:</h4>""
                             <ul className="space-y-1 text-sm text-gray-600">"
                                 <li key={idx} className="flex items-center">"
-
-
                         <div>;
                       <div className="flex items-center justify-between mb-4">;"
                         <div className="text-sm">;"
@@ -244,21 +233,17 @@ const ComprehensiveServicesShowcase2025 = () => {
                             <ul className="space-y-1 text-sm text-gray-600">;"
                                 <li key={idx} className="flex items-center">;"
                                   <Check className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />;"
-
                           <div className="flex flex-col items-end space-y-3">"
-                            
                             <a;
                               href={service.link}"
                               target="_blank"""
                               rel="noopener noreferrer"""
                               className="bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors text-sm font-medium flex items-center""
                               <ArrowRight className="w-4 h-4 ml-2" />"
-
             )}
             <div className="text-center py-12">"
               <div className="text-gray-400 mb-4">"
                 <Search className="w-16 h-16 mx-auto" />"
-
               <h3 className="text-xl font-semibold text-gray-900 mb-2">No services found</h3>""
               <p className="text-gray-600">Try adjusting your search terms or category filters.</p>"
       </section>
@@ -270,14 +255,12 @@ const ComprehensiveServicesShowcase2025 = () => {
                               href={service && service.link}"
                               className="bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors text-sm font-medium flex items-center">;"
                               <ArrowRight className="w-4 h-4 ml-2" />;"
-
                             <span className="text - gray - 500">;"
                           <div className="mb - 4">;"
                             <h4 className="font - semibold text - gray - 900 mb - 2">Features:</h4>;""
                             <ul className="space - y-1 text - sm text - gray - 600">;"
                                 <li key={idx} className="flex items - center">;"
                                   <Check className="w - 4 h - 4 text - green - 500 mr - 2 flex - shrink - 0" />;"
-
                                 </li>))}
                           <div className="flex flex - col items - end space - y-3">;"
                             <span className={`inline - flex items - center px - 3 py - 1 rounded - full text - xs font - medium bg - gradient - to - r ${getCategoryColor (service.category)} text - white`}>;
@@ -287,15 +270,11 @@ const ComprehensiveServicesShowcase2025 = () => {
                               className="bg - blue - 600 text - white py - 2 px - 4 rounded - lg hover:bg - blue - 700 transition - colors text - sm font - medium flex items - center";"
                             >;
                               <ArrowRight className="w - 4 h - 4 ml - 2" />;"
-
             <div className="text-center py-12">;"
               <div className="text-gray-400 mb-4">;"
                 <Search className="w-16 h-16 mx-auto" />;"
-
               <h3 className="text-xl font-semibold text-gray-900 mb-2">No services found</h3>;""
               <p className="text-gray-600">Try adjusting your search terms or category filters.</p>;"
-
-
       <section className="py-20 bg-white">"
           <div className="text-center mb-16">"
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">"
@@ -307,20 +286,15 @@ const ComprehensiveServicesShowcase2025 = () => {
               className="text-center p-6""
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">"
                 <Brain className="w-8 h-8 text-blue-600" />"
-
               <h3 className="text-xl font-semibold text-gray-900 mb-2">AI-Powered Innovation</h3>""
               <p className="text-gray-600">"
-
               transition={{ duration: 0.5, delay: 0.1 }}"
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">"
                 <Shield className="w-8 h-8 text-green-600" />"
-
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Enterprise Security</h3>""
-
               transition={{ duration: 0.5, delay: 0.2 }}"
               <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">"
                 <Globe className="w-8 h-8 text-purple-600" />"
-
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Global Scale</h3>""
       <section className="py-20 bg-gradient-to-r from-blue-900 to-purple-900 text-white">"
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">"
@@ -350,20 +324,15 @@ const ComprehensiveServicesShowcase2025 = () => {
               className="text-center p-6">;"
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">;"
                 <Brain className="w-8 h-8 text-blue-600" />;"
-
               <h3 className="text-xl font-semibold text-gray-900 mb-2">AI-Powered Innovation</h3>;""
               <p className="text-gray-600">;"
-
               transition={{ duration: 0 && 0.5, delay: 0 && 0.1 }}"
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">;"
                 <Shield className="w-8 h-8 text-green-600" />;"
-
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Enterprise Security</h3>;""
-
               transition={{ duration: 0 && 0.5, delay: 0 && 0.2 }}"
               <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">;"
                 <Globe className="w-8 h-8 text-purple-600" />;"
-
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Global Scale</h3>;""
       </section>;"
       <section className="py-20 bg-gradient-to-r from-blue-900 to-purple-900 text-white">;"
@@ -387,11 +356,9 @@ const ComprehensiveServicesShowcase2025 = () => {
               href="mailto:kleber@ziontechgroup.com?subject=Business Transformation Consultation"""
               className="bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center gap-2""
               <Mail className="w-5 h-5" />"
-
               href="https://ziontechgroup.com"""
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition-colors flex items-center justify-center gap-2""
               <Globe className="w-5 h-5" />"
-
       </section>;
     </div>);"
 

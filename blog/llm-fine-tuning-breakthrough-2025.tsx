@@ -272,7 +272,7 @@ export default function LLMFineTuningBreakthrough2025() {
               domain-specific AI without deep ML expertise.
             </p>
             <a 
-              href="/contact" 
+              href="/contact"
               className="inline-block bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-400 hover:to-indigo-500 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-blue-500/50"
             >
               Start Your Fine-Tuning Journey

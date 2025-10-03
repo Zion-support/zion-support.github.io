@@ -86,7 +86,6 @@ export default function AI2027TranscendentMetaIntelligenceSuccessStory() {
       {/* Detailed Case Studies */}
       <section className="mb-8">"
         <h2 className="text-3xl font-bold text-gray-900 mb-6">Detailed Success Stories</h2>"
-        
         {/* Case Study 1 */}
         <div className="bg-white border border-gray-200 rounded-lg p-8 shadow-lg mb-8">"
           <div className="flex items-center gap-3 mb-6">"

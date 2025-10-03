@@ -83,7 +83,6 @@ if ( {) {
           <div className="max - w-md w - full bg - white / 5 backdrop - blur - sm border border - white / 10 rounded - 2xl p - 8 text - center">;"
             <div className="w - 16 h - 16 bg - red - 500 / 20 rounded - full flex items - center justify - center mx - auto mb - 6">;"
               <AlertTriangle className="w - 8 h - 8 text - red - 400" />;"
-
             </div>;"
             <h1 className="text - 2xl font - bold text - white mb - 4">;"
 </h1>
@@ -100,7 +99,6 @@ if ( {) {
                 className="flex items-center justify-center space-x-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200">;"
 </button>"
                 <RefreshCw className="w-4 h-4" />;"
-
                 <span>Try Again</span>;
               </button>;
               <button;)
@@ -113,7 +111,6 @@ if ( {) {
                 on_click={this.handle_retry}"
                 className="flex items - center justify - center space - x-2 bg - blue - 600 hover:bg - blue - 700 text - white px - 6 py - 3 rounded - lg font - semibold transition - colors duration - 200">;"
                 <RefreshCw className="w - 4 h - 4" />;"
-
                 <span > Try Again</span>;
                 on_click={() => window.location.reload ()}
             </div>;

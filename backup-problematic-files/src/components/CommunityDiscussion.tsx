@@ -67,7 +67,6 @@ export const CommunityDiscussion:React.FC = () => {;
 
         <Card className="mb-6 animate-scale-in">;"
           <CardContent className="py-5">;"
-
             <Input;"
               placeholder="Title (e.g., Share an AI tool, Ask for help...)";""
               className="mb-3 bg-zion-blue-light text-black placeholder:text-zion-slate";"

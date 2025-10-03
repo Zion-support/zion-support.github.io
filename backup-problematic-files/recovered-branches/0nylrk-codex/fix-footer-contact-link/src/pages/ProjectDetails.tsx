@@ -11,8 +11,6 @@ import { Textarea } from "@/components/ui/textarea";""
 import { toast } from "@/hooks/use-toast";""
 import { supabase } from "@/integrations/supabase/client";""
 import { ProjectReviewSection } from "@/components/projects/reviews/ProjectReviewSection";"
-
-
       const { data, error } = await supabase;
         .from("project_notes");
 
@@ -45,7 +43,6 @@ default: return <Badge variant="outline"> {";
 }/room` "
 }> <Video className=" mr-2 h-4 w-4"/> Project Room  )""
 }> <MessageSquare className=" mr-2 h-4 w-4"/> Message )"
-
 }</div> </div> </div>) "
 } <TabsContent value=" details"> <Card> <CardHeader> <CardTitle>Project Scope <CardDescription> Project details and expectations   <CardContent> <div className=" space-y-4"> <div> </div> </div> <div>  </div> <div> </div> </div> </div>    <TabsContent value=" timeline"> <Card> <CardHeader> <CardTitle>Project Timeline <CardDescription> Key dates and milestones   <CardContent> <div className=" space-y-4"> <div className=" flex items-start gap-3 p-3 bg-muted/30 rounded-md"> <Calendar className=" h-5 w-5 text-primary mt-0.5"/> <div> </div> </div> <div className=" flex items-start gap-3 p-3 bg-muted/30 rounded-md"> <Clock className=" h-5 w-5 text-primary mt-0.5"/> <div> </div> </div> </div> </div>    <TabsContent value=" documents"> <Card> <CardHeader> <CardTitle>Project Documents <CardDescription> Agreements and relevant files   <CardContent> <div> <h3 className=" font-semibold">Project Agreement</h3> <p className=" text-sm text-muted-foreground"> Uploaded when project was created </p> </div> </div> <Button variant=" outline"size=" sm"asChild> <a href= {"
   project.agreement url;"

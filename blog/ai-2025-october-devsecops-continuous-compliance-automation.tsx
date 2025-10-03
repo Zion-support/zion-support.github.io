@@ -200,13 +200,13 @@ export default function AIDevSecOpsContinuousCompliance2025() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <a 
-                    href="/contact" 
+                    href="/contact"
                     className="px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white font-semibold rounded-lg transition-all shadow-lg hover:shadow-indigo-500/50 text-center"
                   >
                     Schedule Security Assessment
                   </a>
                   <a 
-                    href="/services" 
+                    href="/services"
                     className="px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-lg transition-all border border-white/20 text-center"
                   >
                     Explore DevSecOps Services

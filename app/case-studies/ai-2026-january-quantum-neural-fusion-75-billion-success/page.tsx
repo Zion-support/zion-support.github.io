@@ -72,7 +72,6 @@ export default function QuantumNeuralFusionSuccessPage() {
           </div>
           
           <h2 className="text-3xl font-bold text-white mb-6">Company Profile</h2>"
-          
           <div className="bg-gradient-to-r from-blue-900/30 to-indigo-900/30 backdrop-blur-sm rounded-xl p-6 border border-blue-500/20 mb-8">"
             <h3 className="text-xl font-bold text-blue-400 mb-4">The Challenge</h3>"
             <p className="text-gray-300 mb-4">"
@@ -88,7 +87,6 @@ export default function QuantumNeuralFusionSuccessPage() {
           </div>
           
           <h2 className="text-3xl font-bold text-white mb-6">Implementation Overview</h2>"
-          
           <div className="space-y-8 mb-8">"
             <div className="bg-gradient-to-r from-purple-900/30 to-indigo-900/30 backdrop-blur-sm rounded-xl p-6 border border-purple-500/20">"
               <h3 className="text-xl font-bold text-purple-400 mb-4">Phase 1: Infrastructure Foundation (Months 1-3)</h3>"
@@ -144,7 +142,6 @@ export default function QuantumNeuralFusionSuccessPage() {
           </div>
           
           <h2 className="text-3xl font-bold text-white mb-6">Detailed Results by Business Unit</h2>"
-          
           <div className="grid md:grid-cols-2 gap-6 mb-8">"
             <div className="bg-gradient-to-r from-orange-900/30 to-red-900/30 backdrop-blur-sm rounded-xl p-6 border border-orange-500/20">"
               <h3 className="text-xl font-bold text-orange-400 mb-4">Manufacturing Excellence</h3>"
@@ -188,7 +185,6 @@ export default function QuantumNeuralFusionSuccessPage() {
           </div>
           
           <h2 className="text-3xl font-bold text-white mb-6">ROI Analysis</h2>"
-          
           <div className="bg-gradient-to-r from-emerald-900/30 to-green-900/30 backdrop-blur-sm rounded-xl p-8 border border-emerald-500/20 mb-8">"
             <h3 className="text-2xl font-bold text-emerald-400 mb-4">Investment vs. Returns</h3>"
             <div className="grid md:grid-cols-2 gap-8">"
@@ -215,7 +211,6 @@ export default function QuantumNeuralFusionSuccessPage() {
           </div>
           
           <h2 className="text-3xl font-bold text-white mb-6">Lessons Learned</h2>"
-          
           <div className="bg-gradient-to-r from-teal-900/30 to-cyan-900/30 backdrop-blur-sm rounded-xl p-8 border border-teal-500/20 mb-8">"
             <div className="grid md:grid-cols-2 gap-8">"
               <div>

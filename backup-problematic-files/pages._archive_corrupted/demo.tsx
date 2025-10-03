@@ -309,7 +309,6 @@ import React,{ useState } from 'react' import dynamic from 'next/dynamic' import
       "icon": <Server className="w-8 h-8"  />,"
       "icon": <Zap className="w-8 h-8"  />,"
       "icon": <Shield className="w-8 h-8"  />,"
-
     <>"
       <SEO title="Demo - Zion Tech Group"""
         description="Experience our AI services, IT solutions, and micro SaaS development capabilities through interactive demos."""
@@ -343,14 +342,12 @@ import React,{ useState } from 'react' import dynamic from 'next/dynamic' import
                     whileTap={{ "scale": 0.95 }}""
                     className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2""
                     <Play className="w-5 h-5"  />"
-
                   </motion.button>
                   <motion.a;"
                     href="/contact"""
                     whileHover={{ "scale": 1.05 }}""
                     className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2""
                     <ArrowRight className="w-5 h-5"  />"
-
                   </motion.a>
               </motion.div>
           <section className="py-20">"
@@ -378,7 +375,6 @@ import React,{ useState } from 'react' import dynamic from 'next/dynamic' import
                       <div className="flex items-center justify-center gap-2 text-sm text-gray-500">"
 </div>"
                         <Clock className="w-4 h-4"  />"
-
                 ))}
                   className="bg-white rounded-xl shadow-lg p-8""
                   <div className="grid grid-cols-1 "lg": gri d-cols-2 gap-8">"
@@ -398,30 +394,23 @@ import React,{ useState } from 'react' import dynamic from 'next/dynamic' import
                             <li key={idx} className="flex items-center gap-2 text-gray-600">"
 </li>"
                               <CheckCircle className="w-4 h-4 text-green-500"  />"
-
                             </li>
                         </ul>
                       <div className="flex items-center gap-4 text-sm text-gray-500 mb-6">"
                         <div className="flex items-center gap-1">"
-
                           <Users className="w-4 h-4"  />"
-
                       <motion.button;"
                         className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold flex items-center justify-center gap-2 "hover": b g-blue-700 transition-colors""
-
                     <div className="bg-gray-50 rounded-lg p-6 flex items-center justify-center">"
                         <div className="w-24 h-24 bg-blue-100 rounded-full flex items-center justify-center mb-4 mx-auto">"
                           <Play className="w-12 h-12 text-blue-600"  />"
-
                         <p className="text-gray-600">"
               )}
           <section className="bg-gray-50 py-20">"
                 <h2 className="text-3xl "md": tex t-4xl font-bold text-gray-900 mb-6">"
                 <div className="flex flex-col sm: fle x-row gap-4 justify-center">"
                     href="/contact""
-
                     href=""tel": +13024640950""
-
           </section>
         </main>
       

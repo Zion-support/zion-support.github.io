@@ -344,7 +344,7 @@ export default function EnterpriseAIModelGovernance2025() {
                     <li>Ongoing support and continuous improvement</li>
                   </ul>
                   <a 
-                    href="/contact" 
+                    href="/contact"
                     className="inline-block bg-gradient-to-r from-green-500 to-emerald-500 text-white px-8 py-3 rounded-lg font-semibold hover:shadow-xl transition-all duration-300"
                   >
                     Request Governance Assessment

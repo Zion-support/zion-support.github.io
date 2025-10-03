@@ -70,7 +70,6 @@ export default function AI2026NextGenerationAutomationPlatform() {
         </div>
 
         <h2 className="text-2xl font-bold mt-8 mb-4">🏭 Enterprise Transformation Stories</h2>"
-        
         <div className="bg-gray-50 p-6 rounded-lg mb-6">"
           <h3 className="text-xl font-semibold mb-3">🏆 Fortune 50 Retail Giant</h3>"
           <p>
@@ -99,7 +98,6 @@ export default function AI2026NextGenerationAutomationPlatform() {
         </div>
 
         <h2 className="text-2xl font-bold mt-8 mb-4">🔬 Technical Innovation Deep Dive</h2>"
-        
         <h3 className="text-xl font-semibold mt-6 mb-3">Autonomous Process Engine</h3>"
         <p>
           Our proprietary autonomous process engine uses advanced neural networks to understand, 
@@ -130,7 +128,6 @@ export default function AI2026NextGenerationAutomationPlatform() {
         </div>
 
         <h2 className="text-2xl font-bold mt-8 mb-4">📈 Business Impact Analysis</h2>"
-        
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">"
           <div className="bg-green-50 p-6 rounded-lg">"
             <h3 className="text-lg font-semibold text-green-800 mb-3">Operational Excellence</h3>"
@@ -154,7 +151,6 @@ export default function AI2026NextGenerationAutomationPlatform() {
         </div>
 
         <h2 className="text-2xl font-bold mt-8 mb-4">🛠️ Platform Architecture</h2>"
-        
         <div className="bg-gray-100 p-6 rounded-lg mb-6">"
           <h3 className="text-lg font-semibold mb-3">Core Components</h3>"
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">"

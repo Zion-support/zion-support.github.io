@@ -383,13 +383,13 @@ export default function AI2025OctoberQuantumReadyInfrastructureBlueprint() {
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <a 
-              href="/contact" 
+              href="/contact"
               className="bg-gradient-to-r from-violet-600 to-fuchsia-600 hover:from-violet-700 hover:to-fuchsia-700 text-white font-bold px-8 py-4 rounded-lg transition-all transform hover:scale-105"
             >
               Schedule Quantum Readiness Assessment
             </a>
             <a 
-              href="/services" 
+              href="/services"
               className="bg-slate-800 hover:bg-slate-700 text-violet-400 font-bold px-8 py-4 rounded-lg border border-violet-500/30 transition-all"
             >
               Explore Quantum Services

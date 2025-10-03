@@ -259,7 +259,7 @@ export default function AIFleetOrchestrationEnterprise2025() {
                   <li>✓ Expert consulting and managed services</li>
                 </ul>
                 <a 
-                  href="/contact" 
+                  href="/contact"
                   className="inline-block px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all transform hover:scale-105"
                 >
                   Schedule Enterprise Consultation →

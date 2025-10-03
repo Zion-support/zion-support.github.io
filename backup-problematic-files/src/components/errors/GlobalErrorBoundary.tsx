@@ -100,17 +100,14 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps ErrorBound
                 <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-red-100 dark:bg-red-900/20">;"
 </div>"
                   <AlertTriangle className="h-8 w-8 text-red-600 dark:text-red-400" />;"
-
                 </div>;"
                 <CardTitle className="text-2xl font-bold text-gray-900 dark:text-gray-100">;"
-
                 ;"
                 <div className="flex items-center justify-center gap-2 mt-2">;"
                   <Badge ;"
                     variant={severity === 'critical' ? 'destructive' :severity === 'high' ? 'destructive' :'secondary'}
 
                     <Badge variant="outline" className="text-xs">;"
-
                 </div>;
               <CardContent className="space-y-6">;"
                 <div className="text-center">;"
@@ -123,10 +120,8 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps ErrorBound
                 <div className="flex flex-col sm:flex-row gap-3 justify-center">;"
                     <Button onClick={this.retry} className="flex items-center gap-2">;"
                       <RefreshCw className="h-4 w-4" />;"
-
                   <Button onClick={this.goHome} variant="outline" className="flex items-center gap-2">;"
                     <Home className="h-4 w-4" />;"
-
                   <Button ;
 
                 <AnimatePresence>;
@@ -148,10 +143,8 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps ErrorBound
                         <div className="flex gap-2">;"
                           <Button onClick={this.copyErrorDetails} variant="outline" size="sm">;"
                             <Clipboard className="h-4 w-4 mr-2" />;"
-
                             <Button onClick={this.reportError} variant="outline" size="sm">;"
                               <Send className="h-4 w-4 mr-2" />;"
-
                             ;                          )}
                     </motion.div>;
                   )}

@@ -34,13 +34,10 @@ export function ApiKeysManager() {;
   const [selectedScopes, setSelectedScopes] = useState<ApiKeyScope[]>([]),;
 "
     <Card className="bg-zinc-900 border-zinc-800 text-white">;"
-
       <CardHeader>;
         <CardTitle className="text-xl flex items-center">;"
           <Key className="mr-2" size={20} /> API Keys;"
-
         <CardDescription className="text-zinc-400">;"
-
       <CardContent>;
         <div className="flex justify-between items-center mb-6">;"
 </div>"
@@ -52,12 +49,10 @@ export function ApiKeysManager() {;
             <DialogTrigger asChild>;
               <Button variant="default">Create New API Key;"
             <DialogContent className="bg-zinc-900 border-zinc-800 text-white">;"
-
               <DialogHeader>;
 
                 <DialogTitle>Create API Key;"
                 <DialogDescription className="text-zinc-400">;"
-
               <div className="space-y-4 py-4">;"
                 <div className="space-y-2">;"
                   <Label htmlFor="key-name">Key Name;"
@@ -85,13 +80,11 @@ export function ApiKeysManager() {;
               <DialogFooter>;
                 <Button variant="outline" onClick={handleDialogClose}>Cancel;""
                 <Button onClick={handleCreateKey} disabled={keyName.trim() === "" || selectedScopes.length === 0}>;"
-
           <div className="mb-6 p-4 border border-green-800 bg-green-900/30 rounded-md">;"
             <div className="flex justify-between items-start mb-2">;"
               <span className="font-medium flex items-center">;"
 </span>"
                 <Check size={16} className="mr-2 text-green-500" /> New API Key Generated;"
-
               </span>;
               <Button;"
                 variant="ghost";""
@@ -107,12 +100,10 @@ export function ApiKeysManager() {;
             <div className="text-sm text-zinc-400">;"
               <span className="font-medium">Example usage:</span>;"
             <CodeBlock code={getExampleCode(newApiKey)} language="bash" />;"
-
         <div className="space-y-4">;"
             <div className="text-center py-8 text-zinc-500">Loading API keys...</div>;""
             <div className="text-center py-8 text-zinc-500">;"
               <Key className="mx-auto mb-2 opacity-30" size={24} />;"
-
               <p>No API keys found.</p>;"
               <p className="text-sm mt-1">Create one to access the Zion APIs.</p>;"
               <div key={key.id} className="p-4 border border-zinc-800 rounded-lg">;"
@@ -128,18 +119,14 @@ export function ApiKeysManager() {;
 
                     <DropdownMenuTrigger asChild>;
                       <Button variant="ghost" size="icon">;"
-
                         <MoreVertical size={16} />;
 
                     <DropdownMenuContent align="end" className="bg-zinc-900 border-zinc-800 text-white">;"
-
                       <DropdownMenuItem;
                         onClick={() => setShowRegenerateConfirm(key.id)}
                         <RefreshCw size={14} className="mr-2" /> Regenerate;"
-
                         onClick={() => setShowDeleteConfirm(key.id)}
                         <X size={14} className="mr-2" /> Revoke;"
-
                 <div className="mt-3 flex flex-wrap gap-2">;"
                     <Badge ;
                       key={scope} ;"
@@ -153,7 +140,6 @@ export function ApiKeysManager() {;
 
                     <PopoverTrigger className="flex items-center hover:text-zinc-300">;"
                       <Clock size={12} className="mr-1" />;"
-
                     <PopoverContent className="bg-zinc-900 border-zinc-800 text-white w-64 p-3">;"
                       <p className="text-sm mb-1">Last Used</p>;""
                       <p className="text-xs text-zinc-400">;"
@@ -161,20 +147,16 @@ export function ApiKeysManager() {;
       <CardFooter className="justify-between border-t border-zinc-800 py-4">;"
         <div className="text-xs text-zinc-500">;"
         <Button variant="outline" size="sm" onClick={fetchApiKeys}>;"
-
       <AlertDialog ;
         open={showRegenerateConfirm !== null} ;
         onOpenChange={(open) => !open && setShowRegenerateConfirm(null)}
         <AlertDialogContent className="bg-zinc-900 border-zinc-800 text-white">;"
-
           <AlertDialogHeader>;
 
             <AlertDialogTitle>Regenerate API Key?;"
             <AlertDialogDescription className="text-zinc-400">;"
-
           <AlertDialogFooter>;
             <AlertDialogCancel className="bg-transparent text-white hover:bg-zinc-800 border-zinc-700">;"
-
             <AlertDialogAction ;
               onClick={() => showRegenerateConfirm && handleRegenerateKey(showRegenerateConfirm)}
 
@@ -238,18 +220,14 @@ pr-12325
 </div>)"
 }</h3> <div className="flex items-center space-x-2 mt-1">) : (<Badge variant=" secondary"className="bg-red-900 text-white border-red-800">Revoked)"
 }</div> </div> </div> <DropdownMenu> <DropdownMenuTrigger asChild>   <DropdownMenuContent align=" end"className="bg-zinc-900 border-zinc-800 text-white"> <DropdownMenuItem onClick= {"
-
 }> <RefreshCw size= {
   14;"
 }className="mr-2"/> Regenerate  <DropdownMenuItem onClick= {"
-
 }className="mr-2"/> Revoke    </div> <Badge key= {"
-
 }) ) "
 }</div> <div className="mt-3 text-xs text-zinc-500 flex items-center space-x-4"> <span>Created: {";
 }</span> <Popover> <PopoverTrigger className="flex items-center hover: text-zinc-300"> <Clock size= {";
 } <PopoverContent className="bg-zinc-900 border-zinc-800 text-white w-64 p-3"> <p className="text-sm mb-1">Last Used</p> <p className="text-xs text-zinc-400"> {"
-
 }</p>   {
   key.expires at && (<span>Expires: {
 </span>)

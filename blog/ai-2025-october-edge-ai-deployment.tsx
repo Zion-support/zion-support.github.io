@@ -319,13 +319,13 @@ export default function EdgeAIDeployment2025() {
                   
                   <div className="flex flex-wrap gap-4">
                     <a 
-                      href="/contact" 
+                      href="/contact"
                       className="px-6 py-3 bg-gradient-to-r from-emerald-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-emerald-400 hover:to-cyan-400 transition-all shadow-lg hover:shadow-emerald-500/50"
                     >
                       Start Your Edge AI Journey
                     </a>
                     <a 
-                      href="/services/edge-computing" 
+                      href="/services/edge-computing"
                       className="px-6 py-3 bg-white/10 border border-emerald-400/30 text-white font-semibold rounded-lg hover:bg-white/20 transition-all"
                     >
                       Explore Edge Solutions

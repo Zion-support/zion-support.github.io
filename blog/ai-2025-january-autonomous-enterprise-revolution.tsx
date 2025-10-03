@@ -221,7 +221,7 @@ export default function AI2025JanuaryAutonomousEnterpriseRevolution() {
             every step of the transformation journey.
           </p>
           <Link 
-            href="/contact" 
+            href="/contact"
             className="inline-flex items-center gap-2 bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
           >
             Get Started Today

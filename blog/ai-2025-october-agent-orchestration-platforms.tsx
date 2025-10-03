@@ -202,7 +202,7 @@ const orchestrator = new AgentOrchestrator({
                   Fortune 500 companies deploy autonomous systems that deliver measurable results.
                 </p>
                 <a 
-                  href="/contact" 
+                  href="/contact"
                   className="inline-block px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-bold rounded-xl transition-all transform hover:scale-105"
                 >
                   Start Your Agent Transformation

@@ -5,9 +5,6 @@
 ;
   return (<div>;
       <Head></Head>;<meta name="description" content="DatabaseDesignChat service" />;"
-
-
-
 }
 return (;
 
@@ -16,13 +13,7 @@ return (;
       <Head>;
         <title > DatabaseDesignChat - Zion Tech Solutions</title>;
         <meta name="description" content="DatabaseDesignChat service" />{" "}"
-
-
   return (<div>;
       <Head>;
         <title>DatabaseDesignChat - Zion Tech Solutions</title>;
         <meta name="description" content="DatabaseDesignChat service" />{" "}"
-
-
-
-

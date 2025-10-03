@@ -209,7 +209,7 @@ const AIPoweredCybersecurityDefense2025: React.FC = () => {
             compliance requirements.
           </p>
           <a 
-            href="/contact" 
+            href="/contact"
             className="inline-block bg-gradient-to-r from-red-500 to-orange-500 text-white font-bold py-3 px-8 rounded-lg hover:from-red-600 hover:to-orange-600 transition-all duration-300"
           >
             Schedule Security Assessment →

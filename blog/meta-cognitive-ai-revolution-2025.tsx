@@ -48,14 +48,14 @@ export default function MetaCognitiveAIRevolution2025() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
-                href="#breakthrough-overview" 
+                href="#breakthrough-overview"
                 className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1 flex items-center justify-center gap-2"
               >
                 <Brain className="w-5 h-5" />
                 Explore Breakthrough
               </a>
               <a 
-                href="/contact" 
+                href="/contact"
                 className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2"
               >
                 <span>Get Implementation Guide</span>

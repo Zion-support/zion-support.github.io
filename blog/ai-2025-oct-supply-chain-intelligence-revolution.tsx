@@ -321,13 +321,13 @@ export default function AISupplyChainIntelligenceRevolution2025() {
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <a 
-                    href="/contact" 
+                    href="/contact"
                     className="px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-500 text-white font-bold rounded-xl hover:from-indigo-600 hover:to-purple-600 transition-all transform hover:scale-105"
                   >
                     Schedule Supply Chain AI Assessment
                   </a>
                   <a 
-                    href="/case-studies" 
+                    href="/case-studies"
                     className="px-8 py-4 bg-white/10 text-white font-bold rounded-xl hover:bg-white/20 transition-all backdrop-blur-sm"
                   >
                     View Supply Chain Success Stories

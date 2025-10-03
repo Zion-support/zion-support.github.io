@@ -240,7 +240,7 @@ export default function AI2025JanuaryQuantumComputingBreakthrough() {
             you identify the best use cases for your organization.
           </p>
           <Link 
-            href="/services/quantum-ai-consulting" 
+            href="/services/quantum-ai-consulting"
             className="inline-flex items-center gap-2 bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
           >
             Explore Quantum AI Services

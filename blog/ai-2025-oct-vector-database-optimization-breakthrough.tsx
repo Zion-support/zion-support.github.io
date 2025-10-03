@@ -567,7 +567,7 @@ const VectorDatabaseOptimizationBreakthrough: React.FC = () => {
             <li>✅ 60-day performance guarantee</li>
           </ul>
           <a 
-            href="/contact" 
+            href="/contact"
             className="inline-block bg-white text-purple-600 px-8 py-3 rounded-lg font-bold hover:bg-purple-50 transition-colors"
           >
             Start Your Optimization Journey →

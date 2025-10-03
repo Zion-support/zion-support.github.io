@@ -81,7 +81,6 @@ export default function Fortune500AITransformationCaseStudy() {
           <div className="max-w-4xl mx-auto">"
             <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">"
               <h2 className="text-3xl font-bold text-white mb-6">🏢 The Client: Fortune 500 Manufacturing Giant</h2>"
-              
               <div className="grid md:grid-cols-2 gap-8 mb-8">"
                 <div>
                   <h3 className="text-xl font-bold text-green-400 mb-4">Company Profile</h3>"
@@ -107,7 +106,6 @@ export default function Fortune500AITransformationCaseStudy() {
             {/* Financial Impact */}
             <div className="mt-12 bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">"
               <h2 className="text-3xl font-bold text-white mb-6">💰 Financial Impact & ROI Analysis</h2>"
-              
               <div className="grid md:grid-cols-2 gap-8">"
                 <div>
                   <h3 className="text-xl font-bold text-green-400 mb-4">Direct Cost Savings: $1.8B</h3>"
@@ -196,7 +194,6 @@ export default function Fortune500AITransformationCaseStudy() {
             {/* Key Results */}
             <div className="mt-12 bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">"
               <h2 className="text-3xl font-bold text-white mb-6">📈 Operational Metrics & Results</h2>"
-              
               <div className="grid md:grid-cols-3 gap-6">"
                 <div>
                   <h3 className="text-lg font-bold text-green-400 mb-4">Automation Metrics</h3>"

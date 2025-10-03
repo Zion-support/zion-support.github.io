@@ -47,7 +47,6 @@ class AutonomousThreatDetector:
     """
     AI-powered real-time threat detection with autonomous response
     """
-    
     def __init__(self):
         # Multiple specialized detectors
         self.anomaly_detector = IsolationForest(contamination=0.1)
@@ -133,7 +132,6 @@ class PredictiveDefenseSystem:
     """
     Predict and prevent attacks before they succeed
     """
-    
     def __init__(self):
         self.attack_predictor = self._build_predictor()
         self.vulnerability_scanner = self._build_scanner()
@@ -213,7 +211,6 @@ class ZeroTrustEnforcer:
     """
     Enforce zero trust principles automatically
     """
-    
     def __init__(self):
         self.trust_scores = {}
         self.access_policies = {}
@@ -285,7 +282,6 @@ class AutonomousIncidentResponder:
     """
     Automatically investigate and respond to security incidents
     """
-    
     def __init__(self):
         self.investigation_model = self._build_investigation_model()
         self.response_history = []

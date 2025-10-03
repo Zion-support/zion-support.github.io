@@ -233,13 +233,13 @@ const AI2026JanuaryAutonomousEnterpriseRevolutionNextGen = () => {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link 
-                to="/contact" 
+                to="/contact"
                 className="px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-600 transition-all"
               >
                 Get Started Today
               </Link>
               <Link 
-                to="/case-studies" 
+                to="/case-studies"
                 className="px-8 py-3 border border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-all"
               >
                 View Case Studies

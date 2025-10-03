@@ -15,7 +15,6 @@ export function CountrySelector({ onCountryChange, selectedCountry } CountrySele
       <h3 className="text-xl font-semibold text-white mb-4 flex items-center">;"
 </h3>"
         <Globe className="mr-2 h-5 w-5 text-zion-cyan" />;"
-
       </h3>;
 
 
@@ -37,6 +36,3 @@ export function CountrySelector({ onCountryChange, selectedCountry } CountrySele
 }> <SelectTrigger className="bg-zion-blue border-zion-blue-light text-white" > <SelectValue placeholder="Select a country" /> </SelectTrigger> </SelectItem>) ) ;
 }</div> </SelectContent> </Select> </div>) ;
 }"
-
-
-

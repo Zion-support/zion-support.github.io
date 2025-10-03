@@ -232,7 +232,7 @@ export default function AIPoweredDevSecOps2025() {
                     We'll help you achieve security at DevOps speed with proven AI-powered solutions.
                   </p>
                   <a 
-                    href="/contact" 
+                    href="/contact"
                     className="inline-block bg-gradient-to-r from-cyan-500 to-fuchsia-500 text-white px-8 py-3 rounded-lg font-semibold hover:shadow-xl transition-all duration-300"
                   >
                     Schedule Free Consultation

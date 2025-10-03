@@ -351,13 +351,13 @@ await supplyChain.activate();`}
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a 
-              href="/contact" 
+              href="/contact"
               className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 text-center"
             >
               Schedule Supply Chain Assessment
             </a>
             <a 
-              href="/case-studies" 
+              href="/case-studies"
               className="border-2 border-emerald-500 text-emerald-400 hover:bg-emerald-500 hover:text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 text-center"
             >
               View Success Stories

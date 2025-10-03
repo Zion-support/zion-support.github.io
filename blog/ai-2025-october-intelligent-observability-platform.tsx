@@ -74,7 +74,7 @@ export default function IntelligentObservabilityPlatform2025() {
               <section className="mb-12">
                 <h2 className="text-3xl font-bold mb-6 text-emerald-300">AI-Powered Anomaly Detection</h2>
                 <p className="text-white/80 leading-relaxed mb-6">
-                  Modern observability platforms leverage advanced machine learning to understand what "normal" 
+                  Modern observability platforms leverage advanced machine learning to understand what "normal"
                   looks like for your systems and detect subtle anomalies that traditional threshold-based 
                   monitoring would miss. These systems learn continuously, adapting to changing patterns and 
                   reducing false positives over time.
@@ -353,13 +353,13 @@ const observabilityPlatform = {
                   </p>
                   <div className="flex gap-4 justify-center flex-wrap">
                     <a 
-                      href="/contact" 
+                      href="/contact"
                       className="px-8 py-3 bg-emerald-500 hover:bg-emerald-400 text-white font-semibold rounded-lg transition-colors"
                     >
                       Book a Demo
                     </a>
                     <a 
-                      href="/resources" 
+                      href="/resources"
                       className="px-8 py-3 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-lg border border-white/30 transition-colors"
                     >
                       Download Whitepaper

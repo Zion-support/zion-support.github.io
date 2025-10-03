@@ -818,13 +818,13 @@ REMEDIATION_PLAYBOOKS = [
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <a 
-                    href="/contact" 
+                    href="/contact"
                     className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold text-center transition-colors"
                   >
                     Schedule SRE Automation Assessment
                   </a>
                   <a 
-                    href="/services/ai-devops-automation" 
+                    href="/services/ai-devops-automation"
                     className="border border-orange-400 text-orange-300 hover:bg-orange-500/10 px-6 py-3 rounded-lg font-semibold text-center transition-colors"
                   >
                     Explore DevOps AI Services

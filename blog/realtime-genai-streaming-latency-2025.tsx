@@ -9,8 +9,8 @@ const RealtimeGenAIStreamingLatency2025: React.FC = () => {
       <Helmet>
         <title>Real-Time GenAI Streaming: Sub-100ms Latency Patterns 2025 | Zion Tech Group</title>
         <meta 
-          name="description" 
-          content="Achieve sub-100ms response times for GenAI applications with streaming, edge caching, and latency budgets. Learn production patterns for fast, responsive AI experiences." 
+          name="description"
+          content="Achieve sub-100ms response times for GenAI applications with streaming, edge caching, and latency budgets. Learn production patterns for fast, responsive AI experiences."
         />
         <meta name="keywords" content="GenAI, Streaming, Latency, Real-Time AI, Edge Computing, LLM Performance, AI UX" />
         <link rel="canonical" href="https://ziontechgroup.com/blog/realtime-genai-streaming-latency-2025" />

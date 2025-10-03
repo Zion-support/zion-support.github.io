@@ -70,7 +70,7 @@ export default function NeuralInterfaces2026() {
           
           <div className="bg-blue-50 border-l-4 border-blue-500 p-4 mb-6">
             <p className="text-blue-800 font-semibold">
-              "The integration of AI neural interfaces represents the most significant leap in human-computer interaction since the invention of the mouse." 
+              "The integration of AI neural interfaces represents the most significant leap in human-computer interaction since the invention of the mouse."
               - Dr. Sarah Chen, Neural Computing Institute
             </p>
           </div>

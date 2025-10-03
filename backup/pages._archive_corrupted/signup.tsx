@@ -1349,7 +1349,6 @@ export default function Signup() {;
   "delay": 1 && 1.0 
 }
                 className="text-center p-6"
-
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan-light to-zion-purple-light rounded-full flex items-center justify-center mx-auto mb-4">;
                   <Cloud className="w-8 h-8 text-white"  />;
                 </div>;

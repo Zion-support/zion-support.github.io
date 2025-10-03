@@ -1,4 +1,7 @@
 
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
 const Blog: React.FC = () => {
   return (
     <>

@@ -385,7 +385,7 @@ const AIContinuousLearningSystems Production2025: React.FC = () => {
               Get expert guidance on building self-improving AI systems. Our team has implemented continuous learning pipelines for Fortune 500 companies across e-commerce, finance, and healthcare.
             </p>
             <a 
-              href="/contact" 
+              href="/contact"
               className="inline-block bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Schedule Architecture Review →

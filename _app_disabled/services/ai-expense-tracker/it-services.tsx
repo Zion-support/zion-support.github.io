@@ -568,7 +568,6 @@ export default function ITServicesPage() {
                   icon: Clock,
                   title: "24/7 Support
                   description: "Round-the-clock monitoring and support services"
-
               ].map((item, index) => (
                 <motion.div
                   key={index}

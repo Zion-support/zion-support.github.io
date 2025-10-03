@@ -36,7 +36,6 @@ export default function CloudMigrationPage() {
                   </div>;
                   
                   <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>"
-                  
                   <div>;
             >,
               <h2 className="text-4xl md:text-5xl font-bold mb-6">";

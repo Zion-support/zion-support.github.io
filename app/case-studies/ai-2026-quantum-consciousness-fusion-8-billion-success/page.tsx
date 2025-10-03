@@ -83,7 +83,6 @@ export default function QuantumConsciousnessFusionSuccessPage() {
           </div>
 
           <h2 className="text-3xl font-bold text-white mb-6">Healthcare System Profile</h2>"
-          
           <div className="grid md:grid-cols-2 gap-6 mb-8">"
             <div className="bg-gradient-to-r from-blue-500/20 to-indigo-500/20 rounded-xl p-6 border border-blue-500/30">"
               <h3 className="text-xl font-bold text-blue-400 mb-3">Organization Details</h3>"
@@ -105,7 +104,6 @@ export default function QuantumConsciousnessFusionSuccessPage() {
           </div>
 
           <h2 className="text-3xl font-bold text-white mb-6">The Challenge</h2>"
-          
           <h3 className="text-2xl font-bold text-red-400 mb-4">Patient Care Issues</h3>"
           <div className="grid md:grid-cols-2 gap-6 mb-8">"
             <div className="bg-gradient-to-r from-red-500/20 to-orange-500/20 rounded-xl p-6 border border-red-500/30">"
@@ -130,9 +128,7 @@ export default function QuantumConsciousnessFusionSuccessPage() {
           </div>
 
           <h2 className="text-3xl font-bold text-white mb-6">The Solution: Quantum Consciousness Fusion</h2>"
-          
           <h3 className="text-2xl font-bold text-cyan-400 mb-4">Implementation Strategy</h3>"
-          
           <div className="space-y-6 mb-8">"
             <div className="bg-gradient-to-r from-purple-500/10 to-indigo-500/10 rounded-xl p-6 border border-purple-500/20">"
               <h4 className="text-xl font-bold text-purple-400 mb-3">Phase 1: Foundation (Months 1-6)</h4>"
@@ -176,9 +172,7 @@ export default function QuantumConsciousnessFusionSuccessPage() {
           </div>
 
           <h2 className="text-3xl font-bold text-white mb-6">Results and Impact</h2>"
-          
           <h3 className="text-2xl font-bold text-cyan-400 mb-4">Patient Care Excellence</h3>"
-          
           <div className="grid md:grid-cols-2 gap-6 mb-8">"
             <div className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-xl p-6 border border-green-500/30">"
               <h4 className="text-xl font-bold text-green-400 mb-3">Patient Satisfaction</h4>"
@@ -202,7 +196,6 @@ export default function QuantumConsciousnessFusionSuccessPage() {
           </div>
 
           <h3 className="text-2xl font-bold text-cyan-400 mb-4">Financial Performance</h3>"
-          
           <div className="grid md:grid-cols-2 gap-6 mb-8">"
             <div className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-xl p-6 border border-green-500/30">"
               <h4 className="text-xl font-bold text-green-400 mb-3">Revenue Growth</h4>"
@@ -226,7 +219,6 @@ export default function QuantumConsciousnessFusionSuccessPage() {
           </div>
 
           <h2 className="text-3xl font-bold text-white mb-6">Success Stories</h2>"
-          
           <div className="space-y-6 mb-8">"
             <div className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-xl p-6 border border-green-500/30">"
               <h3 className="text-xl font-bold text-green-400 mb-3">Case Study 1: Emergency Care Transformation</h3>"
@@ -281,7 +273,6 @@ export default function QuantumConsciousnessFusionSuccessPage() {
           </div>
 
           <h2 className="text-3xl font-bold text-white mb-6">ROI Analysis</h2>"
-          
           <div className="grid md:grid-cols-2 gap-6 mb-8">"
             <div className="bg-gradient-to-r from-red-500/20 to-orange-500/20 rounded-xl p-6 border border-red-500/30">"
               <h3 className="text-xl font-bold text-red-400 mb-4">Investment</h3>"
@@ -327,7 +318,6 @@ export default function QuantumConsciousnessFusionSuccessPage() {
           </div>
 
           <h2 className="text-3xl font-bold text-white mb-6">Key Takeaways</h2>"
-          
           <div className="space-y-6 mb-8">"
             <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-xl p-6 border border-cyan-500/20">"
               <h3 className="text-xl font-bold text-cyan-400 mb-3">1. Consciousness Revolutionizes Healthcare</h3>"

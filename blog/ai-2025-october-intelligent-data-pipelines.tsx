@@ -48,7 +48,6 @@ class IntelligentQueryOptimizer:
     """
     AI-powered query optimizer that learns from execution history
     """
-    
     def __init__(self):
         self.execution_history = []
         self.cost_model = RandomForestRegressor(n_estimators=100)
@@ -125,7 +124,6 @@ class IntelligentCache:
     """
     ML-powered cache that predicts what to cache
     """
-    
     def __init__(self, max_size_gb: int = 100):
         self.max_size = max_size_gb * 1024 * 1024 * 1024
         self.cache = {}
@@ -213,7 +211,6 @@ class PredictiveScaler:
     """
     Predict and scale resources before demand spikes
     """
-    
     def __init__(self):
         self.load_model = GradientBoostingRegressor()
         self.historical_loads = []
@@ -284,7 +281,6 @@ class FailurePredictor:
     """
     Predict and prevent pipeline failures
     """
-    
     def __init__(self):
         self.failure_model = RandomForestClassifier(n_estimators=100)
         self.failure_history = []

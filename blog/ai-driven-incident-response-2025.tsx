@@ -279,13 +279,13 @@ const AIDrivenIncidentResponse2025: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a 
-                href="/contact" 
+                href="/contact"
                 className="bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-400 hover:to-red-500 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 text-center"
               >
                 Request AIOps Demo
               </a>
               <a 
-                href="/services/aiops-platform" 
+                href="/services/aiops-platform"
                 className="border-2 border-orange-400 text-orange-400 hover:bg-orange-400 hover:text-red-900 font-bold py-4 px-8 rounded-lg transition-all duration-300 text-center"
               >
                 Explore AIOps Solutions

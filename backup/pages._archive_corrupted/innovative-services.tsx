@@ -232,7 +232,6 @@ export default function InnovativeServices() {
       "category": "Development Tools",
       "benefits": "Improve code quality by 40% and reduce bugs by 60%",
       "marketPrice": "Average market price: $300-1,800/month"
-
     }
   ]
   return (

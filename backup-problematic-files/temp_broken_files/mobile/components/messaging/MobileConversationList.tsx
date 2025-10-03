@@ -32,7 +32,6 @@ export function MobileConversationList({;
       <div className="px-4 mb-2">;"
         <div className="relative">;"
           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />;"
-
           <Input;"
             placeholder="Search messages...";""
             className="pl-9";"
@@ -75,7 +74,6 @@ export function MobileConversationList({;
                       ? <em>Typing...</em> ;
                   </p>;"
                     <Badge className="ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full">;"
-
             <div className="border-t border-border ml-12"></div>;"
   return (<div className="space-y-4" > <div className="px-4 mb-2" > <div className="relative" > <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" /> Search messages..."className=" pl-9"/> </div> </div> <div className=" px-4 pb-4 space-y-2"> <div className=" flex space-x-2"> <Badge variant=" secondary"className=" rounded-full px-3">All <Badge variant=" outline"className=" rounded-full px-3">Unread <Badge variant=" outline"className=" rounded-full px-3">Interviews <Badge variant=" outline"className=" rounded-full px-3">Projects </div> </div> <div className=" space-y-2 pb-24"> {;")
   conversations.map ( (conversation) => (<div key= {;

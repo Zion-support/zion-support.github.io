@@ -44,7 +44,6 @@ interface ResourceItem {;
     <div className="space-y-6">;"
 </div>"
       <Card className="bg-zion-blue-dark border-zion-blue-light">;"
-
 pr-12325
 
 

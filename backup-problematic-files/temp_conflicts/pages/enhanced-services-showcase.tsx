@@ -121,8 +121,6 @@ pr-12325
                 <div className="flex items-center justify-center space-x-3 bg-gradient-to-r from-pink-500/20 to-cyan-500/20 rounded-full px-6 py-3 border border-pink-500/30">;"
                   <Zap className="w-5 h-5 text-pink-400" />;"
                   <span className="text-pink-300 font-semibold">24/7 Support</span>;"
-
-
         </section>;"
         <section className="py-16 px-4 sm:px-6 lg:px-8">;"
           <div className="max-w-7xl mx-auto">;"
@@ -153,19 +151,16 @@ pr-12325
                               <div className="font-semibold">{service.name}</div>;""
                               <div className="text-sm opacity-80">{service.price}{service.period}</div>;"
                             <ArrowRight className="w-4 h-4" />;"
-
                       <Button ;"`;
                         href={`#${category.title.toLowerCase().replace(/\s+/g, '-')}`}
                         variant="secondary";""
                         className="mt-6 w-full";"
-
               ))}
         <section className="py-8 px-4 sm:px-6 lg:px-8">;"
             <div className="bg-gray-800/60 border border-gray-700 rounded-2xl p-6">;"
               <div className="flex flex-col lg:flex-row gap-6">;"
                   <div className="relative">;"
                     <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />;"
-
                     <input;"
                       type="text";""
                       placeholder="Search services...";"
@@ -187,16 +182,12 @@ pr-12325
                       onClick={() => setViewMode('grid')}
 </button>
                       <Grid className="w-5 h-5" />;"
-
                     </button>;
                       onClick={() => setViewMode('list')}
                       <List className="w-5 h-5" />;"
-
               variants={containerVariants}"
               initial="hidden";""
               animate="visible";""
-
-
                   key={service.id}
                   variants={itemVariants}
                   className={viewMode === 'grid' ?  :'bg-gray-800/60 border border-gray-700 rounded-2xl p-6'}
@@ -230,10 +221,8 @@ pr-12325
                           variant="primary";""
                           className="flex-1";"
                           <ExternalLink className="ml-2 w-4 h-4" />;"
-
                         <Button ;"
                           href="/contact";""
-
                     <div className="flex items-start space-x-6">;"
                         <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center text-2xl">;"
                       <div className="flex-1 min-w-0">;"
@@ -248,8 +237,6 @@ pr-12325
                             <span className="text-gray-400">Setup:</span>;""
                             <div className="text-white">{service.setupTime}</div>;"
                             size="sm";"
-
-
             {filteredServices.length === 0 && (;"
               <div className="text-center py-16">;"
                 <div className="text-6xl mb-4"></div>;""
@@ -275,10 +262,8 @@ pr-12325
                   size="lg";""
                   className="text-lg px-8 py-4";"
                   <Rocket className="ml-2 w-6 h-6" />;"
-
                   href="/pricing";""
                   <DollarSign className="ml-2 w-6 h-6" />;"
-
         </section>;
 
 

@@ -274,7 +274,7 @@ export default function AISyntheticDataGenerationPrivacy2025() {
                   <li>✓ Expert consulting and implementation support</li>
                 </ul>
                 <a 
-                  href="/contact" 
+                  href="/contact"
                   className="inline-block px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-500 text-white font-bold rounded-lg hover:from-indigo-600 hover:to-purple-600 transition-all transform hover:scale-105"
                 >
                   Start Your Synthetic Data Journey →

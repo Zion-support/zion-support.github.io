@@ -71,7 +71,6 @@ export default function AIEnterpriseTransformationUltimateGuide2025() {
             <article className="prose prose-lg max-w-none">"
               <div className="bg-white rounded-2xl shadow-xl p-8 mb-8">"
                 <h2 className="text-3xl font-bold text-gray-900 mb-6">The AI Enterprise Transformation Revolution</h2>"
-                
                 <p className="text-lg text-gray-700 mb-6 leading-relaxed">"
                   Enterprise AI transformation is no longer a future aspiration—it's a present reality driving unprecedented business value. 
                   Fortune 500 companies are achieving $2B+ ROI through strategic AI implementation, autonomous operations, and quantum-enhanced 

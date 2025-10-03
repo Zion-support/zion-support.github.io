@@ -68,7 +68,6 @@ export default function Fortune500AIRevolutionSuccess() {
           <div className="max-w-4xl mx-auto">"
             <div className="prose prose-lg prose-invert max-w-none">"
               <h2 className="text-4xl font-bold text-white mb-8">The Challenge</h2>"
-              
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">"
                 A Fortune 500 manufacturing company was facing unprecedented challenges in 2024: increasing operational costs, supply chain disruptions, and the need for real-time decision making across 15 global facilities. Traditional automation systems were reaching their limits, and manual processes were creating bottlenecks that cost the company millions daily.
               </p>
@@ -96,7 +95,6 @@ export default function Fortune500AIRevolutionSuccess() {
               </div>
 
               <h2 className="text-4xl font-bold text-white mb-8">The Solution</h2>"
-              
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">"
                 Zion Tech Group implemented our January 2025 Advanced AI Revolution framework, deploying next-generation autonomous systems, quantum-enhanced intelligence, and zero-trust AI security across all 15 global facilities.
               </p>
@@ -127,7 +125,6 @@ export default function Fortune500AIRevolutionSuccess() {
               </div>
 
               <h2 className="text-4xl font-bold text-white mb-8">The Results</h2>"
-              
               <div className="bg-gradient-to-r from-green-500/10 to-emerald-500/10 backdrop-blur-sm rounded-2xl p-8 border border-green-500/20 mb-12">"
                 <h3 className="text-2xl font-bold text-green-400 mb-6">Transformation Results</h3>"
                 <div className="grid md:grid-cols-2 gap-8">"

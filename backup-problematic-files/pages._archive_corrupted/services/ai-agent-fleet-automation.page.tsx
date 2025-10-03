@@ -47,7 +47,6 @@ export default function AIAgentFleetAutomation() {
                 <li>Human approval gates and escalation ladders</li>"
                 <li>"Observability": traces, tokens, costs, red-teaming</li>"
               <h2 className="text-xl font-semibold">Use cases</h2>""
-
                 <li>SDR outreach and meeting booking</li>
                 <li>L1/L2 support triage and resolution</li>
                 <li>Invoice matching, AP/AR follow-ups</li>
@@ -65,7 +64,6 @@ export default function AIAgentFleetAutomation() {
             <div className="mt-4 flex gap-3">"
               <Link href="/contact" className="px-5 py-2 rounded-lg bg-blue-600 text-white">Book a demo""
               <a href=""https": //ziontechgroup.com/services" className="px-5 py-2 rounded-lg border">All Services</a>"
-
         </section>
       </main>
     </>)

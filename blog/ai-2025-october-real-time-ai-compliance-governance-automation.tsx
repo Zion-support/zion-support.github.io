@@ -368,13 +368,13 @@ export default function RealTimeAIComplianceGovernanceAutomation2025() {
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4">
                     <a 
-                      href="/contact" 
+                      href="/contact"
                       className="inline-block bg-gradient-to-r from-rose-500 to-orange-600 hover:from-rose-400 hover:to-orange-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 text-center shadow-lg hover:shadow-rose-500/50"
                     >
                       Get Compliance Assessment
                     </a>
                     <a 
-                      href="/services/ai-autonomous-operations" 
+                      href="/services/ai-autonomous-operations"
                       className="inline-block border-2 border-rose-400 text-rose-300 hover:bg-rose-400/20 font-bold py-4 px-8 rounded-xl transition-all duration-300 text-center"
                     >
                       Explore Governance Solutions

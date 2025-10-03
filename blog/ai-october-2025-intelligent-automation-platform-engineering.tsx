@@ -214,13 +214,13 @@ export default function AIIntelligentAutomationPlatformEngineering() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a 
-                href="/contact" 
+                href="/contact"
                 className="inline-block bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-3 px-8 rounded-xl transition-all duration-300 text-center"
               >
                 Get Started Today
               </a>
               <a 
-                href="/case-studies" 
+                href="/case-studies"
                 className="inline-block border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-3 px-8 rounded-xl transition-all duration-300 text-center"
               >
                 View Success Stories

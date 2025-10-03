@@ -402,13 +402,13 @@ export default function AI2026FutureTrendsBreakthrough() {
               <h3 className="text-2xl font-bold mb-4 text-green-300">Next Steps for Your Organization</h3>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link 
-                  href="/contact" 
+                  href="/contact"
                   className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1 text-center"
                 >
                   Start Your AI Transformation
                 </Link>
                 <Link 
-                  href="/blog/ai-2026-april-mega-breakthrough-revolution" 
+                  href="/blog/ai-2026-april-mega-breakthrough-revolution"
                   className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 text-center"
                 >
                   Learn About Current Breakthroughs

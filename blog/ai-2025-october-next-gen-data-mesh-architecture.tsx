@@ -441,7 +441,7 @@ export default function NextGenDataMeshArchitecture2025() {
 
               <div className="text-center py-8">
                 <a 
-                  href="/contact" 
+                  href="/contact"
                   className="inline-block px-8 py-4 bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-bold rounded-xl shadow-lg hover:shadow-orange-500/50 transition-all duration-300 transform hover:scale-105"
                 >
                   Begin Your Data Mesh Journey →
