@@ -13,6 +13,7 @@ import {
   Award,
   Target,
   Rocket,
+  Cpu,
   Linkedin,
   Twitter,
   Mail,
