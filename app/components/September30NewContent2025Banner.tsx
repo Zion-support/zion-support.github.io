@@ -111,7 +111,7 @@ const September30NewContent2025Banner: React.FC = () => {
               style={{ animationDelay: `${index * 150}ms` }}
             >
               {/* Card glow effect */}
-              <div className="text-left"></div>"
+              <div className="text-left"></div>
               <div className="text-left">
                 {/* Icon & Badge */}
                 <div className="text-left">
@@ -147,7 +147,7 @@ const September30NewContent2025Banner: React.FC = () => {
                   <span className="text-left">
                     <Zap className="text-left" />
                     {article.readTime}
-                  <
+                  </span>
                   <span>{new Date(article.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>
                 </div>
 
@@ -169,7 +169,7 @@ const September30NewContent2025Banner: React.FC = () => {
               key={article.id}
               className="text-left">
               {/* Card glow effect */}
-              <div className="text-left"></div>"
+              <div className="text-left"></div>
               <div className="text-left">
                 {/* Icon & Badge */}
                 <div className="text-left">
@@ -205,7 +205,7 @@ const September30NewContent2025Banner: React.FC = () => {
                   <span className="text-left">
                     <Zap className="text-left" />
                     {article.readTime}
-                  <
+                  </span>
                   <span>{new Date(article.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>
                 </div>
 
@@ -269,4 +269,4 @@ const September30NewContent2025Banner: React.FC = () => {
   );
 };
 
-export default September30NewContent2025Banner;</div></div></div></div></div></div></div></div>
+export default September30NewContent2025Banner;

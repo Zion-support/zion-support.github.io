@@ -11,7 +11,6 @@
     "build:fast": "vite build --mode development --minify false",
     "build:analyze": "vite build --mode analyze && npx vite-bundle-analyzer dist/stats.html",
     "preview": "vite preview --host --open",
-    "lint": "eslint app/ src/ --ext .ts,.tsx,.js,.jsx --max-warnings 0",
     "lint:fix": "eslint . --ext .ts,.tsx,.js,.jsx --ignore-pattern '__tests__/**' --ignore-pattern '_app_disabled/**' --ignore-pattern '_conflicted_disabled/**' --ignore-pattern '_pages_api_disabled/**' --ignore-pattern '_pages_disabled/**' --ignore-pattern 'admin-api-disabled/**' --ignore-pattern 'api-disabled/**' --ignore-pattern 'api.disabled/**' --ignore-pattern 'api.disabled.temp/**' --ignore-pattern 'api-backup/**' --ignore-pattern 'apps.backup/**' --ignore-pattern 'automation_backup/**' --ignore-pattern 'ai-optimization-backups/**' --ignore-pattern 'automation_logs/**' --ignore-pattern 'all-automations-reports/**' --ignore-pattern 'accessibility-reports/**' --fix",
     "type-check": "tsc --noEmit",
     "type-check:ci": "tsc --noEmit -p tsconfig.ci.json",

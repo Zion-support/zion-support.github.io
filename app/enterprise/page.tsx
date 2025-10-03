@@ -14,15 +14,14 @@ export default function EnterprisePage() {
       <header className="text-left">
         <div className="text-left"></div>
           <div className="text-left"></div>"
-          <div className="text-left" style={{ animationDelay: '2s' }}></div>"
-        </div>
+          <div className="text-left" style={{ animationDelay: '2s' }}></div></div>
         
         <div className="text-left"></div>
           <div className="text-left"></div>
             <div className="text-left"></div>
               <span className="text-left">
                 🏢 Enterprise AI Solutions
-              </span>
+              </span>/span>/span>/span>
             </div>
             
             <h1 className="text-left">
@@ -45,7 +44,7 @@ export default function EnterprisePage() {
                 Schedule Enterprise Demo
               </a>
               <a 
-                href="#solutions" "
+                href="#solutions"
                 className="text-left">
                 View Solutions
               </a>
@@ -59,33 +58,32 @@ export default function EnterprisePage() {
         <div className="text-left"></div>
           <div className="text-left"></div>
             <h2 className="text-left">Enterprise Solutions</h2>"
-            <p className="text-left">Comprehensive AI solutions for enterprise needs</p>"
-          </div>
+            <p className="text-left">Comprehensive AI solutions for enterprise needs</p></div>
           
           <div className="text-left"></div>
             <div className="text-left"></div>
               <h3 className="text-left">AI Automation</h3>"
-              <p className="text-left">Automate complex business processes with AI</p>"
-            </div>
+              <p className="text-left">Automate complex business processes with AI</p></div>
             
             <div className="text-left"></div>
               <h3 className="text-left">Data Analytics</h3>"
-              <p className="text-left">Advanced analytics and insights for decision making</p>"
-            </div>
+              <p className="text-left">Advanced analytics and insights for decision making</p></div>
             
             <div className="text-left"></div>
               <h3 className="text-left">Security</h3>"
-              <p className="text-left">Enterprise-grade security and compliance</p>"
-            </div>
+              <p className="text-left">Enterprise-grade security and compliance</p></div>
           </div>
         </div>
       </section>
 
       <footer className="text-left">
+        <div className="text-left">
+          <p className="text-left">© 2025 Zion Tech Group. All rights reserved.</p>
         <div className="text-left"></div>
           <p className="text-left">© 2025 Zion Tech Group. All rights reserved.</p>"
+>>>>>>> main
         </div>
-      </div>
+      </footer>
     </div>
   );
 }
