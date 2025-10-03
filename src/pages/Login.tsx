@@ -1,24 +1,27 @@
-import React from "react";
-
+import React from "react"
+;
 const Login: React.FC = () => {
   return (
-    <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-      <h1 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Login</h1>
-      <form className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-        <input 
-          type="email" 
-          placeholder="Email" 
-          className="w-full p-3 mb-4 rounded-lg bg-zion-blue-dark border border-zion-blue text-white placeholder-zion-blue-light focus:outline-none focus:border-zion-blue-light"
-        />
-        <input 
-          type="password" 
-          placeholder="Password" 
-          className="w-full p-3 mb-4 rounded-lg bg-zion-blue-dark border border-zion-blue text-white placeholder-zion-blue-light focus:outline-none focus:border-zion-blue-light"
-        />
-        <button className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Sign in</button>
-      </form>
-    </section>
-  );
+<<<<<<< HEAD
+        <section className="min-h-[40vh] max-w-md"
+            <h1 className="text-3xl font-bold mb-4">Login</h1>";,"
+            <form className="grid gap-4"
+                <input className="border rounded-md px-3 py-2" placeholder="Email" />";,"
+                <input className="border rounded-md px-3 py-2" placeholder="Password" type="password" />";,"
+                <button className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700" type ="button">Sign in</button>";,"
+=======
+        <section className= "min-h-[40vh] max-w-md">
+            <h1 className= "text-3xl font-bold mb-4">Login</h1>";,"
+            <form className= "grid gap-4">
+                <input className= "border rounded-md px-3 py-2" placeholder="Email" />";,"
+                <input className= "border rounded-md px-3 py-2" placeholder="Password" type="password" />";,"
+                <button className= "bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700" type ="button">Sign in</button>";,"
+>>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
+            </form>
+        </section>
+    );
 };
 
-export default Component;
+export default Login;
+
+;

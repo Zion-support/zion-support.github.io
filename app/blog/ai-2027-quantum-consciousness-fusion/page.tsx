@@ -1,6 +1,6 @@
 // @ts-nocheck
-// import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'AI 2027: Quantum Consciousness Fusion - 100,000x Performance Breakthrough',
@@ -241,7 +241,8 @@ export default function AI2027QuantumConsciousnessFusion() {
             Only 15 slots remaining
           </div>
           <br />
-          <Link to="/contact" 
+          <Link 
+            href="/contact" 
             className="inline-block bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-indigo-600 transition-all"
           >
             Secure Your Quantum Access
@@ -263,12 +264,14 @@ export default function AI2027QuantumConsciousnessFusion() {
             Contact us today to secure your exclusive early access slot.
           </p>
           <div className="flex gap-4">
-            <Link to="/contact" 
+            <Link 
+              href="/contact" 
               className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
             >
               Get Quantum Access
             </Link>
-            <Link to="/case-studies/ai-2027-quantum-breakthrough-success" 
+            <Link 
+              href="/case-studies/ai-2027-quantum-breakthrough-success" 
               className="bg-gray-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-700 transition-colors"
             >
               View Success Stories

@@ -1,25 +1,28 @@
-import React from "react
+import React from "react"
 ;
 const FAQ: React.FC = () => {
   return (
-        <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-            <h1 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Frequently Asked Questions</h1>";,
-            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+<<<<<<< HEAD
+        <section className="min-h-[40vh]"
+            <h1 className="text-3xl font-bold mb-4">Frequently Asked Questions</h1>";,"
+            <div className="space-y-4 text-gray-700"
                 <div >
-                    <h2 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">What services do you offer?</h2>";,
+                    <h2 className="font-semibold">What services do you offer?</h2>";,"
                     <p >AI, micro SaaS, cybersecurity, cloud/DevOps, analytics, and more.</p>
                 </div>
                 <div >
-                    <h2 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">How do I start a project?</h2>";,
-        <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-            <h1 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Frequently Asked Questions</h1>";,
-            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                    <h2 className="font-semibold">How do I start a project?</h2>";,"
+=======
+        <section className= "min-h-[40vh]">
+            <h1 className= "text-3xl font-bold mb-4">Frequently Asked Questions</h1>";,"
+            <div className= "space-y-4 text-gray-700">
                 <div >
-                    <h2 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">What services do you offer?</h2>";,
+                    <h2 className= "font-semibold">What services do you offer?</h2>";,"
                     <p >AI, micro SaaS, cybersecurity, cloud/DevOps, analytics, and more.</p>
                 </div>
                 <div >
-                    <h2 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">How do I start a project?</h2>";,
+                    <h2 className= "font-semibold">How do I start a project?</h2>";,"
+>>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                     <p >Contact us via the contact page to request a discovery call.</p>
                 </div>
             </div>
@@ -27,6 +30,6 @@ const FAQ: React.FC = () => {
     );
 };
 
-export default Component;
+export default FAQ;
 
 ;

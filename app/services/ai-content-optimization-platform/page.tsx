@@ -1,11 +1,6 @@
-// import React from 'react';
-// Metadata interface for React Helmet
-interface Metadata {
-  title?: string;
-  description?: string;
-  keywords?: string;
-}
-import { Link } from 'react-router-dom';
+import React from 'react';
+import { Metadata } from 'next';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'AI Content Optimization Platform - Zion Tech Group',
@@ -213,12 +208,14 @@ export default function AIContentOptimizationPlatform() {
           Join 500+ companies already using our AI Content Optimization Platform to boost their content performance.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link to="/contact" 
+          <Link 
+            href="/contact" 
             className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
           >
             Start Free Trial
           </Link>
-          <Link to="tel:+13024640950" 
+          <Link 
+            href="tel:+13024640950" 
             className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold border border-blue-600 hover:bg-blue-50 transition-colors"
           >
             Call +1 302 464 0950

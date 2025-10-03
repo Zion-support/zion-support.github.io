@@ -42,7 +42,7 @@ function getAllServices(): any () : Service[] {;
   params: {;
   slug ;)
 fallback: false ;"
-// import React from 'react';
+import React from 'react';
 import Head from 'next/head';
 import Layout from '../../components/layout/Layout';
 import { Check, Mail, MapPin, Phone, ExternalLink } from 'lucide-react';

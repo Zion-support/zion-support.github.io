@@ -1,6 +1,6 @@
-// import React from 'react';
+import React from 'react';
 import Head from 'next/head';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { 
   Brain, Code, Cloud, Shield, Network, Server, BarChart3, Settings, 
   Zap, Monitor, Search, MessageSquare, CheckCircle, ArrowRight, 
@@ -543,7 +543,8 @@ export default function EnhancedServicesCatalog() {
                         <span className="text-lg font-semibold text-orange-600">{service.price}</span>
                         <span className="text-sm text-gray-500">{service.delivery}</span>
                       </div>
-                      <Link to={service.link}
+                      <Link 
+                        href={service.link}
                         className="w-full bg-orange-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-orange-700 transition-colors text-center block"
                       >
                         Learn More
@@ -612,7 +613,8 @@ export default function EnhancedServicesCatalog() {
                         <span className="text-lg font-semibold text-blue-400">{service.price}</span>
                         <span className="text-sm text-blue-300">{service.delivery}</span>
                       </div>
-                      <Link to={service.link}
+                      <Link 
+                        href={service.link}
                         className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center block"
                       >
                         Learn More
@@ -681,7 +683,8 @@ export default function EnhancedServicesCatalog() {
                         <span className="text-lg font-semibold text-green-600">{service.price}</span>
                         <span className="text-sm text-gray-500">{service.delivery}</span>
                       </div>
-                      <Link to={service.link}
+                      <Link 
+                        href={service.link}
                         className="w-full bg-green-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-green-700 transition-colors text-center block"
                       >
                         Learn More

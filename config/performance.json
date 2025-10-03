@@ -1,0 +1,20 @@
+{
+  "lazyLoading": {
+    "enabled": true,
+    "components": [
+      "UnifiedBanner",
+      "ContentShowcase",
+      "FeaturedServiceCard"
+    ]
+  },
+  "bundleOptimization": {
+    "treeShaking": true,
+    "codeSplitting": true,
+    "dynamicImports": true
+  },
+  "caching": {
+    "staticAssets": true,
+    "apiResponses": true,
+    "componentCache": true
+  }
+}

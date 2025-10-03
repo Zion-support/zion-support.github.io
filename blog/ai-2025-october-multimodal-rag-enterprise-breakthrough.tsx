@@ -1,6 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
-import { Brain, Database, Zap, Shield, Code } from 'lucide-react';
+import { Brain, Database, Zap, Shield, TrendingUp, Code } from "lucide-react";
+
 export default function AI2025OctoberMultimodalRAGBreakthrough() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">

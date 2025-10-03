@@ -1,7 +1,7 @@
-// import React from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
-// import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react';'
+import { Helmet } from 'react-helmet-async';'
 
 const Partners: React.FC = () => {
   const partners: [,,
@@ -91,14 +91,14 @@ const Partners: React.FC = () => {
       icon: '🔧',';,';,
       benefits: [,,,
         'Access to cutting-edge technology',';';
-        'Joint go-to-market strategies
+        'Joint go-to-market strategies'
       title: 'Technology Partners',',';,
       description: 'Leading technology providers and platform partners',',';,
       icon: '🔧',',';,
       benefits: [,,,
-        'Access to cutting-edge technology',
-        'Joint go-to-market strategies',
-        'Technical support and training
+        'Access to cutting-edge technology','
+        'Joint go-to-market strategies','
+        'Technical support and training'
       ]
     },
     {
@@ -107,14 +107,14 @@ const Partners: React.FC = () => {
       icon: '🤝',';,';,
       benefits: [,,,
         'Complementary solution offerings',';';
-        'Joint customer implementations
+        'Joint customer implementations'
       title: 'Solution Partners',',';,
       description: 'Specialized solution providers and integrators',',';,
       icon: '🤝',',';,
       benefits: [,,,
-        'Complementary solution offerings',
-        'Joint customer implementations',
-        'Shared expertise and resources
+        'Complementary solution offerings','
+        'Joint customer implementations','
+        'Shared expertise and resources'
       ]
     },
     {
@@ -123,14 +123,14 @@ const Partners: React.FC = () => {
       icon: '📈',';,';,
       benefits: [,,,
         'Extended market reach',';';
-        'Local customer support
+        'Local customer support'
       title: 'Channel Partners',',';,
       description: 'Resellers and distribution partners',',';,
       icon: '📈',',';,
       benefits: [,,,
-        'Extended market reach',
-        'Local customer support',
-        'Revenue sharing opportunities
+        'Extended market reach','
+        'Local customer support','
+        'Revenue sharing opportunities'
       ]
     }
   ];
@@ -141,22 +141,38 @@ const Partners: React.FC = () => {
         <title >Partners - Zion Tech Group</title>
         <meta name="description" content="Strategic partnerships with leading technology providers to deliver comprehensive AI and IT solutions." /><link rel="canonical" href="https://ziontechgroup.com/partners/>",
         <meta name="description" content="Strategic partnerships with leading technology providers to deliver comprehensive AI and IT solutions." />",
-        <link rel="canonical", href ="https: //ziontechgroup.com/partners" />",
+        <link rel: "canonical", href ="https: //ziontechgroup.com/partners" />",
       </Helmet>
       
-      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-              <h1 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-              <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+<<<<<<< HEAD
+      <div className="min-h-screen bg-gray-50">",
         {/* Header */}
-        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-              <h1 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-              <h1 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+        <div className="bg-gradient-to-r from-green-600 to-blue-600 text-white py-16"
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
+            <div className="text-center"
+              <h1 className="text-4xl md: text-5xl font-bold mb-4">",
+        <div className="bg-gradient-to-r from-green-600 to-blue-600 text-white py-16">",
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
+            <div className="text-center">",
+              <h1 className="text-4xl md: text-5xl font-bold mb-4">",;,"
   Our Partners
               </h1>
-              <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <p className="text-xl text-green-100 max-w-3xl mx-auto">",;,"
+=======
+      <div className= "min-h-screen bg-gray-50">",
+        {/* Header */}
+        <div className= "bg-gradient-to-r from-green-600 to-blue-600 text-white py-16">
+          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
+            <div className= "text-center">
+              <h1 className= "text-4xl md: text-5xl font-bold mb-4">",
+        <div className= "bg-gradient-to-r from-green-600 to-blue-600 text-white py-16">",
+          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
+            <div className= "text-center">",
+              <h1 className= "text-4xl md: text-5xl font-bold mb-4">"
+  Our Partners
+              </h1>
+              <p className= "text-xl text-green-100 max-w-3xl mx-auto">"
+>>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Strategic partnerships with industry leaders to deliver 
                 comprehensive AI and IT solutions that drive business success.
               </p>
@@ -165,22 +181,56 @@ const Partners: React.FC = () => {
         </div>
 
         {/* Partners Grid */}
-        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white"> (
+<<<<<<< HEAD
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16">",
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">",
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16">",
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">",
+            {partners.map((partner, index) => (
               <div key={index}
-                className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">{partner.name}</h3>
+                className="bg-white rounded-xl shadow-lg p-8 hover: shadow-xl transition-all duration-300 text-center",
+              >
+                <div className="h-20 bg-gray-100 rounded-lg flex items-center justify-center mb-4">",
+                  <div className="text-2xl font-bold text-gray-600">{partner.name}</div>"
                 </div>
-                <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-                <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-                <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">{partner.name}</h3>
-                </div>
-                <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">",
+                  {partner.name}
+                </h3>
+                <p className="text-blue-600 font-medium mb-3">",
                   {partner.category}
                 </p>
-                <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <p className="text-gray-600 text-sm mb-4">",
+=======
+        <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16">",
+          <div className= "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">",
+        <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16">",
+          <div className= "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">",
+            {partners.map((partner, index) => (
+              <div key={index}
+                className= "bg-white rounded-xl shadow-lg p-8 hover: shadow-xl transition-all duration-300 text-center",
+              >
+                <div className= "h-20 bg-gray-100 rounded-lg flex items-center justify-center mb-4">",
+                  <div className= "text-2xl font-bold text-gray-600">{partner.name}</div>"
+                </div>
+                <h3 className= "text-lg font-semibold text-gray-900 mb-2">",
+                  {partner.name}
+                </h3>
+                <p className= "text-blue-600 font-medium mb-3">",
+                  {partner.category}
+                </p>
+                <p className= "text-gray-600 text-sm mb-4">",
+>>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
+                  {partner.description}
+                </p>
+                <a href: {partner.website}
+                  target="_blank",;,"
+  rel: "noopener noreferrer",;,"
+<<<<<<< HEAD
+  className="inline-flex items-center text-blue-600 hover: text-blue-700 transition-colors",
+=======
+  className= "inline-flex items-center text-blue-600 hover: text-blue-700 transition-colors",
+>>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
+                >
                   Visit Website →
                 </a>
               </div>
@@ -189,39 +239,74 @@ const Partners: React.FC = () => {
         </div>
 
         {/* Partnership Types */}
-        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-              <h2 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-              <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-              <h2 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+<<<<<<< HEAD
+        <div className="bg-white py-16"
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
+            <div className="text-center mb-12"
+              <h2 className="text-3xl font-bold text-gray-900 mb-4"
+        <div className="bg-white py-16">",
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
+            <div className="text-center mb-12">",
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">",;,"
   Partnership Types
               </h2>
-              <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">",;,"
+=======
+        <div className= "bg-white py-16">
+          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
+            <div className= "text-center mb-12">
+              <h2 className= "text-3xl font-bold text-gray-900 mb-4">
+        <div className= "bg-white py-16">",
+          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
+            <div className= "text-center mb-12">",
+              <h2 className= "text-3xl font-bold text-gray-900 mb-4">"
+  Partnership Types
+              </h2>
+              <p className= "text-lg text-gray-600 max-w-2xl mx-auto">"
+>>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   We offer different types of partnerships to meet various business needs
               </p>
             </div>
             
-            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white"> (
-                <div key={index} className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">{type.icon}</h3>
-                  <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-                  <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-                  <ul className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white"> (
-                      <li key={benefitIndex} className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">";,
-                      <li key={benefitIndex} className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+<<<<<<< HEAD
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">",
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">",
               {partnershipTypes.map((type, index) => (
-                <div key={index} className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">{type.icon}</h3>
-                  <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <div key={index} className="text-center">",
+                  <div className="text-4xl mb-4">{type.icon}</div>"
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">",
+                    {type.title}
+                  </h3>
+                  <p className="text-gray-600 mb-6">",
                     {type.description}
                   </p>
-                  <ul className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-                        <svg className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-                          <path fillRule: "evenodd", d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd/>";,
-                      <li key={benefitIndex} className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                  <ul className="text-left space-y-2 text-gray-600">",
+                    {type.benefits.map((benefit, benefitIndex) => (
+                      <li key={benefitIndex} className="flex items-center"
+                        <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20"
+                          <path fillRule: "evenodd", d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd/>";,"
+                      <li key={benefitIndex} className="flex items-center">",
+                        <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">",
+=======
+            <div className= "grid grid-cols-1 md:grid-cols-3 gap-8">",
+            <div className= "grid grid-cols-1 md:grid-cols-3 gap-8">",
+              {partnershipTypes.map((type, index) => (
+                <div key={index} className= "text-center">",
+                  <div className= "text-4xl mb-4">{type.icon}</div>"
+                  <h3 className= "text-xl font-semibold text-gray-900 mb-3">",
+                    {type.title}
+                  </h3>
+                  <p className= "text-gray-600 mb-6">",
+                    {type.description}
+                  </p>
+                  <ul className= "text-left space-y-2 text-gray-600">",
+                    {type.benefits.map((benefit, benefitIndex) => (
+                      <li key={benefitIndex} className= "flex items-center">
+                        <svg className= "w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule: "evenodd", d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd/>";,"
+                      <li key={benefitIndex} className= "flex items-center">",
+                        <svg className= "w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">",
+>>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                           <path fillRule: "evenodd", d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule ="evenodd" />",
                         </svg>
                         {benefit}
@@ -235,30 +320,50 @@ const Partners: React.FC = () => {
         </div>
 
         {/* Become a Partner */}
-        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-            <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-                Partner with Us
-              </a>
-              <a href="/partners/benefits",;,
-  className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-            <h2 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+<<<<<<< HEAD
+        <div className="bg-gradient-to-r from-blue-600 to-green-600 text-white py-16"
+          <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">",
+            <h2 className="text-3xl font-bold mb-4"
+        <div className="bg-gradient-to-r from-blue-600 to-green-600 text-white py-16">",
+          <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">",
+            <h2 className="text-3xl font-bold mb-4">",;,"
   Become a Partner
             </h2>
-            <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <p className="text-xl text-blue-100 mb-8">",;,"
   Join our partner ecosystem and unlock new opportunities for growth and innovation.
             </p>
-            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-              <a href="/contact",;,
-  className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">",
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">",
+              <a href="/contact",;,"
+  className="inline-flex items-center px-8 py-3 bg-white text-blue-600 rounded-lg hover: bg-gray-100 transition-colors font-medium",
+              >
                 Partner with Us
               </a>
-              <a href="/partners/benefits",;,
-  className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <a href="/partners/benefits",;,"
+  className="inline-flex items-center px-8 py-3 border-2 border-white text-white rounded-lg hover: bg-white hover:text-blue-600 transition-colors font-medium",
+=======
+        <div className= "bg-gradient-to-r from-blue-600 to-green-600 text-white py-16">
+          <div className= "max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">",
+            <h2 className= "text-3xl font-bold mb-4">
+        <div className= "bg-gradient-to-r from-blue-600 to-green-600 text-white py-16">",
+          <div className= "max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">",
+            <h2 className= "text-3xl font-bold mb-4">"
+  Become a Partner
+            </h2>
+            <p className= "text-xl text-blue-100 mb-8">"
+  Join our partner ecosystem and unlock new opportunities for growth and innovation.
+            </p>
+            <div className= "flex flex-col sm:flex-row gap-4 justify-center">",
+            <div className= "flex flex-col sm:flex-row gap-4 justify-center">",
+              <a href="/contact",;,"
+  className= "inline-flex items-center px-8 py-3 bg-white text-blue-600 rounded-lg hover: bg-gray-100 transition-colors font-medium",
+              >
+                Partner with Us
+              </a>
+              <a href="/partners/benefits",;,"
+  className= "inline-flex items-center px-8 py-3 border-2 border-white text-white rounded-lg hover: bg-white hover:text-blue-600 transition-colors font-medium",
+>>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
+              >
                 Learn More
               </a>
             </div>
@@ -269,4 +374,4 @@ const Partners: React.FC = () => {
   );
 };
 
-export default Component;
+export default Partners;

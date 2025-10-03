@@ -1,4 +1,4 @@
-// import React from 'react';
+import React from 'react';
 
 export const metadata = {
 	title: 'Enterprise RAG Guardrails: Safety, Quality, and Compliance in 2026',

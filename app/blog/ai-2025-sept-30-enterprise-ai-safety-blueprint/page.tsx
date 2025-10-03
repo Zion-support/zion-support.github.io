@@ -1,5 +1,5 @@
 // @ts-nocheck
-// import React from 'react';
+import React from 'react';
 
 export const metadata = {
 	title: 'AI 2025: Enterprise AI Safety Blueprint — KPIs, Budgets, Rollback',

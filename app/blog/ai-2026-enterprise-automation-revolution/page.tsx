@@ -1,5 +1,5 @@
-// import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import Link from 'next/link';
 import { Cog, Zap, TrendingUp, Shield, Users, BarChart3 } from 'lucide-react';
 
 export const metadata = {
@@ -295,7 +295,8 @@ export default function AI2026EnterpriseAutomationRevolution() {
           Join the leading enterprises already transforming their operations with AI automation.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link to="/case-studies/ai-enterprise-automation-success-2026"
+          <Link
+            href="/case-studies/ai-enterprise-automation-success-2026"
             className="bg-white text-orange-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
           >
             View Success Stories
@@ -313,7 +314,7 @@ export default function AI2026EnterpriseAutomationRevolution() {
       <div className="mt-12 pt-8 border-t border-gray-200">
         <h3 className="text-2xl font-bold text-gray-900 mb-6">Related Automation Content</h3>
         <div className="grid md:grid-cols-2 gap-6">
-          <Link to="/blog/ai-autonomous-operations-2026" className="group">
+          <Link href="/blog/ai-autonomous-operations-2026" className="group">
             <div className="bg-gradient-to-r from-purple-50 to-pink-50 p-6 rounded-lg border border-purple-200 hover:shadow-lg transition-shadow">
               <h4 className="font-semibold text-gray-900 group-hover:text-purple-600 mb-2">
                 Autonomous Operations: The Future of Business
@@ -323,7 +324,7 @@ export default function AI2026EnterpriseAutomationRevolution() {
               </p>
             </div>
           </Link>
-          <Link to="/case-studies/ai-automation-manufacturing-success-2026" className="group">
+          <Link href="/case-studies/ai-automation-manufacturing-success-2026" className="group">
             <div className="bg-gradient-to-r from-blue-50 to-green-50 p-6 rounded-lg border border-blue-200 hover:shadow-lg transition-shadow">
               <h4 className="font-semibold text-gray-900 group-hover:text-blue-600 mb-2">
                 Manufacturing Automation: 40% Cost Reduction

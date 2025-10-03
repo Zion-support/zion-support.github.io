@@ -1,4 +1,4 @@
-// import React from 'react';
+import React from 'react';
 
 export const metadata = {
   title: 'Telecom Giant Achieves $215M Annual Savings with AI-Powered Network Intelligence',

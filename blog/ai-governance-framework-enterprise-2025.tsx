@@ -1,4 +1,4 @@
-// import React from 'react';
+import React from 'react';
 
 export const metadata = {
   title: 'AI Governance Framework 2025: Build Trust, Compliance & Innovation at Enterprise Scale',

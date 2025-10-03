@@ -1,5 +1,5 @@
-// import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import Link from 'next/link';
 import { 
   CurrencyDollarIcon, 
   CheckCircleIcon, 
@@ -32,13 +32,15 @@ export default function IntelligentExpenseManagement() {
               Revolutionize expense management with AI-powered receipt processing, automated policy compliance, and intelligent analytics.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact" 
+              <Link 
+                href="/contact" 
                 className="bg-white text-orange-600 px-8 py-4 rounded-lg font-semibold hover:bg-orange-50 transition-colors inline-flex items-center justify-center"
               >
                 Get Started Today
                 <ArrowRightIcon className="ml-2 w-5 h-5" />
               </Link>
-              <Link to="/portfolio" 
+              <Link 
+                href="/portfolio" 
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-orange-600 transition-colors inline-flex items-center justify-center"
               >
                 View Case Studies
@@ -267,13 +269,15 @@ export default function IntelligentExpenseManagement() {
             Join hundreds of companies already saving time and money with our intelligent expense management solution.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact" 
+            <Link 
+              href="/contact" 
               className="bg-white text-orange-600 px-8 py-4 rounded-lg font-semibold hover:bg-orange-50 transition-colors inline-flex items-center justify-center"
             >
               Start Your Free Trial
               <ArrowRightIcon className="ml-2 w-5 h-5" />
             </Link>
-            <Link to="/case-studies" 
+            <Link 
+              href="/case-studies" 
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-orange-600 transition-colors inline-flex items-center justify-center"
             >
               View Success Stories

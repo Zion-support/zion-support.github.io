@@ -1,4 +1,4 @@
-// import React from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Zap, Shield, Users, DollarSign, Clock, BarChart3, Database, Server, GitBranch } from 'lucide-react';
 

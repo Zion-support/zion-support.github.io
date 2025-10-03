@@ -1,5 +1,5 @@
-// import React from 'react';
-// Metadata handled by React Helmet
+import React from 'react';
+import { Metadata } from 'next';
 import * as Lucide from 'lucide-react';
 const { Bot, Mail, Phone, CheckCircle, ArrowRight, Users, Target, MessageSquare, Database, Shield } = Lucide as any;
 

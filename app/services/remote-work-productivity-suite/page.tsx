@@ -1,11 +1,6 @@
-// import React from 'react';
-// Metadata interface for React Helmet
-interface Metadata {
-  title?: string;
-  description?: string;
-  keywords?: string;
-}
-import { Link } from 'react-router-dom';
+import React from 'react';
+import { Metadata } from 'next';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Remote Work Productivity Suite - Zion Tech Group',
@@ -153,12 +148,14 @@ export default function RemoteWorkProductivitySuite() {
           Join thousands of companies that have improved their remote work productivity with our comprehensive suite.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link to="/contact" 
+          <Link 
+            href="/contact" 
             className="bg-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
           >
             Start Free Trial
           </Link>
-          <Link to="https://ziontechgroup.com/services/remote-work-productivity-suite" 
+          <Link 
+            href="https://ziontechgroup.com/services/remote-work-productivity-suite" 
             className="border border-green-600 text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors"
           >
             Schedule Demo

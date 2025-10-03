@@ -1,4 +1,4 @@
-// import React from 'react';
+import React from 'react';
 
 export const metadata = {
   title: 'Intelligent Automation Platform Revolution 2025 — End-to-End AI-Powered Automation',

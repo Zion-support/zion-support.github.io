@@ -3,37 +3,47 @@ import React from "react";
 
 export default function GenAIEvalScorecardsQuickstart(): React.JSX.Element {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+<<<<<<< HEAD
+    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">",
+=======
+    <div className= "min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">",
+>>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
       <Helmet >
         <title >GenAI Eval Scorecards Quickstart — KPIs, Budgets, Rollback</title>
-        <meta name="description",;,
-  content: "Stand up KPI‑linked evals and budget‑aware routing that gate traffic and trigger instant rollback without slowing teams.", /><link ,";,
-  rel="canonical",;,
+        <meta name: "description",;,"
+  content: "Stand up KPI‑linked evals and budget‑aware routing that gate traffic and trigger instant rollback without slowing teams.", /><link ,";,"
+  rel: "canonical",;,"
   href="https://ziontechgroup.com/blog/genai-2025-sept-30-eval-scorecards-quickstart",
         />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-        <h1 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">GenAI Eval Scorecards Quickstart</h1>",
-        <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">KPIs, Budgets, Rollback</p>";,
-        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,";,
+<<<<<<< HEAD
+      <div className="container mx-auto px-6 py-16"
+        <h1 className="text-4xl md: text-5xl font-bold mb-4">GenAI Eval Scorecards Quickstart</h1>",
+        <p className="text-zion-slate-light mb-8">KPIs, Budgets, Rollback</p>";,"
+        <div className="prose prose-invert max-w-3xl">,";,"
   href="https: //ziontechgroup.com/blog/genai-2025-sept-30-eval-scorecards-quickstart",
         />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">GenAI Eval Scorecards Quickstart</h1>",
-        <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">KPIs, Budgets, Rollback</p>",
-        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-        <h1 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">GenAI Eval Scorecards Quickstart</h1>",
-        <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">KPIs, Budgets, Rollback</p>";,
-        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,";,
+      <div className="container mx-auto px-6 py-16">",
+        <h1 className="text-4xl md: text-5xl font-bold mb-4">GenAI Eval Scorecards Quickstart</h1>",
+        <p className="text-zion-slate-light mb-8">KPIs, Budgets, Rollback</p>",
+        <div className="prose prose-invert max-w-3xl">",
+=======
+      <div className= "container mx-auto px-6 py-16">
+        <h1 className= "text-4xl md: text-5xl font-bold mb-4">GenAI Eval Scorecards Quickstart</h1>",
+        <p className= "text-zion-slate-light mb-8">KPIs, Budgets, Rollback</p>";,"
+        <div className= "prose prose-invert max-w-3xl">,";,"
   href="https: //ziontechgroup.com/blog/genai-2025-sept-30-eval-scorecards-quickstart",
         />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">GenAI Eval Scorecards Quickstart</h1>",
-        <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">KPIs, Budgets, Rollback</p>",
-        <div className="prose prose-invert max-w-3xl>
+      <div className= "container mx-auto px-6 py-16">",
+        <h1 className= "text-4xl md: text-5xl font-bold mb-4">GenAI Eval Scorecards Quickstart</h1>",
+        <p className= "text-zion-slate-light mb-8">KPIs, Budgets, Rollback</p>",
+        <div className= "prose prose-invert max-w-3xl">",
+>>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
           <p >
             Wire evaluation scorecards to business KPIs and enforce traffic gates with budget‑aware routes. Combine
             offline suites with online canaries and rollback triggers to ship confidently.

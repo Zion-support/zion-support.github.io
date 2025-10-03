@@ -1,8 +1,8 @@
-// import React from 'react';
-// import { Metadata } from 'next';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import { Metadata } from 'next';
+import Link from 'next/link';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Remote Collaboration Suite | Zion Tech Group - Enterprise Remote Work Solutions',
   description: 'Comprehensive remote work platform integrating video conferencing, messaging, project management, and team collaboration tools for distributed teams.',
   keywords: 'remote collaboration, video conferencing, project management, team collaboration, distributed teams, remote work tools',
@@ -194,12 +194,14 @@ export default function RemoteCollaborationSuitePage() {
             and team collaboration tools. Empower your distributed teams to work together seamlessly.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact" 
+            <Link 
+              href="/contact" 
               className="bg-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
             >
               Start Free Trial
             </Link>
-            <Link to="/pricing" 
+            <Link 
+              href="/pricing" 
               className="border border-purple-600 text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-purple-50 transition-colors"
             >
               View Pricing
@@ -230,7 +232,8 @@ export default function RemoteCollaborationSuitePage() {
                 ))}
               </ul>
               
-              <Link to="/contact"
+              <Link 
+                href="/contact"
                 className="inline-block w-full text-center bg-purple-600 text-white py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
               >
                 Try Free Trial
@@ -305,7 +308,8 @@ export default function RemoteCollaborationSuitePage() {
                     </li>
                   ))}
                 </ul>
-                <Link to="/contact"
+                <Link 
+                  href="/contact"
                   className={`block w-full text-center py-3 rounded-lg font-semibold transition-colors ${
                     plan.popular
                       ? 'bg-purple-600 text-white hover:bg-purple-700'

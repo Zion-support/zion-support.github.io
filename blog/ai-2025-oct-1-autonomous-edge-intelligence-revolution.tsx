@@ -1,4 +1,4 @@
-// import React from 'react';
+import React from 'react';
 
 export const metadata = {
   title: 'Autonomous Edge Intelligence Revolution 2025 — Distributed AI at the Edge',

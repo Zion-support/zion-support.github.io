@@ -1,11 +1,7 @@
-// import React from 'react';
-import { Link } from 'react-router-dom';
-// Metadata interface for React Helmet
-interface Metadata {
-  title?: string;
-  description?: string;
-  keywords?: string;
-}
+import React from 'react';
+import Link from 'next/link';
+import { Metadata } from 'next';
+
 export const metadata: Metadata = {
   title: 'Healthcare Appointment Scheduling SaaS | Zion Tech Group',
   description: 'Complete appointment management system for hospitals and clinics. Online booking, patient data management, and virtual consultation support.',

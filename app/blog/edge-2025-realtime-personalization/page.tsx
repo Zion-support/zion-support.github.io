@@ -1,4 +1,4 @@
-// import React from 'react';
+import React from 'react';
 
 export const metadata = {
   title: 'Realtime Personalization 2025 at the Edge: <100ms, Zero‑PII',

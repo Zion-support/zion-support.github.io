@@ -1,5 +1,5 @@
-// import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import Link from 'next/link';
 import FeaturedServiceCard from '../../../components/FeaturedServiceCard';
 
 export default function MicroSaaSSolutionsPage() {

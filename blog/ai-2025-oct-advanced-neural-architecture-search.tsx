@@ -1,4 +1,4 @@
-// import React from 'react';
+import React from 'react';
 
 export const metadata = {
   title: 'Advanced Neural Architecture Search 2025 — AI Designing AI Systems',

@@ -14,8 +14,8 @@
   Linkedin,
   Instagram,
 } from "lucide-react";""
-// import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import {
   // TODO: Implement

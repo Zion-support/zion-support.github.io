@@ -1,5 +1,5 @@
-// import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import Link from 'next/link';
 
 export default function AIWorkflowAutomationPage() {
   return (
@@ -16,12 +16,14 @@ export default function AIWorkflowAutomationPage() {
               and performance monitoring. Reduce manual work by 80% with our AI-powered automation platform.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact" 
+              <Link 
+                href="/contact" 
                 className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
                 Get Started Today
               </Link>
-              <Link to="/case-studies" 
+              <Link 
+                href="/case-studies" 
                 className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
               >
                 View Success Stories
@@ -275,7 +277,8 @@ export default function AIWorkflowAutomationPage() {
             </div>
             
             <div className="text-center">
-              <Link to="/contact" 
+              <Link 
+                href="/contact" 
                 className="bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
               >
                 Get Started Today
@@ -295,12 +298,14 @@ export default function AIWorkflowAutomationPage() {
             Join hundreds of organizations already using our AI workflow automation to streamline their operations.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact" 
+            <Link 
+              href="/contact" 
               className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Start Your Automation Journey
             </Link>
-            <Link to="/case-studies" 
+            <Link 
+              href="/case-studies" 
               className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
             >
               View Case Studies

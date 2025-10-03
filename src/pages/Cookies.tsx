@@ -1,58 +1,64 @@
-// import React from 'react';
+import React from 'react';
 ;
 const CookiesPage: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-      <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-          <h1 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Cookie Policy</h1>";,
-          <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,";,
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-      <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-          <h1 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Cookie Policy</h1>";,
-          <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,";,
+<<<<<<< HEAD
+    <div className="min-h-screen bg-gray-50"
+      <section className="bg-gradient-to-r from-gray-600 to-gray-800 text-white py-16"
+        <div className="container mx-auto px-6 text-center"
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">Cookie Policy</h1>";,"
+          <p className="text-xl text-gray-100 max-w-3xl mx-auto">,";,"
+=======
+    <div className= "min-h-screen bg-gray-50">
+      <section className= "bg-gradient-to-r from-gray-600 to-gray-800 text-white py-16">
+        <div className= "container mx-auto px-6 text-center">
+          <h1 className= "text-4xl md:text-5xl font-bold mb-4">Cookie Policy</h1>";,"
+          <p className= "text-xl text-gray-100 max-w-3xl mx-auto">,";,"
+>>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Learn about how we use cookies and similar technologies on our website.
           </p>
         </div>
       </section>
 
-      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-            <h2 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Cookie Policy</h2>";,
-            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-              <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,";,
+<<<<<<< HEAD
+      <div className="container mx-auto px-6 py-20"
+        <div className="max-w-4xl mx-auto"
+          <div className="bg-white p-8 rounded-xl shadow-sm"
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">Cookie Policy</h2>";,"
+            <div className="prose max-w-none"
+              <p className="text-gray-600 mb-4">,";,"
   This cookie policy explains how Zion Tech Group uses cookies and similar technologies.
               </p>
-              <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">What Are Cookies</h3>";,
-              <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,";,
+              <h3 className="text-xl font-bold text-gray-900 mb-4">What Are Cookies</h3>";,"
+              <p className="text-gray-600 mb-4">,";,"
   Cookies are small text files that are placed on your device when you visit our website.
               </p>
-              <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">How We Use Cookies</h3>";,
-              <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,";,
+              <h3 className="text-xl font-bold text-gray-900 mb-4">How We Use Cookies</h3>";,"
+              <p className="text-gray-600 mb-4">,";,"
   We use cookies to improve your experience, analyze website traffic, and personalize content.
               </p>
-              <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Managing Cookies</h3>";,
-              <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,";,
-      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-            <h2 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Cookie Policy</h2>";,
-            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-              <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,";,
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Managing Cookies</h3>";,"
+              <p className="text-gray-600">,";,"
+=======
+      <div className= "container mx-auto px-6 py-20">
+        <div className= "max-w-4xl mx-auto">
+          <div className= "bg-white p-8 rounded-xl shadow-sm">
+            <h2 className= "text-2xl font-bold text-gray-900 mb-6">Cookie Policy</h2>";,"
+            <div className= "prose max-w-none">
+              <p className= "text-gray-600 mb-4">,";,"
   This cookie policy explains how Zion Tech Group uses cookies and similar technologies.
               </p>
-              <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">What Are Cookies</h3>";,
-              <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,";,
+              <h3 className= "text-xl font-bold text-gray-900 mb-4">What Are Cookies</h3>";,"
+              <p className= "text-gray-600 mb-4">,";,"
   Cookies are small text files that are placed on your device when you visit our website.
               </p>
-              <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">How We Use Cookies</h3>";,
-              <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,";,
+              <h3 className= "text-xl font-bold text-gray-900 mb-4">How We Use Cookies</h3>";,"
+              <p className= "text-gray-600 mb-4">,";,"
   We use cookies to improve your experience, analyze website traffic, and personalize content.
               </p>
-              <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Managing Cookies</h3>";,
-              <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,";,
+              <h3 className= "text-xl font-bold text-gray-900 mb-4">Managing Cookies</h3>";,"
+              <p className= "text-gray-600">,";,"
+>>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   You can control and delete cookies through your browser settings.
               </p>
             </div>
@@ -63,4 +69,4 @@ const CookiesPage: React.FC = () => {
   );
 };
 
-export default Component;
+export default CookiesPage;

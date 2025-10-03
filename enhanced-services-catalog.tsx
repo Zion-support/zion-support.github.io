@@ -1,4 +1,4 @@
-// import React from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
@@ -11,6 +11,7 @@ import {
   BarChart3, 
   Settings, 
   Zap, 
+  Monitor, 
   Search, 
   MessageSquare, 
   CheckCircle, 
@@ -31,6 +32,7 @@ import {
   Rocket,
   Cpu,
   FileText,
+  Camera,
   Mic,
   Eye,
   Heart,
@@ -42,6 +44,10 @@ import {
   GitBranch,
   Container,
   Key,
+  AlertTriangle,
+  CheckSquare,
+  PieChart,
+  Activity,
   Zap as Lightning,
   Package,
   Share2,

@@ -1,5 +1,5 @@
-// import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'AI Hyperautomation Enterprise 2025: 98% Automation, $200M+ Savings | Zion Tech Group',

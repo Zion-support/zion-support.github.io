@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 export const metadata = {
 	title: 'GenAI 2027: Economy Modes — 50% Savings with Stable UX',
@@ -19,11 +19,11 @@ export default function Page() {
 				<li>Governance: CI policy tests and online evals to keep quality</li>
 			</ul>
 			<p>
-				Related reads: <Link to="/blog/genai-reliability-scorecards-2027">GenAI Reliability Scorecards 2027</Link>{' '}
-				and <Link to="/blog/genai-routing-blueprints-2026">GenAI Routing Blueprints 2026</Link>.
+				Related reads: <Link href="/blog/genai-reliability-scorecards-2027">GenAI Reliability Scorecards 2027</Link>{' '}
+				and <Link href="/blog/genai-routing-blueprints-2026">GenAI Routing Blueprints 2026</Link>.
 			</p>
 			<p>
-				Continue exploring in our <Link to="/blog">Blog</Link>.
+				Continue exploring in our <Link href="/blog">Blog</Link>.
 			</p>
 		</main>
 	);

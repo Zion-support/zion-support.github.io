@@ -1,11 +1,6 @@
-// import React from 'react';
-// Metadata interface for React Helmet
-interface Metadata {
-  title?: string;
-  description?: string;
-  keywords?: string;
-}
-import { Link } from 'react-router-dom';
+import React from 'react';
+import { Metadata } from 'next';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'AI Resume Screening Service | Zion Tech Group - Intelligent Candidate Evaluation',
@@ -30,12 +25,14 @@ export default function AIResumeScreeningServicePage() {
             Automate candidate evaluation, reduce bias, and identify top talent faster than ever.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact" 
+            <Link 
+              href="/contact" 
               className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
             >
               Start Free Trial
             </Link>
-            <Link to="#demo" 
+            <Link 
+              href="#demo" 
               className="border-2 border-indigo-600 text-indigo-600 px-8 py-4 rounded-lg font-semibold hover:bg-indigo-600 hover:text-white transition-all duration-300"
             >
               Watch Demo
@@ -108,7 +105,7 @@ export default function AIResumeScreeningServicePage() {
                 <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> Email support</li>
                 <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> Basic analytics</li>
               </ul>
-              <Link to="/contact" className="w-full bg-gray-100 text-gray-800 py-3 rounded-lg font-semibold text-center block hover:bg-gray-200 transition-colors">
+              <Link href="/contact" className="w-full bg-gray-100 text-gray-800 py-3 rounded-lg font-semibold text-center block hover:bg-gray-200 transition-colors">
                 Get Started
               </Link>
             </div>
@@ -128,7 +125,7 @@ export default function AIResumeScreeningServicePage() {
                 <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> Priority support</li>
                 <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> Detailed analytics</li>
               </ul>
-              <Link to="/contact" className="w-full bg-indigo-500 text-white py-3 rounded-lg font-semibold text-center block hover:bg-indigo-600 transition-colors">
+              <Link href="/contact" className="w-full bg-indigo-500 text-white py-3 rounded-lg font-semibold text-center block hover:bg-indigo-600 transition-colors">
                 Start Free Trial
               </Link>
             </div>
@@ -145,7 +142,7 @@ export default function AIResumeScreeningServicePage() {
                 <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> Dedicated support</li>
                 <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> Advanced reporting</li>
               </ul>
-              <Link to="/contact" className="w-full bg-purple-500 text-white py-3 rounded-lg font-semibold text-center block hover:bg-purple-600 transition-colors">
+              <Link href="/contact" className="w-full bg-purple-500 text-white py-3 rounded-lg font-semibold text-center block hover:bg-purple-600 transition-colors">
                 Contact Sales
               </Link>
             </div>
@@ -215,7 +212,7 @@ export default function AIResumeScreeningServicePage() {
                 <span>Professional Services</span>
               </div>
             </div>
-            <Link to="/contact" className="mt-6 bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold inline-block hover:bg-gray-100 transition-colors">
+            <Link href="/contact" className="mt-6 bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold inline-block hover:bg-gray-100 transition-colors">
               Start Your Free Trial
             </Link>
           </div>
@@ -244,7 +241,7 @@ export default function AIResumeScreeningServicePage() {
           </div>
           <div className="text-center mt-8">
             <p className="text-lg mb-4">Ready to see how much you can save?</p>
-            <Link to="/contact" className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+            <Link href="/contact" className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
               Get Your ROI Report
             </Link>
           </div>
