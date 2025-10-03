@@ -1,10 +1,6 @@
 // import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  ArrowRight, 
-  Shield, 
-  Eye
-} from 'lucide-react';
+import { ArrowRight, Shield, Eye, Rocket, Award, Tag, Calendar, Clock, TrendingUp, Globe } from 'lucide-react';
 
 export const metadata = {
   title: 'News & Updates - Zion Tech Group | Latest AI Industry News',

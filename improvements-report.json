@@ -5,13 +5,32 @@
     "Performance optimization utilities",
     "Accessibility enhancement utilities",
     "SEO optimization utilities",
-    "Security enhancement utilities"
+    "Security enhancement utilities",
+    "performanceMonitor",
+    "lazyLoading",
+    "csp",
+    "inputSanitization",
+    "metaTags",
+    "structuredData",
+    "ariaUtils",
+    "focusManagement",
+    "errorBoundary",
+    "asyncErrorHandling"
   ],
   "files": [
     "src/utils/performanceOptimizations.ts",
     "src/utils/accessibilityEnhancements.ts",
     "src/utils/seoOptimizations.ts",
     "src/utils/securityEnhancements.ts",
-    "src/components/EnhancedErrorBoundary.tsx"
-  ]
+    "src/components/EnhancedErrorBoundary.tsx",
+    "scripts/apply-improvements.js"
+  ],
+  "summary": {
+    "performance": 3,
+    "security": 3,
+    "seo": 3,
+    "accessibility": 3,
+    "errorHandling": 3,
+    "totalFiles": 6
+  }
 }

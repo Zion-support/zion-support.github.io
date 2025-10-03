@@ -1,14 +1,6 @@
 // import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  ArrowRight, 
-  Shield, 
-  Book,
-  FileText,
-  Video,
-  Lightbulb,
-  Clock
-} from 'lucide-react';
+import { ArrowRight, Shield, Book, FileText, Video, Lightbulb, Clock, Users, Rocket, CheckCircle, Award, ExternalLink } from 'lucide-react';
 
 export const metadata = {
   title: 'AI Resources - Zion Tech Group | Guides, Case Studies & Documentation',
