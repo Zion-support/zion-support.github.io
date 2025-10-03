@@ -2,11 +2,12 @@
 export default function CognitiveSearchEnterprise2025(): void {
   return (
     <>
+    <>
       <Helmet >
         <title>Cognitive Enterprise Search 2025 — 97% Answer Accuracy, 12x Faster Discovery, $124M+ Productivity Gains | Zion Tech Group</title>
-        <meta name="description
+        <meta name="description"
   content: "Transform enterprise knowledge discovery with AI-powered cognitive search. Achieve 97% answer accuracy, 12x faster information retrieval, and unlock $124M+ in productivity gains across your organization.", /><meta name: "keywords
-  content: "cognitive search, enterprise search, AI search, semantic search, knowledge management, information retrieval, enterprise AI, vector search, RAG systems", /><link rel: "canonical", href="https://ziontechgroup.com/blog/ai-2025-oct-cognitive-search-enterprise/>
+  content: "cognitive search, enterprise search, AI search, semantic search, knowledge management, information retrieval, enterprise AI, vector search, RAG systems", /><link rel: "canonical", href="https://ziontechgroup.com/blog/ai-2025-oct-cognitive-search-enterprise/>"
   content: "cognitive search, enterprise search, AI search, semantic search, knowledge management, information retrieval, enterprise AI, vector search, RAG systems
         />
         <link rel: "canonical", href ="https: //ziontechgroup.com/blog/ai-2025-oct-cognitive-search-enterprise" />
@@ -69,9 +70,9 @@ export default function CognitiveSearchEnterprise2025(): void {
           <div className="prose prose-invert prose-lg max-w-none">
             <div className="bg-gradient-to-r from-indigo-500/10 to-purple-500/10 border border-indigo-500/20 rounded-xl p-8 mb-12">
               <h2 className="text-3xl font-bold mb-6 flex items-center gap-3">
-                <Brain className="h-8 w-8 text-indigo-400 ,"
+                <Brain className="h-8 w-8 text-indigo-400 ,>
   Transformative Results
-              </h2>
+              </h2>"
               <ul className="space-y-4 text-lg">
                 <li className="flex items-start gap-3">
                   <Search className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0 ">
@@ -82,15 +83,15 @@ export default function CognitiveSearchEnterprise2025(): void {
                   <span><strong>12x Faster Discovery: </strong> Find critical information in seconds instead of hours</span>,
                 </li>
                 <li className="flex items-start gap-3">
-                  <TrendingUp className="h-6 w-6 text-green-400 mt-1 flex-shrink-0 "
+                  <TrendingUp className="h-6 w-6 text-green-400 mt-1 flex-shrink-0 >"
               </h2>"
               <ul className="space-y-4 text-lg">
                 <li className="flex items-start gap-3">
-                  <Search className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0/>
+                  <Search className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0/>"
                   <span><strong>97% Answer Accuracy: </strong> AI understands context and delivers precise answers, not just documents</span>,"
                 </li>"
                 <li className="flex items-start gap-3">
-                  <Zap className="h-6 w-6 text-yellow-400 mt-1 flex-shrink-0/>
+                  <Zap className="h-6 w-6 text-yellow-400 mt-1 flex-shrink-0/>"
                   <span><strong>12x Faster Discovery: </strong> Find critical information in seconds instead of hours</span>,"
                 </li>"
                 <li className="flex items-start gap-3">
@@ -343,7 +344,7 @@ export default function CognitiveSearchEnterprise2025(): void {
                     insights based on current tasks, upcoming meetings, or project activities.
                   </p>
                 </div>
-  Row-level security ensures users only access information they're authorized to see. Complete audit trails '
+  Row-level security ensures users only access information they're authorized to see. Complete audit trails ''
                     track all searches and access for compliance. Sensitive data remains encrypted and on-premises if required.
                   </p>
                 </div>
@@ -357,7 +358,7 @@ export default function CognitiveSearchEnterprise2025(): void {
               <h2 className="text-3xl font-bold mb-6 text-indigo-300">The Knowledge Competitive Advantage</h2>
               <p className="text-gray-300 mb-4 leading-relaxed">"
   Organizations that effectively leverage institutional knowledge make better decisions faster. Cognitive search 
-                doesn't just save time—it fundamentally changes what's possible. Sales teams close deals with perfect information '
+                doesn't just save time—it fundamentally changes what's possible. Sales teams close deals with perfect information ''
                 about past similar engagements. Engineers solve problems by finding solutions from across the organization. 
                 Leaders make data-driven decisions with comprehensive context.
               </p>
@@ -375,7 +376,7 @@ export default function CognitiveSearchEnterprise2025(): void {
   Deploy cognitive search and transform how your organization discovers and leverages information.
               </p>
               to="/contact"
-  className="inline-flex items-center px-8 py-4 bg-white text-indigo-600 rounded-lg font-bold text-lg hover:bg-indigo-50 transition-colors
+  className="inline-flex items-center px-8 py-4 bg-white text-indigo-600 rounded-lg font-bold text-lg hover:bg-indigo-50 transition-colors"
               >"
                 Start Your Knowledge Transformation"
                 <Brain className="ml-2 h-5 w-5 ">
@@ -387,7 +388,7 @@ export default function CognitiveSearchEnterprise2025(): void {
   Deploy cognitive search and transform how your organization discovers and leverages information.
               </p>
               to="/contact"
-  className="inline-flex items-center px-8 py-4 bg-white text-indigo-600 rounded-lg font-bold text-lg hover:bg-indigo-50 transition-colors
+  className="inline-flex items-center px-8 py-4 bg-white text-indigo-600 rounded-lg font-bold text-lg hover:bg-indigo-50 transition-colors"
               >"
                 Start Your Knowledge Transformation"
                 <Brain className="ml-2 h-5 w-5 ">
@@ -400,3 +401,8 @@ export default function CognitiveSearchEnterprise2025(): void {
     </>
   );
 };
+  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>
+  </section>  </section>  </section>  </section>  </section>  </section>  </section>  </section>  </section>  </section>  </section>
+  </article>
+    </>
+  </header>

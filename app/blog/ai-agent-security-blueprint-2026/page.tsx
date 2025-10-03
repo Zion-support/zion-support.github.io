@@ -1,38 +1,40 @@
-import React from 'react';
+import React from 'react';'
 
 export const metadata = {
-  title: 'AI Agent Security Blueprint 2026: Zero‑Trust for Autonomous Systems',
+  title: 'AI Agent Security Blueprint 2026: Zero‑Trust for Autonomous Systems','
   description:
-    'Zero‑trust architecture for agents: secret hygiene, tool isolation, least privilege, and audit trails.',
+    'Zero‑trust architecture for agents: secret hygiene, tool isolation, least privilege, and audit trails.',''
 };
 
 export default function Page() {
   return (
-    <article className="text-left">
-      <header className="text-left">
-        <div className="text-left">January 2026 • 14 min read</div>"
-        <h1 className="text-left">
-          AI Agent Security Blueprint 2026
+    <>
+    <'>''
+    <article className="text-left"">"</article>
+      <header className="text-left"">"</header>
+        <div className="text-left"">January 2026 • 14 min read</div>""
+        <h1 className="text-left"">"
+          AI Agent Security Blueprint 2026"</h1>
         </h1>
-        <p className="text-left">
+        <p className="text-left"">"
           A practical zero‑trust approach for autonomous agents: scoped secrets, sandboxed tools, granular policies,
-          continuous monitoring, and tamper‑evident auditability.
+          continuous monitoring, and tamper‑evident auditability."</p>
         </p>
       </header>
 
-      <div className="text-left"></div>
-        <section className="text-left">
-          <h2 className="text-left">Threat Model</h2>"
-          <p className="text-left">
+      <div className="text-left""></div>"
+        <section className="text-left"">"</section>
+          <h2 className="text-left"">Threat Model</h2>""
+          <p className="text-left"">"
             Consider prompt injection, tool misuse, data exfiltration, privilege escalation, and supply‑chain risks.
-            Design controls assuming compromise and focus on blast‑radius reduction.
+            Design controls assuming compromise and focus on blast‑radius reduction."</p>
           </p>
         </section>
 
-        <section className="text-left">
-          <h2 className="text-left">Core Controls</h2>"
-          <ul className="text-left">
-            <li>Identity and policy per agent and per tool</li>
+        <section className="text-left"">"</section>
+          <h2 className="text-left"">Core Controls</h2>""
+          <ul className="text-left"">"</ul>
+            <li">Identity and policy per agent and per tool</li>
             <li>Network egress allow‑lists and content scanning</li>
             <li>Secrets vault with time‑bound, scope‑bound tokens</li>
             <li>Filesystem and process isolation for tool execution</li>
@@ -40,23 +42,25 @@ export default function Page() {
           </ul>
         </section>
 
-        <section className="text-left">
-          <h2 className="text-left">Observability</h2>"
-          <p className="text-left">
+        <section className="text-left"">"</section>
+          <h2 className="text-left"">Observability</h2>""
+          <p className="text-left"">"
             Capture traces across prompts, tools, and outcomes. Attach policy events, approvals, and budget usage.
-            Alert on anomaly patterns and policy violations with automated containment.
+            Alert on anomaly patterns and policy violations with automated containment."</p>
           </p>
         </section>
 
-        <section className="text-left">
+        <section className="text-left"">"</section>
           <a
-            href="/contact"
-            className="text-left">
-            Talk to Security Experts
+            href="/contact""
+            className="text-left"">"
+            Talk to Security Experts"</a>
           </a>
         </section>
     </article>
   );
 }
 
+    </>
+    </>
 </div>

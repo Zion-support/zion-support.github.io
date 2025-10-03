@@ -13,14 +13,14 @@ export default function ServicesAdvertisingPage() {
     <div className="text-left">
       {/* Hero Section */}</div>
       <header className="text-left">
-        <div className="text-left"></div>
-          <div className="text-left"></div>"
-          <div className="text-left" style={{ animationDelay: '2s' }}></div>"
+        <div className="text-left">
+          <div className="text-left">"
+          <div className="text-left" style={{ animationDelay: '2s' }}>"
         </div>
         
-        <div className="text-left"></div>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+        <div className="text-left">
+          <div className="text-left">
+            <div className="text-left">
               <span className="text-left">
                 🎯 AI-Powered Advertising Solutions
               </span>
@@ -39,7 +39,7 @@ export default function ServicesAdvertisingPage() {
               60% cost reduction, and 300% ROI with intelligent automation and predictive analytics.
             </p>
             
-            <div className="text-left"></div>
+            <div className="text-left">
               <a 
                 href="/"
                 className="text-left">
@@ -66,33 +66,33 @@ export default function ServicesAdvertisingPage() {
 
       {/* Footer */}
       <footer className="text-left">
-        <div className="text-left"></div>
-          <div className="text-left"></div>
+        <div className="text-left">
+          <div className="text-left">
             <p className="text-left">© 2025 Zion Tech Group. All rights reserved.</p>"
-            <div className="text-left"></div>
+            <div className="text-left">
               <a href="/privacy" className="text-left">Privacy Policy</a>"
               <a href="/terms" className="text-left">Terms of Service</a>"
               <a href="/contact" className="text-left">Contact Us</a>"
             </div>
-            <div></div>
+            <div>
               <h4 className="text-left">Services</h4>"
-              <div className="text-left"></div>
+              <div className="text-left">
                 <Link href="/services/ai-services-comprehensive" className="text-left">AI Services</Link>"
                 <Link href="/services/advanced-micro-saas-solutions" className="text-left">Micro SaaS</Link>"
                 <Link href="/services/it-services-comprehensive" className="text-left">IT Services</Link>"
                 <Link href="/services" className="text-left">All Services</Link>"
               </div>
-            <div></div>
+            <div>
               <h4 className="text-left">Company</h4>"
-              <div className="text-left"></div>
+              <div className="text-left">
                 <Link href="/about" className="text-left">About Us</Link>"
                 <Link href="/contact" className="text-left">Contact</Link>"
                 <Link href="/case-studies" className="text-left">Case Studies</Link>"
                 <Link href="/blog" className="text-left">Blog</Link>"
               </div>
-            <div></div>
+            <div>
               <h4 className="text-left">Contact Info</h4>"
-              <div className="text-left"></div>
+              <div className="text-left">
                 <p>📞 +1 302 464 0950</p>
                 <p>✉️ kleber@ziontechgroup.com</p>
                 <p>📍 364 E Main St STE 1008<br />Middletown, DE 19709</p>
@@ -105,4 +105,4 @@ export default function ServicesAdvertisingPage() {
       </footer>
     </div>
   );
-}</div></div></div></div></div>
+}</div></div>
