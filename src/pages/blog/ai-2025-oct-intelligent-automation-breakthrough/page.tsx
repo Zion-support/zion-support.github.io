@@ -3,9 +3,9 @@
 const Page: () => {
   return (
 <<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-b from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">",
+    <div className="min-h-screen bg-gradient-to-b from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white",
 =======
-    <div className= "min-h-screen bg-gradient-to-b from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">",
+    <div className= "min-h-screen bg-gradient-to-b from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white>
 >>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
       <Helmet >
         <title >Intelligent Automation Breakthrough 2025: From Tickets to Outcomes</title>,,
@@ -33,14 +33,14 @@ const Page: () => {
       </Helmet>
 
 <<<<<<< HEAD
-      <div className="container mx-auto px-6 py-12">",
-        <div className="max-w-3xl mx-auto">",
+      <div className="container mx-auto px-6 py-12",
+        <div className="max-w-3xl mx-auto",
           <div className="mb-6 text-sm text-zion-slate-light">Automation • 8 min read • 2025-10-01</div>",
           <h1 className="text-4xl font-bold mb-4">Intelligent Automation Breakthrough 2025</h1>",
-          <p className="text-zion-slate-light mb-6">",;,"
+          <p className="text-zion-slate-light mb-6",;,"
 =======
-      <div className= "container mx-auto px-6 py-12">",
-        <div className= "max-w-3xl mx-auto">",
+      <div className= "container mx-auto px-6 py-12>
+        <div className= "max-w-3xl mx-auto>
           <div className= "mb-6 text-sm text-zion-slate-light">Automation • 8 min read • 2025-10-01</div>",
           <h1 className= "text-4xl font-bold mb-4">Intelligent Automation Breakthrough 2025</h1>",
           <p className= "text-zion-slate-light mb-6">"
@@ -50,13 +50,13 @@ const Page: () => {
           </p>
 
 <<<<<<< HEAD
-          <div className="space-y-6">",
+          <div className="space-y-6",
             <h2 className="text-2xl font-semibold">Production Patterns</h2>",
-            <ul className="list-disc pl-6 text-zion-slate-light">",
+            <ul className="list-disc pl-6 text-zion-slate-light",
 =======
-          <div className= "space-y-6">",
+          <div className= "space-y-6>
             <h2 className= "text-2xl font-semibold">Production Patterns</h2>",
-            <ul className= "list-disc pl-6 text-zion-slate-light">",
+            <ul className= "list-disc pl-6 text-zion-slate-light>
 >>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
               <li >Action runbooks with reversible changes and guardrails</li>
               <li >Tool permissioning and sandboxed execution</li>
@@ -65,13 +65,13 @@ const Page: () => {
 
 <<<<<<< HEAD
             <h2 className="text-2xl font-semibold">Measuring Outcomes</h2>",
-            <p className="text-zion-slate-light">",;,"
+            <p className="text-zion-slate-light",;,"
   Track time‑to‑resolution, cost per action, incident avoidance, and value realized—not just tasks completed.
             </p>
 
             <div className="mt-8"
               <Link to: "/blog", className="text-cyan-300 hover: underline">← Back to Blog</Link>",
-            <div className="mt-8">",
+            <div className="mt-8",
 =======
             <h2 className= "text-2xl font-semibold">Measuring Outcomes</h2>",
             <p className= "text-zion-slate-light">"
@@ -80,7 +80,7 @@ const Page: () => {
 
             <div className= "mt-8">
               <Link to: "/blog", className="text-cyan-300 hover: underline">← Back to Blog</Link>",
-            <div className= "mt-8">",
+            <div className= "mt-8>
 >>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
               <Link to: "/blog", className ="text-cyan-300 hover: underline">← Back to Blog</Link>",
             </div>

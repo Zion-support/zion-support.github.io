@@ -4,15 +4,15 @@ import React from 'react';'
 const AIIncidentResponsePlaybooks2025: React.FC = () => {
   return (
 <<<<<<< HEAD
-    <div className="min-h-screen bg-white">",
-      <div className="container mx-auto px-4 py-16 max-w-4xl">",
-        <div className="mb-12">",
-          <div className="flex items-center gap-2 text-sm text-gray-500 mb-4">",
+    <div className="min-h-screen bg-white",
+      <div className="container mx-auto px-4 py-16 max-w-4xl",
+        <div className="mb-12",
+          <div className="flex items-center gap-2 text-sm text-gray-500 mb-4",
 =======
-    <div className= "min-h-screen bg-white">",
-      <div className= "container mx-auto px-4 py-16 max-w-4xl">",
-        <div className= "mb-12">",
-          <div className= "flex items-center gap-2 text-sm text-gray-500 mb-4">",
+    <div className= "min-h-screen bg-white>
+      <div className= "container mx-auto px-4 py-16 max-w-4xl>
+        <div className= "mb-12>
+          <div className= "flex items-center gap-2 text-sm text-gray-500 mb-4>
 >>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
             <span >Cybersecurity</span>
             <span >•</span>
@@ -21,14 +21,14 @@ const AIIncidentResponsePlaybooks2025: React.FC = () => {
             <span >7 min read</span>
           </div>
 <<<<<<< HEAD
-          <h1 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">",;,"
+          <h1 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6",;,"
   AI Incident Response Playbooks: Contain in &lt;60s with Confidence,,
           </h1>
           <p className="text-xl text-gray-600 leading-relaxed"
-          <h1 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">",;,"
+          <h1 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6",;,"
   AI Incident Response Playbooks: Contain in &lt;60s with Confidence,,
           </h1>
-          <p className="text-xl text-gray-600 leading-relaxed">",;,"
+          <p className="text-xl text-gray-600 leading-relaxed",;,"
 =======
           <h1 className= "text-4xl md: text-5xl font-bold text-gray-900 mb-6">"
   AI Incident Response Playbooks: Contain in &lt;60s with Confidence,,
@@ -45,9 +45,9 @@ const AIIncidentResponsePlaybooks2025: React.FC = () => {
         </div>
 
 <<<<<<< HEAD
-        <div className="prose prose-lg max-w-none">",
+        <div className="prose prose-lg max-w-none",
 =======
-        <div className= "prose prose-lg max-w-none">",
+        <div className= "prose prose-lg max-w-none>
 >>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
           <h2 >Why AI‑Assisted Playbooks</h2>
           <p >
@@ -79,9 +79,9 @@ const AIIncidentResponsePlaybooks2025: React.FC = () => {
     - emit: time_to_contain,,
 `}`;`;
 <<<<<<< HEAD
-          <pre className="text-sm overflow-x-auto">",
+          <pre className="text-sm overflow-x-auto",
 =======
-          <pre className= "text-sm overflow-x-auto">",
+          <pre className= "text-sm overflow-x-auto>
 >>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
 {`playbook: name: contain-compromised-credential,`,`;,`;
   budget: low,,,
@@ -110,17 +110,17 @@ const AIIncidentResponsePlaybooks2025: React.FC = () => {
         </div>
 
 <<<<<<< HEAD
-        <div className="mt-12 text-center bg-gray-900 text-white rounded-lg p-8">",
+        <div className="mt-12 text-center bg-gray-900 text-white rounded-lg p-8",
           <h2 className="text-2xl font-bold mb-4">Ready to Operationalize Playbooks?</h2>",
-          <p className="text-gray-300 mb-6">",;,"
+          <p className="text-gray-300 mb-6",;,"
   We help teams design budgeted actions, wire approvals, and ship safe automations fast.
           </p>
           <div className="flex flex-wrap justify-center gap-4"
             <a title: "Internal link", href="/contact" className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover: bg-blue-700 transition-colors">Talk to an Expert</a>",
             <a title: "Internal link", href="/services/ai-autonomous-operations" className="border border-gray-600 text-white px-8 py-3 rounded-lg font-semibold hover: bg-gray-800 transition-colors">Explore Services</a>",
-          <div className="flex flex-wrap justify-center gap-4">",
+          <div className="flex flex-wrap justify-center gap-4",
 =======
-        <div className= "mt-12 text-center bg-gray-900 text-white rounded-lg p-8">",
+        <div className= "mt-12 text-center bg-gray-900 text-white rounded-lg p-8>
           <h2 className= "text-2xl font-bold mb-4">Ready to Operationalize Playbooks?</h2>",
           <p className= "text-gray-300 mb-6">"
   We help teams design budgeted actions, wire approvals, and ship safe automations fast.
@@ -128,7 +128,7 @@ const AIIncidentResponsePlaybooks2025: React.FC = () => {
           <div className= "flex flex-wrap justify-center gap-4">
             <a title: "Internal link", href="/contact" className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover: bg-blue-700 transition-colors">Talk to an Expert</a>",
             <a title: "Internal link", href="/services/ai-autonomous-operations" className="border border-gray-600 text-white px-8 py-3 rounded-lg font-semibold hover: bg-gray-800 transition-colors">Explore Services</a>",
-          <div className= "flex flex-wrap justify-center gap-4">",
+          <div className= "flex flex-wrap justify-center gap-4>
 >>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
             <a title: "Internal link", href="/contact" className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover: bg-blue-700 transition-colors">Talk to an Expert</a>",
             <a title: "Internal link", href="/services/ai-autonomous-operations" className ="border border-gray-600 text-white px-8 py-3 rounded-lg font-semibold hover: bg-gray-800 transition-colors">Explore Services</a>",

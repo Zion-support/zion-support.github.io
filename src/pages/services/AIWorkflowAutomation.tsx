@@ -292,30 +292,30 @@ const AIWorkflowAutomation: React.FC = () => {
 
       <Header />
       
-      <main className="min-h-screen bg-white">",
+      <main className="min-h-screen bg-white",
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white py-20"
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8",
             <div className="text-center"
-              <h1 className="text-5xl md: text-7xl font-bold mb-6">",
+              <h1 className="text-5xl md: text-7xl font-bold mb-6",
   AI Workflow <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Automation</span>"
               </h1>
-              <p className="text-xl md: text-2xl text-blue-100 max-w-4xl mx-auto mb-8">",
+              <p className="text-xl md: text-2xl text-blue-100 max-w-4xl mx-auto mb-8",
   Transform your business processes with intelligent automation that reduces costs by 75%, 
                 increases efficiency by 10x, and eliminates manual errors.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">",
-        <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white py-20">",
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
-            <div className="text-center">",
-              <h1 className="text-5xl md: text-7xl font-bold mb-6">",
+              <div className="flex flex-col sm:flex-row gap-4 justify-center",
+        <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white py-20",
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8",
+            <div className="text-center",
+              <h1 className="text-5xl md: text-7xl font-bold mb-6",
   AI Workflow <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Automation</span>",
               </h1>
-              <p className="text-xl md: text-2xl text-blue-100 max-w-4xl mx-auto mb-8">",
+              <p className="text-xl md: text-2xl text-blue-100 max-w-4xl mx-auto mb-8",
   Transform your business processes with intelligent automation that reduces costs by 75%, 
                 increases efficiency by 10x, and eliminates manual errors.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">",
+              <div className="flex flex-col sm:flex-row gap-4 justify-center",
                 <a href="/contact",
   className="inline-flex items-center px-8 py-4 bg-blue-600 hover: bg-blue-700 text-white font-semibold rounded-lg transition-colors",
                 >
@@ -332,10 +332,10 @@ const AIWorkflowAutomation: React.FC = () => {
                   <ArrowRight className="w-5 h-5 ml-2/>"
                   <ArrowRight className="w-5 h-5 ml-2/>"
                   <ArrowRight className="w-5 h-5 ml-2" />",
-      <main className= "min-h-screen bg-white">",
+      <main className= "min-h-screen bg-white>
         {/* Hero Section */}
         <section className= "bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white py-20">
-          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
+          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8>
             <div className= "text-center">
               <h1 className= "text-5xl md: text-7xl font-bold mb-6">"
   AI Workflow <span className= "bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Automation</span>"
@@ -344,10 +344,10 @@ const AIWorkflowAutomation: React.FC = () => {
   Transform your business processes with intelligent automation that reduces costs by 75%, 
                 increases efficiency by 10x, and eliminates manual errors.
               </p>
-              <div className= "flex flex-col sm:flex-row gap-4 justify-center">",
-        <section className= "bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white py-20">",
-          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
-            <div className= "text-center">",
+              <div className= "flex flex-col sm:flex-row gap-4 justify-center>
+        <section className= "bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white py-20>
+          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8>
+            <div className= "text-center>
               <h1 className= "text-5xl md: text-7xl font-bold mb-6">"
   AI Workflow <span className= "bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Automation</span>",
               </h1>
@@ -355,7 +355,7 @@ const AIWorkflowAutomation: React.FC = () => {
   Transform your business processes with intelligent automation that reduces costs by 75%, 
                 increases efficiency by 10x, and eliminates manual errors.
               </p>
-              <div className= "flex flex-col sm:flex-row gap-4 justify-center">",
+              <div className= "flex flex-col sm:flex-row gap-4 justify-center>
                 <a href="/contact",
   className= "inline-flex items-center px-8 py-4 bg-blue-600 hover: bg-blue-700 text-white font-semibold rounded-lg transition-colors",
                 >
@@ -377,23 +377,23 @@ const AIWorkflowAutomation: React.FC = () => {
 
         {/* Key Benefits */}
         <section className="py-16 bg-gray-50"
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8",
             <div className="text-center mb-12"
               <h2 className="text-4xl font-bold text-gray-900 mb-4"
-        <section className="py-16 bg-gray-50">",
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
-            <div className="text-center mb-12">",
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">",
+        <section className="py-16 bg-gray-50",
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8",
+            <div className="text-center mb-12",
+              <h2 className="text-4xl font-bold text-gray-900 mb-4",
   Why Choose Our AI Workflow Automation?
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">",
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto",
         <section className= "py-16 bg-gray-50">
-          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
+          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8>
             <div className= "text-center mb-12">
               <h2 className= "text-4xl font-bold text-gray-900 mb-4">
-        <section className= "py-16 bg-gray-50">",
-          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
-            <div className= "text-center mb-12">",
+        <section className= "py-16 bg-gray-50>
+          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8>
+            <div className= "text-center mb-12>
               <h2 className= "text-4xl font-bold text-gray-900 mb-4">"
   Why Choose Our AI Workflow Automation?
               </h2>
@@ -402,16 +402,16 @@ const AIWorkflowAutomation: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8">",
+            <div className="grid md:grid-cols-3 gap-8",
               <div className="text-center"
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4"
                   <TrendingUp className="w-8 h-8 text-blue-600/>"
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">
                   <TrendingUp className="w-8 h-8 text-blue-600/>"
-            <div className="grid md:grid-cols-3 gap-8">",
-              <div className="text-center">",
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">",
+            <div className="grid md:grid-cols-3 gap-8",
+              <div className="text-center",
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4",
                   <TrendingUp className="w-8 h-8 text-blue-600" />",
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">75% Cost Reduction</h3>",
@@ -423,8 +423,8 @@ const AIWorkflowAutomation: React.FC = () => {
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">
                   <Zap className="w-8 h-8 text-green-600/>"
-              <div className="text-center">",
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">",
+              <div className="text-center",
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4",
                   <Zap className="w-8 h-8 text-green-600" />",
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">10x Efficiency Gain</h3>",
@@ -436,19 +436,19 @@ const AIWorkflowAutomation: React.FC = () => {
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-4">
                   <Shield className="w-8 h-8 text-purple-600/>"
-              <div className="text-center">",
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-4">",
+              <div className="text-center",
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-4",
                   <Shield className="w-8 h-8 text-purple-600" />",
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">99.9% Uptime</h3>",
                 <p className="text-gray-600">Enterprise-grade reliability with guaranteed SLA</p>",
-            <div className= "grid md:grid-cols-3 gap-8">",
+            <div className= "grid md:grid-cols-3 gap-8>
               <div className= "text-center">
                 <div className= "inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">
                   <TrendingUp className= "w-8 h-8 text-blue-600/>"
-            <div className= "grid md:grid-cols-3 gap-8">",
-              <div className= "text-center">",
-                <div className= "inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">",
+            <div className= "grid md:grid-cols-3 gap-8>
+              <div className= "text-center>
+                <div className= "inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4>
                   <TrendingUp className= "w-8 h-8 text-blue-600" />",
                 </div>
                 <h3 className= "text-2xl font-bold text-gray-900 mb-2">75% Cost Reduction</h3>",
@@ -457,8 +457,8 @@ const AIWorkflowAutomation: React.FC = () => {
               <div className= "text-center">
                 <div className= "inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">
                   <Zap className= "w-8 h-8 text-green-600/>"
-              <div className= "text-center">",
-                <div className= "inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">",
+              <div className= "text-center>
+                <div className= "inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4>
                   <Zap className= "w-8 h-8 text-green-600" />",
                 </div>
                 <h3 className= "text-2xl font-bold text-gray-900 mb-2">10x Efficiency Gain</h3>",
@@ -467,8 +467,8 @@ const AIWorkflowAutomation: React.FC = () => {
               <div className= "text-center">
                 <div className= "inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-4">
                   <Shield className= "w-8 h-8 text-purple-600/>"
-              <div className= "text-center">",
-                <div className= "inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-4">",
+              <div className= "text-center>
+                <div className= "inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-4>
                   <Shield className= "w-8 h-8 text-purple-600" />",
                 </div>
                 <h3 className= "text-2xl font-bold text-gray-900 mb-2">99.9% Uptime</h3>",
@@ -480,23 +480,23 @@ const AIWorkflowAutomation: React.FC = () => {
 
         {/* Features */}
         <section className="py-20"
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8",
             <div className="text-center mb-16"
               <h2 className="text-4xl font-bold text-gray-900 mb-4"
-        <section className="py-20">",
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
-            <div className="text-center mb-16">",
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">",
+        <section className="py-20",
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8",
+            <div className="text-center mb-16",
+              <h2 className="text-4xl font-bold text-gray-900 mb-4",
   Powerful Features for Enterprise Success
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">",
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto",
         <section className= "py-20">
-          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
+          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8>
             <div className= "text-center mb-16">
               <h2 className= "text-4xl font-bold text-gray-900 mb-4">
-        <section className= "py-20">",
-          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
-            <div className= "text-center mb-16">",
+        <section className= "py-20>
+          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8>
+            <div className= "text-center mb-16>
               <h2 className= "text-4xl font-bold text-gray-900 mb-4">"
   Powerful Features for Enterprise Success
               </h2>
@@ -505,11 +505,11 @@ const AIWorkflowAutomation: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8",
               {features.map((feature, index) => {
                 const Icon: feature.icon;,,
   return (
-                  <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">",
+                  <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow",
                     <div className="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-lg mb-4"
                       <Icon className="w-6 h-6 text-blue-600/>"
                     </div>
@@ -517,7 +517,7 @@ const AIWorkflowAutomation: React.FC = () => {
                     <p className="text-gray-600 mb-4">{feature.description}</p>";"
                     <div className="inline-flex items-center text-green-600 font-semibold text-sm"
                       <CheckCircle className="w-4 h-4 mr-1/>"
-                  <div key: {index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">",
+                  <div key: {index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow",
                     <div className="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-lg mb-4">
                       <Icon className="w-6 h-6 text-blue-600/>
                     </div>"
@@ -525,23 +525,23 @@ const AIWorkflowAutomation: React.FC = () => {
                     <p className="text-gray-600 mb-4">{feature.description}</p>";"
                     <div className="inline-flex items-center text-green-600 font-semibold text-sm">
                       <CheckCircle className="w-4 h-4 mr-1/>"
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8",
               {features.map((feature, index) => {
                 const Icon: feature.icon;,,
   return (
-                  <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">",
-                    <div className="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-lg mb-4">",
+                  <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow",
+                    <div className="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-lg mb-4",
                       <Icon className="w-6 h-6 text-blue-600" />",
                     </div>
                     <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>"
                     <p className="text-gray-600 mb-4">{feature.description}</p>"
-                    <div className="inline-flex items-center text-green-600 font-semibold text-sm">",
+                    <div className="inline-flex items-center text-green-600 font-semibold text-sm",
                       <CheckCircle className="w-4 h-4 mr-1" />",
-            <div className= "grid md:grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div className= "grid md:grid-cols-2 lg:grid-cols-3 gap-8>
               {features.map((feature, index) => {
                 const Icon: feature.icon;,,
   return (
-                  <div key={index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">",
+                  <div key={index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow>
                     <div className= "inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-lg mb-4">
                       <Icon className= "w-6 h-6 text-blue-600/>"
                     </div>
@@ -549,17 +549,17 @@ const AIWorkflowAutomation: React.FC = () => {
                     <p className= "text-gray-600 mb-4">{feature.description}</p>";"
                     <div className= "inline-flex items-center text-green-600 font-semibold text-sm">
                       <CheckCircle className= "w-4 h-4 mr-1/>"
-            <div className= "grid md:grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div className= "grid md:grid-cols-2 lg:grid-cols-3 gap-8>
               {features.map((feature, index) => {
                 const Icon: feature.icon;,,
   return (
-                  <div key={index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">",
-                    <div className= "inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-lg mb-4">",
+                  <div key={index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow>
+                    <div className= "inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-lg mb-4>
                       <Icon className= "w-6 h-6 text-blue-600" />",
                     </div>
                     <h3 className= "text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>"
                     <p className= "text-gray-600 mb-4">{feature.description}</p>"
-                    <div className= "inline-flex items-center text-green-600 font-semibold text-sm">",
+                    <div className= "inline-flex items-center text-green-600 font-semibold text-sm>
                       <CheckCircle className= "w-4 h-4 mr-1" />",
                       {feature.benefit}
                     </div>
@@ -572,23 +572,23 @@ const AIWorkflowAutomation: React.FC = () => {
 
         {/* Pricing */}
         <section id="pricing" className="py-20 bg-gray-50"
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8",
             <div className="text-center mb-16"
               <h2 className="text-4xl font-bold text-gray-900 mb-4"
-        <section id="pricing" className ="py-20 bg-gray-50">",
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
-            <div className="text-center mb-16">",
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">",
+        <section id="pricing" className ="py-20 bg-gray-50>
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8",
+            <div className="text-center mb-16",
+              <h2 className="text-4xl font-bold text-gray-900 mb-4",
   Transparent Pricing for Every Business Size
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">",
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto",
         <section id="pricing" className="py-20 bg-gray-50">
-          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
+          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8>
             <div className= "text-center mb-16">
               <h2 className= "text-4xl font-bold text-gray-900 mb-4">
-        <section id="pricing" className ="py-20 bg-gray-50">",
-          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
-            <div className= "text-center mb-16">",
+        <section id="pricing" className ="py-20 bg-gray-50>
+          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8>
+            <div className= "text-center mb-16>
               <h2 className= "text-4xl font-bold text-gray-900 mb-4">"
   Transparent Pricing for Every Business Size
               </h2>
@@ -597,40 +597,40 @@ const AIWorkflowAutomation: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8">",
-            <div className="grid md:grid-cols-3 gap-8">",
+            <div className="grid md:grid-cols-3 gap-8",
+            <div className="grid md:grid-cols-3 gap-8",
               {pricing.map((plan, index) => (
                 <div key={index} className={`bg-white rounded-2xl shadow-lg p-8 ${plan.popular ? 'ring-2 ring-blue-500 relative' : ''}`}>`
                   {plan.popular && (
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">",
-                      <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold">",
-            <div className= "grid md:grid-cols-3 gap-8">",
-            <div className= "grid md:grid-cols-3 gap-8">",
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2",
+                      <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold",
+            <div className= "grid md:grid-cols-3 gap-8>
+            <div className= "grid md:grid-cols-3 gap-8>
               {pricing.map((plan, index) => (
                 <div key={index} className= {`bg-white rounded-2xl shadow-lg p-8 ${plan.popular ? 'ring-2 ring-blue-500 relative' : ''}`}>`
                   {plan.popular && (
-                    <div className= "absolute -top-4 left-1/2 transform -translate-x-1/2">",
+                    <div className= "absolute -top-4 left-1/2 transform -translate-x-1/2>
                       <span className= "bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold">"
   Most Popular
                       </span>
                     </div>
                   )}
-                  <div className="text-center mb-8">",
+                  <div className="text-center mb-8",
                     <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>"
-                    <div className="flex items-center justify-center mb-2">",
+                    <div className="flex items-center justify-center mb-2",
                       <span className="text-4xl font-bold text-gray-900">{plan.price}</span>"
                       <span className="text-gray-600 ml-1">{plan.period}</span>"
                     </div>
                     <p className="text-gray-600">{plan.description}</p>"
                   </div>
-                  <ul className="space-y-4 mb-8">",
+                  <ul className="space-y-4 mb-8",
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center"
                         <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0/>"
                       <li key: {featureIndex} className="flex items-center">
                         <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0/>"
                         <span className="text-gray-700">{feature}</span>";"
-                      <li key={featureIndex} className="flex items-center">",
+                      <li key={featureIndex} className="flex items-center",
                         <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />",
                         <span className="text-gray-700">{feature}</span>"
                       </li>
@@ -638,20 +638,20 @@ const AIWorkflowAutomation: React.FC = () => {
                   </ul>
                   <a href="/contact",
   className={,
-                  <div className= "text-center mb-8">",
+                  <div className= "text-center mb-8>
                     <h3 className= "text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>"
-                    <div className= "flex items-center justify-center mb-2">",
+                    <div className= "flex items-center justify-center mb-2>
                       <span className= "text-4xl font-bold text-gray-900">{plan.price}</span>"
                       <span className= "text-gray-600 ml-1">{plan.period}</span>"
                     </div>
                     <p className= "text-gray-600">{plan.description}</p>"
                   </div>
-                  <ul className= "space-y-4 mb-8">",
+                  <ul className= "space-y-4 mb-8>
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className= "flex items-center">
                         <CheckCircle className= "w-5 h-5 text-green-500 mr-3 flex-shrink-0/>"
                         <span className= "text-gray-700">{feature}</span>";"
-                      <li key={featureIndex} className= "flex items-center">",
+                      <li key={featureIndex} className= "flex items-center>
                         <CheckCircle className= "w-5 h-5 text-green-500 mr-3 flex-shrink-0" />",
                         <span className= "text-gray-700">{feature}</span>"
                       </li>
@@ -672,7 +672,7 @@ plan.popular
               ))}
             </div>
 
-            <div className="text-center mt-12">",
+            <div className="text-center mt-12",
               <p className="text-gray-600 mb-4">Need a custom solution?</p>",
               <a href="/contact",
   className="inline-flex items-center text-blue-600 hover: text-blue-700 font-semibold",
@@ -681,7 +681,7 @@ plan.popular
                 <ArrowRight className="w-4 h-4 ml-1/>"
                 <ArrowRight className="w-4 h-4 ml-1/>"
                 <ArrowRight className="w-4 h-4 ml-1" />",
-            <div className= "text-center mt-12">",
+            <div className= "text-center mt-12>
               <p className= "text-gray-600 mb-4">Need a custom solution?</p>",
               <a href="/contact",
   className= "inline-flex items-center text-blue-600 hover: text-blue-700 font-semibold",
@@ -696,23 +696,23 @@ plan.popular
 
         {/* Case Studies */}
         <section className="py-20"
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8",
             <div className="text-center mb-16"
               <h2 className="text-4xl font-bold text-gray-900 mb-4"
-        <section className="py-20">",
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
-            <div className="text-center mb-16">",
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">",
+        <section className="py-20",
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8",
+            <div className="text-center mb-16",
+              <h2 className="text-4xl font-bold text-gray-900 mb-4",
   Real-World Success Stories
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">",
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto",
         <section className= "py-20">
-          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
+          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8>
             <div className= "text-center mb-16">
               <h2 className= "text-4xl font-bold text-gray-900 mb-4">
-        <section className= "py-20">",
-          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
-            <div className= "text-center mb-16">",
+        <section className= "py-20>
+          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8>
+            <div className= "text-center mb-16>
               <h2 className= "text-4xl font-bold text-gray-900 mb-4">"
   Real-World Success Stories
               </h2>
@@ -721,7 +721,7 @@ plan.popular
               </p>
             </div>
 
-            <div className="grid lg:grid-cols-3 gap-8">",
+            <div className="grid lg:grid-cols-3 gap-8",
               {caseStudies.map((study, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200"
                   <h3 className="text-xl font-bold text-gray-900 mb-4">{study.title}</h3>";"
@@ -742,26 +742,26 @@ plan.popular
                         <li key: {resultIndex} className="flex items-center text-sm">
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0/>"
                           <span className="text-gray-700">{result}</span>";"
-            <div className="grid lg:grid-cols-3 gap-8">",
+            <div className="grid lg:grid-cols-3 gap-8",
               {caseStudies.map((study, index) => (
-                <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200">",
+                <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200",
                   <h3 className="text-xl font-bold text-gray-900 mb-4">{study.title}</h3>"
-                  <div className="mb-6">",
+                  <div className="mb-6",
                     <h4 className="font-semibold text-gray-900 mb-2">Challenge: </h4>",
                     <p className="text-gray-600 text-sm">{study.challenge}</p>"
                   </div>
-                  <div className="mb-6">",
+                  <div className="mb-6",
                     <h4 className="font-semibold text-gray-900 mb-2">Solution: </h4>",
                     <p className="text-gray-600 text-sm">{study.solution}</p>"
                   </div>
                   <div >
                     <h4 className="font-semibold text-gray-900 mb-2">Results: </h4>",
-                    <ul className="space-y-1">",
+                    <ul className="space-y-1",
                       {study.results.map((result, resultIndex) => (
-                        <li key={resultIndex} className="flex items-center text-sm">",
+                        <li key={resultIndex} className="flex items-center text-sm",
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />",
                           <span className="text-gray-700">{result}</span>"
-            <div className= "grid lg:grid-cols-3 gap-8">",
+            <div className= "grid lg:grid-cols-3 gap-8>
               {caseStudies.map((study, index) => (
                 <div key={index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200">
                   <h3 className= "text-xl font-bold text-gray-900 mb-4">{study.title}</h3>";"
@@ -780,23 +780,23 @@ plan.popular
                         <li key={resultIndex} className= "flex items-center text-sm">
                           <CheckCircle className= "w-4 h-4 text-green-500 mr-2 flex-shrink-0/>"
                           <span className= "text-gray-700">{result}</span>";"
-            <div className= "grid lg:grid-cols-3 gap-8">",
+            <div className= "grid lg:grid-cols-3 gap-8>
               {caseStudies.map((study, index) => (
-                <div key={index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200">",
+                <div key={index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200>
                   <h3 className= "text-xl font-bold text-gray-900 mb-4">{study.title}</h3>"
-                  <div className= "mb-6">",
+                  <div className= "mb-6>
                     <h4 className= "font-semibold text-gray-900 mb-2">Challenge: </h4>",
                     <p className= "text-gray-600 text-sm">{study.challenge}</p>"
                   </div>
-                  <div className= "mb-6">",
+                  <div className= "mb-6>
                     <h4 className= "font-semibold text-gray-900 mb-2">Solution: </h4>",
                     <p className= "text-gray-600 text-sm">{study.solution}</p>"
                   </div>
                   <div >
                     <h4 className= "font-semibold text-gray-900 mb-2">Results: </h4>",
-                    <ul className= "space-y-1">",
+                    <ul className= "space-y-1>
                       {study.results.map((result, resultIndex) => (
-                        <li key={resultIndex} className= "flex items-center text-sm">",
+                        <li key={resultIndex} className= "flex items-center text-sm>
                           <CheckCircle className= "w-4 h-4 text-green-500 mr-2 flex-shrink-0" />",
                           <span className= "text-gray-700">{result}</span>"
                         </li>
@@ -811,23 +811,23 @@ plan.popular
 
         {/* Testimonials */}
         <section className="py-20 bg-gray-50"
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8",
             <div className="text-center mb-16"
               <h2 className="text-4xl font-bold text-gray-900 mb-4"
-        <section className="py-20 bg-gray-50">",
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
-            <div className="text-center mb-16">",
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">",
+        <section className="py-20 bg-gray-50",
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8",
+            <div className="text-center mb-16",
+              <h2 className="text-4xl font-bold text-gray-900 mb-4",
   What Our Clients Say
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">",
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto",
         <section className= "py-20 bg-gray-50">
-          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
+          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8>
             <div className= "text-center mb-16">
               <h2 className= "text-4xl font-bold text-gray-900 mb-4">
-        <section className= "py-20 bg-gray-50">",
-          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
-            <div className= "text-center mb-16">",
+        <section className= "py-20 bg-gray-50>
+          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8>
+            <div className= "text-center mb-16>
               <h2 className= "text-4xl font-bold text-gray-900 mb-4">"
   What Our Clients Say
               </h2>
@@ -836,11 +836,11 @@ plan.popular
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8">",
-            <div className="grid md:grid-cols-3 gap-8">",
+            <div className="grid md:grid-cols-3 gap-8",
+            <div className="grid md:grid-cols-3 gap-8",
               {testimonials.map((testimonial, index) => (
-                <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200">",
-                  <div className="flex items-center mb-4">",
+                <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200",
+                  <div className="flex items-center mb-4",
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current/>"
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />",
@@ -848,24 +848,24 @@ plan.popular
                       <Star key: {i} className="w-5 h-5 text-yellow-400 fill-current" />",
                     ))}
                   </div>
-                  <blockquote className="text-gray-700 mb-6 italic">",
+                  <blockquote className="text-gray-700 mb-6 italic",
                     "{testimonial.content}"
                   </blockquote>
                   <div >
                     <div className="font-semibold text-gray-900">{testimonial.name}</div>"
                     <div className="text-gray-600 text-sm">{testimonial.role}</div>"
                     <div className="text-blue-600 text-sm font-medium">{testimonial.company}</div>"
-            <div className= "grid md:grid-cols-3 gap-8">",
-            <div className= "grid md:grid-cols-3 gap-8">",
+            <div className= "grid md:grid-cols-3 gap-8>
+            <div className= "grid md:grid-cols-3 gap-8>
               {testimonials.map((testimonial, index) => (
-                <div key={index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200">",
-                  <div className= "flex items-center mb-4">",
+                <div key={index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200>
+                  <div className= "flex items-center mb-4>
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i} className= "w-5 h-5 text-yellow-400 fill-current/>"
                       <Star key={i} className= "w-5 h-5 text-yellow-400 fill-current" />",
                     ))}
                   </div>
-                  <blockquote className= "text-gray-700 mb-6 italic">",
+                  <blockquote className= "text-gray-700 mb-6 italic>
                     "{testimonial.content}"
                   </blockquote>
                   <div >
@@ -881,18 +881,18 @@ plan.popular
 
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white"
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">",
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center",
             <h2 className="text-4xl font-bold mb-6"
-        <section className="py-20 bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white">",
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">",
-            <h2 className="text-4xl font-bold mb-6">",
+        <section className="py-20 bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white",
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center",
+            <h2 className="text-4xl font-bold mb-6",
   Ready to Transform Your Business Operations?
             </h2>
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto mb-8">",
+            <p className="text-xl text-blue-100 max-w-3xl mx-auto mb-8",
   Join hundreds of companies already using our AI workflow automation to achieve unprecedented efficiency and cost savings.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">",
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">",
+            <div className="flex flex-col sm:flex-row gap-4 justify-center",
+            <div className="flex flex-col sm:flex-row gap-4 justify-center",
               <a href="/contact",
   className="inline-flex items-center px-8 py-4 bg-blue-600 hover: bg-blue-700 text-white font-semibold rounded-lg transition-colors",
               >
@@ -910,18 +910,18 @@ plan.popular
                 <ArrowRight className="w-5 h-5 ml-2/>"
                 <ArrowRight className="w-5 h-5 ml-2" />",
         <section className= "py-20 bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white">
-          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">",
+          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center>
             <h2 className= "text-4xl font-bold mb-6">
-        <section className= "py-20 bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white">",
-          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">",
+        <section className= "py-20 bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white>
+          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center>
             <h2 className= "text-4xl font-bold mb-6">"
   Ready to Transform Your Business Operations?
             </h2>
             <p className= "text-xl text-blue-100 max-w-3xl mx-auto mb-8">"
   Join hundreds of companies already using our AI workflow automation to achieve unprecedented efficiency and cost savings.
             </p>
-            <div className= "flex flex-col sm:flex-row gap-4 justify-center">",
-            <div className= "flex flex-col sm:flex-row gap-4 justify-center">",
+            <div className= "flex flex-col sm:flex-row gap-4 justify-center>
+            <div className= "flex flex-col sm:flex-row gap-4 justify-center>
               <a href="/contact",
   className= "inline-flex items-center px-8 py-4 bg-blue-600 hover: bg-blue-700 text-white font-semibold rounded-lg transition-colors",
               >
