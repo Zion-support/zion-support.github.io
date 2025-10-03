@@ -38,14 +38,14 @@ export default function Fortune500AI2027Success() {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">"
             <Link 
-              href="/contact" "
-              className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-3 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50""
+              href="/[^"]*"
+              className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-3 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50"
             >
               Replicate This Success
             </Link>
             <Link 
-              href="/services/enterprise-ai" "
-              className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-3 px-8 rounded-xl transition-all duration-300""
+              href="/[^"]*"
+              className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-3 px-8 rounded-xl transition-all duration-300"
             >
               View Enterprise Solutions
             </Link>
@@ -259,7 +259,7 @@ export default function Fortune500AI2027Success() {
             <blockquote className="text-xl text-gray-300 italic mb-6 border-l-4 border-green-500 pl-6">"
               "The implementation of Zion Tech Group's Transcendent Intelligence and Autonomous Enterprise "
               Operations has been nothing short of revolutionary. We've achieved $50 billion in measurable 
-              value while achieving 99.9% operational efficiency. This is the future of business operations.""
+              value while achieving 99.9% operational efficiency. This is the future of business operations."
             </blockquote>
             <div className="flex items-center gap-4">"
               <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center text-2xl font-bold">"
@@ -284,14 +284,14 @@ export default function Fortune500AI2027Success() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <Link 
-                href="/contact" "
-                className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50""
+                href="/[^"]*"
+                className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50"
               >
                 Schedule Free Assessment
               </Link>
               <Link 
-                href="/services/enterprise-ai" "
-                className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300""
+                href="/[^"]*"
+                className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
               >
                 View Enterprise Solutions
               </Link>

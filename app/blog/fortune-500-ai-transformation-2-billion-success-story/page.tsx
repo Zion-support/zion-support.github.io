@@ -59,14 +59,14 @@ export default function Fortune500AITransformationCaseStudy() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <a 
-                href="/contact" "
-                className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1""
+                href="/[^"]*"
+                className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
               >
                 Achieve Similar Results
               </a>
               <a 
-                href="/blog/ai-2026-autonomous-enterprise-operations-mega-guide" "
-                className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300""
+                href="/[^"]*"
+                className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
               >
                 Read Implementation Guide
               </a>
@@ -232,7 +232,7 @@ export default function Fortune500AITransformationCaseStudy() {
             <div className="mt-12 bg-gradient-to-r from-green-500/10 to-blue-500/10 border border-green-500/30 rounded-2xl p-8 text-center">"
               <div className="text-4xl mb-4">💬</div>"
               <blockquote className="text-xl text-gray-300 italic mb-6 max-w-3xl mx-auto">"
-                "The AI transformation with Zion Tech Group has been the most significant strategic initiative in our company's 120-year history. The $2.3B in savings exceeded our wildest expectations, and the operational improvements have positioned us as the clear leader in our industry.""
+                "The AI transformation with Zion Tech Group has been the most significant strategic initiative in our company's 120-year history. The $2.3B in savings exceeded our wildest expectations, and the operational improvements have positioned us as the clear leader in our industry."
               </blockquote>
               <div className="text-green-400 font-semibold">"
                 — CEO, Fortune 500 Manufacturing Company
@@ -248,14 +248,14 @@ export default function Fortune500AITransformationCaseStudy() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">"
                 <a 
-                  href="/contact" "
-                  className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50""
+                  href="/[^"]*"
+                  className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50"
                 >
                   Start Your Transformation
                 </a>
                 <a 
-                  href="/blog/ai-2026-neural-superintelligence-breakthrough" "
-                  className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300""
+                  href="/[^"]*"
+                  className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
                 >
                   Learn About Neural Superintelligence
                 </a>

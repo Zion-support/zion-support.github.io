@@ -124,14 +124,14 @@ export default function AITrends2026Page() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">"
               <Link 
-                href="/contact" "
-                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-bold hover:bg-blue-50 transition-colors""
+                href="/[^"]*"
+                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-bold hover:bg-blue-50 transition-colors"
               >
                 Get Started Today
               </Link>
               <Link 
-                href="/case-studies" "
-                className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-blue-600 transition-colors""
+                href="/[^"]*"
+                className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-blue-600 transition-colors"
               >
                 View Case Studies
               </Link>

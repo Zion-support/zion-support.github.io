@@ -154,14 +154,14 @@ export default function AI2027AutonomousEnterpriseTransformation() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">"
                 <Link 
-                  href="/contact" "
-                  className="px-8 py-3 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-semibold rounded-xl hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 text-center""
+                  href="/[^"]*"
+                  className="px-8 py-3 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-semibold rounded-xl hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 text-center"
                 >
                   Start Transformation
                 </Link>
                 <Link 
-                  href="/services/autonomous-enterprise" "
-                  className="px-8 py-3 border border-emerald-500 text-emerald-400 font-semibold rounded-xl hover:bg-emerald-500/10 transition-all duration-300 text-center""
+                  href="/[^"]*"
+                  className="px-8 py-3 border border-emerald-500 text-emerald-400 font-semibold rounded-xl hover:bg-emerald-500/10 transition-all duration-300 text-center"
                 >
                   Learn More
                 </Link>
@@ -291,8 +291,8 @@ export default function AI2027AutonomousEnterpriseTransformation() {
         {/* Back to Blog */}
         <div className="text-center mt-16">"
           <Link 
-            href="/blog" "
-            className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-slate-700 to-slate-800 text-white font-semibold rounded-xl hover:from-slate-600 hover:to-slate-700 transition-all duration-300""
+            href="/[^"]*"
+            className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-slate-700 to-slate-800 text-white font-semibold rounded-xl hover:from-slate-600 hover:to-slate-700 transition-all duration-300"
           >
             <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">"
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />"

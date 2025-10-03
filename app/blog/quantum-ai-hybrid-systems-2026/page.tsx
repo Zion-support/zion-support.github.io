@@ -462,14 +462,14 @@ export default function QuantumAIHybridSystemsPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">"
                 <a 
-                  href="/contact" "
-                  className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white font-bold py-3 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50""
+                  href="/[^"]*"
+                  className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white font-bold py-3 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50"
                 >
                   Schedule Quantum Consultation
                 </a>
                 <a 
-                  href="/case-studies" "
-                  className="border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-bold py-3 px-8 rounded-xl transition-all duration-300""
+                  href="/[^"]*"
+                  className="border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-bold py-3 px-8 rounded-xl transition-all duration-300"
                 >
                   View Quantum Success Stories
                 </a>

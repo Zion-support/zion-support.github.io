@@ -226,14 +226,14 @@ export default function AICognitiveComputingBreakthrough2026() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">"
               <Link
-                href="/services/ai-cognitive-computing""
-                className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center""
+                href="/services/ai-cognitive-computing"
+                className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center"
               >
                 Explore Cognitive AI Services
               </Link>
               <Link
-                href="/contact""
-                className="border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors text-center""
+                href="/contact"
+                className="border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors text-center"
               >
                 Schedule Consultation
               </Link>

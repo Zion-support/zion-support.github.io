@@ -283,7 +283,7 @@ export default function AI2026UltimateBreakthroughMegaSuccess() {
               <blockquote className="text-2xl text-gray-300 mb-6 italic">"
                 "This isn't just technology—it's a complete business transformation. We've achieved levels of efficiency "
                 and profitability that we never thought possible. The AI 2026 Ultimate Breakthrough Suite has fundamentally 
-                changed how we operate, compete, and deliver value to our customers.""
+                changed how we operate, compete, and deliver value to our customers."
               </blockquote>
               <div className="text-white font-bold text-lg">Sarah Chen</div>"
               <div className="text-gray-400">CEO, Fortune 100 Manufacturing Company</div>"
@@ -300,14 +300,14 @@ export default function AI2026UltimateBreakthroughMegaSuccess() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <a 
-                href="/contact" "
-                className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1""
+                href="/[^"]*"
+                className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
               >
                 Start Your Transformation
               </a>
               <a 
-                href="/blog/ai-2026-ultimate-breakthrough-revolution" "
-                className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1""
+                href="/[^"]*"
+                className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
               >
                 Learn More About AI 2026 →
               </a>

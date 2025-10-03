@@ -43,19 +43,19 @@ export default function March2026CaseStudyPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">"
               <a 
                 href="#results" "
-                className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1""
+                className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
               >
                 View Results
               </a>
               <a 
-                href="/blog/ai-2026-march-breakthrough-revolution" "
-                className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 transform hover:-translate-y-1""
+                href="/[^"]*"
+                className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 transform hover:-translate-y-1"
               >
                 Read Full Guide →
               </a>
               <a 
-                href="/contact" "
-                className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300""
+                href="/[^"]*"
+                className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
               >
                 Get Free Consultation
               </a>
@@ -281,7 +281,7 @@ export default function March2026CaseStudyPage() {
                   <blockquote className="text-2xl text-gray-200 italic mb-6 max-w-3xl mx-auto">"
                     "The March 2026 AI Breakthrough Suite has transformed our entire operation. We've achieved $5.2 billion "
                     in value generation in just 6 months, with a 500% ROI. The system has revolutionized our quality control, 
-                    reduced costs by 75%, and increased our market share by 25%. This is the future of manufacturing.""
+                    reduced costs by 75%, and increased our market share by 25%. This is the future of manufacturing."
                   </blockquote>
                   <div className="text-lg text-green-400 font-semibold">"
                     — John Smith, CEO, Global Manufacturing Leader
@@ -302,20 +302,20 @@ export default function March2026CaseStudyPage() {
                 </p>
                 <div className="flex flex-wrap justify-center gap-4">"
                   <a 
-                    href="/contact" "
-                    className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1""
+                    href="/[^"]*"
+                    className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
                   >
                     Get Free Consultation
                   </a>
                   <a 
-                    href="/blog/ai-2026-march-breakthrough-revolution" "
-                    className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 transform hover:-translate-y-1""
+                    href="/[^"]*"
+                    className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 transform hover:-translate-y-1"
                   >
                     Read Full Guide →
                   </a>
                   <a 
-                    href="/services/ai-2026-march-breakthrough-consulting" "
-                    className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300""
+                    href="/[^"]*"
+                    className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
                   >
                     Explore Services
                   </a>

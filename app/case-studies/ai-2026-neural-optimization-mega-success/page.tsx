@@ -297,14 +297,14 @@ export default function CaseStudy() {
           </p>
           <div className="flex flex-wrap gap-4">"
             <Link 
-              href="/contact" "
-              className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-indigo-700 transition-all""
+              href="/[^"]*"
+              className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-indigo-700 transition-all"
             >
               Start Your Transformation
             </Link>
             <Link 
-              href="/blog/ai-2026-advanced-neural-optimization-revolution" "
-              className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all""
+              href="/[^"]*"
+              className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all"
             >
               Learn More
             </Link>

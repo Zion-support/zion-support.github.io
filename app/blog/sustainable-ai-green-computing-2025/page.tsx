@@ -155,7 +155,7 @@ export default function SustainableAIGreenComputing() {
           <p className="text-gray-700 italic text-lg">"
             "By implementing sustainable AI solutions from Zion Tech Group, we reduced our data center energy "
             consumption by 85% and achieved net-zero operations. The best part? We saved $30 million annually 
-            while improving AI performance by 25%. It's proof that sustainability and profitability go hand in hand.""
+            while improving AI performance by 25%. It's proof that sustainability and profitability go hand in hand."
           </p>
           <cite className="text-green-600 font-semibold mt-2 block">"
             — Dr. Emily Chang, CTO, Global Tech Corporation
@@ -334,14 +334,14 @@ export default function SustainableAIGreenComputing() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">"
             <Link
-              href="/services/sustainable-ai""
-              className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors""
+              href="/services/sustainable-ai"
+              className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Explore Green Solutions
             </Link>
             <a
-              href="tel:+13024640950""
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors""
+              href="tel:+13024640950"
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
             >
               Call +1 302 464 0950
             </a>

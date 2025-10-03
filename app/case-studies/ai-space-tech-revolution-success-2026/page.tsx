@@ -352,7 +352,7 @@ export default function AISpaceTechRevolutionSuccess() {
             "This mission represents a paradigm shift in space exploration. The AI systems "
             performed flawlessly, making decisions that would have taken human operators 
             hours to process in real-time. We've proven that autonomous space missions 
-            are not just possible—they're superior.""
+            are not just possible—they're superior."
           </p>
           <div className="text-lg font-semibold">Dr. Maria Rodriguez</div>"
           <div className="text-gray-400">Chief Technology Officer</div>"
@@ -394,14 +394,14 @@ export default function AISpaceTechRevolutionSuccess() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">"
           <Link
-            href="/blog/ai-space-tech-2026""
-            className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors""
+            href="/blog/ai-space-tech-2026"
+            className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
           >
             Read Space Tech Guide
           </Link>
           <a
-            href="tel:+13024640950""
-            className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-purple-600 transition-colors""
+            href="tel:+13024640950"
+            className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-purple-600 transition-colors"
           >
             Discuss Your Mission
           </a>

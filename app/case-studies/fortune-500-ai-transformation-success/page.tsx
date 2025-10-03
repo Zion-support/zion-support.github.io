@@ -15,8 +15,8 @@ export default function Fortune500AITransformationSuccess() {
       <header className="border-b border-gray-200 bg-white sticky top-0 z-50">"
         <div className="max-w-4xl mx-auto px-4 py-4">"
           <Link 
-            href="/" "
-            className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium""
+            href="/[^"]*"
+            className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />"
             Back to Home
@@ -404,14 +404,14 @@ export default function Fortune500AITransformationSuccess() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <Link 
-                href="/guides/ai-2026-implementation-roadmap""
-                className="bg-white text-orange-600 px-8 py-4 rounded-full font-bold hover:bg-gray-100 transition-colors""
+                href="/guides/ai-2026-implementation-roadmap"
+                className="bg-white text-orange-600 px-8 py-4 rounded-full font-bold hover:bg-gray-100 transition-colors"
               >
                 Get Implementation Guide
               </Link>
               <Link 
-                href="/tools/ai-roi-calculator""
-                className="border-2 border-white text-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-orange-600 transition-colors""
+                href="/tools/ai-roi-calculator"
+                className="border-2 border-white text-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-orange-600 transition-colors"
               >
                 Calculate Your ROI
               </Link>

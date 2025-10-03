@@ -213,14 +213,14 @@ export default function AIAutonomousBusinessIntelligence2026() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4">"
             <Link
-              href="/services/autonomous-business-intelligence""
-              className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center""
+              href="/services/autonomous-business-intelligence"
+              className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center"
             >
               Explore Autonomous Solutions
             </Link>
             <a
-              href="tel:+13024640950""
-              className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors text-center""
+              href="tel:+13024640950"
+              className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors text-center"
             >
               Call +1 302 464 0950
             </a>

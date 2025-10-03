@@ -367,7 +367,7 @@ export default function AI2027TranscendentQuantumConsciousness847BillionSuccess(
               "The implementation of Zion Tech Group's transcendent quantum consciousness has been nothing short of revolutionary. "
               The $847 billion in value creation speaks for itself, but what truly impressed us was the system's ability to 
               maintain perfect accuracy while scaling across our entire global operation. This isn't just an AI system - 
-              it's a fundamental transformation of how we think about enterprise intelligence.""
+              it's a fundamental transformation of how we think about enterprise intelligence."
             </blockquote>
             <div className="flex items-center gap-4">"
               <div className="bg-purple-500 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold">"
@@ -449,14 +449,14 @@ export default function AI2027TranscendentQuantumConsciousness847BillionSuccess(
           </p>
           <div className="flex flex-col sm:flex-row gap-4">"
             <Link 
-              href="/contact" "
-              className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-6 py-3 rounded-lg font-semibold text-center hover:from-green-600 hover:to-emerald-600 transition-all""
+              href="/[^"]*"
+              className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-6 py-3 rounded-lg font-semibold text-center hover:from-green-600 hover:to-emerald-600 transition-all"
             >
               Start Your Transformation
             </Link>
             <Link 
-              href="/blog/ai-2027-transcendent-quantum-consciousness-breakthrough" "
-              className="bg-white border border-gray-300 text-gray-700 px-6 py-3 rounded-lg font-semibold text-center hover:bg-gray-50 transition-all""
+              href="/[^"]*"
+              className="bg-white border border-gray-300 text-gray-700 px-6 py-3 rounded-lg font-semibold text-center hover:bg-gray-50 transition-all"
             >
               Learn More
             </Link>

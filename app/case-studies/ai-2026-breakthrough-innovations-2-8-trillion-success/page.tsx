@@ -258,7 +258,7 @@ export default function AI2026BreakthroughInnovationsCaseStudyPage() {
             <p className="text-gray-700 italic">"
               "Zion Tech Group's breakthrough innovations transformed our entire enterprise. "
               The quantum-neural consciousness fusion alone generated $500 billion in value, 
-              while achieving 99.9% automation across all operations.""
+              while achieving 99.9% automation across all operations."
             </p>
             <div className="mt-4 text-sm text-blue-600 font-semibold">$500B Value Generated</div>"
           </div>
@@ -276,7 +276,7 @@ export default function AI2026BreakthroughInnovationsCaseStudyPage() {
             <p className="text-gray-700 italic">"
               "The autonomous enterprise systems revolutionized our business model. "
               We achieved 99.999% self-aware operations and generated $750 billion 
-              through hyper-intelligent analytics and real-time decision-making.""
+              through hyper-intelligent analytics and real-time decision-making."
             </p>
             <div className="mt-4 text-sm text-green-600 font-semibold">$750B Value Generated</div>"
           </div>
@@ -291,22 +291,22 @@ export default function AI2026BreakthroughInnovationsCaseStudyPage() {
         </p>
         <div className="flex flex-wrap gap-4 justify-center">"
           <Link 
-            href="/blog/ai-2026-breakthrough-innovations-mega-success" "
-            className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-green-600 hover:to-emerald-600 transition-all flex items-center gap-2""
+            href="/[^"]*"
+            className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-green-600 hover:to-emerald-600 transition-all flex items-center gap-2"
           >
             Read Full Blog Post
             <ArrowRight className="w-5 h-5" />"
           </Link>
           <Link 
-            href="/services/ai-2026-breakthrough-innovations-implementation" "
-            className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all flex items-center gap-2""
+            href="/[^"]*"
+            className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all flex items-center gap-2"
           >
             Start Implementation
             <ArrowRight className="w-5 h-5" />"
           </Link>
           <Link 
-            href="/contact" "
-            className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-indigo-600 transition-all flex items-center gap-2""
+            href="/[^"]*"
+            className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-indigo-600 transition-all flex items-center gap-2"
           >
             Get Expert Consultation
             <ArrowRight className="w-5 h-5" />"

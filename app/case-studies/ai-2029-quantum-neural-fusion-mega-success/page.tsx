@@ -224,7 +224,7 @@ export default function AI2029QuantumNeuralFusionMegaSuccess() {
 
           <h2>Client Testimonial</h2>
           <blockquote className="border-l-4 border-orange-500 pl-6 italic text-lg">"
-            "Zion Tech Group's Quantum Neural Fusion Platform has revolutionized our entire organization. The $10B annual ROI is remarkable, but the breakthrough innovations and conscious AI capabilities are truly transformative. We've achieved impossible goals and created revolutionary products that were unimaginable before this technology.""
+            "Zion Tech Group's Quantum Neural Fusion Platform has revolutionized our entire organization. The $10B annual ROI is remarkable, but the breakthrough innovations and conscious AI capabilities are truly transformative. We've achieved impossible goals and created revolutionary products that were unimaginable before this technology."
           </blockquote>
           <p className="text-right text-gray-400 mt-4">"
             — <strong>Dr. Michael Chen, CTO, TechMega Global</strong>

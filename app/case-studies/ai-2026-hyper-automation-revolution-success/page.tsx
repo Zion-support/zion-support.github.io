@@ -192,7 +192,7 @@ export default function AI2026HyperAutomationRevolutionSuccess() {
           <blockquote className="text-blue-800 italic text-lg mb-4">"
             "The hyper-automation platform from Zion Tech Group has completely transformed our organization. "
             We've achieved $3.2B in ROI and 99.5% autonomous operations that have revolutionized how we 
-            serve our customers and manage our business. This is the future of financial services.""
+            serve our customers and manage our business. This is the future of financial services."
           </blockquote>
           <div className="text-blue-700">"
             <p className="font-semibold">- Chief Executive Officer, Fortune 500 Financial Services</p>"
@@ -241,14 +241,14 @@ export default function AI2026HyperAutomationRevolutionSuccess() {
           </p>
           <div className="flex gap-4">"
             <Link 
-              href="/contact" "
-              className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-red-600 hover:to-orange-600 transition-all""
+              href="/[^"]*"
+              className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-red-600 hover:to-orange-600 transition-all"
             >
               Start Your Transformation
             </Link>
             <Link 
-              href="/blog/ai-2026-hyper-automation-revolution" "
-              className="border border-red-500 text-red-600 px-6 py-3 rounded-lg font-semibold hover:bg-red-50 transition-all""
+              href="/[^"]*"
+              className="border border-red-500 text-red-600 px-6 py-3 rounded-lg font-semibold hover:bg-red-50 transition-all"
             >
               Learn About the Technology
             </Link>

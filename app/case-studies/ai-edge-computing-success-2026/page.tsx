@@ -289,7 +289,7 @@ export default function AIEdgeComputingSuccess2026() {
             <blockquote className="text-xl text-gray-700 italic mb-6">"
               "The AI edge computing transformation has revolutionized our manufacturing operations. "
               We've achieved sub-10ms response times, 99.99% uptime, and $50M in annual savings. 
-              This investment has positioned us as the industry leader in smart manufacturing.""
+              This investment has positioned us as the industry leader in smart manufacturing."
             </blockquote>
             <div className="text-gray-600">"
               <div className="font-semibold">Sarah Johnson</div>"
@@ -307,14 +307,14 @@ export default function AIEdgeComputingSuccess2026() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">"
             <Link
-              href="/services/ai-edge-computing""
-              className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors""
+              href="/services/ai-edge-computing"
+              className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
             >
               Explore Edge AI Services
             </Link>
             <a
-              href="tel:+13024640950""
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-green-600 transition-colors""
+              href="tel:+13024640950"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-green-600 transition-colors"
             >
               Call +1 302 464 0950
             </a>

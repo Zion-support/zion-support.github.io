@@ -237,7 +237,7 @@ export default function AINeuromorphicTransformationMegaSuccess2026() {
           
           <div className="bg-gradient-to-r from-blue-50 to-purple-50 border border-blue-200 rounded-lg p-6">"
             <blockquote className="text-lg text-gray-800 mb-4">"
-              "The neuromorphic transformation has been nothing short of revolutionary. We've achieved energy savings we never thought possible while dramatically improving performance. Zion Tech Group's expertise in neuromorphic computing is unmatched.""
+              "The neuromorphic transformation has been nothing short of revolutionary. We've achieved energy savings we never thought possible while dramatically improving performance. Zion Tech Group's expertise in neuromorphic computing is unmatched."
             </blockquote>
             <div className="flex items-center gap-4">"
               <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white font-semibold">"
@@ -305,14 +305,14 @@ export default function AINeuromorphicTransformationMegaSuccess2026() {
           
           <div className="flex flex-col sm:flex-row gap-4">"
             <Link 
-              href="/contact" "
-              className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-green-700 hover:to-blue-700 transition-all duration-200 text-center""
+              href="/[^"]*"
+              className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-green-700 hover:to-blue-700 transition-all duration-200 text-center"
             >
               Start Your Transformation
             </Link>
             <Link 
-              href="/services/ai-autonomous-cloud-ops" "
-              className="bg-white border-2 border-green-600 text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-all duration-200 text-center""
+              href="/[^"]*"
+              className="bg-white border-2 border-green-600 text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-all duration-200 text-center"
             >
               Explore AI Services
             </Link>

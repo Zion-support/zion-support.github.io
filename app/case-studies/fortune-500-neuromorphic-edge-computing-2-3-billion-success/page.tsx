@@ -223,7 +223,7 @@ export default function Fortune500NeuromorphicEdgeComputingSuccess() {
               <blockquote className="text-gray-300 text-lg italic mb-4">"
                 "The neuromorphic edge computing implementation exceeded all our expectations. We've achieved $2.3B in annual "
                 savings while dramatically improving our operational efficiency. The 78% reduction in downtime alone has 
-                transformed our manufacturing capabilities. Zion Tech Group's solution is truly revolutionary.""
+                transformed our manufacturing capabilities. Zion Tech Group's solution is truly revolutionary."
               </blockquote>
               <div className="flex items-center">"
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">"
@@ -275,14 +275,14 @@ export default function Fortune500NeuromorphicEdgeComputingSuccess() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">"
             <a 
-              href="/contact" "
-              className="bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-400 hover:to-cyan-500 text-white font-bold py-3 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50""
+              href="/[^"]*"
+              className="bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-400 hover:to-cyan-500 text-white font-bold py-3 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50"
             >
               Get Free Consultation
             </a>
             <a 
-              href="/blog/ai-2027-neuromorphic-edge-computing-breakthrough" "
-              className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-3 px-8 rounded-xl transition-all duration-300""
+              href="/[^"]*"
+              className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-3 px-8 rounded-xl transition-all duration-300"
             >
               Read Technical Guide
             </a>

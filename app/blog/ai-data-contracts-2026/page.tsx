@@ -85,19 +85,19 @@ export default function AIDataContracts2026Page() {
           <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">Related Articles</h2>"
           <div className="grid md:grid-cols-3 gap-6">"
             <RelatedArticleCard
-              title="Platform Engineering Scorecards 2026""
-              description="Measure adoption and outcomes with fair, actionable scorecards.""
-              href="/blog/platform-engineering-scorecards-2026""
+              title="Platform Engineering Scorecards 2026"
+              description="Measure adoption and outcomes with fair, actionable scorecards."
+              href="/blog/platform-engineering-scorecards-2026"
             />
             <RelatedArticleCard
-              title="Reliable RAG 2025""
-              description="Hardened RAG with contracts, caching, and evals.""
-              href="/blog/ai-reliable-rag-2025""
+              title="Reliable RAG 2025"
+              description="Hardened RAG with contracts, caching, and evals."
+              href="/blog/ai-reliable-rag-2025"
             />
             <RelatedArticleCard
-              title="AI Governance Maturity 2026""
-              description="Policy gates, audits, and progressive autonomy.""
-              href="/blog/ai-governance-maturity-model-2026""
+              title="AI Governance Maturity 2026"
+              description="Policy gates, audits, and progressive autonomy."
+              href="/blog/ai-governance-maturity-model-2026"
             />
           </div>
         </div>

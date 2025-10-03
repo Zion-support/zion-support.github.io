@@ -241,8 +241,8 @@ export default function AI2026HyperintelligenceBreakthroughService() {
                 </li>
               </ul>
               <a 
-                href="/contact""
-                className="w-full bg-gradient-to-r from-blue-500 to-indigo-500 text-white px-6 py-3 rounded-lg font-bold text-center block hover:from-blue-600 hover:to-indigo-600 transition-all duration-300""
+                href="/contact"
+                className="w-full bg-gradient-to-r from-blue-500 to-indigo-500 text-white px-6 py-3 rounded-lg font-bold text-center block hover:from-blue-600 hover:to-indigo-600 transition-all duration-300"
               >
                 Get Started
               </a>
@@ -280,8 +280,8 @@ export default function AI2026HyperintelligenceBreakthroughService() {
                 </li>
               </ul>
               <a 
-                href="/contact""
-                className="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-3 rounded-lg font-bold text-center block hover:from-purple-600 hover:to-pink-600 transition-all duration-300""
+                href="/contact"
+                className="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-3 rounded-lg font-bold text-center block hover:from-purple-600 hover:to-pink-600 transition-all duration-300"
               >
                 Get Started
               </a>
@@ -314,8 +314,8 @@ export default function AI2026HyperintelligenceBreakthroughService() {
                 </li>
               </ul>
               <a 
-                href="/contact""
-                className="w-full bg-gradient-to-r from-green-500 to-emerald-500 text-white px-6 py-3 rounded-lg font-bold text-center block hover:from-green-600 hover:to-emerald-600 transition-all duration-300""
+                href="/contact"
+                className="w-full bg-gradient-to-r from-green-500 to-emerald-500 text-white px-6 py-3 rounded-lg font-bold text-center block hover:from-green-600 hover:to-emerald-600 transition-all duration-300"
               >
                 Contact Sales
               </a>
@@ -331,14 +331,14 @@ export default function AI2026HyperintelligenceBreakthroughService() {
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">"
             <a 
-              href="/contact""
-              className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-10 py-4 rounded-lg font-bold text-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300""
+              href="/contact"
+              className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-10 py-4 rounded-lg font-bold text-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300"
             >
               Schedule Consultation
             </a>
             <a 
-              href="/case-studies/hyperintelligence-mega-success-2026""
-              className="border border-purple-500/50 text-purple-300 px-10 py-4 rounded-lg font-bold text-lg hover:bg-purple-500/10 transition-all duration-300""
+              href="/case-studies/hyperintelligence-mega-success-2026"
+              className="border border-purple-500/50 text-purple-300 px-10 py-4 rounded-lg font-bold text-lg hover:bg-purple-500/10 transition-all duration-300"
             >
               View Success Stories
             </a>

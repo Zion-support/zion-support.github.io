@@ -270,7 +270,7 @@ export default function AI2027MegaTransformationSuccess() {
               <blockquote className="text-lg text-gray-700 italic mb-4">"
                 "The AI 2027 transformation has been nothing short of revolutionary for our organization. "
                 We've not only achieved our financial objectives but have fundamentally transformed how we operate. 
-                The $150M ROI speaks for itself, but the competitive advantage we've gained is immeasurable.""
+                The $150M ROI speaks for itself, but the competitive advantage we've gained is immeasurable."
               </blockquote>
               <div className="border-l-4 border-purple-500 pl-4">"
                 <p className="font-semibold text-gray-900">Sarah Chen</p>"
@@ -316,14 +316,14 @@ export default function AI2027MegaTransformationSuccess() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">"
               <Link
-                href="/contact""
-                className="bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors text-center""
+                href="/contact"
+                className="bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors text-center"
               >
                 Start Your Transformation
               </Link>
               <Link
-                href="/services""
-                className="border-2 border-green-600 text-green-600 px-6 py-3 rounded-lg font-semibold hover:bg-green-600 hover:text-white transition-colors text-center""
+                href="/services"
+                className="border-2 border-green-600 text-green-600 px-6 py-3 rounded-lg font-semibold hover:bg-green-600 hover:text-white transition-colors text-center"
               >
                 Explore Our Services
               </Link>

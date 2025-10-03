@@ -459,14 +459,14 @@ export default function AIEnterpriseAutomationSuccess2026() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">"
             <Link
-              href="/services""
-              className="bg-white text-green-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-xl transition-colors""
+              href="/services"
+              className="bg-white text-green-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-xl transition-colors"
             >
               Explore Our Services
             </Link>
             <Link
-              href="/contact""
-              className="border-2 border-white text-white hover:bg-white hover:text-green-600 font-bold py-4 px-8 rounded-xl transition-colors""
+              href="/contact"
+              className="border-2 border-white text-white hover:bg-white hover:text-green-600 font-bold py-4 px-8 rounded-xl transition-colors"
             >
               Schedule Consultation
             </Link>

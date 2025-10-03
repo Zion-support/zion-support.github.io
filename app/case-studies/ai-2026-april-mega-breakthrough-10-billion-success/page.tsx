@@ -189,7 +189,7 @@ export default function AI2026AprilMegaBreakthrough10BillionSuccess() {
             <blockquote className="text-xl text-gray-300 italic mb-6 border-l-4 border-orange-500 pl-6">"
               "The Universal Intelligence Systems from Zion Tech Group have completely transformed our operations. "
               The 10,000x performance improvement and $10 billion in value generation exceeded our wildest expectations. 
-              We've achieved levels of efficiency and autonomy that were previously impossible.""
+              We've achieved levels of efficiency and autonomy that were previously impossible."
             </blockquote>
             
             <div className="text-lg text-gray-300">"
@@ -208,14 +208,14 @@ export default function AI2026AprilMegaBreakthrough10BillionSuccess() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <a 
-                href="/contact" "
-                className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1""
+                href="/[^"]*"
+                className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
               >
                 Schedule Consultation
               </a>
               <a 
-                href="/blog/ai-2026-april-mega-breakthrough-revolution" "
-                className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1""
+                href="/[^"]*"
+                className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
               >
                 Learn More
               </a>

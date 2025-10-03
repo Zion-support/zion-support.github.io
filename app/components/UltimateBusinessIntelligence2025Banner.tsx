@@ -102,8 +102,8 @@ const UltimateBusinessIntelligence2025Banner = () => {
           </div>
           <button
             onClick={handleDismiss}
-            className="text-white/70 hover:text-white transition-colors p-2""
-            aria-label="Dismiss banner""
+            className="text-white/70 hover:text-white transition-colors p-2"
+            aria-label="Dismiss banner"
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">"
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />"
@@ -146,13 +146,13 @@ const UltimateBusinessIntelligence2025Banner = () => {
             <div className="flex flex-col sm:flex-row gap-4">"
               <Link
                 href={currentContent.url}
-                className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-3 rounded-lg font-bold hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 transform hover:scale-105 text-center""
+                className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-3 rounded-lg font-bold hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 transform hover:scale-105 text-center"
               >
                 Read {currentContent.type}
               </Link>
               <Link
-                href="/contact""
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition-all duration-300 text-center""
+                href="/contact"
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition-all duration-300 text-center"
               >
                 Get Consultation
               </Link>
