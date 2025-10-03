@@ -64,11 +64,11 @@ export const seoUtils = {
       "@type": "Person",
       "name": article.author
     },
-        "url": article.image || "https://zion.app/logo.png"
-      }
+    "image": {
+      "url": article.image || "https://zion.app/logo.png"
     }
-  })
-};
+  }
+});
 
 // Sitemap generation utilities
 export const sitemapUtils = {
