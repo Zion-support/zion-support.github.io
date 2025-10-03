@@ -175,7 +175,7 @@ export class PerformanceMonitor {
             });
           }
         });
-        });
+      });
       observer.observe({ entryTypes: ['resource'] });
       this.observers.push(observer);
     }
@@ -308,7 +308,7 @@ export class ImageOptimizer {
       height?: number;
       quality?: number;
       format?: 'webp' | 'avif' | 'jpeg' | 'png';
-    } = {};
+    } = {}
   ): Promise<string> {
     const { width, height, quality = 80, format = 'webp' } = options;
 
@@ -322,10 +322,10 @@ export class ImageOptimizer {
     const extension = src.split('.').pop();
 
     const srcset = sizes
-      .map(size => `${baseSrc}-${size}w.${extension' ${size`w`)
+      .map(size => `${baseSrc}-${size}w.${extension} ${size}w`)
       .join(', ');
 
-    return `<img src="${src"" srcset="${srcset`" alt="${alt"" loading="lazy/>`;
+    return `<img src="${src}" srcset="${srcset}" alt="${alt}" loading="lazy" />`;
   }
 
   static preloadCriticalImages(imageUrls: string[]): void {
@@ -337,7 +337,7 @@ export class ImageOptimizer {
       document.head.appendChild(link);
     });
   }
-`
+}
 
 /**
  * Bundle analysis utilities
@@ -349,11 +349,11 @@ export class BundleAnalyzer {
       
       // Analyze loaded scripts
       const scripts = document.querySelectorAll('script[src]');
-      console.log(`Scripts loaded: ${scripts.length``);
+      console.log(`Scripts loaded: ${scripts.length}`);
       
       // Analyze loaded stylesheets
       const styles = document.querySelectorAll('link[rel="stylesheet"]');
-      console.log(`Stylesheets loaded: ${styles.length``);
+      console.log(`Stylesheets loaded: ${styles.length}`);
       
       // Analyze resource timing
       const resources = performance.getEntriesByType('resource');
@@ -361,8 +361,8 @@ export class BundleAnalyzer {
         return sum + ((resource as any).transferSize || 0);
       }, 0);
       
-      console.log(`Total resource size: ${(totalSize / 1024 / 1024).toFixed(2)` MB`);
-      console.log(`Total resources: ${resources.length``);
+      console.log(`Total resource size: ${(totalSize / 1024 / 1024).toFixed(2)} MB`);
+      console.log(`Total resources: ${resources.length}`);
     }
   }
 
@@ -392,4 +392,4 @@ export default {
   ImageOptimizer,
   BundleAnalyzer,
   initializePerformanceMonitoring
-`;
+};

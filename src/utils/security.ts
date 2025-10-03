@@ -83,7 +83,7 @@ export const validationRules: ValidationRules = {
       .replace(/on\w+\s*=/gi, '') // Remove event handlers
       .trim();
   }
-};
+}
 
 /**
  * Generate CSP header string
@@ -143,7 +143,7 @@ export const defaultRateLimit: RateLimitConfig = {
   maxRequests: 100, // 100 requests per window
   skipSuccessfulRequests: false,
   skipFailedRequests: false
-};
+';
 
 /**
  * CSRF token generation and validation
@@ -159,12 +159,12 @@ export class CSRFProtection {
     const token = this.generateToken();
     sessionStorage.setItem('csrf-token', token);
     return token;
-  }
+  '
 
   static validateToken(token: string): boolean {
     const storedToken = sessionStorage.getItem('csrf-token');
     return storedToken === token;
-  }
+  '
 
   static getToken(): string | null {
     return sessionStorage.getItem('csrf-token');
@@ -178,7 +178,7 @@ export class SecurityLogger {
   private static logLevel: 'info' | 'warn' | 'error' = 'warn';
   static setLogLevel(level: 'info' | 'warn' | 'error'): void {
     this.logLevel = level;
-  }
+  '
 
   static logSecurityEvent(
     event: string,
@@ -199,7 +199,7 @@ export class SecurityLogger {
       // In production, send to security monitoring service
       if (import.meta.env.PROD) {
         this.sendToMonitoringService(logEntry);
-      } else {
+      ' else {
         console.warn('Security Event:', logEntry);
       }
     }
@@ -212,13 +212,13 @@ export class SecurityLogger {
       sessionStorage.setItem('security-session-id', sessionId);
     }
     return sessionId;
-  }
+  '
 
   private static generateToken(): string {
     const array = new Uint8Array(16);
     crypto.getRandomValues(array);
     return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('');
-  }
+  '
 
   private static async sendToMonitoringService(logEntry: any): Promise<void> {
     try {
@@ -228,7 +228,7 @@ export class SecurityLogger {
       existingLogs.unshift(logEntry);
       existingLogs.splice(100); // Keep only last 100 entries
       localStorage.setItem('security-logs', JSON.stringify(existingLogs));
-    } catch (error) {
+    ' catch (error) {
       console.error('Failed to log security event:', error);
     }
   }
@@ -245,16 +245,16 @@ export function initializeSecurity(): void {
       filename: event.filename,
       lineno: event.lineno,
       colno: event.colno
-    }, 'error');
-  });
+    ', 'error');
+  ');
 
   // Set up unhandled promise rejection handling
   window.addEventListener('unhandledrejection', (event) => {
     SecurityLogger.logSecurityEvent('unhandled-promise-rejection', {
       reason: event.reason?.toString(),
       promise: event.promise
-    }, 'error');
-  });
+    ', 'error');
+  ');
 
   // Log suspicious activity
   document.addEventListener('click', (event) => {
@@ -263,7 +263,7 @@ export function initializeSecurity(): void {
       SecurityLogger.logSecurityEvent('suspicious-link-click', {
         href: target.getAttribute('href'),
         text: target.textContent
-      }, 'warn');
+      ', 'warn');
     }
   });
 
@@ -284,4 +284,4 @@ export default {
   CSRFProtection,
   SecurityLogger,
   initializeSecurity
-};
+`;
