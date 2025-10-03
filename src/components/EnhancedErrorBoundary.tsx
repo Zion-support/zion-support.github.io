@@ -67,6 +67,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 
     // Log to console in development
     if (import.meta.env.DEV) {
+      // eslint-disable-next-line no-console
       console.error('Error Boundary caught an error:', errorDetails);
     }
 
@@ -133,6 +134,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       navigator.clipboard.writeText(JSON.stringify(errorReport, null, 2));
       alert('Error details copied to clipboard');
     } else {
+      // eslint-disable-next-line no-console
       console.log('Error Report:', errorReport);
       alert('Error details logged to console');
     }
