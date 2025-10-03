@@ -56,9 +56,9 @@ const ContactPage: React.FC = () => {
             <h2 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Send us a Message</h2>
             {isSubmitted ? (
               <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-                <CheckCircle className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-                <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Message Sent!</h3>
-                <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Thank you for contacting us. We'll get back to you within 24 hours.</p>
+                <CheckCircle className="w-12 h-12 text-green-500 mb-4" />
+                <h3 className="text-xl font-semibold mb-2">Message Sent!</h3>
+                <p className="text-zion-blue-light">Thank you for contacting us. We'll get back to you within 24 hours.</p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
