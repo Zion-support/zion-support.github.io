@@ -22,7 +22,7 @@ export class ErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, _errorInfo: ErrorInfo) {
-    // Error caught by boundary - logged to monitoring service
+    // Error logged to monitoring service instead of console
     
     // Send error to monitoring service
     if (typeof gtag !== 'undefined') {
