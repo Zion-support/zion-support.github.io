@@ -8,8 +8,6 @@ export default function NeuromorphicAIBrainInspiredComputing2026() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Helmet>
         <title>Neuromorphic AI: Brain-Inspired Computing Achieving 1000x Energy Efficiency | Zion Tech Group</title>

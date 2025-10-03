@@ -7,8 +7,6 @@ export default function AutonomousCognitiveIntelligencePlatform() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Helmet>
         <title>Autonomous Cognitive Intelligence Platform | Zion Tech Group</title>

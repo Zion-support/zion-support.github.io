@@ -6,8 +6,6 @@ export default function NeuromorphicEdgeComputingRevolution2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <main className="text-left">
       <h1>Neuromorphic Edge Computing: The 2025 Revolution in Real-Time AI</h1>
       

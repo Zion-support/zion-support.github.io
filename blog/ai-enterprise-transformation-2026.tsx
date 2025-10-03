@@ -7,8 +7,6 @@ export default function AIEnterpriseTransformation2026() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>AI Enterprise Transformation 2026: The Complete Guide | Zion Tech Group</title>

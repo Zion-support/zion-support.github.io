@@ -6,8 +6,6 @@ export default function AIMultimodalFusionSystems2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <div className="text-left"></div>
         <main className="text-left">
@@ -201,9 +199,9 @@ export default function AIMultimodalFusionSystems2025() {
                   </p>
                   <pre className="text-left"></p>
 {`// Multimodal Fusion System
-class MultimodalFusionModel {/* content */}
-  constructor(config) {/* content */}
-    this.encoders = {/* content */}
+class MultimodalFusionModel 
+  constructor(config) 
+    this.encoders = 
       text: new TransformerEncoder('bert-large'),
       image: new VisionTransformer('vit-large'),
       audio: new WaveformEncoder('wav2vec2'),
@@ -211,17 +209,17 @@ class MultimodalFusionModel {/* content */}
       sensor: new TimeSeriesEncoder('tcn-deep')
     };
     
-    this.fusion = new CrossModalAttentionFusion({/* content */}
+    this.fusion = new CrossModalAttentionFusion(
       embeddingDim: 847,
       heads: 16,
       layers: 24
     });
   }
   
-  async encode(inputs) {/* content */}
+  async encode(inputs) 
     const embeddings = {};
     
-    for (const [modality, data] of Object.entries(inputs)) {/* content */}
+    for (const [modality, data] of Object.entries(inputs)) 
       embeddings[modality] = await this.encoders[modality]
         .encode(data);
     }
@@ -239,20 +237,20 @@ class MultimodalFusionModel {/* content */}
                   </p>
                   <pre className="text-left"></p>
 {`// Cross-Modal Attention
-class CrossModalAttentionFusion {/* content */}
-  async fuse(modalityEmbeddings) {/* content */}
+class CrossModalAttentionFusion 
+  async fuse(modalityEmbeddings) 
     // Cross-attend between all modality pairs
     const crossAttention = {};
     
     for (const [sourceModal, sourceEmbed] of Object.entries(
       modalityEmbeddings
-    )) {/* content */}
+    )) 
       crossAttention[sourceModal] = {};
       
       for (const [targetModal, targetEmbed] of Object.entries(
         modalityEmbeddings
-      )) {/* content */}
-        if (sourceModal !== targetModal) {/* content */}
+      )) 
+        if (sourceModal !== targetModal) 
           crossAttention[sourceModal][targetModal] = 
             await this.computeAttention(
               sourceEmbed, targetEmbed

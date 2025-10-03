@@ -2,12 +2,10 @@ import { ArrowLeft, Brain, Zap, CheckCircle, TrendingUp, Sparkles } from "lucide
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 
-const AIPromptEngineeringMastery2025 = () => {/* content */}
+const AIPromptEngineeringMastery2025 = () => 
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
       <Helmet>
         <title>Prompt Engineering Mastery 2025: Unlock 95%+ LLM Accuracy | Zion Tech Group</title>
         <meta
@@ -200,11 +198,11 @@ Final answer: The company now has 170 employees.`}
 Job Posting: [job posting text]
 
 Return the following structure:
-{/* content */}
+
   "title": "Job title
   "company": "Company name
   "location": "City, State
-  "salary": {/* content */}
+  "salary": 
     "min": 100000,
     "max": 150000,
     "currency": "USD"

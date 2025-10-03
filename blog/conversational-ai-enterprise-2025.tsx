@@ -7,8 +7,6 @@ export default function ConversationalAIEnterprise2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>Conversational AI for Enterprise: Transforming Customer Experience at Scale | Zion Tech Group</title>

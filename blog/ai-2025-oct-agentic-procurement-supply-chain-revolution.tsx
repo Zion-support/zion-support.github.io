@@ -15,8 +15,6 @@ export default function BlogPost() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <article className="text-left"></a>
       <h1>🚛 Agentic Procurement & Supply Chain Revolution 2025: Autonomous Intelligence at Scale</h1>
       

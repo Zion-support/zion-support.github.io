@@ -1,7 +1,7 @@
 import React from 'react';
 import { ArrowLeft, Calendar, Clock, User, Brain, Zap, TrendingUp } from 'lucide-react';
 
-const NeuromorphicComputingRevolution2025: React.FC = () => {/* content */}
+const NeuromorphicComputingRevolution2025: React.FC = () => 
   return (
   <div></div>
     <div className="text-left"></div>

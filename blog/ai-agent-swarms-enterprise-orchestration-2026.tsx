@@ -18,8 +18,6 @@ export default function AIAgentSwarmsEnterpriseOrchestration2026() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <article className="text-left"></a>
       {/* Hero Section */}
       <header className="text-left">
@@ -130,12 +128,12 @@ export default function AIAgentSwarmsEnterpriseOrchestration2026() {
             <div className="text-left"></div>
               <pre className="text-left"></p>
 {`// Hierarchical Swarm Architecture Example
-class SwarmOrchestrator {/* content */}
+class SwarmOrchestrator 
   private workers: WorkerAgent[] = [];
   private coordinators: CoordinatorAgent[] = [];
   private observers: ObserverAgent[] = [];
   
-  async executeTask(task: Task): Promise<Result> {/* content */}
+  async executeTask(task: Task): Promise<Result> 
     const bestWorker = this.selectOptimalWorker(task);
     const coordinator = this.assignCoordinator(task);
     const observer = this.assignObserver(task);
@@ -226,7 +224,7 @@ class SwarmOrchestrator {/* content */}
               <div className="text-left"></div>
                 <pre className="text-left"></p>
 {`// Knowledge Sharing Protocol
-interface KnowledgeSharing {/* content */}
+interface KnowledgeSharing 
   propagateExperience(experience: AgentExperience): void;
   aggregateKnowledge(domain: string): KnowledgeBase;
   updateBeliefs(evidence: Evidence[]): void;
@@ -243,7 +241,7 @@ interface KnowledgeSharing {/* content */}
               <div className="text-left"></div>
                 <pre className="text-left"></p>
 {`// Adaptive Learning Framework
-class SwarmLearningSystem {/* content */}
+class SwarmLearningSystem 
   updateStrategies(feedback: PerformanceFeedback): void;
   evolveBehaviors(successRate: number): void;
   optimizeCommunication(metrics: CommunicationMetrics): void;

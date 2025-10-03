@@ -47,29 +47,69 @@ const CareersPage: React.FC = () => {
           
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-2xl font-semibold text-gray-800 mb-6">Why Work With Us?</h3>
-            <ul className="space-y-3 text-gray-600">
-              <li className="flex items-center">
-                <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                Competitive salary and benefits
-              </li>
-              <li className="flex items-center">
-                <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                Flexible work arrangements
-              </li>
-              <li className="flex items-center">
-                <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                Opportunities for growth and learning
-              </li>
-              <li className="flex items-center">
-                <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                Innovative and collaborative environment
-              </li>
-              <li className="flex items-center">
-                <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                Cutting-edge technology stack
-              </li>
-            </ul>
+            
+            <div className="space-y-4">
+              <div className="flex items-start">
+                <div className="flex-shrink-0">
+                  <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
+                    <span className="text-blue-600 font-semibold">1</span>
+                  </div>
+                </div>
+                <div className="ml-4">
+                  <h4 className="text-lg font-medium text-gray-900">Innovation</h4>
+                  <p className="text-gray-600">Work on cutting-edge AI and technology solutions.</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start">
+                <div className="flex-shrink-0">
+                  <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
+                    <span className="text-green-600 font-semibold">2</span>
+                  </div>
+                </div>
+                <div className="ml-4">
+                  <h4 className="text-lg font-medium text-gray-900">Flexibility</h4>
+                  <p className="text-gray-600">Remote work options and flexible schedules.</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start">
+                <div className="flex-shrink-0">
+                  <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center">
+                    <span className="text-purple-600 font-semibold">3</span>
+                  </div>
+                </div>
+                <div className="ml-4">
+                  <h4 className="text-lg font-medium text-gray-900">Growth</h4>
+                  <p className="text-gray-600">Continuous learning and career development opportunities.</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="mt-8">
+              <h4 className="text-lg font-medium text-gray-900 mb-4">Benefits</h4>
+              <ul className="space-y-2 text-gray-600">
+                <li>• Competitive salary and equity</li>
+                <li>• Health, dental, and vision insurance</li>
+                <li>• 401(k) with company matching</li>
+                <li>• Unlimited PTO</li>
+                <li>• Professional development budget</li>
+              </ul>
+            </div>
           </div>
+        </div>
+        
+        <div className="mt-12 text-center">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Ready to Join Our Team?</h2>
+          <p className="text-gray-600 mb-6">
+            Send us your resume and let us know why you'd be a great fit for Zion Tech.
+          </p>
+          <a
+            href="mailto:careers@ziontech.com"
+            className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+          >
+            Apply Now
+          </a>
         </div>
       </div>
     </div>

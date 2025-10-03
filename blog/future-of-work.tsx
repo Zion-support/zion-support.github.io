@@ -1,21 +1,21 @@
 
 
-class ErrorBoundary extends React.Component {/* content */}
-  constructor(props) {/* content */}
+class ErrorBoundary extends React.Component 
+  constructor(props) 
     super(props);
     this.state = { hasError: false };
   }
   
-  static getDerivedStateFromError(error) {/* content */}
+  static getDerivedStateFromError(error) 
     return { hasError: true };
   }
   
-  componentDidCatch(error, errorInfo) {/* content */}
+  componentDidCatch(error, errorInfo) 
     console.error('Error caught by boundary:', error, errorInfo);
   }
   
-  render() {/* content */}
-    if (this.state.hasError) {/* content */}
+  render() 
+    if (this.state.hasError) 
       return <div>Something went wrong.</div>;
     }
     

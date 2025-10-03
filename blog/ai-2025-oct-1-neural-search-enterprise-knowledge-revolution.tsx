@@ -15,8 +15,6 @@ export default function BlogPost() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <article className="text-left"></a>
       <h1>🧠 Neural Search & Enterprise Knowledge Revolution 2025: AI-Powered Discovery</h1>
       

@@ -15,8 +15,6 @@ export default function BlogPost() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <article className="text-left"></a>
       <h1>🤖 Intelligent Automation Platform Revolution 2025: End-to-End AI-Powered Automation</h1>
       

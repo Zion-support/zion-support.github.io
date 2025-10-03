@@ -13,8 +13,6 @@ export default function AISupplyChainIntelligenceRevolution2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>AI-Driven Supply Chain Intelligence Revolution 2025: Predictive Optimization at Scale | Zion Tech Group</title>

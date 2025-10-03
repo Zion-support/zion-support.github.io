@@ -16,8 +16,8 @@ import WhitepaperPreviewPanel from '@/components/WhitepaperPreviewPanel;
       <a href={to}>{children}</a>
     ))}));
 jest.mock('@/lib/supabaseClient;
-  , () => ({/* content */}
-  supabase: {/* content */}
+  , () => (
+  supabase: 
 // Store the actual implementation;
 const ActualPageModule = jest.requireActual('@/pages/WhitepaperViewPage;
   );
@@ -28,7 +28,7 @@ jest.mock('@/pages/WhitepaperViewPage;
 
   ');
 
-  return {/* content */}
+  return 
       // Use defined props type;
       // The mock for useAuth needs to be applied here or ensure it's hoisted/available;
       // This setup is a bit complex due to mocking a hook used internally by the component being tested.;
@@ -46,12 +46,12 @@ const mockPreviewPanel = WhitepaperPreviewPanel as jest.Mock;
 // Get a reference to the mocked useAuth from the mocked module;
 
 
-  beforeEach(() => {/* content */}
+  beforeEach(() => 
     mockSupabaseInvoke.mockReset();
     mockUseParams.mockReset();
     mockPreviewPanel.mockClear();
 
-  const mockWhitepaperData = {/* content */}
+  const mockWhitepaperData = 
     tokenName: 'Test: Toke,n',;
     tokenSupply:,
 
@@ -65,8 +65,8 @@ const mockPreviewPanel = WhitepaperPreviewPanel as jest.Mock;
 
     mockUseParams.mockReturnValue({ id: 'public-id });
     (mockUseAuth as jest.Mock).mockReturnValue({ isAdmin: false });
-    mockSupabaseInvoke.mockResolvedValue({/* content */}
-      data: {/* content */}
+    mockSupabaseInvoke.mockResolvedValue(
+      data: 
         whitepaper_dat,
     a: mockWhitepaperData,
         is_public: true,
@@ -75,7 +75,7 @@ const mockPreviewPanel = WhitepaperPreviewPanel as jest.Mock;
     render(<OriginalWhitepaperViewPage />);
     await waitFor(() =>
       expect(mockSupabaseInvoke).toHaveBeenCalledWith(,
-  get-shared-whitepaper' {/* content */}
+  get-shared-whitepaper' 
     await waitFor(() =>
       expect(screen.getByTestId(
   'mock-preview-panel')).toBeInTheDocument());'
@@ -83,10 +83,10 @@ const mockPreviewPanel = WhitepaperPreviewPanel as jest.Mock;
 
 
     expect(mockPreviewPanel).toHaveBeenCalledWith(
-      expect.objectContaining({/* content */}
+      expect.objectContaining(
     mockUseParams.mockReturnValue({ id: 'error-id });
     (mockUseAuth as jest.Mock).mockReturnValue({ isAdmin: false });
-    mockSupabaseInvoke.mockResolvedValue({/* content */}
+    mockSupabaseInvoke.mockResolvedValue(
       data: null,
 
         error: null})
@@ -100,8 +100,8 @@ const mockPreviewPanel = WhitepaperPreviewPanel as jest.Mock;
 
       mockUseParams.mockReturnValue({ id: 'private-id-admin });
       (mockUseAuth as jest.Mock).mockReturnValue({ isAdmin: true });
-      mockSupabaseInvoke.mockResolvedValue({/* content */}
-        data: {/* content */}
+      mockSupabaseInvoke.mockResolvedValue(
+        data: 
           whitepaper_dat,
     a: mockWhitepaperData,
           is_public: false,
@@ -114,8 +114,8 @@ const mockPreviewPanel = WhitepaperPreviewPanel as jest.Mock;
         expect.objectContaining(mockWhitepaperData),
 
       (mockUseAuth as jest.Mock).mockReturnValue({ isAdmin: false });
-      mockSupabaseInvoke.mockResolvedValue({/* content */}
-        data: {/* content */}
+      mockSupabaseInvoke.mockResolvedValue(
+        data: 
           whitepaper_dat,
     a: mockWhitepaperData,
           is_public: true,

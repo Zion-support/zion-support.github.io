@@ -1,5 +1,5 @@
-describe('cart ui', () => {/* content */}
-  it('adds item and shows subtotal', () => {/* content */}
+describe('cart ui', () => 
+  it('adds item and shows subtotal', () => 
     cy.visit('/equipment/audio-mixer-pro');
     cy.contains('Add to Cart').click();
     cy.get('[data-cy="cart-link"]').click();

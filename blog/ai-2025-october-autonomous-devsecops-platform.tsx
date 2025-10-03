@@ -15,8 +15,6 @@ export default function BlogPost() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <article className="text-left"></a>
       <h1>🔒 Autonomous DevSecOps Platform 2025: AI-Powered Security Automation at Scale</h1>
       

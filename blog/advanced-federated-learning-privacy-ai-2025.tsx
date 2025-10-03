@@ -13,8 +13,6 @@ export default function AdvancedFederatedLearningPrivacyAI2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>Advanced Federated Learning for Privacy-Preserving AI 2025 | Zion Tech Group</title>

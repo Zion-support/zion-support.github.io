@@ -6,8 +6,6 @@ export default function Edge2026PrivateFeatureFlags() {
 	return (
     <div>
       <div></div>
-      <div></div>
-    </div>
 		<div className="text-left"></div>
 			<main className="text-left">
 				<h1 className="text-left">Edge 2026: Private Feature Flags</h1>

@@ -8,8 +8,6 @@ export default function QuantumAIHybridComputing2026() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Helmet>
         <title>Quantum-AI Hybrid Computing: Solving Impossible Problems in 2026 | Zion Tech Group</title>

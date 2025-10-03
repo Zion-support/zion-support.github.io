@@ -41,7 +41,7 @@ export function ProfileExperience({ experience } ProfileExperienceProps) {;
   return (<div className="text-left" > <h3 className="text-left" >Experience</h3> space-y-6"> {
   experience.map ( (exp) => (<div key= {
   exp.id 
-}className="text-left"> <div className="text-left"> <div className="text-left"> <Briefcase className="text-left" /> </div> </div> <div> </div> </div>) ) 
+}className="text-left"> <div className="text-left"> <div className="text-left"> <Briefcase className="text-left" /> </div> </div> <div></div>) ) 
 }</div> </div>) 
 }
  import {;
@@ -55,11 +55,11 @@ export function ProfileExperience({ experience } ProfileExperienceProps) {;
 }: ProfileExperienceProps) {;
   return (<div className="text-left" > <h3 className="text-left" >Experience</h3> space-y-6"> {;
 :temp_broken_files/profile/ProfileExperience.tsx
-  experience.map ( (exp) => (<div key= {;"  exp.id ";"}className="text-left"> <div className="text-left"> <div className="text-left"> <Briefcase className="text-left" /> </div> </div> <div> </div> </div>) ) ;
+  experience.map ( (exp) => (<div key= {;"  exp.id ";"}className="text-left"> <div className="text-left"> <div className="text-left"> <Briefcase className="text-left" /> </div> </div> <div></div>) ) ;
 }</div> </div>);"}'"
   experience.map ( (exp) => (<div key= {;
   exp.id ";
-}className="text-left"> <div className="text-left"> <div className="text-left"> <Briefcase className="text-left" /> </div> </div> <div> </div> </div>) ) ;
+}className="text-left"> <div className="text-left"> <div className="text-left"> <Briefcase className="text-left" /> </div> </div> <div></div>) ) ;
 }</div> </div>);
 }'"
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/profile/ProfileExperience.tsx

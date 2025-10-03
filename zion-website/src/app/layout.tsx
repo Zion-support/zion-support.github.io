@@ -1,39 +1,77 @@
 import React from 'react';
-import { Metadata } from 'next';
+import Footer from '@/components/Footer'
+import Navigation from '@/components/Navigation'
+import type { Metadata, Viewport } from 'next'
+import { Inter } from 'next/font/google'
+import type { ReactNode } from 'react'
+import './globals.css'
 
-export const metadata: Metadata = {
-  title: 'Layout | Zion Tech Group',
-  description: 'Discover the latest AI breakthroughs and enterprise automation solutions from Zion Tech Group.',
-  keywords: 'AI, automation, enterprise, breakthrough, technology',
-  openGraph: {
-    title: 'Layout',
-    description: 'Discover the latest AI breakthroughs and enterprise automation solutions.',
-    type: 'article',
-  },
-};
+const inter = Inter({ subsets: ['latin'] })
 
-export default function layout() {
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="max-w-4xl mx-auto px-4 py-8">
-        <div className="bg-white rounded-lg shadow-lg p-8">
-          <div className="text-center mb-8">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">Layout</h1>
-            <p className="text-xl text-gray-600 mb-6">Revolutionary AI Breakthrough</p>
-            <div className="flex justify-center space-x-4">
-              <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">BREAKTHROUGH</span>
-              <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">AI</span>
-              <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">ENTERPRISE</span>
-            </div>
-          </div>
-          
-          <div className="prose max-w-none">
-            <p className="text-lg text-gray-700 mb-6">
-              This page is currently under development. Please check back soon for the complete content.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+export const metadata: Metadata = 
+	title: 'Zion Tech Group - Leading AI and Technology Solutions',
+	description:
+		'Zion Tech Group is a leading technology company specializing in AI, autonomous systems, quantum computing, and innovative business solutions. Transform your business with cutting-edge technology.',
+	keywords: [
+		'AI artificial intelligence',
+		'technology innovation',
+		'quantum computing autonomous systems',
+		'business solutions zion tech',
+	],
+	authors: [{ name: 'Zion Tech Group' }],
+	creator: 'Zion Tech Group',
+	publisher: 'Zion Tech Group',
+	robots: 'index, follow',
+	openGraph: {
+		title: 'Zion Tech Group - Leading AI and Technology Solutions',
+		description:
+			'Transform your business with cutting-edge AI and technology solutions from Zion Tech Group.',
+		url: 'https://ziontechgroup.com',
+		siteName: 'Zion Tech Group',
+		images: [
+			
+				url: '/og-image.jpg',
+				width: 1200,
+				height: 630,
+				alt: 'Zion Tech Group',
+			},
+		],
+		locale: 'en_US',
+		type: 'website',
+	},
+	twitter: 
+		card: 'summary_large_image',
+		title: 'Zion Tech Group - Leading AI and Technology Solutions',
+		description: 'Transform your business with cutting-edge AI and technology solutions.',
+		images: ['/og-image.jpg'],
+	},
+	metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://ziontechgroup.com'),
+}
+
+export const viewport: Viewport = 
+	width: 'device-width',
+	initialScale: 1,
+	themeColor: '#000000',
+}
+
+export default function RootLayout() {
+	return (
+    <div>
+      <div></div>
+		<html lang='en' className='scroll-smooth'>
+			<body className={`${inter.className} bg-black text-white antialiased`}>
+				{/* Promo banner */}
+				<div className='w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center text-sm sm:text-base py-2 px-4'></div>
+					<a href='/updates/agent-safety-whitepaper' className='font-semibold hover:underline'></a>
+						New whitepaper: AI Agent Safety Framework (2025) — read now →
+					</a>
+				</div>
+				<Navigation />
+				<main className='min-h-screen'>{children}</main>
+				<Footer />
+			</body>
+		</html>
+  </div>
+  </div>
+)
 }

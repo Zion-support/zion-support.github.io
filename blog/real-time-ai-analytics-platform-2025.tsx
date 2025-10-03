@@ -6,8 +6,6 @@ export default function RealTimeAIAnalyticsPlatform2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <main className="text-left">
       <h1>Real-Time AI Analytics Platform (2025): Stream Processing at Scale</h1>
       

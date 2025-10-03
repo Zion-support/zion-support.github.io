@@ -12,8 +12,6 @@ export default function AgenticAIEnterpriseTransformation2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <div className="text-left"></div>
         <main className="text-left">

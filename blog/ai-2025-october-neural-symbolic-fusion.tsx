@@ -15,8 +15,6 @@ export default function BlogPost() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <article className="text-left"></a>
       <h1>🧠 Neural-Symbolic Fusion 2025: Combining Deep Learning with Logical Reasoning</h1>
       

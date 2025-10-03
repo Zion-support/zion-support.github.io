@@ -2,12 +2,10 @@ import { ArrowLeft, BookOpen, Calendar, Clock, Share2, Tag, TrendingUp } from "l
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-const VectorDatabaseOptimization2026 = () => {/* content */}
+const VectorDatabaseOptimization2026 = () => 
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
       <Helmet>
         <title>Vector Database Optimization 2026: Scale to Billions with Sub-10ms Latency | Zion Tech Group</title>
         <meta
@@ -141,16 +139,16 @@ const VectorDatabaseOptimization2026 = () => {/* content */}
             <div className="text-left"></div>
               <h4 className="text-left">Production HNSW Configuration (1B vectors, 768d):</h4>
               <pre className="text-left"></p>
-{`{/* content */}
+{`
   "M": 32,
   "efConstruction": 200,
   "efSearch": 100,
-  "quantization": {/* content */}
+  "quantization": 
     "type": "product
     "m": 64,
     "nbits": 8
   },
-  "sharding": {/* content */}
+  "sharding": 
     "replicas": 3,
     "shards": 16
   }

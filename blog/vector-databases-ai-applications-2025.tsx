@@ -7,8 +7,6 @@ export default function VectorDatabasesAIApplications2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>Vector Databases: Powering the Next Generation of AI Applications | Zion Tech Group</title>

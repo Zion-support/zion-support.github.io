@@ -6,7 +6,7 @@ export default function Services() {
   return (
     <div>/* content */}
   const services = [
-    {/* content */}
+    
       title: 'Web Development',
       description: 'Modern, responsive web applications built with cutting-edge technologies.',
       icon: '🌐',
@@ -20,7 +20,7 @@ export default function Services() {
       ],
       technologies: ['React', 'Next.js', 'TypeScript', 'Node.js', 'MongoDB', 'PostgreSQL']
     },
-    {/* content */}
+    
       title: 'Mobile Development',
       description: 'Native and cross-platform mobile applications for iOS and Android.',
       icon: '📱',
@@ -34,7 +34,7 @@ export default function Services() {
       ],
       technologies: ['React Native', 'Flutter', 'Swift', 'Kotlin', 'Firebase', 'Expo']
     },
-    {/* content */}
+    
       title: 'AI Integration',
       description: 'Leverage artificial intelligence to automate processes and gain insights.',
       icon: '🤖',
@@ -48,7 +48,7 @@ export default function Services() {
       ],
       technologies: ['Python', 'TensorFlow', 'PyTorch', 'OpenAI', 'Hugging Face', 'AWS AI']
     },
-    {/* content */}
+    
       title: 'Cloud Services',
       description: 'Scalable and secure cloud infrastructure solutions.',
       icon: '☁️',
@@ -62,7 +62,7 @@ export default function Services() {
       ],
       technologies: ['AWS', 'Azure', 'GCP', 'Docker', 'Kubernetes', 'Terraform']
     },
-    {/* content */}
+    
       title: 'Data Analytics',
       description: 'Transform your data into actionable insights with advanced analytics.',
       icon: '📊',
@@ -76,7 +76,7 @@ export default function Services() {
       ],
       technologies: ['Python', 'R', 'Tableau', 'Power BI', 'Apache Spark', 'Elasticsearch']
     },
-    {/* content */}
+    
       title: 'Cybersecurity',
       description: 'Protect your business with comprehensive security solutions.',
       icon: '🔒',
@@ -95,8 +95,6 @@ export default function Services() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>Our Services - Zion Tech Group</title>

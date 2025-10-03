@@ -6,8 +6,6 @@ export default function AI2025OctoberLLMCostOptimization() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <article className="text-left"></a>
       <div className="text-left"></div>
         {/* Hero Section */}
@@ -123,22 +121,22 @@ import { Redis } from 'ioredis';
 import { OpenAI } from 'openai';
 import { cosineSimilarity } from './utils';
 
-class SemanticCache {/* content */}
-  constructor(redis: Redis, threshold = 0.95) {/* content */}
+class SemanticCache 
+  constructor(redis: Redis, threshold = 0.95) 
     this.redis = redis;
     this.threshold = threshold;
     this.embeddings = new Map();
   }
 
-  async get(prompt: string): Promise<string | null> {/* content */}
+  async get(prompt: string): Promise<string | null> 
     const embedding = await this.getEmbedding(prompt);
     const cached = await this.redis.hgetall('llm:cache');
     
-    for (const [key, value] of Object.entries(cached)) {/* content */}
+    for (const [key, value] of Object.entries(cached)) 
       const cachedEmbedding = JSON.parse(key);
       const similarity = cosineSimilarity(embedding, cachedEmbedding);
       
-      if (similarity >= this.threshold) {/* content */}
+      if (similarity >= this.threshold) 
         console.log('Cache hit with similarity:', similarity);
         return value;
       }
@@ -147,7 +145,7 @@ class SemanticCache {/* content */}
     return null;
   }
 
-  async set(prompt: string, response: string, ttl = 3600) {/* content */}
+  async set(prompt: string, response: string, ttl = 3600) 
     const embedding = await this.getEmbedding(prompt);
     await this.redis.setex(
       JSON.stringify(embedding),
@@ -156,9 +154,9 @@ class SemanticCache {/* content */}
     );
   }
 
-  private async getEmbedding(text: string): Promise<number[]> {/* content */}
+  private async getEmbedding(text: string): Promise<number[]> 
     // Use cheaper embedding model for cache lookup
-    const response = await openai.embeddings.create({/* content */}
+    const response = await openai.embeddings.create(
       model: "text-embedding-3-small
       input: text,
     });
@@ -174,25 +172,25 @@ class SemanticCache {/* content */}
             <pre className="text-left"></p>
               <code className="text-left">
 {`// Route requests to optimal model based on complexity
-class ModelRouter {/* content */}
-  async route(prompt: string, context: any): Promise<ModelConfig> {/* content */}
+class ModelRouter 
+  async route(prompt: string, context: any): Promise<ModelConfig> 
     const complexity = await this.analyzeComplexity(prompt, context);
     
     // Use cascading strategy: try smaller models first
-    if (complexity.score < 0.3) {/* content */}
-      return {/* content */}
+    if (complexity.score < 0.3) 
+      return 
         model: 'gpt-3.5-turbo',
         cost: 0.0005,
         expectedQuality: 0.85
       };
-    } else if (complexity.score < 0.7) {/* content */}
-      return {/* content */}
+    } else if (complexity.score < 0.7) 
+      return 
         model: 'gpt-4-turbo',
         cost: 0.01,
         expectedQuality: 0.95
       };
-    } else {/* content */}
-      return {/* content */}
+    } else 
+      return 
         model: 'gpt-4',
         cost: 0.03,
         expectedQuality: 0.99
@@ -203,9 +201,9 @@ class ModelRouter {/* content */}
   private async analyzeComplexity(
     prompt: string, 
     context: any
-  ): Promise<ComplexityScore> {/* content */}
+  ): Promise<ComplexityScore> 
     // Lightweight complexity analysis
-    const factors = {/* content */}
+    const factors = 
       tokenCount: prompt.split(' ').length,
       hasCode: /\`\`\`/.test(prompt),
       requiresReasoning: /analyze|compare|explain/.test(prompt),

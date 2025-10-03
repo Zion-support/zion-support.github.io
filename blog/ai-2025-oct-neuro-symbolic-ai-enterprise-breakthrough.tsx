@@ -15,8 +15,6 @@ export default function BlogPost() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <article className="text-left"></a>
       <h1>🧠 Neuro-Symbolic AI Enterprise Breakthrough 2025: The Future of Reliable AI</h1>
       

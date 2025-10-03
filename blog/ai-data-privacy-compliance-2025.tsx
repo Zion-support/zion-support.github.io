@@ -21,8 +21,6 @@ export default function AIDataPrivacyCompliance2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div className="text-left"></div>
       <main className="text-left">
         <nav className="text-left">
@@ -181,8 +179,6 @@ export default function AIDataPrivacyCompliance2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div className="text-left"></div>
       <main className="text-left">
         <nav className="text-left">

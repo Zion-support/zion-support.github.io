@@ -13,8 +13,6 @@ export default function EdgeAIRealTimeAnalyticsRevolution2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>Edge AI & Real-Time Analytics Revolution 2025: Sub-Millisecond Intelligence | Zion Tech Group</title>

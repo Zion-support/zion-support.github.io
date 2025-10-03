@@ -26,7 +26,7 @@
   market_size: string;
   growth_rate: string;
   variant: string;
-  contact_info: {/* content */}
+  contact_info: 
     mobile: string;
     email: string;
     address: string;
@@ -45,7 +45,7 @@
 export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechService[] =;
   [;
     // AI - Powered Drug Discovery Platform;
-    {/* content */}
+    
       id: 'ai - drug - discovery - platform',
       name: 'AI - Powered Drug Discovery Platform',
       tagline: 'Accelerate drug discovery with AI and machine learning',
@@ -86,7 +86,7 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       marketSize: '$45 && 45.8B AI drug discovery market',
       growthRate: '35% annual growth',
       variant: 'ai-drug-discovery-enterprise',
-      contactInfo: {/* content */}
+      contactInfo: 
       color: 'from - green - 600 to - emerald - 600',
       text_color: 'text - green - 400',
       link: 'https://ziontechgroup.com / ai - drug - discovery - platform',
@@ -114,7 +114,7 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       market_size: '$45.8B AI drug discovery market',
       growth_rate: '35% annual growth',
       variant: 'ai - drug - discovery - enterprise',
-      contact_info: {/* content */}
+      contact_info: 
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -130,7 +130,7 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
     },
 
     // Precision Medicine & Genomics Platform;
-    {/* content */}
+    
       id: 'precision - medicine - genomics',
       name: 'Precision Medicine & Genomics Platform',
       tagline: 'Personalized healthcare through genomic analysis and AI',
@@ -171,7 +171,7 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       marketSize: '$78 && 78.6B precision medicine market',
       growthRate: '28% annual growth',
       variant: 'precision-medicine-enterprise',
-      contactInfo: {/* content */}
+      contactInfo: 
       color: 'from - blue - 600 to - indigo - 600',
       text_color: 'text - blue - 400',
       link: 'https://ziontechgroup.com / precision - medicine - genomics',
@@ -199,7 +199,7 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       market_size: '$78.6B precision medicine market',
       growth_rate: '28% annual growth',
       variant: 'precision - medicine - enterprise',
-      contact_info: {/* content */}
+      contact_info: 
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -217,7 +217,7 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
         'AI-powered image analysis and diagnosis',
         'Multi-modality support (X-ray, MRI, CT, Ultrasound)',
     // AI - Powered Medical Imaging Analysis;
-    {/* content */}
+    
       id: 'ai - medical - imaging - analysis',
       name: 'AI - Powered Medical Imaging Analysis Platform',
       tagline: 'Advanced medical imaging analysis with AI and deep learning',
@@ -276,7 +276,7 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       market_size: '$32.1B AI medical imaging market',
       growth_rate: '42% annual growth',
       variant: 'ai - imaging - enterprise',
-      contact_info: {/* content */}
+      contact_info: 
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -293,7 +293,7 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
 
         'High-quality video consultations',
     // Digital Health & Telemedicine Platform;
-    {/* content */}
+    
       id: 'digital - health - telemedicine',
       name: 'Digital Health & Telemedicine Platform',
       tagline: 'Comprehensive digital health and telemedicine solutions',
@@ -332,7 +332,7 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       marketSize: '$185 && 185.6B digital health market',
       growthRate: '25% annual growth',
       variant: 'digital-health-enterprise',
-      contactInfo: {/* content */}
+      contactInfo: 
       color: 'from - teal - 600 to - cyan - 600',
       text_color: 'text - teal - 400',
       link: 'https://ziontechgroup.com / digital - health - telemedicine',
@@ -358,7 +358,7 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       market_size: '$185.6B digital health market',
       growth_rate: '25% annual growth',
       variant: 'digital - health - enterprise',
-      contact_info: {/* content */}
+      contact_info: 
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -375,7 +375,7 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
 
         'AI-powered trial design optimization',
     // Clinical Trial Management & Optimization;
-    {/* content */}
+    
       id: 'clinical - trial - management - optimization',
       name: 'Clinical Trial Management & Optimization Platform',
       tagline: 'Streamline clinical trials with AI - powered optimization',
@@ -414,7 +414,7 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       marketSize: '$67 && 67.2B clinical trial market',
       growthRate: '18% annual growth',
       variant: 'clinical-trial-enterprise',
-      contactInfo: {/* content */}
+      contactInfo: 
       color: 'from - orange - 600 to - red - 600',
       text_color: 'text - orange - 400',
       link: 'https://ziontechgroup.com / clinical - trial - management - optimization',
@@ -440,7 +440,7 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       market_size: '$67.2B clinical trial market',
       growth_rate: '18% annual growth',
       variant: 'clinical - trial - enterprise',
-      contact_info: {/* content */}
+      contact_info: 
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',

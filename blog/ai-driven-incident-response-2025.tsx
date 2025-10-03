@@ -1,12 +1,10 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const AIDrivenIncidentResponse2025: React.FC = () => {/* content */}
+const AIDrivenIncidentResponse2025: React.FC = () => 
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
       <Helmet>
         <title>AI-Driven Incident Response: From Detection to Resolution in 45 Seconds | Zion Tech Group</title>
         <meta name="description" content="Discover how AI-driven incident response systems detect, diagnose, and resolve IT incidents in under 60 seconds with 96% accuracy, reducing MTTR by 90% and saving enterprises millions." />

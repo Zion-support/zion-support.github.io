@@ -7,8 +7,6 @@ export default function MultimodalAIAgentsEnterpriseOrchestration2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Helmet>
         <title>Multimodal AI Agents: Enterprise Orchestration at Scale in 2025 | Zion Tech Group</title>

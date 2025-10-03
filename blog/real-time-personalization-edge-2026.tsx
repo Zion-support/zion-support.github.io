@@ -2,12 +2,10 @@ import { ArrowLeft, BookOpen, Calendar, Clock, Share2, Tag, TrendingUp } from "l
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-const RealTimePersonalizationEdge2026 = () => {/* content */}
+const RealTimePersonalizationEdge2026 = () => 
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
       <Helmet>
         <title>Real-Time Personalization at the Edge 2026: Sub-50ms Adaptive Experiences | Zion Tech Group</title>
         <meta

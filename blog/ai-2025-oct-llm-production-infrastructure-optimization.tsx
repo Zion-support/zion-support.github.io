@@ -3,12 +3,10 @@ import { Helmet } from 'react-helmet-async';
 import { Server, Cpu, Zap, TrendingDown, BarChart3, CheckCircle, ArrowRight, AlertTriangle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-const LLMProductionInfrastructure = () => {/* content */}
+const LLMProductionInfrastructure = () => 
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
       <Helmet>
         <title>LLM Production Infrastructure: Cut Costs 70% While Scaling 10x | Zion Tech Group</title>
         <meta

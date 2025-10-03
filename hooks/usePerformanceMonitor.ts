@@ -1,2 +1,2 @@
 ;
-interface PerformanceMetrics {/* content */}
+interface PerformanceMetrics 

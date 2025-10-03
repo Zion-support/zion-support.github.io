@@ -1,12 +1,10 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const AI2025OctoberGenerativeAIEnterpriseCodeModernization = () => {/* content */}
+const AI2025OctoberGenerativeAIEnterpriseCodeModernization = () => 
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
       <Helmet>
         <title>Generative AI Enterprise Code Modernization: Legacy System Transformation - Zion Tech Group</title>
         <meta name="description" content="Discover how generative AI is revolutionizing enterprise code modernization, transforming legacy systems with 87% faster migration, $290M cost savings, and automated refactoring achieving 99.2% accuracy." />

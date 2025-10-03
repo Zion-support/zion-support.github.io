@@ -1,12 +1,10 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const AIBusinessIntelligenceRevolution2025: React.FC = () => {/* content */}
+const AIBusinessIntelligenceRevolution2025: React.FC = () => 
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
       <Helmet>
         <title>AI-Driven Business Intelligence Revolution — 10x Faster Insights, 95% Automation | Zion Tech Group</title>
         <meta name="description" content="Transform decision-making with AI-powered business intelligence that delivers insights 10x faster, automates 95% of analytics workflows, and predicts business outcomes with 90% accuracy." />

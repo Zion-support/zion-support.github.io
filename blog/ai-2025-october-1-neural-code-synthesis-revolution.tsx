@@ -15,8 +15,6 @@ export default function BlogPost() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <article className="text-left"></a>
       <h1>💻 Neural Code Synthesis Revolution 2025: 98.5% Production-Ready Code in Seconds</h1>
       

@@ -13,8 +13,6 @@ export default function RealTimeFraudDetection2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>Real-Time AI Fraud Detection 2025: Millisecond Security at Scale | Zion Tech Group</title>

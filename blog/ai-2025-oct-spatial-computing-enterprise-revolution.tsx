@@ -15,8 +15,6 @@ export default function BlogPost() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <article className="text-left"></a>
       <h1>🌐 Spatial Computing & AI Enterprise Revolution 2025: Immersive Intelligence at Scale</h1>
       

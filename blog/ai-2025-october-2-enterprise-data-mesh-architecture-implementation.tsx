@@ -13,8 +13,6 @@ export default function EnterpriseDataMeshArchitecture2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>Enterprise Data Mesh Architecture 2025: Decentralized Data Platform | Zion Tech Group</title>

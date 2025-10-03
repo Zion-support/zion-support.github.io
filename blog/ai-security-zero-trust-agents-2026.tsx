@@ -2,12 +2,10 @@ import { ArrowLeft, BookOpen, Calendar, Clock, Share2, Tag, TrendingUp } from "l
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-const AISecurityZeroTrustAgents2026 = () => {/* content */}
+const AISecurityZeroTrustAgents2026 = () => 
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
       <Helmet>
         <title>AI Security Zero Trust for Agents 2026: Sandboxes, Guardrails, and Attestations | Zion Tech Group</title>
         <meta
@@ -144,15 +142,15 @@ const AISecurityZeroTrustAgents2026 = () => {/* content */}
 
             <h3>Tool Manifest</h3>
             <pre className="text-left"></p>
-{`{/* content */}
+{`
   "tool_id": "database_query
   "version": "2.1.0
-  "attestation": {/* content */}
+  "attestation": 
     "signature": "sha256:abc123...
     "signer": "security@company.com
     "timestamp": "2026-09-15T10:30:00Z"
   },
-  "permissions": {/* content */}
+  "permissions": 
     "read": ["customers.basic_info"],
     "write": [],
     "apis": ["read_only_db"]
@@ -260,14 +258,14 @@ const AISecurityZeroTrustAgents2026 = () => {/* content */}
 
             <h3>Audit Trail Example</h3>
             <pre className="text-left"></p>
-{`{/* content */}
+{`
   "session_id": "sess_abc123
   "agent_id": "support_agent_v2
   "user_id": "user_12345
   "timestamp": "2026-09-30T14:23:15Z
   "action": "database_write
   "target": "customers.notes
-  "parameters": {/* content */}
+  "parameters": 
     "customer_id": "cust_67890
     "note": "Called regarding billing issue"
   },

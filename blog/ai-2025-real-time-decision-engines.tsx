@@ -6,8 +6,6 @@ export default function RealTimeDecisionEngines2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <main className="text-left">
       <h1 className="text-left">Real-Time Decision Engines 2025</h1>
       <p className="text-left">10M decisions/sec under 1ms: streaming features, caches, and safety guards.</p>

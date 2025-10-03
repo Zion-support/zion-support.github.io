@@ -6,8 +6,6 @@ export default function AgenticSelfHealingInfrastructureRevolution() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <article className="text-left"></a>
       <header className="text-left">
         <h1 className="text-left">Agentic Self-Healing Infrastructure: The Future of Zero-Touch Operations</h1>
@@ -119,20 +117,20 @@ export default function AgenticSelfHealingInfrastructureRevolution() {
         <h3>Agent Framework</h3>
         <pre className="text-left"></p>
 {`// Multi-Agent Self-Healing System
-class SelfHealingOrchestrator {/* content */}
-  private agents: {/* content */}
+class SelfHealingOrchestrator 
+  private agents: 
     monitor: MonitoringAgent,
     diagnose: DiagnosticAgent,
     remediate: RemediationAgent,
     learn: LearningAgent
   };
 
-  async detect(): Promise<Issue[]> {/* content */}
+  async detect(): Promise<Issue[]> 
     const anomalies = await this.agents.monitor.detectAnomalies();
     return anomalies.filter(a => a.severity > THRESHOLD);
   }
 
-  async heal(issue: Issue): Promise<Resolution> {/* content */}
+  async heal(issue: Issue): Promise<Resolution> 
     // 1. Diagnose root cause
     const diagnosis = await this.agents.diagnose.analyze(issue);
     
@@ -140,7 +138,7 @@ class SelfHealingOrchestrator {/* content */}
     const plan = await this.agents.remediate.createPlan(diagnosis);
     
     // 3. Execute with safety checks
-    const result = await this.execute(plan, {/* content */}
+    const result = await this.execute(plan, 
       dryRun: plan.risk > 0.7,
       requireApproval: plan.impact === 'high',
       rollbackOnFailure: true

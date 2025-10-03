@@ -6,8 +6,6 @@ export default function AI2027OperationalRiskBudgets() {
 	return (
     <div>
       <div></div>
-      <div></div>
-    </div>
 		<div className="text-left"></div>
 			<main className="text-left">
 				<h1 className="text-left">AI 2027: Operational Risk Budgets</h1>

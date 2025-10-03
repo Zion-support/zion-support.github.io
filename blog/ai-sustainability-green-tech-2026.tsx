@@ -7,8 +7,6 @@ export default function AISustainabilityGreenTech2026() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>AI for Sustainability: Green Tech Revolution 2026 | Zion Tech Group</title>

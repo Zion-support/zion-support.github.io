@@ -15,8 +15,6 @@ export default function BlogPost() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <article className="text-left"></a>
       <h1>⚡ Distributed Reinforcement Learning at Enterprise Scale 2025</h1>
       

@@ -20,8 +20,6 @@ export default function AI2026UltimateAutonomousRevolution() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div className="text-left"></div>
       {/* Hero Section */}</div>
       <section className="text-left"></section>

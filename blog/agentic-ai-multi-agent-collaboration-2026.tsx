@@ -1,6 +1,6 @@
 import React from 'react';
 
-const AgenticAIMultiAgentCollaboration2026 = () => {/* content */}
+const AgenticAIMultiAgentCollaboration2026 = () => 
   return (
   <div></div>
     <article className="text-left"></a>

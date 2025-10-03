@@ -3,12 +3,10 @@ import { Helmet } from 'react-helmet-async';
 import { Scale, Shield, FileText, Brain, AlertTriangle, CheckCircle, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-const GenAILegalCompliance = () => {/* content */}
+const GenAILegalCompliance = () => 
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
       <Helmet>
         <title>Generative AI in Legal & Compliance: 2025 Revolution Guide | Zion Tech Group</title>
         <meta

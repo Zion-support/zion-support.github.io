@@ -15,8 +15,6 @@ export default function BlogPost() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <article className="text-left"></a>
       <h1>⚡ Distributed Inference Optimization 2025: Serving AI at Internet Scale</h1>
       

@@ -6,8 +6,6 @@ export default function AutonomousDatabaseOptimizationBreakthrough2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <main className="text-left">
       <h1>Autonomous Database Optimization: The 2025 Breakthrough in Data Infrastructure</h1>
       

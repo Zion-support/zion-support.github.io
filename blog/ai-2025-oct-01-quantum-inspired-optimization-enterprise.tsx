@@ -15,8 +15,6 @@ export default function BlogPost() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <article className="text-left"></a>
       <h1>⚛️ Quantum-Inspired Optimization 2025: Enterprise Problem Solving Revolution</h1>
       

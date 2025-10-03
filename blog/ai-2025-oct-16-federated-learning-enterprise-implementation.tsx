@@ -13,8 +13,6 @@ export default function FederatedLearningEnterpriseImplementation2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>Federated Machine Learning 2025: Enterprise Implementation with 97% Accuracy & Privacy Preservation | Zion Tech Group</title>
@@ -222,7 +220,7 @@ class FederatedClient:
   </div>
   </div>
 )
-        return {/* content */}
+        return 
             'client_id': self.client_id,
             'weights': clipped_update,
             'num_samples': len(self.local_data['X']),
@@ -314,7 +312,7 @@ class DifferentiallyPrivateFederation:
   </div>
   </div>
 )
-        return {/* content */}
+        return 
             'total_epsilon': cumulative_epsilon,
             'rounds': num_rounds,
             'per_round_epsilon': self.epsilon
@@ -482,7 +480,7 @@ class FederatedLearningPlatform:
             # 7. Evaluate and monitor
             metrics = await self.server.evaluate_global_model()
             
-            self.monitoring.log_round({/* content */}
+            self.monitoring.log_round(
                 'round': round_num,
                 'participants': len(selected_clients),
                 'accuracy': metrics['accuracy'],

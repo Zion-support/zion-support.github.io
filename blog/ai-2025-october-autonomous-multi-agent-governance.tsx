@@ -9,8 +9,6 @@ export default function AutonomousMultiAgentGovernance2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Helmet>
         <title>Autonomous Multi-Agent Governance Framework 2025 | Zion Tech Group</title>
@@ -286,7 +284,7 @@ class AgentGovernanceEngine:
     async def validate_agent_action(self, agent_id: str, action: Dict):
         """Multi-stage governance validation"""
         # 1. Policy Enforcement
-        policy_result = self.policy_engine.evaluate({/* content */}
+        policy_result = self.policy_engine.evaluate(
             "agent": {"id": agent_id, "role": action.get("role")},
             "action": action,
             "context": self.get_runtime_context()
@@ -317,7 +315,7 @@ class AgentGovernanceEngine:
     
     async def escalate_to_human(self, agent_id, action, safety_checks):
         """Human-in-the-loop escalation"""
-        ticket = self.hitl_queue.create_review_request({/* content */}
+        ticket = self.hitl_queue.create_review_request(
             "agent_id": agent_id,
             "action": action,
             "risk_level": safety_checks.risk_level,
@@ -351,19 +349,19 @@ package agent.governance
 default allow = false
 
 # Allow data access only if agent has explicit permission
-allow {/* content */}
+allow 
     input.action.type == "data_access"
     input.agent.permissions[_] == input.action.resource
     not is_pii(input.action.resource)
 }
 
 # PII access requires human approval
-is_pii(resource) {/* content */}
+is_pii(resource) 
     resource.contains_pii == true
 }
 
 # Financial transactions over $10K require CFO approval
-allow {/* content */}
+allow 
     input.action.type == "financial_transaction"
     input.action.amount <= 10000
     input.agent.role == "finance_agent"
@@ -371,7 +369,7 @@ allow {/* content */}
 """
 # Deploy governance engine
 governance = AgentGovernanceEngine()
-await governance.validate_agent_action("agent-42", {/* content */}
+await governance.validate_agent_action("agent-42", 
     "type": "data_access
     "resource": "customer_db.orders
     "amount": 5000

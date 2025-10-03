@@ -15,8 +15,6 @@ export default function BlogPost() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <article className="text-left"></a>
       <h1>🧠 Advanced Neural Architecture Search 2025: AI Designing AI Systems</h1>
       

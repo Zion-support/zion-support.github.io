@@ -1,6 +1,6 @@
 import { ServiceVariant } from "../types/service-variants";
 
-export interface RealMarketService {/* content */}
+export interface RealMarketService 
   id: string;
   name: string;
   tagline: string;
@@ -27,7 +27,7 @@ export interface RealMarketService {/* content */}
   marketSize: string;
   growthRate: string;
   variant: ServiceVariant;
-  contactInfo: {/* content */}
+  contactInfo: 
     mobile: string;
     email: string;
     address: string;
@@ -42,7 +42,7 @@ export interface RealMarketService {/* content */}
 }
 
 export const realMarketServices: RealMarketService[] = [
-  {/* content */}
+  
     id: "ai-business-intelligence-pro"
     name: "AI Business Intelligence Pro"
     tagline: "Transform data into actionable insights with AI"
@@ -80,7 +80,7 @@ export const realMarketServices: RealMarketService[] = [
     marketSize: "$29.48B market"
     growthRate: "15.7% annual growth"
     variant: "ai-futuristic"
-    contactInfo: {/* content */}
+    contactInfo: 
       mobile: "+1 302 464 0950"
       email: "kleber@ziontechgroup.com"
       address: "364 E Main St STE 1008 Middletown DE 19709"

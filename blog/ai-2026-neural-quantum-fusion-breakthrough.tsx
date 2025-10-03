@@ -2,7 +2,7 @@ import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 
-export const metadata: Metadata = {/* content */}
+export const metadata: Metadata = 
   title: 'AI 2026: Neural-Quantum Fusion Breakthrough - The Ultimate Intelligence Revolution',
   description: 'Discover the revolutionary neural-quantum fusion breakthrough that combines quantum computing with neural networks to achieve unprecedented AI capabilities. Transform your business with Zion Tech Group\'s cutting-edge technologies.',
   keywords: 'neural-quantum fusion, quantum AI, breakthrough technology, quantum computing, neural networks, AI 2026, enterprise transformation',
@@ -14,8 +14,6 @@ export default function NeuralQuantumFusionBreakthrough() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div className="text-left"></div>
       {/* Hero Section */}
       <header className="text-left">

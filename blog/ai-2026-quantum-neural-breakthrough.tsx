@@ -7,8 +7,6 @@ export default function AIQuantumNeuralBreakthrough2026() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div className="text-left"></div>
       {/* Hero Section */}
       <header className="text-left">
@@ -72,19 +70,19 @@ export default function AIQuantumNeuralBreakthrough2026() {
 
           <div className="text-left"></div>
             {[
-              {/* content */}
+              
                 icon: <Atom className="text-left" />,
                 title: 'Quantum Parallel Processing',
                 description: 'Leverage quantum superposition to process millions of calculations simultaneously, achieving exponential speed improvements.',
                 impact: '1000x faster processing'
               },
-              {/* content */}
+              
                 icon: <Brain className="text-left" />,
                 title: 'Quantum Neural Networks',
                 description: 'Neural networks enhanced with quantum entanglement, enabling complex pattern recognition across vast datasets.',
                 impact: '99.9% accuracy rates'
               },
-              {/* content */}
+              
                 icon: <Zap className="text-left" />,
                 title: 'Quantum Optimization',
                 description: 'Quantum algorithms that solve optimization problems in polynomial time, transforming enterprise decision-making.',
@@ -184,22 +182,22 @@ export default function AIQuantumNeuralBreakthrough2026() {
 
           <div className="text-left"></div>
             {[
-              {/* content */}
+              
                 phase: 'Quantum Layer', 
                 title: 'Quantum Processing Units', 
                 description: 'Advanced quantum processors with 1000+ qubits for parallel computation.' 
               },
-              {/* content */}
+              
                 phase: 'Neural Layer', 
                 title: 'Hybrid Neural Networks', 
                 description: 'Deep learning models enhanced with quantum entanglement capabilities.' 
               },
-              {/* content */}
+              
                 phase: 'Integration Layer', 
                 title: 'Quantum-Classical Bridge', 
                 description: 'Seamless integration between quantum and classical computing systems.' 
               },
-              {/* content */}
+              
                 phase: 'Application Layer', 
                 title: 'Enterprise APIs', 
                 description: 'RESTful APIs for easy integration with existing enterprise systems.' 

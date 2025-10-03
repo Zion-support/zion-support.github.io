@@ -3,7 +3,7 @@
 
 
 export const advancedAIServices2025 = [
-  {/* content */}
+  
 export const advancedAIServices2025 = [
       'Advanced AI-powered business intelligence platform that transforms raw data into actionable insights, predictive analytics, and automated reporting.'
       'Natural language query processing'
@@ -16,7 +16,7 @@ export const advancedAIServices2025 = [
       'Advanced security and compliance'
     ]
 export const advancedAIServices2025 = [;
-  {/* content */}
+  
     id: 'ai - powered - business - intelligence - suite',
     name: 'BusinessIntelligence AI Pro',
     description:;
@@ -30,13 +30,13 @@ export const advancedAIServices2025 = [;
       'Custom AI model training',
       'Advanced security and compliance',
     ],
-    pricing: {/* content */}
-      starter: {/* content */}
+    pricing: 
+      starter: 
         price: 199
         period: 'month'
         features: ['Up to 10 users', 'Basic AI insights', 'Standard reports']
       }
-      professional: {/* content */}
+      professional: 
         price: 499,
         period: 'month',
         features: [;
@@ -46,7 +46,7 @@ export const advancedAIServices2025 = [;
           'Predictive analytics',
         ],
       },
-      enterprise: {/* content */}
+      enterprise: 
         price: 1299,
         period: 'month',
         features: [;
@@ -63,7 +63,7 @@ export const advancedAIServices2025 = [;
 
     website: 'https://ziontechgroup.com / business - intelligence - ai - pro',
 
-    contact: {/* content */}
+    contact: 
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
@@ -79,7 +79,7 @@ export const advancedAIServices2025 = [;
     competitiveAdvantage:
       'Advanced natural language processing, comprehensive predictive analytics, and extensive data source integration'
   }
-  {/* content */}
+  
     id: 'intelligent-customer-analytics-platform'
     name: 'CustomerAnalytics AI'
     description:
@@ -93,7 +93,7 @@ export const advancedAIServices2025 = [;
       'Integration with CRM systems'
       'Advanced reporting and dashboards'
       'Custom AI model training'
-    contact: {/* content */}
+    contact: 
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
@@ -104,7 +104,7 @@ export const advancedAIServices2025 = [;
     competitive_advantage:;
       'Advanced customer behavior prediction, comprehensive personalization engine, and seamless CRM integration',
   },
-  {/* content */}
+  
     id: 'ai - powered - financial - risk - management',
     name: 'FinancialRisk AI',
     description:;
@@ -119,8 +119,8 @@ export const advancedAIServices2025 = [;
       'Advanced analytics and reporting',
       'Custom risk models',
     ],
-    pricing: {/* content */}
-      starter: {/* content */}
+    pricing: 
+      starter: 
         price: 299,
         period: 'month',
         features: [;
@@ -129,7 +129,7 @@ export const advancedAIServices2025 = [;
           'Email alerts',
         ],
       },
-      professional: {/* content */}
+      professional: 
         price: 799,
         period: 'month',
         features: [;
@@ -139,7 +139,7 @@ export const advancedAIServices2025 = [;
           'Full compliance suite',
         ],
       },
-      enterprise: {/* content */}
+      enterprise: 
         price: 1999,
         period: 'month',
         features: [;
@@ -156,13 +156,13 @@ export const advancedAIServices2025 = [;
 
     website: 'https://ziontechgroup.com / financial - risk - ai',
 
-    contact: {/* content */}
+    contact: 
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
 
       'Advanced AI fraud detection with 99 && 99.7% accuracy, comprehensive risk assessment, and regulatory compliance automation',
-  {/* content */}
+  
     id: 'intelligent - supply - chain - optimization',
     name: 'SupplyChain AI',
     description:;
@@ -177,8 +177,8 @@ export const advancedAIServices2025 = [;
       'Advanced analytics and reporting',
       'Custom optimization models',
     ],
-    pricing: {/* content */}
-      starter: {/* content */}
+    pricing: 
+      starter: 
         price: 179,
         period: 'month',
         features: [;
@@ -187,7 +187,7 @@ export const advancedAIServices2025 = [;
           'Standard reports',
         ],
       },
-      professional: {/* content */}
+      professional: 
         price: 449,
         period: 'month',
         features: [;
@@ -197,7 +197,7 @@ export const advancedAIServices2025 = [;
           'Full optimization suite',
         ],
       },
-      enterprise: {/* content */}
+      enterprise: 
         price: 1199,
         period: 'month',
         features: [;
@@ -214,7 +214,7 @@ export const advancedAIServices2025 = [;
 
     website: 'https://ziontechgroup.com / supply - chain - ai',
 
-    contact: {/* content */}
+    contact: 
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
@@ -225,7 +225,7 @@ export const advancedAIServices2025 = [;
     competitive_advantage:;
       'Industry - leading demand forecasting accuracy, comprehensive optimization algorithms, and seamless ERP integration',
   },
-  {/* content */}
+  
     id: 'ai - powered - healthcare - diagnostics',
     name: 'HealthcareDiagnostics AI',
     description:;
@@ -240,8 +240,8 @@ export const advancedAIServices2025 = [;
       'Custom AI model training',
       'HIPAA compliance',
     ],
-    pricing: {/* content */}
-      starter: {/* content */}
+    pricing: 
+      starter: 
         price: 399,
         period: 'month',
         features: [;
@@ -250,7 +250,7 @@ export const advancedAIServices2025 = [;
           'Standard reports',
         ],
       },
-      professional: {/* content */}
+      professional: 
         price: 999,
         period: 'month',
         features: [;
@@ -260,7 +260,7 @@ export const advancedAIServices2025 = [;
           'Full diagnostic suite',
         ],
       },
-      enterprise: {/* content */}
+      enterprise: 
         price: 2499,
         period: 'month',
         features: [;
@@ -277,7 +277,7 @@ export const advancedAIServices2025 = [;
 
     website: 'https://ziontechgroup.com / healthcare - diagnostics - ai',
 
-    contact: {/* content */}
+    contact: 
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
@@ -288,7 +288,7 @@ export const advancedAIServices2025 = [;
     competitive_advantage:;
       'Advanced medical image analysis with 96% accuracy, comprehensive diagnostic capabilities, and seamless EMR integration',
   },
-  {/* content */}
+  
     id: 'intelligent - legal - document - analysis',
     name: 'LegalDocument AI',
     description:;
@@ -303,8 +303,8 @@ export const advancedAIServices2025 = [;
       'Custom AI model training',
       'Legal compliance automation',
     ],
-    pricing: {/* content */}
-      starter: {/* content */}
+    pricing: 
+      starter: 
         price: 249,
         period: 'month',
         features: [;
@@ -313,7 +313,7 @@ export const advancedAIServices2025 = [;
           'Standard templates',
         ],
       },
-      professional: {/* content */}
+      professional: 
         price: 599,
         period: 'month',
         features: [;
@@ -323,7 +323,7 @@ export const advancedAIServices2025 = [;
           'Full legal suite',
         ],
       },
-      enterprise: {/* content */}
+      enterprise: 
         price: 1499,
         period: 'month',
         features: [;
@@ -340,7 +340,7 @@ export const advancedAIServices2025 = [;
 
     website: 'https://ziontechgroup.com / legal - document - ai',
 
-    contact: {/* content */}
+    contact: 
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
@@ -351,7 +351,7 @@ export const advancedAIServices2025 = [;
     competitive_advantage:;
       'Advanced legal document analysis, comprehensive compliance automation, and seamless legal system integration',
   },
-  {/* content */}
+  
     id: 'ai - powered - marketing - automation',
     name: 'MarketingAutomation AI',
     description:;
@@ -366,13 +366,13 @@ export const advancedAIServices2025 = [;
       'Custom AI model training',
       'Multi - channel automation',
     ],
-    pricing: {/* content */}
-      starter: {/* content */}
+    pricing: 
+      starter: 
         price: 129,
         period: 'month',
         features: ['Up to 10, 000 contacts', 'Basic AI', 'Standard automation'],
       },
-      professional: {/* content */}
+      professional: 
         price: 349,
         period: 'month',
         features: [;
@@ -382,7 +382,7 @@ export const advancedAIServices2025 = [;
           'Full automation suite',
         ],
       },
-      enterprise: {/* content */}
+      enterprise: 
         price: 899,
         period: 'month',
         features: [;
@@ -404,7 +404,7 @@ export const advancedAIServices2025 = [;
 
     website: 'https://ziontechgroup.com / marketing - automation - ai',
 
-    contact: {/* content */}
+    contact: 
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
@@ -415,7 +415,7 @@ export const advancedAIServices2025 = [;
     competitive_advantage:;
       'Advanced campaign optimization, comprehensive personalization engine, and extensive marketing tool integration',
   },
-  {/* content */}
+  
     id: 'intelligent - sales - optimization - platform',
     name: 'SalesOptimization AI',
     description:;
@@ -430,8 +430,8 @@ export const advancedAIServices2025 = [;
       'Custom AI model training',
       'Sales coaching automation',
     ],
-    pricing: {/* content */}
-      starter: {/* content */}
+    pricing: 
+      starter: 
         price: 99,
         period: 'month',
         features: [;
@@ -440,7 +440,7 @@ export const advancedAIServices2025 = [;
           'Standard reports',
         ],
       },
-      professional: {/* content */}
+      professional: 
         price: 299,
         period: 'month',
         features: [;
@@ -450,7 +450,7 @@ export const advancedAIServices2025 = [;
           'Full optimization suite',
         ],
       },
-      enterprise: {/* content */}
+      enterprise: 
         price: 799,
         period: 'month',
         features: [;
@@ -467,7 +467,7 @@ export const advancedAIServices2025 = [;
 
     website: 'https://ziontechgroup.com / sales - optimization - ai',
 
-    contact: {/* content */}
+    contact: 
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
@@ -478,7 +478,7 @@ export const advancedAIServices2025 = [;
     competitive_advantage:;
       'Advanced lead scoring with 93% accuracy, comprehensive sales forecasting, and seamless CRM integration',
   },
-  {/* content */}
+  
     id: 'ai - powered - hr - recruitment - platform',
     name: 'HRRecruitment AI',
     description:;
@@ -493,8 +493,8 @@ export const advancedAIServices2025 = [;
       'Custom AI model training',
       'Diversity and inclusion tools',
     ],
-    pricing: {/* content */}
-      starter: {/* content */}
+    pricing: 
+      starter: 
         price: 89,
         period: 'month',
         features: [;
@@ -503,7 +503,7 @@ export const advancedAIServices2025 = [;
           'Standard reports',
         ],
       },
-      professional: {/* content */}
+      professional: 
         price: 249,
         period: 'month',
         features: [;
@@ -513,7 +513,7 @@ export const advancedAIServices2025 = [;
           'Full recruitment suite',
         ],
       },
-      enterprise: {/* content */}
+      enterprise: 
         price: 649,
         period: 'month',
         features: [;
@@ -535,7 +535,7 @@ export const advancedAIServices2025 = [;
 
     website: 'https://ziontechgroup.com / hr - recruitment - ai',
 
-    contact: {/* content */}
+    contact: 
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
@@ -546,7 +546,7 @@ export const advancedAIServices2025 = [;
     competitive_advantage:;
       'Advanced candidate screening with 91% accuracy, comprehensive recruitment automation, and seamless ATS integration',
   },
-  {/* content */}
+  
     id: 'intelligent - cybersecurity - threat - detection',
     name: 'Cybersecurity AI',
     description:;
@@ -561,8 +561,8 @@ export const advancedAIServices2025 = [;
       'Custom AI model training',
       '24 / 7 security monitoring',
     ],
-    pricing: {/* content */}
-      starter: {/* content */}
+    pricing: 
+      starter: 
         price: 199,
         period: 'month',
         features: [;
@@ -571,7 +571,7 @@ export const advancedAIServices2025 = [;
           'Email alerts',
         ],
       },
-      professional: {/* content */}
+      professional: 
         price: 499,
         period: 'month',
         features: [;
@@ -581,7 +581,7 @@ export const advancedAIServices2025 = [;
           'Full security suite',
         ],
       },
-      enterprise: {/* content */}
+      enterprise: 
         price: 1299,
         period: 'month',
         features: [;
@@ -598,7 +598,7 @@ export const advancedAIServices2025 = [;
 
     website: 'https://ziontechgroup.com / cybersecurity - ai',
 
-    contact: {/* content */}
+    contact: 
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },

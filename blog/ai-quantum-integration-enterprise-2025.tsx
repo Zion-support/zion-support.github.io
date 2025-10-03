@@ -10,7 +10,7 @@ export const metadata = {
   tags: ['Quantum Computing', 'AI Integration', 'Enterprise Innovation', 'Quantum Algorithms']
 };
 
-const AIQuantumIntegrationEnterprise2025 = () => {/* content */}
+const AIQuantumIntegrationEnterprise2025 = () => 
   return (
   <div></div>
     <article className="text-left"></a>

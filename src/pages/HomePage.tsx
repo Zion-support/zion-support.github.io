@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 
-const HomePage: React.FC = () => 
+const HomePage: React.FC = () => {
   return (
   <div></div>
     <div className="min-h-screen"></div>

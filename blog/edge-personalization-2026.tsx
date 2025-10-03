@@ -11,7 +11,7 @@ export const metadata = {
 	tags: ['Edge', 'Personalization', 'On‑device ML', 'Privacy']
 };
 
-const EdgePersonalization2026 = () => {/* content */}
+const EdgePersonalization2026 = () => 
 	return (
   <div></div>
 		<article className="text-left"></a>

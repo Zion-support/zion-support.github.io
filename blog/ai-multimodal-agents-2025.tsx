@@ -1,6 +1,6 @@
 import React from 'react';
 
-const AIMultimodalAgents2025: React.FC = () => {/* content */}
+const AIMultimodalAgents2025: React.FC = () => 
   return (
   <div></div>
     <article className="text-left"></a>
@@ -69,11 +69,11 @@ const AIMultimodalAgents2025: React.FC = () => {/* content */}
             <p className="text-left">Route requests based on latency budget and quality tier:</p>
             <pre className="text-left"></p>
 {`// Pseudo-code routing logic
-if (latency_budget < 200ms) {/* content */}
+if (latency_budget < 200ms) 
   route_to_edge_model(input, quality='standard')
-} else if (quality_tier == 'premium') {/* content */}
+} else if (quality_tier == 'premium') 
   route_to_cloud_large_model(input)
-} else {/* content */}
+} else 
   route_to_regional_model(input)
 }`}
             </pre>

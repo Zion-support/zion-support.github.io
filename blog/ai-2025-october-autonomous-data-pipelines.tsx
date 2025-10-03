@@ -1,6 +1,6 @@
 import React from 'react';
 
-const AutonomousDataPipelines2025 = () => {/* content */}
+const AutonomousDataPipelines2025 = () => 
   return (
   <div></div>
     <article className="text-left"></a>

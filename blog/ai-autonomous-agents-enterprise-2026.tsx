@@ -8,8 +8,6 @@ export default function AIAutonomousAgentsEnterprise2026() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Helmet>
         <title>AI Autonomous Agents Revolutionizing Enterprise Operations in 2026 | Zion Tech Group</title>

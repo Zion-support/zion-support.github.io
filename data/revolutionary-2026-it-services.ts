@@ -8,7 +8,7 @@
   link: string;
   category: string;
   realImplementation: boolean;
-  contactInfo: {/* content */}
+  contactInfo: 
     mobile: string;
     email: string;
 export interface Revolutionary2026ItService {;
@@ -39,14 +39,14 @@ export interface Revolutionary2026ItService {;
   description: string, features: string[],
   link: string, category: string,
   realImplementation: boolean,
-  contactInfo: {/* content */}
+  contactInfo: 
     mobile: string, email: string,
     address: string
   }
 }
 
 export const revolutionary2026ITServices: Revolutionary2026ItService[] = [
-  {/* content */}
+  
     id: "2026-revolutionary-it", name: "2026 Revolutionary IT Platform",
     tagline: "Revolutionary IT for 2026", price: "$199/month",
     description: "Revolutionary IT platform that transforms how businesses manage technology in 2026.",
@@ -59,7 +59,7 @@ export const revolutionary2026ITServices: Revolutionary2026ItService[] = [
     ];
     link: "/services/2026-revolutionary-it", category: "Revolutionary 2026 IT",
     realImplementation: true,
-    contactInfo: {/* content */}
+    contactInfo: 
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
@@ -90,7 +90,7 @@ export const revolutionary2026ITServices: Revolutionary2026ItService[] = [
     link: "/services/2026-revolutionary-it",
     category: "Revolutionary 2026 IT",
     realImplementation: true,
-    contactInfo: {/* content */}
+    contactInfo: 
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       mobile: '+1 302 464 0950',

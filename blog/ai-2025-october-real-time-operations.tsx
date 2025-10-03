@@ -7,8 +7,6 @@ export default function AIRealTimeOperations2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div className="text-left"></div>
       <main className="text-left">
         {/* Hero Section */}

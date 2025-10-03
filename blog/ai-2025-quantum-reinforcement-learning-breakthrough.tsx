@@ -6,8 +6,6 @@ export default function QuantumReinforcementLearningBreakthrough2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <main className="text-left">
       <h1>Quantum Reinforcement Learning: The 2025 Breakthrough in Adaptive Intelligence</h1>
       

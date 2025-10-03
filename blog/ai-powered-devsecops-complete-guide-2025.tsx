@@ -7,8 +7,6 @@ export default function AIPoweredDevSecOps2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>AI-Powered DevSecOps Complete Guide 2025 | Security at DevOps Speed | Zion Tech Group</title>

@@ -2,12 +2,10 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, TrendingUp, Zap, Target, CheckCircle, Clock } from 'lucide-react';
 
-const EdgeAIRealTimeInference2026 = () => {/* content */}
+const EdgeAIRealTimeInference2026 = () => 
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
       <Helmet>
         <title>Edge AI Real-Time Inference 2026 - Sub-10ms AI at the Edge | Zion Tech Group</title>
         <meta

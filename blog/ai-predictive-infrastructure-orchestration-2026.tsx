@@ -2,12 +2,10 @@ import { Helmet } from "react-helmet-async";
 import { ArrowLeft, Server, Zap, TrendingUp, CheckCircle, DollarSign, Shield } from "lucide-react";
 import { Link } from "react-router-dom";
 
-const AIPredictiveInfrastructureOrchestration2026 = () => {/* content */}
+const AIPredictiveInfrastructureOrchestration2026 = () => 
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
       <Helmet>
         <title>AI Predictive Infrastructure Orchestration 2026: Zero-Touch Cloud Operations | Zion Tech Group</title>
         <meta
@@ -125,7 +123,7 @@ const AIPredictiveInfrastructureOrchestration2026 = () => {/* content */}
               <div className="text-left"></div>
                 <pre className="text-left"></p>
 {`# Example: Predictive Scaling
-prediction = {/* content */}
+prediction = 
   "next_24h_peak": "2025-09-30 18:00:00
   "predicted_load": "85% capacity
   "recommended_action": "scale_up

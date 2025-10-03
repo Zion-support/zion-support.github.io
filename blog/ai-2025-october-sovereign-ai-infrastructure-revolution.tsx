@@ -15,8 +15,6 @@ export default function BlogPost() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <article className="text-left"></a>
       <h1>🏛️ Sovereign AI Infrastructure 2025: National AI Autonomy Revolution</h1>
       

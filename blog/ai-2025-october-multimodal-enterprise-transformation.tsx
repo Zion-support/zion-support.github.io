@@ -16,8 +16,6 @@ export default function MultimodalEnterpriseTransformation() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <article className="text-left"></a>
       <header className="text-left">
         <div className="text-left"></div>
@@ -344,7 +342,7 @@ class MultimodalProcessor:
         return logits
 
 # Deployment configuration
-config = {/* content */}
+config = 
     "batch_size": 32,
     "num_workers": 8,
     "gpu_memory_fraction": 0.9,

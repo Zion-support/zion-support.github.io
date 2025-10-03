@@ -7,8 +7,6 @@ export default function AIDigitalTwinsIndustry42025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>AI-Powered Digital Twins: Revolutionizing Industry 4.0 with 98% Accuracy | Zion Tech Group</title>

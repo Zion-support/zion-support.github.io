@@ -7,8 +7,6 @@ export default function AIMetaCognitiveRevolution2026() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div className="text-left"></div>
       {/* Hero Section */}
       <header className="text-left">
@@ -72,19 +70,19 @@ export default function AIMetaCognitiveRevolution2026() {
 
           <div className="text-left"></div>
             {[
-              {/* content */}
+              
                 icon: <Brain className="text-left" />,
                 title: 'Self-Aware Processing',
                 description: 'AI systems that monitor and understand their own cognitive processes, enabling real-time optimization and error correction.',
                 impact: '95% accuracy improvement'
               },
-              {/* content */}
+              
                 icon: <Target className="text-left" />,
                 title: 'Meta-Strategy Formation',
                 description: 'AI that develops strategies about how to think, creating adaptive reasoning frameworks that evolve with complexity.',
                 impact: '300% faster problem solving'
               },
-              {/* content */}
+              
                 icon: <Zap className="text-left" />,
                 title: 'Autonomous Learning',
                 description: 'Systems that learn how to learn better, continuously improving their own learning algorithms and knowledge acquisition.',

@@ -13,8 +13,6 @@ export default function RealTimePersonalization2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>Real-Time AI Personalization 2025: Sub-Second Hyper-Personalized Experiences | Zion Tech Group</title>

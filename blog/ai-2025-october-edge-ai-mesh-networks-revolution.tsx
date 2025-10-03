@@ -7,8 +7,6 @@ export default function EdgeAIMeshNetworksRevolution() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Helmet>
         <title>Edge AI Mesh Networks Revolution | Zion Tech Group</title>

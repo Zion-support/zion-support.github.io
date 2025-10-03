@@ -13,8 +13,6 @@ export default function AgenticAIOperationsRevolution2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>Agentic AI Operations Revolution 2025: Self-Managing Enterprise Systems | Zion Tech Group</title>

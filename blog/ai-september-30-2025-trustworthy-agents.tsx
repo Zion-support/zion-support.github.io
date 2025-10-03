@@ -6,8 +6,6 @@ export default function TrustworthyAgentsSept302025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div className="text-left"></div>
       <div className="text-left"></div>
         <h1 className="text-left">Trustworthy AI Agents: The 2025 Enterprise Blueprint</h1>

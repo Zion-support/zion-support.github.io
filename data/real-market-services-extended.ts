@@ -1,4 +1,4 @@
-export interface RealMarketServiceExtended {/* content */}
+export interface RealMarketServiceExtended 
   id: string;
   name: string;
   tagline: string;
@@ -7,7 +7,7 @@ export interface RealMarketServiceExtended {/* content */}
 }
 
 export const realMarketServicesExtended: RealMarketServiceExtended[] = [
-  {/* content */}
+  
     id: 'extended-service-1',
     name: 'Extended Market Service 1',
     tagline: 'Extended market coverage',

@@ -2,7 +2,7 @@ import { Helmet } from "react-helmet-async";
 import { ArrowLeft, Bot, Building2, Workflow, TrendingUp, Shield, CheckCircle, Zap, Target } from "lucide-react";
 import { Link } from "react-router-dom";
 
-const EnterpriseAIAgentsAutomationRevolution = () => {/* content */}
+const EnterpriseAIAgentsAutomationRevolution = () => 
   return (
   <div></div>
     <div className="text-left"></div>

@@ -1,6 +1,6 @@
 import { ServiceVariant } from '../types/service-variants';
 
-export interface InnovativeBusinessSolution2025 {/* content */}
+export interface InnovativeBusinessSolution2025 
   id: string;
   name: string;
   tagline: string;
@@ -27,7 +27,7 @@ export interface InnovativeBusinessSolution2025 {/* content */}
   marketSize: string;
   growthRate: string;
   variant: ServiceVariant;
-  contactInfo: {/* content */}
+  contactInfo: 
     mobile: string;
     email: string;
     address: string;
@@ -42,7 +42,7 @@ export interface InnovativeBusinessSolution2025 {/* content */}
 }
 
 export const innovativeBusinessSolutionsExpansion2025: InnovativeBusinessSolution2025[] = [
-  {/* content */}
+  
     id: 'ai-powered-business-intelligence-suite',
     name: 'AI Business Intelligence Suite',
     tagline: 'Transform data into actionable business insights with AI',
@@ -80,7 +80,7 @@ export const innovativeBusinessSolutionsExpansion2025: InnovativeBusinessSolutio
     marketSize: '$24B business intelligence market',
     growthRate: '22% annual growth',
     variant: 'business-intelligence-futuristic',
-    contactInfo: {/* content */}
+    contactInfo: 
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -93,7 +93,7 @@ export const innovativeBusinessSolutionsExpansion2025: InnovativeBusinessSolutio
     rating: 4.8,
     reviews: 189
   },
-  {/* content */}
+  
     id: 'smart-workflow-automation-platform',
     name: 'Smart Workflow Automation Platform',
     tagline: 'Intelligent workflow automation with AI-powered optimization',
@@ -131,7 +131,7 @@ export const innovativeBusinessSolutionsExpansion2025: InnovativeBusinessSolutio
     marketSize: '$18B workflow automation market',
     growthRate: '28% annual growth',
     variant: 'enterprise-futuristic',
-    contactInfo: {/* content */}
+    contactInfo: 
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -144,7 +144,7 @@ export const innovativeBusinessSolutionsExpansion2025: InnovativeBusinessSolutio
     rating: 4.7,
     reviews: 134
   },
-  {/* content */}
+  
     id: 'intelligent-customer-relationship-platform',
     name: 'Intelligent Customer Relationship Platform',
     tagline: 'AI-powered customer relationship management with predictive insights',
@@ -182,7 +182,7 @@ export const innovativeBusinessSolutionsExpansion2025: InnovativeBusinessSolutio
     marketSize: '$30B CRM market',
     growthRate: '25% annual growth',
     variant: 'customer-service-futuristic',
-    contactInfo: {/* content */}
+    contactInfo: 
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -195,7 +195,7 @@ export const innovativeBusinessSolutionsExpansion2025: InnovativeBusinessSolutio
     rating: 4.8,
     reviews: 245
   },
-  {/* content */}
+  
     id: 'ai-powered-financial-management-suite',
     name: 'AI Financial Management Suite',
     tagline: 'Intelligent financial management with AI-powered insights and automation',
@@ -233,7 +233,7 @@ export const innovativeBusinessSolutionsExpansion2025: InnovativeBusinessSolutio
     marketSize: '$20B financial management market',
     growthRate: '20% annual growth',
     variant: 'finance-futuristic',
-    contactInfo: {/* content */}
+    contactInfo: 
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -246,7 +246,7 @@ export const innovativeBusinessSolutionsExpansion2025: InnovativeBusinessSolutio
     rating: 4.6,
     reviews: 112
   },
-  {/* content */}
+  
     id: 'smart-project-management-platform',
     name: 'Smart Project Management Platform',
     tagline: 'AI-powered project management with intelligent planning and optimization',
@@ -284,7 +284,7 @@ export const innovativeBusinessSolutionsExpansion2025: InnovativeBusinessSolutio
     marketSize: '$16B project management market',
     growthRate: '24% annual growth',
     variant: 'project-management-futuristic',
-    contactInfo: {/* content */}
+    contactInfo: 
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',

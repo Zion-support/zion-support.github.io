@@ -1,4 +1,4 @@
-interface ModernNavigationProps {/* content */}
+interface ModernNavigationProps 
   class_name?: string;
 }
 
@@ -6,14 +6,12 @@ interface ModernNavigationProps {/* content */}
 export default function ModernNavigation() {
   return (
     <div>/* content */}
-export default function ModernNavigation({/* content */}
+export default function ModernNavigation(
   className = "
-}: ModernNavigationProps) {/* content */}
+}: ModernNavigationProps) 
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div className={className}></div>
       <h1>ModernNavigation</h1>
       <p>This component is currently under development.</p>

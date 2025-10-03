@@ -8,8 +8,6 @@ export default function EdgeAIRealTimeProcessing2026() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Helmet>
         <title>Edge AI & Real-Time Processing: The 1ms Response Revolution | Zion Tech Group</title>

@@ -11,7 +11,7 @@ export const metadata = {
   readTime: "18 min read
 };
 
-const ProductionReadyAIAgentsFramework: React.FC = () => {/* content */}
+const ProductionReadyAIAgentsFramework: React.FC = () => 
   return (
   <div></div>
     <article className="text-left"></a>

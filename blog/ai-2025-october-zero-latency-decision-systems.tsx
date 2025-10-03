@@ -6,8 +6,6 @@ export default function AI2025OctoberZeroLatencyDecisionSystems() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <article className="text-left"></a>
       <header className="text-left">
         <div className="text-left"></div>

@@ -3,12 +3,10 @@ import { Helmet } from 'react-helmet-async';
 import { Cloud, Server, Shield, Zap, TrendingUp, CheckCircle, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-const HybridCloudTransformation = () => {/* content */}
+const HybridCloudTransformation = () => 
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
       <Helmet>
         <title>Hybrid Cloud Transformation: The 2025 Enterprise Playbook | Zion Tech Group</title>
         <meta

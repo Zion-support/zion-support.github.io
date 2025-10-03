@@ -15,8 +15,6 @@ export default function BlogPost() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <article className="text-left"></a>
       <h1>⚛️ Quantum-Enhanced AI Systems 2025: Hybrid Classical-Quantum Intelligence</h1>
       

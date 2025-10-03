@@ -6,8 +6,6 @@ export default function AISelfHealingInfrastructure2025() {
 	return (
     <div>
       <div></div>
-      <div></div>
-    </div>
 		<div className="text-left"></div>
 			<main className="text-left">
 				<h1 className="text-left">AI Self-Healing Infrastructure 2025</h1>

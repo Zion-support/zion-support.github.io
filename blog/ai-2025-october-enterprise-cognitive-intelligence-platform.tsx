@@ -13,8 +13,6 @@ export default function EnterpriseCognitiveIntelligencePlatform2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>Enterprise Cognitive Intelligence Platform 2025: Building Self-Learning Business Systems | Zion Tech Group</title>

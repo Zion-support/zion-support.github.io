@@ -6,8 +6,6 @@ export default function EnterpriseLLMSecurityFramework2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <main className="text-left">
       <h1>Enterprise LLM Security Framework (2025): Comprehensive Protection Strategy</h1>
       

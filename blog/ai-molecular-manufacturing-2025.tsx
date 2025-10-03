@@ -2,12 +2,10 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Atom, Sparkles, CheckCircle, Beaker, Factory } from "lucide-react";
 
-const AIMolecularManufacturing2025 = () => {/* content */}
+const AIMolecularManufacturing2025 = () => 
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
       <Helmet>
         <title>AI Molecular Manufacturing 2025: Atomic-Precision Production Revolution | Zion Tech Group</title>
         <meta

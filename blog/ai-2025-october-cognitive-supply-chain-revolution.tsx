@@ -9,8 +9,6 @@ export default function CognitiveSupplyChainRevolution2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div className="text-left"></div>
       <Helmet>
         <title>Cognitive Supply Chain Revolution 2025 | AI-Powered Logistics | Zion Tech Group</title>

@@ -1,5 +1,5 @@
 export const revolutionaryITInfrastructure2025Services = [
-  {/* content */}
+  
     name: 'Revolutionary Cloud Infrastructure 2025',
     path: '/services/revolutionary-cloud-infrastructure-2025',
     description: 'Next-generation cloud infrastructure and management',
@@ -11,13 +11,13 @@ export const revolutionaryITInfrastructure2025Services = [
       'Advanced security',
       'Performance optimization'
     ],
-    pricing: {/* content */}
+    pricing: 
       starter: '$299/month',
       professional: '$599/month',
       enterprise: 'Custom'
     }
   },
-  {/* content */}
+  
     name: 'Revolutionary DevOps Automation 2025',
     path: '/services/revolutionary-devops-automation-2025',
     description: 'Intelligent DevOps and CI/CD automation',
@@ -29,7 +29,7 @@ export const revolutionaryITInfrastructure2025Services = [
       'Performance monitoring',
       'Security scanning'
     ],
-    pricing: {/* content */}
+    pricing: 
       starter: '$399/month',
       professional: '$799/month',
       enterprise: 'Custom'
@@ -44,7 +44,7 @@ export const revolutionaryITCategories2025 = [
   'Performance Optimization'
 ];
 
-export const revolutionaryITStats2025 = {/* content */}
+export const revolutionaryITStats2025 = 
   totalServices: 2,
   categories: 4,
   averageRating: 4.8,

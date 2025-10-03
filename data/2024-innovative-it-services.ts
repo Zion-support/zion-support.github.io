@@ -1,4 +1,4 @@
-export interface InnovativeITService2024 {/* content */}
+export interface InnovativeITService2024 
   id: string;
   name: string;
   tagline: string;
@@ -27,7 +27,7 @@ export interface InnovativeITService2024 {/* content */}
   marketSize: string;
   growthRate: string;
   variant: string;
-  contactInfo: {/* content */}
+  contactInfo: 
     mobile: string;
     email: string;
     address: string;
@@ -40,7 +40,7 @@ export interface InnovativeITService2024 {/* content */}
 }
 
 export const innovativeITServices2024: InnovativeITService2024[] = [
-  {/* content */}
+  
     id: "autonomous-devops-platform",
     name: "Autonomous DevOps Platform",
     tagline: "Self-healing infrastructure with zero downtime",
@@ -78,7 +78,7 @@ export const innovativeITServices2024: InnovativeITService2024[] = [
     marketSize: "$8.2B market",
     growthRate: "20.1% annual growth",
     variant: "ai-futuristic",
-    contactInfo: {/* content */}
+    contactInfo: 
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",

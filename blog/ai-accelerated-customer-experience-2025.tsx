@@ -13,22 +13,22 @@ export const metadata = {
 };
 
 const sections: { heading: string; body: string }[] = [
-  {/* content */}
+  
     heading: 'Executive Summary',
     body:
       'Enterprises are transforming customer experience with real-time AI: intent detection, personalized guidance, and autonomous case resolution. This guide outlines a reference architecture and rollout plan delivering 95% CSAT, 40% cost reduction, and sub-2s response time across channels.'
   },
-  {/* content */}
+  
     heading: 'Reference Architecture',
     body:
       'Core layers include: data ingestion (voice, chat, email, app), streaming ETL, vector retrieval with guardrails, reasoning agents for intent/routing, tool-execution for workflows (CRM/ITSM/Billing), and analytics observability with feedback loops. Use safety filters, PII redaction, and policy constraints by default.'
   },
-  {/* content */}
+  
     heading: 'Blueprint Rollout (90 Days)',
     body:
       'Day 0–30: instrument channels, define intents, stand up RAG + guardrails; 30–60: pilot agentic workflows for top-5 intents, measure CSAT/handle-time; 60–90: scale to 15 intents, add proactive outreach, build post-resolution surveys feeding active learning.'
   },
-  {/* content */}
+  
     heading: 'Outcomes & Benchmarks',
     body:
       'Measured across Fortune 500 pilots: 35–45% cost reduction, 60–80% first-contact resolution, 25–35% AHT reduction, 6–12 pt CSAT lift, and 20–30% NPS increase. Maintain 99.9% uptime and &lt;2s P95 across channels.'
@@ -41,8 +41,6 @@ export default function AICustomerExperience2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <article className="text-left"></a>
       <header className="text-left">
         <h1 className="text-left">AI-Accelerated Customer Experience 2025</h1>

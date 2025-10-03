@@ -3,7 +3,7 @@ import { describe, test, expect, jest } from '@jest/globals';
 import { usePerformanceMonitor } from '../hooks/usePerformanceMonitor';
 
 // Mock web-vitals
-jest.mock('web-vitals', () => ({/* content */}
+jest.mock('web-vitals', () => (
   getCLS: jest.fn(),
   getFID: jest.fn(),
   getFCP: jest.fn(),
@@ -11,13 +11,13 @@ jest.mock('web-vitals', () => ({/* content */}
   getTTFB: jest.fn()
 }));
 
-const TestComponent = () => {/* content */}
+const TestComponent = () => 
   usePerformanceMonitor();
   return <div>Test Component</div>;
 };
 
-describe('Performance Tests', () => {/* content */}
-  test('performance monitor hook renders without errors', () => {/* content */}
+describe('Performance Tests', () => 
+  test('performance monitor hook renders without errors', () => 
     expect(() => render(<TestComponent />)).not.toThrow();
   });
 });

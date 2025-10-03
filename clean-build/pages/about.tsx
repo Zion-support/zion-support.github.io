@@ -7,8 +7,6 @@ export default function About() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>About Us - Zion Tech Group</title>

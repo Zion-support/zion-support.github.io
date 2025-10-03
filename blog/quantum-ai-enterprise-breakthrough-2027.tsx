@@ -17,8 +17,6 @@ export default function QuantumAIEnterprise2027() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <article className="text-left"></a>
       <div className="text-left"></div>
         <div className="text-left"></div>

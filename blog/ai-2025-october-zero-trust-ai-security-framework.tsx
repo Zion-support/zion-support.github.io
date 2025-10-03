@@ -13,8 +13,6 @@ export default function ZeroTrustAISecurityFramework2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>Zero Trust AI Security Framework 2025: Complete Protection Architecture | Zion Tech Group</title>

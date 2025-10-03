@@ -8,8 +8,6 @@ export default function AIRealTimeVideoIntelligenceRevolution2026() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Helmet>
         <title>Real-Time Video Intelligence 2026 — 60 FPS Multi-Object Tracking with 98.7% Accuracy | Zion Tech Group</title>

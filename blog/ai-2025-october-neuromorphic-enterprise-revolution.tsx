@@ -9,8 +9,6 @@ export default function NeuromorphicEnterpriseRevolution2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Helmet>
         <title>Neuromorphic Computing for Enterprise AI: The 2025 Revolution | Zion Tech Group</title>

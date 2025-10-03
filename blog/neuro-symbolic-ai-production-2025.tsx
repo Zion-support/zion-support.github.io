@@ -2,12 +2,10 @@ import { Helmet } from "react-helmet-async";
 import { ArrowLeft, Brain, CheckCircle, Code, Lightbulb, TrendingUp, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
 
-const NeuroSymbolicAIProduction2025 = () => {/* content */}
+const NeuroSymbolicAIProduction2025 = () => 
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
       <Helmet>
         <title>Neuro-Symbolic AI in Production: The Next Evolution | Zion Tech Group</title>
         <meta

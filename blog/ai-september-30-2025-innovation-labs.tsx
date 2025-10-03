@@ -6,8 +6,6 @@ export default function AIInnovationLabsSept302025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div className="text-left"></div>
       <div className="text-left"></div>
         <h1 className="text-left">AI Innovation Labs: 10x Product Velocity with Guardrails</h1>

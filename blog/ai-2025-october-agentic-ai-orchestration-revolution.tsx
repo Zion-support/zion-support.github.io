@@ -13,8 +13,6 @@ export default function AgenticAIOrchestrationRevolution2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>Agentic AI Orchestration Revolution 2025: Autonomous Multi-Agent Systems | Zion Tech Group</title>
@@ -127,7 +125,7 @@ export default function AgenticAIOrchestrationRevolution2025() {
                   <div className="text-left"></div>
                     <code>
                       {`// Agent capability registration
-agentRegistry.register({/* content */}
+agentRegistry.register(
   agentId: "fraud-detector-v2.3
   capabilities: ["transaction-analysis", "anomaly-detection"],
   throughput: 50000,  // transactions/sec
@@ -161,7 +159,7 @@ agentRegistry.register({/* content */}
                   <div className="text-left"></div>
                     <code>
                       {`// Agent-to-agent coordination
-await coordinationBus.negotiate({/* content */}
+await coordinationBus.negotiate(
   initiator: "customer-service-agent-42
   request: "escalation-approval
   target: "supervisor-agent-team-A

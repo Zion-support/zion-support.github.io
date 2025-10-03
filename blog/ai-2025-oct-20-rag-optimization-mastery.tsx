@@ -4,12 +4,10 @@ import { Link } from 'react-router-dom';
 import { ArrowLeft, Brain, Zap, Target, TrendingUp, CheckCircle, AlertCircle } from 'lucide-react';
 import Header from '../src/components/Header';
 
-const RAGOptimizationMastery = () => {/* content */}
+const RAGOptimizationMastery = () => 
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
       <Helmet>
         <title>RAG Optimization Mastery 2025 — Achieve 95% Answer Accuracy with Sub-100ms Latency</title>
         <meta 

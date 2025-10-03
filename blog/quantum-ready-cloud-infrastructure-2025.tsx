@@ -7,8 +7,6 @@ export default function QuantumReadyCloudInfrastructure2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>Quantum-Ready Cloud Infrastructure 2025 | Post-Quantum Cryptography Migration Guide | Zion Tech Group</title>

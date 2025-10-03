@@ -3,7 +3,7 @@
 
 
 export const advancedITServices2025 = [
-  {/* content */}
+  
     };
     marketSize: '$15 && 15.7B',
     targetAudience: 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms';
@@ -247,7 +247,7 @@ export const advancedITServices2025 = [
       'Infrastructure Management',
       'Automation',
     ],
-    contact: {/* content */}
+    contact: 
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
@@ -256,7 +256,7 @@ export const advancedITServices2025 = [
     competitiveAdvantage:
       'Advanced autonomous IT operations, comprehensive issue prediction, and extensive IT tool integration'
   }
-  {/* content */}
+  
     id: 'quantum-data-center-platform'
     name: 'QuantumDataCenter Pro'
     description:
@@ -271,8 +271,8 @@ export const advancedITServices2025 = [
       'Custom quantum solutions'
       '24/7 data center support'
     ]
-    pricing: {/* content */}
-      starter: {/* content */}
+    pricing: 
+      starter: 
         price: 499
         period: 'month'
         features: [
@@ -281,7 +281,7 @@ export const advancedITServices2025 = [
           'Standard support'
         ]
       }
-      professional: {/* content */}
+      professional: 
         price: 1299
         period: 'month'
         features: [
@@ -291,7 +291,7 @@ export const advancedITServices2025 = [
           'Priority support'
         ]
       }
-      enterprise: {/* content */}
+      enterprise: 
         price: 2999
         period: 'month'
         features: [
@@ -309,7 +309,7 @@ export const advancedITServices2025 = [
       'Infrastructure',
       'Energy Efficiency',
     ],
-    contact: {/* content */}
+    contact: 
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
@@ -318,7 +318,7 @@ export const advancedITServices2025 = [
     competitiveAdvantage:
       'Industry-first quantum-enhanced data center, advanced energy efficiency, and comprehensive quantum computing integration'
   }
-  {/* content */}
+  
     id: 'quantum-cybersecurity-platform'
     name: 'QuantumCyber Pro'
     description:
@@ -333,8 +333,8 @@ export const advancedITServices2025 = [
       'Custom security solutions'
       '24/7 quantum security operations'
     ]
-    pricing: {/* content */}
-      starter: {/* content */}
+    pricing: 
+      starter: 
         price: 299
         period: 'month'
         features: [
@@ -343,7 +343,7 @@ export const advancedITServices2025 = [
           'Standard monitoring'
         ]
       }
-      professional: {/* content */}
+      professional: 
         price: 799
         period: 'month'
         features: [
@@ -353,7 +353,7 @@ export const advancedITServices2025 = [
           'Priority support'
         ]
       }
-      enterprise: {/* content */}
+      enterprise: 
         price: 1999
         period: 'month'
         features: [
@@ -371,7 +371,7 @@ export const advancedITServices2025 = [
       'Encryption',
       'Threat Detection',
     ],
-    contact: {/* content */}
+    contact: 
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
@@ -380,7 +380,7 @@ export const advancedITServices2025 = [
     competitiveAdvantage:
       'Industry-first quantum cybersecurity platform, unbreakable quantum encryption, and advanced threat detection'
   }
-  {/* content */}
+  
     id: 'quantum-cloud-migration-platform'
     name: 'QuantumMigration Pro'
     description:
@@ -395,8 +395,8 @@ export const advancedITServices2025 = [
       'Custom migration strategies'
       '24/7 migration support'
     ]
-    pricing: {/* content */}
-      starter: {/* content */}
+    pricing: 
+      starter: 
         price: 199
         period: 'month'
         features: [
@@ -405,7 +405,7 @@ export const advancedITServices2025 = [
           'Standard support'
         ]
       }
-      professional: {/* content */}
+      professional: 
         price: 599
         period: 'month'
         features: [
@@ -415,7 +415,7 @@ export const advancedITServices2025 = [
           'Priority support'
         ]
       }
-      enterprise: {/* content */}
+      enterprise: 
         price: 1499
         period: 'month'
         features: [
@@ -428,7 +428,7 @@ export const advancedITServices2025 = [
     },
     category: 'Cloud Migration',
     tags: ['Quantum Computing', 'Cloud Migration', 'AI', 'Zero Downtime'],
-    contact: {/* content */}
+    contact: 
       phone: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
     }

@@ -1,8 +1,8 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 
-describe('App', () => {/* content */}
-  test('renders without crashing', () => {/* content */}
+describe('App', () => 
+  test('renders without crashing', () => 
     expect(true).toBe(true);
   });
 });

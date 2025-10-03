@@ -7,8 +7,6 @@ export default function NeuromorphicQuantumHybridComputing2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>Neuromorphic-Quantum Hybrid Computing 2025: 10,000x Performance Leap | Zion Tech Group</title>

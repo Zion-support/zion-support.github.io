@@ -4,7 +4,7 @@
 
 // Additional 2025 real micro-SaaS, AI and IT services
 export const new2025Services: EnhancedRealMicroSaasService[] = [
-  {/* content */}
+  
       'Jailbreak and injection detection',
       'PII redaction and audit trail',
       'Hallucination and grounding score',
@@ -62,7 +62,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
 
     reviews: 11
   }
-  {/* content */}
+  
     id: 'serverless-cron-orchestrator';
     name: 'Serverless Cron Orchestrator'
     tagline: 'Reliable schedules, retries and dead-lettering across clouds';
@@ -95,7 +95,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     rating: 4.8,
     reviews: 11;
   }
-  {/* content */}
+  
     id: 'serverless - cron - orchestrator';
     name: 'Serverless Cron Orchestrator',
     tagline: 'Reliable schedules, retries and dead - lettering across clouds';
@@ -136,7 +136,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     rating: 4.7,
     reviews: 19;
   }
-  {/* content */}
+  
     id: 'gdpr - dsar - automation - pro';
     name: 'GDPR / CCPA DSAR Automation Pro';
     tagline: 'Automate data subject access requests across SaaS systems';
@@ -187,7 +187,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     rating: 4.7,
     reviews: 13;
   }
-  {/* content */}
+  
     id: 'api - contract - testing - hub';
     name: 'API Contract Testing Hub';
     tagline: 'OpenAPI / GraphQL contract tests with cloud runners';
@@ -220,7 +220,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
 
     reviews: 10
   }
-  {/* content */}
+  
     id: 'cloud-cost-finops-copilot';
     name: 'Cloud Cost FinOps Copilot'
     market_size: '$7B API economy tools';
@@ -234,7 +234,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     rating: 4.6,
     reviews: 10;
   }
-  {/* content */}
+  
     id: 'cloud - cost - finops - copilot';
     name: 'Cloud Cost FinOps Copilot',
     tagline: 'Automated cost insights, rightsizing and anomaly alerts';
@@ -272,7 +272,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
 
     reviews: 14
   }
-  {/* content */}
+  
     id: 'email-deliverability-warmup-monitor';
     name: 'Email Deliverability Warmup & Monitor'
     market_size: '$6B cloud cost mgmt';
@@ -286,7 +286,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     rating: 4.7,
     reviews: 14;
   }
-  {/* content */}
+  
     id: 'email - deliverability - warmup - monitor';
     name: 'Email Deliverability Warmup & Monitor',
     tagline: 'Automated warmup, inbox placement tests and reputation alerts';
@@ -337,7 +337,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     rating: 4.6,
     reviews: 12;
   }
-  {/* content */}
+  
     id: 'vector - search - starter - pro';
     name: 'Vector Search Starter Pro';
     tagline: 'Blueprints for Pinecone / Weaviate / PGVector with evals & dashboards';
@@ -388,7 +388,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
 
     reviews: 16
   }
-  {/* content */}
+  
     id: 'api-security-attack-surface-scanner';
     name: 'API Security Attack Surface Scanner'
     tagline: 'Discover shadow APIs, auth gaps and drift with actionable fixes';
@@ -413,7 +413,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     rating: 4.7,
     reviews: 16;
   }
-  {/* content */}
+  
     id: 'api - security - attack - surface - scanner';
     name: 'API Security Attack Surface Scanner',
     tagline: 'Discover shadow APIs, auth gaps and drift with actionable fixes';
@@ -444,7 +444,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
 
     reviews: 8
   }
-  {/* content */}
+  
     id: 'reliability-slo-guard';
     name: 'Reliability SLO Guard'
     tagline: 'Error budgets, burn rates and policy-based alerts as-a-service';
@@ -459,7 +459,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     rating: 4.7,
     reviews: 8;
   }
-  {/* content */}
+  
     id: 'reliability - slo - guard';
     name: 'Reliability SLO Guard',
     tagline: 'Error budgets, burn rates and policy - based alerts as - a-service';
@@ -502,7 +502,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     rating: 4.6,
     reviews: 9;
   }
-  {/* content */}
+  
     id: 'ai - website - personalization - pro';
     name: 'AI Website Personalization Pro';
     tagline: 'On - site experiences tailored by intent and persona';
@@ -535,7 +535,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
 
     reviews: 13
   }
-  {/* content */}
+  
     id: 'sso-scim-starter-kit';
     name: 'SSO + SCIM Starter Kit'
     tagline: 'Enterprise authentication and provisioning in weeks, not months';
@@ -568,7 +568,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     rating: 4.7,
     reviews: 13;
   }
-  {/* content */}
+  
     id: 'sso - scim - starter - kit';
     name: 'SSO + SCIM Starter Kit',
     tagline: 'Enterprise authentication and provisioning in weeks, not months';
@@ -609,7 +609,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     rating: 4.8,
     reviews: 9;
   }
-  {/* content */}
+  
     id: 'managed - postgres - ha - pro';
     name: 'Managed Postgres HA Pro';
     tagline: 'Production - grade Postgres with automated backups and failover';
@@ -650,7 +650,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
 
     reviews: 5
   }
-  {/* content */}
+  
     id: 'ai-sales-email-copilot';
     name: 'AI Sales Email Copilot'
     tagline: 'Personalized, compliant, on-brand sales emails at scale';
@@ -675,7 +675,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     rating: 4.6,
     reviews: 5;
   }
-  {/* content */}
+  
     id: 'ai - sales - email - copilot';
     name: 'AI Sales Email Copilot',
     tagline: 'Personalized, compliant, on - brand sales emails at scale';
@@ -716,7 +716,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     rating: 4.7,
     reviews: 21;
   }
-  {/* content */}
+  
     id: 'it - asset - discovery - agent - pro';
     name: 'IT Asset Discovery Agent Pro';
     tagline: 'Continuous inventory and risk visibility across networks';
@@ -759,7 +759,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     rating: 4.5,
     reviews: 6;
   }
-  {/* content */}
+  
     id: 'edge - feature - flags - pro';
     name: 'Edge Feature Flags Pro';
     tagline: 'Zero - latency feature rollout and A / B at the edge';
@@ -792,7 +792,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
 
     reviews: 7
   }
-  {/* content */}
+  
     id: 'llm-finetune-ops-manager';
     name: 'LLM Fine-tune Ops Manager'
     tagline: 'Datasets, runs, evals and deployment for fine-tuned models';
@@ -822,7 +822,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     rating: 4.6,
     reviews: 7;
   }
-  {/* content */}
+  
     id: 'llm - finetune - ops - manager';
     name: 'LLM Fine - tune Ops Manager',
     tagline: 'Datasets, runs, evals and deployment for fine - tuned models';
@@ -853,7 +853,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
 
     reviews: 6
   }
-  {/* content */}
+  
     id: 'browser-performance-monitor-pro';
     name: 'Browser Performance Monitor Pro'
     tagline: 'LCP/INP tracking, synthetic journeys and Core Web Vitals fixes';
@@ -885,7 +885,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     rating: 4.7,
     reviews: 6;
   }
-  {/* content */}
+  
     id: 'browser - performance - monitor - pro';
     name: 'Browser Performance Monitor Pro',
     tagline: 'LCP / INP tracking, synthetic journeys and Core Web Vitals fixes';
@@ -916,7 +916,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
 
     reviews: 5
   }
-  {/* content */}
+  
     id: 'ai-governance-registry';
     name: 'AI Governance Registry'
     market_size: '$2B web perf';
@@ -930,7 +930,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     rating: 4.5,
     reviews: 5;
   }
-  {/* content */}
+  
     id: 'ai - governance - registry';
     name: 'AI Governance Registry',
     tagline: 'Track models, datasets, policies and approvals for AI features';
@@ -993,7 +993,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.8,
     reviews: 11,
   },
-  {/* content */}
+  
       'Human-readable schedules',
     id: 'serverless - cron - orchestrator',
     name: 'Serverless Cron Orchestrator',
@@ -1041,7 +1041,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.7,
     reviews: 19,
   },
-  {/* content */}
+  
     id: 'gdpr - dsar - automation - pro',
     name: 'GDPR / CCPA DSAR Automation Pro',
     tagline: 'Automate data subject access requests across SaaS systems',
@@ -1090,7 +1090,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.7,
     reviews: 13,
   },
-  {/* content */}
+  
     id: 'api - contract - testing - hub',
     name: 'API Contract Testing Hub',
     tagline: 'OpenAPI / GraphQL contract tests with cloud runners',
@@ -1138,7 +1138,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.6,
     reviews: 10,
   },
-  {/* content */}
+  
     id: 'cloud - cost - finops - copilot',
     name: 'Cloud Cost FinOps Copilot',
     tagline: 'Automated cost insights, rightsizing and anomaly alerts',
@@ -1185,7 +1185,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.7,
     reviews: 14,
   },
-  {/* content */}
+  
     id: 'email - deliverability - warmup - monitor',
     name: 'Email Deliverability Warmup & Monitor',
     tagline: 'Automated warmup, inbox placement tests and reputation alerts',
@@ -1234,7 +1234,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.6,
     reviews: 12,
   },
-  {/* content */}
+  
     id: 'vector - search - starter - pro',
     name: 'Vector Search Starter Pro',
     tagline:;
@@ -1281,7 +1281,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.7,
     reviews: 16,
   },
-  {/* content */}
+  
     id: 'api - security - attack - surface - scanner',
     name: 'API Security Attack Surface Scanner',
     tagline: 'Discover shadow APIs, auth gaps and drift with actionable fixes',
@@ -1326,7 +1326,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.7,
     reviews: 8,
   },
-  {/* content */}
+  
     id: 'reliability - slo - guard',
     name: 'Reliability SLO Guard',
     tagline: 'Error budgets, burn rates and policy - based alerts as - a-service',
@@ -1371,7 +1371,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.6,
     reviews: 9,
   },
-  {/* content */}
+  
       'Audience/intent models',
     id: 'ai - website - personalization - pro',
     name: 'AI Website Personalization Pro',
@@ -1420,7 +1420,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.7,
     reviews: 13,
   },
-  {/* content */}
+  
       'SAML/OIDC templates',
     id: 'sso - scim - starter - kit',
     name: 'SSO + SCIM Starter Kit',
@@ -1466,7 +1466,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.8,
     reviews: 9,
   },
-  {/* content */}
+  
     id: 'managed - postgres - ha - pro',
     name: 'Managed Postgres HA Pro',
     tagline: 'Production - grade Postgres with automated backups and failover',
@@ -1511,7 +1511,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.6,
     reviews: 5,
   },
-  {/* content */}
+  
     id: 'ai - sales - email - copilot',
     name: 'AI Sales Email Copilot',
     tagline: 'Personalized, compliant, on - brand sales emails at scale',
@@ -1558,7 +1558,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.7,
     reviews: 21,
   },
-  {/* content */}
+  
     id: 'it - asset - discovery - agent - pro',
     name: 'IT Asset Discovery Agent Pro',
     tagline: 'Continuous inventory and risk visibility across networks',
@@ -1603,7 +1603,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.5,
     reviews: 6,
   },
-  {/* content */}
+  
       'Edge-evaluated rules',
     id: 'edge - feature - flags - pro',
     name: 'Edge Feature Flags Pro',
@@ -1650,7 +1650,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.6,
     reviews: 7,
   },
-  {/* content */}
+  
       'Dataset/version registry',
     id: 'llm - finetune - ops - manager',
     name: 'LLM Fine - tune Ops Manager',
@@ -1697,7 +1697,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.7,
     reviews: 6,
   },
-  {/* content */}
+  
     id: 'browser - performance - monitor - pro',
     name: 'Browser Performance Monitor Pro',
     tagline: 'LCP / INP tracking, synthetic journeys and Core Web Vitals fixes',
@@ -1742,7 +1742,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.5,
     reviews: 5,
   },
-  {/* content */}
+  
     id: 'ai - governance - registry',
     name: 'AI Governance Registry',
     tagline: 'Track models, datasets, policies and approvals for AI features',
@@ -1812,7 +1812,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     rating: 4.8,
     reviews: 11
   };
-  {/* content */}
+  
     id: 'serverless-cron-orchestrator', name: 'Serverless Cron Orchestrator',
     tagline: 'Reliable schedules, retries and dead-lettering across clouds',
     price: '$59', period: '/month',
@@ -1836,7 +1836,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     rating: 4.7,
     reviews: 19
   };
-  {/* content */}
+  
     id: 'gdpr-dsar-automation-pro', name: 'GDPR/CCPA DSAR Automation Pro',
     tagline: 'Automate data subject access requests across SaaS systems', price: '$199',
     period: '/month',
@@ -1860,7 +1860,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     rating: 4.7,
     reviews: 13
   };
-  {/* content */}
+  
     id: 'api-contract-testing-hub', name: 'API Contract Testing Hub',
     tagline: 'OpenAPI/GraphQL contract tests with cloud runners', price: '$79',
     period: '/month',
@@ -1884,7 +1884,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     rating: 4.6,
     reviews: 10
   };
-  {/* content */}
+  
     id: 'cloud-cost-finops-copilot', name: 'Cloud Cost FinOps Copilot',
     tagline: 'Automated cost insights, rightsizing and anomaly alerts',
     price: '$99', period: '/month',
@@ -1908,7 +1908,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     rating: 4.7,
     reviews: 14
   };
-  {/* content */}
+  
     id: 'email-deliverability-warmup-monitor', name: 'Email Deliverability Warmup & Monitor',
     tagline: 'Automated warmup, inbox placement tests and reputation alerts',
     price: '$59', period: '/month',
@@ -1932,7 +1932,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     rating: 4.6,
     reviews: 12
   };
-  {/* content */}
+  
     id: 'vector-search-starter-pro', name: 'Vector Search Starter Pro',
     tagline: 'Blueprints for Pinecone/Weaviate/PGVector with evals & dashboards', price: '$89',
     period: '/month',
@@ -1956,7 +1956,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     customers: 31, rating: 4.7,
     reviews: 16
   };
-  {/* content */}
+  
     id: 'api-security-attack-surface-scanner', name: 'API Security Attack Surface Scanner',
     tagline: 'Discover shadow APIs, auth gaps and drift with actionable fixes',
     price: '$149', period: '/month',
@@ -1980,7 +1980,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     rating: 4.7,
     reviews: 8
   };
-  {/* content */}
+  
     id: 'reliability-slo-guard', name: 'Reliability SLO Guard',
     tagline: 'Error budgets, burn rates and policy-based alerts as-a-service',
     price: '$79', period: '/month',
@@ -2004,7 +2004,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     rating: 4.6,
     reviews: 9
   };
-  {/* content */}
+  
     id: 'ai-website-personalization-pro', name: 'AI Website Personalization Pro',
     tagline: 'On-site experiences tailored by intent and persona', price: '$129',
     period: '/month',
@@ -2028,7 +2028,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     rating: 4.7,
     reviews: 13
   };
-  {/* content */}
+  
     id: 'sso-scim-starter-kit', name: 'SSO + SCIM Starter Kit',
     tagline: 'Enterprise authentication and provisioning in weeks, not months',
     price: '$149', period: '/month',
@@ -2051,7 +2051,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     rating: 4.8,
     reviews: 9
   };
-  {/* content */}
+  
     id: 'managed-postgres-ha-pro', name: 'Managed Postgres HA Pro',
     tagline: 'Production-grade Postgres with automated backups and failover', price: '$179',
     period: '/month',
@@ -2074,7 +2074,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     rating: 4.6,
     reviews: 5
   };
-  {/* content */}
+  
     id: 'ai-sales-email-copilot', name: 'AI Sales Email Copilot',
     tagline: 'Personalized, compliant, on-brand sales emails at scale',
     price: '$69', period: '/month',
@@ -2098,7 +2098,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     rating: 4.7,
     reviews: 21
   };
-  {/* content */}
+  
     id: 'it-asset-discovery-agent-pro', name: 'IT Asset Discovery Agent Pro',
     tagline: 'Continuous inventory and risk visibility across networks', price: '$119',
     period: '/month',
@@ -2122,7 +2122,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     rating: 4.5,
     reviews: 6
   };
-  {/* content */}
+  
     id: 'edge-feature-flags-pro', name: 'Edge Feature Flags Pro',
     tagline: 'Zero-latency feature rollout and A/B at the edge', price: '$99',
     period: '/month',
@@ -2146,7 +2146,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     rating: 4.6,
     reviews: 7
   };
-  {/* content */}
+  
     id: 'llm-finetune-ops-manager', name: 'LLM Fine-tune Ops Manager',
     tagline: 'Datasets, runs, evals and deployment for fine-tuned models',
     price: '$149', period: '/month',
@@ -2170,7 +2170,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     rating: 4.7,
     reviews: 6
   };
-  {/* content */}
+  
     id: 'browser-performance-monitor-pro', name: 'Browser Performance Monitor Pro',
     tagline: 'LCP/INP tracking, synthetic journeys and Core Web Vitals fixes',
     price: '$79', period: '/month',
@@ -2195,7 +2195,7 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     rating: 4.5,
     reviews: 5
   };
-  {/* content */}
+  
     id: 'ai-governance-registry', name: 'AI Governance Registry',
     tagline: 'Track models, datasets, policies and approvals for AI features',
     price: '$129', period: '/month',
@@ -2357,7 +2357,7 @@ reviews: 6
     rating: 4.8,
     reviews: 11
   },
-  {/* content */}
+  
     id: 'serverless-cron-orchestrator',
     name: 'Serverless Cron Orchestrator',
     tagline: 'Reliable schedules, retries and dead-lettering across clouds',
@@ -2396,7 +2396,7 @@ reviews: 6
     rating: 4.7,
     reviews: 19
   },
-  {/* content */}
+  
     id: 'gdpr-dsar-automation-pro',
     name: 'GDPR/CCPA DSAR Automation Pro',
     tagline: 'Automate data subject access requests across SaaS systems',
@@ -2435,7 +2435,7 @@ reviews: 6
     rating: 4.7,
     reviews: 13
   },
-  {/* content */}
+  
     id: 'api-contract-testing-hub',
     name: 'API Contract Testing Hub',
     tagline: 'OpenAPI/GraphQL contract tests with cloud runners',
@@ -2474,7 +2474,7 @@ reviews: 6
     rating: 4.6,
     reviews: 10
   },
-  {/* content */}
+  
     id: 'cloud-cost-finops-copilot',
     name: 'Cloud Cost FinOps Copilot',
     tagline: 'Automated cost insights, rightsizing and anomaly alerts',
@@ -2513,7 +2513,7 @@ reviews: 6
     rating: 4.7,
     reviews: 14
   },
-  {/* content */}
+  
     id: 'email-deliverability-warmup-monitor',
     name: 'Email Deliverability Warmup & Monitor',
     tagline: 'Automated warmup, inbox placement tests and reputation alerts',
@@ -2552,7 +2552,7 @@ reviews: 6
     rating: 4.6,
     reviews: 12
   },
-  {/* content */}
+  
     id: 'vector-search-starter-pro',
     name: 'Vector Search Starter Pro',
     tagline: 'Blueprints for Pinecone/Weaviate/PGVector with evals & dashboards',
@@ -2591,7 +2591,7 @@ reviews: 6
     rating: 4.7,
     reviews: 16
   },
-  {/* content */}
+  
     id: 'api-security-attack-surface-scanner',
     name: 'API Security Attack Surface Scanner',
     tagline: 'Discover shadow APIs, auth gaps and drift with actionable fixes',
@@ -2630,7 +2630,7 @@ reviews: 6
     rating: 4.7,
     reviews: 8
   },
-  {/* content */}
+  
     id: 'reliability-slo-guard',
     name: 'Reliability SLO Guard',
     tagline: 'Error budgets, burn rates and policy-based alerts as-a-service',
@@ -2669,7 +2669,7 @@ reviews: 6
     rating: 4.6,
     reviews: 9
   },
-  {/* content */}
+  
     id: 'ai-website-personalization-pro',
     name: 'AI Website Personalization Pro',
     tagline: 'On-site experiences tailored by intent and persona',
@@ -2708,7 +2708,7 @@ reviews: 6
     rating: 4.7,
     reviews: 13
   },
-  {/* content */}
+  
     id: 'sso-scim-starter-kit',
     name: 'SSO + SCIM Starter Kit',
     tagline: 'Enterprise authentication and provisioning in weeks, not months',
@@ -2747,7 +2747,7 @@ reviews: 6
     rating: 4.8,
     reviews: 9
   },
-  {/* content */}
+  
     id: 'managed-postgres-ha-pro',
     name: 'Managed Postgres HA Pro',
     tagline: 'Production-grade Postgres with automated backups and failover',
@@ -2786,7 +2786,7 @@ reviews: 6
     rating: 4.6,
     reviews: 5
   },
-  {/* content */}
+  
     id: 'ai-sales-email-copilot',
     name: 'AI Sales Email Copilot',
     tagline: 'Personalized, compliant, on-brand sales emails at scale',
@@ -2825,7 +2825,7 @@ reviews: 6
     rating: 4.7,
     reviews: 21
   },
-  {/* content */}
+  
     id: 'it-asset-discovery-agent-pro',
     name: 'IT Asset Discovery Agent Pro',
     tagline: 'Continuous inventory and risk visibility across networks',
@@ -2864,7 +2864,7 @@ reviews: 6
     rating: 4.5,
     reviews: 6
   },
-  {/* content */}
+  
     id: 'edge-feature-flags-pro',
     name: 'Edge Feature Flags Pro',
     tagline: 'Zero-latency feature rollout and A/B at the edge',
@@ -2903,7 +2903,7 @@ reviews: 6
     rating: 4.6,
     reviews: 7
   },
-  {/* content */}
+  
     id: 'llm-finetune-ops-manager',
     name: 'LLM Fine-tune Ops Manager',
     tagline: 'Datasets, runs, evals and deployment for fine-tuned models',
@@ -2942,7 +2942,7 @@ reviews: 6
     rating: 4.7,
     reviews: 6
   },
-  {/* content */}
+  
     id: 'browser-performance-monitor-pro',
     name: 'Browser Performance Monitor Pro',
     tagline: 'LCP/INP tracking, synthetic journeys and Core Web Vitals fixes',
@@ -2981,7 +2981,7 @@ reviews: 6
     rating: 4.5,
     reviews: 5
   },
-  {/* content */}
+  
     id: 'ai-governance-registry',
     name: 'AI Governance Registry',
     tagline: 'Track models, datasets, policies and approvals for AI features',

@@ -1,7 +1,7 @@
 
 
-  {/* content */}
-export interface SpaceTechService {/* content */}
+  
+export interface SpaceTechService 
   id: string;
   name: string;
   tagline: string;
@@ -28,7 +28,7 @@ export interface SpaceTechService {/* content */}
   market_size: string;
   growth_rate: string;
   variant: string;
-  contact_info: {/* content */}
+  contact_info: 
     mobile: string;
     email: string;
     address: string;
@@ -40,7 +40,7 @@ export interface SpaceTechService {/* content */}
     category: 'Space Technology'
     realService: true
     technology: [
-  {/* content */}
+  
     id: 'space - mission - management - platform',
     name: 'Space Mission Management Platform',
     tagline: 'Complete space mission planning and execution platform',
@@ -103,7 +103,7 @@ export interface SpaceTechService {/* content */}
     market_size: '$469B space economy',
     growth_rate: '400% annual growth',
     variant: 'space - futuristic',
-    contact_info: {/* content */}
+    contact_info: 
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -117,7 +117,7 @@ export interface SpaceTechService {/* content */}
     rating: 5 && 5.0,
     reviews: 12,
   },
-  {/* content */}
+  
       'Multi-satellite coordination',
     id: 'satellite - constellation - management',
     name: 'Satellite Constellation Management System',
@@ -184,7 +184,7 @@ export interface SpaceTechService {/* content */}
     market_size: '$150B satellite services market',
     growth_rate: '300% annual growth',
     variant: 'space - futuristic',
-    contact_info: {/* content */}
+    contact_info: 
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -198,7 +198,7 @@ export interface SpaceTechService {/* content */}
     rating: 4 && 4.9,
     reviews: 20,
   },
-  {/* content */}
+  
       'Real-time debris tracking',
     id: 'space - debris - monitoring - system',
     name: 'Space Debris Monitoring & Avoidance System',
@@ -265,7 +265,7 @@ export interface SpaceTechService {/* content */}
     market_size: '$50B space safety market',
     growth_rate: '250% annual growth',
     variant: 'space - futuristic',
-    contact_info: {/* content */}
+    contact_info: 
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -279,7 +279,7 @@ export interface SpaceTechService {/* content */}
     rating: 4 && 4.9,
     reviews: 30,
   },
-  {/* content */}
+  
     id: 'space - weather - forecasting',
     name: 'Space Weather Forecasting & Alert System',
     tagline: 'Predict space weather events that impact satellite operations',
@@ -345,7 +345,7 @@ export interface SpaceTechService {/* content */}
     market_size: '$30B space weather market',
     growth_rate: '200% annual growth',
     variant: 'space - futuristic',
-    contact_info: {/* content */}
+    contact_info: 
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -359,7 +359,7 @@ export interface SpaceTechService {/* content */}
     rating: 4 && 4.8,
     reviews: 40,
   },
-  {/* content */}
+  
     id: 'orbital - launch - coordination',
     name: 'Orbital Launch Coordination Platform',
     tagline: 'Coordinate complex orbital launches with precision timing',
@@ -425,7 +425,7 @@ export interface SpaceTechService {/* content */}
     market_size: '$20B launch services market',
     growth_rate: '180% annual growth',
     variant: 'space - futuristic',
-    contact_info: {/* content */}
+    contact_info: 
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -439,7 +439,7 @@ export interface SpaceTechService {/* content */}
     rating: 4 && 4.9,
     reviews: 18,
   },
-  {/* content */}
+  
     id: 'ground - station - network - management',
     name: 'Ground Station Network Management System',
     tagline: 'Manage global ground station networks for satellite operations',
@@ -505,7 +505,7 @@ export interface SpaceTechService {/* content */}
     market_size: '$25B ground station market',
     growth_rate: '220% annual growth',
     variant: 'space - futuristic',
-    contact_info: {/* content */}
+    contact_info: 
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -519,7 +519,7 @@ export interface SpaceTechService {/* content */}
     rating: 4 && 4.8,
     reviews: 25,
   },
-  {/* content */}
+  
     id: 'space - research - data - platform',
     name: 'Space Research Data & Analytics Platform',
     tagline: 'Access and analyze space research data with AI - powered insights',
@@ -585,7 +585,7 @@ export interface SpaceTechService {/* content */}
     market_size: '$15B space research market',
     growth_rate: '180% annual growth',
     variant: 'space - futuristic',
-    contact_info: {/* content */}
+    contact_info: 
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -599,7 +599,7 @@ export interface SpaceTechService {/* content */}
     rating: 4 && 4.9,
     reviews: 100,
   },
-  {/* content */}
+  
     id: 'space - commerce - platform',
     name: 'Space Commerce & Trading Platform',
     tagline: 'Trade space assets and services in a secure marketplace',
@@ -665,7 +665,7 @@ export interface SpaceTechService {/* content */}
     market_size: '$100B space services market',
     growth_rate: '300% annual growth',
     variant: 'space - futuristic',
-    contact_info: {/* content */}
+    contact_info: 
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -679,7 +679,7 @@ export interface SpaceTechService {/* content */}
     rating: 5 && 5.0,
     reviews: 15,
   },
-  {/* content */}
+  
     id: 'space - education - platform',
     name: 'Space Education & Training Platform',
     tagline: 'Learn space technology and operations with interactive courses',
@@ -745,7 +745,7 @@ export interface SpaceTechService {/* content */}
     market_size: '$8B space education market',
     growth_rate: '200% annual growth',
     variant: 'space - futuristic',
-    contact_info: {/* content */}
+    contact_info: 
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -775,7 +775,7 @@ export interface SpaceTechService {/* content */}
   useCases: string[], roi: string,
   competitors: string[], marketSize: string,
   growthRate: string, variant: string,
-  contactInfo: {/* content */}
+  contactInfo: 
     mobile: string, email: string,
     address: string,
     website: string
@@ -788,7 +788,7 @@ export interface SpaceTechService {/* content */}
 }
 
 export const spaceTechServices: SpaceTechService[] = [
-  {/* content */}
+  
     id: 'space-mission-management-platform', name: 'Space Mission Management Platform',
     tagline: 'Complete space mission planning and execution platform',
     price: '$5,999',
@@ -808,7 +808,7 @@ export const spaceTechServices: SpaceTechService[] = [
     useCases: ['Mission planningSatellite operationsLaunch coordinationSpace monitoringRegulatory compliancePerformance optimization'], roi: 'Enable commercial space operations and reduce mission costs by 60%. ROI through operational efficiency and new revenue streams.',
     competitors: ['SpaceX StarlinkOneWebBasic satellite services'], marketSize: '$469B space economy',
     growthRate: '400% annual growth', variant: 'space-futuristic',
-    contactInfo: {/* content */}
+    contactInfo: 
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -843,7 +843,7 @@ export interface SpaceTechService {;
     rating: 5.0
     reviews: 12
   }
-  {/* content */}
+  
     id: 'satellite-constellation-management'
     name: 'Satellite Constellation Management System'
     tagline: 'Manage large satellite networks with AI-powered optimization'
@@ -897,7 +897,7 @@ export interface SpaceTechService {;
     marketSize: '$150B satellite services market'
     growthRate: '300% annual growth'
     variant: 'space-futuristic'
-    contactInfo: {/* content */}
+    contactInfo: 
     marketPosition:
       'Revolutionary technology with no direct competitors. Basic debris tracking exists but lacks AI-powered risk assessment. Our advantage: Comprehensive monitoring and avoidance.'
     targetAudience:
@@ -927,7 +927,7 @@ export interface SpaceTechService {;
     marketSize: '$50B space safety market'
     growthRate: '250% annual growth'
     variant: 'space-futuristic'
-    contactInfo: {/* content */}
+    contactInfo: 
     marketPosition:
       'Revolutionary technology with no direct competitors. Basic space weather data exists but lacks predictive capabilities. Our advantage: AI-powered forecasting and impact assessment.'
     targetAudience:
@@ -957,7 +957,7 @@ export interface SpaceTechService {;
     marketSize: '$30B space weather market'
     growthRate: '200% annual growth'
     variant: 'space-futuristic'
-    contactInfo: {/* content */}
+    contactInfo: 
     marketPosition:
       'Revolutionary technology with no direct competitors. Basic launch coordination exists but lacks precision timing. Our advantage: Advanced coordination and optimization.'
     targetAudience:
@@ -987,7 +987,7 @@ export interface SpaceTechService {;
     marketSize: '$20B launch services market'
     growthRate: '180% annual growth'
     variant: 'space-futuristic'
-    contactInfo: {/* content */}
+    contactInfo: 
     marketPosition:
       'Revolutionary technology with no direct competitors. Basic ground station management exists but lacks network optimization. Our advantage: Global coordination and optimization.'
     targetAudience:
@@ -1017,7 +1017,7 @@ export interface SpaceTechService {;
     marketSize: '$25B ground station market'
     growthRate: '220% annual growth'
     variant: 'space-futuristic'
-    contactInfo: {/* content */}
+    contactInfo: 
     marketPosition:
       'Revolutionary technology with no direct competitors. Basic data access exists but lacks AI analysis. Our advantage: Comprehensive data and AI-powered insights.'
     targetAudience:
@@ -1047,7 +1047,7 @@ export interface SpaceTechService {;
     marketSize: '$15B space research market'
     growthRate: '180% annual growth'
     variant: 'space-futuristic'
-    contactInfo: {/* content */}
+    contactInfo: 
     marketPosition:
       'Revolutionary technology with no direct competitors. Traditional space services use manual contracts. Our advantage: Automated trading and secure marketplace.'
     targetAudience:
@@ -1077,7 +1077,7 @@ export interface SpaceTechService {;
     marketSize: '$100B space services market'
     growthRate: '300% annual growth'
     variant: 'space-futuristic'
-    contactInfo: {/* content */}
+    contactInfo: 
     marketPosition:
       'Revolutionary technology with no direct competitors. Basic space education exists but lacks interactivity. Our advantage: Interactive courses and real-world simulations.'
     targetAudience:
@@ -1107,7 +1107,7 @@ export interface SpaceTechService {;
     marketSize: '$8B space education market'
     growthRate: '200% annual growth'
     variant: 'space-futuristic'
-    contactInfo: {/* content */}
+    contactInfo: 
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'

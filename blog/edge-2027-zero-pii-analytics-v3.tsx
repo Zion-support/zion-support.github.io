@@ -6,8 +6,6 @@ export default function EdgeZeroPIIAnalyticsV3() {
 	return (
     <div>
       <div></div>
-      <div></div>
-    </div>
 		<div className="text-left"></div>
 			<main className="text-left">
 				<h1 className="text-left">Zero‑PII Edge Analytics v3 (2027)</h1>

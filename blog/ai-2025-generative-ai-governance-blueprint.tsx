@@ -6,8 +6,6 @@ export default function GenerativeAIGovernanceBlueprint2025() {
 	return (
     <div>
       <div></div>
-      <div></div>
-    </div>
 		<div className="text-left"></div>
 			<main className="text-left">
 				<h1 className="text-left">Generative AI Governance Blueprint 2025</h1>

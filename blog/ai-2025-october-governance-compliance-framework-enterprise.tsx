@@ -15,8 +15,6 @@ export default function BlogPost() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <article className="text-left"></a>
       <h1>🛡️ AI Governance & Compliance Framework 2025: Enterprise-Grade Risk Management</h1>
       

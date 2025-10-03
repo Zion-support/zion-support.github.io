@@ -6,8 +6,6 @@ export default function HyperAutomationBlueprint2027() {
 	return (
     <div>
       <div></div>
-      <div></div>
-    </div>
 		<div className="text-left"></div>
 			<main className="text-left">
 				<h1 className="text-left">AI 2027 Hyper‑Automation Blueprint</h1>

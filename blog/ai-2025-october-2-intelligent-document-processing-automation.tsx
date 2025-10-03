@@ -2,12 +2,10 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import BlogArticleLayout from '../components/BlogArticleLayout';
 
-const IntelligentDocumentProcessingAutomationArticle = () => {/* content */}
+const IntelligentDocumentProcessingAutomationArticle = () => 
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
       <Helmet>
         <title>Intelligent Document Processing Automation: The AI Revolution | Zion Tech Group</title>
         <meta name="description" content="Discover how Fortune 500 companies process 847M documents annually with 99.7% accuracy using AI. $3.2B in cost savings, 97% automation, and complete document intelligence." />

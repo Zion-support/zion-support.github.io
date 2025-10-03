@@ -1,6 +1,6 @@
 import React from 'react';
 
-const AIAgentsMultiAgentOrchestration2025: React.FC = () => {/* content */}
+const AIAgentsMultiAgentOrchestration2025: React.FC = () => 
   return (
   <div></div>
     <article className="text-left"></a>

@@ -13,8 +13,6 @@ export default function QuantumResistantBlockchainArchitecture2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>Quantum-Resistant Blockchain Architecture 2025: Post-Quantum Security | Zion Tech Group</title>

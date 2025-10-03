@@ -2,12 +2,10 @@ import { ArrowLeft, Shield, Zap, CheckCircle, TrendingUp, AlertTriangle, Lock, E
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 
-const AINativeSecurityOperations2026 = () => {/* content */}
+const AINativeSecurityOperations2026 = () => 
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
       <Helmet>
         <title>AI-Native Security Operations 2026: Autonomous Threat Prevention | Zion Tech Group</title>
         <meta

@@ -2,12 +2,10 @@ import { ArrowLeft, Shield, Zap, CheckCircle, AlertTriangle, TrendingUp } from "
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 
-const AIAutonomousThreatResponse2025 = () => {/* content */}
+const AIAutonomousThreatResponse2025 = () => 
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
       <Helmet>
         <title>AI Autonomous Threat Response 2025: Sub-30s Incident Containment | Zion Tech Group</title>
         <meta

@@ -13,8 +13,6 @@ export default function AIProductivityRevolution2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>AI Productivity Revolution 2025: 10x Your Team Output | Zion Tech Group</title>

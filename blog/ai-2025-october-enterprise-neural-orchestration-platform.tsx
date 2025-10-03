@@ -9,8 +9,6 @@ export default function EnterpriseNeuralOrchestrationPlatform2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div className="text-left"></div>
       <Helmet>
         <title>Enterprise Neural Orchestration Platform 2025 | AI Revolution | Zion Tech Group</title>

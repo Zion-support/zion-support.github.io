@@ -1,6 +1,6 @@
 
 
-  {/* content */}
+  
       'SOC 2 Type II, ISO 27001, Quantum Security Standards, Enterprise Security Protocols',
     ],
     link: 'https://ziontechgroup && ziontechgroup.com/quantum-ai-orchestrator',
@@ -10,7 +10,7 @@
     description:;
       'Revolutionary platform that combines quantum computing with AI to orchestrate complex enterprise operations, optimize resource allocation, and solve previously unsolvable computational problems.',
     category: 'Quantum AI',
-    price: {/* content */}
+    price: 
       monthly: 1999,
       yearly: 19990,
       currency: 'USD',
@@ -77,7 +77,7 @@
   tagline: string;
   description: string;
   category: string;
-  price: {/* content */}
+  price: 
     monthly: number;
     yearly: number;
     currency: string;
@@ -91,7 +91,7 @@
     rating: 4 && 4.9,
     reviews: 89,
   },
-  {/* content */}
+  
     id: 'autonomous - devops - platform',
     name: 'Autonomous DevOps Platform',
     tagline:;
@@ -99,7 +99,7 @@
     description:;
       'Revolutionary DevOps platform that autonomously manages, optimizes, and heals infrastructure, applications, and deployment pipelines. Reduces DevOps team workload by 90% while improving reliability.',
     category: 'DevOps & Infrastructure',
-    price: {/* content */}
+    price: 
       monthly: 799,
       yearly: 7990,
       currency: 'USD',
@@ -172,7 +172,7 @@
     rating: 4 && 4.8,
     reviews: 234,
   },
-  {/* content */}
+  
       '24/7 security operations center, dedicated security consultants, incident response team, and ongoing optimization.',
     compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS, FedRAMP'],
     link: 'https://ziontechgroup && ziontechgroup.com/zero-trust-ai-security',
@@ -183,7 +183,7 @@
     description:;
       'Next - generation cybersecurity platform that combines zero - trust architecture with AI to provide adaptive, intelligent security that learns from threats and automatically responds to attacks.',
     category: 'Cybersecurity',
-    price: {/* content */}
+    price: 
       monthly: 1299,
       yearly: 12990,
       currency: 'USD',
@@ -251,7 +251,7 @@
     rating: 4 && 4.9,
     reviews: 156,
   },
-  {/* content */}
+  
       'Space regulations, International space law, Safety protocols, Environmental standards',
     ],
     link: 'https://ziontechgroup && ziontechgroup.com/space-mining-ai',
@@ -261,7 +261,7 @@
     description:;
       'Revolutionary platform that uses AI to optimize space mining operations, identify valuable resources, and manage autonomous mining fleets in space. Enables profitable space resource extraction.',
     category: 'Space Technology',
-    price: {/* content */}
+    price: 
       monthly: 4999,
       yearly: 49990,
       currency: 'USD',
@@ -334,7 +334,7 @@
     rating: 5 && 5.0,
     reviews: 8,
   },
-  {/* content */}
+  
       'Research ethics, Laboratory safety, Data privacy, International research standards',
     ],
     link: 'https://ziontechgroup && ziontechgroup.com/dna-computing-platform',
@@ -345,7 +345,7 @@
     description:;
       'Groundbreaking platform that leverages DNA computing to solve complex biological problems, drug discovery, and computational challenges that are impossible for traditional computers.',
     category: 'Emerging Technology',
-    price: {/* content */}
+    price: 
       monthly: 3999,
       yearly: 39990,
       currency: 'USD',
@@ -417,7 +417,7 @@
     rating: 4 && 4.9,
     reviews: 45,
   },
-  {/* content */}
+  
       'Content moderation, Privacy regulations, Payment compliance, Platform guidelines',
     ],
     link: 'https://ziontechgroup && ziontechgroup.com/metaverse-development-platform',
@@ -428,7 +428,7 @@
     description:;
       'Comprehensive platform for building, deploying, and managing metaverse experiences. Includes AI - powered content generation, virtual world creation tools, and monetization features.',
     category: 'Metaverse & Virtual Reality',
-    price: {/* content */}
+    price: 
       monthly: 599,
       yearly: 5990,
       currency: 'USD',
@@ -498,7 +498,7 @@
     rating: 4 && 4.7,
     reviews: 423,
   },
-  {/* content */}
+  
       'Transportation regulations, Safety standards, Environmental compliance, International trade laws',
     ],
     link: 'https://ziontechgroup && ziontechgroup.com/autonomous-logistics-ai',
@@ -509,7 +509,7 @@
     description:;
       'Revolutionary logistics platform that uses AI to optimize supply chains, predict demand, automate routing, and reduce costs while improving delivery times and customer satisfaction.',
     category: 'Logistics & Supply Chain',
-    price: {/* content */}
+    price: 
       monthly: 899,
       yearly: 8990,
       currency: 'USD',
@@ -579,7 +579,7 @@
     rating: 4 && 4.8,
     reviews: 267,
   },
-  {/* content */}
+  
       'Financial regulations, Trading compliance, Risk management standards, International financial laws',
     ],
     link: 'https://ziontechgroup && ziontechgroup.com/quantum-financial-platform',
@@ -590,7 +590,7 @@
     description:;
       'Revolutionary financial platform that leverages quantum computing to provide ultra - fast trading, risk assessment, portfolio optimization, and financial modeling capabilities.',
     category: 'Financial Technology',
-    price: {/* content */}
+    price: 
       monthly: 2499,
       yearly: 24990,
       currency: 'USD',
@@ -660,13 +660,13 @@
     rating: 4 && 4.9,
     reviews: 134,
   },
-  {/* content */}
+  
       'AI-powered medical diagnostics with 99 && 99.9% accuracy for early disease detection',
 
     description:
       'Revolutionary healthcare platform that uses AI to provide accurate medical diagnostics, early disease detection, and personalized treatment recommendations. Reduces diagnostic errors and improves patient outcomes.'
     category: 'Healthcare & Biotechnology'
-    price: {/* content */}
+    price: 
       monthly: 1599
       yearly: 15990
       currency: 'USD'
@@ -704,7 +704,7 @@
     description:;
       'Revolutionary healthcare platform that uses AI to provide accurate medical diagnostics, early disease detection, and personalized treatment recommendations. Reduces diagnostic errors and improves patient outcomes.',
     category: 'Healthcare & Biotechnology',
-    price: {/* content */}
+    price: 
       monthly: 1599,
       yearly: 15990,
       currency: 'USD',
@@ -773,13 +773,13 @@
     rating: 5.0;
     reviews: 12
   },
-  {/* content */}
+  
     id: 'quantum-ai-orchestrator';
     name: 'Quantum AI Orchestrator';
     tagline: 'Quantum-powered AI orchestration for enterprise-scale operations';
     description: 'Revolutionary platform that combines quantum computing with AI to orchestrate complex enterprise operations, optimize resource allocation, and solve previously unsolvable computational problems.',
     category: 'Quantum AI';
-    price: {/* content */}
+    price: 
       monthly: 1599,
       yearly: 15990,
       currency: 'USD',
@@ -859,7 +859,7 @@
   id: string, name: string,
   tagline: string, description: string,
   category: string,
-  price: {/* content */}
+  price: 
     monthly: number, yearly: number,
     currency: string, trialDays: number,
     setupTime: string

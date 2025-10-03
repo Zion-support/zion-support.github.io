@@ -1,6 +1,6 @@
-describe('login flow', () => {/* content */}
-  it('shows error on invalid password', () => {/* content */}
-    cy.intercept('POST', '/api/auth/login', {/* content */}
+describe('login flow', () => 
+  it('shows error on invalid password', () => 
+    cy.intercept('POST', '/api/auth/login', 
       statusCode: 401,
       body: { error: 'Invalid credentials' },
     }).as('login');
@@ -13,8 +13,8 @@ describe('login flow', () => {/* content */}
     cy.contains('Invalid credentials');
   });
 
-  it('redirects to next route on success', () => {/* content */}
-    cy.intercept('POST', '/api/auth/login', {/* content */}
+  it('redirects to next route on success', () => 
+    cy.intercept('POST', '/api/auth/login', 
       statusCode: 200,
       body: { token: 'jwt', user: { id: '1', email: 'test@example.com' } },
       headers: { 'set-cookie': 'token=jwt; HttpOnly; Path=/' },

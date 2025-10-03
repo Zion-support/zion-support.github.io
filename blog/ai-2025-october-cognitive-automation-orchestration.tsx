@@ -13,8 +13,6 @@ export default function CognitiveAutomationOrchestration2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>Cognitive Automation Orchestration 2025: Next-Gen AI Workflow Intelligence | Zion Tech Group</title>

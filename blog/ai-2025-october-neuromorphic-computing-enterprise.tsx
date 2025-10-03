@@ -13,8 +13,6 @@ export default function NeuromorphicComputingEnterprise2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>Neuromorphic Computing for Enterprise 2025: Brain-Inspired AI at Scale | Zion Tech Group</title>

@@ -6,8 +6,6 @@ export default function AI2025OctoberLLMFineTuningMastery() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <article className="text-left"></a>
       <div className="text-left"></div>
         {/* Hero Section */}
@@ -82,32 +80,32 @@ export default function AI2025OctoberLLMFineTuningMastery() {
           <h2 className="text-left">Modern Fine-Tuning Techniques</h2>
           <div className="text-left"></div>
             {[
-              {/* content */}
+              
                 title: "LoRA (Low-Rank Adaptation)
                 desc: "Update only 0.1% of parameters while achieving full fine-tuning quality
                 metrics: ["99.9% Parameter Freeze", "Comparable Quality", "Fast Training"]
               },
-              {/* content */}
+              
                 title: "QLoRA (Quantized LoRA)
                 desc: "Fine-tune 70B models on single GPU with 4-bit quantization
                 metrics: ["4-bit Quantization", "1 GPU Training", "65B+ Models"]
               },
-              {/* content */}
+              
                 title: "Prefix Tuning
                 desc: "Learn continuous task-specific vectors prepended to model inputs
                 metrics: ["Minimal Storage", "Multi-Task", "Fast Switching"]
               },
-              {/* content */}
+              
                 title: "P-Tuning v2
                 desc: "Add trainable prompts across all layers for improved performance
                 metrics: ["Deep Prompts", "Better Accuracy", "Efficient"]
               },
-              {/* content */}
+              
                 title: "Adapter Layers
                 desc: "Insert small trainable modules between transformer layers
                 metrics: ["Modular Design", "Task-Specific", "Composable"]
               },
-              {/* content */}
+              
                 title: "Full Fine-Tuning
                 desc: "Update all model parameters for maximum customization
                 metrics: ["Maximum Quality", "Full Control", "Higher Cost"]
@@ -134,27 +132,27 @@ export default function AI2025OctoberLLMFineTuningMastery() {
           <div className="text-left"></div>
             <div className="text-left"></div>
               {[
-                {/* content */}
+                
                   step: "Data Collection
                   desc: "Gather high-quality, domain-specific examples that represent your use case
                   tips: ["10K+ examples ideal", "Diversity matters", "Quality over quantity"]
                 },
-                {/* content */}
+                
                   step: "Data Cleaning
                   desc: "Remove noise, duplicates, and problematic examples that could harm performance
                   tips: ["Deduplication", "Outlier removal", "Format standardization"]
                 },
-                {/* content */}
+                
                   step: "Prompt Formatting
                   desc: "Structure data into instruction-following format with clear inputs and outputs
                   tips: ["Consistent templates", "Clear instructions", "Few-shot examples"]
                 },
-                {/* content */}
+                
                   step: "Train/Val Split
                   desc: "Reserve 10-20% for validation to monitor overfitting and generalization
                   tips: ["Stratified sampling", "Representative split", "Held-out test set"]
                 },
-                {/* content */}
+                
                   step: "Augmentation
                   desc: "Expand training data with paraphrasing, back-translation, and synthetic generation
                   tips: ["Paraphrasing", "Synthetic data", "Difficulty balancing"]
@@ -186,7 +184,7 @@ export default function AI2025OctoberLLMFineTuningMastery() {
           <h2 className="text-left">Optimal Training Configuration</h2>
           <div className="text-left"></div>
             {[
-              {/* content */}
+              
                 category: "Hyperparameters
                 params: [
                   "Learning Rate: 1e-4 to 5e-5
@@ -196,7 +194,7 @@ export default function AI2025OctoberLLMFineTuningMastery() {
                   "Weight Decay: 0.01-0.1"
                 ]
               },
-              {/* content */}
+              
                 category: "Hardware Setup
                 params: [
                   "GPU: A100 80GB ideal
@@ -206,7 +204,7 @@ export default function AI2025OctoberLLMFineTuningMastery() {
                   "Flash Attention 2"
                 ]
               },
-              {/* content */}
+              
                 category: "Optimization
                 params: [
                   "Optimizer: AdamW
@@ -237,25 +235,25 @@ export default function AI2025OctoberLLMFineTuningMastery() {
           <h2 className="text-left">Enterprise Fine-Tuning Success Stories</h2>
           <div className="text-left"></div>
             {[
-              {/* content */}
+              
                 company: "Global Financial Services
                 useCase: "Financial Document Analysis
                 result: "95% accuracy on complex financial reports, 10x faster than manual review
                 savings: "$47M annual savings"
               },
-              {/* content */}
+              
                 company: "Healthcare Provider
                 useCase: "Medical Record Summarization
                 result: "98% clinical accuracy, reduced physician documentation time by 73%
                 savings: "500+ hours saved per physician/year"
               },
-              {/* content */}
+              
                 company: "Legal Tech Firm
                 useCase: "Contract Review & Generation
                 result: "92% accuracy on specialized contracts, 15x faster contract review
                 savings: "$23M in legal fees saved"
               },
-              {/* content */}
+              
                 company: "E-Commerce Platform
                 useCase: "Customer Support Automation
                 result: "89% resolution rate without escalation, 24/7 multilingual support

@@ -1,12 +1,10 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const AIAgentsSoftwareDevelopmentAutomation2025: React.FC = () => {/* content */}
+const AIAgentsSoftwareDevelopmentAutomation2025: React.FC = () => 
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
       <Helmet>
         <title>AI Agents for Software Development Automation — 10x Developer Velocity, 95% Bug Reduction | Zion Tech Group</title>
         <meta name="description" content="Discover how AI-powered development agents are revolutionizing software engineering with autonomous coding, intelligent testing, and 10x faster development cycles. Production-ready strategies from leading tech companies." />

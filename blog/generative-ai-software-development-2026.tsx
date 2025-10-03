@@ -7,8 +7,6 @@ export default function GenerativeAISoftwareDevelopment2026() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>Generative AI Transforms Enterprise Software Development | Zion Tech Group</title>

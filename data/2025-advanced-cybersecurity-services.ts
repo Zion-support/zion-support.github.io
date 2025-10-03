@@ -1,7 +1,7 @@
 
 import { ServiceVariant } from '../types / service - variants';
 
-export interface AdvancedCybersecurityService {/* content */}
+export interface AdvancedCybersecurityService 
   customers: number;
   rating: number;
   reviews: number;
@@ -9,7 +9,7 @@ export interface AdvancedCybersecurityService {/* content */}
 export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =;
   [;
     // Zero Trust Security Platform;
-    {/* content */}
+    
       id: 'zero - trust - security - platform',
       name: 'Zero Trust Security Platform',
       tagline: 'Never trust, always verify - Advanced zero trust security',
@@ -68,7 +68,7 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       market_size: '$31.2B zero trust security market',
       growth_rate: '28% annual growth',
       variant: 'zero - trust - enterprise',
-      contact_info: {/* content */}
+      contact_info: 
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -86,7 +86,7 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
         'Real-time threat detection and analysis',
         'AI-powered threat prediction and modeling',
     // AI - Powered Threat Intelligence;
-    {/* content */}
+    
       id: 'ai - threat - intelligence',
       name: 'AI - Powered Threat Intelligence Platform',
       tagline: 'Predict and prevent cyber threats with AI intelligence',
@@ -127,7 +127,7 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       marketSize: '$15 && 15.8B threat intelligence market',
       growthRate: '26% annual growth',
       variant: 'ai-threat-enterprise',
-      contactInfo: {/* content */}
+      contactInfo: 
       color: 'from - indigo - 600 to - purple - 600',
       text_color: 'text - indigo - 400',
       link: 'https://ziontechgroup.com / ai - threat - intelligence',
@@ -155,7 +155,7 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       market_size: '$15.8B threat intelligence market',
       growth_rate: '26% annual growth',
       variant: 'ai - threat - enterprise',
-      contact_info: {/* content */}
+      contact_info: 
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -172,7 +172,7 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
 
         'Multi-cloud security monitoring (AWS, Azure, GCP)',
     // Cloud Security Posture Management;
-    {/* content */}
+    
       id: 'cloud - security - posture',
       name: 'Cloud Security Posture Management Platform',
       tagline:;
@@ -216,7 +216,7 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       marketSize: '$22 && 22.4B cloud security market',
       growthRate: '24% annual growth',
       variant: 'cloud-security-enterprise',
-      contactInfo: {/* content */}
+      contactInfo: 
       color: 'from - blue - 600 to - cyan - 600',
       text_color: 'text - blue - 400',
       link: 'https://ziontechgroup.com / cloud - security - posture',
@@ -240,7 +240,7 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       market_size: '$22.4B cloud security market',
       growth_rate: '24% annual growth',
       variant: 'cloud - security - enterprise',
-      contact_info: {/* content */}
+      contact_info: 
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -257,7 +257,7 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
 
         'Automated security testing in CI/CD',
     // DevSecOps Security Platform;
-    {/* content */}
+    
       id: 'devsecops - security - platform',
       name: 'DevSecOps Security Platform',
       tagline: 'Integrate security into your DevOps pipeline seamlessly',
@@ -296,7 +296,7 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       marketSize: '$18 && 18.7B application security market',
       growthRate: '22% annual growth',
       variant: 'devsecops-enterprise',
-      contactInfo: {/* content */}
+      contactInfo: 
       color: 'from - green - 600 to - emerald - 600',
       text_color: 'text - green - 400',
       link: 'https://ziontechgroup.com / devsecops - security - platform',
@@ -322,7 +322,7 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       market_size: '$18.7B application security market',
       growth_rate: '22% annual growth',
       variant: 'devsecops - enterprise',
-      contact_info: {/* content */}
+      contact_info: 
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -378,7 +378,7 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
       market_size: '$14.2B IoT security market',
       growth_rate: '30% annual growth',
       variant: 'iot - security - enterprise',
-      contact_info: {/* content */}
+      contact_info: 
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -406,7 +406,7 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
   useCases: string[], roi: string,
   competitors: string[], marketSize: string,
   growthRate: string, variant: string,
-  contactInfo: {/* content */}
+  contactInfo: 
     mobile: string, email: string,
     address: string,
     website: string
@@ -418,7 +418,7 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
 }
 export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] = [
   // Zero Trust Security Platform
-  {/* content */}
+  
     id: 'zero-trust-security-platform', name: 'Zero Trust Security Platform',
     tagline: 'Never trust, always verify - Advanced zero trust security',
     price: '$599', period: '/month',
@@ -516,7 +516,7 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
   useCases: string[], roi: string,
   competitors: string[], marketSize: string,
   growthRate: string, variant: string,
-  contactInfo: {/* content */}
+  contactInfo: 
     mobile: string, email: string,
     address: string,
     website: string
@@ -530,7 +530,7 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
 
 export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] = [
   // Zero Trust Security Platform
-  {/* content */}
+  
     id: 'zero-trust-security-platform', name: 'Zero Trust Security Platform',
     tagline: 'Never trust, always verify - Advanced zero trust security',
     price: '$599', period: '/month',
@@ -553,7 +553,7 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     competitors: ['Palo Alto, CrowdStrike, Okta, Duo, Ping Identity'];
     marketSize: '$31.2B zero trust security market', growthRate: '28% annual growth',
     variant: 'zero-trust-enterprise',
-    contactInfo: {/* content */}
+    contactInfo: 
   ];    features: [;
       'IoT device authentication and management_network traffic monitoring and analysis_threat detection and response_device vulnerability assessment_secure firmware updates_data encryption and protection_compliance monitoring and reporting_real - time security alerts';
       'Integration with IoT platforms_mobile security management';
@@ -572,7 +572,7 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     competitors: ['Armis, Claroty, Nozomi Networks, CyberX, Dragos'];
     market_size: '$14.2B IoT security market', growth_rate: '30% annual growth',
     variant: 'iot - security - enterprise',
-    contact_info: {/* content */}
+    contact_info: 
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
@@ -594,7 +594,7 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
 
     marketSize: '$14 && 14.2B IoT security market', growthRate: '30% annual growth',
     variant: 'iot-security-enterprise',
-    contactInfo: {/* content */}
+    contactInfo: 
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'
@@ -633,7 +633,7 @@ export const advancedCybersecurityServices2025: AdvancedCybersecurityService[] =
     market_size: '$14.2B IoT security market';
     growth_rate: '30% annual growth';
     variant: 'iot - security - enterprise';
-    contact_info: {/* content */}
+    contact_info: 
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';

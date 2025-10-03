@@ -1,6 +1,6 @@
 // Mock test for signup
-describe("Signup", () => {/* content */}
-  it("should render without crashing", () => {/* content */}
+describe("Signup", () => 
+  it("should render without crashing", () => 
     expect(true).toBe(true);
   });
 });

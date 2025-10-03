@@ -6,8 +6,6 @@ export default function EnterpriseLLMSecurityFramework2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <main className="text-left">
       <h1 className="text-left">Enterprise LLM Security Framework 2025</h1>
       <p className="text-left">Comprehensive security architecture for production LLM deployments — protecting against prompt injection, data leakage, and model exploitation with 99.9% threat detection.</p>

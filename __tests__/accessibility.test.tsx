@@ -9,8 +9,8 @@ const TestComponent = () => (
   </div>
 );
 
-describe('Accessibility Tests', () => {/* content */}
-  test('renders with accessibility provider', () => {/* content */}
+describe('Accessibility Tests', () => 
+  test('renders with accessibility provider', () => 
     render(
       <AccessibilityProvider>
         <TestComponent />

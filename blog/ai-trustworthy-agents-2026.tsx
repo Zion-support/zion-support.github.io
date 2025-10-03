@@ -7,8 +7,6 @@ export default function TrustworthyAIAgents2026() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>Trustworthy AI Agents 2026: Safety, Compliance, and Observability | Zion Tech Group</title>

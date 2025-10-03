@@ -46,7 +46,7 @@ export default function PostBySlug(): React.JSX.Element
     if (!slug) return undefined;
     
     const fromLatest = latestArticles.find((a) => a.slug === slug);
-    if (fromLatest) 
+    if() {
       return 
         slug: fromLatest.slug,
         title: fromLatest.title,
@@ -59,7 +59,7 @@ export default function PostBySlug(): React.JSX.Element
     }
     
     const fromBlogPosts = blogPosts.find((p) => p.slug === slug);
-    if (fromBlogPosts) 
+    if() {
       return 
         slug: fromBlogPosts.slug,
         title: fromBlogPosts.title,
@@ -72,7 +72,7 @@ export default function PostBySlug(): React.JSX.Element
     }
     
     const fromPosts = staticPosts.find((p) => p.slug === slug);
-    if (fromPosts) 
+    if() {
       return 
         slug: fromPosts.slug,
         title: fromPosts.title,
@@ -112,12 +112,10 @@ export default function PostBySlug(): React.JSX.Element
     return mockArticle;
   }, [slug]);
 
-  if (!article) 
+  if() {
     return (
     <div>
       <div></div>
-      <div></div>
-    </div>
       <div></div>
         <Header />
         <div className="min-h-screen bg-gray-50 flex items-center justify-center"></div>
@@ -139,8 +137,6 @@ export default function PostBySlug(): React.JSX.Element
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Header />
       <div className="min-h-screen bg-gray-50"></div>
@@ -234,8 +230,6 @@ export default function PostBySlug(): React.JSX.Element
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div className="min-h-screen bg-gray-50"></div>
       <Header />
       

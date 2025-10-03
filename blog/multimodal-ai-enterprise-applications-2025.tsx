@@ -13,8 +13,6 @@ export default function MultimodalAIEnterpriseApplications2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>Multimodal AI for Enterprise Applications 2025: Vision, Language & Beyond | Zion Tech Group</title>

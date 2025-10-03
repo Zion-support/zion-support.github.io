@@ -26,7 +26,7 @@
   market_size: string;
   growth_rate: string;
   variant: ServiceVariant;
-  contact_info: {/* content */}
+  contact_info: 
     mobile: string;
     email: string;
     address: string;
@@ -47,7 +47,7 @@
   market_advantage: string;
 ;
 
-const contact = {/* content */}
+const contact = 
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup && ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',

@@ -7,8 +7,6 @@ export default function Fortune500AI2026MegaTransformationSuccess() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div className="text-left"></div>
       <div className="text-left"></div>
         {/* Hero Section */}

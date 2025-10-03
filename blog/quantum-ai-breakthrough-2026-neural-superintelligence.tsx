@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const QuantumAIBreakthrough2026NeuralSuperintelligence = () => {/* content */}
+const QuantumAIBreakthrough2026NeuralSuperintelligence = () => 
   return (
   <div></div>
     <div className="text-left"></div>

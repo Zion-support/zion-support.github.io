@@ -1,7 +1,7 @@
 export default main;
 
 import ethers from 'hardhat';
-async function main(: any) {/* content */}
+async function main(: any) 
   const [deployer] = await ethers.getSigners();
   console.log('Deploying with:', deployer.address);
   const ZION = await ethers.getContractFactory('ZIONToken');
@@ -12,7 +12,7 @@ async function main(: any) {/* content */}
   console.log('ZIONToken deployed at:', addr);
   console.log('Total supply:', totalSupply.toString());
 }
-main().catch((error: unknown) => {/* content */}
+main().catch((error: unknown) => 
   console.error(error);
   process.exitCode = 1;
 });

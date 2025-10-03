@@ -13,7 +13,7 @@ export type IntegrationProviderId =;
   | 'zoho'
   | 'pipedrive'
   | 'greenhouse'
-export interface SyncLogEntry {/* content */}
+export interface SyncLogEntry 
   id: string;
   timestamp: number;
   provider_id: IntegrationProviderId;
@@ -23,14 +23,14 @@ export interface SyncLogEntry {/* content */}
   details?: Record < string, any>;
 ;
 
-export interface ManualOverride {/* content */}
+export interface ManualOverride 
   job_id: string;
   disableCrmSync?: boolean;
   disableAtsSync?: boolean;
 
 ;
 
-export interface ZapierEvent {/* content */}
+export interface ZapierEvent 
   id: string;
   type: 'zion && zion.job.posted' | 'zion && zion.talent.matched';
   timestamp: number;
@@ -38,7 +38,7 @@ export interface ZapierEvent {/* content */}
   payload: Record < string, any>;
 ;
 
-export interface IntegrationsState {/* content */}
+export interface IntegrationsState 
 export interface ManualOverride {;
   jobId: string;
   disableCrmSync?: boolean;
@@ -53,7 +53,7 @@ export interface ZapierEvent {;
   payload: Record < string, any>;
 ;
 
-export interface IntegrationsState {/* content */}
+export interface IntegrationsState 
 export interface ManualOverride {;
   jobId: string;
   disableCrmSync?: boolean;
@@ -79,32 +79,32 @@ export interface IntegrationsState {;
   overrides: ManualOverride[];
 
 
-export interface SyncLogEntry {/* content */}
+export interface SyncLogEntry 
   id: string, timestamp: number,
   providerId: IntegrationProviderId, level: 'info' | 'warn' | 'error',
   action: string,
   details?: Record<string, any>
 }
 
-export interface ManualOverride {/* content */}
+export interface ManualOverride 
   jobId: string, disableCrmSync?: boolean,
   disableAtsSync?: boolean
 }
 
-export interface ZapierEvent {/* content */}
+export interface ZapierEvent 
   id: string, type: 'zion.job.posted' | 'zion.talent.matched',
   timestamp: number,
   payload: Record<string, any>
 }
 
-export interface IntegrationsState {/* content */}
+export interface IntegrationsState 
   connections: ProviderConnection[], logs: SyncLogEntry[],
   overrides: ManualOverride[],
   events: ZapierEvent[]
 }
 }
   payload: Record<string, any>;
-export interface IntegrationsState {/* content */}
+export interface IntegrationsState 
 export interface IntegrationsState {;
   connections: ProviderConnection[];
   logs: SyncLogEntry[];

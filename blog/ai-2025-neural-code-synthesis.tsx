@@ -6,8 +6,6 @@ export default function NeuralCodeSynthesis2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <main className="text-left">
       <h1 className="text-left">Neural Code Synthesis 2025</h1>
       <p className="text-left">95% accuracy and 90% faster delivery with governed code generation.</p>

@@ -7,8 +7,6 @@ export default function EnterpriseAIModelGovernance2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>Enterprise AI Model Governance Framework 2025 | Complete Guide | Zion Tech Group</title>

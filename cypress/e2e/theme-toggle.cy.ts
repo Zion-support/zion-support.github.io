@@ -1,5 +1,5 @@
-describe('theme toggle', () => {/* content */}
-  it('toggles and persists theme', () => {/* content */}
+describe('theme toggle', () => 
+  it('toggles and persists theme', () => 
     cy.visit('/theme-test');
     cy.get('button[aria-label="Toggle theme"]').click();
     cy.get('html').should('have.class', 'dark');

@@ -1,12 +1,10 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const AICustomerIntelligencePlatform2026: React.FC = () => {/* content */}
+const AICustomerIntelligencePlatform2026: React.FC = () => 
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
       <Helmet>
         <title>AI-Driven Customer Intelligence Platform 2026 | Zion Tech Group</title>
         <meta name="description" content="Transform customer data into $50M+ revenue with AI intelligence. Predictive analytics, sentiment analysis, and personalization delivering 45% conversion lift and 250% ROI." />

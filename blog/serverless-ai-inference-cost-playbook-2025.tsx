@@ -6,8 +6,6 @@ export default function ServerlessAIInferenceCostPlaybook2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <main className="text-left">
       <h1>Serverless AI Inference Cost Playbook (2025)</h1>
       <p></p>

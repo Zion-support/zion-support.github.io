@@ -15,8 +15,6 @@ export default function BlogPost() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <article className="text-left"></a>
       <h1>🧠 Neuroplastic AI Systems 2025: Self-Adapting Neural Networks Revolution</h1>
       

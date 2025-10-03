@@ -6,8 +6,6 @@ export default function AI2026RevolutionaryTrends() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div className="text-left"></div>
       <div className="text-left"></div>
         <h1 className="text-left">AI 2026: Revolutionary Trends Transforming Enterprise</h1>

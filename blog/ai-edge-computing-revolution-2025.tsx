@@ -7,8 +7,6 @@ export default function AIEdgeComputingRevolution2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>AI at the Edge: Real-Time Intelligence with 5ms Latency | Zion Tech Group</title>

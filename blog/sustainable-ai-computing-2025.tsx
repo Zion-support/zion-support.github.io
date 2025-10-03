@@ -7,8 +7,6 @@ export default function SustainableAIComputing2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>Sustainable AI Computing 2025: Green Technology for the Future | Zion Tech Group</title>

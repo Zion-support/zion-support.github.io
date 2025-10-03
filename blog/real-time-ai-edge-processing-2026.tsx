@@ -1,6 +1,6 @@
 import React from 'react';
 
-const RealTimeAIEdgeProcessing2026 = () => {/* content */}
+const RealTimeAIEdgeProcessing2026 = () => 
   return (
   <div></div>
     <article className="text-left"></a>

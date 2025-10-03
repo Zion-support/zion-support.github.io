@@ -6,8 +6,6 @@ export default function AgentOpsObservability2026() {
 	return (
     <div>
       <div></div>
-      <div></div>
-    </div>
 		<div className="text-left"></div>
 			<main className="text-left">
 				<h1 className="text-left">Agent Ops Observability 2026</h1>

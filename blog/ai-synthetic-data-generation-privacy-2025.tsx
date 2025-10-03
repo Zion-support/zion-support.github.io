@@ -13,8 +13,6 @@ export default function AISyntheticDataGenerationPrivacy2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>AI Synthetic Data Generation & Privacy 2025: Training Without Compromise | Zion Tech Group</title>

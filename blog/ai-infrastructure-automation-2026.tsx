@@ -10,7 +10,7 @@ export const metadata = {
   tags: ['AI Infrastructure', 'DevOps Automation', 'Self-Healing Systems', 'Cloud Computing']
 };
 
-const AIInfrastructureAutomation2026 = () => {/* content */}
+const AIInfrastructureAutomation2026 = () => 
   return (
   <div></div>
     <article className="text-left"></a>

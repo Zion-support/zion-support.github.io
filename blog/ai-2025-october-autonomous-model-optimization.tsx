@@ -6,8 +6,6 @@ export default function AutonomousModelOptimization2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <main className="text-left">
       <h1 className="text-left">Autonomous ML Model Optimization 2025</h1>
       <p className="text-left">Self-tuning ML models that automatically optimize hyperparameters, architecture, and training strategies — achieving 95% accuracy with 80% less compute.</p>

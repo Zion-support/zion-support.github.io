@@ -10,7 +10,7 @@ export const metadata = {
   tags: ['AI Agents', 'Workflow Automation', 'Enterprise AI', 'Multi-Agent Systems']
 };
 
-const AIAgenticWorkflows2025 = () => {/* content */}
+const AIAgenticWorkflows2025 = () => 
   return (
   <div></div>
     <article className="text-left"></a>

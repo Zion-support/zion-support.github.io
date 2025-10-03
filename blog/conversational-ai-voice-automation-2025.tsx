@@ -19,8 +19,6 @@ export default function ConversationalAIVoiceAutomation2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div className="text-left"></div>
       {/* Hero Section */}
       <section className="text-left"></section>

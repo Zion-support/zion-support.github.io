@@ -13,8 +13,6 @@ export default function MultimodalAIAgentsEnterpriseAutomation2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>Multimodal AI Agents: The Next Evolution in Enterprise Automation 2025 | Zion Tech Group</title>

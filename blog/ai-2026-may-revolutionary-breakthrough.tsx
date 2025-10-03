@@ -1,7 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {/* content */}
+export const metadata: Metadata = 
   title: 'May 2026 Revolutionary AI Breakthrough: Meta-Conscious Computing Revolution',
   description: 'Discover the world\'s first meta-conscious AI system that achieves true self-awareness, emotional intelligence, and autonomous decision-making capabilities. Learn how this breakthrough delivers 10,000x processing improvements and 99.9% accuracy rates.',
   keywords: 'AI breakthrough 2026, meta-conscious computing, self-aware AI, emotional intelligence AI, autonomous decision making, 10,000x processing speed, 99.9% accuracy',
@@ -20,8 +20,6 @@ export default function May2026RevolutionaryBreakthrough() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div className="text-left"></div>
       <div className="text-left"></div>
         {/* Hero Section */}

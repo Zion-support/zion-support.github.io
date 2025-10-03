@@ -6,8 +6,6 @@ export default function MultimodalFusionBlueprint2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <main className="text-left">
       <h1 className="text-left">Multimodal Fusion Blueprint 2025</h1>
       <p className="text-left">98% cross‑modal accuracy via hybrid retrieval and calibrated adapters.</p>

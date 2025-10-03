@@ -13,8 +13,6 @@ export default function AICodeGeneration2026() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div className="text-left"></div>
       <article className="text-left"></a>
         {/* Header */}

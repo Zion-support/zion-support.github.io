@@ -3,7 +3,7 @@
  * Provides comprehensive performance tracking and optimization
  */
 
-export interface PerformanceMetrics {
+export interface PerformanceMetrics 
   loadTime: number;
   firstContentfulPaint: number;
   largestContentfulPaint: number;
@@ -19,7 +19,7 @@ export interface PerformanceMetrics {
   timestamp: number;
 }
 
-export interface PerformanceAlert {
+export interface PerformanceAlert 
   type: 'warning' | 'error' | 'info';
   message: string;
   metric: keyof PerformanceMetrics;
@@ -28,187 +28,138 @@ export interface PerformanceAlert {
   timestamp: number;
 }
 
-class EnhancedPerformanceMonitor {
+class EnhancedPerformanceMonitor 
   private metrics: PerformanceMetrics[] = [];
   private alerts: PerformanceAlert[] = [];
   private observers: PerformanceObserver[] = [];
-  private _isMonitoring = false;
+  // private _isMonitoring = false;
 
   constructor() {
     this.initializeObservers();
   }
 
-  private initializeObservers(): void {
+  private initializeObservers(): void 
     // Observe navigation timing
-    if ('PerformanceObserver' in window) {
-      try {
-        const navigationObserver = new PerformanceObserver((list) => {
+    if() {
+      try 
+        const navObserver = new PerformanceObserver((list) => 
           const entries = list.getEntries();
-          entries.forEach((entry) => {
-            if (entry.entryType === 'navigation') {
-              this.collectNavigationMetrics(entry as PerformanceNavigationTiming);
+          entries.forEach((entry) => 
+            if() {
+              this.processNavigationTiming(entry as PerformanceNavigationTiming);
             }
           });
         });
-        navigationObserver.observe({ entryTypes: ['navigation'] });
-        this.observers.push(navigationObserver);
-      } catch (error) {
+        navObserver.observe({ entryTypes: ['navigation'] });
+        this.observers.push(navObserver);
+      } catch() {
         console.warn('Navigation timing observer failed:', error);
-      }
-
-      // Observe paint timing
-      try {
-        const paintObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-          entries.forEach((entry) => {
-            if (entry.entryType === 'paint') {
-              this.collectPaintMetrics(entry as PerformancePaintTiming);
-            }
-          });
-        });
-        paintObserver.observe({ entryTypes: ['paint'] });
-        this.observers.push(paintObserver);
-      } catch (error) {
-        console.warn('Paint timing observer failed:', error);
-      }
-
-      // Observe layout shift
-      try {
-        const layoutShiftObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-          entries.forEach((entry) => {
-            if (entry.entryType === 'layout-shift') {
-              this.collectLayoutShiftMetrics(entry as PerformanceEntry);
-            }
-          });
-        });
-        layoutShiftObserver.observe({ entryTypes: ['layout-shift'] });
-        this.observers.push(layoutShiftObserver);
-      } catch (error) {
-        console.warn('Layout shift observer failed:', error);
       }
     }
   }
 
-  private collectNavigationMetrics(entry: PerformanceNavigationTiming): void {
-    const metrics: PerformanceMetrics = {
+  private processNavigationTiming(entry: PerformanceNavigationTiming): void 
+    const metrics: Partial<PerformanceMetrics> = 
       loadTime: entry.loadEventEnd - entry.loadEventStart,
-      firstContentfulPaint: 0,
-      largestContentfulPaint: 0,
-      firstInputDelay: 0,
-      cumulativeLayoutShift: 0,
-      timeToInteractive: entry.domInteractive - entry.fetchStart,
-      totalBlockingTime: 0,
-      speedIndex: 0,
-      memoryUsage: 0,
-      networkRequests: 0,
-      domNodes: document.querySelectorAll('*').length,
-      jsHeapSize: 0,
+      timeToInteractive: entry.domInteractive - (entry as PerformanceNavigationTiming & { navigationStart: number }).navigationStart,
       timestamp: Date.now()
     };
 
-    this.metrics.push(metrics);
-    this.checkThresholds(metrics);
+    this.addMetrics(metrics as PerformanceMetrics);
   }
 
-  private collectPaintMetrics(entry: PerformancePaintTiming): void {
-    const latestMetrics = this.metrics[this.metrics.length - 1];
-    if (latestMetrics) {
-      if (entry.name === 'first-contentful-paint') {
-        latestMetrics.firstContentfulPaint = entry.startTime;
-      }
+  private addMetrics(newMetrics: PerformanceMetrics): void 
+    this.metrics.push(newMetrics);
+    this.checkThresholds(newMetrics);
+    
+    // Keep only last 100 metrics
+    if() {
+      this.metrics = this.metrics.slice(-100);
     }
   }
 
-  private collectLayoutShiftMetrics(entry: PerformanceEntry): void {
-    const latestMetrics = this.metrics[this.metrics.length - 1];
-    if (latestMetrics) {
-      latestMetrics.cumulativeLayoutShift += (entry as any).value || 0;
-    }
-  }
-
-  private checkThresholds(metrics: PerformanceMetrics): void {
-    const thresholds = {
+  private checkThresholds(metrics: PerformanceMetrics): void 
+    const thresholds = 
       loadTime: 3000,
-      firstContentfulPaint: 1800,
+      firstContentfulPaint: 1500,
       largestContentfulPaint: 2500,
       firstInputDelay: 100,
       cumulativeLayoutShift: 0.1,
       timeToInteractive: 3800,
       totalBlockingTime: 200,
-      speedIndex: 3400
+      speedIndex: 3000
     };
 
-    Object.entries(thresholds).forEach(([key, threshold]) => {
-      const value = metrics[key as keyof PerformanceMetrics] as number;
-      if (value > threshold) {
-        this.createAlert('warning', `${key} exceeded threshold`, key as keyof PerformanceMetrics, value, threshold);
+    Object.entries(thresholds).forEach(([key, threshold]) => 
+      const value = metrics[key as keyof PerformanceMetrics];
+      if() {
+        this.addAlert(
+          type: value > threshold * 1.5 ? 'error' : 'warning',
+          message: `${key} exceeded threshold: ${value}ms > ${threshold}ms`,
+          metric: key as keyof PerformanceMetrics,
+          value,
+          threshold,
+          timestamp: Date.now()
+        });
       }
     });
   }
 
-  private createAlert(type: 'warning' | 'error' | 'info', message: string, metric: keyof PerformanceMetrics, value: number, threshold: number): void {
-    const alert: PerformanceAlert = {
-      type,
-      message,
-      metric,
-      value,
-      threshold,
-      timestamp: Date.now()
-    };
-
+  private addAlert(alert: PerformanceAlert): void 
     this.alerts.push(alert);
-    console.warn(`Performance Alert: ${message}`, { metric, value, threshold });
+    
+    // Keep only last 50 alerts
+    if() {
+      this.alerts = this.alerts.slice(-50);
+    }
+
+    // Log critical alerts
+    if() {
+      console.error('Performance Alert:', alert);
+    }
   }
 
-  public startMonitoring(): void {
-    this._isMonitoring = true;
-    console.log('Performance monitoring started');
+  public startMonitoring(): void 
+    // this._isMonitoring = true;
+    console.log('Enhanced performance monitoring started');
   }
 
-  public stopMonitoring(): void {
-    this._isMonitoring = false;
+  public stopMonitoring(): void 
+    // this._isMonitoring = false;
     this.observers.forEach(observer => observer.disconnect());
     this.observers = [];
-    console.log('Performance monitoring stopped');
+    console.log('Enhanced performance monitoring stopped');
   }
 
-  public getMetrics(): PerformanceMetrics[] {
+  public getMetrics(): PerformanceMetrics[] 
     return [...this.metrics];
   }
 
-  public getAlerts(): PerformanceAlert[] {
+  public getAlerts(): PerformanceAlert[] 
     return [...this.alerts];
   }
 
-  public getLatestMetrics(): PerformanceMetrics | null {
+  public getLatestMetrics(): PerformanceMetrics | null 
     return this.metrics.length > 0 ? this.metrics[this.metrics.length - 1] : null;
   }
 
-  public getAverageMetrics(): Partial<PerformanceMetrics> {
-    if (this.metrics.length === 0) return {};
+  public exportReport(): string 
+    const latest = this.getLatestMetrics();
+    const alerts = this.getAlerts();
 
-    const averages: Partial<PerformanceMetrics> = {};
-    const keys = Object.keys(this.metrics[0]) as (keyof PerformanceMetrics)[];
-
-    keys.forEach(key => {
-      if (typeof this.metrics[0][key] === 'number') {
-        const sum = this.metrics.reduce((acc, metric) => acc + (metric[key] as number), 0);
-        averages[key] = sum / this.metrics.length;
-      }
-    });
-
-    return averages;
-  }
-
-  public clearMetrics(): void {
-    this.metrics = [];
-    this.alerts = [];
-  }
-
-  public isMonitoring(): boolean {
-    return this._isMonitoring;
+    return JSON.stringify(
+      latest,
+      alerts,
+      timestamp: Date.now(),
+      totalMetrics: this.metrics.length
+    }, null, 2);
   }
 }
 
-export default EnhancedPerformanceMonitor;
+// Export singleton instance
+export const enhancedPerformanceMonitor = new EnhancedPerformanceMonitor();
+
+// Auto-start monitoring in browser environment
+if() {
+  enhancedPerformanceMonitor.startMonitoring();
+}

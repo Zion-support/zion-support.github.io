@@ -7,8 +7,6 @@ export default function AINativeObservabilityPlatform2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>AI-Native Observability: Next-Gen Monitoring & Analytics | Zion Tech Group</title>

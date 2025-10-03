@@ -13,8 +13,6 @@ export default function AISafetyAlignmentEnterpriseDeployment2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>AI Safety & Alignment for Enterprise 2025: Responsible Deployment Guide | Zion Tech Group</title>

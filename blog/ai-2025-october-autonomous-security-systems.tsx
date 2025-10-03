@@ -10,7 +10,7 @@ export const metadata = {
   readTime: 17
 };
 
-const AutonomousSecuritySystems2025 = () => {/* content */}
+const AutonomousSecuritySystems2025 = () => 
   return (
   <div></div>
     <article className="text-left"></a>
@@ -180,7 +180,7 @@ class PredictiveDefenseSystem:
                     threat_intel
   </div>
 )
-                predictions.append({/* content */}
+                predictions.append(
                     'attack_type': threat_type,
                     'probability': prob,
                     'impact': self._estimate_impact(threat_type),

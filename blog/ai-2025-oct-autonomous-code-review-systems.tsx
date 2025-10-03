@@ -13,8 +13,6 @@ export default function AutonomousCodeReviewSystems2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>Autonomous Code Review Systems 2025: AI-Powered Quality at Scale | Zion Tech Group</title>

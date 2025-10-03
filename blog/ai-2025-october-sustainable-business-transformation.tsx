@@ -13,8 +13,6 @@ export default function AISustainableBusiness2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>AI-Driven Sustainable Business 2025: Green Tech Revolution | Zion Tech Group</title>

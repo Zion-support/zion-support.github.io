@@ -13,8 +13,6 @@ export default function AIObservabilityAPMRevolution2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>AI-Powered Observability & APM Revolution 2025: Intelligent Monitoring | Zion Tech Group</title>

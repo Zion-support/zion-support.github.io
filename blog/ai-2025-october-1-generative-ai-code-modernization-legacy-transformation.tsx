@@ -13,8 +13,6 @@ export default function GenerativeAICodeModernizationLegacyTransformation2025() 
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>Generative AI for Code Modernization: Legacy System Transformation 2025 | Zion Tech Group</title>

@@ -6,8 +6,6 @@ export default function NextGenAIObservabilityPlatform() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <article className="text-left"></a>
       <header className="text-left">
         <h1 className="text-left">Next-Gen AI Observability: Intelligent Monitoring at Scale</h1>
@@ -122,17 +120,17 @@ export default function NextGenAIObservabilityPlatform() {
         <h3>AI-Powered Analysis Engine</h3>
         <pre className="text-left"></p>
 {`// Next-Gen Observability Platform
-class IntelligentObservability {/* content */}
-  private models: {/* content */}
+class IntelligentObservability 
+  private models: 
     anomalyDetection: AnomalyDetector,
     rootCauseAnalysis: RCAEngine,
     forecasting: PredictiveModels,
     alertPrioritization: AlertRanker
   };
 
-  async analyze(telemetry: Telemetry): Promise<Insights> {/* content */}
+  async analyze(telemetry: Telemetry): Promise<Insights> 
     // 1. Detect anomalies across all signals
-    const anomalies = await this.models.anomalyDetection.detect({/* content */}
+    const anomalies = await this.models.anomalyDetection.detect(
       metrics: telemetry.metrics,
       logs: telemetry.logs,
       traces: telemetry.traces,
@@ -146,19 +144,19 @@ class IntelligentObservability {/* content */}
     );
 
     // 3. Generate predictions
-    const predictions = await this.models.forecasting.predict({/* content */}
+    const predictions = await this.models.forecasting.predict(
       horizon: '4h',
       confidence: 0.85
     });
 
     // 4. Prioritize and alert
-    const alerts = await this.models.alertPrioritization.rank({/* content */}
+    const alerts = await this.models.alertPrioritization.rank(
       incidents: rootCauses,
       predictions: predictions,
       businessImpact: await this.calculateImpact(rootCauses)
     });
 
-    return {/* content */}
+    return 
       anomalies,
       rootCauses,
       predictions,

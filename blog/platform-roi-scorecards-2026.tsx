@@ -2,12 +2,10 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { ArrowLeft, BarChart3, TrendingUp, CheckCircle } from "lucide-react";
 
-const PlatformROIScorecards2026 = () => {/* content */}
+const PlatformROIScorecards2026 = () => 
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
       <Helmet>
         <title>Platform ROI Scorecards 2026: From Golden Paths to Revenue | Zion Tech Group</title>
         <meta

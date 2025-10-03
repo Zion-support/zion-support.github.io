@@ -13,8 +13,6 @@ export default function AIRegulatoryCompliance2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>AI Regulatory Compliance 2025: Automated Risk Management | Zion Tech Group</title>

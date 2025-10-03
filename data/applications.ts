@@ -1,6 +1,6 @@
 export type ApplicationStatus = 'New' | 'Viewed' | 'Interviewed' | 'Hired';
 
-export type Application = {/* content */}
+export type Application = 
   id: string;
   jobId: string;
   talentSlug: string;
@@ -17,7 +17,7 @@ export type Application = {/* content */}
 };
 
 export const APPLICATIONS: Application[] = [
-  {/* content */}
+  
     id: 'app-001',
     jobId: 'job-llm-eng-001',
     talentSlug: 'ava-chen',
@@ -31,7 +31,7 @@ export const APPLICATIONS: Application[] = [
     summary: 'Architects robust LLM apps with retrieval, evaluation and guardrails. Ex-FAANG applied scientist.',
     skills: ['LLM Ops', 'RAG', 'OpenAI', 'LangChain', 'Vector DBs', 'TypeScript'],
   },
-  {/* content */}
+  
     id: 'app-002',
     jobId: 'job-devops-002',
     talentSlug: 'marco-silva',
@@ -45,7 +45,7 @@ export const APPLICATIONS: Application[] = [
     summary: 'Designs scalable multi-account AWS platforms and platform engineering toolchains.',
     skills: ['AWS', 'Kubernetes', 'Terraform', 'Serverless', 'Networking'],
   },
-  {/* content */}
+  
     id: 'app-003',
     jobId: 'job-devops-002',
     talentSlug: 'lena-mueller',

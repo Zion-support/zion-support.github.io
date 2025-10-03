@@ -11,7 +11,7 @@ export const metadata = {
   readTime: "16 min read
 };
 
-const AutonomousLLMOrchestrationRevolution: React.FC = () => {/* content */}
+const AutonomousLLMOrchestrationRevolution: React.FC = () => 
   return (
   <div></div>
     <article className="text-left"></a>

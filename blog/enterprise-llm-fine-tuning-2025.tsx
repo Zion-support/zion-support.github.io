@@ -3,12 +3,10 @@ import { Helmet } from 'react-helmet-async';
 import { Calendar, Clock, User, ArrowLeft, Share2, Bookmark, Brain, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-const EnterpriseLLMFineTuning2025: React.FC = () => {/* content */}
+const EnterpriseLLMFineTuning2025: React.FC = () => 
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
       <Helmet>
         <title>Enterprise LLM Fine-Tuning 2025: From Foundation to Domain Expert | Zion Tech Group</title>
         <meta 
@@ -213,37 +211,37 @@ const EnterpriseLLMFineTuning2025: React.FC = () => {/* content */}
               </p>
               <div className="text-left"></div>
                 {[
-                  {/* content */}
+                  
                     step: 1,
                     title: 'Data Collection & Curation',
                     content: 'Gather 500-5000 high-quality examples (more is better, but quality &gt; quantity). Format as instruction-response pairs. Remove duplicates, low-quality examples, and PII.',
                     metrics: 'Target: 1000+ examples, &lt;5% duplicates, manually review 10% for quality'
                   },
-                  {/* content */}
+                  
                     step: 2,
                     title: 'Base Model Selection',
                     content: 'Choose foundation model based on task complexity and latency budget. Options: Llama-3-8B (fast), Mixtral-8x7B (balanced), Llama-3-70B (accurate).',
                     metrics: 'Benchmark base model: measure accuracy, latency, cost on representative tasks'
                   },
-                  {/* content */}
+                  
                     step: 3,
                     title: 'LoRA Configuration',
                     content: 'Set hyperparameters: rank (r=8-64, higher=more capacity), alpha (α=16-128), dropout (0.05-0.1). Target specific modules (q_proj, v_proj for attention; mlp for reasoning).',
                     metrics: 'Start with r=16, α=32, dropout=0.05 as baseline, then tune'
                   },
-                  {/* content */}
+                  
                     step: 4,
                     title: 'Training',
                     content: 'Use small learning rate (1e-4 to 5e-5), train for 3-5 epochs, save checkpoints every epoch. Monitor training loss and eval metrics. Use gradient accumulation for large batches.',
                     metrics: 'Training time: 2-8 hours on A100. Watch for overfitting (eval loss rising)'
                   },
-                  {/* content */}
+                  
                     step: 5,
                     title: 'Evaluation',
                     content: 'Test on held-out set (20% of data). Measure accuracy, F1, ROUGE/BLEU for generation tasks. Compare to base model and production baselines. Check for regressions on other tasks.',
                     metrics: 'Target: 15-30% accuracy improvement over base model'
                   },
-                  {/* content */}
+                  
                     step: 6,
                     title: 'Deployment & Monitoring',
                     content: 'Deploy with A/B test (10% traffic to fine-tuned model). Monitor accuracy, latency, cost, user feedback. Gradually ramp to 100% if metrics hold.',

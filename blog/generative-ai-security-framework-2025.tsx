@@ -1,6 +1,6 @@
 import React from 'react';
 
-const GenerativeAISecurityFramework2025: React.FC = () => {/* content */}
+const GenerativeAISecurityFramework2025: React.FC = () => 
   return (
   <div></div>
     <article className="text-left"></a>

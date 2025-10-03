@@ -1,7 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {/* content */}
+export const metadata: Metadata = 
   title: 'AI 2026 Enterprise Autonomous Operations: Complete Business Automation Guide',
   description: 'Learn how to achieve 100% enterprise autonomy with AI 2026 technologies. Complete guide to autonomous operations, self-healing systems, and business transformation.',
   keywords: 'enterprise autonomous operations, AI automation, business transformation, self-healing systems, complete automation',
@@ -20,8 +20,6 @@ export default function AI2026EnterpriseAutonomousOperations() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div className="text-left"></div>
       <div className="text-left"></div>
         {/* Hero Section */}

@@ -15,8 +15,6 @@ export default function BlogPost() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <article className="text-left"></a>
       <h1>🔍 AI Observability Platform 2025: Monitor, Debug & Optimize AI at Scale</h1>
       
@@ -154,13 +152,13 @@ def predict(input_data):
       <h3>Step 2: Configure Alerts</h3>
       <pre className="text-left"></p>
         <code>{`# Define alert rules
-alerts = {/* content */}
-    "accuracy_drop": {/* content */}
+alerts = 
+    "accuracy_drop": 
         "condition": "accuracy < 0.90
         "severity": "critical
         "action": "trigger_retraining"
     },
-    "high_latency": {/* content */}
+    "high_latency": 
         "condition": "p99_latency > 500ms
         "severity": "warning
         "action": "scale_up"

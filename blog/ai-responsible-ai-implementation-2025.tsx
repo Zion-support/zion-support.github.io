@@ -1,6 +1,6 @@
 import React from 'react';
 
-const AIResponsibleAIImplementation2025 = () => {/* content */}
+const AIResponsibleAIImplementation2025 = () => 
   return (
   <div></div>
     <div className="text-left"></div>

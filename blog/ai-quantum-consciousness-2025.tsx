@@ -2,12 +2,10 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Atom, Sparkles, CheckCircle, Brain, Zap } from "lucide-react";
 
-const AIQuantumConsciousness2025 = () => {/* content */}
+const AIQuantumConsciousness2025 = () => 
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
       <Helmet>
         <title>AI Quantum Consciousness 2025: Bridging Quantum Computing and Cognitive AI | Zion Tech Group</title>
         <meta

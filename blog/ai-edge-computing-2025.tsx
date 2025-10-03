@@ -7,8 +7,6 @@ export default function AIEdgeComputing2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>AI Edge Computing 2025: Real-Time Intelligence at the Edge | Zion Tech Group</title>

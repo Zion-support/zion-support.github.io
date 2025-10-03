@@ -15,8 +15,6 @@ export default function BlogPost() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <article className="text-left"></a>
       <h1>🧠 Advanced Reasoning Models for Enterprise 2025: Chain-of-Thought at Scale</h1>
       
@@ -124,7 +122,7 @@ Monitoring: Prometheus + Grafana + Custom Metrics`}</code>
       <h3>Step 1: Define Reasoning Domain</h3>
       <pre className="text-left"></p>
         <code>{`# Configure reasoning domain and rules
-reasoning_config = {/* content */}
+reasoning_config = 
     "domain": "financial_risk_assessment
     "reasoning_depth": 5,  # Max chain length
     "confidence_threshold": 0.85,

@@ -7,12 +7,10 @@ export const metadata = {
   keywords: 'neural architecture search, NAS, AI automation, AutoML, 2026 AI trends, model design',
 };
 
-export default function AINeural ArchitectureSearch2026() {/* content */}
+export default function AINeural ArchitectureSearch2026() 
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>AI Neural Architecture Search 2026: Revolutionizing Model Design | Zion Tech Group</title>

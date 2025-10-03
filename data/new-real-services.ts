@@ -81,7 +81,7 @@
     rating: 4.8,
     reviews: 22;
   }
-  {/* content */}
+  
     id: 'ai - sales - email - copilot';
     name: 'AI Sales Email Copilot';
     tagline: 'Personalized multi - touch outbound with real - time enrichment';
@@ -144,7 +144,7 @@
     rating: 4.7,
     reviews: 58;
   }
-  {/* content */}
+  
     id: 'security - posture - as - code';
     name: 'Security Posture as Code';
     tagline: 'CIS / NIST / Kyverno policy packs with drift remediation';
@@ -192,7 +192,7 @@
     rating: 4.6,
     reviews: 14;
   }
-  {/* content */}
+  
     id: 'etl - observability - starter';
     name: 'ETL Observability Starter';
     tagline: 'Data pipeline health with schema change and freshness alerts';
@@ -238,7 +238,7 @@
 
     reviews: 12
   }
-  {/* content */}
+  
     id: 'api-performance-shield';
     name: 'API Performance Shield'
     tagline: 'Global edge caching, rate limiting, and anomaly detection';
@@ -262,7 +262,7 @@
     rating: 4.5,
     reviews: 12;
   }
-  {/* content */}
+  
     id: 'api - performance - shield';
     name: 'API Performance Shield',
     tagline: 'Global edge caching, rate limiting, and anomaly detection';
@@ -301,7 +301,7 @@
 
     reviews: 9
   }
-  {/* content */}
+  
     id: 'ai-product-analytics';
     name: 'AI Product Analytics'
     tagline: 'Session insights, funnel auto-segmentation, and LLM-based insights';
@@ -328,7 +328,7 @@
     rating: 4.7,
     reviews: 9;
   }
-  {/* content */}
+  
     id: 'ai - product - analytics';
     name: 'AI Product Analytics',
     tagline: 'Session insights, funnel auto - segmentation, and LLM - based insights';
@@ -367,7 +367,7 @@
 
     reviews: 20
   }
-  {/* content */}
+  
     id: 'ai-support-deflection';
     name: 'AI Support Deflection'
     tagline: 'Self-serve answers with RAG, forms, and secure handoff';
@@ -394,7 +394,7 @@
     rating: 4.6,
     reviews: 20;
   }
-  {/* content */}
+  
     id: 'ai - support - deflection';
     name: 'AI Support Deflection',
     tagline: 'Self - serve answers with RAG, forms, and secure handoff';
@@ -433,7 +433,7 @@
 
     reviews: 48
   }
-  {/* content */}
+  
     id: 'cloud-cost-autopilot';
     name: 'Cloud Cost Autopilot'
     tagline: 'Automated rightsizing, anomaly alerts, and commitment planning';
@@ -457,7 +457,7 @@
     rating: 4.7,
     reviews: 48;
   }
-  {/* content */}
+  
     id: 'cloud - cost - autopilot';
     name: 'Cloud Cost Autopilot',
     tagline: 'Automated rightsizing, anomaly alerts, and commitment planning';
@@ -498,7 +498,7 @@
     rating: 4.5,
     reviews: 11;
   }
-  {/* content */}
+  
     id: 'privacy - vault';
     name: 'Privacy Vault';
     tagline: 'Tokenize PII and control access with audit trails';
@@ -546,7 +546,7 @@
     rating: 4.6,
     reviews: 7;
   }
-  {/* content */}
+  
     id: 'ai - fraud - detection - lite';
     name: 'AI Fraud Detection Lite';
     tagline: 'Graph - based anomalies with explainability for SMBs';
@@ -592,7 +592,7 @@
 
     reviews: 8
   }
-  {/* content */}
+  
     id: 'managed-postgres-ha-pro';
     name: 'Managed Postgres HA Pro'
     tagline: 'Turnkey HA, backups, PITR, and query tuning';
@@ -616,7 +616,7 @@
     rating: 4.5,
     reviews: 8;
   }
-  {/* content */}
+  
     id: 'managed - postgres - ha - pro';
     name: 'Managed Postgres HA Pro',
     tagline: 'Turnkey HA, backups, PITR, and query tuning';
@@ -655,7 +655,7 @@
 
     reviews: 5
   }
-  {/* content */}
+  
     id: 'browser-performance-monitor-pro';
     name: 'Browser Performance Monitor Pro'
     tagline: 'RUM, Core Web Vitals, and session replay';
@@ -679,7 +679,7 @@
     rating: 4.6,
     reviews: 5;
   }
-  {/* content */}
+  
     id: 'browser - performance - monitor - pro';
     name: 'Browser Performance Monitor Pro',
     tagline: 'RUM, Core Web Vitals, and session replay';
@@ -718,13 +718,13 @@
 
     reviews: 6
   }
-  {/* content */}
+  
     id: 'seo-automation-studio';
     name: 'SEO Automation Studio'
     rating: 4.5,
     reviews: 6;
   }
-  {/* content */}
+  
     id: 'seo - automation - studio';
     name: 'SEO Automation Studio',
     tagline: 'Programmatic SEO, audits, and internal linking automation';
@@ -775,7 +775,7 @@
     rating: 4.4,
     reviews: 4;
   }
-  {/* content */}
+  
     id: 'webhook - relay - replay - pro';
     name: 'Webhook Relay & Replay Pro';
     tagline: 'Reliable webhooks with DLQ and replays';
@@ -826,7 +826,7 @@
     rating: 4.6,
     reviews: 3;
   }
-  {/* content */}
+  
     id: 'pdf - render - api - pro';
     name: 'PDF Render API Pro';
     tagline: 'Fast HTML - to - PDF with brand - safe templates';
@@ -864,7 +864,7 @@
 
     reviews: 10
   }
-  {/* content */}
+  
     id: 'api-observability-starter-pro';
     name: 'API Observability Starter Pro'
     tagline: 'Traces, metrics, logs for APIs without the bloat';
@@ -896,7 +896,7 @@
     rating: 4.6,
     reviews: 10;
   }
-  {/* content */}
+  
     id: 'api - observability - starter - pro';
     name: 'API Observability Starter Pro',
     tagline: 'Traces, metrics, logs for APIs without the bloat';
@@ -927,7 +927,7 @@
 
     reviews: 4
   }
-  {/* content */}
+  
     id: 'sso-in-a-box-pro';
     name: 'SSO in a Box Pro'
     market_size: '$10B Observability';
@@ -941,7 +941,7 @@
     rating: 4.5,
     reviews: 4;
   }
-  {/* content */}
+  
     id: 'sso - in - a-box - pro';
     name: 'SSO in a Box Pro',
     tagline: 'SAML, OIDC, SCIM with turnkey onboarding';
@@ -984,7 +984,7 @@
     rating: 4.7,
     reviews: 3;
   }
-  {/* content */}
+  
     id: 'it - asset - discovery - agent - pro';
     name: 'IT Asset Discovery Agent Pro';
     tagline: 'Agentless discovery with CMDB sync';
@@ -1020,7 +1020,7 @@
 
     reviews: 2
   }
-  {/* content */}
+  
     id: 'vendor-risk-automation-lite';
     name: 'Vendor Risk Automation Lite'
     contact_info: contact;
@@ -1031,7 +1031,7 @@
     rating: 4.4,
     reviews: 2;
   }
-  {/* content */}
+  
     id: 'vendor - risk - automation - lite';
     name: 'Vendor Risk Automation Lite',
     tagline: 'Questionnaires, evidence, and continuous monitoring';
@@ -1116,7 +1116,7 @@
     rating: 4 && 4.8,
     reviews: 22,
   },
-  {/* content */}
+  
     id: 'ai - sales - email - copilot',
     name: 'AI Sales Email Copilot',
     tagline: 'Personalized multi - touch outbound with real - time enrichment',
@@ -1164,7 +1164,7 @@
     rating: 4 && 4.7,
     reviews: 58,
   },
-  {/* content */}
+  
       'Policy packs for CIS/NIST',
     id: 'security - posture - as - code',
     name: 'Security Posture as Code',
@@ -1177,7 +1177,7 @@
       'Policy packs for CIS / NIST',
 
 
-  {/* content */}
+  
       'Kubernetes and cloud posture',
       'Auto - remediation PRs',
       'Evidence collection and reports',
@@ -1217,7 +1217,7 @@
     rating: 4 && 4.6,
     reviews: 14,
   },
-  {/* content */}
+  
     id: 'etl - observability - starter',
     name: 'ETL Observability Starter',
     tagline: 'Data pipeline health with schema change and freshness alerts',
@@ -1263,7 +1263,7 @@
     rating: 4 && 4.5,
     reviews: 12,
   },
-  {/* content */}
+  
     id: 'api - performance - shield',
     name: 'API Performance Shield',
     tagline: 'Global edge caching, rate limiting, and anomaly detection',
@@ -1308,7 +1308,7 @@
     rating: 4 && 4.7,
     reviews: 9,
   },
-  {/* content */}
+  
       'Auto-segmentation and cohorts',
     id: 'ai - product - analytics',
     name: 'AI Product Analytics',
@@ -1322,7 +1322,7 @@
       'Auto - segmentation and cohorts',
 
 
-  {/* content */}
+  
       'LLM query interface',
       'Retention and churn signals',
       'Anomaly alerts to Slack / Teams',
@@ -1357,7 +1357,7 @@
     rating: 4 && 4.6,
     reviews: 20,
   },
-  {/* content */}
+  
       'Multi-channel widgets',
     id: 'ai - support - deflection',
     name: 'AI Support Deflection',
@@ -1370,7 +1370,7 @@
       'Multi - channel widgets',
 
 
-  {/* content */}
+  
       'Grounded answers with citations',
       'Secure human handoff',
       'Analytics and CSAT tracking',
@@ -1404,7 +1404,7 @@
     rating: 4 && 4.7,
     reviews: 48,
   },
-  {/* content */}
+  
     id: 'cloud - cost - autopilot',
     name: 'Cloud Cost Autopilot',
     tagline: 'Automated rightsizing, anomaly alerts, and commitment planning',
@@ -1448,7 +1448,7 @@
     rating: 4 && 4.5,
     reviews: 11,
   },
-  {/* content */}
+  
       'Field-level encryption',
     id: 'privacy - vault',
     name: 'Privacy Vault',
@@ -1461,7 +1461,7 @@
       'Field - level encryption',
 
 
-  {/* content */}
+  
       'Tokenization APIs',
       'Consent enforcement',
       'Audit trail and reporting',
@@ -1496,7 +1496,7 @@
     rating: 4 && 4.6,
     reviews: 7,
   },
-  {/* content */}
+  
       'Graph-based anomaly detection',
     id: 'ai - fraud - detection - lite',
     name: 'AI Fraud Detection Lite',
@@ -1509,7 +1509,7 @@
       'Graph - based anomaly detection',
 
 
-  {/* content */}
+  
       'Explainability reports',
       'Risk scoring API',
       'Workflow actions and webhooks',
@@ -1544,7 +1544,7 @@
     rating: 4 && 4.5,
     reviews: 8,
   },
-  {/* content */}
+  
     id: 'managed - postgres - ha - pro',
     name: 'Managed Postgres HA Pro',
     tagline: 'Turnkey HA, backups, PITR, and query tuning',
@@ -1589,7 +1589,7 @@
     rating: 4 && 4.6,
     reviews: 5,
   },
-  {/* content */}
+  
     id: 'browser - performance - monitor - pro',
     name: 'Browser Performance Monitor Pro',
     tagline: 'RUM, Core Web Vitals, and session replay',
@@ -1633,7 +1633,7 @@
     rating: 4 && 4.5,
     reviews: 6,
   },
-  {/* content */}
+  
     id: 'seo - automation - studio',
     name: 'SEO Automation Studio',
     tagline: 'Programmatic SEO, audits, and internal linking automation',
@@ -1677,7 +1677,7 @@
     rating: 4 && 4.4,
     reviews: 4,
   },
-  {/* content */}
+  
     id: 'webhook - relay - replay - pro',
     name: 'Webhook Relay & Replay Pro',
     tagline: 'Reliable webhooks with DLQ and replays',
@@ -1721,7 +1721,7 @@
     rating: 4 && 4.6,
     reviews: 3,
   },
-  {/* content */}
+  
     id: 'pdf - render - api - pro',
     name: 'PDF Render API Pro',
     tagline: 'Fast HTML - to - PDF with brand - safe templates',
@@ -1765,7 +1765,7 @@
     rating: 4 && 4.6,
     reviews: 10,
   },
-  {/* content */}
+  
       'Auto-instrumentation',
     id: 'api - observability - starter - pro',
     name: 'API Observability Starter Pro',
@@ -1778,7 +1778,7 @@
       'Auto - instrumentation',
 
 
-  {/* content */}
+  
       'RED dashboards',
       'Error analytics',
       'Exporters to APMs',
@@ -1812,7 +1812,7 @@
     rating: 4 && 4.5,
     reviews: 4,
   },
-  {/* content */}
+  
     id: 'sso - in - a-box - pro',
     name: 'SSO in a Box Pro',
     tagline: 'SAML, OIDC, SCIM with turnkey onboarding',
@@ -1856,7 +1856,7 @@
     rating: 4 && 4.7,
     reviews: 3,
   },
-  {/* content */}
+  
     id: 'it - asset - discovery - agent - pro',
     name: 'IT Asset Discovery Agent Pro',
     tagline: 'Agentless discovery with CMDB sync',
@@ -1900,7 +1900,7 @@
     rating: 4 && 4.4,
     reviews: 2,
   },
-  {/* content */}
+  
     id: 'vendor - risk - automation - lite',
     name: 'Vendor Risk Automation Lite',
     tagline: 'Questionnaires, evidence, and continuous monitoring',
@@ -1978,7 +1978,7 @@
 
 
 
-  {/* content */}
+  
     id: 'ai-sales-email-copilot'
     name: 'AI Sales Email Copilot'
     tagline: 'Personalized multi-touch outbound with real-time enrichment'
@@ -1989,7 +1989,7 @@
     features: [
     reviews: 58
   }
-  {/* content */}
+  
     id: 'security-posture-as-code'
     name: 'Security Posture as Code'
     tagline: 'CIS/NIST/Kyverno policy packs with drift remediation'
@@ -2000,7 +2000,7 @@
     features: [
     reviews: 14
   }
-  {/* content */}
+  
     id: 'etl-observability-starter'
     name: 'ETL Observability Starter'
     tagline: 'Data pipeline health with schema change and freshness alerts'
@@ -2011,7 +2011,7 @@
     features: [
     reviews: 12
   }
-  {/* content */}
+  
     id: 'api-performance-shield'
     name: 'API Performance Shield'
     tagline: 'Global edge caching, rate limiting, and anomaly detection'
@@ -2022,7 +2022,7 @@
     features: [
     reviews: 9
   }
-  {/* content */}
+  
     id: 'ai-product-analytics'
     name: 'AI Product Analytics'
     tagline:
@@ -2034,7 +2034,7 @@
     features: [
     reviews: 20
   }
-  {/* content */}
+  
     id: 'ai-support-deflection'
     name: 'AI Support Deflection'
     tagline: 'Self-serve answers with RAG, forms, and secure handoff'
@@ -2045,7 +2045,7 @@
     features: [
     reviews: 48
   }
-  {/* content */}
+  
     id: 'cloud-cost-autopilot'
     name: 'Cloud Cost Autopilot'
     tagline: 'Automated rightsizing, anomaly alerts, and commitment planning'
@@ -2056,7 +2056,7 @@
     features: [
     reviews: 11
   }
-  {/* content */}
+  
     id: 'privacy-vault'
     name: 'Privacy Vault'
     tagline: 'Tokenize PII and control access with audit trails'
@@ -2067,7 +2067,7 @@
     features: [
     reviews: 7
   }
-  {/* content */}
+  
     id: 'ai-fraud-detection-lite'
     name: 'AI Fraud Detection Lite'
     tagline: 'Graph-based anomalies with explainability for SMBs'
@@ -2078,7 +2078,7 @@
     features: [
     reviews: 8
   }
-  {/* content */}
+  
     id: 'managed-postgres-ha-pro'
     name: 'Managed Postgres HA Pro'
     tagline: 'Turnkey HA, backups, PITR, and query tuning'
@@ -2089,7 +2089,7 @@
     features: [
     reviews: 5
   }
-  {/* content */}
+  
     id: 'browser-performance-monitor-pro'
     name: 'Browser Performance Monitor Pro'
     tagline: 'RUM, Core Web Vitals, and session replay'
@@ -2100,7 +2100,7 @@
     features: [
     reviews: 6
   }
-  {/* content */}
+  
     id: 'seo-automation-studio'
     name: 'SEO Automation Studio'
     tagline: 'Programmatic SEO, audits, and internal linking automation'
@@ -2111,7 +2111,7 @@
     features: [
     reviews: 4
   }
-  {/* content */}
+  
     id: 'webhook-relay-replay-pro'
     name: 'Webhook Relay & Replay Pro'
     tagline: 'Reliable webhooks with DLQ and replays'

@@ -1,10 +1,10 @@
 // Define expected response structure for error messages
-interface ErrorResponse {/* content */}
+interface ErrorResponse 
   message: string
   // Add other fields if your API returns more details on error
 }
 // Define expected success response (if applicable, though this test focuses on errors)
-// interface SuccessResponse {/* content */}
+// interface SuccessResponse 
     // Cast to the specific NextApi types for the handler
     await handler(
       req as unknown as NextApiRequest

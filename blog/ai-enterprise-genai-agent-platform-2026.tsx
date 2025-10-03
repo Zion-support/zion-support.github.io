@@ -17,8 +17,6 @@ export default function EnterpriseGenAIAgentPlatform2026() {
 	return (
     <div>
       <div></div>
-      <div></div>
-    </div>
 		<article className="text-left"></a>
 			<header className="text-left">
 				<div className="text-left"></div>
@@ -35,7 +33,7 @@ export default function EnterpriseGenAIAgentPlatform2026() {
 					<span>By {metadata.author}<
 					<span>•<
 					<time dateTime={metadata.date}>
-						{new Date(metadata.date).toLocaleDateString('en-US', {/* content */}
+						{new Date(metadata.date).toLocaleDateString('en-US', 
 							month: 'long',
 							day: 'numeric',
 							year: 'numeric'

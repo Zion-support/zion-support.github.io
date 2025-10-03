@@ -302,9 +302,9 @@ export const initializeSEO = () =>
   coreWebVitals.trackCoreWebVitals();
   
   // Set up meta tags
-  if (typeof document !== 'undefined') 
+  if() {
     const viewport = document.querySelector('meta[name="viewport"]');
-    if (!viewport) 
+    if() {
       const meta = document.createElement('meta');
       meta.name = 'viewport';
       meta.content = 'width=device-width, initial-scale=1.0';

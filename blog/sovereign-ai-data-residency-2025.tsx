@@ -7,8 +7,6 @@ export default function SovereignAIDataResidency2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>Sovereign AI: Navigating Data Residency & Compliance in 2025 | Zion Tech Group</title>

@@ -1,12 +1,10 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 
-const CognitiveDigitalTwinEnterpriseRevolutionOctober2025: React.FC = () => {/* content */}
+const CognitiveDigitalTwinEnterpriseRevolutionOctober2025: React.FC = () => 
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
       <Helmet>
         <title>Cognitive Digital Twin Enterprise Revolution - October 2025 | Zion Tech Group</title>
         <meta

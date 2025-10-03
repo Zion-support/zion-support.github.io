@@ -8,8 +8,6 @@ export default function AIConversationalCommerceRevolution2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Helmet>
         <title>AI Conversational Commerce Revolution 2025 | Zion Tech Group</title>

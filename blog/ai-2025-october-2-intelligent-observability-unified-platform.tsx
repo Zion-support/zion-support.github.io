@@ -13,8 +13,6 @@ export default function IntelligentObservabilityUnifiedPlatform2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>Intelligent Observability 2025: Unified AI-Powered Platform | Zion Tech Group</title>

@@ -6,8 +6,6 @@ export default function AgentSafetyBudgets2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <main className="text-left">
       <h1>Agent Safety Budgets (2025): Practical Guardrails That Ship</h1>
       <p></p>

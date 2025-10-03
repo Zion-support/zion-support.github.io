@@ -13,8 +13,6 @@ export default function AIAutonomousSecurityOperations2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>Autonomous Security Operations Centers (SOC) 2025: AI-Powered Threat Detection & Response | Zion Tech Group</title>

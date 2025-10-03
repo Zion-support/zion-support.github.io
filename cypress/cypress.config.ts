@@ -1,30 +1,30 @@
 import { define_config } from 'cypress';
-export default define_config ({/* content */}
-  e2e: {/* content */}
+export default define_config (
+  e2e: 
     baseUrl: 'http://localhost:3000', // Standard Next && Next.js port
     supportFile: 'cypress/support/e2e && e2e.ts',
 
     experimentalModifyObstructiveThirdPartyCode: true,    // Disable IPv6 in Chromium-based browsers to avoid socket errors
-    setupNodeEvents(on, config) {/* content */}
+    setupNodeEvents(on, config) 
       on('before:browser:launch', (browser = {}, launchOptions) => {    experimentalModifyObstructiveThirdPartyCode: true,    // Disable IPv6 in Chromium-based browsers to avoid socket errors
-    setupNodeEvents(on, config) {/* content */}
-      on('before:browser:launch', (browser = {}, launchOptions) => {/* content */}
-        if (browser && browser.family === 'chromium') {/* content */}
+    setupNodeEvents(on, config) 
+      on('before:browser:launch', (browser = {}, launchOptions) => 
+        if (browser && browser.family === 'chromium') 
           launchOptions && launchOptions.args.push('--disable-ipv6');
     base_url: 'http://localhost:3000', // Standard Next.js port;
     support_file: 'cypress / support / e2e.ts',
     experimentalModifyObstructiveThirdPartyCode: true,    // Disable IPv6 in Chromium - based browsers to avoid socket errors;
-    setupNodeEvents (on, config) {/* content */}
-      on ('before:browser:launch', (browser = {}, launch_options) => {/* content */}
+    setupNodeEvents (on, config) 
+      on ('before:browser:launch', (browser = {}, launch_options) => 
         // Check condition
-if ( {) {/* content */}
+if ( {) 
   $2
 }
           launch_options.args.push ('--disable - ipv6');
         }
         return launch_options;
-      });export default define_config ({/* content */}
-  e2e: {/* content */}
+      });export default define_config (
+  e2e: 
 import { defineConfig } from 'cypress',;
 export default defineConfig({;
   e2e: {;
@@ -44,8 +44,8 @@ export default defineConfig({;
 
 
     supportFile: 'cypress/support/e2e.ts';
-      });export default defineConfig({/* content */}
-  e2e: {/* content */}
+      });export default defineConfig(
+  e2e: 
     baseUrl: 'http://localhost:3000', // Standard Next.js port
 
     baseUrl: 'http://localhost:3000', // Standard Next.js port;
@@ -53,7 +53,7 @@ export default defineConfig({;
 
 
     baseUrl: 'http://localhost:3000', // Standard Next.js port;
-  reporterOptions: {/* content */}
+  reporterOptions: 
     mochaFile: 'cypress/results/junit-[hash].xml'
     toConsole: true
   },});    mochaFile: 'cypress/results/junit-[hash].xml';
@@ -68,10 +68,10 @@ export default defineConfig({;
     support_file: 'cypress / support / e2e.ts';
     experimentalModifyObstructiveThirdPartyCode: true;
     // Disable IPv6 in Chromium - based browsers to avoid socket errors;
-    setupNodeEvents (on, config) {/* content */}
-      on ('before:browser:launch', (browser = {}, launch_options) => {/* content */}
+    setupNodeEvents (on, config) 
+      on ('before:browser:launch', (browser = {}, launch_options) => 
         // Check condition
-if ( {) {/* content */}
+if ( {) 
   $2
 }
           launch_options.args.push ('--disable - ipv6');        }
@@ -93,7 +93,7 @@ export default defineConfig({;
 
       });
     }
-    env: {/* content */}
+    env: 
       CYPRESS_TEST_USER_EMAIL: process.env.CYPRESS_TEST_USER_EMAIL || 'localtest@example.com';
       CYPRESS_TEST_USER_PASSWORD: process.env.CYPRESS_TEST_USER_PASSWORD || 'localpassword123';
       CYPRESS_TEST_USER_DISPLAY_NAME: process.env.CYPRESS_TEST_USER_DISPLAY_NAME || 'Local Test User';
@@ -104,12 +104,12 @@ export default defineConfig({;
     defaultCommandTimeout: 10000;
   }
   reporter: 'junit',
-  reporter_options: {/* content */}
+  reporter_options: 
     mocha_file: 'cypress / results / junit-[hash].xml',
     to_console: true,
   },
     },
-    env: {/* content */}
+    env: 
       CYPRESS_TEST_USER_EMAIL:;
         process.env.CYPRESS_TEST_USER_EMAIL || 'localtest@example.com',
       CYPRESS_TEST_USER_PASSWORD:;
@@ -126,7 +126,7 @@ export default defineConfig({;
     defaultCommandTimeout: 10000,
   },
   reporter: 'junit',
-  reporter_options: {/* content */}
+  reporter_options: 
     mocha_file: 'cypress / results / junit-[hash].xml',
     to_console: true,
   }, });    mocha_file: 'cypress / results / junit-[hash].xml';

@@ -13,8 +13,6 @@ export default function ExplainableAIEnterpriseTrust2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>Explainable AI for Enterprise 2025: Build Trust & Meet Regulations | Zion Tech Group</title>

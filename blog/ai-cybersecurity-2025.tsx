@@ -7,8 +7,6 @@ export default function AICybersecurity2025() {
   return (
     <div>
       <div></div>
-      <div></div>
-    </div>
     <div></div>
       <Head>
         <title>AI Cybersecurity 2025: Next-Gen Protection with 99.7% Accuracy | Zion Tech Group</title>
