@@ -1,4 +1,4 @@
-// import React from 'react';
+import React from 'react';
 
 export const metadata = {
   title: 'Real-Time AI Streaming Inference: Low-Latency Intelligence 2025 | Zion Tech',

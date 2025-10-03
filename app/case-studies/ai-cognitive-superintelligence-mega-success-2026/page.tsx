@@ -1,5 +1,5 @@
-// import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import Link from 'next/link';
 import { Clock, ArrowRight, Brain, TrendingUp, DollarSign, Users } from 'lucide-react';
 
 export const metadata = {
@@ -370,12 +370,14 @@ export default function AICognitiveSuperintelligenceMegaSuccess2026() {
           Discover how AI cognitive superintelligence can transform your organization and deliver unprecedented ROI. Our team of experts can help you develop a customized implementation strategy.
         </p>
         <div className="flex flex-col sm:flex-row gap-4">
-          <Link to="/contact"
+          <Link
+            href="/contact"
             className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center"
           >
             Schedule Consultation
           </Link>
-          <Link to="/services/ai-cognitive-superintelligence"
+          <Link
+            href="/services/ai-cognitive-superintelligence"
             className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors text-center"
           >
             Learn More
@@ -387,7 +389,7 @@ export default function AICognitiveSuperintelligenceMegaSuccess2026() {
       <div className="mt-16 pt-8 border-t border-gray-200">
         <h3 className="text-2xl font-bold text-gray-900 mb-6">Related Case Studies</h3>
         <div className="grid md:grid-cols-3 gap-6">
-          <Link to="/case-studies/ai-metaverse-enterprise-mega-success-2026" className="group">
+          <Link href="/case-studies/ai-metaverse-enterprise-mega-success-2026" className="group">
             <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
               <h4 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
                 $400M Metaverse Success Story
@@ -397,7 +399,7 @@ export default function AICognitiveSuperintelligenceMegaSuccess2026() {
               </p>
             </div>
           </Link>
-          <Link to="/case-studies/ai-autonomous-robotics-mega-success-2026" className="group">
+          <Link href="/case-studies/ai-autonomous-robotics-mega-success-2026" className="group">
             <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
               <h4 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
                 $300M Robotics Success Story
@@ -407,7 +409,7 @@ export default function AICognitiveSuperintelligenceMegaSuccess2026() {
               </p>
             </div>
           </Link>
-          <Link to="/blog/ai-cognitive-superintelligence-2026" className="group">
+          <Link href="/blog/ai-cognitive-superintelligence-2026" className="group">
             <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
               <h4 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
                 AI Cognitive Superintelligence 2026

@@ -1,4 +1,4 @@
-// import React from 'react';
+import React from 'react';
 import { Brain, TrendingUp, Zap, Star, ArrowRight, Sparkles, Atom, Bot } from 'lucide-react';
 
 export default function MetaCognitiveAIRevolution2025() {

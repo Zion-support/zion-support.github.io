@@ -1,5 +1,5 @@
-// import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'AI Edge Computing Real-Time Intelligence 2025 | Zion Tech Group',
@@ -12,7 +12,7 @@ export default function AIEdgeComputingRealTime2025Page() {
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-cyan-950 text-white">
       <main className="container mx-auto px-6 py-12">
         <nav className="mb-8">
-          <Link to="/blog" className="text-cyan-300 hover:text-cyan-200 transition-colors">
+          <Link href="/blog" className="text-cyan-300 hover:text-cyan-200 transition-colors">
             ← Back to Blog
           </Link>
         </nav>
@@ -79,7 +79,7 @@ export default function AIEdgeComputingRealTime2025Page() {
           <div className="mt-12 bg-white/5 border border-white/10 rounded-xl p-6">
             <h3 className="text-xl font-bold mb-2">Need help architecting edge AI?</h3>
             <p className="text-white/80 mb-4">Our team delivers secure, low‑latency edge platforms with measurable ROI.</p>
-            <Link to="/contact" className="text-cyan-300 hover:text-cyan-200 font-semibold">
+            <Link href="/contact" className="text-cyan-300 hover:text-cyan-200 font-semibold">
               Talk to experts →
             </Link>
           </div>

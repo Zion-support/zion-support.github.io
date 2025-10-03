@@ -1,4 +1,4 @@
-// import React from 'react';
+import React from 'react';
 
 export default function AIEdgeComputing5GNetworks2025() {
   return (

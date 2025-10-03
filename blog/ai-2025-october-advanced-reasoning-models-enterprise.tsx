@@ -1,4 +1,4 @@
-// import React from 'react';
+import React from 'react';
 
 export const metadata = {
   title: 'Advanced Reasoning Models for Enterprise 2025 — Chain-of-Thought at Scale',

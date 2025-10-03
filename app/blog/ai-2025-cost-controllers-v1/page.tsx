@@ -1,4 +1,4 @@
-// import React from 'react';
+import React from 'react';
 
 export const metadata = {
   title: 'AI Cost Controllers v1 (2025): Budgets, Tiers, and Guardrails',

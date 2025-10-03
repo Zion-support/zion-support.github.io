@@ -1,4 +1,4 @@
-// import React from 'react';
+import React from 'react';
 
 export const metadata = {
   title: 'Autonomous Compliance Automation 2025 — AI-Powered Regulatory Excellence Revolution',

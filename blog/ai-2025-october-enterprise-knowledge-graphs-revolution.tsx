@@ -1,4 +1,4 @@
-// import React from 'react';
+import React from 'react';
 
 export const metadata = {
   title: 'Enterprise Knowledge Graphs 2025 — Connected Intelligence at Scale',

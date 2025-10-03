@@ -1,4 +1,4 @@
-// import React from 'react';
+import React from 'react';
 
 export const metadata = {
   title: 'AI Operational Excellence: Autonomous Agents Driving 10x Efficiency (2026)',

@@ -1,6 +1,6 @@
 // @ts-nocheck
-// import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'Governed Agent Patterns v3 (2025) — Zion Tech Group',
@@ -25,7 +25,7 @@ export default function Page() {
         </ul>
         <p>
           See related operational runbooks in the{' '}
-          <Link to="/blog" className="text-blue-600 hover:underline">Blog</Link>.
+          <Link href="/blog" className="text-blue-600 hover:underline">Blog</Link>.
         </p>
       </section>
     </main>

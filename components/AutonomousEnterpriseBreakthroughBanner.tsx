@@ -1,5 +1,5 @@
-// import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import Link from 'next/link';
 import { ArrowRight, Cpu, Brain, Zap, Target } from 'lucide-react';
 
 const AutonomousEnterpriseBreakthroughBanner: React.FC = () => {
@@ -65,14 +65,14 @@ const AutonomousEnterpriseBreakthroughBanner: React.FC = () => {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Link 
-                to="/blog/ai-2026-january-advanced-autonomous-enterprise-breakthrough"
+                href="/blog/ai-2026-january-advanced-autonomous-enterprise-breakthrough"
                 className="group inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-emerald-500/25"
               >
                 Read Full Article
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link 
-                to="/services"
+                href="/services"
                 className="group inline-flex items-center justify-center px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white font-semibold rounded-xl border border-white/20 hover:border-white/30 transition-all duration-300"
               >
                 Explore Services

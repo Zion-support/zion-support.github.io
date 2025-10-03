@@ -1,5 +1,5 @@
-// import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'PowerGen Energy: AI Autonomous Grid Delivering $1.2B Savings & 99.997% Reliability | Zion Tech Group',

@@ -1,5 +1,5 @@
-// import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'AI Implementation Playbook 2026: Enterprise Guide',
@@ -107,7 +107,7 @@ export default function AIImplementationPlaybook2026() {
 }
 
 
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'AI Implementation Playbook 2026: Complete Enterprise Guide',

@@ -1,4 +1,4 @@
-// import React from 'react';
+import React from 'react';
 import { Calendar, Clock, Shield, Cpu } from 'lucide-react';
 
 export const metadata = {

@@ -1,5 +1,5 @@
-// import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'Quantum-Enhanced AI Enterprise Breakthrough 2026: 1000x Performance with Quantum Advantage',

@@ -1,5 +1,5 @@
-// import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'AI Generative Design for Enterprise 2026: 10x Faster Innovation & $100M+ Savings | Zion Tech Group',

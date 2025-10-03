@@ -1,11 +1,7 @@
-// import React from 'react';
-import { Link } from 'react-router-dom';
-// Metadata interface for React Helmet
-interface Metadata {
-  title?: string;
-  description?: string;
-  keywords?: string;
-}
+import React from 'react';
+import Link from 'next/link';
+import { Metadata } from 'next';
+
 export const metadata: Metadata = {
   title: 'AI Business Intelligence 2025: Advanced Analytics & Insights Platform',
   description: 'Transform your business with AI-powered business intelligence. Advanced analytics, predictive insights, and real-time dashboards for data-driven decision making.',
@@ -38,7 +34,7 @@ export default function AIBusinessIntelligence2025() {
       {/* Header */}
       <div className="mb-12">
         <div className="flex items-center gap-3 mb-4">
-          <Link to="/services" className="text-blue-600 hover:text-blue-700 font-medium">
+          <Link href="/services" className="text-blue-600 hover:text-blue-700 font-medium">
             ← Back to Services
           </Link>
           <span className="text-gray-400">|</span>
@@ -343,7 +339,8 @@ export default function AIBusinessIntelligence2025() {
                 <span>Email support</span>
               </li>
             </ul>
-            <Link to="/contact"
+            <Link
+              href="/contact"
               className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold text-center block hover:bg-blue-700 transition-colors"
             >
               Get Started
@@ -391,7 +388,8 @@ export default function AIBusinessIntelligence2025() {
                 <span>API access</span>
               </li>
             </ul>
-            <Link to="/contact"
+            <Link
+              href="/contact"
               className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold text-center block hover:bg-blue-700 transition-colors"
             >
               Get Started
@@ -434,7 +432,8 @@ export default function AIBusinessIntelligence2025() {
                 <span>Custom development</span>
               </li>
             </ul>
-            <Link to="/contact"
+            <Link
+              href="/contact"
               className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold text-center block hover:bg-blue-700 transition-colors"
             >
               Contact Sales
@@ -550,7 +549,8 @@ export default function AIBusinessIntelligence2025() {
           </div>
           
           <div className="text-center mt-8">
-            <Link to="/contact"
+            <Link
+              href="/contact"
               className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-50 transition-colors inline-block"
             >
               Get Your Custom ROI Analysis
@@ -566,7 +566,8 @@ export default function AIBusinessIntelligence2025() {
           Let our AI experts help you unlock the power of data-driven decision making.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link to="/contact"
+          <Link
+            href="/contact"
             className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors"
           >
             Get Free Consultation
@@ -584,7 +585,7 @@ export default function AIBusinessIntelligence2025() {
       <section className="mt-16">
         <h2 className="text-2xl font-bold text-gray-900 mb-6">Related Services</h2>
         <div className="grid md:grid-cols-2 gap-6">
-          <Link to="/services/ai-data-analytics" className="group">
+          <Link href="/services/ai-data-analytics" className="group">
             <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
               <h3 className="text-lg font-bold text-gray-900 group-hover:text-blue-600 transition-colors mb-2">
                 AI Data Analytics
@@ -594,7 +595,7 @@ export default function AIBusinessIntelligence2025() {
               </p>
             </div>
           </Link>
-          <Link to="/services/ai-workflow-automation" className="group">
+          <Link href="/services/ai-workflow-automation" className="group">
             <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
               <h3 className="text-lg font-bold text-gray-900 group-hover:text-blue-600 transition-colors mb-2">
                 AI Workflow Automation

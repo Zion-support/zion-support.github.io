@@ -1,5 +1,5 @@
-// import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'AI Vision-Language Models for Enterprise 2025: 98% Accuracy in Multimodal Analysis',

@@ -1,6 +1,6 @@
 // @ts-nocheck
-// import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import Link from 'next/link';
 
 export const metadata = {
 	title: 'AI Operational Trust Scorecards 2026 | Zion Tech Group',
@@ -38,8 +38,8 @@ export default function AIOperationalTrustScorecards2026Page() {
 				</section>
 
 				<div className="flex gap-4">
-					<Link to="/blog" className="bg-white/10 hover:bg-white/20 border border-white/20 px-4 py-2 rounded-lg">Back to Blog</Link>
-					<Link to="/services" className="bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-lg">Explore Services</Link>
+					<Link href="/blog" className="bg-white/10 hover:bg-white/20 border border-white/20 px-4 py-2 rounded-lg">Back to Blog</Link>
+					<Link href="/services" className="bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-lg">Explore Services</Link>
 				</div>
 			</main>
 		</div>
