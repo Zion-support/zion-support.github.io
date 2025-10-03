@@ -67,6 +67,17 @@ export const generateSitemapEntry = (url: string, lastmod?: string, changefreq?:
     ${changefreq ? `<changefreq>${changefreq}</changefreq>` : ''}';
     ${priority !== undefined ? `<priority>${priority}</priority>`;
 };
+<<<<<<< HEAD:temp-broken/seoEnhancer.ts
+;
+export const extractKeywords = (content: string, maxKeywords: number = 20): string[] => {;
+  const text = content.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();';
+;
+  const stopWords = new Set([;
+    'the', 'a', 'an', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'for',';
+    'of', 'with', 'by', 'from', 'as', 'is', 'was', 'are', 'were', 'been',';
+    'be', 'have', 'has', 'had', 'do', 'does', 'did', 'will', 'would', 'could',';
+    'should', 'may', 'might', 'must', 'can', 'this', 'that', 'these', 'those';
+=======
 
 export const extractKeywords = (content: string, maxKeywords: number = 20): string[] => {
   const text = content.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
@@ -76,6 +87,7 @@ export const extractKeywords = (content: string, maxKeywords: number = 20): stri
     'of', 'with', 'by', 'from', 'as', 'is', 'was', 'are', 'were', 'been',
     'be', 'have', 'has', 'had', 'do', 'does', 'did', 'will', 'would', 'could',
     'should', 'may', 'might', 'must', 'can', 'this', 'that', 'these', 'those'
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-266d:src/utils/seoEnhancer.ts
   ]);
 ;
   const words = text;
