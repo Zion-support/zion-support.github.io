@@ -7,14 +7,14 @@ const RealTimeCognitiveAutomationPage: React.FC  = () => {
     {
       title: "Intelligent Process Automation","
       description: "Automate complex business processes using AI-powered decision-making and real-time data analysis.","
-      icon: "🧠","
-      features: ["Process Discovery", "Automated Decision Making", "Real-time Monitoring", "Exception Handling"]"
+      icon: "🧠",
+      features: ["Process Discovery", "Automated Decision Making", "Real-time Monitoring", "Exception Handling"]
     },
     {
-      title: "Cognitive Document Processing","
-      description: "Extract insights and automate document workflows using advanced AI and machine learning.","
-      icon: "📄","
-      features: ["Document Classification", "Data Extraction", "Content Analysis", "Workflow Automation"]"
+      title: "Cognitive Document Processing",
+      description: "Extract insights and automate document workflows using advanced AI and machine learning.",
+      icon: "📄",
+      features: ["Document Classification", "Data Extraction", "Content Analysis", "Workflow Automation"]
     },
     {
       title: "Predictive Analytics","
