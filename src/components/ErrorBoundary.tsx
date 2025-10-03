@@ -38,15 +38,15 @@ class ErrorBoundary extends Component<Props, State> {
               <p className="text-gray-600 mb-6">"
                 We're sorry for the inconvenience. Please try refreshing the page.
               </p>
-              <div className="space-y-3">"
+              <div className="space-y-3">
                 <button
                   onClick={() => window.location.reload()}
-                  className="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors""
+                  className="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
                 >
                   Refresh Page
                 </button>
                 <a
-                  href="/""
+                  href="/"
                   className="block w-full border-2 border-red-600 text-red-600 hover:bg-red-50 font-semibold py-3 px-6 rounded-lg transition-colors""
                 >
                   Go to Homepage
