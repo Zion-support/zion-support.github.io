@@ -1,5 +1,5 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react;
+import { Helmet } from 'react-helmet-async;
 import {
   Calendar,
   Users,
@@ -7,22 +7,20 @@ import {
   CreditCard,
   Shield,
   CheckCircle
-} from 'lucide-react';
-
+} from 'lucide-react;
 const SmartAppointmentScheduler: React.FC = () => {
   return (
     <>
       <Helmet>
         <title>Smart Appointment Scheduler - Zion Tech Group</title>
-        <meta name="description" content="Healthcare-focused SaaS for online appointments, virtual consultations, patient data management, and automated reminders." />
-      </Helmet>
+        <meta name="description" content="Healthcare-focused SaaS for online appointments, virtual consultations, patient data management, and automated reminders." /></Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-green-50">
         <div className="container mx-auto px-4 py-12">
           {/* Header */}
           <div className="text-center mb-16">
             <div className="bg-gradient-to-r from-green-600 to-teal-600 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
-              <Users className="w-10 h-10 text-white" />
+              <Users className="w-10 h-10 text-white/>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
               Smart Appointment Scheduler
@@ -53,42 +51,42 @@ const SmartAppointmentScheduler: React.FC = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="bg-white rounded-lg shadow-lg p-6">
                 <div className="bg-green-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                  <Calendar className="w-6 h-6 text-green-600" />
+                  <Calendar className="w-6 h-6 text-green-600/>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Virtual Consultations</h3>
                 <p className="text-gray-600">Conduct secure video consultations with integrated telemedicine capabilities.</p>
               </div>
               <div className="bg-white rounded-lg shadow-lg p-6">
                 <div className="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                  <Users className="w-6 h-6 text-blue-600" />
+                  <Users className="w-6 h-6 text-blue-600/>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Patient Data Storage</h3>
                 <p className="text-gray-600">Secure, HIPAA-compliant storage for patient records and medical histories.</p>
               </div>
               <div className="bg-white rounded-lg shadow-lg p-6">
                 <div className="bg-purple-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                  <Bell className="w-6 h-6 text-purple-600" />
+                  <Bell className="w-6 h-6 text-purple-600/>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Automated Reminders</h3>
                 <p className="text-gray-600">Send SMS and email reminders to reduce no-shows by up to 40%.</p>
               </div>
               <div className="bg-white rounded-lg shadow-lg p-6">
                 <div className="bg-orange-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                  <CreditCard className="w-6 h-6 text-orange-600" />
+                  <CreditCard className="w-6 h-6 text-orange-600/>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Payment Integration</h3>
                 <p className="text-gray-600">Accept payments online with integrated billing and insurance processing.</p>
               </div>
               <div className="bg-white rounded-lg shadow-lg p-6">
                 <div className="bg-indigo-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                  <Calendar className="w-6 h-6 text-indigo-600" />
+                  <Calendar className="w-6 h-6 text-indigo-600/>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Calendar Sync</h3>
                 <p className="text-gray-600">Sync with Google Calendar, Outlook, and other calendar applications.</p>
               </div>
               <div className="bg-white rounded-lg shadow-lg p-6">
                 <div className="bg-red-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                  <Shield className="w-6 h-6 text-red-600" />
+                  <Shield className="w-6 h-6 text-red-600/>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">HIPAA Compliance</h3>
                 <p className="text-gray-600">Full HIPAA compliance with encrypted data transmission and storage.</p>
@@ -105,19 +103,19 @@ const SmartAppointmentScheduler: React.FC = () => {
                 <div className="text-3xl font-bold text-green-600 mb-6">$49/month</div>
                 <ul className="space-y-3 mb-8">
                   <li className="flex items-center text-gray-600">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3/>
                     Up to 5 providers
                   </li>
                   <li className="flex items-center text-gray-600">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3/>
                     500 appointments/month
                   </li>
                   <li className="flex items-center text-gray-600">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3/>
                     Basic telemedicine
                   </li>
                   <li className="flex items-center text-gray-600">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3/>
                     Email support
                   </li>
                 </ul>
@@ -133,23 +131,23 @@ const SmartAppointmentScheduler: React.FC = () => {
                 <div className="text-3xl font-bold mb-6">$149/month</div>
                 <ul className="space-y-3 mb-8">
                   <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-300 mr-3" />
+                    <CheckCircle className="w-5 h-5 text-green-300 mr-3/>
                     Up to 20 providers
                   </li>
                   <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-300 mr-3" />
+                    <CheckCircle className="w-5 h-5 text-green-300 mr-3/>
                     2,000 appointments/month
                   </li>
                   <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-300 mr-3" />
+                    <CheckCircle className="w-5 h-5 text-green-300 mr-3/>
                     Advanced telemedicine
                   </li>
                   <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-300 mr-3" />
+                    <CheckCircle className="w-5 h-5 text-green-300 mr-3/>
                     Payment processing
                   </li>
                   <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-300 mr-3" />
+                    <CheckCircle className="w-5 h-5 text-green-300 mr-3/>
                     Priority support
                   </li>
                 </ul>
@@ -162,23 +160,23 @@ const SmartAppointmentScheduler: React.FC = () => {
                 <div className="text-3xl font-bold text-green-600 mb-6">Custom</div>
                 <ul className="space-y-3 mb-8">
                   <li className="flex items-center text-gray-600">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3/>
                     Unlimited providers
                   </li>
                   <li className="flex items-center text-gray-600">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3/>
                     Unlimited appointments
                   </li>
                   <li className="flex items-center text-gray-600">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3/>
                     Custom integrations
                   </li>
                   <li className="flex items-center text-gray-600">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3/>
                     Dedicated support
                   </li>
                   <li className="flex items-center text-gray-600">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3/>
                     White-label options
                   </li>
                 </ul>

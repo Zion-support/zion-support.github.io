@@ -20,7 +20,7 @@ export interface PerformanceMetrics {
 }
 
 export interface PerformanceAlert {
-  type: 'warning' | 'error' | 'info';
+  type: 'warning' | 'error' | 'info;
   message: string;
   metric: keyof PerformanceMetrics;
   value: number;

@@ -1,7 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
-
+import React from 'react;
+import { Link } from 'react-router-dom;
+import { Helmet } from 'react-helmet-async;
 const ComprehensiveITServices: React.FC = () => {
   const itServices = [
     {
@@ -82,8 +81,7 @@ const ComprehensiveITServices: React.FC = () => {
     <>
       <Helmet>
         <title>Comprehensive IT Services - Zion Tech Group</title>
-        <meta name="description" content="Complete IT services including cloud migration, DevOps, cybersecurity, data analytics, and digital transformation from Zion Tech Group." />"
-      </Helmet>
+        <meta name="description" content="Complete IT services including cloud migration, DevOps, cybersecurity, data analytics, and digital transformation from Zion Tech Group." /></Helmet>
       
       <div className="min-h-screen bg-gray-50">"
         {/* Header */}
@@ -226,7 +224,7 @@ const ComprehensiveITServices: React.FC = () => {
           <div className="container mx-auto px-6 text-center">"
             <h2 className="text-4xl font-bold mb-4">Ready to Modernize Your IT Infrastructure?</h2>"
             <p className="text-xl mb-8 text-purple-100 max-w-2xl mx-auto">"
-              Let's discuss how our comprehensive IT services can transform your technology stack and drive business growth.';
+              Let's discuss how our comprehensive IT services can transform your technology stack and drive business growth.;
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <Link 

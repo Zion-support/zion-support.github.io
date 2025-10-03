@@ -21,25 +21,25 @@ const ContactFormComponent: React.FC = () => null;
 export default function Contact(): React.JSX.Element {
   const contactInfo = [
     {
-      icon: <Mail className="w-6 h-6" />,
+      icon: <Mail className="w-6 h-6/>,
       title: "Email Us",
       details: "hello@ziontechgroup.com",
       description: "Send us an email anytime",
     },
     {
-      icon: <Phone className="w-6 h-6" />,
+      icon: <Phone className="w-6 h-6/>,
       title: "Call Us",
       details: "+1 (555) 123-4567",
       description: "Mon-Fri from 9am to 6pm",
     },
     {
-      icon: <MapPin className="w-6 h-6" />,
+      icon: <MapPin className="w-6 h-6/>,
       title: "Visit Us",
       details: "123 Tech Street, San Francisco, CA 94105",
       description: "Come say hello at our office",
     },
     {
-      icon: <Clock className="w-6 h-6" />,
+      icon: <Clock className="w-6 h-6/>,
       title: "Response Time",
       details: "Within 24 hours",
       description: "We respond to all inquiries quickly",
@@ -48,22 +48,22 @@ export default function Contact(): React.JSX.Element {
 
   const stats = [
     {
-      icon: <Users className="w-8 h-8" />,
+      icon: <Users className="w-8 h-8/>,
       value: "500+",
       label: "Happy Clients"
     },
     {
-      icon: <Award className="w-8 h-8" />,
+      icon: <Award className="w-8 h-8/>,
       value: "99.9%",
       label: "Satisfaction Rate"
     },
     {
-      icon: <Globe className="w-8 h-8" />,
+      icon: <Globe className="w-8 h-8/>,
       value: "50+",
       label: "Countries Served"
     },
     {
-      icon: <Zap className="w-8 h-8" />,
+      icon: <Zap className="w-8 h-8/>,
       value: "24/7",
       label: "Support Available"
     }
@@ -77,23 +77,13 @@ export default function Contact(): React.JSX.Element {
         </title>
         <meta
           name="description"
-          content="Contact Zion Tech Group for AI solutions, cloud services, and technology consulting. Get expert advice and start your digital transformation journey."
-        />
-        <meta
+          content="Contact Zion Tech Group for AI solutions, cloud services, and technology consulting. Get expert advice and start your digital transformation journey." /><meta
           name="keywords"
-          content="contact, AI consulting, technology solutions, cloud services, digital transformation"
-        />
-        <meta
+          content="contact, AI consulting, technology solutions, cloud services, digital transformation" /><meta
           property="og:title"
-          content="Contact Zion Tech Group - Get in Touch"
-        />
-        <meta
+          content="Contact Zion Tech Group - Get in Touch" /><meta
           property="og:description"
-          content="Contact us for AI solutions, cloud services, and technology consulting"
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/contact" />
-        <link rel="canonical" href="https://ziontechgroup.com/contact" />
+          content="Contact us for AI solutions, cloud services, and technology consulting" /><meta property="og:type" content="website" /><meta property="og:url" content="https://ziontechgroup.com/contact" /><link rel="canonical" href="https://ziontechgroup.com/contact/>
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
@@ -115,7 +105,7 @@ export default function Contact(): React.JSX.Element {
 
           <div className="container mx-auto px-6 text-center relative z-10">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm text-white text-sm font-medium mb-6">
-              <MessageSquare className="w-4 h-4 mr-2" />
+              <MessageSquare className="w-4 h-4 mr-2/>
               Let&apos;s Start a Conversation
             </div>
 
@@ -266,7 +256,7 @@ export default function Contact(): React.JSX.Element {
           <div className="container mx-auto px-6 text-center">
             <div className="max-w-4xl mx-auto">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/20 text-blue-300 text-sm font-medium mb-6">
-                <Sparkles className="w-4 h-4 mr-2" />
+                <Sparkles className="w-4 h-4 mr-2/>
                 Ready to Get Started?
               </div>
 
@@ -286,7 +276,7 @@ export default function Contact(): React.JSX.Element {
                   href="#contact-form"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-semibold hover:shadow-lg transition-all duration-300"
                 >
-                  <MessageSquare className="w-5 h-5 mr-2" />
+                  <MessageSquare className="w-5 h-5 mr-2/>
                   Start Your Project
                 </a>
                 <a
@@ -294,7 +284,7 @@ export default function Contact(): React.JSX.Element {
                   href="tel:+15551234567"
                   className="inline-flex items-center px-8 py-4 border-2 border-white text-white rounded-xl font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300"
                 >
-                  <Phone className="w-5 h-5 mr-2" />
+                  <Phone className="w-5 h-5 mr-2/>
                   Call Us Now
                 </a>
               </div>

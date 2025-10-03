@@ -1,7 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
-
+import React from 'react;
+import { Link } from 'react-router-dom;
+import { Helmet } from 'react-helmet-async;
 const InnovativeMicroSAAS: React.FC = () => {
   const microSAASServices = [
     {
@@ -82,8 +81,7 @@ const InnovativeMicroSAAS: React.FC = () => {
     <>
       <Helmet>
         <title>Innovative Micro SaaS Solutions - Zion Tech Group</title>
-        <meta name="description" content="Cutting-edge micro SaaS solutions including AI lead scoring, smart scheduling, fraud detection, and predictive maintenance from Zion Tech Group." />"
-      </Helmet>
+        <meta name="description" content="Cutting-edge micro SaaS solutions including AI lead scoring, smart scheduling, fraud detection, and predictive maintenance from Zion Tech Group." /></Helmet>
       
       <div className="min-h-screen bg-gray-50">"
         {/* Header */}

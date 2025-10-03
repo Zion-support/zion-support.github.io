@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react;
 import { Link } from "react-router-dom";"
 import { Helmet } from "react-helmet-async";"
 import { CheckCircle, Rocket, Shield, Sparkles, Zap, Users, Target, Award, ArrowRight } from "lucide-react";"
@@ -19,72 +19,72 @@ const Home: ()  => {,
   // Mock data for the homepage
   const latestInsights: [,
     {
-      id: '1',';,';,
-      title: 'AI Revolution 2026: The Next Frontier of Enterprise Intelligence',';,';,
-      summary: 'Discover autonomous AI agents, neural interfaces, and predictive intelligence systems achieving 300% productivity gains.',';,';,
-      category: 'AI Innovation',';,';,
-      date: '2025-01-15',';,';,
+      id: '1',',',
+      title: 'AI Revolution 2026: The Next Frontier of Enterprise Intelligence',',',
+      summary: 'Discover autonomous AI agents, neural interfaces, and predictive intelligence systems achieving 300% productivity gains.',',',
+      category: 'AI Innovation',',',
+      date: '2025-01-15',',',
       readMinutes: 25,,
       featured: true,
     },
     {
-      id: '2',';,';,
-      title: 'Quantum AI Breakthrough: Solving Impossible Problems in Seconds',';,';,
-      summary: 'Explore quantum-enhanced AI delivering 500x faster results and revolutionizing computational capabilities.',';,';,
-      category: 'Quantum Computing',';,';,
-      date: '2025-01-10',';,';,
+      id: '2',',',
+      title: 'Quantum AI Breakthrough: Solving Impossible Problems in Seconds',',',
+      summary: 'Explore quantum-enhanced AI delivering 500x faster results and revolutionizing computational capabilities.',',',
+      category: 'Quantum Computing',',',
+      date: '2025-01-10',',',
       readMinutes: 20,,
       featured: false,
     },
     {
-      id: '3',';,';,
-      title: 'Manufacturing AI Transformation: $50M Savings & 95% Efficiency',';,';,
-      summary: 'See how a Fortune 500 manufacturer achieved $50M annual savings and 95% efficiency improvements.',';,';,
-      category: 'Success Story',';,';,
-      date: '2025-01-05',';,';,
+      id: '3',',',
+      title: 'Manufacturing AI Transformation: $50M Savings & 95% Efficiency',',',
+      summary: 'See how a Fortune 500 manufacturer achieved $50M annual savings and 95% efficiency improvements.',',',
+      category: 'Success Story',',',
+      date: '2025-01-05',',',
       readMinutes: 15,,
       featured: true,
     }
   ];
 
-id: '2',';,';,
-title: 'Quantum AI Breakthrough: Solving Impossible Problems in Seconds',';,';,
-summary: 'Explore quantum-enhanced AI delivering 500x faster results and revolutionizing computational capabilities.',';,';,
-category: 'Quantum Computing',';,';,
-date: '2025-01-10',';,';,
+id: '2',',',
+title: 'Quantum AI Breakthrough: Solving Impossible Problems in Seconds',',',
+summary: 'Explore quantum-enhanced AI delivering 500x faster results and revolutionizing computational capabilities.',',',
+category: 'Quantum Computing',',',
+date: '2025-01-10',',',
 readMinutes: 20,,
 featured: false
 },
     {
-id: '3',';,';,
-title: 'Manufacturing AI Transformation: $50M Savings & 95% Efficiency',';,';,
-summary: 'See how a Fortune 500 manufacturer achieved $50M annual savings and 95% efficiency improvements.',';,';,
-category: 'Success Story',';,';,
-date: '2025-01-05',';,';,
+id: '3',',',
+title: 'Manufacturing AI Transformation: $50M Savings & 95% Efficiency',',',
+summary: 'See how a Fortune 500 manufacturer achieved $50M annual savings and 95% efficiency improvements.',',',
+category: 'Success Story',',',
+date: '2025-01-05',',',
 readMinutes: 15,,
 featured: true
 }
   ];
 
     {
-      slug: 'ai-revolution-2026',';,';,
-      title: 'AI Revolution 2026: The Next Frontier of Enterprise Intelligence',';,';,
-      description: 'Discover autonomous AI agents, neural interfaces, and predictive intelligence systems achieving 300% productivity gains.',';,';,
-      category: 'AI Innovation',';,';,
-      publishedAt: '2025-01-15',';,
+      slug: 'ai-revolution-2026',',',
+      title: 'AI Revolution 2026: The Next Frontier of Enterprise Intelligence',',',
+      description: 'Discover autonomous AI agents, neural interfaces, and predictive intelligence systems achieving 300% productivity gains.',',',
+      category: 'AI Innovation',',',
+      publishedAt: '2025-01-15',',
     },
     {
-slug: 'quantum-ai-breakthrough',';,';,
-title: 'Quantum AI Breakthrough: Solving Impossible Problems in Seconds',';,';,
-description: 'Explore quantum-enhanced AI delivering 500x faster results and revolutionizing computational capabilities.',';,';,
-category: 'Quantum Computing',';,';,
+slug: 'quantum-ai-breakthrough',',',
+title: 'Quantum AI Breakthrough: Solving Impossible Problems in Seconds',',',
+description: 'Explore quantum-enhanced AI delivering 500x faster results and revolutionizing computational capabilities.',',',
+category: 'Quantum Computing',',',
 publishedAt: '2025-01-10'
 },
     {
-slug: 'manufacturing-success',';,';,
-title: 'Manufacturing AI Transformation: $50M Savings & 95% Efficiency',';,';,
-description: 'See how a Fortune 500 manufacturer achieved $50M annual savings and 95% efficiency improvements.',';,';,
-category: 'Success Story',';,';,
+slug: 'manufacturing-success',',',
+title: 'Manufacturing AI Transformation: $50M Savings & 95% Efficiency',',',
+description: 'See how a Fortune 500 manufacturer achieved $50M annual savings and 95% efficiency improvements.',',',
+category: 'Success Story',',',
 publishedAt: '2025-01-05'
 }
   ];
@@ -99,44 +99,36 @@ publishedAt: '2025-01-05'
         <meta name: "keywords",
   content: "AI solutions, IT consulting, cybersecurity, machine learning, cloud infrastructure, digital transformation, AI workflow automation, quantum computing, edge AI, zero trust security, micro SAAS platforms, AI virtual assistant, data analytics",
         />
-        <meta property: "og:title", content ="Zion Tech Group - Leading AI & IT Solutions" />"
+        <meta property: "og:title", content ="Zion Tech Group - Leading AI & IT Solutions/>"
         <meta property: "og:description",
   content: "Transform your business with cutting-edge AI and IT solutions. NEW 2025: AI Workflow Automation, Quantum Computing, Edge AI, Zero Trust Security. Expert consulting with proven results.",
         />
-        <meta property: "og:type", content="website" />"
-        <meta property: "og:url", content="https://ziontechgroup.com" />"
-        <meta name: "twitter:card", content="summary_large_image" />"
-        <meta name: "twitter:title", content ="Zion Tech Group - Leading AI & IT Solutions" />"
+        <meta property: "og:type", content="website" /><meta property: "og:url", content="https://ziontechgroup.com" /><meta name: "twitter:card", content="summary_large_image" /><meta name: "twitter:title", content ="Zion Tech Group - Leading AI & IT Solutions/>"
         <meta name: "twitter:description",
-        <meta property: "og:title", content="Zion Tech Group - Leading AI & IT Solutions" />
-        <meta property: "og:description
+        <meta property: "og:title", content="Zion Tech Group - Leading AI & IT Solutions" /><meta property: "og:description
   content: ", Transform your business with cutting-edge AI and IT solutions. NEW 2025: AI Workflow Automation, Quantum Computing, Edge AI, Zero Trust Security. Expert consulting with proven results.",
         />
-        <meta property: "og:type", content="website" />
-        <meta property: "og:url", content="https://ziontechgroup.com" />
-        <meta name: "twitter:card", content="summary_large_image" />
-        <meta name: "twitter:title", content="Zion Tech Group - Leading AI & IT Solutions" />
-        <meta name: "twitter:description
+        <meta property: "og:type", content="website" /><meta property: "og:url", content="https://ziontechgroup.com" /><meta name: "twitter:card", content="summary_large_image" /><meta name: "twitter:title", content="Zion Tech Group - Leading AI & IT Solutions" /><meta name: "twitter:description
   content: ", Transform your business with cutting-edge AI and IT solutions. NEW 2025: AI Workflow Automation, Quantum Computing, Edge AI, Zero Trust Security.",
         />
-        <link rel: "canonical", href ="https://ziontechgroup.com" />"
+        <link rel: "canonical", href ="https://ziontechgroup.com/>"
         {/* Enhanced Structured Data */}
         <script type="application/ld+json"
         <script type="application/ld+json">
           {JSON.stringify({
-            "@context": "https: //schema.org",
+            "@context": "https://schema.org",
             "@type": "Organization",;"
             "name": "Zion Tech Group",;"
             "alternateName": "Zion Tech",;"
             "description": "Leading AI and IT solutions provider specializing in AI workflow automation, quantum computing, edge AI, and zero trust security.",;"
-            "url": "https: //ziontechgroup.com",
+            "url": "https://ziontechgroup.com",
             "logo": {,";"
               "@type": "ImageObject",;"
-              "url": "https: //ziontechgroup.com/logo.png",
+              "url": "https://ziontechgroup.com/logo.png",
               "width": 200,";"
               "height": 60";"
             }
-            "image": "https: //ziontechgroup.com/og-image.jpg",
+            "image": "https://ziontechgroup.com/og-image.jpg",
             "contactPoint": {,";"
               "@type": "ContactPoint",;"
               "telephone": "+1-302-464-0950",;"
@@ -153,9 +145,9 @@ publishedAt: '2025-01-05'
 "email": "kleber@ziontechgroup.com"
 }
             "sameAs": [,";"
-              "https: //linkedin.com/company/zion-tech-group",
-              "https: //twitter.com/ziontechgroup",
-              "https: //github.com/ZionClouds",
+              "https://linkedin.com/company/zion-tech-group",
+              "https://twitter.com/ziontechgroup",
+              "https://github.com/ZionClouds",
             ]
             "foundingDate": "2020",;"
             "numberOfEmployees": "50-100",;"
@@ -281,62 +273,26 @@ publishedAt: '2025-01-05'
         </script>
         
         {/* Additional SEO Meta Tags */}
-        <meta name: "robots", content ="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview: -1" />"
-        <meta name: "googlebot", content ="index, follow" />"
-        <meta name: "bingbot", content ="index, follow" />"
-        <meta name: "author", content="Zion Tech Group" />"
-        <meta name: "publisher", content="Zion Tech Group" />"
-        <meta name: "copyright", content="Zion Tech Group" />"
-        <meta name: "language", content="en-US" />"
-        <meta name: "revisit-after", content="7 days" />"
-        <meta name: "rating", content="general" />"
-        <meta name: "distribution", content="global" />"
-        <meta name: "geo.region", content="US-DE" />"
-        <meta name: "geo.placename", content="Middletown" />"
-        <meta name: "geo.position", content ="39.4496;-75.7163" />"
-        <meta name: "ICBM", content ="39.4496, -75.7163" />"
-        <meta name: "robots", content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview: -1" />
-        <meta name: "googlebot", content="index, follow" />
-        <meta name: "bingbot", content="index, follow" />
-        <meta name: "author", content="Zion Tech Group" />
-        <meta name: "publisher", content="Zion Tech Group" />
-        <meta name: "copyright", content="Zion Tech Group" />
-        <meta name: "language", content="en-US" />
-        <meta name: "revisit-after", content="7 days" />
-        <meta name: "rating", content="general" />
-        <meta name: "distribution", content="global" />
-        <meta name: "geo.region", content="US-DE" />
-        <meta name: "geo.placename", content="Middletown" />
-        <meta name: "geo.position", content="39.4496;-75.7163" />
-        <meta name: "ICBM", content="39.4496, -75.7163" />
-        {/* Open Graph Enhanced */}
-        <meta property: "og:site_name", content="Zion Tech Group" />"
-        <meta property: "og:locale", content="en_US" />"
-        <meta property: "og:image:width", content="1200" />"
-        <meta property: "og:image:height", content="630" />"
-        <meta property: "og:image:alt", content="Zion Tech Group - Leading AI & IT Solutions" />"
-        {/* Twitter Enhanced */}
-        <meta name: "twitter:site", content="@ziontechgroup" />"
-        <meta name: "twitter:creator", content="@ziontechgroup" />"
-        <meta name: "twitter:image:alt", content="Zion Tech Group - Leading AI & IT Solutions" />"
-        {/* Additional Performance Meta */}
-        <meta name: "theme-color", content="#2563eb" />"
-        <meta name: "msapplication-TileColor", content="#2563eb" />"
-        <meta name: "apple-mobile-web-app-capable", content="yes" />"
-        <meta name: "apple-mobile-web-app-status-bar-style", content="default" />"
-        <meta name: "apple-mobile-web-app-title", content="Zion Tech Group" />"
-        {/* Preconnect to external domains */}
-        <link rel: "preconnect", href="https://fonts.googleapis.com" />"
-        <link rel: "preconnect", href="https://fonts.gstatic.com" crossOrigin="anonymous" />"
-        <link rel: "preconnect", href="https://linkedin.com" />"
-        <link rel: "preconnect", href="https://twitter.com" />"
-        <link rel: "preconnect", href="https://github.com" />"
+        <meta name: "robots", content ="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview: -1/>"
+        <meta name: "googlebot", content ="index, follow/>"
+        <meta name: "bingbot", content ="index, follow/>"
+        <meta name: "author", content="Zion Tech Group" /><meta name: "publisher", content="Zion Tech Group" /><meta name: "copyright", content="Zion Tech Group" /><meta name: "language", content="en-US" /><meta name: "revisit-after", content="7 days" /><meta name: "rating", content="general" /><meta name: "distribution", content="global" /><meta name: "geo.region", content="US-DE" /><meta name: "geo.placename", content="Middletown" /><meta name: "geo.position", content ="39.4496;-75.7163/>"
+        <meta name: "ICBM", content ="39.4496, -75.7163/>"
+        <meta name: "robots", content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview: -1" /><meta name: "googlebot", content="index, follow" /><meta name: "bingbot", content="index, follow" /><meta name: "author", content="Zion Tech Group" /><meta name: "publisher", content="Zion Tech Group" /><meta name: "copyright", content="Zion Tech Group" /><meta name: "language", content="en-US" /><meta name: "revisit-after", content="7 days" /><meta name: "rating", content="general" /><meta name: "distribution", content="global" /><meta name: "geo.region", content="US-DE" /><meta name: "geo.placename", content="Middletown" /><meta name: "geo.position", content="39.4496;-75.7163" /><meta name: "ICBM", content="39.4496, -75.7163" />{/* Open Graph Enhanced */}
+        <meta property: "og:site_name", content="Zion Tech Group" /><meta property: "og:locale", content="en_US" /><meta property: "og:image:width", content="1200" /><meta property: "og:image:height", content="630" /><meta property: "og:image:alt", content="Zion Tech Group - Leading AI & IT Solutions" />{/* Twitter Enhanced */}
+        <meta name: "twitter:site", content="@ziontechgroup" /><meta name: "twitter:creator", content="@ziontechgroup" /><meta name: "twitter:image:alt", content="Zion Tech Group - Leading AI & IT Solutions" />{/* Additional Performance Meta */}
+        <meta name: "theme-color", content="#2563eb" /><meta name: "msapplication-TileColor", content="#2563eb" /><meta name: "apple-mobile-web-app-capable", content="yes" /><meta name: "apple-mobile-web-app-status-bar-style", content="default" /><meta name: "apple-mobile-web-app-title", content="Zion Tech Group" />{/* Preconnect to external domains */}
+        <link rel: "preconnect", href="https://fonts.googleapis.com/>"
+        <link rel: "preconnect", href="https://fonts.gstatic.com" crossOrigin="anonymous/>"
+        <link rel: "preconnect", href="https://linkedin.com/>"
+        <link rel: "preconnect", href="https://twitter.com/>"
+        <link rel: "preconnect", href="https://github.com/>"
         {/* DNS Prefetch */}
-        <link rel: "dns-prefetch", href="//fonts.googleapis.com" />"
-        <link rel: "dns-prefetch", href="//fonts.gstatic.com" />"
-        <link rel: "dns-prefetch", href="//linkedin.com" />"
-        <link rel: "dns-prefetch", href="//twitter.com" />"
-        <link rel: "dns-prefetch", href ="//github.com" />"
+        <link rel: "dns-prefetch", href="//fonts.googleapis.com/>"
+        <link rel: "dns-prefetch", href="//fonts.gstatic.com/>"
+        <link rel: "dns-prefetch", href="//linkedin.com/>"
+        <link rel: "dns-prefetch", href="//twitter.com/>"
+        <link rel: "dns-prefetch", href ="//github.com/>"
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-teal-50"
@@ -719,19 +675,19 @@ publishedAt: '2025-01-05'
                 
                 <ul className="space-y-3 mb-6"
                   <li className="flex items-center gap-3"
-                    <CheckCircle className="w-5 h-5 text-green-600" />"
+                    <CheckCircle className="w-5 h-5 text-green-600/>"
                     <span className="text-gray-700">Rapid Development</span>"
                   </li>
                   <li className="flex items-center gap-3"
-                    <CheckCircle className="w-5 h-5 text-green-600" />"
+                    <CheckCircle className="w-5 h-5 text-green-600/>"
                     <span className="text-gray-700">Scalable Architecture</span>"
                   </li>
                   <li className="flex items-center gap-3"
-                    <CheckCircle className="w-5 h-5 text-green-600" />"
+                    <CheckCircle className="w-5 h-5 text-green-600/>"
                     <span className="text-gray-700">Cloud-Native Design</span>"
                   </li>
                   <li className="flex items-center gap-3"
-                    <CheckCircle className="w-5 h-5 text-green-600" />"
+                    <CheckCircle className="w-5 h-5 text-green-600/>"
                     <span className="text-gray-700">API-First Approach</span>"
                 <div className= "text-center mb-6">
                   <div className= "w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-4">
@@ -744,19 +700,19 @@ publishedAt: '2025-01-05'
                 
                 <ul className= "space-y-3 mb-6">
                   <li className= "flex items-center gap-3">
-                    <CheckCircle className= "w-5 h-5 text-green-600" />"
+                    <CheckCircle className= "w-5 h-5 text-green-600/>"
                     <span className= "text-gray-700">Rapid Development</span>"
                   </li>
                   <li className= "flex items-center gap-3">
-                    <CheckCircle className= "w-5 h-5 text-green-600" />"
+                    <CheckCircle className= "w-5 h-5 text-green-600/>"
                     <span className= "text-gray-700">Scalable Architecture</span>"
                   </li>
                   <li className= "flex items-center gap-3">
-                    <CheckCircle className= "w-5 h-5 text-green-600" />"
+                    <CheckCircle className= "w-5 h-5 text-green-600/>"
                     <span className= "text-gray-700">Cloud-Native Design</span>"
                   </li>
                   <li className= "flex items-center gap-3">
-                    <CheckCircle className= "w-5 h-5 text-green-600" />"
+                    <CheckCircle className= "w-5 h-5 text-green-600/>"
                     <span className= "text-gray-700">API-First Approach</span>"
                   </li>
                 </ul>
@@ -781,19 +737,19 @@ publishedAt: '2025-01-05'
                 
                 <ul className="space-y-3 mb-6"
                   <li className="flex items-center gap-3"
-                    <CheckCircle className="w-5 h-5 text-green-600" />"
+                    <CheckCircle className="w-5 h-5 text-green-600/>"
                     <span className="text-gray-700">Cloud Migration</span>"
                   </li>
                   <li className="flex items-center gap-3"
-                    <CheckCircle className="w-5 h-5 text-green-600" />"
+                    <CheckCircle className="w-5 h-5 text-green-600/>"
                     <span className="text-gray-700">DevOps & SRE</span>"
                   </li>
                   <li className="flex items-center gap-3"
-                    <CheckCircle className="w-5 h-5 text-green-600" />"
+                    <CheckCircle className="w-5 h-5 text-green-600/>"
                     <span className="text-gray-700">Infrastructure Management</span>"
                   </li>
                   <li className="flex items-center gap-3"
-                    <CheckCircle className="w-5 h-5 text-green-600" />"
+                    <CheckCircle className="w-5 h-5 text-green-600/>"
                     <span className="text-gray-700">Security & Compliance</span>"
               <div className= "bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-200 hover:border-blue-300">
                 <div className= "text-center mb-6">
@@ -807,19 +763,19 @@ publishedAt: '2025-01-05'
                 
                 <ul className= "space-y-3 mb-6">
                   <li className= "flex items-center gap-3">
-                    <CheckCircle className= "w-5 h-5 text-green-600" />"
+                    <CheckCircle className= "w-5 h-5 text-green-600/>"
                     <span className= "text-gray-700">Cloud Migration</span>"
                   </li>
                   <li className= "flex items-center gap-3">
-                    <CheckCircle className= "w-5 h-5 text-green-600" />"
+                    <CheckCircle className= "w-5 h-5 text-green-600/>"
                     <span className= "text-gray-700">DevOps & SRE</span>"
                   </li>
                   <li className= "flex items-center gap-3">
-                    <CheckCircle className= "w-5 h-5 text-green-600" />"
+                    <CheckCircle className= "w-5 h-5 text-green-600/>"
                     <span className= "text-gray-700">Infrastructure Management</span>"
                   </li>
                   <li className= "flex items-center gap-3">
-                    <CheckCircle className= "w-5 h-5 text-green-600" />"
+                    <CheckCircle className= "w-5 h-5 text-green-600/>"
                     <span className= "text-gray-700">Security & Compliance</span>"
                   </li>
                 </ul>
@@ -1017,16 +973,16 @@ publishedAt: '2025-01-05'
                 <Link key={item.id} to: "/blog", className ="group"
                   <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-200 hover:border-blue-200"
                     <div className="flex items-center gap-2 mb-4"
-                      <span className={`px-2 py-1 rounded-full text-xs font-semibold ${,`;,`;
+                      <span className={`px-2 py-1 rounded-full text-xs font-semibold ${,`,`;
             <div className= "grid md:grid-cols-3 gap-8">
               {latestInsights.map((item) => (
                 <Link key={item.id} to: "/blog", className ="group">
                   <div className= "bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-200 hover:border-blue-200">
                     <div className= "flex items-center gap-2 mb-4">
-                      <span className= {`px-2 py-1 rounded-full text-xs font-semibold ${,`;,`;
+                      <span className= {`px-2 py-1 rounded-full text-xs font-semibold ${,`,`;
   item.featured ? 'bg-red-100 text-red-800' : 'bg-blue-100 text-blue-800'
                       }`}>`;`;
-                        {item.featured ? 'Featured' : item.category}';';
+                        {item.featured ? 'Featured' : item.category}';
                       </span>
                       <span className="text-sm text-gray-500">{item.readMinutes} min read</span>";"
                     </div>
@@ -1079,7 +1035,7 @@ publishedAt: '2025-01-05'
           <div className="container mx-auto px-6"
             <div className="text-center mb-12"
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-100 text-green-700 text-sm font-medium mb-4"
-                <Sparkles className="w-4 h-4 mr-2" />,"
+                <Sparkles className="w-4 h-4 mr-2/>,"
   New Success Stories Available
               </div>
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Success Stories</h2>"
@@ -1088,7 +1044,7 @@ publishedAt: '2025-01-05'
           <div className= "container mx-auto px-6">
             <div className= "text-center mb-12">
               <div className= "inline-flex items-center px-4 py-2 rounded-full bg-green-100 text-green-700 text-sm font-medium mb-4">
-                <Sparkles className= "w-4 h-4 mr-2" />,"
+                <Sparkles className= "w-4 h-4 mr-2/>,"
   New Success Stories Available
               </div>
               <h2 className= "text-3xl font-bold text-gray-900 mb-4">Success Stories</h2>"

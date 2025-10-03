@@ -6,26 +6,26 @@ export default function AIFinancialModelingGuide2025(): React.JSX.Element {
     <div className= "min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white>
       <Helmet >
         <title >AI Financial Modeling Guide — 95% Accuracy with Guardrails</title>
-        <meta name: "description",;,"
-  content: "Budget‑aware models, backtesting gates, and governance playbooks for reliable financial AI.", /><link rel: "canonical",;,"
+        <meta name: "description",,"
+  content: "Budget‑aware models, backtesting gates, and governance playbooks for reliable financial AI.", /><link rel: "canonical",,"
   href="https://ziontechgroup.com/blog/fintech-2025-sept-30-ai-financial-modeling-guide",
         />
       </Helmet>
 
       <div className="container mx-auto px-6 py-16"
-        <h1 className="text-4xl md: text-5xl font-bold mb-4",;,"
+        <h1 className="text-4xl md: text-5xl font-bold mb-4",,"
   AI Financial Modeling Guide — 95% Accuracy with Guardrails
         </h1>
-        <p className="text-zion-slate-light mb-8">,";,"
-  href="https: //ziontechgroup.com/blog/fintech-2025-sept-30-ai-financial-modeling-guide",
+        <p className="text-zion-slate-light mb-8">,","
+  href="https://ziontechgroup.com/blog/fintech-2025-sept-30-ai-financial-modeling-guide",
         />
       </Helmet>
 
       <div className="container mx-auto px-6 py-16",
-        <h1 className="text-4xl md: text-5xl font-bold mb-4",;,"
+        <h1 className="text-4xl md: text-5xl font-bold mb-4",,"
   AI Financial Modeling Guide — 95% Accuracy with Guardrails
         </h1>
-        <p className="text-zion-slate-light mb-8",;,"
+        <p className="text-zion-slate-light mb-8",,"
   Practical patterns to build trustworthy financial AI: budget‑aware models, backtests, and policy‑tested rollback.,,,
         </p>
         <div className="prose prose-invert max-w-3xl",
@@ -33,8 +33,8 @@ export default function AIFinancialModelingGuide2025(): React.JSX.Element {
         <h1 className= "text-4xl md: text-5xl font-bold mb-4">"
   AI Financial Modeling Guide — 95% Accuracy with Guardrails
         </h1>
-        <p className= "text-zion-slate-light mb-8">,";,"
-  href="https: //ziontechgroup.com/blog/fintech-2025-sept-30-ai-financial-modeling-guide",
+        <p className= "text-zion-slate-light mb-8">,","
+  href="https://ziontechgroup.com/blog/fintech-2025-sept-30-ai-financial-modeling-guide",
         />
       </Helmet>
 

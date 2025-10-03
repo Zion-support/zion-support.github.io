@@ -1,22 +1,20 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react;
+import { Helmet } from 'react-helmet-async;
 import {
 
 } from 'lucide-react'
-import React from 'react';'
-import { Helmet } from 'react-helmet-async';'
-
-} from 'lucide-react';'
-
+import React from 'react;
+import { Helmet } from 'react-helmet-async;
+} from 'lucide-react;
 const AIContentGenerator: React.FC = () => {
   return (
     <>
       <Helmet >
         <title >AI Content Generator Pro - Zion Tech Group</title>
-        <meta name: "description", content ="Generate high-quality blog posts, social media content, and marketing copy with advanced AI. Includes SEO optimization and brand voice training." /></Helmet>"
-        <meta name: "description", content ="Generate high-quality blog posts, social media content, and marketing copy with advanced AI. Includes SEO optimization and brand voice training." />",
+        <meta name: "description", content ="Generate high-quality blog posts, social media content, and marketing copy with advanced AI. Includes SEO optimization and brand voice training./></Helmet>"
+        <meta name: "description", content ="Generate high-quality blog posts, social media content, and marketing copy with advanced AI. Includes SEO optimization and brand voice training./>",
         <meta name="description" content="Generate high-quality blog posts, social media content, and marketing copy with advanced AI. Includes SEO optimization and brand voice training." /></Helmet>
-        <meta name="description" content="Generate high-quality blog posts, social media content, and marketing copy with advanced AI. Includes SEO optimization and brand voice training." />",
+        <meta name="description" content="Generate high-quality blog posts, social media content, and marketing copy with advanced AI. Includes SEO optimization and brand voice training." />,
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50",
@@ -33,7 +31,7 @@ const AIContentGenerator: React.FC = () => {
             <h1 className="text-4xl md: text-6xl font-bold text-gray-900 mb-6",
           <div className="text-center mb-16",
             <div className="bg-gradient-to-r from-blue-600 to-purple-600 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6",
-              <FileText className="w-10 h-10 text-white" />",
+              <FileText className="w-10 h-10 text-white/>",
             </div>
             <h1 className="text-4xl md: text-6xl font-bold text-gray-900 mb-6",
   AI Content Generator Pro
@@ -67,7 +65,7 @@ const AIContentGenerator: React.FC = () => {
             <h1 className= "text-4xl md: text-6xl font-bold text-gray-900 mb-6>
           <div className= "text-center mb-16>
             <div className= "bg-gradient-to-r from-blue-600 to-purple-600 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6>
-              <FileText className= "w-10 h-10 text-white" />",
+              <FileText className= "w-10 h-10 text-white/>",
             </div>
             <h1 className= "text-4xl md: text-6xl font-bold text-gray-900 mb-6">"
   AI Content Generator Pro
@@ -113,7 +111,7 @@ const AIContentGenerator: React.FC = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8",
               <div className="bg-white rounded-lg shadow-lg p-6",
                 <div className="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4",
-                  <FileText className="w-6 h-6 text-blue-600" />",
+                  <FileText className="w-6 h-6 text-blue-600/>",
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Multi-Language Support</h3>",
                 <p className="text-gray-600">Generate content in 50+ languages with native-level quality and cultural context.</p>",
@@ -126,7 +124,7 @@ const AIContentGenerator: React.FC = () => {
                   <Zap className="w-6 h-6 text-green-600/>"
               <div className="bg-white rounded-lg shadow-lg p-6",
                 <div className="bg-green-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4",
-                  <Zap className="w-6 h-6 text-green-600" />",
+                  <Zap className="w-6 h-6 text-green-600/>",
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">SEO Optimization</h3>",
                 <p className="text-gray-600">Automatically optimize content for search engines with keyword integration and meta descriptions.</p>",
@@ -136,7 +134,7 @@ const AIContentGenerator: React.FC = () => {
                   <Users className="w-6 h-6 text-purple-600/>"
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Brand Voice Training</h3>"
-                <p className="text-gray-600">Train the AI to match your brand's unique voice and tone for consistent messaging.</p>;';,';,
+                <p className="text-gray-600">Train the AI to match your brand's unique voice and tone for consistent messaging.</p>;',',
               </div>
               <div className="bg-white rounded-lg shadow-lg p-6"
                 <div className="bg-orange-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4"
@@ -146,21 +144,21 @@ const AIContentGenerator: React.FC = () => {
                   <Users className="w-6 h-6 text-purple-600/>
                 </div>"
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Brand Voice Training</h3>
-                <p className="text-gray-600">Train the AI to match your brand's unique voice and tone for consistent messaging.</p>;';,';,
+                <p className="text-gray-600">Train the AI to match your brand's unique voice and tone for consistent messaging.</p>;',',
               </div>
               <div className="bg-white rounded-lg shadow-lg p-6">
                 <div className="bg-orange-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
                   <CheckCircle className="w-6 h-6 text-orange-600/>"
               <div className="bg-white rounded-lg shadow-lg p-6",
                 <div className="bg-purple-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4",
-                  <Users className="w-6 h-6 text-purple-600" />",
+                  <Users className="w-6 h-6 text-purple-600/>",
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Brand Voice Training</h3>",
-                <p className="text-gray-600">Train the AI to match your brand's unique voice and tone for consistent messaging.</p>',';,
+                <p className="text-gray-600">Train the AI to match your brand's unique voice and tone for consistent messaging.</p>',',
               </div>
               <div className="bg-white rounded-lg shadow-lg p-6",
                 <div className="bg-orange-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4",
-                  <CheckCircle className="w-6 h-6 text-orange-600" />",
+                  <CheckCircle className="w-6 h-6 text-orange-600/>",
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Content Scheduling</h3>",
                 <p className="text-gray-600">Schedule content across multiple platforms with automated posting and optimization.</p>",
@@ -173,7 +171,7 @@ const AIContentGenerator: React.FC = () => {
                   <Shield className="w-6 h-6 text-red-600/>"
               <div className="bg-white rounded-lg shadow-lg p-6",
                 <div className="bg-red-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4",
-                  <Shield className="w-6 h-6 text-red-600" />",
+                  <Shield className="w-6 h-6 text-red-600/>",
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Analytics Dashboard</h3>",
                 <p className="text-gray-600">Track content performance with detailed analytics and engagement metrics.</p>",
@@ -186,7 +184,7 @@ const AIContentGenerator: React.FC = () => {
                   <Star className="w-6 h-6 text-indigo-600/>"
               <div className="bg-white rounded-lg shadow-lg p-6",
                 <div className="bg-indigo-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4",
-                  <Star className="w-6 h-6 text-indigo-600" />",
+                  <Star className="w-6 h-6 text-indigo-600/>",
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Quality Assurance</h3>",
                 <p className="text-gray-600">Built-in quality checks ensure content meets your standards before publication.</p>",
@@ -201,7 +199,7 @@ const AIContentGenerator: React.FC = () => {
             <div className= "grid md:grid-cols-2 lg:grid-cols-3 gap-8>
               <div className= "bg-white rounded-lg shadow-lg p-6>
                 <div className= "bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4>
-                  <FileText className= "w-6 h-6 text-blue-600" />",
+                  <FileText className= "w-6 h-6 text-blue-600/>",
                 </div>
                 <h3 className= "text-xl font-bold text-gray-900 mb-3">Multi-Language Support</h3>",
                 <p className= "text-gray-600">Generate content in 50+ languages with native-level quality and cultural context.</p>",
@@ -211,7 +209,7 @@ const AIContentGenerator: React.FC = () => {
                   <Zap className= "w-6 h-6 text-green-600/>"
               <div className= "bg-white rounded-lg shadow-lg p-6>
                 <div className= "bg-green-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4>
-                  <Zap className= "w-6 h-6 text-green-600" />",
+                  <Zap className= "w-6 h-6 text-green-600/>",
                 </div>
                 <h3 className= "text-xl font-bold text-gray-900 mb-3">SEO Optimization</h3>",
                 <p className= "text-gray-600">Automatically optimize content for search engines with keyword integration and meta descriptions.</p>",
@@ -221,21 +219,21 @@ const AIContentGenerator: React.FC = () => {
                   <Users className= "w-6 h-6 text-purple-600/>"
                 </div>
                 <h3 className= "text-xl font-bold text-gray-900 mb-3">Brand Voice Training</h3>"
-                <p className= "text-gray-600">Train the AI to match your brand's unique voice and tone for consistent messaging.</p>;';,';,
+                <p className= "text-gray-600">Train the AI to match your brand's unique voice and tone for consistent messaging.</p>;',',
               </div>
               <div className= "bg-white rounded-lg shadow-lg p-6">
                 <div className= "bg-orange-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
                   <CheckCircle className= "w-6 h-6 text-orange-600/>"
               <div className= "bg-white rounded-lg shadow-lg p-6>
                 <div className= "bg-purple-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4>
-                  <Users className= "w-6 h-6 text-purple-600" />",
+                  <Users className= "w-6 h-6 text-purple-600/>",
                 </div>
                 <h3 className= "text-xl font-bold text-gray-900 mb-3">Brand Voice Training</h3>",
-                <p className= "text-gray-600">Train the AI to match your brand's unique voice and tone for consistent messaging.</p>',';,
+                <p className= "text-gray-600">Train the AI to match your brand's unique voice and tone for consistent messaging.</p>',',
               </div>
               <div className= "bg-white rounded-lg shadow-lg p-6>
                 <div className= "bg-orange-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4>
-                  <CheckCircle className= "w-6 h-6 text-orange-600" />",
+                  <CheckCircle className= "w-6 h-6 text-orange-600/>",
                 </div>
                 <h3 className= "text-xl font-bold text-gray-900 mb-3">Content Scheduling</h3>",
                 <p className= "text-gray-600">Schedule content across multiple platforms with automated posting and optimization.</p>",
@@ -245,7 +243,7 @@ const AIContentGenerator: React.FC = () => {
                   <Shield className= "w-6 h-6 text-red-600/>"
               <div className= "bg-white rounded-lg shadow-lg p-6>
                 <div className= "bg-red-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4>
-                  <Shield className= "w-6 h-6 text-red-600" />",
+                  <Shield className= "w-6 h-6 text-red-600/>",
                 </div>
                 <h3 className= "text-xl font-bold text-gray-900 mb-3">Analytics Dashboard</h3>",
                 <p className= "text-gray-600">Track content performance with detailed analytics and engagement metrics.</p>",
@@ -255,7 +253,7 @@ const AIContentGenerator: React.FC = () => {
                   <Star className= "w-6 h-6 text-indigo-600/>"
               <div className= "bg-white rounded-lg shadow-lg p-6>
                 <div className= "bg-indigo-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4>
-                  <Star className= "w-6 h-6 text-indigo-600" />",
+                  <Star className= "w-6 h-6 text-indigo-600/>",
                 </div>
                 <h3 className= "text-xl font-bold text-gray-900 mb-3">Quality Assurance</h3>",
                 <p className= "text-gray-600">Built-in quality checks ensure content meets your standards before publication.</p>",
@@ -304,19 +302,19 @@ const AIContentGenerator: React.FC = () => {
                 <div className="text-3xl font-bold text-blue-600 mb-6">$29/month</div>",
                 <ul className="space-y-3 mb-8",
                   <li className="flex items-center text-gray-600",
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />",
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3/>",
   1,000 words/month
                   </li>
                   <li className="flex items-center text-gray-600",
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />",
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3/>",
   3 languages
                   </li>
                   <li className="flex items-center text-gray-600",
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />",
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3/>",
   Basic SEO optimization
                   </li>
                   <li className="flex items-center text-gray-600",
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />",
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3/>",
   Email support
                   </li>
                 </ul>
@@ -351,19 +349,19 @@ const AIContentGenerator: React.FC = () => {
                 <div className= "text-3xl font-bold text-blue-600 mb-6">$29/month</div>",
                 <ul className= "space-y-3 mb-8>
                   <li className= "flex items-center text-gray-600>
-                    <CheckCircle className= "w-5 h-5 text-green-500 mr-3" />",
+                    <CheckCircle className= "w-5 h-5 text-green-500 mr-3/>",
   1,000 words/month
                   </li>
                   <li className= "flex items-center text-gray-600>
-                    <CheckCircle className= "w-5 h-5 text-green-500 mr-3" />",
+                    <CheckCircle className= "w-5 h-5 text-green-500 mr-3/>",
   3 languages
                   </li>
                   <li className= "flex items-center text-gray-600>
-                    <CheckCircle className= "w-5 h-5 text-green-500 mr-3" />",
+                    <CheckCircle className= "w-5 h-5 text-green-500 mr-3/>",
   Basic SEO optimization
                   </li>
                   <li className= "flex items-center text-gray-600>
-                    <CheckCircle className= "w-5 h-5 text-green-500 mr-3" />",
+                    <CheckCircle className= "w-5 h-5 text-green-500 mr-3/>",
   Email support
                   </li>
                 </ul>
@@ -417,23 +415,23 @@ const AIContentGenerator: React.FC = () => {
                 <div className="text-3xl font-bold mb-6">$79/month</div>",
                 <ul className="space-y-3 mb-8",
                   <li className="flex items-center",
-                    <CheckCircle className="w-5 h-5 text-green-300 mr-3" />",
+                    <CheckCircle className="w-5 h-5 text-green-300 mr-3/>",
   10,000 words/month
                   </li>
                   <li className="flex items-center",
-                    <CheckCircle className="w-5 h-5 text-green-300 mr-3" />",
+                    <CheckCircle className="w-5 h-5 text-green-300 mr-3/>",
   10 languages
                   </li>
                   <li className="flex items-center",
-                    <CheckCircle className="w-5 h-5 text-green-300 mr-3" />",
+                    <CheckCircle className="w-5 h-5 text-green-300 mr-3/>",
   Advanced SEO optimization
                   </li>
                   <li className="flex items-center",
-                    <CheckCircle className="w-5 h-5 text-green-300 mr-3" />",
+                    <CheckCircle className="w-5 h-5 text-green-300 mr-3/>",
   Brand voice training
                   </li>
                   <li className="flex items-center",
-                    <CheckCircle className="w-5 h-5 text-green-300 mr-3" />",
+                    <CheckCircle className="w-5 h-5 text-green-300 mr-3/>",
   Priority support
                   </li>
                 </ul>
@@ -468,23 +466,23 @@ const AIContentGenerator: React.FC = () => {
                 <div className= "text-3xl font-bold mb-6">$79/month</div>",
                 <ul className= "space-y-3 mb-8>
                   <li className= "flex items-center>
-                    <CheckCircle className= "w-5 h-5 text-green-300 mr-3" />",
+                    <CheckCircle className= "w-5 h-5 text-green-300 mr-3/>",
   10,000 words/month
                   </li>
                   <li className= "flex items-center>
-                    <CheckCircle className= "w-5 h-5 text-green-300 mr-3" />",
+                    <CheckCircle className= "w-5 h-5 text-green-300 mr-3/>",
   10 languages
                   </li>
                   <li className= "flex items-center>
-                    <CheckCircle className= "w-5 h-5 text-green-300 mr-3" />",
+                    <CheckCircle className= "w-5 h-5 text-green-300 mr-3/>",
   Advanced SEO optimization
                   </li>
                   <li className= "flex items-center>
-                    <CheckCircle className= "w-5 h-5 text-green-300 mr-3" />",
+                    <CheckCircle className= "w-5 h-5 text-green-300 mr-3/>",
   Brand voice training
                   </li>
                   <li className= "flex items-center>
-                    <CheckCircle className= "w-5 h-5 text-green-300 mr-3" />",
+                    <CheckCircle className= "w-5 h-5 text-green-300 mr-3/>",
   Priority support
                   </li>
                 </ul>
@@ -536,23 +534,23 @@ const AIContentGenerator: React.FC = () => {
                 <div className="text-3xl font-bold text-blue-600 mb-6">Custom</div>",
                 <ul className="space-y-3 mb-8",
                   <li className="flex items-center text-gray-600",
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />",
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3/>",
   Unlimited words
                   </li>
                   <li className="flex items-center text-gray-600",
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />",
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3/>",
   All languages
                   </li>
                   <li className="flex items-center text-gray-600",
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />",
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3/>",
   Custom integrations
                   </li>
                   <li className="flex items-center text-gray-600",
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />",
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3/>",
   Dedicated support
                   </li>
                   <li className="flex items-center text-gray-600",
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-3" />",
+                    <CheckCircle className="w-5 h-5 text-green-500 mr-3/>",
   White-label options
                   </li>
                 </ul>
@@ -585,23 +583,23 @@ const AIContentGenerator: React.FC = () => {
                 <div className= "text-3xl font-bold text-blue-600 mb-6">Custom</div>",
                 <ul className= "space-y-3 mb-8>
                   <li className= "flex items-center text-gray-600>
-                    <CheckCircle className= "w-5 h-5 text-green-500 mr-3" />",
+                    <CheckCircle className= "w-5 h-5 text-green-500 mr-3/>",
   Unlimited words
                   </li>
                   <li className= "flex items-center text-gray-600>
-                    <CheckCircle className= "w-5 h-5 text-green-500 mr-3" />",
+                    <CheckCircle className= "w-5 h-5 text-green-500 mr-3/>",
   All languages
                   </li>
                   <li className= "flex items-center text-gray-600>
-                    <CheckCircle className= "w-5 h-5 text-green-500 mr-3" />",
+                    <CheckCircle className= "w-5 h-5 text-green-500 mr-3/>",
   Custom integrations
                   </li>
                   <li className= "flex items-center text-gray-600>
-                    <CheckCircle className= "w-5 h-5 text-green-500 mr-3" />",
+                    <CheckCircle className= "w-5 h-5 text-green-500 mr-3/>",
   Dedicated support
                   </li>
                   <li className= "flex items-center text-gray-600>
-                    <CheckCircle className= "w-5 h-5 text-green-500 mr-3" />",
+                    <CheckCircle className= "w-5 h-5 text-green-500 mr-3/>",
   White-label options
                   </li>
                 </ul>

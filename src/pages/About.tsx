@@ -1,5 +1,5 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react;
+import { Helmet } from 'react-helmet-async;
 import {
   Award,
   CheckCircle,
@@ -13,8 +13,7 @@ import {
   Globe,
   Code,
   Zap
-} from 'lucide-react';
-
+} from 'lucide-react;
 const About: React.FC = () => {
   const stats = [
     { number: '10+', label: 'Years Experience', icon: Award },
@@ -27,23 +26,19 @@ const About: React.FC = () => {
     {
       icon: Target,
       title: 'Innovation First',
-      description: 'We stay ahead of technology trends to deliver solutions that give you a competitive edge in the market.',
-    },
+      description: 'We stay ahead of technology trends to deliver solutions that give you a competitive edge in the market.},
     {
       icon: Lightbulb,
       title: 'Creative Problem Solving',
-      description: 'Our team approaches every challenge with creativity and out-of-the-box thinking to find the best solutions.',
-    },
+      description: 'Our team approaches every challenge with creativity and out-of-the-box thinking to find the best solutions.},
     {
       icon: Shield,
       title: 'Quality Assurance',
-      description: 'We maintain the highest standards of quality in all our projects, ensuring reliable and scalable solutions.',
-    },
+      description: 'We maintain the highest standards of quality in all our projects, ensuring reliable and scalable solutions.},
     {
       icon: Heart,
       title: 'Client-Centric Approach',
-      description: 'Your success is our success. We prioritize your needs and work closely with you to achieve your goals.',
-    },
+      description: 'Your success is our success. We prioritize your needs and work closely with you to achieve your goals.},
   ];
 
   const team = [
@@ -51,29 +46,24 @@ const About: React.FC = () => {
       name: 'Kleber Santos',
       role: 'CEO & Founder',
       image: '/images/team/kleber.jpg',
-      bio: 'Visionary leader with 10+ years in technology and business strategy.',
-    },
+      bio: 'Visionary leader with 10+ years in technology and business strategy.},
     {
       name: 'AI Development Team',
       role: 'Technical Experts',
       image: '/images/team/ai-team.jpg',
-      bio: 'Specialized in cutting-edge AI technologies and machine learning solutions.',
-    },
+      bio: 'Specialized in cutting-edge AI technologies and machine learning solutions.},
     {
       name: 'DevOps Engineers',
       role: 'Infrastructure Specialists',
       image: '/images/team/devops.jpg',
-      bio: 'Experts in cloud infrastructure, automation, and scalable system design.',
-    },
+      bio: 'Experts in cloud infrastructure, automation, and scalable system design.},
   ];
 
   return (
     <>
       <Helmet>
         <title>About Us - Zion Tech Group</title>
-        <meta name="description" content="Learn about Zion Tech Group's mission to deliver innovative AI and technology solutions. Meet our team of experts dedicated to your success." />
-        <meta name="keywords" content="about us, Zion Tech Group, AI company, technology experts, team, mission, values" />
-      </Helmet>
+        <meta name="description" content="Learn about Zion Tech Group's mission to deliver innovative AI and technology solutions. Meet our team of experts dedicated to your success." /><meta name="keywords" content="about us, Zion Tech Group, AI company, technology experts, team, mission, values" /></Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
         {/* Hero Section */}
@@ -109,7 +99,7 @@ const About: React.FC = () => {
                 <div className="space-y-6">
                   <div className="flex items-start">
                     <div className="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                      <Globe className="w-6 h-6 text-blue-600" />
+                      <Globe className="w-6 h-6 text-blue-600/>
                     </div>
                     <div>
                       <h4 className="text-xl font-semibold text-gray-900 mb-2">Global Perspective</h4>
@@ -118,7 +108,7 @@ const About: React.FC = () => {
                   </div>
                   <div className="flex items-start">
                     <div className="bg-purple-100 w-12 h-12 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                      <Code className="w-6 h-6 text-purple-600" />
+                      <Code className="w-6 h-6 text-purple-600/>
                     </div>
                     <div>
                       <h4 className="text-xl font-semibold text-gray-900 mb-2">Technical Excellence</h4>
@@ -127,7 +117,7 @@ const About: React.FC = () => {
                   </div>
                   <div className="flex items-start">
                     <div className="bg-green-100 w-12 h-12 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                      <Zap className="w-6 h-6 text-green-600" />
+                      <Zap className="w-6 h-6 text-green-600/>
                     </div>
                     <div>
                       <h4 className="text-xl font-semibold text-gray-900 mb-2">Innovation Focus</h4>
@@ -148,7 +138,7 @@ const About: React.FC = () => {
                 </p>
                 <div className="flex items-center text-blue-600 font-semibold">
                   <span>Learn more about our journey</span>
-                  <ArrowRight className="w-5 h-5 ml-2" />
+                  <ArrowRight className="w-5 h-5 ml-2/>
                 </div>
               </div>
             </div>
@@ -167,7 +157,7 @@ const About: React.FC = () => {
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
                   <div className="bg-gradient-to-r from-blue-600 to-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <stat.icon className="w-8 h-8 text-white" />
+                    <stat.icon className="w-8 h-8 text-white/>
                   </div>
                   <div className="text-4xl font-bold text-gray-900 mb-2">{stat.number}</div>
                   <div className="text-gray-600">{stat.label}</div>
@@ -191,7 +181,7 @@ const About: React.FC = () => {
               {values.map((value, index) => (
                 <div key={index} className="bg-white rounded-lg shadow-lg p-6 text-center">
                   <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <value.icon className="w-8 h-8 text-blue-600" />
+                    <value.icon className="w-8 h-8 text-blue-600/>
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">{value.title}</h3>
                   <p className="text-gray-600">{value.description}</p>

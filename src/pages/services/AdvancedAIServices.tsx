@@ -1,7 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
-
+import React from 'react;
+import { Link } from 'react-router-dom;
+import { Helmet } from 'react-helmet-async;
 const AdvancedAIServices: React.FC = () => {
   const advancedAIServices = [
     {
@@ -58,8 +57,7 @@ const AdvancedAIServices: React.FC = () => {
     <>
       <Helmet>
         <title>Advanced AI Services - Zion Tech Group</title>
-        <meta name="description" content="Cutting-edge AI services including content generation, document processing, predictive analytics, and fraud detection from Zion Tech Group." />"
-      </Helmet>
+        <meta name="description" content="Cutting-edge AI services including content generation, document processing, predictive analytics, and fraud detection from Zion Tech Group." /></Helmet>
       
       <div className="min-h-screen bg-gray-50">"
         {/* Header */}

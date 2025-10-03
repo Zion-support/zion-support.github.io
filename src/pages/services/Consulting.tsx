@@ -1,15 +1,14 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react;
+import { Helmet } from 'react-helmet-async;
 ;
 const Consulting: React.FC = () => {
   return (
     <>
       <Helmet >
         <title >Consulting Services - Zion Tech Group</title>
-        <meta name: "description", content ="Advisory and implementation consulting across AI, Cloud, Cybersecurity, and Transformation." />"
-        <link rel: "canonical", href ="https://ziontechgroup.com/services/consulting" />"
-        <meta name="description" content="Advisory and implementation consulting across AI, Cloud, Cybersecurity, and Transformation." />
-        <link rel: "canonical", href ="https://ziontechgroup.com/services/consulting" />
+        <meta name: "description", content ="Advisory and implementation consulting across AI, Cloud, Cybersecurity, and Transformation./>"
+        <link rel: "canonical", href ="https://ziontechgroup.com/services/consulting/>"
+        <meta name="description" content="Advisory and implementation consulting across AI, Cloud, Cybersecurity, and Transformation." /><link rel: "canonical", href ="https://ziontechgroup.com/services/consulting/>
       </Helmet>
       <section className="py-16"
         <div className="container mx-auto px-6 max-w-5xl"

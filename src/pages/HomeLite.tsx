@@ -1,6 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import React from 'react;
+import { Link } from 'react-router-dom;
+import { Helmet } from 'react-helmet-async;
 ;
 const HomeLite: React.FC = () => {
   return (
@@ -8,10 +8,9 @@ const HomeLite: React.FC = () => {
     <div className= "min-h-screen bg-white">
       <Helmet >
         <title >Zion Tech Group — AI, Micro SaaS, and IT Services</title>
-        <meta name: "description", content ="Enterprise-grade AI, micro SaaS, and IT solutions. Contact us at +1 302 464 0950 or kleber@ziontechgroup.com." />"
-        <link rel: "canonical", href ="https://ziontechgroup.com/" />"
-        <meta name="description" content="Enterprise-grade AI, micro SaaS, and IT solutions. Contact us at +1 302 464 0950 or kleber@ziontechgroup.com." />
-        <link rel: "canonical", href ="https://ziontechgroup.com/" />
+        <meta name: "description", content ="Enterprise-grade AI, micro SaaS, and IT solutions. Contact us at +1 302 464 0950 or kleber@ziontechgroup.com./>"
+        <link rel: "canonical", href ="https://ziontechgroup.com//>"
+        <meta name="description" content="Enterprise-grade AI, micro SaaS, and IT solutions. Contact us at +1 302 464 0950 or kleber@ziontechgroup.com." /><link rel: "canonical", href ="https://ziontechgroup.com//>
       </Helmet>
 
       <section className="py-16 bg-gradient-to-br from-blue-50 to-indigo-50"
