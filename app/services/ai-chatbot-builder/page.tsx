@@ -1,31 +1,31 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, BarChart3, TrendingUp, DollarSign, Clock, Shield, Database, Zap, Users, Target } from 'lucide-react';
+import { CheckCircle, MessageCircle, Users, DollarSign, Clock, Shield, BarChart3, Zap, Brain, Target } from 'lucide-react';
 
-export default function AIBusinessIntelligencePlatform() {
+export default function AIChatbotBuilder() {
   return (
     <>
       <Helmet>
-        <title>AI Business Intelligence Platform | Zion Tech Group</title>
-        <meta name="description" content="Transform your data into actionable insights with AI-powered business intelligence. Get predictive analytics, automated reporting, and real-time dashboards." />
-        <meta name="keywords" content="AI business intelligence, predictive analytics, data visualization, automated reporting, business insights" />
-        <link rel="canonical" href="https://ziontechgroup.com/services/ai-business-intelligence-platform" />
+        <title>AI Chatbot Builder | Zion Tech Group</title>
+        <meta name="description" content="Build intelligent AI chatbots for customer support and lead generation. No-code chatbot builder with advanced AI capabilities." />
+        <meta name="keywords" content="AI chatbot, chatbot builder, customer support automation, lead generation, conversational AI" />
+        <link rel="canonical" href="https://ziontechgroup.com/services/ai-chatbot-builder" />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-pink-900 to-slate-900">
         {/* Hero Section */}
         <div className="relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/20 to-blue-600/20"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-pink-600/20 to-purple-600/20"></div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
             <div className="text-center">
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-                AI Business Intelligence Platform
+                AI Chatbot Builder
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Transform your data into actionable insights with AI-powered business intelligence. Get predictive analytics, automated reporting, and real-time dashboards that drive growth.
+                Build intelligent AI chatbots for customer support and lead generation. No-code chatbot builder with advanced AI capabilities and seamless integrations.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#pricing" className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+                <a href="#pricing" className="bg-pink-600 hover:bg-pink-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
                   View Pricing
                 </a>
                 <a href="/contact" className="border border-white text-white hover:bg-white hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition-colors">
@@ -40,45 +40,45 @@ export default function AIBusinessIntelligencePlatform() {
         <div className="py-20 bg-slate-800/50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Powerful AI Features</h2>
-              <p className="text-xl text-gray-300">Everything you need to turn data into competitive advantage</p>
+              <h2 className="text-4xl font-bold text-white mb-4">Powerful Chatbot Features</h2>
+              <p className="text-xl text-gray-300">Everything you need to build intelligent conversational AI</p>
             </div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="bg-slate-800 p-6 rounded-lg border border-slate-700">
-                <BarChart3 className="h-12 w-12 text-emerald-400 mb-4" />
-                <h3 className="text-xl font-semibold text-white mb-3">Predictive Analytics</h3>
-                <p className="text-gray-300">Forecast trends, customer behavior, and business outcomes with advanced AI algorithms.</p>
+                <MessageCircle className="h-12 w-12 text-pink-400 mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-3">Natural Language Processing</h3>
+                <p className="text-gray-300">Advanced NLP capabilities for understanding context, intent, and sentiment in conversations.</p>
               </div>
               
               <div className="bg-slate-800 p-6 rounded-lg border border-slate-700">
-                <Database className="h-12 w-12 text-blue-400 mb-4" />
-                <h3 className="text-xl font-semibold text-white mb-3">Data Integration</h3>
-                <p className="text-gray-300">Connect and analyze data from multiple sources including CRM, ERP, and external APIs.</p>
+                <Brain className="h-12 w-12 text-purple-400 mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-3">Machine Learning</h3>
+                <p className="text-gray-300">Self-learning chatbots that improve responses over time with every interaction.</p>
               </div>
               
               <div className="bg-slate-800 p-6 rounded-lg border border-slate-700">
-                <Zap className="h-12 w-12 text-yellow-400 mb-4" />
-                <h3 className="text-xl font-semibold text-white mb-3">Automated Insights</h3>
-                <p className="text-gray-300">AI automatically identifies patterns, anomalies, and opportunities in your data.</p>
+                <Users className="h-12 w-12 text-blue-400 mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-3">Multi-Channel Support</h3>
+                <p className="text-gray-300">Deploy chatbots on websites, mobile apps, social media, and messaging platforms.</p>
               </div>
               
               <div className="bg-slate-800 p-6 rounded-lg border border-slate-700">
-                <TrendingUp className="h-12 w-12 text-green-400 mb-4" />
-                <h3 className="text-xl font-semibold text-white mb-3">Real-time Dashboards</h3>
-                <p className="text-gray-300">Monitor KPIs and metrics in real-time with customizable, interactive dashboards.</p>
+                <Target className="h-12 w-12 text-green-400 mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-3">Lead Generation</h3>
+                <p className="text-gray-300">Qualify leads, collect contact information, and schedule appointments automatically.</p>
               </div>
               
               <div className="bg-slate-800 p-6 rounded-lg border border-slate-700">
-                <Target className="h-12 w-12 text-purple-400 mb-4" />
-                <h3 className="text-xl font-semibold text-white mb-3">Smart Alerts</h3>
-                <p className="text-gray-300">Get notified of important changes and opportunities through intelligent alerting.</p>
+                <BarChart3 className="h-12 w-12 text-yellow-400 mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-3">Analytics Dashboard</h3>
+                <p className="text-gray-300">Track conversations, user satisfaction, and chatbot performance with detailed insights.</p>
               </div>
               
               <div className="bg-slate-800 p-6 rounded-lg border border-slate-700">
                 <Shield className="h-12 w-12 text-red-400 mb-4" />
                 <h3 className="text-xl font-semibold text-white mb-3">Enterprise Security</h3>
-                <p className="text-gray-300">Bank-level security with role-based access control and data encryption.</p>
+                <p className="text-gray-300">Bank-level security with data encryption, compliance, and privacy protection.</p>
               </div>
             </div>
           </div>
@@ -88,8 +88,8 @@ export default function AIBusinessIntelligencePlatform() {
         <div className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Transform Your Business Intelligence</h2>
-              <p className="text-xl text-gray-300">See how AI-powered insights drive better decisions and growth</p>
+              <h2 className="text-4xl font-bold text-white mb-4">Transform Customer Experience</h2>
+              <p className="text-xl text-gray-300">See how AI chatbots revolutionize customer support and engagement</p>
             </div>
             
             <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -98,60 +98,60 @@ export default function AIBusinessIntelligencePlatform() {
                   <div className="flex items-start space-x-4">
                     <CheckCircle className="h-6 w-6 text-green-400 mt-1 flex-shrink-0" />
                     <div>
-                      <h3 className="text-xl font-semibold text-white mb-2">Make Decisions 10x Faster</h3>
-                      <p className="text-gray-300">Get instant insights instead of waiting days or weeks for manual analysis.</p>
+                      <h3 className="text-xl font-semibold text-white mb-2">24/7 Customer Support</h3>
+                      <p className="text-gray-300">Provide instant responses to customer queries around the clock without human intervention.</p>
                     </div>
                   </div>
                   
                   <div className="flex items-start space-x-4">
                     <CheckCircle className="h-6 w-6 text-green-400 mt-1 flex-shrink-0" />
                     <div>
-                      <h3 className="text-xl font-semibold text-white mb-2">Increase Revenue by 25%</h3>
-                      <p className="text-gray-300">Identify new opportunities and optimize existing processes with AI insights.</p>
+                      <h3 className="text-xl font-semibold text-white mb-2">Reduce Support Costs by 60%</h3>
+                      <p className="text-gray-300">Handle routine inquiries automatically, freeing human agents for complex issues.</p>
                     </div>
                   </div>
                   
                   <div className="flex items-start space-x-4">
                     <CheckCircle className="h-6 w-6 text-green-400 mt-1 flex-shrink-0" />
                     <div>
-                      <h3 className="text-xl font-semibold text-white mb-2">Reduce Costs by 30%</h3>
-                      <p className="text-gray-300">Optimize operations and eliminate inefficiencies with predictive analytics.</p>
+                      <h3 className="text-xl font-semibold text-white mb-2">Increase Lead Conversion by 40%</h3>
+                      <p className="text-gray-300">Engage visitors immediately and guide them through the sales funnel with personalized conversations.</p>
                     </div>
                   </div>
                   
                   <div className="flex items-start space-x-4">
                     <CheckCircle className="h-6 w-6 text-green-400 mt-1 flex-shrink-0" />
                     <div>
-                      <h3 className="text-xl font-semibold text-white mb-2">Improve Accuracy by 95%</h3>
-                      <p className="text-gray-300">AI eliminates human error and provides consistent, reliable insights.</p>
+                      <h3 className="text-xl font-semibold text-white mb-2">Improve Response Time by 95%</h3>
+                      <p className="text-gray-300">Instant responses to customer queries improve satisfaction and reduce wait times.</p>
                     </div>
                   </div>
                 </div>
               </div>
               
-              <div className="bg-gradient-to-br from-emerald-600 to-blue-600 p-8 rounded-lg">
-                <h3 className="text-2xl font-bold text-white mb-6">ROI Calculator</h3>
+              <div className="bg-gradient-to-br from-pink-600 to-purple-600 p-8 rounded-lg">
+                <h3 className="text-2xl font-bold text-white mb-6">Chatbot Performance</h3>
                 <div className="space-y-4">
                   <div className="flex justify-between text-white">
-                    <span>Time Saved per Month:</span>
-                    <span className="font-semibold">80 hours</span>
+                    <span>Average Response Time:</span>
+                    <span className="font-semibold">0.3 seconds</span>
                   </div>
                   <div className="flex justify-between text-white">
-                    <span>Revenue Increase:</span>
-                    <span className="font-semibold">25%</span>
+                    <span>Customer Satisfaction:</span>
+                    <span className="font-semibold">92%</span>
                   </div>
                   <div className="flex justify-between text-white">
-                    <span>Cost Reduction:</span>
-                    <span className="font-semibold">30%</span>
+                    <span>Query Resolution Rate:</span>
+                    <span className="font-semibold">85%</span>
                   </div>
                   <div className="flex justify-between text-white">
-                    <span>Average Monthly Savings:</span>
-                    <span className="font-semibold">$15,000</span>
+                    <span>Lead Generation Increase:</span>
+                    <span className="font-semibold">40%</span>
                   </div>
                   <div className="border-t border-white/20 pt-4">
                     <div className="flex justify-between text-white text-lg font-bold">
-                      <span>Annual ROI:</span>
-                      <span className="text-green-300">2,400%</span>
+                      <span>ROI Timeline:</span>
+                      <span className="text-green-300">3 months</span>
                     </div>
                   </div>
                 </div>
@@ -165,32 +165,32 @@ export default function AIBusinessIntelligencePlatform() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Perfect For Every Industry</h2>
-              <p className="text-xl text-gray-300">AI business intelligence solutions tailored to your sector</p>
+              <p className="text-xl text-gray-300">AI chatbots tailored to your business needs</p>
             </div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="bg-slate-800 p-6 rounded-lg border border-slate-700 text-center">
-                <DollarSign className="h-12 w-12 text-green-400 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-white mb-3">Financial Services</h3>
-                <p className="text-gray-300">Risk assessment, fraud detection, and investment optimization with AI analytics.</p>
+                <MessageCircle className="h-12 w-12 text-pink-400 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-3">E-commerce</h3>
+                <p className="text-gray-300">Product recommendations, order tracking, and customer support for online stores.</p>
               </div>
               
               <div className="bg-slate-800 p-6 rounded-lg border border-slate-700 text-center">
                 <Users className="h-12 w-12 text-blue-400 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-white mb-3">Retail & E-commerce</h3>
-                <p className="text-gray-300">Customer behavior analysis, inventory optimization, and demand forecasting.</p>
-              </div>
-              
-              <div className="bg-slate-800 p-6 rounded-lg border border-slate-700 text-center">
-                <BarChart3 className="h-12 w-12 text-purple-400 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-white mb-3">Manufacturing</h3>
-                <p className="text-gray-300">Predictive maintenance, quality control, and supply chain optimization.</p>
-              </div>
-              
-              <div className="bg-slate-800 p-6 rounded-lg border border-slate-700 text-center">
-                <Target className="h-12 w-12 text-yellow-400 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-white mb-3">Healthcare</h3>
-                <p className="text-gray-300">Patient outcomes prediction, resource allocation, and treatment optimization.</p>
+                <p className="text-gray-300">Appointment scheduling, symptom checking, and patient support automation.</p>
+              </div>
+              
+              <div className="bg-slate-800 p-6 rounded-lg border border-slate-700 text-center">
+                <DollarSign className="h-12 w-12 text-green-400 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-3">Financial Services</h3>
+                <p className="text-gray-300">Account inquiries, transaction support, and financial advice automation.</p>
+              </div>
+              
+              <div className="bg-slate-800 p-6 rounded-lg border border-slate-700 text-center">
+                <Target className="h-12 w-12 text-purple-400 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-3">Real Estate</h3>
+                <p className="text-gray-300">Property inquiries, virtual tours, and lead qualification for real estate agents.</p>
               </div>
             </div>
           </div>
@@ -201,7 +201,7 @@ export default function AIBusinessIntelligencePlatform() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Flexible Pricing Plans</h2>
-              <p className="text-xl text-gray-300">Choose the plan that matches your data volume and analytics needs</p>
+              <p className="text-xl text-gray-300">Choose the plan that matches your chatbot needs</p>
             </div>
             
             <div className="grid md:grid-cols-3 gap-8">
@@ -209,65 +209,65 @@ export default function AIBusinessIntelligencePlatform() {
               <div className="bg-slate-800 p-8 rounded-lg border border-slate-700">
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">Starter</h3>
-                  <div className="text-4xl font-bold text-emerald-400 mb-2">$199</div>
+                  <div className="text-4xl font-bold text-pink-400 mb-2">$99</div>
                   <div className="text-gray-300">per month</div>
                 </div>
                 <ul className="space-y-4 mb-8">
                   <li className="flex items-center text-gray-300">
                     <CheckCircle className="h-5 w-5 text-green-400 mr-3" />
-                    Up to 1M data points
+                    1,000 conversations/month
                   </li>
                   <li className="flex items-center text-gray-300">
                     <CheckCircle className="h-5 w-5 text-green-400 mr-3" />
-                    5 data sources
+                    Basic chatbot builder
                   </li>
                   <li className="flex items-center text-gray-300">
                     <CheckCircle className="h-5 w-5 text-green-400 mr-3" />
-                    Basic dashboards
+                    Website integration
                   </li>
                   <li className="flex items-center text-gray-300">
                     <CheckCircle className="h-5 w-5 text-green-400 mr-3" />
                     Email support
                   </li>
                 </ul>
-                <a href="/contact" className="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-3 rounded-lg font-semibold transition-colors block text-center">
+                <a href="/contact" className="w-full bg-pink-600 hover:bg-pink-700 text-white py-3 rounded-lg font-semibold transition-colors block text-center">
                   Get Started
                 </a>
               </div>
               
               {/* Professional Plan */}
-              <div className="bg-gradient-to-br from-emerald-600 to-blue-600 p-8 rounded-lg border-2 border-emerald-500 relative">
+              <div className="bg-gradient-to-br from-pink-600 to-purple-600 p-8 rounded-lg border-2 border-pink-500 relative">
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <span className="bg-emerald-500 text-white px-4 py-1 rounded-full text-sm font-semibold">Most Popular</span>
+                  <span className="bg-pink-500 text-white px-4 py-1 rounded-full text-sm font-semibold">Most Popular</span>
                 </div>
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">Professional</h3>
-                  <div className="text-4xl font-bold text-white mb-2">$499</div>
-                  <div className="text-emerald-100">per month</div>
+                  <div className="text-4xl font-bold text-white mb-2">$299</div>
+                  <div className="text-pink-100">per month</div>
                 </div>
                 <ul className="space-y-4 mb-8">
                   <li className="flex items-center text-white">
                     <CheckCircle className="h-5 w-5 text-green-300 mr-3" />
-                    Up to 10M data points
+                    10,000 conversations/month
                   </li>
                   <li className="flex items-center text-white">
                     <CheckCircle className="h-5 w-5 text-green-300 mr-3" />
-                    Unlimited data sources
+                    Advanced AI features
                   </li>
                   <li className="flex items-center text-white">
                     <CheckCircle className="h-5 w-5 text-green-300 mr-3" />
-                    Advanced analytics
+                    Multi-channel deployment
                   </li>
                   <li className="flex items-center text-white">
                     <CheckCircle className="h-5 w-5 text-green-300 mr-3" />
-                    Predictive models
+                    Analytics dashboard
                   </li>
                   <li className="flex items-center text-white">
                     <CheckCircle className="h-5 w-5 text-green-300 mr-3" />
                     Priority support
                   </li>
                 </ul>
-                <a href="/contact" className="w-full bg-white hover:bg-gray-100 text-emerald-600 py-3 rounded-lg font-semibold transition-colors block text-center">
+                <a href="/contact" className="w-full bg-white hover:bg-gray-100 text-pink-600 py-3 rounded-lg font-semibold transition-colors block text-center">
                   Get Started
                 </a>
               </div>
@@ -276,17 +276,17 @@ export default function AIBusinessIntelligencePlatform() {
               <div className="bg-slate-800 p-8 rounded-lg border border-slate-700">
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">Enterprise</h3>
-                  <div className="text-4xl font-bold text-blue-400 mb-2">$999</div>
+                  <div className="text-4xl font-bold text-purple-400 mb-2">$799</div>
                   <div className="text-gray-300">per month</div>
                 </div>
                 <ul className="space-y-4 mb-8">
                   <li className="flex items-center text-gray-300">
                     <CheckCircle className="h-5 w-5 text-green-400 mr-3" />
-                    Unlimited data points
+                    Unlimited conversations
                   </li>
                   <li className="flex items-center text-gray-300">
                     <CheckCircle className="h-5 w-5 text-green-400 mr-3" />
-                    Custom AI models
+                    Custom AI training
                   </li>
                   <li className="flex items-center text-gray-300">
                     <CheckCircle className="h-5 w-5 text-green-400 mr-3" />
@@ -301,7 +301,7 @@ export default function AIBusinessIntelligencePlatform() {
                     Dedicated support
                   </li>
                 </ul>
-                <a href="/contact" className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-semibold transition-colors block text-center">
+                <a href="/contact" className="w-full bg-purple-600 hover:bg-purple-700 text-white py-3 rounded-lg font-semibold transition-colors block text-center">
                   Contact Sales
                 </a>
               </div>
@@ -313,17 +313,17 @@ export default function AIBusinessIntelligencePlatform() {
         <div className="py-20 bg-slate-800/50">
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
             <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Data into Insights?
+              Ready to Build Your AI Chatbot?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join industry leaders using AI to make smarter, faster business decisions.
+              Join thousands of businesses using AI chatbots to improve customer experience.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="/contact" className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+              <a href="/contact" className="bg-pink-600 hover:bg-pink-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
                 Start Free Trial
               </a>
-              <a href="tel:+13024640950" className="border border-white text-white hover:bg-white hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition-colors">
-                Call: +1 302 464 0950
+              <a href="mailto:kleber@ziontechgroup.com" className="border border-white text-white hover:bg-white hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition-colors">
+                Email: kleber@ziontechgroup.com
               </a>
             </div>
           </div>
