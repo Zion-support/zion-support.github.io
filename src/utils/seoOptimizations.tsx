@@ -68,13 +68,6 @@ export const seoUtils = {
       "url": article.image || "https://zion.app/logo.png"
     }
   })
-<<<<<<< HEAD
-<<<<<<< HEAD
-});
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3097
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-bd26
 };
 
 // Sitemap generation utilities
@@ -202,15 +195,15 @@ export const analyticsUtils = {
 
   // Track custom events
   trackEvent: (eventName: string, parameters?: Record<string, unknown>) => {
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', eventName, parameters);
+    if (typeof window !== 'undefined' && (window as typeof window & { gtag?: Function }).gtag) {
+      (window as typeof window & { gtag: Function }).gtag('event', eventName, parameters);
     }
   },
 
   // Track conversion events
   trackConversion: (conversionId: string, value?: number) => {
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'conversion', {
+    if (typeof window !== 'undefined' && (window as typeof window & { gtag?: Function }).gtag) {
+      (window as typeof window & { gtag: Function }).gtag('event', 'conversion', {
         send_to: conversionId,
         value: value
       });
