@@ -1,3 +1,5 @@
+import React from 'react';
+<<<<<<< HEAD
 import Link from 'next/link';
 import { Metadata } from 'next';
 
@@ -361,6 +363,13 @@ export default function ServicesPage() {
       href: '/services/ai-analytics'
     }
   ];
+=======
+import { Link } from 'react-router-dom';
+import { services } from './data';
+
+
+export default function ServicesPage() {
+>>>>>>> 4827493512ccda65d599f4b1883fe42e9d48ba18
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
@@ -433,7 +442,11 @@ export default function ServicesPage() {
                   ))}
                 </ul>
                 <Link
+<<<<<<< HEAD
                   href={service.href}
+=======
+                  to={service.href}
+>>>>>>> 4827493512ccda65d599f4b1883fe42e9d48ba18
                   className="inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 group"
                 >
                   <span>Learn More</span>
