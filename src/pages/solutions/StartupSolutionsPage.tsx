@@ -5,25 +5,25 @@ import { Helmet } from 'react-helmet-async';
 const StartupSolutionsPage: React.FC = () => {
   const startupSolutions = [
     {
-      title: "MVP Development"
-      description: "Rapid development of minimum viable products to validate your ideas and get to market quickly."
-      icon: "🚀"
+      title: "MVP Development",
+      description: "Rapid development of minimum viable products to validate your ideas and get to market quickly.",
+      icon: "🚀",
       features: ["Rapid Prototyping", "Agile Development", "User Testing", "Iterative Improvement"],
     },
     {
-      title: "Scalable Architecture"
-      description: "Build your startup on a foundation that can scale from prototype to enterprise without major rewrites."
-      icon: "📈"
+      title: "Scalable Architecture",
+      description: "Build your startup on a foundation that can scale from prototype to enterprise without major rewrites.",
+      icon: "📈",
       features: ["Microservices Architecture", "Cloud-Native Design", "Auto-scaling", "Performance Optimization"],
     },
     {
-      title: "AI Integration"
-      description: "Leverage artificial intelligence to differentiate your product and create competitive advantages."
+      title: "AI Integration",
+      description: "Leverage artificial intelligence to differentiate your product and create competitive advantages.",
       icon: "🤖"
       features: ["AI-Powered Features", "Machine Learning Models", "Natural Language Processing", "Predictive Analytics"],
     },
     {
-      title: "Growth Analytics"
+      title: "Growth Analytics",
       description: "Data-driven insights to understand user behavior, optimize conversion, and drive sustainable growth."
       icon: "📊"
       features: ["User Analytics", "Conversion Tracking", "A/B Testing", "Growth Metrics"],

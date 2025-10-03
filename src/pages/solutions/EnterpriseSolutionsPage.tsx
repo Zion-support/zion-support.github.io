@@ -5,39 +5,6 @@ import { Helmet } from 'react-helmet-async';
 const EnterpriseSolutionsPage: React.FC = () => {
   const enterpriseSolutions = [
     {
-      title: "Enterprise AI Platform"
-      description: "Comprehensive AI platform designed for large-scale enterprise deployment with advanced analytics and automation capabilities."
-      icon: "🏢"
-      features: ["Scalable AI Infrastructure", "Enterprise Security", "Multi-tenant Architecture", "Advanced Analytics"],
-    },
-    {
-      title: "Digital Transformation"
-      description: "Complete digital transformation solutions that modernize legacy systems and enable new digital capabilities."
-      icon: "🔄"
-      features: ["Legacy Modernization", "Cloud Migration", "Process Automation", "Change Management"],
-    },
-    {
-      title: "Enterprise Security"
-      description: "Comprehensive security solutions including threat detection, compliance management, and data protection."
-      icon: "🛡️"
-      features: ["Threat Detection", "Compliance Management", "Data Protection", "Security Monitoring"],
-    },
-    {
-      title: "Enterprise Analytics"
-      description: "Advanced analytics and business intelligence solutions for data-driven decision making across the organization."
-      icon: "📊"
-      features: ["Business Intelligence", "Predictive Analytics", "Real-time Dashboards", "Data Governance"],
-    },
-    {
-      title: "Enterprise Integration"
-      description: "Seamless integration solutions that connect disparate systems and enable data flow across the enterprise."
-      icon: "🔗"
-      features: ["System Integration", "API Management", "Data Synchronization", "Workflow Automation"],
-    },
-    {
-      title: "Enterprise Support"
-      description: "24/7 enterprise-grade support and maintenance services to ensure optimal system performance."
-      icon: "🛠️"
       title: "Enterprise AI Platform",
       description: "Comprehensive AI platform designed for large-scale enterprise deployment with advanced analytics and automation capabilities.",
       icon: "🏢",
@@ -71,7 +38,7 @@ const EnterpriseSolutionsPage: React.FC = () => {
       title: "Enterprise Support",
       description: "24/7 enterprise-grade support and maintenance services to ensure optimal system performance.",
       icon: "🛠️",
-      features: ["24/7 Support", "Proactive Monitoring", "Performance Optimization", "Disaster Recovery"],
+      features: ["24/7 Support", "Priority Response", "System Maintenance", "Performance Optimization"],
     }
   ];
 
