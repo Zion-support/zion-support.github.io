@@ -1,6 +1,6 @@
-import React, { memo } from 'react;
+import React, { memo } from 'react';
 interface LoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg;
+  size?: 'sm' | 'md' | 'lg';
   text?: string;
   className?: string;
 }
@@ -20,13 +20,13 @@ const LoadingSpinner = memo<LoadingSpinnerProps>(({
     <div className={`flex items-center justify-center h-full p-8 ${className}`} role="status" aria-label="Loading">
       <div 
         className={`${sizeClasses[size]} border-blue-500 border-t-transparent rounded-full animate-spin`}
-        aria-hidden="true/>
+        aria-hidden="true" />
       <span className="ml-4 text-lg text-gray-600 sr-only">{text}</span>
     </div>
   );
 });
 
-LoadingSpinner.displayName = 'LoadingSpinner;
+LoadingSpinner.displayName = 'LoadingSpinner';
 interface PageLoaderProps {
   text?: string;
   className?: string;
