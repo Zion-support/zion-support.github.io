@@ -25,40 +25,40 @@ export const generateMetaTags = (metadata: SEOMetadata): string => {
   
   // Basic meta tags
   tags.push(`<title>${escapeHtml(metadata.title)}</title>`);
-  tags.push(`<meta name="description" content="${escapeHtml(metadata.description)}" />`);
+  tags.push(`<meta name="description" content="${escapeHtml(metadata.description)}" />`);"
   
   if (metadata.keywords && metadata.keywords.length > 0) {
-    tags.push(`<meta name="keywords" content="${metadata.keywords.join(', ')}" />`);
+    tags.push(`<meta name="keywords" content="${metadata.keywords.join(', ')}" />`);"
   }
   
   if (metadata.author) {
-    tags.push(`<meta name="author" content="${escapeHtml(metadata.author)}" />`);
+    tags.push(`<meta name="author" content="${escapeHtml(metadata.author)}" />`);"
   }
   
   if (metadata.canonicalUrl) {
-    tags.push(`<link rel="canonical" href="${escapeHtml(metadata.canonicalUrl)}" />`);
+    tags.push(`<link rel="canonical" href="${escapeHtml(metadata.canonicalUrl)}" />`);"
   }
 
   // Open Graph tags
-  tags.push(`<meta property="og:title" content="${escapeHtml(metadata.ogTitle || metadata.title)}" />`);
-  tags.push(`<meta property="og:description" content="${escapeHtml(metadata.ogDescription || metadata.description)}" />`);
-  tags.push(`<meta property="og:type" content="${metadata.ogType || 'website'}" />`);
+  tags.push(`<meta property="og:title" content="${escapeHtml(metadata.ogTitle || metadata.title)}" />`);"
+  tags.push(`<meta property="og:description" content="${escapeHtml(metadata.ogDescription || metadata.description)}" />`);"
+  tags.push(`<meta property="og:type" content="${metadata.ogType || 'website'}" />`);"
   
   if (metadata.ogImage) {
-    tags.push(`<meta property="og:image" content="${escapeHtml(metadata.ogImage)}" />`);
+    tags.push(`<meta property="og:image" content="${escapeHtml(metadata.ogImage)}" />`);"
   }
   
   if (metadata.canonicalUrl) {
-    tags.push(`<meta property="og:url" content="${escapeHtml(metadata.canonicalUrl)}" />`);
+    tags.push(`<meta property="og:url" content="${escapeHtml(metadata.canonicalUrl)}" />`);"
   }
 
   // Twitter Card tags
-  tags.push(`<meta name="twitter:card" content="${metadata.twitterCard || 'summary_large_image'}" />`);
-  tags.push(`<meta name="twitter:title" content="${escapeHtml(metadata.twitterTitle || metadata.title)}" />`);
-  tags.push(`<meta name="twitter:description" content="${escapeHtml(metadata.twitterDescription || metadata.description)}" />`);
+  tags.push(`<meta name="twitter:card" content="${metadata.twitterCard || 'summary_large_image'}" />`);"
+  tags.push(`<meta name="twitter:title" content="${escapeHtml(metadata.twitterTitle || metadata.title)}" />`);"
+  tags.push(`<meta name="twitter:description" content="${escapeHtml(metadata.twitterDescription || metadata.description)}" />`);"
   
   if (metadata.twitterImage || metadata.ogImage) {
-    tags.push(`<meta name="twitter:image" content="${escapeHtml(metadata.twitterImage || metadata.ogImage || '')}" />`);
+    tags.push(`<meta name="twitter:image" content="${escapeHtml(metadata.twitterImage || metadata.ogImage || '')}" />`);"
   }
   
   return tags.join('\n');
@@ -74,7 +74,7 @@ export const generateStructuredData = (type: string, data: Record<string, unknow
     ...data
   } as Record<string, unknown>;
   
-  return `<script type="application/ld+json">${JSON.stringify(structuredData, null, 2)}</script>`;
+  return `<script type="application/ld+json">${JSON.stringify(structuredData, null, 2)}</script>`;"
 };
 
 export const generateArticleStructuredData = (article: {
@@ -162,7 +162,7 @@ export const generateSitemapXML = (urls: Array<{ loc: string; lastmod?: string; 
     })
     .join('\n');
     
-  return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urlsXml}\n</urlset>`;
+  return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urlsXml}\n</urlset>`;"
 };
 
 export const generateRobotsTxt = (config: {
@@ -193,7 +193,7 @@ export const generateRobotsTxt = (config: {
 /**
  * Optimize title for SEO
  */
-export const optimizeTitle = (title: string, maxLength: number = 60): string => {
+export const optimizeTitle = (title= string, maxLength: number = 60): string => {
   if (title.length <= maxLength) return title;
   const truncated = title.substring(0, maxLength);
   const lastSpace = truncated.lastIndexOf(' ');
@@ -234,7 +234,7 @@ export const extractKeywords = (content: string, maxKeywords: number = 10): stri
 /**
  * Generate URL slug from title
  */
-export const generateSlug = (title: string): string => {
+export const generateSlug = (title= string): string => {
   return title
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, '-')
@@ -278,10 +278,10 @@ function escapeHtml(text: string): string {
     '&': '&amp;',
     '<': '&lt;',
     '>': '&gt;',
-    '"': '&quot;',
-    "'": '&#039;'
+    '"': '&quot;',"
+    "'": '&#039;'"
   };
-  return text.replace(/[&<>"']/g, (m) => map[m]);
+  return text.replace(/[&<>"']/g, (m) => map[m]);"
 }
 
 /**
@@ -297,7 +297,7 @@ export const calculateReadingTime = (content: string, wordsPerMinute: number = 2
  */
 export const checkContentQuality = (
   content: string,
-  title: string,
+  title= string,
 ): { score: number; issues: string[]; recommendations: string[] } => {
   const issues: string[] = [];
   const recommendations: string[] = [];

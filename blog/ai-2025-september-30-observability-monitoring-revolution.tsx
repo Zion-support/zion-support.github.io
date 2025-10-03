@@ -178,7 +178,7 @@ export default function AI2025September30ObservabilityMonitoringRevolution() {
 {`import { trace } from "@observability/llm";
 
 const completion = await trace.llm.call({
-  model: "gpt-4",
+  model: "gpt-4
   prompt: userQuery,
   metadata: { userId, sessionId }
 });`}
@@ -195,8 +195,8 @@ const completion = await trace.llm.call({
 {`const evaluation = await evaluator.check({
   output: completion.text,
   checks: [
-    "hallucination",
-    "toxicity",
+    "hallucination
+    "toxicity
     "pii_detection"
   ]
 });`}

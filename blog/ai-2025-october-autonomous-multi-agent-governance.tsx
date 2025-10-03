@@ -367,8 +367,8 @@ allow {
 # Deploy governance engine
 governance = AgentGovernanceEngine()
 await governance.validate_agent_action("agent-42", {
-    "type": "data_access",
-    "resource": "customer_db.orders",
+    "type": "data_access
+    "resource": "customer_db.orders
     "amount": 5000
 })
 `}</code>

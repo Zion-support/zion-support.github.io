@@ -96,7 +96,7 @@ describe('TeamBuilderPage;
 
       recommendationSummary: 1 PM, 1 Dev,
 
-  ,
+
 
           weeklyHours: 40,
           matchedTalent: []}],

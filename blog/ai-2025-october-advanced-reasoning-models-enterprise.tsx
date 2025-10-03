@@ -119,7 +119,7 @@ Monitoring: Prometheus + Grafana + Custom Metrics`}</code>
       <pre className="bg-slate-900 p-4 rounded-lg overflow-x-auto">
         <code>{`# Configure reasoning domain and rules
 reasoning_config = {
-    "domain": "financial_risk_assessment",
+    "domain": "financial_risk_assessment
     "reasoning_depth": 5,  # Max chain length
     "confidence_threshold": 0.85,
     "explainability": "full"
@@ -130,9 +130,9 @@ reasoning_config = {
       <pre className="bg-slate-900 p-4 rounded-lg overflow-x-auto">
         <code>{`# Import enterprise knowledge
 knowledge_base.load([
-    "financial_statements.csv",
-    "market_data.json",
-    "historical_decisions.db",
+    "financial_statements.csv
+    "market_data.json
+    "historical_decisions.db
     "risk_assessment_rules.yaml"
 ])`}</code>
       </pre>
@@ -141,7 +141,7 @@ knowledge_base.load([
       <pre className="bg-slate-900 p-4 rounded-lg overflow-x-auto">
         <code>{`# Perform reasoning with explanation
 result = reasoning_engine.analyze(
-    query="Assess credit risk for loan application #12847",
+    query="Assess credit risk for loan application #12847
     show_reasoning=True,
     output_format="detailed"
 )

@@ -1,78 +1,13 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import './globals.css';
 
-interface LayoutProps {
+export default function RootLayout({
+  children,
+}: {
   children: React.ReactNode;
-}
-
-export default function RootLayout({ children }: LayoutProps) {
+}) {
   return (
-    <html lang="en">
-      <head>
-        <Helmet>
-          <meta charSet="utf-8" />
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <meta name="description" content="Zion Tech Group - Revolutionary AI Solutions for Enterprise. Transform your business with Meta-Cognitive AI, Quantum-Neural Networks, and Autonomous Operations." />
-          <meta name="keywords" content="AI, Enterprise AI, Quantum Computing, Autonomous Operations, Meta-Cognitive AI, Zion Tech Group" />
-          <meta name="author" content="Zion Tech Group" />
-          <meta name="robots" content="index, follow" />
-          
-          {/* Open Graph Meta Tags */}
-          <meta property="og:title" content="Zion Tech Group - Revolutionary AI Solutions for Enterprise" />
-          <meta property="og:description" content="Transform your business with Meta-Cognitive AI, Quantum-Neural Networks, and Autonomous Operations. Experience 2000x processing speed and 99.9% automation rates." />
-          <meta property="og:type" content="website" />
-          <meta property="og:url" content="https://ziontechgroup.com" />
-          <meta property="og:site_name" content="Zion Tech Group" />
-          
-          {/* Twitter Card Meta Tags */}
-          <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:title" content="Zion Tech Group - Revolutionary AI Solutions for Enterprise" />
-          <meta name="twitter:description" content="Transform your business with Meta-Cognitive AI, Quantum-Neural Networks, and Autonomous Operations." />
-          
-          {/* Favicon */}
-          <link rel="icon" href="/favicon.ico" />
-          <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-          <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-          <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-          
-          {/* Preconnect to external domains */}
-          <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-          
-          {/* Structured Data */}
-          <script type="application/ld+json">
-            {JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              "name": "Zion Tech Group",
-              "url": "https://ziontechgroup.com",
-              "logo": "https://ziontechgroup.com/logo.png",
-              "description": "Revolutionary AI Solutions for Enterprise",
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "364 E Main St STE 1008",
-                "addressLocality": "Middletown",
-                "addressRegion": "DE",
-                "postalCode": "19709",
-                "addressCountry": "US"
-              },
-              "contactPoint": {
-                "@type": "ContactPoint",
-                "telephone": "+1-302-464-0950",
-                "contactType": "customer service",
-                "email": "kleber@ziontechgroup.com"
-              },
-              "sameAs": [
-                "https://ziontechgroup.com"
-              ]
-            })}
-          </script>
-        </Helmet>
-      </head>
-      <body>
-        {children}
-      </body>
+    <html lang="en">"
+      <body>{children}</body>
     </html>
   );
 }
