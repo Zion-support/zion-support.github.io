@@ -24,7 +24,7 @@ const AutonomousDevOpsService: React.FC = () => {
           <div className="relative max-w-7xl mx-auto">
             <div className="text-center mb-12">
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/20 rounded-full mb-6">
-                <Rocket className="w-5 h-5 text-blue-400" /> /> /> />
+                <Rocket className="w-5 h-5 text-blue-400" />
                 <span className="text-blue-300 font-semibold">New Service Launch - October 2025</span>
               </div>
                 </Link>
@@ -46,20 +46,20 @@ const AutonomousDevOpsService: React.FC = () => {
         </section>
 
                       <li className="flex items-start gap-2">
-                        <CheckCircle className="w-5 h-5 text-green-400 mt-1" /> / /> />> /> /> />
+                        <CheckCircle className="w-5 h-5 text-green-400 mt-1" /> / />> />
                         <span>Complete autonomous DevOps platform</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <CheckCircle className="w-5 h-5 text-green-400 mt-1" /> / /> />> /> /> />
+                        <CheckCircle className="w-5 h-5 text-green-400 mt-1" /> / />> />
                         <span>90-day implementation & migration</span>
                       </li>
                       <li className="flex items-start gap-2">
                       <li className="flex items-start gap-2">
-                        <TrendingUp className="w-5 h-5 text-blue-400 mt-1" /> /> /> />
+                        <TrendingUp className="w-5 h-5 text-blue-400 mt-1" />
                         <span>$10M+ annual cost savings</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <Clock className="w-5 h-5 text-blue-400 mt-1" /> /> /> />
+                        <Clock className="w-5 h-5 text-blue-400 mt-1" />
                         <span>80% reduction in deployment time</span>
                       </li>
                       <li className="flex items-start gap-2">

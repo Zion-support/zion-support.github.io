@@ -15,13 +15,13 @@ function App(): React.JSX.Element {
     <ErrorBoundary>
       <Router>
         <div className="min-h-screen bg-slate-950 text-white">
-          <Suspense fallback={><PageLoader />}>
+          <Suspense fallback={<PageLoader />}>
             <Routes>
-              <Route path="/" element={><LazyHomePage />} />
-              <Route path="/blog" element={><LazyBlogPage />} />
-              <Route path="/case-studies" element={><LazyCaseStudiesPage />} />
-              <Route path="/contact" element={><LazyContactPage />} />
-              <Route path="/services" element={><LazyServicesPage />} />
+              <Route path="/" element={<LazyHomePage />} />
+              <Route path="/blog" element={<LazyBlogPage />} />
+              <Route path="/case-studies" element={<LazyCaseStudiesPage />} />
+              <Route path="/contact" element={<LazyContactPage />} />
+              <Route path="/services" element={<LazyServicesPage />} />
               
               {/* Service-specific routes */}
               <Route path="/services/quantum-consciousness-ai-consulting" element={
@@ -56,7 +56,7 @@ function App(): React.JSX.Element {
               } />
               
               {/* 404 fallback */}
-              <Route path="*" element={>
+              <Route path="*" element={
                 <div className="min-h-screen flex items-center justify-center">
                   <div className="text-center">
                     <h1 className="text-4xl font-bold mb-4">404 - Page Not Found</h1>

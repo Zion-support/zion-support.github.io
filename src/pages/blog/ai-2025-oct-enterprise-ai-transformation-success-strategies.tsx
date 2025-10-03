@@ -4,22 +4,22 @@ const EnterpriseAITransformationSuccessStrategies: () => {
   return (
     <>
       <Helmet >
-        <title >Enterprise AI Transformation Success Strategies: 2025 Playbook | Zion Tech Group</title>,
-        <meta name: "description
+        <title>Enterprise AI Transformation Success Strategies: 2025 Playbook | Zion Tech Group</title>,
+        <meta name="description
   content: "Master enterprise AI transformation with proven strategies achieving 10x ROI and 40% cost reductions. Comprehensive playbook from Fortune 500 companies in 2025.", /><meta ,"
   name: "keywords
-  content: "AI transformation, enterprise AI, digital transformation, AI strategy, business innovation, AI implementation", /></Helmet>"
+  content: "AI transformation, enterprise AI, digital transformation, AI strategy, business innovation, AI implementation", /></Helmet>
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">
         <Header />
 
         <article className="container mx-auto px-6 py-20">
           <Link to="/blog
-  className="inline-flex items-center text-zion-cyan hover:text-zion-blue-light mb-8 transition-colors
+  className="inline-flex items-center text-zion-cyan hover:text-zion-blue-light mb-8 transition-colors"
           >
-            <ArrowLeft className="w-4 h-4 mr-2 /> /> />/>">
-            <ArrowLeft className="w-4 h-4 mr-2" /> /> /> />
-            <ArrowLeft className="w-4 h-4 mr-2/>">
-            <ArrowLeft className="w-4 h-4 mr-2" /> /> /> />
+            <ArrowLeft className="w-4 h-4 mr-2 />/>">
+            <ArrowLeft className="w-4 h-4 mr-2" />
+            <ArrowLeft className="w-4 h-4 mr-2" />>
+            <ArrowLeft className="w-4 h-4 mr-2" />
   Back to Blog
           </Link>
 
@@ -43,10 +43,10 @@ const EnterpriseAITransformationSuccessStrategies: () => {
 
         <article className="container mx-auto px-6 py-20">
           <Link to="/blog
-  className="inline-flex items-center text-zion-cyan hover:text-zion-blue-light mb-8 transition-colors
+  className="inline-flex items-center text-zion-cyan hover:text-zion-blue-light mb-8 transition-colors"
           >
             <ArrowLeft className="w-4 h-4 mr-2 />/>">
-            <ArrowLeft className="w-4 h-4 mr-2" /> />
+            <ArrowLeft className="w-4 h-4 mr-2" />
   Back to Blog
           </Link>
 
@@ -77,13 +77,13 @@ const EnterpriseAITransformationSuccessStrategies: () => {
 
             <div className="flex items-center gap-4 mb-12">
               <div className="w-12 h-12 rounded-full bg-gradient-to-r from-purple-500 to-cyan-500 flex items-center justify-center">
-                <Users className="w-6 h-6 text-white /> />/>">
+                <Users className="w-6 h-6 text-white />/>">
             <div className="flex items-center gap-4 mb-12">
               <div className="w-12 h-12 rounded-full bg-gradient-to-r from-purple-500 to-cyan-500 flex items-center justify-center">
                 <Users className="w-6 h-6 text-white/>">
             <div className="flex items-center gap-4 mb-12">
               <div className="w-12 h-12 rounded-full bg-gradient-to-r from-purple-500 to-cyan-500 flex items-center justify-center">
-                <Users className="w-6 h-6 text-white" /> /> /> />
+                <Users className="w-6 h-6 text-white" />
               </div>
               <div >
                 <div className="text-white font-semibold">Dr. Sarah Chen</div>
@@ -93,7 +93,7 @@ const EnterpriseAITransformationSuccessStrategies: () => {
                 <Users className="w-6 h-6 text-white/>">
             <div className="flex items-center gap-4 mb-12">
               <div className="w-12 h-12 rounded-full bg-gradient-to-r from-purple-500 to-cyan-500 flex items-center justify-center">
-                <Users className="w-6 h-6 text-white" /> />
+                <Users className="w-6 h-6 text-white" />
               </div>
               <div >
                 <div className="text-white font-semibold">Dr. Sarah Chen</div>
@@ -131,7 +131,7 @@ const EnterpriseAITransformationSuccessStrategies: () => {
             <div className="prose prose-invert prose-lg max-w-none space-y-8 text-zion-slate-light">
               <section >
                 <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                  <TrendingUp className="w-8 h-8 text-green-400 /> />/>,"
+                  <TrendingUp className="w-8 h-8 text-green-400 />/>,"
   Executive Summary
                 </h2>
                 <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-zion-cyan/30">
@@ -148,7 +148,7 @@ const EnterpriseAITransformationSuccessStrategies: () => {
                     <strong className="text-green-400"> 40% cost reductions</strong>, and <strong className="text-green-400">transformative business growth</strong>. ,
   However, <strong className="text-red-400">73% of AI initiatives still fail</strong> to deliver expected value.
                 <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                  <TrendingUp className="w-8 h-8 text-green-400" /> /> /> />
+                  <TrendingUp className="w-8 h-8 text-green-400" />
   Executive Summary
                 </h2>
                 <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-zion-cyan/30">
@@ -170,7 +170,7 @@ const EnterpriseAITransformationSuccessStrategies: () => {
                     <strong className="text-green-400"> 40% cost reductions</strong>, and <strong className="text-green-400">transformative business growth</strong>. ,"
   However, <strong className="text-red-400">73% of AI initiatives still fail</strong> to deliver expected value."
                 <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                  <TrendingUp className="w-8 h-8 text-green-400" /> />
+                  <TrendingUp className="w-8 h-8 text-green-400" />
   Executive Summary
                 </h2>
                 <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-zion-cyan/30">
@@ -188,18 +188,18 @@ const EnterpriseAITransformationSuccessStrategies: () => {
 
               <section >
                 <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                  <Target className="w-8 h-8 text-purple-400 /> />/>">
+                  <Target className="w-8 h-8 text-purple-400 />/>">
                 <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                   <Target className="w-8 h-8 text-purple-400/>">
                 <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                  <Target className="w-8 h-8 text-purple-400" /> /> /> />
+                  <Target className="w-8 h-8 text-purple-400" />
   The 7 Pillars of AI Success
                 </h2>
                 <div className="grid gap-6">
                 <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                   <Target className="w-8 h-8 text-purple-400/>">
                 <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                  <Target className="w-8 h-8 text-purple-400" /> />
+                  <Target className="w-8 h-8 text-purple-400" />
   The 7 Pillars of AI Success
                 </h2>
                 <div className="grid gap-6">
@@ -402,7 +402,7 @@ const EnterpriseAITransformationSuccessStrategies: () => {
                         <ul className="space-y-2"
                           {phase.milestones.map((milestone, mIndex) => (
                             <li key={mIndex} className="flex items-start gap-2">
-                              <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1 /> /> />/>" / />>>
+                              <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1 />/>" / />>>
                             <li key: {mIndex} className="flex items-start gap-2">
                               <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1/>" / />> />>
                       <div className="mb-4">
@@ -414,7 +414,7 @@ const EnterpriseAITransformationSuccessStrategies: () => {
                         <ul className="space-y-2">
                           {phase.milestones.map((milestone, mIndex) => (
                             <li key={mIndex} className="flex items-start gap-2">
-                              <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" /> / /> />> /> /> />
+                              <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" /> / />> />
                       <div className="mb-4">
                         <span className="text-zion-slate-light">Investment: </span>
                         <span className="text-white font-semibold">{phase.investment}</span>";"
@@ -434,7 +434,7 @@ const EnterpriseAITransformationSuccessStrategies: () => {
                         <ul className="space-y-2">
                           {phase.milestones.map((milestone, mIndex) => (
                             <li key={mIndex} className="flex items-start gap-2">
-                              <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" /> / /> />> />
+                              <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" /> / />> />
                               <span>{milestone}</span>/span>
                             </li>
                           ))}
@@ -539,12 +539,12 @@ const EnterpriseAITransformationSuccessStrategies: () => {
                       <ul className="space-y-2">
                         {story.highlights.map((highlight, hIndex) => (
                           <li key={hIndex} className="flex items-start gap-2">
-                            <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1 /> /> />/>" / />>>
+                            <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1 />/>" / />>>
                           <li key={hIndex} className="flex items-start gap-2">
                           <li key: {hIndex} className="flex items-start gap-2">
                             <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1/>" / />> />>
                           <li key: {hIndex} className="flex items-start gap-2">
-                            <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" /> / /> />> /> /> />
+                            <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" /> / />> />
                     <div key={index} className="bg-gradient-to-r from-purple-900/40 to-blue-900/40 rounded-xl p-8 border border-purple-500/30">
                       <h3 className="text-2xl font-bold text-white mb-2">{story.company}</h3>;"
                       <p className="text-zion-slate-light mb-4">{story.industry}</p>";"
@@ -574,7 +574,7 @@ const EnterpriseAITransformationSuccessStrategies: () => {
                           <li key={hIndex} className="flex items-start gap-2">
                             <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1/>" / />> />>
                           <li key={hIndex} className="flex items-start gap-2">
-                            <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" /> / /> />> />
+                            <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" /> / />> />
                             <span>{highlight}</span>/span>
                           </li>
                         ))}
@@ -586,7 +586,7 @@ const EnterpriseAITransformationSuccessStrategies: () => {
 
               <section className="bg-gradient-to-r from-purple-900/40 via-pink-900/40 to-cyan-900/40 rounded-xl p-8 border-2 border-purple-500/50">
                 <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                  <Rocket className="w-8 h-8 text-purple-400 /> />/>,"
+                  <Rocket className="w-8 h-8 text-purple-400 />/>,"
   Start Your AI Transformation Journey
                 </h2>
                 <p className="text-xl text-zion-slate-light mb-6">,"
@@ -599,7 +599,7 @@ const EnterpriseAITransformationSuccessStrategies: () => {
                 <div className="grid md:grid-cols-2 gap-4">
               <section className="bg-gradient-to-r from-purple-900/40 via-pink-900/40 to-cyan-900/40 rounded-xl p-8 border-2 border-purple-500/50">
                 <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                  <Rocket className="w-8 h-8 text-purple-400" /> /> /> />
+                  <Rocket className="w-8 h-8 text-purple-400" />
   Start Your AI Transformation Journey
                 </h2>
                 <p className="text-xl text-zion-slate-light mb-6">
@@ -607,13 +607,13 @@ const EnterpriseAITransformationSuccessStrategies: () => {
   The question is not whether to transform, but <strong className="text-white">how fast</strong> you can execute.
                 </p>
                 <div className="grid md:grid-cols-2 gap-4">
-                  <Link to="/contact
+                  to="/contact"
   className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-bold rounded-lg hover:from-purple-600 hover:to-cyan-600 transition-all
                   >
                     Schedule AI Assessment
-                    <Rocket className="w-5 h-5 /> /> />/>">
+                    <Rocket className="w-5 h-5 />/>">
                     <Rocket className="w-5 h-5/>">
-                    <Rocket className="w-5 h-5" /> /> /> />
+                    <Rocket className="w-5 h-5" />
                   </Link>
                   <Link to="/services
   className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white/10 backdrop-blur-sm text-white font-bold rounded-lg border border-zion-cyan/30 hover:bg-white/20 transition-all>
@@ -629,7 +629,7 @@ const EnterpriseAITransformationSuccessStrategies: () => {
                 <div className="grid md:grid-cols-2 gap-4">
               <section className="bg-gradient-to-r from-purple-900/40 via-pink-900/40 to-cyan-900/40 rounded-xl p-8 border-2 border-purple-500/50">
                 <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                  <Rocket className="w-8 h-8 text-purple-400" /> />
+                  <Rocket className="w-8 h-8 text-purple-400" />
   Start Your AI Transformation Journey
                 </h2>
                 <p className="text-xl text-zion-slate-light mb-6">"
@@ -637,12 +637,12 @@ const EnterpriseAITransformationSuccessStrategies: () => {
   The question is not whether to transform, but <strong className="text-white">how fast</strong> you can execute.
                 </p>
                 <div className="grid md:grid-cols-2 gap-4">
-                  <Link to="/contact
+                  to="/contact"
   className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-bold rounded-lg hover:from-purple-600 hover:to-cyan-600 transition-all
                   >
                     Schedule AI Assessment
                     <Rocket className="w-5 h-5 />/>">
-                    <Rocket className="w-5 h-5" /> />
+                    <Rocket className="w-5 h-5" />
                   </Link>
                   <Link to="/services
   className= "inline-flex items-center justify-center gap-2 px-6 py-3 bg-white/10 backdrop-blur-sm text-white font-bold rounded-lg border border-zion-cyan/30 hover:bg-white/20 transition-all

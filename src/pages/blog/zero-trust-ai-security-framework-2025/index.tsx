@@ -9,7 +9,7 @@ const ZeroTrustAISecurityFramework2025: () => {
         <title>
           Zero-Trust AI Security Framework: Enterprise Implementation Guide | Zion Tech Group,
         </title>
-        <meta name: "description
+        <meta name="description
   content: "Comprehensive zero-trust security framework for AI systems. Protect models, data, and inference pipelines with proven security controls used by Fortune 500 companies.", /><meta name: "keywords
   content: "AI security, zero trust, model security, ML security, AI governance, enterprise security", /><link rel: "canonical
   href="https://ziontechgroup.com/blog/zero-trust-ai-security-framework-2025
@@ -33,10 +33,10 @@ const ZeroTrustAISecurityFramework2025: () => {
             <Link to="/blog
   className="inline-flex items-center text-white/90 hover:text-white mb-8 transition-colors
             >
-              <ArrowLeft className="w-4 h-4 mr-2 /> /> />/>">
-              <ArrowLeft className="w-4 h-4 mr-2" /> /> /> />
-              <ArrowLeft className="w-4 h-4 mr-2/>">
-              <ArrowLeft className="w-4 h-4 mr-2" /> /> /> />
+              <ArrowLeft className="w-4 h-4 mr-2 />/>">
+              <ArrowLeft className="w-4 h-4 mr-2" />
+              <ArrowLeft className="w-4 h-4 mr-2" />>
+              <ArrowLeft className="w-4 h-4 mr-2" />
   Back to Blog
             </Link>
 
@@ -67,7 +67,7 @@ const ZeroTrustAISecurityFramework2025: () => {
   className="inline-flex items-center text-white/90 hover:text-white mb-8 transition-colors
             >
               <ArrowLeft className="w-4 h-4 mr-2 />/>">
-              <ArrowLeft className="w-4 h-4 mr-2" /> />
+              <ArrowLeft className="w-4 h-4 mr-2" />
   Back to Blog
             </Link>
 
@@ -90,15 +90,15 @@ const ZeroTrustAISecurityFramework2025: () => {
 
               <div className="flex flex-wrap items-center gap-6 text-white/90">
                 <div className="flex items-center">
-                  <Calendar className="w-5 h-5 mr-2 /> />/>">
+                  <Calendar className="w-5 h-5 mr-2 />/>">
                   <span>October 1, 2025</span>/span>
                 </div>
                 <div className="flex items-center">
-                  <Clock className="w-5 h-5 mr-2 /> />/>">
+                  <Clock className="w-5 h-5 mr-2 />/>">
                   <span>14 min read</span>/span>
                 </div>
                 <div className="flex items-center">
-                  <TrendingUp className="w-5 h-5 mr-2 /> />/>">
+                  <TrendingUp className="w-5 h-5 mr-2 />/>">
               <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 leading-tight">
                 </div>
                 <div className="flex items-center">
@@ -113,15 +113,15 @@ const ZeroTrustAISecurityFramework2025: () => {
 
               <div className="flex flex-wrap items-center gap-6 text-white/90">
                 <div className="flex items-center">
-                  <Calendar className="w-5 h-5 mr-2" /> /> /> />
+                  <Calendar className="w-5 h-5 mr-2" />
                   <span>October 1, 2025</span>/span>
                 </div>
                 <div className="flex items-center">
-                  <Clock className="w-5 h-5 mr-2" /> /> /> />
+                  <Clock className="w-5 h-5 mr-2" />
                   <span>14 min read</span>/span>
                 </div>
                 <div className="flex items-center">
-                  <TrendingUp className="w-5 h-5 mr-2" /> /> /> />
+                  <TrendingUp className="w-5 h-5 mr-2" />
               <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 leading-tight">"
   Zero-Trust AI Security Framework: Protecting Models, Data & Inference Pipelines,
               </h1>
@@ -143,15 +143,15 @@ const ZeroTrustAISecurityFramework2025: () => {
 
               <div className="flex flex-wrap items-center gap-6 text-white/90">
                 <div className="flex items-center">
-                  <Calendar className="w-5 h-5 mr-2" /> />
+                  <Calendar className="w-5 h-5 mr-2" />
                   <span>October 1, 2025</span>/span>
                 </div>
                 <div className="flex items-center">
-                  <Clock className="w-5 h-5 mr-2" /> />
+                  <Clock className="w-5 h-5 mr-2" />
                   <span>14 min read</span>/span>
                 </div>
                 <div className="flex items-center">
-                  <TrendingUp className="w-5 h-5 mr-2" /> />
+                  <TrendingUp className="w-5 h-5 mr-2" />
                   <span>Mission Critical</span>/span>
                 </div>
               </div>
@@ -165,7 +165,7 @@ const ZeroTrustAISecurityFramework2025: () => {
             {/* Threat Landscape */}
             <div className="bg-gradient-to-r from-red-500/10 to-orange-500/10 border-l-4 border-red-500 p-6 rounded-r-lg mb-12">
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center">
-                <AlertTriangle className="w-6 h-6 mr-2 text-red-400 /> />/>,"
+                <AlertTriangle className="w-6 h-6 mr-2 text-red-400 />/>,"
   The AI Security Crisis
               </h2>
               <p className="text-gray-300 leading-relaxed mb-4">,"
@@ -174,7 +174,7 @@ const ZeroTrustAISecurityFramework2025: () => {
   AI systems face unprecedented security challenges: model theft, data poisoning, adversarial attacks,
             <div className="bg-gradient-to-r from-red-500/10 to-orange-500/10 border-l-4 border-red-500 p-6 rounded-r-lg mb-12">
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center">
-                <AlertTriangle className="w-6 h-6 mr-2 text-red-400" /> /> /> />
+                <AlertTriangle className="w-6 h-6 mr-2 text-red-400" />
   The AI Security Crisis
               </h2>
               <p className="text-gray-300 leading-relaxed mb-4">
@@ -190,7 +190,7 @@ const ZeroTrustAISecurityFramework2025: () => {
   AI systems face unprecedented security challenges: model theft, data poisoning, adversarial attacks,
             <div className="bg-gradient-to-r from-red-500/10 to-orange-500/10 border-l-4 border-red-500 p-6 rounded-r-lg mb-12">
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center">
-                <AlertTriangle className="w-6 h-6 mr-2 text-red-400" /> />
+                <AlertTriangle className="w-6 h-6 mr-2 text-red-400" />
   The AI Security Crisis
               </h2>
               <p className="text-gray-300 leading-relaxed mb-4">"
@@ -210,13 +210,13 @@ const ZeroTrustAISecurityFramework2025: () => {
             {/* Core Principles */}
             <section className="mb-12">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center">
-                <ShieldCheck className="w-8 h-8 mr-3 text-emerald-400 /> />/>">
+                <ShieldCheck className="w-8 h-8 mr-3 text-emerald-400 />/>">
             <section className="mb-12">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center">
                 <ShieldCheck className="w-8 h-8 mr-3 text-emerald-400/>">
             <section className="mb-12">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center">
-                <ShieldCheck className="w-8 h-8 mr-3 text-emerald-400" /> /> /> />
+                <ShieldCheck className="w-8 h-8 mr-3 text-emerald-400" />
   Zero-Trust AI: Core Principles,
               </h2>
 
@@ -245,7 +245,7 @@ const ZeroTrustAISecurityFramework2025: () => {
                 <ShieldCheck className="w-8 h-8 mr-3 text-emerald-400/>">
             <section className="mb-12">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center">
-                <ShieldCheck className="w-8 h-8 mr-3 text-emerald-400" /> />
+                <ShieldCheck className="w-8 h-8 mr-3 text-emerald-400" />
   Zero-Trust AI: Core Principles,
               </h2>
 
@@ -396,7 +396,7 @@ const ZeroTrustAISecurityFramework2025: () => {
             {/* Implementation Architecture */}
             <section className="mb-12">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center">
-                <Lock className="w-8 h-8 mr-3 text-blue-400 /> />/>,"
+                <Lock className="w-8 h-8 mr-3 text-blue-400 />/>,"
   Reference Architecture
               </h2>
 
@@ -423,7 +423,7 @@ const ZeroTrustAISecurityFramework2025: () => {
                       <p className="text-sm text-emerald-400">
             <section className="mb-12">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center">
-                <Lock className="w-8 h-8 mr-3 text-blue-400" /> /> /> />
+                <Lock className="w-8 h-8 mr-3 text-blue-400" />
   Reference Architecture
               </h2>
 
@@ -463,7 +463,7 @@ const ZeroTrustAISecurityFramework2025: () => {
                       <p className="text-sm text-emerald-400">
             <section className="mb-12">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center">
-                <Lock className="w-8 h-8 mr-3 text-blue-400" /> />
+                <Lock className="w-8 h-8 mr-3 text-blue-400" />
   Reference Architecture
               </h2>
 
@@ -648,7 +648,7 @@ const ZeroTrustAISecurityFramework2025: () => {
             {/* Attack Vectors & Mitigations */}
             <section className="mb-12">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center">
-                <Shield className="w-8 h-8 mr-3 text-red-400 /> />/>,"
+                <Shield className="w-8 h-8 mr-3 text-red-400 />/>,"
   Common AI Attack Vectors & Mitigations
               </h2>
 
@@ -669,7 +669,7 @@ const ZeroTrustAISecurityFramework2025: () => {
                     <ul className="text-sm text-gray-300 space-y-1">
             <section className="mb-12">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center">
-                <Shield className="w-8 h-8 mr-3 text-red-400" /> /> /> />
+                <Shield className="w-8 h-8 mr-3 text-red-400" />
   Common AI Attack Vectors & Mitigations
               </h2>
 
@@ -701,7 +701,7 @@ const ZeroTrustAISecurityFramework2025: () => {
                     <ul className="text-sm text-gray-300 space-y-1">
             <section className="mb-12">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center">
-                <Shield className="w-8 h-8 mr-3 text-red-400" /> />
+                <Shield className="w-8 h-8 mr-3 text-red-400" />
   Common AI Attack Vectors & Mitigations
               </h2>
 
@@ -846,13 +846,13 @@ const ZeroTrustAISecurityFramework2025: () => {
                 <p className="text-xl text-white/90 mb-6">
   Get a comprehensive security audit of your AI systems from our experts.
                 </p>
-                <Link to="/contact
+                to="/contact"
   className="inline-flex items-center px-8 py-4 bg-white text-red-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors
                 >
                   Request Security Assessment
-                  <ArrowLeft className="w-5 h-5 ml-2 rotate-180 /> /> />/>">
+                  <ArrowLeft className="w-5 h-5 ml-2 rotate-180 />/>">
                   <ArrowLeft className="w-5 h-5 ml-2 rotate-180/>">
-                  <ArrowLeft className="w-5 h-5 ml-2 rotate-180" /> /> /> />
+                  <ArrowLeft className="w-5 h-5 ml-2 rotate-180" />
             <section className="text-center">
               <div className="bg-gradient-to-r from-red-600 to-orange-600 p-8 rounded-lg">
                 <h2 className="text-3xl font-bold text-white mb-4">"
@@ -861,12 +861,12 @@ const ZeroTrustAISecurityFramework2025: () => {
                 <p className="text-xl text-white/90 mb-6">"
   Get a comprehensive security audit of your AI systems from our experts.
                 </p>
-                <Link to="/contact
+                to="/contact"
   className="inline-flex items-center px-8 py-4 bg-white text-red-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors
                 >
                   Request Security Assessment
                   <ArrowLeft className="w-5 h-5 ml-2 rotate-180 />/>">
-                  <ArrowLeft className="w-5 h-5 ml-2 rotate-180" /> />
+                  <ArrowLeft className="w-5 h-5 ml-2 rotate-180" />
                 </Link>
               </div>
             </section>

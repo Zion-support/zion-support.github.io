@@ -6,8 +6,8 @@ return (
 <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
 <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
 <Helmet >
-<title >GenAI 2027: Cost Tiers v3 — 40–70% Savings</title>,
-<meta name: "description", content="Quality tiers + semantic caches + policy tests for predictable spend and stable UX." />"
+<title>GenAI 2027: Cost Tiers v3 — 40–70% Savings</title>,
+<meta name="description", content="Quality tiers + semantic caches + policy tests for predictable spend and stable UX." />"
 <link rel: "canonical", href ="https://ziontechgroup.com/blog/genai-2027-cost-tiers-v3" />"
 <meta name="description" content="Quality tiers + semantic caches + policy tests for predictable spend and stable UX." />
 <link rel: "canonical", href ="https://ziontechgroup.com/blog/genai-2027-cost-tiers-v3" />
@@ -20,7 +20,7 @@ return (
 <h1 className="text-4xl md:text-5xl font-bold mb-4">GenAI 2027: Cost Tiers v3 — 40–70% Savings</h1>"
 <p className="text-zion-slate-light mb-8">Quality tiers • Semantic caches • Policy tests</p>"
 <div className="prose prose-invert max-w-3xl">
-<title >GenAI 2027: Cost Tiers v3 — 40–70% Savings</title>,,
+<title>GenAI 2027: Cost Tiers v3 — 40–70% Savings</title>,,
 <meta name="description" content="Quality tiers + semantic caches + policy tests for predictable spend and stable UX." />
 <link rel: "canonical", href ="https: //ziontechgroup.com/blog/genai-2027-cost-tiers-v3" />,
 </Helmet>

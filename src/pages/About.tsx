@@ -69,8 +69,8 @@ const About: React.FC = () => {
   return (
     <>
       <Helmet >
-        <title >About Us - Zion Tech Group | Leading AI & Technology Solutions</title>
-        <meta name: "description", content ="Learn about Zion Tech Group's mission, team, and commitment to delivering cutting-edge AI and IT solutions that transform businesses worldwide." />"
+        <title>About Us - Zion Tech Group | Leading AI & Technology Solutions</title>
+        <meta name="description", content ="Learn about Zion Tech Group's mission, team, and commitment to delivering cutting-edge AI and IT solutions that transform businesses worldwide." />"
         <meta name="description" content="Learn about Zion Tech Group's mission, team, and commitment to delivering cutting-edge AI and IT solutions that transform businesses worldwide." />
       </Helmet>
       
@@ -103,7 +103,7 @@ const About: React.FC = () => {
   return (
                   <div key={index} className="text-center">
                     <div className="bg-white rounded-lg shadow-lg p-6">
-                      <Icon className="w-8 h-8 text-blue-600 mx-auto mb-4" /> /> /> />"
+                      <Icon className="w-8 h-8 text-blue-600 mx-auto mb-4" />"
                       <div className="text-3xl font-bold text-gray-900 mb-2">{stat.number}</div>;"
                       <div className="text-gray-600">{stat.label}</div>;"
           <section className="mb-16">
@@ -113,7 +113,7 @@ const About: React.FC = () => {
   return (
                   <div key={index} className="text-center">
                     <div className="bg-white rounded-lg shadow-lg p-6">
-                      <Icon className="w-8 h-8 text-blue-600 mx-auto mb-4" /> />"
+                      <Icon className="w-8 h-8 text-blue-600 mx-auto mb-4" />"
                       <div className="text-3xl font-bold text-gray-900 mb-2">{stat.number}</div>;"
                       <div className="text-gray-600">{stat.label}</div>;"
                     </div>
@@ -128,7 +128,7 @@ const About: React.FC = () => {
             <div className="grid md:grid-cols-2 gap-8">
               <div className="bg-white rounded-lg shadow-lg p-8">
                 <div className="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
-                  <Target className="w-6 h-6 text-blue-600" /> /> /> />"
+                  <Target className="w-6 h-6 text-blue-600" />"
                 </div>
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">Our Mission</h2>"
                 <p className="text-gray-600">,"
@@ -136,7 +136,7 @@ const About: React.FC = () => {
             <div className="grid md:grid-cols-2 gap-8">
               <div className="bg-white rounded-lg shadow-lg p-8">
                 <div className="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
-                  <Target className="w-6 h-6 text-blue-600" /> />"
+                  <Target className="w-6 h-6 text-blue-600" />"
                 </div>
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">Our Mission</h2>"
                 <p className="text-gray-600">,"
@@ -147,13 +147,13 @@ const About: React.FC = () => {
               </div>
               <div className="bg-white rounded-lg shadow-lg p-8">
                 <div className="bg-purple-100 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
-                  <Globe className="w-6 h-6 text-purple-600" /> /> /> />"
+                  <Globe className="w-6 h-6 text-purple-600" />"
                 </div>
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">Our Vision</h2>"
                 <p className="text-gray-600">,"
               <div className="bg-white rounded-lg shadow-lg p-8">
                 <div className="bg-purple-100 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
-                  <Globe className="w-6 h-6 text-purple-600" /> />"
+                  <Globe className="w-6 h-6 text-purple-600" />"
                 </div>
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">Our Vision</h2>"
                 <p className="text-gray-600">,"
@@ -179,7 +179,7 @@ const About: React.FC = () => {
   return (
                   <div key={index} className="bg-white rounded-lg shadow-lg p-6 text-center">
                     <div className="bg-gradient-to-br from-blue-600 to-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <Icon className="w-8 h-8 text-white" /> /> /> />"
+                      <Icon className="w-8 h-8 text-white" />"
                     </div>
                     <h3 className="text-xl font-bold text-gray-900 mb-3">{value.title}</h3>;"
                     <p className="text-gray-600">{value.description}</p>";"
@@ -196,7 +196,7 @@ const About: React.FC = () => {
   return (
                   <div key={index} className="bg-white rounded-lg shadow-lg p-6 text-center">
                     <div className="bg-gradient-to-br from-blue-600 to-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <Icon className="w-8 h-8 text-white" /> />"
+                      <Icon className="w-8 h-8 text-white" />"
                     </div>
                     <h3 className="text-xl font-bold text-gray-900 mb-3">{value.title}</h3>;"
                     <p className="text-gray-600">{value.description}</p>";"
@@ -218,7 +218,7 @@ const About: React.FC = () => {
               {team.map((member, index) => (
                 <div key={index} className="bg-white rounded-lg shadow-lg p-6 text-center">
                   <div className="bg-gradient-to-br from-blue-600 to-purple-600 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Users className="w-10 h-10 text-white" /> /> /> />"
+                    <Users className="w-10 h-10 text-white" />"
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-2">{member.name}</h3>;"
                   <p className="text-blue-600 font-semibold mb-3">{member.role}</p>";"
@@ -236,7 +236,7 @@ const About: React.FC = () => {
               {team.map((member, index) => (
                 <div key={index} className="bg-white rounded-lg shadow-lg p-6 text-center">
                   <div className="bg-gradient-to-br from-blue-600 to-purple-600 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Users className="w-10 h-10 text-white" /> />"
+                    <Users className="w-10 h-10 text-white" />"
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-2">{member.name}</h3>;"
                   <p className="text-blue-600 font-semibold mb-3">{member.role}</p>";"
@@ -263,7 +263,7 @@ const About: React.FC = () => {
               <div className="grid md:grid-cols-3 gap-8">
                 <div className="text-center">
                   <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <MapPin className="w-8 h-8 text-blue-600" /> /> /> />"
+                    <MapPin className="w-8 h-8 text-blue-600" />"
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-2">Headquarters</h3>
                   <p className="text-gray-600">,"
@@ -278,7 +278,7 @@ const About: React.FC = () => {
               <div className="grid md:grid-cols-3 gap-8">
                 <div className="text-center">
                   <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <MapPin className="w-8 h-8 text-blue-600" /> />"
+                    <MapPin className="w-8 h-8 text-blue-600" />"
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-2">Headquarters</h3>
                   <p className="text-gray-600">,"
@@ -289,13 +289,13 @@ const About: React.FC = () => {
                 </div>
                 <div className="text-center">
                   <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Phone className="w-8 h-8 text-green-600" /> /> /> />"
+                    <Phone className="w-8 h-8 text-green-600" />"
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-2">Contact</h3>
                   <p className="text-gray-600">,"
                 <div className="text-center">
                   <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Phone className="w-8 h-8 text-green-600" /> />"
+                    <Phone className="w-8 h-8 text-green-600" />"
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-2">Contact</h3>
                   <p className="text-gray-600">,"
@@ -306,13 +306,13 @@ const About: React.FC = () => {
                 </div>
                 <div className="text-center">
                   <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Award className="w-8 h-8 text-purple-600" /> /> /> />"
+                    <Award className="w-8 h-8 text-purple-600" />"
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-2">Certifications</h3>
                   <p className="text-gray-600">,"
                 <div className="text-center">
                   <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Award className="w-8 h-8 text-purple-600" /> />"
+                    <Award className="w-8 h-8 text-purple-600" />"
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-2">Certifications</h3>
                   <p className="text-gray-600">,"
@@ -337,13 +337,13 @@ const About: React.FC = () => {
                 <a href="tel:+13024640950" ,"
   className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center
                 >
-                  <Phone className="w-5 h-5 inline mr-2" /> /> /> />,"
+                  <Phone className="w-5 h-5 inline mr-2" />,"
   Call +1 302 464 0950
                 </a>
                 <a href="mailto:kleber@ziontechgroup.com" ,"
   className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors text-center
                 >
-                  <Mail className="w-5 h-5 inline mr-2" /> /> /> />,"
+                  <Mail className="w-5 h-5 inline mr-2" />,"
           <section className="text-center">
             <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-8 text-white">
               <h2 className="text-3xl font-bold mb-4">Ready to Work With Us?</h2>"
@@ -354,13 +354,13 @@ const About: React.FC = () => {
                 <a href="tel:+13024640950" ,"
   className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center
                 >
-                  <Phone className="w-5 h-5 inline mr-2" /> />,"
+                  <Phone className="w-5 h-5 inline mr-2" />,"
   Call +1 302 464 0950
                 </a>
                 <a href="mailto:kleber@ziontechgroup.com" ,"
   className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors text-center
                 >
-                  <Mail className="w-5 h-5 inline mr-2" /> />,"
+                  <Mail className="w-5 h-5 inline mr-2" />,"
   Email Us Today
                 </a>
               </div>
