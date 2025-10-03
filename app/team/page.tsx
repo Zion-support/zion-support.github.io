@@ -1,18 +1,10 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
   ArrowRight, 
-  Star, 
   Users, 
-  Zap, 
   Shield, 
-  Globe, 
-  Database,
-  Lock,
-  TrendingUp,
   Award,
   Target,
-  Rocket,
   Linkedin,
   Twitter,
   Mail,
