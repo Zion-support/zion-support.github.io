@@ -53,23 +53,23 @@ const SEOSplitTesting: React.FC = () => {
       <div className="mt-10">
         <h2 className="text-xl font-semibold text-gray-900">Learn More</h2>
         <ul className="mt-3 space-y-2 text-blue-700">
-          <li >
-            <a href="https://developers.google.com/search/blog/2016/08/improving-search-with-rankbrain" target: "_blank" rel="noreferrer" className ="hover:underline">,
-  Google Search & experimentation (background)
+          <li>
+            <a href="https://developers.google.com/search/blog/2016/08/improving-search-with-rankbrain" target="_blank" rel="noreferrer" className="hover:underline">
+              Google Search & experimentation (background)
             </a>
           </li>
-          <li >
-            <a href="https://support.google.com/webmasters/answer/7519425" target: "_blank" rel="noreferrer" className ="hover:underline">,
-  Google: Search Console Performance report,,,
+          <li>
+            <a href="https://support.google.com/webmasters/answer/7519425" target="_blank" rel="noreferrer" className="hover:underline">
+              Google: Search Console Performance report
             </a>
           </li>
         </ul>
       </div>
 
       <div className="mt-10">
-        <a href="/contact" className ="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">Start a test</a>
-        <p className="mt-4 text-sm text-gray-600">,
-  Contact: +1 302 464 0950 · kleber@ziontechgroup.com · 364 E Main St STE 1008, Middletown DE 19709,,,
+        <a href="/contact" className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">Start a test</a>
+        <p className="mt-4 text-sm text-gray-600">
+          Contact: +1 302 464 0950 · kleber@ziontechgroup.com · 364 E Main St STE 1008, Middletown DE 19709
         </p>
       </div>
     </section>
