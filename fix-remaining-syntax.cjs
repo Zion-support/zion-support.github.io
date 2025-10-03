@@ -1,143 +1,69 @@
 const fs = require('fs');
 const path = require('path');
-const glob = require('glob');
 
-// Additional patterns to fix
-const fixes = [
-  // Fix missing quotes in object properties
-  {
-    pattern: /link: 'https:\/\/ziontechgroup\.com\/services\/ai-services}/g,
-    replacement: "link: 'https://ziontechgroup.com/services/ai-services'},"
-  },
-  {
-    pattern: /link: 'https:\/\/ziontechgroup\.com\/services\/ai-services/g,
-    replacement: "link: 'https://ziontechgroup.com/services/ai-services'},"
-  },
-  // Fix missing quotes in other URL patterns
-  {
-    pattern: /url: 'https:\/\/ziontechgroup\.com\/[^']*}/g,
-    replacement: function(match) {
-      return match.slice(0, -1) + "'},"
-    }
-  },
-  // Fix missing quotes in href attributes
-  {
-    pattern: /href="[^"]*}/g,
-    replacement: function(match) {
-      return match.slice(0, -1) + '"'
-    }
-  },
-  // Fix missing quotes in className attributes
-  {
-    pattern: /className="[^"]*}/g,
-    replacement: function(match) {
-      return match.slice(0, -1) + '"'
-    }
-  },
-  // Fix missing quotes in title attributes
-  {
-    pattern: /title="[^"]*}/g,
-    replacement: function(match) {
-      return match.slice(0, -1) + '"'
-    }
-  },
-  // Fix missing quotes in alt attributes
-  {
-    pattern: /alt="[^"]*}/g,
-    replacement: function(match) {
-      return match.slice(0, -1) + '"'
-    }
-  },
-  // Fix missing quotes in src attributes
-  {
-    pattern: /src="[^"]*}/g,
-    replacement: function(match) {
-      return match.slice(0, -1) + '"'
-    }
-  },
-  // Fix missing quotes in string literals within JSX
-  {
-    pattern: /className="[^"]*}/g,
-    replacement: function(match) {
-      return match.slice(0, -1) + '"'
-    }
-  },
-  // Fix missing quotes in template literals
-  {
-    pattern: /`[^`]*}/g,
-    replacement: function(match) {
-      return match.slice(0, -1) + '`'
-    }
-  },
-  // Fix missing quotes in string concatenation
-  {
-    pattern: /\+ '[^']*}/g,
-    replacement: function(match) {
-      return match.slice(0, -1) + "'"
-    }
-  },
-  // Fix missing quotes in array elements
-  {
-    pattern: /'[^']*}/g,
-    replacement: function(match) {
-      // Only fix if it's clearly a missing quote (ends with } and has no closing quote)
-      if (match.length > 2 && match.endsWith('}') && !match.includes("'", 1)) {
-        return match.slice(0, -1) + "'"
-      }
-      return match
-    }
-  },
-  // Fix missing quotes in object keys
-  {
-    pattern: /([a-zA-Z_][a-zA-Z0-9_]*): '[^']*}/g,
-    replacement: function(match, key) {
-      return match.slice(0, -1) + "'},"
-    }
+function fixFile(filepath) {
+  let content = fs.readFileSync(filepath, 'utf8');
+  let originalContent = content;
+  
+  // Fix unterminated strings and template literals at line ends
+  content = content.replace(/^(\s*)(.+)(['"]);$/gm, '$1$2$3;');
+  
+  // Fix template literal syntax issues  
+  content = content.replace(/\$\{([^}]+)`/g, '${$1}');
+  content = content.replace(/`([^`]*)"\]/g, '`$1`]');
+  content = content.replace(/`([^`]*)"\)/g, '`$1`)');
+  
+  // Fix missing closing braces
+  content = content.replace(/}\s*'/g, '}');
+  content = content.replace(/}\s*"/g, '}');
+  content = content.replace(/;\s*'/g, ';');
+  
+  // Fix method declarations
+  content = content.replace(/(\s+private\s+\w+\([^)]*\):[^{]+);\s*$/gm, '$1 {');
+  content = content.replace(/(\s+public\s+\w+\([^)]*\):[^{]+);\s*$/gm, '$1 {');
+  
+  // Fix closing parens
+  content = content.replace(/'\)/g, '})');
+  content = content.replace(/"\)/g, '})');
+  
+  // Fix template literal closures
+  content = content.replace(/`\s*'\s*\)/g, '`)');
+  content = content.replace(/`\s*"\s*\)/g, '`)');
+  
+  // Fix object type definitions
+  content = content.replace(/\s+'\s*\|\s*null>/g, ' } | null>');
+  content = content.replace(/\s+"\s*\|\s*null>/g, ' } | null>');
+  
+  if (content !== originalContent) {
+    fs.writeFileSync(filepath, content, 'utf8');
+    console.log(`Fixed: ${filepath}`);
+    return true;
   }
-];
-
-function fixFile(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
-    
-    fixes.forEach(fix => {
-      if (typeof fix.replacement === 'function') {
-        const newContent = content.replace(fix.pattern, fix.replacement);
-        if (newContent !== content) {
-          content = newContent;
-          modified = true;
-        }
-      } else {
-        if (fix.pattern.test(content)) {
-          content = content.replace(fix.pattern, fix.replacement);
-          modified = true;
-        }
-      }
-    });
-    
-    if (modified) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed: ${filePath}`);
-      return true;
-    }
-    return false;
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
-  }
+  return false;
 }
 
-// Find all TypeScript and TSX files
-const files = glob.sync('src/**/*.{ts,tsx}', { cwd: __dirname });
-
-console.log(`Found ${files.length} TypeScript files to check...`);
+const files = [
+  'src/utils/enhancedAccessibility.ts',
+  'src/utils/enhancedPerformanceMonitoring.ts',
+  'src/utils/performanceOptimizations.ts',
+  'src/utils/seoOptimizer.ts',
+  'src/utils/seoEnhancer.ts',
+  'src/utils/testHelpers.ts',
+  'src/utils/performance.ts',
+  'src/utils/security.ts',
+  'src/hooks/usePerformance.ts'
+];
 
 let fixedCount = 0;
 files.forEach(file => {
-  if (fixFile(file)) {
-    fixedCount++;
+  const fullPath = path.join(process.cwd(), file);
+  if (fs.existsSync(fullPath)) {
+    if (fixFile(fullPath)) {
+      fixedCount++;
+    }
+  } else {
+    console.log(`File not found: ${file}`);
   }
 });
 
-console.log(`Fixed ${fixedCount} files`);
+console.log(`\nTotal files fixed: ${fixedCount}/${files.length}`);
