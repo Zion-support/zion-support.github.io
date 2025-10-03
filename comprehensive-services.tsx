@@ -1,17 +1,10 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
   Brain, 
   Code, 
-  Cloud, 
-  Shield, 
-  Network, 
   Server, 
   BarChart3, 
   Settings, 
-  Zap, 
-  Monitor, 
-  Search, 
   MessageSquare, 
   CheckCircle, 
   ArrowRight, 
@@ -20,7 +13,6 @@ import {
   Star,
   TrendingUp,
   Smartphone,
-  Globe,
   Target,
   Rocket,
   Atom
