@@ -28,6 +28,10 @@ export interface ErrorReport {
 class EnhancedErrorHandler {
   private errors: ErrorInfo[] = [];
   private maxErrors = 100;
+<<<<<<< HEAD
+=======
+  private isInitialized = false;
+>>>>>>> cursor/fix-errors-and-merge-to-main-a7dc
 
   constructor() {
     this.initialize();

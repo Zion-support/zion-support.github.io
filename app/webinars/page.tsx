@@ -1,6 +1,9 @@
 'use client';
 
+<<<<<<< HEAD
 // import React from 'react';
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-a7dc
 
 export default function WebinarsPage() {
   return (
