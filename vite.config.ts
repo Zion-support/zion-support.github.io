@@ -6,21 +6,12 @@ import { resolve } from 'path'
 export default defineConfig({
   plugins: [
     react({
-<<<<<<< HEAD
       babel: {
         plugins: [
           ['@babel/plugin-transform-react-jsx', { runtime: 'automatic' }],
           ['@babel/plugin-proposal-decorators', { legacy: true }],
         ],
       },
-    }),
-    visualizer({
-      filename: 'dist/stats.html',
-      open: false,
-      gzipSize: true,
-=======
-      jsxRuntime: 'automatic'
->>>>>>> b0266c0c1be3ec9050e7ba803edc6a65b0904e57
     }),
   ],
   root: '.',
