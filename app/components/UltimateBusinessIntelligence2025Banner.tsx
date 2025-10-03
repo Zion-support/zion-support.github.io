@@ -81,23 +81,24 @@ const UltimateBusinessIntelligence2025Banner = () => {
 
   return (
     <div className="text-left">
-      {/* Animated Background */}</div>
-      <div className="text-left"></div>
-        <div className="text-left"></div>"
-        <div className="text-left"></div>"
-        <div className="text-left"></div>"
-        <div className="text-left"></div>"
-        <div className="text-left"></div>"
+      {/* Animated Background */}
+      <div className="text-left">
+        <div className="text-left"></div>
+        <div className="text-left"></div>
+        <div className="text-left"></div>
+        <div className="text-left"></div>
+        <div className="text-left"></div>
       </div>
 
-      <div className="text-left"></div>
-        <div className="text-left"></div>
-          <div className="text-left"></div>
+      <div className="text-left">
+        <div className="text-left">
+          <div className="text-left">
             <div className="text-left">
-              🚀 NEW BREAKTHROUGH</div>
+              🚀 NEW BREAKTHROUGH
             </div>
             <div className="text-left">
-              Ultimate Business Intelligence 2025</div>
+              Ultimate Business Intelligence 2025
+            </div>
             </div>
           </div>
           <button

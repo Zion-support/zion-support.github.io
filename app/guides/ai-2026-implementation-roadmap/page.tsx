@@ -79,7 +79,21 @@ export default function AI2026ImplementationRoadmap() {
             <div className="text-left">
               <div className="text-left">67%</div>
               <div className="text-left">Success rate</div>
-            </div>
+        <div className="text-left"></div>
+          <h2 className="text-left">🎯 Executive Summary</h2>"
+          <div className="text-left"></div>
+            <div className="text-left"></div>
+              <div className="text-left">$2.8T</div>"
+              <div className="text-left">AI market by 2026</div></div>
+            <div className="text-left"></div>
+              <div className="text-left">78%</div>"
+              <div className="text-left">Fortune 500 adoption</div></div>
+            <div className="text-left"></div>
+              <div className="text-left">156%</div>"
+              <div className="text-left">Average ROI</div></div>
+            <div className="text-left"></div>
+              <div className="text-left">67%</div>"
+              <div className="text-left">Success rate</div></div>
           </div>
         </div>
 
@@ -250,20 +264,16 @@ export default function AI2026ImplementationRoadmap() {
             <div className="text-left"></div>
               <div className="text-left"></div>
                 <div className="text-left">Real-time</div>"
-                <div className="text-left">Decision Processing</div>"
-              </div>
+                <div className="text-left">Decision Processing</div></div>
               <div className="text-left"></div>
                 <div className="text-left">Policy</div>"
-                <div className="text-left">Engine Integration</div>"
-              </div>
+                <div className="text-left">Engine Integration</div></div>
               <div className="text-left"></div>
                 <div className="text-left">Audit</div>"
-                <div className="text-left">Trail Maintenance</div>"
-              </div>
+                <div className="text-left">Trail Maintenance</div></div>
               <div className="text-left"></div>
                 <div className="text-left">Human</div>"
-                <div className="text-left">Override Options</div>"
-              </div>
+                <div className="text-left">Override Options</div></div>
             </div>
           </div>
 
@@ -320,20 +330,16 @@ export default function AI2026ImplementationRoadmap() {
             <div className="text-left"></div>
               <div className="text-left"></div>
                 <div className="text-left">156%</div>"
-                <div className="text-left">Average ROI</div>"
-              </div>
+                <div className="text-left">Average ROI</div></div>
               <div className="text-left"></div>
                 <div className="text-left">73%</div>"
-                <div className="text-left">Process efficiency</div>"
-              </div>
+                <div className="text-left">Process efficiency</div></div>
               <div className="text-left"></div>
                 <div className="text-left">89%</div>"
-                <div className="text-left">Customer satisfaction</div>"
-              </div>
+                <div className="text-left">Customer satisfaction</div></div>
               <div className="text-left"></div>
                 <div className="text-left">95%</div>"
-                <div className="text-left">Error reduction</div>"
-              </div>
+                <div className="text-left">Error reduction</div></div>
             </div>
           </div>
 
