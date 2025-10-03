@@ -12,10 +12,6 @@ import {
   Star,
   Smartphone,
   Globe,
-  MapPin,
-  Users,
-  FileText,
-  CreditCard,
   ShoppingCart,
   Camera,
   Mic,
@@ -23,8 +19,7 @@ import {
   Headphones,
   Wifi,
   Battery,
-  Wrench,
-  Tool
+  Wrench
 } from 'lucide-react';
 
 export default function AdditionalServices() {

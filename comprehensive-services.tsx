@@ -23,9 +23,7 @@ import {
   Globe,
   Target,
   Rocket,
-  Atom,
-  Microchip,
-  Cpu
+  Atom
 } from 'lucide-react';
 
 export default function ComprehensiveServices() {

@@ -28,6 +28,7 @@ export interface ErrorReport {
 class EnhancedErrorHandler {
   private errors: ErrorInfo[] = [];
   private maxErrors = 100;
+  // private isInitialized = false;
 
   constructor() {
     this.initialize();
@@ -68,7 +69,6 @@ class EnhancedErrorHandler {
   private determineSeverity(error: any): 'low' | 'medium' | 'high' | 'critical' {
     if (!error) return 'low';
     const message = error.message?.toLowerCase() || '';
-    
     // Critical errors
     if (message.includes('chunk') || message.includes('loading') || message.includes('network')) {
       return 'critical';
