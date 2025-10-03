@@ -57,18 +57,20 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
     // Update state with error info
     this.setState({ errorInfo });
 
-    // Send to analytics
-    analyticsUtils.trackEvent('error_boundary_caught', {
-      error_id: errorId,
-      error_message: error.message,
-      error_stack: error.stack?.substring(0, 500),
-      component_stack: errorInfo.componentStack?.substring(0, 500) || '',
-      retry_count: this.retryCount
-    });
+    // Log error details (including errorId for debugging)
+    console.error('Error Boundary caught an error:', error, errorInfo, { errorId: this.state.errorId });
 
     // Call custom error handler
     if (onError) {
       onError(error, errorInfo);
+    }
+
+    // Send to analytics (placeholder for analytics integration)
+    if (typeof window !== 'undefined' && (window as { gtag?: (...args: unknown[]) => void }).gtag) {
+      (window as { gtag: (...args: unknown[]) => void }).gtag('event', 'exception', {
+        description: error.toString(),
+        fatal: false
+      });
     }
   }
 
