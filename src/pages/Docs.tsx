@@ -1,4 +1,4 @@
-import React from 'react;
+import React from 'react';
 ;
 const Docs: React.FC = () => {
   return (
@@ -40,7 +40,7 @@ const Docs: React.FC = () => {
       </div>
     </div>
   );
-};
+';
 
 export default Docs;
 

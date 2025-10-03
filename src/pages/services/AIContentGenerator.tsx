@@ -1,11 +1,11 @@
-import React from 'react;
-import { Helmet } from 'react-helmet-async;
+import React from 'react';
+import { Helmet ' from 'react-helmet-async';
 import {
 
-} from 'lucide-react'
-import React from 'react;
-import { Helmet } from 'react-helmet-async;
-} from 'lucide-react;
+' from 'lucide-react'
+import React from 'react';
+import { Helmet ' from 'react-helmet-async';
+' from 'lucide-react';
 const AIContentGenerator: React.FC = () => {
   return (
     <>
@@ -96,7 +96,7 @@ const AIContentGenerator: React.FC = () => {
             </div>
           </div>
 
-          {/* Features */}
+          {/* Features */'
           <section className="mb-16"
             <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Key Features</h2>"
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8",
@@ -657,6 +657,6 @@ const AIContentGenerator: React.FC = () => {
       </div>
     </>
   );
-};
+';
 
 export default AIContentGenerator;

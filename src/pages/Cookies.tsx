@@ -1,4 +1,4 @@
-import React from 'react;
+import React from 'react';
 ;
 const CookiesPage: React.FC = () => {
   return (
@@ -67,6 +67,6 @@ const CookiesPage: React.FC = () => {
       </div>
     </div>
   );
-};
+';
 
 export default CookiesPage;

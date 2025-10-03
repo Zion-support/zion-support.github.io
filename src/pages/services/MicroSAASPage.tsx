@@ -1,44 +1,43 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
-
+import { Link ' from 'react-router-dom';
+import { Helmet ' from 'react-helmet-async';
 const MicroSAASPage: React.FC = () => {
   const microSAASServices = [
     {
       title: "Custom SaaS Development",
       description: "Build scalable software-as-a-service applications tailored to your specific business requirements.",
       icon: "⚡",
-      features: ["Custom SaaS Apps", "Multi-tenant Architecture", "API Development", "Scalable Infrastructure"]
+      features: ["Custom SaaS Apps", "Multi-tenant Architecture", "API Development", "Scalable Infrastructure"]"
     },
     {
       title: "SaaS Migration",
       description: "Migrate your existing applications to a modern SaaS architecture for better scalability and performance.",
       icon: "🔄",
-      features: ["Legacy System Migration", "Cloud Migration", "Data Migration", "Performance Optimization"]
+      features: ["Legacy System Migration", "Cloud Migration", "Data Migration", "Performance Optimization"]"
     },
     {
       title: "SaaS Integration",
       description: "Seamlessly integrate your SaaS applications with existing systems and third-party services.",
       icon: "🔗",
-      features: ["API Integration", "Third-party Integrations", "System Integration", "Data Synchronization"]
+      features: ["API Integration", "Third-party Integrations", "System Integration", "Data Synchronization"]"
     },
     {
       title: "SaaS Analytics",
       description: "Implement comprehensive analytics and reporting capabilities to track usage and performance.",
       icon: "📊",
-      features: ["Usage Analytics", "Performance Monitoring", "Custom Dashboards", "Business Intelligence"]
+      features: ["Usage Analytics", "Performance Monitoring", "Custom Dashboards", "Business Intelligence"]"
     },
     {
       title: "SaaS Security",
       description: "Ensure your SaaS applications are secure with enterprise-grade security measures and compliance.",
       icon: "🔒",
-      features: ["Security Audits", "Compliance Management", "Data Encryption", "Access Control"]
+      features: ["Security Audits", "Compliance Management", "Data Encryption", "Access Control"]"
     },
     {
       title: "SaaS Support",
       description: "Ongoing support and maintenance to ensure your SaaS applications run smoothly and efficiently.",
       icon: "🛠️",
-      features: ["24/7 Support", "Performance Monitoring", "Bug Fixes", "Feature Updates"]
+      features: ["24/7 Support", "Performance Monitoring", "Bug Fixes", "Feature Updates"]"
     }
   ];
 
@@ -46,13 +45,12 @@ const MicroSAASPage: React.FC = () => {
     <>
       <Helmet>
         <title>Micro SaaS Services - Zion Tech Group</title>
-        <meta name="description" content="Custom micro SaaS development, migration, and integration services from Zion Tech Group. Scalable software solutions for modern businesses." />
-      </Helmet>
+        <meta name="description" content="Custom micro SaaS development, migration, and integration services from Zion Tech Group. Scalable software solutions for modern businesses." /></Helmet>
       
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen bg-gray-50">"
         {/* Header */}
-        <section className="bg-gradient-to-r from-green-600 to-emerald-600 text-white py-16">
-          <div className="container mx-auto px-6 text-center">
+        <section className="bg-gradient-to-r from-green-600 to-emerald-600 text-white py-16">"
+          <div className="container mx-auto px-6 text-center">"
             <h1 className="text-4xl md: text-5xl font-bold mb-4">Micro SaaS Services</h1>"
             <p className="text-xl text-green-100 max-w-3xl mx-auto">"
               Build, migrate, and scale powerful software-as-a-service applications that deliver immediate value and grow with your business.
@@ -85,12 +83,12 @@ const MicroSAASPage: React.FC = () => {
                     Learn More →
                   </Link>
                 </div>
-              ))}
+              ))"
             </div>
           </div>
         </section>
 
-        {/* Benefits Section */}"
+        {/* Benefits Section */""
         <section className="py-20 bg-white">"
           <div className="container mx-auto px-6">"
             <div className="text-center mb-16">"
@@ -162,12 +160,12 @@ const MicroSAASPage: React.FC = () => {
           </div>
         </section>
 
-        {/* CTA Section */}
+        {/* CTA Section */'
         <section className="py-20 bg-green-600 text-white">"
           <div className="container mx-auto px-6 text-center">"
             <h2 className="text-4xl font-bold mb-4">Ready to Build Your SaaS Solution?</h2>"
             <p className="text-xl mb-8 text-green-100 max-w-2xl mx-auto">"
-              Let's discuss your SaaS requirements and how we can help you build a scalable solution.';
+              Let's discuss your SaaS requirements and how we can help you build a scalable solution.;
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <Link 
@@ -188,6 +186,6 @@ const MicroSAASPage: React.FC = () => {
       </div>
     </>
   );
-};
+";
 "
 export default MicroSAASPage;

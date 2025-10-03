@@ -38,7 +38,7 @@ const AdvancedCybersecurityAI: () => {
   Back to Services
           </Link>
 
-          {/* Header */}
+          {/* Header */"
           <div className="max-w-5xl mx-auto mb-16",
             <div className="flex items-center gap-4 mb-6 flex-wrap",
               <span className="px-4 py-2 bg-red-500/20 text-red-300 rounded-full text-sm font-semibold border border-red-500/30",
@@ -562,7 +562,7 @@ const AdvancedCybersecurityAI: () => {
                     features: ["Unlimited endpoints", "Unlimited log storage", "24/7 SOC monitoring", "Dedicated analysts", "99.97% SLA"]",
                   }
                 ].map((pkg, index) => (
-                  <div key={index} className={`bg-white/5 backdrop-blur-sm rounded-xl p-6 border ${pkg.popular ? 'border-red-500/50 ring-2 ring-red-500/30' : 'border-zion-cyan/30'}`}>`
+                  <div key={index} className={`bg-white/5 backdrop-blur-sm rounded-xl p-6 border ${pkg.popular ? 'border-red-500/50 ring-2 ring-red-500/30' : 'border-zion-cyan/30'```>`
                     {pkg.popular && (
                       <div className="bg-red-500/20 text-red-300 text-xs font-bold px-3 py-1 rounded-full inline-block mb-4",
   MOST POPULAR
@@ -577,9 +577,9 @@ const AdvancedCybersecurityAI: () => {
                         <li key={fIndex} className="flex items-start gap-2",
                         <li key: {fIndex} className="flex items-start gap-2">
                           <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1/>"
-                        <li key: {fIndex} className="flex items-start gap-2",
+                        <li key: {fIndex' className="flex items-start gap-2",
                           <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1/>",
-                  <div key={index} className= {`bg-white/5 backdrop-blur-sm rounded-xl p-6 border ${pkg.popular ? 'border-red-500/50 ring-2 ring-red-500/30' : 'border-zion-cyan/30'}`}>`
+                  <div key={index` className= {`bg-white/5 backdrop-blur-sm rounded-xl p-6 border ${pkg.popular ? 'border-red-500/50 ring-2 ring-red-500/30' : 'border-zion-cyan/30'```>`
                     {pkg.popular && (
                       <div className= "bg-red-500/20 text-red-300 text-xs font-bold px-3 py-1 rounded-full inline-block mb-4">"
   MOST POPULAR
@@ -723,7 +723,7 @@ const AdvancedCybersecurityAI: () => {
               </div>
             </section>
 
-            {/* CTA Section */}
+            {/* CTA Section */'
             <section className="text-center",
               <h2 className="text-3xl font-bold text-white mb-6">Protect Your Enterprise Today</h2>",
               <p className="text-xl text-zion-slate-light mb-8",
@@ -765,7 +765,7 @@ const AdvancedCybersecurityAI: () => {
       </div>
     </>
   );
-};
+`;
 
 export default AdvancedCybersecurityAI;
 ;

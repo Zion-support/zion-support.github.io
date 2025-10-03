@@ -1,11 +1,13 @@
-import React from 'react;
-import { Helmet } from 'react-helmet-async;
+import React from 'react';
+import { Helmet ' from 'react-helmet-async';
+
 const AdditionalServicesPage: React.FC = () => {
   return (
     <>
       <Helmet>
         <title>Additional Services - Zion Tech Group</title>
-        <meta name="description" content="Explore our comprehensive range of additional technology services and solutions." /></Helmet>
+        <meta name="description" content="Explore our comprehensive range of additional technology services and solutions." />
+      </Helmet>
       
       <div className="min-h-screen flex items-center justify-center bg-gray-50">
         <div className="p-8 rounded-lg bg-white shadow text-center max-w-2xl">
@@ -18,6 +20,6 @@ const AdditionalServicesPage: React.FC = () => {
       </div>
     </>
   );
-};
+';
 
 export default AdditionalServicesPage;

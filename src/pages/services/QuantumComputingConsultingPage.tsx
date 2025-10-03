@@ -1,6 +1,7 @@
-import React from 'react;
-import { Link } from 'react-router-dom;
-import { Helmet } from 'react-helmet-async;
+import React from 'react';
+import { Link ' from 'react-router-dom';
+import { Helmet ' from 'react-helmet-async';
+
 const QuantumComputingConsultingPage: React.FC = () => {
   const quantumServices = [
     {
@@ -45,7 +46,8 @@ const QuantumComputingConsultingPage: React.FC = () => {
     <>
       <Helmet>
         <title>Quantum Computing Consulting - Zion Tech Group</title>
-        <meta name="description" content="Expert quantum computing consulting services including strategy, algorithm development, and quantum security solutions from Zion Tech Group." /></Helmet>
+        <meta name="description" content="Expert quantum computing consulting services including strategy, algorithm development, and quantum security solutions from Zion Tech Group." />
+      </Helmet>
       
       <div className="min-h-screen bg-gray-50">
         {/* Header */}
@@ -78,7 +80,6 @@ const QuantumComputingConsultingPage: React.FC = () => {
                   <Link 
                     to="/contact" 
                     className="inline-flex items-center px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors"
-                    className="text-purple-600 font-semibold hover:text-purple-800 transition-colors"
                   >
                     Learn More
                   </Link>
@@ -129,8 +130,13 @@ const QuantumComputingConsultingPage: React.FC = () => {
                 <p className="text-gray-600">
                   Active participation in cutting-edge quantum research and development projects.
                 </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Quantum Applications */}
-        <section className="py-20 bg-white">
+        <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-6">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Quantum Computing Applications</h2>
@@ -184,7 +190,7 @@ const QuantumComputingConsultingPage: React.FC = () => {
         </section>
 
         {/* Technology Partners */}
-        <section className="py-20 bg-gray-50">
+        <section className="py-20 bg-white">
           <div className="container mx-auto px-6">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Quantum Technology Partners</h2>
@@ -245,6 +251,6 @@ const QuantumComputingConsultingPage: React.FC = () => {
       </div>
     </>
   );
-};
+';
 
 export default QuantumComputingConsultingPage;
