@@ -36,6 +36,7 @@ class EnhancedErrorHandler {
   }
 
   private initialize(): void {
+    if (typeof window === 'undefined') return;
 
     // Global error handler
     window.addEventListener('error', (event) => {
@@ -71,7 +72,7 @@ class EnhancedErrorHandler {
     const message = error.message?.toLowerCase() || '';
     
     // Critical errors
-    if (message.includes('chunk') || message.includes('loading')) {
+    if (message.includes('chunk') || message.includes('loading') || message.includes('script error') || message.includes('syntax error')) {
       return 'critical';
     }
     
@@ -81,7 +82,7 @@ class EnhancedErrorHandler {
     }
     
     // Medium severity errors
-    if (message.includes('render') || message.includes('component')) {
+    if (message.includes('warning') || message.includes('deprecated') || message.includes('render') || message.includes('component')) {
       return 'medium';
     }
     

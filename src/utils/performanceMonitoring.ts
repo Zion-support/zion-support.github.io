@@ -7,7 +7,7 @@ const logMetric = (metric: MetricData) => {
   console.log(`Performance Metric: ${metric.name} = ${metric.value}ms`);
 };
 
-export const measurePerformance = () => {
+export const measurePerformance = (): void => {
   if (typeof window === 'undefined') return;
 
   // Web Vitals monitoring

@@ -161,5 +161,6 @@ class EnhancedPerformanceMonitor {
 export const enhancedPerformanceMonitor = new EnhancedPerformanceMonitor();
 
 // Auto-start monitoring in browser environment
+if (typeof window !== 'undefined') {
   enhancedPerformanceMonitor.startMonitoring();
 }

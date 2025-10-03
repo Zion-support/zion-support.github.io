@@ -46,6 +46,8 @@ class PerformanceMonitor {
   }
 
   private initializePerformanceObserver() {
+    if (typeof window === 'undefined') return;
+
     try {
       // Long Task Observer
       const longTaskObserver = new PerformanceObserver((list) => {
