@@ -165,13 +165,13 @@ class EnhancedAccessibility {
     const inputs = document.querySelectorAll('input, textarea, select');
     inputs.forEach((input) => {
       if (!input.getAttribute('aria-label') && !input.getAttribute('aria-labelledby')) {
-        const label = document.querySelector(`label[for="${input.id`"]`);
+        const label = document.querySelector(`label[for="${input.id}"]`);
         if (label) {
-          input.setAttribute('aria-labelledby', label.id || `label-${input.id``);
+          input.setAttribute('aria-labelledby', label.id || `label-${input.id}`);
         }
       }
-    ');
-  `
+    });
+  }
 
   private addSkipLinks(): void {
     const skipLinks = document.createElement('div');
@@ -195,11 +195,11 @@ class EnhancedAccessibility {
     window.matchMedia('(prefers-contrast: high)').addEventListener('change', (e) => {
       if (e.matches) {
         document.body.classList.add('high-contrast');
-      ' else {
+      } else {
         document.body.classList.remove('high-contrast');
       }
     });
-  
+  }
 
   private setupFocusManagement(): void {
     if (!this.config.enableFocusManagement) return;
@@ -207,7 +207,7 @@ class EnhancedAccessibility {
     // Add focus indicators
     document.addEventListener('focusin', (event) => {
       (event.target as HTMLElement).classList.add('focus-visible');
-    ');
+    });
 
     document.addEventListener('focusout', (event) => {
       (event.target as HTMLElement).classList.remove('focus-visible');
@@ -223,7 +223,7 @@ class EnhancedAccessibility {
       if (!button.textContent?.trim()) {
         button.setAttribute('aria-label', 'Button');
       }
-    ');
+    });
 
     // Add ARIA labels to images
     const images = document.querySelectorAll('img:not([alt])');

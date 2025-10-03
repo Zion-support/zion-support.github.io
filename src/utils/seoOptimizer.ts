@@ -85,14 +85,14 @@ export const generateArticleStructuredData = (article: {
   modifiedDate?: string;
   image?: string;
   url: string;
-'): string => {
+): string => {
   return generateStructuredData('Article', {
     headline: article.title,
     description: article.description,
     author: {
       '@type': 'Person',
       name: article.author,
-    ',
+    },
     datePublished: article.publishDate,
     dateModified: article.modifiedDate || article.publishDate,
     image: article.image,
