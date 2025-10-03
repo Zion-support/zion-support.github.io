@@ -244,26 +244,26 @@ export default function Fortune500QuantumAITransformation2026() {
             <div className="space-y-6">"
               {[
                 { 
-                  phase: "Months 1-3", "
-                  title= "Assessment & Strategy", "
+                  phase: "Months 1-3> "
+                  title= "Assessment & Strategy> "
                   description: "Comprehensive analysis of current operations and quantum AI implementation strategy"
                   results: "Identified $5B optimization potential""
                 },
                 { 
-                  phase: "Months 4-6", "
-                  title= "Pilot Implementation", "
+                  phase: "Months 4-6> "
+                  title= "Pilot Implementation> "
                   description: "Deployed quantum AI systems in key manufacturing lines"
                   results: "50% improvement in pilot operations""
                 },
                 { 
-                  phase: "Months 7-12", "
-                  title= "Enterprise Rollout", "
+                  phase: "Months 7-12> "
+                  title= "Enterprise Rollout> "
                   description: "Scaled quantum AI across all manufacturing facilities globally"
                   results: "95% automation achieved""
                 },
                 { 
-                  phase: "Months 13-18", "
-                  title= "Optimization & Growth", "
+                  phase: "Months 13-18> "
+                  title= "Optimization & Growth> "
                   description: "Fine-tuned systems and expanded capabilities for maximum impact"
                   results: "$10B revenue impact realized""
                 }
