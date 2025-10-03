@@ -35,8 +35,7 @@ function App(): JSX.Element {
   React.useEffect(() => {
     if (process.env.NODE_ENV === 'development') {
       logMetrics();
-      // eslint-disable-next-line no-console
-      console.log(`🎯 Performance Score: ${performanceScore}/100`);
+      // Performance score logged in development mode
     }
   }, [logMetrics, performanceScore]);
 
