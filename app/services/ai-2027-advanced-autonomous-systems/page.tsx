@@ -14,11 +14,11 @@ export const metadata = {
 
 export default function AI2027AdvancedAutonomousSystemsService() {
   return (
-    <div className="text-left"></div>
-      {/* Hero Section */}
+    <div className="text-left">
+      {/* Hero Section */}</div>
       <div className="text-left"></div>
         <div className="text-left"></div>
-          <span className="text-left"></span>
+          <span className="text-left">
             🚀 BREAKTHROUGH SERVICE 2027
           </span>
         </div>
@@ -30,15 +30,13 @@ export default function AI2027AdvancedAutonomousSystemsService() {
         </p>
         <div className="text-left"></div>
           <Link
-            href="/contact
-            className="text-left
-          >
+            href="/contact"
+            className="text-left">
             Get Started Today
           </Link>
           <a
-            href="tel:+13024640950
-            className="text-left
-          >
+            href="tel:+13024640950"
+            className="text-left">
             Call +1 302 464 0950
           </a>
         </div>
@@ -196,7 +194,7 @@ export default function AI2027AdvancedAutonomousSystemsService() {
             </div>
           </div>
           <p className="text-left">
-            "A leading manufacturing company achieved unprecedented operational efficiency through Advanced Autonomous Systems, reducing manual interventions by 92% while maintaining 99.97% system uptime and saving $45M annually.
+            "A leading manufacturing company achieved unprecedented operational efficiency through Advanced Autonomous Systems, reducing manual interventions by 92% while maintaining 99.97% system uptime and saving $45M annually."
           </p>
         </div>
       </section>
@@ -209,19 +207,19 @@ export default function AI2027AdvancedAutonomousSystemsService() {
             <h3 className="text-left">Core Technologies</h3>"
             <ul className="text-left">
               <li className="text-left">
-                <span className="text-left">✓<"
+                <span className="text-left">✓>
                 <span>Kubernetes with advanced autoscaling</span>
               </li>
               <li className="text-left">
-                <span className="text-left">✓<"
+                <span className="text-left">✓>
                 <span>Machine learning orchestration platforms</span>
               </li>
               <li className="text-left">
-                <span className="text-left">✓<"
+                <span className="text-left">✓>
                 <span>Real-time monitoring and alerting systems</span>
               </li>
               <li className="text-left">
-                <span className="text-left">✓<"
+                <span className="text-left">✓>
                 <span>Advanced workflow automation engines</span>
               </li>
             </ul>
@@ -231,19 +229,19 @@ export default function AI2027AdvancedAutonomousSystemsService() {
             <h3 className="text-left">AI Components</h3>"
             <ul className="text-left">
               <li className="text-left">
-                <span className="text-left">✓<"
+                <span className="text-left">✓>
                 <span>Neural network optimization algorithms</span>
               </li>
               <li className="text-left">
-                <span className="text-left">✓<"
+                <span className="text-left">✓>
                 <span>Reinforcement learning decision engines</span>
               </li>
               <li className="text-left">
-                <span className="text-left">✓<"
+                <span className="text-left">✓>
                 <span>Predictive analytics and forecasting</span>
               </li>
               <li className="text-left">
-                <span className="text-left">✓<"
+                <span className="text-left">✓>
                 <span>Natural language processing interfaces</span>
               </li>
             </ul>
@@ -266,16 +264,15 @@ export default function AI2027AdvancedAutonomousSystemsService() {
               <li>• Standard support</li>
             </ul>
             <Link
-              href="/contact
-              className="text-left
-            >
+              href="/contact"
+              className="text-left">
               Get Started
             </Link>
           </div>
 
           <div className="text-left"></div>
             <div className="text-left"></div>
-              <span className="text-left">Most Popular<"
+              <span className="text-left">Most Popular>
             </div>
             <h3 className="text-left">Enterprise Package</h3>"
             <div className="text-left">$250,000</div>"
@@ -288,9 +285,8 @@ export default function AI2027AdvancedAutonomousSystemsService() {
               <li>• Custom integration</li>
             </ul>
             <Link
-              href="/contact
-              className="text-left
-            >
+              href="/contact"
+              className="text-left">
               Get Started
             </Link>
           </div>
@@ -307,9 +303,8 @@ export default function AI2027AdvancedAutonomousSystemsService() {
               <li>• White-label solutions</li>
             </ul>
             <Link
-              href="/contact
-              className="text-left
-            >
+              href="/contact"
+              className="text-left">
               Contact Sales
             </Link>
           </div>
@@ -324,15 +319,13 @@ export default function AI2027AdvancedAutonomousSystemsService() {
         </p>
         <div className="text-left"></div>
           <Link
-            href="/contact
-            className="text-left
-          >
+            href="/contact"
+            className="text-left">
             Start Your Transformation
           </Link>
           <a
-            href="tel:+13024640950
-            className="text-left
-          >
+            href="tel:+13024640950"
+            className="text-left">
             Call +1 302 464 0950
           </a>
         </div>

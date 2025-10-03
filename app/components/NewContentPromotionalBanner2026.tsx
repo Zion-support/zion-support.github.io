@@ -43,119 +43,178 @@ const NewContentPromotionalBanner2026: React.FC = () => {
   ];
 
   return (
-    <div className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="text-left">
       {/* Animated background effects */}
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-blue-600/20 to-purple-600/20 animate-pulse"></div>
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-purple-600/20 to-pink-600/20 animate-pulse" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-pink-600/20 to-blue-600/20 animate-pulse" style={{ animationDelay: '2s' }}></div>
+      <div className="text-left">
+        <div className="text-left"></div>
+        <div className="text-left" style={{ animationDelay: '1s' }}></div>
+        <div className="text-left" style={{ animationDelay: '2s' }}></div>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="text-left">
         {/* Header Section */}
-        <div className="text-center mb-12">
-          <div className="flex items-center justify-center gap-2 mb-6">
-            <Sparkles className="w-5 h-5 text-yellow-400" />
-            <span className="text-yellow-400 font-semibold text-sm uppercase tracking-wider">
+        <div className="text-left">
+          <div className="text-left">
+            <Sparkles className="text-left" />
+            <span className="text-left">
               🚀 JUST PUBLISHED • SEPTEMBER 2026
             </span>
-            <Sparkles className="w-5 h-5 text-yellow-400" />
+            <Sparkles className="text-left" />
           </div>
 
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+          <h2 className="text-left">
+            <span className="text-left">
               Latest AI Innovations
             </span>
             <br />
-            <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+            <span className="text-left">
               That Transform Business
             </span>
           </h2>
           
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+          <p className="text-left">
             Explore cutting-edge AI strategies, implementation roadmaps, and security innovations 
-            that are delivering <span className="text-yellow-400 font-semibold">300%+ ROI</span> for enterprises worldwide
+            that are delivering <span className="text-left">300%+ ROI</span> for enterprises worldwide
           </p>
 
-          <div className="flex items-center justify-center gap-8 mb-8">
-            <div className="flex items-center gap-2 text-gray-300">
-              <TrendingUp className="w-5 h-5 text-green-400" />
-              <span className="text-sm">10,000+ Readers</span>
+          <div className="text-left">
+            <div className="text-left">
+              <TrendingUp className="text-left" />
+              <span className="text-left">10,000+ Readers</span>
             </div>
-            <div className="flex items-center gap-2 text-gray-300">
-              <Zap className="w-5 h-5 text-yellow-400" />
-              <span className="text-sm">3 New Articles</span>
+            <div className="text-left">
+              <Zap className="text-left" />
+              <span className="text-left">3 New Articles</span>
             </div>
-            <div className="flex items-center gap-2 text-gray-300">
-              <Target className="w-5 h-5 text-blue-400" />
-              <span className="text-sm">Proven Results</span>
+            <div className="text-left">
+              <Target className="text-left" />
+              <span className="text-left">Proven Results</span>
             </div>
           </div>
         </div>
 
         {/* Featured Content Cards */}
-        <div className="grid md:grid-cols-3 gap-8 mb-12">
+        <div className="text-left">
           {featuredContent.map((content, index) => (
             <div 
               key={content.id}
-              className="relative group bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300 hover:scale-105"
+              className="text-left"
+              style={{ animationDelay: `${index * 150}ms` }}
             >
-              <div className="flex items-center gap-3 mb-4">
-                <span className="text-3xl">{content.icon}</span>
-                <span className={`px-3 py-1 rounded-full text-xs font-semibold bg-gradient-to-r ${content.badgeColor} text-white`}>
-                  {content.badge}
-                </span>
-              </div>
+              {/* Card glow effect */}
+              <div className={`absolute inset-0 bg-gradient-to-br ${content.color} opacity-0 group-hover:opacity-10 transition-all duration-500`}></div>
               
-              <h3 className="text-xl font-bold text-white mb-3 group-hover:text-yellow-400 transition-colors">
-                {content.title}
-              </h3>
-              
-              <p className="text-gray-300 mb-6 text-sm leading-relaxed">
-                {content.excerpt}
-              </p>
-              
-              <div className="flex items-center justify-between">
-                <span className="text-xs text-gray-400 uppercase tracking-wider">
-                  {content.category}
-                </span>
-                <Link 
+              <div className="text-left">
+                {/* Icon & Badge */}
+                <div className="text-left">
+                  <div className="text-left">
+                    {content.icon}
+                  </div>
+                  <div className={`px-4 py-2 rounded-full bg-gradient-to-r ${content.badgeColor} text-white text-sm font-bold shadow-lg`}>
+                    {content.badge}
+                  </div>
+                </div>
+
+                {/* Category */}
+                <div className="text-left">
+                  <span className={`inline-block px-4 py-2 rounded-full bg-gradient-to-r ${content.bgColor} text-gray-900 text-sm font-semibold border border-white/20`}>
+                    {content.category}
+                  </span>
+                </div>
+
+                {/* Title */}
+                <h3 className={`text-3xl font-extrabold text-white mb-4 group-hover:bg-gradient-to-r group-hover:${content.color} group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300 leading-tight`}>
+                  {content.title}
+                </h3>
+
+                {/* Excerpt */}
+                <p className="text-left">
+                  {content.excerpt}
+                </p>
+
+                {/* CTA Button */}
+                <Link
                   href={`/blog/${content.slug}`}
-                  className="flex items-center gap-2 text-yellow-400 hover:text-yellow-300 transition-colors text-sm font-semibold"
+                  className={`group/btn flex items-center justify-center gap-3 w-full bg-gradient-to-r ${content.color} hover:shadow-2xl text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 transform hover:-translate-y-1`}
                 >
-                  Read More
-                  <ArrowRight className="w-4 h-4" />
+                  <span className="text-left">Read Full Article</span>
+                  <ArrowRight className="text-left" />
                 </Link>
               </div>
+
+              {/* Corner accent */}
+              <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${content.color} opacity-10 rounded-bl-full`}></div>
             </div>
           ))}
         </div>
 
-        {/* Call to Action */}
-        <div className="text-center">
-          <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-2xl p-8 border border-white/20">
-            <h3 className="text-2xl font-bold text-white mb-4">
-              Ready to Transform Your Enterprise?
-            </h3>
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Join thousands of forward-thinking companies already implementing these breakthrough AI strategies. 
-              Get exclusive access to our complete implementation guides and expert consultations.
+        {/* Bottom CTA Section */}
+        <div className="text-left">
+          <div className="text-left">
+            <div className="text-left">
+              <Rocket className="text-left" />
+              <h3 className="text-left">
+                Ready to Transform Your Enterprise?
+              </h3>
+              <Shield className="text-left" />
+            </div>
+            
+            <p className="text-left">
+              Join 500+ enterprises achieving <span className="text-left">300% ROI</span>, 
+              <span className="text-left"> 85% automation</span>, and 
+              <span className="text-left"> complete digital transformation</span> with Zion Tech Group's AI solutions
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
+
+            <div className="text-left">
+              <Link
                 href="/contact"
-                className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center gap-2"
-              >
-                <Rocket className="w-5 h-5" />
-                Get Implementation Guide
+                className="text-left">
+                <Sparkles className="text-left" />
+                <span>Start Your AI Journey</span>
               </Link>
-              <Link 
-                href="/services"
-                className="px-8 py-3 border border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-center gap-2"
-              >
-                <Shield className="w-5 h-5" />
-                View All Services
+              
+              <Link
+                href="/blog"
+                className="text-left">
+                <span>Explore All Content</span>
+                <ArrowRight className="text-left" />
               </Link>
+            </div>
+
+            {/* Stats */}
+            <div className="text-left">
+              <div className="text-left">
+                <div className="text-left">
+                  500+
+                </div>
+                <div className="text-left">
+                  Enterprise Clients
+                </div>
+              </div>
+              <div className="text-left">
+                <div className="text-left">
+                  300%
+                </div>
+                <div className="text-left">
+                  Average ROI
+                </div>
+              </div>
+              <div className="text-left">
+                <div className="text-left">
+                  99.9%
+                </div>
+                <div className="text-left">
+                  System Uptime
+                </div>
+              </div>
+              <div className="text-left">
+                <div className="text-left">
+                  24/7
+                </div>
+                <div className="text-left">
+                  Expert Support
+                </div>
+              </div>
             </div>
           </div>
         </div>

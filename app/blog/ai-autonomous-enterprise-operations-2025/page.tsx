@@ -16,7 +16,7 @@ export default function Page() {
 			<article className="text-left">
 				<div className="text-left"></div>
 					<div className="text-left"></div>
-						<span className="text-left"></span>
+						<span className="text-left">
 							🚀 Latest AI Innovation
 						</span>
 					</div>
@@ -24,7 +24,7 @@ export default function Page() {
 						AI Autonomous Enterprise Operations: Complete 2025 Implementation Guide
 					</h1>
 					<p className="text-left">
-						January 30, 2025 · 45 min read · <span className="text-left">Enterprise AI<"
+						January 30, 2025 · 45 min read · <span className="text-left">Enterprise AI>
 					</p>
 				</div>
 
@@ -61,19 +61,19 @@ export default function Page() {
 						<h3 className="text-left">Core Components</h3>"
 						<ul className="text-left">
 							<li className="text-left">
-								<span className="text-left">🤖<"
+								<span className="text-left">🤖>
 								<span><strong>AI Agent Network:</strong> Specialized agents for different operational domains (IT, finance, HR, customer service)<
 							</li>
 							<li className="text-left">
-								<span className="text-left">⚙️<"
+								<span className="text-left">⚙️>
 								<span><strong>Orchestration Engine:</strong> Centralized workflow management with intelligent routing and failover<
 							</li>
 							<li className="text-left">
-								<span className="text-left">📊<"
+								<span className="text-left">📊>
 								<span><strong>Real-time Monitoring:</strong> Continuous performance tracking with predictive analytics<
 							</li>
 							<li className="text-left">
-								<span className="text-left">🛡️<"
+								<span className="text-left">🛡️>
 								<span><strong>Governance Layer:</strong> Compliance, security, and risk management automation<
 							</li>
 						</ul>
@@ -143,11 +143,11 @@ export default function Page() {
 						<pre className="text-left">
 {`// Autonomous Operations Architecture
 const AutonomousOpsFramework = {
-  orchestration: "Kubernetes + Istio Service Mesh
-  aiAgents: "LangChain + OpenAI GPT-4 + Custom Models
-  monitoring: "Prometheus + Grafana + Jaeger Tracing
-  governance: "Open Policy Agent (OPA) + Custom Rules
-  dataLayer: "Apache Kafka + Apache Spark + Vector DBs
+  orchestration: "Kubernetes + Istio Service Mesh"
+  aiAgents: "LangChain + OpenAI GPT-4 + Custom Models"
+  monitoring: "Prometheus + Grafana + Jaeger Tracing"
+  governance: "Open Policy Agent (OPA) + Custom Rules"
+  dataLayer: "Apache Kafka + Apache Spark + Vector DBs"
 };
 
 // Implementation Pattern
@@ -158,7 +158,7 @@ class AutonomousAgent {
     const result = await this.executeWithMonitoring(decision);
     await this.learnAndOptimize(result);
     return result;
-  }`
+  }
 }`}
 						</pre>
 					</div>
@@ -215,19 +215,17 @@ class AutonomousAgent {
 						</p>
 						<div className="text-left"></div>
 							<a 
-								href="/
-								className="text-left
-							>
+								href="/"
+								className="text-left">
 								Get Free Assessment
 							</a>
 							<a 
-								href="/
-								className="text-left
-							>
+								href="/"
+								className="text-left">
 								View Success Stories
 							</a>
 						</div>
 				</div>
 			</article>
 	);
-}</div></div></div></div></div>`
+}</div></div></div></div></div>

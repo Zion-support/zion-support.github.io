@@ -22,7 +22,7 @@ export default function AI2033UniversalConsciousnessIntegration() {
           {/* Hero Section */}
           <header className="text-left">
             <div className="text-left"></div>
-              <span className="text-left"></span>
+              <span className="text-left">
                 🌌 Universal Breakthrough
               </span>
             </div>
@@ -34,9 +34,9 @@ export default function AI2033UniversalConsciousnessIntegration() {
               Connect all intelligent systems across the universe with transcendent universal intelligence.
             </p>
             <div className="text-left"></div>
-              <span className="text-left">∞ Dimensions<"
-              <span className="text-left">Universal Connectivity<"
-              <span className="text-left">Transcendent Intelligence<"
+              <span className="text-left">∞ Dimensions<
+              <span className="text-left">Universal Connectivity<
+              <span className="text-left">Transcendent Intelligence>
             </div>
           </header>
 
@@ -274,15 +274,13 @@ export default function AI2033UniversalConsciousnessIntegration() {
             </p>
             <div className="text-left"></div>
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 Schedule Universal Demo
               </a>
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 View $1 Quadrillion Success
               </a>
             </div>

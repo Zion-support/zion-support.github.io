@@ -9,8 +9,8 @@ export const metadata: Metadata = {
 
 export default function CloudMigrationServicesPage() {
   return (
-    <div className="text-left"></div>
-      {/* Hero Section */}
+    <div className="text-left">
+      {/* Hero Section */}</div>
       <section className="text-left">
         <div className="text-left"></div>
           <h1 className="text-left">
@@ -22,15 +22,13 @@ export default function CloudMigrationServicesPage() {
           </p>
           <div className="text-left"></div>
             <a
-              href="tel:+13024640950
-              className="text-left
-            >
+              href="tel:+13024640950"
+              className="text-left">
               Call +1 302 464 0950
             </a>
             <a
-              href="mailto:kleber@ziontechgroup.com?subject=Cloud Migration Services Inquiry
-              className="text-left
-            >
+              href="mailto:kleber@ziontechgroup.com?subject=Cloud Migration Services Inquiry"
+              className="text-left">
               Get Migration Quote
             </a>
           </div>
@@ -49,8 +47,8 @@ export default function CloudMigrationServicesPage() {
             </p>
           </div>
 
-          <div className="text-left"></div>
-            {/* AWS Migration */}
+          <div className="text-left">
+            {/* AWS Migration */}</div>
             <div className="text-left"></div>
               <div className="text-left"></div>
                 <div className="text-left"></div>
@@ -231,8 +229,8 @@ export default function CloudMigrationServicesPage() {
             </p>
           </div>
 
-          <div className="text-left"></div>
-            {/* Small Business */}
+          <div className="text-left">
+            {/* Small Business */}</div>
             <div className="text-left"></div>
               <div className="text-left"></div>
                 <h3 className="text-left">Small Business</h3>
@@ -266,9 +264,8 @@ export default function CloudMigrationServicesPage() {
                 </li>
               </ul>
               <a
-                href="mailto:kleber@ziontechgroup.com?subject=Small Business Cloud Migration
-                className="text-left
-              >
+                href="mailto:kleber@ziontechgroup.com?subject=Small Business Cloud Migration"
+                className="text-left">
                 Get Quote
               </a>
             </div>
@@ -316,9 +313,8 @@ export default function CloudMigrationServicesPage() {
                 </li>
               </ul>
               <a
-                href="mailto:kleber@ziontechgroup.com?subject=Enterprise Cloud Migration
-                className="text-left
-              >
+                href="mailto:kleber@ziontechgroup.com?subject=Enterprise Cloud Migration"
+                className="text-left">
                 Get Quote
               </a>
             </div>
@@ -363,9 +359,8 @@ export default function CloudMigrationServicesPage() {
                 </li>
               </ul>
               <a
-                href="mailto:kleber@ziontechgroup.com?subject=Custom Cloud Migration Solution
-                className="text-left
-              >
+                href="mailto:kleber@ziontechgroup.com?subject=Custom Cloud Migration Solution"
+                className="text-left">
                 Contact Sales
               </a>
             </div>
@@ -391,15 +386,13 @@ export default function CloudMigrationServicesPage() {
           </p>
           <div className="text-left"></div>
             <a
-              href="tel:+13024640950
-              className="text-left
-            >
+              href="tel:+13024640950"
+              className="text-left">
               Call +1 302 464 0950
             </a>
             <a
-              href="mailto:kleber@ziontechgroup.com?subject=Cloud Migration Services Inquiry
-              className="text-left
-            >
+              href="mailto:kleber@ziontechgroup.com?subject=Cloud Migration Services Inquiry"
+              className="text-left">
               Get Migration Quote
             </a>
           </div>

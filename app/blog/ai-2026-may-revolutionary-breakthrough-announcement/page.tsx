@@ -20,10 +20,10 @@ export default function May2026RevolutionaryBreakthroughPage() {
       <article className="text-left">
         <header className="text-left">
           <div className="text-left"></div>
-            <span className="text-left"></span>
+            <span className="text-left">
               MAY 2026
             </span>
-            <span className="text-left"></span>
+            <span className="text-left">
               $50B ROI
             </span>
           </div>
@@ -41,7 +41,7 @@ export default function May2026RevolutionaryBreakthroughPage() {
         </header>
 
         <div className="text-left"></div>
-          <div dangerouslySetInnerHTML={{ __html: content.replace(/\n/g, '<br />') }} />
+          <div dangerouslySetInnerHTML={{ __html: content.replace(/\n/g, '<br />') }} /></div>
         </div>
 
         <div className="text-left"></div>
@@ -51,15 +51,13 @@ export default function May2026RevolutionaryBreakthroughPage() {
           </p>
           <div className="text-left"></div>
             <a 
-              href="/
-              className="text-left
-            >
+              href="/"
+              className="text-left">
               Contact Us Today
             </a>
             <a 
-              href="/
-              className="text-left
-            >
+              href="/"
+              className="text-left">
               View $50B Success Story
             </a>
           </div>

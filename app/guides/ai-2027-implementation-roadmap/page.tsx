@@ -25,13 +25,13 @@ export default function AI2027ImplementationRoadmap() {
           Complete Guide to Advanced Neural Superintelligence Deployment
         </p>
         <div className="text-left"></div>
-          <span className="text-left"></span>
+          <span className="text-left">
             FREE ROADMAP
           </span>
-          <span className="text-left"></span>
+          <span className="text-left">
             12-MONTH PLAN
           </span>
-          <span className="text-left"></span>
+          <span className="text-left">
             $2.8T PROVEN
           </span>
         </div>
@@ -324,9 +324,8 @@ export default function AI2027ImplementationRoadmap() {
 
         <div className="text-left"></div>
           <Link 
-            href="/
-            className="text-left
-          >
+            href="/"
+            className="text-left">
             🚀 Get Your Custom Implementation Plan
           </Link>
         </div>

@@ -17,8 +17,8 @@ export const metadata: Metadata = {
 
 export default function AI2026RevolutionaryNeuralConsensusBreakthrough() {
   return (
-    <div className="text-left"></div>
-      {/* Hero Section */}
+    <div className="text-left">
+      {/* Hero Section */}</div>
       <section className="text-left">
         <div className="text-left"></div>
           <div className="text-left"></div>"
@@ -28,7 +28,7 @@ export default function AI2026RevolutionaryNeuralConsensusBreakthrough() {
         <div className="text-left"></div>
           <div className="text-left"></div>
             <div className="text-left"></div>
-              <span className="text-left"></span>
+              <span className="text-left">
                 🚀 Revolutionary Breakthrough
               </span>
             </div>
@@ -44,14 +44,12 @@ export default function AI2026RevolutionaryNeuralConsensusBreakthrough() {
             <div className="text-left"></div>
               <a 
                 href="#breakthrough-details" "
-                className="text-left
-              >
+                className="text-left">
                 Discover Breakthrough
               </a>
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 View $500B Success Story →
               </a>
             </div>
@@ -170,7 +168,7 @@ export default function AI2026RevolutionaryNeuralConsensusBreakthrough() {
           <div className="text-left"></div>
             <div className="text-left"></div>
               <div className="text-left"></div>
-                <span className="text-left">🧠<"
+                <span className="text-left">🧠>
               </div>
               <h3 className="text-left">Neural Consensus Engine</h3>"
               <p className="text-left">
@@ -187,7 +185,7 @@ export default function AI2026RevolutionaryNeuralConsensusBreakthrough() {
             
             <div className="text-left"></div>
               <div className="text-left"></div>
-                <span className="text-left">⚡<"
+                <span className="text-left">⚡>
               </div>
               <h3 className="text-left">Performance Optimization</h3>"
               <p className="text-left">
@@ -204,7 +202,7 @@ export default function AI2026RevolutionaryNeuralConsensusBreakthrough() {
             
             <div className="text-left"></div>
               <div className="text-left"></div>
-                <span className="text-left">💰<"
+                <span className="text-left">💰>
               </div>
               <h3 className="text-left">Value Generation</h3>"
               <p className="text-left">
@@ -238,7 +236,7 @@ export default function AI2026RevolutionaryNeuralConsensusBreakthrough() {
             <div className="text-left"></div>
               <div className="text-left"></div>
                 <div className="text-left"></div>
-                  <span className="text-left">F100<"
+                  <span className="text-left">F100>
                 </div>
                 <div></div>
                   <h3 className="text-left">Fortune 100 Manufacturing</h3>"
@@ -264,7 +262,7 @@ export default function AI2026RevolutionaryNeuralConsensusBreakthrough() {
             <div className="text-left"></div>
               <div className="text-left"></div>
                 <div className="text-left"></div>
-                  <span className="text-left">F50<"
+                  <span className="text-left">F50>
                 </div>
                 <div></div>
                   <h3 className="text-left">Fortune 50 Financial</h3>"
@@ -302,15 +300,13 @@ export default function AI2026RevolutionaryNeuralConsensusBreakthrough() {
           </p>
           <div className="text-left"></div>
             <a 
-              href="/
-              className="text-left
-            >
+              href="/"
+              className="text-left">
               Get Started Today
             </a>
             <a 
-              href="/
-              className="text-left
-            >
+              href="/"
+              className="text-left">
               View Success Story
             </a>
           </div>

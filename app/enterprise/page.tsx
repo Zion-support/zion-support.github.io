@@ -9,18 +9,18 @@ export const metadata = {
 
 export default function EnterprisePage() {
   return (
-    <div className="text-left"></div>
-      {/* Hero Section */}
+    <div className="text-left">
+      {/* Hero Section */}</div>
       <header className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
-          <div className="text-left" style={{ animationDelay: '2s' }}></div>
+          <div className="text-left"></div>"
+          <div className="text-left" style={{ animationDelay: '2s' }}></div>"
         </div>
         
         <div className="text-left"></div>
           <div className="text-left"></div>
             <div className="text-left"></div>
-              <span className="text-left"></span>
+              <span className="text-left">
                 🏢 Enterprise AI Solutions
               </span>
             </div>
@@ -40,14 +40,13 @@ export default function EnterprisePage() {
             
             <div className="text-left"></div>
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 Schedule Enterprise Demo
               </a>
               <a 
-                href="#solutions
-                className="text-left
+                href="#solutions"
+                className="text-left"
               >
                 View Solutions
               </a>
@@ -84,10 +83,15 @@ export default function EnterprisePage() {
       </section>
 
       <footer className="text-left">
+<<<<<<< HEAD
+        <div className="text-left">
+          <p className="text-left">© 2025 Zion Tech Group. All rights reserved.</p>
+=======
         <div className="text-left"></div>
           <p className="text-left">© 2025 Zion Tech Group. All rights reserved.</p>"
+>>>>>>> main
         </div>
-      </div>
+      </footer>
     </div>
   );
 }

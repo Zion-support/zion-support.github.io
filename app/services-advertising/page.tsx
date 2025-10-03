@@ -10,8 +10,8 @@ export const metadata: Metadata = {
 
 export default function ServicesAdvertisingPage() {
   return (
-    <div className="text-left"></div>
-      {/* Hero Section */}
+    <div className="text-left">
+      {/* Hero Section */}</div>
       <header className="text-left">
         <div className="text-left"></div>
           <div className="text-left"></div>"
@@ -21,7 +21,7 @@ export default function ServicesAdvertisingPage() {
         <div className="text-left"></div>
           <div className="text-left"></div>
             <div className="text-left"></div>
-              <span className="text-left"></span>
+              <span className="text-left">
                 🎯 AI-Powered Advertising Solutions
               </span>
             </div>
@@ -41,15 +41,13 @@ export default function ServicesAdvertisingPage() {
             
             <div className="text-left"></div>
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 Start Free Consultation
               </a>
               <a 
                 href="#services" "
-                className="text-left
-              >
+                className="text-left">
                 View Our Services
               </a>
             </div>
@@ -100,8 +98,8 @@ export default function ServicesAdvertisingPage() {
                 <p>📍 364 E Main St STE 1008<br />Middletown, DE 19709</p>
               </div>
           </div>
-          <div className="text-left"></div>
-            © {new Date().getFullYear()} Zion Tech Group. All rights reserved. | 
+          <div className="text-left">
+            © {new Date().getFullYear()} Zion Tech Group. All rights reserved. | </div>
             <Link href="https://ziontechgroup.com" className="text-left">ziontechgroup.com</Link>"
           </div>
       </footer>

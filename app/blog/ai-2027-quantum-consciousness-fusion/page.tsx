@@ -19,10 +19,10 @@ export default function AI2027QuantumConsciousnessFusion() {
     <div className="text-left"></div>
       <div className="text-left"></div>
         <div className="text-left"></div>
-          <span className="text-left"></span>
+          <span className="text-left">
             QUANTUM BREAKTHROUGH
           </span>
-          <span className="text-left"></span>
+          <span className="text-left">
             100,000x PERFORMANCE
           </span>
         </div>
@@ -35,10 +35,10 @@ export default function AI2027QuantumConsciousnessFusion() {
         </p>
         <div className="text-left"></div>
           <span>Published: January 2027</span>
-          <span className="text-left">•<"
+          <span className="text-left">•>
           <span>Reading time: 10 min</span>
-          <span className="text-left">•<"
-          <span className="text-left">Zion Tech Group<"
+          <span className="text-left">•<
+          <span className="text-left">Zion Tech Group>
         </div>
 
       <div className="text-left"></div>
@@ -221,14 +221,13 @@ export default function AI2027QuantumConsciousnessFusion() {
             exclusive early access to only 25 select organizations in 2027. This is your chance 
             to gain unprecedented competitive advantage.
           </p>
-          <div className="text-left"></div>
-            Only 15 slots remaining
+          <div className="text-left">
+            Only 15 slots remaining</div>
           </div>
           <br />
           <Link 
-            href="/
-            className="text-left
-          >
+            href="/"
+            className="text-left">
             Secure Your Quantum Access
           </Link>
         </div>
@@ -248,15 +247,13 @@ export default function AI2027QuantumConsciousnessFusion() {
           </p>
           <div className="text-left"></div>
             <Link 
-              href="/
-              className="text-left
-            >
+              href="/"
+              className="text-left">
               Get Quantum Access
             </Link>
             <Link 
-              href="/
-              className="text-left
-            >
+              href="/"
+              className="text-left">
               View Success Stories
             </Link>
           </div>

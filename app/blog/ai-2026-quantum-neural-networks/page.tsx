@@ -16,15 +16,15 @@ export const metadata: Metadata = {
 
 export default function AIQuantumNeuralNetworks2026() {
   return (
-    <div className="text-left"></div>
-      {/* Hero Section */}
+    <div className="text-left">
+      {/* Hero Section */}</div>
       <section className="text-left">
         <div className="text-left"></div>"
         <div className="text-left"></div>"
         <div className="text-left"></div>
           <div className="text-left"></div>
-            <div className="text-left"></div>
-              ⚛️ QUANTUM BREAKTHROUGH 2026 - 1000x PERFORMANCE GAIN
+            <div className="text-left">
+              ⚛️ QUANTUM BREAKTHROUGH 2026 - 1000x PERFORMANCE GAIN</div>
             </div>
             <h1 className="text-left">
               AI 2026 Quantum Neural Networks
@@ -197,20 +197,20 @@ export default function AIQuantumNeuralNetworks2026() {
               <h3 className="text-left">Financial Services</h3>"
               <ul className="text-left">
                 <li className="text-left">
-                  <span className="text-left">✓<"
-                  <span className="text-left">Real-time fraud detection with 99.9% accuracy<"
+                  <span className="text-left">✓<
+                  <span className="text-left">Real-time fraud detection with 99.9% accuracy>
                 </li>
                 <li className="text-left">
-                  <span className="text-left">✓<"
-                  <span className="text-left">High-frequency trading algorithms with microsecond execution<"
+                  <span className="text-left">✓<
+                  <span className="text-left">High-frequency trading algorithms with microsecond execution>
                 </li>
                 <li className="text-left">
-                  <span className="text-left">✓<"
-                  <span className="text-left">Risk assessment models processing 1M+ transactions/second<"
+                  <span className="text-left">✓<
+                  <span className="text-left">Risk assessment models processing 1M+ transactions/second>
                 </li>
                 <li className="text-left">
-                  <span className="text-left">✓<"
-                  <span className="text-left">Portfolio optimization with 1000+ asset classes<"
+                  <span className="text-left">✓<
+                  <span className="text-left">Portfolio optimization with 1000+ asset classes>
                 </li>
               </ul>
             </div>
@@ -218,20 +218,20 @@ export default function AIQuantumNeuralNetworks2026() {
               <h3 className="text-left">Healthcare & Life Sciences</h3>"
               <ul className="text-left">
                 <li className="text-left">
-                  <span className="text-left">✓<"
-                  <span className="text-left">Drug discovery acceleration with molecular simulation<"
+                  <span className="text-left">✓<
+                  <span className="text-left">Drug discovery acceleration with molecular simulation>
                 </li>
                 <li className="text-left">
-                  <span className="text-left">✓<"
-                  <span className="text-left">Medical image analysis with sub-pixel accuracy<"
+                  <span className="text-left">✓<
+                  <span className="text-left">Medical image analysis with sub-pixel accuracy>
                 </li>
                 <li className="text-left">
-                  <span className="text-left">✓<"
-                  <span className="text-left">Personalized treatment recommendations in real-time<"
+                  <span className="text-left">✓<
+                  <span className="text-left">Personalized treatment recommendations in real-time>
                 </li>
                 <li className="text-left">
-                  <span className="text-left">✓<"
-                  <span className="text-left">Genomic sequence analysis with quantum algorithms<"
+                  <span className="text-left">✓<
+                  <span className="text-left">Genomic sequence analysis with quantum algorithms>
                 </li>
               </ul>
             </div>
@@ -239,20 +239,20 @@ export default function AIQuantumNeuralNetworks2026() {
               <h3 className="text-left">Manufacturing & Logistics</h3>"
               <ul className="text-left">
                 <li className="text-left">
-                  <span className="text-left">✓<"
-                  <span className="text-left">Supply chain optimization with quantum annealing<"
+                  <span className="text-left">✓<
+                  <span className="text-left">Supply chain optimization with quantum annealing>
                 </li>
                 <li className="text-left">
-                  <span className="text-left">✓<"
-                  <span className="text-left">Predictive maintenance with 99.9% accuracy<"
+                  <span className="text-left">✓<
+                  <span className="text-left">Predictive maintenance with 99.9% accuracy>
                 </li>
                 <li className="text-left">
-                  <span className="text-left">✓<"
-                  <span className="text-left">Quality control with real-time defect detection<"
+                  <span className="text-left">✓<
+                  <span className="text-left">Quality control with real-time defect detection>
                 </li>
                 <li className="text-left">
-                  <span className="text-left">✓<"
-                  <span className="text-left">Autonomous vehicle navigation and routing<"
+                  <span className="text-left">✓<
+                  <span className="text-left">Autonomous vehicle navigation and routing>
                 </li>
               </ul>
             </div>
@@ -260,20 +260,20 @@ export default function AIQuantumNeuralNetworks2026() {
               <h3 className="text-left">Research & Development</h3>"
               <ul className="text-left">
                 <li className="text-left">
-                  <span className="text-left">✓<"
-                  <span className="text-left">Climate modeling with unprecedented resolution<"
+                  <span className="text-left">✓<
+                  <span className="text-left">Climate modeling with unprecedented resolution>
                 </li>
                 <li className="text-left">
-                  <span className="text-left">✓<"
-                  <span className="text-left">Materials science simulation and discovery<"
+                  <span className="text-left">✓<
+                  <span className="text-left">Materials science simulation and discovery>
                 </li>
                 <li className="text-left">
-                  <span className="text-left">✓<"
-                  <span className="text-left">Quantum cryptography and secure communications<"
+                  <span className="text-left">✓<
+                  <span className="text-left">Quantum cryptography and secure communications>
                 </li>
                 <li className="text-left">
-                  <span className="text-left">✓<"
-                  <span className="text-left">Artificial intelligence research acceleration<"
+                  <span className="text-left">✓<
+                  <span className="text-left">Artificial intelligence research acceleration>
                 </li>
               </ul>
             </div>
@@ -354,15 +354,13 @@ export default function AIQuantumNeuralNetworks2026() {
           </p>
           <div className="text-left"></div>
             <Link
-              href="/services
-              className="text-left
-            >
+              href="/services"
+              className="text-left">
               Explore Quantum AI Services
             </Link>
             <a
-              href="tel:+13024640950
-              className="text-left
-            >
+              href="tel:+13024640950"
+              className="text-left">
               Call +1 302 464 0950
             </a>
           </div>

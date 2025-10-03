@@ -8,14 +8,14 @@ export const metadata = {
 
 export default function AIPoweredDataAnalytics2026() {
   return (
-    <div className="text-left"></div>
-      {/* Hero Section */}
+    <div className="text-left">
+      {/* Hero Section */}</div>
       <section className="text-left">
         <div className="text-left"></div>"
         <div className="text-left"></div>
           <div className="text-left"></div>
             <div className="text-left"></div>
-              <span className="text-left"></span>
+              <span className="text-left">
                 🚀 NEW SERVICE 2026
               </span>
             </div>
@@ -65,11 +65,11 @@ export default function AIPoweredDataAnalytics2026() {
             </p>
           </div>
 
-          <div className="text-left"></div>
-            {/* Real-Time Analytics */}
+          <div className="text-left">
+            {/* Real-Time Analytics */}</div>
             <div className="text-left"></div>
               <div className="text-left"></div>
-                <span className="text-left">⚡<"
+                <span className="text-left">⚡>
               </div>
               <h3 className="text-left">Real-Time Analytics</h3>"
               <p className="text-left">
@@ -78,19 +78,19 @@ export default function AIPoweredDataAnalytics2026() {
               </p>
               <ul className="text-left">
                 <li className="text-left">
-                  <span className="text-left">✓<"
+                  <span className="text-left">✓>
                   <span>Sub-second query performance</span>
                 </li>
                 <li className="text-left">
-                  <span className="text-left">✓<"
+                  <span className="text-left">✓>
                   <span>Live dashboards and alerts</span>
                 </li>
                 <li className="text-left">
-                  <span className="text-left">✓<"
+                  <span className="text-left">✓>
                   <span>Streaming data pipelines</span>
                 </li>
                 <li className="text-left">
-                  <span className="text-left">✓<"
+                  <span className="text-left">✓>
                   <span>Complex event processing</span>
                 </li>
               </ul>
@@ -99,7 +99,7 @@ export default function AIPoweredDataAnalytics2026() {
             {/* Predictive Analytics */}
             <div className="text-left"></div>
               <div className="text-left"></div>
-                <span className="text-left">🔮<"
+                <span className="text-left">🔮>
               </div>
               <h3 className="text-left">Predictive Analytics</h3>"
               <p className="text-left">
@@ -108,19 +108,19 @@ export default function AIPoweredDataAnalytics2026() {
               </p>
               <ul className="text-left">
                 <li className="text-left">
-                  <span className="text-left">✓<"
+                  <span className="text-left">✓>
                   <span>Time series forecasting</span>
                 </li>
                 <li className="text-left">
-                  <span className="text-left">✓<"
+                  <span className="text-left">✓>
                   <span>Churn prediction</span>
                 </li>
                 <li className="text-left">
-                  <span className="text-left">✓<"
+                  <span className="text-left">✓>
                   <span>Demand forecasting</span>
                 </li>
                 <li className="text-left">
-                  <span className="text-left">✓<"
+                  <span className="text-left">✓>
                   <span>Risk assessment models</span>
                 </li>
               </ul>
@@ -129,7 +129,7 @@ export default function AIPoweredDataAnalytics2026() {
             {/* Automated Insights */}
             <div className="text-left"></div>
               <div className="text-left"></div>
-                <span className="text-left">🤖<"
+                <span className="text-left">🤖>
               </div>
               <h3 className="text-left">Automated Insights</h3>"
               <p className="text-left">
@@ -138,19 +138,19 @@ export default function AIPoweredDataAnalytics2026() {
               </p>
               <ul className="text-left">
                 <li className="text-left">
-                  <span className="text-left">✓<"
+                  <span className="text-left">✓>
                   <span>Anomaly detection</span>
                 </li>
                 <li className="text-left">
-                  <span className="text-left">✓<"
+                  <span className="text-left">✓>
                   <span>Pattern discovery</span>
                 </li>
                 <li className="text-left">
-                  <span className="text-left">✓<"
+                  <span className="text-left">✓>
                   <span>Natural language insights</span>
                 </li>
                 <li className="text-left">
-                  <span className="text-left">✓<"
+                  <span className="text-left">✓>
                   <span>Automated reporting</span>
                 </li>
               </ul>
@@ -170,12 +170,12 @@ export default function AIPoweredDataAnalytics2026() {
             </p>
           </div>
 
-          <div className="text-left"></div>
-            {/* Sales & Marketing */}
+          <div className="text-left">
+            {/* Sales & Marketing */}</div>
             <div className="text-left"></div>
               <div className="text-left"></div>
                 <div className="text-left"></div>
-                  <span className="text-left">📊<"
+                  <span className="text-left">📊>
                 </div>
                 <h3 className="text-left">Sales & Marketing Intelligence</h3>"
               </div>
@@ -192,7 +192,7 @@ export default function AIPoweredDataAnalytics2026() {
             <div className="text-left"></div>
               <div className="text-left"></div>
                 <div className="text-left"></div>
-                  <span className="text-left">⚙️<"
+                  <span className="text-left">⚙️>
                 </div>
                 <h3 className="text-left">Operations Optimization</h3>"
               </div>
@@ -209,7 +209,7 @@ export default function AIPoweredDataAnalytics2026() {
             <div className="text-left"></div>
               <div className="text-left"></div>
                 <div className="text-left"></div>
-                  <span className="text-left">💰<"
+                  <span className="text-left">💰>
                 </div>
                 <h3 className="text-left">Financial Intelligence</h3>"
               </div>
@@ -226,7 +226,7 @@ export default function AIPoweredDataAnalytics2026() {
             <div className="text-left"></div>
               <div className="text-left"></div>
                 <div className="text-left"></div>
-                  <span className="text-left">😊<"
+                  <span className="text-left">😊>
                 </div>
                 <h3 className="text-left">Customer Experience Analytics</h3>"
               </div>
@@ -363,15 +363,13 @@ export default function AIPoweredDataAnalytics2026() {
 
           <div className="text-left"></div>
             <a
-              href="tel:+13024640950
-              className="text-left
-            >
+              href="tel:+13024640950"
+              className="text-left">
               📞 Call +1 302 464 0950
             </a>
             <a
-              href="mailto:kleber@ziontechgroup.com
-              className="text-left
-            >
+              href="mailto:kleber@ziontechgroup.com"
+              className="text-left">
               📧 Schedule Consultation
             </a>
           </div>

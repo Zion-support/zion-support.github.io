@@ -21,7 +21,7 @@ export default function MetaCognitiveAIBreakthrough() {
         {/* Hero Section */}
         <header className="text-left">
           <div className="text-left"></div>
-            <span className="text-left"></span>
+            <span className="text-left">
               🧠 Revolutionary AI Breakthrough
             </span>
           </div>
@@ -134,21 +134,21 @@ export default function MetaCognitiveAIBreakthrough() {
           <div className="text-left"></div>
             <ul className="text-left">
               <li className="text-left">
-                <span className="text-left">🧠<"
+                <span className="text-left">🧠>
                 <div></div>
                   <strong className="text-left">Neural-Symbolic Fusion:</strong> Combining deep learning with symbolic reasoning "
                   for enhanced interpretability and accuracy.
                 </div>
               </li>
               <li className="text-left">
-                <span className="text-left">🔄<"
+                <span className="text-left">🔄>
                 <div></div>
                   <strong className="text-left">Self-Monitoring Mechanisms:</strong> Continuous evaluation of reasoning quality "
                   and identification of uncertainty sources.
                 </div>
               </li>
               <li className="text-left">
-                <span className="text-left">⚡<"
+                <span className="text-left">⚡>
                 <div></div>
                   <strong className="text-left">Adaptive Learning:</strong> Real-time strategy adjustment based on "
                   meta-cognitive insights and performance feedback.
@@ -193,15 +193,13 @@ export default function MetaCognitiveAIBreakthrough() {
             </p>
             <div className="text-left"></div>
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 Get Free Consultation
               </a>
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 View Success Stories
               </a>
             </div>

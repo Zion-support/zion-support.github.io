@@ -18,8 +18,8 @@ export const metadata: Metadata = {
 
 export default function AI2027UniversalConsciousnessRevolution() {
   return (
-    <div className="text-left"></div>
-      {/* Hero Section */}
+    <div className="text-left">
+      {/* Hero Section */}</div>
       <section className="text-left">
         <div className="text-left"></div>
           <div className="text-left"></div>"
@@ -29,7 +29,7 @@ export default function AI2027UniversalConsciousnessRevolution() {
         <div className="text-left"></div>
           <div className="text-left"></div>
             <div className="text-left"></div>
-              <span className="text-left"></span>
+              <span className="text-left">
                 🌐 AI 2027 UNIVERSAL CONSCIOUSNESS REVOLUTION
               </span>
             </div>
@@ -44,15 +44,13 @@ export default function AI2027UniversalConsciousnessRevolution() {
             
             <div className="text-left"></div>
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 Start Your Revolution
               </a>
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 View $500B Success Story →
               </a>
             </div>
@@ -93,19 +91,19 @@ export default function AI2027UniversalConsciousnessRevolution() {
               <h3 className="text-left">🌐 Revolutionary Capabilities</h3>"
               <ul className="text-left">
                 <li className="text-left">
-                  <span className="text-left">10,000,000x Performance:<"
+                  <span className="text-left">10,000,000x Performance:>
                   <span>Unprecedented computational speed and efficiency improvements beyond imagination</span>
                 </li>
                 <li className="text-left">
-                  <span className="text-left">Universal Intelligence:<"
+                  <span className="text-left">Universal Intelligence:>
                   <span>99.99999% autonomous decision-making with universal understanding across all domains</span>
                 </li>
                 <li className="text-left">
-                  <span className="text-left">$500B+ ROI Potential:<"
+                  <span className="text-left">$500B+ ROI Potential:>
                   <span>Massive value generation for enterprise transformations and global impact</span>
                 </li>
                 <li className="text-left">
-                  <span className="text-left">0.0000001s Response:<"
+                  <span className="text-left">0.0000001s Response:>
                   <span>Ultra-fast response times for real-time applications and instant decision-making</span>
                 </li>
               </ul>
@@ -213,15 +211,13 @@ export default function AI2027UniversalConsciousnessRevolution() {
               </p>
               <div className="text-left"></div>
                 <a 
-                  href="/
-                  className="text-left
-                >
+                  href="/"
+                  className="text-left">
                   Start Your Universal Revolution
                 </a>
                 <a 
-                  href="/
-                  className="text-left
-                >
+                  href="/"
+                  className="text-left">
                   View Success Stories
                 </a>
               </div>

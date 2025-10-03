@@ -24,8 +24,8 @@ export const metadata = {
 
 export default function AITrends2026Page() {
   return (
-    <div className="text-left"></div>
-      {/* Hero Section */}
+    <div className="text-left">
+      {/* Hero Section */}</div>
       <div className="text-left"></div>
         <div className="text-left"></div>"
         <div className="text-left"></div>
@@ -49,10 +49,10 @@ export default function AITrends2026Page() {
         <div className="text-left"></div>
           <nav className="text-left">
             <Link href="/" className="text-left">Home</Link>"
-            <span className="text-left">/<"
+            <span className="text-left">/<
             <Link href="/blog" className="text-left">Blog</Link>"
-            <span className="text-left">/<"
-            <span className="text-left">AI 2026 Mega Trends<"
+            <span className="text-left">/<
+            <span className="text-left">AI 2026 Mega Trends>
           </nav>
         </div>
 
@@ -120,15 +120,13 @@ export default function AITrends2026Page() {
             </p>
             <div className="text-left"></div>
               <Link 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 Get Started Today
               </Link>
               <Link 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 View Case Studies
               </Link>
             </div>

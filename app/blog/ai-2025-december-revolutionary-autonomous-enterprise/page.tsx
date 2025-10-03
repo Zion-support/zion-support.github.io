@@ -20,7 +20,7 @@ export default function AI2025DecemberRevolutionaryAutonomousEnterprise() {
         <article className="text-left">
           <header className="text-left">
             <div className="text-left"></div>
-              <span className="text-left"></span>
+              <span className="text-left">
                 🚀 December 2025 Breakthrough
               </span>
             </div>
@@ -176,15 +176,13 @@ export default function AI2025DecemberRevolutionaryAutonomousEnterprise() {
               </p>
               <div className="text-left"></div>
                 <a 
-                  href="/
-                  className="text-left
-                >
+                  href="/"
+                  className="text-left">
                   Get Started Today
                 </a>
                 <a 
-                  href="/
-                  className="text-left
-                >
+                  href="/"
+                  className="text-left">
                   View Success Stories
                 </a>
               </div>

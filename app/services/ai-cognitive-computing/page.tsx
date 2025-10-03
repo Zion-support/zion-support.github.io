@@ -12,10 +12,10 @@ export default function AICognitiveComputingServices() {
     <div className="text-left"></div>
       <div className="text-left"></div>
         <div className="text-left"></div>
-          <span className="text-left"></span>
+          <span className="text-left">
             🧠 Revolutionary Service
           </span>
-          <span className="text-left">Cognitive AI<"
+          <span className="text-left">Cognitive AI>
         </div>
         <h1 className="text-left">
           AI Cognitive Computing Services
@@ -27,15 +27,13 @@ export default function AICognitiveComputingServices() {
         </p>
         <div className="text-left"></div>
           <a
-            href="tel:+13024640950
-            className="text-left
-          >
+            href="tel:+13024640950"
+            className="text-left">
             Call +1 302 464 0950
           </a>
           <a
-            href="mailto:kleber@ziontechgroup.com
-            className="text-left
-          >
+            href="mailto:kleber@ziontechgroup.com"
+            className="text-left">
             Get Free Consultation
           </a>
         </div>
@@ -43,7 +41,7 @@ export default function AICognitiveComputingServices() {
       <div className="text-left"></div>
         <div className="text-left"></div>
           <div className="text-left"></div>
-            <span className="text-left">🧠<"
+            <span className="text-left">🧠>
           </div>
           <h3 className="text-left">Advanced Reasoning Engine</h3>"
           <p className="text-left">
@@ -62,7 +60,7 @@ export default function AICognitiveComputingServices() {
 
         <div className="text-left"></div>
           <div className="text-left"></div>
-            <span className="text-left">📚<"
+            <span className="text-left">📚>
           </div>
           <h3 className="text-left">Continuous Learning System</h3>"
           <p className="text-left">
@@ -81,7 +79,7 @@ export default function AICognitiveComputingServices() {
 
         <div className="text-left"></div>
           <div className="text-left"></div>
-            <span className="text-left">💬<"
+            <span className="text-left">💬>
           </div>
           <h3 className="text-left">Natural Language Understanding</h3>"
           <p className="text-left">
@@ -150,13 +148,13 @@ export default function AICognitiveComputingServices() {
           <div className="text-left"></div>
             <h3 className="text-left">MedTech Solutions: 300% Productivity Gains</h3>"
             <p className="text-left">
-              "Zion Tech Group's cognitive AI transformed our diagnostic capabilities. We achieved 300% productivity 
+              "Zion Tech Group's cognitive AI transformed our diagnostic capabilities. We achieved 300% productivity "
               gains and 95% decision accuracy in medical diagnosis. The system learns continuously and improves 
               its performance with every case."
             </p>
             <div className="text-left"></div>
               <div className="text-left"></div>
-                <span className="text-left">🧠<"
+                <span className="text-left">🧠>
               </div>
               <div></div>
                 <div className="text-left">Dr. Michael Rodriguez</div>"
@@ -173,15 +171,13 @@ export default function AICognitiveComputingServices() {
         </p>
         <div className="text-left"></div>
           <a
-            href="tel:+13024640950
-            className="text-left
-          >
+            href="tel:+13024640950"
+            className="text-left">
             Call +1 302 464 0950
           </a>
           <a
-            href="mailto:kleber@ziontechgroup.com
-            className="text-left
-          >
+            href="mailto:kleber@ziontechgroup.com"
+            className="text-left">
             Get Free Consultation
           </a>
         </div>

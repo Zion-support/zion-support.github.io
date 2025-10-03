@@ -21,7 +21,7 @@ export default function QuantumNeuralSuperintelligencePage() {
         <article className="text-left">
           <header className="text-left">
             <div className="text-left"></div>
-              <span className="text-left"></span>
+              <span className="text-left">
                 ⚛️ Quantum AI Breakthrough
               </span>
             </div>
@@ -37,10 +37,10 @@ export default function QuantumNeuralSuperintelligencePage() {
             </p>
             
             <div className="text-left"></div>
-              <span className="text-left">Quantum AI<"
-              <span className="text-left">Superintelligence<"
-              <span className="text-left">Neural Networks<"
-              <span className="text-left">1000x Performance<"
+              <span className="text-left">Quantum AI<
+              <span className="text-left">Superintelligence<
+              <span className="text-left">Neural Networks<
+              <span className="text-left">1000x Performance>
             </div>
           </header>
 
@@ -218,15 +218,13 @@ export default function QuantumNeuralSuperintelligencePage() {
               </p>
               <div className="text-left"></div>
                 <a 
-                  href="/
-                  className="text-left
-                >
+                  href="/"
+                  className="text-left">
                   Schedule Demo
                 </a>
                 <a 
-                  href="/
-                  className="text-left
-                >
+                  href="/"
+                  className="text-left">
                   View Success Stories
                 </a>
               </div>

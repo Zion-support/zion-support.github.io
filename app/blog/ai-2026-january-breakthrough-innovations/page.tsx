@@ -10,8 +10,8 @@ export const metadata: Metadata = {
 
 export default function AI2026JanuaryBreakthroughInnovations() {
   return (
-    <div className="text-left"></div>
-      {/* Hero Section */}
+    <div className="text-left">
+      {/* Hero Section */}</div>
       <header className="text-left">
         <div className="text-left"></div>
           <div className="text-left"></div>"
@@ -21,7 +21,7 @@ export default function AI2026JanuaryBreakthroughInnovations() {
         <div className="text-left"></div>
           <div className="text-left"></div>
             <div className="text-left"></div>
-              <span className="text-left"></span>
+              <span className="text-left">
                 🚀 BREAKING: January 2026 AI Revolution
               </span>
             </div>
@@ -37,14 +37,12 @@ export default function AI2026JanuaryBreakthroughInnovations() {
             <div className="text-left"></div>
               <a 
                 href="#breakthroughs" "
-                className="text-left
-              >
+                className="text-left">
                 Explore Breakthroughs
               </a>
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 Get Implementation Guide →
               </a>
             </div>
@@ -72,8 +70,8 @@ export default function AI2026JanuaryBreakthroughInnovations() {
 
       {/* Main Content */}
       <main className="text-left">
-        <div className="text-left"></div>
-          {/* Introduction */}
+        <div className="text-left">
+          {/* Introduction */}</div>
           <section className="text-left">
             <div className="text-left"></div>
               <h2 className="text-left">Revolutionary January 2026 AI Breakthroughs</h2>"
@@ -251,15 +249,13 @@ export default function AI2026JanuaryBreakthroughInnovations() {
               </p>
               <div className="text-left"></div>
                 <a 
-                  href="/
-                  className="text-left
-                >
+                  href="/"
+                  className="text-left">
                   Get Implementation Guide
                 </a>
                 <a 
-                  href="/
-                  className="text-left
-                >
+                  href="/"
+                  className="text-left">
                   View Success Stories →
                 </a>
               </div>

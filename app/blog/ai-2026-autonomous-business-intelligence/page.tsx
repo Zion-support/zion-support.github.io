@@ -17,16 +17,16 @@ export default function AIAutonomousBusinessIntelligence2026() {
     <article className="text-left">
       <div className="text-left"></div>
         <div className="text-left"></div>
-          <span className="text-left"></span>
+          <span className="text-left">
             🤖 AUTONOMOUS 2026
           </span>
-          <span className="text-left"></span>
+          <span className="text-left">
             300% ROI
           </span>
         </div>
         <h1 className="text-left">
           AI 2026 Autonomous Business Intelligence: 
-          <span className="text-left"> 300% ROI Revolution<"
+          <span className="text-left"> 300% ROI Revolution>
         </h1>
         <p className="text-left">
           The most revolutionary autonomous business intelligence breakthrough of 2026: achieving 300% ROI improvements 
@@ -207,15 +207,13 @@ export default function AIAutonomousBusinessIntelligence2026() {
           </p>
           <div className="text-left"></div>
             <Link
-              href="/services/autonomous-business-intelligence
-              className="text-left
-            >
+              href="/services/autonomous-business-intelligence"
+              className="text-left">
               Explore Autonomous Solutions
             </Link>
             <a
-              href="tel:+13024640950
-              className="text-left
-            >
+              href="tel:+13024640950"
+              className="text-left">
               Call +1 302 464 0950
             </a>
           </div>

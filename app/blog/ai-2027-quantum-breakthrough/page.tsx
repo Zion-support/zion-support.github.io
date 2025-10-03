@@ -26,18 +26,18 @@ export default function AI2027QuantumBreakthrough() {
       <article className="text-left">
         <header className="text-left">
           <div className="text-left"></div>
-            <span className="text-left"></span>
+            <span className="text-left">
               BREAKTHROUGH 2027
             </span>
-            <span className="text-left"></span>
+            <span className="text-left">
               QUANTUM AI
             </span>
           </div>
           <h1 className="text-left">
             AI 2027: Quantum Computing Breakthrough Revolutionizing Enterprise Operations
           </h1>
-          <div className="text-left"></div>
-            Published on January 15, 2027 • 12 min read
+          <div className="text-left">
+            Published on January 15, 2027 • 12 min read</div>
           </div>
           <div className="text-left"></div>
             <p className="text-left">
@@ -82,8 +82,8 @@ export default function AI2027QuantumBreakthrough() {
                   Quantum algorithms now optimize global supply chains in real-time, considering thousands of variables 
                   including weather patterns, geopolitical risks, and demand fluctuations.
                 </p>
-                <div className="text-left"></div>
-                  Result: 35% cost reduction, 60% faster delivery times
+                <div className="text-left">
+                  Result: 35% cost reduction, 60% faster delivery times</div>
                 </div>
               
               <div className="text-left"></div>
@@ -92,8 +92,8 @@ export default function AI2027QuantumBreakthrough() {
                   Quantum key distribution provides unbreakable encryption, while quantum machine learning 
                   detects sophisticated cyber threats with unprecedented accuracy.
                 </p>
-                <div className="text-left"></div>
-                  Result: 99.9% threat detection accuracy, zero quantum-vulnerable breaches
+                <div className="text-left">
+                  Result: 99.9% threat detection accuracy, zero quantum-vulnerable breaches</div>
                 </div>
               
               <div className="text-left"></div>
@@ -102,8 +102,8 @@ export default function AI2027QuantumBreakthrough() {
                   Pharmaceutical companies leverage quantum simulation to model molecular interactions, 
                   accelerating drug discovery from years to months.
                 </p>
-                <div className="text-left"></div>
-                  Result: 80% faster drug development, 50% higher success rates
+                <div className="text-left">
+                  Result: 80% faster drug development, 50% higher success rates</div>
                 </div>
               
               <div className="text-left"></div>
@@ -112,8 +112,8 @@ export default function AI2027QuantumBreakthrough() {
                   Quantum algorithms process complex financial scenarios, enabling real-time risk assessment 
                   and portfolio optimization across global markets.
                 </p>
-                <div className="text-left"></div>
-                  Result: 25% higher returns, 90% risk reduction
+                <div className="text-left">
+                  Result: 25% higher returns, 90% risk reduction</div>
                 </div>
             </div>
           </section>
@@ -193,15 +193,13 @@ export default function AI2027QuantumBreakthrough() {
             </p>
             <div className="text-left"></div>
               <Link
-                href="/contact
-                className="text-left
-              >
+                href="/contact"
+                className="text-left">
                 Get Quantum Assessment
               </Link>
               <Link
-                href="/case-studies
-                className="text-left
-              >
+                href="/case-studies"
+                className="text-left">
                 View Success Stories
               </Link>
             </div>

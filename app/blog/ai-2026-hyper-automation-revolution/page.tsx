@@ -12,13 +12,13 @@ export default function AI2026HyperAutomationRevolution() {
     <div className="text-left"></div>
       <div className="text-left"></div>
         <div className="text-left"></div>
-          <span className="text-left"></span>
+          <span className="text-left">
             HYPER-AUTOMATION
           </span>
-          <span className="text-left"></span>
+          <span className="text-left">
             $3.2B ROI
           </span>
-          <span className="text-left"></span>
+          <span className="text-left">
             99.5% AUTONOMOUS
           </span>
         </div>
@@ -140,19 +140,19 @@ export default function AI2026HyperAutomationRevolution() {
           <h4 className="text-left">Deployment Phases</h4>"
           <div className="text-left"></div>
             <div className="text-left"></div>
-              <span className="text-left">Phase 1<"
+              <span className="text-left">Phase 1>
               <span>Process analysis and automation design (4-6 weeks)</span>
             </div>
             <div className="text-left"></div>
-              <span className="text-left">Phase 2<"
+              <span className="text-left">Phase 2>
               <span>Pilot deployment and testing (8-12 weeks)</span>
             </div>
             <div className="text-left"></div>
-              <span className="text-left">Phase 3<"
+              <span className="text-left">Phase 3>
               <span>Full enterprise rollout (12-16 weeks)</span>
             </div>
             <div className="text-left"></div>
-              <span className="text-left">Phase 4<"
+              <span className="text-left">Phase 4>
               <span>Advanced optimization and scaling (ongoing)</span>
             </div>
         </div>
@@ -165,15 +165,13 @@ export default function AI2026HyperAutomationRevolution() {
           </p>
           <div className="text-left"></div>
             <Link 
-              href="/
-              className="text-left
-            >
+              href="/"
+              className="text-left">
               Start Transformation
             </Link>
             <Link 
-              href="/
-              className="text-left
-            >
+              href="/"
+              className="text-left">
               View Success Stories
             </Link>
           </div>
@@ -184,7 +182,7 @@ export default function AI2026HyperAutomationRevolution() {
         <div className="text-left"></div>
           <Link href="/blog/ai-2026-autonomous-enterprise-operations" className="text-left">
             <div className="text-left"></div>
-              <span className="text-left">AUTONOMOUS OPS<"
+              <span className="text-left">AUTONOMOUS OPS<
               <h4 className="text-left">Autonomous Enterprise Operations</h4>"
               <p className="text-left">95% autonomous operations with AI-powered decision making</p>"
             </div>
@@ -192,7 +190,7 @@ export default function AI2026HyperAutomationRevolution() {
           
           <Link href="/blog/ai-2026-enterprise-automation-revolution" className="text-left">
             <div className="text-left"></div>
-              <span className="text-left">ENTERPRISE AI<"
+              <span className="text-left">ENTERPRISE AI<
               <h4 className="text-left">Enterprise Automation Revolution</h4>"
               <p className="text-left">Complete enterprise transformation with advanced AI automation</p>"
             </div>
@@ -200,7 +198,7 @@ export default function AI2026HyperAutomationRevolution() {
           
           <Link href="/case-studies/ai-2026-hyper-automation-revolution-success" className="text-left">
             <div className="text-left"></div>
-              <span className="text-left">$3.2B ROI<"
+              <span className="text-left">$3.2B ROI<
               <h4 className="text-left">Hyper-Automation Success</h4>"
               <p className="text-left">How Fortune 500 achieved $3.2B ROI with hyper-automation</p>"
             </div>

@@ -28,7 +28,7 @@ export default function AI2027QuantumNeuralNetworks() {
           <div className="text-left"></div>
             <span>📅 January 2027</span>
             <span>⏱️ 15 min read</span>
-            <span className="text-left">BREAKTHROUGH<"
+            <span className="text-left">BREAKTHROUGH>
           </div>
         </div>
       </div>
@@ -229,15 +229,15 @@ export default function AI2027QuantumNeuralNetworks() {
           <h3 className="text-left">Next-Generation Capabilities</h3>"
           <ul className="text-left">
             <li className="text-left">
-              <span className="text-left">🌌<"
+              <span className="text-left">🌌>
               <span><strong>Universal Quantum Computers:</strong> Fault-tolerant quantum systems with millions of qubits<
             </li>
             <li className="text-left">
-              <span className="text-left">🧠<"
+              <span className="text-left">🧠>
               <span><strong>Quantum Consciousness:</strong> AI systems with quantum-enhanced reasoning and creativity<
             </li>
             <li className="text-left">
-              <span className="text-left">🌐<"
+              <span className="text-left">🌐>
               <span><strong>Quantum Internet:</strong> Secure quantum communication networks for distributed AI<
             </li>
           </ul>
@@ -261,15 +261,13 @@ export default function AI2027QuantumNeuralNetworks() {
           </p>
           <div className="text-left"></div>
             <Link 
-              href="/
-              className="text-left
-            >
+              href="/"
+              className="text-left">
               Start Your Quantum Journey
             </Link>
             <Link 
-              href="/
-              className="text-left
-            >
+              href="/"
+              className="text-left">
               Explore Quantum Services
             </Link>
           </div>

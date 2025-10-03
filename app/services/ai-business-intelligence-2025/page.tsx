@@ -30,15 +30,15 @@ export const metadata: Metadata = {
 
 export default function AIBusinessIntelligence2025() {
   return (
-    <div className="text-left"></div>
-      {/* Header */}
+    <div className="text-left">
+      {/* Header */}</div>
       <div className="text-left"></div>
         <div className="text-left"></div>
           <Link href="/services" className="text-left">
             ← Back to Services
           </Link>
-          <span className="text-left">|<"
-          <span className="text-left"></span>
+          <span className="text-left">|<
+          <span className="text-left">
             NEW 2025
           </span>
         </div>
@@ -48,16 +48,16 @@ export default function AIBusinessIntelligence2025() {
         </h1>
         
         <div className="text-left"></div>
-          <span className="text-left"></span>
+          <span className="text-left">
             Business Intelligence
           </span>
-          <span className="text-left"></span>
+          <span className="text-left">
             Predictive Analytics
           </span>
-          <span className="text-left"></span>
+          <span className="text-left">
             Data Visualization
           </span>
-          <span className="text-left"></span>
+          <span className="text-left">
             Real-time Insights
           </span>
         </div>
@@ -97,7 +97,7 @@ export default function AIBusinessIntelligence2025() {
         <div className="text-left"></div>
           <div className="text-left"></div>
             <div className="text-left"></div>
-              <span className="text-left">🔮<"
+              <span className="text-left">🔮>
             </div>
             <h3 className="text-left">Predictive Analytics</h3>"
             <p className="text-left">
@@ -113,7 +113,7 @@ export default function AIBusinessIntelligence2025() {
 
           <div className="text-left"></div>
             <div className="text-left"></div>
-              <span className="text-left">📊<"
+              <span className="text-left">📊>
             </div>
             <h3 className="text-left">Real-time Dashboards</h3>"
             <p className="text-left">
@@ -129,7 +129,7 @@ export default function AIBusinessIntelligence2025() {
 
           <div className="text-left"></div>
             <div className="text-left"></div>
-              <span className="text-left">🤖<"
+              <span className="text-left">🤖>
             </div>
             <h3 className="text-left">AI-Powered Insights</h3>"
             <p className="text-left">
@@ -145,7 +145,7 @@ export default function AIBusinessIntelligence2025() {
 
           <div className="text-left"></div>
             <div className="text-left"></div>
-              <span className="text-left">📈<"
+              <span className="text-left">📈>
             </div>
             <h3 className="text-left">Advanced Reporting</h3>"
             <p className="text-left">
@@ -161,7 +161,7 @@ export default function AIBusinessIntelligence2025() {
 
           <div className="text-left"></div>
             <div className="text-left"></div>
-              <span className="text-left">🔗<"
+              <span className="text-left">🔗>
             </div>
             <h3 className="text-left">Data Integration</h3>"
             <p className="text-left">
@@ -177,7 +177,7 @@ export default function AIBusinessIntelligence2025() {
 
           <div className="text-left"></div>
             <div className="text-left"></div>
-              <span className="text-left">🔒<"
+              <span className="text-left">🔒>
             </div>
             <h3 className="text-left">Security & Compliance</h3>"
             <p className="text-left">
@@ -200,23 +200,23 @@ export default function AIBusinessIntelligence2025() {
             <h3 className="text-left">Sales & Marketing</h3>"
             <ul className="text-left">
               <li className="text-left">
-                <span className="text-left">✓<"
+                <span className="text-left">✓>
                 <span>Lead scoring and qualification</span>
               </li>
               <li className="text-left">
-                <span className="text-left">✓<"
+                <span className="text-left">✓>
                 <span>Customer lifetime value prediction</span>
               </li>
               <li className="text-left">
-                <span className="text-left">✓<"
+                <span className="text-left">✓>
                 <span>Campaign performance optimization</span>
               </li>
               <li className="text-left">
-                <span className="text-left">✓<"
+                <span className="text-left">✓>
                 <span>Market segmentation analysis</span>
               </li>
               <li className="text-left">
-                <span className="text-left">✓<"
+                <span className="text-left">✓>
                 <span>Churn prediction and prevention</span>
               </li>
             </ul>
@@ -226,23 +226,23 @@ export default function AIBusinessIntelligence2025() {
             <h3 className="text-left">Operations & Finance</h3>"
             <ul className="text-left">
               <li className="text-left">
-                <span className="text-left">✓<"
+                <span className="text-left">✓>
                 <span>Financial forecasting and budgeting</span>
               </li>
               <li className="text-left">
-                <span className="text-left">✓<"
+                <span className="text-left">✓>
                 <span>Supply chain optimization</span>
               </li>
               <li className="text-left">
-                <span className="text-left">✓<"
+                <span className="text-left">✓>
                 <span>Inventory management</span>
               </li>
               <li className="text-left">
-                <span className="text-left">✓<"
+                <span className="text-left">✓>
                 <span>Risk assessment and management</span>
               </li>
               <li className="text-left">
-                <span className="text-left">✓<"
+                <span className="text-left">✓>
                 <span>Performance monitoring</span>
               </li>
             </ul>
@@ -252,23 +252,23 @@ export default function AIBusinessIntelligence2025() {
             <h3 className="text-left">Human Resources</h3>"
             <ul className="text-left">
               <li className="text-left">
-                <span className="text-left">✓<"
+                <span className="text-left">✓>
                 <span>Employee performance analytics</span>
               </li>
               <li className="text-left">
-                <span className="text-left">✓<"
+                <span className="text-left">✓>
                 <span>Turnover prediction</span>
               </li>
               <li className="text-left">
-                <span className="text-left">✓<"
+                <span className="text-left">✓>
                 <span>Recruitment optimization</span>
               </li>
               <li className="text-left">
-                <span className="text-left">✓<"
+                <span className="text-left">✓>
                 <span>Skills gap analysis</span>
               </li>
               <li className="text-left">
-                <span className="text-left">✓<"
+                <span className="text-left">✓>
                 <span>Workforce planning</span>
               </li>
             </ul>
@@ -278,23 +278,23 @@ export default function AIBusinessIntelligence2025() {
             <h3 className="text-left">Customer Experience</h3>"
             <ul className="text-left">
               <li className="text-left">
-                <span className="text-left">✓<"
+                <span className="text-left">✓>
                 <span>Customer satisfaction analysis</span>
               </li>
               <li className="text-left">
-                <span className="text-left">✓<"
+                <span className="text-left">✓>
                 <span>Support ticket prediction</span>
               </li>
               <li className="text-left">
-                <span className="text-left">✓<"
+                <span className="text-left">✓>
                 <span>Personalization insights</span>
               </li>
               <li className="text-left">
-                <span className="text-left">✓<"
+                <span className="text-left">✓>
                 <span>Product recommendation engine</span>
               </li>
               <li className="text-left">
-                <span className="text-left">✓<"
+                <span className="text-left">✓>
                 <span>Customer journey optimization</span>
               </li>
             </ul>
@@ -313,37 +313,36 @@ export default function AIBusinessIntelligence2025() {
             </div>
             <ul className="text-left">
               <li className="text-left">
-                <span className="text-left">✓<"
+                <span className="text-left">✓>
                 <span>Up to 10 users</span>
               </li>
               <li className="text-left">
-                <span className="text-left">✓<"
+                <span className="text-left">✓>
                 <span>5 data sources</span>
               </li>
               <li className="text-left">
-                <span className="text-left">✓<"
+                <span className="text-left">✓>
                 <span>Basic dashboards</span>
               </li>
               <li className="text-left">
-                <span className="text-left">✓<"
+                <span className="text-left">✓>
                 <span>Standard reports</span>
               </li>
               <li className="text-left">
-                <span className="text-left">✓<"
+                <span className="text-left">✓>
                 <span>Email support</span>
               </li>
             </ul>
             <Link
-              href="/contact
-              className="text-left
-            >
+              href="/contact"
+              className="text-left">
               Get Started
             </Link>
           </div>
 
           <div className="text-left"></div>
             <div className="text-left"></div>
-              <span className="text-left"></span>
+              <span className="text-left">
                 Most Popular
               </span>
             </div>
@@ -354,38 +353,37 @@ export default function AIBusinessIntelligence2025() {
             </div>
             <ul className="text-left">
               <li className="text-left">
-                <span className="text-left">✓<"
+                <span className="text-left">✓>
                 <span>Up to 50 users</span>
               </li>
               <li className="text-left">
-                <span className="text-left">✓<"
+                <span className="text-left">✓>
                 <span>Unlimited data sources</span>
               </li>
               <li className="text-left">
-                <span className="text-left">✓<"
+                <span className="text-left">✓>
                 <span>Advanced dashboards</span>
               </li>
               <li className="text-left">
-                <span className="text-left">✓<"
+                <span className="text-left">✓>
                 <span>Predictive analytics</span>
               </li>
               <li className="text-left">
-                <span className="text-left">✓<"
+                <span className="text-left">✓>
                 <span>Custom reports</span>
               </li>
               <li className="text-left">
-                <span className="text-left">✓<"
+                <span className="text-left">✓>
                 <span>Priority support</span>
               </li>
               <li className="text-left">
-                <span className="text-left">✓<"
+                <span className="text-left">✓>
                 <span>API access</span>
               </li>
             </ul>
             <Link
-              href="/contact
-              className="text-left
-            >
+              href="/contact"
+              className="text-left">
               Get Started
             </Link>
           </div>
@@ -398,38 +396,37 @@ export default function AIBusinessIntelligence2025() {
             </div>
             <ul className="text-left">
               <li className="text-left">
-                <span className="text-left">✓<"
+                <span className="text-left">✓>
                 <span>Unlimited users</span>
               </li>
               <li className="text-left">
-                <span className="text-left">✓<"
+                <span className="text-left">✓>
                 <span>Enterprise integrations</span>
               </li>
               <li className="text-left">
-                <span className="text-left">✓<"
+                <span className="text-left">✓>
                 <span>White-label solution</span>
               </li>
               <li className="text-left">
-                <span className="text-left">✓<"
+                <span className="text-left">✓>
                 <span>Advanced AI models</span>
               </li>
               <li className="text-left">
-                <span className="text-left">✓<"
+                <span className="text-left">✓>
                 <span>Dedicated support</span>
               </li>
               <li className="text-left">
-                <span className="text-left">✓<"
+                <span className="text-left">✓>
                 <span>On-premise deployment</span>
               </li>
               <li className="text-left">
-                <span className="text-left">✓<"
+                <span className="text-left">✓>
                 <span>Custom development</span>
               </li>
             </ul>
             <Link
-              href="/contact
-              className="text-left
-            >
+              href="/contact"
+              className="text-left">
               Contact Sales
             </Link>
           </div>
@@ -441,7 +438,7 @@ export default function AIBusinessIntelligence2025() {
         <div className="text-left"></div>
           <div className="text-left"></div>
             <div className="text-left"></div>
-              <span className="text-left">1<"
+              <span className="text-left">1>
             </div>
             <div></div>
               <h3 className="text-left">Discovery & Planning</h3>"
@@ -459,7 +456,7 @@ export default function AIBusinessIntelligence2025() {
 
           <div className="text-left"></div>
             <div className="text-left"></div>
-              <span className="text-left">2<"
+              <span className="text-left">2>
             </div>
             <div></div>
               <h3 className="text-left">Data Integration & Setup</h3>"
@@ -477,7 +474,7 @@ export default function AIBusinessIntelligence2025() {
 
           <div className="text-left"></div>
             <div className="text-left"></div>
-              <span className="text-left">3<"
+              <span className="text-left">3>
             </div>
             <div></div>
               <h3 className="text-left">Dashboard & Report Creation</h3>"
@@ -495,7 +492,7 @@ export default function AIBusinessIntelligence2025() {
 
           <div className="text-left"></div>
             <div className="text-left"></div>
-              <span className="text-left">4<"
+              <span className="text-left">4>
             </div>
             <div></div>
               <h3 className="text-left">Training & Deployment</h3>"
@@ -537,9 +534,8 @@ export default function AIBusinessIntelligence2025() {
           
           <div className="text-left"></div>
             <Link
-              href="/contact
-              className="text-left
-            >
+              href="/contact"
+              className="text-left">
               Get Your Custom ROI Analysis
             </Link>
           </div>
@@ -553,15 +549,13 @@ export default function AIBusinessIntelligence2025() {
         </p>
         <div className="text-left"></div>
           <Link
-            href="/contact
-            className="text-left
-          >
+            href="/contact"
+            className="text-left">
             Get Free Consultation
           </Link>
           <a
-            href="tel:+13024640950
-            className="text-left
-          >
+            href="tel:+13024640950"
+            className="text-left">
             Call +1 302 464 0950
           </a>
         </div>

@@ -18,8 +18,8 @@ export const metadata: Metadata = {
 export default function AI2027AutonomousEnterpriseTransformation() {
   return (
     <div className="text-left"></div>
-      <div className="text-left"></div>
-        {/* Header */}
+      <div className="text-left">
+        {/* Header */}</div>
         <div className="text-left"></div>
           <div className="text-left"></div>
             <span className="text-left"><
@@ -81,7 +81,7 @@ export default function AI2027AutonomousEnterpriseTransformation() {
 <div className="text-left"></div>
           <div className="text-left"></div>
             <h2 className="text-left">The Autonomous Enterprise Revolution</h2>"
-            <div className="text-left">origin/cursor/fix-errors-and-merge-to-main-0638
+            <div className="text-left">origin/cursor/fix-errors-and-merge-to-main-0638</div>
               <p>
                 By 2027, we envision a world where enterprises operate with unprecedented autonomy. 
                 These self-governing organizations leverage advanced AI systems to make complex decisions, 
@@ -153,15 +153,13 @@ export default function AI2027AutonomousEnterpriseTransformation() {
               </p>
               <div className="text-left"></div>
                 <Link 
-                  href="/
-                  className="text-left
-                >
+                  href="/"
+                  className="text-left">
                   Start Transformation
                 </Link>
                 <Link 
-                  href="/
-                  className="text-left
-                >
+                  href="/"
+                  className="text-left">
                   Learn More
                 </Link>
               </div>
@@ -290,9 +288,8 @@ export default function AI2027AutonomousEnterpriseTransformation() {
         {/* Back to Blog */}
         <div className="text-left"></div>
           <Link 
-            href="/
-            className="text-left
-          >
+            href="/"
+            className="text-left">
             <svg className="text-left" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
             </svg>

@@ -22,7 +22,7 @@ export default function AutonomousEnterpriseRevolution() {
           {/* Hero Section */}
           <header className="text-left">
             <div className="text-left"></div>
-              <span className="text-left"></span>
+              <span className="text-left">
                 🤖 Autonomous Enterprise
               </span>
             </div>
@@ -34,9 +34,9 @@ export default function AutonomousEnterpriseRevolution() {
               every aspect of business operations with complete independence and superior performance.
             </p>
             <div className="text-left"></div>
-              <span className="text-left">100% Autonomy<"
-              <span className="text-left">Self-Evolving Operations<"
-              <span className="text-left">Autonomous Decision-Making<"
+              <span className="text-left">100% Autonomy<
+              <span className="text-left">Self-Evolving Operations<
+              <span className="text-left">Autonomous Decision-Making>
             </div>
           </header>
 
@@ -271,15 +271,13 @@ export default function AutonomousEnterpriseRevolution() {
             </p>
             <div className="text-left"></div>
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 Start Autonomy Journey
               </a>
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 Explore Autonomous Services
               </a>
             </div>

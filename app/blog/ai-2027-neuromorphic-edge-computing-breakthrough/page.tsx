@@ -17,11 +17,11 @@ export const metadata: Metadata = {
 export default function NeuromorphicEdgeComputingBreakthrough() {
   return (
     <div className="text-left"></div>
-      <div className="text-left"></div>
-        {/* Hero Section */}
+      <div className="text-left">
+        {/* Hero Section */}</div>
         <div className="text-left"></div>
           <div className="text-left"></div>
-            <span className="text-left"></span>
+            <span className="text-left">
               🧠 BREAKING: Neuromorphic Edge Computing Revolution
             </span>
           </div>
@@ -175,15 +175,13 @@ export default function NeuromorphicEdgeComputingBreakthrough() {
           </p>
           <div className="text-left"></div>
             <a 
-              href="/
-              className="text-left
-            >
+              href="/"
+              className="text-left">
               Get Started Today
             </a>
             <a 
-              href="/
-              className="text-left
-            >
+              href="/"
+              className="text-left">
               View More Case Studies
             </a>
           </div>

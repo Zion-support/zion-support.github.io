@@ -16,8 +16,8 @@ export const metadata: Metadata = {
 export default function AICybersecurity2025Page() {
   return (
     <div className="text-left"></div>
-      <div className="text-left"></div>
-        {/* Header */}
+      <div className="text-left">
+        {/* Header */}</div>
         <div className="text-left"></div>
           <div className="text-left"></div>
             <Link href="/services" className="text-left">
@@ -69,27 +69,27 @@ export default function AICybersecurity2025Page() {
                 <h3 className="text-left">Security Features</h3>"
                 <ul className="text-left">
                   <li className="text-left">
-                    <span className="text-left">✓<"
+                    <span className="text-left">✓>
                     <span>AI-powered threat detection & prevention</span>
                   </li>
                   <li className="text-left">
-                    <span className="text-left">✓<"
+                    <span className="text-left">✓>
                     <span>Quantum encryption protocols</span>
                   </li>
                   <li className="text-left">
-                    <span className="text-left">✓<"
+                    <span className="text-left">✓>
                     <span>Zero-trust architecture implementation</span>
                   </li>
                   <li className="text-left">
-                    <span className="text-left">✓<"
+                    <span className="text-left">✓>
                     <span>Real-time vulnerability scanning</span>
                   </li>
                   <li className="text-left">
-                    <span className="text-left">✓<"
+                    <span className="text-left">✓>
                     <span>Behavioral anomaly detection</span>
                   </li>
                   <li className="text-left">
-                    <span className="text-left">✓<"
+                    <span className="text-left">✓>
                     <span>Automated incident response</span>
                   </li>
                 </ul>
@@ -99,27 +99,27 @@ export default function AICybersecurity2025Page() {
                 <h3 className="text-left">Business Protection</h3>"
                 <ul className="text-left">
                   <li className="text-left">
-                    <span className="text-left">→<"
+                    <span className="text-left">→>
                     <span>99.99% threat detection accuracy</span>
                   </li>
                   <li className="text-left">
-                    <span className="text-left">→<"
+                    <span className="text-left">→>
                     <span>100% ransomware attack prevention</span>
                   </li>
                   <li className="text-left">
-                    <span className="text-left">→<"
+                    <span className="text-left">→>
                     <span>$80M+ in breach cost savings</span>
                   </li>
                   <li className="text-left">
-                    <span className="text-left">→<"
+                    <span className="text-left">→>
                     <span>&lt;10ms real-time response time</span>
                   </li>
                   <li className="text-left">
-                    <span className="text-left">→<"
+                    <span className="text-left">→>
                     <span>24/7 AI security monitoring</span>
                   </li>
                   <li className="text-left">
-                    <span className="text-left">→<"
+                    <span className="text-left">→>
                     <span>Compliance certification support</span>
                   </li>
                 </ul>
@@ -219,14 +219,14 @@ export default function AICybersecurity2025Page() {
                 <div></div>
                   <h3 className="text-left">Global Financial Institution Protected</h3>"
                   <p className="text-left">
-                    "After implementing Zion's AI Cybersecurity Solutions, we've blocked over 50,000 
+                    "After implementing Zion's AI Cybersecurity Solutions, we've blocked over 50,000 "
                     sophisticated attacks including multiple zero-day exploits. The system prevented 
                     three major ransomware attempts that could have cost us $200M+. This technology 
                     is absolutely game-changing."
                   </p>
                   <div className="text-left"></div>
                     <div className="text-left"></div>
-                      <span className="text-left">MJ<"
+                      <span className="text-left">MJ>
                     </div>
                     <div></div>
                       <div className="text-left">Michael Johnson</div>"
@@ -235,20 +235,20 @@ export default function AICybersecurity2025Page() {
                 </div>
                 <div className="text-left"></div>
                   <div className="text-left"></div>
-                    <span className="text-left">Attacks Blocked<"
-                    <span className="text-left">50,000+<"
+                    <span className="text-left">Attacks Blocked<
+                    <span className="text-left">50,000+>
                   </div>
                   <div className="text-left"></div>
-                    <span className="text-left">Breach Cost Saved<"
-                    <span className="text-left">$200M+<"
+                    <span className="text-left">Breach Cost Saved<
+                    <span className="text-left">$200M+>
                   </div>
                   <div className="text-left"></div>
-                    <span className="text-left">Detection Rate<"
-                    <span className="text-left">99.99%<"
+                    <span className="text-left">Detection Rate<
+                    <span className="text-left">99.99%>
                   </div>
                   <div className="text-left"></div>
-                    <span className="text-left">Response Time<"
-                    <span className="text-left">&lt;10ms<"
+                    <span className="text-left">Response Time<
+                    <span className="text-left">&lt;10ms>
                   </div>
               </div>
           </section>
@@ -265,15 +265,13 @@ export default function AICybersecurity2025Page() {
               </p>
               <div className="text-left"></div>
                 <a
-                  href="tel:+13024640950
-                  className="text-left
-                >
+                  href="tel:+13024640950"
+                  className="text-left">
                   Call +1 302 464 0950
                 </a>
                 <a
-                  href="mailto:kleber@ziontechgroup.com
-                  className="text-left
-                >
+                  href="mailto:kleber@ziontechgroup.com"
+                  className="text-left">
                   Email Us
                 </a>
               </div>

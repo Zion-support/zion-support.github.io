@@ -17,11 +17,11 @@ export const metadata: Metadata = {
 export default function AI2026MayMegaBreakthroughRevolution() {
   return (
     <div className="text-left"></div>
-      <div className="text-left"></div>
-        {/* Hero Section */}
+      <div className="text-left">
+        {/* Hero Section */}</div>
         <div className="text-left"></div>
           <div className="text-left"></div>
-            <span className="text-left"></span>
+            <span className="text-left">
               🚀 May 2026 Mega Breakthrough
             </span>
           </div>
@@ -36,15 +36,13 @@ export default function AI2026MayMegaBreakthroughRevolution() {
           
           <div className="text-left"></div>
             <a 
-              href="/
-              className="text-left
-            >
+              href="/"
+              className="text-left">
               Get Your Free Consultation
             </a>
             <a 
-              href="/
-              className="text-left
-            >
+              href="/"
+              className="text-left">
               View $10B Success Story →
             </a>
           </div>
@@ -210,15 +208,13 @@ export default function AI2026MayMegaBreakthroughRevolution() {
               </p>
               <div className="text-left"></div>
                 <a 
-                  href="/
-                  className="text-left
-                >
+                  href="/"
+                  className="text-left">
                   Get Your Free Consultation
                 </a>
                 <a 
-                  href="/
-                  className="text-left
-                >
+                  href="/"
+                  className="text-left">
                   View Success Stories →
                 </a>
               </div>

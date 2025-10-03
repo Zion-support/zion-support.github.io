@@ -19,8 +19,8 @@ export default function AIEnterpriseTransformation2026() {
       <div className="text-left"></div>
         <article className="text-left">
           <header className="text-left">
-            <div className="text-left"></div>
-              Enterprise AI
+            <div className="text-left">
+              Enterprise AI</div>
             </div>
             <h1 className="text-left">
               AI Enterprise Transformation: Complete Digital Overhaul Guide 2026
@@ -31,9 +31,9 @@ export default function AIEnterpriseTransformation2026() {
             </p>
             <div className="text-left"></div>
               <span>Published January 30, 2025</span>
-              <span className="text-left">•<"
+              <span className="text-left">•>
               <span>18 min read</span>
-              <span className="text-left">•<"
+              <span className="text-left">•>
               <span>By Zion Tech Group Strategy Team</span>
             </div>
           </header>
@@ -43,21 +43,21 @@ export default function AIEnterpriseTransformation2026() {
             <div className="text-left"></div>
               <div className="text-left"></div>
                 <div className="text-left"></div>
-                  <span className="text-left">🎯<"
+                  <span className="text-left">🎯>
                 </div>
                 <h3 className="text-left">Strategy & Planning</h3>"
                 <p className="text-left">Define AI vision and roadmap</p>"
               </div>
               <div className="text-left"></div>
                 <div className="text-left"></div>
-                  <span className="text-left">⚙️<"
+                  <span className="text-left">⚙️>
                 </div>
                 <h3 className="text-left">Implementation</h3>"
                 <p className="text-left">Deploy AI solutions at scale</p>"
               </div>
               <div className="text-left"></div>
                 <div className="text-left"></div>
-                  <span className="text-left">📈<"
+                  <span className="text-left">📈>
                 </div>
                 <h3 className="text-left">Optimization</h3>"
                 <p className="text-left">Maximize ROI and performance</p>"
@@ -130,9 +130,8 @@ export default function AIEnterpriseTransformation2026() {
               Ready to transform your enterprise with AI? Our experts can guide you through every step of the journey.
             </p>
             <a 
-              href="/
-              className="text-left
-            >
+              href="/"
+              className="text-left">
               Begin AI Transformation
             </a>
           </div>

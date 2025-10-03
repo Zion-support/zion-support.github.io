@@ -14,10 +14,10 @@ export default function December2025AdvancedAutonomousSystems() {
       <article className="text-left">
         <header className="text-left">
           <div className="text-left"></div>
-            <span className="text-left"></span>
+            <span className="text-left">
               🚀 DECEMBER 2025
             </span>
-            <span className="text-left"></span>
+            <span className="text-left">
               AUTONOMOUS SYSTEMS
             </span>
           </div>
@@ -128,28 +128,28 @@ export default function December2025AdvancedAutonomousSystems() {
 
           <ol className="text-left">
             <li className="text-left">
-              <span className="text-left">1<"
+              <span className="text-left">1>
               <div></div>
                 <strong className="text-left">System Assessment:</strong> Comprehensive evaluation of current "
                 automation capabilities and identification of optimization opportunities.
               </div>
             </li>
             <li className="text-left">
-              <span className="text-left">2<"
+              <span className="text-left">2>
               <div></div>
                 <strong className="text-left">Intelligence Integration:</strong> Seamless integration of "
                 universal intelligence core with existing business systems and workflows.
               </div>
             </li>
             <li className="text-left">
-              <span className="text-left">3<"
+              <span className="text-left">3>
               <div></div>
                 <strong className="text-left">Autonomous Deployment:</strong> Gradual rollout of autonomous "
                 operations with continuous monitoring and optimization.
               </div>
             </li>
             <li className="text-left">
-              <span className="text-left">4<"
+              <span className="text-left">4>
               <div></div>
                 <strong className="text-left">Value Optimization:</strong> Continuous refinement to maximize "
                 ROI and achieve full autonomous business operations.
@@ -186,9 +186,8 @@ export default function December2025AdvancedAutonomousSystems() {
                 and generate unprecedented value.
               </p>
               <Link 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 Get Started Today
               </Link>
             </div>
@@ -197,16 +196,14 @@ export default function December2025AdvancedAutonomousSystems() {
               <h3 className="text-left">Related Success Stories</h3>"
               <div className="text-left"></div>
                 <Link 
-                  href="/
-                  className="text-left
-                >
+                  href="/"
+                  className="text-left">
                   <div className="text-left">$500M Success Story</div>"
                   <div className="text-left">Fortune 100 company achieves massive ROI</div>"
                 </Link>
                 <Link 
-                  href="/
-                  className="text-left
-                >
+                  href="/"
+                  className="text-left">
                   <div className="text-left">Quantum Computing Breakthrough</div>"
                   <div className="text-left">Next-generation computing capabilities</div>"
                 </Link>

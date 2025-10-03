@@ -17,8 +17,8 @@ export const metadata: Metadata = {
 export default function AIGovernance2026EnterpriseSafety() {
   return (
     <div className="text-left"></div>
-      <div className="text-left"></div>
-        {/* Hero Section */}
+      <div className="text-left">
+        {/* Hero Section */}</div>
         <div className="text-left"></div>
           <h1 className="text-left">
             AI Governance 2026
@@ -427,15 +427,13 @@ export default function AIGovernance2026EnterpriseSafety() {
             </p>
             <div className="text-left"></div>
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 Get Governance Assessment
               </a>
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 Explore Governance Services
               </a>
             </div>

@@ -16,7 +16,7 @@ export default function Page() {
 			<article className="text-left">
 				<div className="text-left"></div>
 					<div className="text-left"></div>
-						<span className="text-left"></span>
+						<span className="text-left">
 							💰 Success Story
 						</span>
 					</div>
@@ -24,7 +24,7 @@ export default function Page() {
 						AI Enterprise Transformation: $50M Annual Savings Blueprint
 					</h1>
 					<p className="text-left">
-						January 28, 2025 · 50 min read · <span className="text-left">Enterprise AI<"
+						January 28, 2025 · 50 min read · <span className="text-left">Enterprise AI>
 					</p>
 				</div>
 
@@ -60,19 +60,19 @@ export default function Page() {
 						<h3 className="text-left">Fortune 500 Global Manufacturing</h3>"
 						<ul className="text-left">
 							<li className="text-left">
-								<span className="text-left">🏭<"
+								<span className="text-left">🏭>
 								<span><strong>Industry:</strong> Global Manufacturing & Supply Chain<
 							</li>
 							<li className="text-left">
-								<span className="text-left">👥<"
+								<span className="text-left">👥>
 								<span><strong>Size:</strong> 50,000+ employees across 40 countries<
 							</li>
 							<li className="text-left">
-								<span className="text-left">💰<"
+								<span className="text-left">💰>
 								<span><strong>Revenue:</strong> $15B+ annual revenue<
 							</li>
 							<li className="text-left">
-								<span className="text-left">📊<"
+								<span className="text-left">📊>
 								<span><strong>Challenge:</strong> Manual processes, legacy systems, operational inefficiencies<
 							</li>
 						</ul>
@@ -171,25 +171,25 @@ export default function Page() {
 {`// Enterprise AI Transformation Architecture
 const TransformationStack = {
   dataLayer: {
-    warehouses: "Snowflake + Databricks
-    streaming: "Apache Kafka + Apache Pulsar
-    storage: "AWS S3 + Azure Data Lake
+    warehouses: "Snowflake + Databricks"
+    streaming: "Apache Kafka + Apache Pulsar"
+    storage: "AWS S3 + Azure Data Lake"
   },
   aiPlatform: {
-    mlOps: "MLflow + Kubeflow + Weights & Biases
-    models: "TensorFlow + PyTorch + Hugging Face
-    deployment: "Kubernetes + Docker + Istio
+    mlOps: "MLflow + Kubeflow + Weights & Biases"
+    models: "TensorFlow + PyTorch + Hugging Face"
+    deployment: "Kubernetes + Docker + Istio"
   },
   automation: {
-    orchestration: "Apache Airflow + Prefect
-    monitoring: "Prometheus + Grafana + ELK Stack
-    governance: "Apache Atlas + Custom AI Governance
+    orchestration: "Apache Airflow + Prefect"
+    monitoring: "Prometheus + Grafana + ELK Stack"
+    governance: "Apache Atlas + Custom AI Governance"
   },
   infrastructure: {
-    cloud: "Multi-cloud (AWS + Azure + GCP)
-    compute: "Kubernetes + Serverless Functions
-    networking: "Istio Service Mesh + CDN
-  }`
+    cloud: "Multi-cloud (AWS + Azure + GCP)"
+    compute: "Kubernetes + Serverless Functions"
+    networking: "Istio Service Mesh + CDN"
+  }
 };`}
 						</pre>
 					</div>
@@ -276,19 +276,17 @@ const TransformationStack = {
 						</p>
 						<div className="text-left"></div>
 							<a 
-								href="/
-								className="text-left
-							>
+								href="/"
+								className="text-left">
 								Get Transformation Assessment
 							</a>
 							<a 
-								href="/
-								className="text-left
-							>
+								href="/"
+								className="text-left">
 								Explore AI Services
 							</a>
 						</div>
 				</div>
 			</article>
 	);
-}</div></div></div></div></div></div></div></div></div>`
+}</div></div></div></div></div></div></div></div></div>

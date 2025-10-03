@@ -10,13 +10,13 @@ export const metadata: Metadata = {
 
 export default function February2026TranscendentAutomationRevolutionPage() {
   return (
-    <div className="text-left"></div>
-      {/* Hero Section */}
+    <div className="text-left">
+      {/* Hero Section */}</div>
       <section className="text-left">
         <div className="text-left"></div>
           <div className="text-left"></div>
             <div className="text-left"></div>
-              <span className="text-left"></span>
+              <span className="text-left">
                 🌟 FEBRUARY 2026 BREAKTHROUGH
               </span>
             </div>
@@ -205,21 +205,18 @@ export default function February2026TranscendentAutomationRevolutionPage() {
             </p>
             <div className="text-left"></div>
               <Link
-                href="/contact
-                className="text-left
-              >
+                href="/contact"
+                className="text-left">
                 Get Started Today
               </Link>
               <Link
-                href="/case-studies/ai-2026-february-transcendent-automation-1-trillion-success
-                className="text-left
-              >
+                href="/case-studies/ai-2026-february-transcendent-automation-1-trillion-success"
+                className="text-left">
                 View $1 Trillion Success →
               </Link>
               <Link
-                href="/services/transcendent-automation
-                className="text-left
-              >
+                href="/services/transcendent-automation"
+                className="text-left">
                 Learn More
               </Link>
             </div>

@@ -17,8 +17,8 @@ export const metadata: Metadata = {
 export default function AI2027NeuromorphicComputingRevolution() {
   return (
     <div className="text-left"></div>
-      <div className="text-left"></div>
-        {/* Hero Section */}
+      <div className="text-left">
+        {/* Hero Section */}</div>
         <div className="text-left"></div>
           <h1 className="text-left">
             AI 2027: Neuromorphic Computing Revolution
@@ -218,15 +218,13 @@ export default function AI2027NeuromorphicComputingRevolution() {
             </p>
             <div className="text-left"></div>
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 Schedule Consultation
               </a>
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 Explore Neuromorphic Solutions
               </a>
             </div>

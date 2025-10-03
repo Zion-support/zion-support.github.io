@@ -22,7 +22,7 @@ export default function QuantumNeuralFusion() {
           {/* Hero Section */}
           <header className="text-left">
             <div className="text-left"></div>
-              <span className="text-left"></span>
+              <span className="text-left">
                 ⚛️ Quantum Breakthrough
               </span>
             </div>
@@ -34,9 +34,9 @@ export default function QuantumNeuralFusion() {
               in artificial intelligence that transcends traditional computational boundaries.
             </p>
             <div className="text-left"></div>
-              <span className="text-left">1000x Speed Boost<"
-              <span className="text-left">Quantum Parallelism<"
-              <span className="text-left">Neural Optimization<"
+              <span className="text-left">1000x Speed Boost<
+              <span className="text-left">Quantum Parallelism<
+              <span className="text-left">Neural Optimization>
             </div>
           </header>
 
@@ -273,15 +273,13 @@ export default function QuantumNeuralFusion() {
             </p>
             <div className="text-left"></div>
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 Schedule Demo
               </a>
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 Explore Services
               </a>
             </div>

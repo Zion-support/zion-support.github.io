@@ -4,11 +4,11 @@ import Link from 'next/link';
 export default function AISuperintelligentAutomationBreakthrough() {
   return (
     <div className="text-left"></div>
-      <div className="text-left"></div>
-        {/* Hero Section */}
+      <div className="text-left">
+        {/* Hero Section */}</div>
         <div className="text-left"></div>
           <div className="text-left"></div>
-            <span className="text-left"></span>
+            <span className="text-left">
               🚀 BREAKTHROUGH ANNOUNCEMENT
             </span>
           </div>
@@ -22,20 +22,20 @@ export default function AISuperintelligentAutomationBreakthrough() {
         </div>
 
         {/* Key Metrics */}
-        <div className="text-left"></div>
+        <div className="text-left">
           {[
             { value='99.9%', label: 'Automation Accuracy', icon: '🎯' },
             { value='$500M+', label: 'Annual Savings', icon: '💰' },
             { value='1000x', label: 'Processing Speed', icon: '⚡' },
             { value='24/7', label: 'Autonomous Operations', icon: '🤖' }
-          ].map((metric, index) => (
+          ].map((metric, index) => (</div>
             <div key={index} className="text-left"></div>
               <div className="text-left">{metric.icon}</div>"
-              <div className="text-left"></div>
-                {metric.value}
+              <div className="text-left">
+                {metric.value}</div>
               </div>
-              <div className="text-left"></div>
-                {metric.label}
+              <div className="text-left">
+                {metric.label}</div>
               </div>
             </div>
           ))}
@@ -180,15 +180,13 @@ export default function AISuperintelligentAutomationBreakthrough() {
           </p>
           <div className="text-left"></div>
             <Link 
-              href="/
-              className="text-left
-            >
+              href="/"
+              className="text-left">
               Get Free Assessment
             </Link>
             <Link 
-              href="/
-              className="text-left
-            >
+              href="/"
+              className="text-left">
               View Success Stories
             </Link>
           </div>

@@ -19,10 +19,10 @@ export default function FeaturedServiceCard({
   popular = false
 }: FeaturedServiceCardProps) {
   return (
-    <div className={`bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border ${popular ? 'border-blue-300 ring-2 ring-blue-100' : 'border-gray-200'} hover:border-blue-300 relative`}></div>
-      {popular && (
+    <div className={`bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border ${popular ? 'border-blue-300 ring-2 ring-blue-100' : 'border-gray-200'} hover:border-blue-300 relative`}>
+      {popular && (</div>
         <div className="text-left"></div>
-          <span className="text-left"></span>
+          <span className="text-left">
             Most Popular
           <
         </div>
@@ -47,15 +47,15 @@ export default function FeaturedServiceCard({
       </ul>
       
       <Link
-        href={to}`
+        href={to}
         className={`block w-full text-center py-3 px-4 rounded-lg font-semibold transition-colors ${
           popular
             ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700'
-            : 'bg-blue-600 text-white hover:bg-blue-700'`
+            : 'bg-blue-600 text-white hover:bg-blue-700'
         }`}
       >
         Learn More
       </Link>
     </div>
   );
-}</div>`
+}</div>

@@ -10,8 +10,8 @@ export const metadata: Metadata = {
 
 export default function SustainableAISolutionsPage() {
   return (
-    <div className="text-left"></div>
-      {/* Hero Section */}
+    <div className="text-left">
+      {/* Hero Section */}</div>
       <header className="text-left">
         <div className="text-left"></div>
           <div className="text-left"></div>"
@@ -21,7 +21,7 @@ export default function SustainableAISolutionsPage() {
         <div className="text-left"></div>
           <div className="text-left"></div>
             <div className="text-left"></div>
-              <span className="text-left"></span>
+              <span className="text-left">
                 🌱 Sustainable AI Solutions
               </span>
             </div>
@@ -36,15 +36,13 @@ export default function SustainableAISolutionsPage() {
             
             <div className="text-left"></div>
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 Get Sustainable AI Solutions
               </a>
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 View $2.5B Success Story →
               </a>
             </div>
@@ -88,7 +86,7 @@ export default function SustainableAISolutionsPage() {
             <div className="text-left"></div>
               <div className="text-left"></div>
                 <div className="text-left"></div>
-                  <span className="text-left">⚡<"
+                  <span className="text-left">⚡>
                 </div>
                 <h3 className="text-left">Energy Optimization</h3>"
               </div>
@@ -98,23 +96,22 @@ export default function SustainableAISolutionsPage() {
               </p>
               <ul className="text-left">
                 <li className="text-left">
-                  <span className="text-left">✓<"
+                  <span className="text-left">✓>
                   <span>Quantum-inspired neural optimization</span>
                 </li>
                 <li className="text-left">
-                  <span className="text-left">✓<"
+                  <span className="text-left">✓>
                   <span>Smart resource allocation</span>
                 </li>
                 <li className="text-left">
-                  <span className="text-left">✓<"
+                  <span className="text-left">✓>
                   <span>Real-time efficiency monitoring</span>
                 </li>
               </ul>
               <div className="text-left">Starting at $50K/month</div>"
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 Get Started
               </a>
             </div>
@@ -122,7 +119,7 @@ export default function SustainableAISolutionsPage() {
             <div className="text-left"></div>
               <div className="text-left"></div>
                 <div className="text-left"></div>
-                  <span className="text-left">🌱<"
+                  <span className="text-left">🌱>
                 </div>
                 <h3 className="text-left">Carbon Neutral AI</h3>"
               </div>
@@ -132,23 +129,22 @@ export default function SustainableAISolutionsPage() {
               </p>
               <ul className="text-left">
                 <li className="text-left">
-                  <span className="text-left">✓<"
+                  <span className="text-left">✓>
                   <span>Renewable energy integration</span>
                 </li>
                 <li className="text-left">
-                  <span className="text-left">✓<"
+                  <span className="text-left">✓>
                   <span>Carbon footprint monitoring</span>
                 </li>
                 <li className="text-left">
-                  <span className="text-left">✓<"
+                  <span className="text-left">✓>
                   <span>Green computing protocols</span>
                 </li>
               </ul>
               <div className="text-left">Starting at $75K/month</div>"
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 Get Started
               </a>
             </div>
@@ -156,7 +152,7 @@ export default function SustainableAISolutionsPage() {
             <div className="text-left"></div>
               <div className="text-left"></div>
                 <div className="text-left"></div>
-                  <span className="text-left">🔄<"
+                  <span className="text-left">🔄>
                 </div>
                 <h3 className="text-left">Circular AI Economy</h3>"
               </div>
@@ -166,23 +162,22 @@ export default function SustainableAISolutionsPage() {
               </p>
               <ul className="text-left">
                 <li className="text-left">
-                  <span className="text-left">✓<"
+                  <span className="text-left">✓>
                   <span>Resource recycling systems</span>
                 </li>
                 <li className="text-left">
-                  <span className="text-left">✓<"
+                  <span className="text-left">✓>
                   <span>Waste minimization protocols</span>
                 </li>
                 <li className="text-left">
-                  <span className="text-left">✓<"
+                  <span className="text-left">✓>
                   <span>Self-healing infrastructure</span>
                 </li>
               </ul>
               <div className="text-left">Starting at $100K/month</div>"
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 Get Started
               </a>
             </div>
@@ -190,7 +185,7 @@ export default function SustainableAISolutionsPage() {
             <div className="text-left"></div>
               <div className="text-left"></div>
                 <div className="text-left"></div>
-                  <span className="text-left">🧠<"
+                  <span className="text-left">🧠>
                 </div>
                 <h3 className="text-left">Neural Architecture Search</h3>"
               </div>
@@ -200,23 +195,22 @@ export default function SustainableAISolutionsPage() {
               </p>
               <ul className="text-left">
                 <li className="text-left">
-                  <span className="text-left">✓<"
+                  <span className="text-left">✓>
                   <span>Automated architecture discovery</span>
                 </li>
                 <li className="text-left">
-                  <span className="text-left">✓<"
+                  <span className="text-left">✓>
                   <span>Energy-performance optimization</span>
                 </li>
                 <li className="text-left">
-                  <span className="text-left">✓<"
+                  <span className="text-left">✓>
                   <span>Custom model development</span>
                 </li>
               </ul>
               <div className="text-left">Starting at $125K/month</div>"
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 Get Started
               </a>
             </div>
@@ -224,7 +218,7 @@ export default function SustainableAISolutionsPage() {
             <div className="text-left"></div>
               <div className="text-left"></div>
                 <div className="text-left"></div>
-                  <span className="text-left">📊<"
+                  <span className="text-left">📊>
                 </div>
                 <h3 className="text-left">Sustainability Analytics</h3>"
               </div>
@@ -234,23 +228,22 @@ export default function SustainableAISolutionsPage() {
               </p>
               <ul className="text-left">
                 <li className="text-left">
-                  <span className="text-left">✓<"
+                  <span className="text-left">✓>
                   <span>Real-time impact monitoring</span>
                 </li>
                 <li className="text-left">
-                  <span className="text-left">✓<"
+                  <span className="text-left">✓>
                   <span>Predictive analytics</span>
                 </li>
                 <li className="text-left">
-                  <span className="text-left">✓<"
+                  <span className="text-left">✓>
                   <span>Automated optimization</span>
                 </li>
               </ul>
               <div className="text-left">Starting at $40K/month</div>"
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 Get Started
               </a>
             </div>
@@ -258,7 +251,7 @@ export default function SustainableAISolutionsPage() {
             <div className="text-left"></div>
               <div className="text-left"></div>
                 <div className="text-left"></div>
-                  <span className="text-left">🏢<"
+                  <span className="text-left">🏢>
                 </div>
                 <h3 className="text-left">Enterprise Transformation</h3>"
               </div>
@@ -268,23 +261,22 @@ export default function SustainableAISolutionsPage() {
               </p>
               <ul className="text-left">
                 <li className="text-left">
-                  <span className="text-left">✓<"
+                  <span className="text-left">✓>
                   <span>Full enterprise assessment</span>
                 </li>
                 <li className="text-left">
-                  <span className="text-left">✓<"
+                  <span className="text-left">✓>
                   <span>Strategic roadmap development</span>
                 </li>
                 <li className="text-left">
-                  <span className="text-left">✓<"
+                  <span className="text-left">✓>
                   <span>24/7 support & optimization</span>
                 </li>
               </ul>
               <div className="text-left">Custom Pricing</div>"
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 Get Started
               </a>
             </div>
@@ -304,7 +296,7 @@ export default function SustainableAISolutionsPage() {
           <div className="text-left"></div>
             <div className="text-left"></div>
               <div className="text-left"></div>
-                <span className="text-left">1<"
+                <span className="text-left">1>
               </div>
               <h3 className="text-left">Assessment</h3>"
               <p className="text-left">
@@ -314,7 +306,7 @@ export default function SustainableAISolutionsPage() {
 
             <div className="text-left"></div>
               <div className="text-left"></div>
-                <span className="text-left">2<"
+                <span className="text-left">2>
               </div>
               <h3 className="text-left">Strategy</h3>"
               <p className="text-left">
@@ -324,7 +316,7 @@ export default function SustainableAISolutionsPage() {
 
             <div className="text-left"></div>
               <div className="text-left"></div>
-                <span className="text-left">3<"
+                <span className="text-left">3>
               </div>
               <h3 className="text-left">Implementation</h3>"
               <p className="text-left">
@@ -334,7 +326,7 @@ export default function SustainableAISolutionsPage() {
 
             <div className="text-left"></div>
               <div className="text-left"></div>
-                <span className="text-left">4<"
+                <span className="text-left">4>
               </div>
               <h3 className="text-left">Optimization</h3>"
               <p className="text-left">
@@ -394,15 +386,13 @@ export default function SustainableAISolutionsPage() {
             </p>
             <div className="text-left"></div>
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 Get Sustainable AI Solutions
               </a>
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 View Success Stories
               </a>
             </div>

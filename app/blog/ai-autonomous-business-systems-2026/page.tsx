@@ -30,10 +30,10 @@ export default function AIAutonomousBusinessSystems2026() {
         </Link>
         
         <div className="text-left"></div>
-          <span className="text-left"></span>
+          <span className="text-left">
             AUTONOMOUS 2026
           </span>
-          <span className="text-left"></span>
+          <span className="text-left">
             95% AUTOMATION
           </span>
         </div>
@@ -44,9 +44,9 @@ export default function AIAutonomousBusinessSystems2026() {
         
         <div className="text-left"></div>
           <span>Published: January 20, 2026</span>
-          <span className="text-left">•<"
+          <span className="text-left">•>
           <span>18 min read</span>
-          <span className="text-left">•<"
+          <span className="text-left">•>
           <span>Zion Tech Group Research</span>
         </div>
 
@@ -203,9 +203,8 @@ export default function AIAutonomousBusinessSystems2026() {
             can help you implement autonomous systems tailored to your organization's specific needs.
           </p>
           <Link 
-            href="/
-            className="text-left
-          >
+            href="/"
+            className="text-left">
             Explore Autonomous Operations
           </Link>
         </div>

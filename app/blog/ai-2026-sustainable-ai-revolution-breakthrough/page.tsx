@@ -10,8 +10,8 @@ export const metadata: Metadata = {
 
 export default function SustainableAIRevolutionPage() {
   return (
-    <div className="text-left"></div>
-      {/* Hero Section */}
+    <div className="text-left">
+      {/* Hero Section */}</div>
       <header className="text-left">
         <div className="text-left"></div>
           <div className="text-left"></div>"
@@ -21,7 +21,7 @@ export default function SustainableAIRevolutionPage() {
         <div className="text-left"></div>
           <div className="text-left"></div>
             <div className="text-left"></div>
-              <span className="text-left"></span>
+              <span className="text-left">
                 🌱 AI 2026 Sustainable Revolution
               </span>
             </div>
@@ -36,15 +36,13 @@ export default function SustainableAIRevolutionPage() {
             
             <div className="text-left"></div>
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 Get Sustainable AI Solutions
               </a>
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 View $2.5B Success Story →
               </a>
             </div>
@@ -73,8 +71,8 @@ export default function SustainableAIRevolutionPage() {
       {/* Main Content */}
       <main className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
-            {/* Introduction */}
+          <div className="text-left">
+            {/* Introduction */}</div>
             <section>
               <h2 className="text-left">
                 The Sustainable AI Revolution
@@ -103,7 +101,7 @@ export default function SustainableAIRevolutionPage() {
                 <div className="text-left"></div>
                   <div className="text-left"></div>
                     <div className="text-left"></div>
-                      <span className="text-left">⚡<"
+                      <span className="text-left">⚡>
                     </div>
                     <h3 className="text-left">Ultra-Efficient Processing</h3>"
                   </div>
@@ -115,7 +113,7 @@ export default function SustainableAIRevolutionPage() {
                 <div className="text-left"></div>
                   <div className="text-left"></div>
                     <div className="text-left"></div>
-                      <span className="text-left">🌱<"
+                      <span className="text-left">🌱>
                     </div>
                     <h3 className="text-left">Carbon Neutral Operations</h3>"
                   </div>
@@ -127,7 +125,7 @@ export default function SustainableAIRevolutionPage() {
                 <div className="text-left"></div>
                   <div className="text-left"></div>
                     <div className="text-left"></div>
-                      <span className="text-left">🔄<"
+                      <span className="text-left">🔄>
                     </div>
                     <h3 className="text-left">Circular AI Economy</h3>"
                   </div>
@@ -139,7 +137,7 @@ export default function SustainableAIRevolutionPage() {
                 <div className="text-left"></div>
                   <div className="text-left"></div>
                     <div className="text-left"></div>
-                      <span className="text-left">📊<"
+                      <span className="text-left">📊>
                     </div>
                     <h3 className="text-left">Real-time Monitoring</h3>"
                   </div>
@@ -160,19 +158,19 @@ export default function SustainableAIRevolutionPage() {
                 </p>
                 <ul className="text-left">
                   <li className="text-left">
-                    <span className="text-left">•<"
+                    <span className="text-left">•>
                     <span><strong>Quantum-Inspired Optimization:</strong> Leveraging quantum computing principles for ultra-efficient neural network training and inference.<
                   </li>
                   <li className="text-left">
-                    <span className="text-left">•<"
+                    <span className="text-left">•>
                     <span><strong>Adaptive Resource Management:</strong> Dynamic allocation of computational resources based on real-time environmental conditions.<
                   </li>
                   <li className="text-left">
-                    <span className="text-left">•<"
+                    <span className="text-left">•>
                     <span><strong>Neural Architecture Search (NAS):</strong> Automated discovery of energy-efficient neural architectures.<
                   </li>
                   <li className="text-left">
-                    <span className="text-left">•<"
+                    <span className="text-left">•>
                     <span><strong>Green Computing Protocols:</strong> Integration with renewable energy sources and carbon-neutral data centers.<
                   </li>
                 </ul>
@@ -186,20 +184,20 @@ export default function SustainableAIRevolutionPage() {
               <h3 className="text-left">Success Metrics</h3>"
               <div className="text-left"></div>
                 <div className="text-left"></div>
-                  <span className="text-left">Energy Efficiency<"
-                  <span className="text-left">99.9%<"
+                  <span className="text-left">Energy Efficiency<
+                  <span className="text-left">99.9%>
                 </div>
                 <div className="text-left"></div>
-                  <span className="text-left">Carbon Reduction<"
-                  <span className="text-left">85%<"
+                  <span className="text-left">Carbon Reduction<
+                  <span className="text-left">85%>
                 </div>
                 <div className="text-left"></div>
-                  <span className="text-left">ROI Generated<"
-                  <span className="text-left">$2.5B<"
+                  <span className="text-left">ROI Generated<
+                  <span className="text-left">$2.5B>
                 </div>
                 <div className="text-left"></div>
-                  <span className="text-left">Companies Transformed<"
-                  <span className="text-left">500+<"
+                  <span className="text-left">Companies Transformed<
+                  <span className="text-left">500+>
                 </div>
             </div>
 
@@ -228,9 +226,8 @@ export default function SustainableAIRevolutionPage() {
                 Transform your business with our revolutionary sustainable AI solutions.
               </p>
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 Get Started Today
               </a>
             </div>

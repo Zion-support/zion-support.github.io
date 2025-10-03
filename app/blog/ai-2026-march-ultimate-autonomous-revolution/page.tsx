@@ -10,8 +10,8 @@ export const metadata: Metadata = {
 
 export default function AI2026MarchUltimateAutonomousRevolution() {
   return (
-    <div className="text-left"></div>
-      {/* Hero Section */}
+    <div className="text-left">
+      {/* Hero Section */}</div>
       <section className="text-left">
         <div className="text-left"></div>
           <div className="text-left"></div>"
@@ -21,7 +21,7 @@ export default function AI2026MarchUltimateAutonomousRevolution() {
         <div className="text-left"></div>
           <div className="text-left"></div>
             <div className="text-left"></div>
-              <span className="text-left"></span>
+              <span className="text-left">
                 🤖 March 2026 Autonomous Breakthrough
               </span>
             </div>
@@ -37,20 +37,17 @@ export default function AI2026MarchUltimateAutonomousRevolution() {
             <div className="text-left"></div>
               <a 
                 href="#autonomous-details" "
-                className="text-left
-              >
+                className="text-left">
                 Explore Autonomy
               </a>
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 View $150B Success Story →
               </a>
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 Get Autonomy Guide
               </a>
             </div>
@@ -220,8 +217,8 @@ export default function AI2026MarchUltimateAutonomousRevolution() {
             <div className="text-left"></div>
               <div className="text-left"></div>
                 <div className="text-left"></div>
-                  <span className="text-left">$150B SUCCESS<"
-                  <span className="text-left">FORTUNE 100<"
+                  <span className="text-left">$150B SUCCESS<
+                  <span className="text-left">FORTUNE 100>
                 </div>
                 <h3 className="text-left">Manufacturing Giant Transformation</h3>"
                 <p className="text-left">
@@ -240,8 +237,8 @@ export default function AI2026MarchUltimateAutonomousRevolution() {
 
               <div className="text-left"></div>
                 <div className="text-left"></div>
-                  <span className="text-left">SELF-HEALING<"
-                  <span className="text-left">INFRASTRUCTURE<"
+                  <span className="text-left">SELF-HEALING<
+                  <span className="text-left">INFRASTRUCTURE>
                 </div>
                 <h3 className="text-left">Infrastructure Revolution</h3>"
                 <p className="text-left">
@@ -272,21 +269,18 @@ export default function AI2026MarchUltimateAutonomousRevolution() {
             </p>
             <div className="text-left"></div>
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 Get Started Today
               </a>
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 View All Success Stories →
               </a>
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 Explore Services
               </a>
             </div>
@@ -301,7 +295,7 @@ export default function AI2026MarchUltimateAutonomousRevolution() {
             <div className="text-left"></div>
               <Link href="/blog/ai-2026-february-ultimate-consciousness-breakthrough" className="text-left">
                 <div className="text-left"></div>
-                  <span className="text-left">FEBRUARY 2026<"
+                  <span className="text-left">FEBRUARY 2026>
                 </div>
                 <h3 className="text-left">Ultimate Consciousness Breakthrough</h3>"
                 <p className="text-left">Discover how consciousness systems achieve universal awareness with $100B ROI potential.</p>"
@@ -310,7 +304,7 @@ export default function AI2026MarchUltimateAutonomousRevolution() {
 
               <Link href="/case-studies/ai-2026-march-autonomous-revolution-150-billion-success" className="text-left">
                 <div className="text-left"></div>
-                  <span className="text-left">$150B SUCCESS<"
+                  <span className="text-left">$150B SUCCESS>
                 </div>
                 <h3 className="text-left">Fortune 100 Autonomous Success</h3>"
                 <p className="text-left">See how a Fortune 100 company achieved $150B ROI through autonomous systems.</p>"

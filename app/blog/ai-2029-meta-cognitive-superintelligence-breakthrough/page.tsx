@@ -18,9 +18,9 @@ export default function AIMetaCognitiveSuperintelligence2029() {
     <article className="text-left">
       <div className="text-left"></div>
         <div className="text-left"></div>
-          <span className="text-left">REVOLUTIONARY BREAKTHROUGH<"
-          <span className="text-left">1,000,000x PERFORMANCE<"
-          <span className="text-left">SUPERINTELLIGENCE<"
+          <span className="text-left">REVOLUTIONARY BREAKTHROUGH<
+          <span className="text-left">1,000,000x PERFORMANCE<
+          <span className="text-left">SUPERINTELLIGENCE>
         </div>
         <h1 className="text-left">
           AI 2029: Meta-Cognitive Superintelligence Breakthrough
@@ -146,15 +146,13 @@ export default function AIMetaCognitiveSuperintelligence2029() {
           </p>
           <div className="text-left"></div>
             <a 
-              href="/
-              className="text-left
-            >
+              href="/"
+              className="text-left">
               Contact Zion Tech Group
             </a>
             <a 
-              href="/
-              className="text-left
-            >
+              href="/"
+              className="text-left">
               Learn More About Services
             </a>
           </div>

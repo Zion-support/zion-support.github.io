@@ -17,7 +17,7 @@ export default function AI2027NeuromorphicComputingEnterprise() {
     <div className="text-left"></div>
       <div className="text-left"></div>
         <div className="text-left"></div>
-          <span className="text-left"></span>
+          <span className="text-left">
             🧠 NEUROMORPHIC BREAKTHROUGH 2027
           </span>
         </div>
@@ -27,8 +27,8 @@ export default function AI2027NeuromorphicComputingEnterprise() {
         <p className="text-left">
           Revolutionary neuromorphic computing technologies delivering 90% energy reduction, real-time learning, and brain-inspired AI architectures for enterprise applications with unprecedented efficiency.
         </p>
-        <div className="text-left"></div>
-          Published: January 30, 2027 • 26 min read • Neuromorphic AI
+        <div className="text-left">
+          Published: January 30, 2027 • 26 min read • Neuromorphic AI</div>
         </div>
       </div>
 
@@ -79,19 +79,19 @@ export default function AI2027NeuromorphicComputingEnterprise() {
           <h4 className="text-left">Spiking Neural Network Advantages:</h4>"
           <ul className="text-left">
             <li className="text-left">
-              <span className="text-left">1<"
+              <span className="text-left">1>
               <div></div>
                 <strong>Event-Driven Processing:</strong> Only activate when necessary, reducing energy consumption by 90%
               </div>
             </li>
             <li className="text-left">
-              <span className="text-left">2<"
+              <span className="text-left">2>
               <div></div>
                 <strong>Temporal Information:</strong> Process time-based patterns impossible with traditional networks
               </div>
             </li>
             <li className="text-left">
-              <span className="text-left">3<"
+              <span className="text-left">3>
               <div></div>
                 <strong>Real-Time Learning:</strong> Continuously adapt to new information without retraining
               </div>
@@ -240,15 +240,13 @@ export default function AI2027NeuromorphicComputingEnterprise() {
           </p>
           <div className="text-left"></div>
             <Link
-              href="/services/neuromorphic-ai
-              className="text-left
-            >
+              href="/services/neuromorphic-ai"
+              className="text-left">
               Explore Neuromorphic AI Services
             </Link>
             <a
-              href="tel:+13024640950
-              className="text-left
-            >
+              href="tel:+13024640950"
+              className="text-left">
               Call +1 302 464 0950
             </a>
           </div>

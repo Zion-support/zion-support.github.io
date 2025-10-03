@@ -10,8 +10,8 @@ export const metadata: Metadata = {
 
 export default function UltraIntelligentAutonomousSystemsPage() {
   return (
-    <div className="text-left"></div>
-      {/* Hero Section */}
+    <div className="text-left">
+      {/* Hero Section */}</div>
       <header className="text-left">
         <div className="text-left"></div>
           <div className="text-left"></div>"
@@ -21,7 +21,7 @@ export default function UltraIntelligentAutonomousSystemsPage() {
         <div className="text-left"></div>
           <div className="text-left"></div>
             <div className="text-left"></div>
-              <span className="text-left"></span>
+              <span className="text-left">
                 🚀 BREAKTHROUGH 2026
               </span>
             </div>
@@ -36,15 +36,13 @@ export default function UltraIntelligentAutonomousSystemsPage() {
             
             <div className="text-left"></div>
               <Link 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 View $15.2B Success Story →
               </Link>
               <Link 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 Get Started Today
               </Link>
             </div>
@@ -218,15 +216,13 @@ export default function UltraIntelligentAutonomousSystemsPage() {
             
             <div className="text-left"></div>
               <Link 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 Schedule Consultation
               </Link>
               <Link 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 View Success Story
               </Link>
             </div>
@@ -243,15 +239,13 @@ export default function UltraIntelligentAutonomousSystemsPage() {
           
           <div className="text-left"></div>
             <Link 
-              href="/
-              className="text-left
-            >
+              href="/"
+              className="text-left">
               Get Started Today
             </Link>
             <a 
               href="tel:+13024640950" "
-              className="text-left
-            >
+              className="text-left">
               Call +1 302 464 0950
             </a>
           </div>

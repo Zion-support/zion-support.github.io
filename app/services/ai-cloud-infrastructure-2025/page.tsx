@@ -16,8 +16,8 @@ export const metadata: Metadata = {
 export default function AICloudInfrastructure2025Page() {
   return (
     <div className="text-left"></div>
-      <div className="text-left"></div>
-        {/* Header */}
+      <div className="text-left">
+        {/* Header */}</div>
         <div className="text-left"></div>
           <div className="text-left"></div>
             <Link href="/services" className="text-left">
@@ -70,27 +70,27 @@ export default function AICloudInfrastructure2025Page() {
                 <h3 className="text-left">Key Capabilities</h3>"
                 <ul className="text-left">
                   <li className="text-left">
-                    <span className="text-left">✓<"
+                    <span className="text-left">✓>
                     <span>Self-healing infrastructure automation</span>
                   </li>
                   <li className="text-left">
-                    <span className="text-left">✓<"
+                    <span className="text-left">✓>
                     <span>Predictive capacity planning & scaling</span>
                   </li>
                   <li className="text-left">
-                    <span className="text-left">✓<"
+                    <span className="text-left">✓>
                     <span>AI-driven cost optimization</span>
                   </li>
                   <li className="text-left">
-                    <span className="text-left">✓<"
+                    <span className="text-left">✓>
                     <span>Intelligent workload distribution</span>
                   </li>
                   <li className="text-left">
-                    <span className="text-left">✓<"
+                    <span className="text-left">✓>
                     <span>Automated security compliance</span>
                   </li>
                   <li className="text-left">
-                    <span className="text-left">✓<"
+                    <span className="text-left">✓>
                     <span>Real-time performance optimization</span>
                   </li>
                 </ul>
@@ -100,27 +100,27 @@ export default function AICloudInfrastructure2025Page() {
                 <h3 className="text-left">Business Benefits</h3>"
                 <ul className="text-left">
                   <li className="text-left">
-                    <span className="text-left">→<"
+                    <span className="text-left">→>
                     <span>99.999% uptime guarantee (5 nines)</span>
                   </li>
                   <li className="text-left">
-                    <span className="text-left">→<"
+                    <span className="text-left">→>
                     <span>70% reduction in cloud costs</span>
                   </li>
                   <li className="text-left">
-                    <span className="text-left">→<"
+                    <span className="text-left">→>
                     <span>98% automatic issue resolution</span>
                   </li>
                   <li className="text-left">
-                    <span className="text-left">→<"
+                    <span className="text-left">→>
                     <span>5x faster deployment speeds</span>
                   </li>
                   <li className="text-left">
-                    <span className="text-left">→<"
+                    <span className="text-left">→>
                     <span>Zero downtime migrations</span>
                   </li>
                   <li className="text-left">
-                    <span className="text-left">→<"
+                    <span className="text-left">→>
                     <span>Multi-cloud optimization</span>
                   </li>
                 </ul>
@@ -220,14 +220,14 @@ export default function AICloudInfrastructure2025Page() {
                 <div></div>
                   <h3 className="text-left">E-Commerce Giant Transforms Cloud Operations</h3>"
                   <p className="text-left">
-                    "Zion's AI Cloud Infrastructure transformed our operations completely. We reduced our 
+                    "Zion's AI Cloud Infrastructure transformed our operations completely. We reduced our "
                     cloud costs by $45M annually while achieving 99.999% uptime during peak shopping seasons. 
                     The self-healing capabilities have eliminated 98% of incidents before users even notice. 
                     Deployment speed increased by 500%. This is the future of cloud."
                   </p>
                   <div className="text-left"></div>
                     <div className="text-left"></div>
-                      <span className="text-left">SC<"
+                      <span className="text-left">SC>
                     </div>
                     <div></div>
                       <div className="text-left">Sarah Chen</div>"
@@ -236,20 +236,20 @@ export default function AICloudInfrastructure2025Page() {
                 </div>
                 <div className="text-left"></div>
                   <div className="text-left"></div>
-                    <span className="text-left">Annual Savings<"
-                    <span className="text-left">$45M<"
+                    <span className="text-left">Annual Savings<
+                    <span className="text-left">$45M>
                   </div>
                   <div className="text-left"></div>
-                    <span className="text-left">Uptime<"
-                    <span className="text-left">99.999%<"
+                    <span className="text-left">Uptime<
+                    <span className="text-left">99.999%>
                   </div>
                   <div className="text-left"></div>
-                    <span className="text-left">Auto-Resolution<"
-                    <span className="text-left">98%<"
+                    <span className="text-left">Auto-Resolution<
+                    <span className="text-left">98%>
                   </div>
                   <div className="text-left"></div>
-                    <span className="text-left">Deployment Speed<"
-                    <span className="text-left">5x Faster<"
+                    <span className="text-left">Deployment Speed<
+                    <span className="text-left">5x Faster>
                   </div>
               </div>
           </section>
@@ -266,15 +266,13 @@ export default function AICloudInfrastructure2025Page() {
               </p>
               <div className="text-left"></div>
                 <a
-                  href="tel:+13024640950
-                  className="text-left
-                >
+                  href="tel:+13024640950"
+                  className="text-left">
                   Call +1 302 464 0950
                 </a>
                 <a
-                  href="mailto:kleber@ziontechgroup.com
-                  className="text-left
-                >
+                  href="mailto:kleber@ziontechgroup.com"
+                  className="text-left">
                   Email Us
                 </a>
               </div>

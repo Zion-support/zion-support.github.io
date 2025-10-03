@@ -17,13 +17,13 @@ export const metadata: Metadata = {
 
 export default function NextGenAutonomousIntelligenceRevolutionPage() {
   return (
-    <div className="text-left"></div>
-      {/* Hero Section */}
+    <div className="text-left">
+      {/* Hero Section */}</div>
       <header className="text-left">
         <div className="text-left"></div>
           <div className="text-left"></div>
             <div className="text-left"></div>
-              <span className="text-left"></span>
+              <span className="text-left">
                 🚀 AI 2026 Next-Generation Autonomous Intelligence Revolution
               </span>
             </div>
@@ -38,15 +38,13 @@ export default function NextGenAutonomousIntelligenceRevolutionPage() {
             
             <div className="text-left"></div>
               <Link 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 View $5.2B Success Story →
               </Link>
               <Link 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 Get Started Today
               </Link>
             </div>
@@ -98,25 +96,25 @@ export default function NextGenAutonomousIntelligenceRevolutionPage() {
               <h3 className="text-left">Key Innovation Areas</h3>"
               <ul className="text-left">
                 <li className="text-left">
-                  <span className="text-left">🚀<"
+                  <span className="text-left">🚀>
                   <div></div>
                     <strong>99.99% Operational Autonomy:</strong> Complete self-governing operations with minimal human intervention
                   </div>
                 </li>
                 <li className="text-left">
-                  <span className="text-left">🧠<"
+                  <span className="text-left">🧠>
                   <div></div>
                     <strong>Universal Consciousness Integration:</strong> True awareness and understanding across all business domains
                   </div>
                 </li>
                 <li className="text-left">
-                  <span className="text-left">💰<"
+                  <span className="text-left">💰>
                   <div></div>
                     <strong>$5.2B Enterprise Value Generation:</strong> Proven ROI across Fortune 500 implementations
                   </div>
                 </li>
                 <li className="text-left">
-                  <span className="text-left">⚡<"
+                  <span className="text-left">⚡>
                   <div></div>
                     <strong>50,000x Performance Enhancement:</strong> Exponential improvement over traditional systems
                   </div>
@@ -141,7 +139,7 @@ export default function NextGenAutonomousIntelligenceRevolutionPage() {
         
     def make_enterprise_decision(self, context):
         # Universal consciousness processing
-        decision = self.process_with_consciousness(context)`
+        decision = self.process_with_consciousness(context)
         return self.execute_with_autonomy(decision)`}
               </pre>
             </div>
@@ -312,15 +310,13 @@ export default function NextGenAutonomousIntelligenceRevolutionPage() {
               </p>
               <div className="text-left"></div>
                 <Link 
-                  href="/
-                  className="text-left
-                >
+                  href="/"
+                  className="text-left">
                   Start Your Transformation
                 </Link>
                 <Link 
-                  href="/
-                  className="text-left
-                >
+                  href="/"
+                  className="text-left">
                   View Success Story
                 </Link>
               </div>
@@ -328,4 +324,4 @@ export default function NextGenAutonomousIntelligenceRevolutionPage() {
       </main>
     </div>
   );
-}</div></div></div></div>`
+}</div></div></div></div>

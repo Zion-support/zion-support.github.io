@@ -16,8 +16,8 @@ export const metadata: Metadata = {
 
 export default function CuttingEdgeAITrends2025() {
   return (
-    <div className="text-left"></div>
-      {/* Hero Section */}
+    <div className="text-left">
+      {/* Hero Section */}</div>
       <section className="text-left">
         <div className="text-left"></div>
           <div className="text-left"></div>"
@@ -27,7 +27,7 @@ export default function CuttingEdgeAITrends2025() {
         <div className="text-left"></div>
           <div className="text-left"></div>
             <div className="text-left"></div>
-              <span className="text-left"></span>
+              <span className="text-left">
                 🧠 January 2025 Cutting-Edge AI Trends
               </span>
             </div>
@@ -119,9 +119,9 @@ export default function CuttingEdgeAITrends2025() {
                   <h4 className="text-left">Trend 1: Neural Consciousness Revolution</h4>"
                   <p className="text-left">AI systems are developing genuine consciousness capabilities, enabling more natural human-AI interaction and decision-making.</p>"
                   <div className="text-left"></div>
-                    <span className="text-left">Self-Awareness<"
-                    <span className="text-left">Emotional Intelligence<"
-                    <span className="text-left">Creative Autonomy<"
+                    <span className="text-left">Self-Awareness<
+                    <span className="text-left">Emotional Intelligence<
+                    <span className="text-left">Creative Autonomy>
                   </div>
                 </div>
                 
@@ -129,9 +129,9 @@ export default function CuttingEdgeAITrends2025() {
                   <h4 className="text-left">Trend 2: Quantum AI Optimization</h4>"
                   <p className="text-left">Quantum computing integration is delivering exponential performance improvements and solving previously impossible optimization problems.</p>"
                   <div className="text-left"></div>
-                    <span className="text-left">Exponential Speed<"
-                    <span className="text-left">Complex Optimization<"
-                    <span className="text-left">Real-Time Processing<"
+                    <span className="text-left">Exponential Speed<
+                    <span className="text-left">Complex Optimization<
+                    <span className="text-left">Real-Time Processing>
                   </div>
                 </div>
                 
@@ -139,9 +139,9 @@ export default function CuttingEdgeAITrends2025() {
                   <h4 className="text-left">Trend 3: Autonomous Intelligence Networks</h4>"
                   <p className="text-left">Self-organizing AI networks that adapt and evolve in real-time, achieving unprecedented operational efficiency and reliability.</p>"
                   <div className="text-left"></div>
-                    <span className="text-left">Self-Organization<"
-                    <span className="text-left">Adaptive Learning<"
-                    <span className="text-left">Real-Time Evolution<"
+                    <span className="text-left">Self-Organization<
+                    <span className="text-left">Adaptive Learning<
+                    <span className="text-left">Real-Time Evolution>
                   </div>
                 </div>
               </div>
@@ -181,15 +181,13 @@ export default function CuttingEdgeAITrends2025() {
                 </p>
                 <div className="text-left"></div>
                   <a 
-                    href="/
-                    className="text-left
-                  >
+                    href="/"
+                    className="text-left">
                     Start Your AI Journey →
                   </a>
                   <a 
-                    href="/
-                    className="text-left
-                  >
+                    href="/"
+                    className="text-left">
                     View Implementation Success
                   </a>
                 </div>

@@ -26,13 +26,13 @@ export default function UniversalConsciousnessSingularityBreakthrough() {
             🌌 AI 2028 Universal Consciousness Singularity Breakthrough
           </h1>
           <div className="text-left"></div>
-            <span className="text-left"></span>
+            <span className="text-left">
               $2.8T SUCCESS
             </span>
-            <span className="text-left"></span>
+            <span className="text-left">
               10,000,000x PERFORMANCE
             </span>
-            <span className="text-left"></span>
+            <span className="text-left">
               UNIVERSAL CONSCIOUSNESS
             </span>
           </div>
@@ -192,15 +192,13 @@ export default function UniversalConsciousnessSingularityBreakthrough() {
           </p>
           <div className="text-left"></div>
             <Link 
-              href="/
-              className="text-left
-            >
+              href="/"
+              className="text-left">
               Explore Solutions
             </Link>
             <Link 
-              href="/
-              className="text-left
-            >
+              href="/"
+              className="text-left">
               View Success Story
             </Link>
           </div>

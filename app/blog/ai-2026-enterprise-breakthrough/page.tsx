@@ -18,11 +18,11 @@ export const metadata: Metadata = {
 export default function AI2026EnterpriseBreakthrough() {
   return (
     <div className="text-left"></div>
-      <div className="text-left"></div>
-        {/* Hero Section */}
+      <div className="text-left">
+        {/* Hero Section */}</div>
         <div className="text-left"></div>
-          <div className="text-left"></div>
-            🚀 Latest AI Insights
+          <div className="text-left">
+            🚀 Latest AI Insights</div>
           </div>
           <h1 className="text-left">
             AI 2026 Enterprise Breakthrough
@@ -186,20 +186,20 @@ export default function AI2026EnterpriseBreakthrough() {
                 <h3 className="text-left">Financial Impact</h3>"
                 <div className="text-left"></div>
                   <div className="text-left"></div>
-                    <span className="text-left">Cost Reduction<"
-                    <span className="text-left">35-50%<"
+                    <span className="text-left">Cost Reduction<
+                    <span className="text-left">35-50%>
                   </div>
                   <div className="text-left"></div>
-                    <span className="text-left">Revenue Increase<"
-                    <span className="text-left">25-40%<"
+                    <span className="text-left">Revenue Increase<
+                    <span className="text-left">25-40%>
                   </div>
                   <div className="text-left"></div>
-                    <span className="text-left">ROI Timeline<"
-                    <span className="text-left">6-12 months<"
+                    <span className="text-left">ROI Timeline<
+                    <span className="text-left">6-12 months>
                   </div>
                   <div className="text-left"></div>
-                    <span className="text-left">Payback Period<"
-                    <span className="text-left">8-18 months<"
+                    <span className="text-left">Payback Period<
+                    <span className="text-left">8-18 months>
                   </div>
               </div>
 
@@ -207,20 +207,20 @@ export default function AI2026EnterpriseBreakthrough() {
                 <h3 className="text-left">Operational Excellence</h3>"
                 <div className="text-left"></div>
                   <div className="text-left"></div>
-                    <span className="text-left">Process Automation<"
-                    <span className="text-left">80-90%<"
+                    <span className="text-left">Process Automation<
+                    <span className="text-left">80-90%>
                   </div>
                   <div className="text-left"></div>
-                    <span className="text-left">Decision Speed<"
-                    <span className="text-left">10x faster<"
+                    <span className="text-left">Decision Speed<
+                    <span className="text-left">10x faster>
                   </div>
                   <div className="text-left"></div>
-                    <span className="text-left">Error Reduction<"
-                    <span className="text-left">95%<"
+                    <span className="text-left">Error Reduction<
+                    <span className="text-left">95%>
                   </div>
                   <div className="text-left"></div>
-                    <span className="text-left">Uptime Improvement<"
-                    <span className="text-left">99.9%<"
+                    <span className="text-left">Uptime Improvement<
+                    <span className="text-left">99.9%>
                   </div>
               </div>
           </section>
@@ -255,15 +255,13 @@ export default function AI2026EnterpriseBreakthrough() {
             </p>
             <div className="text-left"></div>
               <Link 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 View Success Stories
               </Link>
               <Link 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 Start Your AI Journey
               </Link>
             </div>

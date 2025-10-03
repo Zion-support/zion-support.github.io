@@ -4,11 +4,11 @@ import Link from 'next/link';
 export default function AINeuralSuperintelligencePlatform() {
   return (
     <div className="text-left"></div>
-      <div className="text-left"></div>
-        {/* Hero Section */}
+      <div className="text-left">
+        {/* Hero Section */}</div>
         <div className="text-left"></div>
           <div className="text-left"></div>
-            <span className="text-left"></span>
+            <span className="text-left">
               🧠 NEURAL SUPERINTELLIGENCE PLATFORM
             </span>
           </div>
@@ -22,20 +22,20 @@ export default function AINeuralSuperintelligencePlatform() {
         </div>
 
         {/* Key Metrics */}
-        <div className="text-left"></div>
+        <div className="text-left">
           {[
             { value='99.99%', label: 'Reasoning Accuracy', icon: '🧠' },
             { value='∞', label: 'Scalability', icon: '📈' },
             { value='100x', label: 'Human Intelligence', icon: '⚡' },
             { value='0.1ms', label: 'Response Time', icon: '⚡' }
-          ].map((metric, index) => (
+          ].map((metric, index) => (</div>
             <div key={index} className="text-left"></div>
               <div className="text-left">{metric.icon}</div>"
-              <div className="text-left"></div>
-                {metric.value}
+              <div className="text-left">
+                {metric.value}</div>
               </div>
-              <div className="text-left"></div>
-                {metric.label}
+              <div className="text-left">
+                {metric.label}</div>
               </div>
             </div>
           ))}
@@ -219,15 +219,13 @@ export default function AINeuralSuperintelligencePlatform() {
           </p>
           <div className="text-left"></div>
             <Link 
-              href="/
-              className="text-left
-            >
+              href="/"
+              className="text-left">
               Schedule Consultation
             </Link>
             <Link 
-              href="/
-              className="text-left
-            >
+              href="/"
+              className="text-left">
               View Success Stories
             </Link>
           </div>

@@ -19,15 +19,15 @@ export const metadata = {
 export default function AI2026EdgeComputingRevolution() {
   return (
     <div className="text-left"></div>
-      <div className="text-left"></div>
-        {/* Header */}
+      <div className="text-left">
+        {/* Header */}</div>
         <div className="text-left"></div>
-          <div className="text-left"></div>
-            🚀 BREAKTHROUGH 2026
+          <div className="text-left">
+            🚀 BREAKTHROUGH 2026</div>
           </div>
           <h1 className="text-left">
             AI 2026 Edge Computing Revolution: 
-            <span className="text-left"> Sub-10ms Intelligence at Scale<"
+            <span className="text-left"> Sub-10ms Intelligence at Scale>
           </h1>
           <p className="text-left">
             Discover how revolutionary edge computing AI is delivering sub-10ms response times, 99.99% uptime, 
@@ -167,15 +167,13 @@ export default function AI2026EdgeComputingRevolution() {
           </p>
           <div className="text-left"></div>
             <Link
-              href="/services/ai-edge-computing
-              className="text-left
-            >
+              href="/services/ai-edge-computing"
+              className="text-left">
               Explore Edge AI Services
             </Link>
             <a
-              href="tel:+13024640950
-              className="text-left
-            >
+              href="tel:+13024640950"
+              className="text-left">
               Call +1 302 464 0950
             </a>
           </div>

@@ -17,11 +17,11 @@ export const metadata: Metadata = {
 export default function ConsensusIntelligencePage() {
   return (
     <div className="text-left"></div>
-      <div className="text-left"></div>
-        {/* Header */}
+      <div className="text-left">
+        {/* Header */}</div>
         <div className="text-left"></div>
           <div className="text-left"></div>
-            <span className="text-left"></span>
+            <span className="text-left">
               🚀 AI 2026 Breakthrough
             </span>
           </div>
@@ -35,10 +35,10 @@ export default function ConsensusIntelligencePage() {
           </p>
           
           <div className="text-left"></div>
-            <span className="text-left">Consensus AI<"
-            <span className="text-left">Quantum Computing<"
-            <span className="text-left">Enterprise Ready<"
-            <span className="text-left">99.9% Accuracy<"
+            <span className="text-left">Consensus AI<
+            <span className="text-left">Quantum Computing<
+            <span className="text-left">Enterprise Ready<
+            <span className="text-left">99.9% Accuracy>
           </div>
 
         {/* Key Metrics */}
@@ -129,15 +129,13 @@ export default function ConsensusIntelligencePage() {
             </p>
             <div className="text-left"></div>
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 Schedule Free Consultation
               </a>
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 View Success Stories
               </a>
             </div>

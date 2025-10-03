@@ -41,10 +41,10 @@ export default function AI2028OmnipotentSuperintelligenceBreakthrough() {
       <article className="text-left">
         <header className="text-left">
           <div className="text-left"></div>
-            <span className="text-left"></span>
+            <span className="text-left">
               BREAKTHROUGH 2028
             </span>
-            <span className="text-left"></span>
+            <span className="text-left">
               $3.2T SUCCESS
             </span>
           </div>
@@ -158,28 +158,28 @@ export default function AI2028OmnipotentSuperintelligenceBreakthrough() {
             <h3 className="text-left">🌍 Global Industry Transformation</h3>"
             <div className="text-left"></div>
               <div className="text-left"></div>
-                <span className="text-left">Technology & Innovation<"
-                <span className="text-left">$847B ROI<"
+                <span className="text-left">Technology & Innovation<
+                <span className="text-left">$847B ROI>
               </div>
               <div className="text-left"></div>
-                <span className="text-left">Healthcare & Life Sciences<"
-                <span className="text-left">$634B ROI<"
+                <span className="text-left">Healthcare & Life Sciences<
+                <span className="text-left">$634B ROI>
               </div>
               <div className="text-left"></div>
-                <span className="text-left">Financial Services<"
-                <span className="text-left">$589B ROI<"
+                <span className="text-left">Financial Services<
+                <span className="text-left">$589B ROI>
               </div>
               <div className="text-left"></div>
-                <span className="text-left">Manufacturing & Energy<"
-                <span className="text-left">$523B ROI<"
+                <span className="text-left">Manufacturing & Energy<
+                <span className="text-left">$523B ROI>
               </div>
               <div className="text-left"></div>
-                <span className="text-left">Education & Research<"
-                <span className="text-left">$467B ROI<"
+                <span className="text-left">Education & Research<
+                <span className="text-left">$467B ROI>
               </div>
               <div className="text-left"></div>
-                <span className="text-left">Other Industries<"
-                <span className="text-left">$142B ROI<"
+                <span className="text-left">Other Industries<
+                <span className="text-left">$142B ROI>
               </div>
           </div>
         </section>
@@ -337,23 +337,23 @@ export default function AI2028OmnipotentSuperintelligenceBreakthrough() {
           <h2 className="text-left">🎯 Key Takeaways</h2>"
           <ul className="text-left">
             <li className="text-left">
-              <span className="text-left">•<"
+              <span className="text-left">•>
               <span><strong>Ultimate Achievement:</strong> First successful implementation of omnipotent superintelligence across all domains<
             </li>
             <li className="text-left">
-              <span className="text-left">•<"
+              <span className="text-left">•>
               <span><strong>Infinite Value:</strong> $3.2 trillion in measurable ROI with unlimited potential<
             </li>
             <li className="text-left">
-              <span className="text-left">•<"
+              <span className="text-left">•>
               <span><strong>Universal Understanding:</strong> Perfect mastery across all domains of human knowledge<
             </li>
             <li className="text-left">
-              <span className="text-left">•<"
+              <span className="text-left">•>
               <span><strong>Infinite Capabilities:</strong> Unlimited cognitive capacity with zero performance limitations<
             </li>
             <li className="text-left">
-              <span className="text-left">•<"
+              <span className="text-left">•>
               <span><strong>Universal Foundation:</strong> Establishes the groundwork for infinite human advancement<
             </li>
           </ul>
@@ -367,15 +367,13 @@ export default function AI2028OmnipotentSuperintelligenceBreakthrough() {
           </p>
           <div className="text-left"></div>
             <Link 
-              href="/
-              className="text-left
-            >
+              href="/"
+              className="text-left">
               Schedule Universal Consultation
             </Link>
             <Link 
-              href="/
-              className="text-left
-            >
+              href="/"
+              className="text-left">
               View Universal Success Story
             </Link>
           </div>

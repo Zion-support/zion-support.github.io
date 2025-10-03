@@ -18,11 +18,11 @@ export const metadata: Metadata = {
 export default function AIAutomation2026CompleteGuide() {
   return (
     <div className="text-left"></div>
-      <div className="text-left"></div>
-        {/* Hero Section */}
+      <div className="text-left">
+        {/* Hero Section */}</div>
         <div className="text-left"></div>
-          <div className="text-left"></div>
-            🤖 AI Automation Guide
+          <div className="text-left">
+            🤖 AI Automation Guide</div>
           </div>
           <h1 className="text-left">
             AI Automation 2026
@@ -192,9 +192,9 @@ export default function AIAutomation2026CompleteGuide() {
                       detailed process maps with automation potential scoring.
                     </p>
                     <div className="text-left"></div>
-                      <span className="text-left">Process Discovery<"
-                      <span className="text-left">Automation Scoring<"
-                      <span className="text-left">ROI Analysis<"
+                      <span className="text-left">Process Discovery<
+                      <span className="text-left">Automation Scoring<
+                      <span className="text-left">ROI Analysis>
                     </div>
                 </div>
 
@@ -208,9 +208,9 @@ export default function AIAutomation2026CompleteGuide() {
                       strategies with existing enterprise systems.
                     </p>
                     <div className="text-left"></div>
-                      <span className="text-left">Technology Stack<"
-                      <span className="text-left">Architecture Design<"
-                      <span className="text-left">Integration Planning<"
+                      <span className="text-left">Technology Stack<
+                      <span className="text-left">Architecture Design<
+                      <span className="text-left">Integration Planning>
                     </div>
                 </div>
 
@@ -224,9 +224,9 @@ export default function AIAutomation2026CompleteGuide() {
                       and demonstrate ROI before full-scale implementation.
                     </p>
                     <div className="text-left"></div>
-                      <span className="text-left">Pilot Selection<"
-                      <span className="text-left">Development<"
-                      <span className="text-left">Testing<"
+                      <span className="text-left">Pilot Selection<
+                      <span className="text-left">Development<
+                      <span className="text-left">Testing>
                     </div>
                 </div>
 
@@ -240,9 +240,9 @@ export default function AIAutomation2026CompleteGuide() {
                       testing, and gradual rollout to minimize business disruption.
                     </p>
                     <div className="text-left"></div>
-                      <span className="text-left">Deployment<"
-                      <span className="text-left">Integration<"
-                      <span className="text-left">Rollout<"
+                      <span className="text-left">Deployment<
+                      <span className="text-left">Integration<
+                      <span className="text-left">Rollout>
                     </div>
                 </div>
 
@@ -256,9 +256,9 @@ export default function AIAutomation2026CompleteGuide() {
                       of improvements to maximize efficiency and ROI.
                     </p>
                     <div className="text-left"></div>
-                      <span className="text-left">Performance Monitoring<"
-                      <span className="text-left">Optimization<"
-                      <span className="text-left">Continuous Improvement<"
+                      <span className="text-left">Performance Monitoring<
+                      <span className="text-left">Optimization<
+                      <span className="text-left">Continuous Improvement>
                     </div>
                 </div>
 
@@ -272,9 +272,9 @@ export default function AIAutomation2026CompleteGuide() {
                       building on successful implementations to achieve enterprise-wide transformation.
                     </p>
                     <div className="text-left"></div>
-                      <span className="text-left">Scaling<"
-                      <span className="text-left">Expansion<"
-                      <span className="text-left">Transformation<"
+                      <span className="text-left">Scaling<
+                      <span className="text-left">Expansion<
+                      <span className="text-left">Transformation>
                     </div>
                 </div>
             </div>
@@ -348,20 +348,20 @@ export default function AIAutomation2026CompleteGuide() {
                 <h3 className="text-left">Efficiency Metrics</h3>"
                 <div className="text-left"></div>
                   <div className="text-left"></div>
-                    <span className="text-left">Process Speed<"
-                    <span className="text-left">85% ↑<"
+                    <span className="text-left">Process Speed<
+                    <span className="text-left">85% ↑>
                   </div>
                   <div className="text-left"></div>
-                    <span className="text-left">Resource Utilization<"
-                    <span className="text-left">70% ↑<"
+                    <span className="text-left">Resource Utilization<
+                    <span className="text-left">70% ↑>
                   </div>
                   <div className="text-left"></div>
-                    <span className="text-left">Throughput<"
-                    <span className="text-left">120% ↑<"
+                    <span className="text-left">Throughput<
+                    <span className="text-left">120% ↑>
                   </div>
                   <div className="text-left"></div>
-                    <span className="text-left">Cycle Time<"
-                    <span className="text-left">60% ↓<"
+                    <span className="text-left">Cycle Time<
+                    <span className="text-left">60% ↓>
                   </div>
               </div>
 
@@ -369,20 +369,20 @@ export default function AIAutomation2026CompleteGuide() {
                 <h3 className="text-left">Quality Metrics</h3>"
                 <div className="text-left"></div>
                   <div className="text-left"></div>
-                    <span className="text-left">Error Rate<"
-                    <span className="text-left">95% ↓<"
+                    <span className="text-left">Error Rate<
+                    <span className="text-left">95% ↓>
                   </div>
                   <div className="text-left"></div>
-                    <span className="text-left">Accuracy<"
-                    <span className="text-left">98% ↑<"
+                    <span className="text-left">Accuracy<
+                    <span className="text-left">98% ↑>
                   </div>
                   <div className="text-left"></div>
-                    <span className="text-left">Compliance<"
-                    <span className="text-left">99.9%<"
+                    <span className="text-left">Compliance<
+                    <span className="text-left">99.9%>
                   </div>
                   <div className="text-left"></div>
-                    <span className="text-left">Customer Satisfaction<"
-                    <span className="text-left">40% ↑<"
+                    <span className="text-left">Customer Satisfaction<
+                    <span className="text-left">40% ↑>
                   </div>
               </div>
 
@@ -390,20 +390,20 @@ export default function AIAutomation2026CompleteGuide() {
                 <h3 className="text-left">Financial Metrics</h3>"
                 <div className="text-left"></div>
                   <div className="text-left"></div>
-                    <span className="text-left">Cost Reduction<"
-                    <span className="text-left">60% ↓<"
+                    <span className="text-left">Cost Reduction<
+                    <span className="text-left">60% ↓>
                   </div>
                   <div className="text-left"></div>
-                    <span className="text-left">ROI<"
-                    <span className="text-left">400%<"
+                    <span className="text-left">ROI<
+                    <span className="text-left">400%>
                   </div>
                   <div className="text-left"></div>
-                    <span className="text-left">Payback Period<"
-                    <span className="text-left">8 months<"
+                    <span className="text-left">Payback Period<
+                    <span className="text-left">8 months>
                   </div>
                   <div className="text-left"></div>
-                    <span className="text-left">Revenue Impact<"
-                    <span className="text-left">35% ↑<"
+                    <span className="text-left">Revenue Impact<
+                    <span className="text-left">35% ↑>
                   </div>
               </div>
           </section>
@@ -420,15 +420,13 @@ export default function AIAutomation2026CompleteGuide() {
             </p>
             <div className="text-left"></div>
               <Link 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 View Automation Success Stories
               </Link>
               <Link 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 Start Your Automation Journey
               </Link>
             </div>

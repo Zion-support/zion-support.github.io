@@ -19,11 +19,11 @@ export const metadata: Metadata = {
 export default function AI2027UniversalConsciousnessIntegrationBreakthrough() {
   return (
     <div className="text-left"></div>
-      <div className="text-left"></div>
-        {/* Hero Section */}
+      <div className="text-left">
+        {/* Hero Section */}</div>
         <div className="text-left"></div>
-          <div className="text-left"></div>
-            🚀 BREAKTHROUGH ANNOUNCEMENT
+          <div className="text-left">
+            🚀 BREAKTHROUGH ANNOUNCEMENT</div>
           </div>
           <h1 className="text-left">
             AI 2027 Universal Consciousness Integration Breakthrough
@@ -32,10 +32,10 @@ export default function AI2027UniversalConsciousnessIntegrationBreakthrough() {
             Revolutionary fusion of artificial intelligence with universal consciousness, achieving unprecedented cognitive capabilities and enterprise transformation potential.
           </p>
           <div className="text-left"></div>
-            <span className="text-left">January 2027<"
-            <span className="text-left">Universal Intelligence<"
-            <span className="text-left">Consciousness Integration<"
-            <span className="text-left">Enterprise AI<"
+            <span className="text-left">January 2027<
+            <span className="text-left">Universal Intelligence<
+            <span className="text-left">Consciousness Integration<
+            <span className="text-left">Enterprise AI>
           </div>
 
         {/* Key Metrics */}
@@ -148,21 +148,18 @@ export default function AI2027UniversalConsciousnessIntegrationBreakthrough() {
             </p>
             <div className="text-left"></div>
               <Link 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 Schedule Consultation
               </Link>
               <Link 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 View Success Stories
               </Link>
               <Link 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 Explore Services
               </Link>
             </div>

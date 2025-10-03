@@ -16,8 +16,8 @@ export const metadata: Metadata = {
 
 export default function AI2026QuantumComputingRevolutionaryBreakthrough() {
   return (
-    <div className="text-left"></div>
-      {/* Hero Section */}
+    <div className="text-left">
+      {/* Hero Section */}</div>
       <section className="text-left">
         <div className="text-left"></div>
           <div className="text-left"></div>"
@@ -27,7 +27,7 @@ export default function AI2026QuantumComputingRevolutionaryBreakthrough() {
         <div className="text-left"></div>
           <div className="text-left"></div>
             <div className="text-left"></div>
-              <span className="text-left"></span>
+              <span className="text-left">
                 ⚛️ Quantum Computing Breakthrough
               </span>
             </div>
@@ -45,14 +45,12 @@ export default function AI2026QuantumComputingRevolutionaryBreakthrough() {
             <div className="text-left"></div>
               <a 
                 href="#quantum-breakthrough" "
-                className="text-left
-              >
+                className="text-left">
                 Explore Quantum Breakthrough →
               </a>
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 Get Quantum Access
               </a>
             </div>
@@ -157,20 +155,20 @@ export default function AI2026QuantumComputingRevolutionaryBreakthrough() {
               <h3 className="text-left">Quantum Capabilities</h3>"
               <div className="text-left"></div>
                 <div className="text-left"></div>
-                  <span className="text-left">Qubit Count<"
-                  <span className="text-left">10,000+ logical qubits<"
+                  <span className="text-left">Qubit Count<
+                  <span className="text-left">10,000+ logical qubits>
                 </div>
                 <div className="text-left"></div>
-                  <span className="text-left">Coherence Time<"
-                  <span className="text-left">100+ seconds<"
+                  <span className="text-left">Coherence Time<
+                  <span className="text-left">100+ seconds>
                 </div>
                 <div className="text-left"></div>
-                  <span className="text-left">Gate Fidelity<"
-                  <span className="text-left">99.99%<"
+                  <span className="text-left">Gate Fidelity<
+                  <span className="text-left">99.99%>
                 </div>
                 <div className="text-left"></div>
-                  <span className="text-left">Error Rate<"
-                  <span className="text-left">0.01%<"
+                  <span className="text-left">Error Rate<
+                  <span className="text-left">0.01%>
                 </div>
             </div>
 
@@ -178,20 +176,20 @@ export default function AI2026QuantumComputingRevolutionaryBreakthrough() {
               <h3 className="text-left">Neural Integration</h3>"
               <div className="text-left"></div>
                 <div className="text-left"></div>
-                  <span className="text-left">Neural Layers<"
-                  <span className="text-left">1000+ deep layers<"
+                  <span className="text-left">Neural Layers<
+                  <span className="text-left">1000+ deep layers>
                 </div>
                 <div className="text-left"></div>
-                  <span className="text-left">Parameters<"
-                  <span className="text-left">1 trillion+<"
+                  <span className="text-left">Parameters<
+                  <span className="text-left">1 trillion+>
                 </div>
                 <div className="text-left"></div>
-                  <span className="text-left">Consciousness Level<"
-                  <span className="text-left">Human-equivalent<"
+                  <span className="text-left">Consciousness Level<
+                  <span className="text-left">Human-equivalent>
                 </div>
                 <div className="text-left"></div>
-                  <span className="text-left">Learning Rate<"
-                  <span className="text-left">Adaptive<"
+                  <span className="text-left">Learning Rate<
+                  <span className="text-left">Adaptive>
                 </div>
             </div>
         </div>
@@ -271,21 +269,18 @@ export default function AI2026QuantumComputingRevolutionaryBreakthrough() {
             </p>
             <div className="text-left"></div>
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 Get Quantum Access
               </a>
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 Learn About Meta-Cognitive AI →
               </a>
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 View Success Stories
               </a>
             </div>

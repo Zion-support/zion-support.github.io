@@ -24,11 +24,11 @@ export const metadata = {
 
 export default function AutonomousBusinessIntelligenceBreakthrough() {
   return (
-    <div className="text-left"></div>
-      {/* Hero Section */}
+    <div className="text-left">
+      {/* Hero Section */}</div>
       <div className="text-left"></div>
-        <div className="text-left"></div>
-          🚀 BREAKTHROUGH 2026
+        <div className="text-left">
+          🚀 BREAKTHROUGH 2026</div>
         </div>
         <h1 className="text-left">
           AI 2026: Autonomous Business Intelligence Breakthrough
@@ -170,15 +170,13 @@ export default function AutonomousBusinessIntelligenceBreakthrough() {
           </p>
           <div className="text-left"></div>
             <Link
-              href="/services/ai-autonomous-business-intelligence
-              className="text-left
-            >
+              href="/services/ai-autonomous-business-intelligence"
+              className="text-left">
               Explore Our Solutions
             </Link>
             <a
-              href="tel:+13024640950
-              className="text-left
-            >
+              href="tel:+13024640950"
+              className="text-left">
               Call +1 302 464 0950
             </a>
           </div>

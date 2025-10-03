@@ -18,9 +18,9 @@ export default function AI2028AutonomousEnterpriseRevolution() {
     <article className="text-left">
       <div className="text-left"></div>
         <div className="text-left"></div>
-          <span className="text-left">REVOLUTIONARY<"
-          <span className="text-left">AUTONOMOUS<"
-          <span className="text-left">2028<"
+          <span className="text-left">REVOLUTIONARY<
+          <span className="text-left">AUTONOMOUS<
+          <span className="text-left">2028>
         </div>
         <h1 className="text-left">
           AI 2028: Autonomous Enterprise Revolution
@@ -224,15 +224,13 @@ export default function AI2028AutonomousEnterpriseRevolution() {
           </p>
           <div className="text-left"></div>
             <a 
-              href="/
-              className="text-left
-            >
+              href="/"
+              className="text-left">
               Contact Zion Tech Group
             </a>
             <a 
-              href="/
-              className="text-left
-            >
+              href="/"
+              className="text-left">
               Learn More About Services
             </a>
           </div>

@@ -9,11 +9,11 @@ export const metadata: Metadata = {
 
 export default function MarchUltimateBreakthroughRevolution() {
   return (
-    <div className="text-left"></div>
-      {/* Header */}
+    <div className="text-left">
+      {/* Header */}</div>
       <div className="text-left"></div>
         <div className="text-left"></div>
-          <span className="text-left"></span>
+          <span className="text-left">
             🚀 March 2026 Ultimate Breakthrough
           </span>
         </div>
@@ -131,15 +131,13 @@ export default function MarchUltimateBreakthroughRevolution() {
         </p>
         <div className="text-left"></div>
           <a 
-            href="/
-            className="text-left
-          >
+            href="/"
+            className="text-left">
             Get Started Today
           </a>
           <a 
-            href="/
-            className="text-left
-          >
+            href="/"
+            className="text-left">
             View Success Stories
           </a>
         </div>

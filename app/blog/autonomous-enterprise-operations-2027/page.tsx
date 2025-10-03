@@ -17,11 +17,11 @@ export const metadata: Metadata = {
 export default function AutonomousEnterpriseOperations2027() {
   return (
     <div className="text-left"></div>
-      <div className="text-left"></div>
-        {/* Hero Section */}
+      <div className="text-left">
+        {/* Hero Section */}</div>
         <div className="text-left"></div>
           <div className="text-left"></div>
-            <span className="text-left"></span>
+            <span className="text-left">
               🤖 Autonomous Enterprise Revolution
             </span>
           </div>
@@ -37,15 +37,13 @@ export default function AutonomousEnterpriseOperations2027() {
           
           <div className="text-left"></div>
             <Link 
-              href="/
-              className="text-left
-            >
+              href="/"
+              className="text-left">
               Start Your Automation Journey
             </Link>
             <Link 
-              href="/
-              className="text-left
-            >
+              href="/"
+              className="text-left">
               View Automation Services
             </Link>
           </div>
@@ -73,7 +71,7 @@ export default function AutonomousEnterpriseOperations2027() {
         <article className="text-left">
           <div className="text-left"></div>
             <h2 className="text-left">
-              <span className="text-left">🏢<"
+              <span className="text-left">🏢>
               The Future of Enterprise Operations
             </h2>
             <p className="text-left">
@@ -91,7 +89,7 @@ export default function AutonomousEnterpriseOperations2027() {
 
           <div className="text-left"></div>
             <h2 className="text-left">
-              <span className="text-left">🧠<"
+              <span className="text-left">🧠>
               Intelligent Process Orchestration
             </h2>
             <p className="text-left">
@@ -118,7 +116,7 @@ export default function AutonomousEnterpriseOperations2027() {
 
           <div className="text-left"></div>
             <h2 className="text-left">
-              <span className="text-left">⚡<"
+              <span className="text-left">⚡>
               Real-Time Decision Making
             </h2>
             <p className="text-left">
@@ -129,19 +127,19 @@ export default function AutonomousEnterpriseOperations2027() {
             </p>
             <ul className="text-left">
               <li className="text-left">
-                <span className="text-left">•<"
+                <span className="text-left">•>
                 <span>Instantaneous decision processing across all business functions</span>
               </li>
               <li className="text-left">
-                <span className="text-left">•<"
+                <span className="text-left">•>
                 <span>Predictive analytics for proactive problem resolution</span>
               </li>
               <li className="text-left">
-                <span className="text-left">•<"
+                <span className="text-left">•>
                 <span>Multi-variable optimization for maximum efficiency</span>
               </li>
               <li className="text-left">
-                <span className="text-left">•<"
+                <span className="text-left">•>
                 <span>Continuous learning and strategy refinement</span>
               </li>
             </ul>
@@ -149,7 +147,7 @@ export default function AutonomousEnterpriseOperations2027() {
 
           <div className="text-left"></div>
             <h2 className="text-left">
-              <span className="text-left">💰<"
+              <span className="text-left">💰>
               Measurable Business Impact
             </h2>
             <p className="text-left">
@@ -162,47 +160,47 @@ export default function AutonomousEnterpriseOperations2027() {
                 <h3 className="text-left">Operational Efficiency</h3>"
                 <div className="text-left"></div>
                   <div className="text-left"></div>
-                    <span className="text-left">Process Automation Rate<"
-                    <span className="text-left">99.9%<"
+                    <span className="text-left">Process Automation Rate<
+                    <span className="text-left">99.9%>
                   </div>
                   <div className="text-left"></div>
-                    <span className="text-left">Operational Cost Reduction<"
-                    <span className="text-left">85%<"
+                    <span className="text-left">Operational Cost Reduction<
+                    <span className="text-left">85%>
                   </div>
                   <div className="text-left"></div>
-                    <span className="text-left">Decision Speed Improvement<"
-                    <span className="text-left">1000x<"
+                    <span className="text-left">Decision Speed Improvement<
+                    <span className="text-left">1000x>
                   </div>
                   <div className="text-left"></div>
-                    <span className="text-left">Error Rate Reduction<"
-                    <span className="text-left">99.7%<"
+                    <span className="text-left">Error Rate Reduction<
+                    <span className="text-left">99.7%>
                   </div>
               </div>
               <div></div>
                 <h3 className="text-left">Financial Impact</h3>"
                 <div className="text-left"></div>
                   <div className="text-left"></div>
-                    <span className="text-left">Average Cost Savings<"
-                    <span className="text-left">$100M<"
+                    <span className="text-left">Average Cost Savings<
+                    <span className="text-left">$100M>
                   </div>
                   <div className="text-left"></div>
-                    <span className="text-left">ROI Achievement<"
-                    <span className="text-left">500%<"
+                    <span className="text-left">ROI Achievement<
+                    <span className="text-left">500%>
                   </div>
                   <div className="text-left"></div>
-                    <span className="text-left">Payback Period<"
-                    <span className="text-left">3 months<"
+                    <span className="text-left">Payback Period<
+                    <span className="text-left">3 months>
                   </div>
                   <div className="text-left"></div>
-                    <span className="text-left">Revenue Growth<"
-                    <span className="text-left">40%<"
+                    <span className="text-left">Revenue Growth<
+                    <span className="text-left">40%>
                   </div>
               </div>
           </div>
 
           <div className="text-left"></div>
             <h2 className="text-left">
-              <span className="text-left">🚀<"
+              <span className="text-left">🚀>
               Implementation Roadmap
             </h2>
             <p className="text-left">
@@ -251,7 +249,7 @@ export default function AutonomousEnterpriseOperations2027() {
 
           <div className="text-left"></div>
             <h2 className="text-left">
-              <span className="text-left">🎯<"
+              <span className="text-left">🎯>
               Get Started Today
             </h2>
             <p className="text-left">
@@ -261,15 +259,13 @@ export default function AutonomousEnterpriseOperations2027() {
             </p>
             <div className="text-left"></div>
               <Link 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 Schedule Free Assessment
               </Link>
               <Link 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 View Automation Services
               </Link>
             </div>

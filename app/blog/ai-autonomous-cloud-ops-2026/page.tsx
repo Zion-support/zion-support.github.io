@@ -16,8 +16,8 @@ export const metadata = {
 
 export default function AIAutonomousCloudOps2026() {
   return (
-    <div className="text-left"></div>
-      {/* Hero Section */}
+    <div className="text-left">
+      {/* Hero Section */}</div>
       <section className="text-left">
         <div className="text-left"></div>
           <div className="text-left"></div>
@@ -27,7 +27,7 @@ export default function AIAutonomousCloudOps2026() {
             </div>
             <h1 className="text-left">
               AI Autonomous Cloud Operations 2026:
-              <span className="text-left"></span>
+              <span className="text-left">
                 {' '}Self-Healing Infrastructure
               </span>
             </h1>
@@ -184,15 +184,13 @@ export default function AIAutonomousCloudOps2026() {
             </p>
             <div className="text-left"></div>
               <Link
-                href="/services/ai-autonomous-cloud-ops
-                className="text-left
-              >
+                href="/services/ai-autonomous-cloud-ops"
+                className="text-left">
                 Explore Our Services
               </Link>
               <a
-                href="tel:+13024640950
-                className="text-left
-              >
+                href="tel:+13024640950"
+                className="text-left">
                 Call +1 302 464 0950
               </a>
             </div>

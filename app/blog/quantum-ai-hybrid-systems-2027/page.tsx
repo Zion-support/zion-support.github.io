@@ -17,8 +17,8 @@ export const metadata: Metadata = {
 export default function QuantumAIHybridSystems2027() {
   return (
     <div className="text-left"></div>
-      <div className="text-left"></div>
-        {/* Hero Section */}
+      <div className="text-left">
+        {/* Hero Section */}</div>
         <div className="text-left"></div>
           <h1 className="text-left">
             Quantum-AI Hybrid Systems 2027
@@ -239,15 +239,13 @@ export default function QuantumAIHybridSystems2027() {
             </p>
             <div className="text-left"></div>
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 Schedule Quantum Consultation
               </a>
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 Explore Quantum-AI Solutions
               </a>
             </div>

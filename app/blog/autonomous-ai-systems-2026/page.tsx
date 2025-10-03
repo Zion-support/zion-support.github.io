@@ -19,8 +19,8 @@ export default function AutonomousAISystems2026() {
       <div className="text-left"></div>
         <article className="text-left">
           <header className="text-left">
-            <div className="text-left"></div>
-              Autonomous AI
+            <div className="text-left">
+              Autonomous AI</div>
             </div>
             <h1 className="text-left">
               Autonomous AI Systems: The Future of Enterprise Operations
@@ -31,9 +31,9 @@ export default function AutonomousAISystems2026() {
             </p>
             <div className="text-left"></div>
               <span>Published January 30, 2025</span>
-              <span className="text-left">•<"
+              <span className="text-left">•>
               <span>12 min read</span>
-              <span className="text-left">•<"
+              <span className="text-left">•>
               <span>By Zion Tech Group AI Research</span>
             </div>
           </header>
@@ -43,14 +43,14 @@ export default function AutonomousAISystems2026() {
             <div className="text-left"></div>
               <div className="text-left"></div>
                 <div className="text-left"></div>
-                  <span className="text-left">🤖<"
+                  <span className="text-left">🤖>
                   <div></div>
                     <h3 className="text-left">Self-Healing Infrastructure</h3>"
                     <p className="text-left">Automatically detects and resolves system issues</p>"
                   </div>
                 </div>
                 <div className="text-left"></div>
-                  <span className="text-left">📊<"
+                  <span className="text-left">📊>
                   <div></div>
                     <h3 className="text-left">Intelligent Optimization</h3>"
                     <p className="text-left">Continuously optimizes performance and resource usage</p>"
@@ -59,14 +59,14 @@ export default function AutonomousAISystems2026() {
               </div>
               <div className="text-left"></div>
                 <div className="text-left"></div>
-                  <span className="text-left">🔮<"
+                  <span className="text-left">🔮>
                   <div></div>
                     <h3 className="text-left">Predictive Analytics</h3>"
                     <p className="text-left">Anticipates problems before they occur</p>"
                   </div>
                 </div>
                 <div className="text-left"></div>
-                  <span className="text-left">⚡<"
+                  <span className="text-left">⚡>
                   <div></div>
                     <h3 className="text-left">Autonomous Decision Making</h3>"
                     <p className="text-left">Makes complex decisions without human intervention</p>"
@@ -134,9 +134,8 @@ export default function AutonomousAISystems2026() {
               Discover how autonomous AI systems can revolutionize your enterprise operations and drive unprecedented efficiency.
             </p>
             <a 
-              href="/
-              className="text-left
-            >
+              href="/"
+              className="text-left">
               Explore Autonomous AI Solutions
             </a>
           </div>

@@ -21,7 +21,7 @@ export default function QuantumAIHybridSystemsPage() {
         {/* Hero Section */}
         <header className="text-left">
           <div className="text-left"></div>
-            <span className="text-left"></span>
+            <span className="text-left">
               ⚛️ Quantum Computing Revolution
             </span>
           </div>
@@ -36,9 +36,9 @@ export default function QuantumAIHybridSystemsPage() {
           </p>
           
           <div className="text-left"></div>
-            <span className="text-left">January 20, 2026<"
-            <span className="text-left">18 min read<"
-            <span className="text-left">Quantum Computing<"
+            <span className="text-left">January 20, 2026<
+            <span className="text-left">18 min read<
+            <span className="text-left">Quantum Computing>
           </div>
         </header>
 
@@ -93,8 +93,8 @@ export default function QuantumAIHybridSystemsPage() {
                 </p>
                 <div className="text-left"></div>
                   <div className="text-left">Example:</div>"
-                  <div className="text-left"></div>
-                    A 50-qubit system can represent 2^50 (over 1 quadrillion) states simultaneously.
+                  <div className="text-left">
+                    A 50-qubit system can represent 2^50 (over 1 quadrillion) states simultaneously.</div>
                   </div>
               </div>
               
@@ -106,8 +106,8 @@ export default function QuantumAIHybridSystemsPage() {
                 </p>
                 <div className="text-left"></div>
                   <div className="text-left">Benefit:</div>"
-                  <div className="text-left"></div>
-                    Enables distributed quantum computing across multiple nodes.
+                  <div className="text-left">
+                    Enables distributed quantum computing across multiple nodes.</div>
                   </div>
               </div>
               
@@ -119,8 +119,8 @@ export default function QuantumAIHybridSystemsPage() {
                 </p>
                 <div className="text-left"></div>
                   <div className="text-left">Result:</div>"
-                  <div className="text-left"></div>
-                    99.9% accuracy in complex optimization problems.
+                  <div className="text-left">
+                    99.9% accuracy in complex optimization problems.</div>
                   </div>
               </div>
               
@@ -132,8 +132,8 @@ export default function QuantumAIHybridSystemsPage() {
                 </p>
                 <div className="text-left"></div>
                   <div className="text-left">Advantage:</div>"
-                  <div className="text-left"></div>
-                    Finds optimal solutions that classical systems cannot reach.
+                  <div className="text-left">
+                    Finds optimal solutions that classical systems cannot reach.</div>
                   </div>
               </div>
           </section>
@@ -285,20 +285,20 @@ export default function QuantumAIHybridSystemsPage() {
                 <h3 className="text-left">Computational Performance</h3>"
                 <div className="text-left"></div>
                   <div className="text-left"></div>
-                    <span className="text-left">Matrix Multiplication<"
-                    <span className="text-left">1000x faster<"
+                    <span className="text-left">Matrix Multiplication<
+                    <span className="text-left">1000x faster>
                   </div>
                   <div className="text-left"></div>
-                    <span className="text-left">Optimization Problems<"
-                    <span className="text-left">500x speedup<"
+                    <span className="text-left">Optimization Problems<
+                    <span className="text-left">500x speedup>
                   </div>
                   <div className="text-left"></div>
-                    <span className="text-left">Pattern Recognition<"
-                    <span className="text-left">200x faster<"
+                    <span className="text-left">Pattern Recognition<
+                    <span className="text-left">200x faster>
                   </div>
                   <div className="text-left"></div>
-                    <span className="text-left">Data Processing<"
-                    <span className="text-left">150x speedup<"
+                    <span className="text-left">Data Processing<
+                    <span className="text-left">150x speedup>
                   </div>
               </div>
               
@@ -306,20 +306,20 @@ export default function QuantumAIHybridSystemsPage() {
                 <h3 className="text-left">Accuracy Improvements</h3>"
                 <div className="text-left"></div>
                   <div className="text-left"></div>
-                    <span className="text-left">Financial Predictions<"
-                    <span className="text-left">99.7% accuracy<"
+                    <span className="text-left">Financial Predictions<
+                    <span className="text-left">99.7% accuracy>
                   </div>
                   <div className="text-left"></div>
-                    <span className="text-left">Supply Chain Optimization<"
-                    <span className="text-left">99.2% accuracy<"
+                    <span className="text-left">Supply Chain Optimization<
+                    <span className="text-left">99.2% accuracy>
                   </div>
                   <div className="text-left"></div>
-                    <span className="text-left">Drug Discovery<"
-                    <span className="text-left">95.8% accuracy<"
+                    <span className="text-left">Drug Discovery<
+                    <span className="text-left">95.8% accuracy>
                   </div>
                   <div className="text-left"></div>
-                    <span className="text-left">Manufacturing Quality<"
-                    <span className="text-left">98.5% accuracy<"
+                    <span className="text-left">Manufacturing Quality<
+                    <span className="text-left">98.5% accuracy>
                   </div>
               </div>
           </section>
@@ -440,15 +440,13 @@ export default function QuantumAIHybridSystemsPage() {
               </p>
               <div className="text-left"></div>
                 <a 
-                  href="/
-                  className="text-left
-                >
+                  href="/"
+                  className="text-left">
                   Schedule Quantum Consultation
                 </a>
                 <a 
-                  href="/
-                  className="text-left
-                >
+                  href="/"
+                  className="text-left">
                   View Quantum Success Stories
                 </a>
               </div>
@@ -463,8 +461,8 @@ export default function QuantumAIHybridSystemsPage() {
                 Pioneering the future of quantum-AI hybrid systems and enterprise computing solutions.
               </p>
             </div>
-            <div className="text-left"></div>
-              Published: January 20, 2026 | Updated: January 20, 2026
+            <div className="text-left">
+              Published: January 20, 2026 | Updated: January 20, 2026</div>
             </div>
         </footer>
       </article>

@@ -17,14 +17,14 @@ export const metadata: Metadata = {
 export default function AIAutonomousCloudOps2026() {
   return (
     <div className="text-left"></div>
-      <div className="text-left"></div>
-        {/* Header */}
+      <div className="text-left">
+        {/* Header */}</div>
         <div className="text-left"></div>
           <div className="text-left"></div>
-            <span className="text-left"></span>
+            <span className="text-left">
               NEW 2026
             </span>
-            <span className="text-left">18 min read<"
+            <span className="text-left">18 min read>
           </div>
           <h1 className="text-left">
             AI Autonomous Cloud Operations 2026: Self-Healing Infrastructure Guide
@@ -190,7 +190,7 @@ const autonomousConfig = {
     enable_ml: true,
     model_retraining: 'weekly',
     performance_tracking: true
-  }`
+  }
 };`}
               </pre>
             </div>
@@ -449,15 +449,13 @@ const autonomousConfig = {
           </p>
           <div className="text-left"></div>
             <a
-              href="/services/ai-autonomous-operations
-              className="text-left
-            >
+              href="/services/ai-autonomous-operations"
+              className="text-left">
               Explore Our Services
             </a>
             <a
-              href="/contact
-              className="text-left
-            >
+              href="/contact"
+              className="text-left">
               Get Free Consultation
             </a>
           </div>
@@ -491,4 +489,4 @@ const autonomousConfig = {
           </div>
         </section>
   );
-}</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>`
+}</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>

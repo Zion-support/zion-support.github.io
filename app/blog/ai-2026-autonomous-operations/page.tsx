@@ -21,7 +21,7 @@ export default function AutonomousOperations() {
         {/* Hero Section */}
         <header className="text-left">
           <div className="text-left"></div>
-            <span className="text-left"></span>
+            <span className="text-left">
               🤖 Autonomous AI Revolution
             </span>
           </div>
@@ -145,28 +145,28 @@ export default function AutonomousOperations() {
           <div className="text-left"></div>
             <ul className="text-left">
               <li className="text-left">
-                <span className="text-left">🧠<"
+                <span className="text-left">🧠>
                 <div></div>
                   <strong className="text-left">Self-Healing Systems:</strong> Automatically detect, "
                   diagnose, and resolve system issues without human intervention.
                 </div>
               </li>
               <li className="text-left">
-                <span className="text-left">🔄<"
+                <span className="text-left">🔄>
                 <div></div>
                   <strong className="text-left">Adaptive Learning:</strong> Continuously improve "
                   operational strategies based on real-time performance feedback.
                 </div>
               </li>
               <li className="text-left">
-                <span className="text-left">⚡<"
+                <span className="text-left">⚡>
                 <div></div>
                   <strong className="text-left">Predictive Optimization:</strong> Anticipate future "
                   needs and proactively adjust resources and processes.
                 </div>
               </li>
               <li className="text-left">
-                <span className="text-left">🎯<"
+                <span className="text-left">🎯>
                 <div></div>
                   <strong className="text-left">Multi-Domain Coordination:</strong> Orchestrate "
                   complex operations across multiple systems and departments.
@@ -211,15 +211,13 @@ export default function AutonomousOperations() {
             </p>
             <div className="text-left"></div>
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 Start Automation Assessment
               </a>
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 View Automation Success Stories
               </a>
             </div>

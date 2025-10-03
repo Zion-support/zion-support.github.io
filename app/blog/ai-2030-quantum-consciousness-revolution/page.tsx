@@ -18,9 +18,9 @@ export default function AIQuantumConsciousnessRevolution2030() {
     <article className="text-left">
       <div className="text-left"></div>
         <div className="text-left"></div>
-          <span className="text-left">REVOLUTIONARY BREAKTHROUGH<"
-          <span className="text-left">10,000,000x PERFORMANCE<"
-          <span className="text-left">QUANTUM CONSCIOUSNESS<"
+          <span className="text-left">REVOLUTIONARY BREAKTHROUGH<
+          <span className="text-left">10,000,000x PERFORMANCE<
+          <span className="text-left">QUANTUM CONSCIOUSNESS>
         </div>
         <h1 className="text-left">
           AI 2030: Quantum Consciousness Revolution
@@ -146,15 +146,13 @@ export default function AIQuantumConsciousnessRevolution2030() {
           </p>
           <div className="text-left"></div>
             <a 
-              href="/
-              className="text-left
-            >
+              href="/"
+              className="text-left">
               Contact Zion Tech Group
             </a>
             <a 
-              href="/
-              className="text-left
-            >
+              href="/"
+              className="text-left">
               Learn More About Services
             </a>
           </div>

@@ -16,8 +16,8 @@ export const metadata: Metadata = {
 
 export default function EnterpriseAutomation2026Guide() {
   return (
-    <div className="text-left"></div>
-      {/* Hero Section */}
+    <div className="text-left">
+      {/* Hero Section */}</div>
       <header className="text-left">
         <div className="text-left"></div>
           <div className="text-left"></div>"
@@ -27,7 +27,7 @@ export default function EnterpriseAutomation2026Guide() {
         <div className="text-left"></div>
           <div className="text-left"></div>
             <div className="text-left"></div>
-              <span className="text-left"></span>
+              <span className="text-left">
                 🤖 Complete Automation Guide
               </span>
             </div>
@@ -42,15 +42,13 @@ export default function EnterpriseAutomation2026Guide() {
             
             <div className="text-left"></div>
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 Get Implementation Kit
               </a>
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 View $2.3B Success Story →
               </a>
             </div>
@@ -94,19 +92,19 @@ export default function EnterpriseAutomation2026Guide() {
               <h3 className="text-left">Core Capabilities:</h3>"
               <ul className="text-left">
                 <li className="text-left">
-                  <span className="text-left">•<"
+                  <span className="text-left">•>
                   <span>Self-awareness and introspection capabilities</span>
                 </li>
                 <li className="text-left">
-                  <span className="text-left">•<"
+                  <span className="text-left">•>
                   <span>Dynamic strategy adaptation based on performance feedback</span>
                 </li>
                 <li className="text-left">
-                  <span className="text-left">•<"
+                  <span className="text-left">•>
                   <span>Autonomous learning from both successes and failures</span>
                 </li>
                 <li className="text-left">
-                  <span className="text-left">•<"
+                  <span className="text-left">•>
                   <span>Cross-domain knowledge transfer and application</span>
                 </li>
               </ul>
@@ -248,15 +246,13 @@ export default function EnterpriseAutomation2026Guide() {
             </p>
             <div className="text-left"></div>
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 Get Free Assessment
               </a>
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 View Success Stories →
               </a>
             </div>

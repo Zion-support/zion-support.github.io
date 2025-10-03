@@ -21,7 +21,7 @@ export default function AI2025EnterpriseAutomationBreakthrough() {
         {/* Header */}
         <header className="text-left">
           <div className="text-left"></div>
-            <span className="text-left"></span>
+            <span className="text-left">
               🚀 January 2025 • Enterprise AI Breakthrough
             </span>
           </div>
@@ -78,7 +78,7 @@ export default function AI2025EnterpriseAutomationBreakthrough() {
 
           <blockquote className="text-left">
             <p className="text-left">
-              "We've achieved what we thought was impossible - complete automation of our core business processes 
+              "We've achieved what we thought was impossible - complete automation of our core business processes "
               while maintaining human oversight and creativity where it matters most."
             </p>
             <cite className="text-left">— CTO, Fortune 500 Technology Company</cite>"
@@ -91,19 +91,19 @@ export default function AI2025EnterpriseAutomationBreakthrough() {
 
           <ul className="text-left">
             <li className="text-left">
-              <span className="text-left">•<"
+              <span className="text-left">•>
               <span><strong>Autonomous Decision Engines:</strong> AI systems that make complex business decisions in real-time with 99.7% accuracy<
             </li>
             <li className="text-left">
-              <span className="text-left">•<"
+              <span className="text-left">•>
               <span><strong>Intelligent Process Orchestration:</strong> Self-optimizing workflows that adapt to changing business conditions<
             </li>
             <li className="text-left">
-              <span className="text-left">•<"
+              <span className="text-left">•>
               <span><strong>Predictive Resource Management:</strong> AI-driven allocation of resources before bottlenecks occur<
             </li>
             <li className="text-left">
-              <span className="text-left">•<"
+              <span className="text-left">•>
               <span><strong>Continuous Learning Systems:</strong> Self-improving algorithms that get smarter with every transaction<
             </li>
           </ul>
@@ -216,15 +216,15 @@ export default function AI2025EnterpriseAutomationBreakthrough() {
 
           <ul className="text-left">
             <li className="text-left">
-              <span className="text-left">•<"
+              <span className="text-left">•>
               <span><strong>Autonomous Business Units:</strong> Self-managing departments with minimal human oversight<
             </li>
             <li className="text-left">
-              <span className="text-left">•<"
+              <span className="text-left">•>
               <span><strong>Predictive Market Intelligence:</strong> AI systems that anticipate market changes before they happen<
             </li>
             <li className="text-left">
-              <span className="text-left">•<"
+              <span className="text-left">•>
               <span><strong>Emotional AI Integration:</strong> Systems that understand and respond to human emotions in business contexts<
             </li>
           </ul>
@@ -238,15 +238,13 @@ export default function AI2025EnterpriseAutomationBreakthrough() {
             </p>
             <div className="text-left"></div>
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 Start Your Transformation
               </a>
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 View Success Stories
               </a>
             </div>

@@ -4,8 +4,8 @@ import { ArrowRight, Brain, Zap, Shield, TrendingUp, Users, Target, CheckCircle 
 
 export default function AINextGenEnterpriseAutomation2026() {
   return (
-    <div className="text-left"></div>
-      {/* Hero Section */}
+    <div className="text-left">
+      {/* Hero Section */}</div>
       <section className="text-left">
         <div className="text-left"></div>
           <div className="text-left"></div>
@@ -15,7 +15,7 @@ export default function AINextGenEnterpriseAutomation2026() {
         <div className="text-left"></div>
           <div className="text-left"></div>
             <div className="text-left"></div>
-              <span className="text-left"></span>
+              <span className="text-left">
                 🚀 January 2026 • Enterprise AI Revolution
               </span>
             </div>
@@ -29,15 +29,15 @@ export default function AINextGenEnterpriseAutomation2026() {
             </p>
             
             <div className="text-left"></div>
-              <span className="text-left"></span>
+              <span className="text-left">
                 <Users className="text-left" />
                 Enterprise AI
               <
-              <span className="text-left"></span>
+              <span className="text-left">
                 <Zap className="text-left" />
                 Automation
               <
-              <span className="text-left"></span>
+              <span className="text-left">
                 <Brain className="text-left" />
                 Meta-Cognitive AI
               <
@@ -50,20 +50,20 @@ export default function AINextGenEnterpriseAutomation2026() {
       {/* Key Statistics */}
       <section className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
+          <div className="text-left">
             {[
               { value='98%', label: 'Automation Rate', icon: '🤖', color: 'from-blue-400 to-cyan-400' },
               { value='1000x', label: 'Processing Speed', icon: '⚡', color: 'from-purple-400 to-pink-400' },
               { value='$2.5B', label: 'Cost Savings', icon: '💰', color: 'from-green-400 to-emerald-400' },
               { value='99.9%', label: 'Accuracy Rate', icon: '🎯', color: 'from-yellow-400 to-orange-400' }
-            ].map((stat, index) => (
+            ].map((stat, index) => (</div>
               <div key={index} className="text-left"></div>
                 <div className="text-left">{stat.icon}</div>
-                <div className={`text-4xl font-extrabold bg-gradient-to-r ${stat.color} bg-clip-text text-transparent mb-2`}></div>
-                  {stat.value}
+                <div className={`text-4xl font-extrabold bg-gradient-to-r ${stat.color} bg-clip-text text-transparent mb-2`}>
+                  {stat.value}</div>
                 </div>
-                <div className="text-left"></div>
-                  {stat.label}
+                <div className="text-left">
+                  {stat.label}</div>
                 </div>
               </div>
             ))}
@@ -72,18 +72,6 @@ export default function AINextGenEnterpriseAutomation2026() {
       </section>
 
       {/* Main Content */}
-
-      <section className="text-left">
-        <div className="text-left"></div>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
-              <h2 className="text-left">
-
-      <section className="text-left">
-        <div className="text-left"></div>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
-              <h2 className="text-left">
 
                 The Enterprise Automation Revolution is Here
               </h2>
@@ -174,23 +162,13 @@ export default function AINextGenEnterpriseAutomation2026() {
                 Implementation Roadmap: Your Path to 98% Automation
               </h2>
 
-              <div className="text-left"></div>
+              <div className="text-left">
                 {[
 
-                  { phase: "Phase 1> title: "Assessment & Strategy> duration: "2-4 weeks> description: "Comprehensive analysis of current operations and automation opportunities" },"
-                  { phase: "Phase 2> title: "Pilot Implementation> duration: "4-8 weeks> description: "Deploy AI systems in select departments with measurable results" },"
-                  { phase: "Phase 3> title: "Enterprise Rollout> duration: "8-16 weeks> description: "Scale automation across all business units with full integration" },"
-                  { phase: "Phase 4> title: "Optimization & Evolution> duration: "Ongoing> description: "Continuous improvement and adaptation to achieve maximum efficiency" }"
-
-                  { phase: "Phase 1", title: "Assessment & Strategy", duration: "2-4 weeks", description: "Comprehensive analysis of current operations and automation opportunities" },"
-                  { phase: "Phase 2", title: "Pilot Implementation", duration: "4-8 weeks", description: "Deploy AI systems in select departments with measurable results" },"
-                  { phase: "Phase 3", title: "Enterprise Rollout", duration: "8-16 weeks", description: "Scale automation across all business units with full integration" },"
-                  { phase: "Phase 4", title: "Optimization & Evolution", duration: "Ongoing", description: "Continuous improvement and adaptation to achieve maximum efficiency" }"
-
-                ].map((phase, index) => (
+                ].map((phase, index) => (</div>
                   <div key={index} className="text-left"></div>
-                    <div className="text-left"></div>
-                      {phase.phase}
+                    <div className="text-left">
+                      {phase.phase}</div>
                     </div>
                     <div className="text-left"></div>
                       <h4 className="text-left">{phase.title}</h4>
@@ -217,15 +195,13 @@ export default function AINextGenEnterpriseAutomation2026() {
           </p>
           <div className="text-left"></div>
             <Link 
-              href="/
-              className="text-left
-            >
+              href="/"
+              className="text-left">
               Start Your Transformation
             </Link>
             <Link 
-              href="/
-              className="text-left
-            >
+              href="/"
+              className="text-left">
               View Success Stories
             </Link>
           </div>
@@ -238,16 +214,14 @@ export default function AINextGenEnterpriseAutomation2026() {
           <div className="text-left"></div>
             <div className="text-left"></div>
               <Link 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 <ArrowRight className="text-left" />
                 Back to Blog
               </Link>
               <Link 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 Explore Our Services
                 <ArrowRight className="text-left" />
               </Link>
@@ -266,4 +240,4 @@ export default function AINextGenEnterpriseAutomation2026() {
 </CheckCircle>
 </Brain>
 </Zap>
-</Users>`
+</Users>

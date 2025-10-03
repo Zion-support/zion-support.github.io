@@ -17,7 +17,7 @@ export default function AI2027QuantumEnhancedMachineLearning() {
     <div className="text-left"></div>
       <div className="text-left"></div>
         <div className="text-left"></div>
-          <span className="text-left"></span>
+          <span className="text-left">
             ⚛️ QUANTUM BREAKTHROUGH 2027
           </span>
         </div>
@@ -27,8 +27,8 @@ export default function AI2027QuantumEnhancedMachineLearning() {
         <p className="text-left">
           Revolutionary quantum-enhanced machine learning technologies delivering 1000x performance improvements, 95% accuracy gains, and breakthrough capabilities for enterprise AI applications.
         </p>
-        <div className="text-left"></div>
-          Published: January 30, 2027 • 28 min read • Quantum AI
+        <div className="text-left">
+          Published: January 30, 2027 • 28 min read • Quantum AI</div>
         </div>
       </div>
 
@@ -79,19 +79,19 @@ export default function AI2027QuantumEnhancedMachineLearning() {
           <h4 className="text-left">Quantum Neural Network Advantages:</h4>"
           <ul className="text-left">
             <li className="text-left">
-              <span className="text-left">1<"
+              <span className="text-left">1>
               <div></div>
                 <strong>Exponential Parallelism:</strong> Process 2^n states simultaneously where n is the number of qubits
               </div>
             </li>
             <li className="text-left">
-              <span className="text-left">2<"
+              <span className="text-left">2>
               <div></div>
                 <strong>Quantum Entanglement:</strong> Enable correlations impossible in classical systems
               </div>
             </li>
             <li className="text-left">
-              <span className="text-left">3<"
+              <span className="text-left">3>
               <div></div>
                 <strong>Interference Effects:</strong> Amplify correct solutions while canceling incorrect ones
               </div>
@@ -240,15 +240,13 @@ export default function AI2027QuantumEnhancedMachineLearning() {
           </p>
           <div className="text-left"></div>
             <Link
-              href="/services/ai-quantum-computing
-              className="text-left
-            >
+              href="/services/ai-quantum-computing"
+              className="text-left">
               Explore Quantum AI Services
             </Link>
             <a
-              href="tel:+13024640950
-              className="text-left
-            >
+              href="tel:+13024640950"
+              className="text-left">
               Call +1 302 464 0950
             </a>
           </div>

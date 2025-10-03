@@ -17,11 +17,11 @@ export const metadata: Metadata = {
 export default function QuantumAISecurityRevolution() {
   return (
     <div className="text-left"></div>
-      <div className="text-left"></div>
-        {/* Hero Section */}
+      <div className="text-left">
+        {/* Hero Section */}</div>
         <div className="text-left"></div>
           <div className="text-left"></div>
-            <span className="text-left"></span>
+            <span className="text-left">
               🔐 BREAKING: Quantum AI Security Revolution
             </span>
           </div>
@@ -215,15 +215,13 @@ export default function QuantumAISecurityRevolution() {
           </p>
           <div className="text-left"></div>
             <a 
-              href="/
-              className="text-left
-            >
+              href="/"
+              className="text-left">
               Get Security Assessment
             </a>
             <a 
-              href="/
-              className="text-left
-            >
+              href="/"
+              className="text-left">
               View Security Services
             </a>
           </div>

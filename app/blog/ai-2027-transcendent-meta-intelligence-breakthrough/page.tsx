@@ -14,14 +14,14 @@ export const metadata = {
 
 export default function AI2027TranscendentMetaIntelligenceBreakthrough() {
   return (
-    <div className="text-left"></div>
-      {/* Hero Section */}
+    <div className="text-left">
+      {/* Hero Section */}</div>
       <div className="text-left"></div>
         <div className="text-left"></div>
-          <span className="text-left"></span>
+          <span className="text-left">
             BREAKTHROUGH 2027
           </span>
-          <span className="text-left"></span>
+          <span className="text-left">
             $1.8T SUCCESS
           </span>
         </div>
@@ -137,10 +137,10 @@ export default function AI2027TranscendentMetaIntelligenceBreakthrough() {
           <div className="text-left"></div>
             <div className="text-left"></div>
               <div className="text-left"></div>
-                <span className="text-left"></span>
+                <span className="text-left">
                   Fortune 50 Success
                 </span>
-                <span className="text-left">$450B Value Creation<"
+                <span className="text-left">$450B Value Creation>
               </div>
               <h3 className="text-left">Global Manufacturing Conglomerate</h3>"
               <p className="text-left">
@@ -168,10 +168,10 @@ export default function AI2027TranscendentMetaIntelligenceBreakthrough() {
 
             <div className="text-left"></div>
               <div className="text-left"></div>
-                <span className="text-left"></span>
+                <span className="text-left">
                   Fortune 100 Success
                 </span>
-                <span className="text-left">$380B Value Creation<"
+                <span className="text-left">$380B Value Creation>
               </div>
               <h3 className="text-left">International Financial Services</h3>"
               <p className="text-left">
@@ -229,15 +229,13 @@ export default function AI2027TranscendentMetaIntelligenceBreakthrough() {
             </p>
             <div className="text-left"></div>
               <Link 
-                href="/case-studies/ai-2027-transcendent-meta-intelligence-1-8-trillion-success
-                className="text-left
-              >
+                href="/case-studies/ai-2027-transcendent-meta-intelligence-1-8-trillion-success"
+                className="text-left">
                 View Success Story
               </Link>
               <Link 
-                href="/services/ai-2027-transcendent-meta-intelligence-solutions
-                className="text-left
-              >
+                href="/services/ai-2027-transcendent-meta-intelligence-solutions"
+                className="text-left">
                 Get Implementation Guide
               </Link>
             </div>

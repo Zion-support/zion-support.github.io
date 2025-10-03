@@ -157,23 +157,23 @@ export default function AIMegaTrends20252026() {
         <div className="text-left"></div>
           <ul className="text-left">
             <li className="text-left">
-              <span className="text-left">✓<"
+              <span className="text-left">✓>
               <span>Quantum-enhanced AI will deliver 1000x performance improvements</span>
             </li>
             <li className="text-left">
-              <span className="text-left">✓<"
+              <span className="text-left">✓>
               <span>Autonomous operations will achieve 95% automation by 2026</span>
             </li>
             <li className="text-left">
-              <span className="text-left">✓<"
+              <span className="text-left">✓>
               <span>Enterprise ROI will increase by $2.5B on average</span>
             </li>
             <li className="text-left">
-              <span className="text-left">✓<"
+              <span className="text-left">✓>
               <span>Meta-cognitive AI will enable self-improving systems</span>
             </li>
             <li className="text-left">
-              <span className="text-left">✓<"
+              <span className="text-left">✓>
               <span>Neuromorphic computing will revolutionize AI reasoning</span>
             </li>
           </ul>
@@ -186,9 +186,8 @@ export default function AIMegaTrends20252026() {
             and achieve unprecedented operational excellence.
           </p>
           <Link 
-            href="/contact
-            className="text-left
-          >
+            href="/contact"
+            className="text-left">
             Start Your Transformation
           </Link>
         </div>
@@ -198,16 +197,14 @@ export default function AIMegaTrends20252026() {
         <h3 className="text-left">Related Content</h3>
         <div className="text-left"></div>
           <Link 
-            href="/services/quantum-analytics
-            className="text-left
-          >
+            href="/services/quantum-analytics"
+            className="text-left">
             <h4 className="text-left">Quantum Analytics 1000x Performance</h4>
             <p className="text-left">Discover how quantum computing revolutionizes data analytics</p>
           </Link>
           <Link 
-            href="/case-studies/enterprise-success
-            className="text-left
-          >
+            href="/case-studies/enterprise-success"
+            className="text-left">
             <h4 className="text-left">$500M Global Enterprise Success</h4>
             <p className="text-left">Real-world transformation case study with massive ROI</p>
           </Link>

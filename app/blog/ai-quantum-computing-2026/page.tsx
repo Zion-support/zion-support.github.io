@@ -19,8 +19,8 @@ export default function AIQuantumComputing2026() {
       <div className="text-left"></div>
         <article className="text-left">
           <header className="text-left">
-            <div className="text-left"></div>
-              Quantum AI Revolution
+            <div className="text-left">
+              Quantum AI Revolution</div>
             </div>
             <h1 className="text-left">
               AI-Powered Quantum Computing Breakthroughs in 2026
@@ -31,9 +31,9 @@ export default function AIQuantumComputing2026() {
             </p>
             <div className="text-left"></div>
               <span>Published January 30, 2025</span>
-              <span className="text-left">•<"
+              <span className="text-left">•>
               <span>15 min read</span>
-              <span className="text-left">•<"
+              <span className="text-left">•>
               <span>By Zion Tech Group Research Team</span>
             </div>
           </header>
@@ -42,19 +42,19 @@ export default function AIQuantumComputing2026() {
             <h2 className="text-left">Key Breakthroughs</h2>"
             <ul className="text-left">
               <li className="text-left">
-                <span className="text-left">⚡<"
+                <span className="text-left">⚡>
                 Quantum machine learning algorithms achieving 1000x speedup over classical methods
               </li>
               <li className="text-left">
-                <span className="text-left">🧬<"
+                <span className="text-left">🧬>
                 AI-driven quantum simulations solving protein folding in seconds instead of years
               </li>
               <li className="text-left">
-                <span className="text-left">💰<"
+                <span className="text-left">💰>
                 Quantum financial models predicting market movements with 95% accuracy
               </li>
               <li className="text-left">
-                <span className="text-left">🔐<"
+                <span className="text-left">🔐>
                 Post-quantum cryptography protecting enterprise data from future threats
               </li>
             </ul>
@@ -110,9 +110,8 @@ export default function AIQuantumComputing2026() {
               Discover how quantum-AI solutions can revolutionize your operations and drive unprecedented growth.
             </p>
             <a 
-              href="/
-              className="text-left
-            >
+              href="/"
+              className="text-left">
               Explore Quantum-AI Services
             </a>
           </div>

@@ -20,8 +20,8 @@ export const metadata: Metadata = {
 export default function AI2026FutureLandscapeMegaTrends() {
   return (
     <div className="text-left"></div>
-      <div className="text-left"></div>
-        {/* Header */}
+      <div className="text-left">
+        {/* Header */}</div>
         <div className="text-left"></div>
           <div className="text-left"></div>
             <TrendingUp className="text-left" />
@@ -64,7 +64,7 @@ export default function AI2026FutureLandscapeMegaTrends() {
         {/* Main Content */}
 <div className="text-left"></div>
           <div className="text-left">origin/cursor/fix-errors-and-merge-to-main-0638
-            {/* Executive Summary */}
+            {/* Executive Summary */}</div>
             <div className="text-left"></div>
               <h2 className="text-left">
                 <Target className="text-left" />
@@ -259,16 +259,14 @@ export default function AI2026FutureLandscapeMegaTrends() {
               </p>
               <div className="text-left"></div>
                 <Link 
-                  href="/contact
-                  className="text-left
-                >
+                  href="/contact"
+                  className="text-left">
                   Get Started Today
                   <ArrowRight className="text-left" />
                 </Link>
                 <Link 
-                  href="/services
-                  className="text-left
-                >
+                  href="/services"
+                  className="text-left">
                   Explore Our Services
                   <ArrowRight className="text-left" />
                 </Link>

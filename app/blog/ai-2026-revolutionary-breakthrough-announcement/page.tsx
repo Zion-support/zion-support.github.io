@@ -17,8 +17,8 @@ export const metadata: Metadata = {
 
 export default function RevolutionaryBreakthroughAnnouncement2026() {
   return (
-    <div className="text-left"></div>
-      {/* Hero Section */}
+    <div className="text-left">
+      {/* Hero Section */}</div>
       <section className="text-left">
         <div className="text-left"></div>
           <div className="text-left"></div>"
@@ -28,7 +28,7 @@ export default function RevolutionaryBreakthroughAnnouncement2026() {
         <div className="text-left"></div>
           <div className="text-left"></div>
             <div className="text-left"></div>
-              <span className="text-left"></span>
+              <span className="text-left">
                 🚀 BREAKING: Revolutionary AI Breakthroughs 2026
               </span>
             </div>
@@ -64,15 +64,13 @@ export default function RevolutionaryBreakthroughAnnouncement2026() {
 
             <div className="text-left"></div>
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 Get Free Consultation
               </a>
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 View Success Stories
               </a>
             </div>
@@ -85,7 +83,7 @@ export default function RevolutionaryBreakthroughAnnouncement2026() {
           <div className="text-left"></div>
             <div className="text-left"></div>
               <div className="text-left"></div>
-                <span className="text-left"></span>
+                <span className="text-left">
                   🧠 Meta-Cognitive AI Breakthrough
                 </span>
               </div>
@@ -105,20 +103,20 @@ export default function RevolutionaryBreakthroughAnnouncement2026() {
                 </p>
                 <ul className="text-left">
                   <li className="text-left">
-                    <span className="text-left">✓<"
-                    <span className="text-left">Monitor and evaluate their own decision-making processes<"
+                    <span className="text-left">✓<
+                    <span className="text-left">Monitor and evaluate their own decision-making processes>
                   </li>
                   <li className="text-left">
-                    <span className="text-left">✓<"
-                    <span className="text-left">Adapt reasoning strategies based on context and performance<"
+                    <span className="text-left">✓<
+                    <span className="text-left">Adapt reasoning strategies based on context and performance>
                   </li>
                   <li className="text-left">
-                    <span className="text-left">✓<"
-                    <span className="text-left">Self-correct and improve without human intervention<"
+                    <span className="text-left">✓<
+                    <span className="text-left">Self-correct and improve without human intervention>
                   </li>
                   <li className="text-left">
-                    <span className="text-left">✓<"
-                    <span className="text-left">Provide transparent explanations for complex decisions<"
+                    <span className="text-left">✓<
+                    <span className="text-left">Provide transparent explanations for complex decisions>
                   </li>
                 </ul>
               </div>
@@ -126,20 +124,20 @@ export default function RevolutionaryBreakthroughAnnouncement2026() {
                 <h4 className="text-left">Performance Metrics</h4>"
                 <div className="text-left"></div>
                   <div className="text-left"></div>
-                    <span className="text-left">Decision Accuracy<"
-                    <span className="text-left">95%<"
+                    <span className="text-left">Decision Accuracy<
+                    <span className="text-left">95%>
                   </div>
                   <div className="text-left"></div>
-                    <span className="text-left">Self-Correction Rate<"
-                    <span className="text-left">87%<"
+                    <span className="text-left">Self-Correction Rate<
+                    <span className="text-left">87%>
                   </div>
                   <div className="text-left"></div>
-                    <span className="text-left">Adaptation Speed<"
-                    <span className="text-left">3.2x<"
+                    <span className="text-left">Adaptation Speed<
+                    <span className="text-left">3.2x>
                   </div>
                   <div className="text-left"></div>
-                    <span className="text-left">Trust Score<"
-                    <span className="text-left">9.4/10<"
+                    <span className="text-left">Trust Score<
+                    <span className="text-left">9.4/10>
                   </div>
               </div>
           </div>
@@ -151,7 +149,7 @@ export default function RevolutionaryBreakthroughAnnouncement2026() {
           <div className="text-left"></div>
             <div className="text-left"></div>
               <div className="text-left"></div>
-                <span className="text-left"></span>
+                <span className="text-left">
                   ⚛️ Quantum-Neural Networks
                 </span>
               </div>
@@ -168,20 +166,20 @@ export default function RevolutionaryBreakthroughAnnouncement2026() {
                 <h4 className="text-left">Quantum Performance Metrics</h4>"
                 <div className="text-left"></div>
                   <div className="text-left"></div>
-                    <span className="text-left">Processing Speed<"
-                    <span className="text-left">1000x<"
+                    <span className="text-left">Processing Speed<
+                    <span className="text-left">1000x>
                   </div>
                   <div className="text-left"></div>
-                    <span className="text-left">Parallel Processing<"
-                    <span className="text-left">∞ States<"
+                    <span className="text-left">Parallel Processing<
+                    <span className="text-left">∞ States>
                   </div>
                   <div className="text-left"></div>
-                    <span className="text-left">Energy Efficiency<"
-                    <span className="text-left">85%<"
+                    <span className="text-left">Energy Efficiency<
+                    <span className="text-left">85%>
                   </div>
                   <div className="text-left"></div>
-                    <span className="text-left">Error Correction<"
-                    <span className="text-left">99.9%<"
+                    <span className="text-left">Error Correction<
+                    <span className="text-left">99.9%>
                   </div>
               </div>
               <div></div>
@@ -191,20 +189,20 @@ export default function RevolutionaryBreakthroughAnnouncement2026() {
                 </p>
                 <ul className="text-left">
                   <li className="text-left">
-                    <span className="text-left">⚛️<"
-                    <span className="text-left">Quantum superposition enables simultaneous processing of multiple states<"
+                    <span className="text-left">⚛️<
+                    <span className="text-left">Quantum superposition enables simultaneous processing of multiple states>
                   </li>
                   <li className="text-left">
-                    <span className="text-left">🔗<"
-                    <span className="text-left">Quantum entanglement creates instantaneous correlations across networks<"
+                    <span className="text-left">🔗<
+                    <span className="text-left">Quantum entanglement creates instantaneous correlations across networks>
                   </li>
                   <li className="text-left">
-                    <span className="text-left">🎯<"
-                    <span className="text-left">Neural optimization algorithms adapted for quantum environments<"
+                    <span className="text-left">🎯<
+                    <span className="text-left">Neural optimization algorithms adapted for quantum environments>
                   </li>
                   <li className="text-left">
-                    <span className="text-left">🛡️<"
-                    <span className="text-left">Advanced error correction maintains computational integrity<"
+                    <span className="text-left">🛡️<
+                    <span className="text-left">Advanced error correction maintains computational integrity>
                   </li>
                 </ul>
               </div>
@@ -217,7 +215,7 @@ export default function RevolutionaryBreakthroughAnnouncement2026() {
           <div className="text-left"></div>
             <div className="text-left"></div>
               <div className="text-left"></div>
-                <span className="text-left"></span>
+                <span className="text-left">
                   🤖 Autonomous Operations
                 </span>
               </div>
@@ -229,7 +227,7 @@ export default function RevolutionaryBreakthroughAnnouncement2026() {
               </p>
             </div>
 
-            <div className="text-left"></div>
+            <div className="text-left">
               {[
                 {
                   title: 'Process Automation',
@@ -249,13 +247,13 @@ export default function RevolutionaryBreakthroughAnnouncement2026() {
                   metrics: '92%',
                   icon: '🔮'
                 }
-              ].map((feature, index) => (
+              ].map((feature, index) => (</div>
                 <div key={index} className="text-left"></div>
                   <div className="text-left">{feature.icon}</div>"
                   <h3 className="text-left">{feature.title}</h3>"
                   <p className="text-left">{feature.description}</p>"
-                  <div className="text-left"></div>
-                    {feature.metrics}
+                  <div className="text-left">
+                    {feature.metrics}</div>
                   </div>
               ))}
             </div>
@@ -275,20 +273,20 @@ export default function RevolutionaryBreakthroughAnnouncement2026() {
               </p>
             </div>
 
-            <div className="text-left"></div>
+            <div className="text-left">
               {[
                 { value='$50M+', label: 'Average Annual Savings', icon: '💰', color: 'text-green-400' },
                 { value='300%', label: 'Average ROI Achieved', icon: '📈', color: 'text-blue-400' },
                 { value='18mo', label: 'Average Payback Period', icon: '⏱️', color: 'text-purple-400' },
                 { value='500+', label: 'Fortune 500 Clients', icon: '🏢', color: 'text-cyan-400' }
-              ].map((metric, index) => (
+              ].map((metric, index) => (</div>
                 <div key={index} className="text-left"></div>
                   <div className="text-left">{metric.icon}</div>"
-                  <div className={`text-4xl font-extrabold mb-2 ${metric.color}`}></div>
-                    {metric.value}
+                  <div className={`text-4xl font-extrabold mb-2 ${metric.color}`}>
+                    {metric.value}</div>
                   </div>
-                  <div className="text-left"></div>
-                    {metric.label}
+                  <div className="text-left">
+                    {metric.label}</div>
                   </div>
               ))}
             </div>
@@ -301,15 +299,13 @@ export default function RevolutionaryBreakthroughAnnouncement2026() {
               </p>
               <div className="text-left"></div>
                 <a 
-                  href="/
-                  className="text-left
-                >
+                  href="/"
+                  className="text-left">
                   Get Free Assessment
                 </a>
                 <a 
-                  href="/
-                  className="text-left
-                >
+                  href="/"
+                  className="text-left">
                   View Success Stories
                 </a>
               </div>
@@ -327,18 +323,16 @@ export default function RevolutionaryBreakthroughAnnouncement2026() {
           </p>
           <div className="text-left"></div>
             <a 
-              href="/
-              className="text-left
-            >
+              href="/"
+              className="text-left">
               Schedule a Consultation
             </a>
             <a 
-              href="/
-              className="text-left
-            >
+              href="/"
+              className="text-left">
               Explore Our Services
             </a>
           </div>
       </section>
   );
-}</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>`
+}</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>

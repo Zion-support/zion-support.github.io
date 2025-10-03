@@ -10,14 +10,14 @@ export const metadata = {
 
 export default function AIAutonomousRobotics2026() {
   return (
-    <div className="text-left"></div>
-      {/* Header */}
+    <div className="text-left">
+      {/* Header */}</div>
       <div className="text-left"></div>
         <div className="text-left"></div>
-          <span className="text-left"></span>
+          <span className="text-left">
             NEW 2026
           </span>
-          <span className="text-left"></span>
+          <span className="text-left">
             BREAKTHROUGH
           </span>
         </div>
@@ -92,30 +92,6 @@ export default function AIAutonomousRobotics2026() {
 
       {/* Main Content */}
 
-      <div className="text-left"></div>
-        <h2 className="text-left">The Autonomous Robotics Revolution</h2>"
-        <p className="text-left">
-          AI autonomous robotics represents the convergence of artificial intelligence, machine learning, and advanced robotics technologies. These systems can perceive their environment, make intelligent decisions, and execute complex tasks with minimal human intervention, opening up unprecedented possibilities for automation and efficiency.
-        </p>
-
-        <h3 className="text-left">Core Technologies</h3>"
-        <div className="text-left"></div>
-          <h4 className="text-left">1. Advanced Perception Systems</h4>"
-          <p className="text-left">
-
-      <div className="text-left"></div>
-        <h2 className="text-left">The Autonomous Robotics Revolution</h2>
-        
-        <p className="text-left">
-          AI autonomous robotics represents the convergence of artificial intelligence, machine learning, and advanced robotics technologies. These systems can perceive their environment, make intelligent decisions, and execute complex tasks with minimal human intervention, opening up unprecedented possibilities for automation and efficiency.
-        </p>
-
-        <h3 className="text-left">Core Technologies</h3>
-        
-        <div className="text-left"></div>
-          <h4 className="text-left">1. Advanced Perception Systems</h4>
-          <p className="text-left">
-
             Multi-sensor fusion combining cameras, LiDAR, radar, and tactile sensors to create comprehensive environmental awareness and object recognition capabilities.
           </p>
           <ul className="text-left">
@@ -152,21 +128,6 @@ export default function AIAutonomousRobotics2026() {
           </ul>
         </div>
 
-
-        <h3 className="text-left">Industry Applications</h3>"
-        <div className="text-left"></div>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
-                <Bot className="text-left" />
-
-        <h3 className="text-left">Industry Applications</h3>
-
-        <div className="text-left"></div>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
-                <Bot className="text-left" />
 
               </div>
               <h4 className="text-left">Manufacturing & Assembly</h4>
@@ -226,23 +187,6 @@ export default function AIAutonomousRobotics2026() {
         </div>
 
 
-        <h3 className="text-left">Implementation Framework</h3>"
-        <div className="text-left"></div>
-          <h4 className="text-left">Phase 1: Assessment & Planning (Months 1-3)</h4>"
-          <div className="text-left"></div>
-            <div className="text-left"></div>
-              <h5 className="text-left">Process Analysis</h5>"
-              <p className="text-left">Identify automation opportunities and requirements</p>"
-
-        <h3 className="text-left">Implementation Framework</h3>
-
-        <div className="text-left"></div>
-          <h4 className="text-left">Phase 1: Assessment & Planning (Months 1-3)</h4>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
-              <h5 className="text-left">Process Analysis</h5>
-              <p className="text-left">Identify automation opportunities and requirements</p>
-
             </div>
             <div className="text-left"></div>
               <h5 className="text-left">Technology Selection</h5>
@@ -292,17 +236,6 @@ export default function AIAutonomousRobotics2026() {
         </div>
 
 
-        <h3 className="text-left">Success Stories</h3>"
-        <div className="text-left"></div>
-          <h4 className="text-left">Global Automotive Manufacturer</h4>"
-          <p className="text-left">
-
-        <h3 className="text-left">Success Stories</h3>
-
-        <div className="text-left"></div>
-          <h4 className="text-left">Global Automotive Manufacturer</h4>
-          <p className="text-left">
-
             Deployed autonomous robotic assembly lines that increased production efficiency by 85% while reducing defects by 90% and achieving 99.9% uptime.
           </p>
           <div className="text-left"></div>
@@ -322,13 +255,6 @@ export default function AIAutonomousRobotics2026() {
         </div>
 
 
-        <h3 className="text-left">Future Trends</h3>"
-        <p className="text-left">
-
-        <h3 className="text-left">Future Trends</h3>
-
-        <p className="text-left">
-
           The future of AI autonomous robotics is incredibly promising, with several key trends shaping the industry:
         </p>
 
@@ -342,13 +268,6 @@ export default function AIAutonomousRobotics2026() {
         </ul>
 
 
-        <h3 className="text-left">Getting Started</h3>"
-        <p className="text-left">
-
-        <h3 className="text-left">Getting Started</h3>
-
-        <p className="text-left">
-
           Ready to transform your operations with AI autonomous robotics? Our team of experts can help you identify opportunities, develop implementation strategies, and deploy cutting-edge robotic solutions tailored to your specific needs.
         </p>
 
@@ -359,15 +278,13 @@ export default function AIAutonomousRobotics2026() {
           </p>
           <div className="text-left"></div>
             <Link
-              href="/contact
-              className="text-left
-            >
+              href="/contact"
+              className="text-left">
               Schedule Consultation
             </Link>
             <Link
-              href="/services/ai-autonomous-robotics
-              className="text-left
-            >
+              href="/services/ai-autonomous-robotics"
+              className="text-left">
               Learn More
             </Link>
           </div>

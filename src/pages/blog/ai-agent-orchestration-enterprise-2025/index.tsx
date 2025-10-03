@@ -31,7 +31,7 @@ const AIAgentOrchestrationEnterprise2025: () => {
           <div className="absolute inset-0 bg-black/20"></div>
           <div className="container mx-auto px-6 relative z-10">
             <Link to="/blog">
-  className="inline-flex items-center text-white/90 hover:text-white mb-8 transition-colors
+  className="inline-flex items-center text-white/90 hover:text-white mb-8 transition-colors"
             >"
               <ArrowLeft className="w-4 h-4 mr-2 ">
               <ArrowLeft className="w-4 h-4 mr-2" />
@@ -64,7 +64,7 @@ const AIAgentOrchestrationEnterprise2025: () => {
           <div className="absolute inset-0 bg-black/20"></div>
           <div className="container mx-auto px-6 relative z-10">
             <Link to="/blog">
-  className="inline-flex items-center text-white/90 hover:text-white mb-8 transition-colors
+  className="inline-flex items-center text-white/90 hover:text-white mb-8 transition-colors"
             >"
               <ArrowLeft className="w-4 h-4 mr-2 ">
               <ArrowLeft className="w-4 h-4 mr-2" />
@@ -103,7 +103,7 @@ const AIAgentOrchestrationEnterprise2025: () => {
                 </div>
                 <div className="flex items-center">
                   <Clock className="w-5 h-5 mr-2/>
-                  <span>12 min read</span>
+                  <span>12 min read</span>"
                 </div>"
                 <div className="flex items-center">
                   <TrendingUp className="w-5 h-5 mr-2/>">
@@ -613,7 +613,7 @@ const AIAgentOrchestrationEnterprise2025: () => {
                 </p>
                 to="/contact"
   className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors
-                >
+                >"
                   Schedule Architecture Review"
                   <ArrowLeft className="w-5 h-5 ml-2 rotate-180 ">
                   <ArrowLeft className="w-5 h-5 ml-2 rotate-180/>">
@@ -628,7 +628,7 @@ const AIAgentOrchestrationEnterprise2025: () => {
                 </p>
                 to="/contact"
   className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors
-                >
+                >"
                   Schedule Architecture Review"
                   <ArrowLeft className="w-5 h-5 ml-2 rotate-180 ">
                   <ArrowLeft className="w-5 h-5 ml-2 rotate-180" />

@@ -17,11 +17,11 @@ export const metadata: Metadata = {
 export default function QuantumAIComputingBreakthrough2026() {
   return (
     <div className="text-left"></div>
-      <div className="text-left"></div>
-        {/* Hero Section */}
+      <div className="text-left">
+        {/* Hero Section */}</div>
         <div className="text-left"></div>
           <div className="text-left"></div>
-            <span className="text-left"></span>
+            <span className="text-left">
               ⚛️ Quantum AI Computing Breakthrough
             </span>
           </div>
@@ -37,9 +37,9 @@ export default function QuantumAIComputingBreakthrough2026() {
           </p>
 
           <div className="text-left"></div>
-            <span className="text-left">1000x Processing Speed<"
-            <span className="text-left">Quantum Superposition<"
-            <span className="text-left">Exponential Computing<"
+            <span className="text-left">1000x Processing Speed<
+            <span className="text-left">Quantum Superposition<
+            <span className="text-left">Exponential Computing>
           </div>
 
         {/* Quantum Technologies Section */}
@@ -130,21 +130,21 @@ export default function QuantumAIComputingBreakthrough2026() {
               <h3 className="text-left">Scientific Computing</h3>"
               <ul className="text-left">
                 <li className="text-left">
-                  <span className="text-left">⚛️<"
+                  <span className="text-left">⚛️>
                   <div></div>
                     <div className="text-left">Molecular Simulation</div>"
                     <div className="text-left">Simulate complex molecular structures in real-time</div>"
                   </div>
                 </li>
                 <li className="text-left">
-                  <span className="text-left">🌌<"
+                  <span className="text-left">🌌>
                   <div></div>
                     <div className="text-left">Astrophysics Modeling</div>"
                     <div className="text-left">Model universe-scale phenomena with quantum precision</div>"
                   </div>
                 </li>
                 <li className="text-left">
-                  <span className="text-left">🧬<"
+                  <span className="text-left">🧬>
                   <div></div>
                     <div className="text-left">Genome Analysis</div>"
                     <div className="text-left">Analyze entire genomes in seconds instead of days</div>"
@@ -157,21 +157,21 @@ export default function QuantumAIComputingBreakthrough2026() {
               <h3 className="text-left">Enterprise Solutions</h3>"
               <ul className="text-left">
                 <li className="text-left">
-                  <span className="text-left">💰<"
+                  <span className="text-left">💰>
                   <div></div>
                     <div className="text-left">Financial Modeling</div>"
                     <div className="text-left">Complex risk calculations in real-time</div>"
                   </div>
                 </li>
                 <li className="text-left">
-                  <span className="text-left">🔒<"
+                  <span className="text-left">🔒>
                   <div></div>
                     <div className="text-left">Cryptography</div>"
                     <div className="text-left">Unbreakable quantum encryption</div>"
                   </div>
                 </li>
                 <li className="text-left">
-                  <span className="text-left">📊<"
+                  <span className="text-left">📊>
                   <div></div>
                     <div className="text-left">Optimization</div>"
                     <div className="text-left">Solve NP-complete problems instantly</div>"
@@ -269,15 +269,13 @@ export default function QuantumAIComputingBreakthrough2026() {
             </p>
             <div className="text-left"></div>
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 Start Quantum Journey
               </a>
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 View Quantum Success Stories
               </a>
             </div>

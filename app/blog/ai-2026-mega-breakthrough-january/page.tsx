@@ -16,13 +16,13 @@ export const metadata: Metadata = {
 
 export default function AI2026MegaBreakthroughPage() {
   return (
-    <div className="text-left"></div>
-      {/* Hero Section */}
+    <div className="text-left">
+      {/* Hero Section */}</div>
       <section className="text-left">
         <div className="text-left"></div>
           <div className="text-left"></div>
             <div className="text-left"></div>
-              <span className="text-left"></span>
+              <span className="text-left">
                 🚀 January 2026 Breakthrough
               </span>
             </div>
@@ -37,9 +37,9 @@ export default function AI2026MegaBreakthroughPage() {
             </p>
 
             <div className="text-left"></div>
-              <span className="text-left">95% Decision Accuracy<"
-              <span className="text-left">1000x Processing Speed<"
-              <span className="text-left">98% Automation Rate<"
+              <span className="text-left">95% Decision Accuracy<
+              <span className="text-left">1000x Processing Speed<
+              <span className="text-left">98% Automation Rate>
             </div>
         </div>
       </section>
@@ -83,19 +83,19 @@ export default function AI2026MegaBreakthroughPage() {
                 <h3 className="text-left">Proven Results</h3>"
                 <ul className="text-left">
                   <li className="text-left">
-                    <span className="text-left">✓<"
+                    <span className="text-left">✓>
                     <span><strong>$50M+</strong> average annual savings across Fortune 500 implementations<
                   </li>
                   <li className="text-left">
-                    <span className="text-left">✓<"
+                    <span className="text-left">✓>
                     <span><strong>300%</strong> average ROI within 18 months<
                   </li>
                   <li className="text-left">
-                    <span className="text-left">✓<"
+                    <span className="text-left">✓>
                     <span><strong>95%</strong> reduction in manual operational tasks<
                   </li>
                   <li className="text-left">
-                    <span className="text-left">✓<"
+                    <span className="text-left">✓>
                     <span><strong>18 months</strong> average payback period<
                   </li>
                 </ul>
@@ -134,15 +134,13 @@ export default function AI2026MegaBreakthroughPage() {
                 </p>
                 <div className="text-left"></div>
                   <a 
-                    href="/
-                    className="text-left
-                  >
+                    href="/"
+                    className="text-left">
                     Get Free Assessment
                   </a>
                   <a 
-                    href="/
-                    className="text-left
-                  >
+                    href="/"
+                    className="text-left">
                     View Success Stories
                   </a>
                 </div>

@@ -17,8 +17,8 @@ export const metadata: Metadata = {
 export default function AI2026BreakthroughInnovations() {
   return (
     <div className="text-left"></div>
-      <div className="text-left"></div>
-        {/* Hero Section */}
+      <div className="text-left">
+        {/* Hero Section */}</div>
         <div className="text-left"></div>
           <h1 className="text-left">
             AI 2026: Breakthrough Innovations
@@ -244,15 +244,13 @@ export default function AI2026BreakthroughInnovations() {
             </p>
             <div className="text-left"></div>
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 Schedule Consultation
               </a>
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 Explore Services
               </a>
             </div>

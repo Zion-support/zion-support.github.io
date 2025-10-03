@@ -26,18 +26,18 @@ export default function AI2027AutonomousEnterprise() {
       <article className="text-left">
         <header className="text-left">
           <div className="text-left"></div>
-            <span className="text-left"></span>
+            <span className="text-left">
               AUTONOMOUS 2027
             </span>
-            <span className="text-left"></span>
+            <span className="text-left">
               ENTERPRISE AI
             </span>
           </div>
           <h1 className="text-left">
             AI 2027: The Dawn of Fully Autonomous Enterprise Operations
           </h1>
-          <div className="text-left"></div>
-            Published on February 20, 2027 • 15 min read
+          <div className="text-left">
+            Published on February 20, 2027 • 15 min read</div>
           </div>
           <div className="text-left"></div>
             <p className="text-left">
@@ -257,15 +257,13 @@ export default function AI2027AutonomousEnterprise() {
             </p>
             <div className="text-left"></div>
               <Link
-                href="/contact
-                className="text-left
-              >
+                href="/contact"
+                className="text-left">
                 Start Autonomous Journey
               </Link>
               <Link
-                href="/services/ai-autonomous-operations
-                className="text-left
-              >
+                href="/services/ai-autonomous-operations"
+                className="text-left">
                 Explore Services
               </Link>
             </div>

@@ -13,10 +13,10 @@ export default function BlogPost() {
     <div className="text-left"></div>
       <div className="text-left"></div>
         <div className="text-left"></div>
-          <span className="text-left"></span>
+          <span className="text-left">
             NEURAL REVOLUTION
           </span>
-          <span className="text-left"></span>
+          <span className="text-left">
             1000x PERFORMANCE
           </span>
         </div>
@@ -163,15 +163,13 @@ export default function BlogPost() {
           </p>
           <div className="text-left"></div>
             <Link 
-              href="/
-              className="text-left
-            >
+              href="/"
+              className="text-left">
               Schedule Consultation
             </Link>
             <Link 
-              href="/
-              className="text-left
-            >
+              href="/"
+              className="text-left">
               View Success Stories
             </Link>
           </div>

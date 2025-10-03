@@ -12,9 +12,9 @@ export default function AI2026BreakthroughInnovationsPage() {
     <div className="text-left"></div>
       <div className="text-left"></div>
         <div className="text-left"></div>
-          <span className="text-left">BREAKTHROUGH<"
-          <span className="text-left">JANUARY 2026<"
-          <span className="text-left">$10B+ ROI<"
+          <span className="text-left">BREAKTHROUGH<
+          <span className="text-left">JANUARY 2026<
+          <span className="text-left">$10B+ ROI>
         </div>
         
         <h1 className="text-left">
@@ -255,15 +255,13 @@ export default function AI2026BreakthroughInnovationsPage() {
           </p>
           <div className="text-left"></div>
             <Link 
-              href="/
-              className="text-left
-            >
+              href="/"
+              className="text-left">
               Schedule Consultation
             </Link>
             <Link 
-              href="/
-              className="text-left
-            >
+              href="/"
+              className="text-left">
               View Success Stories
             </Link>
           </div>

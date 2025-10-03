@@ -17,11 +17,11 @@ export const metadata: Metadata = {
 export default function AITrends2026FutureEnterpriseTransformation() {
   return (
     <div className="text-left"></div>
-      <div className="text-left"></div>
-        {/* Header */}
+      <div className="text-left">
+        {/* Header */}</div>
         <div className="text-left"></div>
           <div className="text-left"></div>
-            <span className="text-left"></span>
+            <span className="text-left">
               🔮 AI Trends 2026
             </span>
           </div>
@@ -35,10 +35,10 @@ export default function AITrends2026FutureEnterpriseTransformation() {
           </p>
           
           <div className="text-left"></div>
-            <span className="text-left">2026 Trends<"
-            <span className="text-left">Enterprise AI<"
-            <span className="text-left">Quantum Computing<"
-            <span className="text-left">Future Tech<"
+            <span className="text-left">2026 Trends<
+            <span className="text-left">Enterprise AI<
+            <span className="text-left">Quantum Computing<
+            <span className="text-left">Future Tech>
           </div>
 
         {/* Executive Summary */}
@@ -66,8 +66,8 @@ export default function AITrends2026FutureEnterpriseTransformation() {
         {/* Top Trends */}
         <div className="text-left"></div>
           <h2 className="text-left">Top AI Trends Shaping 2026</h2>"
-          <div className="text-left"></div>
-            {/* Trend 1 */}
+          <div className="text-left">
+            {/* Trend 1 */}</div>
             <div className="text-left"></div>
               <div className="text-left"></div>
                 <div className="text-left">🧠</div>"
@@ -349,15 +349,13 @@ export default function AITrends2026FutureEnterpriseTransformation() {
           </p>
           <div className="text-left"></div>
             <a 
-              href="/
-              className="text-left
-            >
+              href="/"
+              className="text-left">
               Start Your AI Transformation
             </a>
             <a 
-              href="/
-              className="text-left
-            >
+              href="/"
+              className="text-left">
               Learn About Our Breakthrough
             </a>
           </div>

@@ -10,8 +10,8 @@ export const metadata: Metadata = {
 
 export default function AI2025DecemberQuantumComputingBreakthrough() {
   return (
-    <div className="text-left"></div>
-      {/* Hero Section */}
+    <div className="text-left">
+      {/* Hero Section */}</div>
       <section className="text-left">
         <div className="text-left"></div>
           <div className="text-left"></div>"
@@ -21,7 +21,7 @@ export default function AI2025DecemberQuantumComputingBreakthrough() {
         <div className="text-left"></div>
           <div className="text-left"></div>
             <div className="text-left"></div>
-              <span className="text-left"></span>
+              <span className="text-left">
                 ⚛️ December 2025 Breakthrough
               </span>
             </div>
@@ -37,14 +37,12 @@ export default function AI2025DecemberQuantumComputingBreakthrough() {
             <div className="text-left"></div>
               <a 
                 href="#quantum-details" "
-                className="text-left
-              >
+                className="text-left">
                 Explore Breakthrough
               </a>
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 View $1B Success Story →
               </a>
             </div>
@@ -147,15 +145,13 @@ export default function AI2025DecemberQuantumComputingBreakthrough() {
             </p>
             <div className="text-left"></div>
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 Get Quantum Access
               </a>
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 Explore Services →
               </a>
             </div>

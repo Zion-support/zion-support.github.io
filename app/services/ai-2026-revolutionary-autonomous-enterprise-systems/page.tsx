@@ -18,13 +18,13 @@ export default function AI2026RevolutionaryAutonomousEnterpriseSystemsService() 
     <div className="text-left"></div>
       <div className="text-left"></div>
         <div className="text-left"></div>
-          <span className="text-left"></span>
+          <span className="text-left">
             🚀 REVOLUTIONARY BREAKTHROUGH
           </span>
-          <span className="text-left"></span>
+          <span className="text-left">
             $2.8B ROI
           </span>
-          <span className="text-left"></span>
+          <span className="text-left">
             99.7% AUTOMATION
           </span>
         </div>
@@ -223,21 +223,18 @@ export default function AI2026RevolutionaryAutonomousEnterpriseSystemsService() 
         </p>
         <div className="text-left"></div>
           <Link 
-            href="/
-            className="text-left
-          >
+            href="/"
+            className="text-left">
             🚀 Start Your Transformation
           </Link>
           <Link 
-            href="/
-            className="text-left
-          >
+            href="/"
+            className="text-left">
             💰 View Success Stories
           </Link>
           <Link 
-            href="/
-            className="text-left
-          >
+            href="/"
+            className="text-left">
             📖 Read Full Article
           </Link>
         </div>

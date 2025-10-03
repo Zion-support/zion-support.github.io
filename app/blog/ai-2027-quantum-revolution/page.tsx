@@ -24,8 +24,8 @@ export const metadata: Metadata = {
 
 export default function AI2027QuantumRevolution() {
   return (
-    <div className="text-left"></div>
-      {/* Hero Section */}
+    <div className="text-left">
+      {/* Hero Section */}</div>
       <section className="text-left">
         <div className="text-left"></div>
           <div className="text-left"></div>"
@@ -35,7 +35,7 @@ export default function AI2027QuantumRevolution() {
         <div className="text-left"></div>
           <div className="text-left"></div>
             <div className="text-left"></div>
-              <span className="text-left"></span>
+              <span className="text-left">
                 ⚛️ Revolutionary Quantum AI Breakthrough
               </span>
             </div>
@@ -54,19 +54,19 @@ export default function AI2027QuantumRevolution() {
             </p>
 
             {/* Key Metrics */}
-            <div className="text-left"></div>
+            <div className="text-left">
               {[
                 { value='1000x', label: 'Performance Improvement', icon: '⚡' },
                 { value='99.99%', label: 'Computational Accuracy', icon: '🎯' },
                 { value='$500M+', label: 'Average ROI Achieved', icon: '💰' }
-              ].map((metric, index) => (
+              ].map((metric, index) => (</div>
                 <div key={index} className="text-left"></div>
                   <div className="text-left">{metric.icon}</div>"
-                  <div className="text-left"></div>
-                    {metric.value}
+                  <div className="text-left">
+                    {metric.value}</div>
                   </div>
-                  <div className="text-left"></div>
-                    {metric.label}
+                  <div className="text-left">
+                    {metric.label}</div>
                   </div>
                 </div>
               ))}
@@ -78,8 +78,8 @@ export default function AI2027QuantumRevolution() {
       {/* Content Sections */}
       <section className="text-left">
         <div className="text-left"></div>
-          <div className="text-left"></div>
-            {/* Introduction */}
+          <div className="text-left">
+            {/* Introduction */}</div>
             <div className="text-left"></div>
               <h2 className="text-left">
                 The Quantum AI Revolution Begins
@@ -322,15 +322,13 @@ export default function AI2027QuantumRevolution() {
               </p>
               <div className="text-left"></div>
                 <Link 
-                  href="/
-                  className="text-left
-                >
+                  href="/"
+                  className="text-left">
                   Start Quantum AI Transformation
                 </Link>
                 <Link 
-                  href="/
-                  className="text-left
-                >
+                  href="/"
+                  className="text-left">
                   View Success Stories
                 </Link>
               </div>
@@ -357,7 +355,7 @@ export default function AI2027QuantumRevolution() {
                   <p className="text-left">
                     Self-managing business ecosystems with 98% automation rates and intelligent decision-making capabilities.
                   </p>
-                  <span className="text-left"></span>
+                  <span className="text-left">
                     Explore Now →
                   </span>
                 </div>
@@ -372,7 +370,7 @@ export default function AI2027QuantumRevolution() {
                   <p className="text-left">
                     Brain-inspired computing architectures achieving 90% energy reduction and real-time adaptive learning.
                   </p>
-                  <span className="text-left"></span>
+                  <span className="text-left">
                     Learn More →
                   </span>
                 </div>

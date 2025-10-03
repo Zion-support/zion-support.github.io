@@ -22,7 +22,7 @@ export default function EnterpriseAIAutomationGuide() {
           {/* Hero Section */}
           <header className="text-left">
             <div className="text-left"></div>
-              <span className="text-left"></span>
+              <span className="text-left">
                 📚 Complete Mega Guide
               </span>
             </div>
@@ -37,10 +37,10 @@ export default function EnterpriseAIAutomationGuide() {
             </p>
             
             <div className="text-left"></div>
-              <span className="text-left">98% Automation Rate<"
-              <span className="text-left">Meta-Cognitive AI<"
-              <span className="text-left">Autonomous Operations<"
-              <span className="text-left">Complete Guide<"
+              <span className="text-left">98% Automation Rate<
+              <span className="text-left">Meta-Cognitive AI<
+              <span className="text-left">Autonomous Operations<
+              <span className="text-left">Complete Guide>
             </div>
           </header>
 
@@ -262,15 +262,13 @@ export default function EnterpriseAIAutomationGuide() {
               
               <div className="text-left"></div>
                 <a 
-                  href="/
-                  className="text-left
-                >
+                  href="/"
+                  className="text-left">
                   Start Your Automation Journey
                 </a>
                 <a 
-                  href="/
-                  className="text-left
-                >
+                  href="/"
+                  className="text-left">
                   View Success Stories
                 </a>
               </div>

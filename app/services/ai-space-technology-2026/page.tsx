@@ -21,10 +21,10 @@ export default function AISpaceTechnologyService() {
           ← Back to Services
         </Link>
         <div className="text-left"></div>
-          <span className="text-left"></span>
+          <span className="text-left">
             🚀 SPACE BREAKTHROUGH
           </span>
-          <span className="text-left">Available Now<"
+          <span className="text-left">Available Now>
         </div>
         <h1 className="text-left">
           AI Space Technology 2026 Service
@@ -212,21 +212,18 @@ export default function AISpaceTechnologyService() {
 
             <div className="text-left"></div>
               <a
-                href="tel:+13024640950
-                className="text-left
-              >
+                href="tel:+13024640950"
+                className="text-left">
                 📞 Call +1 302 464 0950
               </a>
               <a
-                href="mailto:kleber@ziontechgroup.com
-                className="text-left
-              >
+                href="mailto:kleber@ziontechgroup.com"
+                className="text-left">
                 🚀 Schedule Demo
               </a>
               <Link
-                href="/case-studies/ai-space-technology-success-2026
-                className="text-left
-              >
+                href="/case-studies/ai-space-technology-success-2026"
+                className="text-left">
                 View Success Stories →
               </Link>
             </div>
@@ -243,15 +240,13 @@ export default function AISpaceTechnologyService() {
           </p>
           <div className="text-left"></div>
             <a
-              href="tel:+13024640950
-              className="text-left
-            >
+              href="tel:+13024640950"
+              className="text-left">
               📞 Call +1 302 464 0950
             </a>
             <a
-              href="mailto:kleber@ziontechgroup.com
-              className="text-left
-            >
+              href="mailto:kleber@ziontechgroup.com"
+              className="text-left">
               🚀 Schedule Space AI Demo
             </a>
           </div>
@@ -288,7 +283,7 @@ export default function AISpaceTechnologyService() {
       <div className="text-left"></div>
         <div className="text-left"></div>
           <div className="text-left"></div>
-            <span className="text-left">ZT<"
+            <span className="text-left">ZT>
           </div>
           <div></div>
             <h4 className="text-left">Zion Tech Group</h4>"
@@ -302,15 +297,13 @@ export default function AISpaceTechnologyService() {
         </p>
         <div className="text-left"></div>
           <Link
-            href="/services
-            className="text-left
-          >
+            href="/services"
+            className="text-left">
             View All Services →
           </Link>
           <Link
-            href="/case-studies
-            className="text-left
-          >
+            href="/case-studies"
+            className="text-left">
             View Success Stories →
           </Link>
         </div>

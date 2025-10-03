@@ -9,8 +9,8 @@ export const metadata: Metadata = {
 
 export default function September2026BreakthroughRevolution() {
   return (
-    <div className="text-left"></div>
-      {/* Hero Section */}
+    <div className="text-left">
+      {/* Hero Section */}</div>
       <section className="text-left">
         <div className="text-left"></div>
           <div className="text-left"></div>"
@@ -20,7 +20,7 @@ export default function September2026BreakthroughRevolution() {
         <div className="text-left"></div>
           <div className="text-left"></div>
             <div className="text-left"></div>
-              <span className="text-left"></span>
+              <span className="text-left">
                 🚀 September 2026 Breakthrough Revolution
               </span>
             </div>
@@ -35,15 +35,13 @@ export default function September2026BreakthroughRevolution() {
             
             <div className="text-left"></div>
               <a 
-                href="/case-studies/ai-2026-september-breakthrough-12-billion-success
-                className="text-left
-              >
+                href="/case-studies/ai-2026-september-breakthrough-12-billion-success"
+                className="text-left">
                 View $12B Success Story
               </a>
               <a 
-                href="/services/ai-2026-september-autonomous-intelligence-consulting
-                className="text-left
-              >
+                href="/services/ai-2026-september-autonomous-intelligence-consulting"
+                className="text-left">
                 Get Intelligence Consultation
               </a>
             </div>
@@ -76,9 +74,8 @@ export default function September2026BreakthroughRevolution() {
                 <li>• Continuous improvement</li>
               </ul>
               <a 
-                href="/services/ai-2026-september-autonomous-intelligence-consulting
-                className="text-left
-              >
+                href="/services/ai-2026-september-autonomous-intelligence-consulting"
+                className="text-left">
                 Learn More →
               </a>
             </div>
@@ -96,9 +93,8 @@ export default function September2026BreakthroughRevolution() {
                 <li>• Enhanced problem-solving</li>
               </ul>
               <a 
-                href="/case-studies/ai-2026-september-breakthrough-12-billion-success
-                className="text-left
-              >
+                href="/case-studies/ai-2026-september-breakthrough-12-billion-success"
+                className="text-left">
                 View Case Study →
               </a>
             </div>
@@ -116,9 +112,8 @@ export default function September2026BreakthroughRevolution() {
                 <li>• 4,500% ROI</li>
               </ul>
               <a 
-                href="/case-studies/ai-2026-september-breakthrough-12-billion-success
-                className="text-left
-              >
+                href="/case-studies/ai-2026-september-breakthrough-12-billion-success"
+                className="text-left">
                 Read Success Story →
               </a>
             </div>
@@ -180,7 +175,7 @@ export default function September2026BreakthroughRevolution() {
         <div className="text-left"></div>
           <div className="text-left"></div>
             <div className="text-left"></div>
-              <span className="text-left"></span>
+              <span className="text-left">
                 💰 Ready to Transform Your Enterprise?
               </span>
             </div>
@@ -209,15 +204,13 @@ export default function September2026BreakthroughRevolution() {
             
             <div className="text-left"></div>
               <a 
-                href="/contact
-                className="text-left
-              >
+                href="/contact"
+                className="text-left">
                 Get Started Today
               </a>
               <a 
-                href="/case-studies/ai-2026-september-breakthrough-12-billion-success
-                className="text-left
-              >
+                href="/case-studies/ai-2026-september-breakthrough-12-billion-success"
+                className="text-left">
                 View $12B Success Story
               </a>
             </div>

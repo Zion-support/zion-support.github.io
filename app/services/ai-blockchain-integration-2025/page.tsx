@@ -16,8 +16,8 @@ export const metadata: Metadata = {
 export default function AIBlockchainIntegration2025Page() {
   return (
     <div className="text-left"></div>
-      <div className="text-left"></div>
-        {/* Header */}
+      <div className="text-left">
+        {/* Header */}</div>
         <div className="text-left"></div>
           <div className="text-left"></div>
             <Link href="/services" className="text-left">
@@ -70,27 +70,27 @@ export default function AIBlockchainIntegration2025Page() {
                 <h3 className="text-left">Blockchain Features</h3>"
                 <ul className="text-left">
                   <li className="text-left">
-                    <span className="text-left">✓<"
+                    <span className="text-left">✓>
                     <span>AI-powered smart contract generation</span>
                   </li>
                   <li className="text-left">
-                    <span className="text-left">✓<"
+                    <span className="text-left">✓>
                     <span>Intelligent DeFi protocol optimization</span>
                   </li>
                   <li className="text-left">
-                    <span className="text-left">✓<"
+                    <span className="text-left">✓>
                     <span>Automated security auditing</span>
                   </li>
                   <li className="text-left">
-                    <span className="text-left">✓<"
+                    <span className="text-left">✓>
                     <span>Cross-chain interoperability</span>
                   </li>
                   <li className="text-left">
-                    <span className="text-left">✓<"
+                    <span className="text-left">✓>
                     <span>Real-time fraud detection</span>
                   </li>
                   <li className="text-left">
-                    <span className="text-left">✓<"
+                    <span className="text-left">✓>
                     <span>Predictive gas fee optimization</span>
                   </li>
                 </ul>
@@ -100,27 +100,27 @@ export default function AIBlockchainIntegration2025Page() {
                 <h3 className="text-left">Business Impact</h3>"
                 <ul className="text-left">
                   <li className="text-left">
-                    <span className="text-left">→<"
+                    <span className="text-left">→>
                     <span>10,000+ transactions per second</span>
                   </li>
                   <li className="text-left">
-                    <span className="text-left">→<"
+                    <span className="text-left">→>
                     <span>99.9% transaction success rate</span>
                   </li>
                   <li className="text-left">
-                    <span className="text-left">→<"
+                    <span className="text-left">→>
                     <span>85% reduction in transaction costs</span>
                   </li>
                   <li className="text-left">
-                    <span className="text-left">→<"
+                    <span className="text-left">→>
                     <span>&lt;1 second transaction finality</span>
                   </li>
                   <li className="text-left">
-                    <span className="text-left">→<"
+                    <span className="text-left">→>
                     <span>Zero smart contract vulnerabilities</span>
                   </li>
                   <li className="text-left">
-                    <span className="text-left">→<"
+                    <span className="text-left">→>
                     <span>Seamless enterprise integration</span>
                   </li>
                 </ul>
@@ -220,14 +220,14 @@ export default function AIBlockchainIntegration2025Page() {
                 <div></div>
                   <h3 className="text-left">Global Supply Chain Revolutionized</h3>"
                   <p className="text-left">
-                    "Zion's AI Blockchain Integration transformed our global supply chain completely. 
+                    "Zion's AI Blockchain Integration transformed our global supply chain completely. "
                     We now track $5B in goods with complete transparency and real-time optimization. 
                     Fraud dropped by 95%, efficiency increased 300%, and customers love the transparency. 
                     The AI-powered smart contracts handle everything automatically. Game-changing technology."
                   </p>
                   <div className="text-left"></div>
                     <div className="text-left"></div>
-                      <span className="text-left">RL<"
+                      <span className="text-left">RL>
                     </div>
                     <div></div>
                       <div className="text-left">Robert Lee</div>"
@@ -236,20 +236,20 @@ export default function AIBlockchainIntegration2025Page() {
                 </div>
                 <div className="text-left"></div>
                   <div className="text-left"></div>
-                    <span className="text-left">Assets Tracked<"
-                    <span className="text-left">$5B<"
+                    <span className="text-left">Assets Tracked<
+                    <span className="text-left">$5B>
                   </div>
                   <div className="text-left"></div>
-                    <span className="text-left">Fraud Reduction<"
-                    <span className="text-left">95%<"
+                    <span className="text-left">Fraud Reduction<
+                    <span className="text-left">95%>
                   </div>
                   <div className="text-left"></div>
-                    <span className="text-left">Efficiency Gain<"
-                    <span className="text-left">300%<"
+                    <span className="text-left">Efficiency Gain<
+                    <span className="text-left">300%>
                   </div>
                   <div className="text-left"></div>
-                    <span className="text-left">Transaction Speed<"
-                    <span className="text-left">10,000 TPS<"
+                    <span className="text-left">Transaction Speed<
+                    <span className="text-left">10,000 TPS>
                   </div>
               </div>
           </section>
@@ -266,15 +266,13 @@ export default function AIBlockchainIntegration2025Page() {
               </p>
               <div className="text-left"></div>
                 <a
-                  href="tel:+13024640950
-                  className="text-left
-                >
+                  href="tel:+13024640950"
+                  className="text-left">
                   Call +1 302 464 0950
                 </a>
                 <a
-                  href="mailto:kleber@ziontechgroup.com
-                  className="text-left
-                >
+                  href="mailto:kleber@ziontechgroup.com"
+                  className="text-left">
                   Email Us
                 </a>
               </div>

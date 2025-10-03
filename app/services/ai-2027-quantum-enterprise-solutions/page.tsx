@@ -26,7 +26,7 @@ export default function AI2027QuantumEnterpriseSolutions() {
             The Next Generation of Enterprise AI - 1000x Performance Improvements
           </p>
           <div className="text-left"></div>
-            <span className="text-left">BREAKTHROUGH<"
+            <span className="text-left">BREAKTHROUGH>
             <span>🚀 1000x Faster Processing</span>
             <span>💰 500% ROI Guaranteed</span>
             <span>⚡ Quantum-Powered AI</span>
@@ -221,15 +221,13 @@ export default function AI2027QuantumEnterpriseSolutions() {
               </p>
               <div className="text-left"></div>
                 <Link 
-                  href="/
-                  className="text-left
-                >
+                  href="/"
+                  className="text-left">
                   Request Consultation
                 </Link>
                 <Link 
-                  href="/
-                  className="text-left
-                >
+                  href="/"
+                  className="text-left">
                   View Success Story
                 </Link>
               </div>
@@ -258,23 +256,23 @@ export default function AI2027QuantumEnterpriseSolutions() {
               <h3 className="text-left">🎯 Why Choose Zion Tech Group?</h3>"
               <ul className="text-left">
                 <li className="text-left">
-                  <span className="text-left">✓<"
+                  <span className="text-left">✓>
                   <span>Proven track record with Fortune 100 companies</span>
                 </li>
                 <li className="text-left">
-                  <span className="text-left">✓<"
+                  <span className="text-left">✓>
                   <span>World-class quantum computing expertise</span>
                 </li>
                 <li className="text-left">
-                  <span className="text-left">✓<"
+                  <span className="text-left">✓>
                   <span>Guaranteed ROI with measurable results</span>
                 </li>
                 <li className="text-left">
-                  <span className="text-left">✓<"
+                  <span className="text-left">✓>
                   <span>24/7 support and maintenance</span>
                 </li>
                 <li className="text-left">
-                  <span className="text-left">✓<"
+                  <span className="text-left">✓>
                   <span>Cutting-edge quantum AI technology</span>
                 </li>
               </ul>

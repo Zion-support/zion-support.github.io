@@ -16,8 +16,8 @@ export const metadata: Metadata = {
 export default function AI2026EnterpriseTransformationPage() {
   return (
     <div className="text-left"></div>
-      <div className="text-left"></div>
-        {/* Header */}
+      <div className="text-left">
+        {/* Header */}</div>
         <div className="text-left"></div>
           <div className="text-left"></div>
             <Link href="/services" className="text-left">
@@ -69,27 +69,27 @@ export default function AI2026EnterpriseTransformationPage() {
                 <h3 className="text-left">What We Deliver</h3>"
                 <ul className="text-left">
                   <li className="text-left">
-                    <span className="text-left">✓<"
+                    <span className="text-left">✓>
                     <span>Quantum AI computing implementation</span>
                   </li>
                   <li className="text-left">
-                    <span className="text-left">✓<"
+                    <span className="text-left">✓>
                     <span>Neural interface integration</span>
                   </li>
                   <li className="text-left">
-                    <span className="text-left">✓<"
+                    <span className="text-left">✓>
                     <span>Autonomous enterprise systems</span>
                   </li>
                   <li className="text-left">
-                    <span className="text-left">✓<"
+                    <span className="text-left">✓>
                     <span>Multimodal AI processing</span>
                   </li>
                   <li className="text-left">
-                    <span className="text-left">✓<"
+                    <span className="text-left">✓>
                     <span>Predictive analytics platforms</span>
                   </li>
                   <li className="text-left">
-                    <span className="text-left">✓<"
+                    <span className="text-left">✓>
                     <span>Real-time decision automation</span>
                   </li>
                 </ul>
@@ -99,27 +99,27 @@ export default function AI2026EnterpriseTransformationPage() {
                 <h3 className="text-left">Business Impact</h3>"
                 <ul className="text-left">
                   <li className="text-left">
-                    <span className="text-left">→<"
+                    <span className="text-left">→>
                     <span>300%+ return on investment</span>
                   </li>
                   <li className="text-left">
-                    <span className="text-left">→<"
+                    <span className="text-left">→>
                     <span>95% operational efficiency improvement</span>
                   </li>
                   <li className="text-left">
-                    <span className="text-left">→<"
+                    <span className="text-left">→>
                     <span>$50M+ annual cost savings</span>
                   </li>
                   <li className="text-left">
-                    <span className="text-left">→<"
+                    <span className="text-left">→>
                     <span>18-month payback period</span>
                   </li>
                   <li className="text-left">
-                    <span className="text-left">→<"
+                    <span className="text-left">→>
                     <span>99.9% system reliability</span>
                   </li>
                   <li className="text-left">
-                    <span className="text-left">→<"
+                    <span className="text-left">→>
                     <span>Competitive market advantage</span>
                   </li>
                 </ul>
@@ -219,13 +219,13 @@ export default function AI2026EnterpriseTransformationPage() {
                 <div></div>
                   <h3 className="text-left">Fortune 500 Manufacturing Transformation</h3>"
                   <p className="text-left">
-                    "Our AI transformation with Zion Tech Group has been revolutionary. We achieved $100M 
+                    "Our AI transformation with Zion Tech Group has been revolutionary. We achieved $100M "
                     in annual savings and 400% ROI within 18 months. The quantum AI computing and autonomous 
                     systems have fundamentally transformed our operations."
                   </p>
                   <div className="text-left"></div>
                     <div className="text-left"></div>
-                      <span className="text-left">JS<"
+                      <span className="text-left">JS>
                     </div>
                     <div></div>
                       <div className="text-left">John Smith</div>"
@@ -234,20 +234,20 @@ export default function AI2026EnterpriseTransformationPage() {
                 </div>
                 <div className="text-left"></div>
                   <div className="text-left"></div>
-                    <span className="text-left">Annual Savings<"
-                    <span className="text-left">$100M<"
+                    <span className="text-left">Annual Savings<
+                    <span className="text-left">$100M>
                   </div>
                   <div className="text-left"></div>
-                    <span className="text-left">ROI Achieved<"
-                    <span className="text-left">400%<"
+                    <span className="text-left">ROI Achieved<
+                    <span className="text-left">400%>
                   </div>
                   <div className="text-left"></div>
-                    <span className="text-left">Efficiency Gain<"
-                    <span className="text-left">95%<"
+                    <span className="text-left">Efficiency Gain<
+                    <span className="text-left">95%>
                   </div>
                   <div className="text-left"></div>
-                    <span className="text-left">Payback Period<"
-                    <span className="text-left">18 months<"
+                    <span className="text-left">Payback Period<
+                    <span className="text-left">18 months>
                   </div>
               </div>
           </section>
@@ -264,15 +264,13 @@ export default function AI2026EnterpriseTransformationPage() {
               </p>
               <div className="text-left"></div>
                 <a
-                  href="tel:+13024640950
-                  className="text-left
-                >
+                  href="tel:+13024640950"
+                  className="text-left">
                   Call +1 302 464 0950
                 </a>
                 <a
-                  href="mailto:kleber@ziontechgroup.com
-                  className="text-left
-                >
+                  href="mailto:kleber@ziontechgroup.com"
+                  className="text-left">
                   Email Us
                 </a>
               </div>

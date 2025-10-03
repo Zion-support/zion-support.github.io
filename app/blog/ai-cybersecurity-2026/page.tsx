@@ -12,10 +12,10 @@ export default function AICybersecurity2026() {
     <div className="text-left"></div>
       <div className="text-left"></div>
         <div className="text-left"></div>
-          <span className="text-left"></span>
+          <span className="text-left">
             NEW 2026
           </span>
-          <span className="text-left"></span>
+          <span className="text-left">
             CYBERSECURITY
           </span>
         </div>
@@ -160,15 +160,13 @@ export default function AICybersecurity2026() {
           </p>
           <div className="text-left"></div>
             <Link
-              href="/contact
-              className="text-left
-            >
+              href="/contact"
+              className="text-left">
               Get Security Assessment
             </Link>
             <Link
-              href="/services/cybersecurity-consulting
-              className="text-left
-            >
+              href="/services/cybersecurity-consulting"
+              className="text-left">
               View Security Services
             </Link>
           </div>

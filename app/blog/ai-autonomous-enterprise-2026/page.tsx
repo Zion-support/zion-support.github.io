@@ -14,10 +14,10 @@ export default function AIAutonomousEnterprise2026() {
         {/* Header */}
         <div className="text-left"></div>
           <div className="text-left"></div>
-            <span className="text-left"></span>
+            <span className="text-left">
               Featured Article
             </span>
-            <span className="text-left"></span>
+            <span className="text-left">
               Autonomous AI
             </span>
           </div>
@@ -116,7 +116,7 @@ export default function AIAutonomousEnterprise2026() {
           <div className="text-left"></div>
             <h3 className="text-left">💡 Success Story: Global Manufacturing Corp</h3>"
             <p className="text-left">
-              "After implementing autonomous AI systems across our manufacturing operations, we achieved 85% reduction in downtime, 
+              "After implementing autonomous AI systems across our manufacturing operations, we achieved 85% reduction in downtime, "
               60% improvement in efficiency, and $15M in cost savings within the first year. The system now manages our entire 
               production line with minimal human oversight."
             </p>
@@ -209,15 +209,13 @@ export default function AIAutonomousEnterprise2026() {
             </p>
             <div className="text-left"></div>
               <Link
-                href="/contact
-                className="text-left
-              >
+                href="/contact"
+                className="text-left">
                 Get Free Consultation
               </Link>
               <Link
-                href="/case-studies/ai-autonomous-enterprise-success-2026
-                className="text-left
-              >
+                href="/case-studies/ai-autonomous-enterprise-success-2026"
+                className="text-left">
                 View Success Stories
               </Link>
             </div>

@@ -18,11 +18,11 @@ export const metadata: Metadata = {
 export default function AI2026AutonomousEnterpriseRevolution() {
   return (
     <div className="text-left"></div>
-      <div className="text-left"></div>
-        {/* Hero Section */}
+      <div className="text-left">
+        {/* Hero Section */}</div>
         <div className="text-left"></div>
           <div className="text-left"></div>
-            <span className="text-left"></span>
+            <span className="text-left">
               🤖 AUTONOMOUS REVOLUTION
             </span>
           </div>
@@ -37,15 +37,15 @@ export default function AI2026AutonomousEnterpriseRevolution() {
           </p>
           
           <div className="text-left"></div>
-            <span className="text-left"></span>
+            <span className="text-left">
               <div className="text-left">99%</div>"
               <div className="text-left">Automation Rate</div>"
             <
-            <span className="text-left"></span>
+            <span className="text-left">
               <div className="text-left">Self-Healing</div>"
               <div className="text-left">Systems</div>"
             <
-            <span className="text-left"></span>
+            <span className="text-left">
               <div className="text-left">Zero-Touch</div>"
               <div className="text-left">Operations</div>"
             <
@@ -140,23 +140,23 @@ export default function AI2026AutonomousEnterpriseRevolution() {
               <ul className="text-left">
                 <li className="text-left">
                   <span>Process Automation Rate</span>
-                  <span className="text-left">99%<"
+                  <span className="text-left">99%>
                 </li>
                 <li className="text-left">
                   <span>Operational Efficiency</span>
-                  <span className="text-left">+156%<"
+                  <span className="text-left">+156%>
                 </li>
                 <li className="text-left">
                   <span>Error Reduction</span>
-                  <span className="text-left">-94%<"
+                  <span className="text-left">-94%>
                 </li>
                 <li className="text-left">
                   <span>Response Time</span>
-                  <span className="text-left">-89%<"
+                  <span className="text-left">-89%>
                 </li>
                 <li className="text-left">
                   <span>Uptime</span>
-                  <span className="text-left">99.9%<"
+                  <span className="text-left">99.9%>
                 </li>
               </ul>
             </div>
@@ -166,23 +166,23 @@ export default function AI2026AutonomousEnterpriseRevolution() {
               <ul className="text-left">
                 <li className="text-left">
                   <span>Cost Reduction</span>
-                  <span className="text-left">-67%<"
+                  <span className="text-left">-67%>
                 </li>
                 <li className="text-left">
                   <span>Revenue Growth</span>
-                  <span className="text-left">+89%<"
+                  <span className="text-left">+89%>
                 </li>
                 <li className="text-left">
                   <span>ROI</span>
-                  <span className="text-left">500%<"
+                  <span className="text-left">500%>
                 </li>
                 <li className="text-left">
                   <span>Payback Period</span>
-                  <span className="text-left">1.2 months<"
+                  <span className="text-left">1.2 months>
                 </li>
                 <li className="text-left">
                   <span>Profit Margin</span>
-                  <span className="text-left">+234%<"
+                  <span className="text-left">+234%>
                 </li>
               </ul>
             </div>
@@ -257,15 +257,13 @@ export default function AI2026AutonomousEnterpriseRevolution() {
             </p>
             <div className="text-left"></div>
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 Start Your Autonomous Journey
               </a>
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 View Success Stories →
               </a>
             </div>

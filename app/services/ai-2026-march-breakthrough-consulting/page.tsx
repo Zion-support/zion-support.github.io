@@ -9,13 +9,13 @@ export const metadata: Metadata = {
 
 export default function March2026BreakthroughConsultingPage() {
   return (
-    <div className="text-left"></div>
-      {/* Hero Section */}
+    <div className="text-left">
+      {/* Hero Section */}</div>
       <section className="text-left">
         <div className="text-left"></div>
           <div className="text-left"></div>
             <div className="text-left"></div>
-              <span className="text-left"></span>
+              <span className="text-left">
                 🎯 AI Consulting Services
               </span>
             </div>
@@ -29,10 +29,10 @@ export default function March2026BreakthroughConsultingPage() {
             </p>
             
             <div className="text-left"></div>
-              <span className="text-left">Meta-Cognitive AI Strategy<"
-              <span className="text-left">Quantum-Enhanced Analytics<"
-              <span className="text-left">Autonomous Operations<"
-              <span className="text-left">$3.2B Proven Results<"
+              <span className="text-left">Meta-Cognitive AI Strategy<
+              <span className="text-left">Quantum-Enhanced Analytics<
+              <span className="text-left">Autonomous Operations<
+              <span className="text-left">$3.2B Proven Results>
             </div>
         </div>
       </section>
@@ -238,21 +238,18 @@ export default function March2026BreakthroughConsultingPage() {
               </p>
               <div className="text-left"></div>
                 <a
-                  href="/contact
-                  className="text-left
-                >
+                  href="/contact"
+                  className="text-left">
                   Get Free Consultation
                 </a>
                 <a
-                  href="/case-studies/ai-2026-march-breakthrough-mega-success
-                  className="text-left
-                >
+                  href="/case-studies/ai-2026-march-breakthrough-mega-success"
+                  className="text-left">
                   View $3.2B Success Story
                 </a>
                 <a
-                  href="/blog/ai-2026-march-revolutionary-breakthroughs
-                  className="text-left
-                >
+                  href="/blog/ai-2026-march-revolutionary-breakthroughs"
+                  className="text-left">
                   Read March Breakthroughs
                 </a>
               </div>

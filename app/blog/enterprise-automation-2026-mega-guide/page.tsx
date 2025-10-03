@@ -22,7 +22,7 @@ export default function EnterpriseAutomationMegaGuide() {
           {/* Hero Section */}
           <header className="text-left">
             <div className="text-left"></div>
-              <span className="text-left"></span>
+              <span className="text-left">
                 🤖 Complete Automation Guide
               </span>
             </div>
@@ -36,14 +36,14 @@ export default function EnterpriseAutomationMegaGuide() {
             </p>
             
             <div className="text-left"></div>
-              <span className="text-left">98% Automation Rate<"
-              <span className="text-left">Meta-Cognitive AI<"
-              <span className="text-left">Self-Healing Systems<"
-              <span className="text-left">Complete Guide<"
+              <span className="text-left">98% Automation Rate<
+              <span className="text-left">Meta-Cognitive AI<
+              <span className="text-left">Self-Healing Systems<
+              <span className="text-left">Complete Guide>
             </div>
             
-            <div className="text-left"></div>
-              Published: January 20, 2026 • Reading Time: 15 minutes
+            <div className="text-left">
+              Published: January 20, 2026 • Reading Time: 15 minutes</div>
             </div>
           </header>
 
@@ -99,7 +99,7 @@ export default function EnterpriseAutomationMegaGuide() {
                   optimizations that can increase efficiency by up to 300%.
                 </p>
                 <div className="text-left"></div>
-                  <span className="text-left">Result: 95% process coverage identified<"
+                  <span className="text-left">Result: 95% process coverage identified>
                 </div>
               
               <div className="text-left"></div>
@@ -110,7 +110,7 @@ export default function EnterpriseAutomationMegaGuide() {
                   experts and deliver consistent, optimal outcomes.
                 </p>
                 <div className="text-left"></div>
-                  <span className="text-left">Result: 99% decision accuracy<"
+                  <span className="text-left">Result: 99% decision accuracy>
                 </div>
               
               <div className="text-left"></div>
@@ -121,7 +121,7 @@ export default function EnterpriseAutomationMegaGuide() {
                   prevent and resolve future issues.
                 </p>
                 <div className="text-left"></div>
-                  <span className="text-left">Result: 99.9% system uptime<"
+                  <span className="text-left">Result: 99.9% system uptime>
                 </div>
               
               <div className="text-left"></div>
@@ -131,7 +131,7 @@ export default function EnterpriseAutomationMegaGuide() {
                   They adapt their behavior and optimize processes without requiring system downtime or human intervention.
                 </p>
                 <div className="text-left"></div>
-                  <span className="text-left">Result: 15% monthly efficiency gains<"
+                  <span className="text-left">Result: 15% monthly efficiency gains>
                 </div>
               
               <div className="text-left"></div>
@@ -142,7 +142,7 @@ export default function EnterpriseAutomationMegaGuide() {
                   preferences and adapts accordingly.
                 </p>
                 <div className="text-left"></div>
-                  <span className="text-left">Result: 80% reduction in manual tasks<"
+                  <span className="text-left">Result: 80% reduction in manual tasks>
                 </div>
             </div>
 
@@ -248,7 +248,7 @@ export default function EnterpriseAutomationMegaGuide() {
                   <li>• Investment analysis</li>
                 </ul>
                 <div className="text-left"></div>
-                  <span className="text-left">99.5% accuracy rate<"
+                  <span className="text-left">99.5% accuracy rate>
                 </div>
               
               <div className="text-left"></div>
@@ -261,7 +261,7 @@ export default function EnterpriseAutomationMegaGuide() {
                   <li>• Inventory management</li>
                 </ul>
                 <div className="text-left"></div>
-                  <span className="text-left">95% efficiency gain<"
+                  <span className="text-left">95% efficiency gain>
                 </div>
               
               <div className="text-left"></div>
@@ -274,7 +274,7 @@ export default function EnterpriseAutomationMegaGuide() {
                   <li>• Compliance tracking</li>
                 </ul>
                 <div className="text-left"></div>
-                  <span className="text-left">98% accuracy<"
+                  <span className="text-left">98% accuracy>
                 </div>
               
               <div className="text-left"></div>
@@ -287,7 +287,7 @@ export default function EnterpriseAutomationMegaGuide() {
                   <li>• Marketing automation</li>
                 </ul>
                 <div className="text-left"></div>
-                  <span className="text-left">300% ROI<"
+                  <span className="text-left">300% ROI>
                 </div>
             </div>
 
@@ -300,15 +300,13 @@ export default function EnterpriseAutomationMegaGuide() {
               </p>
               <div className="text-left"></div>
                 <a 
-                  href="/
-                  className="text-left
-                >
+                  href="/"
+                  className="text-left">
                   Start Your Automation Journey
                 </a>
                 <a 
-                  href="/
-                  className="text-left
-                >
+                  href="/"
+                  className="text-left">
                   View Success Stories
                 </a>
               </div>

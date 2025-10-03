@@ -16,7 +16,7 @@ export default function Page() {
 			<article className="text-left">
 				<div className="text-left"></div>
 					<div className="text-left"></div>
-						<span className="text-left"></span>
+						<span className="text-left">
 							🚀 Innovation Lab
 						</span>
 					</div>
@@ -24,7 +24,7 @@ export default function Page() {
 						AI Innovation Labs: Product Development Revolution 2025
 					</h1>
 					<p className="text-left">
-						January 25, 2025 · 40 min read · <span className="text-left">AI Innovation<"
+						January 25, 2025 · 40 min read · <span className="text-left">AI Innovation>
 					</p>
 				</div>
 
@@ -62,19 +62,19 @@ export default function Page() {
 						<h3 className="text-left">Revolutionary Capabilities</h3>"
 						<ul className="text-left">
 							<li className="text-left">
-								<span className="text-left">🧠<"
+								<span className="text-left">🧠>
 								<span><strong>Autonomous Ideation:</strong> AI systems generate thousands of product concepts based on market data and trends<
 							</li>
 							<li className="text-left">
-								<span className="text-left">⚡<"
+								<span className="text-left">⚡>
 								<span><strong>Rapid Prototyping:</strong> 3D printing and AI-driven design optimization for instant physical prototypes<
 							</li>
 							<li className="text-left">
-								<span className="text-left">🔬<"
+								<span className="text-left">🔬>
 								<span><strong>Virtual Testing:</strong> AI-powered simulation environments testing products in millions of scenarios<
 							</li>
 							<li className="text-left">
-								<span className="text-left">📊<"
+								<span className="text-left">📊>
 								<span><strong>Market Intelligence:</strong> Real-time market analysis and consumer behavior prediction<
 							</li>
 						</ul>
@@ -91,25 +91,25 @@ export default function Page() {
 {`// AI Innovation Lab Architecture
 const InnovationLabFramework = {
   ideation: {
-    aiBrainstorming: "GPT-4 + Custom Innovation Models
-    marketAnalysis: "Real-time Data Streams + ML Predictions
-    conceptGeneration: "Generative AI + Design Thinking AI
+    aiBrainstorming: "GPT-4 + Custom Innovation Models"
+    marketAnalysis: "Real-time Data Streams + ML Predictions"
+    conceptGeneration: "Generative AI + Design Thinking AI"
   },
   design: {
-    autonomousDesign: "AutoCAD AI + Generative Design
-    simulation: "ANSYS AI + Digital Twin Technology
-    optimization: "Genetic Algorithms + ML Optimization
+    autonomousDesign: "AutoCAD AI + Generative Design"
+    simulation: "ANSYS AI + Digital Twin Technology"
+    optimization: "Genetic Algorithms + ML Optimization"
   },
   prototyping: {
-    rapidPrototyping: "3D Printing + AI Quality Control
-    virtualTesting: "VR/AR + Physics Simulation AI
-    iteration: "Automated Feedback Loops + Learning Systems
+    rapidPrototyping: "3D Printing + AI Quality Control"
+    virtualTesting: "VR/AR + Physics Simulation AI"
+    iteration: "Automated Feedback Loops + Learning Systems"
   },
   marketValidation: {
-    predictiveAnalytics: "Consumer Behavior AI + Market Modeling
-    aTesting: "AI-Powered Experiments + Statistical Analysis
-    feedback: "Sentiment Analysis + Social Media Intelligence
-  }`
+    predictiveAnalytics: "Consumer Behavior AI + Market Modeling"
+    aTesting: "AI-Powered Experiments + Statistical Analysis"
+    feedback: "Sentiment Analysis + Social Media Intelligence"
+  }
 };`}
 						</pre>
 					</div>
@@ -261,19 +261,17 @@ const InnovationLabFramework = {
 						</p>
 						<div className="text-left"></div>
 							<a 
-								href="/
-								className="text-left
-							>
+								href="/"
+								className="text-left">
 								Get Innovation Assessment
 							</a>
 							<a 
-								href="/
-								className="text-left
-							>
+								href="/"
+								className="text-left">
 								Explore Innovation Labs
 							</a>
 						</div>
 				</div>
 			</article>
 	);
-}</div></div></div></div></div></div></div></div>`
+}</div></div></div></div></div></div></div></div>

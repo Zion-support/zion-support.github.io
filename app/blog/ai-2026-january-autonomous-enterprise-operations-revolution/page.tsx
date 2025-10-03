@@ -18,11 +18,11 @@ export const metadata: Metadata = {
 export default function January2026AutonomousEnterpriseOperationsRevolution() {
   return (
     <div className="text-left"></div>
-      <div className="text-left"></div>
-        {/* Header */}
+      <div className="text-left">
+        {/* Header */}</div>
         <div className="text-left"></div>
           <div className="text-left"></div>
-            <span className="text-left"><"
+            <span className="text-left">>
             Featured Article
           </div>
           <h1 className="text-left">
@@ -39,8 +39,8 @@ export default function January2026AutonomousEnterpriseOperationsRevolution() {
 
         {/* Content */}
         <div className="text-left"></div>
-          <div className="text-left"></div>
-            {/* Introduction */}
+          <div className="text-left">
+            {/* Introduction */}</div>
             <section className="text-left">
               <h2 className="text-left">The Future of Enterprise Operations is Here</h2>"
               <p className="text-left">
@@ -56,15 +56,15 @@ export default function January2026AutonomousEnterpriseOperationsRevolution() {
                   <h3 className="text-left">1. Self-Healing Infrastructure</h3>"
                   <ul className="text-left">
                     <li className="text-left">
-                      <span className="text-left">✓<"
+                      <span className="text-left">✓>
                       <span><strong>Predictive Failure Detection:</strong> AI systems now predict infrastructure failures 72 hours in advance with 94% accuracy<
                     </li>
                     <li className="text-left">
-                      <span className="text-left">✓<"
+                      <span className="text-left">✓>
                       <span><strong>Automated Remediation:</strong> Self-repairing systems that resolve 87% of issues without human intervention<
                     </li>
                     <li className="text-left">
-                      <span className="text-left">✓<"
+                      <span className="text-left">✓>
                       <span><strong>Resource Optimization:</strong> Dynamic resource allocation that reduces operational costs by 40%<
                     </li>
                   </ul>
@@ -74,15 +74,15 @@ export default function January2026AutonomousEnterpriseOperationsRevolution() {
                   <h3 className="text-left">2. Intelligent Decision Making</h3>"
                   <ul className="text-left">
                     <li className="text-left">
-                      <span className="text-left">✓<"
+                      <span className="text-left">✓>
                       <span><strong>Real-time Analytics:</strong> Process 10TB of operational data per second for instant insights<
                     </li>
                     <li className="text-left">
-                      <span className="text-left">✓<"
+                      <span className="text-left">✓>
                       <span><strong>Autonomous Decision Trees:</strong> AI makes complex operational decisions in under 100ms<
                     </li>
                     <li className="text-left">
-                      <span className="text-left">✓<"
+                      <span className="text-left">✓>
                       <span><strong>Risk Assessment:</strong> Advanced algorithms evaluate and mitigate risks before they impact operations<
                     </li>
                   </ul>
@@ -92,15 +92,15 @@ export default function January2026AutonomousEnterpriseOperationsRevolution() {
                   <h3 className="text-left">3. Predictive Operations Management</h3>"
                   <ul className="text-left">
                     <li className="text-left">
-                      <span className="text-left">✓<"
+                      <span className="text-left">✓>
                       <span><strong>Demand Forecasting:</strong> Predict operational demands with 96% accuracy up to 90 days ahead<
                     </li>
                     <li className="text-left">
-                      <span className="text-left">✓<"
+                      <span className="text-left">✓>
                       <span><strong>Capacity Planning:</strong> Automated scaling that maintains optimal performance while minimizing costs<
                     </li>
                     <li className="text-left">
-                      <span className="text-left">✓<"
+                      <span className="text-left">✓>
                       <span><strong>Performance Optimization:</strong> Continuous improvement algorithms that enhance efficiency by 35%<
                     </li>
                   </ul>
@@ -171,15 +171,13 @@ export default function January2026AutonomousEnterpriseOperationsRevolution() {
                 </p>
                 <div className="text-left"></div>
                   <Link 
-                    href="/
-                    className="text-left
-                  >
+                    href="/"
+                    className="text-left">
                     Schedule Consultation
                   </Link>
                   <Link 
-                    href="/
-                    className="text-left
-                  >
+                    href="/"
+                    className="text-left">
                     View Services
                   </Link>
                 </div>
@@ -189,15 +187,13 @@ export default function January2026AutonomousEnterpriseOperationsRevolution() {
         <div className="text-left"></div>
           <div className="text-left"></div>
             <Link 
-              href="/
-              className="text-left
-            >
+              href="/"
+              className="text-left">
               ← Back to Blog
             </Link>
             <Link 
-              href="/
-              className="text-left
-            >
+              href="/"
+              className="text-left">
               Next Article →
             </Link>
           </div>

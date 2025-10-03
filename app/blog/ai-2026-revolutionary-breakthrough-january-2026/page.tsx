@@ -21,7 +21,7 @@ export default function RevolutionaryAIBreakthroughJanuary2026() {
           {/* Hero Section */}
           <header className="text-left">
             <div className="text-left"></div>
-              <span className="text-left"></span>
+              <span className="text-left">
                 🚀 Revolutionary Breakthrough
               </span>
             </div>
@@ -34,9 +34,9 @@ export default function RevolutionaryAIBreakthroughJanuary2026() {
               revolutionizing enterprise computing.
             </p>
             <div className="text-left"></div>
-              <span className="text-left">95% Decision Accuracy<"
-              <span className="text-left">1000x Processing Speed<"
-              <span className="text-left">98% Automation Rate<"
+              <span className="text-left">95% Decision Accuracy<
+              <span className="text-left">1000x Processing Speed<
+              <span className="text-left">98% Automation Rate>
             </div>
           </header>
 
@@ -213,15 +213,13 @@ export default function RevolutionaryAIBreakthroughJanuary2026() {
             </p>
             <div className="text-left"></div>
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 Schedule Consultation
               </a>
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 View Case Studies
               </a>
             </div>

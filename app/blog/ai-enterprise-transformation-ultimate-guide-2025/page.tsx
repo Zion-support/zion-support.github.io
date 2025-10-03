@@ -24,17 +24,17 @@ export const metadata: Metadata = {
 
 export default function AIEnterpriseTransformationUltimateGuide2025() {
   return (
-    <div className="text-left"></div>
-      {/* Hero Section */}
+    <div className="text-left">
+      {/* Hero Section */}</div>
       <section className="text-left">
         <div className="text-left"></div>
           <div className="text-left"></div>
-            <div className="text-left"></div>
-              🚀 ULTIMATE GUIDE 2025
+            <div className="text-left">
+              🚀 ULTIMATE GUIDE 2025</div>
             </div>
             <h1 className="text-left">
               AI Enterprise Transformation
-              <span className="text-left"></span>
+              <span className="text-left">
                 Ultimate Guide
               </span>
             </h1>
@@ -65,8 +65,8 @@ export default function AIEnterpriseTransformationUltimateGuide2025() {
 
       {/* Main Content */}
       <div className="text-left"></div>
-        <div className="text-left"></div>
-          {/* Main Article */}
+        <div className="text-left">
+          {/* Main Article */}</div>
           <div className="text-left"></div>
             <article className="text-left">
               <div className="text-left"></div>
@@ -82,30 +82,30 @@ export default function AIEnterpriseTransformationUltimateGuide2025() {
                   <div className="text-left"></div>
                     <div className="text-left"></div>
                       <div className="text-left"></div>
-                        <span className="text-left"><"
-                        <span className="text-left">Autonomous Operations<"
+                        <span className="text-left"><
+                        <span className="text-left">Autonomous Operations>
                       </div>
                       <div className="text-left"></div>
-                        <span className="text-left"><"
-                        <span className="text-left">Multi-Agent Orchestration<"
+                        <span className="text-left"><
+                        <span className="text-left">Multi-Agent Orchestration>
                       </div>
                       <div className="text-left"></div>
-                        <span className="text-left"><"
-                        <span className="text-left">Quantum AI Integration<"
+                        <span className="text-left"><
+                        <span className="text-left">Quantum AI Integration>
                       </div>
                     </div>
                     <div className="text-left"></div>
                       <div className="text-left"></div>
-                        <span className="text-left"><"
-                        <span className="text-left">Real-Time Decision Engines<"
+                        <span className="text-left"><
+                        <span className="text-left">Real-Time Decision Engines>
                       </div>
                       <div className="text-left"></div>
-                        <span className="text-left"><"
-                        <span className="text-left">Predictive Analytics<"
+                        <span className="text-left"><
+                        <span className="text-left">Predictive Analytics>
                       </div>
                       <div className="text-left"></div>
-                        <span className="text-left"><"
-                        <span className="text-left">Self-Healing Systems<"
+                        <span className="text-left"><
+                        <span className="text-left">Self-Healing Systems>
                       </div>
                     </div>
                   </div>
@@ -204,23 +204,21 @@ export default function AIEnterpriseTransformationUltimateGuide2025() {
 
           {/* Sidebar */}
           <div className="text-left"></div>
-            <div className="text-left"></div>
-              {/* CTA Card */}
+            <div className="text-left">
+              {/* CTA Card */}</div>
               <div className="text-left"></div>
                 <h3 className="text-left">Ready to Transform?</h3>"
                 <p className="text-left">
                   Get a personalized AI transformation strategy for your enterprise.
                 </p>
                 <Link 
-                  href="/
-                  className="text-left
-                >
+                  href="/"
+                  className="text-left">
                   Get Free Consultation
                 </Link>
                 <Link 
-                  href="/
-                  className="text-left
-                >
+                  href="/"
+                  className="text-left">
                   View Case Studies
                 </Link>
               </div>

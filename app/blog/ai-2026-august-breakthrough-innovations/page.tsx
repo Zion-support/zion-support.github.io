@@ -16,8 +16,8 @@ export const metadata: Metadata = {
 
 export default function AI2026AugustBreakthroughPage() {
   return (
-    <div className="text-left"></div>
-      {/* Hero Section */}
+    <div className="text-left">
+      {/* Hero Section */}</div>
       <header className="text-left">
         <div className="text-left"></div>
           <div className="text-left"></div>"
@@ -27,7 +27,7 @@ export default function AI2026AugustBreakthroughPage() {
         <div className="text-left"></div>
           <div className="text-left"></div>
             <div className="text-left"></div>
-              <span className="text-left"></span>
+              <span className="text-left">
                 🚀 BREAKING: August 2026 AI Revolution
               </span>
             </div>
@@ -62,8 +62,8 @@ export default function AI2026AugustBreakthroughPage() {
 
       {/* Main Content */}
       <main className="text-left">
-        <div className="text-left"></div>
-          {/* Introduction */}
+        <div className="text-left">
+          {/* Introduction */}</div>
           <section className="text-left">
             <div className="text-left"></div>
               <h2 className="text-left">The Most Revolutionary AI Breakthrough of 2026</h2>"
@@ -172,9 +172,8 @@ export default function AI2026AugustBreakthroughPage() {
                   with results that exceed all previous benchmarks by orders of magnitude.
                 </p>
                 <a 
-                  href="/case-studies/ai-2026-august-breakthrough-8-5-billion-success
-                  className="text-left
-                >
+                  href="/case-studies/ai-2026-august-breakthrough-8-5-billion-success"
+                  className="text-left">
                   View Full Success Story →
                 </a>
               </div>
@@ -239,21 +238,18 @@ export default function AI2026AugustBreakthroughPage() {
               </p>
               <div className="text-left"></div>
                 <a 
-                  href="/
-                  className="text-left
-                >
+                  href="/"
+                  className="text-left">
                   Get Started Today
                 </a>
                 <a 
-                  href="/
-                  className="text-left
-                >
+                  href="/"
+                  className="text-left">
                   View Success Story →
                 </a>
                 <a 
-                  href="/
-                  className="text-left
-                >
+                  href="/"
+                  className="text-left">
                   Get Consultation
                 </a>
               </div>

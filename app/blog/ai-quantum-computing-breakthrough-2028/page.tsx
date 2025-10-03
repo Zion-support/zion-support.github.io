@@ -23,8 +23,8 @@ export default function AIQuantumComputingBreakthrough2028() {
           <span>AI Quantum Computing Breakthrough 2028</span>
         </div>
         
-        <div className="text-left"></div>
-          QUANTUM BREAKTHROUGH 2028
+        <div className="text-left">
+          QUANTUM BREAKTHROUGH 2028</div>
         </div>
         
         <h1 className="text-left">
@@ -228,15 +228,13 @@ export default function AIQuantumComputingBreakthrough2028() {
           </p>
           <div className="text-left"></div>
             <Link 
-              href="/
-              className="text-left
-            >
+              href="/"
+              className="text-left">
               Get Quantum AI Consultation
             </Link>
             <Link 
-              href="/
-              className="text-left
-            >
+              href="/"
+              className="text-left">
               Explore Quantum Services
             </Link>
           </div>

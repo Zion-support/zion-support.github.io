@@ -18,8 +18,8 @@ export const metadata: Metadata = {
 
 export default function AutonomousBusinessProcessesBlog() {
   return (
-    <div className="text-left"></div>
-      {/* Header */}
+    <div className="text-left">
+      {/* Header */}</div>
       <div className="text-left"></div>
         <div className="text-left"></div>
           <Link href="/blog" className="text-left">
@@ -44,7 +44,7 @@ export default function AutonomousBusinessProcessesBlog() {
           
           <h1 className="text-left">
             AI-Powered Autonomous Business Processes:
-            <span className="text-left"></span>
+            <span className="text-left">
               The 2026 Revolution
             </span>
           </h1>
@@ -69,10 +69,6 @@ export default function AutonomousBusinessProcessesBlog() {
 
       {/* Content */}
 
-      <div className="text-left"></div>
-        <div className="text-left"></div>
-      <div className="text-left"></div>
-        <div className="text-left"></div>
           {/* Introduction */}
           <div className="text-left"></div>
             <p className="text-left">
@@ -248,23 +244,6 @@ export default function AutonomousBusinessProcessesBlog() {
 
           {/* Implementation Roadmap */}
 
-          <section className="text-left">
-            <h2 className="text-left">Implementation Roadmap</h2>"
-            <div className="text-left"></div>
-              <div className="text-left"></div>
-                <div className="text-left">1</div>"
-                <h3 className="text-left">Foundation (Months 1-3)</h3>"
-                <ul className="text-left">
-
-          <section className="text-left">
-            <h2 className="text-left">Implementation Roadmap</h2>
-            
-            <div className="text-left"></div>
-              <div className="text-left"></div>
-                <div className="text-left">1</div>
-                <h3 className="text-left">Foundation (Months 1-3)</h3>
-                <ul className="text-left">
-
                   <li>• Process discovery and mapping</li>
                   <li>• Technology infrastructure setup</li>
                   <li>• Pilot process selection</li>
@@ -298,17 +277,6 @@ export default function AutonomousBusinessProcessesBlog() {
 
           {/* ROI and Business Impact */}
 
-          <section className="text-left">
-            <h2 className="text-left">ROI and Business Impact</h2>"
-            <div className="text-left"></div>
-              <h3 className="text-left">Quantifiable Benefits</h3>"
-              <div className="text-left"></div>
-          <section className="text-left">
-            <h2 className="text-left">ROI and Business Impact</h2>
-            
-            <div className="text-left"></div>
-              <h3 className="text-left">Quantifiable Benefits</h3>
-              <div className="text-left"></div>
                 <div></div>
                   <h4 className="text-left">Operational Efficiency</h4>
                   <ul className="text-left">
@@ -393,16 +361,14 @@ export default function AutonomousBusinessProcessesBlog() {
               </p>
               <div className="text-left"></div>
                 <Link 
-                  href="/contact
-                  className="text-left
-                >
+                  href="/contact"
+                  className="text-left">
                   Schedule Consultation
                   <ArrowLeft className="text-left" />
                 </Link>
                 <Link 
-                  href="/guides/autonomous-business-processes-implementation-guide-2026
-                  className="text-left
-                >
+                  href="/guides/autonomous-business-processes-implementation-guide-2026"
+                  className="text-left">
                   Get Implementation Guide
                   <BookOpen className="text-left" />
                 </Link>

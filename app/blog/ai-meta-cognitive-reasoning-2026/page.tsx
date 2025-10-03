@@ -26,7 +26,7 @@ export default function AIMetaCognitiveReasoning2026() {
             <span>•</span>
             <span>15 min read</span>
             <span>•</span>
-            <span className="text-left"></span>
+            <span className="text-left">
               BREAKTHROUGH
             </span>
           </div>
@@ -176,15 +176,13 @@ export default function AIMetaCognitiveReasoning2026() {
           
           <div className="text-left"></div>
             <Link 
-              href="/
-              className="text-left
-            >
+              href="/"
+              className="text-left">
               Schedule Consultation
             </Link>
             <Link 
-              href="/
-              className="text-left
-            >
+              href="/"
+              className="text-left">
               Explore AI Services
             </Link>
           </div>

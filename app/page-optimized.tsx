@@ -82,8 +82,8 @@ export default function HomePage() {
       "addressCountry": "US"
     },
     "sameAs": ["
-      "https://linkedin.com/company/zion-tech-group
-      "https://twitter.com/ziontechgroup
+      "https://linkedin.com/company/zion-tech-group"
+      "https://twitter.com/ziontechgroup"
     ],
     "offers": {"
       "@type": "Offer"
@@ -98,11 +98,11 @@ export default function HomePage() {
   return (
     <>
       <script
-        type="application/ld+json
+        type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      <div className="text-left"></div>
-        {/* Unified Content Promotion - Replaces multiple redundant banners */}
+      <div className="text-left">
+        {/* Unified Content Promotion - Replaces multiple redundant banners */}</div>
         <UnifiedContentPromotion />
 
         {/* Hero Section */}
@@ -110,7 +110,7 @@ export default function HomePage() {
           <div className="text-left"></div>
             <h1 className="text-left">
               Transform Your Business with
-              <span className="text-left"></span>
+              <span className="text-left">
                 {' '}AI-Powered Solutions
               </span>
             </h1>
@@ -120,15 +120,13 @@ export default function HomePage() {
             </p>
             <div className="text-left"></div>
               <Link
-                href="/services
-                className="text-left
-              >
+                href="/services"
+                className="text-left">
                 Explore Our Services
               </Link>
               <a
-                href="tel:+13024640950
-                className="text-left
-              >
+                href="tel:+13024640950"
+                className="text-left">
                 Call +1 302 464 0950
               </a>
             </div>
@@ -165,8 +163,8 @@ export default function HomePage() {
         {/* Enhanced Newsletter Signup */}
         <section className="text-left">
           <div className="text-left"></div>
-            <div className="text-left"></div>
-              {/* Newsletter Signup */}
+            <div className="text-left">
+              {/* Newsletter Signup */}</div>
               <div className="text-left"></div>
                 <h2 className="text-left">
                   Stay Ahead with AI & Tech Insights
@@ -176,9 +174,9 @@ export default function HomePage() {
                 </p>
                 <div className="text-left"></div>
                   <input
-                    type="email
-                    placeholder="Enter your email
-                    className="text-left
+                    type="email"
+                    placeholder="Enter your email"
+                    className="text-left"
                   />
                   <button className="text-left">
                     Subscribe
@@ -217,9 +215,8 @@ export default function HomePage() {
                 </div>
                 <div className="text-left"></div>
                   <Link
-                    href="/blog
-                    className="text-left
-                  >
+                    href="/blog"
+                    className="text-left">
                     View All Content →
                   </Link>
                 </div>
@@ -239,15 +236,13 @@ export default function HomePage() {
             </p>
             <div className="text-left"></div>
               <a
-                href="tel:+13024640950
-                className="text-left
-              >
+                href="tel:+13024640950"
+                className="text-left">
                 Call +1 302 464 0950
               </a>
               <a
-                href="mailto:kleber@ziontechgroup.com
-                className="text-left
-              >
+                href="mailto:kleber@ziontechgroup.com"
+                className="text-left">
                 Get Free Consultation
               </a>
             </div>

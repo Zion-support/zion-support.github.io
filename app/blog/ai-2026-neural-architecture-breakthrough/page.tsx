@@ -22,7 +22,7 @@ export default function AINeuralArchitectureBreakthrough() {
           {/* Hero Section */}
           <header className="text-left">
             <div className="text-left"></div>
-              <span className="text-left"></span>
+              <span className="text-left">
                 🚀 Revolutionary Breakthrough
               </span>
             </div>
@@ -37,10 +37,10 @@ export default function AINeuralArchitectureBreakthrough() {
             </p>
             
             <div className="text-left"></div>
-              <span className="text-left">1000x Processing Speed<"
-              <span className="text-left">99% Accuracy Rate<"
-              <span className="text-left">Multi-Modal Intelligence<"
-              <span className="text-left">Enterprise Ready<"
+              <span className="text-left">1000x Processing Speed<
+              <span className="text-left">99% Accuracy Rate<
+              <span className="text-left">Multi-Modal Intelligence<
+              <span className="text-left">Enterprise Ready>
             </div>
           </header>
 
@@ -176,15 +176,13 @@ export default function AINeuralArchitectureBreakthrough() {
               
               <div className="text-left"></div>
                 <a 
-                  href="/
-                  className="text-left
-                >
+                  href="/"
+                  className="text-left">
                   Get Free Consultation
                 </a>
                 <a 
-                  href="/
-                  className="text-left
-                >
+                  href="/"
+                  className="text-left">
                   View Case Study
                 </a>
               </div>

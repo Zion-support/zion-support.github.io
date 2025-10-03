@@ -25,13 +25,13 @@ export default function AI2027AdvancedNeuralSuperintelligenceBreakthrough() {
           Revolutionary 1,000,000x Performance Gains with Self-Evolving Neural Architectures
         </p>
         <div className="text-left"></div>
-          <span className="text-left"></span>
+          <span className="text-left">
             $2.8T SUCCESS
           </span>
-          <span className="text-left"></span>
+          <span className="text-left">
             1,000,000x PERFORMANCE
           </span>
-          <span className="text-left"></span>
+          <span className="text-left">
             SELF-EVOLVING AI
           </span>
         </div>
@@ -221,9 +221,8 @@ export default function AI2027AdvancedNeuralSuperintelligenceBreakthrough() {
 
         <div className="text-left"></div>
           <Link 
-            href="/
-            className="text-left
-          >
+            href="/"
+            className="text-left">
             🚀 Start Your AI 2027 Transformation Today
           </Link>
         </div>

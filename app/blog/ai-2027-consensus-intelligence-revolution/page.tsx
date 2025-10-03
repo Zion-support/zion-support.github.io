@@ -9,11 +9,11 @@ export const metadata: Metadata = {
 
 export default function ConsensusIntelligenceRevolution() {
   return (
-    <div className="text-left"></div>
-      {/* Header */}
+    <div className="text-left">
+      {/* Header */}</div>
       <div className="text-left"></div>
         <div className="text-left"></div>
-          <span className="text-left"></span>
+          <span className="text-left">
             🚀 AI 2027 Consensus Intelligence Revolution
           </span>
         </div>
@@ -131,15 +131,13 @@ export default function ConsensusIntelligenceRevolution() {
         </p>
         <div className="text-left"></div>
           <a 
-            href="/
-            className="text-left
-          >
+            href="/"
+            className="text-left">
             Get Started Today
           </a>
           <a 
-            href="/
-            className="text-left
-          >
+            href="/"
+            className="text-left">
             View Success Stories
           </a>
         </div>

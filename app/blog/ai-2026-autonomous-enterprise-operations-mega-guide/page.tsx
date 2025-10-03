@@ -9,8 +9,8 @@ export const metadata: Metadata = {
 
 export default function AutonomousEnterpriseOperationsGuide() {
   return (
-    <div className="text-left"></div>
-      {/* Hero Section */}
+    <div className="text-left">
+      {/* Hero Section */}</div>
       <section className="text-left">
         <div className="text-left"></div>
           <div className="text-left"></div>"
@@ -20,7 +20,7 @@ export default function AutonomousEnterpriseOperationsGuide() {
         <div className="text-left"></div>
           <div className="text-left"></div>
             <div className="text-left"></div>
-              <span className="text-left"></span>
+              <span className="text-left">
                 🤖 Complete Enterprise Guide
               </span>
             </div>
@@ -58,15 +58,13 @@ export default function AutonomousEnterpriseOperationsGuide() {
 
             <div className="text-left"></div>
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 Get Free Consultation
               </a>
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 View $2.3B Success Story
               </a>
             </div>
@@ -158,19 +156,19 @@ export default function AutonomousEnterpriseOperationsGuide() {
                   <h4 className="text-left">Pre-Implementation</h4>"
                   <ul className="text-left">
                     <li className="text-left">
-                      <span className="text-left">✓<"
+                      <span className="text-left">✓>
                       Executive alignment and sponsorship
                     </li>
                     <li className="text-left">
-                      <span className="text-left">✓<"
+                      <span className="text-left">✓>
                       Comprehensive business assessment
                     </li>
                     <li className="text-left">
-                      <span className="text-left">✓<"
+                      <span className="text-left">✓>
                       Technology infrastructure evaluation
                     </li>
                     <li className="text-left">
-                      <span className="text-left">✓<"
+                      <span className="text-left">✓>
                       Change management planning
                     </li>
                   </ul>
@@ -179,19 +177,19 @@ export default function AutonomousEnterpriseOperationsGuide() {
                   <h4 className="text-left">Implementation</h4>"
                   <ul className="text-left">
                     <li className="text-left">
-                      <span className="text-left">✓<"
+                      <span className="text-left">✓>
                       Phased rollout strategy
                     </li>
                     <li className="text-left">
-                      <span className="text-left">✓<"
+                      <span className="text-left">✓>
                       Employee training and communication
                     </li>
                     <li className="text-left">
-                      <span className="text-left">✓<"
+                      <span className="text-left">✓>
                       System integration and testing
                     </li>
                     <li className="text-left">
-                      <span className="text-left">✓<"
+                      <span className="text-left">✓>
                       Performance monitoring
                     </li>
                   </ul>
@@ -200,19 +198,19 @@ export default function AutonomousEnterpriseOperationsGuide() {
                   <h4 className="text-left">Post-Implementation</h4>"
                   <ul className="text-left">
                     <li className="text-left">
-                      <span className="text-left">✓<"
+                      <span className="text-left">✓>
                       Success metrics tracking
                     </li>
                     <li className="text-left">
-                      <span className="text-left">✓<"
+                      <span className="text-left">✓>
                       ROI analysis and reporting
                     </li>
                     <li className="text-left">
-                      <span className="text-left">✓<"
+                      <span className="text-left">✓>
                       Knowledge sharing
                     </li>
                     <li className="text-left">
-                      <span className="text-left">✓<"
+                      <span className="text-left">✓>
                       Continuous optimization
                     </li>
                   </ul>
@@ -228,15 +226,13 @@ export default function AutonomousEnterpriseOperationsGuide() {
               </p>
               <div className="text-left"></div>
                 <a 
-                  href="/
-                  className="text-left
-                >
+                  href="/"
+                  className="text-left">
                   Get Free Assessment
                 </a>
                 <a 
-                  href="/
-                  className="text-left
-                >
+                  href="/"
+                  className="text-left">
                   Learn About Neural Superintelligence
                 </a>
               </div>

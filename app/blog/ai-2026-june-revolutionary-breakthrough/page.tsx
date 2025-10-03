@@ -14,7 +14,7 @@ export default function AI2026JuneRevolutionaryBreakthrough() {
         {/* Header */}
         <header className="text-left">
           <div className="text-left"></div>
-            <span className="text-left"></span>
+            <span className="text-left">
               🚀 June 2026 Revolutionary Breakthrough
             </span>
           </div>
@@ -145,15 +145,13 @@ export default function AI2026JuneRevolutionaryBreakthrough() {
             </p>
             <div className="text-left"></div>
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 Get Free Consultation
               </a>
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 View Success Stories →
               </a>
             </div>
@@ -164,16 +162,14 @@ export default function AI2026JuneRevolutionaryBreakthrough() {
           <h2 className="text-left">Related Content</h2>"
           <div className="text-left"></div>
             <a 
-              href="/blog/ai-2026-quantum-neural-fusion-breakthrough
-              className="text-left
-            >
+              href="/blog/ai-2026-quantum-neural-fusion-breakthrough"
+              className="text-left">
               <h3 className="text-left">Quantum-Neural Fusion Breakthrough</h3>"
               <p className="text-left">Deep dive into the technical architecture and capabilities of quantum-neural fusion systems.</p>"
             </a>
             <a 
-              href="/case-studies/fortune-500-ai-2026-breakthrough-mega-success
-              className="text-left
-            >
+              href="/case-studies/fortune-500-ai-2026-breakthrough-mega-success"
+              className="text-left">
               <h3 className="text-left">$2.3B Fortune 500 Success Story</h3>"
               <p className="text-left">Real-world case study showing measurable business value and ROI from AI implementation.</p>"
             </a>

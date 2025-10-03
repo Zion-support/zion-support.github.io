@@ -17,13 +17,13 @@ export const metadata: Metadata = {
 
 export default function February2025QuantumAIBreakthroughPage() {
   return (
-    <div className="text-left"></div>
-      {/* Hero Section */}
+    <div className="text-left">
+      {/* Hero Section */}</div>
       <section className="text-left">
         <div className="text-left"></div>
           <div className="text-left"></div>
             <div className="text-left"></div>
-              <span className="text-left"></span>
+              <span className="text-left">
                 🚀 February 2025 Quantum AI Breakthrough
               </span>
             </div>
@@ -57,15 +57,13 @@ export default function February2025QuantumAIBreakthroughPage() {
 
             <div className="text-left"></div>
               <a 
-                href="/case-studies/ai-2025-february-quantum-ai-breakthrough-50-billion-success
-                className="text-left
-              >
+                href="/case-studies/ai-2025-february-quantum-ai-breakthrough-50-billion-success"
+                className="text-left">
                 View $50B Success Story →
               </a>
               <a 
-                href="/services/quantum-ai-consultation
-                className="text-left
-              >
+                href="/services/quantum-ai-consultation"
+                className="text-left">
                 Get Quantum AI Consultation →
               </a>
             </div>
@@ -195,15 +193,13 @@ export default function February2025QuantumAIBreakthroughPage() {
               
               <div className="text-left"></div>
                 <a 
-                  href="/contact
-                  className="text-left
-                >
+                  href="/contact"
+                  className="text-left">
                   Schedule Consultation
                 </a>
                 <a 
-                  href="/services/quantum-ai-consultation
-                  className="text-left
-                >
+                  href="/services/quantum-ai-consultation"
+                  className="text-left">
                   Learn More About Our Services
                 </a>
               </div>
@@ -219,9 +215,8 @@ export default function February2025QuantumAIBreakthroughPage() {
               <h3 className="text-left">March 2025: Autonomous Operations Revolution</h3>"
               <p className="text-left">Discover how autonomous AI agents are revolutionizing enterprise operations with 85% automation rates.</p>"
               <a 
-                href="/blog/ai-2025-march-autonomous-enterprise-operations-revolution
-                className="text-left
-              >
+                href="/blog/ai-2025-march-autonomous-enterprise-operations-revolution"
+                className="text-left">
                 Read More →
               </a>
             </div>
@@ -229,9 +224,8 @@ export default function February2025QuantumAIBreakthroughPage() {
               <h3 className="text-left">January 2025: Enterprise Automation Breakthrough</h3>"
               <p className="text-left">Learn about the $2.3B cost savings and 95% efficiency gains achieved by Fortune 500 companies.</p>"
               <a 
-                href="/blog/ai-2025-january-enterprise-automation-breakthrough
-                className="text-left
-              >
+                href="/blog/ai-2025-january-enterprise-automation-breakthrough"
+                className="text-left">
                 Read More →
               </a>
             </div>
@@ -239,9 +233,8 @@ export default function February2025QuantumAIBreakthroughPage() {
               <h3 className="text-left">Case Study: $50B Success Story</h3>"
               <p className="text-left">Detailed analysis of how a Fortune 50 company achieved unprecedented results with quantum AI.</p>"
               <a 
-                href="/case-studies/ai-2025-february-quantum-ai-breakthrough-50-billion-success
-                className="text-left
-              >
+                href="/case-studies/ai-2025-february-quantum-ai-breakthrough-50-billion-success"
+                className="text-left">
                 View Case Study →
               </a>
             </div>

@@ -10,8 +10,8 @@ export const metadata = {
 
 export default function QuantumNeuralSuperintelligence2026() {
   return (
-    <div className="text-left"></div>
-      {/* Hero Section */}
+    <div className="text-left">
+      {/* Hero Section */}</div>
       <div className="text-left"></div>
         <div className="text-left"></div>
         <div className="text-left"></div>
@@ -30,16 +30,14 @@ export default function QuantumNeuralSuperintelligence2026() {
             </p>
             <div className="text-left"></div>
               <Link 
-                href="/case-studies/ai-2026-quantum-neural-superintelligence-25-billion-success
-                className="text-left
-              >
+                href="/case-studies/ai-2026-quantum-neural-superintelligence-25-billion-success"
+                className="text-left">
                 View $25B Success Case Study
                 <ArrowRight className="text-left" />
               </Link>
               <Link 
-                href="/services/quantum-ai-development
-                className="text-left
-              >
+                href="/services/quantum-ai-development"
+                className="text-left">
                 Implement Quantum AI
                 <Brain className="text-left" />
               </Link>
@@ -97,29 +95,29 @@ export default function QuantumNeuralSuperintelligence2026() {
           </h2>
           <div className="text-left"></div>
             <div className="text-left"></div>
-              <div className="text-left"></div>
-                10^15
+              <div className="text-left">
+                10^15</div>
               </div>
               <div className="text-left">Speed Improvement</div>
               <div className="text-left">Over classical AI systems</div>
             </div>
             <div className="text-left"></div>
-              <div className="text-left"></div>
-                99.9%
+              <div className="text-left">
+                99.9%</div>
               </div>
               <div className="text-left">Problem Solving Accuracy</div>
               <div className="text-left">Across all complexity levels</div>
             </div>
             <div className="text-left"></div>
-              <div className="text-left"></div>
-                ∞
+              <div className="text-left">
+                ∞</div>
               </div>
               <div className="text-left">Parallel Processing</div>
               <div className="text-left">Quantum superposition states</div>
             </div>
             <div className="text-left"></div>
-              <div className="text-left"></div>
-                $25B
+              <div className="text-left">
+                $25B</div>
               </div>
               <div className="text-left">ROI Generated</div>
               <div className="text-left">For enterprise clients</div>
@@ -270,16 +268,14 @@ export default function QuantumNeuralSuperintelligence2026() {
           </p>
           <div className="text-left"></div>
             <Link 
-              href="/contact
-              className="text-left
-            >
+              href="/contact"
+              className="text-left">
               Schedule Quantum Consultation
               <ArrowRight className="text-left" />
             </Link>
             <Link 
-              href="/services/quantum-ai-development
-              className="text-left
-            >
+              href="/services/quantum-ai-development"
+              className="text-left">
               Explore Quantum Solutions
               <TrendingUp className="text-left" />
             </Link>

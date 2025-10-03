@@ -14,8 +14,8 @@ export const metadata: Metadata = {
 
 export default function AIAutonomousOperations2025() {
   return (
-    <div className="text-left"></div>
-      {/* Hero Section */}
+    <div className="text-left">
+      {/* Hero Section */}</div>
       <section className="text-left">
         <div className="text-left"></div>
           <div className="text-left"></div>"
@@ -25,7 +25,7 @@ export default function AIAutonomousOperations2025() {
         <div className="text-left"></div>
           <div className="text-left"></div>
             <div className="text-left"></div>
-              <span className="text-left"></span>
+              <span className="text-left">
                 🤖 AI Innovation • January 27, 2025
               </span>
             </div>
@@ -49,8 +49,8 @@ export default function AIAutonomousOperations2025() {
 
       {/* Main Content */}
       <article className="text-left">
-        <div className="text-left"></div>
-          {/* Executive Summary */}
+        <div className="text-left">
+          {/* Executive Summary */}</div>
           <div className="text-left"></div>
             <h2 className="text-left">🎯 Executive Summary</h2>"
             <p className="text-left">
@@ -163,15 +163,13 @@ export default function AIAutonomousOperations2025() {
             </p>
             <div className="text-left"></div>
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 Get Free Consultation
               </a>
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 View More Case Studies
               </a>
             </div>

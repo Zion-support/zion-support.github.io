@@ -17,14 +17,14 @@ export const metadata: Metadata = {
 export default function AIFinTechTransformation2026() {
   return (
     <div className="text-left"></div>
-      <div className="text-left"></div>
-        {/* Header */}
+      <div className="text-left">
+        {/* Header */}</div>
         <div className="text-left"></div>
           <div className="text-left"></div>
-            <span className="text-left"></span>
+            <span className="text-left">
               NEW 2026
             </span>
-            <span className="text-left">22 min read<"
+            <span className="text-left">22 min read>
           </div>
           <h1 className="text-left">
             AI FinTech Transformation 2026: Complete Digital Banking Revolution
@@ -133,7 +133,7 @@ const digitalBankingAI = {
     loanProcessing: 'Automated underwriting',
     investmentAdvice: 'Robo-advisory services',
     compliance: 'Automated reporting'
-  }`
+  }
 };`}
               </pre>
             </div>
@@ -249,7 +249,7 @@ const digitalBankingAI = {
 
             <h3 className="text-left">AI Risk Assessment Model</h3>"
             <div className="text-left"></div>
-              <pre className="text-left">`
+              <pre className="text-left">
 {`// AI Risk Management System
 const riskAssessment = {
   fraudDetection: {
@@ -269,7 +269,7 @@ const riskAssessment = {
     timeHorizon: '1-30 days',
     confidence: '95-99%',
     updateFrequency: 'Continuous'
-  }`
+  }
 };`}
               </pre>
             </div>
@@ -468,15 +468,13 @@ const riskAssessment = {
           </p>
           <div className="text-left"></div>
             <a
-              href="/services/ai-finance-automation
-              className="text-left
-            >
+              href="/services/ai-finance-automation"
+              className="text-left">
               Explore AI Finance Solutions
             </a>
             <a
-              href="/contact
-              className="text-left
-            >
+              href="/contact"
+              className="text-left">
               Get Free Consultation
             </a>
           </div>
@@ -510,4 +508,4 @@ const riskAssessment = {
           </div>
         </section>
   );
-}</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>`
+}</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>

@@ -12,10 +12,10 @@ export default function AIFutureWorkforce2026() {
     <div className="text-left"></div>
       <div className="text-left"></div>
         <div className="text-left"></div>
-          <span className="text-left"></span>
+          <span className="text-left">
             NEW 2026
           </span>
-          <span className="text-left"></span>
+          <span className="text-left">
             FUTURE OF WORK
           </span>
         </div>
@@ -139,15 +139,13 @@ export default function AIFutureWorkforce2026() {
           </p>
           <div className="text-left"></div>
             <Link
-              href="/contact
-              className="text-left
-            >
+              href="/contact"
+              className="text-left">
               Get AI Workforce Consultation
             </Link>
             <Link
-              href="/services
-              className="text-left
-            >
+              href="/services"
+              className="text-left">
               View AI Services
             </Link>
           </div>

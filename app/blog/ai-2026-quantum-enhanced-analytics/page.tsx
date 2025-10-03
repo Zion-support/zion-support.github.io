@@ -18,8 +18,8 @@ export const metadata: Metadata = {
 export default function AI2026QuantumEnhancedAnalytics() {
   return (
     <div className="text-left"></div>
-      <div className="text-left"></div>
-        {/* Header */}
+      <div className="text-left">
+        {/* Header */}</div>
         <div className="text-left"></div>
           <div className="text-left"></div>
             <span className="text-left"><
@@ -80,7 +80,7 @@ export default function AI2026QuantumEnhancedAnalytics() {
 <div className="text-left"></div>
           <div className="text-left"></div>
             <h2 className="text-left">The Quantum Analytics Breakthrough</h2>"
-            <div className="text-left">origin/cursor/fix-errors-and-merge-to-main-0638
+            <div className="text-left">origin/cursor/fix-errors-and-merge-to-main-0638</div>
               <p>
                 Quantum-enhanced analytics represents the most significant leap forward in data processing 
                 since the advent of modern computing. By harnessing the power of quantum mechanics, we can 
@@ -141,15 +141,13 @@ export default function AI2026QuantumEnhancedAnalytics() {
               </p>
               <div className="text-left"></div>
                 <Link 
-                  href="/
-                  className="text-left
-                >
+                  href="/"
+                  className="text-left">
                   Get Quantum Analytics
                 </Link>
                 <Link 
-                  href="/
-                  className="text-left
-                >
+                  href="/"
+                  className="text-left">
                   Learn More
                 </Link>
               </div>
@@ -196,9 +194,8 @@ export default function AI2026QuantumEnhancedAnalytics() {
         {/* Back to Blog */}
         <div className="text-left"></div>
           <Link 
-            href="/
-            className="text-left
-          >
+            href="/"
+            className="text-left">
             <svg className="text-left" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
             </svg>

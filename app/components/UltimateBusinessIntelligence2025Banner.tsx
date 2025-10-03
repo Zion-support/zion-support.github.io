@@ -80,30 +80,31 @@ const UltimateBusinessIntelligence2025Banner = () => {
   const currentContent = content[currentSlide];
 
   return (
-    <div className="text-left"></div>
+    <div className="text-left">
       {/* Animated Background */}
-      <div className="text-left"></div>
-        <div className="text-left"></div>"
-        <div className="text-left"></div>"
-        <div className="text-left"></div>"
-        <div className="text-left"></div>"
-        <div className="text-left"></div>"
+      <div className="text-left">
+        <div className="text-left"></div>
+        <div className="text-left"></div>
+        <div className="text-left"></div>
+        <div className="text-left"></div>
+        <div className="text-left"></div>
       </div>
 
-      <div className="text-left"></div>
-        <div className="text-left"></div>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+      <div className="text-left">
+        <div className="text-left">
+          <div className="text-left">
+            <div className="text-left">
               🚀 NEW BREAKTHROUGH
             </div>
-            <div className="text-left"></div>
+            <div className="text-left">
               Ultimate Business Intelligence 2025
+            </div>
             </div>
           </div>
           <button
             onClick={handleDismiss}
-            className="text-left
-            aria-label="Dismiss banner
+            className="text-left"
+            aria-label="Dismiss banner"
           >
             <svg className="text-left" fill="none" stroke="currentColor" viewBox="0 0 24 24">"
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />"
@@ -146,28 +147,26 @@ const UltimateBusinessIntelligence2025Banner = () => {
             <div className="text-left"></div>
               <Link
                 href={currentContent.url}
-                className="text-left
-              >
+                className="text-left">
                 Read {currentContent.type}
               </Link>
               <Link
-                href="/contact
-                className="text-left
-              >
+                href="/contact"
+                className="text-left">
                 Get Consultation
               </Link>
             </div>
 
             {/* Content Type Badge */}
             <div className="text-left"></div>
-              <span className="text-left"></span>
+              <span className="text-left">
                 {currentContent.type}
               </span>
-              <span className="text-left"></span>
+              <span className="text-left">
                 {currentContent.readingTime}
               </span>
               {currentContent.featured && (
-                <span className="text-left"></span>
+                <span className="text-left">
                   FEATURED
                 </span>
               )}
@@ -181,10 +180,10 @@ const UltimateBusinessIntelligence2025Banner = () => {
               <div
                 key={item.id}
                 className={`bg-white/10 backdrop-blur-sm rounded-lg p-4 cursor-pointer transition-all duration-300 ${
-                  index === currentSlide ? 'ring-2 ring-yellow-400 bg-white/20' : 'hover:bg-white/15'`
+                  index === currentSlide ? 'ring-2 ring-yellow-400 bg-white/20' : 'hover:bg-white/15'
                 }`}
                 onClick={() => setCurrentSlide(index)}
-              >
+              ></div>
                 <div className="text-left"></div>
                   <div className="text-left"></div>
                     <h4 className="text-left">{item.title}</h4>"
@@ -205,14 +204,14 @@ const UltimateBusinessIntelligence2025Banner = () => {
         </div>
 
         {/* Progress Indicators */}
-        <div className="text-left"></div>
-          {content.map((_, index) => (
+        <div className="text-left">
+          {content.map((_, index) => (</div>
             <button
               key={index}
-              onClick={() => setCurrentSlide(index)}`
+              onClick={() => setCurrentSlide(index)}
               className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === currentSlide ? 'bg-yellow-400' : 'bg-white/30'`
-              }`}`
+                index === currentSlide ? 'bg-yellow-400' : 'bg-white/30'
+              }`}
               aria-label={`Go to slide ${index + 1}`}
             />
           ))}
@@ -222,4 +221,4 @@ const UltimateBusinessIntelligence2025Banner = () => {
   );
 };
 
-export default UltimateBusinessIntelligence2025Banner;`
+export default UltimateBusinessIntelligence2025Banner;

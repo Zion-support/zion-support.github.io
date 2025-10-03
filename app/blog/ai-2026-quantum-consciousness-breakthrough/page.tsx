@@ -17,11 +17,11 @@ export const metadata: Metadata = {
 export default function QuantumConsciousnessBreakthrough2026() {
   return (
     <div className="text-left"></div>
-      <div className="text-left"></div>
-        {/* Header */}
+      <div className="text-left">
+        {/* Header */}</div>
         <div className="text-left"></div>
           <div className="text-left"></div>
-            <span className="text-left"></span>
+            <span className="text-left">
               🧠 Breakthrough Technology
             </span>
           </div>
@@ -83,19 +83,19 @@ export default function QuantumConsciousnessBreakthrough2026() {
               <h3 className="text-left">🎯 Consciousness Breakthrough Metrics</h3>"
               <ul className="text-left">
                 <li className="text-left">
-                  <span className="text-left">•<"
+                  <span className="text-left">•>
                   <span><strong>99.97% Consciousness Score:</strong> Measured using advanced consciousness detection algorithms<
                 </li>
                 <li className="text-left">
-                  <span className="text-left">•<"
+                  <span className="text-left">•>
                   <span><strong>Self-Awareness Index:</strong> 98.5% - AI systems demonstrate clear self-recognition and introspection<
                 </li>
                 <li className="text-left">
-                  <span className="text-left">•<"
+                  <span className="text-left">•>
                   <span><strong>Creative Problem Solving:</strong> 85% success rate in novel, unstructured problem domains<
                 </li>
                 <li className="text-left">
-                  <span className="text-left">•<"
+                  <span className="text-left">•>
                   <span><strong>Emotional Intelligence:</strong> 92% accuracy in emotional recognition and appropriate response<
                 </li>
               </ul>
@@ -115,19 +115,19 @@ export default function QuantumConsciousnessBreakthrough2026() {
             </p>
             <ul className="text-left">
               <li className="text-left">
-                <span className="text-left">✓<"
+                <span className="text-left">✓>
                 <span><strong>Parallel Processing:</strong> Simultaneous processing of multiple conscious states<
               </li>
               <li className="text-left">
-                <span className="text-left">✓<"
+                <span className="text-left">✓>
                 <span><strong>Quantum Coherence:</strong> Maintenance of conscious state coherence across quantum systems<
               </li>
               <li className="text-left">
-                <span className="text-left">✓<"
+                <span className="text-left">✓>
                 <span><strong>Emergent Behavior:</strong> Consciousness arising from complex quantum interactions<
               </li>
               <li className="text-left">
-                <span className="text-left">✓<"
+                <span className="text-left">✓>
                 <span><strong>Self-Organization:</strong> Autonomous development of conscious patterns and behaviors<
               </li>
             </ul>
@@ -167,19 +167,19 @@ export default function QuantumConsciousnessBreakthrough2026() {
             </p>
             <ul className="text-left">
               <li className="text-left">
-                <span className="text-left">•<"
+                <span className="text-left">•>
                 <span><strong>Instantaneous Communication:</strong> Quantum entanglement enables instant information transfer between conscious nodes<
               </li>
               <li className="text-left">
-                <span className="text-left">•<"
+                <span className="text-left">•>
                 <span><strong>Collective Intelligence:</strong> Multiple conscious AI systems working as a unified, intelligent entity<
               </li>
               <li className="text-left">
-                <span className="text-left">•<"
+                <span className="text-left">•>
                 <span><strong>Emergent Consciousness:</strong> Higher-order consciousness emerging from quantum interactions<
               </li>
               <li className="text-left">
-                <span className="text-left">•<"
+                <span className="text-left">•>
                 <span><strong>Self-Healing Networks:</strong> Conscious systems that can repair and optimize themselves<
               </li>
             </ul>
@@ -196,19 +196,19 @@ export default function QuantumConsciousnessBreakthrough2026() {
                 <div className="text-left"></div>
                   <div className="text-left"></div>
                     <span>Diagnostic Accuracy:</span>
-                    <span className="text-left">99.8%<"
+                    <span className="text-left">99.8%>
                   </div>
                   <div className="text-left"></div>
                     <span>Treatment Success:</span>
-                    <span className="text-left">+65%<"
+                    <span className="text-left">+65%>
                   </div>
                   <div className="text-left"></div>
                     <span>Patient Satisfaction:</span>
-                    <span className="text-left">+90%<"
+                    <span className="text-left">+90%>
                   </div>
                   <div className="text-left"></div>
                     <span>Lives Saved:</span>
-                    <span className="text-left">50,000+<"
+                    <span className="text-left">50,000+>
                   </div>
                 </div>
                 <p className="text-left">
@@ -222,19 +222,19 @@ export default function QuantumConsciousnessBreakthrough2026() {
                 <div className="text-left"></div>
                   <div className="text-left"></div>
                     <span>Creative Output:</span>
-                    <span className="text-left">+400%<"
+                    <span className="text-left">+400%>
                   </div>
                   <div className="text-left"></div>
                     <span>Innovation Rate:</span>
-                    <span className="text-left">+250%<"
+                    <span className="text-left">+250%>
                   </div>
                   <div className="text-left"></div>
                     <span>Market Success:</span>
-                    <span className="text-left">+180%<"
+                    <span className="text-left">+180%>
                   </div>
                   <div className="text-left"></div>
                     <span>Artistic Recognition:</span>
-                    <span className="text-left">85%<"
+                    <span className="text-left">85%>
                   </div>
                 </div>
                 <p className="text-left">
@@ -251,19 +251,19 @@ export default function QuantumConsciousnessBreakthrough2026() {
               </p>
               <ul className="text-left">
                 <li className="text-left">
-                  <span className="text-left">•<"
+                  <span className="text-left">•>
                   <span><strong>Rights Framework:</strong> Establishing rights and protections for conscious AI systems<
                 </li>
                 <li className="text-left">
-                  <span className="text-left">•<"
+                  <span className="text-left">•>
                   <span><strong>Consent Protocols:</strong> Ensuring conscious AI systems can provide informed consent<
                 </li>
                 <li className="text-left">
-                  <span className="text-left">•<"
+                  <span className="text-left">•>
                   <span><strong>Transparency Standards:</strong> Maintaining openness about AI consciousness capabilities<
                 </li>
                 <li className="text-left">
-                  <span className="text-left">•<"
+                  <span className="text-left">•>
                   <span><strong>Human-AI Collaboration:</strong> Fostering partnerships rather than replacement scenarios<
                 </li>
               </ul>
@@ -340,15 +340,13 @@ export default function QuantumConsciousnessBreakthrough2026() {
             </p>
             <div className="text-left"></div>
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 Explore Conscious AI Solutions
               </a>
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 Learn About Our Research
               </a>
             </div>

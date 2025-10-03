@@ -50,10 +50,21 @@ const September30NewContent2025Banner: React.FC = () => {
     },
     {
       id: 4,
-      title: 'AI-Driven Financial Intelligence 2025',
-      slug: 'ai-financial-intelligence-2025',
-      excerpt: 'Real-time risk assessment and autonomous trading achieving 99.7% accuracy. Discover how AI transforms financial operations and decision-making.',
-      category: 'Financial AI',
+      title: 'Quantum-Enhanced Machine Learning 2025',
+      slug: 'quantum-enhanced-machine-learning-2025',
+      excerpt: '1000x performance breakthrough with quantum computing. Real quantum advantage demonstrated in optimization, drug discovery, and financial modeling.',
+      category: 'Quantum ML',
+      date: '2025-09-30',
+      readTime: '20 min',
+      icon: '⚛️',
+      gradient: 'from-indigo-500 to-purple-600'
+    },
+    {
+      id: 5,
+      title: 'AI-Powered Cloud FinOps 2025',
+      slug: 'ai-powered-cloud-finops-2025',
+      excerpt: '60% cloud cost reduction through autonomous optimization. $450M+ annual savings achieved with AI-driven resource management and predictive scaling.',
+      category: 'Cloud FinOps',
       date: '2025-09-30',
       readTime: '14 min',
       icon: '💰',
@@ -62,127 +73,198 @@ const September30NewContent2025Banner: React.FC = () => {
   ];
 
   return (
-    <div className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="text-left">
       {/* Animated background effects */}
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-blue-600/20 to-purple-600/20 animate-pulse"></div>
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-purple-600/20 to-pink-600/20 animate-pulse" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-pink-600/20 to-blue-600/20 animate-pulse" style={{ animationDelay: '4s' }}></div>
+      <div className="text-left">
+        <div className="text-left"></div>"
+        <div className="text-left" style={{ animationDelay: '2s' }}></div>"
+        <div className="text-left" style={{ animationDelay: '4s' }}></div>"
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="text-left">
         {/* Header Section */}
-        <div className="text-center mb-12">
-          <div className="flex items-center justify-center gap-2 mb-6">
-            <Rocket className="w-6 h-6 text-yellow-400" />
-            <span className="text-yellow-400 font-semibold text-sm uppercase tracking-wider">
-              🚀 JUST PUBLISHED • SEPTEMBER 30, 2025
+        <div className="text-left">
+          <div className="text-left">
+            <Rocket className="text-left" />
+            <span className="text-left">
+              🔥 5 BREAKTHROUGH ARTICLES RELEASED • SEPTEMBER 30, 2025
             </span>
-            <Rocket className="w-6 h-6 text-yellow-400" />
+            <Sparkles className="text-left" />
           </div>
 
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              Revolutionary AI Articles
-            </span>
-            <br />
-            <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-              Just Released Today
-            </span>
+          <h2 className="text-left">
+            Latest AI Breakthroughs & Innovations
           </h2>
           
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Discover the latest breakthroughs in AI technology, autonomous operations, and enterprise transformation. 
-            These cutting-edge insights are already delivering <span className="text-yellow-400 font-semibold">300%+ ROI</span> for forward-thinking companies.
+          <p className="text-left">
+            Cutting-edge research, enterprise implementations, and breakthrough technologies that are 
+            revolutionizing AI operations, quantum computing, and cloud economics.
           </p>
-
-          <div className="flex items-center justify-center gap-8 mb-8">
-            <div className="flex items-center gap-2 text-gray-300">
-              <TrendingUp className="w-5 h-5 text-green-400" />
-              <span className="text-sm">15,000+ Readers</span>
-            </div>
-            <div className="flex items-center gap-2 text-gray-300">
-              <Zap className="w-5 h-5 text-yellow-400" />
-              <span className="text-sm">5 New Articles</span>
-            </div>
-            <div className="flex items-center gap-2 text-gray-300">
-              <Star className="w-5 h-5 text-blue-400" />
-              <span className="text-sm">Expert Insights</span>
-            </div>
-          </div>
         </div>
 
-        {/* Featured Articles Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {newArticles.map((article, index) => (
-            <Link 
+        {/* Articles Grid */}
+        <div className="text-left">
+          {newArticles.slice(0, 3).map((article, index) => (
+            <div 
               key={article.id}
-              href={`/blog/${article.slug}`}
-              className="group"
+              className="text-left"
+              style={{ animationDelay: `${index * 150}ms` }}
             >
-              <div className="relative bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300 hover:scale-105">
-                <div className={`absolute inset-0 bg-gradient-to-r ${article.gradient} opacity-0 group-hover:opacity-20 rounded-2xl transition-opacity duration-300`}></div>
-                
-                <div className="relative z-10">
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="text-4xl">{article.icon}</span>
-                    <div className="flex gap-2">
-                      <span className="px-3 py-1 bg-gradient-to-r from-green-500 to-blue-500 rounded-full text-xs font-semibold text-white">
-                        NEW
-                      </span>
-                    </div>
+              {/* Card glow effect */}
+              <div className="text-left"></div>
+              <div className="text-left">
+                {/* Icon & Badge */}
+                <div className="text-left">
+                  <div className="text-left">
+                    {article.icon}
                   </div>
-                  
-                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-yellow-400 transition-colors">
-                    {article.title}
-                  </h3>
-                  
-                  <p className="text-gray-300 mb-4 text-sm leading-relaxed">
-                    {article.excerpt}
-                  </p>
-                  
-                  <div className="flex items-center justify-between text-xs text-gray-400">
-                    <span className="uppercase tracking-wider">{article.category}</span>
-                    <div className="flex items-center gap-2">
-                      <span>{article.readTime}</span>
-                      <ArrowRight className="w-4 h-4 text-blue-400 group-hover:text-blue-300" />
+                  <div className="text-left">
+                    <div className="text-left">
+                      <TrendingUp className="text-left" />
+                      <span>NEW</span>
                     </div>
-                  </div>
                 </div>
+
+                {/* Category Tag */}
+                <div className="text-left">
+                  <span className={`inline-block px-4 py-2 rounded-full bg-gradient-to-r ${article.gradient} text-white text-sm font-semibold shadow-lg`}>
+                    {article.category}
+                  </span>
+                </div>
+
+                {/* Title */}
+                <h3 className="text-left">
+                  {article.title}
+                </h3>
+
+                {/* Excerpt */}
+                <p className="text-left">
+                  {article.excerpt}
+                </p>
+
+                {/* Meta Info */}
+                <div className="text-left">
+                  <span className="text-left">
+                    <Zap className="text-left" />
+                    {article.readTime}
+                  </span>
+                  <span>{new Date(article.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>
+                </div>
+
+                {/* CTA Button */}
+                <Link
+                  href={`/blog/${article.slug}`}
+                  className="text-left">
+                  <span>Read Full Article</span>
+                  <ArrowRight className="text-left" />
+                </Link>
               </div>
-            </Link>
           ))}
         </div>
 
-        {/* Call to Action */}
-        <div className="text-center">
-          <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-2xl p-8 border border-white/20">
-            <h3 className="text-2xl font-bold text-white mb-4">
-              Ready to Implement These Breakthroughs?
-            </h3>
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Join thousands of enterprises already implementing these revolutionary AI strategies. 
-              Get exclusive access to our implementation guides, expert consultations, and proven frameworks.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="/contact"
-                className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center gap-2"
-              >
-                <Rocket className="w-5 h-5" />
-                Get Implementation Guide
-              </Link>
-              <Link 
-                href="/services"
-                className="px-8 py-3 border border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-center gap-2"
-              >
-                <Sparkles className="w-5 h-5" />
-                View All Services
-              </Link>
-            </div>
-          </div>
+        {/* Second Row */}
+        <div className="text-left">
+          {newArticles.slice(3).map((article, index) => (
+            <div 
+              key={article.id}
+              className="text-left">
+              {/* Card glow effect */}
+              <div className="text-left"></div>
+              <div className="text-left">
+                {/* Icon & Badge */}
+                <div className="text-left">
+                  <div className="text-left">
+                    {article.icon}
+                  </div>
+                  <div className="text-left">
+                    <div className="text-left">
+                      <Star className="text-left" />
+                      <span>FEATURED</span>
+                    </div>
+                </div>
+
+                {/* Category Tag */}
+                <div className="text-left">
+                  <span className={`inline-block px-4 py-2 rounded-full bg-gradient-to-r ${article.gradient} text-white text-sm font-semibold shadow-lg`}>
+                    {article.category}
+                  </span>
+                </div>
+
+                {/* Title */}
+                <h3 className="text-left">
+                  {article.title}
+                </h3>
+
+                {/* Excerpt */}
+                <p className="text-left">
+                  {article.excerpt}
+                </p>
+
+                {/* Meta Info */}
+                <div className="text-left">
+                  <span className="text-left">
+                    <Zap className="text-left" />
+                    {article.readTime}
+                  </span>
+                  <span>{new Date(article.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>
+                </div>
+
+                {/* CTA Button */}
+                <Link
+                  href={`/blog/${article.slug}`}
+                  className="text-left">
+                  <span>Read Full Article</span>
+                  <ArrowRight className="text-left" />
+                </Link>
+              </div>
+          ))}
         </div>
-      </div>
+
+        {/* Call-to-Action Section */}
+        <div className="text-left">
+          <div className="text-left">
+            <div className="text-left">
+              <h3 className="text-left">
+                Transform Your Enterprise with AI
+              </h3>
+              <p className="text-left">
+                Join 500+ Fortune 500 enterprises achieving breakthrough results with AI-powered operations, 
+                quantum computing, and autonomous systems. Get expert guidance from our team.
+              </p>
+              <div className="text-left">
+                <Link
+                  href="/blog"
+                  className="text-left">
+                  <Sparkles className="text-left" />
+                  <span>Explore All Articles</span>
+                </Link>
+                <Link
+                  href="/contact"
+                  className="text-left">
+                  <span>Schedule Expert Consultation</span>
+                  <ArrowRight className="text-left" />
+                </Link>
+              </div>
+          </div>
+
+        {/* Stats Section */}
+        <div className="text-left">
+          {[
+            { value='500+', label: 'Enterprise Clients', icon: '🏢' },
+            { value='$2.5B+', label: 'Value Delivered', icon: '💎' },
+            { value='99.99%', label: 'System Reliability', icon: '⚡' },
+            { value='1000x', label: 'Performance Gains', icon: '🚀' }
+          ].map((stat, index) => (
+            <div key={index} className="text-left">
+              <div className="text-left">{stat.icon}</div>"
+              <div className="text-left">
+                {stat.value}
+              </div>
+              <div className="text-left">
+                {stat.label}
+              </div>
+          ))}
+        </div>
     </div>
   );
 };

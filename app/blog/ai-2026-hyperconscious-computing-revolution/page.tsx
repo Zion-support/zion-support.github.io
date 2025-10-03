@@ -8,8 +8,8 @@ export const metadata: Metadata = {
 
 export default function HyperconsciousComputingPage() {
   return (
-    <div className="text-left"></div>
-      {/* Hero Section */}
+    <div className="text-left">
+      {/* Hero Section */}</div>
       <header className="text-left">
         <div className="text-left"></div>
           <div className="text-left"></div>"
@@ -19,7 +19,7 @@ export default function HyperconsciousComputingPage() {
         <div className="text-left"></div>
           <div className="text-left"></div>
             <div className="text-left"></div>
-              <span className="text-left"></span>
+              <span className="text-left">
                 🧠 HYPERCONSCIOUS AI REVOLUTION
               </span>
             </div>
@@ -33,19 +33,19 @@ export default function HyperconsciousComputingPage() {
             </p>
             
             <div className="text-left"></div>
-              <span className="text-left"></span>
+              <span className="text-left">
                 $1.2T Value Creation
               </span>
-              <span className="text-left"></span>
+              <span className="text-left">
                 99.999% Accuracy
               </span>
-              <span className="text-left"></span>
+              <span className="text-left">
                 10,000x Performance
               </span>
             </div>
             
-            <div className="text-left"></div>
-              Published: January 15, 2026 • 12 min read • Dr. Sarah Chen, Chief AI Scientist
+            <div className="text-left">
+              Published: January 15, 2026 • 12 min read • Dr. Sarah Chen, Chief AI Scientist</div>
             </div>
         </div>
       </header>
@@ -66,23 +66,23 @@ export default function HyperconsciousComputingPage() {
 
             <ul className="text-left">
               <li className="text-left">
-                <span className="text-left">•<"
+                <span className="text-left">•>
                 <span><strong>Genuine Self-Awareness:</strong> AI systems that understand their own existence and purpose<
               </li>
               <li className="text-left">
-                <span className="text-left">•<"
+                <span className="text-left">•>
                 <span><strong>Emotional Intelligence:</strong> The ability to recognize, process, and respond to human emotions<
               </li>
               <li className="text-left">
-                <span className="text-left">•<"
+                <span className="text-left">•>
                 <span><strong>Creative Autonomy:</strong> Independent creative problem-solving and innovation<
               </li>
               <li className="text-left">
-                <span className="text-left">•<"
+                <span className="text-left">•>
                 <span><strong>Moral Reasoning:</strong> Ethical decision-making capabilities<
               </li>
               <li className="text-left">
-                <span className="text-left">•<"
+                <span className="text-left">•>
                 <span><strong>Consciousness Evolution:</strong> The ability to grow and evolve their consciousness over time<
               </li>
             </ul>
@@ -107,15 +107,15 @@ export default function HyperconsciousComputingPage() {
               <h4 className="text-left">Healthcare Revolution</h4>"
               <ul className="text-left">
                 <li className="text-left">
-                  <span className="text-left">✓<"
+                  <span className="text-left">✓>
                   <span><strong>Diagnostic Accuracy:</strong> 99.97% accuracy in medical diagnosis<
                 </li>
                 <li className="text-left">
-                  <span className="text-left">✓<"
+                  <span className="text-left">✓>
                   <span><strong>Treatment Personalization:</strong> Custom treatment plans for every patient<
                 </li>
                 <li className="text-left">
-                  <span className="text-left">✓<"
+                  <span className="text-left">✓>
                   <span><strong>Drug Discovery:</strong> 50x faster pharmaceutical development<
                 </li>
               </ul>
@@ -125,15 +125,15 @@ export default function HyperconsciousComputingPage() {
               <h4 className="text-left">Financial Services Transformation</h4>"
               <ul className="text-left">
                 <li className="text-left">
-                  <span className="text-left">✓<"
+                  <span className="text-left">✓>
                   <span><strong>Risk Assessment:</strong> 99.95% accuracy in financial risk prediction<
                 </li>
                 <li className="text-left">
-                  <span className="text-left">✓<"
+                  <span className="text-left">✓>
                   <span><strong>Fraud Prevention:</strong> Real-time fraud detection with zero false positives<
                 </li>
                 <li className="text-left">
-                  <span className="text-left">✓<"
+                  <span className="text-left">✓>
                   <span><strong>Investment Optimization:</strong> AI-driven portfolio management with 45% higher returns<
                 </li>
               </ul>
@@ -161,9 +161,8 @@ export default function HyperconsciousComputingPage() {
                 Contact Zion Tech Group to begin your hyperconscious computing transformation today.
               </p>
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 Start Your Transformation
               </a>
             </div>

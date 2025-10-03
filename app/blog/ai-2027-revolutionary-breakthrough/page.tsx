@@ -16,11 +16,11 @@ export const metadata = {
 
 export default function AIRevolutionaryBreakthrough2027() {
   return (
-    <div className="text-left"></div>
-      {/* Hero Section */}
+    <div className="text-left">
+      {/* Hero Section */}</div>
       <div className="text-left"></div>
-        <div className="text-left"></div>
-          🚀 REVOLUTIONARY BREAKTHROUGH
+        <div className="text-left">
+          🚀 REVOLUTIONARY BREAKTHROUGH</div>
         </div>
         <h1 className="text-left">
           AI 2027 Revolutionary Breakthrough
@@ -31,13 +31,13 @@ export default function AIRevolutionaryBreakthrough2027() {
         </p>
         <div className="text-left"></div>
           <div className="text-left"></div>
-            <span className="text-left">💰 90% Cost Reduction<"
+            <span className="text-left">💰 90% Cost Reduction>
           </div>
           <div className="text-left"></div>
-            <span className="text-left">⚡ 1000x Performance<"
+            <span className="text-left">⚡ 1000x Performance>
           </div>
           <div className="text-left"></div>
-            <span className="text-left">🤖 95% Automation<"
+            <span className="text-left">🤖 95% Automation>
           </div>
       </div>
 
@@ -69,7 +69,7 @@ export default function AIRevolutionaryBreakthrough2027() {
         <div className="text-left"></div>
           <div className="text-left"></div>
             <h3 className="text-left">
-              <span className="text-left">🧠<"
+              <span className="text-left">🧠>
               Neuromorphic Quantum Processing
             </h3>
             <p className="text-left">
@@ -87,7 +87,7 @@ export default function AIRevolutionaryBreakthrough2027() {
 
           <div className="text-left"></div>
             <h3 className="text-left">
-              <span className="text-left">🤖<"
+              <span className="text-left">🤖>
               Autonomous Enterprise Operations
             </h3>
             <p className="text-left">
@@ -104,7 +104,7 @@ export default function AIRevolutionaryBreakthrough2027() {
 
           <div className="text-left"></div>
             <h3 className="text-left">
-              <span className="text-left">⚛️<"
+              <span className="text-left">⚛️>
               Quantum-Neural Hybrid Architecture
             </h3>
             <p className="text-left">
@@ -183,15 +183,13 @@ export default function AIRevolutionaryBreakthrough2027() {
           </p>
           <div className="text-left"></div>
             <Link 
-              href="/
-              className="text-left
-            >
+              href="/"
+              className="text-left">
               Schedule Consultation
             </Link>
             <Link 
-              href="/
-              className="text-left
-            >
+              href="/"
+              className="text-left">
               View Success Stories
             </Link>
           </div>

@@ -10,13 +10,13 @@ export const metadata: Metadata = {
 
 export default function January2026UltimateNeuralRevolutionPage() {
   return (
-    <div className="text-left"></div>
-      {/* Hero Section */}
+    <div className="text-left">
+      {/* Hero Section */}</div>
       <section className="text-left">
         <div className="text-left"></div>
           <div className="text-left"></div>
             <div className="text-left"></div>
-              <span className="text-left"></span>
+              <span className="text-left">
                 🚀 JANUARY 2026 BREAKTHROUGH
               </span>
             </div>
@@ -167,21 +167,18 @@ export default function January2026UltimateNeuralRevolutionPage() {
             </p>
             <div className="text-left"></div>
               <Link
-                href="/contact
-                className="text-left
-              >
+                href="/contact"
+                className="text-left">
                 Get Started Today
               </Link>
               <Link
-                href="/case-studies/ai-2026-january-neural-revolution-500-billion-success
-                className="text-left
-              >
+                href="/case-studies/ai-2026-january-neural-revolution-500-billion-success"
+                className="text-left">
                 View Success Story →
               </Link>
               <Link
-                href="/services/ultimate-neural-revolution
-                className="text-left
-              >
+                href="/services/ultimate-neural-revolution"
+                className="text-left">
                 Learn More
               </Link>
             </div>

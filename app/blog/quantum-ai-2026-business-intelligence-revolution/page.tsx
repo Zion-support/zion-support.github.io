@@ -10,14 +10,13 @@ export const metadata = {
 
 export default function QuantumAIBusinessIntelligence() {
   return (
-    <div className="text-left"></div>
-      {/* Header */}
+    <div className="text-left">
+      {/* Header */}</div>
       <header className="text-left">
         <div className="text-left"></div>
           <Link 
-            href="/
-            className="text-left
-          >
+            href="/"
+            className="text-left">
             <ArrowLeft className="text-left" />
             Back to Home
           </Link>
@@ -51,9 +50,9 @@ export default function QuantumAIBusinessIntelligence() {
             Explore how quantum AI is revolutionizing business intelligence in 2026. Discover the breakthrough technologies that are transforming raw data into strategic competitive advantages for forward-thinking enterprises.
           </p>
           
-          <div className="text-left"></div>
-            {['Quantum AI', 'Business Intelligence', 'Data Analytics', '2026 Innovation', 'Strategic Intelligence'].map((tag) => (
-              <span key={tag} className="text-left"></span>
+          <div className="text-left">
+            {['Quantum AI', 'Business Intelligence', 'Data Analytics', '2026 Innovation', 'Strategic Intelligence'].map((tag) => (</div>
+              <span key={tag} className="text-left">
                 <Tag className="text-left" />
                 {tag}
               <
@@ -297,15 +296,13 @@ export default function QuantumAIBusinessIntelligence() {
             </p>
             <div className="text-left"></div>
               <Link 
-                href="/guides/quantum-ai-implementation-roadmap-2026
-                className="text-left
-              >
+                href="/guides/quantum-ai-implementation-roadmap-2026"
+                className="text-left">
                 Get Quantum AI Roadmap
               </Link>
               <Link 
-                href="/case-studies/fortune-500-quantum-bi-transformation
-                className="text-left
-              >
+                href="/case-studies/fortune-500-quantum-bi-transformation"
+                className="text-left">
                 View Success Stories
               </Link>
             </div>

@@ -14,8 +14,8 @@ export const metadata: Metadata = {
 
 export default function AIAutonomousOperationsService() {
   return (
-    <div className="text-left"></div>
-      {/* Hero Section */}
+    <div className="text-left">
+      {/* Hero Section */}</div>
       <section className="text-left">
         <div className="text-left"></div>
           <div className="text-left"></div>"
@@ -25,7 +25,7 @@ export default function AIAutonomousOperationsService() {
         <div className="text-left"></div>
           <div className="text-left"></div>
             <div className="text-left"></div>
-              <span className="text-left"></span>
+              <span className="text-left">
                 ⚡ New Service • January 20, 2025
               </span>
             </div>
@@ -40,15 +40,13 @@ export default function AIAutonomousOperationsService() {
             
             <div className="text-left"></div>
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 Get Started Today
               </a>
               <a 
                 href="#features" "
-                className="text-left
-              >
+                className="text-left">
                 Explore Features
               </a>
             </div>
@@ -57,8 +55,8 @@ export default function AIAutonomousOperationsService() {
 
       {/* Main Content */}
       <article className="text-left">
-        <div className="text-left"></div>
-          {/* Service Overview */}
+        <div className="text-left">
+          {/* Service Overview */}</div>
           <div className="text-left"></div>
             <h2 className="text-left">🎯 Service Overview</h2>"
             <p className="text-left">
@@ -207,62 +205,60 @@ export default function AIAutonomousOperationsService() {
                 <div className="text-left">$50K<span className="text-left">/month<</div>"
                 <ul className="text-left">
                   <li className="text-left">
-                    <span className="text-left">✓<"
+                    <span className="text-left">✓>
                     Up to 10 processes automated
                   </li>
                   <li className="text-left">
-                    <span className="text-left">✓<"
+                    <span className="text-left">✓>
                     Basic predictive analytics
                   </li>
                   <li className="text-left">
-                    <span className="text-left">✓<"
+                    <span className="text-left">✓>
                     Email support
                   </li>
                   <li className="text-left">
-                    <span className="text-left">✓<"
+                    <span className="text-left">✓>
                     Monthly performance reports
                   </li>
                 </ul>
                 <a 
-                  href="/
-                  className="text-left
-                >
+                  href="/"
+                  className="text-left">
                   Get Started
                 </a>
               </div>
               
               <div className="text-left"></div>
-                <div className="text-left"></div>
-                  Most Popular
+                <div className="text-left">
+                  Most Popular</div>
                 </div>
                 <h3 className="text-left">Professional</h3>"
                 <div className="text-left">$150K<span className="text-left">/month<</div>"
                 <ul className="text-left">
                   <li className="text-left">
-                    <span className="text-left">✓<"
+                    <span className="text-left">✓>
                     Up to 50 processes automated
                   </li>
                   <li className="text-left">
-                    <span className="text-left">✓<"
+                    <span className="text-left">✓>
                     Advanced AI analytics
                   </li>
                   <li className="text-left">
-                    <span className="text-left">✓<"
+                    <span className="text-left">✓>
                     Priority support
                   </li>
                   <li className="text-left">
-                    <span className="text-left">✓<"
+                    <span className="text-left">✓>
                     Real-time monitoring
                   </li>
                   <li className="text-left">
-                    <span className="text-left">✓<"
+                    <span className="text-left">✓>
                     Custom integrations
                   </li>
                 </ul>
                 <a 
-                  href="/
-                  className="text-left
-                >
+                  href="/"
+                  className="text-left">
                   Get Started
                 </a>
               </div>
@@ -272,30 +268,29 @@ export default function AIAutonomousOperationsService() {
                 <div className="text-left">Custom</div>"
                 <ul className="text-left">
                   <li className="text-left">
-                    <span className="text-left">✓<"
+                    <span className="text-left">✓>
                     Unlimited processes
                   </li>
                   <li className="text-left">
-                    <span className="text-left">✓<"
+                    <span className="text-left">✓>
                     Full AI autonomy
                   </li>
                   <li className="text-left">
-                    <span className="text-left">✓<"
+                    <span className="text-left">✓>
                     Dedicated support team
                   </li>
                   <li className="text-left">
-                    <span className="text-left">✓<"
+                    <span className="text-left">✓>
                     Custom AI models
                   </li>
                   <li className="text-left">
-                    <span className="text-left">✓<"
+                    <span className="text-left">✓>
                     24/7 monitoring
                   </li>
                 </ul>
                 <a 
-                  href="/
-                  className="text-left
-                >
+                  href="/"
+                  className="text-left">
                   Contact Sales
                 </a>
               </div>
@@ -309,15 +304,13 @@ export default function AIAutonomousOperationsService() {
             </p>
             <div className="text-left"></div>
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 Get Free Consultation
               </a>
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 View Case Studies
               </a>
             </div>

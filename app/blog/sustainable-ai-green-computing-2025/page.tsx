@@ -29,10 +29,10 @@ export default function SustainableAIGreenComputing() {
           ← Back to Blog
         </Link>
         <div className="text-left"></div>
-          <span className="text-left"></span>
+          <span className="text-left">
             Sustainable Technology
           </span>
-          <span className="text-left">September 30, 2025<"
+          <span className="text-left">September 30, 2025>
         </div>
         <h1 className="text-left">
           Sustainable AI: Green Computing Solutions for Enterprise 2025
@@ -152,7 +152,7 @@ export default function SustainableAIGreenComputing() {
         <h2 className="text-left">📊 Real-World Success Stories</h2>"
         <blockquote className="text-left">
           <p className="text-left">
-            "By implementing sustainable AI solutions from Zion Tech Group, we reduced our data center energy 
+            "By implementing sustainable AI solutions from Zion Tech Group, we reduced our data center energy "
             consumption by 85% and achieved net-zero operations. The best part? We saved $30 million annually 
             while improving AI performance by 25%. It's proof that sustainability and profitability go hand in hand."
           </p>
@@ -166,29 +166,29 @@ export default function SustainableAIGreenComputing() {
           <div className="text-left"></div>
             <div></div>
               <div className="text-left"></div>
-                <span className="text-left">85%<"
-                <span className="text-left">Carbon Reduction<"
+                <span className="text-left">85%<
+                <span className="text-left">Carbon Reduction>
               </div>
               <p className="text-left">500,000 tons CO₂ saved annually</p>"
             </div>
             <div></div>
               <div className="text-left"></div>
-                <span className="text-left">$30M<"
-                <span className="text-left">Cost Savings<"
+                <span className="text-left">$30M<
+                <span className="text-left">Cost Savings>
               </div>
               <p className="text-left">Per year for enterprise deployment</p>"
             </div>
             <div></div>
               <div className="text-left"></div>
-                <span className="text-left">25%<"
-                <span className="text-left">Performance Increase<"
+                <span className="text-left">25%<
+                <span className="text-left">Performance Increase>
               </div>
               <p className="text-left">Faster processing with less energy</p>"
             </div>
             <div></div>
               <div className="text-left"></div>
-                <span className="text-left">Net-Zero<"
-                <span className="text-left">Carbon Neutrality<"
+                <span className="text-left">Net-Zero<
+                <span className="text-left">Carbon Neutrality>
               </div>
               <p className="text-left">Achieved within 18 months</p>"
             </div>
@@ -205,8 +205,8 @@ export default function SustainableAIGreenComputing() {
                 while enabling higher performance density.
               </p>
               <div className="text-left"></div>
-                <span className="text-left">40% Energy Savings<"
-                <span className="text-left">50% More Compute Density<"
+                <span className="text-left">40% Energy Savings<
+                <span className="text-left">50% More Compute Density>
               </div>
             </div>
             <div></div>
@@ -216,8 +216,8 @@ export default function SustainableAIGreenComputing() {
                 district heating networks, or industrial processes.
               </p>
               <div className="text-left"></div>
-                <span className="text-left">90% Heat Recovery<"
-                <span className="text-left">Additional Revenue Stream<"
+                <span className="text-left">90% Heat Recovery<
+                <span className="text-left">Additional Revenue Stream>
               </div>
             </div>
             <div></div>
@@ -227,8 +227,8 @@ export default function SustainableAIGreenComputing() {
                 schedule intensive workloads during peak renewable energy production.
               </p>
               <div className="text-left"></div>
-                <span className="text-left">95% Renewable Energy<"
-                <span className="text-left">35% Cost Reduction<"
+                <span className="text-left">95% Renewable Energy<
+                <span className="text-left">35% Cost Reduction>
               </div>
             </div>
           </div>
@@ -240,23 +240,23 @@ export default function SustainableAIGreenComputing() {
             <h3 className="text-left">Financial Impact</h3>"
             <ul className="text-left">
               <li className="text-left">
-                <span className="text-left">✓<"
+                <span className="text-left">✓>
                 $30M+ annual cost savings
               </li>
               <li className="text-left">
-                <span className="text-left">✓<"
+                <span className="text-left">✓>
                 60% reduction in energy bills
               </li>
               <li className="text-left">
-                <span className="text-left">✓<"
+                <span className="text-left">✓>
                 Carbon credit revenue generation
               </li>
               <li className="text-left">
-                <span className="text-left">✓<"
+                <span className="text-left">✓>
                 Government incentives and tax benefits
               </li>
               <li className="text-left">
-                <span className="text-left">✓<"
+                <span className="text-left">✓>
                 Improved investor ESG ratings
               </li>
             </ul>
@@ -265,23 +265,23 @@ export default function SustainableAIGreenComputing() {
             <h3 className="text-left">Strategic Advantages</h3>"
             <ul className="text-left">
               <li className="text-left">
-                <span className="text-left">✓<"
+                <span className="text-left">✓>
                 Enhanced brand reputation and customer loyalty
               </li>
               <li className="text-left">
-                <span className="text-left">✓<"
+                <span className="text-left">✓>
                 Regulatory compliance and future-proofing
               </li>
               <li className="text-left">
-                <span className="text-left">✓<"
+                <span className="text-left">✓>
                 Attract environmentally conscious talent
               </li>
               <li className="text-left">
-                <span className="text-left">✓<"
+                <span className="text-left">✓>
                 Competitive differentiation in the market
               </li>
               <li className="text-left">
-                <span className="text-left">✓<"
+                <span className="text-left">✓>
                 25% performance improvement
               </li>
             </ul>
@@ -330,15 +330,13 @@ export default function SustainableAIGreenComputing() {
           </p>
           <div className="text-left"></div>
             <Link
-              href="/services/sustainable-ai
-              className="text-left
-            >
+              href="/services/sustainable-ai"
+              className="text-left">
               Explore Green Solutions
             </Link>
             <a
-              href="tel:+13024640950
-              className="text-left
-            >
+              href="tel:+13024640950"
+              className="text-left">
               Call +1 302 464 0950
             </a>
           </div>

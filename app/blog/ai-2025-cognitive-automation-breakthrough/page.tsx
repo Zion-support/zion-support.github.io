@@ -17,11 +17,11 @@ export const metadata: Metadata = {
 export default function AI2025CognitiveAutomationBreakthrough() {
   return (
     <div className="text-left"></div>
-      <div className="text-left"></div>
-        {/* Hero Section */}
+      <div className="text-left">
+        {/* Hero Section */}</div>
         <div className="text-left"></div>
           <div className="text-left"></div>
-            <span className="text-left"></span>
+            <span className="text-left">
               🧠 BREAKING: January 2025
             </span>
           </div>
@@ -267,15 +267,13 @@ export default function AI2025CognitiveAutomationBreakthrough() {
               </p>
               <div className="text-left"></div>
                 <a 
-                  href="/contact
-                  className="text-left
-                >
+                  href="/contact"
+                  className="text-left">
                   Get Started Today
                 </a>
                 <a 
-                  href="/services
-                  className="text-left
-                >
+                  href="/services"
+                  className="text-left">
                   View Services
                 </a>
               </div>

@@ -10,12 +10,12 @@ export const metadata: Metadata = {
 export default function AI2026AdvancedNeuralArchitectures() {
   return (
     <main className="text-left">
-      <div className="text-left"></div>
-        {/* Hero Section */}
+      <div className="text-left">
+        {/* Hero Section */}</div>
         <div className="text-left"></div>
           <div className="text-left"></div>
             <div className="text-left"></div>
-              <span className="text-left"></span>
+              <span className="text-left">
                 🚀 Revolutionary AI Breakthrough
               </span>
             </div>
@@ -29,20 +29,20 @@ export default function AI2026AdvancedNeuralArchitectures() {
           </div>
 
           {/* Key Metrics */}
-          <div className="text-left"></div>
+          <div className="text-left">
             {[
               { value='1000x', label: 'Performance Improvement', icon: '⚡' },
               { value='95%', label: 'Decision Accuracy', icon: '🎯' },
               { value='98%', label: 'Automation Rate', icon: '🤖' },
               { value='$2.3B', label: 'Enterprise Savings', icon: '💰' }
-            ].map((metric, index) => (
+            ].map((metric, index) => (</div>
               <div key={index} className="text-left"></div>
                 <div className="text-left">{metric.icon}</div>"
-                <div className="text-left"></div>
-                  {metric.value}
+                <div className="text-left">
+                  {metric.value}</div>
                 </div>
-                <div className="text-left"></div>
-                  {metric.label}
+                <div className="text-left">
+                  {metric.label}</div>
                 </div>
             ))}
           </div>
@@ -60,19 +60,19 @@ export default function AI2026AdvancedNeuralArchitectures() {
                 <h3 className="text-left">Key Breakthrough Features</h3>"
                 <ul className="text-left">
                   <li className="text-left">
-                    <span className="text-left">✓<"
+                    <span className="text-left">✓>
                     <span>Meta-reasoning capabilities that enable self-reflection and strategy optimization</span>
                   </li>
                   <li className="text-left">
-                    <span className="text-left">✓<"
+                    <span className="text-left">✓>
                     <span>Quantum-enhanced processing for 1000x faster decision making</span>
                   </li>
                   <li className="text-left">
-                    <span className="text-left">✓<"
+                    <span className="text-left">✓>
                     <span>Autonomous learning systems that adapt and evolve without human intervention</span>
                   </li>
                   <li className="text-left">
-                    <span className="text-left">✓<"
+                    <span className="text-left">✓>
                     <span>Consciousness-level reasoning for complex enterprise decision making</span>
                   </li>
                 </ul>
@@ -162,15 +162,13 @@ export default function AI2026AdvancedNeuralArchitectures() {
             </p>
             <div className="text-left"></div>
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 Get Free Consultation
               </a>
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 View Success Stories
               </a>
             </div>

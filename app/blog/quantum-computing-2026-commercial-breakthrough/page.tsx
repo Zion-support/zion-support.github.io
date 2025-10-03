@@ -20,8 +20,8 @@ export const metadata: Metadata = {
 export default function QuantumComputing2026CommercialBreakthrough() {
   return (
     <div className="text-left"></div>
-      <div className="text-left"></div>
-        {/* Header */}
+      <div className="text-left">
+        {/* Header */}</div>
         <div className="text-left"></div>
           <div className="text-left"></div>
             <Zap className="text-left" />
@@ -64,7 +64,7 @@ export default function QuantumComputing2026CommercialBreakthrough() {
         {/* Main Content */}
 <div className="text-left"></div>
           <div className="text-left">origin/cursor/fix-errors-and-merge-to-main-0638
-            {/* Executive Summary */}
+            {/* Executive Summary */}</div>
             <div className="text-left"></div>
               <h2 className="text-left">
                 <Target className="text-left" />
@@ -298,16 +298,14 @@ export default function QuantumComputing2026CommercialBreakthrough() {
               </p>
               <div className="text-left"></div>
                 <Link 
-                  href="/contact
-                  className="text-left
-                >
+                  href="/contact"
+                  className="text-left">
                   Start Your Quantum Journey
                   <ArrowRight className="text-left" />
                 </Link>
                 <Link 
-                  href="/services/quantum-computing
-                  className="text-left
-                >
+                  href="/services/quantum-computing"
+                  className="text-left">
                   Explore Quantum Services
                   <ArrowRight className="text-left" />
                 </Link>

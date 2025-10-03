@@ -18,20 +18,20 @@ export const metadata = {
 
 export default function AI2026BreakthroughInnovationsPage() {
   return (
-    <div className="text-left"></div>
-      {/* Hero Section */}
+    <div className="text-left">
+      {/* Hero Section */}</div>
       <div className="text-left"></div>
         <div className="text-left"></div>
-          <span className="text-left"></span>
+          <span className="text-left">
             BREAKTHROUGH 2026
           </span>
-          <span className="text-left"></span>
+          <span className="text-left">
             $2.8T SUCCESS
           </span>
         </div>
         <h1 className="text-left">
           AI 2026 Breakthrough Innovations: 
-          <span className="text-left"></span>
+          <span className="text-left">
             {' '}$2.8 Trillion Success Story
           </span>
         </h1>
@@ -195,23 +195,20 @@ export default function AI2026BreakthroughInnovationsPage() {
         </p>
         <div className="text-left"></div>
           <Link 
-            href="/
-            className="text-left
-          >
+            href="/"
+            className="text-left">
             View Success Story
             <ArrowRight className="text-left" />
           </Link>
           <Link 
-            href="/
-            className="text-left
-          >
+            href="/"
+            className="text-left">
             Start Implementation
             <ArrowRight className="text-left" />
           </Link>
           <Link 
-            href="/
-            className="text-left
-          >
+            href="/"
+            className="text-left">
             Get Expert Consultation
             <ArrowRight className="text-left" />
           </Link>

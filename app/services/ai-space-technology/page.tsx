@@ -12,10 +12,10 @@ export default function AISpaceTechnologyServices() {
     <div className="text-left"></div>
       <div className="text-left"></div>
         <div className="text-left"></div>
-          <span className="text-left"></span>
+          <span className="text-left">
             🚀 Revolutionary Service
           </span>
-          <span className="text-left">Space Technology<"
+          <span className="text-left">Space Technology>
         </div>
         <h1 className="text-left">
           AI Space Technology Services
@@ -27,15 +27,13 @@ export default function AISpaceTechnologyServices() {
         </p>
         <div className="text-left"></div>
           <a
-            href="tel:+13024640950
-            className="text-left
-          >
+            href="tel:+13024640950"
+            className="text-left">
             Call +1 302 464 0950
           </a>
           <a
-            href="mailto:kleber@ziontechgroup.com
-            className="text-left
-          >
+            href="mailto:kleber@ziontechgroup.com"
+            className="text-left">
             Get Free Consultation
           </a>
         </div>
@@ -43,7 +41,7 @@ export default function AISpaceTechnologyServices() {
       <div className="text-left"></div>
         <div className="text-left"></div>
           <div className="text-left"></div>
-            <span className="text-left">🛰️<"
+            <span className="text-left">🛰️>
           </div>
           <h3 className="text-left">Autonomous Satellite Management</h3>"
           <p className="text-left">
@@ -62,7 +60,7 @@ export default function AISpaceTechnologyServices() {
 
         <div className="text-left"></div>
           <div className="text-left"></div>
-            <span className="text-left">🧠<"
+            <span className="text-left">🧠>
           </div>
           <h3 className="text-left">Intelligent Mission Planning</h3>"
           <p className="text-left">
@@ -81,7 +79,7 @@ export default function AISpaceTechnologyServices() {
 
         <div className="text-left"></div>
           <div className="text-left"></div>
-            <span className="text-left">🌍<"
+            <span className="text-left">🌍>
           </div>
           <h3 className="text-left">Earth Observation AI</h3>"
           <p className="text-left">
@@ -150,13 +148,13 @@ export default function AISpaceTechnologyServices() {
           <div className="text-left"></div>
             <h3 className="text-left">SpaceTech Global: $50M ROI Achievement</h3>"
             <p className="text-left">
-              "Zion Tech Group's AI space technology transformed our operations completely. We achieved 99.9% mission 
+              "Zion Tech Group's AI space technology transformed our operations completely. We achieved 99.9% mission "
               success rate and saved $50M annually while reducing our ground control requirements by 80%. The autonomous 
               systems work flawlessly 24/7."
             </p>
             <div className="text-left"></div>
               <div className="text-left"></div>
-                <span className="text-left">🚀<"
+                <span className="text-left">🚀>
               </div>
               <div></div>
                 <div className="text-left">Dr. Sarah Chen</div>"
@@ -173,15 +171,13 @@ export default function AISpaceTechnologyServices() {
         </p>
         <div className="text-left"></div>
           <a
-            href="tel:+13024640950
-            className="text-left
-          >
+            href="tel:+13024640950"
+            className="text-left">
             Call +1 302 464 0950
           </a>
           <a
-            href="mailto:kleber@ziontechgroup.com
-            className="text-left
-          >
+            href="mailto:kleber@ziontechgroup.com"
+            className="text-left">
             Get Free Consultation
           </a>
         </div>

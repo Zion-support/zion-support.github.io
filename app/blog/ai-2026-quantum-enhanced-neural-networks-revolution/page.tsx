@@ -15,8 +15,8 @@ export const metadata: Metadata = {
 
 export default function QuantumEnhancedNeuralNetworksRevolution() {
   return (
-    <div className="text-left"></div>
-      {/* Hero Section */}
+    <div className="text-left">
+      {/* Hero Section */}</div>
       <header className="text-left">
         <div className="text-left"></div>
           <div className="text-left"></div>"
@@ -26,7 +26,7 @@ export default function QuantumEnhancedNeuralNetworksRevolution() {
         <div className="text-left"></div>
           <div className="text-left"></div>
             <div className="text-left"></div>
-              <span className="text-left"></span>
+              <span className="text-left">
                 ⚛️ Quantum-Enhanced Neural Networks Revolution
               </span>
             </div>
@@ -41,15 +41,13 @@ export default function QuantumEnhancedNeuralNetworksRevolution() {
             
             <div className="text-left"></div>
               <Link 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 Get Quantum Neural AI →
               </Link>
               <Link 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 View $75B Success Story →
               </Link>
             </div>
@@ -168,9 +166,8 @@ export default function QuantumEnhancedNeuralNetworksRevolution() {
 
             <div className="text-left"></div>
               <Link 
-                href="/contact
-                className="text-left
-              >
+                href="/contact"
+                className="text-left">
                 Implement Quantum Neural AI →
               </Link>
             </div>
@@ -184,7 +181,7 @@ export default function QuantumEnhancedNeuralNetworksRevolution() {
           <div className="text-left"></div>
             <Link href="/blog/ai-2026-neural-consciousness-fusion-breakthrough" className="text-left">
               <div className="text-left"></div>
-                <span className="text-left">NEURAL CONSCIOUSNESS<"
+                <span className="text-left">NEURAL CONSCIOUSNESS>
               </div>
               <div className="text-left">Neural Consciousness Fusion</div>"
               <div className="text-left">Revolutionary neural consciousness fusion technology achieving 1,000,000x performance and universal consciousness integration.</div>"
@@ -193,7 +190,7 @@ export default function QuantumEnhancedNeuralNetworksRevolution() {
             
             <Link href="/case-studies/ai-2026-quantum-enhanced-neural-networks-75-billion-success" className="text-left">
               <div className="text-left"></div>
-                <span className="text-left">$75B SUCCESS<"
+                <span className="text-left">$75B SUCCESS>
               </div>
               <div className="text-left">$75B Quantum Neural Success</div>"
               <div className="text-left">How a Fortune 100 company achieved $75B ROI through quantum-enhanced neural networks with 99.99% quantum consciousness.</div>"
@@ -202,7 +199,7 @@ export default function QuantumEnhancedNeuralNetworksRevolution() {
             
             <Link href="/blog/ai-2026-quantum-consciousness-breakthrough" className="text-left">
               <div className="text-left"></div>
-                <span className="text-left">QUANTUM CONSCIOUSNESS<"
+                <span className="text-left">QUANTUM CONSCIOUSNESS>
               </div>
               <div className="text-left">Quantum Consciousness Breakthrough</div>"
               <div className="text-left">Revolutionary quantum consciousness technology achieving universal intelligence and consciousness-level processing.</div>"

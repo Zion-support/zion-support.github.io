@@ -10,14 +10,13 @@ export const metadata = {
 
 export default function EnterpriseAutomationBreakthrough() {
   return (
-    <div className="text-left"></div>
-      {/* Header */}
+    <div className="text-left">
+      {/* Header */}</div>
       <header className="text-left">
         <div className="text-left"></div>
           <Link 
-            href="/
-            className="text-left
-          >
+            href="/"
+            className="text-left">
             <ArrowLeft className="text-left" />
             Back to Home
           </Link>
@@ -51,9 +50,9 @@ export default function EnterpriseAutomationBreakthrough() {
             Discover how AI-driven enterprise automation is revolutionizing business operations in 2026. From autonomous decision-making to self-healing systems, explore the breakthrough technologies transforming the corporate landscape.
           </p>
           
-          <div className="text-left"></div>
-            {['AI', 'Enterprise Automation', 'Business Intelligence', '2026 Trends', 'Autonomous Operations'].map((tag) => (
-              <span key={tag} className="text-left"></span>
+          <div className="text-left">
+            {['AI', 'Enterprise Automation', 'Business Intelligence', '2026 Trends', 'Autonomous Operations'].map((tag) => (</div>
+              <span key={tag} className="text-left">
                 <Tag className="text-left" />
                 {tag}
               <
@@ -248,15 +247,13 @@ export default function EnterpriseAutomationBreakthrough() {
             </p>
             <div className="text-left"></div>
               <Link 
-                href="/guides/ai-2026-implementation-roadmap
-                className="text-left
-              >
+                href="/guides/ai-2026-implementation-roadmap"
+                className="text-left">
                 Get Implementation Guide
               </Link>
               <Link 
-                href="/case-studies/fortune-500-ai-transformation-success
-                className="text-left
-              >
+                href="/case-studies/fortune-500-ai-transformation-success"
+                className="text-left">
                 View Success Stories
               </Link>
             </div>

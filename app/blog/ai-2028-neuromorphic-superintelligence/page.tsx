@@ -144,9 +144,8 @@ export default function AI2028NeuromorphicSuperintelligence() {
             Discover how neuromorphic superintelligence can transform your enterprise operations and unlock unprecedented capabilities.
           </p>
           <Link 
-            href="/
-            className="text-left
-          >
+            href="/"
+            className="text-left">
             Schedule Your Neuromorphic Consultation
           </Link>
         </div>
@@ -155,16 +154,14 @@ export default function AI2028NeuromorphicSuperintelligence() {
           <h4 className="text-left">Related Revolutionary Content</h4>"
           <div className="text-left"></div>
             <Link 
-              href="/
-              className="text-left
-            >
+              href="/"
+              className="text-left">
               <h5 className="text-left">AI 2028 Autonomous Enterprise</h5>"
               <p className="text-left">99.9% autonomous operations breakthrough</p>"
             </Link>
             <Link 
-              href="/
-              className="text-left
-            >
+              href="/"
+              className="text-left">
               <h5 className="text-left">AI 2028 Success Stories</h5>"
               <p className="text-left">Real-world transformation results</p>"
             </Link>

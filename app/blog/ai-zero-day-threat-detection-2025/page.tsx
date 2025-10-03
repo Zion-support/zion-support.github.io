@@ -29,10 +29,10 @@ export default function AIZeroDayThreatDetection() {
           ← Back to Blog
         </Link>
         <div className="text-left"></div>
-          <span className="text-left"></span>
+          <span className="text-left">
             Cybersecurity Breakthrough
           </span>
-          <span className="text-left">September 30, 2025<"
+          <span className="text-left">September 30, 2025>
         </div>
         <h1 className="text-left">
           AI-Powered Zero-Day Threat Detection: The Future of Cybersecurity in 2025
@@ -127,7 +127,7 @@ export default function AIZeroDayThreatDetection() {
         <h2 className="text-left">📊 Real-World Success Stories</h2>"
         <blockquote className="text-left">
           <p className="text-left">
-            "Our AI-powered security system detected and neutralized a sophisticated zero-day attack targeting our 
+            "Our AI-powered security system detected and neutralized a sophisticated zero-day attack targeting our "
             financial infrastructure within 3 milliseconds. Traditional systems would have taken days to identify 
             this threat. The AI saved us from a potential $50 million loss."
           </p>
@@ -141,29 +141,29 @@ export default function AIZeroDayThreatDetection() {
           <div className="text-left"></div>
             <div></div>
               <div className="text-left"></div>
-                <span className="text-left">99.97%<"
-                <span className="text-left">Detection Accuracy<"
+                <span className="text-left">99.97%<
+                <span className="text-left">Detection Accuracy>
               </div>
               <p className="text-left">Across 10 million threat scenarios</p>"
             </div>
             <div></div>
               <div className="text-left"></div>
-                <span className="text-left">3ms<"
-                <span className="text-left">Average Response Time<"
+                <span className="text-left">3ms<
+                <span className="text-left">Average Response Time>
               </div>
               <p className="text-left">From detection to neutralization</p>"
             </div>
             <div></div>
               <div className="text-left"></div>
-                <span className="text-left">100%<"
-                <span className="text-left">Zero-Day Prevention<"
+                <span className="text-left">100%<
+                <span className="text-left">Zero-Day Prevention>
               </div>
               <p className="text-left">Over 18 months of deployment</p>"
             </div>
             <div></div>
               <div className="text-left"></div>
-                <span className="text-left">$45M<"
-                <span className="text-left">Average Cost Savings<"
+                <span className="text-left">$45M<
+                <span className="text-left">Average Cost Savings>
               </div>
               <p className="text-left">Per year for enterprise clients</p>"
             </div>
@@ -204,19 +204,19 @@ export default function AIZeroDayThreatDetection() {
             <h3 className="text-left">Cost Savings</h3>"
             <ul className="text-left">
               <li className="text-left">
-                <span className="text-left">✓<"
+                <span className="text-left">✓>
                 95% reduction in security incident costs
               </li>
               <li className="text-left">
-                <span className="text-left">✓<"
+                <span className="text-left">✓>
                 $45M+ average annual savings
               </li>
               <li className="text-left">
-                <span className="text-left">✓<"
+                <span className="text-left">✓>
                 87% decrease in security team workload
               </li>
               <li className="text-left">
-                <span className="text-left">✓<"
+                <span className="text-left">✓>
                 Zero data breach losses since deployment
               </li>
             </ul>
@@ -225,19 +225,19 @@ export default function AIZeroDayThreatDetection() {
             <h3 className="text-left">Operational Benefits</h3>"
             <ul className="text-left">
               <li className="text-left">
-                <span className="text-left">✓<"
+                <span className="text-left">✓>
                 24/7 autonomous protection
               </li>
               <li className="text-left">
-                <span className="text-left">✓<"
+                <span className="text-left">✓>
                 99.99% system uptime
               </li>
               <li className="text-left">
-                <span className="text-left">✓<"
+                <span className="text-left">✓>
                 Zero false positives or alert fatigue
               </li>
               <li className="text-left">
-                <span className="text-left">✓<"
+                <span className="text-left">✓>
                 Compliance with all major security frameworks
               </li>
             </ul>
@@ -286,15 +286,13 @@ export default function AIZeroDayThreatDetection() {
           </p>
           <div className="text-left"></div>
             <Link
-              href="/services/ai-cybersecurity
-              className="text-left
-            >
+              href="/services/ai-cybersecurity"
+              className="text-left">
               Explore Security Solutions
             </Link>
             <a
-              href="tel:+13024640950
-              className="text-left
-            >
+              href="tel:+13024640950"
+              className="text-left">
               Call +1 302 464 0950
             </a>
           </div>

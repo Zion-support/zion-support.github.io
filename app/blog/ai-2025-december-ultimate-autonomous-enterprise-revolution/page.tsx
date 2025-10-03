@@ -10,14 +10,13 @@ export const metadata = {
 
 export default function AI2025DecemberUltimateAutonomousEnterpriseRevolution() {
   return (
-    <div className="text-left"></div>
-      {/* Header */}
+    <div className="text-left">
+      {/* Header */}</div>
       <header className="text-left">
         <div className="text-left"></div>
           <Link 
-            href="/
-            className="text-left
-          >
+            href="/"
+            className="text-left">
             <ArrowLeft className="text-left" />
             Back to Home
           </Link>
@@ -51,9 +50,9 @@ export default function AI2025DecemberUltimateAutonomousEnterpriseRevolution() {
             The most significant AI breakthrough of 2025 has arrived. Discover how Zion Tech Group's revolutionary autonomous enterprise platform is achieving 99.9% operational autonomy across Fortune 500 companies, delivering unprecedented efficiency and cost savings.
           </p>
           
-          <div className="text-left"></div>
-            {['AI Revolution', 'Autonomous Enterprise', 'December 2025', 'AI Breakthrough', 'Enterprise Automation'].map((tag) => (
-              <span key={tag} className="text-left"></span>
+          <div className="text-left">
+            {['AI Revolution', 'Autonomous Enterprise', 'December 2025', 'AI Breakthrough', 'Enterprise Automation'].map((tag) => (</div>
+              <span key={tag} className="text-left">
                 <Tag className="text-left" />
                 {tag}
               <
@@ -270,9 +269,8 @@ export default function AI2025DecemberUltimateAutonomousEnterpriseRevolution() {
                   Schedule a free consultation with our AI experts to discuss your autonomous transformation goals.
                 </p>
                 <Link 
-                  href="/
-                  className="text-left
-                >
+                  href="/"
+                  className="text-left">
                   Schedule Consultation
                 </Link>
               </div>

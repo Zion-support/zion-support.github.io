@@ -18,11 +18,11 @@ export const metadata: Metadata = {
 export default function AI2026UltimateBreakthroughRevolution() {
   return (
     <div className="text-left"></div>
-      <div className="text-left"></div>
-        {/* Hero Section */}
+      <div className="text-left">
+        {/* Hero Section */}</div>
         <div className="text-left"></div>
           <div className="text-left"></div>
-            <span className="text-left"></span>
+            <span className="text-left">
               🚀 ULTIMATE BREAKTHROUGH 2026
             </span>
           </div>
@@ -36,15 +36,15 @@ export default function AI2026UltimateBreakthroughRevolution() {
           </p>
           
           <div className="text-left"></div>
-            <span className="text-left"></span>
+            <span className="text-left">
               <div className="text-left">1000x</div>"
               <div className="text-left">Performance Boost</div>"
             <
-            <span className="text-left"></span>
+            <span className="text-left">
               <div className="text-left">99%</div>"
               <div className="text-left">Automation Rate</div>"
             <
-            <span className="text-left"></span>
+            <span className="text-left">
               <div className="text-left">$10B+</div>"
               <div className="text-left">ROI Achieved</div>"
             <
@@ -162,8 +162,8 @@ export default function AI2026UltimateBreakthroughRevolution() {
                 optimization to customer service automation, the results exceeded all expectations.
               </p>
               <p className="text-left">
-                "This isn't just technology—it's a complete business transformation. We've achieved levels of efficiency and 
-                profitability that we never thought possible." - CEO, Fortune 100 Manufacturing Company
+                "This isn't just technology—it's a complete business transformation. We've achieved levels of efficiency and "
+                profitability that we never thought possible." - CEO, Fortune 100 Manufacturing Company"
               </p>
             </div>
         </section>
@@ -212,15 +212,13 @@ export default function AI2026UltimateBreakthroughRevolution() {
             </p>
             <div className="text-left"></div>
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 Get Started Today
               </a>
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 View Success Stories →
               </a>
             </div>

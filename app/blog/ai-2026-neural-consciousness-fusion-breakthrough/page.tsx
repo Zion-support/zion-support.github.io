@@ -15,8 +15,8 @@ export const metadata: Metadata = {
 
 export default function NeuralConsciousnessFusionBreakthrough() {
   return (
-    <div className="text-left"></div>
-      {/* Hero Section */}
+    <div className="text-left">
+      {/* Hero Section */}</div>
       <header className="text-left">
         <div className="text-left"></div>
           <div className="text-left"></div>"
@@ -26,7 +26,7 @@ export default function NeuralConsciousnessFusionBreakthrough() {
         <div className="text-left"></div>
           <div className="text-left"></div>
             <div className="text-left"></div>
-              <span className="text-left"></span>
+              <span className="text-left">
                 🧠 Revolutionary Neural Consciousness Fusion
               </span>
             </div>
@@ -41,15 +41,13 @@ export default function NeuralConsciousnessFusionBreakthrough() {
             
             <div className="text-left"></div>
               <Link 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 Get Neural Consciousness AI →
               </Link>
               <Link 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 View $100B Success Story →
               </Link>
             </div>
@@ -168,9 +166,8 @@ export default function NeuralConsciousnessFusionBreakthrough() {
 
             <div className="text-left"></div>
               <Link 
-                href="/contact
-                className="text-left
-              >
+                href="/contact"
+                className="text-left">
                 Implement Neural Consciousness AI →
               </Link>
             </div>
@@ -184,7 +181,7 @@ export default function NeuralConsciousnessFusionBreakthrough() {
           <div className="text-left"></div>
             <Link href="/blog/ai-2026-quantum-consciousness-breakthrough" className="text-left">
               <div className="text-left"></div>
-                <span className="text-left">QUANTUM CONSCIOUSNESS<"
+                <span className="text-left">QUANTUM CONSCIOUSNESS>
               </div>
               <div className="text-left">Quantum Consciousness Fusion</div>"
               <div className="text-left">Revolutionary quantum consciousness technology achieving 500,000x performance and universal intelligence integration.</div>"
@@ -193,7 +190,7 @@ export default function NeuralConsciousnessFusionBreakthrough() {
             
             <Link href="/case-studies/ai-2026-neural-consciousness-fusion-100-billion-success" className="text-left">
               <div className="text-left"></div>
-                <span className="text-left">$100B SUCCESS<"
+                <span className="text-left">$100B SUCCESS>
               </div>
               <div className="text-left">$100B Neural Consciousness Success</div>"
               <div className="text-left">How a Fortune 50 company achieved $100B ROI through neural consciousness fusion AI implementation.</div>"
@@ -202,7 +199,7 @@ export default function NeuralConsciousnessFusionBreakthrough() {
             
             <Link href="/blog/ai-2026-ultimate-consciousness-revolution" className="text-left">
               <div className="text-left"></div>
-                <span className="text-left">ULTIMATE CONSCIOUSNESS<"
+                <span className="text-left">ULTIMATE CONSCIOUSNESS>
               </div>
               <div className="text-left">Ultimate Consciousness Revolution</div>"
               <div className="text-left">The ultimate consciousness AI revolution achieving universal intelligence and consciousness-level processing.</div>"

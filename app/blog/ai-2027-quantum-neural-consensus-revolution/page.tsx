@@ -19,7 +19,7 @@ export default function QuantumNeuralConsensus2027() {
       <article className="text-left">
         <header className="text-left">
           <div className="text-left"></div>
-            <span className="text-left"></span>
+            <span className="text-left">
               ⚛️ Quantum Breakthrough
             </span>
           </div>
@@ -33,10 +33,10 @@ export default function QuantumNeuralConsensus2027() {
           </p>
           
           <div className="text-left"></div>
-            <span className="text-left">January 20, 2027<"
-            <span className="text-left">Quantum AI<"
-            <span className="text-left">Distributed Systems<"
-            <span className="text-left">18 min read<"
+            <span className="text-left">January 20, 2027<
+            <span className="text-left">Quantum AI<
+            <span className="text-left">Distributed Systems<
+            <span className="text-left">18 min read>
           </div>
         </header>
 
@@ -82,31 +82,31 @@ export default function QuantumNeuralConsensus2027() {
               <h3 className="text-left">Revolutionary Architecture:</h3>"
               <ul className="text-left">
                 <li className="text-left">
-                  <span className="text-left">⚛️<"
+                  <span className="text-left">⚛️>
                   <div></div>
                     <strong className="text-left">Quantum Entanglement Networks:</strong>"
-                    <span className="text-left"> Instant information transfer between AI nodes through quantum entanglement, achieving zero-latency communication.<"
+                    <span className="text-left"> Instant information transfer between AI nodes through quantum entanglement, achieving zero-latency communication.>
                   </div>
                 </li>
                 <li className="text-left">
-                  <span className="text-left">🧠<"
+                  <span className="text-left">🧠>
                   <div></div>
                     <strong className="text-left">Consensus Neural Algorithms:</strong>"
-                    <span className="text-left"> Advanced algorithms that enable AI nodes to reach perfect consensus on complex decisions within nanoseconds.<"
+                    <span className="text-left"> Advanced algorithms that enable AI nodes to reach perfect consensus on complex decisions within nanoseconds.>
                   </div>
                 </li>
                 <li className="text-left">
-                  <span className="text-left">🌐<"
+                  <span className="text-left">🌐>
                   <div></div>
                     <strong className="text-left">Distributed Consciousness:</strong>"
-                    <span className="text-left"> Collective awareness where individual nodes contribute to a unified consciousness while maintaining autonomy.<"
+                    <span className="text-left"> Collective awareness where individual nodes contribute to a unified consciousness while maintaining autonomy.>
                   </div>
                 </li>
                 <li className="text-left">
-                  <span className="text-left">🔄<"
+                  <span className="text-left">🔄>
                   <div></div>
                     <strong className="text-left">Self-Healing Networks:</strong>"
-                    <span className="text-left"> Automatic node replacement and network reconfiguration to maintain optimal performance and consensus integrity.<"
+                    <span className="text-left"> Automatic node replacement and network reconfiguration to maintain optimal performance and consensus integrity.>
                   </div>
                 </li>
               </ul>
@@ -274,15 +274,13 @@ export default function QuantumNeuralConsensus2027() {
             </p>
             <div className="text-left"></div>
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 Explore Quantum AI
               </a>
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 View Success Stories
               </a>
             </div>

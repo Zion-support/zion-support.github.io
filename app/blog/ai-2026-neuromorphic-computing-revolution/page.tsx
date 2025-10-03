@@ -17,8 +17,8 @@ export const metadata: Metadata = {
 
 export default function NeuromorphicComputingRevolution2026() {
   return (
-    <div className="text-left"></div>
-      {/* Hero Section */}
+    <div className="text-left">
+      {/* Hero Section */}</div>
       <section className="text-left">
         <div className="text-left"></div>
           <div className="text-left"></div>"
@@ -28,7 +28,7 @@ export default function NeuromorphicComputingRevolution2026() {
         <div className="text-left"></div>
           <div className="text-left"></div>
             <div className="text-left"></div>
-              <span className="text-left"></span>
+              <span className="text-left">
                 🧠 REVOLUTIONARY: Neuromorphic Computing 2026
               </span>
             </div>
@@ -49,44 +49,42 @@ export default function NeuromorphicComputingRevolution2026() {
             <div className="text-left"></div>
               <div className="text-left"></div>
                 <div className="text-left">🧠</div>"
-                <div className="text-left"></div>
-                  99.7%
+                <div className="text-left">
+                  99.7%</div>
                 </div>
-                <div className="text-left"></div>
-                  Neural Efficiency Rate
+                <div className="text-left">
+                  Neural Efficiency Rate</div>
                 </div>
               </div>
               <div className="text-left"></div>
                 <div className="text-left">⚡</div>"
-                <div className="text-left"></div>
-                  1000x
+                <div className="text-left">
+                  1000x</div>
                 </div>
-                <div className="text-left"></div>
-                  Processing Speed
+                <div className="text-left">
+                  Processing Speed</div>
                 </div>
               </div>
               <div className="text-left"></div>
                 <div className="text-left">🔋</div>"
-                <div className="text-left"></div>
-                  99%
+                <div className="text-left">
+                  99%</div>
                 </div>
-                <div className="text-left"></div>
-                  Energy Reduction
+                <div className="text-left">
+                  Energy Reduction</div>
                 </div>
               </div>
             </div>
             
             <div className="text-left"></div>
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 Get Neuromorphic Consultation
               </a>
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 View Success Stories
               </a>
             </div>
@@ -106,7 +104,7 @@ export default function NeuromorphicComputingRevolution2026() {
             </p>
           </div>
 
-          <div className="text-left"></div>
+          <div className="text-left">
             {[
               {
                 icon: '🧠',
@@ -144,7 +142,7 @@ export default function NeuromorphicComputingRevolution2026() {
                 description: 'Continuous learning and adaptation without forgetting previous knowledge or experiences.',
                 features: ['Lifelong learning', 'Knowledge retention', 'Experience integration']
               }
-            ].map((feature, index) => (
+            ].map((feature, index) => (</div>
               <div key={index} className="text-left"></div>
                 <div className="text-left">{feature.icon}</div>"
                 <h3 className="text-left">{feature.title}</h3>"
@@ -152,7 +150,7 @@ export default function NeuromorphicComputingRevolution2026() {
                 <ul className="text-left">
                   {feature.features.map((item, idx) => (
                     <li key={idx} className="text-left">
-                      <span className="text-left">✓<"
+                      <span className="text-left">✓>
                       {item}
                     </li>
                   ))}
@@ -176,7 +174,7 @@ export default function NeuromorphicComputingRevolution2026() {
           </div>
 
           <div className="text-left"></div>
-            <div className="text-left"></div>
+            <div className="text-left">
               {[
                 {
                   title: 'Real-Time Decision Making',
@@ -193,14 +191,14 @@ export default function NeuromorphicComputingRevolution2026() {
                   description: 'Self-managing systems that adapt and optimize without human intervention.',
                   benefits: ['Self-healing systems', 'Dynamic optimization', 'Continuous improvement']
                 }
-              ].map((app, index) => (
+              ].map((app, index) => (</div>
                 <div key={index} className="text-left"></div>
                   <h3 className="text-left">{app.title}</h3>"
                   <p className="text-left">{app.description}</p>"
                   <ul className="text-left">
                     {app.benefits.map((benefit, idx) => (
                       <li key={idx} className="text-left">
-                        <span className="text-left">→<"
+                        <span className="text-left">→>
                         {benefit}
                       </li>
                     ))}
@@ -211,19 +209,19 @@ export default function NeuromorphicComputingRevolution2026() {
             
             <div className="text-left"></div>
               <h3 className="text-left">🎯 Performance Metrics</h3>"
-              <div className="text-left"></div>
+              <div className="text-left">
                 {[
                   { metric: 'Processing Speed', value='1000x faster', icon: '⚡' },
                   { metric: 'Energy Efficiency', value='99% reduction', icon: '🔋' },
                   { metric: 'Memory Usage', value='95% optimized', icon: '💾' },
                   { metric: 'Accuracy Rate', value='99.7% precision', icon: '🎯' }
-                ].map((metric, index) => (
+                ].map((metric, index) => (</div>
                   <div key={index} className="text-left"></div>
                     <div className="text-left"></div>
-                      <span className="text-left">{metric.icon}<"
-                      <span className="text-left">{metric.metric}<"
+                      <span className="text-left">{metric.icon}<
+                      <span className="text-left">{metric.metric}>
                     </div>
-                    <span className="text-left">{metric.value}<"
+                    <span className="text-left">{metric.value}>
                   </div>
                 ))}
               </div>
@@ -243,15 +241,13 @@ export default function NeuromorphicComputingRevolution2026() {
           </p>
           <div className="text-left"></div>
             <a 
-              href="/
-              className="text-left
-            >
+              href="/"
+              className="text-left">
               Schedule Neuromorphic Demo
             </a>
             <a 
-              href="/
-              className="text-left
-            >
+              href="/"
+              className="text-left">
               View Case Studies
             </a>
           </div>

@@ -13,10 +13,10 @@ export default function BlogPost() {
     <div className="text-left"></div>
       <div className="text-left"></div>
         <div className="text-left"></div>
-          <span className="text-left"></span>
+          <span className="text-left">
             AUTONOMOUS BI
           </span>
-          <span className="text-left"></span>
+          <span className="text-left">
             99% AUTOMATION
           </span>
         </div>
@@ -145,20 +145,20 @@ export default function BlogPost() {
             <h4 className="text-left">Automation Achievements</h4>"
             <div className="text-left"></div>
               <div className="text-left"></div>
-                <span className="text-left">Data Processing:<"
-                <span className="text-left">99.2%<"
+                <span className="text-left">Data Processing:<
+                <span className="text-left">99.2%>
               </div>
               <div className="text-left"></div>
-                <span className="text-left">Report Generation:<"
-                <span className="text-left">99.8%<"
+                <span className="text-left">Report Generation:<
+                <span className="text-left">99.8%>
               </div>
               <div className="text-left"></div>
-                <span className="text-left">Insight Discovery:<"
-                <span className="text-left">98.5%<"
+                <span className="text-left">Insight Discovery:<
+                <span className="text-left">98.5%>
               </div>
               <div className="text-left"></div>
-                <span className="text-left">Model Updates:<"
-                <span className="text-left">100%<"
+                <span className="text-left">Model Updates:<
+                <span className="text-left">100%>
               </div>
             </div>
           </div>
@@ -167,20 +167,20 @@ export default function BlogPost() {
             <h4 className="text-left">Business Impact</h4>"
             <div className="text-left"></div>
               <div className="text-left"></div>
-                <span className="text-left">Cost Reduction:<"
-                <span className="text-left">90%<"
+                <span className="text-left">Cost Reduction:<
+                <span className="text-left">90%>
               </div>
               <div className="text-left"></div>
-                <span className="text-left">Speed Improvement:<"
-                <span className="text-left">1000x<"
+                <span className="text-left">Speed Improvement:<
+                <span className="text-left">1000x>
               </div>
               <div className="text-left"></div>
-                <span className="text-left">Accuracy Gain:<"
-                <span className="text-left">39.7%<"
+                <span className="text-left">Accuracy Gain:<
+                <span className="text-left">39.7%>
               </div>
               <div className="text-left"></div>
-                <span className="text-left">ROI Achievement:<"
-                <span className="text-left">$3.5B+<"
+                <span className="text-left">ROI Achievement:<
+                <span className="text-left">$3.5B+>
               </div>
             </div>
           </div>
@@ -213,15 +213,13 @@ export default function BlogPost() {
           </p>
           <div className="text-left"></div>
             <Link 
-              href="/
-              className="text-left
-            >
+              href="/"
+              className="text-left">
               Start Your Transformation
             </Link>
             <Link 
-              href="/
-              className="text-left
-            >
+              href="/"
+              className="text-left">
               View Success Stories
             </Link>
           </div>

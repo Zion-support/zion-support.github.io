@@ -10,8 +10,8 @@ export const metadata = {
 
 export default function AI2026EnterpriseAutomationRevolution() {
   return (
-    <div className="text-left"></div>
-      {/* Header */}
+    <div className="text-left">
+      {/* Header */}</div>
       <div className="text-left"></div>
         <div className="text-left"></div>
           <Cog className="text-left" />
@@ -75,23 +75,6 @@ export default function AI2026EnterpriseAutomationRevolution() {
       </div>
 
       {/* Core Automation Technologies */}
-
-      <div className="text-left"></div>
-        <h2 className="text-left">Core Automation Technologies</h2>"
-        <div className="text-left"></div>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
-                <Zap className="text-left" />
-
-      <div className="text-left"></div>
-        <h2 className="text-left">Core Automation Technologies</h2>
-        
-        <div className="text-left"></div>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
-              <div className="text-left"></div>
-                <Zap className="text-left" />
 
               </div>
               <h3 className="text-left">Intelligent Process Automation</h3>
@@ -177,8 +160,8 @@ export default function AI2026EnterpriseAutomationRevolution() {
               Autonomous production lines that self-optimize for quality, efficiency, and cost while 
               predicting maintenance needs and adapting to demand fluctuations.
             </p>
-            <div className="text-left"></div>
-              Result: 40% cost reduction, 99.9% uptime
+            <div className="text-left">
+              Result: 40% cost reduction, 99.9% uptime</div>
             </div>
           </div>
           <div className="text-left"></div>
@@ -187,8 +170,8 @@ export default function AI2026EnterpriseAutomationRevolution() {
               AI-powered risk assessment, fraud detection, and automated compliance that processes 
               millions of transactions while maintaining regulatory standards.
             </p>
-            <div className="text-left"></div>
-              Result: 90% faster processing, 99.8% accuracy
+            <div className="text-left">
+              Result: 90% faster processing, 99.8% accuracy</div>
             </div>
           </div>
           <div className="text-left"></div>
@@ -197,8 +180,8 @@ export default function AI2026EnterpriseAutomationRevolution() {
               Automated patient care workflows, predictive diagnostics, and intelligent resource 
               allocation that improves outcomes while reducing costs.
             </p>
-            <div className="text-left"></div>
-              Result: 35% faster diagnosis, 25% cost savings
+            <div className="text-left">
+              Result: 35% faster diagnosis, 25% cost savings</div>
             </div>
           </div>
         </div>
@@ -206,17 +189,6 @@ export default function AI2026EnterpriseAutomationRevolution() {
 
       {/* Implementation Framework */}
 
-      <div className="text-left"></div>
-        <h2 className="text-left">Implementation Framework</h2>"
-        <div className="text-left"></div>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
-      <div className="text-left"></div>
-        <h2 className="text-left">Implementation Framework</h2>
-        
-        <div className="text-left"></div>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
               1
             </div>
             <div></div>
@@ -229,8 +201,8 @@ export default function AI2026EnterpriseAutomationRevolution() {
           </div>
 
           <div className="text-left"></div>
-            <div className="text-left"></div>
-              2
+            <div className="text-left">
+              2</div>
             </div>
             <div></div>
               <h3 className="text-left">Pilot Implementation</h3>
@@ -242,8 +214,8 @@ export default function AI2026EnterpriseAutomationRevolution() {
           </div>
 
           <div className="text-left"></div>
-            <div className="text-left"></div>
-              3
+            <div className="text-left">
+              3</div>
             </div>
             <div></div>
               <h3 className="text-left">Scale & Optimize</h3>
@@ -312,15 +284,13 @@ export default function AI2026EnterpriseAutomationRevolution() {
         </p>
         <div className="text-left"></div>
           <Link
-            href="/case-studies/ai-enterprise-automation-success-2026
-            className="text-left
-          >
+            href="/case-studies/ai-enterprise-automation-success-2026"
+            className="text-left">
             View Success Stories
           </Link>
           <a
-            href="tel:+13024640950
-            className="text-left
-          >
+            href="tel:+13024640950"
+            className="text-left">
             Get Automation Assessment
           </a>
         </div>

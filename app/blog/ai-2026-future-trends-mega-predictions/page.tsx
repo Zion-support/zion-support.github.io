@@ -16,8 +16,8 @@ export const metadata: Metadata = {
 
 export default function AI2026FutureTrendsMegaPredictions() {
   return (
-    <div className="text-left"></div>
-      {/* Hero Section */}
+    <div className="text-left">
+      {/* Hero Section */}</div>
       <section className="text-left">
         <div className="text-left"></div>
           <div className="text-left"></div>"
@@ -27,7 +27,7 @@ export default function AI2026FutureTrendsMegaPredictions() {
         <div className="text-left"></div>
           <div className="text-left"></div>
             <div className="text-left"></div>
-              <span className="text-left"></span>
+              <span className="text-left">
                 🔮 Future Trends 2026
               </span>
             </div>
@@ -44,14 +44,12 @@ export default function AI2026FutureTrendsMegaPredictions() {
             <div className="text-left"></div>
               <a 
                 href="#trends-overview" "
-                className="text-left
-              >
+                className="text-left">
                 Explore Trends →
               </a>
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 Get Strategic Consultation
               </a>
             </div>
@@ -101,19 +99,19 @@ export default function AI2026FutureTrendsMegaPredictions() {
                 </p>
                 <ul className="text-left">
                   <li className="text-left">
-                    <span className="text-left">→<"
+                    <span className="text-left">→>
                     Self-aware decision making and introspection
                   </li>
                   <li className="text-left">
-                    <span className="text-left">→<"
+                    <span className="text-left">→>
                     Emotional intelligence and empathy in business processes
                   </li>
                   <li className="text-left">
-                    <span className="text-left">→<"
+                    <span className="text-left">→>
                     Autonomous learning and self-improvement
                   </li>
                   <li className="text-left">
-                    <span className="text-left">→<"
+                    <span className="text-left">→>
                     Meta-reasoning and strategic thinking
                   </li>
                 </ul>
@@ -128,19 +126,19 @@ export default function AI2026FutureTrendsMegaPredictions() {
                 </p>
                 <ul className="text-left">
                   <li className="text-left">
-                    <span className="text-left">→<"
+                    <span className="text-left">→>
                     1000x faster processing speeds
                   </li>
                   <li className="text-left">
-                    <span className="text-left">→<"
+                    <span className="text-left">→>
                     Quantum parallelism and superposition
                   </li>
                   <li className="text-left">
-                    <span className="text-left">→<"
+                    <span className="text-left">→>
                     Perfect quantum error correction
                   </li>
                   <li className="text-left">
-                    <span className="text-left">→<"
+                    <span className="text-left">→>
                     Real-time optimization and adaptation
                   </li>
                 </ul>
@@ -206,20 +204,20 @@ export default function AI2026FutureTrendsMegaPredictions() {
                 <h3 className="text-left">Market Transformation</h3>"
                 <div className="text-left"></div>
                   <div className="text-left"></div>
-                    <span className="text-left">AI Market Value<"
-                    <span className="text-left">$10 Trillion<"
+                    <span className="text-left">AI Market Value<
+                    <span className="text-left">$10 Trillion>
                   </div>
                   <div className="text-left"></div>
-                    <span className="text-left">Enterprise Adoption<"
-                    <span className="text-left">95%<"
+                    <span className="text-left">Enterprise Adoption<
+                    <span className="text-left">95%>
                   </div>
                   <div className="text-left"></div>
-                    <span className="text-left">Job Creation<"
-                    <span className="text-left">50M+<"
+                    <span className="text-left">Job Creation<
+                    <span className="text-left">50M+>
                   </div>
                   <div className="text-left"></div>
-                    <span className="text-left">Productivity Gain<"
-                    <span className="text-left">300%<"
+                    <span className="text-left">Productivity Gain<
+                    <span className="text-left">300%>
                   </div>
               </div>
 
@@ -255,15 +253,13 @@ export default function AI2026FutureTrendsMegaPredictions() {
             </p>
             <div className="text-left"></div>
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 Get Strategic Consultation
               </a>
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 Learn About Current Breakthroughs →
               </a>
             </div>

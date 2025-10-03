@@ -18,8 +18,8 @@ export default function AIAutonomousOperationsServices2026() {
       <div className="text-left"></div>
         <div className="text-left"></div>
           <header className="text-left">
-            <div className="text-left"></div>
-              Autonomous AI Operations
+            <div className="text-left">
+              Autonomous AI Operations</div>
             </div>
             <h1 className="text-left">
               Autonomous AI Operations Services
@@ -83,19 +83,19 @@ export default function AIAutonomousOperationsServices2026() {
                 <h3 className="text-left">Operational Autonomy</h3>"
                 <ul className="text-left">
                   <li className="text-left">
-                    <span className="text-left">✓<"
+                    <span className="text-left">✓>
                     <span>Self-managing workflows and processes</span>
                   </li>
                   <li className="text-left">
-                    <span className="text-left">✓<"
+                    <span className="text-left">✓>
                     <span>Autonomous decision-making for routine tasks</span>
                   </li>
                   <li className="text-left">
-                    <span className="text-left">✓<"
+                    <span className="text-left">✓>
                     <span>Independent problem-solving and resolution</span>
                   </li>
                   <li className="text-left">
-                    <span className="text-left">✓<"
+                    <span className="text-left">✓>
                     <span>Continuous learning and adaptation</span>
                   </li>
                 </ul>
@@ -104,19 +104,19 @@ export default function AIAutonomousOperationsServices2026() {
                 <h3 className="text-left">Intelligence Features</h3>"
                 <ul className="text-left">
                   <li className="text-left">
-                    <span className="text-left">✓<"
+                    <span className="text-left">✓>
                     <span>Context-aware decision making</span>
                   </li>
                   <li className="text-left">
-                    <span className="text-left">✓<"
+                    <span className="text-left">✓>
                     <span>Multi-modal data processing</span>
                   </li>
                   <li className="text-left">
-                    <span className="text-left">✓<"
+                    <span className="text-left">✓>
                     <span>Natural language interaction</span>
                   </li>
                   <li className="text-left">
-                    <span className="text-left">✓<"
+                    <span className="text-left">✓>
                     <span>Cross-system integration and coordination</span>
                   </li>
                 </ul>
@@ -128,21 +128,21 @@ export default function AIAutonomousOperationsServices2026() {
             <div className="text-left"></div>
               <div className="text-left"></div>
                 <div className="text-left"></div>
-                  <span className="text-left">95%<"
+                  <span className="text-left">95%>
                 </div>
                 <h3 className="text-left">Automation Rate</h3>"
                 <p className="text-left">Average automation achieved across all operations</p>"
               </div>
               <div className="text-left"></div>
                 <div className="text-left"></div>
-                  <span className="text-left">90%<"
+                  <span className="text-left">90%>
                 </div>
                 <h3 className="text-left">Uptime Improvement</h3>"
                 <p className="text-left">Reduction in system downtime and outages</p>"
               </div>
               <div className="text-left"></div>
                 <div className="text-left"></div>
-                  <span className="text-left">60%<"
+                  <span className="text-left">60%>
                 </div>
                 <h3 className="text-left">Cost Reduction</h3>"
                 <p className="text-left">Average operational cost savings achieved</p>"
@@ -159,8 +159,8 @@ export default function AIAutonomousOperationsServices2026() {
                   customer service, and operational workflows.
                 </p>
                 <div className="text-left"></div>
-                  <span className="text-left">Results:<"
-                  <span className="text-left">$2.3M annual savings, 70% fewer manual interventions<"
+                  <span className="text-left">Results:<
+                  <span className="text-left">$2.3M annual savings, 70% fewer manual interventions>
                 </div>
               <div></div>
                 <h3 className="text-left">Manufacturing Enterprise</h3>"
@@ -169,8 +169,8 @@ export default function AIAutonomousOperationsServices2026() {
                   predictive maintenance, and supply chain coordination.
                 </p>
                 <div className="text-left"></div>
-                  <span className="text-left">Results:<"
-                  <span className="text-left">45% efficiency gain, 80% reduction in defects<"
+                  <span className="text-left">Results:<
+                  <span className="text-left">45% efficiency gain, 80% reduction in defects>
                 </div>
             </div>
 
@@ -183,15 +183,13 @@ export default function AIAutonomousOperationsServices2026() {
               </p>
               <div className="text-left"></div>
                 <a 
-                  href="/
-                  className="text-left
-                >
+                  href="/"
+                  className="text-left">
                   Start Your Transformation
                 </a>
                 <a 
-                  href="/
-                  className="text-left
-                >
+                  href="/"
+                  className="text-left">
                   Learn More
                 </a>
               </div>

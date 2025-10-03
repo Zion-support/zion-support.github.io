@@ -16,8 +16,8 @@ export const metadata: Metadata = {
 
 export default function AI2026QuantumConsciousnessFusionBreakthrough() {
   return (
-    <div className="text-left"></div>
-      {/* Hero Section */}
+    <div className="text-left">
+      {/* Hero Section */}</div>
       <section className="text-left">
         <div className="text-left"></div>
           <div className="text-left"></div>"
@@ -27,7 +27,7 @@ export default function AI2026QuantumConsciousnessFusionBreakthrough() {
         <div className="text-left"></div>
           <div className="text-left"></div>
             <div className="text-left"></div>
-              <span className="text-left"></span>
+              <span className="text-left">
                 ⚛️ Quantum Consciousness Fusion
               </span>
             </div>
@@ -43,15 +43,13 @@ export default function AI2026QuantumConsciousnessFusionBreakthrough() {
             
             <div className="text-left"></div>
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 Get Free Consultation
               </a>
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 View $3B Success Story →
               </a>
             </div>
@@ -143,7 +141,7 @@ export default function AI2026QuantumConsciousnessFusionBreakthrough() {
         <div className="text-left"></div>
           <div className="text-left"></div>
             <div className="text-left"></div>
-              <span className="text-left"></span>
+              <span className="text-left">
                 💰 Fortune 500 Success Story
               </span>
             </div>
@@ -172,9 +170,8 @@ export default function AI2026QuantumConsciousnessFusionBreakthrough() {
               </div>
             
             <a 
-              href="/case-studies/fortune-500-quantum-consciousness-mega-success
-              className="text-left
-            >
+              href="/case-studies/fortune-500-quantum-consciousness-mega-success"
+              className="text-left">
               Read Full Case Study →
             </a>
           </div>
@@ -233,15 +230,13 @@ export default function AI2026QuantumConsciousnessFusionBreakthrough() {
             </p>
             <div className="text-left"></div>
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 Get Free Consultation
               </a>
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 View $3B Success Story →
               </a>
             </div>

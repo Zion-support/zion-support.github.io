@@ -19,15 +19,15 @@ export const metadata = {
 export default function AI2026AutonomousFinanceOperations() {
   return (
     <div className="text-left"></div>
-      <div className="text-left"></div>
-        {/* Header */}
+      <div className="text-left">
+        {/* Header */}</div>
         <div className="text-left"></div>
-          <div className="text-left"></div>
-            💰 FINANCE REVOLUTION
+          <div className="text-left">
+            💰 FINANCE REVOLUTION</div>
           </div>
           <h1 className="text-left">
             AI 2026 Autonomous Finance Operations:
-            <span className="text-left"> 98% Automation & $100M+ Savings<"
+            <span className="text-left"> 98% Automation & $100M+ Savings>
           </h1>
           <p className="text-left">
             Discover how revolutionary AI autonomous finance operations are delivering 98% process automation, 
@@ -242,15 +242,13 @@ export default function AI2026AutonomousFinanceOperations() {
           </p>
           <div className="text-left"></div>
             <Link
-              href="/services/ai-finance-automation
-              className="text-left
-            >
+              href="/services/ai-finance-automation"
+              className="text-left">
               Explore Finance AI Services
             </Link>
             <a
-              href="tel:+13024640950
-              className="text-left
-            >
+              href="tel:+13024640950"
+              className="text-left">
               Call +1 302 464 0950
             </a>
           </div>

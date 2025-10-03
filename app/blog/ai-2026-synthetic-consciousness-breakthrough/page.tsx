@@ -10,8 +10,8 @@ export const metadata = {
 
 export default function SyntheticConsciousnessBreakthrough2026() {
   return (
-    <div className="text-left"></div>
-      {/* Hero Section */}
+    <div className="text-left">
+      {/* Hero Section */}</div>
       <div className="text-left"></div>
         <div className="text-left"></div>
         <div className="text-left"></div>
@@ -30,16 +30,14 @@ export default function SyntheticConsciousnessBreakthrough2026() {
             </p>
             <div className="text-left"></div>
               <Link 
-                href="/case-studies/ai-2026-synthetic-consciousness-10-billion-success
-                className="text-left
-              >
+                href="/case-studies/ai-2026-synthetic-consciousness-10-billion-success"
+                className="text-left">
                 View $10B Success Case Study
                 <ArrowRight className="text-left" />
               </Link>
               <Link 
-                href="/services/ai-consulting
-                className="text-left
-              >
+                href="/services/ai-consulting"
+                className="text-left">
                 Implement Conscious AI
                 <Brain className="text-left" />
               </Link>
@@ -97,29 +95,29 @@ export default function SyntheticConsciousnessBreakthrough2026() {
           </h2>
           <div className="text-left"></div>
             <div className="text-left"></div>
-              <div className="text-left"></div>
-                10x
+              <div className="text-left">
+                10x</div>
               </div>
               <div className="text-left">Decision Accuracy</div>
               <div className="text-left">Compared to traditional AI systems</div>
             </div>
             <div className="text-left"></div>
-              <div className="text-left"></div>
-                95%
+              <div className="text-left">
+                95%</div>
               </div>
               <div className="text-left">Ethical Compliance</div>
               <div className="text-left">In complex decision scenarios</div>
             </div>
             <div className="text-left"></div>
-              <div className="text-left"></div>
-                3x
+              <div className="text-left">
+                3x</div>
               </div>
               <div className="text-left">Learning Speed</div>
               <div className="text-left">Faster adaptation to new tasks</div>
             </div>
             <div className="text-left"></div>
-              <div className="text-left"></div>
-                $10B
+              <div className="text-left">
+                $10B</div>
               </div>
               <div className="text-left">ROI Generated</div>
               <div className="text-left">For enterprise clients</div>
@@ -217,16 +215,14 @@ export default function SyntheticConsciousnessBreakthrough2026() {
           </p>
           <div className="text-left"></div>
             <Link 
-              href="/contact
-              className="text-left
-            >
+              href="/contact"
+              className="text-left">
               Schedule Consultation
               <ArrowRight className="text-left" />
             </Link>
             <Link 
-              href="/services/ai-development
-              className="text-left
-            >
+              href="/services/ai-development"
+              className="text-left">
               Explore AI Services
               <TrendingUp className="text-left" />
             </Link>

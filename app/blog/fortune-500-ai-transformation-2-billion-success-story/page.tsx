@@ -9,8 +9,8 @@ export const metadata: Metadata = {
 
 export default function Fortune500AITransformationCaseStudy() {
   return (
-    <div className="text-left"></div>
-      {/* Hero Section */}
+    <div className="text-left">
+      {/* Hero Section */}</div>
       <section className="text-left">
         <div className="text-left"></div>
           <div className="text-left"></div>"
@@ -20,7 +20,7 @@ export default function Fortune500AITransformationCaseStudy() {
         <div className="text-left"></div>
           <div className="text-left"></div>
             <div className="text-left"></div>
-              <span className="text-left"></span>
+              <span className="text-left">
                 💰 Exclusive Fortune 500 Case Study
               </span>
             </div>
@@ -58,15 +58,13 @@ export default function Fortune500AITransformationCaseStudy() {
 
             <div className="text-left"></div>
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 Achieve Similar Results
               </a>
               <a 
-                href="/
-                className="text-left
-              >
+                href="/"
+                className="text-left">
                 Read Implementation Guide
               </a>
             </div>
@@ -220,10 +218,10 @@ export default function Fortune500AITransformationCaseStudy() {
             <div className="text-left"></div>
               <div className="text-left">💬</div>"
               <blockquote className="text-left">
-                "The AI transformation with Zion Tech Group has been the most significant strategic initiative in our company's 120-year history. The $2.3B in savings exceeded our wildest expectations, and the operational improvements have positioned us as the clear leader in our industry.
+                "The AI transformation with Zion Tech Group has been the most significant strategic initiative in our company's 120-year history. The $2.3B in savings exceeded our wildest expectations, and the operational improvements have positioned us as the clear leader in our industry."
               </blockquote>
-              <div className="text-left"></div>
-                — CEO, Fortune 500 Manufacturing Company
+              <div className="text-left">
+                — CEO, Fortune 500 Manufacturing Company</div>
               </div>
 
             {/* CTA Section */}
@@ -235,15 +233,13 @@ export default function Fortune500AITransformationCaseStudy() {
               </p>
               <div className="text-left"></div>
                 <a 
-                  href="/
-                  className="text-left
-                >
+                  href="/"
+                  className="text-left">
                   Start Your Transformation
                 </a>
                 <a 
-                  href="/
-                  className="text-left
-                >
+                  href="/"
+                  className="text-left">
                   Learn About Neural Superintelligence
                 </a>
               </div>

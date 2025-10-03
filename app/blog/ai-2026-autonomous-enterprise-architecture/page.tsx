@@ -18,8 +18,8 @@ export const metadata: Metadata = {
 export default function AI2026AutonomousEnterpriseArchitecture() {
   return (
     <div className="text-left"></div>
-      <div className="text-left"></div>
-        {/* Header */}
+      <div className="text-left">
+        {/* Header */}</div>
         <div className="text-left"></div>
           <div className="text-left"></div>
             <span className="text-left"><
@@ -80,7 +80,7 @@ export default function AI2026AutonomousEnterpriseArchitecture() {
 <div className="text-left"></div>
           <div className="text-left"></div>
             <h2 className="text-left">The Autonomous Architecture Revolution</h2>"
-            <div className="text-left">origin/cursor/fix-errors-and-merge-to-main-0638
+            <div className="text-left">origin/cursor/fix-errors-and-merge-to-main-0638</div>
               <p>
                 In 2026, enterprise architecture is undergoing a fundamental transformation. Traditional 
                 static architectures are being replaced by dynamic, self-optimizing systems that adapt 
@@ -118,15 +118,13 @@ export default function AI2026AutonomousEnterpriseArchitecture() {
               </p>
               <div className="text-left"></div>
                 <Link 
-                  href="/
-                  className="text-left
-                >
+                  href="/"
+                  className="text-left">
                   Get Started Today
                 </Link>
                 <Link 
-                  href="/
-                  className="text-left
-                >
+                  href="/"
+                  className="text-left">
                   Learn More
                 </Link>
               </div>
@@ -173,9 +171,8 @@ export default function AI2026AutonomousEnterpriseArchitecture() {
         {/* Back to Blog */}
         <div className="text-left"></div>
           <Link 
-            href="/
-            className="text-left
-          >
+            href="/"
+            className="text-left">
             <svg className="text-left" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
             </svg>
