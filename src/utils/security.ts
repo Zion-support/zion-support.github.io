@@ -55,7 +55,7 @@ export const defaultCSP: ContentSecurityPolicy = {
   'form-action': ["'self'"],
   'frame-ancestors': ["'none'"],
   'upgrade-insecure-requests': true
-';
+};
 
 /**
  * Default security headers
@@ -66,7 +66,7 @@ export const defaultSecurityHeaders: SecurityHeaders = {
   'X-XSS-Protection': '1; mode=block',
   'Referrer-Policy': 'strict-origin-when-cross-origin',
   'Permissions-Policy': 'camera=(), microphone=(), geolocation=(), payment=()',
-  'Strict-Transport-Security': 'max-age=31536000; includeSubDomains};
+  'Strict-Transport-Security': 'max-age=31536000; includeSubDomains'
 };
 
 /**
@@ -75,7 +75,7 @@ export const defaultSecurityHeaders: SecurityHeaders = {
 export const validationRules: ValidationRules = {
   email: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
   phone: /^[\+]?[1-9][\d]{0,15}$/,
-  url: /^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6'\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)$/,
+  url: /^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)$/,
   sanitize: (input: string): string => {
     return input
       .replace(/[<>]/g, '') // Remove potential HTML tags
@@ -83,7 +83,7 @@ export const validationRules: ValidationRules = {
       .replace(/on\w+\s*=/gi, '') // Remove event handlers
       .trim();
   }
-';
+};
 
 /**
  * Generate CSP header string
@@ -94,8 +94,8 @@ export function generateCSPHeader(csp: ContentSecurityPolicy): string {
       if (typeof value === 'boolean') {
         return value ? directive : '';
       }
-      return `${directive' ${value.join(' ')``;
-    ')
+      return `${directive} ${value.join(' ')}`;
+    })
     .filter(Boolean)
     .join('; ');
 }
@@ -143,7 +143,7 @@ export const defaultRateLimit: RateLimitConfig = {
   maxRequests: 100, // 100 requests per window
   skipSuccessfulRequests: false,
   skipFailedRequests: false
-';
+};
 
 /**
  * CSRF token generation and validation
@@ -159,12 +159,12 @@ export class CSRFProtection {
     const token = this.generateToken();
     sessionStorage.setItem('csrf-token', token);
     return token;
-  '
+  }
 
   static validateToken(token: string): boolean {
     const storedToken = sessionStorage.getItem('csrf-token');
     return storedToken === token;
-  '
+  }
 
   static getToken(): string | null {
     return sessionStorage.getItem('csrf-token');
@@ -178,7 +178,7 @@ export class SecurityLogger {
   private static logLevel: 'info' | 'warn' | 'error' = 'warn';
   static setLogLevel(level: 'info' | 'warn' | 'error'): void {
     this.logLevel = level;
-  '
+  }
 
   static logSecurityEvent(
     event: string,
@@ -199,7 +199,7 @@ export class SecurityLogger {
       // In production, send to security monitoring service
       if (import.meta.env.PROD) {
         this.sendToMonitoringService(logEntry);
-      ' else {
+      } else {
         console.warn('Security Event:', logEntry);
       }
     }
@@ -212,13 +212,13 @@ export class SecurityLogger {
       sessionStorage.setItem('security-session-id', sessionId);
     }
     return sessionId;
-  '
+  }
 
   private static generateToken(): string {
     const array = new Uint8Array(16);
     crypto.getRandomValues(array);
     return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('');
-  '
+  }
 
   private static async sendToMonitoringService(logEntry: any): Promise<void> {
     try {
@@ -228,7 +228,7 @@ export class SecurityLogger {
       existingLogs.unshift(logEntry);
       existingLogs.splice(100); // Keep only last 100 entries
       localStorage.setItem('security-logs', JSON.stringify(existingLogs));
-    ' catch (error) {
+    } catch (error) {
       console.error('Failed to log security event:', error);
     }
   }
@@ -245,25 +245,25 @@ export function initializeSecurity(): void {
       filename: event.filename,
       lineno: event.lineno,
       colno: event.colno
-    ', 'error');
-  ');
+    }, 'error');
+  });
 
   // Set up unhandled promise rejection handling
   window.addEventListener('unhandledrejection', (event) => {
     SecurityLogger.logSecurityEvent('unhandled-promise-rejection', {
-      reason: event.reason?.toString(),
-      promise: event.promise
-    ', 'error');
-  ');
+        reason: event.reason?.toString(),
+        promise: event.promise
+      }, 'error');
+    });
 
   // Log suspicious activity
   document.addEventListener('click', (event) => {
     const target = event.target as HTMLElement;
     if (target.tagName === 'A' && target.getAttribute('href')?.startsWith('javascript:')) {
       SecurityLogger.logSecurityEvent('suspicious-link-click', {
-        href: target.getAttribute('href'),
-        text: target.textContent
-      ', 'warn');
+          href: target.getAttribute('href'),
+          text: target.textContent
+        }, 'warn');
     }
   });
 
@@ -282,6 +282,6 @@ export default {
   sanitizeInput,
   defaultRateLimit,
   CSRFProtection,
-  SecurityLogger,
-  initializeSecurity
-`;
+    SecurityLogger,
+    initializeSecurity
+  };
