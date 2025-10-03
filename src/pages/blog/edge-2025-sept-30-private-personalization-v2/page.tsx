@@ -6,8 +6,7 @@ export default function EdgePrivatePersonalizationV2(): React.JSX.Element {
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
       <Helmet>
         <title>Edge Private Personalization v2 — Zero‑PII, Global &lt;100ms</title>
-        <meta name="description" content="Scoped IDs, signed configs, and on‑device models for privacy‑first personalization with stable SLAs." />
-        <link rel="canonical" href="https://ziontechgroup.com/blog/edge-2025-sept-30-private-personalization-v2" />
+        <meta name="description" content="Scoped IDs, signed configs, and on‑device models for privacy‑first personalization with stable SLAs." /><link rel="canonical" href="https://ziontechgroup.com/blog/edge-2025-sept-30-private-personalization-v2/>
       </Helmet>
 
       <div className="container mx-auto px-6 py-16">

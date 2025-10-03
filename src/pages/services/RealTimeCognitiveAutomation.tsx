@@ -8,9 +8,7 @@ const RealTimeCognitiveAutomation = () => {
     <>
       <Helmet>
         <title>Real-Time Cognitive Automation Platform | Transform Business Operations with AI | Zion Tech Group</title>
-        <meta name="description" content="Transform operations with Real-Time Cognitive Automation Platform. 94% accuracy, 85% cost reduction, 10x productivity gains. AI-powered workflows that learn and optimize autonomously." />
-        <meta name="keywords" content="cognitive automation, intelligent automation, RPA, AI workflows, process automation, business automation, hyperautomation" />
-      </Helmet>
+        <meta name="description" content="Transform operations with Real-Time Cognitive Automation Platform. 94% accuracy, 85% cost reduction, 10x productivity gains. AI-powered workflows that learn and optimize autonomously." /><meta name="keywords" content="cognitive automation, intelligent automation, RPA, AI workflows, process automation, business automation, hyperautomation" /></Helmet>
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">
         <Header />
 
@@ -20,7 +18,7 @@ const RealTimeCognitiveAutomation = () => {
             to="/services"
             className="inline-flex items-center text-zion-cyan hover:text-zion-blue-light mb-8 transition-colors"
           >
-            <ArrowLeft className="w-4 h-4 mr-2" />
+            <ArrowLeft className="w-4 h-4 mr-2/>
             Back to Services
           </Link>
 
@@ -73,7 +71,7 @@ const RealTimeCognitiveAutomation = () => {
             {/* Business Impact */}
             <section>
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                <TrendingUp className="w-8 h-8 text-green-400" />
+                <TrendingUp className="w-8 h-8 text-green-400/>
                 Business Impact
               </h2>
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-zion-cyan/30">
@@ -82,15 +80,15 @@ const RealTimeCognitiveAutomation = () => {
                     <h3 className="text-xl font-bold text-white mb-4">⚡ Real-Time Processing</h3>
                     <ul className="space-y-3">
                       <li className="flex items-start gap-2">
-                        <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
+                        <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1/>
                         <span>&lt;50ms decision latency</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
+                        <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1/>
                         <span>Instant workflow execution</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
+                        <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1/>
                         <span>Live process optimization</span>
                       </li>
                     </ul>
@@ -99,15 +97,15 @@ const RealTimeCognitiveAutomation = () => {
                     <h3 className="text-xl font-bold text-white mb-4">🧠 Self-Learning Systems</h3>
                     <ul className="space-y-3">
                       <li className="flex items-start gap-2">
-                        <CheckCircle className="w-5 h-5 text-blue-400 flex-shrink-0 mt-1" />
+                        <CheckCircle className="w-5 h-5 text-blue-400 flex-shrink-0 mt-1/>
                         <span>Continuous model improvement</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <CheckCircle className="w-5 h-5 text-blue-400 flex-shrink-0 mt-1" />
+                        <CheckCircle className="w-5 h-5 text-blue-400 flex-shrink-0 mt-1/>
                         <span>Adaptive workflow optimization</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <CheckCircle className="w-5 h-5 text-blue-400 flex-shrink-0 mt-1" />
+                        <CheckCircle className="w-5 h-5 text-blue-400 flex-shrink-0 mt-1/>
                         <span>Autonomous error correction</span>
                       </li>
                     </ul>
@@ -119,7 +117,7 @@ const RealTimeCognitiveAutomation = () => {
             {/* Platform Capabilities */}
             <section>
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                <Brain className="w-8 h-8 text-purple-400" />
+                <Brain className="w-8 h-8 text-purple-400/>
                 Platform Capabilities
               </h2>
               <div className="grid md:grid-cols-2 gap-6">
@@ -210,7 +208,7 @@ const RealTimeCognitiveAutomation = () => {
                     <ul className="space-y-2">
                       {solution.highlights.map((highlight, hIndex) => (
                         <li key={hIndex} className="flex items-start gap-2">
-                          <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0 mt-1" />
+                          <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0 mt-1/>
                           <span>{highlight}</span>
                         </li>
                       ))}
@@ -223,7 +221,7 @@ const RealTimeCognitiveAutomation = () => {
             {/* Pricing */}
             <section>
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                <Zap className="w-8 h-8 text-yellow-400" />
+                <Zap className="w-8 h-8 text-yellow-400/>
                 Pricing Plans
               </h2>
               <div className="grid md:grid-cols-3 gap-6">
@@ -264,7 +262,7 @@ const RealTimeCognitiveAutomation = () => {
                     <ul className="space-y-3">
                       {pkg.features.map((feature, fIndex) => (
                         <li key={fIndex} className="flex items-start gap-2">
-                          <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0 mt-1" />
+                          <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0 mt-1/>
                           <span>{feature}</span>
                         </li>
                       ))}
@@ -285,11 +283,11 @@ const RealTimeCognitiveAutomation = () => {
                   <div className="text-sm text-zion-slate-light">
                     <ul className="space-y-2">
                       <li className="flex items-center gap-2">
-                        <CheckCircle className="w-4 h-4 text-green-400" />
+                        <CheckCircle className="w-4 h-4 text-green-400/>
                         <span>3 months free (save $47,997)</span>
                       </li>
                       <li className="flex items-center gap-2">
-                        <CheckCircle className="w-4 h-4 text-green-400" />
+                        <CheckCircle className="w-4 h-4 text-green-400/>
                         <span>AI transformation roadmap ($10,000 value)</span>
                       </li>
                     </ul>
@@ -299,7 +297,7 @@ const RealTimeCognitiveAutomation = () => {
                       to="/contact"
                       className="px-6 py-3 bg-gradient-to-r from-purple-500 to-blue-500 text-white rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all flex items-center gap-2"
                     >
-                      <Zap className="w-5 h-5" />
+                      <Zap className="w-5 h-5/>
                       Start Free Trial
                     </Link>
                   </div>

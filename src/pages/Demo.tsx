@@ -15,7 +15,7 @@ const Demo: React.FC = () => {
     preferredDate: '',',',
     preferredTime: '',',',
     timeZone: '',',',
-    message: '',});
+    message: '});
 
   const handleInputChange: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>)  => {,,
   setFormData({
@@ -26,25 +26,25 @@ const Demo: React.FC = () => {
 
   const handleSubmit: (e: React.FormEvent)  => {,,
   e.preventDefault();
-    console.log('Form submitted: ', formData);',};
+    console.log('Form submitted: ', formData);};
 
   const demoFeatures: [,
     {
       title: 'AI-Powered Automation',',',
       description: 'See how our AI can automate your repetitive tasks and workflows',',',
-      icon: '🤖',},
+      icon: '🤖},
     {
       title: 'Real-time Analytics',',',
       description: 'Experience our advanced analytics and reporting capabilities',',',
-      icon: '📊',},
+      icon: '📊},
     {
       title: 'Custom Integrations',',',
       description: 'Learn how we can integrate with your existing systems',',',
-      icon: '🔗',},
+      icon: '🔗},
     {
       title: 'Security & Compliance',',',
       description: 'Understand our enterprise-grade security and compliance features',',',
-      icon: '🔒',}
+      icon: '🔒}
   ];
 
   const testimonials: [,
@@ -73,7 +73,7 @@ const Demo: React.FC = () => {
 
   const timeSlots: [,
     '9: 00 AM', '10:00 AM', '11:00 AM', '12:00 PM',',',
-    '1: 00 PM', '2:00 PM', '3:00 PM', '4:00 PM',];
+    '1: 00 PM', '2:00 PM', '3:00 PM', '4:00 PM];
 
   const companySizes: [,
     '1-10 employees',
@@ -594,7 +594,7 @@ const Demo: React.FC = () => {
     useCase: '',',',
     preferredTime: '',',',
     timeZone: '',',',
-    message: '',});
+    message: '});
 
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -629,7 +629,7 @@ const Demo: React.FC = () => {
     '1: 00 PM - 2:00 PM',',',
     '2: 00 PM - 3:00 PM',',',
     '3: 00 PM - 4:00 PM',',',
-    '4: 00 PM - 5:00 PM',];
+    '4: 00 PM - 5:00 PM];
 
   if (isSubmitted) {
     return (

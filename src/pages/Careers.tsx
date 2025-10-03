@@ -6,8 +6,7 @@ const Careers: React.FC = () => {
     <>
       <Helmet>
         <title>Careers - Zion Tech Group</title>
-        <meta name="description" content="Join Zion Tech Group to build enterprise-grade AI, micro SaaS, and IT solutions." />
-      </Helmet>
+        <meta name="description" content="Join Zion Tech Group to build enterprise-grade AI, micro SaaS, and IT solutions." /></Helmet>
       
       <div className="min-h-screen bg-gray-50 py-20">
         <div className="container mx-auto px-6">

@@ -1,7 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
-
+import React from 'react;
+import { Link } from 'react-router-dom;
+import { Helmet } from 'react-helmet-async;
 const QuantumComputingConsultingPage: React.FC = () => {
   const quantumServices = [
     {
@@ -46,8 +45,7 @@ const QuantumComputingConsultingPage: React.FC = () => {
     <>
       <Helmet>
         <title>Quantum Computing Consulting - Zion Tech Group</title>
-        <meta name="description" content="Expert quantum computing consulting services including strategy, algorithm development, and quantum security solutions from Zion Tech Group." />
-      </Helmet>
+        <meta name="description" content="Expert quantum computing consulting services including strategy, algorithm development, and quantum security solutions from Zion Tech Group." /></Helmet>
       
       <div className="min-h-screen bg-gray-50">
         {/* Header */}

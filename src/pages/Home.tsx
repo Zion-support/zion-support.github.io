@@ -71,7 +71,7 @@ featured: true
       title: 'AI Revolution 2026: The Next Frontier of Enterprise Intelligence',',',
       description: 'Discover autonomous AI agents, neural interfaces, and predictive intelligence systems achieving 300% productivity gains.',',',
       category: 'AI Innovation',',',
-      publishedAt: '2025-01-15',},
+      publishedAt: '2025-01-15},
     {
 slug: 'quantum-ai-breakthrough',',',
 title: 'Quantum AI Breakthrough: Solving Impossible Problems in Seconds',',',

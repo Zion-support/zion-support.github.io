@@ -26,7 +26,7 @@ const LoadingSpinner = memo<LoadingSpinnerProps>(({
   );
 });
 
-LoadingSpinner.displayName = 'LoadingSpinner;
+  LoadingSpinner.displayName = 'LoadingSpinner';
 interface PageLoaderProps {
   text?: string;
   className?: string;
@@ -40,13 +40,13 @@ const PageLoader = memo<PageLoaderProps>(({
     <div className={`flex flex-col items-center justify-center min-h-screen bg-slate-950 text-white ${className}`} role="status" aria-label="Page loading">
       <div 
         className="w-16 h-16 border-8 border-blue-500 border-t-transparent rounded-full animate-spin mb-4"
-        aria-hidden="true"/>
-      <p className="text-xl font-semibold">{text}</p>
+          aria-hidden="true"/>
+        <p className="text-xl font-semibold">{text}</p>
     </div>
   );
 });
 
-PageLoader.displayName = 'PageLoader;
+  PageLoader.displayName = 'PageLoader';
 // Optimized skeleton loader for better perceived performance
 interface SkeletonLoaderProps {
   lines?: number;
@@ -69,10 +69,10 @@ const SkeletonLoader = memo<SkeletonLoaderProps>(({ lines = 3, className = '' })
   );
 });
 
-SkeletonLoader.displayName = 'SkeletonLoader;
+  SkeletonLoader.displayName = 'SkeletonLoader';
 // Inline spinner for buttons and small components
 interface InlineSpinnerProps {
-  size?: 'xs' | 'sm;
+  size?: 'xs' | 'sm';
   className?: string;
 }
 

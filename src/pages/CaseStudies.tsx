@@ -1,13 +1,11 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
+import React from 'react;
+import { Helmet } from 'react-helmet-async;
 const CaseStudies: React.FC = () => {
   return (
     <>
       <Helmet>
         <title>Case Studies - Zion Tech Group</title>
-        <meta name="description" content="Real-world success stories and case studies showcasing our AI solutions and their impact on businesses." />
-        <link rel="canonical" href="https://ziontechgroup.com/case-studies" />
+        <meta name="description" content="Real-world success stories and case studies showcasing our AI solutions and their impact on businesses." /><link rel="canonical" href="https://ziontechgroup.com/case-studies/>
       </Helmet>
       
       <div className="min-h-screen bg-gray-50 py-16">
