@@ -15,10 +15,10 @@ export const usePerformanceMonitor = (componentName: string) => {
       const totalTime = unmountTime - mountTime.current;
       
       if (import.meta.env.DEV) {
-        console.log(`[Performance] ${componentName`:`, {
+        console.log(`[Performance] ${componentName}:`, {
           renderCount: renderCount.current,
-          totalTime: `${totalTime`ms`,
-          avgRenderTime: `${totalTime / renderCount.current`ms`
+          totalTime: `${totalTime}ms`,
+          avgRenderTime: `${totalTime / renderCount.current}ms`
         });
       }
     };
@@ -107,7 +107,7 @@ export const useIntersectionObserver = (
     const observer = new IntersectionObserver(
       ([entry]) => {
         setIsIntersecting(entry.isIntersecting);
-      ',
+      },
       {
         threshold: 0.1,
         rootMargin: '50px',
@@ -134,7 +134,7 @@ export const useVisibility = () => {
   useEffect(() => {
     const handleVisibilityChange = () => {
       setIsVisible(!document.hidden);
-    ';
+    };
 
     document.addEventListener('visibilitychange', handleVisibilityChange);
 
@@ -144,7 +144,7 @@ export const useVisibility = () => {
   }, []);
 
   return isVisible;
-';
+};
 
 /**
  * Hook for managing network status
@@ -167,7 +167,7 @@ export const useNetworkStatus = () => {
       
       const handleConnectionChange = () => {
         setConnectionType(connection.effectiveType || 'unknown');
-      ';
+      };
 
       connection.addEventListener('change', handleConnectionChange);
 
@@ -176,7 +176,7 @@ export const useNetworkStatus = () => {
         window.removeEventListener('offline', handleOffline);
         connection.removeEventListener('change', handleConnectionChange);
       };
-    };
+    }
 
     return () => {
       window.removeEventListener('online', handleOnline);
@@ -195,7 +195,7 @@ export const useMemoryInfo = () => {
     usedJSHeapSize: number;
     totalJSHeapSize: number;
     jsHeapSizeLimit: number;
-  ' | null>(null);
+  } | null>(null);
 
   useEffect(() => {
     if ('memory' in performance) {
@@ -249,18 +249,18 @@ export const useComponentLifecycle = (componentName: string) => {
   useEffect(() => {
     renderStartTime.current = performance.now();
     markRender();
-  `);
+  });
 
   useEffect(() => {
     const renderTime = performance.now() - renderStartTime.current;
     
     if (import.meta.env.DEV && renderTime > 16) {
-      console.warn(`[Performance] ${componentName} render took ${renderTime.toFixed(2)`ms (target: <16ms)`);
+      console.warn(`[Performance] ${componentName} render took ${renderTime.toFixed(2)}ms`);
     }
   });
 
   return {
     markRender,
     renderStartTime: renderStartTime.current
-  ';
-`;
+  };
+};

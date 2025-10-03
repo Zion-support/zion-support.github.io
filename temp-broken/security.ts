@@ -9,27 +9,11 @@ export interface SecurityConfig {
 }
 
 export interface ContentSecurityPolicy {
-  'default-src': string[];
-  'script-src': string[];
-  'style-src': string[];
-  'img-src': string[];
-  'font-src': string[];
-  'connect-src': string[];
-  'frame-src': string[];
-  'object-src': string[];
-  'base-uri': string[];
-  'form-action': string[];
-  'frame-ancestors': string[];
-  'upgrade-insecure-requests': boolean;
+  'default-src': string[];script-src': string[];style-src': string[];img-src': string[];font-src': string[];connect-src': string[];frame-src': string[];object-src': string[];base-uri': string[];form-action': string[];frame-ancestors': string[];upgrade-insecure-requests': boolean;
 }
 
 export interface SecurityHeaders {
-  'X-Content-Type-Options': string;
-  'X-Frame-Options': string;
-  'X-XSS-Protection': string;
-  'Referrer-Policy': string;
-  'Permissions-Policy': string;
-  'Strict-Transport-Security': string;
+  'X-Content-Type-Options': string;X-Frame-Options': string;X-XSS-Protection': string;Referrer-Policy': string;Permissions-Policy': string;Strict-Transport-Security': string;
 }
 
 export interface ValidationRules {
@@ -78,9 +62,9 @@ export const validationRules: ValidationRules = {
   url: /^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)$/,
   sanitize: (input: string): string => {
     return input
-      .replace(/[<>]/g, '') // Remove potential HTML tags
-      .replace(/javascript:/gi, '') // Remove javascript: protocol
-      .replace(/on\w+\s*=/gi, '') // Remove event handlers
+      .replace(/[<>]/g, '}) // Remove potential HTML tags
+      .replace(/javascript:/gi, '}) // Remove javascript: protocol
+      .replace(/on\w+\s*=/gi, '}) // Remove event handlers
       .trim();
   }
 };
@@ -91,13 +75,13 @@ export const validationRules: ValidationRules = {
 export function generateCSPHeader(csp: ContentSecurityPolicy): string {
   return Object.entries(csp)
     .map(([directive, value]) => {
-      if (typeof value === 'boolean') {
+      if (typeof value === 'boolean}) {
         return value ? directive : '';
       }
-      return `${directive} ${value.join(' ')}`;
+      return `${directive} ${value.join(' })}`;
     })
     .filter(Boolean)
-    .join('; ');
+    .join('; });
 }
 
 /**
@@ -111,7 +95,7 @@ export function validateEmail(email: string): boolean {
  * Validate phone number
  */
 export function validatePhone(phone: string): boolean {
-  return validationRules.phone.test(phone.replace(/[\s\-\(\)]/g, ''));
+  return validationRules.phone.test(phone.replace(/[\s\-\(\)]/g, '}));
 }
 
 /**
@@ -152,7 +136,7 @@ export class CSRFProtection {
   private static generateToken(): string {
     const array = new Uint8Array(32);
     crypto.getRandomValues(array);
-    return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('');
+    return Array.from(array, byte => byte.toString(16).padStart(2, '0})).join('});
   }
 
   static createToken(): string {
@@ -162,12 +146,12 @@ export class CSRFProtection {
   }
 
   static validateToken(token: string): boolean {
-    const storedToken = sessionStorage.getItem('csrf-token');
+    const storedToken = sessionStorage.getItem('csrf-token});
     return storedToken === token;
   }
 
   static getToken(): string | null {
-    return sessionStorage.getItem('csrf-token');
+    return sessionStorage.getItem('csrf-token});
   }
 }
 
@@ -176,7 +160,7 @@ export class CSRFProtection {
  */
 export class SecurityLogger {
   private static logLevel: 'info' | 'warn' | 'error' = 'warn';
-  static setLogLevel(level: 'info' | 'warn' | 'error'): void {
+  static setLogLevel(level: 'info' | 'warn' | 'error}): void {
     this.logLevel = level;
   }
 
@@ -185,7 +169,7 @@ export class SecurityLogger {
     details: Record<string, any>,
     level: 'info' | 'warn' | 'error' = 'warn
   ): void {
-    if (level === 'error' || (level === 'warn' && this.logLevel !== 'error')) {
+    if (level === 'error' || (level === 'warn' && this.logLevel !== 'error})) {
       const logEntry = {
         timestamp: new Date().toISOString(),
         event,
@@ -206,7 +190,7 @@ export class SecurityLogger {
   }
 
   private static getSessionId(): string {
-    let sessionId = sessionStorage.getItem('security-session-id');
+    let sessionId = sessionStorage.getItem('security-session-id});
     if (!sessionId) {
       sessionId = this.generateToken();
       sessionStorage.setItem('security-session-id', sessionId);
@@ -217,14 +201,14 @@ export class SecurityLogger {
   private static generateToken(): string {
     const array = new Uint8Array(16);
     crypto.getRandomValues(array);
-    return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('');
+    return Array.from(array, byte => byte.toString(16).padStart(2, '0})).join('});
   }
 
   private static async sendToMonitoringService(logEntry: any): Promise<void> {
     try {
       // In a real application, this would send to your security monitoring service
       // For now, we'll store it in localStorage for debugging
-      const existingLogs = JSON.parse(localStorage.getItem('security-logs') || '[]');
+      const existingLogs = JSON.parse(localStorage.getItem('security-logs}) || '[]});
       existingLogs.unshift(logEntry);
       existingLogs.splice(100); // Keep only last 100 entries
       localStorage.setItem('security-logs', JSON.stringify(existingLogs));
@@ -245,7 +229,7 @@ export function initializeSecurity(): void {
       filename: event.filename,
       lineno: event.lineno,
       colno: event.colno
-    }, 'error');
+    }, 'error});
   });
 
   // Set up unhandled promise rejection handling
@@ -253,17 +237,17 @@ export function initializeSecurity(): void {
     SecurityLogger.logSecurityEvent('unhandled-promise-rejection', {
       reason: event.reason?.toString(),
       promise: event.promise
-    }, 'error');
+    }, 'error});
   });
 
   // Log suspicious activity
   document.addEventListener('click', (event) => {
     const target = event.target as HTMLElement;
-    if (target.tagName === 'A' && target.getAttribute('href')?.startsWith('javascript:')) {
+    if (target.tagName === 'A' && target.getAttribute('href})?.startsWith('javascript:})) {
       SecurityLogger.logSecurityEvent('suspicious-link-click', {
-        href: target.getAttribute('href'),
+        href: target.getAttribute('href}),
         text: target.textContent
-      }, 'warn');
+      }, 'warn});
     }
   });
 

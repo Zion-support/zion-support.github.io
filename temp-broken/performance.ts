@@ -63,7 +63,7 @@ export class PerformanceMonitor {
   }
 
   private initializeMonitoring(): void {
-    if (!this.config.enableMonitoring || typeof window === 'undefined') {
+    if (!this.config.enableMonitoring || typeof window === 'undefined}) {
       return;
     }
 
@@ -83,24 +83,24 @@ export class PerformanceMonitor {
   }
 
   private measurePageLoad(): void {
-    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    const navigation = performance.getEntriesByType('navigation})[0] as PerformanceNavigationTiming;
     if (navigation) {
       this.metrics.loadTime = navigation.loadEventEnd - navigation.fetchStart;
       this.metrics.timeToInteractive = navigation.domInteractive - navigation.fetchStart;
     }
 
     // Measure bundle size
-    const scripts = document.querySelectorAll('script[src]');
+    const scripts = document.querySelectorAll('script[src]});
     let totalSize = 0;
     scripts.forEach(script => {
       const src = (script as HTMLScriptElement).src;
-      if (src.includes('assets/') || src.includes('chunks/')) {
+      if (src.includes('assets/}) || src.includes('chunks/})) {
         // Estimate size based on common patterns
         totalSize += 50000; // Average chunk size
       }
     });
     this.metrics.bundleSize = totalSize;
-    this.metrics.resourceCount = performance.getEntriesByType('resource').length;
+    this.metrics.resourceCount = performance.getEntriesByType('resource}).length;
 
     this.reportMetrics();
   }
@@ -151,7 +151,7 @@ export class PerformanceMonitor {
     if ('PerformanceObserver' in window) {
       const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
+        const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint});
         if (fcpEntry) {
           this.metrics.firstContentfulPaint = fcpEntry.startTime;
         }
@@ -253,7 +253,7 @@ export class PerformanceMonitor {
 
   private storeLocally(report: any): void {
     try {
-      const existingReports = JSON.parse(localStorage.getItem('performance-reports') || '[]');
+      const existingReports = JSON.parse(localStorage.getItem('performance-reports}) || '[]});
       existingReports.unshift(report);
       existingReports.splice(50); // Keep only last 50 reports
       localStorage.setItem('performance-reports', JSON.stringify(existingReports));
@@ -318,19 +318,19 @@ export class ImageOptimizer {
   }
 
   static createResponsiveImage(src: string, alt: string, sizes: string[]): string {
-    const baseSrc = src.replace(/\.[^/.]+$/, '');
-    const extension = src.split('.').pop();
+    const baseSrc = src.replace(/\.[^/.]+$/, '});
+    const extension = src.split('.}).pop();
 
     const srcset = sizes
       .map(size => `${baseSrc}-${size}w.${extension} ${size}w`)
-      .join(', ');
+      .join(', });
 
-    return `<img src="${src}" srcset="${srcset}" alt="${alt}" loading="lazy" />`;
+    return `<img src="${src} srcset="${srcset} alt="${alt} loading="lazy` />`;
   }
 
   static preloadCriticalImages(imageUrls: string[]): void {
     imageUrls.forEach(url => {
-      const link = document.createElement('link');
+      const link = document.createElement('link});
       link.rel = 'preload';
       link.as = 'image';
       link.href = url;
@@ -345,18 +345,18 @@ export class ImageOptimizer {
 export class BundleAnalyzer {
   static analyzeBundle(): void {
     if (import.meta.env.DEV) {
-      console.log('Bundle Analysis:');
+      console.log('Bundle Analysis:});
       
       // Analyze loaded scripts
-      const scripts = document.querySelectorAll('script[src]');
+      const scripts = document.querySelectorAll('script[src]});
       console.log(`Scripts loaded: ${scripts.length}`);
       
       // Analyze loaded stylesheets
-      const styles = document.querySelectorAll('link[rel="stylesheet"]');
+      const styles = document.querySelectorAll('link[rel="stylesheet`]});
       console.log(`Stylesheets loaded: ${styles.length}`);
       
       // Analyze resource timing
-      const resources = performance.getEntriesByType('resource');
+      const resources = performance.getEntriesByType('resource});
       const totalSize = resources.reduce((sum, resource) => {
         return sum + ((resource as any).transferSize || 0);
       }, 0);
@@ -367,7 +367,7 @@ export class BundleAnalyzer {
   }
 
   static getLargestResources(limit: number = 10): any[] {
-    const resources = performance.getEntriesByType('resource');
+    const resources = performance.getEntriesByType('resource});
     return resources
       .filter(resource => (resource as any).transferSize > 0)
       .sort((a, b) => (b as any).transferSize - (a as any).transferSize)

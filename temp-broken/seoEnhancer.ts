@@ -28,7 +28,7 @@ export const calculateReadingTime = (content: string, wordsPerMinute: number = 2
 };
 
 export const analyzeContent = (content: string): ContentMetrics => {
-  const text = content.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
+  const text = content.replace(/<[^>]*>/g, ' }).replace(/\s+/g, ' }).trim();
   const words = text.split(/\s+/).filter(word => word.length > 0);
   
   const headings = content.match(/<h[1-6][^>]*>([^<]+)<\/h[1-6]>/gi) || [];
@@ -42,7 +42,7 @@ export const analyzeContent = (content: string): ContentMetrics => {
   const wordFreq: Record<string, number> = {};
   
   words.forEach(word => {
-    const cleanWord = word.toLowerCase().replace(/[^\w]/g, '');
+    const cleanWord = word.toLowerCase().replace(/[^\w]/g, '});
     if (cleanWord.length > 3) {
       wordFreq[cleanWord] = (wordFreq[cleanWord] || 0) + 1;
     }
@@ -56,22 +56,22 @@ export const analyzeContent = (content: string): ContentMetrics => {
     wordCount,
     readingTime,
     keywordDensity,
-    headings: headings.map(h => h.replace(/<[^>]*>/g, '').trim()),
-    links: links.map(l => l.match(/href=["']([^"']+)["']/)?.[1] || '').filter(Boolean)
+    headings: headings.map(h => h.replace(/<[^>]*>/g, '}).trim()),
+    links: links.map(l => l.match(/href=["']([^"']+)["']/)?.[1] || '}).filter(Boolean)
   };
 };
 
 export const generateSitemapEntry = (url: string, lastmod?: string, changefreq?: string, priority?: number): string => {
   return `<url>
     <loc>${url}</loc>
-    ${lastmod ? `<lastmod>${lastmod}</lastmod>` : ''}
-    ${changefreq ? `<changefreq>${changefreq}</changefreq>` : ''}
-    ${priority !== undefined ? `<priority>${priority}</priority>` : ''}
+    ${lastmod ? }<lastmod>${lastmod}</lastmod>` : ''}
+    ${changefreq ? }<changefreq>${changefreq}</changefreq>` : ''}
+    ${priority !== undefined ? }<priority>${priority}</priority>` : ''}
   </url>`;
 };
 
 export const extractKeywords = (content: string, maxKeywords: number = 20): string[] => {
-  const text = content.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
+  const text = content.replace(/<[^>]*>/g, ' }).replace(/\s+/g, ' }).trim();
   
   const stopWords = new Set([
     'the', 'a', 'an', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'for',
@@ -82,7 +82,7 @@ export const extractKeywords = (content: string, maxKeywords: number = 20): stri
   
   const words = text
     .toLowerCase()
-    .replace(/[^\w\s]/g, ' ')
+    .replace(/[^\w\s]/g, ' })
     .split(/\s+/)
     .filter(word => word.length > 3 && !stopWords.has(word));
   
@@ -103,18 +103,18 @@ export const optimizeDescription = (description: string, maxLength: number = 160
   }
   
   const truncated = description.substring(0, maxLength);
-  const lastSentence = truncated.lastIndexOf('.');
+  const lastSentence = truncated.lastIndexOf('.});
   
   if (lastSentence > maxLength * 0.7) {
     return truncated.substring(0, lastSentence + 1);
   }
   
-  const lastSpace = truncated.lastIndexOf(' ');
+  const lastSpace = truncated.lastIndexOf(' });
   return lastSpace > 0 ? truncated.substring(0, lastSpace) + '...' : truncated + '...';
 };
 
 export const generateMetaDescription = (content: string, maxLength: number = 160): string => {
-  const text = content.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
+  const text = content.replace(/<[^>]*>/g, ' }).replace(/\s+/g, ' }).trim();
   const sentences = text.split(/[.!?]+/).filter(s => s.trim().length > 0);
   
   let description = '';
@@ -137,29 +137,29 @@ export const analyzeSEO = (content: string, title: string, description: string):
   
   // Title analysis
   if (title.length < 30) {
-    suggestions.push('Title should be at least 30 characters long');
+    suggestions.push('Title should be at least 30 characters long});
   } else if (title.length > 60) {
-    suggestions.push('Title should be less than 60 characters');
+    suggestions.push('Title should be less than 60 characters});
   }
   
   // Description analysis
   if (description.length < 120) {
-    suggestions.push('Description should be at least 120 characters long');
+    suggestions.push('Description should be at least 120 characters long});
   } else if (description.length > 160) {
-    suggestions.push('Description should be less than 160 characters');
+    suggestions.push('Description should be less than 160 characters});
   }
   
   // Content analysis
   if (metrics.wordCount < 300) {
-    suggestions.push('Content should be at least 300 words for better SEO');
+    suggestions.push('Content should be at least 300 words for better SEO});
   }
   
   if (metrics.headings.length === 0) {
-    suggestions.push('Add headings (H1, H2, etc.) to improve content structure');
+    suggestions.push('Add headings (H1, H2, etc.) to improve content structure});
   }
   
   if (metrics.links.length === 0) {
-    suggestions.push('Add internal and external links to improve SEO');
+    suggestions.push('Add internal and external links to improve SEO});
   }
   
   // Keyword analysis
@@ -181,7 +181,7 @@ export const analyzeSEO = (content: string, title: string, description: string):
 };
 
 export const calculateReadabilityScore = (content: string): number => {
-  const text = content.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
+  const text = content.replace(/<[^>]*>/g, ' }).replace(/\s+/g, ' }).trim();
   const sentences = text.split(/[.!?]+/).filter(s => s.trim().length > 0);
   const words = text.split(/\s+/).filter(word => word.length > 0);
   
@@ -214,7 +214,7 @@ export const countSyllables = (word: string): number => {
   }
   
   // Handle silent 'e
-  if (word.endsWith('e') && count > 1) {
+  if (word.endsWith('e}) && count > 1) {
     count--;
   }
   
@@ -228,22 +228,22 @@ export const generateSchemaMarkup = (type: string, data: Record<string, any>): s
     ...data
   };
   
-  return `<script type="application/ld+json">${JSON.stringify(schema, null, 2)}</script>`;
+  return `<script type="application/ld+json`>${JSON.stringify(schema, null, 2)}</script>`;
 };
 
 export const optimizeImages = (images: string[]): string[] => {
   return images.map(image => {
     // Add WebP format suggestion
-    if (image.includes('.jpg') || image.includes('.jpeg') || image.includes('.png')) {
-      return image.replace(/\.(jpg|jpeg|png)$/i, '.webp');
+    if (image.includes('.jpg}) || image.includes('.jpeg}) || image.includes('.png})) {
+      return image.replace(/\.(jpg|jpeg|png)$/i, '.webp});
     }
     return image;
   });
 };
 
 export const generateCanonicalUrl = (baseUrl: string, path: string): string => {
-  const cleanPath = path.startsWith('/') ? path : `/${path}`;
-  return `${baseUrl.replace(/\/$/, '')}${cleanPath}`;
+  const cleanPath = path.startsWith('/}) ? path : `/${path}`;
+  return `${baseUrl.replace(/\/$/, '})}${cleanPath}`;
 };
 
 export const validateUrl = (url: string): boolean => {
@@ -257,8 +257,8 @@ export const validateUrl = (url: string): boolean => {
 
 export const generateRobotsMeta = (index: boolean = true, follow: boolean = true): string => {
   const directives = [];
-  if (!index) directives.push('noindex');
-  if (!follow) directives.push('nofollow');
+  if (!index) directives.push('noindex});
+  if (!follow) directives.push('nofollow});
   
-  return directives.length > 0 ? directives.join(', ') : 'index, follow';
+  return directives.length > 0 ? directives.join(', }) : 'index, follow';
 };
