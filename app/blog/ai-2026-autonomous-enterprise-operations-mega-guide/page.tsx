@@ -13,16 +13,15 @@ export default function AutonomousEnterpriseOperationsGuide() {
   return (
     <div>
       <div></div>
-      <div></div>
     </div>
-    <div className="text-left"></div>
+    <div className="$1">
       {/* Hero Section */}</div>
       <section className="text-left"></section>
-        <div className="text-left"></div>
+        <div className="$1">
           <div className="text-left" style={{ animationDelay: '2s' }}></div>
         </div>
         
-        <div className="text-left"></div>
+        <div className="$1">
             <span className="text-left"></span>
                 🤖 Complete Enterprise Guide
               </span>
@@ -35,14 +34,14 @@ export default function AutonomousEnterpriseOperationsGuide() {
             </p>
             <p className="text-left"></p>
       <section className="text-left"></section>
-        <div className="text-left"></div>
-          <div className="text-left"></div>"
+        <div className="$1">
+          <div className="$1">"
           <div className="text-left" style={{ animationDelay: '2s' }}></div>"
         </div>
         
-        <div className="text-left"></div>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+        <div className="$1">
+          <div className="$1">
+            <div className="$1">
               <span className="text-left"></span>
                 🤖 Complete Enterprise Guide
               </span>
@@ -61,7 +60,7 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
               The definitive guide to autonomous enterprise operations. Learn how to achieve 98% automation, 
               reduce costs by $50M+ annually, and transform your organization with proven AI technologies.
             </p>
-            <div className="text-left"></div>
+            <div className="$1">
                 <div className="text-left">98%</div>
                 <div className="text-left">Automation Rate</div>
               </div>
@@ -75,7 +74,7 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
                 <div className="text-left">Payback</div>
               </div>
 
-            <div className="text-left"></div>
+            <div className="$1">
               <a 
                 href="/"
                 className="text-left"></a>
@@ -92,18 +91,18 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
 
       {/* Content Section */}
       <section className="text-left"></section>
-        <div className="text-left"></div>
+        <div className="$1">
             <h3 className="text-left">🚀 The Autonomous Operations Framework</h2>
       <section className="text-left"></section>
-        <div className="text-left"></div>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+        <div className="$1">
+          <div className="$1">
+            <div className="$1">
               <h2 className="text-left">🚀 The Autonomous Operations Framework</h2>"
 origin/cursor/fix-errors-and-merge-to-main-cc0a
-              <div className="text-left"></div>
+              <div className="$1">
                 <div></div>
                   <h3 className="text-left">Phase 1: Foundation & Assessment (Months 1-3)</h3>
-                  <div className="text-left"></div>
+                  <div className="$1">
                     <div></div>
                       <h4 className="text-left">Current State Analysis</h4>
                       <ul className="text-left">
@@ -132,7 +131,7 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
 
                 <div></div>
                   <h3 className="text-left">Phase 2: Core Automation Implementation (Months 4-9)</h3>
-                  <div className="text-left"></div>
+                  <div className="$1">
                     <div></div>
                       <h4 className="text-left">Intelligent Process Automation</h4>
                       <ul className="text-left">
@@ -161,7 +160,7 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
 
                 <div></div>
                   <h3 className="text-left">Phase 3: Advanced Autonomy (Months 10-18)</h3>
-                  <div className="text-left"></div>
+                  <div className="$1">
                     <div></div>
                       <h4 className="text-left">Meta-Cognitive Operations</h4>
                       <ul className="text-left">
@@ -186,12 +185,10 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
                         <li>1000x processing improvements</li>
                       </ul>
                     </div>
-                </div>
-            </div>
 
             {/* Implementation Checklist */}
             <h3 className="text-left">🎯 Implementation Checklist</h3>
-              <div className="text-left"></div>
+              <div className="$1">
                 <div></div>
                   <h4 className="text-left">Pre-Implementation</h4>
                   <ul className="text-left">
@@ -272,14 +269,14 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
             {/* CTA Section */}
             <h3 className="text-left">Ready to Achieve 98% Automation?</h3>
               <p className="text-left"></p>
-            <div className="text-left"></div>
+            <div className="$1">
               <h3 className="text-left">Ready to Achieve 98% Automation?</h3>"
               <p className="text-left"></p>
 origin/cursor/fix-errors-and-merge-to-main-cc0a
                 Transform your enterprise with autonomous operations. Get your free assessment 
                 and personalized implementation roadmap today.
               </p>
-              <div className="text-left"></div>
+              <div className="$1">
                 <a 
                   href="/"
                   className="text-left"></a>
@@ -294,7 +291,7 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
           </div>
       </section>
   );
-}</div></div></div></div></div></div></div></div></div></div>
+}</div></div></div></div>
 </span>
 </span>
 </span>

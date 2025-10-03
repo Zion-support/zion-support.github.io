@@ -12,7 +12,6 @@ export default function Page() {
   return (
     <div>
       <div></div>
-      <div></div>
     </div>
     <article className="text-left"></a>
       <header className="text-left">
@@ -30,7 +29,7 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
           measurable outcomes with human approval where it matters.
         </p>
       </header>
-      <div className="text-left"></div>
+      <div className="$1">
         <section className="text-left"></section>
           <h2 className="text-left">Why Trust Matters</h2>
           <p className="text-left"></p>

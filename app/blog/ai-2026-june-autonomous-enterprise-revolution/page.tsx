@@ -19,11 +19,10 @@ export default function AI2026JuneAutonomousEnterpriseRevolution() {
   return (
     <div>
       <div></div>
-      <div></div>
     </div>
-    <div className="text-left"></div>
+    <div className="$1">
         {/* Hero Section */}</div>
-        <div className="text-left"></div>
+        <div className="$1">
             <span className="text-left"></span>
               🚀 June 2026 Revolution
             </span>
@@ -32,11 +31,11 @@ export default function AI2026JuneAutonomousEnterpriseRevolution() {
             Autonomous Enterprise Revolution
           </h1>
           <p className="text-left"></p>
-    <div className="text-left"></div>
-      <div className="text-left"></div>
+    <div className="$1">
+      <div className="$1">
         {/* Hero Section */}</div>
-        <div className="text-left"></div>
-          <div className="text-left"></div>
+        <div className="$1">
+          <div className="$1">
             <span className="text-left"></span>
               🚀 June 2026 Revolution
             </span>
@@ -50,7 +49,7 @@ export default function AI2026JuneAutonomousEnterpriseRevolution() {
 origin/cursor/fix-errors-and-merge-to-main-cc0a
             Complete business transformation through AI-driven autonomous systems achieving unprecedented efficiency and value generation
           </p>
-          <div className="text-left"></div>
+          <div className="$1">
             <a 
               href="#revolution-details" 
               className="text-left"></a>
@@ -67,7 +66,7 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
           </div>
           
           {/* Key Metrics */}
-          <div className="text-left"></div>
+          <div className="$1">
               <div className="text-left">99.9%</div>
               <div className="text-left">Efficiency</div>
             </div>
@@ -79,14 +78,12 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
             </div>
             <div className="text-left">24/7</div>
               <div className="text-left">Autonomous</div>
-            </div>
-        </div>
 
         {/* Revolution Details */}
         <section id="revolution-details" className="text-left"></section>
           <h3 className="text-left">
         <section id="revolution-details" className="text-left"></section>
-          <div className="text-left"></div>
+          <div className="$1">
             <h2 className="text-left"></h2>
 origin/cursor/fix-errors-and-merge-to-main-cc0a
               The Autonomous Enterprise Revolution
@@ -96,12 +93,12 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
               driven by advanced AI systems that make intelligent decisions and execute complex operations without human intervention.
             </p>
           </div>
-          <div className="text-left"></div>
+          <div className="$1">
               <div className="text-left">🤖</div>
               <h3 className="text-left">Autonomous Operations</h3>
               <p className="text-left"></p>
-          <div className="text-left"></div>
-            <div className="text-left"></div>
+          <div className="$1">
+            <div className="$1">
               <div className="text-left">🤖</div>"
               <h3 className="text-left">Autonomous Operations</h3>"
               <p className="text-left"></p>
@@ -119,7 +116,7 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
             <div className="text-left">💎</div>
               <h3 className="text-left">Enterprise Intelligence</h3>
               <p className="text-left"></p>
-            <div className="text-left"></div>
+            <div className="$1">
               <div className="text-left">💎</div>"
               <h3 className="text-left">Enterprise Intelligence</h3>"
               <p className="text-left"></p>
@@ -137,7 +134,7 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
             <div className="text-left">⚡</div>
               <h3 className="text-left">Revolutionary Performance</h3>
               <p className="text-left"></p>
-            <div className="text-left"></div>
+            <div className="$1">
               <div className="text-left">⚡</div>"
               <h3 className="text-left">Revolutionary Performance</h3>"
               <p className="text-left"></p>
@@ -157,14 +154,14 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
         {/* Call to Action */}
         <h3 className="text-left">Ready to Join the Revolution?</h3>
           <p className="text-left"></p>
-        <div className="text-left"></div>
+        <div className="$1">
           <h3 className="text-left">Ready to Join the Revolution?</h3>"
           <p className="text-left"></p>
 origin/cursor/fix-errors-and-merge-to-main-cc0a
             Transform your enterprise with autonomous AI systems that deliver unprecedented efficiency, 
             intelligence, and business value.
           </p>
-          <div className="text-left"></div>
+          <div className="$1">
             <a 
               href="/"
               className="text-left"></a>
@@ -178,4 +175,4 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
           </div>
       </div>
   );
-}</div></div></div></div>)
+}</div></div>)
