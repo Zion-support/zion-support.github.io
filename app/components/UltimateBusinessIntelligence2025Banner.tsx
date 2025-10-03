@@ -99,7 +99,7 @@ const UltimateBusinessIntelligence2025Banner = () => {
             <div className="text-left">
               Ultimate Business Intelligence 2025
             </div>
-            </div>
+          </div>
           </div>
           <button
             onClick={handleDismiss}
@@ -205,7 +205,7 @@ const UltimateBusinessIntelligence2025Banner = () => {
 
         {/* Progress Indicators */}
         <div className="text-left">
-          {content.map((_, index) => (</div>
+          {content.map((_, index) => (
             <button
               key={index}
               onClick={() => setCurrentSlide(index)}
