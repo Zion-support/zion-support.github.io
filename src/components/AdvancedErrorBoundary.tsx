@@ -29,7 +29,7 @@ export class AdvancedErrorBoundary extends Component<Props, State> {
     
     // Send to error tracking service
     if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as unknown as { gtag: (event: string, action: string, params: { description: string; fatal: boolean }) => void }).gtag('event', 'exception', {
+      (window as unknown as { gtag: (event: string, type: string, data: Record<string, unknown>) => void }).gtag('event', 'exception', {
         description: error.toString(),
         fatal: false,
       });
@@ -39,7 +39,7 @@ export class AdvancedErrorBoundary extends Component<Props, State> {
   render() {
     if (this.state.hasError) {
       return this.props.fallback || (
-        <div className="text-left">
+        <div className="error-boundary">
           <h2>Something went wrong.</h2>
           <details style={{ whiteSpace: 'pre-wrap' }}>
             {this.state.error && this.state.error.toString()}

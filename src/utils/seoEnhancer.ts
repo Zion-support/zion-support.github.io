@@ -213,7 +213,7 @@ export const countSyllables = (word: string): number => {
   return Math.max(1, count);
 };
 
-export const generateStructuredData = (type: string, data: any): string => {
+export const generateStructuredData = (type: string, data: Record<string, unknown>): string => {
   const schema = {
     '@context': 'https://schema.org',
     '@type': type,
