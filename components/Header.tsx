@@ -1,11 +1,6 @@
 import React, { useState } from 'react';
-<<<<<<< HEAD
-import Link from 'next/link';
-import PromoBanner from './PromoBanner';
-=======
 import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
->>>>>>> b0266c0c1be3ec9050e7ba803edc6a65b0904e57
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -20,8 +15,6 @@ const Header: React.FC = () => {
 
   return (
     <header className="bg-white shadow-lg sticky top-0 z-50">
-      <PromoBanner />
-      
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
@@ -88,12 +81,7 @@ const Header: React.FC = () => {
             </div>
           </div>
         )}
-<<<<<<< HEAD
       </nav>
-=======
-        </nav>
-      </div>
->>>>>>> b0266c0c1be3ec9050e7ba803edc6a65b0904e57
     </header>
   );
 };
