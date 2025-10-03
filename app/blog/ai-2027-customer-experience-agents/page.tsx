@@ -1,5 +1,5 @@
 // @ts-nocheck
-import React from 'react';
+// import React from 'react';
 
 export const metadata = {
   title: 'AI 2027: Customer Experience Agents — 24/7 Autonomous CX',

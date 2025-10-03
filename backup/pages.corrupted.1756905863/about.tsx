@@ -2,7 +2,7 @@ import type { NextPage } from \'next\'; import Head from \'next/head\'; import N
 }
 
 export default About;
-import React from 'react';
+// import React from 'react';
 interface AboutProps {
   // Add props here as needed
 

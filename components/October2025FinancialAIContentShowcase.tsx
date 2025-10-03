@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { Sparkles, BookOpen, Trophy, ArrowRight } from 'lucide-react';
 
 export default function October2025FinancialAIContentShowcase() {

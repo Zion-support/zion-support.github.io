@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { Link } from 'react-router-dom';
 import { Brain, Zap, ArrowRight, Sparkles, TrendingUp } from 'lucide-react';
 

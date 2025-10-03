@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 
 export const metadata = {
   title: 'AI-Accelerated Customer Experience 2025: 95% CSAT with Real-Time Intelligence',

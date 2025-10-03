@@ -19,7 +19,7 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }'
-import React from 'react';
+// import React from 'react';
 export default function FuturisticBackground() { return null; }
       {/* Animated gradient background */}
       {/* Glow orbs */}'

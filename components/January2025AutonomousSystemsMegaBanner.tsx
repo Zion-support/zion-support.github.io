@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { motion } from 'framer-motion';
 import { Bot, Settings, Globe, TrendingUp, Award, Star, Zap } from 'lucide-react';
 

@@ -1,7 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, BookOpen, Calendar, Clock, Share2, Video, Eye, Zap } from 'lucide-react';
-
+import { ArrowLeft, BookOpen, Calendar, Clock, Share2, Video, Zap } from 'lucide-react';
 export default function AIRealTimeVideoIntelligenceRevolution2026() {
   return (
     <>

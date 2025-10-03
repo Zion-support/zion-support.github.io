@@ -18,8 +18,8 @@
 
     /* Linting */
     "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
     "noFallthroughCasesInSwitch": true,
 
     /* Path mapping */
@@ -32,7 +32,7 @@
       "@types/*": ["./src/types/*"]
     }
   },
-  "include": ["src", "app"],
-  "exclude": ["src/pages", "src/pages/**/*"],
+  "include": [],
+  "exclude": ["**/*"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

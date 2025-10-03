@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { Award,Brain,Cloud,Globe,Image,Target,Today,Users,Zap,} from 'lucide-react';

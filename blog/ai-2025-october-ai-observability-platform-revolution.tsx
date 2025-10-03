@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 
 export const metadata = {
   title: 'AI Observability Platform 2025 — Monitor, Debug & Optimize AI at Scale',

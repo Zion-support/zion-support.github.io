@@ -1,5 +1,5 @@
 // @ts-nocheck
-import React from 'react';
+// import React from 'react';
 
 export const metadata = {
 	title: 'Federated Learning for Enterprise 2026: 100% Privacy by Design',

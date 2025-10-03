@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 
 export const metadata = {
   title: 'LLM Cost Optimization: Strategies to Reduce AI Inference Costs by 80%',

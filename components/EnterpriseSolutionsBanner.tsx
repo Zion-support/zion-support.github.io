@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { ArrowRight, Sparkles, Shield, Zap, Building2, Users, Globe, Lock } from 'lucide-react';
 
 const EnterpriseSolutionsBanner: React.FC = () => {
