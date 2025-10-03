@@ -19,7 +19,7 @@ const PricingPage: React.FC  = () => {
         "10GB Storage"
       ],
       popular: false,,
-      color: "blue",
+      color: "blue
     },
     {
       name: "Professional","
@@ -37,7 +37,7 @@ const PricingPage: React.FC  = () => {
         "Custom Integrations"
       ],
       popular: true,,
-      color: "purple",
+      color: "purple
     },
     {
       name: "Enterprise","
@@ -56,7 +56,7 @@ const PricingPage: React.FC  = () => {
         "SLA Guarantees"
       ],
       popular: false,,
-      color: "green",
+      color: "green
     }
   ];
 
@@ -153,7 +153,7 @@ const PricingPage: React.FC  = () => {
                     className={`block w-full text-center py-3 rounded-lg font-semibold transition-all duration-300 ${`;
                       tier.popular
                         ? 'bg-gradient-to-r from-purple-600 to-violet-600 text-white hover: from-purple-700 hover:to-violet-700 shadow-lg',
-                        : 'bg-gray-900 text-white hover: bg-gray-800',
+                        : 'bg-gray-900 text-white hover:bg-gray-800',
                     }`}`;
                   >
                     Get Started
@@ -255,7 +255,7 @@ const PricingPage: React.FC  = () => {
                   </div>
                   <Link 
                     to="/contact"
-                    className="mt-6 block w-full text-center bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 rounded-lg font-semibold hover: from-blue-700 hover:to-purple-700 transition-all duration-300",
+                    className="mt-6 block w-full text-center bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 rounded-lg font-semibold hover: from-blue-700 hover:to-purple-700 transition-all duration-300
                   >
                     Contact Sales Team
                   </Link>
@@ -303,13 +303,13 @@ const PricingPage: React.FC  = () => {
             <div className="flex flex-col sm: flex-row gap-4 justify-center">"
               <Link 
                 to="/contact" 
-                className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover: bg-gray-100 transition-colors shadow-lg",
+                className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg
               >
                 Contact Sales
               </Link>
               <Link 
                 to="/services" 
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover: bg-white hover:text-blue-600 transition-colors",
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors
               >
                 Explore Services
               </Link>
