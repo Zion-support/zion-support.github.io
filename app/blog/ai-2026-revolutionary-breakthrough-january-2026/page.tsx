@@ -1,7 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {/* content */}
+export const metadata: Metadata = {
   title: 'Revolutionary AI Breakthrough: January 2026 - Zion Tech Group',
   description: 'Discover the groundbreaking AI innovations revolutionizing enterprise operations in January 2026. Meta-cognitive reasoning, quantum-neural networks, and autonomous systems delivering unprecedented results.',
   keywords: 'AI breakthrough 2026, meta-cognitive AI, quantum neural networks, autonomous operations, enterprise AI transformation',

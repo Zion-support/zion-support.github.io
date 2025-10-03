@@ -1,7 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {/* content */}
+export const metadata: Metadata = {
   title: 'AI 2026 May Revolutionary Breakthrough: Quantum Consciousness Fusion',
   description: 'Discover the groundbreaking May 2026 AI breakthrough featuring quantum consciousness fusion and autonomous enterprise transformation.',
   keywords: 'AI breakthrough 2026, quantum consciousness, enterprise automation, superintelligence',

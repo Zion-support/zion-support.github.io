@@ -11,7 +11,7 @@ export const metadata = {
     type: 'article',
     url: 'https://ziontechgroup.com/blog/ai-autonomous-business-systems-2026',
     images: [
-      {/* content */}
+      {
         url: '/og-autonomous-business-2026.jpg',
         width: 1200,
         height: 630,

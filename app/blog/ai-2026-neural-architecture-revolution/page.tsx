@@ -1,7 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {/* content */}
+export const metadata: Metadata = {
   title: 'AI 2026: Neural Architecture Revolution - Zion Tech Group',
   description: 'Discover the revolutionary neural architecture breakthroughs that are transforming enterprise AI in 2026. Learn about quantum-neural fusion, meta-cognitive AI, and autonomous operations.',
   keywords: 'AI 2026, neural architecture, quantum-neural fusion, meta-cognitive AI, enterprise automation, Zion Tech Group',

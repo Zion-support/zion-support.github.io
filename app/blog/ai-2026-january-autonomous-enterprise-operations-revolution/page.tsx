@@ -2,7 +2,7 @@ import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 
-export const metadata: Metadata = {/* content */}
+export const metadata: Metadata = {
   title: 'January 2026 Autonomous Enterprise Operations Revolution | Zion Tech Group',
   description: 'Revolutionary breakthrough in autonomous enterprise operations with AI-driven decision making, self-healing infrastructure, and predictive analytics.',
   keywords: ['autonomous operations', 'enterprise AI', 'self-healing infrastructure', 'predictive analytics', 'AI automation'],

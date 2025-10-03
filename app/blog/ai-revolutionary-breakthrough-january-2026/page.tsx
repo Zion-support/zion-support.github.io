@@ -12,7 +12,7 @@ export const metadata = {
     type: 'article',
     url: 'https://ziontechgroup.com/blog/ai-revolutionary-breakthrough-january-2026',
     images: [
-      {/* content */}
+      {
         url: '/og-ai-breakthrough-2026.jpg',
         width: 1200,
         height: 630,
@@ -20,7 +20,7 @@ export const metadata = {
       },
     ],
   },
-  twitter: {/* content */}
+  twitter: {
     card: 'summary_large_image',
     title: 'AI Revolutionary Breakthrough January 2026: 10x Performance Gains',
     description: 'Discover the groundbreaking AI innovations delivering 10x performance gains, 95% cost reduction, and $500M+ ROI for Fortune 500 companies.',

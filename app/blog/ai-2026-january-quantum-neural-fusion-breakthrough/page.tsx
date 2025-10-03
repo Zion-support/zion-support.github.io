@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
-export const metadata: Metadata = {/* content */}
+export const metadata: Metadata = {
   title: 'AI 2026: Quantum-Neural Fusion Breakthrough - The Next Frontier of Enterprise Intelligence',
   description: 'Discover how quantum-neural fusion is revolutionizing enterprise AI with unprecedented computational power, consciousness-level reasoning, and infinite scalability potential.',
   keywords: 'Quantum AI, Neural Networks, Enterprise AI, Breakthrough Technology, 2026',

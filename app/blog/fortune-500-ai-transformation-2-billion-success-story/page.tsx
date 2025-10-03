@@ -1,7 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {/* content */}
+export const metadata: Metadata = {
   title: 'Fortune 500 AI Transformation: $2.3B Success Story | Zion Tech Group',
   description: 'Exclusive case study: How a Fortune 500 company achieved $2.3B in savings through comprehensive AI transformation using Neural Superintelligence and Autonomous Operations.',
   keywords: 'case-study, fortune-500, ai-transformation, success-story, roi, neural-superintelligence',

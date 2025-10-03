@@ -1,7 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {/* content */}
+export const metadata: Metadata = {
   title: 'AI 2025: The Enterprise Autonomous Operations Revolution | Zion Tech Group',
   description: 'Discover how Fortune 500 companies are achieving 95% automation rates and $2M+ annual savings through next-generation autonomous AI operations.',
   keywords: 'autonomous AI operations, enterprise automation, AI transformation, Fortune 500, cost savings',

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {/* content */}
+export const metadata: Metadata = {
   title: 'AI Autonomous Cloud Operations 2026: Self-Healing Infrastructure Guide',
   description: 'Master autonomous cloud operations with AI-powered self-healing infrastructure, predictive maintenance, and zero-touch operations for 99.9% uptime.',
   keywords: 'autonomous cloud operations, AI infrastructure, self-healing systems, cloud automation, DevOps AI, predictive maintenance',
@@ -220,22 +220,22 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
               <pre className="text-left"></pre>
 origin/cursor/fix-errors-and-merge-to-main-cc0a
 {`// AI Autonomous Cloud Operations Configuration
-const autonomousConfig = {/* content */}
-  monitoring: {/* content */}
+const autonomousConfig = {
+  monitoring: {
     metrics: ['cpu', 'memory', 'disk', 'network'],
-    thresholds: {/* content */}
+    thresholds: {
       cpu: 80,
       memory: 85,
       response_time: 1000
     }
   },
-  healing: {/* content */}
+  healing: {
     auto_restart: true,
     scale_up: true,
     failover: true,
     recovery_time: 30
   },
-  learning: {/* content */}
+  learning: {
     enable_ml: true,
     model_retraining: 'weekly',
     performance_tracking: true

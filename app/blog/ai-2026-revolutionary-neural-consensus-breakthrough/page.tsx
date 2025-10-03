@@ -2,7 +2,7 @@ import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 
-export const metadata: Metadata = {/* content */}
+export const metadata: Metadata = {
   title: 'AI 2026 Revolutionary Neural Consensus Breakthrough: 1,000,000x Performance & $500B Value Generation',
   description: 'Discover the revolutionary neural consensus breakthrough that achieved 1,000,000x performance improvements, 99.999% accuracy, and $500B+ value generation for Fortune 100 enterprises.',
   keywords: 'AI breakthrough 2026, neural consensus, 1 million x performance, $500B value, Fortune 100 success, revolutionary AI',

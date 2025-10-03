@@ -1,7 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {/* content */}
+export const metadata: Metadata = {
   title: 'AI 2026 June Autonomous Enterprise Revolution: Complete Business Transformation',
   description: 'Discover how autonomous enterprise systems are revolutionizing business operations with AI-driven automation, achieving 99.9% efficiency and $2.5B in measurable value.',
   keywords: 'autonomous enterprise, AI automation, business transformation, enterprise AI, June 2026 breakthrough',

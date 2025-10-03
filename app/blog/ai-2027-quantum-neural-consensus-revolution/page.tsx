@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {/* content */}
+export const metadata: Metadata = {
   title: 'AI 2027: Quantum-Neural Consensus Revolution - Distributed Superintelligence',
   description: 'Discover the quantum-neural consensus revolution: a distributed superintelligence network achieving collective consciousness and 10,000x processing power through quantum entanglement.',
   keywords: 'AI 2027, quantum neural networks, consensus AI, distributed superintelligence, quantum entanglement, collective consciousness',

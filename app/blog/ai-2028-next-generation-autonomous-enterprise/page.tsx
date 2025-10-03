@@ -14,7 +14,7 @@ export const metadata = {
     locale: 'en_US',
     type: 'article',
   },
-  twitter: {/* content */}
+  twitter: {
     card: 'summary_large_image',
     title: 'AI 2028: Next-Generation Autonomous Enterprise Revolution',
     description: 'Revolutionary AI breakthrough enabling 99.9% autonomous enterprise operations with quantum-enhanced capabilities.',
