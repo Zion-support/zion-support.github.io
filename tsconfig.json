@@ -32,7 +32,7 @@
       "@types/*": ["./src/types/*"]
     }
   },
-  "include": ["src", "app"],
-  "exclude": ["app/blog/**/*"],
+  "include": ["src"],
+  "exclude": ["app/**/*", "src/pages/**/*", "node_modules", "dist"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

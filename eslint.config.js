@@ -154,6 +154,7 @@ export default [
   // Simplified TypeScript configuration (non type-aware)
   {
     files: ["src/**/*.{ts,tsx}"],
+    ignores: ["src/pages/**"],
     languageOptions: {
       parser: tsParser,
       parserOptions: {
