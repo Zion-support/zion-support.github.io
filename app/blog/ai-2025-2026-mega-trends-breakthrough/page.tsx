@@ -198,14 +198,14 @@ export default function AIMegaTrends20252026() {
         <h3 className="text-2xl font-bold mb-4">Related Content</h3>
         <div className="grid md:grid-cols-2 gap-4">
           <Link 
-            href="/blog/ai-2026-quantum-enhanced-analytics"
+            href="/services/quantum-analytics"
             className="block p-4 border rounded-lg hover:shadow-md transition-shadow"
           >
             <h4 className="font-bold text-blue-600">Quantum Analytics 1000x Performance</h4>
             <p className="text-gray-600 text-sm">Discover how quantum computing revolutionizes data analytics</p>
           </Link>
           <Link 
-            href="/case-studies/ai-2026-global-enterprise-transformation-success"
+            href="/case-studies/enterprise-success"
             className="block p-4 border rounded-lg hover:shadow-md transition-shadow"
           >
             <h4 className="font-bold text-green-600">$500M Global Enterprise Success</h4>
