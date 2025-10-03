@@ -229,7 +229,7 @@ const RealTimeCognitiveAutomation: React.FC = () => {
                 </div>
               </div>
             </section>
-          </div>
+          </article>
         </div>
       </div>
     </>
