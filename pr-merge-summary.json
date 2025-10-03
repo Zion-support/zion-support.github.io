@@ -1,26 +1,18 @@
 {
-  "totalPRs": 3,
-  "successfulMerges": 1,
-  "failedMerges": 2,
+  "timestamp": "2025-10-03T19:59:06.084Z",
+  "processed": 2,
+  "merged": 0,
+  "failed": 2,
   "prs": [
     {
-      "number": 24703,
-      "title": "Enhance and expand ziontechgroup.com services and site",
-      "branch": "cursor/enhance-and-expand-ziontechgroup-com-services-and-site-44c4",
-      "status": "processed"
+      "number": 24750,
+      "title": "Fix web vitals import error during build",
+      "processed": true
     },
     {
-      "number": 24702,
-      "title": "Enhance and expand ziontechgroup.com services and site",
-      "branch": "cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f3e7",
-      "status": "processed"
-    },
-    {
-      "number": 24701,
-      "title": "Enhance and expand ziontechgroup.com services and site",
-      "branch": "cursor/enhance-and-expand-ziontechgroup-com-services-and-site-d21e",
-      "status": "processed"
+      "number": 24749,
+      "title": "Fix errors and merge to main",
+      "processed": true
     }
-  ],
-  "timestamp": "2025-10-03T19:45:04.004Z"
+  ]
 }
