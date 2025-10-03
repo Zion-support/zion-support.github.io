@@ -1,53 +1,39 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Network } from 'lucide-react'';
-import Header from '../../components/Header'';
-import Footer from '../../components/Footer'';
-import React from 'react';'
-import { Helmet } from 'react-helmet-async';'
-import { Network } from 'lucide-react';'
-import Header from '../../components/Header';'
-import Footer from '../../components/Footer';'
+import { Network, Cpu, Shield, Database, Zap, Smartphone, ArrowRight, Phone } from 'lucide-react';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 
 const IoTEdgeComputing: React.FC = () => {
-  const features: [,
+  const features = [
     {
-      icon: Cpu,,
-      title: "Edge AI Processing",,"
-      description: "Real-time AI inference at the edge with optimized models for low-latency decision making.",,"
-      title: "Edge AI Processing",,"
-      description: "Real-time AI inference at the edge with optimized models for low-latency decision making.",,"
+      icon: Cpu,
+      title: "Edge AI Processing",
+      description: "Real-time AI inference at the edge with optimized models for low-latency decision making.",
       benefit: "95% latency reduction",
     },
     {
-      icon: Network,,
-      title: "5G Integration",,"
-      description: "Seamless 5G connectivity with edge computing for ultra-low latency applications.",,"
-      title: "5G Integration",,"
-      description: "Seamless 5G connectivity with edge computing for ultra-low latency applications.",,"
+      icon: Network,
+      title: "5G Integration",
+      description: "Seamless 5G connectivity with edge computing for ultra-low latency applications.",
       benefit: "Sub-millisecond response times",
     },
     {
-      icon: Shield,,
-      title: "Edge Security",,"
-      description: "Advanced security protocols for edge devices with encrypted communication and threat detection.",,"
-      title: "Edge Security",,"
-      description: "Advanced security protocols for edge devices with encrypted communication and threat detection.",,"
+      icon: Shield,
+      title: "Edge Security",
+      description: "Advanced security protocols for edge devices with encrypted communication and threat detection.",
       benefit: "Zero-trust architecture",
     },
     {
-      icon: Database,,
-      title: "Data Synchronization",,"
-      description: "Intelligent data synchronization between edge devices and cloud with conflict resolution.",,"
-      title: "Data Synchronization",,"
-      description: "Intelligent data synchronization between edge devices and cloud with conflict resolution.",,"
+      icon: Database,
+      title: "Data Synchronization",
+      description: "Intelligent data synchronization between edge devices and cloud with conflict resolution.",
       benefit: "99.9% data consistency",
     },
     {
-      icon: Zap,,
-      title: "Real-time Analytics",,"
-      description: "Stream processing and analytics at the edge for immediate insights and actions.",,"
-      title: "Real-time Analytics",,"
+      icon: Zap,
+      title: "Real-time Analytics",
+      description: "Stream processing and analytics at the edge for immediate insights and actions.",
       description: "Stream processing and analytics at the edge for immediate insights and actions.",,"
       benefit: "Real-time decision making",
     },
