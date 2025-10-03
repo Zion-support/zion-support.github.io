@@ -1,6 +1,12 @@
 import { useEffect, useState, useCallback } from 'react';
 import { PerformanceMetrics } from '../types';
 
+interface PerformanceMemory {
+  usedJSHeapSize: number;
+  totalJSHeapSize: number;
+  jsHeapSizeLimit: number;
+}
+
 interface UsePerformanceOptions {
   enableMonitoring?: boolean;
   reportInterval?: number;
@@ -60,7 +66,7 @@ export const usePerformance = (options: UsePerformanceOptions = {}) => {
     // First Input Delay
     const fidObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
-      entries.forEach((entry: any) => {
+      entries.forEach((entry: PerformanceEntry) => {
         setMetrics(prev => {
           const newMetrics = { 
             ...prev, 
@@ -77,7 +83,7 @@ export const usePerformance = (options: UsePerformanceOptions = {}) => {
     let clsValue = 0;
     const clsObserver = new PerformanceObserver((list) => {
       const entries = list.getEntries();
-      entries.forEach((entry: any) => {
+      entries.forEach((entry: PerformanceEntry) => {
         if (!entry.hadRecentInput) {
           clsValue += entry.value;
           setMetrics(prev => {
@@ -117,7 +123,7 @@ export const usePerformance = (options: UsePerformanceOptions = {}) => {
       return null;
     }
     
-    const memory = (performance as any).memory;
+    const memory = (performance as Performance & { memory?: PerformanceMemory }).memory;
     return {
       used: Math.round(memory.usedJSHeapSize / 1048576), // MB
       total: Math.round(memory.totalJSHeapSize / 1048576), // MB
@@ -132,7 +138,7 @@ export const usePerformance = (options: UsePerformanceOptions = {}) => {
     return resources.map(resource => ({
       name: resource.name,
       duration: resource.duration,
-      size: (resource as any).transferSize || 0,
+      size: (resource as PerformanceResourceTiming).transferSize || 0,
       type: resource.initiatorType
     }));
   }, []);

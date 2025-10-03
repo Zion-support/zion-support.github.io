@@ -204,8 +204,8 @@ export const performanceSEO = {
 export const analyticsUtils = {
   // Track page views
   trackPageView: (url: string, title: string) => {
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('config', 'GA_MEASUREMENT_ID', {
+    if (typeof window !== 'undefined' && (window as Window & { gtag?: Function }).gtag) {
+      (window as Window & { gtag: Function }).gtag('config', 'GA_MEASUREMENT_ID', {
         page_title: title,
         page_location: url
       });
@@ -213,9 +213,9 @@ export const analyticsUtils = {
   },
 
   // Track custom events
-  trackEvent: (eventName: string, parameters?: Record<string, any>) => {
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', eventName, parameters);
+  trackEvent: (eventName: string, parameters?: Record<string, unknown>) => {
+    if (typeof window !== 'undefined' && (window as Window & { gtag?: Function }).gtag) {
+      (window as Window & { gtag: Function }).gtag('event', eventName, parameters);
     }
   },
 
