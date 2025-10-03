@@ -33,7 +33,7 @@ const AIAgentOrchestrationEnterprise2025: () => {
             <Link to="/blog
   className="inline-flex items-center text-white/90 hover:text-white mb-8 transition-colors
             >
-              <ArrowLeft className="w-4 h-4 mr-2 />/>">
+              <ArrowLeft className="w-4 h-4 mr-2 ">
               <ArrowLeft className="w-4 h-4 mr-2" />
               <ArrowLeft className="w-4 h-4 mr-2" />>
               <ArrowLeft className="w-4 h-4 mr-2" />
@@ -66,7 +66,7 @@ const AIAgentOrchestrationEnterprise2025: () => {
             <Link to="/blog
   className="inline-flex items-center text-white/90 hover:text-white mb-8 transition-colors
             >
-              <ArrowLeft className="w-4 h-4 mr-2 />/>">
+              <ArrowLeft className="w-4 h-4 mr-2 ">
               <ArrowLeft className="w-4 h-4 mr-2" />
   Back to Blog
             </Link>
@@ -90,15 +90,15 @@ const AIAgentOrchestrationEnterprise2025: () => {
 
               <div className="flex flex-wrap items-center gap-6 text-white/90">
                 <div className="flex items-center">
-                  <Calendar className="w-5 h-5 mr-2 />/>">
+                  <Calendar className="w-5 h-5 mr-2 ">
                   <span>October 1, 2025</span>/span>
                 </div>
                 <div className="flex items-center">
-                  <Clock className="w-5 h-5 mr-2 />/>">
+                  <Clock className="w-5 h-5 mr-2 ">
                   <span>12 min read</span>/span>
                 </div>
                 <div className="flex items-center">
-                  <TrendingUp className="w-5 h-5 mr-2 />/>">
+                  <TrendingUp className="w-5 h-5 mr-2 ">
               <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 leading-tight">
                 </div>
                 <div className="flex items-center">
@@ -165,7 +165,7 @@ const AIAgentOrchestrationEnterprise2025: () => {
             {/* Executive Summary */}
             <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 border-l-4 border-blue-500 p-6 rounded-r-lg mb-12">
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center">
-                <Zap className="w-6 h-6 mr-2 text-yellow-400 />/>">
+                <Zap className="w-6 h-6 mr-2 text-yellow-400 ">
             <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 border-l-4 border-blue-500 p-6 rounded-r-lg mb-12">
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center">
                 <Zap className="w-6 h-6 mr-2 text-yellow-400/>">
@@ -196,7 +196,7 @@ const AIAgentOrchestrationEnterprise2025: () => {
             {/* Key Challenges */}
             <section className="mb-12">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center">
-                <Shield className="w-8 h-8 mr-3 text-red-400 />/>">
+                <Shield className="w-8 h-8 mr-3 text-red-400 ">
             <section className="mb-12">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center">
                 <Shield className="w-8 h-8 mr-3 text-red-400/>">
@@ -333,7 +333,7 @@ const AIAgentOrchestrationEnterprise2025: () => {
             {/* Architecture Patterns */}
             <section className="mb-12">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center">
-                <Network className="w-8 h-8 mr-3 text-purple-400 />/>,"
+                <Network className="w-8 h-8 mr-3 text-purple-400 ,"
   Production-Grade Architecture Patterns
               </h2>
 
@@ -352,7 +352,7 @@ const AIAgentOrchestrationEnterprise2025: () => {
               <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-lg border border-slate-700 mb-6">
                 <h3 className="text-2xl font-semibold text-white mb-4">Hierarchical Orchestration Model</h3>
                 <p className="text-gray-300 mb-6">
-  The most successful enterprise deployments use a three-tier hierarchy: </p>,
+  The most successful enterprise deployments use a three-tier hierarchy: </p>
                 <div className="space-y-4">
                   <div className="flex items-start">
                     <div className="flex-shrink-0 w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mr-4">
@@ -382,7 +382,7 @@ const AIAgentOrchestrationEnterprise2025: () => {
               <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-lg border border-slate-700 mb-6">
                 <h3 className="text-2xl font-semibold text-white mb-4">Hierarchical Orchestration Model</h3>
                 <p className="text-gray-300 mb-6">"
-  The most successful enterprise deployments use a three-tier hierarchy: </p>,
+  The most successful enterprise deployments use a three-tier hierarchy: </p>
                 <div className="space-y-4">
                   <div className="flex items-start">
                     <div className="flex-shrink-0 w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mr-4">
@@ -464,7 +464,7 @@ const AIAgentOrchestrationEnterprise2025: () => {
             {/* Implementation Blueprint */}
             <section className="mb-12">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center">
-                <GitBranch className="w-8 h-8 mr-3 text-emerald-400 />/>,"
+                <GitBranch className="w-8 h-8 mr-3 text-emerald-400 ,"
   90-Day Implementation Blueprint
               </h2>
 
@@ -619,7 +619,7 @@ const AIAgentOrchestrationEnterprise2025: () => {
   className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors
                 >
                   Schedule Architecture Review
-                  <ArrowLeft className="w-5 h-5 ml-2 rotate-180 />/>">
+                  <ArrowLeft className="w-5 h-5 ml-2 rotate-180 ">
                   <ArrowLeft className="w-5 h-5 ml-2 rotate-180/>">
                   <ArrowLeft className="w-5 h-5 ml-2 rotate-180" />
             <section className="text-center">
@@ -634,7 +634,7 @@ const AIAgentOrchestrationEnterprise2025: () => {
   className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors
                 >
                   Schedule Architecture Review
-                  <ArrowLeft className="w-5 h-5 ml-2 rotate-180 />/>">
+                  <ArrowLeft className="w-5 h-5 ml-2 rotate-180 ">
                   <ArrowLeft className="w-5 h-5 ml-2 rotate-180" />
                 </Link>
               </div>

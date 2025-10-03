@@ -24,7 +24,7 @@ const EnterpriseAutomation2025: () => {
         <div className="container mx-auto px-6 py-12">
           <div className="max-w-4xl mx-auto text-center mb-12">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-emerald-500/20 text-emerald-300 text-sm font-medium mb-6 border border-emerald-400/30">
-              <Zap className="w-4 h-4 mr-2 />/>,"
+              <Zap className="w-4 h-4 mr-2 ,"
   October 2025 • Enterprise AI
             </div>
             
@@ -199,19 +199,19 @@ const EnterpriseAutomation2025: () => {
                   <h3 className="text-xl font-bold text-white mb-4">Key Drivers of the 2025 Automation Revolution</h3>
                   <ul className="space-y-3">
                     <li className="flex items-start">
-                      <CheckCircle className="w-5 h-5 text-emerald-400 mr-3 mt-0.5 flex-shrink-0 />/>" / />> />>
+                      <CheckCircle className="w-5 h-5 text-emerald-400 mr-3 mt-0.5 flex-shrink-0 " / />> />>
                       <span className="text-white">Advanced Language Models: GPT-4 class models with enterprise security</span>
                     </li>
                     <li className="flex items-start">
-                      <CheckCircle className="w-5 h-5 text-emerald-400 mr-3 mt-0.5 flex-shrink-0 />/>" / />> />>
+                      <CheckCircle className="w-5 h-5 text-emerald-400 mr-3 mt-0.5 flex-shrink-0 " / />> />>
                       <span className="text-white">Edge AI Computing: Sub-100ms response times for real-time automation</span>
                     </li>
                     <li className="flex items-start">
-                      <CheckCircle className="w-5 h-5 text-emerald-400 mr-3 mt-0.5 flex-shrink-0 />/>" / />> />>
+                      <CheckCircle className="w-5 h-5 text-emerald-400 mr-3 mt-0.5 flex-shrink-0 " / />> />>
                       <span className="text-white">Zero-Trust Security: Enterprise-grade AI with built-in compliance</span>
                     </li>
                     <li className="flex items-start">
-                      <CheckCircle className="w-5 h-5 text-emerald-400 mr-3 mt-0.5 flex-shrink-0 />/>" / />> />>
+                      <CheckCircle className="w-5 h-5 text-emerald-400 mr-3 mt-0.5 flex-shrink-0 " / />> />>
                 <div className="bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-400/30 rounded-xl p-6 mb-6">
                   <h3 className="text-xl font-bold text-white mb-4">Key Drivers of the 2025 Automation Revolution</h3>
                   <ul className="space-y-3">
@@ -316,7 +316,7 @@ const EnterpriseAutomation2025: () => {
   className="bg-emerald-500 text-white px-8 py-4 rounded-lg font-semibold hover:bg-emerald-600 transition-colors inline-flex items-center justify-center gap-2
                     >
                       Start Your Transformation
-                      <ArrowRight className="w-5 h-5 />/>">
+                      <ArrowRight className="w-5 h-5 ">
                       <ArrowRight className="w-5 h-5/>">
                       <ArrowRight className="w-5 h-5" />
                     </Link>
@@ -337,7 +337,7 @@ const EnterpriseAutomation2025: () => {
   className="bg-emerald-500 text-white px-8 py-4 rounded-lg font-semibold hover:bg-emerald-600 transition-colors inline-flex items-center justify-center gap-2
                     >
                       Start Your Transformation
-                      <ArrowRight className="w-5 h-5 />/>">
+                      <ArrowRight className="w-5 h-5 ">
                       <ArrowRight className="w-5 h-5" />
                     </Link>
                     <Link to="/case-studies"

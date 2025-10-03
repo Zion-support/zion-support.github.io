@@ -16,7 +16,7 @@ const GlobalRetailAITransformation: () => {
           <Link to="/case-studies"
   className="inline-flex items-center text-zion-cyan hover:text-zion-blue-light mb-8 transition-colors"
           >
-            <ArrowLeft className="w-4 h-4 mr-2 />/>">
+            <ArrowLeft className="w-4 h-4 mr-2 ">
             <ArrowLeft className="w-4 h-4 mr-2" />
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">
         <Header />
@@ -27,7 +27,7 @@ const GlobalRetailAITransformation: () => {
           <Link to="/case-studies"
   className="inline-flex items-center text-zion-cyan hover:text-zion-blue-light mb-8 transition-colors"
           >
-            <ArrowLeft className="w-4 h-4 mr-2 />/>">
+            <ArrowLeft className="w-4 h-4 mr-2 ">
             <ArrowLeft className="w-4 h-4 mr-2" />
             <ArrowLeft className="w-4 h-4 mr-2" />>
             <ArrowLeft className="w-4 h-4 mr-2" />
@@ -229,9 +229,9 @@ const GlobalRetailAITransformation: () => {
             {/* Solution Overview */}
             <section >
               <h2 className="text-3xl font-bold text-white mb-6">🎯 AI Transformation Solution</h2>"
-              <p className="text-lg leading-relaxed mb-6">,"
+              <p className="text-lg leading-relaxed mb-6">
               <h2 className="text-3xl font-bold text-white mb-6">🎯 AI Transformation Solution</h2>"
-              <p className="text-lg leading-relaxed mb-6">,"
+              <p className="text-lg leading-relaxed mb-6">
   Zion Tech Group designed and deployed a comprehensive AI platform spanning demand forecasting
                 inventory optimization, personalized customer experiences, and intelligent marketing across 
                 all 2,800+ stores and digital channels.
@@ -239,7 +239,7 @@ const GlobalRetailAITransformation: () => {
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-gradient-to-br from-blue-900/40 to-cyan-900/40 rounded-xl p-6 border border-blue-500/30">
                   <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
-                    <Zap className="w-6 h-6 text-blue-400 />/>">
+                    <Zap className="w-6 h-6 text-blue-400 ">
                 <div className="bg-gradient-to-br from-blue-900/40 to-cyan-900/40 rounded-xl p-6 border border-blue-500/30">
                   <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
                     <Zap className="w-6 h-6 text-blue-400/>">
@@ -250,7 +250,7 @@ const GlobalRetailAITransformation: () => {
                   <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
                     <Zap className="w-6 h-6 text-blue-400/>">
               <h2 className="text-3xl font-bold text-white mb-6">🎯 AI Transformation Solution</h2>
-              <p className="text-lg leading-relaxed mb-6">"
+              <p className="text-lg leading-relaxed mb-6">
   Zion Tech Group designed and deployed a comprehensive AI platform spanning demand forecasting
                 inventory optimization, personalized customer experiences, and intelligent marketing across 
                 all 2,800+ stores and digital channels.
@@ -267,15 +267,15 @@ const GlobalRetailAITransformation: () => {
                   </p>
                   <ul className="space-y-2 text-sm">
                     <li className="flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-400 />/>" / />> />>
+                      <CheckCircle className="w-4 h-4 text-green-400 " / />> />>
                       <span>96% forecast accuracy (up from 67%)</span>/span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-400 />/>" / />> />>
+                      <CheckCircle className="w-4 h-4 text-green-400 " / />> />>
                       <span>$2.1B reduction in inventory waste</span>/span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-400 />/>" / />> />
+                      <CheckCircle className="w-4 h-4 text-green-400 " / />> />
                     </li>
                     <li className="flex items-center gap-2">
                       <CheckCircle className="w-4 h-4 text-green-400/>
@@ -333,7 +333,7 @@ const GlobalRetailAITransformation: () => {
 
                 <div className="bg-gradient-to-br from-purple-900/40 to-pink-900/40 rounded-xl p-6 border border-purple-500/30">
                   <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
-                    <Users className="w-6 h-6 text-purple-400 />/>">
+                    <Users className="w-6 h-6 text-purple-400 ">
                 <div className="bg-gradient-to-br from-purple-900/40 to-pink-900/40 rounded-xl p-6 border border-purple-500/30">
                   <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
                     <Users className="w-6 h-6 text-purple-400/>">
@@ -348,15 +348,15 @@ const GlobalRetailAITransformation: () => {
                   </p>
                   <ul className="space-y-2 text-sm">
                     <li className="flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-400 />/>" / />> />>
+                      <CheckCircle className="w-4 h-4 text-green-400 " / />> />>
                       <span>78% increase in customer satisfaction</span>/span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-400 />/>" / />> />>
+                      <CheckCircle className="w-4 h-4 text-green-400 " / />> />>
                       <span>$1.8B incremental revenue</span>/span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-400 />/>" / />> />
+                      <CheckCircle className="w-4 h-4 text-green-400 " / />> />
                     </li>
                     <li className="flex items-center gap-2">
                       <CheckCircle className="w-4 h-4 text-green-400/>
@@ -416,7 +416,7 @@ const GlobalRetailAITransformation: () => {
 
                 <div className="bg-gradient-to-br from-green-900/40 to-teal-900/40 rounded-xl p-6 border border-green-500/30">
                   <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
-                    <Target className="w-6 h-6 text-green-400 />/>">
+                    <Target className="w-6 h-6 text-green-400 ">
                 <div className="bg-gradient-to-br from-green-900/40 to-teal-900/40 rounded-xl p-6 border border-green-500/30">
                   <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
                     <Target className="w-6 h-6 text-green-400/>">
@@ -431,15 +431,15 @@ const GlobalRetailAITransformation: () => {
                   </p>
                   <ul className="space-y-2 text-sm">
                     <li className="flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-400 />/>" / />> />>
+                      <CheckCircle className="w-4 h-4 text-green-400 " / />> />>
                       <span>340% marketing ROI improvement</span>/span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-400 />/>" / />> />>
+                      <CheckCircle className="w-4 h-4 text-green-400 " / />> />>
                       <span>$340M additional revenue</span>/span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-400 />/>" / />> />
+                      <CheckCircle className="w-4 h-4 text-green-400 " / />> />
                     </li>
                     <li className="flex items-center gap-2">
                       <CheckCircle className="w-4 h-4 text-green-400/>
@@ -499,7 +499,7 @@ const GlobalRetailAITransformation: () => {
 
                 <div className="bg-gradient-to-br from-orange-900/40 to-red-900/40 rounded-xl p-6 border border-orange-500/30">
                   <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
-                    <DollarSign className="w-6 h-6 text-orange-400 />/>,"
+                    <DollarSign className="w-6 h-6 text-orange-400 ,"
   Dynamic Pricing Engine
                   </h3>
                   <p className="mb-4">,"
@@ -510,15 +510,15 @@ const GlobalRetailAITransformation: () => {
                   </p>
                   <ul className="space-y-2 text-sm">
                     <li className="flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-400 />/>" / />> />>
+                      <CheckCircle className="w-4 h-4 text-green-400 " / />> />>
                       <span>$890M incremental revenue</span>/span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-400 />/>" / />> />>
+                      <CheckCircle className="w-4 h-4 text-green-400 " / />> />>
                       <span>4.2% gross margin improvement</span>/span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-400 />/>" / />> />
+                      <CheckCircle className="w-4 h-4 text-green-400 " / />> />
                     </li>
                     <li className="flex items-center gap-2">
                       <CheckCircle className="w-4 h-4 text-green-400/>
@@ -961,7 +961,7 @@ const GlobalRetailAITransformation: () => {
                 to="/contact"
   className="bg-white text-purple-600 hover:bg-zion-slate-light px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105 inline-flex items-center justify-center gap-2 text-lg
                 >
-                  <TrendingUp className="w-6 h-6 />/>">
+                  <TrendingUp className="w-6 h-6 ">
                   <TrendingUp className="w-6 h-6" />
                   <TrendingUp className="w-6 h-6/>">
                   <TrendingUp className="w-6 h-6" />
@@ -984,7 +984,7 @@ const GlobalRetailAITransformation: () => {
                 to="/contact"
   className="bg-white text-purple-600 hover:bg-zion-slate-light px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105 inline-flex items-center justify-center gap-2 text-lg
                 >
-                  <TrendingUp className="w-6 h-6 />/>">
+                  <TrendingUp className="w-6 h-6 ">
                   <TrendingUp className="w-6 h-6" />
   Schedule Free Consultation
                 </Link>
