@@ -1,13 +1,3 @@
-import React from 'react'';
-import { Helmet } from 'react-helmet-async'';
-import { Globe } from 'lucide-react'';
-import Header from '../../components/Header'';
-import Footer from '../../components/Footer'';
-import React from 'react';'
-import { Helmet } from 'react-helmet-async';'
-import { Globe } from 'lucide-react';'
-import Header from '../../components/Header';'
-import Footer from '../../components/Footer';'
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
@@ -27,15 +17,13 @@ import {
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 
-const SmartContractAudit: React.FC: ()  => {,,
-  const features: [,
+const SmartContractAudit: React.FC = () => {
+  const features = [
     {
-      icon: Shield,,
-      title: "Comprehensive Security Analysis",","
-      description: "Deep code analysis using static analysis, dynamic testing, and formal verification to identify vulnerabilities.",","
-      title: "Comprehensive Security Analysis",","
-      description: "Deep code analysis using static analysis, dynamic testing, and formal verification to identify vulnerabilities.",","
-      benefit: "99.8% vulnerability detection rate","
+      icon: Shield,
+      title: "Comprehensive Security Analysis",
+      description: "Deep code analysis using static analysis, dynamic testing, and formal verification to identify vulnerabilities.",
+      benefit: "99.8% vulnerability detection rate"
     },
     {
       icon: Search,,
@@ -1080,98 +1068,173 @@ const SmartContractAudit: React.FC: ()  => {,,
         </section>
 
         {/* Pricing */}
-        <section id="pricing" className="py-20 bg-gray-50"
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
-            <div className="text-center mb-16"
-              <h2 className="text-4xl font-bold text-gray-900 mb-4"
-        <section id="pricing" className ="py-20 bg-gray-50">","
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
-            <div className="text-center mb-16">","
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">","
-  Transparent Pricing for Every Project Size
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">","
         <section id="pricing" className="py-20 bg-gray-50">
-          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
-            <div className= "text-center mb-16">
-              <h2 className= "text-4xl font-bold text-gray-900 mb-4">
-        <section id="pricing" className ="py-20 bg-gray-50">","
-          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
-            <div className= "text-center mb-16">","
-              <h2 className= "text-4xl font-bold text-gray-900 mb-4">"
-  Transparent Pricing for Every Project Size
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                Transparent Pricing for Every Project Size
               </h2>
-              <p className= "text-xl text-gray-600 max-w-3xl mx-auto">"
-  Choose the audit package that fits your smart contract complexity and security requirements.
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Choose the audit package that fits your smart contract complexity and security requirements.
               </p>
             </div>
 
-            <div className="grid md: grid-cols-3 gap-8">","
-            <div className="grid md: grid-cols-3 gap-8">","
+            <div className="grid md:grid-cols-3 gap-8">
               {pricing.map((plan, index) => (
-                <div key={index} className={`bg-white rounded-2xl shadow-lg p-8 ${plan.popular ? 'ring-2 ring-red-500 relative' : ''}`}>`
+                <div key={index} className={`bg-white rounded-2xl shadow-lg p-8 ${plan.popular ? 'ring-2 ring-red-500 relative' : ''}`}>
                   {plan.popular && (
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">","
-                      <span className="bg-red-500 text-white px-4 py-1 rounded-full text-sm font-semibold">","
-            <div className= "grid md: grid-cols-3 gap-8">","
-            <div className= "grid md: grid-cols-3 gap-8">","
-              {pricing.map((plan, index) => (
-                <div key={index} className= {`bg-white rounded-2xl shadow-lg p-8 ${plan.popular ? 'ring-2 ring-red-500 relative' : ''}`}>`
-                  {plan.popular && (
-                    <div className= "absolute -top-4 left-1/2 transform -translate-x-1/2">","
-                      <span className= "bg-red-500 text-white px-4 py-1 rounded-full text-sm font-semibold">"
-  Most Popular
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                      <span className="bg-red-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                        Most Popular
                       </span>
                     </div>
                   )}
-                  <div className="text-center mb-8">","
-                    <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>"
-                    <div className="flex items-center justify-center mb-2">","
-                      <span className="text-4xl font-bold text-gray-900">{plan.price}</span>"
-                      <span className="text-gray-600 ml-1">/{plan.period}</span>"
+                  <div className="text-center mb-8">
+                    <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
+                    <div className="flex items-center justify-center mb-2">
+                      <span className="text-4xl font-bold text-gray-900">{plan.price}</span>
+                      <span className="text-gray-600 ml-1">/{plan.period}</span>
                     </div>
-                    <p className="text-gray-600">{plan.description}</p>"
+                    <p className="text-gray-600">{plan.description}</p>
                   </div>
-                  <ul className="space-y-4 mb-8">","
+                  <ul className="space-y-4 mb-8">
                     {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center"
-                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0/>"
-                        <span className="text-gray-700">{feature}</span>";"
-                      <li key={featureIndex} className="flex items-center">","
-                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />","
-                        <span className="text-gray-700">{feature}</span>"
+                      <li key={featureIndex} className="flex items-center">
+                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
+                        <span className="text-gray-700">{feature}</span>
                       </li>
                     ))}
                   </ul>
-                  <a href="/contact","
-  className={,
-                  <div className= "text-center mb-8">","
-                    <h3 className= "text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>"
-                    <div className= "flex items-center justify-center mb-2">","
-                      <span className= "text-4xl font-bold text-gray-900">{plan.price}</span>"
-                      <span className= "text-gray-600 ml-1">/{plan.period}</span>"
+                  <a 
+                    href="/contact"
+                    className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
+                      plan.popular
+                        ? 'bg-red-600 text-white hover:bg-red-700'
+                        : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
+                    }`}
+                  >
+                    Request Quote
+                    <ArrowRight className="w-4 h-4 ml-1" />
+                  </a>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Features */}
+        <section className="py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                Advanced Security Analysis
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Comprehensive security testing using cutting-edge tools and expert manual review.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
+                    <div className="inline-flex items-center justify-center w-12 h-12 bg-red-100 rounded-lg mb-4">
+                      <Icon className="w-6 h-6 text-red-600" />
                     </div>
-                    <p className= "text-gray-600">{plan.description}</p>"
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
+                    <p className="text-gray-600 mb-4">{feature.description}</p>
+                    <div className="inline-flex items-center text-green-600 font-semibold text-sm">
+                      <CheckCircle className="w-4 h-4 mr-1" />
+                      {feature.benefit}
+                    </div>
                   </div>
-                  <ul className= "space-y-4 mb-8">","
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* Pricing */}
+        <section id="pricing" className="py-20 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                Transparent Pricing for Every Project Size
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Choose the audit package that fits your smart contract complexity and security requirements.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              {pricing.map((plan, index) => (
+                <div key={index} className={`bg-white rounded-2xl shadow-lg p-8 ${plan.popular ? 'ring-2 ring-red-500 relative' : ''}`}>
+                  {plan.popular && (
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                      <span className="bg-red-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                        Most Popular
+                      </span>
+                    </div>
+                  )}
+                  <div className="text-center mb-8">
+                    <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
+                    <div className="flex items-center justify-center mb-2">
+                      <span className="text-4xl font-bold text-gray-900">{plan.price}</span>
+                      <span className="text-gray-600 ml-1">/{plan.period}</span>
+                    </div>
+                    <p className="text-gray-600">{plan.description}</p>
+                  </div>
+                  <ul className="space-y-4 mb-8">
                     {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className= "flex items-center">
-                        <CheckCircle className= "w-5 h-5 text-green-500 mr-3 flex-shrink-0/>"
-                        <span className= "text-gray-700">{feature}</span>";"
-                      <li key={featureIndex} className= "flex items-center">","
-                        <CheckCircle className= "w-5 h-5 text-green-500 mr-3 flex-shrink-0" />","
-                        <span className= "text-gray-700">{feature}</span>"
+                      <li key={featureIndex} className="flex items-center">
+                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
+                        <span className="text-gray-700">{feature}</span>
                       </li>
                     ))}
                   </ul>
-                  <a href="/contact","
-  className= {,
-`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${`
-plan.popular
-? 'bg-red-600 text-white hover: bg-red-700',';,
-? 'bg-red-600 text-white hover: bg-red-700',',';,
-: 'bg-gray-100 text-gray-900 hover:bg-gray-200'
-}`}`
+                  <a 
+                    href="/contact"
+                    className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
+                      plan.popular
+                        ? 'bg-red-600 text-white hover:bg-red-700'
+                        : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
+                    }`}
+                  >
+                    Request Quote
+                    <ArrowRight className="w-4 h-4 ml-1" />
+                  </a>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Features */}
+        <section className="py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                    <div className="flex items-center justify-center mb-2">
+                      <span className="text-4xl font-bold text-gray-900">{plan.price}</span>
+                      <span className="text-gray-600 ml-1">/{plan.period}</span>
+                    </div>
+                    <p className="text-gray-600">{plan.description}</p>
+                  </div>
+                  <ul className="space-y-4 mb-8">
+                    {plan.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center">
+                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
+                        <span className="text-gray-700">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <a href="/contact"
+                    className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
+                      plan.popular
+                        ? 'bg-red-600 text-white hover:bg-red-700'
+                        : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
+                    }`}
         {/* Features */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1303,50 +1366,37 @@ plan.popular
             <div className= "text-center mb-16">
               <h2 className= "text-4xl font-bold text-gray-900 mb-4">
         <section className= "py-20">","
-          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
-            <div className= "text-center mb-16">","
-              <h2 className= "text-4xl font-bold text-gray-900 mb-4">"
-  What Our Clients Say
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                What Our Clients Say
               </h2>
-              <p className= "text-xl text-gray-600 max-w-3xl mx-auto">"
-  Join dozens of successful blockchain projects that trust our security expertise.
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Join dozens of successful blockchain projects that trust our security expertise.
               </p>
             </div>
 
-            <div className="grid md: grid-cols-3 gap-8">","
-            <div className="grid md: grid-cols-3 gap-8">","
+            <div className="grid md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
-                <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200">","
-                  <div className="flex items-center mb-4">","
+                <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200">
+                  <div className="flex items-center mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current/>"
-                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />","
+                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                     ))}
                   </div>
-                  <blockquote className="text-gray-700 mb-6 italic">","
+                  <blockquote className="text-gray-700 mb-6 italic">
                     "{testimonial.content}"
                   </blockquote>
-                  <div >
-                    <div className="font-semibold text-gray-900">{testimonial.name}</div>"
-                    <div className="text-gray-600 text-sm">{testimonial.role}</div>"
-                    <div className="text-red-600 text-sm font-medium">{testimonial.company}</div>"
-            <div className= "grid md: grid-cols-3 gap-8">","
-            <div className= "grid md: grid-cols-3 gap-8">","
-              {testimonials.map((testimonial, index) => (
-                <div key={index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200">","
-                  <div className= "flex items-center mb-4">","
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className= "w-5 h-5 text-yellow-400 fill-current/>"
-                      <Star key={i} className= "w-5 h-5 text-yellow-400 fill-current" />","
-                    ))}
+                  <div>
+                    <div className="font-semibold text-gray-900">{testimonial.name}</div>
+                    <div className="text-gray-600 text-sm">{testimonial.role}</div>
+                    <div className="text-red-600 text-sm font-medium">{testimonial.company}</div>
                   </div>
-                  <blockquote className= "text-gray-700 mb-6 italic">","
-                    "{testimonial.content}"
-                  </blockquote>
-                  <div >
-                    <div className= "font-semibold text-gray-900">{testimonial.name}</div>"
-                    <div className= "text-gray-600 text-sm">{testimonial.role}</div>"
-                    <div className= "text-red-600 text-sm font-medium">{testimonial.company}</div>"
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
