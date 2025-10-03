@@ -48,34 +48,34 @@ export default function App(): JSX.Element {
           <AutonomousEnterpriseBreakthroughBanner />
           
           <main className="min-h-screen">
-            <Suspense fallback="{<PageLoader /">}>
+            <Suspense fallback={<PageLoader />}>
               <Routes>
-                <Route path="/" element="{<LazyHomePage /">} />
-                <Route path="/solutions" element="{<LazySolutionsPage /">} />
-                <Route path="/resources" element="{<LazyResourcesPage /">} />
-                <Route path="/team" element="{<LazyTeamPage /">} />
-                <Route path="/news" element="{<LazyNewsPage /">} />
-                <Route path="/press" element="{<LazyPressPage /">} />
-                <Route path="/careers" element="{<LazyCareersPage /">} />
-                <Route path="/marketplace" element="{<LazyMarketplacePage /">} />
-                <Route path="/services" element="{<LazyServicesPage /">} />
-                <Route path="/services/ai-invoice-processing-saas" element="{<LazyAIInvoiceProcessingPage /">} />
-                <Route path="/services/comprehensive-it-services" element="{<LazyComprehensiveITServicesPage /">} />
-                <Route path="/services/ai-social-media-content-generator" element="{<LazyAISocialMediaContentGenerator /">} />
-                <Route path="/services/ai-email-marketing-automation" element="{<LazyAIEmailMarketingAutomation /">} />
-                <Route path="/services/ai-business-intelligence-platform" element="{<LazyAIBusinessIntelligencePlatform /">} />
-                <Route path="/services/cloud-migration-service" element="{<LazyCloudMigrationService /">} />
-                <Route path="/services/devops-automation-service" element="{<LazyDevOpsAutomationService /">} />
-                <Route path="/services/api-development-service" element="{<LazyAPIDevelopmentService /">} />
-                <Route path="/services/ai-chatbot-builder" element="{<LazyAIChatbotBuilder /">} />
+                <Route path="/" element={<LazyHomePage />} />
+                <Route path="/solutions" element={<LazySolutionsPage />} />
+                <Route path="/resources" element={<LazyResourcesPage />} />
+                <Route path="/team" element={<LazyTeamPage />} />
+                <Route path="/news" element={<LazyNewsPage />} />
+                <Route path="/press" element={<LazyPressPage />} />
+                <Route path="/careers" element={<LazyCareersPage />} />
+                <Route path="/marketplace" element={<LazyMarketplacePage />} />
+                <Route path="/services" element={<LazyServicesPage />} />
+                <Route path="/services/ai-invoice-processing-saas" element={<LazyAIInvoiceProcessingPage />} />
+                <Route path="/services/comprehensive-it-services" element={<LazyComprehensiveITServicesPage />} />
+                <Route path="/services/ai-social-media-content-generator" element={<LazyAISocialMediaContentGenerator />} />
+                <Route path="/services/ai-email-marketing-automation" element={<LazyAIEmailMarketingAutomation />} />
+                <Route path="/services/ai-business-intelligence-platform" element={<LazyAIBusinessIntelligencePlatform />} />
+                <Route path="/services/cloud-migration-service" element={<LazyCloudMigrationService />} />
+                <Route path="/services/devops-automation-service" element={<LazyDevOpsAutomationService />} />
+                <Route path="/services/api-development-service" element={<LazyAPIDevelopmentService />} />
+                <Route path="/services/ai-chatbot-builder" element={<LazyAIChatbotBuilder />} />
                 <Route path="/services/comprehensive-micro-saas-solutions" element={<div className="py-20 px-4"><h1 className="text-4xl font-bold text-center text-white">Comprehensive Micro SaaS Solutions</h1></div>} />
                 <Route path="/services/ai-voice-assistant-platform" element={<div className="py-20 px-4"><h1 className="text-4xl font-bold text-center text-white">AI Voice Assistant Platform</h1></div>} />
                 <Route path="/services/ai-document-automation-platform" element={<div className="py-20 px-4"><h1 className="text-4xl font-bold text-center text-white">AI Document Automation Platform</h1></div>} />
-                <Route path="/comprehensive-micro-saas-services" element="{<LazyServicesPage /">} />
-                <Route path="/comprehensive-it-services" element="{<LazyComprehensiveITServicesPage /">} />
+                <Route path="/comprehensive-micro-saas-services" element={<LazyServicesPage />} />
+                <Route path="/comprehensive-it-services" element={<LazyComprehensiveITServicesPage />} />
                 <Route path="/case-studies" element={<div className="py-20 px-4"><h1 className="text-4xl font-bold text-center text-white">Case Studies</h1></div>} />
-                <Route path="/contact" element="{<LazyContactPage /">} />
-                <Route path="/about" element="{<LazyAboutPage /">} />
+                <Route path="/contact" element={<LazyContactPage />} />
+                <Route path="/about" element={<LazyAboutPage />} />
                 <Route path="*" element={<div className="py-20 px-4"><h1 className="text-4xl font-bold text-center text-white">404 - Page Not Found</h1></div>} />
               </Routes>
             </Suspense>
