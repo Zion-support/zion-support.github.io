@@ -25,6 +25,7 @@ const LazyPressPage = React.lazy(() => import('../app/press/page'));
 const LazyCareersPage = React.lazy(() => import('../app/careers/page'));
 const LazyMarketplacePage = React.lazy(() => import('../app/marketplace/page'));
 const LazyServicesPage = React.lazy(() => import('../app/services/page'));
+// Unused lazy imports removed to fix linting warnings
 
 function App(): JSX.Element {
   // Performance monitoring
