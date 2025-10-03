@@ -52,23 +52,23 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
 };
 
 // Full page loader component
-export const PageLoader: React.FC = () => (
+export const PageLoader: React.FC = React.memo(() => (
   <div className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white min-h-screen">
     <LoadingSpinner size="xl" text="Loading page..." />
   </div>
-);
+));
 
 // Inline loader for smaller components
-export const InlineLoader: React.FC = () => (
+export const InlineLoader: React.FC = React.memo(() => (
   <LoadingSpinner size="sm" text="Loading..." className="p-4" />
-);
+));
 
 // Button loader for form submissions
-export const ButtonLoader: React.FC = () => (
-  <div className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white min-h-screen">
+export const ButtonLoader: React.FC = React.memo(() => (
+  <div className="flex items-center space-x-2">
     <LoadingSpinner size="sm" />
     <span>Processing...</span>
   </div>
-);
+));
 
 export default LoadingSpinner;
