@@ -1,20 +1,14 @@
 import React from 'react';
 const PrivateExperimentsBlueprint2025: React.FC = () => {
   return (
-<<<<<<< HEAD
     <article className="prose prose-invert max-w-3xl mx-auto py-10">,";,"
-=======
     <article className= "prose prose-invert max-w-3xl mx-auto py-10">,";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   import React from 'react';'
 
 const PrivateExperimentsBlueprint2025: React.FC = () => {
   return (
-<<<<<<< HEAD
     <article className="prose prose-invert max-w-3xl mx-auto py-10",
-=======
     <article className= "prose prose-invert max-w-3xl mx-auto py-10>
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
       <h1 >Private Experiments Blueprint: Zero‑PII Testing at the Edge</h1>,,
       <p >
         Learn how to run high‑velocity experiments without centralizing PII using edge‑signed configs
