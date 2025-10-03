@@ -66,24 +66,24 @@ export const seoUtils = {
     image?: string;
     url: string;
   }) => ({
-    "@context": "https://schema.org","
-    "@type": "Article","
-    "headline": article.title,"
-    "description": article.description,"
-    "author": {"
-      "@type": "Person","
-      "name": article.author"
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": article.title,
+    "description": article.description,
+    "author": {
+      "@type": "Person",
+      "name": article.author
     },
-    "datePublished": article.datePublished,"
-    "dateModified": article.dateModified,"
-    "image": article.image,"
-    "url": article.url,"
-    "publisher": {"
-      "@type": "Organization","
-      "name": "Zion Tech Group","
-      "logo": {"
-        "@type": "ImageObject","
-        "url": "https://zion.app/logo.png""
+    "datePublished": article.datePublished,
+    "dateModified": article.dateModified,
+    "image": article.image,
+    "url": article.url,
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://zion.app/logo.png"
       }
     }
   })
@@ -323,7 +323,7 @@ export const initializeSEO = () => {
   
   // Set up meta tags
   if (typeof document !== 'undefined') {
-    const viewport = document.querySelector('meta[name="viewport"]');"
+    const viewport = document.querySelector('meta[name="viewport"]');
     if (!viewport) {
       const meta = document.createElement('meta');
       meta.name = 'viewport';
