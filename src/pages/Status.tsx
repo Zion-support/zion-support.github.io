@@ -1,6 +1,6 @@
 import React from "react"
 ;
-const Status: React.FC: ()  => {,,,
+const Status: React.FC = () => {
   return (
 <<<<<<< HEAD
         <section className="min-h-[40vh]"

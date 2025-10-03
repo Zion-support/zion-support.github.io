@@ -1,6 +1,6 @@
 import React from "react"
 ;
-const MarketplaceServices: React.FC: ()  => {,,,
+const MarketplaceServices: React.FC = () => {
   return (
 <<<<<<< HEAD
         <section className="min-h-[40vh]"

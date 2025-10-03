@@ -1,5 +1,5 @@
-import React from 'react'';
-const AIPlatformArchitecture: React.FC: ()  => {,,,
+import React from 'react';
+const AIPlatformArchitecture: React.FC = () => {
   return (
 <<<<<<< HEAD
     <div className="min-h-screen bg-slate-950"
@@ -14,7 +14,7 @@ const AIPlatformArchitecture: React.FC: ()  => {,,,
 >>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   import React from 'react';'
 
-const AIPlatformArchitecture: React.FC: ()  => {,,,
+const AIPlatformArchitecture: React.FC = () => {
   return (
 <<<<<<< HEAD
     <div className="min-h-screen bg-slate-950">","

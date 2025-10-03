@@ -1,6 +1,6 @@
 import React from 'react';
 ;
-const Docs: React.FC: ()  => {,,,
+const Docs: React.FC = () => {
   return (
 <<<<<<< HEAD
     <div className="py-12"

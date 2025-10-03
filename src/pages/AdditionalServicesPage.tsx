@@ -1,6 +1,6 @@
 import React from 'react';
 ;
-const AdditionalServicesPage: React.FC: ()  => {,,,
+const AdditionalServicesPage: React.FC = () => {
   return (
 <<<<<<< HEAD
     <div className="min-h-screen flex items-center justify-center bg-gray-50"

@@ -1,7 +1,7 @@
-import React from 'react'';
+import React from 'react';
 import React from 'react';'
 
-const AIIncidentResponsePlaybooks2025: React.FC: ()  => {,,,
+const AIIncidentResponsePlaybooks2025: React.FC = () => {
   return (
 <<<<<<< HEAD
     <div className="min-h-screen bg-white">","

@@ -1,33 +1,31 @@
-import React from 'react'';
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 ;
-const BlogPage: React.FC: ()  => {,,,
+const BlogPage: React.FC = () => {
   return (
     <>
       <Helmet >
         <title >Blog & Insights - Zion Tech Group</title>
-        <meta name: "description" content ="Stay updated with the latest trends, insights, and best practices in AI and technology." />";,"
+        <meta name: "description" content ="Stay updated with the latest trends, insights, and best practices in AI and technology." />"
+        <meta name="description" content="Stay updated with the latest trends, insights, and best practices in AI and technology." />
       </Helmet>
       
-<<<<<<< HEAD
       <div className="py-20 px-4"
         <div className="max-w-4xl mx-auto text-center"
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">Blog & Insights - Zion Tech Group</h1>";,"
-          <p className="text-xl text-gray-600 mb-8">,";,"
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">Blog & Insights - Zion Tech Group</h1>"
+          <p className="text-xl text-gray-600 mb-8">,"
   This page is currently under development. Please check back soon for updates.
           </p>
           <div className="bg-white p-8 rounded-xl shadow-lg"
-            <p className="text-gray-600">,";,"
-=======
+            <p className="text-gray-600">,"
       <div className= "py-20 px-4">
         <div className= "max-w-4xl mx-auto text-center">
-          <h1 className= "text-4xl font-bold text-gray-900 mb-6">Blog & Insights - Zion Tech Group</h1>";,"
-          <p className= "text-xl text-gray-600 mb-8">,";,"
+          <h1 className= "text-4xl font-bold text-gray-900 mb-6">Blog & Insights - Zion Tech Group</h1>"
+          <p className= "text-xl text-gray-600 mb-8">,"
   This page is currently under development. Please check back soon for updates.
           </p>
           <div className= "bg-white p-8 rounded-xl shadow-lg">
-            <p className= "text-gray-600">,";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
+            <p className= "text-gray-600">,"
   We're working hard to bring you the best content and features. Thank you for your patience.';';
             </p>
           </div>

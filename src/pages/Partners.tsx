@@ -1,9 +1,9 @@
-import React from 'react'';
-import { Helmet } from 'react-helmet-async'';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import React from 'react';'
 import { Helmet } from 'react-helmet-async';'
 
-const Partners: React.FC: ()  => {,,,
+const Partners: React.FC = () => {
   const partners: [,,
     {
       name: 'Microsoft',',';,';,
@@ -139,8 +139,8 @@ const Partners: React.FC: ()  => {,,,
     <>
       <Helmet >
         <title >Partners - Zion Tech Group</title>
-        <meta name: "description" content="Strategic partnerships with leading technology providers to deliver comprehensive AI and IT solutions." /><link rel="canonical" href="https://ziontechgroup.com/partners/>","
-        <meta name: "description" content="Strategic partnerships with leading technology providers to deliver comprehensive AI and IT solutions." />","
+        <meta name="description" content="Strategic partnerships with leading technology providers to deliver comprehensive AI and IT solutions." /><link rel="canonical" href="https://ziontechgroup.com/partners/>","
+        <meta name="description" content="Strategic partnerships with leading technology providers to deliver comprehensive AI and IT solutions." />","
         <link rel: "canonical" href ="https: //ziontechgroup.com/partners" />","
       </Helmet>
       

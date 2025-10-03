@@ -1,6 +1,6 @@
 import React from "react"
 ;
-const GreenIT: React.FC: ()  => {,,,
+const GreenIT: React.FC = () => {
   return (
 <<<<<<< HEAD
         <section className="min-h-[40vh]"

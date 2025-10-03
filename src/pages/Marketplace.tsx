@@ -1,7 +1,7 @@
 import React from "react";"
 import { Link } from "react-router-dom"
 ;
-const Marketplace: React.FC: ()  => {,,,
+const Marketplace: React.FC = () => {
   return (
 <<<<<<< HEAD
         <section className="min-h-[40vh]"

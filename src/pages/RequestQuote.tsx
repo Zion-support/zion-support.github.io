@@ -1,6 +1,6 @@
 import React from "react"
 ;
-const RequestQuote: React.FC: ()  => {,,,
+const RequestQuote: React.FC = () => {
   return (
 <<<<<<< HEAD
         <section className="min-h-[40vh]"

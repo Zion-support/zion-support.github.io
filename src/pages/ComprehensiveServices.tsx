@@ -1,10 +1,10 @@
-import React from 'react'';
+import React from 'react';
 import { Link } from 'react-router-dom'';
 import {
 
 } from 'lucide-react'
 
-const ComprehensiveServices: React.FC: ()  => {,,,
+const ComprehensiveServices: React.FC = () => {
   const microSaasServices: [,,
     {
       id: 'ai-content-generator',';,';,

@@ -1,6 +1,6 @@
 import React from "react"
 ;
-const ResearchDevelopment: React.FC: ()  => {,,,
+const ResearchDevelopment: React.FC = () => {
   return (
 <<<<<<< HEAD
         <section className="min-h-[40vh]"

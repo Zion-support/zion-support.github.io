@@ -1,11 +1,11 @@
-import React from 'react'';
-import { Helmet } from 'react-helmet-async'';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import {
 
 } from 'lucide-react'
 
-const About: React.FC: ()  => {,,,
-  const stats: [,,
+const About: React.FC = () => {
+  const stats: [,
     { number: '10+', label: 'Years Experience', icon: Award }'';
     { number: '500+', label: 'Projects Completed', icon: CheckCircle }';';
     { number: '50+', label: 'Happy Clients', icon: Users }';';
@@ -13,27 +13,27 @@ const About: React.FC: ()  => {,,,
     { number: '99%', label: 'Client Satisfaction', icon: Star }';';
   ];
 
-  const values: [,,
+  const values: [,
     {
-      icon: Target,,,
+      icon: Target,,
       title: 'Innovation First',';,';,
       description: 'We stay ahead of technology trends to deliver solutions that give you a competitive edge in the market.',';,';,
       description: 'We stay ahead of technology trends to deliver solutions that give you a competitive edge in the market.',';,
     },
     {
-      icon: Shield,,,
+      icon: Shield,,
       title: 'Enterprise Security',';,';,
       description: 'Bank-grade security measures protect your data and ensure compliance with industry standards.',';,';,
       description: 'Bank-grade security measures protect your data and ensure compliance with industry standards.',';,
     },
     {
-      icon: TrendingUp,,,
+      icon: TrendingUp,,
       title: 'Measurable Results',';,';,
       description: 'We deliver quantifiable outcomes with average 75% cost reduction and 10x efficiency gains.',';,';,
       description: 'We deliver quantifiable outcomes with average 75% cost reduction and 10x efficiency gains.',';,
     },
     {
-      icon: Globe,,,
+      icon: Globe,,
       title: 'Global Reach',';,';,
       description: 'Serving clients worldwide with 24/7 support and localized solutions for international markets.',';,
     }
@@ -41,7 +41,7 @@ const About: React.FC: ()  => {,,,
     }
   ];
 
-  const team: [,,
+  const team: [,
     {
       name: 'Kleber Santos',';,';,
       role: 'CEO & Founder',';,';,
@@ -70,57 +70,52 @@ const About: React.FC: ()  => {,,,
     <>
       <Helmet >
         <title >About Us - Zion Tech Group | Leading AI & Technology Solutions</title>
-        <meta name: "description" content ="Learn about Zion Tech Group's mission, team, and commitment to delivering cutting-edge AI and IT solutions that transform businesses worldwide." />";,"
+        <meta name: "description" content ="Learn about Zion Tech Group's mission, team, and commitment to delivering cutting-edge AI and IT solutions that transform businesses worldwide." />"
+        <meta name="description" content="Learn about Zion Tech Group's mission, team, and commitment to delivering cutting-edge AI and IT solutions that transform businesses worldwide." />
       </Helmet>
       
-<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50"
         <div className="container mx-auto px-4 py-12"
           {/* Header */}
           <div className="text-center mb-16"
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">,";,"
-  About <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Zion Tech Group</span>";,"
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">,"
+  About <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Zion Tech Group</span>"
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">,";,"
-=======
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">,"
       <div className= "min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
         <div className= "container mx-auto px-4 py-12">
           {/* Header */}
           <div className= "text-center mb-16">
-            <h1 className= "text-4xl md:text-6xl font-bold text-gray-900 mb-6">,";,"
-  About <span className= "bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Zion Tech Group</span>";,"
+            <h1 className= "text-4xl md:text-6xl font-bold text-gray-900 mb-6">,"
+  About <span className= "bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Zion Tech Group</span>"
             </h1>
-            <p className= "text-xl text-gray-600 max-w-3xl mx-auto mb-8">,";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
+            <p className= "text-xl text-gray-600 max-w-3xl mx-auto mb-8">,"
   We are a leading provider of cutting-edge AI and IT solutions that transform businesses. 
               Our mission is to empower organizations with innovative technology that drives growth and success.
             </p>
           </div>
 
           {/* Stats */}
-<<<<<<< HEAD
           <section className="mb-16"
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8"
               {stats.map((stat, index) => {
-                const Icon: stat.icon;,,,
+                const Icon: stat.icon;,,
   return (
                   <div key={index} className="text-center"
                     <div className="bg-white rounded-lg shadow-lg p-6"
-                      <Icon className="w-8 h-8 text-blue-600 mx-auto mb-4" />";,"
+                      <Icon className="w-8 h-8 text-blue-600 mx-auto mb-4" />"
                       <div className="text-3xl font-bold text-gray-900 mb-2">{stat.number}</div>";"
                       <div className="text-gray-600">{stat.label}</div>";"
-=======
           <section className= "mb-16">
             <div className= "grid grid-cols-2 md:grid-cols-4 gap-8">
               {stats.map((stat, index) => {
-                const Icon: stat.icon;,,,
+                const Icon: stat.icon;,,
   return (
                   <div key={index} className= "text-center">
                     <div className= "bg-white rounded-lg shadow-lg p-6">
-                      <Icon className= "w-8 h-8 text-blue-600 mx-auto mb-4" />";,"
+                      <Icon className= "w-8 h-8 text-blue-600 mx-auto mb-4" />"
                       <div className= "text-3xl font-bold text-gray-900 mb-2">{stat.number}</div>";"
                       <div className= "text-gray-600">{stat.label}</div>";"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                     </div>
                   </div>
                 );
@@ -129,45 +124,39 @@ const About: React.FC: ()  => {,,,
           </section>
 
           {/* Mission & Vision */}
-<<<<<<< HEAD
           <section className="mb-16"
             <div className="grid md:grid-cols-2 gap-8"
               <div className="bg-white rounded-lg shadow-lg p-8"
                 <div className="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center mb-6"
-                  <Target className="w-6 h-6 text-blue-600" />";,"
+                  <Target className="w-6 h-6 text-blue-600" />"
                 </div>
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">Our Mission</h2>";,"
-                <p className="text-gray-600">,";,"
-=======
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">Our Mission</h2>"
+                <p className="text-gray-600">,"
           <section className= "mb-16">
             <div className= "grid md:grid-cols-2 gap-8">
               <div className= "bg-white rounded-lg shadow-lg p-8">
                 <div className= "bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
-                  <Target className= "w-6 h-6 text-blue-600" />";,"
+                  <Target className= "w-6 h-6 text-blue-600" />"
                 </div>
-                <h2 className= "text-2xl font-bold text-gray-900 mb-4">Our Mission</h2>";,"
-                <p className= "text-gray-600">,";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
+                <h2 className= "text-2xl font-bold text-gray-900 mb-4">Our Mission</h2>"
+                <p className= "text-gray-600">,"
   To democratize advanced AI and technology solutions, making them accessible and affordable 
                   for businesses of all sizes. We believe that cutting-edge technology should be a catalyst 
                   for growth, not a barrier to entry.
                 </p>
               </div>
-<<<<<<< HEAD
               <div className="bg-white rounded-lg shadow-lg p-8"
                 <div className="bg-purple-100 w-12 h-12 rounded-lg flex items-center justify-center mb-6"
-                  <Globe className="w-6 h-6 text-purple-600" />";,"
+                  <Globe className="w-6 h-6 text-purple-600" />"
                 </div>
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">Our Vision</h2>";,"
-                <p className="text-gray-600">,";,"
-=======
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">Our Vision</h2>"
+                <p className="text-gray-600">,"
               <div className= "bg-white rounded-lg shadow-lg p-8">
                 <div className= "bg-purple-100 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
-                  <Globe className= "w-6 h-6 text-purple-600" />";,"
+                  <Globe className= "w-6 h-6 text-purple-600" />"
                 </div>
-                <h2 className= "text-2xl font-bold text-gray-900 mb-4">Our Vision</h2>";,"
-                <p className= "text-gray-600">,";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
+                <h2 className= "text-2xl font-bold text-gray-900 mb-4">Our Vision</h2>"
+                <p className= "text-gray-600">,"
   To be the global leader in AI-powered business transformation, creating a world where 
                   every organization can leverage advanced technology to achieve unprecedented levels of 
                   efficiency, innovation, and success.
@@ -177,43 +166,40 @@ const About: React.FC: ()  => {,,,
           </section>
 
           {/* Values */}
-<<<<<<< HEAD
           <section className="mb-16"
             <div className="text-center mb-12"
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Core Values</h2>";,"
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">,";,"
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Core Values</h2>"
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">,"
   These principles guide everything we do and shape our commitment to excellence.
               </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
               {values.map((value, index) => {
-                const Icon: value.icon;,,,
+                const Icon: value.icon;,,
   return (
                   <div key={index} className="bg-white rounded-lg shadow-lg p-6 text-center"
                     <div className="bg-gradient-to-br from-blue-600 to-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
-                      <Icon className="w-8 h-8 text-white" />";,"
+                      <Icon className="w-8 h-8 text-white" />"
                     </div>
                     <h3 className="text-xl font-bold text-gray-900 mb-3">{value.title}</h3>";"
                     <p className="text-gray-600">{value.description}</p>";"
-=======
           <section className= "mb-16">
             <div className= "text-center mb-12">
-              <h2 className= "text-3xl font-bold text-gray-900 mb-4">Our Core Values</h2>";,"
-              <p className= "text-lg text-gray-600 max-w-2xl mx-auto">,";,"
+              <h2 className= "text-3xl font-bold text-gray-900 mb-4">Our Core Values</h2>"
+              <p className= "text-lg text-gray-600 max-w-2xl mx-auto">,"
   These principles guide everything we do and shape our commitment to excellence.
               </p>
             </div>
             <div className= "grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {values.map((value, index) => {
-                const Icon: value.icon;,,,
+                const Icon: value.icon;,,
   return (
                   <div key={index} className= "bg-white rounded-lg shadow-lg p-6 text-center">
                     <div className= "bg-gradient-to-br from-blue-600 to-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <Icon className= "w-8 h-8 text-white" />";,"
+                      <Icon className= "w-8 h-8 text-white" />"
                     </div>
                     <h3 className= "text-xl font-bold text-gray-900 mb-3">{value.title}</h3>";"
                     <p className= "text-gray-600">{value.description}</p>";"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                   </div>
                 );
               })}
@@ -221,11 +207,10 @@ const About: React.FC: ()  => {,,,
           </section>
 
           {/* Team */}
-<<<<<<< HEAD
           <section className="mb-16"
             <div className="text-center mb-12"
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Meet Our Team</h2>";,"
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">,";,"
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Meet Our Team</h2>"
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">,"
   Our diverse team of experts brings together decades of experience in AI, technology, and business transformation.
               </p>
             </div>
@@ -233,18 +218,17 @@ const About: React.FC: ()  => {,,,
               {team.map((member, index) => (
                 <div key={index} className="bg-white rounded-lg shadow-lg p-6 text-center"
                   <div className="bg-gradient-to-br from-blue-600 to-purple-600 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4"
-                    <Users className="w-10 h-10 text-white" />";,"
+                    <Users className="w-10 h-10 text-white" />"
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-2">{member.name}</h3>";"
                   <p className="text-blue-600 font-semibold mb-3">{member.role}</p>";"
                   <p className="text-gray-600 mb-4">{member.description}</p>";"
-                  <a href: {`mailto:${member.email}`}`;`;
+                  <a href={`mailto:${member.email}`}`;`;
                     className="text-blue-600 hover:text-blue-700 transition-colors","
-=======
           <section className= "mb-16">
             <div className= "text-center mb-12">
-              <h2 className= "text-3xl font-bold text-gray-900 mb-4">Meet Our Team</h2>";,"
-              <p className= "text-lg text-gray-600 max-w-2xl mx-auto">,";,"
+              <h2 className= "text-3xl font-bold text-gray-900 mb-4">Meet Our Team</h2>"
+              <p className= "text-lg text-gray-600 max-w-2xl mx-auto">,"
   Our diverse team of experts brings together decades of experience in AI, technology, and business transformation.
               </p>
             </div>
@@ -252,14 +236,13 @@ const About: React.FC: ()  => {,,,
               {team.map((member, index) => (
                 <div key={index} className= "bg-white rounded-lg shadow-lg p-6 text-center">
                   <div className= "bg-gradient-to-br from-blue-600 to-purple-600 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Users className= "w-10 h-10 text-white" />";,"
+                    <Users className= "w-10 h-10 text-white" />"
                   </div>
                   <h3 className= "text-xl font-bold text-gray-900 mb-2">{member.name}</h3>";"
                   <p className= "text-blue-600 font-semibold mb-3">{member.role}</p>";"
                   <p className= "text-gray-600 mb-4">{member.description}</p>";"
-                  <a href: {`mailto:${member.email}`}`;`;
+                  <a href={`mailto:${member.email}`}`;`;
                     className= "text-blue-600 hover:text-blue-700 transition-colors","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                   >
                     {member.email}
                   </a>
@@ -269,79 +252,70 @@ const About: React.FC: ()  => {,,,
           </section>
 
           {/* Company Info */}
-<<<<<<< HEAD
           <section className="mb-16"
             <div className="bg-white rounded-xl shadow-lg p-8"
               <div className="text-center mb-8"
-                <h2 className="text-3xl font-bold text-gray-900 mb-4">Company Information</h2>";,"
-                <p className="text-lg text-gray-600">,";,"
+                <h2 className="text-3xl font-bold text-gray-900 mb-4">Company Information</h2>"
+                <p className="text-lg text-gray-600">,"
   Zion Tech Group is headquartered in Delaware, USA, with a global presence serving clients worldwide.
                 </p>
               </div>
               <div className="grid md:grid-cols-3 gap-8"
                 <div className="text-center"
                   <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
-                    <MapPin className="w-8 h-8 text-blue-600" />";,"
+                    <MapPin className="w-8 h-8 text-blue-600" />"
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">Headquarters</h3>";,"
-                  <p className="text-gray-600">,";,"
-=======
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">Headquarters</h3>"
+                  <p className="text-gray-600">,"
           <section className= "mb-16">
             <div className= "bg-white rounded-xl shadow-lg p-8">
               <div className= "text-center mb-8">
-                <h2 className= "text-3xl font-bold text-gray-900 mb-4">Company Information</h2>";,"
-                <p className= "text-lg text-gray-600">,";,"
+                <h2 className= "text-3xl font-bold text-gray-900 mb-4">Company Information</h2>"
+                <p className= "text-lg text-gray-600">,"
   Zion Tech Group is headquartered in Delaware, USA, with a global presence serving clients worldwide.
                 </p>
               </div>
               <div className= "grid md:grid-cols-3 gap-8">
                 <div className= "text-center">
                   <div className= "bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <MapPin className= "w-8 h-8 text-blue-600" />";,"
+                    <MapPin className= "w-8 h-8 text-blue-600" />"
                   </div>
-                  <h3 className= "text-xl font-bold text-gray-900 mb-2">Headquarters</h3>";,"
-                  <p className= "text-gray-600">,";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
+                  <h3 className= "text-xl font-bold text-gray-900 mb-2">Headquarters</h3>"
+                  <p className= "text-gray-600">,"
   364 E Main St STE 1008<br />
                     Middletown, DE 19709<br />
                     United States
                   </p>
                 </div>
-<<<<<<< HEAD
                 <div className="text-center"
                   <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
-                    <Phone className="w-8 h-8 text-green-600" />";,"
+                    <Phone className="w-8 h-8 text-green-600" />"
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">Contact</h3>";,"
-                  <p className="text-gray-600">,";,"
-=======
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">Contact</h3>"
+                  <p className="text-gray-600">,"
                 <div className= "text-center">
                   <div className= "bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Phone className= "w-8 h-8 text-green-600" />";,"
+                    <Phone className= "w-8 h-8 text-green-600" />"
                   </div>
-                  <h3 className= "text-xl font-bold text-gray-900 mb-2">Contact</h3>";,"
-                  <p className= "text-gray-600">,";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
-  Phone: +1 302 464 0950<br />,,,
-                    Email: kleber@ziontechgroup.com<br />,,,
+                  <h3 className= "text-xl font-bold text-gray-900 mb-2">Contact</h3>"
+                  <p className= "text-gray-600">,"
+  Phone: +1 302 464 0950<br />,,
+                    Email: kleber@ziontechgroup.com<br />,,
                     Available 24/7
                   </p>
                 </div>
-<<<<<<< HEAD
                 <div className="text-center"
                   <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
-                    <Award className="w-8 h-8 text-purple-600" />";,"
+                    <Award className="w-8 h-8 text-purple-600" />"
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">Certifications</h3>";,"
-                  <p className="text-gray-600">,";,"
-=======
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">Certifications</h3>"
+                  <p className="text-gray-600">,"
                 <div className= "text-center">
                   <div className= "bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Award className= "w-8 h-8 text-purple-600" />";,"
+                    <Award className= "w-8 h-8 text-purple-600" />"
                   </div>
-                  <h3 className= "text-xl font-bold text-gray-900 mb-2">Certifications</h3>";,"
-                  <p className= "text-gray-600">,";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
+                  <h3 className= "text-xl font-bold text-gray-900 mb-2">Certifications</h3>"
+                  <p className= "text-gray-600">,"
   AWS Certified<br />
                     Microsoft Partner<br />
                     Google Cloud Partner<br />
@@ -353,43 +327,40 @@ const About: React.FC: ()  => {,,,
           </section>
 
           {/* Contact CTA */}
-<<<<<<< HEAD
           <section className="text-center"
             <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-8 text-white"
-              <h2 className="text-3xl font-bold mb-4">Ready to Work With Us?</h2>";,"
-              <p className="text-xl mb-8 opacity-90">,";,"
+              <h2 className="text-3xl font-bold mb-4">Ready to Work With Us?</h2>"
+              <p className="text-xl mb-8 opacity-90">,"
   Let's discuss how our technology solutions can transform your business.';';
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center"
-                <a href="tel:+13024640950" ,";,"
+                <a href="tel:+13024640950" ,"
   className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center","
                 >
-                  <Phone className="w-5 h-5 inline mr-2" />,";,"
+                  <Phone className="w-5 h-5 inline mr-2" />,"
   Call +1 302 464 0950
                 </a>
-                <a href="mailto:kleber@ziontechgroup.com" ,";,"
+                <a href="mailto:kleber@ziontechgroup.com" ,"
   className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors text-center","
                 >
-                  <Mail className="w-5 h-5 inline mr-2" />,";,"
-=======
+                  <Mail className="w-5 h-5 inline mr-2" />,"
           <section className= "text-center">
             <div className= "bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-8 text-white">
-              <h2 className= "text-3xl font-bold mb-4">Ready to Work With Us?</h2>";,"
-              <p className= "text-xl mb-8 opacity-90">,";,"
+              <h2 className= "text-3xl font-bold mb-4">Ready to Work With Us?</h2>"
+              <p className= "text-xl mb-8 opacity-90">,"
   Let's discuss how our technology solutions can transform your business.';';
               </p>
               <div className= "flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="tel:+13024640950" ,";,"
+                <a href="tel:+13024640950" ,"
   className= "bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center","
                 >
-                  <Phone className= "w-5 h-5 inline mr-2" />,";,"
+                  <Phone className= "w-5 h-5 inline mr-2" />,"
   Call +1 302 464 0950
                 </a>
-                <a href="mailto:kleber@ziontechgroup.com" ,";,"
+                <a href="mailto:kleber@ziontechgroup.com" ,"
   className= "border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors text-center","
                 >
-                  <Mail className= "w-5 h-5 inline mr-2" />,";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
+                  <Mail className= "w-5 h-5 inline mr-2" />,"
   Email Us Today
                 </a>
               </div>

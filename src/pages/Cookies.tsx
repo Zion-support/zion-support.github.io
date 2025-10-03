@@ -1,6 +1,6 @@
 import React from 'react';
 ;
-const CookiesPage: React.FC: ()  => {,,,
+const CookiesPage: React.FC = () => {
   return (
 <<<<<<< HEAD
     <div className="min-h-screen bg-gray-50"

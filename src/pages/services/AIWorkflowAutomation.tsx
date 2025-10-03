@@ -1,5 +1,5 @@
-import React from 'react'';
-import { Helmet } from 'react-helmet-async'';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { TrendingUp } from 'lucide-react'';
 import Header from '../../components/Header'';
 import Footer from '../../components/Footer'';
@@ -9,80 +9,90 @@ import { TrendingUp } from 'lucide-react';'
 import Header from '../../components/Header';'
 import Footer from '../../components/Footer';'
 
-const AIWorkflowAutomation: React.FC: ()  => {,,,
-  const features: [,,
+const AIWorkflowAutomation: React.FC = () => {
+  const features: [,
     {
-      icon: Brain,,,,
-      title: "Intelligent Process Discovery",",";,"
-      description: "AI automatically maps your existing workflows and identifies optimization opportunities.",",";,"
+      icon: Brain,,
+      title: "Intelligent Process Discovery",","
+      description: "AI automatically maps your existing workflows and identifies optimization opportunities.",","
       title: "Intelligent Process Discovery",","
       description: "AI automatically maps your existing workflows and identifies optimization opportunities.",","
       benefit: "Reduce manual mapping time by 90%","
     },
     {
-      icon: Zap,,,,
-      title: "Smart Automation Rules",",";,"
-      description: "Machine learning algorithms create and optimize automation rules based on your data patterns.",",";,"
+      icon: Zap,,
+      title: "Smart Automation Rules",","
+      description: "Machine learning algorithms create and optimize automation rules based on your data patterns.",","
       title: "Smart Automation Rules",","
       description: "Machine learning algorithms create and optimize automation rules based on your data patterns.",","
       benefit: "Increase automation accuracy by 95%","
     },
     {
-      icon: BarChart3,,,,
-      title: "Real-time Analytics",",";,"
-      description: "Monitor workflow performance with advanced analytics and predictive insights.",",";,"
+      icon: BarChart3,,
+      title: "Real-time Analytics",","
+      description: "Monitor workflow performance with advanced analytics and predictive insights.",","
       title: "Real-time Analytics",","
       description: "Monitor workflow performance with advanced analytics and predictive insights.",","
       benefit: "Improve decision-making speed by 80%","
     },
     {
-      icon: Shield,,,,
-      title: "Enterprise Security",",";,"
-      description: "Bank-grade security with end-to-end encryption and compliance certifications.",",";,"
+      icon: Shield,,
+      title: "Enterprise Security",","
+      description: "Bank-grade security with end-to-end encryption and compliance certifications.",","
       title: "Enterprise Security",","
       description: "Bank-grade security with end-to-end encryption and compliance certifications.",","
       benefit: "100% compliance with industry standards","
     },
     {
-      icon: Clock,,,,
-      title: "24/7 Operations",",";,"
-      description: "Automated workflows run continuously without human intervention.",",";,"
+      icon: Clock,,
+      title: "24/7 Operations",","
+      description: "Automated workflows run continuously without human intervention.",","
       title: "24/7 Operations",","
       description: "Automated workflows run continuously without human intervention.",","
       benefit: "Reduce operational costs by 75%","
     },
     {
-      icon: Users,,,,
-      title: "Collaborative Workflows",",";,"
-      description: "Enable seamless collaboration across teams with intelligent task routing.",",";,"
+      icon: Users,,
+      title: "Collaborative Workflows",","
+      description: "Enable seamless collaboration across teams with intelligent task routing.",","
       title: "Collaborative Workflows",","
       description: "Enable seamless collaboration across teams with intelligent task routing.",","
       benefit: "Boost team productivity by 60%","
-    }
-  ];
+    }],
+;
 
-  const pricing: [,,
+  const pricing: [,
     {
-      name: "Starter",";,"
-      price: "$2,500",";,"
-      period: "/month",";,"
-      description: "Perfect for small businesses getting started with automation",";,"
-      features: [,,,
+      name: "Starter","
+      price: "$2,500","
+      period: "/month","
+      description: "Perfect for small businesses getting started with automation","
+      features: [,,
+      name: "Starter
+      price: "$2,500
+      period: "/month
+      description: "Perfect for small businesses getting started with automation
+      features: [,,",
         "Up to 10 automated workflows",";"
         "5 user accounts",";"
         "Basic analytics dashboard",";"
         "Email support",";"
         "Standard integrations (5)",";"
-        "Monthly reporting"
-      ]
-      popular: false,,
+        "Monthly reporting"],
+
+      popular: false,
     },
     {
-      name: "Professional",";,"
-      price: "$7,500",";,"
-      period: "/month",";,"
-      description: "Ideal for growing businesses with complex workflows",";,"
-      features: [,,,
+      name: "Professional","
+      price: "$7,500","
+      period: "/month","
+      description: "Ideal for growing businesses with complex workflows","
+      features: [,,
+      name: "Professional
+      price: "$7,500
+      period: "/month
+      description: "Ideal for growing businesses with complex workflows
+      features: [,,",
         "Unlimited automated workflows",";"
         "25 user accounts",";"
         "Advanced analytics & AI insights",";"
@@ -90,16 +100,21 @@ const AIWorkflowAutomation: React.FC: ()  => {,,,
         "Advanced integrations (25)",";"
         "Real-time monitoring",";"
         "Custom workflow templates",";"
-        "API access"
-      ]
-      popular: true,,
+        "API access"],
+
+      popular: true,
     },
     {
-      name: "Enterprise",";,"
-      price: "$25,000",";,"
-      period: "/month",";,"
-      description: "Complete solution for large organizations",";,"
-      features: [,,,
+      name: "Enterprise","
+      price: "$25,000","
+      period: "/month","
+      description: "Complete solution for large organizations","
+      features: [,,
+      name: "Enterprise
+      price: "$25,000
+      period: "/month
+      description: "Complete solution for large organizations
+      features: [,,",
         "Unlimited everything",";"
         "Unlimited user accounts",";"
         "Enterprise-grade analytics",";"
@@ -108,29 +123,29 @@ const AIWorkflowAutomation: React.FC: ()  => {,,,
         "Advanced security features",";"
         "Custom development",";"
         "SLA guarantee",";"
-        "On-premise deployment option"
-      ]
-      popular: false,,,
+        "On-premise deployment option"],
+
+      popular: false,,
       name: "Starter",","
       price: "$2,500",","
       period: "/month",","
       description: "Perfect for small businesses getting started with automation",","
-      features: [,,,
+      features: [,,
         "Up to 10 automated workflows","
         "5 user accounts","
         "Basic analytics dashboard","
         "Email support","
         "Standard integrations (5)","
-        "Monthly reporting"
-      ]
-      popular: false,,
+        "Monthly reporting"],
+
+      popular: false,
     },
     {
       name: "Professional",","
       price: "$7,500",","
       period: "/month",","
       description: "Ideal for growing businesses with complex workflows",","
-      features: [,,,
+      features: [,,
         "Unlimited automated workflows","
         "25 user accounts","
         "Advanced analytics & AI insights","
@@ -138,16 +153,16 @@ const AIWorkflowAutomation: React.FC: ()  => {,,,
         "Advanced integrations (25)","
         "Real-time monitoring","
         "Custom workflow templates","
-        "API access"
-      ]
-      popular: true,,
+        "API access"],
+
+      popular: true,
     },
     {
       name: "Enterprise",","
       price: "$25,000",","
       period: "/month",","
       description: "Complete solution for large organizations",","
-      features: [,,,
+      features: [,,
         "Unlimited everything","
         "Unlimited user accounts","
         "Enterprise-grade analytics","
@@ -156,58 +171,61 @@ const AIWorkflowAutomation: React.FC: ()  => {,,,
         "Advanced security features","
         "Custom development","
         "SLA guarantee","
-        "On-premise deployment option"
-      ]
-      popular: false,,
+        "On-premise deployment option"],
+
+      popular: false,
     }
   ];
 
-  const testimonials: [,,
+  const testimonials: [,
     {
-      name: "Sarah Chen",",";,"
-      role: "CTO, TechFlow Solutions",",";,"
-      content: "Zion's AI Workflow Automation reduced our processing time by 85% and eliminated manual errors completely. ROI achieved in just 3 months.",",";,"
       name: "Sarah Chen",","
       role: "CTO, TechFlow Solutions",","
       content: "Zion's AI Workflow Automation reduced our processing time by 85% and eliminated manual errors completely. ROI achieved in just 3 months.",","
-      rating: 5,,,,
+      name: "Sarah Chen",","
+      role: "CTO, TechFlow Solutions",","
+      content: "Zion's AI Workflow Automation reduced our processing time by 85% and eliminated manual errors completely. ROI achieved in just 3 months.",","
+      rating: 5,,
       company: "TechFlow Solutions","
     },
     {
-      name: "Michael Rodriguez",",";,"
-      role: "Operations Director, Global Manufacturing Co.",",";,"
-      content: "The intelligent process discovery feature identified $2M in savings opportunities we never knew existed. Game-changing technology.",",";,"
       name: "Michael Rodriguez",","
       role: "Operations Director, Global Manufacturing Co.",","
       content: "The intelligent process discovery feature identified $2M in savings opportunities we never knew existed. Game-changing technology.",","
-      rating: 5,,,,
+      name: "Michael Rodriguez",","
+      role: "Operations Director, Global Manufacturing Co.",","
+      content: "The intelligent process discovery feature identified $2M in savings opportunities we never knew existed. Game-changing technology.",","
+      rating: 5,,
       company: "Global Manufacturing Co.","
     },
     {
-      name: "Dr. Lisa Wang",",";,"
-      role: "VP Operations, HealthTech Innovations",",";,"
-      content: "Implementation was seamless and the results exceeded our expectations. Our team productivity increased by 70% within the first quarter.",",";,"
       name: "Dr. Lisa Wang",","
       role: "VP Operations, HealthTech Innovations",","
       content: "Implementation was seamless and the results exceeded our expectations. Our team productivity increased by 70% within the first quarter.",","
-      rating: 5,,,,
+      name: "Dr. Lisa Wang",","
+      role: "VP Operations, HealthTech Innovations",","
+      content: "Implementation was seamless and the results exceeded our expectations. Our team productivity increased by 70% within the first quarter.",","
+      rating: 5,,
       company: "HealthTech Innovations","
     }
   ];
 
-  const caseStudies: [,,
+  const caseStudies: [,
     {
-      title: "Fortune 500 Manufacturing",";,"
-      challenge: "Manual workflow processes causing delays and errors",";,"
-      solution: "Implemented AI-driven automation for supply chain management",";,"
-      results: [,,,
+      title: "Fortune 500 Manufacturing","
+      challenge: "Manual workflow processes causing delays and errors","
+      solution: "Implemented AI-driven automation for supply chain management","
+      title: "Fortune 500 Manufacturing",
+      challenge: "Manual workflow processes causing delays and errors
+      solution: "Implemented AI-driven automation for supply chain management
+      results: [,,
         "85% reduction in processing time",";"
         "99.7% accuracy improvement",";"
         "$15M annual cost savings"
       title: "Fortune 500 Manufacturing",","
       challenge: "Manual workflow processes causing delays and errors",","
       solution: "Implemented AI-driven automation for supply chain management",","
-      results: [,,,
+      results: [,,
         "85% reduction in processing time","
         "99.7% accuracy improvement","
         "$15M annual cost savings","
@@ -215,17 +233,20 @@ const AIWorkflowAutomation: React.FC: ()  => {,,,
       ]
     },
     {
-      title: "Global Financial Services",";,"
-      challenge: "Complex compliance workflows requiring manual oversight",";,"
-      solution: "Deployed intelligent automation with real-time monitoring",";,"
-      results: [,,,
+      title: "Global Financial Services","
+      challenge: "Complex compliance workflows requiring manual oversight","
+      solution: "Deployed intelligent automation with real-time monitoring","
+      title: "Global Financial Services",
+      challenge: "Complex compliance workflows requiring manual oversight
+      solution: "Deployed intelligent automation with real-time monitoring
+      results: [,,
         "90% faster compliance reporting",";"
         "100% audit compliance rate",";"
         "$8M operational savings"
       title: "Global Financial Services",","
       challenge: "Complex compliance workflows requiring manual oversight",","
       solution: "Deployed intelligent automation with real-time monitoring",","
-      results: [,,,
+      results: [,,
         "90% faster compliance reporting","
         "100% audit compliance rate","
         "$8M operational savings","
@@ -233,17 +254,20 @@ const AIWorkflowAutomation: React.FC: ()  => {,,,
       ]
     },
     {
-      title: "Healthcare System",";,"
-      challenge: "Patient data processing bottlenecks",";,"
-      solution: "Automated patient intake and data processing workflows",";,"
-      results: [,,,
+      title: "Healthcare System","
+      challenge: "Patient data processing bottlenecks","
+      solution: "Automated patient intake and data processing workflows","
+      title: "Healthcare System",
+      challenge: "Patient data processing bottlenecks
+      solution: "Automated patient intake and data processing workflows
+      results: [,,
         "75% faster patient processing",";"
         "95% reduction in data entry errors",";"
         "40% improvement in patient satisfaction"
       title: "Healthcare System",","
       challenge: "Patient data processing bottlenecks",","
       solution: "Automated patient intake and data processing workflows",","
-      results: [,,,
+      results: [,,
         "75% faster patient processing","
         "95% reduction in data entry errors","
         "40% improvement in patient satisfaction","
@@ -256,26 +280,27 @@ const AIWorkflowAutomation: React.FC: ()  => {,,,
     <>
       <Helmet >
         <title >AI Workflow Automation - Zion Tech Group | Transform Your Business Processes</title>
-        <meta name: "description",";,"
-  content: "Revolutionary AI workflow automation that reduces costs by 75%, increases efficiency by 10x, and eliminates manual errors. Enterprise-grade security and 24/7 operations." /><meta name: "keywords" content ="AI workflow automation, business process automation, intelligent automation, workflow optimization, enterprise automation" /><link rel: "canonical" href="https://ziontechgroup.com/services/ai-workflow-automation/>",";,"
+        <meta name: "description","
+  content: "Revolutionary AI workflow automation that reduces costs by 75%, increases efficiency by 10x, and eliminates manual errors. Enterprise-grade security and 24/7 operations." /><meta name: "keywords" content ="AI workflow automation, business process automation, intelligent automation, workflow optimization, enterprise automation" /><link rel: "canonical" href="https://ziontechgroup.com/services/ai-workflow-automation/>","
+        <meta name: "description
+  content: "Revolutionary AI workflow automation that reduces costs by 75%, increases efficiency by 10x, and eliminates manual errors. Enterprise-grade security and 24/7 operations." /><meta name: "keywords" content="AI workflow automation, business process automation, intelligent automation, workflow optimization, enterprise automation" /><link rel: "canonical" href="https://ziontechgroup.com/services/ai-workflow-automation/>
   content: "Revolutionary AI workflow automation that reduces costs by 75%, increases efficiency by 10x, and eliminates manual errors. Enterprise-grade security and 24/7 operations.","
         />
-        <meta name: "keywords" content ="AI workflow automation, business process automation, intelligent automation, workflow optimization, enterprise automation" />","
+        <meta name: "keywords" content="AI workflow automation, business process automation, intelligent automation, workflow optimization, enterprise automation" />","
         <link rel: "canonical" href ="https: //ziontechgroup.com/services/ai-workflow-automation" />","
       </Helmet>
 
       <Header />
       
-<<<<<<< HEAD
       <main className="min-h-screen bg-white">","
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white py-20"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
             <div className="text-center"
-              <h1 className="text-5xl md: text-7xl font-bold mb-6">",";,"
-  AI Workflow <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Automation</span>";,"
+              <h1 className="text-5xl md: text-7xl font-bold mb-6">","
+  AI Workflow <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Automation</span>"
               </h1>
-              <p className="text-xl md: text-2xl text-blue-100 max-w-4xl mx-auto mb-8">",";,"
+              <p className="text-xl md: text-2xl text-blue-100 max-w-4xl mx-auto mb-8">","
   Transform your business processes with intelligent automation that reduces costs by 75%, 
                 increases efficiency by 10x, and eliminates manual errors.
               </p>
@@ -283,35 +308,37 @@ const AIWorkflowAutomation: React.FC: ()  => {,,,
         <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white py-20">","
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
             <div className="text-center">","
-              <h1 className="text-5xl md: text-7xl font-bold mb-6">",";,"
+              <h1 className="text-5xl md: text-7xl font-bold mb-6">","
   AI Workflow <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Automation</span>","
               </h1>
-              <p className="text-xl md: text-2xl text-blue-100 max-w-4xl mx-auto mb-8">",";,"
+              <p className="text-xl md: text-2xl text-blue-100 max-w-4xl mx-auto mb-8">","
   Transform your business processes with intelligent automation that reduces costs by 75%, 
                 increases efficiency by 10x, and eliminates manual errors.
               </p>
               <div className="flex flex-col sm: flex-row gap-4 justify-center">","
-                <a href="/contact",";,"
+                <a href="/contact","
   className="inline-flex items-center px-8 py-4 bg-blue-600 hover: bg-blue-700 text-white font-semibold rounded-lg transition-colors","
                 >
-                  <Phone className="w-5 h-5 mr-2/>";,"
-                  <Phone className="w-5 h-5 mr-2" />",";,"
+                  <Phone className="w-5 h-5 mr-2/>"
+                  <Phone className="w-5 h-5 mr-2" />","
+                  <Phone className="w-5 h-5 mr-2/>"
+                  <Phone className="w-5 h-5 mr-2" />
   Schedule Demo
                 </a>
-                <a href="#pricing",";,"
+                <a href="#pricing","
   className="inline-flex items-center px-8 py-4 border-2 border-white text-white hover: bg-white hover:text-blue-900 font-semibold rounded-lg transition-colors","
                 >
                   View Pricing
-                  <ArrowRight className="w-5 h-5 ml-2/>";,"
+                  <ArrowRight className="w-5 h-5 ml-2/>"
+                  <ArrowRight className="w-5 h-5 ml-2/>"
                   <ArrowRight className="w-5 h-5 ml-2" />","
-=======
       <main className= "min-h-screen bg-white">","
         {/* Hero Section */}
         <section className= "bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white py-20">
           <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
             <div className= "text-center">
               <h1 className= "text-5xl md: text-7xl font-bold mb-6">"
-  AI Workflow <span className= "bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Automation</span>";,"
+  AI Workflow <span className= "bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Automation</span>"
               </h1>
               <p className= "text-xl md: text-2xl text-blue-100 max-w-4xl mx-auto mb-8">"
   Transform your business processes with intelligent automation that reduces costs by 75%, 
@@ -329,20 +356,19 @@ const AIWorkflowAutomation: React.FC: ()  => {,,,
                 increases efficiency by 10x, and eliminates manual errors.
               </p>
               <div className= "flex flex-col sm: flex-row gap-4 justify-center">","
-                <a href="/contact",";,"
+                <a href="/contact","
   className= "inline-flex items-center px-8 py-4 bg-blue-600 hover: bg-blue-700 text-white font-semibold rounded-lg transition-colors","
                 >
-                  <Phone className= "w-5 h-5 mr-2/>";,"
-                  <Phone className= "w-5 h-5 mr-2" />",";,"
+                  <Phone className= "w-5 h-5 mr-2/>"
+                  <Phone className= "w-5 h-5 mr-2" />","
   Schedule Demo
                 </a>
-                <a href="#pricing",";,"
+                <a href="#pricing","
   className= "inline-flex items-center px-8 py-4 border-2 border-white text-white hover: bg-white hover:text-blue-900 font-semibold rounded-lg transition-colors","
                 >
                   View Pricing
-                  <ArrowRight className= "w-5 h-5 ml-2/>";,"
+                  <ArrowRight className= "w-5 h-5 ml-2/>"
                   <ArrowRight className= "w-5 h-5 ml-2" />","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                 </a>
               </div>
             </div>
@@ -350,7 +376,6 @@ const AIWorkflowAutomation: React.FC: ()  => {,,,
         </section>
 
         {/* Key Benefits */}
-<<<<<<< HEAD
         <section className="py-16 bg-gray-50"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
             <div className="text-center mb-12"
@@ -358,11 +383,10 @@ const AIWorkflowAutomation: React.FC: ()  => {,,,
         <section className="py-16 bg-gray-50">","
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
             <div className="text-center mb-12">","
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">",";,"
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">","
   Why Choose Our AI Workflow Automation?
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">",";,"
-=======
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">","
         <section className= "py-16 bg-gray-50">
           <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
             <div className= "text-center mb-12">
@@ -374,16 +398,17 @@ const AIWorkflowAutomation: React.FC: ()  => {,,,
   Why Choose Our AI Workflow Automation?
               </h2>
               <p className= "text-xl text-gray-600 max-w-3xl mx-auto">"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Our platform delivers measurable results through cutting-edge AI technology and proven methodologies.
               </p>
             </div>
 
-<<<<<<< HEAD
             <div className="grid md: grid-cols-3 gap-8">","
               <div className="text-center"
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4"
-                  <TrendingUp className="w-8 h-8 text-blue-600/>";,"
+                  <TrendingUp className="w-8 h-8 text-blue-600/>"
+              <div className="text-center">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">
+                  <TrendingUp className="w-8 h-8 text-blue-600/>"
             <div className="grid md: grid-cols-3 gap-8">","
               <div className="text-center">","
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">","
@@ -394,7 +419,10 @@ const AIWorkflowAutomation: React.FC: ()  => {,,,
               </div>
               <div className="text-center"
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4"
-                  <Zap className="w-8 h-8 text-green-600/>";,"
+                  <Zap className="w-8 h-8 text-green-600/>"
+              <div className="text-center">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">
+                  <Zap className="w-8 h-8 text-green-600/>"
               <div className="text-center">","
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">","
                   <Zap className="w-8 h-8 text-green-600" />","
@@ -404,18 +432,20 @@ const AIWorkflowAutomation: React.FC: ()  => {,,,
               </div>
               <div className="text-center"
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-4"
-                  <Shield className="w-8 h-8 text-purple-600/>";,"
+                  <Shield className="w-8 h-8 text-purple-600/>"
+              <div className="text-center">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-4">
+                  <Shield className="w-8 h-8 text-purple-600/>"
               <div className="text-center">","
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-4">","
                   <Shield className="w-8 h-8 text-purple-600" />","
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">99.9% Uptime</h3>","
                 <p className="text-gray-600">Enterprise-grade reliability with guaranteed SLA</p>","
-=======
             <div className= "grid md: grid-cols-3 gap-8">","
               <div className= "text-center">
                 <div className= "inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">
-                  <TrendingUp className= "w-8 h-8 text-blue-600/>";,"
+                  <TrendingUp className= "w-8 h-8 text-blue-600/>"
             <div className= "grid md: grid-cols-3 gap-8">","
               <div className= "text-center">","
                 <div className= "inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">","
@@ -426,7 +456,7 @@ const AIWorkflowAutomation: React.FC: ()  => {,,,
               </div>
               <div className= "text-center">
                 <div className= "inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">
-                  <Zap className= "w-8 h-8 text-green-600/>";,"
+                  <Zap className= "w-8 h-8 text-green-600/>"
               <div className= "text-center">","
                 <div className= "inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">","
                   <Zap className= "w-8 h-8 text-green-600" />","
@@ -436,21 +466,19 @@ const AIWorkflowAutomation: React.FC: ()  => {,,,
               </div>
               <div className= "text-center">
                 <div className= "inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-4">
-                  <Shield className= "w-8 h-8 text-purple-600/>";,"
+                  <Shield className= "w-8 h-8 text-purple-600/>"
               <div className= "text-center">","
                 <div className= "inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-4">","
                   <Shield className= "w-8 h-8 text-purple-600" />","
                 </div>
                 <h3 className= "text-2xl font-bold text-gray-900 mb-2">99.9% Uptime</h3>","
                 <p className= "text-gray-600">Enterprise-grade reliability with guaranteed SLA</p>","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
               </div>
             </div>
           </div>
         </section>
 
         {/* Features */}
-<<<<<<< HEAD
         <section className="py-20"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
             <div className="text-center mb-16"
@@ -458,11 +486,10 @@ const AIWorkflowAutomation: React.FC: ()  => {,,,
         <section className="py-20">","
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
             <div className="text-center mb-16">","
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">",";,"
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">","
   Powerful Features for Enterprise Success
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">",";,"
-=======
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">","
         <section className= "py-20">
           <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
             <div className= "text-center mb-16">
@@ -474,27 +501,33 @@ const AIWorkflowAutomation: React.FC: ()  => {,,,
   Powerful Features for Enterprise Success
               </h2>
               <p className= "text-xl text-gray-600 max-w-3xl mx-auto">"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Comprehensive AI-powered capabilities designed to transform your business operations.
               </p>
             </div>
 
-<<<<<<< HEAD
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">","
               {features.map((feature, index) => {
-                const Icon: feature.icon;,,,
+                const Icon: feature.icon;,,
   return (
                   <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">","
                     <div className="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-lg mb-4"
-                      <Icon className="w-6 h-6 text-blue-600/>";,"
+                      <Icon className="w-6 h-6 text-blue-600/>"
                     </div>
                     <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>";"
                     <p className="text-gray-600 mb-4">{feature.description}</p>";"
                     <div className="inline-flex items-center text-green-600 font-semibold text-sm"
-                      <CheckCircle className="w-4 h-4 mr-1/>";,"
+                      <CheckCircle className="w-4 h-4 mr-1/>"
+                  <div key: {index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">","
+                    <div className="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-lg mb-4">
+                      <Icon className="w-6 h-6 text-blue-600/>
+                    </div>"
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>";"
+                    <p className="text-gray-600 mb-4">{feature.description}</p>";"
+                    <div className="inline-flex items-center text-green-600 font-semibold text-sm">
+                      <CheckCircle className="w-4 h-4 mr-1/>"
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">","
               {features.map((feature, index) => {
-                const Icon: feature.icon;,,,
+                const Icon: feature.icon;,,
   return (
                   <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">","
                     <div className="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-lg mb-4">","
@@ -504,22 +537,21 @@ const AIWorkflowAutomation: React.FC: ()  => {,,,
                     <p className="text-gray-600 mb-4">{feature.description}</p>"
                     <div className="inline-flex items-center text-green-600 font-semibold text-sm">","
                       <CheckCircle className="w-4 h-4 mr-1" />","
-=======
             <div className= "grid md: grid-cols-2 lg:grid-cols-3 gap-8">","
               {features.map((feature, index) => {
-                const Icon: feature.icon;,,,
+                const Icon: feature.icon;,,
   return (
                   <div key={index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">","
                     <div className= "inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-lg mb-4">
-                      <Icon className= "w-6 h-6 text-blue-600/>";,"
+                      <Icon className= "w-6 h-6 text-blue-600/>"
                     </div>
                     <h3 className= "text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>";"
                     <p className= "text-gray-600 mb-4">{feature.description}</p>";"
                     <div className= "inline-flex items-center text-green-600 font-semibold text-sm">
-                      <CheckCircle className= "w-4 h-4 mr-1/>";,"
+                      <CheckCircle className= "w-4 h-4 mr-1/>"
             <div className= "grid md: grid-cols-2 lg:grid-cols-3 gap-8">","
               {features.map((feature, index) => {
-                const Icon: feature.icon;,,,
+                const Icon: feature.icon;,,
   return (
                   <div key={index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">","
                     <div className= "inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-lg mb-4">","
@@ -529,7 +561,6 @@ const AIWorkflowAutomation: React.FC: ()  => {,,,
                     <p className= "text-gray-600 mb-4">{feature.description}</p>"
                     <div className= "inline-flex items-center text-green-600 font-semibold text-sm">","
                       <CheckCircle className= "w-4 h-4 mr-1" />","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                       {feature.benefit}
                     </div>
                   </div>
@@ -540,7 +571,6 @@ const AIWorkflowAutomation: React.FC: ()  => {,,,
         </section>
 
         {/* Pricing */}
-<<<<<<< HEAD
         <section id="pricing" className="py-20 bg-gray-50"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
             <div className="text-center mb-16"
@@ -548,11 +578,10 @@ const AIWorkflowAutomation: React.FC: ()  => {,,,
         <section id="pricing" className ="py-20 bg-gray-50">","
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
             <div className="text-center mb-16">","
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">",";,"
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">","
   Transparent Pricing for Every Business Size
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">",";,"
-=======
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">","
         <section id="pricing" className="py-20 bg-gray-50">
           <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
             <div className= "text-center mb-16">
@@ -564,20 +593,17 @@ const AIWorkflowAutomation: React.FC: ()  => {,,,
   Transparent Pricing for Every Business Size
               </h2>
               <p className= "text-xl text-gray-600 max-w-3xl mx-auto">"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Choose the plan that fits your needs. All plans include our core AI automation features.
               </p>
             </div>
 
-<<<<<<< HEAD
             <div className="grid md: grid-cols-3 gap-8">","
             <div className="grid md: grid-cols-3 gap-8">","
               {pricing.map((plan, index) => (
-                <div key={index} className: {`bg-white rounded-2xl shadow-lg p-8 ${plan.popular ? 'ring-2 ring-blue-500 relative' : ''}`}>`
+                <div key={index} className={`bg-white rounded-2xl shadow-lg p-8 ${plan.popular ? 'ring-2 ring-blue-500 relative' : ''}`}>`
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">","
-                      <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold">",";,"
-=======
+                      <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold">","
             <div className= "grid md: grid-cols-3 gap-8">","
             <div className= "grid md: grid-cols-3 gap-8">","
               {pricing.map((plan, index) => (
@@ -585,12 +611,10 @@ const AIWorkflowAutomation: React.FC: ()  => {,,,
                   {plan.popular && (
                     <div className= "absolute -top-4 left-1/2 transform -translate-x-1/2">","
                       <span className= "bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold">"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Most Popular
                       </span>
                     </div>
                   )}
-<<<<<<< HEAD
                   <div className="text-center mb-8">","
                     <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>"
                     <div className="flex items-center justify-center mb-2">","
@@ -602,7 +626,9 @@ const AIWorkflowAutomation: React.FC: ()  => {,,,
                   <ul className="space-y-4 mb-8">","
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center"
-                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0/>";,"
+                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0/>"
+                      <li key: {featureIndex} className="flex items-center">
+                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0/>"
                         <span className="text-gray-700">{feature}</span>";"
                       <li key={featureIndex} className="flex items-center">","
                         <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />","
@@ -610,9 +636,8 @@ const AIWorkflowAutomation: React.FC: ()  => {,,,
                       </li>
                     ))}
                   </ul>
-                  <a href="/contact",";,"
-  className: {,,
-=======
+                  <a href="/contact","
+  className={,
                   <div className= "text-center mb-8">","
                     <h3 className= "text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>"
                     <div className= "flex items-center justify-center mb-2">","
@@ -624,7 +649,7 @@ const AIWorkflowAutomation: React.FC: ()  => {,,,
                   <ul className= "space-y-4 mb-8">","
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className= "flex items-center">
-                        <CheckCircle className= "w-5 h-5 text-green-500 mr-3 flex-shrink-0/>";,"
+                        <CheckCircle className= "w-5 h-5 text-green-500 mr-3 flex-shrink-0/>"
                         <span className= "text-gray-700">{feature}</span>";"
                       <li key={featureIndex} className= "flex items-center">","
                         <CheckCircle className= "w-5 h-5 text-green-500 mr-3 flex-shrink-0" />","
@@ -632,9 +657,8 @@ const AIWorkflowAutomation: React.FC: ()  => {,,,
                       </li>
                     ))}
                   </ul>
-                  <a href="/contact",";,"
-  className= {,,
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
+                  <a href="/contact","
+  className= {,
 `w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${`
 plan.popular
 ? 'bg-blue-600 text-white hover: bg-blue-700',';,
@@ -648,32 +672,29 @@ plan.popular
               ))}
             </div>
 
-<<<<<<< HEAD
             <div className="text-center mt-12">","
               <p className="text-gray-600 mb-4">Need a custom solution?</p>","
-              <a href="/contact",";,"
+              <a href="/contact","
   className="inline-flex items-center text-blue-600 hover: text-blue-700 font-semibold","
               >
                 Contact our Enterprise Team
-                <ArrowRight className="w-4 h-4 ml-1/>";,"
+                <ArrowRight className="w-4 h-4 ml-1/>"
+                <ArrowRight className="w-4 h-4 ml-1/>"
                 <ArrowRight className="w-4 h-4 ml-1" />","
-=======
             <div className= "text-center mt-12">","
               <p className= "text-gray-600 mb-4">Need a custom solution?</p>","
-              <a href="/contact",";,"
+              <a href="/contact","
   className= "inline-flex items-center text-blue-600 hover: text-blue-700 font-semibold","
               >
                 Contact our Enterprise Team
-                <ArrowRight className= "w-4 h-4 ml-1/>";,"
+                <ArrowRight className= "w-4 h-4 ml-1/>"
                 <ArrowRight className= "w-4 h-4 ml-1" />","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
               </a>
             </div>
           </div>
         </section>
 
         {/* Case Studies */}
-<<<<<<< HEAD
         <section className="py-20"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
             <div className="text-center mb-16"
@@ -681,11 +702,10 @@ plan.popular
         <section className="py-20">","
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
             <div className="text-center mb-16">","
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">",";,"
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">","
   Real-World Success Stories
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">",";,"
-=======
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">","
         <section className= "py-20">
           <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
             <div className= "text-center mb-16">
@@ -697,12 +717,10 @@ plan.popular
   Real-World Success Stories
               </h2>
               <p className= "text-xl text-gray-600 max-w-3xl mx-auto">"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   See how leading organizations have transformed their operations with our AI workflow automation.
               </p>
             </div>
 
-<<<<<<< HEAD
             <div className="grid lg: grid-cols-3 gap-8">","
               {caseStudies.map((study, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200"
@@ -720,7 +738,9 @@ plan.popular
                     <ul className="space-y-1"
                       {study.results.map((result, resultIndex) => (
                         <li key={resultIndex} className="flex items-center text-sm"
-                          <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0/>";,"
+                          <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0/>"
+                        <li key: {resultIndex} className="flex items-center text-sm">
+                          <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0/>"
                           <span className="text-gray-700">{result}</span>";"
             <div className="grid lg: grid-cols-3 gap-8">","
               {caseStudies.map((study, index) => (
@@ -741,7 +761,6 @@ plan.popular
                         <li key={resultIndex} className="flex items-center text-sm">","
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />","
                           <span className="text-gray-700">{result}</span>"
-=======
             <div className= "grid lg: grid-cols-3 gap-8">","
               {caseStudies.map((study, index) => (
                 <div key={index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200">
@@ -759,7 +778,7 @@ plan.popular
                     <ul className= "space-y-1">
                       {study.results.map((result, resultIndex) => (
                         <li key={resultIndex} className= "flex items-center text-sm">
-                          <CheckCircle className= "w-4 h-4 text-green-500 mr-2 flex-shrink-0/>";,"
+                          <CheckCircle className= "w-4 h-4 text-green-500 mr-2 flex-shrink-0/>"
                           <span className= "text-gray-700">{result}</span>";"
             <div className= "grid lg: grid-cols-3 gap-8">","
               {caseStudies.map((study, index) => (
@@ -780,7 +799,6 @@ plan.popular
                         <li key={resultIndex} className= "flex items-center text-sm">","
                           <CheckCircle className= "w-4 h-4 text-green-500 mr-2 flex-shrink-0" />","
                           <span className= "text-gray-700">{result}</span>"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                         </li>
                       ))}
                     </ul>
@@ -792,7 +810,6 @@ plan.popular
         </section>
 
         {/* Testimonials */}
-<<<<<<< HEAD
         <section className="py-20 bg-gray-50"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
             <div className="text-center mb-16"
@@ -800,11 +817,10 @@ plan.popular
         <section className="py-20 bg-gray-50">","
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
             <div className="text-center mb-16">","
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">",";,"
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">","
   What Our Clients Say
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">",";,"
-=======
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">","
         <section className= "py-20 bg-gray-50">
           <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
             <div className= "text-center mb-16">
@@ -816,20 +832,20 @@ plan.popular
   What Our Clients Say
               </h2>
               <p className= "text-xl text-gray-600 max-w-3xl mx-auto">"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Join hundreds of satisfied customers who have transformed their operations with our AI solutions.
               </p>
             </div>
 
-<<<<<<< HEAD
             <div className="grid md: grid-cols-3 gap-8">","
             <div className="grid md: grid-cols-3 gap-8">","
               {testimonials.map((testimonial, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200">","
                   <div className="flex items-center mb-4">","
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current/>";,"
+                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current/>"
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />","
+                      <Star key: {i} className="w-5 h-5 text-yellow-400 fill-current/>"
+                      <Star key: {i} className="w-5 h-5 text-yellow-400 fill-current" />","
                     ))}
                   </div>
                   <blockquote className="text-gray-700 mb-6 italic">","
@@ -839,14 +855,13 @@ plan.popular
                     <div className="font-semibold text-gray-900">{testimonial.name}</div>"
                     <div className="text-gray-600 text-sm">{testimonial.role}</div>"
                     <div className="text-blue-600 text-sm font-medium">{testimonial.company}</div>"
-=======
             <div className= "grid md: grid-cols-3 gap-8">","
             <div className= "grid md: grid-cols-3 gap-8">","
               {testimonials.map((testimonial, index) => (
                 <div key={index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200">","
                   <div className= "flex items-center mb-4">","
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className= "w-5 h-5 text-yellow-400 fill-current/>";,"
+                      <Star key={i} className= "w-5 h-5 text-yellow-400 fill-current/>"
                       <Star key={i} className= "w-5 h-5 text-yellow-400 fill-current" />","
                     ))}
                   </div>
@@ -857,7 +872,6 @@ plan.popular
                     <div className= "font-semibold text-gray-900">{testimonial.name}</div>"
                     <div className= "text-gray-600 text-sm">{testimonial.role}</div>"
                     <div className= "text-blue-600 text-sm font-medium">{testimonial.company}</div>"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                   </div>
                 </div>
               ))}
@@ -866,34 +880,35 @@ plan.popular
         </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
         <section className="py-20 bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">","
             <h2 className="text-4xl font-bold mb-6"
         <section className="py-20 bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white">","
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">","
-            <h2 className="text-4xl font-bold mb-6">",";,"
+            <h2 className="text-4xl font-bold mb-6">","
   Ready to Transform Your Business Operations?
             </h2>
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto mb-8">",";,"
+            <p className="text-xl text-blue-100 max-w-3xl mx-auto mb-8">","
   Join hundreds of companies already using our AI workflow automation to achieve unprecedented efficiency and cost savings.
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">","
             <div className="flex flex-col sm: flex-row gap-4 justify-center">","
-              <a href="/contact",";,"
+              <a href="/contact","
   className="inline-flex items-center px-8 py-4 bg-blue-600 hover: bg-blue-700 text-white font-semibold rounded-lg transition-colors","
               >
-                <Phone className="w-5 h-5 mr-2/>";,"
-                <Phone className="w-5 h-5 mr-2" />",";,"
+                <Phone className="w-5 h-5 mr-2/>"
+                <Phone className="w-5 h-5 mr-2" />","
+                <Phone className="w-5 h-5 mr-2/>"
+                <Phone className="w-5 h-5 mr-2" />
   Schedule Free Consultation
               </a>
-              <a href="/case-studies",";,"
+              <a href="/case-studies","
   className="inline-flex items-center px-8 py-4 border-2 border-white text-white hover: bg-white hover:text-blue-900 font-semibold rounded-lg transition-colors","
               >
                 View Case Studies
-                <ArrowRight className="w-5 h-5 ml-2/>";,"
+                <ArrowRight className="w-5 h-5 ml-2/>"
+                <ArrowRight className="w-5 h-5 ml-2/>"
                 <ArrowRight className="w-5 h-5 ml-2" />","
-=======
         <section className= "py-20 bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white">
           <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">","
             <h2 className= "text-4xl font-bold mb-6">
@@ -907,20 +922,19 @@ plan.popular
             </p>
             <div className= "flex flex-col sm: flex-row gap-4 justify-center">","
             <div className= "flex flex-col sm: flex-row gap-4 justify-center">","
-              <a href="/contact",";,"
+              <a href="/contact","
   className= "inline-flex items-center px-8 py-4 bg-blue-600 hover: bg-blue-700 text-white font-semibold rounded-lg transition-colors","
               >
-                <Phone className= "w-5 h-5 mr-2/>";,"
-                <Phone className= "w-5 h-5 mr-2" />",";,"
+                <Phone className= "w-5 h-5 mr-2/>"
+                <Phone className= "w-5 h-5 mr-2" />","
   Schedule Free Consultation
               </a>
-              <a href="/case-studies",";,"
+              <a href="/case-studies","
   className= "inline-flex items-center px-8 py-4 border-2 border-white text-white hover: bg-white hover:text-blue-900 font-semibold rounded-lg transition-colors","
               >
                 View Case Studies
-                <ArrowRight className= "w-5 h-5 ml-2/>";,"
+                <ArrowRight className= "w-5 h-5 ml-2/>"
                 <ArrowRight className= "w-5 h-5 ml-2" />","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
               </a>
             </div>
           </div>

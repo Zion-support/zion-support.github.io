@@ -1,6 +1,6 @@
 import React from "react"
 ;
-const News: React.FC: ()  => {,,,
+const News: React.FC = () => {
   return (
 <<<<<<< HEAD
         <section className="min-h-[40vh]"

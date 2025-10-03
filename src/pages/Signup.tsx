@@ -1,6 +1,6 @@
 import React from "react"
 ;
-const Signup: React.FC: ()  => {,,,
+const Signup: React.FC = () => {
   return (
 <<<<<<< HEAD
         <section className="min-h-[40vh] max-w-md"
