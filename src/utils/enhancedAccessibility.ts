@@ -1,4 +1,4 @@
-interface AccessibilityConfig {/* content */}
+interface AccessibilityConfig {
   enableAnnouncements: boolean;
   enableFormLabels: boolean;
   enableSkipLinks: boolean;
@@ -12,17 +12,17 @@ interface AccessibilityConfig {/* content */}
   enableTouchAccessibility: boolean;
 }
 
-interface AccessibilityMetrics {/* content */}
+interface AccessibilityMetrics {
   score: number;
   issues: string[];
   recommendations: string[];
 }
 
-export class EnhancedAccessibility {/* content */}
+export class EnhancedAccessibility {
   private config: AccessibilityConfig;
 
-  constructor(config: Partial<AccessibilityConfig> = {}) {/* content */}
-    this.config = {/* content */}
+  constructor(config: Partial<AccessibilityConfig> = {}) {
+    this.config = {
       enableAnnouncements: true,
       enableFormLabels: true,
       enableSkipLinks: true,
@@ -38,281 +38,222 @@ export class EnhancedAccessibility {/* content */}
     };
   }
 
-  public init(): void {/* content */}
+  public init(): void {
     if (typeof window === 'undefined') return;
 
     // Initialize all accessibility features
-    if (this.config.enableAnnouncements) {/* content */}
+    if (this.config.enableAnnouncements) {
       this.createAnnouncementRegion();
     }
 
-    if (this.config.enableFormLabels) {/* content */}
+    if (this.config.enableFormLabels) {
       this.enhanceFormLabels();
     }
 
-    if (this.config.enableSkipLinks) {/* content */}
+    if (this.config.enableSkipLinks) {
       this.addSkipLinks();
     }
 
-    if (this.config.enableHighContrast) {/* content */}
+    if (this.config.enableHighContrast) {
       this.setupHighContrast();
     }
 
-    if (this.config.enableFocusManagement) {/* content */}
+    if (this.config.enableFocusManagement) {
       this.setupFocusManagement();
     }
 
-    if (this.config.enableARIALabels) {/* content */}
+    if (this.config.enableARIALabels) {
       this.setupARIALabels();
     }
 
-    if (this.config.enableColorContrast) {/* content */}
+    if (this.config.enableColorContrast) {
       this.setupColorContrast();
     }
 
-    if (this.config.enableTextScaling) {/* content */}
+    if (this.config.enableTextScaling) {
       this.setupTextScaling();
     }
 
-    if (this.config.enableMotionReduction) {/* content */}
+    if (this.config.enableMotionReduction) {
       this.setupMotionReduction();
     }
 
-    if (this.config.enableVoiceControl) {/* content */}
+    if (this.config.enableVoiceControl) {
       this.setupVoiceControl();
     }
 
-    if (this.config.enableTouchAccessibility) {/* content */}
+    if (this.config.enableTouchAccessibility) {
       this.setupTouchAccessibility();
     }
   }
 
-  private createAnnouncementRegion(): void {/* content */}
-    const announcement = document.createElement('div');
-    announcement.setAttribute('aria-live', 'polite');
-    announcement.setAttribute('aria-atomic', 'true');
-    announcement.className = 'sr-only';
-    announcement.id = 'announcements';
-    document.body.appendChild(announcement);
+  private createAnnouncementRegion(): void {
+    const announcementRegion = document.createElement('div');
+    announcementRegion.setAttribute('aria-live', 'polite');
+    announcementRegion.setAttribute('aria-atomic', 'true');
+    announcementRegion.className = 'sr-only';
+    announcementRegion.id = 'announcement-region';
+    document.body.appendChild(announcementRegion);
   }
 
-  private enhanceFormLabels(): void {/* content */}
-    const inputs = document.querySelectorAll('input, textarea, select');
-    inputs.forEach((input) => {/* content */}
-      const label = input.closest('label');
-      if (label) {/* content */}
-        input.setAttribute('aria-labelledby', label.id || `label-${input.id}`);
-      }
+  private enhanceFormLabels(): void {
+    const forms = document.querySelectorAll('form');
+    forms.forEach(form => {
+      const inputs = form.querySelectorAll('input, textarea, select');
+      inputs.forEach(input => {
+        if (!input.getAttribute('aria-label') && !input.getAttribute('aria-labelledby')) {
+          const label = form.querySelector(`label[for="${input.id}"]`);
+          if (label) {
+            input.setAttribute('aria-labelledby', label.id || `label-${input.id}`);
+          }
+        }
+      });
     });
   }
 
-  private addSkipLinks(): void {/* content */}
-    const skipLinks = document.createElement('div');
-    skipLinks.innerHTML = `
-      <a href="#main-content" class="skip-link">Skip to main content</a>
-      <a href="#navigation" class="skip-link">Skip to navigation</a>
+  private addSkipLinks(): void {
+    const skipLink = document.createElement('a');
+    skipLink.href = '#main-content';
+    skipLink.textContent = 'Skip to main content';
+    skipLink.className = 'skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
+    document.body.insertBefore(skipLink, document.body.firstChild);
+  }
+
+  private setupHighContrast(): void {
+    const style = document.createElement('style');
+    style.textContent = `
+      @media (prefers-contrast: high) {
+        * {
+          background-color: white !important;
+          color: black !important;
+        }
+      }
     `;
-    document.body.insertBefore(skipLinks, document.body.firstChild);
+    document.head.appendChild(style);
   }
 
-  private setupHighContrast(): void {/* content */}
-    // Listen for changes in contrast preference
-    window.matchMedia('(prefers-contrast: high)').addEventListener('change', (e) => {/* content */}
-      if (e.matches) {/* content */}
-        document.body.classList.add('high-contrast');
-      } else {/* content */}
-        document.body.classList.remove('high-contrast');
-      }
-    });
-  }
-
-  private setupFocusManagement(): void {/* content */}
-    if (!this.config.enableFocusManagement) return;
-
-    // Add focus indicators
-    document.addEventListener('keydown', (e) => {/* content */}
-      if (e.key === 'Tab') {/* content */}
+  private setupFocusManagement(): void {
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Tab') {
         document.body.classList.add('keyboard-navigation');
       }
     });
 
-    document.addEventListener('mousedown', () => {/* content */}
+    document.addEventListener('mousedown', () => {
       document.body.classList.remove('keyboard-navigation');
     });
   }
 
-  private setupARIALabels(): void {/* content */}
-    if (!this.config.enableARIALabels) return;
-
-    // Add ARIA labels to interactive elements
-    const buttons = document.querySelectorAll('button:not([aria-label])');
-    buttons.forEach((button) => {/* content */}
-      if (!button.textContent?.trim()) {/* content */}
+  private setupARIALabels(): void {
+    const buttons = document.querySelectorAll('button');
+    buttons.forEach(button => {
+      if (!button.getAttribute('aria-label') && !button.textContent?.trim()) {
         button.setAttribute('aria-label', 'Button');
       }
     });
-
-    // Add ARIA labels to images
-    const images = document.querySelectorAll('img:not([alt])');
-    images.forEach((img) => {/* content */}
-      img.setAttribute('alt', 'Image');
-    });
   }
 
-  private setupColorContrast(): void {/* content */}
-    if (!this.config.enableColorContrast) return;
-
-    // Check color contrast
-    this.checkColorContrast();
-  }
-
-  private setupTextScaling(): void {/* content */}
-    if (!this.config.enableTextScaling) return;
-
-    // Initialize text scaling
-    document.body.style.fontSize = '100%';
-
-    // Listen for text size changes
-    const observer = new ResizeObserver(() => {/* content */}
-      this.updateTextScaling();
-    });
-
-    observer.observe(document.body);
-  }
-
-  private setupMotionReduction(): void {/* content */}
-    // Listen for motion preference
-    window.matchMedia('(prefers-reduced-motion: reduce)').addEventListener('change', (e) => {/* content */}
-      if (e.matches) {/* content */}
-        document.body.classList.add('reduced-motion');
-      } else {/* content */}
-        document.body.classList.remove('reduced-motion');
+  private setupColorContrast(): void {
+    const style = document.createElement('style');
+    style.textContent = `
+      .contrast-check {
+        filter: contrast(1.2);
       }
-    });
+    `;
+    document.head.appendChild(style);
   }
 
-  private setupVoiceControl(): void {/* content */}
-    if (!this.config.enableVoiceControl) return;
-
-    // Basic voice control setup
-    document.addEventListener('keydown', (e) => {/* content */}
-      if (e.ctrlKey && e.key === 'v') {/* content */}
-        this.activateVoiceControl();
+  private setupTextScaling(): void {
+    const style = document.createElement('style');
+    style.textContent = `
+      @media (prefers-reduced-motion: no-preference) {
+        html {
+          font-size: clamp(16px, 1vw, 20px);
+        }
       }
-    });
+    `;
+    document.head.appendChild(style);
   }
 
-  private setupTouchAccessibility(): void {/* content */}
-    if (!this.config.enableTouchAccessibility) return;
-
-    // Ensure touch targets are at least 44px
-    const touchTargets = document.querySelectorAll('button, a, input, select, textarea');
-    touchTargets.forEach((target) => {/* content */}
-      const element = target as HTMLElement;
-      if (element.offsetHeight < 44 || element.offsetWidth < 44) {/* content */}
-        element.style.minHeight = '44px';
-        element.style.minWidth = '44px';
+  private setupMotionReduction(): void {
+    const style = document.createElement('style');
+    style.textContent = `
+      @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+        }
       }
-    });
+    `;
+    document.head.appendChild(style);
   }
 
-  private getFocusableElements(): HTMLElement[] {/* content */}
-    const focusableSelectors = [
-      'button:not([disabled])',
-      'input:not([disabled])',
-      'select:not([disabled])',
-      'textarea:not([disabled])',
-      'a[href]',
-      '[tabindex]:not([tabindex="-1"])',
-    ].join(', ');
-
-    return Array.from(document.querySelectorAll(focusableSelectors)) as HTMLElement[];
+  private setupVoiceControl(): void {
+    // Voice control setup would go here
+    console.log('Voice control setup initialized');
   }
 
-  private checkColorContrast(): void {/* content */}
-    // Basic color contrast check
-    console.log('Checking color contrast...');
-    // Implementation would go here
+  private setupTouchAccessibility(): void {
+    const style = document.createElement('style');
+    style.textContent = `
+      @media (hover: none) and (pointer: coarse) {
+        button, a, input, select, textarea {
+          min-height: 44px;
+          min-width: 44px;
+        }
+      }
+    `;
+    document.head.appendChild(style);
   }
 
-  private updateTextScaling(): void {/* content */}
-    // Update text scaling based on user preferences
-    const fontSize = window.getComputedStyle(document.body).fontSize;
-    console.log('Text scaling updated:', fontSize);
+  public announce(message: string): void {
+    const announcementRegion = document.getElementById('announcement-region');
+    if (announcementRegion) {
+      announcementRegion.textContent = message;
+    }
   }
 
-  private activateVoiceControl(): void {/* content */}
-    console.log('Voice control activated');
-    // Voice control implementation would go here
-  }
-
-  public analyzeAccessibility(): AccessibilityMetrics {/* content */}
+  public audit(): AccessibilityMetrics {
     const issues: string[] = [];
     const recommendations: string[] = [];
 
     // Check for missing alt text
-    const imagesWithoutAlt = document.querySelectorAll('img:not([alt])');
-    if (imagesWithoutAlt.length > 0) {/* content */}
-      issues.push(`${imagesWithoutAlt.length} images missing alt text`);
-      recommendations.push('Add descriptive alt text to all images');
-    }
+    const images = document.querySelectorAll('img');
+    images.forEach(img => {
+      if (!img.alt) {
+        issues.push(`Image missing alt text: ${img.src}`);
+        recommendations.push('Add descriptive alt text to all images');
+      }
+    });
 
     // Check for missing form labels
-    const inputsWithoutLabels = document.querySelectorAll('input:not([aria-label]):not([aria-labelledby])');
-    if (inputsWithoutLabels.length > 0) {/* content */}
-      issues.push(`${inputsWithoutLabels.length} form inputs missing labels`);
-      recommendations.push('Add labels or aria-label to all form inputs');
-    }
+    const inputs = document.querySelectorAll('input, textarea, select');
+    inputs.forEach(input => {
+      if (!input.getAttribute('aria-label') && !input.getAttribute('aria-labelledby')) {
+        const label = document.querySelector(`label[for="${input.id}"]`);
+        if (!label) {
+          const inputType = (input as HTMLInputElement).type || 'input';
+          issues.push(`Form input missing label: ${inputType}`);
+          recommendations.push('Add labels to all form inputs');
+        }
+      }
+    });
 
-    // Check for missing heading structure
+    // Check for missing headings
     const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
-    if (headings.length === 0) {/* content */}
-      issues.push('No headings found');
+    if (headings.length === 0) {
+      issues.push('No headings found on page');
       recommendations.push('Add proper heading structure');
     }
 
-    // Calculate overall score
-    const score = this.calculateOverallScore(issues);
+    const score = Math.max(0, 100 - (issues.length * 10));
 
-    return {/* content */}
+    return {
       score,
       issues,
-      recommendations,
+      recommendations
     };
-  }
-
-  private calculateOverallScore(issues: string[]): number {/* content */}
-    const baseScore = 100;
-    const penaltyPerIssue = 10;
-    const penalty = issues.length * penaltyPerIssue;
-    return Math.max(0, baseScore - penalty);
-  }
-
-  public announce(message: string): void {/* content */}
-    const announcement = document.getElementById('announcements');
-    if (announcement) {/* content */}
-      announcement.textContent = message;
-    }
-  }
-
-  public getMetrics(): AccessibilityMetrics {/* content */}
-    return this.analyzeAccessibility();
-  }
-
-  public getReport(): string {/* content */}
-    const metrics = this.getMetrics();
-    return `
-Accessibility Report:
-Score: ${metrics.score}/100
-Issues: ${metrics.issues.length}
-Recommendations: ${metrics.recommendations.length}
-
-Issues:
-${metrics.issues.map(issue => `- ${issue}`).join('\n')}
-
-Recommendations:
-${metrics.recommendations.map(rec => `- ${rec}`).join('\n')}
-    `.trim();
   }
 }
 
