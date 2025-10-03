@@ -21,8 +21,10 @@ export class ErrorBoundary extends Component<Props, State> {
     return { hasError: true, error };
   }
 
-  componentDidCatch(error: Error, _errorInfo: ErrorInfo) {
-    // Log error to monitoring service instead of console
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+    
+    // Send error to monitoring service
     if (typeof gtag !== 'undefined') {
       gtag('event', 'exception', {
         description: error.message,
