@@ -1,18 +1,34 @@
 
-export const performanceConfig = {
-  monitoring: {
-    enabled: true,
-    sampleRate: 0.1
+// Advanced Performance Optimizations
+export const advancedPerformanceConfig = {
+  // Service Worker for caching
+  enableServiceWorker: true,
+  
+  // Prefetching strategy
+  prefetchStrategy: {
+    critical: ['/home', '/services', '/about'],
+    optional: ['/blog', '/contact', '/pricing']
   },
-  optimization: {
-    lazyLoading: true,
-    imageOptimization: true,
-    bundleSplitting: true
+  
+  // Resource hints
+  resourceHints: {
+    preload: ['/fonts/main.woff2', '/images/hero.webp'],
+    prefetch: ['/api/services', '/api/testimonials'],
+    preconnect: ['https://fonts.googleapis.com', 'https://analytics.google.com']
   },
-  metrics: {
-    targetLoadTime: 2000,
-    targetFCP: 1500,
-    targetLCP: 2500,
-    targetCLS: 0.1
+  
+  // Bundle splitting
+  bundleSplitting: {
+    vendor: ['react', 'react-dom'],
+    ui: ['@headlessui/react', '@heroicons/react'],
+    utils: ['lodash', 'date-fns'],
+    charts: ['recharts', 'd3']
+  },
+  
+  // Compression
+  compression: {
+    gzip: true,
+    brotli: true,
+    minify: true
   }
 };

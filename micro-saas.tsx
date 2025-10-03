@@ -1,6 +1,6 @@
 // import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Code, CheckCircle, ArrowRight, DollarSign, Clock, Star, Smartphone } from 'lucide-react';
+import { Code, CheckCircle, ArrowRight, Smartphone } from 'lucide-react';
 
 export default function MicroSaaS() {
   const title = 'Micro SaaS Services — Zion Tech Group';

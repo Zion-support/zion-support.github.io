@@ -1,6 +1,6 @@
 import React from "react";
 ;
-export default function ITServices(): React.JSX.Element React.JSX.Element React.JSX.Element React.JSX.Element {
+export default function ITServices(): React.JSX.Element {
   const itServices: [,
     {
       id="cloud-migration-expert",
@@ -258,58 +258,58 @@ export default function ITServices(): React.JSX.Element React.JSX.Element React.
         <link rel="canonical", href ="https://ziontechgroup.com/it-services" />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
+      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
         {/* Hero Section */}
-        <section className="container mx-auto px-6 py-16">
-          <div className="text-center mb-16">
-            <div className="flex items-center justify-center mb-4">
-              <Server className="h-8 w-8 text-cyan-400 mr-3" />
-              <span className="text-lg font-semibold text-cyan-400">Enterprise IT Solutions</h3>
+        <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <Server className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Enterprise IT Solutions</h3>
             </div>
-            <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">,
+            <h1 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   Transform Your IT Infrastructure
             </h1>
-            <p className="text-xl text-blue-100 mb-8 max-w-4xl mx-auto">,
+            <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   Modernize your IT infrastructure with our comprehensive suite of enterprise-grade services. 
               From cloud migration to cybersecurity, we deliver scalable solutions that drive business growth.
             </p>
-            <div className="flex items-center justify-center gap-6 text-sm text-blue-200">
-              <div className="flex items-center">
-                <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <CheckCircle className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 <span >Enterprise-Grade</span>
               </div>
-              <div className="flex items-center">
-                <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <CheckCircle className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 <span >24/7 Support</span>
               </div>
-              <div className="flex items-center">
-                <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <CheckCircle className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
         {/* Hero Section */}
-        <section className="container mx-auto px-6 py-16">
-          <div className="text-center mb-16">
-            <div className="flex items-center justify-center mb-4">
-              <Server className="h-8 w-8 text-cyan-400 mr-3" />
-              <span className="text-lg font-semibold text-cyan-400">Enterprise IT Solutions</h3>
+        <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <Server className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Enterprise IT Solutions</h3>
             </div>
-            <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">,
+            <h1 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   Transform Your IT Infrastructure
             </h1>
-            <p className="text-xl text-blue-100 mb-8 max-w-4xl mx-auto">,
+            <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   Modernize your IT infrastructure with our comprehensive suite of enterprise-grade services. 
               From cloud migration to cybersecurity, we deliver scalable solutions that drive business growth.
             </p>
-            <div className="flex items-center justify-center gap-6 text-sm text-blue-200">
-              <div className="flex items-center">
-                <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <CheckCircle className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 <span >Enterprise-Grade</span>
               </div>
-              <div className="flex items-center">
-                <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <CheckCircle className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 <span >24/7 Support</span>
               </div>
-              <div className="flex items-center">
-                <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <CheckCircle className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 <span >Proven Results</span>
               </div>
             </div>
@@ -317,72 +317,64 @@ export default function ITServices(): React.JSX.Element React.JSX.Element React.
         </section>
 
         {/* Main Services Grid */}
-        <section className="container mx-auto px-6 py-12">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
             {itServices.map((service)  => {
               const Icon: service.icon;,,
   return (
-                <div key={service.id} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300
-                  <div className="flex items-start gap-4 mb-6">
-                    <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center flex-shrink-0">
-                      <Icon className="w-8 h-8 text-white" />
+                <div key={service.id} className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                      <Icon className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                     </div>
-                    <div className="flex-1">
-                      <div className="flex items-center gap-2 mb-2">
-                        <span className="text-xs font-semibold text-cyan-400 bg-cyan-400/20 px-2 py-1 rounded-full
-                          {service.category}
-                        </span>
-                        <span className="text-xs text-slate-400">•</h3>
-                        <span className="text-xs text-slate-400">{service.marketSize}</span>";
+                    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                        <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">•</h3>
+                        <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">{service.marketSize}</span>";
                       </div>
-                      <h3 className="text-xl font-semibold text-white mb-2">{service.name}</h3>";
-                      <p className="text-slate-300 mb-4">{service.blurb}</p>";
+                      <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">{service.name}</h3>";
+                      <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">{service.blurb}</p>";
                     </div>
                   </div>
 
-                  <div className="space-y-4 mb-6">
+                  <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                     <div >
-                      <h4 className="text-sm font-semibold text-cyan-400 mb-2">Comprehensive Features:</h3>
-                      <ul className="space-y-1
-                        {service.features.slice(0, 4).map((feature, idx) => (
-                          <li key={idx} className="flex items-center text-sm text-slate-300
-                            <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
-        <section className="container mx-auto px-6 py-12">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                      <h4 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Comprehensive Features:</h3>
+                      <ul className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+        <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
             {itServices.map((service)  => {
               const Icon: service.icon;,,
   return (
-                <div key={service.id} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300">
-                  <div className="flex items-start gap-4 mb-6">
-                    <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center flex-shrink-0">
-                      <Icon className="w-8 h-8 text-white" />
+                <div key={service.id} className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                  <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                      <Icon className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                     </div>
-                    <div className="flex-1">
-                      <div className="flex items-center gap-2 mb-2">
-                        <span className="text-xs font-semibold text-cyan-400 bg-cyan-400/20 px-2 py-1 rounded-full">
+                    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                        <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                           {service.category}
                         </span>
-                        <span className="text-xs text-slate-400">•</h3>
-                        <span className="text-xs text-slate-400">{service.marketSize}</span>";
+                        <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">•</h3>
+                        <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">{service.marketSize}</span>";
                       </div>
-                      <h3 className="text-xl font-semibold text-white mb-2">{service.name}</h3>";
-                      <p className="text-slate-300 mb-4">{service.blurb}</p>";
+                      <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">{service.name}</h3>";
+                      <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">{service.blurb}</p>";
                     </div>
                   </div>
 
-                  <div className="space-y-4 mb-6">
+                  <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                     <div >
-                      <h4 className="text-sm font-semibold text-cyan-400 mb-2">Comprehensive Features:</h3>
-                      <ul className="space-y-1">
+                      <h4 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Comprehensive Features:</h3>
+                      <ul className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                         {service.features.slice(0, 4).map((feature, idx) => (
-                          <li key={idx} className="flex items-center text-sm text-slate-300">
-                            <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                          <li key={idx} className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                            <CheckCircle className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                             <span >{feature}</span>
                           </li>
                         ))}
                         {service.features.length > 4 && (
-                          <li className="text-xs text-slate-400 ml-5
-                          <li className="text-xs text-slate-400 ml-5">
+                          <li className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                             +{service.features.length - 4} more features
                           </li>
                         )}
@@ -390,16 +382,13 @@ export default function ITServices(): React.JSX.Element React.JSX.Element React.
                     </div>
 
                     <div >
-                      <h4 className="text-sm font-semibold text-fuchsia-400 mb-2">Measurable Benefits:</h3>
-                      <ul className="space-y-1
+                      <h4 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Measurable Benefits:</h3>
+                      <ul className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                      <h4 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Measurable Benefits:</h3>
+                      <ul className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                         {service.benefits.map((benefit, idx) => (
-                          <li key={idx} className="flex items-center text-sm text-slate-300
-                            <TrendingUp className="w-3 h-3 text-fuchsia-400 mr-2 flex-shrink-0" />
-                      <h4 className="text-sm font-semibold text-fuchsia-400 mb-2">Measurable Benefits:</h3>
-                      <ul className="space-y-1">
-                        {service.benefits.map((benefit, idx) => (
-                          <li key={idx} className="flex items-center text-sm text-slate-300">
-                            <TrendingUp className="w-3 h-3 text-fuchsia-400 mr-2 flex-shrink-0" />
+                          <li key={idx} className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                            <TrendingUp className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                             <span >{benefit}</span>
                           </li>
                         ))}
@@ -407,40 +396,37 @@ export default function ITServices(): React.JSX.Element React.JSX.Element React.
                     </div>
                   </div>
 
-                  <div className="flex items-center justify-between mb-6">
-                    <div className="text-left">
-                      <div className="text-lg font-semibold text-cyan-400">{service.price}</div>";
-                      <div className="text-sm text-slate-400">{service.eta} implementation</div>";
+                  <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">{service.price}</div>";
+                      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">{service.eta} implementation</div>";
                     </div>
                     <a href={service.link}
-                      className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300",
-                    >
+                      className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                       Get Started
-                      <ArrowRight className="w-4 h-4" />
+                      <ArrowRight className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                     </a>
                   </div>
 
-                  <div className="pt-4 border-t border-slate-700/50">
-                    <div className="flex flex-wrap gap-2">
+                  <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                       {service.useCases.map((useCase, idx) => (
-                        <span key={idx} className="text-xs bg-slate-700/50 text-slate-300 px-2 py-1 rounded
-                  <div className="flex items-center justify-between mb-6">
-                    <div className="text-left">
-                      <div className="text-lg font-semibold text-cyan-400">{service.price}</div>";
-                      <div className="text-sm text-slate-400">{service.eta} implementation</div>";
+                        <span key={idx} className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">{service.price}</div>";
+                      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">{service.eta} implementation</div>";
                     </div>
                     <a href={service.link}
-                      className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300",
-                    >
+                      className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                       Get Started
-                      <ArrowRight className="w-4 h-4" />
+                      <ArrowRight className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                     </a>
                   </div>
 
-                  <div className="pt-4 border-t border-slate-700/50">
-                    <div className="flex flex-wrap gap-2">
+                  <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                       {service.useCases.map((useCase, idx) => (
-                        <span key={idx} className="text-xs bg-slate-700/50 text-slate-300 px-2 py-1 rounded">
+                        <span key={idx} className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                           {useCase}
                         </span>
                       ))}
@@ -453,44 +439,40 @@ export default function ITServices(): React.JSX.Element React.JSX.Element React.
         </section>
 
         {/* Industry Solutions */}
-        <section className="container mx-auto px-6 py-12">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white mb-4">Industry-Specific Solutions</h3>
-            <p className="text-blue-100 max-w-2xl mx-auto">,
-        <section className="container mx-auto px-6 py-12">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white mb-4">Industry-Specific Solutions</h3>
-            <p className="text-blue-100 max-w-2xl mx-auto">,
+        <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <h2 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Industry-Specific Solutions</h3>
+            <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
+        <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <h2 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Industry-Specific Solutions</h3>
+            <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   Tailored IT solutions designed for specific industry requirements and compliance needs
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
             {industrySolutions.map((solution, idx) => {
               const Icon: solution.icon;,,
   return (
-                <div key={idx} className="bg-slate-800/30 backdrop-blur-sm rounded-xl p-6 border border-slate-700/30 hover:border-cyan-500/30 transition-all duration-300
-                  <div className="{`w-12 h-12 bg-gradient-to-br ${solution.color} rounded-lg flex items-center justify-center mx-auto mb-4`}">`;`;
-                    <Icon className="w-6 h-6 text-white" />
+                <div key={idx} className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">`;`;
+                    <Icon className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                   </div>
-                  <h3 className="text-lg font-semibold text-white mb-3 text-center">{solution.industry}</h3>";
-                  <ul className="space-y-2
-                    {solution.solutions.map((item, sIdx) => (
-                      <li key={sIdx} className="flex items-center text-sm text-slate-300
-                        <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                  <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">{solution.industry}</h3>";
+                  <ul className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
             {industrySolutions.map((solution, idx) => {
               const Icon: solution.icon;,,
   return (
-                <div key={idx} className="bg-slate-800/30 backdrop-blur-sm rounded-xl p-6 border border-slate-700/30 hover:border-cyan-500/30 transition-all duration-300">
+                <div key={idx} className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                   <div className= {`w-12 h-12 bg-gradient-to-br ${solution.color} rounded-lg flex items-center justify-center mx-auto mb-4`}>`;`;
-                    <Icon className="w-6 h-6 text-white" />
+                    <Icon className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                   </div>
-                  <h3 className="text-lg font-semibold text-white mb-3 text-center">{solution.industry}</h3>";
-                  <ul className="space-y-2">
+                  <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">{solution.industry}</h3>";
+                  <ul className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                     {solution.solutions.map((item, sIdx) => (
-                      <li key={sIdx} className="flex items-center text-sm text-slate-300">
-                        <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                      <li key={sIdx} className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                        <CheckCircle className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                         <span >{item}</span>
                       </li>
                     ))}
@@ -502,142 +484,136 @@ export default function ITServices(): React.JSX.Element React.JSX.Element React.
         </section>
 
         {/* Additional Services */}
-        <section className="container mx-auto px-6 py-12">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white mb-4">Additional IT Services</h3>
-            <p className="text-blue-100 max-w-2xl mx-auto">,
-        <section className="container mx-auto px-6 py-12">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white mb-4">Additional IT Services</h3>
-            <p className="text-blue-100 max-w-2xl mx-auto">,
+        <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <h2 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Additional IT Services</h3>
+            <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
+        <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <h2 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Additional IT Services</h3>
+            <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   Comprehensive IT support services to keep your infrastructure running smoothly
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
             {additionalITServices.map((service, idx) => (
-              <div key={idx} className="bg-slate-800/30 backdrop-blur-sm rounded-xl p-6 border border-slate-700/30 hover:border-cyan-500/30 transition-all duration-300
-                <h3 className="text-lg font-semibold text-white mb-2">{service.name}</h3>";
-                <p className="text-sm text-slate-300 mb-4">{service.description}</p>";
-                <div className="space-y-2 mb-4">
+              <div key={idx} className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">{service.name}</h3>";
+                <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">{service.description}</p>";
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                   {service.features.map((feature, fIdx) => (
-                    <div key={fIdx} className="flex items-center text-xs text-slate-400
-                      <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div key={fIdx} className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
             {additionalITServices.map((service, idx) => (
-              <div key={idx} className="bg-slate-800/30 backdrop-blur-sm rounded-xl p-6 border border-slate-700/30 hover:border-cyan-500/30 transition-all duration-300">
-                <h3 className="text-lg font-semibold text-white mb-2">{service.name}</h3>";
-                <p className="text-sm text-slate-300 mb-4">{service.description}</p>";
-                <div className="space-y-2 mb-4">
+              <div key={idx} className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">{service.name}</h3>";
+                <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">{service.description}</p>";
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                   {service.features.map((feature, fIdx) => (
-                    <div key={fIdx} className="flex items-center text-xs text-slate-400">
-                      <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                    <div key={fIdx} className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                      <CheckCircle className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                       <span >{feature}</span>
                     </div>
                   ))}
                 </div>
-                <div className="text-cyan-400 font-semibold text-sm">{service.price}</div>";
-                <div className="text-cyan-400 font-semibold text-sm">{service.price}</div>";
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">{service.price}</div>";
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">{service.price}</div>";
               </div>
             ))}
           </div>
         </section>
 
         {/* Contact Section */}
-        <section className="container mx-auto px-6 py-16">
-          <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-2xl p-8 border border-cyan-500/20">
-            <div className="text-center mb-8">
-              <h2 className="text-3xl font-bold text-white mb-4">Ready to Modernize Your IT Infrastructure?</h3>
-              <p className="text-blue-100 max-w-2xl mx-auto">,
-        <section className="container mx-auto px-6 py-16">
-          <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-2xl p-8 border border-cyan-500/20">
-            <div className="text-center mb-8">
-              <h2 className="text-3xl font-bold text-white mb-4">Ready to Modernize Your IT Infrastructure?</h3>
-              <p className="text-blue-100 max-w-2xl mx-auto">,
+        <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <h2 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Ready to Modernize Your IT Infrastructure?</h3>
+              <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
+        <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <h2 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Ready to Modernize Your IT Infrastructure?</h3>
+              <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   Get a comprehensive IT assessment and custom solution proposal. Most projects start with a detailed infrastructure analysis.
               </p>
             </div>
             
-            <div className="grid md:grid-cols-3 gap-6 text-center">
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
               <div >
-                <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Clock className="w-6 h-6 text-cyan-400" />
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                  <Clock className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Rapid Deployment</h3>
-                <p className="text-sm text-slate-300">Implementation in 2-12 weeks with minimal disruption</h3>
+                <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Rapid Deployment</h3>
+                <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Implementation in 2-12 weeks with minimal disruption</h3>
               </div>
               <div >
-                <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <DollarSign className="w-6 h-6 text-blue-400" />
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                  <DollarSign className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Cost Optimization</h3>
-                <p className="text-sm text-slate-300">Average 40% reduction in IT operational costs</h3>
+                <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Cost Optimization</h3>
+                <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Average 40% reduction in IT operational costs</h3>
               </div>
               <div >
-                <div className="w-12 h-12 bg-fuchsia-500/20 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Star className="w-6 h-6 text-fuchsia-400" />
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                  <Star className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Expert Support</h3>
-                <p className="text-sm text-slate-300">24/7 support from certified IT professionals</h3>
+                <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Expert Support</h3>
+                <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">24/7 support from certified IT professionals</h3>
               </div>
             </div>
 
-            <div className="mt-8 text-center">
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 <a href="tel:+13024640950" ,
-  className="inline-flex items-center gap-2 bg-white text-slate-900 px-6 py-3 rounded-lg font-semibold hover:bg-slate-100 transition-colors",
-                >
-                  <Smartphone className="w-4 h-4" />
+  className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                  <Smartphone className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                   +1 302 464 0950
                 </a>
                 <a href="mailto:kleber@ziontechgroup.com" ,
-  className="inline-flex items-center gap-2 bg-slate-700 text-white px-6 py-3 rounded-lg font-semibold hover:bg-slate-600 transition-colors",
-                >
-                  <MessageSquare className="w-4 h-4" />,
+  className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                  <MessageSquare className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   kleber@ziontechgroup.com
                 </a>
               </div>
-              <p className="text-sm text-slate-400">,
-            <div className="grid md:grid-cols-3 gap-6 text-center">
+              <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
               <div >
-                <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Clock className="w-6 h-6 text-cyan-400" />
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                  <Clock className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Rapid Deployment</h3>
-                <p className="text-sm text-slate-300">Implementation in 2-12 weeks with minimal disruption</h3>
+                <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Rapid Deployment</h3>
+                <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Implementation in 2-12 weeks with minimal disruption</h3>
               </div>
               <div >
-                <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <DollarSign className="w-6 h-6 text-blue-400" />
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                  <DollarSign className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Cost Optimization</h3>
-                <p className="text-sm text-slate-300">Average 40% reduction in IT operational costs</h3>
+                <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Cost Optimization</h3>
+                <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Average 40% reduction in IT operational costs</h3>
               </div>
               <div >
-                <div className="w-12 h-12 bg-fuchsia-500/20 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Star className="w-6 h-6 text-fuchsia-400" />
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                  <Star className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Expert Support</h3>
-                <p className="text-sm text-slate-300">24/7 support from certified IT professionals</h3>
+                <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Expert Support</h3>
+                <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">24/7 support from certified IT professionals</h3>
               </div>
             </div>
 
-            <div className="mt-8 text-center">
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 <a href="tel:+13024640950" ,
-  className="inline-flex items-center gap-2 bg-white text-slate-900 px-6 py-3 rounded-lg font-semibold hover:bg-slate-100 transition-colors",
-                >
-                  <Smartphone className="w-4 h-4" />
+  className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                  <Smartphone className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                   +1 302 464 0950
                 </a>
                 <a href="mailto:kleber@ziontechgroup.com" ,
-  className="inline-flex items-center gap-2 bg-slate-700 text-white px-6 py-3 rounded-lg font-semibold hover:bg-slate-600 transition-colors",
-                >
-                  <MessageSquare className="w-4 h-4" />,
+  className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                  <MessageSquare className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   kleber@ziontechgroup.com
                 </a>
               </div>
-              <p className="text-sm text-slate-400">,
+              <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   364 E Main St STE 1008, Middletown DE 19709
               </p>
             </div>

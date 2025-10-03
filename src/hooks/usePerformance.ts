@@ -1,4 +1,6 @@
 
+import { useState, useEffect } from 'react';
+
 interface PerformanceMetrics {
   loadTime: number;
   domContentLoaded: number;

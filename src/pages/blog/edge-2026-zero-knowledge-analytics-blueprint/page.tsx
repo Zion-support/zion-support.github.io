@@ -1,9 +1,8 @@
 import React from "react";
 
-export default function EdgeZeroKnowledgeAnalyticsBlueprint2026(): React.JSX.Element React.JSX.Element React.JSX.Element React.JSX.Element {
+export default function EdgeZeroKnowledgeAnalyticsBlueprint2026(): React.JSX.Element {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white",
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white>
+    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
       <Helmet >
         <title >Edge 2026: Zero‑Knowledge Analytics Blueprint</title>,,
         <meta name="description",;,
@@ -12,29 +11,26 @@ export default function EdgeZeroKnowledgeAnalyticsBlueprint2026(): React.JSX.Ele
         />
       </Helmet>
 
-      <div className="container mx-auto px-6 py-16">
-        <h1 className="text-4xl md: text-5xl font-bold mb-4">Edge 2026: Zero‑Knowledge Analytics</h1>",
-        <p className="text-zion-slate-light mb-8">ZK proofs • Local aggregation • Signed consent windows</p>";,
-        <div className="prose prose-invert max-w-3xl">,";,
+      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+        <h1 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Edge 2026: Zero‑Knowledge Analytics</h1>",
+        <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">ZK proofs • Local aggregation • Signed consent windows</p>";,
+        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,";,
   href="https: //ziontechgroup.com/blog/edge-2026-zero-knowledge-analytics-blueprint",
         />
       </Helmet>
 
-      <div className="container mx-auto px-6 py-16",
-        <h1 className="text-4xl md: text-5xl font-bold mb-4">Edge 2026: Zero‑Knowledge Analytics</h1>",
-        <p className="text-zion-slate-light mb-8">ZK proofs • Local aggregation • Signed consent windows</p>",
-        <div className="prose prose-invert max-w-3xl",
-      <div className="container mx-auto px-6 py-16">
-        <h1 className="text-4xl md: text-5xl font-bold mb-4">Edge 2026: Zero‑Knowledge Analytics</h1>",
-        <p className="text-zion-slate-light mb-8">ZK proofs • Local aggregation • Signed consent windows</p>";,
-        <div className="prose prose-invert max-w-3xl">,";,
+      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Edge 2026: Zero‑Knowledge Analytics</h1>",
+        <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">ZK proofs • Local aggregation • Signed consent windows</p>",
+        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+        <h1 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Edge 2026: Zero‑Knowledge Analytics</h1>",
+        <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">ZK proofs • Local aggregation • Signed consent windows</p>";,
+        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,";,
   href="https: //ziontechgroup.com/blog/edge-2026-zero-knowledge-analytics-blueprint",
         />
       </Helmet>
 
-      <div className="container mx-auto px-6 py-16>
-        <h1 className="text-4xl md: text-5xl font-bold mb-4">Edge 2026: Zero‑Knowledge Analytics</h1>",
-        <p className="text-zion-slate-light mb-8">ZK proofs • Local aggregation • Signed consent windows</p>",
+      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Edge 2026: Zero‑Knowledge Analytics</h1>",
+        <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">ZK proofs • Local aggregation • Signed consent windows</p>",
         <div className="prose prose-invert max-w-3xl>
           <p >
             Measure engagement and outcomes without collecting PII. This blueprint combines scoped identifiers, on‑device

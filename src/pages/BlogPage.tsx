@@ -9,22 +9,22 @@ const BlogPage: React.FC = () => {
         <meta name="description" content="Stay updated with the latest trends, insights, and best practices in AI and technology." />
       </Helmet>
       
-      <div className="py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">Blog & Insights - Zion Tech Group</h3>
-          <p className="text-xl text-gray-600 mb-8">,
+      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <h1 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Blog & Insights - Zion Tech Group</h3>
+          <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   This page is currently under development. Please check back soon for updates.
           </p>
-          <div className="bg-white p-8 rounded-xl shadow-lg">
-            <p className="text-gray-600">,
-      <div className="py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">Blog & Insights - Zion Tech Group</h3>
-          <p className="text-xl text-gray-600 mb-8">,
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
+      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <h1 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Blog & Insights - Zion Tech Group</h3>
+          <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   This page is currently under development. Please check back soon for updates.
           </p>
-          <div className="bg-white p-8 rounded-xl shadow-lg">
-            <p className="text-gray-600">,
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   We're working hard to bring you the best content and features. Thank you for your patience.';';
             </p>
           </div>
