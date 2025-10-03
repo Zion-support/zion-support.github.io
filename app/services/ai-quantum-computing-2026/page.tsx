@@ -1,7 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Metadata } from 'next';
-=======
 import Head from 'next/head';
 import Link from 'next/link';
 import { 
@@ -41,7 +38,6 @@ import {
   ShoppingCart,
   CreditCard
 } from 'lucide-react';
->>>>>>> b0266c0c1be3ec9050e7ba803edc6a65b0904e57
 
 export const metadata: Metadata = {
   title: 'AI-Powered Quantum Computing Services 2026 | Zion Tech Group',
@@ -87,8 +83,6 @@ export default function AIQuantumComputingServices2026() {
                 <li>• Hybrid quantum-classical models</li>
               </ul>
             </div>
-<<<<<<< HEAD
-=======
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {quantumServices.map((service, index) => (
@@ -155,7 +149,6 @@ export default function AIQuantumComputingServices2026() {
             </div>
           </div>
         </section>
->>>>>>> b0266c0c1be3ec9050e7ba803edc6a65b0904e57
 
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-purple-500/30">
               <div className="text-4xl mb-4">🔬</div>

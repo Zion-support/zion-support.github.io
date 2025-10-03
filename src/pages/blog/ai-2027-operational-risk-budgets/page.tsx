@@ -2,11 +2,7 @@ import React from "react";
 
 export default function AIOperationalRiskBudgets2027(): React.JSX.Element {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">",
-=======
     <div className= "min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">",
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
       <Helmet >
         <title >AI 2027: Operational Risk Budgets — Ship Faster, Stay Safe</title>,,
         <meta name: "description",;,"
@@ -15,22 +11,6 @@ export default function AIOperationalRiskBudgets2027(): React.JSX.Element {
         />
       </Helmet>
 
-<<<<<<< HEAD
-      <div className="container mx-auto px-6 py-16"
-        <h1 className="text-4xl md: text-5xl font-bold mb-4">",;,"
-  href="https: //ziontechgroup.com/blog/ai-2027-operational-risk-budgets",
-        />
-      </Helmet>
-
-      <div className="container mx-auto px-6 py-16">",
-        <h1 className="text-4xl md: text-5xl font-bold mb-4">",;,"
-  AI 2027: Operational Risk Budgets — Ship Faster, Stay Safe,,
-        </h1>
-        <p className="text-zion-slate-light mb-8">",;,"
-  Budgets • KPI Canaries • Instant Rollback
-        </p>
-        <div className="prose prose-invert max-w-3xl">",
-=======
       <div className= "container mx-auto px-6 py-16">
         <h1 className= "text-4xl md: text-5xl font-bold mb-4">"
   href="https: //ziontechgroup.com/blog/ai-2027-operational-risk-budgets",
@@ -45,7 +25,6 @@ export default function AIOperationalRiskBudgets2027(): React.JSX.Element {
   Budgets • KPI Canaries • Instant Rollback
         </p>
         <div className= "prose prose-invert max-w-3xl">",
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
           <p >
             Move fast without breakage by introducing operational risk budgets: a,,,
   quantified allowance of acceptable risk wired to product KPIs. Route
