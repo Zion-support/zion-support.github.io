@@ -6,11 +6,11 @@ export const metadata = {
     'Zero‑trust architecture for agents: secret hygiene, tool isolation, least privilege, and audit trails.',
 };
 
-export default function Page() {
+export default function Page() 
   return (
-    <div>/* content */}
+    <div></div>
   return (
-    <div>
+    <div></div>
       <div></div>
     </div>
     <article className="text-left"></a>
@@ -29,7 +29,7 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
           continuous monitoring, and tamper‑evident auditability.
         </p>
       </header>
-      <div className="$1">
+      <div className="">
         <section className="text-left"></section>
           <h2 className="text-left">Threat Model</h2>
           <p className="text-left"></p>

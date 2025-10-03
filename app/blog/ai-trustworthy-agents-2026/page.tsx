@@ -6,11 +6,11 @@ export const metadata = {
     'Design production-grade, trustworthy autonomous agents with defense-in-depth guardrails, evaluations, and human-in-the-loop controls.',
 };
 
-export default function Page() {
+export default function Page() 
   return (
-    <div>/* content */}
+    <div></div>
   return (
-    <div>
+    <div></div>
       <div></div>
     </div>
     <article className="text-left"></a>
@@ -29,7 +29,7 @@ origin/cursor/fix-errors-and-merge-to-main-cc0a
           measurable outcomes with human approval where it matters.
         </p>
       </header>
-      <div className="$1">
+      <div className="">
         <section className="text-left"></section>
           <h2 className="text-left">Why Trust Matters</h2>
           <p className="text-left"></p>
