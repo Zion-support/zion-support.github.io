@@ -86,6 +86,4 @@ export default function App(): JSX.Element {
       </Router>
     </ErrorBoundary>
   );
-};
-
-export default App;
+}
