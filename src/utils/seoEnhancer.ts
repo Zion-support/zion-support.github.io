@@ -213,7 +213,7 @@ export const countSyllables = (word: string): number => {
   return Math.max(1, count);
 };
 
-export const generateSchema = (type: string, data: Record<string, any>): string => {
+export const generateStructuredData = (type: string, data: any): string => {
   const schema = {
     '@context': 'https://schema.org',
     '@type': type,
@@ -234,8 +234,8 @@ export const optimizeImages = (images: string[]): string[] => {
 };
 
 export const generateCanonicalUrl = (baseUrl: string, path: string): string => {
-  const cleanPath = path.startsWith('/') ? path : `/${path}`
-  return `${baseUrl.replace(/\/$/, '')}${cleanPath}`
+  const cleanPath = path.startsWith('/') ? path : `/${path}`;
+  return `${baseUrl.replace(/\/$/, '')}${cleanPath}`;
 };
 
 export const validateUrl = (url: string): boolean => {
@@ -252,5 +252,5 @@ export const generateRobotsMeta = (index: boolean = true, follow: boolean = true
   if (!index) directives.push('noindex');
   if (!follow) directives.push('nofollow');
   
-  return directives.length > 0 ? directives.join(', ') : 'index, follow'
+  return directives.length > 0 ? directives.join(', ') : 'index, follow';
 };
