@@ -154,8 +154,7 @@ const September30NewContent2025Banner: React.FC = () => {
                 {/* CTA Button */}
                 <Link
                   href={`/blog/${article.slug}`}
-                  className="text-left"
-                >
+                  className="text-left">
                   <span>Read Full Article</span>
                   <ArrowRight className="text-left" />
                 </Link>
@@ -168,8 +167,7 @@ const September30NewContent2025Banner: React.FC = () => {
           {newArticles.slice(3).map((article, index) => (
             <div 
               key={article.id}
-              className="text-left"
-            >
+              className="text-left">
               {/* Card glow effect */}
               <div className="text-left"></div>
               <div className="text-left">
@@ -214,8 +212,7 @@ const September30NewContent2025Banner: React.FC = () => {
                 {/* CTA Button */}
                 <Link
                   href={`/blog/${article.slug}`}
-                  className="text-left"
-                >
+                  className="text-left">
                   <span>Read Full Article</span>
                   <ArrowRight className="text-left" />
                 </Link>
@@ -237,15 +234,13 @@ const September30NewContent2025Banner: React.FC = () => {
               <div className="text-left">
                 <Link
                   href="/blog"
-                  className="text-left"
-                >
+                  className="text-left">
                   <Sparkles className="text-left" />
                   <span>Explore All Articles</span>
                 </Link>
                 <Link
                   href="/contact"
-                  className="text-left"
-                >
+                  className="text-left">
                   <span>Schedule Expert Consultation</span>
                   <ArrowRight className="text-left" />
                 </Link>

@@ -11,16 +11,16 @@ export const metadata: Metadata = {
 export default function AI2025DecemberQuantumComputingBreakthrough() {
   return (
     <div className="text-left">
-      {/* Hero Section */}
+      {/* Hero Section */}</div>
       <section className="text-left">
-        <div className="text-left">
+        <div className="text-left"></div>
           <div className="text-left"></div>"
           <div className="text-left" style={{ animationDelay: '2s' }}></div>"
         </div>
         
-        <div className="text-left">
-          <div className="text-left">
-            <div className="text-left">
+        <div className="text-left"></div>
+          <div className="text-left"></div>
+            <div className="text-left"></div>
               <span className="text-left">
                 ⚛️ December 2025 Breakthrough
               </span>
@@ -34,36 +34,34 @@ export default function AI2025DecemberQuantumComputingBreakthrough() {
               Achieving 1 Million Qubits with Exponential AI Performance and Revolutionary Problem-Solving Capabilities
             </p>
             
-            <div className="text-left">
+            <div className="text-left"></div>
               <a 
                 href="#quantum-details" "
-                className="text-left"
-              >
+                className="text-left">
                 Explore Breakthrough
               </a>
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 View $1B Success Story →
               </a>
             </div>
             
             {/* Key Metrics */}
-            <div className="text-left">
-              <div className="text-left">
+            <div className="text-left"></div>
+              <div className="text-left"></div>
                 <div className="text-left">1M+</div>"
                 <div className="text-left">Qubits</div>"
               </div>
-              <div className="text-left">
+              <div className="text-left"></div>
                 <div className="text-left">10^15</div>"
                 <div className="text-left">Performance Gain</div>"
               </div>
-              <div className="text-left">
+              <div className="text-left"></div>
                 <div className="text-left">99.99%</div>"
                 <div className="text-left">Accuracy</div>"
               </div>
-              <div className="text-left">
+              <div className="text-left"></div>
                 <div className="text-left">24/7</div>"
                 <div className="text-left">Operation</div>"
               </div>
@@ -72,9 +70,9 @@ export default function AI2025DecemberQuantumComputingBreakthrough() {
 
       {/* Quantum Details */}
       <section id="quantum-details" className="text-left">
-        <div className="text-left">
-          <div className="text-left">
-            <div className="text-left">
+        <div className="text-left"></div>
+          <div className="text-left"></div>
+            <div className="text-left"></div>
               <h2 className="text-left">
                 Quantum Computing Revolution
               </h2>
@@ -83,8 +81,8 @@ export default function AI2025DecemberQuantumComputingBreakthrough() {
               </p>
             </div>
 
-            <div className="text-left">
-              <div className="text-left">
+            <div className="text-left"></div>
+              <div className="text-left"></div>
                 <div className="text-left">⚛️</div>"
                 <h3 className="text-left">1 Million Qubit System</h3>"
                 <p className="text-left">
@@ -98,7 +96,7 @@ export default function AI2025DecemberQuantumComputingBreakthrough() {
                 </ul>
               </div>
 
-              <div className="text-left">
+              <div className="text-left"></div>
                 <div className="text-left">🚀</div>"
                 <h3 className="text-left">Exponential AI Performance</h3>"
                 <p className="text-left">
@@ -113,20 +111,20 @@ export default function AI2025DecemberQuantumComputingBreakthrough() {
               </div>
 
             {/* Applications */}
-            <div className="text-left">
+            <div className="text-left"></div>
               <h3 className="text-left">Revolutionary Applications</h3>"
-              <div className="text-left">
-                <div className="text-left">
+              <div className="text-left"></div>
+                <div className="text-left"></div>
                   <div className="text-left">💊</div>"
                   <h4 className="text-left">Drug Discovery</h4>"
                   <p className="text-left">Accelerate pharmaceutical development with quantum molecular simulation</p>"
                 </div>
-                <div className="text-left">
+                <div className="text-left"></div>
                   <div className="text-left">🔬</div>"
                   <h4 className="text-left">Scientific Research</h4>"
                   <p className="text-left">Breakthrough discoveries in physics, chemistry, and materials science</p>"
                 </div>
-                <div className="text-left">
+                <div className="text-left"></div>
                   <div className="text-left">💰</div>"
                   <h4 className="text-left">Financial Modeling</h4>"
                   <p className="text-left">Advanced risk analysis and portfolio optimization at unprecedented scale</p>"
@@ -137,25 +135,23 @@ export default function AI2025DecemberQuantumComputingBreakthrough() {
 
       {/* Call to Action */}
       <section className="text-left">
-        <div className="text-left">
-          <div className="text-left">
+        <div className="text-left"></div>
+          <div className="text-left"></div>
             <h2 className="text-left">
               Experience Quantum Computing
             </h2>
             <p className="text-left">
               Join the quantum computing revolution and unlock exponential performance gains for your enterprise. Get access to our breakthrough quantum systems today.
             </p>
-            <div className="text-left">
+            <div className="text-left"></div>
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Get Quantum Access
               </a>
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 Explore Services →
               </a>
             </div>

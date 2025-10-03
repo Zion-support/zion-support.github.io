@@ -15,7 +15,7 @@ export default function CognitiveSearchEnterprise2025(): void {
       <article className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900 text-white">
         <div className="container mx-auto px-4 py-12 max-w-4xl">
           <Link to="/blog">
-  className="inline-flex items-center text-indigo-400 hover:text-indigo-300 mb-8 transition-colors
+  className="inline-flex items-center text-indigo-400 hover:text-indigo-300 mb-8 transition-colors"
           >"
             <ArrowLeft className="mr-2 h-4 w-4 ">
             <ArrowLeft className="mr-2 h-4 w-4" />
@@ -41,7 +41,7 @@ export default function CognitiveSearchEnterprise2025(): void {
       <article className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900 text-white">
         <div className="container mx-auto px-4 py-12 max-w-4xl">
           <Link to="/blog">
-  className="inline-flex items-center text-indigo-400 hover:text-indigo-300 mb-8 transition-colors
+  className="inline-flex items-center text-indigo-400 hover:text-indigo-300 mb-8 transition-colors"
           >"
             <ArrowLeft className="mr-2 h-4 w-4 ">
             <ArrowLeft className="mr-2 h-4 w-4" />
@@ -87,11 +87,11 @@ export default function CognitiveSearchEnterprise2025(): void {
               <ul className="space-y-4 text-lg">
                 <li className="flex items-start gap-3">
                   <Search className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0/>
-                  <span><strong>97% Answer Accuracy: </strong> AI understands context and delivers precise answers, not just documents</span>,
+                  <span><strong>97% Answer Accuracy: </strong> AI understands context and delivers precise answers, not just documents</span>,"
                 </li>"
                 <li className="flex items-start gap-3">
                   <Zap className="h-6 w-6 text-yellow-400 mt-1 flex-shrink-0/>
-                  <span><strong>12x Faster Discovery: </strong> Find critical information in seconds instead of hours</span>,
+                  <span><strong>12x Faster Discovery: </strong> Find critical information in seconds instead of hours</span>,"
                 </li>"
                 <li className="flex items-start gap-3">
                   <TrendingUp className="h-6 w-6 text-green-400 mt-1 flex-shrink-0/>">
@@ -376,7 +376,7 @@ export default function CognitiveSearchEnterprise2025(): void {
               </p>
               to="/contact"
   className="inline-flex items-center px-8 py-4 bg-white text-indigo-600 rounded-lg font-bold text-lg hover:bg-indigo-50 transition-colors
-              >
+              >"
                 Start Your Knowledge Transformation"
                 <Brain className="ml-2 h-5 w-5 ">
                 <Brain className="ml-2 h-5 w-5/>">
@@ -388,7 +388,7 @@ export default function CognitiveSearchEnterprise2025(): void {
               </p>
               to="/contact"
   className="inline-flex items-center px-8 py-4 bg-white text-indigo-600 rounded-lg font-bold text-lg hover:bg-indigo-50 transition-colors
-              >
+              >"
                 Start Your Knowledge Transformation"
                 <Brain className="ml-2 h-5 w-5 ">
                 <Brain className="ml-2 h-5 w-5" />

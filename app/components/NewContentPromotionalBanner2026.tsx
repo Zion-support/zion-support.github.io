@@ -168,16 +168,14 @@ const NewContentPromotionalBanner2026: React.FC = () => {
             <div className="text-left">
               <Link
                 href="/contact"
-                className="text-left"
-              >
+                className="text-left">
                 <Sparkles className="text-left" />
                 <span>Start Your AI Journey</span>
               </Link>
               
               <Link
                 href="/blog"
-                className="text-left"
-              >
+                className="text-left">
                 <span>Explore All Content</span>
                 <ArrowRight className="text-left" />
               </Link>

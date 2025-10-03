@@ -29,15 +29,15 @@ export default function RevolutionaryBreakthroughs2025() {
             <div className="text-left">
               <div className="text-left">
                 <Sparkles className="text-left" />
-                <span className="text-left">REVOLUTIONARY BREAKTHROUGHS<"
+                <span className="text-left">REVOLUTIONARY BREAKTHROUGHS</span>
               </div>
               <div className="text-left">
                 <TrendingUp className="text-left" />
-                <span className="text-left">6 BREAKTHROUGH TECHNOLOGIES<"
+                <span className="text-left">6 BREAKTHROUGH TECHNOLOGIES</span>
               </div>
               <div className="text-left">
                 <Star className="text-left" />
-                <span className="text-left">LIMITED EARLY ACCESS<"
+                <span className="text-left">LIMITED EARLY ACCESS</span>
               </div>
 
             <h1 className="text-left">
@@ -63,15 +63,13 @@ export default function RevolutionaryBreakthroughs2025() {
             <div className="text-left">
               <a 
                 href="#breakthrough-technologies" "
-                className="text-left"
-              >
+                className="text-left">
                 <Sparkles className="text-left" />
                 Explore Breakthroughs
               </a>
               <a 
                 href="/"
-                className="text-left"
-              >
+                className="text-left">
                 <span>Get Implementation Guide</span>
                 <ArrowRight className="text-left" />
               </a>
@@ -97,8 +95,7 @@ export default function RevolutionaryBreakthroughs2025() {
               return (
                 <div
                   key={breakthrough.id}
-                  className="text-left"
-                >
+                  className="text-left">
                   {/* Card Header */}
                   <div className="text-left">
                     <div className="text-left">
@@ -153,8 +150,7 @@ export default function RevolutionaryBreakthroughs2025() {
                   {/* CTA Button */}
                   <a
                     href={`/blog/${breakthrough.slug}`}
-                    className="text-left"
-                  >
+                    className="text-left">
                     <IconComponent className="text-left" />
                     <span>Explore Breakthrough</span>
                     <ArrowRight className="text-left" />
@@ -183,8 +179,7 @@ export default function RevolutionaryBreakthroughs2025() {
               return (
                 <div
                   key={service.id}
-                  className="text-left"
-                >
+                  className="text-left">
                   <div className="text-left">
                     {service.icon}
                   </div>
@@ -234,8 +229,7 @@ export default function RevolutionaryBreakthroughs2025() {
 
                   <a
                     href="/contact"
-                    className="text-left"
-                  >
+                    className="text-left">
                     <IconComponent className="text-left" />
                     <span>Get Started</span>
                     <ArrowRight className="text-left" />
@@ -262,8 +256,7 @@ export default function RevolutionaryBreakthroughs2025() {
             {latestCaseStudies2025.map((caseStudy, index) => (
               <div
                 key={caseStudy.id}
-                className="text-left"
-              >
+                className="text-left">
                 <div className="text-left">
                   <div className="text-left">
                     {caseStudy.icon}
@@ -309,8 +302,7 @@ export default function RevolutionaryBreakthroughs2025() {
 
                 <a
                   href={`/case-studies/${caseStudy.slug}`}
-                  className="text-left"
-                >
+                  className="text-left">
                   <span>View Full Case Study</span>
                   <ArrowRight className="text-left" />
                 </a>
@@ -335,15 +327,13 @@ export default function RevolutionaryBreakthroughs2025() {
                 <div className="text-left">
                   <a
                     href="/contact"
-                    className="text-left"
-                  >
+                    className="text-left">
                     <Sparkles className="text-left" />
                     <span>Get Early Access</span>
                   </a>
                   <a
                     href="/contact"
-                    className="text-left"
-                  >
+                    className="text-left">
                     <span>Schedule Consultation</span>
                     <ArrowRight className="text-left" />
                   </a>
