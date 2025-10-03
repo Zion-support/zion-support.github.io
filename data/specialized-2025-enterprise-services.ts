@@ -26,7 +26,7 @@
   market_size: string;
   growth_rate: string;
   variant: ServiceVariant;
-  contact_info: {
+  contact_info: 
     mobile: string;
     email: string;
     address: string;
@@ -46,7 +46,7 @@
 
   market_advantage: string;
 ;
-const contact = {
+const contact = 
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -65,7 +65,7 @@ const contact = {
   website: 'https://ziontechgroup && ziontechgroup.com'
 
 import { ServiceVariant } from '../types/service-variants';
-export interface SpecializedEnterpriseService {
+export interface SpecializedEnterpriseService 
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -79,8 +79,7 @@ export interface SpecializedEnterpriseService {
   useCases: string[], roi: string,
   competitors: string[], marketSize: string,
   growthRate: string, variant: ServiceVariant,
-  contactInfo: {
-      
+  contactInfo: 
     mobile: string, email: string,
     address: string,
     website: string
@@ -93,7 +92,7 @@ export interface SpecializedEnterpriseService {
   marketAdvantage: string
 }
 
-const contact = {
+const contact = 
   mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
 
@@ -101,16 +100,14 @@ const contact = {
 
 export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
   // Advanced AI & Consciousness Services
-  {
-
-
+  
       'Cutting-edge platform for AI consciousness research, enabling scientists to study artificial general intelligence, consciousness emergence, and cognitive modeling.',
   website: 'https://ziontechgroup.com';
 }
 ;
 export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [;
   // Advanced AI & Consciousness Services;
-  {
+  
     id: 'ai - consciousness - research - platform',
     name: 'AI Consciousness Research Platform',
     tagline: 'Advanced AI consciousness simulation and research',
@@ -211,7 +208,7 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [;
       'Only comprehensive AI consciousness research platform available',
   },
   // Quantum Computing Services;
-  {
+  
     id: 'quantum - machine - learning - platform',
     name: 'Quantum Machine Learning Platform',
     tagline: 'Quantum - enhanced machine learning and optimization',
@@ -294,7 +291,7 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [;
       'Advanced quantum ML platform with hybrid computing capabilities',
   },
   // Advanced Cybersecurity Services;
-  {
+  
     id: 'quantum - resistant - cryptography',
     name: 'Quantum - Resistant Cryptography Platform',
     tagline: 'Future - proof cryptography for the quantum era',
@@ -373,7 +370,7 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [;
       'Comprehensive quantum - resistant cryptography platform with migration support',
   },
   // Space Technology Services;
-  {
+  
     id: 'satellite - ai - orchestration',
     name: 'Satellite AI Orchestration Platform',
     tagline: 'Intelligent satellite constellation management',
@@ -452,7 +449,7 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [;
       'Advanced AI satellite orchestration with autonomous capabilities',
   },
   // Neural Interface Services;
-  {
+  
     id: 'brain - computer - interface - platform',
     name: 'Brain - Computer Interface Platform',
     tagline: 'Advanced neural interface technology',
@@ -531,7 +528,7 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [;
       'Advanced BCI platform with medical - grade capabilities and research tools',
   },
   // Advanced IoT Services;
-  {
+  
     id: 'autonomous - iot - ecosystem',
     name: 'Autonomous IoT Ecosystem Platform',
     tagline: 'Self - managing IoT infrastructure',
@@ -610,7 +607,7 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [;
       'Advanced autonomous IoT platform with AI - powered management capabilities',
   },
   // Advanced Analytics Services;
-  {
+  
     id: 'predictive - analytics - engine',
     name: 'Predictive Analytics Engine',
     tagline: 'AI - powered predictive insights and forecasting',
@@ -789,7 +786,7 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
 ;
   // Advanced Cybersecurity Services;
 
-  {
+  
     id: 'quantum - resistant - cryptography';
     name: 'Quantum - Resistant Cryptography Platform';
     tagline: 'Future - proof cryptography for the quantum era';
@@ -840,7 +837,7 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
 ;
   // Space Technology Services;
 
-  {
+  
     id: 'satellite - ai - orchestration';
     name: 'Satellite AI Orchestration Platform';
     tagline: 'Intelligent satellite constellation management';
@@ -891,7 +888,7 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
 ;
   // Neural Interface Services;
 
-  {
+  
     id: 'brain - computer - interface - platform';
     name: 'Brain - Computer Interface Platform';
     tagline: 'Advanced neural interface technology';
@@ -942,7 +939,7 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
 ;
   // Advanced IoT Services;
 
-  {
+  
     id: 'autonomous - iot - ecosystem';
     name: 'Autonomous IoT Ecosystem Platform';
     tagline: 'Self - managing IoT infrastructure';
@@ -993,7 +990,7 @@ export default specializedEnterpriseServices;    id: 'quantum - machine - learni
 ;
   // Advanced Analytics Services;
 
-  {
+  
     id: 'predictive - analytics - engine';
     name: 'Predictive Analytics Engine';
     tagline: 'AI - powered predictive insights and forecasting';

@@ -34,8 +34,8 @@ import {
   Network
 } from 'lucide-react'
 const contactInfo = {
-  phone: "+1 302 464 0950",
-  email: "kleber@ziontechgroup.com",
+  phone: "+1 302 464 0950
+  email: "kleber@ziontechgroup.com
   address: "364 E Main St STE 1008 Middletown DE 19709"
 }
 const itServices = [
@@ -274,39 +274,39 @@ const itServices = [
 ]
 const industries = [
   {
-    title: "Healthcare & Medical",
-    description: "HIPAA-compliant IT solutions for healthcare providers and medical facilities",
-    icon: "🏥",
+    title: "Healthcare & Medical
+    description: "HIPAA-compliant IT solutions for healthcare providers and medical facilities
+    icon: "🏥
     useCases: ["Electronic Health Records", "Telemedicine platforms", "Medical imaging systems", "Patient data security"]
   },
   {
-    title: "Financial Services",
-    description: "Secure, compliant IT infrastructure for banks, credit unions, and financial institutions",
-    icon: "🏦",
+    title: "Financial Services
+    description: "Secure, compliant IT infrastructure for banks, credit unions, and financial institutions
+    icon: "🏦
     useCases: ["Core banking systems", "Payment processing", "Risk management", "Regulatory compliance"]
   },
   {
-    title: "E-commerce & Retail",
-    description: "Scalable IT solutions for online retailers and brick-and-mortar stores",
-    icon: "🛒",
+    title: "E-commerce & Retail
+    description: "Scalable IT solutions for online retailers and brick-and-mortar stores
+    icon: "🛒
     useCases: ["E-commerce platforms", "Inventory management", "Payment gateways", "Customer analytics"]
   },
   {
-    title: "Manufacturing",
-    description: "Industrial IT solutions for manufacturing and production facilities",
-    icon: "🏭",
+    title: "Manufacturing
+    description: "Industrial IT solutions for manufacturing and production facilities
+    icon: "🏭
     useCases: ["ERP systems", "Production monitoring", "Supply chain management", "Quality control"]
   },
   {
-    title: "Education & Training",
-    description: "IT infrastructure for schools, universities, and training organizations",
-    icon: "🎓",
+    title: "Education & Training
+    description: "IT infrastructure for schools, universities, and training organizations
+    icon: "🎓
     useCases: ["Learning management systems", "Student information systems", "Campus networks", "Online learning platforms"]
   },
   {
-    title: "Government & Public Sector",
-    description: "Secure, compliant IT solutions for government agencies and public organizations",
-    icon: "🏛️",
+    title: "Government & Public Sector
+    description: "Secure, compliant IT solutions for government agencies and public organizations
+    icon: "🏛️
     useCases: ["Citizen services", "Document management", "Security compliance", "Digital transformation"]
 
 ]
@@ -320,7 +320,7 @@ export default function ITServicesPage() {
         <link rel="canonical" href="https://ziontechgroup.com/it-services" />
       </Head>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
+      <div className="text-left">
         {/* Hero Section */}
         <section className='bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white py-20'>
           <div className='container mx-auto px-4'>
@@ -330,17 +330,17 @@ export default function ITServicesPage() {
               animate={ opacity: 1, y: 0 }
               transition={ duration: 0.8 }
             >
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              <h1 className="text-left">
                 IT Services & Solutions
               </h1>
-              <p className="text-xl md:text-2xl mb-8 text-blue-100">
+              <p className="text-left">
                 Comprehensive IT services to modernize your infrastructure, enhance security, and drive digital transformation.
                 From cloud migration to cybersecurity, we deliver enterprise-grade solutions at competitive prices.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="text-left">
                 <Link
                   href="/contact"
-                  className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg"
+                  className="text-left"
                 >
                   Get IT Consultation
                 </Link>
@@ -365,15 +365,15 @@ export default function ITServicesPage() {
               transition={ duration: 0.8 }
               viewport={ once: true }
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-left">
                 Our IT Services
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="text-left">
                 End-to-end IT solutions designed to modernize your infrastructure, enhance security, and drive business growth.
               </p>
             </motion.div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="text-left">
               {itServices.map((service, index) => (
                 <motion.div
                   key={service.id}
@@ -391,25 +391,25 @@ export default function ITServicesPage() {
                     </div>
                   )}
 
-                  <div className="flex items-center mb-4">
-                    <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mr-4">
-                      <service.icon className="w-8 h-8 text-blue-600" />
+                  <div className="text-left">
+                    <div className="text-left">
+                      <service.icon className="text-left" />
                     </div>
                     <div>
                       <h3 className='text-xl font-semibold text-gray-900'>{service.title}</h3>
                       <div className='flex items-center gap-2 mt-1'>
                         <Clock className='w-4 h-4 text-gray-400' />
-                        <span className='text-sm text-gray-500'>{service.setupTime}</span>
+                        <span className='text-sm text-gray-500'>{service.setupTime}<
                       </div>
                     </div>
                   </div>
 
-                  <p className="text-gray-600 mb-4">{service.description}</p>
+                  <p className="text-left">{service.description}</p>
 
-                  <div className="mb-4">
-                    <div className="flex items-center gap-2 mb-2">
-                      <span className="text-2xl font-bold text-blue-600">{service.price}</span>
-                      <span className="text-sm text-gray-500 line-through">{service.marketPrice}</span>
+                  <div className="text-left">
+                    <div className="text-left">
+                      <span className="text-left">{service.price}<
+                      <span className="text-left">{service.marketPrice}<
                     </div>
                     <div className='text-sm text-green-600 font-medium'>
                       Save up to 50% vs market rate
@@ -419,15 +419,15 @@ export default function ITServicesPage() {
                   {/* ROI and Popularity */}
                   <div className='flex items-center justify-between mb-4'>
                     <div className='text-sm'>
-                      <span className='text-gray-500'>Expected ROI:</span>
+                      <span className='text-gray-500'>Expected ROI:<
                       <span className='text-green-600 font-semibold ml-1'>
                         {service.roi.split(' ')[0]} ROI
-                      </span>
+                      <
                     </div>
                     {service.popular && (
                       <div className='flex items-center gap-1 text-yellow-600'>
                         <Star className='w-4 h-4 fill-current' />
-                        <span className='text-sm font-medium'>Popular</span>
+                        <span className='text-sm font-medium'>Popular<
                       </div>
                     )}
                   </div>
@@ -494,7 +494,7 @@ export default function ITServicesPage() {
               <h2 className='text-3xl md:text-4xl font-bold text-gray-900 mb-4'>
                 Industries We Serve
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="text-left">
                 Our IT services are tailored to meet the unique requirements and compliance needs of various industries.
               </p>
             </motion.div>
@@ -539,10 +539,10 @@ export default function ITServicesPage() {
               transition={ duration: 0.8 }
               viewport={ once: true }
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-left">
                 Why Choose Our IT Services?
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="text-left">
                 We combine deep technical expertise with business acumen to deliver IT solutions that drive real business value.
               </p>
             </motion.div>
@@ -551,24 +551,23 @@ export default function ITServicesPage() {
               {[
                 {
                   icon: Award,
-                  title: "Certified Experts",
+                  title: "Certified Experts
                   description: "Certified professionals with 10+ years of experience"
                 },
                 {
                   icon: Shield,
-                  title: "Security First",
+                  title: "Security First
                   description: "Enterprise-grade security and compliance standards"
                 },
                 {
                   icon: DollarSign,
-                  title: "Cost Effective",
+                  title: "Cost Effective
                   description: "50% lower costs than traditional IT providers"
                 },
                 {
                   icon: Clock,
-                  title: "24/7 Support",
+                  title: "24/7 Support
                   description: "Round-the-clock monitoring and support services"
-
               ].map((item, index) => (
                 <motion.div
                   key={index}
@@ -598,17 +597,17 @@ export default function ITServicesPage() {
               transition={ duration: 0.8 }
               viewport={ once: true }
             >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              <h2 className="text-left">
                 Ready to Modernize Your IT Infrastructure?
               </h2>
-              <p className="text-xl mb-8 text-blue-100 max-w-3xl mx-auto">
+              <p className="text-left">
                 Transform your technology infrastructure with our comprehensive IT services. From cloud migration to cybersecurity,
                 we'll help you build a robust, secure, and scalable IT environment.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+              <div className="text-left">
                 <Link
                   href="/contact"
-                  className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-lg"
+                  className="text-left"
                 >
                   Get IT Assessment
                 </Link>
@@ -624,15 +623,15 @@ export default function ITServicesPage() {
               <div className='grid md:grid-cols-3 gap-8 mt-12'>
                 <div className='flex items-center justify-center'>
                   <Phone className='w-6 h-6 mr-2' />
-                  <span>{contactInfo.phone}</span>
+                  <span>{contactInfo.phone}<
                 </div>
                 <div className='flex items-center justify-center'>
                   <Mail className='w-6 h-6 mr-2' />
-                  <span>{contactInfo.email}</span>
+                  <span>{contactInfo.email}<
                 </div>
                 <div className='flex items-center justify-center'>
                   <MapPin className='w-6 h-6 mr-2' />
-                  <span>{contactInfo.address}</span>
+                  <span>{contactInfo.address}<
                 </div>
               </div>
             </motion.div>

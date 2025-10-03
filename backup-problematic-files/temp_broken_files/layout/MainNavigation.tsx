@@ -14,13 +14,12 @@
 
 
           </ul>;"
-          <div className="flex items-center gap-2 mt-4 md:mt-0 md:ml-auto">;"
+          <div className="text-left">;"
 </div>
 
 
   Heart, MessageSquare, CreditCard,   ShoppingCart, Wallet ;"
  } from "lucide-react";"
-
 import {;
 
   }

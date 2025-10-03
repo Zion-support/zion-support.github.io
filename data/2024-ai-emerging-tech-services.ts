@@ -1,6 +1,6 @@
 import { ServiceVariant } from "../types/service-variants";
 
-export interface AIEmergingTechService {
+export interface AIEmergingTechService 
   id: string;
   name: string;
   tagline: string;
@@ -27,7 +27,7 @@ export interface AIEmergingTechService {
   marketSize: string;
   growthRate: string;
   variant: ServiceVariant;
-  contactInfo: {
+  contactInfo: 
     mobile: string;
     email: string;
     address: string;
@@ -42,7 +42,7 @@ export interface AIEmergingTechService {
 }
 
 export const aiEmergingTechServices: AIEmergingTechService[] = [
-  {
+  
     id: "ai-video-generation-platform"
     name: "AI Video Generation Platform"
     tagline: "Create professional videos with AI in minutes"
@@ -80,7 +80,7 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
     marketSize: "$3.2B market"
     growthRate: "45% annual growth"
     variant: "ai-futuristic"
-    contactInfo: {
+    contactInfo: 
       mobile: "+1 302 464 0950"
       email: "kleber@ziontechgroup.com"
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -94,7 +94,7 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
     reviews: 1800
   },
   // Quantum Machine Learning Platform
-  {
+  
     id: 'quantum-machine-learning-platform',
     name: 'Quantum Machine Learning Platform',
     tagline: 'Harness quantum computing for advanced ML',
@@ -132,7 +132,7 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
     marketSize: '$1.8B market',
     growthRate: '65% annual growth',
     variant: 'quantum-futuristic',
-    contactInfo: {
+    contactInfo: 
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -146,7 +146,7 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
     reviews: 280
   },
   // AI-Powered Cybersecurity Platform
-  {
+  
     id: 'ai-cybersecurity-platform',
     name: 'AI-Powered Cybersecurity Platform',
     tagline: 'Next-generation threat detection and response',
@@ -184,7 +184,7 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
     marketSize: '$173.5B market',
     growthRate: '18.3% annual growth',
     variant: 'enterprise-futuristic',
-    contactInfo: {
+    contactInfo: 
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -198,7 +198,7 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
     reviews: 950
   },
   // Autonomous Robotics Platform
-  {
+  
     id: 'autonomous-robotics-platform',
     name: 'Autonomous Robotics Platform',
     tagline: 'Build and deploy intelligent robots',
@@ -236,7 +236,7 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
     marketSize: '$23.9B market',
     growthRate: '25.8% annual growth',
     variant: 'autonomous-futuristic',
-    contactInfo: {
+    contactInfo: 
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -250,7 +250,7 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
     reviews: 180
   },
   // Blockchain AI Platform
-  {
+  
     id: 'blockchain-ai-platform',
     name: 'Blockchain AI Platform',
     tagline: 'Decentralized AI for the future',
@@ -288,7 +288,7 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
     marketSize: '$2.1B market',
     growthRate: '52% annual growth',
     variant: 'blockchain-futuristic',
-    contactInfo: {
+    contactInfo: 
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -302,7 +302,7 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
     reviews: 420
   },
   // Edge AI Computing Platform
-  {
+  
     id: 'edge-ai-computing-platform',
     name: 'Edge AI Computing Platform',
     tagline: 'AI at the edge for real-time processing',
@@ -340,7 +340,7 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
     marketSize: '$12.1B market',
     growthRate: '38.9% annual growth',
     variant: 'edge-futuristic',
-    contactInfo: {
+    contactInfo: 
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -354,7 +354,7 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
     reviews: 580
   },
   // AI-Powered Drug Discovery Platform
-  {
+  
     id: 'ai-drug-discovery-platform',
     name: 'AI-Powered Drug Discovery Platform',
     tagline: 'Accelerate drug discovery with AI',
@@ -392,7 +392,7 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
     marketSize: '$1.2B market',
     growthRate: '42% annual growth',
     variant: 'biotech-futuristic',
-    contactInfo: {
+    contactInfo: 
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -406,7 +406,7 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
     reviews: 120
   },
   // AI-Powered Climate Modeling Platform
-  {
+  
     id: 'ai-climate-modeling-platform',
     name: 'AI-Powered Climate Modeling Platform',
     tagline: 'Predict climate change with AI precision',
@@ -444,7 +444,7 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
     marketSize: '$1.8B market',
     growthRate: '35% annual growth',
     variant: 'simulation-futuristic',
-    contactInfo: {
+    contactInfo: 
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',

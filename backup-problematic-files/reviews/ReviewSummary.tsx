@@ -10,17 +10,17 @@ const ReviewSummary: React.FC<Props> = ({ summary }) => {
 
 
 
-</span>
+<
           <StarRating;
             value={Math.round(summary.averageRating)}
             onChange={() => {}}
 
         <div className='text-sm text-gray-600 mt-1'>
-          <span className='mr-3'>{summary.totalReviews} reviews</span>          <span>{summary.totalCompletedProjects} completed projects</span>
+          <span className='mr-3'>{summary.totalReviews} reviews<          <span>{summary.totalCompletedProjects} completed projects<
 export default ReviewSummary;      <div>
-        <div className="flex items-center gap-3">"
+        <div className="text-left">"
 </div>"
-          <span className="text-2xl font-semibold">{summary.averageRating.toFixed(1)}</span>"
+          <span className="text-left">{summary.averageRating.toFixed(1)}<"
           <StarRating value={Math.round(summary.averageRating)} onChange={() => {}} readOnly />
 
 

@@ -3,7 +3,7 @@
  * Provides comprehensive performance tracking and optimization
  */
 
-export interface PerformanceMetrics {
+export interface PerformanceMetrics 
   loadTime: number;
   firstContentfulPaint: number;
   largestContentfulPaint: number;
@@ -19,7 +19,7 @@ export interface PerformanceMetrics {
   timestamp: number;
 }
 
-export interface PerformanceAlert {
+export interface PerformanceAlert 
   type: 'warning' | 'error' | 'info';
   message: string;
   metric: keyof PerformanceMetrics;
@@ -28,60 +28,58 @@ export interface PerformanceAlert {
   timestamp: number;
 }
 
-class EnhancedPerformanceMonitor {
+class EnhancedPerformanceMonitor 
   private metrics: PerformanceMetrics[] = [];
   private alerts: PerformanceAlert[] = [];
   private observers: PerformanceObserver[] = [];
-  private isMonitoring = false;
+  // private _isMonitoring = false;
 
   constructor() {
     this.initializeObservers();
   }
 
-  private initializeObservers(): void {
-    if (typeof window === 'undefined') return;
-
+  private initializeObservers(): void 
     // Observe navigation timing
-    if ('PerformanceObserver' in window) {
-      try {
-        const navObserver = new PerformanceObserver((list) => {
+    if() {
+      try 
+        const navObserver = new PerformanceObserver((list) => 
           const entries = list.getEntries();
-          entries.forEach((entry) => {
-            if (entry.entryType === 'navigation') {
+          entries.forEach((entry) => 
+            if() {
               this.processNavigationTiming(entry as PerformanceNavigationTiming);
             }
           });
         });
         navObserver.observe({ entryTypes: ['navigation'] });
         this.observers.push(navObserver);
-      } catch (error) {
+      } catch() {
         console.warn('Navigation timing observer failed:', error);
       }
     }
   }
 
-  private processNavigationTiming(entry: PerformanceNavigationTiming): void {
-    const metrics: Partial<PerformanceMetrics> = {
+  private processNavigationTiming(entry: PerformanceNavigationTiming): void 
+    const metrics: Partial<PerformanceMetrics> = 
       loadTime: entry.loadEventEnd - entry.loadEventStart,
-      timeToInteractive: entry.domInteractive - entry.navigationStart,
+      timeToInteractive: entry.domInteractive - (entry as PerformanceNavigationTiming & { navigationStart: number }).navigationStart,
       timestamp: Date.now()
     };
 
     this.addMetrics(metrics as PerformanceMetrics);
   }
 
-  private addMetrics(newMetrics: PerformanceMetrics): void {
+  private addMetrics(newMetrics: PerformanceMetrics): void 
     this.metrics.push(newMetrics);
     this.checkThresholds(newMetrics);
     
     // Keep only last 100 metrics
-    if (this.metrics.length > 100) {
+    if() {
       this.metrics = this.metrics.slice(-100);
     }
   }
 
-  private checkThresholds(metrics: PerformanceMetrics): void {
-    const thresholds = {
+  private checkThresholds(metrics: PerformanceMetrics): void 
+    const thresholds = 
       loadTime: 3000,
       firstContentfulPaint: 1500,
       largestContentfulPaint: 2500,
@@ -92,10 +90,10 @@ class EnhancedPerformanceMonitor {
       speedIndex: 3000
     };
 
-    Object.entries(thresholds).forEach(([key, threshold]) => {
+    Object.entries(thresholds).forEach(([key, threshold]) => 
       const value = metrics[key as keyof PerformanceMetrics];
-      if (typeof value === 'number' && value > threshold) {
-        this.addAlert({
+      if() {
+        this.addAlert(
           type: value > threshold * 1.5 ? 'error' : 'warning',
           message: `${key} exceeded threshold: ${value}ms > ${threshold}ms`,
           metric: key as keyof PerformanceMetrics,
@@ -107,49 +105,49 @@ class EnhancedPerformanceMonitor {
     });
   }
 
-  private addAlert(alert: PerformanceAlert): void {
+  private addAlert(alert: PerformanceAlert): void 
     this.alerts.push(alert);
     
     // Keep only last 50 alerts
-    if (this.alerts.length > 50) {
+    if() {
       this.alerts = this.alerts.slice(-50);
     }
 
     // Log critical alerts
-    if (alert.type === 'error') {
+    if() {
       console.error('Performance Alert:', alert);
     }
   }
 
-  public startMonitoring(): void {
-    this.isMonitoring = true;
+  public startMonitoring(): void 
+    // this._isMonitoring = true;
     console.log('Enhanced performance monitoring started');
   }
 
-  public stopMonitoring(): void {
-    this.isMonitoring = false;
+  public stopMonitoring(): void 
+    // this._isMonitoring = false;
     this.observers.forEach(observer => observer.disconnect());
     this.observers = [];
     console.log('Enhanced performance monitoring stopped');
   }
 
-  public getMetrics(): PerformanceMetrics[] {
+  public getMetrics(): PerformanceMetrics[] 
     return [...this.metrics];
   }
 
-  public getAlerts(): PerformanceAlert[] {
+  public getAlerts(): PerformanceAlert[] 
     return [...this.alerts];
   }
 
-  public getLatestMetrics(): PerformanceMetrics | null {
+  public getLatestMetrics(): PerformanceMetrics | null 
     return this.metrics.length > 0 ? this.metrics[this.metrics.length - 1] : null;
   }
 
-  public exportReport(): string {
+  public exportReport(): string 
     const latest = this.getLatestMetrics();
     const alerts = this.getAlerts();
 
-    return JSON.stringify({
+    return JSON.stringify(
       latest,
       alerts,
       timestamp: Date.now(),
@@ -162,6 +160,6 @@ class EnhancedPerformanceMonitor {
 export const enhancedPerformanceMonitor = new EnhancedPerformanceMonitor();
 
 // Auto-start monitoring in browser environment
-if (typeof window !== 'undefined') {
+if() {
   enhancedPerformanceMonitor.startMonitoring();
 }

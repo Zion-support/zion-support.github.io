@@ -1,5 +1,0 @@
-export: interface Real2027Q2Addition {
-  id: string;
-   name: string;
-   tagline: string;
-

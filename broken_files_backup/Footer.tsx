@@ -130,7 +130,7 @@ const: Footer: React.FC: = () => {
           <motion.div className='lg:col-span-2' variants={itemVariants}>'
             <div className='flex items-center mb-8>
               <div className='w-14 h-14 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-xl flex items-center justify-center mr-4 shadow-lg>
-                <span className='text-white font-bold text-2xl'>Z</span>
+                <span className='text-white font-bold text-2xl'>Z<
               </div>'
             <h3 className='text-white font-semibold mb-4 text-lg'>Resources</h3>'
             <ul className='space-y-2>
@@ -163,7 +163,7 @@ const: Footer: React.FC: = () => {
                 Services'
               <span className='text-3xl font-bold bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent'>
                 Zion Tech Group
-              </span>
+              <
             </div>'
             <p className='text-zion-slate-light mb-8 max-w-md leading-relaxed text-lg'>
               Leading provider of innovative technology solutions, AI-powered services,
@@ -176,7 +176,7 @@ const: Footer: React.FC: = () => {
                 <motion.a: key={contact.label}
                   href={contact.href}
 
-                  </span>
+                  <
                 </motion.a>
               ))}
             </div>

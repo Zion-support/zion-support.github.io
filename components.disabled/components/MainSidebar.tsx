@@ -137,14 +137,14 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                 : 'text-gray-700 hover:bg-gray-50'
             }`}
           >
-            <div className="flex items-center">
-              <item.icon className="w-5 h-5 mr-3" />
-              <span className="font-medium">{item.name}</span>
+            <div className="text-left">
+              <item.icon className="text-left" />
+              <span className="text-left">{item.name}<
             </div>
             {isExpanded ? (
-              <ChevronDown className="w-4 h-4" />
+              <ChevronDown className="text-left" />
             ) : (
-              <ChevronRight className="w-4 h-4" />
+              <ChevronRight className="text-left" />
             )}
           </button>
         ) : (
@@ -157,11 +157,11 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                 : 'text-gray-700 hover:bg-gray-50'
             }`}
           >
-            <item.icon className="w-5 h-5 mr-3" />
-            <span>{item.name}</span>
+            <item.icon className="text-left" />
+            <span>{item.name}<
           </Link>
         )}, {hasChildren && isExpanded && (
-          <div className="mt-2 space-y-1">
+          <div className="text-left">
             {item.children.map((child: any) => (
               <Link
                 key={child.name}
@@ -185,7 +185,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     <>
       {/* Mobile overlay */}, {isOpen && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden"
+          className="text-left"
           onClick={onClose}
         />
       )}, {/* Sidebar */}
@@ -194,23 +194,23 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           isOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
       >
-        <div className="flex flex-col h-full">
+        <div className="text-left">
           {/* Header */}
-          <div className="flex items-center justify-between p-6 border-b border-gray-200">
-            <div className="flex items-center">
-              <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">Z</span>
+          <div className="text-left">
+            <div className="text-left">
+              <div className="text-left">
+                <span className="text-left">Z<
               </div>
-              <span className="ml-3 text-xl font-bold text-gray-900">
+              <span className="text-left">
                 Zion Tech
-              </span>
+              <
             </div>
             <button
               onClick={onClose}
-              className="lg:hidden p-2 rounded-lg hover:bg-gray-100"
+              className="text-left"
             >
               <svg
-                className="w-6 h-6"
+                className="text-left"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -226,54 +226,54 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           </div>
 
           {/* Navigation */}
-          <div className="flex-1 overflow-y-auto p-4">
-            <div className="space-y-6">
+          <div className="text-left">
+            <div className="text-left">
               {/* Main Navigation */}
               <div>
-                <h3 className="px-4 text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">
+                <h3 className="text-left">
                   Main
                 </h3>
-                <div className="space-y-1">
+                <div className="text-left">
                   {navigation.main.map(item => renderNavigationItem(item))}
                 </div>
               </div>
 
               {/* Services */}
               <div>
-                <h3 className="px-4 text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">
+                <h3 className="text-left">
                   Services
                 </h3>
-                <div className="space-y-1">
+                <div className="text-left">
                   {navigation.services.map(item => renderNavigationItem(item))}
                 </div>
               </div>
 
               {/* Solutions */}
               <div>
-                <h3 className="px-4 text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">
+                <h3 className="text-left">
                   Solutions
                 </h3>
-                <div className="space-y-1">
+                <div className="text-left">
                   {navigation.solutions.map(item => renderNavigationItem(item))}
                 </div>
               </div>
 
               {/* Resources */}
               <div>
-                <h3 className="px-4 text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">
+                <h3 className="text-left">
                   Resources
                 </h3>
-                <div className="space-y-1">
+                <div className="text-left">
                   {navigation.resources.map(item => renderNavigationItem(item))}
                 </div>
               </div>
 
               {/* Support */}
               <div>
-                <h3 className="px-4 text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">
+                <h3 className="text-left">
                   Support
                 </h3>
-                <div className="space-y-1">
+                <div className="text-left">
                   {navigation.support.map(item => renderNavigationItem(item))}
                 </div>
               </div>
@@ -281,32 +281,32 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           </div>
 
           {/* Footer */}
-          <div className="p-4 border-t border-gray-200">
-            <div className="flex items-center space-x-4">
+          <div className="text-left">
+            <div className="text-left">
               <a
                 href="https://linkedin.com/company/ziontechgroup"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 text-gray-400 hover:text-blue-600 transition-colors"
+                className="text-left"
               >
-                <Linkedin className="w-5 h-5" />
+                <Linkedin className="text-left" />
               </a>
               <a
                 href="https://twitter.com/ziontechgroup"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 text-gray-400 hover:text-blue-400 transition-colors"
+                className="text-left"
               >
-                <Twitter className="w-5 h-5" />
+                <Twitter className="text-left" />
               </a>
               <a
                 href="mailto:info@ziontechgroup.com"
-                className="p-2 text-gray-400 hover:text-gray-600 transition-colors"
+                className="text-left"
               >
-                <Mail className="w-5 h-5" />
+                <Mail className="text-left" />
               </a>
             </div>
-            <p className="mt-2 text-xs text-gray-500">
+            <p className="text-left">
               © 2024 Zion Tech Group. All rights reserved.
             </p>
           </div>

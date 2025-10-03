@@ -60,7 +60,7 @@
           <div className=\"text-center\">
             <h1 className=\"text-5xl md:text-6xl font-bold mb-6\">
               Transform Your Business with
-              <span className=\"text-blue-400\"> Zion Tech Group</span>
+              <span className=\"text-blue-400\"> Zion Tech Group<
             </h1>
             <p className=\"text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200\">
               Leading technology solutions provider helping businesses innovate and grow 

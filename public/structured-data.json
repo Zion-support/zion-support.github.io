@@ -2,9 +2,15 @@
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "Zion Tech Group",
-  "url": "https://zion.app",
-  "logo": "https://zion.app/logo.png",
-  "description": "Leading AI and technology solutions for modern enterprises",
+  "description": "Leading AI and IT solutions provider specializing in AI workflow automation, quantum computing, edge AI, and zero trust security.",
+  "url": "https://ziontechgroup.com",
+  "logo": "https://ziontechgroup.com/logo.png",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+1-302-464-0950",
+    "contactType": "customer service",
+    "availableLanguage": "English"
+  },
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "364 E Main St STE 1008",
@@ -13,26 +19,20 @@
     "postalCode": "19709",
     "addressCountry": "US"
   },
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "telephone": "+1-302-464-0950",
-    "contactType": "customer service",
-    "email": "kleber@ziontechgroup.com"
-  },
   "sameAs": [
     "https://linkedin.com/company/zion-tech-group",
     "https://twitter.com/ziontechgroup"
   ],
+  "foundingDate": "2020",
+  "numberOfEmployees": "50-100",
   "services": [
-    {
-      "@type": "Service",
-      "name": "AI Solutions",
-      "description": "Advanced artificial intelligence solutions for enterprise"
-    },
-    {
-      "@type": "Service",
-      "name": "IT Infrastructure",
-      "description": "Comprehensive IT infrastructure and cloud solutions"
-    }
+    "AI Workflow Automation",
+    "AI Virtual Assistant",
+    "AI Data Analytics",
+    "Quantum Computing Consulting",
+    "Edge AI Solutions",
+    "Zero Trust Security",
+    "Cybersecurity",
+    "Cloud Infrastructure"
   ]
 }

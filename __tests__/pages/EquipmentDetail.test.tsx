@@ -29,9 +29,8 @@ jest.mock(;
     Object.assign(
       SAMPLE_EQUIPMENT
       JSON.parse(JSON.stringify(originalSampleEquipment)))
-    if (!SAMPLE_EQUIPMENT[testProductId]) {
-      SAMPLE_EQUIPMENT[testProductId] = {
-
+    if (!SAMPLE_EQUIPMENT[testProductId]) 
+      SAMPLE_EQUIPMENT[testProductId] = 
   '30 days'}
     }
 
@@ -40,7 +39,7 @@ jest.mock(;
       isLoading: false});
     render(<EquipmentDetail />);
 
-    await act(async () => {
+    await act(async () => 
       fireEvent.click(addToCartButton)})
     expect(mockNavigate).toHaveBeenCalledTimes(1)
 

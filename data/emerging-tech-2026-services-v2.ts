@@ -1,10 +1,8 @@
 
 import { ServiceVariant } from '../types / service - variants';
 
-export interface EmergingTech2026ServiceV2 {
-
-  {
-
+export interface EmergingTech2026ServiceV2 
+  
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -18,8 +16,7 @@ export interface EmergingTech2026ServiceV2 {
   useCases: string[], roi: string,
   competitors: string[], marketSize: string,
   growthRate: string, variant: ServiceVariant,
-  contactInfo: {
-      
+  contactInfo: 
     mobile: string, email: string,
     address: string,
     website: string
@@ -33,12 +30,11 @@ export interface EmergingTech2026ServiceV2 {
 
 export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
   // Neuromorphic Computing Platform
-  {
-
+  
 }
 export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
   // Neuromorphic Computing Platform
-  {
+  
     id: 'neuromorphic-computing-platform', name: 'Neuromorphic Computing Platform',
     tagline: 'Brain-inspired computing for next-generation AI applications',
     price: '$1,299',
@@ -59,8 +55,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     useCases: ['AI researchCognitive computingRoboticsAutonomous systemsBrain-computer interfacesNeuromorphic applications'], roi: 'Average customer sees 700% ROI through breakthrough research capabilities and reduced computing costs.',
     competitors: ['Intel LoihiIBM TrueNorthBrainChipSpiNNakerTrueNorth'], marketSize: '$8.2B market',
     growthRate: '450% annual growth', variant: 'ai-futuristic',
-    contactInfo: {
-      
+    contactInfo: 
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
@@ -76,7 +71,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     reviews: 420
   }
   // Synthetic Biology AI Platform
-  {
+  
     id: 'synthetic-biology-ai-platform'
     name: 'Synthetic Biology AI Platform'
     tagline: 'Design and engineer life with AI-powered synthetic biology'
@@ -142,7 +137,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     marketSize: '$13.8B market'
     growthRate: '380% annual growth'
     variant: 'ai-futuristic'
-    contactInfo: {
+    contactInfo: 
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -157,7 +152,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     reviews: 180
   }
   // Fusion Energy AI Platform
-  {
+  
     id: 'fusion-energy-ai-platform'
     name: 'Fusion Energy AI Platform'
     tagline: 'AI-powered fusion energy optimization and control'
@@ -223,7 +218,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     marketSize: '$2.1B market'
     growthRate: '520% annual growth'
     variant: 'ai-futuristic'
-    contactInfo: {
+    contactInfo: 
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -238,7 +233,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     reviews: 65
   }
   // Quantum Machine Learning Platform
-  {
+  
     id: 'quantum-machine-learning-platform'
     name: 'Quantum Machine Learning Platform'
     tagline: 'Accelerate AI with quantum computing power'
@@ -305,7 +300,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     marketSize: '$1.8B market'
     growthRate: '380% annual growth'
     variant: 'quantum-futuristic'
-    contactInfo: {
+    contactInfo: 
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -320,7 +315,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     reviews: 280
   }
   // Autonomous Vehicle AI Platform
-  {
+  
     id: 'autonomous-vehicle-ai-platform'
     name: 'Autonomous Vehicle AI Platform'
     tagline: 'AI-powered autonomous vehicle development and testing'
@@ -381,7 +376,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     marketSize: '$54.2B market'
     growthRate: '320% annual growth'
     variant: 'ai-futuristic'
-    contactInfo: {
+    contactInfo: 
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -396,7 +391,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     reviews: 120
   }
   // Brain-Computer Interface Platform
-  {
+  
     id: 'brain-computer-interface-platform'
     name: 'Brain-Computer Interface Platform'
     tagline: 'Connect minds to machines with AI-powered BCI technology'
@@ -457,7 +452,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     marketSize: '$1.7B market'
     growthRate: '450% annual growth'
     variant: 'ai-futuristic'
-    contactInfo: {
+    contactInfo: 
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -472,7 +467,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     reviews: 65
   }
   // Quantum Internet Platform
-  {
+  
     id: 'quantum-internet-platform'
     name: 'Quantum Internet Platform'
     tagline: 'Build the quantum internet of the future'
@@ -537,7 +532,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     marketSize: '$0.8B market'
     growthRate: '600% annual growth'
     variant: 'quantum-futuristic'
-    contactInfo: {
+    contactInfo: 
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -616,8 +611,7 @@ export interface EmergingTech2026ServiceV2 {;
 
 export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
   // Neuromorphic Computing Platform
-  {
-
+  
     id: 'neuromorphic-computing-platform', name: 'Neuromorphic Computing Platform',
     tagline: 'Brain-inspired computing for next-generation AI applications',
     price: '$1,299',
@@ -638,8 +632,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     useCases: ['AI researchCognitive computingRoboticsAutonomous systemsBrain-computer interfacesNeuromorphic applications'], roi: 'Average customer sees 700% ROI through breakthrough research capabilities and reduced computing costs.',
     competitors: ['Intel LoihiIBM TrueNorthBrainChipSpiNNakerTrueNorth'], marketSize: '$8.2B market',
     growthRate: '450% annual growth', variant: 'ai-futuristic',
-    contactInfo: {
-      
+    contactInfo: 
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
       address: '364 E Main St STE 1008 Middletown DE 19709',

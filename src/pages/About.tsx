@@ -1,16 +1,39 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { 
-  Zap, Users, Target, Award, Globe, Shield, 
-  TrendingUp, CheckCircle, Star, Phone, Mail, MapPin 
+import {
+  Target,
+  Shield,
+  TrendingUp,
+  Globe,
+  Users,
+  MapPin,
+  Phone,
+  Award,
+  Mail
 } from 'lucide-react';
 
 const About: React.FC = () => {
   const stats = [
-    { number: '10+', label: 'Years Experience', icon: Award },
-    { number: '500+', label: 'Projects Completed', icon: CheckCircle },
-    { number: '50+', label: 'Happy Clients', icon: Users },
-    { number: '99%', label: 'Client Satisfaction', icon: Star }
+    {
+      icon: Users,
+      value: '500+',
+      label: 'Projects Completed'
+    },
+    {
+      icon: Globe,
+      value: '50+',
+      label: 'Countries Served'
+    },
+    {
+      icon: TrendingUp,
+      value: '75%',
+      label: 'Average Cost Reduction'
+    },
+    {
+      icon: Shield,
+      value: '99.9%',
+      label: 'Uptime Guarantee'
+    }
   ];
 
   const values = [
@@ -83,12 +106,12 @@ const About: React.FC = () => {
               {stats.map((stat, index) => {
                 const Icon = stat.icon;
                 return (
-                  <div key={index} className="text-center">
-                    <div className="bg-white rounded-lg shadow-lg p-6">
-                      <Icon className="w-8 h-8 text-blue-600 mx-auto mb-4" />
-                      <div className="text-3xl font-bold text-gray-900 mb-2">{stat.number}</div>
-                      <div className="text-gray-600">{stat.label}</div>
+                  <div key={index} className="bg-white rounded-lg shadow-lg p-6 text-center">
+                    <div className="bg-gradient-to-br from-blue-600 to-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <Icon className="w-8 h-8 text-white" />
                     </div>
+                    <div className="text-3xl font-bold text-gray-900 mb-2">{stat.value}</div>
+                    <div className="text-gray-600">{stat.label}</div>
                   </div>
                 );
               })}
@@ -123,7 +146,7 @@ const About: React.FC = () => {
             </div>
           </section>
 
-          {/* Values */}
+          {/* Core Values */}
           <section className="mb-16">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Core Values</h2>
@@ -164,10 +187,7 @@ const About: React.FC = () => {
                   <h3 className="text-xl font-bold text-gray-900 mb-2">{member.name}</h3>
                   <p className="text-blue-600 font-semibold mb-3">{member.role}</p>
                   <p className="text-gray-600 mb-4">{member.description}</p>
-                  <a 
-                    href={`mailto:${member.email}`}
-                    className="text-blue-600 hover:text-blue-700 transition-colors"
-                  >
+                  <a href={`mailto:${member.email}`} className="text-blue-600 hover:text-blue-800 transition-colors">
                     {member.email}
                   </a>
                 </div>
@@ -231,15 +251,13 @@ const About: React.FC = () => {
                 Let's discuss how our technology solutions can transform your business.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a 
-                  href="tel:+13024640950" 
+                <a href="tel:+13024640950" 
                   className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center"
                 >
                   <Phone className="w-5 h-5 inline mr-2" />
                   Call +1 302 464 0950
                 </a>
-                <a 
-                  href="mailto:kleber@ziontechgroup.com" 
+                <a href="mailto:kleber@ziontechgroup.com" 
                   className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors text-center"
                 >
                   <Mail className="w-5 h-5 inline mr-2" />

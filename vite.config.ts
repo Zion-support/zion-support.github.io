@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { resolve } from 'path'
+import { visualizer } from 'rollup-plugin-visualizer'
 
 // Optimized Vite configuration for better performance and smaller bundle size
 export default defineConfig({
@@ -8,7 +9,14 @@ export default defineConfig({
     react({
       jsxRuntime: 'automatic'
     }),
+    visualizer({
+      filename: 'dist/stats.html',
+      open: false,
+      gzipSize: true,
+    }),
   ],
+  root: '.',
+  publicDir: 'public',
   resolve: {
     alias: {
       '@': resolve(__dirname, 'src'),

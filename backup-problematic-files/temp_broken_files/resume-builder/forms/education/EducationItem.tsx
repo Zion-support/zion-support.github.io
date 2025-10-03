@@ -6,8 +6,7 @@
 
 
               onClick={() => onEdit(education)}
-              <Edit className="h-4 w-4" />;"
-
+              <Edit className="text-left" />;"
               size="icon";"
               onClick={() => onDelete(education.id!)}
 

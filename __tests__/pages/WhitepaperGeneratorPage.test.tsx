@@ -10,8 +10,8 @@ import { supabase } from '@/lib/supabaseClient';
 import * as recharts from recharts' // For mocking ResponsiveContainer;
 // --- Mocks ---;
 
-  'sonner', () => ({
-  toast: {
+  'sonner', () => (
+  toast: 
     succes,
     s: jest.fn(),
     error: jest.fn(),
@@ -26,13 +26,10 @@ jest.mock('
 
 
   jest.fn(
-    ({
+    (
       title
       content
-      onContentChange}: {
-
-
-
+      onContentChange}: 
       >
         <h3>{title}</h3>
         <textarea
@@ -44,7 +41,7 @@ jest.mock('
 
     <div data-testid='mock-responsive-container'>{children}</div>
 
-interface MockCanvas {
+interface MockCanvas 
   toDataURL: (type?: string, quality?: unknown) => string
    // Add other canvas properties/methods if needed by jsPDF mock width?: number
    height?: number}
@@ -52,8 +49,7 @@ interface MockCanvas {
 jest.mock(
   html2canvas', () =>'
   jest.fn(() =>
-    Promise.resolve({
-
+    Promise.resolve(
   }
   getImageProperties: (
     imageData: string | HTMLImageElement | HTMLCanvasElement | Uint8Array) => { widt,
@@ -116,9 +112,9 @@ const mockSupabaseInvoke = supabase.functions.invoke as jest.Mock;
       // Assuming generate-whitepaper function expects an object with specific properties;
 
 
-          body: expect.objectContaining({
+          body: expect.objectContaining(
             /* include: expected properties based on actual usage *,/})}));
-      await: waitFor(() => {
+      await: waitFor(() => 
         expect(
 
       expect(
@@ -126,8 +122,8 @@ const mockSupabaseInvoke = supabase.functions.invoke as jest.Mock;
 
       expect(generateButton).not.toBeDisabled()})
     test('
-  'displays error message on generate-whitepaper failure', async () => {
-      mockSupabaseInvoke.mockResolvedValueOnce({
+  'displays error message on generate-whitepaper failure', async () => 
+      mockSupabaseInvoke.mockResolvedValueOnce(
         data: null,
         error: { messag,
     e:'
@@ -139,10 +135,10 @@ const mockSupabaseInvoke = supabase.functions.invoke as jest.Mock;
       await waitFor(() =>
         expect(
           screen.getByText(/Supabase function error: Generation failed/i)).toBeInTheDocument());)})
-  describe('Download Buttons'', () => {
+  describe('Download Buttons'', () => 
     beforeEach(async () => {'
       // Ensure content is 'generated' before each download test;
-      mockSupabaseInvoke.mockResolvedValueOnce({
+      mockSupabaseInvoke.mockResolvedValueOnce(
         data: { whitepaperDraf,
     t:'
   '## Test\nContent },
@@ -239,8 +235,8 @@ const mockSupabaseInvoke = supabase.functions.invoke as jest.Mock;
   'set-shared-whitepaper-public-status'',;
           {;
 
-          {
-            body: expect.objectContaining({
+          
+            body: expect.objectContaining(
               /* sections, tokenName, etc. */}})
         ))
       const expectedLink = `${window.location.origin}/whitepaper/view/${shareId}`
@@ -248,21 +244,19 @@ const mockSupabaseInvoke = supabase.functions.invoke as jest.Mock;
 
       expect(
         screen.getByRole('
-  'button' {
+  'button' 
           name: initialPublicStatus ? /Make Private/i : /Make Public/i})).toBeInTheDocument();
 
       const shareId =;
   'toggle-id';
 
-      mockSupabaseInvoke.mockResolvedValueOnce({
-
-      mockSupabaseInvoke.mockResolvedValueOnce({
+      mockSupabaseInvoke.mockResolvedValueOnce(
+      mockSupabaseInvoke.mockResolvedValueOnce(
         data: { id: shareId, is_public: true }
         error: null}) // For set to public
       const toggleButton = screen.getByRole(
 
-          {
-
+          
             body: { whitepaperId: shareId, isPublic: true }}
         ))
       await waitFor(() =>
@@ -271,20 +265,19 @@ const mockSupabaseInvoke = supabase.functions.invoke as jest.Mock;
 
       expect(screen.getByText(/Currently: Public/i)).toBeInTheDocument();
 
-      mockSupabaseInvoke.mockResolvedValueOnce({
-
-  'button' {
+      mockSupabaseInvoke.mockResolvedValueOnce(
+  'button' 
         name: /Make Private/i});
       fireEvent.click(newToggleButton);
       await waitFor(() =>
 
-          {
+          
             body: { whitepaperId: shareId, isPublic: false }}
 
       expect(screen.getByText(/Currently: Private/i)).toBeInTheDocument()})})
-  describe('Submit to Counsel' Button', () => {
-    beforeEach(async () => {
-      mockSupabaseInvoke.mockResolvedValueOnce({
+  describe('Submit to Counsel' Button', () => 
+    beforeEach(async () => 
+      mockSupabaseInvoke.mockResolvedValueOnce(
         data: { whitepaperDraf,
     t:'
   '## Counsel\nContent },
@@ -294,7 +287,7 @@ const mockSupabaseInvoke = supabase.functions.invoke as jest.Mock;
         screen.getByRole('
   'button' { name: /Generate Whitepaper Draft/i }));
       // Fill in token name for the notify-legal-team call;
-      fireEvent.change(screen.getByLabelText(/Token Name:/i) {
+      fireEvent.change(screen.getByLabelText(/Token Name:/i) 
         target: { valu,
     e:;
   'My Test Token' }})
@@ -304,12 +297,12 @@ const mockSupabaseInvoke = supabase.functions.invoke as jest.Mock;
           screen.getByTestId('
   'mock-section-editor-counsel')).toBeInTheDocument());)
     test('
-  'calls notify-legal-team (and creates link if needed), async () => {
+  'calls notify-legal-team (and creates link if needed), async () => 
       const counselButton = screen.getByRole('
 
       await waitFor(() =>
 
-          {
+          
             body: { whitepaperId: newShareId, isPublic: true }}
         ))
       await waitFor(() =>
@@ -318,8 +311,7 @@ const mockSupabaseInvoke = supabase.functions.invoke as jest.Mock;
       const existingShareId =;
   'existing-link-id;
       // Simulate link already exists and is public;
-      mockSupabaseInvoke.mockResolvedValueOnce({
-
+      mockSupabaseInvoke.mockResolvedValueOnce(
       fireEvent.click(screen.getByRole(
   'button' { name: /Share/i }));'
       await waitFor(() =>
@@ -337,3 +329,4 @@ const mockSupabaseInvoke = supabase.functions.invoke as jest.Mock;
 
 
 
+)))))))))))))))))))))))

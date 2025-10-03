@@ -3,9 +3,7 @@
 
 
 export const cuttingEdgeMicroSaasServices2025 = [
-  {
-
-
+  
       'Basel III',
       'Solvency II',
       'Dodd - Frank',
@@ -29,7 +27,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
 
 
 export const cuttingEdgeMicroSaasServices2025 = [
-  {
+  
     id: 'customer-success-ai-pro'
     name: 'Customer Success AI Pro'
     description:
@@ -45,8 +43,8 @@ export const cuttingEdgeMicroSaasServices2025 = [
       'Performance metrics and reporting'
       'Custom AI model training'
     ]
-    pricing: {
-      starter: {
+    pricing: 
+      starter: 
         price: 199
         period: 'month'
         features: [
@@ -55,7 +53,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
           'Email support'
         ]
       }
-      professional: {
+      professional: 
         price: 499
         period: 'month'
         features: [
@@ -65,7 +63,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
           'Custom workflows'
         ]
       }
-      enterprise: {
+      enterprise: 
         price: 1299
         period: 'month'
         features: [
@@ -85,7 +83,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
       'Analytics'
     ]
     website: 'https://ziontechgroup.com/customer-success-ai-pro'
-    contact: {
+    contact: 
       phone: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
     }
@@ -111,7 +109,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
     ]
     compliance: ['GDPR', 'CCPA', 'SOC2', 'Data Privacy Standards']
   }
-  {
+  
     id: 'quantum-supply-chain-optimizer'
     name: 'Quantum Supply Chain Optimizer'
     description:
@@ -128,8 +126,8 @@ export const cuttingEdgeMicroSaasServices2025 = [
       'Multi-modal transportation planning'
       'Real-time collaboration tools'
     ]
-    pricing: {
-      starter: {
+    pricing: 
+      starter: 
         price: 299
         period: 'month'
         features: [
@@ -138,7 +136,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
           'Email support'
         ]
       }
-      professional: {
+      professional: 
         price: 799
         period: 'month'
         features: [
@@ -148,7 +146,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
           'Custom modeling'
         ]
       }
-      enterprise: {
+      enterprise: 
         price: 1999
         period: 'month'
         features: [
@@ -168,7 +166,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
       'Analytics'
     ]
     website: 'https://ziontechgroup.com/quantum-supply-chain-optimizer'
-    contact: {
+    contact: 
       phone: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
     }
@@ -197,7 +195,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
       'Data Privacy Laws'
     ]
   }
-  {
+  
     id: 'blockid-verify-pro'
     name: 'BlockID Verify Pro'
     description:
@@ -214,8 +212,8 @@ export const cuttingEdgeMicroSaasServices2025 = [
       'Mobile and web applications'
       'White-label solutions'
     ]
-    pricing: {
-      starter: {
+    pricing: 
+      starter: 
         price: 149
         period: 'month'
         features: [
@@ -224,7 +222,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
           'Email support'
         ]
       }
-      professional: {
+      professional: 
         price: 399
         period: 'month'
         features: [
@@ -234,7 +232,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
           'Custom workflows'
         ]
       }
-      enterprise: {
+      enterprise: 
         price: 999
         period: 'month'
         features: [
@@ -254,7 +252,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
       'Compliance'
     ]
     website: 'https://ziontechgroup.com/blockid-verify-pro'
-    contact: {
+    contact: 
       phone: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
     }
@@ -285,7 +283,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
       'Global Identity Standards'
     ]
   }
-  {
+  
     id: 'hr-analytics-ai-suite'
     name: 'HR Analytics AI Suite'
     description:
@@ -302,8 +300,8 @@ export const cuttingEdgeMicroSaasServices2025 = [
       'Integration with HR systems'
       'Predictive modeling capabilities'
     ]
-    pricing: {
-      starter: {
+    pricing: 
+      starter: 
         price: 249
         period: 'month'
         features: [
@@ -312,7 +310,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
           'Email support'
         ]
       }
-      professional: {
+      professional: 
         price: 649
         period: 'month'
         features: [
@@ -322,7 +320,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
           'Custom reporting'
         ]
       }
-      enterprise: {
+      enterprise: 
         price: 1699
         period: 'month'
         features: [
@@ -342,7 +340,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
       'Predictive Analytics'
     ]
     website: 'https://ziontechgroup.com/hr-analytics-ai-suite'
-    contact: {
+    contact: 
       phone: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
     }
@@ -372,7 +370,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
       'Data Protection Regulations'
     ]
   }
-  {
+  
     id: 'quantum-risk-financial-manager'
     name: 'Quantum Risk Financial Manager'
     description:
@@ -389,8 +387,8 @@ export const cuttingEdgeMicroSaasServices2025 = [
       'Performance attribution analysis'
       'Comprehensive risk reporting'
     ]
-    pricing: {
-      starter: {
+    pricing: 
+      starter: 
         price: 399
         period: 'month'
         features: [
@@ -399,7 +397,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
           'Email support'
         ]
       }
-      professional: {
+      professional: 
         price: 999
         period: 'month'
         features: [
@@ -409,7 +407,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
           'Custom models'
         ]
       }
-      enterprise: {
+      enterprise: 
         price: 2499
         period: 'month'
         features: [
@@ -429,7 +427,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
       'Compliance'
     ]
     website: 'https://ziontechgroup.com/quantum-risk-financial-manager'
-    contact: {
+    contact: 
       phone: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
     }
@@ -460,8 +458,7 @@ export const cuttingEdgeMicroSaasServices2025 = [
       'Risk Management Standards'
     ]
   }export const cuttingEdgeMicroSaasServices2025 = [
-  {
-
+  
 ];      'Portfolio risk assessmentInvestment strategy optimizationRegulatory compliance reportingRisk model developmentPerformance analysis and attribution'
     id: 'customer-success-ai-pro', name: 'Customer Success AI Pro',
     description: 'Intelligent customer success platform that uses AI to predict customer churn, optimize engagement strategies, and maximize customer lifetime value through predictive analytics.',

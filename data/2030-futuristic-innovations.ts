@@ -112,7 +112,7 @@ reviews: 89
 }];  reviews: number
 
 import { ServiceVariant } from '../types/service-variants';
-export interface FuturisticInnovation2030 {
+export interface FuturisticInnovation2030 
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -126,8 +126,7 @@ export interface FuturisticInnovation2030 {
   useCases: string[], roi: string,
   competitors: string[], marketSize: string,
   growthRate: string, variant: ServiceVariant,
-  contactInfo: {
-      
+  contactInfo: 
     mobile: string, email: string,
     address: string,
     website: string
@@ -144,10 +143,7 @@ export interface FuturisticInnovation2030 {
 }
 export const futuristicInnovations2030: FuturisticInnovation2030[] = [
   // AI Consciousness & Emotional Intelligence
-  {
-
-
-
+  
     id: 'ai-consciousness-evolution-platform', name: 'AI Consciousness Evolution Platform',
     tagline: 'Develop genuine AI consciousness and self-awareness',
     price: '$19,999',
@@ -184,7 +180,7 @@ export const futuristicInnovations2030: FuturisticInnovation2030[] = [
     marketSize: '$15B market',
     growthRate: '300% annual growth',
     variant: 'ai-futuristic',
-    contactInfo: {
+    contactInfo: 
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -197,7 +193,7 @@ export const futuristicInnovations2030: FuturisticInnovation2030[] = [
     rating: 4.9,
     reviews: 8
   },
-  {
+  
     id: 'ai-emotional-intelligence-platform',
     name: 'AI Emotional Intelligence Platform',
     tagline: 'Real-time emotion analysis and empathetic response generation',
@@ -235,7 +231,7 @@ export const futuristicInnovations2030: FuturisticInnovation2030[] = [
     marketSize: '$3.5B market',
     growthRate: '150% annual growth',
     variant: 'ai-futuristic',
-    contactInfo: {
+    contactInfo: 
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
@@ -248,7 +244,7 @@ export const futuristicInnovations2030: FuturisticInnovation2030[] = [
     reviews: 23
   },
   // Quantum & Emerging Tech
-  {
+  
     id: 'quantum-internet-security-gateway', name: 'Quantum Internet Security Gateway'
     tagline: 'Unbreakable quantum encryption for the future internet'
     price: '$15,999'
@@ -270,7 +266,7 @@ export const futuristicInnovations2030: FuturisticInnovation2030[] = [
     competitors: ['ID Quantique, Toshiba Quantum, Quantum Xchange'];
     marketSize: '$8B market', growthRate: '250% annual growth'
     variant: 'quantum-futuristic'
-    contactInfo: {
+    contactInfo: 
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
@@ -282,8 +278,7 @@ export const futuristicInnovations2030: FuturisticInnovation2030[] = [
 
     reviews: 5
   }
-  {
-
+  
     id: 'biotech-dna-computing-platform', name: 'Biotech DNA Computing Platform'
     tagline: 'Revolutionary DNA-based computation and data storage'
     price: '$25,999'
@@ -304,7 +299,7 @@ export const futuristicInnovations2030: FuturisticInnovation2030[] = [
     roi: 'Average customer sees 600% ROI within 18 months through revolutionary computing capabilities.', competitors: ['No direct competitors in DNA computing']
     marketSize: '$12B market', growthRate: '400% annual growth'
     variant: 'biotech-futuristic'
-    contactInfo: {
+    contactInfo: 
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
@@ -315,7 +310,7 @@ export const futuristicInnovations2030: FuturisticInnovation2030[] = [
     rating: 5.0,    reviews: 2
   }
   // Space & Metaverse Tech
-  {
+  
     id: 'space-mining-automation-platform', name: 'Space Mining Automation Platform'
     tagline: 'Automated asteroid mining and space resource extraction'
     price: '$45,999'
@@ -337,7 +332,7 @@ export const futuristicInnovations2030: FuturisticInnovation2030[] = [
     competitors: ['Planetary Resources, Deep Space Industries, AstroForge'];
     marketSize: '$25B market', growthRate: '500% annual growth'
     variant: 'space-futuristic'
-    contactInfo: {
+    contactInfo: 
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
@@ -349,8 +344,7 @@ export const futuristicInnovations2030: FuturisticInnovation2030[] = [
 
     reviews: 1
   }
-  {
-
+  
     id: 'metaverse-development-platform', name: 'Metaverse Development Platform'
     tagline: 'Build immersive virtual worlds and digital experiences', price: '$499'
     period: '/month'
@@ -371,7 +365,7 @@ export const futuristicInnovations2030: FuturisticInnovation2030[] = [
     competitors: ['Unity, Unreal Engine, Roblox, Decentraland'];
     marketSize: '$8B market', growthRate: '200% annual growth'
     variant: 'metaverse-futuristic'
-    contactInfo: {
+    contactInfo: 
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
@@ -382,7 +376,7 @@ export const futuristicInnovations2030: FuturisticInnovation2030[] = [
     rating: 4.7,    reviews: 67
   }
   // Enterprise IT Solutions
-  {
+  
     id: 'autonomous-devops-platform', name: 'Autonomous DevOps Platform'
     tagline: 'Fully autonomous DevOps operations and infrastructure management', price: '$799'
     period: '/month'
@@ -403,7 +397,7 @@ export const futuristicInnovations2030: FuturisticInnovation2030[] = [
     competitors: ['GitLab, Jenkins, CircleCI, GitHub Actions'];
     marketSize: '$6B market', growthRate: '180% annual growth'
     variant: 'it-futuristic'
-    contactInfo: {
+    contactInfo: 
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
@@ -415,7 +409,7 @@ export const futuristicInnovations2030: FuturisticInnovation2030[] = [
 
     reviews: 42
   },
-  {
+  
     id: 'zero-trust-network-architecture',
     name: 'Zero Trust Network Architecture',
     tagline: 'Never trust, always verify - comprehensive zero trust security',
@@ -453,7 +447,7 @@ export const futuristicInnovations2030: FuturisticInnovation2030[] = [
     marketSize: '$5B market',
     growthRate: '160% annual growth',
     variant: 'security-futuristic',
-    contactInfo: {
+    contactInfo: 
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -466,8 +460,7 @@ export const futuristicInnovations2030: FuturisticInnovation2030[] = [
     rating: 4.9,
     reviews: 89
   }
-  {
-
+  
     id: 'zero-trust-network-architecture', name: 'Zero Trust Network Architecture'
     tagline: 'Never trust, always verify - comprehensive zero trust security'
     price: '$599', period: '/month'
@@ -488,7 +481,7 @@ export const futuristicInnovations2030: FuturisticInnovation2030[] = [
     competitors: ['Palo Alto Networks, Cisco, Fortinet, Zscaler'];
     marketSize: '$5B market', growthRate: '160% annual growth'
     variant: 'security-futuristic'
-    contactInfo: {
+    contactInfo: 
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
@@ -531,7 +524,7 @@ reviews: 89;
 }
 export const futuristicInnovations2030: FuturisticInnovation2030[] = [;
   // AI Consciousness & Emotional Intelligence;
-  {
+  
     id: 'ai - consciousness - evolution - platform', name: 'AI Consciousness Evolution Platform',
     tagline: 'Develop genuine AI consciousness and self - awareness',
     price: '$19, 999',
@@ -579,7 +572,7 @@ export const futuristicInnovations2030: FuturisticInnovation2030[] = [;
 ;
     marketSize: '$5B market', growthRate: '160% annual growth'
     variant: 'security-futuristic'
-    contactInfo: {
+    contactInfo: 
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
@@ -635,7 +628,7 @@ export interface FuturisticInnovation2030 {;
 }
 export const futuristicInnovations2030: FuturisticInnovation2030[] = [;
   // AI Consciousness & Emotional Intelligence;
-  {
+  
     id: 'ai - consciousness - evolution - platform', name: 'AI Consciousness Evolution Platform',
     tagline: 'Develop genuine AI consciousness and self - awareness',
     price: '$19, 999',
@@ -998,7 +991,7 @@ export const futuristicInnovations2030: FuturisticInnovation2030[] = [;
 ;
     marketSize: '$5B market', growthRate: '160% annual growth'
     variant: 'security-futuristic'
-    contactInfo: {
+    contactInfo: 
     reviews: 89
       website: 'https://ziontechgroup.com';
     },;

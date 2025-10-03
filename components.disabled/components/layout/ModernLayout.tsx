@@ -86,9 +86,9 @@ const ModernLayout: React.FC<ModernLayoutProps> = ({
         />
       </Helmet>
 
-      <div className="min-h-screen bg-white text-gray-900 flex flex-col">
+      <div className="text-left">
         <ModernHeader />
-        <main className="flex-1 pt-20">{children}</main>
+        <main className="text-left">{children}</main>
         <ModernFooter />
       </div>
     </>

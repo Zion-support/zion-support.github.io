@@ -55,22 +55,22 @@ export const InteractiveButton: React.FC<InteractiveButtonProps> = ({
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          className="absolute inset-0 flex items-center justify-center"
+          className="text-left"
         >
-          <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
+          <div className="text-left" />
         </motion.div>
       )}
 
       <motion.div
         animate={{ opacity: loading ? 0 : 1 }}
-        className="flex items-center"
+        className="text-left"
       >
-        {icon && <span className="mr-2">{icon}</span>}, {children}
+        {icon && <span className="text-left">{icon}<}, {children}
       </motion.div>
 
       {variant === 'gradient' && (
         <motion.div
-          className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0"
+          className="text-left"
           initial={{ x: '-100%' }}
           animate={{ x: isHovered ? '100%' : '-100%' }}
           transition={{ duration: 0.6 }}
@@ -148,15 +148,15 @@ export const ProgressBar: React.FC<ProgressBarProps> = ({
   showPercentage = true }) => {
   return (
     <div className={`w-full ${className}`}>
-      <div className="flex justify-between items-center mb-2">
-        <span className="text-sm font-medium text-gray-700">Progress</span>
+      <div className="text-left">
+        <span className="text-left">Progress<
         {showPercentage && (
-          <span className="text-sm text-gray-500">{Math.round(progress)}%</span>
+          <span className="text-left">{Math.round(progress)}%<
         )}
       </div>
-      <div className="w-full bg-gray-200 rounded-full h-2">
+      <div className="text-left">
         <motion.div
-          className="bg-gradient-to-r from-blue-600 to-purple-600 h-2 rounded-full"
+          className="text-left"
           initial={{ width: 0 }}
           animate={{ width: `${progress}%` }}
           transition={{ duration: 0.5, ease: 'easeOut' }}
@@ -184,7 +184,7 @@ export const Tooltip: React.FC<TooltipProps> = ({
 
   return (
     <div
-      className="relative inline-block"
+      className="text-left"
       onMouseEnter={() => setIsVisible(true)}
       onMouseLeave={() => setIsVisible(false)}
     >

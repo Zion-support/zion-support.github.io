@@ -4,145 +4,145 @@ import { ArrowRight, Zap, Brain, TrendingUp } from 'lucide-react';
 
 export default function RevolutionaryContent2026Banner() {
   return (
-    <div className="w-full bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 text-white py-16">
-      <div className="max-w-6xl mx-auto px-4">
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm text-sm font-medium mb-6">
-            <span className="w-4 h-4 mr-2">🚀</span>
+    <div className="text-left">
+      <div className="text-left">
+        <div className="text-left">
+          <div className="text-left">
+            <span className="text-left">🚀<
             REVOLUTIONARY BREAKTHROUGH 2026
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+          <h2 className="text-left">
             The AI Revolution is Here
           </h2>
-          <p className="text-xl opacity-90 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-left">
             Discover the groundbreaking AI innovations that are reshaping entire industries and creating unprecedented opportunities for businesses worldwide.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 mb-12">
+        <div className="text-left">
           {/* Revolutionary Breakthrough Article */}
-          <Link href="/blog/ai-2026-revolutionary-breakthrough" className="group">
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 hover:scale-105">
-              <div className="flex items-center gap-2 mb-4">
-                <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-semibold">
+          <Link href="/blog/ai-2026-revolutionary-breakthrough" className="text-left">
+            <div className="text-left">
+              <div className="text-left">
+                <span className="text-left">
                   BREAKTHROUGH
-                </span>
-                <span className="text-sm opacity-75">25 min read</span>
+                <
+                <span className="text-left">25 min read<
               </div>
-              <h3 className="text-xl font-bold mb-4 group-hover:text-yellow-200 transition-colors">
+              <h3 className="text-left">
                 AI 2026 Revolutionary Breakthrough
               </h3>
-              <p className="text-sm opacity-90 mb-6">
+              <p className="text-left">
                 Explore the groundbreaking AI innovations of 2026 that are reshaping entire industries and creating unprecedented opportunities.
               </p>
-              <div className="flex items-center justify-between">
-                <div className="flex gap-4">
-                  <div className="text-center">
-                    <div className="text-lg font-bold text-yellow-300">$2.5T</div>
-                    <div className="text-xs opacity-75">Market Value</div>
+              <div className="text-left">
+                <div className="text-left">
+                  <div className="text-left">
+                    <div className="text-left">$2.5T</div>
+                    <div className="text-left">Market Value</div>
                   </div>
-                  <div className="text-center">
-                    <div className="text-lg font-bold text-yellow-300">95%</div>
-                    <div className="text-xs opacity-75">Efficiency</div>
+                  <div className="text-left">
+                    <div className="text-left">95%</div>
+                    <div className="text-left">Efficiency</div>
                   </div>
                 </div>
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="text-left" />
               </div>
             </div>
           </Link>
 
           {/* Cognitive Superintelligence Article */}
-          <Link href="/blog/ai-cognitive-superintelligence-2026" className="group">
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 hover:scale-105">
-              <div className="flex items-center gap-2 mb-4">
-                <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-semibold">
+          <Link href="/blog/ai-cognitive-superintelligence-2026" className="text-left">
+            <div className="text-left">
+              <div className="text-left">
+                <span className="text-left">
                   SUPERINTELLIGENCE
-                </span>
-                <span className="text-sm opacity-75">32 min read</span>
+                <
+                <span className="text-left">32 min read<
               </div>
-              <h3 className="text-xl font-bold mb-4 group-hover:text-yellow-200 transition-colors">
+              <h3 className="text-left">
                 Cognitive Superintelligence 2026
               </h3>
-              <p className="text-sm opacity-90 mb-6">
+              <p className="text-left">
                 Discover how cognitive superintelligence systems are revolutionizing AI with advanced reasoning and emotional intelligence.
               </p>
-              <div className="flex items-center justify-between">
-                <div className="flex gap-4">
-                  <div className="text-center">
-                    <div className="text-lg font-bold text-yellow-300">1000x</div>
-                    <div className="text-xs opacity-75">Speed</div>
+              <div className="text-left">
+                <div className="text-left">
+                  <div className="text-left">
+                    <div className="text-left">1000x</div>
+                    <div className="text-left">Speed</div>
                   </div>
-                  <div className="text-center">
-                    <div className="text-lg font-bold text-yellow-300">$750M</div>
-                    <div className="text-xs opacity-75">ROI</div>
+                  <div className="text-left">
+                    <div className="text-left">$750M</div>
+                    <div className="text-left">ROI</div>
                   </div>
                 </div>
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="text-left" />
               </div>
             </div>
           </Link>
 
           {/* Mega Transformation Case Study */}
-          <Link href="/case-studies/ai-mega-transformation-success-2026" className="group">
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 hover:scale-105">
-              <div className="flex items-center gap-2 mb-4">
-                <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-semibold">
+          <Link href="/case-studies/ai-mega-transformation-success-2026" className="text-left">
+            <div className="text-left">
+              <div className="text-left">
+                <span className="text-left">
                   $150M ROI
-                </span>
-                <span className="text-sm opacity-75">18 min read</span>
+                <
+                <span className="text-left">18 min read<
               </div>
-              <h3 className="text-xl font-bold mb-4 group-hover:text-yellow-200 transition-colors">
+              <h3 className="text-left">
                 Mega Transformation Success
               </h3>
-              <p className="text-sm opacity-90 mb-6">
+              <p className="text-left">
                 See how a Fortune 500 company achieved $150M ROI with comprehensive AI transformation and cognitive superintelligence.
               </p>
-              <div className="flex items-center justify-between">
-                <div className="flex gap-4">
-                  <div className="text-center">
-                    <div className="text-lg font-bold text-yellow-300">$150M</div>
-                    <div className="text-xs opacity-75">ROI</div>
+              <div className="text-left">
+                <div className="text-left">
+                  <div className="text-left">
+                    <div className="text-left">$150M</div>
+                    <div className="text-left">ROI</div>
                   </div>
-                  <div className="text-center">
-                    <div className="text-lg font-bold text-yellow-300">95%</div>
-                    <div className="text-xs opacity-75">Efficiency</div>
+                  <div className="text-left">
+                    <div className="text-left">95%</div>
+                    <div className="text-left">Efficiency</div>
                   </div>
                 </div>
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="text-left" />
               </div>
             </div>
           </Link>
         </div>
 
-        <div className="text-center">
-          <div className="inline-flex items-center gap-4 mb-6">
-            <div className="flex items-center gap-2">
-              <Brain className="w-5 h-5" />
-              <span className="font-semibold">Cognitive AI</span>
+        <div className="text-left">
+          <div className="text-left">
+            <div className="text-left">
+              <Brain className="text-left" />
+              <span className="text-left">Cognitive AI<
             </div>
-            <div className="w-2 h-2 bg-white/50 rounded-full"></div>
-            <div className="flex items-center gap-2">
-              <Zap className="w-5 h-5" />
-              <span className="font-semibold">Autonomous Systems</span>
+            <div className="text-left"></div>
+            <div className="text-left">
+              <Zap className="text-left" />
+              <span className="text-left">Autonomous Systems<
             </div>
-            <div className="w-2 h-2 bg-white/50 rounded-full"></div>
-            <div className="flex items-center gap-2">
-              <TrendingUp className="w-5 h-5" />
-              <span className="font-semibold">$150M+ ROI</span>
+            <div className="text-left"></div>
+            <div className="text-left">
+              <TrendingUp className="text-left" />
+              <span className="text-left">$150M+ ROI<
             </div>
           </div>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="text-left">
             <Link
               href="/blog"
-              className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors inline-flex items-center justify-center"
+              className="text-left"
             >
               Explore All Revolutionary Content
-              <ArrowRight className="w-5 h-5 ml-2" />
+              <ArrowRight className="text-left" />
             </Link>
             <Link
               href="/services"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-purple-600 transition-colors inline-flex items-center justify-center"
+              className="text-left"
             >
               Start Your AI Transformation
             </Link>

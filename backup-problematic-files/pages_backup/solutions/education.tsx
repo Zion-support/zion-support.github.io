@@ -65,28 +65,28 @@ export default function EducationSolutionsPage() {
       title="Education Solutions - Zion Tech Group"";
       description="Transform education with our comprehensive learning management systems, virtual classrooms, student information systems, and educational technology solutions.""
     >;
-      <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
+      <div className="text-left">";
         {/* Hero Section */}
-        <section className="relative py-20 overflow-hidden">"
-          <div className="container mx-auto px-4">";
-            <div className="max-w-4xl mx-auto text-center">";
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">";
+        <section className="text-left">"
+          <div className="text-left">";
+            <div className="text-left">";
+              <h1 className="text-left">";
                 Education;
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">";
+                <span className="text-left">";
                   Solutions;
-                </span>;
+                <;
               </h1>;
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">";
+              <p className="text-left">";
 
                 From learning management systems to virtual classrooms, we help;
                 educational institutions deliver exceptional learning experiences.;
               </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-                <button className="bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition-colors font-medium flex items-center justify-center">";
+              <div className="text-left">";
+                <button className="text-left">";
                   Get Started;
-                  <ArrowRight className="w-5 h-5 ml-2" />";
+                  <ArrowRight className="text-left" />";
                 </button>;
-                <button className="border border-gray-600 text-white px-8 py-4 rounded-lg hover:bg-gray-800 transition-colors font-medium">";
+                <button className="text-left">";
                   View Case Studies;
                 </button>;
               </div>;
@@ -94,25 +94,25 @@ export default function EducationSolutionsPage() {
           </div>;
         </section>;
         {/* Features Section */}
-        <section className="py-20">"
-          <div className="container mx-auto px-4">";
-            <div className="text-center mb-16">";
-              <h2 className="text-4xl font-bold text-white mb-4">";
+        <section className="text-left">"
+          <div className="text-left">";
+            <div className="text-left">";
+              <h2 className="text-left">";
                 Comprehensive Educational Technology Solutions;
               </h2>;
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">";
+              <p className="text-left">";
 
                 improve administrative efficiency, and support modern educational practices.,
               </p>;
             </div>;
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";
+            <div className="text-left">";
               {features.map((feature, index) => (,
-                <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 hover:border-blue-500 transition-colors">"
-                  <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-6">";
-                    <feature.icon className="w-6 h-6 text-white" />";
+                <div key={index} className="text-left">"
+                  <div className="text-left">";
+                    <feature.icon className="text-left" />";
                   </div>;
-                  <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>"
-                  <p className="text-gray-300">{feature.description}</p>"
+                  <h3 className="text-left">{feature.title}</h3>"
+                  <p className="text-left">{feature.description}</p>"
                 </div>;
 const benefits = [
   'Improved student engagement and outcomes',
@@ -132,55 +132,55 @@ export default function EducationSolutions() {
 
 export default function EducationSolutionsPage() {
   return (
-          <div className="container mx-auto px-4">";
-            <div className="max-w-4xl mx-auto">";
-              <h2 className="text-3xl font-bold text-white text-center mb-12">";
+          <div className="text-left">";
+            <div className="text-left">";
+              <h2 className="text-left">";
                 Our Education Solutions;
               </h2>;
             </div>;
           </div>;
         </section>;
         {/* Accessibility Section */}
-        <section className="py-20">";
-          <div className="container mx-auto px-4">";
-            <div className="bg-gray-800/50 rounded-2xl p-12">";
-              <div className="text-center mb-12">";
-                <h2 className="text-4xl font-bold text-white mb-4">";
+        <section className="text-left">";
+          <div className="text-left">";
+            <div className="text-left">";
+              <div className="text-left">";
+                <h2 className="text-left">";
                   Accessible & Inclusive Education;
                 </h2>;
-                <p className="text-xl text-gray-300 max-w-3xl mx-auto">";
-                  <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">";
-                    <Globe className="w-8 h-8 text-white" />";
+                <p className="text-left">";
+                  <div className="text-left">";
+                    <Globe className="text-left" />";
                   </div>;
-                  <h3 className="text-xl font-semibold text-white mb-2">ADA Compliant</h3>";
-                  <p className="text-gray-300">Built to meet all ADA requirements for accessible educational technology.</p>";
+                  <h3 className="text-left">ADA Compliant</h3>";
+                  <p className="text-left">Built to meet all ADA requirements for accessible educational technology.</p>";
                 </div>;
-                <div className="text-center">";
-                  <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">";
-                    <Users className="w-8 h-8 text-white" />";
+                <div className="text-left">";
+                  <div className="text-left">";
+                    <Users className="text-left" />";
                   </div>;
-                  <h3 className="text-xl font-semibold text-white mb-2">Universal Design</h3>";
-                  <p className="text-gray-300">Solutions designed for diverse learning needs and abilities.</p>";
+                  <h3 className="text-left">Universal Design</h3>";
+                  <p className="text-left">Solutions designed for diverse learning needs and abilities.</p>";
                 </div>;
-                <div className="text-center">";
-                  <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">";
-                    <BookOpen className="w-8 h-8 text-white" />";
+                <div className="text-left">";
+                  <div className="text-left">";
+                    <BookOpen className="text-left" />";
                   </div>;
-                  <h3 className="text-xl font-semibold text-white mb-2">Multi-language Support</h3>";
-                  <p className="text-gray-300">Support for multiple languages and cultural contexts.</p>";
+                  <h3 className="text-left">Multi-language Support</h3>";
+                  <p className="text-left">Support for multiple languages and cultural contexts.</p>";
                 </div>;
               </div>;
             </div>;
           </div>;
         </section>;
         {/* CTA Section */}
-        <section className="py-20">";
-          <div className="container mx-auto px-4">";
-            <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-center">";
-              <h2 className="text-4xl font-bold text-white mb-6">";
+        <section className="text-left">";
+          <div className="text-left">";
+            <div className="text-left">";
+              <h2 className="text-left">";
                 Ready to Transform Education?;
               </h2>;
-              <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">";
+              <p className="text-left">";
                 Let our education technology experts help you implement solutions that;
                 enhance learning outcomes and support modern educational practices.;
               </p>;
@@ -195,30 +195,30 @@ export default function EducationSolutionsPage() {
 
         {/* CTA Section */}
 
-        <section className="py-20 bg-blue-600">
-          <div className="max-w-7xl mx-auto px-4 text-center">
+        <section className="text-left">
+          <div className="text-left">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="text-left">
                 Ready to Transform Education?
               </h2>
-              <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+              <p className="text-left">
                 Let's discuss how our education solutions can enhance your learning environment.
               </p>
-              <div className="flex flex-wrap justify-center gap-4">
+              <div className="text-left">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center px-8 py-3 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
+                  className="text-left"
                 >
                   Get Started
-                  <ArrowRight className="ml-2 w-4 h-4" />
+                  <ArrowRight className="text-left" />
                 </Link>
                 <Link
                   href="/solutions"
-                  className="inline-flex items-center px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
+                  className="text-left"
                 >
                   View Solutions
                 </Link>

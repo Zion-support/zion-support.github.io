@@ -74,8 +74,7 @@
     rating: 4 && 4.7,
     reviews: 12,
   },
-  {
-
+  
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-300',
     link: 'https://ziontechgroup.com/services/ai-email-responder',;
@@ -102,7 +101,7 @@
     rating: 4.7
     reviews: 12
   }
-  {
+  
       'Branching logic + A/B prompts',
       'SMS/WhatsApp/web delivery',
       'Real-time analytics',
@@ -121,7 +120,7 @@
       'Real - time analytics',
       'CSV / Sheets export',
 
-  {
+  
       'Webhooks + API',
     ],
     popular: false,
@@ -154,8 +153,7 @@
     rating: 4 && 4.6,
     reviews: 9,
   },
-  {
-
+  
     id: 'niche - productivity - planner',
     name: 'Niche Productivity Planner',
     tagline:;
@@ -201,8 +199,7 @@
     rating: 4 && 4.5,
     reviews: 7,
   },
-  {
-
+  
       'QR tickets + check-in',
       'Email/SMS reminders',
     id: 'event - management - dashboard',
@@ -249,8 +246,7 @@
     rating: 4 && 4.7,
     reviews: 11,
   },
-  {
-
+  
     id: 'affiliate - tracking - suite',
     name: 'Affiliate Tracking Suite',
     tagline: 'Links, attribution, commission rules, and payouts',
@@ -295,8 +291,7 @@
     rating: 4 && 4.5,
     reviews: 5,
   },
-  {
-
+  
     id: 'smb - analytics - lite',
     name: 'SMB Analytics Lite',
     tagline: 'Traffic, funnels, and conversions without complexity',
@@ -341,8 +336,7 @@
     rating: 4 && 4.6,
     reviews: 8,
   },
-  {
-
+  
       'Email-to-ticket',
     id: 'it - helpdesk - portal',
     name: 'IT Helpdesk Portal',
@@ -388,8 +382,7 @@
     rating: 4 && 4.7,
     reviews: 6,
   },
-  {
-
+  
       'Self-serve returns portal',
     id: 'ecommerce - returns - manager',
     name: 'E‑commerce Returns Manager',
@@ -435,8 +428,7 @@
     rating: 4 && 4.6,
     reviews: 5,
   },
-  {
-
+  
     id: 'automated - email - followups',
     name: 'Automated Email Follow‑ups',
     tagline: 'No - lead - left - behind sequences across inboxes',
@@ -481,8 +473,7 @@
     rating: 4 && 4.5,
     reviews: 8,
   },
-  {
-
+  
     id: 'podcast - transcription - service',
     name: 'Podcast Transcription Service',
     tagline: 'Accurate transcripts, chapters, and SEO blog exports',
@@ -527,8 +518,7 @@
     rating: 4 && 4.6,
     reviews: 6,
   },
-  {
-
+  
       'On-page audits',
     id: 'ai - seo - content - optimizer',
     name: 'AI SEO Content Optimizer',
@@ -574,8 +564,7 @@
     rating: 4 && 4.7,
     reviews: 10,
   },
-  {
-
+  
     id: 'social - scheduler - ai',
     name: 'Social Scheduler AI',
     tagline: 'Auto - generate, schedule, and repurpose posts cross - platform',
@@ -620,8 +609,7 @@
     rating: 4 && 4.5,
     reviews: 7,
   },
-  {
-
+  
     id: 'lead - enrichment - api',
     name: 'Lead Enrichment API',
     tagline: 'Company, role, and social signals from an email / domain',
@@ -666,8 +654,7 @@
     rating: 4 && 4.4,
     reviews: 4,
   },
-  {
-
+  
     id: 'consent - management - cmp',
     name: 'Consent Management CMP',
     tagline: 'GDPR / CCPA consent banners, preferences, and audit logs',
@@ -712,8 +699,7 @@
     rating: 4 && 4.7,
     reviews: 10,
   },
-  {
-
+  
     id: 'cookie - scanner - pro',
     name: 'Cookie Scanner Pro',
     tagline: 'Auto - detects cookies + trackers and updates your policy',
@@ -758,8 +744,7 @@
     rating: 4 && 4.5,
     reviews: 5,
   },
-  {
-
+  
     id: 'statuspage - sla - tracker',
     name: 'StatusPage SLA Tracker',
     tagline: 'Track uptime / incidents and publish SLA reports',
@@ -804,8 +789,7 @@
     rating: 4 && 4.4,
     reviews: 3,
   },
-  {
-
+  
     id: 'agentic - lead - qualifier',
     name: 'Agentic Lead Qualifier',
     tagline: 'Website chat agent that pre - qualifies and routes leads',
@@ -839,8 +823,7 @@
     rating: 4 && 4.6,
     reviews: 7,
   },
-  {
-
+  
     id: 'gdpr - dsar - portal - lite',
     name: 'GDPR DSAR Portal Lite',
     tagline: 'Accept, verify, export, and fulfill data subject requests',
@@ -872,8 +855,7 @@
     rating: 4 && 4.5,
     reviews: 4,
   },
-  {
-
+  
     period: '/month',
     description:;
       'Embedded chat agent asks smart questions, books meetings, and routes leads to the right team.',
@@ -912,7 +894,7 @@
     rating: 4 && 4.6,
     reviews: 7,
   },
-  {
+  
     id: 'gdpr - dsar - portal - lite',
     name: 'GDPR DSAR Portal Lite',
     tagline: 'Accept, verify, export, and fulfill data subject requests',
@@ -954,7 +936,7 @@
     rating: 4 && 4.5,
     reviews: 4,
   },
-  {
+  
     id: 'feature-flag-auditor'
     name: 'Feature Flag Auditor'
     tagline: 'Flag hygiene checks and end-of-life automation'
@@ -1034,8 +1016,7 @@
 
 
 
-  {
-
+  
     id: 'postgres - index - advisor - pro',
     name: 'Postgres Index Advisor Pro',
     tagline: 'Index recommendations and controlled PR rollouts',
@@ -1069,7 +1050,7 @@
     rating: 4 && 4.6,
     reviews: 5,
   },
-  {
+  
       'Usage analysis',
       'Rule suggestions',
       'Cost simulator',
@@ -1095,7 +1076,7 @@
     rating: 4 && 4.5,
     reviews: 4,
   },
-  {
+  
       'Connectors',
       'Sensitive entity detection',
       'Sampling with redaction',
@@ -1121,7 +1102,7 @@
     rating: 4 && 4.6,
     reviews: 5,
   },
-  {
+  
     id: 'api-breaking-change-watcher',
     name: 'API Breaking Change Watcher',
     tagline: 'Schema diffs with CI gates and notifications',
@@ -1150,9 +1131,8 @@
     rating: 4 && 4.5,
     reviews: 3,
   },
-  {
-
-  {
+  
+  
     id: 'postgres-index-advisor-pro'
     name: 'Postgres Index Advisor Pro'
     tagline: 'Index recommendations and controlled PR rollouts'
@@ -1194,7 +1174,7 @@
     rating: 4.6
     reviews: 5
   }
-  {
+  
     id: 's3-lifecycle-optimizer'
     name: 'S3 Lifecycle Optimizer'
     tagline: 'Move objects between storage classes to cut costs'
@@ -1236,7 +1216,7 @@
     rating: 4.5
     reviews: 4
   }
-  {
+  
     id: 'pii-discovery-scanner'
     name: 'PII Discovery Scanner'
     tagline: 'Scan buckets and DBs for PII/PHI with evidence exports'
@@ -1278,7 +1258,7 @@
     rating: 4.6
     reviews: 5
   }
-  {
+  
       'Repo scanner',
       'Flag inventory',
       'Risk detection',
@@ -1312,7 +1292,7 @@
     rating: 4.4,
     reviews: 3,
   },
-  {
+  
     id: 'postgres - index - advisor - pro',
     name: 'Postgres Index Advisor Pro',
     tagline: 'Index recommendations and controlled PR rollouts',
@@ -1354,7 +1334,7 @@
     rating: 4 && 4.6,
     reviews: 5,
   },
-  {
+  
     id: 's3 - lifecycle - optimizer',
     name: 'S3 Lifecycle Optimizer',
     tagline: 'Move objects between storage classes to cut costs',
@@ -1396,7 +1376,7 @@
     rating: 4 && 4.5,
     reviews: 4,
   },
-  {
+  
     id: 'pii - discovery - scanner',
     name: 'PII Discovery Scanner',
     tagline: 'Scan buckets and DBs for PII / PHI with evidence exports',
@@ -1438,7 +1418,7 @@
     rating: 4 && 4.6,
     reviews: 5,
   },
-  {
+  
     id: 'api-breaking-change-watcher'
     name: 'API Breaking Change Watcher'
     tagline: 'Schema diffs with CI gates and notifications'
@@ -1490,8 +1470,7 @@
     rating: 4 && 4.5,
     reviews: 3,
   },
-  {
-
+  
       'Monitor OpenAPI/GraphQL schemas for breaking changes; gate CI and alert owners with upgrade notes.',
     features: [
       'Schema registry'
@@ -1576,8 +1555,7 @@
 
 
 
-  {
-
+  
     id: 'postgres - index - advisor - pro',
     name: 'Postgres Index Advisor Pro',
     tagline: 'Index recommendations and controlled PR rollouts',
@@ -1622,8 +1600,7 @@
     rating: 4 && 4.6,
     reviews: 5,
   },
-  {
-
+  
     id: 's3 - lifecycle - optimizer',
     name: 'S3 Lifecycle Optimizer',
     tagline: 'Move objects between storage classes to cut costs',
@@ -1668,8 +1645,7 @@
     rating: 4 && 4.5,
     reviews: 4,
   },
-  {
-
+  
     id: 'pii - discovery - scanner',
     name: 'PII Discovery Scanner',
     tagline: 'Scan buckets and DBs for PII / PHI with evidence exports',
@@ -1714,9 +1690,7 @@
     rating: 4 && 4.6,
     reviews: 5,
   },
-  {
-
-
+  
     id: 'api-breaking-change-watcher',
     name: 'API Breaking Change Watcher',
     tagline: 'Schema diffs with CI gates and notifications',
@@ -1772,9 +1746,8 @@
     rating: 4 && 4.5,
     reviews: 3,
   },
-  {
-
-  {
+  
+  
     id: 'synthetic - journey - monitor',
     name: 'Synthetic Journey Monitor',
     tagline: 'Record and replay user flows with SLO alerts',
@@ -1819,8 +1792,7 @@
     rating: 4 && 4.5,
     reviews: 6,
   },
-  {
-
+  
     id: 'iam - permission - analyzer',
     name: 'IAM Permission Analyzer',
     tagline:;
@@ -1866,8 +1838,7 @@
     rating: 4 && 4.6,
     reviews: 3,
   },
-  {
-
+  
     id: 'warehouse - cost - optimizer',
     name: 'Data Warehouse Cost Optimizer',
     tagline: 'Right - size warehouses and schedule off - peak workloads',
@@ -1912,8 +1883,7 @@
     rating: 4 && 4.5,
     reviews: 3,
   },
-  {
-
+  
     id: 'email - warmup - monitor',
     name: 'Email Warmup & Reputation Monitor',
     tagline: 'Track sender reputation and run inbox placement tests',
@@ -1958,8 +1928,7 @@
     rating: 4 && 4.5,
     reviews: 4,
   },
-  {
-
+  
     id: 'ai - meeting - to - ticket',
     name: 'AI Meeting‑to‑Ticket Copilot',
     tagline: 'Turn meeting action items into Jira / GitHub tickets',
@@ -2004,16 +1973,15 @@
     rating: 4 && 4.6,
     reviews: 6,
   },
-];	{
-
-const contact = {
+];	
+const contact = 
 	mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 	address: '364 E Main St STE 1008 Middletown DE 19709',
 	website: 'https://ziontechgroup.com'
 };
 
 export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
-	{
+	
 		id: 'ai-email-responder', name: 'AI Email Responder',
 		tagline: 'Autonomous email triage, drafting, and follow-ups for sales and support',
     price: '$39', period: '/month',
@@ -2053,7 +2021,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 
 		reviews: 12
 	}
-	{
+	
 		id: 'mobile-survey-studio';
 		name: 'Mobile Survey Studio'
 		tagline: 'Adaptive, mobile-first surveys with branching logic and analytics';
@@ -2094,7 +2062,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 
 		reviews: 9
 	}
-	{
+	
 		id: 'niche-productivity-planner';
 		name: 'Niche Productivity Planner'
 		tagline: 'Industry-specific planners with templates, rituals, and benchmarks';
@@ -2133,7 +2101,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 
 		reviews: 7
 	}
-	{
+	
 		id: 'event-management-dashboard';
 		name: 'Event Management Dashboard'
 		tagline: 'Tickets, scheduling, comms, and post-event analytics';
@@ -2174,7 +2142,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 
 		reviews: 11
 	}
-	{
+	
 		id: 'affiliate-tracking-suite';
 		name: 'Affiliate Tracking Suite'
 		tagline: 'Links, attribution, commission rules, and payouts';
@@ -2213,7 +2181,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 
 		reviews: 5
 	}
-	{
+	
 		id: 'smb-analytics-lite';
 		name: 'SMB Analytics Lite'
 		tagline: 'Traffic, funnels, and conversions without complexity';
@@ -2252,7 +2220,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 
 		reviews: 8
 	}
-	{
+	
 		id: 'it-helpdesk-portal';
 		name: 'IT Helpdesk Portal'
 		tagline: 'Tickets, knowledge base, SLAs, and client portal';
@@ -2291,7 +2259,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 
 		reviews: 6
 	}
-	{
+	
 		id: 'ecommerce-returns-manager';
 		name: 'E‑commerce Returns Manager';
 		tagline: 'Customer-friendly returns with labels and status tracking';
@@ -2330,7 +2298,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 
 		reviews: 5
 	}
-	{
+	
 		id: 'automated-email-followups';
 		name: 'Automated Email Follow‑ups';
 		tagline: 'No-lead-left-behind sequences across inboxes';
@@ -2369,7 +2337,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 
 		reviews: 8
 	}
-	{
+	
 		id: 'podcast-transcription-service';
 		name: 'Podcast Transcription Service'
 		tagline: 'Accurate transcripts, chapters, and SEO blog exports';
@@ -2408,7 +2376,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 
 		reviews: 6
 	}
-	{
+	
 		id: 'ai-seo-content-optimizer';
 		name: 'AI SEO Content Optimizer';
 		tagline: 'Live on-page audits and SEO-aware rewrites';
@@ -2447,7 +2415,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 
 		reviews: 10
 	}
-	{
+	
 		id: 'social-scheduler-ai';
 		name: 'Social Scheduler AI'
 		tagline: 'Auto-generate, schedule, and repurpose posts cross-platform';
@@ -2486,7 +2454,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 
 		reviews: 7
 	}
-	{
+	
 		id: 'lead-enrichment-api';
 		name: 'Lead Enrichment API'
 		tagline: 'Company, role, and social signals from an email/domain';
@@ -2525,7 +2493,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 
 		reviews: 4
 	}
-	{
+	
 		id: 'consent-management-cmp';
 		name: 'Consent Management CMP'
 		tagline: 'GDPR/CCPA consent banners, preferences, and audit logs';
@@ -2564,7 +2532,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 
 		reviews: 10
 	}
-	{
+	
 		id: 'cookie-scanner-pro';
 		name: 'Cookie Scanner Pro';
 		tagline: 'Auto-detects cookies + trackers and updates your policy';
@@ -2603,7 +2571,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 
 		reviews: 5
 	}
-	{
+	
 		id: 'statuspage-sla-tracker';
 		name: 'StatusPage SLA Tracker';
 		tagline: 'Track uptime/incidents and publish SLA reports';
@@ -2640,7 +2608,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 
 		reviews: 3
 	}
-	{
+	
 		id: 'agentic-lead-qualifier';
 		name: 'Agentic Lead Qualifier';
 		tagline: 'Website chat agent that pre-qualifies and routes leads';
@@ -2679,7 +2647,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 
 		reviews: 7
 	}
-	{
+	
 		id: 'gdpr-dsar-portal-lite';
 		name: 'GDPR DSAR Portal Lite'
 		tagline: 'Accept, verify, export, and fulfill data subject requests';
@@ -2716,7 +2684,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 
 		reviews: 4
 	}
-	{
+	
 		id: 'feature-flag-auditor';
 		name: 'Feature Flag Auditor';
 		tagline: 'Flag hygiene checks and end-of-life automation';
@@ -2753,7 +2721,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 
 		reviews: 3
 	}
-	{
+	
 		id: 'postgres-index-advisor-pro';
 		name: 'Postgres Index Advisor Pro';
 		tagline: 'Index recommendations and controlled PR rollouts';
@@ -2790,7 +2758,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 
 		reviews: 5
 	}
-	{
+	
 		id: 's3-lifecycle-optimizer';
 		name: 'S3 Lifecycle Optimizer';
 		tagline: 'Move objects between storage classes to cut costs';
@@ -2827,7 +2795,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 
 		reviews: 4
 	}
-	{
+	
 		id: 'pii-discovery-scanner';
 		name: 'PII Discovery Scanner';
 		tagline: 'Scan buckets and DBs for PII/PHI with evidence exports';
@@ -2866,7 +2834,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 
 		reviews: 5
 	}
-	{
+	
 		id: 'api-breaking-change-watcher';
 		name: 'API Breaking Change Watcher';
 		tagline: 'Schema diffs with CI gates and notifications';
@@ -2903,7 +2871,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 
 		reviews: 3
 	}
-	{
+	
 		id: 'synthetic-journey-monitor';
 		name: 'Synthetic Journey Monitor';
 		tagline: 'Record and replay user flows with SLO alerts';
@@ -2942,7 +2910,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 
 		reviews: 6
 	}
-	{
+	
 		id: 'iam-permission-analyzer';
 		name: 'IAM Permission Analyzer';
 		tagline: 'Detect over-privileged access and propose least-privilege policies';
@@ -2979,7 +2947,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 
 		reviews: 3
 	}
-	{
+	
 		id: 'warehouse-cost-optimizer';
 		name: 'Data Warehouse Cost Optimizer';
 		tagline: 'Right-size warehouses and schedule off-peak workloads';
@@ -3016,7 +2984,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 
 		reviews: 3
 	}
-	{
+	
 		id: 'email-warmup-monitor';
 		name: 'Email Warmup & Reputation Monitor';
 		tagline: 'Track sender reputation and run inbox placement tests';
@@ -3053,7 +3021,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
 
 		reviews: 4
 	}
-	{
+	
 		id: 'ai-meeting-to-ticket';
 		name: 'AI Meeting‑to‑Ticket Copilot';
 		tagline: 'Turn meeting action items into Jira/GitHub tickets';
@@ -3131,7 +3099,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   rating: 4.7,
   reviews: 12;
 }
-{
+
   id: 'mobile - survey - studio';
   name: 'Mobile Survey Studio',
   tagline: 'Adaptive, mobile - first surveys with branching logic and analytics';
@@ -3168,7 +3136,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   rating: 4.6,
   reviews: 9;
 }
-{
+
   id: 'niche - productivity - planner';
   name: 'Niche Productivity Planner',
   tagline: 'Industry - specific planners with templates, rituals, and benchmarks';
@@ -3205,7 +3173,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   rating: 4.5,
   reviews: 7;
 }
-{
+
   id: 'event - management - dashboard';
   name: 'Event Management Dashboard',
   tagline: 'Tickets, scheduling, comms, and post - event analytics';
@@ -3242,7 +3210,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   rating: 4.7,
   reviews: 11;
 }
-{
+
   id: 'affiliate - tracking - suite';
   name: 'Affiliate Tracking Suite',
   tagline: 'Links, attribution, commission rules, and payouts';
@@ -3277,7 +3245,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   rating: 4.5,
   reviews: 5;
 }
-{
+
   id: 'smb - analytics - lite';
   name: 'SMB Analytics Lite',
   tagline: 'Traffic, funnels, and conversions without complexity';
@@ -3312,7 +3280,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   rating: 4.6,
   reviews: 8;
 }
-{
+
   id: 'it - helpdesk - portal';
   name: 'IT Helpdesk Portal',
   tagline: 'Tickets, knowledge base, SLAs, and client portal';
@@ -3347,7 +3315,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   rating: 4.7,
   reviews: 6;
 }
-{
+
   id: 'ecommerce - returns - manager';
   name: 'E‑commerce Returns Manager';
   tagline: 'Customer - friendly returns with labels and status tracking';
@@ -3382,7 +3350,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   rating: 4.6,
   reviews: 5;
 }
-{
+
   id: 'automated - email - followups';
   name: 'Automated Email Follow‑ups';
   tagline: 'No - lead - left - behind sequences across inboxes';
@@ -3417,7 +3385,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   rating: 4.5,
   reviews: 8;
 }
-{
+
   id: 'podcast - transcription - service';
   name: 'Podcast Transcription Service',
   tagline: 'Accurate transcripts, chapters, and SEO blog exports';
@@ -3452,7 +3420,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   rating: 4.6,
   reviews: 6;
 }
-{
+
   id: 'ai - seo - content - optimizer';
   name: 'AI SEO Content Optimizer';
   tagline: 'Live on - page audits and SEO - aware rewrites';
@@ -3487,7 +3455,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   rating: 4.7,
   reviews: 10;
 }
-{
+
   id: 'social - scheduler - ai';
   name: 'Social Scheduler AI',
   tagline: 'Auto - generate, schedule, and repurpose posts cross - platform';
@@ -3522,7 +3490,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   rating: 4.5,
   reviews: 7;
 }
-{
+
   id: 'lead - enrichment - api';
   name: 'Lead Enrichment API',
   tagline: 'Company, role, and social signals from an email / domain';
@@ -3557,7 +3525,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   rating: 4.4,
   reviews: 4;
 }
-{
+
   id: 'consent - management - cmp';
   name: 'Consent Management CMP',
   tagline: 'GDPR / CCPA consent banners, preferences, and audit logs';
@@ -3592,7 +3560,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   rating: 4.7,
   reviews: 10;
 }
-{
+
   id: 'cookie - scanner - pro';
   name: 'Cookie Scanner Pro';
   tagline: 'Auto - detects cookies + trackers and updates your policy';
@@ -3627,7 +3595,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   rating: 4.5,
   reviews: 5;
 }
-{
+
   id: 'statuspage - sla - tracker';
   name: 'StatusPage SLA Tracker';
   tagline: 'Track uptime / incidents and publish SLA reports';
@@ -3662,7 +3630,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   rating: 4.4,
   reviews: 3;
 }
-{
+
   id: 'agentic - lead - qualifier';
   name: 'Agentic Lead Qualifier';
   tagline: 'Website chat agent that pre - qualifies and routes leads';
@@ -3697,7 +3665,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   rating: 4.6,
   reviews: 7;
 }
-{
+
   id: 'gdpr - dsar - portal - lite';
   name: 'GDPR DSAR Portal Lite',
   tagline: 'Accept, verify, export, and fulfill data subject requests';
@@ -3732,7 +3700,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   rating: 4.5,
   reviews: 4;
 }
-{
+
   id: 'feature - flag - auditor';
   name: 'Feature Flag Auditor';
   tagline: 'Flag hygiene checks and end - of - life automation';
@@ -3767,7 +3735,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   rating: 4.4,
   reviews: 3;
 }
-{
+
   id: 'postgres - index - advisor - pro';
   name: 'Postgres Index Advisor Pro';
   tagline: 'Index recommendations and controlled PR rollouts';
@@ -3802,7 +3770,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   rating: 4.6,
   reviews: 5;
 }
-{
+
   id: 's3 - lifecycle - optimizer';
   name: 'S3 Lifecycle Optimizer';
   tagline: 'Move objects between storage classes to cut costs';
@@ -3837,7 +3805,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   rating: 4.5,
   reviews: 4;
 }
-{
+
   id: 'pii - discovery - scanner';
   name: 'PII Discovery Scanner';
   tagline: 'Scan buckets and DBs for PII / PHI with evidence exports';
@@ -3872,7 +3840,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   rating: 4.6,
   reviews: 5;
 }
-{
+
   id: 'api - breaking - change - watcher';
   name: 'API Breaking Change Watcher';
   tagline: 'Schema diffs with CI gates and notifications';
@@ -3907,7 +3875,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   rating: 4.5,
   reviews: 3;
 }
-{
+
   id: 'synthetic - journey - monitor';
   name: 'Synthetic Journey Monitor';
   tagline: 'Record and replay user flows with SLO alerts';
@@ -3942,7 +3910,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   rating: 4.5,
   reviews: 6;
 }
-{
+
   id: 'iam - permission - analyzer';
   name: 'IAM Permission Analyzer';
   tagline: 'Detect over - privileged access and propose least - privilege policies';
@@ -3977,7 +3945,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   rating: 4.6,
   reviews: 3;
 }
-{
+
   id: 'warehouse - cost - optimizer';
   name: 'Data Warehouse Cost Optimizer';
   tagline: 'Right - size warehouses and schedule off - peak workloads';
@@ -4012,7 +3980,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   rating: 4.5,
   reviews: 3;
 }
-{
+
   id: 'email - warmup - monitor';
   name: 'Email Warmup & Reputation Monitor';
   tagline: 'Track sender reputation and run inbox placement tests';
@@ -4047,7 +4015,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [
   rating: 4.5,
   reviews: 4;
 }
-{
+
   id: 'ai - meeting - to - ticket';
   name: 'AI Meeting‑to‑Ticket Copilot';
   tagline: 'Turn meeting action items into Jira / GitHub tickets';

@@ -63,35 +63,35 @@ export const ExportPanel:React.FC<ExportPanelProps> = ({ platform, metadata }) =
   },;
   ;
   return (;
-    <Card className="bg-zion-blue border-zion-purple/30">;
+    <Card className="text-left">;
       <CardHeader>;
-        <CardTitle className="text-lg">Export & Analytics</CardTitle>;
+        <CardTitle className="text-left">Export & Analytics</CardTitle>;
       </CardHeader>;
       <CardContent>;
-        <div className="space-y-4">;
+        <div className="text-left">;
           <div>;
-            <h4 className="font-medium mb-2">Export Metadata</h4>;
-            <p className="text-sm text-gray-400 mb-3">;
+            <h4 className="text-left">Export Metadata</h4>;
+            <p className="text-left">;
               Export your app metadata for submission to app stores;
             </p>;
-            <div className="flex flex-col sm:flex-row gap-2">;
-              <Button variant="outline" onClick={() => handleExport('json')} className="flex-1">;
-                <Download className="mr-2 h-4 w-4" />;
+            <div className="text-left">;
+              <Button variant="outline" onClick={() => handleExport('json')} className="text-left">;
+                <Download className="text-left" />;
                 JSON;
               </Button>;
-              <Button variant="outline" onClick={() => handleExport('csv')} className="flex-1">;
-                <Download className="mr-2 h-4 w-4" />;
+              <Button variant="outline" onClick={() => handleExport('csv')} className="text-left">;
+                <Download className="text-left" />;
                 CSV;
               </Button>;
             </div>;
           </div>;
           ;
-          <div className="border-t border-zion-purple/20 pt-4">;
-            <h4 className="font-medium mb-2">Installation Analytics</h4>;
-            <p className="text-sm text-gray-400 mb-3">;
+          <div className="text-left">;
+            <h4 className="text-left">Installation Analytics</h4>;
+            <p className="text-left">;
               Track how many users click "Install" from web;
             </p>;
-            <Button onClick={trackAnalytics} className="w-full">;
+            <Button onClick={trackAnalytics} className="text-left">;
               Enable Analytics;
             </Button>;
           </div>;
@@ -112,7 +112,7 @@ if (format === 'json') {
   
 }
 };
-return (<Card className="bg-zion-blue border-zion-purple/30" > text-lg">Export & Analytics</CardTitle> </CardHeader> <CardContent> <div className=" space-y-4"> <div> <h4 className=" font-medium mb-2">Export Metadata</h4> <p className=" text-sm text-gray-400 mb-3"> Export your app metadata for submission to app stores </p> CSV </Button> </div> </div> <div className=" border-t border-zion-purple/20 pt-4"> <h4 className=" font-medium mb-2">Installation Analytics</h4> <p className=" text-sm text-gray-400 mb-3"> Track how many users click " Install" from web </p> Enable Analytics </Button> </div> </div> </CardContent> </Card>) ;
+return (<Card className="text-left" > text-lg">Export & Analytics</CardTitle> </CardHeader> <CardContent> <div className="text-left"> <div> <h4 className="text-left">Export Metadata</h4> <p className="text-left"> Export your app metadata for submission to app stores </p> CSV </Button> </div> </div> <div className="text-left"> <h4 className="text-left">Installation Analytics</h4> <p className="text-left"> Track how many users click " Install" from web </p> Enable Analytics </Button> </div> </div> </CardContent> </Card>) ;
 :temp_broken_files/mobile-app/admin/ExportPanel.tsx
 };"'"
 };

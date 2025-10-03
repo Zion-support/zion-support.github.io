@@ -8,11 +8,11 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
 
   },;
   return (;"
-    <div className="mb-6 border-b border-zion-blue-light pb-6">;"
+    <div className="text-left">;"
 </div>
       <button;
         onClick={toggleSection}"
-        className="flex w-full items-center justify-between text-white font-medium";"
+        className="text-left";"
       >;
 
 
@@ -28,13 +28,13 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
 
 
 };
-mb-6 border-b border-zion-blue-light pb-6"> <button) : (<ChevronDown className=" h-4 w-4 text-zion-slate-light" />) ;
+mb-6 border-b border-zion-blue-light pb-6"> <button) : (<ChevronDown className="text-left" />) ;
 
     </div>;)"
-mb-6 border-b border-zion-blue-light pb-6"> <button) : (<ChevronDown className=" h-4 w-4 text-zion-slate-light" />) ;"
+mb-6 border-b border-zion-blue-light pb-6"> <button) : (<ChevronDown className="text-left" />) ;"
 pr-12325
 }</button> <span> {;
-</span>
-}years</span> <span> {;
+<
+}years< <span> {;
 
 

@@ -37,11 +37,9 @@ pr-12325
 
 
     <button ;"
-      className="absolute top-2 right-2 z-10 p-2 rounded-full bg-zion-blue-dark/80 hover:bg-zion-blue-light/30 transition-colors";"
+      className="text-left";"
       onClick={handleSaveToggle}"
       aria-label={localIsSaved ? "Remove from favorites" :"Save to favorites"}"
-
-
         className={cn(;"
           "h-4 w-4 transition-colors", ;""
           localIsSaved ? "fill-red-500 text-red-500" :"text-zion-slate";")
@@ -64,8 +62,6 @@ pr-12325
 };
 }/> </button>) ;
 }"
-
-
 :temp_broken_files/profile/talent-card/TalentCardSaveButton.tsx
 
 }variant: "default",

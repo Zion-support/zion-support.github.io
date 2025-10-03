@@ -3,7 +3,11 @@ import Head from 'next/head';
 
 export default function AIValueStreamAnalytics2026() {
   return (
-    <>
+    <div>/* content */}
+  return (
+    <div>
+      <div></div>
+    <div></div>
       <Head>
         <title>AI Value Stream Analytics 2026: Trace ROI from Token to Revenue | Zion Tech Group</title>
         <meta
@@ -17,45 +21,45 @@ export default function AIValueStreamAnalytics2026() {
         />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <div className="min-h-screen bg-gradient-to-br from-slate-950 via-blue-950 to-indigo-950 text-white">
-        <main className="container mx-auto px-6 py-12">
-          <nav className="mb-8">
-            <a href="/blog" className="text-blue-400 hover:text-blue-300 transition-colors">
+      <div className="text-left"></div>
+        <main className="text-left">
+          <nav className="text-left">
+            <a href="/blog" className="text-left"></a>
               ← Back to Blog
             </a>
           </nav>
 
-          <article className="max-w-4xl mx-auto">
-            <header className="mb-12">
-              <div className="flex items-center gap-3 mb-4">
-                <span className="px-3 py-1 bg-blue-400/20 text-blue-300 text-sm rounded-full border border-blue-400/30">
+          <article className="text-left"></a>
+            <header className="text-left">
+              <div className="text-left"></div>
+                <span className="text-left"></span>
                   Analytics
-                </span>
-                <span className="text-white/60 text-sm">September 30, 2026</span>
-                <span className="text-white/60 text-sm">•</span>
-                <span className="text-white/60 text-sm">9 min read</span>
+                <
+                <span className="text-left">September 30, 2026<
+                <span className="text-left">•<
+                <span className="text-left">9 min read<
               </div>
-              <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-blue-300 to-cyan-300 bg-clip-text text-transparent">
+              <h1 className="text-left">
                 AI Value Stream Analytics 2026: Trace ROI from Token to Revenue
               </h1>
-              <p className="text-xl text-white/80">
+              <p className="text-left"></p>
                 Connect platform metrics like token usage, latency, and model quality to business KPIs such as conversion,
                 CSAT, and revenue. Build a value stream that proves ROI and guides optimization.
               </p>
             </header>
 
-            <div className="prose prose-invert prose-lg max-w-none">
-              <section className="mb-12">
-                <h2 className="text-3xl font-bold mb-6 text-blue-300">What Is a Value Stream for AI?</h2>
-                <p className="text-white/80 mb-4">
+            <div className="text-left"></div>
+              <section className="text-left"></section>
+                <h2 className="text-left">What Is a Value Stream for AI?</h2>
+                <p className="text-left"></p>
                   A value stream ties technical measures (tokens, cache hits, routing choices) to outcomes (lead wins, cases resolved
                   per hour). With consistent tracing and attribution, you can prioritize improvements that move business metrics.
                 </p>
               </section>
 
-              <section className="mb-12">
-                <h2 className="text-3xl font-bold mb-6 text-cyan-300">Key Telemetry to Capture</h2>
-                <ul className="list-disc pl-6 text-white/80 space-y-3">
+              <section className="text-left"></section>
+                <h2 className="text-left">Key Telemetry to Capture</h2>
+                <ul className="text-left">
                   <li>End-to-end traces across prompts, tools, vector queries, and approvals</li>
                   <li>Token usage, cache effectiveness, and routing decisions per request</li>
                   <li>Quality signals: groundedness, correctness, and user feedback</li>
@@ -63,23 +67,23 @@ export default function AIValueStreamAnalytics2026() {
                 </ul>
               </section>
 
-              <section className="mb-12">
-                <h2 className="text-3xl font-bold mb-6 text-indigo-300">From Metrics to Decisions</h2>
-                <p className="text-white/80 mb-4">
+              <section className="text-left"></section>
+                <h2 className="text-left">From Metrics to Decisions</h2>
+                <p className="text-left"></p>
                   Use the value stream to justify model changes, prompt budgets, and product bets. Optimize \$ per desired
                   outcome while respecting SLOs for latency and quality.
                 </p>
               </section>
             </div>
 
-            <footer className="mt-16 pt-8 border-t border-white/20">
-              <div className="flex items-center justify-between">
-                <div className="text-white/60 text-sm">Written by Zion Tech Group</div>
-                <div className="flex gap-4">
-                  <a href="/blog" className="text-blue-400 hover:text-blue-300 transition-colors">
+            <footer className="text-left">
+              <div className="text-left"></div>
+                <div className="text-left">Written by Zion Tech Group</div>
+                <div className="text-left"></div>
+                  <a href="/blog" className="text-left"></a>
                     ← Back to Blog
                   </a>
-                  <a href="/contact" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                  <a href="/contact" className="text-left"></a>
                     Get in Touch
                   </a>
                 </div>
@@ -92,3 +96,4 @@ export default function AIValueStreamAnalytics2026() {
   );
 }
 
+)
