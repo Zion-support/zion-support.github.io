@@ -1,34 +1,15 @@
 import React from 'react';
-import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
-import { 
-  ArrowLeft, 
-  Brain, 
-  Zap, 
-  Shield, 
-  TrendingUp, 
-  Clock, 
-  CheckCircle, 
-  DollarSign,
-  Rocket
-} from "lucide-react";
-import Header from "../../components/Header";
+import { Helmet } from 'react-helmet-async';
 
 const RealTimeCognitiveAutomation: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Real-Time Cognitive Automation Platform | Transform Business Operations with AI | Zion Tech Group</title>
-        <meta 
-          name="description" 
-          content="Transform operations with Real-Time Cognitive Automation Platform. 94% accuracy, 85% cost reduction, 10x productivity gains. AI-powered workflows that learn and optimize autonomously." 
-        />
-        <meta 
-          name="keywords" 
-          content="cognitive automation, intelligent automation, RPA, AI workflows, process automation, business automation, hyperautomation" 
-        />
+        <title>Real-Time Cognitive Automation - Zion Tech Group</title>
+        <meta name="description" content="Implement cognitive automation that processes information and makes decisions in real-time." />
       </Helmet>
       
+<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">
         <Header />
 
