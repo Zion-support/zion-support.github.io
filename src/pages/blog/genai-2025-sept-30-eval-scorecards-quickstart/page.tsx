@@ -11,7 +11,7 @@ export default function GenAIEvalScorecardsQuickstart(): React.JSX.Element {
       <Helmet >
         <title >GenAI Eval Scorecards Quickstart — KPIs, Budgets, Rollback</title>
         <meta name: "description",;,"
-  content: "Stand up KPI‑linked evals and budget‑aware routing that gate traffic and trigger instant rollback without slowing teams." /><link ,";,"
+  content: "Stand up KPI‑linked evals and budget‑aware routing that gate traffic and trigger instant rollback without slowing teams.", /><link ,";,"
   rel: "canonical",;,"
   href="https://ziontechgroup.com/blog/genai-2025-sept-30-eval-scorecards-quickstart",
         />

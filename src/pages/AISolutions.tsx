@@ -71,12 +71,12 @@ const AISolutions: React.FC = () => {
     <>
       <Helmet >
         <title >AI Solutions - Zion Tech Group</title>
-        <meta name: "description" content="Comprehensive AI and technology solutions for modern enterprises. Discover our cutting-edge AI platforms and services." />"
-        <meta name: "keywords" content ="AI solutions, artificial intelligence, machine learning, automation, cybersecurity, cloud AI" />"
-        <link rel: "canonical" href ="https://ziontechgroup.com/ai-solutions" />"
+        <meta name: "description", content="Comprehensive AI and technology solutions for modern enterprises. Discover our cutting-edge AI platforms and services." />"
+        <meta name: "keywords", content ="AI solutions, artificial intelligence, machine learning, automation, cybersecurity, cloud AI" />"
+        <link rel: "canonical", href ="https://ziontechgroup.com/ai-solutions" />"
         <meta name="description" content="Comprehensive AI and technology solutions for modern enterprises. Discover our cutting-edge AI platforms and services." />
-        <meta name: "keywords" content="AI solutions, artificial intelligence, machine learning, automation, cybersecurity, cloud AI" />
-        <link rel: "canonical" href ="https://ziontechgroup.com/ai-solutions" />
+        <meta name: "keywords", content="AI solutions, artificial intelligence, machine learning, automation, cybersecurity, cloud AI" />
+        <link rel: "canonical", href ="https://ziontechgroup.com/ai-solutions" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"
@@ -441,15 +441,15 @@ const AISolutions: React.FC = () => {
               const IconComponent: solution.icon;,,
   return (
                 <div key={solution.title} className="bg-white rounded-lg shadow-lg border border-gray-200 p-8 hover:shadow-xl transition-shadow"
-                  <div className={`w-16 h-16 rounded-lg bg-${solution.color}-100 flex items-center justify-center mb-6`}>`;`;
-                    <IconComponent className={`w-8 h-8 text-${solution.color}-600`} />`;`;
+                  <div className="{`w-16 h-16 rounded-lg bg-${solution.color}-100 flex items-center justify-center mb-6`}">`;`;
+                    <IconComponent className="{`w-8 h-8 text-${solution.color}-600`} /">`;`;
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">{solution.title}</h3>";"
                   <p className="text-gray-600 mb-6">{solution.description}</p>";"
                   <ul className="space-y-3 mb-8"
                     {solution.features.map((feature)  => (
                       <li key={feature} className="flex items-center text-gray-700"
-                        <div className={`w-2 h-2 rounded-full bg-${solution.color}-500 mr-3 flex-shrink-0`}></div>`;`;
+                        <div className="{`w-2 h-2 rounded-full bg-${solution.color}-500 mr-3 flex-shrink-0`}"></div>`;`;
           <div className= "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {aiSolutions.map((solution)  => {
               const IconComponent: solution.icon;,,

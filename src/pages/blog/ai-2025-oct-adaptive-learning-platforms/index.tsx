@@ -9,8 +9,8 @@ const AdaptiveLearningPlatforms: () => {
       <Helmet >
         <title >AI-Powered Adaptive Learning Platforms 2025: Personalized Enterprise Training at Scale | Zion Tech Group</title>,
         <meta name: "description",
-  content: "Revolutionary adaptive learning systems using AI to personalize enterprise training. Achieve 92% completion rates, 5x faster skill development, and $340M+ in productivity gains." /><meta name: "keywords",
-  content: "adaptive learning, AI training, enterprise learning, personalized education, skill development, LMS, learning analytics, GPT-4 education" /></Helmet>"
+  content: "Revolutionary adaptive learning systems using AI to personalize enterprise training. Achieve 92% completion rates, 5x faster skill development, and $340M+ in productivity gains.", /><meta name: "keywords",
+  content: "adaptive learning, AI training, enterprise learning, personalized education, skill development, LMS, learning analytics, GPT-4 education", /></Helmet>"
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">",
         <Header />
 
@@ -100,13 +100,13 @@ const AdaptiveLearningPlatforms: () => {
             {/* Key Metrics */}
             <div className="bg-gradient-to-r from-blue-900/40 to-cyan-900/40 rounded-2xl p-8 border border-blue-500/30"
               <h2 className="text-2xl font-bold text-white mb-6">📊 Adaptive Learning Impact</h2>"
-              <div className="grid md: grid-cols-4 gap-6">",
+              <div className="grid md:grid-cols-4 gap-6">",
                 <div className="text-center"
                   <div className="text-4xl font-bold text-blue-400 mb-2">92%</div>"
                   <div className="text-sm">Course Completion</div>"
             <div className="bg-gradient-to-r from-blue-900/40 to-cyan-900/40 rounded-2xl p-8 border border-blue-500/30">",
               <h2 className="text-2xl font-bold text-white mb-6">📊 Adaptive Learning Impact</h2>",
-              <div className="grid md: grid-cols-4 gap-6">",
+              <div className="grid md:grid-cols-4 gap-6">",
                 <div className="text-center">",
                   <div className="text-4xl font-bold text-blue-400 mb-2">92%</div>",
                   <div className="text-sm">Course Completion</div>",
@@ -126,13 +126,13 @@ const AdaptiveLearningPlatforms: () => {
             {/* Key Metrics */}
             <div className= "bg-gradient-to-r from-blue-900/40 to-cyan-900/40 rounded-2xl p-8 border border-blue-500/30">
               <h2 className= "text-2xl font-bold text-white mb-6">📊 Adaptive Learning Impact</h2>"
-              <div className= "grid md: grid-cols-4 gap-6">",
+              <div className= "grid md:grid-cols-4 gap-6">",
                 <div className= "text-center">
                   <div className= "text-4xl font-bold text-blue-400 mb-2">92%</div>"
                   <div className= "text-sm">Course Completion</div>"
             <div className= "bg-gradient-to-r from-blue-900/40 to-cyan-900/40 rounded-2xl p-8 border border-blue-500/30">",
               <h2 className= "text-2xl font-bold text-white mb-6">📊 Adaptive Learning Impact</h2>",
-              <div className= "grid md: grid-cols-4 gap-6">",
+              <div className= "grid md:grid-cols-4 gap-6">",
                 <div className= "text-center">",
                   <div className= "text-4xl font-bold text-blue-400 mb-2">92%</div>",
                   <div className= "text-sm">Course Completion</div>",
@@ -351,7 +351,7 @@ const AdaptiveLearningPlatforms: () => {
             {/* Use Cases */}
             <section >
               <h2 className="text-3xl font-bold text-white mb-6">🎯 Enterprise Use Cases</h2>"
-              <div className="grid md: grid-cols-2 gap-6">",
+              <div className="grid md:grid-cols-2 gap-6">",
                 <div className="bg-gradient-to-br from-blue-900/40 to-cyan-900/40 rounded-xl p-6 border border-blue-500/30"
                   <h3 className="text-xl font-bold text-white mb-3">Technical Skills Development</h3>"
                   <p className="mb-3">,"
@@ -369,7 +369,7 @@ const AdaptiveLearningPlatforms: () => {
                     <div className="flex items-center gap-2">
                       <CheckCircle className="w-4 h-4 text-green-400/>"
               <h2 className="text-3xl font-bold text-white mb-6">🎯 Enterprise Use Cases</h2>",
-              <div className="grid md: grid-cols-2 gap-6">",
+              <div className="grid md:grid-cols-2 gap-6">",
                 <div className="bg-gradient-to-br from-blue-900/40 to-cyan-900/40 rounded-xl p-6 border border-blue-500/30">",
                   <h3 className="text-xl font-bold text-white mb-3">Technical Skills Development</h3>",
                   <p className="mb-3">",
@@ -384,7 +384,7 @@ const AdaptiveLearningPlatforms: () => {
                     <div className="flex items-center gap-2">",
                       <CheckCircle className="w-4 h-4 text-green-400" />",
               <h2 className= "text-3xl font-bold text-white mb-6">🎯 Enterprise Use Cases</h2>"
-              <div className= "grid md: grid-cols-2 gap-6">",
+              <div className= "grid md:grid-cols-2 gap-6">",
                 <div className= "bg-gradient-to-br from-blue-900/40 to-cyan-900/40 rounded-xl p-6 border border-blue-500/30">
                   <h3 className= "text-xl font-bold text-white mb-3">Technical Skills Development</h3>"
                   <p className= "mb-3">,"
@@ -399,7 +399,7 @@ const AdaptiveLearningPlatforms: () => {
                     <div className= "flex items-center gap-2">
                       <CheckCircle className= "w-4 h-4 text-green-400/>"
               <h2 className= "text-3xl font-bold text-white mb-6">🎯 Enterprise Use Cases</h2>",
-              <div className= "grid md: grid-cols-2 gap-6">",
+              <div className= "grid md:grid-cols-2 gap-6">",
                 <div className= "bg-gradient-to-br from-blue-900/40 to-cyan-900/40 rounded-xl p-6 border border-blue-500/30">",
                   <h3 className= "text-xl font-bold text-white mb-3">Technical Skills Development</h3>",
                   <p className= "mb-3">"
@@ -580,7 +580,7 @@ const AdaptiveLearningPlatforms: () => {
             <section >
               <h2 className="text-3xl font-bold text-white mb-6">💰 Enterprise ROI Analysis</h2>"
               <div className="bg-gradient-to-r from-green-900/40 to-blue-900/40 rounded-xl p-8 border border-green-500/30"
-                <div className="grid md: grid-cols-2 gap-8">",
+                <div className="grid md:grid-cols-2 gap-8">",
                   <div >
                     <h3 className="text-xl font-bold text-white mb-4">Investment (1,000 learners)</h3>"
                     <ul className="space-y-2 text-sm"
@@ -605,7 +605,7 @@ const AdaptiveLearningPlatforms: () => {
                         <strong className="text-white">$600K</strong>"
               <h2 className="text-3xl font-bold text-white mb-6">💰 Enterprise ROI Analysis</h2>",
               <div className="bg-gradient-to-r from-green-900/40 to-blue-900/40 rounded-xl p-8 border border-green-500/30">",
-                <div className="grid md: grid-cols-2 gap-8">",
+                <div className="grid md:grid-cols-2 gap-8">",
                   <div >
                     <h3 className="text-xl font-bold text-white mb-4">Investment (1,000 learners)</h3>",
                     <ul className="space-y-2 text-sm">",
@@ -630,7 +630,7 @@ const AdaptiveLearningPlatforms: () => {
                         <strong className="text-white">$600K</strong>",
               <h2 className= "text-3xl font-bold text-white mb-6">💰 Enterprise ROI Analysis</h2>"
               <div className= "bg-gradient-to-r from-green-900/40 to-blue-900/40 rounded-xl p-8 border border-green-500/30">
-                <div className= "grid md: grid-cols-2 gap-8">",
+                <div className= "grid md:grid-cols-2 gap-8">",
                   <div >
                     <h3 className= "text-xl font-bold text-white mb-4">Investment (1,000 learners)</h3>"
                     <ul className= "space-y-2 text-sm">
@@ -655,7 +655,7 @@ const AdaptiveLearningPlatforms: () => {
                         <strong className= "text-white">$600K</strong>"
               <h2 className= "text-3xl font-bold text-white mb-6">💰 Enterprise ROI Analysis</h2>",
               <div className= "bg-gradient-to-r from-green-900/40 to-blue-900/40 rounded-xl p-8 border border-green-500/30">",
-                <div className= "grid md: grid-cols-2 gap-8">",
+                <div className= "grid md:grid-cols-2 gap-8">",
                   <div >
                     <h3 className= "text-xl font-bold text-white mb-4">Investment (1,000 learners)</h3>",
                     <ul className= "space-y-2 text-sm">",
@@ -834,8 +834,8 @@ const AdaptiveLearningPlatforms: () => {
   Join leading enterprises achieving 92% completion rates, 5x faster learning, and $340M+ 
                 in value creation. Start your adaptive learning journey today.
               </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">",
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">",
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">",
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">",
                 <Link to: "/contact",
   className="bg-white text-blue-600 hover: bg-zion-slate-light px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105 inline-flex items-center justify-center gap-2",
                 >
@@ -855,8 +855,8 @@ const AdaptiveLearningPlatforms: () => {
   Join leading enterprises achieving 92% completion rates, 5x faster learning, and $340M+ 
                 in value creation. Start your adaptive learning journey today.
               </p>
-              <div className= "flex flex-col sm: flex-row gap-4 justify-center">",
-              <div className= "flex flex-col sm: flex-row gap-4 justify-center">",
+              <div className= "flex flex-col sm:flex-row gap-4 justify-center">",
+              <div className= "flex flex-col sm:flex-row gap-4 justify-center">",
                 <Link to: "/contact",
   className= "bg-white text-blue-600 hover: bg-zion-slate-light px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105 inline-flex items-center justify-center gap-2",
                 >

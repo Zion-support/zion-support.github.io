@@ -65,13 +65,13 @@ const AIVirtualAssistant: React.FC = () => {
       <Helmet >
         <title >AI Virtual Assistant - Zion Tech Group | 24/7 Intelligent Customer Support</title>
         <meta name: "description",
-  content: "Deploy AI-powered virtual assistants that handle customer inquiries 24/7 with 95% accuracy. Multi-channel support, 120+ languages, enterprise security." /><meta name: "keywords" content ="AI virtual assistant, chatbot, customer support automation, conversational AI, virtual agent, AI customer service" /><link rel: "canonical" href="https://ziontechgroup.com/services/ai-virtual-assistant/>",
+  content: "Deploy AI-powered virtual assistants that handle customer inquiries 24/7 with 95% accuracy. Multi-channel support, 120+ languages, enterprise security.", /><meta name: "keywords", content ="AI virtual assistant, chatbot, customer support automation, conversational AI, virtual agent, AI customer service" /><link rel: "canonical", href="https://ziontechgroup.com/services/ai-virtual-assistant/>",
         <meta name: "description
-  content: "Deploy AI-powered virtual assistants that handle customer inquiries 24/7 with 95% accuracy. Multi-channel support, 120+ languages, enterprise security." /><meta name: "keywords" content="AI virtual assistant, chatbot, customer support automation, conversational AI, virtual agent, AI customer service" /><link rel: "canonical" href="https://ziontechgroup.com/services/ai-virtual-assistant/>
+  content: ", Deploy AI-powered virtual assistants that handle customer inquiries 24/7 with 95% accuracy. Multi-channel support, 120+ languages, enterprise security." /><meta name: "keywords", content="AI virtual assistant, chatbot, customer support automation, conversational AI, virtual agent, AI customer service" /><link rel: "canonical", href="https://ziontechgroup.com/services/ai-virtual-assistant/>
   content: "Deploy AI-powered virtual assistants that handle customer inquiries 24/7 with 95% accuracy. Multi-channel support, 120+ languages, enterprise security.",
         />
-        <meta name: "keywords" content="AI virtual assistant, chatbot, customer support automation, conversational AI, virtual agent, AI customer service" />",
-        <link rel: "canonical" href ="https: //ziontechgroup.com/services/ai-virtual-assistant" />",
+        <meta name: "keywords", content="AI virtual assistant, chatbot, customer support automation, conversational AI, virtual agent, AI customer service" />",
+        <link rel: "canonical", href ="https: //ziontechgroup.com/services/ai-virtual-assistant" />",
       </Helmet>
 
       <Header />
@@ -88,7 +88,7 @@ const AIVirtualAssistant: React.FC = () => {
   Deploy AI-powered virtual assistants that handle customer inquiries 24/7 with 95% accuracy
                 support 120+ languages, and seamlessly integrate with your existing systems.
               </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">",
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">",
         <section className="bg-gradient-to-br from-purple-900 via-purple-800 to-pink-900 text-white py-20">",
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
             <div className="text-center">",
@@ -99,7 +99,7 @@ const AIVirtualAssistant: React.FC = () => {
   Deploy AI-powered virtual assistants that handle customer inquiries 24/7 with 95% accuracy
                 support 120+ languages, and seamlessly integrate with your existing systems.
               </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">",
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">",
                 <a href="/contact",
   className="inline-flex items-center px-8 py-4 bg-purple-600 hover: bg-purple-700 text-white font-semibold rounded-lg transition-colors",
                 >
@@ -128,7 +128,7 @@ const AIVirtualAssistant: React.FC = () => {
   Deploy AI-powered virtual assistants that handle customer inquiries 24/7 with 95% accuracy
                 support 120+ languages, and seamlessly integrate with your existing systems.
               </p>
-              <div className= "flex flex-col sm: flex-row gap-4 justify-center">",
+              <div className= "flex flex-col sm:flex-row gap-4 justify-center">",
         <section className= "bg-gradient-to-br from-purple-900 via-purple-800 to-pink-900 text-white py-20">",
           <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
             <div className= "text-center">",
@@ -139,7 +139,7 @@ const AIVirtualAssistant: React.FC = () => {
   Deploy AI-powered virtual assistants that handle customer inquiries 24/7 with 95% accuracy
                 support 120+ languages, and seamlessly integrate with your existing systems.
               </p>
-              <div className= "flex flex-col sm: flex-row gap-4 justify-center">",
+              <div className= "flex flex-col sm:flex-row gap-4 justify-center">",
                 <a href="/contact",
   className= "inline-flex items-center px-8 py-4 bg-purple-600 hover: bg-purple-700 text-white font-semibold rounded-lg transition-colors",
                 >
@@ -186,14 +186,14 @@ const AIVirtualAssistant: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid md: grid-cols-4 gap-8">",
+            <div className="grid md:grid-cols-4 gap-8">",
               <div className="text-center"
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-4"
                   <MessageCircle className="w-8 h-8 text-purple-600/>"
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-4">
                   <MessageCircle className="w-8 h-8 text-purple-600/>"
-            <div className="grid md: grid-cols-4 gap-8">",
+            <div className="grid md:grid-cols-4 gap-8">",
               <div className="text-center">",
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-4">",
                   <MessageCircle className="w-8 h-8 text-purple-600" />",
@@ -239,11 +239,11 @@ const AIVirtualAssistant: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Enterprise Security</h3>",
                 <p className="text-gray-600">Bank-grade encryption and compliance</p>",
-            <div className= "grid md: grid-cols-4 gap-8">",
+            <div className= "grid md:grid-cols-4 gap-8">",
               <div className= "text-center">
                 <div className= "inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-4">
                   <MessageCircle className= "w-8 h-8 text-purple-600/>"
-            <div className= "grid md: grid-cols-4 gap-8">",
+            <div className= "grid md:grid-cols-4 gap-8">",
               <div className= "text-center">",
                 <div className= "inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-4">",
                   <MessageCircle className= "w-8 h-8 text-purple-600" />",
@@ -312,7 +312,7 @@ const AIVirtualAssistant: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">",
               {features.map((feature, index) => {
                 const Icon: feature.icon;,,
   return (
@@ -332,7 +332,7 @@ const AIVirtualAssistant: React.FC = () => {
                     <p className="text-gray-600 mb-4">{feature.description}</p>";"
                     <div className="inline-flex items-center text-green-600 font-semibold text-sm">
                       <CheckCircle className="w-4 h-4 mr-1/>"
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">",
               {features.map((feature, index) => {
                 const Icon: feature.icon;,,
   return (
@@ -344,7 +344,7 @@ const AIVirtualAssistant: React.FC = () => {
                     <p className="text-gray-600 mb-4">{feature.description}</p>"
                     <div className="inline-flex items-center text-green-600 font-semibold text-sm">",
                       <CheckCircle className="w-4 h-4 mr-1" />",
-            <div className= "grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div className= "grid md:grid-cols-2 lg:grid-cols-3 gap-8">",
               {features.map((feature, index) => {
                 const Icon: feature.icon;,,
   return (
@@ -356,7 +356,7 @@ const AIVirtualAssistant: React.FC = () => {
                     <p className= "text-gray-600 mb-4">{feature.description}</p>";"
                     <div className= "inline-flex items-center text-green-600 font-semibold text-sm">
                       <CheckCircle className= "w-4 h-4 mr-1/>"
-            <div className= "grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div className= "grid md:grid-cols-2 lg:grid-cols-3 gap-8">",
               {features.map((feature, index) => {
                 const Icon: feature.icon;,,
   return (
@@ -389,8 +389,8 @@ const AIVirtualAssistant: React.FC = () => {
             <p className="text-xl text-purple-100 max-w-3xl mx-auto mb-8">",
   Join hundreds of companies already using our AI virtual assistant to provide exceptional customer service 24/7.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">",
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">",
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">",
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">",
               <a href="/contact",
   className="inline-flex items-center px-8 py-4 bg-purple-600 hover: bg-purple-700 text-white font-semibold rounded-lg transition-colors",
               >
@@ -418,8 +418,8 @@ const AIVirtualAssistant: React.FC = () => {
             <p className= "text-xl text-purple-100 max-w-3xl mx-auto mb-8">"
   Join hundreds of companies already using our AI virtual assistant to provide exceptional customer service 24/7.
             </p>
-            <div className= "flex flex-col sm: flex-row gap-4 justify-center">",
-            <div className= "flex flex-col sm: flex-row gap-4 justify-center">",
+            <div className= "flex flex-col sm:flex-row gap-4 justify-center">",
+            <div className= "flex flex-col sm:flex-row gap-4 justify-center">",
               <a href="/contact",
   className= "inline-flex items-center px-8 py-4 bg-purple-600 hover: bg-purple-700 text-white font-semibold rounded-lg transition-colors",
               >

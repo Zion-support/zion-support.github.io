@@ -63,7 +63,7 @@ const RealTimeCognitiveAutomationPage: React.FC = () => {
         {/* Features Grid */}
         <section className=py-20">"
           <div className=container mx-auto px-6">"
-            <div className=grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">"
+            <div className=grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">"
               {automationFeatures.map((feature, index) => (
                 <div key={index} className=bg-white p-8 rounded-xl shadow-sm hover: shadow-lg transition-shadow">"
                   <div className=text-4xl mb-4">{feature.icon}</div>"
@@ -80,8 +80,7 @@ const RealTimeCognitiveAutomationPage: React.FC = () => {
                   
                   <Link 
                     to="/contact" 
-                    className=text-indigo-600 font-semibold hover: text-indigo-800 transition-colors
-                  >
+                    className="text-indigo-600 font-semibold hover: text-indigo-800 transition-colors">
                     Learn More →
                   </Link>
                 </div>
@@ -100,7 +99,7 @@ const RealTimeCognitiveAutomationPage: React.FC = () => {
               </p>
             </div>
             
-            <div className=grid grid-cols-1 md: grid-cols-3 gap-8">"
+            <div className=grid grid-cols-1 md:grid-cols-3 gap-8">"
               <div className=text-center">"
                 <div className=text-4xl mb-4">⚡</div>"
                 <h3 className=text-2xl font-bold text-gray-900 mb-4">Real-Time Processing</h3>"
@@ -138,7 +137,7 @@ const RealTimeCognitiveAutomationPage: React.FC = () => {
               </p>
             </div>
             
-            <div className=grid grid-cols-1 md: grid-cols-2 gap-8">"
+            <div className=grid grid-cols-1 md:grid-cols-2 gap-8">"
               <div className=bg-white p-8 rounded-xl shadow-sm">"
                 <h3 className=text-2xl font-bold text-gray-900 mb-4">Financial Services</h3>"
                 <ul className=space-y-2 text-gray-600">"
@@ -183,22 +182,22 @@ const RealTimeCognitiveAutomationPage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-        <section className=py-20 bg-indigo-600 text-white">"
-          <div className=container mx-auto px-6 text-center">"
-            <h2 className=text-4xl font-bold mb-4">Ready to Automate Intelligently?</h2>"
-            <p className=text-xl mb-8 text-indigo-100 max-w-2xl mx-auto">"
-              Let's discuss how cognitive automation can transform your business processes and drive efficiency.';
+        <section className="py-20 bg-indigo-600 text-white">
+          <div className="container mx-auto px-6 text-center">
+            <h2 className="text-4xl font-bold mb-4">Ready to Automate Intelligently?</h2>
+            <p className="text-xl mb-8 text-indigo-100 max-w-2xl mx-auto">
+              Let's discuss how cognitive automation can transform your business processes and drive efficiency.
             </p>
-            <div className=flex flex-col sm: flex-row gap-4 justify-center">"
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 to="/contact" 
-                className=bg-white text-indigo-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors
+                className="bg-white text-indigo-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
                 Get Started
               </Link>
-              <Link "
+              <Link 
                 to="/case-studies" 
-                className=border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors"
               >
                 View Case Studies
               </Link>
@@ -209,5 +208,4 @@ const RealTimeCognitiveAutomationPage: React.FC = () => {
     </>
   );
 };
-"
 export default RealTimeCognitiveAutomationPage;

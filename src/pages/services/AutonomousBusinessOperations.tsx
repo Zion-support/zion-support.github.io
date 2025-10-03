@@ -5,9 +5,9 @@ const AutonomousBusinessOperations: () => {
       <Helmet >
         <title >Autonomous Business Operations Platform | 85% Cost Reduction in 90 Days | Zion Tech Group</title>
         <meta name: "description",
-  content: "Transform your enterprise with AI-powered autonomous operations. Deploy 40+ self-managing workflows in 90 days. $500M+ value creation. 300-500% ROI. Get started with a free consultation." /><meta ,"
+  content: "Transform your enterprise with AI-powered autonomous operations. Deploy 40+ self-managing workflows in 90 days. $500M+ value creation. 300-500% ROI. Get started with a free consultation.", /><meta ,"
   name: "keywords",
-  content: "autonomous business operations, AI automation platform, enterprise automation, business process automation, operational efficiency, AI transformation, ROI guarantee" /><link rel: "canonical" href ="https://ziontechgroup.com/services/autonomous-business-operations/>",
+  content: "autonomous business operations, AI automation platform, enterprise automation, business process automation, operational efficiency, AI transformation, ROI guarantee", /><link rel: "canonical", href ="https://ziontechgroup.com/services/autonomous-business-operations/>",
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900"
@@ -20,7 +20,7 @@ const AutonomousBusinessOperations: () => {
           <div className= "absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>,"
   content: "autonomous business operations, AI automation platform, enterprise automation, business process automation, operational efficiency, AI transformation, ROI guarantee",
         />
-        <link rel: "canonical" href ="https: //ziontechgroup.com/services/autonomous-business-operations" />",
+        <link rel: "canonical", href ="https: //ziontechgroup.com/services/autonomous-business-operations" />",
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900">",
@@ -96,11 +96,11 @@ const AutonomousBusinessOperations: () => {
               </p>
 
               {/* Key Metrics */}
-              <div className="grid grid-cols-2 md: grid-cols-4 gap-6 mb-12">",
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">",
                 <div className="bg-gradient-to-br from-green-600/30 to-emerald-600/30 backdrop-blur-sm rounded-xl p-6 border-2 border-green-400/50"
                   <div className="text-5xl font-bold text-green-300 mb-2">85%</div>"
                   <div className="text-green-100 font-semibold">Cost Reduction</div>"
-              <div className="grid grid-cols-2 md: grid-cols-4 gap-6 mb-12">",
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">",
                 <div className="bg-gradient-to-br from-green-600/30 to-emerald-600/30 backdrop-blur-sm rounded-xl p-6 border-2 border-green-400/50">",
                   <div className="text-5xl font-bold text-green-300 mb-2">85%</div>",
                   <div className="text-green-100 font-semibold">Cost Reduction</div>",
@@ -116,11 +116,11 @@ const AutonomousBusinessOperations: () => {
                 <div className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-6 border-2 border-orange-400/50">",
                   <div className="text-5xl font-bold text-orange-300 mb-2">99.7%</div>",
                   <div className="text-orange-100 font-semibold">Accuracy Rate</div>",
-              <div className= "grid grid-cols-2 md: grid-cols-4 gap-6 mb-12">",
+              <div className= "grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">",
                 <div className= "bg-gradient-to-br from-green-600/30 to-emerald-600/30 backdrop-blur-sm rounded-xl p-6 border-2 border-green-400/50">
                   <div className= "text-5xl font-bold text-green-300 mb-2">85%</div>"
                   <div className= "text-green-100 font-semibold">Cost Reduction</div>"
-              <div className= "grid grid-cols-2 md: grid-cols-4 gap-6 mb-12">",
+              <div className= "grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">",
                 <div className= "bg-gradient-to-br from-green-600/30 to-emerald-600/30 backdrop-blur-sm rounded-xl p-6 border-2 border-green-400/50">",
                   <div className= "text-5xl font-bold text-green-300 mb-2">85%</div>",
                   <div className= "text-green-100 font-semibold">Cost Reduction</div>",
@@ -140,8 +140,8 @@ const AutonomousBusinessOperations: () => {
               </div>
 
               {/* CTA Buttons */}
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">",
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">",
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">",
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">",
                 <Link to: "/contact",
   className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-green-500 to-emerald-500 hover: from-green-600 hover:to-emerald-600 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all shadow-2xl hover:shadow-green-500/50 hover:scale-105",
                 >
@@ -158,8 +158,8 @@ const AutonomousBusinessOperations: () => {
                 </Link>
                 <Link to: "/case-studies/fortune-100-autonomous-operations-transformation-2025",
   className="inline-flex items-center justify-center gap-2 border-2 border-white text-white hover: bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-bold text-lg transition-all",
-              <div className= "flex flex-col sm: flex-row gap-4 justify-center">",
-              <div className= "flex flex-col sm: flex-row gap-4 justify-center">",
+              <div className= "flex flex-col sm:flex-row gap-4 justify-center">",
+              <div className= "flex flex-col sm:flex-row gap-4 justify-center">",
                 <Link to: "/contact",
   className= "inline-flex items-center justify-center gap-2 bg-gradient-to-r from-green-500 to-emerald-500 hover: from-green-600 hover:to-emerald-600 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all shadow-2xl hover:shadow-green-500/50 hover:scale-105",
                 >
@@ -301,14 +301,14 @@ const AutonomousBusinessOperations: () => {
             </p>
           </div>
 
-          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">",
             {/* Feature 1 */}
             <div className="bg-gradient-to-br from-blue-900/60 to-cyan-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-blue-400/50 hover: border-blue-400/80 transition-all hover:scale-105">",
               <div className="bg-blue-500/20 w-16 h-16 rounded-xl flex items-center justify-center mb-6 border border-blue-400/30"
                 <Zap className="w-8 h-8 text-blue-300/>"
               <div className="bg-blue-500/20 w-16 h-16 rounded-xl flex items-center justify-center mb-6 border border-blue-400/30">
                 <Zap className="w-8 h-8 text-blue-300/>"
-          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">",
             {/* Feature 1 */}
             <div className="bg-gradient-to-br from-blue-900/60 to-cyan-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-blue-400/50 hover: border-blue-400/80 transition-all hover:scale-105">",
               <div className="bg-blue-500/20 w-16 h-16 rounded-xl flex items-center justify-center mb-6 border border-blue-400/30">",
@@ -361,12 +361,12 @@ const AutonomousBusinessOperations: () => {
                 </li>
                 <li className="flex items-start gap-2">",
                   <CheckCircle className="w-4 h-4 text-blue-400 mt-1 flex-shrink-0" />",
-          <div className= "grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
+          <div className= "grid md:grid-cols-2 lg:grid-cols-3 gap-8">",
             {/* Feature 1 */}
             <div className= "bg-gradient-to-br from-blue-900/60 to-cyan-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-blue-400/50 hover: border-blue-400/80 transition-all hover:scale-105">",
               <div className= "bg-blue-500/20 w-16 h-16 rounded-xl flex items-center justify-center mb-6 border border-blue-400/30">
                 <Zap className= "w-8 h-8 text-blue-300/>"
-          <div className= "grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
+          <div className= "grid md:grid-cols-2 lg:grid-cols-3 gap-8">",
             {/* Feature 1 */}
             <div className= "bg-gradient-to-br from-blue-900/60 to-cyan-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-blue-400/50 hover: border-blue-400/80 transition-all hover:scale-105">",
               <div className= "bg-blue-500/20 w-16 h-16 rounded-xl flex items-center justify-center mb-6 border border-blue-400/30">",
@@ -982,7 +982,7 @@ const AutonomousBusinessOperations: () => {
                   <p className="text-blue-100 mb-4">",
   Process mapping, data assessment, and ROI modeling with your team
                   </p>
-                  <div className="grid md: grid-cols-3 gap-4 text-sm">",
+                  <div className="grid md:grid-cols-3 gap-4 text-sm">",
                     <div className="flex items-center gap-2 text-blue-200"
                       <CheckCircle className="w-4 h-4 text-blue-400/>"
                       <span >Process workshops</span>
@@ -1000,7 +1000,7 @@ const AutonomousBusinessOperations: () => {
                     </div>"
                     <div className="flex items-center gap-2 text-blue-200">
                       <CheckCircle className="w-4 h-4 text-blue-400/>"
-                  <div className="grid md: grid-cols-3 gap-4 text-sm">",
+                  <div className="grid md:grid-cols-3 gap-4 text-sm">",
                     <div className="flex items-center gap-2 text-blue-200">",
                       <CheckCircle className="w-4 h-4 text-blue-400" />",
                       <span >Process workshops</span>
@@ -1023,7 +1023,7 @@ const AutonomousBusinessOperations: () => {
                   <p className= "text-blue-100 mb-4">"
   Process mapping, data assessment, and ROI modeling with your team
                   </p>
-                  <div className= "grid md: grid-cols-3 gap-4 text-sm">",
+                  <div className= "grid md:grid-cols-3 gap-4 text-sm">",
                     <div className= "flex items-center gap-2 text-blue-200">
                       <CheckCircle className= "w-4 h-4 text-blue-400/>"
                       <span >Process workshops</span>
@@ -1034,7 +1034,7 @@ const AutonomousBusinessOperations: () => {
                     </div>
                     <div className= "flex items-center gap-2 text-blue-200">
                       <CheckCircle className= "w-4 h-4 text-blue-400/>"
-                  <div className= "grid md: grid-cols-3 gap-4 text-sm">",
+                  <div className= "grid md:grid-cols-3 gap-4 text-sm">",
                     <div className= "flex items-center gap-2 text-blue-200">",
                       <CheckCircle className= "w-4 h-4 text-blue-400" />",
                       <span >Process workshops</span>
@@ -1063,7 +1063,7 @@ const AutonomousBusinessOperations: () => {
                   <p className="text-purple-100 mb-4">",
   Infrastructure deployment, model training, and system integration
                   </p>
-                  <div className="grid md: grid-cols-3 gap-4 text-sm">",
+                  <div className="grid md:grid-cols-3 gap-4 text-sm">",
                     <div className="flex items-center gap-2 text-purple-200"
                       <CheckCircle className="w-4 h-4 text-purple-400/>"
                       <span >Cloud infrastructure</span>
@@ -1081,7 +1081,7 @@ const AutonomousBusinessOperations: () => {
                     </div>"
                     <div className="flex items-center gap-2 text-purple-200">
                       <CheckCircle className="w-4 h-4 text-purple-400/>"
-                  <div className="grid md: grid-cols-3 gap-4 text-sm">",
+                  <div className="grid md:grid-cols-3 gap-4 text-sm">",
                     <div className="flex items-center gap-2 text-purple-200">",
                       <CheckCircle className="w-4 h-4 text-purple-400" />",
                       <span >Cloud infrastructure</span>
@@ -1102,7 +1102,7 @@ const AutonomousBusinessOperations: () => {
                   <p className= "text-purple-100 mb-4">"
   Infrastructure deployment, model training, and system integration
                   </p>
-                  <div className= "grid md: grid-cols-3 gap-4 text-sm">",
+                  <div className= "grid md:grid-cols-3 gap-4 text-sm">",
                     <div className= "flex items-center gap-2 text-purple-200">
                       <CheckCircle className= "w-4 h-4 text-purple-400/>"
                       <span >Cloud infrastructure</span>
@@ -1113,7 +1113,7 @@ const AutonomousBusinessOperations: () => {
                     </div>
                     <div className= "flex items-center gap-2 text-purple-200">
                       <CheckCircle className= "w-4 h-4 text-purple-400/>"
-                  <div className= "grid md: grid-cols-3 gap-4 text-sm">",
+                  <div className= "grid md:grid-cols-3 gap-4 text-sm">",
                     <div className= "flex items-center gap-2 text-purple-200">",
                       <CheckCircle className= "w-4 h-4 text-purple-400" />",
                       <span >Cloud infrastructure</span>
@@ -1142,7 +1142,7 @@ const AutonomousBusinessOperations: () => {
                   <p className="text-green-100 mb-4">",
   Pilot deployment, validation, and full-scale rollout
                   </p>
-                  <div className="grid md: grid-cols-3 gap-4 text-sm">",
+                  <div className="grid md:grid-cols-3 gap-4 text-sm">",
                     <div className="flex items-center gap-2 text-green-200"
                       <CheckCircle className="w-4 h-4 text-green-400/>"
                       <span >Pilot workflows</span>
@@ -1160,7 +1160,7 @@ const AutonomousBusinessOperations: () => {
                     </div>"
                     <div className="flex items-center gap-2 text-green-200">
                       <CheckCircle className="w-4 h-4 text-green-400/>"
-                  <div className="grid md: grid-cols-3 gap-4 text-sm">",
+                  <div className="grid md:grid-cols-3 gap-4 text-sm">",
                     <div className="flex items-center gap-2 text-green-200">",
                       <CheckCircle className="w-4 h-4 text-green-400" />",
                       <span >Pilot workflows</span>
@@ -1181,7 +1181,7 @@ const AutonomousBusinessOperations: () => {
                   <p className= "text-green-100 mb-4">"
   Pilot deployment, validation, and full-scale rollout
                   </p>
-                  <div className= "grid md: grid-cols-3 gap-4 text-sm">",
+                  <div className= "grid md:grid-cols-3 gap-4 text-sm">",
                     <div className= "flex items-center gap-2 text-green-200">
                       <CheckCircle className= "w-4 h-4 text-green-400/>"
                       <span >Pilot workflows</span>
@@ -1192,7 +1192,7 @@ const AutonomousBusinessOperations: () => {
                     </div>
                     <div className= "flex items-center gap-2 text-green-200">
                       <CheckCircle className= "w-4 h-4 text-green-400/>"
-                  <div className= "grid md: grid-cols-3 gap-4 text-sm">",
+                  <div className= "grid md:grid-cols-3 gap-4 text-sm">",
                     <div className= "flex items-center gap-2 text-green-200">",
                       <CheckCircle className= "w-4 h-4 text-green-400" />",
                       <span >Pilot workflows</span>
@@ -1235,8 +1235,8 @@ const AutonomousBusinessOperations: () => {
             </p>
           </div>
 
-          <div className="grid md: grid-cols-2 gap-8 max-w-4xl mx-auto">",
-          <div className="grid md: grid-cols-2 gap-8 max-w-4xl mx-auto">",
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">",
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">",
             {/* Investment */}
             <div className="bg-gradient-to-br from-blue-900/60 to-purple-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-blue-400/50">",
               <h3 className="text-2xl font-bold text-white mb-6 text-center">Total Investment</h3>",
@@ -1285,8 +1285,8 @@ const AutonomousBusinessOperations: () => {
                 </li>
                 <li className="flex items-start gap-2">",
                   <CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />",
-          <div className= "grid md: grid-cols-2 gap-8 max-w-4xl mx-auto">",
-          <div className= "grid md: grid-cols-2 gap-8 max-w-4xl mx-auto">",
+          <div className= "grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">",
+          <div className= "grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">",
             {/* Investment */}
             <div className= "bg-gradient-to-br from-blue-900/60 to-purple-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-blue-400/50">",
               <h3 className= "text-2xl font-bold text-white mb-6 text-center">Total Investment</h3>",
@@ -1484,8 +1484,8 @@ const AutonomousBusinessOperations: () => {
   Get started with a free 90-minute strategy consultation and custom ROI analysis.
             </p>
             
-            <div className="flex flex-col sm: flex-row gap-4 justify-center mb-8">",
-            <div className="flex flex-col sm: flex-row gap-4 justify-center mb-8">",
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">",
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">",
               <Link to: "/contact",
   className="inline-flex items-center justify-center gap-2 bg-white text-blue-600 hover: bg-blue-50 px-8 py-4 rounded-lg font-bold text-lg transition-all shadow-xl hover:shadow-2xl",
               >
@@ -1514,8 +1514,8 @@ const AutonomousBusinessOperations: () => {
   Get started with a free 90-minute strategy consultation and custom ROI analysis.
             </p>
             
-            <div className= "flex flex-col sm: flex-row gap-4 justify-center mb-8">",
-            <div className= "flex flex-col sm: flex-row gap-4 justify-center mb-8">",
+            <div className= "flex flex-col sm:flex-row gap-4 justify-center mb-8">",
+            <div className= "flex flex-col sm:flex-row gap-4 justify-center mb-8">",
               <Link to: "/contact",
   className= "inline-flex items-center justify-center gap-2 bg-white text-blue-600 hover: bg-blue-50 px-8 py-4 rounded-lg font-bold text-lg transition-all shadow-xl hover:shadow-2xl",
               >

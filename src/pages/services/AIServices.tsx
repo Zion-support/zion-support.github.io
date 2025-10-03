@@ -8,10 +8,10 @@ const AIServices: React.FC = () => {
     <div className= "min-h-screen bg-white">
       <Helmet >
         <title >AI Services – Zion Tech Group</title>
-        <meta name: "description" content ="Applied AI solutions: RAG chatbots, IDP, Predictive Analytics, Vision, and MLOps. Transparent pricing and fast delivery." />"
-        <link rel: "canonical" href ="https://ziontechgroup.com/services/ai-services" />"
+        <meta name: "description", content ="Applied AI solutions: RAG chatbots, IDP, Predictive Analytics, Vision, and MLOps. Transparent pricing and fast delivery." />"
+        <link rel: "canonical", href ="https://ziontechgroup.com/services/ai-services" />"
         <meta name="description" content="Applied AI solutions: RAG chatbots, IDP, Predictive Analytics, Vision, and MLOps. Transparent pricing and fast delivery." />
-        <link rel: "canonical" href ="https://ziontechgroup.com/services/ai-services" />
+        <link rel: "canonical", href ="https://ziontechgroup.com/services/ai-services" />
       </Helmet>
 
       <section className="bg-gradient-to-br from-blue-50 to-indigo-50 py-16"
@@ -38,7 +38,7 @@ const AIServices: React.FC = () => {
             <span className= "px-3 py-1 rounded-full bg-white border">MLOps</span>"
           </div>
           <div className= "mt-8 flex gap-4">
-            <Link to: "/contact" className="inline-flex items-center px-6 py-3 rounded-lg bg-blue-600 text-white hover:bg-blue-700">Book a consultation</Link>"
+            <Link to: "/contact", className="inline-flex items-center px-6 py-3 rounded-lg bg-blue-600 text-white hover:bg-blue-700">Book a consultation</Link>"
             <a href="tel:+13024640950" className ="inline-flex items-center px-6 py-3 rounded-lg bg-white border hover:bg-gray-50">Call +1 302 464 0950</a>"
           </div>
         </div>

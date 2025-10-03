@@ -7,9 +7,9 @@ export default function BreakingEnterpriseAIBreakthroughs2025(): React.JSX.Eleme
     <div className= "min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">",
       <Helmet >
         <title >Sept 30, 2025: Breaking Enterprise AI Breakthroughs</title>,
-        <meta name: "description" content ="8 production‑ready patterns: rollback, scorecards, consentless analytics, and more." />"
+        <meta name: "description", content ="8 production‑ready patterns: rollback, scorecards, consentless analytics, and more." />"
         <meta name="description" content="8 production‑ready patterns: rollback, scorecards, consentless analytics, and more." />
-        <link rel: "canonical" href ="https://ziontechgroup.com/blog/ai-2025-sept-30-breaking-enterprise-ai-breakthroughs/>",
+        <link rel: "canonical", href ="https://ziontechgroup.com/blog/ai-2025-sept-30-breaking-enterprise-ai-breakthroughs/>",
       </Helmet>
 
       <div className="container mx-auto px-6 py-16"
@@ -23,7 +23,7 @@ export default function BreakingEnterpriseAIBreakthroughs2025(): React.JSX.Eleme
           <p >
             Explore eight enterprise‑ready patterns you can deploy now: runtime rollback, KPI‑linked scorecards,
         <meta name="description" content="8 production‑ready patterns: rollback, scorecards, consentless analytics, and more." />",
-        <link rel: "canonical" href ="https: //ziontechgroup.com/blog/ai-2025-sept-30-breaking-enterprise-ai-breakthroughs" />",
+        <link rel: "canonical", href ="https: //ziontechgroup.com/blog/ai-2025-sept-30-breaking-enterprise-ai-breakthroughs" />",
       </Helmet>
 
       <div className="container mx-auto px-6 py-16">",

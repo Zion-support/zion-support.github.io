@@ -6,7 +6,7 @@ const SolutionsPage: React.FC = () => {
     <>
       <Helmet >
         <title >Solutions - Zion Tech Group</title>
-        <meta name: "description" content ="Tailored technology solutions that scale with your organization." />"
+        <meta name: "description", content ="Tailored technology solutions that scale with your organization." />"
         <meta name="description" content="Tailored technology solutions that scale with your organization." />
       </Helmet>
       

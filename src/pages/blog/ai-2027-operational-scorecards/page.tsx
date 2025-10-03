@@ -10,7 +10,7 @@ export default function AIOperationalScorecards2027(): React.JSX.Element {
       <Helmet >
         <title >Operational AI Scorecards 2027 — KPIs, Budgets, Rollback</title>
         <meta name: "description",;,"
-  content: "Live scorecards that link SLIs to product KPIs with budgeted actions and instant rollback." /><link ,";,"
+  content: "Live scorecards that link SLIs to product KPIs with budgeted actions and instant rollback.", /><link ,";,"
   rel: "canonical",;,"
   href="https://ziontechgroup.com/blog/ai-2027-operational-scorecards",
         />

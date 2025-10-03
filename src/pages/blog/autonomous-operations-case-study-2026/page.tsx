@@ -11,7 +11,7 @@ export default function AutonomousOperationsCaseStudy2026(): React.JSX.Element {
       <Helmet >
         <title >Autonomous Operations Case Study 2026 — 98% automation</title>
         <meta name: "description",;,"
-  content: "Real‑world case study achieving 98% automation with budgets, KPI‑linked canaries, and instant rollback across critical workflows." /><link rel: "canonical",;,"
+  content: "Real‑world case study achieving 98% automation with budgets, KPI‑linked canaries, and instant rollback across critical workflows.", /><link rel: "canonical",;,"
   href="https://ziontechgroup.com/blog/autonomous-operations-case-study-2026",
         />
       </Helmet>

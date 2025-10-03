@@ -560,7 +560,7 @@ export default function EnhancedServicesCatalog() {
     <>
       <Helmet>
         <title>{title}</title>
-        <meta name="description" content={description} />"
+        <meta name="description" content="{description} /">"
         <meta name="keywords" content="micro SaaS, AI services, IT solutions, automation, cloud services, enterprise software, pricing, ROI" />"
         <link rel="canonical" href="https: //ziontechgroup.com/enhanced-services-catalog" />"
       </Helmet>
@@ -608,7 +608,7 @@ export default function EnhancedServicesCatalog() {
               return (
                 <div key={categoryIndex} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50">"
                   <div className="flex items-center gap-4 mb-8">"
-                    <div className={`w-16 h-16 bg-gradient-to-br from-${category.color}-500 to-${category.color}-600 rounded-xl flex items-center justify-center`}>`;
+                    <div className="{`w-16 h-16 bg-gradient-to-br from-${category.color}-500 to-${category.color}-600 rounded-xl flex items-center justify-center`}">`;
                       <Icon className="w-8 h-8 text-white" />"
                     </div>
                     <div>
@@ -617,7 +617,7 @@ export default function EnhancedServicesCatalog() {
                     </div>
                   </div>
                   
-                  <div className="grid grid-cols-1 lg: grid-cols-2 xl:grid-cols-3 gap-6">"
+                  <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">"
                     {category.services.map((service, serviceIndex) => (
                       <div key={serviceIndex} className="group bg-slate-700/30 backdrop-blur-sm rounded-xl p-6 border border-slate-600/50 hover: border-cyan-500/50 transition-all duration-300">"
                         <div className="mb-4">"
@@ -683,7 +683,7 @@ export default function EnhancedServicesCatalog() {
               </p>
             </div>
             
-            <div className="grid md: grid-cols-3 gap-8 text-center mb-8">"
+            <div className="grid md:grid-cols-3 gap-8 text-center mb-8">"
               <div className="bg-slate-800/50 rounded-xl p-6">"
                 <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center mx-auto mb-4">"
                   <DollarSign className="w-6 h-6 text-cyan-400" />"
@@ -708,7 +708,7 @@ export default function EnhancedServicesCatalog() {
             </div>
 
             <div className="text-center">"
-              <div className="flex flex-col sm: flex-row items-center justify-center gap-4 mb-6">"
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">"
                 <a 
                   href={`tel:${contactInfo.phone}`} `;
                   className="inline-flex items-center gap-2 bg-white text-slate-900 px-6 py-3 rounded-lg font-semibold hover:bg-slate-100 transition-colors

@@ -10,10 +10,10 @@ const Page: () => {
       <Helmet >
         <title >AI Self-Healing Infrastructure 2025 — 99.99% Uptime</title>
         <meta name: "description",;,"
-  content: "Autonomous infrastructure detecting and fixing issues in real-time. 95% MTTR reduction, zero human intervention." /><link rel: "canonical" href="https://ziontechgroup.com/blog/ai-self-healing-infrastructure-2025/>",;,"
+  content: "Autonomous infrastructure detecting and fixing issues in real-time. 95% MTTR reduction, zero human intervention.", /><link rel: "canonical", href="https://ziontechgroup.com/blog/ai-self-healing-infrastructure-2025/>",;,"
   content: "Autonomous infrastructure detecting and fixing issues in real-time. 95% MTTR reduction, zero human intervention.",
         />
-        <link rel: "canonical" href ="https: //ziontechgroup.com/blog/ai-self-healing-infrastructure-2025" />",
+        <link rel: "canonical", href ="https: //ziontechgroup.com/blog/ai-self-healing-infrastructure-2025" />",
       </Helmet>
 
 <<<<<<< HEAD
@@ -61,14 +61,14 @@ const Page: () => {
 
 <<<<<<< HEAD
             <div className="mt-8"
-              <Link to: "/blog" className="text-cyan-300 hover: underline">← Back to Blog</Link>",
+              <Link to: "/blog", className="text-cyan-300 hover: underline">← Back to Blog</Link>",
             <div className="mt-8">",
 =======
             <div className= "mt-8">
-              <Link to: "/blog" className="text-cyan-300 hover: underline">← Back to Blog</Link>",
+              <Link to: "/blog", className="text-cyan-300 hover: underline">← Back to Blog</Link>",
             <div className= "mt-8">",
 >>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
-              <Link to: "/blog" className ="text-cyan-300 hover: underline">← Back to Blog</Link>",
+              <Link to: "/blog", className ="text-cyan-300 hover: underline">← Back to Blog</Link>",
             </div>
           </div>
         </div>

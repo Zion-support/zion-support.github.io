@@ -10,7 +10,7 @@ const Page: () => {
       <Helmet >
         <title >Edge 2025: Consentless Experiments v3 (&lt;100ms)</title>,,
         <meta name: "description",;,"
-  content: "Scoped IDs, on‑device metrics, and DP noise enabling compliant A/B at &lt;100ms — v3 blueprint." /><link rel: "canonical" href ="https://ziontechgroup.com/blog/edge-2025-oct-01-private-consentless-experiments/>",
+  content: "Scoped IDs, on‑device metrics, and DP noise enabling compliant A/B at &lt;100ms — v3 blueprint.", /><link rel: "canonical", href ="https://ziontechgroup.com/blog/edge-2025-oct-01-private-consentless-experiments/>",
       </Helmet>
 
 <<<<<<< HEAD
@@ -28,7 +28,7 @@ const Page: () => {
 >>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   content: "Scoped IDs, on‑device metrics, and DP noise enabling compliant A/B at &lt;100ms — v3 blueprint.",
         />
-        <link rel: "canonical" href ="https: //ziontechgroup.com/blog/edge-2025-oct-01-private-consentless-experiments" />",
+        <link rel: "canonical", href ="https: //ziontechgroup.com/blog/edge-2025-oct-01-private-consentless-experiments" />",
       </Helmet>
 
 <<<<<<< HEAD
@@ -64,14 +64,14 @@ const Page: () => {
 
 <<<<<<< HEAD
             <div className="mt-8"
-              <Link to: "/blog" className="text-cyan-300 hover: underline">← Back to Blog</Link>",
+              <Link to: "/blog", className="text-cyan-300 hover: underline">← Back to Blog</Link>",
             <div className="mt-8">",
 =======
             <div className= "mt-8">
-              <Link to: "/blog" className="text-cyan-300 hover: underline">← Back to Blog</Link>",
+              <Link to: "/blog", className="text-cyan-300 hover: underline">← Back to Blog</Link>",
             <div className= "mt-8">",
 >>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
-              <Link to: "/blog" className ="text-cyan-300 hover: underline">← Back to Blog</Link>",
+              <Link to: "/blog", className ="text-cyan-300 hover: underline">← Back to Blog</Link>",
             </div>
           </div>
         </div>

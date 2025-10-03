@@ -10,8 +10,8 @@ const ZeroTrustAISecurityFramework2025: () => {
           Zero-Trust AI Security Framework: Enterprise Implementation Guide | Zion Tech Group,
         </title>
         <meta name: "description",
-  content: "Comprehensive zero-trust security framework for AI systems. Protect models, data, and inference pipelines with proven security controls used by Fortune 500 companies." /><meta name: "keywords",
-  content: "AI security, zero trust, model security, ML security, AI governance, enterprise security" /><link rel: "canonical",
+  content: "Comprehensive zero-trust security framework for AI systems. Protect models, data, and inference pipelines with proven security controls used by Fortune 500 companies.", /><meta name: "keywords",
+  content: "AI security, zero trust, model security, ML security, AI governance, enterprise security", /><link rel: "canonical",
   href="https://ziontechgroup.com/blog/zero-trust-ai-security-framework-2025",
         />
       </Helmet>
@@ -789,11 +789,11 @@ const ZeroTrustAISecurityFramework2025: () => {
             <section className="mb-12"
               <div className="bg-gradient-to-r from-emerald-500/20 to-blue-500/20 p-8 rounded-lg border border-emerald-500/30"
                 <h2 className="text-3xl font-bold text-white mb-6">Security Posture Improvements</h2>"
-                <div className="grid md: grid-cols-2 gap-6">",
+                <div className="grid md:grid-cols-2 gap-6">",
             <section className="mb-12">",
               <div className="bg-gradient-to-r from-emerald-500/20 to-blue-500/20 p-8 rounded-lg border border-emerald-500/30">",
                 <h2 className="text-3xl font-bold text-white mb-6">Security Posture Improvements</h2>",
-                <div className="grid md: grid-cols-2 gap-6">",
+                <div className="grid md:grid-cols-2 gap-6">",
                   <div >
                     <p className="text-5xl font-bold text-emerald-400 mb-2">92%</p>",
                     <p className="text-gray-300">Reduction in security incidents post-implementation</p>",
@@ -812,11 +812,11 @@ const ZeroTrustAISecurityFramework2025: () => {
             <section className= "mb-12">
               <div className= "bg-gradient-to-r from-emerald-500/20 to-blue-500/20 p-8 rounded-lg border border-emerald-500/30">
                 <h2 className= "text-3xl font-bold text-white mb-6">Security Posture Improvements</h2>"
-                <div className= "grid md: grid-cols-2 gap-6">",
+                <div className= "grid md:grid-cols-2 gap-6">",
             <section className= "mb-12">",
               <div className= "bg-gradient-to-r from-emerald-500/20 to-blue-500/20 p-8 rounded-lg border border-emerald-500/30">",
                 <h2 className= "text-3xl font-bold text-white mb-6">Security Posture Improvements</h2>",
-                <div className= "grid md: grid-cols-2 gap-6">",
+                <div className= "grid md:grid-cols-2 gap-6">",
                   <div >
                     <p className= "text-5xl font-bold text-emerald-400 mb-2">92%</p>",
                     <p className= "text-gray-300">Reduction in security incidents post-implementation</p>",

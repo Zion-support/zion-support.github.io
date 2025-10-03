@@ -63,11 +63,11 @@ export default function EnterpriseBlockchainIntegration2025Page(): void {
             <p className="text-gray-300 leading-relaxed mb-4">",;,"
   Enterprise blockchain has evolved from experimental technology to mission-critical infrastructure. Modern blockchain platforms deliver 10,000+ transactions per second, 99.999% uptime, and seamless integration with existing enterprise systems. Organizations leveraging blockchain achieve 95% reduction in reconciliation costs, 100% data provenance, and unlock entirely new business models through programmable trust.
             </p>
-            <div className="grid md: grid-cols-2 gap-4 mt-6">",
+            <div className="grid md:grid-cols-2 gap-4 mt-6">",
               <div className="bg-emerald-500/10 rounded-xl p-6 border border-emerald-500/20"
                 <div className="text-2xl font-bold text-emerald-300 mb-2">$156M Annual Savings</div>";,"
                 <p className="text-sm text-gray-300">Fortune 500 companies reduce operational costs through blockchain automation</p>";,"
-            <div className="grid md: grid-cols-2 gap-4 mt-6">",
+            <div className="grid md:grid-cols-2 gap-4 mt-6">",
               <div className="bg-emerald-500/10 rounded-xl p-6 border border-emerald-500/20">",
                 <div className="text-2xl font-bold text-emerald-300 mb-2">$156M Annual Savings</div>",
                 <p className="text-sm text-gray-300">Fortune 500 companies reduce operational costs through blockchain automation</p>",
@@ -82,11 +82,11 @@ export default function EnterpriseBlockchainIntegration2025Page(): void {
             <p className= "text-gray-300 leading-relaxed mb-4">"
   Enterprise blockchain has evolved from experimental technology to mission-critical infrastructure. Modern blockchain platforms deliver 10,000+ transactions per second, 99.999% uptime, and seamless integration with existing enterprise systems. Organizations leveraging blockchain achieve 95% reduction in reconciliation costs, 100% data provenance, and unlock entirely new business models through programmable trust.
             </p>
-            <div className= "grid md: grid-cols-2 gap-4 mt-6">",
+            <div className= "grid md:grid-cols-2 gap-4 mt-6">",
               <div className= "bg-emerald-500/10 rounded-xl p-6 border border-emerald-500/20">
                 <div className= "text-2xl font-bold text-emerald-300 mb-2">$156M Annual Savings</div>";,"
                 <p className= "text-sm text-gray-300">Fortune 500 companies reduce operational costs through blockchain automation</p>";,"
-            <div className= "grid md: grid-cols-2 gap-4 mt-6">",
+            <div className= "grid md:grid-cols-2 gap-4 mt-6">",
               <div className= "bg-emerald-500/10 rounded-xl p-6 border border-emerald-500/20">",
                 <div className= "text-2xl font-bold text-emerald-300 mb-2">$156M Annual Savings</div>",
                 <p className= "text-sm text-gray-300">Fortune 500 companies reduce operational costs through blockchain automation</p>",
@@ -197,7 +197,7 @@ export default function EnterpriseBlockchainIntegration2025Page(): void {
             <h2 className="text-3xl font-bold text-white mb-6">Success Story: Global Supply Chain Transformation</h2>",
             <p className="text-gray-300 leading-relaxed mb-6">,";,"
   A multinational logistics company with operations in 150+ countries deployed our blockchain platform to track $50B in annual shipments: </p>,,
-            <div className="grid md: grid-cols-3 gap-4 mb-6">",
+            <div className="grid md:grid-cols-3 gap-4 mb-6">",
               <div className="bg-white/10 rounded-xl p-6"
                 <div className="text-3xl font-bold text-emerald-300 mb-2">92%</div>";,"
                 <p className="text-sm text-gray-300">Reduction in Disputes</p>";,"
@@ -205,7 +205,7 @@ export default function EnterpriseBlockchainIntegration2025Page(): void {
             <h2 className="text-3xl font-bold text-white mb-6">Success Story: Global Supply Chain Transformation</h2>",
             <p className="text-gray-300 leading-relaxed mb-6">",;,"
   A multinational logistics company with operations in 150+ countries deployed our blockchain platform to track $50B in annual shipments: </p>,,
-            <div className="grid md: grid-cols-3 gap-4 mb-6">",
+            <div className="grid md:grid-cols-3 gap-4 mb-6">",
               <div className="bg-white/10 rounded-xl p-6">",
                 <div className="text-3xl font-bold text-emerald-300 mb-2">92%</div>",
                 <p className="text-sm text-gray-300">Reduction in Disputes</p>",
@@ -225,7 +225,7 @@ export default function EnterpriseBlockchainIntegration2025Page(): void {
             <h2 className= "text-3xl font-bold text-white mb-6">Success Story: Global Supply Chain Transformation</h2>",
             <p className= "text-gray-300 leading-relaxed mb-6">,";,"
   A multinational logistics company with operations in 150+ countries deployed our blockchain platform to track $50B in annual shipments: </p>,,
-            <div className= "grid md: grid-cols-3 gap-4 mb-6">",
+            <div className= "grid md:grid-cols-3 gap-4 mb-6">",
               <div className= "bg-white/10 rounded-xl p-6">
                 <div className= "text-3xl font-bold text-emerald-300 mb-2">92%</div>";,"
                 <p className= "text-sm text-gray-300">Reduction in Disputes</p>";,"
@@ -233,7 +233,7 @@ export default function EnterpriseBlockchainIntegration2025Page(): void {
             <h2 className= "text-3xl font-bold text-white mb-6">Success Story: Global Supply Chain Transformation</h2>",
             <p className= "text-gray-300 leading-relaxed mb-6">"
   A multinational logistics company with operations in 150+ countries deployed our blockchain platform to track $50B in annual shipments: </p>,,
-            <div className= "grid md: grid-cols-3 gap-4 mb-6">",
+            <div className= "grid md:grid-cols-3 gap-4 mb-6">",
               <div className= "bg-white/10 rounded-xl p-6">",
                 <div className= "text-3xl font-bold text-emerald-300 mb-2">92%</div>",
                 <p className= "text-sm text-gray-300">Reduction in Disputes</p>",
@@ -443,42 +443,42 @@ export default function EnterpriseBlockchainIntegration2025Page(): void {
             <p className="text-gray-300 leading-relaxed mb-6">,";,"
   Let's discuss how blockchain can transform your business operations. Our blockchain architects and engineers will help you identify the highest-impact use cases and design a solution that delivers measurable ROI.;';';
             </p>
-            <div className="flex flex-col sm: flex-row gap-4">",
-              <a title: "Internal link" href="/contact" className ="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-emerald-600 to-teal-600 hover: from-emerald-700 hover:to-teal-700 text-white font-semibold rounded-xl transition-all transform hover:scale-105 shadow-xl">",;,"
+            <div className="flex flex-col sm:flex-row gap-4">",
+              <a title: "Internal link", href="/contact" className ="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-emerald-600 to-teal-600 hover: from-emerald-700 hover:to-teal-700 text-white font-semibold rounded-xl transition-all transform hover:scale-105 shadow-xl">",;,"
   Schedule Consultation
               </a>
-              <a title: "Internal link" href="/demo" className ="inline-flex items-center justify-center px-8 py-4 bg-white/10 hover: bg-white/20 text-white font-semibold rounded-xl border border-white/20 transition-all">",
+              <a title: "Internal link", href="/demo" className ="inline-flex items-center justify-center px-8 py-4 bg-white/10 hover: bg-white/20 text-white font-semibold rounded-xl border border-white/20 transition-all">",
           <section className="mb-12 bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">",
             <h2 className="text-3xl font-bold text-white mb-6">Ready to Build Trust at Scale?</h2>",
             <p className="text-gray-300 leading-relaxed mb-6">",;,"
   Let's discuss how blockchain can transform your business operations. Our blockchain architects and engineers will help you identify the highest-impact use cases and design a solution that delivers measurable ROI.'
             </p>
-            <div className="flex flex-col sm: flex-row gap-4">",
-              <a title: "Internal link" href="/contact" className ="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-emerald-600 to-teal-600 hover: from-emerald-700 hover:to-teal-700 text-white font-semibold rounded-xl transition-all transform hover:scale-105 shadow-xl">",;,"
+            <div className="flex flex-col sm:flex-row gap-4">",
+              <a title: "Internal link", href="/contact" className ="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-emerald-600 to-teal-600 hover: from-emerald-700 hover:to-teal-700 text-white font-semibold rounded-xl transition-all transform hover:scale-105 shadow-xl">",;,"
   Schedule Consultation
               </a>
-              <a title: "Internal link" href="/demo" className ="inline-flex items-center justify-center px-8 py-4 bg-white/10 hover: bg-white/20 text-white font-semibold rounded-xl border border-white/20 transition-all">",;,"
+              <a title: "Internal link", href="/demo" className ="inline-flex items-center justify-center px-8 py-4 bg-white/10 hover: bg-white/20 text-white font-semibold rounded-xl border border-white/20 transition-all">",;,"
 =======
           <section className= "mb-12 bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
             <h2 className= "text-3xl font-bold text-white mb-6">Ready to Build Trust at Scale?</h2>";,"
             <p className= "text-gray-300 leading-relaxed mb-6">,";,"
   Let's discuss how blockchain can transform your business operations. Our blockchain architects and engineers will help you identify the highest-impact use cases and design a solution that delivers measurable ROI.;';';
             </p>
-            <div className= "flex flex-col sm: flex-row gap-4">",
-              <a title: "Internal link" href="/contact" className ="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-emerald-600 to-teal-600 hover: from-emerald-700 hover:to-teal-700 text-white font-semibold rounded-xl transition-all transform hover:scale-105 shadow-xl">"
+            <div className= "flex flex-col sm:flex-row gap-4">",
+              <a title: "Internal link", href="/contact" className ="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-emerald-600 to-teal-600 hover: from-emerald-700 hover:to-teal-700 text-white font-semibold rounded-xl transition-all transform hover:scale-105 shadow-xl">"
   Schedule Consultation
               </a>
-              <a title: "Internal link" href="/demo" className ="inline-flex items-center justify-center px-8 py-4 bg-white/10 hover: bg-white/20 text-white font-semibold rounded-xl border border-white/20 transition-all">",
+              <a title: "Internal link", href="/demo" className ="inline-flex items-center justify-center px-8 py-4 bg-white/10 hover: bg-white/20 text-white font-semibold rounded-xl border border-white/20 transition-all">",
           <section className= "mb-12 bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">",
             <h2 className= "text-3xl font-bold text-white mb-6">Ready to Build Trust at Scale?</h2>",
             <p className= "text-gray-300 leading-relaxed mb-6">"
   Let's discuss how blockchain can transform your business operations. Our blockchain architects and engineers will help you identify the highest-impact use cases and design a solution that delivers measurable ROI.'
             </p>
-            <div className= "flex flex-col sm: flex-row gap-4">",
-              <a title: "Internal link" href="/contact" className ="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-emerald-600 to-teal-600 hover: from-emerald-700 hover:to-teal-700 text-white font-semibold rounded-xl transition-all transform hover:scale-105 shadow-xl">"
+            <div className= "flex flex-col sm:flex-row gap-4">",
+              <a title: "Internal link", href="/contact" className ="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-emerald-600 to-teal-600 hover: from-emerald-700 hover:to-teal-700 text-white font-semibold rounded-xl transition-all transform hover:scale-105 shadow-xl">"
   Schedule Consultation
               </a>
-              <a title: "Internal link" href="/demo" className ="inline-flex items-center justify-center px-8 py-4 bg-white/10 hover: bg-white/20 text-white font-semibold rounded-xl border border-white/20 transition-all">"
+              <a title: "Internal link", href="/demo" className ="inline-flex items-center justify-center px-8 py-4 bg-white/10 hover: bg-white/20 text-white font-semibold rounded-xl border border-white/20 transition-all">"
 >>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Explore Use Cases
               </a>

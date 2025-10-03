@@ -31,14 +31,14 @@ export default function Page(): void {
       </div>
 <<<<<<< HEAD
       <div className="mt-8"
-        <Link to: "/" className="text-indigo-700 font-medium hover: text-indigo-800">← Back to Home</Link>",
+        <Link to: "/", className="text-indigo-700 font-medium hover: text-indigo-800">← Back to Home</Link>",
       <div className="mt-8">",
 =======
       <div className= "mt-8">
-        <Link to: "/" className="text-indigo-700 font-medium hover: text-indigo-800">← Back to Home</Link>",
+        <Link to: "/", className="text-indigo-700 font-medium hover: text-indigo-800">← Back to Home</Link>",
       <div className= "mt-8">",
 >>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
-        <Link to: "/" className ="text-indigo-700 font-medium hover: text-indigo-800">← Back to Home</Link>",
+        <Link to: "/", className ="text-indigo-700 font-medium hover: text-indigo-800">← Back to Home</Link>",
       </div>
     </div>
   );

@@ -5,11 +5,11 @@ export default function RealtimePersonalizationEngine2025(): void {
       <Helmet >
         <title >Real-Time AI Personalization Engine 2025 — 98.4% Relevance, 8.7x Conversion Lift, $234M+ Revenue Growth | Zion Tech Group</title>
         <meta name: "description",
-  content: "Deploy real-time AI personalization that adapts to user behavior in milliseconds. Achieve 98.4% relevance scoring, 8.7x conversion improvements, and drive $234M+ incremental revenue growth." /><meta name: "keywords",
-  content: "AI personalization, real-time personalization, recommendation engine, customer experience, conversion optimization, behavioral targeting, predictive personalization, marketing AI" /><link rel: "canonical" href="https://ziontechgroup.com/blog/ai-2025-oct-realtime-personalization-engine/>",
+  content: "Deploy real-time AI personalization that adapts to user behavior in milliseconds. Achieve 98.4% relevance scoring, 8.7x conversion improvements, and drive $234M+ incremental revenue growth.", /><meta name: "keywords",
+  content: "AI personalization, real-time personalization, recommendation engine, customer experience, conversion optimization, behavioral targeting, predictive personalization, marketing AI", /><link rel: "canonical", href="https://ziontechgroup.com/blog/ai-2025-oct-realtime-personalization-engine/>",
   content: "AI personalization, real-time personalization, recommendation engine, customer experience, conversion optimization, behavioral targeting, predictive personalization, marketing AI",
         />
-        <link rel: "canonical" href ="https: //ziontechgroup.com/blog/ai-2025-oct-realtime-personalization-engine" />",
+        <link rel: "canonical", href ="https: //ziontechgroup.com/blog/ai-2025-oct-realtime-personalization-engine" />",
       </Helmet>
 
       <article className="min-h-screen bg-gradient-to-br from-slate-900 via-rose-900 to-slate-900 text-white">",
@@ -264,25 +264,25 @@ export default function RealtimePersonalizationEngine2025(): void {
 
             <section className="mb-12"
               <h2 className="text-3xl font-bold mb-6 text-rose-300">Enterprise Success Stories</h2>"
-              <div className="grid md: grid-cols-2 gap-6 mb-8">",
+              <div className="grid md:grid-cols-2 gap-6 mb-8">",
                 <div className="bg-gradient-to-br from-rose-500/20 to-pink-500/20 rounded-xl p-6 border border-rose-500/30"
                   <h3 className="text-2xl font-bold mb-4 text-rose-300">Global Retail Leader</h3>"
                   <ul className="space-y-3 text-gray-300"
             <section className="mb-12">",
               <h2 className="text-3xl font-bold mb-6 text-rose-300">Enterprise Success Stories</h2>",
-              <div className="grid md: grid-cols-2 gap-6 mb-8">",
+              <div className="grid md:grid-cols-2 gap-6 mb-8">",
                 <div className="bg-gradient-to-br from-rose-500/20 to-pink-500/20 rounded-xl p-6 border border-rose-500/30">",
                   <h3 className="text-2xl font-bold mb-4 text-rose-300">Global Retail Leader</h3>",
                   <ul className="space-y-3 text-gray-300">",
             <section className= "mb-12">
               <h2 className= "text-3xl font-bold mb-6 text-rose-300">Enterprise Success Stories</h2>"
-              <div className= "grid md: grid-cols-2 gap-6 mb-8">",
+              <div className= "grid md:grid-cols-2 gap-6 mb-8">",
                 <div className= "bg-gradient-to-br from-rose-500/20 to-pink-500/20 rounded-xl p-6 border border-rose-500/30">
                   <h3 className= "text-2xl font-bold mb-4 text-rose-300">Global Retail Leader</h3>"
                   <ul className= "space-y-3 text-gray-300">
             <section className= "mb-12">",
               <h2 className= "text-3xl font-bold mb-6 text-rose-300">Enterprise Success Stories</h2>",
-              <div className= "grid md: grid-cols-2 gap-6 mb-8">",
+              <div className= "grid md:grid-cols-2 gap-6 mb-8">",
                 <div className= "bg-gradient-to-br from-rose-500/20 to-pink-500/20 rounded-xl p-6 border border-rose-500/30">",
                   <h3 className= "text-2xl font-bold mb-4 text-rose-300">Global Retail Leader</h3>",
                   <ul className= "space-y-3 text-gray-300">",

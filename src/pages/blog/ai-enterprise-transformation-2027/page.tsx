@@ -10,7 +10,7 @@ export default function AIEnterpriseTransformation2027(): React.JSX.Element {
       <Helmet >
         <title >AI Enterprise Transformation 2027 — Plan, Fund, Scale</title>
         <meta name: "description",;,"
-  content: "Executive playbook to plan, fund, and scale AI with measurable ROI using KPI-linked scorecards and governance." /><link rel: "canonical",;,"
+  content: "Executive playbook to plan, fund, and scale AI with measurable ROI using KPI-linked scorecards and governance.", /><link rel: "canonical",;,"
   href="https://ziontechgroup.com/blog/ai-enterprise-transformation-2027",
         />
       </Helmet>

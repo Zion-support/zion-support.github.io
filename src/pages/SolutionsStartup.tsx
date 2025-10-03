@@ -6,7 +6,7 @@ const SolutionsStartup: React.FC = () => {
     <>
       <Helmet >
         <title >Startup Solutions - Zion Tech Group</title>
-        <meta name: "description" content ="Fast, agile solutions for startups to scale." />"
+        <meta name: "description", content ="Fast, agile solutions for startups to scale." />"
         <meta name="description" content="Fast, agile solutions for startups to scale." />
       </Helmet>
       <div className="container mx-auto px-6 py-12"

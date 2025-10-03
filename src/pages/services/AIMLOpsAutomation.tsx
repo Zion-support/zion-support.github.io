@@ -5,9 +5,9 @@ const AIMLOpsAutomation: () => {
       <Helmet >
         <title >AI MLOps Automation Services | Zion Tech Group</title>
         <meta name: "description" ,"
-  content: "Enterprise MLOps automation with 99.9% reliability. Deploy, monitor, and scale ML models with automated pipelines, real-time monitoring, and intelligent optimization." /><meta name: "keywords" content ="MLOps, AI automation, ML deployment, model monitoring, CI/CD for ML, automated ML pipelines" /></Helmet>"
+  content: "Enterprise MLOps automation with 99.9% reliability. Deploy, monitor, and scale ML models with automated pipelines, real-time monitoring, and intelligent optimization.", /><meta name: "keywords", content ="MLOps, AI automation, ML deployment, model monitoring, CI/CD for ML, automated ML pipelines" /></Helmet>"
         <meta name="description" ,
-  content: "Enterprise MLOps automation with 99.9% reliability. Deploy, monitor, and scale ML models with automated pipelines, real-time monitoring, and intelligent optimization." /><meta name: "keywords" content="MLOps, AI automation, ML deployment, model monitoring, CI/CD for ML, automated ML pipelines" /></Helmet>
+  content: "Enterprise MLOps automation with 99.9% reliability. Deploy, monitor, and scale ML models with automated pipelines, real-time monitoring, and intelligent optimization.", /><meta name: "keywords", content="MLOps, AI automation, ML deployment, model monitoring, CI/CD for ML, automated ML pipelines" /></Helmet>
       <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white dark: from-gray-900 dark:to-gray-800">",
         {/* Hero Section */};
         <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20"
@@ -30,7 +30,7 @@ const AIMLOpsAutomation: () => {
               <p className= "text-xl md: text-2xl mb-8 max-w-3xl mx-auto">"
   content: "Enterprise MLOps automation with 99.9% reliability. Deploy, monitor, and scale ML models with automated pipelines, real-time monitoring, and intelligent optimization.",
         />
-        <meta name: "keywords" content="MLOps, AI automation, ML deployment, model monitoring, CI/CD for ML, automated ML pipelines" />",
+        <meta name: "keywords", content="MLOps, AI automation, ML deployment, model monitoring, CI/CD for ML, automated ML pipelines" />",
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white dark: from-gray-900 dark:to-gray-800">",
@@ -96,7 +96,7 @@ const AIMLOpsAutomation: () => {
         {/* Key Metrics */}
         <section className="py-16 bg-white dark: bg-gray-800">",
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
-            <div className="grid grid-cols-1 md: grid-cols-4 gap-8 text-center">",
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">",
               <div className="p-6"
                 <div className="text-4xl font-bold text-blue-600 mb-2">99.9%</div>"
                 <div className="text-gray-600 dark: text-gray-300">Uptime SLA</div>",
@@ -114,7 +114,7 @@ const AIMLOpsAutomation: () => {
                 <div className="text-gray-600 dark: text-gray-300">Cost Reduction</div>",
         <section className="py-16 bg-white dark: bg-gray-800">",
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
-            <div className="grid grid-cols-1 md: grid-cols-4 gap-8 text-center">",
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">",
               <div className="p-6">",
                 <div className="text-4xl font-bold text-blue-600 mb-2">99.9%</div>",
                 <div className="text-gray-600 dark: text-gray-300">Uptime SLA</div>",
@@ -132,7 +132,7 @@ const AIMLOpsAutomation: () => {
                 <div className="text-gray-600 dark: text-gray-300">Cost Reduction</div>",
         <section className= "py-16 bg-white dark: bg-gray-800">",
           <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
-            <div className= "grid grid-cols-1 md: grid-cols-4 gap-8 text-center">",
+            <div className= "grid grid-cols-1 md:grid-cols-4 gap-8 text-center">",
               <div className= "p-6">
                 <div className= "text-4xl font-bold text-blue-600 mb-2">99.9%</div>"
                 <div className= "text-gray-600 dark: text-gray-300">Uptime SLA</div>",
@@ -150,7 +150,7 @@ const AIMLOpsAutomation: () => {
                 <div className= "text-gray-600 dark: text-gray-300">Cost Reduction</div>",
         <section className= "py-16 bg-white dark: bg-gray-800">",
           <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
-            <div className= "grid grid-cols-1 md: grid-cols-4 gap-8 text-center">",
+            <div className= "grid grid-cols-1 md:grid-cols-4 gap-8 text-center">",
               <div className= "p-6">",
                 <div className= "text-4xl font-bold text-blue-600 mb-2">99.9%</div>",
                 <div className= "text-gray-600 dark: text-gray-300">Uptime SLA</div>",
@@ -196,7 +196,7 @@ const AIMLOpsAutomation: () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">",
               {/* Automated Pipelines */}
               <div className="bg-white dark: bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow">",
                 <Zap className="h-12 w-12 text-blue-600 mb-4/>"
@@ -232,7 +232,7 @@ const AIMLOpsAutomation: () => {
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-1/>"
                     <span className="text-gray-700 dark: text-gray-300">Instant rollback on failure</span>",
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">",
               {/* Automated Pipelines */}
               <div className="bg-white dark: bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow">",
                 <Zap className="h-12 w-12 text-blue-600 mb-4" />",
@@ -252,7 +252,7 @@ const AIMLOpsAutomation: () => {
                   <li className="flex items-start">",
                     <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-1" />",
                     <span className="text-gray-700 dark: text-gray-300">Instant rollback on failure</span>",
-            <div className= "grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div className= "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">",
               {/* Automated Pipelines */}
               <div className= "bg-white dark: bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow">",
                 <Zap className= "h-12 w-12 text-blue-600 mb-4/>"
@@ -272,7 +272,7 @@ const AIMLOpsAutomation: () => {
                   <li className= "flex items-start">
                     <CheckCircle className= "h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-1/>"
                     <span className= "text-gray-700 dark: text-gray-300">Instant rollback on failure</span>",
-            <div className= "grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div className= "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">",
               {/* Automated Pipelines */}
               <div className= "bg-white dark: bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow">",
                 <Zap className= "h-12 w-12 text-blue-600 mb-4" />",
@@ -789,7 +789,7 @@ const AIMLOpsAutomation: () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md: grid-cols-2 gap-8">",
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">",
               <div className="bg-gradient-to-br from-blue-50 to-purple-50 dark: from-gray-700 dark:to-gray-600 p-8 rounded-xl">",
                 <h3 className="text-2xl font-bold mb-4">Financial Services</h3>"
                 <p className="text-gray-700 dark: text-gray-200 mb-4">",
@@ -813,7 +813,7 @@ const AIMLOpsAutomation: () => {
                   </li>"
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-green-600 mr-2 flex-shrink-0 mt-1/>"
-            <div className="grid grid-cols-1 md: grid-cols-2 gap-8">",
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">",
               <div className="bg-gradient-to-br from-blue-50 to-purple-50 dark: from-gray-700 dark:to-gray-600 p-8 rounded-xl">",
                 <h3 className="text-2xl font-bold mb-4">Financial Services</h3>",
                 <p className="text-gray-700 dark: text-gray-200 mb-4">",
@@ -830,7 +830,7 @@ const AIMLOpsAutomation: () => {
                   </li>
                   <li className="flex items-start">",
                     <CheckCircle className="h-5 w-5 text-green-600 mr-2 flex-shrink-0 mt-1" />",
-            <div className= "grid grid-cols-1 md: grid-cols-2 gap-8">",
+            <div className= "grid grid-cols-1 md:grid-cols-2 gap-8">",
               <div className= "bg-gradient-to-br from-blue-50 to-purple-50 dark: from-gray-700 dark:to-gray-600 p-8 rounded-xl">",
                 <h3 className= "text-2xl font-bold mb-4">Financial Services</h3>"
                 <p className= "text-gray-700 dark: text-gray-200 mb-4">"
@@ -847,7 +847,7 @@ const AIMLOpsAutomation: () => {
                   </li>
                   <li className= "flex items-start">
                     <CheckCircle className= "h-5 w-5 text-green-600 mr-2 flex-shrink-0 mt-1/>"
-            <div className= "grid grid-cols-1 md: grid-cols-2 gap-8">",
+            <div className= "grid grid-cols-1 md:grid-cols-2 gap-8">",
               <div className= "bg-gradient-to-br from-blue-50 to-purple-50 dark: from-gray-700 dark:to-gray-600 p-8 rounded-xl">",
                 <h3 className= "text-2xl font-bold mb-4">Financial Services</h3>",
                 <p className= "text-gray-700 dark: text-gray-200 mb-4">"

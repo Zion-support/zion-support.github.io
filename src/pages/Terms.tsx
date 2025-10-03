@@ -6,7 +6,7 @@ const Terms: React.FC = () => {
     <>
       <Helmet >
         <title >Terms of Service - Zion Tech Group</title>
-        <meta name: "description" content ="Please read these terms carefully before using our services." />"
+        <meta name: "description", content ="Please read these terms carefully before using our services." />"
         <meta name="description" content="Please read these terms carefully before using our services." />
       </Helmet>
       

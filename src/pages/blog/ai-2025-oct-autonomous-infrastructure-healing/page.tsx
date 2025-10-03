@@ -5,11 +5,11 @@ export default function AutonomousInfrastructureHealing2025(): void {
       <Helmet >
         <title >Autonomous Infrastructure Self-Healing 2025 — 99.97% Uptime, 94% Incident Reduction, $67M+ Annual Savings | Zion Tech Group</title>
         <meta name: "description",
-  content: "Deploy autonomous self-healing infrastructure that automatically detects, diagnoses, and resolves incidents in milliseconds. Achieve 99.97% uptime, reduce incidents by 94%, and save $67M+ annually with AI-powered infrastructure automation." /><meta name: "keywords",
-  content: "autonomous infrastructure, self-healing systems, AI infrastructure, automated incident response, infrastructure automation, site reliability engineering, chaos engineering, infrastructure resilience" /><link rel: "canonical" href="https://ziontechgroup.com/blog/ai-2025-oct-autonomous-infrastructure-healing/>",
+  content: "Deploy autonomous self-healing infrastructure that automatically detects, diagnoses, and resolves incidents in milliseconds. Achieve 99.97% uptime, reduce incidents by 94%, and save $67M+ annually with AI-powered infrastructure automation.", /><meta name: "keywords",
+  content: "autonomous infrastructure, self-healing systems, AI infrastructure, automated incident response, infrastructure automation, site reliability engineering, chaos engineering, infrastructure resilience", /><link rel: "canonical", href="https://ziontechgroup.com/blog/ai-2025-oct-autonomous-infrastructure-healing/>",
   content: "autonomous infrastructure, self-healing systems, AI infrastructure, automated incident response, infrastructure automation, site reliability engineering, chaos engineering, infrastructure resilience",
         />
-        <link rel: "canonical" href ="https: //ziontechgroup.com/blog/ai-2025-oct-autonomous-infrastructure-healing" />",
+        <link rel: "canonical", href ="https: //ziontechgroup.com/blog/ai-2025-oct-autonomous-infrastructure-healing" />",
       </Helmet>
 
       <article className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">",
@@ -244,25 +244,25 @@ export default function AutonomousInfrastructureHealing2025(): void {
 
             <section className="mb-12"
               <h2 className="text-3xl font-bold mb-6 text-purple-300">Enterprise Implementation Results</h2>"
-              <div className="grid md: grid-cols-2 gap-6 mb-8">",
+              <div className="grid md:grid-cols-2 gap-6 mb-8">",
                 <div className="bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-xl p-6 border border-purple-500/30"
                   <h3 className="text-2xl font-bold mb-4 text-purple-300">Global Financial Services</h3>"
                   <ul className="space-y-3 text-gray-300"
             <section className="mb-12">",
               <h2 className="text-3xl font-bold mb-6 text-purple-300">Enterprise Implementation Results</h2>",
-              <div className="grid md: grid-cols-2 gap-6 mb-8">",
+              <div className="grid md:grid-cols-2 gap-6 mb-8">",
                 <div className="bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-xl p-6 border border-purple-500/30">",
                   <h3 className="text-2xl font-bold mb-4 text-purple-300">Global Financial Services</h3>",
                   <ul className="space-y-3 text-gray-300">",
             <section className= "mb-12">
               <h2 className= "text-3xl font-bold mb-6 text-purple-300">Enterprise Implementation Results</h2>"
-              <div className= "grid md: grid-cols-2 gap-6 mb-8">",
+              <div className= "grid md:grid-cols-2 gap-6 mb-8">",
                 <div className= "bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-xl p-6 border border-purple-500/30">
                   <h3 className= "text-2xl font-bold mb-4 text-purple-300">Global Financial Services</h3>"
                   <ul className= "space-y-3 text-gray-300">
             <section className= "mb-12">",
               <h2 className= "text-3xl font-bold mb-6 text-purple-300">Enterprise Implementation Results</h2>",
-              <div className= "grid md: grid-cols-2 gap-6 mb-8">",
+              <div className= "grid md:grid-cols-2 gap-6 mb-8">",
                 <div className= "bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-xl p-6 border border-purple-500/30">",
                   <h3 className= "text-2xl font-bold mb-4 text-purple-300">Global Financial Services</h3>",
                   <ul className= "space-y-3 text-gray-300">",

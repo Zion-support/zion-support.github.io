@@ -69,9 +69,9 @@ const ConversationalAI: React.FC = () => {
       description: "Perfect for small businesses wanting to add conversational AI capabilities",
       features: [,,
       name: "Starter
-      price: "$399
+      price: ", $399
       period: "/month
-      description: "Perfect for small businesses wanting to add conversational AI capabilities
+      description: ", Perfect for small businesses wanting to add conversational AI capabilities
       features: [,,",
         "Up to 1,000 conversations/month",;"
         "Basic NLP capabilities",;"
@@ -91,9 +91,9 @@ const ConversationalAI: React.FC = () => {
       description: "Ideal for growing companies with complex conversational needs",
       features: [,,
       name: "Professional
-      price: "$1,299
+      price: ", $1,299
       period: "/month
-      description: "Ideal for growing companies with complex conversational needs
+      description: ", Ideal for growing companies with complex conversational needs
       features: [,,",
         "Up to 10,000 conversations/month",;"
         "Advanced NLP & NLU",;"
@@ -116,9 +116,9 @@ const ConversationalAI: React.FC = () => {
       description: "Complete solution for large organizations with enterprise requirements",
       features: [,,
       name: "Enterprise
-      price: "$4,999
+      price: ", $4,999
       period: "/month
-      description: "Complete solution for large organizations with enterprise requirements
+      description: ", Complete solution for large organizations with enterprise requirements
       features: [,,",
         "Unlimited conversations",;"
         "Enterprise NLP & NLU",;"
@@ -321,13 +321,13 @@ const ConversationalAI: React.FC = () => {
       <Helmet >
         <title >Conversational AI - Zion Tech Group | Advanced Multi-Modal AI Conversations</title>
         <meta name: "description",
-  content: "Deploy advanced conversational AI with 96% accuracy, 150+ language support, and multi-modal conversations. Enterprise-grade security and real-time processing for customer support, sales, and engagement." /><meta name: "keywords" content ="conversational AI, chatbot, voice AI, multi-modal AI, customer support AI, sales automation, natural language processing, AI conversations" /><link rel: "canonical" href="https://ziontechgroup.com/services/conversational-ai/>",
+  content: "Deploy advanced conversational AI with 96% accuracy, 150+ language support, and multi-modal conversations. Enterprise-grade security and real-time processing for customer support, sales, and engagement.", /><meta name: "keywords", content ="conversational AI, chatbot, voice AI, multi-modal AI, customer support AI, sales automation, natural language processing, AI conversations" /><link rel: "canonical", href="https://ziontechgroup.com/services/conversational-ai/>",
         <meta name: "description
-  content: "Deploy advanced conversational AI with 96% accuracy, 150+ language support, and multi-modal conversations. Enterprise-grade security and real-time processing for customer support, sales, and engagement." /><meta name: "keywords" content="conversational AI, chatbot, voice AI, multi-modal AI, customer support AI, sales automation, natural language processing, AI conversations" /><link rel: "canonical" href="https://ziontechgroup.com/services/conversational-ai/>
+  content: ", Deploy advanced conversational AI with 96% accuracy, 150+ language support, and multi-modal conversations. Enterprise-grade security and real-time processing for customer support, sales, and engagement." /><meta name: "keywords", content="conversational AI, chatbot, voice AI, multi-modal AI, customer support AI, sales automation, natural language processing, AI conversations" /><link rel: "canonical", href="https://ziontechgroup.com/services/conversational-ai/>
   content: "Deploy advanced conversational AI with 96% accuracy, 150+ language support, and multi-modal conversations. Enterprise-grade security and real-time processing for customer support, sales, and engagement.",
         />
-        <meta name: "keywords" content="conversational AI, chatbot, voice AI, multi-modal AI, customer support AI, sales automation, natural language processing, AI conversations" />",
-        <link rel: "canonical" href ="https: //ziontechgroup.com/services/conversational-ai" />",
+        <meta name: "keywords", content="conversational AI, chatbot, voice AI, multi-modal AI, customer support AI, sales automation, natural language processing, AI conversations" />",
+        <link rel: "canonical", href ="https: //ziontechgroup.com/services/conversational-ai" />",
       </Helmet>
 
       <Header />
@@ -344,7 +344,7 @@ const ConversationalAI: React.FC = () => {
   Deploy advanced conversational AI with 96% accuracy, 150+ language support
                 and multi-modal conversations for customer support, sales, and engagement.
               </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">",
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">",
         <section className="bg-gradient-to-br from-violet-900 via-purple-800 to-pink-900 text-white py-20">",
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
             <div className="text-center">",
@@ -355,7 +355,7 @@ const ConversationalAI: React.FC = () => {
   Deploy advanced conversational AI with 96% accuracy, 150+ language support
                 and multi-modal conversations for customer support, sales, and engagement.
               </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">",
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">",
                 <a href="/contact",
   className="inline-flex items-center px-8 py-4 bg-violet-600 hover: bg-violet-700 text-white font-semibold rounded-lg transition-colors",
                 >
@@ -384,7 +384,7 @@ const ConversationalAI: React.FC = () => {
   Deploy advanced conversational AI with 96% accuracy, 150+ language support
                 and multi-modal conversations for customer support, sales, and engagement.
               </p>
-              <div className= "flex flex-col sm: flex-row gap-4 justify-center">",
+              <div className= "flex flex-col sm:flex-row gap-4 justify-center">",
         <section className= "bg-gradient-to-br from-violet-900 via-purple-800 to-pink-900 text-white py-20">",
           <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
             <div className= "text-center">",
@@ -395,7 +395,7 @@ const ConversationalAI: React.FC = () => {
   Deploy advanced conversational AI with 96% accuracy, 150+ language support
                 and multi-modal conversations for customer support, sales, and engagement.
               </p>
-              <div className= "flex flex-col sm: flex-row gap-4 justify-center">",
+              <div className= "flex flex-col sm:flex-row gap-4 justify-center">",
                 <a href="/contact",
   className= "inline-flex items-center px-8 py-4 bg-violet-600 hover: bg-violet-700 text-white font-semibold rounded-lg transition-colors",
                 >
@@ -442,14 +442,14 @@ const ConversationalAI: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid md: grid-cols-4 gap-8">",
+            <div className="grid md:grid-cols-4 gap-8">",
               <div className="text-center"
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-violet-100 rounded-full mb-4"
                   <Brain className="w-8 h-8 text-violet-600/>"
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-violet-100 rounded-full mb-4">
                   <Brain className="w-8 h-8 text-violet-600/>"
-            <div className="grid md: grid-cols-4 gap-8">",
+            <div className="grid md:grid-cols-4 gap-8">",
               <div className="text-center">",
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-violet-100 rounded-full mb-4">",
                   <Brain className="w-8 h-8 text-violet-600" />",
@@ -495,11 +495,11 @@ const ConversationalAI: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Enterprise Security</h3>",
                 <p className="text-gray-600">Bank-grade encryption & compliance</p>",
-            <div className= "grid md: grid-cols-4 gap-8">",
+            <div className= "grid md:grid-cols-4 gap-8">",
               <div className= "text-center">
                 <div className= "inline-flex items-center justify-center w-16 h-16 bg-violet-100 rounded-full mb-4">
                   <Brain className= "w-8 h-8 text-violet-600/>"
-            <div className= "grid md: grid-cols-4 gap-8">",
+            <div className= "grid md:grid-cols-4 gap-8">",
               <div className= "text-center">",
                 <div className= "inline-flex items-center justify-center w-16 h-16 bg-violet-100 rounded-full mb-4">",
                   <Brain className= "w-8 h-8 text-violet-600" />",
@@ -568,7 +568,7 @@ const ConversationalAI: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">",
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">",
               {useCases.map((useCase, index) => {
                 const Icon: useCase.icon;,,
   return (
@@ -578,7 +578,7 @@ const ConversationalAI: React.FC = () => {
                   <div key: {index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">",
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-violet-100 rounded-full mb-6">
                       <Icon className="w-8 h-8 text-violet-600/>"
-            <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">",
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">",
               {useCases.map((useCase, index) => {
                 const Icon: useCase.icon;,,
   return (
@@ -598,14 +598,14 @@ const ConversationalAI: React.FC = () => {
                         <li key={benefitIndex} className="flex items-center text-sm">",
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />",
                           <span className="text-gray-700">{benefit}</span>"
-            <div className= "grid md: grid-cols-2 lg:grid-cols-4 gap-8">",
+            <div className= "grid md:grid-cols-2 lg:grid-cols-4 gap-8">",
               {useCases.map((useCase, index) => {
                 const Icon: useCase.icon;,,
   return (
                   <div key={index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">",
                     <div className= "inline-flex items-center justify-center w-16 h-16 bg-violet-100 rounded-full mb-6">
                       <Icon className= "w-8 h-8 text-violet-600/>"
-            <div className= "grid md: grid-cols-2 lg:grid-cols-4 gap-8">",
+            <div className= "grid md:grid-cols-2 lg:grid-cols-4 gap-8">",
               {useCases.map((useCase, index) => {
                 const Icon: useCase.icon;,,
   return (
@@ -660,7 +660,7 @@ const ConversationalAI: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">",
               {integrations.map((integration, index) => {
                 const Icon: integration.icon;,,
   return (
@@ -670,7 +670,7 @@ const ConversationalAI: React.FC = () => {
                   <div key: {index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200">
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-violet-100 rounded-full mb-6">
                       <Icon className="w-8 h-8 text-violet-600/>"
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">",
               {integrations.map((integration, index) => {
                 const Icon: integration.icon;,,
   return (
@@ -680,14 +680,14 @@ const ConversationalAI: React.FC = () => {
                     </div>
                     <h3 className="text-xl font-bold text-gray-900 mb-4">{integration.name}</h3>"
                     <p className="text-gray-600">{integration.description}</p>"
-            <div className= "grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div className= "grid md:grid-cols-2 lg:grid-cols-3 gap-8">",
               {integrations.map((integration, index) => {
                 const Icon: integration.icon;,,
   return (
                   <div key={index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200">
                     <div className= "inline-flex items-center justify-center w-16 h-16 bg-violet-100 rounded-full mb-6">
                       <Icon className= "w-8 h-8 text-violet-600/>"
-            <div className= "grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div className= "grid md:grid-cols-2 lg:grid-cols-3 gap-8">",
               {integrations.map((integration, index) => {
                 const Icon: integration.icon;,,
   return (
@@ -731,7 +731,7 @@ const ConversationalAI: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">",
               {features.map((feature, index) => {
                 const Icon: feature.icon;,,
   return (
@@ -751,7 +751,7 @@ const ConversationalAI: React.FC = () => {
                     <p className="text-gray-600 mb-4">{feature.description}</p>";"
                     <div className="inline-flex items-center text-green-600 font-semibold text-sm">
                       <CheckCircle className="w-4 h-4 mr-1/>"
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">",
               {features.map((feature, index) => {
                 const Icon: feature.icon;,,
   return (
@@ -763,7 +763,7 @@ const ConversationalAI: React.FC = () => {
                     <p className="text-gray-600 mb-4">{feature.description}</p>"
                     <div className="inline-flex items-center text-green-600 font-semibold text-sm">",
                       <CheckCircle className="w-4 h-4 mr-1" />",
-            <div className= "grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div className= "grid md:grid-cols-2 lg:grid-cols-3 gap-8">",
               {features.map((feature, index) => {
                 const Icon: feature.icon;,,
   return (
@@ -775,7 +775,7 @@ const ConversationalAI: React.FC = () => {
                     <p className= "text-gray-600 mb-4">{feature.description}</p>";"
                     <div className= "inline-flex items-center text-green-600 font-semibold text-sm">
                       <CheckCircle className= "w-4 h-4 mr-1/>"
-            <div className= "grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div className= "grid md:grid-cols-2 lg:grid-cols-3 gap-8">",
               {features.map((feature, index) => {
                 const Icon: feature.icon;,,
   return (
@@ -823,15 +823,15 @@ const ConversationalAI: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid md: grid-cols-3 gap-8">",
-            <div className="grid md: grid-cols-3 gap-8">",
+            <div className="grid md:grid-cols-3 gap-8">",
+            <div className="grid md:grid-cols-3 gap-8">",
               {pricing.map((plan, index) => (
                 <div key={index} className={`bg-white rounded-2xl shadow-lg p-8 ${plan.popular ? 'ring-2 ring-violet-500 relative' : ''}`}>`
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">",
                       <span className="bg-violet-500 text-white px-4 py-1 rounded-full text-sm font-semibold">",
-            <div className= "grid md: grid-cols-3 gap-8">",
-            <div className= "grid md: grid-cols-3 gap-8">",
+            <div className= "grid md:grid-cols-3 gap-8">",
+            <div className= "grid md:grid-cols-3 gap-8">",
               {pricing.map((plan, index) => (
                 <div key={index} className= {`bg-white rounded-2xl shadow-lg p-8 ${plan.popular ? 'ring-2 ring-violet-500 relative' : ''}`}>`
                   {plan.popular && (
@@ -947,8 +947,8 @@ plan.popular
               </p>
             </div>
 
-            <div className="grid md: grid-cols-3 gap-8">",
-            <div className="grid md: grid-cols-3 gap-8">",
+            <div className="grid md:grid-cols-3 gap-8">",
+            <div className="grid md:grid-cols-3 gap-8">",
               {testimonials.map((testimonial, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200">",
                   <div className="flex items-center mb-4">",
@@ -966,8 +966,8 @@ plan.popular
                     <div className="font-semibold text-gray-900">{testimonial.name}</div>"
                     <div className="text-gray-600 text-sm">{testimonial.role}</div>"
                     <div className="text-violet-600 text-sm font-medium">{testimonial.company}</div>"
-            <div className= "grid md: grid-cols-3 gap-8">",
-            <div className= "grid md: grid-cols-3 gap-8">",
+            <div className= "grid md:grid-cols-3 gap-8">",
+            <div className= "grid md:grid-cols-3 gap-8">",
               {testimonials.map((testimonial, index) => (
                 <div key={index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200">",
                   <div className= "flex items-center mb-4">",
@@ -1002,8 +1002,8 @@ plan.popular
             <p className="text-xl text-violet-100 max-w-3xl mx-auto mb-8">",
   Deploy advanced conversational AI that understands, responds, and engages with 96% accuracy across 150+ languages.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">",
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">",
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">",
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">",
               <a href="/contact",
   className="inline-flex items-center px-8 py-4 bg-violet-600 hover: bg-violet-700 text-white font-semibold rounded-lg transition-colors",
               >
@@ -1031,8 +1031,8 @@ plan.popular
             <p className= "text-xl text-violet-100 max-w-3xl mx-auto mb-8">"
   Deploy advanced conversational AI that understands, responds, and engages with 96% accuracy across 150+ languages.
             </p>
-            <div className= "flex flex-col sm: flex-row gap-4 justify-center">",
-            <div className= "flex flex-col sm: flex-row gap-4 justify-center">",
+            <div className= "flex flex-col sm:flex-row gap-4 justify-center">",
+            <div className= "flex flex-col sm:flex-row gap-4 justify-center">",
               <a href="/contact",
   className= "inline-flex items-center px-8 py-4 bg-violet-600 hover: bg-violet-700 text-white font-semibold rounded-lg transition-colors",
               >

@@ -5,11 +5,11 @@ export default function HyperPersonalizedCustomerExperience2025(): void {
       <Helmet >
         <title >Hyper-Personalized AI Customer Experience Platform 2025 — 97.8% Satisfaction, 12.4x Engagement, $3.2B+ Revenue | Zion Tech Group</title>
         <meta name: "description",
-  content: "Deploy AI-powered hyper-personalization that understands each customer individually. Achieve 97.8% satisfaction scores, increase engagement by 12.4x, reduce churn by 89%, and drive $3.2B+ in incremental revenue through truly personalized experiences." /><meta name: "keywords",
-  content: "AI personalization, customer experience, hyper-personalization, customer engagement, AI CX platform, behavioral AI, customer journey, experience optimization" /><link rel: "canonical" href="https://ziontechgroup.com/blog/ai-2025-oct-hyper-personalized-customer-experience/>",
+  content: "Deploy AI-powered hyper-personalization that understands each customer individually. Achieve 97.8% satisfaction scores, increase engagement by 12.4x, reduce churn by 89%, and drive $3.2B+ in incremental revenue through truly personalized experiences.", /><meta name: "keywords",
+  content: "AI personalization, customer experience, hyper-personalization, customer engagement, AI CX platform, behavioral AI, customer journey, experience optimization", /><link rel: "canonical", href="https://ziontechgroup.com/blog/ai-2025-oct-hyper-personalized-customer-experience/>",
   content: "AI personalization, customer experience, hyper-personalization, customer engagement, AI CX platform, behavioral AI, customer journey, experience optimization",
         />
-        <link rel: "canonical" href ="https: //ziontechgroup.com/blog/ai-2025-oct-hyper-personalized-customer-experience" />",
+        <link rel: "canonical", href ="https: //ziontechgroup.com/blog/ai-2025-oct-hyper-personalized-customer-experience" />",
       </Helmet>
 
       <article className="min-h-screen bg-gradient-to-br from-slate-900 via-pink-900 to-slate-900 text-white">",
@@ -305,25 +305,25 @@ export default function HyperPersonalizedCustomerExperience2025(): void {
 
             <section className="mb-12"
               <h2 className="text-3xl font-bold mb-6 text-pink-300">Enterprise Success Stories</h2>"
-              <div className="grid md: grid-cols-2 gap-6 mb-8">",
+              <div className="grid md:grid-cols-2 gap-6 mb-8">",
                 <div className="bg-gradient-to-br from-pink-500/20 to-rose-500/20 rounded-xl p-6 border border-pink-500/30"
                   <h3 className="text-2xl font-bold mb-4 text-pink-300">Leading E-Commerce Platform</h3>"
                   <ul className="space-y-3 text-gray-300"
             <section className="mb-12">",
               <h2 className="text-3xl font-bold mb-6 text-pink-300">Enterprise Success Stories</h2>",
-              <div className="grid md: grid-cols-2 gap-6 mb-8">",
+              <div className="grid md:grid-cols-2 gap-6 mb-8">",
                 <div className="bg-gradient-to-br from-pink-500/20 to-rose-500/20 rounded-xl p-6 border border-pink-500/30">",
                   <h3 className="text-2xl font-bold mb-4 text-pink-300">Leading E-Commerce Platform</h3>",
                   <ul className="space-y-3 text-gray-300">",
             <section className= "mb-12">
               <h2 className= "text-3xl font-bold mb-6 text-pink-300">Enterprise Success Stories</h2>"
-              <div className= "grid md: grid-cols-2 gap-6 mb-8">",
+              <div className= "grid md:grid-cols-2 gap-6 mb-8">",
                 <div className= "bg-gradient-to-br from-pink-500/20 to-rose-500/20 rounded-xl p-6 border border-pink-500/30">
                   <h3 className= "text-2xl font-bold mb-4 text-pink-300">Leading E-Commerce Platform</h3>"
                   <ul className= "space-y-3 text-gray-300">
             <section className= "mb-12">",
               <h2 className= "text-3xl font-bold mb-6 text-pink-300">Enterprise Success Stories</h2>",
-              <div className= "grid md: grid-cols-2 gap-6 mb-8">",
+              <div className= "grid md:grid-cols-2 gap-6 mb-8">",
                 <div className= "bg-gradient-to-br from-pink-500/20 to-rose-500/20 rounded-xl p-6 border border-pink-500/30">",
                   <h3 className= "text-2xl font-bold mb-4 text-pink-300">Leading E-Commerce Platform</h3>",
                   <ul className= "space-y-3 text-gray-300">",

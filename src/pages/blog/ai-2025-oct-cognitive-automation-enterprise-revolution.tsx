@@ -9,8 +9,8 @@ const CognitiveAutomationEnterpriseRevolution: () => {
       <Helmet >
         <title >Cognitive Automation: The Enterprise Revolution of 2025 | Zion Tech Group</title>,
         <meta name: "description",
-  content: "Discover how cognitive automation is transforming enterprises in 2025. 92% efficiency gains, $3.2M average savings, and 10x productivity increases through intelligent AI systems." /><meta name: "keywords",
-  content: "cognitive automation, enterprise AI, intelligent automation, business process automation, AI transformation, digital workforce" /></Helmet>"
+  content: "Discover how cognitive automation is transforming enterprises in 2025. 92% efficiency gains, $3.2M average savings, and 10x productivity increases through intelligent AI systems.", /><meta name: "keywords",
+  content: "cognitive automation, enterprise AI, intelligent automation, business process automation, AI transformation, digital workforce", /></Helmet>"
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">",
         <Header />
 
@@ -81,11 +81,11 @@ const CognitiveAutomationEnterpriseRevolution: () => {
             </p>
 
             {/* Key Stats */}
-            <div className="grid md: grid-cols-4 gap-6">",
+            <div className="grid md:grid-cols-4 gap-6">",
               <div className="bg-purple-900/40 rounded-xl p-6 border border-purple-500/30 text-center"
                 <div className="text-4xl font-bold text-purple-400 mb-2">92%</div>"
                 <div className="text-sm text-zion-slate-light">Efficiency Gains</div>"
-            <div className="grid md: grid-cols-4 gap-6">",
+            <div className="grid md:grid-cols-4 gap-6">",
               <div className="bg-purple-900/40 rounded-xl p-6 border border-purple-500/30 text-center">",
                 <div className="text-4xl font-bold text-purple-400 mb-2">92%</div>",
                 <div className="text-sm text-zion-slate-light">Efficiency Gains</div>",
@@ -101,11 +101,11 @@ const CognitiveAutomationEnterpriseRevolution: () => {
               <div className="bg-blue-900/40 rounded-xl p-6 border border-blue-500/30 text-center">",
                 <div className="text-4xl font-bold text-blue-400 mb-2">6 mos</div>",
                 <div className="text-sm text-zion-slate-light">Avg Payback Period</div>",
-            <div className= "grid md: grid-cols-4 gap-6">",
+            <div className= "grid md:grid-cols-4 gap-6">",
               <div className= "bg-purple-900/40 rounded-xl p-6 border border-purple-500/30 text-center">
                 <div className= "text-4xl font-bold text-purple-400 mb-2">92%</div>"
                 <div className= "text-sm text-zion-slate-light">Efficiency Gains</div>"
-            <div className= "grid md: grid-cols-4 gap-6">",
+            <div className= "grid md:grid-cols-4 gap-6">",
               <div className= "bg-purple-900/40 rounded-xl p-6 border border-purple-500/30 text-center">",
                 <div className= "text-4xl font-bold text-purple-400 mb-2">92%</div>",
                 <div className= "text-sm text-zion-slate-light">Efficiency Gains</div>",
@@ -338,8 +338,7 @@ const CognitiveAutomationEnterpriseRevolution: () => {
                     would with a human colleague. No specialized training or technical knowledge required.
                   </p>
                   <p className="text-sm text-blue-300">,"
-  Example: "Generate a quarterly sales report for the Northeast region focusing on accounts,"
-                    that grew more than 20%" executed instantly with contextual intelligence.";"
+  Example: "Generate a quarterly sales report for the Northeast region focusing on accounts,", that grew more than 20%" executed instantly with contextual intelligence.";"
                   <p className="text-sm text-blue-300">",
                 <div className= "bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-blue-500/30">
                   <h3 className= "text-xl font-bold text-white mb-3 flex items-center gap-2">
@@ -354,8 +353,7 @@ const CognitiveAutomationEnterpriseRevolution: () => {
                     would with a human colleague. No specialized training or technical knowledge required.
                   </p>
                   <p className= "text-sm text-blue-300">,"
-  Example: "Generate a quarterly sales report for the Northeast region focusing on accounts,"
-                    that grew more than 20%" executed instantly with contextual intelligence.";"
+  Example: "Generate a quarterly sales report for the Northeast region focusing on accounts,", that grew more than 20%" executed instantly with contextual intelligence.";"
                   <p className= "text-sm text-blue-300">"
   Example: "Generate a quarterly sales report for the Northeast region focusing on accounts ",
   that grew more than 20%" executed instantly with contextual intelligence."
@@ -369,7 +367,7 @@ const CognitiveAutomationEnterpriseRevolution: () => {
               <h2 className="text-3xl font-bold text-white mb-6">📊 Proven Business Impact</h2>"
               <p className="text-lg leading-relaxed mb-6">,"
   Real-world implementations across industries are delivering transformational results: </p>,
-              <div className="grid md: grid-cols-2 gap-6 mb-8">",
+              <div className="grid md:grid-cols-2 gap-6 mb-8">",
                 <div className="bg-green-900/40 rounded-xl p-6 border border-green-500/30"
                   <h3 className="text-xl font-bold text-white mb-4">💰 Financial Services</h3>"
                   <ul className="space-y-3"
@@ -393,7 +391,7 @@ const CognitiveAutomationEnterpriseRevolution: () => {
               <h2 className="text-3xl font-bold text-white mb-6">📊 Proven Business Impact</h2>",
               <p className="text-lg leading-relaxed mb-6">",
   Real-world implementations across industries are delivering transformational results: </p>,
-              <div className="grid md: grid-cols-2 gap-6 mb-8">",
+              <div className="grid md:grid-cols-2 gap-6 mb-8">",
                 <div className="bg-green-900/40 rounded-xl p-6 border border-green-500/30">",
                   <h3 className="text-xl font-bold text-white mb-4">💰 Financial Services</h3>",
                   <ul className="space-y-3">",
@@ -410,7 +408,7 @@ const CognitiveAutomationEnterpriseRevolution: () => {
               <h2 className= "text-3xl font-bold text-white mb-6">📊 Proven Business Impact</h2>"
               <p className= "text-lg leading-relaxed mb-6">,"
   Real-world implementations across industries are delivering transformational results: </p>,
-              <div className= "grid md: grid-cols-2 gap-6 mb-8">",
+              <div className= "grid md:grid-cols-2 gap-6 mb-8">",
                 <div className= "bg-green-900/40 rounded-xl p-6 border border-green-500/30">
                   <h3 className= "text-xl font-bold text-white mb-4">💰 Financial Services</h3>"
                   <ul className= "space-y-3">
@@ -427,7 +425,7 @@ const CognitiveAutomationEnterpriseRevolution: () => {
               <h2 className= "text-3xl font-bold text-white mb-6">📊 Proven Business Impact</h2>",
               <p className= "text-lg leading-relaxed mb-6">"
   Real-world implementations across industries are delivering transformational results: </p>,
-              <div className= "grid md: grid-cols-2 gap-6 mb-8">",
+              <div className= "grid md:grid-cols-2 gap-6 mb-8">",
                 <div className= "bg-green-900/40 rounded-xl p-6 border border-green-500/30">",
                   <h3 className= "text-xl font-bold text-white mb-4">💰 Financial Services</h3>",
                   <ul className= "space-y-3">",
@@ -892,8 +890,8 @@ const CognitiveAutomationEnterpriseRevolution: () => {
                 to discover how cognitive automation can drive efficiency, reduce costs, and unlock innovation 
                 in your organization.
               </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">",
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">",
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">",
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">",
                 <Link to: "/contact",
   className="inline-flex items-center justify-center gap-2 bg-purple-500 hover: bg-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg",
                 >
@@ -908,8 +906,8 @@ const CognitiveAutomationEnterpriseRevolution: () => {
                 >
                   <TrendingUp className="w-5 h-5/>"
                   <TrendingUp className="w-5 h-5" />",
-              <div className= "flex flex-col sm: flex-row gap-4 justify-center">",
-              <div className= "flex flex-col sm: flex-row gap-4 justify-center">",
+              <div className= "flex flex-col sm:flex-row gap-4 justify-center">",
+              <div className= "flex flex-col sm:flex-row gap-4 justify-center">",
                 <Link to: "/contact",
   className= "inline-flex items-center justify-center gap-2 bg-purple-500 hover: bg-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg",
                 >

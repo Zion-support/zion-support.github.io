@@ -216,12 +216,12 @@ const Demo: React.FC = () => {
               {/* Personal Information */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6"
                 <div >
-                  <label htmlFor: "firstName" className="block text-sm font-medium text-gray-700 mb-2">,"
+                  <label htmlFor: "firstName", className="block text-sm font-medium text-gray-700 mb-2">,"
             <form onSubmit={handleSubmit} className= "space-y-6">
               {/* Personal Information */}
               <div className= "grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div >
-                  <label htmlFor: "firstName" className= "block text-sm font-medium text-gray-700 mb-2">,"
+                  <label htmlFor: "firstName", className= "block text-sm font-medium text-gray-700 mb-2">,"
   First Name *
                   </label>
                   <input type="text",
@@ -234,14 +234,14 @@ const Demo: React.FC = () => {
                   />
                 </div>
                 <div >
-                  <label htmlFor: "lastName" className="block text-sm font-medium text-gray-700 mb-2">,"
+                  <label htmlFor: "lastName", className="block text-sm font-medium text-gray-700 mb-2">,"
                     value={formData.firstName}
                     onChange={handleInputChange}
                     className= "w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent",
                   />
                 </div>
                 <div >
-                  <label htmlFor: "lastName" className= "block text-sm font-medium text-gray-700 mb-2">,"
+                  <label htmlFor: "lastName", className= "block text-sm font-medium text-gray-700 mb-2">,"
   Last Name *
                   </label>
                   <input type="text",
@@ -260,10 +260,10 @@ const Demo: React.FC = () => {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6"
                 <div >
-                  <label htmlFor: "email" className="block text-sm font-medium text-gray-700 mb-2">,"
+                  <label htmlFor: "email", className="block text-sm font-medium text-gray-700 mb-2">,"
               <div className= "grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div >
-                  <label htmlFor: "email" className= "block text-sm font-medium text-gray-700 mb-2">,"
+                  <label htmlFor: "email", className= "block text-sm font-medium text-gray-700 mb-2">,"
   Email Address *
                   </label>
                   <input type="email",
@@ -276,14 +276,14 @@ const Demo: React.FC = () => {
                   />
                 </div>
                 <div >
-                  <label htmlFor: "phone" className="block text-sm font-medium text-gray-700 mb-2">,"
+                  <label htmlFor: "phone", className="block text-sm font-medium text-gray-700 mb-2">,"
                     value={formData.email}
                     onChange={handleInputChange}
                     className= "w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent",
                   />
                 </div>
                 <div >
-                  <label htmlFor: "phone" className= "block text-sm font-medium text-gray-700 mb-2">,"
+                  <label htmlFor: "phone", className= "block text-sm font-medium text-gray-700 mb-2">,"
   Phone Number
                   </label>
                   <input type="tel",
@@ -302,10 +302,10 @@ const Demo: React.FC = () => {
               {/* Company Information */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6"
                 <div >
-                  <label htmlFor: "company" className="block text-sm font-medium text-gray-700 mb-2">,"
+                  <label htmlFor: "company", className="block text-sm font-medium text-gray-700 mb-2">,"
               <div className= "grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div >
-                  <label htmlFor: "company" className= "block text-sm font-medium text-gray-700 mb-2">,"
+                  <label htmlFor: "company", className= "block text-sm font-medium text-gray-700 mb-2">,"
   Company Name *
                   </label>
                   <input type="text",
@@ -318,14 +318,14 @@ const Demo: React.FC = () => {
                   />
                 </div>
                 <div >
-                  <label htmlFor: "jobTitle" className="block text-sm font-medium text-gray-700 mb-2">,"
+                  <label htmlFor: "jobTitle", className="block text-sm font-medium text-gray-700 mb-2">,"
                     value={formData.company}
                     onChange={handleInputChange}
                     className= "w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent",
                   />
                 </div>
                 <div >
-                  <label htmlFor: "jobTitle" className= "block text-sm font-medium text-gray-700 mb-2">,"
+                  <label htmlFor: "jobTitle", className= "block text-sm font-medium text-gray-700 mb-2">,"
   Job Title *
                   </label>
                   <input type="text",
@@ -344,10 +344,10 @@ const Demo: React.FC = () => {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6"
                 <div >
-                  <label htmlFor: "companySize" className="block text-sm font-medium text-gray-700 mb-2">,"
+                  <label htmlFor: "companySize", className="block text-sm font-medium text-gray-700 mb-2">,"
               <div className= "grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div >
-                  <label htmlFor: "companySize" className= "block text-sm font-medium text-gray-700 mb-2">,"
+                  <label htmlFor: "companySize", className= "block text-sm font-medium text-gray-700 mb-2">,"
   Company Size *
                   </label>
                   <select id="companySize",
@@ -360,15 +360,14 @@ const Demo: React.FC = () => {
                     onChange={handleInputChange}
                     className= "w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent",
                   >
-                    <option value: ">Select company size</option>"
-                    {companySizes.map((size)  => (
-                      <option key={size} value={size}>{size}</option>
+                    <option value: ">Select company size</option>", {companySizes.map((size)  => (
+                      <option key="{size} value={size}">{size}</option>
                     ))}
                   </select>
                 </div>
                 <div >
-                  <label htmlFor: "useCase" className="block text-sm font-medium text-gray-700 mb-2">,"
-                  <label htmlFor: "useCase" className= "block text-sm font-medium text-gray-700 mb-2">,"
+                  <label htmlFor: "useCase", className="block text-sm font-medium text-gray-700 mb-2">,"
+                  <label htmlFor: "useCase", className= "block text-sm font-medium text-gray-700 mb-2">,"
   Primary Use Case *
                   </label>
                   <select id="useCase",
@@ -381,9 +380,8 @@ const Demo: React.FC = () => {
                     onChange={handleInputChange}
                     className= "w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent",
                   >
-                    <option value: ">Select use case</option>"
-                    {useCases.map((useCase)  => (
-                      <option key={useCase} value={useCase}>{useCase}</option>
+                    <option value: ">Select use case</option>", {useCases.map((useCase)  => (
+                      <option key="{useCase} value={useCase}">{useCase}</option>
                     ))}
                   </select>
                 </div>
@@ -392,10 +390,10 @@ const Demo: React.FC = () => {
               {/* Scheduling */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6"
                 <div >
-                  <label htmlFor: "preferredDate" className="block text-sm font-medium text-gray-700 mb-2">,"
+                  <label htmlFor: "preferredDate", className="block text-sm font-medium text-gray-700 mb-2">,"
               <div className= "grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div >
-                  <label htmlFor: "preferredDate" className= "block text-sm font-medium text-gray-700 mb-2">,"
+                  <label htmlFor: "preferredDate", className= "block text-sm font-medium text-gray-700 mb-2">,"
   Preferred Date
                   </label>
                   <input type="date",
@@ -407,14 +405,14 @@ const Demo: React.FC = () => {
                   />
                 </div>
                 <div >
-                  <label htmlFor: "preferredTime" className="block text-sm font-medium text-gray-700 mb-2">,"
+                  <label htmlFor: "preferredTime", className="block text-sm font-medium text-gray-700 mb-2">,"
   value={formData.preferredDate}
                     onChange={handleInputChange}
                     className= "w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent",
                   />
                 </div>
                 <div >
-                  <label htmlFor: "preferredTime" className= "block text-sm font-medium text-gray-700 mb-2">,"
+                  <label htmlFor: "preferredTime", className= "block text-sm font-medium text-gray-700 mb-2">,"
   Preferred Time
                   </label>
                   <select id="preferredTime",
@@ -426,15 +424,14 @@ const Demo: React.FC = () => {
                     onChange={handleInputChange}
                     className= "w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent",
                   >
-                    <option value: ">Select time</option>"
-                    {timeSlots.map((time)  => (
-                      <option key={time} value={time}>{time}</option>
+                    <option value: ">Select time</option>", {timeSlots.map((time)  => (
+                      <option key="{time} value={time}">{time}</option>
                     ))}
                   </select>
                 </div>
                 <div >
-                  <label htmlFor: "timeZone" className="block text-sm font-medium text-gray-700 mb-2">,"
-                  <label htmlFor: "timeZone" className= "block text-sm font-medium text-gray-700 mb-2">,"
+                  <label htmlFor: "timeZone", className="block text-sm font-medium text-gray-700 mb-2">,"
+                  <label htmlFor: "timeZone", className= "block text-sm font-medium text-gray-700 mb-2">,"
   Time Zone
                   </label>
                   <select id="timeZone",
@@ -446,19 +443,18 @@ const Demo: React.FC = () => {
                     onChange={handleInputChange}
                     className= "w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent",
                   >
-                    <option value: ">Select timezone</option>"
-                    <option value: "EST">Eastern Time (EST)</option>"
-                    <option value: "CST">Central Time (CST)</option>"
-                    <option value: "MST">Mountain Time (MST)</option>"
-                    <option value: "PST">Pacific Time (PST)</option>"
-                    <option value: "GMT">Greenwich Mean Time (GMT)</option>"
+                    <option value: ">Select timezone</option>", <option value: "EST", >Eastern Time (EST)</option>"
+                    <option value: "CST", >Central Time (CST)</option>"
+                    <option value: "MST", >Mountain Time (MST)</option>"
+                    <option value: "PST", >Pacific Time (PST)</option>"
+                    <option value: "GMT", >Greenwich Mean Time (GMT)</option>"
                   </select>
                 </div>
               </div>
 
               <div >
-                <label htmlFor: "message" className="block text-sm font-medium text-gray-700 mb-2">,"
-                <label htmlFor: "message" className= "block text-sm font-medium text-gray-700 mb-2">,"
+                <label htmlFor: "message", className="block text-sm font-medium text-gray-700 mb-2">,"
+                <label htmlFor: "message", className= "block text-sm font-medium text-gray-700 mb-2">,"
   Additional Information
                 </label>
                 <textarea id="message",
@@ -650,7 +646,7 @@ const Demo: React.FC = () => {
       <>
         <Helmet >
           <title >Demo Request Submitted - Zion Tech Group</title>
-          <meta name: "description" content ="Thank you for requesting a demo. We'll contact you soon to schedule your personalized demonstration." />"
+          <meta name: "description", content ="Thank you for requesting a demo. We'll contact you soon to schedule your personalized demonstration." />"
           <meta name="description" content="Thank you for requesting a demo. We'll contact you soon to schedule your personalized demonstration." />
         </Helmet>
 
@@ -702,12 +698,12 @@ const Demo: React.FC = () => {
     <>
       <Helmet >
         <title >Request a Demo - Zion Tech Group</title>
-        <meta name: "description" content="Schedule a personalized demonstration of our AI and IT solutions. See how our technology can transform your business." />"
-        <meta name: "keywords" content ="demo, demonstration, AI solutions, technology showcase, business transformation" />"
-        <link rel: "canonical" href ="https://ziontechgroup.com/demo" />"
+        <meta name: "description", content="Schedule a personalized demonstration of our AI and IT solutions. See how our technology can transform your business." />"
+        <meta name: "keywords", content ="demo, demonstration, AI solutions, technology showcase, business transformation" />"
+        <link rel: "canonical", href ="https://ziontechgroup.com/demo" />"
         <meta name="description" content="Schedule a personalized demonstration of our AI and IT solutions. See how our technology can transform your business." />
-        <meta name: "keywords" content="demo, demonstration, AI solutions, technology showcase, business transformation" />
-        <link rel: "canonical" href ="https://ziontechgroup.com/demo" />
+        <meta name: "keywords", content="demo, demonstration, AI solutions, technology showcase, business transformation" />
+        <link rel: "canonical", href ="https://ziontechgroup.com/demo" />
       </Helmet>
 
       <div className="min-h-screen bg-gray-50"
@@ -786,12 +782,12 @@ const Demo: React.FC = () => {
                 {/* Personal Information */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6"
                   <div >
-                    <label htmlFor: "firstName" className="block text-sm font-medium text-gray-700 mb-1">,"
+                    <label htmlFor: "firstName", className="block text-sm font-medium text-gray-700 mb-1">,"
               <form onSubmit={handleSubmit} className= "space-y-6">
                 {/* Personal Information */}
                 <div className= "grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div >
-                    <label htmlFor: "firstName" className= "block text-sm font-medium text-gray-700 mb-1">,"
+                    <label htmlFor: "firstName", className= "block text-sm font-medium text-gray-700 mb-1">,"
   First Name *
                     </label>
                     <input type="text",
@@ -804,12 +800,12 @@ const Demo: React.FC = () => {
                     />
                   </div>
                   <div >
-                    <label htmlFor: "lastName" className="block text-sm font-medium text-gray-700 mb-1">,"
+                    <label htmlFor: "lastName", className="block text-sm font-medium text-gray-700 mb-1">,"
                       className= "w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500",
                     />
                   </div>
                   <div >
-                    <label htmlFor: "lastName" className= "block text-sm font-medium text-gray-700 mb-1">,"
+                    <label htmlFor: "lastName", className= "block text-sm font-medium text-gray-700 mb-1">,"
   Last Name *
                     </label>
                     <input type="text",
@@ -826,10 +822,10 @@ const Demo: React.FC = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6"
                   <div >
-                    <label htmlFor: "email" className="block text-sm font-medium text-gray-700 mb-1">,"
+                    <label htmlFor: "email", className="block text-sm font-medium text-gray-700 mb-1">,"
                 <div className= "grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div >
-                    <label htmlFor: "email" className= "block text-sm font-medium text-gray-700 mb-1">,"
+                    <label htmlFor: "email", className= "block text-sm font-medium text-gray-700 mb-1">,"
   Email Address *
                     </label>
                     <input type="email",
@@ -842,12 +838,12 @@ const Demo: React.FC = () => {
                     />
                   </div>
                   <div >
-                    <label htmlFor: "phone" className="block text-sm font-medium text-gray-700 mb-1">,"
+                    <label htmlFor: "phone", className="block text-sm font-medium text-gray-700 mb-1">,"
                       className= "w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500",
                     />
                   </div>
                   <div >
-                    <label htmlFor: "phone" className= "block text-sm font-medium text-gray-700 mb-1">,"
+                    <label htmlFor: "phone", className= "block text-sm font-medium text-gray-700 mb-1">,"
   Phone Number
                     </label>
                     <input type="tel",
@@ -864,8 +860,8 @@ const Demo: React.FC = () => {
                 </div>
 
                 <div >
-                  <label htmlFor: "company" className="block text-sm font-medium text-gray-700 mb-1">,"
-                  <label htmlFor: "company" className= "block text-sm font-medium text-gray-700 mb-1">,"
+                  <label htmlFor: "company", className="block text-sm font-medium text-gray-700 mb-1">,"
+                  <label htmlFor: "company", className= "block text-sm font-medium text-gray-700 mb-1">,"
   Company *
                   </label>
                   <input type="text",
@@ -880,8 +876,8 @@ const Demo: React.FC = () => {
                 </div>
 
                 <div >
-                  <label htmlFor: "useCase" className="block text-sm font-medium text-gray-700 mb-1">,"
-                  <label htmlFor: "useCase" className= "block text-sm font-medium text-gray-700 mb-1">,"
+                  <label htmlFor: "useCase", className="block text-sm font-medium text-gray-700 mb-1">,"
+                  <label htmlFor: "useCase", className= "block text-sm font-medium text-gray-700 mb-1">,"
   Primary Use Case
                   </label>
                   <select id="useCase",
@@ -893,9 +889,8 @@ const Demo: React.FC = () => {
                     onChange={handleInputChange}
                     className= "w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500",
                   >
-                    <option value: ">Select a use case</option>"
-                    {useCases.map((useCase)  => (
-                      <option key={useCase} value={useCase}>
+                    <option value: ">Select a use case</option>", {useCases.map((useCase)  => (
+                      <option key="{useCase} value={useCase}">
                         {useCase}
                       </option>
                     ))}
@@ -904,10 +899,10 @@ const Demo: React.FC = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6"
                   <div >
-                    <label htmlFor: "preferredTime" className="block text-sm font-medium text-gray-700 mb-1">,"
+                    <label htmlFor: "preferredTime", className="block text-sm font-medium text-gray-700 mb-1">,"
                 <div className= "grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div >
-                    <label htmlFor: "preferredTime" className= "block text-sm font-medium text-gray-700 mb-1">,"
+                    <label htmlFor: "preferredTime", className= "block text-sm font-medium text-gray-700 mb-1">,"
   Preferred Time Slot
                     </label>
                     <select id="preferredTime",
@@ -919,17 +914,16 @@ const Demo: React.FC = () => {
                       onChange={handleInputChange}
                       className= "w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500",
                     >
-                      <option value: ">Select a time</option>"
-                      {timeSlots.map((time)  => (
-                        <option key={time} value={time}>
+                      <option value: ">Select a time</option>", {timeSlots.map((time)  => (
+                        <option key="{time} value={time}">
                           {time}
                         </option>
                       ))}
                     </select>
                   </div>
                   <div >
-                    <label htmlFor: "timeZone" className="block text-sm font-medium text-gray-700 mb-1">,"
-                    <label htmlFor: "timeZone" className= "block text-sm font-medium text-gray-700 mb-1">,"
+                    <label htmlFor: "timeZone", className="block text-sm font-medium text-gray-700 mb-1">,"
+                    <label htmlFor: "timeZone", className= "block text-sm font-medium text-gray-700 mb-1">,"
   Time Zone
                     </label>
                     <select id="timeZone",
@@ -941,22 +935,21 @@ const Demo: React.FC = () => {
                       onChange={handleInputChange}
                       className= "w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500",
                     >
-                      <option value: ">Select time zone</option>"
-                      <option value: "EST">Eastern Time (EST)</option>"
-                      <option value: "CST">Central Time (CST)</option>"
-                      <option value: "MST">Mountain Time (MST)</option>"
-                      <option value: "PST">Pacific Time (PST)</option>"
-                      <option value: "GMT">Greenwich Mean Time (GMT)</option>"
-                      <option value: "CET">Central European Time (CET)</option>"
-                      <option value: "IST">India Standard Time (IST)</option>"
-                      <option value: "JST">Japan Standard Time (JST)</option>"
+                      <option value: ">Select time zone</option>", <option value: "EST", >Eastern Time (EST)</option>"
+                      <option value: "CST", >Central Time (CST)</option>"
+                      <option value: "MST", >Mountain Time (MST)</option>"
+                      <option value: "PST", >Pacific Time (PST)</option>"
+                      <option value: "GMT", >Greenwich Mean Time (GMT)</option>"
+                      <option value: "CET", >Central European Time (CET)</option>"
+                      <option value: "IST", >India Standard Time (IST)</option>"
+                      <option value: "JST", >Japan Standard Time (JST)</option>"
                     </select>
                   </div>
                 </div>
 
                 <div >
-                  <label htmlFor: "message" className="block text-sm font-medium text-gray-700 mb-1">,"
-                  <label htmlFor: "message" className= "block text-sm font-medium text-gray-700 mb-1">,"
+                  <label htmlFor: "message", className="block text-sm font-medium text-gray-700 mb-1">,"
+                  <label htmlFor: "message", className= "block text-sm font-medium text-gray-700 mb-1">,"
   Additional Information
                   </label>
                   <textarea id="message",

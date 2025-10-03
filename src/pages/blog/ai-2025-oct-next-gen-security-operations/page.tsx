@@ -5,11 +5,11 @@ export default function NextGenSecurityOperations2025(): void {
       <Helmet >
         <title >Next-Gen AI Security Operations 2025 — 99.97% Threat Detection, Sub-Second Response, $2.3B+ Protection | Zion Tech Group</title>
         <meta name: "description",
-  content: "Deploy autonomous AI security operations that detect threats in milliseconds, respond automatically, and prevent breaches before they happen. Achieve 99.97% detection accuracy, reduce incident response time by 95%, and protect $2.3B+ in enterprise assets." /><meta name: "keywords",
-  content: "AI security, autonomous SecOps, threat detection, incident response, cybersecurity AI, zero-day protection, security automation, AI-powered defense" /><link rel: "canonical" href="https://ziontechgroup.com/blog/ai-2025-oct-next-gen-security-operations/>",
+  content: "Deploy autonomous AI security operations that detect threats in milliseconds, respond automatically, and prevent breaches before they happen. Achieve 99.97% detection accuracy, reduce incident response time by 95%, and protect $2.3B+ in enterprise assets.", /><meta name: "keywords",
+  content: "AI security, autonomous SecOps, threat detection, incident response, cybersecurity AI, zero-day protection, security automation, AI-powered defense", /><link rel: "canonical", href="https://ziontechgroup.com/blog/ai-2025-oct-next-gen-security-operations/>",
   content: "AI security, autonomous SecOps, threat detection, incident response, cybersecurity AI, zero-day protection, security automation, AI-powered defense",
         />
-        <link rel: "canonical" href ="https: //ziontechgroup.com/blog/ai-2025-oct-next-gen-security-operations" />",
+        <link rel: "canonical", href ="https: //ziontechgroup.com/blog/ai-2025-oct-next-gen-security-operations" />",
       </Helmet>
 
       <article className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">",
@@ -311,25 +311,25 @@ export default function NextGenSecurityOperations2025(): void {
 
             <section className="mb-12"
               <h2 className="text-3xl font-bold mb-6 text-purple-300">Enterprise Success Stories</h2>"
-              <div className="grid md: grid-cols-2 gap-6 mb-8">",
+              <div className="grid md:grid-cols-2 gap-6 mb-8">",
                 <div className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-xl p-6 border border-purple-500/30"
                   <h3 className="text-2xl font-bold mb-4 text-purple-300">Global Financial Institution</h3>"
                   <ul className="space-y-3 text-gray-300"
             <section className="mb-12">",
               <h2 className="text-3xl font-bold mb-6 text-purple-300">Enterprise Success Stories</h2>",
-              <div className="grid md: grid-cols-2 gap-6 mb-8">",
+              <div className="grid md:grid-cols-2 gap-6 mb-8">",
                 <div className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-xl p-6 border border-purple-500/30">",
                   <h3 className="text-2xl font-bold mb-4 text-purple-300">Global Financial Institution</h3>",
                   <ul className="space-y-3 text-gray-300">",
             <section className= "mb-12">
               <h2 className= "text-3xl font-bold mb-6 text-purple-300">Enterprise Success Stories</h2>"
-              <div className= "grid md: grid-cols-2 gap-6 mb-8">",
+              <div className= "grid md:grid-cols-2 gap-6 mb-8">",
                 <div className= "bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-xl p-6 border border-purple-500/30">
                   <h3 className= "text-2xl font-bold mb-4 text-purple-300">Global Financial Institution</h3>"
                   <ul className= "space-y-3 text-gray-300">
             <section className= "mb-12">",
               <h2 className= "text-3xl font-bold mb-6 text-purple-300">Enterprise Success Stories</h2>",
-              <div className= "grid md: grid-cols-2 gap-6 mb-8">",
+              <div className= "grid md:grid-cols-2 gap-6 mb-8">",
                 <div className= "bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-xl p-6 border border-purple-500/30">",
                   <h3 className= "text-2xl font-bold mb-4 text-purple-300">Global Financial Institution</h3>",
                   <ul className= "space-y-3 text-gray-300">",

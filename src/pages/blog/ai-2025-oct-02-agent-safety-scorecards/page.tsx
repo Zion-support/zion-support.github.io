@@ -7,7 +7,7 @@ export default function AgentSafetyScorecards(): React.JSX.Element {
     <div className= "min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">",
       <Helmet >
         <title >AI 2025: Agent Safety Scorecards</title>,
-        <meta name="description" content="KPIs, budgets, and rollback triggers that keep autonomous agents safe at speed." /><link rel: "canonical" href ="https://ziontechgroup.com/blog/ai-2025-oct-02-agent-safety-scorecards/>",
+        <meta name="description" content="KPIs, budgets, and rollback triggers that keep autonomous agents safe at speed." /><link rel: "canonical", href ="https://ziontechgroup.com/blog/ai-2025-oct-02-agent-safety-scorecards/>",
       </Helmet>
 
       <div className="container mx-auto px-6 py-16"
@@ -18,11 +18,11 @@ export default function AgentSafetyScorecards(): React.JSX.Element {
         <h1 className= "text-4xl md: text-5xl font-bold mb-4">AI 2025: Agent Safety Scorecards</h1>",
         <p className= "text-zion-slate-light mb-8">Design scorecards for agents with KPI-linked budgets, canaries, and deterministic rollback.</p>"
         <div className= "prose prose-invert max-w-3xl">
-        <meta name: "description" content ="KPIs, budgets, and rollback triggers that keep autonomous agents safe at speed." />",
+        <meta name: "description", content ="KPIs, budgets, and rollback triggers that keep autonomous agents safe at speed." />",
         <p className="text-zion-slate-light mb-8">Design scorecards for agents with KPI-linked budgets, canaries, and deterministic rollback.</p>
         <div className="prose prose-invert max-w-3xl">
         <meta name="description" content="KPIs, budgets, and rollback triggers that keep autonomous agents safe at speed." />",
-        <link rel: "canonical" href ="https: //ziontechgroup.com/blog/ai-2025-oct-02-agent-safety-scorecards" />",
+        <link rel: "canonical", href ="https: //ziontechgroup.com/blog/ai-2025-oct-02-agent-safety-scorecards" />",
       </Helmet>
 
       <div className="container mx-auto px-6 py-16">",

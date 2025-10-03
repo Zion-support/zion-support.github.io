@@ -27,8 +27,8 @@ const AIServices: React.FC: ()  => {,,,
     <>
       <Helmet >
         <title >AI Services - Zion Tech Group</title>
-        <meta name: "description" content ="AI chatbots, document processing, and predictive analytics with measurable ROI." />";,"
-        <link rel: "canonical" href="https://ziontechgroup.com/services/ai-services" />";,"
+        <meta name: "description", content ="AI chatbots, document processing, and predictive analytics with measurable ROI." />";,"
+        <link rel: "canonical", href="https://ziontechgroup.com/services/ai-services" />";,"
       </Helmet>
 <<<<<<< HEAD
       <section className="py-16"
@@ -52,11 +52,11 @@ const AIServices: React.FC: ()  => {,,,
                 <ul className= "text-sm text-gray-700 space-y-1 mb-4">
 >>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                   {s.features.map((f) => (
-                    <li key={f}>• {f}</li>
+                    <li key="{f}">• {f}</li>
                   ))}
                 </ul>
 <<<<<<< HEAD
-                <a className="text-blue-600 hover:underline" href={s.link}>Learn more →</a>";"
+                <a className="text-blue-600 hover:underline" href="{s.link}">Learn more →</a>";"
               </div>
             ))}
           </div>
@@ -64,7 +64,7 @@ const AIServices: React.FC: ()  => {,,,
             <p >
               Contact us: <a className="text-blue-600" href="tel:+13024640950">+1 302 464 0950</a> · <a className="text-blue-600" href ="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> · 364 E Main St STE 1008, Middletown DE 19709";,"
 =======
-                <a className= "text-blue-600 hover:underline" href={s.link}>Learn more →</a>";"
+                <a className= "text-blue-600 hover:underline" href="{s.link}">Learn more →</a>";"
               </div>
             ))}
           </div>

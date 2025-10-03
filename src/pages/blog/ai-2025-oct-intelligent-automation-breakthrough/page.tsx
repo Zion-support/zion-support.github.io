@@ -10,7 +10,7 @@ const Page: () => {
       <Helmet >
         <title >Intelligent Automation Breakthrough 2025: From Tickets to Outcomes</title>,,
         <meta name: "description",;,"
-  content: "Shift from manual tickets to outcome‑driven automation with safe agent runbooks, budgets, and instant rollback." /><link rel: "canonical" href ="https://ziontechgroup.com/blog/ai-2025-oct-intelligent-automation-breakthrough/>",
+  content: "Shift from manual tickets to outcome‑driven automation with safe agent runbooks, budgets, and instant rollback.", /><link rel: "canonical", href ="https://ziontechgroup.com/blog/ai-2025-oct-intelligent-automation-breakthrough/>",
       </Helmet>
 
 <<<<<<< HEAD
@@ -29,7 +29,7 @@ const Page: () => {
   Go beyond scripts with agents that plan, execute, and recover safely. Learn production patterns for approvals
           content: "Shift from manual tickets to outcome‑driven automation with safe agent runbooks, budgets, and instant rollback.",
         />
-        <link rel: "canonical" href ="https: //ziontechgroup.com/blog/ai-2025-oct-intelligent-automation-breakthrough" />",
+        <link rel: "canonical", href ="https: //ziontechgroup.com/blog/ai-2025-oct-intelligent-automation-breakthrough" />",
       </Helmet>
 
 <<<<<<< HEAD
@@ -70,7 +70,7 @@ const Page: () => {
             </p>
 
             <div className="mt-8"
-              <Link to: "/blog" className="text-cyan-300 hover: underline">← Back to Blog</Link>",
+              <Link to: "/blog", className="text-cyan-300 hover: underline">← Back to Blog</Link>",
             <div className="mt-8">",
 =======
             <h2 className= "text-2xl font-semibold">Measuring Outcomes</h2>",
@@ -79,10 +79,10 @@ const Page: () => {
             </p>
 
             <div className= "mt-8">
-              <Link to: "/blog" className="text-cyan-300 hover: underline">← Back to Blog</Link>",
+              <Link to: "/blog", className="text-cyan-300 hover: underline">← Back to Blog</Link>",
             <div className= "mt-8">",
 >>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
-              <Link to: "/blog" className ="text-cyan-300 hover: underline">← Back to Blog</Link>",
+              <Link to: "/blog", className ="text-cyan-300 hover: underline">← Back to Blog</Link>",
             </div>
           </div>
         </div>

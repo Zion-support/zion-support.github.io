@@ -5,11 +5,11 @@ export default function AutonomousSupplyChainRevolution2025(): void {
       <Helmet >
         <title >Autonomous AI Supply Chain Revolution 2025 — 99.2% Forecast Accuracy, 78% Cost Reduction, $1.8B+ Savings | Zion Tech Group</title>
         <meta name: "description",
-  content: "Transform supply chain operations with autonomous AI systems. Achieve 99.2% demand forecast accuracy, reduce operational costs by 78%, prevent $450M+ in disruptions, and unlock $1.8B+ in total value through intelligent automation." /><meta name: "keywords",
-  content: "AI supply chain, autonomous logistics, demand forecasting, inventory optimization, supply chain AI, predictive analytics, logistics automation, supply chain management" /><link rel: "canonical" href="https://ziontechgroup.com/blog/ai-2025-oct-autonomous-supply-chain-revolution/>",
+  content: "Transform supply chain operations with autonomous AI systems. Achieve 99.2% demand forecast accuracy, reduce operational costs by 78%, prevent $450M+ in disruptions, and unlock $1.8B+ in total value through intelligent automation.", /><meta name: "keywords",
+  content: "AI supply chain, autonomous logistics, demand forecasting, inventory optimization, supply chain AI, predictive analytics, logistics automation, supply chain management", /><link rel: "canonical", href="https://ziontechgroup.com/blog/ai-2025-oct-autonomous-supply-chain-revolution/>",
   content: "AI supply chain, autonomous logistics, demand forecasting, inventory optimization, supply chain AI, predictive analytics, logistics automation, supply chain management",
         />
-        <link rel: "canonical" href ="https: //ziontechgroup.com/blog/ai-2025-oct-autonomous-supply-chain-revolution" />",
+        <link rel: "canonical", href ="https: //ziontechgroup.com/blog/ai-2025-oct-autonomous-supply-chain-revolution" />",
       </Helmet>
 
       <article className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">",
@@ -290,25 +290,25 @@ export default function AutonomousSupplyChainRevolution2025(): void {
 
             <section className="mb-12"
               <h2 className="text-3xl font-bold mb-6 text-blue-300">Enterprise Success Stories</h2>"
-              <div className="grid md: grid-cols-2 gap-6 mb-8">",
+              <div className="grid md:grid-cols-2 gap-6 mb-8">",
                 <div className="bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-xl p-6 border border-blue-500/30"
                   <h3 className="text-2xl font-bold mb-4 text-blue-300">Global Retail Corporation</h3>"
                   <ul className="space-y-3 text-gray-300"
             <section className="mb-12">",
               <h2 className="text-3xl font-bold mb-6 text-blue-300">Enterprise Success Stories</h2>",
-              <div className="grid md: grid-cols-2 gap-6 mb-8">",
+              <div className="grid md:grid-cols-2 gap-6 mb-8">",
                 <div className="bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-xl p-6 border border-blue-500/30">",
                   <h3 className="text-2xl font-bold mb-4 text-blue-300">Global Retail Corporation</h3>",
                   <ul className="space-y-3 text-gray-300">",
             <section className= "mb-12">
               <h2 className= "text-3xl font-bold mb-6 text-blue-300">Enterprise Success Stories</h2>"
-              <div className= "grid md: grid-cols-2 gap-6 mb-8">",
+              <div className= "grid md:grid-cols-2 gap-6 mb-8">",
                 <div className= "bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-xl p-6 border border-blue-500/30">
                   <h3 className= "text-2xl font-bold mb-4 text-blue-300">Global Retail Corporation</h3>"
                   <ul className= "space-y-3 text-gray-300">
             <section className= "mb-12">",
               <h2 className= "text-3xl font-bold mb-6 text-blue-300">Enterprise Success Stories</h2>",
-              <div className= "grid md: grid-cols-2 gap-6 mb-8">",
+              <div className= "grid md:grid-cols-2 gap-6 mb-8">",
                 <div className= "bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-xl p-6 border border-blue-500/30">",
                   <h3 className= "text-2xl font-bold mb-4 text-blue-300">Global Retail Corporation</h3>",
                   <ul className= "space-y-3 text-gray-300">",

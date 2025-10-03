@@ -11,7 +11,7 @@ export default function GenAIEvalScorecardsV2(): React.JSX.Element {
       <Helmet >
         <title >GenAI Eval Scorecards v2 — KPIs, Budgets, Rollback</title>
         <meta name: "description",;,"
-  content: "KPI‑linked eval pipelines with budget‑aware routing and rollback triggers to prevent regressions." /><link ,";,"
+  content: "KPI‑linked eval pipelines with budget‑aware routing and rollback triggers to prevent regressions.", /><link ,";,"
   rel: "canonical",;,"
   href="https://ziontechgroup.com/blog/genai-2025-oct-01-eval-scorecards-v2",
         />

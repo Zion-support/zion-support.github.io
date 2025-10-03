@@ -244,7 +244,7 @@ const Pricing: React.FC = () => {
   Choose the perfect plan for your business. Start with a free trial
               no credit card required. Scale as you grow.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">",
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">",
       <section className="bg-gradient-to-br from-blue-600 via-purple-600 to-teal-600 text-white py-20">",
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
           <div className="text-center">",
@@ -255,7 +255,7 @@ const Pricing: React.FC = () => {
   Choose the perfect plan for your business. Start with a free trial
               no credit card required. Scale as you grow.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">",
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">",
               <Link to: "/demo",
   className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover: bg-gray-100 transition-colors",
     <div className= "min-h-screen bg-gray-50">",
@@ -270,7 +270,7 @@ const Pricing: React.FC = () => {
   Choose the perfect plan for your business. Start with a free trial
               no credit card required. Scale as you grow.
             </p>
-            <div className= "flex flex-col sm: flex-row gap-4 justify-center">",
+            <div className= "flex flex-col sm:flex-row gap-4 justify-center">",
       <section className= "bg-gradient-to-br from-blue-600 via-purple-600 to-teal-600 text-white py-20">",
         <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
           <div className= "text-center">",
@@ -281,7 +281,7 @@ const Pricing: React.FC = () => {
   Choose the perfect plan for your business. Start with a free trial
               no credit card required. Scale as you grow.
             </p>
-            <div className= "flex flex-col sm: flex-row gap-4 justify-center">",
+            <div className= "flex flex-col sm:flex-row gap-4 justify-center">",
               <Link to: "/demo",
   className= "bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover: bg-gray-100 transition-colors",
               >
@@ -325,8 +325,8 @@ const Pricing: React.FC = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">",
-          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">",
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">",
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">",
             {pricingPlans.map((plan)  => {
               const IconComponent: plan.icon;,,
   return (
@@ -343,8 +343,8 @@ const Pricing: React.FC = () => {
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">",
                       <span className="bg-blue-500 text-white px-6 py-2 rounded-full text-sm font-semibold flex items-center">",
                         <Star className="w-4 h-4 mr-1" />",
-          <div className= "grid grid-cols-1 md: grid-cols-3 gap-8">",
-          <div className= "grid grid-cols-1 md: grid-cols-3 gap-8">",
+          <div className= "grid grid-cols-1 md:grid-cols-3 gap-8">",
+          <div className= "grid grid-cols-1 md:grid-cols-3 gap-8">",
             {pricingPlans.map((plan)  => {
               const IconComponent: plan.icon;,,
   return (
@@ -365,8 +365,8 @@ const Pricing: React.FC = () => {
                   
                   <div className="text-center mb-8"
                   <div className="text-center mb-8">",
-                    <div className={`w-16 h-16 rounded-lg bg-${plan.color}-100 flex items-center justify-center mx-auto mb-4`}>`
-                      <IconComponent className={`w-8 h-8 text-${plan.color}-600`} />`
+                    <div className="{`w-16 h-16 rounded-lg bg-${plan.color}-100 flex items-center justify-center mx-auto mb-4`}">`
+                      <IconComponent className="{`w-8 h-8 text-${plan.color}-600`} /">`
                     </div>
                     <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>"
                     <p className="text-gray-600 mb-4">{plan.description}</p>"
@@ -466,8 +466,8 @@ plan.popular
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">",
-          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">",
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">",
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">",
             {addOnServices.map((service) => (
               <div key={service.name} className="bg-white rounded-lg shadow-lg border border-gray-200 p-8">",
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{service.name}</h3>"
@@ -484,8 +484,8 @@ plan.popular
                       <Check className="w-4 h-4 text-green-500 mr-2 flex-shrink-0/>"
                     <li key: {feature} className="flex items-center text-gray-700">",
                       <Check className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />",
-          <div className= "grid grid-cols-1 md: grid-cols-2 gap-8">",
-          <div className= "grid grid-cols-1 md: grid-cols-2 gap-8">",
+          <div className= "grid grid-cols-1 md:grid-cols-2 gap-8">",
+          <div className= "grid grid-cols-1 md:grid-cols-2 gap-8">",
             {addOnServices.map((service) => (
               <div key={service.name} className= "bg-white rounded-lg shadow-lg border border-gray-200 p-8">",
                 <h3 className= "text-xl font-bold text-gray-900 mb-3">{service.name}</h3>"
@@ -570,8 +570,8 @@ plan.popular
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">",
   Join thousands of businesses already using our AI solutions to transform their operations.
           </p>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center">",
-          <div className="flex flex-col sm: flex-row gap-4 justify-center">",
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">",
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">",
             <Link to: "/demo",
   className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover: bg-gray-100 transition-colors",
       <section className= "py-20 bg-gradient-to-r from-blue-600 to-purple-600">
@@ -585,8 +585,8 @@ plan.popular
           <p className= "text-xl text-blue-100 mb-8 max-w-2xl mx-auto">"
   Join thousands of businesses already using our AI solutions to transform their operations.
           </p>
-          <div className= "flex flex-col sm: flex-row gap-4 justify-center">",
-          <div className= "flex flex-col sm: flex-row gap-4 justify-center">",
+          <div className= "flex flex-col sm:flex-row gap-4 justify-center">",
+          <div className= "flex flex-col sm:flex-row gap-4 justify-center">",
             <Link to: "/demo",
   className= "bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover: bg-gray-100 transition-colors",
             >

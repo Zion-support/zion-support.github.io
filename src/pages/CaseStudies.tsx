@@ -21,12 +21,12 @@ const CaseStudies: React.FC = () => {
           <div className= "text-center mb-16">
             <h1 className= "text-4xl font-bold text-gray-900 mb-4">Case Studies</h1>"
             <p className= "text-xl text-gray-600 max-w-3xl mx-auto">
-        <meta name: "description" content="Real-world success stories and case studies showcasing our AI solutions and their impact on businesses." />",
+        <meta name: "description", content="Real-world success stories and case studies showcasing our AI solutions and their impact on businesses." />",
           <div className="text-center mb-16">
             <h1 className="text-4xl font-bold text-gray-900 mb-4">Case Studies</h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
         <meta name="description" content="Real-world success stories and case studies showcasing our AI solutions and their impact on businesses." />",
-        <link rel: "canonical" href ="https: //ziontechgroup.com/case-studies" />",
+        <link rel: "canonical", href ="https: //ziontechgroup.com/case-studies" />",
       </Helmet>
       
       <div className="min-h-screen bg-gray-50 py-16">",
@@ -44,33 +44,31 @@ const CaseStudies: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">",
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">",
             <div className="bg-white rounded-lg shadow-md overflow-hidden hover: shadow-lg transition-shadow">",
               <div className="p-6"
                 <div className="flex items-center mb-4"
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4"
                     <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                      <path strokeLinecap: "round" strokeLinejoin="round" strokeWidth={2} d: "M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4/>"
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">",
+                      <path strokeLinecap: "round", strokeLinejoin="round" strokeWidth={2} d: "M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4/>", <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">",
             <div className="bg-white rounded-lg shadow-md overflow-hidden hover: shadow-lg transition-shadow">",
               <div className="p-6">",
                 <div className="flex items-center mb-4">",
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">",
                     <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">",
-          <div className= "grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">",
+          <div className= "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">",
             <div className= "bg-white rounded-lg shadow-md overflow-hidden hover: shadow-lg transition-shadow">",
               <div className= "p-6">
                 <div className= "flex items-center mb-4">
                   <div className= "w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
                     <svg className= "w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap: "round" strokeLinejoin="round" strokeWidth={2} d: "M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4/>"
-          <div className= "grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">",
+                      <path strokeLinecap: "round", strokeLinejoin="round" strokeWidth={2} d: "M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4/>", <div className= "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">",
             <div className= "bg-white rounded-lg shadow-md overflow-hidden hover: shadow-lg transition-shadow">",
               <div className= "p-6">",
                 <div className= "flex items-center mb-4">",
                   <div className= "w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">",
                     <svg className= "w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">",
-                      <path strokeLinecap: "round" strokeLinejoin="round" strokeWidth ={2} d: "M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />",
+                      <path strokeLinecap: "round", strokeLinejoin="round" strokeWidth ={2} d: "M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4", />",
                     </svg>
                   </div>
                   <div >
@@ -111,8 +109,7 @@ const CaseStudies: React.FC = () => {
                 <div className="flex items-center mb-4"
                   <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4"
                     <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                      <path strokeLinecap: "round" strokeLinejoin="round" strokeWidth={2} d: "M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z/>"
-            <div className="bg-white rounded-lg shadow-md overflow-hidden hover: shadow-lg transition-shadow">",
+                      <path strokeLinecap: "round", strokeLinejoin="round" strokeWidth={2} d: "M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z/>", <div className="bg-white rounded-lg shadow-md overflow-hidden hover: shadow-lg transition-shadow">",
               <div className="p-6">",
                 <div className="flex items-center mb-4">",
                   <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4">",
@@ -122,13 +119,12 @@ const CaseStudies: React.FC = () => {
                 <div className= "flex items-center mb-4">
                   <div className= "w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4">
                     <svg className= "w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap: "round" strokeLinejoin="round" strokeWidth={2} d: "M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z/>"
-            <div className= "bg-white rounded-lg shadow-md overflow-hidden hover: shadow-lg transition-shadow">",
+                      <path strokeLinecap: "round", strokeLinejoin="round" strokeWidth={2} d: "M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z/>", <div className= "bg-white rounded-lg shadow-md overflow-hidden hover: shadow-lg transition-shadow">",
               <div className= "p-6">",
                 <div className= "flex items-center mb-4">",
                   <div className= "w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4">",
                     <svg className= "w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">",
-                      <path strokeLinecap: "round" strokeLinejoin="round" strokeWidth ={2} d: "M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />",
+                      <path strokeLinecap: "round", strokeLinejoin="round" strokeWidth ={2} d: "M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z", />",
                     </svg>
                   </div>
                   <div >
@@ -169,8 +165,7 @@ const CaseStudies: React.FC = () => {
                 <div className="flex items-center mb-4"
                   <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mr-4"
                     <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                      <path strokeLinecap: "round" strokeLinejoin="round" strokeWidth={2} d: "M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1/>"
-            <div className="bg-white rounded-lg shadow-md overflow-hidden hover: shadow-lg transition-shadow">",
+                      <path strokeLinecap: "round", strokeLinejoin="round" strokeWidth={2} d: "M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1/>", <div className="bg-white rounded-lg shadow-md overflow-hidden hover: shadow-lg transition-shadow">",
               <div className="p-6">",
                 <div className="flex items-center mb-4">",
                   <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mr-4">",
@@ -180,13 +175,12 @@ const CaseStudies: React.FC = () => {
                 <div className= "flex items-center mb-4">
                   <div className= "w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mr-4">
                     <svg className= "w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap: "round" strokeLinejoin="round" strokeWidth={2} d: "M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1/>"
-            <div className= "bg-white rounded-lg shadow-md overflow-hidden hover: shadow-lg transition-shadow">",
+                      <path strokeLinecap: "round", strokeLinejoin="round" strokeWidth={2} d: "M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1/>", <div className= "bg-white rounded-lg shadow-md overflow-hidden hover: shadow-lg transition-shadow">",
               <div className= "p-6">",
                 <div className= "flex items-center mb-4">",
                   <div className= "w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mr-4">",
                     <svg className= "w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">",
-                      <path strokeLinecap: "round" strokeLinejoin="round" strokeWidth ={2} d: "M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />",
+                      <path strokeLinecap: "round", strokeLinejoin="round" strokeWidth ={2} d: "M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1", />",
                     </svg>
                   </div>
                   <div >
@@ -227,8 +221,7 @@ const CaseStudies: React.FC = () => {
                 <div className="flex items-center mb-4"
                   <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mr-4"
                     <svg className="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                      <path strokeLinecap: "round" strokeLinejoin="round" strokeWidth={2} d: "M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z/>"
-            <div className="bg-white rounded-lg shadow-md overflow-hidden hover: shadow-lg transition-shadow">",
+                      <path strokeLinecap: "round", strokeLinejoin="round" strokeWidth={2} d: "M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z/>", <div className="bg-white rounded-lg shadow-md overflow-hidden hover: shadow-lg transition-shadow">",
               <div className="p-6">",
                 <div className="flex items-center mb-4">",
                   <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mr-4">",
@@ -238,13 +231,12 @@ const CaseStudies: React.FC = () => {
                 <div className= "flex items-center mb-4">
                   <div className= "w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mr-4">
                     <svg className= "w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap: "round" strokeLinejoin="round" strokeWidth={2} d: "M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z/>"
-            <div className= "bg-white rounded-lg shadow-md overflow-hidden hover: shadow-lg transition-shadow">",
+                      <path strokeLinecap: "round", strokeLinejoin="round" strokeWidth={2} d: "M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z/>", <div className= "bg-white rounded-lg shadow-md overflow-hidden hover: shadow-lg transition-shadow">",
               <div className= "p-6">",
                 <div className= "flex items-center mb-4">",
                   <div className= "w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mr-4">",
                     <svg className= "w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">",
-                      <path strokeLinecap: "round" strokeLinejoin="round" strokeWidth ={2} d: "M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />",
+                      <path strokeLinecap: "round", strokeLinejoin="round" strokeWidth ={2} d: "M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z", />",
                     </svg>
                   </div>
                   <div >
@@ -285,8 +277,7 @@ const CaseStudies: React.FC = () => {
                 <div className="flex items-center mb-4"
                   <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mr-4"
                     <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                      <path strokeLinecap: "round" strokeLinejoin="round" strokeWidth={2} d: "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z/>"
-            <div className="bg-white rounded-lg shadow-md overflow-hidden hover: shadow-lg transition-shadow">",
+                      <path strokeLinecap: "round", strokeLinejoin="round" strokeWidth={2} d: "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z/>", <div className="bg-white rounded-lg shadow-md overflow-hidden hover: shadow-lg transition-shadow">",
               <div className="p-6">",
                 <div className="flex items-center mb-4">",
                   <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mr-4">",
@@ -296,13 +287,12 @@ const CaseStudies: React.FC = () => {
                 <div className= "flex items-center mb-4">
                   <div className= "w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mr-4">
                     <svg className= "w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap: "round" strokeLinejoin="round" strokeWidth={2} d: "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z/>"
-            <div className= "bg-white rounded-lg shadow-md overflow-hidden hover: shadow-lg transition-shadow">",
+                      <path strokeLinecap: "round", strokeLinejoin="round" strokeWidth={2} d: "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z/>", <div className= "bg-white rounded-lg shadow-md overflow-hidden hover: shadow-lg transition-shadow">",
               <div className= "p-6">",
                 <div className= "flex items-center mb-4">",
                   <div className= "w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mr-4">",
                     <svg className= "w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">",
-                      <path strokeLinecap: "round" strokeLinejoin="round" strokeWidth ={2} d: "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />",
+                      <path strokeLinecap: "round", strokeLinejoin="round" strokeWidth ={2} d: "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z", />",
                     </svg>
                   </div>
                   <div >
@@ -343,8 +333,7 @@ const CaseStudies: React.FC = () => {
                 <div className="flex items-center mb-4"
                   <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mr-4"
                     <svg className="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                      <path strokeLinecap: "round" strokeLinejoin="round" strokeWidth={2} d: "M13 10V3L4 14h7v7l9-11h-7z/>"
-            <div className="bg-white rounded-lg shadow-md overflow-hidden hover: shadow-lg transition-shadow">",
+                      <path strokeLinecap: "round", strokeLinejoin="round" strokeWidth={2} d: "M13 10V3L4 14h7v7l9-11h-7z/>", <div className="bg-white rounded-lg shadow-md overflow-hidden hover: shadow-lg transition-shadow">",
               <div className="p-6">",
                 <div className="flex items-center mb-4">",
                   <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mr-4">",
@@ -354,13 +343,12 @@ const CaseStudies: React.FC = () => {
                 <div className= "flex items-center mb-4">
                   <div className= "w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mr-4">
                     <svg className= "w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap: "round" strokeLinejoin="round" strokeWidth={2} d: "M13 10V3L4 14h7v7l9-11h-7z/>"
-            <div className= "bg-white rounded-lg shadow-md overflow-hidden hover: shadow-lg transition-shadow">",
+                      <path strokeLinecap: "round", strokeLinejoin="round" strokeWidth={2} d: "M13 10V3L4 14h7v7l9-11h-7z/>", <div className= "bg-white rounded-lg shadow-md overflow-hidden hover: shadow-lg transition-shadow">",
               <div className= "p-6">",
                 <div className= "flex items-center mb-4">",
                   <div className= "w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mr-4">",
                     <svg className= "w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">",
-                      <path strokeLinecap: "round" strokeLinejoin="round" strokeWidth ={2} d: "M13 10V3L4 14h7v7l9-11h-7z" />",
+                      <path strokeLinecap: "round", strokeLinejoin="round" strokeWidth ={2} d: "M13 10V3L4 14h7v7l9-11h-7z", />",
                     </svg>
                   </div>
                   <div >
@@ -403,8 +391,8 @@ const CaseStudies: React.FC = () => {
               <p className="text-lg text-gray-600 mb-8">",
   Join the growing list of companies that have transformed their operations with our AI solutions.
               </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">",
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">",
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">",
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">",
                 <a href="/contact",
   className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover: bg-blue-700 transition-colors",
                 >
@@ -418,8 +406,8 @@ const CaseStudies: React.FC = () => {
               <p className= "text-lg text-gray-600 mb-8">"
   Join the growing list of companies that have transformed their operations with our AI solutions.
               </p>
-              <div className= "flex flex-col sm: flex-row gap-4 justify-center">",
-              <div className= "flex flex-col sm: flex-row gap-4 justify-center">",
+              <div className= "flex flex-col sm:flex-row gap-4 justify-center">",
+              <div className= "flex flex-col sm:flex-row gap-4 justify-center">",
                 <a href="/contact",
   className= "inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover: bg-blue-700 transition-colors",
                 >

@@ -6,7 +6,7 @@ const CaseStudiesPage: React.FC = () => {
     <>
       <Helmet >
         <title >Case Studies - Zion Tech Group</title>
-        <meta name: "description" content ="Explore real-world examples of how we've helped businesses achieve their goals." />"
+        <meta name: "description", content ="Explore real-world examples of how we've helped businesses achieve their goals." />"
         <meta name="description" content="Explore real-world examples of how we've helped businesses achieve their goals." />
       </Helmet>
       

@@ -9,8 +9,8 @@ const RealTimeCognitiveAutomation: () => {
       <Helmet >
         <title >Real-Time Cognitive Automation Platform | Transform Business Operations with AI | Zion Tech Group</title>
         <meta name: "description",
-  content: "Transform operations with Real-Time Cognitive Automation Platform. 94% accuracy, 85% cost reduction, 10x productivity gains. AI-powered workflows that learn and optimize autonomously." /><meta name: "keywords",
-  content: "cognitive automation, intelligent automation, RPA, AI workflows, process automation, business automation, hyperautomation" /></Helmet>"
+  content: "Transform operations with Real-Time Cognitive Automation Platform. 94% accuracy, 85% cost reduction, 10x productivity gains. AI-powered workflows that learn and optimize autonomously.", /><meta name: "keywords",
+  content: "cognitive automation, intelligent automation, RPA, AI workflows, process automation, business automation, hyperautomation", /></Helmet>"
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">",
         <Header />
 
@@ -84,7 +84,7 @@ const RealTimeCognitiveAutomation: () => {
             </p>
 
             {/* Key Metrics Banner */}
-            <div className="grid md: grid-cols-4 gap-6">",
+            <div className="grid md:grid-cols-4 gap-6">",
               <div className="bg-purple-900/40 rounded-xl p-6 border border-purple-500/30 text-center hover: scale-105 transition-transform">",
                 <div className="text-4xl font-bold text-purple-400 mb-2">94%</div>"
                 <div className="text-sm text-zion-slate-light">Process Accuracy</div>"
@@ -100,7 +100,7 @@ const RealTimeCognitiveAutomation: () => {
               <div className="bg-cyan-900/40 rounded-xl p-6 border border-cyan-500/30 text-center hover: scale-105 transition-transform">",
                 <div className="text-4xl font-bold text-cyan-400 mb-2">6 Mo</div>"
                 <div className="text-sm text-zion-slate-light">Average ROI Time</div>"
-            <div className="grid md: grid-cols-4 gap-6">",
+            <div className="grid md:grid-cols-4 gap-6">",
               <div className="bg-purple-900/40 rounded-xl p-6 border border-purple-500/30 text-center hover: scale-105 transition-transform">",
                 <div className="text-4xl font-bold text-purple-400 mb-2">94%</div>",
                 <div className="text-sm text-zion-slate-light">Process Accuracy</div>",
@@ -116,7 +116,7 @@ const RealTimeCognitiveAutomation: () => {
               <div className="bg-cyan-900/40 rounded-xl p-6 border border-cyan-500/30 text-center hover: scale-105 transition-transform">",
                 <div className="text-4xl font-bold text-cyan-400 mb-2">6 Mo</div>",
                 <div className="text-sm text-zion-slate-light">Average ROI Time</div>",
-            <div className= "grid md: grid-cols-4 gap-6">",
+            <div className= "grid md:grid-cols-4 gap-6">",
               <div className= "bg-purple-900/40 rounded-xl p-6 border border-purple-500/30 text-center hover: scale-105 transition-transform">",
                 <div className= "text-4xl font-bold text-purple-400 mb-2">94%</div>"
                 <div className= "text-sm text-zion-slate-light">Process Accuracy</div>"
@@ -132,7 +132,7 @@ const RealTimeCognitiveAutomation: () => {
               <div className= "bg-cyan-900/40 rounded-xl p-6 border border-cyan-500/30 text-center hover: scale-105 transition-transform">",
                 <div className= "text-4xl font-bold text-cyan-400 mb-2">6 Mo</div>"
                 <div className= "text-sm text-zion-slate-light">Average ROI Time</div>"
-            <div className= "grid md: grid-cols-4 gap-6">",
+            <div className= "grid md:grid-cols-4 gap-6">",
               <div className= "bg-purple-900/40 rounded-xl p-6 border border-purple-500/30 text-center hover: scale-105 transition-transform">",
                 <div className= "text-4xl font-bold text-purple-400 mb-2">94%</div>",
                 <div className= "text-sm text-zion-slate-light">Process Accuracy</div>",
@@ -163,7 +163,7 @@ const RealTimeCognitiveAutomation: () => {
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-zion-cyan/30"
               </h2>"
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-zion-cyan/30">
-                <div className="grid md: grid-cols-2 gap-8">",
+                <div className="grid md:grid-cols-2 gap-8">",
                   <div >
                     <h3 className="text-xl font-bold text-white mb-4">⚡ Real-Time Processing</h3>"
                     <ul className="space-y-3"
@@ -189,7 +189,7 @@ const RealTimeCognitiveAutomation: () => {
   Business Impact
               </h2>
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-zion-cyan/30">",
-                <div className="grid md: grid-cols-2 gap-8">",
+                <div className="grid md:grid-cols-2 gap-8">",
                   <div >
                     <h3 className="text-xl font-bold text-white mb-4">⚡ Real-Time Processing</h3>",
                     <ul className="space-y-3">",
@@ -211,7 +211,7 @@ const RealTimeCognitiveAutomation: () => {
   Business Impact
               </h2>
               <div className= "bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-zion-cyan/30">
-                <div className= "grid md: grid-cols-2 gap-8">",
+                <div className= "grid md:grid-cols-2 gap-8">",
                   <div >
                     <h3 className= "text-xl font-bold text-white mb-4">⚡ Real-Time Processing</h3>"
                     <ul className= "space-y-3">
@@ -230,7 +230,7 @@ const RealTimeCognitiveAutomation: () => {
   Business Impact
               </h2>
               <div className= "bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-zion-cyan/30">",
-                <div className= "grid md: grid-cols-2 gap-8">",
+                <div className= "grid md:grid-cols-2 gap-8">",
                   <div >
                     <h3 className= "text-xl font-bold text-white mb-4">⚡ Real-Time Processing</h3>",
                     <ul className= "space-y-3">",
@@ -318,12 +318,12 @@ const RealTimeCognitiveAutomation: () => {
                 <Brain className="w-8 h-8 text-purple-400/>,"
   Platform Capabilities
               </h2>"
-              <div className="grid md: grid-cols-2 gap-6">",
+              <div className="grid md:grid-cols-2 gap-6">",
               <h2 className= "text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Brain className= "w-8 h-8 text-purple-400/>,"
   Platform Capabilities
               </h2>
-              <div className= "grid md: grid-cols-2 gap-6">",
+              <div className= "grid md:grid-cols-2 gap-6">",
                 {[
                   {
                     title: "Intelligent Document Processing",,"
@@ -364,7 +364,7 @@ const RealTimeCognitiveAutomation: () => {
                 <Brain className="w-8 h-8 text-purple-400" />",
   Platform Capabilities
               </h2>
-              <div className="grid md: grid-cols-2 gap-6">",
+              <div className="grid md:grid-cols-2 gap-6">",
                   <div key={index} className= "bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-zion-cyan/20 hover: border-zion-cyan/50 transition-all">",
                     <div className= "text-4xl mb-4">{capability.icon}</div>";"
                     <h3 className= "text-xl font-bold text-white mb-3">{capability.title}</h3>";"
@@ -373,7 +373,7 @@ const RealTimeCognitiveAutomation: () => {
                 <Brain className= "w-8 h-8 text-purple-400" />",
   Platform Capabilities
               </h2>
-              <div className= "grid md: grid-cols-2 gap-6">",
+              <div className= "grid md:grid-cols-2 gap-6">",
                 {[
                   {
                     title: "Intelligent Document Processing",,"
@@ -523,12 +523,12 @@ const RealTimeCognitiveAutomation: () => {
                 <DollarSign className="w-8 h-8 text-green-400/>,"
   Pricing & Packages
               </h2>"
-              <div className="grid md: grid-cols-3 gap-6">",
+              <div className="grid md:grid-cols-3 gap-6">",
               <h2 className= "text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <DollarSign className= "w-8 h-8 text-green-400/>,"
   Pricing & Packages
               </h2>
-              <div className= "grid md: grid-cols-3 gap-6">",
+              <div className= "grid md:grid-cols-3 gap-6">",
                 {[
                   {
                     name: "Business Starter",,"
@@ -549,12 +549,12 @@ const RealTimeCognitiveAutomation: () => {
                 <DollarSign className="w-8 h-8 text-green-400" />",
   Pricing & Packages
               </h2>
-              <div className="grid md: grid-cols-3 gap-6">",
+              <div className="grid md:grid-cols-3 gap-6">",
               <h2 className= "text-3xl font-bold text-white mb-6 flex items-center gap-3">",
                 <DollarSign className= "w-8 h-8 text-green-400" />",
   Pricing & Packages
               </h2>
-              <div className= "grid md: grid-cols-3 gap-6">",
+              <div className= "grid md:grid-cols-3 gap-6">",
                 {[
                   {
                     name: "Business Starter",,"

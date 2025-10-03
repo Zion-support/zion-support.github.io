@@ -12,7 +12,7 @@ const Page: () => {
         <meta name: "description",;,"
   content: "Blueprint for building enterprise AI platforms: SLAs, guardrails, cost controls, and measurable ROI.",
         />
-        <link rel: "canonical" href ="https://ziontechgroup.com/blog/ai-2025-oct-enterprise-ai-platforms/>",
+        <link rel: "canonical", href ="https://ziontechgroup.com/blog/ai-2025-oct-enterprise-ai-platforms/>",
       </Helmet>
 
 <<<<<<< HEAD
@@ -29,7 +29,7 @@ const Page: () => {
           <p className= "text-zion-slate-light mb-6">,";,"
 >>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Production patterns that scale: golden paths, eval‑gated releases, cost guardrails, privacy‑first telemetry,,
-        <link rel: "canonical" href ="https: //ziontechgroup.com/blog/ai-2025-oct-enterprise-ai-platforms" />",
+        <link rel: "canonical", href ="https: //ziontechgroup.com/blog/ai-2025-oct-enterprise-ai-platforms" />",
       </Helmet>
 
 <<<<<<< HEAD
@@ -87,14 +87,14 @@ const Page: () => {
 
 <<<<<<< HEAD
             <div className="mt-8"
-              <Link to: "/blog" className="text-cyan-300 hover: underline">← Back to Blog</Link>",
+              <Link to: "/blog", className="text-cyan-300 hover: underline">← Back to Blog</Link>",
             <div className="mt-8">",
 =======
             <div className= "mt-8">
-              <Link to: "/blog" className="text-cyan-300 hover: underline">← Back to Blog</Link>",
+              <Link to: "/blog", className="text-cyan-300 hover: underline">← Back to Blog</Link>",
             <div className= "mt-8">",
 >>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
-              <Link to: "/blog" className ="text-cyan-300 hover: underline">← Back to Blog</Link>",
+              <Link to: "/blog", className ="text-cyan-300 hover: underline">← Back to Blog</Link>",
             </div>
           </div>
         </div>

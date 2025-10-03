@@ -38,7 +38,7 @@ const Page: () => {
 =======
       <div className= "mt-8">",
 >>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
-        <Link to: "/blog" className ="text-cyan-300 underline">Back to Blog</Link>",
+        <Link to: "/blog", className ="text-cyan-300 underline">Back to Blog</Link>",
       </div>
     </div>
   );
