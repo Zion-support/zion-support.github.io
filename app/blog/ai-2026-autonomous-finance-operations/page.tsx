@@ -1,5 +1,5 @@
-import React from 'react';
-import Link from 'next/link';
+// import React from 'react';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'AI 2026 Autonomous Finance Operations: 98% Automation & $100M+ Savings',
@@ -241,8 +241,7 @@ export default function AI2026AutonomousFinanceOperations() {
             Join Fortune 500 companies achieving 98% automation and $100M+ savings with AI autonomous finance operations.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/services/ai-finance-automation"
+            <Link to="/services/ai-finance-automation"
               className="bg-white text-emerald-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
             >
               Explore Finance AI Services
@@ -260,7 +259,7 @@ export default function AI2026AutonomousFinanceOperations() {
         <div className="mt-12">
           <h3 className="text-2xl font-bold text-gray-900 mb-6">Related Articles</h3>
           <div className="grid md:grid-cols-2 gap-6">
-            <Link href="/blog/ai-2026-autonomous-business-systems" className="group">
+            <Link to="/blog/ai-2026-autonomous-business-systems" className="group">
               <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow border border-gray-200">
                 <h4 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
                   AI 2026 Autonomous Business Systems
@@ -268,7 +267,7 @@ export default function AI2026AutonomousFinanceOperations() {
                 <p className="text-gray-600">Discover how autonomous AI systems are transforming enterprise operations across all departments.</p>
               </div>
             </Link>
-            <Link href="/case-studies/ai-finance-automation-success-2026" className="group">
+            <Link to="/case-studies/ai-finance-automation-success-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow border border-gray-200">
                 <h4 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
                   Finance Automation Success Story

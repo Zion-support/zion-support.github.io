@@ -1,7 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, BookOpen, Calendar, Clock, Share2, Shield, CheckCircle, AlertTriangle } from 'lucide-react';
-
+import { ArrowLeft, BookOpen, Calendar, Clock, Share2, Shield, AlertTriangle } from 'lucide-react';
 export default function AIEnterpriseGovernanceComplianceAutomation2026() {
   return (
     <>

@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Shield, TrendingUp, DollarSign, Zap, AlertTriangle, CheckCircle, ArrowRight, Target } from 'lucide-react';
 import { Link } from 'react-router-dom';

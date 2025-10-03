@@ -1,5 +1,5 @@
-import React from 'react';
-import Link from 'next/link';
+// import React from 'react';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: '$65M ROI: AI Digital Twin Manufacturing Transformation Success Story | Zion Tech Group',

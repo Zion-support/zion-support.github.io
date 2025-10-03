@@ -1,5 +1,5 @@
-import React from 'react';
-import Link from 'next/link';
+// import React from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowLeft, CheckCircle, Brain, TrendingUp, Sparkles, Layers } from 'lucide-react';
 
 export const metadata = {

@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 
 export const metadata = {
   title: 'Autonomous DevSecOps Platform 2025 — AI-Powered Security Automation at Scale',

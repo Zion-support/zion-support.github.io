@@ -1,5 +1,5 @@
-import React from 'react';
-import Link from 'next/link';
+// import React from 'react';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
 	title: 'Agentic Risk Mitigation 2026 — Guardrails, Evals, and Safe Autonomy',
@@ -68,7 +68,7 @@ export default function AgenticRiskMitigation2026Page() {
 						<p className="text-gray-700 mb-4">
 							Download the operational checklist to productionize these controls inside your platform.
 						</p>
-						<Link href="/case-studies" className="inline-block bg-purple-600 hover:bg-purple-700 text-white px-5 py-3 rounded-lg font-semibold">
+						<Link to="/case-studies" className="inline-block bg-purple-600 hover:bg-purple-700 text-white px-5 py-3 rounded-lg font-semibold">
 							Explore case studies →
 						</Link>
 					</div>

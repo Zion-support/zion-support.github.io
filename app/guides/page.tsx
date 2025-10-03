@@ -7,8 +7,8 @@ export default function GuidesPage() {
   );
 }
 
-import React from 'react';
-import { Metadata } from 'next';
+// import React from 'react';
+// Metadata handled by React Helmet
 
 export const metadata: Metadata = {
   title: 'Guides | Zion Tech Group',

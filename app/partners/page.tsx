@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 type Metadata = { title: string; description: string; keywords?: string[] };
 import { Link } from 'react-router-dom';
 

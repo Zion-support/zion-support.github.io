@@ -1,5 +1,5 @@
-import React from 'react';
-import Link from 'next/link';
+// import React from 'react';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'AI 2027 Implementation Roadmap - Complete Guide to Advanced Neural Superintelligence',
@@ -335,8 +335,7 @@ export default function AI2027ImplementationRoadmap() {
         </div>
 
         <div className="text-center mb-8">
-          <Link 
-            href="/contact" 
+          <Link to="/contact" 
             className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-bold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 inline-block"
           >
             🚀 Get Your Custom Implementation Plan

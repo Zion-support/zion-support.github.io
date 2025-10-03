@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'GenAI Routing v1 (2025): Tiered Models + Semantic Caches',
@@ -23,7 +23,7 @@ export default function Page() {
       </ul>
       <p>
         Explore more GenAI playbooks on the{' '}
-        <Link href="/blog" className="font-semibold">blog</Link>.
+        <Link to="/blog" className="font-semibold">blog</Link>.
       </p>
     </main>
   );

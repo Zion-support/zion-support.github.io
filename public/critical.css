@@ -1,0 +1,5 @@
+
+/* Critical CSS for above-the-fold content */
+.min-h-screen { min-height: 100vh; }
+.bg-slate-950 { background-color: #020617; }
+.container { max-width: 1200px; margin: 0 auto; }

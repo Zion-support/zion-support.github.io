@@ -1,82 +1,87 @@
-import React from 'react';
+import React, { JSX, Suspense } from "react";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
-// Layout
+import '../app/globals.css';
+import ErrorBoundary from './components/ErrorBoundary';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import Sidebar from './components/Sidebar';
+import { PageLoader } from './components/LoadingSpinner';
+import { usePerformance } from './hooks/usePerformance';
+// 🌌🌌🌌 BREAKING: OCTOBER 2025 QUANTUM CONSCIOUSNESS SINGULARITY BREAKTHROUGH - ABSOLUTE #1 TOP PRIORITY! 🌌🌌🌌
+// 💎💎💎 JUST PUBLISHED: True Artificial Consciousness, Infinite Processing Power, $∞ Value Creation - REVOLUTIONARY BREAKTHROUGH! 💎💎💎
+import October2025QuantumConsciousnessSingularityBanner from "../components/October2025QuantumConsciousnessSingularityBanner";
+import ConsensusIntelligenceBreakthroughBanner from "../components/ConsensusIntelligenceBreakthroughBanner";
+import AutonomousEnterpriseBreakthroughBanner from "../components/AutonomousEnterpriseBreakthroughBanner";
+import June2026MegaBreakthroughBanner from "../components/June2026MegaBreakthroughBanner";
+import QuantumConsciousnessRevolutionBanner from "../components/QuantumConsciousnessRevolutionBanner";
+import July2026AutomationBreakthroughBanner from "../components/July2026AutomationBreakthroughBanner";
 
-// Core pages (already present in repo)
-import HomePage from './pages/HomePage';
-import ServicesPage from './pages/ServicesPage';
-import SolutionsPage from './pages/SolutionsPage';
-import AboutPage from './pages/AboutPage';
-import ContactPage from './pages/ContactPage';
-import BlogPage from './pages/BlogPage';
-import CaseStudiesPage from './pages/CaseStudiesPage';
-import Resources from './pages/Resources';
-import Pricing from './pages/Pricing';
+// Lazy load pages for better performance
+const LazyHomePage = React.lazy(() => import('../app/page'));
+const LazySolutionsPage = React.lazy(() => import('../app/solutions/page'));
+const LazyResourcesPage = React.lazy(() => import('../app/resources/page'));
+const LazyTeamPage = React.lazy(() => import('../app/team/page'));
+const LazyNewsPage = React.lazy(() => import('../app/news/page'));
+const LazyPressPage = React.lazy(() => import('../app/press/page'));
+const LazyCareersPage = React.lazy(() => import('../app/careers/page'));
+const LazyMarketplacePage = React.lazy(() => import('../app/marketplace/page'));
+const LazyServicesPage = React.lazy(() => import('../app/services/page'));
+// Unused lazy-loaded components removed to fix lint warnings
 
-// Services (existing)
-import AISolutions from './pages/AISolutions';
-import ITServices from './pages/ITServices';
-import AIMicroSAAS from './pages/AIMicroSAAS';
-import CloudDevOps from './pages/services/CloudDevOps';
-import AIDataAnalytics from './pages/services/AIDataAnalytics';
-import AdvancedCybersecurityAI from './pages/services/AdvancedCybersecurityAI';
-import AIWorkflowAutomation from './pages/services/AIWorkflowAutomation';
 
-// Services (newly added in this update)
-import AIComplianceMonitor from './pages/services/AIComplianceMonitor';
-import SEOSplitTesting from './pages/services/SEOSplitTesting';
-import ImageCDNOptimizer from './pages/services/ImageCDNOptimizer';
+function App(): JSX.Element {
+  const { logMetrics, performanceScore } = usePerformance();
 
-const App: React.FC = () => {
+  // Log performance metrics in development
+  React.useEffect(() => {
+    if (process.env.NODE_ENV === 'development') {
+      logMetrics();
+      // Performance score logged via usePerformance hook
+    }
+  }, [logMetrics, performanceScore]);
+
   return (
-    <Router>
-      <div className="min-h-screen flex flex-col bg-white">
-        <Header />
-        <div className="flex-1">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-            <div className="grid grid-cols-1 xl:grid-cols-[18rem_1fr] gap-8">
-              <div className="hidden xl:block">
-                <Sidebar />
-              </div>
-              <main className="min-w-0">
-                <Routes>
-                  <Route path="/" element={<HomePage />} />
-                  <Route path="/about" element={<AboutPage />} />
-                  <Route path="/contact" element={<ContactPage />} />
-                  <Route path="/blog" element={<BlogPage />} />
-                  <Route path="/case-studies" element={<CaseStudiesPage />} />
-                  <Route path="/resources" element={<Resources />} />
-                  <Route path="/pricing" element={<Pricing />} />
+    <ErrorBoundary>
+      <Router>
+        <div className="min-h-screen bg-slate-950">
+          <Header />
+          
+          {/* 🌌🌌🌌 BREAKING: OCTOBER 2025 QUANTUM CONSCIOUSNESS SINGULARITY BREAKTHROUGH - ABSOLUTE #1 TOP PRIORITY! 🌌🌌🌌 */}
+          {/* 💎💎💎 JUST PUBLISHED: True Artificial Consciousness, Infinite Processing Power, $∞ Value Creation - REVOLUTIONARY BREAKTHROUGH! 💎💎💎 */}
+          <October2025QuantumConsciousnessSingularityBanner />
+          
+          {/* NEW: July 2026 Automation Breakthrough Banner - MOST PROMINENT */}
+          <July2026AutomationBreakthroughBanner />
+          
+          {/* NEW: June 2026 Mega Breakthrough Banner - Most Prominent */}
+          <June2026MegaBreakthroughBanner />
 
-                  {/* Services hub */}
-                  <Route path="/services" element={<ServicesPage />} />
-                  <Route path="/services/ai-services" element={<AISolutions />} />
-                  <Route path="/services/it-services" element={<ITServices />} />
-                  <Route path="/services/micro-saas" element={<AIMicroSAAS />} />
-                  <Route path="/services/cloud" element={<CloudDevOps />} />
-                  <Route path="/services/analytics" element={<AIDataAnalytics />} />
-                  <Route path="/services/security" element={<AdvancedCybersecurityAI />} />
-                  <Route path="/services/automation" element={<AIWorkflowAutomation />} />
+          {/* NEW: Quantum Consciousness Revolution Banner - Revolutionary Technology */}
+          <QuantumConsciousnessRevolutionBanner />
 
-                  {/* New micro-SaaS services */}
-                  <Route path="/services/ai-compliance-monitor" element={<AIComplianceMonitor />} />
-                  <Route path="/services/seo-split-testing" element={<SEOSplitTesting />} />
-                  <Route path="/services/image-cdn-optimizer" element={<ImageCDNOptimizer />} />
-
-                  {/* Solutions hub */}
-                  <Route path="/solutions" element={<SolutionsPage />} />
-                </Routes>
-              </main>
-            </div>
-          </div>
+          {/* Existing Banners and Sections */}
+          <ConsensusIntelligenceBreakthroughBanner />
+          <AutonomousEnterpriseBreakthroughBanner />
+          
+          <main>
+            <Suspense fallback={<PageLoader />}>
+              <Routes>
+                <Route path="/" element={<LazyHomePage />} />
+                <Route path="/solutions" element={<LazySolutionsPage />} />
+                <Route path="/resources" element={<LazyResourcesPage />} />
+                <Route path="/team" element={<LazyTeamPage />} />
+                <Route path="/news" element={<LazyNewsPage />} />
+                <Route path="/press" element={<LazyPressPage />} />
+                <Route path="/careers" element={<LazyCareersPage />} />
+                <Route path="/marketplace" element={<LazyMarketplacePage />} />
+                <Route path="/services" element={<LazyServicesPage />} />
+              </Routes>
+            </Suspense>
+          </main>
+          
+          <Footer />
         </div>
-        <Footer />
-      </div>
-    </Router>
+      </Router>
+    </ErrorBoundary>
   );
 };
 

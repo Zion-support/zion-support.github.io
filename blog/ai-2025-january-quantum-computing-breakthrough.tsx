@@ -1,5 +1,5 @@
-import React from 'react';
-import Link from 'next/link';
+// import React from 'react';
+import { Link } from 'react-router-dom';
 import { Calendar, User, ArrowRight, Atom, Cpu, Zap, Target } from 'lucide-react';
 
 export default function AI2025JanuaryQuantumComputingBreakthrough() {

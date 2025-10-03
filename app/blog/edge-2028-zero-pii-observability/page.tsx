@@ -1,5 +1,5 @@
-import React from 'react';
-import Link from 'next/link';
+// import React from 'react';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'Edge 2028: Zero‑PII Observability — <100ms Insights',
@@ -36,8 +36,8 @@ export default function Page() {
         </section>
 
         <footer className="mt-12 border-t border-gray-200 pt-6 flex items-center justify-between">
-          <Link href="/blog" className="text-emerald-600 font-semibold hover:text-emerald-700">← Back to Blog</Link>
-          <Link href="/content-hub" className="text-gray-600 hover:text-gray-800">Explore All Content →</Link>
+          <Link to="/blog" className="text-emerald-600 font-semibold hover:text-emerald-700">← Back to Blog</Link>
+          <Link to="/content-hub" className="text-gray-600 hover:text-gray-800">Explore All Content →</Link>
         </footer>
       </div>
     </article>

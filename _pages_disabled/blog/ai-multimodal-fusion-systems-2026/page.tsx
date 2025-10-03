@@ -1,5 +1,5 @@
-import React from 'react';
-import Link from 'next/link';
+// import React from 'react';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'Multimodal AI Fusion Systems: Unified Intelligence Across Vision, Language & Audio 2026 | Zion Tech Group',

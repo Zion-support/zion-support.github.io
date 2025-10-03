@@ -1,11 +1,10 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
+// import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { 
   Home, MapPin, Users, BarChart3, Camera, 
-  FileText, Clock, CheckCircle, ArrowRight, Phone, 
-  Mail, ExternalLink, Zap, Target, Award, 
-  Globe, Smartphone, Brain, Monitor, Shield, Search
+  FileText, CheckCircle, Phone, 
+  Mail, ExternalLink, 
+  Brain, Monitor, Shield, Search
 } from 'lucide-react';
 
 export const metadata = {
@@ -15,10 +14,9 @@ export const metadata = {
 };
 
 export default function RealEstateTechnologySolutions() {
-  const phoneHref = "tel:+13024640950";
-  const emailHref = "mailto:kleber@ziontechgroup.com";
-  const websiteHref = "https://ziontechgroup.com";
-
+  const phoneHref = "tel:+13024640950"
+  const emailHref = "mailto:kleber@ziontechgroup.com"
+  const websiteHref = "https://ziontechgroup.com"
   const realEstateServices = [
     {
       name: 'AI-Powered Property Management Platform',

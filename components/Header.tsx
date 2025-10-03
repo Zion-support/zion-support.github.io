@@ -1,12 +1,8 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import PromoBanner from './PromoBanner';
-import Sidebar from './Sidebar';
-=======
-import React from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
-import { useState } from 'react';
+import Sidebar from './Sidebar';
+import PromoBanner from './PromoBanner';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,21 +15,24 @@ export default function Header() {
       href: '/services',
       submenu: [
         { name: 'All Services', href: '/services' },
-        { name: 'AI Services', href: '/ai-services' },
-        { name: 'Micro SaaS', href: '/services/micro-saas' },
-        { name: 'IT Services', href: '/services/it-services-comprehensive' },
-        { name: 'AI Content Tools', href: '/services/ai-powered-content-tools' },
-        { name: 'Telemedicine Platform', href: '/services/telemedicine-platform' },
-        { name: 'Remote Collaboration', href: '/services/remote-collaboration-suite' },
-        { name: 'API Integration', href: '/services/api-integration-platform' },
-        { name: 'Customer Insights', href: '/services/ai-customer-insights-platform' },
-        { name: 'Blockchain Solutions', href: '/services/blockchain-solutions' },
-        { name: 'Quantum Computing', href: '/services/ai-quantum-computing-2026' },
-        { name: 'Additional Services', href: '/additional-services' },
-        { name: 'Comprehensive Services', href: '/comprehensive-services' },
-        { name: 'Cloud Migration', href: '/services/cloud-migration-service' },
-        { name: 'Cybersecurity', href: '/services/cybersecurity-solutions' },
-        { name: 'Data Analytics', href: '/services/data-analytics-business-intelligence' }
+        { name: 'AI Micro SaaS Solutions', href: '/services', category: 'AI Micro SaaS' },
+        { name: 'Advanced AI Solutions', href: '/services', category: 'Advanced AI' },
+        { name: 'IT Services & DevOps', href: '/services', category: 'IT Services' },
+        { name: 'Micro SaaS Platforms', href: '/services', category: 'Micro SaaS' },
+        { name: 'Healthcare Technology', href: '/services', category: 'Healthcare Tech' },
+        { name: 'Blockchain Solutions', href: '/services', category: 'Blockchain' },
+        { name: 'AI Customer Feedback Analyzer', href: '/services/ai-customer-feedback-analyzer' },
+        { name: 'AI Expense Management SaaS', href: '/services/ai-expense-management-saas' },
+        { name: 'AI Time Tracking Suite', href: '/services/ai-time-tracking-productivity-suite' },
+        { name: 'AI Email Automation Platform', href: '/services/ai-email-automation-platform' },
+        { name: 'AI Password Manager Enterprise', href: '/services/ai-password-manager-enterprise' },
+        { name: 'AI Video Content Optimizer', href: '/services/ai-video-content-optimizer' },
+        { name: 'AI HR Recruitment Automation', href: '/services/ai-hr-recruitment-automation' },
+        { name: 'AI Customer Support Automation', href: '/services/ai-customer-support-automation' },
+        { name: 'AI Inventory Forecasting Platform', href: '/services/ai-inventory-forecasting-platform' },
+        { name: 'AI Quantum Optimization Engine', href: '/services/ai-quantum-optimization-engine' },
+        { name: 'AI Autonomous DevOps Orchestrator', href: '/services/ai-autonomous-devops-orchestrator' },
+        { name: 'AI Meta-Cognitive Business Intelligence', href: '/services/ai-meta-cognitive-business-intelligence' }
       ]
     },
     { 
@@ -47,7 +46,11 @@ export default function Header() {
         { name: 'Healthcare Technology', href: '/services/healthcare-technology-solutions' },
         { name: 'FinTech Solutions', href: '/services/financial-technology-solutions' },
         { name: 'E-commerce Solutions', href: '/services/ecommerce-technology-solutions' },
-        { name: 'Manufacturing AI', href: '/services/manufacturing-ai-platform' }
+        { name: 'Manufacturing AI', href: '/services/manufacturing-ai-platform' },
+        { name: 'Cloud Migration Services', href: '/services/cloud-migration-services' },
+        { name: 'DevOps Automation Services', href: '/services/devops-automation-services' },
+        { name: 'Cybersecurity Consulting', href: '/services/cybersecurity-consulting-services' },
+        { name: 'Data Analytics Consulting', href: '/services/data-analytics-consulting' }
       ]
     },
     { name: 'Case Studies', href: '/case-studies' },
@@ -57,12 +60,13 @@ export default function Header() {
       href: '/resources',
       submenu: [
         { name: 'All Resources', href: '/resources' },
-        { name: 'Guides', href: '/guides' },
+        { name: 'AI Implementation Guides', href: '/guides' },
         { name: 'Content Hub', href: '/content-hub' },
         { name: 'Enhanced Services Catalog', href: '/enhanced-services-catalog' },
+        { name: 'Pricing Information', href: '/pricing' },
         { name: 'Privacy Policy', href: '/privacy' },
         { name: 'Terms of Service', href: '/terms' },
-        { name: 'Security', href: '/security' }
+        { name: 'Security Information', href: '/security' }
       ]
     },
     { 
@@ -70,10 +74,12 @@ export default function Header() {
       href: '/about',
       submenu: [
         { name: 'About Us', href: '/about' },
-        { name: 'Pricing', href: '/pricing' },
-        { name: 'Support', href: '/support' },
+        { name: 'Our Team', href: '/team' },
+        { name: 'Careers', href: '/careers' },
         { name: 'Partners', href: '/partners' },
-        { name: 'Portfolio', href: '/portfolio' }
+        { name: 'Portfolio', href: '/portfolio' },
+        { name: 'Support', href: '/support' },
+        { name: 'Contact Us', href: '/contact' }
       ]
     },
     { name: 'Contact', href: '/contact' },
@@ -115,14 +121,15 @@ export default function Header() {
                 
                 {/* Dropdown Menu */}
                 {item.submenu && (
-                  <div className="absolute top-full left-0 mt-2 w-72 bg-white rounded-xl shadow-xl border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                  <div className="absolute top-full left-0 mt-2 w-80 max-w-sm bg-white rounded-xl shadow-xl border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 max-h-96 overflow-y-auto">
                     <div className="py-4">
                       <div className="grid grid-cols-1 gap-1">
                         {item.submenu.map((subItem) => (
                           <Link
                             key={subItem.name}
                             to={subItem.href}
-                            className="block px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors rounded-lg mx-2"
+                            className="block px-4 py-3 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors rounded-lg mx-2 truncate"
+                            title={subItem.name}
                           >
                             {subItem.name}
                           </Link>
@@ -137,69 +144,11 @@ export default function Header() {
             <Link
               to="/contact"
               className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors"
-=======
-  return (
-    <header className="bg-white shadow-lg sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4">
-          {/* Logo */}
-          <div className="flex-shrink-0">
-            <Link to="/" className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              Zion Tech Group
-            </Link>
-          </div>
-
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
-            <Link to="/" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
-              Home
-            </Link>
-            <Link to="/services" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
-              Services
-            </Link>
-            <Link to="/case-studies" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
-              Case Studies
-            </Link>
-            <Link to="/about" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
-              About
-            </Link>
-            <Link to="/contact" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
-              Contact
-            </Link>
-          </nav>
-
-          {/* CTA Button */}
-          <div className="hidden md:block">
-            <Link 
-              to="/contact" 
-              className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:shadow-lg transition-all duration-300"
             >
               Get Started
             </Link>
           </div>
 
-          {/* Mobile menu buttons */}
-          <div className="md:hidden flex items-center space-x-2">
-            {/* Sidebar toggle */}
-            <button
-              className="p-2 rounded-lg hover:bg-gray-100 transition-colors"
-              onClick={() => setIsSidebarOpen(!isSidebarOpen)}
-              aria-label="Toggle sidebar"
-            >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            </button>
-            {/* Mobile menu toggle */}
-            <button
-              className="p-2 rounded-lg hover:bg-gray-100 transition-colors lg:hidden"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              aria-label="Toggle mobile menu"
-            >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={isMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"} />
-              </svg>
-=======
           {/* Mobile menu button */}
           <div className="md:hidden">
             <button
@@ -213,106 +162,97 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="lg:hidden mt-4 pb-4 border-t border-gray-200 bg-white">
-            <div className="flex flex-col space-y-1 pt-4 max-h-96 overflow-y-auto">
-              {navigation.map((item) => (
-                <div key={item.name} className="px-4">
-                  <Link
-                    to={item.href}
-                    className="text-gray-700 hover:text-blue-600 font-medium py-3 transition-colors block px-3 rounded-lg hover:bg-blue-50"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    {item.name}
-                  </Link>
-                  {item.submenu && (
-                    <div className="ml-4 space-y-1 border-l-2 border-gray-100 pl-4">
-                      {item.submenu.slice(0, 6).map((subItem) => (
-                        <Link
-                          key={subItem.name}
-                          to={subItem.href}
-                          className="text-gray-600 hover:text-blue-600 text-sm py-2 transition-colors block px-3 rounded-lg hover:bg-blue-50"
-                          onClick={() => setIsMenuOpen(false)}
-                        >
-                          {subItem.name}
-                        </Link>
-                      ))}
-                      {item.submenu.length > 6 && (
-                        <div className="px-3 py-2 text-xs text-gray-500">
-                          +{item.submenu.length - 6} more services
-                        </div>
-                      )}
-                    </div>
-                  )}
-                </div>
-              ))}
-              
-              <div className="pt-4 border-t border-gray-200 px-4">
-                <Link
-                  to="/contact"
-                  className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors text-center block"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Get Started
-                </Link>
-                <div className="mt-3 text-center">
-                  <a 
-                    href="tel:+13024640950" 
-                    className="text-sm text-blue-600 hover:text-blue-700 font-medium"
-                  >
-                    📞 +1 302 464 0950
-                  </a>
-                </div>
-              </div>
-=======
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-50 rounded-lg mt-2">
+          <div className="md:hidden mt-4 pb-4 border-t border-gray-200">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-50 rounded-lg mt-2 max-h-96 overflow-y-auto">
               <Link 
                 to="/" 
                 className="block px-3 py-2 text-gray-700 hover:text-blue-600 font-medium transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Home
+                🏠 Home
               </Link>
               <Link 
                 to="/services" 
                 className="block px-3 py-2 text-gray-700 hover:text-blue-600 font-medium transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Services
+                ⚙️ All Services
+              </Link>
+              <Link 
+                to="/services/ai-customer-feedback-analyzer" 
+                className="block px-3 py-2 text-gray-600 hover:text-blue-600 text-sm transition-colors ml-4"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                💬 AI Customer Feedback Analyzer
+              </Link>
+              <Link 
+                to="/services/ai-expense-management-saas" 
+                className="block px-3 py-2 text-gray-600 hover:text-blue-600 text-sm transition-colors ml-4"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                💳 AI Expense Management SaaS
+              </Link>
+              <Link 
+                to="/services/ai-time-tracking-productivity-suite" 
+                className="block px-3 py-2 text-gray-600 hover:text-blue-600 text-sm transition-colors ml-4"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                ⏱️ AI Time Tracking Suite
+              </Link>
+              <Link 
+                to="/services/ai-quantum-optimization-engine" 
+                className="block px-3 py-2 text-gray-600 hover:text-blue-600 text-sm transition-colors ml-4"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                ⚛️ AI Quantum Optimization Engine
+              </Link>
+              <Link 
+                to="/solutions" 
+                className="block px-3 py-2 text-gray-700 hover:text-blue-600 font-medium transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                🎯 Solutions
               </Link>
               <Link 
                 to="/case-studies" 
                 className="block px-3 py-2 text-gray-700 hover:text-blue-600 font-medium transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Case Studies
+                📈 Case Studies
+              </Link>
+              <Link 
+                to="/blog" 
+                className="block px-3 py-2 text-gray-700 hover:text-blue-600 font-medium transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                📝 Blog
               </Link>
               <Link 
                 to="/about" 
                 className="block px-3 py-2 text-gray-700 hover:text-blue-600 font-medium transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
-                About
+                🏢 About
               </Link>
               <Link 
                 to="/contact" 
                 className="block px-3 py-2 text-gray-700 hover:text-blue-600 font-medium transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Contact
+                📞 Contact
               </Link>
               <Link 
                 to="/contact" 
                 className="block px-3 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-semibold text-center mt-4"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Get Started
+                🚀 Get Started
               </Link>
             </div>
           </div>
         )}
-      </div>
-    </header>
+        </nav>
+      </header>
     </>
   );
 }

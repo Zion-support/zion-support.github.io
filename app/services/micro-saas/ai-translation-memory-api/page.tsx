@@ -1,5 +1,5 @@
-import React from 'react';
-import Link from 'next/link';
+// import React from 'react';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'AI Translation Memory API | Micro SaaS | Zion Tech Group',
@@ -46,7 +46,7 @@ export default function AITranslationMemoryAPIPage() {
           <div className="mt-6 flex gap-3 flex-wrap">
             <a href={`tel:${contact.phone}`} className="px-6 py-3 bg-white text-blue-700 font-semibold rounded-lg">Call {contact.phone}</a>
             <a href={`mailto:${contact.email}?subject=AI Translation Memory API`} className="px-6 py-3 border border-white rounded-lg font-semibold">Email {contact.email}</a>
-            <Link href="/services/micro-saas" className="px-6 py-3 bg-black/20 border border-white/30 rounded-lg font-semibold">Browse Micro SaaS</Link>
+            <Link to="/services/micro-saas" className="px-6 py-3 bg-black/20 border border-white/30 rounded-lg font-semibold">Browse Micro SaaS</Link>
           </div>
         </div>
       </section>

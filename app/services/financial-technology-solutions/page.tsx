@@ -1,6 +1,6 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
+// import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import { 
   CreditCard, DollarSign, TrendingUp, Shield, Calculator, 
   FileText, BarChart3, Clock, Users, CheckCircle, 
@@ -15,10 +15,9 @@ export const metadata = {
 };
 
 export default function FinancialTechnologySolutions() {
-  const phoneHref = "tel:+13024640950";
-  const emailHref = "mailto:kleber@ziontechgroup.com";
-  const websiteHref = "https://ziontechgroup.com";
-
+  const phoneHref = "tel:+13024640950"
+  const emailHref = "mailto:kleber@ziontechgroup.com"
+  const websiteHref = "https://ziontechgroup.com"
   const fintechServices = [
     {
       name: 'AI-Powered Payment Processing Platform',

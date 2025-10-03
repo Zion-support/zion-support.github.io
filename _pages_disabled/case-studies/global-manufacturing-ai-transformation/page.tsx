@@ -1,5 +1,5 @@
-import React from 'react';
-import Link from 'next/link';
+// import React from 'react';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'Global Manufacturing AI Transformation: $50M Savings & 95% Efficiency | Zion Tech Group',

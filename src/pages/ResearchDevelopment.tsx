@@ -1,13 +1,17 @@
-import React from "react";
-
+import React from "react
+;
 const ResearchDevelopment: React.FC = () => {
-    return (
-        <section className="min-h-[40vh]">
-            <h1 className="text-3xl font-bold mb-4">Research & Development</h1>
-            <p className="text-gray-700">Exploring next-gen AI, quantum computing, edge intelligence, and more.</p>
+  return (
+        <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <h1 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Research & Development</h1>";,
+            <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Exploring next-gen AI, quantum computing, edge intelligence, and more.</p>";,
+        <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <h1 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Research & Development</h1>";,
+            <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Exploring next-gen AI, quantum computing, edge intelligence, and more.</p>";,
         </section>
     );
 };
 
-export default ResearchDevelopment;
+export default Component;
 
+;

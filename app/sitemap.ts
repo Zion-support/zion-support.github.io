@@ -35,13 +35,13 @@ export default function sitemap(): SiteEntry[] {
       priority: 0.5,
     },
     {
-      url: `${baseUrl}/services/ai-data-governance-platform`,
+      url: `${baseUrl}/services/ai-services`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/services/rpa-automation-suite`,
+      url: `${baseUrl}/services/micro-saas`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.8,
@@ -71,7 +71,7 @@ export default function sitemap(): SiteEntry[] {
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/services-advertising`,
+      url: `${baseUrl}/services`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.9,
@@ -107,13 +107,13 @@ export default function sitemap(): SiteEntry[] {
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/services/ai-services/ai-fraud-detection-advanced`,
+      url: `${baseUrl}/services/ai-services`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/services/micro-saas/ai-predictive-maintenance`,
+      url: `${baseUrl}/services/micro-saas`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.8,
@@ -268,5 +268,30 @@ export default function sitemap(): SiteEntry[] {
       changeFrequency: 'weekly',
       priority: 1.0,
     },
-  ]
+    // New 2026 Revolutionary Breakthroughs Content - High Priority
+    {
+      url: `${baseUrl}/content/blog/ai-2026-january-revolutionary-breakthroughs`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/content/blog/ai-2026-february-mega-breakthrough-revolution`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/content/case-studies/ai-2026-january-revolutionary-breakthroughs-5-billion-success`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/content/case-studies/ai-2026-february-mega-breakthrough-10-billion-success`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+  ];
 }

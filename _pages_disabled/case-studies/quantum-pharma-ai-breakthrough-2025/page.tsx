@@ -1,5 +1,5 @@
-import React from 'react';
-import Link from 'next/link';
+// import React from 'react';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'Quantum Pharma AI Drug Discovery: $2.8B Value Created in 18 Months | Zion Tech Group',

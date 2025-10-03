@@ -1,57 +1,48 @@
-// Service Worker for Zion Tech Group Website
-const CACHE_NAME = 'zion-tech-group-v1';
-const STATIC_CACHE_NAME = 'zion-static-v1';
-const DYNAMIC_CACHE_NAME = 'zion-dynamic-v1';
 
-// Files to cache immediately
-const STATIC_FILES = [
+// Comprehensive Service Worker for Zion Website
+const CACHE_NAME = 'zion-website-v1.0.0';
+const STATIC_CACHE = 'zion-static-v1.0.0';
+const DYNAMIC_CACHE = 'zion-dynamic-v1.0.0';
+
+// Assets to cache on install
+const STATIC_ASSETS = [
   '/',
   '/index.html',
   '/manifest.json',
-  '/assets/css/main-BltRtwWF.css',
-  '/assets/js/main-CyGst8ov.js',
-  '/assets/js/vendor-react-Bhjid7yq.js',
-  '/assets/js/components-xFNA8Lw3.js',
+  '/images/logo.png',
+  '/images/hero-bg.jpg',
+  '/css/main.css',
+  '/js/vendor.js',
+  '/js/main.js'
 ];
 
-// Install event - cache static files
+// Install event - cache static assets
 self.addEventListener('install', (event) => {
-  console.log('Service Worker installing...');
+  console.log('Service Worker: Installing...');
   event.waitUntil(
-    caches.open(STATIC_CACHE_NAME)
+    caches.open(STATIC_CACHE)
       .then((cache) => {
-        console.log('Caching static files');
-        return cache.addAll(STATIC_FILES);
+        console.log('Service Worker: Caching static assets');
+        return cache.addAll(STATIC_ASSETS);
       })
-      .then(() => {
-        console.log('Service Worker installed');
-        return self.skipWaiting();
-      })
-      .catch((error) => {
-        console.error('Service Worker installation failed:', error);
-      })
+      .then(() => self.skipWaiting())
   );
 });
 
 // Activate event - clean up old caches
 self.addEventListener('activate', (event) => {
-  console.log('Service Worker activating...');
+  console.log('Service Worker: Activating...');
   event.waitUntil(
-    caches.keys()
-      .then((cacheNames) => {
-        return Promise.all(
-          cacheNames.map((cacheName) => {
-            if (cacheName !== STATIC_CACHE_NAME && cacheName !== DYNAMIC_CACHE_NAME) {
-              console.log('Deleting old cache:', cacheName);
-              return caches.delete(cacheName);
-            }
-          })
-        );
-      })
-      .then(() => {
-        console.log('Service Worker activated');
-        return self.clients.claim();
-      })
+    caches.keys().then((cacheNames) => {
+      return Promise.all(
+        cacheNames.map((cacheName) => {
+          if (cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE) {
+            console.log('Service Worker: Deleting old cache:', cacheName);
+            return caches.delete(cacheName);
+          }
+        })
+      );
+    }).then(() => self.clients.claim())
   );
 });
 
@@ -61,122 +52,73 @@ self.addEventListener('fetch', (event) => {
   const url = new URL(request.url);
 
   // Skip non-GET requests
-  if (request.method !== 'GET') {
-    return;
-  }
+  if (request.method !== 'GET') return;
 
-  // Skip cross-origin requests
-  if (url.origin !== location.origin) {
-    return;
-  }
+  // Skip chrome-extension and other non-http requests
+  if (!url.protocol.startsWith('http')) return;
 
-  // Handle different types of requests
-  if (request.destination === 'document') {
-    // HTML pages - network first, cache fallback
-    event.respondWith(
-      fetch(request)
-        .then((response) => {
-          if (response.status === 200) {
-            const responseClone = response.clone();
-            caches.open(DYNAMIC_CACHE_NAME)
-              .then((cache) => {
-                cache.put(request, responseClone);
-              });
-          }
-          return response;
-        })
-        .catch(() => {
-          return caches.match(request)
-            .then((response) => {
-              if (response) {
-                return response;
-              }
-              // Fallback to index.html for SPA routing
-              return caches.match('/index.html');
-            });
-        })
-    );
-  } else if (request.destination === 'script' || request.destination === 'style') {
-    // JS/CSS files - cache first, network fallback
-    event.respondWith(
-      caches.match(request)
-        .then((response) => {
-          if (response) {
-            return response;
-          }
-          return fetch(request)
-            .then((response) => {
-              if (response.status === 200) {
-                const responseClone = response.clone();
-                caches.open(DYNAMIC_CACHE_NAME)
-                  .then((cache) => {
-                    cache.put(request, responseClone);
-                  });
-              }
+  event.respondWith(
+    caches.match(request)
+      .then((cachedResponse) => {
+        if (cachedResponse) {
+          console.log('Service Worker: Serving from cache:', request.url);
+          return cachedResponse;
+        }
+
+        return fetch(request)
+          .then((response) => {
+            // Don't cache if not a valid response
+            if (!response || response.status !== 200 || response.type !== 'basic') {
               return response;
-            });
-        })
-    );
-  } else if (request.destination === 'image') {
-    // Images - cache first, network fallback
-    event.respondWith(
-      caches.match(request)
-        .then((response) => {
-          if (response) {
-            return response;
-          }
-          return fetch(request)
-            .then((response) => {
-              if (response.status === 200) {
-                const responseClone = response.clone();
-                caches.open(DYNAMIC_CACHE_NAME)
-                  .then((cache) => {
-                    cache.put(request, responseClone);
-                  });
-              }
-              return response;
-            });
-        })
-    );
-  } else {
-    // Other requests - network first, cache fallback
-    event.respondWith(
-      fetch(request)
-        .then((response) => {
-          if (response.status === 200) {
-            const responseClone = response.clone();
-            caches.open(DYNAMIC_CACHE_NAME)
+            }
+
+            // Clone the response
+            const responseToCache = response.clone();
+
+            caches.open(DYNAMIC_CACHE)
               .then((cache) => {
-                cache.put(request, responseClone);
+                cache.put(request, responseToCache);
               });
-          }
-          return response;
-        })
-        .catch(() => {
-          return caches.match(request);
-        })
-    );
-  }
+
+            return response;
+          })
+          .catch(() => {
+            // Return offline page for navigation requests
+            if (request.mode === 'navigate') {
+              return caches.match('/offline.html');
+            }
+          });
+      })
+  );
 });
 
-// Background sync for offline form submissions
+// Background sync for form submissions
 self.addEventListener('sync', (event) => {
-  if (event.tag === 'contact-form') {
-    event.waitUntil(
-      // Handle offline form submissions
-      handleOfflineFormSubmissions()
-    );
+  if (event.tag === 'background-sync') {
+    event.waitUntil(doBackgroundSync());
   }
 });
 
-// Push notifications
+async function doBackgroundSync() {
+  try {
+    const pendingSubmissions = await getPendingSubmissions();
+    for (const submission of pendingSubmissions) {
+      await submitForm(submission);
+      await removePendingSubmission(submission.id);
+    }
+  } catch (error) {
+    console.error('Background sync failed:', error);
+  }
+}
+
+// Push notification handler
 self.addEventListener('push', (event) => {
   if (event.data) {
     const data = event.data.json();
     const options = {
       body: data.body,
-      icon: '/icon-192x192.png',
-      badge: '/badge-72x72.png',
+      icon: '/images/icon-192.png',
+      badge: '/images/badge-72.png',
       vibrate: [100, 50, 100],
       data: {
         dateOfArrival: Date.now(),
@@ -186,12 +128,12 @@ self.addEventListener('push', (event) => {
         {
           action: 'explore',
           title: 'View Details',
-          icon: '/icon-192x192.png'
+          icon: '/images/checkmark.png'
         },
         {
           action: 'close',
           title: 'Close',
-          icon: '/icon-192x192.png'
+          icon: '/images/xmark.png'
         }
       ]
     };
@@ -213,50 +155,24 @@ self.addEventListener('notificationclick', (event) => {
   }
 });
 
-// Helper function for offline form submissions
-async function handleOfflineFormSubmissions() {
-  try {
-    // Get stored form data from IndexedDB
-    const formData = await getStoredFormData();
-    
-    if (formData && formData.length > 0) {
-      for (const data of formData) {
-        try {
-          await fetch('/api/contact', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(data)
-          });
-          
-          // Remove successfully submitted data
-          await removeStoredFormData(data.id);
-        } catch (error) {
-          console.error('Failed to submit form data:', error);
-        }
-      }
-    }
-  } catch (error) {
-    console.error('Error handling offline form submissions:', error);
-  }
-}
-
-// Helper functions for IndexedDB operations
-async function getStoredFormData() {
-  // Implementation would use IndexedDB to retrieve stored form data
+// Helper functions
+async function getPendingSubmissions() {
+  // Implementation for getting pending form submissions
   return [];
 }
 
-async function removeStoredFormData(id) {
-  // Implementation would use IndexedDB to remove stored form data
-  return true;
+async function submitForm(submission) {
+  // Implementation for submitting form data
+  return fetch('/api/contact', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(submission)
+  });
 }
 
-// Performance monitoring
-self.addEventListener('message', (event) => {
-  if (event.data && event.data.type === 'PERFORMANCE_METRIC') {
-    // Send performance metrics to analytics
-    console.log('Performance metric received:', event.data.metric);
-  }
-});
+async function removePendingSubmission(id) {
+  // Implementation for removing submitted form data
+  return Promise.resolve();
+}

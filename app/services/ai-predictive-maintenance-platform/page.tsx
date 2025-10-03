@@ -1,6 +1,11 @@
-import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+// import React from 'react';
+// Metadata interface for React Helmet
+interface Metadata {
+  title?: string;
+  description?: string;
+  keywords?: string;
+}
+import { Link } from 'react-router-dom';
 import { 
   Wrench, 
   AlertTriangle, 
@@ -52,14 +57,12 @@ export default function AIPredictiveMaintenancePlatform() {
           predicts failures with 95% accuracy, and reduces maintenance costs by 40% while increasing uptime by 80%.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link 
-            href="mailto:kleber@ziontechgroup.com?subject=AI Predictive Maintenance Platform Inquiry"
+          <Link to="mailto:kleber@ziontechgroup.com?subject=AI Predictive Maintenance Platform Inquiry"
             className="bg-red-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors"
           >
             Prevent Failures Today
           </Link>
-          <Link 
-            href="tel:+13024640950"
+          <Link to="tel:+13024640950"
             className="border border-red-600 text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-red-50 transition-colors"
           >
             Call +1 302 464 0950
@@ -238,8 +241,7 @@ export default function AIPredictiveMaintenancePlatform() {
                 Cloud deployment
               </li>
             </ul>
-            <Link 
-              href="mailto:kleber@ziontechgroup.com?subject=Small Fleet Plan - AI Predictive Maintenance"
+            <Link to="mailto:kleber@ziontechgroup.com?subject=Small Fleet Plan - AI Predictive Maintenance"
               className="w-full bg-gray-900 text-white py-3 rounded-lg font-semibold text-center block hover:bg-gray-800 transition-colors"
             >
               Get Started
@@ -277,8 +279,7 @@ export default function AIPredictiveMaintenancePlatform() {
                 API access
               </li>
             </ul>
-            <Link 
-              href="mailto:kleber@ziontechgroup.com?subject=Enterprise Plan - AI Predictive Maintenance"
+            <Link to="mailto:kleber@ziontechgroup.com?subject=Enterprise Plan - AI Predictive Maintenance"
               className="w-full bg-red-600 text-white py-3 rounded-lg font-semibold text-center block hover:bg-red-700 transition-colors"
             >
               Get Started
@@ -313,8 +314,7 @@ export default function AIPredictiveMaintenancePlatform() {
                 On-premise deployment
               </li>
             </ul>
-            <Link 
-              href="mailto:kleber@ziontechgroup.com?subject=Custom Plan - AI Predictive Maintenance"
+            <Link to="mailto:kleber@ziontechgroup.com?subject=Custom Plan - AI Predictive Maintenance"
               className="w-full bg-gray-900 text-white py-3 rounded-lg font-semibold text-center block hover:bg-gray-800 transition-colors"
             >
               Contact Sales
@@ -414,14 +414,12 @@ export default function AIPredictiveMaintenancePlatform() {
           Join thousands of organizations using our AI Predictive Maintenance Platform to prevent failures and optimize maintenance operations.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link 
-            href="mailto:kleber@ziontechgroup.com?subject=AI Predictive Maintenance Platform Demo Request"
+          <Link to="mailto:kleber@ziontechgroup.com?subject=AI Predictive Maintenance Platform Demo Request"
             className="bg-red-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors"
           >
             Schedule Demo
           </Link>
-          <Link 
-            href="tel:+13024640950"
+          <Link to="tel:+13024640950"
             className="border border-red-600 text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-red-50 transition-colors"
           >
             Call +1 302 464 0950
@@ -429,7 +427,7 @@ export default function AIPredictiveMaintenancePlatform() {
         </div>
         <div className="mt-8 text-sm text-gray-500">
           <p>📍 364 E Main St STE 1008, Middletown, DE 19709</p>
-          <p>📧 kleber@ziontechgroup.com | 🌐 <Link href="https://ziontechgroup.com" className="text-red-600 hover:underline">ziontechgroup.com</Link></p>
+          <p>📧 kleber@ziontechgroup.com | 🌐 <Link to="https://ziontechgroup.com" className="text-red-600 hover:underline">ziontechgroup.com</Link></p>
         </div>
       </div>
     </div>

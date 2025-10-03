@@ -1,5 +1,5 @@
-import React from 'react';
-import Link from 'next/link';
+// import React from 'react';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'Telecom AI Transformation: $120M Savings & 95% Network Efficiency | Zion Tech Group Success Story',

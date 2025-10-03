@@ -1,76 +1,55 @@
+
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { AlertTriangle } from 'lucide-react';
-=======
-import React, { Component, ErrorInfo, ReactNode } from 'react';';
-import {
-AlertTriangle
-} from 'lucide-react';';
 
 interface Props {
   children: ReactNode;
+  fallback?: ReactNode;
 }
 
 interface State {
-hasError: boolean;,
-error?: Error;
+  hasError: boolean;
+  error?: Error;
 }
 
 class ErrorBoundary extends Component<Props, State> {
-public state: State = {
-=======
-public state: State = {,,
-hasError: false
-};
+  constructor(props: Props) {
+    super(props);
+    this.state = { hasError: false };
+  }
 
-  public static getDerivedStateFromError(error: Error): State {,
+  static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error };
   }
 
-  public componentDidCatch(error: Error, errorInfo: ErrorInfo) {,
-    console.error('Uncaught error: ', error, errorInfo);',
-=======
-    console.error('Uncaught error: ', error, errorInfo);';,
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    // Log to external service if available
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'exception', {
+        description: error.message,
+        fatal: false
+      });
+    }
+    
+    // In development, log to console for debugging
+    if (process.env.NODE_ENV === 'development') {
+      // eslint-disable-next-line no-console
+      console.error('Error caught by boundary:', error, errorInfo);
+    }
   }
 
-  public render() {
+  render() {
     if (this.state.hasError) {
-      return (
-        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-red-50 to-orange-50">
-          <div className="max-w-md w-full mx-4">
-            <div className="bg-white rounded-2xl shadow-xl p-8 text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-red-100 mb-4">
-                <AlertTriangle className="w-8 h-8 text-red-600/>
-=======
-        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-red-50 to-orange-50">";
-          <div className="max-w-md w-full mx-4">";
-            <div className="bg-white rounded-2xl shadow-xl p-8 text-center">";
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-red-100 mb-4">";
-                <AlertTriangle className="w-8 h-8 text-red-600" />";
-              </div>
-              <h1 className="text-2xl font-bold text-gray-900 mb-2">";
-                Oops! Something went wrong
-              </h1>
-              <p className="text-gray-600 mb-6">
-                We're sorry for the inconvenience. Please try refreshing the page.;
-=======
-              <p className="text-gray-600 mb-6">";
-                We're sorry for the inconvenience. Please try refreshing the page.';
-              </p>
-              <div className="space-y-3">";
-                <button
-                  onClick={() => window.location.reload()}
-                  className="w-full bg-red-600 hover: bg-red-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors",
-                >
-                  Refresh Page
-                </button>
-                <a
-                  href="/"
-                  className="block w-full border-2 border-red-600 text-red-600 hover: bg-red-50 font-semibold py-3 px-6 rounded-lg transition-colors",
-                >
-                  Go to Homepage
-                </a>
-              </div>
-            </div>
+      return this.props.fallback || (
+        <div className="min-h-screen bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white flex items-center justify-center">
+          <div className="text-center">
+            <h2 className="text-2xl font-bold mb-4">Something went wrong</h2>
+            <p className="mb-6">We're sorry, but something unexpected happened.</p>
+            <button 
+              onClick={() => this.setState({ hasError: false })}
+              className="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors"
+            >
+              Try again
+            </button>
           </div>
         </div>
       );
@@ -81,4 +60,3 @@ hasError: false
 }
 
 export default ErrorBoundary;
-;

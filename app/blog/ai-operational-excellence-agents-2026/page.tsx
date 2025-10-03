@@ -1,5 +1,5 @@
-import React from 'react';
-import Link from 'next/link';
+// import React from 'react';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
 	title: 'AI Operational Excellence 2026: Autonomous Agents Driving 10x Efficiency',
@@ -57,10 +57,10 @@ export default function Page() {
 					<h3 className="text-xl font-semibold mb-2">Next up</h3>
 					<ul className="list-disc pl-6 text-emerald-700">
 						<li>
-							<Link href="/blog/ai-agent-observability-2026">AI Agent Observability 2026</Link>
+							<Link to="/blog/ai-agent-observability-2026">AI Agent Observability 2026</Link>
 						</li>
 						<li>
-							<Link href="/content-hub">Explore the Content Hub</Link>
+							<Link to="/content-hub">Explore the Content Hub</Link>
 						</li>
 					</ul>
 				</div>

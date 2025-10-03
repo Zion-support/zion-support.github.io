@@ -1,117 +1,42 @@
-/**
- * SEO Utilities
- * Helper functions for search engine optimization
- */
-
-export interface SEOData {
-title: string;,
-description: string;,
-keywords?: string[];,
-canonical?: string;,
-ogImage?: string;,
-ogType?: string;,
-twitterCard?: string;
+interface SEOData {
+  title: string;
+  description: string;
+  keywords: string[];
+  canonical?: string;
+  ogImage?: string;
+  ogType?: string;
 }
 
-export const generateMetaTags = (data: SEOData) => {,
-  const {
-    title,
-    description
-    keywords = []
-    canonical
-    ogImage = '/images/og-default.jpg'
-    ogType = 'website'
-=======
-    description,
-    keywords = [],
-    canonical,
-    ogImage = '/images/og-default.jpg',';
-    ogType = 'website',';
-    twitterCard = 'summary_large_image'
-  } = data;
+export const seoUtils = {
+  generateMetaTags: (data: SEOData) => {
+    return {
+      title: data.title,
+      description: data.description,
+      keywords: data.keywords.join(', '),
+      'og:title': data.title,
+      'og:description': data.description,
+      'og:image': data.ogImage || '/og-image.jpg',
+      'og:type': data.ogType || 'website',
+      'twitter:card': 'summary_large_image',
+      'twitter:title': data.title,
+      'twitter:description': data.description,
+      'twitter:image': data.ogImage || '/og-image.jpg',
+      canonical: data.canonical
+    };
+  },
 
-  return {
-    title,
-    description,
-    keywords: keywords.join(', '),',
-    canonical,
-    'og:title': title,',
-    'og:description': description,',
-    'og:image': ogImage,',
-    'og:type': ogType,',
-    'og:url': canonical,',
-    'twitter:card': twitterCard,',
-    'twitter:title': title,',
-    'twitter:description': description,',
-    'twitter:image': ogImage',
-  };
+  generateStructuredData: (type: string, data: any) => {
+    return {
+      '@context': 'https://schema.org',
+      '@type': type,
+      ...data
+    };
+  },
+
+  optimizeImageAlt: (filename: string, context: string) => {
+    const name = filename.replace(/\.[^/.]+$/, '');
+    return `${name} - ${context}`;
+  }
 };
 
-export const generateStructuredData = (data: {
-name: string;
-description: string;
-url: string;
-=======
-    keywords: keywords.join(', '),';,
-    canonical,
-    'og: title': title,';,
-    'og: description': description,';,
-    'og: image': ogImage,';,
-    'og: type': ogType,';,
-    'og: url': canonical,';,
-    'twitter: card': twitterCard,';,
-    'twitter: title': title,';,
-    'twitter: description': description,';,
-    'twitter: image': ogImage';,
-  };
-};
-
-export const generateStructuredData = (data: {,
-name: string;,
-description: string;,
-url: string;,
-logo?: string;
-sameAs?: string[];
-}) => {
-  return {
-    '@context': 'https://schema.org',',
-    '@type': 'Organization',
-=======
-    '@context': 'https: //schema.org',';,
-    '@type': 'Organization',';
-    name: data.name,,
-    description: data.description,,
-    url: data.url,,
-    logo: data.logo,,
-    sameAs: data.sameAs,
-  };
-};
-
-export const generateBreadcrumbStructuredData = (items: Array<{
-name: string;
-url: string;
-}>) => {
-  return {
-    '@context': 'https://schema.org',',
-    '@type': 'BreadcrumbList',
-    itemListElement: items.map((item, index) => ({,
-      '@type': 'ListItem',
-      position: index + 1,
-      name: item.name,
-      item: item.url
-=======
-export const generateBreadcrumbStructuredData = (items: Array<{,
-name: string;,
-url: string;
-}>) => {
-  return {
-    '@context': 'https: //schema.org',';,
-    '@type': 'BreadcrumbList',';
-    itemListElement: items.map((item, index) => ({,
-      '@type': 'ListItem',';
-      position: index + 1,,
-      name: item.name,,
-      item: item.url,
-    }))
-  };
-};
+export default seoUtils;

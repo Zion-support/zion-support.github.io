@@ -1,6 +1,11 @@
-import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+// import React from 'react';
+// Metadata interface for React Helmet
+interface Metadata {
+  title?: string;
+  description?: string;
+  keywords?: string;
+}
+import { Link } from 'react-router-dom';
 
 export const metadata: Metadata = {
   title: 'AI Meeting Assistant Platform - Zion Tech Group',
@@ -193,14 +198,12 @@ export default function AIMeetingAssistantPlatform() {
           Join thousands of teams that have transformed their meeting productivity with our AI-powered assistant platform.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link 
-            href="/contact" 
+          <Link to="/contact" 
             className="bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
           >
             Start Free Trial
           </Link>
-          <Link 
-            href="https://ziontechgroup.com/services/ai-meeting-assistant-platform" 
+          <Link to="https://ziontechgroup.com/services/ai-meeting-assistant-platform" 
             className="border border-purple-600 text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors"
           >
             Watch Demo

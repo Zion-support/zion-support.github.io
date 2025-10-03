@@ -1,10 +1,10 @@
-import React from 'react';
-import Link from 'next/link';
+// import React from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowLeft, Calendar, User, Clock, Tag, TrendingUp, DollarSign, Users, Target, Brain, Zap, Shield } from 'lucide-react';
 
 export const metadata = {
   title: 'AI 2025 December: Ultimate Autonomous Enterprise Revolution - Zion Tech Group',
-  description: 'Discover the revolutionary AI breakthrough of December 2025 that's transforming enterprise operations with 99.9% autonomous capabilities and unprecedented efficiency gains.',
+  description: 'Discover the revolutionary AI breakthrough of December 2025 that is transforming enterprise operations with 99.9% autonomous capabilities and unprecedented efficiency gains.',
   keywords: 'AI Revolution, Autonomous Enterprise, December 2025, AI Breakthrough, Enterprise Automation, Zion Tech Group',
 };
 
@@ -14,8 +14,7 @@ export default function AI2025DecemberUltimateAutonomousEnterpriseRevolution() {
       {/* Header */}
       <header className="border-b border-gray-200 bg-white sticky top-0 z-50">
         <div className="max-w-4xl mx-auto px-4 py-4">
-          <Link 
-            href="/" 
+          <Link to="/" 
             className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
@@ -269,8 +268,7 @@ export default function AI2025DecemberUltimateAutonomousEnterpriseRevolution() {
                 <p className="text-blue-700 mb-4">
                   Schedule a free consultation with our AI experts to discuss your autonomous transformation goals.
                 </p>
-                <Link 
-                  href="/contact" 
+                <Link to="/contact" 
                   className="inline-flex items-center bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors"
                 >
                   Schedule Consultation

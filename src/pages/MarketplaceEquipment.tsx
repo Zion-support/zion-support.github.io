@@ -1,13 +1,12 @@
 import React from "react";
 
 const MarketplaceEquipment: React.FC = () => {
-    return (
-        <section className="min-h-[40vh]">
-            <h1 className="text-3xl font-bold mb-4">Marketplace - Equipment</h1>
-            <p className="text-gray-700">Rent or buy specialized IT and AI equipment.</p>
-        </section>
-    );
+  return (
+    <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+      <h1 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Marketplace - Equipment</h1>
+      <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Rent or buy specialized IT and AI equipment.</p>
+    </section>
+  );
 };
 
-export default MarketplaceEquipment;
-
+export default Component;

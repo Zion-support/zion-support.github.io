@@ -1,5 +1,5 @@
-import React from 'react';
-import Link from 'next/link';
+// import React from 'react';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'Fortune 500 AI Transformation Success: $50M Savings Achieved | Zion Tech Group',

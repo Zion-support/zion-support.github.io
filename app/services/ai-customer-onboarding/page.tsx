@@ -1,5 +1,5 @@
-import React from 'react';
-import Link from 'next/link';
+// import React from 'react';
+import { Link } from 'react-router-dom';
 import { 
   UserPlusIcon, 
   CheckCircleIcon, 
@@ -32,15 +32,13 @@ export default function AICustomerOnboarding() {
               Transform customer onboarding with AI-powered personalization, automated workflows, and intelligent success tracking.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="/contact" 
+              <Link to="/contact" 
                 className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-purple-50 transition-colors inline-flex items-center justify-center"
               >
                 Get Started Today
                 <ArrowRightIcon className="ml-2 w-5 h-5" />
               </Link>
-              <Link 
-                href="/portfolio" 
+              <Link to="/portfolio" 
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors inline-flex items-center justify-center"
               >
                 View Case Studies
@@ -261,15 +259,13 @@ export default function AICustomerOnboarding() {
             Join leading companies already delivering exceptional onboarding experiences with our AI platform.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/contact" 
+            <Link to="/contact" 
               className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-purple-50 transition-colors inline-flex items-center justify-center"
             >
               Start Your Free Trial
               <ArrowRightIcon className="ml-2 w-5 h-5" />
             </Link>
-            <Link 
-              href="/case-studies" 
+            <Link to="/case-studies" 
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors inline-flex items-center justify-center"
             >
               View Success Stories

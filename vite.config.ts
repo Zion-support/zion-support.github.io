@@ -6,16 +6,13 @@ import { resolve } from 'path'
 export default defineConfig({
   plugins: [
     react({
-      jsxRuntime: 'automatic'
+      jsxRuntime: 'automatic',
     }),
   ],
-  root: '.',
-  publicDir: 'public',
   resolve: {
     alias: {
       '@': resolve(__dirname, 'src'),
       '@components': resolve(__dirname, 'components'),
-      '@app': resolve(__dirname, 'app'),
     },
   },
   build: {
@@ -25,6 +22,10 @@ export default defineConfig({
     target: 'es2020',
     reportCompressedSize: false,
     rollupOptions: {
+      input: {
+        main: './index.html'
+      },
+      external: ['next/link', 'next/image', 'next/router'],
       treeshake: {
         moduleSideEffects: false,
         propertyReadSideEffects: false,
@@ -33,66 +34,36 @@ export default defineConfig({
       },
       output: {
         manualChunks: (id) => {
-          // Vendor chunks - more granular splitting
+          // Vendor chunks
           if (id.includes('node_modules')) {
-            // React core
+            // Group React-related packages
             if (id.includes('react') || id.includes('react-dom')) {
               return 'vendor-react';
             }
-            // Router
-            if (id.includes('react-router')) {
-              return 'vendor-router';
+            // Group UI libraries
+            if (id.includes('framer-motion') || id.includes('lucide-react')) {
+              return 'vendor-ui';
             }
-            // UI libraries
-            if (id.includes('framer-motion')) {
-              return 'vendor-animations';
+            // Group utility libraries
+            if (id.includes('clsx') || id.includes('tailwind-merge') || id.includes('axios')) {
+              return 'vendor-utils';
             }
-            if (id.includes('lucide-react')) {
-              return 'vendor-icons';
-            }
-            // Utility libraries
-            if (id.includes('clsx') || id.includes('tailwind-merge')) {
-              return 'vendor-styling';
-            }
-            if (id.includes('axios')) {
-              return 'vendor-http';
-            }
-            // SEO and analytics
-            if (id.includes('react-helmet') || id.includes('web-vitals')) {
-              return 'vendor-seo';
-            }
-            return 'vendor-misc';
+            return 'vendor';
           }
-          // App chunks - lazy load pages
+          // App chunks
           if (id.includes('src/pages/')) {
-            // Split large page bundles
-            if (id.includes('services/')) {
-              return 'pages-services';
-            }
-            if (id.includes('case-studies/')) {
-              return 'pages-case-studies';
-            }
-            if (id.includes('blog/')) {
-              return 'pages-blog';
-            }
-            return 'pages-core';
+            return 'pages';
           }
-          // Component chunks
           if (id.includes('src/components/')) {
-            if (id.includes('banner') || id.includes('Banner')) {
-              return 'components-banners';
-            }
-            return 'components-core';
+            return 'components';
           }
-          // Charts and data visualization
-          if (id.includes('recharts') || id.includes('d3')) {
-            return 'vendor-charts';
+          if (id.includes('src/utils/')) {
+            return 'utils';
           }
-          // Large libraries
-          if (id.includes('lodash') || id.includes('moment')) {
-            return 'vendor-large';
+          if (id.includes('src/hooks/')) {
+            return 'hooks';
           }
-          return 'vendor';
+          return 'app';
         },
         chunkFileNames: 'assets/js/[name]-[hash].js',
         entryFileNames: 'assets/js/main-[hash].js',
@@ -103,7 +74,7 @@ export default defineConfig({
             return `assets/css/[name]-[hash].${ext}`;
           }
           return `assets/[name]-[hash].${ext}`;
-        }
+        },
       },
     },
     chunkSizeWarningLimit: 1000,
@@ -152,7 +123,6 @@ export default defineConfig({
     ],
     exclude: ['@vite/client', '@vite/env'],
   },
-  assetsInclude: ['**/*.html', '**/*.new'],
   define: {
     global: 'globalThis',
   },
