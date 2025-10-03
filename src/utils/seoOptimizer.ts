@@ -13,7 +13,7 @@ export interface SEOMetadata {
   ogDescription?: string;
   ogImage?: string;
   ogType?: string;
-  twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player;
+  twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player';
   twitterTitle?: string;
   twitterDescription?: string;
   twitterImage?: string;
@@ -36,7 +36,7 @@ export const generateMetaTags = (metadata: SEOMetadata): string => {
   }
   
   if (metadata.canonicalUrl) {
-    tags.push(`<link rel="canonical" href="${escapeHtml(metadata.canonicalUrl)}/>`);
+    tags.push(`<link rel="canonical" href="${escapeHtml(metadata.canonicalUrl)}" />`);
   }
 
   // Open Graph tags
@@ -85,14 +85,14 @@ export const generateArticleStructuredData = (article: {
   modifiedDate?: string;
   image?: string;
   url: string;
-}): string => {
+'): string => {
   return generateStructuredData('Article', {
     headline: article.title,
     description: article.description,
     author: {
       '@type': 'Person',
       name: article.author,
-    },
+    ',
     datePublished: article.publishDate,
     dateModified: article.modifiedDate || article.publishDate,
     image: article.image,
@@ -102,12 +102,12 @@ export const generateArticleStructuredData = (article: {
       name: 'Zion Tech Group',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://ziontechgroup.com/logo.png}
+        url: 'https://ziontechgroup.com/logo.png'},
     }
   });
 };
 
-export const generateBreadcrumbStructuredData = (breadcrumbs: Array<{ name: string; url: string }>): string => {
+export const generateBreadcrumbStructuredData = (breadcrumbs: Array<{ name: string; url: string '>): string => {
   return generateStructuredData('BreadcrumbList', {
     itemListElement: breadcrumbs.map((crumb, index) => ({
       '@type': 'ListItem',
@@ -116,7 +116,7 @@ export const generateBreadcrumbStructuredData = (breadcrumbs: Array<{ name: stri
       item: crumb.url,
     }))
   });
-};
+';
 
 export const generateOrganizationStructuredData = (): string => {
   return generateStructuredData('Organization', {
@@ -127,16 +127,16 @@ export const generateOrganizationStructuredData = (): string => {
     sameAs: [
       'https://twitter.com/ziontechgroup',
       'https://linkedin.com/company/ziontechgroup',
-      'https://github.com/zion-holdings],
+      'https://github.com/zion-holdings'],
     contactPoint: {
       '@type': 'ContactPoint',
       telephone: '+1-800-ZION-TECH',
       contactType: 'Customer Service',
-      email: 'contact@ziontechgroup.com}
+      email: 'contact@ziontechgroup.com'}
   });
 };
 
-export const generateFAQStructuredData = (faqs: Array<{ question: string; answer: string }>): string => {
+export const generateFAQStructuredData = (faqs: Array<{ question: string; answer: string '>): string => {
   return generateStructuredData('FAQPage', {
     mainEntity: faqs.map((faq) => ({
       '@type': 'Question',
@@ -147,45 +147,45 @@ export const generateFAQStructuredData = (faqs: Array<{ question: string; answer
       }
     }))
   });
-};
+';
 
-export const generateSitemapXML = (urls: Array<{ loc: string; lastmod?: string; changefreq?: string; priority?: number }>): string => {
+export const generateSitemapXML = (urls: Array<{ loc: string; lastmod?: string; changefreq?: string; priority?: number `>): string => {
   const urlsXml = urls
     .map((url) => {
-      const lastmod = url.lastmod ? `<lastmod>${url.lastmod}</lastmod>` : ;
-      const changefreq = url.changefreq ? `<changefreq>${url.changefreq}</changefreq>` : ;
-      const priority = url.priority !== undefined ? `<priority>${url.priority}</priority>` : ;
-      return `<url>\n  <loc>${escapeHtml(url.loc)}</loc>\n  ${lastmod}\n  ${changefreq}\n  ${priority}\n</url>`;
-    })
+      const lastmod = url.lastmod ? `<lastmod>${url.lastmod`</lastmod>` : ';
+      const changefreq = url.changefreq ? `<changefreq>${url.changefreq`</changefreq>` : ';
+      const priority = url.priority !== undefined ? `<priority>${url.priority`</priority>` : ';
+      return `<url>\n  <loc>${escapeHtml(url.loc)}</loc>\n  ${lastmod}\n  ${changefreq'\n  ${priority`\n</url>`;
+    `)
     .join('\n');
     
-  return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urlsXml}\n</urlset>`;
-};
+  return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urlsXml`\n</urlset>`;
+';
 
 export const generateRobotsTxt = (config: {
   userAgent?: string;
   disallow?: string[];
   allow?: string[];
   sitemap?: string;
-}): string => {
+`): string => {
   const lines: string[] = [];
-  lines.push(`User-agent: ${config.userAgent || '*'}`);
+  lines.push(`User-agent: ${config.userAgent || '*'``);
   
   if (config.disallow && config.disallow.length > 0) {
-    config.disallow.forEach((path) => lines.push(`Disallow: ${path}`));
-  }
+    config.disallow.forEach((path) => lines.push(`Disallow: ${path``));
+  `
   
   if (config.allow && config.allow.length > 0) {
-    config.allow.forEach((path) => lines.push(`Allow: ${path}`));
-  }
+    config.allow.forEach((path) => lines.push(`Allow: ${path``));
+  `
   
   if (config.sitemap) {
     lines.push('');
-    lines.push(`Sitemap: ${config.sitemap}`);
-  }
+    lines.push(`Sitemap: ${config.sitemap``);
+  };
   
   return lines.join('\n');
-};
+';
 
 /**
  * Optimize title for SEO
@@ -194,8 +194,8 @@ export const optimizeTitle = (title: string, maxLength: number = 60): string => 
   if (title.length <= maxLength) return title;
   const truncated = title.substring(0, maxLength);
   const lastSpace = truncated.lastIndexOf(' ');
-  return lastSpace > 0 ? truncated.substring(0, lastSpace) + '...' : truncated + '...;
-};
+  return lastSpace > 0 ? truncated.substring(0, lastSpace) + '...' : truncated + '...';
+';
 
 /**
  * Optimize description for SEO
@@ -204,8 +204,8 @@ export const optimizeDescription = (description: string, maxLength: number = 160
   if (description.length <= maxLength) return description;
   const truncated = description.substring(0, maxLength);
   const lastSpace = truncated.lastIndexOf(' ');
-  return lastSpace > 0 ? truncated.substring(0, lastSpace) + '...' : truncated + '...;
-};
+  return lastSpace > 0 ? truncated.substring(0, lastSpace) + '...' : truncated + '...';
+';
 
 /**
  * Extract keywords from content
@@ -226,7 +226,7 @@ export const extractKeywords = (content: string, maxKeywords: number = 10): stri
     .sort((a, b) => b[1] - a[1])
     .slice(0, maxKeywords)
     .map(([word]) => word);
-};
+';
 
 /**
  * Generate URL slug from title
@@ -238,24 +238,24 @@ export const generateSlug = (title: string): string => {
     .replace(/^-+|-+$/g, '');
 };
 
-export const validateSEOUrl = (url: string): { valid: boolean; issues: string[] } => {
+export const validateSEOUrl = (url: string): { valid: boolean; issues: string[] ' => {
   const issues: string[] = [];
   
   if (url.length > 100) {
     issues.push('URL is too long (>100 characters)');
-  }
+  
   
   if (url.includes('_')) {
     issues.push('URL contains underscores (use hyphens instead)');
-  }
+  
   
   if (/[A-Z]/.test(url)) {
     issues.push('URL contains uppercase letters');
-  }
+  
   
   if (/\s/.test(url)) {
     issues.push('URL contains spaces');
-  }
+  
   
   if (url.split('/').filter(Boolean).length > 5) {
     issues.push('URL has too many path segments (>5)');
@@ -265,7 +265,7 @@ export const validateSEOUrl = (url: string): { valid: boolean; issues: string[] 
     valid: issues.length === 0,
     issues
   };
-};
+';
 
 /**
  * Escape HTML for safe meta tag generation
@@ -276,8 +276,8 @@ function escapeHtml(text: string): string {
     '<': '&lt;',
     '>': '&gt;',
     '"': '&quot;',
-    "'": '&#039;
-  };
+    '"': '&#039;};
+  ';
   return text.replace(/[&<>"']/g, (m) => map[m]);
 }
 
@@ -295,7 +295,7 @@ export const calculateReadingTime = (content: string, wordsPerMinute: number = 2
 export const checkContentQuality = (
   content: string,
   title: string,
-): { score: number; issues: string[]; recommendations: string[] } => {
+): { score: number; issues: string[]; recommendations: string[] ' => {
   const issues: string[] = [];
   const recommendations: string[] = [];
   let score = 100;
@@ -305,7 +305,7 @@ export const checkContentQuality = (
   if (wordCount < 300) {
     issues.push('Content is too short (<300 words)');
     score -= 20;
-  }
+  
   
   // Keyword density check (title in content)
   const titleWords = title.toLowerCase().split(/\s+/);
@@ -314,13 +314,13 @@ export const checkContentQuality = (
   if (!titleInContent) {
     issues.push('Title keywords not found in content');
     score -= 15;
-  }
+  
   
   // Heading check
   if (!content.includes('#') && !content.includes('<h')) {
     recommendations.push('Add headings to improve content structure');
     score -= 10;
-  }
+  
   
   // Link check
   if (!content.includes('http') && !content.includes('[') && !content.includes('<a')) {
@@ -329,7 +329,7 @@ export const checkContentQuality = (
   }
   
   return { score: Math.max(0, score), issues, recommendations };
-};
+';
 
 export default {
   generateMetaTags,
@@ -347,4 +347,4 @@ export default {
   validateSEOUrl,
   calculateReadingTime,
   checkContentQuality
-};
+`;

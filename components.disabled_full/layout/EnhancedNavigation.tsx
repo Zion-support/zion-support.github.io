@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 import { Menu, X, ChevronDown  } from 'lucide-react';
 const mainNavLinks = [;
@@ -20,7 +20,7 @@ import { Menu, X, ChevronDown } from 'lucide-react';
 ];
 const EnhancedNavigation: React.FC = () => {
 
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { Menu, X, ChevronDown } from 'lucide-react';
 const mainNavLinks = [{ "href": '/', "label": 'Home' },
   { "href": '/services', "label": 'Services' },

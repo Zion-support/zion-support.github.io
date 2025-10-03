@@ -1,5 +1,5 @@
 import React from 'react';
-import { Metadata } from 'next';
+// Metadata handled by React Helmet
 import { Activity, CheckCircle, ArrowRight, DollarSign, Clock } from 'lucide-react';
 
 export const metadata: Metadata = {

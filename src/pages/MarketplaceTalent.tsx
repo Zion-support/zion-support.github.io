@@ -9,4 +9,4 @@ const MarketplaceTalent: React.FC = () => {
   );
 };
 
-export default MarketplaceTalent;
+export default Component;

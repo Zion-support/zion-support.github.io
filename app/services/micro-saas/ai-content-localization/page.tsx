@@ -1,6 +1,6 @@
 "use client"
 import React from 'react';
-import { Metadata } from 'next';
+// Metadata handled by React Helmet
 import { Globe, CheckCircle, Languages, FileText, BarChart3, Phone, Mail, MapPin } from 'lucide-react';
 
 export const metadata: Metadata = {

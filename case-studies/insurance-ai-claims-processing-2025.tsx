@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'Insurance AI Claims Processing: 98% Accuracy, 10x Faster | Zion Tech Group Case Study',

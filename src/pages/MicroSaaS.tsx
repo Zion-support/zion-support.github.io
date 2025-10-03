@@ -1,5 +1,5 @@
-import React from 'react;
-import { Helmet } from 'react-helmet-async;
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 const MicroSaaS: React.FC = () => {
   const products = [
     {
@@ -50,5 +50,5 @@ const MicroSaaS: React.FC = () => {
   );
 };
 
-export default MicroSaaS;
+export default Component;
 ;

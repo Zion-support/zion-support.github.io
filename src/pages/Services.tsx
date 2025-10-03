@@ -1,5 +1,5 @@
-import React from 'react;
-import { Helmet } from 'react-helmet-async;
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import ComprehensiveServices from './ComprehensiveServices;
 ;
 const Services: React.FC = () => {
@@ -7,7 +7,7 @@ const Services: React.FC = () => {
     <>
       <Helmet >
         <title >Services - Zion Tech Group | AI & IT Solutions</title>
-        <meta name: "description
+        <meta name="description
   content: ", Explore our comprehensive AI and IT services including workflow automation, virtual assistants, data analytics, and cybersecurity solutions.",
         />
       </Helmet>
@@ -16,4 +16,4 @@ const Services: React.FC = () => {
   );
 };
 
-export default Services;
+export default Component;

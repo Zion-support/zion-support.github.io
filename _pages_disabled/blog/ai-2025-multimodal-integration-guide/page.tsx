@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'AI Multimodal Integration Guide 2025: Text, Voice & Video AI Revolution',

@@ -1,6 +1,6 @@
-import React from 'react;
-import { Link } from 'react-router-dom;
-import { Helmet } from 'react-helmet-async;
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 const StartupSolutionsPage: React.FC = () => {
   const startupSolutions = [
     {
@@ -78,7 +78,7 @@ const StartupSolutionsPage: React.FC = () => {
                   
                   <Link 
                     to="/contact" 
-                    className="text-orange-600 font-semibold hover:text-orange-800 transition-colors"
+                    className="text-orange-600 font-semibold hover:text-orange-800 transition-colors
                   >
                     Learn More →
                   </Link>
@@ -217,14 +217,14 @@ const StartupSolutionsPage: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                to="/contact"
-                className="bg-white text-orange-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                to="/contact
+                className="bg-white text-orange-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors
               >
                 Start Your Journey
               </Link>
               <Link
-                to="/pricing"
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-orange-600 transition-colors"
+                to="/pricing
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-orange-600 transition-colors
               >
                 View Pricing
               </Link>
@@ -236,4 +236,4 @@ const StartupSolutionsPage: React.FC = () => {
   );
 };
 
-export default StartupSolutionsPage;
+export default Component;

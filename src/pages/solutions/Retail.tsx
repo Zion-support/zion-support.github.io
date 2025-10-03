@@ -1,4 +1,4 @@
-import React from 'react;
+import React from 'react';
 const Retail: React.FC = () => {
   return (
     <div className="container mx-auto px-6 py-12">
@@ -6,6 +6,6 @@ const Retail: React.FC = () => {
       <p className="text-gray-700 max-w-3xl">Next-gen demand forecasting, personalization, and autonomous operations for retail and e-commerce. Placeholder content to satisfy navigation; expand with case studies and features.</p>
     </div>
   );
-};
+';
 
-export default Retail;
+export default Component;

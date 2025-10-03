@@ -175,7 +175,7 @@ export class CSRFProtection {
  * Security audit logging
  */
 export class SecurityLogger {
-    private static logLevel: 'info' | 'warn' | 'error' = 'warn';
+  private static logLevel: 'info' | 'warn' | 'error' = 'warn';
   static setLogLevel(level: 'info' | 'warn' | 'error'): void {
     this.logLevel = level;
   }
@@ -183,7 +183,7 @@ export class SecurityLogger {
   static logSecurityEvent(
     event: string,
     details: Record<string, any>,
-    level: 'info' | 'warn' | 'error' = 'warn'
+    level: 'info' | 'warn' | 'error' = 'warn
   ): void {
     if (level === 'error' || (level === 'warn' && this.logLevel !== 'error')) {
       const logEntry = {

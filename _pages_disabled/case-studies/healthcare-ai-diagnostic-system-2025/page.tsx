@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'Case Study: Healthcare AI Diagnostic System Saves 12,000+ Lives | Zion Tech Group',

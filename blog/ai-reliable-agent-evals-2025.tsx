@@ -118,7 +118,7 @@ export default function ReliableAgentEvals2025() {
 }
 
 
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'Reliable Agent Evals 2025: Measure and Guardrail Autonomy',

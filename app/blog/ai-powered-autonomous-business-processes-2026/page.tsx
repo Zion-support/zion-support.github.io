@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Clock, User, Tag, Share2, BookOpen, CheckCircle, TrendingUp, Brain, Zap } from 'lucide-react';
-import { Metadata } from 'next';
+// Metadata handled by React Helmet
 
 export const metadata: Metadata = {
   title: 'AI-Powered Autonomous Business Processes: The 2026 Revolution | Zion Tech Group',

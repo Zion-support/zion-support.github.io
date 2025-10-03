@@ -9,20 +9,20 @@ export const preloadCriticalResources = () => {
   const criticalResources = [
     '/fonts/inter-var.woff2',
     '/images/hero-bg.webp',
-    '/images/logo.svg'
+    '/images/logo.svg
   ];
 
   criticalResources.forEach(resource => {
     const link = document.createElement('link');
-    link.rel = 'preload;
+    link.rel = 'preload';
     link.href = resource;
-    link.as = resource.endsWith('.woff2') ? 'font' : 'image;
+    link.as = resource.endsWith('.woff2') ? 'font' : 'image';
     if (resource.endsWith('.woff2')) {
-      link.crossOrigin = 'anonymous;
+      link.crossOrigin = 'anonymous';
     }
     document.head.appendChild(link);
   });
-};
+';
 
 // Optimize images with lazy loading
 export const optimizeImages = () => {
@@ -33,7 +33,7 @@ export const optimizeImages = () => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         const img = entry.target as HTMLImageElement;
-        img.src = img.dataset.src || ;
+        img.src = img.dataset.src || '';
         img.classList.remove('lazy');
         imageObserver.unobserve(img);
       }
@@ -107,17 +107,17 @@ export const performanceMonitor = {
     if (typeof window !== 'undefined' && 'performance' in window) {
       performance.mark(name);
     }
-  },
+  ',
 
   measure: (name: string, startMark: string, endMark?: string) => {
     if (typeof window !== 'undefined' && 'performance' in window) {
       try {
         performance.measure(name, startMark, endMark);
       } catch (error) {
-        console.warn(`Performance measure failed for ${name}:`, error);
+        console.warn(`Performance measure failed for ${name`:`, error);
       }
     }
-  },
+  ',
 
   getEntries: (type?: string) => {
     if (typeof window !== 'undefined' && 'performance' in window) {
@@ -134,32 +134,32 @@ export const bundleOptimizations = {
     try {
       const module = await importFn();
       return module.default || module;
-    } catch (error) {
+    ' catch (error) {
       console.error('Failed to load component:', error);
       return null;
     }
-  },
+  ',
 
   // Prefetch resources
   prefetch: (url: string) => {
     if (typeof window === 'undefined') return;
     
     const link = document.createElement('link');
-    link.rel = 'prefetch;
+    link.rel = 'prefetch';
     link.href = url;
     document.head.appendChild(link);
-  },
+  ',
 
   // Preconnect to external domains
   preconnect: (url: string) => {
     if (typeof window === 'undefined') return;
     
     const link = document.createElement('link');
-    link.rel = 'preconnect;
+    link.rel = 'preconnect';
     link.href = url;
     document.head.appendChild(link);
   }
-};
+';
 
 // Initialize performance optimizations
 export const initializePerformanceOptimizations = () => {
@@ -173,4 +173,4 @@ export const initializePerformanceOptimizations = () => {
 
   // Mark initial load
   performanceMonitor.mark('app-initialized');
-};
+`;
