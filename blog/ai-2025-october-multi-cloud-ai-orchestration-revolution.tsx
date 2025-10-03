@@ -1,7 +1,7 @@
 export default {
-  slug: "ai-2025-october-multi-cloud-ai-orchestration-revolution",
-  title: "Multi-Cloud AI Orchestration 2025: Seamless Intelligence Across AWS, Azure, GCP",
-  description: "Master multi-cloud AI orchestration achieving 99.98% uptime, 76% cost reduction, and seamless workload distribution across AWS, Azure, and GCP. Deploy AI anywhere without vendor lock-in.",
+  slug: "ai-2025-october-multi-cloud-ai-orchestration-revolution
+  title: "Multi-Cloud AI Orchestration 2025: Seamless Intelligence Across AWS, Azure, GCP
+  description: "Master multi-cloud AI orchestration achieving 99.98% uptime, 76% cost reduction, and seamless workload distribution across AWS, Azure, and GCP. Deploy AI anywhere without vendor lock-in.
   content: `
 # Multi-Cloud AI Orchestration 2025: Seamless Intelligence Across AWS, Azure, GCP
 
@@ -320,11 +320,11 @@ Ready to break free from vendor lock-in and optimize your AI infrastructure acro
 
 We pioneer multi-cloud AI orchestration platforms that deliver superior performance, cost efficiency, and reliability. Our solutions power enterprise AI for global organizations, achieving measurable business value through intelligent cloud orchestration.
 `,
-  author: "Zion Tech Group Cloud Architecture Team",
-  date: "2025-10-01",
-  category: "Cloud Infrastructure",
+  author: "Zion Tech Group Cloud Architecture Team
+  date: "2025-10-01
+  category: "Cloud Infrastructure
   tags: ["Multi-Cloud", "AI Orchestration", "Cloud Optimization", "AWS", "Azure", "GCP"],
   featured: true,
-  readTime: "14 min read",
+  readTime: "14 min read
   image: "/images/multi-cloud-ai-orchestration-2025.jpg"
 };

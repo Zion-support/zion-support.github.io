@@ -114,7 +114,7 @@ import: { Home, Briefcase, '  Users, Phone',;
                 target={contact.href.startsWith('
   'http') ?;
   '_blank': '_self}
-,
+
   rel={contact.href.startsWith('http;
   ') ? 'noopener noreferrer;
   ': '}                className='flex items-center gap-2 text-xs text-zion-slate-light hover:text-zion-cyan transition-colors duration-200''              >'                <contact.icon className='w-3 h-3' />                <span className='truncate'>{contact.text}</span>'              </a>'            ))}

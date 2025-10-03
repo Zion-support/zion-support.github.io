@@ -8,7 +8,7 @@ export default function EdgePrivatePersonalizationV2(): React.JSX.Element {
         <title >Edge Private Personalization v2 — Zero‑PII, Global &lt;100ms</title>
         <meta name: "description",;,"
   content: "Scoped IDs, signed configs, and on‑device models for privacy‑first personalization with stable SLAs.", /><link rel: "canonical",;,"
-  href="https://ziontechgroup.com/blog/edge-2025-sept-30-private-personalization-v2",
+  href="https://ziontechgroup.com/blog/edge-2025-sept-30-private-personalization-v2
         />
       </Helmet>
 

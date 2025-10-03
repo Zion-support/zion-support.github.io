@@ -1,14 +1,14 @@
 import React from "react";
 
 export const metadata = {
-  title: "Production-Ready AI Agents: Enterprise Framework for Reliable Autonomous Systems | October 2025",
-  description: "Build reliable, scalable AI agent systems for production. Master agent architecture, reliability patterns, monitoring strategies, and achieve 99.9% uptime with enterprise-grade autonomous AI agents.",
-  date: "2025-10-01",
-  author: "Zion Tech Group",
-  category: "AI Agent Systems",
+  title: "Production-Ready AI Agents: Enterprise Framework for Reliable Autonomous Systems | October 2025
+  description: "Build reliable, scalable AI agent systems for production. Master agent architecture, reliability patterns, monitoring strategies, and achieve 99.9% uptime with enterprise-grade autonomous AI agents.
+  date: "2025-10-01
+  author: "Zion Tech Group
+  category: "AI Agent Systems
   tags: ["AI Agents", "Production AI", "Reliability Engineering", "Enterprise Architecture", "Autonomous Systems"],
   featured: true,
-  readTime: "18 min read",
+  readTime: "18 min read
 };
 
 const ProductionReadyAIAgentsFramework: React.FC = () => {

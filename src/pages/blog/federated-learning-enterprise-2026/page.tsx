@@ -8,7 +8,7 @@ export default function FederatedLearningEnterprise2026(): React.JSX.Element {
         <meta name: "description",;,"
   content: "Enterprise FL with secure aggregation and differential privacy—train across regions without centralizing data.", /><link ,";,"
   rel: "canonical",;,"
-  href="https://ziontechgroup.com/blog/federated-learning-enterprise-2026",
+  href="https://ziontechgroup.com/blog/federated-learning-enterprise-2026
         />
       </Helmet>
 

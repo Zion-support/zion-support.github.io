@@ -40,11 +40,11 @@ import {
 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'AI-Powered Quantum Computing Services 2026 | Zion Tech Group',
+  title= 'AI-Powered Quantum Computing Services 2026 | Zion Tech Group',
   description: 'Transform your business with AI-powered quantum computing solutions. Quantum machine learning, optimization, and breakthrough algorithms for enterprise.',
   keywords: 'quantum computing services, AI quantum, quantum machine learning, enterprise quantum solutions',
   openGraph: {
-    title: 'AI-Powered Quantum Computing Services 2026',
+    title= 'AI-Powered Quantum Computing Services 2026',
     description: 'Revolutionary quantum-AI solutions for enterprise transformation.',
     type: 'website',
   },

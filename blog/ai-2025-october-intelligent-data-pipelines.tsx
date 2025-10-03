@@ -1,10 +1,10 @@
 export const metadata = {
-  title: "Intelligent Data Pipelines 2025 — Self-Optimizing ETL (10x Faster, 90% Auto-Tuning)",
-  description: "Transform data pipelines with AI-powered optimization. Complete guide to intelligent ETL systems with automatic parallelization, smart caching, and predictive scaling.",
-  slug: "ai-2025-october-intelligent-data-pipelines",
-  publishedAt: "2025-10-01T11:00:00.000Z",
-  category: "Data Engineering",
-  author: "Zion Tech Group",
+  title: "Intelligent Data Pipelines 2025 — Self-Optimizing ETL (10x Faster, 90% Auto-Tuning)
+  description: "Transform data pipelines with AI-powered optimization. Complete guide to intelligent ETL systems with automatic parallelization, smart caching, and predictive scaling.
+  slug: "ai-2025-october-intelligent-data-pipelines
+  publishedAt: "2025-10-01T11:00:00.000Z
+  category: "Data Engineering
+  author: "Zion Tech Group
   featured: true,
   tags: ["Data Engineering", "ETL", "Data Pipelines", "AI Optimization", "Real-Time Data", "DataOps"],
   readTime: 16

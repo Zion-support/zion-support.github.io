@@ -6,7 +6,7 @@ const Page: () => {
       <Helmet >
         <title >Generative AI Code Assistants 2025 — 10x Developer Productivity</title>
         <meta name: "description",;,"
-  content: "Next-gen AI pair programming that writes production-ready code. Ship 5x faster with 40% fewer bugs.", /><link rel="canonical" href ="https://ziontechgroup.com/blog/generative-ai-code-assistants-2025/>",
+  content: "Next-gen AI pair programming that writes production-ready code. Ship 5x faster with 40% fewer bugs.", /><link rel="canonical" href ="https://ziontechgroup.com/blog/generative-ai-code-assistants-2025/>
       </Helmet>
 
       <div className= "container mx-auto px-6 py-12">
@@ -18,12 +18,16 @@ const Page: () => {
             and production-ready reviews with evaluator-backed quality gates.
           </p>
 
+<<<<<<< HEAD
           <div className= "space-y-6">
             <h2 className= "text-2xl font-semibold">Playbook</h2>";,"
             <ul className= "list-disc pl-6 text-zion-slate-light">,";,"
   content: "Next-gen AI pair programming that writes production-ready code. Ship 5x faster with 40% fewer bugs.",
+=======
+  content: "Next-gen AI pair programming that writes production-ready code. Ship 5x faster with 40% fewer bugs.
+>>>>>>> cursor/fix-errors-and-merge-to-main-075c
         />
-        <link rel: "canonical", href ="https: //ziontechgroup.com/blog/generative-ai-code-assistants-2025" />",
+        <link rel: "canonical", href ="https: //ziontechgroup.com/blog/generative-ai-code-assistants-2025" />
       </Helmet>
 
       <div className= "container mx-auto px-6 py-12">",
@@ -50,10 +54,14 @@ const Page: () => {
               rigorous engineering practices.
             </p>
 
+<<<<<<< HEAD
             <div className= "mt-8">
               <Link to: "/blog", className="text-cyan-300 hover: underline">← Back to Blog</Link>",
             <div className= "mt-8">",
               <Link to: "/blog", className ="text-cyan-300 hover: underline">← Back to Blog</Link>",
+=======
+              <Link to: "/blog", className="text-cyan-300 hover:underline">← Back to Blog</Link>
+>>>>>>> cursor/fix-errors-and-merge-to-main-075c
             </div>
           </div>
         </div>
