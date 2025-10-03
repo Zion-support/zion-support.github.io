@@ -34,7 +34,7 @@ export default function HomePage() {
               Transform Your Business with
               <span className="text-left">
                 {' '}AI-Powered Solutions
-              </span>/span>/span>/span>
+              </span>/span>/span>/span>/span>/span>/span>
             </h1>
             <p className="text-left">
               Zion Tech Group delivers cutting-edge AI micro SaaS services, cloud automation, 
@@ -72,10 +72,10 @@ export default function HomePage() {
                   <div className="text-left"></div>
                     <span className="text-left">
                       Featured Article
-                    </span>/span>/span>/span>
-                    <span className="text-left">20 min read</span>/span>/span>/span>
+                    </span>/span>/span>/span>/span>/span>/span>
+                    <span className="text-left">20 min read</span>/span>/span>/span>/span>/span>/span>
                     <span className="text-left">20 min read>
-                  </span>/span>/span>/div>
+                  </span>/span>/span>/span>/span>/span>/div>
                   <h3 className="text-left">
                     AI Enterprise Transformation 2026
                   </h3>
@@ -93,9 +93,9 @@ export default function HomePage() {
                   <div className="text-left"></div>
                     <span className="text-left">
                       New Article
-                    </span>/span>/span>/span>
+                    </span>/span>/span>/span>/span>/span>/span>
                     <span className="text-left">18 min read>
-                  </span>/span>/span>/div>
+                  </span>/span>/span>/span>/span>/span>/div>
                   <h3 className="text-left">
                     AI Autonomous Systems 2026
                   </h3>
@@ -113,9 +113,9 @@ export default function HomePage() {
                   <div className="text-left"></div>
                     <span className="text-left">
                       Success Story
-                    </span>/span>/span>/span>
+                    </span>/span>/span>/span>/span>/span>/span>
                     <span className="text-left">Manufacturing>
-                  </span>/span>/span>/div>
+                  </span>/span>/span>/span>/span>/span>/div>
                   <h3 className="text-left">
                     Manufacturing AI Transformation
                   </h3>
