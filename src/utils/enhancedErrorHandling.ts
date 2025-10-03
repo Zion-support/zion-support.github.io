@@ -28,6 +28,7 @@ export interface ErrorReport {
 class EnhancedErrorHandler {
   private errors: ErrorInfo[] = [];
   private maxErrors = 100;
+  private initialized = false;
 
   constructor() {
     this.initialize();
@@ -62,7 +63,7 @@ class EnhancedErrorHandler {
       });
     });
 
-    this.isInitialized = true;
+    this.initialized = true;
   }
 
   private determineSeverity(error: any): 'low' | 'medium' | 'high' | 'critical' {
