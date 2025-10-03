@@ -48,6 +48,9 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
   if (!isVisible) return null;
 
   return (
+    <div className="performance-monitor">
+      <div className="monitor-content">
+        {/* Performance monitoring content */}
       </div>
     </div>
   );

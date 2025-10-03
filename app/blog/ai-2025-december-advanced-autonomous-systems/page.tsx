@@ -10,14 +10,14 @@ export const metadata: Metadata = {
 
 export default function December2025AdvancedAutonomousSystems() {
   return (
-    <div className="min-h-screen bg-slate-950">"
-      <article className="max-w-4xl mx-auto px-6 py-12">"
-        <header className="mb-12">"
-          <div className="flex items-center gap-3 mb-6">"
-            <span className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-4 py-2 rounded-full text-sm font-bold">"
+    <div className="min-h-screen bg-slate-950">
+      <article className="max-w-4xl mx-auto px-6 py-12">
+        <header className="mb-12">
+          <div className="flex items-center gap-3 mb-6">
+            <span className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-4 py-2 rounded-full text-sm font-bold">
               🚀 DECEMBER 2025
             </span>
-            <span className="bg-gradient-to-r from-purple-400 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-bold">"
+            <span className="bg-gradient-to-r from-purple-400 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-bold">
               AUTONOMOUS SYSTEMS
             </span>
           </div>
