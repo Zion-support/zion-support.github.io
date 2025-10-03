@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
-import Header from "../../components/Header";
+import Header from "../../../components/Header";
 import { Helmet } from "react-helmet-async";
-import { ArrowLeft, TrendingUp, Brain, BarChart3, CheckCircle, DollarSign, Rocket, Zap } from "lucide-react";
+import { ArrowLeft, Brain, CheckCircle, Zap, TrendingUp, DollarSign, Rocket } from "lucide-react";
 
-const RealTimeCognitiveAutomation: () => {
+const RealTimeCognitiveAutomation = () => {
   return (
     <>
       <Helmet>
