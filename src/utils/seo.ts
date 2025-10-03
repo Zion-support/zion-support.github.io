@@ -76,7 +76,7 @@ export const generateStructuredData = (data: {
 export const generateSitemapEntry = (url: string, lastmod?: string, changefreq?: string, priority?: string) => {
   return {
     url,
-    lastmod: lastmod || new Date().toISOString(),
+    lastmod: lastmod || new Date().toISOString().split('T')[0],
     changefreq: changefreq || 'weekly',
     priority: priority || '0.5',
   };
