@@ -51,10 +51,10 @@ class EnhancedPerformanceMonitor {
               this.processNavigationTiming(entry as PerformanceNavigationTiming);
             }
           });
-        ');
+        });
         navObserver.observe({ entryTypes: ['navigation'] });
         this.observers.push(navObserver);
-      ' catch (error) {
+      } catch (error) {
         console.warn('Navigation timing observer failed:', error);
       }
     }
@@ -90,14 +90,14 @@ class EnhancedPerformanceMonitor {
       timeToInteractive: 3800,
       totalBlockingTime: 200,
       speedIndex: 3000
-    ';
+    };
 
     Object.entries(thresholds).forEach(([key, threshold]) => {
       const value = metrics[key as keyof PerformanceMetrics];
       if (typeof value === 'number' && value > threshold) {
         this.addAlert({
           type: value > threshold * 1.5 ? 'error' : 'warning',
-          message: `${key} exceeded threshold: ${value}ms > ${threshold`ms`,
+          message: `${key} exceeded threshold: ${value}ms > ${threshold}ms`,
           metric: key as keyof PerformanceMetrics,
           value,
           threshold,

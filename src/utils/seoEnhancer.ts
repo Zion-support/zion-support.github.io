@@ -77,7 +77,7 @@ export const extractKeywords = (content: string, maxKeywords: number = 20): stri
     'the', 'a', 'an', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'for',
     'of', 'with', 'by', 'from', 'as', 'is', 'was', 'are', 'were', 'been',
     'be', 'have', 'has', 'had', 'do', 'does', 'did', 'will', 'would', 'could',
-    'should', 'may', 'might', 'must', 'can', 'this', 'that', 'these', 'those
+    'should', 'may', 'might', 'must', 'can', 'this', 'that', 'these', 'those'
   ]);
   
   const words = text

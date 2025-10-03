@@ -14,7 +14,7 @@ export const waitFor = async (
     await new Promise(resolve => setTimeout(resolve, 100));
   }
   if (!condition()) {
-    throw new Error(`Timeout waiting for condition after ${timeout`ms`);
+    throw new Error(`Timeout waiting for condition after ${timeout}ms`);
   }
 };
 
@@ -49,7 +49,7 @@ export const simulateClick = (element: Element): void => {
     view: window,
   });
   element.dispatchEvent(event);
-';
+};
 
 /**
  * Simulate user input
@@ -76,7 +76,7 @@ export const mockFetch = (response: any, status = 200): void => {
  * Mock localStorage
  */
 export const mockLocalStorage = (): void => {
-  const store: { [key: string]: string } = {';
+  const store: { [key: string]: string } = {};
   
   Object.defineProperty(window, 'localStorage', {
     value: {

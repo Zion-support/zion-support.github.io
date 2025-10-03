@@ -15,10 +15,10 @@ export const usePerformanceMonitor = (componentName: string) => {
       const totalTime = unmountTime - mountTime.current;
       
       if (import.meta.env.DEV) {
-        console.log(`[Performance] ${componentName`:`, {
+        console.log(`[Performance] ${componentName}:`, {
           renderCount: renderCount.current,
-          totalTime: `${totalTime`ms`,
-          avgRenderTime: `${totalTime / renderCount.current`ms`
+          totalTime: `${totalTime}ms`,
+          avgRenderTime: `${totalTime / renderCount.current}ms`
         });
       }
     };
@@ -249,18 +249,18 @@ export const useComponentLifecycle = (componentName: string) => {
   useEffect(() => {
     renderStartTime.current = performance.now();
     markRender();
-  `);
+  };
 
   useEffect(() => {
     const renderTime = performance.now() - renderStartTime.current;
     
     if (import.meta.env.DEV && renderTime > 16) {
-      console.warn(`[Performance] ${componentName} render took ${renderTime.toFixed(2)`ms (target: <16ms)`);
+      console.warn(`[Performance] ${componentName} render took ${renderTime.toFixed(2)}ms (target: <16ms)`);
     }
   });
 
   return {
     markRender,
     renderStartTime: renderStartTime.current
-  ';
-`;
+  };
+};
