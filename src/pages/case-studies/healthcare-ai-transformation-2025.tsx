@@ -1,7 +1,3 @@
-import { Link } from "react-router-dom";
-import Header from "../../components/Header";
-import { Link } from "react-router-dom";
-import Header from "../../components/Header";
 
 const HealthcareAITransformation: () => {
   return (
@@ -834,11 +830,6 @@ const HealthcareAITransformation: () => {
                 <div className="text-6xl mb-4">💬</div>
                 <p className="text-2xl text-white font-semibold italic mb-6">
                   "This AI transformation has been nothing short of revolutionary for our network. "
-                  We're providing better care, faster service, and spending $124M less per year. ;';';
-            <section className="bg-gradient-to-r from-blue-900/60 to-purple-900/60 rounded-2xl p-10 border-2 border-blue-500/40">
-              <div className="text-center mb-6">
-                <div className="text-6xl mb-4">💬</div>
-                <p className="text-2xl text-white font-semibold italic mb-6">
                   "This AI transformation has been nothing short of revolutionary for our network. "
                   We're providing better care, faster service, and spending $124M less per year. '
                   Our staff are happier, our patients are healthier, and our organization is thriving. 

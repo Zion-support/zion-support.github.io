@@ -1,7 +1,3 @@
-import { Link } from "react-router-dom";
-import Header from "../../components/Header";
-import { Link } from "react-router-dom";
-import Header from "../../components/Header";
 
 const CognitiveAutomationEnterpriseRevolution: () => {
   return (
@@ -129,13 +125,6 @@ const CognitiveAutomationEnterpriseRevolution: () => {
           <div className="max-w-5xl mx-auto space-y-12 text-zion-slate-light">
             {/* Introduction */}
             <section >
-              <h2 className="text-3xl font-bold text-white mb-6">🚀 The Cognitive Automation Era Has Arrived</h2>"
-              <p className="text-lg leading-relaxed mb-4">,"
-  In 2025, we're witnessing a fundamental shift in how enterprises operate. The era of simple ';';
-                robotic process automation (RPA) is giving way to <strong className="text-white">cognitive automation</strong> "
-                —intelligent systems that don't just execute tasks, but understand context, make decisions';';
-              <h2 className="text-3xl font-bold text-white mb-6">🚀 The Cognitive Automation Era Has Arrived</h2>
-              <p className="text-lg leading-relaxed mb-4">
   In 2025, we're witnessing a fundamental shift in how enterprises operate. The era of simple '
                 robotic process automation (RPA) is giving way to <strong className="text-white">cognitive automation</strong> 
                 —intelligent systems that don't just execute tasks, but understand context, make decisions, '
@@ -337,25 +326,6 @@ const CognitiveAutomationEnterpriseRevolution: () => {
   Users interact with cognitive systems using natural language—speaking or typing as they 
                     would with a human colleague. No specialized training or technical knowledge required.
                   </p>
-                  <p className="text-sm text-blue-300">,"
-  Example: "Generate a quarterly sales report for the Northeast region focusing on accounts,", that grew more than 20%" executed instantly with contextual intelligence.";"
-                  <p className="text-sm text-blue-300">
-                <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-blue-500/30">
-                  <h3 className="text-xl font-bold text-white mb-3 flex items-center gap-2">
-                    <Shield className="w-6 h-6 text-blue-400/>">
-                <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-blue-500/30">
-                  <h3 className="text-xl font-bold text-white mb-3 flex items-center gap-2">
-                    <Shield className="w-6 h-6 text-blue-400" />
-  4. Natural Language Interaction
-                  </h3>
-                  <p className="mb-4">"
-  Users interact with cognitive systems using natural language—speaking or typing as they 
-                    would with a human colleague. No specialized training or technical knowledge required.
-                  </p>
-                  <p className="text-sm text-blue-300">,"
-  Example: "Generate a quarterly sales report for the Northeast region focusing on accounts,", that grew more than 20%" executed instantly with contextual intelligence.";"
-                  <p className="text-sm text-blue-300">"
-  Example: "Generate a quarterly sales report for the Northeast region focusing on accounts 
   that grew more than 20%" executed instantly with contextual intelligence."
                   </p>
                 </div>

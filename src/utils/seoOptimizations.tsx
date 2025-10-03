@@ -9,23 +9,6 @@ import { Helmet } from 'react-helmet-async';
 export const seoUtils = {
   // Generate structured data for organization
   generateOrganizationSchema: () => ({
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Zion Tech Group",
-    "url": "https://zion.app",
-    "logo": "https://zion.app/logo.png",
-    "description": "Advanced AI and IT Solutions for Enterprise",
-    "address": {
-      "@type": "PostalAddress",
-      "addressCountry": "US"
-    },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+1-XXX-XXX-XXXX",
-      "contactType": "customer service"
-    },
-    "sameAs": [
-      "https://twitter.com/ziontech",
       "https://linkedin.com/company/zion-tech"
     ]
   }),
@@ -74,15 +57,6 @@ export const seoUtils = {
       "@type": "Person",
       "name": article.author
     },
-    "datePublished": article.datePublished,
-    "dateModified": article.dateModified,
-    "image": article.image,
-    "url": article.url,
-    "publisher": {
-      "@type": "Organization",
-      "name": "Zion Tech Group",
-      "logo": {
-        "@type": "ImageObject",
         "url": "https://zion.app/logo.png"
       }
     }

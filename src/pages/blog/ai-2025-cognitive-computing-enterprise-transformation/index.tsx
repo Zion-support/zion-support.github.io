@@ -1,5 +1,3 @@
-import React from 'react';
-import Header from '../../../components/Header'';
 import React from 'react';'
 import Header from '../../../components/Header';'
 
@@ -383,11 +381,6 @@ const CognitiveComputingTransformation: React.FC = () => {
                       title= "Natural Language Understanding
                       icon: "💬
                       features: [,,
-                      title= "Natural Language Understanding
-                      icon: "💬
-                      features: [,,
-                        "Semantic comprehension of unstructured text",;"
-                        "Intent recognition with 98.7% accuracy",;"
                         "Multi-language support for global operations"
                       title= "Natural Language Understanding",,"
                       icon: "💬",,"
@@ -402,11 +395,6 @@ const CognitiveComputingTransformation: React.FC = () => {
                       title= "Knowledge Reasoning
                       icon: "🧠
                       features: [,,
-                      title= "Knowledge Reasoning
-                      icon: "🧠
-                      features: [,,
-                        "Inference over complex knowledge graphs",;"
-                        "Causal relationship understanding",;"
                         "Analogical reasoning for novel situations"
                       title= "Knowledge Reasoning",,"
                       icon: "🧠",,"
@@ -421,11 +409,6 @@ const CognitiveComputingTransformation: React.FC = () => {
                       title= "Continuous Learning
                       icon: "📈
                       features: [,,
-                      title= "Continuous Learning
-                      icon: "📈
-                      features: [,,
-                        "Adaptive models that improve over time",;"
-                        "Transfer learning across domains",;"
                         "Few-shot learning for new scenarios"
                       title= "Continuous Learning",,"
                       icon: "📈",,"
@@ -440,11 +423,6 @@ const CognitiveComputingTransformation: React.FC = () => {
                       title= "Explainable Intelligence
                       icon: "🔍
                       features: [,,
-                      title= "Explainable Intelligence
-                      icon: "🔍
-                      features: [,,
-                        "Transparent decision pathways",;"
-                        "Confidence scoring for recommendations",;"
                         "Audit trails for compliance"
                       title= "Explainable Intelligence",,"
                       icon: "🔍",,"
@@ -456,12 +434,6 @@ const CognitiveComputingTransformation: React.FC = () => {
 
                     }
                   ].map((capability, idx) => (
-                    <div key={idx} className="bg-gradient-to-br from-purple-900/30 to-blue-900/30 border border-purple-500/30 rounded-xl p-6 hover:border-purple-500/50 transition-all">
-                      <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-3">
-                        <span className="text-3xl">{capability.icon}</span>";"
-                    <div key={idx} className="bg-gradient-to-br from-purple-900/30 to-blue-900/30 border border-purple-500/30 rounded-xl p-6 hover:border-purple-500/50 transition-all">
-                      <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-3">
-                        <span className="text-3xl">{capability.icon}</span>"
                         {capability.title}
                       </h3>
                       <ul className="space-y-2">
@@ -823,13 +795,6 @@ const CognitiveComputingTransformation: React.FC = () => {
           </div>
           
           {/* CTA Section */}
-          <div className="mt-16 bg-gradient-to-r from-purple-900/50 to-pink-900/50 border border-purple-500/30 rounded-2xl p-8 text-center">
-            <h2 className="text-3xl font-bold text-white mb-4">Transform Your Enterprise with Cognitive AI</h2>"
-            <p className="text-purple-100 mb-6 max-w-2xl mx-auto">,"
-  Zion Tech Group's Cognitive Computing Platform enables rapid deployment of human-like AI intelligence. ;';';
-          <div className="mt-16 bg-gradient-to-r from-purple-900/50 to-pink-900/50 border border-purple-500/30 rounded-2xl p-8 text-center">
-            <h2 className="text-3xl font-bold text-white mb-4">Transform Your Enterprise with Cognitive AI</h2>
-            <p className="text-purple-100 mb-6 max-w-2xl mx-auto">
   Zion Tech Group's Cognitive Computing Platform enables rapid deployment of human-like AI intelligence. '
               Achieve 98.5%+ decision accuracy and $1.2B+ in annual value creation.
             </p>

@@ -39,7 +39,6 @@ class EnhancedPerformanceMonitor {
   }
 
   private initializeObservers(): void {
-    if (typeof window === 'undefined') return;
 
     // Observe navigation timing
     if ('PerformanceObserver' in window) {
@@ -162,6 +161,5 @@ class EnhancedPerformanceMonitor {
 export const enhancedPerformanceMonitor = new EnhancedPerformanceMonitor();
 
 // Auto-start monitoring in browser environment
-if (typeof window !== 'undefined') {
   enhancedPerformanceMonitor.startMonitoring();
 }

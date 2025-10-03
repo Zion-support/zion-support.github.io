@@ -178,7 +178,6 @@ export default function HyperPersonalizedCustomerExperience2025(): void {
               <h2 className="text-3xl font-bold mb-6 text-pink-300">The Experience Imperative</h2>
               <p className="text-gray-300 mb-4 leading-relaxed">"
   Customer expectations have reached unprecedented levels. 87% of customers expect companies to anticipate their 
-                needs, and 76% get frustrated when experiences aren't personalized. Yet most enterprises still deliver generic';';
                 one-size-fits-all experiences that feel robotic and irrelevant.
               </p>
               <p className="text-gray-300 mb-4 leading-relaxed">,"
@@ -205,25 +204,6 @@ export default function HyperPersonalizedCustomerExperience2025(): void {
                 <p className="text-gray-300 mb-4">,"
   AI fuses data from every touchpoint—web, mobile, call center, in-store, email, social—into unified customer 
                   profiles that capture complete behavioral history, preferences, sentiment, and context. Real-time identity 
-                  resolution links anonymous and known sessions, providing a holistic view of each customer's journey.;';';
-            <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-pink-300">The Hyper-Personalization Platform Architecture</h2>
-              <div className="bg-slate-800/50 rounded-xl p-6 mb-6 border border-pink-500/20">
-                <h3 className="text-2xl font-bold mb-4 text-rose-300">1. Unified Customer Intelligence</h3>
-                <p className="text-gray-300 mb-4">
-            <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-pink-300">The Hyper-Personalization Platform Architecture</h2>"
-              <div className="bg-slate-800/50 rounded-xl p-6 mb-6 border border-pink-500/20">
-                <h3 className="text-2xl font-bold mb-4 text-rose-300">1. Unified Customer Intelligence</h3>
-                <p className="text-gray-300 mb-4">,"
-  AI fuses data from every touchpoint—web, mobile, call center, in-store, email, social—into unified customer 
-                  profiles that capture complete behavioral history, preferences, sentiment, and context. Real-time identity 
-                  resolution links anonymous and known sessions, providing a holistic view of each customer's journey.;';';
-            <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-pink-300">The Hyper-Personalization Platform Architecture</h2>
-              <div className="bg-slate-800/50 rounded-xl p-6 mb-6 border border-pink-500/20">
-                <h3 className="text-2xl font-bold mb-4 text-rose-300">1. Unified Customer Intelligence</h3>
-                <p className="text-gray-300 mb-4">"
   AI fuses data from every touchpoint—web, mobile, call center, in-store, email, social—into unified customer 
                   profiles that capture complete behavioral history, preferences, sentiment, and context. Real-time identity 
                   resolution links anonymous and known sessions, providing a holistic view of each customer's journey.'
@@ -431,9 +411,6 @@ export default function HyperPersonalizedCustomerExperience2025(): void {
   The competitive advantage is overwhelming: 12x higher engagement, 89% lower churn, and $3.2B+ in incremental,
                 revenue. With average ROI exceeding 7x within 18 months, the business case is irrefutable. The question is not 
                 whether to deploy AI-powered personalization, but how quickly you can implement it before competitors capture 
-                your customers' hearts.;';';
-              <p className="text-gray-300 mb-4 leading-relaxed">
-              <p className="text-gray-300 mb-4 leading-relaxed">"
   The competitive advantage is overwhelming: 12x higher engagement, 89% lower churn, and $3.2B+ in incremental,
                 revenue. With average ROI exceeding 7x within 18 months, the business case is irrefutable. The question is not 
                 whether to deploy AI-powered personalization, but how quickly you can implement it before competitors capture 

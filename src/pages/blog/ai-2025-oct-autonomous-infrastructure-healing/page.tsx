@@ -350,20 +350,6 @@ export default function AutonomousInfrastructureHealing2025(): void {
               </div>
             </section>
 
-            <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-purple-300">The Reliability Advantage</h2>"
-              <p className="text-gray-300 mb-4 leading-relaxed">,"
-  Autonomous infrastructure self-healing isn't just about reducing downtime—it's about fundamentally transforming ;';';
-            <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-purple-300">The Reliability Advantage</h2>
-              <p className="text-gray-300 mb-4 leading-relaxed">
-            <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-purple-300">The Reliability Advantage</h2>"
-              <p className="text-gray-300 mb-4 leading-relaxed">,"
-  Autonomous infrastructure self-healing isn't just about reducing downtime—it's about fundamentally transforming ;';';
-            <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-purple-300">The Reliability Advantage</h2>
-              <p className="text-gray-300 mb-4 leading-relaxed">"
   Autonomous infrastructure self-healing isn't just about reducing downtime—it's about fundamentally transforming '
                 how organizations operate. Teams shift from reactive firefighting to proactive system improvement. Engineers focus 
                 on building features instead of managing incidents. Organizations achieve reliability at scale that was previously 
