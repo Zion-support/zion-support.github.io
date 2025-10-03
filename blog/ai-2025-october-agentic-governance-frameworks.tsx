@@ -1,4 +1,4 @@
-// import React from 'react';
+import React from 'react';
 
 export const metadata = {
   title: 'Agentic Governance Frameworks 2025 — Building Trust in Autonomous AI Systems',

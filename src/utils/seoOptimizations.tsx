@@ -3,7 +3,6 @@
  * Comprehensive SEO enhancements for the Zion website
  */
 
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 // Meta tags utilities

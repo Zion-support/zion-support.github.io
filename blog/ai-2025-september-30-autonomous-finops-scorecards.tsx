@@ -1,4 +1,4 @@
-// import React from 'react';
+import React from 'react';
 
 export const metadata = {
   title: 'September 30, 2025: Autonomous FinOps Scorecards — Prevent Cost Regressions',

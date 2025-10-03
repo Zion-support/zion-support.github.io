@@ -1,4 +1,4 @@
-// import React from 'react';
+import React from 'react';
 
 export const metadata = {
   title: 'RLHF in Enterprise: Reinforcement Learning from Human Feedback Revolution 2025',

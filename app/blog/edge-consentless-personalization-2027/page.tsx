@@ -1,5 +1,11 @@
+<<<<<<< HEAD
+"use client";
+import Link from "next/link";
+
+=======
 "use client"
-import { Link } from "react-router-dom"
+import Link from "next/link"
+>>>>>>> b0266c0c1be3ec9050e7ba803edc6a65b0904e57
 export default function Page() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
@@ -27,10 +33,10 @@ export default function Page() {
           </p>
         </div>
         <div className="flex gap-3">
-          <Link to="/blog" className="text-emerald-700 font-semibold hover:underline">
+          <Link href="/blog" className="text-emerald-700 font-semibold hover:underline">
             ← Back to Blog
           </Link>
-          <Link to="/contact" className="text-emerald-700 font-semibold hover:underline">
+          <Link href="/contact" className="text-emerald-700 font-semibold hover:underline">
             Talk to an expert →
           </Link>
         </div>

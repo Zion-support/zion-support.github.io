@@ -1,18 +1,35 @@
-module.exports = {
-  "performance": {
-    "webVitals": true,
-    "coreWebVitals": true,
-    "customMetrics": true
+
+// Advanced Analytics Configuration
+export const analyticsConfig = {
+  // Performance monitoring
+  performance: {
+    webVitals: true,
+    coreMetrics: ['LCP', 'FID', 'CLS', 'FCP', 'TTFB'],
+    customMetrics: ['pageLoad', 'apiResponse', 'userInteraction'],
+    samplingRate: 1.0
   },
-  "errorTracking": {
-    "clientErrors": true,
-    "serverErrors": true,
-    "networkErrors": true
+  
+  // Error tracking
+  errorTracking: {
+    captureErrors: true,
+    captureUnhandledRejections: true,
+    captureConsoleErrors: true,
+    maxErrorReports: 100
   },
-  "analytics": {
-    "userBehavior": true,
-    "conversionTracking": true,
-    "performanceMetrics": true
+  
+  // User behavior
+  userBehavior: {
+    trackClicks: true,
+    trackScroll: true,
+    trackFormSubmissions: true,
+    trackPageViews: true
   },
-  "timestamp": "2025-10-03T14:56:25.333Z"
+  
+  // Business metrics
+  businessMetrics: {
+    conversionTracking: true,
+    goalTracking: true,
+    funnelAnalysis: true,
+    cohortAnalysis: true
+  }
 };

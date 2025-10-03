@@ -1,11 +1,11 @@
-// import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import Link from 'next/link';
 
 export default function BlogPost() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
       <div className="mb-8">
-        <Link to="/blog" className="text-blue-600 hover:text-blue-800 transition-colors">
+        <Link href="/blog" className="text-blue-600 hover:text-blue-800 transition-colors">
           ← Back to Blog
         </Link>
       </div>
@@ -229,12 +229,14 @@ export default function BlogPost() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link to="/services/ai-autonomous-operations" 
+              <Link 
+                href="/services/ai-autonomous-operations" 
                 className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300 text-center"
               >
                 Explore Autonomous AI Services
               </Link>
-              <Link to="/case-studies" 
+              <Link 
+                href="/case-studies" 
                 className="border border-blue-500 text-blue-500 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-all duration-300 text-center"
               >
                 View Success Stories

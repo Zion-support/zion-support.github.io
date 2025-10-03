@@ -1,13 +1,11 @@
-import React from "react";
-import { createRoot } from "react-dom/client";
-import App from "./App";
-
-async function reportWebVitals(): Promise<void> {
+import React from "react"
+import { createRoot } from "react-dom/client"
+import App from "./AppSafe"
+async function reportWebVitals() {
   try {
     const { onCLS, onLCP, onFCP, onTTFB } = await import("web-vitals");
     const log = (metric: { name: string; value: number }) => {
       if (import.meta.env.PROD) {
-        // eslint-disable-next-line no-console
         console.log(`[WebVitals] ${metric.name}:`, Math.round(metric.value));
       }
     };
@@ -18,7 +16,7 @@ async function reportWebVitals(): Promise<void> {
   } catch {
     // ignore in unsupported environments
   }
-}
+};
 
 // Optimized service worker registration
 const registerServiceWorker = () => {
@@ -35,7 +33,6 @@ const registerServiceWorker = () => {
 const initializeApp = () => {
   const container = document.getElementById("root");
   if (!container) {
-    // eslint-disable-next-line no-console
     console.error("Root container not found");
     return;
   }

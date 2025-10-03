@@ -1,5 +1,5 @@
-// import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'AI Edge Computing Real-Time Intelligence 2025: Millisecond Processing at Scale | Zion Tech Group',

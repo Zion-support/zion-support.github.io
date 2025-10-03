@@ -1,10 +1,10 @@
-// import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import Link from 'next/link';
 
 interface FeaturedServiceCardProps {
   title: string;
   description: string;
-  icon: string;
+  price: string;
   features: string[];
   href: string;
   popular?: boolean;
@@ -13,7 +13,7 @@ interface FeaturedServiceCardProps {
 export default function FeaturedServiceCard({ 
   title, 
   description, 
-  icon, 
+  price, 
   features, 
   href, 
   popular = false 
@@ -26,7 +26,7 @@ export default function FeaturedServiceCard({
         </div>
       )}
       <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-6">
-        <span className="text-white text-2xl">{icon}</span>
+        <span className="text-white text-2xl">⚡</span>
       </div>
       <h3 className="text-xl font-bold text-gray-900 mb-4">{title}</h3>
       <p className="text-gray-600 mb-6">{description}</p>
@@ -35,8 +35,13 @@ export default function FeaturedServiceCard({
           <li key={index}>• {feature}</li>
         ))}
       </ul>
+<<<<<<< HEAD
+      <div className="flex justify-between items-center">
+        <div className="text-blue-600 font-bold">{price}</div>
+=======
       <div className="flex justify-end">
-        <Link to={href} className="text-blue-600 font-semibold hover:text-blue-700">
+>>>>>>> b0266c0c1be3ec9050e7ba803edc6a65b0904e57
+        <Link href={href} className="text-blue-600 font-semibold hover:text-blue-700">
           Learn More →
         </Link>
       </div>

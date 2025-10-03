@@ -1,0 +1,44 @@
+{
+  "timestamp": "2025-09-04T13:09:56.557Z",
+  "analysis": {
+    "build": {
+      "total": 0,
+      "successful": 0,
+      "failed": 0,
+      "averageBuildTime": 0,
+      "successRate": 0
+    },
+    "errors": {
+      "total": 0,
+      "types": {},
+      "files": {},
+      "errors": []
+    },
+    "performance": {
+      "averageResponseTime": 0,
+      "averageMemoryUsage": 0,
+      "averageCpuUsage": 0,
+      "totalRequests": 0,
+      "dataPoints": {
+        "responseTimes": 0,
+        "memoryUsage": 0,
+        "cpuUsage": 0
+      }
+    },
+    "access": {
+      "total": 0,
+      "statusCodes": {},
+      "userAgents": {},
+      "ipAddresses": {},
+      "requests": []
+    }
+  },
+  "recommendations": [
+    {
+      "type": "build_reliability",
+      "priority": "high",
+      "message": "Build success rate is 0.0%. Improve build reliability.",
+      "impact": "Reduces deployment failures"
+    }
+  ]
+}

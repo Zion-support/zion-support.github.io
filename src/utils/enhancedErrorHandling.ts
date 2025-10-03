@@ -2,6 +2,7 @@
  * Enhanced Error Handling Utility
  * Provides comprehensive error tracking and recovery
  */
+
 export interface ErrorInfo {
   message: string;
   stack?: string;
@@ -63,12 +64,14 @@ class EnhancedErrorHandler {
       });
     });
 
-    // this.isInitialized = true;
+    this.isInitialized = true;
   }
 
   private determineSeverity(error: any): 'low' | 'medium' | 'high' | 'critical' {
     if (!error) return 'low';
+
     const message = error.message?.toLowerCase() || '';
+    
     // Critical errors
     if (message.includes('chunk') || message.includes('loading') || message.includes('network')) {
       return 'critical';
@@ -89,7 +92,7 @@ class EnhancedErrorHandler {
 
   private handleError(errorInfo: ErrorInfo): void {
     this.errors.push(errorInfo);
-
+    
     // Keep only the most recent errors
     if (this.errors.length > this.maxErrors) {
       this.errors = this.errors.slice(-this.maxErrors);
@@ -138,7 +141,7 @@ class EnhancedErrorHandler {
   public getErrorReport(): ErrorReport {
     const criticalErrors = this.errors.filter(e => e.severity === 'critical').length;
     const lastError = this.errors.length > 0 ? this.errors[this.errors.length - 1] : undefined;
-
+    
     return {
       errors: [...this.errors],
       totalErrors: this.errors.length,

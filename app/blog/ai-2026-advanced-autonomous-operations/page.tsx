@@ -1,12 +1,12 @@
-// import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import Link from 'next/link';
 
 export default function AIAdvancedAutonomousOperations2026() {
   return (
     <div className="min-h-screen bg-slate-950 text-white">
       <div className="container mx-auto px-6 py-12">
         <nav className="mb-8">
-          <Link to="/" className="text-blue-400 hover:text-blue-300 transition-colors">
+          <Link href="/" className="text-blue-400 hover:text-blue-300 transition-colors">
             ← Back to Home
           </Link>
         </nav>

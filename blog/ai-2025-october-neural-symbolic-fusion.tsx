@@ -1,4 +1,4 @@
-// import React from 'react';
+import React from 'react';
 
 export const metadata = {
   title: 'Neural-Symbolic Fusion 2025 — Combining Deep Learning with Logical Reasoning',

@@ -47,7 +47,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    const { onError, showDetails = false } = this.props;
+    const { onError } = this.props;
     const { errorId } = this.state;
 
     // Update state with error info
@@ -139,7 +139,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
   };
 
   render() {
-    const { hasError, error, errorInfo, errorId } = this.state;
+    const { hasError, error, errorId } = this.state;
     const { children, fallback, showDetails } = this.props;
 
     if (hasError) {

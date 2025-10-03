@@ -1,6 +1,6 @@
 'use client';
-// import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import Link from 'next/link';
 
 interface ServiceCardProps {
   title: string;

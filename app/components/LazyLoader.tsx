@@ -1,58 +1,33 @@
-import React, { Suspense, lazy, ComponentType } from 'react';
+import React, { Suspense, lazy } from 'react';
 
-interface LazyLoaderProps {
-  children: React.ReactNode;
-  fallback?: React.ReactNode;
-}
-
-const DefaultFallback = () => (
+// Loading component
+const LoadingSpinner = () => (
   <div className="flex items-center justify-center p-8">
     <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
     <span className="ml-2 text-gray-600">Loading...</span>
   </div>
 );
 
-export const LazyLoader: React.FC<LazyLoaderProps> = ({ 
-  children, 
-  fallback = <DefaultFallback /> 
-}) => {
-  return (
+// Lazy load components
+export const LazyUnifiedBanner = lazy(() => import('../components/UnifiedBannerSystem'));
+export const LazyContentShowcase = lazy(() => import('../components/ContentShowcase'));
+export const LazyFeaturedServiceCard = lazy(() => import('../components/FeaturedServiceCard'));
+export const LazyNavigation = lazy(() => import('../components/Navigation'));
+
+// Higher-order component for lazy loading
+export const withLazyLoading = (Component, fallback = <LoadingSpinner />) => {
+  return (props) => (
     <Suspense fallback={fallback}>
-      {children}
+      <Component {...props} />
     </Suspense>
   );
 };
 
-// Higher-order component for lazy loading
-export function withLazyLoading<P extends object>(
-  Component: ComponentType<P>,
-  fallback?: React.ReactNode
-) {
-  const LazyComponent = lazy(() => Promise.resolve({ default: Component }));
-  
-  return function LazyWrappedComponent(props: P) {
-    return (
-      <LazyLoader fallback={fallback}>
-        <LazyComponent {...props} />
-      </LazyLoader>
-    );
-  };
-}
+// Lazy loading wrapper
+export const LazyWrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => (
+  <Suspense fallback={<LoadingSpinner />}>
+    {children}
+  </Suspense>
+);
 
-// Utility function to create lazy-loaded components
-export function createLazyComponent<P extends object>(
-  importFunc: () => Promise<{ default: ComponentType<P> }>,
-  fallback?: React.ReactNode
-) {
-  const LazyComponent = lazy(importFunc);
-  
-  return function LazyComponentWrapper(props: P) {
-    return (
-      <LazyLoader fallback={fallback}>
-        <LazyComponent {...props} />
-      </LazyLoader>
-    );
-  };
-}
-
-export default LazyLoader;
+export default LazyWrapper;

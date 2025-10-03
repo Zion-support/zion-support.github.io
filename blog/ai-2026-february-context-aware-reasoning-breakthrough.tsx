@@ -1,6 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, BookOpen, Calendar, Clock, Share2, Target } from 'lucide-react';
+import { ArrowLeft, BookOpen, Calendar, Clock, Share2, TrendingUp, Zap, Brain, Target } from 'lucide-react';
+
 export default function AIContextAwareReasoningBreakthrough2026() {
   return (
     <>

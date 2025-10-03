@@ -1,5 +1,5 @@
-// import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'AI Model Optimization Breakthrough 2025: 92% Cost Reduction & 5x Speed Gains | Zion Tech Group',

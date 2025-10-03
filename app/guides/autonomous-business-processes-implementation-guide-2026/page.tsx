@@ -1,7 +1,7 @@
-// import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import Link from 'next/link';
 import { ArrowLeft, BookOpen, CheckCircle, Clock, Target, Users, Zap, TrendingUp } from 'lucide-react';
-// Metadata handled by React Helmet
+import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Complete Guide to Implementing Autonomous Business Processes in 2026 | Zion Tech Group',
@@ -22,7 +22,7 @@ export default function ImplementationGuide() {
       {/* Header */}
       <div className="bg-white shadow-sm border-b">
         <div className="max-w-4xl mx-auto px-4 py-8">
-          <Link to="/guides" className="inline-flex items-center text-blue-600 hover:text-blue-700 mb-6">
+          <Link href="/guides" className="inline-flex items-center text-blue-600 hover:text-blue-700 mb-6">
             <ArrowLeft className="w-5 h-5 mr-2" />
             Back to Guides
           </Link>
@@ -90,45 +90,45 @@ export default function ImplementationGuide() {
               <ol className="space-y-3">
                 <li className="flex items-start">
                   <span className="w-6 h-6 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-1 flex-shrink-0">1</span>
-                  <Link to="#introduction" className="text-blue-600 hover:text-blue-700">Introduction</Link>
+                  <Link href="#introduction" className="text-blue-600 hover:text-blue-700">Introduction</Link>
                 </li>
                 <li className="flex items-start">
                   <span className="w-6 h-6 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-1 flex-shrink-0">2</span>
-                  <Link to="#prerequisites" className="text-blue-600 hover:text-blue-700">Prerequisites and Readiness Assessment</Link>
+                  <Link href="#prerequisites" className="text-blue-600 hover:text-blue-700">Prerequisites and Readiness Assessment</Link>
                 </li>
                 <li className="flex items-start">
                   <span className="w-6 h-6 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-1 flex-shrink-0">3</span>
-                  <Link to="#strategic-planning" className="text-blue-600 hover:text-blue-700">Strategic Planning and Architecture</Link>
+                  <Link href="#strategic-planning" className="text-blue-600 hover:text-blue-700">Strategic Planning and Architecture</Link>
                 </li>
                 <li className="flex items-start">
                   <span className="w-6 h-6 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-1 flex-shrink-0">4</span>
-                  <Link to="#technology-stack" className="text-blue-600 hover:text-blue-700">Technology Stack Selection</Link>
+                  <Link href="#technology-stack" className="text-blue-600 hover:text-blue-700">Technology Stack Selection</Link>
                 </li>
                 <li className="flex items-start">
                   <span className="w-6 h-6 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-1 flex-shrink-0">5</span>
-                  <Link to="#implementation" className="text-blue-600 hover:text-blue-700">Implementation Methodology</Link>
+                  <Link href="#implementation" className="text-blue-600 hover:text-blue-700">Implementation Methodology</Link>
                 </li>
               </ol>
               <ol className="space-y-3">
                 <li className="flex items-start">
                   <span className="w-6 h-6 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-1 flex-shrink-0">6</span>
-                  <Link to="#change-management" className="text-blue-600 hover:text-blue-700">Change Management Strategy</Link>
+                  <Link href="#change-management" className="text-blue-600 hover:text-blue-700">Change Management Strategy</Link>
                 </li>
                 <li className="flex items-start">
                   <span className="w-6 h-6 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-1 flex-shrink-0">7</span>
-                  <Link to="#risk-management" className="text-blue-600 hover:text-blue-700">Risk Management and Mitigation</Link>
+                  <Link href="#risk-management" className="text-blue-600 hover:text-blue-700">Risk Management and Mitigation</Link>
                 </li>
                 <li className="flex items-start">
                   <span className="w-6 h-6 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-1 flex-shrink-0">8</span>
-                  <Link to="#monitoring" className="text-blue-600 hover:text-blue-700">Monitoring and Optimization</Link>
+                  <Link href="#monitoring" className="text-blue-600 hover:text-blue-700">Monitoring and Optimization</Link>
                 </li>
                 <li className="flex items-start">
                   <span className="w-6 h-6 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-1 flex-shrink-0">9</span>
-                  <Link to="#scaling" className="text-blue-600 hover:text-blue-700">Scaling and Evolution</Link>
+                  <Link href="#scaling" className="text-blue-600 hover:text-blue-700">Scaling and Evolution</Link>
                 </li>
                 <li className="flex items-start">
                   <span className="w-6 h-6 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-1 flex-shrink-0">10</span>
-                  <Link to="#best-practices" className="text-blue-600 hover:text-blue-700">Best Practices and Lessons Learned</Link>
+                  <Link href="#best-practices" className="text-blue-600 hover:text-blue-700">Best Practices and Lessons Learned</Link>
                 </li>
               </ol>
             </div>
@@ -383,13 +383,15 @@ export default function ImplementationGuide() {
               expert consulting, technical implementation, and ongoing optimization services.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact"
+              <Link 
+                href="/contact"
                 className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-bold rounded-xl hover:bg-gray-100 transition-colors"
               >
                 Schedule Consultation
                 <ArrowLeft className="w-5 h-5 ml-2 rotate-180" />
               </Link>
-              <Link to="/blog/ai-powered-autonomous-business-processes-2026"
+              <Link 
+                href="/blog/ai-powered-autonomous-business-processes-2026"
                 className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-semibold rounded-xl border border-white/30 hover:bg-white/20 transition-colors"
               >
                 Read Full Article
@@ -406,7 +408,7 @@ export default function ImplementationGuide() {
         <div className="max-w-4xl mx-auto px-4">
           <h2 className="text-2xl font-bold text-gray-900 mb-8">Related Content</h2>
           <div className="grid md:grid-cols-2 gap-8">
-            <Link to="/blog/ai-powered-autonomous-business-processes-2026" className="group">
+            <Link href="/blog/ai-powered-autonomous-business-processes-2026" className="group">
               <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
                 <h3 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-blue-600">AI-Powered Autonomous Business Processes</h3>
                 <p className="text-gray-600 mb-4">Discover how AI-powered autonomous business processes are revolutionizing enterprise operations in 2026.</p>
@@ -417,7 +419,7 @@ export default function ImplementationGuide() {
               </div>
             </Link>
             
-            <Link to="/case-studies/global-manufacturing-autonomous-transformation" className="group">
+            <Link href="/case-studies/global-manufacturing-autonomous-transformation" className="group">
               <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
                 <h3 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-blue-600">Global Manufacturing Case Study</h3>
                 <p className="text-gray-600 mb-4">See how a Fortune 500 manufacturer achieved 85% process automation with our solution.</p>

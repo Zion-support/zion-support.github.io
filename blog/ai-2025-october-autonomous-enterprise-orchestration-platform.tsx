@@ -1,4 +1,4 @@
-// import React from 'react';
+import React from 'react';
 
 export const metadata = {
   title: 'Autonomous Enterprise Orchestration Platform 2025 — Self-Managing Business Operations',

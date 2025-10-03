@@ -1,5 +1,5 @@
-// import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'AI Autonomous Reasoning Agents 2025: 500% Productivity Gains | Zion Tech Group',

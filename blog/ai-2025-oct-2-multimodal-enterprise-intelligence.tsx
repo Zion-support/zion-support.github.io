@@ -1,4 +1,4 @@
-// import React from 'react';
+import React from 'react';
 
 export const metadata = {
   title: 'Multimodal Enterprise Intelligence — Vision + Language + Action Models for 2025',

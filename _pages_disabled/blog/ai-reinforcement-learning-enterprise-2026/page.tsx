@@ -1,5 +1,5 @@
-// import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'AI Reinforcement Learning for Enterprise 2026: 400% ROI Through Intelligent Optimization | Zion Tech Group',

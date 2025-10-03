@@ -1,5 +1,5 @@
-// import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'AI Enterprise Supergraph: Unified Intelligence Across Your Organization 2025 | Zion Tech Group',

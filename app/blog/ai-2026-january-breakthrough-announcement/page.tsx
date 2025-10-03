@@ -1,5 +1,5 @@
-// import React from 'react';
-// Metadata handled by React Helmet
+import React from 'react';
+import { Metadata } from 'next';
 import AI2026JanuaryBreakthroughAnnouncement from '../../../blog/ai-2026-january-breakthrough-announcement';
 
 export const metadata: Metadata = {
