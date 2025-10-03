@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 const AI2026AutonomousCognitiveMeshBanner: React.FC = () => {
   return (
@@ -41,8 +41,7 @@ const AI2026AutonomousCognitiveMeshBanner: React.FC = () => {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link 
-                href="/blog/ai-2026-autonomous-cognitive-mesh-enterprise-transformation"
+              <Link to="/blog/ai-2026-autonomous-cognitive-mesh-enterprise-transformation"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 rounded-lg font-semibold text-white transition-all duration-200 transform hover:scale-105"
               >
                 Explore Technology
@@ -50,8 +49,7 @@ const AI2026AutonomousCognitiveMeshBanner: React.FC = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
               </Link>
-              <Link 
-                href="/services"
+              <Link to="/services"
                 className="inline-flex items-center px-8 py-4 border-2 border-emerald-400 hover:bg-emerald-400/10 rounded-lg font-semibold text-white transition-all duration-200"
               >
                 Get Implementation

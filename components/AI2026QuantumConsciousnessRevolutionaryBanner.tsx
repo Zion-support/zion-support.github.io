@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function AI2026QuantumConsciousnessRevolutionaryBanner() {
   return (
@@ -32,7 +32,7 @@ export default function AI2026QuantumConsciousnessRevolutionaryBanner() {
         <div className="grid md:grid-cols-2 gap-8 mb-12">
           
           {/* Quantum Consciousness Article */}
-          <Link href="/blog/ai-2026-quantum-consciousness-breakthrough" className="group">
+          <Link to="/blog/ai-2026-quantum-consciousness-breakthrough" className="group">
             <div className="bg-white rounded-2xl shadow-2xl overflow-hidden hover:shadow-3xl transition-all hover:scale-105 transform">
               <div className="bg-gradient-to-r from-purple-600 to-indigo-600 p-6 text-white">
                 <div className="flex items-center gap-2 mb-3">
@@ -74,7 +74,7 @@ export default function AI2026QuantumConsciousnessRevolutionaryBanner() {
           </Link>
 
           {/* Autonomous Enterprise Article */}
-          <Link href="/blog/ai-2026-future-autonomous-enterprise-revolution" className="group">
+          <Link to="/blog/ai-2026-future-autonomous-enterprise-revolution" className="group">
             <div className="bg-white rounded-2xl shadow-2xl overflow-hidden hover:shadow-3xl transition-all hover:scale-105 transform">
               <div className="bg-gradient-to-r from-blue-600 to-cyan-600 p-6 text-white">
                 <div className="flex items-center gap-2 mb-3">
@@ -123,7 +123,7 @@ export default function AI2026QuantumConsciousnessRevolutionaryBanner() {
             <p className="text-xl mb-6 opacity-95">
               See how a Fortune 50 global enterprise achieved unprecedented results with quantum consciousness transformation.
             </p>
-            <Link href="/case-studies/ai-2026-global-enterprise-quantum-consciousness-transformation-500-billion-success" className="group">
+            <Link to="/case-studies/ai-2026-global-enterprise-quantum-consciousness-transformation-500-billion-success" className="group">
               <div className="bg-gradient-to-r from-green-600 to-emerald-600 text-white p-6 rounded-xl hover:shadow-xl transition-all hover:scale-105 transform">
                 <div className="flex items-center gap-2 mb-3">
                   <span className="bg-white text-green-900 px-3 py-1 rounded-full text-xs font-bold animate-bounce">
@@ -170,13 +170,13 @@ export default function AI2026QuantumConsciousnessRevolutionaryBanner() {
               Our AI services are already delivering quantum consciousness capabilities to Fortune 500 companies worldwide.
             </p>
             <div className="grid md:grid-cols-2 gap-4">
-              <Link href="/services/quantum-consciousness-implementation" className="group">
+              <Link to="/services/quantum-consciousness-implementation" className="group">
                 <div className="bg-purple-600 text-white p-4 rounded-lg hover:bg-purple-700 transition-colors">
                   <h4 className="font-bold text-lg mb-2">⚡ Quantum Consciousness Service</h4>
                   <p className="text-sm opacity-95">Starting at $10M implementation</p>
                 </div>
               </Link>
-              <Link href="/services/autonomous-enterprise-systems" className="group">
+              <Link to="/services/autonomous-enterprise-systems" className="group">
                 <div className="bg-blue-600 text-white p-4 rounded-lg hover:bg-blue-700 transition-colors">
                   <h4 className="font-bold text-lg mb-2">🏢 Autonomous Enterprise Service</h4>
                   <p className="text-sm opacity-95">Starting at $5M implementation</p>

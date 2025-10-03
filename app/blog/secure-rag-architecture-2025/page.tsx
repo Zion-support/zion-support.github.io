@@ -1,10 +1,10 @@
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function SecureRAGArchitecture2025Page() {
 	return (
 		<div className='min-h-screen'>
 			<nav className='mb-6'>
-				<Link href='/blog' className='text-blue-600 hover:underline'>
+				<Link to='/blog' className='text-blue-600 hover:underline'>
 					← Back to Blog
 				</Link>
 			</nav>
@@ -30,7 +30,7 @@ export default function SecureRAGArchitecture2025Page() {
 				</ul>
 				<p>
 					Need help designing or hardening your RAG stack?{' '}
-					<Link href='/contact' className='text-blue-600 hover:underline'>We can help</Link>.
+					<Link to='/contact' className='text-blue-600 hover:underline'>We can help</Link>.
 				</p>
 			</article>
 		</div>

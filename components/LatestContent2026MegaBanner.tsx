@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function LatestContent2026MegaBanner() {
   return (
@@ -26,7 +26,7 @@ export default function LatestContent2026MegaBanner() {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          <Link href="/blog/ai-revolution-2026-next-frontier" className="group">
+          <Link to="/blog/ai-revolution-2026-next-frontier" className="group">
             <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-200 hover:border-red-200">
               <div className="flex items-center gap-2 mb-4">
                 <span className="bg-red-100 text-red-800 px-2 py-1 rounded-full text-xs font-semibold">
@@ -46,7 +46,7 @@ export default function LatestContent2026MegaBanner() {
             </div>
           </Link>
 
-          <Link href="/blog/quantum-ai-breakthrough-2026" className="group">
+          <Link to="/blog/quantum-ai-breakthrough-2026" className="group">
             <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-200 hover:border-purple-200">
               <div className="flex items-center gap-2 mb-4">
                 <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-semibold">
@@ -66,7 +66,7 @@ export default function LatestContent2026MegaBanner() {
             </div>
           </Link>
 
-          <Link href="/case-studies/global-manufacturing-ai-transformation" className="group">
+          <Link to="/case-studies/global-manufacturing-ai-transformation" className="group">
             <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-200 hover:border-green-200">
               <div className="flex items-center gap-2 mb-4">
                 <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
@@ -93,14 +93,12 @@ export default function LatestContent2026MegaBanner() {
             Access our complete library of AI insights, case studies, and implementation guides
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/content-hub"
+            <Link to="/content-hub"
               className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Browse All Content
             </Link>
-            <Link
-              href="/blog"
+            <Link to="/blog"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors"
             >
               Latest Articles

@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 const AI2026BreakthroughBanner: React.FC = () => {
   return (
@@ -35,8 +35,7 @@ const AI2026BreakthroughBanner: React.FC = () => {
                 <div className="text-blue-200 text-xs">Error Reduction</div>
               </div>
             </div>
-            <Link 
-              href="/blog/ai-2026-enterprise-breakthrough" 
+            <Link to="/blog/ai-2026-enterprise-breakthrough" 
               className="inline-flex items-center bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors"
             >
               Explore AI 2026 Breakthrough

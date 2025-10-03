@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function NewContent2025PromotionalBanner() {
   return (
@@ -23,29 +23,25 @@ export default function NewContent2025PromotionalBanner() {
           </div>
           
           <div className="flex flex-wrap gap-2 justify-center lg:justify-end">
-            <Link 
-              href="/blog/ai-2025-next-generation-autonomous-systems-revolution"
+            <Link to="/blog/ai-2025-next-generation-autonomous-systems-revolution"
               className="bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               🤖 99.9% AUTONOMOUS
             </Link>
             
-            <Link 
-              href="/blog/ai-2025-quantum-enhanced-business-intelligence-breakthrough"
+            <Link to="/blog/ai-2025-quantum-enhanced-business-intelligence-breakthrough"
               className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               ⚛️ 1000x QUANTUM BI
             </Link>
             
-            <Link 
-              href="/blog/ai-2025-autonomous-cloud-operations-revolution"
+            <Link to="/blog/ai-2025-autonomous-cloud-operations-revolution"
               className="bg-gradient-to-r from-purple-500 to-indigo-500 hover:from-purple-600 hover:to-indigo-600 text-white px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               ☁️ $5.2B CLOUD SAVINGS
             </Link>
             
-            <Link 
-              href="/content-hub"
+            <Link to="/content-hub"
               className="bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-white px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               📚 VIEW ALL CONTENT

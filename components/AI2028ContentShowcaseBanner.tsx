@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function AI2028ContentShowcaseBanner() {
   return (
@@ -15,8 +15,7 @@ export default function AI2028ContentShowcaseBanner() {
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-          <Link 
-            href="/blog/ai-2028-neuromorphic-superintelligence"
+          <Link to="/blog/ai-2028-neuromorphic-superintelligence"
             className="group bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg p-6 hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 transform hover:scale-105 shadow-lg"
           >
             <div className="text-center">
@@ -29,8 +28,7 @@ export default function AI2028ContentShowcaseBanner() {
             </div>
           </Link>
           
-          <Link 
-            href="/blog/ai-2028-next-generation-autonomous-enterprise"
+          <Link to="/blog/ai-2028-next-generation-autonomous-enterprise"
             className="group bg-gradient-to-br from-purple-500 to-indigo-600 rounded-lg p-6 hover:from-purple-400 hover:to-indigo-500 transition-all duration-300 transform hover:scale-105 shadow-lg"
           >
             <div className="text-center">
@@ -43,8 +41,7 @@ export default function AI2028ContentShowcaseBanner() {
             </div>
           </Link>
           
-          <Link 
-            href="/case-studies/ai-2028-neuromorphic-superintelligence-success"
+          <Link to="/case-studies/ai-2028-neuromorphic-superintelligence-success"
             className="group bg-gradient-to-br from-green-500 to-teal-600 rounded-lg p-6 hover:from-green-400 hover:to-teal-500 transition-all duration-300 transform hover:scale-105 shadow-lg"
           >
             <div className="text-center">
@@ -57,8 +54,7 @@ export default function AI2028ContentShowcaseBanner() {
             </div>
           </Link>
           
-          <Link 
-            href="/case-studies/ai-2028-autonomous-enterprise-mega-success"
+          <Link to="/case-studies/ai-2028-autonomous-enterprise-mega-success"
             className="group bg-gradient-to-br from-orange-500 to-red-600 rounded-lg p-6 hover:from-orange-400 hover:to-red-500 transition-all duration-300 transform hover:scale-105 shadow-lg"
           >
             <div className="text-center">
@@ -96,8 +92,7 @@ export default function AI2028ContentShowcaseBanner() {
         </div>
         
         <div className="text-center">
-          <Link 
-            href="/contact"
+          <Link to="/contact"
             className="inline-block bg-gradient-to-r from-pink-500 to-purple-600 text-white px-10 py-4 rounded-lg font-bold text-xl hover:from-pink-400 hover:to-purple-500 transition-all duration-300 transform hover:scale-105 shadow-xl"
           >
             🚀 Explore AI 2028 Breakthroughs

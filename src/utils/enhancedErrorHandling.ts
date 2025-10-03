@@ -33,7 +33,7 @@ class EnhancedErrorHandler {
 
   constructor() {
     this.initialize();
-  }
+  };
 
   private initialize(): void {
     if (typeof window === 'undefined') return;
@@ -65,27 +65,25 @@ class EnhancedErrorHandler {
     });
 
     this.isInitialized = true;
-  }
+  
 
   private determineSeverity(error: any): 'low' | 'medium' | 'high' | 'critical' {
     if (!error) return 'low';
-
     const message = error.message?.toLowerCase() || '';
-    
     // Critical errors
     if (message.includes('chunk') || message.includes('loading') || message.includes('network')) {
       return 'critical';
-    }
+    
     
     // High severity errors
     if (message.includes('syntax') || message.includes('reference') || message.includes('type')) {
       return 'high';
-    }
+    
     
     // Medium severity errors
     if (message.includes('warning') || message.includes('deprecated')) {
       return 'medium';
-    }
+    
     
     return 'low';
   }
@@ -96,7 +94,7 @@ class EnhancedErrorHandler {
     // Keep only the most recent errors
     if (this.errors.length > this.maxErrors) {
       this.errors = this.errors.slice(-this.maxErrors);
-    }
+    
 
     // Log critical errors immediately
     if (errorInfo.severity === 'critical') {
@@ -105,12 +103,12 @@ class EnhancedErrorHandler {
 
     // Send to analytics or error reporting service
     this.reportError(errorInfo);
-  }
+  
 
   private reportError(errorInfo: ErrorInfo): void {
     // In a real application, you would send this to an error reporting service
     console.log('Error reported:', errorInfo);
-  }
+  
 
   public logError(
     error: Error | string,
@@ -136,7 +134,7 @@ class EnhancedErrorHandler {
 
   public getErrors(): ErrorInfo[] {
     return [...this.errors];
-  }
+  
 
   public getErrorReport(): ErrorReport {
     const criticalErrors = this.errors.filter(e => e.severity === 'critical').length;

@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { ArrowRight, Calendar, BookOpen, Brain, Zap, TrendingUp, Star, Sparkles } from 'lucide-react';
 
 export default function January2025NewContentShowcaseBanner() {
@@ -52,8 +52,7 @@ export default function January2025NewContentShowcaseBanner() {
                 <Calendar className="h-4 w-4" />
                 <span>January 15, 2025</span>
               </div>
-              <Link 
-                href="/blog/ai-2025-january-autonomous-enterprise-revolution"
+              <Link to="/blog/ai-2025-january-autonomous-enterprise-revolution"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-2 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300"
               >
                 Read More
@@ -85,8 +84,7 @@ export default function January2025NewContentShowcaseBanner() {
                 <Calendar className="h-4 w-4" />
                 <span>January 20, 2025</span>
               </div>
-              <Link 
-                href="/blog/ai-2025-january-quantum-computing-breakthrough"
+              <Link to="/blog/ai-2025-january-quantum-computing-breakthrough"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300"
               >
                 Read More
@@ -129,8 +127,7 @@ export default function January2025NewContentShowcaseBanner() {
               </div>
             </div>
             
-            <Link 
-              href="/content/case-studies/fortune-500-quantum-ai-transformation"
+            <Link to="/content/case-studies/fortune-500-quantum-ai-transformation"
               className="inline-flex items-center gap-2 bg-white text-green-600 px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               View Case Study
@@ -161,8 +158,7 @@ export default function January2025NewContentShowcaseBanner() {
               <span className="bg-white/20 px-3 py-1 rounded-full text-xs">Integration</span>
             </div>
             
-            <Link 
-              href="/content/services/quantum-ai-consulting"
+            <Link to="/content/services/quantum-ai-consulting"
               className="inline-flex items-center gap-2 bg-white text-orange-600 px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Explore Services
@@ -190,16 +186,14 @@ export default function January2025NewContentShowcaseBanner() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="/contact"
+              <Link to="/contact"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-600 hover:to-purple-600 transition-all duration-300 shadow-lg"
               >
                 Get Started Today
                 <ArrowRight className="h-5 w-5" />
               </Link>
               
-              <Link 
-                href="/blog"
+              <Link to="/blog"
                 className="inline-flex items-center gap-2 bg-white/20 backdrop-blur text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/30 transition-all duration-300 border border-white/30"
               >
                 Explore All Content

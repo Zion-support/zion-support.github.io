@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { Atom, Brain, Zap, ArrowRight, Sparkles, Cpu, Network } from 'lucide-react';
 
 const December2025QuantumSyntheticConsciousnessRevolutionBanner: React.FC = () => {
@@ -73,16 +73,14 @@ const December2025QuantumSyntheticConsciousnessRevolutionBanner: React.FC = () =
 
             {/* CTA buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link 
-                href="/blog/ai-2025-december-quantum-synthetic-consciousness-revolution"
+              <Link to="/blog/ai-2025-december-quantum-synthetic-consciousness-revolution"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-600 to-purple-600 hover:from-cyan-700 hover:to-purple-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
               >
                 <Atom className="w-5 h-5" />
                 Explore Quantum Revolution
                 <ArrowRight className="w-4 h-4" />
               </Link>
-              <Link 
-                href="/guides/quantum-consciousness-implementation-roadmap-2026"
+              <Link to="/guides/quantum-consciousness-implementation-roadmap-2026"
                 className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 border border-white/20 hover:border-white/40"
               >
                 <Cpu className="w-5 h-5" />

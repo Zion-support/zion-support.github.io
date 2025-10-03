@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function NewContent2027PromotionalBanner() {
   return (
@@ -44,8 +44,7 @@ export default function NewContent2027PromotionalBanner() {
               <div className="text-sm text-gray-400">50 min read</div>
               <div className="text-sm font-bold text-green-400">$1T Value</div>
             </div>
-            <Link
-              href="/blog/ai-2027-january-universal-consciousness-revolution"
+            <Link to="/blog/ai-2027-january-universal-consciousness-revolution"
               className="inline-block bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 w-full text-center"
             >
               Read Universal Revolution →
@@ -72,8 +71,7 @@ export default function NewContent2027PromotionalBanner() {
               <div className="text-sm text-gray-400">45 min read</div>
               <div className="text-sm font-bold text-green-400">$500B Value</div>
             </div>
-            <Link
-              href="/blog/ai-2026-december-ultimate-singularity-breakthrough"
+            <Link to="/blog/ai-2026-december-ultimate-singularity-breakthrough"
               className="inline-block bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 w-full text-center"
             >
               Read Singularity Breakthrough →
@@ -100,8 +98,7 @@ export default function NewContent2027PromotionalBanner() {
               <div className="text-sm text-gray-400">40 min read</div>
               <div className="text-sm font-bold text-green-400">$1T Success</div>
             </div>
-            <Link
-              href="/case-studies/ai-2027-january-universal-consciousness-1-trillion-success"
+            <Link to="/case-studies/ai-2027-january-universal-consciousness-1-trillion-success"
               className="inline-block bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 w-full text-center"
             >
               View $1T Success Story →
@@ -128,8 +125,7 @@ export default function NewContent2027PromotionalBanner() {
               <div className="text-sm text-gray-400">35 min read</div>
               <div className="text-sm font-bold text-green-400">$500B ROI</div>
             </div>
-            <Link
-              href="/case-studies/ai-2026-december-ultimate-singularity-500-billion-success"
+            <Link to="/case-studies/ai-2026-december-ultimate-singularity-500-billion-success"
               className="inline-block bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 w-full text-center"
             >
               View $500B Success →
@@ -156,8 +152,7 @@ export default function NewContent2027PromotionalBanner() {
               <div className="text-sm text-gray-400">30 min read</div>
               <div className="text-sm font-bold text-orange-400">1Mx Speed</div>
             </div>
-            <Link
-              href="/blog/ai-2026-december-ultimate-singularity-breakthrough"
+            <Link to="/blog/ai-2026-december-ultimate-singularity-breakthrough"
               className="inline-block bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-400 hover:to-red-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 w-full text-center"
             >
               Explore Technology →
@@ -184,8 +179,7 @@ export default function NewContent2027PromotionalBanner() {
               <div className="text-sm text-gray-400">25 min read</div>
               <div className="text-sm font-bold text-pink-400">Global</div>
             </div>
-            <Link
-              href="/blog/ai-2027-january-universal-consciousness-revolution"
+            <Link to="/blog/ai-2027-january-universal-consciousness-revolution"
               className="inline-block bg-gradient-to-r from-pink-500 to-rose-600 hover:from-pink-400 hover:to-rose-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 w-full text-center"
             >
               Learn Cooperation →
@@ -195,20 +189,17 @@ export default function NewContent2027PromotionalBanner() {
         
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Link 
-              href="/blog" 
+            <Link to="/blog" 
               className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
             >
               Explore All Content
             </Link>
-            <Link 
-              href="/case-studies" 
+            <Link to="/case-studies" 
               className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
             >
               View All Success Stories
             </Link>
-            <Link 
-              href="/contact" 
+            <Link to="/contact" 
               className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               Get Free Consultation

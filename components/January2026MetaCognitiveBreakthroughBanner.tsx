@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function January2026MetaCognitiveBreakthroughBanner() {
   return (
@@ -100,15 +100,13 @@ export default function January2026MetaCognitiveBreakthroughBanner() {
         
         <div className="text-center">
           <div className="flex flex-wrap justify-center gap-4 mb-6">
-            <Link
-              href="/blog/ai-2026-meta-cognitive-superintelligence-breakthrough"
+            <Link to="/blog/ai-2026-meta-cognitive-superintelligence-breakthrough"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-purple-700 hover:to-pink-700 transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
             >
               Discover Meta-Cognitive AI
               <span className="text-xl">→</span>
             </Link>
-            <Link
-              href="/case-studies/ai-2026-neuromorphic-computing-mega-success"
+            <Link to="/case-studies/ai-2026-neuromorphic-computing-mega-success"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-blue-700 hover:to-indigo-700 transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
             >
               View Success Stories

@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function Latest2026RevolutionaryContentBanner() {
   return (
@@ -32,7 +32,7 @@ export default function Latest2026RevolutionaryContentBanner() {
         {/* Featured Articles Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {/* Neuromorphic AI */}
-          <Link href="/blog/ai-2026-neuromorphic-breakthrough" className="group">
+          <Link to="/blog/ai-2026-neuromorphic-breakthrough" className="group">
             <div className="bg-gradient-to-br from-purple-900/50 to-indigo-900/50 backdrop-blur-sm rounded-2xl p-6 hover:from-purple-800/60 hover:to-indigo-800/60 transition-all transform hover:scale-105 border border-purple-500/30 shadow-2xl">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-indigo-500 rounded-lg flex items-center justify-center">
@@ -60,7 +60,7 @@ export default function Latest2026RevolutionaryContentBanner() {
           </Link>
 
           {/* Quantum Neural Fusion */}
-          <Link href="/blog/ai-2026-quantum-neural-fusion" className="group">
+          <Link to="/blog/ai-2026-quantum-neural-fusion" className="group">
             <div className="bg-gradient-to-br from-indigo-900/50 to-blue-900/50 backdrop-blur-sm rounded-2xl p-6 hover:from-indigo-800/60 hover:to-blue-800/60 transition-all transform hover:scale-105 border border-indigo-500/30 shadow-2xl">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-12 h-12 bg-gradient-to-br from-indigo-500 to-blue-500 rounded-lg flex items-center justify-center">
@@ -88,7 +88,7 @@ export default function Latest2026RevolutionaryContentBanner() {
           </Link>
 
           {/* Autonomous Business Intelligence */}
-          <Link href="/blog/ai-2026-autonomous-business-intelligence" className="group">
+          <Link to="/blog/ai-2026-autonomous-business-intelligence" className="group">
             <div className="bg-gradient-to-br from-blue-900/50 to-cyan-900/50 backdrop-blur-sm rounded-2xl p-6 hover:from-blue-800/60 hover:to-cyan-800/60 transition-all transform hover:scale-105 border border-blue-500/30 shadow-2xl">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center">
@@ -143,8 +143,7 @@ export default function Latest2026RevolutionaryContentBanner() {
             Join industry leaders achieving breakthrough results with our cutting-edge AI solutions
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/services"
+            <Link to="/services"
               className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl font-bold text-lg hover:from-cyan-600 hover:to-blue-600 transition-all hover:scale-105 shadow-lg"
             >
               Explore AI Services →

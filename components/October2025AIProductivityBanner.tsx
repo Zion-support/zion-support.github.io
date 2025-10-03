@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 const October2025AIProductivityBanner = () => {
   return (
@@ -46,14 +46,12 @@ const October2025AIProductivityBanner = () => {
               </div>
             </div>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link
-                href="/blog/ai-2025-oct-01-generative-ai-code-assistant-revolution"
+              <Link to="/blog/ai-2025-oct-01-generative-ai-code-assistant-revolution"
                 className="bg-white text-indigo-600 hover:bg-gray-100 px-6 py-3 rounded-lg text-center font-bold transition-colors"
               >
                 Read Complete Guide →
               </Link>
-              <Link
-                href="/case-studies/ai-2025-oct-01-tech-startup-ai-code-assistant-32m-success"
+              <Link to="/case-studies/ai-2025-oct-01-tech-startup-ai-code-assistant-32m-success"
                 className="border-2 border-white text-white hover:bg-white/10 px-6 py-3 rounded-lg text-center font-bold transition-colors"
               >
                 View $32M Success Story →
@@ -89,14 +87,12 @@ const October2025AIProductivityBanner = () => {
               </div>
             </div>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link
-                href="/blog/ai-2025-oct-01-ai-powered-customer-success-platform"
+              <Link to="/blog/ai-2025-oct-01-ai-powered-customer-success-platform"
                 className="bg-white text-purple-600 hover:bg-gray-100 px-6 py-3 rounded-lg text-center font-bold transition-colors"
               >
                 Read Complete Guide →
               </Link>
-              <Link
-                href="/case-studies/ai-2025-oct-01-saas-company-ai-customer-success-18m-success"
+              <Link to="/case-studies/ai-2025-oct-01-saas-company-ai-customer-success-18m-success"
                 className="border-2 border-white text-white hover:bg-white/10 px-6 py-3 rounded-lg text-center font-bold transition-colors"
               >
                 View $18M Success Story →
@@ -133,8 +129,7 @@ const October2025AIProductivityBanner = () => {
               </div>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
+              <Link to="/contact"
                 className="bg-yellow-400 text-indigo-900 hover:bg-yellow-300 px-8 py-4 rounded-lg font-bold text-lg transition-colors"
               >
                 Get Free AI Strategy Consultation
@@ -151,8 +146,7 @@ const October2025AIProductivityBanner = () => {
 
         {/* Explore Content Hub */}
         <div className="text-center mt-10">
-          <Link
-            href="/content-hub"
+          <Link to="/content-hub"
             className="inline-flex items-center gap-2 text-white hover:text-yellow-300 text-lg font-semibold transition-colors"
           >
             Explore More AI Content & Resources

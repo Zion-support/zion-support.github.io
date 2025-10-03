@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function AI2027BreakthroughPromotionalBanner() {
   return (
@@ -33,7 +33,7 @@ export default function AI2027BreakthroughPromotionalBanner() {
 
         <div className="grid md:grid-cols-2 gap-8 mb-12">
           {/* Featured Blog Post */}
-          <Link href="/blog/ai-2027-breakthrough-technologies" className="group">
+          <Link to="/blog/ai-2027-breakthrough-technologies" className="group">
             <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:bg-white/15 transition-all duration-300 hover:scale-105">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-500 rounded-xl flex items-center justify-center">
@@ -60,7 +60,7 @@ export default function AI2027BreakthroughPromotionalBanner() {
           </Link>
 
           {/* Featured Case Study */}
-          <Link href="/case-studies/fortune-500-ai-transformation-2027" className="group">
+          <Link to="/case-studies/fortune-500-ai-transformation-2027" className="group">
             <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:bg-white/15 transition-all duration-300 hover:scale-105">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-teal-500 rounded-xl flex items-center justify-center">
@@ -129,14 +129,12 @@ export default function AI2027BreakthroughPromotionalBanner() {
         {/* Call to Action */}
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
-            <Link
-              href="/services/ai-2027-breakthrough-solutions"
+            <Link to="/services/ai-2027-breakthrough-solutions"
               className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               Explore AI 2027 Solutions
             </Link>
-            <Link
-              href="/blog/ai-2027-breakthrough-technologies"
+            <Link to="/blog/ai-2027-breakthrough-technologies"
               className="border-2 border-white/30 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white/10 transition-all duration-300 backdrop-blur-sm"
             >
               Read Breakthrough Article

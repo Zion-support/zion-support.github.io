@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function July2026QuantumConsciousnessBanner() {
   return (
@@ -52,20 +52,17 @@ export default function July2026QuantumConsciousnessBanner() {
           
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
-            <Link 
-              href="/blog/ai-2026-july-quantum-consciousness-fusion-breakthrough" 
+            <Link to="/blog/ai-2026-july-quantum-consciousness-fusion-breakthrough" 
               className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 transform hover:-translate-y-1 text-lg"
             >
               Read Consciousness Breakthrough →
             </Link>
-            <Link 
-              href="/case-studies/ai-2026-july-quantum-consciousness-100-billion-success" 
+            <Link to="/case-studies/ai-2026-july-quantum-consciousness-100-billion-success" 
               className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1 text-lg"
             >
               View $100B Success Story →
             </Link>
-            <Link 
-              href="/contact" 
+            <Link to="/contact" 
               className="border-2 border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 text-lg"
             >
               Transcend Today

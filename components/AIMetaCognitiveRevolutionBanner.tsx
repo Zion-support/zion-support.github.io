@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function AIMetaCognitiveRevolutionBanner() {
   return (
@@ -44,14 +44,12 @@ export default function AIMetaCognitiveRevolutionBanner() {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link 
-                href="/blog/ai-meta-cognitive-reasoning-2026"
+              <Link to="/blog/ai-meta-cognitive-reasoning-2026"
                 className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-200 text-center"
               >
                 Read Full Article
               </Link>
-              <Link 
-                href="/contact"
+              <Link to="/contact"
                 className="bg-white/20 backdrop-blur-sm border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/30 transition-all duration-200 text-center"
               >
                 Get Implementation Guide

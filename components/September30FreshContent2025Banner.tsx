@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function September30FreshContent2025Banner() {
   return (
@@ -40,7 +40,7 @@ export default function September30FreshContent2025Banner() {
         {/* Content Grid */}
         <div className="grid md:grid-cols-3 gap-8 mb-12">
           {/* Article 1 */}
-          <Link href="/blog/ai-driven-cybersecurity-revolution-2025" className="group">
+          <Link to="/blog/ai-driven-cybersecurity-revolution-2025" className="group">
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border-2 border-purple-400/50 hover:border-purple-300 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/50 h-full">
               <div className="text-5xl mb-4">🛡️</div>
               <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-purple-300 transition-colors">
@@ -66,7 +66,7 @@ export default function September30FreshContent2025Banner() {
           </Link>
 
           {/* Article 2 */}
-          <Link href="/blog/autonomous-cloud-orchestration-2025" className="group">
+          <Link to="/blog/autonomous-cloud-orchestration-2025" className="group">
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border-2 border-cyan-400/50 hover:border-cyan-300 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/50 h-full">
               <div className="text-5xl mb-4">☁️</div>
               <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-300 transition-colors">
@@ -92,7 +92,7 @@ export default function September30FreshContent2025Banner() {
           </Link>
 
           {/* Article 3 */}
-          <Link href="/blog/enterprise-digital-transformation-strategy-2025" className="group">
+          <Link to="/blog/enterprise-digital-transformation-strategy-2025" className="group">
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border-2 border-emerald-400/50 hover:border-emerald-300 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-emerald-500/50 h-full">
               <div className="text-5xl mb-4">🎯</div>
               <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-emerald-300 transition-colors">
@@ -175,7 +175,7 @@ export default function September30FreshContent2025Banner() {
 
         {/* Additional Info */}
         <div className="mt-12 text-center">
-          <Link href="/blog" className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200 font-semibold text-lg transition-colors">
+          <Link to="/blog" className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200 font-semibold text-lg transition-colors">
             <span>Explore All Articles</span>
             <span className="text-2xl">→</span>
           </Link>

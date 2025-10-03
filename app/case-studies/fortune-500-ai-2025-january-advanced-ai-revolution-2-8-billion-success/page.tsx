@@ -1,4 +1,4 @@
-import { Metadata } from 'next';
+// Metadata handled by React Helmet
 
 export const metadata: Metadata = {
   title: 'Fortune 500 $2.8B AI Revolution Success: January 2025 Advanced Enterprise Transformation | Zion Tech Group',

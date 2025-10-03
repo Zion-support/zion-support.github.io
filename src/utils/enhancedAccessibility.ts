@@ -83,7 +83,7 @@ class EnhancedAccessibility {
 
     this.isInitialized = true;
     console.log('Enhanced accessibility initialized');
-  }
+  };
 
   private setupKeyboardNavigation(): void {
     if (!this.config.enableKeyboardNavigation) return;
@@ -95,13 +95,13 @@ class EnhancedAccessibility {
           event.target instanceof HTMLTextAreaElement ||
           event.target instanceof HTMLSelectElement) {
         return;
-      }
+      
 
       // Handle arrow key navigation
       if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
         event.preventDefault();
         this.navigateWithArrows(event.key === 'ArrowDown' ? 1 : -1);
-      }
+      
 
       // Handle tab navigation
       if (event.key === 'Tab') {
@@ -150,7 +150,7 @@ class EnhancedAccessibility {
     
     // Add skip links
     this.addSkipLinks();
-  }
+  
 
   private createAnnouncementRegion(): void {
     const announcement = document.createElement('div');
@@ -159,7 +159,7 @@ class EnhancedAccessibility {
     announcement.className = 'sr-only';
     announcement.id = 'announcements';
     document.body.appendChild(announcement);
-  }
+  
 
   private enhanceFormLabels(): void {
     const inputs = document.querySelectorAll('input, textarea, select');
@@ -181,7 +181,7 @@ class EnhancedAccessibility {
       <a href="#navigation" class="skip-link">Skip to navigation</a>
     `;
     document.body.insertBefore(skipLinks, document.body.firstChild);
-  }
+  
 
   private setupHighContrast(): void {
     if (!this.config.enableHighContrast) return;
@@ -189,7 +189,7 @@ class EnhancedAccessibility {
     // Check for high contrast mode preference
     if (window.matchMedia('(prefers-contrast: high)').matches) {
       document.body.classList.add('high-contrast');
-    }
+    
 
     // Listen for changes in contrast preference
     window.matchMedia('(prefers-contrast: high)').addEventListener('change', (e) => {
@@ -212,7 +212,7 @@ class EnhancedAccessibility {
     document.addEventListener('focusout', (event) => {
       (event.target as HTMLElement).classList.remove('focus-visible');
     });
-  }
+  
 
   private setupARIALabels(): void {
     if (!this.config.enableARIALabels) return;
@@ -237,21 +237,20 @@ class EnhancedAccessibility {
 
     // Check color contrast ratios
     this.checkColorContrast();
-  }
+  
 
   private setupTextScaling(): void {
     if (!this.config.enableTextScaling) return;
 
     // Support for text scaling
     document.body.style.fontSize = '100%';
-    
     // Listen for text scaling changes
     const observer = new ResizeObserver(() => {
       this.updateTextScaling();
     });
     
     observer.observe(document.body);
-  }
+  
 
   private setupMotionReduction(): void {
     if (!this.config.enableMotionReduction) return;
@@ -259,17 +258,17 @@ class EnhancedAccessibility {
     // Check for reduced motion preference
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       document.body.classList.add('reduced-motion');
-    }
+    
 
     // Listen for changes in motion preference
     window.matchMedia('(prefers-reduced-motion: reduce)').addEventListener('change', (e) => {
       if (e.matches) {
         document.body.classList.add('reduced-motion');
-      } else {
+      ' else {
         document.body.classList.remove('reduced-motion');
       }
     });
-  }
+  
 
   private setupVoiceControl(): void {
     if (!this.config.enableVoiceControl) return;
@@ -280,7 +279,7 @@ class EnhancedAccessibility {
         this.activateVoiceControl();
       }
     });
-  }
+  
 
   private setupTouchAccessibility(): void {
     if (!this.config.enableTouchAccessibility) return;
@@ -296,7 +295,7 @@ class EnhancedAccessibility {
         element.style.minHeight = '44px';
       }
     });
-  }
+  
 
   private getFocusableElements(): HTMLElement[] {
     const focusableSelectors = [
@@ -305,27 +304,27 @@ class EnhancedAccessibility {
       'input:not([disabled])',
       'select:not([disabled])',
       'textarea:not([disabled])',
-      '[tabindex]:not([tabindex="-1"])'
+      '[tabindex]:not([tabindex="-1"])
     ].join(', ');
 
     return Array.from(document.querySelectorAll(focusableSelectors)) as HTMLElement[];
-  }
+  
 
   private checkColorContrast(): void {
     // This would typically use a color contrast checking library
     console.log('Checking color contrast...');
-  }
+  
 
   private updateTextScaling(): void {
     // Update text scaling based on user preferences
     const fontSize = window.getComputedStyle(document.body).fontSize;
     console.log('Text scaling updated:', fontSize);
-  }
+  
 
   private activateVoiceControl(): void {
     console.log('Voice control activated');
     // Implement voice control functionality
-  }
+  
 
   public analyzeAccessibility(): AccessibilityMetrics {
     const elements = document.querySelectorAll('*');
@@ -382,7 +381,7 @@ class EnhancedAccessibility {
     score += contrastScore;
 
     return Math.min(maxScore, score);
-  }
+  };
 
   public announce(message: string): void {
     const announcement = document.getElementById('announcements');
@@ -393,7 +392,7 @@ class EnhancedAccessibility {
 
   public getMetrics(): AccessibilityMetrics {
     return { ...this.metrics };
-  }
+  `
 
   public getReport(): string {
     const metrics = this.analyzeAccessibility();
@@ -405,7 +404,7 @@ Enhanced Accessibility Report:
 - Alt Texts: ${metrics.altTexts}
 - Heading Structure: ${metrics.headingStructure}
 - Issues Found: ${metrics.issuesFound}
-- Score: ${metrics.score}%
+- Score: ${metrics.score`%
 `;
   }
 }
@@ -416,4 +415,4 @@ export const enhancedAccessibility = new EnhancedAccessibility();
 // Auto-initialize in browser environment
 if (typeof window !== 'undefined') {
   enhancedAccessibility.initialize();
-}
+`

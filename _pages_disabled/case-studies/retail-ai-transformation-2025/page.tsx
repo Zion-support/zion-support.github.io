@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'Case Study: $80M Retail AI Transformation Success Story | Zion Tech Group',

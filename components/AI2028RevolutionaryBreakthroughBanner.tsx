@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function AI2028RevolutionaryBreakthroughBanner() {
   return (
@@ -52,24 +52,21 @@ export default function AI2028RevolutionaryBreakthroughBanner() {
         
         <div className="text-center">
           <div className="grid md:grid-cols-3 gap-4 mb-6">
-            <Link 
-              href="/blog/ai-2028-neuromorphic-superintelligence"
+            <Link to="/blog/ai-2028-neuromorphic-superintelligence"
               className="bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-lg p-4 border border-white/30 transition-all duration-300 hover:scale-105"
             >
               <h4 className="font-bold text-lg mb-2">🧠 Neuromorphic Technology</h4>
               <p className="text-sm opacity-90">Learn about brain-inspired computing</p>
             </Link>
             
-            <Link 
-              href="/blog/ai-2028-next-generation-autonomous-enterprise"
+            <Link to="/blog/ai-2028-next-generation-autonomous-enterprise"
               className="bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-lg p-4 border border-white/30 transition-all duration-300 hover:scale-105"
             >
               <h4 className="font-bold text-lg mb-2">🏭 Autonomous Enterprise</h4>
               <p className="text-sm opacity-90">Complete operational autonomy</p>
             </Link>
             
-            <Link 
-              href="/case-studies/ai-2028-autonomous-enterprise-mega-success"
+            <Link to="/case-studies/ai-2028-autonomous-enterprise-mega-success"
               className="bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-lg p-4 border border-white/30 transition-all duration-300 hover:scale-105"
             >
               <h4 className="font-bold text-lg mb-2">💰 $100B Success Story</h4>
@@ -77,8 +74,7 @@ export default function AI2028RevolutionaryBreakthroughBanner() {
             </Link>
           </div>
           
-          <Link 
-            href="/contact"
+          <Link to="/contact"
             className="inline-block bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 transform hover:scale-105 shadow-lg"
           >
             🚀 Start Your AI 2028 Transformation

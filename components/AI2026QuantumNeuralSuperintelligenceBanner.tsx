@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { ArrowRight, Atom, Brain, Zap, Target } from 'lucide-react';
 
 const AI2026QuantumNeuralSuperintelligenceBanner: React.FC = () => {
@@ -102,16 +102,14 @@ const AI2026QuantumNeuralSuperintelligenceBanner: React.FC = () => {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link 
-              href="/blog/ai-2026-quantum-neural-superintelligence"
+            <Link to="/blog/ai-2026-quantum-neural-superintelligence"
               className="group bg-gradient-to-r from-cyan-600 to-purple-600 hover:from-cyan-700 hover:to-purple-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center space-x-2"
             >
               <span>Explore Quantum AI</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
             
-            <Link 
-              href="/quantum-consultation"
+            <Link to="/quantum-consultation"
               className="group bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 border border-white/30 hover:border-white/50 flex items-center space-x-2"
             >
               <span>Quantum Strategy Session</span>

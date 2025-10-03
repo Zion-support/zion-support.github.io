@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function QuantumTransformationBanner() {
   return (
@@ -46,14 +46,12 @@ export default function QuantumTransformationBanner() {
 
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link
-              href="/blog/ai-2026-quantum-enterprise-transformation-breakthrough"
+            <Link to="/blog/ai-2026-quantum-enterprise-transformation-breakthrough"
               className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-purple-700 hover:to-pink-700 transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
             >
               🔮 Discover the Quantum Revolution
             </Link>
-            <Link
-              href="/case-studies/ai-2026-quantum-transformation-10-billion-success"
+            <Link to="/case-studies/ai-2026-quantum-transformation-10-billion-success"
               className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-green-700 hover:to-emerald-700 transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
             >
               🏆 Read $10B Success Story

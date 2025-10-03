@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { Sparkles, TrendingUp, DollarSign, Zap } from 'lucide-react';
 
 const September30LatestContentBanner: React.FC = () => {
@@ -145,8 +145,7 @@ const September30LatestContentBanner: React.FC = () => {
                 </div>
 
                 {/* CTA Button */}
-                <Link
-                  href={content.slug}
+                <Link to={content.slug}
                   className="group/btn flex items-center justify-center gap-2 w-full bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
                 >
                   <span>{content.type === 'case-study' ? 'Read Success Story' : 'Read Full Guide'}</span>

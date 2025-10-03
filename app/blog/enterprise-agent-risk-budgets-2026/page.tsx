@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
 	title: 'Enterprise Agent Risk Budgets: Safe Autonomy at Scale',
@@ -26,7 +26,7 @@ export default function Page() {
 				Adopt a scorecard that correlates agent outcomes to business metrics, ensuring speed without surprises.
 			</p>
 			<div className="mt-10">
-				<Link href="/blog" className="text-indigo-600 font-semibold">← Back to Blog</Link>
+				<Link to="/blog" className="text-indigo-600 font-semibold">← Back to Blog</Link>
 			</div>
 		</div>
 	);

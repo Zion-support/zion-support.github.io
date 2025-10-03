@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function RevolutionaryAI2026ContentBanner() {
   return (
@@ -41,8 +41,7 @@ export default function RevolutionaryAI2026ContentBanner() {
             <div className="text-3xl mb-3">🧠</div>
             <h3 className="text-lg font-bold mb-2 text-white">Autonomous AI</h3>
             <p className="text-sm text-gray-300 mb-4">90% automation achieved</p>
-            <Link
-              href="/blog/ai-2026-autonomous-enterprise-systems"
+            <Link to="/blog/ai-2026-autonomous-enterprise-systems"
               className="text-cyan-400 text-sm font-semibold hover:text-cyan-300 transition-colors group-hover:translate-x-1 transform"
             >
               Learn More →
@@ -54,8 +53,7 @@ export default function RevolutionaryAI2026ContentBanner() {
             <div className="text-3xl mb-3">💰</div>
             <h3 className="text-lg font-bold mb-2 text-white">$100M ROI</h3>
             <p className="text-sm text-gray-300 mb-4">Success story revealed</p>
-            <Link
-              href="/case-studies/ai-2026-mega-transformation-success-story"
+            <Link to="/case-studies/ai-2026-mega-transformation-success-story"
               className="text-cyan-400 text-sm font-semibold hover:text-cyan-300 transition-colors group-hover:translate-x-1 transform"
             >
               View Story →
@@ -67,8 +65,7 @@ export default function RevolutionaryAI2026ContentBanner() {
             <div className="text-3xl mb-3">⚡</div>
             <h3 className="text-lg font-bold mb-2 text-white">Edge Computing</h3>
             <p className="text-sm text-gray-300 mb-4">Sub-50ms response times</p>
-            <Link
-              href="/services/ai-edge-computing"
+            <Link to="/services/ai-edge-computing"
               className="text-cyan-400 text-sm font-semibold hover:text-cyan-300 transition-colors group-hover:translate-x-1 transform"
             >
               Explore →
@@ -80,8 +77,7 @@ export default function RevolutionaryAI2026ContentBanner() {
             <div className="text-3xl mb-3">🛡️</div>
             <h3 className="text-lg font-bold mb-2 text-white">AI Security</h3>
             <p className="text-sm text-gray-300 mb-4">99.7% threat detection</p>
-            <Link
-              href="/services/cybersecurity-consulting"
+            <Link to="/services/cybersecurity-consulting"
               className="text-cyan-400 text-sm font-semibold hover:text-cyan-300 transition-colors group-hover:translate-x-1 transform"
             >
               Secure Now →
@@ -103,8 +99,7 @@ export default function RevolutionaryAI2026ContentBanner() {
               >
                 📞 Call +1 302 464 0950
               </a>
-              <Link
-                href="/services/ai-2026-revolutionary-solutions"
+              <Link to="/services/ai-2026-revolutionary-solutions"
                 className="border-2 border-white/30 text-white px-8 py-3 rounded-lg font-bold hover:bg-white/10 transition-all"
               >
                 🚀 View AI 2026 Solutions
