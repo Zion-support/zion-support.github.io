@@ -32,10 +32,10 @@ export default function NotFound() {
   ];
 
   return (
-    <div className="text-left"></div>
+    <div className="text-left">
       <div className="text-left">
         {/* Error Code */}</div>
-        <div className="text-left"></div>
+        <div className="text-left">
           <h1 className="text-left">
             404
           </h1>
@@ -43,7 +43,7 @@ export default function NotFound() {
         </div>
 
         {/* Error Message */}
-        <div className="text-left"></div>
+        <div className="text-left">
           <h2 className="text-left">
             Oops! Page Not Found
           </h2>
@@ -54,8 +54,8 @@ export default function NotFound() {
         </div>
 
         {/* Search Bar */}
-        <div className="text-left"></div>
-          <div className="text-left"></div>
+        <div className="text-left">
+          <div className="text-left">
             <input
               type="text"
               placeholder="Search for AI services, articles, or case studies..."
@@ -75,7 +75,7 @@ export default function NotFound() {
           </div>
 
         {/* Popular Pages */}
-        <div className="text-left"></div>
+        <div className="text-left">
           <h3 className="text-left">
             Popular Pages
           </h3>
@@ -97,7 +97,7 @@ export default function NotFound() {
           </div>
 
         {/* CTA Buttons */}
-        <div className="text-left"></div>
+        <div className="text-left">
           <Link
             href="/"
             className="text-left">
@@ -111,14 +111,14 @@ export default function NotFound() {
         </div>
 
         {/* Help Section */}
-        <div className="text-left"></div>
+        <div className="text-left">
           <h3 className="text-left">
             Still need help?
           </h3>
           <p className="text-left">
             Our AI support team is available 24/7 to assist you with any questions or concerns.
           </p>
-          <div className="text-left"></div>
+          <div className="text-left">
             <a
               href="mailto:kleber@ziontechgroup.com"
               className="text-left">
@@ -133,7 +133,7 @@ export default function NotFound() {
           </div>
 
         {/* Footer Note */}
-        <div className="text-left"></div>
+        <div className="text-left">
           <p>Error Code: 404 | Page Not Found</p>
           <p className="text-left">
             If you believe this is an error, please{' '}
@@ -146,4 +146,4 @@ export default function NotFound() {
         </div>
     </div>
   );
-}</div></div></div></div>
+}</div>

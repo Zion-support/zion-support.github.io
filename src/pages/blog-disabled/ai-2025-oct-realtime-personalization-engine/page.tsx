@@ -2,6 +2,7 @@
 export default function RealtimePersonalizationEngine2025(): void {
   return (
     <>
+    <>
       <Helmet >
         <title>Real-Time AI Personalization Engine 2025 — 98.4% Relevance, 8.7x Conversion Lift, $234M+ Revenue Growth | Zion Tech Group</title>
         <meta name="description"
@@ -391,3 +392,8 @@ export default function RealtimePersonalizationEngine2025(): void {
     </>
   );
 };
+  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>
+  </section>  </section>  </section>  </section>  </section>  </section>  </section>  </section>  </section>
+  </article>
+    </>
+  </header>

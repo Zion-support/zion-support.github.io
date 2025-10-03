@@ -1,10 +1,11 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowLeft, Shield, Lock, Zap, DollarSign, AlertTriangle } from 'lucide-react';
+import React from 'react';'
+import { Helmet } from 'react-helmet-async';'
+import { Link } from 'react-router-dom';'
+import { ArrowLeft, Shield, Lock, Zap, DollarSign, AlertTriangle } from 'lucide-react';'
 
 export default function NextGenSecurityOperations2025(): JSX.Element {
   return (
+    <>
     <>
       <Helmet>
         <title>Next-Gen AI Security Operations 2025 — 99.97% Threat Detection, Sub-Second Response, $2.3B+ Protection | Zion Tech Group</title>
@@ -33,7 +34,7 @@ export default function NextGenSecurityOperations2025(): JSX.Element {
             </h1>
             
             <p className="text-xl text-gray-300 leading-relaxed">
-              Deploy autonomous AI security systems that detect threats with 99.97% accuracy in milliseconds, respond automatically to attacks, and predict zero-day vulnerabilities before they're exploited. Protect $2.3B+ in enterprise assets while reducing security operations costs by 87%.
+              Deploy autonomous AI security systems that detect threats with 99.97% accuracy in milliseconds, respond automatically to attacks, and predict zero-day vulnerabilities before they're exploited. Protect $2.3B+ in enterprise assets while reducing security operations costs by 87%.'
             </p>
           </header>
 
@@ -229,6 +230,7 @@ export default function NextGenSecurityOperations2025(): JSX.Element {
           </div>
         </div>
       </article>
+    </>
     </>
   );
 }

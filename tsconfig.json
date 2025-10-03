@@ -49,17 +49,7 @@
     "_app_disabled/**/*",
     "_conflicted_disabled/**/*",
     "_pages_api_disabled/**/*",
-    "admin-api-disabled/**/*",
-    "api-disabled/**/*",
-    "api.disabled/**/*",
-    "api.disabled.temp/**/*",
-    "api-backup/**/*",
-    "apps.backup/**/*",
-    "automation_backup/**/*",
-    "ai-optimization-backups/**/*",
-    "automation_logs/**/*",
-    "all-automations-reports/**/*",
-    "accessibility-reports/**/*"
+    "src/pages/case-studies/fortune-100-autonomous-operations-transformation-2025.tsx"
   ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

@@ -2,6 +2,7 @@ import React from "react";
 
 export default function AICostOptimizationPlaybook2027(): React.JSX.Element {
   return (
+    <>
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
       <Helmet >
@@ -43,3 +44,5 @@ export default function AICostOptimizationPlaybook2027(): React.JSX.Element {
     </div>
   );
 };
+    </>
+  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>
