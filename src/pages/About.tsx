@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 <<<<<<< HEAD
@@ -50,6 +51,10 @@ const About: React.FC = () => {
     {
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-3097
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd26
 import {
   Target,
   Shield,
@@ -60,7 +65,7 @@ import {
   Phone,
   Award,
   Mail
-} from 'lucide-react'
+} from 'lucide-react';
 
 const About: React.FC = () => {
   const stats = [
@@ -154,6 +159,7 @@ const About: React.FC = () => {
           <section className="mb-16">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
 <<<<<<< HEAD
+<<<<<<< HEAD
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
                   <div className="text-3xl font-bold text-blue-600 mb-2">{stat.value}</div>
@@ -162,6 +168,8 @@ const About: React.FC = () => {
               ))}
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-3097
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd26
               {stats.map((stat, index) => {
                 const Icon = stat.icon;
                 return (
@@ -187,12 +195,15 @@ const About: React.FC = () => {
 <<<<<<< HEAD
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Mission</h3>
                 <p className="text-gray-600">
+<<<<<<< HEAD
                   To revolutionize business operations through innovative AI and technology solutions, 
                   empowering organizations to achieve unprecedented growth and efficiency.
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-3097
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">Our Mission</h2>
                 <p className="text-gray-600">
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd26
                   To democratize advanced AI and technology solutions, making them accessible and affordable 
                   for businesses of all sizes. We believe that cutting-edge technology should be a catalyst 
                   for growth, not a barrier to entry.
@@ -205,12 +216,15 @@ const About: React.FC = () => {
 <<<<<<< HEAD
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Vision</h3>
                 <p className="text-gray-600">
+<<<<<<< HEAD
                   To be the global leader in AI-driven business transformation, creating a world 
                   where technology seamlessly enhances human potential and business success.
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-3097
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">Our Vision</h2>
                 <p className="text-gray-600">
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd26
                   To be the global leader in AI-powered business transformation, creating a world where 
                   every organization can leverage advanced technology to achieve unprecedented levels of 
                   efficiency, innovation, and success.
@@ -222,6 +236,7 @@ const About: React.FC = () => {
           {/* Core Values */}
           <section className="mb-16">
 <<<<<<< HEAD
+<<<<<<< HEAD
             <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Our Core Values</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {values.map((value, index) => (
@@ -230,6 +245,8 @@ const About: React.FC = () => {
                     <value.icon className="w-8 h-8 text-blue-600" />
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-3097
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd26
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Core Values</h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -255,6 +272,7 @@ const About: React.FC = () => {
           {/* Team */}
           <section className="mb-16">
 <<<<<<< HEAD
+<<<<<<< HEAD
             <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Meet Our Team</h2>
             <div className="grid md:grid-cols-3 gap-8">
               {team.map((member, index) => (
@@ -265,6 +283,8 @@ const About: React.FC = () => {
                     </span>
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-3097
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd26
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Meet Our Team</h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -281,12 +301,15 @@ const About: React.FC = () => {
                   <p className="text-blue-600 font-semibold mb-3">{member.role}</p>
                   <p className="text-gray-600 mb-4">{member.description}</p>
 <<<<<<< HEAD
+<<<<<<< HEAD
                   <a 
                     href={`mailto:${member.email}`}
                     className="text-blue-600 hover:text-blue-800 transition-colors"
                   >
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-3097
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd26
                   <a href={`mailto:${member.email}`} className="text-blue-600 hover:text-blue-800 transition-colors">
                     {member.email}
                   </a>
@@ -295,6 +318,7 @@ const About: React.FC = () => {
             </div>
           </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
           {/* Call to Action */}
           <section className="text-center">
@@ -311,6 +335,8 @@ const About: React.FC = () => {
               </a>
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-3097
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-bd26
           {/* Company Info */}
           <section className="mb-16">
             <div className="bg-white rounded-xl shadow-lg p-8">
