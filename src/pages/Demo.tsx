@@ -101,52 +101,52 @@ const Demo: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-600 via-purple-600 to-teal-600 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">,
+      <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <h1 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   Schedule Your Demo
             </h1>
-            <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">,
+            <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   See how our AI solutions can transform your business. Book a personalized demo 
               tailored to your specific needs and challenges.
             </p>
-            <div className="flex items-center justify-center space-x-8 text-blue-100">
-              <div className="flex items-center">
-                <Calendar className="w-5 h-5 mr-2" />
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <Calendar className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 <span >30 minutes</span>
               </div>
-              <div className="flex items-center">
-                <User className="w-5 h-5 mr-2" />
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <User className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 <span >1-on-1 with expert</span>
               </div>
-              <div className="flex items-center">
-                <Play className="w-5 h-5 mr-2" />
-    <div className="min-h-screen bg-gray-50">
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <Play className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-600 via-purple-600 to-teal-600 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">,
+      <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <h1 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   Schedule Your Demo
             </h1>
-            <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">,
+            <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   See how our AI solutions can transform your business. Book a personalized demo 
               tailored to your specific needs and challenges.
             </p>
-            <div className="flex items-center justify-center space-x-8 text-blue-100">
-              <div className="flex items-center">
-                <Calendar className="w-5 h-5 mr-2" />
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <Calendar className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 <span >30 minutes</span>
               </div>
-              <div className="flex items-center">
-                <User className="w-5 h-5 mr-2" />
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <User className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 <span >1-on-1 with expert</span>
               </div>
-              <div className="flex items-center">
-                <Play className="w-5 h-5 mr-2" />
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <Play className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 <span >Live demonstration</span>
               </div>
             </div>
@@ -155,36 +155,35 @@ const Demo: React.FC = () => {
       </section>
 
       {/* Demo Features */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">,
+      <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <h2 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   What You'll See in the Demo';';
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">,
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">,
+            <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
+      <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <h2 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   What You'll See in the Demo';';
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">,
+            <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   Get a comprehensive overview of our AI solutions tailored to your business
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
             {demoFeatures.map((feature, index) => (
-              <div key={index} className="text-center
-                <div className="text-4xl mb-4">{feature.icon}</div>";
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>";
-                <p className="text-gray-600">{feature.description}</p>";
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div key={index} className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">{feature.icon}</div>";
+                <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">{feature.title}</h3>";
+                <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">{feature.description}</p>";
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
             {demoFeatures.map((feature, index) => (
-              <div key={index} className="text-center">
-                <div className="text-4xl mb-4">{feature.icon}</div>";
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>";
-                <p className="text-gray-600">{feature.description}</p>";
+              <div key={index} className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">{feature.icon}</div>";
+                <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">{feature.title}</h3>";
+                <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">{feature.description}</p>";
               </div>
             ))}
           </div>
@@ -192,36 +191,34 @@ const Demo: React.FC = () => {
       </section>
 
       {/* Demo Form */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white rounded-lg shadow-lg p-8">
-            <div className="text-center mb-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">,
+      <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <h2 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   Book Your Demo
               </h2>
-              <p className="text-gray-600">,
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white rounded-lg shadow-lg p-8">
-            <div className="text-center mb-8">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">,
+              <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
+      <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <h2 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   Book Your Demo
               </h2>
-              <p className="text-gray-600">,
+              <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   Fill out the form below and we'll contact you to schedule your personalized demo';';
               </p>
             </div>
 
-            <form onSubmit={handleSubmit} className="space-y-6
-              {/* Personal Information */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <form onSubmit={handleSubmit} className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 <div >
-                  <label htmlFor: "firstName", className="block text-sm font-medium text-gray-700 mb-2">,
-            <form onSubmit={handleSubmit} className="space-y-6">
+                  <label htmlFor: "firstName", className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
+            <form onSubmit={handleSubmit} className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
               {/* Personal Information */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 <div >
-                  <label htmlFor: "firstName", className="block text-sm font-medium text-gray-700 mb-2">,
+                  <label htmlFor: "firstName", className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   First Name *
                   </label>
                   <input type="text",
@@ -230,18 +227,16 @@ const Demo: React.FC = () => {
   required
                     value={formData.firstName}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent",
-                  />
+                    className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 </div>
                 <div >
-                  <label htmlFor: "lastName", className="block text-sm font-medium text-gray-700 mb-2">,
+                  <label htmlFor: "lastName", className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
                     value={formData.firstName}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent",
-                  />
+                    className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 </div>
                 <div >
-                  <label htmlFor: "lastName", className="block text-sm font-medium text-gray-700 mb-2">,
+                  <label htmlFor: "lastName", className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   Last Name *
                   </label>
                   <input type="text",
@@ -250,20 +245,16 @@ const Demo: React.FC = () => {
   required
                     value={formData.lastName}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent",
-                    value={formData.lastName}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent",
-                  />
+                    className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 <div >
-                  <label htmlFor: "email", className="block text-sm font-medium text-gray-700 mb-2">,
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <label htmlFor: "email", className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 <div >
-                  <label htmlFor: "email", className="block text-sm font-medium text-gray-700 mb-2">,
+                  <label htmlFor: "email", className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   Email Address *
                   </label>
                   <input type="email",
@@ -272,18 +263,16 @@ const Demo: React.FC = () => {
   required
                     value={formData.email}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent",
-                  />
+                    className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 </div>
                 <div >
-                  <label htmlFor: "phone", className="block text-sm font-medium text-gray-700 mb-2">,
+                  <label htmlFor: "phone", className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
                     value={formData.email}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent",
-                  />
+                    className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 </div>
                 <div >
-                  <label htmlFor: "phone", className="block text-sm font-medium text-gray-700 mb-2">,
+                  <label htmlFor: "phone", className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   Phone Number
                   </label>
                   <input type="tel",
@@ -291,21 +280,17 @@ const Demo: React.FC = () => {
   name="phone",
   value={formData.phone}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent",
-  value={formData.phone}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent",
-                  />
+                    className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 </div>
               </div>
 
               {/* Company Information */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 <div >
-                  <label htmlFor: "company", className="block text-sm font-medium text-gray-700 mb-2">,
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <label htmlFor: "company", className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 <div >
-                  <label htmlFor: "company", className="block text-sm font-medium text-gray-700 mb-2">,
+                  <label htmlFor: "company", className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   Company Name *
                   </label>
                   <input type="text",
@@ -314,18 +299,16 @@ const Demo: React.FC = () => {
   required
                     value={formData.company}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent",
-                  />
+                    className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 </div>
                 <div >
-                  <label htmlFor: "jobTitle", className="block text-sm font-medium text-gray-700 mb-2">,
+                  <label htmlFor: "jobTitle", className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
                     value={formData.company}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent",
-                  />
+                    className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 </div>
                 <div >
-                  <label htmlFor: "jobTitle", className="block text-sm font-medium text-gray-700 mb-2">,
+                  <label htmlFor: "jobTitle", className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   Job Title *
                   </label>
                   <input type="text",
@@ -334,20 +317,16 @@ const Demo: React.FC = () => {
   required
                     value={formData.jobTitle}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent",
-                    value={formData.jobTitle}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent",
-                  />
+                    className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 <div >
-                  <label htmlFor: "companySize", className="block text-sm font-medium text-gray-700 mb-2">,
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <label htmlFor: "companySize", className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 <div >
-                  <label htmlFor: "companySize", className="block text-sm font-medium text-gray-700 mb-2">,
+                  <label htmlFor: "companySize", className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   Company Size *
                   </label>
                   <select id="companySize",
@@ -355,19 +334,15 @@ const Demo: React.FC = () => {
   required
                     value={formData.companySize}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent",
-                    value={formData.companySize}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent",
-                  >
+                    className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                     <option value: ">Select company size</option>", {companySizes.map((size)  => (
                       <option key="{size} value={size}">{size}</option>
                     ))}
                   </select>
                 </div>
                 <div >
-                  <label htmlFor: "useCase", className="block text-sm font-medium text-gray-700 mb-2">,
-                  <label htmlFor: "useCase", className="block text-sm font-medium text-gray-700 mb-2">,
+                  <label htmlFor: "useCase", className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
+                  <label htmlFor: "useCase", className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   Primary Use Case *
                   </label>
                   <select id="useCase",
@@ -375,11 +350,7 @@ const Demo: React.FC = () => {
   required
                     value={formData.useCase}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent",
-                    value={formData.useCase}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent",
-                  >
+                    className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                     <option value: ">Select use case</option>", {useCases.map((useCase)  => (
                       <option key="{useCase} value={useCase}">{useCase}</option>
                     ))}
@@ -388,12 +359,12 @@ const Demo: React.FC = () => {
               </div>
 
               {/* Scheduling */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 <div >
-                  <label htmlFor: "preferredDate", className="block text-sm font-medium text-gray-700 mb-2">,
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  <label htmlFor: "preferredDate", className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 <div >
-                  <label htmlFor: "preferredDate", className="block text-sm font-medium text-gray-700 mb-2">,
+                  <label htmlFor: "preferredDate", className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   Preferred Date
                   </label>
                   <input type="date",
@@ -401,48 +372,38 @@ const Demo: React.FC = () => {
   name="preferredDate",
   value={formData.preferredDate}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent",
-                  />
+                    className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 </div>
                 <div >
-                  <label htmlFor: "preferredTime", className="block text-sm font-medium text-gray-700 mb-2">,
+                  <label htmlFor: "preferredTime", className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   value={formData.preferredDate}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent",
-                  />
+                    className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 </div>
                 <div >
-                  <label htmlFor: "preferredTime", className="block text-sm font-medium text-gray-700 mb-2">,
+                  <label htmlFor: "preferredTime", className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   Preferred Time
                   </label>
                   <select id="preferredTime",
   name="preferredTime",
   value={formData.preferredTime}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent",
-  value={formData.preferredTime}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent",
-                  >
+                    className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                     <option value: ">Select time</option>", {timeSlots.map((time)  => (
                       <option key="{time} value={time}">{time}</option>
                     ))}
                   </select>
                 </div>
                 <div >
-                  <label htmlFor: "timeZone", className="block text-sm font-medium text-gray-700 mb-2">,
-                  <label htmlFor: "timeZone", className="block text-sm font-medium text-gray-700 mb-2">,
+                  <label htmlFor: "timeZone", className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
+                  <label htmlFor: "timeZone", className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   Time Zone
                   </label>
                   <select id="timeZone",
   name="timeZone",
   value={formData.timeZone}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent",
-  value={formData.timeZone}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent",
-                  >
+                    className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                     <option value: ">Select timezone</option>", <option value: "EST", >Eastern Time (EST)</h3>
                     <option value: "CST", >Central Time (CST)</h3>
                     <option value: "MST", >Mountain Time (MST)</h3>
@@ -453,8 +414,8 @@ const Demo: React.FC = () => {
               </div>
 
               <div >
-                <label htmlFor: "message", className="block text-sm font-medium text-gray-700 mb-2">,
-                <label htmlFor: "message", className="block text-sm font-medium text-gray-700 mb-2">,
+                <label htmlFor: "message", className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
+                <label htmlFor: "message", className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   Additional Information
                 </label>
                 <textarea id="message",
@@ -463,31 +424,27 @@ const Demo: React.FC = () => {
                   value={formData.message}
                   onChange={handleInputChange}
                   placeholder="Tell us about your specific needs, challenges, or questions...",
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent",
-                />
+                  className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
               </div>
 
-              <div className="text-center">
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 <button type="submit",
-  className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-lg",
-                >
+  className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                   Schedule My Demo
                 </button>
-                <p className="text-sm text-gray-500 mt-4">
+                <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                   value={formData.message}
                   onChange={handleInputChange}
                   placeholder="Tell us about your specific needs, challenges, or questions...",
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent",
-                />
+                  className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
               </div>
 
-              <div className="text-center">
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 <button type="submit",
-  className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-lg",
-                >
+  className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                   Schedule My Demo
                 </button>
-                <p className="text-sm text-gray-500 mt-4">
+                <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                   * Required fields. We'll contact you within 24 hours to confirm your demo time.';';
                 </p>
               </div>
@@ -497,48 +454,47 @@ const Demo: React.FC = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">,
+      <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <h2 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   What Our Clients Say
             </h2>
-            <p className="text-xl text-gray-600">,
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">,
+            <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
+      <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <h2 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   What Our Clients Say
             </h2>
-            <p className="text-xl text-gray-600">,
+            <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   See what happens when you schedule a demo
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-gray-50 rounded-lg p-8
-                <div className="flex items-center mb-4">
+              <div key={index} className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                    <Star key={i} className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                   ))}
                 </div>
-                <p className="text-gray-700 mb-6 italic"{testimonial.content}"</p>";
+                <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">";
                 <div >
-                  <p className="font-semibold text-gray-900">{testimonial.name}</p>";
-                  <p className="text-gray-600">{testimonial.role}, {testimonial.company}</p>";
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                  <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">{testimonial.name}</p>";
+                  <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">{testimonial.role}, {testimonial.company}</p>";
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-gray-50 rounded-lg p-8">
-                <div className="flex items-center mb-4">
+              <div key={index} className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                    <Star key={i} className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                   ))}
                 </div>
-                <p className="text-gray-700 mb-6 italic">"{testimonial.content}"</p>";
+                <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">"{testimonial.content}"</p>";
                 <div >
-                  <p className="font-semibold text-gray-900">{testimonial.name}</p>";
-                  <p className="text-gray-600">{testimonial.role}, {testimonial.company}</p>";
+                  <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">{testimonial.name}</p>";
+                  <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">{testimonial.role}, {testimonial.company}</p>";
                 </div>
               </div>
             ))}
@@ -547,35 +503,31 @@ const Demo: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">,
+      <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <h2 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   Ready to See AI in Action?
           </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">,
+          <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   Join thousands of businesses that have transformed their operations with our AI solutions.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
             <Link to="/contact",
-  className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors",
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">,
+  className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <h2 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   Ready to See AI in Action?
           </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">,
+          <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   Join thousands of businesses that have transformed their operations with our AI solutions.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
             <Link to="/contact",
-  className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors",
-            >
+  className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
               Contact Us Now
             </Link>
             <Link to="/case-studies",
-  className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors",
-  className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors",
-            >
+  className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
               View Success Stories
             </Link>
           </div>
@@ -649,41 +601,37 @@ const Demo: React.FC = () => {
           <meta name="description" content="Thank you for requesting a demo. We'll contact you soon to schedule your personalized demonstration." />
         </Helmet>
 
-        <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-          <div className="max-w-md mx-auto text-center">
-            <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-              <CheckCircle className="h-8 w-8 text-green-600" />
+        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <CheckCircle className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
             </div>
-            <h1 className="text-3xl font-bold text-gray-900 mb-4">,
+            <h1 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   Demo Request Submitted!
             </h1>
-            <p className="text-lg text-gray-600 mb-8">,
+            <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   Thank you for your interest in our solutions. Our team will contact you within 24 hours to schedule your personalized demonstration.
             </p>
-            <div className="space-y-4">
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
               <Link to="/",
-  className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors",
-        <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-          <div className="max-w-md mx-auto text-center">
-            <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-              <CheckCircle className="h-8 w-8 text-green-600" />
+  className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <CheckCircle className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
             </div>
-            <h1 className="text-3xl font-bold text-gray-900 mb-4">,
+            <h1 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   Demo Request Submitted!
             </h1>
-            <p className="text-lg text-gray-600 mb-8">,
+            <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   Thank you for your interest in our solutions. Our team will contact you within 24 hours to schedule your personalized demonstration.
             </p>
-            <div className="space-y-4">
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
               <Link to="/",
-  className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors",
-              >
+  className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 Return to Home
               </Link>
               <Link to="/contact",
-  className="block text-blue-600 hover:text-blue-700 font-semibold",
-  className="block text-blue-600 hover:text-blue-700 font-semibold",
-              >
+  className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 Contact Us Directly
               </Link>
             </div>
@@ -705,50 +653,50 @@ const Demo: React.FC = () => {
         <link rel="canonical", href ="https://ziontechgroup.com/demo" />
       </Helmet>
 
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
         {/* Hero Section */}
-        <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">,
+        <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <h1 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   Request a Demo
               </h1>
-              <p className="text-xl mb-8 max-w-3xl mx-auto">,
+              <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   See our AI and IT solutions in action. Schedule a personalized demonstration tailored to your business needs.
               </p>
-              <div className="flex items-center justify-center space-x-8 text-sm">
-                <div className="flex items-center">
-                  <Clock className="h-4 w-4 mr-2" />,
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                  <Clock className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   30-minute session
                 </div>
-                <div className="flex items-center">
-                  <User className="h-4 w-4 mr-2" />,
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                  <User className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   Expert presenter
                 </div>
-                <div className="flex items-center">
-                  <Star className="h-4 w-4 mr-2" />,
-      <div className="min-h-screen bg-gray-50">
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                  <Star className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
+      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
         {/* Hero Section */}
-        <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">,
+        <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <h1 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   Request a Demo
               </h1>
-              <p className="text-xl mb-8 max-w-3xl mx-auto">,
+              <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   See our AI and IT solutions in action. Schedule a personalized demonstration tailored to your business needs.
               </p>
-              <div className="flex items-center justify-center space-x-8 text-sm">
-                <div className="flex items-center">
-                  <Clock className="h-4 w-4 mr-2" />,
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                  <Clock className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   30-minute session
                 </div>
-                <div className="flex items-center">
-                  <User className="h-4 w-4 mr-2" />,
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                  <User className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   Expert presenter
                 </div>
-                <div className="flex items-center">
-                  <Star className="h-4 w-4 mr-2" />,
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                  <Star className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   Customized demo
                 </div>
               </div>
@@ -757,36 +705,34 @@ const Demo: React.FC = () => {
         </section>
 
         {/* Demo Form */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              <div className="text-center mb-8">
-                <h2 className="text-3xl font-bold text-gray-900 mb-4">,
+        <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <h2 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   Schedule Your Demo
                 </h2>
-                <p className="text-gray-600">,
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              <div className="text-center mb-8">
-                <h2 className="text-3xl font-bold text-gray-900 mb-4">,
+                <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
+        <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <h2 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   Schedule Your Demo
                 </h2>
-                <p className="text-gray-600">,
+                <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   Fill out the form below and we'll contact you to schedule your personalized demonstration.';';
                 </p>
               </div>
 
-              <form onSubmit={handleSubmit} className="space-y-6
-                {/* Personal Information */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <form onSubmit={handleSubmit} className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                   <div >
-                    <label htmlFor: "firstName", className="block text-sm font-medium text-gray-700 mb-1">,
-              <form onSubmit={handleSubmit} className="space-y-6">
+                    <label htmlFor: "firstName", className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
+              <form onSubmit={handleSubmit} className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 {/* Personal Information */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                   <div >
-                    <label htmlFor: "firstName", className="block text-sm font-medium text-gray-700 mb-1">,
+                    <label htmlFor: "firstName", className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   First Name *
                     </label>
                     <input type="text",
@@ -795,16 +741,14 @@ const Demo: React.FC = () => {
   value={formData.firstName}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500",
-                    />
+                      className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                   </div>
                   <div >
-                    <label htmlFor: "lastName", className="block text-sm font-medium text-gray-700 mb-1">,
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500",
-                    />
+                    <label htmlFor: "lastName", className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
+                      className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                   </div>
                   <div >
-                    <label htmlFor: "lastName", className="block text-sm font-medium text-gray-700 mb-1">,
+                    <label htmlFor: "lastName", className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   Last Name *
                     </label>
                     <input type="text",
@@ -813,18 +757,16 @@ const Demo: React.FC = () => {
   value={formData.lastName}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500",
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500",
-                    />
+                      className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                   </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                   <div >
-                    <label htmlFor: "email", className="block text-sm font-medium text-gray-700 mb-1">,
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <label htmlFor: "email", className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                   <div >
-                    <label htmlFor: "email", className="block text-sm font-medium text-gray-700 mb-1">,
+                    <label htmlFor: "email", className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   Email Address *
                     </label>
                     <input type="email",
@@ -833,16 +775,14 @@ const Demo: React.FC = () => {
   value={formData.email}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500",
-                    />
+                      className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                   </div>
                   <div >
-                    <label htmlFor: "phone", className="block text-sm font-medium text-gray-700 mb-1">,
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500",
-                    />
+                    <label htmlFor: "phone", className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
+                      className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                   </div>
                   <div >
-                    <label htmlFor: "phone", className="block text-sm font-medium text-gray-700 mb-1">,
+                    <label htmlFor: "phone", className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   Phone Number
                     </label>
                     <input type="tel",
@@ -850,17 +790,13 @@ const Demo: React.FC = () => {
   name="phone",
   value={formData.phone}
                       onChange={handleInputChange}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500",
-  value={formData.phone}
-                      onChange={handleInputChange}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500",
-                    />
+                      className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                   </div>
                 </div>
 
                 <div >
-                  <label htmlFor: "company", className="block text-sm font-medium text-gray-700 mb-1">,
-                  <label htmlFor: "company", className="block text-sm font-medium text-gray-700 mb-1">,
+                  <label htmlFor: "company", className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
+                  <label htmlFor: "company", className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   Company *
                   </label>
                   <input type="text",
@@ -869,25 +805,19 @@ const Demo: React.FC = () => {
   value={formData.company}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500",
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500",
-                  />
+                    className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 </div>
 
                 <div >
-                  <label htmlFor: "useCase", className="block text-sm font-medium text-gray-700 mb-1">,
-                  <label htmlFor: "useCase", className="block text-sm font-medium text-gray-700 mb-1">,
+                  <label htmlFor: "useCase", className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
+                  <label htmlFor: "useCase", className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   Primary Use Case
                   </label>
                   <select id="useCase",
   name="useCase",
   value={formData.useCase}
                     onChange={handleInputChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500",
-  value={formData.useCase}
-                    onChange={handleInputChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500",
-                  >
+                    className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                     <option value: ">Select a use case</option>", {useCases.map((useCase)  => (
                       <option key="{useCase} value={useCase}">
                         {useCase}
@@ -896,23 +826,19 @@ const Demo: React.FC = () => {
                   </select>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                   <div >
-                    <label htmlFor: "preferredTime", className="block text-sm font-medium text-gray-700 mb-1">,
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <label htmlFor: "preferredTime", className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                   <div >
-                    <label htmlFor: "preferredTime", className="block text-sm font-medium text-gray-700 mb-1">,
+                    <label htmlFor: "preferredTime", className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   Preferred Time Slot
                     </label>
                     <select id="preferredTime",
   name="preferredTime",
   value={formData.preferredTime}
                       onChange={handleInputChange}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500",
-  value={formData.preferredTime}
-                      onChange={handleInputChange}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500",
-                    >
+                      className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                       <option value: ">Select a time</option>", {timeSlots.map((time)  => (
                         <option key="{time} value={time}">
                           {time}
@@ -921,19 +847,15 @@ const Demo: React.FC = () => {
                     </select>
                   </div>
                   <div >
-                    <label htmlFor: "timeZone", className="block text-sm font-medium text-gray-700 mb-1">,
-                    <label htmlFor: "timeZone", className="block text-sm font-medium text-gray-700 mb-1">,
+                    <label htmlFor: "timeZone", className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
+                    <label htmlFor: "timeZone", className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   Time Zone
                     </label>
                     <select id="timeZone",
   name="timeZone",
   value={formData.timeZone}
                       onChange={handleInputChange}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500",
-  value={formData.timeZone}
-                      onChange={handleInputChange}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500",
-                    >
+                      className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                       <option value: ">Select time zone</option>", <option value: "EST", >Eastern Time (EST)</h3>
                       <option value: "CST", >Central Time (CST)</h3>
                       <option value: "MST", >Mountain Time (MST)</h3>
@@ -947,8 +869,8 @@ const Demo: React.FC = () => {
                 </div>
 
                 <div >
-                  <label htmlFor: "message", className="block text-sm font-medium text-gray-700 mb-1">,
-                  <label htmlFor: "message", className="block text-sm font-medium text-gray-700 mb-1">,
+                  <label htmlFor: "message", className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
+                  <label htmlFor: "message", className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   Additional Information
                   </label>
                   <textarea id="message",
@@ -957,25 +879,21 @@ const Demo: React.FC = () => {
                     onChange={handleInputChange}
                     rows: {4}
                     placeholder="Tell us about your specific needs, challenges, or questions...",
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500",
-                  />
+                    className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 </div>
 
-                <div className="text-center">
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                   <button type="submit",
-  className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors",
-                  >
-                    <Play className="mr-2 h-5 w-5" />,
+  className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                    <Play className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
                     placeholder="Tell us about your specific needs, challenges, or questions...",
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500",
-                  />
+                    className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 </div>
 
-                <div className="text-center">
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                   <button type="submit",
-  className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors",
-                  >
-                    <Play className="mr-2 h-5 w-5" />,
+  className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                    <Play className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   Request Demo
                   </button>
                 </div>
@@ -985,82 +903,82 @@ const Demo: React.FC = () => {
         </section>
 
         {/* Benefits Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">,
+        <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <h2 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   Why Schedule a Demo?
               </h2>
-              <p className="text-xl text-gray-600">,
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">,
+              <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
+        <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <h2 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   Why Schedule a Demo?
               </h2>
-              <p className="text-xl text-gray-600">,
+              <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   See firsthand how our solutions can transform your business
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <User className="h-8 w-8 text-blue-600" />
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                  <User className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">,
+                <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   Personalized Experience
                 </h3>
-                <p className="text-gray-600">,
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <User className="h-8 w-8 text-blue-600" />
+                <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                  <User className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">,
+                <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   Personalized Experience
                 </h3>
-                <p className="text-gray-600">,
+                <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   Our experts tailor the demonstration to your specific industry and use cases.
                 </p>
               </div>
 
-              <div className="text-center">
-                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <CheckCircle className="h-8 w-8 text-green-600" />
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                  <CheckCircle className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">,
+                <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   Real-World Examples
                 </h3>
-                <p className="text-gray-600">,
-              <div className="text-center">
-                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <CheckCircle className="h-8 w-8 text-green-600" />
+                <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                  <CheckCircle className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">,
+                <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   Real-World Examples
                 </h3>
-                <p className="text-gray-600">,
+                <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   See our solutions in action with real business scenarios and case studies.
                 </p>
               </div>
 
-              <div className="text-center">
-                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Mail className="h-8 w-8 text-purple-600" />
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                  <Mail className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">,
+                <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   Expert Q&A
                 </h3>
-                <p className="text-gray-600">,
-              <div className="text-center">
-                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Mail className="h-8 w-8 text-purple-600" />
+                <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                  <Mail className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">,
+                <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   Expert Q&A
                 </h3>
-                <p className="text-gray-600">,
+                <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   Get answers to your specific questions from our technical experts.
                 </p>
               </div>

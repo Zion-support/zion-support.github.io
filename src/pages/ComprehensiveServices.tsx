@@ -241,45 +241,36 @@ const ComprehensiveServices: React.FC = () => {
   const ServiceCard: ({ service }: { service: any })  => {
     const Icon: service.icon;,,,
   return (
-      <div className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 overflow-hidden">
+      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
         <div className: {`bg-gradient-to-br ${service.color} p-6 text-white`}>`;`;
-          {Icon ? <Icon className="w-12 h-12 mb-4" /> : <span className ="w-12 h-12 mb-4">🧩</span>}";
-          <h3 className="text-xl font-bold mb-2">{service.title}</h3>";
-          <p className="text-white/90 mb-4">{service.description}</p>";
-          <div className="flex items-center justify-between">
-            <span className="text-sm font-semibold bg-white/20 px-3 py-1 rounded-full
-              {service.pricing}
-            </span>
-            <Link to: {service.link}
-              className="text-white hover:text-white/80 transition-colors",
-      <div className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 overflow-hidden">
+          {Icon ? <Icon className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white"> : <span className ="w-12 h-12 mb-4">🧩</span>}";
+          <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">{service.title}</h3>";
+          <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">{service.description}</p>";
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
         <div className= {`bg-gradient-to-br ${service.color} p-6 text-white`}>`;`;
-          {Icon ? <Icon className="w-12 h-12 mb-4" /> : <span className ="w-12 h-12 mb-4">🧩</span>}";
-          <h3 className="text-xl font-bold mb-2">{service.title}</h3>";
-          <p className="text-white/90 mb-4">{service.description}</p>";
-          <div className="flex items-center justify-between">
-            <span className="text-sm font-semibold bg-white/20 px-3 py-1 rounded-full">
+          {Icon ? <Icon className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white"> : <span className ="w-12 h-12 mb-4">🧩</span>}";
+          <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">{service.title}</h3>";
+          <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">{service.description}</p>";
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
               {service.pricing}
             </span>
             <Link to: {service.link}
-              className="text-white hover:text-white/80 transition-colors",
-            >
+              className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
               Learn More →
             </Link>
           </div>
         </div>
-        <div className="p-6">
-          <h4 className="font-semibold text-gray-800 mb-3">Key Features:</h4>";,
-          <ul className="space-y-2
+        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <h4 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Key Features:</h4>";,
+          <ul className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">✔️</span>";,
+        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <h4 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Key Features:</h4>";,
+          <ul className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
             {service.features.map((feature: string, index: number)  => (,,
-              <li key={index} className="flex items-center text-sm text-gray-600
-                <span className="w-4 h-4 text-green-500 mr-2 flex-shrink-0">✔️</span>";,
-        <div className="p-6">
-          <h4 className="font-semibold text-gray-800 mb-3">Key Features:</h4>";,
-          <ul className="space-y-2">
-            {service.features.map((feature: string, index: number)  => (,,
-              <li key={index} className="flex items-center text-sm text-gray-600">
-                <span className="w-4 h-4 text-green-500 mr-2 flex-shrink-0">✔️</span>";,
+              <li key={index} className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">✔️</span>";,
                 {feature}
               </li>
             ))}
@@ -290,76 +281,72 @@ const ComprehensiveServices: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
-      <div className="container mx-auto px-4 py-12">
+    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">,";,
-  Comprehensive <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Services</span>";,
+        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <h1 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,";,
+  Comprehensive <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Services</span>";,
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">,";,
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
-      <div className="container mx-auto px-4 py-12">
+          <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,";,
+    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">,";,
-  Comprehensive <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Services</span>";,
+        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <h1 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,";,
+  Comprehensive <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Services</span>";,
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">,";,
+          <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,";,
   Discover our full range of cutting-edge AI, micro SaaS, and IT solutions designed to transform your business operations and drive measurable results.
           </p>
           
           {/* Contact CTA */}
-          <div className="bg-white rounded-lg shadow-lg p-6 max-w-2xl mx-auto">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Ready to Get Started?</h2>";,
-            <p className="text-gray-600 mb-6">Contact us today for a free consultation and custom pricing.</p>";,
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <h2 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Ready to Get Started?</h2>";,
+            <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Contact us today for a free consultation and custom pricing.</p>";,
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
               <a href="tel:+13024640950" ,";,
-  className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center",
-              >
+  className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 Call +1 302 464 0950
               </a>
               <a href="mailto:kleber@ziontechgroup.com" ,";,
-  className="border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors text-center",
-          <div className="bg-white rounded-lg shadow-lg p-6 max-w-2xl mx-auto">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Ready to Get Started?</h2>";,
-            <p className="text-gray-600 mb-6">Contact us today for a free consultation and custom pricing.</p>";,
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+  className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <h2 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Ready to Get Started?</h2>";,
+            <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Contact us today for a free consultation and custom pricing.</p>";,
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
               <a href="tel:+13024640950" ,";,
-  className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center",
-              >
+  className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 Call +1 302 464 0950
               </a>
               <a href="mailto:kleber@ziontechgroup.com" ,";,
-  className="border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors text-center",
-              >
+  className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 Email Us
               </a>
             </div>
-            <p className="text-sm text-gray-500 mt-4">,";,
-            <p className="text-sm text-gray-500 mt-4">,";,
+            <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,";,
+            <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,";,
   364 E Main St STE 1008, Middletown, DE 19709
             </p>
           </div>
         </div>
 
         {/* Micro SaaS Services */}
-        <section className="mb-16">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Micro SaaS Solutions</h2>";,
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">,";,
+        <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <h2 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Micro SaaS Solutions</h2>";,
+            <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,";,
   Specialized software-as-a-service solutions designed for specific business needs with affordable pricing and quick deployment.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <section className="mb-16">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Micro SaaS Solutions</h2>";,
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">,";,
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+        <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <h2 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Micro SaaS Solutions</h2>";,
+            <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,";,
   Specialized software-as-a-service solutions designed for specific business needs with affordable pricing and quick deployment.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
             {microSaasServices.map((service)  => (
               <ServiceCard key="{service.id} service: {service} /">
             ))}
@@ -367,22 +354,22 @@ const ComprehensiveServices: React.FC = () => {
         </section>
 
         {/* AI Services */}
-        <section className="mb-16">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">AI & Machine Learning Services</h2>";,
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">,";,
+        <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <h2 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">AI & Machine Learning Services</h2>";,
+            <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,";,
   Advanced artificial intelligence solutions that automate processes, analyze data, and provide intelligent insights for your business.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <section className="mb-16">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">AI & Machine Learning Services</h2>";,
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">,";,
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+        <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <h2 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">AI & Machine Learning Services</h2>";,
+            <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,";,
   Advanced artificial intelligence solutions that automate processes, analyze data, and provide intelligent insights for your business.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
             {aiServices.map((service)  => (
               <ServiceCard key="{service.id} service: {service} /">
             ))}
@@ -390,22 +377,22 @@ const ComprehensiveServices: React.FC = () => {
         </section>
 
         {/* IT Services */}
-        <section className="mb-16">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">IT & Technology Services</h2>";,
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">,";,
+        <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <h2 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">IT & Technology Services</h2>";,
+            <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,";,
   Comprehensive IT services including cloud migration, DevOps automation, and cutting-edge technology implementations.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <section className="mb-16">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">IT & Technology Services</h2>";,
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">,";,
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+        <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <h2 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">IT & Technology Services</h2>";,
+            <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,";,
   Comprehensive IT services including cloud migration, DevOps automation, and cutting-edge technology implementations.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
             {itServices.map((service)  => (
               <ServiceCard key="{service.id} service: {service} /">
             ))}
@@ -413,110 +400,106 @@ const ComprehensiveServices: React.FC = () => {
         </section>
 
         {/* Why Choose Us */}
-        <section className="bg-white rounded-xl shadow-lg p-8 mb-16">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose Zion Tech Group?</h2>";,
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">,";,
+        <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <h2 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Why Choose Zion Tech Group?</h2>";,
+            <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,";,
   We deliver exceptional value through innovation, expertise, and customer-focused solutions.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Star className="w-8 h-8 text-blue-600" />";,
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <Star className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">";,
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Proven Expertise</h3>";,
-              <p className="text-gray-600">10+ years of experience in AI and IT solutions</p>";,
+              <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Proven Expertise</h3>";,
+              <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">10+ years of experience in AI and IT solutions</p>";,
             </div>
-            <div className="text-center">
-              <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <TrendingUp className="w-8 h-8 text-green-600" />";,
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <TrendingUp className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">";,
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Measurable Results</h3>";,
-              <p className="text-gray-600">Average 75% cost reduction and 10x efficiency gains</p>";,
+              <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Measurable Results</h3>";,
+              <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Average 75% cost reduction and 10x efficiency gains</p>";,
             </div>
-            <div className="text-center">
-              <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Headphones className="w-8 h-8 text-purple-600" />";,
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <Headphones className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">";,
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">24/7 Support</h3>";,
-              <p className="text-gray-600">Round-the-clock technical support and maintenance</p>";,
+              <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">24/7 Support</h3>";,
+              <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Round-the-clock technical support and maintenance</p>";,
             </div>
-            <div className="text-center">
-              <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Target className="w-8 h-8 text-orange-600" />";,
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <Target className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">";,
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Custom Solutions</h3>";,
-              <p className="text-gray-600">Tailored solutions designed for your specific needs</p>";,
-        <section className="bg-white rounded-xl shadow-lg p-8 mb-16">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose Zion Tech Group?</h2>";,
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">,";,
+              <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Custom Solutions</h3>";,
+              <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Tailored solutions designed for your specific needs</p>";,
+        <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <h2 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Why Choose Zion Tech Group?</h2>";,
+            <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,";,
   We deliver exceptional value through innovation, expertise, and customer-focused solutions.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Star className="w-8 h-8 text-blue-600" />";,
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <Star className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">";,
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Proven Expertise</h3>";,
-              <p className="text-gray-600">10+ years of experience in AI and IT solutions</p>";,
+              <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Proven Expertise</h3>";,
+              <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">10+ years of experience in AI and IT solutions</p>";,
             </div>
-            <div className="text-center">
-              <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <TrendingUp className="w-8 h-8 text-green-600" />";,
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <TrendingUp className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">";,
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Measurable Results</h3>";,
-              <p className="text-gray-600">Average 75% cost reduction and 10x efficiency gains</p>";,
+              <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Measurable Results</h3>";,
+              <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Average 75% cost reduction and 10x efficiency gains</p>";,
             </div>
-            <div className="text-center">
-              <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Headphones className="w-8 h-8 text-purple-600" />";,
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <Headphones className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">";,
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">24/7 Support</h3>";,
-              <p className="text-gray-600">Round-the-clock technical support and maintenance</p>";,
+              <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">24/7 Support</h3>";,
+              <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Round-the-clock technical support and maintenance</p>";,
             </div>
-            <div className="text-center">
-              <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Target className="w-8 h-8 text-orange-600" />";,
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <Target className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">";,
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Custom Solutions</h3>";,
-              <p className="text-gray-600">Tailored solutions designed for your specific needs</p>";,
+              <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Custom Solutions</h3>";,
+              <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Tailored solutions designed for your specific needs</p>";,
             </div>
           </div>
         </section>
 
         {/* Final CTA */}
-        <section className="text-center">
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-8 text-white">
-            <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h2>";,
-            <p className="text-xl mb-8 opacity-90">,";,
+        <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <h2 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Ready to Transform Your Business?</h2>";,
+            <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,";,
   Let's discuss how our technology solutions can drive your success.';';
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
               <a href="tel:+13024640950" ,";,
-  className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center",
-              >
+  className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 Call +1 302 464 0950
               </a>
               <a href="mailto:kleber@ziontechgroup.com" ,";,
-  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors text-center",
-        <section className="text-center">
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-8 text-white">
-            <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h2>";,
-            <p className="text-xl mb-8 opacity-90">,";,
+  className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <h2 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Ready to Transform Your Business?</h2>";,
+            <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,";,
   Let's discuss how our technology solutions can drive your success.';';
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
               <a href="tel:+13024640950" ,";,
-  className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center",
-              >
+  className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 Call +1 302 464 0950
               </a>
               <a href="mailto:kleber@ziontechgroup.com" ,";,
-  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors text-center",
-              >
+  className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 Email Us Today
               </a>
             </div>

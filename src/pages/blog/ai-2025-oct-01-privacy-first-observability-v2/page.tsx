@@ -1,10 +1,9 @@
 // @ts-nocheck
 import React from "react";
 
-export default function PrivacyFirstObservabilityV2(): React.JSX.Element React.JSX.Element React.JSX.Element React.JSX.Element {
+export default function PrivacyFirstObservabilityV2(): React.JSX.Element {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white",
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white>
+    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
       <Helmet >
         <title >Privacy‑First Observability v2 — User‑Centric Traces, Zero‑PII</title>
         <meta name="description",;,
@@ -13,29 +12,24 @@ export default function PrivacyFirstObservabilityV2(): React.JSX.Element React.J
         />
       </Helmet>
 
-      <div className="container mx-auto px-6 py-16">
-        <h1 className="text-4xl md: text-5xl font-bold mb-4">Privacy‑First Observability v2</h1>",
-        <p className="text-zion-slate-light mb-8">,";,
+      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+        <h1 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Privacy‑First Observability v2</h1>",
+        <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,";,
   href="https: //ziontechgroup.com/blog/ai-2025-oct-01-privacy-first-observability-v2",
         />
       </Helmet>
 
-      <div className="container mx-auto px-6 py-16",
-        <h1 className="text-4xl md: text-5xl font-bold mb-4">Privacy‑First Observability v2</h1>",
-        <p className="text-zion-slate-light mb-8",;,
-  Scoped IDs • Redaction Filters • Retention Budgets
-        </p>
-        <div className="prose prose-invert max-w-3xl",
-      <div className="container mx-auto px-6 py-16">
-        <h1 className="text-4xl md: text-5xl font-bold mb-4">Privacy‑First Observability v2</h1>",
-        <p className="text-zion-slate-light mb-8">,";,
+      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Privacy‑First Observability v2</h1>",
+        <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+        <h1 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Privacy‑First Observability v2</h1>",
+        <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,";,
   href="https: //ziontechgroup.com/blog/ai-2025-oct-01-privacy-first-observability-v2",
         />
       </Helmet>
 
-      <div className="container mx-auto px-6 py-16>
-        <h1 className="text-4xl md: text-5xl font-bold mb-4">Privacy‑First Observability v2</h1>",
-        <p className="text-zion-slate-light mb-8">
+      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Privacy‑First Observability v2</h1>",
+        <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
   Scoped IDs • Redaction Filters • Retention Budgets
         </p>
         <div className="prose prose-invert max-w-3xl>

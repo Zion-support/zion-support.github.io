@@ -94,21 +94,21 @@ const PricingPage: React.FC = () => {
         <meta name="description" content="Transparent pricing for AI services, micro SaaS solutions, and comprehensive IT services from Zion Tech Group." />
       </Helmet>
       
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
         {/* Header */}
-        <section className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-800 text-white py-16">
-          <div className="container mx-auto px-6 text-center">
-            <h1 className="text-4xl md: text-5xl font-bold mb-4">Transparent Pricing</h3>
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+        <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <h1 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Transparent Pricing</h3>
+            <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
               Choose the perfect plan for your business needs. All plans include our commitment to quality, security, and innovation.
             </p>
           </div>
         </section>
 
         {/* Main Pricing Tiers */}
-        <section className="py-20">
-          <div className="container mx-auto px-6">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
               {pricingTiers.map((tier, index) => (
                 <div 
                   key={index} 
@@ -119,28 +119,24 @@ const PricingPage: React.FC = () => {
                   }`}`;
                 >
                   {tier.popular && (
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-gradient-to-r from-purple-600 to-violet-600 text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center
-                        <Star className="w-4 h-4 mr-1" />
+                    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                      <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                         Most Popular
                       </span>
                     </div>
                   )}
                   
-                  <div className="text-center mb-8">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-2">{tier.name}</h3>
-                    <p className="text-gray-600 mb-4">{tier.description}</h3>
-                    <div className="flex items-baseline justify-center">
-                      <span className="text-4xl font-bold text-gray-900">{tier.price}</h3>
-                      <span className="text-gray-600 ml-1">{tier.period}</h3>
+                  <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                    <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">{tier.name}</h3>
+                    <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">{tier.description}</h3>
+                    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                      <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">{tier.price}</h3>
+                      <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">{tier.period}</h3>
                     </div>
                   </div>
 
-                  <ul className="space-y-4 mb-8
-                    {tier.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center
-                        <Check className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
-                        <span className="text-gray-700">{feature}</h3>
+                  <ul className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                        <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">{feature}</h3>
                       </li>
                     ))}
                   </ul>
@@ -162,25 +158,24 @@ const PricingPage: React.FC = () => {
         </section>
 
         {/* Service-Specific Pricing */}
-        <section className="py-20 bg-white">
-          <div className="container mx-auto px-6">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Service-Specific Pricing</h3>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+        <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <h2 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Service-Specific Pricing</h3>
+              <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 Detailed pricing for individual services. Custom packages available for enterprise clients.
               </p>
             </div>
 
-            <div className="space-y-16">
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
               {servicePricing.map((category, categoryIndex) => (
                 <div key="{categoryIndex}">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">{category.category}</h3>
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                  <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">{category.category}</h3>
+                  <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                     {category.services.map((service, serviceIndex) => (
-                      <div key={serviceIndex} className="bg-gray-50 p-6 rounded-xl hover: shadow-md transition-shadow
-                        <h4 className="text-lg font-bold text-gray-900 mb-2">{service.name}</h3>
-                        <p className="text-2xl font-bold text-blue-600 mb-3">{service.price}</h3>
-                        <p className="text-gray-600 text-sm">{service.description}</h3>
+                      <div key={serviceIndex} className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">{service.name}</h3>
+                        <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">{service.price}</h3>
+                        <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">{service.description}</h3>
                       </div>
                     ))}
                   </div>
@@ -191,123 +186,98 @@ const PricingPage: React.FC = () => {
         </section>
 
         {/* Enterprise Pricing */}
-        <section className="py-20 bg-gray-50">
-          <div className="container mx-auto px-6">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Enterprise Solutions</h3>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+        <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <h2 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Enterprise Solutions</h3>
+              <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 Custom solutions for large organizations with specific requirements and compliance needs.
               </p>
             </div>
 
-            <div className="bg-white p-8 rounded-xl shadow-lg max-w-4xl mx-auto">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 <div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">What's Included</h3>';
-                  <ul className="space-y-3
-                    <li className="flex items-center
-                      <Check className="w-5 h-5 text-green-500 mr-3" />
-                      <span className="text-gray-700">Custom AI model development</h3>
+                  <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">What's Included</h3>';
+                  <ul className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                      <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Custom AI model development</h3>
                     </li>
-                    <li className="flex items-center
-                      <Check className="w-5 h-5 text-green-500 mr-3" />
-                      <span className="text-gray-700">Dedicated infrastructure</h3>
+                    <li className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                      <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Dedicated infrastructure</h3>
                     </li>
-                    <li className="flex items-center
-                      <Check className="w-5 h-5 text-green-500 mr-3" />
-                      <span className="text-gray-700">24/7 dedicated support</h3>
+                    <li className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                      <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">24/7 dedicated support</h3>
                     </li>
-                    <li className="flex items-center
-                      <Check className="w-5 h-5 text-green-500 mr-3" />
-                      <span className="text-gray-700">Compliance management</h3>
+                    <li className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                      <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Compliance management</h3>
                     </li>
-                    <li className="flex items-center
-                      <Check className="w-5 h-5 text-green-500 mr-3" />
-                      <span className="text-gray-700">White-label solutions</h3>
+                    <li className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                      <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">White-label solutions</h3>
                     </li>
-                    <li className="flex items-center
-                      <Check className="w-5 h-5 text-green-500 mr-3" />
-                      <span className="text-gray-700">SLA guarantees</h3>
+                    <li className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                      <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">SLA guarantees</h3>
                     </li>
                   </ul>
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">Contact Sales</h3>
-                  <p className="text-gray-600 mb-6">
+                  <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Contact Sales</h3>
+                  <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                     Get a custom quote tailored to your organization's specific needs and requirements.';
                   </p>
-                  <div className="space-y-4">
-                    <div className="flex items-center">
-                      <span className="text-sm text-gray-500 w-20">Email: </h3>
-                      <span className="text-gray-900">kleber@ziontechgroup.com</h3>
+                  <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                      <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Email: </h3>
+                      <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">kleber@ziontechgroup.com</h3>
                     </div>
-                    <div className="flex items-center">
-                      <span className="text-sm text-gray-500 w-20">Phone: </h3>
-                      <span className="text-gray-900">+1 302 464 0950</h3>
+                    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                      <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Phone: </h3>
+                      <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">+1 302 464 0950</h3>
                     </div>
-                    <div className="flex items-center">
-                      <span className="text-sm text-gray-500 w-20">Address: </h3>
-                      <span className="text-gray-900">364 E Main St STE 1008<br />Middletown DE 19709</h3>
+                    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                      <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Address: </h3>
+                      <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">364 E Main St STE 1008<br />Middletown DE 19709</h3>
                     </div>
                   </div>
                   <Link 
                     to="/contact
-                    className="mt-6 block w-full text-center bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 rounded-lg font-semibold hover: from-blue-700 hover:to-purple-700 transition-all duration-300
-                  >
-                    Contact Sales Team
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* FAQ Section */}
-        <section className="py-20 bg-white">
-          <div className="container mx-auto px-6">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h3>
+                    className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <h2 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Frequently Asked Questions</h3>
             </div>
 
-            <div className="max-w-3xl mx-auto space-y-8">
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
               <div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Can I change my plan anytime?</h3>
-                <p className="text-gray-600">Yes, you can upgrade or downgrade your plan at any time. Changes take effect at the next billing cycle.</h3>
+                <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Can I change my plan anytime?</h3>
+                <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Yes, you can upgrade or downgrade your plan at any time. Changes take effect at the next billing cycle.</h3>
               </div>
               <div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Do you offer custom pricing?</h3>
-                <p className="text-gray-600">Absolutely! We offer custom pricing for enterprise clients with specific requirements and large-scale implementations.</h3>
+                <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Do you offer custom pricing?</h3>
+                <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Absolutely! We offer custom pricing for enterprise clients with specific requirements and large-scale implementations.</h3>
               </div>
               <div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">What's included in support?</h3>';
-                <p className="text-gray-600">All plans include email support. Professional and Enterprise plans include priority support, and Enterprise includes 24/7 dedicated support.</h3>
+                <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">What's included in support?</h3>';
+                <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">All plans include email support. Professional and Enterprise plans include priority support, and Enterprise includes 24/7 dedicated support.</h3>
               </div>
               <div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Is there a free trial?</h3>
-                <p className="text-gray-600">Yes, we offer a 14-day free trial for most services. Contact us to learn more about trial availability for your specific needs.</h3>
+                <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Is there a free trial?</h3>
+                <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Yes, we offer a 14-day free trial for most services. Contact us to learn more about trial availability for your specific needs.</h3>
               </div>
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-          <div className="container mx-auto px-6 text-center">
-            <h2 className="text-4xl font-bold mb-4">Ready to Get Started?</h3>
-            <p className="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">
+        <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <h2 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Ready to Get Started?</h3>
+            <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
               Choose the perfect plan for your business or contact us for a custom solution.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
               <Link 
                 to="/contact" 
-                className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg
-              >
-                Contact Sales
-              </Link>
-              <Link 
-                to="/services" 
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors
-              >
+                className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 Explore Services
               </Link>
             </div>

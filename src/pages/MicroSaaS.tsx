@@ -21,26 +21,26 @@ const MicroSaaS: React.FC = () => {
   return (
     <>
       </Helmet>
-      <section className="py-16">
-        <div className="container mx-auto px-6 max-w-6xl">
-          <h1 className="text-4xl font-bold mb-8">Micro SaaS Solutions</h1>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <h1 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Micro SaaS Solutions</h1>
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
             {products.map((p) => (
-              <div key={p.name} className="bg-white rounded-lg border p-6">
-                <h2 className="text-xl font-semibold mb-2">{p.name}</h2>
-                <div className="text-blue-600 font-semibold mb-3">{p.price}</div>
-                <ul className="text-sm text-gray-700 space-y-1 mb-4">
+              <div key={p.name} className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <h2 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">{p.name}</h2>
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">{p.price}</div>
+                <ul className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                   {p.features.map((f) => (
                     <li key="{f}">• {f}</li>
                   ))}
                 </ul>
-                <a className="text-blue-600 hover:underline" href="/micro-saas">Learn more →</a>
+                <a className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Learn more →</a>
               </div>
             ))}
           </div>
-          <div className="mt-10 text-sm text-gray-600">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
             <p>
-              Contact us: <a className="text-blue-600" href="tel:+13024640950">+1 302 464 0950</a> · <a className="text-blue-600" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> · 364 E Main St STE 1008, Middletown DE 19709
+              Contact us: <a className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">+1 302 464 0950</a> · <a className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">kleber@ziontechgroup.com</a> · 364 E Main St STE 1008, Middletown DE 19709
             </p>
           </div>
         </div>

@@ -88,29 +88,22 @@ const AISolutions: React.FC = () => {
         <title>AI Solutions - Zion Tech Group</title>
         <meta name="description" content="Comprehensive AI solutions including machine learning, automation, cybersecurity, and data analytics. Transform your business with cutting-edge artificial intelligence." /><meta name="keywords" content="AI solutions, machine learning, artificial intelligence, automation, cybersecurity, data analytics, Zion Tech Group" /></Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
+      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
         {/* Hero Section */}
-        <section className="relative py-20 bg-gradient-to-r from-blue-600 to-purple-700 text-white">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-5xl md:text-6xl font-bold mb-6">
+        <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <h1 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 AI Solutions for the Future
               </h1>
-              <p className="text-xl md:text-2xl mb-8 text-blue-100">
+              <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 Transform your business with cutting-edge artificial intelligence solutions
                 designed to drive innovation, efficiency, and growth.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 <Link
                   to="/contact
-                  className="inline-flex items-center px-8 py-4 bg-white text-blue-600 hover:bg-blue-50 font-semibold rounded-lg transition-colors
-                >
-                  Get Started Today
-                </Link>
-                <Link
-                  to="/case-studies
-                  className="inline-flex items-center px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold rounded-lg transition-colors
-                >
+                  className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                   View Case Studies
                 </Link>
               </div>
@@ -119,32 +112,30 @@ const AISolutions: React.FC = () => {
         </section>
 
         {/* AI Solutions Grid */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+        <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <h2 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 Our AI Solutions
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 Comprehensive artificial intelligence services tailored to meet your specific business needs
                 and drive digital transformation.
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
               {aiSolutions.map((solution, index) => (
-                <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
-                  <div className="flex items-center mb-4">
-                    <div className="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center mr-4">
-                      <solution.icon className="w-6 h-6 text-blue-600/>
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-900">{solution.title}</h3>
+                <div key={index} className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                  <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                      <solution.icon className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">{solution.title}</h3>
                   </div>
-                  <p className="text-gray-600 mb-4">{solution.description}</p>
-                  <ul className="space-y-2">
+                  <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">{solution.description}</p>
+                  <ul className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                     {solution.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm text-gray-600">
-                        <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                      <li key={featureIndex} className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                        <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white"></span>
                         {feature}
                       </li>
                     ))}
@@ -156,23 +147,23 @@ const AISolutions: React.FC = () => {
         </section>
 
         {/* Benefits Section */}
-        <section className="py-20 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+        <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <h2 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 Why Choose Our AI Solutions?
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 Experience the transformative power of artificial intelligence with our proven solutions.
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
               {benefits.map((benefit, index) => (
-                <div key={index} className="text-center">
-                  <div className="text-4xl mb-4">{benefit.icon}</div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{benefit.title}</h3>
-                  <p className="text-gray-600">{benefit.description}</p>
+                <div key={index} className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                  <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">{benefit.icon}</div>
+                  <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">{benefit.title}</h3>
+                  <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">{benefit.description}</p>
                 </div>
               ))}
             </div>
@@ -180,26 +171,19 @@ const AISolutions: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-700 text-white">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-4xl font-bold mb-4">
+        <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <h2 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
               Ready to Transform Your Business with AI?
             </h2>
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto mb-8">
+            <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
               Let our AI experts help you identify opportunities and implement solutions
               that drive real business value.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
               <Link
                 to="/contact
-                className="inline-flex items-center px-8 py-4 bg-white text-blue-600 hover:bg-blue-50 font-semibold rounded-lg transition-colors
-              >
-                Schedule Consultation
-              </Link>
-              <Link
-                to="/services
-                className="inline-flex items-center px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold rounded-lg transition-colors
-              >
+                className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 Explore All Services
               </Link>
             </div>

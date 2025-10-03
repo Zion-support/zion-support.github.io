@@ -47,30 +47,30 @@ const ITServicesPage: React.FC = () => {
         <meta name="description" content="Comprehensive IT services including cloud infrastructure, DevOps, security, and network management from Zion Tech Group." />
       </Helmet>
       
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
         {/* Header */}
-        <section className="bg-gradient-to-r from-purple-600 to-violet-600 text-white py-16">
-          <div className="container mx-auto px-6 text-center">
-            <h1 className="text-4xl md: text-5xl font-bold mb-4">IT Services</h3>
-            <p className="text-xl text-purple-100 max-w-3xl mx-auto">
+        <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <h1 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">IT Services</h3>
+            <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
               Complete IT infrastructure management, cloud solutions, and enterprise-grade security services to keep your business running smoothly.
             </p>
           </div>
         </section>
 
         {/* Services Grid */}
-        <section className="py-20">
-          <div className="container mx-auto px-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
               {itServices.map((service, index) => (
-                <div key={index} className="bg-white p-8 rounded-xl shadow-sm hover: shadow-lg transition-shadow">
-                  <div className="text-4xl mb-4">{service.icon}</h3>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
-                  <p className="text-gray-600 mb-6">{service.description}</h3>
-                  <ul className="space-y-2 mb-6">
+                <div key={index} className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                  <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">{service.icon}</h3>
+                  <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">{service.title}</h3>
+                  <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">{service.description}</h3>
+                  <ul className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                     {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm text-gray-700">
-                        <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></h3>
+                      <li key={featureIndex} className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                        <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white"></h3>
                         {feature}
                       </li>
                     ))}
@@ -78,47 +78,36 @@ const ITServicesPage: React.FC = () => {
                   
                   <Link 
                     to="/contact" 
-                    className="text-purple-600 font-semibold hover: text-purple-800 transition-colors
-                  >
-                    Learn More →
-                  </Link>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Benefits Section */}
-        <section className="py-20 bg-white">
-          <div className="container mx-auto px-6">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose Our IT Services?</h3>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                    className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <h2 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Why Choose Our IT Services?</h3>
+              <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 We provide reliable, scalable, and secure IT solutions that support your business growth
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="text-4xl mb-4">🛡️</h3>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Enterprise Security</h3>
-                <p className="text-gray-600">
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">🛡️</h3>
+                <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Enterprise Security</h3>
+                <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                   Comprehensive security measures to protect your infrastructure and data from evolving threats.
                 </p>
               </div>
               
-              <div className="text-center">
-                <div className="text-4xl mb-4">⚡</h3>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">High Performance</h3>
-                <p className="text-gray-600">
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">⚡</h3>
+                <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">High Performance</h3>
+                <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                   Optimized infrastructure and processes ensure maximum performance and minimal downtime.
                 </p>
               </div>
               
-              <div className="text-center">
-                <div className="text-4xl mb-4">📈</h3>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Scalable Solutions</h3>
-                <p className="text-gray-600">
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">📈</h3>
+                <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Scalable Solutions</h3>
+                <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                   IT solutions that grow with your business, handling increased loads and requirements seamlessly.
                 </p>
               </div>
@@ -127,57 +116,50 @@ const ITServicesPage: React.FC = () => {
         </section>
 
         {/* Technology Partners */}
-        <section className="py-20 bg-gray-50">
-          <div className="container mx-auto px-6">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Technology Partners</h3>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+        <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <h2 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Technology Partners</h3>
+              <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 We work with leading technology providers to deliver best-in-class solutions
               </p>
             </div>
             
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              <div className="bg-white p-6 rounded-xl shadow-sm text-center">
-                <h3 className="text-lg font-bold text-gray-900 mb-2">Cloud Providers</h3>
-                <p className="text-gray-600">AWS, Azure, Google Cloud</h3>
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Cloud Providers</h3>
+                <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">AWS, Azure, Google Cloud</h3>
               </div>
               
-              <div className="bg-white p-6 rounded-xl shadow-sm text-center">
-                <h3 className="text-lg font-bold text-gray-900 mb-2">Security</h3>
-                <p className="text-gray-600">Cisco, Palo Alto, Fortinet</h3>
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Security</h3>
+                <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Cisco, Palo Alto, Fortinet</h3>
               </div>
               
-              <div className="bg-white p-6 rounded-xl shadow-sm text-center">
-                <h3 className="text-lg font-bold text-gray-900 mb-2">Monitoring</h3>
-                <p className="text-gray-600">Datadog, New Relic, Splunk</h3>
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Monitoring</h3>
+                <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Datadog, New Relic, Splunk</h3>
               </div>
               
-              <div className="bg-white p-6 rounded-xl shadow-sm text-center">
-                <h3 className="text-lg font-bold text-gray-900 mb-2">DevOps</h3>
-                <p className="text-gray-600">Docker, Kubernetes, Terraform</h3>
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">DevOps</h3>
+                <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Docker, Kubernetes, Terraform</h3>
               </div>
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-purple-600 text-white">
-          <div className="container mx-auto px-6 text-center">
-            <h2 className="text-4xl font-bold mb-4">Ready to Optimize Your IT Infrastructure?</h3>
-            <p className="text-xl mb-8 text-purple-100 max-w-2xl mx-auto">
+        <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <h2 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Ready to Optimize Your IT Infrastructure?</h3>
+            <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
               Let's discuss how our IT services can improve your infrastructure performance and security.';
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
               <Link 
                 to="/contact" 
-                className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors
-              >
-                Get Started
-              </Link>
-              <Link 
-                to="/support" 
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors
-              >
+                className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 Get Support
               </Link>
             </div>

@@ -337,16 +337,16 @@ publishedAt: '2025-01-05
         <link rel="dns-prefetch", href ="//github.com" />
       </Helmet>
       
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-teal-50">
+      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
         <Header />
         
         {/* 🚀 SEPTEMBER 30, 2025 - MEGA BREAKTHROUGH ANNOUNCEMENT */}
-        <div className="container mx-auto px-6 pt-8">
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-teal-50">
+        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
         <Header />
         
         {/* 🚀 SEPTEMBER 30, 2025 - MEGA BREAKTHROUGH ANNOUNCEMENT */}
-        <div className="container mx-auto px-6 pt-8">
+        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
           <September30MegaBanner2025 />
         </div>
         
@@ -364,20 +364,20 @@ publishedAt: '2025-01-05
         />
         <NewContentPromoBanner />
         {/* Fresh content banner promoting brand-new articles */}
-        <div className="container mx-auto px-6 mt-6">
+        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
           <NewContentAdvertisingBanner />
           {/* Inline promo for new service */}
-          <div className="mt-4">
-        <div className="container mx-auto px-6 mt-6">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
           <NewContentAdvertisingBanner />
           {/* Inline promo for new service */}
-          <div className="mt-4">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
             <ContentPromotionBanner variant: "info",
   title: "🧪 New Service: Edge Experimentation Suite",
   description: "Privacy‑first A/B testing at <100ms with scoped IDs and on‑device metrics.",
   ctaText: "Learn more",
   ctaLink: "/services/edge-experimentation-suite",
-          <div className="mt-4">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
             <ContentPromotionBanner variant: "info
   title: ", 🧪 New Service: Edge Experimentation Suite",
   description: "Privacy‑first A/B testing at <100ms with scoped IDs and on‑device metrics.",
@@ -387,142 +387,141 @@ publishedAt: '2025-01-05
             />
           </div>
         </div>
-        <div className="container mx-auto px-6 mt-6">
+        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
           <TrendingContentBanner />
           {/* Inline promotion for brand-new content */}
-          <div className="mt-6 rounded-xl border border-white/10 bg-white/5 p-6">
-            <div className="text-white text-sm mb-4">New this week</h3>
-            <div className="grid md:grid-cols-2 gap-4">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">New this week</h3>
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
               <Link to="/blog/ai-enterprise-transformation-2027", className ="block rounded-lg border border-white/10 p-4 hover:border-indigo-400/40 transition-colors
-                <div className="text-indigo-300 text-xs mb-2">Enterprise AI</h3>
-                <div className="text-white font-semibold">AI Enterprise Transformation 2027</h3>
-                <div className="text-zion-slate-light text-sm mt-1">Executive playbook to plan, fund, and scale AI with measurable ROI.</h3>
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Enterprise AI</h3>
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">AI Enterprise Transformation 2027</h3>
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Executive playbook to plan, fund, and scale AI with measurable ROI.</h3>
               </Link>
               <Link to="/blog/agentic-workflow-orchestration-2026", className ="block rounded-lg border border-white/10 p-4 hover:border-emerald-400/40 transition-colors
-                <div className="text-emerald-300 text-xs mb-2">AI Operations</h3>
-                <div className="text-white font-semibold">Agentic Workflow Orchestration 2026</h3>
-                <div className="text-zion-slate-light text-sm mt-1">Budgets, KPI‑linked canaries, and rollback for safe velocity.</h3>
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">AI Operations</h3>
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Agentic Workflow Orchestration 2026</h3>
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Budgets, KPI‑linked canaries, and rollback for safe velocity.</h3>
               </Link>
             </div>
             {/* Freshly added posts */}
-            <div className="grid md:grid-cols-2 gap-4 mt-4">
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
               <Link to="/blog/ai-2026-reliability-runbooks-v4", className ="block rounded-lg border border-white/10 p-4 hover:border-cyan-400/40 transition-colors
-                <div className="text-cyan-300 text-xs mb-2">AI Operations</h3>
-                <div className="text-white font-semibold">AI 2026: Reliability Runbooks v4</h3>
-                <div className="text-zion-slate-light text-sm mt-1">Budgeted actions, KPI canaries, and instant rollback—v4 playbooks.</h3>
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">AI Operations</h3>
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">AI 2026: Reliability Runbooks v4</h3>
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Budgeted actions, KPI canaries, and instant rollback—v4 playbooks.</h3>
               </Link>
               <Link to="/blog/edge-2026-consentless-metrics-v2", className ="block rounded-lg border border-white/10 p-4 hover:border-rose-400/40 transition-colors
-                <div className="text-rose-300 text-xs mb-2">Analytics</h3>
-                <div className="text-white font-semibold">Edge 2026: Consentless Metrics v2</h3>
-                <div className="text-zion-slate-light text-sm mt-1">Zero‑PII signals at &lt;100ms with scoped IDs, edge aggregation, DP.</h3>
-        <div className="container mx-auto px-6 mt-6">
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Analytics</h3>
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Edge 2026: Consentless Metrics v2</h3>
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Zero‑PII signals at &lt;100ms with scoped IDs, edge aggregation, DP.</h3>
+        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
           <TrendingContentBanner />
           {/* Inline promotion for brand-new content */}
-          <div className="mt-6 rounded-xl border border-white/10 bg-white/5 p-6">
-            <div className="text-white text-sm mb-4">New this week</h3>
-            <div className="grid md:grid-cols-2 gap-4">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">New this week</h3>
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
               <Link to="/blog/ai-enterprise-transformation-2027", className ="block rounded-lg border border-white/10 p-4 hover:border-indigo-400/40 transition-colors">
-                <div className="text-indigo-300 text-xs mb-2">Enterprise AI</h3>
-                <div className="text-white font-semibold">AI Enterprise Transformation 2027</h3>
-                <div className="text-zion-slate-light text-sm mt-1">Executive playbook to plan, fund, and scale AI with measurable ROI.</h3>
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Enterprise AI</h3>
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">AI Enterprise Transformation 2027</h3>
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Executive playbook to plan, fund, and scale AI with measurable ROI.</h3>
               </Link>
               <Link to="/blog/agentic-workflow-orchestration-2026", className ="block rounded-lg border border-white/10 p-4 hover:border-emerald-400/40 transition-colors">
-                <div className="text-emerald-300 text-xs mb-2">AI Operations</h3>
-                <div className="text-white font-semibold">Agentic Workflow Orchestration 2026</h3>
-                <div className="text-zion-slate-light text-sm mt-1">Budgets, KPI‑linked canaries, and rollback for safe velocity.</h3>
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">AI Operations</h3>
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Agentic Workflow Orchestration 2026</h3>
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Budgets, KPI‑linked canaries, and rollback for safe velocity.</h3>
               </Link>
             </div>
             {/* Freshly added posts */}
-            <div className="grid md:grid-cols-2 gap-4 mt-4">
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
               <Link to="/blog/ai-2026-reliability-runbooks-v4", className ="block rounded-lg border border-white/10 p-4 hover:border-cyan-400/40 transition-colors">
-                <div className="text-cyan-300 text-xs mb-2">AI Operations</h3>
-                <div className="text-white font-semibold">AI 2026: Reliability Runbooks v4</h3>
-                <div className="text-zion-slate-light text-sm mt-1">Budgeted actions, KPI canaries, and instant rollback—v4 playbooks.</h3>
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">AI Operations</h3>
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">AI 2026: Reliability Runbooks v4</h3>
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Budgeted actions, KPI canaries, and instant rollback—v4 playbooks.</h3>
               </Link>
               <Link to="/blog/edge-2026-consentless-metrics-v2", className ="block rounded-lg border border-white/10 p-4 hover:border-rose-400/40 transition-colors">
-                <div className="text-rose-300 text-xs mb-2">Analytics</h3>
-                <div className="text-white font-semibold">Edge 2026: Consentless Metrics v2</h3>
-                <div className="text-zion-slate-light text-sm mt-1">Zero‑PII signals at &lt;100ms with scoped IDs, edge aggregation, DP.</h3>
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Analytics</h3>
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Edge 2026: Consentless Metrics v2</h3>
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Zero‑PII signals at &lt;100ms with scoped IDs, edge aggregation, DP.</h3>
               </Link>
             </div>
           </div>
         </div>
 
         {/* Newly added content promo */}
-        <div className="container mx-auto px-6 mt-6">
-          <div className="rounded-xl border border-white/10 bg-white/5 p-6">
-            <div className="text-white text-sm mb-4">Just added</h3>
-            <div className="grid md:grid-cols-3 gap-4">
+        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Just added</h3>
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
               <Link to="/blog/real-time-decision-engines-2026", className ="block rounded-lg border border-white/10 p-4 hover:border-blue-400/40 transition-colors
-                <div className="text-blue-300 text-xs mb-2">Platform Engineering</h3>
-                <div className="text-white font-semibold">Real‑Time Decision Engines 2026</h3>
-                <div className="text-zion-slate-light text-sm mt-1">10M/sec under 1ms using warm pools, intent prefetching, and caches.</h3>
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Platform Engineering</h3>
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Real‑Time Decision Engines 2026</h3>
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">10M/sec under 1ms using warm pools, intent prefetching, and caches.</h3>
               </Link>
-              <Link to="/blog/federated-learning-enterprise-2026", className="block rounded-lg border border-white/10 p-4 hover:border-rose-400/40 transition-colors
-                <div className="text-rose-300 text-xs mb-2">Machine Learning</h3>
-                <div className="text-white font-semibold">Federated Learning 2026</h3>
-                <div className="text-zion-slate-light text-sm mt-1">Train across regions with secure aggregation and DP noise—no centralization.</h3>
+              <Link to="/blog/federated-learning-enterprise-2026", className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Machine Learning</h3>
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Federated Learning 2026</h3>
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Train across regions with secure aggregation and DP noise—no centralization.</h3>
               </Link>
               <Link to="/blog/cognitive-financial-modeling-2027", className ="block rounded-lg border border-white/10 p-4 hover:border-emerald-400/40 transition-colors
-                <div className="text-emerald-300 text-xs mb-2">FinTech AI</h3>
-                <div className="text-white font-semibold">AI Financial Modeling 2027</h3>
-                <div className="text-zion-slate-light text-sm mt-1">95%+ accuracy with KPI‑linked scorecards, evals, and rollback.</h3>
-        <div className="container mx-auto px-6 mt-6">
-          <div className="rounded-xl border border-white/10 bg-white/5 p-6">
-            <div className="text-white text-sm mb-4">Just added</h3>
-            <div className="grid md:grid-cols-3 gap-4">
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">FinTech AI</h3>
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">AI Financial Modeling 2027</h3>
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">95%+ accuracy with KPI‑linked scorecards, evals, and rollback.</h3>
+        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Just added</h3>
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
               <Link to="/blog/real-time-decision-engines-2026", className ="block rounded-lg border border-white/10 p-4 hover:border-blue-400/40 transition-colors">
-                <div className="text-blue-300 text-xs mb-2">Platform Engineering</h3>
-                <div className="text-white font-semibold">Real‑Time Decision Engines 2026</h3>
-                <div className="text-zion-slate-light text-sm mt-1">10M/sec under 1ms using warm pools, intent prefetching, and caches.</h3>
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Platform Engineering</h3>
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Real‑Time Decision Engines 2026</h3>
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">10M/sec under 1ms using warm pools, intent prefetching, and caches.</h3>
               </Link>
-              <Link to="/blog/federated-learning-enterprise-2026", className="block rounded-lg border border-white/10 p-4 hover:border-rose-400/40 transition-colors">
-                <div className="text-rose-300 text-xs mb-2">Machine Learning</h3>
-                <div className="text-white font-semibold">Federated Learning 2026</h3>
-                <div className="text-zion-slate-light text-sm mt-1">Train across regions with secure aggregation and DP noise—no centralization.</h3>
+              <Link to="/blog/federated-learning-enterprise-2026", className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Machine Learning</h3>
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Federated Learning 2026</h3>
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Train across regions with secure aggregation and DP noise—no centralization.</h3>
               </Link>
               <Link to="/blog/cognitive-financial-modeling-2027", className ="block rounded-lg border border-white/10 p-4 hover:border-emerald-400/40 transition-colors">
-                <div className="text-emerald-300 text-xs mb-2">FinTech AI</h3>
-                <div className="text-white font-semibold">AI Financial Modeling 2027</h3>
-                <div className="text-zion-slate-light text-sm mt-1">95%+ accuracy with KPI‑linked scorecards, evals, and rollback.</h3>
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">FinTech AI</h3>
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">AI Financial Modeling 2027</h3>
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">95%+ accuracy with KPI‑linked scorecards, evals, and rollback.</h3>
               </Link>
             </div>
           </div>
         </div>
         
         {/* OCTOBER 2025 MEGA LAUNCH - 7 Revolutionary Articles */}
-        <div className="container mx-auto px-6 mt-6">
-        <div className="container mx-auto px-6 mt-6">
+        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
           <October2025MegaLaunchBanner />
         </div>
         
         {/* SEPTEMBER 30, 2025 - 5 Revolutionary AI Breakthroughs */}
-        <div className="container mx-auto px-6 mt-6 mb-6">
-        <div className="container mx-auto px-6 mt-6 mb-6">
+        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
           <September30NewContentMegaBanner />
         </div>
         
         {/* BREAKTHROUGH CONTENT 2026 - September 30, 2025 */}
-        <div className="container mx-auto px-6 mt-6">
-        <div className="container mx-auto px-6 mt-6">
+        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
           <Revolutionary2026ContentMegaBanner />
         </div>
         
         {/* New Comprehensive Promotional Banner */}
-        <div className="container mx-auto px-6 mt-6">
-        <div className="container mx-auto px-6 mt-6">
+        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
           <ComprehensivePromoBanner variant: "hero", showCount="{4} /">";
         </div>
         
         {/* New Articles Promotional Banner */}
-        <div className="container mx-auto px-6 mt-6">
-        <div className="container mx-auto px-6 mt-6">
+        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
           <NewArticlesPromoBanner variant: "premium", showCount="{3} /">";
         </div>
         
         {/* New Services Promotional Banner */}
-        <div className="container mx-auto px-6 mt-6">
-        <div className="container mx-auto px-6 mt-6">
+        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
           <NewServicesPromoBanner variant: "showcase", showCount ={3} featuredOnly: {true} />";
         </div>
         
@@ -537,74 +536,64 @@ publishedAt: '2025-01-05
   dismissible: {true}
         />
         {/* Animated background elements */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-zion-blue rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"></h3>
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-zion-purple rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float",
+        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white"></h3>
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white"></div>
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white"></h3>
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white"></div>
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white"></div>
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
   style: {{ animationDelay: "2s" }}";
           ></div>
-          <div className="absolute top-40 left-1/2 w-60 h-60 bg-zion-cyan rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float",
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-zion-blue rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"></h3>
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-zion-purple rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float",
-  style: {{ animationDelay: "2s" }}";
-          ></div>
-          <div className="absolute top-40 left-1/2 w-60 h-60 bg-zion-cyan rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float",
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-zion-blue rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"></div>
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-zion-purple rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float">
-  style: {{ animationDelay: "2s" }}";
-          ></div>
-          <div className="absolute top-40 left-1/2 w-60 h-60 bg-zion-cyan rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
   style: {{ animationDelay: "4s" }}";
           ></div>
         </div>
 
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <div className="inline-flex items-center px-6 py-3 rounded-full bg-blue-100 text-blue-800 text-sm font-medium mb-8">
-                <span className="w-4 h-4 mr-2">✨</span>,
+        <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">✨</span>,
   Trusted by 500+ companies worldwide
-                <span className="w-4 h-4 ml-2">🚀</h3>
+                <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">🚀</h3>
               </div>
               
-              <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">,
+              <h1 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   Leading AI & Technology Solutions
               </h1>
               
-              <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">,
-        <section className="relative bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <div className="inline-flex items-center px-6 py-3 rounded-full bg-blue-100 text-blue-800 text-sm font-medium mb-8">
-                <span className="w-4 h-4 mr-2">✨</span>,
+              <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
+        <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">✨</span>,
   Trusted by 500+ companies worldwide
-                <span className="w-4 h-4 ml-2">🚀</h3>
+                <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">🚀</h3>
               </div>
               
-              <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">,
+              <h1 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   Leading AI & Technology Solutions
               </h1>
               
-              <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">,
+              <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   Transform your business with cutting-edge AI, micro SaaS, and enterprise IT solutions. 
                 Build faster, scale smarter, and achieve unprecedented results.
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 <Link to="/services" ,
-  className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors",
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+  className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 <Link to="/services" ,
-  className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors",
-                >
+  className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                   Explore Services
                 </Link>
                 <Link to="/contact" ,
-  className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors",
-  className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors",
-                >
+  className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                   Get Started
                 </Link>
               </div>
@@ -613,219 +602,198 @@ publishedAt: '2025-01-05
         </section>
 
         {/* Featured Services */}
-        <section className="py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">,
+        <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <h2 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   Our Core Services
               </h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">,
-        <section className="py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">,
+              <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
+        <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <h2 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   Our Core Services
               </h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">,
+              <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   Comprehensive solutions designed to accelerate your digital transformation
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-200 hover:border-blue-300">
-                <div className="text-center mb-6">
-                  <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                    <span className="w-8 h-8 text-blue-600">⚡</h3>
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                  <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                    <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">⚡</h3>
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">AI Services & Solutions</h3>
-                  <p className="text-gray-600 mb-4">Advanced artificial intelligence solutions including machine learning, deep learning, and AI automation.</h3>
-                  <div className="text-3xl font-bold text-blue-600 mb-4">Starting at $5,000</h3>
+                  <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">AI Services & Solutions</h3>
+                  <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Advanced artificial intelligence solutions including machine learning, deep learning, and AI automation.</h3>
+                  <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Starting at $5,000</h3>
                 </div>
                 
-                <ul className="space-y-3 mb-6
-                  <li className="flex items-center gap-3
-                    <span className="w-5 h-5 text-green-600">✔️</h3>
-                    <span className="text-gray-700">Machine Learning Models</h3>
+                <ul className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">✔️</h3>
+                    <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Machine Learning Models</h3>
                   </li>
-                  <li className="flex items-center gap-3
-                    <span className="w-5 h-5 text-green-600">✔️</h3>
-                    <span className="text-gray-700">Deep Learning Systems</h3>
+                  <li className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">✔️</h3>
+                    <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Deep Learning Systems</h3>
                   </li>
-                  <li className="flex items-center gap-3
-                    <span className="w-5 h-5 text-green-600">✔️</h3>
-                    <span className="text-gray-700">AI Automation</h3>
+                  <li className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">✔️</h3>
+                    <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">AI Automation</h3>
                   </li>
-                  <li className="flex items-center gap-3
-                    <span className="w-5 h-5 text-green-600">✔️</h3>
-                    <span className="text-gray-700">Predictive Analytics</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-200 hover:border-blue-300">
-                <div className="text-center mb-6">
-                  <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                    <span className="w-8 h-8 text-blue-600">⚡</h3>
+                  <li className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">✔️</h3>
+                    <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Predictive Analytics</h3>
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                  <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                    <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">⚡</h3>
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">AI Services & Solutions</h3>
-                  <p className="text-gray-600 mb-4">Advanced artificial intelligence solutions including machine learning, deep learning, and AI automation.</h3>
-                  <div className="text-3xl font-bold text-blue-600 mb-4">Starting at $5,000</h3>
+                  <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">AI Services & Solutions</h3>
+                  <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Advanced artificial intelligence solutions including machine learning, deep learning, and AI automation.</h3>
+                  <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Starting at $5,000</h3>
                 </div>
                 
-                <ul className="space-y-3 mb-6">
-                  <li className="flex items-center gap-3">
-                    <span className="w-5 h-5 text-green-600">✔️</h3>
-                    <span className="text-gray-700">Machine Learning Models</h3>
+                <ul className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                  <li className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                    <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">✔️</h3>
+                    <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Machine Learning Models</h3>
                   </li>
-                  <li className="flex items-center gap-3">
-                    <span className="w-5 h-5 text-green-600">✔️</h3>
-                    <span className="text-gray-700">Deep Learning Systems</h3>
+                  <li className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                    <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">✔️</h3>
+                    <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Deep Learning Systems</h3>
                   </li>
-                  <li className="flex items-center gap-3">
-                    <span className="w-5 h-5 text-green-600">✔️</h3>
-                    <span className="text-gray-700">AI Automation</h3>
+                  <li className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                    <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">✔️</h3>
+                    <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">AI Automation</h3>
                   </li>
-                  <li className="flex items-center gap-3">
-                    <span className="w-5 h-5 text-green-600">✔️</h3>
-                    <span className="text-gray-700">Predictive Analytics</h3>
+                  <li className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                    <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">✔️</h3>
+                    <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Predictive Analytics</h3>
                   </li>
                 </ul>
                 
                 <Link to="/services/ai-services",
-  className="block w-full text-center py-3 px-4 rounded-lg font-semibold bg-blue-600 text-white hover:bg-blue-700 transition-colors",
-  className="block w-full text-center py-3 px-4 rounded-lg font-semibold bg-blue-600 text-white hover:bg-blue-700 transition-colors",
-                >
+  className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                   Learn More
                 </Link>
               </div>
               
-              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-blue-300 ring-2 ring-blue-100 relative">
-                <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                  <span className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-bold">,
-              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-blue-300 ring-2 ring-blue-100 relative">
-                <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                  <span className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-bold">,
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                  <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                  <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   Most Popular
                   </span>
                 </div>
                 
-                <div className="text-center mb-6">
-                  <div className="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                    <span className="w-8 h-8 text-purple-600">🚀</h3>
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                  <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                    <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">🚀</h3>
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">Micro SaaS Solutions</h3>
-                  <p className="text-gray-600 mb-4">Scalable software-as-a-service applications designed for rapid deployment and growth.</h3>
-                  <div className="text-3xl font-bold text-blue-600 mb-4">Starting at $3,000</h3>
+                  <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Micro SaaS Solutions</h3>
+                  <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Scalable software-as-a-service applications designed for rapid deployment and growth.</h3>
+                  <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Starting at $3,000</h3>
                 </div>
                 
-                <ul className="space-y-3 mb-6
-                  <li className="flex items-center gap-3
-                    <CheckCircle className="w-5 h-5 text-green-600" />
-                    <span className="text-gray-700">Rapid Development</h3>
+                <ul className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                    <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Rapid Development</h3>
                   </li>
-                  <li className="flex items-center gap-3
-                    <CheckCircle className="w-5 h-5 text-green-600" />
-                    <span className="text-gray-700">Scalable Architecture</h3>
+                  <li className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                    <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Scalable Architecture</h3>
                   </li>
-                  <li className="flex items-center gap-3
-                    <CheckCircle className="w-5 h-5 text-green-600" />
-                    <span className="text-gray-700">Cloud-Native Design</h3>
+                  <li className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                    <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Cloud-Native Design</h3>
                   </li>
-                  <li className="flex items-center gap-3
-                    <CheckCircle className="w-5 h-5 text-green-600" />
-                    <span className="text-gray-700">API-First Approach</h3>
-                <div className="text-center mb-6">
-                  <div className="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                    <span className="w-8 h-8 text-purple-600">🚀</h3>
+                  <li className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                    <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">API-First Approach</h3>
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                  <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                    <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">🚀</h3>
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">Micro SaaS Solutions</h3>
-                  <p className="text-gray-600 mb-4">Scalable software-as-a-service applications designed for rapid deployment and growth.</h3>
-                  <div className="text-3xl font-bold text-blue-600 mb-4">Starting at $3,000</h3>
+                  <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Micro SaaS Solutions</h3>
+                  <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Scalable software-as-a-service applications designed for rapid deployment and growth.</h3>
+                  <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Starting at $3,000</h3>
                 </div>
                 
-                <ul className="space-y-3 mb-6">
-                  <li className="flex items-center gap-3">
-                    <CheckCircle className="w-5 h-5 text-green-600" />
-                    <span className="text-gray-700">Rapid Development</h3>
+                <ul className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                  <li className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                    <CheckCircle className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                    <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Rapid Development</h3>
                   </li>
-                  <li className="flex items-center gap-3">
-                    <CheckCircle className="w-5 h-5 text-green-600" />
-                    <span className="text-gray-700">Scalable Architecture</h3>
+                  <li className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                    <CheckCircle className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                    <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Scalable Architecture</h3>
                   </li>
-                  <li className="flex items-center gap-3">
-                    <CheckCircle className="w-5 h-5 text-green-600" />
-                    <span className="text-gray-700">Cloud-Native Design</h3>
+                  <li className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                    <CheckCircle className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                    <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Cloud-Native Design</h3>
                   </li>
-                  <li className="flex items-center gap-3">
-                    <CheckCircle className="w-5 h-5 text-green-600" />
-                    <span className="text-gray-700">API-First Approach</h3>
+                  <li className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                    <CheckCircle className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                    <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">API-First Approach</h3>
                   </li>
                 </ul>
                 
                 <Link to="/services/micro-saas",
-  className="block w-full text-center py-3 px-4 rounded-lg font-semibold bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 transition-colors",
-  className="block w-full text-center py-3 px-4 rounded-lg font-semibold bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 transition-colors",
-                >
+  className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                   Learn More
                 </Link>
               </div>
               
-              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-200 hover:border-blue-300">
-                <div className="text-center mb-6">
-                  <div className="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                    <span className="w-8 h-8 text-green-600">🛡️</h3>
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                  <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                    <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">🛡️</h3>
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">IT Services & Solutions</h3>
-                  <p className="text-gray-600 mb-4">Comprehensive IT infrastructure, cloud migration, and DevOps services.</h3>
-                  <div className="text-3xl font-bold text-blue-600 mb-4">Starting at $2,500</h3>
+                  <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">IT Services & Solutions</h3>
+                  <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Comprehensive IT infrastructure, cloud migration, and DevOps services.</h3>
+                  <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Starting at $2,500</h3>
                 </div>
                 
-                <ul className="space-y-3 mb-6
-                  <li className="flex items-center gap-3
-                    <CheckCircle className="w-5 h-5 text-green-600" />
-                    <span className="text-gray-700">Cloud Migration</h3>
+                <ul className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                    <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Cloud Migration</h3>
                   </li>
-                  <li className="flex items-center gap-3
-                    <CheckCircle className="w-5 h-5 text-green-600" />
-                    <span className="text-gray-700">DevOps & SRE</h3>
+                  <li className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                    <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">DevOps & SRE</h3>
                   </li>
-                  <li className="flex items-center gap-3
-                    <CheckCircle className="w-5 h-5 text-green-600" />
-                    <span className="text-gray-700">Infrastructure Management</h3>
+                  <li className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                    <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Infrastructure Management</h3>
                   </li>
-                  <li className="flex items-center gap-3
-                    <CheckCircle className="w-5 h-5 text-green-600" />
-                    <span className="text-gray-700">Security & Compliance</h3>
-              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-200 hover:border-blue-300">
-                <div className="text-center mb-6">
-                  <div className="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                    <span className="w-8 h-8 text-green-600">🛡️</h3>
+                  <li className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                    <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Security & Compliance</h3>
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                  <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                    <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">🛡️</h3>
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">IT Services & Solutions</h3>
-                  <p className="text-gray-600 mb-4">Comprehensive IT infrastructure, cloud migration, and DevOps services.</h3>
-                  <div className="text-3xl font-bold text-blue-600 mb-4">Starting at $2,500</h3>
+                  <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">IT Services & Solutions</h3>
+                  <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Comprehensive IT infrastructure, cloud migration, and DevOps services.</h3>
+                  <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Starting at $2,500</h3>
                 </div>
                 
-                <ul className="space-y-3 mb-6">
-                  <li className="flex items-center gap-3">
-                    <CheckCircle className="w-5 h-5 text-green-600" />
-                    <span className="text-gray-700">Cloud Migration</h3>
+                <ul className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                  <li className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                    <CheckCircle className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                    <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Cloud Migration</h3>
                   </li>
-                  <li className="flex items-center gap-3">
-                    <CheckCircle className="w-5 h-5 text-green-600" />
-                    <span className="text-gray-700">DevOps & SRE</h3>
+                  <li className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                    <CheckCircle className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                    <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">DevOps & SRE</h3>
                   </li>
-                  <li className="flex items-center gap-3">
-                    <CheckCircle className="w-5 h-5 text-green-600" />
-                    <span className="text-gray-700">Infrastructure Management</h3>
+                  <li className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                    <CheckCircle className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                    <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Infrastructure Management</h3>
                   </li>
-                  <li className="flex items-center gap-3">
-                    <CheckCircle className="w-5 h-5 text-green-600" />
-                    <span className="text-gray-700">Security & Compliance</h3>
+                  <li className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                    <CheckCircle className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                    <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Security & Compliance</h3>
                   </li>
                 </ul>
                 
                 <Link to="/services/it-services",
-  className="block w-full text-center py-3 px-4 rounded-lg font-semibold bg-blue-600 text-white hover:bg-blue-700 transition-colors",
-  className="block w-full text-center py-3 px-4 rounded-lg font-semibold bg-blue-600 text-white hover:bg-blue-700 transition-colors",
-                >
+  className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                   Learn More
                 </Link>
               </div>
@@ -834,155 +802,155 @@ publishedAt: '2025-01-05
         </section>
 
         {/* Success Stories */}
-        <section className="py-20 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">,
+        <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <h2 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   Success Stories
               </h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">,
-        <section className="py-20 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">,
+              <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
+        <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <h2 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   Success Stories
               </h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">,
+              <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   Real results from our enterprise clients
               </p>
             </div>
             
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8 border border-gray-200">
-                <div className="mb-6">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
-                      <span className="text-white font-bold text-lg">G</h3>
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                  <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                      <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">G</h3>
                     </div>
                     <div >
-                      <h3 className="text-xl font-bold text-gray-900">Global Manufacturing Corp</h3>
-                      <p className="text-gray-500 text-sm">Manufacturing</h3>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8 border border-gray-200">
-                <div className="mb-6">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
-                      <span className="text-white font-bold text-lg">G</h3>
+                      <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Global Manufacturing Corp</h3>
+                      <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Manufacturing</h3>
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                  <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                      <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">G</h3>
                     </div>
                     <div >
-                      <h3 className="text-xl font-bold text-gray-900">Global Manufacturing Corp</h3>
-                      <p className="text-gray-500 text-sm">Manufacturing</h3>
+                      <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Global Manufacturing Corp</h3>
+                      <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Manufacturing</h3>
                     </div>
                   </div>
                 </div>
                 
-                <div className="space-y-4">
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                   <div >
-                    <h4 className="font-semibold text-gray-900 mb-2">Challenge:</h3>
-                    <p className="text-gray-600 text-sm">High equipment downtime and maintenance costs affecting production efficiency</h3>
+                    <h4 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Challenge:</h3>
+                    <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">High equipment downtime and maintenance costs affecting production efficiency</h3>
                   </div>
                   
                   <div >
-                    <h4 className="font-semibold text-gray-900 mb-2">Solution:</h3>
-                    <p className="text-gray-600 text-sm">Implemented AI-powered predictive maintenance system with real-time monitoring</h3>
+                    <h4 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Solution:</h3>
+                    <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Implemented AI-powered predictive maintenance system with real-time monitoring</h3>
                   </div>
                   
                   <div >
-                    <h4 className="font-semibold text-gray-900 mb-2">Result:</h3>
-                    <p className="text-gray-600 text-sm">Achieved 40% reduction in downtime and $25M annual savings</h3>
+                    <h4 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Result:</h3>
+                    <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Achieved 40% reduction in downtime and $25M annual savings</h3>
                   </div>
                   
-                  <div className="pt-4 border-t border-gray-200">
-                    <div className="text-center">
-                      <div className="text-2xl font-bold text-green-600 mb-1">$25M Annual Savings</h3>
-                      <div className="text-xs text-gray-500 uppercase tracking-wide">Key Metric</h3>
-                <div className="space-y-4">
+                  <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">$25M Annual Savings</h3>
+                      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Key Metric</h3>
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                   <div >
-                    <h4 className="font-semibold text-gray-900 mb-2">Challenge:</h3>
-                    <p className="text-gray-600 text-sm">High equipment downtime and maintenance costs affecting production efficiency</h3>
-                  </div>
-                  
-                  <div >
-                    <h4 className="font-semibold text-gray-900 mb-2">Solution:</h3>
-                    <p className="text-gray-600 text-sm">Implemented AI-powered predictive maintenance system with real-time monitoring</h3>
+                    <h4 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Challenge:</h3>
+                    <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">High equipment downtime and maintenance costs affecting production efficiency</h3>
                   </div>
                   
                   <div >
-                    <h4 className="font-semibold text-gray-900 mb-2">Result:</h3>
-                    <p className="text-gray-600 text-sm">Achieved 40% reduction in downtime and $25M annual savings</h3>
+                    <h4 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Solution:</h3>
+                    <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Implemented AI-powered predictive maintenance system with real-time monitoring</h3>
                   </div>
                   
-                  <div className="pt-4 border-t border-gray-200">
-                    <div className="text-center">
-                      <div className="text-2xl font-bold text-green-600 mb-1">$25M Annual Savings</h3>
-                      <div className="text-xs text-gray-500 uppercase tracking-wide">Key Metric</h3>
+                  <div >
+                    <h4 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Result:</h3>
+                    <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Achieved 40% reduction in downtime and $25M annual savings</h3>
+                  </div>
+                  
+                  <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">$25M Annual Savings</h3>
+                      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Key Metric</h3>
                     </div>
                   </div>
                 </div>
               </div>
               
-              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8 border border-gray-200">
-                <div className="mb-6">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-teal-600 rounded-lg flex items-center justify-center">
-                      <span className="text-white font-bold text-lg">H</h3>
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                  <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                      <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">H</h3>
                     </div>
                     <div >
-                      <h3 className="text-xl font-bold text-gray-900">HealthTech Solutions</h3>
-                      <p className="text-gray-500 text-sm">Healthcare</h3>
-              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8 border border-gray-200">
-                <div className="mb-6">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-teal-600 rounded-lg flex items-center justify-center">
-                      <span className="text-white font-bold text-lg">H</h3>
+                      <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">HealthTech Solutions</h3>
+                      <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Healthcare</h3>
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                  <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                      <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">H</h3>
                     </div>
                     <div >
-                      <h3 className="text-xl font-bold text-gray-900">HealthTech Solutions</h3>
-                      <p className="text-gray-500 text-sm">Healthcare</h3>
+                      <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">HealthTech Solutions</h3>
+                      <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Healthcare</h3>
                     </div>
                   </div>
                 </div>
                 
-                <div className="space-y-4">
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                   <div >
-                    <h4 className="font-semibold text-gray-900 mb-2">Challenge:</h3>
-                    <p className="text-gray-600 text-sm">Manual processes causing delays in patient care and operational inefficiencies</h3>
+                    <h4 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Challenge:</h3>
+                    <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Manual processes causing delays in patient care and operational inefficiencies</h3>
                   </div>
                   
                   <div >
-                    <h4 className="font-semibold text-gray-900 mb-2">Solution:</h3>
-                    <p className="text-gray-600 text-sm">Deployed comprehensive AI platform for patient data analysis and workflow automation</h3>
+                    <h4 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Solution:</h3>
+                    <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Deployed comprehensive AI platform for patient data analysis and workflow automation</h3>
                   </div>
                   
                   <div >
-                    <h4 className="font-semibold text-gray-900 mb-2">Result:</h3>
-                    <p className="text-gray-600 text-sm">Improved patient outcomes and achieved 3x faster processing times</h3>
+                    <h4 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Result:</h3>
+                    <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Improved patient outcomes and achieved 3x faster processing times</h3>
                   </div>
                   
-                  <div className="pt-4 border-t border-gray-200">
-                    <div className="text-center">
-                      <div className="text-2xl font-bold text-green-600 mb-1">95% Patient Satisfaction</h3>
-                      <div className="text-xs text-gray-500 uppercase tracking-wide">Key Metric</h3>
-                <div className="space-y-4">
+                  <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">95% Patient Satisfaction</h3>
+                      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Key Metric</h3>
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                   <div >
-                    <h4 className="font-semibold text-gray-900 mb-2">Challenge:</h3>
-                    <p className="text-gray-600 text-sm">Manual processes causing delays in patient care and operational inefficiencies</h3>
-                  </div>
-                  
-                  <div >
-                    <h4 className="font-semibold text-gray-900 mb-2">Solution:</h3>
-                    <p className="text-gray-600 text-sm">Deployed comprehensive AI platform for patient data analysis and workflow automation</h3>
+                    <h4 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Challenge:</h3>
+                    <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Manual processes causing delays in patient care and operational inefficiencies</h3>
                   </div>
                   
                   <div >
-                    <h4 className="font-semibold text-gray-900 mb-2">Result:</h3>
-                    <p className="text-gray-600 text-sm">Improved patient outcomes and achieved 3x faster processing times</h3>
+                    <h4 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Solution:</h3>
+                    <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Deployed comprehensive AI platform for patient data analysis and workflow automation</h3>
                   </div>
                   
-                  <div className="pt-4 border-t border-gray-200">
-                    <div className="text-center">
-                      <div className="text-2xl font-bold text-green-600 mb-1">95% Patient Satisfaction</h3>
-                      <div className="text-xs text-gray-500 uppercase tracking-wide">Key Metric</h3>
+                  <div >
+                    <h4 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Result:</h3>
+                    <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Improved patient outcomes and achieved 3x faster processing times</h3>
+                  </div>
+                  
+                  <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">95% Patient Satisfaction</h3>
+                      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Key Metric</h3>
                     </div>
                   </div>
                 </div>
@@ -992,66 +960,66 @@ publishedAt: '2025-01-05
         </section>
 
         {/* Content Showcase */}
-        <section className="py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">,
+        <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <h2 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   Featured Content
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">,
-        <section className="py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">,
+              <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
+        <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <h2 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   Featured Content
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">,
+              <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   Explore our latest AI insights, breakthrough technologies, and success stories
               </p>
             </div>
             
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
               {latestInsights.map((item) => (
                 <Link key={item.id} to="/blog", className ="group
-                  <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-200 hover:border-blue-200">
-                    <div className="flex items-center gap-2 mb-4">
+                  <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                       <span className={`px-2 py-1 rounded-full text-xs font-semibold ${,`;,`;
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
               {latestInsights.map((item) => (
                 <Link key={item.id} to="/blog", className ="group">
-                  <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-200 hover:border-blue-200">
-                    <div className="flex items-center gap-2 mb-4">
+                  <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                       <span className= {`px-2 py-1 rounded-full text-xs font-semibold ${,`;,`;
   item.featured ? 'bg-red-100 text-red-800' : 'bg-blue-100 text-blue-800
                       }`}>`;`;
                         {item.featured ? 'Featured' : item.category}';';
                       </span>
-                      <span className="text-sm text-gray-500">{item.readMinutes} min read</span>";
+                      <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">{item.readMinutes} min read</span>";
                     </div>
                     
-                    <div className="text-4xl mb-4">🚀</h3>
-                    <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">🚀</h3>
+                    <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                       {item.title}
                     </h3>
                     
-                    <p className="text-gray-600 mb-4 text-sm leading-relaxed">
+                    <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                       {item.summary}
                     </p>
                     
-                    <div className="text-blue-600 font-semibold group-hover:text-blue-700 transition-colors">,
-                      <span className="text-sm text-gray-500">{item.readMinutes} min read</span>";
+                    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
+                      <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">{item.readMinutes} min read</span>";
                     </div>
                     
-                    <div className="text-4xl mb-4">🚀</h3>
-                    <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">🚀</h3>
+                    <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                       {item.title}
                     </h3>
                     
-                    <p className="text-gray-600 mb-4 text-sm leading-relaxed">
+                    <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                       {item.summary}
                     </p>
                     
-                    <div className="text-blue-600 font-semibold group-hover:text-blue-700 transition-colors">,
+                    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   Read More →
                     </div>
                   </div>
@@ -1059,13 +1027,11 @@ publishedAt: '2025-01-05
               ))}
             </div>
             
-            <div className="text-center mt-12">
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
               <Link to="/blog",
-  className="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl",
-            <div className="text-center mt-12">
+  className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
               <Link to="/blog",
-  className="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl",
-              >
+  className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 Explore All Content
               </Link>
             </div>
@@ -1073,182 +1039,180 @@ publishedAt: '2025-01-05
         </section>
 
         {/* Case Studies Preview */}
-        <section className="py-20 bg-gray-50">
-          <div className="container mx-auto px-6">
-            <div className="text-center mb-12">
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-100 text-green-700 text-sm font-medium mb-4">
-                <Sparkles className="w-4 h-4 mr-2" />,
+        <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <Sparkles className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   New Success Stories Available
               </div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Success Stories</h3>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">,
-        <section className="py-20 bg-gray-50">
-          <div className="container mx-auto px-6">
-            <div className="text-center mb-12">
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-100 text-green-700 text-sm font-medium mb-4">
-                <Sparkles className="w-4 h-4 mr-2" />,
+              <h2 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Success Stories</h3>
+              <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
+        <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <Sparkles className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   New Success Stories Available
               </div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Success Stories</h3>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">,
+              <h2 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Success Stories</h3>
+              <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   See how Fortune 500 companies are transforming their operations with our breakthrough AI solutions. New: Enterprise AI Platform Modernization, Multi-Modal AI, Edge AI Deployment & More.,
               </p>
             </div>
             
-            <div className="grid md:grid-cols-3 gap-8 mb-12">
-              <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition-shadow">
-                <div className="flex items-center mb-4">
-                  <div className="bg-green-100 w-12 h-12 rounded-lg flex items-center justify-center mr-4">
-                    <span className="w-6 h-6 text-green-600">📈</h3>
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                  <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                    <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">📈</h3>
                   </div>
                   <div >
-                    <h3 className="font-semibold text-gray-900">RetailMax Corporation</h3>
-                    <p className="text-sm text-gray-600">E-commerce</h3>
+                    <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">RetailMax Corporation</h3>
+                    <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">E-commerce</h3>
                   </div>
                 </div>
-                <p className="text-gray-600 mb-4">Reduced order processing time from 24 hours to 2 minutes with AI workflow automation.</h3>
-                <div className="text-2xl font-bold text-green-600">99% Time Reduction</h3>
+                <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Reduced order processing time from 24 hours to 2 minutes with AI workflow automation.</h3>
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">99% Time Reduction</h3>
               </div>
               
-              <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition-shadow">
-                <div className="flex items-center mb-4">
-                  <div className="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center mr-4">
-                    <span className="w-6 h-6 text-blue-600">👥</h3>
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                  <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                    <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">👥</h3>
                   </div>
                   <div >
-                    <h3 className="font-semibold text-gray-900">First National Bank</h3>
-                    <p className="text-sm text-gray-600">Banking</h3>
+                    <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">First National Bank</h3>
+                    <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Banking</h3>
                   </div>
                 </div>
-                <p className="text-gray-600 mb-4">Reduced customer wait times from 45 minutes to 2 minutes with AI virtual assistant.</h3>
-                <div className="text-2xl font-bold text-blue-600">95% Faster Response</h3>
+                <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Reduced customer wait times from 45 minutes to 2 minutes with AI virtual assistant.</h3>
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">95% Faster Response</h3>
               </div>
               
-              <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition-shadow">
-                <div className="flex items-center mb-4">
-                  <div className="bg-purple-100 w-12 h-12 rounded-lg flex items-center justify-center mr-4">
-                    <span className="w-6 h-6 text-purple-600">🎯</h3>
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                  <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                    <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">🎯</h3>
                   </div>
                   <div >
-                    <h3 className="font-semibold text-gray-900">Precision Manufacturing</h3>
-                    <p className="text-sm text-gray-600">Manufacturing</h3>
+                    <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Precision Manufacturing</h3>
+                    <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Manufacturing</h3>
                   </div>
                 </div>
-                <p className="text-gray-600 mb-4">Reduced production waste by 70% with AI data analytics and predictive maintenance.</h3>
-                <div className="text-2xl font-bold text-purple-600">70% Waste Reduction</h3>
+                <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Reduced production waste by 70% with AI data analytics and predictive maintenance.</h3>
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">70% Waste Reduction</h3>
               </div>
             </div>
             
-            <div className="text-center">
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
               <Link to="/case-studies",
-  className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-xl transition-all duration-300 hover:scale-105 inline-flex items-center gap-2",
-              >
-                <span className="w-5 h-5">🏆</span>,
-            <div className="grid md:grid-cols-3 gap-8 mb-12">
-              <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition-shadow">
-                <div className="flex items-center mb-4">
-                  <div className="bg-green-100 w-12 h-12 rounded-lg flex items-center justify-center mr-4">
-                    <span className="w-6 h-6 text-green-600">📈</h3>
+  className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">🏆</span>,
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                  <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                    <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">📈</h3>
                   </div>
                   <div >
-                    <h3 className="font-semibold text-gray-900">RetailMax Corporation</h3>
-                    <p className="text-sm text-gray-600">E-commerce</h3>
+                    <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">RetailMax Corporation</h3>
+                    <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">E-commerce</h3>
                   </div>
                 </div>
-                <p className="text-gray-600 mb-4">Reduced order processing time from 24 hours to 2 minutes with AI workflow automation.</h3>
-                <div className="text-2xl font-bold text-green-600">99% Time Reduction</h3>
+                <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Reduced order processing time from 24 hours to 2 minutes with AI workflow automation.</h3>
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">99% Time Reduction</h3>
               </div>
               
-              <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition-shadow">
-                <div className="flex items-center mb-4">
-                  <div className="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center mr-4">
-                    <span className="w-6 h-6 text-blue-600">👥</h3>
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                  <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                    <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">👥</h3>
                   </div>
                   <div >
-                    <h3 className="font-semibold text-gray-900">First National Bank</h3>
-                    <p className="text-sm text-gray-600">Banking</h3>
+                    <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">First National Bank</h3>
+                    <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Banking</h3>
                   </div>
                 </div>
-                <p className="text-gray-600 mb-4">Reduced customer wait times from 45 minutes to 2 minutes with AI virtual assistant.</h3>
-                <div className="text-2xl font-bold text-blue-600">95% Faster Response</h3>
+                <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Reduced customer wait times from 45 minutes to 2 minutes with AI virtual assistant.</h3>
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">95% Faster Response</h3>
               </div>
               
-              <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition-shadow">
-                <div className="flex items-center mb-4">
-                  <div className="bg-purple-100 w-12 h-12 rounded-lg flex items-center justify-center mr-4">
-                    <span className="w-6 h-6 text-purple-600">🎯</h3>
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                  <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                    <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">🎯</h3>
                   </div>
                   <div >
-                    <h3 className="font-semibold text-gray-900">Precision Manufacturing</h3>
-                    <p className="text-sm text-gray-600">Manufacturing</h3>
+                    <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Precision Manufacturing</h3>
+                    <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Manufacturing</h3>
                   </div>
                 </div>
-                <p className="text-gray-600 mb-4">Reduced production waste by 70% with AI data analytics and predictive maintenance.</h3>
-                <div className="text-2xl font-bold text-purple-600">70% Waste Reduction</h3>
+                <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Reduced production waste by 70% with AI data analytics and predictive maintenance.</h3>
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">70% Waste Reduction</h3>
               </div>
             </div>
             
-            <div className="text-center">
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
               <Link to="/case-studies",
-  className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-xl transition-all duration-300 hover:scale-105 inline-flex items-center gap-2",
-              >
-                <span className="w-5 h-5">🏆</span>,
+  className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">🏆</span>,
   View All Success Stories
               </Link>
             </div>
           </div>
         </section>
         {/* New Content Promo */}
-        <section className="py-20 bg-white">
-          <div className="container mx-auto px-6">
-            <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-8 md:p-12 text-white">
-              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
-                <div className="max-w-2xl">
-                  <h2 className="text-3xl font-bold mb-2">Latest from Zion Insights</h3>
-              <p className="text-white/90">New: AI SRE Runbooks 2026, Real‑Time Evals, and Cost‑Aware Agents.</h3>
+        <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                  <h2 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Latest from Zion Insights</h3>
+              <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">New: AI SRE Runbooks 2026, Real‑Time Evals, and Cost‑Aware Agents.</h3>
                 </div>
-                <Link to="/blog", className="bg-white text-indigo-700 hover:bg-indigo-50 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 self-start md:self-auto">,
+                <Link to="/blog", className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   Read the latest
-                  <span className="w-5 h-5">›</h3>
-        <section className="py-20 bg-white">
-          <div className="container mx-auto px-6">
-            <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-8 md:p-12 text-white">
-              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
-                <div className="max-w-2xl">
-                  <h2 className="text-3xl font-bold mb-2">Latest from Zion Insights</h3>
-              <p className="text-white/90">New: AI SRE Runbooks 2026, Real‑Time Evals, and Cost‑Aware Agents.</h3>
+                  <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">›</h3>
+        <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                  <h2 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Latest from Zion Insights</h3>
+              <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">New: AI SRE Runbooks 2026, Real‑Time Evals, and Cost‑Aware Agents.</h3>
                 </div>
-                <Link to="/blog", className="bg-white text-indigo-700 hover:bg-indigo-50 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 self-start md:self-auto">,
+                <Link to="/blog", className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   Read the latest
-                  <span className="w-5 h-5">›</h3>
+                  <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">›</h3>
                 </Link>
               </div>
 
               {/* Inline featured list (auto-curated highlights) */}
-              <div className="mt-8 grid gap-6 md:grid-cols-3">
-                <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-purple-200 mb-1">Observability</h3>
-                  <div className="font-semibold text-white">E2E AI Tracing</h3>
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                  <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Observability</h3>
+                  <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">E2E AI Tracing</h3>
                 </div>
-                <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-rose-200 mb-1">Edge Computing</h3>
-                  <div className="font-semibold text-white">Edge Personalization</h3>
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                  <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Edge Computing</h3>
+                  <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Edge Personalization</h3>
                 </div>
-                <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-blue-200 mb-1">AI Governance</h3>
-                  <div className="font-semibold text-white">Policy Tests Quickstart</h3>
-              <div className="mt-8 grid gap-6 md:grid-cols-3">
-                <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-purple-200 mb-1">Observability</h3>
-                  <div className="font-semibold text-white">E2E AI Tracing</h3>
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                  <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">AI Governance</h3>
+                  <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Policy Tests Quickstart</h3>
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                  <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Observability</h3>
+                  <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">E2E AI Tracing</h3>
                 </div>
-                <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-rose-200 mb-1">Edge Computing</h3>
-                  <div className="font-semibold text-white">Edge Personalization</h3>
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                  <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Edge Computing</h3>
+                  <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Edge Personalization</h3>
                 </div>
-                <div className="bg-white/10 rounded-xl p-5">
-                  <div className="text-sm text-blue-200 mb-1">AI Governance</h3>
-                  <div className="font-semibold text-white">Policy Tests Quickstart</h3>
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                  <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">AI Governance</h3>
+                  <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Policy Tests Quickstart</h3>
                 </div>
               </div>
             </div>
@@ -1256,18 +1220,18 @@ publishedAt: '2025-01-05
         </section>
 
         {/* New Services Promotional Section */}
-        <section className="py-20 bg-gradient-to-r from-emerald-50 to-teal-50 relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-emerald-100/20 to-teal-100/20"></h3>
-          <div className="container mx-auto px-6 relative z-10">
-            <div className="text-center">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Latest AI Services</h3>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">,
-        <section className="py-20 bg-gradient-to-r from-emerald-50 to-teal-50 relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-emerald-100/20 to-teal-100/20"></h3>
-          <div className="container mx-auto px-6 relative z-10">
-            <div className="text-center">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Latest AI Services</h3>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">,
+        <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white"></h3>
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <h2 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Latest AI Services</h3>
+              <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
+        <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white"></h3>
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <h2 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Latest AI Services</h3>
+              <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   Discover our newest AI-powered solutions designed to accelerate your digital transformation.
               </p>
             </div>
@@ -1279,18 +1243,18 @@ publishedAt: '2025-01-05
         <NewServicesShowcase />
 
         {/* Latest Articles Promotional Section */}
-        <section className="py-20 bg-gradient-to-r from-purple-50 to-indigo-50 relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-purple-100/20 to-indigo-100/20"></h3>
-          <div className="container mx-auto px-6 relative z-10">
-            <div className="text-center">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Latest Articles & Insights</h3>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">,
-        <section className="py-20 bg-gradient-to-r from-purple-50 to-indigo-50 relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-purple-100/20 to-indigo-100/20"></h3>
-          <div className="container mx-auto px-6 relative z-10">
-            <div className="text-center">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Latest Articles & Insights</h3>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">,
+        <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white"></h3>
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <h2 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Latest Articles & Insights</h3>
+              <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
+        <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white"></h3>
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <h2 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Latest Articles & Insights</h3>
+              <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   Stay ahead with our latest AI insights, technical guides, and industry best practices.
               </p>
             </div>
@@ -1303,35 +1267,31 @@ publishedAt: '2025-01-05
         {/* Success Stories Showcase */}
         <SuccessStoriesShowcase />
         {/* CTA Section */}
-        <section className="py-20 bg-blue-600">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">,
+        <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <h2 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   Ready to Transform Your Business?
             </h2>
-            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">,
+            <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   Join hundreds of enterprises already leveraging our AI and technology solutions.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
               <Link to="/contact" ,
-  className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors",
-        <section className="py-20 bg-blue-600">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">,
+  className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <h2 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   Ready to Transform Your Business?
             </h2>
-            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">,
+            <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   Join hundreds of enterprises already leveraging our AI and technology solutions.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
               <Link to="/contact" ,
-  className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors",
-              >
+  className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 Start Your Project
               </Link>
               <Link to="/case-studies" ,
-  className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors",
-  className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors",
-              >
+  className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 View Case Studies
               </Link>
             </div>
