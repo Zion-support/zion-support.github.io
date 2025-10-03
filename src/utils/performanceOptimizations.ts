@@ -9,7 +9,7 @@ export const preloadCriticalResources = () => {
   const criticalResources = [
     '/fonts/inter-var.woff2',
     '/images/hero-bg.webp',
-    '/images/logo.svg'
+    '/images/logo.svg
   ];
 
   criticalResources.forEach(resource => {

@@ -840,7 +840,7 @@ const HealthcareAITransformation: () => {
                 <div className="text-6xl mb-4">💬</div>",
                 <p className="text-2xl text-white font-semibold italic mb-6>
                   "This AI transformation has been nothing short of revolutionary for our network. 
-                  We're providing better care, faster service, and spending $124M less per year. '
+                  We're providing better care, faster service, and spending $124M less per year. 
                   Our staff are happier, our patients are healthier, and our organization is thriving. 
                   Zion Tech Group didn't just deliver technology—they transformed our entire operation.
                 </p>

@@ -243,19 +243,19 @@ export const validateSEOUrl = (url: string): { valid: boolean; issues: string[] 
   
   if (url.length > 100) {
     issues.push('URL is too long (>100 characters)');
-  '
+  
   
   if (url.includes('_')) {
     issues.push('URL contains underscores (use hyphens instead)');
-  '
+  
   
   if (/[A-Z]/.test(url)) {
     issues.push('URL contains uppercase letters');
-  '
+  
   
   if (/\s/.test(url)) {
     issues.push('URL contains spaces');
-  '
+  
   
   if (url.split('/').filter(Boolean).length > 5) {
     issues.push('URL has too many path segments (>5)');
@@ -305,7 +305,7 @@ export const checkContentQuality = (
   if (wordCount < 300) {
     issues.push('Content is too short (<300 words)');
     score -= 20;
-  '
+  
   
   // Keyword density check (title in content)
   const titleWords = title.toLowerCase().split(/\s+/);
@@ -314,13 +314,13 @@ export const checkContentQuality = (
   if (!titleInContent) {
     issues.push('Title keywords not found in content');
     score -= 15;
-  '
+  
   
   // Heading check
   if (!content.includes('#') && !content.includes('<h')) {
     recommendations.push('Add headings to improve content structure');
     score -= 10;
-  '
+  
   
   // Link check
   if (!content.includes('http') && !content.includes('[') && !content.includes('<a')) {

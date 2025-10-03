@@ -119,12 +119,12 @@ class EnhancedPerformanceMonitor {
     if (alert.type === 'error') {
       console.error('Performance Alert:', alert);
     }
-  '
+  
 
   public startMonitoring(): void {
     this.isMonitoring = true;
     console.log('Enhanced performance monitoring started');
-  '
+  
 
   public stopMonitoring(): void {
     this.isMonitoring = false;

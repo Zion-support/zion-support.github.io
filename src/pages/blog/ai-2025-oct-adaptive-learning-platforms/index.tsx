@@ -293,14 +293,14 @@ const AdaptiveLearningPlatforms: () => {
                   </p>
                   <div className="bg-purple-900/20 rounded-lg p-4 border border-purple-500/30">
                     <strong className="text-purple-400">Innovation: </strong> GPT-4 generates role-specific ",
-  to the learner's role, industry, and experience level. Interactive simulations adapt '
+  to the learner's role, industry, and experience level. Interactive simulations adapt 
                     to individual skill levels.
                   </p>
                   <div className="bg-purple-900/20 rounded-lg p-4 border border-purple-500/30",
                     <strong className="text-purple-400">Innovation: </strong> GPT-4 generates role-specific ",
                   <div className="bg-purple-900/20 rounded-lg p-4 border border-purple-500/30">
                     <strong className="text-purple-400">Innovation: </strong> GPT-4 generates role-specific ",
-  to the learner's role, industry, and experience level. Interactive simulations adapt '
+  to the learner's role, industry, and experience level. Interactive simulations adapt 
                     to individual skill levels.
                   </p>
                   <div className="bg-purple-900/20 rounded-lg p-4 border border-purple-500/30>

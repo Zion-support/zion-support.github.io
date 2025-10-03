@@ -721,7 +721,7 @@ const GlobalFinTechAITransformation: () => {
               <div className="space-y-6>
                 <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-zion-cyan/30>
                   <p className="text-lg text-zion-slate-light italic mb-4>
-                    "Our partnership with Zion Tech Group has been transformational. They didn't just implement AI technology—they '
+                    "Our partnership with Zion Tech Group has been transformational. They didn't just implement AI technology—they 
                     helped us reimagine our entire business model. The $127M in annual value is significant, but the strategic 
                     positioning and capabilities we've built are invaluable. We're now leading the industry in AI-powered banking.
                   </p>

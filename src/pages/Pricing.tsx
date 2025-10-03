@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import {
 
-} from 'lucide-react'
+} from 'lucide-react
 const Pricing: React.FC = () => {
   const pricingPlans: [,
     {
@@ -22,7 +22,7 @@ const Pricing: React.FC = () => {
 
       limitations: [,,
         'Limited API Calls',';';
-        'Basic Customization'
+        'Basic Customization
       ]
       cta: 'Start Free Trial',';,';,
       popular: false,
@@ -70,10 +70,10 @@ const Pricing: React.FC = () => {
       limitations: [],,
       cta: 'Contact Sales',';,';,
       popular: false,,
-import React from 'react';'
-import { Link } from 'react-router-dom';'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-} from 'lucide-react';'
+} from 'lucide-react';
 
 const Pricing: React.FC = () => {
   const pricingPlans: [,
@@ -85,16 +85,16 @@ const Pricing: React.FC = () => {
       icon: Zap,,
       color: 'blue',',';,
       features: [,,
-        'Basic AI Automation','
-        'Email Support','
-        'Up to 5 Users','
-        'Standard Analytics','
-        'Basic Integrations','
+        'Basic AI Automation',
+        'Email Support',
+        'Up to 5 Users',
+        'Standard Analytics',
+        'Basic Integrations',
         'Monthly Reports'],
 
       limitations: [,,
-        'Limited API Calls','
-        'Basic Customization'
+        'Limited API Calls',
+        'Basic Customization
       ]
       cta: 'Start Free Trial',',';,
       popular: false,
@@ -107,13 +107,13 @@ const Pricing: React.FC = () => {
       icon: Shield,,
       color: 'green',',';,
       features: [,,
-        'Advanced AI Automation','
-        'Priority Support','
-        'Up to 25 Users','
-        'Advanced Analytics','
-        'Custom Integrations','
-        'Weekly Reports','
-        'Training Sessions','
+        'Advanced AI Automation',
+        'Priority Support',
+        'Up to 25 Users',
+        'Advanced Analytics',
+        'Custom Integrations',
+        'Weekly Reports',
+        'Training Sessions',
         'API Access'],
 
       limitations: [],,
@@ -128,15 +128,15 @@ const Pricing: React.FC = () => {
       icon: Crown,,
       color: 'purple',',';,
       features: [,,
-        'Unlimited AI Automation','
-        '24/7 Dedicated Support','
-        'Unlimited Users','
-        'Custom Analytics','
-        'White-label Solutions','
-        'Real-time Reports','
-        'Dedicated Account Manager','
-        'Full API Access','
-        'Custom Development','
+        'Unlimited AI Automation',
+        '24/7 Dedicated Support',
+        'Unlimited Users',
+        'Custom Analytics',
+        'White-label Solutions',
+        'Real-time Reports',
+        'Dedicated Account Manager',
+        'Full API Access',
+        'Custom Development',
         'SLA Guarantee'],
 
       limitations: [],,
@@ -331,7 +331,7 @@ const Pricing: React.FC = () => {
               const IconComponent: plan.icon;,,
   return (
                 <div key={plan.name} className={`relative bg-white rounded-lg shadow-lg border-2 p-8 ${`,`;,`;
-  plan.popular ? 'border-blue-500' : 'border-gray-200'
+  plan.popular ? 'border-blue-500' : 'border-gray-200
                 }`}>`
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -349,7 +349,7 @@ const Pricing: React.FC = () => {
               const IconComponent: plan.icon;,,
   return (
                 <div key={plan.name} className= {`relative bg-white rounded-lg shadow-lg border-2 p-8 ${`,`;,`;
-  plan.popular ? 'border-blue-500' : 'border-gray-200'
+  plan.popular ? 'border-blue-500' : 'border-gray-200
                 }`}>`
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -422,12 +422,12 @@ const Pricing: React.FC = () => {
 `block w-full text-center px-6 py-3 rounded-lg font-semibold transition-colors ${`
 plan.popular
 ? 'bg-blue-600 text-white hover: bg-blue-700',';,';,
-  to: {plan.name == = 'Enterprise' ? '/contact' : '/demo'}'
+  to: {plan.name == = 'Enterprise' ? '/contact' : '/demo'}
                     className= {,
 `block w-full text-center px-6 py-3 rounded-lg font-semibold transition-colors ${`
 plan.popular
 ? 'bg-blue-600 text-white hover: bg-blue-700',',';,
-: 'bg-gray-100 text-gray-900 hover:bg-gray-200'
+: 'bg-gray-100 text-gray-900 hover:bg-gray-200
 }`}`
                   >
                     {plan.cta}

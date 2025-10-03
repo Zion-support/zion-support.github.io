@@ -3,11 +3,11 @@ import { Helmet } from 'react-helmet-async';
 import { Network } from 'lucide-react'';
 import Header from '../../components/Header'';
 import Footer from '../../components/Footer'';
-import React from 'react';'
-import { Helmet } from 'react-helmet-async';'
-import { Network } from 'lucide-react';'
-import Header from '../../components/Header';'
-import Footer from '../../components/Footer';'
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Network } from 'lucide-react';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 
 const IoTEdgeComputing: React.FC = () => {
   const features: [,
@@ -866,7 +866,7 @@ const IoTEdgeComputing: React.FC = () => {
 plan.popular
 ? 'bg-orange-600 text-white hover: bg-orange-700',';,
 ? 'bg-orange-600 text-white hover: bg-orange-700',',';,
-: 'bg-gray-100 text-gray-900 hover:bg-gray-200'
+: 'bg-gray-100 text-gray-900 hover:bg-gray-200
 }`}`
                   >
                     Get Started

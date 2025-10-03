@@ -1,5 +1,5 @@
 import React from 'react';
-import React from 'react';'
+import React from 'react';
 
 const AIIncidentResponsePlaybooks2025: React.FC = () => {
   return (

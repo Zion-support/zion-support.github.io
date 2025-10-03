@@ -78,14 +78,14 @@ slug: 'quantum-ai-breakthrough',';,';,
 title: 'Quantum AI Breakthrough: Solving Impossible Problems in Seconds',';,';,
 description: 'Explore quantum-enhanced AI delivering 500x faster results and revolutionizing computational capabilities.',';,';,
 category: 'Quantum Computing',';,';,
-publishedAt: '2025-01-10'
+publishedAt: '2025-01-10
 },
     {
 slug: 'manufacturing-success',';,';,
 title: 'Manufacturing AI Transformation: $50M Savings & 95% Efficiency',';,';,
 description: 'See how a Fortune 500 manufacturer achieved $50M annual savings and 95% efficiency improvements.',';,';,
 category: 'Success Story',';,';,
-publishedAt: '2025-01-05'
+publishedAt: '2025-01-05
 }
   ];
 
@@ -1024,7 +1024,7 @@ publishedAt: '2025-01-05'
                   <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-200 hover:border-blue-200">
                     <div className="flex items-center gap-2 mb-4">
                       <span className= {`px-2 py-1 rounded-full text-xs font-semibold ${,`;,`;
-  item.featured ? 'bg-red-100 text-red-800' : 'bg-blue-100 text-blue-800'
+  item.featured ? 'bg-red-100 text-red-800' : 'bg-blue-100 text-blue-800
                       }`}>`;`;
                         {item.featured ? 'Featured' : item.category}';';
                       </span>

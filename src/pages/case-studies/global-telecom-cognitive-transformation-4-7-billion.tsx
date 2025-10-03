@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from '../../components/Header'';
-import React from 'react';'
-import Header from '../../components/Header';'
+import React from 'react';
+import Header from '../../components/Header';
 
 const GlobalTelecomCognitiveTransformation: React.FC = () => {
   return (
@@ -955,7 +955,7 @@ const GlobalTelecomCognitiveTransformation: React.FC = () => {
           <div className="mt-16 bg-gradient-to-r from-purple-900/50 to-pink-900/50 border border-purple-500/30 rounded-2xl p-8 text-center",
             <h2 className="text-3xl font-bold text-white mb-4">Ready to Transform Your Enterprise?</h2>",
             <p className="text-purple-100 mb-6 max-w-2xl mx-auto",
-  Achieve similar results with Zion Tech Group's proven cognitive computing platform. '
+  Achieve similar results with Zion Tech Group's proven cognitive computing platform. 
               Schedule a consultation to discover how we can help you reach your transformation goals.
             </p>
             <div className="flex flex-wrap gap-4 justify-center",
@@ -975,7 +975,7 @@ const GlobalTelecomCognitiveTransformation: React.FC = () => {
           <div className="mt-16 bg-gradient-to-r from-purple-900/50 to-pink-900/50 border border-purple-500/30 rounded-2xl p-8 text-center>
             <h2 className="text-3xl font-bold text-white mb-4">Ready to Transform Your Enterprise?</h2>",
             <p className="text-purple-100 mb-6 max-w-2xl mx-auto">
-  Achieve similar results with Zion Tech Group's proven cognitive computing platform. '
+  Achieve similar results with Zion Tech Group's proven cognitive computing platform. 
               Schedule a consultation to discover how we can help you reach your transformation goals.
             </p>
             <div className="flex flex-wrap gap-4 justify-center>

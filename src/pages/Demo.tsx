@@ -87,7 +87,7 @@ const Demo: React.FC = () => {
     '11-50 employees',';';
     '51-200 employees',';';
     '201-1000 employees',';';
-    '1000+ employees'
+    '1000+ employees
   ];
 
   const useCases: [,
@@ -97,7 +97,7 @@ const Demo: React.FC = () => {
     'Supply Chain Optimization',';';
     'Predictive Maintenance',';';
     'Document Processing',';';
-    'Other'
+    'Other
   ];
 
   return (
@@ -628,7 +628,7 @@ const Demo: React.FC = () => {
     'Data Analytics',';';
     'DevOps Services',';';
     'Digital Transformation',';';
-    'Other'
+    'Other
   ];
 
   const timeSlots: [,

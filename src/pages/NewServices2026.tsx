@@ -296,13 +296,13 @@ export default function NewServices2026() {
             'Performance analytics and recommendations',
             'Compliance with CAN-SPAM and GDPR regulations',
             'Multi-language support for global campaigns',
-            'Real-time performance monitoring and alerts'
+            'Real-time performance monitoring and alerts
           ],
           benefits: [
             'Average 23% increase in email open rates',
             '40% improvement in click-through rates',
             '60% reduction in email marketing costs',
-            'Automated optimization saves 10+ hours weekly'
+            'Automated optimization saves 10+ hours weekly
           ],
           useCases: ['E-commerce brands', 'SaaS companies', 'Marketing agencies', 'Non-profits'],
           marketSize: '$7.5B email marketing market',
@@ -321,13 +321,13 @@ export default function NewServices2026() {
             'Integration with Zoom, Teams, Google Meet, Webex',
             'Team productivity dashboards and reporting',
             'Sentiment analysis and engagement tracking',
-            'Automated meeting summaries and distribution'
+            'Automated meeting summaries and distribution
           ],
           benefits: [
             '35% reduction in meeting time waste',
             '50% improvement in action item completion',
             '25% increase in team productivity',
-            'Automated follow-ups save 5+ hours weekly'
+            'Automated follow-ups save 5+ hours weekly
           ],
           useCases: ['Remote teams', 'Consulting firms', 'Sales organizations', 'Project managers'],
           marketSize: '$4.2B meeting software market',
@@ -346,13 +346,13 @@ export default function NewServices2026() {
             'Revenue optimization through intelligent scheduling',
             'Integration with major EHR systems (Epic, Cerner, Allscripts)',
             'Multi-provider scheduling coordination',
-            'Real-time availability updates and notifications'
+            'Real-time availability updates and notifications
           ],
           benefits: [
             '28% reduction in no-show rates',
             '15% increase in revenue through optimized scheduling',
             '40% reduction in administrative overhead',
-            '95% patient satisfaction improvement'
+            '95% patient satisfaction improvement
           ],
           useCases: ['Medical practices', 'Dental offices', 'Mental health providers', 'Specialty clinics'],
           marketSize: '$3.8B healthcare scheduling market',
@@ -377,7 +377,7 @@ export default function NewServices2026() {
             '40% faster time-to-market globally',';
             '60% reduction in translation costs',';
             '85% improvement in international SEO rankings',';
-            'Automated workflows save 20+ hours weekly'
+            'Automated workflows save 20+ hours weekly
           ],
           useCases: ['E-commerce brands', 'SaaS companies', 'Publishing houses', 'Global enterprises'],';,
           marketSize: '$56B localization market',';,
@@ -402,7 +402,7 @@ export default function NewServices2026() {
             '25% reduction in stockouts',';
             '20% reduction in inventory carrying costs',';
             '35% improvement in cash flow',';
-            '50% reduction in manual inventory management'
+            '50% reduction in manual inventory management
           ],
           useCases: ['E-commerce retailers', 'Wholesale distributors', 'Manufacturing companies', 'Multi-location businesses'],';,
           marketSize: '$2.1B inventory management market',';,
@@ -435,7 +435,7 @@ export default function NewServices2026() {
             '60% reduction in compliance costs',';
             '90% reduction in regulatory violations',';
             '50% faster audit preparation',';
-            'Automated reporting saves 40+ hours monthly'
+            'Automated reporting saves 40+ hours monthly
           ],
           useCases: ['Banks', 'Credit unions', 'Investment firms', 'Insurance companies'],';,
           marketSize: '$12.3B compliance software market',';,
@@ -460,7 +460,7 @@ export default function NewServices2026() {
             '45% improvement in lead conversion rates',';
             '30% reduction in sales cycle length',';
             '50% increase in sales team productivity',';
-            'Automated nurturing saves 15+ hours weekly'
+            'Automated nurturing saves 15+ hours weekly
           ],
           useCases: ['B2B sales teams', 'Marketing agencies', 'SaaS companies', 'Professional services'],';,
           marketSize: '$6.8B sales automation market',';,
@@ -485,7 +485,7 @@ export default function NewServices2026() {
             '50% improvement in customer service quality scores',';
             '35% reduction in customer complaints',';
             '25% increase in customer satisfaction',';
-            'Automated analytics save 20+ hours weekly'
+            'Automated analytics save 20+ hours weekly
           ],
           useCases: ['Call centers', 'Customer service teams', 'Sales organizations', 'Healthcare providers'],';,
           marketSize: '$2.8B voice analytics market',';,
@@ -510,7 +510,7 @@ export default function NewServices2026() {
             '40% reduction in unplanned downtime',';
             '25% reduction in maintenance costs',';
             '30% improvement in equipment lifespan',';
-            'Predictive insights prevent 80% of failures'
+            'Predictive insights prevent 80% of failures
           ],
           useCases: ['Manufacturing companies', 'Facilities management', 'Transportation', 'Utilities'],';,
           marketSize: '$4.5B predictive maintenance market',';,
@@ -535,7 +535,7 @@ export default function NewServices2026() {
             '70% reduction in moderation costs',';
             '90% improvement in content safety',';
             '60% faster content review processes',';
-            'Automated moderation handles 95% of content'
+            'Automated moderation handles 95% of content
           ],
           useCases: ['Social media platforms', 'Online communities', 'E-commerce marketplaces', 'Content publishers'],';,
           marketSize: '$3.2B content moderation market',';,
@@ -568,7 +568,7 @@ export default function NewServices2026() {
             '99.9% reduction in security breaches',';
             '50% reduction in security management overhead',';
             '100% compliance with industry standards',';
-            'Automated security saves 30+ hours weekly'
+            'Automated security saves 30+ hours weekly
           ],
           useCases: ['Enterprise organizations', 'Financial institutions', 'Healthcare providers', 'Government agencies'],';,
           marketSize: '$31.8B zero trust security market',';,
@@ -593,7 +593,7 @@ export default function NewServices2026() {
             '40% reduction in infrastructure costs',';
             '60% improvement in application performance',';
             '99.9% uptime and reliability',';
-            'Automated scaling saves 50+ hours monthly'
+            'Automated scaling saves 50+ hours monthly
           ],
           useCases: ['Enterprise IT departments', 'Growing businesses', 'Digital transformation initiatives', 'Legacy system modernization'],';,
           marketSize: '$445B cloud computing market',';,
@@ -618,7 +618,7 @@ export default function NewServices2026() {
             '80% reduction in security vulnerabilities',';
             '70% faster deployment cycles',';
             '90% reduction in security incidents',';
-            'Automated pipelines save 40+ hours weekly'
+            'Automated pipelines save 40+ hours weekly
           ],
           useCases: ['Software development teams', 'DevOps engineers', 'Security teams', 'IT operations'],';,
           marketSize: '$7.8B DevSecOps market',';,
@@ -643,7 +643,7 @@ export default function NewServices2026() {
             '99.99% business continuity assurance',';
             '80% reduction in recovery time',';
             '50% reduction in disaster costs',';
-            'Automated recovery saves critical time'
+            'Automated recovery saves critical time
           ],
           useCases: ['Enterprise organizations', 'Financial services', 'Healthcare providers', 'Government agencies'],';,
           marketSize: '$12.4B disaster recovery market',';,
@@ -668,7 +668,7 @@ export default function NewServices2026() {
             '60% improvement in API performance',';
             '50% reduction in API management overhead',';
             '90% improvement in developer productivity',';
-            'Automated management saves 25+ hours weekly'
+            'Automated management saves 25+ hours weekly
           ],
           useCases: ['API-driven businesses', 'Microservices architectures', 'Developer teams', 'Enterprise integration'],';,
           marketSize: '$4.1B API management market',';,
@@ -701,7 +701,7 @@ export default function NewServices2026() {
             '70% reduction in video production costs',';
             '90% faster video creation and deployment',';
             '60% improvement in engagement rates',';
-            'Automated creation saves 40+ hours weekly'
+            'Automated creation saves 40+ hours weekly
           ],
           useCases: ['Marketing agencies', 'E-learning platforms', 'Social media managers', 'Content creators'],';,
           marketSize: '$15.7B video marketing market',';,
@@ -726,7 +726,7 @@ export default function NewServices2026() {
             '80% reduction in smart contract risks',';
             '60% improvement in DeFi performance',';
             '90% faster risk assessment',';
-            'Automated monitoring saves 30+ hours weekly'
+            'Automated monitoring saves 30+ hours weekly
           ],
           useCases: ['DeFi protocols', 'Crypto exchanges', 'Investment firms', 'Blockchain developers'],';,
           marketSize: '$2.1B blockchain analytics market',';,
@@ -751,7 +751,7 @@ export default function NewServices2026() {
             '30% reduction in energy costs',';
             '25% improvement in energy efficiency',';
             '40% reduction in carbon footprint',';
-            'Automated optimization saves 20+ hours monthly'
+            'Automated optimization saves 20+ hours monthly
           ],
           useCases: ['Manufacturing facilities', 'Commercial buildings', 'Data centers', 'Utilities'],';,
           marketSize: '$12.8B energy management market',';,
@@ -776,7 +776,7 @@ export default function NewServices2026() {
             '75% reduction in document review time',';
             '90% improvement in risk detection accuracy',';
             '60% reduction in legal costs',';
-            'Automated analysis saves 50+ hours weekly'
+            'Automated analysis saves 50+ hours weekly
           ],
           useCases: ['Law firms', 'Corporate legal departments', 'Compliance teams', 'Contract management'],';,
           marketSize: '$12.4B legal tech market',';,
@@ -801,7 +801,7 @@ export default function NewServices2026() {
             '25% reduction in fleet operating costs',';
             '30% improvement in fuel efficiency',';
             '40% reduction in maintenance costs',';
-            'Automated management saves 35+ hours weekly'
+            'Automated management saves 35+ hours weekly
           ],
           useCases: ['Transportation companies', 'Delivery services', 'Construction firms', 'Fleet operators'],';,
           marketSize: '$5.8B fleet management market',';,

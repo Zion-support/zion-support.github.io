@@ -3,11 +3,11 @@ import { Helmet } from 'react-helmet-async';
 import { Cloud } from 'lucide-react'';
 import Header from '../../components/Header'';
 import Footer from '../../components/Footer'';
-import React from 'react';'
-import { Helmet } from 'react-helmet-async';'
-import { Cloud } from 'lucide-react';'
-import Header from '../../components/Header';'
-import Footer from '../../components/Footer';'
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Cloud } from 'lucide-react';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 
 const EdgeComputingAI: React.FC = () => {
   const features: [,
@@ -868,7 +868,7 @@ const EdgeComputingAI: React.FC = () => {
 plan.popular
 ? 'bg-teal-600 text-white hover: bg-teal-700',';,
 ? 'bg-teal-600 text-white hover: bg-teal-700',',';,
-: 'bg-gray-100 text-gray-900 hover:bg-gray-200'
+: 'bg-gray-100 text-gray-900 hover:bg-gray-200
 }`}`
                   >
                     Get Started

@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from '../../../components/Header'';
-import React from 'react';'
-import Header from '../../../components/Header';'
+import React from 'react';
+import Header from '../../../components/Header';
 
 const MultiAgentEnterpriseOrchestration: React.FC = () => {
   return (
@@ -810,7 +810,7 @@ const MultiAgentEnterpriseOrchestration: React.FC = () => {
           <div className="mt-16 bg-gradient-to-r from-purple-900/50 to-pink-900/50 border border-purple-500/30 rounded-2xl p-8 text-center",
             <h2 className="text-3xl font-bold text-white mb-4">Ready to Deploy Multi-Agent Orchestration?</h2>",
             <p className="text-purple-100 mb-6 max-w-2xl mx-auto",
-  Zion Tech Group's Multi-Agent Orchestration Platform enables rapid deployment of enterprise-grade agent systems. '
+  Zion Tech Group's Multi-Agent Orchestration Platform enables rapid deployment of enterprise-grade agent systems. 
               Achieve 97.8% automation rates and $847M+ in annual value creation.
             </p>
             <div className="flex flex-wrap gap-4 justify-center",
@@ -830,7 +830,7 @@ const MultiAgentEnterpriseOrchestration: React.FC = () => {
           <div className="mt-16 bg-gradient-to-r from-purple-900/50 to-pink-900/50 border border-purple-500/30 rounded-2xl p-8 text-center>
             <h2 className="text-3xl font-bold text-white mb-4">Ready to Deploy Multi-Agent Orchestration?</h2>",
             <p className="text-purple-100 mb-6 max-w-2xl mx-auto">
-  Zion Tech Group's Multi-Agent Orchestration Platform enables rapid deployment of enterprise-grade agent systems. '
+  Zion Tech Group's Multi-Agent Orchestration Platform enables rapid deployment of enterprise-grade agent systems. 
               Achieve 97.8% automation rates and $847M+ in annual value creation.
             </p>
             <div className="flex flex-wrap gap-4 justify-center>

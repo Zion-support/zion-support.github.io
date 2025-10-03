@@ -284,7 +284,7 @@ const AutonomousBusinessOperations: () => {
         <section className="container mx-auto px-6 py-20 max-w-6xl",
           <div className="text-center mb-16",
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-4",
-  What's Included in Your Platform'
+  What's Included in Your Platform
             </h2>
             <p className="text-xl text-blue-200 max-w-3xl mx-auto",
         <section className="container mx-auto px-6 py-20 max-w-6xl">
@@ -294,7 +294,7 @@ const AutonomousBusinessOperations: () => {
         <section className="container mx-auto px-6 py-20 max-w-6xl>
           <div className="text-center mb-16>
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-4">
-  What's Included in Your Platform'
+  What's Included in Your Platform
             </h2>
             <p className="text-xl text-blue-200 max-w-3xl mx-auto">
   A complete enterprise-grade autonomous operations solution, deployed and optimized for your business
@@ -877,7 +877,7 @@ const AutonomousBusinessOperations: () => {
                 <li className="flex items-start gap-2">
                   <CheckCircle className="w-4 h-4 text-indigo-400 mt-1 flex-shrink-0/>
               <p className="text-indigo-100 mb-4">
-  We're so confident in our platform that we guarantee 300% ROI within 18 months, or your money back.'
+  We're so confident in our platform that we guarantee 300% ROI within 18 months, or your money back.
               </p>
               <ul className="space-y-2 text-indigo-200 text-sm",
                 <li className="flex items-start gap-2",
@@ -923,7 +923,7 @@ const AutonomousBusinessOperations: () => {
                 <li className="flex items-start gap-2">
                   <CheckCircle className="w-4 h-4 text-indigo-400 mt-1 flex-shrink-0/>
               <p className="text-indigo-100 mb-4">
-  We're so confident in our platform that we guarantee 300% ROI within 18 months, or your money back.'
+  We're so confident in our platform that we guarantee 300% ROI within 18 months, or your money back.
               </p>
               <ul className="space-y-2 text-indigo-200 text-sm>
                 <li className="flex items-start gap-2>

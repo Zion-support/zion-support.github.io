@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import React from 'react';'
-import { Helmet } from 'react-helmet-async';'
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
 const Partners: React.FC = () => {
   const partners: [,,
@@ -91,14 +91,14 @@ const Partners: React.FC = () => {
       icon: '🔧',';,';,
       benefits: [,,,
         'Access to cutting-edge technology',';';
-        'Joint go-to-market strategies'
+        'Joint go-to-market strategies
       title: 'Technology Partners',',';,
       description: 'Leading technology providers and platform partners',',';,
       icon: '🔧',',';,
       benefits: [,,,
-        'Access to cutting-edge technology','
-        'Joint go-to-market strategies','
-        'Technical support and training'
+        'Access to cutting-edge technology',
+        'Joint go-to-market strategies',
+        'Technical support and training
       ]
     },
     {
@@ -107,14 +107,14 @@ const Partners: React.FC = () => {
       icon: '🤝',';,';,
       benefits: [,,,
         'Complementary solution offerings',';';
-        'Joint customer implementations'
+        'Joint customer implementations
       title: 'Solution Partners',',';,
       description: 'Specialized solution providers and integrators',',';,
       icon: '🤝',',';,
       benefits: [,,,
-        'Complementary solution offerings','
-        'Joint customer implementations','
-        'Shared expertise and resources'
+        'Complementary solution offerings',
+        'Joint customer implementations',
+        'Shared expertise and resources
       ]
     },
     {
@@ -123,14 +123,14 @@ const Partners: React.FC = () => {
       icon: '📈',';,';,
       benefits: [,,,
         'Extended market reach',';';
-        'Local customer support'
+        'Local customer support
       title: 'Channel Partners',',';,
       description: 'Resellers and distribution partners',',';,
       icon: '📈',',';,
       benefits: [,,,
-        'Extended market reach','
-        'Local customer support','
-        'Revenue sharing opportunities'
+        'Extended market reach',
+        'Local customer support',
+        'Revenue sharing opportunities
       ]
     }
   ];

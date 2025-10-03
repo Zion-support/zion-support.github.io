@@ -133,7 +133,7 @@ export default function NextGenSecurityOperations2025(): void {
             </h1>
             
             <p className="text-xl text-gray-300 leading-relaxed">
-  Deploy autonomous AI security systems that detect threats with 99.97% accuracy in milliseconds, respond automatically to attacks, and predict zero-day vulnerabilities before they're exploited. Protect $2.3B+ in enterprise assets while reducing security operations costs by 87%.'
+  Deploy autonomous AI security systems that detect threats with 99.97% accuracy in milliseconds, respond automatically to attacks, and predict zero-day vulnerabilities before they're exploited. Protect $2.3B+ in enterprise assets while reducing security operations costs by 87%.
             </p>
           </header>
 

@@ -294,7 +294,7 @@ const SmartContractAudit: React.FC = () => {
                   <a href="/contact" className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
                     plan.popular 
                       ? 'bg-red-600 text-white hover:bg-red-700' 
-                      : 'bg-gray-900 text-white hover:bg-gray-800'
+                      : 'bg-gray-900 text-white hover:bg-gray-800
                   }`}>
                     Get Started
                   </a>

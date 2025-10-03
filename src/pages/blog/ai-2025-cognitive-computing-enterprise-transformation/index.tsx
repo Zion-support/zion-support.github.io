@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from '../../../components/Header'';
-import React from 'react';'
-import Header from '../../../components/Header';'
+import React from 'react';
+import Header from '../../../components/Header';
 
 const CognitiveComputingTransformation: React.FC = () => {
   return (
@@ -830,7 +830,7 @@ const CognitiveComputingTransformation: React.FC = () => {
           <div className="mt-16 bg-gradient-to-r from-purple-900/50 to-pink-900/50 border border-purple-500/30 rounded-2xl p-8 text-center",
             <h2 className="text-3xl font-bold text-white mb-4">Transform Your Enterprise with Cognitive AI</h2>",
             <p className="text-purple-100 mb-6 max-w-2xl mx-auto",
-  Zion Tech Group's Cognitive Computing Platform enables rapid deployment of human-like AI intelligence. '
+  Zion Tech Group's Cognitive Computing Platform enables rapid deployment of human-like AI intelligence. 
               Achieve 98.5%+ decision accuracy and $1.2B+ in annual value creation.
             </p>
             <div className="flex flex-wrap gap-4 justify-center",
@@ -850,7 +850,7 @@ const CognitiveComputingTransformation: React.FC = () => {
           <div className="mt-16 bg-gradient-to-r from-purple-900/50 to-pink-900/50 border border-purple-500/30 rounded-2xl p-8 text-center>
             <h2 className="text-3xl font-bold text-white mb-4">Transform Your Enterprise with Cognitive AI</h2>",
             <p className="text-purple-100 mb-6 max-w-2xl mx-auto">
-  Zion Tech Group's Cognitive Computing Platform enables rapid deployment of human-like AI intelligence. '
+  Zion Tech Group's Cognitive Computing Platform enables rapid deployment of human-like AI intelligence. 
               Achieve 98.5%+ decision accuracy and $1.2B+ in annual value creation.
             </p>
             <div className="flex flex-wrap gap-4 justify-center>

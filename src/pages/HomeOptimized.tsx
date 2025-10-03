@@ -220,10 +220,10 @@ const HomeOptimized: () => {
           <BannerRotationManager banners: {[,
               'october2025-new-breakthrough',';';
               'october2025-tech-breakthrough',';';
-              'october2025-next-gen-ai'
-              'october2025-new-breakthrough','
-              'october2025-tech-breakthrough','
-              'october2025-next-gen-ai','
+              'october2025-next-gen-ai
+              'october2025-new-breakthrough',
+              'october2025-tech-breakthrough',
+              'october2025-next-gen-ai',
             ]}
             maxBanners: {3}
             autoRotate: {false}
