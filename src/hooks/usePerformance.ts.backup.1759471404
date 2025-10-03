@@ -13,6 +13,14 @@ export const usePerformanceMonitor = (componentName: string) => {;
     return () => {;
       const unmountTime = Date.now();
       const totalTime = unmountTime - mountTime.current;
+<<<<<<< HEAD
+;
+      if (import.meta.env.DEV) {;
+        console.log(`[Performance] ${componentName`:`, {;
+          renderCount: renderCount.current,;
+          totalTime: `${totalTime`ms`,;
+          avgRenderTime: `${totalTime / renderCount.current`;
+=======
 =======
       
       if (import.meta.env.DEV) {
@@ -20,6 +28,7 @@ export const usePerformanceMonitor = (componentName: string) => {;
           renderCount: renderCount.current,
           totalTime: `${totalTime}ms`,
           avgRenderTime: `${totalTime / renderCount.current}ms`
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0173
         });
       }
     };
@@ -135,12 +144,21 @@ export const useVisibility = () => {;
   useEffect(() => {;
     const handleVisibilityChange = () => {;
       setIsVisible(!document.hidden);
+<<<<<<< HEAD
+    ';';
+;
+    document.addEventListener('visibilitychange', handleVisibilityChange);';
+;
+    return () => {;
+      document.removeEventListener('visibilitychange', handleVisibilityChange);';
+=======
     };
 
     document.addEventListener('visibilitychange', handleVisibilityChange);
 
     return () => {
       document.removeEventListener('visibilitychange', handleVisibilityChange);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0173
     };
   }, []);
 ;
@@ -164,6 +182,20 @@ export const useNetworkStatus = () => {
     // Check connection type if available;
     if ('connection' in navigator) {';
       const connection = (navigator as any).connection;
+<<<<<<< HEAD
+      setConnectionType(connection.effectiveType || 'unknown');';
+;
+      const handleConnectionChange = () => {;
+        setConnectionType(connection.effectiveType || 'unknown');';
+      ';';
+;
+      connection.addEventListener('change', handleConnectionChange);';
+;
+      return () => {;
+        window.removeEventListener('online', handleOnline);';
+        window.removeEventListener('offline', handleOffline);';
+        connection.removeEventListener('change', handleConnectionChange);';
+=======
       setConnectionType(connection.effectiveType || 'unknown');
       
       const handleConnectionChange = () => {
@@ -176,6 +208,7 @@ export const useNetworkStatus = () => {
         window.removeEventListener('online', handleOnline);
         window.removeEventListener('offline', handleOffline);
         connection.removeEventListener('change', handleConnectionChange);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0173
       };
     };
 ;
@@ -196,11 +229,19 @@ export const useMemoryInfo = () => {;
     usedJSHeapSize: number;
     totalJSHeapSize: number;
     jsHeapSizeLimit: number;
+<<<<<<< HEAD
+  ' | null>(null);';
+;
+  useEffect(() => {;
+    if ('memory' in performance) {';
+      const updateMemoryInfo = () => {;
+=======
   } | null>(null);
 
   useEffect(() => {
     if ('memory' in performance) {
       const updateMemoryInfo = () => {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0173
         const memory = (performance as any).memory;
         setMemoryInfo({;
           usedJSHeapSize: memory.usedJSHeapSize,;
@@ -250,6 +291,21 @@ export const useComponentLifecycle = (componentName: string) => {;
   useEffect(() => {;
     renderStartTime.current = performance.now();
     markRender();
+<<<<<<< HEAD
+  `);
+;
+  useEffect(() => {;
+    const renderTime = performance.now() - renderStartTime.current;
+;
+    if (import.meta.env.DEV && renderTime > 16) {;
+      console.warn(`[Performance] ${componentName} render took ${renderTime.toFixed(2)`ms (target: <16ms)`);
+    }
+  });
+;
+  return {;
+    markRender,;
+    renderStartTime: renderStartTime.current;
+=======
   });
 
   useEffect(() => {
@@ -263,5 +319,6 @@ export const useComponentLifecycle = (componentName: string) => {;
   return {
     markRender,
     renderStartTime: renderStartTime.current
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0173
   };
 };

@@ -134,11 +134,11 @@ export const bundleOptimizations = {
     try {
       const module = await importFn();
       return module.default || module;
-    ' catch (error) {
+    } catch (error) {
       console.error('Failed to load component:', error);
       return null;
     }
-  ',
+  },
 
   // Prefetch resources
   prefetch: (url: string) => {
@@ -148,7 +148,7 @@ export const bundleOptimizations = {
     link.rel = 'prefetch';
     link.href = url;
     document.head.appendChild(link);
-  ',
+  },
 
   // Preconnect to external domains
   preconnect: (url: string) => {
@@ -159,7 +159,7 @@ export const bundleOptimizations = {
     link.href = url;
     document.head.appendChild(link);
   }
-';
+};
 
 // Initialize performance optimizations
 export const initializePerformanceOptimizations = () => {
@@ -173,4 +173,4 @@ export const initializePerformanceOptimizations = () => {
 
   // Mark initial load
   performanceMonitor.mark('app-initialized');
-`;
+};

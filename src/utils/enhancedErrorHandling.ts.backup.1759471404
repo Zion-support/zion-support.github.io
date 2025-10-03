@@ -33,6 +33,22 @@ class EnhancedErrorHandler {;
   constructor() {;
     this.initialize();
   };
+<<<<<<< HEAD
+;
+  private initialize(): void {;
+    if (typeof window === 'undefined') return;';
+;
+    // Global error handler;
+    window.addEventListener('error', (event) => {';
+      this.handleError({;
+        message: event.message,;
+        stack: event.error?.stack,;
+        timestamp: Date.now(),;
+        userAgent: navigator.userAgent,;
+        url: window.location.href,;
+        severity: this.determineSeverity(event.error),;
+        category: 'javascript'';
+=======
 =======
 
   private initialize(): void {
@@ -61,6 +77,7 @@ class EnhancedErrorHandler {;
         url: window.location.href,
         severity: this.determineSeverity(event.reason),
         category: 'promise'
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0173
       });
     });
 ;
@@ -78,6 +95,8 @@ class EnhancedErrorHandler {;
     });
 ;
     this.isInitialized = true;
+<<<<<<< HEAD
+=======
   }
 
   private determineSeverity(error: any): 'low' | 'medium' | 'high' | 'critical' {
@@ -99,6 +118,7 @@ class EnhancedErrorHandler {;
     }
     
     return 'low';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0173
   }
 ;
   private determineSeverity(error: any): 'low' | 'medium' | 'high' | 'critical' {';
@@ -125,11 +145,14 @@ class EnhancedErrorHandler {;
     // Keep only the most recent errors;
     if (this.errors.length > this.maxErrors) {;
       this.errors = this.errors.slice(-this.maxErrors);
+<<<<<<< HEAD
+=======
     }
 
     // Log critical errors immediately
     if (errorInfo.severity === 'critical') {
       console.error('Critical Error:', errorInfo);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0173
     }
 ;
     // Log critical errors immediately;
@@ -140,6 +163,31 @@ class EnhancedErrorHandler {;
     // Send to analytics or error reporting service;
     this.reportError(errorInfo);
   }
+<<<<<<< HEAD
+;
+  private reportError(errorInfo: ErrorInfo): void {;
+    // In a real application, you would send this to an error reporting service;
+    console.log('Error reported:', errorInfo);';
+  }
+;
+  public logError(;
+    error: Error | string,;
+    componentStack?: string,;
+    errorBoundary?: string,;
+    additionalInfo?: Partial<ErrorInfo>;
+  ): void {;
+    const errorInfo: ErrorInfo = {;
+      message: typeof error === 'string' ? error : error.message,';
+      stack: typeof error === 'object' ? error.stack : undefined,';
+      componentStack,;
+      errorBoundary,;
+      timestamp: Date.now(),;
+      userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown',';
+      url: typeof window !== 'undefined' ? window.location.href : 'unknown',';
+      severity: 'medium',';
+      category: 'react',';
+      ...additionalInfo;
+=======
 
   private reportError(errorInfo: ErrorInfo): void {
     // In a real application, you would send this to an error reporting service
@@ -163,6 +211,7 @@ class EnhancedErrorHandler {;
       severity: 'medium',
       category: 'react',
       ...additionalInfo
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0173
     };
 ;
     this.handleError(errorInfo);
@@ -170,10 +219,16 @@ class EnhancedErrorHandler {;
 ;
   public getErrors(): ErrorInfo[] {;
     return [...this.errors];
+<<<<<<< HEAD
+;
+  public getErrorReport(): ErrorReport {;
+    const criticalErrors = this.errors.filter(e => e.severity === 'critical').length;';
+=======
   }
 
   public getErrorReport(): ErrorReport {
     const criticalErrors = this.errors.filter(e => e.severity === 'critical').length;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0173
     const lastError = this.errors.length > 0 ? this.errors[this.errors.length - 1] : undefined;
 ;
     return {;

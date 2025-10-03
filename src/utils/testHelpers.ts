@@ -134,7 +134,7 @@ export const mockResizeObserver = (): void => {
     unobserve: jest.fn(),
     disconnect: jest.fn(),
   }));
-';
+};
 
 /**
  * Mock matchMedia
@@ -189,7 +189,7 @@ export const mockConsole = (): void => {
   afterEach(() => {
     Object.assign(console, originalConsole);
   });
-';
+};
 
 /**
  * Create mock router
@@ -205,12 +205,12 @@ export const createMockRouter = (pathname = '/', search = ''): any => ({
   forward: jest.fn(),
   reload: jest.fn(),
   prefetch: jest.fn(),
-');
+});
 
 /**
  * Mock Next.js router
  */
-export const mockNextRouter = (pathname = '/', query = {'): void => {
+export const mockNextRouter = (pathname = '/', query = {}): void => {
   const mockRouter = createMockRouter(pathname);
   mockRouter.query = query;
   
@@ -249,7 +249,7 @@ export const cleanupTestEnvironment = (): void => {
   if (window.location) {
     window.location = new URL('http://localhost:3000') as any;
   }
-';
+};
 
 /**
  * Create mock API response

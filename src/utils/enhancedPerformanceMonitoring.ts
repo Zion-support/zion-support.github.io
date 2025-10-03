@@ -90,14 +90,14 @@ class EnhancedPerformanceMonitor {
       timeToInteractive: 3800,
       totalBlockingTime: 200,
       speedIndex: 3000
-    ';
+    };
 
     Object.entries(thresholds).forEach(([key, threshold]) => {
       const value = metrics[key as keyof PerformanceMetrics];
       if (typeof value === 'number' && value > threshold) {
         this.addAlert({
           type: value > threshold * 1.5 ? 'error' : 'warning',
-          message: `${key} exceeded threshold: ${value}ms > ${threshold`ms`,
+          message: `${key} exceeded threshold: ${value}ms > ${threshold}ms`,
           metric: key as keyof PerformanceMetrics,
           value,
           threshold,
@@ -113,18 +113,18 @@ class EnhancedPerformanceMonitor {
     // Keep only last 50 alerts
     if (this.alerts.length > 50) {
       this.alerts = this.alerts.slice(-50);
-    };
+    }
 
     // Log critical alerts
     if (alert.type === 'error') {
       console.error('Performance Alert:', alert);
     }
-  
+  }
 
   public startMonitoring(): void {
     this.isMonitoring = true;
     console.log('Enhanced performance monitoring started');
-  
+  }
 
   public stopMonitoring(): void {
     this.isMonitoring = false;
@@ -164,4 +164,4 @@ export const enhancedPerformanceMonitor = new EnhancedPerformanceMonitor();
 // Auto-start monitoring in browser environment
 if (typeof window !== 'undefined') {
   enhancedPerformanceMonitor.startMonitoring();
-`
+}
