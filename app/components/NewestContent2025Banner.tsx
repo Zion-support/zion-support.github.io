@@ -14,11 +14,11 @@ const NewestContent2025Banner = () => {
         {/* Header */}
         <div className="text-left">
           <div className="text-left">
-            <span className="text-left">🚀</span>/span>/span>/span>
+            <span className="text-left">🚀</span>
             <span className="text-left">
               BREAKING: 3 REVOLUTIONARY ARTICLES JUST PUBLISHED!
-            </span>/span>/span>/span>
-            <span className="text-left">⚡</span>/span>/span>/span>
+            </span>
+            <span className="text-left">⚡</span>
           </div>
 
           <h2 className="text-left">

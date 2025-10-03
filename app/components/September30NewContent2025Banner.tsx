@@ -159,7 +159,7 @@ const September30NewContent2025Banner: React.FC = () => {
                   <ArrowRight className="text-left" />
                 </Link>
               </div>
-          ))}
+            ))}
         </div>
 
         {/* Second Row */}
@@ -217,7 +217,7 @@ const September30NewContent2025Banner: React.FC = () => {
                   <ArrowRight className="text-left" />
                 </Link>
               </div>
-          ))}
+            ))}
         </div>
 
         {/* Call-to-Action Section */}
@@ -263,7 +263,7 @@ const September30NewContent2025Banner: React.FC = () => {
               <div className="text-left">
                 {stat.label}
               </div>
-          ))}
+            ))}
         </div>
     </div>
   );

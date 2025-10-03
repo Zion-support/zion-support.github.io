@@ -72,6 +72,7 @@ export default {
     'accessibility-reports/**',
     'backup-banner-components/**',
     'blog/**',
+    'app/blog/**',
     'automation/**',
     '*.cjs',
     '*.js',
