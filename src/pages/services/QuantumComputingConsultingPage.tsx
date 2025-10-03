@@ -227,23 +227,17 @@ const QuantumComputingConsultingPage: React.FC = () => {
             </h2>
             <p className="text-xl text-purple-100 max-w-3xl mx-auto mb-8">
               Let our quantum experts help you understand how quantum computing can transform your business operations and create competitive advantages.
-            <h2 className="text-4xl font-bold mb-4">Ready to Explore Quantum Computing?</h2>
-            <p className="text-xl mb-8 text-purple-100 max-w-2xl mx-auto">
-              Let's discuss how quantum computing can give your organization a competitive advantage.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 to="/contact" 
                 className="inline-flex items-center px-8 py-4 bg-white text-purple-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
-                className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
                 Schedule Consultation
               </Link>
               <Link 
                 to="/services" 
                 className="inline-flex items-center px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-purple-600 transition-colors font-semibold"
-                to="/blog" 
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
               >
                 View All Services
               </Link>

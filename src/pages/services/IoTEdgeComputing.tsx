@@ -61,26 +61,22 @@ const IoTEdgeComputing: React.FC = () => {
     }],
 ;
 
-  const pricing: [,
+  const pricing = [
     {
       name: "Development",
       price: "$5,000",
       period: "/month",
       description: "Perfect for IoT projects in development and testing phases",
-      features: [,,
-      name: "Development
-      price: ", $5,000
-      period: "/month
-      description: ", Perfect for IoT projects in development and testing phases
-      features: [,,",
-        "Up to 1,000 connected devices",;"
-        "Basic edge computing capabilities",;"
-        "Standard data analytics",;"
-        "Email support",;"
-        "Monthly device health reports",;"
-        "Basic security monitoring",;"
-        "Cloud data storage (100GB)",;"
-        "Standard integrations (10)"],
+      features: [
+        "Up to 1,000 connected devices",
+        "Basic edge computing capabilities",
+        "Standard data analytics",
+        "Email support",
+        "Monthly device health reports",
+        "Basic security monitoring",
+        "Cloud data storage (100GB)",
+        "Standard integrations (10)"
+      ],
 
       popular: false,
     },
@@ -89,74 +85,7 @@ const IoTEdgeComputing: React.FC = () => {
       price: "$15,000",
       period: "/month",
       description: "Ideal for production IoT deployments with high device counts",
-      features: [,,
-      name: "Production
-      price: ", $15,000
-      period: "/month
-      description: ", Ideal for production IoT deployments with high device counts
-      features: [,,",
-        "Up to 10,000 connected devices",;"
-        "Advanced edge AI processing",;"
-        "Real-time analytics & insights",;"
-        "Priority support",;"
-        "Weekly performance reports",;"
-        "Advanced security & threat detection",;"
-        "Cloud data storage (1TB)",;"
-        "Advanced integrations (50)",;"
-        "Custom device protocols",;"
-        "Edge-to-cloud synchronization",;"
-        "5G connectivity support"],
-
-      popular: true,
-    },
-    {
-      name: "Enterprise",
-      price: "$45,000",
-      period: "/month",
-      description: "Complete solution for large-scale enterprise IoT deployments",
-      features: [,,
-      name: "Enterprise
-      price: ", $45,000
-      period: "/month
-      description: ", Complete solution for large-scale enterprise IoT deployments
-      features: [,,",
-        "Unlimited connected devices",;"
-        "Premium edge AI with custom models",;"
-        "Enterprise-grade analytics platform",;"
-        "Dedicated IoT engineer",;"
-        "Daily monitoring & optimization",;"
-        "Full security suite with compliance",;"
-        "Unlimited cloud data storage",;"
-        "Unlimited integrations",;"
-        "Custom protocol development",;"
-        "Multi-region deployment",;"
-        "Private 5G network setup",;"
-        "SLA guarantee",;"
-        "On-premise edge infrastructure"],
-
-      popular: false,,
-      name: "Development",,"
-      price: "$5,000",,"
-      period: "/month",,"
-      description: "Perfect for IoT projects in development and testing phases",,"
-      features: [,,
-        "Up to 1,000 connected devices",
-        "Basic edge computing capabilities",
-        "Standard data analytics",
-        "Email support",
-        "Monthly device health reports",
-        "Basic security monitoring",
-        "Cloud data storage (100GB)",
-        "Standard integrations (10)"],
-
-      popular: false,
-    },
-    {
-      name: "Production",,"
-      price: "$15,000",,"
-      period: "/month",,"
-      description: "Ideal for production IoT deployments with high device counts",,"
-      features: [,,
+      features: [
         "Up to 10,000 connected devices",
         "Advanced edge AI processing",
         "Real-time analytics & insights",
@@ -167,16 +96,16 @@ const IoTEdgeComputing: React.FC = () => {
         "Advanced integrations (50)",
         "Custom device protocols",
         "Edge-to-cloud synchronization",
-        "5G connectivity support"],
-
+        "5G connectivity support"
+      ],
       popular: true,
     },
     {
-      name: "Enterprise",,"
-      price: "$45,000",,"
-      period: "/month",,"
-      description: "Complete solution for large-scale enterprise IoT deployments",,"
-      features: [,,
+      name: "Enterprise",
+      price: "$45,000",
+      period: "/month",
+      description: "Complete solution for large-scale enterprise IoT deployments",
+      features: [
         "Unlimited connected devices",
         "Premium edge AI with custom models",
         "Enterprise-grade analytics platform",
@@ -189,74 +118,64 @@ const IoTEdgeComputing: React.FC = () => {
         "Multi-region deployment",
         "Private 5G network setup",
         "SLA guarantee",
-        "On-premise edge infrastructure"],
-
+        "On-premise edge infrastructure"
+      ],
       popular: false,
     }
   ];
 
-  const testimonials: [,
+  const testimonials = [
     {
-      name: "Robert Kim",,"
-      role: "CTO, Smart Manufacturing Corp",,"
-      content: "Zion's IoT edge computing solution reduced our production line latency by 98%. Real-time quality control now catches defects instantly, saving us $2M annually.",,"
-      name: "Robert Kim",,"
-      role: "CTO, Smart Manufacturing Corp",,"
-      content: "Zion's IoT edge computing solution reduced our production line latency by 98%. Real-time quality control now catches defects instantly, saving us $2M annually.",,"
-      rating: 5,,
+      name: "Robert Kim",
+      role: "CTO, Smart Manufacturing Corp",
+      content: "Zion's IoT edge computing solution reduced our production line latency by 98%. Real-time quality control now catches defects instantly, saving us $2M annually.",
+      rating: 5,
       company: "Smart Manufacturing Corp",
     },
     {
-      name: "Sarah Williams",,"
-      role: "VP Technology, Smart City Initiative",,"
-      content: "The edge AI processing for traffic management reduced congestion by 35% and emergency response times by 50%. The system pays for itself every quarter.",,"
-      name: "Sarah Williams",,"
-      role: "VP Technology, Smart City Initiative",,"
-      content: "The edge AI processing for traffic management reduced congestion by 35% and emergency response times by 50%. The system pays for itself every quarter.",,"
-      rating: 5,,
+      name: "Sarah Williams",
+      role: "VP Technology, Smart City Initiative",
+      content: "The edge AI processing for traffic management reduced congestion by 35% and emergency response times by 50%. The system pays for itself every quarter.",
+      rating: 5,
       company: "Smart City Initiative",
     },
     {
-      name: "Dr. Michael Chen",,"
-      role: "Head of R&D, Healthcare IoT",,"
-      content: "Patient monitoring with edge computing ensures real-time alerts reach medical staff instantly. We've prevented 15 critical incidents this year alone.",,"
-      name: "Dr. Michael Chen",,"
-      role: "Head of R&D, Healthcare IoT",,"
-      content: "Patient monitoring with edge computing ensures real-time alerts reach medical staff instantly. We've prevented 15 critical incidents this year alone.",,"
-      rating: 5,,
+      name: "Dr. Michael Chen",
+      role: "Head of R&D, Healthcare IoT",
+      content: "Patient monitoring with edge computing ensures real-time alerts reach medical staff instantly. We've prevented 15 critical incidents this year alone.",
+      rating: 5,
       company: "Healthcare IoT",
     }
   ];
 
-  const useCases: [,
+  const useCases = [
     {
-      title: "Smart Manufacturing",,"
-      icon: Cpu,,
-      description: "Real-time quality control, predictive maintenance, and automated optimization on production lines.",,"
-      metrics: "98% defect detection accuracy",,"
-      benefits: ["Predictive maintenance", "Quality control automation", "Energy optimization"]",
+      title: "Smart Manufacturing",
+      icon: Cpu,
+      description: "Real-time quality control, predictive maintenance, and automated optimization on production lines.",
+      metrics: "98% defect detection accuracy",
+      benefits: ["Predictive maintenance", "Quality control automation", "Energy optimization"],
     },
     {
-      title: "Smart Cities",,"
-      icon: Globe,,
-      description: "Traffic management, environmental monitoring, and public safety systems with real-time response.",,"
-      metrics: "35% traffic reduction",,"
-      benefits: ["Traffic optimization", "Environmental monitoring", "Public safety alerts"]",
+      title: "Smart Cities",
+      icon: Globe,
+      description: "Traffic management, environmental monitoring, and public safety systems with real-time response.",
+      metrics: "35% traffic reduction",
+      benefits: ["Traffic optimization", "Environmental monitoring", "Public safety alerts"],
     },
     {
-      title: "Healthcare IoT",,"
-      icon: Monitor,,
-      description: "Patient monitoring, medical device integration, and emergency response systems.",,"
-      metrics: "50% faster emergency response",,"
-      benefits: ["Real-time patient monitoring", "Medical device integration", "Emergency automation"]",
+      title: "Healthcare IoT",
+      icon: Monitor,
+      description: "Patient monitoring, medical device integration, and emergency response systems.",
+      metrics: "50% faster emergency response",
+      benefits: ["Real-time patient monitoring", "Medical device integration", "Emergency automation"],
     },
     {
-      title: "Retail Analytics",,"
-      icon: BarChart3,,
-      description: "Customer behavior analysis, inventory management, and personalized experiences.",,"
-      metrics: "60% inventory efficiency gain",,"
-      benefits: ["Customer analytics", "Inventory optimization", "Personalized experiences"]",
-      title: "Smart Manufacturing",,"
+      title: "Retail Analytics",
+      icon: BarChart3,
+      description: "Customer behavior analysis, inventory management, and personalized experiences.",
+      metrics: "60% inventory efficiency gain",
+      benefits: ["Customer analytics", "Inventory optimization", "Personalized experiences"],
       icon: Cpu,,
       description: "Real-time quality control, predictive maintenance, and automated optimization on production lines.",,"
       metrics: "98% defect detection accuracy",,"
@@ -800,74 +719,39 @@ const IoTEdgeComputing: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8",
-            <div className="grid md:grid-cols-3 gap-8",
+            <div className="grid md:grid-cols-3 gap-8">
               {pricing.map((plan, index) => (
-                <div key={index} className={`bg-white rounded-2xl shadow-lg p-8 ${plan.popular ? 'ring-2 ring-orange-500 relative' : ''}`}>`
+                <div key={index} className={`bg-white rounded-2xl shadow-lg p-8 ${plan.popular ? 'ring-2 ring-orange-500 relative' : ''}`}>
                   {plan.popular && (
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2",
-                      <span className="bg-orange-500 text-white px-4 py-1 rounded-full text-sm font-semibold",
-            <div className= "grid md:grid-cols-3 gap-8>
-            <div className= "grid md:grid-cols-3 gap-8>
-              {pricing.map((plan, index) => (
-                <div key={index} className= {`bg-white rounded-2xl shadow-lg p-8 ${plan.popular ? 'ring-2 ring-orange-500 relative' : ''}`}>`
-                  {plan.popular && (
-                    <div className= "absolute -top-4 left-1/2 transform -translate-x-1/2>
-                      <span className= "bg-orange-500 text-white px-4 py-1 rounded-full text-sm font-semibold">"
-  Most Popular
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                      <span className="bg-orange-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                        Most Popular
                       </span>
                     </div>
                   )}
-                  <div className="text-center mb-8",
-                    <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>"
-                    <div className="flex items-center justify-center mb-2",
-                      <span className="text-4xl font-bold text-gray-900">{plan.price}</span>"
-                      <span className="text-gray-600 ml-1">{plan.period}</span>"
+                  <div className="text-center mb-8">
+                    <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
+                    <div className="flex items-center justify-center mb-2">
+                      <span className="text-4xl font-bold text-gray-900">{plan.price}</span>
+                      <span className="text-gray-600 ml-1">{plan.period}</span>
                     </div>
-                    <p className="text-gray-600">{plan.description}</p>"
+                    <p className="text-gray-600">{plan.description}</p>
                   </div>
-                  <ul className="space-y-4 mb-8",
+                  <ul className="space-y-4 mb-8">
                     {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center"
-                        <CheckCircle className="w-5 h-5 text-orange-500 mr-3 flex-shrink-0/>"
-                      <li key: {featureIndex} className="flex items-center">
-                        <CheckCircle className="w-5 h-5 text-orange-500 mr-3 flex-shrink-0/>"
-                        <span className="text-gray-700">{feature}</span>";"
-                      <li key={featureIndex} className="flex items-center",
-                        <CheckCircle className="w-5 h-5 text-orange-500 mr-3 flex-shrink-0" />",
-                        <span className="text-gray-700">{feature}</span>"
+                      <li key={featureIndex} className="flex items-center">
+                        <CheckCircle className="w-5 h-5 text-orange-500 mr-3 flex-shrink-0" />
+                        <span className="text-gray-700">{feature}</span>
                       </li>
                     ))}
                   </ul>
-                  <a href="/contact",
-  className={,
-                  <div className= "text-center mb-8>
-                    <h3 className= "text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>"
-                    <div className= "flex items-center justify-center mb-2>
-                      <span className= "text-4xl font-bold text-gray-900">{plan.price}</span>"
-                      <span className= "text-gray-600 ml-1">{plan.period}</span>"
-                    </div>
-                    <p className= "text-gray-600">{plan.description}</p>"
-                  </div>
-                  <ul className= "space-y-4 mb-8>
-                    {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className= "flex items-center">
-                        <CheckCircle className= "w-5 h-5 text-orange-500 mr-3 flex-shrink-0/>"
-                        <span className= "text-gray-700">{feature}</span>";"
-                      <li key={featureIndex} className= "flex items-center>
-                        <CheckCircle className= "w-5 h-5 text-orange-500 mr-3 flex-shrink-0" />",
-                        <span className= "text-gray-700">{feature}</span>"
-                      </li>
-                    ))}
-                  </ul>
-                  <a href="/contact",
-  className= {,
-`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${`
-plan.popular
-? 'bg-orange-600 text-white hover: bg-orange-700',';,
-? 'bg-orange-600 text-white hover: bg-orange-700',',';,
-: 'bg-gray-100 text-gray-900 hover:bg-gray-200'
-}`}`
+                  <a 
+                    href="/contact"
+                    className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
+                      plan.popular
+                        ? 'bg-orange-600 text-white hover:bg-orange-700'
+                        : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
+                    }`}
                   >
                     Get Started
                   </a>
@@ -875,91 +759,46 @@ plan.popular
               ))}
             </div>
 
-            <div className="text-center mt-12",
-              <p className="text-gray-600 mb-4">Need a custom IoT solution?</p>",
-              <a href="/contact",
-  className="inline-flex items-center text-orange-600 hover: text-orange-700 font-semibold",
+            <div className="text-center mt-12">
+              <p className="text-gray-600 mb-4">Need a custom IoT solution?</p>
+              <a 
+                href="/contact"
+                className="inline-flex items-center text-orange-600 hover:text-orange-700 font-semibold"
               >
                 Contact our IoT Specialists
-                <ArrowRight className="w-4 h-4 ml-1/>"
-                <ArrowRight className="w-4 h-4 ml-1/>"
-                <ArrowRight className="w-4 h-4 ml-1" />",
-            <div className= "text-center mt-12>
-              <p className= "text-gray-600 mb-4">Need a custom IoT solution?</p>",
-              <a href="/contact",
-  className= "inline-flex items-center text-orange-600 hover: text-orange-700 font-semibold",
-              >
-                Contact our IoT Specialists
-                <ArrowRight className= "w-4 h-4 ml-1/>"
-                <ArrowRight className= "w-4 h-4 ml-1" />",
+                <ArrowRight className="w-4 h-4 ml-1" />
               </a>
             </div>
           </div>
         </section>
 
         {/* Testimonials */}
-        <section className="py-20"
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8",
-            <div className="text-center mb-16"
-              <h2 className="text-4xl font-bold text-gray-900 mb-4"
-        <section className="py-20",
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8",
-            <div className="text-center mb-16",
-              <h2 className="text-4xl font-bold text-gray-900 mb-4",
-  What Our Clients Say
+        <section className="py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                What Our Clients Say
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto",
-        <section className= "py-20">
-          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8>
-            <div className= "text-center mb-16">
-              <h2 className= "text-4xl font-bold text-gray-900 mb-4">
-        <section className= "py-20>
-          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8>
-            <div className= "text-center mb-16>
-              <h2 className= "text-4xl font-bold text-gray-900 mb-4">"
-  What Our Clients Say
-              </h2>
-              <p className= "text-xl text-gray-600 max-w-3xl mx-auto">"
-  Join hundreds of satisfied customers who have transformed their operations with our IoT and edge computing solutions.
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Join hundreds of satisfied customers who have transformed their operations with our IoT and edge computing solutions.
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8",
-            <div className="grid md:grid-cols-3 gap-8",
+            <div className="grid md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
-                <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200",
-                  <div className="flex items-center mb-4",
+                <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200">
+                  <div className="flex items-center mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current/>"
-                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />",
-                      <Star key: {i} className="w-5 h-5 text-yellow-400 fill-current/>"
-                      <Star key: {i} className="w-5 h-5 text-yellow-400 fill-current" />",
+                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                     ))}
                   </div>
-                  <blockquote className="text-gray-700 mb-6 italic",
+                  <blockquote className="text-gray-700 mb-6 italic">
                     "{testimonial.content}"
                   </blockquote>
-                  <div >
-                    <div className="font-semibold text-gray-900">{testimonial.name}</div>"
-                    <div className="text-gray-600 text-sm">{testimonial.role}</div>"
-                    <div className="text-orange-600 text-sm font-medium">{testimonial.company}</div>"
-            <div className= "grid md:grid-cols-3 gap-8>
-            <div className= "grid md:grid-cols-3 gap-8>
-              {testimonials.map((testimonial, index) => (
-                <div key={index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200>
-                  <div className= "flex items-center mb-4>
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className= "w-5 h-5 text-yellow-400 fill-current/>"
-                      <Star key={i} className= "w-5 h-5 text-yellow-400 fill-current" />",
-                    ))}
-                  </div>
-                  <blockquote className= "text-gray-700 mb-6 italic>
-                    "{testimonial.content}"
-                  </blockquote>
-                  <div >
-                    <div className= "font-semibold text-gray-900">{testimonial.name}</div>"
-                    <div className= "text-gray-600 text-sm">{testimonial.role}</div>"
-                    <div className= "text-orange-600 text-sm font-medium">{testimonial.company}</div>"
+                  <div>
+                    <div className="font-semibold text-gray-900">{testimonial.name}</div>
+                    <div className="text-gray-600 text-sm">{testimonial.role}</div>
+                    <div className="text-orange-600 text-sm font-medium">{testimonial.company}</div>
                   </div>
                 </div>
               ))}
@@ -968,61 +807,28 @@ plan.popular
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-br from-orange-900 via-orange-800 to-red-900 text-white"
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center",
-            <h2 className="text-4xl font-bold mb-6"
-        <section className="py-20 bg-gradient-to-br from-orange-900 via-orange-800 to-red-900 text-white",
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center",
-            <h2 className="text-4xl font-bold mb-6",
-  Ready to Build Your Smart Connected Future?
+        <section className="py-20 bg-gradient-to-br from-orange-900 via-orange-800 to-red-900 text-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-4xl font-bold mb-6">
+              Ready to Build Your Smart Connected Future?
             </h2>
-            <p className="text-xl text-orange-100 max-w-3xl mx-auto mb-8",
-  Join hundreds of companies already using our IoT and edge computing solutions to create intelligent, connected systems.
+            <p className="text-xl text-orange-100 max-w-3xl mx-auto mb-8">
+              Join hundreds of companies already using our IoT and edge computing solutions to create intelligent, connected systems.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center",
-            <div className="flex flex-col sm:flex-row gap-4 justify-center",
-              <a href="/contact",
-  className="inline-flex items-center px-8 py-4 bg-orange-600 hover: bg-orange-700 text-white font-semibold rounded-lg transition-colors",
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a 
+                href="/contact"
+                className="inline-flex items-center px-8 py-4 bg-orange-600 hover:bg-orange-700 text-white font-semibold rounded-lg transition-colors"
               >
-                <Phone className="w-5 h-5 mr-2/>"
-                <Phone className="w-5 h-5 mr-2" />",
-                <Phone className="w-5 h-5 mr-2/>"
                 <Phone className="w-5 h-5 mr-2" />
-  Schedule Free Consultation
+                Schedule Free Consultation
               </a>
-              <a href="/case-studies",
-  className="inline-flex items-center px-8 py-4 border-2 border-white text-white hover: bg-white hover:text-orange-900 font-semibold rounded-lg transition-colors",
+              <a 
+                href="/case-studies"
+                className="inline-flex items-center px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-orange-900 font-semibold rounded-lg transition-colors"
               >
                 View Success Stories
-                <ArrowRight className="w-5 h-5 ml-2/>"
-                <ArrowRight className="w-5 h-5 ml-2/>"
-                <ArrowRight className="w-5 h-5 ml-2" />",
-        <section className= "py-20 bg-gradient-to-br from-orange-900 via-orange-800 to-red-900 text-white">
-          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center>
-            <h2 className= "text-4xl font-bold mb-6">
-        <section className= "py-20 bg-gradient-to-br from-orange-900 via-orange-800 to-red-900 text-white>
-          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center>
-            <h2 className= "text-4xl font-bold mb-6">"
-  Ready to Build Your Smart Connected Future?
-            </h2>
-            <p className= "text-xl text-orange-100 max-w-3xl mx-auto mb-8">"
-  Join hundreds of companies already using our IoT and edge computing solutions to create intelligent, connected systems.
-            </p>
-            <div className= "flex flex-col sm:flex-row gap-4 justify-center>
-            <div className= "flex flex-col sm:flex-row gap-4 justify-center>
-              <a href="/contact",
-  className= "inline-flex items-center px-8 py-4 bg-orange-600 hover: bg-orange-700 text-white font-semibold rounded-lg transition-colors",
-              >
-                <Phone className= "w-5 h-5 mr-2/>"
-                <Phone className= "w-5 h-5 mr-2" />",
-  Schedule Free Consultation
-              </a>
-              <a href="/case-studies",
-  className= "inline-flex items-center px-8 py-4 border-2 border-white text-white hover: bg-white hover:text-orange-900 font-semibold rounded-lg transition-colors",
-              >
-                View Success Stories
-                <ArrowRight className= "w-5 h-5 ml-2/>"
-                <ArrowRight className= "w-5 h-5 ml-2" />",
+                <ArrowRight className="w-5 h-5 ml-2" />
               </a>
             </div>
           </div>
