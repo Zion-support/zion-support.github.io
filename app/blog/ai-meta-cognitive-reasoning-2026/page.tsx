@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'AI Meta-Cognitive Reasoning: The Next Evolution in Enterprise Intelligence | Zion Tech Group',

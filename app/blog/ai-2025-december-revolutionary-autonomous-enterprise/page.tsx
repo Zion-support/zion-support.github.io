@@ -1,4 +1,4 @@
-import { Metadata } from 'next';
+// Metadata handled by React Helmet
 
 export const metadata: Metadata = {
   title: 'AI 2025 December: Revolutionary Autonomous Enterprise Transformation',

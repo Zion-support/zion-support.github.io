@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
 	title: 'Edge Private Feature Flags (2026): Zero‑PII, Sub‑100ms, Signed Configs',

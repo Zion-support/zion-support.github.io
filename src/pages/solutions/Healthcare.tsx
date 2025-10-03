@@ -1,4 +1,4 @@
-import React from 'react;
+import React from 'react';
 const Healthcare: React.FC = () => {
   return (
     <div className="container mx-auto px-6 py-12">
@@ -6,6 +6,6 @@ const Healthcare: React.FC = () => {
       <p className="text-gray-700 max-w-3xl">Comprehensive AI solutions for healthcare providers, payers, and life sciences organizations. This page is a foundational overview to support navigation links and will be expanded with detailed content.</p>
     </div>
   );
-};
+';
 
-export default Healthcare;
+export default Component;

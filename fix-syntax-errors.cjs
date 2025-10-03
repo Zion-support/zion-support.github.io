@@ -1,40 +1,75 @@
-#!/usr/bin/env node
-
 const fs = require('fs');
 const path = require('path');
 
-// Function to fix common syntax errors
-function fixSyntaxErrors(content) {
-  // Fix missing quotes around className attributes
-  content = content.replace(/className=([^"'\s][^"'>]*[^"'\s])\s*>/g, 'className="$1">');
-  content = content.replace(/className=([^"'\s][^"'>]*[^"'\s])\s*\/>/g, 'className="$1" />');
-  
-  // Fix missing quotes around other JSX attributes
-  content = content.replace(/(\w+)=([^"'\s][^"'>]*[^"'\s])\s*>/g, '$1="$2">');
-  content = content.replace(/(\w+)=([^"'\s][^"'>]*[^"'\s])\s*\/>/g, '$1="$2" />');
-  
-  // Fix missing commas after object properties
-  content = content.replace(/(\w+):\s*"([^"]*)"\s*([^,}\s])/g, '$1: "$2", $3');
-  
-  // Fix malformed JSX with extra quotes
-  content = content.replace(/className="([^"]*)"\s*"/g, 'className="$1"');
-  
-  // Fix spaces in Tailwind classes (remove spaces before colons)
-  content = content.replace(/sm:\s+flex/g, 'sm:flex');
-  content = content.replace(/md:\s+grid/g, 'md:grid');
-  content = content.replace(/lg:\s+grid/g, 'lg:grid');
-  
-  return content;
-}
-
-// Function to process a file
-function processFile(filePath) {
+// Function to fix common syntax errors in TSX files
+function fixSyntaxErrors(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    const fixedContent = fixSyntaxErrors(content);
-    
-    if (content !== fixedContent) {
-      fs.writeFileSync(filePath, fixedContent, 'utf8');
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
+
+    // Fix common patterns
+    const fixes = [
+      // Fix malformed JSX attributes
+      { pattern: /className="([^"]*)"([^>]*?)>/g, replacement: 'className="$1">' },
+      { pattern: /className= "([^"]*)"([^>]*?)>/g, replacement: 'className="$1">' },
+      { pattern: /className="([^"]*)"([^>]*?)"/g, replacement: 'className="$1"' },
+      
+      // Fix malformed string literals
+      { pattern: /(["'])([^"']*?)\1"/g, replacement: '$1$2$1' },
+      { pattern: /(["'])([^"']*?)\1\s*"/g, replacement: '$1$2$1' },
+      
+      // Fix malformed array syntax
+      { pattern: /features:\s*\[([^\]]*?)\]"/g, replacement: 'features: [$1]' },
+      
+      // Fix malformed JSX closing tags
+      { pattern: /<\/div>"/g, replacement: '</div>' },
+      { pattern: /<\/section>"/g, replacement: '</section>' },
+      { pattern: /<\/h[1-6]>"/g, replacement: '</h$1>' },
+      { pattern: /<\/p>"/g, replacement: '</p>' },
+      { pattern: /<\/span>"/g, replacement: '</span>' },
+      { pattern: /<\/li>"/g, replacement: '</li>' },
+      { pattern: /<\/ul>"/g, replacement: '</ul>' },
+      { pattern: /<\/Link>"/g, replacement: '</Link>' },
+      
+      // Fix malformed JSX opening tags
+      { pattern: /<div className="([^"]*?)">"/g, replacement: '<div className="$1">' },
+      { pattern: /<section className="([^"]*?)">"/g, replacement: '<section className="$1">' },
+      { pattern: /<h[1-6] className="([^"]*?)">"/g, replacement: '<h$1 className="$1">' },
+      { pattern: /<p className="([^"]*?)">"/g, replacement: '<p className="$1">' },
+      { pattern: /<span className="([^"]*?)">"/g, replacement: '<span className="$1">' },
+      { pattern: /<li className="([^"]*?)">"/g, replacement: '<li className="$1">' },
+      { pattern: /<ul className="([^"]*?)">"/g, replacement: '<ul className="$1">' },
+      { pattern: /<Link className="([^"]*?)">"/g, replacement: '<Link className="$1">' },
+      
+      // Fix hover syntax
+      { pattern: /hover:\s*([^"]*?)"/g, replacement: 'hover:$1' },
+      
+      // Fix malformed meta tags
+      { pattern: /<meta name="([^"]*?)",\s*content="([^"]*?)"\s*\/>"/g, replacement: '<meta name="$1" content="$2" />' },
+      
+      // Fix malformed link tags
+      { pattern: /<link rel="([^"]*?)",\s*href="([^"]*?)"\s*\/>"/g, replacement: '<link rel="$1" href="$2" />' },
+      
+      // Fix malformed to attributes
+      { pattern: /to:\s*"([^"]*?)",/g, replacement: 'to="$1"' },
+      
+      // Remove stray quotes at end of lines
+      { pattern: /"\s*$/gm, replacement: '' },
+      
+      // Fix malformed comments
+      { pattern: /{\/\*([^*]|\*[^/])*\*\/\}"\s*$/gm, replacement: '$1' },
+    ];
+
+    fixes.forEach(fix => {
+      const newContent = content.replace(fix.pattern, fix.replacement);
+      if (newContent !== content) {
+        content = newContent;
+        modified = true;
+      }
+    });
+
+    if (modified) {
+      fs.writeFileSync(filePath, content, 'utf8');
       console.log(`Fixed: ${filePath}`);
       return true;
     }
@@ -45,36 +80,40 @@ function processFile(filePath) {
   }
 }
 
-// Function to recursively find TypeScript/TSX files
-function findTsxFiles(dir, files = []) {
-  const items = fs.readdirSync(dir);
+// Function to find all TSX files
+function findTsxFiles(dir) {
+  const files = [];
   
-  for (const item of items) {
-    const fullPath = path.join(dir, item);
-    const stat = fs.statSync(fullPath);
+  function traverse(currentDir) {
+    const items = fs.readdirSync(currentDir);
     
-    if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-      findTsxFiles(fullPath, files);
-    } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
-      files.push(fullPath);
+    for (const item of items) {
+      const fullPath = path.join(currentDir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+        traverse(fullPath);
+      } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
+        files.push(fullPath);
+      }
     }
   }
   
+  traverse(dir);
   return files;
 }
 
 // Main execution
-console.log('Starting syntax error fixes...');
-
 const srcDir = path.join(__dirname, 'src');
-const files = findTsxFiles(srcDir);
+const tsxFiles = findTsxFiles(srcDir);
+
+console.log(`Found ${tsxFiles.length} TypeScript files to process...`);
 
 let fixedCount = 0;
-for (const file of files) {
-  if (processFile(file)) {
+for (const file of tsxFiles) {
+  if (fixSyntaxErrors(file)) {
     fixedCount++;
   }
 }
 
-console.log(`\nFixed ${fixedCount} files out of ${files.length} total files.`);
-console.log('Syntax error fixes completed!');
+console.log(`Fixed ${fixedCount} files.`);

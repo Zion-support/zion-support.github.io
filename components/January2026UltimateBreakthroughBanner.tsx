@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { ArrowRight, Star, TrendingUp, Brain, Zap } from 'lucide-react';
 
 export default function January2026UltimateBreakthroughBanner() {

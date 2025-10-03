@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'Real-Time Agent Routing 2026: Faster, Cheaper, More Reliable AI Ops',

@@ -1,6 +1,6 @@
 "use client"
 import React from 'react';
-import { Metadata } from 'next';
+// Metadata handled by React Helmet
 import { Globe, CheckCircle, Languages, FileText, BarChart3, Phone, Mail, MapPin } from 'lucide-react';
 
 export const metadata: Metadata = {
@@ -95,8 +95,8 @@ export default function AIContentLocalizationPage() {
 }
 
 import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import { 
   Globe, 
   Languages, 

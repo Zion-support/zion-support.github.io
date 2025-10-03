@@ -1,4 +1,4 @@
-import { Metadata } from 'next';
+// Metadata handled by React Helmet
 
 export const metadata: Metadata = {
   title: 'AI 2026 Hyperconscious Computing Revolution: Beyond Artificial Intelligence | Zion Tech Group',

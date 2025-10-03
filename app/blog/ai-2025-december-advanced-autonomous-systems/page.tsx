@@ -1,6 +1,6 @@
 import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+// Metadata handled by React Helmet
+import { Link } from 'react-router-dom';
 
 export const metadata: Metadata = {
   title: 'December 2025 Advanced Autonomous Systems Revolution | Zion Tech Group',

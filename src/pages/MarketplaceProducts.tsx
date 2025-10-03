@@ -9,4 +9,4 @@ const MarketplaceProducts: React.FC = () => {
   );
 };
 
-export default MarketplaceProducts;
+export default Component;

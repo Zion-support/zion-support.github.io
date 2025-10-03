@@ -1,6 +1,6 @@
 import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import { TrendingUp, CheckCircle, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
 
 export default function FinOpsManagedServicePage() {

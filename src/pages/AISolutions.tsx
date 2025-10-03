@@ -1,7 +1,7 @@
-import React from 'react;
-import { Link } from 'react-router-dom;
-import { Brain, Zap, Shield, Cloud, Database, Users, BarChart3, Cog, Target, Rocket } from 'lucide-react;
-import { Helmet } from 'react-helmet-async;
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Brain, Zap, Shield, Cloud, Database, Users, BarChart3, Cog, Target, Rocket } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 const AISolutions: React.FC = () => {
   const aiSolutions = [
     {
@@ -105,14 +105,14 @@ const AISolutions: React.FC = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
-                  to="/contact"
-                  className="inline-flex items-center px-8 py-4 bg-white text-blue-600 hover:bg-blue-50 font-semibold rounded-lg transition-colors"
+                  to="/contact
+                  className="inline-flex items-center px-8 py-4 bg-white text-blue-600 hover:bg-blue-50 font-semibold rounded-lg transition-colors
                 >
                   Get Started Today
                 </Link>
                 <Link
-                  to="/case-studies"
-                  className="inline-flex items-center px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold rounded-lg transition-colors"
+                  to="/case-studies
+                  className="inline-flex items-center px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold rounded-lg transition-colors
                 >
                   View Case Studies
                 </Link>
@@ -194,14 +194,14 @@ const AISolutions: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-white text-blue-600 hover:bg-blue-50 font-semibold rounded-lg transition-colors"
+                to="/contact
+                className="inline-flex items-center px-8 py-4 bg-white text-blue-600 hover:bg-blue-50 font-semibold rounded-lg transition-colors
               >
                 Schedule Consultation
               </Link>
               <Link
-                to="/services"
-                className="inline-flex items-center px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold rounded-lg transition-colors"
+                to="/services
+                className="inline-flex items-center px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold rounded-lg transition-colors
               >
                 Explore All Services
               </Link>
@@ -213,4 +213,4 @@ const AISolutions: React.FC = () => {
   );
 };
 
-export default AISolutions;
+export default Component;

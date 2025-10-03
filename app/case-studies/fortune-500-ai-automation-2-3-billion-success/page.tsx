@@ -1,4 +1,4 @@
-import { Metadata } from 'next';
+// Metadata handled by React Helmet
 
 export const metadata: Metadata = {
   title: 'Fortune 500 AI Automation Success: $2.3B Cost Savings & 95% Efficiency Gains',
