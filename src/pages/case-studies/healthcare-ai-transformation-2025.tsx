@@ -498,24 +498,21 @@ const HealthcareAITransformation: () => {
   Cognitive automation handling claims processing, billing, scheduling, and compliance—
                     eliminating 78% of manual administrative work.
                   </p>
-                  <ul className="space-y-2 text-sm"
-                    <li className="flex items-center gap-2"
-                      <CheckCircle className="w-4 h-4 text-green-400/>"
-                      <span >Claims processing: 28 days → 3.2 days</span>,
-                    </li>
-                    <li className="flex items-center gap-2"
-                      <CheckCircle className="w-4 h-4 text-green-400/>"
-                      <span >$89M reduction in admin costs (72%)</span>
-                    </li>
-                    <li className="flex items-center gap-2"
-                      <CheckCircle className="w-4 h-4 text-green-400/>"
-                    </li>"
+                  <ul className="space-y-2 text-sm">
                     <li className="flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-400/>
-                      <span >$89M reduction in admin costs (72%)</span>
-                    </li>"
+                      <CheckCircle className="w-4 h-4 text-green-400" />
+                      <span>Claims processing: 28 days → 3.2 days</span>
+                    </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-400/>"
+                      <CheckCircle className="w-4 h-4 text-green-400" />
+                      <span>$89M reduction in admin costs (72%)</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <CheckCircle className="w-4 h-4 text-green-400" />
+                      <span>$89M reduction in admin costs (72%)</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <CheckCircle className="w-4 h-4 text-green-400" />
                   <ul className="space-y-2 text-sm">
                     <li className="flex items-center gap-2">
                       <CheckCircle className="w-4 h-4 text-green-400" />
@@ -527,26 +524,23 @@ const HealthcareAITransformation: () => {
                     </li>
                     <li className="flex items-center gap-2">
                       <CheckCircle className="w-4 h-4 text-green-400" />
-                <div className= "bg-gradient-to-br from-green-900/40 to-teal-900/40 rounded-xl p-6 border border-green-500/30">
-                  <h3 className= "text-xl font-bold text-white mb-4 flex items-center gap-2">
-                    <Target className= "w-6 h-6 text-green-400/>"
-                <div className= "bg-gradient-to-br from-green-900/40 to-teal-900/40 rounded-xl p-6 border border-green-500/30">
-                  <h3 className= "text-xl font-bold text-white mb-4 flex items-center gap-2">
-                    <Target className= "w-6 h-6 text-green-400" />
-  Administrative Automation
+                <div className="bg-gradient-to-br from-green-900/40 to-teal-900/40 rounded-xl p-6 border border-green-500/30">
+                  <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                    <Target className="w-6 h-6 text-green-400" />
+                    Administrative Automation
                   </h3>
-                  <p className= "mb-4">"
-  Cognitive automation handling claims processing, billing, scheduling, and compliance—
+                  <p className="mb-4">
+                    Cognitive automation handling claims processing, billing, scheduling, and compliance—
                     eliminating 78% of manual administrative work.
                   </p>
-                  <ul className= "space-y-2 text-sm">
-                    <li className= "flex items-center gap-2">
-                      <CheckCircle className= "w-4 h-4 text-green-400/>"
-                      <span >Claims processing: 28 days → 3.2 days</span>,
+                  <ul className="space-y-2 text-sm">
+                    <li className="flex items-center gap-2">
+                      <CheckCircle className="w-4 h-4 text-green-400" />
+                      <span>Claims processing: 28 days → 3.2 days</span>
                     </li>
-                    <li className= "flex items-center gap-2">
-                      <CheckCircle className= "w-4 h-4 text-green-400/>"
-                      <span >$89M reduction in admin costs (72%)</span>
+                    <li className="flex items-center gap-2">
+                      <CheckCircle className="w-4 h-4 text-green-400" />
+                      <span>$89M reduction in admin costs (72%)</span>
                     </li>
                     <li className= "flex items-center gap-2">
                       <CheckCircle className= "w-4 h-4 text-green-400/>"
@@ -854,64 +848,30 @@ const HealthcareAITransformation: () => {
             </section>
 
             {/* Call to Action */}
-            <section className="bg-gradient-to-r from-red-900/60 to-pink-900/60 rounded-2xl p-12 border-2 border-red-500/40 text-center"
-              <Heart className="w-16 h-16 text-red-400 mx-auto mb-6/>"
-              <h2 className="text-4xl font-bold text-white mb-6"
-            <section className="bg-gradient-to-r from-red-900/60 to-pink-900/60 rounded-2xl p-12 border-2 border-red-500/40 text-center">
-              <Heart className="w-16 h-16 text-red-400 mx-auto mb-6/>"
-              <h2 className="text-4xl font-bold text-white mb-6">
             <section className="bg-gradient-to-r from-red-900/60 to-pink-900/60 rounded-2xl p-12 border-2 border-red-500/40 text-center">
               <Heart className="w-16 h-16 text-red-400 mx-auto mb-6" />
               <h2 className="text-4xl font-bold text-white mb-6">
-  Transform Your Healthcare Organization
+                Transform Your Healthcare Organization
               </h2>
               <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-            <section className= "bg-gradient-to-r from-red-900/60 to-pink-900/60 rounded-2xl p-12 border-2 border-red-500/40 text-center">
-              <Heart className= "w-16 h-16 text-red-400 mx-auto mb-6/>"
-              <h2 className= "text-4xl font-bold text-white mb-6">
-            <section className= "bg-gradient-to-r from-red-900/60 to-pink-900/60 rounded-2xl p-12 border-2 border-red-500/40 text-center">
-              <Heart className= "w-16 h-16 text-red-400 mx-auto mb-6" />
-              <h2 className= "text-4xl font-bold text-white mb-6">"
-  Transform Your Healthcare Organization
-              </h2>
-              <p className= "text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">"
-  Ready to improve patient outcomes, reduce costs, and empower your healthcare 
+                Ready to improve patient outcomes, reduce costs, and empower your healthcare 
                 professionals with AI? Schedule a consultation to explore how we can transform 
                 your organization.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link to: "/contact
-  className="inline-flex items-center justify-center gap-2 bg-red-500 hover:bg-red-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg
+                <Link 
+                  to="/contact"
+                  className="inline-flex items-center justify-center gap-2 bg-red-500 hover:bg-red-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg"
                 >
-                  <Heart className="w-5 h-5/>"
                   <Heart className="w-5 h-5" />
-                  <Heart className="w-5 h-5/>"
-                  <Heart className="w-5 h-5" />
-  Schedule Healthcare AI Consultation
+                  Schedule Healthcare AI Consultation
                 </Link>
-                <Link to: "/case-studies
-  className="inline-flex items-center justify-center gap-2 border-2 border-red-400 text-red-300 hover:bg-red-500/20 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105
+                <Link 
+                  to="/case-studies"
+                  className="inline-flex items-center justify-center gap-2 border-2 border-red-400 text-red-300 hover:bg-red-500/20 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105"
                 >
-                  <TrendingUp className="w-5 h-5/>"
                   <TrendingUp className="w-5 h-5" />
-              <div className= "flex flex-col sm:flex-row gap-4 justify-center">
-              <div className= "flex flex-col sm:flex-row gap-4 justify-center">
-                <Link to: "/contact
-  className= "inline-flex items-center justify-center gap-2 bg-red-500 hover:bg-red-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg
-                >
-                  <Heart className= "w-5 h-5/>"
-                  <Heart className= "w-5 h-5" />
-  Schedule Healthcare AI Consultation
-                </Link>
-                <Link to: "/case-studies
-  className= "inline-flex items-center justify-center gap-2 border-2 border-red-400 text-red-300 hover:bg-red-500/20 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105
-                >
-                  <TrendingUp className= "w-5 h-5/>"
-                  <TrendingUp className= "w-5 h-5" />
-                  <TrendingUp className="w-5 h-5/>"
-                  <TrendingUp className="w-5 h-5" />
-  View More Success Stories
+                  View More Success Stories
                 </Link>
               </div>
             </section>
