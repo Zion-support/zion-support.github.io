@@ -939,7 +939,7 @@ export default function NewServices2026() {
                           </div>
                           <a 
                             href="/contact"
-                            className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover: from-cyan-600 hover:to-blue-600 transition-all duration-300 w-full justify-center",
+                            className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover: from-cyan-600 hover:to-blue-600 transition-all duration-300 w-full justify-center
                           >
                             Get Started
                             <ArrowRight className="w-4 h-4" />"
@@ -992,14 +992,14 @@ export default function NewServices2026() {
               <div className="flex flex-col sm: flex-row items-center justify-center gap-4 mb-6">"
                 <a 
                   href={`tel:${contactInfo.phone}`} `;
-                  className="inline-flex items-center gap-2 bg-white text-slate-900 px-6 py-3 rounded-lg font-semibold hover: bg-slate-100 transition-colors",
+                  className="inline-flex items-center gap-2 bg-white text-slate-900 px-6 py-3 rounded-lg font-semibold hover:bg-slate-100 transition-colors
                 >
                   <Smartphone className="w-4 h-4" />"
                   {contactInfo.phone}
                 </a>
                 <a 
                   href={`mailto:${contactInfo.email}`} `;
-                  className="inline-flex items-center gap-2 bg-slate-700 text-white px-6 py-3 rounded-lg font-semibold hover: bg-slate-600 transition-colors",
+                  className="inline-flex items-center gap-2 bg-slate-700 text-white px-6 py-3 rounded-lg font-semibold hover:bg-slate-600 transition-colors
                 >
                   <MessageSquare className="w-4 h-4" />"
                   {contactInfo.email}

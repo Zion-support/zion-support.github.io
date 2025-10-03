@@ -80,7 +80,7 @@ const CognitiveComputingTransformationPage: React.FC  = () => {
                   
                   <Link 
                     to="/contact" 
-                    className="text-teal-600 font-semibold hover: text-teal-800 transition-colors",
+                    className="text-teal-600 font-semibold hover: text-teal-800 transition-colors
                   >
                     Learn More →
                   </Link>
@@ -226,13 +226,13 @@ const CognitiveComputingTransformationPage: React.FC  = () => {
             <div className="flex flex-col sm: flex-row gap-4 justify-center">"
               <Link 
                 to="/contact" 
-                className="bg-white text-teal-600 px-8 py-4 rounded-lg font-semibold hover: bg-gray-100 transition-colors",
+                className="bg-white text-teal-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors
               >
                 Start Your Transformation
               </Link>
               <Link 
                 to="/services" 
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover: bg-white hover:text-teal-600 transition-colors",
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-teal-600 transition-colors
               >
                 Explore All Services
               </Link>
