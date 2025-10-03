@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function September30ContentPromo2025() {
   return (
@@ -19,7 +19,7 @@ export default function September30ContentPromo2025() {
           <article className="bg-white/10 border border-white/20 rounded-xl p-6 hover:bg-white/15 transition">
             <h3 className="text-2xl font-bold mb-2">Trustworthy AI Agents</h3>
             <p className="text-white/85 mb-4">Blueprint for safe, scalable agent deployments.</p>
-            <Link href="/blog/ai-september-30-2025-trustworthy-agents" className="inline-block bg-white text-indigo-700 font-semibold py-2 px-4 rounded-lg hover:bg-gray-100">
+            <Link to="/blog/ai-september-30-2025-trustworthy-agents" className="inline-block bg-white text-indigo-700 font-semibold py-2 px-4 rounded-lg hover:bg-gray-100">
               Read →
             </Link>
           </article>
@@ -27,7 +27,7 @@ export default function September30ContentPromo2025() {
           <article className="bg-white/10 border border-white/20 rounded-xl p-6 hover:bg-white/15 transition">
             <h3 className="text-2xl font-bold mb-2">Agent Security Blueprint</h3>
             <p className="text-white/85 mb-4">Zero-trust controls for autonomous systems.</p>
-            <Link href="/blog/ai-september-30-2025-agent-security-blueprint" className="inline-block bg-white text-indigo-700 font-semibold py-2 px-4 rounded-lg hover:bg-gray-100">
+            <Link to="/blog/ai-september-30-2025-agent-security-blueprint" className="inline-block bg-white text-indigo-700 font-semibold py-2 px-4 rounded-lg hover:bg-gray-100">
               Read →
             </Link>
           </article>
@@ -35,7 +35,7 @@ export default function September30ContentPromo2025() {
           <article className="bg-white/10 border border-white/20 rounded-xl p-6 hover:bg-white/15 transition">
             <h3 className="text-2xl font-bold mb-2">AI Innovation Labs</h3>
             <p className="text-white/85 mb-4">Achieve 10x velocity with guardrails.</p>
-            <Link href="/blog/ai-september-30-2025-innovation-labs" className="inline-block bg-white text-indigo-700 font-semibold py-2 px-4 rounded-lg hover:bg-gray-100">
+            <Link to="/blog/ai-september-30-2025-innovation-labs" className="inline-block bg-white text-indigo-700 font-semibold py-2 px-4 rounded-lg hover:bg-gray-100">
               Read →
             </Link>
           </article>

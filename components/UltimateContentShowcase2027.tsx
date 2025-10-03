@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 interface ContentItem {
   id: string;
@@ -174,15 +174,13 @@ export default function UltimateContentShowcase2027() {
             )}
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link
-                href={activeContent.link}
+              <Link to={activeContent.link}
                 className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl text-center inline-flex items-center justify-center gap-2"
               >
                 Read Full Story
                 <span className="text-xl">→</span>
               </Link>
-              <Link
-                href="/blog"
+              <Link to="/blog"
                 className="border-2 border-white/50 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all duration-300 text-center"
               >
                 Explore All Content
@@ -300,8 +298,7 @@ export default function UltimateContentShowcase2027() {
           <p className="text-lg opacity-75 mb-6">
             Ready to achieve similar breakthrough results for your enterprise?
           </p>
-          <Link
-            href="/contact"
+          <Link to="/contact"
             className="inline-flex items-center gap-2 bg-gradient-to-r from-green-500 to-emerald-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-600 hover:to-emerald-600 transition-all duration-300 shadow-lg hover:shadow-xl"
           >
             Start Your Transformation

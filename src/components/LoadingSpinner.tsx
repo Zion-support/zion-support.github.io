@@ -1,122 +1,100 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import { memo } from 'react';
 
 interface LoadingSpinnerProps {
-  size?: 'small' | 'medium' | 'large';
-  color?: 'blue' | 'white' | 'gray';
+  size?: 'sm' | 'md' | 'lg';
   text?: string;
-  fullScreen?: boolean;
+  className?: string;
 }
 
-const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
-  size = 'medium',
-  color = 'blue',
-  text,
-  fullScreen = false
+const LoadingSpinner = memo<LoadingSpinnerProps>(({ 
+  size = 'md', 
+  text = 'Loading...', 
+  className = '' 
 }) => {
   const sizeClasses = {
-    small: 'w-4 h-4',
-    medium: 'w-8 h-8',
-    large: 'w-12 h-12'
+    sm: 'w-6 h-6 border-2',
+    md: 'w-12 h-12 border-4',
+    lg: 'w-16 h-16 border-8'
   };
 
-  const colorClasses = {
-    blue: 'text-blue-600',
-    white: 'text-white',
-    gray: 'text-gray-600'
-  };
-
-  const spinnerVariants = {
-    animate: {
-      rotate: 360,
-      transition: {
-        duration: 1,
-        repeat: Infinity,
-        ease: 'linear'
-      }
-    }
-  };
-
-  const dotVariants = {
-    animate: {
-      scale: [1, 1.2, 1],
-      opacity: [0.5, 1, 0.5],
-      transition: {
-        duration: 1.5,
-        repeat: Infinity,
-        ease: 'easeInOut'
-      }
-    }
-  };
-
-  const content = (
-    <div className="flex flex-col items-center justify-center space-y-4">
-      {/* Animated Spinner */}
-      <motion.div
-        variants={spinnerVariants}
-        animate="animate"
-        className={`${sizeClasses[size]} ${colorClasses[color]}`}
-      >
-        <svg
-          className="w-full h-full"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <circle
-            className="opacity-25"
-            cx="12"
-            cy="12"
-            r="10"
-            strokeWidth="4"
-          />
-          <path
-            className="opacity-75"
-            fill="currentColor"
-            d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-          />
-        </svg>
-      </motion.div>
-
-      {/* Alternative Dot Animation */}
-      {size === 'large' && (
-        <div className="flex space-x-2">
-          {[0, 1, 2].map((index) => (
-            <motion.div
-              key={index}
-              variants={dotVariants}
-              animate="animate"
-              className={`w-3 h-3 rounded-full ${colorClasses[color].replace('text-', 'bg-')}`}
-              style={{ animationDelay: `${index * 0.2}s` }}
-            />
-          ))}
-        </div>
-      )}
-
-      {/* Loading Text */}
-      {text && (
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.5 }}
-          className={`text-sm font-medium ${colorClasses[color]}`}
-        >
-          {text}
-        </motion.p>
-      )}
+  return (
+    <div className={`flex items-center justify-center h-full p-8 ${className}`} role="status" aria-label="Loading">
+      <div 
+        className={`${sizeClasses[size]} border-blue-500 border-t-transparent rounded-full animate-spin`}
+        aria-hidden="true" />
+      <span className="ml-4 text-lg text-gray-600 sr-only">{text}</span>
     </div>
   );
+});
 
-  if (fullScreen) {
-    return (
-      <div className="fixed inset-0 bg-white bg-opacity-90 backdrop-blur-sm flex items-center justify-center z-50">
-        {content}
-      </div>
-    );
-  }
+LoadingSpinner.displayName = 'LoadingSpinner';
 
-  return content;
-};
+interface PageLoaderProps {
+  text?: string;
+  className?: string;
+}
 
-export default LoadingSpinner;
+const PageLoader = memo<PageLoaderProps>(({ 
+  text = 'Loading content...', 
+  className = '' 
+}) => {
+  return (
+    <div className={`flex flex-col items-center justify-center min-h-screen bg-slate-950 text-white ${className}`} role="status" aria-label="Page loading">
+      <div 
+        className="w-16 h-16 border-8 border-blue-500 border-t-transparent rounded-full animate-spin mb-4"
+        aria-hidden="true" />
+      <p className="text-xl font-semibold">{text}</p>
+    </div>
+  );
+});
+
+PageLoader.displayName = 'PageLoader';
+
+// Optimized skeleton loader for better perceived performance
+interface SkeletonLoaderProps {
+  lines?: number;
+  className?: string;
+}
+
+const SkeletonLoader = memo<SkeletonLoaderProps>(({ lines = 3, className = '' }) => {
+  return (
+    <div className={`animate-pulse ${className}`} role="status" aria-label="Content loading">
+      {Array.from({ length: lines }).map((_, index) => (
+        <div
+          key={index}
+          className={`h-4 bg-gray-300 rounded mb-2 ${
+            index === lines - 1 ? 'w-3/4' : 'w-full'
+          }`}
+          aria-hidden="true" />
+      ))}
+      <span className="sr-only">Loading content...</span>
+    </div>
+  );
+});
+
+SkeletonLoader.displayName = 'SkeletonLoader';
+
+// Inline spinner for buttons and small components
+interface InlineSpinnerProps {
+  size?: 'xs' | 'sm';
+  className?: string;
+}
+
+const InlineSpinner = memo<InlineSpinnerProps>(({ size = 'sm', className = '' }) => {
+  const sizeClasses = {
+    xs: 'w-3 h-3 border',
+    sm: 'w-4 h-4 border-2'
+  };
+
+  return (
+    <div 
+      className={`${sizeClasses[size]} border-current border-t-transparent rounded-full animate-spin ${className}`}
+      role="status"
+      aria-label="Loading"
+      aria-hidden="true" />
+  );
+});
+
+InlineSpinner.displayName = 'InlineSpinner';
+
+export { LoadingSpinner, PageLoader, SkeletonLoader, InlineSpinner };

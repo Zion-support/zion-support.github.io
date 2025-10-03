@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function UltimateContentShowcase2026MegaBanner() {
   return (
@@ -25,8 +25,7 @@ export default function UltimateContentShowcase2026MegaBanner() {
         {/* Featured Breakthroughs Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {/* Superintelligent Automation */}
-          <Link 
-            href="/blog/ai-2026-superintelligent-automation-breakthrough"
+          <Link to="/blog/ai-2026-superintelligent-automation-breakthrough"
             className="group bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20"
           >
             <div className="text-6xl mb-6 group-hover:scale-110 transition-transform duration-300">🤖</div>
@@ -52,8 +51,7 @@ export default function UltimateContentShowcase2026MegaBanner() {
           </Link>
 
           {/* Neural Superintelligence Platform */}
-          <Link 
-            href="/blog/ai-2026-neural-superintelligence-platform"
+          <Link to="/blog/ai-2026-neural-superintelligence-platform"
             className="group bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20"
           >
             <div className="text-6xl mb-6 group-hover:scale-110 transition-transform duration-300">🧠</div>
@@ -79,8 +77,7 @@ export default function UltimateContentShowcase2026MegaBanner() {
           </Link>
 
           {/* Quantum Neural Networks */}
-          <Link 
-            href="/blog/ai-2026-quantum-neural-networks"
+          <Link to="/blog/ai-2026-quantum-neural-networks"
             className="group bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/20"
           >
             <div className="text-6xl mb-6 group-hover:scale-110 transition-transform duration-300">⚛️</div>
@@ -106,8 +103,7 @@ export default function UltimateContentShowcase2026MegaBanner() {
           </Link>
 
           {/* Autonomous Enterprise Operations */}
-          <Link 
-            href="/blog/ai-2026-autonomous-enterprise-operations"
+          <Link to="/blog/ai-2026-autonomous-enterprise-operations"
             className="group bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-green-500/50 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-green-500/20"
           >
             <div className="text-6xl mb-6 group-hover:scale-110 transition-transform duration-300">🏢</div>
@@ -133,8 +129,7 @@ export default function UltimateContentShowcase2026MegaBanner() {
           </Link>
 
           {/* Meta-Cognitive Reasoning */}
-          <Link 
-            href="/blog/ai-2026-meta-cognitive-reasoning"
+          <Link to="/blog/ai-2026-meta-cognitive-reasoning"
             className="group bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-orange-500/50 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-orange-500/20"
           >
             <div className="text-6xl mb-6 group-hover:scale-110 transition-transform duration-300">🔮</div>
@@ -160,8 +155,7 @@ export default function UltimateContentShowcase2026MegaBanner() {
           </Link>
 
           {/* Consciousness Fusion */}
-          <Link 
-            href="/blog/ai-2027-consciousness-fusion-breakthrough"
+          <Link to="/blog/ai-2027-consciousness-fusion-breakthrough"
             className="group bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-pink-500/50 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-pink-500/20"
           >
             <div className="text-6xl mb-6 group-hover:scale-110 transition-transform duration-300">✨</div>
@@ -220,20 +214,17 @@ export default function UltimateContentShowcase2026MegaBanner() {
             Get started with a free assessment and personalized implementation roadmap.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Link 
-              href="/contact" 
+            <Link to="/contact" 
               className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 transform hover:-translate-y-1"
             >
               Get Free Assessment
             </Link>
-            <Link 
-              href="/case-studies" 
+            <Link to="/case-studies" 
               className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
             >
               View Success Stories
             </Link>
-            <Link 
-              href="/services" 
+            <Link to="/services" 
               className="border-2 border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               Explore Services

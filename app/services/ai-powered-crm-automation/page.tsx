@@ -1,16 +1,6 @@
 import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
-export const metadata: Metadata = {
-  title: 'AI-Powered CRM Automation - Zion Tech Group',
-  description: 'Transform your customer relationships with AI-powered CRM automation. Automate lead scoring, sales forecasting, and customer engagement with intelligent insights.',
-  keywords: 'AI CRM automation, sales automation, lead scoring, customer relationship management, sales AI',
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
 
 export default function AIPoweredCRMAutomation() {
   return (

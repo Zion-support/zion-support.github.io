@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { 
   Zap, 
   Brain, 
@@ -401,8 +401,7 @@ export default function AIAutonomousBusinessOperationsPage() {
                     </div>
                   </div>
                   
-                  <Link 
-                    href="/contact"
+                  <Link to="/contact"
                     className="w-full bg-cyan-600 hover:bg-cyan-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors flex items-center justify-center"
                   >
                     Get Autonomous Consultation

@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function AI2026RevolutionaryBreakthroughBanner() {
   return (
@@ -31,7 +31,7 @@ export default function AI2026RevolutionaryBreakthroughBanner() {
         <div className="grid md:grid-cols-3 gap-8 mb-12">
           
           {/* AI Neural Interfaces */}
-          <Link href="/blog/ai-neural-interfaces-2026" className="group">
+          <Link to="/blog/ai-neural-interfaces-2026" className="group">
             <div className="bg-white rounded-2xl shadow-2xl overflow-hidden hover:shadow-3xl transition-all hover:scale-105 transform">
               <div className="bg-gradient-to-r from-purple-600 to-indigo-600 p-6 text-white">
                 <div className="flex items-center gap-2 mb-3">
@@ -73,7 +73,7 @@ export default function AI2026RevolutionaryBreakthroughBanner() {
           </Link>
 
           {/* AI Space Technology */}
-          <Link href="/blog/ai-space-tech-2026" className="group">
+          <Link to="/blog/ai-space-tech-2026" className="group">
             <div className="bg-white rounded-2xl shadow-2xl overflow-hidden hover:shadow-3xl transition-all hover:scale-105 transform">
               <div className="bg-gradient-to-r from-blue-600 to-cyan-600 p-6 text-white">
                 <div className="flex items-center gap-2 mb-3">
@@ -115,7 +115,7 @@ export default function AI2026RevolutionaryBreakthroughBanner() {
           </Link>
 
           {/* AI Synthetic Data */}
-          <Link href="/blog/ai-synthetic-data-2026" className="group">
+          <Link to="/blog/ai-synthetic-data-2026" className="group">
             <div className="bg-white rounded-2xl shadow-2xl overflow-hidden hover:shadow-3xl transition-all hover:scale-105 transform border-4 border-green-300">
               <div className="bg-gradient-to-r from-green-600 to-emerald-600 p-6 text-white">
                 <div className="flex items-center gap-2 mb-3">
@@ -165,19 +165,19 @@ export default function AI2026RevolutionaryBreakthroughBanner() {
               Our AI services are already delivering these revolutionary capabilities to Fortune 500 companies worldwide.
             </p>
             <div className="grid md:grid-cols-3 gap-4">
-              <Link href="/services/ai-neural-interfaces-2026" className="group">
+              <Link to="/services/ai-neural-interfaces-2026" className="group">
                 <div className="bg-purple-600 text-white p-4 rounded-lg hover:bg-purple-700 transition-colors">
                   <h4 className="font-bold text-lg mb-2">🧠 Neural Interface Service</h4>
                   <p className="text-sm opacity-95">Starting at $2.5M implementation</p>
                 </div>
               </Link>
-              <Link href="/services/ai-space-technology-2026" className="group">
+              <Link to="/services/ai-space-technology-2026" className="group">
                 <div className="bg-blue-600 text-white p-4 rounded-lg hover:bg-blue-700 transition-colors">
                   <h4 className="font-bold text-lg mb-2">🚀 Space AI Service</h4>
                   <p className="text-sm opacity-95">Starting at $5M implementation</p>
                 </div>
               </Link>
-              <Link href="/services/ai-synthetic-data-2026" className="group">
+              <Link to="/services/ai-synthetic-data-2026" className="group">
                 <div className="bg-green-600 text-white p-4 rounded-lg hover:bg-green-700 transition-colors">
                   <h4 className="font-bold text-lg mb-2">🔒 Synthetic Data Service</h4>
                   <p className="text-sm opacity-95">Starting at $500K implementation</p>

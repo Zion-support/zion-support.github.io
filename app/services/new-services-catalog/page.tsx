@@ -1,6 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
-import { Metadata } from 'next';
+import { Link } from 'react-router-dom';
 import { 
   Brain, 
   Code, 
@@ -24,11 +23,6 @@ import {
   Star
 } from 'lucide-react';
 
-export const metadata: Metadata = {
-  title: 'Innovative Services Catalog | Zion Tech Group - Cutting-Edge Solutions',
-  description: 'Explore our latest micro SaaS, AI, and IT services including autonomous operations, quantum computing, and next-generation business intelligence solutions.',
-  keywords: 'micro SaaS, AI services, IT solutions, autonomous systems, quantum computing, business intelligence, cloud services',
-};
 
 export default function NewServicesCatalogPage() {
   const serviceCategories = [

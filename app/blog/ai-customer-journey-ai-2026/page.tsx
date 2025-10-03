@@ -1,12 +1,6 @@
 import React from 'react';
-import Link from 'next/link';
-import { Metadata } from 'next';
+import { Link } from 'react-router-dom';
 
-export const metadata: Metadata = {
-  title: 'AI Customer Journey 2026: Complete Personalization Guide',
-  description: 'Master AI-powered customer journey optimization in 2026. Learn how to create seamless, personalized experiences that increase conversion by 250% and customer satisfaction by 90%.',
-  keywords: 'AI customer journey, customer experience, personalization, journey mapping, CX optimization, 2026',
-};
 
 export default function AICustomerJourney2026Page() {
   return (

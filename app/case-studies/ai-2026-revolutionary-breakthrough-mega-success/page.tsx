@@ -1,11 +1,5 @@
 import React from 'react';
-import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'AI 2026 Revolutionary Breakthrough Mega Success | Zion Tech Group',
-  description: 'How a Fortune 500 company achieved $5.2B in savings and 99.9% operational autonomy through our revolutionary AI breakthrough technologies.',
-  keywords: 'AI 2026, revolutionary breakthrough, Fortune 500, enterprise success, AI transformation',
-};
 
 export default function AI2026RevolutionaryBreakthroughMegaSuccess() {
   return (

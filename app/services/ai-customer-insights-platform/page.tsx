@@ -1,234 +1,354 @@
 import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
-export const metadata: Metadata = {
-  title: 'AI Customer Insights Platform - Zion Tech Group',
-  description: 'Transform customer data into actionable insights with AI-powered analytics. Understand customer behavior, predict trends, and optimize experiences.',
-  keywords: 'customer analytics, AI insights, customer behavior, predictive analytics, customer intelligence',
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
 
-export default function AICustomerInsightsPlatform() {
+export default function AICustomerInsightsPlatformPage() {
+  const features = [
+    {
+      name: "Behavioral Analytics Engine",
+      description: "Advanced AI algorithms analyze customer behavior patterns across all touchpoints",
+      capabilities: [
+        "Real-time behavior tracking",
+        "Pattern recognition and anomaly detection",
+        "Customer journey mapping",
+        "Engagement scoring",
+        "Predictive behavior modeling",
+        "Cross-platform data correlation"
+      ],
+      pricing: "Starting from $199/month"
+    },
+    {
+      name: "Sentiment Intelligence",
+      description: "AI-powered sentiment analysis across social media, reviews, and customer feedback",
+      capabilities: [
+        "Multi-language sentiment analysis",
+        "Emotion detection and classification",
+        "Brand mention monitoring",
+        "Competitor sentiment tracking",
+        "Trend analysis and forecasting",
+        "Automated alert system"
+      ],
+      pricing: "Starting from $149/month"
+    },
+    {
+      name: "Predictive Customer Analytics",
+      description: "Machine learning models predict customer lifetime value, churn risk, and purchase behavior",
+      capabilities: [
+        "Customer lifetime value prediction",
+        "Churn risk scoring",
+        "Purchase probability modeling",
+        "Personalization recommendations",
+        "Market basket analysis",
+        "Customer segmentation"
+      ],
+      pricing: "Starting from $299/month"
+    },
+    {
+      name: "Real-time Customer Intelligence",
+      description: "Live dashboard with actionable insights and automated recommendations",
+      capabilities: [
+        "Real-time customer monitoring",
+        "Automated insight generation",
+        "Custom alert configuration",
+        "Performance benchmarking",
+        "ROI tracking and optimization",
+        "Executive reporting"
+      ],
+      pricing: "Starting from $399/month"
+    }
+  ];
+
+  const useCases = [
+    {
+      industry: "E-commerce",
+      description: "Optimize product recommendations and reduce cart abandonment",
+      results: "35% increase in conversion rates, 25% reduction in cart abandonment"
+    },
+    {
+      industry: "SaaS",
+      description: "Predict churn and improve customer retention",
+      results: "40% reduction in churn rate, 50% improvement in customer lifetime value"
+    },
+    {
+      industry: "Healthcare",
+      description: "Enhance patient experience and satisfaction",
+      results: "30% improvement in patient satisfaction scores, 20% increase in retention"
+    },
+    {
+      industry: "Financial Services",
+      description: "Improve risk assessment and customer onboarding",
+      results: "45% improvement in risk prediction accuracy, 60% faster onboarding"
+    }
+  ];
+
+  const benefits = [
+    {
+      title: "Increased Revenue",
+      description: "Average 28% increase in revenue through better customer insights",
+      icon: "💰"
+    },
+    {
+      title: "Reduced Churn",
+      description: "Predict and prevent customer churn with 85% accuracy",
+      icon: "📈"
+    },
+    {
+      title: "Better Personalization",
+      description: "Deliver hyper-personalized experiences at scale",
+      icon: "🎯"
+    },
+    {
+      title: "Data-Driven Decisions",
+      description: "Make informed business decisions with real-time insights",
+      icon: "📊"
+    }
+  ];
+
+  const pricingPlans = [
+    {
+      name: "Starter",
+      price: "$299/month",
+      description: "Perfect for small businesses starting with customer analytics",
+      features: [
+        "Up to 10,000 customer profiles",
+        "Basic behavioral analytics",
+        "Standard sentiment analysis",
+        "Monthly reporting",
+        "Email support",
+        "Basic integrations"
+      ],
+      popular: false
+    },
+    {
+      name: "Professional",
+      price: "$799/month",
+      description: "Ideal for growing businesses with advanced analytics needs",
+      features: [
+        "Up to 100,000 customer profiles",
+        "Advanced behavioral analytics",
+        "Real-time sentiment monitoring",
+        "Predictive analytics models",
+        "Priority support",
+        "Advanced integrations",
+        "Custom dashboards"
+      ],
+      popular: true
+    },
+    {
+      name: "Enterprise",
+      price: "Custom pricing",
+      description: "For large organizations with complex customer data requirements",
+      features: [
+        "Unlimited customer profiles",
+        "Advanced AI models",
+        "Real-time intelligence",
+        "Custom model development",
+        "Dedicated account manager",
+        "White-label solutions",
+        "On-premise deployment"
+      ],
+      popular: false
+    }
+  ];
+
   return (
-    <div className="max-w-6xl mx-auto px-4 py-8">
-      <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">AI Customer Insights Platform</h1>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Transform your customer data into actionable insights with AI-powered analytics. 
-          Understand customer behavior, predict trends, and optimize experiences for maximum engagement.
-        </p>
-        <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-center">
-          <div className="bg-blue-50 px-4 py-2 rounded-lg">
-            <span className="text-blue-800 font-semibold">Starting from $399/month</span>
-          </div>
-          <div className="bg-green-50 px-4 py-2 rounded-lg">
-            <span className="text-green-800 font-semibold">21-day free trial</span>
-          </div>
-        </div>
-      </div>
-
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-        <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-200">
-          <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-            <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-            </svg>
-          </div>
-          <h3 className="text-xl font-semibold text-gray-900 mb-3">Behavioral Analytics</h3>
-          <p className="text-gray-600 mb-4">
-            Track and analyze customer behavior patterns across all touchpoints to understand preferences and pain points.
+    <div className="min-h-screen bg-gradient-to-br from-emerald-50 to-blue-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+            AI Customer Insights Platform
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+            Transform customer data into actionable insights with our AI-powered analytics platform. 
+            Understand behavior, predict trends, and optimize customer experiences with advanced machine learning.
           </p>
-          <ul className="text-sm text-gray-500 space-y-1">
-            <li>• Journey mapping</li>
-            <li>• Engagement tracking</li>
-            <li>• Conversion analysis</li>
-            <li>• Drop-off identification</li>
-          </ul>
-        </div>
-
-        <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-200">
-          <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
-            <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-            </svg>
-          </div>
-          <h3 className="text-xl font-semibold text-gray-900 mb-3">Predictive Analytics</h3>
-          <p className="text-gray-600 mb-4">
-            Predict customer lifetime value, churn risk, and purchase likelihood using advanced machine learning models.
-          </p>
-          <ul className="text-sm text-gray-500 space-y-1">
-            <li>• Churn prediction</li>
-            <li>• Lifetime value forecasting</li>
-            <li>• Purchase probability</li>
-            <li>• Upsell opportunities</li>
-          </ul>
-        </div>
-
-        <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-200">
-          <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
-            <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-            </svg>
-          </div>
-          <h3 className="text-xl font-semibold text-gray-900 mb-3">Customer Segmentation</h3>
-          <p className="text-gray-600 mb-4">
-            Automatically segment customers based on behavior, demographics, and preferences for targeted marketing.
-          </p>
-          <ul className="text-sm text-gray-500 space-y-1">
-            <li>• Dynamic segmentation</li>
-            <li>• RFM analysis</li>
-            <li>• Behavioral clusters</li>
-            <li>• Custom segments</li>
-          </ul>
-        </div>
-
-        <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-200">
-          <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
-            <svg className="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-            </svg>
-          </div>
-          <h3 className="text-xl font-semibold text-gray-900 mb-3">Sentiment Analysis</h3>
-          <p className="text-gray-600 mb-4">
-            Analyze customer feedback, reviews, and social media mentions to understand sentiment and satisfaction levels.
-          </p>
-          <ul className="text-sm text-gray-500 space-y-1">
-            <li>• Review analysis</li>
-            <li>• Social media monitoring</li>
-            <li>• Support ticket sentiment</li>
-            <li>• Brand perception tracking</li>
-          </ul>
-        </div>
-
-        <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-200">
-          <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
-            <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-          </div>
-          <h3 className="text-xl font-semibold text-gray-900 mb-3">Real-time Alerts</h3>
-          <p className="text-gray-600 mb-4">
-            Get instant notifications about significant changes in customer behavior or satisfaction metrics.
-          </p>
-          <ul className="text-sm text-gray-500 space-y-1">
-            <li>• Anomaly detection</li>
-            <li>• Threshold alerts</li>
-            <li>• Trend notifications</li>
-            <li>• Custom triggers</li>
-          </ul>
-        </div>
-
-        <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-200">
-          <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
-            <svg className="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4" />
-            </svg>
-          </div>
-          <h3 className="text-xl font-semibold text-gray-900 mb-3">Data Integration</h3>
-          <p className="text-gray-600 mb-4">
-            Connect all your customer data sources for a unified view of customer interactions and preferences.
-          </p>
-          <ul className="text-sm text-gray-500 space-y-1">
-            <li>• CRM integration</li>
-            <li>• E-commerce platforms</li>
-            <li>• Marketing tools</li>
-            <li>• Support systems</li>
-          </ul>
-        </div>
-      </div>
-
-      <div className="bg-gradient-to-r from-purple-50 to-blue-50 rounded-lg p-8 mb-12">
-        <h2 className="text-2xl font-bold text-gray-900 mb-4">Key Benefits</h2>
-        <div className="grid md:grid-cols-2 gap-6">
-          <div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">📈 Increased Revenue</h3>
-            <p className="text-gray-600">Identify upsell opportunities and reduce churn with predictive insights.</p>
-          </div>
-          <div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">🎯 Better Targeting</h3>
-            <p className="text-gray-600">Create highly targeted campaigns based on customer behavior and preferences.</p>
-          </div>
-          <div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">⚡ Faster Decisions</h3>
-            <p className="text-gray-600">Make data-driven decisions quickly with real-time insights and alerts.</p>
-          </div>
-          <div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">🔍 Deep Understanding</h3>
-            <p className="text-gray-600">Gain comprehensive understanding of your customer base and market trends.</p>
-          </div>
-        </div>
-      </div>
-
-      <div className="bg-white rounded-lg shadow-lg p-8 mb-12">
-        <h2 className="text-2xl font-bold text-gray-900 mb-6">Pricing Plans</h2>
-        <div className="grid md:grid-cols-3 gap-6">
-          <div className="border border-gray-200 rounded-lg p-6">
-            <h3 className="text-xl font-semibold text-gray-900 mb-2">Starter</h3>
-            <div className="text-3xl font-bold text-blue-600 mb-4">$399<span className="text-lg text-gray-500">/month</span></div>
-            <ul className="space-y-2 text-gray-600">
-              <li>• Up to 10,000 customers</li>
-              <li>• Basic analytics dashboard</li>
-              <li>• 5 data sources</li>
-              <li>• Email support</li>
-            </ul>
-            <Link href="/contact" className="block mt-6 bg-blue-600 text-white text-center py-2 rounded-lg hover:bg-blue-700 transition-colors">
-              Get Started
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
+              href="/contact" 
+              className="bg-emerald-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-emerald-700 transition-colors"
+            >
+              Start Free Trial
+            </Link>
+            <Link 
+              href="/pricing" 
+              className="border border-emerald-600 text-emerald-600 px-8 py-4 rounded-lg font-semibold hover:bg-emerald-50 transition-colors"
+            >
+              View Pricing
             </Link>
           </div>
-          
-          <div className="border-2 border-blue-500 rounded-lg p-6 relative">
-            <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-blue-500 text-white px-3 py-1 rounded-full text-sm">
-              Most Popular
+        </div>
+
+        {/* Features Grid */}
+        <div className="grid md:grid-cols-2 gap-8 mb-16">
+          {features.map((feature, index) => (
+            <div key={index} className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+              <div className="flex items-start justify-between mb-6">
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{feature.name}</h3>
+                  <p className="text-gray-600 mb-4">{feature.description}</p>
+                </div>
+                <div className="bg-emerald-100 text-emerald-800 px-3 py-1 rounded-full text-sm font-semibold">
+                  {feature.pricing}
+                </div>
+              </div>
+              
+              <div className="mb-6">
+                <h4 className="font-semibold text-gray-900 mb-3">Key Capabilities:</h4>
+                <ul className="space-y-2">
+                  {feature.capabilities.map((capability, idx) => (
+                    <li key={idx} className="flex items-center text-gray-600">
+                      <span className="text-green-500 mr-2">✓</span>
+                      {capability}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              
+              <Link 
+                href="/contact"
+                className="inline-block w-full text-center bg-emerald-600 text-white py-3 rounded-lg font-semibold hover:bg-emerald-700 transition-colors"
+              >
+                Start Free Trial
+              </Link>
             </div>
-            <h3 className="text-xl font-semibold text-gray-900 mb-2">Professional</h3>
-            <div className="text-3xl font-bold text-blue-600 mb-4">$999<span className="text-lg text-gray-500">/month</span></div>
-            <ul className="space-y-2 text-gray-600">
-              <li>• Up to 100,000 customers</li>
-              <li>• Advanced analytics & AI insights</li>
-              <li>• 20 data sources</li>
-              <li>• Predictive analytics</li>
-              <li>• Priority support</li>
-            </ul>
-            <Link href="/contact" className="block mt-6 bg-blue-600 text-white text-center py-2 rounded-lg hover:bg-blue-700 transition-colors">
-              Get Started
-            </Link>
-          </div>
-          
-          <div className="border border-gray-200 rounded-lg p-6">
-            <h3 className="text-xl font-semibold text-gray-900 mb-2">Enterprise</h3>
-            <div className="text-3xl font-bold text-blue-600 mb-4">Custom</div>
-            <ul className="space-y-2 text-gray-600">
-              <li>• Unlimited customers</li>
-              <li>• Custom analytics & reporting</li>
-              <li>• Unlimited data sources</li>
-              <li>• White-label solution</li>
-              <li>• Dedicated account manager</li>
-            </ul>
-            <Link href="/contact" className="block mt-6 bg-gray-600 text-white text-center py-2 rounded-lg hover:bg-gray-700 transition-colors">
-              Contact Sales
-            </Link>
-          </div>
+          ))}
         </div>
-      </div>
 
-      <div className="text-center">
-        <h2 className="text-2xl font-bold text-gray-900 mb-4">Ready to Unlock Customer Insights?</h2>
-        <p className="text-gray-600 mb-6">Transform your customer data into competitive advantage with AI-powered insights.</p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link href="/contact" className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium">
-            Start Free Trial
-          </Link>
-          <Link href="/contact" className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors font-medium">
-            Schedule Demo
-          </Link>
+        {/* Use Cases */}
+        <div className="bg-white rounded-2xl shadow-lg p-8 mb-16">
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
+            Industry Success Stories
+          </h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            {useCases.map((useCase, index) => (
+              <div key={index} className="border border-gray-200 rounded-lg p-6">
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">{useCase.industry}</h3>
+                <p className="text-gray-600 mb-4">{useCase.description}</p>
+                <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+                  <h4 className="font-semibold text-green-800 mb-2">Results Achieved:</h4>
+                  <p className="text-green-700">{useCase.results}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
-        <div className="mt-6 text-sm text-gray-500">
-          <p>📞 Call us: <a href="tel:+13024640950" className="text-blue-600 hover:underline">+1 302 464 0950</a></p>
-          <p>📧 Email: <a href="mailto:kleber@ziontechgroup.com" className="text-blue-600 hover:underline">kleber@ziontechgroup.com</a></p>
+
+        {/* Benefits Section */}
+        <div className="bg-white rounded-2xl shadow-lg p-8 mb-16">
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
+            Transform Your Customer Understanding
+          </h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="text-center">
+                <div className="text-4xl mb-4">{benefit.icon}</div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">{benefit.title}</h3>
+                <p className="text-gray-600">{benefit.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Pricing Plans */}
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
+            Flexible Pricing Plans
+          </h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            {pricingPlans.map((plan, index) => (
+              <div 
+                key={index} 
+                className={`bg-white rounded-xl shadow-lg p-8 relative ${
+                  plan.popular ? 'ring-2 ring-emerald-500 scale-105' : ''
+                }`}
+              >
+                {plan.popular && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-emerald-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                      Most Popular
+                    </span>
+                  </div>
+                )}
+                <div className="text-center mb-6">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
+                  <div className="text-4xl font-bold text-emerald-600 mb-2">{plan.price}</div>
+                  <p className="text-gray-600">{plan.description}</p>
+                </div>
+                <ul className="space-y-3 mb-8">
+                  {plan.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-center">
+                      <span className="text-emerald-500 mr-3">✓</span>
+                      <span className="text-gray-600">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                <Link 
+                  href="/contact"
+                  className={`block w-full text-center py-3 rounded-lg font-semibold transition-colors ${
+                    plan.popular
+                      ? 'bg-emerald-600 text-white hover:bg-emerald-700'
+                      : 'border border-emerald-600 text-emerald-600 hover:bg-emerald-50'
+                  }`}
+                >
+                  {plan.name === 'Enterprise' ? 'Contact Sales' : 'Start Free Trial'}
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Performance Metrics */}
+        <div className="bg-gradient-to-r from-emerald-600 to-blue-600 rounded-2xl p-8 text-white mb-16">
+          <h2 className="text-3xl font-bold text-center mb-8">
+            Proven Results Across Industries
+          </h2>
+          <div className="grid md:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="text-4xl font-bold mb-2">28%</div>
+              <p className="text-emerald-100">Average revenue increase</p>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold mb-2">85%</div>
+              <p className="text-emerald-100">Churn prediction accuracy</p>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold mb-2">40%</div>
+              <p className="text-emerald-100">Improvement in customer satisfaction</p>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold mb-2">60%</div>
+              <p className="text-emerald-100">Reduction in decision-making time</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Contact Information */}
+        <div className="bg-white rounded-2xl shadow-lg p-8 text-center">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">
+            Ready to Unlock Customer Insights?
+          </h2>
+          <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
+            Join hundreds of businesses already using our AI customer insights platform to 
+            understand their customers better, predict behavior, and drive growth.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+            <a 
+              href="tel:+13024640950" 
+              className="flex items-center justify-center bg-emerald-600 text-white px-6 py-3 rounded-lg hover:bg-emerald-700 transition-colors"
+            >
+              📞 Call: +1 302 464 0950
+            </a>
+            <a 
+              href="mailto:kleber@ziontechgroup.com" 
+              className="flex items-center justify-center bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              ✉️ Email: kleber@ziontechgroup.com
+            </a>
+          </div>
+          <p className="text-gray-500">
+            📍 364 E Main St STE 1008, Middletown, DE 19709
+          </p>
         </div>
       </div>
     </div>

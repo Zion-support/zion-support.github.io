@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function NewContent2026RevolutionaryBanner() {
   return (
@@ -30,7 +30,7 @@ export default function NewContent2026RevolutionaryBanner() {
         {/* Content Cards */}
         <div className="grid md:grid-cols-3 gap-8 mb-12">
           {/* Quantum Neural Networks Article */}
-          <Link href="/blog/ai-2026-quantum-neural-networks" className="group">
+          <Link to="/blog/ai-2026-quantum-neural-networks" className="group">
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:border-cyan-400/50 transition-all hover:scale-105 shadow-xl">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center">
@@ -69,7 +69,7 @@ export default function NewContent2026RevolutionaryBanner() {
           </Link>
 
           {/* Hyper-Automation Article */}
-          <Link href="/blog/ai-2026-hyper-automation-revolution" className="group">
+          <Link to="/blog/ai-2026-hyper-automation-revolution" className="group">
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:border-green-400/50 transition-all hover:scale-105 shadow-xl">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center">
@@ -108,7 +108,7 @@ export default function NewContent2026RevolutionaryBanner() {
           </Link>
 
           {/* Fortune 500 Success Story */}
-          <Link href="/case-studies/fortune-500-quantum-hyper-automation-success-2026" className="group">
+          <Link to="/case-studies/fortune-500-quantum-hyper-automation-success-2026" className="group">
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:border-yellow-400/50 transition-all hover:scale-105 shadow-xl">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-12 h-12 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-lg flex items-center justify-center">
@@ -155,14 +155,12 @@ export default function NewContent2026RevolutionaryBanner() {
               Essential reading for CTOs, CIOs, and technology leaders planning their 2026 AI transformation strategy
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/blog"
+              <Link to="/blog"
                 className="bg-white text-purple-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all hover:scale-105 shadow-lg"
               >
                 Explore All Latest Content →
               </Link>
-              <Link
-                href="/case-studies"
+              <Link to="/case-studies"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-900 transition-all hover:scale-105"
               >
                 View Success Stories →

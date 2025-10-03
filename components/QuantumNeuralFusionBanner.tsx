@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { ArrowRight, Zap, Brain, Cpu } from 'lucide-react';
 
 const QuantumNeuralFusionBanner: React.FC = () => {
@@ -64,15 +64,13 @@ const QuantumNeuralFusionBanner: React.FC = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Link 
-                href="/services/quantum-neural-fusion-2026"
+              <Link to="/services/quantum-neural-fusion-2026"
                 className="group inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-purple-500/25"
               >
                 Explore QNF Services
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
-              <Link 
-                href="/blog/ai-2026-february-quantum-neural-fusion-breakthrough"
+              <Link to="/blog/ai-2026-february-quantum-neural-fusion-breakthrough"
                 className="group inline-flex items-center justify-center px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white font-semibold rounded-xl border border-white/20 hover:border-white/30 transition-all duration-300"
               >
                 Read Breakthrough Article

@@ -1,5 +1,4 @@
-"use client";
-import React from 'react';
+"use client"
 import AdditionalServices from '../../additional-services';
 
 export default function Page() {

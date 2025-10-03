@@ -1,19 +1,6 @@
 import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
-export const metadata: Metadata = {
-  title: 'January 2026 Autonomous Enterprise Operations Revolution | Zion Tech Group',
-  description: 'Revolutionary breakthrough in autonomous enterprise operations with AI-driven decision making, self-healing infrastructure, and predictive analytics.',
-  keywords: ['autonomous operations', 'enterprise AI', 'self-healing infrastructure', 'predictive analytics', 'AI automation'],
-  openGraph: {
-    title: 'January 2026 Autonomous Enterprise Operations Revolution',
-    description: 'Revolutionary breakthrough in autonomous enterprise operations with AI-driven decision making, self-healing infrastructure, and predictive analytics.',
-    type: 'article',
-    publishedTime: '2026-01-15T00:00:00Z',
-    authors: ['Zion Tech Group'],
-  },
-};
 
 export default function January2026AutonomousEnterpriseOperationsRevolution() {
   return (

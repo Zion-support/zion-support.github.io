@@ -1,12 +1,6 @@
 import React from 'react';
-import Link from 'next/link';
-import { Metadata } from 'next';
+import { Link } from 'react-router-dom';
 
-export const metadata: Metadata = {
-  title: 'IT Services & Solutions | Zion Tech Group',
-  description: 'Comprehensive IT services including cloud migration, DevOps, cybersecurity, infrastructure management, and digital transformation solutions.',
-  keywords: 'IT services, cloud migration, DevOps, cybersecurity, infrastructure, digital transformation',
-};
 
 export default function ITServicesPage() {
   const itServices = [

@@ -1,12 +1,6 @@
 import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
-export const metadata: Metadata = {
-  title: 'AI 2027 Ultimate Consciousness: $847B Success Story',
-  description: 'How a Fortune 100 global conglomerate achieved $847B ROI through AI Ultimate Consciousness Breakthrough with 99.999% accuracy and infinite processing power.',
-  keywords: 'AI consciousness case study, enterprise AI, ROI, business transformation, consciousness breakthrough',
-};
 
 export default function AI2027UltimateConsciousnessSuccessPage() {
   return (

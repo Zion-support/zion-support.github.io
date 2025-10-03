@@ -1,6 +1,5 @@
 import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { 
   Cpu, 
   Brain, 
@@ -19,11 +18,6 @@ import {
   Globe
 } from 'lucide-react';
 
-export const metadata: Metadata = {
-  title: 'Autonomous Business Process Orchestrator | Zion Tech Group',
-  description: 'Revolutionary AI system that autonomously manages and optimizes entire business processes. Reduce execution time by 80% and eliminate human errors in routine tasks.',
-  keywords: 'autonomous AI, business process automation, AI orchestration, intelligent automation, process optimization',
-};
 
 export default function AutonomousOrchestratorPage() {
   const features = [

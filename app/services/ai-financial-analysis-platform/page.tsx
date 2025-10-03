@@ -1,16 +1,6 @@
 import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
-export const metadata: Metadata = {
-  title: 'AI Financial Analysis Platform - Zion Tech Group',
-  description: 'Advanced AI-powered financial analysis and forecasting platform. Automate financial reporting, risk assessment, and investment analysis.',
-  keywords: 'AI financial analysis, financial forecasting, risk assessment, investment analysis, financial automation',
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
 
 export default function AIFinancialAnalysisPlatform() {
   return (

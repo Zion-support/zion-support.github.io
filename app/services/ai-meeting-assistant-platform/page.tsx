@@ -1,16 +1,6 @@
 import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
-export const metadata: Metadata = {
-  title: 'AI Meeting Assistant Platform - Zion Tech Group',
-  description: 'AI-powered meeting assistant that records conversations, extracts key decisions, assigns tasks, and sends reminders. Boost productivity with intelligent automation.',
-  keywords: 'AI meeting assistant, meeting automation, task management, meeting summaries, productivity tools, virtual assistant',
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
 
 export default function AIMeetingAssistantPlatform() {
   return (

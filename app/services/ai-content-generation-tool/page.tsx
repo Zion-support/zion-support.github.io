@@ -1,12 +1,6 @@
 import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
-export const metadata: Metadata = {
-  title: 'AI Content Generation Tool | Zion Tech Group - Automated Content Creation',
-  description: 'Revolutionary AI-powered content generation platform for blogs, social media, and marketing materials. Save time with intelligent content creation.',
-  keywords: 'AI content generation, automated content creation, blog writing, social media content, marketing automation',
-};
 
 export default function AIContentGenerationToolPage() {
   return (

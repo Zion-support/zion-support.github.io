@@ -1,12 +1,6 @@
 import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
-export const metadata: Metadata = {
-  title: 'Automated Appointment Scheduler | Zion Tech Group - Smart Scheduling Solution',
-  description: 'Revolutionary appointment scheduling system with calendar integration, automated reminders, and intelligent booking optimization.',
-  keywords: 'appointment scheduling, booking system, calendar integration, automated reminders, scheduling software',
-};
 
 export default function AutomatedAppointmentSchedulerPage() {
   return (

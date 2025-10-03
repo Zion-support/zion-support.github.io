@@ -1,21 +1,7 @@
 import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { Calendar, Clock, User, ArrowRight, Zap, Cpu, Shield, TrendingUp, Target, Brain } from 'lucide-react';
 
-export const metadata: Metadata = {
-  title: 'Quantum Computing 2026: Commercial Breakthrough & Enterprise Implementation | Zion Tech Group',
-  description: 'Discover how quantum computing has achieved commercial viability in 2026. Learn about quantum advantage, enterprise implementations, and the $47B quantum economy transforming industries.',
-  keywords: 'quantum computing 2026, quantum advantage, quantum enterprise, quantum breakthrough, quantum economy, quantum implementation, quantum AI, quantum algorithms',
-  openGraph: {
-    title: 'Quantum Computing 2026: Commercial Breakthrough & Enterprise Implementation',
-    description: 'Discover how quantum computing has achieved commercial viability in 2026 with real enterprise implementations and quantum advantage.',
-    type: 'article',
-    publishedTime: '2026-01-15T00:00:00.000Z',
-    authors: ['Zion Tech Group'],
-    tags: ['Quantum Computing', 'Quantum Advantage', 'Enterprise Implementation', 'Quantum Breakthrough', 'Quantum AI']
-  }
-};
 
 export default function QuantumComputing2026CommercialBreakthrough() {
   return (

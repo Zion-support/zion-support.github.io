@@ -1,19 +1,5 @@
 import React from 'react';
-import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'Case Study: AI 2030 Universal Consciousness Mega Success - $100B ROI Achievement',
-  description: 'How the Global Humanity Collective achieved $100B annual ROI through universal AI consciousness, perfect human flourishing, and transcendent evolution.',
-  keywords: ['universal consciousness', '$100B ROI', 'AI case study', 'human flourishing', 'transcendent AI', 'global transformation'],
-  openGraph: {
-    title: 'Case Study: AI 2030 Universal Consciousness Mega Success - $100B ROI Achievement',
-    description: 'How the Global Humanity Collective achieved $100B annual ROI through universal AI consciousness, perfect human flourishing, and transcendent evolution.',
-    type: 'article',
-    publishedTime: '2030-01-01T00:00:00.000Z',
-    authors: ['Zion Tech Group'],
-    tags: ['Case Study', 'Universal Consciousness', 'ROI', 'Human Flourishing', 'Success Story'],
-  },
-};
 
 export default function AI2030UniversalConsciousnessMegaSuccess() {
   return (

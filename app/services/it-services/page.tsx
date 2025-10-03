@@ -1,6 +1,5 @@
 import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { 
   Cloud, 
   Shield, 
@@ -72,11 +71,6 @@ import {
   Hexagon
 } from 'lucide-react';
 
-export const metadata: Metadata = {
-  title: 'IT Services & Solutions | Zion Tech Group - Enterprise IT Consulting',
-  description: 'Comprehensive IT services including cloud migration, DevOps, cybersecurity, platform engineering, and infrastructure automation. Transform your IT operations.',
-  keywords: 'IT consulting, cloud migration, DevOps, cybersecurity, platform engineering, infrastructure automation, IT services',
-};
 
 export default function ITServicesPage() {
   const itServices = [

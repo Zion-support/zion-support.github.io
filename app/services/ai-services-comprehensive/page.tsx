@@ -1,12 +1,6 @@
 import React from 'react';
-import Link from 'next/link';
-import { Metadata } from 'next';
+import { Link } from 'react-router-dom';
 
-export const metadata: Metadata = {
-  title: 'AI Services & Solutions | Zion Tech Group',
-  description: 'Comprehensive AI services including machine learning, natural language processing, computer vision, and autonomous systems for enterprise applications.',
-  keywords: 'AI services, machine learning, NLP, computer vision, autonomous systems, AI consulting',
-};
 
 export default function AIServicesPage() {
   const aiServices = [

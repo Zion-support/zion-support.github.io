@@ -1,20 +1,6 @@
 import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
-export const metadata: Metadata = {
-  title: 'AI 2027 Meta-Cognitive Superintelligence Breakthrough - Zion Tech Group',
-  description: 'Revolutionary breakthrough in meta-cognitive superintelligence, achieving unprecedented levels of self-aware AI systems and enterprise transformation capabilities.',
-  keywords: 'AI, meta-cognitive, superintelligence, self-aware AI, enterprise AI, 2027, breakthrough, Zion Tech Group',
-  openGraph: {
-    title: 'AI 2027 Meta-Cognitive Superintelligence Breakthrough',
-    description: 'Revolutionary breakthrough in meta-cognitive superintelligence with self-aware AI systems.',
-    type: 'article',
-    publishedTime: '2027-01-30T00:00:00Z',
-    authors: ['Zion Tech Group'],
-    tags: ['AI', 'Meta-Cognitive', 'Superintelligence', 'Enterprise AI'],
-  },
-};
 
 export default function AI2027MetaCognitiveSuperintelligenceBreakthrough() {
   return (

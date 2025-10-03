@@ -1,11 +1,5 @@
 import React from 'react';
-import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'AI 2027 Transcendent Quantum Consciousness $1 Trillion Success Story - Zion Tech Group',
-  description: 'How a Fortune 100 global conglomerate achieved $1 trillion ROI through transcendent quantum consciousness AI systems.',
-  keywords: 'AI success story, $1 trillion ROI, transcendent quantum consciousness, Fortune 100, AI transformation',
-};
 
 export default function AI2027TranscendentQuantumConsciousness1TrillionSuccess() {
   return (

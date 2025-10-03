@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 const December2025NewContentShowcase: React.FC = () => {
   return (
@@ -29,8 +29,7 @@ const December2025NewContentShowcase: React.FC = () => {
             </h3>
             <ul className="space-y-3 text-blue-100">
               <li>
-                <Link 
-                  href="/blog/ai-2025-december-generative-ai-enterprise-transformation-2026" 
+                <Link to="/blog/ai-2025-december-generative-ai-enterprise-transformation-2026" 
                   className="hover:text-white transition-colors flex items-start"
                 >
                   <span className="text-green-400 mr-2">✓</span>
@@ -38,8 +37,7 @@ const December2025NewContentShowcase: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link 
-                  href="/blog/ai-2025-december-quantum-ai-business-intelligence-breakthrough" 
+                <Link to="/blog/ai-2025-december-quantum-ai-business-intelligence-breakthrough" 
                   className="hover:text-white transition-colors flex items-start"
                 >
                   <span className="text-green-400 mr-2">✓</span>
@@ -47,8 +45,7 @@ const December2025NewContentShowcase: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link 
-                  href="/blog/ai-2025-december-autonomous-enterprise-operations-revolution" 
+                <Link to="/blog/ai-2025-december-autonomous-enterprise-operations-revolution" 
                   className="hover:text-white transition-colors flex items-start"
                 >
                   <span className="text-green-400 mr-2">✓</span>
@@ -57,8 +54,7 @@ const December2025NewContentShowcase: React.FC = () => {
               </li>
             </ul>
             <div className="mt-4 pt-4 border-t border-white/20">
-              <Link 
-                href="/blog" 
+              <Link to="/blog" 
                 className="text-blue-300 hover:text-white font-semibold"
               >
                 View All Blog Posts →
@@ -78,8 +74,7 @@ const December2025NewContentShowcase: React.FC = () => {
             </h3>
             <ul className="space-y-3 text-blue-100">
               <li>
-                <Link 
-                  href="/case-studies/ai-2025-december-global-finance-quantum-ai-transformation-500-billion-success" 
+                <Link to="/case-studies/ai-2025-december-global-finance-quantum-ai-transformation-500-billion-success" 
                   className="hover:text-white transition-colors flex items-start"
                 >
                   <span className="text-green-400 mr-2">💰</span>
@@ -87,8 +82,7 @@ const December2025NewContentShowcase: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link 
-                  href="/case-studies/ai-2025-december-manufacturing-autonomous-operations-340-billion-success" 
+                <Link to="/case-studies/ai-2025-december-manufacturing-autonomous-operations-340-billion-success" 
                   className="hover:text-white transition-colors flex items-start"
                 >
                   <span className="text-green-400 mr-2">🏭</span>
@@ -97,8 +91,7 @@ const December2025NewContentShowcase: React.FC = () => {
               </li>
             </ul>
             <div className="mt-4 pt-4 border-t border-white/20">
-              <Link 
-                href="/case-studies" 
+              <Link to="/case-studies" 
                 className="text-blue-300 hover:text-white font-semibold"
               >
                 View All Case Studies →
@@ -118,8 +111,7 @@ const December2025NewContentShowcase: React.FC = () => {
             </h3>
             <ul className="space-y-3 text-blue-100">
               <li>
-                <Link 
-                  href="/services/ai-2025-december-quantum-ai-business-intelligence-consulting" 
+                <Link to="/services/ai-2025-december-quantum-ai-business-intelligence-consulting" 
                   className="hover:text-white transition-colors flex items-start"
                 >
                   <span className="text-green-400 mr-2">🎯</span>
@@ -128,8 +120,7 @@ const December2025NewContentShowcase: React.FC = () => {
               </li>
             </ul>
             <div className="mt-4 pt-4 border-t border-white/20">
-              <Link 
-                href="/services" 
+              <Link to="/services" 
                 className="text-blue-300 hover:text-white font-semibold"
               >
                 View All Services →
@@ -166,8 +157,7 @@ const December2025NewContentShowcase: React.FC = () => {
         {/* Call to Action */}
         <div className="text-center mt-12">
           <div className="bg-gradient-to-r from-green-500 to-blue-500 p-1 rounded-full inline-block">
-            <Link 
-              href="/contact" 
+            <Link to="/contact" 
               className="bg-gradient-to-r from-purple-900 to-blue-900 text-white px-8 py-4 rounded-full font-bold text-lg hover:from-purple-800 hover:to-blue-800 transition-all duration-300 inline-flex items-center"
             >
               🚀 Start Your AI Transformation Journey

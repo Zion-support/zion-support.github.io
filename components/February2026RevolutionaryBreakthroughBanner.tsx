@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function February2026RevolutionaryBreakthroughBanner() {
   return (
@@ -46,7 +46,7 @@ export default function February2026RevolutionaryBreakthroughBanner() {
           {/* Content Cards */}
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             {/* Blog Post */}
-            <Link href="/blog/ai-2026-february-revolutionary-breakthrough-revolution" className="group block">
+            <Link to="/blog/ai-2026-february-revolutionary-breakthrough-revolution" className="group block">
               <div className="bg-gradient-to-br from-purple-900/30 to-blue-900/30 rounded-xl p-8 border border-purple-500/20 hover:border-purple-400/40 transition-all duration-300 hover:scale-105 h-full">
                 <div className="flex items-center gap-3 mb-4">
                   <span className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-4 py-2 rounded-full text-sm font-bold">FEBRUARY 2026</span>
@@ -69,7 +69,7 @@ export default function February2026RevolutionaryBreakthroughBanner() {
             </Link>
 
             {/* Case Study */}
-            <Link href="/case-studies/ai-2026-february-mega-breakthrough-3-billion-success" className="group block">
+            <Link to="/case-studies/ai-2026-february-mega-breakthrough-3-billion-success" className="group block">
               <div className="bg-gradient-to-br from-green-900/30 to-emerald-900/30 rounded-xl p-8 border border-green-500/20 hover:border-green-400/40 transition-all duration-300 hover:scale-105 h-full">
                 <div className="flex items-center gap-3 mb-4">
                   <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-4 py-2 rounded-full text-sm font-bold">$3B SUCCESS</span>
@@ -95,20 +95,17 @@ export default function February2026RevolutionaryBreakthroughBanner() {
           {/* Call to Action */}
           <div className="text-center">
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <Link 
-                href="/contact" 
+              <Link to="/contact" 
                 className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
               >
                 Get Started Today
               </Link>
-              <Link 
-                href="/blog/ai-2026-february-revolutionary-breakthrough-revolution" 
+              <Link to="/blog/ai-2026-february-revolutionary-breakthrough-revolution" 
                 className="bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
               >
                 Learn About the Breakthrough →
               </Link>
-              <Link 
-                href="/case-studies/ai-2026-february-mega-breakthrough-3-billion-success" 
+              <Link to="/case-studies/ai-2026-february-mega-breakthrough-3-billion-success" 
                 className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
               >
                 View $3B Success Story

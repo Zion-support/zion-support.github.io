@@ -1,11 +1,5 @@
 import React from 'react';
-import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'AI 2027: Consensus Intelligence Revolution - 1,000,000x Performance',
-  description: 'Revolutionary consensus intelligence AI delivering 1,000,000x performance improvements, universal decision-making, and $50B+ ROI across enterprises.',
-  keywords: 'AI 2027, consensus intelligence, 1,000,000x performance, universal AI, revolutionary technology',
-};
 
 export default function ConsensusIntelligenceRevolution() {
   return (

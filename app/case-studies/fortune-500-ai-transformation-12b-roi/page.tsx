@@ -1,21 +1,7 @@
 import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { Calendar, Clock, User, ArrowRight, TrendingUp, DollarSign, Target, Zap, Shield, Users, Award, CheckCircle } from 'lucide-react';
 
-export const metadata: Metadata = {
-  title: 'Fortune 500 AI Transformation: $12.4B ROI Case Study | Zion Tech Group',
-  description: 'Discover how a Fortune 500 company achieved $12.4B ROI through comprehensive AI transformation. Learn about autonomous systems, quantum computing, and neural superintelligence implementation.',
-  keywords: 'Fortune 500 AI transformation, AI ROI case study, autonomous enterprise, quantum computing ROI, neural superintelligence, AI implementation success',
-  openGraph: {
-    title: 'Fortune 500 AI Transformation: $12.4B ROI Case Study',
-    description: 'Discover how a Fortune 500 company achieved $12.4B ROI through comprehensive AI transformation with autonomous systems and quantum computing.',
-    type: 'article',
-    publishedTime: '2026-01-15T00:00:00.000Z',
-    authors: ['Zion Tech Group'],
-    tags: ['AI Transformation', 'Fortune 500', 'ROI Case Study', 'Autonomous Enterprise', 'Quantum Computing']
-  }
-};
 
 export default function Fortune500AITransformation12BROI() {
   return (

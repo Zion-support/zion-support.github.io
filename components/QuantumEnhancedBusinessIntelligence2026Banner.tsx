@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 const QuantumEnhancedBusinessIntelligence2026Banner: React.FC = () => {
   return (
@@ -24,20 +24,17 @@ const QuantumEnhancedBusinessIntelligence2026Banner: React.FC = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Link 
-              href="/blog/ai-2026-quantum-enhanced-business-intelligence-revolution" 
+            <Link to="/blog/ai-2026-quantum-enhanced-business-intelligence-revolution" 
               className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 transform hover:-translate-y-1"
             >
               Read Quantum Revolution →
             </Link>
-            <Link 
-              href="/case-studies/ai-2026-quantum-enhanced-business-intelligence-3-8-billion-success" 
+            <Link to="/case-studies/ai-2026-quantum-enhanced-business-intelligence-3-8-billion-success" 
               className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
             >
               View $3.8B Success Story →
             </Link>
-            <Link 
-              href="/services/ai-2026-quantum-enhanced-business-intelligence-solutions" 
+            <Link to="/services/ai-2026-quantum-enhanced-business-intelligence-solutions" 
               className="border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               Get Quantum BI Solutions
@@ -100,8 +97,7 @@ const QuantumEnhancedBusinessIntelligence2026Banner: React.FC = () => {
               "A Fortune 50 global financial services corporation achieved unprecedented success through quantum-enhanced business intelligence, 
               generating $3.8B ROI while processing data 1000x faster with 99.99% accuracy across 150+ business units."
             </p>
-            <Link 
-              href="/case-studies/ai-2026-quantum-enhanced-business-intelligence-3-8-billion-success" 
+            <Link to="/case-studies/ai-2026-quantum-enhanced-business-intelligence-3-8-billion-success" 
               className="inline-flex items-center gap-2 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-green-500/50"
             >
               Read Complete Success Story →
@@ -154,14 +150,12 @@ const QuantumEnhancedBusinessIntelligence2026Banner: React.FC = () => {
             Join the quantum-enhanced business intelligence revolution. Transform your analytics with quantum processing today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/contact" 
+            <Link to="/contact" 
               className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 transform hover:-translate-y-1"
             >
               Start Quantum Transformation
             </Link>
-            <Link 
-              href="/services/ai-2026-quantum-enhanced-business-intelligence-solutions" 
+            <Link to="/services/ai-2026-quantum-enhanced-business-intelligence-solutions" 
               className="border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               View Quantum BI Solutions

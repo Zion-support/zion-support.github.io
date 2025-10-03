@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function Ultimate2026ContentShowcaseMegaBanner() {
   return (
@@ -59,8 +59,7 @@ export default function Ultimate2026ContentShowcaseMegaBanner() {
                     <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold">
                       1M TIMES FASTER
                     </span>
-                    <Link 
-                      href="/blog/ai-2027-quantum-machine-learning-revolution"
+                    <Link to="/blog/ai-2027-quantum-machine-learning-revolution"
                       className="text-purple-400 hover:text-purple-300 font-semibold text-sm transition-colors"
                     >
                       Read Breakthrough →
@@ -84,8 +83,7 @@ export default function Ultimate2026ContentShowcaseMegaBanner() {
                     <span className="bg-gradient-to-r from-green-400 to-emerald-500 text-black px-3 py-1 rounded-full text-xs font-bold">
                       $2.5B VALUE
                     </span>
-                    <Link 
-                      href="/case-studies/ai-2027-quantum-pharmaceutical-breakthrough"
+                    <Link to="/case-studies/ai-2027-quantum-pharmaceutical-breakthrough"
                       className="text-green-400 hover:text-green-300 font-semibold text-sm transition-colors"
                     >
                       View Success →
@@ -109,8 +107,7 @@ export default function Ultimate2026ContentShowcaseMegaBanner() {
                     <span className="bg-gradient-to-r from-blue-400 to-cyan-500 text-black px-3 py-1 rounded-full text-xs font-bold">
                       99.9% UPTIME
                     </span>
-                    <Link 
-                      href="/blog/ai-2026-autonomous-cloud-infrastructure-breakthrough"
+                    <Link to="/blog/ai-2026-autonomous-cloud-infrastructure-breakthrough"
                       className="text-blue-400 hover:text-blue-300 font-semibold text-sm transition-colors"
                     >
                       Learn More →
@@ -142,8 +139,7 @@ export default function Ultimate2026ContentShowcaseMegaBanner() {
                     <span className="bg-gradient-to-r from-orange-400 to-red-500 text-black px-3 py-1 rounded-full text-xs font-bold">
                       $75M ROI
                     </span>
-                    <Link 
-                      href="/case-studies/ai-2026-autonomous-cloud-enterprise-success"
+                    <Link to="/case-studies/ai-2026-autonomous-cloud-enterprise-success"
                       className="text-orange-400 hover:text-orange-300 font-semibold text-sm transition-colors"
                     >
                       Read Case Study →
@@ -167,8 +163,7 @@ export default function Ultimate2026ContentShowcaseMegaBanner() {
                     <span className="bg-gradient-to-r from-pink-400 to-purple-500 text-black px-3 py-1 rounded-full text-xs font-bold">
                       BLUEPRINT
                     </span>
-                    <Link 
-                      href="/blog/ai-future-enterprise-2026"
+                    <Link to="/blog/ai-future-enterprise-2026"
                       className="text-pink-400 hover:text-pink-300 font-semibold text-sm transition-colors"
                     >
                       Get Blueprint →
@@ -192,8 +187,7 @@ export default function Ultimate2026ContentShowcaseMegaBanner() {
                     <span className="bg-gradient-to-r from-indigo-400 to-blue-500 text-black px-3 py-1 rounded-full text-xs font-bold">
                       99% AUTOMATION
                     </span>
-                    <Link 
-                      href="/blog/ai-next-generation-automation-2026"
+                    <Link to="/blog/ai-next-generation-automation-2026"
                       className="text-indigo-400 hover:text-indigo-300 font-semibold text-sm transition-colors"
                     >
                       Read Guide →
@@ -228,15 +222,13 @@ export default function Ultimate2026ContentShowcaseMegaBanner() {
         {/* Call to Action */}
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
-            <Link
-              href="/blog"
+            <Link to="/blog"
               className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-10 py-4 rounded-lg font-bold text-xl hover:from-yellow-600 hover:to-orange-600 transition-all shadow-lg hover:shadow-xl flex items-center gap-3"
             >
               <span>📚</span>
               Explore All AI Content
             </Link>
-            <Link
-              href="/case-studies"
+            <Link to="/case-studies"
               className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-10 py-4 rounded-lg font-bold text-xl hover:from-purple-600 hover:to-pink-600 transition-all shadow-lg hover:shadow-xl flex items-center gap-3"
             >
               <span>🏆</span>

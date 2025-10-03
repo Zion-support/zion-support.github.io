@@ -1,17 +1,4 @@
-import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'AI 2027 Mega Transformation: $500M Global Enterprise Success - Zion Tech Group',
-  description: 'Discover how Zion Tech Group delivered a $500M transformation success using AI 2027 technologies. Learn about the breakthrough results, ROI, and implementation strategies.',
-  keywords: 'AI 2027, enterprise transformation, case study, $500M success, ROI, Zion Tech Group, AI implementation',
-  openGraph: {
-    title: 'AI 2027 Mega Transformation: $500M Global Enterprise Success',
-    description: 'Revolutionary AI transformation delivering $500M in value through breakthrough technologies.',
-    type: 'article',
-    publishedTime: '2027-01-25T00:00:00.000Z',
-    authors: ['Zion Tech Group'],
-  },
-};
 
 export default function AI2027MegaTransformationSuccess() {
   return (

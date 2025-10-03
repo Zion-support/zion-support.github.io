@@ -1,11 +1,11 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function AI2026NovemberQuantumSuperintelligenceBreakthrough() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
       <div className="mb-8">
-        <Link href="/blog" className="text-blue-600 hover:text-blue-800 mb-4 inline-block">
+        <Link to="/blog" className="text-blue-600 hover:text-blue-800 mb-4 inline-block">
           ← Back to Blog
         </Link>
         <h1 className="text-4xl font-bold text-gray-900 mb-4">
@@ -94,8 +94,7 @@ export default function AI2026NovemberQuantumSuperintelligenceBreakthrough() {
             Join the quantum superintelligence revolution and achieve unprecedented ROI with our 
             advanced AI solutions.
           </p>
-          <Link 
-            href="/contact" 
+          <Link to="/contact" 
             className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block"
           >
             Get Started Today

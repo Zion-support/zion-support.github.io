@@ -1,6 +1,5 @@
 import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { 
   Wrench, 
   AlertTriangle, 
@@ -25,15 +24,6 @@ import {
   Eye
 } from 'lucide-react';
 
-export const metadata: Metadata = {
-  title: 'AI Predictive Maintenance Platform - Zion Tech Group',
-  description: 'Revolutionary AI-powered predictive maintenance platform that prevents equipment failures, reduces downtime by 80%, and saves millions in maintenance costs.',
-  keywords: 'AI predictive maintenance, equipment monitoring, IoT sensors, maintenance optimization, failure prediction',
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
 
 export default function AIPredictiveMaintenancePlatform() {
   return (

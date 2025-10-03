@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function GenerativeIntelligence2026Banner() {
   return (
@@ -42,14 +42,12 @@ export default function GenerativeIntelligence2026Banner() {
               </div>
               
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link
-                  href="/blog/ai-2026-generative-intelligence-revolution"
+                <Link to="/blog/ai-2026-generative-intelligence-revolution"
                   className="bg-white text-purple-600 px-6 py-3 rounded-lg font-bold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
                 >
                   📚 Read Full Report
                 </Link>
-                <Link
-                  href="/services"
+                <Link to="/services"
                   className="border-2 border-white text-white px-6 py-3 rounded-lg font-bold hover:bg-white hover:text-purple-600 transition-all duration-300 transform hover:scale-105"
                 >
                   🚀 Get Started

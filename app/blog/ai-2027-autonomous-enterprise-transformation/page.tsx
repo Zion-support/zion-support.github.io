@@ -1,19 +1,6 @@
 import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
-export const metadata: Metadata = {
-  title: 'AI 2027: Autonomous Enterprise Transformation | Zion Tech Group',
-  description: 'Discover the future of autonomous enterprise transformation in 2027. Learn about self-governing businesses, AI-driven decision making, and complete operational autonomy.',
-  keywords: 'AI 2027, autonomous enterprise, business transformation, AI-driven decisions, self-governing business, operational autonomy',
-  openGraph: {
-    title: 'AI 2027: Autonomous Enterprise Transformation',
-    description: 'Revolutionary autonomous enterprise transformation reshaping business operations',
-    type: 'article',
-    publishedTime: '2027-01-10T00:00:00Z',
-    authors: ['Zion Tech Group'],
-  },
-};
 
 export default function AI2027AutonomousEnterpriseTransformation() {
   return (

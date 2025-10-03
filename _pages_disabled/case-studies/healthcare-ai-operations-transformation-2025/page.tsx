@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: '$68M ROI: Healthcare AI Operations Transformation Success | Zion Tech Group',

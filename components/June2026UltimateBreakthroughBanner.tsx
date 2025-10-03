@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function June2026UltimateBreakthroughBanner() {
   return (
@@ -55,20 +55,17 @@ export default function June2026UltimateBreakthroughBanner() {
           
           {/* CTA buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Link 
-              href="/blog/ai-2026-june-ultimate-breakthrough-revolution" 
+            <Link to="/blog/ai-2026-june-ultimate-breakthrough-revolution" 
               className="bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-400 hover:to-red-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-orange-500/50 transform hover:-translate-y-1"
             >
               Read Ultimate Breakthrough →
             </Link>
-            <Link 
-              href="/case-studies/ai-2026-june-ultimate-breakthrough-100-billion-success" 
+            <Link to="/case-studies/ai-2026-june-ultimate-breakthrough-100-billion-success" 
               className="bg-gradient-to-r from-red-500 to-pink-600 hover:from-red-400 hover:to-pink-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-red-500/50 transform hover:-translate-y-1"
             >
               View $100B Success Story →
             </Link>
-            <Link 
-              href="/contact" 
+            <Link to="/contact" 
               className="border-2 border-orange-500 text-orange-400 hover:bg-orange-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               Get Started Today

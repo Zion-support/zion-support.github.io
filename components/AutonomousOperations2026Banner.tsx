@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 const AutonomousOperations2026Banner = () => {
   return (
@@ -52,20 +52,17 @@ const AutonomousOperations2026Banner = () => {
           
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Link 
-              href="/blog/ai-2026-autonomous-enterprise-operations-revolution" 
+            <Link to="/blog/ai-2026-autonomous-enterprise-operations-revolution" 
               className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
             >
               Read Autonomous Operations Guide →
             </Link>
-            <Link 
-              href="/blog/ai-2026-advanced-neural-superintelligence-breakthrough" 
+            <Link to="/blog/ai-2026-advanced-neural-superintelligence-breakthrough" 
               className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-emerald-500/50 transform hover:-translate-y-1"
             >
               Explore Neural Superintelligence →
             </Link>
-            <Link 
-              href="/case-studies/ai-2026-neural-superintelligence-50-billion-success" 
+            <Link to="/case-studies/ai-2026-neural-superintelligence-50-billion-success" 
               className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               View $50B Success Story →

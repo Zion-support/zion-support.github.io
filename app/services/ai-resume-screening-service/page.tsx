@@ -1,12 +1,6 @@
 import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
-export const metadata: Metadata = {
-  title: 'AI Resume Screening Service | Zion Tech Group - Intelligent Candidate Evaluation',
-  description: 'Revolutionary AI-powered resume screening service that automates candidate evaluation, reduces bias, and accelerates hiring processes.',
-  keywords: 'AI resume screening, automated hiring, candidate evaluation, HR automation, recruitment AI, bias-free screening',
-};
 
 export default function AIResumeScreeningServicePage() {
   return (

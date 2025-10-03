@@ -1,12 +1,6 @@
 import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
-export const metadata: Metadata = {
-  title: 'AI 2026 Sustainable AI Revolution $2.5B Success Story - Zion Tech Group',
-  description: 'How a Fortune 100 global conglomerate achieved $2.5B ROI through sustainable AI implementation, reducing energy consumption by 99.9% and carbon footprint by 85%.',
-  keywords: 'sustainable AI success story, green AI ROI, Fortune 100 transformation, carbon footprint reduction, energy efficiency',
-};
 
 export default function SustainableAISuccessPage() {
   return (

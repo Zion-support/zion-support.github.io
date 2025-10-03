@@ -1,18 +1,7 @@
 // @ts-nocheck
 import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
-export const metadata: Metadata = {
-  title: 'AI 2026 Ultimate Autonomous Revolution - 99.99% Automation Breakthrough',
-  description: 'Discover the revolutionary AI breakthrough achieving 99.99% autonomous operations, 1 million times performance boost, and $100 billion enterprise value generation.',
-  keywords: 'AI 2026, autonomous systems, 99.99% automation, enterprise AI, revolutionary breakthrough, $100B value',
-  openGraph: {
-    title: 'AI 2026 Ultimate Autonomous Revolution - 99.99% Automation Breakthrough',
-    description: 'Revolutionary AI breakthrough achieving 99.99% autonomous operations and $100 billion enterprise value.',
-    type: 'article',
-  },
-};
 
 export default function AI2026UltimateAutonomousRevolution() {
   return (

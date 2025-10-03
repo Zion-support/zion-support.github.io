@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'AI 2027: Quantum Computing Breakthrough Revolutionizing Enterprise Operations',
@@ -18,7 +18,7 @@ export default function AI2027QuantumBreakthrough() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
       <div className="mb-8">
-        <Link href="/blog" className="text-blue-600 hover:text-blue-800 transition-colors">
+        <Link to="/blog" className="text-blue-600 hover:text-blue-800 transition-colors">
           ← Back to Blog
         </Link>
       </div>
@@ -201,14 +201,12 @@ export default function AI2027QuantumBreakthrough() {
               plan, and implement quantum computing solutions tailored to your specific business needs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link
-                href="/contact"
+              <Link to="/contact"
                 className="bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors text-center"
               >
                 Get Quantum Assessment
               </Link>
-              <Link
-                href="/case-studies"
+              <Link to="/case-studies"
                 className="border-2 border-indigo-600 text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-indigo-600 hover:text-white transition-colors text-center"
               >
                 View Success Stories

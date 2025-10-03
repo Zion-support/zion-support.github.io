@@ -1,12 +1,6 @@
 import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
-export const metadata: Metadata = {
-  title: 'AI Customer Support Chatbot | Zion Tech Group - Intelligent Support Automation',
-  description: 'Revolutionary AI-powered customer support chatbot with natural language processing, 24/7 availability, and seamless human handoff.',
-  keywords: 'AI chatbot, customer support automation, conversational AI, NLP, customer service, support automation',
-};
 
 export default function AICustomerSupportChatbotPage() {
   return (

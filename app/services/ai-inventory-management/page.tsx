@@ -1,16 +1,6 @@
 import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
-export const metadata: Metadata = {
-  title: 'AI Inventory Management System - Zion Tech Group',
-  description: 'Optimize your inventory with AI-powered demand forecasting, automated reordering, and intelligent stock management. Reduce costs and prevent stockouts.',
-  keywords: 'inventory management, AI demand forecasting, stock optimization, automated reordering, inventory analytics',
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
 
 export default function AIInventoryManagement() {
   const features = [

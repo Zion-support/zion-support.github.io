@@ -1,17 +1,5 @@
 import React from 'react';
-import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'Autonomous AI Systems: The Future of Enterprise Operations | Zion Tech Group',
-  description: 'Discover how autonomous AI systems are revolutionizing enterprise operations, from self-healing infrastructure to intelligent decision-making agents.',
-  keywords: 'autonomous AI, enterprise automation, AI agents, self-healing systems, intelligent operations',
-  openGraph: {
-    title: 'Autonomous AI Systems: The Future of Enterprise Operations',
-    description: 'Learn how autonomous AI systems are transforming enterprise operations and decision-making.',
-    type: 'article',
-    publishedTime: '2025-01-30T00:00:00.000Z',
-  },
-};
 
 export default function AutonomousAISystems2026() {
   return (

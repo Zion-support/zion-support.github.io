@@ -1,26 +1,6 @@
 import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
-export const metadata: Metadata = {
-  title: 'AI 2027 Quantum Breakthrough Success: $1.2B ROI Case Study',
-  description: 'Discover how a Fortune 100 technology leader achieved $1.2B ROI and 1000x performance improvements through revolutionary quantum-enhanced AI implementation.',
-  keywords: 'quantum AI success story, AI ROI case study, quantum computing breakthrough, enterprise AI transformation, Fortune 100 AI implementation',
-  authors: [{ name: 'Zion Tech Group' }],
-  openGraph: {
-    title: 'AI 2027 Quantum Breakthrough Success: $1.2B ROI Case Study',
-    description: 'Discover how a Fortune 100 technology leader achieved $1.2B ROI and 1000x performance improvements through revolutionary quantum-enhanced AI implementation.',
-    url: 'https://ziontechgroup.com/case-studies/ai-2027-quantum-breakthrough-success',
-    siteName: 'Zion Tech Group',
-    locale: 'en_US',
-    type: 'article',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'AI 2027 Quantum Breakthrough Success: $1.2B ROI Case Study',
-    description: 'Discover how a Fortune 100 technology leader achieved $1.2B ROI and 1000x performance improvements through revolutionary quantum-enhanced AI implementation.',
-  },
-};
 
 export default function AI2027QuantumBreakthroughSuccess() {
   return (

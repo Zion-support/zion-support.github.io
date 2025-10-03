@@ -1,19 +1,6 @@
 import React from 'react';
-import Link from 'next/link';
-import { Metadata } from 'next';
+import { Link } from 'react-router-dom';
 
-export const metadata: Metadata = {
-  title: 'Fortune 500 AI Transformation: $2.3B Revenue Increase in 12 Months',
-  description: 'How a Fortune 500 company achieved unprecedented success with AI transformation, generating $2.3B in additional revenue and 450% ROI in just 12 months.',
-  keywords: 'Fortune 500 AI transformation, enterprise AI success, AI ROI case study, business transformation',
-  openGraph: {
-    title: 'Fortune 500 AI Transformation: $2.3B Revenue Increase in 12 Months',
-    description: 'How a Fortune 500 company achieved unprecedented success with AI transformation, generating $2.3B in additional revenue and 450% ROI in just 12 months.',
-    type: 'article',
-    publishedTime: '2025-01-30T00:00:00Z',
-    authors: ['Zion Tech Group'],
-  },
-};
 
 export default function Fortune500AITransformationMegaSuccess2026() {
   return (

@@ -1,18 +1,5 @@
 import React from 'react';
-import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'AI 2027: Neuromorphic Computing Revolution - The Future of Brain-Inspired AI',
-  description: 'Explore the revolutionary neuromorphic computing breakthrough of 2027 that mimics human brain architecture for unprecedented AI performance. Discover how brain-inspired chips are transforming enterprise operations.',
-  keywords: ['AI 2027', 'neuromorphic computing', 'brain-inspired AI', 'spiking neural networks', 'cognitive computing', 'enterprise AI', 'next-generation processors'],
-  openGraph: {
-    title: 'AI 2027: Neuromorphic Computing Revolution - The Future of Brain-Inspired AI',
-    description: 'Explore the revolutionary neuromorphic computing breakthrough of 2027 that mimics human brain architecture.',
-    type: 'article',
-    publishedTime: '2027-01-20T00:00:00.000Z',
-    authors: ['Zion Tech Group'],
-  },
-};
 
 export default function AI2027NeuromorphicComputingRevolution() {
   return (

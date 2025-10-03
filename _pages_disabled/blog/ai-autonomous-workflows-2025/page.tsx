@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'AI Autonomous Workflows 2025: 95% Process Automation & $42M Savings | Zion Tech Group',

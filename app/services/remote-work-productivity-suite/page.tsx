@@ -1,16 +1,6 @@
 import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
-export const metadata: Metadata = {
-  title: 'Remote Work Productivity Suite - Zion Tech Group',
-  description: 'Comprehensive remote work solutions including meeting optimization, team onboarding, and productivity analytics for distributed teams.',
-  keywords: 'remote work, productivity tools, meeting optimization, team onboarding, distributed teams, collaboration software',
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
 
 export default function RemoteWorkProductivitySuite() {
   return (

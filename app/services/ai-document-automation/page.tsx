@@ -1,16 +1,6 @@
 import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
-export const metadata: Metadata = {
-  title: 'AI Document Automation Platform - Zion Tech Group',
-  description: 'Automate document processing, data extraction, and workflow management with our AI-powered document automation platform. Reduce manual work by 90%.',
-  keywords: 'document automation, AI document processing, data extraction, workflow automation, OCR, intelligent document management',
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
 
 export default function AIDocumentAutomation() {
   return (

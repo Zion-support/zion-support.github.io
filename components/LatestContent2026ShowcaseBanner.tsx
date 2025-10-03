@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { ArrowRight, Star, Zap, Rocket, DollarSign } from 'lucide-react';
 
 export default function LatestContent2026ShowcaseBanner() {
@@ -53,8 +53,7 @@ export default function LatestContent2026ShowcaseBanner() {
                 <span>Autonomous Enterprise Systems</span>
               </div>
             </div>
-            <Link
-              href="/blog/ai-2026-mega-breakthroughs"
+            <Link to="/blog/ai-2026-mega-breakthroughs"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-6 py-3 rounded-lg font-semibold hover:from-yellow-500 hover:to-orange-600 transition-all group-hover:scale-105"
             >
               Read Full Guide
@@ -91,8 +90,7 @@ export default function LatestContent2026ShowcaseBanner() {
                 <span>Self-Healing Systems</span>
               </div>
             </div>
-            <Link
-              href="/blog/ai-2026-enterprise-automation-revolution"
+            <Link to="/blog/ai-2026-enterprise-automation-revolution"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-green-400 to-teal-500 text-black px-6 py-3 rounded-lg font-semibold hover:from-green-500 hover:to-teal-600 transition-all group-hover:scale-105"
             >
               Explore Revolution
@@ -129,8 +127,7 @@ export default function LatestContent2026ShowcaseBanner() {
                 <span>99.9% system uptime achieved</span>
               </div>
             </div>
-            <Link
-              href="/case-studies/ai-2026-mega-transformation-success"
+            <Link to="/case-studies/ai-2026-mega-transformation-success"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-6 py-3 rounded-lg font-semibold hover:from-yellow-500 hover:to-orange-600 transition-all group-hover:scale-105"
             >
               View Success Story
@@ -176,8 +173,7 @@ export default function LatestContent2026ShowcaseBanner() {
               </div>
             </div>
             <div className="flex-shrink-0">
-              <Link
-                href="/case-studies/ai-space-tech-revolution-success-2026"
+              <Link to="/case-studies/ai-space-tech-revolution-success-2026"
                 className="inline-flex items-center gap-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-4 rounded-xl font-bold text-lg hover:from-yellow-500 hover:to-orange-600 transition-all hover:scale-105"
               >
                 Explore Space Mission
@@ -193,14 +189,12 @@ export default function LatestContent2026ShowcaseBanner() {
             Ready to transform your business with cutting-edge AI technology?
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/blog"
+            <Link to="/blog"
               className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-4 rounded-lg font-bold text-lg hover:from-yellow-500 hover:to-orange-600 transition-all hover:scale-105"
             >
               Explore All Content
             </Link>
-            <Link
-              href="/case-studies"
+            <Link to="/case-studies"
               className="border-2 border-yellow-400 text-yellow-400 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-400 hover:text-black transition-colors"
             >
               View Success Stories

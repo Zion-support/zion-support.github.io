@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { 
   ShoppingCart, Package, Truck, BarChart3, Users, 
   CreditCard, Globe, Clock, CheckCircle, ArrowRight, 
@@ -15,10 +15,9 @@ export const metadata = {
 };
 
 export default function EcommerceTechnologySolutions() {
-  const phoneHref = "tel:+13024640950";
-  const emailHref = "mailto:kleber@ziontechgroup.com";
-  const websiteHref = "https://ziontechgroup.com";
-
+  const phoneHref = "tel:+13024640950"
+  const emailHref = "mailto:kleber@ziontechgroup.com"
+  const websiteHref = "https://ziontechgroup.com"
   const ecommerceServices = [
     {
       name: 'AI-Powered Inventory Management Platform',

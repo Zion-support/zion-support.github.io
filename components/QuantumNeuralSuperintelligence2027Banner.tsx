@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 const QuantumNeuralSuperintelligence2027Banner: React.FC = () => {
   return (
@@ -58,22 +58,19 @@ const QuantumNeuralSuperintelligence2027Banner: React.FC = () => {
         </div>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <Link 
-            href="/blog/ai-2027-quantum-neural-superintelligence-enterprise-breakthrough"
+          <Link to="/blog/ai-2027-quantum-neural-superintelligence-enterprise-breakthrough"
             className="bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl"
           >
             🚀 Experience the Revolution
           </Link>
           
-          <Link 
-            href="/case-studies/ai-2027-quantum-neural-superintelligence-success-stories"
+          <Link to="/case-studies/ai-2027-quantum-neural-superintelligence-success-stories"
             className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl"
           >
             💎 Success Stories
           </Link>
           
-          <Link 
-            href="/services/quantum-neural-superintelligence-solutions"
+          <Link to="/services/quantum-neural-superintelligence-solutions"
             className="bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl"
           >
             🌟 Get Started

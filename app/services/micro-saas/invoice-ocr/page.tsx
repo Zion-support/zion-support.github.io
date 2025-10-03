@@ -1,6 +1,91 @@
+"use client"
+import React from 'react';
+import { DollarSign, FileText, CheckCircle, Shield, BarChart3, Phone, Mail, MapPin } from 'lucide-react';
+
+
+export default function InvoiceOCRPage() {
+  const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com' };
+  const features = [
+    'Line-item extraction incl. tax and currency',
+    'Duplicate and fraud detection',
+    'Approval workflows and audit trails',
+    'Exports to QuickBooks, Xero, NetSuite',
+    'SOC 2-ready controls and data encryption',
+    'Vendor normalization and GL mapping',
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-amber-50 via-white to-slate-50">
+      <section className="bg-gradient-to-r from-amber-600 to-orange-600 text-white py-20">
+        <div className="max-w-6xl mx-auto px-6 text-center">
+          <div className="inline-flex items-center gap-2 bg-white/15 px-4 py-2 rounded-full mb-6">
+            <DollarSign className="w-5 h-5" />
+            <span className="font-semibold">Finance Automation</span>
+          </div>
+          <h1 className="text-5xl md:text-6xl font-extrabold mb-6">Invoice OCR & AP Automation</h1>
+          <p className="text-xl md:text-2xl text-amber-100 max-w-3xl mx-auto mb-8">
+            Capture, validate, and approve invoices automatically—then export to your ERP with one click.
+          </p>
+        </div>
+      </section>
+
+      <section className="py-16">
+        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10">
+          <div>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Key Features</h2>
+            <ul className="space-y-3">
+              {features.map((f) => (
+                <li key={f} className="flex items-start text-gray-700"><CheckCircle className="w-5 h-5 text-green-600 mr-3 mt-0.5" />{f}</li>
+              ))}
+            </ul>
+          </div>
+          <div className="bg-white rounded-2xl border border-gray-200 p-8 shadow-sm">
+            <div className="flex items-center gap-3 mb-3">
+              <BarChart3 className="w-6 h-6 text-amber-600" />
+              <h3 className="text-xl font-semibold text-gray-900">Business Impact</h3>
+            </div>
+            <ul className="space-y-2 text-gray-700">
+              <li>• 60% lower AP processing cost</li>
+              <li>• 5x faster cycle time</li>
+              <li>• Better cash flow visibility</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-6">
+          {[{t:'Starter',p:'$149/mo',i:['Up to 500 invoices','Email import','CSV export']},{t:'Growth',p:'$499/mo',i:['2,500 invoices','ERP exports','Approval workflows']},{t:'Enterprise',p:'Custom',i:['Unlimited','SSO & RBAC','Custom validations']}].map((x) => (
+            <div key={x.t} className={`bg-white rounded-2xl border ${x.t==='Growth' ? 'border-amber-600' : 'border-gray-200'} shadow p-8`}>
+              <div className="text-center mb-6">
+                <h3 className="text-xl font-semibold text-gray-900">{x.t}</h3>
+                <div className="text-3xl font-bold text-amber-700 mt-2">{x.p}</div>
+              </div>
+              <ul className="space-y-3 mb-6">
+                {x.i.map((it) => (
+                  <li key={it} className="flex items-center text-gray-700"><CheckCircle className="w-5 h-5 text-green-600 mr-3" />{it}</li>
+                ))}
+              </ul>
+              <a href={`mailto:kleber@ziontechgroup.com?subject=${encodeURIComponent(x.t + ' - Invoice OCR & AP Automation')}`} className={`w-full block text-center font-semibold py-3 rounded-lg ${x.t==='Growth' ? 'bg-amber-600 text-white hover:bg-amber-700' : 'bg-gray-900 text-white hover:bg-gray-800'}`}>Get Started</a>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="py-12 bg-gray-900 text-white">
+        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-6 text-center">
+          <div className="flex items-center justify-center"><Phone className="w-5 h-5 mr-2" /><a href={`tel:${contact.phone}`} className="hover:text-amber-300">{contact.phone}</a></div>
+          <div className="flex items-center justify-center"><Mail className="w-5 h-5 mr-2" /><a href={`mailto:${contact.email}`} className="hover:text-amber-300">{contact.email}</a></div>
+          <div className="flex items-center justify-center"><MapPin className="w-5 h-5 mr-2" /><span>364 E Main St STE 1008, Middletown, DE 19709</span></div>
+        </div>
+      </section>
+    </div>
+  );
+}
+
 import React from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { DollarSign, CheckCircle, Shield, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
 
 export default function InvoiceOCRPage() {

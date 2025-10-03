@@ -1,11 +1,5 @@
 import React from 'react';
-import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'AI 2026 Autonomous Enterprise Automation Mega Breakthrough: Complete Business Transformation',
-  description: 'Discover the revolutionary autonomous enterprise automation breakthrough of 2026, featuring 99.98% self-managing operations, intelligent process optimization, and $15 billion in proven enterprise value.',
-  keywords: 'AI 2026, autonomous enterprise automation, business transformation, intelligent automation, enterprise AI, process optimization',
-};
 
 export default function AutonomousEnterpriseAutomationMegaBreakthrough() {
   return (

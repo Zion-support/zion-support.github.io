@@ -1,6 +1,5 @@
 import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { 
   Zap, 
   Workflow, 
@@ -24,15 +23,6 @@ import {
   Database
 } from 'lucide-react';
 
-export const metadata: Metadata = {
-  title: 'AI Workflow Automation Engine - Zion Tech Group',
-  description: 'Revolutionary AI-powered workflow automation platform that eliminates manual tasks, reduces errors, and increases productivity by 400%.',
-  keywords: 'AI workflow automation, business process automation, RPA, intelligent automation, workflow optimization',
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
 
 export default function AIWorkflowAutomationEngine() {
   return (

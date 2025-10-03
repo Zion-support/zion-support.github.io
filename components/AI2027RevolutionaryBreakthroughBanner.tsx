@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function AI2027RevolutionaryBreakthroughBanner() {
   return (
@@ -59,15 +59,13 @@ export default function AI2027RevolutionaryBreakthroughBanner() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link
-                href="/blog/ai-2027-autonomous-enterprise-revolution"
+              <Link to="/blog/ai-2027-autonomous-enterprise-revolution"
                 className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl text-center inline-flex items-center justify-center gap-2"
               >
                 Read Full Article
                 <span className="text-xl">→</span>
               </Link>
-              <Link
-                href="/case-studies/ai-2027-revolutionary-breakthrough-success"
+              <Link to="/case-studies/ai-2027-revolutionary-breakthrough-success"
                 className="border-2 border-white/50 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all duration-300 text-center"
               >
                 View $1.2B Success Story
@@ -111,8 +109,7 @@ export default function AI2027RevolutionaryBreakthroughBanner() {
           <p className="text-lg opacity-75 mb-4">
             Join 200+ Fortune 500 companies achieving breakthrough results with AI 2027 technology
           </p>
-          <Link
-            href="/contact"
+          <Link to="/contact"
             className="inline-flex items-center gap-2 bg-gradient-to-r from-green-500 to-emerald-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-green-600 hover:to-emerald-600 transition-all duration-300 shadow-lg hover:shadow-xl"
           >
             Start Your Transformation

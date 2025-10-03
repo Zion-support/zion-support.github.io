@@ -1,12 +1,6 @@
 import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
-export const metadata: Metadata = {
-  title: '$8.5 Billion Success: Quantum Consciousness Fusion Revolutionizes Healthcare | Zion Tech Group',
-  description: 'Global healthcare network achieved $8.5 billion in value through Quantum Consciousness Fusion technology with 98% patient satisfaction and 415% ROI.',
-  keywords: 'quantum consciousness success, healthcare AI transformation, conscious AI ROI, patient satisfaction, 8.5 billion value, healthcare automation',
-};
 
 export default function QuantumConsciousnessFusionSuccessPage() {
   return (

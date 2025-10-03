@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 const UltimateAutonomousBI2026PromotionalBanner: React.FC = () => {
   return (
@@ -35,15 +35,13 @@ const UltimateAutonomousBI2026PromotionalBanner: React.FC = () => {
         </div>
         
         <div className="flex flex-col sm:flex-row gap-3 items-center">
-          <Link 
-            href="/blog/ai-2026-ultimate-autonomous-business-intelligence-revolution"
+          <Link to="/blog/ai-2026-ultimate-autonomous-business-intelligence-revolution"
             className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
           >
             📖 Read the Breakthrough
           </Link>
           
-          <Link 
-            href="/case-studies/ai-2026-ultimate-autonomous-business-intelligence-500-billion-success"
+          <Link to="/case-studies/ai-2026-ultimate-autonomous-business-intelligence-500-billion-success"
             className="bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
           >
             💰 $500B Success Story

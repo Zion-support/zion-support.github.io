@@ -1,12 +1,6 @@
 import React from 'react';
-import Link from 'next/link';
-import { Metadata } from 'next';
+import { Link } from 'react-router-dom';
 
-export const metadata: Metadata = {
-  title: 'Healthcare AI Transformation 2026: $5.2M ROI Case Study',
-  description: 'See how an academic medical center achieved $5.2M savings with AI healthcare diagnostics. 99.2% accuracy, 75% faster diagnosis, 87% error reduction.',
-  keywords: 'healthcare AI transformation, medical diagnostics, AI healthcare, ROI case study, academic medical center',
-};
 
 export default function HealthcareAITransformation2026Page() {
   return (

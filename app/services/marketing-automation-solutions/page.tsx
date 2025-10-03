@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { 
   Mail, MessageSquare, BarChart3, Users, Target, 
   Clock, CheckCircle, ArrowRight, Phone, 
@@ -15,10 +15,9 @@ export const metadata = {
 };
 
 export default function MarketingAutomationSolutions() {
-  const phoneHref = "tel:+13024640950";
-  const emailHref = "mailto:kleber@ziontechgroup.com";
-  const websiteHref = "https://ziontechgroup.com";
-
+  const phoneHref = "tel:+13024640950"
+  const emailHref = "mailto:kleber@ziontechgroup.com"
+  const websiteHref = "https://ziontechgroup.com"
   const marketingServices = [
     {
       name: 'AI-Powered Email Marketing Platform',

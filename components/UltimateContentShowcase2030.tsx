@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function UltimateContentShowcase2030() {
   return (
@@ -39,14 +39,12 @@ export default function UltimateContentShowcase2030() {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-3">
-                <Link 
-                  href="/blog/ai-2030-quantum-consciousness-revolution"
+                <Link to="/blog/ai-2030-quantum-consciousness-revolution"
                   className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-6 py-3 rounded-lg font-bold hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 text-center"
                 >
                   Read Full Article
                 </Link>
-                <Link 
-                  href="/services/ai-2030-quantum-consciousness"
+                <Link to="/services/ai-2030-quantum-consciousness"
                   className="bg-white/20 text-white px-6 py-3 rounded-lg font-bold hover:bg-white/30 transition-all duration-300 text-center"
                 >
                   Learn Services
@@ -79,14 +77,12 @@ export default function UltimateContentShowcase2030() {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-3">
-                <Link 
-                  href="/blog/ai-2029-meta-cognitive-superintelligence-breakthrough"
+                <Link to="/blog/ai-2029-meta-cognitive-superintelligence-breakthrough"
                   className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-6 py-3 rounded-lg font-bold hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 text-center"
                 >
                   Read Full Article
                 </Link>
-                <Link 
-                  href="/services/ai-2029-meta-cognitive-superintelligence"
+                <Link to="/services/ai-2029-meta-cognitive-superintelligence"
                   className="bg-white/20 text-white px-6 py-3 rounded-lg font-bold hover:bg-white/30 transition-all duration-300 text-center"
                 >
                   Learn Services
@@ -117,8 +113,7 @@ export default function UltimateContentShowcase2030() {
                 How a Fortune 500 company achieved $50B ROI through revolutionary quantum consciousness breakthrough implementation.
               </p>
               
-              <Link 
-                href="/case-studies/ai-2030-quantum-consciousness-mega-success"
+              <Link to="/case-studies/ai-2030-quantum-consciousness-mega-success"
                 className="bg-gradient-to-r from-green-400 to-emerald-500 text-black px-6 py-3 rounded-lg font-bold hover:from-green-300 hover:to-emerald-400 transition-all duration-300 text-center inline-block"
               >
                 Read Success Story
@@ -145,8 +140,7 @@ export default function UltimateContentShowcase2030() {
                 How a Fortune 500 company achieved $10B ROI through revolutionary meta-cognitive superintelligence breakthrough implementation.
               </p>
               
-              <Link 
-                href="/case-studies/ai-2029-meta-cognitive-superintelligence-mega-success"
+              <Link to="/case-studies/ai-2029-meta-cognitive-superintelligence-mega-success"
                 className="bg-gradient-to-r from-blue-400 to-indigo-500 text-white px-6 py-3 rounded-lg font-bold hover:from-blue-300 hover:to-indigo-400 transition-all duration-300 text-center inline-block"
               >
                 Read Success Story

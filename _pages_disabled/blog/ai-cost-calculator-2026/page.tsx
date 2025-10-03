@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'AI Cost Calculator 2026: Optimize Your AI Spending',
@@ -124,7 +124,7 @@ export default function AICostCalculator2026() {
 }
 
 
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'AI Cost Calculator 2026: Optimize Your AI Spending',

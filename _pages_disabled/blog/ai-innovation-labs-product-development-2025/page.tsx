@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'AI-Driven Innovation Labs: Accelerating Product Development 10x Faster in 2025',

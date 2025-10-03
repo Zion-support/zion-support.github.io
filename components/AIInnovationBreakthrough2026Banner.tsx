@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function AIInnovationBreakthrough2026Banner() {
   return (
@@ -31,7 +31,7 @@ export default function AIInnovationBreakthrough2026Banner() {
         <div className="grid md:grid-cols-3 gap-8 mb-12">
           
           {/* Main Article */}
-          <Link href="/blog/ai-innovation-breakthrough-2026" className="group md:col-span-2">
+          <Link to="/blog/ai-innovation-breakthrough-2026" className="group md:col-span-2">
             <div className="bg-white rounded-2xl shadow-2xl overflow-hidden hover:shadow-3xl transition-all hover:scale-105 transform border-4 border-yellow-300">
               <div className="bg-gradient-to-r from-purple-600 to-blue-600 p-8 text-white">
                 <div className="flex items-center gap-2 mb-4">
@@ -79,7 +79,7 @@ export default function AIInnovationBreakthrough2026Banner() {
           <div className="space-y-6">
             
             {/* Quantum AI */}
-            <Link href="/blog/quantum-ai-computing-2026" className="group">
+            <Link to="/blog/quantum-ai-computing-2026" className="group">
               <div className="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition-all hover:scale-105 transform">
                 <div className="bg-gradient-to-r from-indigo-600 to-purple-600 p-6 text-white">
                   <div className="flex items-center gap-2 mb-3">
@@ -113,7 +113,7 @@ export default function AIInnovationBreakthrough2026Banner() {
             </Link>
 
             {/* Autonomous Enterprise */}
-            <Link href="/case-studies/autonomous-enterprise-success" className="group">
+            <Link to="/case-studies/autonomous-enterprise-success" className="group">
               <div className="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition-all hover:scale-105 transform">
                 <div className="bg-gradient-to-r from-green-600 to-teal-600 p-6 text-white">
                   <div className="flex items-center gap-2 mb-3">
@@ -147,7 +147,7 @@ export default function AIInnovationBreakthrough2026Banner() {
             </Link>
 
             {/* Neural Networks */}
-            <Link href="/blog/neural-network-breakthroughs" className="group">
+            <Link to="/blog/neural-network-breakthroughs" className="group">
               <div className="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition-all hover:scale-105 transform">
                 <div className="bg-gradient-to-r from-blue-600 to-cyan-600 p-6 text-white">
                   <div className="flex items-center gap-2 mb-3">

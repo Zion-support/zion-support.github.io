@@ -1,2 +1,0 @@
-  console.log('✅ Fixed all empty TypeScript files in api-disabled directory')} else {,
-  console.log('❌ api-disabled directory not found')};

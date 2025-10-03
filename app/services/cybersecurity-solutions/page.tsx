@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { 
   Shield, Eye, Lock, AlertTriangle, BarChart3, 
   Clock, CheckCircle, ArrowRight, Phone, 
@@ -15,10 +15,9 @@ export const metadata = {
 };
 
 export default function CybersecuritySolutions() {
-  const phoneHref = "tel:+13024640950";
-  const emailHref = "mailto:kleber@ziontechgroup.com";
-  const websiteHref = "https://ziontechgroup.com";
-
+  const phoneHref = "tel:+13024640950"
+  const emailHref = "mailto:kleber@ziontechgroup.com"
+  const websiteHref = "https://ziontechgroup.com"
   const cybersecurityServices = [
     {
       name: 'AI-Powered Threat Detection Platform',

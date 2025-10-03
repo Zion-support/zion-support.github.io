@@ -1,58 +1,39 @@
 import React from 'react';
-import SEO from '../components/SEO';
-
+import { Helmet } from 'react-helmet-async';
+;
 const CaseStudiesPage: React.FC = () => {
   return (
     <>
-      <SEO 
-        title="Case Studies - Zion Tech Group"
-        description="Success stories and case studies showcasing how Zion Tech Group has helped businesses transform with AI and IT solutions."
-        keywords="case studies, success stories, AI implementation, business transformation"
-      />
+      <Helmet >
+        <title >Case Studies - Zion Tech Group</title>
+        <meta name="description", content ="Explore real-world examples of how we've helped businesses achieve their goals." />
+        <meta name="description" content="Explore real-world examples of how we've helped businesses achieve their goals." />
+      </Helmet>
       
-      <main className="py-20">
-        <div className="container mx-auto px-6">
-          <div className="max-w-6xl mx-auto">
-            <h1 className="text-4xl font-bold mb-8 text-center">Case Studies</h1>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-white p-6 rounded-lg shadow-lg border">
-                <h2 className="text-2xl font-bold mb-4">Manufacturing AI Platform</h2>
-                <p className="text-gray-600 mb-4">
-                  Implemented an AI-powered manufacturing platform that increased efficiency by 40% and reduced costs by 25%.
-                </p>
-                <div className="text-sm text-gray-500">Industry: Manufacturing | ROI: 300%</div>
-              </div>
-              
-              <div className="bg-white p-6 rounded-lg shadow-lg border">
-                <h2 className="text-2xl font-bold mb-4">Supply Chain Intelligence</h2>
-                <p className="text-gray-600 mb-4">
-                  Developed a comprehensive supply chain optimization solution that improved delivery times by 35%.
-                </p>
-                <div className="text-sm text-gray-500">Industry: Logistics | ROI: 250%</div>
-              </div>
-              
-              <div className="bg-white p-6 rounded-lg shadow-lg border">
-                <h2 className="text-2xl font-bold mb-4">Autonomous Operations</h2>
-                <p className="text-gray-600 mb-4">
-                  Created an autonomous operations system that reduced manual intervention by 80% and improved reliability.
-                </p>
-                <div className="text-sm text-gray-500">Industry: Technology | ROI: 400%</div>
-              </div>
-              
-              <div className="bg-white p-6 rounded-lg shadow-lg border">
-                <h2 className="text-2xl font-bold mb-4">AI Customer Support</h2>
-                <p className="text-gray-600 mb-4">
-                  Implemented AI-powered customer support automation that improved response times by 90%.
-                </p>
-                <div className="text-sm text-gray-500">Industry: Services | ROI: 200%</div>
-              </div>
-            </div>
+      <div className="py-20 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">Case Studies - Zion Tech Group</h3>
+          <p className="text-xl text-gray-600 mb-8">,
+  This page is currently under development. Please check back soon for updates.
+          </p>
+          <div className="bg-white p-8 rounded-xl shadow-lg">
+            <p className="text-gray-600">,
+      <div className="py-20 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">Case Studies - Zion Tech Group</h3>
+          <p className="text-xl text-gray-600 mb-8">,
+  This page is currently under development. Please check back soon for updates.
+          </p>
+          <div className="bg-white p-8 rounded-xl shadow-lg">
+            <p className="text-gray-600">,
+  We're working hard to bring you the best content and features. Thank you for your patience.';';
+            </p>
           </div>
         </div>
-      </main>
+      </div>
     </>
   );
 };
 
-export default CaseStudiesPage;
+export default Component;
+;

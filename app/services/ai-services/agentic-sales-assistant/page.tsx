@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { Target, CheckCircle, Shield, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
 
 export default function AgenticSalesAssistantPage() {
@@ -39,7 +39,7 @@ export default function AgenticSalesAssistantPage() {
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Agentic Sales Assistant</h1>
             <p className="text-gray-600 text-lg max-w-3xl">{description}</p>
             <div className="mt-6 flex gap-3">
-              <Link href="/contact" className="bg-rose-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-rose-700">Request a Demo</Link>
+              <Link to="/contact" className="bg-rose-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-rose-700">Request a Demo</Link>
               <a href="#pricing" className="border border-rose-600 text-rose-700 px-6 py-3 rounded-lg font-semibold hover:bg-rose-50">View Pricing</a>
             </div>
           </div>
@@ -79,7 +79,7 @@ export default function AgenticSalesAssistantPage() {
                       <li key={j} className="flex items-start text-sm"><CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-0.5" />{d}</li>
                     ))}
                   </ul>
-                  <Link href="/contact" className="w-full inline-flex items-center justify-center px-4 py-2 bg-rose-600 text-white rounded-lg font-semibold hover:bg-rose-700">
+                  <Link to="/contact" className="w-full inline-flex items-center justify-center px-4 py-2 bg-rose-600 text-white rounded-lg font-semibold hover:bg-rose-700">
                     Get Started <ArrowRight className="w-4 h-4 ml-2" />
                   </Link>
                 </div>

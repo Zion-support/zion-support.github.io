@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function October2025ContentShowcase() {
   const articles = [
@@ -110,8 +110,7 @@ export default function October2025ContentShowcase() {
         {/* Call to Action */}
         <div className="text-center">
           <div className="inline-flex flex-col sm:flex-row gap-4 items-center">
-            <Link
-              href="/blog"
+            <Link to="/blog"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:shadow-2xl hover:scale-105 transition-all duration-300"
             >
               <span>Explore All Articles</span>
@@ -120,8 +119,7 @@ export default function October2025ContentShowcase() {
               </svg>
             </Link>
             
-            <Link
-              href="/contact"
+            <Link to="/contact"
               className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/20 transition-all duration-300 border border-white/30"
             >
               <span>Implement These Solutions</span>

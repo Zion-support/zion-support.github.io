@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function ProductionAgenticAIBanner() {
   return (
@@ -11,8 +11,7 @@ export default function ProductionAgenticAIBanner() {
           <div className="flex items-center gap-3 flex-wrap justify-center md:justify-start">
             <span className="text-3xl animate-bounce">🤖</span>
             <span className="font-bold text-lg uppercase tracking-wide">NEW PRACTICAL GUIDE:</span>
-            <Link 
-              href="/blog/ai-2025-oct-practical-agentic-ai-systems-production" 
+            <Link to="/blog/ai-2025-oct-practical-agentic-ai-systems-production" 
               className="underline hover:text-yellow-200 font-bold text-lg decoration-2 underline-offset-4"
             >
               Production-Ready Agentic AI Systems
@@ -20,8 +19,7 @@ export default function ProductionAgenticAIBanner() {
             <span className="hidden md:inline text-yellow-300">•</span>
             <span className="font-semibold text-yellow-100">70% Faster Development • $2.4M Savings • 95% Reliability</span>
           </div>
-          <Link
-            href="/blog/ai-2025-oct-practical-agentic-ai-systems-production"
+          <Link to="/blog/ai-2025-oct-practical-agentic-ai-systems-production"
             className="bg-white text-emerald-700 hover:bg-yellow-400 hover:text-emerald-900 px-6 py-2.5 rounded-full text-sm font-bold whitespace-nowrap transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
           >
             Read Guide →
@@ -56,8 +54,7 @@ export const AgenticAIShowcaseBanner = () => {
             <p className="text-gray-600 mb-4">
               Step-by-step implementation from MVP to production. Complete with code examples and best practices.
             </p>
-            <Link 
-              href="/blog/ai-2025-oct-practical-agentic-ai-systems-production"
+            <Link to="/blog/ai-2025-oct-practical-agentic-ai-systems-production"
               className="text-emerald-600 font-semibold hover:text-emerald-800 flex items-center"
             >
               Read Guide <span className="ml-2">→</span>
@@ -70,8 +67,7 @@ export const AgenticAIShowcaseBanner = () => {
             <p className="text-gray-600 mb-4">
               See how a global FinTech achieved 92% automation and 94% customer satisfaction with agentic AI.
             </p>
-            <Link 
-              href="/case-studies/ai-2025-oct-global-fintech-agentic-ai-customer-service-success"
+            <Link to="/case-studies/ai-2025-oct-global-fintech-agentic-ai-customer-service-success"
               className="text-teal-600 font-semibold hover:text-teal-800 flex items-center"
             >
               View Case Study <span className="ml-2">→</span>
@@ -84,8 +80,7 @@ export const AgenticAIShowcaseBanner = () => {
             <p className="text-gray-600 mb-4">
               Get expert help deploying production-ready agentic AI. From architecture to ongoing optimization.
             </p>
-            <Link 
-              href="/services/production-agentic-ai-implementation-services"
+            <Link to="/services/production-agentic-ai-implementation-services"
               className="text-cyan-600 font-semibold hover:text-cyan-800 flex items-center"
             >
               Get Started <span className="ml-2">→</span>
@@ -101,8 +96,7 @@ export const AgenticAIShowcaseBanner = () => {
                 Average ROI: 580% | Payback: 2-3 months | 95%+ reliability
               </p>
             </div>
-            <Link
-              href="/contact"
+            <Link to="/contact"
               className="bg-white text-emerald-700 hover:bg-yellow-400 hover:text-emerald-900 px-8 py-3 rounded-full font-bold whitespace-nowrap transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
             >
               Schedule Consultation

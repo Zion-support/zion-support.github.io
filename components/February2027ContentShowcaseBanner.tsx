@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 const February2027ContentShowcaseBanner: React.FC = () => {
   return (
@@ -43,8 +43,7 @@ const February2027ContentShowcaseBanner: React.FC = () => {
                 <div className="text-blue-300 font-bold">• Quantum Neural Superintelligence</div>
                 <div className="text-green-300 font-bold">• Universal Intelligence Integration</div>
               </div>
-              <Link 
-                href="/content/february-2027-revolutionary"
+              <Link to="/content/february-2027-revolutionary"
                 className="inline-block px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold rounded-full hover:scale-105 transition-transform duration-200"
               >
                 Explore February Content
@@ -65,8 +64,7 @@ const February2027ContentShowcaseBanner: React.FC = () => {
                 <div className="text-pink-300 font-bold">• Universal Intelligence</div>
                 <div className="text-red-300 font-bold">• Transcendent Reality</div>
               </div>
-              <Link 
-                href="/content/march-2027-quantum-consciousness"
+              <Link to="/content/march-2027-quantum-consciousness"
                 className="inline-block px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-bold rounded-full hover:scale-105 transition-transform duration-200"
               >
                 Explore March Content
@@ -87,8 +85,7 @@ const February2027ContentShowcaseBanner: React.FC = () => {
                 <div className="text-purple-300 font-bold">• Transcendent Intelligence</div>
                 <div className="text-green-300 font-bold">• Universal Integration</div>
               </div>
-              <Link 
-                href="/content/april-2027-universal-intelligence"
+              <Link to="/content/april-2027-universal-intelligence"
                 className="inline-block px-8 py-4 bg-gradient-to-r from-green-500 to-teal-500 text-white font-bold rounded-full hover:scale-105 transition-transform duration-200"
               >
                 Explore April Content
@@ -227,8 +224,7 @@ const February2027ContentShowcaseBanner: React.FC = () => {
 
         {/* Call to Action */}
         <div className="text-center">
-          <Link 
-            href="/content/revolutionary-showcase-2027"
+          <Link to="/content/revolutionary-showcase-2027"
             className="inline-block px-20 py-8 bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 text-black font-bold text-3xl rounded-full hover:scale-110 transition-transform duration-300 shadow-2xl"
           >
             🌟 Explore All Revolutionary Content 🌟

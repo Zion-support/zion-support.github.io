@@ -1,12 +1,6 @@
 import React from 'react';
-import Link from 'next/link';
-import { Metadata } from 'next';
+import { Link } from 'react-router-dom';
 
-export const metadata: Metadata = {
-  title: 'Supply Chain Transformation 2026: $8.2M ROI Case Study',
-  description: 'See how a Fortune 500 manufacturer achieved $8.2M annual savings with AI-powered supply chain transformation. 92% forecast accuracy, 85% stockout reduction, 99.5% on-time delivery.',
-  keywords: 'supply chain transformation, AI supply chain, manufacturing automation, ROI case study, Fortune 500',
-};
 
 export default function SupplyChainTransformation2026Page() {
   return (

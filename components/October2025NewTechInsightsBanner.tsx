@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function October2025NewTechInsightsBanner() {
   return (
@@ -27,7 +27,7 @@ export default function October2025NewTechInsightsBanner() {
 
         <div className="grid md:grid-cols-3 gap-6 mb-10">
           {/* Article 1: Cognitive Automation */}
-          <Link href="/blog/ai-2025-october-cognitive-automation-orchestration" className="group">
+          <Link to="/blog/ai-2025-october-cognitive-automation-orchestration" className="group">
             <div className="h-full bg-gradient-to-br from-purple-900/50 to-purple-800/30 backdrop-blur-sm rounded-xl border border-purple-400/30 p-6 hover:border-purple-400/60 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-purple-500/50">
               <div className="mb-4">
                 <span className="inline-block px-3 py-1 bg-purple-500/20 text-purple-300 text-xs rounded-full border border-purple-400/40 mb-3">
@@ -58,7 +58,7 @@ export default function October2025NewTechInsightsBanner() {
           </Link>
 
           {/* Article 2: Neural Search */}
-          <Link href="/blog/ai-2025-october-neural-search-revolution" className="group">
+          <Link to="/blog/ai-2025-october-neural-search-revolution" className="group">
             <div className="h-full bg-gradient-to-br from-indigo-900/50 to-indigo-800/30 backdrop-blur-sm rounded-xl border border-indigo-400/30 p-6 hover:border-indigo-400/60 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-indigo-500/50">
               <div className="mb-4">
                 <span className="inline-block px-3 py-1 bg-indigo-500/20 text-indigo-300 text-xs rounded-full border border-indigo-400/40 mb-3">
@@ -89,7 +89,7 @@ export default function October2025NewTechInsightsBanner() {
           </Link>
 
           {/* Article 3: Data Mesh */}
-          <Link href="/blog/ai-2025-october-intelligent-data-mesh-architecture" className="group">
+          <Link to="/blog/ai-2025-october-intelligent-data-mesh-architecture" className="group">
             <div className="h-full bg-gradient-to-br from-emerald-900/50 to-emerald-800/30 backdrop-blur-sm rounded-xl border border-emerald-400/30 p-6 hover:border-emerald-400/60 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-emerald-500/50">
               <div className="mb-4">
                 <span className="inline-block px-3 py-1 bg-emerald-500/20 text-emerald-300 text-xs rounded-full border border-emerald-400/40 mb-3">
@@ -121,7 +121,7 @@ export default function October2025NewTechInsightsBanner() {
         </div>
 
         <div className="text-center">
-          <Link href="/blog" className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-purple-600 to-emerald-600 hover:from-purple-500 hover:to-emerald-500 rounded-lg font-semibold text-white shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+          <Link to="/blog" className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-purple-600 to-emerald-600 hover:from-purple-500 hover:to-emerald-500 rounded-lg font-semibold text-white shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
             <span>Explore All October 2025 Insights</span>
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />

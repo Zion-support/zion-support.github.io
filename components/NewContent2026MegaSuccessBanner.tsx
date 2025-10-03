@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function NewContent2026MegaSuccessBanner() {
   return (
@@ -80,15 +80,13 @@ export default function NewContent2026MegaSuccessBanner() {
               </p>
               
               <div className="space-y-4">
-                <Link
-                  href="/case-studies/ai-enterprise-transformation-mega-success-2026"
+                <Link to="/case-studies/ai-enterprise-transformation-mega-success-2026"
                   className="block w-full bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors text-center"
                 >
                   Read Full Success Story
                 </Link>
                 
-                <Link
-                  href="/blog/ai-enterprise-implementation-2026"
+                <Link to="/blog/ai-enterprise-implementation-2026"
                   className="block w-full border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors text-center"
                 >
                   View Implementation Guide
