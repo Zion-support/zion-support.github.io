@@ -326,7 +326,7 @@ const RealTimeCognitiveAutomation: () => {
                   to="/contact"
                   className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-bold rounded-lg border border-zion-cyan/30 hover:bg-white/20 transition-all"
                 >
-                  Request Live Demo
+                  Get Custom Quote
                 </Link>
               </div>
             </section>
