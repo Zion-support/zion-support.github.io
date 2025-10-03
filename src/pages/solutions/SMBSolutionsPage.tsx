@@ -17,7 +17,7 @@ const SMBSolutionsPage: React.FC = () => {
       features: ["Cloud Migration", "Data Backup", "Remote Access", "Scalable Infrastructure"],
     },
     {
-      title: "Business Intelligence",
+      title: "Business Analytics",
       description: "Transform your data into actionable insights with user-friendly analytics and reporting tools.",
       icon: "📊",
       features: ["Data Visualization", "Custom Reports", "Performance Dashboards", "Trend Analysis"],
