@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function January2026EdgeNativeAgentsBanner() {
   return (
@@ -100,15 +100,13 @@ export default function January2026EdgeNativeAgentsBanner() {
         
         <div className="text-center">
           <div className="flex flex-wrap justify-center gap-4 mb-6">
-            <Link
-              href="/blog/ai-2026-edge-native-agents-revolution"
+            <Link to="/blog/ai-2026-edge-native-agents-revolution"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-600 to-red-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-orange-700 hover:to-red-700 transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
             >
               Discover Edge-Native AI
               <span className="text-xl">→</span>
             </Link>
-            <Link
-              href="/case-studies"
+            <Link to="/case-studies"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-pink-600 to-purple-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-pink-700 hover:to-purple-700 transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
             >
               View Success Stories

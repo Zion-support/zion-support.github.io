@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'AI Digital Transformation ROI Playbook 2026: $500M+ Value Creation | Zion Tech Group',

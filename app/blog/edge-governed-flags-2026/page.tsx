@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'Edge‑Governed Feature Flags (2026): Private control at <100ms',
@@ -20,7 +20,7 @@ export default function Page() {
         <li>DP‑hardened telemetry and KPI‑linked canaries for safe rollout</li>
       </ul>
       <p>
-        See also: <Link href="/blog/privacy-safe-feature-flags-2026">Privacy‑Safe Feature Flags (2026)</Link>.
+        See also: <Link to="/blog/privacy-safe-feature-flags-2026">Privacy‑Safe Feature Flags (2026)</Link>.
       </p>
     </main>
   );

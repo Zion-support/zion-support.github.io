@@ -2,7 +2,7 @@
 
 // @ts-nocheck
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function InteractiveContentDiscovery2026() {
   const [selectedCategory, setSelectedCategory] = useState('all');

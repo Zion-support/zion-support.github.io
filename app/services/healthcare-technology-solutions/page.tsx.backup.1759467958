@@ -1,0 +1,396 @@
+import React from 'react';
+<<<<<<< HEAD
+import { Helmet } from 'react-helmet-async';
+=======
+import Head from 'next/head';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-76ea
+import { Link } from 'react-router-dom';
+import { 
+  Heart, Stethoscope, Users, FileText, Shield, 
+  Calendar, BarChart3, Clock, CheckCircle, 
+  ArrowRight, Phone, Mail, MapPin, ExternalLink,
+  Zap, Target, Award, Globe, Smartphone, Activity
+} from 'lucide-react';
+
+export const metadata = {
+  title: 'Healthcare Technology Solutions — Zion Tech Group',
+  description: 'Comprehensive healthcare micro SaaS solutions including telemedicine, patient management, medical billing, and health analytics.',
+  keywords: 'healthcare technology, telemedicine, patient management, medical billing, health analytics, HIPAA compliance, micro SaaS',
+};
+
+export default function HealthcareTechnologySolutions() {
+  const phoneHref = "tel:+13024640950"
+  const emailHref = "mailto:kleber@ziontechgroup.com"
+  const websiteHref = "https://ziontechgroup.com"
+  const healthcareServices = [
+    {
+      name: 'AI-Powered Telemedicine Platform',
+      description: 'Complete telemedicine solution with AI diagnostics, appointment scheduling, and patient monitoring.',
+      price: '$399 - $2,999/month',
+      eta: '3-4 weeks',
+      features: [
+        'HD video consultations with screen sharing',
+        'AI-powered symptom analysis and triage',
+        'Automated appointment scheduling',
+        'Patient health monitoring and alerts',
+        'HIPAA-compliant data encryption'
+      ],
+      icon: Stethoscope,
+      category: 'Telemedicine',
+      roi: '60% increase in patient accessibility',
+      marketPrice: '$800 - $5,500/month',
+      savings: 'Save up to 45%'
+    },
+    {
+      name: 'Smart Patient Management System',
+      description: 'Comprehensive patient records management with AI-powered insights and care coordination.',
+      price: '$299 - $1,999/month',
+      eta: '2-3 weeks',
+      features: [
+        'Electronic health records (EHR) management',
+        'AI-powered patient risk assessment',
+        'Care team coordination and communication',
+        'Medication management and alerts',
+        'Integration with medical devices'
+      ],
+      icon: Users,
+      category: 'Patient Management',
+      roi: '40% reduction in administrative overhead',
+      marketPrice: '$600 - $3,500/month',
+      savings: 'Save up to 43%'
+    },
+    {
+      name: 'Medical Billing & Revenue Cycle Management',
+      description: 'Automated medical billing with AI-powered coding and claims processing.',
+      price: '$199 - $1,499/month',
+      eta: '2-3 weeks',
+      features: [
+        'Automated medical coding and billing',
+        'Real-time claims processing and tracking',
+        'Revenue cycle analytics and reporting',
+        'Insurance verification and eligibility',
+        'Patient payment processing and collections'
+      ],
+      icon: FileText,
+      category: 'Billing',
+      roi: '70% reduction in billing errors',
+      marketPrice: '$400 - $2,800/month',
+      savings: 'Save up to 46%'
+    },
+    {
+      name: 'Healthcare Analytics Dashboard',
+      description: 'Advanced healthcare analytics with population health insights and predictive modeling.',
+      price: '$499 - $3,499/month',
+      eta: '3-4 weeks',
+      features: [
+        'Population health analytics and reporting',
+        'Predictive modeling for patient outcomes',
+        'Quality metrics and performance tracking',
+        'Cost analysis and resource optimization',
+        'Custom dashboard and reporting tools'
+      ],
+      icon: BarChart3,
+      category: 'Analytics',
+      roi: '35% improvement in patient outcomes',
+      marketPrice: '$1,000 - $6,000/month',
+      savings: 'Save up to 42%'
+    },
+    {
+      name: 'AI Diagnostic Assistant Platform',
+      description: 'AI-powered diagnostic support with medical imaging analysis and clinical decision support.',
+      price: '$799 - $4,999/month',
+      eta: '4-6 weeks',
+      features: [
+        'Medical imaging analysis (X-ray, MRI, CT)',
+        'Clinical decision support algorithms',
+        'Drug interaction and allergy checking',
+        'Evidence-based treatment recommendations',
+        'Integration with medical devices and EHR'
+      ],
+      icon: Heart,
+      category: 'Diagnostics',
+      roi: '25% improvement in diagnostic accuracy',
+      marketPrice: '$1,500 - $8,500/month',
+      savings: 'Save up to 41%'
+    },
+    {
+      name: 'Healthcare Appointment Intelligence',
+      description: 'Smart scheduling system with patient preferences, provider optimization, and telehealth integration.',
+      price: '$149 - $899/month',
+      eta: '1-2 weeks',
+      features: [
+        'AI-powered appointment optimization',
+        'Patient preference matching',
+        'Provider schedule optimization',
+        'Automated reminders and confirmations',
+        'Telehealth integration and management'
+      ],
+      icon: Calendar,
+      category: 'Scheduling',
+      roi: '50% reduction in no-show rates',
+      marketPrice: '$300 - $1,800/month',
+      savings: 'Save up to 50%'
+    }
+  ];
+
+  const itServices = [
+    {
+      name: 'HIPAA-Compliant Security Suite',
+      description: 'Enterprise-grade security specifically designed for healthcare data protection and compliance.',
+      price: '$599 - $3,999/month',
+      eta: '2-3 weeks',
+      features: [
+        'HIPAA-compliant data encryption',
+        'Multi-factor authentication and access control',
+        'Audit logging and compliance monitoring',
+        'Data backup and disaster recovery',
+        'Security incident response and monitoring'
+      ],
+      icon: Shield,
+      category: 'Security',
+      roi: '99.9% compliance rate maintained',
+      marketPrice: '$1,200 - $6,500/month',
+      savings: 'Save up to 38%'
+    },
+    {
+      name: 'Healthcare Cloud Infrastructure',
+      description: 'Scalable cloud infrastructure optimized for healthcare applications and regulatory compliance.',
+      price: '$799 - $4,999/month',
+      eta: '1-2 weeks',
+      features: [
+        'HIPAA-compliant cloud infrastructure',
+        'High availability and disaster recovery',
+        'Automated backup and data protection',
+        '24/7 monitoring and support',
+        'Scalable resource allocation'
+      ],
+      icon: Globe,
+      category: 'Infrastructure',
+      roi: '45% reduction in infrastructure costs',
+      marketPrice: '$1,500 - $8,000/month',
+      savings: 'Save up to 38%'
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
+      <Head>
+        <title>Healthcare Technology Solutions — Zion Tech Group</title>
+        <meta name="description" content="Comprehensive healthcare micro SaaS solutions including telemedicine, patient management, medical billing, and health analytics." />
+        <meta name="keywords" content="healthcare technology, telemedicine, patient management, medical billing, health analytics, HIPAA compliance, micro SaaS" />
+        <link rel="canonical" href={`${websiteHref}/services/healthcare-technology-solutions`} />
+      </Head>
+
+      {/* Hero Section */}
+      <section className="relative py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-green-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
+              Healthcare Technology Solutions
+            </h1>
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
+              Transform healthcare delivery with our comprehensive suite of healthcare micro SaaS solutions. 
+              From telemedicine to advanced analytics, we provide HIPAA-compliant technology for modern healthcare.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4 mb-12">
+              <a href={phoneHref} className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors flex items-center gap-2">
+                <Phone className="w-5 h-5" />
+                Call Now: +1 302 464 0950
+              </a>
+              <a href={emailHref} className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors flex items-center gap-2">
+                <Mail className="w-5 h-5" />
+                Email: kleber@ziontechgroup.com
+              </a>
+              <a href={websiteHref} className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors flex items-center gap-2">
+                <ExternalLink className="w-5 h-5" />
+                Visit: ziontechgroup.com
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Micro SaaS Services */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">
+              Healthcare Micro SaaS Solutions
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Comprehensive healthcare technology solutions designed for modern medical practices
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            {healthcareServices.map((service, index) => (
+              <div key={index} className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-slate-700 hover:border-green-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-green-500/20">
+                <div className="flex items-center mb-4">
+                  <service.icon className="w-8 h-8 text-green-400 mr-3" />
+                  <span className="text-sm text-green-300 font-semibold">{service.category}</span>
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-4">{service.name}</h3>
+                <p className="text-gray-300 mb-6">{service.description}</p>
+                
+                <div className="space-y-4 mb-6">
+                  <div className="flex justify-between items-center">
+                    <span className="text-green-400 font-bold text-xl">{service.price}</span>
+                    <span className="text-sm text-gray-400">ETA: {service.eta}</span>
+                  </div>
+                  <div className="flex justify-between items-center text-sm">
+                    <span className="text-gray-400">Market Price:</span>
+                    <span className="text-gray-300">{service.marketPrice}</span>
+                  </div>
+                  <div className="flex justify-between items-center text-sm">
+                    <span className="text-green-400">Your Savings:</span>
+                    <span className="text-green-400 font-semibold">{service.savings}</span>
+                  </div>
+                </div>
+
+                <div className="mb-6">
+                  <h4 className="text-white font-semibold mb-3">Key Features:</h4>
+                  <ul className="space-y-2">
+                    {service.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-start text-gray-300 text-sm">
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="bg-green-500/10 border border-green-500/30 rounded-lg p-4 mb-6">
+                  <div className="flex items-center mb-2">
+                    <Activity className="w-5 h-5 text-green-400 mr-2" />
+                    <span className="text-green-400 font-semibold">ROI Impact</span>
+                  </div>
+                  <p className="text-green-300 text-sm">{service.roi}</p>
+                </div>
+
+                <div className="flex gap-3">
+                  <a href={phoneHref} className="flex-1 bg-green-600 hover:bg-green-700 text-white text-center py-3 rounded-lg font-semibold transition-colors">
+                    Get Quote
+                  </a>
+                  <a href={emailHref} className="flex-1 bg-blue-600 hover:bg-blue-700 text-white text-center py-3 rounded-lg font-semibold transition-colors">
+                    Learn More
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* IT Services */}
+      <section className="py-20 px-4 bg-slate-800/50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+              Supporting IT Services
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Enterprise-grade infrastructure and security solutions for healthcare applications
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {itServices.map((service, index) => (
+              <div key={index} className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-slate-700 hover:border-blue-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/20">
+                <div className="flex items-center mb-4">
+                  <service.icon className="w-8 h-8 text-blue-400 mr-3" />
+                  <span className="text-sm text-blue-300 font-semibold">{service.category}</span>
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-4">{service.name}</h3>
+                <p className="text-gray-300 mb-6">{service.description}</p>
+                
+                <div className="space-y-4 mb-6">
+                  <div className="flex justify-between items-center">
+                    <span className="text-blue-400 font-bold text-xl">{service.price}</span>
+                    <span className="text-sm text-gray-400">ETA: {service.eta}</span>
+                  </div>
+                  <div className="flex justify-between items-center text-sm">
+                    <span className="text-gray-400">Market Price:</span>
+                    <span className="text-gray-300">{service.marketPrice}</span>
+                  </div>
+                  <div className="flex justify-between items-center text-sm">
+                    <span className="text-blue-400">Your Savings:</span>
+                    <span className="text-blue-400 font-semibold">{service.savings}</span>
+                  </div>
+                </div>
+
+                <div className="mb-6">
+                  <h4 className="text-white font-semibold mb-3">Key Features:</h4>
+                  <ul className="space-y-2">
+                    {service.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-start text-gray-300 text-sm">
+                        <CheckCircle className="w-4 h-4 text-blue-400 mr-2 mt-0.5 flex-shrink-0" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="bg-blue-500/10 border border-blue-500/30 rounded-lg p-4 mb-6">
+                  <div className="flex items-center mb-2">
+                    <Activity className="w-5 h-5 text-blue-400 mr-2" />
+                    <span className="text-blue-400 font-semibold">ROI Impact</span>
+                  </div>
+                  <p className="text-blue-300 text-sm">{service.roi}</p>
+                </div>
+
+                <div className="flex gap-3">
+                  <a href={phoneHref} className="flex-1 bg-blue-600 hover:bg-blue-700 text-white text-center py-3 rounded-lg font-semibold transition-colors">
+                    Get Quote
+                  </a>
+                  <a href={emailHref} className="flex-1 bg-green-600 hover:bg-green-700 text-white text-center py-3 rounded-lg font-semibold transition-colors">
+                    Learn More
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl font-bold text-white mb-8">Ready to Transform Your Healthcare Operations?</h2>
+          <p className="text-xl text-gray-300 mb-12">
+            Contact us today for a free consultation and custom quote for your healthcare technology needs.
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-slate-700">
+              <Phone className="w-12 h-12 text-green-400 mx-auto mb-4" />
+              <h3 className="text-xl font-bold text-white mb-2">Call Us</h3>
+              <p className="text-gray-300 mb-4">Speak directly with our healthcare technology experts</p>
+              <a href={phoneHref} className="text-green-400 font-semibold hover:text-green-300">
+                +1 302 464 0950
+              </a>
+            </div>
+            
+            <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-slate-700">
+              <Mail className="w-12 h-12 text-blue-400 mx-auto mb-4" />
+              <h3 className="text-xl font-bold text-white mb-2">Email Us</h3>
+              <p className="text-gray-300 mb-4">Get detailed information and pricing</p>
+              <a href={emailHref} className="text-blue-400 font-semibold hover:text-blue-300">
+                kleber@ziontechgroup.com
+              </a>
+            </div>
+            
+            <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border border-slate-700">
+              <MapPin className="w-12 h-12 text-purple-400 mx-auto mb-4" />
+              <h3 className="text-xl font-bold text-white mb-2">Visit Us</h3>
+              <p className="text-gray-300 mb-4">Our headquarters location</p>
+              <p className="text-purple-400 font-semibold">
+                364 E Main St STE 1008<br />
+                Middletown DE 19709
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}

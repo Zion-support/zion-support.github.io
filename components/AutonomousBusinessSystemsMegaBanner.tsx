@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function AutonomousBusinessSystemsMegaBanner() {
   return (
@@ -79,15 +79,13 @@ export default function AutonomousBusinessSystemsMegaBanner() {
 
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
-            <Link 
-              href="/blog/ai-autonomous-business-systems-2026"
+            <Link to="/blog/ai-autonomous-business-systems-2026"
               className="bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
               Read Full Research Paper
             </Link>
             
-            <Link 
-              href="/case-studies/ai-autonomous-business-systems-success-2026"
+            <Link to="/case-studies/ai-autonomous-business-systems-success-2026"
               className="bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-600 hover:to-indigo-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
               View Success Story
@@ -95,15 +93,15 @@ export default function AutonomousBusinessSystemsMegaBanner() {
           </div>
           
           <div className="flex justify-center items-center gap-6 text-green-200">
-            <Link href="/services/ai-autonomous-operations" className="hover:text-white transition-colors">
+            <Link to="/services/ai-autonomous-operations" className="hover:text-white transition-colors">
               Explore Autonomous Operations
             </Link>
             <span>•</span>
-            <Link href="/services/ai-enterprise-transformation" className="hover:text-white transition-colors">
+            <Link to="/services/ai-enterprise-transformation" className="hover:text-white transition-colors">
               Enterprise Transformation
             </Link>
             <span>•</span>
-            <Link href="/contact" className="hover:text-white transition-colors">
+            <Link to="/contact" className="hover:text-white transition-colors">
               Get Started Today
             </Link>
           </div>

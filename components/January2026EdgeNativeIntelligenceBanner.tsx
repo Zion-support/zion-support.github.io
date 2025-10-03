@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function January2026EdgeNativeIntelligenceBanner() {
   return (
@@ -57,14 +57,12 @@ export default function January2026EdgeNativeIntelligenceBanner() {
 
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link
-              href="/blog/ai-2026-edge-native-intelligence-revolution"
+            <Link to="/blog/ai-2026-edge-native-intelligence-revolution"
               className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-cyan-600 hover:to-blue-700 transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
             >
               Read Full Article →
             </Link>
-            <Link
-              href="/case-studies/ai-2026-edge-native-intelligence-mega-success"
+            <Link to="/case-studies/ai-2026-edge-native-intelligence-mega-success"
               className="bg-gradient-to-r from-purple-500 to-indigo-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-purple-600 hover:to-indigo-700 transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
             >
               View Success Story →

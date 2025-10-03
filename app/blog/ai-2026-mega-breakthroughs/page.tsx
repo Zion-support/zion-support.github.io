@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { ArrowRight, Zap, Brain, Shield, Rocket, Target } from 'lucide-react';
 
 export const metadata = {
@@ -254,8 +254,7 @@ export default function AI2026MegaBreakthroughs() {
           Don't let your competitors gain the advantage. Start implementing these breakthrough technologies today.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link
-            href="/case-studies/ai-2026-mega-transformation-success"
+          <Link to="/case-studies/ai-2026-mega-transformation-success"
             className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
           >
             View Success Stories
@@ -273,7 +272,7 @@ export default function AI2026MegaBreakthroughs() {
       <div className="mt-12 pt-8 border-t border-gray-200">
         <h3 className="text-2xl font-bold text-gray-900 mb-6">Related Breakthrough Content</h3>
         <div className="grid md:grid-cols-2 gap-6">
-          <Link href="/blog/ai-quantum-optimization-2026" className="group">
+          <Link to="/blog/ai-quantum-optimization-2026" className="group">
             <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-6 rounded-lg border border-blue-200 hover:shadow-lg transition-shadow">
               <h4 className="font-semibold text-gray-900 group-hover:text-blue-600 mb-2">
                 Quantum AI Optimization: 1000x Performance Gains
@@ -283,7 +282,7 @@ export default function AI2026MegaBreakthroughs() {
               </p>
             </div>
           </Link>
-          <Link href="/case-studies/ai-neural-interface-success-2026" className="group">
+          <Link to="/case-studies/ai-neural-interface-success-2026" className="group">
             <div className="bg-gradient-to-r from-green-50 to-teal-50 p-6 rounded-lg border border-green-200 hover:shadow-lg transition-shadow">
               <h4 className="font-semibold text-gray-900 group-hover:text-green-600 mb-2">
                 300% Productivity Case Study: Neural Interfaces

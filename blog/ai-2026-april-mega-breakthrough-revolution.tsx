@@ -1,6 +1,6 @@
 import React from 'react';
 import { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata: Metadata = {
   title: 'AI April 2026 Mega Breakthrough Revolution - 99.9% Autonomous Enterprise Operations | Zion Tech Group',

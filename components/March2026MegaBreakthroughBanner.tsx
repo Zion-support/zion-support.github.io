@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function March2026MegaBreakthroughBanner() {
   return (
@@ -99,20 +99,17 @@ export default function March2026MegaBreakthroughBanner() {
 
           {/* Call to Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Link
-              href="/blog/ai-2026-march-mega-breakthrough-revolution"
+            <Link to="/blog/ai-2026-march-mega-breakthrough-revolution"
               className="bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
             >
               Read Full Breakthrough →
             </Link>
-            <Link
-              href="/case-studies/ai-2026-march-mega-breakthrough-15-billion-success"
+            <Link to="/case-studies/ai-2026-march-mega-breakthrough-15-billion-success"
               className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
             >
               View $15.2B Success Story →
             </Link>
-            <Link
-              href="/contact"
+            <Link to="/contact"
               className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               Get Started Today
@@ -121,22 +118,19 @@ export default function March2026MegaBreakthroughBanner() {
 
           {/* Additional Links */}
           <div className="flex flex-wrap justify-center gap-4 text-sm">
-            <Link
-              href="/services/ai-2026-march-mega-breakthrough-solutions"
+            <Link to="/services/ai-2026-march-mega-breakthrough-solutions"
               className="text-purple-300 hover:text-purple-200 transition-colors"
             >
               Implementation Services
             </Link>
             <span className="text-gray-500">•</span>
-            <Link
-              href="/case-studies"
+            <Link to="/case-studies"
               className="text-purple-300 hover:text-purple-200 transition-colors"
             >
               All Success Stories
             </Link>
             <span className="text-gray-500">•</span>
-            <Link
-              href="/blog"
+            <Link to="/blog"
               className="text-purple-300 hover:text-purple-200 transition-colors"
             >
               Latest AI Insights

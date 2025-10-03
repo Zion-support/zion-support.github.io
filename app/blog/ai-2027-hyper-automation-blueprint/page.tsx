@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'AI 2027 Hyper‑Automation Blueprint | Zion Tech Group',
@@ -78,7 +78,7 @@ export default function HyperAutomationBlueprint2027Page() {
 
           <p>
             For a deeper dive into workflow orchestration patterns, see our guide on{' '}
-            <Link href="/blog/agentic-workflow-orchestration-2026" className="text-emerald-400 hover:text-emerald-300">
+            <Link to="/blog/agentic-workflow-orchestration-2026" className="text-emerald-400 hover:text-emerald-300">
               Agentic Workflow Orchestration 2026
             </Link>
             .
@@ -86,7 +86,7 @@ export default function HyperAutomationBlueprint2027Page() {
         </div>
 
         <div className="mt-12">
-          <Link href="/blog" className="inline-block bg-white text-emerald-700 px-6 py-3 rounded-lg font-bold hover:bg-emerald-50">
+          <Link to="/blog" className="inline-block bg-white text-emerald-700 px-6 py-3 rounded-lg font-bold hover:bg-emerald-50">
             ← Back to Blog
           </Link>
         </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { ArrowRight, TrendingUp, Users, DollarSign, Clock } from 'lucide-react';
 
 const January2025NewContentBanner: React.FC = () => {
@@ -70,16 +70,14 @@ const January2025NewContentBanner: React.FC = () => {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link 
-                href="/blog/ai-2025-january-15-practical-ai-implementation-roadmap"
+              <Link to="/blog/ai-2025-january-15-practical-ai-implementation-roadmap"
                 className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-600 hover:to-indigo-600 text-white font-semibold rounded-lg transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl"
               >
                 Read Complete Roadmap
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               
-              <Link 
-                href="/case-studies/fortune-100-ai-transformation-2025-2-3-billion-success"
+              <Link to="/case-studies/fortune-100-ai-transformation-2025-2-3-billion-success"
                 className="inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-white hover:bg-white hover:text-blue-900 text-white font-semibold rounded-lg transition-all duration-200"
               >
                 View Success Story

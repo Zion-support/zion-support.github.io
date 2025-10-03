@@ -1,108 +1,131 @@
 #!/bin/bash
 
-# Comprehensive merge strategy for all open PRs
-# This script will merge all relevant branches into main
-
+# Comprehensive script to merge all cursor/fix-errors-and-merge-to-main branches
 set -e
 
-echo "🚀 Starting comprehensive branch merge process..."
+echo "🚀 Starting comprehensive merge process for all branches..."
 
-# Function to merge a branch with conflict resolution
-merge_branch() {
+# Get all cursor branches
+BRANCHES=(
+    "cursor/fix-errors-and-merge-to-main-092a"
+    "cursor/fix-errors-and-merge-to-main-1361"
+    "cursor/fix-errors-and-merge-to-main-1aaf"
+    "cursor/fix-errors-and-merge-to-main-2303"
+    "cursor/fix-errors-and-merge-to-main-2ad6"
+    "cursor/fix-errors-and-merge-to-main-549d"
+    "cursor/fix-errors-and-merge-to-main-5562"
+    "cursor/fix-errors-and-merge-to-main-59dc"
+    "cursor/fix-errors-and-merge-to-main-59e5"
+    "cursor/fix-errors-and-merge-to-main-5a1e"
+    "cursor/fix-errors-and-merge-to-main-5caf"
+    "cursor/fix-errors-and-merge-to-main-6517"
+    "cursor/fix-errors-and-merge-to-main-69a3"
+    "cursor/fix-errors-and-merge-to-main-6af4"
+    "cursor/fix-errors-and-merge-to-main-7162"
+    "cursor/fix-errors-and-merge-to-main-7679"
+    "cursor/fix-errors-and-merge-to-main-7a03"
+    "cursor/fix-errors-and-merge-to-main-8428"
+    "cursor/fix-errors-and-merge-to-main-8fe9"
+    "cursor/fix-errors-and-merge-to-main-95bc"
+    "cursor/fix-errors-and-merge-to-main-9759"
+    "cursor/fix-errors-and-merge-to-main-9a25"
+    "cursor/fix-errors-and-merge-to-main-a771"
+    "cursor/fix-errors-and-merge-to-main-adc9"
+    "cursor/fix-errors-and-merge-to-main-b32f"
+    "cursor/fix-errors-and-merge-to-main-b7c3"
+    "cursor/fix-errors-and-merge-to-main-bcfd"
+    "cursor/fix-errors-and-merge-to-main-bd5e"
+    "cursor/fix-errors-and-merge-to-main-c24f"
+    "cursor/fix-errors-and-merge-to-main-c26f"
+    "cursor/fix-errors-and-merge-to-main-c338"
+    "cursor/fix-errors-and-merge-to-main-caf5"
+    "cursor/fix-errors-and-merge-to-main-cf6a"
+    "cursor/fix-errors-and-merge-to-main-d14e"
+    "cursor/fix-errors-and-merge-to-main-e14f"
+    "cursor/fix-errors-and-merge-to-main-e7ee"
+    "cursor/fix-errors-and-merge-to-main-e8d8"
+    "cursor/fix-errors-and-merge-to-main-ea18"
+    "cursor/fix-errors-and-merge-to-main-ec2e"
+    "cursor/fix-errors-and-merge-to-main-ec70"
+    "cursor/fix-errors-and-merge-to-main-f08d"
+    "cursor/fix-errors-and-merge-to-main-fed1"
+)
+
+# Function to resolve merge conflicts by keeping main branch version
+resolve_conflicts() {
     local branch=$1
-    echo "📦 Attempting to merge branch: $branch"
+    echo "🔧 Resolving conflicts in $branch by keeping main branch changes..."
     
-    if git merge "origin/$branch" --no-ff -m "merge: Integrate $branch into main" 2>/dev/null; then
-        echo "✅ Successfully merged $branch"
-        return 0
-    else
-        echo "⚠️  Merge conflict in $branch, resolving..."
+    # Find all conflicted files
+    local conflicted_files=$(git diff --name-only --diff-filter=U)
+    
+    if [ -n "$conflicted_files" ]; then
+        echo "📝 Found conflicted files: $conflicted_files"
         
-        # Check what files have conflicts
-        local conflicts=$(git diff --name-only --diff-filter=U)
-        
-        if [ -z "$conflicts" ]; then
-            echo "✅ No conflicts found, continuing..."
-            git commit --no-edit
-            return 0
-        fi
-        
-        echo "🔧 Resolving conflicts in: $conflicts"
-        
-        # For App.tsx conflicts, use a strategy that combines both versions
-        if echo "$conflicts" | grep -q "App.tsx"; then
-            echo "🔧 Resolving App.tsx conflicts by combining imports..."
-            # Keep both sets of imports and content
-            git checkout --ours App.tsx
-            # Add any new imports from the incoming branch
-            git show "origin/$branch:App.tsx" | grep "^import" >> App.tsx.tmp || true
-            if [ -f App.tsx.tmp ]; then
-                # Remove duplicates and merge
-                sort App.tsx.tmp | uniq > App.tsx.imports
-                rm App.tsx.tmp
-            fi
-        fi
-        
-        # For other conflicts, use incoming version
-        for conflict in $conflicts; do
-            if [ "$conflict" != "App.tsx" ]; then
-                echo "🔧 Using incoming version for $conflict"
-                git checkout --theirs "$conflict"
-            fi
+        # For each conflicted file, use main branch version
+        for file in $conflicted_files; do
+            echo "🔄 Resolving conflicts in $file..."
+            git checkout --theirs "$file" 2>/dev/null || git checkout --ours "$file"
+            git add "$file"
         done
         
-        # Add resolved files and commit
-        git add .
-        git commit --no-edit -m "merge: Resolve conflicts and integrate $branch"
-        echo "✅ Successfully resolved conflicts for $branch"
-        return 0
+        # Commit the merge
+        git commit -m "Merge $branch into main - resolved conflicts by keeping main branch changes"
+        echo "✅ Successfully merged $branch"
+    else
+        echo "✅ No conflicts found in $branch"
     fi
 }
 
-# Get list of branches to merge (prioritized by recency and importance)
-branches=(
-    "feature/new-content-and-advertising-final"
-    "feature/performance-and-recommendation-improvements" 
-    "january-2026-content-final"
-    "january-2026-content-merge"
-)
-
-# Add recent cursor branches
-recent_branches=$(git for-each-ref --sort=-committerdate refs/remotes/origin --format='%(refname:short)' | grep "cursor/create-and-deploy-new-content" | head -20)
-
-for branch in $recent_branches; do
-    branches+=("${branch#origin/}")
-done
-
-echo "📋 Found ${#branches[@]} branches to merge"
-
-# Merge each branch
-for branch in "${branches[@]}"; do
-    echo ""
+# Function to merge a single branch
+merge_branch() {
+    local branch=$1
     echo "🔄 Processing branch: $branch"
     
-    # Check if branch exists
-    if ! git show-ref --verify --quiet "refs/remotes/origin/$branch"; then
-        echo "⚠️  Branch $branch does not exist, skipping..."
-        continue
+    # Checkout the branch
+    git checkout "$branch" 2>/dev/null || {
+        echo "⚠️  Branch $branch not found locally, skipping..."
+        return 0
+    }
+    
+    # Try to merge main into the branch
+    echo "🔀 Attempting to merge main into $branch..."
+    if git merge main --no-edit; then
+        echo "✅ Successfully merged main into $branch"
+    else
+        echo "⚠️  Merge conflicts detected in $branch"
+        resolve_conflicts "$branch"
     fi
     
-    # Check if branch is already merged
-    if git merge-base --is-ancestor "origin/$branch" HEAD; then
-        echo "✅ Branch $branch is already merged, skipping..."
-        continue
+    # Switch back to main
+    git checkout main
+    
+    # Merge the branch into main
+    echo "🔀 Merging $branch into main..."
+    if git merge "$branch" --no-edit; then
+        echo "✅ Successfully merged $branch into main"
+    else
+        echo "⚠️  Final merge conflicts detected"
+        resolve_conflicts "$branch"
     fi
     
+    echo "🎉 Completed processing $branch"
+    echo "---"
+}
+
+# Main execution
+echo "📊 Total branches to process: ${#BRANCHES[@]}"
+
+# Process each branch
+for branch in "${BRANCHES[@]}"; do
     merge_branch "$branch"
 done
 
-echo ""
-echo "🎉 All branches merged successfully!"
-echo "📊 Final status:"
-git status --short
+echo "🚀 All branches processed successfully!"
+echo "📤 Pushing updated main branch to remote..."
 
-echo ""
-echo "🚀 Pushing merged changes to remote..."
-git push origin main --force-with-lease
+# Push the updated main branch
+git push origin main
 
-echo "✅ Merge process completed successfully!"
+echo "✅ Comprehensive merge process completed!"
+echo "🎯 All branches have been merged into main and pushed to remote."

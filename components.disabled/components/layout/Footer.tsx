@@ -29,7 +29,7 @@ interface ComponentProps {
   [key: string]: unknown}
 
 
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { Button } from '../ui/Button';
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();

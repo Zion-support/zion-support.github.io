@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function AI2027AutonomousOperationsAdvertisingBanner() {
   return (
@@ -35,14 +35,12 @@ export default function AI2027AutonomousOperationsAdvertisingBanner() {
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link 
-              href="/blog/ai-2027-autonomous-enterprise-operations-revolution"
+            <Link to="/blog/ai-2027-autonomous-enterprise-operations-revolution"
               className="bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               Read Autonomous Operations Guide
             </Link>
-            <Link 
-              href="/case-studies"
+            <Link to="/case-studies"
               className="bg-white/20 hover:bg-white/30 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 border border-white/30"
             >
               View Success Stories

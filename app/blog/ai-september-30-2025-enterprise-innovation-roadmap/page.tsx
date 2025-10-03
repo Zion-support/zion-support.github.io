@@ -1,6 +1,6 @@
 // @ts-nocheck
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'AI September 30, 2025 — Enterprise Innovation Roadmap | Zion Tech Group',
@@ -74,8 +74,8 @@ export default function EnterpriseInnovationRoadmapSept302025() {
             <h3 className="text-2xl font-bold text-white mb-2">Accelerate your AI roadmap</h3>
             <p className="text-emerald-100 mb-4">We bring playbooks, guardrails, and platform patterns that work.</p>
             <div className="flex gap-3 justify-center">
-              <Link href="/contact" className="bg-white text-emerald-700 px-6 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors">Start a pilot</Link>
-              <Link href="/blog" className="border border-white/70 text-white px-6 py-2 rounded-lg font-semibold hover:bg-white hover:text-emerald-700 transition-colors">Learn more</Link>
+              <Link to="/contact" className="bg-white text-emerald-700 px-6 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors">Start a pilot</Link>
+              <Link to="/blog" className="border border-white/70 text-white px-6 py-2 rounded-lg font-semibold hover:bg-white hover:text-emerald-700 transition-colors">Learn more</Link>
             </div>
           </div>
         </article>

@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function Ultimate2026ContentRevolutionBanner() {
   return (
@@ -44,14 +44,12 @@ export default function Ultimate2026ContentRevolutionBanner() {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link 
-                href="/content-hub"
+              <Link to="/content-hub"
                 className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-200 text-center"
               >
                 Explore Content Hub
               </Link>
-              <Link 
-                href="/blog"
+              <Link to="/blog"
                 className="bg-white/20 backdrop-blur-sm border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/30 transition-all duration-200 text-center"
               >
                 Read Latest Articles

@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'AI Edge Computing Transformation 2026: 95% Latency Reduction & Distributed Intelligence | Zion Tech Group',

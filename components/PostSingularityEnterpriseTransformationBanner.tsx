@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 const PostSingularityEnterpriseTransformationBanner: React.FC = () => {
   return (
@@ -57,20 +57,17 @@ const PostSingularityEnterpriseTransformationBanner: React.FC = () => {
           
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Link 
-              href="/blog/ai-2026-post-singularity-enterprise-transformation"
+            <Link to="/blog/ai-2026-post-singularity-enterprise-transformation"
               className="bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
             >
               Read Full Article →
             </Link>
-            <Link 
-              href="/case-studies/post-singularity-enterprise-1-trillion-success"
+            <Link to="/case-studies/post-singularity-enterprise-1-trillion-success"
               className="bg-gradient-to-r from-indigo-500 to-cyan-600 hover:from-indigo-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 transform hover:-translate-y-1"
             >
               View $1T Success Story →
             </Link>
-            <Link 
-              href="/contact"
+            <Link to="/contact"
               className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               Start Transformation

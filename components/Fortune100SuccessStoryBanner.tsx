@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle, TrendingUp, DollarSign, Users, Clock } from 'lucide-react';
 
 const Fortune100SuccessStoryBanner: React.FC = () => {
@@ -161,16 +161,14 @@ const Fortune100SuccessStoryBanner: React.FC = () => {
         {/* Call to Action */}
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link 
-              href="/case-studies/fortune-100-ai-transformation-2025-2-3-billion-success"
+            <Link to="/case-studies/fortune-100-ai-transformation-2025-2-3-billion-success"
               className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white font-semibold rounded-lg transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
               Read Full Case Study
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
             
-            <Link 
-              href="/blog/ai-2025-january-15-practical-ai-implementation-roadmap"
+            <Link to="/blog/ai-2025-january-15-practical-ai-implementation-roadmap"
               className="inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-white hover:bg-white hover:text-green-900 text-white font-semibold rounded-lg transition-all duration-200"
             >
               View Implementation Roadmap

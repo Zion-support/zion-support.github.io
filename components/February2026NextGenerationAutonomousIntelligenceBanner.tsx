@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function February2026NextGenerationAutonomousIntelligenceBanner() {
   return (
@@ -52,20 +52,17 @@ export default function February2026NextGenerationAutonomousIntelligenceBanner()
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Link 
-              href="/blog/ai-2026-february-next-generation-autonomous-intelligence-revolution"
+            <Link to="/blog/ai-2026-february-next-generation-autonomous-intelligence-revolution"
               className="bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
             >
               Read Full Breakthrough Report
             </Link>
-            <Link 
-              href="/case-studies/ai-2026-february-autonomous-intelligence-2-5-trillion-success"
+            <Link to="/case-studies/ai-2026-february-autonomous-intelligence-2-5-trillion-success"
               className="bg-gradient-to-r from-indigo-500 to-blue-600 hover:from-indigo-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 transform hover:-translate-y-1"
             >
               View $2.5T Success Story
             </Link>
-            <Link 
-              href="/contact"
+            <Link to="/contact"
               className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               Start Your Transformation
@@ -114,8 +111,7 @@ export default function February2026NextGenerationAutonomousIntelligenceBanner()
           {/* Bottom CTA */}
           <div className="mt-12 text-center">
             <p className="text-gray-400 mb-4">Ready to join the Next-Generation Autonomous Intelligence Revolution?</p>
-            <Link 
-              href="/contact"
+            <Link to="/contact"
               className="inline-block bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1"
             >
               Get Started Today

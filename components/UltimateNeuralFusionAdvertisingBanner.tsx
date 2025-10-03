@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function UltimateNeuralFusionAdvertisingBanner() {
   return (
@@ -79,7 +79,7 @@ export default function UltimateNeuralFusionAdvertisingBanner() {
 
           {/* Content Links */}
           <div className="grid md:grid-cols-2 gap-8 mb-12">
-            <Link href="/blog/ai-2026-ultimate-neural-fusion-breakthrough" className="group block rounded-xl border border-purple-500/20 bg-gradient-to-br from-purple-900/20 to-indigo-900/20 p-8 hover:border-purple-400/40 transition-all duration-300 hover:scale-105">
+            <Link to="/blog/ai-2026-ultimate-neural-fusion-breakthrough" className="group block rounded-xl border border-purple-500/20 bg-gradient-to-br from-purple-900/20 to-indigo-900/20 p-8 hover:border-purple-400/40 transition-all duration-300 hover:scale-105">
               <div className="flex items-center gap-3 mb-4">
                 <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-4 py-2 rounded-full text-sm font-bold">BREAKTHROUGH</span>
                 <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-4 py-2 rounded-full text-sm font-bold">500,000x</span>
@@ -96,7 +96,7 @@ export default function UltimateNeuralFusionAdvertisingBanner() {
               </div>
             </Link>
             
-            <Link href="/case-studies/ai-2026-ultimate-neural-fusion-100-billion-success" className="group block rounded-xl border border-green-500/20 bg-gradient-to-br from-green-900/20 to-emerald-900/20 p-8 hover:border-green-400/40 transition-all duration-300 hover:scale-105">
+            <Link to="/case-studies/ai-2026-ultimate-neural-fusion-100-billion-success" className="group block rounded-xl border border-green-500/20 bg-gradient-to-br from-green-900/20 to-emerald-900/20 p-8 hover:border-green-400/40 transition-all duration-300 hover:scale-105">
               <div className="flex items-center gap-3 mb-4">
                 <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-4 py-2 rounded-full text-sm font-bold">$100B SUCCESS</span>
                 <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-4 py-2 rounded-full text-sm font-bold">FORTUNE 50</span>
@@ -123,14 +123,12 @@ export default function UltimateNeuralFusionAdvertisingBanner() {
                 with revolutionary AI systems powered by universal consciousness integration.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
-                  href="/contact" 
+                <Link to="/contact" 
                   className="bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
                 >
                   Implement Neural Fusion →
                 </Link>
-                <Link 
-                  href="/services/ai-2026-ultimate-neural-fusion-solutions" 
+                <Link to="/services/ai-2026-ultimate-neural-fusion-solutions" 
                   className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
                 >
                   View Solutions

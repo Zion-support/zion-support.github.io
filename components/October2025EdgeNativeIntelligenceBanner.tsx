@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function October2025EdgeNativeIntelligenceBanner() {
   return (
@@ -67,8 +67,7 @@ export default function October2025EdgeNativeIntelligenceBanner() {
 
         {/* Call-to-Action Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
-          <Link
-            href="/blog/ai-2025-october-edge-native-autonomous-intelligence"
+          <Link to="/blog/ai-2025-october-edge-native-autonomous-intelligence"
             className="group inline-flex items-center gap-3 bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-400 hover:to-cyan-400 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
           >
             <span className="text-xl">📖</span>
@@ -76,8 +75,7 @@ export default function October2025EdgeNativeIntelligenceBanner() {
             <span className="group-hover:translate-x-1 transition-transform">→</span>
           </Link>
           
-          <Link
-            href="/case-studies/ai-2025-october-fortune-100-edge-intelligence-12-billion-success"
+          <Link to="/case-studies/ai-2025-october-fortune-100-edge-intelligence-12-billion-success"
             className="group inline-flex items-center gap-3 bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-400 hover:to-emerald-400 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
           >
             <span className="text-xl">🏆</span>
@@ -85,8 +83,7 @@ export default function October2025EdgeNativeIntelligenceBanner() {
             <span className="group-hover:translate-x-1 transition-transform">→</span>
           </Link>
           
-          <Link
-            href="/services/edge-native-autonomous-intelligence-platform"
+          <Link to="/services/edge-native-autonomous-intelligence-platform"
             className="group inline-flex items-center gap-3 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-400 hover:to-pink-400 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
           >
             <span className="text-xl">⚙️</span>
@@ -128,8 +125,7 @@ export default function October2025EdgeNativeIntelligenceBanner() {
             <span className="font-semibold text-white">Limited Time Offer:</span> Schedule a consultation this month and receive 
             a complimentary edge AI readiness assessment (valued at $50,000)
           </p>
-          <Link
-            href="/contact"
+          <Link to="/contact"
             className="inline-flex items-center gap-2 text-blue-300 hover:text-blue-200 font-semibold text-lg transition-colors"
           >
             Schedule Your Consultation Today

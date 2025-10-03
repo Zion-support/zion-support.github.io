@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function Revolutionary2027ContentMegaBanner() {
   return (
@@ -24,8 +24,7 @@ export default function Revolutionary2027ContentMegaBanner() {
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          <Link 
-            href="/blog/ai-2027-meta-cognitive-superintelligence-breakthrough"
+          <Link to="/blog/ai-2027-meta-cognitive-superintelligence-breakthrough"
             className="group block rounded-2xl border border-purple-500/30 bg-gradient-to-br from-purple-900/40 to-indigo-900/40 p-8 hover:border-purple-400/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl"
           >
             <div className="flex items-center gap-3 mb-4">
@@ -51,8 +50,7 @@ export default function Revolutionary2027ContentMegaBanner() {
             </div>
           </Link>
 
-          <Link 
-            href="/case-studies/ai-2027-meta-cognitive-superintelligence-success"
+          <Link to="/case-studies/ai-2027-meta-cognitive-superintelligence-success"
             className="group block rounded-2xl border border-green-500/30 bg-gradient-to-br from-green-900/40 to-emerald-900/40 p-8 hover:border-green-400/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl"
           >
             <div className="flex items-center gap-3 mb-4">
@@ -78,8 +76,7 @@ export default function Revolutionary2027ContentMegaBanner() {
             </div>
           </Link>
 
-          <Link 
-            href="/blog/ai-2026-synthetic-intelligence-revolution"
+          <Link to="/blog/ai-2026-synthetic-intelligence-revolution"
             className="group block rounded-2xl border border-blue-500/30 bg-gradient-to-br from-blue-900/40 to-cyan-900/40 p-8 hover:border-blue-400/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl"
           >
             <div className="flex items-center gap-3 mb-4">
@@ -108,14 +105,12 @@ export default function Revolutionary2027ContentMegaBanner() {
 
         <div className="text-center">
           <div className="inline-flex flex-col sm:flex-row gap-4">
-            <Link
-              href="/blog"
+            <Link to="/blog"
               className="inline-block bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-indigo-700 transition-all shadow-lg hover:shadow-xl"
             >
               Explore All AI Content
             </Link>
-            <Link
-              href="/case-studies"
+            <Link to="/case-studies"
               className="inline-block bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-green-700 hover:to-emerald-700 transition-all shadow-lg hover:shadow-xl"
             >
               View Success Stories

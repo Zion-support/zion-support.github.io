@@ -1,12 +1,12 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function NAS500xSuccessPage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white">
       <div className="max-w-4xl mx-auto px-4 py-16">
         <div className="mb-8">
-          <Link href="/case-studies" className="text-blue-400 hover:text-blue-300 mb-4 inline-block">
+          <Link to="/case-studies" className="text-blue-400 hover:text-blue-300 mb-4 inline-block">
             ← Back to Case Studies
           </Link>
           <div className="flex items-center gap-2 mb-4">
@@ -231,14 +231,12 @@ export default function NAS500xSuccessPage() {
               architecture discovery systems can help you achieve breakthrough performance in days.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Link 
-                href="/services/ai-innovation-lab" 
+              <Link to="/services/ai-innovation-lab" 
                 className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-orange-700 hover:to-red-700 transition-all"
               >
                 Explore NAS Services
               </Link>
-              <Link 
-                href="/contact" 
+              <Link to="/contact" 
                 className="border border-white/20 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all"
               >
                 Schedule Demo

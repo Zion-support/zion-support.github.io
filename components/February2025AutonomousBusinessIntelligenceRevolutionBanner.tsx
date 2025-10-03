@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { ArrowRight, Brain, Zap, Target, TrendingUp, Clock, Shield } from 'lucide-react';
 
 export default function February2025AutonomousBusinessIntelligenceRevolutionBanner() {
@@ -66,7 +66,7 @@ export default function February2025AutonomousBusinessIntelligenceRevolutionBann
 
           {/* Featured Content */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-            <Link href="/blog/ai-2025-february-autonomous-business-intelligence-revolution" 
+            <Link to="/blog/ai-2025-february-autonomous-business-intelligence-revolution" 
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
               <div className="text-left">
                 <div className="flex items-center mb-6">
@@ -161,12 +161,12 @@ export default function February2025AutonomousBusinessIntelligenceRevolutionBann
               Get expert consultation and implementation support from Zion Tech Group.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" 
+              <Link to="/contact" 
                     className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-yellow-500 to-emerald-500 text-black font-bold rounded-xl hover:from-yellow-400 hover:to-emerald-400 transition-all duration-300 transform hover:scale-105">
                 Get Expert Consultation
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
-              <Link href="/services/autonomous-ai-solutions" 
+              <Link to="/services/autonomous-ai-solutions" 
                     className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-semibold rounded-xl border border-white/30 hover:bg-white/20 transition-all duration-300">
                 Explore Autonomous Solutions
               </Link>
@@ -179,17 +179,17 @@ export default function February2025AutonomousBusinessIntelligenceRevolutionBann
               More Autonomous Intelligence Resources:
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link href="/blog/ai-2025-february-quantum-neural-superintelligence-enterprise-breakthrough" 
+              <Link to="/blog/ai-2025-february-quantum-neural-superintelligence-enterprise-breakthrough" 
                     className="text-yellow-300 hover:text-yellow-200 transition-colors text-sm underline">
                 Quantum Neural Superintelligence
               </Link>
               <span className="text-teal-400">•</span>
-              <Link href="/case-studies" 
+              <Link to="/case-studies" 
                     className="text-yellow-300 hover:text-yellow-200 transition-colors text-sm underline">
                 All Success Stories
               </Link>
               <span className="text-teal-400">•</span>
-              <Link href="/guides" 
+              <Link to="/guides" 
                     className="text-yellow-300 hover:text-yellow-200 transition-colors text-sm underline">
                 Implementation Guides
               </Link>

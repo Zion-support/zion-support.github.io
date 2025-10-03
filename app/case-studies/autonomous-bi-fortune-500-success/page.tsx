@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'Fortune 500 Autonomous BI Success: $50M ROI | Zion Tech Group',
@@ -287,8 +287,7 @@ export default function AutonomousBIFortune500Success() {
             Transform your business intelligence with autonomous systems and achieve breakthrough ROI.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/services/ai-autonomous-business-intelligence"
+            <Link to="/services/ai-autonomous-business-intelligence"
               className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Explore Our Solutions
@@ -307,7 +306,7 @@ export default function AutonomousBIFortune500Success() {
       <div className="mt-16 border-t border-gray-200 pt-8">
         <h3 className="text-2xl font-bold mb-6">Related Success Stories</h3>
         <div className="grid md:grid-cols-2 gap-6">
-          <Link href="/case-studies/quantum-analytics-fortune-500-success" className="group">
+          <Link to="/case-studies/quantum-analytics-fortune-500-success" className="group">
             <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
               <h4 className="font-bold text-lg mb-2 group-hover:text-blue-600 transition-colors">
                 Fortune 500 Quantum Analytics: $100M ROI
@@ -317,7 +316,7 @@ export default function AutonomousBIFortune500Success() {
               </p>
             </div>
           </Link>
-          <Link href="/blog/ai-2026-autonomous-business-intelligence-breakthrough" className="group">
+          <Link to="/blog/ai-2026-autonomous-business-intelligence-breakthrough" className="group">
             <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
               <h4 className="font-bold text-lg mb-2 group-hover:text-blue-600 transition-colors">
                 Autonomous BI Breakthrough Guide

@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { ArrowRight, Brain, Zap, Target, TrendingUp } from 'lucide-react';
 
 export default function February2025QuantumNeuralSuperintelligenceBreakthroughBanner() {
@@ -66,7 +66,7 @@ export default function February2025QuantumNeuralSuperintelligenceBreakthroughBa
 
           {/* Featured Content */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
-            <Link href="/blog/ai-2025-february-quantum-neural-superintelligence-enterprise-breakthrough" 
+            <Link to="/blog/ai-2025-february-quantum-neural-superintelligence-enterprise-breakthrough" 
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
               <div className="text-left">
                 <div className="flex items-center mb-4">
@@ -87,7 +87,7 @@ export default function February2025QuantumNeuralSuperintelligenceBreakthroughBa
               </div>
             </Link>
 
-            <Link href="/case-studies/ai-2025-february-fortune-100-quantum-neural-superintelligence-2-7-billion-success" 
+            <Link to="/case-studies/ai-2025-february-fortune-100-quantum-neural-superintelligence-2-7-billion-success" 
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
               <div className="text-left">
                 <div className="flex items-center mb-4">
@@ -108,7 +108,7 @@ export default function February2025QuantumNeuralSuperintelligenceBreakthroughBa
               </div>
             </Link>
 
-            <Link href="/guides/quantum-neural-superintelligence-implementation-guide-2025" 
+            <Link to="/guides/quantum-neural-superintelligence-implementation-guide-2025" 
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
               <div className="text-left">
                 <div className="flex items-center mb-4">
@@ -140,12 +140,12 @@ export default function February2025QuantumNeuralSuperintelligenceBreakthroughBa
               Get expert consultation and implementation support from Zion Tech Group.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" 
+              <Link to="/contact" 
                     className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-yellow-500 to-orange-500 text-black font-bold rounded-xl hover:from-yellow-400 hover:to-orange-400 transition-all duration-300 transform hover:scale-105">
                 Get Expert Consultation
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
-              <Link href="/services/quantum-ai-solutions" 
+              <Link to="/services/quantum-ai-solutions" 
                     className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-semibold rounded-xl border border-white/30 hover:bg-white/20 transition-all duration-300">
                 Explore Quantum Solutions
               </Link>
@@ -158,17 +158,17 @@ export default function February2025QuantumNeuralSuperintelligenceBreakthroughBa
               More Quantum Intelligence Resources:
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link href="/blog/ai-2025-february-autonomous-business-intelligence-revolution" 
+              <Link to="/blog/ai-2025-february-autonomous-business-intelligence-revolution" 
                     className="text-yellow-300 hover:text-yellow-200 transition-colors text-sm underline">
                 Autonomous Business Intelligence Revolution
               </Link>
               <span className="text-blue-400">•</span>
-              <Link href="/guides/ai-2026-implementation-roadmap" 
+              <Link to="/guides/ai-2026-implementation-roadmap" 
                     className="text-yellow-300 hover:text-yellow-200 transition-colors text-sm underline">
                 AI 2026 Implementation Roadmap
               </Link>
               <span className="text-blue-400">•</span>
-              <Link href="/case-studies" 
+              <Link to="/case-studies" 
                     className="text-yellow-300 hover:text-yellow-200 transition-colors text-sm underline">
                 All Success Stories
               </Link>

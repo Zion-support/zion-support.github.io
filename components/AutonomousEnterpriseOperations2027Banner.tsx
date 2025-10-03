@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function AutonomousEnterpriseOperations2027Banner() {
   return (
@@ -61,20 +61,17 @@ export default function AutonomousEnterpriseOperations2027Banner() {
           
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/blog/autonomous-enterprise-operations-2027"
+            <Link to="/blog/autonomous-enterprise-operations-2027"
               className="bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
             >
               🤖 Explore Autonomous Operations →
             </Link>
-            <Link 
-              href="/contact" 
+            <Link to="/contact" 
               className="bg-gradient-to-r from-cyan-500 to-teal-600 hover:from-cyan-400 hover:to-teal-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 transform hover:-translate-y-1"
             >
               💼 Get Free Enterprise Assessment
             </Link>
-            <Link 
-              href="/services/enterprise-automation" 
+            <Link to="/services/enterprise-automation" 
               className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               🚀 View Automation Services
@@ -163,8 +160,7 @@ export default function AutonomousEnterpriseOperations2027Banner() {
                 </p>
               </div>
             </div>
-            <Link 
-              href="/services/enterprise-automation"
+            <Link to="/services/enterprise-automation"
               className="bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-400 hover:to-cyan-500 text-white font-bold py-3 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50"
             >
               Start Your Automation Journey →
