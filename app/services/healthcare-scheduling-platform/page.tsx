@@ -1,16 +1,6 @@
 import React from 'react';
-import { Metadata } from 'next';
 import { Link } from 'react-router-dom';
 
-export const metadata: Metadata = {
-  title: 'Healthcare Scheduling Platform - Zion Tech Group',
-  description: 'Comprehensive healthcare scheduling SaaS for hospitals and clinics. Manage appointments, patient data, and virtual consultations with HIPAA compliance.',
-  keywords: 'healthcare scheduling, hospital management, patient appointments, virtual consultations, HIPAA compliance, medical software',
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
 
 export default function HealthcareSchedulingPlatform() {
   return (
@@ -195,12 +185,14 @@ export default function HealthcareSchedulingPlatform() {
           Join thousands of healthcare providers who have streamlined their operations with our comprehensive platform.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link to="/contact" 
+          <Link 
+            href="/contact" 
             className="bg-red-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors"
           >
             Request Demo
           </Link>
-          <Link to="https://ziontechgroup.com/services/healthcare-scheduling-platform" 
+          <Link 
+            href="https://ziontechgroup.com/services/healthcare-scheduling-platform" 
             className="border border-red-600 text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-red-50 transition-colors"
           >
             View Pricing

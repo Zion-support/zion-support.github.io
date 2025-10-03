@@ -1,12 +1,6 @@
 import React from 'react';
-import { Metadata } from 'next';
 import { Link } from 'react-router-dom';
 
-export const metadata: Metadata = {
-  title: 'AI 2026: Ultra-Intelligent Autonomous Systems Breakthrough | Zion Tech Group',
-  description: 'Revolutionary 99.99% autonomous AI systems with 50,000x performance boost delivering $15.2B success in Fortune 50 manufacturing.',
-  keywords: 'ultra-intelligent AI, autonomous systems, 99.99% autonomy, 50,000x performance, quantum-neural fusion, meta-cognitive processing',
-};
 
 export default function UltraIntelligentAutonomousSystemsPage() {
   return (
@@ -35,12 +29,14 @@ export default function UltraIntelligentAutonomousSystemsPage() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link to="/case-studies/ai-2026-ultra-intelligent-autonomous-systems-15-billion-success" 
+              <Link 
+                href="/case-studies/ai-2026-ultra-intelligent-autonomous-systems-15-billion-success" 
                 className="bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
               >
                 View $15.2B Success Story →
               </Link>
-              <Link to="/contact" 
+              <Link 
+                href="/contact" 
                 className="bg-gradient-to-r from-indigo-500 to-blue-600 hover:from-indigo-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 transform hover:-translate-y-1"
               >
                 Get Started Today
@@ -226,12 +222,14 @@ export default function UltraIntelligentAutonomousSystemsPage() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact" 
+              <Link 
+                href="/contact" 
                 className="bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
               >
                 Schedule Consultation
               </Link>
-              <Link to="/case-studies/ai-2026-ultra-intelligent-autonomous-systems-15-billion-success" 
+              <Link 
+                href="/case-studies/ai-2026-ultra-intelligent-autonomous-systems-15-billion-success" 
                 className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
               >
                 View Success Story
@@ -250,7 +248,8 @@ export default function UltraIntelligentAutonomousSystemsPage() {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact" 
+            <Link 
+              href="/contact" 
               className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
             >
               Get Started Today

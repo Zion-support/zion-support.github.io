@@ -1,11 +1,5 @@
 import React from 'react';
-// Metadata handled by React Helmet
 
-export const metadata: Metadata = {
-  title: 'Hyperintelligence Mega Success 2026 - Fortune 500 Case Study',
-  description: 'How a Fortune 500 company achieved $3.2B ROI through AI hyperintelligence breakthrough implementation.',
-  keywords: ['AI success story', 'Fortune 500', 'hyperintelligence', 'ROI case study', 'AI transformation'],
-};
 
 export default function HyperintelligenceMegaSuccess2026() {
   return (

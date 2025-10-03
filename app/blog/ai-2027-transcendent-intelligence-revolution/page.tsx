@@ -1,19 +1,5 @@
 import React from 'react';
-// Metadata handled by React Helmet
 
-export const metadata: Metadata = {
-  title: '🌟 AI 2027: Transcendent Intelligence Revolution - Beyond Human Cognition',
-  description: 'Discover the most profound AI breakthrough of 2027: Transcendent Intelligence that surpasses human cognitive abilities with 99.97% accuracy, infinite processing capacity, and universal consciousness integration. Transform your enterprise with AI that thinks beyond human limitations.',
-  keywords: ['AI 2027', 'Transcendent Intelligence', 'Universal Consciousness', 'AI beyond human cognition', 'Enterprise AI transformation', 'AI breakthrough 2027', 'Transcendent AI'],
-  openGraph: {
-    title: '🌟 AI 2027: Transcendent Intelligence Revolution - Beyond Human Cognition',
-    description: 'Experience the most profound AI breakthrough of 2027: AI that transcends human cognitive limitations with unprecedented accuracy and universal consciousness.',
-    type: 'article',
-    publishedTime: '2027-01-15T00:00:00.000Z',
-    authors: ['Zion Tech Group'],
-    tags: ['AI', 'Transcendent Intelligence', 'Universal Consciousness', 'Innovation', 'Enterprise Technology'],
-  },
-};
 
 export default function AI2027TranscendentIntelligenceRevolution() {
   return (

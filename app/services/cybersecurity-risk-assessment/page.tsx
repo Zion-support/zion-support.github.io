@@ -1,12 +1,6 @@
 import React from 'react';
-import { Metadata } from 'next';
 import { Link } from 'react-router-dom';
 
-export const metadata: Metadata = {
-  title: 'Cybersecurity Risk Assessment | Zion Tech Group - Comprehensive Security Evaluation',
-  description: 'Professional cybersecurity risk assessment services with vulnerability scanning, compliance checks, and detailed security recommendations.',
-  keywords: 'cybersecurity assessment, security audit, vulnerability scanning, compliance, risk management, IT security',
-};
 
 export default function CybersecurityRiskAssessmentPage() {
   return (
@@ -25,12 +19,14 @@ export default function CybersecurityRiskAssessmentPage() {
             ensure compliance, and implement robust security measures with expert guidance.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact" 
+            <Link 
+              href="/contact" 
               className="bg-gradient-to-r from-red-600 to-orange-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-700 hover:to-orange-700 transition-all duration-300 transform hover:scale-105"
             >
               Schedule Assessment
             </Link>
-            <Link to="#demo" 
+            <Link 
+              href="#demo" 
               className="border-2 border-red-600 text-red-600 px-8 py-4 rounded-lg font-semibold hover:bg-red-600 hover:text-white transition-all duration-300"
             >
               View Sample Report
@@ -103,7 +99,7 @@ export default function CybersecurityRiskAssessmentPage() {
                 <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> Top 10 recommendations</li>
                 <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> 30-day follow-up</li>
               </ul>
-              <Link to="/contact" className="w-full bg-gray-100 text-gray-800 py-3 rounded-lg font-semibold text-center block hover:bg-gray-200 transition-colors">
+              <Link href="/contact" className="w-full bg-gray-100 text-gray-800 py-3 rounded-lg font-semibold text-center block hover:bg-gray-200 transition-colors">
                 Get Quote
               </Link>
             </div>
@@ -123,7 +119,7 @@ export default function CybersecurityRiskAssessmentPage() {
                 <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> Security training session</li>
                 <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> 90-day follow-up</li>
               </ul>
-              <Link to="/contact" className="w-full bg-red-500 text-white py-3 rounded-lg font-semibold text-center block hover:bg-red-600 transition-colors">
+              <Link href="/contact" className="w-full bg-red-500 text-white py-3 rounded-lg font-semibold text-center block hover:bg-red-600 transition-colors">
                 Schedule Assessment
               </Link>
             </div>
@@ -133,7 +129,7 @@ export default function CybersecurityRiskAssessmentPage() {
             <h3 className="text-xl font-semibold mb-4 text-orange-600">Enterprise Security Program</h3>
             <div className="text-2xl font-bold mb-4">$25,000+</div>
             <p className="text-gray-600 mb-6">Custom enterprise security program with ongoing monitoring, incident response planning, and dedicated security consultant.</p>
-            <Link to="/contact" className="bg-orange-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-600 transition-colors">
+            <Link href="/contact" className="bg-orange-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-600 transition-colors">
               Contact Sales
             </Link>
           </div>
@@ -194,7 +190,7 @@ export default function CybersecurityRiskAssessmentPage() {
                 <span>Protect customer data and trust</span>
               </div>
             </div>
-            <Link to="/contact" className="mt-6 bg-white text-red-600 px-6 py-3 rounded-lg font-semibold inline-block hover:bg-gray-100 transition-colors">
+            <Link href="/contact" className="mt-6 bg-white text-red-600 px-6 py-3 rounded-lg font-semibold inline-block hover:bg-gray-100 transition-colors">
               Schedule Your Assessment
             </Link>
           </div>

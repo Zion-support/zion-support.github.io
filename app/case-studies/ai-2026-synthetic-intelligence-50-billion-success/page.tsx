@@ -1,12 +1,6 @@
 import React from 'react';
-import { Metadata } from 'next';
 import { Link } from 'react-router-dom';
 
-export const metadata: Metadata = {
-  title: 'AI 2026: Synthetic Intelligence Delivers $50B Enterprise Success | Zion Tech Group',
-  description: 'How a Fortune 500 company achieved $50 billion in value through synthetic intelligence implementation, revolutionizing their entire business operations.',
-  keywords: 'synthetic intelligence case study, AI success story, enterprise AI, $50B ROI, business transformation',
-};
 
 export default function SyntheticIntelligenceSuccessPage() {
   return (

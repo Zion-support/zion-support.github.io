@@ -1,21 +1,7 @@
 import React from 'react';
-import { Metadata } from 'next';
 import { Link } from 'react-router-dom';
 import { Calendar, Clock, User, ArrowRight, TrendingUp, DollarSign, Target, Zap, Shield, Users, Award, CheckCircle } from 'lucide-react';
 
-export const metadata: Metadata = {
-  title: 'Fortune 500 AI Transformation: $12.4B ROI Case Study | Zion Tech Group',
-  description: 'Discover how a Fortune 500 company achieved $12.4B ROI through comprehensive AI transformation. Learn about autonomous systems, quantum computing, and neural superintelligence implementation.',
-  keywords: 'Fortune 500 AI transformation, AI ROI case study, autonomous enterprise, quantum computing ROI, neural superintelligence, AI implementation success',
-  openGraph: {
-    title: 'Fortune 500 AI Transformation: $12.4B ROI Case Study',
-    description: 'Discover how a Fortune 500 company achieved $12.4B ROI through comprehensive AI transformation with autonomous systems and quantum computing.',
-    type: 'article',
-    publishedTime: '2026-01-15T00:00:00.000Z',
-    authors: ['Zion Tech Group'],
-    tags: ['AI Transformation', 'Fortune 500', 'ROI Case Study', 'Autonomous Enterprise', 'Quantum Computing']
-  }
-};
 
 export default function Fortune500AITransformation12BROI() {
   return (
@@ -351,13 +337,15 @@ export default function Fortune500AITransformation12BROI() {
                 through strategic AI implementation and autonomous systems deployment.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link to="/contact"
+                <Link 
+                  href="/contact"
                   className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center gap-2"
                 >
                   Start Your Transformation
                   <ArrowRight className="w-4 h-4" />
                 </Link>
-                <Link to="/services"
+                <Link 
+                  href="/services"
                   className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors flex items-center justify-center gap-2"
                 >
                   Explore Our Services
@@ -373,7 +361,7 @@ export default function Fortune500AITransformation12BROI() {
         <div className="mt-16">
           <h3 className="text-2xl font-bold text-white mb-8 text-center">Related Case Studies</h3>
           <div className="grid md:grid-cols-3 gap-6">
-            <Link to="/case-studies/healthcare-ai-transformation-8b-roi" className="group">
+            <Link href="/case-studies/healthcare-ai-transformation-8b-roi" className="group">
               <div className="bg-gradient-to-r from-blue-900/50 to-cyan-900/50 border border-blue-500/30 rounded-xl p-6 hover:border-blue-400/60 transition-colors">
                 <h4 className="text-lg font-semibold text-white mb-2 group-hover:text-blue-300 transition-colors">
                   Healthcare AI Transformation: $8.2B ROI
@@ -383,7 +371,7 @@ export default function Fortune500AITransformation12BROI() {
                 </p>
               </div>
             </Link>
-            <Link to="/case-studies/fintech-quantum-computing-6b-roi" className="group">
+            <Link href="/case-studies/fintech-quantum-computing-6b-roi" className="group">
               <div className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 border border-purple-500/30 rounded-xl p-6 hover:border-purple-400/60 transition-colors">
                 <h4 className="text-lg font-semibold text-white mb-2 group-hover:text-purple-300 transition-colors">
                   FinTech Quantum Computing: $6.7B ROI
@@ -393,7 +381,7 @@ export default function Fortune500AITransformation12BROI() {
                 </p>
               </div>
             </Link>
-            <Link to="/case-studies/retail-neural-superintelligence-9b-roi" className="group">
+            <Link href="/case-studies/retail-neural-superintelligence-9b-roi" className="group">
               <div className="bg-gradient-to-r from-green-900/50 to-teal-900/50 border border-green-500/30 rounded-xl p-6 hover:border-green-400/60 transition-colors">
                 <h4 className="text-lg font-semibold text-white mb-2 group-hover:text-green-300 transition-colors">
                   Retail Neural Superintelligence: $9.1B ROI

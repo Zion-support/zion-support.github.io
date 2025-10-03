@@ -1,20 +1,5 @@
 import React from 'react';
-// Metadata handled by React Helmet
 
-export const metadata: Metadata = {
-  title: 'February 2026 AI Mega Breakthrough Revolution: The Future is Here',
-  description: 'Discover the revolutionary AI breakthroughs that are transforming enterprise operations in February 2026. Meta-cognitive AI, quantum-neural fusion, and autonomous operations delivering unprecedented results.',
-  keywords: ['AI', 'Breakthrough', '2026', 'Enterprise', 'Quantum', 'Meta-Cognitive', 'Autonomous'],
-  authors: [{ name: 'Zion Tech Group' }],
-  openGraph: {
-    title: 'February 2026 AI Mega Breakthrough Revolution: The Future is Here',
-    description: 'Discover the revolutionary AI breakthroughs that are transforming enterprise operations in February 2026.',
-    type: 'article',
-    publishedTime: '2026-02-15T00:00:00.000Z',
-    authors: ['Zion Tech Group'],
-    tags: ['AI', 'Breakthrough', '2026', 'Enterprise', 'Quantum', 'Meta-Cognitive', 'Autonomous'],
-  },
-};
 
 export default function February2026BreakthroughPage() {
   return (

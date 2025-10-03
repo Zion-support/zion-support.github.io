@@ -1,12 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'Advanced Micro SaaS Solutions | Zion Tech Group',
-  description: 'Cutting-edge micro SaaS platforms for modern businesses. AI-powered tools, automation suites, and specialized business applications.',
-  keywords: 'micro SaaS, business automation, AI tools, specialized software, subscription platforms',
-};
 
 export default function AdvancedMicroSaaSSolutionsPage() {
   const microSaaSServices = [
@@ -245,7 +239,8 @@ export default function AdvancedMicroSaaSSolutionsPage() {
                   </div>
                   
                   <div className="flex gap-2">
-                    <Link to={service.href}
+                    <Link 
+                      href={service.href}
                       className="flex-1 bg-blue-600 text-white text-center py-2 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
                     >
                       Learn More
@@ -309,10 +304,10 @@ export default function AdvancedMicroSaaSSolutionsPage() {
             <div>
               <h4 className="text-lg font-semibold text-gray-900 mb-4">Quick Links</h4>
               <div className="space-y-2">
-                <Link to="/services" className="block text-gray-600 hover:text-blue-600">All Services</Link>
-                <Link to="/about" className="block text-gray-600 hover:text-blue-600">About Us</Link>
-                <Link to="/contact" className="block text-gray-600 hover:text-blue-600">Contact</Link>
-                <Link to="https://ziontechgroup.com" className="block text-gray-600 hover:text-blue-600">Main Website</Link>
+                <Link href="/services" className="block text-gray-600 hover:text-blue-600">All Services</Link>
+                <Link href="/about" className="block text-gray-600 hover:text-blue-600">About Us</Link>
+                <Link href="/contact" className="block text-gray-600 hover:text-blue-600">Contact</Link>
+                <Link href="https://ziontechgroup.com" className="block text-gray-600 hover:text-blue-600">Main Website</Link>
               </div>
             </div>
           </div>

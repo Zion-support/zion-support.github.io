@@ -1,5 +1,4 @@
 import React from 'react';
-import { Metadata } from 'next';
 import { Link } from 'react-router-dom';
 import { 
   Cloud, 
@@ -72,11 +71,6 @@ import {
   Hexagon
 } from 'lucide-react';
 
-export const metadata: Metadata = {
-  title: 'IT Services & Solutions | Zion Tech Group - Enterprise IT Consulting',
-  description: 'Comprehensive IT services including cloud migration, DevOps, cybersecurity, platform engineering, and infrastructure automation. Transform your IT operations.',
-  keywords: 'IT consulting, cloud migration, DevOps, cybersecurity, platform engineering, infrastructure automation, IT services',
-};
 
 export default function ITServicesPage() {
   const itServices = [
@@ -672,7 +666,8 @@ export default function ITServicesPage() {
                   </div>
 
                   <div className="flex gap-3">
-                    <Link to={service.link}
+                    <Link 
+                      href={service.link}
                       className="flex-1 inline-flex items-center justify-center px-4 py-2 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors text-sm"
                     >
                       Learn More

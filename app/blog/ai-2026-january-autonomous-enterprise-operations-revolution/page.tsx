@@ -1,19 +1,6 @@
 import React from 'react';
-import { Metadata } from 'next';
 import { Link } from 'react-router-dom';
 
-export const metadata: Metadata = {
-  title: 'January 2026 Autonomous Enterprise Operations Revolution | Zion Tech Group',
-  description: 'Revolutionary breakthrough in autonomous enterprise operations with AI-driven decision making, self-healing infrastructure, and predictive analytics.',
-  keywords: ['autonomous operations', 'enterprise AI', 'self-healing infrastructure', 'predictive analytics', 'AI automation'],
-  openGraph: {
-    title: 'January 2026 Autonomous Enterprise Operations Revolution',
-    description: 'Revolutionary breakthrough in autonomous enterprise operations with AI-driven decision making, self-healing infrastructure, and predictive analytics.',
-    type: 'article',
-    publishedTime: '2026-01-15T00:00:00Z',
-    authors: ['Zion Tech Group'],
-  },
-};
 
 export default function January2026AutonomousEnterpriseOperationsRevolution() {
   return (
@@ -176,12 +163,14 @@ export default function January2026AutonomousEnterpriseOperationsRevolution() {
                   Contact our experts to learn how the January 2026 Autonomous Enterprise Operations Revolution can transform your business.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link to="/contact" 
+                  <Link 
+                    href="/contact" 
                     className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                   >
                     Schedule Consultation
                   </Link>
-                  <Link to="/services" 
+                  <Link 
+                    href="/services" 
                     className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
                   >
                     View Services
@@ -196,12 +185,14 @@ export default function January2026AutonomousEnterpriseOperationsRevolution() {
         {/* Navigation */}
         <div className="max-w-4xl mx-auto mt-12">
           <div className="flex justify-between">
-            <Link to="/blog" 
+            <Link 
+              href="/blog" 
               className="flex items-center text-blue-400 hover:text-blue-300 transition-colors"
             >
               ← Back to Blog
             </Link>
-            <Link to="/blog/ai-2026-january-quantum-neural-optimization-breakthrough" 
+            <Link 
+              href="/blog/ai-2026-january-quantum-neural-optimization-breakthrough" 
               className="flex items-center text-blue-400 hover:text-blue-300 transition-colors"
             >
               Next Article →

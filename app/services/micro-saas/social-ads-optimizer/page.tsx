@@ -1,12 +1,6 @@
 import React from 'react';
-// Metadata handled by React Helmet
 import { MessageSquare, CheckCircle, ArrowRight, DollarSign, Clock } from 'lucide-react';
 
-export const metadata: Metadata = {
-  title: 'AI Social Ads Optimizer | Zion Tech Group - Micro SaaS',
-  description: 'Generates and tests ad variants across platforms, shifts budget to winners automatically, and explains performance drivers.',
-  keywords: 'ads optimizer, AI advertising, creative generation, budget allocation, ROAS optimization',
-};
 
 export default function SocialAdsOptimizerPage() {
   const contact = {

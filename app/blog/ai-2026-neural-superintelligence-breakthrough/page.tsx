@@ -1,11 +1,5 @@
 import React from 'react';
-// Metadata handled by React Helmet
 
-export const metadata: Metadata = {
-  title: 'AI 2026: Neural Superintelligence Breakthrough - Zion Tech Group',
-  description: 'Revolutionary neural superintelligence platform delivering 1000x processing speed, 95% decision accuracy, and autonomous operations at enterprise scale.',
-  keywords: 'ai, superintelligence, neural-networks, breakthrough, enterprise, 2026',
-};
 
 export default function NeuralSuperintelligenceBreakthrough() {
   return (

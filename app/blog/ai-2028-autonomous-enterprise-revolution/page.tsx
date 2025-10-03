@@ -1,17 +1,5 @@
 import React from 'react';
-// Metadata handled by React Helmet
 
-export const metadata: Metadata = {
-  title: 'AI 2028: Autonomous Enterprise Revolution - The Future of Business',
-  description: 'Discover the 2028 autonomous enterprise revolution where AI achieves complete business autonomy, delivering unprecedented efficiency and revolutionary business transformation.',
-  keywords: 'autonomous enterprise, AI 2028, business autonomy, enterprise revolution, AI transformation, future of business',
-  openGraph: {
-    title: 'AI 2028: Autonomous Enterprise Revolution - The Future of Business',
-    description: 'Discover the 2028 autonomous enterprise revolution where AI achieves complete business autonomy, delivering unprecedented efficiency and revolutionary business transformation.',
-    type: 'article',
-    publishedTime: '2028-01-01T00:00:00.000Z',
-  },
-};
 
 export default function AI2028AutonomousEnterpriseRevolution() {
   return (

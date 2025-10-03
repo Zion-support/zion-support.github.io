@@ -1,12 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'Healthcare Appointment Scheduling SaaS | Zion Tech Group',
-  description: 'Complete appointment management system for hospitals and clinics. Online booking, patient data management, and virtual consultation support.',
-  keywords: 'healthcare scheduling, appointment booking, patient management, medical scheduling, clinic management',
-};
 
 export default function HealthcareSchedulingPage() {
   return (

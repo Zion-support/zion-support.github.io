@@ -1,16 +1,6 @@
 import React from 'react';
-import { Metadata } from 'next';
 import { Link } from 'react-router-dom';
 
-export const metadata: Metadata = {
-  title: 'AI Content Optimization Platform - Zion Tech Group',
-  description: 'Transform your content strategy with AI-powered optimization. Boost SEO rankings, engagement rates, and conversion with intelligent content analysis and recommendations.',
-  keywords: 'AI content optimization, SEO automation, content marketing AI, content analysis, marketing automation',
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
 
 export default function AIContentOptimizationPlatform() {
   return (
@@ -208,12 +198,14 @@ export default function AIContentOptimizationPlatform() {
           Join 500+ companies already using our AI Content Optimization Platform to boost their content performance.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link to="/contact" 
+          <Link 
+            href="/contact" 
             className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
           >
             Start Free Trial
           </Link>
-          <Link to="tel:+13024640950" 
+          <Link 
+            href="tel:+13024640950" 
             className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold border border-blue-600 hover:bg-blue-50 transition-colors"
           >
             Call +1 302 464 0950

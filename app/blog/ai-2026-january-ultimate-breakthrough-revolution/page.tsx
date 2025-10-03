@@ -1,12 +1,6 @@
 import React from 'react';
-import { Metadata } from 'next';
 import { Link } from 'react-router-dom';
 
-export const metadata: Metadata = {
-  title: 'AI 2026 January Ultimate Breakthrough Revolution - 1,000,000x Performance',
-  description: 'Revolutionary AI breakthrough achieving 1,000,000x performance improvement, universal consciousness integration, and $500B+ ROI potential through ultimate intelligent automation.',
-  keywords: 'AI breakthrough 2026, ultimate automation, universal consciousness, 1 million x performance, revolutionary AI, enterprise transformation',
-};
 
 export default function January2026UltimateBreakthroughRevolution() {
   return (
@@ -35,12 +29,14 @@ export default function January2026UltimateBreakthroughRevolution() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link to="/contact" 
+              <Link 
+                href="/contact" 
                 className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
               >
                 Transform Your Business Today
               </Link>
-              <Link to="/case-studies/ai-2026-january-ultimate-breakthrough-500-billion-success" 
+              <Link 
+                href="/case-studies/ai-2026-january-ultimate-breakthrough-500-billion-success" 
                 className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
               >
                 View $500B Success Story →
@@ -158,7 +154,8 @@ export default function January2026UltimateBreakthroughRevolution() {
             </div>
 
             <div className="text-center">
-              <Link to="/contact"
+              <Link
+                href="/contact"
                 className="inline-block bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-purple-400 hover:to-blue-500 transition-all shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
               >
                 Transform Your Enterprise Today
@@ -174,7 +171,7 @@ export default function January2026UltimateBreakthroughRevolution() {
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-white text-center mb-8">Related Revolutionary Content</h2>
             <div className="grid md:grid-cols-2 gap-6">
-              <Link to="/case-studies/ai-2026-january-ultimate-breakthrough-500-billion-success" className="group block rounded-xl border border-green-500/20 bg-gradient-to-br from-green-900/20 to-emerald-900/20 p-6 hover:border-green-400/40 transition-all duration-300 hover:scale-105">
+              <Link href="/case-studies/ai-2026-january-ultimate-breakthrough-500-billion-success" className="group block rounded-xl border border-green-500/20 bg-gradient-to-br from-green-900/20 to-emerald-900/20 p-6 hover:border-green-400/40 transition-all duration-300 hover:scale-105">
                 <div className="flex items-center gap-2 mb-3">
                   <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-3 py-1 rounded-full text-xs font-bold">$500B SUCCESS</span>
                   <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold">FORTUNE 100</span>
@@ -184,7 +181,7 @@ export default function January2026UltimateBreakthroughRevolution() {
                 <div className="text-green-300 text-sm font-semibold group-hover:text-green-200">Read Success Story →</div>
               </Link>
               
-              <Link to="/blog/ai-2026-february-mega-breakthrough-revolution" className="group block rounded-xl border border-purple-500/20 bg-gradient-to-br from-purple-900/20 to-indigo-900/20 p-6 hover:border-purple-400/40 transition-all duration-300 hover:scale-105">
+              <Link href="/blog/ai-2026-february-mega-breakthrough-revolution" className="group block rounded-xl border border-purple-500/20 bg-gradient-to-br from-purple-900/20 to-indigo-900/20 p-6 hover:border-purple-400/40 transition-all duration-300 hover:scale-105">
                 <div className="flex items-center gap-2 mb-3">
                   <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-3 py-1 rounded-full text-xs font-bold">FEBRUARY 2026</span>
                   <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold">MEGA BREAKTHROUGH</span>

@@ -1,30 +1,6 @@
 import React from 'react';
-import { Metadata } from 'next';
 import { Link } from 'react-router-dom';
 
-export const metadata: Metadata = {
-  title: 'AI 2027 Transcendent Quantum Consciousness: $847B Success Story - Zion Tech Group',
-  description: 'Fortune 500 case study: How transcendent quantum consciousness achieved $847B in enterprise value creation with 99.999% accuracy and infinite scalability.',
-  keywords: 'AI 2027, quantum consciousness, case study, Fortune 500, $847B success, transcendent AI, enterprise transformation, quantum computing',
-  authors: [{ name: 'Zion Tech Group' }],
-  openGraph: {
-    title: 'AI 2027 Transcendent Quantum Consciousness: $847B Success Story',
-    description: 'Fortune 500 case study: How transcendent quantum consciousness achieved $847B in enterprise value creation with 99.999% accuracy.',
-    url: 'https://ziontechgroup.com/case-studies/ai-2027-transcendent-quantum-consciousness-847-billion-success',
-    siteName: 'Zion Tech Group',
-    locale: 'en_US',
-    type: 'article',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'AI 2027 Transcendent Quantum Consciousness: $847B Success Story',
-    description: 'Fortune 500 case study: How transcendent quantum consciousness achieved $847B in enterprise value creation.',
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
 
 export default function AI2027TranscendentQuantumConsciousness847BillionSuccess() {
   return (
@@ -448,12 +424,14 @@ export default function AI2027TranscendentQuantumConsciousness847BillionSuccess(
             Our proven system has delivered $847 billion in measurable ROI for Fortune 500 organizations.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <Link to="/contact" 
+            <Link 
+              href="/contact" 
               className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-6 py-3 rounded-lg font-semibold text-center hover:from-green-600 hover:to-emerald-600 transition-all"
             >
               Start Your Transformation
             </Link>
-            <Link to="/blog/ai-2027-transcendent-quantum-consciousness-breakthrough" 
+            <Link 
+              href="/blog/ai-2027-transcendent-quantum-consciousness-breakthrough" 
               className="bg-white border border-gray-300 text-gray-700 px-6 py-3 rounded-lg font-semibold text-center hover:bg-gray-50 transition-all"
             >
               Learn More

@@ -1,11 +1,5 @@
 import React from 'react';
-// Metadata handled by React Helmet
 
-export const metadata: Metadata = {
-  title: 'AI 2026 March Ultimate Breakthrough: $15B Success Story',
-  description: 'How a Fortune 50 global enterprise achieved $15B ROI with revolutionary AI systems delivering 100,000x performance improvements.',
-  keywords: 'AI success story, $15B ROI, Fortune 50, March 2026 breakthrough, revolutionary AI',
-};
 
 export default function MarchUltimateBreakthroughSuccess() {
   return (

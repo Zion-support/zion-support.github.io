@@ -1,12 +1,6 @@
 import React from 'react';
-// Metadata handled by React Helmet
 import { Activity, CheckCircle, ArrowRight, DollarSign, Clock } from 'lucide-react';
 
-export const metadata: Metadata = {
-  title: 'API Uptime & SLO Monitor | Zion Tech Group - Micro SaaS',
-  description: 'Global synthetic monitoring, latency SLOs, and burn-rate alerts with runbook links for fast incident response.',
-  keywords: 'synthetic monitoring, SLO, SLA tracking, burn-rate alerts, uptime monitoring, status page',
-};
 
 export default function ApiUptimeSloMonitorPage() {
   const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com' } as const;

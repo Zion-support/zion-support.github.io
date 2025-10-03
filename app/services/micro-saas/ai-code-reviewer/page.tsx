@@ -1,13 +1,7 @@
 import React from 'react';
-// Metadata handled by React Helmet
 import * as Lucide from 'lucide-react';
 const { Code, Shield, CheckCircle, GitBranch, AlertTriangle, Mail, Phone, ArrowRight } = Lucide as any;
 
-export const metadata: Metadata = {
-  title: 'AI Code Reviewer | Zion Tech Group',
-  description: 'Automated pull request reviews for style, complexity, security patterns, and test suggestions.',
-  keywords: 'AI code review, PR automation, security code analysis, static analysis, CI integration',
-};
 
 export default function AICodeReviewerPage() {
   const contactInfo = {

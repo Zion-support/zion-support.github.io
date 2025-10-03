@@ -1,18 +1,5 @@
 import React from 'react';
-// Metadata handled by React Helmet
 
-export const metadata: Metadata = {
-  title: 'AI 2026 Hyper-Autonomous Enterprise Systems: The Future of Business Automation',
-  description: 'Discover the revolutionary hyper-autonomous enterprise systems of 2026. Learn how next-generation AI is achieving 99.9% automation rates, 500% efficiency gains, and complete business process transformation.',
-  keywords: 'AI 2026, hyper-autonomous systems, enterprise automation, business transformation, AI efficiency',
-  openGraph: {
-    title: 'AI 2026 Hyper-Autonomous Enterprise Systems: The Future of Business Automation',
-    description: 'Discover the revolutionary hyper-autonomous enterprise systems of 2026. Learn how next-generation AI is achieving 99.9% automation rates, 500% efficiency gains, and complete business process transformation.',
-    type: 'article',
-    publishedTime: '2026-01-25T00:00:00Z',
-    authors: ['Zion Tech Group'],
-  },
-};
 
 export default function HyperAutonomousEnterpriseSystems2026() {
   return (

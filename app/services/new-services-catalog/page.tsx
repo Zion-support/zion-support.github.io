@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Metadata } from 'next';
 import { 
   Brain, 
   Code, 
@@ -24,11 +23,6 @@ import {
   Star
 } from 'lucide-react';
 
-export const metadata: Metadata = {
-  title: 'Innovative Services Catalog | Zion Tech Group - Cutting-Edge Solutions',
-  description: 'Explore our latest micro SaaS, AI, and IT services including autonomous operations, quantum computing, and next-generation business intelligence solutions.',
-  keywords: 'micro SaaS, AI services, IT solutions, autonomous systems, quantum computing, business intelligence, cloud services',
-};
 
 export default function NewServicesCatalogPage() {
   const serviceCategories = [
@@ -471,7 +465,8 @@ export default function NewServicesCatalogPage() {
                         </div>
 
                         {/* CTA */}
-                        <Link to={service.href}
+                        <Link
+                          href={service.href}
                           className={`inline-flex items-center justify-center w-full py-3 px-6 bg-${category.color}-600 text-white font-semibold rounded-lg hover:bg-${category.color}-700 transition-colors group`}
                         >
                           <span>Get Started</span>

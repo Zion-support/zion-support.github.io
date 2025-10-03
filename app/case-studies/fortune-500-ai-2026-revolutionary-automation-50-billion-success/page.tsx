@@ -1,18 +1,5 @@
 import React from 'react';
-// Metadata handled by React Helmet
 
-export const metadata: Metadata = {
-  title: 'Fortune 500 AI 2026 Revolutionary Automation: $50B Success Story | Zion Tech Group',
-  description: 'How a Fortune 500 company achieved $50 billion in value creation through revolutionary AI automation in 2026. Complete case study with implementation details and ROI metrics.',
-  keywords: 'Fortune 500, AI automation, $50 billion success, enterprise transformation, AI ROI, case study',
-  openGraph: {
-    title: 'Fortune 500 AI 2026 Revolutionary Automation: $50B Success Story',
-    description: 'Complete case study: How revolutionary AI automation delivered $50 billion in value creation.',
-    type: 'article',
-    publishedTime: '2026-01-15T00:00:00Z',
-    authors: ['Zion Tech Group'],
-  },
-};
 
 export default function Fortune500AI2026RevolutionaryAutomation50BillionSuccess() {
   return (

@@ -1,5 +1,4 @@
 import React from 'react';
-// Metadata handled by React Helmet
 import { 
   Heart, 
   Target, 
@@ -20,11 +19,6 @@ import {
   Bell
 } from 'lucide-react';
 
-export const metadata: Metadata = {
-  title: 'AI Habit Tracking & Wellness Platform | Zion Tech Group - Smart Health Analytics',
-  description: 'Transform your wellness journey with AI-powered habit tracking, personalized insights, and behavioral coaching. Achieve your health goals with intelligent analytics.',
-  keywords: 'AI habit tracking, wellness platform, health analytics, behavioral coaching, fitness tracking, wellness AI',
-};
 
 export default function AIHabitTrackingWellnessPlatform() {
   const features = [

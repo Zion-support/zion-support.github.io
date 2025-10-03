@@ -1,12 +1,6 @@
 import React from 'react';
-import { Metadata } from 'next';
 import { Link } from 'react-router-dom';
 
-export const metadata: Metadata = {
-  title: 'AI 2026: Autonomous Business Intelligence Mega Breakthrough - 99% Automation',
-  description: 'Revolutionary autonomous business intelligence systems achieving 99% automation with $3.5B+ ROI. Complete implementation guide for enterprise transformation.',
-  keywords: 'autonomous business intelligence, AI automation, business intelligence, data analytics, enterprise AI, BI automation',
-};
 
 export default function BlogPost() {
   return (
@@ -216,12 +210,14 @@ export default function BlogPost() {
             Mega Breakthrough. Transform your data into autonomous insights that drive business growth.
           </p>
           <div className="flex flex-wrap gap-4">
-            <Link to="/contact" 
+            <Link 
+              href="/contact" 
               className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all"
             >
               Start Your Transformation
             </Link>
-            <Link to="/case-studies/ai-2026-autonomous-business-intelligence-mega-success" 
+            <Link 
+              href="/case-studies/ai-2026-autonomous-business-intelligence-mega-success" 
               className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-green-700 hover:to-emerald-700 transition-all"
             >
               View Success Stories
@@ -232,11 +228,11 @@ export default function BlogPost() {
         <div className="border-t border-gray-700 pt-8 mt-12">
           <h3 className="text-xl font-bold text-white mb-4">Related Content</h3>
           <div className="grid md:grid-cols-2 gap-6">
-            <Link to="/blog/ai-2026-advanced-neural-optimization-revolution" className="block p-4 border border-gray-600 rounded-lg hover:border-purple-500 transition-colors">
+            <Link href="/blog/ai-2026-advanced-neural-optimization-revolution" className="block p-4 border border-gray-600 rounded-lg hover:border-purple-500 transition-colors">
               <h4 className="font-semibold text-white mb-2">Neural Optimization: 1000x Performance</h4>
               <p className="text-gray-400 text-sm">Revolutionary neural optimization techniques for maximum efficiency</p>
             </Link>
-            <Link to="/case-studies/ai-2026-autonomous-business-intelligence-mega-success" className="block p-4 border border-gray-600 rounded-lg hover:border-green-500 transition-colors">
+            <Link href="/case-studies/ai-2026-autonomous-business-intelligence-mega-success" className="block p-4 border border-gray-600 rounded-lg hover:border-green-500 transition-colors">
               <h4 className="font-semibold text-white mb-2">$3.5B Autonomous BI Success</h4>
               <p className="text-gray-400 text-sm">Real-world case study of massive ROI achievement</p>
             </Link>

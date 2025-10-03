@@ -1,18 +1,5 @@
 import React from 'react';
-// Metadata handled by React Helmet
 
-export const metadata: Metadata = {
-  title: 'AI 2026 May Revolutionary Breakthrough: Quantum Consciousness Fusion',
-  description: 'Discover the groundbreaking May 2026 AI breakthrough featuring quantum consciousness fusion and autonomous enterprise transformation.',
-  keywords: 'AI breakthrough 2026, quantum consciousness, enterprise automation, superintelligence',
-  openGraph: {
-    title: 'AI 2026 May Revolutionary Breakthrough: Quantum Consciousness Fusion',
-    description: 'Revolutionary AI breakthrough featuring quantum consciousness fusion and autonomous enterprise transformation.',
-    type: 'article',
-    publishedTime: '2026-05-01T00:00:00.000Z',
-    authors: ['Zion Tech Group'],
-  },
-};
 
 export default function AI2026MayRevolutionaryBreakthrough() {
   return (

@@ -1,5 +1,4 @@
 import React from 'react';
-import { Metadata } from 'next';
 import { Link } from 'react-router-dom';
 import { 
   Shield, 
@@ -60,11 +59,6 @@ import {
   Code
 } from 'lucide-react';
 
-export const metadata: Metadata = {
-  title: 'Blockchain Enterprise Solutions | Zion Tech Group - Secure & Transparent',
-  description: 'Enterprise-grade blockchain solutions for supply chain, finance, and data integrity. Smart contracts, DeFi, and secure transaction processing.',
-  keywords: 'blockchain solutions, smart contracts, DeFi, supply chain blockchain, enterprise blockchain, cryptocurrency, distributed ledger',
-};
 
 export default function BlockchainEnterpriseSolutionsPage() {
   const features = [
@@ -239,12 +233,14 @@ export default function BlockchainEnterpriseSolutionsPage() {
               DeFi applications, and secure transaction processing for the modern enterprise.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact" 
+              <Link 
+                href="/contact" 
                 className="bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors"
               >
                 Get Started
               </Link>
-              <Link to="#demo" 
+              <Link 
+                href="#demo" 
                 className="border border-orange-600 text-orange-600 px-8 py-3 rounded-lg font-semibold hover:bg-orange-50 transition-colors"
               >
                 Watch Demo
@@ -353,7 +349,8 @@ export default function BlockchainEnterpriseSolutionsPage() {
                   ))}
                 </ul>
                 
-                <Link to="/contact"
+                <Link
+                  href="/contact"
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
                     tier.popular
                       ? 'bg-orange-600 text-white hover:bg-orange-700'
@@ -416,12 +413,14 @@ export default function BlockchainEnterpriseSolutionsPage() {
             Join forward-thinking companies leveraging blockchain for competitive advantage.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact" 
+            <Link 
+              href="/contact" 
               className="bg-white text-orange-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Get Started
             </Link>
-            <Link to="/contact" 
+            <Link 
+              href="/contact" 
               className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-orange-600 transition-colors"
             >
               Schedule Consultation

@@ -1,13 +1,7 @@
 import React from 'react';
-// Metadata handled by React Helmet
 import * as Lucide from 'lucide-react';
 const { Bot, Mail, Phone, CheckCircle, ArrowRight, Users, Target, MessageSquare, Database, Shield } = Lucide as any;
 
-export const metadata: Metadata = {
-  title: 'AI Sales Copilot | Zion Tech Group',
-  description: 'Prospecting prioritization, next-best-action, and AI-drafted emails integrated with Salesforce and HubSpot.',
-  keywords: 'AI sales copilot, sales enablement, email drafting, Salesforce, HubSpot, next best action',
-};
 
 export default function AISalesCopilotPage() {
   const contactInfo = {

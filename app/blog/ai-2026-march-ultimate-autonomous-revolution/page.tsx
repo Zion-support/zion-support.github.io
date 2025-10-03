@@ -1,12 +1,6 @@
 import React from 'react';
-import { Metadata } from 'next';
 import { Link } from 'react-router-dom';
 
-export const metadata: Metadata = {
-  title: 'AI 2026 March Ultimate Autonomous Revolution - Zion Tech Group',
-  description: 'Discover the groundbreaking March 2026 AI breakthrough achieving 99.99% autonomous enterprise operations, self-healing systems, and $150B transformation potential.',
-  keywords: 'AI autonomous systems, enterprise automation, self-healing systems, March 2026, Zion Tech Group',
-};
 
 export default function AI2026MarchUltimateAutonomousRevolution() {
   return (
@@ -311,7 +305,7 @@ export default function AI2026MarchUltimateAutonomousRevolution() {
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-8 text-center">Related Autonomous Breakthroughs</h2>
             <div className="grid md:grid-cols-2 gap-6">
-              <Link to="/blog/ai-2026-february-ultimate-consciousness-breakthrough" className="group block rounded-xl border border-purple-500/20 bg-gradient-to-br from-purple-900/20 to-indigo-900/20 p-6 hover:border-purple-400/40 transition-all duration-300">
+              <Link href="/blog/ai-2026-february-ultimate-consciousness-breakthrough" className="group block rounded-xl border border-purple-500/20 bg-gradient-to-br from-purple-900/20 to-indigo-900/20 p-6 hover:border-purple-400/40 transition-all duration-300">
                 <div className="flex items-center gap-2 mb-3">
                   <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-3 py-1 rounded-full text-xs font-bold">FEBRUARY 2026</span>
                 </div>
@@ -320,7 +314,7 @@ export default function AI2026MarchUltimateAutonomousRevolution() {
                 <div className="text-purple-300 text-sm font-semibold group-hover:text-purple-200">Read More →</div>
               </Link>
 
-              <Link to="/case-studies/ai-2026-march-autonomous-revolution-150-billion-success" className="group block rounded-xl border border-green-500/20 bg-gradient-to-br from-green-900/20 to-emerald-900/20 p-6 hover:border-green-400/40 transition-all duration-300">
+              <Link href="/case-studies/ai-2026-march-autonomous-revolution-150-billion-success" className="group block rounded-xl border border-green-500/20 bg-gradient-to-br from-green-900/20 to-emerald-900/20 p-6 hover:border-green-400/40 transition-all duration-300">
                 <div className="flex items-center gap-2 mb-3">
                   <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-3 py-1 rounded-full text-xs font-bold">$150B SUCCESS</span>
                 </div>

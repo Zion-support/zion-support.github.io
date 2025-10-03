@@ -1,18 +1,5 @@
 import React from 'react';
-// Metadata handled by React Helmet
 
-export const metadata: Metadata = {
-  title: 'AI 2027 Transcendent Intelligence: $5.7B Mega Success Story - Zion Tech Group',
-  description: 'Discover how a global enterprise achieved $5.7 billion in measurable value using Zion Tech Group\'s AI 2027 Transcendent Intelligence breakthrough.',
-  keywords: 'transcendent intelligence success, AI 2027 case study, enterprise AI, consciousness breakthrough, $5.7B success',
-  openGraph: {
-    title: 'AI 2027 Transcendent Intelligence: $5.7B Mega Success Story',
-    description: 'How a global enterprise achieved $5.7 billion in measurable value with transcendent intelligence.',
-    type: 'article',
-    publishedTime: '2027-06-25T00:00:00.000Z',
-    authors: ['Zion Tech Group'],
-  },
-};
 
 export default function TranscendentIntelligenceMegaSuccess() {
   return (

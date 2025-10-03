@@ -1,20 +1,13 @@
-import React, { JSX, Suspense, useMemo, useEffect } from "react";
+import React, { JSX, Suspense } from "react"
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Header, Footer } from '../app/components/Navigation';
 import ErrorBoundary from './components/ErrorBoundary';
 import { PageLoader } from './components/LoadingSpinner';
-import { usePerformanceMonitorHook } from './utils/performanceMonitor';
-import seoOptimizer from './utils/seoOptimizer';
 import '../app/globals.css';
-// 🌌🌌🌌 BREAKING: OCTOBER 2025 QUANTUM CONSCIOUSNESS SINGULARITY BREAKTHROUGH - ABSOLUTE #1 TOP PRIORITY! 🌌🌌🌌
-// 💎💎💎 JUST PUBLISHED: True Artificial Consciousness, Infinite Processing Power, $∞ Value Creation - REVOLUTIONARY BREAKTHROUGH! 💎💎💎
-import October2025QuantumConsciousnessSingularityBanner from "../components/October2025QuantumConsciousnessSingularityBanner";
-import ConsensusIntelligenceBreakthroughBanner from "../components/ConsensusIntelligenceBreakthroughBanner";
-import AutonomousEnterpriseBreakthroughBanner from "../components/AutonomousEnterpriseBreakthroughBanner";
-import June2026MegaBreakthroughBanner from "../components/June2026MegaBreakthroughBanner";
-import QuantumConsciousnessRevolutionBanner from "../components/QuantumConsciousnessRevolutionBanner";
-import July2026AutomationBreakthroughBanner from "../components/July2026AutomationBreakthroughBanner";
-
+import ConsensusIntelligenceBreakthroughBanner from "../components/ConsensusIntelligenceBreakthroughBanner"
+import AutonomousEnterpriseBreakthroughBanner from "../components/AutonomousEnterpriseBreakthroughBanner"
+import June2026MegaBreakthroughBanner from "../components/June2026MegaBreakthroughBanner"
+import QuantumConsciousnessRevolutionBanner from "../components/QuantumConsciousnessRevolutionBanner"
 // Lazy load pages for better performance
 const LazyHomePage = React.lazy(() => import('../app/page'));
 const LazySolutionsPage = React.lazy(() => import('../app/solutions/page'));
@@ -25,44 +18,28 @@ const LazyPressPage = React.lazy(() => import('../app/press/page'));
 const LazyCareersPage = React.lazy(() => import('../app/careers/page'));
 const LazyMarketplacePage = React.lazy(() => import('../app/marketplace/page'));
 const LazyServicesPage = React.lazy(() => import('../app/services/page'));
-// Unused lazy imports removed to fix linting warnings
+const LazyAIInvoiceProcessingPage = React.lazy(() => import('../app/services/ai-invoice-processing-saas/page'));
+const LazyComprehensiveITServicesPage = React.lazy(() => import('../app/services/comprehensive-it-services/page'));
+const LazyAISocialMediaContentGenerator = React.lazy(() => import('../app/services/ai-social-media-content-generator/page'));
+const LazyAIEmailMarketingAutomation = React.lazy(() => import('../app/services/ai-email-marketing-automation/page'));
+const LazyAIBusinessIntelligencePlatform = React.lazy(() => import('../app/services/ai-business-intelligence-platform/page'));
+const LazyCloudMigrationService = React.lazy(() => import('../app/services/cloud-migration-service/page'));
+const LazyDevOpsAutomationService = React.lazy(() => import('../app/services/devops-automation-service/page'));
+const LazyAPIDevelopmentService = React.lazy(() => import('../app/services/api-development-service/page'));
+const LazyAIChatbotBuilder = React.lazy(() => import('../app/services/ai-chatbot-builder/page'));
+const LazyContactPage = React.lazy(() => import('../app/contact/page'));
+const LazyAboutPage = React.lazy(() => import('../app/about/page'));
 
-function App(): JSX.Element {
-  // Performance monitoring
-  const { markRender } = usePerformanceMonitorHook('App');
-  
-  // Memoize banner components for better performance
-  const banners = useMemo(() => [
-    <October2025QuantumConsciousnessSingularityBanner key="quantum-consciousness" />,
-    <July2026AutomationBreakthroughBanner key="automation-breakthrough" />,
-    <June2026MegaBreakthroughBanner key="mega-breakthrough" />,
-    <QuantumConsciousnessRevolutionBanner key="quantum-revolution" />,
-    <ConsensusIntelligenceBreakthroughBanner key="consensus-intelligence" />,
-    <AutonomousEnterpriseBreakthroughBanner key="autonomous-enterprise" />
-  ], []);
-
-  // Initialize SEO optimization
-  useEffect(() => {
-    seoOptimizer.updateSEO({
-      title: "Zion Tech Group - Advanced AI & IT Solutions",
-      description: "Zion Tech Group provides cutting-edge AI, IT, and micro SaaS solutions for enterprise transformation, operational efficiency, and strategic growth.",
-      keywords: ["AI solutions", "IT services", "micro SaaS", "enterprise AI", "digital transformation", "cloud computing", "cybersecurity", "blockchain", "quantum computing"]
-    });
-  }, []);
-
-  // Mark render for performance tracking
-  markRender();
-
+export default function App(): JSX.Element {
   return (
     <ErrorBoundary>
       <Router>
         <div className="min-h-screen bg-slate-950">
           <Header />
           
-          {/* Render memoized banners */}
-          {banners}
+          {/* Banners and promotional content can be added here */}
           
-          <main>
+          <main className="min-h-screen">
             <Suspense fallback={<PageLoader />}>
               <Routes>
                 <Route path="/" element={<LazyHomePage />} />
@@ -74,6 +51,10 @@ function App(): JSX.Element {
                 <Route path="/careers" element={<LazyCareersPage />} />
                 <Route path="/marketplace" element={<LazyMarketplacePage />} />
                 <Route path="/services" element={<LazyServicesPage />} />
+                <Route path="/case-studies" element={<div className="py-20 px-4"><h1 className="text-4xl font-bold text-center text-white">Case Studies</h1></div>} />
+                <Route path="/contact" element={<LazyContactPage />} />
+                <Route path="/about" element={<LazyAboutPage />} />
+                <Route path="*" element={<div className="py-20 px-4"><h1 className="text-4xl font-bold text-center text-white">404 - Page Not Found</h1></div>} />
               </Routes>
             </Suspense>
           </main>
@@ -83,6 +64,4 @@ function App(): JSX.Element {
       </Router>
     </ErrorBoundary>
   );
-};
-
-export default App;
+}

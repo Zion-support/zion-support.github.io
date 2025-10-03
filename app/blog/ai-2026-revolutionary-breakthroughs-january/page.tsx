@@ -1,18 +1,5 @@
 import React from 'react';
-// Metadata handled by React Helmet
 
-export const metadata: Metadata = {
-  title: 'AI 2026: Revolutionary Breakthroughs That Will Transform Enterprise | Zion Tech Group',
-  description: 'Discover the groundbreaking AI innovations of 2026: Meta-Cognitive AI, Quantum-Neural Networks, and Autonomous Operations delivering 1000x performance improvements.',
-  keywords: 'AI 2026, Meta-Cognitive AI, Quantum-Neural Networks, Autonomous Operations, Enterprise AI, AI Breakthroughs',
-  openGraph: {
-    title: 'AI 2026: Revolutionary Breakthroughs That Will Transform Enterprise',
-    description: 'Explore the cutting-edge AI technologies reshaping enterprise operations in 2026.',
-    type: 'article',
-    publishedTime: '2026-01-15T00:00:00Z',
-    authors: ['Zion Tech Group'],
-  },
-};
 
 export default function AI2026RevolutionaryBreakthroughsPage() {
   return (

@@ -1,5 +1,4 @@
 import React from 'react';
-import { Metadata } from 'next';
 import { Link } from 'react-router-dom';
 import { 
   Brain, 
@@ -68,11 +67,6 @@ import {
   AlertTriangle
 } from 'lucide-react';
 
-export const metadata: Metadata = {
-  title: 'AI Services & Solutions | Zion Tech Group - Advanced AI Consulting',
-  description: 'Advanced AI services including autonomous systems, machine learning, natural language processing, computer vision, and intelligent automation. Transform your business with AI.',
-  keywords: 'AI services, machine learning, natural language processing, computer vision, autonomous systems, AI consulting, intelligent automation',
-};
 
 export default function AIServicesPage() {
   const aiServices = [
@@ -668,7 +662,8 @@ export default function AIServicesPage() {
                   </div>
 
                   <div className="flex gap-3">
-                    <Link to={service.link}
+                    <Link 
+                      href={service.link}
                       className="flex-1 inline-flex items-center justify-center px-4 py-2 bg-purple-600 text-white font-semibold rounded-lg hover:bg-purple-700 transition-colors text-sm"
                     >
                       Learn More

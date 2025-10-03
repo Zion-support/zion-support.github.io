@@ -1,19 +1,5 @@
 import React from 'react';
-// Metadata handled by React Helmet
 
-export const metadata: Metadata = {
-  title: '🔒 Federated Learning Breakthrough 2026: Privacy-First AI That Learns Without Sharing Data',
-  description: 'Discover the revolutionary federated learning breakthrough of 2026 that enables AI to learn across organizations while maintaining complete data privacy. Achieve 98% model accuracy with zero data exposure and 100% privacy compliance.',
-  keywords: ['federated learning', 'privacy-preserving AI', 'distributed learning', 'data privacy', 'AI collaboration', 'enterprise AI security', 'federated ML'],
-  openGraph: {
-    title: '🔒 Federated Learning Breakthrough 2026: Privacy-First AI That Learns Without Sharing Data',
-    description: 'Revolutionary federated learning breakthrough enabling AI collaboration with 100% data privacy and 98% model accuracy.',
-    type: 'article',
-    publishedTime: '2026-01-22T00:00:00.000Z',
-    authors: ['Zion Tech Group'],
-    tags: ['Federated Learning', 'Privacy-Preserving AI', 'Data Security', 'Enterprise Collaboration'],
-  },
-};
 
 export default function FederatedLearningBreakthrough2026() {
   return (

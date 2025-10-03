@@ -1,16 +1,6 @@
 import React from 'react';
-import { Metadata } from 'next';
 import { Link } from 'react-router-dom';
 
-export const metadata: Metadata = {
-  title: 'AI Cybersecurity Automation - Zion Tech Group',
-  description: 'Advanced AI-powered cybersecurity automation platform. Protect your business with intelligent threat detection, automated response, and continuous security monitoring.',
-  keywords: 'AI cybersecurity, threat detection, security automation, vulnerability assessment, incident response, security monitoring',
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
 
 export default function AICybersecurityAutomation() {
   return (
@@ -226,12 +216,14 @@ export default function AICybersecurityAutomation() {
           Protect your organization with our advanced AI-powered cybersecurity automation platform.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link to="/contact" 
+          <Link 
+            href="/contact" 
             className="bg-red-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors"
           >
             Request Security Assessment
           </Link>
-          <Link to="https://ziontechgroup.com/services/ai-cybersecurity-automation" 
+          <Link 
+            href="https://ziontechgroup.com/services/ai-cybersecurity-automation" 
             className="border border-red-600 text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-red-50 transition-colors"
           >
             View Demo

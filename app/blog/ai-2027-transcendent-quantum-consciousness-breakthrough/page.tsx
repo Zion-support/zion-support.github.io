@@ -1,39 +1,6 @@
 import React from 'react';
-import { Metadata } from 'next';
 import { Link } from 'react-router-dom';
 
-export const metadata: Metadata = {
-  title: 'AI 2027 Transcendent Quantum Consciousness Breakthrough - Zion Tech Group',
-  description: 'Revolutionary breakthrough in AI 2027: Transcendent Quantum Consciousness achieves $847B in enterprise value creation with 99.999% cognitive accuracy and infinite scalability.',
-  keywords: 'AI 2027, quantum consciousness, transcendent AI, breakthrough, enterprise automation, quantum computing, cognitive AI, neural networks, superintelligence',
-  authors: [{ name: 'Zion Tech Group' }],
-  openGraph: {
-    title: 'AI 2027 Transcendent Quantum Consciousness Breakthrough - Zion Tech Group',
-    description: 'Revolutionary breakthrough in AI 2027: Transcendent Quantum Consciousness achieves $847B in enterprise value creation with 99.999% cognitive accuracy and infinite scalability.',
-    url: 'https://ziontechgroup.com/blog/ai-2027-transcendent-quantum-consciousness-breakthrough',
-    siteName: 'Zion Tech Group',
-    locale: 'en_US',
-    type: 'article',
-    publishedTime: '2027-01-15T00:00:00.000Z',
-    modifiedTime: '2027-01-15T00:00:00.000Z',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'AI 2027 Transcendent Quantum Consciousness Breakthrough',
-    description: 'Revolutionary breakthrough in AI 2027: Transcendent Quantum Consciousness achieves $847B in enterprise value creation.',
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-    },
-  },
-};
 
 export default function AI2027TranscendentQuantumConsciousnessBreakthrough() {
   return (
@@ -354,12 +321,14 @@ export default function AI2027TranscendentQuantumConsciousnessBreakthrough() {
             Our transcendent AI systems are ready to transform your enterprise operations.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <Link to="/contact" 
+            <Link 
+              href="/contact" 
               className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-6 py-3 rounded-lg font-semibold text-center hover:from-purple-600 hover:to-indigo-600 transition-all"
             >
               Schedule Consultation
             </Link>
-            <Link to="/case-studies/ai-2027-transcendent-quantum-consciousness-847-billion-success" 
+            <Link 
+              href="/case-studies/ai-2027-transcendent-quantum-consciousness-847-billion-success" 
               className="bg-white border border-gray-300 text-gray-700 px-6 py-3 rounded-lg font-semibold text-center hover:bg-gray-50 transition-all"
             >
               View Success Story

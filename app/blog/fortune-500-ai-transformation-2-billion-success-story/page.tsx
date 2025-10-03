@@ -1,11 +1,5 @@
 import React from 'react';
-// Metadata handled by React Helmet
 
-export const metadata: Metadata = {
-  title: 'Fortune 500 AI Transformation: $2.3B Success Story | Zion Tech Group',
-  description: 'Exclusive case study: How a Fortune 500 company achieved $2.3B in savings through comprehensive AI transformation using Neural Superintelligence and Autonomous Operations.',
-  keywords: 'case-study, fortune-500, ai-transformation, success-story, roi, neural-superintelligence',
-};
 
 export default function Fortune500AITransformationCaseStudy() {
   return (

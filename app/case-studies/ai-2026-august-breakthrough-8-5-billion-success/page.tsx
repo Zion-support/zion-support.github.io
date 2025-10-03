@@ -1,18 +1,5 @@
 import React from 'react';
-// Metadata handled by React Helmet
 
-export const metadata: Metadata = {
-  title: 'AI 2026 August Breakthrough: $8.5B Enterprise Transformation Success | Zion Tech Group',
-  description: 'Discover how Fortune 500 companies achieved $8.5B in value with AI 2026 August breakthrough: 99.95% autonomous operations, 3,000% ROI, and revolutionary transformation.',
-  keywords: 'AI 2026, August breakthrough, $8.5B success, Fortune 500, autonomous operations, 3,000% ROI, enterprise transformation',
-  openGraph: {
-    title: 'AI 2026 August Breakthrough: $8.5B Enterprise Transformation Success',
-    description: 'Fortune 500 companies achieve unprecedented success with AI 2026 August breakthrough: $8.5B value, 99.95% autonomy, 3,000% ROI.',
-    type: 'article',
-    publishedTime: '2026-08-15T00:00:00Z',
-    authors: ['Zion Tech Group'],
-  },
-};
 
 export default function AI2026AugustBreakthroughSuccessPage() {
   return (

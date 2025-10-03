@@ -1,5 +1,4 @@
 import React from 'react';
-import { Metadata } from 'next';
 import { Link } from 'react-router-dom';
 import { 
   FileText, 
@@ -62,11 +61,6 @@ import {
   Truck
 } from 'lucide-react';
 
-export const metadata: Metadata = {
-  title: 'AI Content Factory - Intelligent Content Creation Suite | Zion Tech Group',
-  description: 'AI-powered content generation for marketing, social media, documentation, and SEO with brand consistency. Create 10x more content in less time.',
-  keywords: 'AI content creation, content marketing, social media automation, blog writing, SEO content, marketing automation',
-};
 
 export default function AIContentFactoryPage() {
   const features = [

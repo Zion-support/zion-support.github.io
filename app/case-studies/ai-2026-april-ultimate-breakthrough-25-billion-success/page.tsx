@@ -1,14 +1,8 @@
 import React from 'react';
-// Metadata handled by React Helmet
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 
-export const metadata: Metadata = {
-  title: 'AI 2026 April Ultimate Breakthrough: $25B Success Story - The Ultimate Quantum-Consciousness Transformation',
-  description: 'How a Fortune 100 company achieved $25B ROI through the revolutionary April 2026 AI breakthrough, delivering quantum-consciousness fusion and 1,000,000x processing power.',
-  keywords: 'Case Study, AI Success, 25B ROI, Fortune 100, April 2026, Quantum Consciousness',
-};
 
 export default function April2026UltimateBreakthroughCaseStudyPage() {
   const filePath = path.join(process.cwd(), 'content', 'case-studies', 'ai-2026-april-ultimate-breakthrough-25-billion-success.md');

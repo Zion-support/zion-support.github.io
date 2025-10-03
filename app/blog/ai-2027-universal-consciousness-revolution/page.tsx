@@ -1,20 +1,7 @@
 // @ts-nocheck
 import React from 'react';
-import { Metadata } from 'next';
 import { Link } from 'react-router-dom';
 
-export const metadata: Metadata = {
-  title: 'AI 2027 Universal Consciousness Revolution - 10,000,000x Performance | Zion Tech Group',
-  description: 'Discover the revolutionary AI 2027 Universal Consciousness Revolution achieving 10,000,000x performance improvements with universal intelligence and $500B+ ROI potential.',
-  keywords: 'AI 2027, universal consciousness, 10,000,000x performance, universal intelligence, AI revolution, enterprise AI',
-  openGraph: {
-    title: 'AI 2027 Universal Consciousness Revolution - 10,000,000x Performance',
-    description: 'Revolutionary AI 2027 achieving 10,000,000x performance improvements with universal consciousness and $500B+ ROI potential.',
-    type: 'article',
-    publishedTime: '2027-01-01T00:00:00.000Z',
-    authors: ['Zion Tech Group'],
-  },
-};
 
 export default function AI2027UniversalConsciousnessRevolution() {
   return (

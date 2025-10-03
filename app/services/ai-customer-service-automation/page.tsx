@@ -1,5 +1,4 @@
 import React from 'react';
-import { Metadata } from 'next';
 import { Link } from 'react-router-dom';
 import { 
   CheckCircle, 
@@ -20,15 +19,6 @@ import {
   Settings
 } from 'lucide-react';
 
-export const metadata: Metadata = {
-  title: 'AI Customer Service Automation - Zion Tech Group',
-  description: 'Transform customer support with intelligent automation. Advanced AI-powered customer service platform with 24/7 support and human-like interactions.',
-  keywords: 'AI customer service, automation, chatbot, customer support, AI assistant',
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
 
 export default function AICustomerServiceAutomation() {
   const contactInfo = {

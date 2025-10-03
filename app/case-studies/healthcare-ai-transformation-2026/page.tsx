@@ -1,12 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'Healthcare AI Transformation 2026: $5.2M ROI Case Study',
-  description: 'See how an academic medical center achieved $5.2M savings with AI healthcare diagnostics. 99.2% accuracy, 75% faster diagnosis, 87% error reduction.',
-  keywords: 'healthcare AI transformation, medical diagnostics, AI healthcare, ROI case study, academic medical center',
-};
 
 export default function HealthcareAITransformation2026Page() {
   return (
@@ -25,12 +19,14 @@ export default function HealthcareAITransformation2026Page() {
             Academic Medical Center: $5.2M Savings with AI-Powered Healthcare Diagnostics
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact"
+            <Link
+              href="/contact"
               className="bg-white text-red-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors shadow-lg hover:shadow-xl"
             >
               Get Similar Results
             </Link>
-            <Link to="/services"
+            <Link
+              href="/services"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-red-600 transition-colors"
             >
               Our Services

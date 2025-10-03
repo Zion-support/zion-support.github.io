@@ -1,18 +1,5 @@
 import React from 'react';
-// Metadata handled by React Helmet
 
-export const metadata: Metadata = {
-  title: 'AI Autonomous Cloud Operations 2026: Self-Healing Infrastructure Guide',
-  description: 'Master autonomous cloud operations with AI-powered self-healing infrastructure, predictive maintenance, and zero-touch operations for 99.9% uptime.',
-  keywords: 'autonomous cloud operations, AI infrastructure, self-healing systems, cloud automation, DevOps AI, predictive maintenance',
-  openGraph: {
-    title: 'AI Autonomous Cloud Operations 2026: Self-Healing Infrastructure Guide',
-    description: 'Master autonomous cloud operations with AI-powered self-healing infrastructure, predictive maintenance, and zero-touch operations for 99.9% uptime.',
-    type: 'article',
-    publishedTime: '2026-01-20T10:00:00Z',
-    authors: ['Zion Tech Group'],
-  },
-};
 
 export default function AIAutonomousCloudOps2026() {
   return (

@@ -1,5 +1,4 @@
 import React from 'react';
-import { Metadata } from 'next';
 import { Link } from 'react-router-dom';
 import { 
   TrendingUp, 
@@ -60,11 +59,6 @@ import {
   Eye
 } from 'lucide-react';
 
-export const metadata: Metadata = {
-  title: 'AI Financial Forecasting Suite | Zion Tech Group - Predictive Finance',
-  description: 'Advanced AI-powered financial forecasting and analysis platform. Real-time market predictions, risk assessment, and automated financial planning for businesses.',
-  keywords: 'AI financial forecasting, predictive finance, financial analytics, risk assessment, market predictions, automated financial planning',
-};
 
 export default function AIFinancialForecastingSuitePage() {
   const features = [
@@ -240,12 +234,14 @@ export default function AIFinancialForecastingSuitePage() {
               with unprecedented accuracy.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact" 
+              <Link 
+                href="/contact" 
                 className="bg-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
               >
                 Start Free Trial
               </Link>
-              <Link to="#demo" 
+              <Link 
+                href="#demo" 
                 className="border border-green-600 text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors"
               >
                 Watch Demo
@@ -354,7 +350,8 @@ export default function AIFinancialForecastingSuitePage() {
                   ))}
                 </ul>
                 
-                <Link to={tier.name === 'Institutional' ? '/contact' : '/contact'}
+                <Link
+                  href={tier.name === 'Institutional' ? '/contact' : '/contact'}
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
                     tier.popular
                       ? 'bg-green-600 text-white hover:bg-green-700'
@@ -417,12 +414,14 @@ export default function AIFinancialForecastingSuitePage() {
             Join leading financial institutions using AI to make smarter, more profitable decisions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact" 
+            <Link 
+              href="/contact" 
               className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Start Free Trial
             </Link>
-            <Link to="/contact" 
+            <Link 
+              href="/contact" 
               className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
             >
               Schedule Demo
