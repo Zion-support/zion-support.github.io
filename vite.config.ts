@@ -1,12 +1,13 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { resolve } from 'path'
+import { visualizer } from 'rollup-plugin-visualizer'
 
 // Optimized Vite configuration for better performance and smaller bundle size
 export default defineConfig({
   plugins: [
     react({
-<<<<<<< HEAD
+      jsxRuntime: 'automatic',
       babel: {
         plugins: [
           ['@babel/plugin-transform-react-jsx', { runtime: 'automatic' }],
@@ -18,9 +19,6 @@ export default defineConfig({
       filename: 'dist/stats.html',
       open: false,
       gzipSize: true,
-=======
-      jsxRuntime: 'automatic'
->>>>>>> b0266c0c1be3ec9050e7ba803edc6a65b0904e57
     }),
   ],
   root: '.',
