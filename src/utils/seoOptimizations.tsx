@@ -66,9 +66,12 @@ export const seoUtils = {
     },
     "image": {
       "url": article.image || "https://zion.app/logo.png"
-    }
-  }
-});
+    },
+    "datePublished": article.datePublished,
+    "dateModified": article.dateModified,
+    "url": article.url
+  })
+};
 
 // Sitemap generation utilities
 export const sitemapUtils = {
@@ -195,8 +198,8 @@ export const analyticsUtils = {
 
   // Track custom events
   trackEvent: (eventName: string, parameters?: Record<string, unknown>) => {
-    if (typeof window !== 'undefined' && (window as Window & { gtag?: Function }).gtag) {
-      (window as Window & { gtag: Function }).gtag('event', eventName, parameters);
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', eventName, parameters);
     }
   },
 
@@ -205,7 +208,7 @@ export const analyticsUtils = {
     if (typeof window !== 'undefined' && (window as any).gtag) {
       (window as any).gtag('event', 'conversion', {
         send_to: conversionId,
-        value=value
+        value: value
       });
     }
   }
@@ -220,7 +223,7 @@ export const coreWebVitals = {
     const trackMetric = (metric: any) => {
       analyticsUtils.trackEvent('core_web_vitals', {
         metric_name: metric.name,
-        metric_value=Math.round(metric.value),
+        metric_value: Math.round(metric.value),
         metric_id: metric.id,
         metric_delta: metric.delta
       });
