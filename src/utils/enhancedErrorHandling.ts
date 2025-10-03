@@ -69,6 +69,7 @@ class EnhancedErrorHandler {
   private determineSeverity(error: any): 'low' | 'medium' | 'high' | 'critical' {
     if (!error) return 'low';
     const message = error.message?.toLowerCase() || '';
+    
     // Critical errors
     if (message.includes('chunk') || message.includes('loading') || message.includes('network')) {
       return 'critical';

@@ -14,7 +14,7 @@ export const usePerformanceMonitor = (componentName: string) => {
     return () => {
       const unmountTime = Date.now();
       const totalTime = unmountTime - mountTime.current;
-      
+
       if (import.meta.env.DEV) {
         console.log(`[Performance] ${componentName}:`, {
           renderCount: renderCount.current,
@@ -165,7 +165,7 @@ export const useNetworkStatus = () => {
     if ('connection' in navigator) {
       const connection = (navigator as any).connection;
       setConnectionType(connection.effectiveType || 'unknown');
-      
+
       const handleConnectionChange = () => {
         setConnectionType(connection.effectiveType || 'unknown');
       };
@@ -254,7 +254,7 @@ export const useComponentLifecycle = (componentName: string) => {
 
   useEffect(() => {
     const renderTime = performance.now() - renderStartTime.current;
-    
+
     if (import.meta.env.DEV && renderTime > 16) {
       console.warn(`[Performance] ${componentName} render took ${renderTime.toFixed(2)}ms (target: <16ms)`);
     }
