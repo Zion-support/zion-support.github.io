@@ -4,7 +4,14 @@ import { visualizer } from 'rollup-plugin-visualizer';
 
 export default defineConfig({
   plugins: [
-    react(),
+    react({
+      babel: {
+        plugins: [
+          ['@babel/plugin-transform-react-jsx', { runtime: 'automatic' }],
+          ['@babel/plugin-proposal-decorators', { legacy: true }],
+        ],
+      },
+    }),
     visualizer({
       filename: 'dist/stats.html',
       open: false,
