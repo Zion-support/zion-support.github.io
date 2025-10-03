@@ -124,11 +124,11 @@ export class PerformanceMonitor {
         entries.forEach(entry => {
           this.metrics.firstInputDelay = entry.processingStart - entry.startTime;
         });
-      ');
+      });
       observer.observe({ entryTypes: ['first-input'] });
       this.observers.push(observer);
     }
-  '
+  }
 
   private observeCLS(): void {
     if ('PerformanceObserver' in window) {
@@ -141,11 +141,11 @@ export class PerformanceMonitor {
           }
         });
         this.metrics.cumulativeLayoutShift = clsValue;
-      ');
+      });
       observer.observe({ entryTypes: ['layout-shift'] });
       this.observers.push(observer);
     }
-  '
+  }
 
   private observeFCP(): void {
     if ('PerformanceObserver' in window) {
@@ -155,11 +155,11 @@ export class PerformanceMonitor {
         if (fcpEntry) {
           this.metrics.firstContentfulPaint = fcpEntry.startTime;
         }
-      ');
+      });
       observer.observe({ entryTypes: ['paint'] });
       this.observers.push(observer);
     }
-  '
+  }
 
   private observeResources(): void {
     if ('PerformanceObserver' in window) {
@@ -246,10 +246,10 @@ export class PerformanceMonitor {
         },
         body: JSON.stringify(report)
       });
-    ' catch (error) {
+    } catch (error) {
       console.error('Failed to send performance metrics:', error);
     }
-  '
+  }
 
   private storeLocally(report: any): void {
     try {
@@ -322,11 +322,11 @@ export class ImageOptimizer {
     const extension = src.split('.').pop();
 
     const srcset = sizes
-      .map(size => `${baseSrc}-${size}w.${extension' ${size`w`)
+      .map(size => `${baseSrc}-${size}w.${extension} ${size}w`)
       .join(', ');
 
-    return `<img src="${src"" srcset="${srcset`" alt="${alt"" loading="lazy/>`;
-  '
+    return `<img src="${src}" srcset="${srcset}" alt="${alt}" loading="lazy" />`;
+  }
 
   static preloadCriticalImages(imageUrls: string[]): void {
     imageUrls.forEach(url => {
@@ -336,8 +336,8 @@ export class ImageOptimizer {
       link.href = url;
       document.head.appendChild(link);
     });
-  '
-`
+  }
+}
 
 /**
  * Bundle analysis utilities
@@ -349,22 +349,22 @@ export class BundleAnalyzer {
       
       // Analyze loaded scripts
       const scripts = document.querySelectorAll('script[src]');
-      console.log(`Scripts loaded: ${scripts.length``);
+      console.log(`Scripts loaded: ${scripts.length}`);
       
       // Analyze loaded stylesheets
       const styles = document.querySelectorAll('link[rel="stylesheet"]');
-      console.log(`Stylesheets loaded: ${styles.length``);
+      console.log(`Stylesheets loaded: ${styles.length}`);
       
       // Analyze resource timing
       const resources = performance.getEntriesByType('resource');
       const totalSize = resources.reduce((sum, resource) => {
         return sum + ((resource as any).transferSize || 0);
-      `, 0);
+      }, 0);
       
-      console.log(`Total resource size: ${(totalSize / 1024 / 1024).toFixed(2)` MB`);
-      console.log(`Total resources: ${resources.length``);
+      console.log(`Total resource size: ${(totalSize / 1024 / 1024).toFixed(2)} MB`);
+      console.log(`Total resources: ${resources.length}`);
     }
-  '
+  }
 
   static getLargestResources(limit: number = 10): any[] {
     const resources = performance.getEntriesByType('resource');
