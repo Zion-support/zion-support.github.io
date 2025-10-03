@@ -7,7 +7,7 @@ export const metadata = {
 
 export default function Page() {
   return (
-    <main className="max-w-3xl mx-auto px-4 py-12 prose prose-invert">
+    <main className="max-w-3xl mx-auto px-4 py-12 prose prose-invert">"
       <h1>Real‑Time Multimodal Assistants (2028): Voice + Vision + Touch</h1>
       <p>
         Build assistants that see, hear, and act in real time. This guide covers unified embeddings,
@@ -23,7 +23,7 @@ export default function Page() {
         Gate changes with policy checks and online canaries tied to KPIs.
       </p>
       <p>
-        Continue exploring in our <Link href="/blog">Blog</Link>.
+        Continue exploring in our <Link href="/blog">Blog</Link>."
       </p>
     </main>
   );

@@ -32,7 +32,7 @@ export const withErrorHandling = (Component: React.ComponentType<any>) => {
     
     if (error) {
       return (
-        <div className="error-state">
+        <div className="error-state">"
           <p>Something went wrong: {(error as Error).message}</p>
           <button onClick={() => setError(null)}>Try Again</button>
         </div>

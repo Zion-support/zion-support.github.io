@@ -32,7 +32,7 @@ export const analyzeContent = (content: string): ContentMetrics => {
   const words = text.split(/\s+/).filter(word => word.length > 0);
   
   const headings = content.match(/<h[1-6][^>]*>([^<]+)<\/h[1-6]>/gi) || [];
-  const links = content.match(/<a[^>]*href=["']([^"']+)["'][^>]*>/gi) || [];
+  const links = content.match(/<a[^>]*href=["']([^"']+)["'][^>]*>/gi) || [];"
   
   const wordCount = words.length;
   const readingTime = calculateReadingTime(text);
@@ -57,7 +57,7 @@ export const analyzeContent = (content: string): ContentMetrics => {
     readingTime,
     keywordDensity,
     headings: headings.map(h => h.replace(/<[^>]*>/g, '').trim()),
-    links: links.map(l => l.match(/href=["']([^"']+)["']/)?.[1] || '').filter(Boolean)
+    links: links.map(l => l.match(/href=["']([^"']+)["']/)?.[1] || '').filter(Boolean)"
   };
 };
 
@@ -228,7 +228,7 @@ export const generateSchemaMarkup = (type: string, data: Record<string, unknown>
     ...data
   };
   
-  return `<script type="application/ld+json">${JSON.stringify(schema, null, 2)}</script>`;
+  return `<script type="application/ld+json">${JSON.stringify(schema, null, 2)}</script>`;"
 };
 
 export const optimizeImages = (images: string[]): string[] => {

@@ -16,22 +16,22 @@ export const metadata = {
 
 export default function Page() {
   return (
-    <div className="min-h-screen bg-slate-950 text-white">
-      <section className="py-16 border-b border-white/10 bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900">
-        <div className="max-w-4xl mx-auto px-4">
-          <div className="mb-4 text-emerald-300 text-xs font-semibold uppercase tracking-wider">FinOps • Autonomous Platforms</div>
-          <h1 className="text-4xl md:text-5xl font-extrabold mb-4 leading-tight">
+    <div className="min-h-screen bg-slate-950 text-white">"
+      <section className="py-16 border-b border-white/10 bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900">"
+        <div className="max-w-4xl mx-auto px-4">"
+          <div className="mb-4 text-emerald-300 text-xs font-semibold uppercase tracking-wider">FinOps • Autonomous Platforms</div>"
+          <h1 className="text-4xl md:text-5xl font-extrabold mb-4 leading-tight">"
             AI 2028: Autonomous FinOps Scorecards
           </h1>
-          <p className="text-emerald-100/90 text-lg">
+          <p className="text-emerald-100/90 text-lg">"
             Prevent spend regressions with KPI-linked action scorecards, budget-aware routing, tiered quality, and
             instant rollback — all without hurting user experience.
           </p>
-          <div className="mt-6 text-sm text-emerald-200/80">18 min • Oct 2025</div>
+          <div className="mt-6 text-sm text-emerald-200/80">18 min • Oct 2025</div>"
         </div>
       </section>
 
-      <article className="max-w-4xl mx-auto px-4 py-12 prose prose-invert prose-emerald">
+      <article className="max-w-4xl mx-auto px-4 py-12 prose prose-invert prose-emerald">"
         <h2>Why Autonomous FinOps Now</h2>
         <p>
           GenAI costs can spike 3–10x with prompt drift, retrieval variance, and traffic surges. Traditional dashboards are
@@ -66,13 +66,13 @@ export default function Page() {
           <li>Automate rollback and alerting via scorecard triggers.</li>
         </ol>
 
-        <div className="mt-10 p-6 rounded-2xl bg-emerald-900/40 border border-emerald-700/40">
-          <div className="text-sm text-emerald-200 mb-2">Next up</div>
-          <div className="flex flex-wrap gap-3">
-            <Link href="/blog/ai-2027-cost-optimization-playbook" className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white/10 hover:bg-white/20 text-white transition-colors">
+        <div className="mt-10 p-6 rounded-2xl bg-emerald-900/40 border border-emerald-700/40">"
+          <div className="text-sm text-emerald-200 mb-2">Next up</div>"
+          <div className="flex flex-wrap gap-3">"
+            <Link href="/blog/ai-2027-cost-optimization-playbook" className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white/10 hover:bg-white/20 text-white transition-colors">"
               Cost Optimization Playbook 2027 →
             </Link>
-            <Link href="/blog/genai-quality-tiers-v2-2026" className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white/10 hover:bg-white/20 text-white transition-colors">
+            <Link href="/blog/genai-quality-tiers-v2-2026" className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white/10 hover:bg-white/20 text-white transition-colors">"
               GenAI Quality Tiers v2 →
             </Link>
           </div>
