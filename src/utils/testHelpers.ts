@@ -160,7 +160,7 @@ export const mockMatchMedia = (matches: boolean): void => {
  */
 export const waitForAsyncComponent = async (
   component: React.ComponentType<any>,
-  props: any = {},
+  _props: any = {},
   timeout = 5000,
 ): Promise<void> => {
   await waitFor(() => {
@@ -236,8 +236,8 @@ export const setupTestEnvironment = (): void => {
  */
 export const cleanupTestEnvironment = (): void => {
   // Clean up any global mocks
-  if (global.fetch) {
-    delete global.fetch;
+  if (typeof global.fetch !== 'undefined') {
+    // delete global.fetch;
   }
   
   // Clear localStorage
@@ -261,13 +261,16 @@ export const createMockApiResponse = <T>(data: T, status = 200): Response => ({
   headers: new Headers(),
   body: null,
   bodyUsed: false,
+  redirected: false,
+  type: 'basic' as ResponseType,
+  url: '',
   arrayBuffer: () => Promise.resolve(new ArrayBuffer(0)),
   blob: () => Promise.resolve(new Blob()),
   formData: () => Promise.resolve(new FormData()),
   json: () => Promise.resolve(data),
   text: () => Promise.resolve(JSON.stringify(data)),
   clone: () => createMockApiResponse(data, status),
-});
+} as Response);
 
 /**
  * Mock fetch with different responses

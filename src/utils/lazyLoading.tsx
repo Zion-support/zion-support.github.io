@@ -1,12 +1,14 @@
 // Lazy loading utility
-export const lazyLoadComponent = (importFn, fallback = null) => {
+import React from 'react';
+
+export const lazyLoadComponent = (importFn: () => Promise<any>, fallback: React.ReactNode = null) => {
   return React.lazy(() => importFn().catch(() => ({ 
     default: () => fallback || <div>Loading...</div> 
   })));
 };
 
 // Intersection observer for lazy loading
-export const useIntersectionObserver = (ref, options = {}) => {
+export const useIntersectionObserver = (ref: React.RefObject<HTMLElement>, options: IntersectionObserverInit = {}) => {
   const [isIntersecting, setIsIntersecting] = React.useState(false);
   
   React.useEffect(() => {

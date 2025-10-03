@@ -1,15 +1,27 @@
 // Enhanced error boundary
-export class EnhancedErrorBoundary extends React.Component {
-  constructor(props) {
+import React from 'react';
+
+interface ErrorBoundaryState {
+  hasError: boolean;
+  error: Error | null;
+  errorInfo: any;
+}
+
+interface ErrorBoundaryProps {
+  children: React.ReactNode;
+}
+
+export class EnhancedErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundaryState> {
+  constructor(props: ErrorBoundaryProps) {
     super(props);
     this.state = { hasError: false, error: null, errorInfo: null };
   }
   
-  static getDerivedStateFromError(error) {
+  static getDerivedStateFromError(_error: Error) {
     return { hasError: true };
   }
   
-  componentDidCatch(error, errorInfo) {
+  componentDidCatch(error: Error, errorInfo: any) {
     this.setState({
       error,
       errorInfo
@@ -19,8 +31,8 @@ export class EnhancedErrorBoundary extends React.Component {
     console.error('Error caught by boundary:', error, errorInfo);
     
     // Send to error tracking service
-    if (window.gtag) {
-      window.gtag('event', 'exception', {
+    if ((window as any).gtag) {
+      (window as any).gtag('event', 'exception', {
         description: error.toString(),
         fatal: false
       });
@@ -35,7 +47,7 @@ export class EnhancedErrorBoundary extends React.Component {
           <details style={{ whiteSpace: 'pre-wrap' }}>
             {this.state.error && this.state.error.toString()}
             <br />
-            {this.state.errorInfo.componentStack}
+            {this.state.errorInfo?.componentStack}
           </details>
           <button onClick={() => window.location.reload()}>
             Reload Page
