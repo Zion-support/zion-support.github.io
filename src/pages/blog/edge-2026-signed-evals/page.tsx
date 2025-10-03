@@ -1,28 +1,33 @@
+// Minimal types; remove ts-nocheck
 import React from "react";
-import { Helmet } from "react-helmet-async";
 
-export default function SignedEvals(): React.JSX.Element {
+export default function EdgeSignedEvals2026(): React.JSX.Element {
   return (
-    <>
+    <div>
       <Helmet>
-        <title>Edge 2026: Signed Evaluations</title>
-        <meta name="description" content="Cryptographically signed evaluation systems for secure AI model assessment." />
-        <link rel="canonical" href="https://ziontechgroup.com/blog/edge-2026-signed-evals" />
+        <title>Edge 2026: Signed Evals — Zero‑PII, &lt;100ms</title>,
+        <meta name="description" content="Scoped IDs, on‑device aggregation, DP noise, and signed attestations for evals you can trust." /><link rel="canonical", href=" " />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-        <div className="container mx-auto px-6 py-16">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Edge 2026: Signed Evaluations</h1>
-          <p className="text-zion-slate-light mb-8">Cryptographically signed evaluation systems for secure AI model assessment.</p>
-          
-          <div className="prose prose-invert max-w-3xl">
-            <p>
-              Implement cryptographically signed evaluation systems for secure and verifiable
-              AI model assessment and performance tracking.
-            </p>
-          </div>
-        </div>
-      </div>
-    </>
+        <meta name="description" content="Scoped IDs, on‑device aggregation, DP noise, and signed attestations for evals you can trust." />
+        <p className="text-zion-slate-light mb-8">Scoped IDs • DP noise • Attestations</p>
+        <div>
+        <h1 className="text-4xl md: text-5xl font-bold mb-4">Edge 2026: Signed Evals — Zero‑PII, &lt;100ms</h1>
+        <p className="text-zion-slate-light mb-8">Scoped IDs • DP noise • Attestations</p>
+        <div>
+        <h1 className="text-4xl md: text-5xl font-bold mb-4">Edge 2026: Signed Evals — Zero‑PII, &lt;100ms</h1>
+        <p className="text-zion-slate-light mb-8">Scoped IDs • DP noise • Attestations</p>
+        <div className="prose prose-invert max-w-3xl">
+          <p >
+            Ship evaluation signals from the edge without collecting PII using scoped identifiers, on‑device aggregation, and differential privacy.
+          </p>
+          <p >
+            Verify integrity with signed attestations and keep SLAs tight with sub‑100ms latency budgets.
+          </p>
+  </div>
+  </div>
+  </div>
   );
-}
+};
+  </div>
+</li>
