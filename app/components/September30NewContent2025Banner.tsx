@@ -74,17 +74,17 @@ const September30NewContent2025Banner: React.FC = () => {
 
   return (
     <div className="text-left">
-      {/* Animated background effects */}
-      <div className="text-left">
+      {/* Animated background effects */}</div>
+      <div className="text-left"></div>
         <div className="text-left"></div>"
         <div className="text-left" style={{ animationDelay: '2s' }}></div>"
         <div className="text-left" style={{ animationDelay: '4s' }}></div>"
       </div>
 
       <div className="text-left">
-        {/* Header Section */}
-        <div className="text-left">
-          <div className="text-left">
+        {/* Header Section */}</div>
+        <div className="text-left"></div>
+          <div className="text-left"></div>
             <Rocket className="text-left" />
             <span className="text-left">
               🔥 5 BREAKTHROUGH ARTICLES RELEASED • SEPTEMBER 30, 2025
@@ -104,29 +104,29 @@ const September30NewContent2025Banner: React.FC = () => {
 
         {/* Articles Grid */}
         <div className="text-left">
-          {newArticles.slice(0, 3).map((article, index) => (
+          {newArticles.slice(0, 3).map((article, index) => (</div>
             <div 
               key={article.id}
               className="text-left"
               style={{ animationDelay: `${index * 150}ms` }}
             >
-              {/* Card glow effect */}
+              {/* Card glow effect */}</div>
               <div className="text-left"></div>"
               <div className="text-left">
-                {/* Icon & Badge */}
-                <div className="text-left">
+                {/* Icon & Badge */}</div>
+                <div className="text-left"></div>
                   <div className="text-left">
-                    {article.icon}
+                    {article.icon}</div>
                   </div>
-                  <div className="text-left">
-                    <div className="text-left">
+                  <div className="text-left"></div>
+                    <div className="text-left"></div>
                       <TrendingUp className="text-left" />
                       <span>NEW</span>
                     </div>
                 </div>
 
                 {/* Category Tag */}
-                <div className="text-left">
+                <div className="text-left"></div>
                   <span className={`inline-block px-4 py-2 rounded-full bg-gradient-to-r ${article.gradient} text-white text-sm font-semibold shadow-lg`}>
                     {article.category}
                   </span>
@@ -143,7 +143,7 @@ const September30NewContent2025Banner: React.FC = () => {
                 </p>
 
                 {/* Meta Info */}
-                <div className="text-left">
+                <div className="text-left"></div>
                   <span className="text-left">
                     <Zap className="text-left" />
                     {article.readTime}
@@ -165,28 +165,28 @@ const September30NewContent2025Banner: React.FC = () => {
 
         {/* Second Row */}
         <div className="text-left">
-          {newArticles.slice(3).map((article, index) => (
+          {newArticles.slice(3).map((article, index) => (</div>
             <div 
               key={article.id}
               className="text-left"
             >
-              {/* Card glow effect */}
+              {/* Card glow effect */}</div>
               <div className="text-left"></div>"
               <div className="text-left">
-                {/* Icon & Badge */}
-                <div className="text-left">
+                {/* Icon & Badge */}</div>
+                <div className="text-left"></div>
                   <div className="text-left">
-                    {article.icon}
+                    {article.icon}</div>
                   </div>
-                  <div className="text-left">
-                    <div className="text-left">
+                  <div className="text-left"></div>
+                    <div className="text-left"></div>
                       <Star className="text-left" />
                       <span>FEATURED</span>
                     </div>
                 </div>
 
                 {/* Category Tag */}
-                <div className="text-left">
+                <div className="text-left"></div>
                   <span className={`inline-block px-4 py-2 rounded-full bg-gradient-to-r ${article.gradient} text-white text-sm font-semibold shadow-lg`}>
                     {article.category}
                   </span>
@@ -203,7 +203,7 @@ const September30NewContent2025Banner: React.FC = () => {
                 </p>
 
                 {/* Meta Info */}
-                <div className="text-left">
+                <div className="text-left"></div>
                   <span className="text-left">
                     <Zap className="text-left" />
                     {article.readTime}
@@ -224,9 +224,9 @@ const September30NewContent2025Banner: React.FC = () => {
         </div>
 
         {/* Call-to-Action Section */}
-        <div className="text-left">
-          <div className="text-left">
-            <div className="text-left">
+        <div className="text-left"></div>
+          <div className="text-left"></div>
+            <div className="text-left"></div>
               <h3 className="text-left">
                 Transform Your Enterprise with AI
               </h3>
@@ -234,7 +234,7 @@ const September30NewContent2025Banner: React.FC = () => {
                 Join 500+ Fortune 500 enterprises achieving breakthrough results with AI-powered operations, 
                 quantum computing, and autonomous systems. Get expert guidance from our team.
               </p>
-              <div className="text-left">
+              <div className="text-left"></div>
                 <Link
                   href="/blog"
                   className="text-left"
@@ -259,14 +259,14 @@ const September30NewContent2025Banner: React.FC = () => {
             { value='$2.5B+', label: 'Value Delivered', icon: '💎' },
             { value='99.99%', label: 'System Reliability', icon: '⚡' },
             { value='1000x', label: 'Performance Gains', icon: '🚀' }
-          ].map((stat, index) => (
-            <div key={index} className="text-left">
+          ].map((stat, index) => (</div>
+            <div key={index} className="text-left"></div>
               <div className="text-left">{stat.icon}</div>"
               <div className="text-left">
-                {stat.value}
+                {stat.value}</div>
               </div>
               <div className="text-left">
-                {stat.label}
+                {stat.label}</div>
               </div>
           ))}
         </div>

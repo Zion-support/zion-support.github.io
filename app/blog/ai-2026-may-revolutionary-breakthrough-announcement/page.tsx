@@ -16,10 +16,10 @@ export default function May2026RevolutionaryBreakthroughPage() {
   const { data, content } = matter(fileContents);
 
   return (
-    <div className="text-left">
+    <div className="text-left"></div>
       <article className="text-left">
         <header className="text-left">
-          <div className="text-left">
+          <div className="text-left"></div>
             <span className="text-left">
               MAY 2026
             </span>
@@ -33,23 +33,23 @@ export default function May2026RevolutionaryBreakthroughPage() {
           <p className="text-left">
             {data.description}
           </p>
-          <div className="text-left">
+          <div className="text-left"></div>
             <span>By {data.author}</span>
             <span>•</span>
             <span>{new Date(data.date).toLocaleDateString()}</span>
           </div>
         </header>
 
-        <div className="text-left">
-          <div dangerouslySetInnerHTML={{ __html: content.replace(/\n/g, '<br />') }} />
+        <div className="text-left"></div>
+          <div dangerouslySetInnerHTML={{ __html: content.replace(/\n/g, '<br />') }} /></div>
         </div>
 
-        <div className="text-left">
+        <div className="text-left"></div>
           <h3 className="text-left">Get Started Today</h3>
           <p className="text-left">
             Ready to transform your enterprise with the May 2026 AI breakthrough? Contact our team to schedule a consultation and discover how this revolutionary technology can deliver unprecedented value to your organization.
           </p>
-          <div className="text-left">
+          <div className="text-left"></div>
             <a 
               href="/"
               className="text-left"

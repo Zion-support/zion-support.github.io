@@ -20,7 +20,7 @@ export default function Page() {
         </p>
       </header>
 
-      <div className="text-left">
+      <div className="text-left"></div>
         <section className="text-left">
           <h2 className="text-left">Why Trust Matters</h2>"
           <p className="text-left">

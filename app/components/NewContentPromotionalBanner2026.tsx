@@ -43,180 +43,120 @@ const NewContentPromotionalBanner2026: React.FC = () => {
   ];
 
   return (
-    <div className="text-left">
+    <div className="relative bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 py-16">
       {/* Animated background effects */}
-      <div className="text-left">
-        <div className="text-left"></div>"
-        <div className="text-left" style={{ animationDelay: '1s' }}></div>"
-        <div className="text-left" style={{ animationDelay: '2s' }}></div>"
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute -top-4 -left-4 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
+        <div className="absolute -top-4 -right-4 w-72 h-72 bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
+        <div className="absolute -bottom-8 left-20 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
       </div>
 
-      <div className="text-left">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Section */}
-        <div className="text-left">
-          <div className="text-left">
-            <Sparkles className="text-left" />
-            <span className="text-left">
+        <div className="text-center mb-12">
+          <div className="flex items-center justify-center space-x-2 mb-4">
+            <Sparkles className="w-5 h-5 text-purple-600" />
+            <span className="text-purple-600 font-semibold">
               🚀 JUST PUBLISHED • SEPTEMBER 2026
             </span>
-            <Sparkles className="text-left" />
+            <Sparkles className="w-5 h-5 text-purple-600" />
           </div>
 
-          <h2 className="text-left">
-            <span className="text-left">
-              Latest AI Innovations
-            </span>
-            <br />
-            <span className="text-left">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            <span className="block">Latest AI Innovations</span>
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600">
               That Transform Business
             </span>
           </h2>
           
-          <p className="text-left">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
             Explore cutting-edge AI strategies, implementation roadmaps, and security innovations 
-            that are delivering <span className="text-left">300%+ ROI< for enterprises worldwide"
+            that are delivering <span className="font-semibold text-purple-600">300%+ ROI</span> for enterprises worldwide
           </p>
 
-          <div className="text-left">
-            <div className="text-left">
-              <TrendingUp className="text-left" />
-              <span className="text-left">10,000+ Readers<"
+          <div className="flex items-center justify-center space-x-8 text-sm text-gray-500">
+            <div className="flex items-center space-x-2">
+              <TrendingUp className="w-4 h-4" />
+              <span>10,000+ Readers</span>
             </div>
-            <div className="text-left">
-              <Zap className="text-left" />
-              <span className="text-left">3 New Articles<"
+            <div className="flex items-center space-x-2">
+              <Zap className="w-4 h-4" />
+              <span>3 New Articles</span>
             </div>
-            <div className="text-left">
-              <Target className="text-left" />
-              <span className="text-left">Proven Results<"
+            <div className="flex items-center space-x-2">
+              <Target className="w-4 h-4" />
+              <span>Proven Results</span>
             </div>
           </div>
         </div>
 
         {/* Featured Content Cards */}
-        <div className="text-left">
+        <div className="grid md:grid-cols-3 gap-8">
           {featuredContent.map((content, index) => (
-            <div 
+            <Link 
               key={content.id}
-              className="text-left"
-              style={{ animationDelay: `${index * 150}ms` }}
+              href={`/blog/${content.slug}`}
+              className="group block"
             >
-              {/* Card glow effect */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${content.color} opacity-0 group-hover:opacity-10 transition-all duration-500`}></div>
-              
-              <div className="text-left">
-                {/* Icon & Badge */}
-                <div className="text-left">
-                  <div className="text-left">
-                    {content.icon}
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 p-6 h-full">
+                {/* Card glow effect */}
+                <div className={`absolute inset-0 bg-gradient-to-r ${content.bgColor} rounded-xl opacity-0 group-hover:opacity-20 transition-opacity duration-300`}></div>
+                
+                <div className="relative">
+                  {/* Icon & Badges */}
+                  <div className="flex items-center justify-between mb-4">
+                    <div className={`w-12 h-12 bg-gradient-to-r ${content.color} rounded-lg flex items-center justify-center text-2xl`}>
+                      {content.icon}
+                    </div>
+                    <div className={`px-3 py-1 bg-gradient-to-r ${content.badgeColor} text-white text-xs font-bold rounded-full`}>
+                      {content.badge}
+                    </div>
                   </div>
-                  <div className={`px-4 py-2 rounded-full bg-gradient-to-r ${content.badgeColor} text-white text-sm font-bold shadow-lg`}>
-                    {content.badge}
+
+                  {/* Content */}
+                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition-colors">
+                    {content.title}
+                  </h3>
+                  
+                  <p className="text-gray-600 mb-4 line-clamp-3">
+                    {content.excerpt}
+                  </p>
+
+                  {/* Category & CTA */}
+                  <div className="flex items-center justify-between">
+                    <span className={`text-sm font-medium bg-gradient-to-r ${content.color} bg-clip-text text-transparent`}>
+                      {content.category}
+                    </span>
+                    <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-purple-600 transition-colors" />
                   </div>
                 </div>
-
-                {/* Category */}
-                <div className="text-left">
-                  <span className={`inline-block px-4 py-2 rounded-full bg-gradient-to-r ${content.bgColor} text-gray-900 text-sm font-semibold border border-white/20`}>
-                    {content.category}
-                  </span>
-                </div>
-
-                {/* Title */}
-                <h3 className={`text-3xl font-extrabold text-white mb-4 group-hover:bg-gradient-to-r group-hover:${content.color} group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300 leading-tight`}>
-                  {content.title}
-                </h3>
-
-                {/* Excerpt */}
-                <p className="text-left">
-                  {content.excerpt}
-                </p>
-
-                {/* CTA Button */}
-                <Link
-                  href={`/blog/${content.slug}`}
-                  className={`group/btn flex items-center justify-center gap-3 w-full bg-gradient-to-r ${content.color} hover:shadow-2xl text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 transform hover:-translate-y-1`}
-                >
-                  <span className="text-left">Read Full Article<"
-                  <ArrowRight className="text-left" />
-                </Link>
               </div>
-
-              {/* Corner accent */}
-              <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${content.color} opacity-10 rounded-bl-full`}></div>
-            </div>
+            </Link>
           ))}
         </div>
 
-        {/* Bottom CTA Section */}
-        <div className="text-left">
-          <div className="text-left">
-            <div className="text-left">
-              <Rocket className="text-left" />
-              <h3 className="text-left">
-                Ready to Transform Your Enterprise?
-              </h3>
-              <Shield className="text-left" />
-            </div>
-            
-            <p className="text-left">
-              Join 500+ enterprises achieving <span className="text-left">300% ROI<, "
-              <span className="text-left"> 85% automation<, and "
-              <span className="text-left"> complete digital transformation< with Zion Tech Group's AI solutions"
+        {/* CTA Section */}
+        <div className="text-center mt-12">
+          <div className="bg-white rounded-xl shadow-lg p-8 max-w-2xl mx-auto">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">
+              Ready to Transform Your Business with AI?
+            </h3>
+            <p className="text-gray-600 mb-6">
+              Join thousands of enterprises already implementing these breakthrough strategies
             </p>
-
-            <div className="text-left">
-              <Link
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
                 href="/contact"
-                className="text-left"
+                className="px-8 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
               >
-                <Sparkles className="text-left" />
-                <span>Start Your AI Journey</span>
+                Get Started Today
               </Link>
-              
-              <Link
+              <Link 
                 href="/blog"
-                className="text-left"
+                className="px-8 py-3 border-2 border-purple-600 text-purple-600 font-semibold rounded-lg hover:bg-purple-600 hover:text-white transition-all duration-300"
               >
-                <span>Explore All Content</span>
-                <ArrowRight className="text-left" />
+                Explore All Articles
               </Link>
-            </div>
-
-            {/* Stats */}
-            <div className="text-left">
-              <div className="text-left">
-                <div className="text-left">
-                  500+
-                </div>
-                <div className="text-left">
-                  Enterprise Clients
-                </div>
-              </div>
-              <div className="text-left">
-                <div className="text-left">
-                  300%
-                </div>
-                <div className="text-left">
-                  Average ROI
-                </div>
-              </div>
-              <div className="text-left">
-                <div className="text-left">
-                  99.9%
-                </div>
-                <div className="text-left">
-                  System Uptime
-                </div>
-              </div>
-              <div className="text-left">
-                <div className="text-left">
-                  24/7
-                </div>
-                <div className="text-left">
-                  Expert Support
-                </div>
-              </div>
             </div>
           </div>
         </div>
