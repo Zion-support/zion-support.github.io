@@ -275,7 +275,7 @@ const AI2025OctCustomerIntentPredictionBreakthrough = () => {
               Join industry leaders achieving 98.2% prediction accuracy and transforming customer experiences with AI-powered intent prediction.
             </p>
             <a 
-              href="/contact" 
+              href="/contact"
               className="inline-block bg-gradient-to-r from-rose-500 to-orange-500 text-white font-bold px-8 py-4 rounded-lg hover:from-rose-600 hover:to-orange-600 transition-all duration-300 shadow-lg hover:shadow-rose-500/50"
             >
               Transform Your Customer Experience

@@ -71,7 +71,6 @@ export default function Fortune500AITransformation() {
         {/* Main Content */}
         <div className="prose prose-lg prose-invert max-w-none">"
           <h2 className="text-3xl font-bold text-white mb-6">The Challenge</h2>"
-          
           <p className="text-gray-300 mb-6 leading-relaxed">"
             A leading Fortune 500 manufacturing company faced significant operational challenges that were impacting 
             their competitive position and profitability. With over 50,000 employees across 25 countries and 
@@ -114,7 +113,6 @@ export default function Fortune500AITransformation() {
           </div>
 
           <h2 className="text-3xl font-bold text-white mb-6 mt-12">The Solution: Meta-Cognitive AI Implementation</h2>"
-          
           <p className="text-gray-300 mb-6 leading-relaxed">"
             Zion Tech Group partnered with the organization to implement a comprehensive Meta-Cognitive AI solution 
             that would transform their decision-making capabilities and operational efficiency. The implementation 
@@ -122,7 +120,6 @@ export default function Fortune500AITransformation() {
           </p>
 
           <h3 className="text-2xl font-bold text-white mb-4 mt-8">Phase 1: Strategic Decision Engine</h3>"
-          
           <p className="text-gray-300 mb-6 leading-relaxed">"
             The first phase involved deploying Meta-Cognitive AI systems to enhance strategic decision-making 
             processes across the organization. The AI system was trained on historical business data, market 
@@ -141,7 +138,6 @@ export default function Fortune500AITransformation() {
           </div>
 
           <h3 className="text-2xl font-bold text-white mb-4 mt-8">Phase 2: Operational Optimization</h3>"
-          
           <p className="text-gray-300 mb-6 leading-relaxed">"
             The second phase focused on automating and optimizing operational processes across manufacturing, 
             supply chain, and customer service operations. Meta-Cognitive AI systems were deployed to monitor, 
@@ -171,7 +167,6 @@ export default function Fortune500AITransformation() {
           </div>
 
           <h3 className="text-2xl font-bold text-white mb-4 mt-8">Phase 3: Predictive Analytics & Automation</h3>"
-          
           <p className="text-gray-300 mb-6 leading-relaxed">"
             The final phase implemented advanced predictive analytics and autonomous decision-making capabilities 
             across customer service, finance, and human resources. Meta-Cognitive AI systems were trained to 
@@ -179,7 +174,6 @@ export default function Fortune500AITransformation() {
           </p>
 
           <h2 className="text-3xl font-bold text-white mb-6 mt-12">The Results</h2>"
-          
           <p className="text-gray-300 mb-6 leading-relaxed">"
             The Meta-Cognitive AI implementation delivered unprecedented results across all business areas, 
             transforming the organization's operational efficiency and financial performance.
@@ -208,7 +202,6 @@ export default function Fortune500AITransformation() {
           </div>
 
           <h3 className="text-2xl font-bold text-white mb-4 mt-8">Business Impact by Department</h3>"
-          
           <div className="space-y-6 mb-8">"
             <div className="bg-slate-900/50 rounded-xl p-6">"
               <h4 className="text-xl font-bold text-blue-400 mb-3">Executive Leadership</h4>"
@@ -239,7 +232,6 @@ export default function Fortune500AITransformation() {
           </div>
 
           <h2 className="text-3xl font-bold text-white mb-6 mt-12">Implementation Timeline & Investment</h2>"
-          
           <div className="bg-slate-900/50 rounded-xl p-6 mb-8">"
             <h3 className="text-xl font-bold text-white mb-4">Project Timeline: 12 Months</h3>"
             <div className="space-y-4">"

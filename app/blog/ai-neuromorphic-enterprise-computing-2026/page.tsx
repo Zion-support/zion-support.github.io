@@ -61,7 +61,6 @@ export default function AINeuromorphicEnterpriseComputing2026() {
 
         <section className="mb-8">"
           <h2 className="text-2xl font-bold text-gray-900 mb-4">Enterprise Applications & Performance Gains</h2>"
-          
           <div className="grid md:grid-cols-2 gap-6 mb-6">"
             <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">"
               <h3 className="text-lg font-semibold text-blue-900 mb-3">🏭 Industrial IoT</h3>"
@@ -158,7 +157,6 @@ export default function AINeuromorphicEnterpriseComputing2026() {
 
         <section className="mb-8">"
           <h2 className="text-2xl font-bold text-gray-900 mb-4">Implementation Challenges & Solutions</h2>"
-          
           <div className="space-y-4">"
             <div className="bg-red-50 border border-red-200 rounded-lg p-6">"
               <h3 className="text-lg font-semibold text-red-900 mb-3">⚠️ Challenge: Programming Paradigm Shift</h3>"
@@ -188,7 +186,6 @@ export default function AINeuromorphicEnterpriseComputing2026() {
 
         <section className="mb-8">"
           <h2 className="text-2xl font-bold text-gray-900 mb-4">ROI & Business Impact</h2>"
-          
           <div className="bg-gradient-to-r from-green-50 to-blue-50 border border-green-200 rounded-lg p-6 mb-6">"
             <h3 className="text-xl font-semibold text-gray-900 mb-4">💰 Financial Benefits</h3>"
             <div className="grid md:grid-cols-2 gap-6">"

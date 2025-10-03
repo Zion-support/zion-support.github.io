@@ -100,7 +100,6 @@ export default function December2026MegaBreakthroughConsultingPage() {
 
             <div className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 backdrop-blur-lg rounded-2xl p-8 border border-purple-500/30 mb-12">"
               <h2 className="text-3xl font-bold text-white mb-6">What Makes This Revolutionary</h2>"
-              
               <h3 className="text-2xl font-bold text-white mb-4">Universal Intelligence Architecture 2.0</h3>"
               <ul className="list-disc list-inside text-gray-300 mb-8 space-y-2">"
                 <li><strong className="text-indigo-400">15,000x Performance Boost</strong>: Unprecedented processing speeds</li>"
@@ -131,7 +130,6 @@ export default function December2026MegaBreakthroughConsultingPage() {
 
             <div className="bg-gradient-to-r from-green-500/10 to-blue-500/10 backdrop-blur-lg rounded-2xl p-8 border border-green-500/30 mb-12">"
               <h2 className="text-3xl font-bold text-white mb-6">Service Components</h2>"
-              
               <div className="grid md:grid-cols-2 gap-8 mb-8">"
                 <div className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10">"
                   <h3 className="text-xl font-bold text-white mb-4">1. AI Transformation Assessment</h3>"
@@ -181,7 +179,6 @@ export default function December2026MegaBreakthroughConsultingPage() {
 
             <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 backdrop-blur-lg rounded-2xl p-8 border border-cyan-500/30 mb-12">"
               <h2 className="text-3xl font-bold text-white mb-6">Expected Results</h2>"
-              
               <h3 className="text-2xl font-bold text-white mb-4">Performance Metrics</h3>"
               <div className="grid md:grid-cols-2 gap-6 mb-8">"
                 <div>
@@ -223,7 +220,6 @@ export default function December2026MegaBreakthroughConsultingPage() {
 
             <div className="bg-gradient-to-r from-orange-500/10 to-red-500/10 backdrop-blur-lg rounded-2xl p-8 border border-orange-500/30 mb-12">"
               <h2 className="text-3xl font-bold text-white mb-6">Implementation Process</h2>"
-              
               <div className="space-y-8">"
                 <div className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10">"
                   <h3 className="text-xl font-bold text-white mb-4">Phase 1: Foundation (Months 1-2)</h3>"
@@ -262,7 +258,6 @@ export default function December2026MegaBreakthroughConsultingPage() {
 
             <div className="bg-gradient-to-r from-pink-500/10 to-purple-500/10 backdrop-blur-lg rounded-2xl p-8 border border-pink-500/30 mb-12">"
               <h2 className="text-3xl font-bold text-white mb-6">Success Stories</h2>"
-              
               <div className="grid md:grid-cols-3 gap-6 mb-8">"
                 <div className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10">"
                   <h4 className="text-lg font-bold text-white mb-3">Fortune 500 Manufacturing Conglomerate</h4>"
@@ -298,7 +293,6 @@ export default function December2026MegaBreakthroughConsultingPage() {
 
             <div className="bg-gradient-to-r from-indigo-500/10 to-purple-500/10 backdrop-blur-lg rounded-2xl p-8 border border-indigo-500/30 mb-12">"
               <h2 className="text-3xl font-bold text-white mb-6">Investment & ROI</h2>"
-              
               <div className="grid md:grid-cols-2 gap-8 mb-8">"
                 <div>
                   <h3 className="text-2xl font-bold text-white mb-4">Service Investment</h3>"
@@ -342,7 +336,6 @@ export default function December2026MegaBreakthroughConsultingPage() {
 
             <div className="bg-gradient-to-r from-green-500/10 to-blue-500/10 backdrop-blur-lg rounded-2xl p-8 border border-green-500/30">"
               <h2 className="text-3xl font-bold text-white mb-6">Getting Started</h2>"
-              
               <div className="space-y-8">"
                 <div className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10">"
                   <h3 className="text-xl font-bold text-white mb-4">Step 1: Initial Consultation</h3>"

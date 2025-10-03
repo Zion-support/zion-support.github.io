@@ -58,7 +58,6 @@ export default function AI2025CognitiveAutomationBreakthrough() {
         {/* Main Content */}
         <div className="max-w-4xl mx-auto">"
           <div className="prose prose-lg prose-invert max-w-none">"
-            
             <section className="mb-12">"
               <h2 className="text-3xl font-bold text-white mb-6">The Cognitive Automation Revolution</h2>"
               <p className="text-xl text-gray-300 mb-6">"
@@ -75,7 +74,6 @@ export default function AI2025CognitiveAutomationBreakthrough() {
 
             <section className="mb-12">"
               <h2 className="text-3xl font-bold text-white mb-6">Breakthrough Technologies</h2>"
-              
               <div className="grid md:grid-cols-2 gap-8 mb-8">"
                 <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">"
                   <h3 className="text-2xl font-bold text-white mb-4">🧠 Neural Reasoning Engines</h3>"
@@ -139,7 +137,6 @@ export default function AI2025CognitiveAutomationBreakthrough() {
 
             <section className="mb-12">"
               <h2 className="text-3xl font-bold text-white mb-6">Fortune 500 Success Stories</h2>"
-              
               <div className="bg-gradient-to-r from-purple-500/10 to-indigo-500/10 backdrop-blur-lg rounded-2xl p-8 border border-purple-500/20 mb-8">"
                 <h3 className="text-2xl font-bold text-purple-400 mb-4">🏦 Global Financial Services Leader</h3>"
                 <div className="grid md:grid-cols-3 gap-6 mb-6">"
@@ -211,7 +208,6 @@ export default function AI2025CognitiveAutomationBreakthrough() {
 
             <section className="mb-12">"
               <h2 className="text-3xl font-bold text-white mb-6">Implementation Framework</h2>"
-              
               <div className="space-y-6">"
                 <div className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10">"
                   <div className="flex items-center gap-4 mb-4">"

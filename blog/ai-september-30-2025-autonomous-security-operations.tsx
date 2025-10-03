@@ -239,13 +239,13 @@ export default function AISeptember302025AutonomousSecurityOperations() {
             </p>
             <div className="flex flex-wrap gap-4">
               <a 
-                href="/contact" 
+                href="/contact"
                 className="inline-block bg-gradient-to-r from-red-500 to-orange-600 hover:from-red-400 hover:to-orange-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-red-500/50 transform hover:-translate-y-1"
               >
                 Request Security Assessment →
               </a>
               <a 
-                href="/case-studies" 
+                href="/case-studies"
                 className="inline-block border-2 border-red-500 text-red-400 hover:bg-red-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
               >
                 View Success Stories

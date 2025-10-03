@@ -92,7 +92,6 @@ export default function AIEdgeComputingSuccess2026() {
         {/* Solution Overview */}
         <div className="bg-white rounded-xl shadow-lg p-8 mb-8">"
           <h2 className="text-3xl font-bold text-gray-900 mb-6">AI Edge Computing Solution</h2>"
-          
           <h3 className="text-2xl font-bold text-gray-900 mb-4">Implementation Strategy</h3>"
           <div className="grid md:grid-cols-3 gap-6 mb-8">"
             <div className="bg-blue-50 rounded-lg p-6 border border-blue-200">"
@@ -148,7 +147,6 @@ export default function AIEdgeComputingSuccess2026() {
         {/* Results */}
         <div className="bg-white rounded-xl shadow-lg p-8 mb-8">"
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Transformation Results</h2>"
-          
           <div className="grid md:grid-cols-2 gap-8 mb-8">"
             <div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">Performance Improvements</h3>"
@@ -230,7 +228,6 @@ export default function AIEdgeComputingSuccess2026() {
         {/* ROI Analysis */}
         <div className="bg-gradient-to-r from-green-50 to-blue-50 rounded-xl p-8 mb-8 border border-green-200">"
           <h2 className="text-3xl font-bold text-gray-900 mb-6">ROI Analysis</h2>"
-          
           <div className="grid md:grid-cols-2 gap-8">"
             <div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">Investment Breakdown</h3>"

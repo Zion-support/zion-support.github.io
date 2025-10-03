@@ -246,7 +246,7 @@ const vectorStore = new OptimizedVectorDB({
                   dramatically reducing costs.
                 </p>
                 <a 
-                  href="/contact" 
+                  href="/contact"
                   className="inline-block px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-bold rounded-xl transition-all transform hover:scale-105"
                 >
                   Get Your Vector Optimization Assessment

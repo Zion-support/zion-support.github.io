@@ -77,7 +77,6 @@ export default function GlobalManufacturingCaseStudy() {
 
       {/* Content */}
       <div className="max-w-4xl mx-auto px-4 py-12">"
-        
         {/* Executive Summary */}
         <section className="mb-12">"
           <div className="bg-gradient-to-r from-green-50 to-blue-50 rounded-2xl p-8 border border-green-100">"
@@ -244,7 +243,6 @@ export default function GlobalManufacturingCaseStudy() {
         {/* Implementation Journey */}
         <section className="mb-12">"
           <h2 className="text-3xl font-bold text-gray-900 mb-8">Implementation Journey</h2>"
-          
           <div className="grid md:grid-cols-3 gap-8">"
             <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl p-6 border border-blue-100">"
               <div className="w-12 h-12 bg-blue-500 text-white rounded-xl flex items-center justify-center font-bold text-xl mb-4">1</div>"
@@ -284,11 +282,9 @@ export default function GlobalManufacturingCaseStudy() {
         {/* Results and Impact */}
         <section className="mb-12">"
           <h2 className="text-3xl font-bold text-gray-900 mb-8">Results and Impact</h2>"
-          
           <div className="grid md:grid-cols-2 gap-8 mb-8">"
             <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-8 border border-green-100">"
               <h3 className="text-2xl font-bold text-gray-800 mb-6">Quantifiable Business Results</h3>"
-              
               <div className="space-y-6">"
                 <div>
                   <h4 className="text-lg font-semibold text-gray-800 mb-3">Operational Efficiency</h4>"
@@ -338,7 +334,6 @@ export default function GlobalManufacturingCaseStudy() {
 
             <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl p-8 border border-blue-100">"
               <h3 className="text-2xl font-bold text-gray-800 mb-6">Financial Impact</h3>"
-              
               <div className="space-y-6">"
                 <div className="text-center">"
                   <div className="text-4xl font-bold text-green-600 mb-2">$75M</div>"
@@ -367,7 +362,6 @@ export default function GlobalManufacturingCaseStudy() {
         {/* Technology Architecture */}
         <section className="mb-12">"
           <h2 className="text-3xl font-bold text-gray-900 mb-8">Technology Architecture</h2>"
-          
           <div className="bg-white rounded-xl p-8 shadow-lg border border-gray-100 mb-8">"
             <h3 className="text-xl font-bold text-gray-800 mb-6">Core Components</h3>"
             <div className="bg-gray-100 rounded-lg p-6 font-mono text-sm">"

@@ -216,13 +216,13 @@ export default function QuantumEdgeComputingBreakthrough2025() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a 
-              href="/contact" 
+              href="/contact"
               className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center"
             >
               Schedule Quantum Consultation
             </a>
             <a 
-              href="/case-studies/quantum-edge-manufacturing-success-2025" 
+              href="/case-studies/quantum-edge-manufacturing-success-2025"
               className="border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center"
             >
               View Success Stories

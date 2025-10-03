@@ -81,7 +81,6 @@ export default function ImplementationGuide() {
 
       {/* Content */}
       <div className="max-w-4xl mx-auto px-4 py-12">"
-        
         {/* Table of Contents */}
         <section className="mb-12">"
           <div className="bg-white rounded-xl p-8 shadow-lg border border-gray-100">"

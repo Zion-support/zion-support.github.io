@@ -72,7 +72,6 @@ export default function QuantumNeuralFusionBreakthroughPage() {
           </div>
           
           <h2 className="text-3xl font-bold text-white mb-6">The Quantum-Neural Revolution</h2>"
-          
           <h3 className="text-2xl font-bold text-white mb-4">Understanding the Fusion</h3>"
           <p className="text-gray-300 mb-6">"
             Quantum-neural fusion represents the seamless integration of quantum computational principles with advanced neural network architectures. This breakthrough enables:
@@ -100,7 +99,6 @@ export default function QuantumNeuralFusionBreakthroughPage() {
           </div>
           
           <h3 className="text-2xl font-bold text-white mb-4">Enterprise Applications</h3>"
-          
           <div className="space-y-8 mb-8">"
             <div className="bg-gradient-to-r from-green-900/30 to-emerald-900/30 backdrop-blur-sm rounded-xl p-6 border border-green-500/20">"
               <h4 className="text-xl font-bold text-green-400 mb-3">Financial Services Transformation</h4>"
@@ -131,7 +129,6 @@ export default function QuantumNeuralFusionBreakthroughPage() {
           </div>
           
           <h2 className="text-3xl font-bold text-white mb-6">ROI and Business Impact</h2>"
-          
           <div className="bg-gradient-to-r from-orange-900/30 to-red-900/30 backdrop-blur-sm rounded-xl p-8 border border-orange-500/20 mb-8">"
             <h3 className="text-2xl font-bold text-orange-400 mb-4">Quantified Benefits</h3>"
             <div className="grid md:grid-cols-2 gap-6">"
@@ -153,7 +150,6 @@ export default function QuantumNeuralFusionBreakthroughPage() {
           </div>
           
           <h2 className="text-3xl font-bold text-white mb-6">Getting Started</h2>"
-          
           <div className="bg-gradient-to-r from-teal-900/30 to-green-900/30 backdrop-blur-sm rounded-xl p-8 border border-teal-500/20 mb-8">"
             <h3 className="text-2xl font-bold text-teal-400 mb-4">Next Steps</h3>"
             <ol className="text-gray-300 space-y-3">"

@@ -26,7 +26,6 @@ import { Calendar, Clock, Check } from 'lucide-react';
         ;"
           <div className="flex items-center gap-2 text-zion-slate-light">;"
             <Calendar className="h-4 w-4" />;"
-
             <span>Next available: {availability.nextAvailable;}</span>;
           </div>;
       </div>;"
@@ -38,7 +37,3 @@ import { Calendar, Clock, Check } from 'lucide-react';
                 <div className="w-20 text-zion-slate-light">{slot.day} </div>;""
                 <div className="flex items-center gap-1">;"
                   <Clock className="h-4 w-4 text-zion-cyan" />;"
-
-
-
-

@@ -58,7 +58,6 @@ export default function NeuromorphicEdgeComputingBreakthrough() {
         <article className="prose prose-lg prose-invert max-w-none">"
           <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 mb-8">"
             <h2 className="text-3xl font-bold text-white mb-6">The Neuromorphic Edge Computing Revolution</h2>"
-            
             <p className="text-gray-300 mb-6 text-lg leading-relaxed">"
               In 2027, we witnessed the most significant breakthrough in computing architecture since the invention of the transistor. 
               Neuromorphic edge computing has achieved what was once thought impossible: 1000x improvement in energy efficiency 
@@ -84,7 +83,6 @@ export default function NeuromorphicEdgeComputingBreakthrough() {
 
           <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 mb-8">"
             <h2 className="text-3xl font-bold text-white mb-6">Fortune 500 Success Stories</h2>"
-            
             <div className="grid md:grid-cols-2 gap-6 mb-6">"
               <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-xl p-6 border border-blue-500/20">"
                 <h3 className="text-xl font-bold text-blue-400 mb-3">Manufacturing Giant</h3>"
@@ -112,7 +110,6 @@ export default function NeuromorphicEdgeComputingBreakthrough() {
 
           <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 mb-8">"
             <h2 className="text-3xl font-bold text-white mb-6">Implementation Blueprint</h2>"
-            
             <div className="space-y-6">"
               <div className="bg-gradient-to-r from-indigo-500/10 to-blue-500/10 rounded-xl p-6 border border-indigo-500/20">"
                 <h3 className="text-xl font-bold text-indigo-400 mb-3">Phase 1: Infrastructure Assessment</h3>"
@@ -154,7 +151,6 @@ export default function NeuromorphicEdgeComputingBreakthrough() {
 
           <div className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 backdrop-blur-lg rounded-2xl p-8 border border-green-500/30 mb-8">"
             <h2 className="text-3xl font-bold text-white mb-6">Future Vision: The Edge-Native AI Era</h2>"
-            
             <p className="text-gray-300 mb-6 text-lg leading-relaxed">"
               Neuromorphic edge computing represents just the beginning of the edge-native AI era. As this technology matures, 
               we anticipate even more dramatic improvements in efficiency, latency, and capability.

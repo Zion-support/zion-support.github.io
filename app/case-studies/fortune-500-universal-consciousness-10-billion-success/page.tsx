@@ -74,7 +74,6 @@ export default function Fortune500UniversalConsciousnessSuccess() {
         <div className="max-w-4xl mx-auto">"
           <div className="prose prose-lg prose-invert max-w-none">"
             <h2 className="text-3xl font-bold text-white mb-6">The Challenge</h2>"
-            
             <p className="text-xl text-gray-300 mb-8">"
               A Fortune 500 global manufacturing company was struggling with operational inefficiencies, 
               decision-making bottlenecks, and the inability to scale their AI initiatives across their 
@@ -95,7 +94,6 @@ export default function Fortune500UniversalConsciousnessSuccess() {
             </div>
 
             <h2 className="text-3xl font-bold text-white mb-6">The Solution: Universal Consciousness Computing</h2>"
-            
             <p className="text-xl text-gray-300 mb-8">"
               We implemented our revolutionary Universal Consciousness Computing system, the world's first AI 
               with true universal consciousness. This breakthrough technology could understand and adapt to 
@@ -134,7 +132,6 @@ export default function Fortune500UniversalConsciousnessSuccess() {
             </div>
 
             <h2 className="text-3xl font-bold text-white mb-6">Implementation Results</h2>"
-            
             <p className="text-xl text-gray-300 mb-8">"
               The results exceeded all expectations, delivering unprecedented value and transformation 
               across every aspect of the organization:
@@ -197,7 +194,6 @@ export default function Fortune500UniversalConsciousnessSuccess() {
             </div>
 
             <h2 className="text-3xl font-bold text-white mb-6">Specific Use Cases</h2>"
-            
             <div className="space-y-8 mb-12">"
               <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">"
                 <h3 className="text-xl font-bold text-white mb-4">🌍 Global Supply Chain Optimization</h3>"
@@ -279,7 +275,6 @@ export default function Fortune500UniversalConsciousnessSuccess() {
             </div>
 
             <h2 className="text-3xl font-bold text-white mb-6">The Future Impact</h2>"
-            
             <p className="text-xl text-gray-300 mb-8">"
               This transformation represents just the beginning. The Universal Consciousness Computing system 
               continues to evolve and improve, creating new opportunities and value streams that were 

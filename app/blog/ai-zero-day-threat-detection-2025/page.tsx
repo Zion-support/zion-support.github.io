@@ -125,7 +125,6 @@ export default function AIZeroDayThreatDetection() {
         </div>
 
         <h2 className="text-3xl font-bold text-gray-900 mb-6">📊 Real-World Success Stories</h2>"
-        
         <blockquote className="border-l-4 border-red-500 pl-6 py-4 bg-red-50 rounded-r-xl mb-8">"
           <p className="text-gray-700 italic text-lg">"
             "Our AI-powered security system detected and neutralized a sophisticated zero-day attack targeting our "
@@ -172,7 +171,6 @@ export default function AIZeroDayThreatDetection() {
         </div>
 
         <h2 className="text-3xl font-bold text-gray-900 mb-6">🔮 Advanced Capabilities</h2>"
-        
         <div className="space-y-6 mb-8">"
           <div className="bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl p-6 border border-purple-200">"
             <h3 className="text-xl font-bold text-gray-900 mb-3">Predictive Threat Modeling</h3>"
@@ -201,7 +199,6 @@ export default function AIZeroDayThreatDetection() {
         </div>
 
         <h2 className="text-3xl font-bold text-gray-900 mb-6">💰 ROI and Business Impact</h2>"
-        
         <div className="grid md:grid-cols-2 gap-8 mb-8">"
           <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">"
             <h3 className="text-xl font-bold text-gray-900 mb-4">Cost Savings</h3>"
@@ -248,7 +245,6 @@ export default function AIZeroDayThreatDetection() {
         </div>
 
         <h2 className="text-3xl font-bold text-gray-900 mb-6">🚀 Implementation Strategy</h2>"
-        
         <div className="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-xl p-8 mb-8 border border-blue-200">"
           <div className="space-y-4">"
             <div className="flex items-start gap-4">"

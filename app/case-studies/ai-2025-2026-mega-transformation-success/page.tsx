@@ -36,7 +36,6 @@ export default function AIMegaTransformationSuccess20252026() {
         </div>
 
         <h2 className="text-3xl font-bold mb-6 text-gray-900">📊 Transformation Metrics</h2>"
-        
         <div className="grid md:grid-cols-2 gap-6 mb-8">"
           <div className="bg-gradient-to-br from-green-50 to-emerald-100 p-6 rounded-lg">"
             <h3 className="text-xl font-bold text-green-900 mb-3">💰 Financial Impact</h3>"
@@ -60,7 +59,6 @@ export default function AIMegaTransformationSuccess20252026() {
         </div>
 
         <h2 className="text-3xl font-bold mb-6 text-gray-900">🏢 Company Profile</h2>"
-        
         <div className="bg-gray-50 p-6 rounded-lg mb-8">"
           <div className="grid md:grid-cols-2 gap-6">"
             <div>
@@ -87,7 +85,6 @@ export default function AIMegaTransformationSuccess20252026() {
         </div>
 
         <h2 className="text-3xl font-bold mb-6 text-gray-900">🚀 Transformation Strategy</h2>"
-        
         <div className="space-y-6 mb-8">"
           <div className="border-l-4 border-blue-500 pl-6">"
             <h3 className="text-xl font-bold text-blue-900 mb-2">Phase 1: Quantum AI Foundation (Months 1-4)</h3>"
@@ -130,7 +127,6 @@ export default function AIMegaTransformationSuccess20252026() {
         </div>
 
         <h2 className="text-3xl font-bold mb-6 text-gray-900">🔧 Key Technologies Implemented</h2>"
-        
         <div className="grid md:grid-cols-2 gap-6 mb-8">"
           <div className="bg-gradient-to-br from-purple-50 to-indigo-100 p-6 rounded-lg">"
             <h3 className="text-xl font-bold text-purple-900 mb-3">⚛️ Quantum-Enhanced AI</h3>"
@@ -174,7 +170,6 @@ export default function AIMegaTransformationSuccess20252026() {
         </div>
 
         <h2 className="text-3xl font-bold mb-6 text-gray-900">📈 Results & Impact</h2>"
-        
         <div className="bg-gradient-to-r from-green-600 to-emerald-600 text-white p-6 rounded-lg mb-8">"
           <h3 className="text-2xl font-bold mb-4">Transformation Results</h3>"
           <div className="grid md:grid-cols-4 gap-4">"
@@ -198,7 +193,6 @@ export default function AIMegaTransformationSuccess20252026() {
         </div>
 
         <h2 className="text-3xl font-bold mb-6 text-gray-900">💡 Key Success Factors</h2>"
-        
         <div className="bg-blue-50 border-l-4 border-blue-400 p-6 mb-8">"
           <ul className="space-y-3 text-gray-700">"
             <li className="flex items-start gap-2">"
@@ -225,7 +219,6 @@ export default function AIMegaTransformationSuccess20252026() {
         </div>
 
         <h2 className="text-3xl font-bold mb-6 text-gray-900">🎯 Lessons Learned</h2>"
-        
         <div className="grid md:grid-cols-2 gap-6 mb-8">"
           <div className="bg-yellow-50 p-6 rounded-lg">"
             <h3 className="text-lg font-bold text-yellow-900 mb-3">Critical Success Elements</h3>"

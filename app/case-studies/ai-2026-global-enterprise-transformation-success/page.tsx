@@ -78,7 +78,6 @@ export default function GlobalEnterpriseAITransformationSuccess() {
         </div>
 
         <h2 className="text-3xl font-bold text-gray-900 mb-6">🏢 Company Profile</h2>"
-
         <div className="bg-white border border-gray-200 rounded-lg p-6 mb-8">"
           <h3 className="text-xl font-bold text-gray-900 mb-4">Global Enterprise Overview</h3>"
           <div className="grid md:grid-cols-2 gap-6">"
@@ -106,7 +105,6 @@ export default function GlobalEnterpriseAITransformationSuccess() {
         </div>
 
         <h2 className="text-3xl font-bold text-gray-900 mb-6">🚀 Transformation Journey</h2>"
-
         <div className="space-y-8 mb-8">"
           <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-6 rounded-lg">"
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Phase 1: Foundation & Assessment (Months 1-3)</h3>"
@@ -210,7 +208,6 @@ export default function GlobalEnterpriseAITransformationSuccess() {
         </div>
 
         <h2 className="text-3xl font-bold text-gray-900 mb-6">💡 Key Success Factors</h2>"
-
         <div className="grid md:grid-cols-2 gap-6 mb-8">"
           <div className="bg-white border border-gray-200 rounded-lg p-6">"
             <h3 className="text-xl font-bold text-gray-900 mb-4">Technology Excellence</h3>"
@@ -250,7 +247,6 @@ export default function GlobalEnterpriseAITransformationSuccess() {
         </div>
 
         <h2 className="text-3xl font-bold text-gray-900 mb-6">📊 Detailed Results Analysis</h2>"
-
         <div className="bg-white border border-gray-200 rounded-lg p-6 mb-8">"
           <h3 className="text-2xl font-bold text-gray-900 mb-6">Financial Impact Breakdown</h3>"
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">"

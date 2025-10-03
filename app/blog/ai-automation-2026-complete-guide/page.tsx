@@ -101,7 +101,6 @@ export default function AIAutomation2026CompleteGuide() {
 
           <section className="mb-12">"
             <h2 className="text-3xl font-bold text-white mb-6">Core Technologies Powering AI Automation</h2>"
-            
             <div className="space-y-8">"
               <div className="bg-gradient-to-r from-indigo-900/30 to-purple-900/30 rounded-xl p-8">"
                 <h3 className="text-2xl font-semibold text-indigo-400 mb-4">1. Autonomous Agent Frameworks</h3>"
@@ -191,7 +190,6 @@ export default function AIAutomation2026CompleteGuide() {
 
           <section className="mb-12">"
             <h2 className="text-3xl font-bold text-white mb-6">Implementation Framework: The 6-Step Process</h2>"
-            
             <div className="space-y-6">"
               <div className="bg-gradient-to-r from-slate-800/50 to-gray-800/50 rounded-xl p-6">"
                 <div className="flex items-start gap-4">"
@@ -305,7 +303,6 @@ export default function AIAutomation2026CompleteGuide() {
 
           <section className="mb-12">"
             <h2 className="text-3xl font-bold text-white mb-6">Industry-Specific Automation Strategies</h2>"
-            
             <div className="grid md:grid-cols-2 gap-8">"
               <div className="bg-gradient-to-br from-blue-900/30 to-cyan-900/30 rounded-xl p-6">"
                 <h3 className="text-xl font-semibold text-blue-400 mb-4">Financial Services</h3>"
@@ -371,7 +368,6 @@ export default function AIAutomation2026CompleteGuide() {
 
           <section className="mb-12">"
             <h2 className="text-3xl font-bold text-white mb-6">Measuring Success: KPIs and Metrics</h2>"
-            
             <div className="grid md:grid-cols-3 gap-6">"
               <div className="bg-gradient-to-br from-emerald-900/30 to-teal-900/30 rounded-xl p-6">"
                 <h3 className="text-lg font-semibold text-emerald-400 mb-4">Efficiency Metrics</h3>"

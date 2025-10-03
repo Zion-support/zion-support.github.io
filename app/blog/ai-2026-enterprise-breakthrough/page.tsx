@@ -80,7 +80,6 @@ export default function AI2026EnterpriseBreakthrough() {
 
           <section className="mb-12">"
             <h2 className="text-3xl font-bold text-white mb-6">Key Technologies Driving 2026 AI Revolution</h2>"
-            
             <div className="space-y-8">"
               <div className="bg-gradient-to-r from-purple-900/30 to-pink-900/30 rounded-xl p-8">"
                 <h3 className="text-2xl font-semibold text-purple-400 mb-4">1. Meta-Cognitive AI Agents</h3>"
@@ -133,7 +132,6 @@ export default function AI2026EnterpriseBreakthrough() {
 
           <section className="mb-12">"
             <h2 className="text-3xl font-bold text-white mb-6">Enterprise Implementation Roadmap</h2>"
-            
             <div className="bg-gradient-to-r from-slate-800/50 to-gray-800/50 rounded-xl p-8">"
               <h3 className="text-2xl font-semibold text-white mb-6">Phase 1: Foundation (Months 1-3)</h3>"
               <div className="grid md:grid-cols-3 gap-6">"
@@ -191,7 +189,6 @@ export default function AI2026EnterpriseBreakthrough() {
 
           <section className="mb-12">"
             <h2 className="text-3xl font-bold text-white mb-6">ROI and Success Metrics</h2>"
-            
             <div className="grid md:grid-cols-2 gap-8">"
               <div className="bg-gradient-to-br from-green-900/40 to-emerald-900/40 rounded-xl p-8">"
                 <h3 className="text-2xl font-semibold text-green-400 mb-6">Financial Impact</h3>"

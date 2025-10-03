@@ -64,13 +64,11 @@ export default function February2026ConsultingPage() {
         <div className="container mx-auto px-6">"
           <div className="max-w-4xl mx-auto prose prose-lg prose-invert">"
             <h2 className="text-4xl font-bold text-white mb-6">🚀 Revolutionary AI Consulting for the Future</h2>"
-            
             <p className="text-xl text-gray-300 mb-8">"
               Transform your organization with Zion Tech Group's cutting-edge AI 2026 February breakthrough consulting services. Our expert consultants deliver proven solutions that have generated over $3.2 billion in client value, featuring Meta-Cognitive AI, Quantum-Neural Fusion, and Autonomous Enterprise Operations.
             </p>
 
             <h3 className="text-3xl font-bold text-white mb-4">Why Choose Our February 2026 AI Breakthrough Consulting?</h3>"
-            
             <h4 className="text-2xl font-bold text-white mb-4">Proven Track Record</h4>"
             <ul className="list-disc list-inside text-lg text-gray-300 mb-6 space-y-2">"
               <li><strong>$3.2B+</strong> in client value delivered</li>
@@ -88,9 +86,7 @@ export default function February2026ConsultingPage() {
             </ul>
 
             <h3 className="text-3xl font-bold text-white mb-4">Our February 2026 AI Breakthrough Services</h3>"
-            
             <h4 className="text-2xl font-bold text-white mb-4">1. Meta-Cognitive AI Consulting</h4>"
-            
             <h5 className="text-xl font-bold text-white mb-4">What is Meta-Cognitive AI?</h5>"
             <p className="text-lg text-gray-300 mb-6">"
               Meta-Cognitive AI represents the next evolution in artificial intelligence - systems that can think about their own thinking processes, learn from their learning, and continuously optimize their decision-making capabilities.
@@ -106,7 +102,6 @@ export default function February2026ConsultingPage() {
             </ul>
 
             <h4 className="text-2xl font-bold text-white mb-4">2. Quantum-Neural Fusion Consulting</h4>"
-            
             <h5 className="text-xl font-bold text-white mb-4">Revolutionary Hybrid Computing</h5>"
             <p className="text-lg text-gray-300 mb-6">"
               Quantum-Neural Fusion combines the parallel processing power of quantum computing with the pattern recognition capabilities of neural networks, delivering unprecedented performance.
@@ -122,7 +117,6 @@ export default function February2026ConsultingPage() {
             </ul>
 
             <h4 className="text-2xl font-bold text-white mb-4">3. Autonomous Enterprise Operations Consulting</h4>"
-            
             <h5 className="text-xl font-bold text-white mb-4">Complete Business Automation</h5>"
             <p className="text-lg text-gray-300 mb-6">"
               Transform your organization with autonomous operations that deliver 98% automation rates and self-healing capabilities.
@@ -138,7 +132,6 @@ export default function February2026ConsultingPage() {
             </ul>
 
             <h3 className="text-3xl font-bold text-white mb-4">Our Consulting Methodology</h3>"
-            
             <h4 className="text-2xl font-bold text-white mb-4">Phase 1: Discovery and Assessment (Weeks 1-2)</h4>"
             <ul className="list-disc list-inside text-lg text-gray-300 mb-6 space-y-2">"
               <li><strong>Business Process Analysis</strong>: Comprehensive evaluation of current operations</li>
@@ -172,7 +165,6 @@ export default function February2026ConsultingPage() {
             </ul>
 
             <h3 className="text-3xl font-bold text-white mb-4">Success Stories</h3>"
-            
             <div className="grid md:grid-cols-3 gap-6 mb-8">"
               <div className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10">"
                 <h4 className="text-xl font-bold text-white mb-2">Fortune 100 Manufacturing Client</h4>"
@@ -204,7 +196,6 @@ export default function February2026ConsultingPage() {
             </div>
 
             <h3 className="text-3xl font-bold text-white mb-4">Getting Started</h3>"
-            
             <div className="bg-gradient-to-r from-purple-500/20 to-blue-500/20 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/30">"
               <h4 className="text-2xl font-bold text-white mb-4">Ready to Transform Your Business?</h4>"
               <p className="text-lg text-gray-300 mb-6">"

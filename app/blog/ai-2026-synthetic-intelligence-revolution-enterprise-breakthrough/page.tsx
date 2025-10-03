@@ -126,7 +126,6 @@ export default function SyntheticIntelligenceRevolutionPage() {
             </div>
             
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Real-World Applications</h3>"
-            
             <div className="grid md:grid-cols-2 gap-6 mb-8">"
               <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-200">"
                 <h4 className="text-xl font-bold text-gray-900 mb-3">1. Autonomous Business Strategy</h4>"

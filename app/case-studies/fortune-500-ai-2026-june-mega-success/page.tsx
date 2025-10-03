@@ -69,7 +69,6 @@ export default function Fortune500AI2026JuneMegaSuccess() {
         {/* Challenge */}
         <section className="mb-12">"
           <h2 className="text-3xl font-bold text-white mb-8">🎯 The Challenge</h2>"
-          
           <div className="bg-white/5 backdrop-blur-lg rounded-xl p-8 border border-white/10 mb-8">"
             <h3 className="text-xl font-bold text-white mb-4">Company Profile</h3>"
             <ul className="list-disc list-inside text-gray-300 space-y-2 mb-6">"
@@ -124,7 +123,6 @@ export default function Fortune500AI2026JuneMegaSuccess() {
         {/* Solution */}
         <section className="mb-12">"
           <h2 className="text-3xl font-bold text-white mb-8">🚀 The Solution</h2>"
-          
           <div className="mb-8">"
             <h3 className="text-2xl font-bold text-white mb-4">AI 2026 Breakthrough Implementation</h3>"
             <p className="text-gray-300 mb-6 leading-relaxed">"
@@ -201,7 +199,6 @@ export default function Fortune500AI2026JuneMegaSuccess() {
         {/* Results */}
         <section className="mb-12">"
           <h2 className="text-3xl font-bold text-white mb-8">📈 Results & Impact</h2>"
-          
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">"
             <div className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 backdrop-blur-sm rounded-xl p-6 border border-green-500/30 text-center">"
               <div className="text-4xl font-extrabold text-green-400 mb-2">$3.2B</div>"
@@ -263,10 +260,8 @@ export default function Fortune500AI2026JuneMegaSuccess() {
         {/* ROI Analysis */}
         <section className="mb-12">"
           <h2 className="text-3xl font-bold text-white mb-8">💰 ROI Analysis</h2>"
-          
           <div className="bg-gradient-to-r from-green-900/50 to-emerald-900/50 backdrop-blur-sm rounded-2xl p-8 border border-green-500/30">"
             <h3 className="text-xl font-bold text-white mb-6">Investment vs. Returns</h3>"
-            
             <div className="grid md:grid-cols-2 gap-8">"
               <div>
                 <h4 className="text-lg font-bold text-green-400 mb-4">Investment Breakdown</h4>"

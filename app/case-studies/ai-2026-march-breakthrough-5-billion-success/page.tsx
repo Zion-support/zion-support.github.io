@@ -182,7 +182,6 @@ export default function March2026CaseStudyPage() {
             {/* Results Achieved */}
             <section id="results" className="mb-16">"
               <h2 className="text-4xl font-bold text-white mb-8">Results Achieved</h2>"
-              
               <div className="grid md:grid-cols-2 gap-8 mb-8">"
                 <div className="bg-gradient-to-r from-green-500/10 to-emerald-500/10 backdrop-blur-sm rounded-2xl p-8 border border-green-500/20">"
                   <h3 className="text-2xl font-bold text-white mb-6">Financial Impact</h3>"

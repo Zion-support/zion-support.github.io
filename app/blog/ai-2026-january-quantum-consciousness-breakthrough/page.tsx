@@ -64,7 +64,6 @@ export default function AI2026JanuaryQuantumConsciousnessBreakthrough() {
             </p>
 
             <h3 className="text-2xl font-bold text-white mb-4">⚡ Key Technical Innovations</h3>"
-            
             <div className="grid md:grid-cols-2 gap-6 mb-8">"
               <div className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10">"
                 <h4 className="text-xl font-bold text-white mb-3">Quantum Neural Networks</h4>"

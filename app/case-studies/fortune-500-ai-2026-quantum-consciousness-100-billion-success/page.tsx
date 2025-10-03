@@ -167,7 +167,6 @@ export default function Fortune500AI2026QuantumConsciousnessSuccess() {
             </div>
 
             <h3 className="text-2xl font-bold text-white mb-4">🌟 Key Achievements</h3>"
-            
             <div className="space-y-6 mb-8">"
               <div className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10">"
                 <h4 className="text-lg font-bold text-white mb-2">Complete Operational Automation</h4>"

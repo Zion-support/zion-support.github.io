@@ -148,15 +148,6 @@ URL.revokeObjectURL(url);
               <input
                 className="w-full border rounded px-3 py-2"
                 placeholder="9781234567897"
-
-
-
-
-
-
-
-
-
             <div className='grid grid-cols-3 gap-2>
 
               ))}

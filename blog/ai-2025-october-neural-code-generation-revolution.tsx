@@ -282,13 +282,13 @@ export default function NeuralCodeGenerationRevolution2025() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <a 
-                    href="/contact" 
+                    href="/contact"
                     className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center"
                   >
                     Schedule Consultation
                   </a>
                   <a 
-                    href="/case-studies/tech-giant-neural-code-generation-18-3m-success" 
+                    href="/case-studies/tech-giant-neural-code-generation-18-3m-success"
                     className="bg-white/10 hover:bg-white/20 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 border border-green-400/30 text-center"
                   >
                     View Case Studies

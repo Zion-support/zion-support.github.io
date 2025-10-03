@@ -51,13 +51,13 @@ const QuantumAI2026EnterpriseTransformation = () => {
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a 
-                  href="/contact" 
+                  href="/contact"
                   className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 transform hover:-translate-y-1"
                 >
                   Explore Quantum AI →
                 </a>
                 <a 
-                  href="#quantum-capabilities" 
+                  href="#quantum-capabilities"
                   className="border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
                 >
                   Learn More
@@ -192,13 +192,13 @@ const QuantumAI2026EnterpriseTransformation = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
-                href="/contact" 
+                href="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50"
               >
                 Start Quantum Journey
               </a>
               <a 
-                href="/case-studies" 
+                href="/case-studies"
                 className="border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
               >
                 View Quantum Success Stories

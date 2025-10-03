@@ -56,7 +56,6 @@ export default function AISpaceTechSuccess2026() {
         </div>
 
         <h2 className="text-3xl font-bold text-gray-900 mb-6">Company Background</h2>"
-        
         <div className="bg-gray-50 p-6 rounded-xl mb-8">"
           <h3 className="text-xl font-bold text-gray-900 mb-4">SpaceTech Global</h3>"
           <ul className="text-gray-700 space-y-2">"
@@ -69,7 +68,6 @@ export default function AISpaceTechSuccess2026() {
         </div>
 
         <h2 className="text-3xl font-bold text-gray-900 mb-6">The Challenge</h2>"
-        
         <p className="text-lg text-gray-700 mb-6">"
           SpaceTech Global faced several critical challenges in their space operations:
         </p>
@@ -98,7 +96,6 @@ export default function AISpaceTechSuccess2026() {
         </div>
 
         <h2 className="text-3xl font-bold text-gray-900 mb-6">AI Solution Implementation</h2>"
-
         <h3 className="text-2xl font-bold text-gray-900 mb-4">Phase 1: Autonomous Mission Planning</h3>"
         <p className="text-lg text-gray-700 mb-6">"
           Implemented AI-powered mission planning systems that could autonomously:
@@ -136,7 +133,6 @@ export default function AISpaceTechSuccess2026() {
         </ul>
 
         <h2 className="text-3xl font-bold text-gray-900 mb-6">Technology Stack</h2>"
-
         <div className="bg-white border border-gray-200 rounded-lg p-6 mb-8">"
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">"
             <div>
@@ -170,7 +166,6 @@ export default function AISpaceTechSuccess2026() {
         </div>
 
         <h2 className="text-3xl font-bold text-gray-900 mb-6">Results & Impact</h2>"
-
         <h3 className="text-2xl font-bold text-gray-900 mb-4">Quantifiable Results</h3>"
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">"
           <div className="bg-green-50 p-6 rounded-lg">"
@@ -205,7 +200,6 @@ export default function AISpaceTechSuccess2026() {
         </div>
 
         <h2 className="text-3xl font-bold text-gray-900 mb-6">Implementation Timeline</h2>"
-
         <div className="space-y-6 mb-8">"
           <div className="flex items-start gap-4">"
             <div className="bg-indigo-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm">1</div>"
@@ -238,7 +232,6 @@ export default function AISpaceTechSuccess2026() {
         </div>
 
         <h2 className="text-3xl font-bold text-gray-900 mb-6">Lessons Learned</h2>"
-
         <div className="bg-yellow-50 p-6 rounded-xl mb-8">"
           <h3 className="text-lg font-bold text-yellow-800 mb-4">Key Success Factors</h3>"
           <ul className="text-yellow-700 space-y-2">"
@@ -251,7 +244,6 @@ export default function AISpaceTechSuccess2026() {
         </div>
 
         <h2 className="text-3xl font-bold text-gray-900 mb-6">Future Roadmap</h2>"
-
         <p className="text-lg text-gray-700 mb-6">"
           SpaceTech Global is now expanding their AI capabilities to include:
         </p>

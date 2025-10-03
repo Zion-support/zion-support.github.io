@@ -70,7 +70,6 @@ export default function AutonomousOperations() {
         {/* Main Content */}
         <div className="prose prose-lg prose-invert max-w-none">"
           <h2 className="text-3xl font-bold text-white mb-6">The Autonomous Operations Revolution</h2>"
-          
           <p className="text-gray-300 mb-6 leading-relaxed">"
             In 2026, we're witnessing the emergence of truly autonomous enterprise operations through 
             <strong className="text-green-400"> Autonomous Operations AI</strong>. These revolutionary systems "
@@ -85,7 +84,6 @@ export default function AutonomousOperations() {
           </p>
 
           <h3 className="text-2xl font-bold text-white mb-4 mt-8">How Autonomous Operations Work</h3>"
-          
           <p className="text-gray-300 mb-6 leading-relaxed">"
             Autonomous Operations AI operates through a sophisticated multi-layer architecture:
           </p>
@@ -117,7 +115,6 @@ export default function AutonomousOperations() {
           </div>
 
           <h3 className="text-2xl font-bold text-white mb-4 mt-8">Enterprise Applications & Results</h3>"
-          
           <p className="text-gray-300 mb-6 leading-relaxed">"
             Leading enterprises are achieving remarkable results with Autonomous Operations:
           </p>
@@ -143,7 +140,6 @@ export default function AutonomousOperations() {
           </div>
 
           <h3 className="text-2xl font-bold text-white mb-4 mt-8">Key Technologies & Capabilities</h3>"
-          
           <p className="text-gray-300 mb-6 leading-relaxed">"
             Autonomous Operations leverage cutting-edge AI technologies:
           </p>
@@ -182,7 +178,6 @@ export default function AutonomousOperations() {
           </div>
 
           <h3 className="text-2xl font-bold text-white mb-4 mt-8">Implementation Framework</h3>"
-          
           <p className="text-gray-300 mb-6 leading-relaxed">"
             Successfully deploying Autonomous Operations requires a structured approach:
           </p>

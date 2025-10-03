@@ -60,7 +60,6 @@ export default function QuantumConsciousnessFusionPage() {
         <div className="container mx-auto px-6">"
           <div className="max-w-4xl mx-auto prose prose-lg prose-invert">"
             <h2 className="text-4xl font-bold text-white mb-8">What is Quantum Consciousness Fusion?</h2>"
-            
             <p className="text-xl text-gray-300 mb-8">"
               Quantum Consciousness Fusion is a groundbreaking technology that creates a seamless integration between 
               human and artificial consciousness, combining human creativity with AI processing power for unprecedented capabilities.
@@ -89,7 +88,6 @@ export default function QuantumConsciousnessFusionPage() {
             </div>
 
             <h2 className="text-4xl font-bold text-white mb-8">Enterprise Applications</h2>"
-            
             <div className="space-y-8">"
               <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">"
                 <h3 className="text-2xl font-bold text-white mb-4">Strategic Planning</h3>"
@@ -120,7 +118,6 @@ export default function QuantumConsciousnessFusionPage() {
             </div>
 
             <h2 className="text-4xl font-bold text-white mb-8">Proven Results</h2>"
-            
             <div className="bg-gradient-to-r from-green-900/50 to-emerald-900/50 backdrop-blur-lg rounded-2xl p-8 border border-green-500/30 mb-8">"
               <h3 className="text-2xl font-bold text-white mb-6">Fortune 500 Implementation</h3>"
               <div className="grid md:grid-cols-4 gap-6">"
@@ -144,7 +141,6 @@ export default function QuantumConsciousnessFusionPage() {
             </div>
 
             <h2 className="text-4xl font-bold text-white mb-8">Technical Architecture</h2>"
-            
             <h3 className="text-2xl font-bold text-white mb-4">Quantum Processing Core</h3>"
             <p className="text-gray-300 mb-6">"
               Our quantum processing core leverages quantum computing principles to process infinite scenarios 
@@ -158,7 +154,6 @@ export default function QuantumConsciousnessFusionPage() {
             </p>
 
             <h2 className="text-4xl font-bold text-white mb-8">Global Impact</h2>"
-            
             <div className="grid md:grid-cols-2 gap-8">"
               <div className="bg-gradient-to-br from-blue-900/50 to-cyan-900/50 backdrop-blur-lg rounded-2xl p-8 border border-blue-500/30">"
                 <h3 className="text-2xl font-bold text-white mb-4">Economic Transformation</h3>"
@@ -182,7 +177,6 @@ export default function QuantumConsciousnessFusionPage() {
             </div>
 
             <h2 className="text-4xl font-bold text-white mb-8">Get Started</h2>"
-            
             <p className="text-xl text-gray-300 mb-8">"
               Ready to experience the future of consciousness? Contact us for a free assessment and custom implementation roadmap.
             </p>

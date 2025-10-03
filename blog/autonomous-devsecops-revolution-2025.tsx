@@ -222,7 +222,7 @@ export default function AutonomousDevSecOpsRevolution2025() {
                   <li className="text-white/70">✓ Provide developer training on secure coding practices</li>
                 </ul>
                 <a 
-                  href="/contact" 
+                  href="/contact"
                   className="inline-block bg-gradient-to-r from-red-500 to-orange-600 hover:from-red-400 hover:to-orange-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-red-500/50"
                 >
                   Schedule Security Consultation →

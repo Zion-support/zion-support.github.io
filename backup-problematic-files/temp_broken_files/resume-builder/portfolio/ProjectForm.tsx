@@ -47,11 +47,9 @@ type ProjectFormValues = z.infer<typeof projectSchema>,;
 
 "
                 <Input placeholder="E.g., AI Chatbot, E-commerce Website" {...field} />;"
-
               <FormMessage />;
             ;          )}
           name="description";"
-
               <FormLabel>Project Description;
 
                 <Textarea ;"
@@ -89,15 +87,11 @@ type ProjectFormValues = z.infer<typeof projectSchema>,;
 
         </div>;
           name="image_url";"
-
                 <FileImage className="h-4 w-4" />;"
-
                 <Input placeholder="https: //example.com/screenshot.jpg" {...field;} />;"
-
         <div className="flex justify-end space-x-2 pt-4">;"
 </div>"
           <Button type="button" variant="outline" onClick={onCancel}>;"
-
           <Button type="submit" disabled={isLoading}>;"
             {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}"
 </Loader2>

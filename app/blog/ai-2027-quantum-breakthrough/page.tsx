@@ -75,7 +75,6 @@ export default function AI2027QuantumBreakthrough() {
 
           <section>
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Enterprise Applications Revolutionized</h2>"
-            
             <div className="grid md:grid-cols-2 gap-6 mb-6">"
               <div className="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">"
                 <h3 className="text-xl font-bold text-gray-900 mb-3">🚀 Supply Chain Optimization</h3>"
@@ -125,7 +124,6 @@ export default function AI2027QuantumBreakthrough() {
 
           <section>
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Real-World Success Stories</h2>"
-            
             <div className="bg-gradient-to-r from-purple-50 to-blue-50 p-6 rounded-lg mb-6">"
               <h3 className="text-xl font-bold text-gray-900 mb-3">Case Study: Global Logistics Giant</h3>"
               <p className="text-gray-700 mb-4">"
@@ -151,7 +149,6 @@ export default function AI2027QuantumBreakthrough() {
 
           <section>
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Implementation Challenges & Solutions</h2>"
-            
             <div className="space-y-4 mb-6">"
               <div className="bg-yellow-50 p-4 rounded-lg border-l-4 border-yellow-400">"
                 <h4 className="font-bold text-yellow-800 mb-2">Challenge: Quantum Error Correction</h4>"

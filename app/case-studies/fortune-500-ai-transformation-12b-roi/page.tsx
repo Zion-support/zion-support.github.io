@@ -62,7 +62,6 @@ export default function Fortune500AITransformation12BROI() {
         {/* Main Content */}
         <div className="max-w-4xl mx-auto">"
           <div className="prose prose-lg prose-invert max-w-none">"
-            
             {/* Executive Summary */}
             <div className="bg-gradient-to-r from-green-900/50 to-emerald-900/50 border border-green-500/30 rounded-xl p-8 mb-12">"
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-3">"
@@ -149,7 +148,6 @@ export default function Fortune500AITransformation12BROI() {
             {/* Key Implementations */}
             <div className="mb-12">"
               <h2 className="text-3xl font-bold text-white mb-6">Key AI Implementations</h2>"
-              
               {/* Autonomous Manufacturing */}
               <div className="bg-gradient-to-r from-purple-900/30 to-blue-900/30 border border-purple-500/30 rounded-xl p-6 mb-6">"
                 <h3 className="text-xl font-semibold text-purple-300 mb-3">Autonomous Manufacturing Systems</h3>"

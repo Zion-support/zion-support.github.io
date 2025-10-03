@@ -301,13 +301,13 @@ const AIAgentsSoftwareDevelopmentAutomation2025: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a 
-                href="/contact" 
+                href="/contact"
                 className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 text-center"
               >
                 Schedule Demo & ROI Analysis
               </a>
               <a 
-                href="/services/ai-development-automation" 
+                href="/services/ai-development-automation"
                 className="border-2 border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-emerald-900 font-bold py-4 px-8 rounded-lg transition-all duration-300 text-center"
               >
                 Explore AI DevAgent Solutions

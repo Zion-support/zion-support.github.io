@@ -57,7 +57,6 @@ export default function EnterpriseAITransformationCaseStudy() {
       {/* Main Content */}
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">"
         <article className="prose prose-lg max-w-none">"
-          
           {/* Executive Summary */}
           <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl p-8 mb-12 border-l-4 border-green-500">"
             <h2 className="text-2xl font-bold text-gray-900 mb-4">🎯 Executive Summary</h2>"

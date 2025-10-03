@@ -349,7 +349,7 @@ export default function RetrievalAugmentedGenerationEnterpriseBreakthrough2025()
               of hybrid search, reranking, and continuous optimization.
             </p>
             <a 
-              href="/contact" 
+              href="/contact"
               className="inline-block bg-gradient-to-r from-violet-500 to-purple-600 hover:from-violet-400 hover:to-purple-500 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-violet-500/50"
             >
               Launch Your RAG System

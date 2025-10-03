@@ -51,7 +51,6 @@ export default function AI2026MegaBreakthroughPage() {
           <div className="max-w-4xl mx-auto">"
             <div className="prose prose-invert prose-lg max-w-none">"
               <h2 className="text-3xl font-bold mb-6 text-purple-400">The Three Pillars of AI Revolution</h2>"
-              
               <div className="grid md:grid-cols-3 gap-8 mb-12">"
                 <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10">"
                   <div className="text-4xl mb-4">🧠</div>"
@@ -82,7 +81,6 @@ export default function AI2026MegaBreakthroughPage() {
               </div>
 
               <h2 className="text-3xl font-bold mb-6 text-blue-400">Enterprise Impact & Results</h2>"
-              
               <div className="bg-gradient-to-r from-green-500/10 to-blue-500/10 border border-green-500/30 rounded-2xl p-8 mb-8">"
                 <h3 className="text-2xl font-bold mb-4 text-green-400">Proven Results</h3>"
                 <ul className="space-y-3 text-gray-300">"
@@ -106,7 +104,6 @@ export default function AI2026MegaBreakthroughPage() {
               </div>
 
               <h2 className="text-3xl font-bold mb-6 text-indigo-400">Implementation Roadmap</h2>"
-              
               <div className="space-y-6">"
                 <div className="border-l-4 border-purple-500 pl-6">"
                   <h3 className="text-xl font-bold mb-2 text-purple-400">Phase 1: Assessment & Strategy</h3>"

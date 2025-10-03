@@ -102,7 +102,6 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       <div className="animate-fade-in">"
-        
         {/* Unified Content Promotion - Replaces multiple redundant banners */}
         <UnifiedContentPromotion />
 

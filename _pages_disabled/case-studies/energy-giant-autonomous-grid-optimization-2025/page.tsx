@@ -501,13 +501,13 @@ export default function EnergyGiantAutonomousGridPage() {
 
             <div className="flex flex-wrap gap-4">
               <Link 
-                href="/contact" 
+                href="/contact"
                 className="bg-cyan-400 text-blue-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-cyan-300 transition-all transform hover:scale-105 shadow-xl"
               >
                 ⚡ Transform Your Grid Today
               </Link>
               <Link 
-                href="/case-studies" 
+                href="/case-studies"
                 className="bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/30 transition-all border-2 border-white"
               >
                 More Success Stories →

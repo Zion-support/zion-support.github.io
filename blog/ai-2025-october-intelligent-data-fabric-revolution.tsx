@@ -327,7 +327,7 @@ const placement = await orchestrator.optimizeDataPlacement({
                   within 6 months.
                 </p>
                 <a 
-                  href="/contact" 
+                  href="/contact"
                   className="inline-block bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-emerald-500/50"
                 >
                   Start Your Data Fabric Journey

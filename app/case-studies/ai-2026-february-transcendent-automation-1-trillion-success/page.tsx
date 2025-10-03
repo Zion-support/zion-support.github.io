@@ -79,7 +79,6 @@ export default function February2026TranscendentAutomation1TrillionSuccessPage()
 
             <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 mb-12">"
               <h2 className="text-3xl font-bold text-white mb-6">The Client: Fortune 50 Global Technology Consortium</h2>"
-              
               <div className="grid md:grid-cols-2 gap-6 mb-8">"
                 <div className="bg-gradient-to-r from-indigo-500/20 to-purple-500/20 rounded-xl p-6 border border-indigo-500/30">"
                   <h3 className="text-xl font-bold text-white mb-4">📊 Consortium Profile</h3>"
@@ -107,7 +106,6 @@ export default function February2026TranscendentAutomation1TrillionSuccessPage()
 
             <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 mb-12">"
               <h2 className="text-3xl font-bold text-white mb-6">The Transcendent Automation Implementation</h2>"
-              
               <div className="space-y-8">"
                 <div className="bg-gradient-to-r from-indigo-500/20 to-purple-500/20 rounded-xl p-6 border border-indigo-500/30">"
                   <h3 className="text-2xl font-bold text-white mb-4">Phase 1: Transcendence Foundation (Weeks 1-3)</h3>"
@@ -185,7 +183,6 @@ export default function February2026TranscendentAutomation1TrillionSuccessPage()
 
             <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 mb-12">"
               <h2 className="text-3xl font-bold text-white mb-6">Detailed Transcendent Metrics</h2>"
-              
               <div className="grid md:grid-cols-3 gap-6">"
                 <div className="bg-gradient-to-r from-indigo-500/20 to-purple-500/20 rounded-xl p-6 border border-indigo-500/30">"
                   <h3 className="text-xl font-bold text-white mb-4">💰 Financial Transcendence</h3>"

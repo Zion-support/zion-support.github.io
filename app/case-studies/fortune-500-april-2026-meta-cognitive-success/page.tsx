@@ -159,7 +159,6 @@ export default function Fortune500April2026MetaCognitiveSuccess() {
         {/* Results Section */}
         <section className="mb-12">"
           <h2 className="text-3xl font-bold text-white mb-6">Revolutionary Results</h2>"
-          
           <div className="grid md:grid-cols-2 gap-8 mb-8">"
             <div className="bg-gradient-to-r from-green-500/20 to-green-600/20 backdrop-blur-sm rounded-xl p-6 border border-green-500/30">"
               <h3 className="text-2xl font-bold text-green-400 mb-4">Financial Impact</h3>"
@@ -200,7 +199,6 @@ export default function Fortune500April2026MetaCognitiveSuccess() {
 
           <div className="bg-white/5 backdrop-blur-lg rounded-xl p-8 border border-white/10">"
             <h3 className="text-2xl font-bold text-white mb-6">Key Performance Improvements</h3>"
-            
             <div className="grid md:grid-cols-3 gap-6 mb-6">"
               <div className="text-center">"
                 <div className="text-2xl font-bold text-purple-400 mb-2">85%</div>"
@@ -233,7 +231,6 @@ export default function Fortune500April2026MetaCognitiveSuccess() {
         {/* Business Impact */}
         <section className="mb-12">"
           <h2 className="text-3xl font-bold text-white mb-6">Transformative Business Impact</h2>"
-          
           <div className="space-y-8">"
             <div className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10">"
               <h3 className="text-xl font-bold text-purple-400 mb-4">Manufacturing Operations</h3>"
@@ -282,7 +279,6 @@ export default function Fortune500April2026MetaCognitiveSuccess() {
         {/* Future Roadmap */}
         <section className="mb-12">"
           <h2 className="text-3xl font-bold text-white mb-6">Future Expansion Plans</h2>"
-          
           <div className="bg-gradient-to-r from-purple-900/50 via-blue-900/50 to-indigo-900/50 rounded-xl p-8 border border-purple-500/30">"
             <p className="text-xl text-gray-300 mb-6">"
               Building on this unprecedented success, the client is expanding the meta-cognitive 

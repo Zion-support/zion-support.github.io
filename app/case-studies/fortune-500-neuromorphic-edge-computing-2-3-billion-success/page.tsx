@@ -58,7 +58,6 @@ export default function Fortune500NeuromorphicEdgeComputingSuccess() {
         <article className="prose prose-lg prose-invert max-w-none">"
           <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 mb-8">"
             <h2 className="text-3xl font-bold text-white mb-6">The Challenge</h2>"
-            
             <p className="text-gray-300 mb-6 text-lg leading-relaxed">"
               A Fortune 100 manufacturing company with 320 facilities worldwide was facing critical operational challenges. 
               Traditional computing infrastructure was consuming excessive energy, causing production delays, and failing to 
@@ -79,7 +78,6 @@ export default function Fortune500NeuromorphicEdgeComputingSuccess() {
 
           <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 mb-8">"
             <h2 className="text-3xl font-bold text-white mb-6">The Solution: Neuromorphic Edge Computing</h2>"
-            
             <p className="text-gray-300 mb-6 text-lg leading-relaxed">"
               Zion Tech Group implemented a comprehensive neuromorphic edge computing solution across all 320 facilities, 
               replacing traditional computing infrastructure with energy-efficient neuromorphic processors that mimic 
@@ -129,7 +127,6 @@ export default function Fortune500NeuromorphicEdgeComputingSuccess() {
 
           <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 mb-8">"
             <h2 className="text-3xl font-bold text-white mb-6">The Results: $2.3B Annual Savings</h2>"
-            
             <div className="grid md:grid-cols-2 gap-6 mb-6">"
               <div className="space-y-4">"
                 <div className="bg-gradient-to-r from-blue-500/10 to-blue-600/10 rounded-xl p-4 border border-blue-500/20">"
@@ -183,7 +180,6 @@ export default function Fortune500NeuromorphicEdgeComputingSuccess() {
 
           <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 mb-8">"
             <h2 className="text-3xl font-bold text-white mb-6">ROI Analysis</h2>"
-            
             <div className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-xl p-6 border border-purple-500/20 mb-6">"
               <h3 className="text-xl font-bold text-purple-400 mb-4">💡 Return on Investment</h3>"
               <div className="grid md:grid-cols-2 gap-6">"
@@ -218,7 +214,6 @@ export default function Fortune500NeuromorphicEdgeComputingSuccess() {
 
           <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 mb-8">"
             <h2 className="text-3xl font-bold text-white mb-6">Customer Testimonial</h2>"
-            
             <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-xl p-6 border border-blue-500/20">"
               <blockquote className="text-gray-300 text-lg italic mb-4">"
                 "The neuromorphic edge computing implementation exceeded all our expectations. We've achieved $2.3B in annual "
@@ -240,7 +235,6 @@ export default function Fortune500NeuromorphicEdgeComputingSuccess() {
 
           <div className="bg-gradient-to-r from-blue-500/20 to-cyan-500/20 backdrop-blur-lg rounded-2xl p-8 border border-blue-500/30 mb-8">"
             <h2 className="text-3xl font-bold text-white mb-6">Lessons Learned</h2>"
-            
             <div className="grid md:grid-cols-2 gap-6">"
               <div>
                 <h3 className="text-xl font-bold text-blue-400 mb-3">✅ Success Factors</h3>"

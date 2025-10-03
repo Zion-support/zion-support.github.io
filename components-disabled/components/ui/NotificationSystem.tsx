@@ -26,7 +26,6 @@ const NotificationSystem: React.FC<NotificationSystemProps> = ({
         return <AlertTriangle className="h-5 w-5 text-yellow-500" />;"
         return <Info className="h-5 w-5 text-blue-500" />;"
         return <Info className="h-5 w-5 text-gray-500" />;"
-
     <div className={`fixed ${getPositionStyles()} z-50 space-y-2`}>
 </div>"
   addNotification: (notification: Omit<Notification, 'id'>) => void;
@@ -67,7 +66,6 @@ const NotificationContainer: React.FC = () => {
                 onClick={() => handleDismiss(notification.id)}
 </button>"
                 <X className="h-4 w-4" />"
-
               </button>
     <div className={colors[notification.type] + ' text-white p-4 rounded-lg shadow-lg max-w-sm'}>
       <div className="flex items-start">"
@@ -76,5 +74,4 @@ const NotificationContainer: React.FC = () => {
           <p className="text-sm opacity-90">{notification.message}</p>"
           onClick={() => onRemove(notification.id)}
           <X className="w-4 h-4" />"
-
     </div>"`;

@@ -189,7 +189,7 @@ export default function AIDrivenObservabilityPlatform2026() {
                   <li className="text-white/70">✓ Integrate with existing monitoring tools and ITSM systems</li>
                 </ul>
                 <a 
-                  href="/contact" 
+                  href="/contact"
                   className="inline-block bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50"
                 >
                   Schedule Your Free Consultation →

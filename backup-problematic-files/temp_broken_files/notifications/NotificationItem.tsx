@@ -41,13 +41,9 @@ export const NotificationItem:React.FC<NotificationItemProps> = ({;
                 className="text-zion-cyan p-0 h-auto";                onClick={handleClick}"
 "
                 <ChevronRight className="h-3 w-3 ml-1" />;"
-
               ;            )}
           </div>;
       <div className="absolute right-2 top-2 opacity-0 group-hover:opacity-100 transition-opacity flex gap-1">;"
-
-
-
                 variant="ghost";""
                 size="icon";""
                 className="h-6 w-6";"

@@ -62,7 +62,6 @@ export default function NeuralSuperintelligenceBreakthrough() {
           <div className="max-w-4xl mx-auto">"
             <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">"
               <h2 className="text-3xl font-bold text-white mb-6">🚀 The Breakthrough Technology</h2>"
-              
               <div className="space-y-8">"
                 <div>
                   <h3 className="text-2xl font-bold text-purple-400 mb-4">Meta-Cognitive AI Architecture</h3>"

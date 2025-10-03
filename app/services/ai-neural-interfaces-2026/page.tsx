@@ -61,7 +61,6 @@ export default function AINeuralInterfacesService() {
 
           <div className="prose prose-lg max-w-none">"
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Revolutionary Neural Control Technology</h2>"
-            
             <p className="text-lg text-gray-700 mb-6">"
               Our AI Neural Interfaces 2026 service represents the cutting edge of human-computer interaction. 
               By creating direct communication pathways between the human brain and AI systems, we enable 
@@ -69,7 +68,6 @@ export default function AINeuralInterfacesService() {
             </p>
 
             <h3 className="text-2xl font-bold text-gray-900 mb-4">🎯 Core Capabilities</h3>"
-            
             <div className="grid md:grid-cols-2 gap-6 mb-8">"
               <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-200">"
                 <h4 className="text-xl font-bold text-gray-900 mb-3">🧠 Thought-to-Action Translation</h4>"
@@ -102,7 +100,6 @@ export default function AINeuralInterfacesService() {
             </div>
 
             <h3 className="text-2xl font-bold text-gray-900 mb-4">🏢 Enterprise Applications</h3>"
-            
             <div className="space-y-6 mb-8">"
               <div className="border-l-4 border-purple-500 pl-6">"
                 <h4 className="text-xl font-bold text-gray-900 mb-2">Manufacturing & Industrial</h4>"
@@ -135,7 +132,6 @@ export default function AINeuralInterfacesService() {
             </div>
 
             <h3 className="text-2xl font-bold text-gray-900 mb-4">🔬 Technical Implementation</h3>"
-            
             <div className="space-y-4 mb-8">"
               <div className="bg-white p-6 rounded-lg shadow-lg">"
                 <h4 className="text-xl font-bold text-gray-900 mb-3">1. Neural Signal Capture</h4>"
@@ -165,7 +161,6 @@ export default function AINeuralInterfacesService() {
         <div className="lg:col-span-1">"
           <div className="bg-white rounded-lg shadow-lg p-6 sticky top-8">"
             <h3 className="text-2xl font-bold text-gray-900 mb-6">Service Details</h3>"
-            
             <div className="space-y-4 mb-6">"
               <div>
                 <h4 className="font-bold text-gray-900">Starting Price</h4>"

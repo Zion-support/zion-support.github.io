@@ -298,7 +298,7 @@ export default function AIEnterpriseSecurityPage() {
 
                   <p className="text-red-700 text-sm italic">
                     "AI security detected threats our SOC team never would have found. The ROI was 
-                    immediate—we prevented more fraud in the first month than the system cost for a year." 
+                    immediate—we prevented more fraud in the first month than the system cost for a year."
                     <span className="font-semibold">— CISO, Global Banking Group</span>
                   </p>
                 </div>
@@ -529,7 +529,7 @@ export default function AIEnterpriseSecurityPage() {
 
               <p className="text-gray-700 leading-relaxed">
                 September 2025 represents the inflection point where AI security transitioned from competitive 
-                advantage to survival requirement. The question is no longer "Should we deploy AI security?" 
+                advantage to survival requirement. The question is no longer "Should we deploy AI security?"
                 but rather "How quickly can we implement it before the next attack?" Your answer may determine 
                 whether your organization thrives or becomes another breach statistic.
               </p>

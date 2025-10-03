@@ -331,7 +331,7 @@ export default function QuantumResistantBlockchainArchitecture2025() {
                   quantum-resistant blockchain architecture that protects your assets for decades to come.
                 </p>
                 <a 
-                  href="/contact" 
+                  href="/contact"
                   className="inline-block bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-2xl transition-all duration-300 hover:scale-105"
                 >
                   Start Your Quantum Migration →

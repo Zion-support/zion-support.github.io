@@ -238,13 +238,13 @@ export default function October2025RealTimeIntelligenceRevolution() {
           </p>
           <div className="flex flex-wrap gap-4">
             <a 
-              href="/contact" 
+              href="/contact"
               className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-3 px-8 rounded-xl transition-all duration-300"
             >
               Schedule Consultation
             </a>
             <a 
-              href="/case-studies/fortune-500-real-time-intelligence-success-2025" 
+              href="/case-studies/fortune-500-real-time-intelligence-success-2025"
               className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-400 hover:to-indigo-500 text-white font-bold py-3 px-8 rounded-xl transition-all duration-300"
             >
               View Success Stories

@@ -172,7 +172,7 @@ const SyntheticDataGeneration2025: React.FC = () => {
                 Partner with Zion Tech to create synthetic training data that accelerates your AI initiatives.
               </p>
               <a 
-                href="/contact" 
+                href="/contact"
                 className="inline-block bg-white text-green-600 font-bold py-4 px-8 rounded-xl hover:bg-gray-100 transition-all duration-300 shadow-lg"
               >
                 Start Generating Data

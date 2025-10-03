@@ -318,7 +318,6 @@ title="Government Solutions - Zion Tech Group""
       description="Comprehensive government technology solutions for public sector organizations. Digital services, citizen engagement, and government process automation.""
       keywords="government solutions, digital government, public sector, citizen services, government technology, e-government">;"
       <div className="min-h-screen bg-white">;"
-
         {/* Hero Section */}
     >
       <div className="min-h-screen bg-white">"

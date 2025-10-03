@@ -71,7 +71,6 @@ export default function InteractiveAIROICalculator() {
           {/* Input Section */}
           <div className="space-y-6">"
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Organization Details</h3>"
-            
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">"
                 Number of Employees
@@ -145,7 +144,6 @@ export default function InteractiveAIROICalculator() {
           {/* Results Section */}
           <div className="space-y-6">"
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Projected Results</h3>"
-            
             {/* ROI */}
             <div className="bg-white p-6 rounded-xl shadow-md">"
               <div className="flex items-center mb-3">"

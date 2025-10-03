@@ -342,7 +342,7 @@ export default function ExplainableAITransparencyRevolution2025() {
                   </div>
                   <div className="text-center">
                     <a 
-                      href="/contact" 
+                      href="/contact"
                       className="inline-block bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-3 px-8 rounded-lg transition-colors"
                     >
                       Schedule Your XAI Assessment

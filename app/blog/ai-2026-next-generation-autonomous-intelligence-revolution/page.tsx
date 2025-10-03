@@ -127,7 +127,6 @@ export default function NextGenAutonomousIntelligenceRevolutionPage() {
             </div>
 
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Revolutionary Technology Stack</h2>"
-            
             <h3 className="text-2xl font-bold text-gray-900 mb-4">1. Autonomous Decision-Making Architecture</h3>"
             <p className="text-lg text-gray-700 mb-6">"
               The new autonomous intelligence systems feature revolutionary decision-making capabilities that operate 
@@ -219,7 +218,6 @@ export default function NextGenAutonomousIntelligenceRevolutionPage() {
             </div>
 
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Real-World Implementation Success</h2>"
-            
             <div className="bg-gradient-to-r from-green-50 to-emerald-50 border border-green-200 rounded-lg p-6 mb-8">"
               <h3 className="text-xl font-bold text-gray-900 mb-4">Fortune 100 Global Manufacturing Conglomerate</h3>"
               <p className="text-gray-700 mb-4">"
@@ -251,7 +249,6 @@ export default function NextGenAutonomousIntelligenceRevolutionPage() {
             </div>
 
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Implementation Roadmap</h2>"
-            
             <div className="space-y-6 mb-8">"
               <div className="bg-white border border-gray-200 rounded-lg p-6">"
                 <div className="flex items-center gap-3 mb-3">"

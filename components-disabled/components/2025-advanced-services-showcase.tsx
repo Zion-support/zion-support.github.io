@@ -78,7 +78,6 @@ const categories = [
         <div className="absolute top-4 right-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-semibold flex items-center gap-1">"
 </div>"
           <Star className="w-4 h-4" />"
-
         </div>`;
       <div className={`h-32 bg-gradient-to-br ${service.color} flex items-center justify-center`}>
         <span className="text-4xl">{service.icon}</span>"
@@ -115,7 +114,6 @@ const categories = [
             className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105""
 </a>"
             <ArrowRight className="w-4 h-4" />"
-
           </a>
 
           <a;`;
@@ -141,12 +139,8 @@ const categories = [
                 <div className="text-sm text-gray-500 dark:text-gray-400">"
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">"
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">"
-              
                 <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">"
             <div className="flex items-center gap-4">"
-
-              
-
   return ("
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">"
       <SEO;"
@@ -171,7 +165,6 @@ const categories = [
 </motion>"
               <div className="flex items-center gap-2 text-white">"
                 <CheckCircle className="w-5 h-5 text-green-300" />"
-
                 <span>30+ New Services</span>
 
                 <span>Real Implementations</span>
@@ -190,7 +183,6 @@ const categories = [
                 <span className="text-gray-700 dark:text-gray-300">{contactInfo.address}</span>"
                 href={`mailto:${contactInfo.email}?subject=Services Inquiry`}"
                 className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-all duration-300""
-
                 href={contactInfo.website}"
                 target="_blank"""
                 rel="noopener noreferrer"""
@@ -200,7 +192,6 @@ const categories = [
           <div className="flex flex-col lg:flex-row gap-6 items-start lg:items-center justify-between">"
               <div className="relative max-w-md">"
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />"
-
                 <input;"
                   type="text"""
                   placeholder="Search services...""
@@ -211,10 +202,8 @@ const categories = [
                   onClick={() => setViewMode('grid')}
 </button>
                   <LayoutGrid className="w-5 h-5" />"
-
                   onClick={() => setViewMode('list')}
                   <List className="w-5 h-5" />"
-
     <motion.div;"
         <div className='mb-6'>;
           <h4 className='font-semibold text-gray-900 dark:text-white mb-2'>;
@@ -239,7 +228,6 @@ const categories = [
             href={service && service.link}"
             className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">;"
             <ArrowRight className="w-4 h-4" />;"
-
           </a>;"
     icon: <Grid className='w - 6 h - 6' />,
 
@@ -394,7 +382,6 @@ if ()
         <div className="flex items - center justify - between">;"
             className="inline - flex items - center gap - 2 bg - gradient - to - r from - blue - 600 to - purple - 600 text - white px - 6 py - 3 rounded - lg font - semibold hover:from - blue - 700 hover:to - purple - 700 transition - all duration - 300 transform hover:scale - 105";"
             <ArrowRight className="w - 4 h - 4" />;"
-
             href={`mailto:${contact_info.email}?subject = Inquiry about ${service.name}`}"
             className="inline - flex items - center gap - 2 bg - gray - 100 dark: bg - gray - 700 text - gray - 700 dark:text - gray - 300 px - 4 py - 3 rounded - lg font - semibold hover:bg - gray - 200 dark:hover:bg - gray - 600 transition - all duration - 300";"
       <div className='relative overflow-hidden bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700'>;
@@ -420,33 +407,19 @@ if ()
                 <span>Real Implementations</span>;
                 <CheckCircle className='w-5 h-5 text-green-300' />                <span>Market Validated</span>              <div className="flex items-center gap-2 text-white">;"
                 <CheckCircle className="w-5 h-5 text-green-300" />;"
-
                 <span>Market Validated</span>;
             </motion && motion.div>;
                 href={`mailto:${contactInfo && contactInfo.email}?subject=Services Inquiry`}"
                 className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-all duration-300">;"
-
                 href={contactInfo && contactInfo.website}"
                 rel="noopener noreferrer""
                 Visit Website;
                   <Grid className='w-5 h-5' />                </button>                <button;
 
                   <Grid className="w-5 h-5" />;"
-
                 </button>;
           <div className="mt-6">;"
             <div className="flex flex-wrap gap-3">;"
-              
-
-              
-
-
-
-
-
-
-
-
           <div className="mt-6">"
             <div className="flex flex-wrap gap-3">"
                 <button;
@@ -460,10 +433,8 @@ if ()
                 <p className="text-gray-600 dark:text-gray-400">"
               <div className="flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400">"
                   <TrendingUp className="w-4 h-4 text-green-500" />"
-
                   <span>Market Growth: 150%+ YoY</span>
                   <Award className="w-4 h-4 text-blue-500" />"
-
                   <span>4.8+ Average Rating</span>
         <div className="space-y-6">"
             <div className="text-center py-12">"
@@ -493,9 +464,7 @@ if ()
               <div className="flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400">;"
                 <div className="flex items-center gap-2">;"
                   <TrendingUp className="w-4 h-4 text-green-500" />;"
-
                   <Award className="w-4 h-4 text-blue-500" />;"
-
                   <span>4 && 4.8+ Average Rating</span>;
                 </button>))}
         <div className='mb - 8'>;
@@ -515,9 +484,7 @@ if ()
                 <p className="text - gray - 600 dark:text - gray - 400">;"
               <div className="flex items - center gap - 4 text - sm text - gray - 600 dark:text - gray - 400">;"
                   <TrendingUp className="w - 4 h - 4 text - green - 500" />;"
-
                   <Award className="w - 4 h - 4 text - blue - 500" />;"
-
                   <span > 4.8+ Average Rating</span>;
             ;"
         <div className='mt-16 text-center'>;
@@ -530,20 +497,14 @@ if ()
                 <ArrowRight className='w-5 h-5' />;
 
 </p>"
-
-
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">"
                 href={`mailto:${contactInfo.email}?subject=Business Transformation Consultation`}"
                 className="inline-flex items-center gap-2 bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105""
                 <ArrowRight className="w-5 h-5" />"
-
                 href={`tel:${contactInfo.mobile}`}"
                 className="inline-flex items-center gap-2 bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover: bg-white hover:text-blue-600 transition-all duration-300""
                 <Phone className="w-5 h-5" />"
-
                 <ArrowRight className="w-5 h-5" />;"
-
                 href={`tel:${contactInfo && contactInfo.mobile}`}"
                 className="inline-flex items-center gap-2 bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover: bg-white hover:text-blue-600 transition-all duration-300">;"
                 <Phone className="w-5 h-5" />;"
@@ -552,11 +513,9 @@ if ()
                 href={`mailto:${contact_info.email}?subject = Business Transformation Consultation`}"
                 className="inline - flex items - center gap - 2 bg - white text - blue - 600 px - 8 py - 4 rounded - lg font - bold text - lg hover:bg - gray - 100 transition - all duration - 300 transform hover:scale - 105";"
                 <ArrowRight className="w - 5 h - 5" />;"
-
                 href={`tel:${contact_info.mobile}`}"
                 className="inline - flex items - center gap - 2 bg - transparent border - 2 border - white text - white px - 8 py - 4 rounded - lg font - bold text - lg hover: bg - white hover:text - blue - 600 transition - all duration - 300";"
                 <Phone className="w - 5 h - 5" />;"
-
           <button className="px - 8 py - 4 bg - white text - blue - 600 rounded - xl font - semibold hover:bg - gray - 100 transition - all duration - 300">;"
         </motion.div>;
     </div>);        </div>;

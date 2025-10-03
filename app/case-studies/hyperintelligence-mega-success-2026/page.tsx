@@ -134,7 +134,6 @@ export default function HyperintelligenceMegaSuccess2026() {
           </div>
 
           <h2 className="text-3xl font-bold mb-6 text-white">Results and Impact</h2>"
-          
           <div className="bg-gradient-to-r from-green-900/10 to-emerald-900/10 border border-green-500/20 rounded-xl p-8 mb-8">"
             <h3 className="text-2xl font-bold mb-6 text-green-300">Financial Impact</h3>"
             <div className="grid md:grid-cols-3 gap-6">"

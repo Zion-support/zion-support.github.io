@@ -62,7 +62,6 @@ export default function AISpaceTechnologyService() {
 
           <div className="prose prose-lg max-w-none">"
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Revolutionary Space AI Technology</h2>"
-            
             <p className="text-lg text-gray-700 mb-6">"
               Our AI Space Technology 2026 service represents the pinnacle of autonomous space operations. 
               By combining advanced artificial intelligence with cutting-edge space systems, we enable 
@@ -70,7 +69,6 @@ export default function AISpaceTechnologyService() {
             </p>
 
             <h3 className="text-2xl font-bold text-gray-900 mb-4">🛰️ Core Capabilities</h3>"
-            
             <div className="grid md:grid-cols-2 gap-6 mb-8">"
               <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-200">"
                 <h4 className="text-xl font-bold text-gray-900 mb-3">🧠 Autonomous Satellite Intelligence</h4>"
@@ -103,7 +101,6 @@ export default function AISpaceTechnologyService() {
             </div>
 
             <h3 className="text-2xl font-bold text-gray-900 mb-4">🚀 Space Applications</h3>"
-            
             <div className="space-y-6 mb-8">"
               <div className="border-l-4 border-blue-500 pl-6">"
                 <h4 className="text-xl font-bold text-gray-900 mb-2">Satellite Constellation Management</h4>"
@@ -136,7 +133,6 @@ export default function AISpaceTechnologyService() {
             </div>
 
             <h3 className="text-2xl font-bold text-gray-900 mb-4">🔬 Technical Architecture</h3>"
-            
             <div className="space-y-4 mb-8">"
               <div className="bg-white p-6 rounded-lg shadow-lg">"
                 <h4 className="text-xl font-bold text-gray-900 mb-3">1. Orbital Intelligence Engine</h4>"
@@ -166,7 +162,6 @@ export default function AISpaceTechnologyService() {
         <div className="lg:col-span-1">"
           <div className="bg-white rounded-lg shadow-lg p-6 sticky top-8">"
             <h3 className="text-2xl font-bold text-gray-900 mb-6">Service Details</h3>"
-            
             <div className="space-y-4 mb-6">"
               <div>
                 <h4 className="font-bold text-gray-900">Starting Price</h4>"

@@ -75,7 +75,6 @@ export default function AI2026JanuaryBreakthrough50BillionSuccess() {
       {/* Main Content */}
       <main className="container mx-auto px-6 py-16">"
         <div className="max-w-4xl mx-auto">"
-          
           {/* Client Overview */}
           <section className="mb-16">"
             <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">"

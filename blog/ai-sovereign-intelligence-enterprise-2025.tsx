@@ -294,7 +294,7 @@ export default function SovereignAIEnterprise2025() {
                     Get a custom architecture plan, TCO analysis, and implementation timeline for your sovereign AI deployment.
                   </p>
                   <a 
-                    href="/contact" 
+                    href="/contact"
                     className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-50 transition-colors inline-block"
                   >
                     Schedule Your Assessment →

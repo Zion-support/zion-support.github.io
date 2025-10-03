@@ -32,7 +32,6 @@ export default function QuantumInternetSecurityPage() {
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-emerald-400 via-green-400 to-cyan-400 bg-clip-text text-transparent flex items-center justify-center gap-3">"
 </h1>"
               <Shield className="w-10 h-10" />"
-
             <p className="mt-4 text-xl text-slate-300 max-w-3xl mx-auto">"
 </p>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">"
@@ -49,7 +48,6 @@ export default function QuantumInternetSecurityPage() {
                   >
 </li>"
                     <Check className="w-5 h-5 text-emerald-400 mt-0.5" />"
-
                     <span>{feat}</span>
                   </li>
             <div className="bg-black/30 rounded-2xl border border-emerald-500/30 p-6 h-fit">"

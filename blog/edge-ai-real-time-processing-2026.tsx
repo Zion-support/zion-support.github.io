@@ -244,13 +244,13 @@ export default function EdgeAIRealTimeProcessing2026() {
           </p>
           <div className="flex flex-wrap gap-4">
             <a 
-              href="/contact" 
+              href="/contact"
               className="bg-gradient-to-r from-indigo-500 to-violet-600 hover:from-indigo-400 hover:to-violet-500 text-white font-bold py-3 px-8 rounded-xl transition-all duration-300 shadow-lg"
             >
               Discuss Your Edge AI Needs
             </a>
             <a 
-              href="/services" 
+              href="/services"
               className="border-2 border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white font-bold py-3 px-8 rounded-xl transition-all duration-300"
             >
               Edge AI Services

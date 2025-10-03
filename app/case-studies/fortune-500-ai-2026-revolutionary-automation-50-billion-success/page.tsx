@@ -52,7 +52,6 @@ export default function Fortune500AI2026RevolutionaryAutomation50BillionSuccess(
 
         {/* Content Sections */}
         <div className="max-w-4xl mx-auto space-y-16">"
-          
           {/* Executive Summary */}
           <section>
             <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">"

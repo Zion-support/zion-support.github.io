@@ -380,13 +380,13 @@ export default function AI2025OctoberEnterpriseRAGImplementation() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
-              href="/contact" 
+              href="/contact"
               className="bg-gradient-to-r from-emerald-500 to-cyan-600 hover:from-emerald-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-emerald-500/50 transform hover:-translate-y-1"
             >
               Schedule RAG Consultation
             </a>
             <a 
-              href="/case-studies" 
+              href="/case-studies"
               className="border-2 border-emerald-500 text-emerald-400 hover:bg-emerald-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               View RAG Case Studies

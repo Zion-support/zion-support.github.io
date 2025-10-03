@@ -277,13 +277,13 @@ const EnterpriseLLMOrchestration2025: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a 
-                href="/contact" 
+                href="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 text-center"
               >
                 Schedule Orchestration Consultation
               </a>
               <a 
-                href="/services/llm-infrastructure" 
+                href="/services/llm-infrastructure"
                 className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-blue-900 font-bold py-4 px-8 rounded-lg transition-all duration-300 text-center"
               >
                 Explore LLM Solutions
@@ -294,7 +294,7 @@ const EnterpriseLLMOrchestration2025: React.FC = () => {
           <h2 className="text-3xl font-bold mt-12 mb-6 text-gray-900">Conclusion: Orchestration Is Essential, Not Optional</h2>
           
           <p className="text-lg leading-relaxed text-gray-700 mb-6">
-            As enterprises deploy more LLMs across more use cases, orchestration transitions from "nice-to-have" to "table-stakes." 
+            As enterprises deploy more LLMs across more use cases, orchestration transitions from "nice-to-have" to "table-stakes."
             The complexity of managing dozens of models, providers, and workloads cannot be handled manually. Organizations that invest 
             in robust orchestration platforms achieve dramatic cost savings, improved reliability, and better user experiences.
           </p>

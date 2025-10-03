@@ -100,7 +100,6 @@ export default function AdaptiveNeuralArchitecturesPage() {
             </ul>
             
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Revolutionary Capabilities</h3>"
-            
             <div className="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-xl p-6 mb-8">"
               <h4 className="text-xl font-bold text-gray-900 mb-4">Real-Time Adaptation</h4>"
               <p className="text-lg text-gray-600 mb-4">"
@@ -128,7 +127,6 @@ export default function AdaptiveNeuralArchitecturesPage() {
             </div>
             
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Enterprise Applications</h3>"
-            
             <div className="grid md:grid-cols-2 gap-6 mb-8">"
               <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-200">"
                 <h4 className="text-xl font-bold text-gray-900 mb-3">1. Dynamic Customer Experience</h4>"

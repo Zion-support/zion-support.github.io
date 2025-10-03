@@ -131,7 +131,6 @@ export default function SyntheticIntelligenceSuccessPage() {
             </p>
             
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Quantified Results</h3>"
-            
             <div className="overflow-x-auto mb-8">"
               <table className="min-w-full bg-white border border-gray-200 rounded-lg">"
                 <thead className="bg-gradient-to-r from-green-500 to-emerald-500 text-white">"
@@ -172,7 +171,6 @@ export default function SyntheticIntelligenceSuccessPage() {
             </div>
             
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Specific Use Cases</h3>"
-            
             <div className="space-y-6 mb-8">"
               <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-200">"
                 <h4 className="text-xl font-bold text-gray-900 mb-3">1. Supply Chain Revolution</h4>"

@@ -115,7 +115,6 @@ export default function AISpaceTechRevolutionSuccess() {
       {/* AI Solution */}
       <section className="mb-12">"
         <h2 className="text-3xl font-bold text-gray-900 mb-6">AI-Powered Solution</h2>"
-        
         <div className="space-y-8">"
           <div className="bg-gradient-to-r from-purple-50 to-blue-50 p-8 rounded-2xl border border-purple-200">"
             <h3 className="text-2xl font-bold text-gray-900 mb-4">Autonomous Spacecraft AI System</h3>"
@@ -198,7 +197,6 @@ export default function AISpaceTechRevolutionSuccess() {
       {/* Mission Results */}
       <section className="mb-12">"
         <h2 className="text-3xl font-bold text-gray-900 mb-6">Mission Results</h2>"
-        
         <div className="grid md:grid-cols-2 gap-8 mb-8">"
           <div className="bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-2xl border border-green-200">"
             <h3 className="text-2xl font-bold text-green-800 mb-4">Mission Success Metrics</h3>"
@@ -275,7 +273,6 @@ export default function AISpaceTechRevolutionSuccess() {
       {/* Technical Deep Dive */}
       <section className="mb-12">"
         <h2 className="text-3xl font-bold text-gray-900 mb-6">Technical Deep Dive</h2>"
-        
         <div className="space-y-8">"
           <div className="bg-gray-50 p-8 rounded-2xl">"
             <h3 className="text-2xl font-bold text-gray-900 mb-4">AI Navigation System</h3>"

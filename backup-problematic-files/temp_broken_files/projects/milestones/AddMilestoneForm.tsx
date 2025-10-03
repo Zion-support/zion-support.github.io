@@ -114,12 +114,10 @@ pr-12325
                 <FormControl>;
 "
                   <Input placeholder="Milestone title" {...field} />;"
-
                 <FormMessage />;
 )
               ;            )}
             name="description";"
-
                 <FormLabel>Description (optional);
 
                   <Textarea;"
@@ -146,9 +144,7 @@ pr-12325
 </span>
                             </span>;"
                           <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />;"
-
                     <PopoverContent className="w-auto p-0" align="start">;"
-
                       <Calendar;"
                         mode="single";"
                         selected={field.value}
@@ -158,7 +154,6 @@ pr-12325
 
                 ;              )}
               name="amount";"
-
                   <FormLabel>Amount ($);
 
                     <Input;"
@@ -166,8 +161,6 @@ pr-12325
                       min="0";""
                       step="0.01";""
                       placeholder="0.00";"
-
-
           </div>;"
           <div className="flex justify-end space-x-2 pt-4">;"
                 type="button";""
@@ -176,7 +169,6 @@ pr-12325
                 disabled={isSubmitting}
 
             <Button type="submit" disabled={isSubmitting}>;"
-
                 <>;"
                   <Loader2 className="mr-2 h-4 w-4 animate-spin" />;"
 </Loader2>

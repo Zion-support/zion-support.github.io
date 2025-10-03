@@ -70,7 +70,6 @@ export default function AI2026UltimateBreakthroughRevolution() {
         {/* Key Breakthroughs */}
         <section className="mb-16">"
           <h2 className="text-3xl font-bold mb-8 text-white">Revolutionary AI Breakthroughs</h2>"
-          
           <div className="grid md:grid-cols-2 gap-8 mb-12">"
             <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-blue-500/50 transition-all duration-300">"
               <div className="text-6xl mb-6">⚛️</div>"
@@ -137,7 +136,6 @@ export default function AI2026UltimateBreakthroughRevolution() {
         {/* Case Study */}
         <section className="mb-16">"
           <h2 className="text-3xl font-bold mb-8 text-white">Fortune 500 Success Story</h2>"
-          
           <div className="bg-gradient-to-br from-green-900 via-emerald-900 to-teal-900 rounded-2xl p-8 border border-green-500/30">"
             <div className="text-center mb-8">"
               <h3 className="text-4xl font-bold text-green-400 mb-4">$10.2 Billion in Measurable Value</h3>"
@@ -177,7 +175,6 @@ export default function AI2026UltimateBreakthroughRevolution() {
         {/* Implementation Guide */}
         <section className="mb-16">"
           <h2 className="text-3xl font-bold mb-8 text-white">Implementation Roadmap</h2>"
-          
           <div className="space-y-6">"
             <div className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10">"
               <h3 className="text-xl font-bold text-white mb-3">Phase 1: Foundation (Months 1-2)</h3>"

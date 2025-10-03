@@ -98,7 +98,6 @@ export default function AIQuantumComputingServices2026() {
                   </div>
                   
                   <p className="text-gray-600 mb-6">{service.description}</p>"
-                  
                   <div className="space-y-3 mb-6">"
                     {service.features.slice(0, 4).map((feature, idx) => (
                       <div key={idx} className="flex items-start">"

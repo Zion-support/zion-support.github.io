@@ -9,8 +9,8 @@ const AIPoweredThreatDetectionSOC2025: React.FC = () => {
       <Helmet>
         <title>AI-Powered Threat Detection: Modern SOC Operations 2025 | Zion Tech Group</title>
         <meta 
-          name="description" 
-          content="Transform your SOC with AI-powered threat detection achieving 99.5% accuracy and sub-60s response times. Learn behavioral analytics, automated playbooks, and ML-driven incident response." 
+          name="description"
+          content="Transform your SOC with AI-powered threat detection achieving 99.5% accuracy and sub-60s response times. Learn behavioral analytics, automated playbooks, and ML-driven incident response."
         />
         <meta name="keywords" content="AI Cybersecurity, Threat Detection, SOC, Security Operations, ML Security, Behavioral Analytics, Incident Response, Security Automation" />
         <link rel="canonical" href="https://ziontechgroup.com/blog/ai-powered-threat-detection-soc-2025" />

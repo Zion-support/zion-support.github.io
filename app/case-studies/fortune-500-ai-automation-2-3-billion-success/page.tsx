@@ -71,7 +71,6 @@ export default function Fortune500AIAutomationSuccess() {
         {/* Content */}
         <div className="prose prose-invert prose-lg max-w-none">"
           <h2 className="text-3xl font-bold text-white mt-12 mb-6">🏢 Company Overview</h2>"
-          
           <p className="text-gray-300 mb-6">"
             Our client is a Fortune 500 global manufacturing company with operations spanning 47 countries, 
             employing over 150,000 people, and generating $45 billion in annual revenue. The company faced 
@@ -91,7 +90,6 @@ export default function Fortune500AIAutomationSuccess() {
           </div>
 
           <h2 className="text-3xl font-bold text-white mt-12 mb-6">🚀 Implementation Strategy</h2>"
-          
           <p className="text-gray-300 mb-6">"
             Our comprehensive AI automation strategy was implemented across four key phases over 24 months:
           </p>
@@ -140,7 +138,6 @@ export default function Fortune500AIAutomationSuccess() {
           </div>
 
           <h2 className="text-3xl font-bold text-white mt-12 mb-6">🏭 Manufacturing Transformation</h2>"
-          
           <p className="text-gray-300 mb-6">"
             The manufacturing division achieved the most dramatic transformation through AI automation:
           </p>
@@ -172,7 +169,6 @@ export default function Fortune500AIAutomationSuccess() {
           </div>
 
           <h2 className="text-3xl font-bold text-white mt-12 mb-6">📊 Measurable Results</h2>"
-          
           <div className="overflow-x-auto mb-8">"
             <table className="w-full bg-white/5 backdrop-blur-sm rounded-xl border border-white/10">"
               <thead>
@@ -219,7 +215,6 @@ export default function Fortune500AIAutomationSuccess() {
           </div>
 
           <h2 className="text-3xl font-bold text-white mt-12 mb-6">🎯 Key Success Factors</h2>"
-          
           <div className="grid md:grid-cols-3 gap-6 mb-8">"
             <div className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10">"
               <h3 className="text-xl font-bold text-white mb-4">🏗️ Infrastructure</h3>"
@@ -251,7 +246,6 @@ export default function Fortune500AIAutomationSuccess() {
           </div>
 
           <h2 className="text-3xl font-bold text-white mt-12 mb-6">💬 Client Testimonial</h2>"
-          
           <blockquote className="border-l-4 border-green-500 pl-6 py-4 bg-green-500/10 rounded-r-xl mb-8">"
             <p className="text-xl text-green-200 italic mb-4">"
               "The AI automation implementation exceeded our wildest expectations. We've achieved $2.3 billion "
@@ -264,7 +258,6 @@ export default function Fortune500AIAutomationSuccess() {
           </blockquote>
 
           <h2 className="text-3xl font-bold text-white mt-12 mb-6">🚀 Future Roadmap</h2>"
-          
           <p className="text-gray-300 mb-6">"
             Building on this success, the company is planning next-generation AI initiatives:
           </p>

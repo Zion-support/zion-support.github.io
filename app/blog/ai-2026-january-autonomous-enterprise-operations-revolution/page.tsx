@@ -41,7 +41,6 @@ export default function January2026AutonomousEnterpriseOperationsRevolution() {
         {/* Content */}
         <div className="max-w-4xl mx-auto">"
           <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 md:p-12">"
-            
             {/* Introduction */}
             <section className="mb-12">"
               <h2 className="text-3xl font-bold text-white mb-6">The Future of Enterprise Operations is Here</h2>"
@@ -53,7 +52,6 @@ export default function January2026AutonomousEnterpriseOperationsRevolution() {
             {/* Key Breakthrough Technologies */}
             <section className="mb-12">"
               <h2 className="text-3xl font-bold text-white mb-8">Key Breakthrough Technologies</h2>"
-              
               <div className="grid md:grid-cols-1 gap-8">"
                 <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 p-6 rounded-xl border border-blue-500/30">"
                   <h3 className="text-2xl font-bold text-white mb-4">1. Self-Healing Infrastructure</h3>"

@@ -44,7 +44,6 @@ export default function AIFutureWorkforce2026() {
         </div>
 
         <h2 className="text-3xl font-bold text-gray-900 mb-6">The New Workplace Reality</h2>"
-        
         <p className="text-gray-700 mb-6">"
           The traditional workplace is disappearing. AI isn't replacing humans—it's augmenting our capabilities 
           in unprecedented ways. From creative professionals to data scientists, every role is evolving to 
@@ -52,7 +51,6 @@ export default function AIFutureWorkforce2026() {
         </p>
 
         <h3 className="text-2xl font-bold text-gray-900 mb-4">Key Workforce Transformations</h3>"
-        
         <div className="grid md:grid-cols-2 gap-6 mb-8">"
           <div className="bg-white border border-gray-200 rounded-lg p-6">"
             <h4 className="text-xl font-bold text-blue-600 mb-3">🤖 AI-Augmented Roles</h4>"
@@ -75,7 +73,6 @@ export default function AIFutureWorkforce2026() {
         </div>
 
         <h3 className="text-2xl font-bold text-gray-900 mb-4">Essential AI Skills for 2026</h3>"
-        
         <div className="bg-gray-50 p-6 rounded-lg mb-8">"
           <h4 className="text-xl font-bold text-gray-900 mb-4">Critical Skills Framework</h4>"
           <div className="grid md:grid-cols-3 gap-4">"
@@ -95,7 +92,6 @@ export default function AIFutureWorkforce2026() {
         </div>
 
         <h2 className="text-3xl font-bold text-gray-900 mb-6">Industry-Specific Transformations</h2>"
-        
         <div className="space-y-6 mb-8">"
           <div className="border-l-4 border-blue-500 pl-6">"
             <h3 className="text-xl font-bold text-gray-900 mb-2">Healthcare</h3>"
@@ -121,7 +117,6 @@ export default function AIFutureWorkforce2026() {
         </div>
 
         <h2 className="text-3xl font-bold text-gray-900 mb-6">Organizational Strategies</h2>"
-        
         <div className="bg-gradient-to-r from-green-50 to-blue-50 p-6 rounded-xl mb-8">"
           <h3 className="text-2xl font-bold text-gray-900 mb-4">Best Practices for AI Integration</h3>"
           <ol className="text-gray-700 space-y-3">"
@@ -134,7 +129,6 @@ export default function AIFutureWorkforce2026() {
         </div>
 
         <h2 className="text-3xl font-bold text-gray-900 mb-6">Future Outlook</h2>"
-        
         <p className="text-gray-700 mb-6">"
           The future workforce will be defined by human-AI collaboration. Organizations that embrace this 
           transformation will see unprecedented productivity, innovation, and employee satisfaction. The key 

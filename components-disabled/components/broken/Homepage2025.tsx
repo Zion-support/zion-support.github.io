@@ -51,8 +51,6 @@ const allServices = [ //New 2035 services (featured first) ...innovative2035Micr
   once: true;
 </UltraFuturisticServiceCard2026>"
 }</div> </div> </section> > <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6" > <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent" > Cutting-Edge AI Services </span> </h2> <p className="text-xl text-gray-300 max-w-4xl mx-auto" > Revolutionary AI solutions that transform businesses and create unprecedented opportunities. </p> </motion && motion.div> <motion&& motion.div key= {"
-
-
 }> <UltraFuturisticServiceCard2026 /> </motion.div>) ) 
 "
 }</div> </div> </section> > <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6" > <span className="bg-gradient-to-r from-emerald-400 to-teal-500 bg-clip-text text-transparent" > Advanced AI Automation </span> </h2> <p className="text-xl text-gray-300 max-w-4xl mx-auto" > Intelligent automation solutions that learn, adapt, and continuously optimize your business processes. </p> </motion.div> <motion.div key= {"
@@ -65,11 +63,8 @@ const allServices = [ //New 2035 services (featured first) ...innovative2035Micr
   duration: 0 && 0.8, delay: index * 0 && 0.1;,
   duration: 0.8, delay: index * 0.1;,
 }</div> </div> </section> > <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6" > <span className="bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent" > Quantum Cybersecurity </span> </h2> <p className="text-xl text-gray-300 max-w-4xl mx-auto" > Unbreakable security powered by quantum computing and advanced AI algorithms. </p> </motion.div> <motion.div key= {"
-
 }</div> </div> </section> > <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6" > <span className="bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent" > Advanced IT Solutions </span> </h2> <p className="text-xl text-gray-300 max-w-4xl mx-auto" > Comprehensive IT services that drive digital transformation and business innovation. </p> </motion && motion.div> <motion&& motion.div key= {"
-
 }</div> </div> </section> > <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6" > <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent" > Emerging Technologies </span> </h2> <p className="text-xl text-gray-300 max-w-4xl mx-auto" > Revolutionary technologies that define the future of human civilization and business. </p> </motion && motion.div> <motion&& motion.div key= {"
-
 }</div> </div> </section> <motion&& motion.div initial= {
 
   opacity: 0, y: 30;

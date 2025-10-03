@@ -60,7 +60,6 @@ export default function EnterpriseAutomationMegaGuide() {
             </div>
 
             <h2 className="text-4xl font-bold text-white mb-8 mt-12">The Meta-Cognitive AI Advantage</h2>"
-            
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">"
               Traditional automation systems follow rigid rules and require constant human intervention. Meta-cognitive AI 
               represents a paradigm shift, enabling systems that can think about their own thinking, learn from experience, 
@@ -92,7 +91,6 @@ export default function EnterpriseAutomationMegaGuide() {
             </div>
 
             <h2 className="text-4xl font-bold text-white mb-8">The 5 Pillars of Enterprise Automation</h2>"
-            
             <div className="space-y-8 mb-12">"
               <div className="bg-white/5 backdrop-blur-lg rounded-xl p-8 border border-white/10">"
                 <h3 className="text-3xl font-bold text-white mb-4">1. Intelligent Process Discovery</h3>"
@@ -155,7 +153,6 @@ export default function EnterpriseAutomationMegaGuide() {
             </div>
 
             <h2 className="text-4xl font-bold text-white mb-8">Implementation Framework</h2>"
-            
             <div className="bg-gradient-to-r from-blue-900/30 to-purple-900/30 rounded-2xl p-8 mb-12 border border-blue-500/30">"
               <h3 className="text-2xl font-bold text-white mb-6">Phase 1: Foundation (Weeks 1-4)</h3>"
               <div className="grid md:grid-cols-2 gap-6">"
@@ -229,7 +226,6 @@ export default function EnterpriseAutomationMegaGuide() {
             </div>
 
             <h2 className="text-4xl font-bold text-white mb-8">Success Metrics & ROI</h2>"
-            
             <div className="grid md:grid-cols-3 gap-8 mb-12">"
               <div className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 text-center">"
                 <div className="text-4xl font-extrabold text-green-400 mb-2">98%</div>"
@@ -251,7 +247,6 @@ export default function EnterpriseAutomationMegaGuide() {
             </div>
 
             <h2 className="text-4xl font-bold text-white mb-8">Industry-Specific Applications</h2>"
-            
             <div className="grid md:grid-cols-2 gap-8 mb-12">"
               <div className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10">"
                 <h3 className="text-2xl font-bold text-white mb-4">Financial Services</h3>"

@@ -51,7 +51,6 @@ export default function AI2027RevolutionaryBreakthroughSolutions() {
       {/* Core Solutions */}
       <div className="mb-16">"
         <h2 className="text-4xl font-bold text-gray-900 mb-12 text-center">Revolutionary AI Solutions</h2>"
-        
         <div className="grid lg:grid-cols-3 gap-8">"
           <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-8 border-2 border-blue-200 hover:shadow-2xl transition-all duration-300">"
             <div className="text-5xl mb-6">🧠</div>"
@@ -148,7 +147,6 @@ export default function AI2027RevolutionaryBreakthroughSolutions() {
       {/* Implementation Packages */}
       <div className="mb-16">"
         <h2 className="text-4xl font-bold text-gray-900 mb-12 text-center">Implementation Packages</h2>"
-        
         <div className="grid lg:grid-cols-3 gap-8">"
           <div className="border-2 border-gray-200 rounded-2xl p-8 hover:border-blue-300 transition-colors">"
             <div className="text-center mb-6">"
@@ -268,7 +266,6 @@ export default function AI2027RevolutionaryBreakthroughSolutions() {
       {/* Success Metrics */}
       <div className="mb-16">"
         <h2 className="text-4xl font-bold text-gray-900 mb-12 text-center">Proven Results</h2>"
-        
         <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-white">"
           <div className="grid md:grid-cols-4 gap-8 text-center">"
             <div>
@@ -298,7 +295,6 @@ export default function AI2027RevolutionaryBreakthroughSolutions() {
       {/* Technology Stack */}
       <div className="mb-16">"
         <h2 className="text-4xl font-bold text-gray-900 mb-12 text-center">Revolutionary Technology Stack</h2>"
-        
         <div className="grid md:grid-cols-2 gap-8">"
           <div className="space-y-6">"
             <div className="border border-gray-200 rounded-xl p-6">"

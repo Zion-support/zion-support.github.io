@@ -366,7 +366,6 @@ import React from 'react' import dynamic from 'next/dynamic' import Head from 'n
       "icon": <Globe className="w-6 h-6"  />,"
       "icon": <Settings className="w-6 h-6"  />,"
       "icon": <Users className="w-6 h-6"  />,"
-
     <>"
       <SEO title="Comprehensive Services - Zion Tech Group"""
         description="Complete technology solutions including AI services, IT infrastructure, micro SaaS development, and innovative digital transformation services."""
@@ -401,12 +400,10 @@ import React from 'react' import dynamic from 'next/dynamic' import Head from 'n
                     whileTap={{ "scale": 0.95 }}""
                     className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2""
                     <ArrowRight className="w-5 h-5"  />"
-
                   </motion.a>
                     href="/contact"""
                     whileHover={{ "scale": 1.05 }}""
                     className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold flex items-center gap-2""
-
               </motion.div>
           <section id="services" className="py-20">"
                 transition={{ "duration": 0.6, "delay": 0.2 }}""
@@ -436,7 +433,6 @@ import React from 'react' import dynamic from 'next/dynamic' import Head from 'n
                             <li key={idx} className="flex items-center gap-2 text-sm text-gray-600">"
 </li>"
                               <CheckCircle className="w-4 h-4 text-green-500"  />"
-
                             </li>
                         </ul>
                       <div className="flex items-center justify-between text-sm text-gray-500 mb-6">"
@@ -446,7 +442,6 @@ import React from 'react' import dynamic from 'next/dynamic' import Head from 'n
                         whileHover={{ "scale": 1.02 }}""
                         whileTap={{ "scale": 0.98 }}""
                         className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold flex items-center justify-center gap-2 "hover": b g-blue-700 transition-colors""
-
                       </motion.button>
                 ))}
           <section className="bg-gray-50 py-20">"
@@ -459,9 +454,7 @@ import React from 'react' import dynamic from 'next/dynamic' import Head from 'n
                 <h2 className="text-3xl "md": text-4xl font-bold text-gray-900 mb-6">"
                 <div className="flex flex-col sm: fle x-row gap-4 justify-center">"
                     href="/contact""
-
                     href=""tel": +13024640950""
-
           </section>
         </main>
       

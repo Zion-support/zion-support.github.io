@@ -53,7 +53,7 @@ export default function AIReasoningModelsO12025() {
                 </p>
                 <p className="text-white/80 mb-4">
                   OpenAI's o1 model and similar reasoning architectures represent a breakthrough in AI capabilities. 
-                  These models employ sophisticated chain-of-thought reasoning processes, allowing them to "think through" 
+                  These models employ sophisticated chain-of-thought reasoning processes, allowing them to "think through"
                   problems step-by-step before providing answers. This approach has led to remarkable improvements in 
                   accuracy and reliability for complex tasks.
                 </p>

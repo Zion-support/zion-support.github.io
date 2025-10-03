@@ -304,13 +304,13 @@ const AI2025DecemberQuantumAIBreakthrough = () => {
               
               <div className="mt-6 flex flex-col sm:flex-row gap-4">
                 <a 
-                  href="/contact" 
+                  href="/contact"
                   className="bg-gradient-to-r from-purple-500 to-cyan-600 hover:from-purple-400 hover:to-cyan-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center"
                 >
                   Explore Quantum AI
                 </a>
                 <a 
-                  href="/case-studies" 
+                  href="/case-studies"
                   className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center"
                 >
                   View Success Stories

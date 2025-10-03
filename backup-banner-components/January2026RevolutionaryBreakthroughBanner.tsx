@@ -42,7 +42,7 @@ export default function January2026RevolutionaryBreakthroughBanner() {
                 </div>
               </div>
               <a 
-                href="/blog/ai-2026-neural-architecture-search-breakthrough" 
+                href="/blog/ai-2026-neural-architecture-search-breakthrough"
                 className="inline-flex items-center text-white font-semibold hover:text-cyan-400 transition-colors"
               >
                 Explore breakthrough
@@ -72,7 +72,7 @@ export default function January2026RevolutionaryBreakthroughBanner() {
                 </div>
               </div>
               <a 
-                href="/blog/ai-2026-federated-learning-enterprise-breakthrough" 
+                href="/blog/ai-2026-federated-learning-enterprise-breakthrough"
                 className="inline-flex items-center text-white font-semibold hover:text-cyan-400 transition-colors"
               >
                 Explore breakthrough
@@ -102,7 +102,7 @@ export default function January2026RevolutionaryBreakthroughBanner() {
                 </div>
               </div>
               <a 
-                href="/blog/ai-2026-quantum-enhanced-analytics" 
+                href="/blog/ai-2026-quantum-enhanced-analytics"
                 className="inline-flex items-center text-white font-semibold hover:text-cyan-400 transition-colors"
               >
                 Explore breakthrough
@@ -132,7 +132,7 @@ export default function January2026RevolutionaryBreakthroughBanner() {
                 </div>
               </div>
               <a 
-                href="/blog/ai-2026-autonomous-business-intelligence" 
+                href="/blog/ai-2026-autonomous-business-intelligence"
                 className="inline-flex items-center text-white font-semibold hover:text-cyan-400 transition-colors"
               >
                 Explore breakthrough
@@ -162,7 +162,7 @@ export default function January2026RevolutionaryBreakthroughBanner() {
                 </div>
               </div>
               <a 
-                href="/blog/ai-2026-edge-computing-revolution" 
+                href="/blog/ai-2026-edge-computing-revolution"
                 className="inline-flex items-center text-white font-semibold hover:text-cyan-400 transition-colors"
               >
                 Explore breakthrough
@@ -189,7 +189,7 @@ export default function January2026RevolutionaryBreakthroughBanner() {
                 </a>
               </div>
               <a 
-                href="/services" 
+                href="/services"
                 className="inline-flex items-center text-white font-semibold hover:text-cyan-400 transition-colors"
               >
                 View all services
@@ -201,7 +201,7 @@ export default function January2026RevolutionaryBreakthroughBanner() {
 
         <div className="text-center mt-12">
           <a 
-            href="/blog" 
+            href="/blog"
             className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold rounded-full hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
           >
             Explore All Breakthroughs

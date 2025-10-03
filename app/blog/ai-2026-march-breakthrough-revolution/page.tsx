@@ -103,7 +103,6 @@ export default function March2026BreakthroughPage() {
             {/* Revolutionary Breakthroughs */}
             <section id="breakthroughs" className="mb-16">"
               <h2 className="text-4xl font-bold text-white mb-8">Revolutionary Breakthroughs</h2>"
-              
               <div className="grid md:grid-cols-3 gap-8">"
                 <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-purple-500/50 transition-all duration-300">"
                   <div className="text-6xl mb-6">🧠</div>"
@@ -152,7 +151,6 @@ export default function March2026BreakthroughPage() {
             {/* Real-World Impact */}
             <section id="impact" className="mb-16">"
               <h2 className="text-4xl font-bold text-white mb-8">Real-World Impact</h2>"
-              
               <div className="grid md:grid-cols-2 gap-8">"
                 <div className="bg-gradient-to-r from-green-500/10 to-emerald-500/10 backdrop-blur-sm rounded-2xl p-8 border border-green-500/20">"
                   <h3 className="text-2xl font-bold text-white mb-6">Fortune 500 Success Stories</h3>"

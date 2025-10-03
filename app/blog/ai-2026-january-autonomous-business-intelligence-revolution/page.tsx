@@ -41,7 +41,6 @@ export default function January2026AutonomousBusinessIntelligenceRevolution() {
         {/* Content */}
         <div className="max-w-4xl mx-auto">"
           <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 md:p-12">"
-            
             {/* Introduction */}
             <section className="mb-12">"
               <h2 className="text-3xl font-bold text-white mb-6">The Era of Self-Driving Business Intelligence</h2>"
@@ -54,7 +53,6 @@ export default function January2026AutonomousBusinessIntelligenceRevolution() {
             {/* Revolutionary Capabilities */}
             <section className="mb-12">"
               <h2 className="text-3xl font-bold text-white mb-8">Revolutionary Autonomous BI Capabilities</h2>"
-              
               <div className="space-y-8">"
                 <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 p-6 rounded-xl border border-blue-500/30">"
                   <h3 className="text-2xl font-bold text-white mb-4">1. Self-Generating Insights</h3>"
@@ -153,7 +151,6 @@ export default function January2026AutonomousBusinessIntelligenceRevolution() {
             {/* Enterprise Use Cases */}
             <section className="mb-12">"
               <h2 className="text-3xl font-bold text-white mb-8">Enterprise Use Cases</h2>"
-              
               <div className="space-y-6">"
                 <div className="bg-gradient-to-r from-blue-600/20 to-indigo-600/20 p-6 rounded-xl border border-blue-500/30">"
                   <h3 className="text-xl font-bold text-white mb-3">Financial Services</h3>"

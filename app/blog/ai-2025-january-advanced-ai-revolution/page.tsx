@@ -68,7 +68,6 @@ export default function AdvancedAIRevolution2025() {
           <div className="max-w-4xl mx-auto">"
             <div className="prose prose-lg prose-invert max-w-none">"
               <h2 className="text-4xl font-bold text-white mb-8">The Advanced AI Revolution: January 2025 Breakthrough</h2>"
-              
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">"
                 January 2025 marks a pivotal moment in enterprise AI transformation. Our advanced AI revolution has delivered unprecedented results across Fortune 500 companies, achieving $2.8 billion in proven ROI while maintaining 99.9% operational autonomy and zero downtime.
               </p>
@@ -96,7 +95,6 @@ export default function AdvancedAIRevolution2025() {
               </div>
 
               <h3 className="text-3xl font-bold text-white mb-6">Revolutionary Implementation Results</h3>"
-              
               <div className="bg-gradient-to-r from-green-500/10 to-emerald-500/10 backdrop-blur-sm rounded-2xl p-8 border border-green-500/20 mb-8">"
                 <h4 className="text-2xl font-bold text-green-400 mb-4">Fortune 500 Success Metrics</h4>"
                 <div className="grid md:grid-cols-3 gap-6">"
@@ -116,7 +114,6 @@ export default function AdvancedAIRevolution2025() {
               </div>
 
               <h3 className="text-3xl font-bold text-white mb-6">Implementation Framework</h3>"
-              
               <div className="space-y-6 mb-12">"
                 <div className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10">"
                   <h4 className="text-xl font-semibold text-white mb-3">Phase 1: Advanced AI Assessment</h4>"

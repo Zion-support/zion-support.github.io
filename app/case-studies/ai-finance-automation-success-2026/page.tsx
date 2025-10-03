@@ -44,7 +44,6 @@ export default function AIFinanceAutomationSuccess2026() {
         </div>
 
         <h2 className="text-3xl font-bold text-gray-900 mb-6">Client Overview</h2>"
-        
         <div className="bg-white border border-gray-200 rounded-lg p-6 mb-8">"
           <div className="grid md:grid-cols-2 gap-6">"
             <div>
@@ -71,7 +70,6 @@ export default function AIFinanceAutomationSuccess2026() {
         </div>
 
         <h2 className="text-3xl font-bold text-gray-900 mb-6">The Challenge</h2>"
-        
         <p className="text-gray-700 mb-6">"
           The client faced significant operational challenges in their financial processing workflows. 
           With 80% of operations requiring manual intervention, they experienced high costs, slow processing times, 
@@ -79,7 +77,6 @@ export default function AIFinanceAutomationSuccess2026() {
         </p>
 
         <h3 className="text-2xl font-bold text-gray-900 mb-4">Key Pain Points</h3>"
-        
         <div className="grid md:grid-cols-2 gap-6 mb-8">"
           <div className="bg-red-50 border border-red-200 rounded-lg p-6">"
             <h4 className="text-xl font-bold text-red-600 mb-3">🚨 Operational Issues</h4>"
@@ -104,7 +101,6 @@ export default function AIFinanceAutomationSuccess2026() {
         </div>
 
         <h2 className="text-3xl font-bold text-gray-900 mb-6">AI Solution Implementation</h2>"
-        
         <div className="space-y-6 mb-8">"
           <div className="border-l-4 border-blue-500 pl-6">"
             <h3 className="text-xl font-bold text-gray-900 mb-2">Phase 1: Process Analysis & Automation</h3>"
@@ -130,7 +126,6 @@ export default function AIFinanceAutomationSuccess2026() {
         </div>
 
         <h3 className="text-2xl font-bold text-gray-900 mb-4">Technology Stack</h3>"
-        
         <div className="bg-gray-50 p-6 rounded-lg mb-8">"
           <div className="grid md:grid-cols-3 gap-4">"
             <div className="bg-white p-4 rounded-lg">"
@@ -149,7 +144,6 @@ export default function AIFinanceAutomationSuccess2026() {
         </div>
 
         <h2 className="text-3xl font-bold text-gray-900 mb-6">Results & ROI</h2>"
-        
         <div className="grid md:grid-cols-2 gap-6 mb-8">"
           <div className="bg-green-50 border border-green-200 rounded-lg p-6">"
             <h4 className="text-xl font-bold text-green-600 mb-3">💰 Financial Impact</h4>"
@@ -174,7 +168,6 @@ export default function AIFinanceAutomationSuccess2026() {
         </div>
 
         <h3 className="text-2xl font-bold text-gray-900 mb-4">Before vs After Comparison</h3>"
-        
         <div className="bg-white border border-gray-200 rounded-lg p-6 mb-8">"
           <div className="overflow-x-auto">"
             <table className="w-full">"
@@ -223,7 +216,6 @@ export default function AIFinanceAutomationSuccess2026() {
         </div>
 
         <h2 className="text-3xl font-bold text-gray-900 mb-6">Key Success Factors</h2>"
-        
         <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-6 rounded-xl mb-8">"
           <h3 className="text-2xl font-bold text-gray-900 mb-4">Critical Implementation Elements</h3>"
           <ol className="text-gray-700 space-y-3">"
@@ -236,7 +228,6 @@ export default function AIFinanceAutomationSuccess2026() {
         </div>
 
         <h2 className="text-3xl font-bold text-gray-900 mb-6">Lessons Learned</h2>"
-        
         <div className="space-y-4 mb-8">"
           <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">"
             <h4 className="font-bold text-yellow-800 mb-2">💡 Key Insight</h4>"

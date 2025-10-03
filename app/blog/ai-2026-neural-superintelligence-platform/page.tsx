@@ -68,7 +68,6 @@ export default function AINeuralSuperintelligencePlatform() {
           </div>
 
           <h2 className="text-3xl font-bold mb-6 text-white">Platform Architecture</h2>"
-          
           <div className="space-y-8">"
             <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">"
               <h3 className="text-2xl font-bold mb-4 text-cyan-400">Neural Consciousness Core</h3>"
@@ -114,7 +113,6 @@ export default function AINeuralSuperintelligencePlatform() {
           </div>
 
           <h2 className="text-3xl font-bold mb-6 text-white mt-12">Enterprise Applications</h2>"
-          
           <div className="grid md:grid-cols-2 gap-8 mb-8">"
             <div className="bg-gradient-to-br from-cyan-500/10 to-blue-500/10 border border-cyan-500/30 rounded-2xl p-6">"
               <h3 className="text-xl font-bold mb-4 text-cyan-400">Strategic Planning</h3>"
@@ -155,7 +153,6 @@ export default function AINeuralSuperintelligencePlatform() {
           </div>
 
           <h2 className="text-3xl font-bold mb-6 text-white">Performance Metrics</h2>"
-          
           <div className="bg-gradient-to-r from-green-500/10 to-blue-500/10 border border-green-500/30 rounded-2xl p-8 mb-8">"
             <h3 className="text-2xl font-bold mb-4 text-green-400">Proven Results</h3>"
             <div className="grid md:grid-cols-2 gap-8">"
@@ -181,7 +178,6 @@ export default function AINeuralSuperintelligencePlatform() {
           </div>
 
           <h2 className="text-3xl font-bold mb-6 text-white">Implementation Process</h2>"
-          
           <div className="space-y-6">"
             <div className="flex items-start gap-4">"
               <div className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold rounded-full w-8 h-8 flex items-center justify-center text-sm">1</div>"

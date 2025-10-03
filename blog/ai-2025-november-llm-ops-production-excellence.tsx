@@ -596,13 +596,13 @@ export default function LLMOpsProductionExcellence2025() {
                   </ul>
                   <div className="flex flex-col sm:flex-row gap-4">
                     <a 
-                      href="/contact" 
+                      href="/contact"
                       className="bg-gradient-to-r from-emerald-500 to-teal-500 text-white px-8 py-3 rounded-lg font-semibold text-center hover:shadow-xl transition-all duration-300 hover:scale-105"
                     >
                       Schedule LLMOps Assessment
                     </a>
                     <a 
-                      href="/services/llmops-platform" 
+                      href="/services/llmops-platform"
                       className="border-2 border-emerald-400 text-emerald-400 px-8 py-3 rounded-lg font-semibold text-center hover:bg-emerald-400 hover:text-white transition-all duration-300"
                     >
                       Explore LLMOps Platform

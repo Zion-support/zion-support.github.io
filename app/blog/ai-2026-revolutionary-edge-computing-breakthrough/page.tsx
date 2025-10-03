@@ -69,7 +69,6 @@ export default function AI2026RevolutionaryEdgeComputingBreakthrough() {
         </div>
 
         <h2 className="text-2xl font-bold mt-8 mb-4">🏭 Enterprise Impact Stories</h2>"
-        
         <div className="bg-gray-50 p-6 rounded-lg mb-6">"
           <h3 className="text-xl font-semibold mb-3">🏆 Fortune 100 Manufacturing Giant</h3>"
           <p>
@@ -96,7 +95,6 @@ export default function AI2026RevolutionaryEdgeComputingBreakthrough() {
         </div>
 
         <h2 className="text-2xl font-bold mt-8 mb-4">🔬 Technical Innovation Deep Dive</h2>"
-        
         <h3 className="text-xl font-semibold mt-6 mb-3">Neural Edge Processing Architecture</h3>"
         <p>
           Our proprietary neural edge processors combine quantum-inspired algorithms with traditional 
@@ -121,7 +119,6 @@ export default function AI2026RevolutionaryEdgeComputingBreakthrough() {
         </div>
 
         <h2 className="text-2xl font-bold mt-8 mb-4">📈 ROI and Business Impact</h2>"
-        
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">"
           <div className="bg-green-50 p-6 rounded-lg">"
             <h3 className="text-lg font-semibold text-green-800 mb-3">Cost Savings</h3>"

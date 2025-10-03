@@ -90,7 +90,6 @@ export default function NeuralSynapticFusionSuccessCaseStudy() {
       {/* Main Content */}
       <main className="container mx-auto px-6 py-16">"
         <article className="max-w-4xl mx-auto prose prose-lg prose-invert">"
-          
           {/* Executive Summary */}
           <div className="bg-gradient-to-r from-green-900/30 to-emerald-900/30 backdrop-blur-sm rounded-2xl p-8 border border-green-500/20 mb-12">"
             <h2 className="text-3xl font-bold text-white mb-6">📊 Executive Summary</h2>"
@@ -164,7 +163,6 @@ export default function NeuralSynapticFusionSuccessCaseStudy() {
           {/* Results */}
           <div className="bg-gradient-to-r from-purple-900/30 to-pink-900/30 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/20 mb-12">"
             <h2 className="text-3xl font-bold text-white mb-6">📈 Results Achieved</h2>"
-            
             <div className="grid md:grid-cols-2 gap-8 mb-8">"
               <div>
                 <h3 className="text-2xl font-bold text-white mb-4">💰 Financial Impact</h3>"

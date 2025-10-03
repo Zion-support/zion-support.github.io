@@ -279,19 +279,19 @@ export default function AISustainableBusiness2025() {
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <a 
-                    href="/contact" 
+                    href="/contact"
                     className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
                   >
                     Schedule Free Assessment
                   </a>
                   <a 
-                    href="/case-studies/sustainable-manufacturing-transformation-2025" 
+                    href="/case-studies/sustainable-manufacturing-transformation-2025"
                     className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
                   >
                     View Case Studies
                   </a>
                   <a 
-                    href="/services/ai-sustainability-solutions" 
+                    href="/services/ai-sustainability-solutions"
                     className="bg-white/10 hover:bg-white/20 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
                   >
                     Explore Solutions

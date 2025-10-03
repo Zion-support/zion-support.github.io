@@ -280,7 +280,7 @@ await coordinationBus.negotiate({
                   healthcare, manufacturing, and retail.
                 </p>
                 <a 
-                  href="/contact" 
+                  href="/contact"
                   className="inline-block bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-purple-500/50"
                 >
                   Schedule a Consultation

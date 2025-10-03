@@ -415,14 +415,14 @@ class RealtimeMultimodalSystem:
             </p>
             <div className="flex flex-wrap gap-4">
               <a 
-                href="/contact" 
+                href="/contact"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-600 transition-colors"
               >
                 Schedule Consultation
                 <span>→</span>
               </a>
               <a 
-                href="/services/ai-solutions" 
+                href="/services/ai-solutions"
                 className="inline-flex items-center gap-2 px-6 py-3 border border-orange-500 text-orange-400 font-semibold rounded-lg hover:bg-orange-500/10 transition-colors"
               >
                 Explore AI Services

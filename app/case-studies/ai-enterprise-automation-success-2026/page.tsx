@@ -115,7 +115,6 @@ export default function AIEnterpriseAutomationSuccess2026() {
         {/* Case Study Content */}
         <article className="prose prose-lg max-w-none">"
           <h2 className="text-3xl font-bold text-gray-900 mb-6">The Challenge: Operational Inefficiency at Scale</h2>"
-          
           <p className="text-lg text-gray-700 mb-6 leading-relaxed">"
             Our client, a Fortune 500 manufacturing conglomerate with operations spanning 47 countries and 180,000 employees, 
             faced mounting operational challenges that threatened their competitive position. Despite generating $85B in annual 
@@ -167,7 +166,6 @@ export default function AIEnterpriseAutomationSuccess2026() {
           </div>
 
           <h2 className="text-3xl font-bold text-gray-900 mb-6">The Solution: Comprehensive AI Enterprise Automation</h2>"
-
           <p className="text-lg text-gray-700 mb-6 leading-relaxed">"
             Working closely with the client's executive team, we designed and implemented a comprehensive AI enterprise 
             automation platform that would transform every aspect of their operations. The solution consisted of three 
@@ -231,7 +229,6 @@ export default function AIEnterpriseAutomationSuccess2026() {
           </div>
 
           <h3 className="text-2xl font-bold text-gray-900 mb-4">Implementation Timeline</h3>"
-
           <p className="text-lg text-gray-700 mb-6 leading-relaxed">"
             The implementation followed a carefully orchestrated 6-month timeline, designed to minimize disruption 
             while maximizing impact:
@@ -282,7 +279,6 @@ export default function AIEnterpriseAutomationSuccess2026() {
           </div>
 
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Transformation Results: Beyond Expectations</h2>"
-
           <p className="text-lg text-gray-700 mb-6 leading-relaxed">"
             The results exceeded even our most optimistic projections. The AI enterprise automation platform 
             delivered transformative outcomes across every dimension of the business:
@@ -341,7 +337,6 @@ export default function AIEnterpriseAutomationSuccess2026() {
           </div>
 
           <h3 className="text-2xl font-bold text-gray-900 mb-4">Specific Success Stories</h3>"
-
           <div className="space-y-6 mb-8">"
             <div className="border border-gray-200 rounded-xl p-6">"
               <h4 className="text-lg font-bold text-gray-900 mb-3">Supply Chain Optimization</h4>"
@@ -379,7 +374,6 @@ export default function AIEnterpriseAutomationSuccess2026() {
           </div>
 
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Lessons Learned & Best Practices</h2>"
-
           <p className="text-lg text-gray-700 mb-6 leading-relaxed">"
             This transformation provided valuable insights for organizations considering AI enterprise automation. 
             Here are the key lessons learned:
@@ -420,7 +414,6 @@ export default function AIEnterpriseAutomationSuccess2026() {
           </div>
 
           <h2 className="text-3xl font-bold text-gray-900 mb-6">The Future: Continuous Innovation</h2>"
-
           <p className="text-lg text-gray-700 mb-6 leading-relaxed">"
             The transformation marked the beginning, not the end, of their AI journey. The client is now 
             exploring advanced capabilities including:

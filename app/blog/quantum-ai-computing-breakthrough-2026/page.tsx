@@ -101,7 +101,6 @@ export default function QuantumAIComputingBreakthrough2026() {
         <section className="mb-16">"
           <div className="bg-gradient-to-r from-slate-900/50 to-slate-800/50 rounded-2xl p-8 border border-slate-700/50">"
             <h3 className="text-3xl font-bold mb-8 text-center text-white">Quantum Performance Metrics</h3>"
-            
             <div className="grid md:grid-cols-4 gap-8">"
               <div className="text-center">"
                 <div className="text-4xl font-extrabold text-cyan-400 mb-2">1000x</div>"

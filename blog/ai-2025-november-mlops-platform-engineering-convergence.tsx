@@ -618,13 +618,13 @@ export default function MLOpsPlatformEngineeringConvergence2025() {
                   </ul>
                   <div className="flex flex-col sm:flex-row gap-4">
                     <a 
-                      href="/contact" 
+                      href="/contact"
                       className="bg-gradient-to-r from-indigo-500 to-violet-500 text-white px-8 py-3 rounded-lg font-semibold text-center hover:shadow-xl transition-all duration-300 hover:scale-105"
                     >
                       Schedule Platform Assessment
                     </a>
                     <a 
-                      href="/services/ml-platform-engineering" 
+                      href="/services/ml-platform-engineering"
                       className="border-2 border-indigo-400 text-indigo-400 px-8 py-3 rounded-lg font-semibold text-center hover:bg-indigo-400 hover:text-white transition-all duration-300"
                     >
                       Explore Platform Services

@@ -219,13 +219,13 @@ export default function AIEdgeComputing5GIntegration2025() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
-              href="/contact" 
+              href="/contact"
               className="bg-emerald-500 hover:bg-emerald-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105"
             >
               Schedule Consultation
             </a>
             <a 
-              href="/blog" 
+              href="/blog"
               className="border-2 border-emerald-500 text-emerald-400 hover:bg-emerald-500 hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
             >
               Explore More Guides

@@ -88,7 +88,6 @@ export default function January2026UltimateNeuralRevolutionPage() {
 
             <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 mb-12">"
               <h2 className="text-3xl font-bold text-white mb-6">The Neural Architecture Revolution</h2>"
-              
               <h3 className="text-2xl font-bold text-purple-400 mb-4">1. Quantum-Neural Fusion Technology</h3>"
               <p className="text-gray-300 mb-6">"
                 Our breakthrough neural architecture represents a fundamental leap beyond traditional AI systems with seamless 
@@ -111,7 +110,6 @@ export default function January2026UltimateNeuralRevolutionPage() {
 
             <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 mb-12">"
               <h2 className="text-3xl font-bold text-white mb-6">Enterprise Implementation Results</h2>"
-              
               <div className="grid md:grid-cols-3 gap-6">"
                 <div className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-xl p-6 border border-green-500/30">"
                   <h3 className="text-xl font-bold text-white mb-4">🏭 Manufacturing</h3>"

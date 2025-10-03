@@ -238,13 +238,13 @@ export default function MultimodalCustomerExperience2025() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <a 
-                    href="/contact" 
+                    href="/contact"
                     className="px-8 py-4 bg-gradient-to-r from-rose-600 to-orange-600 hover:from-rose-500 hover:to-orange-500 text-white font-semibold rounded-lg transition-all shadow-lg hover:shadow-rose-500/50 text-center"
                   >
                     Request CX Assessment
                   </a>
                   <a 
-                    href="/services" 
+                    href="/services"
                     className="px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-lg transition-all border border-white/20 text-center"
                   >
                     Explore AI Solutions

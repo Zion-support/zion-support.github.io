@@ -64,7 +64,6 @@ export default function QuantumComputing2026CommercialBreakthrough() {
         {/* Main Content */}
         <div className="max-w-4xl mx-auto">"
           <div className="prose prose-lg prose-invert max-w-none">"
-            
             {/* Executive Summary */}
             <div className="bg-gradient-to-r from-blue-900/50 to-cyan-900/50 border border-blue-500/30 rounded-xl p-8 mb-12">"
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-3">"

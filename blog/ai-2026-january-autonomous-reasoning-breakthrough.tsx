@@ -234,13 +234,13 @@ const AI2026JanuaryAutonomousReasoningBreakthrough = () => {
             
             <div className="flex flex-col sm:flex-row gap-4">
               <a 
-                href="/contact" 
+                href="/contact"
                 className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-bold rounded-lg hover:from-blue-600 hover:to-purple-600 transition-all"
               >
                 Schedule Consultation
               </a>
               <a 
-                href="/services/ai-solutions" 
+                href="/services/ai-solutions"
                 className="inline-flex items-center justify-center px-8 py-4 bg-gray-800 text-white font-bold rounded-lg border border-gray-700 hover:bg-gray-700 transition-all"
               >
                 Explore AI Solutions

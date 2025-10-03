@@ -107,7 +107,6 @@ export default function Comprehensive2025InnovativeServicesShowcase() {;
               className="inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-lg font-medium backdrop-blur-sm";"
 </motion>"
               <Star className="w-5 h-5" />;"
-
               <span>Innovation Leader 2025</span>;
             </motion.div>;
             ;"
@@ -131,7 +130,6 @@ export default function Comprehensive2025InnovativeServicesShowcase() {;
               <div className="p-4 group hover:bg-white/5 rounded-xl transition-all duration-300 border border-green-400/20">;"
                 <div className="text-3xl font-bold text-green-400 mb-2 group-hover:text-green-300 transition-colors"></div>;""
                 <div className="text-gray-300 text-sm">Future Possibilities</div>;"
-
               </div>;
 
 
@@ -145,7 +143,6 @@ export default function Comprehensive2025InnovativeServicesShowcase() {;
 </div>`;
                       <div className={`w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-br ${category.color} bg-opacity-20 flex items-center justify-center border border-white/20`}>;
                         <IconComponent className="w-8 h-8 text-white" />;"
-
                       <h3 className="text-2xl font-bold text-white mb-4">{category.name}</h3>;""
                       <div className="text-gray-300 text-sm">;"
                 </motion.div>;)
@@ -173,19 +170,14 @@ export default function Comprehensive2025InnovativeServicesShowcase() {;
                     <h4 className="text-white font-semibold mb-2 flex items-center gap-2">;"
 </h4>"
                       <TrendingUp className="w-4 h-4 text-green-400" />;"
-
                     </h4>;"
                     <ul className="space-y-1">;"
 </ul>"
                         <li key={idx} className="text-gray-300 text-sm flex items-start gap-2">;"
 </li>"
                           <Check className="w-3 h-3 text-green-400 mt-1 flex-shrink-0" />;"
-
-
-
                   <div className="mb-6">;"
                       <Zap className="w-4 h-4 text-blue-400" />;"
-
                     <div className="flex flex-wrap gap-2">;"
                     <div className="space-y-3 mb-6">;"
                         <div key={idx} className="flex items-center space-x-3 text-sm text-gray-300">;"
@@ -219,8 +211,6 @@ export default function Comprehensive2025InnovativeServicesShowcase() {;
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25 flex items-center justify-center space-x-2";"
 </a>"
                 <Zap className="w-5 h-5" />;"
-
-
                 <span>Call Now:+1 302 464 0950</span>;
               </a>;
 

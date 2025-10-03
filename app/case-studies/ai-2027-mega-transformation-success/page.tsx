@@ -54,7 +54,6 @@ export default function AI2027MegaTransformationSuccess() {
         <div className="space-y-8">"
           <section>
             <h2 className="text-3xl font-bold text-gray-900 mb-4">The Challenge: Legacy Operations at Scale</h2>"
-            
             <div className="bg-red-50 p-6 rounded-lg border-l-4 border-red-500 mb-6">"
               <h3 className="text-xl font-bold text-red-900 mb-3">Critical Business Challenges</h3>"
               <ul className="space-y-2 text-red-800">"
@@ -91,7 +90,6 @@ export default function AI2027MegaTransformationSuccess() {
 
           <section>
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Solution: AI 2027 Mega Transformation</h2>"
-            
             <div className="bg-blue-50 p-6 rounded-lg mb-6">"
               <h3 className="text-xl font-bold text-blue-900 mb-4">Comprehensive Transformation Approach</h3>"
               <div className="space-y-4">"
@@ -132,7 +130,6 @@ export default function AI2027MegaTransformationSuccess() {
 
           <section>
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Implementation Timeline</h2>"
-            
             <div className="space-y-4 mb-6">"
               <div className="bg-green-50 p-4 rounded-lg border-l-4 border-green-400">"
                 <h4 className="font-bold text-green-800 mb-2">Phase 1: Foundation (Months 1-4)</h4>"
@@ -174,7 +171,6 @@ export default function AI2027MegaTransformationSuccess() {
 
           <section>
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Quantified Results</h2>"
-            
             <div className="bg-gradient-to-r from-green-50 to-blue-50 p-6 rounded-lg mb-6">"
               <h3 className="text-xl font-bold text-gray-900 mb-4">$150M ROI Breakdown</h3>"
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">"
@@ -237,7 +233,6 @@ export default function AI2027MegaTransformationSuccess() {
 
           <section>
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Key Success Factors</h2>"
-            
             <div className="grid md:grid-cols-2 gap-6 mb-6">"
               <div className="bg-blue-50 p-6 rounded-lg">"
                 <h3 className="text-xl font-bold text-blue-900 mb-3">Technical Excellence</h3>"
@@ -265,7 +260,6 @@ export default function AI2027MegaTransformationSuccess() {
 
           <section>
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Client Testimonial</h2>"
-            
             <div className="bg-gradient-to-r from-purple-50 to-blue-50 p-6 rounded-lg mb-6">"
               <blockquote className="text-lg text-gray-700 italic mb-4">"
                 "The AI 2027 transformation has been nothing short of revolutionary for our organization. "
@@ -282,7 +276,6 @@ export default function AI2027MegaTransformationSuccess() {
 
           <section>
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Long-term Impact</h2>"
-            
             <div className="bg-gradient-to-r from-indigo-50 to-purple-50 p-6 rounded-lg mb-6">"
               <h3 className="text-xl font-bold text-gray-900 mb-4">Sustained Competitive Advantage</h3>"
               <div className="grid md:grid-cols-2 gap-6">"
