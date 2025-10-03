@@ -27,11 +27,11 @@ export function Header() {
   };
 
   return (
-    <header className="border-b border-gray-200 sticky top-0 z-50 bg-white shadow-sm">
-      <nav className="flex items-center justify-between px-4 py-3 max-w-6xl mx-auto">
+    <header className="border-b border-gray-200 sticky top-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm">
+      <nav className="flex items-center justify-between px-4 py-3 max-w-7xl mx-auto">
         <Link to="/" className="font-bold text-lg text-gray-900 hover:text-blue-600 transition-colors flex items-center">
           <span className="text-blue-600 mr-2 text-xl">🚀</span>
-          Zion Tech Group
+          <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Zion Tech Group</span>
         </Link>
         
         {/* Desktop Navigation */}
@@ -43,7 +43,7 @@ export function Header() {
               onMouseEnter={() => setOpenDropdown('services')}
               onMouseLeave={() => setOpenDropdown(null)}
             >
-              Services
+              🚀 Services
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
@@ -52,24 +52,33 @@ export function Header() {
               openDropdown === 'services' ? 'opacity-100 visible' : 'opacity-0 invisible'
             }`}>
               <div className="py-3">
-                <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide">Featured AI Micro SaaS</div>
-                <Link to="/services/ai-content-optimization-suite" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                  AI Content Optimization Suite - $199/mo
+                <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide">🚀 Featured AI Micro SaaS</div>
+                <Link to="/services/ai-voice-assistant-platform" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  🎤 AI Voice Assistant Platform - $299/mo
                 </Link>
-                <Link to="/services/ai-lead-scoring-api" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
-                  AI Lead Scoring API - $299/mo
+                <Link to="/services/ai-document-automation-platform" className="block px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-600">
+                  📄 AI Document Automation Platform - $199/mo
+                </Link>
+                <Link to="/services/ai-business-intelligence-platform" className="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-50 hover:text-indigo-600">
+                  📊 AI Business Intelligence Platform - $899/mo
+                </Link>
+                <Link to="/services/ai-content-optimization-suite" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-600">
+                  ✍️ AI Content Optimization Suite - $199/mo
+                </Link>
+                <Link to="/services/ai-lead-scoring-api" className="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600">
+                  🎯 AI Lead Scoring API - $299/mo
                 </Link>
                 <Link to="/services/ai-financial-forecasting-suite" className="block px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-600">
-                  AI Financial Forecasting Suite - $499/mo
+                  💰 AI Financial Forecasting Suite - $499/mo
                 </Link>
-                <Link to="/services/smart-inventory-management-saas" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-600">
-                  Smart Inventory Management SaaS - $199/mo
+                <Link to="/services/smart-inventory-management-saas" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  📦 Smart Inventory Management SaaS - $199/mo
                 </Link>
-                <Link to="/services/ai-meeting-assistant-platform" className="block px-4 py-2 text-sm text-gray-700 hover:bg-orange-50 hover:text-orange-600">
-                  AI Meeting Assistant Platform - $99/mo
+                <Link to="/services/ai-meeting-assistant-platform" className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-600">
+                  🤝 AI Meeting Assistant Platform - $99/mo
                 </Link>
                 <Link to="/services/smart-invoice-processing" className="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-50 hover:text-indigo-600">
-                  Smart Invoice Processing System - $299/mo
+                  🧾 Smart Invoice Processing System - $299/mo
                 </Link>
                 <div className="border-t border-gray-100 my-2"></div>
                 <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide">Advanced AI Solutions</div>
@@ -84,6 +93,9 @@ export function Header() {
                 </Link>
                 <div className="border-t border-gray-100 my-2"></div>
                 <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wide">IT Services & Solutions</div>
+                <Link to="/services/comprehensive-it-services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-600 font-semibold">
+                  🖥️ Comprehensive IT Services →
+                </Link>
                 <Link to="/services/cloud-native-devops-platform" className="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-50 hover:text-indigo-600">
                   Cloud-Native DevOps Platform - $1,499/mo
                 </Link>
@@ -217,6 +229,9 @@ export function Header() {
                   IT Services & Solutions
                 </Link>
                 <div className="border-t border-gray-100 my-2"></div>
+                <Link to="/services/comprehensive-micro-saas-solutions" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 font-medium">
+                  🚀 Comprehensive Micro SaaS Solutions →
+                </Link>
                 <Link to="/services" className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 font-medium">
                   View All Services →
                 </Link>
@@ -364,7 +379,7 @@ export function Header() {
                 className="flex items-center justify-between w-full text-left font-medium text-gray-700 hover:text-blue-600"
                 onClick={() => toggleDropdown('mobile-services')}
               >
-                Services
+                🚀 Services
                 <svg className={`w-4 h-4 transition-transform ${openDropdown === 'mobile-services' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
@@ -372,9 +387,11 @@ export function Header() {
               {openDropdown === 'mobile-services' && (
                 <div className="mt-2 pl-4 space-y-2">
                   <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Core Services</div>
-                  <Link to="/services/ai-services" className="block text-sm text-gray-600 hover:text-blue-600">AI Services</Link>
-                  <Link to="/services/micro-saas" className="block text-sm text-gray-600 hover:text-blue-600">Micro SaaS</Link>
-                  <Link to="/services/it-services" className="block text-sm text-gray-600 hover:text-blue-600">IT Services</Link>
+                  <Link to="/services/comprehensive-micro-saas-solutions" className="block text-sm text-gray-600 hover:text-blue-600 font-semibold">🚀 Comprehensive Micro SaaS</Link>
+                  <Link to="/services/comprehensive-it-services" className="block text-sm text-gray-600 hover:text-blue-600 font-semibold">🖥️ Comprehensive IT Services</Link>
+                  <Link to="/services/ai-voice-assistant-platform" className="block text-sm text-gray-600 hover:text-blue-600">🎤 AI Voice Assistant</Link>
+                  <Link to="/services/ai-document-automation-platform" className="block text-sm text-gray-600 hover:text-blue-600">📄 AI Document Automation</Link>
+                  <Link to="/services/ai-business-intelligence-platform" className="block text-sm text-gray-600 hover:text-blue-600">📊 AI Business Intelligence</Link>
                   <div className="border-t border-gray-200 my-2"></div>
                   <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide">New Micro SaaS</div>
                   <Link to="/services/ai-invoice-processing-saas" className="block text-sm text-gray-600 hover:text-blue-600">AI Invoice Processing</Link>
@@ -477,11 +494,14 @@ export function Header() {
 
 export function Footer() {
   return (
-    <footer className="border-t border-gray-200 mt-16 bg-gradient-to-br from-gray-50 to-blue-50">
-      <div className="max-w-7xl mx-auto px-6 py-12">
+    <footer className="border-t border-gray-200 mt-16 bg-gradient-to-br from-slate-50 via-blue-50 to-purple-50">
+      <div className="max-w-7xl mx-auto px-6 py-16">
         {/* Contact Information Banner */}
-        <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-8 text-white mb-12">
-          <h3 className="text-2xl font-bold text-center mb-6">Ready to Transform Your Business?</h3>
+        <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 rounded-2xl p-8 text-white mb-12 shadow-xl">
+          <h3 className="text-3xl font-bold text-center mb-6">Ready to Transform Your Business?</h3>
+          <p className="text-center text-blue-100 mb-8 max-w-3xl mx-auto">
+            Join thousands of businesses using our revolutionary AI and IT solutions to drive unprecedented growth and efficiency.
+          </p>
           <div className="grid md:grid-cols-3 gap-6 text-center">
             <div className="flex flex-col items-center">
               <svg className="w-8 h-8 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -515,16 +535,21 @@ export function Footer() {
           </div>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Services */}
           <div>
-            <h3 className="font-semibold text-gray-900 mb-3">Featured Services</h3>
+            <h3 className="font-semibold text-gray-900 mb-4 text-lg">🚀 Featured Services</h3>
             <div className="space-y-2">
               <Link to="/services" className="block text-gray-600 hover:text-blue-600 transition-colors">All Services</Link>
-              <Link to="/services/ai-content-optimization-suite" className="block text-gray-600 hover:text-blue-600 transition-colors">AI Content Suite - $199/mo</Link>
-              <Link to="/services/ai-lead-scoring-api" className="block text-gray-600 hover:text-blue-600 transition-colors">AI Lead Scoring API - $299/mo</Link>
-              <Link to="/services/ai-financial-forecasting-suite" className="block text-gray-600 hover:text-blue-600 transition-colors">AI Financial Forecasting - $499/mo</Link>
-              <Link to="/services/smart-inventory-management-saas" className="block text-gray-600 hover:text-blue-600 transition-colors">Smart Inventory SaaS - $199/mo</Link>
+              <Link to="/services/comprehensive-micro-saas-solutions" className="block text-gray-600 hover:text-blue-600 transition-colors font-semibold">🚀 Comprehensive Micro SaaS Solutions</Link>
+              <Link to="/services/comprehensive-it-services" className="block text-gray-600 hover:text-blue-600 transition-colors font-semibold">🖥️ Comprehensive IT Services</Link>
+              <Link to="/services/ai-voice-assistant-platform" className="block text-gray-600 hover:text-blue-600 transition-colors">🎤 AI Voice Assistant Platform - $299/mo</Link>
+              <Link to="/services/ai-document-automation-platform" className="block text-gray-600 hover:text-blue-600 transition-colors">📄 AI Document Automation - $199/mo</Link>
+              <Link to="/services/ai-business-intelligence-platform" className="block text-gray-600 hover:text-blue-600 transition-colors">📊 AI Business Intelligence - $899/mo</Link>
+              <Link to="/services/ai-content-optimization-suite" className="block text-gray-600 hover:text-blue-600 transition-colors">✍️ AI Content Suite - $199/mo</Link>
+              <Link to="/services/ai-lead-scoring-api" className="block text-gray-600 hover:text-blue-600 transition-colors">🎯 AI Lead Scoring API - $299/mo</Link>
+              <Link to="/services/ai-financial-forecasting-suite" className="block text-gray-600 hover:text-blue-600 transition-colors">💰 AI Financial Forecasting - $499/mo</Link>
+              <Link to="/services/smart-inventory-management-saas" className="block text-gray-600 hover:text-blue-600 transition-colors">📦 Smart Inventory SaaS - $199/mo</Link>
               <div className="border-t border-gray-200 my-2"></div>
               <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-1">New Micro SaaS</div>
               <Link to="/services/ai-invoice-processing-saas" className="block text-gray-600 hover:text-blue-600 transition-colors">AI Invoice Processing</Link>
@@ -548,7 +573,7 @@ export function Footer() {
           
           {/* Solutions */}
           <div>
-            <h3 className="font-semibold text-gray-900 mb-3">Solutions</h3>
+            <h3 className="font-semibold text-gray-900 mb-4 text-lg">💡 Solutions</h3>
             <div className="space-y-2">
               <Link to="/solutions" className="block text-gray-600 hover:text-blue-600 transition-colors">All Solutions</Link>
               <Link to="/enterprise" className="block text-gray-600 hover:text-blue-600 transition-colors">Enterprise Solutions</Link>
@@ -560,7 +585,7 @@ export function Footer() {
 
           {/* Resources */}
           <div>
-            <h3 className="font-semibold text-gray-900 mb-3">Resources</h3>
+            <h3 className="font-semibold text-gray-900 mb-4 text-lg">📚 Resources</h3>
             <div className="space-y-2">
               <Link to="/blog" className="block text-gray-600 hover:text-blue-600 transition-colors">📚 Blog & Insights</Link>
               <Link to="/guides" className="block text-gray-600 hover:text-blue-600 transition-colors">📖 Implementation Guides</Link>
@@ -573,7 +598,7 @@ export function Footer() {
 
           {/* Company & Contact */}
           <div>
-            <h3 className="font-semibold text-gray-900 mb-4 text-lg">Company</h3>
+            <h3 className="font-semibold text-gray-900 mb-4 text-lg">🏢 Company</h3>
             <div className="space-y-3 mb-6">
               <Link to="/about" className="block text-gray-600 hover:text-blue-600 transition-colors">
                 About Us
@@ -648,8 +673,17 @@ export function Footer() {
             </div>
           </div>
         </div>
-        <div className="border-t border-gray-200 mt-6 pt-4 text-xs text-gray-500 text-center">
-          © {new Date().getFullYear()} Zion Tech Group. All rights reserved.
+        <div className="border-t border-gray-200 mt-8 pt-6">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <div className="text-sm text-gray-500 mb-4 md:mb-0">
+              © {new Date().getFullYear()} Zion Tech Group. All rights reserved.
+            </div>
+            <div className="flex items-center space-x-6 text-sm text-gray-500">
+              <Link to="/privacy" className="hover:text-blue-600 transition-colors">Privacy Policy</Link>
+              <Link to="/terms" className="hover:text-blue-600 transition-colors">Terms of Service</Link>
+              <Link to="/security" className="hover:text-blue-600 transition-colors">Security</Link>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
