@@ -47,8 +47,8 @@ const HomePage: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">"
             {/* AI Services */}
             <div className="bg-gradient-to-br from-blue-50 to-indigo-100 p-8 rounded-xl hover:shadow-lg transition-shadow">"
-              <div className="text-4xl mb-4">🤖</div>"
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">AI Services</h3>"
+              <div className="text-4xl mb-4">🤖</div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">AI Services</h3>
               <p className="text-gray-600 mb-6">"
                 Advanced artificial intelligence solutions including machine learning, 
                 natural language processing, and predictive analytics.
@@ -71,8 +71,8 @@ const HomePage: React.FC = () => {
 
             {/* Micro SaaS */}"
             <div className="bg-gradient-to-br from-green-50 to-emerald-100 p-8 rounded-xl hover:shadow-lg transition-shadow">"
-              <div className="text-4xl mb-4">⚡</div>"
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Micro SaaS</h3>"
+              <div className="text-4xl mb-4">⚡</div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Micro SaaS</h3>
               <p className="text-gray-600 mb-6">"
                 Scalable software-as-a-service solutions that deliver immediate value 
                 and grow with your business needs.
@@ -95,8 +95,8 @@ const HomePage: React.FC = () => {
 
             {/* IT Services */}"
             <div className="bg-gradient-to-br from-purple-50 to-violet-100 p-8 rounded-xl hover:shadow-lg transition-shadow">"
-              <div className="text-4xl mb-4">🛠️</div>"
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">IT Services</h3>"
+              <div className="text-4xl mb-4">🛠️</div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">IT Services</h3>
               <p className="text-gray-600 mb-6">"
                 Complete IT infrastructure management, cloud solutions, and 
                 enterprise-grade security services.
@@ -132,7 +132,7 @@ const HomePage: React.FC = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">"
             <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">"
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Enterprise</h3>"
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Enterprise</h3>
               <p className="text-gray-600 mb-6">"
                 Comprehensive solutions for large organizations with complex infrastructure needs.
               </p>
@@ -145,7 +145,7 @@ const HomePage: React.FC = () => {
             </div>
 "
             <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">"
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">SMB</h3>"
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">SMB</h3>
               <p className="text-gray-600 mb-6">"
                 Cost-effective solutions designed for small and medium businesses.
               </p>
@@ -158,7 +158,7 @@ const HomePage: React.FC = () => {
             </div>
 "
             <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">"
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Startup</h3>"
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Startup</h3>
               <p className="text-gray-600 mb-6">"
                 Agile solutions to help startups scale quickly and efficiently.
               </p>
@@ -188,7 +188,7 @@ const HomePage: React.FC = () => {
               <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">"
                 <span className="text-2xl">🚀</span>"
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Fast Delivery</h3>"
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Fast Delivery</h3>
               <p className="text-gray-600">Rapid deployment and implementation of solutions</p>"
             </div>
             
@@ -196,7 +196,7 @@ const HomePage: React.FC = () => {
               <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">"
                 <span className="text-2xl">🔒</span>"
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Secure & Reliable</h3>"
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Secure & Reliable</h3>
               <p className="text-gray-600">Enterprise-grade security and 99.9% uptime</p>"
             </div>
             
@@ -204,7 +204,7 @@ const HomePage: React.FC = () => {
               <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">"
                 <span className="text-2xl">📈</span>"
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Scalable</h3>"
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Scalable</h3>
               <p className="text-gray-600">Solutions that grow with your business</p>"
             </div>
             
@@ -212,7 +212,7 @@ const HomePage: React.FC = () => {
               <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">"
                 <span className="text-2xl">💡</span>"
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Innovation</h3>"
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Innovation</h3>
               <p className="text-gray-600">Cutting-edge AI and technology solutions</p>"
             </div>
           </div>
