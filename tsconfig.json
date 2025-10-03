@@ -32,17 +32,10 @@
       "@types/*": ["./src/types/*"]
     }
   },
-<<<<<<< HEAD
   "include": ["src", "app"],
   "exclude": [
     "app/blog/**/*",
     "app/components/**/*",
-=======
-  "include": ["src", "app"],
-  "exclude": [
-    "app/blog/**/*",
-    "app/components/**/*",
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7443
     "app/contact/**/*",
     "app/enterprise/**/*",
     "app/guides/**/*",
@@ -50,7 +43,23 @@
     "app/services-advertising/**/*",
     "app/not-found.tsx",
     "app/page-minimal.tsx",
-    "app/page-optimized.tsx"
+    "app/page-optimized.tsx",
+    "src/pages/blog-disabled/**/*",
+    "_pages_disabled/**/*",
+    "_app_disabled/**/*",
+    "_conflicted_disabled/**/*",
+    "_pages_api_disabled/**/*",
+    "admin-api-disabled/**/*",
+    "api-disabled/**/*",
+    "api.disabled/**/*",
+    "api.disabled.temp/**/*",
+    "api-backup/**/*",
+    "apps.backup/**/*",
+    "automation_backup/**/*",
+    "ai-optimization-backups/**/*",
+    "automation_logs/**/*",
+    "all-automations-reports/**/*",
+    "accessibility-reports/**/*"
   ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
