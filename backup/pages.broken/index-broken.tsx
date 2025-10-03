@@ -94,39 +94,39 @@ const processSteps = [
 export default function HomePage() {
   
     >
-      <div className="min-h-screen">
+      <div className="text-left">
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
-          <div className="absolute inset-0">
-            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
-            <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
+        <section className="text-left">
+          <div className="text-left">
+            <div className="text-left"></div>
+            <div className="text-left"></div>
           </div>
-          <div className="container mx-auto px-4 relative z-10">
+          <div className="text-left">
             <motion.div
-              className="text-center"
+              className="text-left"
               initial={ opacity: 0, y: 30 }
               animate={ opacity: 1, y: 0 }
               transition={ duration: 0.8 }
             >
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              <h1 className="text-left">
                 Transform Your Business with{' '}
-                <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                <span className="text-left">
                   AI & Technology
-                </span>
+                <
               </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              <p className="text-left">
                 We deliver cutting-edge AI solutions, cloud services, and technology consulting to help your business thrive in the digital age.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="text-left">
                 <Link
                   href="/contact"
-                  className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold"
+                  className="text-left"
                 >
                   Get Started
                 </Link>
                 <Link
                   href="/services"
-                  className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold"
+                  className="text-left"
                 >
                   View Services
                 </Link>
@@ -136,41 +136,41 @@ export default function HomePage() {
         </section>
 
 <MainLayout>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <div className="text-left">
         {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
+      <section className="text-left">
         {/* Background Animation */}
-        <div className="absolute inset-0">
-<div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse">
+        <div className="text-left">
+<div className="text-left">
                   </div>
-                  <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000">
+                  <div className="text-left">
                   </div>
-                  <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000">
+                  <div className="text-left">
                   </div>
                   </div>
-                  <div className="container mx-auto px-4 relative z-10">
+                  <div className="text-left">
                   <motion.div
             initial={ opacity: 0, y: 30 }
             animate={ opacity: 1, y: 0 }
             transition={ duration: 0.8 }
-            className="text-center"
+            className="text-left"
           >
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            <h1 className="text-left">
               Transform Your Business with{' '}
-              <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+              <span className="text-left">
                 AI & Technology
-              </span>
+              <
 </h1>
-                  <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+                  <p className="text-left">
               Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services. 
-              <br className="hidden md:block" />
-                  <span className="text-blue-300 font-semibold">Contact us: +1 302 464 0950 | kleber@ziontechgroup.com</span>
+              <br className="text-left" />
+                  <span className="text-left">Contact us: +1 302 464 0950 | kleber@ziontechgroup.com<
                   </p>
-                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">ursor/add-new-services-and-deploy-updates-1b90
+                  <div className="text-left">
+                  <Link href="/contact" className="text-left">ursor/add-new-services-and-deploy-updates-1b90
                 Get Started Today
               </Link>
-                  <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">
+                  <Link href="/services" className="text-left">
                 Explore Services
               </Link>
                   </div>
@@ -179,45 +179,45 @@ export default function HomePage() {
                   </section>
 
         {/* Services Section */}
-        <section className="py-20 bg-white">
-          <div className="container mx-auto px-4">
+        <section className="text-left">
+          <div className="text-left">
             <motion.div
-              className="text-center mb-16"
+              className="text-left"
               initial={ opacity: 0, y: 30 }
               whileInView={ opacity: 1, y: 0 }
               transition={ duration: 0.8 }
               viewport={ once: true }
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-left">
                 Our Services
               </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              <p className="text-left">
                 Comprehensive technology solutions designed to accelerate your business growth
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+            <div className="text-left">
               {services.map((service, index) => {
                 const IconComponent = service.icon 
                 
                   >
-                    <div className="flex items-center mb-4">
-                      <IconComponent className="h-12 w-12 text-blue-600 mr-4" />
+                    <div className="text-left">
+                      <IconComponent className="text-left" />
                       <div>
-                        <h3 className="text-xl font-bold text-gray-900">{service.title}</h3>
-                        <p className="text-sm text-blue-600 font-semibold">{service.count}</p>
+                        <h3 className="text-left">{service.title}</h3>
+                        <p className="text-left">{service.count}</p>
                       </div>
                     </div>
-                    <p className="text-gray-600 mb-4 leading-relaxed">{service.description}</p>
-                    <div className="mb-4">
-                      <span className="text-lg font-semibold text-blue-600">{service.pricing}</span>
+                    <p className="text-left">{service.description}</p>
+                    <div className="text-left">
+                      <span className="text-left">{service.pricing}<
                     </div>
                     <Link
                       href={service.href}
-                      className="inline-flex items-center text-blue-600 hover:text-blue-800 font-semibold transition-colors duration-200"
+                      className="text-left"
                     >
                       Learn More
-                      <ArrowRight className="w-4 h-4 ml-1" />
+                      <ArrowRight className="text-left" />
                     </Link>
                   </motion.div>
                 ) 
@@ -227,37 +227,37 @@ export default function HomePage() {
         </section>
 
         {/* Stats Section */}
-        <section className="py-20 bg-white">
-          <div className="container mx-auto px-4">
+        <section className="text-left">
+          <div className="text-left">
             <motion.div
-              className="text-center mb-16"
+              className="text-left"
               initial={ opacity: 0, y: 30 }
               whileInView={ opacity: 1, y: 0 }
               transition={ duration: 0.8 }
               viewport={ once: true }
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-left">
                 Trusted by Industry Leaders
               </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              <p className="text-left">
                 Our proven track record speaks for itself
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div className="text-left">
               {stats.map((stat, index) => (
                 <motion.div
                   key={index}
-                  className="text-center"
+                  className="text-left"
                   initial={ opacity: 0, y: 30 }
                   whileInView={ opacity: 1, y: 0 }
                   transition={ duration: 0.8, delay: index * 0.1 }
                   viewport={ once: true }
                 >
-                  <div className="text-4xl md:text-5xl font-bold text-blue-600 mb-2">
+                  <div className="text-left">
                     {stat.number}
                   </div>
-                  <div className="text-gray-600 font-medium">{stat.label}</div>
+                  <div className="text-left">{stat.label}</div>
                 </motion.div>
               ))}
             </div>
@@ -265,30 +265,30 @@ export default function HomePage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-          <div className="container mx-auto px-4 text-center">
+        <section className="text-left">
+          <div className="text-left">
             <motion.div
               initial={ opacity: 0, y: 30 }
               whileInView={ opacity: 1, y: 0 }
               transition={ duration: 0.8 }
               viewport={ once: true }
             >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              <h2 className="text-left">
                 Ready to Transform Your Business?
               </h2>
-              <p className="text-xl mb-8 max-w-2xl mx-auto">
+              <p className="text-left">
                 Let's discuss how our innovative solutions can help you achieve your goals.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="text-left">
                 <Link
                   href="/contact"
-                  className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold"
+                  className="text-left"
                 >
                   Get Started
                 </Link>
                 <Link
                   href="/services"
-                  className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold"
+                  className="text-left"
                 >
                   View Services
                 </Link>
@@ -298,71 +298,71 @@ export default function HomePage() {
         </section>
 
         {/* Contact Information Section */}
-        <section className="py-20 bg-gray-50">
-          <div className="container mx-auto px-4">
+        <section className="text-left">
+          <div className="text-left">
             <motion.div
-              className="text-center mb-16"
+              className="text-left"
               initial={ opacity: 0, y: 30 }
               whileInView={ opacity: 1, y: 0 }
               transition={ duration: 0.8 }
               viewport={ once: true }
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-left">
                 Get in Touch
               </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              <p className="text-left">
                 Ready to start your next project? Contact our expert team for a free consultation.
               </p>
             </motion.div>
 
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="text-left">
               <motion.div 
-                className="text-center p-6 bg-white rounded-lg shadow-lg"
+                className="text-left"
                 initial={ opacity: 0, y: 30 } 
                 whileInView={ opacity: 1, y: 0 } 
                 transition={ duration: 0.8, delay: 0.1 } 
                 viewport={ once: true } 
               >
-                <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Phone className="w-8 h-8 text-blue-600" />
+                <div className="text-left">
+                  <Phone className="text-left" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Call Us</h3>
-                <p className="text-gray-600 mb-4">Speak directly with our technical experts</p>
-                <a href="tel:+13024640950" className="text-blue-600 font-semibold hover:text-blue-700">
+                <h3 className="text-left">Call Us</h3>
+                <p className="text-left">Speak directly with our technical experts</p>
+                <a href="tel:+13024640950" className="text-left">
                   +1 302 464 0950 
                 </a>
               </motion.div>
 
               <motion.div 
-                className="text-center p-6 bg-white rounded-lg shadow-lg"
+                className="text-left"
                 initial={ opacity: 0, y: 30 } 
                 whileInView={ opacity: 1, y: 0 } 
                 transition={ duration: 0.8, delay: 0.2 } 
                 viewport={ once: true } 
               >
-                <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Mail className="w-8 h-8 text-green-600" />
+                <div className="text-left">
+                  <Mail className="text-left" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Email Us</h3>
-                <p className="text-gray-600 mb-4">Send us your project details</p>
-                <a href="mailto:kleber@ziontechgroup.com" className="text-green-600 font-semibold hover:text-green-700">
+                <h3 className="text-left">Email Us</h3>
+                <p className="text-left">Send us your project details</p>
+                <a href="mailto:kleber@ziontechgroup.com" className="text-left">
                   kleber@ziontechgroup.com 
                 </a>
               </motion.div>
 
               <motion.div 
-                className="text-center p-6 bg-white rounded-lg shadow-lg"
+                className="text-left"
                 initial={ opacity: 0, y: 30 } 
                 whileInView={ opacity: 1, y: 0 } 
                 transition={ duration: 0.8, delay: 0.3 } 
                 viewport={ once: true } 
               >
-                <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <MapPin className="w-8 h-8 text-purple-600" />
+                <div className="text-left">
+                  <MapPin className="text-left" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Visit Us</h3>
-                <p className="text-gray-600 mb-4">Our headquarters in Delaware</p>
-                <address className="text-purple-600 font-semibold not-italic">
+                <h3 className="text-left">Visit Us</h3>
+                <p className="text-left">Our headquarters in Delaware</p>
+                <address className="text-left">
                   364 E Main St STE 1008<br />
                   Middletown, DE 19709 
                 </address>

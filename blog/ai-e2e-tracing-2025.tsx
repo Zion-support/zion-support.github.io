@@ -11,44 +11,45 @@ export const metadata = {
 	tags: ['Tracing', 'Observability', 'KPIs', 'GenAI']
 };
 
-const AIE2ETracing2025 = () => {
+const AIE2ETracing2025 = () => {/* content */}
 	return (
-		<article className="max-w-4xl mx-auto px-6 py-12">
-			<header className="mb-12">
-				<div className="flex items-center gap-3 mb-4">
-					<span className="px-4 py-1.5 bg-gradient-to-r from-indigo-500/20 to-blue-500/20 text-indigo-300 text-sm font-semibold rounded-full border border-indigo-500/30">
+  <div></div>
+		<article className="text-left"></a>
+			<header className="text-left">
+				<div className="text-left"></div>
+					<span className="text-left"></span>
 						{metadata.category}
-					</span>
-					<span className="text-gray-500 text-sm">{metadata.readTime} read</span>
+					<
+					<span className="text-left">{metadata.readTime} read<
 				</div>
-				<h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-indigo-300 via-blue-300 to-cyan-300 bg-clip-text text-transparent">
+				<h1 className="text-left">
 					{metadata.title}
 				</h1>
-				<p className="text-xl text-gray-400 leading-relaxed">{metadata.description}</p>
-				<div className="flex items-center gap-4 mt-6 text-sm text-gray-500">
-					<span>By {metadata.author}</span>
-					<span>•</span>
+				<p className="text-left">{metadata.description}</p>
+				<div className="text-left"></div>
+					<span>By {metadata.author}<
+					<span>•<
 					<time dateTime={metadata.date}>{new Date(metadata.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</time>
 				</div>
 			</header>
 
-			<div className="prose prose-invert prose-lg max-w-none">
-				<section className="mb-10">
-					<h2 className="text-3xl font-bold text-white mb-4">Why E2E Tracing</h2>
-					<p className="text-gray-300">Connect prompts, tools, and UX to measurable KPIs. Capture spans for prompts, tool calls, retrieval, and responses, then attribute impact to conversions and support SLAs.</p>
+			<div className="text-left"></div>
+				<section className="text-left"></section>
+					<h2 className="text-left">Why E2E Tracing</h2>
+					<p className="text-left">Connect prompts, tools, and UX to measurable KPIs. Capture spans for prompts, tool calls, retrieval, and responses, then attribute impact to conversions and support SLAs.</p>
 				</section>
-				<section className="mb-10">
-					<h2 className="text-3xl font-bold text-white mb-4">Implementation Blueprint</h2>
-					<ul className="list-disc pl-6 text-gray-300">
+				<section className="text-left"></section>
+					<h2 className="text-left">Implementation Blueprint</h2>
+					<ul className="text-left">
 						<li>Trace context propagation across frontend, gateway, and workers</li>
 						<li>Span taxonomy for prompts, retrieval, tools, and model inference</li>
 						<li>Eval hooks in CI and online canaries</li>
 						<li>KPI linkage for ROI dashboards</li>
 					</ul>
 				</section>
-				<section className="mb-10">
-					<h2 className="text-3xl font-bold text-white mb-4">Results</h2>
-					<p className="text-gray-300">Teams report 300% faster diagnosis, 40% cost reduction through routing, and measurable uplift in conversion from prompt quality improvements.</p>
+				<section className="text-left"></section>
+					<h2 className="text-left">Results</h2>
+					<p className="text-left">Teams report 300% faster diagnosis, 40% cost reduction through routing, and measurable uplift in conversion from prompt quality improvements.</p>
 				</section>
 			</div>
 		</article>

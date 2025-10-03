@@ -6,7 +6,7 @@ import { Briefcase, HardDrive, Lightbulb, Users } from "lucide-react";
 const categories = [
   {
     description: "AI-powered solutions for automation, analytics, and intelligent decision making",
-    icon: <Bot className="w-10 h-10" />,
+    icon: <Bot className="text-left" />,
     link: "/micro-saas-services?category=ai",
     color: "from-purple-500 to-indigo-600",
     count: "8+ Services",
@@ -15,7 +15,7 @@ const categories = [
   {
     title: "IT Services",
     description: "Professional IT consulting, cloud migration, and infrastructure management",
-    icon: <Cloud className="w-10 h-10" />,
+    icon: <Cloud className="text-left" />,
     link: "/micro-saas-services?category=it",
     color: "from-blue-500 to-cyan-600",
     count: "6+ Services",
@@ -24,7 +24,7 @@ const categories = [
   {
     title: "Micro SAAS",
     description: "Ready-to-use business applications for inventory, CRM, and project management",
-    icon: <Code className="w-10 h-10" />,
+    icon: <Code className="text-left" />,
     link: "/micro-saas-services?category=saas",
     color: "from-emerald-500 to-green-600",
     count: "5+ Solutions",
@@ -33,7 +33,7 @@ const categories = [
   {
     title: "Development",
     description: "Custom software development, APIs, and mobile applications",
-    icon: <Code className="w-10 h-10" />,
+    icon: <Code className="text-left" />,
     link: "/micro-saas-services?category=dev",
     color: "from-orange-500 to-red-600",
     count: "4+ Services"
@@ -41,7 +41,7 @@ const categories = [
   {
     title: "Analytics",
     description: "Business intelligence, data visualization, and predictive analytics",
-    icon: <BarChart3 className="w-10 h-10" />,
+    icon: <BarChart3 className="text-left" />,
     link: "/micro-saas-services?category=analytics",
     color: "from-teal-500 to-blue-600",
     count: "3+ Services"
@@ -49,7 +49,7 @@ const categories = [
   {
     title: "Security",
     description: "Cybersecurity audits, penetration testing, and 24/7 monitoring",
-    icon: <Shield className="w-10 h-10" />,
+    icon: <Shield className="text-left" />,
     link: "/micro-saas-services?category=security",
     color: "from-red-500 to-pink-600",
     count: "4+ Services"
@@ -57,7 +57,7 @@ const categories = [
   {
     title: "Automation",
     description: "Business process automation and robotic process automation (RPA)",
-    icon: <Settings className="w-10 h-10" />,
+    icon: <Settings className="text-left" />,
     link: "/micro-saas-services?category=automation",
     color: "from-indigo-500 to-purple-600",
     count: "3+ Services"
@@ -65,7 +65,7 @@ const categories = [
   {
     title: "Integration",
     description: "System integration, API development, and third-party platform connectors",
-    icon: <LinkIcon className="w-10 h-10" />,
+    icon: <LinkIcon className="text-left" />,
     link: "/micro-saas-services?category=integration",
     color: "from-yellow-500 to-orange-600",
     count: "3+ Services"

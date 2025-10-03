@@ -1,9 +1,8 @@
 
 
 
-  {
-
-export type InnovativeMicroSaas = {
+  {/* content */}
+export type InnovativeMicroSaas = {/* content */}
 export type InnovativeMicroSaas = {;
   id: string;
   name: string,
@@ -30,8 +29,7 @@ export type InnovativeMicroSaas = {;
 }
 export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
 
-  {
-
+  {/* content */}
     id: 'local - seo - reviews - booster',
     name: 'Local SEO Reviews Booster',
     description:;
@@ -63,7 +61,7 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
     rating: 4.7,
     launch_date: '2025 - 12 - 01',
   },
-  {
+  {/* content */}
     id: 'local - seo - reviews - booster',
     name: 'Local SEO Reviews Booster',
     description:;
@@ -84,11 +82,9 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
     real_service: true,
 
   },
-  {
-
+  {/* content */}
   },
-  {
-
+  {/* content */}
     id: 'smart - invoice - reconciliation',
     name: 'Smart Invoice Reconciliation',
     description:;
@@ -110,8 +106,7 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
     real_service: true,
 
   },
-  {
-
+  {/* content */}
       'Summarize resumes, score against job descriptions, and auto-generate interview question sets.',
       'Summarize resumes, score against job descriptions, and auto-generate interview question sets.'
     category: 'Human Resources'
@@ -172,7 +167,7 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
 	launchDate?: string
 }
 export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
-	{
+	{/* content */}
 		id: 'podcast-transcription-seo-suite';
 		name: 'Podcast Transcription & SEO Suite';
 		tagline: 'Turn episodes into SEO-optimized blogs in minutes'
@@ -189,7 +184,7 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
 
 		launchDate: '2025-12-01'
 	}
-	{
+	{/* content */}
 		id: 'local-seo-reviews-booster';
 		name: 'Local SEO Reviews Booster';
 		description: 'Automated post-visit SMS/email review requests with smart routing to preferred platforms and churn-risk alerts.';
@@ -203,7 +198,7 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
 
 		realService: true
 	}
-	{
+	{/* content */}
 		id: 'smart-invoice-reconciliation';
 		name: 'Smart Invoice Reconciliation'
 		description: 'Reconciling bank transactions with invoices using OCR and matching heuristics, with discrepancy alerts.';
@@ -217,7 +212,7 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
 
 		realService: true
 	}
-	{
+	{/* content */}
 		id: 'candidate-screening-copilot';
 		name: 'Candidate Screening Copilot'
 		description: 'Summarize resumes, score against job descriptions, and auto-generate interview question sets.';
@@ -258,7 +253,7 @@ launch_date?: string;
 }
 ;
 export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [;
-{
+{/* content */}
   id: 'podcast - transcription - seo - suite';
   name: 'Podcast Transcription & SEO Suite';
   tagline: 'Turn episodes into SEO - optimized blogs in minutes',
@@ -273,7 +268,7 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [;
   rating: 4.7,
   launch_date: '2025 - 12 - 01';
 }
-{
+{/* content */}
   id: 'local - seo - reviews - booster';
   name: 'Local SEO Reviews Booster',
   description: 'Automated post - visit SMS / email review requests with smart routing to preferred platforms and churn - risk alerts.';
@@ -285,7 +280,7 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [;
   link: 'https://ziontechgroup.com / services / local - seo - reviews - booster',
   real_service: true;
 }
-{
+{/* content */}
   id: 'smart - invoice - reconciliation';
   name: 'Smart Invoice Reconciliation',
   description: 'Reconciling bank transactions with invoices using OCR and matching heuristics, with discrepancy alerts.';
@@ -297,7 +292,7 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [;
   link: 'https://ziontechgroup.com / services / smart - invoice - reconciliation',
   real_service: true;
 }
-{
+{/* content */}
   id: 'candidate - screening - copilot';
   name: 'Candidate Screening Copilot',
   description: 'Summarize resumes, score against job descriptions, and auto - generate interview question sets.';
@@ -471,13 +466,13 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [;
 	}
 ];
 
-export type InnovativeMicroSaas = {
+export type InnovativeMicroSaas = {/* content */}
   id: string;
   name: string,
   description: string;
   tagline?: string;
   category:;
-  {
+  {/* content */}
       'Smart review routing',
       'NPS & CSAT',
       'Churn alerts',
@@ -485,7 +480,7 @@ export type InnovativeMicroSaas = {
     ],
     integrations: ['Google Business Profile', 'Yelp'],
   },
-  {
+  {/* content */}
       'OCR ingestion',
       'Matching heuristics',
       'Discrepancy alerts',
@@ -493,7 +488,7 @@ export type InnovativeMicroSaas = {
     ],
     integrations: ['QuickBooks', 'Xero', 'Stripe'],
   },
-  {
+  {/* content */}
     category: 'Human Resources',
     pricing: { starter: '$69 / mo' },
     features: ['Resume parsing', 'JD matching', 'Question sets', 'ATS sync'],
@@ -520,7 +515,7 @@ export type InnovativeMicroSaas = {
 	launchDate?: string
 }
 export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
-	{
+	{/* content */}
 		id: 'podcast-transcription-seo-suite';
 		name: 'Podcast Transcription & SEO Suite';
 		tagline: 'Turn episodes into SEO-optimized blogs in minutes'
@@ -534,7 +529,7 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
 		realService: true;
 		launchDate: '2025-12-01'
 	}
-	{
+	{/* content */}
 		id: 'local-seo-reviews-booster';
 		name: 'Local SEO Reviews Booster',
   description: 'Automated post-visit SMS/email review requests with smart routing to preferred platforms and churn-risk alerts.';
@@ -545,7 +540,7 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
 		useCases: ['Local rankingReputation management'];
 		realService: true
 	}
-	{
+	{/* content */}
 		id: 'smart-invoice-reconciliation';
 		name: 'Smart Invoice Reconciliation'
 		description: 'Reconciling bank transactions with invoices using OCR and matching heuristics, with discrepancy alerts.';
@@ -556,7 +551,7 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
 		useCases: ['Accounting automationFinance ops'];
 		realService: true
 	}
-	{
+	{/* content */}
 		id: 'candidate-screening-copilot';
 		name: 'Candidate Screening Copilot'
 		description: 'Summarize resumes, score against job descriptions, and auto-generate interview question sets.';
@@ -592,7 +587,7 @@ launch_date?: string;
 }
 ;
 export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [;
-{
+{/* content */}
   id: 'podcast - transcription - seo - suite';
   name: 'Podcast Transcription & SEO Suite';
   tagline: 'Turn episodes into SEO - optimized blogs in minutes',
@@ -607,7 +602,7 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [;
   rating: 4.7,
   launch_date: '2025 - 12 - 01';
 }
-{
+{/* content */}
   id: 'local - seo - reviews - booster';
   name: 'Local SEO Reviews Booster',
   description: 'Automated post - visit SMS / email review requests with smart routing to preferred platforms and churn - risk alerts.';
@@ -619,7 +614,7 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [;
   link: 'https://ziontechgroup.com / services / local - seo - reviews - booster',
   real_service: true;
 }
-{
+{/* content */}
   id: 'smart - invoice - reconciliation';
   name: 'Smart Invoice Reconciliation',
   description: 'Reconciling bank transactions with invoices using OCR and matching heuristics, with discrepancy alerts.';
@@ -631,7 +626,7 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [;
   link: 'https://ziontechgroup.com / services / smart - invoice - reconciliation',
   real_service: true;
 }
-{
+{/* content */}
   id: 'candidate - screening - copilot';
   name: 'Candidate Screening Copilot',
   description: 'Summarize resumes, score against job descriptions, and auto - generate interview question sets.';

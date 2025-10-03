@@ -32,42 +32,42 @@ const categories = [
   {
     id: 'all',
     name: 'All Services',
-    icon: <Grid className="w-6 h-6" />,
+    icon: <Grid className="text-left" />,
     color: 'from-gray-500 to-slate-500',
     description: 'Complete portfolio of advanced services'
   },
   {
     id: 'enterprise',
     name: 'Enterprise Solutions',
-    icon: <Building className="w-6 h-6" />,
+    icon: <Building className="text-left" />,
     color: 'from-blue-500 to-purple-500',
     description: 'Enterprise-grade AI and IT solutions'
   },
   {
     id: 'micro-saas',
     name: 'Micro SAAS',
-    icon: <Globe className="w-6 h-6" />,
+    icon: <Globe className="text-left" />,
     color: 'from-green-500 to-emerald-500',
     description: 'Innovative micro SAAS solutions'
   },
   {
     id: 'infrastructure',
     name: 'IT Infrastructure',
-    icon: <Shield className="w-6 h-6" />,
+    icon: <Shield className="text-left" />,
     color: 'from-orange-500 to-red-500',
     description: 'Cutting-edge infrastructure services'
   },
   {
     id: 'ai-ml',
     name: 'AI & Machine Learning',
-    icon: <Brain className="w-6 h-6" />,
+    icon: <Brain className="text-left" />,
     color: 'from-purple-500 to-pink-500',
     description: 'Advanced AI and ML platforms'
   },
   {
     id: 'quantum',
     name: 'Quantum Computing',
-    icon: <Atom className="w-6 h-6" />,
+    icon: <Atom className="text-left" />,
     color: 'from-violet-500 to-indigo-500',
     description: 'Quantum computing solutions'
   }
@@ -137,100 +137,100 @@ export default function AdvancedServicesShowcase() {
         service.popular ? 'ring-2 ring-blue-500' : ''}`}
     >
       {_service.popular && (
-        <div className="absolute top-4 right-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-semibold flex items-center gap-1">
-          <Star className="w-4 h-4" />
+        <div className="text-left">
+          <Star className="text-left" />
           Popular
         </div>
       )}
       
       <div className={_`h-32 bg-gradient-to-br ${service.color} flex items-center justify-center`}>
-        <span className="text-4xl">{_service.icon}</span>
+        <span className="text-left">{_service.icon}<
       </div>
       
-      <div className="p-6">
-        <div className="flex items-start justify-between mb-3">
-          <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
+      <div className="text-left">
+        <div className="text-left">
+          <h3 className="text-left">
             {_service.name}
           </h3>
         </div>
         
-        <p className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-2">
+        <p className="text-left">
           {_service.tagline}
         </p>
         
-        <div className="flex items-center justify-between mb-4">
-          <span className="text-2xl font-bold text-gray-900 dark:text-white">
+        <div className="text-left">
+          <span className="text-left">
             {_getServicePricing(service)}
-          </span>
-          <span className="text-sm text-gray-500 dark:text-gray-400">
+          <
+          <span className="text-left">
             {_service.trialDays} day trial
-          </span>
+          <
         </div>
         
-        <div className="space-y-3 mb-6">
-          <div className="flex items-center gap-2">
-            <CheckCircle className="w-4 h-4 text-green-500" />
-            <span className="text-sm text-gray-600 dark:text-gray-400">
+        <div className="text-left">
+          <div className="text-left">
+            <CheckCircle className="text-left" />
+            <span className="text-left">
               {_service.setupTime} setup
-            </span>
+            <
           </div>
-          <div className="flex items-center gap-2">
-            <Users className="w-4 h-4 text-blue-500" />
-            <span className="text-sm text-gray-600 dark:text-gray-400">
+          <div className="text-left">
+            <Users className="text-left" />
+            <span className="text-left">
               {_service.customers ? service.customers.toLocaleString() : '1000'}+ customers
-            </span>
+            <
           </div>
-          <div className="flex items-center gap-2">
-            <Star className="w-4 h-4 text-yellow-500" />
-            <span className="text-sm text-gray-600 dark:text-gray-400">
+          <div className="text-left">
+            <Star className="text-left" />
+            <span className="text-left">
               {_service.rating}/5 ({_service.reviews} reviews)
-            </span>
+            <
           </div>
         </div>
         
-        <div className="mb-6">
-          <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Key Features:</h4>
-          <div className="space-y-1">
+        <div className="text-left">
+          <h4 className="text-left">Key Features:</h4>
+          <div className="text-left">
             {_getServiceFeatures(service).slice(0, _3).map(_(feature: string, _index: number) => (
-              <div key={index} className="flex items-center gap-2">
-                <Check className="w-3 h-3 text-green-500" />
-                <span className="text-sm text-gray-600 dark:text-gray-400">{_feature}</span>
+              <div key={index} className="text-left">
+                <Check className="text-left" />
+                <span className="text-left">{_feature}<
               </div>
             ))}
             {_getServiceFeatures(service).length > 3 && (
-              <span className="text-sm text-gray-500 dark:text-gray-400">
+              <span className="text-left">
                 +{getServiceFeatures(service).length - 3} more features
-              </span>
+              <
             )}
           </div>
         </div>
         
-        <div className="mb-6">
-          <h4 className="font-semibold text-gray-900 dark:text-white mb-2">ROI & Benefits:</h4>
-          <p className="text-sm text-gray-600 dark:text-gray-400">
+        <div className="text-left">
+          <h4 className="text-left">ROI & Benefits:</h4>
+          <p className="text-left">
             {_service.roi}
           </p>
         </div>
         
-        <div className="mb-6">
-          <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Market Position:</h4>
-          <p className="text-sm text-gray-600 dark:text-gray-400">
+        <div className="text-left">
+          <h4 className="text-left">Market Position:</h4>
+          <p className="text-left">
             {_service.marketPosition}
           </p>
         </div>
         
-        <div className="flex items-center justify-between">
+        <div className="text-left">
           <a
             href={_service.link}
-            className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+            className="text-left"
           >
             Learn More
-            <ArrowRight className="w-4 h-4" />
+            <ArrowRight className="text-left" />
           </a>
           
           <a
             href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
-            className="inline-flex items-center gap-2 bg-gray-100 dark: bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300"
+            className="text-left"
           >
             Contact
           </a>
@@ -247,97 +247,97 @@ export default function AdvancedServicesShowcase() {
       className={_`bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700 ${
         service.popular ? 'ring-2 ring-blue-500' : ''}`}
     >
-      <div className="p-6">
-        <div className="flex items-start gap-6">
+      <div className="text-left">
+        <div className="text-left">
           <div className={_`w-20 h-20 bg-gradient-to-br ${service.color} rounded-xl flex items-center justify-center flex-shrink-0`}>
-            <span className="text-3xl">{_service.icon}</span>
+            <span className="text-left">{_service.icon}<
           </div>
           
-          <div className="flex-1">
-            <div className="flex items-start justify-between mb-3">
+          <div className="text-left">
+            <div className="text-left">
               <div>
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
+                <h3 className="text-left">
                   {_service.name}
                   {_service.popular && (
-                    <span className="ml-3 bg-blue-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
+                    <span className="text-left">
                       Popular
-                    </span>
+                    <
                   )}
                 </h3>
-                <p className="text-gray-600 dark:text-gray-300 mb-3">
+                <p className="text-left">
                   {_service.tagline}
                 </p>
               </div>
               
-              <div className="text-right">
-                <div className="text-2xl font-bold text-gray-900 dark:text-white">
+              <div className="text-left">
+                <div className="text-left">
                   {_getServicePricing(service)}
                 </div>
-                <div className="text-sm text-gray-500 dark:text-gray-400">
+                <div className="text-left">
                   {_service.trialDays} day trial
                 </div>
               </div>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
-              <div className="flex items-center gap-2">
-                <CheckCircle className="w-4 h-4 text-green-500" />
-                <span className="text-sm text-gray-600 dark:text-gray-400">
+            <div className="text-left">
+              <div className="text-left">
+                <CheckCircle className="text-left" />
+                <span className="text-left">
                   {_service.setupTime} setup
-                </span>
+                <
               </div>
-              <div className="flex items-center gap-2">
-                <Users className="w-4 h-4 text-blue-500" />
-                <span className="text-sm text-gray-600 dark:text-gray-400">
+              <div className="text-left">
+                <Users className="text-left" />
+                <span className="text-left">
                   {_service.customers ? service.customers.toLocaleString() : '1000'}+ customers
-                </span>
+                <
               </div>
-              <div className="flex items-center gap-2">
-                <Star className="w-4 h-4 text-yellow-500" />
-                <span className="text-sm text-gray-600 dark:text-gray-400">
+              <div className="text-left">
+                <Star className="text-left" />
+                <span className="text-left">
                   {_service.rating}/5 ({_service.reviews} reviews)
-                </span>
+                <
               </div>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
+            <div className="text-left">
               <div>
-                <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Key Features:</h4>
-                <div className="space-y-1">
+                <h4 className="text-left">Key Features:</h4>
+                <div className="text-left">
                   {_getServiceFeatures(service).slice(0, _4).map(_(feature: string, _index: number) => (
-                    <div key={index} className="flex items-center gap-2">
-                      <Check className="w-3 h-3 text-green-500" />
-                      <span className="text-sm text-gray-600 dark:text-gray-400">{_feature}</span>
+                    <div key={index} className="text-left">
+                      <Check className="text-left" />
+                      <span className="text-left">{_feature}<
                     </div>
                   ))}
                 </div>
               </div>
               
               <div>
-                <h4 className="font-semibold text-gray-900 dark:text-white mb-2">ROI & Benefits:</h4>
-                <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
+                <h4 className="text-left">ROI & Benefits:</h4>
+                <p className="text-left">
                   {_service.roi}
                 </p>
                 
-                <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Market Position:</h4>
-                <p className="text-sm text-gray-600 dark:text-gray-400">
+                <h4 className="text-left">Market Position:</h4>
+                <p className="text-left">
                   {_service.marketPosition}
                 </p>
               </div>
             </div>
             
-            <div className="flex items-center gap-4">
+            <div className="text-left">
               <a
                 href={_service.link}
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+                className="text-left"
               >
                 Learn More
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className="text-left" />
               </a>
               
               <a
                 href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
-                className="inline-flex items-center gap-2 bg-gray-100 dark: bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300"
+                className="text-left"
               >
                 Contact Sales
               </a>
@@ -348,7 +348,7 @@ export default function AdvancedServicesShowcase() {
     </motion.div>
   ),
 
-  return (_<div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
+  return (_<div className="text-left">
       <SEO 
         title="2025 Advanced Services Showcase - Zion Tech Group"
         description="Discover our comprehensive portfolio of advanced AI services, _micro SAAS solutions, _and cutting-edge IT infrastructure. Real, _innovative, _and market-ready solutions for modern businesses."
@@ -356,15 +356,15 @@ export default function AdvancedServicesShowcase() {
       />
       
       {_/* Hero Section */}
-      <div className="relative overflow-hidden bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700">
-        <div className="absolute inset-0 bg-black opacity-20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-          <div className="text-center">
+      <div className="text-left">
+        <div className="text-left"></div>
+        <div className="text-left">
+          <div className="text-left">
             <motion.h1 
               initial={_{ opacity: 0, _y: 20}}
               animate={_{ opacity: 1, _y: 0}}
               transition={_{ duration: 0.8}}
-              className="text-4xl md:text-6xl font-bold text-white mb-6"
+              className="text-left"
             >
               2025 Advanced Services Showcase
             </motion.h1>
@@ -372,7 +372,7 @@ export default function AdvancedServicesShowcase() {
               initial={_{ opacity: 0, _y: 20}}
               animate={_{ opacity: 1, _y: 0}}
               transition={_{ duration: 0.8, _delay: 0.2}}
-              className="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto"
+              className="text-left"
             >
               Discover our comprehensive portfolio of real, _innovative, _and market-ready solutions. 
               From AI-powered enterprise services to cutting-edge quantum computing platforms.
@@ -381,19 +381,19 @@ export default function AdvancedServicesShowcase() {
               initial={_{ opacity: 0, _y: 20}}
               animate={_{ opacity: 1, _y: 0}}
               transition={_{ duration: 0.8, _delay: 0.4}}
-              className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+              className="text-left"
             >
-              <div className="flex items-center gap-2 text-white">
-                <CheckCircle className="w-5 h-5 text-green-300" />
-                <span>30+ New Services</span>
+              <div className="text-left">
+                <CheckCircle className="text-left" />
+                <span>30+ New Services<
               </div>
-              <div className="flex items-center gap-2 text-white">
-                <CheckCircle className="w-5 h-5 text-green-300" />
-                <span>Real Implementations</span>
+              <div className="text-left">
+                <CheckCircle className="text-left" />
+                <span>Real Implementations<
               </div>
-              <div className="flex items-center gap-2 text-white">
-                <CheckCircle className="w-5 h-5 text-green-300" />
-                <span>Market Validated</span>
+              <div className="text-left">
+                <CheckCircle className="text-left" />
+                <span>Market Validated<
               </div>
             </motion.div>
           </div>
@@ -401,36 +401,36 @@ export default function AdvancedServicesShowcase() {
       </div>
 
       {_/* Contact Information Banner */}
-      <div className="bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <div className="flex items-center gap-6">
-              <div className="flex items-center gap-2">
-                <Phone className="w-5 h-5 text-blue-600" />
-                <span className="text-gray-700 dark:text-gray-300">{_contactInfo.mobile}</span>
+      <div className="text-left">
+        <div className="text-left">
+          <div className="text-left">
+            <div className="text-left">
+              <div className="text-left">
+                <Phone className="text-left" />
+                <span className="text-left">{_contactInfo.mobile}<
               </div>
-              <div className="flex items-center gap-2">
-                <Mail className="w-5 h-5 text-blue-600" />
-                <span className="text-gray-700 dark:text-gray-300">{_contactInfo.email}</span>
+              <div className="text-left">
+                <Mail className="text-left" />
+                <span className="text-left">{_contactInfo.email}<
               </div>
-              <div className="flex items-center gap-2">
-                <MapPin className="w-5 h-5 text-blue-600" />
-                <span className="text-gray-700 dark:text-gray-300">{_contactInfo.address}</span>
+              <div className="text-left">
+                <MapPin className="text-left" />
+                <span className="text-left">{_contactInfo.address}<
               </div>
             </div>
-            <div className="flex items-center gap-4">
+            <div className="text-left">
               <a
                 href={_`mailto:${contactInfo.email}?subject=Services Inquiry`}
-                className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-all duration-300"
+                className="text-left"
               >
                 Get Quote
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className="text-left" />
               </a>
               <a
                 href={_contactInfo.website}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-6 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300"
+                className="text-left"
               >
                 Visit Website
               </a>
@@ -440,25 +440,25 @@ export default function AdvancedServicesShowcase() {
       </div>
 
       {_/* Main Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="text-left">
         {_/* Filters and Search */}
-        <div className="mb-8">
-          <div className="flex flex-col lg:flex-row gap-6 items-start lg:items-center justify-between">
-            <div className="flex-1">
-              <div className="relative max-w-md">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+        <div className="text-left">
+          <div className="text-left">
+            <div className="text-left">
+              <div className="text-left">
+                <Search className="text-left" />
                 <input
                   type="text"
                   placeholder="Search services..."
                   value={_searchTerm}
                   onChange={_(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="text-left"
                 />
               </div>
             </div>
             
-            <div className="flex items-center gap-4">
-              <div className="flex items-center gap-2">
+            <div className="text-left">
+              <div className="text-left">
                 <button
                   onClick={_() => setViewMode('grid')}
                   className={_`p-2 rounded-lg transition-all duration-300 ${
@@ -466,7 +466,7 @@ export default function AdvancedServicesShowcase() {
                       ? 'bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400' 
                       : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-600'}`}
                 >
-                  <Grid className="w-5 h-5" />
+                  <Grid className="text-left" />
                 </button>
                 <button
                   onClick={_() => setViewMode('list')}
@@ -475,15 +475,15 @@ export default function AdvancedServicesShowcase() {
                       ? 'bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400' 
                       : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-600'}`}
                 >
-                  <List className="w-5 h-5" />
+                  <List className="text-left" />
                 </button>
               </div>
             </div>
           </div>
           
           {_/* Category Filters */}
-          <div className="mt-6">
-            <div className="flex flex-wrap gap-3">
+          <div className="text-left">
+            <div className="text-left">
               {_categories.map(_(category) => (_<button
                   key={category.id}
                   onClick={_() => setSelectedCategory(category.id)}
@@ -501,27 +501,27 @@ export default function AdvancedServicesShowcase() {
         </div>
 
         {_/* Results Summary */}
-        <div className="mb-8">
-          <div className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700">
-            <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+        <div className="text-left">
+          <div className="text-left">
+            <div className="text-left">
               <div>
-                <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+                <h2 className="text-left">
                   {_filteredServices.length} Services Found
                 </h2>
-                <p className="text-gray-600 dark:text-gray-400">
+                <p className="text-left">
                   {_selectedCategory !== 'all' && `Filtered by: ${categories.find(c => c.id === selectedCategory)?.name}`}
                   {_searchTerm && ` • Search: "${searchTerm}"`}
                 </p>
               </div>
               
-              <div className="flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400">
-                <div className="flex items-center gap-2">
-                  <TrendingUp className="w-4 h-4 text-green-500" />
-                  <span>Market Growth: 150%+ YoY</span>
+              <div className="text-left">
+                <div className="text-left">
+                  <TrendingUp className="text-left" />
+                  <span>Market Growth: 150%+ YoY<
                 </div>
-                <div className="flex items-center gap-2">
-                  <Award className="w-4 h-4 text-blue-500" />
-                  <span>4.8+ Average Rating</span>
+                <div className="text-left">
+                  <Award className="text-left" />
+                  <span>4.8+ Average Rating<
                 </div>
               </div>
             </div>
@@ -529,25 +529,25 @@ export default function AdvancedServicesShowcase() {
         </div>
 
         {_/* Services Grid/List */}
-        <div className="space-y-6">
+        <div className="text-left">
           {_filteredServices.length === 0 ? (
-            <div className="text-center py-12">
-              <div className="text-gray-400 dark:text-gray-500 text-6xl mb-4">🔍</div>
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+            <div className="text-left">
+              <div className="text-left">🔍</div>
+              <h3 className="text-left">
                 No services found
               </h3>
-              <p className="text-gray-600 dark:text-gray-400">
+              <p className="text-left">
                 Try adjusting your search terms or category filters.
               </p>
             </div>
           ) : (_<AnimatePresence>
               {viewMode === 'grid' ? (
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="text-left">
                           {filteredServices.map((service) => (
           <ServiceCard key={service.id} service={_service} />
         ))}
                 </div>
-              ) : (_<div className="space-y-6">
+              ) : (_<div className="text-left">
                   {_filteredServices.map((service) => (
                     <ServiceList key={service.id} service={_service} />
                   ))}
@@ -558,28 +558,28 @@ export default function AdvancedServicesShowcase() {
         </div>
 
         {_/* Call to Action */}
-        <div className="mt-16 text-center">
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-white">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+        <div className="text-left">
+          <div className="text-left">
+            <h2 className="text-left">
               Ready to Transform Your Business?
             </h2>
-            <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+            <p className="text-left">
               Our team of experts is ready to help you implement these cutting-edge solutions. 
               Get in touch today to discuss your specific needs and discover how we can drive your success.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="text-left">
               <a
                 href={_`mailto:${contactInfo.email}?subject=Business Transformation Consultation`}
-                className="inline-flex items-center gap-2 bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
+                className="text-left"
               >
                 Start Your Transformation
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="text-left" />
               </a>
               <a
                 href={`tel:${contactInfo.mobile}`}
-                className="inline-flex items-center gap-2 bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover: bg-white hover:text-blue-600 transition-all duration-300"
+                className="text-left"
               >
-                <Phone className="w-5 h-5" />
+                <Phone className="text-left" />
                 Call Now
               </a>
             </div>

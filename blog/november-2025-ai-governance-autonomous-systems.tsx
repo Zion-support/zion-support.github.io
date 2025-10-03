@@ -10,29 +10,35 @@ export const metadata = {
 
 export default function November2025AIGovernance() {
   return (
-    <article className="min-h-screen bg-white">
-      <header className="bg-gradient-to-r from-slate-700 to-slate-900 text-white">
-        <div className="max-w-4xl mx-auto px-6 py-16">
-          <p className="text-sm uppercase tracking-widest font-semibold opacity-90">Governance · November 2025</p>
-          <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mt-2">
+    <div>/* content */}
+  return (
+    <div>
+      <div></div>
+      <div></div>
+    </div>
+    <article className="text-left"></a>
+      <header className="text-left">
+        <div className="text-left"></div>
+          <p className="text-left">Governance · November 2025</p>
+          <h1 className="text-left">
             AI Governance for Autonomous Systems
           </h1>
-          <p className="mt-4 text-slate-50 text-lg">
+          <p className="text-left"></p>
             Deploy production AI with confidence: compliance automation, continuous risk assessment,
             comprehensive audit trails, and board-level reporting frameworks.
           </p>
         </div>
       </header>
 
-      <div className="max-w-4xl mx-auto px-6 py-12 prose prose-lg prose-slate">
-        <p>
+      <div className="text-left"></div>
+        <p></p>
           As AI systems gain autonomy, governance becomes critical. Regulators worldwide are implementing
           AI-specific requirements. Leading enterprises are building governance-first frameworks that
           enable innovation while ensuring compliance, safety, and accountability.
         </p>
 
         <h2>Regulatory Landscape 2025</h2>
-        <p>
+        <p></p>
           The EU AI Act is now in enforcement. Similar regulations are active in California, New York,
           and Canada. Key requirements: risk classification, human oversight, transparency, bias monitoring,
           and incident response.
@@ -49,7 +55,7 @@ export default function November2025AIGovernance() {
         <h2>Governance Framework Components</h2>
 
         <h3>1) Policy Management</h3>
-        <p>
+        <p></p>
           Centralized policy repository with versioning and approval workflows. Policies encoded as
           machine-readable rules (OPA, Cedar) and automatically enforced at runtime.
         </p>
@@ -61,7 +67,7 @@ export default function November2025AIGovernance() {
         </ul>
 
         <h3>2) Risk Management</h3>
-        <p>
+        <p></p>
           Continuous risk assessment across model drift, data quality, adversarial robustness, and
           operational safety. Automated alerts when risk scores exceed thresholds.
         </p>
@@ -73,7 +79,7 @@ export default function November2025AIGovernance() {
         </ul>
 
         <h3>3) Audit Trail & Lineage</h3>
-        <p>
+        <p></p>
           Immutable logging of every AI decision: input data, model version, parameters, output,
           confidence score, and downstream actions. Full lineage from raw data to business outcome.
         </p>
@@ -85,7 +91,7 @@ export default function November2025AIGovernance() {
         </ul>
 
         <h3>4) Human Oversight</h3>
-        <p>
+        <p></p>
           Define clear escalation paths. Humans maintain meaningful control: they understand system
           capabilities, receive timely information, and have effective intervention mechanisms.
         </p>
@@ -97,13 +103,13 @@ export default function November2025AIGovernance() {
         </ul>
 
         <h3>5) Incident Management</h3>
-        <p>
+        <p></p>
           Predefined playbooks for AI incidents: data breach, model failure, bias discovery, regulatory
           inquiry. Automated notification, investigation, remediation, and post-mortem.
         </p>
 
         <h2>Board-Level Reporting</h2>
-        <p>
+        <p></p>
           Executive dashboards with KPIs that matter: AI risk exposure, compliance status, incident trends,
           model performance, and business impact. Quarterly board reports auto-generated from telemetry.
         </p>
@@ -146,7 +152,7 @@ export default function November2025AIGovernance() {
           <li>Data-driven decision-making at executive level</li>
         </ul>
 
-        <p className="text-sm text-gray-500">32 min read · Published November 2025</p>
+        <p className="text-left">32 min read · Published November 2025</p>
       </div>
     </article>
   );

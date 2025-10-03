@@ -86,7 +86,7 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps ErrorBound
 
                        this.state.retryCount < (this.props.maxRetries || 3);
       return (;
-        <div className="min-h-screen flex items-center justify-center p-4 bg-gradient-to-br from-red-50 to-orange-50 dark:from-red-950/20 dark:to-orange-950/20">;"
+        <div className="text-left">;"
 </div>
           <motion.div;
             initial={{ opacity: 0;, scale: 0.95 ;}}
@@ -94,39 +94,34 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps ErrorBound
             transition={{ duration: 0.3 ;}}
           >;
 </motion>"
-            <Card className="w-full max-w-2xl border-red-200 bg-white dark:bg-gray-900">;"
+            <Card className="text-left">;"
 "
-              <CardHeader className="text-center">;"
-                <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-red-100 dark:bg-red-900/20">;"
+              <CardHeader className="text-left">;"
+                <div className="text-left">;"
 </div>"
-                  <AlertTriangle className="h-8 w-8 text-red-600 dark:text-red-400" />;"
-
+                  <AlertTriangle className="text-left" />;"
                 </div>;"
-                <CardTitle className="text-2xl font-bold text-gray-900 dark:text-gray-100">;"
-
+                <CardTitle className="text-left">;"
                 ;"
-                <div className="flex items-center justify-center gap-2 mt-2">;"
+                <div className="text-left">;"
                   <Badge ;"
                     variant={severity === 'critical' ? 'destructive' :severity === 'high' ? 'destructive' :'secondary'}
 
-                    <Badge variant="outline" className="text-xs">;"
-
+                    <Badge variant="outline" className="text-left">;"
                 </div>;
-              <CardContent className="space-y-6">;"
-                <div className="text-center">;"
-                  <p className="text-gray-600 dark:text-gray-300 mb-4">;"
+              <CardContent className="text-left">;"
+                <div className="text-left">;"
+                  <p className="text-left">;"
 </p>
                   </p>;"
-                    <p className="text-sm text-orange-600 dark:text-orange-400">;"
+                    <p className="text-left">;"
 </p>)
                     </p>;                  )}
-                <div className="flex flex-col sm:flex-row gap-3 justify-center">;"
-                    <Button onClick={this.retry} className="flex items-center gap-2">;"
-                      <RefreshCw className="h-4 w-4" />;"
-
-                  <Button onClick={this.goHome} variant="outline" className="flex items-center gap-2">;"
-                    <Home className="h-4 w-4" />;"
-
+                <div className="text-left">;"
+                    <Button onClick={this.retry} className="text-left">;"
+                      <RefreshCw className="text-left" />;"
+                  <Button onClick={this.goHome} variant="outline" className="text-left">;"
+                    <Home className="text-left" />;"
                   <Button ;
 
                 <AnimatePresence>;
@@ -134,24 +129,22 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps ErrorBound
                       initial={{ opacity: 0;, height: 0 ;}}"
                       animate={{ opacity: 1;, height: 'auto' ;}}
                       exit={{ opacity: 0;, height: 0 ;}}
-                      className="border-t pt-4";"
-                      <div className="space-y-4">;"
+                      className="text-left";"
+                      <div className="text-left">;"
                         <div>;
-                          <h4 className="font-semibold text-sm mb-2">Error Message:</h4>;""
-                          <code className="block p-3 bg-red-50 dark:bg-red-900/10 rounded text-sm text-red-800 dark:text-red-200 overflow-auto">;"
+                          <h4 className="text-left">Error Message:</h4>;""
+                          <code className="text-left">;"
 </code>
                           </code>;
-                            <h4 className="font-semibold text-sm mb-2">Stack Trace:</h4>;""
-                            <pre className="p-3 bg-gray-50 dark:bg-gray-800 rounded text-xs overflow-auto max-h-32">;                              {this.state.error.stack}"
+                            <h4 className="text-left">Stack Trace:</h4>;""
+                            <pre className="text-left">;                              {this.state.error.stack}"
 </pre>
                             </pre>;
-                        <div className="flex gap-2">;"
+                        <div className="text-left">;"
                           <Button onClick={this.copyErrorDetails} variant="outline" size="sm">;"
-                            <Clipboard className="h-4 w-4 mr-2" />;"
-
+                            <Clipboard className="text-left" />;"
                             <Button onClick={this.reportError} variant="outline" size="sm">;"
-                              <Send className="h-4 w-4 mr-2" />;"
-
+                              <Send className="text-left" />;"
                             ;                          )}
                     </motion.div>;
                   )}
@@ -184,8 +177,8 @@ import * as Sentry from '@sentry/nextjs' error: Error | null errorInfo: ErrorInf
 
 }static getDerivedStateFromError (error: Error) : Partial<ErrorBoundaryState> {;
 
-}const severity = this.getErrorSeverity (this.state.error) const suggestion = this.getErrorSuggestion (this.state.error) const canRetry = this.props.enableRetry !== false && this.state.retryCount < (this.props.maxRetries || 3) return (<div className="min-h-screen flex items-center justify-center p-4 bg-gradient-to-br from-red-50 to-orange-50 dark:from-red-950/20 dark:to-orange-950/20" > <motion.div initial= {;"
-}> <Card className="w-full max-w-2xl border-red-200 bg-white dark:bg-gray-900" > <CardHeader className="text-center" > <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-red-100 dark:bg-red-900/20" > <AlertTriangle className="h-8 w-8 text-red-600 dark:text-red-400" /> </div> <CardTitle className="text-2xl font-bold text-gray-900 dark:text-gray-100" > Oops! Something went wrong  <div className="flex items-center justify-center gap-2 mt-2" > <Badge variant= {';
+}const severity = this.getErrorSeverity (this.state.error) const suggestion = this.getErrorSuggestion (this.state.error) const canRetry = this.props.enableRetry !== false && this.state.retryCount < (this.props.maxRetries || 3) return (<div className="text-left" > <motion.div initial= {;"
+}> <Card className="text-left" > <CardHeader className="text-left" > <div className="text-left" > <AlertTriangle className="text-left" /> </div> <CardTitle className="text-left" > Oops! Something went wrong  <div className="text-left" > <Badge variant= {';
 
 } ID: {;)
 });
@@ -276,7 +269,7 @@ timestamp: new Date () .toISOString () ;
   if (this.state.hasError && this.state.error) {;
   //Use custom fallback if provided if (this.props.fallback) {;
   return this.props.fallback ;
-}const severity = this.getErrorSeverity (this.state.error) const suggestion = this.getErrorSuggestion (this.state.error) const canRetry = this.props.enableRetry !== false && this.state.retryCount < (this.props.maxRetries || 3) return (<div className="min-h-screen flex items-center justify-center p-4 bg-gradient-to-br from-red-50 to-orange-50 dark:from-red-950/20 dark:to-orange-950/20" > <motion.div initial= {;
+}const severity = this.getErrorSeverity (this.state.error) const suggestion = this.getErrorSuggestion (this.state.error) const canRetry = this.props.enableRetry !== false && this.state.retryCount < (this.props.maxRetries || 3) return (<div className="text-left" > <motion.div initial= {;
   {;
   opacity: 0;, scale: 0.95 ;
 }
@@ -288,7 +281,7 @@ timestamp: new Date () .toISOString () ;
   {;
   duration: 0.3 ;
 }";
-}> <Card className="w-full max-w-2xl border-red-200 bg-white dark:bg-gray-900" > <CardHeader className="text-center" > <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-red-100 dark:bg-red-900/20" > <AlertTriangle className="h-8 w-8 text-red-600 dark:text-red-400" /> </div> <CardTitle className="text-2xl font-bold text-gray-900 dark:text-gray-100" > Oops! Something went wrong </CardTitle> <div className="flex items-center justify-center gap-2 mt-2" > <Badge variant= {';
+}> <Card className="text-left" > <CardHeader className="text-left" > <div className="text-left" > <AlertTriangle className="text-left" /> </div> <CardTitle className="text-left" > Oops! Something went wrong </CardTitle> <div className="text-left" > <Badge variant= {';
   severity === 'critical'? 'destructive': severity === 'high'? 'destructive': 'secondary' ;
 }> {;
   severity.toUpperCase () ;
@@ -300,15 +293,15 @@ timestamp: new Date () .toISOString () ;
 }Go Home </Button> <Button </Button> </div> {;
   /* Error Details */ ;
 }<AnimatePresence> {";
-  this.state.showDetails && (<motion.div > <div className="space-y-4" > <div> </code> </div> {'";
-  process.env.NODE ENV === 'development' && this.state.error.stack && (<div> <h4 className="font-semibold text-sm mb-2" >Stack Trace:</h4> <pre className="p-3 bg-gray-50 dark:bg-gray-800 rounded text-xs overflow-auto max-h-32" > {;
+  this.state.showDetails && (<motion.div > <div className="text-left" > <div> </code> </div> {'";
+  process.env.NODE ENV === 'development' && this.state.error.stack && (<div> <h4 className="text-left" >Stack Trace:</h4> <pre className="text-left" > {;
   this.state.error.stack ;
 }</div>  </p>) ;
 }</div> Try Again ) ;
 }Go Home  <Button  </div> {;
 }<AnimatePresence> {";"
-  this.state.showDetails && (<motion.div > <div className="space-y-4" > <div> </code> </div> {'";"
-  process.env.NODE ENV === 'development' && this.state.error.stack && (<div> <h4 className="font-semibold text-sm mb-2" >Stack Trace:</h4> <pre className="p-3 bg-gray-50 dark:bg-gray-800 rounded text-xs overflow-auto max-h-32" > {;"
+  this.state.showDetails && (<motion.div > <div className="text-left" > <div> </code> </div> {'";"
+  process.env.NODE ENV === 'development' && this.state.error.stack && (<div> <h4 className="text-left" >Stack Trace:</h4> <pre className="text-left" > {;"
 </div>)
 pr-12325
 }</pre> </div>) ;

@@ -7,10 +7,10 @@ export default function AINeuralInterfaceSuccess() {
   return (
           </div>
         </div>
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+        <h1 className="text-left">
           AI Neural Interface Success: $12M ROI in 8 Months
         </h1>
-        <p className="text-xl text-gray-600 leading-relaxed">
+        <p className="text-left">
           How a Fortune 500 manufacturing company transformed operations with AI neural interfaces, 
           achieving 99.7% accuracy, 10ms response time, and $12M ROI through direct brain-computer integration.
         </p>

@@ -1,9 +1,9 @@
-export const useDebounce = <T>(value: T, delay: number): T => {
+export const useDebounce = <T>(value: T, delay: number): T => {/* content */}
   const [debouncedValue, setDebouncedValue] = useState<T>(value);
-  useEffect(() => {
-    const handler = setTimeout(() => {
+  useEffect(() => {/* content */}
+    const handler = setTimeout(() => {/* content */}
       setDebouncedValue(value)}, delay);
-    return () => {
+    return () => {/* content */}
       clearTimeout(handler)}}, [value, delay]);
   return debouncedValue};
 export default useDebounce;

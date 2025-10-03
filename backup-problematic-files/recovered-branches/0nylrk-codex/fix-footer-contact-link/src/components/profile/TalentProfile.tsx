@@ -50,7 +50,7 @@ export function TalentProfile({ ;
   })) || [],;
   ;
   return (;
-    <div className="container mx-auto px-4 py-8">;
+    <div className="text-left">;
       {/* Profile Header */}
       <ProfileHero;
         name={profile.full_name}
@@ -62,9 +62,9 @@ export function TalentProfile({ ;
       />;
       ;
       {/* Main content area */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8">;
+      <div className="text-left">;
         {/* Left Column - Skills & Info */}
-        <div className="space-y-8">;
+        <div className="text-left">;
           <ProfileSkills skills={skillsArray} />;
           <ProfileAvailability availability={availability} />;
           <ProfileContact ;
@@ -75,12 +75,12 @@ export function TalentProfile({ ;
         </div>;
         ;
         {/* Right Column - Bio & Projects */}
-        <div className="lg:col-span-2 space-y-8">;
+        <div className="text-left">;
           {/* Bio Section */}
-          <div className="bg-zion-purple/10 border border-zion-purple/30 rounded-lg p-6">;
-            <h2 className="text-xl font-bold text-white mb-4">About {profile.full_name}</h2>;
-            <div className="prose prose-invert max-w-none">;
-              <p className="text-zion-slate whitespace-pre-wrap">{profile.bio}</p>;
+          <div className="text-left">;
+            <h2 className="text-left">About {profile.full_name}</h2>;
+            <div className="text-left">;
+              <p className="text-left">{profile.bio}</p>;
             </div>;
           </div>;
           ;
@@ -88,9 +88,9 @@ export function TalentProfile({ ;
           <ProfileProjects projects={projectsArray} />;
           ;
           {/* Ratings Section */}
-          <div className="bg-zion-purple/10 border border-zion-purple/30 rounded-lg p-6">;
-            <h2 className="text-xl font-bold text-white mb-4 flex items-center">;
-              <Star className="mr-2 h-5 w-5 text-yellow-400" />;
+          <div className="text-left">;
+            <h2 className="text-left">;
+              <Star className="text-left" />;
               Reviews & Ratings;
             </h2>;
             <ProfileRatings ;
@@ -102,21 +102,21 @@ export function TalentProfile({ ;
           ;
           {/* Hire Now CTA */}
           {isAuthenticated && (;
-            <div className="bg-zion-purple/10 border border-zion-purple/30 rounded-lg p-6 mb-8">;
-              <div className="flex flex-col items-center text-center">;
-                <h3 className="text-xl font-bold text-white mb-2">Ready to collaborate?</h3>;
-                <p className="text-zion-slate mb-6 max-w-md">;
+            <div className="text-left">;
+              <div className="text-left">;
+                <h3 className="text-left">Ready to collaborate?</h3>;
+                <p className="text-left">;
                   Connect with {profile.full_name} for your next project and get started right away.;
                   {profile.hourly_rate && ` Rate starts at $${profile.hourly_rate}/hour.`}
                 </p>;
                 ;
-                <div className="flex flex-wrap gap-4 justify-center">;
+                <div className="text-left">;
                   <Button ;
                     size="lg" ;
-                    className="bg-zion-purple text-white hover:bg-zion-purple-dark";
+                    className="text-left";
                     onClick={onRequestHire}
                   >;
-                    <Handshake className="mr-2 h-5 w-5" />;
+                    <Handshake className="text-left" />;
                     Hire Now;
                   </Button>;
                   ;
@@ -124,10 +124,10 @@ export function TalentProfile({ ;
                     <Button ;
                       size="lg" ;
                       variant="outline";
-                      className="border-zion-purple text-zion-purple hover:bg-zion-purple/10";
+                      className="text-left";
                       onClick={onMessageTalent}
                     >;
-                      <MessageSquare className="mr-2 h-5 w-5" />;
+                      <MessageSquare className="text-left" />;
                       Message;
                     </Button>;                  )}
                 </div>;
@@ -185,7 +185,7 @@ return (</div> </div> {;
   profile.hourly rate && `Rate starts at $$ {;
   profile.hourly rate ;
 }/hour.` ;
-}</p> <div className="flex flex-wrap gap-4 justify-center" > <Button > <Handshake className="mr-2 h-5 w-5" /> Hire Now </Button> {";"  onMessageTalent && (<Button size="lg" variant="outline" className="border-zion-purple text-zion-purple hover:bg-zion-purple/10" onClick={;"  onMessageTalent ";"}> <MessageSquare className="mr-2 h-5 w-5" /> Message </Button>) ;
+}</p> <div className="text-left" > <Button > <Handshake className="text-left" /> Hire Now </Button> {";"  onMessageTalent && (<Button size="lg" variant="outline" className="text-left" onClick={;"  onMessageTalent ";"}> <MessageSquare className="text-left" /> Message </Button>) ;
 }</div> </div> </div>) ;
 :temp_broken_files/profile/TalentProfile.tsx
 }</div> </div> </div>) ;"}'"

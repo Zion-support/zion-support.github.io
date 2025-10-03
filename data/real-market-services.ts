@@ -1,8 +1,7 @@
 
 import { ServiceVariant } from '../types / service - variants';
 
-export interface RealMarketService {
-
+export interface RealMarketService {/* content */}
   real_implementation: boolean;
   implementation_details: string;
   launch_date: string;
@@ -13,7 +12,7 @@ export interface RealMarketService {
   reviews: number;
 
 ;
-const contact = {
+const contact = {/* content */}
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -57,8 +56,7 @@ export const realMarketServices: RealMarketService[] = [;
   useCases: string[], roi: string,
   competitors: string[], marketSize: string,
   growthRate: string, variant: ServiceVariant,
-  contactInfo: {
-      
+  contactInfo: {/* content */}
     mobile: string, email: string,
     address: string,
     website: string
@@ -70,7 +68,7 @@ export const realMarketServices: RealMarketService[] = [;
   reviews: number
 }
 
-const contact = {
+const contact = {/* content */}
   mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
 
@@ -83,14 +81,12 @@ export const realMarketServices: RealMarketService[] = [
 };
 
 export const realMarketServices: RealMarketService[] = [
-  {
-
-
+  {/* content */}
   website: 'https://ziontechgroup.com';
 }
 ;
 export const realMarketServices: RealMarketService[] = [;
-  {
+  {/* content */}
     id: 'llm-gateway-cost-control'
     name: 'LLM Gateway & Cost Control'
     tagline:
@@ -165,8 +161,7 @@ export const realMarketServices: RealMarketService[] = [;
     rating: 4 && 4.8,
     reviews: 61,
   },
-  {
-
+  {/* content */}
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-400',
     link: 'https://ziontechgroup.com/llm-gateway',
@@ -198,7 +193,7 @@ export const realMarketServices: RealMarketService[] = [;
     rating: 4.8
     reviews: 61
   }
-  {
+  {/* content */}
       'Turn-key instrumentation templates, dashboards, and SLOs for Node/Next && Next.js, with error budgets, golden signals, and alerts integrated out of the box.',
     features: [
       'OpenTelemetry auto-instrumentation',
@@ -212,7 +207,7 @@ export const realMarketServices: RealMarketService[] = [;
     features: [;
       'OpenTelemetry auto - instrumentation',
 
-  {
+  {/* content */}
       'Golden signals dashboards',
       'Error budgets and SLO templates',
       'Jaeger / Tempo tracing ready',
@@ -253,8 +248,7 @@ export const realMarketServices: RealMarketService[] = [;
     rating: 4 && 4.7,
     reviews: 73,
   },
-  {
-
+  {/* content */}
       'SPF/DKIM/DMARC configuration checks',
       'Seed-list deliverability tests',
     id: 'email - deliverability - warmup',
@@ -296,8 +290,7 @@ export const realMarketServices: RealMarketService[] = [;
     market_size: '$1B+ deliverability tooling',
     growth_rate: '15% YoY',
     variant: 'monitoring - futuristic' as any,
-    contact_info: {
-
+    contact_info: {/* content */}
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -311,8 +304,7 @@ export const realMarketServices: RealMarketService[] = [;
     rating: 4 && 4.6,
     reviews: 44,
   },
-  {
-
+  {/* content */}
     id: 'affiliate - attribution - hub',
     name: 'Affiliate Attribution & Payouts Hub',
     tagline: 'Track referrals, detect fraud, and automate commission payouts',
@@ -352,8 +344,7 @@ export const realMarketServices: RealMarketService[] = [;
     market_size: '$5B affiliate platforms',
     growth_rate: '12% YoY',
     variant: 'growth - futuristic' as any,
-    contact_info: {
-
+    contact_info: {/* content */}
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -367,8 +358,7 @@ export const realMarketServices: RealMarketService[] = [;
     rating: 4 && 4.5,
     reviews: 29,
   },
-  {
-
+  {/* content */}
     id: 'ai - customer - support - suite',
     name: 'AI Customer Support Suite',
     tagline: 'Unified ticketing, chat, and AI assistants with knowledge sync',
@@ -409,7 +399,7 @@ export const realMarketServices: RealMarketService[] = [;
     market_size: '$10B+ AI support',
     growth_rate: '30% YoY',
     variant: 'ai - futuristic' as any,
-    contact_info: {
+    contact_info: {/* content */}
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -423,8 +413,7 @@ export const realMarketServices: RealMarketService[] = [;
     rating: 4 && 4.7,
     reviews: 21,
   },
-  {
-
+  {/* content */}
     id: 'smb - analytics - starter',
     name: 'SMB Web Analytics Starter',
     tagline: 'Privacy - first, cookie - lite analytics with actionable insights',
@@ -462,7 +451,7 @@ export const realMarketServices: RealMarketService[] = [;
     market_size: '$1B SMB analytics',
     growth_rate: '14% YoY',
     variant: 'analytics - futuristic' as any,
-    contact_info: {
+    contact_info: {/* content */}
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -476,8 +465,7 @@ export const realMarketServices: RealMarketService[] = [;
     rating: 4 && 4.5,
     reviews: 17,
   },
-  {
-
+  {/* content */}
     id: 'cloud - cost - optimizer',
     name: 'Cloud Cost Optimizer',
     tagline:;
@@ -529,8 +517,7 @@ export const realMarketServices: RealMarketService[] = [;
     rating: 4 && 4.6,
     reviews: 48,
   },
-  {
-
+  {/* content */}
     id: 'soc2 - evidence - automation',
     name: 'SOC 2 Evidence Automation',
     tagline:;
@@ -584,8 +571,7 @@ export const realMarketServices: RealMarketService[] = [;
     rating: 4 && 4.7,
     reviews: 37,
   },
-  {
-
+  {/* content */}
     id: 'vector-search-starter'
     name: 'Vector Search Starter'
     tagline: 'Production vector DB setup with ingestion pipelines in a day'
@@ -751,8 +737,7 @@ export const realMarketServices: RealMarketService[] = [;
     rating: 4 && 4.6,
     reviews: 41,
   },
-  {
-
+  {/* content */}
       'Multi-domain monitoring',
       'HTTP/TLS and OCSP checks',
       'Slack/Email alerts',
@@ -768,7 +753,7 @@ export const realMarketServices: RealMarketService[] = [;
       'HTTP / TLS and OCSP checks',
       'Slack / Email alerts',
 
-  {
+  {/* content */}
       'Public status pages',
       'Weekly compliance reports',
     ],
@@ -789,8 +774,7 @@ export const realMarketServices: RealMarketService[] = [;
     rating: 4 && 4.5,
     reviews: 52,
   },
-  {
-
+  {/* content */}
       'OpenAPI/GraphQL schema discovery',
       'Auth and permission testing',
       'OWASP API Top 10 mapping',
@@ -831,8 +815,7 @@ export const realMarketServices: RealMarketService[] = [;
     rating: 4 && 4.7,
     reviews: 33,
   },
-  {
-
+  {/* content */}
       'SPF/DKIM/DMARC validation',
       'Seed inbox placement tests',
       'Blocklist monitoring',
@@ -853,8 +836,7 @@ export const realMarketServices: RealMarketService[] = [;
     rating: 4 && 4.6,
     reviews: 44,
   },
-  {
-
+  {/* content */}
     id: 'domain - dns - monitor',
     name: 'Domain & DNS Monitor',
     tagline: 'Track DNS, nameserver and SSL changes with instant alerts',
@@ -887,8 +869,7 @@ export const realMarketServices: RealMarketService[] = [;
     rating: 4 && 4.5,
     reviews: 36,
   },
-  {
-
+  {/* content */}
       'Multi-region uptime checks',
       'Latency and availability SLIs',
       'SLOs and error budgets',
@@ -912,8 +893,7 @@ export const realMarketServices: RealMarketService[] = [;
     rating: 4 && 4.6,
     reviews: 58,
   },
-  {
-
+  {/* content */}
     id: 'status - pages - slo',
     name: 'Status Pages & SLO',
     tagline: 'Customer - facing status pages with SLO metrics baked - in',
@@ -945,8 +925,7 @@ export const realMarketServices: RealMarketService[] = [;
     rating: 4 && 4.5,
     reviews: 27,
   },
-  {
-
+  {/* content */}
     id: 'serverless - cron - manager',
     name: 'Serverless Cron Manager',
     tagline: 'Reliable scheduled jobs without servers and with retries',
@@ -982,8 +961,7 @@ export const realMarketServices: RealMarketService[] = [;
     rating: 4 && 4.5,
     reviews: 39,
   },
-  {
-
+  {/* content */}
       'Chrome-based renderer',
       'Custom fonts and CSS',
       'Headers / footers, page numbers',
@@ -1006,8 +984,7 @@ export const realMarketServices: RealMarketService[] = [;
     rating: 4 && 4.7,
     reviews: 91,
   },
-  {
-
+  {/* content */}
     id: 'gdpr - dsar - automation',
     name: 'GDPR DSAR Automation',
     tagline: 'Automate data subject requests with evidence and workflows',
@@ -1039,8 +1016,7 @@ export const realMarketServices: RealMarketService[] = [;
     rating: 4 && 4.6,
     reviews: 21,
   },
-  {
-
+  {/* content */}
       'SIG/CAIQ templates',
       'Evidence collection links',
       'Risk scoring and tracking',
@@ -1063,8 +1039,7 @@ export const realMarketServices: RealMarketService[] = [;
     rating: 4 && 4.5,
     reviews: 18,
   },
-  {
-
+  {/* content */}
     id: 'browser - performance - monitor',
     name: 'Browser Performance Monitor',
     tagline: 'Core Web Vitals and RUM with actionable diagnostics',
@@ -1110,8 +1085,7 @@ export const realMarketServices: RealMarketService[] = [;
     rating: 4 && 4.5,
     reviews: 29,
   },
-  {
-
+  {/* content */}
     id: 'database - performance - monitor',
     name: 'Database Performance Monitor',
     tagline: 'Query insights, locks, connection pools and slow query fixes',
@@ -1145,8 +1119,7 @@ export const realMarketServices: RealMarketService[] = [;
     rating: 4 && 4.6,
     reviews: 23,
   },
-  {
-
+  {/* content */}
     id: 'cloud - platform - managed - kubernetes',
     name: 'Managed Kubernetes Platform',
     tagline: 'Production EKS / GKE / AKS with GitOps, SSO and guardrails',
@@ -1192,8 +1165,7 @@ export const realMarketServices: RealMarketService[] = [;
     rating: 4 && 4.7,
     reviews: 12,
   },
-  {
-
+  {/* content */}
     id: 'rum - analytics - starter',
     name: 'Real User Monitoring (RUM) Analytics Starter',
     tagline:;
@@ -1219,8 +1191,7 @@ export const realMarketServices: RealMarketService[] = [;
     rating: 4 && 4.6,
     reviews: 14,
   },
-  {
-
+  {/* content */}
       'Automate WCAG 2 && 2.2 AA checks with axe-core powered scans, page templates, and CI gates. Export auditor-ready reports and remediation tasks.',
     features: [
       'axe-core rules and custom checks',
@@ -1243,8 +1214,7 @@ export const realMarketServices: RealMarketService[] = [;
     rating: 4 && 4.7,
     reviews: 19,
   },
-  {
-
+  {/* content */}
       'Per-route latency SLOs',
       'Error budget tracking',
       'Auto - ticket creation',
@@ -1282,8 +1252,7 @@ export const realMarketServices: RealMarketService[] = [;
     rating: 4 && 4.5,
     reviews: 11,
   },
-  {
-
+  {/* content */}
       'CSP/HSTS header checks',
       'TLS version/cipher checks',
       'Auto-diff of changes',
@@ -1310,8 +1279,7 @@ export const realMarketServices: RealMarketService[] = [;
     rating: 4 && 4.6,
     reviews: 22,
   },
-  {
-
+  {/* content */}
       'Geo-based consent rules',
       'Policy page generator',
       'Audit log export',
@@ -1339,8 +1307,7 @@ export const realMarketServices: RealMarketService[] = [;
     rating: 4 && 4.5,
     reviews: 10,
   },
-  {
-
+  {/* content */}
       'RPO/RTO policy checks',
       'Snapshot/restore verification',
       'Drift detection',
@@ -1356,8 +1323,7 @@ export const realMarketServices: RealMarketService[] = [;
     rating: 4 && 4.5,
     reviews: 7,
   },
-  {
-
+  {/* content */}
       'IAB TCF v2 && v2.2 compatible consent',
       'Geo-targeted policies (EEA/UK/US states)',
     id: 'consent - compliance - kit',
@@ -1409,9 +1375,7 @@ export const realMarketServices: RealMarketService[] = [;
     rating: 4 && 4.6,
     reviews: 11,
   },
-  {
-
-
+  {/* content */}
       'Bridges the gap between brittle webhook flows and reliable data pipelines.'
     targetAudience: 'Data engineers, platform teams, RevOps'
     trialDays: 14
@@ -1490,10 +1454,8 @@ export const realMarketServices: RealMarketService[] = [;
     rating: 4 && 4.7,
     reviews: 9,
   },
-  {
-
-  {
-
+  {/* content */}
+  {/* content */}
     id: 'data - quality - sla - monitor',
     name: 'Data Quality & Freshness SLAs',
     tagline: 'Track freshness, nulls, and schema drift with alerting and SLOs',
@@ -1503,7 +1465,7 @@ export const realMarketServices: RealMarketService[] = [;
       'Define and monitor data SLAs for freshness and quality. Receive alerts, create tickets, and visualize lineage impacts for downstream consumers.',
     features: [;
 
-  {
+  {/* content */}
       'Freshness and volume checks',
       'Null / outlier thresholds',
       'Schema drift detection',
@@ -1538,8 +1500,7 @@ export const realMarketServices: RealMarketService[] = [;
     rating: 4 && 4.6,
     reviews: 13,
   },
-  {
-
+  {/* content */}
     id: 'postgres - index - advisor',
     name: 'Postgres Index Advisor & Tuner',
     tagline: 'Automatic index suggestions, vacuum tuning, and slow query fixes',
@@ -1575,8 +1536,7 @@ export const realMarketServices: RealMarketService[] = [;
     rating: 4 && 4.5,
     reviews: 8,
   },
-  {
-
+  {/* content */}
     id: 'gitops - drift - monitor',
     name: 'GitOps Policy & Drift Monitor',
     tagline:;
@@ -1625,8 +1585,7 @@ export const realMarketServices: RealMarketService[] = [;
     rating: 4 && 4.6,
     reviews: 7,
   },
-  {
-
+  {/* content */}
     id: 'soc2 - readiness - scanner',
     name: 'SOC 2 Readiness Scanner',
     tagline: 'Map controls to TSC, auto - collect evidence, and flag gaps',
@@ -1661,8 +1620,7 @@ export const realMarketServices: RealMarketService[] = [;
     rating: 4 && 4.7,
     reviews: 12,
   },
-  {
-
+  {/* content */}
       'Multi-cloud asset discovery',
       'Public exposure detection',
       'Ownership and tagging',
@@ -1693,8 +1651,7 @@ export const realMarketServices: RealMarketService[] = [;
     rating: 4 && 4.5,
     reviews: 9,
   },
-  {
-
+  {/* content */}
     id: 'llm - red - team - simulator',
     name: 'LLM Red Team & Jailbreak Simulator',
     tagline:;
@@ -1742,8 +1699,7 @@ export const realMarketServices: RealMarketService[] = [;
     rating: 4 && 4.6,
     reviews: 8,
   },
-  {
-
+  {/* content */}
       'Self-referral detection',
       'Device and IP risk signals',
       'Velocity and cohort heuristics',
@@ -1781,8 +1737,7 @@ export const realMarketServices: RealMarketService[] = [;
     rating: 4 && 4.7,
     reviews: 29,
   },
-  {
-
+  {/* content */}
       'Automated table/column discovery',
       'Column-level lineage and impact analysis',
       'PII tagging and masking policies',
@@ -1798,8 +1753,7 @@ export const realMarketServices: RealMarketService[] = [;
     rating: 4 && 4.7,
     reviews: 18,
   },
-  {
-
+  {/* content */}
       'Session-based and user-based recommendations',
       'Bundle and upsell optimizer',
       'A / B testing and holdouts',
@@ -1820,8 +1774,7 @@ export const realMarketServices: RealMarketService[] = [;
     rating: 4 && 4.6,
     reviews: 77,
   },
-  {
-
+  {/* content */}
       'MQTT/HTTP ingestion and device registry',
       'Rules engine and alerting',
       'Anomaly detection and forecasting',
@@ -1859,8 +1812,7 @@ export const realMarketServices: RealMarketService[] = [;
     rating: 4 && 4.5,
     reviews: 12,
   },
-  {
-
+  {/* content */}
     id: 'api - security - testing',
     name: 'API Security Testing as a Service',
     tagline: 'Automated DAST / SAST for APIs with CI / CD integration',
@@ -1911,8 +1863,7 @@ export const realMarketServices: RealMarketService[] = [;
     rating: 4 && 4.5,
     reviews: 7,
   },
-  {
-
+  {/* content */}
     id: 'cloudflare - turnstile - proxy',
     name: 'Cloudflare Turnstile & Bot Shield Proxy',
     tagline: 'Kill signup spam and bot abuse without CAPTCHAs',
@@ -1934,7 +1885,7 @@ export const realMarketServices: RealMarketService[] = [;
     market_size: '$2B bot mitigation',
     growth_rate: '16% YoY',
     variant: 'security - futuristic' as any,
-    contact_info: {
+    contact_info: {/* content */}
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1948,8 +1899,7 @@ export const realMarketServices: RealMarketService[] = [;
     rating: 4 && 4.6,
     reviews: 8,
   },
-  {
-
+  {/* content */}
     id: 'reverse - etl - lite',
     name: 'Reverse ETL Lite',
     tagline: 'Sync warehouse data to SaaS apps in minutes',
@@ -1989,7 +1939,7 @@ export const realMarketServices: RealMarketService[] = [;
     market_size: '$1B reverse ETL',
     growth_rate: '30% YoY',
     variant: 'data - futuristic' as any,
-    contact_info: {
+    contact_info: {/* content */}
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -2003,8 +1953,7 @@ export const realMarketServices: RealMarketService[] = [;
     rating: 4 && 4.5,
     reviews: 6,
   },
-  {
-
+  {/* content */}
     id: 'ai-rfp-response-copilot'
     name: 'AI RFP Response Copilot'
     tagline: 'Draft RFP answers from your knowledge base with evidence links'
@@ -2068,8 +2017,7 @@ export const realMarketServices: RealMarketService[] = [;
     variant: 'ai-futuristic' as any,
 
 
-    contactInfo: {
-
+    contactInfo: {/* content */}
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -2083,8 +2031,7 @@ export const realMarketServices: RealMarketService[] = [;
     rating: 4 && 4.6,
     reviews: 9,
   },
-  {
-
+  {/* content */}
       'Word/PDF export',
     ],
     popular: true,
@@ -2107,7 +2054,7 @@ export const realMarketServices: RealMarketService[] = [;
     marketSize: '$1B RFP tooling',
     growthRate: '20% YoY',
     variant: 'ai-futuristic' as any,
-    contactInfo: {
+    contactInfo: {/* content */}
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -2121,7 +2068,7 @@ export const realMarketServices: RealMarketService[] = [;
     rating: 4.6
     reviews: 9
   }
-  {
+  {/* content */}
     id: 'gpt - eval - harness',
     name: 'LLM Evaluation Harness',
     tagline: 'Automated evals with golden sets, judges, and regression gates',
@@ -2158,7 +2105,7 @@ export const realMarketServices: RealMarketService[] = [;
     market_size: '$1B eval tooling',
     growth_rate: '35% YoY',
     variant: 'ai - futuristic' as any,
-    contact_info: {
+    contact_info: {/* content */}
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -2172,8 +2119,7 @@ export const realMarketServices: RealMarketService[] = [;
     rating: 4 && 4.5,
     reviews: 7,
   },
-  {
-
+  {/* content */}
       'Geo rules (EEA/UK/US states)',
     id: 'gdpr - cookie - consent - edge',
     name: 'GDPR Cookie Consent Edge',
@@ -2212,8 +2158,7 @@ export const realMarketServices: RealMarketService[] = [;
     market_size: '$2B privacy tooling',
     growth_rate: '18% YoY',
     variant: 'security - futuristic' as any,
-    contact_info: {
-
+    contact_info: {/* content */}
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -2227,8 +2172,7 @@ export const realMarketServices: RealMarketService[] = [;
     rating: 4 && 4.6,
     reviews: 12,
   },
-  {
-
+  {/* content */}
     id: 'smart - web - scraper - hub',
     name: 'Smart Web Scraper Hub',
     tagline: 'Rotate, render, and extract with compliance guards and queues',
@@ -2266,8 +2210,7 @@ export const realMarketServices: RealMarketService[] = [;
     market_size: '$1.5B data collection',
     growth_rate: '20% YoY',
     variant: 'data - futuristic' as any,
-    contact_info: {
-
+    contact_info: {/* content */}
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -2281,8 +2224,7 @@ export const realMarketServices: RealMarketService[] = [;
     rating: 4 && 4.4,
     reviews: 5,
   },
-  {
-
+  {/* content */}
     id: 'ecommerce - returns - manager',
     name: 'E‑commerce Returns Manager',
     tagline: 'Automate RMAs, labels, and refund workflows for Shopify / Woo',
@@ -2320,8 +2262,7 @@ export const realMarketServices: RealMarketService[] = [;
     market_size: '$9B returns tech',
     growth_rate: '18% YoY',
     variant: 'growth - futuristic' as any,
-    contact_info: {
-
+    contact_info: {/* content */}
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -2335,8 +2276,7 @@ export const realMarketServices: RealMarketService[] = [;
     rating: 4 && 4.6,
     reviews: 24,
   },
-  {
-
+  {/* content */}
     id: 'automated - email - followups',
     name: 'Automated Email Follow‑ups',
     tagline: 'Sequenced follow‑ups with inbox rotation and reply detection',
@@ -2377,7 +2317,7 @@ export const realMarketServices: RealMarketService[] = [;
     market_size: '$6B sales engagement',
     growth_rate: '20% YoY',
     variant: 'growth - futuristic' as any,
-    contact_info: {
+    contact_info: {/* content */}
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -2391,8 +2331,7 @@ export const realMarketServices: RealMarketService[] = [;
     rating: 4 && 4.5,
     reviews: 33,
   },
-  {
-
+  {/* content */}
     id: 'podcast - transcribe - chapters',
     name: 'Podcast Transcribe & Chapters',
     tagline: 'Accurate transcripts, speakers, summaries, chapters and clips',
@@ -2430,8 +2369,7 @@ export const realMarketServices: RealMarketService[] = [;
     market_size: '$2B podcast tooling',
     growth_rate: '19% YoY',
     variant: 'ai - futuristic' as any,
-    contact_info: {
-
+    contact_info: {/* content */}
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -2445,8 +2383,7 @@ export const realMarketServices: RealMarketService[] = [;
     rating: 4 && 4.7,
     reviews: 58,
   },
-  {
-
+  {/* content */}
     id: 'freelancer - portfolio - studio',
     name: 'Freelancer Portfolio Studio',
     tagline: 'Stunning portfolios and case studies with leads tracking',
@@ -2487,7 +2424,7 @@ export const realMarketServices: RealMarketService[] = [;
     market_size: '$4B creator sites',
     growth_rate: '11% YoY',
     variant: 'growth - futuristic' as any,
-    contact_info: {
+    contact_info: {/* content */}
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -2501,9 +2438,7 @@ export const realMarketServices: RealMarketService[] = [;
     rating: 4 && 4.6,
     reviews: 64,
   },
-  {
-
-
+  {/* content */}
       'Contacts and notes'
       'Reminders and tasks'
       'Simple pipeline stages'
@@ -2559,7 +2494,7 @@ export const realMarketServices: RealMarketService[] = [;
     variant: 'analytics-futuristic' as any,
 
 
-    contactInfo: {
+    contactInfo: {/* content */}
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -2609,7 +2544,7 @@ export const realMarketServices: RealMarketService[] = [;
     market_size: '$20B SMB CRM',
     growth_rate: '10% YoY',
     variant: 'analytics - futuristic' as any,
-    contact_info: {
+    contact_info: {/* content */}
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -2623,9 +2558,7 @@ export const realMarketServices: RealMarketService[] = [;
     rating: 4 && 4.5,
     reviews: 77,
   },
-  {
-
-
+  {/* content */}
       'AI suggestions and variants',
       'Tone and length tuning',
       'Performance benchmarks',
@@ -2655,7 +2588,7 @@ export const realMarketServices: RealMarketService[] = [;
     variant: 'ai-futuristic' as any,
 
 
-    contactInfo: {
+    contactInfo: {/* content */}
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -2709,8 +2642,7 @@ export const realMarketServices: RealMarketService[] = [;
     rating: 4 && 4.4,
     reviews: 28,
   },
-  {
-
+  {/* content */}
     id: 'dev - workflow - analytics',
     name: 'Developer Workflow Analytics',
     tagline: 'Visualize reviews, velocity, and bottlenecks across repos',
@@ -2748,8 +2680,7 @@ export const realMarketServices: RealMarketService[] = [;
     market_size: '$5B dev analytics',
     growth_rate: '21% YoY',
     variant: 'analytics - futuristic' as any,
-    contact_info: {
-
+    contact_info: {/* content */}
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -2763,8 +2694,7 @@ export const realMarketServices: RealMarketService[] = [;
     rating: 4 && 4.6,
     reviews: 19,
   },
-  {
-
+  {/* content */}
       'Geo/rule‑based banners',
     id: 'privacy - consent - manager - smb',
     name: 'Privacy & Consent Manager (SMB)',
@@ -2803,7 +2733,7 @@ export const realMarketServices: RealMarketService[] = [;
     market_size: '$3B privacy tech',
     growth_rate: '16% YoY',
     variant: 'security - futuristic' as any,
-    contact_info: {
+    contact_info: {/* content */}
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -2848,7 +2778,7 @@ export const realMarketServices: RealMarketService[] = [;
     rating: 4.8,
     reviews: 61
   };
-  {
+  {/* content */}
     id: 'api-observability-starter', name: 'API Observability Starter',
     tagline: 'Trace, log, and profile your APIs in hours, not weeks',
     price: '$149', period: '/month',
@@ -2876,7 +2806,7 @@ export const realMarketServices: RealMarketService[] = [;
     rating: 4.7,
     reviews: 73
   };
-  {
+  {/* content */}
     id: 'email-deliverability-warmup', name: 'Email Deliverability & Warmup Monitor',
     tagline: 'Inbox placement, warmup, and sender reputation monitoring',
     price: '$79', period: '/month',
@@ -2898,8 +2828,7 @@ export const realMarketServices: RealMarketService[] = [;
     competitors: ['SendForensics, Mailgun Deliverability, Folderly'];
     marketSize: '$1B+ deliverability tooling', growthRate: '15% YoY',
     variant: 'monitoring-futuristic' as any,
-    contactInfo: {
-      
+    contactInfo: {/* content */}
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
       address: '364 E Main St STE 1008 Middletown DE 19709',

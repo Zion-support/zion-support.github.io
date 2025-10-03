@@ -29,24 +29,24 @@ export function GeneratedDescriptionDisplay({ ;
   },;
 ;
   return (;
-    <Card className="border border-zion-blue-light bg-zion-blue-dark">;
+    <Card className="text-left">;
       <CardHeader>;
-        <CardTitle className="text-white flex items-center justify-between">;
+        <CardTitle className="text-left">;
           Generated Description;
           <Button ;
             variant="outline" ;
             size="sm" ;
             onClick={() => setIsEditing(!isEditing)}
-            className="border-zion-blue-light text-zion-slate-light hover:text-white";
+            className="text-left";
           >;
             {isEditing ? (;
               <>;
-                <Check className="h-4 w-4 mr-1" />;
+                <Check className="text-left" />;
                 Done;
               </>;
             ) :(;
               <>;
-                <Pencil className="h-4 w-4 mr-1" />;
+                <Pencil className="text-left" />;
                 Edit;
               </>;
             )}
@@ -58,10 +58,10 @@ export function GeneratedDescriptionDisplay({ ;
           <Textarea;
             value={editedDescription}
             onChange={(e) => setEditedDescription(e.target.value)}
-            className="bg-zion-blue border border-zion-blue-light text-white min-h-[300px] resize-none";
+            className="text-left";
           />;
         ) :(;
-          <div className="bg-zion-blue p-4 rounded-md text-white min-h-[300px] whitespace-pre-wrap">;
+          <div className="text-left">;
             {editedDescription}
           </div>;
         )}
@@ -70,7 +70,7 @@ export function GeneratedDescriptionDisplay({ ;
         <CardFooter>;
           <Button ;
             onClick={handleSave}
-            className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white";
+            className="text-left";
           >;
             Save Changes;
           </Button>;
@@ -99,18 +99,18 @@ toast ({
 :temp_broken_files/services/GeneratedDescriptionDisplay.tsx
 
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/services/GeneratedDescriptionDisplay.tsx
-  isEditing ? (<> <Check className="h-4 w-4 mr-1" /> Done </>) : (<> <Pencil className="h-4 w-4 mr-1" /> Edit </>) ;
+  isEditing ? (<> <Check className="text-left" /> Done </>) : (<> <Pencil className="text-left" /> Edit </>) ;
 }</Button> </CardTitle> </CardHeader> <CardContent> {;
   isEditing ? (<Textarea value= {;
   editedDescription ;
 }</div>) ;
 }</CardContent> {;
 :temp_broken_files/services/GeneratedDescriptionDisplay.tsx
-  isEditing && (<CardFooter> <Button onClick={;"  handleSave ";"}className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white" > Save Changes </Button> </CardFooter>) ;
+  isEditing && (<CardFooter> <Button onClick={;"  handleSave ";"}className="text-left" > Save Changes </Button> </CardFooter>) ;
 }</Card>) ;"}'"
   isEditing && (<CardFooter> <Button onClick={;
   handleSave ";
-}className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white" > Save Changes </Button> </CardFooter>) ;
+}className="text-left" > Save Changes </Button> </CardFooter>) ;
 }</Card>) ;
 }'"
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/services/GeneratedDescriptionDisplay.tsx

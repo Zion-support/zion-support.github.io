@@ -3,15 +3,15 @@ import react from '@vitejs/plugin-react';
 import { visualizer } from 'rollup-plugin-visualizer';
 
 // https://vitejs.dev/config/
-export default defineConfig({
+export default defineConfig({/* content */}
   plugins: [
-    react({
+    react({/* content */}
       // Enable Fast Refresh
       fastRefresh: true,
       // Use automatic JSX runtime
       jsxRuntime: 'automatic',
       // Optimize deps
-      babel: {
+      babel: {/* content */}
         plugins: [
           // Remove console.log in production
           ['transform-remove-console', { exclude: ['error', 'warn'] }]
@@ -19,7 +19,7 @@ export default defineConfig({
       }
     }),
     // Bundle analyzer
-    visualizer({
+    visualizer({/* content */}
       filename: './dist/stats.html',
       open: false,
       gzipSize: true,
@@ -27,7 +27,7 @@ export default defineConfig({
     })
   ],
   
-  build: {
+  build: {/* content */}
     // Target modern browsers
     target: 'es2020',
     
@@ -35,10 +35,10 @@ export default defineConfig({
     chunkSizeWarningLimit: 1000,
     
     // Rollup options for better code splitting
-    rollupOptions: {
-      output: {
+    rollupOptions: {/* content */}
+      output: {/* content */}
         // Manual chunks for better caching
-        manualChunks: {
+        manualChunks: {/* content */}
           // Vendor chunks
           'vendor-react': ['react', 'react-dom', 'react-router-dom'],
           'vendor-ui': ['lucide-react', 'framer-motion'],
@@ -63,17 +63,17 @@ export default defineConfig({
     
     // Minification options
     minify: 'terser',
-    terserOptions: {
-      compress: {
+    terserOptions: {/* content */}
+      compress: {/* content */}
         drop_console: true,
         drop_debugger: true,
         pure_funcs: ['console.log', 'console.info', 'console.debug'],
         passes: 2
       },
-      mangle: {
+      mangle: {/* content */}
         safari10: true
       },
-      format: {
+      format: {/* content */}
         comments: false
       }
     },
@@ -92,7 +92,7 @@ export default defineConfig({
   },
   
   // Optimize dependencies
-  optimizeDeps: {
+  optimizeDeps: {/* content */}
     include: [
       'react',
       'react-dom',
@@ -104,19 +104,19 @@ export default defineConfig({
   },
   
   // Server configuration
-  server: {
+  server: {/* content */}
     port: 3000,
     strictPort: false,
     host: true,
     open: false,
     // HMR configuration
-    hmr: {
+    hmr: {/* content */}
       overlay: true
     }
   },
   
   // Preview configuration
-  preview: {
+  preview: {/* content */}
     port: 4173,
     strictPort: false,
     host: true,
@@ -124,7 +124,7 @@ export default defineConfig({
   },
   
   // Performance hints
-  esbuild: {
+  esbuild: {/* content */}
     // Minify identifiers
     minifyIdentifiers: true,
     // Minify syntax
@@ -138,13 +138,13 @@ export default defineConfig({
   },
   
   // CSS configuration
-  css: {
+  css: {/* content */}
     devSourcemap: true,
-    modules: {
+    modules: {/* content */}
       localsConvention: 'camelCaseOnly'
     },
-    preprocessorOptions: {
-      scss: {
+    preprocessorOptions: {/* content */}
+      scss: {/* content */}
         additionalData: `@import "./src/styles/variables.scss";`
       }
     }

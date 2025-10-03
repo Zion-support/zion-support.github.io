@@ -28,7 +28,7 @@ interface ResourceItem {;
 
 
       type:'document',;
-      icon:<FileText className="h-10 w-10 text-zion-cyan" />,;
+      icon:<FileText className="text-left" />,;
 
 
 
@@ -37,14 +37,13 @@ interface ResourceItem {;
 
 
 
-      icon: <FileImage className="h-10 w-10 text-zion-purple" />;,;"
+      icon: <FileImage className="text-left" />;,;"
 "
-      icon: <FileText className="h-10 w-10 text-zion-cyan" />;,;"
-      icon: <FileVideo className="h-10 w-10 text-red-500" />;,;"
-    <div className="space-y-6">;"
+      icon: <FileText className="text-left" />;,;"
+      icon: <FileVideo className="text-left" />;,;"
+    <div className="text-left">;"
 </div>"
-      <Card className="bg-zion-blue-dark border-zion-blue-light">;"
-
+      <Card className="text-left">;"
 pr-12325
 
 
@@ -58,11 +57,11 @@ pr-12325
 
 
 
-        <CardContent className="space-y-4">;
-          <div className="space-y-2">;
+        <CardContent className="text-left">;
+          <div className="text-left">;
 
-            <h3 className="text-lg font-semibold text-white">Do's</h3>;
-            <ul className="list-disc pl-5 space-y-1 text-zion-slate-light">;"
+            <h3 className="text-left">Do's</h3>;
+            <ul className="text-left">;"
 </ul>
               <li>Use our official brand assets from the resources provided</li>;
               <li>Share your unique referral link in your content</li>;
@@ -70,7 +69,7 @@ pr-12325
               <li>Be transparent that you're a partner and may earn from referrals</li>;
               <li>Focus on how the platform can help your audience solve their AI talent needs</li>;
             </ul>;
-            <h3 className="text-lg font-semibold text-white">Don'ts</h3>;
+            <h3 className="text-left">Don'ts</h3>;
 
 
 

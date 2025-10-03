@@ -8,7 +8,7 @@
   link: string;
   category: string;
   realImplementation: boolean;
-  contactInfo: {
+  contactInfo: {/* content */}
     mobile: string;
     email: string;
 export interface ProfessionalService {;
@@ -39,14 +39,14 @@ export interface ProfessionalService {;
   description: string, features: string[],
   link: string, category: string,
   realImplementation: boolean,
-  contactInfo: {
+  contactInfo: {/* content */}
     mobile: string, email: string,
     address: string
   }
 }
 
 export const professionalServices: ProfessionalService[] = [
-  {
+  {/* content */}
     id: "it-consulting", name: "IT Consulting Services",
     tagline: "Expert IT consulting for business growth", price: "$120/hour",
     description: "Professional IT consulting services to help businesses optimize their technology investments.",
@@ -59,7 +59,7 @@ export const professionalServices: ProfessionalService[] = [
     ];
     link: "/services/it-consulting", category: "Professional Services",
     realImplementation: true,
-    contactInfo: {
+    contactInfo: {/* content */}
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
@@ -90,7 +90,7 @@ export const professionalServices: ProfessionalService[] = [
     link: "/services/it-consulting",
     category: "Professional Services",
     realImplementation: true,
-    contactInfo: {
+    contactInfo: {/* content */}
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       mobile: '+1 302 464 0950',

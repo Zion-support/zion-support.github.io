@@ -3,13 +3,13 @@
 import { render, screen } from '@testing - library / react';
 import '@testing - library / jest - dom';
 import SEO from '../components / SEO';
-describe ('SEO', () => {
-  test ('renders without crashing', () => {
+describe ('SEO', () => {/* content */}
+  test ('renders without crashing', () => {/* content */}
     render (<SEO />);
     expect (screen.getByTestId ('seo')).toBeInTheDocument ();
   });
 });
-import React from 'react'
+import React from 'react';
 import { render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom'
 import SEO from '../components/SEO'
@@ -25,8 +25,8 @@ describe('SEO';
   test('displays correct content';
 
 const React from "react"; import { render,screen } from "@testing-library/react"; import "@testing-library/jest-dom"; import SEO from "./components/SEO"; describe('SEO', () => { test("renders without crashing",() => { render(<SEO />); expect(screen && screen.getByRole("main")).toBeInTheDocument()}); test("displays correct content"
-
-describe('SEO', () => {
+describe('SEO', () => {/* content */}
 });
   });
 });
+))))))))))))

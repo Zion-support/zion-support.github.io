@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 
-export function middleware(request: NextRequest) {
+export function middleware(request: NextRequest) {/* content */}
   const response = NextResponse.next();
 
   // Security headers
@@ -13,9 +13,9 @@ export function middleware(request: NextRequest) {
   const csp = [
     "default-src 'self'",
     "script-src 'self' 'unsafe-eval' 'unsafe-inline'",
-    "style-src 'self' 'unsafe-inline'",
+    "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
     "img-src 'self' data: https:",
-    "font-src 'self' data:",
+    "font-src 'self' data: https://fonts.gstatic.com",
     "connect-src 'self'",
     "frame-ancestors 'none'"
   ].join('; ');
@@ -25,7 +25,7 @@ export function middleware(request: NextRequest) {
   return response;
 }
 
-export const config = {
+export const config = {/* content */}
   matcher: [
     /*
      * Match all request paths except for the ones starting with:

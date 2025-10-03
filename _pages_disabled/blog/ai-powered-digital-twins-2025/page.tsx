@@ -10,45 +10,45 @@ export const metadata: Metadata = {
 
 export default function AIDigitalTwinsPage() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="text-left">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
-        <div className="max-w-4xl mx-auto px-4">
-          <div className="mb-6">
-            <Link href="/blog" className="text-blue-300 hover:text-blue-200 transition-colors">
+      <section className="text-left">
+        <div className="text-left">
+          <div className="text-left">
+            <Link href="/blog" className="text-left">
               ← Back to Blog
             </Link>
           </div>
-          <span className="bg-green-500 text-white px-4 py-2 rounded-full text-sm font-semibold inline-block mb-6">
+          <span className="text-left">
             NEW ARTICLE
-          </span>
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
+          <
+          <h1 className="text-left">
             AI-Powered Digital Twins 2025: Real-Time Simulation & Predictive Intelligence
           </h1>
-          <div className="flex flex-wrap items-center gap-4 text-gray-300">
-            <span>📅 September 30, 2025</span>
-            <span>•</span>
-            <span>⏱️ 12 min read</span>
-            <span>•</span>
-            <span>Category: Industrial AI</span>
+          <div className="text-left">
+            <span>📅 September 30, 2025<
+            <span>•<
+            <span>⏱️ 12 min read<
+            <span>•<
+            <span>Category: Industrial AI<
           </div>
         </div>
       </section>
 
       {/* Content */}
-      <article className="max-w-4xl mx-auto px-4 py-12">
-        <div className="prose prose-lg max-w-none">
+      <article className="text-left">
+        <div className="text-left">
           {/* Introduction */}
-          <section className="mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">The Digital Twin Revolution</h2>
-            <p className="text-xl text-gray-700 leading-relaxed mb-6">
+          <section className="text-left">
+            <h2 className="text-left">The Digital Twin Revolution</h2>
+            <p className="text-left">
               Digital twins are transforming how enterprises operate, monitor, and optimize their physical assets. 
               By creating virtual replicas powered by AI and real-time data, organizations achieve unprecedented 
               visibility and control over their operations.
             </p>
-            <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-8 my-8 border-l-4 border-blue-600">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Key Takeaways</h3>
-              <ul className="space-y-3 text-gray-700">
+            <div className="text-left">
+              <h3 className="text-left">Key Takeaways</h3>
+              <ul className="text-left">
                 <li>✅ <strong>95% accuracy</strong> in failure prediction with AI-powered twins</li>
                 <li>✅ <strong>60% reduction</strong> in unplanned downtime</li>
                 <li>✅ <strong>$5M+ annual savings</strong> through predictive maintenance</li>
@@ -58,21 +58,21 @@ export default function AIDigitalTwinsPage() {
           </section>
 
           {/* Core Capabilities */}
-          <section className="mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Core Capabilities of AI Digital Twins</h2>
+          <section className="text-left">
+            <h2 className="text-left">Core Capabilities of AI Digital Twins</h2>
             
-            <div className="space-y-8">
-              <div className="bg-white rounded-xl shadow-lg p-8 border border-gray-200">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
-                  <span className="text-3xl mr-3">🔮</span>
+            <div className="text-left">
+              <div className="text-left">
+                <h3 className="text-left">
+                  <span className="text-left">🔮<
                   Predictive Maintenance
                 </h3>
-                <p className="text-gray-700 mb-4">
+                <p className="text-left">
                   AI algorithms analyze historical and real-time sensor data to predict equipment failures 
                   before they occur. Machine learning models identify patterns invisible to human operators, 
                   enabling proactive maintenance scheduling and minimizing costly downtime.
                 </p>
-                <ul className="space-y-2 text-gray-600">
+                <ul className="text-left">
                   <li>• Anomaly detection with 99% accuracy</li>
                   <li>• Remaining useful life (RUL) predictions</li>
                   <li>• Automated maintenance scheduling</li>
@@ -80,16 +80,16 @@ export default function AIDigitalTwinsPage() {
                 </ul>
               </div>
 
-              <div className="bg-white rounded-xl shadow-lg p-8 border border-gray-200">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
-                  <span className="text-3xl mr-3">⚡</span>
+              <div className="text-left">
+                <h3 className="text-left">
+                  <span className="text-left">⚡<
                   Real-Time Optimization
                 </h3>
-                <p className="text-gray-700 mb-4">
+                <p className="text-left">
                   Digital twins continuously analyze operational data and recommend optimizations in real-time. 
                   From energy consumption to production throughput, AI ensures your operations run at peak efficiency.
                 </p>
-                <ul className="space-y-2 text-gray-600">
+                <ul className="text-left">
                   <li>• Dynamic resource allocation</li>
                   <li>• Energy efficiency optimization (30% reduction)</li>
                   <li>• Production line balancing</li>
@@ -97,16 +97,16 @@ export default function AIDigitalTwinsPage() {
                 </ul>
               </div>
 
-              <div className="bg-white rounded-xl shadow-lg p-8 border border-gray-200">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
-                  <span className="text-3xl mr-3">🎯</span>
+              <div className="text-left">
+                <h3 className="text-left">
+                  <span className="text-left">🎯<
                   Scenario Simulation
                 </h3>
-                <p className="text-gray-700 mb-4">
+                <p className="text-left">
                   Test operational changes in a virtual environment before implementation. Run thousands of 
                   simulations to identify optimal configurations and predict outcomes with confidence.
                 </p>
-                <ul className="space-y-2 text-gray-600">
+                <ul className="text-left">
                   <li>• What-if analysis and planning</li>
                   <li>• Risk assessment and mitigation</li>
                   <li>• Process optimization testing</li>
@@ -117,13 +117,13 @@ export default function AIDigitalTwinsPage() {
           </section>
 
           {/* Implementation Framework */}
-          <section className="mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Implementation Framework</h2>
+          <section className="text-left">
+            <h2 className="text-left">Implementation Framework</h2>
             
-            <div className="grid md:grid-cols-2 gap-6 mb-8">
-              <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-6">
-                <h4 className="text-xl font-bold text-gray-900 mb-3">Phase 1: Data Foundation</h4>
-                <ul className="space-y-2 text-gray-700">
+            <div className="text-left">
+              <div className="text-left">
+                <h4 className="text-left">Phase 1: Data Foundation</h4>
+                <ul className="text-left">
                   <li>✓ IoT sensor deployment</li>
                   <li>✓ Data pipeline establishment</li>
                   <li>✓ Historical data integration</li>
@@ -131,9 +131,9 @@ export default function AIDigitalTwinsPage() {
                 </ul>
               </div>
 
-              <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-6">
-                <h4 className="text-xl font-bold text-gray-900 mb-3">Phase 2: Twin Development</h4>
-                <ul className="space-y-2 text-gray-700">
+              <div className="text-left">
+                <h4 className="text-left">Phase 2: Twin Development</h4>
+                <ul className="text-left">
                   <li>✓ 3D modeling and visualization</li>
                   <li>✓ Physics-based simulations</li>
                   <li>✓ AI model training</li>
@@ -141,9 +141,9 @@ export default function AIDigitalTwinsPage() {
                 </ul>
               </div>
 
-              <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-6">
-                <h4 className="text-xl font-bold text-gray-900 mb-3">Phase 3: Intelligence Layer</h4>
-                <ul className="space-y-2 text-gray-700">
+              <div className="text-left">
+                <h4 className="text-left">Phase 3: Intelligence Layer</h4>
+                <ul className="text-left">
                   <li>✓ Predictive analytics deployment</li>
                   <li>✓ Anomaly detection algorithms</li>
                   <li>✓ Optimization engines</li>
@@ -151,9 +151,9 @@ export default function AIDigitalTwinsPage() {
                 </ul>
               </div>
 
-              <div className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl p-6">
-                <h4 className="text-xl font-bold text-gray-900 mb-3">Phase 4: Enterprise Integration</h4>
-                <ul className="space-y-2 text-gray-700">
+              <div className="text-left">
+                <h4 className="text-left">Phase 4: Enterprise Integration</h4>
+                <ul className="text-left">
                   <li>✓ ERP/MES integration</li>
                   <li>✓ Dashboard and reporting</li>
                   <li>✓ Mobile accessibility</li>
@@ -164,61 +164,61 @@ export default function AIDigitalTwinsPage() {
           </section>
 
           {/* ROI Metrics */}
-          <section className="mb-12">
-            <div className="bg-gradient-to-br from-green-900 to-teal-900 rounded-xl p-10 text-white">
-              <h2 className="text-3xl font-bold mb-6">Proven ROI Metrics</h2>
-              <div className="grid md:grid-cols-3 gap-8">
+          <section className="text-left">
+            <div className="text-left">
+              <h2 className="text-left">Proven ROI Metrics</h2>
+              <div className="text-left">
                 <div>
-                  <div className="text-5xl font-bold mb-2">60%</div>
-                  <div className="text-xl text-green-200">Reduction in Downtime</div>
-                  <p className="text-sm text-green-100 mt-2">Predictive maintenance prevents failures</p>
+                  <div className="text-left">60%</div>
+                  <div className="text-left">Reduction in Downtime</div>
+                  <p className="text-left">Predictive maintenance prevents failures</p>
                 </div>
                 <div>
-                  <div className="text-5xl font-bold mb-2">35%</div>
-                  <div className="text-xl text-green-200">Energy Savings</div>
-                  <p className="text-sm text-green-100 mt-2">Real-time optimization reduces waste</p>
+                  <div className="text-left">35%</div>
+                  <div className="text-left">Energy Savings</div>
+                  <p className="text-left">Real-time optimization reduces waste</p>
                 </div>
                 <div>
-                  <div className="text-5xl font-bold mb-2">$5M+</div>
-                  <div className="text-xl text-green-200">Annual Savings</div>
-                  <p className="text-sm text-green-100 mt-2">Typical enterprise deployment</p>
+                  <div className="text-left">$5M+</div>
+                  <div className="text-left">Annual Savings</div>
+                  <p className="text-left">Typical enterprise deployment</p>
                 </div>
               </div>
             </div>
           </section>
 
           {/* Industry Applications */}
-          <section className="mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Industry Applications</h2>
+          <section className="text-left">
+            <h2 className="text-left">Industry Applications</h2>
             
-            <div className="space-y-6">
-              <div className="border-l-4 border-blue-600 pl-6 py-4">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">Manufacturing</h3>
-                <p className="text-gray-700">
+            <div className="text-left">
+              <div className="text-left">
+                <h3 className="text-left">Manufacturing</h3>
+                <p className="text-left">
                   Digital twins optimize production lines, predict equipment failures, and enable just-in-time 
                   manufacturing with 99.5% on-time delivery rates.
                 </p>
               </div>
 
-              <div className="border-l-4 border-purple-600 pl-6 py-4">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">Energy & Utilities</h3>
-                <p className="text-gray-700">
+              <div className="text-left">
+                <h3 className="text-left">Energy & Utilities</h3>
+                <p className="text-left">
                   Real-time monitoring and optimization of power plants, wind farms, and grid infrastructure 
                   reduce emissions by 25% while improving reliability.
                 </p>
               </div>
 
-              <div className="border-l-4 border-green-600 pl-6 py-4">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">Smart Buildings</h3>
-                <p className="text-gray-700">
+              <div className="text-left">
+                <h3 className="text-left">Smart Buildings</h3>
+                <p className="text-left">
                   AI twins manage HVAC, lighting, and security systems to reduce energy consumption by 40% 
                   while enhancing occupant comfort and safety.
                 </p>
               </div>
 
-              <div className="border-l-4 border-orange-600 pl-6 py-4">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">Supply Chain & Logistics</h3>
-                <p className="text-gray-700">
+              <div className="text-left">
+                <h3 className="text-left">Supply Chain & Logistics</h3>
+                <p className="text-left">
                   Virtual warehouses and distribution networks enable real-time route optimization and 
                   inventory management, cutting costs by 30%.
                 </p>
@@ -227,38 +227,38 @@ export default function AIDigitalTwinsPage() {
           </section>
 
           {/* Getting Started */}
-          <section className="mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Getting Started with Digital Twins</h2>
+          <section className="text-left">
+            <h2 className="text-left">Getting Started with Digital Twins</h2>
             
-            <div className="bg-blue-50 rounded-xl p-8 border border-blue-200">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Start Small, Scale Fast</h3>
-              <ol className="space-y-4 text-gray-700">
-                <li className="flex items-start">
-                  <span className="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center mr-4 flex-shrink-0 font-bold">1</span>
+            <div className="text-left">
+              <h3 className="text-left">Start Small, Scale Fast</h3>
+              <ol className="text-left">
+                <li className="text-left">
+                  <span className="text-left">1<
                   <div>
                     <strong>Pilot Project Selection:</strong> Choose a high-impact asset or process for initial deployment
                   </div>
                 </li>
-                <li className="flex items-start">
-                  <span className="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center mr-4 flex-shrink-0 font-bold">2</span>
+                <li className="text-left">
+                  <span className="text-left">2<
                   <div>
                     <strong>Data Infrastructure:</strong> Establish IoT connectivity and data pipelines
                   </div>
                 </li>
-                <li className="flex items-start">
-                  <span className="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center mr-4 flex-shrink-0 font-bold">3</span>
+                <li className="text-left">
+                  <span className="text-left">3<
                   <div>
                     <strong>Twin Development:</strong> Build and validate the digital twin with real data
                   </div>
                 </li>
-                <li className="flex items-start">
-                  <span className="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center mr-4 flex-shrink-0 font-bold">4</span>
+                <li className="text-left">
+                  <span className="text-left">4<
                   <div>
                     <strong>AI Integration:</strong> Deploy predictive models and optimization engines
                   </div>
                 </li>
-                <li className="flex items-start">
-                  <span className="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center mr-4 flex-shrink-0 font-bold">5</span>
+                <li className="text-left">
+                  <span className="text-left">5<
                   <div>
                     <strong>Scale & Expand:</strong> Roll out proven solutions across the enterprise
                   </div>
@@ -268,14 +268,14 @@ export default function AIDigitalTwinsPage() {
           </section>
 
           {/* Conclusion */}
-          <section className="mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">The Future is Digital</h2>
-            <p className="text-xl text-gray-700 leading-relaxed mb-6">
+          <section className="text-left">
+            <h2 className="text-left">The Future is Digital</h2>
+            <p className="text-left">
               AI-powered digital twins represent the convergence of IoT, AI, and advanced simulation technologies. 
               Organizations that embrace this technology gain unprecedented operational insights, achieve dramatic 
               cost savings, and establish competitive advantages that compound over time.
             </p>
-            <p className="text-xl text-gray-700 leading-relaxed">
+            <p className="text-left">
               The question is no longer whether to implement digital twins, but how quickly you can deploy them 
               to stay ahead of the competition.
             </p>
@@ -283,21 +283,21 @@ export default function AIDigitalTwinsPage() {
         </div>
 
         {/* CTA Section */}
-        <div className="mt-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-10 text-white">
-          <h2 className="text-3xl font-bold mb-4">Ready to Build Your Digital Twin?</h2>
-          <p className="text-xl mb-8 opacity-90">
+        <div className="text-left">
+          <h2 className="text-left">Ready to Build Your Digital Twin?</h2>
+          <p className="text-left">
             Our experts will help you design, implement, and scale AI-powered digital twins for your enterprise.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="text-left">
             <Link
               href="/services"
-              className="bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition-colors text-center"
+              className="text-left"
             >
               Explore Services
             </Link>
             <a
               href="tel:+13024640950"
-              className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors text-center"
+              className="text-left"
             >
               Call +1 302 464 0950
             </a>
@@ -305,27 +305,27 @@ export default function AIDigitalTwinsPage() {
         </div>
 
         {/* Related Articles */}
-        <div className="mt-16">
-          <h3 className="text-2xl font-bold text-gray-900 mb-6">Related Articles</h3>
-          <div className="grid md:grid-cols-2 gap-6">
-            <Link href="/blog/serverless-ai-architecture-2025" className="group">
-              <div className="bg-white rounded-xl p-6 border border-gray-200 hover:border-blue-400 hover:shadow-lg transition-all">
-                <span className="text-2xl mb-3 block">☁️</span>
-                <h4 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
+        <div className="text-left">
+          <h3 className="text-left">Related Articles</h3>
+          <div className="text-left">
+            <Link href="/blog/serverless-ai-architecture-2025" className="text-left">
+              <div className="text-left">
+                <span className="text-left">☁️<
+                <h4 className="text-left">
                   Serverless AI Architecture 2025
                 </h4>
-                <p className="text-gray-600">
+                <p className="text-left">
                   Scale AI workloads infinitely with serverless infrastructure
                 </p>
               </div>
             </Link>
-            <Link href="/blog/ai-enhanced-cybersecurity-2025" className="group">
-              <div className="bg-white rounded-xl p-6 border border-gray-200 hover:border-blue-400 hover:shadow-lg transition-all">
-                <span className="text-2xl mb-3 block">🛡️</span>
-                <h4 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
+            <Link href="/blog/ai-enhanced-cybersecurity-2025" className="text-left">
+              <div className="text-left">
+                <span className="text-left">🛡️<
+                <h4 className="text-left">
                   AI-Enhanced Cybersecurity 2025
                 </h4>
-                <p className="text-gray-600">
+                <p className="text-left">
                   Protect your enterprise with AI-powered threat detection
                 </p>
               </div>

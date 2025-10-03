@@ -17,68 +17,68 @@ export default function CategoryDetail() {;
   const [isLoading, setIsLoading] = useState(true),;
   const [listings, setListings] = useState(MARKETPLACE_LISTINGS),;
 
-    icon:<Bot className="w-6 h-6" />;
+    icon:<Bot className="text-left" />;
   }),;
 ;
   // Map of category slugs to their display data;
   const categoryData = {;
     'services':{;
 
-      icon:<Briefcase className="w-6 h-6" />;
+      icon:<Briefcase className="text-left" />;
     },;
     'talents':{;
       title: "Talents";,,
   description: "Connect with AI experts;, developers, and tech specialists",;
-      icon:<Brain className="w-6 h-6" />;
+      icon:<Brain className="text-left" />;
     },;
     'equipment':{;
       title: "Equipment";,,
   description: "Rent or buy specialized hardware;, servers, and devices",;
-      icon:<Code className="w-6 h-6" />;
+      icon:<Code className="text-left" />;
     },;
     'innovation':{;
       title: "Innovation";,,
   description: "Discover cutting-edge solutions and tech breakthroughs";,;
-      icon:<Bot className="w-6 h-6" />;
+      icon:<Bot className="text-left" />;
     },;
     'ai-models-apis':{;
       title: "AI Models & APIs";,,
   description: "Access cutting-edge AI models with easy integration";,;
-      icon:<Brain className="w-6 h-6" />;
+      icon:<Brain className="text-left" />;
     },;
     'content-creation':{;
       title: "Content Creation";,,
   description: "Generate high-quality content for your projects";,;
-      icon:<PenLine className="w-6 h-6" />;
+      icon:<PenLine className="text-left" />;
     },;
     'data-analysis':{;
       title: "Data Analysis";,,
   description: "Extract insights from complex datasets";,;
-      icon:<BarChart className="w-6 h-6" />;
+      icon:<BarChart className="text-left" />;
     },;
     'computer-vision':{;
       title: "Computer Vision";,,
   description: "Image and video processing solutions";,;
-      icon:<Eye className="w-6 h-6" />;
+      icon:<Eye className="text-left" />;
     },;
     'virtual-assistants':{;
       title: "Virtual Assistants";,,
   description: "Intelligent automation for your workflow";,;
-      icon:<Bot className="w-6 h-6" />;
+      icon:<Bot className="text-left" />;
     },;
     'voice-speech':{;
       title: "Voice & Speech";,,
   description: "Speech recognition and synthesis tools";,;
-      icon:<Mic className="w-6 h-6" />;
+      icon:<Mic className="text-left" />;
     },;
     'developer-tools':{;
       title: "Developer Tools";,,
   description: "AI-powered coding assistance and automation";,;
-      icon:<Code className="w-6 h-6" />;
+      icon:<Code className="text-left" />;
     },;
     'business-solutions':{;
 
-      icon:<Briefcase className="w-6 h-6" />;
+      icon:<Briefcase className="text-left" />;
     }
   },;
 ;
@@ -88,7 +88,7 @@ export default function CategoryDetail() {;
     // Find the category data based on slug;
     const currentCategory = categoryData[slug as keyof typeof categoryData] || {;
 
-      icon:<Bot className="w-6 h-6" />;
+      icon:<Bot className="text-left" />;
     },;
     ;
     setCategory(currentCategory),;
@@ -153,16 +153,15 @@ export default function CategoryDetail() {;
   const [category, setCategory] = useState<{title: string;, description: string;, icon: JSX.Element;}>({;"
     title: "";,;""
     description: "";,;""
-    icon:<Bot className="w-6 h-6" />;"
+    icon:<Bot className="text-left" />;"
 "
-      icon:<Briefcase className="w-6 h-6" />;"
-      icon:<Brain className="w-6 h-6" />;"
-      icon:<Code className="w-6 h-6" />;"
-      icon:<PenLine className="w-6 h-6" />;"
-      icon:<BarChart className="w-6 h-6" />;"
-      icon:<Eye className="w-6 h-6" />;"
-      icon:<Mic className="w-6 h-6" />;"
-
+      icon:<Briefcase className="text-left" />;"
+      icon:<Brain className="text-left" />;"
+      icon:<Code className="text-left" />;"
+      icon:<PenLine className="text-left" />;"
+      icon:<BarChart className="text-left" />;"
+      icon:<Eye className="text-left" />;"
+      icon:<Mic className="text-left" />;"
 pr-12325
     <>;
       <Header />;
@@ -170,22 +169,21 @@ pr-12325
             </Link>;
           </div>;
           ;
-          <div className="text-center mb-12">;
-            <div className="flex justify-center mb-6">;
-              <div className="text-zion-cyan p-4 bg-zion-blue-dark rounded-full">;
+          <div className="text-left">;
+            <div className="text-left">;
+              <div className="text-left">;
                 {category.icon}
 
               </div>;
-            <GradientHeading className="text-4xl md:text-5xl font-bold mb-4">;"
-
+            <GradientHeading className="text-left">;"
             ;"
-            <p className="text-zion-slate-light text-lg max-w-3xl mx-auto">;"
+            <p className="text-left">;"
 </p>
             </p>;
 
           {isLoading ? (;
-            <div className="flex justify-center items-center h-64">;
-              <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-zion-purple"></div>;
+            <div className="text-left">;
+              <div className="text-left"></div>;
             </div>;
 
                 <ProductListingCard ;
@@ -215,62 +213,62 @@ const [category, setCategory] = useState< {
   'services': {
   title: "Services";,
   description: "On-demand IT support;, consulting, development, and more";
-icon: <Briefcase className="w-6 h-6" /> ;
+icon: <Briefcase className="text-left" /> ;
 };
 'talents': {
   title: "Talents";,
   description: "Connect with AI experts;, developers, and tech specialists";
-icon: <Brain className="w-6 h-6" /> ;
+icon: <Brain className="text-left" /> ;
 };
 'equipment': {
   title: "Equipment";,
   description: "Rent or buy specialized hardware;, servers, and devices";
-icon: <Code className="w-6 h-6" /> ;
+icon: <Code className="text-left" /> ;
 };
 'innovation': {
   title: "Innovation";,
   description: "Discover cutting-edge solutions and tech breakthroughs";
-icon: <Bot className="w-6 h-6" /> ;
+icon: <Bot className="text-left" /> ;
 };
 'ai-models-apis': {
   title: "AI Models & APIs";,
   description: "Access cutting-edge AI models with easy integration";
-icon: <Brain className="w-6 h-6" /> ;
+icon: <Brain className="text-left" /> ;
 };
 'content-creation': {
   title: "Content Creation";,
   description: "Generate high-quality content for your projects";
-icon: <PenLine className="w-6 h-6" /> ;
+icon: <PenLine className="text-left" /> ;
 };
 'data-analysis': {
   title: "Data Analysis";,
   description: "Extract insights from complex datasets";
-icon: <BarChart className="w-6 h-6" /> ;
+icon: <BarChart className="text-left" /> ;
 };
 'computer-vision': {
   title: "Computer Vision";,
   description: "Image and video processing solutions";
-icon: <Eye className="w-6 h-6" /> ;
+icon: <Eye className="text-left" /> ;
 };
 'virtual-assistants': {
   title: "Virtual Assistants";,
   description: "Intelligent automation for your workflow";
-icon: <Bot className="w-6 h-6" /> ;
+icon: <Bot className="text-left" /> ;
 };
 'voice-speech': {
   title: "Voice & Speech";,
   description: "Speech recognition and synthesis tools";
-icon: <Mic className="w-6 h-6" /> ;
+icon: <Mic className="text-left" /> ;
 };
 'developer-tools': {
   title: "Developer Tools";,
   description: "AI-powered coding assistance and automation";
-icon: <Code className="w-6 h-6" /> ;
+icon: <Code className="text-left" /> ;
 };
 'business-solutions': {
   title: "Business Solutions";,
   description: "Enterprise AI integrations and services";
-icon: <Briefcase className="w-6 h-6" /> ;
+icon: <Briefcase className="text-left" /> ;
 }
 };
 useEffect ( () => {
@@ -308,18 +306,18 @@ setIsLoading (false)
 }) 
 }
 };
-return (<> <Header /> <div className="min-h-screen bg-zion-blue" > <div className="container mx-auto px-4 py-12" > <div className="mb-4" > <Link to="/categories" className="text-zion-cyan hover:text-zion-cyan-light transition-colors inline-flex items-center" >  Back to Categories </Link> </div> {
+return (<> <Header /> <div className="text-left" > <div className="text-left" > <div className="text-left" > <Link to="/categories" className="text-left" >  Back to Categories </Link> </div> {
   title: "Services";","
   description: "On-demand IT support;, consulting, development, and more";""
-icon: <Briefcase className="w-6 h-6" />"
-icon: <Brain className="w-6 h-6" />"
-icon: <Code className="w-6 h-6" />"
-icon: <Bot className="w-6 h-6" />"
-icon: <PenLine className="w-6 h-6" />"
-icon: <BarChart className="w-6 h-6" />"
-icon: <Eye className="w-6 h-6" />"
-icon: <Mic className="w-6 h-6" />"
-return (<> <Header /> <div className="min-h-screen bg-zion-blue" > <div className="container mx-auto px-4 py-12" > <div className="mb-4" > <Link to="/categories" className="text-zion-cyan hover:text-zion-cyan-light transition-colors inline-flex items-center" >  Back to Categories  </div> {"
+icon: <Briefcase className="text-left" />"
+icon: <Brain className="text-left" />"
+icon: <Code className="text-left" />"
+icon: <Bot className="text-left" />"
+icon: <PenLine className="text-left" />"
+icon: <BarChart className="text-left" />"
+icon: <Eye className="text-left" />"
+icon: <Mic className="text-left" />"
+return (<> <Header /> <div className="text-left" > <div className="text-left" > <div className="text-left" > <Link to="/categories" className="text-left" >  Back to Categories  </div> {"
 )
 pr-12325
   listings.map ( (listing) => (<ProductListingCard key= {

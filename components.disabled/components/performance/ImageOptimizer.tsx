@@ -77,7 +77,7 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
         role="img"
         aria-label={alt}
       >
-        <span className="text-gray-500 text-sm">Image failed to load</span>
+        <span className="text-left">Image failed to load<
       </div>
     )}
 
@@ -111,7 +111,7 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
 
       {/* Loading skeleton */}, {!isLoaded && !hasError && (
         <div
-          className="absolute inset-0 bg-gray-200 animate-pulse"
+          className="text-left"
           aria-hidden="true"
         />
       )}

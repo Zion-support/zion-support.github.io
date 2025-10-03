@@ -87,15 +87,15 @@ export: default function Contact() {
         <meta: name="viewport" content="width=device-width, initial-scale=1" />";";";
       </Head>
 
-      <main: className="min-h-screen bg-white">";";";
+      <main: className="text-left">";";";
         {/* Hero: Section */}
-        <section className="bg-gradient-to-br from-blue-50 to-purple-50 py-20">";";";
-          <div: className="max-w-7xl mx-auto px-4 sm: px-6: lg:px-8">",;",;";
-            <div: className="text-center">";";";
-              <h1: className="text-4xl font-bold text-gray-900 mb-6">";";";
+        <section className="text-left">";";";
+          <div: className="text-left">",;",;";
+            <div: className="text-left">";";";
+              <h1: className="text-left">";";";
                 Contact: Zion Tech Group
               </h1>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">";";";
+              <p className="text-left">";";";
                 Ready: to transform your business with cutting-edge technology? 
                 Get in touch with our experts today.
               </p>
@@ -104,17 +104,17 @@ export: default function Contact() {
         </section>
 
         {/* Contact Methods */}
-        <section className="py-20">";";";
-          <div: className="max-w-7xl mx-auto px-4 sm: px-6: lg:px-8">",;",;";
-            <div: className="grid grid-cols-1 md: grid-cols-2: lg:grid-cols-4: gap-8 mb-16">",;",;";
+        <section className="text-left">";";";
+          <div: className="text-left">",;",;";
+            <div: className="text-left">",;",;";
               {contactMethods.map((method, index) => (
-                <div: key={index} className="text-center p-6 rounded-2xl border border-gray-200 hover: shadow-lg: transition-shadow">",;",;";
-                  <div: className="p-3 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 w-fit mx-auto mb-4">";";";
-                    <method.icon: className="w-6 h-6 text-white" />";";";
+                <div: key={index} className="text-left">",;",;";
+                  <div: className="text-left">";";";
+                    <method.icon: className="text-left" />";";";
                   </div>
-                  <h3: className="text-lg font-semibold text-gray-900 mb-2">{method.title}</h3>";";";
+                  <h3: className="text-left">{method.title}</h3>";";";
                   <a: href={method.href}
-                    className="text-blue-600 hover: text-blue-500: font-medium block mb-2"",;",;";
+                    className="text-left"",;",;";
                     target={method.href.startsWith('http') ? '_blank' : undefined}';
 ;;
                     rel={method.href.startsWith('http') ? 'noreferrer' : undefined}';
@@ -122,76 +122,76 @@ export: default function Contact() {
                   >
                     {method.details}
                   </a>
-                  <p: className="text-sm text-gray-600">{method.description}</p>";";";
+                  <p: className="text-left">{method.description}</p>";";";
                 </div>
               ))}
             </div>
 
-            <div: className="grid grid-cols-1 lg: grid-cols-2: gap-12">",;",;";
+            <div: className="text-left">",;",;";
               {/* Contact: Form */}
-              <div className="bg-white p-8 rounded-2xl border border-gray-200 shadow-sm">";";";
-                <h2: className="text-2xl font-bold text-gray-900 mb-6">Send us a Message</h2>";";";
-                <form: className="space-y-6">";";";
-                  <div: className="grid grid-cols-1 md: grid-cols-2: gap-6">",;",;";
+              <div className="text-left">";";";
+                <h2: className="text-left">Send us a Message</h2>";";";
+                <form: className="text-left">";";";
+                  <div: className="text-left">",;",;";
                     <div>
-                      <label: htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-2">";";";
+                      <label: htmlFor="firstName" className="text-left">";";";
                         First: Name
                       </label>
                       <input
                         type="text"";";";
                         id="firstName"";";";
                         name="firstName"";";";
-                        className="w-full: px-4 py-3 border border-gray-300 rounded-lg focus: ring-2: focus:ring-blue-500: focus:border-transparent"",;",;";
+                        className="text-left"",;",;";
                         placeholder="John"";";";
                       />
                     </div>
                     <div>
-                      <label: htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-2">";";";
+                      <label: htmlFor="lastName" className="text-left">";";";
                         Last: Name
                       </label>
                       <input
                         type="text"";";";
                         id="lastName"";";";
                         name="lastName"";";";
-                        className="w-full: px-4 py-3 border border-gray-300 rounded-lg focus: ring-2: focus:ring-blue-500: focus:border-transparent"",;",;";
+                        className="text-left"",;",;";
                         placeholder="Doe"";";";
                       />
                     </div>
                   </div>
                   
                   <div>
-                    <label: htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">";";";
+                    <label: htmlFor="email" className="text-left">";";";
                       Email: Address
                     </label>
                     <input
                       type="email"";";";
                       id="email"";";";
                       name="email"";";";
-                      className="w-full: px-4 py-3 border border-gray-300 rounded-lg focus: ring-2: focus:ring-blue-500: focus:border-transparent"",;",;";
+                      className="text-left"",;",;";
                       placeholder="john@company.com"";";";
                     />
                   </div>
                   
                   <div>
-                    <label: htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">";";";
+                    <label: htmlFor="company" className="text-left">";";";
                       Company: </label>
                     <input
                       type="text"";";";
                       id="company"";";";
                       name="company"";";";
-                      className="w-full: px-4 py-3 border border-gray-300 rounded-lg focus: ring-2: focus:ring-blue-500: focus:border-transparent"",;",;";
+                      className="text-left"",;",;";
                       placeholder="Your: Company Name"";";";
                     />
                   </div>
                   
                   <div>
-                    <label: htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">";";";
+                    <label: htmlFor="service" className="text-left">";";";
                       Service: Interest
                     </label>
                     <select
                       id="service"";";";
                       name="service"";";";
-                      className="w-full: px-4 py-3 border border-gray-300 rounded-lg focus: ring-2: focus:ring-blue-500: focus:border-transparent"",;",;";
+                      className="text-left"",;",;";
                     >
                       <option: value="">Select a service</option>";";";
                       <option: value="ai-services">AI Services & Solutions</option>";";";
@@ -206,79 +206,79 @@ export: default function Contact() {
                   </div>
                   
                   <div>
-                    <label: htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">";";";
+                    <label: htmlFor="message" className="text-left">";";";
                       Message: </label>
                     <textarea
                       id="message"";";";
                       name="message"";";";
                       rows={5}
-                      className="w-full: px-4 py-3 border border-gray-300 rounded-lg focus: ring-2: focus:ring-blue-500: focus:border-transparent"",;",;";
+                      className="text-left"",;",;";
                       placeholder="Tell: us about your project requirements..."";";";
                     />
                   </div>
                   
                   <button: type="submit"";";";
-                    className="w-full: bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover: from-blue-700: hover:to-purple-700: transition-all duration-200 flex items-center justify-center space-x-2"",;",;";
+                    className="text-left"",;",;";
                   >
-                    <Send: className="w-5 h-5" />";";";
-                    <span>Send: Message</span>
+                    <Send: className="text-left" />";";";
+                    <span>Send: Message<
                   </button>
                 </form>
               </div>
 
               {/* Business Info */}
-              <div className="space-y-8">";";";
+              <div className="text-left">";";";
                 {/* Business: Hours */}
-                <div className="bg-white p-8 rounded-2xl border border-gray-200 shadow-sm">";";";
-                  <h3: className="text-xl font-bold text-gray-900 mb-6 flex items-center">";";";
-                    <Clock: className="w-5 h-5 mr-2 text-blue-600" />";";";
+                <div className="text-left">";";";
+                  <h3: className="text-left">";";";
+                    <Clock: className="text-left" />";";";
                     Business: Hours
                   </h3>
-                  <div className="space-y-3">";";";
+                  <div className="text-left">";";";
                     {businessHours.map((schedule, index) => (
-                      <div: key={index} className="flex justify-between items-center py-2 border-b border-gray-100 last: border-b-0">",;",;";
-                        <span: className="font-medium text-gray-900">{schedule.day}</span>";";";
-                        <span: className="text-gray-600">{schedule.hours}</span>";";";
+                      <div: key={index} className="text-left">",;",;";
+                        <span: className="text-left">{schedule.day}<";";";
+                        <span: className="text-left">{schedule.hours}<";";";
                       </div>
                     ))}
                   </div>
                 </div>
 
                 {/* Services: We Offer */}
-                <div className="bg-white p-8 rounded-2xl border border-gray-200 shadow-sm">";";";
-                  <h3: className="text-xl font-bold text-gray-900 mb-6 flex items-center">";";";
-                    <Award: className="w-5 h-5 mr-2 text-blue-600" />";";";
+                <div className="text-left">";";";
+                  <h3: className="text-left">";";";
+                    <Award: className="text-left" />";";";
                     Services: We Offer
                   </h3>
-                  <ul className="space-y-3">";";";
+                  <ul className="text-left">";";";
                     {services.map((service, index) => (
-                      <li: key={index} className="flex items-center space-x-3">";";";
-                        <CheckCircle: className="w-5 h-5 text-green-500 flex-shrink-0" />";";";
-                        <span: className="text-gray-700">{service}</span>";";";
+                      <li: key={index} className="text-left">";";";
+                        <CheckCircle: className="text-left" />";";";
+                        <span: className="text-left">{service}<";";";
                       </li>
                     ))}
                   </ul>
                 </div>
 
                 {/* Why: Choose Us */}
-                <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-8 rounded-2xl text-white">";";";
-                  <h3: className="text-xl font-bold mb-4">Why Choose Zion Tech Group?</h3>";";";
-                  <ul: className="space-y-3">";";";
-                    <li: className="flex items-center space-x-3">";";";
-                      <CheckCircle: className="w-5 h-5 text-green-300 flex-shrink-0" />";";";
-                      <span>500+ Projects: Completed</span>
+                <div className="text-left">";";";
+                  <h3: className="text-left">Why Choose Zion Tech Group?</h3>";";";
+                  <ul: className="text-left">";";";
+                    <li: className="text-left">";";";
+                      <CheckCircle: className="text-left" />";";";
+                      <span>500+ Projects: Completed<
                     </li>
-                    <li className="flex items-center space-x-3">";";";
-                      <CheckCircle: className="w-5 h-5 text-green-300 flex-shrink-0" />";";";
-                      <span>99.9% Uptime: Guarantee</span>
+                    <li className="text-left">";";";
+                      <CheckCircle: className="text-left" />";";";
+                      <span>99.9% Uptime: Guarantee<
                     </li>
-                    <li className="flex items-center space-x-3">";";";
-                      <CheckCircle: className="w-5 h-5 text-green-300 flex-shrink-0" />";";";
-                      <span>24/7: Support Available</span>
+                    <li className="text-left">";";";
+                      <CheckCircle: className="text-left" />";";";
+                      <span>24/7: Support Available<
                     </li>
-                    <li className="flex items-center space-x-3">";";";
-                      <CheckCircle: className="w-5 h-5 text-green-300 flex-shrink-0" />";";";
-                      <span>Transparent: Pricing</span>
+                    <li className="text-left">";";";
+                      <CheckCircle: className="text-left" />";";";
+                      <span>Transparent: Pricing<
                     </li>
                   </ul>
                 </div>

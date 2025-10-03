@@ -69,11 +69,11 @@ const AdminSupportRequestsPage: React.FC = () => {
   return (
 
             <div>
-              <label className="block text-sm font-medium mb-2">Priority Filter</label>
+              <label className="text-left">Priority Filter</label>
               <select
                 value={priorityFilter}
                 onChange={(e) => setPriorityFilter(e.target.value as any)}
-                className="w-full p-2 border rounded-md"
+                className="text-left"
               >
                 <option value="all">All Priorities</option>
                 <option value="urgent">Urgent</option>
@@ -87,28 +87,28 @@ const AdminSupportRequestsPage: React.FC = () => {
 
         {/* Requests List */}
         {loading ? (
-          <div className="text-center py-8">Loading support requests...</div>
+          <div className="text-left">Loading support requests...</div>
         ) : filteredRequests.length === 0 ? (
-          <div className="text-center py-8 text-gray-500">
+          <div className="text-left">
             No support requests found matching your criteria.
           </div>
         ) : (
-          <div className="space-y-4">
+          <div className="text-left">
             {filteredRequests.map((request) => (
-              <div key={request.id} className="bg-white rounded-lg shadow p-6">
-                <div className="flex justify-between items-start mb-4">
-                  <div className="flex-1">
-                    <div className="flex items-center gap-3 mb-2">
-                      <h3 className="font-semibold text-lg">{request.subject}</h3>
+              <div key={request.id} className="text-left">
+                <div className="text-left">
+                  <div className="text-left">
+                    <div className="text-left">
+                      <h3 className="text-left">{request.subject}</h3>
                       <span className={`px-2 py-1 rounded text-xs font-semibold ${getStatusColor(request.status)}`}>
                         {request.status.replace('_', ' ')}
-                      </span>
+                      <
                       <span className={`px-2 py-1 rounded text-xs font-semibold ${getPriorityColor(request.priority)}`}>
                         {request.priority}
-                      </span>
+                      <
                     </div>
                     
-                    <div className="text-sm text-gray-600 mb-2">
+                    <div className="text-left">
                       <p><strong>From:</strong> {request.userName} ({request.email})</p>
                       <p><strong>Category:</strong> {request.category}</p>
                       {request.assignedTo && (
@@ -116,33 +116,33 @@ const AdminSupportRequestsPage: React.FC = () => {
                       )}
                     </div>
                     
-                    <p className="text-gray-700 mb-3">{request.message}</p>
+                    <p className="text-left">{request.message}</p>
                     
                     {request.response && (
-                      <div className="bg-blue-50 border-l-4 border-blue-400 p-3 mb-3">
-                        <p className="text-sm font-medium text-blue-800 mb-1">Response:</p>
-                        <p className="text-sm text-blue-700">{request.response}</p>
+                      <div className="text-left">
+                        <p className="text-left">Response:</p>
+                        <p className="text-left">{request.response}</p>
                       </div>
                     )}
                     
-                    <div className="flex justify-between text-xs text-gray-500">
-                      <span>Created: {new Date(request.createdAt).toLocaleString()}</span>
-                      <span>Updated: {new Date(request.updatedAt).toLocaleString()}</span>
+                    <div className="text-left">
+                      <span>Created: {new Date(request.createdAt).toLocaleString()}<
+                      <span>Updated: {new Date(request.updatedAt).toLocaleString()}<
                     </div>
                   </div>
                   
-                  <div className="flex gap-2 ml-4">
+                  <div className="text-left">
                     {request.status === 'open' && (
                       <>
                         <button
                           onClick={() => handleAssign(request.id, 'current_user')}
-                          className="px-3 py-1 bg-blue-600 text-white rounded text-sm hover:bg-blue-700"
+                          className="text-left"
                         >
                           Assign to Me
                         </button>
                         <button
                           onClick={() => handleStatusChange(request.id, 'in_progress')}
-                          className="px-3 py-1 bg-yellow-600 text-white rounded text-sm hover:bg-yellow-700"
+                          className="text-left"
                         >
                           Start Progress
                         </button>
@@ -151,7 +151,7 @@ const AdminSupportRequestsPage: React.FC = () => {
                     {request.status === 'in_progress' && (
                       <button
                         onClick={() => handleStatusChange(request.id, 'resolved')}
-                        className="px-3 py-1 bg-green-600 text-white rounded text-sm hover:bg-green-700"
+                        className="text-left"
                       >
                         Mark Resolved
                       </button>
@@ -159,14 +159,14 @@ const AdminSupportRequestsPage: React.FC = () => {
                     {request.status === 'resolved' && (
                       <button
                         onClick={() => handleStatusChange(request.id, 'closed')}
-                        className="px-3 py-1 bg-gray-600 text-white rounded text-sm hover:bg-gray-700"
+                        className="text-left"
                       >
                         Close
                       </button>
                     )}
                     <button
                       onClick={() => setSelectedRequest(request)}
-                      className="px-3 py-1 bg-gray-100 text-gray-700 rounded text-sm hover:bg-gray-200"
+                      className="text-left"
                     >
                       View Details
                     </button>

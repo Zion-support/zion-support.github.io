@@ -15,7 +15,7 @@ export const StarRating: React.FC<Props> = ({
   readOnly,;
 }) => {  const [hovered, setHovered] = useState<number | null>(null);import React, { useState } from 'react';
 
-    <div className="flex items-center gap-1">
+    <div className="text-left">
       {stars.map((star) => {
         const active = (hovered ?? value) >= star,
         return (

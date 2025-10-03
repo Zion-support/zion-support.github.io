@@ -17,52 +17,52 @@ export const metadata = {
 
 export default function MultimodalAIAgents2025() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-emerald-950 to-slate-950">
+    <div className="text-left">
       {/* Hero Section */}
-      <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/10 via-teal-500/10 to-cyan-500/10 animate-pulse"></div>
-        <div className="container mx-auto px-6 py-20 relative z-10">
-          <Link href="/blog" className="inline-flex items-center text-emerald-400 hover:text-emerald-300 mb-8 transition-colors">
-            <ArrowLeft className="w-4 h-4 mr-2" />
+      <div className="text-left">
+        <div className="text-left"></div>
+        <div className="text-left">
+          <Link href="/blog" className="text-left">
+            <ArrowLeft className="text-left" />
             Back to Blog
           </Link>
           
-          <div className="max-w-4xl">
-            <div className="flex items-center gap-3 mb-6">
-              <span className="px-4 py-2 rounded-full bg-gradient-to-r from-emerald-500/20 to-teal-500/20 border border-emerald-500/30 text-emerald-400 text-sm font-semibold">
+          <div className="text-left">
+            <div className="text-left">
+              <span className="text-left">
                 👁️ MULTIMODAL AI BREAKTHROUGH
-              </span>
-              <span className="px-4 py-2 rounded-full bg-cyan-500/20 border border-cyan-500/30 text-cyan-400 text-sm font-semibold">
+              <
+              <span className="text-left">
                 September 30, 2025
-              </span>
+              <
             </div>
             
-            <h1 className="text-5xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent leading-tight">
+            <h1 className="text-left">
               Multimodal AI Agents 2025: Unified Vision, Language, and Audio Intelligence
             </h1>
             
-            <p className="text-xl text-gray-300 leading-relaxed mb-8">
+            <p className="text-left">
               Revolutionary enterprise AI agents that seamlessly process and understand text, images, video, and audio 
               simultaneously. Deploy systems achieving 97% cross-modal accuracy with applications spanning manufacturing 
               quality control, healthcare diagnostics, and customer service automation.
             </p>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              <div className="bg-white/5 backdrop-blur-lg rounded-xl p-4 border border-white/10">
-                <div className="text-3xl font-bold text-emerald-400 mb-1">97%</div>
-                <div className="text-sm text-gray-400">Cross-Modal Accuracy</div>
+            <div className="text-left">
+              <div className="text-left">
+                <div className="text-left">97%</div>
+                <div className="text-left">Cross-Modal Accuracy</div>
               </div>
-              <div className="bg-white/5 backdrop-blur-lg rounded-xl p-4 border border-white/10">
-                <div className="text-3xl font-bold text-teal-400 mb-1">50M+</div>
-                <div className="text-sm text-gray-400">Objects Analyzed Daily</div>
+              <div className="text-left">
+                <div className="text-left">50M+</div>
+                <div className="text-left">Objects Analyzed Daily</div>
               </div>
-              <div className="bg-white/5 backdrop-blur-lg rounded-xl p-4 border border-white/10">
-                <div className="text-3xl font-bold text-cyan-400 mb-1">&lt;200ms</div>
-                <div className="text-sm text-gray-400">Inference Latency</div>
+              <div className="text-left">
+                <div className="text-left">&lt;200ms</div>
+                <div className="text-left">Inference Latency</div>
               </div>
-              <div className="bg-white/5 backdrop-blur-lg rounded-xl p-4 border border-white/10">
-                <div className="text-3xl font-bold text-blue-400 mb-1">$80M</div>
-                <div className="text-sm text-gray-400">Aggregate ROI</div>
+              <div className="text-left">
+                <div className="text-left">$80M</div>
+                <div className="text-left">Aggregate ROI</div>
               </div>
             </div>
           </div>
@@ -70,16 +70,16 @@ export default function MultimodalAIAgents2025() {
       </div>
 
       {/* Main Content */}
-      <div className="container mx-auto px-6 py-16">
-        <div className="max-w-4xl mx-auto">
+      <div className="text-left">
+        <div className="text-left">
           
           {/* Modalities Overview */}
-          <div className="bg-gradient-to-br from-emerald-500/10 to-teal-500/10 rounded-2xl p-8 border border-emerald-500/20 mb-12">
-            <h2 className="text-3xl font-bold text-white mb-8">Supported Modalities & Capabilities</h2>
-            <div className="grid md:grid-cols-3 gap-6">
+          <div className="text-left">
+            <h2 className="text-left">Supported Modalities & Capabilities</h2>
+            <div className="text-left">
               {[
                 {
-                  icon: <Eye className="w-10 h-10 text-emerald-400" />,
+                  icon: <Eye className="text-left" />,
                   title: 'Vision & Image Understanding',
                   capabilities: [
                     'Object detection & classification',
@@ -89,7 +89,7 @@ export default function MultimodalAIAgents2025() {
                   ]
                 },
                 {
-                  icon: <MessageSquare className="w-10 h-10 text-teal-400" />,
+                  icon: <MessageSquare className="text-left" />,
                   title: 'Natural Language Processing',
                   capabilities: [
                     'Text generation & summarization',
@@ -99,7 +99,7 @@ export default function MultimodalAIAgents2025() {
                   ]
                 },
                 {
-                  icon: <Ear className="w-10 h-10 text-cyan-400" />,
+                  icon: <Ear className="text-left" />,
                   title: 'Audio & Speech Processing',
                   capabilities: [
                     'Speech-to-text transcription',
@@ -109,7 +109,7 @@ export default function MultimodalAIAgents2025() {
                   ]
                 },
                 {
-                  icon: <Video className="w-10 h-10 text-blue-400" />,
+                  icon: <Video className="text-left" />,
                   title: 'Video Analysis',
                   capabilities: [
                     'Activity & event recognition',
@@ -119,7 +119,7 @@ export default function MultimodalAIAgents2025() {
                   ]
                 },
                 {
-                  icon: <FileText className="w-10 h-10 text-purple-400" />,
+                  icon: <FileText className="text-left" />,
                   title: 'Document Intelligence',
                   capabilities: [
                     'Layout analysis & extraction',
@@ -129,7 +129,7 @@ export default function MultimodalAIAgents2025() {
                   ]
                 },
                 {
-                  icon: <Image className="w-10 h-10 text-pink-400" />,
+                  icon: <Image className="text-left" />,
                   title: 'Cross-Modal Reasoning',
                   capabilities: [
                     'Vision-language alignment',
@@ -139,14 +139,14 @@ export default function MultimodalAIAgents2025() {
                   ]
                 }
               ].map((modality, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10">
-                  <div className="mb-4">{modality.icon}</div>
-                  <h3 className="text-xl font-bold text-white mb-4">{modality.title}</h3>
-                  <ul className="space-y-2">
+                <div key={index} className="text-left">
+                  <div className="text-left">{modality.icon}</div>
+                  <h3 className="text-left">{modality.title}</h3>
+                  <ul className="text-left">
                     {modality.capabilities.map((capability, i) => (
-                      <li key={i} className="text-gray-400 text-sm flex items-start gap-2">
-                        <span className="text-emerald-400 mt-1">•</span>
-                        <span>{capability}</span>
+                      <li key={i} className="text-left">
+                        <span className="text-left">•<
+                        <span>{capability}<
                       </li>
                     ))}
                   </ul>
@@ -156,9 +156,9 @@ export default function MultimodalAIAgents2025() {
           </div>
 
           {/* Use Cases */}
-          <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 mb-12">
-            <h2 className="text-3xl font-bold text-white mb-8">Enterprise Use Cases</h2>
-            <div className="space-y-6">
+          <div className="text-left">
+            <h2 className="text-left">Enterprise Use Cases</h2>
+            <div className="text-left">
               {[
                 {
                   industry: 'Manufacturing: Quality Control Automation',
@@ -205,17 +205,17 @@ export default function MultimodalAIAgents2025() {
                   ]
                 }
               ].map((useCase, index) => (
-                <div key={index} className="bg-gradient-to-br from-emerald-500/5 to-teal-500/5 rounded-xl p-6 border border-emerald-500/20">
-                  <div className="flex items-center gap-3 mb-4">
-                    <span className="text-4xl">{useCase.icon}</span>
-                    <h3 className="text-2xl font-bold text-emerald-400">{useCase.industry}</h3>
+                <div key={index} className="text-left">
+                  <div className="text-left">
+                    <span className="text-left">{useCase.icon}<
+                    <h3 className="text-left">{useCase.industry}</h3>
                   </div>
-                  <p className="text-gray-300 mb-4 leading-relaxed">{useCase.description}</p>
-                  <div className="grid md:grid-cols-2 gap-3">
+                  <p className="text-left">{useCase.description}</p>
+                  <div className="text-left">
                     {useCase.results.map((result, i) => (
-                      <div key={i} className="bg-white/5 rounded-lg p-3 text-gray-400 text-sm flex items-start gap-2">
-                        <span className="text-green-400 text-lg">✓</span>
-                        <span>{result}</span>
+                      <div key={i} className="text-left">
+                        <span className="text-left">✓<
+                        <span>{result}<
                       </div>
                     ))}
                   </div>
@@ -225,30 +225,30 @@ export default function MultimodalAIAgents2025() {
           </div>
 
           {/* Technical Architecture */}
-          <div className="bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-2xl p-8 border border-cyan-500/20 mb-12">
-            <h2 className="text-3xl font-bold text-white mb-6">Technical Architecture Stack</h2>
-            <div className="space-y-4">
-              <div className="bg-white/5 rounded-xl p-6 border border-white/10">
-                <h3 className="text-xl font-bold text-cyan-400 mb-3">Foundation Models</h3>
-                <ul className="space-y-2 text-gray-300">
+          <div className="text-left">
+            <h2 className="text-left">Technical Architecture Stack</h2>
+            <div className="text-left">
+              <div className="text-left">
+                <h3 className="text-left">Foundation Models</h3>
+                <ul className="text-left">
                   <li>• GPT-4 Vision for image understanding and visual reasoning</li>
                   <li>• Claude 3 Opus for complex document analysis</li>
                   <li>• Gemini 1.5 Pro for video and long-context processing</li>
                   <li>• Custom fine-tuned models for domain-specific tasks</li>
                 </ul>
               </div>
-              <div className="bg-white/5 rounded-xl p-6 border border-white/10">
-                <h3 className="text-xl font-bold text-teal-400 mb-3">Specialized Models</h3>
-                <ul className="space-y-2 text-gray-300">
+              <div className="text-left">
+                <h3 className="text-left">Specialized Models</h3>
+                <ul className="text-left">
                   <li>• YOLO v9 for real-time object detection</li>
                   <li>• Whisper v3 for speech recognition and transcription</li>
                   <li>• SAM (Segment Anything Model) for image segmentation</li>
                   <li>• BLIP-2 for vision-language pretraining</li>
                 </ul>
               </div>
-              <div className="bg-white/5 rounded-xl p-6 border border-white/10">
-                <h3 className="text-xl font-bold text-emerald-400 mb-3">Infrastructure</h3>
-                <ul className="space-y-2 text-gray-300">
+              <div className="text-left">
+                <h3 className="text-left">Infrastructure</h3>
+                <ul className="text-left">
                   <li>• NVIDIA H100 GPU clusters for model inference</li>
                   <li>• Kubernetes orchestration for scalability</li>
                   <li>• Redis for low-latency caching</li>
@@ -259,27 +259,27 @@ export default function MultimodalAIAgents2025() {
           </div>
 
           {/* CTA */}
-          <div className="bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500 rounded-2xl p-8 text-center">
-            <h2 className="text-3xl font-bold text-white mb-4">
+          <div className="text-left">
+            <h2 className="text-left">
               Deploy Enterprise Multimodal AI
             </h2>
-            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+            <p className="text-left">
               Our multimodal AI specialists have implemented vision-language-audio systems for Fortune 500 enterprises. 
               Transform your operations with unified AI intelligence.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="text-left">
               <Link
                 href="/contact"
-                className="bg-white text-emerald-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg inline-flex items-center justify-center gap-2"
+                className="text-left"
               >
-                <span>Schedule Multimodal AI Demo</span>
-                <ArrowLeft className="w-5 h-5 rotate-180" />
+                <span>Schedule Multimodal AI Demo<
+                <ArrowLeft className="text-left" />
               </Link>
               <Link
                 href="/services"
-                className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-emerald-600 font-bold py-4 px-8 rounded-xl transition-all duration-300 inline-flex items-center justify-center gap-2"
+                className="text-left"
               >
-                <span>Explore AI Services</span>
+                <span>Explore AI Services<
               </Link>
             </div>
           </div>

@@ -67,29 +67,29 @@ export: default function Documentation() {;
         keywords="documentation, API: reference, guides, tutorials, technical docs, Zion Tech Group"";";";
       />
       
-      <div: className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";";";
+      <div: className="text-left">";";";
         {/* Hero: Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20">";";";
-          <div: className="container mx-auto px-4">";";";
+        <section className="text-left">";";";
+          <div: className="text-left">";";";
             <motion.div: initial={{ opacity:  ,0, y: 20 }}
               animate={{ opacity:  ,1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center: max-w-4xl mx-auto"";";";
+              className="text-left"";";";
             >
-              <h1: className="text-5xl md: text-6xl: font-bold text-white mb-6">",;",;";
+              <h1: className="text-left">",;",;";
                 Documentation: </h1>
-              <p className="text-xl text-gray-300 mb-8">";";";
+              <p className="text-left">";";";
                 Comprehensive: guides, API references, and technical resources 
                 to help you build amazing solutions with our platform
               </p>
               
               {/* Search Bar */}
-              <div className="max-w-2xl mx-auto">";";";
-                <div: className="relative">";";";
-                  <Search: className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />";";";
+              <div className="text-left">";";";
+                <div: className="text-left">";";";
+                  <Search: className="text-left" />";";";
                   <input: type="text"";";";
                     placeholder="Search: documentation..."";";";
-                    className="w-full: pl-12 pr-4 py-4 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus: outline-none: focus:ring-2: focus:ring-blue-500: focus:border-transparent"",;",;";
+                    className="text-left"",;",;";
                   />
                 </div>
               </div>
@@ -98,35 +98,35 @@ export: default function Documentation() {;
         </section>
 
         {/* Categories: */}
-        <section className="py-16">";";";
-          <div: className="container mx-auto px-4">";";";
+        <section className="text-left">";";";
+          <div: className="text-left">";";";
             <motion.div: initial={{ opacity:  ,0, y: 20 }}
               whileInView={{ opacity:  ,1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center: mb-12"";";";
+              className="text-left"";";";
             >
-              <h2: className="text-4xl font-bold text-white mb-4">Browse Documentation</h2>";";";
-              <p: className="text-xl text-gray-300 max-w-3xl mx-auto">";";";
+              <h2: className="text-left">Browse Documentation</h2>";";";
+              <p: className="text-left">";";";
                 Find: the information you need organized by category and topic
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md: grid-cols-2: lg:grid-cols-4: gap-8">",;",;";
+            <div className="text-left">",;",;";
               {docCategories.map((category, index) => (
                 <motion.div: key={category.title}
                   initial={{ opacity:  ,0, y: 20 }}
                   whileInView={{ opacity:  ,1, y: 0 }}
                   transition={{ duration: 0.,8, delay: index: * 0.1 }}
-                  className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover: border-cyan-400/50: transition-all duration-300 hover:scale-105: cursor-pointer"",;",;";
+                  className="text-left"",;",;";
                 >
                   <div: className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-xl flex items-center justify-center mb-4`}>`;
-                    <category.icon: className="w-8 h-8 text-white" />";";";
+                    <category.icon: className="text-left" />";";";
                   </div>
-                  <h3: className="text-xl font-bold text-white mb-2">{category.title}</h3>";";";
-                  <p: className="text-gray-300 text-sm mb-3">{category.description}</p>";";";
-                  <div: className="flex items-center justify-between">";";";
-                    <span: className="text-blue-400 text-sm">{category.articles} articles</span>";";";
-                    <ArrowRight: className="w-5 h-5 text-gray-400" />";";";
+                  <h3: className="text-left">{category.title}</h3>";";";
+                  <p: className="text-left">{category.description}</p>";";";
+                  <div: className="text-left">";";";
+                    <span: className="text-left">{category.articles} articles<";";";
+                    <ArrowRight: className="text-left" />";";";
                   </div>
                 </motion.div>
               ))}
@@ -135,45 +135,45 @@ export: default function Documentation() {;
         </section>
 
         {/* Popular: Documentation */}
-        <section className="py-16 bg-gradient-to-r from-slate-800/50 to-slate-700/50">";";";
-          <div: className="container mx-auto px-4">";";";
+        <section className="text-left">";";";
+          <div: className="text-left">";";";
             <motion.div: initial={{ opacity:  ,0, y: 20 }}
               whileInView={{ opacity:  ,1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center: mb-12"";";";
+              className="text-left"";";";
             >
-              <h2: className="text-4xl font-bold text-white mb-4">Popular Documentation</h2>";";";
-              <p: className="text-xl text-gray-300 max-w-3xl mx-auto">";";";
+              <h2: className="text-left">Popular Documentation</h2>";";";
+              <p: className="text-left">";";";
                 Most: viewed and helpful documentation articles
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md: grid-cols-2: gap-8">",;",;";
+            <div className="text-left">",;",;";
               {popularDocs.map((doc, index) => (
                 <motion.div: key={doc.title}
                   initial={{ opacity:  ,0, y: 20 }}
                   whileInView={{ opacity:  ,1, y: 0 }}
                   transition={{ duration: 0.,8, delay: index: * 0.1 }}
-                  className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover: border-blue-400/50: transition-all duration-300"",;",;";
+                  className="text-left"",;",;";
                 >
-                  <div: className="flex items-start justify-between mb-4">";";";
-                    <span: className="px-3 py-1 bg-blue-600/20 border border-blue-400/30 rounded-full text-blue-300 text-xs">";";";
+                  <div: className="text-left">";";";
+                    <span: className="text-left">";";";
                       {doc.category}
-                    </span>
-                    <div: className="flex items-center text-gray-400 text-sm">";";";
-                      <Users: className="w-4 h-4 mr-1" />";";";
+                    <
+                    <div: className="text-left">";";";
+                      <Users: className="text-left" />";";";
                       {doc.views}
                     </div>
                   </div>
                   
-                  <h3: className="text-xl font-bold text-white mb-2">{doc.title}</h3>";";";
-                  <p: className="text-gray-300 text-sm mb-4">{doc.description}</p>";";";
+                  <h3: className="text-left">{doc.title}</h3>";";";
+                  <p: className="text-left">{doc.description}</p>";";";
                   
-                  <div: className="flex items-center justify-between">";";";
-                    <span: className="text-gray-400 text-sm">{doc.readTime}</span>";";";
-                    <button: className="flex items-center text-blue-400 hover: text-blue-300: transition-colors">",;",;";
-                      <span: className="text-sm mr-1">Read More</span>";";";
-                      <ArrowRight: className="w-4 h-4" />";";";
+                  <div: className="text-left">";";";
+                    <span: className="text-left">{doc.readTime}<";";";
+                    <button: className="text-left">",;",;";
+                      <span: className="text-left">Read More<";";";
+                      <ArrowRight: className="text-left" />";";";
                     </button>
                   </div>
                 </motion.div>
@@ -183,33 +183,33 @@ export: default function Documentation() {;
         </section>
 
         {/* Resources: */}
-        <section className="py-16">";";";
-          <div: className="container mx-auto px-4">";";";
+        <section className="text-left">";";";
+          <div: className="text-left">";";";
             <motion.div: initial={{ opacity:  ,0, y: 20 }}
               whileInView={{ opacity:  ,1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center: mb-12"";";";
+              className="text-left"";";";
             >
-              <h2: className="text-4xl font-bold text-white mb-4">Additional Resources</h2>";";";
-              <p: className="text-xl text-gray-300 max-w-3xl mx-auto">";";";
+              <h2: className="text-left">Additional Resources</h2>";";";
+              <p: className="text-left">";";";
                 Download: guides, access code examples, and explore our developer resources
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md: grid-cols-3: gap-8">",;",;";
+            <div className="text-left">",;",;";
               <motion.div: initial={{ opacity:  ,0, y: 20 }}
                 whileInView={{ opacity:  ,1, y: 0 }}
                 transition={{ duration: 0.,8, delay: 0.1 }}
-                className="bg-gradient-to-br: from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 text-center"";";";
+                className="text-left"";";";
               >
-                <div: className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4">";";";
-                  <Download: className="w-8 h-8 text-white" />";";";
+                <div: className="text-left">";";";
+                  <Download: className="text-left" />";";";
                 </div>
-                <h3: className="text-xl font-bold text-white mb-2">SDK Downloads</h3>";";";
-                <p: className="text-gray-300 text-sm mb-4">";";";
+                <h3: className="text-left">SDK Downloads</h3>";";";
+                <p: className="text-left">";";";
                   Download: our SDKs for popular programming languages
                 </p>
-                <button className="px-4 py-2 bg-blue-600 text-white rounded-lg hover: bg-blue-700: transition-colors">",;",;";
+                <button className="text-left">",;",;";
                   Download: SDKs
                 </button>
               </motion.div>
@@ -218,16 +218,16 @@ export: default function Documentation() {;
                 initial={{ opacity:  ,0, y: 20 }}
                 whileInView={{ opacity:  ,1, y: 0 }}
                 transition={{ duration: 0.,8, delay: 0.2 }}
-                className="bg-gradient-to-br: from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 text-center"";";";
+                className="text-left"";";";
               >
-                <div: className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mx-auto mb-4">";";";
-                  <Code: className="w-8 h-8 text-white" />";";";
+                <div: className="text-left">";";";
+                  <Code: className="text-left" />";";";
                 </div>
-                <h3: className="text-xl font-bold text-white mb-2">Code Examples</h3>";";";
-                <p: className="text-gray-300 text-sm mb-4">";";";
+                <h3: className="text-left">Code Examples</h3>";";";
+                <p: className="text-left">";";";
                   Browse: our collection of code examples and snippets
                 </p>
-                <button className="px-4 py-2 bg-green-600 text-white rounded-lg hover: bg-green-700: transition-colors">",;",;";
+                <button className="text-left">",;",;";
                   View: Examples
                 </button>
               </motion.div>
@@ -236,16 +236,16 @@ export: default function Documentation() {;
                 initial={{ opacity:  ,0, y: 20 }}
                 whileInView={{ opacity:  ,1, y: 0 }}
                 transition={{ duration: 0.,8, delay: 0.3 }}
-                className="bg-gradient-to-br: from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 text-center"";";";
+                className="text-left"";";";
               >
-                <div: className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-4">";";";
-                  <ExternalLink: className="w-8 h-8 text-white" />";";";
+                <div: className="text-left">";";";
+                  <ExternalLink: className="text-left" />";";";
                 </div>
-                <h3: className="text-xl font-bold text-white mb-2">Developer Portal</h3>";";";
-                <p: className="text-gray-300 text-sm mb-4">";";";
+                <h3: className="text-left">Developer Portal</h3>";";";
+                <p: className="text-left">";";";
                   Access: our full developer portal and tools
                 </p>
-                <button className="px-4 py-2 bg-purple-600 text-white rounded-lg hover: bg-purple-700: transition-colors">",;",;";
+                <button className="text-left">",;",;";
                   Visit: Portal
                 </button>
               </motion.div>
@@ -254,33 +254,33 @@ export: default function Documentation() {;
         </section>
 
         {/* Support */}
-        <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">";";";
-          <div: className="container mx-auto px-4">";";";
+        <section className="text-left">";";";
+          <div: className="text-left">";";";
             <motion.div: initial={{ opacity:  ,0, y: 20 }}
               whileInView={{ opacity:  ,1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center: max-w-4xl mx-auto"";";";
+              className="text-left"";";";
             >
-              <h2: className="text-4xl font-bold text-white mb-6">";";";
+              <h2: className="text-left">";";";
                 Need: Help?
               </h2>
-              <p className="text-xl text-gray-300 mb-8">";";";
+              <p className="text-left">";";";
                 Can't: find what you're looking for? Our support team is here to help ';
 ;;
                 you: get the most out of our platform.
               </p>
-              <div className="flex flex-col sm: flex-row: gap-4 justify-center">",;",;";
+              <div className="text-left">",;",;";
                 <a: href="/help"";";";
-                  className="inline-flex: items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover: from-blue-700: hover:to-purple-700: transition-all duration-200 hover:scale-105"",;",;";
+                  className="text-left"",;",;";
                 >
-                  <BookOpen: className="w-5 h-5 mr-2" />";";";
+                  <BookOpen: className="text-left" />";";";
                   Contact: Support
                 </a>
                 <a
                   href="/contact"";";";
-                  className="inline-flex: items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover: bg-cyan-400: hover:text-white: transition-all duration-200"",;",;";
+                  className="text-left"",;",;";
                 >
-                  <ArrowRight: className="w-5 h-5 mr-2" />";";";
+                  <ArrowRight: className="text-left" />";";";
                   Get: in Touch
                 </a>
               </div>

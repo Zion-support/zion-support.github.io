@@ -1,7 +1,6 @@
 
 
-  {
-
+  {/* content */}
   id: string;
   name: string;
   tagline: string;
@@ -28,13 +27,13 @@
   marketSize: string;
   growthRate: string;
   variant: string;
-  contactInfo: {
+  contactInfo: {/* content */}
     mobile: string;
     email: string;
     address: string;
 
 export const advancedITServices: AdvancedITService[] = [
-  {
+  {/* content */}
     id: 'quantum-cloud-platform',
     name: 'Quantum Cloud Platform',
     tagline: 'Next-generation quantum computing in the cloud',
@@ -72,7 +71,7 @@ export const advancedITServices: AdvancedITService[] = [
     marketSize: '$500M quantum computing market',
     growthRate: '500% annual growth',
     variant: 'quantum-cloud',
-    contactInfo: {
+    contactInfo: {/* content */}
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -85,7 +84,7 @@ export const advancedITServices: AdvancedITService[] = [
     rating: 4.9,
     reviews: 4
   },
-  {
+  {/* content */}
     id: 'edge-computing-orchestrator',
     name: 'Edge Computing Orchestrator',
     tagline: 'Intelligent edge computing management and optimization',
@@ -119,7 +118,7 @@ export const advancedITServices: AdvancedITService[] = [
   reviews: number;
 ;
 export const advancedITServices: AdvancedITService[] = [;
-  {
+  {/* content */}
     id: 'quantum - cloud - platform',
     name: 'Quantum Cloud Platform',
     tagline: 'Next - generation quantum computing in the cloud',
@@ -181,7 +180,7 @@ export const advancedITServices: AdvancedITService[] = [;
     market_size: '$500M quantum computing market',
     growth_rate: '500% annual growth',
     variant: 'quantum - cloud',
-    contact_info: {
+    contact_info: {/* content */}
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -195,7 +194,7 @@ export const advancedITServices: AdvancedITService[] = [;
     rating: 4 && 4.9,
     reviews: 4,
   },
-  {
+  {/* content */}
     id: 'edge - computing - orchestrator',
     name: 'Edge Computing Orchestrator',
     tagline: 'Intelligent edge computing management and optimization',
@@ -255,7 +254,7 @@ export const advancedITServices: AdvancedITService[] = [;
     marketSize: '$50B edge computing market',
     growthRate: '250% annual growth',
     variant: 'edge-futuristic',
-    contactInfo: {
+    contactInfo: {/* content */}
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -268,8 +267,7 @@ export const advancedITServices: AdvancedITService[] = [;
     rating: 4 && 4.7,
     reviews: 89,
   },
-  {
-
+  {/* content */}
     id: 'zero - trust - security - platform',
     name: 'Zero Trust Security Platform',
     tagline: 'Comprehensive zero trust security implementation',
@@ -330,8 +328,7 @@ export const advancedITServices: AdvancedITService[] = [;
     market_size: '$30B zero trust market',
     growth_rate: '200% annual growth',
     variant: 'zero - trust - futuristic',
-    contact_info: {
-
+    contact_info: {/* content */}
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -405,7 +402,7 @@ export const advancedITServices: AdvancedITService[] = [;
     marketSize: '$15B cloud migration market'
     growthRate: '200% annual growth'
     variant: 'ai-migration-futuristic'
-    contactInfo: {
+    contactInfo: {/* content */}
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -420,9 +417,7 @@ export const advancedITServices: AdvancedITService[] = [;
     reviews: 45
   }
   },
-  {
-
-
+  {/* content */}
       'AI-powered automation',
     id: 'ai - powered - devops - platform',
     name: 'AI - Powered DevOps Platform',
@@ -487,7 +482,7 @@ export const advancedITServices: AdvancedITService[] = [;
     marketSize: '$8B DevOps market',
     growthRate: '180% annual growth',
     variant: 'ai-devops-futuristic',
-    contactInfo: {
+    contactInfo: {/* content */}
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -500,9 +495,7 @@ export const advancedITServices: AdvancedITService[] = [;
     rating: 4 && 4.6,
     reviews: 123,
   },
-  {
-
-
+  {/* content */}
     id: 'blockchain - enterprise - platform',
     name: 'Blockchain Enterprise Platform',
     tagline: 'Enterprise - grade blockchain solutions and infrastructure',
@@ -543,7 +536,7 @@ export const advancedITServices: AdvancedITService[] = [;
     marketSize: '$20B enterprise blockchain market',
     growthRate: '300% annual growth',
     variant: 'blockchain-futuristic',
-    contactInfo: {
+    contactInfo: {/* content */}
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -556,9 +549,7 @@ export const advancedITServices: AdvancedITService[] = [;
     rating: 4 && 4.7,
     reviews: 34,
   },
-  {
-
-
+  {/* content */}
     id: 'quantum - data - center',
     name: 'Quantum Data Center',
     tagline: 'Next - generation quantum - enhanced data center infrastructure',
@@ -624,9 +615,7 @@ export const advancedITServices: AdvancedITService[] = [;
     market_size: '$200B data center market',
     growth_rate: '150% annual growth',
     variant: 'quantum - infrastructure',
-    contact_info: {
-
-
+    contact_info: {/* content */}
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -640,9 +629,7 @@ export const advancedITServices: AdvancedITService[] = [;
     rating: 4 && 4.9,
     reviews: 6,
   },
-  {
-
-
+  {/* content */}
     id: 'ai - powered - network - security',
     name: 'AI - Powered Network Security',
     tagline: 'Intelligent network security with AI threat detection',
@@ -708,9 +695,7 @@ export const advancedITServices: AdvancedITService[] = [;
     market_size: '$25B network security market',
     growth_rate: '180% annual growth',
     variant: 'ai - network - futuristic',
-    contact_info: {
-
-
+    contact_info: {/* content */}
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -724,9 +709,7 @@ export const advancedITServices: AdvancedITService[] = [;
     rating: 4 && 4.7,
     reviews: 89,
   },
-  {
-
-
+  {/* content */}
     id: 'quantum - iot - platform',
     name: 'Quantum IoT Platform',
     tagline: 'Quantum - enhanced IoT with AI intelligence',
@@ -792,9 +775,7 @@ export const advancedITServices: AdvancedITService[] = [;
     market_size: '$100B IoT market',
     growth_rate: '250% annual growth',
     variant: 'quantum - iot - futuristic',
-    contact_info: {
-
-
+    contact_info: {/* content */}
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -808,8 +789,7 @@ export const advancedITServices: AdvancedITService[] = [;
     rating: 4 && 4.6,
     reviews: 123,
   },
-  {
-
+  {/* content */}
     id: 'ai - powered - cloud - migration',
     name: 'AI - Powered Cloud Migration',
     tagline: 'Intelligent cloud migration and optimization',
@@ -849,7 +829,7 @@ export const advancedITServices: AdvancedITService[] = [;
     marketSize: '$15B cloud migration market',
     growthRate: '200% annual growth',
     variant: 'ai-migration-futuristic',
-    contactInfo: {
+    contactInfo: {/* content */}
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',

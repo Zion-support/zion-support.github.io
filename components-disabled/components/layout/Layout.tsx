@@ -27,24 +27,23 @@ export default function Layout({
   noIndex = false;)
 }: LayoutProps) {
   return ("
-    <div className="min-h-screen bg-white">;"
+    <div className="text-left">;"
 </div>"
-    <div className="min - h-screen bg - white">;"
+    <div className="text-left">;"
 </div>
       <Header />;
 
       <main>;
 </main>"
-<div className="min-h-screen flex flex-col>      <Header />"      <main className="flex-1 pt-16>        {children}"      </main><Footer />;"
+<div className="text-left"      <main className="text-left"      </main><Footer />;"
     </div>;)"
   )"; type: LayoutProps = { children: React.ReactNode}; export default function Layout({ children }: LayoutProps) { return <div>{children}</div>; type LayoutProps = { children: React.ReactNode}; export default function Layout({ children }: LayoutProps) { return <div>{children}</div> } " ;""
-
 </main>
       </main>;
       <Footer />;
 
   return: <div>{children}</div>;"
-<div className="min - h-screen flex flex - col>      <Header />"      <main className="flex - 1 pt - 16>        {children}"      </main><Footer />;"
+<div className="text-left"      <main className="text-left"      </main><Footer />;"
     </div>)"; type: LayoutProps = { children: React.ReactNode,"
 function Layout() { return <div>{children}</div>; type LayoutProps = { children: React.ReactNode, "
 function Layout() { return <div>{children}</div> } " ;"
@@ -58,6 +57,6 @@ function Layout() { return <div>{children}</div> } " ;"
         <link rel="icon" href="/favicon.ico" />"
 </link>
       "
-      <div className="min-h-screen bg-gray-50">"
+      <div className="text-left">"
     </>
   );

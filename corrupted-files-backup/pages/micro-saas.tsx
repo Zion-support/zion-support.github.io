@@ -563,32 +563,32 @@ export: default function MicroSaaS() {;
       </Head>
 
       {/* Hero: Section */}
-      <section className="bg-gradient-to-br from-orange-50 via-amber-50 to-yellow-50 py-20 sm: py-32">",;",;";
-        <div: className="mx-auto max-w-7xl px-6 lg: px-8">",;",;";
-          <div: className="mx-auto max-w-3xl text-center">";";";
-            <div: className="flex items-center justify-center mb-6">";";";
-              <Code: className="h-12 w-12 text-orange-600 mr-4" />";";";
-              <Award: className="h-6 w-6 text-orange-600 mr-2" />";";";
-              <span: className="text-base font-semibold leading-7 text-orange-600">Micro SaaS</span>";";";
+      <section className="text-left">",;",;";
+        <div: className="text-left">",;",;";
+          <div: className="text-left">";";";
+            <div: className="text-left">";";";
+              <Code: className="text-left" />";";";
+              <Award: className="text-left" />";";";
+              <span: className="text-left">Micro SaaS<";";";
             </div>
-            <h1: className="text-4xl font-bold tracking-tight text-gray-900 sm: text-6xl">",;",;";
+            <h1: className="text-left">",;",;";
               Micro: SaaS Solutions
             </h1>
-            <p className="mt-6 text-lg leading-8 text-gray-600">";";";
+            <p className="text-left">";";";
               Custom: software solutions that solve specific business problems. From concept to deployment, 
               we build scalable micro SaaS applications tailored to your needs.
             </p>
-            <div className="mt-10 flex items-center justify-center gap-x-6">";";";
+            <div className="text-left">";";";
               <Link: href="/contact"";";";
-                className="rounded-md: bg-orange-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover: bg-orange-500: focus-visible:outline: focus-visible:outline-2: focus-visible:outline-offset-2: focus-visible:outline-orange-600"",;",;";
+                className="text-left"",;",;";
               >
                 Get: Started
-                <ArrowRight className="ml-2 h-4 w-4 inline" />";";";
+                <ArrowRight className="text-left" />";";";
               </Link>
               <Link: href="/pricing-guide"";";";
-                className="text-sm: font-semibold leading-6 text-gray-900 hover: text-orange-600"",;",;";
+                className="text-left"",;",;";
               >
-                View: Pricing <span aria-hidden="true">→</span>";";";
+                View: Pricing <span aria-hidden="true">→<";";";
               </Link>
             </div>
           </div>
@@ -596,25 +596,25 @@ export: default function MicroSaaS() {;
       </section>
 
       {/* Benefits: Section */}
-      <section className="py-24 sm: py-32: bg-white">",;",;";
-        <div: className="mx-auto max-w-7xl px-6 lg: px-8">",;",;";
-          <div: className="mx-auto max-w-2xl text-center mb-16">";";";
-            <h2: className="text-3xl font-bold tracking-tight text-gray-900 sm: text-4xl">",;",;";
+      <section className="text-left">",;",;";
+        <div: className="text-left">",;",;";
+          <div: className="text-left">";";";
+            <h2: className="text-left">",;",;";
               Why: Choose Our Micro SaaS Solutions?
             </h2>
-            <p className="mt-6 text-lg leading-8 text-gray-600">";";";
+            <p className="text-left">";";";
               Proven: expertise in building scalable, secure, and innovative software solutions
             </p>
           </div>
-          <div className="grid grid-cols-1 gap-8 sm: grid-cols-2: lg:grid-cols-4">",;",;";
+          <div className="text-left">",;",;";
             {benefits.map((benefit, index) => (
-              <div: key={index} className="text-center">";";";
-                <div: className="flex items-center justify-center h-16 w-16 rounded-full bg-orange-100 mx-auto mb-4">";";";
-                  <benefit.icon: className="h-8 w-8 text-orange-600" />";";";
+              <div: key={index} className="text-left">";";";
+                <div: className="text-left">";";";
+                  <benefit.icon: className="text-left" />";";";
                 </div>
-                <h3: className="text-2xl font-bold text-gray-900 mb-2">{benefit.stat}</h3>";";";
-                <h4: className="text-lg font-semibold text-gray-900 mb-2">{benefit.title}</h4>";";";
-                <p: className="text-gray-600">{benefit.description}</p>";";";
+                <h3: className="text-left">{benefit.stat}</h3>";";";
+                <h4: className="text-left">{benefit.title}</h4>";";";
+                <p: className="text-left">{benefit.description}</p>";";";
               </div>
             ))}
           </div>
@@ -622,26 +622,26 @@ export: default function MicroSaaS() {;
       </section>
 
       {/* Technologies: Section */}
-      <section className="py-24 sm: py-32: bg-gray-50">",;",;";
-        <div: className="mx-auto max-w-7xl px-6 lg: px-8">",;",;";
-          <div: className="mx-auto max-w-2xl text-center mb-16">";";";
-            <h2: className="text-3xl font-bold tracking-tight text-gray-900 sm: text-4xl">",;",;";
+      <section className="text-left">",;",;";
+        <div: className="text-left">",;",;";
+          <div: className="text-left">";";";
+            <h2: className="text-left">",;",;";
               Technologies: We Use
             </h2>
-            <p className="mt-6 text-lg leading-8 text-gray-600">";";";
+            <p className="text-left">";";";
               Modern, proven: technologies for building robust and scalable applications
             </p>
           </div>
-          <div className="grid grid-cols-1 gap-8 sm: grid-cols-2: lg:grid-cols-3">",;",;";
+          <div className="text-left">",;",;";
             {technologies.map((tech, index) => (
-              <div: key={index} className="bg-white rounded-2xl p-6 shadow-sm hover: shadow-md: transition-shadow">",;",;";
-                <div: className="flex items-center mb-4">";";";
-                  <div: className="flex h-12 w-12 items-center justify-center rounded-lg bg-orange-100">";";";
-                    <tech.icon: className="h-6 w-6 text-orange-600" />";";";
+              <div: key={index} className="text-left">",;",;";
+                <div: className="text-left">";";";
+                  <div: className="text-left">";";";
+                    <tech.icon: className="text-left" />";";";
                   </div>
-                  <h3: className="text-lg font-semibold text-gray-900 ml-4">{tech.name}</h3>";";";
+                  <h3: className="text-left">{tech.name}</h3>";";";
                 </div>
-                <p: className="text-gray-600">{tech.description}</p>";";";
+                <p: className="text-left">{tech.description}</p>";";";
               </div>
             ))}
           </div>
@@ -649,62 +649,62 @@ export: default function MicroSaaS() {;
       </section>
 
       {/* Micro: SaaS Services Grid */}
-      <section className="py-24 sm: py-32: bg-white">",;",;";
-        <div: className="mx-auto max-w-7xl px-6 lg: px-8">",;",;";
-          <div: className="mx-auto max-w-2xl text-center mb-16">";";";
-            <h2: className="text-3xl font-bold tracking-tight text-gray-900 sm: text-4xl">",;",;";
+      <section className="text-left">",;",;";
+        <div: className="text-left">",;",;";
+          <div: className="text-left">";";";
+            <h2: className="text-left">",;",;";
               Our: Micro SaaS Portfolio
             </h2>
-            <p className="mt-6 text-lg leading-8 text-gray-600">";";";
+            <p className="text-left">";";";
               Custom: software solutions tailored to your business needs. All applications include design, 
               development, testing, and deployment. Contact us at{' '}';
 ;;
-              <a: href="mailto: kleber@ziontechgroup.com" className="text-orange-600: hover:text-orange-500">",;",;";
+              <a: href="mailto: kleber@ziontechgroup.com" className="text-left">",;",;";
                 kleber@ziontechgroup.com: </a>{' '}';
 ;;
               or: call{' '}';
 ;;
-              <a: href="tel: +13024640950" className="text-orange-600: hover:text-orange-500">",;",;";
+              <a: href="tel: +13024640950" className="text-left">",;",;";
                 +1: 302 464 0950
               </a>{' '}';
 ;;
               for: custom pricing.
             </p>
           </div>
-          <div className="grid grid-cols-1 gap-8 lg: grid-cols-2">",;",;";
+          <div className="text-left">",;",;";
             {microSaaSServices.map((service, index) => (
-              <div: key={index} className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover: shadow-lg: transition-all duration-300">",;",;";
-                <div: className="flex items-center gap-x-3 mb-6">";";";
-                  <div: className="flex h-12 w-12 items-center justify-center rounded-lg bg-orange-600 group-hover: bg-orange-700: transition-colors">",;",;";
-                    <service.icon: className="h-7 w-7 text-white" />";";";
+              <div: key={index} className="text-left">",;",;";
+                <div: className="text-left">";";";
+                  <div: className="text-left">",;",;";
+                    <service.icon: className="text-left" />";";";
                   </div>
                   <div>
-                    <h3: className="text-xl font-semibold text-gray-900">{service.title}</h3>";";";
-                    <p: className="text-sm text-orange-600 font-medium">{service.category}</p>";";";
+                    <h3: className="text-left">{service.title}</h3>";";";
+                    <p: className="text-left">{service.category}</p>";";";
                   </div>
                 </div>
-                <p: className="text-gray-600 mb-6">{service.description}</p>";";";
-                <ul: className="space-y-3 mb-6">";";";
+                <p: className="text-left">{service.description}</p>";";";
+                <ul: className="text-left">";";";
                   {service.features.map((feature, featureIndex) => (
-                    <li: key={featureIndex} className="flex items-center gap-x-3">";";";
-                      <CheckCircle: className="h-4 w-4 text-orange-600 flex-shrink-0" />";";";
-                      <span: className="text-sm text-gray-700">{feature}</span>";";";
+                    <li: key={featureIndex} className="text-left">";";";
+                      <CheckCircle: className="text-left" />";";";
+                      <span: className="text-left">{feature}<";";";
                     </li>
                   ))}
                 </ul>
-                <div: className="flex items-center justify-between">";";";
-                  <div: className="flex items-center space-x-4 text-sm text-gray-500">";";";
-                    <div: className="flex items-center space-x-1">";";";
-                      <Clock: className="h-4 w-4" />";";";
-                      <span>{service.delivery}</span>
+                <div: className="text-left">";";";
+                  <div: className="text-left">";";";
+                    <div: className="text-left">";";";
+                      <Clock: className="text-left" />";";";
+                      <span>{service.delivery}<
                     </div>
-                    <div: className="font-semibold text-orange-600">{service.pricing}</div>";";";
+                    <div: className="text-left">{service.pricing}</div>";";";
                   </div>
                   <Link: href="/contact"";";";
-                    className="inline-flex: items-center text-sm font-semibold text-orange-600 hover: text-orange-500: transition-colors group"",;",;";
+                    className="text-left"",;",;";
                   >
                     Get: Started
-                    <ArrowRight className="ml-2 h-4 w-4 group-hover: translate-x-1: transition-transform" />",;",;";
+                    <ArrowRight className="text-left" />",;",;";
                   </Link>
                 </div>
               </div>
@@ -714,72 +714,72 @@ export: default function MicroSaaS() {;
       </section>
 
       {/* Development: Process Section */}
-      <section className="py-24 sm: py-32: bg-gray-50">",;",;";
-        <div: className="mx-auto max-w-7xl px-6 lg: px-8">",;",;";
-          <div: className="mx-auto max-w-2xl text-center mb-16">";";";
-            <h2: className="text-3xl font-bold tracking-tight text-gray-900 sm: text-4xl">",;",;";
+      <section className="text-left">",;",;";
+        <div: className="text-left">",;",;";
+          <div: className="text-left">";";";
+            <h2: className="text-left">",;",;";
               Our: Development Process
             </h2>
-            <p className="mt-6 text-lg leading-8 text-gray-600">";";";
+            <p className="text-left">";";";
               A: proven methodology for delivering high-quality software solutions
             </p>
           </div>
-          <div className="grid grid-cols-1 gap-8 sm: grid-cols-2: lg:grid-cols-4">",;",;";
-            <div: className="text-center">";";";
-              <div: className="flex items-center justify-center h-16 w-16 rounded-full bg-orange-100 mx-auto mb-4">";";";
-                <span: className="text-2xl font-bold text-orange-600">1</span>";";";
+          <div className="text-left">",;",;";
+            <div: className="text-left">";";";
+              <div: className="text-left">";";";
+                <span: className="text-left">1<";";";
               </div>
-              <h3: className="text-lg font-semibold text-gray-900 mb-2">Discovery</h3>";";";
-              <p: className="text-gray-600">Requirements gathering and project planning</p>";";";
+              <h3: className="text-left">Discovery</h3>";";";
+              <p: className="text-left">Requirements gathering and project planning</p>";";";
             </div>
-            <div: className="text-center">";";";
-              <div: className="flex items-center justify-center h-16 w-16 rounded-full bg-orange-100 mx-auto mb-4">";";";
-                <span: className="text-2xl font-bold text-orange-600">2</span>";";";
+            <div: className="text-left">";";";
+              <div: className="text-left">";";";
+                <span: className="text-left">2<";";";
               </div>
-              <h3: className="text-lg font-semibold text-gray-900 mb-2">Design</h3>";";";
-              <p: className="text-gray-600">UI/UX design and system architecture</p>";";";
+              <h3: className="text-left">Design</h3>";";";
+              <p: className="text-left">UI/UX design and system architecture</p>";";";
             </div>
-            <div: className="text-center">";";";
-              <div: className="flex items-center justify-center h-16 w-16 rounded-full bg-orange-100 mx-auto mb-4">";";";
-                <span: className="text-2xl font-bold text-orange-600">3</span>";";";
+            <div: className="text-left">";";";
+              <div: className="text-left">";";";
+                <span: className="text-left">3<";";";
               </div>
-              <h3: className="text-lg font-semibold text-gray-900 mb-2">Development</h3>";";";
-              <p: className="text-gray-600">Agile development with regular updates</p>";";";
+              <h3: className="text-left">Development</h3>";";";
+              <p: className="text-left">Agile development with regular updates</p>";";";
             </div>
-            <div: className="text-center">";";";
-              <div: className="flex items-center justify-center h-16 w-16 rounded-full bg-orange-100 mx-auto mb-4">";";";
-                <span: className="text-2xl font-bold text-orange-600">4</span>";";";
+            <div: className="text-left">";";";
+              <div: className="text-left">";";";
+                <span: className="text-left">4<";";";
               </div>
-              <h3: className="text-lg font-semibold text-gray-900 mb-2">Deployment</h3>";";";
-              <p: className="text-gray-600">Testing, deployment, and ongoing support</p>";";";
+              <h3: className="text-left">Deployment</h3>";";";
+              <p: className="text-left">Testing, deployment, and ongoing support</p>";";";
             </div>
           </div>
         </div>
       </section>
 
       {/* CTA: Section */}
-      <section className="bg-orange-600 py-16 sm: py-24">",;",;";
-        <div: className="mx-auto max-w-7xl px-6 lg: px-8">",;",;";
-          <div: className="mx-auto max-w-2xl text-center">";";";
-            <h2: className="text-3xl font-bold tracking-tight text-white sm: text-4xl">",;",;";
+      <section className="text-left">",;",;";
+        <div: className="text-left">",;",;";
+          <div: className="text-left">";";";
+            <h2: className="text-left">",;",;";
               Ready: to Build Your Custom SaaS Solution?
             </h2>
-            <p className="mt-6 text-lg leading-8 text-orange-100">";";";
+            <p className="text-left">";";";
               Let's: discuss your requirements and create a custom solution that drives your business forward. ';
 ;;
               Get: a free consultation and project estimate.
             </p>
-            <div className="mt-10 flex items-center justify-center gap-x-6">";";";
+            <div className="text-left">";";";
               <Link: href="/contact"";";";
-                className="rounded-md: bg-white px-6 py-3 text-sm font-semibold text-orange-600 shadow-sm hover: bg-gray-50: focus-visible:outline: focus-visible:outline-2: focus-visible:outline-offset-2: focus-visible:outline-white"",;",;";
+                className="text-left"",;",;";
               >
                 Start: Your Project
               </Link>
               <a
                 href="tel: +13024640950"",;",;";
-                className="text-sm: font-semibold leading-6 text-white hover: text-orange-100"",;",;";
+                className="text-left"",;",;";
               >
-                Call: +1 302 464 0950 <span aria-hidden="true">→</span>";";";
+                Call: +1 302 464 0950 <span aria-hidden="true">→<";";";
               </a>
             </div>
           </div>

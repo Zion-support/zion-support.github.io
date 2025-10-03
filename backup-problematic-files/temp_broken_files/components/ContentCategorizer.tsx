@@ -126,6 +126,6 @@ value={selectedSubcategory}
                 <span className=&quot;flex items-center gap-1&quot;>
                   <Calendar className=&quot;w-3 h-3&quot; />
                   {item.date}
-                </span>
+                <
                 <span className={`flex items-center gap-1 ${getRelevanceColor(item.relevance)}`}>
                   <TrendingUp className=&quot;w-3 h-3&quot; />
