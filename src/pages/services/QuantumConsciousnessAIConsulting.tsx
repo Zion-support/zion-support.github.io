@@ -232,19 +232,19 @@ const QuantumConsciousnessAIConsulting: React.FC = () => {
                     <form className="space-y-6">
                       <div>
                         <label className="block text-white font-bold mb-2">Company Name</label>
-                        <input type="text" className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-indigo-500" placeholder="Your Company" /> /> /> />
+                        <input type="text" className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-indigo-500" placeholder="Your Company" />
                       </div>
                       <div>
                         <label className="block text-white font-bold mb-2">Your Name</label>
-                        <input type="text" className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-indigo-500" placeholder="Your Name" /> /> /> />
+                        <input type="text" className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-indigo-500" placeholder="Your Name" />
                       </div>
                       <div>
                         <label className="block text-white font-bold mb-2">Email</label>
-                        <input type="email" className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-indigo-500" placeholder="your@email.com" /> /> /> />
+                        <input type="email" className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-indigo-500" placeholder="your@email.com" />
                       </div>
                       <div>
                         <label className="block text-white font-bold mb-2">Phone</label>
-                        <input type="tel" className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-indigo-500" placeholder="+1 (555) 123-4567" /> /> /> />
+                        <input type="tel" className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-indigo-500" placeholder="+1 (555) 123-4567" />
                       </div>
                       <div>
                         <label className="block text-white font-bold mb-2">Company Size</label>
