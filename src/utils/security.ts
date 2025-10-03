@@ -153,7 +153,7 @@ export class CSRFProtection {
     const array = new Uint8Array(32);
     crypto.getRandomValues(array);
     return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('');
-  };
+  }
 
   static createToken(): string {
     const token = this.generateToken();
@@ -203,7 +203,7 @@ export class SecurityLogger {
         console.warn('Security Event:', logEntry);
       }
     }
-  };
+  }
 
   private static getSessionId(): string {
     let sessionId = sessionStorage.getItem('security-session-id');
@@ -251,19 +251,19 @@ export function initializeSecurity(): void {
   // Set up unhandled promise rejection handling
   window.addEventListener('unhandledrejection', (event) => {
     SecurityLogger.logSecurityEvent('unhandled-promise-rejection', {
-        reason: event.reason?.toString(),
-        promise: event.promise
-      }, 'error');
-    });
+      reason: event.reason?.toString(),
+      promise: event.promise
+    }, 'error');
+  });
 
   // Log suspicious activity
   document.addEventListener('click', (event) => {
     const target = event.target as HTMLElement;
     if (target.tagName === 'A' && target.getAttribute('href')?.startsWith('javascript:')) {
       SecurityLogger.logSecurityEvent('suspicious-link-click', {
-          href: target.getAttribute('href'),
-          text: target.textContent
-        }, 'warn');
+        href: target.getAttribute('href'),
+        text: target.textContent
+      }, 'warn');
     }
   });
 
@@ -282,6 +282,6 @@ export default {
   sanitizeInput,
   defaultRateLimit,
   CSRFProtection,
-    SecurityLogger,
-    initializeSecurity
-  };
+  SecurityLogger,
+  initializeSecurity
+};

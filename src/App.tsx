@@ -30,7 +30,7 @@ const LazyAIChatbotBuilder = React.lazy(() => import('../app/services/ai-chatbot
 const LazyContactPage = React.lazy(() => import('../app/contact/page'));
 const LazyAboutPage = React.lazy(() => import('../app/about/page'));
 
-export default function App(): JSX.Element {
+function App(): JSX.Element {
   return (
     <ErrorBoundary>
       <Router>
@@ -86,4 +86,6 @@ export default function App(): JSX.Element {
       </Router>
     </ErrorBoundary>
   );
-};
+}
+
+export default App;

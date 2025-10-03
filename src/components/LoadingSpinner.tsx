@@ -1,4 +1,5 @@
 import React, { memo } from 'react';
+
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg';
   text?: string;
@@ -27,6 +28,7 @@ const LoadingSpinner = memo<LoadingSpinnerProps>(({
 });
 
 LoadingSpinner.displayName = 'LoadingSpinner';
+
 interface PageLoaderProps {
   text?: string;
   className?: string;
@@ -47,6 +49,7 @@ const PageLoader = memo<PageLoaderProps>(({
 });
 
 PageLoader.displayName = 'PageLoader';
+
 // Optimized skeleton loader for better perceived performance
 interface SkeletonLoaderProps {
   lines?: number;
@@ -70,6 +73,7 @@ const SkeletonLoader = memo<SkeletonLoaderProps>(({ lines = 3, className = '' })
 });
 
 SkeletonLoader.displayName = 'SkeletonLoader';
+
 // Inline spinner for buttons and small components
 interface InlineSpinnerProps {
   size?: 'xs' | 'sm';
@@ -92,4 +96,5 @@ const InlineSpinner = memo<InlineSpinnerProps>(({ size = 'sm', className = '' })
 });
 
 InlineSpinner.displayName = 'InlineSpinner';
+
 export { LoadingSpinner, PageLoader, SkeletonLoader, InlineSpinner };
