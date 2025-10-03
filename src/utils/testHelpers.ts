@@ -165,7 +165,7 @@ export const waitForAsyncComponent = async (
 ): Promise<void> => {
   await waitFor(() => {
     try {
-      const element = document.querySelector(`[data-testid="${component.name}"]`);"
+      const element = document.querySelector(`[data-testid="${component.name}"]`);
       return !!element;
     } catch {
       return false;
