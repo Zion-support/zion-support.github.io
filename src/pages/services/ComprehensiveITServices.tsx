@@ -1,6 +1,6 @@
-import React from 'react'';
+import React from 'react';
 import { Link } from 'react-router-dom'';
-import { Helmet } from 'react-helmet-async'';
+import { Helmet } from 'react-helmet-async';
 
 const ComprehensiveITServices: React.FC  = () => {
   const itServices = [
@@ -154,7 +154,7 @@ const ComprehensiveITServices: React.FC  = () => {
           </div>
         </section>
 
-        {/* Service Level Agreements */}
+        {/* Service Level Agreements */}"
         <section className="py-20 bg-white">"
           <div className="container mx-auto px-6">"
             <div className="text-center mb-16">"
@@ -235,7 +235,7 @@ const ComprehensiveITServices: React.FC  = () => {
               >
                 Schedule Consultation
               </Link>
-              <Link 
+              <Link "
                 to="/case-studies" 
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors
               >
@@ -248,5 +248,5 @@ const ComprehensiveITServices: React.FC  = () => {
     </>
   );
 };
-
+"
 export default ComprehensiveITServices;

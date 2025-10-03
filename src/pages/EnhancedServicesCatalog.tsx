@@ -1,5 +1,5 @@
-import React from 'react'';
-import { Helmet } from 'react-helmet-async'';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { 
   Brain, 
   Code, 
@@ -661,7 +661,7 @@ export default function EnhancedServicesCatalog() {
                           href="/contact"
                           className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-2 rounded-lg text-sm font-semibold hover: from-cyan-600 hover:to-blue-600 transition-all duration-300 w-full justify-center
                         >
-                          Get Started
+                          Get Started"
                           <ArrowRight className="w-3 h-3" />"
                         </a>
                       </div>
@@ -712,14 +712,14 @@ export default function EnhancedServicesCatalog() {
                 <a 
                   href={`tel:${contactInfo.phone}`} `;
                   className="inline-flex items-center gap-2 bg-white text-slate-900 px-6 py-3 rounded-lg font-semibold hover:bg-slate-100 transition-colors
-                >
+                >"
                   <Smartphone className="w-4 h-4" />"
                   {contactInfo.phone}
                 </a>
                 <a 
                   href={`mailto:${contactInfo.email}`} `;
                   className="inline-flex items-center gap-2 bg-slate-700 text-white px-6 py-3 rounded-lg font-semibold hover:bg-slate-600 transition-colors
-                >
+                >"
                   <MessageSquare className="w-4 h-4" />"
                   {contactInfo.email}
                 </a>

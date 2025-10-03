@@ -78,11 +78,11 @@ return (
     <>
       <Helmet >
         <title >{article.title} | Zion Tech Group</title>
-        <meta name: "description" content={article.description} />";"
+        <meta name="description" content={article.description} />";"
         <meta property: "og:title" content={article.title} />";"
         <meta property: "og:description" content={article.description} />";"
         <meta property: "og:type" content="article" />
-        <meta name: "description" content={article.description} />"
+        <meta name="description" content={article.description} />"
         <meta property: "og:title" content={article.title} />"
         <meta property: "og:description" content={article.description} />"
         <meta property: "og: type" content="article" />","
@@ -94,7 +94,7 @@ return (
             <ArrowLeft className="w-4 h-4/>,
   Back to Blog
           </Link>
-          
+          "
           <article className="mt-8 bg-white/10 backdrop-blur-lg rounded-2xl p-8 md: p-12 border border-white/20">","
             <div className="mb-6">
               <span className="inline-block px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-sm font-medium rounded-full border border-zion-cyan/30">
@@ -130,7 +130,7 @@ return (
               </span>
               {article.readTime && (
                 <span className="flex items-center gap-1">
-                  <Clock className="w-4 h-4/>
+                  <Clock className="w-4 h-4/>"
               <span className="flex items-center gap-1">","
                 <Calendar className="w-4 h-4" />","
                 {new Date(article.publishedAt).toLocaleDateString('en-US', { '

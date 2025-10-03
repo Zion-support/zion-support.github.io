@@ -1,6 +1,6 @@
 import React from 'react';
 ;
-const SEOSplitTesting: React.FC: ()  => {,,,
+const SEOSplitTesting: React.FC = () => {
   return (
     <section className="max-w-5xl mx-auto">
       <header className="mb-8">
@@ -54,12 +54,12 @@ const SEOSplitTesting: React.FC: ()  => {,,,
         <h2 className="text-xl font-semibold text-gray-900">Learn More</h2>
         <ul className="mt-3 space-y-2 text-blue-700">
           <li >
-            <a href="https://developers.google.com/search/blog/2016/08/improving-search-with-rankbrain" target: "_blank" rel="noreferrer" className ="hover:underline">,
+            <a href="https://developers.google.com/search/blog/2016/08/improving-search-with-rankbrain" target="_blank" rel="noreferrer" className ="hover:underline">,
   Google Search & experimentation (background)
             </a>
           </li>
           <li >
-            <a href="https://support.google.com/webmasters/answer/7519425" target: "_blank" rel="noreferrer" className ="hover:underline">,
+            <a href="https://support.google.com/webmasters/answer/7519425" target="_blank" rel="noreferrer" className ="hover:underline">,
   Google: Search Console Performance report,,,
             </a>
           </li>

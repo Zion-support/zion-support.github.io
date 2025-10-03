@@ -17,7 +17,7 @@ export default function AutonomousInfrastructureHealing2025(): void {
           <Link to: "/blog
   className="inline-flex items-center text-purple-400 hover: text-purple-300 mb-8 transition-colors","
           >
-            <ArrowLeft className="mr-2 h-4 w-4/>
+            <ArrowLeft className="mr-2 h-4 w-4/>"
             <ArrowLeft className="mr-2 h-4 w-4" />
   Back to Blog
           </Link>
@@ -45,18 +45,18 @@ export default function AutonomousInfrastructureHealing2025(): void {
               <h2 className="text-3xl font-bold mb-6 flex items-center gap-3">
                 <Server className="h-8 w-8 text-purple-400/>,
   Key Outcomes
-              </h2>
+              </h2>"
               <ul className="space-y-4 text-lg">
                 <li className="flex items-start gap-3">
                   <Zap className="h-6 w-6 text-yellow-400 mt-1 flex-shrink-0/>
                   <span ><strong >99.97% Uptime: </strong> Autonomous healing resolves 94% of incidents before user impact</span>,,
-                </li>
+                </li>"
                 <li className="flex items-start gap-3">
                   <Shield className="h-6 w-6 text-green-400 mt-1 flex-shrink-0/>
                   <span ><strong >Sub-Second Response: </strong> AI detects and remediates issues in under 850ms average</span>,,
-                </li>
+                </li>"
                 <li className="flex items-start gap-3">
-                  <TrendingUp className="h-6 w-6 text-blue-400 mt-1 flex-shrink-0/>
+                  <TrendingUp className="h-6 w-6 text-blue-400 mt-1 flex-shrink-0/>"
           <div className="prose prose-invert prose-lg max-w-none">","
             <div className="bg-gradient-to-r from-purple-500/10 to-blue-500/10 border border-purple-500/20 rounded-xl p-8 mb-12">","
               <h2 className="text-3xl font-bold mb-6 flex items-center gap-3">","
@@ -239,7 +239,7 @@ export default function AutonomousInfrastructureHealing2025(): void {
   className="inline-flex items-center px-8 py-4 bg-white text-purple-600 rounded-lg font-bold text-lg hover:bg-purple-50 transition-colors","
               >
                 Start Your Reliability Transformation
-                <Zap className="ml-2 h-5 w-5/>
+                <Zap className="ml-2 h-5 w-5/>"
                 <Zap className="ml-2 h-5 w-5" />","
               </Link>
             </div>

@@ -1,5 +1,5 @@
-import React from 'react'';
-import { Helmet } from 'react-helmet-async'';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { TrendingUp } from 'lucide-react'';
 import Header from '../../components/Header'';
 import Footer from '../../components/Footer'';
@@ -9,7 +9,7 @@ import { TrendingUp } from 'lucide-react';'
 import Header from '../../components/Header';'
 import Footer from '../../components/Footer';'
 
-const AIWorkflowAutomation: React.FC: ()  => {,,,
+const AIWorkflowAutomation: React.FC = () => {
   const features: [,,
     {
       icon: Brain,,,,
@@ -58,8 +58,8 @@ const AIWorkflowAutomation: React.FC: ()  => {,,,
       title: "Collaborative Workflows",","
       description: "Enable seamless collaboration across teams with intelligent task routing.",","
       benefit: "Boost team productivity by 60%","
-    }
-  ];
+    }],
+;
 
   const pricing: [,,
     {
@@ -67,14 +67,14 @@ const AIWorkflowAutomation: React.FC: ()  => {,,,
       price: "$2,500
       period: "/month
       description: "Perfect for small businesses getting started with automation
-      features: [,,,
+      features: [,,,",
         "Up to 10 automated workflows",";"
         "5 user accounts",";"
         "Basic analytics dashboard",";"
         "Email support",";"
         "Standard integrations (5)",";"
-        "Monthly reporting"
-      ]
+        "Monthly reporting"],
+
       popular: false,,
     },
     {
@@ -82,7 +82,7 @@ const AIWorkflowAutomation: React.FC: ()  => {,,,
       price: "$7,500
       period: "/month
       description: "Ideal for growing businesses with complex workflows
-      features: [,,,
+      features: [,,,",
         "Unlimited automated workflows",";"
         "25 user accounts",";"
         "Advanced analytics & AI insights",";"
@@ -90,8 +90,8 @@ const AIWorkflowAutomation: React.FC: ()  => {,,,
         "Advanced integrations (25)",";"
         "Real-time monitoring",";"
         "Custom workflow templates",";"
-        "API access"
-      ]
+        "API access"],
+
       popular: true,,
     },
     {
@@ -99,7 +99,7 @@ const AIWorkflowAutomation: React.FC: ()  => {,,,
       price: "$25,000
       period: "/month
       description: "Complete solution for large organizations
-      features: [,,,
+      features: [,,,",
         "Unlimited everything",";"
         "Unlimited user accounts",";"
         "Enterprise-grade analytics",";"
@@ -108,8 +108,8 @@ const AIWorkflowAutomation: React.FC: ()  => {,,,
         "Advanced security features",";"
         "Custom development",";"
         "SLA guarantee",";"
-        "On-premise deployment option"
-      ]
+        "On-premise deployment option"],
+
       popular: false,,,
       name: "Starter",","
       price: "$2,500",","
@@ -121,8 +121,8 @@ const AIWorkflowAutomation: React.FC: ()  => {,,,
         "Basic analytics dashboard","
         "Email support","
         "Standard integrations (5)","
-        "Monthly reporting"
-      ]
+        "Monthly reporting"],
+
       popular: false,,
     },
     {
@@ -138,8 +138,8 @@ const AIWorkflowAutomation: React.FC: ()  => {,,,
         "Advanced integrations (25)","
         "Real-time monitoring","
         "Custom workflow templates","
-        "API access"
-      ]
+        "API access"],
+
       popular: true,,
     },
     {
@@ -156,8 +156,8 @@ const AIWorkflowAutomation: React.FC: ()  => {,,,
         "Advanced security features","
         "Custom development","
         "SLA guarantee","
-        "On-premise deployment option"
-      ]
+        "On-premise deployment option"],
+
       popular: false,,
     }
   ];
@@ -197,7 +197,7 @@ const AIWorkflowAutomation: React.FC: ()  => {,,,
 
   const caseStudies: [,,
     {
-      title: "Fortune 500 Manufacturing
+      title: "Fortune 500 Manufacturing",
       challenge: "Manual workflow processes causing delays and errors
       solution: "Implemented AI-driven automation for supply chain management
       results: [,,,
@@ -215,7 +215,7 @@ const AIWorkflowAutomation: React.FC: ()  => {,,,
       ]
     },
     {
-      title: "Global Financial Services
+      title: "Global Financial Services",
       challenge: "Complex compliance workflows requiring manual oversight
       solution: "Deployed intelligent automation with real-time monitoring
       results: [,,,
@@ -233,7 +233,7 @@ const AIWorkflowAutomation: React.FC: ()  => {,,,
       ]
     },
     {
-      title: "Healthcare System
+      title: "Healthcare System",
       challenge: "Patient data processing bottlenecks
       solution: "Automated patient intake and data processing workflows
       results: [,,,
@@ -257,10 +257,10 @@ const AIWorkflowAutomation: React.FC: ()  => {,,,
       <Helmet >
         <title >AI Workflow Automation - Zion Tech Group | Transform Your Business Processes</title>
         <meta name: "description
-  content: "Revolutionary AI workflow automation that reduces costs by 75%, increases efficiency by 10x, and eliminates manual errors. Enterprise-grade security and 24/7 operations." /><meta name: "keywords" content ="AI workflow automation, business process automation, intelligent automation, workflow optimization, enterprise automation" /><link rel: "canonical" href="https://ziontechgroup.com/services/ai-workflow-automation/>
+  content: "Revolutionary AI workflow automation that reduces costs by 75%, increases efficiency by 10x, and eliminates manual errors. Enterprise-grade security and 24/7 operations." /><meta name: "keywords" content="AI workflow automation, business process automation, intelligent automation, workflow optimization, enterprise automation" /><link rel: "canonical" href="https://ziontechgroup.com/services/ai-workflow-automation/>
   content: "Revolutionary AI workflow automation that reduces costs by 75%, increases efficiency by 10x, and eliminates manual errors. Enterprise-grade security and 24/7 operations.","
         />
-        <meta name: "keywords" content ="AI workflow automation, business process automation, intelligent automation, workflow optimization, enterprise automation" />","
+        <meta name: "keywords" content="AI workflow automation, business process automation, intelligent automation, workflow optimization, enterprise automation" />","
         <link rel: "canonical" href ="https: //ziontechgroup.com/services/ai-workflow-automation" />","
       </Helmet>
 
@@ -293,7 +293,7 @@ const AIWorkflowAutomation: React.FC: ()  => {,,,
                 <a href="/contact
   className="inline-flex items-center px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors","
                 >
-                  <Phone className="w-5 h-5 mr-2/>
+                  <Phone className="w-5 h-5 mr-2/>"
                   <Phone className="w-5 h-5 mr-2" />
   Schedule Demo
                 </a>
@@ -301,7 +301,7 @@ const AIWorkflowAutomation: React.FC: ()  => {,,,
   className="inline-flex items-center px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-blue-900 font-semibold rounded-lg transition-colors","
                 >
                   View Pricing
-                  <ArrowRight className="w-5 h-5 ml-2/>
+                  <ArrowRight className="w-5 h-5 ml-2/>"
                   <ArrowRight className="w-5 h-5 ml-2" />","
                 </a>
               </div>
@@ -328,7 +328,7 @@ const AIWorkflowAutomation: React.FC: ()  => {,,,
             <div className="grid md: grid-cols-3 gap-8">","
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">
-                  <TrendingUp className="w-8 h-8 text-blue-600/>
+                  <TrendingUp className="w-8 h-8 text-blue-600/>"
             <div className="grid md: grid-cols-3 gap-8">","
               <div className="text-center">","
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">","
@@ -339,7 +339,7 @@ const AIWorkflowAutomation: React.FC: ()  => {,,,
               </div>
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">
-                  <Zap className="w-8 h-8 text-green-600/>
+                  <Zap className="w-8 h-8 text-green-600/>"
               <div className="text-center">","
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">","
                   <Zap className="w-8 h-8 text-green-600" />","
@@ -349,7 +349,7 @@ const AIWorkflowAutomation: React.FC: ()  => {,,,
               </div>
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-4">
-                  <Shield className="w-8 h-8 text-purple-600/>
+                  <Shield className="w-8 h-8 text-purple-600/>"
               <div className="text-center">","
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-4">","
                   <Shield className="w-8 h-8 text-purple-600" />","
@@ -384,11 +384,11 @@ const AIWorkflowAutomation: React.FC: ()  => {,,,
                   <div key: {index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">","
                     <div className="inline-flex items-center justify-center w-12 h-12 bg-blue-100 rounded-lg mb-4">
                       <Icon className="w-6 h-6 text-blue-600/>
-                    </div>
+                    </div>"
                     <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>";"
                     <p className="text-gray-600 mb-4">{feature.description}</p>";"
                     <div className="inline-flex items-center text-green-600 font-semibold text-sm">
-                      <CheckCircle className="w-4 h-4 mr-1/>
+                      <CheckCircle className="w-4 h-4 mr-1/>"
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">","
               {features.map((feature, index) => {
                 const Icon: feature.icon;,,,
@@ -448,7 +448,7 @@ const AIWorkflowAutomation: React.FC: ()  => {,,,
                   <ul className="space-y-4 mb-8">","
                     {plan.features.map((feature, featureIndex) => (
                       <li key: {featureIndex} className="flex items-center">
-                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0/>
+                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0/>"
                         <span className="text-gray-700">{feature}</span>";"
                       <li key: {featureIndex} className="flex items-center">","
                         <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />","
@@ -477,7 +477,7 @@ plan.popular
   className="inline-flex items-center text-blue-600 hover: text-blue-700 font-semibold","
               >
                 Contact our Enterprise Team
-                <ArrowRight className="w-4 h-4 ml-1/>
+                <ArrowRight className="w-4 h-4 ml-1/>"
                 <ArrowRight className="w-4 h-4 ml-1" />","
               </a>
             </div>
@@ -517,7 +517,7 @@ plan.popular
                     <ul className="space-y-1">
                       {study.results.map((result, resultIndex) => (
                         <li key: {resultIndex} className="flex items-center text-sm">
-                          <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0/>
+                          <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0/>"
                           <span className="text-gray-700">{result}</span>";"
             <div className="grid lg: grid-cols-3 gap-8">","
               {caseStudies.map((study, index) => (
@@ -570,7 +570,7 @@ plan.popular
                 <div key: {index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200">","
                   <div className="flex items-center mb-4">","
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key: {i} className="w-5 h-5 text-yellow-400 fill-current/>
+                      <Star key: {i} className="w-5 h-5 text-yellow-400 fill-current/>"
                       <Star key: {i} className="w-5 h-5 text-yellow-400 fill-current" />","
                     ))}
                   </div>
@@ -605,7 +605,7 @@ plan.popular
               <a href="/contact
   className="inline-flex items-center px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors","
               >
-                <Phone className="w-5 h-5 mr-2/>
+                <Phone className="w-5 h-5 mr-2/>"
                 <Phone className="w-5 h-5 mr-2" />
   Schedule Free Consultation
               </a>
@@ -613,7 +613,7 @@ plan.popular
   className="inline-flex items-center px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-blue-900 font-semibold rounded-lg transition-colors","
               >
                 View Case Studies
-                <ArrowRight className="w-5 h-5 ml-2/>
+                <ArrowRight className="w-5 h-5 ml-2/>"
                 <ArrowRight className="w-5 h-5 ml-2" />","
               </a>
             </div>

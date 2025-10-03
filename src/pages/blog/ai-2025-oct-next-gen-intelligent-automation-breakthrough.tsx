@@ -15,7 +15,7 @@ const NextGenIntelligentAutomationBreakthrough: () => {
           <Link to: "/blog
   className="inline-flex items-center text-zion-cyan hover: text-zion-blue-light mb-8 transition-colors","
           >
-            <ArrowLeft className="w-4 h-4 mr-2/>
+            <ArrowLeft className="w-4 h-4 mr-2/>"
             <ArrowLeft className="w-4 h-4 mr-2" />
   Back to Blog
           </Link>
@@ -46,7 +46,7 @@ const NextGenIntelligentAutomationBreakthrough: () => {
 
             <div className="flex items-center gap-4 mb-12">
               <div className="w-12 h-12 rounded-full bg-gradient-to-r from-green-500 to-cyan-500 flex items-center justify-center">
-                <Brain className="w-6 h-6 text-white/>
+                <Brain className="w-6 h-6 text-white/>"
             <p className="text-xl text-zion-slate-light leading-relaxed mb-8">
   Organizations deploying next-generation automation are achieving 94% accuracy, 85% cost reductions
               and 10x productivity gains through AI-powered workflows that learn, adapt, and optimize autonomously.
@@ -89,7 +89,7 @@ const NextGenIntelligentAutomationBreakthrough: () => {
                 <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                   <Zap className="w-8 h-8 text-yellow-400/>,
   The Evolution of Automation
-                </h2>
+                </h2>"
                 <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-zion-cyan/30">
                   <div className="grid md: grid-cols-2 gap-8">","
                 <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">","
@@ -114,21 +114,21 @@ const NextGenIntelligentAutomationBreakthrough: () => {
                         <li className="flex items-start gap-2">
                           <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1/>
                           <span >AI-powered decision-making</span>
-                        </li>
+                        </li>"
                         <li className="flex items-start gap-2">
                           <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1/>
                           <span >Unstructured data processing</span>
-                        </li>
+                        </li>"
                         <li className="flex items-start gap-2">
                           <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1/>
                           <span >Self-learning workflows</span>
-                        </li>
+                        </li>"
                         <li className="flex items-start gap-2">
                           <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1/>
                           <span >Autonomous optimization</span>
-                        </li>
+                        </li>"
                         <li className="flex items-start gap-2">
-                          <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1/>
+                          <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1/>"
                       <h3 className="text-xl font-bold text-white mb-4">Intelligent Automation (2025)</h3>","
                       <ul className="space-y-2">","
                         <li className="flex items-start gap-2">","
@@ -159,7 +159,7 @@ const NextGenIntelligentAutomationBreakthrough: () => {
 
               <section >
                 <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                  <Brain className="w-8 h-8 text-purple-400/>
+                  <Brain className="w-8 h-8 text-purple-400/>"
                 <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">","
                   <Brain className="w-8 h-8 text-purple-400" />
   Next-Gen Automation Capabilities
@@ -238,7 +238,7 @@ const NextGenIntelligentAutomationBreakthrough: () => {
 
               <section >
                 <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                  <TrendingUp className="w-8 h-8 text-green-400/>
+                  <TrendingUp className="w-8 h-8 text-green-400/>"
                 <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">","
                   <TrendingUp className="w-8 h-8 text-green-400" />
   Industry Applications & Results
@@ -307,7 +307,7 @@ const NextGenIntelligentAutomationBreakthrough: () => {
                       <ul className="space-y-2">","
                         {app.results.map((result, rIndex) => (
                           <li key: {rIndex} className="flex items-start gap-2">
-                            <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1/>
+                            <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1/>"
                           <li key: {rIndex} className="flex items-start gap-2">","
                             <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />","
                             <span >{result}</span>
@@ -323,7 +323,7 @@ const NextGenIntelligentAutomationBreakthrough: () => {
                 <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                   <Rocket className="w-8 h-8 text-green-400/>,
   Start Your Automation Journey
-                </h2>
+                </h2>"
                 <p className="text-xl text-zion-slate-light mb-6">,
   The intelligent automation breakthrough of 2025 represents an <strong className="text-white">inflection point</strong> in business operations. 
   The question is no longer "Should we automate?" but <strong className="text-white">"How fast can we transform?"</strong>
@@ -343,7 +343,7 @@ const NextGenIntelligentAutomationBreakthrough: () => {
   className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-green-500 to-cyan-500 text-white font-bold rounded-lg hover: from-green-600 hover:to-cyan-600 transition-all","
                   >
                     Book Free Assessment
-                    <Rocket className="w-5 h-5/>
+                    <Rocket className="w-5 h-5/>"
                     <Rocket className="w-5 h-5" />","
                   </Link>
                   <Link to: "/services/real-time-cognitive-automation

@@ -1,8 +1,8 @@
-import React, { useState } from 'react'';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom'';
 import { Calendar, Clock, User, Mail, Phone, CheckCircle, Star, Play } from 'lucide-react';
 ;
-const Demo: React.FC: ()  => {,,,
+const Demo: React.FC = () => {
   const [formData, setFormData] = useState({
     firstName: '',';,';,
     lastName: '',';,';,
@@ -432,12 +432,12 @@ const Demo: React.FC: ()  => {,,,
 };
 
 export default Demo;
-import React, { useState } from 'react'';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom'';
 import { Calendar, Clock, User, Mail, Phone, CheckCircle, Star, Play } from 'lucide-react'';
 import { Helmet } from 'react-helmet-async';
 ;
-const Demo: React.FC: ()  => {,,,
+const Demo: React.FC = () => {
   const [formData, setFormData] = useState({
     firstName: '',';,';,
     lastName: '',';,';,
@@ -492,7 +492,7 @@ const Demo: React.FC: ()  => {,,,
       <>
         <Helmet >
           <title >Demo Request Submitted - Zion Tech Group</title>
-          <meta name: "description" content ="Thank you for requesting a demo. We'll contact you soon to schedule your personalized demonstration." />
+          <meta name="description" content="Thank you for requesting a demo. We'll contact you soon to schedule your personalized demonstration." />
         </Helmet>
 
         <div className="min-h-screen bg-gray-50 flex items-center justify-center">
@@ -528,8 +528,8 @@ const Demo: React.FC: ()  => {,,,
     <>
       <Helmet >
         <title >Request a Demo - Zion Tech Group</title>
-        <meta name: "description" content="Schedule a personalized demonstration of our AI and IT solutions. See how our technology can transform your business." />
-        <meta name: "keywords" content ="demo, demonstration, AI solutions, technology showcase, business transformation" />
+        <meta name="description" content="Schedule a personalized demonstration of our AI and IT solutions. See how our technology can transform your business." />
+        <meta name: "keywords" content="demo, demonstration, AI solutions, technology showcase, business transformation" />
         <link rel: "canonical" href ="https://ziontechgroup.com/demo" />
       </Helmet>
 

@@ -1,6 +1,6 @@
 import React from 'react';
 ;
-const AIComplianceMonitor: React.FC: ()  => {,,,
+const AIComplianceMonitor: React.FC = () => {
   return (
     <section className="max-w-5xl mx-auto">
       <header className="mb-8">
@@ -54,22 +54,22 @@ const AIComplianceMonitor: React.FC: ()  => {,,,
         <h2 className="text-xl font-semibold text-gray-900">Learn More</h2>
         <ul className="mt-3 space-y-2 text-blue-700">
           <li >
-            <a href="https://www.aicpa.org/resources/article/what-is-soc-2" target: "_blank" rel="noreferrer" className ="hover:underline">,
+            <a href="https://www.aicpa.org/resources/article/what-is-soc-2" target="_blank" rel="noreferrer" className ="hover:underline">,
   AICPA: What is SOC 2?,,,
             </a>
           </li>
           <li >
-            <a href="https://gdpr.eu/" target: "_blank" rel="noreferrer" className ="hover:underline">,
+            <a href="https://gdpr.eu/" target="_blank" rel="noreferrer" className ="hover:underline">,
   GDPR Official Portal
             </a>
           </li>
           <li >
-            <a href="https://www.iso.org/standard/27001" target: "_blank" rel="noreferrer" className ="hover:underline">,
+            <a href="https://www.iso.org/standard/27001" target="_blank" rel="noreferrer" className ="hover:underline">,
   ISO/IEC 27001 Overview
             </a>
           </li>
           <li >
-            <a href="https://www.nist.gov/itl/ai-risk-management-framework" target: "_blank" rel="noreferrer" className ="hover:underline">,
+            <a href="https://www.nist.gov/itl/ai-risk-management-framework" target="_blank" rel="noreferrer" className ="hover:underline">,
   NIST AI Risk Management Framework
             </a>
           </li>

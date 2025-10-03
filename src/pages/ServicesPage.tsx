@@ -1,43 +1,43 @@
-import React from 'react'';
+import React from 'react';
 import { Link } from 'react-router-dom'';
 import { Helmet } from 'react-helmet-async';
 ;
-const ServicesPage: React.FC: ()  => {,,,
+const ServicesPage: React.FC = () => {
   const services: [,,
     {
-      title: "AI & Machine Learning
-      description: "Advanced artificial intelligence solutions including machine learning models, natural language processing, and predictive analytics.
-      icon: "🤖
+      title: "AI & Machine Learning",
+      description: "Advanced artificial intelligence solutions including machine learning models, natural language processing, and predictive analytics.",
+      icon: "🤖",
       features: ["Custom ML Models", "NLP Solutions", "Predictive Analytics", "Computer Vision"]
     },
     {
-      title: "Micro SaaS Development
-      description: "Scalable software-as-a-service solutions that deliver immediate value and grow with your business needs.
-      icon: "⚡
+      title: "Micro SaaS Development",
+      description: "Scalable software-as-a-service solutions that deliver immediate value and grow with your business needs.",
+      icon: "⚡",
       features: ["Custom SaaS Apps", "API Development", "Cloud Integration", "Scalable Architecture"]
     },
     {
-      title: "IT Infrastructure
-      description: "Complete IT infrastructure management, cloud solutions, and enterprise-grade security services.
-      icon: "🛠️
+      title: "IT Infrastructure",
+      description: "Complete IT infrastructure management, cloud solutions, and enterprise-grade security services.",
+      icon: "🛠️",
       features: ["Cloud Migration", "DevOps Services", "Security Solutions", "Infrastructure Management"]
     },
     {
-      title: "Data Analytics
-      description: "Transform your data into actionable insights with our advanced analytics and business intelligence solutions.
-      icon: "📊
+      title: "Data Analytics",
+      description: "Transform your data into actionable insights with our advanced analytics and business intelligence solutions.",
+      icon: "📊",
       features: ["Business Intelligence", "Data Visualization", "Real-time Analytics", "Data Warehousing"]
     },
     {
-      title: "Automation Solutions
-      description: "Streamline your operations with intelligent automation solutions that reduce costs and improve efficiency.
-      icon: "🔄
+      title: "Automation Solutions",
+      description: "Streamline your operations with intelligent automation solutions that reduce costs and improve efficiency.",
+      icon: "🔄",
       features: ["Process Automation", "Workflow Optimization", "RPA Solutions", "Smart Integrations"]
     },
     {
-      title: "Consulting Services
-      description: "Expert technology consulting to help you make informed decisions and achieve your digital transformation goals.
-      icon: "💡
+      title: "Consulting Services",
+      description: "Expert technology consulting to help you make informed decisions and achieve your digital transformation goals.",
+      icon: "💡",
       features: ["Technology Strategy", "Digital Transformation", "Architecture Planning", "Best Practices"]
     }
   ];
@@ -46,7 +46,7 @@ const ServicesPage: React.FC: ()  => {,,,
     <>
       <Helmet >
         <title >Services - Zion Tech Group</title>
-        <meta name: "description" content ="Comprehensive AI and technology services from Zion Tech Group. AI services, micro SaaS development, IT infrastructure, and consulting solutions." />
+        <meta name="description" content="Comprehensive AI and technology services from Zion Tech Group. AI services, micro SaaS development, IT infrastructure, and consulting solutions." />
       </Helmet>
       
       <div className="min-h-screen bg-gray-50">

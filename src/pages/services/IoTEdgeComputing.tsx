@@ -1,5 +1,5 @@
-import React from 'react'';
-import { Helmet } from 'react-helmet-async'';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Network } from 'lucide-react'';
 import Header from '../../components/Header'';
 import Footer from '../../components/Footer'';
@@ -9,7 +9,7 @@ import { Network } from 'lucide-react';'
 import Header from '../../components/Header';'
 import Footer from '../../components/Footer';'
 
-const IoTEdgeComputing: React.FC: ()  => {,,,
+const IoTEdgeComputing: React.FC = () => {
   const features: [,,
     {
       icon: Cpu,,,,
@@ -58,8 +58,8 @@ const IoTEdgeComputing: React.FC: ()  => {,,,
       title: "Global Connectivity",","
       description: "Worldwide IoT device management with regional compliance and data sovereignty.",","
       benefit: "Global deployment ready","
-    }
-  ];
+    }],
+;
 
   const pricing: [,,
     {
@@ -67,7 +67,7 @@ const IoTEdgeComputing: React.FC: ()  => {,,,
       price: "$5,000
       period: "/month
       description: "Perfect for IoT projects in development and testing phases
-      features: [,,,
+      features: [,,,",
         "Up to 1,000 connected devices",";"
         "Basic edge computing capabilities",";"
         "Standard data analytics",";"
@@ -75,8 +75,8 @@ const IoTEdgeComputing: React.FC: ()  => {,,,
         "Monthly device health reports",";"
         "Basic security monitoring",";"
         "Cloud data storage (100GB)",";"
-        "Standard integrations (10)"
-      ]
+        "Standard integrations (10)"],
+
       popular: false,,
     },
     {
@@ -84,7 +84,7 @@ const IoTEdgeComputing: React.FC: ()  => {,,,
       price: "$15,000
       period: "/month
       description: "Ideal for production IoT deployments with high device counts
-      features: [,,,
+      features: [,,,",
         "Up to 10,000 connected devices",";"
         "Advanced edge AI processing",";"
         "Real-time analytics & insights",";"
@@ -95,8 +95,8 @@ const IoTEdgeComputing: React.FC: ()  => {,,,
         "Advanced integrations (50)",";"
         "Custom device protocols",";"
         "Edge-to-cloud synchronization",";"
-        "5G connectivity support"
-      ]
+        "5G connectivity support"],
+
       popular: true,,
     },
     {
@@ -104,7 +104,7 @@ const IoTEdgeComputing: React.FC: ()  => {,,,
       price: "$45,000
       period: "/month
       description: "Complete solution for large-scale enterprise IoT deployments
-      features: [,,,
+      features: [,,,",
         "Unlimited connected devices",";"
         "Premium edge AI with custom models",";"
         "Enterprise-grade analytics platform",";"
@@ -117,8 +117,8 @@ const IoTEdgeComputing: React.FC: ()  => {,,,
         "Multi-region deployment",";"
         "Private 5G network setup",";"
         "SLA guarantee",";"
-        "On-premise edge infrastructure"
-      ]
+        "On-premise edge infrastructure"],
+
       popular: false,,,
       name: "Development",","
       price: "$5,000",","
@@ -132,8 +132,8 @@ const IoTEdgeComputing: React.FC: ()  => {,,,
         "Monthly device health reports","
         "Basic security monitoring","
         "Cloud data storage (100GB)","
-        "Standard integrations (10)"
-      ]
+        "Standard integrations (10)"],
+
       popular: false,,
     },
     {
@@ -152,8 +152,8 @@ const IoTEdgeComputing: React.FC: ()  => {,,,
         "Advanced integrations (50)","
         "Custom device protocols","
         "Edge-to-cloud synchronization","
-        "5G connectivity support"
-      ]
+        "5G connectivity support"],
+
       popular: true,,
     },
     {
@@ -174,8 +174,8 @@ const IoTEdgeComputing: React.FC: ()  => {,,,
         "Multi-region deployment","
         "Private 5G network setup","
         "SLA guarantee","
-        "On-premise edge infrastructure"
-      ]
+        "On-premise edge infrastructure"],
+
       popular: false,,
     }
   ];
@@ -290,10 +290,10 @@ const IoTEdgeComputing: React.FC: ()  => {,,,
       <Helmet >
         <title >IoT & Edge Computing - Zion Tech Group | Smart Connected Solutions</title>
         <meta name: "description
-  content: "Advanced IoT and edge computing solutions with real-time AI processing, 5G integration, and global connectivity. 95% latency reduction, enterprise security." /><meta name: "keywords" content ="IoT solutions, edge computing, smart devices, connected systems, real-time analytics, 5G IoT, industrial IoT" /><link rel: "canonical" href="https://ziontechgroup.com/services/iot-edge-computing/>
+  content: "Advanced IoT and edge computing solutions with real-time AI processing, 5G integration, and global connectivity. 95% latency reduction, enterprise security." /><meta name: "keywords" content="IoT solutions, edge computing, smart devices, connected systems, real-time analytics, 5G IoT, industrial IoT" /><link rel: "canonical" href="https://ziontechgroup.com/services/iot-edge-computing/>
   content: "Advanced IoT and edge computing solutions with real-time AI processing, 5G integration, and global connectivity. 95% latency reduction, enterprise security.","
         />
-        <meta name: "keywords" content ="IoT solutions, edge computing, smart devices, connected systems, real-time analytics, 5G IoT, industrial IoT" />","
+        <meta name: "keywords" content="IoT solutions, edge computing, smart devices, connected systems, real-time analytics, 5G IoT, industrial IoT" />","
         <link rel: "canonical" href ="https: //ziontechgroup.com/services/iot-edge-computing" />","
       </Helmet>
 
@@ -326,7 +326,7 @@ const IoTEdgeComputing: React.FC: ()  => {,,,
                 <a href="/contact
   className="inline-flex items-center px-8 py-4 bg-orange-600 hover:bg-orange-700 text-white font-semibold rounded-lg transition-colors","
                 >
-                  <Phone className="w-5 h-5 mr-2/>
+                  <Phone className="w-5 h-5 mr-2/>"
                   <Phone className="w-5 h-5 mr-2" />
   Schedule Demo
                 </a>
@@ -334,7 +334,7 @@ const IoTEdgeComputing: React.FC: ()  => {,,,
   className="inline-flex items-center px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-orange-900 font-semibold rounded-lg transition-colors","
                 >
                   View Pricing
-                  <ArrowRight className="w-5 h-5 ml-2/>
+                  <ArrowRight className="w-5 h-5 ml-2/>"
                   <ArrowRight className="w-5 h-5 ml-2" />","
                 </a>
               </div>
@@ -361,7 +361,7 @@ const IoTEdgeComputing: React.FC: ()  => {,,,
             <div className="grid md: grid-cols-4 gap-8">","
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-orange-100 rounded-full mb-4">
-                  <Zap className="w-8 h-8 text-orange-600/>
+                  <Zap className="w-8 h-8 text-orange-600/>"
             <div className="grid md: grid-cols-4 gap-8">","
               <div className="text-center">","
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-orange-100 rounded-full mb-4">","
@@ -372,7 +372,7 @@ const IoTEdgeComputing: React.FC: ()  => {,,,
               </div>
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">
-                  <Network className="w-8 h-8 text-blue-600/>
+                  <Network className="w-8 h-8 text-blue-600/>"
               <div className="text-center">","
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">","
                   <Network className="w-8 h-8 text-blue-600" />","
@@ -382,7 +382,7 @@ const IoTEdgeComputing: React.FC: ()  => {,,,
               </div>
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">
-                  <Shield className="w-8 h-8 text-green-600/>
+                  <Shield className="w-8 h-8 text-green-600/>"
               <div className="text-center">","
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">","
                   <Shield className="w-8 h-8 text-green-600" />","
@@ -392,7 +392,7 @@ const IoTEdgeComputing: React.FC: ()  => {,,,
               </div>
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-4">
-                  <Globe className="w-8 h-8 text-purple-600/>
+                  <Globe className="w-8 h-8 text-purple-600/>"
               <div className="text-center">","
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-4">","
                   <Globe className="w-8 h-8 text-purple-600" />","
@@ -426,7 +426,7 @@ const IoTEdgeComputing: React.FC: ()  => {,,,
   return (
                   <div key: {index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">","
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-orange-100 rounded-full mb-6">
-                      <Icon className="w-8 h-8 text-orange-600/>
+                      <Icon className="w-8 h-8 text-orange-600/>"
             <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">","
               {useCases.map((useCase, index) => {
                 const Icon: useCase.icon;,,,
@@ -441,7 +441,7 @@ const IoTEdgeComputing: React.FC: ()  => {,,,
                     <ul className="space-y-2">","
                       {useCase.benefits.map((benefit, benefitIndex) => (
                         <li key: {benefitIndex} className="flex items-center text-sm">
-                          <CheckCircle className="w-4 h-4 text-orange-500 mr-2 flex-shrink-0/>
+                          <CheckCircle className="w-4 h-4 text-orange-500 mr-2 flex-shrink-0/>"
                           <span className="text-gray-700">{benefit}</span>";"
                         <li key: {benefitIndex} className="flex items-center text-sm">","
                           <CheckCircle className="w-4 h-4 text-orange-500 mr-2 flex-shrink-0" />","
@@ -479,11 +479,11 @@ const IoTEdgeComputing: React.FC: ()  => {,,,
                   <div key: {index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">","
                     <div className="inline-flex items-center justify-center w-12 h-12 bg-orange-100 rounded-lg mb-4">
                       <Icon className="w-6 h-6 text-orange-600/>
-                    </div>
+                    </div>"
                     <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>";"
                     <p className="text-gray-600 mb-4">{feature.description}</p>";"
                     <div className="inline-flex items-center text-orange-600 font-semibold text-sm">
-                      <CheckCircle className="w-4 h-4 mr-1/>
+                      <CheckCircle className="w-4 h-4 mr-1/>"
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">","
               {features.map((feature, index) => {
                 const Icon: feature.icon;,,,
@@ -580,7 +580,7 @@ const IoTEdgeComputing: React.FC: ()  => {,,,
                   <ul className="space-y-4 mb-8">","
                     {plan.features.map((feature, featureIndex) => (
                       <li key: {featureIndex} className="flex items-center">
-                        <CheckCircle className="w-5 h-5 text-orange-500 mr-3 flex-shrink-0/>
+                        <CheckCircle className="w-5 h-5 text-orange-500 mr-3 flex-shrink-0/>"
                         <span className="text-gray-700">{feature}</span>";"
                       <li key: {featureIndex} className="flex items-center">","
                         <CheckCircle className="w-5 h-5 text-orange-500 mr-3 flex-shrink-0" />","
@@ -609,7 +609,7 @@ plan.popular
   className="inline-flex items-center text-orange-600 hover: text-orange-700 font-semibold","
               >
                 Contact our IoT Specialists
-                <ArrowRight className="w-4 h-4 ml-1/>
+                <ArrowRight className="w-4 h-4 ml-1/>"
                 <ArrowRight className="w-4 h-4 ml-1" />","
               </a>
             </div>
@@ -638,7 +638,7 @@ plan.popular
                 <div key: {index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200">","
                   <div className="flex items-center mb-4">","
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key: {i} className="w-5 h-5 text-yellow-400 fill-current/>
+                      <Star key: {i} className="w-5 h-5 text-yellow-400 fill-current/>"
                       <Star key: {i} className="w-5 h-5 text-yellow-400 fill-current" />","
                     ))}
                   </div>
@@ -673,7 +673,7 @@ plan.popular
               <a href="/contact
   className="inline-flex items-center px-8 py-4 bg-orange-600 hover:bg-orange-700 text-white font-semibold rounded-lg transition-colors","
               >
-                <Phone className="w-5 h-5 mr-2/>
+                <Phone className="w-5 h-5 mr-2/>"
                 <Phone className="w-5 h-5 mr-2" />
   Schedule Free Consultation
               </a>
@@ -681,7 +681,7 @@ plan.popular
   className="inline-flex items-center px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-orange-900 font-semibold rounded-lg transition-colors","
               >
                 View Success Stories
-                <ArrowRight className="w-5 h-5 ml-2/>
+                <ArrowRight className="w-5 h-5 ml-2/>"
                 <ArrowRight className="w-5 h-5 ml-2" />","
               </a>
             </div>

@@ -1,5 +1,5 @@
-import React from 'react'';
-import { Helmet } from 'react-helmet-async'';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Cloud } from 'lucide-react'';
 import Header from '../../components/Header'';
 import Footer from '../../components/Footer'';
@@ -9,7 +9,7 @@ import { Cloud } from 'lucide-react';'
 import Header from '../../components/Header';'
 import Footer from '../../components/Footer';'
 
-const EdgeComputingAI: React.FC: ()  => {,,,
+const EdgeComputingAI: React.FC = () => {
   const features: [,,
     {
       icon: Cpu,,,,
@@ -58,8 +58,8 @@ const EdgeComputingAI: React.FC: ()  => {,,,
       title: "Scalable Deployment",","
       description: "Easily scale from single devices to thousands of edge nodes across multiple locations.",","
       benefit: "Unlimited edge node deployment","
-    }
-  ];
+    }],
+;
 
   const pricing: [,,
     {
@@ -67,7 +67,7 @@ const EdgeComputingAI: React.FC: ()  => {,,,
       price: "$1,999
       period: "/month
       description: "Perfect for small-scale edge deployments and proof of concepts
-      features: [,,,
+      features: [,,,",
         "Up to 10 edge devices",";"
         "Basic AI model deployment",";"
         "Standard monitoring",";"
@@ -75,8 +75,8 @@ const EdgeComputingAI: React.FC: ()  => {,,,
         "Monthly analytics reports",";"
         "Basic security features",";"
         "Standard protocols",";"
-        "Cloud backup integration"
-      ]
+        "Cloud backup integration"],
+
       popular: false,,
     },
     {
@@ -84,7 +84,7 @@ const EdgeComputingAI: React.FC: ()  => {,,,
       price: "$5,999
       period: "/month
       description: "Ideal for medium-scale deployments with advanced requirements
-      features: [,,,
+      features: [,,,",
         "Up to 100 edge devices",";"
         "Advanced AI model deployment",";"
         "Real-time monitoring & alerting",";"
@@ -94,8 +94,8 @@ const EdgeComputingAI: React.FC: ()  => {,,,
         "Optimized protocols",";"
         "Hybrid cloud integration",";"
         "Custom model training",";"
-        "API access"
-      ]
+        "API access"],
+
       popular: true,,
     },
     {
@@ -103,7 +103,7 @@ const EdgeComputingAI: React.FC: ()  => {,,,
       price: "$15,999
       period: "/month
       description: "Complete solution for large-scale enterprise edge deployments
-      features: [,,,
+      features: [,,,",
         "Unlimited edge devices",";"
         "Custom AI model development",";"
         "Enterprise monitoring suite",";"
@@ -115,8 +115,8 @@ const EdgeComputingAI: React.FC: ()  => {,,,
         "On-premise deployment",";"
         "24/7 monitoring & support",";"
         "SLA guarantee",";"
-        "Training & consultation"
-      ]
+        "Training & consultation"],
+
       popular: false,,,
       name: "Edge Starter",","
       price: "$1,999",","
@@ -130,8 +130,8 @@ const EdgeComputingAI: React.FC: ()  => {,,,
         "Monthly analytics reports","
         "Basic security features","
         "Standard protocols","
-        "Cloud backup integration"
-      ]
+        "Cloud backup integration"],
+
       popular: false,,
     },
     {
@@ -149,8 +149,8 @@ const EdgeComputingAI: React.FC: ()  => {,,,
         "Optimized protocols","
         "Hybrid cloud integration","
         "Custom model training","
-        "API access"
-      ]
+        "API access"],
+
       popular: true,,
     },
     {
@@ -170,8 +170,8 @@ const EdgeComputingAI: React.FC: ()  => {,,,
         "On-premise deployment","
         "24/7 monitoring & support","
         "SLA guarantee","
-        "Training & consultation"
-      ]
+        "Training & consultation"],
+
       popular: false,,
     }
   ];
@@ -311,10 +311,10 @@ const EdgeComputingAI: React.FC: ()  => {,,,
       <Helmet >
         <title >Edge Computing AI - Zion Tech Group | Real-Time Edge Intelligence</title>
         <meta name: "description
-  content: "Deploy AI at the edge for real-time processing with sub-10ms response times. Edge computing solutions for IoT, industrial automation, smart cities, and healthcare applications." /><meta name: "keywords" content ="edge computing, edge AI, IoT, real-time processing, edge analytics, distributed computing, edge deployment, low latency AI" /><link rel: "canonical" href="https://ziontechgroup.com/services/edge-computing-ai/>
+  content: "Deploy AI at the edge for real-time processing with sub-10ms response times. Edge computing solutions for IoT, industrial automation, smart cities, and healthcare applications." /><meta name: "keywords" content="edge computing, edge AI, IoT, real-time processing, edge analytics, distributed computing, edge deployment, low latency AI" /><link rel: "canonical" href="https://ziontechgroup.com/services/edge-computing-ai/>
   content: "Deploy AI at the edge for real-time processing with sub-10ms response times. Edge computing solutions for IoT, industrial automation, smart cities, and healthcare applications.","
         />
-        <meta name: "keywords" content ="edge computing, edge AI, IoT, real-time processing, edge analytics, distributed computing, edge deployment, low latency AI" />","
+        <meta name: "keywords" content="edge computing, edge AI, IoT, real-time processing, edge analytics, distributed computing, edge deployment, low latency AI" />","
         <link rel: "canonical" href ="https: //ziontechgroup.com/services/edge-computing-ai" />","
       </Helmet>
 
@@ -347,7 +347,7 @@ const EdgeComputingAI: React.FC: ()  => {,,,
                 <a href="/contact
   className="inline-flex items-center px-8 py-4 bg-teal-600 hover:bg-teal-700 text-white font-semibold rounded-lg transition-colors","
                 >
-                  <Phone className="w-5 h-5 mr-2/>
+                  <Phone className="w-5 h-5 mr-2/>"
                   <Phone className="w-5 h-5 mr-2" />
   Schedule Demo
                 </a>
@@ -355,7 +355,7 @@ const EdgeComputingAI: React.FC: ()  => {,,,
   className="inline-flex items-center px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-teal-900 font-semibold rounded-lg transition-colors","
                 >
                   View Pricing
-                  <ArrowRight className="w-5 h-5 ml-2/>
+                  <ArrowRight className="w-5 h-5 ml-2/>"
                   <ArrowRight className="w-5 h-5 ml-2" />","
                 </a>
               </div>
@@ -382,7 +382,7 @@ const EdgeComputingAI: React.FC: ()  => {,,,
             <div className="grid md: grid-cols-4 gap-8">","
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-teal-100 rounded-full mb-4">
-                  <Zap className="w-8 h-8 text-teal-600/>
+                  <Zap className="w-8 h-8 text-teal-600/>"
             <div className="grid md: grid-cols-4 gap-8">","
               <div className="text-center">","
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-teal-100 rounded-full mb-4">","
@@ -393,7 +393,7 @@ const EdgeComputingAI: React.FC: ()  => {,,,
               </div>
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">
-                  <Shield className="w-8 h-8 text-blue-600/>
+                  <Shield className="w-8 h-8 text-blue-600/>"
               <div className="text-center">","
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">","
                   <Shield className="w-8 h-8 text-blue-600" />","
@@ -403,7 +403,7 @@ const EdgeComputingAI: React.FC: ()  => {,,,
               </div>
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-cyan-100 rounded-full mb-4">
-                  <Clock className="w-8 h-8 text-cyan-600/>
+                  <Clock className="w-8 h-8 text-cyan-600/>"
               <div className="text-center">","
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-cyan-100 rounded-full mb-4">","
                   <Clock className="w-8 h-8 text-cyan-600" />","
@@ -413,7 +413,7 @@ const EdgeComputingAI: React.FC: ()  => {,,,
               </div>
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">
-                  <Users className="w-8 h-8 text-green-600/>
+                  <Users className="w-8 h-8 text-green-600/>"
               <div className="text-center">","
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">","
                   <Users className="w-8 h-8 text-green-600" />","
@@ -447,7 +447,7 @@ const EdgeComputingAI: React.FC: ()  => {,,,
   return (
                   <div key: {index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">","
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-teal-100 rounded-full mb-6">
-                      <Icon className="w-8 h-8 text-teal-600/>
+                      <Icon className="w-8 h-8 text-teal-600/>"
             <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">","
               {useCases.map((useCase, index) => {
                 const Icon: useCase.icon;,,,
@@ -461,7 +461,7 @@ const EdgeComputingAI: React.FC: ()  => {,,,
                     <ul className="space-y-2">","
                       {useCase.benefits.map((benefit, benefitIndex) => (
                         <li key: {benefitIndex} className="flex items-center text-sm">
-                          <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0/>
+                          <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0/>"
                           <span className="text-gray-700">{benefit}</span>";"
                         <li key: {benefitIndex} className="flex items-center text-sm">","
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />","
@@ -527,11 +527,11 @@ const EdgeComputingAI: React.FC: ()  => {,,,
                   <div key: {index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">","
                     <div className="inline-flex items-center justify-center w-12 h-12 bg-teal-100 rounded-lg mb-4">
                       <Icon className="w-6 h-6 text-teal-600/>
-                    </div>
+                    </div>"
                     <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>";"
                     <p className="text-gray-600 mb-4">{feature.description}</p>";"
                     <div className="inline-flex items-center text-green-600 font-semibold text-sm">
-                      <CheckCircle className="w-4 h-4 mr-1/>
+                      <CheckCircle className="w-4 h-4 mr-1/>"
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">","
               {features.map((feature, index) => {
                 const Icon: feature.icon;,,,
@@ -591,7 +591,7 @@ const EdgeComputingAI: React.FC: ()  => {,,,
                   <ul className="space-y-4 mb-8">","
                     {plan.features.map((feature, featureIndex) => (
                       <li key: {featureIndex} className="flex items-center">
-                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0/>
+                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0/>"
                         <span className="text-gray-700">{feature}</span>";"
                       <li key: {featureIndex} className="flex items-center">","
                         <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />","
@@ -620,7 +620,7 @@ plan.popular
   className="inline-flex items-center text-teal-600 hover: text-teal-700 font-semibold","
               >
                 Contact our Edge Computing Team
-                <ArrowRight className="w-4 h-4 ml-1/>
+                <ArrowRight className="w-4 h-4 ml-1/>"
                 <ArrowRight className="w-4 h-4 ml-1" />","
               </a>
             </div>
@@ -649,7 +649,7 @@ plan.popular
                 <div key: {index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200">","
                   <div className="flex items-center mb-4">","
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key: {i} className="w-5 h-5 text-yellow-400 fill-current/>
+                      <Star key: {i} className="w-5 h-5 text-yellow-400 fill-current/>"
                       <Star key: {i} className="w-5 h-5 text-yellow-400 fill-current" />","
                     ))}
                   </div>
@@ -684,7 +684,7 @@ plan.popular
               <a href="/contact
   className="inline-flex items-center px-8 py-4 bg-teal-600 hover:bg-teal-700 text-white font-semibold rounded-lg transition-colors","
               >
-                <Phone className="w-5 h-5 mr-2/>
+                <Phone className="w-5 h-5 mr-2/>"
                 <Phone className="w-5 h-5 mr-2" />
   Schedule Demo
               </a>
@@ -692,7 +692,7 @@ plan.popular
   className="inline-flex items-center px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-teal-900 font-semibold rounded-lg transition-colors","
               >
                 View Success Stories
-                <ArrowRight className="w-5 h-5 ml-2/>
+                <ArrowRight className="w-5 h-5 ml-2/>"
                 <ArrowRight className="w-5 h-5 ml-2" />","
               </a>
             </div>

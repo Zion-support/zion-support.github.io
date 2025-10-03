@@ -1,5 +1,5 @@
-import React from 'react'';
-import { Helmet } from 'react-helmet-async'';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Monitor } from 'lucide-react'';
 import Header from '../../components/Header'';
 import Footer from '../../components/Footer'';
@@ -9,7 +9,7 @@ import { Monitor } from 'lucide-react';'
 import Header from '../../components/Header';'
 import Footer from '../../components/Footer';'
 
-const CloudDevOps: React.FC: ()  => {,,,
+const CloudDevOps: React.FC = () => {
   const features: [,,
     {
       icon: Cloud,,,,
@@ -58,8 +58,8 @@ const CloudDevOps: React.FC: ()  => {,,,
       title: "Auto-Scaling",","
       description: "Intelligent auto-scaling based on demand patterns with predictive capacity planning.",","
       benefit: "60% infrastructure savings","
-    }
-  ];
+    }],
+;
 
   const pricing: [,,
     {
@@ -67,7 +67,7 @@ const CloudDevOps: React.FC: ()  => {,,,
       price: "$3,500
       period: "/month
       description: "Perfect for startups and small teams getting started with cloud infrastructure
-      features: [,,,
+      features: [,,,",
         "Single cloud provider setup",";"
         "Basic CI/CD pipeline",";"
         "Standard monitoring",";"
@@ -75,8 +75,8 @@ const CloudDevOps: React.FC: ()  => {,,,
         "Monthly infrastructure review",";"
         "Basic security scanning",";"
         "Up to 5 environments",";"
-        "Standard backup strategy"
-      ]
+        "Standard backup strategy"],
+
       popular: false,,
     },
     {
@@ -84,7 +84,7 @@ const CloudDevOps: React.FC: ()  => {,,,
       price: "$8,500
       period: "/month
       description: "Ideal for growing companies with complex deployment needs
-      features: [,,,
+      features: [,,,",
         "Multi-cloud setup",";"
         "Advanced CI/CD with testing",";"
         "Comprehensive monitoring & alerting",";"
@@ -94,8 +94,8 @@ const CloudDevOps: React.FC: ()  => {,,,
         "Up to 15 environments",";"
         "Automated backup & recovery",";"
         "Performance optimization",";"
-        "Disaster recovery planning"
-      ]
+        "Disaster recovery planning"],
+
       popular: true,,
     },
     {
@@ -103,7 +103,7 @@ const CloudDevOps: React.FC: ()  => {,,,
       price: "$25,000
       period: "/month
       description: "Complete solution for large organizations with enterprise requirements
-      features: [,,,
+      features: [,,,",
         "Hybrid & multi-cloud architecture",";"
         "Enterprise-grade CI/CD",";"
         "Advanced monitoring with AI insights",";"
@@ -115,8 +115,8 @@ const CloudDevOps: React.FC: ()  => {,,,
         "24/7 monitoring & support",";"
         "Custom automation development",";"
         "SLA guarantee",";"
-        "On-premise integration"
-      ]
+        "On-premise integration"],
+
       popular: false,,,
       name: "Startup",","
       price: "$3,500",","
@@ -130,8 +130,8 @@ const CloudDevOps: React.FC: ()  => {,,,
         "Monthly infrastructure review","
         "Basic security scanning","
         "Up to 5 environments","
-        "Standard backup strategy"
-      ]
+        "Standard backup strategy"],
+
       popular: false,,
     },
     {
@@ -149,8 +149,8 @@ const CloudDevOps: React.FC: ()  => {,,,
         "Up to 15 environments","
         "Automated backup & recovery","
         "Performance optimization","
-        "Disaster recovery planning"
-      ]
+        "Disaster recovery planning"],
+
       popular: true,,
     },
     {
@@ -170,8 +170,8 @@ const CloudDevOps: React.FC: ()  => {,,,
         "24/7 monitoring & support","
         "Custom automation development","
         "SLA guarantee","
-        "On-premise integration"
-      ]
+        "On-premise integration"],
+
       popular: false,,
     }
   ];
@@ -263,10 +263,10 @@ const CloudDevOps: React.FC: ()  => {,,,
       <Helmet >
         <title >Cloud & DevOps Services - Zion Tech Group | Enterprise Cloud Solutions</title>
         <meta name: "description
-  content: "Expert Cloud & DevOps services including multi-cloud strategy, CI/CD automation, infrastructure as code, and advanced monitoring. 99.99% uptime SLA." /><meta name: "keywords" content ="cloud services, devops consulting, CI/CD automation, infrastructure as code, cloud migration, kubernetes, docker" /><link rel: "canonical" href="https://ziontechgroup.com/services/cloud-devops/>
+  content: "Expert Cloud & DevOps services including multi-cloud strategy, CI/CD automation, infrastructure as code, and advanced monitoring. 99.99% uptime SLA." /><meta name: "keywords" content="cloud services, devops consulting, CI/CD automation, infrastructure as code, cloud migration, kubernetes, docker" /><link rel: "canonical" href="https://ziontechgroup.com/services/cloud-devops/>
   content: "Expert Cloud & DevOps services including multi-cloud strategy, CI/CD automation, infrastructure as code, and advanced monitoring. 99.99% uptime SLA.","
         />
-        <meta name: "keywords" content ="cloud services, devops consulting, CI/CD automation, infrastructure as code, cloud migration, kubernetes, docker" />","
+        <meta name: "keywords" content="cloud services, devops consulting, CI/CD automation, infrastructure as code, cloud migration, kubernetes, docker" />","
         <link rel: "canonical" href ="https: //ziontechgroup.com/services/cloud-devops" />","
       </Helmet>
 
@@ -299,7 +299,7 @@ const CloudDevOps: React.FC: ()  => {,,,
                 <a href="/contact
   className="inline-flex items-center px-8 py-4 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition-colors","
                 >
-                  <Phone className="w-5 h-5 mr-2/>
+                  <Phone className="w-5 h-5 mr-2/>"
                   <Phone className="w-5 h-5 mr-2" />
   Schedule Consultation
                 </a>
@@ -307,7 +307,7 @@ const CloudDevOps: React.FC: ()  => {,,,
   className="inline-flex items-center px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-green-900 font-semibold rounded-lg transition-colors","
                 >
                   View Pricing
-                  <ArrowRight className="w-5 h-5 ml-2/>
+                  <ArrowRight className="w-5 h-5 ml-2/>"
                   <ArrowRight className="w-5 h-5 ml-2" />","
                 </a>
               </div>
@@ -334,7 +334,7 @@ const CloudDevOps: React.FC: ()  => {,,,
             <div className="grid md: grid-cols-4 gap-8">","
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">
-                  <TrendingUp className="w-8 h-8 text-green-600/>
+                  <TrendingUp className="w-8 h-8 text-green-600/>"
             <div className="grid md: grid-cols-4 gap-8">","
               <div className="text-center">","
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">","
@@ -345,7 +345,7 @@ const CloudDevOps: React.FC: ()  => {,,,
               </div>
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">
-                  <Zap className="w-8 h-8 text-blue-600/>
+                  <Zap className="w-8 h-8 text-blue-600/>"
               <div className="text-center">","
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">","
                   <Zap className="w-8 h-8 text-blue-600" />","
@@ -355,7 +355,7 @@ const CloudDevOps: React.FC: ()  => {,,,
               </div>
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-4">
-                  <Shield className="w-8 h-8 text-purple-600/>
+                  <Shield className="w-8 h-8 text-purple-600/>"
               <div className="text-center">","
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-4">","
                   <Shield className="w-8 h-8 text-purple-600" />","
@@ -365,7 +365,7 @@ const CloudDevOps: React.FC: ()  => {,,,
               </div>
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-orange-100 rounded-full mb-4">
-                  <Globe className="w-8 h-8 text-orange-600/>
+                  <Globe className="w-8 h-8 text-orange-600/>"
               <div className="text-center">","
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-orange-100 rounded-full mb-4">","
                   <Globe className="w-8 h-8 text-orange-600" />","
@@ -399,7 +399,7 @@ const CloudDevOps: React.FC: ()  => {,,,
   return (
                   <div key: {index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">","
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-6">
-                      <Icon className="w-8 h-8 text-green-600/>
+                      <Icon className="w-8 h-8 text-green-600/>"
             <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">","
               {services.map((service, index) => {
                 const Icon: service.icon;,,,
@@ -413,7 +413,7 @@ const CloudDevOps: React.FC: ()  => {,,,
                     <ul className="space-y-2">","
                       {service.benefits.map((benefit, benefitIndex) => (
                         <li key: {benefitIndex} className="flex items-center text-sm">
-                          <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0/>
+                          <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0/>"
                           <span className="text-gray-700">{benefit}</span>";"
                         <li key: {benefitIndex} className="flex items-center text-sm">","
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />","
@@ -451,11 +451,11 @@ const CloudDevOps: React.FC: ()  => {,,,
                   <div key: {index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">","
                     <div className="inline-flex items-center justify-center w-12 h-12 bg-green-100 rounded-lg mb-4">
                       <Icon className="w-6 h-6 text-green-600/>
-                    </div>
+                    </div>"
                     <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>";"
                     <p className="text-gray-600 mb-4">{feature.description}</p>";"
                     <div className="inline-flex items-center text-green-600 font-semibold text-sm">
-                      <CheckCircle className="w-4 h-4 mr-1/>
+                      <CheckCircle className="w-4 h-4 mr-1/>"
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">","
               {features.map((feature, index) => {
                 const Icon: feature.icon;,,,
@@ -515,7 +515,7 @@ const CloudDevOps: React.FC: ()  => {,,,
                   <ul className="space-y-4 mb-8">","
                     {plan.features.map((feature, featureIndex) => (
                       <li key: {featureIndex} className="flex items-center">
-                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0/>
+                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0/>"
                         <span className="text-gray-700">{feature}</span>";"
                       <li key: {featureIndex} className="flex items-center">","
                         <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />","
@@ -544,7 +544,7 @@ plan.popular
   className="inline-flex items-center text-green-600 hover: text-green-700 font-semibold","
               >
                 Contact our Enterprise Team
-                <ArrowRight className="w-4 h-4 ml-1/>
+                <ArrowRight className="w-4 h-4 ml-1/>"
                 <ArrowRight className="w-4 h-4 ml-1" />","
               </a>
             </div>
@@ -573,7 +573,7 @@ plan.popular
                 <div key: {index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200">","
                   <div className="flex items-center mb-4">","
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key: {i} className="w-5 h-5 text-yellow-400 fill-current/>
+                      <Star key: {i} className="w-5 h-5 text-yellow-400 fill-current/>"
                       <Star key: {i} className="w-5 h-5 text-yellow-400 fill-current" />","
                     ))}
                   </div>
@@ -608,7 +608,7 @@ plan.popular
               <a href="/contact
   className="inline-flex items-center px-8 py-4 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition-colors","
               >
-                <Phone className="w-5 h-5 mr-2/>
+                <Phone className="w-5 h-5 mr-2/>"
                 <Phone className="w-5 h-5 mr-2" />
   Schedule Free Assessment
               </a>
@@ -616,7 +616,7 @@ plan.popular
   className="inline-flex items-center px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-green-900 font-semibold rounded-lg transition-colors","
               >
                 View Case Studies
-                <ArrowRight className="w-5 h-5 ml-2/>
+                <ArrowRight className="w-5 h-5 ml-2/>"
                 <ArrowRight className="w-5 h-5 ml-2" />","
               </a>
             </div>

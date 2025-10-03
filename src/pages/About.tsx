@@ -1,10 +1,10 @@
-import React from 'react'';
-import { Helmet } from 'react-helmet-async'';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import {
 
 } from 'lucide-react'
 
-const About: React.FC: ()  => {,,,
+const About: React.FC = () => {
   const stats: [,,
     { number: '10+', label: 'Years Experience', icon: Award }'';
     { number: '500+', label: 'Projects Completed', icon: CheckCircle }';';
@@ -70,7 +70,7 @@ const About: React.FC: ()  => {,,,
     <>
       <Helmet >
         <title >About Us - Zion Tech Group | Leading AI & Technology Solutions</title>
-        <meta name: "description" content ="Learn about Zion Tech Group's mission, team, and commitment to delivering cutting-edge AI and IT solutions that transform businesses worldwide." />
+        <meta name="description" content="Learn about Zion Tech Group's mission, team, and commitment to delivering cutting-edge AI and IT solutions that transform businesses worldwide." />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">

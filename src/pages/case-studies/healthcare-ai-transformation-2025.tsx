@@ -20,7 +20,7 @@ const HealthcareAITransformation: () => {
           <Link to: "/case-studies
   className="inline-flex items-center text-zion-cyan hover: text-zion-blue-light mb-8 transition-colors","
           >
-            <ArrowLeft className="w-4 h-4 mr-2/>
+            <ArrowLeft className="w-4 h-4 mr-2/>"
             <ArrowLeft className="w-4 h-4 mr-2" />
   Back to Case Studies
           </Link>
@@ -179,7 +179,7 @@ const HealthcareAITransformation: () => {
                   <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
                     <Heart className="w-6 h-6 text-blue-400/>,
   AI-Powered Patient Intake
-                  </h3>
+                  </h3>"
                   <p className="mb-4">,
   Intelligent intake system using NLP to automatically process patient information
                     insurance verification, and medical history—reducing registration time from 24 
@@ -189,13 +189,13 @@ const HealthcareAITransformation: () => {
                     <li className="flex items-center gap-2">
                       <CheckCircle className="w-4 h-4 text-green-400/>
                       <span >87% faster patient registration</span>
-                    </li>
+                    </li>"
                     <li className="flex items-center gap-2">
                       <CheckCircle className="w-4 h-4 text-green-400/>
                       <span >98.4% insurance verification accuracy</span>
-                    </li>
+                    </li>"
                     <li className="flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-400/>
+                      <CheckCircle className="w-4 h-4 text-green-400/>"
               <div className="grid md: grid-cols-2 gap-6">","
                 <div className="bg-gradient-to-br from-blue-900/40 to-cyan-900/40 rounded-xl p-6 border border-blue-500/30">","
                   <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">","
@@ -225,7 +225,7 @@ const HealthcareAITransformation: () => {
 
                 <div className="bg-gradient-to-br from-purple-900/40 to-pink-900/40 rounded-xl p-6 border border-purple-500/30">
                   <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
-                    <Zap className="w-6 h-6 text-purple-400/>
+                    <Zap className="w-6 h-6 text-purple-400/>"
                 <div className="bg-gradient-to-br from-purple-900/40 to-pink-900/40 rounded-xl p-6 border border-purple-500/30">","
                   <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">","
                     <Zap className="w-6 h-6 text-purple-400" />
@@ -239,13 +239,13 @@ const HealthcareAITransformation: () => {
                     <li className="flex items-center gap-2">
                       <CheckCircle className="w-4 h-4 text-green-400/>
                       <span >94% diagnostic accuracy improvement</span>
-                    </li>
+                    </li>"
                     <li className="flex items-center gap-2">
                       <CheckCircle className="w-4 h-4 text-green-400/>
                       <span >63% reduction in unnecessary tests</span>
-                    </li>
+                    </li>"
                     <li className="flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-400/>
+                      <CheckCircle className="w-4 h-4 text-green-400/>"
                   <ul className="space-y-2 text-sm">","
                     <li className="flex items-center gap-2">","
                       <CheckCircle className="w-4 h-4 text-green-400" />","
@@ -264,7 +264,7 @@ const HealthcareAITransformation: () => {
 
                 <div className="bg-gradient-to-br from-green-900/40 to-teal-900/40 rounded-xl p-6 border border-green-500/30">
                   <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
-                    <Target className="w-6 h-6 text-green-400/>
+                    <Target className="w-6 h-6 text-green-400/>"
                 <div className="bg-gradient-to-br from-green-900/40 to-teal-900/40 rounded-xl p-6 border border-green-500/30">","
                   <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">","
                     <Target className="w-6 h-6 text-green-400" />
@@ -278,13 +278,13 @@ const HealthcareAITransformation: () => {
                     <li className="flex items-center gap-2">
                       <CheckCircle className="w-4 h-4 text-green-400/>
                       <span >Claims processing: 28 days → 3.2 days</span>,,
-                    </li>
+                    </li>"
                     <li className="flex items-center gap-2">
                       <CheckCircle className="w-4 h-4 text-green-400/>
                       <span >$89M reduction in admin costs (72%)</span>
-                    </li>
+                    </li>"
                     <li className="flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-400/>
+                      <CheckCircle className="w-4 h-4 text-green-400/>"
                   <ul className="space-y-2 text-sm">","
                     <li className="flex items-center gap-2">","
                       <CheckCircle className="w-4 h-4 text-green-400" />","
@@ -303,7 +303,7 @@ const HealthcareAITransformation: () => {
 
                 <div className="bg-gradient-to-br from-red-900/40 to-orange-900/40 rounded-xl p-6 border border-red-500/30">
                   <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
-                    <Users className="w-6 h-6 text-red-400/>
+                    <Users className="w-6 h-6 text-red-400/>"
                 <div className="bg-gradient-to-br from-red-900/40 to-orange-900/40 rounded-xl p-6 border border-red-500/30">","
                   <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">","
                     <Users className="w-6 h-6 text-red-400" />
@@ -317,13 +317,13 @@ const HealthcareAITransformation: () => {
                     <li className="flex items-center gap-2">
                       <CheckCircle className="w-4 h-4 text-green-400/>
                       <span >58% reduction in readmissions (18.7% → 7.8%)</span>
-                    </li>
+                    </li>"
                     <li className="flex items-center gap-2">
                       <CheckCircle className="w-4 h-4 text-green-400/>
                       <span >Early intervention for 34,000+ high-risk patients</span>
-                    </li>
+                    </li>"
                     <li className="flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-400/>
+                      <CheckCircle className="w-4 h-4 text-green-400/>"
                   <ul className="space-y-2 text-sm">","
                     <li className="flex items-center gap-2">","
                       <CheckCircle className="w-4 h-4 text-green-400" />","
@@ -458,7 +458,7 @@ const HealthcareAITransformation: () => {
 
             {/* Call to Action */}
             <section className="bg-gradient-to-r from-red-900/60 to-pink-900/60 rounded-2xl p-12 border-2 border-red-500/40 text-center">
-              <Heart className="w-16 h-16 text-red-400 mx-auto mb-6/>
+              <Heart className="w-16 h-16 text-red-400 mx-auto mb-6/>"
               <h2 className="text-4xl font-bold text-white mb-6">
             <section className="bg-gradient-to-r from-red-900/60 to-pink-900/60 rounded-2xl p-12 border-2 border-red-500/40 text-center">","
               <Heart className="w-16 h-16 text-red-400 mx-auto mb-6" />","
@@ -475,14 +475,14 @@ const HealthcareAITransformation: () => {
                 <Link to: "/contact
   className="inline-flex items-center justify-center gap-2 bg-red-500 hover:bg-red-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg","
                 >
-                  <Heart className="w-5 h-5/>
+                  <Heart className="w-5 h-5/>"
                   <Heart className="w-5 h-5" />
   Schedule Healthcare AI Consultation
                 </Link>
                 <Link to: "/case-studies
   className="inline-flex items-center justify-center gap-2 border-2 border-red-400 text-red-300 hover:bg-red-500/20 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105","
                 >
-                  <TrendingUp className="w-5 h-5/>
+                  <TrendingUp className="w-5 h-5/>"
                   <TrendingUp className="w-5 h-5" />
   View More Success Stories
                 </Link>

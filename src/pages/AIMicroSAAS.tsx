@@ -12,14 +12,13 @@ export default function AIMicroSAAS(): React.JSX.Element {
       eta: "1-2 weeks",
       category: "Content AI",
       icon: Target,
-      features: [
-        "AI-generated blog posts, social media content, and email campaigns",
+      features: ["AI-generated blog posts, social media content, and email campaigns",
         "SEO optimization with real-time keyword analysis",
         "Brand voice consistency across all content",
         "A/B testing and performance analytics",
         "Multi-language content generation with cultural adaptation",
-        "Content calendar automation and scheduling"
-      ],
+        "Content calendar automation and scheduling"],
+,
       benefits: [
         "10x faster content creation",
         "40% improvement in engagement rates",
@@ -38,14 +37,13 @@ export default function AIMicroSAAS(): React.JSX.Element {
       eta: "1-2 weeks",
       category: "Process Automation",
       icon: Zap,
-      features: [
-        "Visual workflow builder with drag-and-drop interface",
+      features: ["Visual workflow builder with drag-and-drop interface",
         "500+ pre-built integrations (Slack, Salesforce, HubSpot, etc.)",
         "AI-powered process discovery and optimization suggestions",
         "Real-time monitoring and performance analytics",
         "Custom trigger and action creation",
-        "Multi-user collaboration and approval workflows"
-      ],
+        "Multi-user collaboration and approval workflows"],
+,
       benefits: [
         "80% reduction in manual tasks",
         "50% faster process completion",

@@ -20,7 +20,7 @@ const Fortune100AutonomousOperationsTransformation: () => {
           <Link to: "/case-studies
   className="inline-flex items-center text-cyan-400 hover: text-cyan-300 mb-8 transition-colors","
           >
-            <ArrowLeft className="w-4 h-4 mr-2/>
+            <ArrowLeft className="w-4 h-4 mr-2/>"
             <ArrowLeft className="w-4 h-4 mr-2" />
   Back to Case Studies
           </Link>
@@ -52,22 +52,22 @@ const Fortune100AutonomousOperationsTransformation: () => {
             {/* Key Metrics */}
             <div className="grid grid-cols-2 md: grid-cols-4 gap-6">","
               <div className="bg-gradient-to-br from-green-900/60 to-emerald-900/60 backdrop-blur-sm rounded-xl p-6 border border-green-400/30">
-                <DollarSign className="w-8 h-8 text-green-400 mb-2/>
+                <DollarSign className="w-8 h-8 text-green-400 mb-2/>"
                 <div className="text-3xl font-bold text-white mb-1">$650M</div>
                 <div className="text-green-200 text-sm">Annual Value Creation</div>
               </div>
               <div className="bg-gradient-to-br from-blue-900/60 to-cyan-900/60 backdrop-blur-sm rounded-xl p-6 border border-blue-400/30">
-                <TrendingUp className="w-8 h-8 text-blue-400 mb-2/>
+                <TrendingUp className="w-8 h-8 text-blue-400 mb-2/>"
                 <div className="text-3xl font-bold text-white mb-1">85%</div>
                 <div className="text-blue-200 text-sm">Cost Reduction</div>
               </div>
               <div className="bg-gradient-to-br from-purple-900/60 to-pink-900/60 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30">
-                <Zap className="w-8 h-8 text-purple-400 mb-2/>
+                <Zap className="w-8 h-8 text-purple-400 mb-2/>"
                 <div className="text-3xl font-bold text-white mb-1">99.7%</div>
                 <div className="text-purple-200 text-sm">Accuracy Rate</div>
               </div>
               <div className="bg-gradient-to-br from-orange-900/60 to-red-900/60 backdrop-blur-sm rounded-xl p-6 border border-orange-400/30">
-                <Users className="w-8 h-8 text-orange-400 mb-2/>
+                <Users className="w-8 h-8 text-orange-400 mb-2/>"
                 <div className="text-3xl font-bold text-white mb-1">3,611%</div>
                 <div className="text-orange-200 text-sm">3-Year ROI</div>
             <div className="grid grid-cols-2 md: grid-cols-4 gap-6">","
@@ -158,21 +158,21 @@ const Fortune100AutonomousOperationsTransformation: () => {
                   <li className="flex items-start gap-2">
                     <CheckCircle className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0/>
                     <span >Reduce operational costs by 60%+ within 18 months</span>
-                  </li>
+                  </li>"
                   <li className="flex items-start gap-2">
                     <CheckCircle className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0/>
                     <span >Improve processing speed by 10x</span>
-                  </li>
+                  </li>"
                   <li className="flex items-start gap-2">
                     <CheckCircle className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0/>
                     <span >Achieve 99.5%+ accuracy across all operations</span>
-                  </li>
+                  </li>"
                   <li className="flex items-start gap-2">
                     <CheckCircle className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0/>
                     <span >Enable 24/7 global operations without offshore labor</span>
-                  </li>
+                  </li>"
                   <li className="flex items-start gap-2">
-                    <CheckCircle className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0/>
+                    <CheckCircle className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0/>"
               <div className="bg-gradient-to-br from-yellow-900/40 to-amber-900/40 backdrop-blur-sm rounded-xl p-8 border border-yellow-400/30">","
                 <h3 className="text-2xl font-bold text-white mb-4">Strategic Imperatives</h3>","
                 <ul className="space-y-3 text-yellow-100">","
@@ -290,7 +290,7 @@ const Fortune100AutonomousOperationsTransformation: () => {
                 <DollarSign className="w-8 h-8 text-green-400/>,
   Financial Impact: $650M+ Annual Value,,
               </h3>
-              
+              "
               <div className="grid md: grid-cols-3 gap-6 mb-8">","
                 <div className="bg-green-800/30 rounded-xl p-6 border border-green-400/30">
                   <div className="text-4xl font-bold text-green-300 mb-2">$443M</div>
@@ -346,7 +346,7 @@ const Fortune100AutonomousOperationsTransformation: () => {
                 <h3 className="text-2xl font-bold text-white mb-6">Speed & Scale</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0/>
+                    <CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0/>"
             <div className="grid md: grid-cols-2 gap-8 mb-8">","
               <div className="bg-gradient-to-br from-blue-900/60 to-cyan-900/60 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30">","
                 <h3 className="text-2xl font-bold text-white mb-6">Speed & Scale</h3>","
@@ -359,7 +359,7 @@ const Fortune100AutonomousOperationsTransformation: () => {
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0/>
+                    <CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0/>"
                   <li className="flex items-start gap-3">","
                     <CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />","
                     <div >
@@ -368,7 +368,7 @@ const Fortune100AutonomousOperationsTransformation: () => {
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0/>
+                    <CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0/>"
                   <li className="flex items-start gap-3">","
                     <CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />","
                     <div >
@@ -383,7 +383,7 @@ const Fortune100AutonomousOperationsTransformation: () => {
                 <h3 className="text-2xl font-bold text-white mb-6">Quality & Accuracy</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-purple-400 mt-1 flex-shrink-0/>
+                    <CheckCircle className="w-5 h-5 text-purple-400 mt-1 flex-shrink-0/>"
               <div className="bg-gradient-to-br from-purple-900/60 to-pink-900/60 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30">","
                 <h3 className="text-2xl font-bold text-white mb-6">Quality & Accuracy</h3>","
                 <ul className="space-y-3">","
@@ -395,7 +395,7 @@ const Fortune100AutonomousOperationsTransformation: () => {
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-purple-400 mt-1 flex-shrink-0/>
+                    <CheckCircle className="w-5 h-5 text-purple-400 mt-1 flex-shrink-0/>"
                   <li className="flex items-start gap-3">","
                     <CheckCircle className="w-5 h-5 text-purple-400 mt-1 flex-shrink-0" />","
                     <div >
@@ -404,7 +404,7 @@ const Fortune100AutonomousOperationsTransformation: () => {
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-purple-400 mt-1 flex-shrink-0/>
+                    <CheckCircle className="w-5 h-5 text-purple-400 mt-1 flex-shrink-0/>"
                   <li className="flex items-start gap-3">","
                     <CheckCircle className="w-5 h-5 text-purple-400 mt-1 flex-shrink-0" />","
                     <div >
@@ -560,7 +560,7 @@ const Fortune100AutonomousOperationsTransformation: () => {
   className="inline-flex items-center justify-center gap-2 bg-white text-green-600 hover:bg-green-50 px-8 py-4 rounded-lg font-bold text-lg transition-all shadow-xl","
                 >
                   Explore Our Services
-                  <ArrowRight className="w-5 h-5/>
+                  <ArrowRight className="w-5 h-5/>"
                   <ArrowRight className="w-5 h-5" />","
                 </Link>
                 <Link to: "/contact

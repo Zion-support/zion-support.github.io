@@ -1,5 +1,5 @@
-import React from 'react'';
-import { Helmet } from 'react-helmet-async'';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Video } from 'lucide-react'';
 import Header from '../../components/Header'';
 import Footer from '../../components/Footer'';
@@ -9,7 +9,7 @@ import { Video } from 'lucide-react';'
 import Header from '../../components/Header';'
 import Footer from '../../components/Footer';'
 
-const ConversationalAI: React.FC: ()  => {,,,
+const ConversationalAI: React.FC = () => {
   const features: [,,
     {
       icon: Brain,,,,
@@ -58,8 +58,8 @@ const ConversationalAI: React.FC: ()  => {,,,
       title: "Human-AI Collaboration",","
       description: "Seamless handoff between AI and human agents with full context preservation.",","
       benefit: "Perfect escalation flow","
-    }
-  ];
+    }],
+;
 
   const pricing: [,,
     {
@@ -67,7 +67,7 @@ const ConversationalAI: React.FC: ()  => {,,,
       price: "$399
       period: "/month
       description: "Perfect for small businesses wanting to add conversational AI capabilities
-      features: [,,,
+      features: [,,,",
         "Up to 1,000 conversations/month",";"
         "Basic NLP capabilities",";"
         "Text & voice support",";"
@@ -75,8 +75,8 @@ const ConversationalAI: React.FC: ()  => {,,,
         "Basic analytics",";"
         "Standard integrations",";"
         "5 language support",";"
-        "Basic customization"
-      ]
+        "Basic customization"],
+
       popular: false,,
     },
     {
@@ -84,7 +84,7 @@ const ConversationalAI: React.FC: ()  => {,,,
       price: "$1,299
       period: "/month
       description: "Ideal for growing companies with complex conversational needs
-      features: [,,,
+      features: [,,,",
         "Up to 10,000 conversations/month",";"
         "Advanced NLP & NLU",";"
         "Text, voice & video support",";"
@@ -95,8 +95,8 @@ const ConversationalAI: React.FC: ()  => {,,,
         "Custom model training",";"
         "API access",";"
         "A/B testing",";"
-        "Sentiment analysis"
-      ]
+        "Sentiment analysis"],
+
       popular: true,,
     },
     {
@@ -104,7 +104,7 @@ const ConversationalAI: React.FC: ()  => {,,,
       price: "$4,999
       period: "/month
       description: "Complete solution for large organizations with enterprise requirements
-      features: [,,,
+      features: [,,,",
         "Unlimited conversations",";"
         "Enterprise NLP & NLU",";"
         "Full multi-modal support",";"
@@ -117,8 +117,8 @@ const ConversationalAI: React.FC: ()  => {,,,
         "Advanced security features",";"
         "SLA guarantee",";"
         "On-premise deployment",";"
-        "Training & consultation"
-      ]
+        "Training & consultation"],
+
       popular: false,,,
       name: "Starter",","
       price: "$399",","
@@ -132,8 +132,8 @@ const ConversationalAI: React.FC: ()  => {,,,
         "Basic analytics","
         "Standard integrations","
         "5 language support","
-        "Basic customization"
-      ]
+        "Basic customization"],
+
       popular: false,,
     },
     {
@@ -152,8 +152,8 @@ const ConversationalAI: React.FC: ()  => {,,,
         "Custom model training","
         "API access","
         "A/B testing","
-        "Sentiment analysis"
-      ]
+        "Sentiment analysis"],
+
       popular: true,,
     },
     {
@@ -174,8 +174,8 @@ const ConversationalAI: React.FC: ()  => {,,,
         "Advanced security features","
         "SLA guarantee","
         "On-premise deployment","
-        "Training & consultation"
-      ]
+        "Training & consultation"],
+
       popular: false,,
     }
   ];
@@ -306,10 +306,10 @@ const ConversationalAI: React.FC: ()  => {,,,
       <Helmet >
         <title >Conversational AI - Zion Tech Group | Advanced Multi-Modal AI Conversations</title>
         <meta name: "description
-  content: "Deploy advanced conversational AI with 96% accuracy, 150+ language support, and multi-modal conversations. Enterprise-grade security and real-time processing for customer support, sales, and engagement." /><meta name: "keywords" content ="conversational AI, chatbot, voice AI, multi-modal AI, customer support AI, sales automation, natural language processing, AI conversations" /><link rel: "canonical" href="https://ziontechgroup.com/services/conversational-ai/>
+  content: "Deploy advanced conversational AI with 96% accuracy, 150+ language support, and multi-modal conversations. Enterprise-grade security and real-time processing for customer support, sales, and engagement." /><meta name: "keywords" content="conversational AI, chatbot, voice AI, multi-modal AI, customer support AI, sales automation, natural language processing, AI conversations" /><link rel: "canonical" href="https://ziontechgroup.com/services/conversational-ai/>
   content: "Deploy advanced conversational AI with 96% accuracy, 150+ language support, and multi-modal conversations. Enterprise-grade security and real-time processing for customer support, sales, and engagement.","
         />
-        <meta name: "keywords" content ="conversational AI, chatbot, voice AI, multi-modal AI, customer support AI, sales automation, natural language processing, AI conversations" />","
+        <meta name: "keywords" content="conversational AI, chatbot, voice AI, multi-modal AI, customer support AI, sales automation, natural language processing, AI conversations" />","
         <link rel: "canonical" href ="https: //ziontechgroup.com/services/conversational-ai" />","
       </Helmet>
 
@@ -342,7 +342,7 @@ const ConversationalAI: React.FC: ()  => {,,,
                 <a href="/contact
   className="inline-flex items-center px-8 py-4 bg-violet-600 hover:bg-violet-700 text-white font-semibold rounded-lg transition-colors","
                 >
-                  <Phone className="w-5 h-5 mr-2/>
+                  <Phone className="w-5 h-5 mr-2/>"
                   <Phone className="w-5 h-5 mr-2" />
   Schedule Demo
                 </a>
@@ -350,7 +350,7 @@ const ConversationalAI: React.FC: ()  => {,,,
   className="inline-flex items-center px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-violet-900 font-semibold rounded-lg transition-colors","
                 >
                   View Pricing
-                  <ArrowRight className="w-5 h-5 ml-2/>
+                  <ArrowRight className="w-5 h-5 ml-2/>"
                   <ArrowRight className="w-5 h-5 ml-2" />","
                 </a>
               </div>
@@ -377,7 +377,7 @@ const ConversationalAI: React.FC: ()  => {,,,
             <div className="grid md: grid-cols-4 gap-8">","
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-violet-100 rounded-full mb-4">
-                  <Brain className="w-8 h-8 text-violet-600/>
+                  <Brain className="w-8 h-8 text-violet-600/>"
             <div className="grid md: grid-cols-4 gap-8">","
               <div className="text-center">","
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-violet-100 rounded-full mb-4">","
@@ -388,7 +388,7 @@ const ConversationalAI: React.FC: ()  => {,,,
               </div>
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-4">
-                  <Clock className="w-8 h-8 text-purple-600/>
+                  <Clock className="w-8 h-8 text-purple-600/>"
               <div className="text-center">","
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-4">","
                   <Clock className="w-8 h-8 text-purple-600" />","
@@ -398,7 +398,7 @@ const ConversationalAI: React.FC: ()  => {,,,
               </div>
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-pink-100 rounded-full mb-4">
-                  <Languages className="w-8 h-8 text-pink-600/>
+                  <Languages className="w-8 h-8 text-pink-600/>"
               <div className="text-center">","
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-pink-100 rounded-full mb-4">","
                   <Languages className="w-8 h-8 text-pink-600" />","
@@ -408,7 +408,7 @@ const ConversationalAI: React.FC: ()  => {,,,
               </div>
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">
-                  <Shield className="w-8 h-8 text-blue-600/>
+                  <Shield className="w-8 h-8 text-blue-600/>"
               <div className="text-center">","
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">","
                   <Shield className="w-8 h-8 text-blue-600" />","
@@ -442,7 +442,7 @@ const ConversationalAI: React.FC: ()  => {,,,
   return (
                   <div key: {index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">","
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-violet-100 rounded-full mb-6">
-                      <Icon className="w-8 h-8 text-violet-600/>
+                      <Icon className="w-8 h-8 text-violet-600/>"
             <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">","
               {useCases.map((useCase, index) => {
                 const Icon: useCase.icon;,,,
@@ -456,7 +456,7 @@ const ConversationalAI: React.FC: ()  => {,,,
                     <ul className="space-y-2">","
                       {useCase.benefits.map((benefit, benefitIndex) => (
                         <li key: {benefitIndex} className="flex items-center text-sm">
-                          <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0/>
+                          <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0/>"
                           <span className="text-gray-700">{benefit}</span>";"
                         <li key: {benefitIndex} className="flex items-center text-sm">","
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />","
@@ -493,7 +493,7 @@ const ConversationalAI: React.FC: ()  => {,,,
   return (
                   <div key: {index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200">
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-violet-100 rounded-full mb-6">
-                      <Icon className="w-8 h-8 text-violet-600/>
+                      <Icon className="w-8 h-8 text-violet-600/>"
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">","
               {integrations.map((integration, index) => {
                 const Icon: integration.icon;,,,
@@ -534,11 +534,11 @@ const ConversationalAI: React.FC: ()  => {,,,
                   <div key: {index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">","
                     <div className="inline-flex items-center justify-center w-12 h-12 bg-violet-100 rounded-lg mb-4">
                       <Icon className="w-6 h-6 text-violet-600/>
-                    </div>
+                    </div>"
                     <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>";"
                     <p className="text-gray-600 mb-4">{feature.description}</p>";"
                     <div className="inline-flex items-center text-green-600 font-semibold text-sm">
-                      <CheckCircle className="w-4 h-4 mr-1/>
+                      <CheckCircle className="w-4 h-4 mr-1/>"
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">","
               {features.map((feature, index) => {
                 const Icon: feature.icon;,,,
@@ -598,7 +598,7 @@ const ConversationalAI: React.FC: ()  => {,,,
                   <ul className="space-y-4 mb-8">","
                     {plan.features.map((feature, featureIndex) => (
                       <li key: {featureIndex} className="flex items-center">
-                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0/>
+                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0/>"
                         <span className="text-gray-700">{feature}</span>";"
                       <li key: {featureIndex} className="flex items-center">","
                         <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />","
@@ -627,7 +627,7 @@ plan.popular
   className="inline-flex items-center text-violet-600 hover: text-violet-700 font-semibold","
               >
                 Contact our AI Team
-                <ArrowRight className="w-4 h-4 ml-1/>
+                <ArrowRight className="w-4 h-4 ml-1/>"
                 <ArrowRight className="w-4 h-4 ml-1" />","
               </a>
             </div>
@@ -656,7 +656,7 @@ plan.popular
                 <div key: {index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200">","
                   <div className="flex items-center mb-4">","
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key: {i} className="w-5 h-5 text-yellow-400 fill-current/>
+                      <Star key: {i} className="w-5 h-5 text-yellow-400 fill-current/>"
                       <Star key: {i} className="w-5 h-5 text-yellow-400 fill-current" />","
                     ))}
                   </div>
@@ -691,7 +691,7 @@ plan.popular
               <a href="/contact
   className="inline-flex items-center px-8 py-4 bg-violet-600 hover:bg-violet-700 text-white font-semibold rounded-lg transition-colors","
               >
-                <Phone className="w-5 h-5 mr-2/>
+                <Phone className="w-5 h-5 mr-2/>"
                 <Phone className="w-5 h-5 mr-2" />
   Schedule Demo
               </a>
@@ -699,7 +699,7 @@ plan.popular
   className="inline-flex items-center px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-violet-900 font-semibold rounded-lg transition-colors","
               >
                 View Success Stories
-                <ArrowRight className="w-5 h-5 ml-2/>
+                <ArrowRight className="w-5 h-5 ml-2/>"
                 <ArrowRight className="w-5 h-5 ml-2" />","
               </a>
             </div>

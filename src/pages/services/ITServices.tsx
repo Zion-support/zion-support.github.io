@@ -1,13 +1,13 @@
-import React from 'react'';
-import { Helmet } from 'react-helmet-async'';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 ;
-const ITServices: React.FC: ()  => {,,,
+const ITServices: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
       <Helmet >
         <title >IT Services – Zion Tech Group</title>
-        <meta name: "description" content ="Cloud migration, DevOps/SRE, cybersecurity, observability, and cost optimization with clear SLAs." />
+        <meta name="description" content="Cloud migration, DevOps/SRE, cybersecurity, observability, and cost optimization with clear SLAs." />
         <link rel: "canonical" href ="https://ziontechgroup.com/services/it-services" />
       </Helmet>
 

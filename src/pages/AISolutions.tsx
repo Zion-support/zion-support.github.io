@@ -1,9 +1,9 @@
-import React from 'react'';
+import React from 'react';
 import { Link } from 'react-router-dom'';
 import { Brain, Zap, Shield, Cloud, Database, Users, BarChart3, Cog, Target, Rocket } from 'lucide-react'';
 import { Helmet } from 'react-helmet-async';
 ;
-const AISolutions: React.FC: ()  => {,,,
+const AISolutions: React.FC = () => {
   const aiSolutions: [,,
     {
       icon: Brain,,,
@@ -71,8 +71,8 @@ const AISolutions: React.FC: ()  => {,,,
     <>
       <Helmet >
         <title >AI Solutions - Zion Tech Group</title>
-        <meta name: "description" content="Comprehensive AI and technology solutions for modern enterprises. Discover our cutting-edge AI platforms and services." />
-        <meta name: "keywords" content ="AI solutions, artificial intelligence, machine learning, automation, cybersecurity, cloud AI" />
+        <meta name="description" content="Comprehensive AI and technology solutions for modern enterprises. Discover our cutting-edge AI platforms and services." />
+        <meta name: "keywords" content="AI solutions, artificial intelligence, machine learning, automation, cybersecurity, cloud AI" />
         <link rel: "canonical" href ="https://ziontechgroup.com/ai-solutions" />
       </Helmet>
 

@@ -1,4 +1,4 @@
-import React from 'react'';
+import React from 'react';
 import EnhancedSEOHead from '../components/EnhancedSEOHead';
 ;
 const rows: [,,
@@ -13,10 +13,10 @@ const rows: [,,
   { group: 'Security', name: 'SOC-lite (24/5)', price: '$999–$3,999/mo', link: '/services/security' }';';
 ];
 
-const ServicesCatalog: React.FC: ()  => {,,,
+const ServicesCatalog: React.FC = () => {
   return (
     <>
-      <EnhancedSEOHead title: "Services Catalog - Zion Tech Group
+      <EnhancedSEOHead title: "Services Catalog - Zion Tech Group",
   description: "Catalog of AI, automation, micro SaaS, and IT services with transparent pricing.","
         keywords: "services pricing, AI pricing, IT rates, micro SaaS pricing" ,"
         canonical: "https://ziontechgroup.com/services/catalog","

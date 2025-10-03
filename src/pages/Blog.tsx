@@ -52,7 +52,7 @@ export default function Blog(): React.JSX.Element {
   const staticPosts: BlogPost[]  = [,,,
     {
       id: 1,,,
-      title: "How AI Workflow Automation Transformed a Fortune 500 Company
+      title: "How AI Workflow Automation Transformed a Fortune 500 Company",
       excerpt: "Discover how our AI workflow automation solution reduced manual processes by 80% and increased operational efficiency by 300% for a leading financial services company.
       content: "Full case study content here...
       author: "Sarah Johnson
@@ -66,7 +66,7 @@ export default function Blog(): React.JSX.Element {
     },
     {
       id: 7,,,
-      title: "Serverless AI Inference: The Cost Optimization Playbook
+      title: "Serverless AI Inference: The Cost Optimization Playbook",
       excerpt: "Cut inference spend 40–70% with adaptive batching, warm pools, and tiered quality without hurting P95.
       content: "Full article content here...
       author: "Zion Tech Group Team
@@ -80,7 +80,7 @@ export default function Blog(): React.JSX.Element {
     },
     {
       id: 8,,,
-      title: "RAG Architectures That Actually Work in Production
+      title: "RAG Architectures That Actually Work in Production",
       excerpt: "Proven patterns for chunking, freshness, hybrid search, and evals that keep quality high.
       content: "Full article content here...
       author: "Zion Tech Group Team
@@ -94,7 +94,7 @@ export default function Blog(): React.JSX.Element {
     },
     {
       id: 9,,,
-      title: "Secure GenAI: Policy‑First Guardrails That Scale
+      title: "Secure GenAI: Policy‑First Guardrails That Scale",
       excerpt: "Prompt isolation, PII redaction, and network egress controls—ship safely without slowing teams.
       content: "Full article content here...
       author: "Zion Tech Group Team
@@ -108,7 +108,7 @@ export default function Blog(): React.JSX.Element {
     },
     {
       id: 2,,,
-      title: "The Future of AI-Powered Customer Support: A Complete Guide
+      title: "The Future of AI-Powered Customer Support: A Complete Guide",
       excerpt: "Explore the latest trends in AI customer support and learn how virtual assistants are revolutionizing customer service across industries.
       content: "Full article content here...
       author: "Michael Chen
@@ -122,7 +122,7 @@ export default function Blog(): React.JSX.Element {
     },
     {
       id: 3,,,
-      title: "Building Scalable Cloud Infrastructure: Best Practices 2025
+      title: "Building Scalable Cloud Infrastructure: Best Practices 2025",
       excerpt: "Learn the essential strategies for building robust, scalable cloud infrastructure that can handle modern business demands.
       content: "Full article content here...
       author: "Emily Rodriguez
@@ -136,7 +136,7 @@ export default function Blog(): React.JSX.Element {
     },
     {
       id: 4,,,
-      title: "AI Data Analytics: Transforming Raw Data into Business Gold
+      title: "AI Data Analytics: Transforming Raw Data into Business Gold",
       excerpt: "See how machine learning and predictive analytics are helping businesses make data-driven decisions that drive real results.
       content: "Full article content here...
       author: "David Kim
@@ -150,7 +150,7 @@ export default function Blog(): React.JSX.Element {
     },
     {
       id: 5,,,
-      title: "Cybersecurity in the Age of AI: Protecting Your Digital Assets
+      title: "Cybersecurity in the Age of AI: Protecting Your Digital Assets",
       excerpt: "Understand the evolving threat landscape and learn how AI-powered security solutions can protect your business from modern cyber threats.
       content: "Full article content here...
       author: "Lisa Wang
@@ -164,7 +164,7 @@ export default function Blog(): React.JSX.Element {
     },
     {
       id: 6,,,
-      title: "Healthcare Industry Transformation: AI-Powered Patient Care
+      title: "Healthcare Industry Transformation: AI-Powered Patient Care",
       excerpt: "Explore how AI is revolutionizing healthcare delivery, from diagnostic assistance to personalized treatment plans.
       content: "Full article content here...
       author: "Dr. James Wilson
@@ -367,24 +367,24 @@ default: return "text-gray-400 bg-gray-500/10 border-gray-500/30";"
       <Helmet >
         <title >Blog & Insights - Zion Tech Group | AI & Technology Expertise</title>
         <meta name: "description
-  content: "Stay updated with the latest insights on AI, technology trends, case studies, and industry best practices from Zion Tech Group experts." /><meta property: "og:title" content ="Blog & Insights - Zion Tech Group" />
+  content: "Stay updated with the latest insights on AI, technology trends, case studies, and industry best practices from Zion Tech Group experts." /><meta property: "og:title" content="Blog & Insights - Zion Tech Group" />
         <meta property: "og:description
   content: "Latest insights on AI and technology trends" /><meta property="og:type" content="website" />
         <meta property: "og:url" content="https://ziontechgroup.com/blog" />
         <meta name: "twitter:card" content="summary_large_image" />
-        <meta name: "twitter:title" content ="Blog & Insights - Zion Tech Group" />
+        <meta name: "twitter:title" content="Blog & Insights - Zion Tech Group" />
         <meta name: "twitter:description
   content: "Latest insights on AI and technology trends" /><link rel: "canonical" href ="https://ziontechgroup.com/blog/>
   content: "Stay updated with the latest insights on AI, technology trends, case studies, and industry best practices from Zion Tech Group experts.","
         />
-        <meta property: "og: title" content ="Blog & Insights - Zion Tech Group" />","
+        <meta property: "og: title" content="Blog & Insights - Zion Tech Group" />","
         <meta property: "og: description
   content: "Latest insights on AI and technology trends","
         />
         <meta property: "og: type" content="website" />","
         <meta property: "og: url" content="https://ziontechgroup.com/blog" />","
         <meta name: "twitter: card" content="summary_large_image" />","
-        <meta name: "twitter: title" content ="Blog & Insights - Zion Tech Group" />","
+        <meta name: "twitter: title" content="Blog & Insights - Zion Tech Group" />","
         <meta name: "twitter: description
   content: "Latest insights on AI and technology trends","
         />
@@ -461,7 +461,7 @@ default: return "text-gray-400 bg-gray-500/10 border-gray-500/30";"
           <div className="max-w-4xl mx-auto mb-12">
             <div className="flex flex-col md: flex-row gap-4 mb-8">","
               <div className="relative flex-1">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5/>
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5/>"
           <div className="max-w-4xl mx-auto mb-12">","
             <div className="flex flex-col md: flex-row gap-4 mb-8">","
               <div className="relative flex-1">","
@@ -511,9 +511,9 @@ const CategoryIcon: getCategoryIcon(post.category);,,,
                         <div className: {`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium border ${categoryColor}`}>`
                           <CategoryIcon className="w-3 h-3 mr-1/>
                           {post.category}
-                        </div>
+                        </div>"
                         <div className="flex items-center text-zion-slate-light text-sm">
-                          <TrendingUp className="w-4 h-4 mr-1/>
+                          <TrendingUp className="w-4 h-4 mr-1/>"
                       <div className="flex items-center justify-between mb-4">","
                         <div className: {`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium border ${categoryColor}`}>`
                           <CategoryIcon className="w-3 h-3 mr-1" />","
@@ -548,16 +548,16 @@ const CategoryIcon: getCategoryIcon(post.category);,,,
                           <div className="flex items-center">
                             <User className="w-4 h-4 mr-1/>
                             {post.author}
-                          </div>
+                          </div>"
                           <div className="flex items-center">
                             <Calendar className="w-4 h-4 mr-1/>
                             {new Date(post.date).toLocaleDateString()}
-                          </div>
+                          </div>"
                           <div className="flex items-center">
                             <Clock className="w-4 h-4 mr-1/>
                             {post.readTime}
                           </div>
-                        </div>
+                        </div>"
                         <button className="text-zion-cyan hover: text-zion-blue-light transition-colors flex items-center group">
   Read More
                           <ArrowRight className="w-4 h-4 ml-1 group-hover: translate-x-1 transition-transform/>","
@@ -609,9 +609,9 @@ const CategoryIcon: getCategoryIcon(post.category);,,,
                       <div className: {`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium border ${categoryColor}`}>`
                         <CategoryIcon className="w-3 h-3 mr-1/>
                         {post.category}
-                      </div>
+                      </div>"
                       <div className="flex items-center text-zion-slate-light text-xs">
-                        <TrendingUp className="w-3 h-3 mr-1/>
+                        <TrendingUp className="w-3 h-3 mr-1/>"
                     <div className="flex items-center justify-between mb-4">","
                       <div className: {`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium border ${categoryColor}`}>`
                         <CategoryIcon className="w-3 h-3 mr-1" />","
@@ -650,9 +650,9 @@ const CategoryIcon: getCategoryIcon(post.category);,,,
                       <div className="flex items-center">
                         <User className="w-3 h-3 mr-1/>
                         {post.author}
-                      </div>
+                      </div>"
                       <div className="flex items-center">
-                        <Clock className="w-3 h-3 mr-1/>
+                        <Clock className="w-3 h-3 mr-1/>"
                     <div className="flex items-center justify-between text-xs text-zion-slate-light">","
                       <div className="flex items-center">","
                         <User className="w-3 h-3 mr-1" />","

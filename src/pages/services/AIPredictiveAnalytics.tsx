@@ -1,5 +1,5 @@
-import React from 'react'';
-import { Helmet } from 'react-helmet-async'';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Zap } from 'lucide-react'';
 import Header from '../../components/Header'';
 import Footer from '../../components/Footer'';
@@ -9,7 +9,7 @@ import { Zap } from 'lucide-react';'
 import Header from '../../components/Header';'
 import Footer from '../../components/Footer';'
 
-const AIPredictiveAnalytics: React.FC: ()  => {,,,
+const AIPredictiveAnalytics: React.FC = () => {
   const features: [,,
     {
       icon: Brain,,,,
@@ -58,8 +58,8 @@ const AIPredictiveAnalytics: React.FC: ()  => {,,,
       title: "Automated Insights",","
       description: "AI-generated insights and recommendations delivered directly to decision-makers.",","
       benefit: "50% faster decision making","
-    }
-  ];
+    }],
+;
 
   const pricing: [,,
     {
@@ -67,7 +67,7 @@ const AIPredictiveAnalytics: React.FC: ()  => {,,,
       price: "$299
       period: "/month
       description: "Perfect for small businesses wanting to leverage predictive analytics
-      features: [,,,
+      features: [,,,",
         "Up to 10 predictive models",";"
         "5 data sources",";"
         "Basic dashboard",";"
@@ -75,8 +75,8 @@ const AIPredictiveAnalytics: React.FC: ()  => {,,,
         "Monthly reports",";"
         "Standard integrations",";"
         "Historical data analysis",";"
-        "Basic forecasting"
-      ]
+        "Basic forecasting"],
+
       popular: false,,
     },
     {
@@ -84,7 +84,7 @@ const AIPredictiveAnalytics: React.FC: ()  => {,,,
       price: "$899
       period: "/month
       description: "Ideal for growing companies with complex data needs
-      features: [,,,
+      features: [,,,",
         "Unlimited predictive models",";"
         "25 data sources",";"
         "Advanced dashboard & visualization",";"
@@ -94,8 +94,8 @@ const AIPredictiveAnalytics: React.FC: ()  => {,,,
         "Custom model training",";"
         "API access",";"
         "Automated alerts",";"
-        "A/B testing insights"
-      ]
+        "A/B testing insights"],
+
       popular: true,,
     },
     {
@@ -103,7 +103,7 @@ const AIPredictiveAnalytics: React.FC: ()  => {,,,
       price: "$2,999
       period: "/month
       description: "Complete solution for large organizations with enterprise requirements
-      features: [,,,
+      features: [,,,",
         "Unlimited everything",";"
         "Unlimited data sources",";"
         "Enterprise dashboard",";"
@@ -115,8 +115,8 @@ const AIPredictiveAnalytics: React.FC: ()  => {,,,
         "SLA guarantee",";"
         "On-premise deployment",";"
         "Custom reporting",";"
-        "Training & consultation"
-      ]
+        "Training & consultation"],
+
       popular: false,,,
       name: "Starter",","
       price: "$299",","
@@ -130,8 +130,8 @@ const AIPredictiveAnalytics: React.FC: ()  => {,,,
         "Monthly reports","
         "Standard integrations","
         "Historical data analysis","
-        "Basic forecasting"
-      ]
+        "Basic forecasting"],
+
       popular: false,,
     },
     {
@@ -149,8 +149,8 @@ const AIPredictiveAnalytics: React.FC: ()  => {,,,
         "Custom model training","
         "API access","
         "Automated alerts","
-        "A/B testing insights"
-      ]
+        "A/B testing insights"],
+
       popular: true,,
     },
     {
@@ -170,8 +170,8 @@ const AIPredictiveAnalytics: React.FC: ()  => {,,,
         "SLA guarantee","
         "On-premise deployment","
         "Custom reporting","
-        "Training & consultation"
-      ]
+        "Training & consultation"],
+
       popular: false,,
     }
   ];
@@ -263,10 +263,10 @@ const AIPredictiveAnalytics: React.FC: ()  => {,,,
       <Helmet >
         <title >AI Predictive Analytics - Zion Tech Group | Advanced Forecasting & Insights</title>
         <meta name: "description
-  content: "Transform your business with AI predictive analytics that deliver 94% accuracy in forecasting, customer behavior prediction, and risk assessment. Real-time insights for better decisions." /><meta name: "keywords" content ="predictive analytics, machine learning, forecasting, business intelligence, data analytics, AI insights, predictive modeling" /><link rel: "canonical" href="https://ziontechgroup.com/services/ai-predictive-analytics/>
+  content: "Transform your business with AI predictive analytics that deliver 94% accuracy in forecasting, customer behavior prediction, and risk assessment. Real-time insights for better decisions." /><meta name: "keywords" content="predictive analytics, machine learning, forecasting, business intelligence, data analytics, AI insights, predictive modeling" /><link rel: "canonical" href="https://ziontechgroup.com/services/ai-predictive-analytics/>
   content: "Transform your business with AI predictive analytics that deliver 94% accuracy in forecasting, customer behavior prediction, and risk assessment. Real-time insights for better decisions.","
         />
-        <meta name: "keywords" content ="predictive analytics, machine learning, forecasting, business intelligence, data analytics, AI insights, predictive modeling" />","
+        <meta name: "keywords" content="predictive analytics, machine learning, forecasting, business intelligence, data analytics, AI insights, predictive modeling" />","
         <link rel: "canonical" href ="https: //ziontechgroup.com/services/ai-predictive-analytics" />","
       </Helmet>
 
@@ -299,7 +299,7 @@ const AIPredictiveAnalytics: React.FC: ()  => {,,,
                 <a href="/contact
   className="inline-flex items-center px-8 py-4 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-lg transition-colors","
                 >
-                  <Phone className="w-5 h-5 mr-2/>
+                  <Phone className="w-5 h-5 mr-2/>"
                   <Phone className="w-5 h-5 mr-2" />
   Schedule Demo
                 </a>
@@ -307,7 +307,7 @@ const AIPredictiveAnalytics: React.FC: ()  => {,,,
   className="inline-flex items-center px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-indigo-900 font-semibold rounded-lg transition-colors","
                 >
                   View Pricing
-                  <ArrowRight className="w-5 h-5 ml-2/>
+                  <ArrowRight className="w-5 h-5 ml-2/>"
                   <ArrowRight className="w-5 h-5 ml-2" />","
                 </a>
               </div>
@@ -334,7 +334,7 @@ const AIPredictiveAnalytics: React.FC: ()  => {,,,
             <div className="grid md: grid-cols-4 gap-8">","
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-indigo-100 rounded-full mb-4">
-                  <TrendingUp className="w-8 h-8 text-indigo-600/>
+                  <TrendingUp className="w-8 h-8 text-indigo-600/>"
             <div className="grid md: grid-cols-4 gap-8">","
               <div className="text-center">","
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-indigo-100 rounded-full mb-4">","
@@ -345,7 +345,7 @@ const AIPredictiveAnalytics: React.FC: ()  => {,,,
               </div>
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">
-                  <Clock className="w-8 h-8 text-blue-600/>
+                  <Clock className="w-8 h-8 text-blue-600/>"
               <div className="text-center">","
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">","
                   <Clock className="w-8 h-8 text-blue-600" />","
@@ -355,7 +355,7 @@ const AIPredictiveAnalytics: React.FC: ()  => {,,,
               </div>
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">
-                  <Target className="w-8 h-8 text-green-600/>
+                  <Target className="w-8 h-8 text-green-600/>"
               <div className="text-center">","
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">","
                   <Target className="w-8 h-8 text-green-600" />","
@@ -365,7 +365,7 @@ const AIPredictiveAnalytics: React.FC: ()  => {,,,
               </div>
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-4">
-                  <Shield className="w-8 h-8 text-purple-600/>
+                  <Shield className="w-8 h-8 text-purple-600/>"
               <div className="text-center">","
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-4">","
                   <Shield className="w-8 h-8 text-purple-600" />","
@@ -399,7 +399,7 @@ const AIPredictiveAnalytics: React.FC: ()  => {,,,
   return (
                   <div key: {index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">","
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-indigo-100 rounded-full mb-6">
-                      <Icon className="w-8 h-8 text-indigo-600/>
+                      <Icon className="w-8 h-8 text-indigo-600/>"
             <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">","
               {useCases.map((useCase, index) => {
                 const Icon: useCase.icon;,,,
@@ -413,7 +413,7 @@ const AIPredictiveAnalytics: React.FC: ()  => {,,,
                     <ul className="space-y-2">","
                       {useCase.benefits.map((benefit, benefitIndex) => (
                         <li key: {benefitIndex} className="flex items-center text-sm">
-                          <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0/>
+                          <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0/>"
                           <span className="text-gray-700">{benefit}</span>";"
                         <li key: {benefitIndex} className="flex items-center text-sm">","
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />","
@@ -451,11 +451,11 @@ const AIPredictiveAnalytics: React.FC: ()  => {,,,
                   <div key: {index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">","
                     <div className="inline-flex items-center justify-center w-12 h-12 bg-indigo-100 rounded-lg mb-4">
                       <Icon className="w-6 h-6 text-indigo-600/>
-                    </div>
+                    </div>"
                     <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>";"
                     <p className="text-gray-600 mb-4">{feature.description}</p>";"
                     <div className="inline-flex items-center text-green-600 font-semibold text-sm">
-                      <CheckCircle className="w-4 h-4 mr-1/>
+                      <CheckCircle className="w-4 h-4 mr-1/>"
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">","
               {features.map((feature, index) => {
                 const Icon: feature.icon;,,,
@@ -515,7 +515,7 @@ const AIPredictiveAnalytics: React.FC: ()  => {,,,
                   <ul className="space-y-4 mb-8">","
                     {plan.features.map((feature, featureIndex) => (
                       <li key: {featureIndex} className="flex items-center">
-                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0/>
+                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0/>"
                         <span className="text-gray-700">{feature}</span>";"
                       <li key: {featureIndex} className="flex items-center">","
                         <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />","
@@ -544,7 +544,7 @@ plan.popular
   className="inline-flex items-center text-indigo-600 hover: text-indigo-700 font-semibold","
               >
                 Contact our Data Science Team
-                <ArrowRight className="w-4 h-4 ml-1/>
+                <ArrowRight className="w-4 h-4 ml-1/>"
                 <ArrowRight className="w-4 h-4 ml-1" />","
               </a>
             </div>
@@ -573,7 +573,7 @@ plan.popular
                 <div key: {index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200">","
                   <div className="flex items-center mb-4">","
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key: {i} className="w-5 h-5 text-yellow-400 fill-current/>
+                      <Star key: {i} className="w-5 h-5 text-yellow-400 fill-current/>"
                       <Star key: {i} className="w-5 h-5 text-yellow-400 fill-current" />","
                     ))}
                   </div>
@@ -608,7 +608,7 @@ plan.popular
               <a href="/contact
   className="inline-flex items-center px-8 py-4 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-lg transition-colors","
               >
-                <Phone className="w-5 h-5 mr-2/>
+                <Phone className="w-5 h-5 mr-2/>"
                 <Phone className="w-5 h-5 mr-2" />
   Schedule Free Demo
               </a>
@@ -616,7 +616,7 @@ plan.popular
   className="inline-flex items-center px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-indigo-900 font-semibold rounded-lg transition-colors","
               >
                 View Success Stories
-                <ArrowRight className="w-5 h-5 ml-2/>
+                <ArrowRight className="w-5 h-5 ml-2/>"
                 <ArrowRight className="w-5 h-5 ml-2" />","
               </a>
             </div>
