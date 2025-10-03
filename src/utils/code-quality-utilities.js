@@ -24,7 +24,7 @@ export const codeQualityUtils = {
       
       for (const key of keys1) {
         if (!keys2.includes(key)) return false;
-        if (!deepEqual(obj1[key], obj2[key])) return false;
+        if (!codeQualityUtils.deepEqual(obj1[key], obj2[key])) return false;
       }
       
       return true;

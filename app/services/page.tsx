@@ -1,16 +1,9 @@
 import React from 'react';
-import Link from 'next/link';
-import { Metadata } from 'next';
-import { services, getAllCategories, getServicesByCategory } from './data';
+import { Link } from 'react-router-dom';
+import { services } from './data';
 
-export const metadata: Metadata = {
-  title: 'AI & IT Services | Zion Tech Group - Enterprise Solutions',
-  description: 'Comprehensive AI services, micro SaaS solutions, and IT consulting. Transform your business with cutting-edge technology and automation.',
-  keywords: 'AI services, micro SaaS, IT consulting, cloud migration, DevOps, enterprise software, automation',
-};
 
 export default function ServicesPage() {
-  const categories = getAllCategories();
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
@@ -83,7 +76,7 @@ export default function ServicesPage() {
                   ))}
                 </ul>
                 <Link
-                  href={service.href}
+                  to={service.href}
                   className="inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 group"
                 >
                   <span>Learn More</span>
