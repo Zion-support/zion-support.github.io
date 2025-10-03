@@ -14,7 +14,7 @@ const BlogArticleLayout: React.FC<BlogArticleLayoutProps> = ({
   title,
   description,
   children,
-  author = "Zion Tech Group",
+  author = "Zion Tech Group
   publishDate,
   tags = []
 }) => {

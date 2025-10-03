@@ -29,7 +29,7 @@ export interface ErrorReport {
 class EnhancedErrorHandler {
   private errors: ErrorInfo[] = [];
   private maxErrors = 100;
-  private isInitialized = false;
+  // private _isInitialized = false;
 
   constructor() {
     this.initialize();
@@ -64,13 +64,13 @@ class EnhancedErrorHandler {
       });
     });
 
-    this.isInitialized = true;
+    // this._isInitialized = true;
   }
 
-  private determineSeverity(error: any): 'low' | 'medium' | 'high' | 'critical' {
+  private determineSeverity(error: Error | unknown): 'low' | 'medium' | 'high' | 'critical' {
     if (!error) return 'low';
 
-    const message = error.message?.toLowerCase() || '';
+    const message = error instanceof Error ? error.message?.toLowerCase() || '' : '';
     
     // Critical errors
     if (message.includes('chunk') || message.includes('loading') || message.includes('network')) {

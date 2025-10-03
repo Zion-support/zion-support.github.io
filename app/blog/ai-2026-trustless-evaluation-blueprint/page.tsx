@@ -2,11 +2,11 @@ import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-	title: 'Trustless Evaluation Blueprint (2026) | Zion Tech Group',
+	title= 'Trustless Evaluation Blueprint (2026) | Zion Tech Group',
 	description:
 		'Implement verifiable, tamper‑evident AI evaluations with signed datasets, attestations, and reproducible scoring.',
 	openGraph: {
-		title: 'Trustless Evaluation Blueprint (2026)',
+		title= 'Trustless Evaluation Blueprint (2026)',
 		description:
 			'How to build signed, reproducible, and policy‑aligned evals for reliable AI at scale.',
 		type: 'article'
@@ -15,18 +15,18 @@ export const metadata = {
 
 export default function TrustlessEvaluationBlueprint2026Page() {
 	return (
-		<div className="min-h-screen bg-slate-950 text-white">
-			<main className="max-w-3xl mx-auto px-6 py-16">
-				<header className="mb-10">
-					<div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/10 border border-purple-400/20 text-purple-300 text-xs font-semibold">
+		<div className="min-h-screen bg-slate-950 text-white">"
+			<main className="max-w-3xl mx-auto px-6 py-16">"
+				<header className="mb-10">"
+					<div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/10 border border-purple-400/20 text-purple-300 text-xs font-semibold">"
 						New • 2026
 					</div>
-					<h1 className="text-4xl font-extrabold mt-4 mb-3">Trustless Evaluation Blueprint (2026)</h1>
-					<p className="text-slate-300">Verifiable evals with signed datasets, deterministic scoring, and transparent provenance.</p>
-					<div className="mt-3 text-slate-400 text-sm">16 min read • Category: Reliability & Governance</div>
+					<h1 className="text-4xl font-extrabold mt-4 mb-3">Trustless Evaluation Blueprint (2026)</h1>"
+					<p className="text-slate-300">Verifiable evals with signed datasets, deterministic scoring, and transparent provenance.</p>"
+					<div className="mt-3 text-slate-400 text-sm">16 min read • Category: Reliability & Governance</div>"
 				</header>
 
-				<div className="prose prose-invert prose-slate max-w-none">
+				<div className="prose prose-invert prose-slate max-w-none">"
 					<p>
 						This blueprint provides a practical approach to make AI evaluations tamper‑evident and reproducible across
 						teams and environments. It covers dataset signing, containerized runners, deterministic scoring, and end‑to‑end
@@ -82,12 +82,12 @@ export default function TrustlessEvaluationBlueprint2026Page() {
 
 					<p>
 						For related practices, explore our guide on{' '}
-						<Link href="/blog/agentic-workflow-orchestration-2026" className="text-purple-300 hover:text-purple-200">Agentic Workflow Orchestration 2026</Link>.
+						<Link href="/blog/agentic-workflow-orchestration-2026" className="text-purple-300 hover:text-purple-200">Agentic Workflow Orchestration 2026</Link>."
 					</p>
 				</div>
 
-				<div className="mt-12">
-					<Link href="/blog" className="inline-block bg-white text-purple-700 px-6 py-3 rounded-lg font-bold hover:bg-purple-50">
+				<div className="mt-12">"
+					<Link href="/blog" className="inline-block bg-white text-purple-700 px-6 py-3 rounded-lg font-bold hover:bg-purple-50">"
 						← Back to Blog
 					</Link>
 				</div>

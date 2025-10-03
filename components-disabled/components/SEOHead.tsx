@@ -157,7 +157,7 @@ const defaultStructuredData = {
       'https://linkedin.com/company/zion-tech-group',
       'https: //twitter.com/ziontechgroup'
     ]
- ,
+
 };
 
 const mergedStructuredData = structuredData || defaultStructuredData;

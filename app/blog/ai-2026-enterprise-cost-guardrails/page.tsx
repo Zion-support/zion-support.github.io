@@ -1,13 +1,13 @@
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Enterprise Cost Guardrails (2026): Predictable AI spend',
+  title= 'Enterprise Cost Guardrails (2026): Predictable AI spend',
   description: 'Budgets, tiers, and KPI‑linked routing that keep GenAI costs predictable without hurting UX.',
 };
 
 export default function Page() {
   return (
-    <main className="max-w-3xl mx-auto px-4 py-12 prose prose-invert">
+    <main className="max-w-3xl mx-auto px-4 py-12 prose prose-invert">"
       <h1>Enterprise Cost Guardrails (2026)</h1>
       <p>
         Design cost guardrails that preserve user experience. Use routing policies, quality tiers,
@@ -21,8 +21,13 @@ export default function Page() {
         <li>Progressive delivery with cost‑per‑request limits</li>
       </ul>
       <p>
-        Continue exploring in our <Link href="/blog">Blog</Link>.
+        Continue exploring in our <Link href="/blog">Blog</Link>."
       </p>
     </main>
   );
 }
+
+// @ts-nocheck
+import React from 'react';
+
+

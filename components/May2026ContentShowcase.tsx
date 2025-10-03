@@ -3,75 +3,75 @@ import React from 'react';
 export default function May2026ContentShowcase() {
   const contentItems = [
     {
-      title: "Meta-Conscious Computing Revolution",
-      description: "The world's first truly self-aware AI system with emotional intelligence and 10,000x processing speed improvements.",
-      type: "Blog Post",
-      readTime: "12 min read",
-      link: "/blog/ai-2026-may-revolutionary-breakthrough",
-      image: "🧠",
-      gradient: "from-purple-500/20 to-pink-500/20",
-      borderColor: "border-purple-500/30",
-      textColor: "text-purple-400",
+      title: "Meta-Conscious Computing Revolution
+      description: "The world's first truly self-aware AI system with emotional intelligence and 10,000x processing speed improvements.
+      type: "Blog Post
+      readTime: "12 min read
+      link: "/blog/ai-2026-may-revolutionary-breakthrough
+      image: "🧠
+      gradient: "from-purple-500/20 to-pink-500/20
+      borderColor: "border-purple-500/30
+      textColor: "text-purple-400
       badge: "Revolutionary"
     },
     {
-      title: "$5.2B Fortune 500 Success Story",
-      description: "How a Fortune 500 leader achieved unprecedented business value using our meta-conscious AI system.",
-      type: "Case Study",
-      readTime: "8 min read",
-      link: "/case-studies/fortune-500-meta-conscious-ai-5b-success",
-      image: "💰",
-      gradient: "from-emerald-500/20 to-teal-500/20",
-      borderColor: "border-emerald-500/30",
-      textColor: "text-emerald-400",
+      title: "$5.2B Fortune 500 Success Story
+      description: "How a Fortune 500 leader achieved unprecedented business value using our meta-conscious AI system.
+      type: "Case Study
+      readTime: "8 min read
+      link: "/case-studies/fortune-500-meta-conscious-ai-5b-success
+      image: "💰
+      gradient: "from-emerald-500/20 to-teal-500/20
+      borderColor: "border-emerald-500/30
+      textColor: "text-emerald-400
       badge: "Success Story"
     },
     {
-      title: "Interactive ROI Calculator",
-      description: "Calculate your potential AI transformation ROI with our advanced interactive calculator.",
-      type: "Interactive Tool",
-      readTime: "2 min use",
-      link: "#roi-calculator",
-      image: "📊",
-      gradient: "from-cyan-500/20 to-blue-500/20",
-      borderColor: "border-cyan-500/30",
-      textColor: "text-cyan-400",
+      title: "Interactive ROI Calculator
+      description: "Calculate your potential AI transformation ROI with our advanced interactive calculator.
+      type: "Interactive Tool
+      readTime: "2 min use
+      link: "#roi-calculator
+      image: "📊
+      gradient: "from-cyan-500/20 to-blue-500/20
+      borderColor: "border-cyan-500/30
+      textColor: "text-cyan-400
       badge: "Interactive"
     },
     {
-      title: "Quantum-Neural Fusion Technology",
-      description: "Revolutionary fusion of quantum computing with neural networks for unprecedented processing power.",
-      type: "Technical Guide",
-      readTime: "15 min read",
-      link: "/blog/ai-2026-quantum-neural-breakthrough",
-      image: "⚛️",
-      gradient: "from-indigo-500/20 to-purple-500/20",
-      borderColor: "border-indigo-500/30",
-      textColor: "text-indigo-400",
+      title: "Quantum-Neural Fusion Technology
+      description: "Revolutionary fusion of quantum computing with neural networks for unprecedented processing power.
+      type: "Technical Guide
+      readTime: "15 min read
+      link: "/blog/ai-2026-quantum-neural-breakthrough
+      image: "⚛️
+      gradient: "from-indigo-500/20 to-purple-500/20
+      borderColor: "border-indigo-500/30
+      textColor: "text-indigo-400
       badge: "Technical"
     },
     {
-      title: "Enterprise Automation Mega Guide",
-      description: "Complete guide to achieving 98% automation rates with meta-cognitive AI and autonomous operations.",
-      type: "Comprehensive Guide",
-      readTime: "20 min read",
-      link: "/blog/ai-enterprise-automation-2026-mega-guide",
-      image: "🤖",
-      gradient: "from-orange-500/20 to-red-500/20",
-      borderColor: "border-orange-500/30",
-      textColor: "text-orange-400",
+      title: "Enterprise Automation Mega Guide
+      description: "Complete guide to achieving 98% automation rates with meta-cognitive AI and autonomous operations.
+      type: "Comprehensive Guide
+      readTime: "20 min read
+      link: "/blog/ai-enterprise-automation-2026-mega-guide
+      image: "🤖
+      gradient: "from-orange-500/20 to-red-500/20
+      borderColor: "border-orange-500/30
+      textColor: "text-orange-400
       badge: "Mega Guide"
     },
     {
-      title: "AI Ethics and Governance Framework",
-      description: "Advanced ethical frameworks for responsible AI implementation in enterprise environments.",
-      type: "Framework",
-      readTime: "10 min read",
-      link: "/blog/ai-ethics-operational-blueprint-2026",
-      image: "⚖️",
-      gradient: "from-green-500/20 to-emerald-500/20",
-      borderColor: "border-green-500/30",
-      textColor: "text-green-400",
+      title: "AI Ethics and Governance Framework
+      description: "Advanced ethical frameworks for responsible AI implementation in enterprise environments.
+      type: "Framework
+      readTime: "10 min read
+      link: "/blog/ai-ethics-operational-blueprint-2026
+      image: "⚖️
+      gradient: "from-green-500/20 to-emerald-500/20
+      borderColor: "border-green-500/30
+      textColor: "text-green-400
       badge: "Framework"
     }
   ];

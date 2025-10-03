@@ -1,100 +1,91 @@
 import React from 'react';
-import Header from '../components/Header';
+import { Helmet } from 'react-helmet-async';
 
 const Services: React.FC = () => {
   const services = [
     {
-      id: 'ai-workflow-automation',
+      title: 'Quantum Consciousness AI Consulting',
+      description: 'Transform your enterprise with quantum consciousness AI that achieves 99.9% decision accuracy.',
+      href: '/services/quantum-consciousness-ai-consulting'
+    },
+    {
       title: 'AI Workflow Automation',
-      description: 'Transform your business processes with intelligent automation that reduces costs by 75% and increases efficiency by 10x.',
-      icon: Zap,
-      link: '/services/ai-workflow-automation',
-      color: 'from-blue-600 to-purple-600'
+      description: 'Streamline business processes with intelligent automation and self-optimizing workflows.',
+      href: '/services/ai-workflow-automation'
     },
     {
-      id: 'ai-virtual-assistant',
       title: 'AI Virtual Assistant',
-      description: 'Deploy AI-powered virtual assistants that handle customer inquiries 24/7 with 95% accuracy.',
-      icon: Bot,
-      link: '/services/ai-virtual-assistant',
-      color: 'from-purple-600 to-pink-600'
+      description: 'Deploy advanced virtual assistants that understand context and provide intelligent support.',
+      href: '/services/ai-virtual-assistant'
     },
     {
-      id: 'ai-data-analytics',
+      title: 'AI MLOps Automation',
+      description: 'Automate machine learning operations with self-healing pipelines and intelligent monitoring.',
+      href: '/services/ai-mlops-automation'
+    },
+    {
+      title: 'AI Intelligent Document Processing',
+      description: 'Extract insights from documents with advanced AI-powered processing and analysis.',
+      href: '/services/ai-intelligent-document-processing'
+    },
+    {
+      title: 'Advanced Cybersecurity AI',
+      description: 'Protect your enterprise with AI-powered security systems that adapt to emerging threats.',
+      href: '/services/advanced-cybersecurity-ai'
+    },
+    {
+      title: 'Autonomous Business Operations',
+      description: 'Run your business autonomously with AI systems that make decisions and execute operations.',
+      href: '/services/autonomous-business-operations'
+    },
+    {
+      title: 'Real-Time Cognitive Automation',
+      description: 'Implement cognitive automation that processes information and makes decisions in real-time.',
+      href: '/services/real-time-cognitive-automation'
+    },
+    {
       title: 'AI Data Analytics',
-      description: 'Turn raw data into actionable insights with advanced machine learning and predictive analytics.',
-      icon: BarChart3,
-      link: '/services/ai-data-analytics',
-      color: 'from-green-600 to-teal-600'
+      description: 'Unlock insights from your data with advanced AI analytics and predictive modeling.',
+      href: '/services/ai-data-analytics'
     },
     {
-      id: 'cybersecurity',
-      title: 'Cybersecurity Solutions',
-      description: 'Protect your business with AI-powered security solutions that detect and prevent threats in real-time.',
-      icon: Shield,
-      link: '/contact',
-      color: 'from-red-600 to-orange-600'
+      title: 'Enterprise AI Solutions',
+      description: 'Comprehensive AI solutions designed for large-scale enterprise transformation.',
+      href: '/services/enterprise-ai-solutions'
     }
   ];
 
   return (
     <>
       <Helmet>
-        <title>Services - Zion Tech Group | AI & IT Solutions</title>
-        <meta
-          name="description"
-          content="Explore our comprehensive AI and IT services including workflow automation, virtual assistants, data analytics, and cybersecurity solutions."
-        />
+        <title>Services - Zion Tech Group</title>
+        <meta name="description" content="Comprehensive AI and quantum computing services for enterprise transformation." />"
       </Helmet>
       
-      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">
-        <Header />
-        
-        <section className="container mx-auto px-6 py-20">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Our <span className="bg-gradient-to-r from-zion-blue-light to-zion-purple-light bg-clip-text text-transparent">Services</span>
-            </h1>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Cutting-edge AI and IT solutions designed to transform your business operations and drive measurable results.
+      <div className="min-h-screen bg-slate-950">"
+        <div className="container mx-auto px-4 py-16">"
+          <div className="text-center mb-16">"
+            <h1 className="text-5xl font-bold mb-6">Our Services</h1>"
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">"
+              Comprehensive AI and quantum computing solutions designed to transform your enterprise operations.
             </p>
           </div>
-
-          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            {services.map((service) => {
-              const Icon = service.icon;
-              return (
-                <Link
-                  key={service.id}
-                  to={service.link}
-                  className="group block"
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">"
+            {services.map((service, index) => (
+              <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-purple-500/20 hover:border-purple-400/40 transition-all duration-300">"
+                <h3 className="text-xl font-bold mb-4 text-purple-400">{service.title}</h3>"
+                <p className="text-gray-300 mb-6">{service.description}</p>"
+                <a 
+                  href={service.href}
+                  className="inline-block bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105""
                 >
-                  <div className={`bg-gradient-to-br ${service.color} rounded-2xl p-8 text-white hover:scale-105 transition-all duration-300 hover:shadow-2xl h-full`}>
-                    <Icon className="w-12 h-12 mb-6 text-white/90" />
-                    <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
-                    <p className="text-white/90 mb-6">
-                      {service.description}
-                    </p>
-                    <div className="inline-flex items-center text-white font-semibold">
-                      Learn More
-                      <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                    </div>
-                  </div>
-                </Link>
-              );
-            })}
+                  Learn More
+                </a>
+              </div>
+            ))}
           </div>
-
-          <div className="text-center mt-16">
-            <Link
-              to="/contact"
-              className="inline-flex items-center gap-2 bg-white text-zion-blue hover:bg-zion-slate-light px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105"
-            >
-              Get Started Today
-              <ArrowRight className="w-5 h-5" />
-            </Link>
-          </div>
-        </section>
+        </div>
       </div>
     </>
   );

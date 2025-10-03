@@ -1,13 +1,13 @@
 import Link from 'next/link';
 
 export const metadata = {
-	title: 'Edge Private Feature Flags (2026): Zero‑PII, Sub‑100ms, Signed Configs',
+	title= 'Edge Private Feature Flags (2026): Zero‑PII, Sub‑100ms, Signed Configs',
 	description: 'Blueprint for privacy‑safe feature flags and experiments at the edge with scoped IDs and DP noise.',
 };
 
 export default function Page() {
 	return (
-		<main className="max-w-3xl mx-auto px-4 py-12 prose prose-invert">
+		<main className="max-w-3xl mx-auto px-4 py-12 prose prose-invert">"
 			<h1>Edge Private Feature Flags (2026)</h1>
 			<p>
 				Roll out features globally with zero PII using scoped identifiers, on‑device aggregation, and
@@ -19,11 +19,11 @@ export default function Page() {
 				<li>Observability: edge traces, cohort metrics, KPI‑linked approvals</li>
 			</ul>
 			<p>
-				Related reads: <Link href="/blog/edge-2025-zero-pii-experiments">Edge Experiments 2025</Link>{' '}
-				and <Link href="/blog/ai-2027-cost-optimization-playbook">AI 2027 Cost Optimization</Link>.
+				Related reads: <Link href="/blog/edge-2025-zero-pii-experiments">Edge Experiments 2025</Link>{' '}"
+				and <Link href="/blog/ai-2027-cost-optimization-playbook">AI 2027 Cost Optimization</Link>."
 			</p>
 			<p>
-				Continue exploring in our <Link href="/blog">Blog</Link>.
+				Continue exploring in our <Link href="/blog">Blog</Link>."
 			</p>
 		</main>
 	);

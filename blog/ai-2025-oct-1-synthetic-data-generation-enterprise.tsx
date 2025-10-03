@@ -1,14 +1,14 @@
 import React from "react";
 
 export const metadata = {
-  title: "Synthetic Data Generation: Solving AI's Biggest Challenge | October 2025",
-  description: "Discover how synthetic data generation is revolutionizing AI development. Learn about privacy-preserving AI training, unlimited dataset creation, and the $127B synthetic data market.",
-  date: "2025-10-01",
-  author: "Zion Tech Group",
-  category: "AI Data",
+  title: "Synthetic Data Generation: Solving AI's Biggest Challenge | October 2025
+  description: "Discover how synthetic data generation is revolutionizing AI development. Learn about privacy-preserving AI training, unlimited dataset creation, and the $127B synthetic data market.
+  date: "2025-10-01
+  author: "Zion Tech Group
+  category: "AI Data
   tags: ["Synthetic Data", "AI Training", "Data Privacy", "Machine Learning", "Enterprise AI"],
   featured: true,
-  readTime: "13 min read",
+  readTime: "13 min read
 };
 
 const SyntheticDataGenerationEnterprise: React.FC = () => {

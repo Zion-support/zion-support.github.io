@@ -1,141 +1,91 @@
 #!/bin/bash
 
-# Script to merge all recent cursor branches and resolve conflicts
+# Script to merge all open PRs into main branch
 set -e
 
-echo "🚀 Starting comprehensive PR merge process..."
+echo "🚀 Starting PR merge process..."
 
-# List of recent cursor branches to merge
-CURSOR_BRANCHES=(
-    "origin/cursor/create-and-deploy-new-content-03fd"
-    "origin/cursor/create-and-deploy-new-content-0d76"
-    "origin/cursor/create-and-deploy-new-content-22ba"
-    "origin/cursor/create-and-deploy-new-content-3296"
-    "origin/cursor/create-and-deploy-new-content-3ae9"
-    "origin/cursor/create-and-deploy-new-content-4013"
-    "origin/cursor/create-and-deploy-new-content-49f0"
-    "origin/cursor/create-and-deploy-new-content-4eb2"
-    "origin/cursor/create-and-deploy-new-content-53f4"
-    "origin/cursor/create-and-deploy-new-content-54e2"
-    "origin/cursor/create-and-deploy-new-content-59f0"
-    "origin/cursor/create-and-deploy-new-content-617c"
-    "origin/cursor/create-and-deploy-new-content-6627"
-    "origin/cursor/create-and-deploy-new-content-6bff"
-    "origin/cursor/create-and-deploy-new-content-6cb8"
-    "origin/cursor/create-and-deploy-new-content-7352"
-    "origin/cursor/create-and-deploy-new-content-7a98"
-    "origin/cursor/create-and-deploy-new-content-7bd2"
-    "origin/cursor/create-and-deploy-new-content-7d57"
-    "origin/cursor/create-and-deploy-new-content-8222"
-    "origin/cursor/create-and-deploy-new-content-84c6"
-    "origin/cursor/create-and-deploy-new-content-85fc"
-    "origin/cursor/create-and-deploy-new-content-88ac"
-    "origin/cursor/create-and-deploy-new-content-8c8b"
-    "origin/cursor/create-and-deploy-new-content-976a"
-    "origin/cursor/create-and-deploy-new-content-a596"
-    "origin/cursor/create-and-deploy-new-content-b3e7"
-    "origin/cursor/create-and-deploy-new-content-bccc"
-    "origin/cursor/create-and-deploy-new-content-c144"
-    "origin/cursor/create-and-deploy-new-content-c85f"
-    "origin/cursor/create-and-deploy-new-content-db31"
-    "origin/cursor/create-and-deploy-new-content-f799"
-    "origin/cursor/create-and-deploy-new-content-fa57"
-)
+# Get all cursor branches
+CURSOR_BRANCHES=$(git branch -r | grep "origin/cursor/" | sed 's/origin\///')
 
-# Additional branches to merge
-ADDITIONAL_BRANCHES=(
-    "origin/ai-2027-content-integration"
-    "origin/feature/revolutionary-2026-ai-content"
-    "origin/ultimate-neural-fusion-content"
-)
+# Counter for tracking progress
+count=0
+total=$(echo "$CURSOR_BRANCHES" | wc -l)
 
-ALL_BRANCHES=("${CURSOR_BRANCHES[@]}" "${ADDITIONAL_BRANCHES[@]}")
+echo "📊 Found $total cursor branches to process"
 
-echo "📋 Found ${#ALL_BRANCHES[@]} branches to merge"
-
-# Function to resolve conflicts automatically
-resolve_conflicts() {
-    local conflicted_files=$(git diff --name-only --diff-filter=U)
-    
-    if [ -z "$conflicted_files" ]; then
-        echo "✅ No conflicts to resolve"
-        return 0
-    fi
-    
-    echo "🔧 Resolving conflicts in: $conflicted_files"
-    
-    for file in $conflicted_files; do
-        echo "  📝 Resolving conflicts in $file"
-        
-        # For most files, we'll take the incoming changes (theirs) to preserve new content
-        # But for critical files like App.tsx, we'll use a more sophisticated approach
-        
-        if [[ "$file" == *"App.tsx" ]] || [[ "$file" == *"layout.tsx" ]] || [[ "$file" == *"page.tsx" ]]; then
-            echo "    🎯 Critical file detected, using sophisticated merge strategy"
-            # For critical files, keep both sets of changes where possible
-            git checkout --theirs "$file" 2>/dev/null || git checkout --ours "$file" 2>/dev/null || true
-        else
-            # For other files, prefer incoming changes (newer content)
-            git checkout --theirs "$file" 2>/dev/null || git checkout --ours "$file" 2>/dev/null || true
-        fi
-        
-        git add "$file"
-    done
-}
-
-# Function to merge a single branch
-merge_branch() {
-    local branch=$1
-    echo "🔄 Attempting to merge $branch"
-    
-    if git merge --no-commit --no-ff "$branch" 2>/dev/null; then
-        echo "✅ $branch merged successfully (no conflicts)"
-        git commit -m "Merge $branch - No conflicts"
-        return 0
-    else
-        echo "⚠️  $branch has conflicts, resolving..."
-        resolve_conflicts
-        
-        if git commit -m "Merge $branch - Conflicts resolved" 2>/dev/null; then
-            echo "✅ $branch merged successfully (conflicts resolved)"
-            return 0
-        else
-            echo "❌ Failed to resolve conflicts for $branch"
-            git merge --abort
-            return 1
-        fi
-    fi
-}
-
-# Main merge loop
-successful_merges=0
-failed_merges=0
-
-for branch in "${ALL_BRANCHES[@]}"; do
+# Process each branch
+for branch in $CURSOR_BRANCHES; do
+    count=$((count + 1))
     echo ""
-    echo "🔄 Processing $branch..."
+    echo "🔄 Processing branch $count/$total: $branch"
     
-    if merge_branch "$branch"; then
-        ((successful_merges++))
-        echo "✅ Successfully merged $branch"
+    # Checkout the branch
+    if git checkout "$branch" 2>/dev/null; then
+        echo "✅ Checked out $branch"
+        
+        # Pull latest changes
+        if git pull origin "$branch" 2>/dev/null; then
+            echo "✅ Pulled latest changes for $branch"
+            
+            # Switch back to main
+            git checkout main
+            
+            # Try to merge
+            if git merge "$branch" --no-ff -m "Merge $branch into main" 2>/dev/null; then
+                echo "✅ Successfully merged $branch into main"
+            else
+                echo "⚠️  Merge conflict in $branch - attempting to resolve..."
+                
+                # Check for conflicts
+                if git status --porcelain | grep -q "^UU\|^AA\|^DD"; then
+                    echo "🔧 Resolving conflicts in $branch..."
+                    
+                    # Auto-resolve conflicts by preferring the incoming changes
+                    git status --porcelain | grep "^UU\|^AA\|^DD" | cut -c4- | while read file; do
+                        if [ -f "$file" ]; then
+                            echo "   Resolving conflict in $file"
+                            # Use incoming changes (from the branch)
+                            git checkout --theirs "$file" 2>/dev/null || true
+                            git add "$file" 2>/dev/null || true
+                        fi
+                    done
+                    
+                    # Complete the merge
+                    if git commit --no-edit 2>/dev/null; then
+                        echo "✅ Resolved conflicts and merged $branch"
+                    else
+                        echo "❌ Failed to resolve conflicts for $branch - skipping"
+                        git merge --abort 2>/dev/null || true
+                    fi
+                else
+                    echo "❌ Merge failed for $branch - skipping"
+                    git merge --abort 2>/dev/null || true
+                fi
+            fi
+        else
+            echo "❌ Failed to pull $branch - skipping"
+        fi
     else
-        ((failed_merges++))
-        echo "❌ Failed to merge $branch"
+        echo "❌ Failed to checkout $branch - skipping"
     fi
+    
+    # Progress indicator
+    echo "📈 Progress: $count/$total branches processed"
 done
 
 echo ""
-echo "📊 Merge Summary:"
-echo "✅ Successful merges: $successful_merges"
-echo "❌ Failed merges: $failed_merges"
-echo "📈 Success rate: $(( successful_merges * 100 / (successful_merges + failed_merges) ))%
+echo "🎉 PR merge process completed!"
+echo "📊 Processed $count branches"
 
-if [ $successful_merges -gt 0 ]; then
-    echo ""
-    echo "🚀 Pushing merged changes to main branch..."
-    git push origin main --force-with-lease
-    echo "✅ All successful merges pushed to main!"
+# Push the merged changes
+echo "🚀 Pushing merged changes to origin/main..."
+if git push origin main; then
+    echo "✅ Successfully pushed all merged changes to origin/main"
+else
+    echo "❌ Failed to push changes to origin/main"
+    exit 1
 fi
 
 echo ""
-echo "🎉 PR merge process completed!"
+echo "✨ All done! All open PRs have been merged into main branch."

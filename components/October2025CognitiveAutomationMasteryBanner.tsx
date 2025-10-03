@@ -101,9 +101,9 @@ const October2025CognitiveAutomationMasteryBanner: React.FC = () => {
         {/* Technology Pillars */}
         <div className="grid md:grid-cols-4 gap-3 mb-8">
           {[
-            "Neural Language Models",
-            "Computer Vision Systems",
-            "Predictive Analytics",
+            "Neural Language Models
+            "Computer Vision Systems
+            "Predictive Analytics
             "Decision Intelligence"
           ].map((tech, index) => (
             <motion.div

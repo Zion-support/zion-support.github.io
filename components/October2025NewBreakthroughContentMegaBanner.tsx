@@ -6,26 +6,26 @@ const October2025NewBreakthroughContentMegaBanner: React.FC = () => {
   const breakthroughs = [
     {
       icon: Network,
-      title: "Agentic AI Orchestration",
-      description: "10,000+ Agents Coordinated at Scale",
-      metrics: "$8.4B Value • 99.98% Reliability • 1,847% ROI",
-      gradient: "from-purple-600 via-pink-600 to-red-600",
+      title: "Agentic AI Orchestration
+      description: "10,000+ Agents Coordinated at Scale
+      metrics: "$8.4B Value • 99.98% Reliability • 1,847% ROI
+      gradient: "from-purple-600 via-pink-600 to-red-600
       link: "/blog/ai-2025-october-agentic-orchestration-breakthrough"
     },
     {
       icon: Zap,
-      title: "Quantum LLM Training",
-      description: "10,000x Faster Model Development",
-      metrics: "$12.8B Savings • 99.97% Accuracy • 2,847% ROI",
-      gradient: "from-blue-600 via-cyan-600 to-teal-600",
+      title: "Quantum LLM Training
+      description: "10,000x Faster Model Development
+      metrics: "$12.8B Savings • 99.97% Accuracy • 2,847% ROI
+      gradient: "from-blue-600 via-cyan-600 to-teal-600
       link: "/blog/ai-2025-october-quantum-llm-training-breakthrough"
     },
     {
       icon: Brain,
-      title: "Neuromorphic Edge Intelligence",
-      description: "Brain-Inspired Computing Revolution",
-      metrics: "$4.7B Value • 1,000x Efficiency • 3,247% ROI",
-      gradient: "from-green-600 via-emerald-600 to-teal-600",
+      title: "Neuromorphic Edge Intelligence
+      description: "Brain-Inspired Computing Revolution
+      metrics: "$4.7B Value • 1,000x Efficiency • 3,247% ROI
+      gradient: "from-green-600 via-emerald-600 to-teal-600
       link: "/blog/ai-2025-october-neuromorphic-edge-intelligence"
     }
   ];

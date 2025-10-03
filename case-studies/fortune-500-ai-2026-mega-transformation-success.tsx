@@ -1,18 +1,5 @@
 import React from 'react';
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: 'Fortune 500 AI 2026 Mega Transformation: $10B Value Generation Success Story',
-  description: 'Discover how a Fortune 500 company achieved $10B in value generation through AI 2026 mega transformation, achieving 99.9% automation and 2000x processing improvements.',
-  keywords: 'Fortune 500, AI transformation, $10B value, enterprise success, AI 2026, mega transformation',
-  openGraph: {
-    title: 'Fortune 500 AI 2026 Mega Transformation: $10B Value Generation Success Story',
-    description: 'Fortune 500 company achieves $10B value through AI 2026 mega transformation',
-    type: 'article',
-    publishedTime: '2026-06-15T00:00:00.000Z',
-    authors: ['Zion Tech Group'],
-  },
-};
+import { Helmet } from 'react-helmet-async';
 
 export default function Fortune500AI2026MegaTransformationSuccess() {
   return (

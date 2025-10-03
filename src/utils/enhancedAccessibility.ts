@@ -165,7 +165,7 @@ class EnhancedAccessibility {
     const inputs = document.querySelectorAll('input, textarea, select');
     inputs.forEach((input) => {
       if (!input.getAttribute('aria-label') && !input.getAttribute('aria-labelledby')) {
-        const label = document.querySelector(`label[for="${input.id}"]`);
+        const label = document.querySelector(`label[for="${input.id}"]`);"
         if (label) {
           input.setAttribute('aria-labelledby', label.id || `label-${input.id}`);
         }
@@ -177,8 +177,8 @@ class EnhancedAccessibility {
     const skipLinks = document.createElement('div');
     skipLinks.className = 'skip-links';
     skipLinks.innerHTML = `
-      <a href="#main-content" class="skip-link">Skip to main content</a>
-      <a href="#navigation" class="skip-link">Skip to navigation</a>
+      <a href="#main-content" class="skip-link">Skip to main content</a>"
+      <a href="#navigation" class="skip-link">Skip to navigation</a>"
     `;
     document.body.insertBefore(skipLinks, document.body.firstChild);
   }
@@ -305,7 +305,7 @@ class EnhancedAccessibility {
       'input:not([disabled])',
       'select:not([disabled])',
       'textarea:not([disabled])',
-      '[tabindex]:not([tabindex="-1"])'
+      '[tabindex]:not([tabindex="-1"])'"
     ].join(', ');
 
     return Array.from(document.querySelectorAll(focusableSelectors)) as HTMLElement[];
@@ -332,7 +332,7 @@ class EnhancedAccessibility {
     const focusableElements = this.getFocusableElements();
     const ariaLabels = document.querySelectorAll('[aria-label], [aria-labelledby]');
     const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
-    // const images = document.querySelectorAll('img'); // Available for future use
+    // const _images = document.querySelectorAll('img');
     const imagesWithAlt = document.querySelectorAll('img[alt]');
 
     this.metrics = {
