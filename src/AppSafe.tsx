@@ -10,4 +10,4 @@ const AppSafe: React.FC = () => {
   );
 };
 
-export default Component;
+export default AppSafe;
