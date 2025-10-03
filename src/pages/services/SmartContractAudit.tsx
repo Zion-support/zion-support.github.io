@@ -71,7 +71,6 @@ const SmartContractAudit: React.FC = () => {
         "1 revision included",
         "Standard compliance check",
         "Up to 500 lines of code"],
-,
       popular: false
     },
     {
@@ -89,7 +88,6 @@ const SmartContractAudit: React.FC = () => {
         "Up to 2,000 lines of code",
         "Gas optimization analysis",
         "Architecture review"],
-,
       popular: true
     },
     {
