@@ -1,43 +1,43 @@
 import React from 'react';
-import { Link } from 'react-router-dom'';
+import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 
-const AIServicesPage: React.FC  = () => {
+const AIServicesPage: React.FC = () => {
   const aiServices = [
     {
-      title: "Machine Learning Solutions","
-      description: "Custom ML models tailored to your business needs, from predictive analytics to recommendation systems.","
-      icon: "🧠","
+      title: "Machine Learning Solutions",
+      description: "Custom ML models tailored to your business needs, from predictive analytics to recommendation systems.",
+      icon: "🧠",
       features: ["Custom Model Development", "Predictive Analytics", "Recommendation Engines", "Model Optimization"]"
     },
     {
-      title: "Natural Language Processing","
-      description: "Advanced NLP solutions for text analysis, sentiment analysis, and automated content generation.","
-      icon: "💬","
+      title: "Natural Language Processing",
+      description: "Advanced NLP solutions for text analysis, sentiment analysis, and automated content generation.",
+      icon: "💬",
       features: ["Text Analysis", "Sentiment Analysis", "Content Generation", "Language Translation"]"
     },
     {
-      title: "Computer Vision","
-      description: "Image and video analysis solutions for object detection, facial recognition, and visual content understanding.","
-      icon: "👁️","
+      title: "Computer Vision",
+      description: "Image and video analysis solutions for object detection, facial recognition, and visual content understanding.",
+      icon: "👁️",
       features: ["Object Detection", "Facial Recognition", "Image Classification", "Video Analysis"]"
     },
     {
-      title: "AI Automation","
-      description: "Intelligent automation solutions that streamline processes and reduce manual work.","
-      icon: "🤖","
+      title: "AI Automation",
+      description: "Intelligent automation solutions that streamline processes and reduce manual work.",
+      icon: "🤖",
       features: ["Process Automation", "Workflow Optimization", "Intelligent Document Processing", "Smart Integrations"]"
     },
     {
-      title: "AI Consulting","
-      description: "Strategic AI consulting to help you identify opportunities and implement AI solutions effectively.","
-      icon: "💡","
+      title: "AI Consulting",
+      description: "Strategic AI consulting to help you identify opportunities and implement AI solutions effectively.",
+      icon: "💡",
       features: ["AI Strategy", "Technology Assessment", "Implementation Planning", "ROI Analysis"]"
     },
     {
-      title: "AI Training & Support","
-      description: "Comprehensive training programs and ongoing support to ensure successful AI adoption.","
-      icon: "🎓","
+      title: "AI Training & Support",
+      description: "Comprehensive training programs and ongoing support to ensure successful AI adoption.",
+      icon: "🎓",
       features: ["Team Training", "Best Practices", "Ongoing Support", "Knowledge Transfer"]"
     }
   ];
@@ -63,7 +63,7 @@ const AIServicesPage: React.FC  = () => {
         {/* Services Grid */}
         <section className="py-20">"
           <div className="container mx-auto px-6">"
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">"
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">"
               {aiServices.map((service, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-sm hover: shadow-lg transition-shadow">"
                   <div className="text-4xl mb-4">{service.icon}</div>"
@@ -100,7 +100,7 @@ const AIServicesPage: React.FC  = () => {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md: grid-cols-3 gap-8">"
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">"
               <div className="text-center">"
                 <div className="text-4xl mb-4">📈</div>"
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Proven ROI</h3>"
@@ -135,7 +135,7 @@ const AIServicesPage: React.FC  = () => {
             <p className="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">"
               Let's discuss how our AI services can transform your business operations and drive growth.';
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">"
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <Link 
                 to="/contact" 
                 className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors

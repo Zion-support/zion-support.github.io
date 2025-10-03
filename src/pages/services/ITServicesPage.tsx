@@ -1,43 +1,43 @@
 import React from 'react';
-import { Link } from 'react-router-dom'';
+import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 
-const ITServicesPage: React.FC  = () => {
+const ITServicesPage: React.FC = () => {
   const itServices = [
     {
-      title: "Cloud Infrastructure","
-      description: "Complete cloud infrastructure setup, migration, and management services for optimal performance and scalability.","
-      icon: "☁️","
+      title: "Cloud Infrastructure",
+      description: "Complete cloud infrastructure setup, migration, and management services for optimal performance and scalability.",
+      icon: "☁️",
       features: ["Cloud Migration", "Infrastructure Setup", "Performance Optimization", "Cost Management"]"
     },
     {
-      title: "DevOps & Automation","
-      description: "Streamline your development and deployment processes with modern DevOps practices and automation tools.","
-      icon: "🔄","
+      title: "DevOps & Automation",
+      description: "Streamline your development and deployment processes with modern DevOps practices and automation tools.",
+      icon: "🔄",
       features: ["CI/CD Pipelines", "Infrastructure as Code", "Monitoring & Logging", "Automated Testing"]"
     },
     {
-      title: "Security Solutions","
-      description: "Comprehensive security services to protect your infrastructure, applications, and data from threats.","
-      icon: "🔒","
+      title: "Security Solutions",
+      description: "Comprehensive security services to protect your infrastructure, applications, and data from threats.",
+      icon: "🔒",
       features: ["Security Audits", "Threat Detection", "Compliance Management", "Incident Response"]"
     },
     {
-      title: "Network Management","
-      description: "Design, implement, and manage robust network infrastructure for optimal connectivity and performance.","
-      icon: "🌐","
+      title: "Network Management",
+      description: "Design, implement, and manage robust network infrastructure for optimal connectivity and performance.",
+      icon: "🌐",
       features: ["Network Design", "Performance Monitoring", "Troubleshooting", "Security Implementation"]"
     },
     {
-      title: "Database Management","
-      description: "Expert database design, optimization, and management services for improved performance and reliability.","
-      icon: "🗄️","
+      title: "Database Management",
+      description: "Expert database design, optimization, and management services for improved performance and reliability.",
+      icon: "🗄️",
       features: ["Database Design", "Performance Tuning", "Backup & Recovery", "Migration Services"]"
     },
     {
-      title: "IT Support & Maintenance","
-      description: "24/7 IT support and proactive maintenance to ensure your systems run smoothly and efficiently.","
-      icon: "🛠️","
+      title: "IT Support & Maintenance",
+      description: "24/7 IT support and proactive maintenance to ensure your systems run smoothly and efficiently.",
+      icon: "🛠️",
       features: ["24/7 Support", "Proactive Monitoring", "System Updates", "Performance Optimization"]"
     }
   ];
@@ -63,7 +63,7 @@ const ITServicesPage: React.FC  = () => {
         {/* Services Grid */}
         <section className="py-20">"
           <div className="container mx-auto px-6">"
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">"
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">"
               {itServices.map((service, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-sm hover: shadow-lg transition-shadow">"
                   <div className="text-4xl mb-4">{service.icon}</div>"
@@ -100,7 +100,7 @@ const ITServicesPage: React.FC  = () => {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md: grid-cols-3 gap-8">"
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">"
               <div className="text-center">"
                 <div className="text-4xl mb-4">🛡️</div>"
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Enterprise Security</h3>"
@@ -138,7 +138,7 @@ const ITServicesPage: React.FC  = () => {
               </p>
             </div>
             
-            <div className="grid grid-cols-2 md: grid-cols-4 gap-8">"
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">"
               <div className="bg-white p-6 rounded-xl shadow-sm text-center">"
                 <h3 className="text-lg font-bold text-gray-900 mb-2">Cloud Providers</h3>"
                 <p className="text-gray-600">AWS, Azure, Google Cloud</p>"
@@ -169,7 +169,7 @@ const ITServicesPage: React.FC  = () => {
             <p className="text-xl mb-8 text-purple-100 max-w-2xl mx-auto">"
               Let's discuss how our IT services can improve your infrastructure performance and security.';
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">"
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <Link 
                 to="/contact" 
                 className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors

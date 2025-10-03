@@ -5,242 +5,242 @@ import { CheckCircle, ArrowRight, DollarSign, Clock, Star, TrendingUp, Globe, Sm
 export default function ITServices(): React.JSX.Element {
   const itServices: [,
     {
-      id="cloud-migration-expert","
-      name: "Cloud Migration & Optimization Expert","
-      blurb: "Complete cloud transformation with cost optimization and security hardening","
-      price: "$5,000 - $25,000/month","
-      eta: "4-12 weeks","
-      category: "Cloud Infrastructure","
+      id="cloud-migration-expert",
+      name: "Cloud Migration & Optimization Expert",
+      blurb: "Complete cloud transformation with cost optimization and security hardening",
+      price: "$5,000 - $25,000/month",
+      eta: "4-12 weeks",
+      category: "Cloud Infrastructure",
       icon: Cloud,,
       features: [,,
-        "Multi-cloud strategy and architecture design",";"
-        "Automated migration with zero downtime",";"
-        "Cost optimization with 30-50% savings",";"
-        "Security hardening and compliance setup",";"
-        "Performance monitoring and optimization",";"
-        "Disaster recovery and backup solutions",";"
+        "Multi-cloud strategy and architecture design",;"
+        "Automated migration with zero downtime",;"
+        "Cost optimization with 30-50% savings",;"
+        "Security hardening and compliance setup",;"
+        "Performance monitoring and optimization",;"
+        "Disaster recovery and backup solutions",;"
         "24/7 cloud operations support"],
 
       benefits: [,,
-        "50% reduction in infrastructure costs",";"
-        "99.99% uptime guarantee",";"
-        "3x faster application deployment",";"
+        "50% reduction in infrastructure costs",;"
+        "99.99% uptime guarantee",;"
+        "3x faster application deployment",;"
         "Complete security compliance"
       ]
       useCases: ["Enterprise companies", "SaaS providers", "E-commerce platforms", "Healthcare systems"],"
-      marketSize: "$623.3B cloud computing market","
-      link: "/contact","
+      marketSize: "$623.3B cloud computing market",
+      link: "/contact",
     },
     {
-      id="zero-trust-security","
-      name: "Zero Trust Security Framework","
-      blurb: "Enterprise-grade security architecture with continuous verification","
-      price: "$3,500 - $18,000/month","
-      eta: "3-8 weeks","
-      category: "Cybersecurity","
+      id="zero-trust-security",
+      name: "Zero Trust Security Framework",
+      blurb: "Enterprise-grade security architecture with continuous verification",
+      price: "$3,500 - $18,000/month",
+      eta: "3-8 weeks",
+      category: "Cybersecurity",
       icon: Shield,,
       features: [,,
-        "Identity and access management (IAM) setup",";"
-        "Network segmentation and micro-segmentation",";"
-        "Endpoint detection and response (EDR)",";"
-        "Security information and event management (SIEM)",";"
-        "Multi-factor authentication (MFA) implementation",";"
-        "Continuous security monitoring",";"
+        "Identity and access management (IAM) setup",;"
+        "Network segmentation and micro-segmentation",;"
+        "Endpoint detection and response (EDR)",;"
+        "Security information and event management (SIEM)",;"
+        "Multi-factor authentication (MFA) implementation",;"
+        "Continuous security monitoring",;"
         "Incident response automation"],
 
       benefits: [,,
-        "95% reduction in security incidents",";"
-        "100% compliance with industry standards",";"
-        "Real-time threat detection and response",";"
+        "95% reduction in security incidents",;"
+        "100% compliance with industry standards",;"
+        "Real-time threat detection and response",;"
         "Automated security policy enforcement"
       ]
       useCases: ["Financial institutions", "Government agencies", "Healthcare organizations", "Large enterprises"],"
-      marketSize: "$366.1B cybersecurity market","
-      link: "/contact","
+      marketSize: "$366.1B cybersecurity market",
+      link: "/contact",
     },
     {
-      id="devops-automation","
-      name: "DevOps Automation Platform","
-      blurb: "Complete CI/CD pipeline with infrastructure as code and monitoring","
-      price: "$2,500 - $12,000/month","
-      eta: "3-6 weeks","
-      category: "DevOps & Automation","
+      id="devops-automation",
+      name: "DevOps Automation Platform",
+      blurb: "Complete CI/CD pipeline with infrastructure as code and monitoring",
+      price: "$2,500 - $12,000/month",
+      eta: "3-6 weeks",
+      category: "DevOps & Automation",
       icon: Zap,,
       features: [,,
-        "CI/CD pipeline setup with automated testing",";"
-        "Infrastructure as Code (IaC) with Terraform",";"
-        "Container orchestration with Kubernetes",";"
-        "Automated deployment and rollback",";"
-        "Performance monitoring and alerting",";"
-        "Security scanning and compliance checks",";"
+        "CI/CD pipeline setup with automated testing",;"
+        "Infrastructure as Code (IaC) with Terraform",;"
+        "Container orchestration with Kubernetes",;"
+        "Automated deployment and rollback",;"
+        "Performance monitoring and alerting",;"
+        "Security scanning and compliance checks",;"
         "Developer productivity tools integration"],
 
       benefits: [,,
-        "10x faster deployment cycles",";"
-        "80% reduction in deployment failures",";"
-        "50% improvement in developer productivity",";"
+        "10x faster deployment cycles",;"
+        "80% reduction in deployment failures",;"
+        "50% improvement in developer productivity",;"
         "Automated quality assurance"
       ]
       useCases: ["Software companies", "Tech startups", "E-commerce platforms", "Financial services"],"
-      marketSize: "$10.3B DevOps market","
-      link: "/contact","
+      marketSize: "$10.3B DevOps market",
+      link: "/contact",
     },
     {
-      id="data-engineering-platform","
-      name: "Data Engineering Platform","
-      blurb: "Scalable data infrastructure with real-time processing and analytics","
-      price: "$4,000 - $20,000/month","
-      eta: "4-10 weeks","
-      category: "Data & Analytics","
+      id="data-engineering-platform",
+      name: "Data Engineering Platform",
+      blurb: "Scalable data infrastructure with real-time processing and analytics",
+      price: "$4,000 - $20,000/month",
+      eta: "4-10 weeks",
+      category: "Data & Analytics",
       icon: Database,,
       features: [,,
-        "Data lake and data warehouse architecture",";"
-        "Real-time data streaming with Apache Kafka",";"
-        "ETL/ELT pipeline automation",";"
-        "Data quality monitoring and governance",";"
-        "Machine learning pipeline integration",";"
-        "Business intelligence dashboard creation",";"
+        "Data lake and data warehouse architecture",;"
+        "Real-time data streaming with Apache Kafka",;"
+        "ETL/ELT pipeline automation",;"
+        "Data quality monitoring and governance",;"
+        "Machine learning pipeline integration",;"
+        "Business intelligence dashboard creation",;"
         "Data security and privacy compliance"],
 
       benefits: [,,
-        "5x faster data processing",";"
-        "Real-time business insights",";"
-        "90% reduction in data errors",";"
+        "5x faster data processing",;"
+        "Real-time business insights",;"
+        "90% reduction in data errors",;"
         "Automated data governance"
       ]
       useCases: ["Analytics companies", "E-commerce platforms", "Financial services", "Healthcare systems"],"
-      marketSize: "$274.3B data analytics market","
-      link: "/contact","
+      marketSize: "$274.3B data analytics market",
+      link: "/contact",
     },
     {
-      id="network-infrastructure","
-      name: "Enterprise Network Infrastructure","
-      blurb: "High-performance network design with SD-WAN and security integration","
-      price: "$3,000 - $15,000/month","
-      eta: "2-6 weeks","
-      category: "Network Solutions","
+      id="network-infrastructure",
+      name: "Enterprise Network Infrastructure",
+      blurb: "High-performance network design with SD-WAN and security integration",
+      price: "$3,000 - $15,000/month",
+      eta: "2-6 weeks",
+      category: "Network Solutions",
       icon: Network,,
       features: [,,
-        "SD-WAN implementation and optimization",";"
-        "Network security with next-gen firewalls",";"
-        "Load balancing and traffic optimization",";"
-        "Network monitoring and performance analytics",";"
-        "Wireless infrastructure setup",";"
-        "VPN and remote access solutions",";"
+        "SD-WAN implementation and optimization",;"
+        "Network security with next-gen firewalls",;"
+        "Load balancing and traffic optimization",;"
+        "Network monitoring and performance analytics",;"
+        "Wireless infrastructure setup",;"
+        "VPN and remote access solutions",;"
         "Disaster recovery network planning"],
 
       benefits: [,,
-        "60% improvement in network performance",";"
-        "99.9% network uptime guarantee",";"
-        "40% reduction in network costs",";"
+        "60% improvement in network performance",;"
+        "99.9% network uptime guarantee",;"
+        "40% reduction in network costs",;"
         "Enhanced security and compliance"
       ]
       useCases: ["Multi-location businesses", "Remote work environments", "Healthcare networks", "Educational institutions"],"
-      marketSize: "$45.2B SD-WAN market","
-      link: "/contact","
+      marketSize: "$45.2B SD-WAN market",
+      link: "/contact",
     },
     {
-      id="compliance-automation","
-      name: "Compliance Automation Suite","
-      blurb: "Automated compliance monitoring for SOC 2, HIPAA, GDPR, and industry standards","
-      price: "$2,000 - $10,000/month","
-      eta: "2-4 weeks","
-      category: "Compliance & Governance","
+      id="compliance-automation",
+      name: "Compliance Automation Suite",
+      blurb: "Automated compliance monitoring for SOC 2, HIPAA, GDPR, and industry standards",
+      price: "$2,000 - $10,000/month",
+      eta: "2-4 weeks",
+      category: "Compliance & Governance",
       icon: Lock,,
       features: [,,
-        "Automated compliance monitoring and reporting",";"
-        "Policy management and enforcement",";"
-        "Risk assessment and mitigation",";"
-        "Audit trail and evidence collection",";"
-        "Employee training and awareness programs",";"
-        "Incident response and breach notification",";"
+        "Automated compliance monitoring and reporting",;"
+        "Policy management and enforcement",;"
+        "Risk assessment and mitigation",;"
+        "Audit trail and evidence collection",;"
+        "Employee training and awareness programs",;"
+        "Incident response and breach notification",;"
         "Regulatory change management"],
 
       benefits: [,,
-        "90% reduction in compliance costs",";"
-        "100% audit readiness",";"
-        "Automated risk management",";"
+        "90% reduction in compliance costs",;"
+        "100% audit readiness",;"
+        "Automated risk management",;"
         "Continuous compliance monitoring"
       ]
       useCases: ["Healthcare providers", "Financial services", "SaaS companies", "Government contractors"],"
-      marketSize: "$56.9B compliance management market","
-      link: "/contact","
+      marketSize: "$56.9B compliance management market",
+      link: "/contact",
     }
   ];
 
   const additionalITServices: [,
     {
-      name: "IT Infrastructure Assessment","
-      description: "Comprehensive infrastructure audit and optimization recommendations","
-      price: "$1,500 - $5,000/month","
+      name: "IT Infrastructure Assessment",
+      description: "Comprehensive infrastructure audit and optimization recommendations",
+      price: "$1,500 - $5,000/month",
       features: ["Performance analysis", "Security assessment", "Cost optimization", "Modernization roadmap"]"
     },
     {
-      name: "24/7 IT Support & Monitoring","
-      description: "Round-the-clock IT support with proactive monitoring","
-      price: "$800 - $3,000/month","
+      name: "24/7 IT Support & Monitoring",
+      description: "Round-the-clock IT support with proactive monitoring",
+      price: "$800 - $3,000/month",
       features: ["24/7 helpdesk", "Proactive monitoring", "Remote support", "SLA guarantees"]"
     },
     {
-      name: "Backup & Disaster Recovery","
-      description: "Automated backup solutions with disaster recovery planning","
-      price: "$500 - $2,500/month","
+      name: "Backup & Disaster Recovery",
+      description: "Automated backup solutions with disaster recovery planning",
+      price: "$500 - $2,500/month",
       features: ["Automated backups", "Disaster recovery", "Business continuity", "Data protection"]"
     },
     {
-      name: "IT Consulting & Strategy","
-      description: "Strategic IT planning and digital transformation consulting","
-      price: "$200 - $500/hour","
+      name: "IT Consulting & Strategy",
+      description: "Strategic IT planning and digital transformation consulting",
+      price: "$200 - $500/hour",
       features: ["Strategic planning", "Technology roadmap", "Vendor selection", "Implementation guidance"]"
       name: "IT Infrastructure Assessment
-      description: "Comprehensive infrastructure audit and optimization recommendations",
+      description: ", Comprehensive infrastructure audit and optimization recommendations",
       price: "$1,500 - $5,000/month
-      features: ["Performance analysis", "Security assessment", "Cost optimization", "Modernization roadmap"]
+      features: [", Performance analysis", "Security assessment", "Cost optimization", "Modernization roadmap"],
     },
     {
       name: "24/7 IT Support & Monitoring
-      description: "Round-the-clock IT support with proactive monitoring",
+      description: ", Round-the-clock IT support with proactive monitoring",
       price: "$800 - $3,000/month
-      features: ["24/7 helpdesk", "Proactive monitoring", "Remote support", "SLA guarantees"]
+      features: [", 24/7 helpdesk", "Proactive monitoring", "Remote support", "SLA guarantees"],
     },
     {
       name: "Backup & Disaster Recovery
-      description: "Automated backup solutions with disaster recovery planning",
+      description: ", Automated backup solutions with disaster recovery planning",
       price: "$500 - $2,500/month
-      features: ["Automated backups", "Disaster recovery", "Business continuity", "Data protection"]
+      features: [", Automated backups", "Disaster recovery", "Business continuity", "Data protection"],
     },
     {
       name: "IT Consulting & Strategy
-      description: "Strategic IT planning and digital transformation consulting",
+      description: ", Strategic IT planning and digital transformation consulting",
       price: "$200 - $500/hour
-      features: ["Strategic planning", "Technology roadmap", "Vendor selection", "Implementation guidance"]
+      features: [", Strategic planning", "Technology roadmap", "Vendor selection", "Implementation guidance"],
     }
   ];
 
   const industrySolutions: [,
     {
-      industry: "Healthcare","
+      industry: "Healthcare",
       solutions: ["HIPAA compliance", "Patient data security", "Telemedicine infrastructure", "Medical device integration"],"
       icon: Building,,
-      color: "from-green-500 to-teal-500","
+      color: "from-green-500 to-teal-500",
     },
     {
-      industry: "Financial Services","
+      industry: "Financial Services",
       solutions: ["PCI DSS compliance", "Fraud detection systems", "Risk management", "Regulatory reporting"],"
       icon: DollarSign,,
-      color: "from-blue-500 to-indigo-500","
+      color: "from-blue-500 to-indigo-500",
     },
     {
-      industry: "E-commerce","
+      industry: "E-commerce",
       solutions: ["Scalable infrastructure", "Payment security", "Inventory management", "Customer analytics"],"
       icon: Globe,,
-      color: "from-purple-500 to-pink-500","
+      color: "from-purple-500 to-pink-500",
     },
     {
-      industry: "Manufacturing","
+      industry: "Manufacturing",
       solutions: ["IoT integration", "Predictive maintenance", "Supply chain optimization", "Quality control systems"],"
       icon: Cpu,,
-      color: "from-orange-500 to-red-500","
+      color: "from-orange-500 to-red-500",
     }
   ];
 
@@ -251,13 +251,13 @@ export default function ITServices(): React.JSX.Element {
         <meta name: "description" ,"
   content: "Comprehensive IT services including cloud migration, cybersecurity, DevOps automation, and data engineering. Enterprise-grade solutions with proven results." ,"
         />
-        <meta name: "keywords" content ="IT services, cloud migration, cybersecurity, DevOps, data engineering, network infrastructure, compliance" />"
-        <link rel: "canonical" href ="https://ziontechgroup.com/it-services" />"
+        <meta name: "keywords", content ="IT services, cloud migration, cybersecurity, DevOps, data engineering, network infrastructure, compliance" />"
+        <link rel: "canonical", href ="https://ziontechgroup.com/it-services" />"
         <meta name="description" ,
   content: "Comprehensive IT services including cloud migration, cybersecurity, DevOps automation, and data engineering. Enterprise-grade solutions with proven results." ,"
         />
-        <meta name: "keywords" content="IT services, cloud migration, cybersecurity, DevOps, data engineering, network infrastructure, compliance" />
-        <link rel: "canonical" href ="https://ziontechgroup.com/it-services" />
+        <meta name: "keywords", content="IT services, cloud migration, cybersecurity, DevOps, data engineering, network infrastructure, compliance" />
+        <link rel: "canonical", href ="https://ziontechgroup.com/it-services" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white"
@@ -415,7 +415,7 @@ export default function ITServices(): React.JSX.Element {
                       <div className="text-sm text-slate-400">{service.eta} implementation</div>";"
                     </div>
                     <a href={service.link}
-                      className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300","
+                      className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300",
                     >
                       Get Started
                       <ArrowRight className="w-4 h-4" />"
@@ -432,7 +432,7 @@ export default function ITServices(): React.JSX.Element {
                       <div className= "text-sm text-slate-400">{service.eta} implementation</div>";"
                     </div>
                     <a href={service.link}
-                      className= "inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300","
+                      className= "inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300",
                     >
                       Get Started
                       <ArrowRight className= "w-4 h-4" />"
@@ -472,7 +472,7 @@ export default function ITServices(): React.JSX.Element {
               const Icon: solution.icon;,,
   return (
                 <div key={idx} className="bg-slate-800/30 backdrop-blur-sm rounded-xl p-6 border border-slate-700/30 hover:border-cyan-500/30 transition-all duration-300"
-                  <div className={`w-12 h-12 bg-gradient-to-br ${solution.color} rounded-lg flex items-center justify-center mx-auto mb-4`}>`;`;
+                  <div className="{`w-12 h-12 bg-gradient-to-br ${solution.color} rounded-lg flex items-center justify-center mx-auto mb-4`}">`;`;
                     <Icon className="w-6 h-6 text-white" />"
                   </div>
                   <h3 className="text-lg font-semibold text-white mb-3 text-center">{solution.industry}</h3>";"
@@ -587,13 +587,13 @@ export default function ITServices(): React.JSX.Element {
             <div className="mt-8 text-center"
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6"
                 <a href="tel:+13024640950" ,"
-  className="inline-flex items-center gap-2 bg-white text-slate-900 px-6 py-3 rounded-lg font-semibold hover:bg-slate-100 transition-colors","
+  className="inline-flex items-center gap-2 bg-white text-slate-900 px-6 py-3 rounded-lg font-semibold hover:bg-slate-100 transition-colors",
                 >
                   <Smartphone className="w-4 h-4" />"
                   +1 302 464 0950
                 </a>
                 <a href="mailto:kleber@ziontechgroup.com" ,"
-  className="inline-flex items-center gap-2 bg-slate-700 text-white px-6 py-3 rounded-lg font-semibold hover:bg-slate-600 transition-colors","
+  className="inline-flex items-center gap-2 bg-slate-700 text-white px-6 py-3 rounded-lg font-semibold hover:bg-slate-600 transition-colors",
                 >
                   <MessageSquare className="w-4 h-4" />,"
   kleber@ziontechgroup.com
@@ -627,13 +627,13 @@ export default function ITServices(): React.JSX.Element {
             <div className= "mt-8 text-center">
               <div className= "flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
                 <a href="tel:+13024640950" ,"
-  className= "inline-flex items-center gap-2 bg-white text-slate-900 px-6 py-3 rounded-lg font-semibold hover:bg-slate-100 transition-colors","
+  className= "inline-flex items-center gap-2 bg-white text-slate-900 px-6 py-3 rounded-lg font-semibold hover:bg-slate-100 transition-colors",
                 >
                   <Smartphone className= "w-4 h-4" />"
                   +1 302 464 0950
                 </a>
                 <a href="mailto:kleber@ziontechgroup.com" ,"
-  className= "inline-flex items-center gap-2 bg-slate-700 text-white px-6 py-3 rounded-lg font-semibold hover:bg-slate-600 transition-colors","
+  className= "inline-flex items-center gap-2 bg-slate-700 text-white px-6 py-3 rounded-lg font-semibold hover:bg-slate-600 transition-colors",
                 >
                   <MessageSquare className= "w-4 h-4" />,"
   kleber@ziontechgroup.com

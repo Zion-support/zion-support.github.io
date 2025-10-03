@@ -1,55 +1,55 @@
 import React from 'react';
-import { Link } from 'react-router-dom'';
+import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 
-const AdvancedAIServices: React.FC  = () => {
+const AdvancedAIServices: React.FC = () => {
   const advancedAIServices = [
     {
-      title: "AI-Powered Content Generation","
-      description: "Advanced AI systems that generate high-quality content for marketing, documentation, and communications with natural language processing capabilities.","
-      icon: "📝","
+      title: "AI-Powered Content Generation",
+      description: "Advanced AI systems that generate high-quality content for marketing, documentation, and communications with natural language processing capabilities.",
+      icon: "📝",
       features: ["Automated Content Creation", "SEO-Optimized Writing", "Multi-language Support", "Brand Voice Consistency"],"
-      pricing: "Starting at $2,500/month","
+      pricing: "Starting at $2,500/month",
       benefits: ["75% reduction in content creation time", "40% increase in engagement rates", "Scalable content production"]"
     },
     {
-      title: "Intelligent Document Processing","
-      description: "AI-powered document analysis and processing that extracts, categorizes, and analyzes information from various document types.","
-      icon: "📄","
+      title: "Intelligent Document Processing",
+      description: "AI-powered document analysis and processing that extracts, categorizes, and analyzes information from various document types.",
+      icon: "📄",
       features: ["OCR Technology", "Data Extraction", "Document Classification", "Automated Workflows"],"
-      pricing: "Starting at $1,800/month","
+      pricing: "Starting at $1,800/month",
       benefits: ["90% accuracy in data extraction", "60% faster document processing", "Reduced manual errors"]"
     },
     {
-      title: "Predictive Analytics Platform","
-      description: "Advanced machine learning models that predict business trends, customer behavior, and operational outcomes with high accuracy.","
-      icon: "🔮","
+      title: "Predictive Analytics Platform",
+      description: "Advanced machine learning models that predict business trends, customer behavior, and operational outcomes with high accuracy.",
+      icon: "🔮",
       features: ["Trend Forecasting", "Customer Analytics", "Risk Assessment", "Performance Optimization"],"
-      pricing: "Starting at $3,200/month","
+      pricing: "Starting at $3,200/month",
       benefits: ["25% improvement in decision accuracy", "30% reduction in operational costs", "Enhanced business insights"]"
     },
     {
-      title: "AI-Powered Fraud Detection","
-      description: "Real-time fraud detection system using machine learning to identify and prevent fraudulent activities across multiple channels.","
-      icon: "🛡️","
+      title: "AI-Powered Fraud Detection",
+      description: "Real-time fraud detection system using machine learning to identify and prevent fraudulent activities across multiple channels.",
+      icon: "🛡️",
       features: ["Real-time Monitoring", "Pattern Recognition", "Risk Scoring", "Automated Alerts"],"
-      pricing: "Starting at $2,800/month","
+      pricing: "Starting at $2,800/month",
       benefits: ["95% fraud detection accuracy", "70% reduction in false positives", "24/7 monitoring"]"
     },
     {
-      title: "Conversational AI Assistant","
-      description: "Intelligent chatbots and virtual assistants that provide natural language interactions for customer service and support.","
-      icon: "🤖","
+      title: "Conversational AI Assistant",
+      description: "Intelligent chatbots and virtual assistants that provide natural language interactions for customer service and support.",
+      icon: "🤖",
       features: ["Natural Language Understanding", "Multi-channel Support", "Context Awareness", "Integration APIs"],"
-      pricing: "Starting at $1,500/month","
+      pricing: "Starting at $1,500/month",
       benefits: ["80% reduction in support tickets", "24/7 customer availability", "Improved customer satisfaction"]"
     },
     {
-      title: "Computer Vision Solutions","
-      description: "Advanced image and video analysis systems for quality control, security monitoring, and automated visual inspections.","
-      icon: "👁️","
+      title: "Computer Vision Solutions",
+      description: "Advanced image and video analysis systems for quality control, security monitoring, and automated visual inspections.",
+      icon: "👁️",
       features: ["Object Detection", "Quality Control", "Facial Recognition", "Video Analytics"],"
-      pricing: "Starting at $2,200/month","
+      pricing: "Starting at $2,200/month",
       benefits: ["99% accuracy in visual inspections", "50% faster processing", "Automated quality assurance"]"
     }
   ];
@@ -75,7 +75,7 @@ const AdvancedAIServices: React.FC  = () => {
         {/* Services Grid */}
         <section className="py-20">"
           <div className="container mx-auto px-6">"
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">"
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">"
               {advancedAIServices.map((service, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-sm hover: shadow-lg transition-all duration-300 border border-gray-100">"
                   <div className="text-4xl mb-4">{service.icon}</div>"
@@ -129,7 +129,7 @@ const AdvancedAIServices: React.FC  = () => {
               </p>
             </div>
             
-            <div className="grid grid-cols-2 md: grid-cols-4 gap-8">"
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">"
               <div className="bg-gradient-to-br from-blue-50 to-indigo-100 p-6 rounded-xl text-center border border-blue-200">"
                 <h3 className="text-lg font-bold text-gray-900 mb-2">Machine Learning</h3>"
                 <p className="text-gray-600">TensorFlow, PyTorch, Scikit-learn</p>"
@@ -160,7 +160,7 @@ const AdvancedAIServices: React.FC  = () => {
             <p className="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">"
               Contact us today to discuss how our advanced AI services can drive innovation and growth in your organization.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">"
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <Link 
                 to="/contact" 
                 className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg

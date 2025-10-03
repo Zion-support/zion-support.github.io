@@ -85,19 +85,19 @@ const ImageCDNOptimizer: React.FC = () => {
         <h2 className= "text-xl font-semibold text-gray-900">Learn More</h2>"
         <ul className= "mt-3 space-y-2 text-blue-700">
           <li >
-            <a href="https://web.dev/articles/optimize-lcp" target: "_blank" rel="noreferrer" className ="hover:underline">,"
+            <a href="https://web.dev/articles/optimize-lcp" target="_blank" rel="noreferrer" className ="hover:underline">,"
             <a href="https://web.dev/articles/optimize-lcp" target="_blank" rel="noreferrer" className ="hover:underline">,
   web.dev: Optimize LCP,
             </a>
           </li>
           <li >
-            <a href="https://web.dev/articles/optimize-images" target: "_blank" rel="noreferrer" className ="hover:underline">,"
+            <a href="https://web.dev/articles/optimize-images" target="_blank" rel="noreferrer" className ="hover:underline">,"
             <a href="https://web.dev/articles/optimize-images" target="_blank" rel="noreferrer" className ="hover:underline">,
   web.dev: Optimize Images,
             </a>
           </li>
           <li >
-            <a href="https://developers.google.com/speed/pagespeed/insights/" target: "_blank" rel="noreferrer" className ="hover:underline">,"
+            <a href="https://developers.google.com/speed/pagespeed/insights/" target="_blank" rel="noreferrer" className ="hover:underline">,"
             <a href="https://developers.google.com/speed/pagespeed/insights/" target="_blank" rel="noreferrer" className ="hover:underline">,
   PageSpeed Insights
             </a>

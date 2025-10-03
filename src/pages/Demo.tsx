@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom'';
+import { Link } from 'react-router-dom';
 import { Calendar, Clock, User, Mail, Phone, CheckCircle, Star, Play } from 'lucide-react';
 ;
 const Demo: React.FC = () => {
@@ -65,7 +65,7 @@ const Demo: React.FC = () => {
       name: 'Michael Chen',';,';,
       company: 'FinanceFlow',';,';,
       role: 'VP of Operations',';,';,
-      content: "Zion Tech Group's demo was eye-opening. We saw immediate value and signed up the same week.","
+      content: "Zion Tech Group's demo was eye-opening. We saw immediate value and signed up the same week.",
       rating: 5,
     },
     {
@@ -216,85 +216,85 @@ const Demo: React.FC = () => {
               {/* Personal Information */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6"
                 <div >
-                  <label htmlFor: "firstName" className="block text-sm font-medium text-gray-700 mb-2">,"
+                  <label htmlFor: "firstName", className="block text-sm font-medium text-gray-700 mb-2">,"
             <form onSubmit={handleSubmit} className= "space-y-6">
               {/* Personal Information */}
               <div className= "grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div >
-                  <label htmlFor: "firstName" className= "block text-sm font-medium text-gray-700 mb-2">,"
+                  <label htmlFor: "firstName", className= "block text-sm font-medium text-gray-700 mb-2">,"
   First Name *
                   </label>
-                  <input type="text","
-  id="firstName","
-  name: "firstName","
+                  <input type="text",
+  id="firstName",
+  name: "firstName",
   required
                     value={formData.firstName}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent","
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent",
                   />
                 </div>
                 <div >
-                  <label htmlFor: "lastName" className="block text-sm font-medium text-gray-700 mb-2">,"
+                  <label htmlFor: "lastName", className="block text-sm font-medium text-gray-700 mb-2">,"
                     value={formData.firstName}
                     onChange={handleInputChange}
-                    className= "w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent","
+                    className= "w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent",
                   />
                 </div>
                 <div >
-                  <label htmlFor: "lastName" className= "block text-sm font-medium text-gray-700 mb-2">,"
+                  <label htmlFor: "lastName", className= "block text-sm font-medium text-gray-700 mb-2">,"
   Last Name *
                   </label>
-                  <input type="text","
-  id="lastName","
-  name: "lastName","
+                  <input type="text",
+  id="lastName",
+  name: "lastName",
   required
                     value={formData.lastName}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent","
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent",
                     value={formData.lastName}
                     onChange={handleInputChange}
-                    className= "w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent","
+                    className= "w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent",
                   />
                 </div>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6"
                 <div >
-                  <label htmlFor: "email" className="block text-sm font-medium text-gray-700 mb-2">,"
+                  <label htmlFor: "email", className="block text-sm font-medium text-gray-700 mb-2">,"
               <div className= "grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div >
-                  <label htmlFor: "email" className= "block text-sm font-medium text-gray-700 mb-2">,"
+                  <label htmlFor: "email", className= "block text-sm font-medium text-gray-700 mb-2">,"
   Email Address *
                   </label>
-                  <input type="email","
-  id="email","
-  name: "email","
+                  <input type="email",
+  id="email",
+  name: "email",
   required
                     value={formData.email}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent","
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent",
                   />
                 </div>
                 <div >
-                  <label htmlFor: "phone" className="block text-sm font-medium text-gray-700 mb-2">,"
+                  <label htmlFor: "phone", className="block text-sm font-medium text-gray-700 mb-2">,"
                     value={formData.email}
                     onChange={handleInputChange}
-                    className= "w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent","
+                    className= "w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent",
                   />
                 </div>
                 <div >
-                  <label htmlFor: "phone" className= "block text-sm font-medium text-gray-700 mb-2">,"
+                  <label htmlFor: "phone", className= "block text-sm font-medium text-gray-700 mb-2">,"
   Phone Number
                   </label>
-                  <input type="tel","
-  id="phone","
-  name: "phone","
+                  <input type="tel",
+  id="phone",
+  name: "phone",
   value={formData.phone}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent","
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent",
   value={formData.phone}
                     onChange={handleInputChange}
-                    className= "w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent","
+                    className= "w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent",
                   />
                 </div>
               </div>
@@ -302,88 +302,86 @@ const Demo: React.FC = () => {
               {/* Company Information */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6"
                 <div >
-                  <label htmlFor: "company" className="block text-sm font-medium text-gray-700 mb-2">,"
+                  <label htmlFor: "company", className="block text-sm font-medium text-gray-700 mb-2">,"
               <div className= "grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div >
-                  <label htmlFor: "company" className= "block text-sm font-medium text-gray-700 mb-2">,"
+                  <label htmlFor: "company", className= "block text-sm font-medium text-gray-700 mb-2">,"
   Company Name *
                   </label>
-                  <input type="text","
-  id="company","
-  name: "company","
+                  <input type="text",
+  id="company",
+  name: "company",
   required
                     value={formData.company}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent","
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent",
                   />
                 </div>
                 <div >
-                  <label htmlFor: "jobTitle" className="block text-sm font-medium text-gray-700 mb-2">,"
+                  <label htmlFor: "jobTitle", className="block text-sm font-medium text-gray-700 mb-2">,"
                     value={formData.company}
                     onChange={handleInputChange}
-                    className= "w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent","
+                    className= "w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent",
                   />
                 </div>
                 <div >
-                  <label htmlFor: "jobTitle" className= "block text-sm font-medium text-gray-700 mb-2">,"
+                  <label htmlFor: "jobTitle", className= "block text-sm font-medium text-gray-700 mb-2">,"
   Job Title *
                   </label>
-                  <input type="text","
-  id="jobTitle","
-  name: "jobTitle","
+                  <input type="text",
+  id="jobTitle",
+  name: "jobTitle",
   required
                     value={formData.jobTitle}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent","
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent",
                     value={formData.jobTitle}
                     onChange={handleInputChange}
-                    className= "w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent","
+                    className= "w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent",
                   />
                 </div>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6"
                 <div >
-                  <label htmlFor: "companySize" className="block text-sm font-medium text-gray-700 mb-2">,"
+                  <label htmlFor: "companySize", className="block text-sm font-medium text-gray-700 mb-2">,"
               <div className= "grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div >
-                  <label htmlFor: "companySize" className= "block text-sm font-medium text-gray-700 mb-2">,"
+                  <label htmlFor: "companySize", className= "block text-sm font-medium text-gray-700 mb-2">,"
   Company Size *
                   </label>
-                  <select id="companySize","
-  name: "companySize","
+                  <select id="companySize",
+  name: "companySize",
   required
                     value={formData.companySize}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent","
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent",
                     value={formData.companySize}
                     onChange={handleInputChange}
-                    className= "w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent","
+                    className= "w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent",
                   >
-                    <option value: ">Select company size</option>"
-                    {companySizes.map((size)  => (
-                      <option key={size} value={size}>{size}</option>
+                    <option value: ">Select company size</option>", {companySizes.map((size)  => (
+                      <option key="{size} value={size}">{size}</option>
                     ))}
                   </select>
                 </div>
                 <div >
-                  <label htmlFor: "useCase" className="block text-sm font-medium text-gray-700 mb-2">,"
-                  <label htmlFor: "useCase" className= "block text-sm font-medium text-gray-700 mb-2">,"
+                  <label htmlFor: "useCase", className="block text-sm font-medium text-gray-700 mb-2">,"
+                  <label htmlFor: "useCase", className= "block text-sm font-medium text-gray-700 mb-2">,"
   Primary Use Case *
                   </label>
-                  <select id="useCase","
-  name: "useCase","
+                  <select id="useCase",
+  name: "useCase",
   required
                     value={formData.useCase}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent","
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent",
                     value={formData.useCase}
                     onChange={handleInputChange}
-                    className= "w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent","
+                    className= "w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent",
                   >
-                    <option value: ">Select use case</option>"
-                    {useCases.map((useCase)  => (
-                      <option key={useCase} value={useCase}>{useCase}</option>
+                    <option value: ">Select use case</option>", {useCases.map((useCase)  => (
+                      <option key="{useCase} value={useCase}">{useCase}</option>
                     ))}
                   </select>
                 </div>
@@ -392,102 +390,100 @@ const Demo: React.FC = () => {
               {/* Scheduling */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6"
                 <div >
-                  <label htmlFor: "preferredDate" className="block text-sm font-medium text-gray-700 mb-2">,"
+                  <label htmlFor: "preferredDate", className="block text-sm font-medium text-gray-700 mb-2">,"
               <div className= "grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div >
-                  <label htmlFor: "preferredDate" className= "block text-sm font-medium text-gray-700 mb-2">,"
+                  <label htmlFor: "preferredDate", className= "block text-sm font-medium text-gray-700 mb-2">,"
   Preferred Date
                   </label>
-                  <input type="date","
-  id="preferredDate","
-  name: "preferredDate","
+                  <input type="date",
+  id="preferredDate",
+  name: "preferredDate",
   value={formData.preferredDate}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent","
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent",
                   />
                 </div>
                 <div >
-                  <label htmlFor: "preferredTime" className="block text-sm font-medium text-gray-700 mb-2">,"
+                  <label htmlFor: "preferredTime", className="block text-sm font-medium text-gray-700 mb-2">,"
   value={formData.preferredDate}
                     onChange={handleInputChange}
-                    className= "w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent","
+                    className= "w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent",
                   />
                 </div>
                 <div >
-                  <label htmlFor: "preferredTime" className= "block text-sm font-medium text-gray-700 mb-2">,"
+                  <label htmlFor: "preferredTime", className= "block text-sm font-medium text-gray-700 mb-2">,"
   Preferred Time
                   </label>
-                  <select id="preferredTime","
-  name: "preferredTime","
+                  <select id="preferredTime",
+  name: "preferredTime",
   value={formData.preferredTime}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent","
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent",
   value={formData.preferredTime}
                     onChange={handleInputChange}
-                    className= "w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent","
+                    className= "w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent",
                   >
-                    <option value: ">Select time</option>"
-                    {timeSlots.map((time)  => (
-                      <option key={time} value={time}>{time}</option>
+                    <option value: ">Select time</option>", {timeSlots.map((time)  => (
+                      <option key="{time} value={time}">{time}</option>
                     ))}
                   </select>
                 </div>
                 <div >
-                  <label htmlFor: "timeZone" className="block text-sm font-medium text-gray-700 mb-2">,"
-                  <label htmlFor: "timeZone" className= "block text-sm font-medium text-gray-700 mb-2">,"
+                  <label htmlFor: "timeZone", className="block text-sm font-medium text-gray-700 mb-2">,"
+                  <label htmlFor: "timeZone", className= "block text-sm font-medium text-gray-700 mb-2">,"
   Time Zone
                   </label>
-                  <select id="timeZone","
-  name: "timeZone","
+                  <select id="timeZone",
+  name: "timeZone",
   value={formData.timeZone}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent","
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent",
   value={formData.timeZone}
                     onChange={handleInputChange}
-                    className= "w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent","
+                    className= "w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent",
                   >
-                    <option value: ">Select timezone</option>"
-                    <option value: "EST">Eastern Time (EST)</option>"
-                    <option value: "CST">Central Time (CST)</option>"
-                    <option value: "MST">Mountain Time (MST)</option>"
-                    <option value: "PST">Pacific Time (PST)</option>"
-                    <option value: "GMT">Greenwich Mean Time (GMT)</option>"
+                    <option value: ">Select timezone</option>", <option value: "EST", >Eastern Time (EST)</option>"
+                    <option value: "CST", >Central Time (CST)</option>"
+                    <option value: "MST", >Mountain Time (MST)</option>"
+                    <option value: "PST", >Pacific Time (PST)</option>"
+                    <option value: "GMT", >Greenwich Mean Time (GMT)</option>"
                   </select>
                 </div>
               </div>
 
               <div >
-                <label htmlFor: "message" className="block text-sm font-medium text-gray-700 mb-2">,"
-                <label htmlFor: "message" className= "block text-sm font-medium text-gray-700 mb-2">,"
+                <label htmlFor: "message", className="block text-sm font-medium text-gray-700 mb-2">,"
+                <label htmlFor: "message", className= "block text-sm font-medium text-gray-700 mb-2">,"
   Additional Information
                 </label>
-                <textarea id="message","
-  name: "message","
+                <textarea id="message",
+  name: "message",
   rows: {4}
                   value={formData.message}
                   onChange={handleInputChange}
-                  placeholder="Tell us about your specific needs, challenges, or questions...","
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent","
+                  placeholder="Tell us about your specific needs, challenges, or questions...",
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent",
                 />
               </div>
 
               <div className="text-center"
-                <button type="submit","
-  className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-lg","
+                <button type="submit",
+  className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-lg",
                 >
                   Schedule My Demo
                 </button>
                 <p className="text-sm text-gray-500 mt-4"
                   value={formData.message}
                   onChange={handleInputChange}
-                  placeholder="Tell us about your specific needs, challenges, or questions...","
-                  className= "w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent","
+                  placeholder="Tell us about your specific needs, challenges, or questions...",
+                  className= "w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent",
                 />
               </div>
 
               <div className= "text-center">
-                <button type="submit","
-  className= "bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-lg","
+                <button type="submit",
+  className= "bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-lg",
                 >
                   Schedule My Demo
                 </button>
@@ -560,8 +556,8 @@ const Demo: React.FC = () => {
   Join thousands of businesses that have transformed their operations with our AI solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center"
-            <Link to: "/contact","
-  className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors","
+            <Link to: "/contact",
+  className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors",
       <section className= "py-20 bg-gradient-to-r from-blue-600 to-purple-600">
         <div className= "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className= "text-3xl md:text-4xl font-bold text-white mb-4">,"
@@ -571,14 +567,14 @@ const Demo: React.FC = () => {
   Join thousands of businesses that have transformed their operations with our AI solutions.
           </p>
           <div className= "flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to: "/contact","
-  className= "bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors","
+            <Link to: "/contact",
+  className= "bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors",
             >
               Contact Us Now
             </Link>
-            <Link to: "/case-studies","
-  className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors","
-  className= "border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors","
+            <Link to: "/case-studies",
+  className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors",
+  className= "border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors",
             >
               View Success Stories
             </Link>
@@ -591,7 +587,7 @@ const Demo: React.FC = () => {
 
 export default Demo;
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom'';
+import { Link } from 'react-router-dom';
 import { Calendar, Clock, User, Mail, Phone, CheckCircle, Star, Play } from 'lucide-react'';
 import { Helmet } from 'react-helmet-async';
 ;
@@ -650,7 +646,7 @@ const Demo: React.FC = () => {
       <>
         <Helmet >
           <title >Demo Request Submitted - Zion Tech Group</title>
-          <meta name: "description" content ="Thank you for requesting a demo. We'll contact you soon to schedule your personalized demonstration." />"
+          <meta name: "description", content ="Thank you for requesting a demo. We'll contact you soon to schedule your personalized demonstration." />"
           <meta name="description" content="Thank you for requesting a demo. We'll contact you soon to schedule your personalized demonstration." />
         </Helmet>
 
@@ -666,8 +662,8 @@ const Demo: React.FC = () => {
   Thank you for your interest in our solutions. Our team will contact you within 24 hours to schedule your personalized demonstration.
             </p>
             <div className="space-y-4"
-              <Link to: "/","
-  className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors","
+              <Link to: "/",
+  className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors",
         <div className= "min-h-screen bg-gray-50 flex items-center justify-center">
           <div className= "max-w-md mx-auto text-center">
             <div className= "w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -680,14 +676,14 @@ const Demo: React.FC = () => {
   Thank you for your interest in our solutions. Our team will contact you within 24 hours to schedule your personalized demonstration.
             </p>
             <div className= "space-y-4">
-              <Link to: "/","
-  className= "inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors","
+              <Link to: "/",
+  className= "inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors",
               >
                 Return to Home
               </Link>
-              <Link to: "/contact","
-  className="block text-blue-600 hover:text-blue-700 font-semibold","
-  className= "block text-blue-600 hover:text-blue-700 font-semibold","
+              <Link to: "/contact",
+  className="block text-blue-600 hover:text-blue-700 font-semibold",
+  className= "block text-blue-600 hover:text-blue-700 font-semibold",
               >
                 Contact Us Directly
               </Link>
@@ -702,12 +698,12 @@ const Demo: React.FC = () => {
     <>
       <Helmet >
         <title >Request a Demo - Zion Tech Group</title>
-        <meta name: "description" content="Schedule a personalized demonstration of our AI and IT solutions. See how our technology can transform your business." />"
-        <meta name: "keywords" content ="demo, demonstration, AI solutions, technology showcase, business transformation" />"
-        <link rel: "canonical" href ="https://ziontechgroup.com/demo" />"
+        <meta name: "description", content="Schedule a personalized demonstration of our AI and IT solutions. See how our technology can transform your business." />"
+        <meta name: "keywords", content ="demo, demonstration, AI solutions, technology showcase, business transformation" />"
+        <link rel: "canonical", href ="https://ziontechgroup.com/demo" />"
         <meta name="description" content="Schedule a personalized demonstration of our AI and IT solutions. See how our technology can transform your business." />
-        <meta name: "keywords" content="demo, demonstration, AI solutions, technology showcase, business transformation" />
-        <link rel: "canonical" href ="https://ziontechgroup.com/demo" />
+        <meta name: "keywords", content="demo, demonstration, AI solutions, technology showcase, business transformation" />
+        <link rel: "canonical", href ="https://ziontechgroup.com/demo" />
       </Helmet>
 
       <div className="min-h-screen bg-gray-50"
@@ -786,116 +782,115 @@ const Demo: React.FC = () => {
                 {/* Personal Information */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6"
                   <div >
-                    <label htmlFor: "firstName" className="block text-sm font-medium text-gray-700 mb-1">,"
+                    <label htmlFor: "firstName", className="block text-sm font-medium text-gray-700 mb-1">,"
               <form onSubmit={handleSubmit} className= "space-y-6">
                 {/* Personal Information */}
                 <div className= "grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div >
-                    <label htmlFor: "firstName" className= "block text-sm font-medium text-gray-700 mb-1">,"
+                    <label htmlFor: "firstName", className= "block text-sm font-medium text-gray-700 mb-1">,"
   First Name *
                     </label>
-                    <input type="text","
-  id="firstName","
-  name: "firstName","
+                    <input type="text",
+  id="firstName",
+  name: "firstName",
   value={formData.firstName}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500","
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500",
                     />
                   </div>
                   <div >
-                    <label htmlFor: "lastName" className="block text-sm font-medium text-gray-700 mb-1">,"
-                      className= "w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500","
+                    <label htmlFor: "lastName", className="block text-sm font-medium text-gray-700 mb-1">,"
+                      className= "w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500",
                     />
                   </div>
                   <div >
-                    <label htmlFor: "lastName" className= "block text-sm font-medium text-gray-700 mb-1">,"
+                    <label htmlFor: "lastName", className= "block text-sm font-medium text-gray-700 mb-1">,"
   Last Name *
                     </label>
-                    <input type="text","
-  id="lastName","
-  name: "lastName","
+                    <input type="text",
+  id="lastName",
+  name: "lastName",
   value={formData.lastName}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500","
-                      className= "w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500","
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500",
+                      className= "w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500",
                     />
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6"
                   <div >
-                    <label htmlFor: "email" className="block text-sm font-medium text-gray-700 mb-1">,"
+                    <label htmlFor: "email", className="block text-sm font-medium text-gray-700 mb-1">,"
                 <div className= "grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div >
-                    <label htmlFor: "email" className= "block text-sm font-medium text-gray-700 mb-1">,"
+                    <label htmlFor: "email", className= "block text-sm font-medium text-gray-700 mb-1">,"
   Email Address *
                     </label>
-                    <input type="email","
-  id="email","
-  name: "email","
+                    <input type="email",
+  id="email",
+  name: "email",
   value={formData.email}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500","
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500",
                     />
                   </div>
                   <div >
-                    <label htmlFor: "phone" className="block text-sm font-medium text-gray-700 mb-1">,"
-                      className= "w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500","
+                    <label htmlFor: "phone", className="block text-sm font-medium text-gray-700 mb-1">,"
+                      className= "w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500",
                     />
                   </div>
                   <div >
-                    <label htmlFor: "phone" className= "block text-sm font-medium text-gray-700 mb-1">,"
+                    <label htmlFor: "phone", className= "block text-sm font-medium text-gray-700 mb-1">,"
   Phone Number
                     </label>
-                    <input type="tel","
-  id="phone","
-  name: "phone","
+                    <input type="tel",
+  id="phone",
+  name: "phone",
   value={formData.phone}
                       onChange={handleInputChange}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500","
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500",
   value={formData.phone}
                       onChange={handleInputChange}
-                      className= "w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500","
+                      className= "w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500",
                     />
                   </div>
                 </div>
 
                 <div >
-                  <label htmlFor: "company" className="block text-sm font-medium text-gray-700 mb-1">,"
-                  <label htmlFor: "company" className= "block text-sm font-medium text-gray-700 mb-1">,"
+                  <label htmlFor: "company", className="block text-sm font-medium text-gray-700 mb-1">,"
+                  <label htmlFor: "company", className= "block text-sm font-medium text-gray-700 mb-1">,"
   Company *
                   </label>
-                  <input type="text","
-  id="company","
-  name: "company","
+                  <input type="text",
+  id="company",
+  name: "company",
   value={formData.company}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500","
-                    className= "w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500","
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500",
+                    className= "w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500",
                   />
                 </div>
 
                 <div >
-                  <label htmlFor: "useCase" className="block text-sm font-medium text-gray-700 mb-1">,"
-                  <label htmlFor: "useCase" className= "block text-sm font-medium text-gray-700 mb-1">,"
+                  <label htmlFor: "useCase", className="block text-sm font-medium text-gray-700 mb-1">,"
+                  <label htmlFor: "useCase", className= "block text-sm font-medium text-gray-700 mb-1">,"
   Primary Use Case
                   </label>
-                  <select id="useCase","
-  name: "useCase","
+                  <select id="useCase",
+  name: "useCase",
   value={formData.useCase}
                     onChange={handleInputChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500","
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500",
   value={formData.useCase}
                     onChange={handleInputChange}
-                    className= "w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500","
+                    className= "w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500",
                   >
-                    <option value: ">Select a use case</option>"
-                    {useCases.map((useCase)  => (
-                      <option key={useCase} value={useCase}>
+                    <option value: ">Select a use case</option>", {useCases.map((useCase)  => (
+                      <option key="{useCase} value={useCase}">
                         {useCase}
                       </option>
                     ))}
@@ -904,84 +899,82 @@ const Demo: React.FC = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6"
                   <div >
-                    <label htmlFor: "preferredTime" className="block text-sm font-medium text-gray-700 mb-1">,"
+                    <label htmlFor: "preferredTime", className="block text-sm font-medium text-gray-700 mb-1">,"
                 <div className= "grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div >
-                    <label htmlFor: "preferredTime" className= "block text-sm font-medium text-gray-700 mb-1">,"
+                    <label htmlFor: "preferredTime", className= "block text-sm font-medium text-gray-700 mb-1">,"
   Preferred Time Slot
                     </label>
-                    <select id="preferredTime","
-  name: "preferredTime","
+                    <select id="preferredTime",
+  name: "preferredTime",
   value={formData.preferredTime}
                       onChange={handleInputChange}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500","
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500",
   value={formData.preferredTime}
                       onChange={handleInputChange}
-                      className= "w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500","
+                      className= "w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500",
                     >
-                      <option value: ">Select a time</option>"
-                      {timeSlots.map((time)  => (
-                        <option key={time} value={time}>
+                      <option value: ">Select a time</option>", {timeSlots.map((time)  => (
+                        <option key="{time} value={time}">
                           {time}
                         </option>
                       ))}
                     </select>
                   </div>
                   <div >
-                    <label htmlFor: "timeZone" className="block text-sm font-medium text-gray-700 mb-1">,"
-                    <label htmlFor: "timeZone" className= "block text-sm font-medium text-gray-700 mb-1">,"
+                    <label htmlFor: "timeZone", className="block text-sm font-medium text-gray-700 mb-1">,"
+                    <label htmlFor: "timeZone", className= "block text-sm font-medium text-gray-700 mb-1">,"
   Time Zone
                     </label>
-                    <select id="timeZone","
-  name: "timeZone","
+                    <select id="timeZone",
+  name: "timeZone",
   value={formData.timeZone}
                       onChange={handleInputChange}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500","
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500",
   value={formData.timeZone}
                       onChange={handleInputChange}
-                      className= "w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500","
+                      className= "w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500",
                     >
-                      <option value: ">Select time zone</option>"
-                      <option value: "EST">Eastern Time (EST)</option>"
-                      <option value: "CST">Central Time (CST)</option>"
-                      <option value: "MST">Mountain Time (MST)</option>"
-                      <option value: "PST">Pacific Time (PST)</option>"
-                      <option value: "GMT">Greenwich Mean Time (GMT)</option>"
-                      <option value: "CET">Central European Time (CET)</option>"
-                      <option value: "IST">India Standard Time (IST)</option>"
-                      <option value: "JST">Japan Standard Time (JST)</option>"
+                      <option value: ">Select time zone</option>", <option value: "EST", >Eastern Time (EST)</option>"
+                      <option value: "CST", >Central Time (CST)</option>"
+                      <option value: "MST", >Mountain Time (MST)</option>"
+                      <option value: "PST", >Pacific Time (PST)</option>"
+                      <option value: "GMT", >Greenwich Mean Time (GMT)</option>"
+                      <option value: "CET", >Central European Time (CET)</option>"
+                      <option value: "IST", >India Standard Time (IST)</option>"
+                      <option value: "JST", >Japan Standard Time (JST)</option>"
                     </select>
                   </div>
                 </div>
 
                 <div >
-                  <label htmlFor: "message" className="block text-sm font-medium text-gray-700 mb-1">,"
-                  <label htmlFor: "message" className= "block text-sm font-medium text-gray-700 mb-1">,"
+                  <label htmlFor: "message", className="block text-sm font-medium text-gray-700 mb-1">,"
+                  <label htmlFor: "message", className= "block text-sm font-medium text-gray-700 mb-1">,"
   Additional Information
                   </label>
-                  <textarea id="message","
-  name: "message","
+                  <textarea id="message",
+  name: "message",
   value={formData.message}
                     onChange={handleInputChange}
                     rows: {4}
-                    placeholder="Tell us about your specific needs, challenges, or questions...","
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500","
+                    placeholder="Tell us about your specific needs, challenges, or questions...",
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500",
                   />
                 </div>
 
                 <div className="text-center"
-                  <button type="submit","
-  className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors","
+                  <button type="submit",
+  className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors",
                   >
                     <Play className="mr-2 h-5 w-5" />,"
-                    placeholder="Tell us about your specific needs, challenges, or questions...","
-                    className= "w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500","
+                    placeholder="Tell us about your specific needs, challenges, or questions...",
+                    className= "w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500",
                   />
                 </div>
 
                 <div className= "text-center">
-                  <button type="submit","
-  className= "inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors","
+                  <button type="submit",
+  className= "inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors",
                   >
                     <Play className= "mr-2 h-5 w-5" />,"
   Request Demo

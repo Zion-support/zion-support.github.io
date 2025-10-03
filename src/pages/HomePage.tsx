@@ -1,7 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom'';
+import { Link } from 'react-router-dom';
 
-const HomePage: React.FC  = () => {
+const HomePage: React.FC = () => {
   return (
     <div className="min-h-screen">"
       {/* Hero Section */}
@@ -17,7 +17,7 @@ const HomePage: React.FC  = () => {
             Enterprise-grade AI, micro SaaS, and IT solutions that drive innovation, 
             efficiency, and growth for modern businesses.
           </p>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center">"
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">"
             <Link 
               to="/contact"
               className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors
@@ -44,7 +44,7 @@ const HomePage: React.FC  = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">"
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">"
             {/* AI Services */}
             <div className="bg-gradient-to-br from-blue-50 to-indigo-100 p-8 rounded-xl hover: shadow-lg transition-shadow">"
               <div className="text-4xl mb-4">🤖</div>"
@@ -130,7 +130,7 @@ const HomePage: React.FC  = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">"
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">"
             <div className="bg-white p-8 rounded-xl shadow-sm hover: shadow-md transition-shadow">"
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Enterprise</h3>"
               <p className="text-gray-600 mb-6">"
@@ -183,7 +183,7 @@ const HomePage: React.FC  = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">"
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">"
             <div className="text-center">"
               <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">"
                 <span className="text-2xl">🚀</span>"
@@ -226,7 +226,7 @@ const HomePage: React.FC  = () => {
           <p className="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">"
             Let's discuss how our AI-powered solutions can drive your success';
           </p>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center">"
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">"
             <Link 
               to="/contact"
               className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors

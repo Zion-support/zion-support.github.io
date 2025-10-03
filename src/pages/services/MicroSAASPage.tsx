@@ -1,43 +1,43 @@
 import React from 'react';
-import { Link } from 'react-router-dom'';
+import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 
-const MicroSAASPage: React.FC  = () => {
+const MicroSAASPage: React.FC = () => {
   const microSAASServices = [
     {
-      title: "Custom SaaS Development","
-      description: "Build scalable software-as-a-service applications tailored to your specific business requirements.","
-      icon: "⚡","
+      title: "Custom SaaS Development",
+      description: "Build scalable software-as-a-service applications tailored to your specific business requirements.",
+      icon: "⚡",
       features: ["Custom SaaS Apps", "Multi-tenant Architecture", "API Development", "Scalable Infrastructure"]"
     },
     {
-      title: "SaaS Migration","
-      description: "Migrate your existing applications to a modern SaaS architecture for better scalability and performance.","
-      icon: "🔄","
+      title: "SaaS Migration",
+      description: "Migrate your existing applications to a modern SaaS architecture for better scalability and performance.",
+      icon: "🔄",
       features: ["Legacy System Migration", "Cloud Migration", "Data Migration", "Performance Optimization"]"
     },
     {
-      title: "SaaS Integration","
-      description: "Seamlessly integrate your SaaS applications with existing systems and third-party services.","
-      icon: "🔗","
+      title: "SaaS Integration",
+      description: "Seamlessly integrate your SaaS applications with existing systems and third-party services.",
+      icon: "🔗",
       features: ["API Integration", "Third-party Integrations", "System Integration", "Data Synchronization"]"
     },
     {
-      title: "SaaS Analytics","
-      description: "Implement comprehensive analytics and reporting capabilities to track usage and performance.","
-      icon: "📊","
+      title: "SaaS Analytics",
+      description: "Implement comprehensive analytics and reporting capabilities to track usage and performance.",
+      icon: "📊",
       features: ["Usage Analytics", "Performance Monitoring", "Custom Dashboards", "Business Intelligence"]"
     },
     {
-      title: "SaaS Security","
-      description: "Ensure your SaaS applications are secure with enterprise-grade security measures and compliance.","
-      icon: "🔒","
+      title: "SaaS Security",
+      description: "Ensure your SaaS applications are secure with enterprise-grade security measures and compliance.",
+      icon: "🔒",
       features: ["Security Audits", "Compliance Management", "Data Encryption", "Access Control"]"
     },
     {
-      title: "SaaS Support","
-      description: "Ongoing support and maintenance to ensure your SaaS applications run smoothly and efficiently.","
-      icon: "🛠️","
+      title: "SaaS Support",
+      description: "Ongoing support and maintenance to ensure your SaaS applications run smoothly and efficiently.",
+      icon: "🛠️",
       features: ["24/7 Support", "Performance Monitoring", "Bug Fixes", "Feature Updates"]"
     }
   ];
@@ -63,7 +63,7 @@ const MicroSAASPage: React.FC  = () => {
         {/* Services Grid */}
         <section className="py-20">"
           <div className="container mx-auto px-6">"
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">"
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">"
               {microSAASServices.map((service, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-sm hover: shadow-lg transition-shadow">"
                   <div className="text-4xl mb-4">{service.icon}</div>"
@@ -100,7 +100,7 @@ const MicroSAASPage: React.FC  = () => {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md: grid-cols-3 gap-8">"
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">"
               <div className="text-center">"
                 <div className="text-4xl mb-4">⚡</div>"
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Rapid Development</h3>"
@@ -138,7 +138,7 @@ const MicroSAASPage: React.FC  = () => {
               </p>
             </div>
             
-            <div className="grid grid-cols-2 md: grid-cols-4 gap-8">"
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">"
               <div className="bg-white p-6 rounded-xl shadow-sm text-center">"
                 <h3 className="text-lg font-bold text-gray-900 mb-2">Frontend</h3>"
                 <p className="text-gray-600">React, Vue.js, Angular</p>"
@@ -169,7 +169,7 @@ const MicroSAASPage: React.FC  = () => {
             <p className="text-xl mb-8 text-green-100 max-w-2xl mx-auto">"
               Let's discuss your SaaS requirements and how we can help you build a scalable solution.';
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">"
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <Link 
                 to="/contact" 
                 className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors

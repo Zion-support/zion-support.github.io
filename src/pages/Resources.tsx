@@ -6,7 +6,7 @@ const Resources: React.FC = () => {
     <>
       <Helmet >
         <title >Resources - Zion Tech Group</title>
-        <meta name: "description" content ="Access valuable resources, documentation, and tools to support your technology journey." />"
+        <meta name: "description", content ="Access valuable resources, documentation, and tools to support your technology journey." />"
         <meta name="description" content="Access valuable resources, documentation, and tools to support your technology journey." />
       </Helmet>
       

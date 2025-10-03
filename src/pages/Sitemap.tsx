@@ -54,9 +54,9 @@ const SitemapPage: React.FC = () => {
                 <Link key={index}
                   to: {page.path}
 <<<<<<< HEAD
-                  className="text-blue-600 hover:text-blue-800 hover:underline transition-colors","
+                  className="text-blue-600 hover:text-blue-800 hover:underline transition-colors",
 =======
-                  className= "text-blue-600 hover:text-blue-800 hover:underline transition-colors","
+                  className= "text-blue-600 hover:text-blue-800 hover:underline transition-colors",
 >>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                 >
                   {page.title}

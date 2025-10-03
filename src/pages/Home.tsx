@@ -93,250 +93,250 @@ publishedAt: '2025-01-05'
     <>
       <Helmet >
         <title >Zion Tech Group - Leading AI & IT Solutions | Transform Your Business</title>
-        <meta name: "description","
-  content: "Zion Tech Group delivers cutting-edge AI and IT solutions that transform businesses. NEW 2025: AI Workflow Automation, Quantum Computing, Edge AI, Zero Trust Security. Expert consulting services with proven results.","
+        <meta name: "description",
+  content: "Zion Tech Group delivers cutting-edge AI and IT solutions that transform businesses. NEW 2025: AI Workflow Automation, Quantum Computing, Edge AI, Zero Trust Security. Expert consulting services with proven results.",
         />
-        <meta name: "keywords","
-  content: "AI solutions, IT consulting, cybersecurity, machine learning, cloud infrastructure, digital transformation, AI workflow automation, quantum computing, edge AI, zero trust security, micro SAAS platforms, AI virtual assistant, data analytics","
+        <meta name: "keywords",
+  content: "AI solutions, IT consulting, cybersecurity, machine learning, cloud infrastructure, digital transformation, AI workflow automation, quantum computing, edge AI, zero trust security, micro SAAS platforms, AI virtual assistant, data analytics",
         />
-        <meta property: "og:title" content ="Zion Tech Group - Leading AI & IT Solutions" />"
-        <meta property: "og:description","
-  content: "Transform your business with cutting-edge AI and IT solutions. NEW 2025: AI Workflow Automation, Quantum Computing, Edge AI, Zero Trust Security. Expert consulting with proven results.","
+        <meta property: "og:title", content ="Zion Tech Group - Leading AI & IT Solutions" />"
+        <meta property: "og:description",
+  content: "Transform your business with cutting-edge AI and IT solutions. NEW 2025: AI Workflow Automation, Quantum Computing, Edge AI, Zero Trust Security. Expert consulting with proven results.",
         />
-        <meta property: "og:type" content="website" />"
-        <meta property: "og:url" content="https://ziontechgroup.com" />"
-        <meta name: "twitter:card" content="summary_large_image" />"
-        <meta name: "twitter:title" content ="Zion Tech Group - Leading AI & IT Solutions" />"
-        <meta name: "twitter:description","
-        <meta property: "og:title" content="Zion Tech Group - Leading AI & IT Solutions" />
+        <meta property: "og:type", content="website" />"
+        <meta property: "og:url", content="https://ziontechgroup.com" />"
+        <meta name: "twitter:card", content="summary_large_image" />"
+        <meta name: "twitter:title", content ="Zion Tech Group - Leading AI & IT Solutions" />"
+        <meta name: "twitter:description",
+        <meta property: "og:title", content="Zion Tech Group - Leading AI & IT Solutions" />
         <meta property: "og:description
-  content: "Transform your business with cutting-edge AI and IT solutions. NEW 2025: AI Workflow Automation, Quantum Computing, Edge AI, Zero Trust Security. Expert consulting with proven results.","
+  content: ", Transform your business with cutting-edge AI and IT solutions. NEW 2025: AI Workflow Automation, Quantum Computing, Edge AI, Zero Trust Security. Expert consulting with proven results.",
         />
-        <meta property: "og:type" content="website" />
-        <meta property: "og:url" content="https://ziontechgroup.com" />
-        <meta name: "twitter:card" content="summary_large_image" />
-        <meta name: "twitter:title" content="Zion Tech Group - Leading AI & IT Solutions" />
+        <meta property: "og:type", content="website" />
+        <meta property: "og:url", content="https://ziontechgroup.com" />
+        <meta name: "twitter:card", content="summary_large_image" />
+        <meta name: "twitter:title", content="Zion Tech Group - Leading AI & IT Solutions" />
         <meta name: "twitter:description
-  content: "Transform your business with cutting-edge AI and IT solutions. NEW 2025: AI Workflow Automation, Quantum Computing, Edge AI, Zero Trust Security.","
+  content: ", Transform your business with cutting-edge AI and IT solutions. NEW 2025: AI Workflow Automation, Quantum Computing, Edge AI, Zero Trust Security.",
         />
-        <link rel: "canonical" href ="https://ziontechgroup.com" />"
+        <link rel: "canonical", href ="https://ziontechgroup.com" />"
         {/* Enhanced Structured Data */}
         <script type="application/ld+json"
         <script type="application/ld+json">
           {JSON.stringify({
-            "@context": "https: //schema.org","
-            "@type": "Organization",";"
-            "name": "Zion Tech Group",";"
-            "alternateName": "Zion Tech",";"
-            "description": "Leading AI and IT solutions provider specializing in AI workflow automation, quantum computing, edge AI, and zero trust security.",";"
-            "url": "https: //ziontechgroup.com","
+            "@context": "https: //schema.org",
+            "@type": "Organization",;"
+            "name": "Zion Tech Group",;"
+            "alternateName": "Zion Tech",;"
+            "description": "Leading AI and IT solutions provider specializing in AI workflow automation, quantum computing, edge AI, and zero trust security.",;"
+            "url": "https: //ziontechgroup.com",
             "logo": {,";"
-              "@type": "ImageObject",";"
-              "url": "https: //ziontechgroup.com/logo.png","
+              "@type": "ImageObject",;"
+              "url": "https: //ziontechgroup.com/logo.png",
               "width": 200,";"
               "height": 60";"
             }
-            "image": "https: //ziontechgroup.com/og-image.jpg","
+            "image": "https: //ziontechgroup.com/og-image.jpg",
             "contactPoint": {,";"
-              "@type": "ContactPoint",";"
-              "telephone": "+1-302-464-0950",";"
-              "contactType": "customer service",";"
-              "availableLanguage": "English",";"
-              "areaServed": "US",";"
+              "@type": "ContactPoint",;"
+              "telephone": "+1-302-464-0950",;"
+              "contactType": "customer service",;"
+              "availableLanguage": "English",;"
+              "areaServed": "US",;"
               "email": "kleber@ziontechgroup.com"
             }
-"@type": "ContactPoint",";"
-"telephone": "+1-302-464-0950",";"
-"contactType": "customer service",";"
-"availableLanguage": "English",";"
-"areaServed": "US",";"
+"@type": "ContactPoint",;"
+"telephone": "+1-302-464-0950",;"
+"contactType": "customer service",;"
+"availableLanguage": "English",;"
+"areaServed": "US",;"
 "email": "kleber@ziontechgroup.com"
 }
             "sameAs": [,";"
-              "https: //linkedin.com/company/zion-tech-group","
-              "https: //twitter.com/ziontechgroup","
-              "https: //github.com/ZionClouds","
+              "https: //linkedin.com/company/zion-tech-group",
+              "https: //twitter.com/ziontechgroup",
+              "https: //github.com/ZionClouds",
             ]
-            "foundingDate": "2020",";"
-            "numberOfEmployees": "50-100",";"
+            "foundingDate": "2020",;"
+            "numberOfEmployees": "50-100",;"
             "address": {,";"
-              "@type": "PostalAddress",";"
-              "streetAddress": "364 E Main St STE 1008",";"
-              "addressLocality": "Middletown",";"
-              "addressRegion": "DE",";"
-              "postalCode": "19709",";"
+              "@type": "PostalAddress",;"
+              "streetAddress": "364 E Main St STE 1008",;"
+              "addressLocality": "Middletown",;"
+              "addressRegion": "DE",;"
+              "postalCode": "19709",;"
               "addressCountry": "US"
             }
             "serviceArea": {,";"
-              "@type": "Country",";"
+              "@type": "Country",;"
               "name": "United States"
             }
             "hasOfferCatalog": {,";"
-              "@type": "OfferCatalog",";"
-              "name": "AI and IT Solutions",";"
+              "@type": "OfferCatalog",;"
+              "name": "AI and IT Solutions",;"
               "itemListElement": [,";"
                 {
-                  "@type": "Offer",";"
+                  "@type": "Offer",;"
                   "itemOffered": {,";"
-                    "@type": "Service",";"
-                    "name": "AI Workflow Automation",";"
+                    "@type": "Service",;"
+                    "name": "AI Workflow Automation",;"
                     "description": "Automate complex business processes with AI-powered workflows"
                   }
                 },
                 {
-                  "@type": "Offer",";"
+                  "@type": "Offer",;"
                   "itemOffered": {,";"
-                    "@type": "Service",";"
-                    "name": "AI Virtual Assistant",";"
+                    "@type": "Service",;"
+                    "name": "AI Virtual Assistant",;"
                     "description": "Intelligent virtual assistants for customer service and support"
                   }
                 },
                 {
-                  "@type": "Offer",";"
+                  "@type": "Offer",;"
                   "itemOffered": {,";"
-                    "@type": "Service",";"
-                    "name": "AI Data Analytics",";"
+                    "@type": "Service",;"
+                    "name": "AI Data Analytics",;"
                     "description": "Advanced data analytics and insights powered by AI"
                   }
                 },
                 {
-                  "@type": "Offer",";"
+                  "@type": "Offer",;"
                   "itemOffered": {,";"
-                    "@type": "Service",";"
-                    "name": "Quantum Computing Consulting",";"
+                    "@type": "Service",;"
+                    "name": "Quantum Computing Consulting",;"
                     "description": "Expert consulting on quantum computing solutions"
                   }
-"@type": "PostalAddress",";"
-"streetAddress": "364 E Main St STE 1008",";"
-"addressLocality": "Middletown",";"
-"addressRegion": "DE",";"
-"postalCode": "19709",";"
+"@type": "PostalAddress",;"
+"streetAddress": "364 E Main St STE 1008",;"
+"addressLocality": "Middletown",;"
+"addressRegion": "DE",;"
+"postalCode": "19709",;"
 "addressCountry": "US"
 }
             "serviceArea": {,";"
-"@type": "Country",";"
+"@type": "Country",;"
 "name": "United States"
 }
             "hasOfferCatalog": {,";"
-"@type": "OfferCatalog",";"
-"name": "AI and IT Solutions",";"
+"@type": "OfferCatalog",;"
+"name": "AI and IT Solutions",;"
 "itemListElement": [,";"
 {
-"@type": "Offer",";"
+"@type": "Offer",;"
 "itemOffered": {,";"
-"@type": "Service",";"
-"name": "AI Workflow Automation",";"
+"@type": "Service",;"
+"name": "AI Workflow Automation",;"
 "description": "Automate complex business processes with AI-powered workflows"
 }
                 },
                 {
-"@type": "Offer",";"
+"@type": "Offer",;"
 "itemOffered": {,";"
-"@type": "Service",";"
-"name": "AI Virtual Assistant",";"
+"@type": "Service",;"
+"name": "AI Virtual Assistant",;"
 "description": "Intelligent virtual assistants for customer service and support"
 }
                 },
                 {
-"@type": "Offer",";"
+"@type": "Offer",;"
 "itemOffered": {,";"
-"@type": "Service",";"
-"name": "AI Data Analytics",";"
+"@type": "Service",;"
+"name": "AI Data Analytics",;"
 "description": "Advanced data analytics and insights powered by AI"
 }
                 },
                 {
-"@type": "Offer",";"
+"@type": "Offer",;"
 "itemOffered": {,";"
-"@type": "Service",";"
-"name": "Quantum Computing Consulting",";"
+"@type": "Service",;"
+"name": "Quantum Computing Consulting",;"
 "description": "Expert consulting on quantum computing solutions"
 }
                 }
               ]
             }
             "aggregateRating": {,";"
-              "@type": "AggregateRating",";"
-              "ratingValue": "4.8",";"
-              "reviewCount": "150",";"
-              "bestRating": "5",";"
+              "@type": "AggregateRating",;"
+              "ratingValue": "4.8",;"
+              "reviewCount": "150",;"
+              "bestRating": "5",;"
               "worstRating": "1"
             }
           ]
         }
         "aggregateRating": {,";"
-          "@type": "AggregateRating",";"
-          "ratingValue": "4.8",";"
-          "reviewCount": "150",";"
-          "bestRating": "5",";"
+          "@type": "AggregateRating",;"
+          "ratingValue": "4.8",;"
+          "reviewCount": "150",;"
+          "bestRating": "5",;"
           "worstRating": "1"
         }
-"@type": "AggregateRating",";"
-"ratingValue": "4.8",";"
-"reviewCount": "150",";"
-"bestRating": "5",";"
+"@type": "AggregateRating",;"
+"ratingValue": "4.8",;"
+"reviewCount": "150",;"
+"bestRating": "5",;"
 "worstRating": "1"
 }
           })}
         </script>
         
         {/* Additional SEO Meta Tags */}
-        <meta name: "robots" content ="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview: -1" />"
-        <meta name: "googlebot" content ="index, follow" />"
-        <meta name: "bingbot" content ="index, follow" />"
-        <meta name: "author" content="Zion Tech Group" />"
-        <meta name: "publisher" content="Zion Tech Group" />"
-        <meta name: "copyright" content="Zion Tech Group" />"
-        <meta name: "language" content="en-US" />"
-        <meta name: "revisit-after" content="7 days" />"
-        <meta name: "rating" content="general" />"
-        <meta name: "distribution" content="global" />"
-        <meta name: "geo.region" content="US-DE" />"
-        <meta name: "geo.placename" content="Middletown" />"
-        <meta name: "geo.position" content ="39.4496;-75.7163" />"
-        <meta name: "ICBM" content ="39.4496, -75.7163" />"
-        <meta name: "robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview: -1" />
-        <meta name: "googlebot" content="index, follow" />
-        <meta name: "bingbot" content="index, follow" />
-        <meta name: "author" content="Zion Tech Group" />
-        <meta name: "publisher" content="Zion Tech Group" />
-        <meta name: "copyright" content="Zion Tech Group" />
-        <meta name: "language" content="en-US" />
-        <meta name: "revisit-after" content="7 days" />
-        <meta name: "rating" content="general" />
-        <meta name: "distribution" content="global" />
-        <meta name: "geo.region" content="US-DE" />
-        <meta name: "geo.placename" content="Middletown" />
-        <meta name: "geo.position" content="39.4496;-75.7163" />
-        <meta name: "ICBM" content="39.4496, -75.7163" />
+        <meta name: "robots", content ="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview: -1" />"
+        <meta name: "googlebot", content ="index, follow" />"
+        <meta name: "bingbot", content ="index, follow" />"
+        <meta name: "author", content="Zion Tech Group" />"
+        <meta name: "publisher", content="Zion Tech Group" />"
+        <meta name: "copyright", content="Zion Tech Group" />"
+        <meta name: "language", content="en-US" />"
+        <meta name: "revisit-after", content="7 days" />"
+        <meta name: "rating", content="general" />"
+        <meta name: "distribution", content="global" />"
+        <meta name: "geo.region", content="US-DE" />"
+        <meta name: "geo.placename", content="Middletown" />"
+        <meta name: "geo.position", content ="39.4496;-75.7163" />"
+        <meta name: "ICBM", content ="39.4496, -75.7163" />"
+        <meta name: "robots", content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview: -1" />
+        <meta name: "googlebot", content="index, follow" />
+        <meta name: "bingbot", content="index, follow" />
+        <meta name: "author", content="Zion Tech Group" />
+        <meta name: "publisher", content="Zion Tech Group" />
+        <meta name: "copyright", content="Zion Tech Group" />
+        <meta name: "language", content="en-US" />
+        <meta name: "revisit-after", content="7 days" />
+        <meta name: "rating", content="general" />
+        <meta name: "distribution", content="global" />
+        <meta name: "geo.region", content="US-DE" />
+        <meta name: "geo.placename", content="Middletown" />
+        <meta name: "geo.position", content="39.4496;-75.7163" />
+        <meta name: "ICBM", content="39.4496, -75.7163" />
         {/* Open Graph Enhanced */}
-        <meta property: "og:site_name" content="Zion Tech Group" />"
-        <meta property: "og:locale" content="en_US" />"
-        <meta property: "og:image:width" content="1200" />"
-        <meta property: "og:image:height" content="630" />"
-        <meta property: "og:image:alt" content="Zion Tech Group - Leading AI & IT Solutions" />"
+        <meta property: "og:site_name", content="Zion Tech Group" />"
+        <meta property: "og:locale", content="en_US" />"
+        <meta property: "og:image:width", content="1200" />"
+        <meta property: "og:image:height", content="630" />"
+        <meta property: "og:image:alt", content="Zion Tech Group - Leading AI & IT Solutions" />"
         {/* Twitter Enhanced */}
-        <meta name: "twitter:site" content="@ziontechgroup" />"
-        <meta name: "twitter:creator" content="@ziontechgroup" />"
-        <meta name: "twitter:image:alt" content="Zion Tech Group - Leading AI & IT Solutions" />"
+        <meta name: "twitter:site", content="@ziontechgroup" />"
+        <meta name: "twitter:creator", content="@ziontechgroup" />"
+        <meta name: "twitter:image:alt", content="Zion Tech Group - Leading AI & IT Solutions" />"
         {/* Additional Performance Meta */}
-        <meta name: "theme-color" content="#2563eb" />"
-        <meta name: "msapplication-TileColor" content="#2563eb" />"
-        <meta name: "apple-mobile-web-app-capable" content="yes" />"
-        <meta name: "apple-mobile-web-app-status-bar-style" content="default" />"
-        <meta name: "apple-mobile-web-app-title" content="Zion Tech Group" />"
+        <meta name: "theme-color", content="#2563eb" />"
+        <meta name: "msapplication-TileColor", content="#2563eb" />"
+        <meta name: "apple-mobile-web-app-capable", content="yes" />"
+        <meta name: "apple-mobile-web-app-status-bar-style", content="default" />"
+        <meta name: "apple-mobile-web-app-title", content="Zion Tech Group" />"
         {/* Preconnect to external domains */}
-        <link rel: "preconnect" href="https://fonts.googleapis.com" />"
-        <link rel: "preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />"
-        <link rel: "preconnect" href="https://linkedin.com" />"
-        <link rel: "preconnect" href="https://twitter.com" />"
-        <link rel: "preconnect" href="https://github.com" />"
+        <link rel: "preconnect", href="https://fonts.googleapis.com" />"
+        <link rel: "preconnect", href="https://fonts.gstatic.com" crossOrigin="anonymous" />"
+        <link rel: "preconnect", href="https://linkedin.com" />"
+        <link rel: "preconnect", href="https://twitter.com" />"
+        <link rel: "preconnect", href="https://github.com" />"
         {/* DNS Prefetch */}
-        <link rel: "dns-prefetch" href="//fonts.googleapis.com" />"
-        <link rel: "dns-prefetch" href="//fonts.gstatic.com" />"
-        <link rel: "dns-prefetch" href="//linkedin.com" />"
-        <link rel: "dns-prefetch" href="//twitter.com" />"
-        <link rel: "dns-prefetch" href ="//github.com" />"
+        <link rel: "dns-prefetch", href="//fonts.googleapis.com" />"
+        <link rel: "dns-prefetch", href="//fonts.gstatic.com" />"
+        <link rel: "dns-prefetch", href="//linkedin.com" />"
+        <link rel: "dns-prefetch", href="//twitter.com" />"
+        <link rel: "dns-prefetch", href ="//github.com" />"
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-teal-50"
@@ -354,13 +354,13 @@ publishedAt: '2025-01-05'
         
         {/* Enhanced Promotional Banners */}
         {getFeaturedBanners().slice(0, 4).map((banner) => (
-          <EnhancedPromotionalBanner key={banner.id}
+          <EnhancedPromotionalBanner key="{banner.id}
             banner: {banner}
-          />
+          /">
         ))}
         
         <NewContentAnnouncement />
-        <LatestContentBanner variant: "info","
+        <LatestContentBanner variant: "info",
   autoRotate
           rotationInterval: {7000}
         />
@@ -374,17 +374,17 @@ publishedAt: '2025-01-05'
           <NewContentAdvertisingBanner />
           {/* Inline promo for new service */}
           <div className= "mt-4">
-            <ContentPromotionBanner variant: "info","
-  title: "🧪 New Service: Edge Experimentation Suite","
-  description: "Privacy‑first A/B testing at <100ms with scoped IDs and on‑device metrics.","
-  ctaText: "Learn more","
-  ctaLink: "/services/edge-experimentation-suite","
-          <div className="mt-4">
-            <ContentPromotionBanner variant: "info
+            <ContentPromotionBanner variant: "info",
   title: "🧪 New Service: Edge Experimentation Suite",
   description: "Privacy‑first A/B testing at <100ms with scoped IDs and on‑device metrics.",
+  ctaText: "Learn more",
+  ctaLink: "/services/edge-experimentation-suite",
+          <div className="mt-4">
+            <ContentPromotionBanner variant: "info
+  title: ", 🧪 New Service: Edge Experimentation Suite",
+  description: "Privacy‑first A/B testing at <100ms with scoped IDs and on‑device metrics.",
   ctaText: "Learn more
-  ctaLink: "/services/edge-experimentation-suite
+  ctaLink: ", /services/edge-experimentation-suite
   dismissible: {true}
             />
           </div>
@@ -395,12 +395,12 @@ publishedAt: '2025-01-05'
           <div className="mt-6 rounded-xl border border-white/10 bg-white/5 p-6"
             <div className="text-white text-sm mb-4">New this week</div>"
             <div className="grid md:grid-cols-2 gap-4"
-              <Link to: "/blog/ai-enterprise-transformation-2027" className ="block rounded-lg border border-white/10 p-4 hover:border-indigo-400/40 transition-colors"
+              <Link to: "/blog/ai-enterprise-transformation-2027", className ="block rounded-lg border border-white/10 p-4 hover:border-indigo-400/40 transition-colors"
                 <div className="text-indigo-300 text-xs mb-2">Enterprise AI</div>"
                 <div className="text-white font-semibold">AI Enterprise Transformation 2027</div>"
                 <div className="text-zion-slate-light text-sm mt-1">Executive playbook to plan, fund, and scale AI with measurable ROI.</div>"
               </Link>
-              <Link to: "/blog/agentic-workflow-orchestration-2026" className ="block rounded-lg border border-white/10 p-4 hover:border-emerald-400/40 transition-colors"
+              <Link to: "/blog/agentic-workflow-orchestration-2026", className ="block rounded-lg border border-white/10 p-4 hover:border-emerald-400/40 transition-colors"
                 <div className="text-emerald-300 text-xs mb-2">AI Operations</div>"
                 <div className="text-white font-semibold">Agentic Workflow Orchestration 2026</div>"
                 <div className="text-zion-slate-light text-sm mt-1">Budgets, KPI‑linked canaries, and rollback for safe velocity.</div>"
@@ -408,12 +408,12 @@ publishedAt: '2025-01-05'
             </div>
             {/* Freshly added posts */}
             <div className="grid md:grid-cols-2 gap-4 mt-4"
-              <Link to: "/blog/ai-2026-reliability-runbooks-v4" className ="block rounded-lg border border-white/10 p-4 hover:border-cyan-400/40 transition-colors"
+              <Link to: "/blog/ai-2026-reliability-runbooks-v4", className ="block rounded-lg border border-white/10 p-4 hover:border-cyan-400/40 transition-colors"
                 <div className="text-cyan-300 text-xs mb-2">AI Operations</div>"
                 <div className="text-white font-semibold">AI 2026: Reliability Runbooks v4</div>"
                 <div className="text-zion-slate-light text-sm mt-1">Budgeted actions, KPI canaries, and instant rollback—v4 playbooks.</div>"
               </Link>
-              <Link to: "/blog/edge-2026-consentless-metrics-v2" className ="block rounded-lg border border-white/10 p-4 hover:border-rose-400/40 transition-colors"
+              <Link to: "/blog/edge-2026-consentless-metrics-v2", className ="block rounded-lg border border-white/10 p-4 hover:border-rose-400/40 transition-colors"
                 <div className="text-rose-300 text-xs mb-2">Analytics</div>"
                 <div className="text-white font-semibold">Edge 2026: Consentless Metrics v2</div>"
                 <div className="text-zion-slate-light text-sm mt-1">Zero‑PII signals at &lt;100ms with scoped IDs, edge aggregation, DP.</div>"
@@ -423,12 +423,12 @@ publishedAt: '2025-01-05'
           <div className= "mt-6 rounded-xl border border-white/10 bg-white/5 p-6">
             <div className= "text-white text-sm mb-4">New this week</div>"
             <div className= "grid md:grid-cols-2 gap-4">
-              <Link to: "/blog/ai-enterprise-transformation-2027" className ="block rounded-lg border border-white/10 p-4 hover:border-indigo-400/40 transition-colors">
+              <Link to: "/blog/ai-enterprise-transformation-2027", className ="block rounded-lg border border-white/10 p-4 hover:border-indigo-400/40 transition-colors">
                 <div className= "text-indigo-300 text-xs mb-2">Enterprise AI</div>"
                 <div className= "text-white font-semibold">AI Enterprise Transformation 2027</div>"
                 <div className= "text-zion-slate-light text-sm mt-1">Executive playbook to plan, fund, and scale AI with measurable ROI.</div>"
               </Link>
-              <Link to: "/blog/agentic-workflow-orchestration-2026" className ="block rounded-lg border border-white/10 p-4 hover:border-emerald-400/40 transition-colors">
+              <Link to: "/blog/agentic-workflow-orchestration-2026", className ="block rounded-lg border border-white/10 p-4 hover:border-emerald-400/40 transition-colors">
                 <div className= "text-emerald-300 text-xs mb-2">AI Operations</div>"
                 <div className= "text-white font-semibold">Agentic Workflow Orchestration 2026</div>"
                 <div className= "text-zion-slate-light text-sm mt-1">Budgets, KPI‑linked canaries, and rollback for safe velocity.</div>"
@@ -436,12 +436,12 @@ publishedAt: '2025-01-05'
             </div>
             {/* Freshly added posts */}
             <div className= "grid md:grid-cols-2 gap-4 mt-4">
-              <Link to: "/blog/ai-2026-reliability-runbooks-v4" className ="block rounded-lg border border-white/10 p-4 hover:border-cyan-400/40 transition-colors">
+              <Link to: "/blog/ai-2026-reliability-runbooks-v4", className ="block rounded-lg border border-white/10 p-4 hover:border-cyan-400/40 transition-colors">
                 <div className= "text-cyan-300 text-xs mb-2">AI Operations</div>"
                 <div className= "text-white font-semibold">AI 2026: Reliability Runbooks v4</div>"
                 <div className= "text-zion-slate-light text-sm mt-1">Budgeted actions, KPI canaries, and instant rollback—v4 playbooks.</div>"
               </Link>
-              <Link to: "/blog/edge-2026-consentless-metrics-v2" className ="block rounded-lg border border-white/10 p-4 hover:border-rose-400/40 transition-colors">
+              <Link to: "/blog/edge-2026-consentless-metrics-v2", className ="block rounded-lg border border-white/10 p-4 hover:border-rose-400/40 transition-colors">
                 <div className= "text-rose-300 text-xs mb-2">Analytics</div>"
                 <div className= "text-white font-semibold">Edge 2026: Consentless Metrics v2</div>"
                 <div className= "text-zion-slate-light text-sm mt-1">Zero‑PII signals at &lt;100ms with scoped IDs, edge aggregation, DP.</div>"
@@ -455,17 +455,17 @@ publishedAt: '2025-01-05'
           <div className="rounded-xl border border-white/10 bg-white/5 p-6"
             <div className="text-white text-sm mb-4">Just added</div>"
             <div className="grid md:grid-cols-3 gap-4"
-              <Link to: "/blog/real-time-decision-engines-2026" className ="block rounded-lg border border-white/10 p-4 hover:border-blue-400/40 transition-colors"
+              <Link to: "/blog/real-time-decision-engines-2026", className ="block rounded-lg border border-white/10 p-4 hover:border-blue-400/40 transition-colors"
                 <div className="text-blue-300 text-xs mb-2">Platform Engineering</div>"
                 <div className="text-white font-semibold">Real‑Time Decision Engines 2026</div>"
                 <div className="text-zion-slate-light text-sm mt-1">10M/sec under 1ms using warm pools, intent prefetching, and caches.</div>"
               </Link>
-              <Link to: "/blog/federated-learning-enterprise-2026" className="block rounded-lg border border-white/10 p-4 hover:border-rose-400/40 transition-colors"
+              <Link to: "/blog/federated-learning-enterprise-2026", className="block rounded-lg border border-white/10 p-4 hover:border-rose-400/40 transition-colors"
                 <div className="text-rose-300 text-xs mb-2">Machine Learning</div>"
                 <div className="text-white font-semibold">Federated Learning 2026</div>"
                 <div className="text-zion-slate-light text-sm mt-1">Train across regions with secure aggregation and DP noise—no centralization.</div>"
               </Link>
-              <Link to: "/blog/cognitive-financial-modeling-2027" className ="block rounded-lg border border-white/10 p-4 hover:border-emerald-400/40 transition-colors"
+              <Link to: "/blog/cognitive-financial-modeling-2027", className ="block rounded-lg border border-white/10 p-4 hover:border-emerald-400/40 transition-colors"
                 <div className="text-emerald-300 text-xs mb-2">FinTech AI</div>"
                 <div className="text-white font-semibold">AI Financial Modeling 2027</div>"
                 <div className="text-zion-slate-light text-sm mt-1">95%+ accuracy with KPI‑linked scorecards, evals, and rollback.</div>"
@@ -473,17 +473,17 @@ publishedAt: '2025-01-05'
           <div className= "rounded-xl border border-white/10 bg-white/5 p-6">
             <div className= "text-white text-sm mb-4">Just added</div>"
             <div className= "grid md:grid-cols-3 gap-4">
-              <Link to: "/blog/real-time-decision-engines-2026" className ="block rounded-lg border border-white/10 p-4 hover:border-blue-400/40 transition-colors">
+              <Link to: "/blog/real-time-decision-engines-2026", className ="block rounded-lg border border-white/10 p-4 hover:border-blue-400/40 transition-colors">
                 <div className= "text-blue-300 text-xs mb-2">Platform Engineering</div>"
                 <div className= "text-white font-semibold">Real‑Time Decision Engines 2026</div>"
                 <div className= "text-zion-slate-light text-sm mt-1">10M/sec under 1ms using warm pools, intent prefetching, and caches.</div>"
               </Link>
-              <Link to: "/blog/federated-learning-enterprise-2026" className="block rounded-lg border border-white/10 p-4 hover:border-rose-400/40 transition-colors">
+              <Link to: "/blog/federated-learning-enterprise-2026", className="block rounded-lg border border-white/10 p-4 hover:border-rose-400/40 transition-colors">
                 <div className= "text-rose-300 text-xs mb-2">Machine Learning</div>"
                 <div className= "text-white font-semibold">Federated Learning 2026</div>"
                 <div className= "text-zion-slate-light text-sm mt-1">Train across regions with secure aggregation and DP noise—no centralization.</div>"
               </Link>
-              <Link to: "/blog/cognitive-financial-modeling-2027" className ="block rounded-lg border border-white/10 p-4 hover:border-emerald-400/40 transition-colors">
+              <Link to: "/blog/cognitive-financial-modeling-2027", className ="block rounded-lg border border-white/10 p-4 hover:border-emerald-400/40 transition-colors">
                 <div className= "text-emerald-300 text-xs mb-2">FinTech AI</div>"
                 <div className= "text-white font-semibold">AI Financial Modeling 2027</div>"
                 <div className= "text-zion-slate-light text-sm mt-1">95%+ accuracy with KPI‑linked scorecards, evals, and rollback.</div>"
@@ -513,44 +513,44 @@ publishedAt: '2025-01-05'
         {/* New Comprehensive Promotional Banner */}
         <div className="container mx-auto px-6 mt-6"
         <div className= "container mx-auto px-6 mt-6">
-          <ComprehensivePromoBanner variant: "hero" showCount={4} />";"
+          <ComprehensivePromoBanner variant: "hero", showCount="{4} /">";"
         </div>
         
         {/* New Articles Promotional Banner */}
         <div className="container mx-auto px-6 mt-6"
         <div className= "container mx-auto px-6 mt-6">
-          <NewArticlesPromoBanner variant: "premium" showCount={3} />";"
+          <NewArticlesPromoBanner variant: "premium", showCount="{3} /">";"
         </div>
         
         {/* New Services Promotional Banner */}
         <div className="container mx-auto px-6 mt-6"
         <div className= "container mx-auto px-6 mt-6">
-          <NewServicesPromoBanner variant: "showcase" showCount ={3} featuredOnly: {true} />";"
+          <NewServicesPromoBanner variant: "showcase", showCount ={3} featuredOnly: {true} />";"
         </div>
         
         {/* Content Promotion Banner */}
-        <ContentPromotionBanner variant: "info","
-  title: "🚀 Fresh: Incident Playbooks + Privacy‑Preserving Analytics","
-        <ContentPromotionBanner variant: "info
+        <ContentPromotionBanner variant: "info",
   title: "🚀 Fresh: Incident Playbooks + Privacy‑Preserving Analytics",
-  description: "Budgeted actions, approvals, and DP‑backed telemetry you can ship today.","
-          ctaText: "Read the latest","
-  ctaLink: "/blog/ai-incident-response-playbooks-2025","
+        <ContentPromotionBanner variant: "info
+  title: ", 🚀 Fresh: Incident Playbooks + Privacy‑Preserving Analytics",
+  description: "Budgeted actions, approvals, and DP‑backed telemetry you can ship today.",
+          ctaText: "Read the latest",
+  ctaLink: "/blog/ai-incident-response-playbooks-2025",
   dismissible: {true}
         />
         {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden"
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-zion-blue rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"></div>"
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-zion-purple rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float","
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-zion-purple rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float",
   style: {{ animationDelay: "2s" }}";"
           ></div>
-          <div className="absolute top-40 left-1/2 w-60 h-60 bg-zion-cyan rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float","
+          <div className="absolute top-40 left-1/2 w-60 h-60 bg-zion-cyan rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float",
         <div className= "absolute inset-0 overflow-hidden">
           <div className= "absolute -top-40 -right-40 w-80 h-80 bg-zion-blue rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"></div>"
-          <div className= "absolute -bottom-40 -left-40 w-80 h-80 bg-zion-purple rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float","
+          <div className= "absolute -bottom-40 -left-40 w-80 h-80 bg-zion-purple rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float",
   style: {{ animationDelay: "2s" }}";"
           ></div>
-          <div className= "absolute top-40 left-1/2 w-60 h-60 bg-zion-cyan rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float","
+          <div className= "absolute top-40 left-1/2 w-60 h-60 bg-zion-cyan rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float",
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-zion-blue rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"></div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-zion-purple rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"
@@ -596,16 +596,16 @@ publishedAt: '2025-01-05'
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center"
                 <Link to: "/services" ,"
-  className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors","
+  className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors",
               <div className= "flex flex-col sm:flex-row gap-4 justify-center">
                 <Link to: "/services" ,"
-  className= "bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors","
+  className= "bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors",
                 >
                   Explore Services
                 </Link>
                 <Link to: "/contact" ,"
-  className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors","
-  className= "border border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors","
+  className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors",
+  className= "border border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors",
                 >
                   Get Started
                 </Link>
@@ -690,9 +690,9 @@ publishedAt: '2025-01-05'
                   </li>
                 </ul>
                 
-                <Link to: "/services/ai-services","
-  className="block w-full text-center py-3 px-4 rounded-lg font-semibold bg-blue-600 text-white hover:bg-blue-700 transition-colors","
-  className= "block w-full text-center py-3 px-4 rounded-lg font-semibold bg-blue-600 text-white hover:bg-blue-700 transition-colors","
+                <Link to: "/services/ai-services",
+  className="block w-full text-center py-3 px-4 rounded-lg font-semibold bg-blue-600 text-white hover:bg-blue-700 transition-colors",
+  className= "block w-full text-center py-3 px-4 rounded-lg font-semibold bg-blue-600 text-white hover:bg-blue-700 transition-colors",
                 >
                   Learn More
                 </Link>
@@ -761,9 +761,9 @@ publishedAt: '2025-01-05'
                   </li>
                 </ul>
                 
-                <Link to: "/services/micro-saas","
-  className="block w-full text-center py-3 px-4 rounded-lg font-semibold bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 transition-colors","
-  className= "block w-full text-center py-3 px-4 rounded-lg font-semibold bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 transition-colors","
+                <Link to: "/services/micro-saas",
+  className="block w-full text-center py-3 px-4 rounded-lg font-semibold bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 transition-colors",
+  className= "block w-full text-center py-3 px-4 rounded-lg font-semibold bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 transition-colors",
                 >
                   Learn More
                 </Link>
@@ -824,9 +824,9 @@ publishedAt: '2025-01-05'
                   </li>
                 </ul>
                 
-                <Link to: "/services/it-services","
-  className="block w-full text-center py-3 px-4 rounded-lg font-semibold bg-blue-600 text-white hover:bg-blue-700 transition-colors","
-  className= "block w-full text-center py-3 px-4 rounded-lg font-semibold bg-blue-600 text-white hover:bg-blue-700 transition-colors","
+                <Link to: "/services/it-services",
+  className="block w-full text-center py-3 px-4 rounded-lg font-semibold bg-blue-600 text-white hover:bg-blue-700 transition-colors",
+  className= "block w-full text-center py-3 px-4 rounded-lg font-semibold bg-blue-600 text-white hover:bg-blue-700 transition-colors",
                 >
                   Learn More
                 </Link>
@@ -1014,13 +1014,13 @@ publishedAt: '2025-01-05'
             
             <div className="grid md:grid-cols-3 gap-8"
               {latestInsights.map((item) => (
-                <Link key={item.id} to: "/blog" className ="group"
+                <Link key={item.id} to: "/blog", className ="group"
                   <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-200 hover:border-blue-200"
                     <div className="flex items-center gap-2 mb-4"
                       <span className={`px-2 py-1 rounded-full text-xs font-semibold ${,`;,`;
             <div className= "grid md:grid-cols-3 gap-8">
               {latestInsights.map((item) => (
-                <Link key={item.id} to: "/blog" className ="group">
+                <Link key={item.id} to: "/blog", className ="group">
                   <div className= "bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-200 hover:border-blue-200">
                     <div className= "flex items-center gap-2 mb-4">
                       <span className= {`px-2 py-1 rounded-full text-xs font-semibold ${,`;,`;
@@ -1062,11 +1062,11 @@ publishedAt: '2025-01-05'
             </div>
             
             <div className="text-center mt-12"
-              <Link to: "/blog","
-  className="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl","
+              <Link to: "/blog",
+  className="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl",
             <div className= "text-center mt-12">
-              <Link to: "/blog","
-  className= "inline-block bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl","
+              <Link to: "/blog",
+  className= "inline-block bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl",
               >
                 Explore All Content
               </Link>
@@ -1142,8 +1142,8 @@ publishedAt: '2025-01-05'
             </div>
             
             <div className="text-center"
-              <Link to: "/case-studies","
-  className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-xl transition-all duration-300 hover:scale-105 inline-flex items-center gap-2","
+              <Link to: "/case-studies",
+  className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-xl transition-all duration-300 hover:scale-105 inline-flex items-center gap-2",
               >
                 <span className="w-5 h-5">🏆</span>,"
             <div className= "grid md:grid-cols-3 gap-8 mb-12">
@@ -1191,8 +1191,8 @@ publishedAt: '2025-01-05'
             </div>
             
             <div className= "text-center">
-              <Link to: "/case-studies","
-  className= "bg-gradient-to-r from-green-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-xl transition-all duration-300 hover:scale-105 inline-flex items-center gap-2","
+              <Link to: "/case-studies",
+  className= "bg-gradient-to-r from-green-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-xl transition-all duration-300 hover:scale-105 inline-flex items-center gap-2",
               >
                 <span className= "w-5 h-5">🏆</span>,"
   View All Success Stories
@@ -1209,7 +1209,7 @@ publishedAt: '2025-01-05'
                   <h2 className="text-3xl font-bold mb-2">Latest from Zion Insights</h2>"
               <p className="text-white/90">New: AI SRE Runbooks 2026, Real‑Time Evals, and Cost‑Aware Agents.</p>"
                 </div>
-                <Link to: "/blog" className="bg-white text-indigo-700 hover:bg-indigo-50 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 self-start md:self-auto">,"
+                <Link to: "/blog", className="bg-white text-indigo-700 hover:bg-indigo-50 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 self-start md:self-auto">,"
   Read the latest
                   <span className="w-5 h-5">›</span>"
         <section className= "py-20 bg-white">
@@ -1220,7 +1220,7 @@ publishedAt: '2025-01-05'
                   <h2 className= "text-3xl font-bold mb-2">Latest from Zion Insights</h2>"
               <p className= "text-white/90">New: AI SRE Runbooks 2026, Real‑Time Evals, and Cost‑Aware Agents.</p>"
                 </div>
-                <Link to: "/blog" className= "bg-white text-indigo-700 hover:bg-indigo-50 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 self-start md:self-auto">,"
+                <Link to: "/blog", className= "bg-white text-indigo-700 hover:bg-indigo-50 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 self-start md:self-auto">,"
   Read the latest
                   <span className= "w-5 h-5">›</span>"
                 </Link>
@@ -1315,7 +1315,7 @@ publishedAt: '2025-01-05'
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"
               <Link to: "/contact" ,"
-  className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors","
+  className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors",
         <section className= "py-20 bg-blue-600">
           <div className= "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className= "text-3xl md:text-4xl font-bold text-white mb-4">,"
@@ -1326,13 +1326,13 @@ publishedAt: '2025-01-05'
             </p>
             <div className= "flex flex-col sm:flex-row gap-4 justify-center">
               <Link to: "/contact" ,"
-  className= "bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors","
+  className= "bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors",
               >
                 Start Your Project
               </Link>
               <Link to: "/case-studies" ,"
-  className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors","
-  className= "border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors","
+  className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors",
+  className= "border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors",
               >
                 View Case Studies
               </Link>

@@ -1,78 +1,78 @@
 import React from 'react';
-import { Link } from 'react-router-dom'';
+import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 
-const ComprehensiveITServices: React.FC  = () => {
+const ComprehensiveITServices: React.FC = () => {
   const itServices = [
     {
-      title: "Cloud Migration & Optimization","
-      description: "Complete cloud migration services with cost optimization, security hardening, and performance tuning for AWS, Azure, and GCP.","
-      icon: "☁️","
+      title: "Cloud Migration & Optimization",
+      description: "Complete cloud migration services with cost optimization, security hardening, and performance tuning for AWS, Azure, and GCP.",
+      icon: "☁️",
       features: ["Multi-cloud Strategy", "Cost Optimization", "Security Hardening", "Performance Tuning", "Disaster Recovery"],"
-      pricing: "Starting at $5,000/month","
+      pricing: "Starting at $5,000/month",
       benefits: ["40% cost reduction", "99.9% uptime guarantee", "Enhanced security posture", "Scalable infrastructure"],"
       technologies: ["AWS", "Azure", "Google Cloud", "Terraform", "Kubernetes"]"
     },
     {
-      title: "DevOps & CI/CD Automation","
-      description: "Modern DevOps practices with automated CI/CD pipelines, infrastructure as code, and comprehensive monitoring solutions.","
-      icon: "🔄","
+      title: "DevOps & CI/CD Automation",
+      description: "Modern DevOps practices with automated CI/CD pipelines, infrastructure as code, and comprehensive monitoring solutions.",
+      icon: "🔄",
       features: ["CI/CD Pipelines", "Infrastructure as Code", "Monitoring & Logging", "Automated Testing", "Deployment Automation"],"
-      pricing: "Starting at $3,500/month","
+      pricing: "Starting at $3,500/month",
       benefits: ["80% faster deployments", "50% reduction in errors", "Automated scaling", "Improved collaboration"],"
       technologies: ["Docker", "Kubernetes", "Jenkins", "GitLab CI", "Ansible"]"
     },
     {
-      title: "Cybersecurity & Compliance","
-      description: "Comprehensive cybersecurity services including threat detection, vulnerability assessment, and compliance management.","
-      icon: "🛡️","
+      title: "Cybersecurity & Compliance",
+      description: "Comprehensive cybersecurity services including threat detection, vulnerability assessment, and compliance management.",
+      icon: "🛡️",
       features: ["Threat Detection", "Vulnerability Assessment", "Compliance Management", "Incident Response", "Security Training"],"
-      pricing: "Starting at $4,200/month","
+      pricing: "Starting at $4,200/month",
       benefits: ["24/7 threat monitoring", "SOC 2 compliance", "Reduced security risks", "Automated compliance reporting"],"
       technologies: ["SIEM", "EDR", "WAF", "VPN", "Identity Management"]"
     },
     {
-      title: "Data Analytics & Business Intelligence","
-      description: "Advanced data analytics platforms with real-time dashboards, predictive analytics, and business intelligence solutions.","
-      icon: "📊","
+      title: "Data Analytics & Business Intelligence",
+      description: "Advanced data analytics platforms with real-time dashboards, predictive analytics, and business intelligence solutions.",
+      icon: "📊",
       features: ["Real-time Dashboards", "Predictive Analytics", "Data Warehousing", "ETL Processes", "Machine Learning"],"
-      pricing: "Starting at $2,800/month","
+      pricing: "Starting at $2,800/month",
       benefits: ["Data-driven decisions", "Real-time insights", "Improved efficiency", "Competitive advantage"],"
       technologies: ["Tableau", "Power BI", "Apache Spark", "Hadoop", "Python/R"]"
     },
     {
-      title: "Network Infrastructure & Security","
-      description: "Complete network design, implementation, and security solutions for enterprise-grade connectivity and performance.","
-      icon: "🌐","
+      title: "Network Infrastructure & Security",
+      description: "Complete network design, implementation, and security solutions for enterprise-grade connectivity and performance.",
+      icon: "🌐",
       features: ["Network Design", "Performance Monitoring", "Security Implementation", "Load Balancing", "VPN Solutions"],"
-      pricing: "Starting at $2,500/month","
+      pricing: "Starting at $2,500/month",
       benefits: ["Enhanced connectivity", "Improved performance", "Secure communications", "Reduced downtime"],"
       technologies: ["Cisco", "Fortinet", "Palo Alto", "F5", "SD-WAN"]"
     },
     {
-      title: "Database Management & Optimization","
-      description: "Expert database administration, optimization, and migration services for improved performance and reliability.","
-      icon: "🗄️","
+      title: "Database Management & Optimization",
+      description: "Expert database administration, optimization, and migration services for improved performance and reliability.",
+      icon: "🗄️",
       features: ["Database Design", "Performance Tuning", "Backup & Recovery", "Migration Services", "High Availability"],"
-      pricing: "Starting at $2,200/month","
+      pricing: "Starting at $2,200/month",
       benefits: ["Improved performance", "Data integrity", "Automated backups", "Reduced downtime"],"
       technologies: ["PostgreSQL", "MySQL", "MongoDB", "Redis", "Oracle"]"
     },
     {
-      title: "IT Support & Managed Services","
-      description: "24/7 IT support and managed services with proactive monitoring, maintenance, and help desk solutions.","
-      icon: "🛠️","
+      title: "IT Support & Managed Services",
+      description: "24/7 IT support and managed services with proactive monitoring, maintenance, and help desk solutions.",
+      icon: "🛠️",
       features: ["24/7 Support", "Proactive Monitoring", "System Maintenance", "Help Desk", "Remote Management"],"
-      pricing: "Starting at $1,800/month","
+      pricing: "Starting at $1,800/month",
       benefits: ["Reduced IT overhead", "Improved uptime", "Expert support", "Predictable costs"],"
       technologies: ["ServiceNow", "Zendesk", "Nagios", "Puppet", "Chef"]"
     },
     {
-      title: "Digital Transformation Consulting","
-      description: "Strategic digital transformation services to modernize legacy systems and implement new technologies.","
-      icon: "🚀","
+      title: "Digital Transformation Consulting",
+      description: "Strategic digital transformation services to modernize legacy systems and implement new technologies.",
+      icon: "🚀",
       features: ["Technology Assessment", "Legacy Modernization", "Digital Strategy", "Change Management", "Training Programs"],"
-      pricing: "Starting at $6,000/month","
+      pricing: "Starting at $6,000/month",
       benefits: ["Modernized systems", "Improved efficiency", "Competitive advantage", "Future-ready infrastructure"],"
       technologies: ["Microservices", "API Gateway", "Event Streaming", "Cloud Native", "AI/ML"]"
     }
@@ -99,7 +99,7 @@ const ComprehensiveITServices: React.FC  = () => {
         {/* Services Grid */}
         <section className="py-20">"
           <div className="container mx-auto px-6">"
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">"
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">"
               {itServices.map((service, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-sm hover: shadow-lg transition-all duration-300 border border-gray-100">"
                   <div className="text-4xl mb-4">{service.icon}</div>"
@@ -164,7 +164,7 @@ const ComprehensiveITServices: React.FC  = () => {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md: grid-cols-4 gap-8">"
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">"
               <div className="bg-gradient-to-br from-blue-50 to-indigo-100 p-6 rounded-xl text-center border border-blue-200">"
                 <div className="text-4xl mb-4">⏱️</div>"
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Response Time</h3>"
@@ -202,7 +202,7 @@ const ComprehensiveITServices: React.FC  = () => {
               </p>
             </div>
             
-            <div className="grid grid-cols-2 md: grid-cols-6 gap-8">"
+            <div className="grid grid-cols-2 md:grid-cols-6 gap-8">"
               {[
                 { name: "Healthcare", logo: "🏥", description: "HIPAA compliant solutions" },"
                 { name: "Finance", logo: "🏦", description: "PCI DSS compliance" },"
@@ -228,7 +228,7 @@ const ComprehensiveITServices: React.FC  = () => {
             <p className="text-xl mb-8 text-purple-100 max-w-2xl mx-auto">"
               Let's discuss how our comprehensive IT services can transform your technology stack and drive business growth.';
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">"
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <Link 
                 to="/contact" 
                 className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg

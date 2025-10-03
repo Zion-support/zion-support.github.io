@@ -1,78 +1,78 @@
 import React from 'react';
-import { Link } from 'react-router-dom'';
+import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 
-const InnovativeMicroSAAS: React.FC  = () => {
+const InnovativeMicroSAAS: React.FC = () => {
   const microSAASServices = [
     {
-      title: "AI-Powered Lead Scoring API","
-      description: "Intelligent lead scoring system that analyzes customer behavior and engagement to predict conversion probability with 95% accuracy.","
-      icon: "🎯","
+      title: "AI-Powered Lead Scoring API",
+      description: "Intelligent lead scoring system that analyzes customer behavior and engagement to predict conversion probability with 95% accuracy.",
+      icon: "🎯",
       features: ["Behavioral Analysis", "Predictive Scoring", "Real-time Updates", "CRM Integration"],"
-      pricing: "Starting at $299/month","
+      pricing: "Starting at $299/month",
       benefits: ["40% increase in conversion rates", "60% reduction in sales cycle", "Automated lead prioritization"],"
       useCases: ["B2B Sales Teams", "Marketing Agencies", "E-commerce Platforms"]"
     },
     {
-      title: "Smart Appointment Scheduler","
-      description: "AI-driven scheduling platform with automatic time zone detection, conflict resolution, and intelligent meeting optimization.","
-      icon: "📅","
+      title: "Smart Appointment Scheduler",
+      description: "AI-driven scheduling platform with automatic time zone detection, conflict resolution, and intelligent meeting optimization.",
+      icon: "📅",
       features: ["Auto-scheduling", "Time Zone Management", "Calendar Integration", "Reminder Automation"],"
-      pricing: "Starting at $199/month","
+      pricing: "Starting at $199/month",
       benefits: ["80% reduction in scheduling conflicts", "50% faster booking process", "Improved customer satisfaction"],"
       useCases: ["Healthcare Providers", "Consulting Firms", "Service Businesses"]"
     },
     {
-      title: "Content Localization QA Tool","
-      description: "Automated quality assurance for content translation with AI-powered accuracy checking and cultural adaptation suggestions.","
-      icon: "🌍","
+      title: "Content Localization QA Tool",
+      description: "Automated quality assurance for content translation with AI-powered accuracy checking and cultural adaptation suggestions.",
+      icon: "🌍",
       features: ["Translation QA", "Cultural Adaptation", "Quality Scoring", "Batch Processing"],"
-      pricing: "Starting at $399/month","
+      pricing: "Starting at $399/month",
       benefits: ["90% reduction in translation errors", "70% faster QA process", "Consistent brand voice"],"
       useCases: ["Global Brands", "Marketing Agencies", "E-learning Platforms"]"
     },
     {
-      title: "AI Contract Review Assistant","
-      description: "Intelligent contract analysis tool that identifies risks, suggests improvements, and automates legal document review.","
-      icon: "⚖️","
+      title: "AI Contract Review Assistant",
+      description: "Intelligent contract analysis tool that identifies risks, suggests improvements, and automates legal document review.",
+      icon: "⚖️",
       features: ["Risk Identification", "Clause Analysis", "Compliance Checking", "Redlining Suggestions"],"
-      pricing: "Starting at $599/month","
+      pricing: "Starting at $599/month",
       benefits: ["75% faster contract review", "95% accuracy in risk detection", "Reduced legal costs"],"
       useCases: ["Law Firms", "Corporate Legal Teams", "Real Estate Agencies"]"
     },
     {
-      title: "Fraud Detection API","
-      description: "Real-time fraud detection system for e-commerce and financial transactions using machine learning algorithms.","
-      icon: "🔍","
+      title: "Fraud Detection API",
+      description: "Real-time fraud detection system for e-commerce and financial transactions using machine learning algorithms.",
+      icon: "🔍",
       features: ["Real-time Analysis", "Pattern Recognition", "Risk Scoring", "API Integration"],"
-      pricing: "Starting at $449/month","
+      pricing: "Starting at $449/month",
       benefits: ["98% fraud detection accuracy", "60% reduction in chargebacks", "Real-time protection"],"
       useCases: ["E-commerce Platforms", "Payment Processors", "Financial Services"]"
     },
     {
-      title: "Predictive Maintenance Platform","
-      description: "IoT-enabled predictive maintenance solution that predicts equipment failures before they occur, reducing downtime.","
-      icon: "🔧","
+      title: "Predictive Maintenance Platform",
+      description: "IoT-enabled predictive maintenance solution that predicts equipment failures before they occur, reducing downtime.",
+      icon: "🔧",
       features: ["IoT Integration", "Failure Prediction", "Maintenance Scheduling", "Cost Optimization"],"
-      pricing: "Starting at $799/month","
+      pricing: "Starting at $799/month",
       benefits: ["40% reduction in downtime", "25% decrease in maintenance costs", "Improved equipment lifespan"],"
       useCases: ["Manufacturing", "Facilities Management", "Transportation"]"
     },
     {
-      title: "AI Customer Support Copilot","
-      description: "Intelligent customer support assistant that provides instant responses, escalates complex issues, and learns from interactions.","
-      icon: "🤖","
+      title: "AI Customer Support Copilot",
+      description: "Intelligent customer support assistant that provides instant responses, escalates complex issues, and learns from interactions.",
+      icon: "🤖",
       features: ["Instant Responses", "Context Awareness", "Issue Escalation", "Learning Capabilities"],"
-      pricing: "Starting at $349/month","
+      pricing: "Starting at $349/month",
       benefits: ["85% faster response times", "70% reduction in support tickets", "24/7 availability"],"
       useCases: ["SaaS Companies", "E-commerce", "Service Providers"]"
     },
     {
-      title: "Social Media Content Scheduler","
-      description: "AI-powered social media management platform with optimal posting times, content suggestions, and engagement analytics.","
-      icon: "📱","
+      title: "Social Media Content Scheduler",
+      description: "AI-powered social media management platform with optimal posting times, content suggestions, and engagement analytics.",
+      icon: "📱",
       features: ["Optimal Timing", "Content Suggestions", "Engagement Analytics", "Multi-platform Support"],"
-      pricing: "Starting at $249/month","
+      pricing: "Starting at $249/month",
       benefits: ["60% increase in engagement", "50% time savings", "Improved brand visibility"],"
       useCases: ["Digital Marketing Agencies", "Small Businesses", "Content Creators"]"
     }
@@ -99,7 +99,7 @@ const InnovativeMicroSAAS: React.FC  = () => {
         {/* Services Grid */}
         <section className="py-20">"
           <div className="container mx-auto px-6">"
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">"
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">"
               {microSAASServices.map((service, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-sm hover: shadow-lg transition-all duration-300 border border-gray-100">"
                   <div className="text-4xl mb-4">{service.icon}</div>"
@@ -164,7 +164,7 @@ const InnovativeMicroSAAS: React.FC  = () => {
               </p>
             </div>
             
-            <div className="grid grid-cols-2 md: grid-cols-4 gap-8">"
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">"
               <div className="bg-gradient-to-br from-blue-50 to-indigo-100 p-6 rounded-xl text-center border border-blue-200">"
                 <h3 className="text-lg font-bold text-gray-900 mb-2">Frontend</h3>"
                 <p className="text-gray-600">React, Vue.js, Next.js</p>"
@@ -198,7 +198,7 @@ const InnovativeMicroSAAS: React.FC  = () => {
               </p>
             </div>
             
-            <div className="grid grid-cols-2 md: grid-cols-6 gap-8">"
+            <div className="grid grid-cols-2 md:grid-cols-6 gap-8">"
               {[
                 { name: "Salesforce", logo: "🔄" },"
                 { name: "HubSpot", logo: "📊" },"
@@ -223,7 +223,7 @@ const InnovativeMicroSAAS: React.FC  = () => {
             <p className="text-xl mb-8 text-green-100 max-w-2xl mx-auto">"
               Discover how our innovative micro SaaS solutions can solve your specific business challenges and drive growth.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">"
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <Link 
                 to="/contact" 
                 className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg
