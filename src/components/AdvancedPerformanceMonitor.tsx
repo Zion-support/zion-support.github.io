@@ -27,6 +27,22 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
     // Only run in development
     if (process.env.NODE_ENV !== 'development') return;
 
+    const observer = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      entries.forEach((entry) => {
+        if (entry.entryType === 'largest-contentful-paint') {
+          setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
+        } else if (entry.entryType === 'first-input') {
+          const fidEntry = entry as PerformanceEventTiming;
+          setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - fidEntry.startTime }));
+        } else if (entry.entryType === 'layout-shift') {
+          const clsEntry = entry as LayoutShift;
+          if (!clsEntry.hadRecentInput) {
+            setMetrics(prev => ({ ...prev, cls: (prev.cls || 0) + clsEntry.value }));
+          }
+        }
+      });
+    });
 
     observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
 
@@ -48,7 +64,11 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
   if (!isVisible) return null;
 
   return (
-      </div>
+    <div className="fixed top-4 right-4 bg-black/80 text-white p-4 rounded-lg font-mono text-xs z-50">
+      <div className="font-bold mb-2">Performance Metrics</div>
+      <div>LCP: {metrics.lcp?.toFixed(2) || 'N/A'}ms</div>
+      <div>FID: {metrics.fid?.toFixed(2) || 'N/A'}ms</div>
+      <div>CLS: {metrics.cls?.toFixed(4) || 'N/A'}</div>
     </div>
   );
 };

@@ -3,6 +3,7 @@
  * Comprehensive error handling with performance monitoring and user feedback
  */
 
+import React, { Component, ReactNode, ErrorInfo } from 'react';
 
 interface Props {
   children: ReactNode;
@@ -18,6 +19,17 @@ interface State {
   errorId: string;
 }
 
+class EnhancedErrorBoundary extends Component<Props, State> {
+  private retryCount = 0;
+  private maxRetries = 3;
+
+  constructor(props: Props) {
+    super(props);
+    this.state = {
+      hasError: false,
+      error: null,
+      errorInfo: null,
+      errorId: ''
     };
   }
 
@@ -39,26 +51,21 @@ interface State {
     // Update state with error info
     this.setState({ errorInfo });
 
-      timestamp: new Date().toISOString(),
-      userAgent: navigator.userAgent,
-      url: window.location.href,
-      retryCount: this.retryCount
-    };
+    // const errorDetails = {
+    //   timestamp: new Date().toISOString(),
+    //   userAgent: navigator.userAgent,
+    //   url: window.location.href,
+    //   retryCount: this.retryCount
+    // };
 
-
-    // Send to analytics
-    analyticsUtils.trackEvent('error_boundary_caught', {
+    // Send to analytics (placeholder - would need actual analytics implementation)
+    console.log('Error boundary caught:', {
       error_id: errorId,
       error_message: error.message,
-      error_stack: error.stack?.substring(0, 500), // Truncate for analytics
+      error_stack: error.stack?.substring(0, 500),
       component_stack: errorInfo.componentStack?.substring(0, 500) || '',
       retry_count: this.retryCount
     });
-
-    // Log security event if suspicious
-    // if (securityMonitoring.detectSuspiciousActivity(errorDetails)) {
-    //   securityMonitoring.logSecurityEvent('suspicious_error', errorDetails);
-    // }
 
     // Call custom error handler
     if (onError) {
@@ -76,8 +83,8 @@ interface State {
         errorId: ''
       });
 
-      // Track retry attempt
-      analyticsUtils.trackEvent('error_boundary_retry', {
+      // Track retry attempt (placeholder)
+      console.log('Error boundary retry:', {
         error_id: this.state.errorId,
         retry_count: this.retryCount
       });
@@ -98,8 +105,8 @@ interface State {
       url: window.location.href
     };
 
-    // Track error report
-    analyticsUtils.trackEvent('error_boundary_report', {
+    // Track error report (placeholder)
+    console.log('Error boundary report:', {
       error_id: errorId,
       reported: true
     });
@@ -126,6 +133,34 @@ interface State {
 
       // Default error UI
       return (
+        <div className="min-h-screen flex items-center justify-center bg-gray-100">
+          <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6">
+            <div className="text-center">
+              <h1 className="text-2xl font-bold text-red-600 mb-4">Something went wrong</h1>
+              <p className="text-gray-600 mb-4">
+                We're sorry, but something unexpected happened.
+              </p>
+              {showDetails && error && (
+                <div className="text-left bg-gray-100 p-4 rounded mb-4">
+                  <p className="text-sm font-mono text-red-600">{error.message}</p>
+                  <p className="text-xs text-gray-500 mt-2">Error ID: {errorId}</p>
+                </div>
+              )}
+              <div className="space-x-4">
+                <button
+                  onClick={this.handleRetry}
+                  className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+                  disabled={this.retryCount >= this.maxRetries}
+                >
+                  Try Again ({this.maxRetries - this.retryCount} left)
+                </button>
+                <button
+                  onClick={this.handleReportError}
+                  className="bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-700"
+                >
+                  Report Issue
+                </button>
+              </div>
             </div>
           </div>
         </div>
