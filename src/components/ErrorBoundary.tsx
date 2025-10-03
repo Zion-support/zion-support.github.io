@@ -22,29 +22,32 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    // eslint-disable-next-line no-console
-    console.error('Error caught by boundary:', error, errorInfo);
-    
-    // Send error to monitoring service
-    if (typeof gtag !== 'undefined') {
-      gtag('event', 'exception', {
+    // Log to external service if available
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'exception', {
         description: error.message,
         fatal: false
       });
+    }
+    
+    // In development, log to console for debugging
+    if (process.env.NODE_ENV === 'development') {
+      // eslint-disable-next-line no-console
+      console.error('Error caught by boundary:', error, errorInfo);
     }
   }
 
   render() {
     if (this.state.hasError) {
       return this.props.fallback || (
-        <div className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white min-h-screen">
-          <div className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white min-h-screen">
-            <h2 className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white min-h-screen">
-              Something went wrong
-            </h2>
-            <button
+        <div className="min-h-screen bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white flex items-center justify-center">
+          <div className="text-center">
+            <h2 className="text-2xl font-bold mb-4">Something went wrong</h2>
+            <p className="mb-6">We're sorry, but something unexpected happened.</p>
+            <button 
               onClick={() => this.setState({ hasError: false })}
-              className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white min-h-screen">
+              className="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors"
+            >
               Try again
             </button>
           </div>
