@@ -20,10 +20,15 @@ class PerformanceMonitor {
   };
 
   private observers: PerformanceObserver[] = [];
+  private isInitialized = false;
+  private performanceBuffer: number[] = [];
 
   constructor() {
-    this.initializeWebVitals();
-    this.initializePerformanceObserver();
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      this.initializeWebVitals();
+      this.initializePerformanceObserver();
+      this.isInitialized = true;
+    }
   }
 
   private initializeWebVitals() {

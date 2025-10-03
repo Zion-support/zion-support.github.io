@@ -39,6 +39,12 @@ export const generateMetaTags = (metadata: SEOMetadata): string => {
     tags.push(`<link rel="canonical" href="${escapeHtml(metadata.canonicalUrl)}" />`);
   }
 
+  // Enhanced performance and SEO meta tags
+  tags.push(`<meta name="viewport" content="width=device-width, initial-scale=1.0" />`);
+  tags.push(`<meta name="robots" content="index, follow, max-image-preview:large" />`);
+  tags.push(`<meta http-equiv="X-UA-Compatible" content="IE=edge" />`);
+  tags.push(`<meta name="theme-color" content="#0f172a" />`);
+
   // Open Graph tags
   tags.push(`<meta property="og:title" content="${escapeHtml(metadata.ogTitle || metadata.title)}" />`);
   tags.push(`<meta property="og:description" content="${escapeHtml(metadata.ogDescription || metadata.description)}" />`);

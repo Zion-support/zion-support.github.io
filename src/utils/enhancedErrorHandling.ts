@@ -28,7 +28,13 @@ export interface ErrorReport {
 
 class EnhancedErrorHandler {
   private errors: ErrorInfo[] = [];
-  private maxErrors = 100;
+  private maxErrors = 100; // Limit stored errors to prevent memory issues
+  private errorThresholds = {
+    low: 10,
+    medium: 5,
+    high: 3,
+    critical: 1
+  };
   private isInitialized = false;
 
   constructor() {
