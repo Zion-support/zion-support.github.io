@@ -1,4 +1,4 @@
-import React from 'react;
+import React from 'react';
 import { Link } from "react-router-dom";"
 import { Helmet } from "react-helmet-async";"
 import { CheckCircle, Rocket, Shield, Sparkles, Zap, Users, Target, Award, ArrowRight } from "lucide-react";"
@@ -7,7 +7,7 @@ import { Helmet } from "react-helmet-async";"
 import {
 
 } from "lucide-react"
-import { CheckCircle, Sparkles } from "lucide-react";"
+import { CheckCircle, Sparkles ' from "lucide-react";"
 import Header from "../components/Header";"
 import Footer from "../components/Footer";"
 import NewServicesPromoBanner2026 from "../components/NewServicesPromoBanner2026";"
@@ -26,7 +26,7 @@ const Home: ()  => {,
       date: '2025-01-15',',',
       readMinutes: 25,,
       featured: true,
-    },
+    ',
     {
       id: '2',',',
       title: 'Quantum AI Breakthrough: Solving Impossible Problems in Seconds',',',
@@ -35,7 +35,7 @@ const Home: ()  => {,
       date: '2025-01-10',',',
       readMinutes: 20,,
       featured: false,
-    },
+    ',
     {
       id: '3',',',
       title: 'Manufacturing AI Transformation: $50M Savings & 95% Efficiency',',',
@@ -44,7 +44,7 @@ const Home: ()  => {,
       date: '2025-01-05',',',
       readMinutes: 15,,
       featured: true,
-    }
+    '
   ];
 
 id: '2',',',
@@ -54,7 +54,7 @@ category: 'Quantum Computing',',',
 date: '2025-01-10',',',
 readMinutes: 20,,
 featured: false
-},
+',
     {
 id: '3',',',
 title: 'Manufacturing AI Transformation: $50M Savings & 95% Efficiency',',',
@@ -72,14 +72,14 @@ featured: true
       description: 'Discover autonomous AI agents, neural interfaces, and predictive intelligence systems achieving 300% productivity gains.',',',
       category: 'AI Innovation',',',
       publishedAt: '2025-01-15',',
-    },
+    ',
     {
 slug: 'quantum-ai-breakthrough',',',
 title: 'Quantum AI Breakthrough: Solving Impossible Problems in Seconds',',',
 description: 'Explore quantum-enhanced AI delivering 500x faster results and revolutionizing computational capabilities.',',',
 category: 'Quantum Computing',',',
 publishedAt: '2025-01-10'
-},
+',
     {
 slug: 'manufacturing-success',',',
 title: 'Manufacturing AI Transformation: $50M Savings & 95% Efficiency',',',
@@ -970,19 +970,19 @@ publishedAt: '2025-01-05'
             
             <div className="grid md:grid-cols-3 gap-8"
               {latestInsights.map((item) => (
-                <Link key={item.id} to: "/blog", className ="group"
+                <Link key={item.id' to: "/blog", className ="group"
                   <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-200 hover:border-blue-200"
                     <div className="flex items-center gap-2 mb-4"
                       <span className={`px-2 py-1 rounded-full text-xs font-semibold ${,`,`;
             <div className= "grid md:grid-cols-3 gap-8">
               {latestInsights.map((item) => (
-                <Link key={item.id} to: "/blog", className ="group">
+                <Link key={item.id` to: "/blog", className ="group">
                   <div className= "bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-200 hover:border-blue-200">
                     <div className= "flex items-center gap-2 mb-4">
                       <span className= {`px-2 py-1 rounded-full text-xs font-semibold ${,`,`;
   item.featured ? 'bg-red-100 text-red-800' : 'bg-blue-100 text-blue-800'
-                      }`}>`;`;
-                        {item.featured ? 'Featured' : item.category}';
+                      ```>`;`;
+                        {item.featured ? 'Featured' : item.category'';
                       </span>
                       <span className="text-sm text-gray-500">{item.readMinutes} min read</span>";"
                     </div>
@@ -1260,7 +1260,7 @@ publishedAt: '2025-01-05'
 
         {/* Success Stories Showcase */}
         <SuccessStoriesShowcase />
-        {/* CTA Section */}
+        {/* CTA Section */'
         <section className="py-20 bg-blue-600"
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">,"
@@ -1300,6 +1300,6 @@ publishedAt: '2025-01-05'
       </div>
     </>
   );
-};
+`;
 
 export default Home;

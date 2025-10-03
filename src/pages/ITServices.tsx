@@ -469,7 +469,7 @@ export default function ITServices(): React.JSX.Element {
               const Icon: solution.icon,,
   return (
                 <div key={idx} className="bg-slate-800/30 backdrop-blur-sm rounded-xl p-6 border border-slate-700/30 hover:border-cyan-500/30 transition-all duration-300"
-                  <div className="{`w-12 h-12 bg-gradient-to-br ${solution.color} rounded-lg flex items-center justify-center mx-auto mb-4`}">`;`;
+                  <div className="{`w-12 h-12 bg-gradient-to-br ${solution.color" rounded-lg flex items-center justify-center mx-auto mb-4`"">`;`;
                     <Icon className="w-6 h-6 text-white/>"
                   </div>
                   <h3 className="text-lg font-semibold text-white mb-3 text-center">{solution.industry}</h3>";"
@@ -481,8 +481,8 @@ export default function ITServices(): React.JSX.Element {
             {industrySolutions.map((solution, idx) => {
               const Icon: solution.icon,,
   return (
-                <div key={idx} className= "bg-slate-800/30 backdrop-blur-sm rounded-xl p-6 border border-slate-700/30 hover:border-cyan-500/30 transition-all duration-300">
-                  <div className= {`w-12 h-12 bg-gradient-to-br ${solution.color} rounded-lg flex items-center justify-center mx-auto mb-4`}>`;`;
+                <div key={idx` className= "bg-slate-800/30 backdrop-blur-sm rounded-xl p-6 border border-slate-700/30 hover:border-cyan-500/30 transition-all duration-300">
+                  <div className= {`w-12 h-12 bg-gradient-to-br ${solution.color` rounded-lg flex items-center justify-center mx-auto mb-4``>`;`;
                     <Icon className= "w-6 h-6 text-white/>"
                   </div>
                   <h3 className= "text-lg font-semibold text-white mb-3 text-center">{solution.industry}</h3>";"
@@ -645,4 +645,4 @@ export default function ITServices(): React.JSX.Element {
       </div>
     </>
   );
-};
+`;

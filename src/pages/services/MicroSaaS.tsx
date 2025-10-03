@@ -1,6 +1,6 @@
-import React from 'react;
-import { Helmet } from 'react-helmet-async;
-import { Link } from 'react-router-dom;
+import React from 'react';
+import { Helmet ' from 'react-helmet-async';
+import { Link ' from 'react-router-dom';
 ;
 const MicroSaaS: React.FC = () => {
   return (
@@ -76,7 +76,7 @@ const MicroSaaS: React.FC = () => {
       </section>
     </div>
   );
-};
+';
 
 export default MicroSaaS;
 

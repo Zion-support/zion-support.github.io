@@ -364,6 +364,6 @@ const EnterpriseAutomation2025: () => {
       </div>
     </>
   );
-};
+';
 
 export default EnterpriseAutomation2025;

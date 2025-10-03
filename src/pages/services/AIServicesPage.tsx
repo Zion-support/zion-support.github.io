@@ -1,6 +1,6 @@
-import React from 'react;
-import { Link } from 'react-router-dom;
-import { Helmet } from 'react-helmet-async;
+import React from 'react';
+import { Link ' from 'react-router-dom';
+import { Helmet ' from 'react-helmet-async';
 const AIServicesPage: React.FC = () => {
   const aiServices = [
     {
@@ -83,12 +83,12 @@ const AIServicesPage: React.FC = () => {
                     Learn More →
                   </Link>
                 </div>
-              ))}
+              ))"
             </div>
           </div>
         </section>
 
-        {/* Benefits Section */}"
+        {/* Benefits Section */""
         <section className="py-20 bg-white">"
           <div className="container mx-auto px-6">"
             <div className="text-center mb-16">"
@@ -126,7 +126,7 @@ const AIServicesPage: React.FC = () => {
           </div>
         </section>
 
-        {/* CTA Section */}
+        {/* CTA Section */'
         <section className="py-20 bg-blue-600 text-white">"
           <div className="container mx-auto px-6 text-center">"
             <h2 className="text-4xl font-bold mb-4">Ready to Harness the Power of AI?</h2>"
@@ -152,6 +152,6 @@ const AIServicesPage: React.FC = () => {
       </div>
     </>
   );
-};
+";
 "
 export default AIServicesPage;

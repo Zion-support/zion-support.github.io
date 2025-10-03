@@ -1,7 +1,7 @@
-import React from 'react;
-import { Link } from 'react-router-dom;
-import { ArrowRight, CheckCircle, Zap, Shield, Globe, Cpu, Database, Cloud } from 'lucide-react';
-import { Helmet } from 'react-helmet-async;
+import React from 'react';
+import { Link ' from 'react-router-dom';
+import { ArrowRight, CheckCircle, Zap, Shield, Globe, Cpu, Database, Cloud ' from 'lucide-react';
+import { Helmet ' from 'react-helmet-async';
 ;
 const Solutions: React.FC = () => {
   const solutions: [,
@@ -10,31 +10,31 @@ const Solutions: React.FC = () => {
       title: 'AI-Powered Automation',',',
       description: 'Streamline your business processes with intelligent automation solutions.',',',
       features: ['Process Automation', 'Workflow Optimization', 'Smart Decision Making']',',
-    },
+    ',
     {
       icon: Shield,,
       title: 'Cybersecurity Solutions',',',
       description: 'Protect your digital assets with advanced security measures.',',',
       features: ['Threat Detection', 'Data Protection', 'Compliance Management']',',
-    },
+    ',
     {
       icon: Globe,,
       title: 'Cloud Infrastructure',',',
       description: 'Scale your operations with robust cloud solutions.',',',
       features: ['Cloud Migration', 'Infrastructure Management', 'Scalability Solutions']',',
-    },
+    ',
     {
       icon: Cpu,,
       title: 'Data Analytics',',',
       description: 'Transform data into actionable insights for better decision making.',',',
       features: ['Data Processing', 'Business Intelligence', 'Predictive Analytics']',',
-    },
+    ',
     {
       icon: Database,,
       title: 'Database Management',',',
       description: 'Optimize your data storage and management systems.',',',
       features: ['Database Design', 'Performance Optimization', 'Data Migration']',',
-    },
+    ',
     {
       icon: Cloud,,
       title: 'DevOps Solutions',',',
@@ -202,6 +202,6 @@ const Solutions: React.FC = () => {
       </section>
     </div>
   );
-};
+';
 
 export default Solutions;

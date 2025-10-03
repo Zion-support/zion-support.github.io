@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { Helmet ' from 'react-helmet-async';
 
 const BlogPage: React.FC = () => {
   return (
@@ -25,6 +25,6 @@ const BlogPage: React.FC = () => {
       </div>
     </>
   );
-};
+';
 
 export default BlogPage;

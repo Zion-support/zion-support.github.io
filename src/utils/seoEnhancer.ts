@@ -39,7 +39,7 @@ export const analyzeContent = (content: string): ContentMetrics => {
   
   // Calculate keyword density
   const keywordDensity: Record<string, number> = {};
-  const wordFreq: Record<string, number> = {};
+  const wordFreq: Record<string, number> = {';
   
   words.forEach(word => {
     const cleanWord = word.toLowerCase().replace(/[^\w]/g, '');
@@ -50,7 +50,7 @@ export const analyzeContent = (content: string): ContentMetrics => {
   
   Object.entries(wordFreq).forEach(([word, count]) => {
     keywordDensity[word] = (count / wordCount) * 100;
-  });
+  ');
   
   return {
     wordCount,
@@ -59,16 +59,16 @@ export const analyzeContent = (content: string): ContentMetrics => {
     headings: headings.map(h => h.replace(/<[^>]*>/g, '').trim()),
     links: links.map(l => l.match(/href=["']([^"']+)["']/)?.[1] || '').filter(Boolean)
   };
-};
+';
 
 export const generateSitemapEntry = (url: string, lastmod?: string, changefreq?: string, priority?: number): string => {
   return `<url>
-    <loc>${url}</loc>
-    ${lastmod ? `<lastmod>${lastmod}</lastmod>` : ''}
-    ${changefreq ? `<changefreq>${changefreq}</changefreq>` : ''}
-    ${priority !== undefined ? `<priority>${priority}</priority>` : ''}
+    <loc>${url`</loc>
+    ${lastmod ? `<lastmod>${lastmod`</lastmod>` : ''`
+    ${changefreq ? `<changefreq>${changefreq`</changefreq>` : ''`
+    ${priority !== undefined ? `<priority>${priority`</priority>` : ''`
   </url>`;
-};
+';
 
 export const extractKeywords = (content: string, maxKeywords: number = 20): string[] => {
   const text = content.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
@@ -77,7 +77,7 @@ export const extractKeywords = (content: string, maxKeywords: number = 20): stri
     'the', 'a', 'an', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'for',
     'of', 'with', 'by', 'from', 'as', 'is', 'was', 'are', 'were', 'been',
     'be', 'have', 'has', 'had', 'do', 'does', 'did', 'will', 'would', 'could',
-    'should', 'may', 'might', 'must', 'can', 'this', 'that', 'these', 'those'
+    'should', 'may', 'might', 'must', 'can', 'this', 'that', 'these', 'those};
   ]);
   
   const words = text
@@ -100,26 +100,26 @@ export const extractKeywords = (content: string, maxKeywords: number = 20): stri
 export const optimizeDescription = (description: string, maxLength: number = 160): string => {
   if (description.length <= maxLength) {
     return description;
-  }
+  };
   
   const truncated = description.substring(0, maxLength);
   const lastSentence = truncated.lastIndexOf('.');
   
   if (lastSentence > maxLength * 0.7) {
     return truncated.substring(0, lastSentence + 1);
-  }
+  '
   
   const lastSpace = truncated.lastIndexOf(' ');
-  return lastSpace > 0 ? truncated.substring(0, lastSpace) + '...' : truncated + '...;
-};
+  return lastSpace > 0 ? truncated.substring(0, lastSpace) + '...' : truncated + '...';
+';
 
 export const generateMetaDescription = (content: string, maxLength: number = 160): string => {
   const text = content.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
   const sentences = text.split(/[.!?]+/).filter(s => s.trim().length > 0);
   
-  let description = ';
+  let description = '';
   for (const sentence of sentences) {
-    const candidate = description + sentence.trim() + '. ;
+    const candidate = description + sentence.trim() + '. ';
     if (candidate.length <= maxLength) {
       description = candidate;
     } else {
@@ -128,7 +128,7 @@ export const generateMetaDescription = (content: string, maxLength: number = 160
   }
   
   return optimizeDescription(description.trim(), maxLength);
-};
+';
 
 export const analyzeSEO = (content: string, title: string, description: string): SEOAnalysis => {
   const metrics = analyzeContent(content);
@@ -138,25 +138,25 @@ export const analyzeSEO = (content: string, title: string, description: string):
   // Title analysis
   if (title.length < 30) {
     suggestions.push('Title should be at least 30 characters long');
-  } else if (title.length > 60) {
+  ' else if (title.length > 60) {
     suggestions.push('Title should be less than 60 characters');
-  }
+  '
   
   // Description analysis
   if (description.length < 120) {
     suggestions.push('Description should be at least 120 characters long');
-  } else if (description.length > 160) {
+  ' else if (description.length > 160) {
     suggestions.push('Description should be less than 160 characters');
-  }
+  '
   
   // Content analysis
   if (metrics.wordCount < 300) {
     suggestions.push('Content should be at least 300 words for better SEO');
-  }
+  '
   
   if (metrics.headings.length === 0) {
     suggestions.push('Add headings (H1, H2, etc.) to improve content structure');
-  }
+  '
   
   if (metrics.links.length === 0) {
     suggestions.push('Add internal and external links to improve SEO');
@@ -178,7 +178,7 @@ export const analyzeSEO = (content: string, title: string, description: string):
     readabilityScore: calculateReadabilityScore(content),
     suggestions
   };
-};
+';
 
 export const calculateReadabilityScore = (content: string): number => {
   const text = content.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
@@ -198,10 +198,10 @@ export const calculateReadabilityScore = (content: string): number => {
   const score = 206.835 - (1.015 * avgWordsPerSentence) - (84.6 * avgSyllablesPerWord);
   
   return Math.max(0, Math.min(100, Math.round(score)));
-};
+';
 
 export const countSyllables = (word: string): number => {
-  const vowels = 'aeiouy;
+  const vowels = 'aeiouy';
   let count = 0;
   let previousWasVowel = false;
   
@@ -211,7 +211,7 @@ export const countSyllables = (word: string): number => {
       count++;
     }
     previousWasVowel = isVowel;
-  }
+  };
   
   // Handle silent 'e'
   if (word.endsWith('e') && count > 1) {
@@ -219,17 +219,17 @@ export const countSyllables = (word: string): number => {
   }
   
   return Math.max(1, count);
-};
+';
 
 export const generateSchemaMarkup = (type: string, data: Record<string, any>): string => {
   const schema = {
     '@context': 'https://schema.org',
     '@type': type,
     ...data
-  };
+  `;
   
-  return `<script type="application/ld+json">${JSON.stringify(schema, null, 2)}</script>`;
-};
+  return `<script type="application/ld+json">${JSON.stringify(schema, null, 2)`</script>`;
+';
 
 export const optimizeImages = (images: string[]): string[] => {
   return images.map(image => {
@@ -238,12 +238,12 @@ export const optimizeImages = (images: string[]): string[] => {
       return image.replace(/\.(jpg|jpeg|png)$/i, '.webp');
     }
     return image;
-  });
-};
+  ');
+`;
 
 export const generateCanonicalUrl = (baseUrl: string, path: string): string => {
-  const cleanPath = path.startsWith('/') ? path : `/${path}`;
-  return `${baseUrl.replace(/\/$/, '')}${cleanPath}`;
+  const cleanPath = path.startsWith('/') ? path : `/${path``;
+  return `${baseUrl.replace(/\/$/, '')}${cleanPath``;
 };
 
 export const validateUrl = (url: string): boolean => {
@@ -253,12 +253,12 @@ export const validateUrl = (url: string): boolean => {
   } catch {
     return false;
   }
-};
+';
 
 export const generateRobotsMeta = (index: boolean = true, follow: boolean = true): string => {
   const directives = [];
   if (!index) directives.push('noindex');
   if (!follow) directives.push('nofollow');
   
-  return directives.length > 0 ? directives.join(', ') : 'index, follow;
-};
+  return directives.length > 0 ? directives.join(', ') : 'index, follow';
+`;

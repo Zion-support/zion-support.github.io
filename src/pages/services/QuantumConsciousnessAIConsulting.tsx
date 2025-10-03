@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { Helmet ' from 'react-helmet-async';
 
 const QuantumConsciousnessAIConsulting: React.FC = () => {
   return (
@@ -17,11 +17,11 @@ const QuantumConsciousnessAIConsulting: React.FC = () => {
       </Helmet>
 
       <div className="min-h-screen bg-slate-950">
-        {/* Hero Section */}
+        {/* Hero Section */'
         <section className="relative overflow-hidden bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 py-20">
           <div className="absolute inset-0 overflow-hidden opacity-20">
             <div className="absolute top-0 left-1/3 w-96 h-96 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
-            <div className="absolute bottom-0 right-1/3 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+            <div className="absolute bottom-0 right-1/3 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' };></div>
           </div>
           
           <div className="container mx-auto px-6 relative z-10">
@@ -229,6 +229,6 @@ const QuantumConsciousnessAIConsulting: React.FC = () => {
       </div>
     </>
   );
-};
+';
 
 export default QuantumConsciousnessAIConsulting;

@@ -38,7 +38,7 @@ const GlobalRetailAITransformation: () => {
   Back to Case Studies
           </Link>
 
-          {/* Header */}
+          {/* Header */"
           <div className="max-w-5xl mx-auto mb-16",
             <div className="flex items-center gap-4 mb-6 flex-wrap",
               <span className="px-4 py-2 bg-green-500/20 text-green-300 rounded-full text-sm font-semibold border border-green-500/30",
@@ -972,7 +972,7 @@ const GlobalRetailAITransformation: () => {
               </div>
             </section>
 
-            {/* CTA */}
+            {/* CTA */'
             <section className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-10 text-center",
               <h2 className="text-3xl font-bold text-white mb-4",
   Ready to Transform Your Enterprise with AI?
@@ -1027,7 +1027,7 @@ const GlobalRetailAITransformation: () => {
       </div>
     </>
   );
-};
+';
 
 export default GlobalRetailAITransformation;
 ;

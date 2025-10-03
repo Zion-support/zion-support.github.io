@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { Helmet ' from 'react-helmet-async';
 
 const CaseStudiesPage: React.FC = () => {
   return (
@@ -25,6 +25,6 @@ const CaseStudiesPage: React.FC = () => {
       </div>
     </>
   );
-};
+';
 
 export default CaseStudiesPage;

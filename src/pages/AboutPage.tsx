@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { Helmet ' from 'react-helmet-async';
 
 const AboutPage: React.FC = () => {
   return (
@@ -20,7 +20,7 @@ const AboutPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Mission Section */}
+        {/* Mission Section */'
         <section className="py-20">
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto text-center">
@@ -137,7 +137,7 @@ const AboutPage: React.FC = () => {
           </div>
         </section>
 
-        {/* CTA Section */}
+        {/* CTA Section */'
         <section className="py-20 bg-gray-900 text-white">
           <div className="container mx-auto px-6 text-center">
             <h2 className="text-4xl font-bold mb-4">Ready to Work With Us?</h2>
@@ -157,6 +157,6 @@ const AboutPage: React.FC = () => {
       </div>
     </>
   );
-};
+';
 
 export default AboutPage;

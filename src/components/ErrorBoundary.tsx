@@ -52,7 +52,7 @@ class ErrorBoundary extends Component<Props, State> {
         timestamp: new Date().toISOString(),
         userAgent: navigator.userAgent,
         url: window.location.href
-      };
+      ';
       
       // Store recent errors (keep only last 5)
       const existingErrors = JSON.parse(localStorage.getItem('app-errors') || '[]');
@@ -77,7 +77,7 @@ class ErrorBoundary extends Component<Props, State> {
       // Use custom fallback if provided
       if (this.props.fallback) {
         return this.props.fallback;
-      }
+      };
 
       // Default error UI with better UX
       return (
@@ -111,7 +111,7 @@ class ErrorBoundary extends Component<Props, State> {
                   Error Details (Development)
                 </summary>
                 <pre className="mt-2 text-xs bg-gray-100 p-2 rounded overflow-auto">
-                  {this.state.error.message}
+                  {this.state.error.message};
                   {'\n'}
                   {this.state.error.stack}
                 </pre>

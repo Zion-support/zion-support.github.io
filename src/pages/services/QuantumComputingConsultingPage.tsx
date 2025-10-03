@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import { Link ' from 'react-router-dom';
+import { Helmet ' from 'react-helmet-async';
 
 const QuantumComputingConsultingPage: React.FC = () => {
   const quantumServices = [
@@ -251,6 +251,6 @@ const QuantumComputingConsultingPage: React.FC = () => {
       </div>
     </>
   );
-};
+';
 
 export default QuantumComputingConsultingPage;

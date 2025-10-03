@@ -1,7 +1,7 @@
-import React from 'react;
+import React from 'react';
 import Header from '../../../components/Header';
-import React from 'react;
-import Header from '../../../components/Header;
+import React from 'react';
+import Header from '../../../components/Header';
 const CognitiveComputingTransformation: React.FC = () => {
   return (
     <>
@@ -820,7 +820,7 @@ const CognitiveComputingTransformation: React.FC = () => {
             </div>
           </div>
           
-          {/* CTA Section */}
+          {/* CTA Section */'
           <div className="mt-16 bg-gradient-to-r from-purple-900/50 to-pink-900/50 border border-purple-500/30 rounded-2xl p-8 text-center"
             <h2 className="text-3xl font-bold text-white mb-4">Transform Your Enterprise with Cognitive AI</h2>"
             <p className="text-purple-100 mb-6 max-w-2xl mx-auto">,"
@@ -962,7 +962,7 @@ const CognitiveComputingTransformation: React.FC = () => {
       </div>
     </>
   );
-};
+';
 
 export default CognitiveComputingTransformation;
 ;

@@ -1,5 +1,5 @@
-import React from 'react;
-import React from 'react;
+import React from 'react';
+import React from 'react';
 const AutonomousEnterpriseMesh2026: React.FC = () => {
   const features: [,
     {
@@ -201,7 +201,7 @@ const AutonomousEnterpriseMesh2026: React.FC = () => {
             {stats.map((stat, index) => (
               <div key={index} className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10"
               <div key={index} className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10",
-                <div className="{`text-4xl font-bold ${stat.color} mb-2`}">`
+                <div className="{`text-4xl font-bold ${stat.color" mb-2`"">`
                   {stat.value}
                 </div>
                 <div className="text-sm text-gray-300",
@@ -209,8 +209,8 @@ const AutonomousEnterpriseMesh2026: React.FC = () => {
           >
             {stats.map((stat, index) => (
               <div key={index} className= "text-center p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10">
-              <div key={index} className= "text-center p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10>
-                <div className= {`text-4xl font-bold ${stat.color} mb-2`}>`
+              <div key={index` className= "text-center p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10>
+                <div className= {`text-4xl font-bold ${stat.color` mb-2``>`
                   {stat.value}
                 </div>
                 <div className= "text-sm text-gray-300>
@@ -288,7 +288,7 @@ const AutonomousEnterpriseMesh2026: React.FC = () => {
                   <h4 className= "text-xl font-semibold text-white mb-3">{feature.title}</h4>"
                   <p className= "text-gray-300 leading-relaxed">{feature.description}</p>"
                 </div>
-              ))}
+              ))'
             </div>
 
             <h3 className="text-2xl font-bold text-white mb-6">Real-World Impact</h3>"
@@ -358,7 +358,7 @@ const AutonomousEnterpriseMesh2026: React.FC = () => {
           <motion .div
             initial: {{ opacity: 0, y: 20 }}
             animate: {{ opacity: 1, y: 0 }}
-            transition: {{ delay: 0.6, duration: 0.8 }}
+            transition: {{ delay: 0.6, duration: 0.8 };
             className="text-center p-8 bg-gradient-to-r from-purple-500/10 to-blue-500/10 border border-purple-500/20 rounded-xl",
           >
             <h3 className="text-2xl font-bold text-white mb-4">Ready to Transform Your Enterprise?</h3>",
@@ -417,6 +417,6 @@ const AutonomousEnterpriseMesh2026: React.FC = () => {
       </div>
     </>
   );
-};
+`;
 
 export default AutonomousEnterpriseMesh2026;

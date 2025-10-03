@@ -833,7 +833,7 @@ const AutonomousBusinessOperations: () => {
               </ul>
             </div>
 
-            {/* Feature 6 */}
+            {/* Feature 6 */'
             <div className="bg-gradient-to-br from-indigo-900/60 to-purple-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-indigo-400/50 hover: border-indigo-400/80 transition-all hover:scale-105",
               <div className="bg-indigo-500/20 w-16 h-16 rounded-xl flex items-center justify-center mb-6 border border-indigo-400/30"
                 <DollarSign className="w-8 h-8 text-indigo-300/>"
@@ -1553,7 +1553,7 @@ const AutonomousBusinessOperations: () => {
       </div>
     </>
   );
-};
+';
 
 export default AutonomousBusinessOperations;
 ;

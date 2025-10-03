@@ -1,6 +1,6 @@
-import React from 'react;
-import { Link } from 'react-router-dom;
-import { Helmet } from 'react-helmet-async;
+import React from 'react';
+import { Link ' from 'react-router-dom';
+import { Helmet ' from 'react-helmet-async';
 const SMBSolutionsPage: React.FC = () => {
   const smbSolutions = [
     {
@@ -126,7 +126,7 @@ const SMBSolutionsPage: React.FC = () => {
           </div>
         </section>
 
-        {/* SMB Features */}
+        {/* SMB Features */'
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-6">
             <div className="text-center mb-16">
@@ -226,7 +226,7 @@ const SMBSolutionsPage: React.FC = () => {
           </div>
         </section>
 
-        {/* CTA Section */}
+        {/* CTA Section */'
         <section className="py-20 bg-green-600 text-white">
           <div className="container mx-auto px-6 text-center">
             <h2 className="text-4xl font-bold mb-4">Ready to Grow Your SMB?</h2>
@@ -252,6 +252,6 @@ const SMBSolutionsPage: React.FC = () => {
       </div>
     </>
   );
-};
+';
 
 export default SMBSolutionsPage;

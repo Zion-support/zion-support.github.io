@@ -248,7 +248,7 @@ const RealTimeCognitiveAutomation = () => {
                     features: ["Unlimited transactions", "Unlimited workflows", "Custom integrations", "Dedicated support", "99.99% SLA"]
                   }
                 ].map((pkg, index) => (
-                  <div key={index} className={`bg-white/5 backdrop-blur-sm rounded-xl p-6 border ${pkg.popular ? 'border-purple-500/50 ring-2 ring-purple-500/30' : 'border-zion-cyan/30'}`}>
+                  <div key={index} className={`bg-white/5 backdrop-blur-sm rounded-xl p-6 border ${pkg.popular ? 'border-purple-500/50 ring-2 ring-purple-500/30' : 'border-zion-cyan/30'``}>
                     {pkg.popular && (
                       <div className="text-center mb-4">
                         <span className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm font-semibold">
@@ -274,7 +274,7 @@ const RealTimeCognitiveAutomation = () => {
               </div>
             </section>
 
-            {/* CTA Section */}
+            {/* CTA Section */'
             <section>
               <div className="bg-gradient-to-r from-purple-900/40 to-blue-900/40 rounded-2xl p-8 border border-purple-500/30 text-center">
                 <h3 className="text-2xl font-bold text-white mb-4">🚀 October 2025 Launch Special</h3>
@@ -311,6 +311,6 @@ const RealTimeCognitiveAutomation = () => {
       </div>
     </>
   );
-};
+`;
 
 export default RealTimeCognitiveAutomation;

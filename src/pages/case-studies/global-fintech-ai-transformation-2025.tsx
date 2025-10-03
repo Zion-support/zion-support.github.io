@@ -820,7 +820,7 @@ const GlobalFinTechAITransformation: () => {
       </div>
     </>
   );
-};
+';
 
 export default GlobalFinTechAITransformation;
 ;

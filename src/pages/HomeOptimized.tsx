@@ -330,8 +330,8 @@ const HomeOptimized: () => {
               }
             ].map((feature, index) => (
               <div key={index} className="card group hover: scale-105 transition-all duration-300 hover:shadow-2xl",
-                <div className="{`bg-zion-${feature.color}/20 w-16 h-16 rounded-lg flex items-center justify-center mb-6 group-hover:bg-zion-${feature.color}/30 transition-colors border border-zion-${feature.color}/30 shadow-lg`}">`
-                  <feature .icon className="{`w-8 h-8 text-zion-${feature.color}-light group-hover:scale-110 transition-transform duration-300`} /">`
+                <div className="{`bg-zion-${feature.color}/20 w-16 h-16 rounded-lg flex items-center justify-center mb-6 group-hover:bg-zion-${feature.color`/30 transition-colors border border-zion-${feature.color"/30 shadow-lg`"">`
+                  <feature .icon className="{`w-8 h-8 text-zion-${feature.color"-light group-hover:scale-110 transition-transform duration-300`" /">`
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4",
                   {feature.title}
@@ -348,9 +348,9 @@ const HomeOptimized: () => {
                       <CheckCircle className="w-4 h-4 mr-2 text-zion-cyan/>"
                     <li key: {i} className="flex items-center",
                       <CheckCircle className="w-4 h-4 mr-2 text-zion-cyan/>",
-              <div key={index} className= "card group hover: scale-105 transition-all duration-300 hover:shadow-2xl>
-                <div className= {`bg-zion-${feature.color}/20 w-16 h-16 rounded-lg flex items-center justify-center mb-6 group-hover:bg-zion-${feature.color}/30 transition-colors border border-zion-${feature.color}/30 shadow-lg`}>`
-                  <feature .icon className= {`w-8 h-8 text-zion-${feature.color}-light group-hover:scale-110 transition-transform duration-300`} />`
+              <div key={index` className= "card group hover: scale-105 transition-all duration-300 hover:shadow-2xl>
+                <div className= {`bg-zion-${feature.color}/20 w-16 h-16 rounded-lg flex items-center justify-center mb-6 group-hover:bg-zion-${feature.color}/30 transition-colors border border-zion-${feature.color`/30 shadow-lg``>`
+                  <feature .icon className= {`w-8 h-8 text-zion-${feature.color`-light group-hover:scale-110 transition-transform duration-300`` />`
                 </div>
                 <h3 className= "text-xl font-semibold text-white mb-4>
                   {feature.title}
@@ -507,9 +507,9 @@ const HomeOptimized: () => {
                 <div key={index} className= "card text-center hover: scale-105 transition-all duration-300 hover:shadow-2xl>
                   <div className= "flex justify-center mb-4>
                     {[...Array(5)].map((_, i) => (
-                      <Star key={i}
+                      <Star key={i`
                         className= "w-5 h-5 text-yellow-400 fill-current animate-pulse",
-  style: {{ animationDelay: `${i * 0.1}s` }}`
+  style: {{ animationDelay: `${i * 0.1`s` }``
                       />
                     ))}
                   </div>
@@ -543,7 +543,7 @@ const HomeOptimized: () => {
           <EnhancedTestimonials />
         </Suspense>
 
-        {/* CTA Section */}
+        {/* CTA Section */'
         <section className="py-20 bg-gradient-to-r from-zion-blue to-zion-purple relative overflow-hidden",
           <div className="absolute inset-0 bg-black opacity-10"></div>",
           <div className="container mx-auto px-6 text-center relative z-10",
@@ -595,7 +595,7 @@ const HomeOptimized: () => {
       </div>
     </>
   );
-};
+`;
 
 export default HomeOptimized;
 ;

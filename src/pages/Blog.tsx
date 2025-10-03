@@ -35,7 +35,7 @@ const Blog: React.FC = () => {
       image: "/api/placeholder/600/300",
       featured: true,
       views: 1250
-    },
+    ',
     {
       id: 2,
       title: "Getting Started with Machine Learning: A Beginner's Guide",
@@ -115,12 +115,12 @@ const Blog: React.FC = () => {
                 {categories.map(category => (
                   <button
                     key={category}
-                    onClick={() => setSelectedCategory(category)}
+                    onClick={() => setSelectedCategory(category)};
                     className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                       selectedCategory === category
                         ? 'bg-blue-600 text-white'
                         : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-                    }`}
+                    ``}
                   >
                     {category}
                   </button>
@@ -206,12 +206,12 @@ const Blog: React.FC = () => {
                   </article>
                 ))}
               </div>
-            )}
+            )'
           </div>
         </section>
       </div>
     </>
   );
-};
+`;
 
 export default Blog;

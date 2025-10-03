@@ -169,7 +169,7 @@ return (
                   year: 'numeric',',',
                   month: 'long',',',
                   day: 'numeric' ,',
-                })}
+                })};
               </span>
               {article.readTime && (
                 <span className="flex items-center gap-1"

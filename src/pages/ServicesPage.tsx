@@ -1,6 +1,6 @@
-import React from 'react;
-import { Link } from 'react-router-dom;
-import { Helmet } from 'react-helmet-async;
+import React from 'react';
+import { Link ' from 'react-router-dom';
+import { Helmet ' from 'react-helmet-async';
 ;
 const ServicesPage: React.FC = () => {
   const services: [,
@@ -142,7 +142,7 @@ const ServicesPage: React.FC = () => {
           </div>
         </section>
 
-        {/* CTA Section */}
+        {/* CTA Section */'
         <section className="py-20 bg-blue-600 text-white"
           <div className="container mx-auto px-6 text-center"
             <h2 className="text-4xl font-bold mb-4">Ready to Get Started?</h2>"
@@ -176,6 +176,6 @@ const ServicesPage: React.FC = () => {
       </div>
     </>
   );
-};
+';
 
 export default ServicesPage;

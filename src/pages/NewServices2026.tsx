@@ -1,5 +1,5 @@
-import React from 'react;
-import { Helmet } from 'react-helmet-async;
+import React from 'react';
+import { Helmet ' from 'react-helmet-async';
 import { 
   Brain, 
   Code, 
@@ -270,7 +270,7 @@ import {
   BlueFootedBooby,
   PeruvianBooby,
   AbbottBooby
-} from 'lucide-react';
+' from 'lucide-react';
 export default function NewServices2026() {
   const title = 'New Services 2026 — Zion Tech Group';
   const description = 'Revolutionary micro SaaS, IT, and AI services for 2026. Cutting-edge solutions with proven ROI and fast implementation.';
@@ -304,7 +304,7 @@ export default function NewServices2026() {
           ],
           useCases: ['E-commerce brands', 'SaaS companies', 'Marketing agencies', 'Non-profits'],
           marketSize: '$7.5B email marketing market',
-          roi: '400% ROI within 3 months},
+          roi: '400% ROI within 3 months',
         {
           name: 'Smart Meeting Analytics Platform',
           description: 'AI-powered meeting insights, productivity tracking, and automated follow-up generation for remote teams.',
@@ -328,7 +328,7 @@ export default function NewServices2026() {
           ],
           useCases: ['Remote teams', 'Consulting firms', 'Sales organizations', 'Project managers'],
           marketSize: '$4.2B meeting software market',
-          roi: '300% ROI within 6 months},
+          roi: '300% ROI within 6 months',
         {
           name: 'AI Healthcare Appointment Intelligence',
           description: 'AI-driven appointment scheduling with patient preference learning, no-show prediction, and optimization.',
@@ -352,7 +352,7 @@ export default function NewServices2026() {
           ],
           useCases: ['Medical practices', 'Dental offices', 'Mental health providers', 'Specialty clinics'],
           marketSize: '$3.8B healthcare scheduling market',
-          roi: '250% ROI within 4 months},
+          roi: '250% ROI within 4 months',
         {
           name: 'AI Content Localization Engine',',
           description: 'Automated content translation, cultural adaptation, and SEO optimization for global markets.',',
@@ -376,7 +376,7 @@ export default function NewServices2026() {
           ],
           useCases: ['E-commerce brands', 'SaaS companies', 'Publishing houses', 'Global enterprises'],',
           marketSize: '$56B localization market',',
-          roi: '500% ROI within 6 months},
+          roi: '500% ROI within 6 months',
         {
           name: 'Smart Inventory Forecasting Pro',',
           description: 'AI-powered demand forecasting, stock optimization, and automated reordering for e-commerce businesses.',',
@@ -400,9 +400,9 @@ export default function NewServices2026() {
           ],
           useCases: ['E-commerce retailers', 'Wholesale distributors', 'Manufacturing companies', 'Multi-location businesses'],',
           marketSize: '$2.1B inventory management market',',
-          roi: '400% ROI within 5 months}
+          roi: '400% ROI within 5 months'},
       ]
-    },
+    ',
     // Advanced AI Services
     {
       category: 'Advanced AI Services',',
@@ -432,7 +432,7 @@ export default function NewServices2026() {
           ],
           useCases: ['Banks', 'Credit unions', 'Investment firms', 'Insurance companies'],',
           marketSize: '$12.3B compliance software market',',
-          roi: '600% ROI within 8 months},
+          roi: '600% ROI within 8 months',
         {
           name: 'Smart Lead Scoring Platform',',
           description: 'AI-driven lead qualification, scoring, and nurturing automation for B2B sales teams.',',
@@ -456,7 +456,7 @@ export default function NewServices2026() {
           ],
           useCases: ['B2B sales teams', 'Marketing agencies', 'SaaS companies', 'Professional services'],',
           marketSize: '$6.8B sales automation market',',
-          roi: '350% ROI within 4 months},
+          roi: '350% ROI within 4 months',
         {
           name: 'AI-Powered Voice Analytics Platform',',
           description: 'Advanced voice analysis for customer service optimization, sentiment detection, and compliance monitoring.',',
@@ -480,7 +480,7 @@ export default function NewServices2026() {
           ],
           useCases: ['Call centers', 'Customer service teams', 'Sales organizations', 'Healthcare providers'],',
           marketSize: '$2.8B voice analytics market',',
-          roi: '400% ROI within 6 months},
+          roi: '400% ROI within 6 months',
         {
           name: 'AI-Powered Predictive Maintenance System',',
           description: 'IoT sensor data analysis for predictive equipment maintenance and failure prevention.',',
@@ -504,7 +504,7 @@ export default function NewServices2026() {
           ],
           useCases: ['Manufacturing companies', 'Facilities management', 'Transportation', 'Utilities'],',
           marketSize: '$4.5B predictive maintenance market',',
-          roi: '500% ROI within 12 months},
+          roi: '500% ROI within 12 months',
         {
           name: 'AI-Powered Content Moderation Suite',',
           description: 'Automated content moderation with multi-modal AI for text, image, and video analysis.',',
@@ -528,9 +528,9 @@ export default function NewServices2026() {
           ],
           useCases: ['Social media platforms', 'Online communities', 'E-commerce marketplaces', 'Content publishers'],',
           marketSize: '$3.2B content moderation market',',
-          roi: '450% ROI within 5 months}
+          roi: '450% ROI within 5 months'},
       ]
-    },
+    ',
     // IT Infrastructure Services
     {
       category: 'IT Infrastructure Services',',
@@ -560,7 +560,7 @@ export default function NewServices2026() {
           ],
           useCases: ['Enterprise organizations', 'Financial institutions', 'Healthcare providers', 'Government agencies'],',
           marketSize: '$31.8B zero trust security market',',
-          roi: '800% ROI within 18 months},
+          roi: '800% ROI within 18 months',
         {
           name: 'Cloud Migration & Modernization',',
           description: 'Complete cloud migration strategy with application modernization and optimization.',',
@@ -584,7 +584,7 @@ export default function NewServices2026() {
           ],
           useCases: ['Enterprise IT departments', 'Growing businesses', 'Digital transformation initiatives', 'Legacy system modernization'],',
           marketSize: '$445B cloud computing market',',
-          roi: '600% ROI within 24 months},
+          roi: '600% ROI within 24 months',
         {
           name: 'DevSecOps Pipeline Implementation',',
           description: 'Secure CI/CD pipelines with automated security testing and compliance.',',
@@ -608,7 +608,7 @@ export default function NewServices2026() {
           ],
           useCases: ['Software development teams', 'DevOps engineers', 'Security teams', 'IT operations'],',
           marketSize: '$7.8B DevSecOps market',',
-          roi: '500% ROI within 12 months},
+          roi: '500% ROI within 12 months',
         {
           name: 'Disaster Recovery & Business Continuity',',
           description: 'Comprehensive disaster recovery planning with automated failover and testing.',',
@@ -632,7 +632,7 @@ export default function NewServices2026() {
           ],
           useCases: ['Enterprise organizations', 'Financial services', 'Healthcare providers', 'Government agencies'],',
           marketSize: '$12.4B disaster recovery market',',
-          roi: '1000% ROI during disaster events},
+          roi: '1000% ROI during disaster events',
         {
           name: 'API Gateway & Microservices Management',',
           description: 'Enterprise API management with security, monitoring, and developer portal.',',
@@ -656,9 +656,9 @@ export default function NewServices2026() {
           ],
           useCases: ['API-driven businesses', 'Microservices architectures', 'Developer teams', 'Enterprise integration'],',
           marketSize: '$4.1B API management market',',
-          roi: '400% ROI within 8 months}
+          roi: '400% ROI within 8 months'},
       ]
-    },
+    ',
     // Emerging Technology Services
     {
       category: 'Emerging Technology Services',',
@@ -688,7 +688,7 @@ export default function NewServices2026() {
           ],
           useCases: ['Marketing agencies', 'E-learning platforms', 'Social media managers', 'Content creators'],',
           marketSize: '$15.7B video marketing market',',
-          roi: '500% ROI within 6 months},
+          roi: '500% ROI within 6 months',
         {
           name: 'Smart Contract Analytics Platform',',
           description: 'Blockchain analytics and monitoring for DeFi protocols and smart contract interactions.',',
@@ -712,7 +712,7 @@ export default function NewServices2026() {
           ],
           useCases: ['DeFi protocols', 'Crypto exchanges', 'Investment firms', 'Blockchain developers'],',
           marketSize: '$2.1B blockchain analytics market',',
-          roi: '600% ROI within 8 months},
+          roi: '600% ROI within 8 months',
         {
           name: 'AI-Powered Energy Optimization Platform',',
           description: 'Smart energy management with predictive analytics and automated optimization.',',
@@ -736,7 +736,7 @@ export default function NewServices2026() {
           ],
           useCases: ['Manufacturing facilities', 'Commercial buildings', 'Data centers', 'Utilities'],',
           marketSize: '$12.8B energy management market',',
-          roi: '400% ROI within 12 months},
+          roi: '400% ROI within 12 months',
         {
           name: 'AI-Powered Legal Document Analyzer',',
           description: 'Intelligent legal document review with risk assessment and compliance checking.',',
@@ -760,7 +760,7 @@ export default function NewServices2026() {
           ],
           useCases: ['Law firms', 'Corporate legal departments', 'Compliance teams', 'Contract management'],',
           marketSize: '$12.4B legal tech market',',
-          roi: '700% ROI within 10 months},
+          roi: '700% ROI within 10 months',
         {
           name: 'Smart Fleet Management Platform',',
           description: 'IoT-powered fleet tracking with predictive maintenance and route optimization.',',
@@ -784,9 +784,9 @@ export default function NewServices2026() {
           ],
           useCases: ['Transportation companies', 'Delivery services', 'Construction firms', 'Fleet operators'],',
           marketSize: '$5.8B fleet management market',',
-          roi: '450% ROI within 12 months}
+          roi: '450% ROI within 12 months'},
       ]
-    }
+    '
   ];
 
   const contactInfo = {
@@ -842,7 +842,7 @@ export default function NewServices2026() {
               return (
                 <div key={categoryIndex} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50">"
                   <div className="flex items-center gap-4 mb-8">"
-                    <div className="{`w-16 h-16 bg-gradient-to-br from-${category.color}-500 to-${category.color}-600 rounded-xl flex items-center justify-center`}">`;
+                    <div className="{`w-16 h-16 bg-gradient-to-br from-${category.color`-500 to-${category.color"-600 rounded-xl flex items-center justify-center`"">`;
                       <Icon className="w-8 h-8 text-white/>"
                     </div>
                     <div>
@@ -930,7 +930,7 @@ export default function NewServices2026() {
           </div>
         </section>
 
-        {/* Contact Section */}
+        {/* Contact Section */`
         <section className="container mx-auto px-6 py-16">"
           <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-2xl p-8 border border-cyan-500/20">"
             <div className="text-center mb-8">"
@@ -967,14 +967,14 @@ export default function NewServices2026() {
             <div className="text-center">"
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">"
                 <a 
-                  href={`tel:${contactInfo.phone}`} `;
+                  href={`tel:${contactInfo.phone``` `;
                   className="inline-flex items-center gap-2 bg-white text-slate-900 px-6 py-3 rounded-lg font-semibold hover:bg-slate-100 transition-colors
                 >"
                   <Smartphone className="w-4 h-4/>"
-                  {contactInfo.phone}
+                  {contactInfo.phone`
                 </a>
                 <a 
-                  href={`mailto:${contactInfo.email}`} `;
+                  href={`mailto:${contactInfo.email``` `;
                   className="inline-flex items-center gap-2 bg-slate-700 text-white px-6 py-3 rounded-lg font-semibold hover:bg-slate-600 transition-colors
                 >"
                   <MessageSquare className="w-4 h-4/>"
@@ -985,7 +985,7 @@ export default function NewServices2026() {
                 {contactInfo.address}
               </p>
               <p className="text-sm text-slate-400 mt-2">"
-                Visit our website: <a href={contactInfo.website} className="text-cyan-400 hover:underline">{contactInfo.website}</a>"
+                Visit our website: <a href={contactInfo.website'}, className="text-cyan-400 hover:underline">{contactInfo.website'</a>"
               </p>
             </div>
           </div>
@@ -993,4 +993,4 @@ export default function NewServices2026() {
       </div>
     </>
   );
-};
+`;

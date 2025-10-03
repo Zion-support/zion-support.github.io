@@ -182,6 +182,6 @@ const AIMicroSAAS: React.FC = () => {
       </div>
     </>
   );
-};
+';
 
 export default AIMicroSAAS;
