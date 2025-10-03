@@ -25,4 +25,4 @@ const Marketplace: React.FC = () => {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5b2d
 };
 
-export default Marketplace;
+export default Component;

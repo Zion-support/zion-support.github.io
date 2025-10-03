@@ -49,28 +49,34 @@ const MicroSaaS: React.FC = () => {
 
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Why Choose Our Micro SaaS Solutions?</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">Why Choose Our Micro SaaS Solutions?</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">⚡</span>
+                <svg className="w-8 h-8 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
               </div>
-              <h3 className="text-xl font-semibold mb-2">Fast Deployment</h3>
-              <p className="text-gray-600">Get your micro SaaS up and running in weeks, not months.</p>
+              <h3 className="text-xl font-semibold mb-2">Fast Development</h3>
+              <p className="text-gray-600">From concept to MVP in 2-4 weeks with modern tech stack</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🎯</span>
+                <svg className="w-8 h-8 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
               </div>
-              <h3 className="text-xl font-semibold mb-2">Focused Solutions</h3>
-              <p className="text-gray-600">Each tool solves one specific problem exceptionally well.</p>
+              <h3 className="text-xl font-semibold mb-2">Proven Revenue</h3>
+              <p className="text-gray-600">Subscription models with predictable recurring revenue</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🔄</span>
+                <svg className="w-8 h-8 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                </svg>
               </div>
-              <h3 className="text-xl font-semibold mb-2">Continuous Support</h3>
-              <p className="text-gray-600">Ongoing maintenance, updates, and feature enhancements.</p>
+              <h3 className="text-xl font-semibold mb-2">Full Support</h3>
+              <p className="text-gray-600">Hosting, maintenance, and customer support included</p>
             </div>
           </div>
         </div>

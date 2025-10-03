@@ -75,4 +75,4 @@ const SEOSplitTesting: React.FC = () => {
   );
 ';
 
-export default SEOSplitTesting;
+export default Component;

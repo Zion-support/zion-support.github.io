@@ -229,14 +229,14 @@ const About: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="/contact"
-                className="inline-flex items-center px-8 py-4 bg-white text-blue-600 hover:bg-blue-50 font-semibold rounded-lg transition-colors"
+                href="/contact
+                className="inline-flex items-center px-8 py-4 bg-white text-blue-600 hover:bg-blue-50 font-semibold rounded-lg transition-colors
               >
                 Get In Touch
               </a>
               <a
-                href="/case-studies"
-                className="inline-flex items-center px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold rounded-lg transition-colors"
+                href="/case-studies
+                className="inline-flex items-center px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold rounded-lg transition-colors
               >
                 View Our Work
               </a>
@@ -248,4 +248,4 @@ const About: React.FC = () => {
   );
 };
 
-export default About;
+export default Component;

@@ -8,4 +8,4 @@ const Manufacturing: React.FC = () => {
   );
 ';
 
-export default Manufacturing;
+export default Component;

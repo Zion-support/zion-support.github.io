@@ -53,7 +53,7 @@ const MicroSAASPage: React.FC = () => {
         {/* Header */}
         <section className="bg-gradient-to-r from-green-600 to-emerald-600 text-white py-16">
           <div className="container mx-auto px-6 text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">Micro SaaS Services</h1>
+            <h1 className="text-4xl md: text-5xl font-bold mb-4">Micro SaaS Services</h3>
             <p className="text-xl text-green-100 max-w-3xl mx-auto">
               Build, migrate, and scale powerful software-as-a-service applications that deliver immediate value and grow with your business.
             </p>
@@ -65,14 +65,14 @@ const MicroSAASPage: React.FC = () => {
           <div className="container mx-auto px-6">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {microSAASServices.map((service, index) => (
-                <div key={index} className="bg-white p-8 rounded-xl shadow-sm hover:shadow-lg transition-shadow">
-                  <div className="text-4xl mb-4">{service.icon}</div>
+                <div key={index} className="bg-white p-8 rounded-xl shadow-sm hover: shadow-lg transition-shadow">
+                  <div className="text-4xl mb-4">{service.icon}</h3>
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
-                  <p className="text-gray-600 mb-6">{service.description}</p>
+                  <p className="text-gray-600 mb-6">{service.description}</h3>
                   <ul className="space-y-2 mb-6">
                     {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm text-gray-700">
-                        <span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                        <span className="w-2 h-2 bg-green-500 rounded-full mr-3"></h3>
                         {feature}
                       </li>
                     ))}
@@ -80,7 +80,7 @@ const MicroSAASPage: React.FC = () => {
                   
                   <Link 
                     to="/contact" 
-                    className="text-green-600 font-semibold hover:text-green-800 transition-colors"
+                    className="text-green-600 font-semibold hover: text-green-800 transition-colors
                   >
                     Learn More →
                   </Link>
@@ -94,7 +94,7 @@ const MicroSAASPage: React.FC = () => {
         <section className="py-20 bg-white">
           <div className="container mx-auto px-6">
             <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose Our Micro SaaS Services?</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose Our Micro SaaS Services?</h3>
               <p className="text-xl text-gray-600 max-w-2xl mx-auto">
                 We deliver SaaS solutions that provide immediate value and scale with your business
               </p>
@@ -102,7 +102,7 @@ const MicroSAASPage: React.FC = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center">
-                <div className="text-4xl mb-4">⚡</div>
+                <div className="text-4xl mb-4">⚡</h3>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Rapid Development</h3>
                 <p className="text-gray-600">
                   Our agile development process ensures faster time-to-market with high-quality SaaS applications.
@@ -110,7 +110,7 @@ const MicroSAASPage: React.FC = () => {
               </div>
               
               <div className="text-center">
-                <div className="text-4xl mb-4">📈</div>
+                <div className="text-4xl mb-4">📈</h3>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Scalable Architecture</h3>
                 <p className="text-gray-600">
                   Built with scalability in mind, our SaaS solutions handle growth from startup to enterprise scale.
@@ -118,7 +118,7 @@ const MicroSAASPage: React.FC = () => {
               </div>
               
               <div className="text-center">
-                <div className="text-4xl mb-4">💰</div>
+                <div className="text-4xl mb-4">💰</h3>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Cost-Effective</h3>
                 <p className="text-gray-600">
                   Reduce operational costs with our efficient SaaS solutions and cloud-native architecture.
@@ -132,7 +132,7 @@ const MicroSAASPage: React.FC = () => {
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-6">
             <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Technology Stack</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Technology Stack</h3>
               <p className="text-xl text-gray-600 max-w-2xl mx-auto">
                 We use modern technologies to build robust and scalable SaaS applications
               </p>
@@ -141,22 +141,22 @@ const MicroSAASPage: React.FC = () => {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               <div className="bg-white p-6 rounded-xl shadow-sm text-center">
                 <h3 className="text-lg font-bold text-gray-900 mb-2">Frontend</h3>
-                <p className="text-gray-600">React, Vue.js, Angular</p>
+                <p className="text-gray-600">React, Vue.js, Angular</h3>
               </div>
               
               <div className="bg-white p-6 rounded-xl shadow-sm text-center">
                 <h3 className="text-lg font-bold text-gray-900 mb-2">Backend</h3>
-                <p className="text-gray-600">Node.js, Python, .NET</p>
+                <p className="text-gray-600">Node.js, Python, .NET</h3>
               </div>
               
               <div className="bg-white p-6 rounded-xl shadow-sm text-center">
                 <h3 className="text-lg font-bold text-gray-900 mb-2">Cloud</h3>
-                <p className="text-gray-600">AWS, Azure, GCP</p>
+                <p className="text-gray-600">AWS, Azure, GCP</h3>
               </div>
               
               <div className="bg-white p-6 rounded-xl shadow-sm text-center">
                 <h3 className="text-lg font-bold text-gray-900 mb-2">Database</h3>
-                <p className="text-gray-600">PostgreSQL, MongoDB, Redis</p>
+                <p className="text-gray-600">PostgreSQL, MongoDB, Redis</h3>
               </div>
             </div>
           </div>
@@ -165,20 +165,20 @@ const MicroSAASPage: React.FC = () => {
         {/* CTA Section */}
         <section className="py-20 bg-green-600 text-white">
           <div className="container mx-auto px-6 text-center">
-            <h2 className="text-4xl font-bold mb-4">Ready to Build Your SaaS Solution?</h2>
+            <h2 className="text-4xl font-bold mb-4">Ready to Build Your SaaS Solution?</h3>
             <p className="text-xl mb-8 text-green-100 max-w-2xl mx-auto">
-              Let's discuss your SaaS requirements and how we can help you build a scalable solution.
+              Let's discuss your SaaS requirements and how we can help you build a scalable solution.';
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 to="/contact" 
-                className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors
               >
                 Start Your Project
               </Link>
               <Link 
                 to="/solutions" 
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors
               >
                 View Solutions
               </Link>
@@ -190,4 +190,4 @@ const MicroSAASPage: React.FC = () => {
   );
 };
 
-export default MicroSAASPage;
+export default Component;

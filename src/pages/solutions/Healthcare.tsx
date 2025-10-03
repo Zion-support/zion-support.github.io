@@ -8,4 +8,4 @@ const Healthcare: React.FC = () => {
   );
 ';
 
-export default Healthcare;
+export default Component;

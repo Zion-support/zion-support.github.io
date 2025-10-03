@@ -1,236 +1,236 @@
-import React from 'react';
 import { Link } from "react-router-dom";
-import Header from "../../../components/Header";
+import Header from "../../components/Header";
 import { Helmet } from "react-helmet-async";
-import { ArrowLeft, TrendingUp, CheckCircle, DollarSign, Zap, Rocket } from "lucide-react";
+import { ArrowLeft, TrendingUp, Brain, BarChart3, CheckCircle, DollarSign, Rocket, Zap } from "lucide-react";
 
 const RealTimeCognitiveAutomation: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Real-Time Cognitive Automation | Zion Tech Group</title>
-        <meta name="description" content="Transform your business with real-time cognitive automation. AI-powered decision engines that process data instantly and optimize workflows automatically." />
+        <title>Real-Time Cognitive Automation Platform | Transform Business Operations with AI | Zion Tech Group</title>
+        <meta name="description" content="Transform operations with Real-Time Cognitive Automation Platform. 94% accuracy, 85% cost reduction, 10x productivity gains. AI-powered workflows that learn and optimize autonomously." />
+        <meta name="keywords" content="cognitive automation, intelligent automation, RPA, AI workflows, process automation, business automation, hyperautomation" />
       </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">
         <Header />
-        
-        <div className="container mx-auto px-4 py-8">
-          {/* Back Button */}
+
+        <article className="container mx-auto px-6 py-20">
+          {/* Back Link */}
           <Link 
-            to="/services" 
-            className="inline-flex items-center text-zion-cyan hover:text-white mb-8 transition-colors"
+            to="/services"
+            className="inline-flex items-center text-zion-slate-light hover:text-white mb-8 transition-colors"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Services
           </Link>
 
           {/* Header */}
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-zion-cyan/20 rounded-full text-zion-cyan text-sm font-medium mb-6">
-              🤖 AI Automation
+          <header className="mb-12">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/20 border border-emerald-500/30 mb-6">
+              <span className="text-emerald-400 font-semibold text-sm">COGNITIVE AUTOMATION</span>
+              <span className="text-gray-400">•</span>
+              <span className="text-gray-400 text-sm">Real-Time Processing</span>
             </div>
-            <h1 className="text-5xl font-bold text-white mb-4">
-              Real-Time Cognitive Automation
+            
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 bg-gradient-to-r from-emerald-300 via-teal-300 to-cyan-300 bg-clip-text text-transparent leading-tight">
+              Real-Time Cognitive Automation Platform
             </h1>
-            <p className="text-xl text-zion-slate-light mb-6 max-w-3xl mx-auto">
-              Transform your business with AI-powered decision engines that process data instantly and optimize workflows automatically.
+            
+            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+              Transform business operations with AI-powered cognitive automation that learns, adapts, and optimizes in real-time. Achieve 94% accuracy, 85% cost reduction, and 10x productivity gains through intelligent workflows that evolve with your business.
             </p>
-            <div className="flex items-center justify-center gap-4">
-              <span className="text-2xl font-bold text-zion-cyan">Starting at $7,999/month</span>
+
+            <div className="flex flex-wrap gap-3 mb-8">
+              <span className="bg-emerald-500/20 px-4 py-2 rounded-full text-emerald-300 text-sm font-semibold">Cognitive AI</span>
+              <span className="bg-teal-500/20 px-4 py-2 rounded-full text-teal-300 text-sm font-semibold">Real-Time Processing</span>
+              <span className="bg-cyan-500/20 px-4 py-2 rounded-full text-cyan-300 text-sm font-semibold">Adaptive Learning</span>
+              <span className="bg-blue-500/20 px-4 py-2 rounded-full text-blue-300 text-sm font-semibold">Enterprise Scale</span>
             </div>
-          </div>
+          </header>
 
           {/* Content */}
-          <article className="max-w-6xl mx-auto">
-            {/* Business Impact */}
-            <section className="mb-16">
-              <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                <TrendingUp className="w-8 h-8 text-green-400" />
-                Business Impact
-              </h2>
-              <div className="grid md:grid-cols-2 gap-8">
-                <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-zion-cyan/30">
-                  <h3 className="text-xl font-bold text-white mb-4">⚡ Real-Time Processing</h3>
-                  <ul className="space-y-3">
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
-                      <span className="text-zion-slate-light">&lt;50ms decision latency</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
-                      <span className="text-zion-slate-light">Instant workflow execution</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
-                      <span className="text-zion-slate-light">Live process optimization</span>
-                    </li>
+          <div className="prose prose-invert prose-lg max-w-none">
+            <section className="mb-12 bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
+              <h2 className="text-3xl font-bold text-white mb-6">Executive Summary</h2>
+              <p className="text-gray-300 leading-relaxed mb-4">
+                Real-Time Cognitive Automation represents the next evolution of business process automation. Unlike traditional RPA that follows rigid rules, our cognitive platform uses advanced AI to understand context, make decisions, and continuously improve performance. Organizations implementing our solution achieve 94% accuracy rates, 85% cost reduction, and 10x productivity improvements while maintaining full audit trails and compliance.
+              </p>
+              <div className="grid md:grid-cols-2 gap-4 mt-6">
+                <div className="bg-emerald-500/10 rounded-xl p-6 border border-emerald-500/20">
+                  <div className="text-2xl font-bold text-emerald-300 mb-2">94% Accuracy</div>
+                  <p className="text-sm text-gray-300">Cognitive AI achieves near-human accuracy with continuous learning</p>
+                </div>
+                <div className="bg-teal-500/10 rounded-xl p-6 border border-teal-500/20">
+                  <div className="text-2xl font-bold text-teal-300 mb-2">85% Cost Reduction</div>
+                  <p className="text-sm text-gray-300">Automated processes eliminate manual labor and errors</p>
+                </div>
+              </div>
+            </section>
+
+            <section className="mb-12">
+              <h2 className="text-3xl font-bold text-white mb-6">Platform Architecture</h2>
+              <p className="text-gray-300 leading-relaxed mb-6">
+                Our cognitive automation platform combines multiple AI technologies to create intelligent workflows that adapt and optimize in real-time:
+              </p>
+              <div className="space-y-6">
+                <div className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10">
+                  <h3 className="text-xl font-bold text-emerald-300 mb-3">🧠 Cognitive Processing Engine</h3>
+                  <p className="text-gray-300 leading-relaxed">
+                    Advanced neural networks process unstructured data, understand context, and make intelligent decisions. Natural language processing enables communication with humans, while computer vision handles complex visual tasks. Machine learning algorithms continuously improve performance based on outcomes.
+                  </p>
+                </div>
+                
+                <div className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10">
+                  <h3 className="text-xl font-bold text-teal-300 mb-3">⚡ Real-Time Execution Layer</h3>
+                  <p className="text-gray-300 leading-relaxed">
+                    Microservices architecture ensures sub-second response times for critical processes. Event-driven design triggers automated workflows based on real-time data changes. Distributed processing handles high-volume operations across multiple systems simultaneously.
+                  </p>
+                </div>
+                
+                <div className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10">
+                  <h3 className="text-xl font-bold text-cyan-300 mb-3">🔄 Adaptive Learning System</h3>
+                  <p className="text-gray-300 leading-relaxed">
+                    Continuous learning algorithms analyze process outcomes and automatically optimize workflows. A/B testing capabilities compare different approaches to identify the most effective strategies. Feedback loops ensure the system improves with every interaction.
+                  </p>
+                </div>
+                
+                <div className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10">
+                  <h3 className="text-xl font-bold text-blue-300 mb-3">🛡️ Enterprise Security & Compliance</h3>
+                  <p className="text-gray-300 leading-relaxed">
+                    End-to-end encryption protects sensitive data throughout the automation process. Role-based access controls ensure proper authorization for all operations. Comprehensive audit trails satisfy regulatory requirements and enable full process transparency.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <section className="mb-12 bg-gradient-to-r from-emerald-500/10 to-teal-500/10 rounded-2xl p-8 border border-emerald-500/20">
+              <h2 className="text-3xl font-bold text-white mb-6">Success Story: Global Manufacturing Transformation</h2>
+              <p className="text-gray-300 leading-relaxed mb-6">
+                A Fortune 500 manufacturing company with 50+ facilities worldwide deployed our cognitive automation platform to optimize their supply chain operations:
+              </p>
+              <div className="grid md:grid-cols-3 gap-4 mb-6">
+                <div className="bg-white/10 rounded-xl p-6">
+                  <div className="text-3xl font-bold text-emerald-300 mb-2">$2.3M</div>
+                  <p className="text-sm text-gray-300">Annual Cost Savings</p>
+                </div>
+                <div className="bg-white/10 rounded-xl p-6">
+                  <div className="text-3xl font-bold text-teal-300 mb-2">78%</div>
+                  <p className="text-sm text-gray-300">Process Efficiency Gain</p>
+                </div>
+                <div className="bg-white/10 rounded-xl p-6">
+                  <div className="text-3xl font-bold text-cyan-300 mb-2">15x</div>
+                  <p className="text-sm text-gray-300">Faster Decision Making</p>
+                </div>
+              </div>
+              <p className="text-gray-300 leading-relaxed">
+                By automating demand forecasting, inventory optimization, and supplier coordination, they reduced stockouts by 95%, improved on-time delivery to 99.2%, and achieved ROI within 6 months.
+              </p>
+            </section>
+
+            <section className="mb-12">
+              <h2 className="text-3xl font-bold text-white mb-6">Key Use Cases</h2>
+              <div className="space-y-6">
+                <div className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10">
+                  <h3 className="text-xl font-bold text-emerald-300 mb-3">📊 Intelligent Document Processing</h3>
+                  <p className="text-gray-300 leading-relaxed mb-3">
+                    Automatically extract, classify, and process documents with 99% accuracy. Handle invoices, contracts, reports, and forms across multiple formats and languages. Reduce processing time from hours to minutes while eliminating human errors.
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="text-xs px-3 py-1 bg-emerald-500/20 text-emerald-300 rounded-full">OCR & NLP</span>
+                    <span className="text-xs px-3 py-1 bg-emerald-500/20 text-emerald-300 rounded-full">Data Extraction</span>
+                    <span className="text-xs px-3 py-1 bg-emerald-500/20 text-emerald-300 rounded-full">Validation</span>
+                  </div>
+                </div>
+
+                <div className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10">
+                  <h3 className="text-xl font-bold text-teal-300 mb-3">🤖 Customer Service Automation</h3>
+                  <p className="text-gray-300 leading-relaxed mb-3">
+                    Intelligent chatbots and virtual assistants handle 80% of customer inquiries automatically. Natural language understanding enables complex problem resolution, while escalation to human agents occurs seamlessly when needed.
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="text-xs px-3 py-1 bg-teal-500/20 text-teal-300 rounded-full">Conversational AI</span>
+                    <span className="text-xs px-3 py-1 bg-teal-500/20 text-teal-300 rounded-full">Sentiment Analysis</span>
+                    <span className="text-xs px-3 py-1 bg-teal-500/20 text-teal-300 rounded-full">Smart Routing</span>
+                  </div>
+                </div>
+
+                <div className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10">
+                  <h3 className="text-xl font-bold text-cyan-300 mb-3">💰 Financial Process Automation</h3>
+                  <p className="text-gray-300 leading-relaxed mb-3">
+                    Automate accounts payable, expense management, and financial reporting with intelligent approval workflows. Detect anomalies and fraud patterns in real-time while ensuring compliance with financial regulations.
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="text-xs px-3 py-1 bg-cyan-500/20 text-cyan-300 rounded-full">AP Automation</span>
+                    <span className="text-xs px-3 py-1 bg-cyan-500/20 text-cyan-300 rounded-full">Fraud Detection</span>
+                    <span className="text-xs px-3 py-1 bg-cyan-500/20 text-cyan-300 rounded-full">Compliance</span>
+                  </div>
+                </div>
+
+                <div className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10">
+                  <h3 className="text-xl font-bold text-blue-300 mb-3">🏭 Supply Chain Optimization</h3>
+                  <p className="text-gray-300 leading-relaxed mb-3">
+                    Real-time demand forecasting, inventory optimization, and supplier coordination. Predict disruptions and automatically adjust supply chain parameters to maintain optimal performance across global operations.
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="text-xs px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full">Demand Forecasting</span>
+                    <span className="text-xs px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full">Inventory Management</span>
+                    <span className="text-xs px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full">Risk Mitigation</span>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section className="mb-12 bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 rounded-2xl p-8 border border-emerald-500/30">
+              <h2 className="text-3xl font-bold text-white mb-6">Implementation Roadmap</h2>
+              <div className="space-y-6">
+                <div className="bg-white/10 rounded-xl p-6">
+                  <h3 className="text-xl font-bold text-emerald-300 mb-3">Phase 1: Assessment & Design (2-3 weeks)</h3>
+                  <ul className="text-gray-300 space-y-2 ml-6 list-disc">
+                    <li>Process analysis and automation opportunity identification</li>
+                    <li>Technology stack evaluation and integration planning</li>
+                    <li>Security and compliance requirements assessment</li>
+                    <li>ROI modeling and success metrics definition</li>
                   </ul>
                 </div>
-                <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-zion-cyan/30">
-                  <h3 className="text-xl font-bold text-white mb-4">🧠 Self-Learning Systems</h3>
-                  <ul className="space-y-3">
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
-                      <span className="text-zion-slate-light">Continuous pattern recognition</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
-                      <span className="text-zion-slate-light">Automatic model updates</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
-                      <span className="text-zion-slate-light">Predictive optimization</span>
-                    </li>
+
+                <div className="bg-white/10 rounded-xl p-6">
+                  <h3 className="text-xl font-bold text-teal-300 mb-3">Phase 2: Pilot Implementation (4-6 weeks)</h3>
+                  <ul className="text-gray-300 space-y-2 ml-6 list-disc">
+                    <li>Deploy cognitive automation for 2-3 high-impact processes</li>
+                    <li>Configure AI models and learning algorithms</li>
+                    <li>Integrate with existing systems and data sources</li>
+                    <li>Train staff and establish monitoring procedures</li>
+                  </ul>
+                </div>
+
+                <div className="bg-white/10 rounded-xl p-6">
+                  <h3 className="text-xl font-bold text-cyan-300 mb-3">Phase 3: Scale & Optimize (Ongoing)</h3>
+                  <ul className="text-gray-300 space-y-2 ml-6 list-disc">
+                    <li>Expand automation to additional business processes</li>
+                    <li>Continuous optimization based on performance data</li>
+                    <li>Advanced analytics and predictive capabilities</li>
+                    <li>Integration with emerging AI technologies</li>
                   </ul>
                 </div>
               </div>
             </section>
 
-            {/* Key Features */}
-            <section className="mb-16">
-              <h2 className="text-3xl font-bold text-white mb-8 text-center">Key Features</h2>
-              <div className="grid md:grid-cols-3 gap-6">
-                {[
-                  {
-                    title: "Real-Time Processing",
-                    description: "Process and respond to data in real-time, enabling instant decision-making and immediate action.",
-                    icon: "⚡"
-                  },
-                  {
-                    title: "Cognitive Decision Engines",
-                    description: "AI-powered decision engines that learn from patterns and make optimal choices automatically.",
-                    icon: "🧠"
-                  },
-                  {
-                    title: "Adaptive Learning",
-                    description: "Systems that continuously improve and adapt based on new data and changing conditions.",
-                    icon: "🔄"
-                  }
-                ].map((feature, index) => (
-                  <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-zion-cyan/30">
-                    <div className="text-4xl mb-4">{feature.icon}</div>
-                    <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
-                    <p className="text-zion-slate-light">{feature.description}</p>
-                  </div>
-                ))}
+            <section className="mb-12 bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
+              <h2 className="text-3xl font-bold text-white mb-6">Ready to Transform Your Operations?</h2>
+              <p className="text-gray-300 leading-relaxed mb-6">
+                Let's discuss how real-time cognitive automation can revolutionize your business processes and drive measurable results. Our experts will help you identify the highest-impact opportunities and design a solution that delivers immediate value.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link to="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white font-semibold rounded-xl transition-all transform hover:scale-105 shadow-xl">
+                  Schedule Consultation
+                </Link>
+                <Link to="/demo" className="inline-flex items-center justify-center px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-xl border border-white/20 transition-all">
+                  Request Demo
+                </Link>
               </div>
             </section>
-
-            {/* Pricing Packages */}
-            <section className="mb-16">
-              <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                <DollarSign className="w-8 h-8 text-green-400" />
-                Pricing & Packages
-              </h2>
-              <div className="grid md:grid-cols-3 gap-6">
-                {[
-                  {
-                    name: "Business Starter",
-                    price: "$7,999",
-                    features: ["50,000 transactions/month", "10 automated workflows", "Standard integrations", "Email support", "99.5% SLA"]
-                  },
-                  {
-                    name: "Professional",
-                    price: "$19,999",
-                    popular: true,
-                    features: ["250,000 transactions/month", "50 automated workflows", "Advanced integrations", "24/7 support", "99.9% SLA"]
-                  },
-                  {
-                    name: "Enterprise",
-                    price: "$49,999",
-                    features: ["Unlimited transactions", "Unlimited workflows", "Custom AI models", "Dedicated team", "99.97% SLA"]
-                  }
-                ].map((pkg, index) => (
-                  <div key={index} className={`bg-white/5 backdrop-blur-sm rounded-xl p-6 border ${pkg.popular ? 'border-purple-500/50 ring-2 ring-purple-500/30' : 'border-zion-cyan/30'}`}>
-                    {pkg.popular && (
-                      <div className="text-center mb-4">
-                        <span className="bg-purple-500 text-white px-3 py-1 rounded-full text-sm font-bold">
-                          MOST POPULAR
-                        </span>
-                      </div>
-                    )}
-                    <h3 className="text-2xl font-bold text-white mb-2">{pkg.name}</h3>
-                    <div className="text-4xl font-bold text-zion-cyan mb-4">{pkg.price}<span className="text-lg text-zion-slate-light">/month</span></div>
-                    <ul className="space-y-2 mb-6">
-                      {pkg.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-start gap-2">
-                          <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
-                          <span className="text-zion-slate-light">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
-              </div>
-            </section>
-
-            {/* Limited Time Offer */}
-            <section className="mb-16">
-              <div className="bg-gradient-to-r from-purple-900/40 via-pink-900/40 to-cyan-900/40 rounded-xl p-8 border-2 border-purple-500/50">
-                <div className="flex items-center justify-between flex-wrap gap-6">
-                  <div className="flex-1">
-                    <div className="flex items-center gap-3 mb-4">
-                      <Rocket className="w-8 h-8 text-purple-400" />
-                      <h3 className="text-2xl font-bold text-white">🚀 October 2025 Launch Special</h3>
-                    </div>
-                    <p className="text-zion-slate-light mb-4">
-                      Get Your <strong className="text-white">First 3 Months at 50% OFF</strong>
-                    </p>
-                    <ul className="space-y-2">
-                      <li className="flex items-start gap-2">
-                        <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
-                        <span className="text-zion-slate-light">Free process assessment ($15,000 value)</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
-                        <span className="text-zion-slate-light">Complimentary pilot implementation ($25,000 value)</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
-                        <span className="text-zion-slate-light">Limited to first 30 customers. Annual contract required.</span>
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="flex-shrink-0">
-                    <Link 
-                      to="/contact"
-                      className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-bold rounded-lg hover:from-purple-600 hover:to-cyan-600 transition-all transform hover:scale-105"
-                    >
-                      Get Started Today
-                      <Zap className="w-5 h-5" />
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-            {/* CTA Section */}
-            <section className="text-center">
-              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-zion-cyan/30">
-                <h2 className="text-3xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
-                <p className="text-zion-slate-light mb-8 max-w-2xl mx-auto">
-                  Join leading enterprises that have already transformed their operations with our real-time cognitive automation solutions.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link 
-                    to="/contact"
-                    className="inline-flex items-center gap-2 px-8 py-4 bg-zion-cyan text-white font-bold rounded-lg hover:bg-zion-cyan/80 transition-colors"
-                  >
-                    Schedule Free Assessment
-                    <Zap className="w-5 h-5" />
-                  </Link>
-                  <Link 
-                    to="/demo"
-                    className="inline-flex items-center gap-2 px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-bold rounded-lg hover:bg-zion-cyan hover:text-white transition-colors"
-                  >
-                    Request Live Demo
-                  </Link>
-                </div>
-              </div>
-            </section>
-          </article>
-        </div>
+          </div>
+        </article>
       </div>
     </>
   );

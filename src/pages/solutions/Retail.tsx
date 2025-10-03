@@ -8,4 +8,4 @@ const Retail: React.FC = () => {
   );
 ';
 
-export default Retail;
+export default Component;

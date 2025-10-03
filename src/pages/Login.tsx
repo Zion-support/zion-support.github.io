@@ -13,4 +13,4 @@ const Login: React.FC = () => {
   );
 };
 
-export default Login;
+export default Component;

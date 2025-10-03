@@ -1,139 +1,615 @@
+import { Zap } from "lucide-react";
 import React, { useMemo, useState } from "react";
-import { Helmet } from "react-helmet-async";
-import { Zap, Calendar, Clock, User, Eye } from "lucide-react";
+import BlogPromotionBanner from "../components/BlogPromotionBanner";
+// const Footer: React.FC: ()  => null;,
+// import Header from "../components/Header
 
 interface BlogPost {
-  id: number;
-  title: string;
-  excerpt: string;
-  content: string;
-  author: string;
-  date: string;
-  readTime: string;
-  category: string;
-  tags: string[];
-  image: string;
-  featured: boolean;
-  views: number;
+  id: number;,,
+title: string;,
+excerpt: string;,,
+content: string;,
+author: string;,,
+date: string;,
+readTime: string;,,
+category: string;,
+tags: string[];,,
+image: string;,
+featured: boolean;,,
+views: number;,
+
 }
 
-const Blog: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState<string>("All");
-  const [searchTerm, setSearchTerm] = useState<string>("");
+export default function Blog(): React.JSX.Element {
+  const [selectedCategory, setSelectedCategory] = useState("All");
+  const [searchTerm, setSearchTerm] = useState(");
 
-  const blogPosts: BlogPost[] = [
+  const categories: [,
+    "All",;
+    "AI Strategy",;
+    "Security",;
+    "Edge Computing",;
+    "GenAI",;
+    "Data Engineering",;
+    "Technology",;
+    "AI Solutions",;
+    "Case Studies",;
+    "Industry Insights",;
+    "Tutorials
+    "All",
+    "AI Strategy",
+    "Security",
+    "Edge Computing",
+    "GenAI",
+    "Data Engineering",
+    "Technology",
+    "AI Solutions",
+    "Case Studies",
+    "Industry Insights",
+    "Tutorials",
+  ];
+
+  const staticPosts: BlogPost[]  = [,,
     {
-      id: 1,
-      title: "The Future of AI in Business: Trends and Predictions",
-      excerpt: "Explore the latest trends in artificial intelligence and how they're transforming businesses across industries.",
-      content: "Full article content would go here...",
-      author: "Zion Tech Team",
-      date: "2024-01-15",
-      readTime: "5 min read",
-      category: "AI & Technology",
-      tags: ["AI", "Business", "Technology", "Future"],
-      image: "/api/placeholder/600/300",
-      featured: true,
-      views: 1250
-    ',
-    {
-      id: 2,
-      title: "Getting Started with Machine Learning: A Beginner's Guide",
-      excerpt: "Learn the fundamentals of machine learning and how to implement your first ML model.",
-      content: "Full article content would go here...",
+      id: 1,,
+      title: "How AI Workflow Automation Transformed a Fortune 500 Company",
+      excerpt: "Discover how our AI workflow automation solution reduced manual processes by 80% and increased operational efficiency by 300% for a leading financial services company.",
+      content: "Full case study content here...",
       author: "Sarah Johnson",
-      date: "2024-01-12",
+      date: "2025-01-15",
       readTime: "8 min read",
-      category: "Machine Learning",
-      tags: ["Machine Learning", "Beginner", "Tutorial"],
-      image: "/api/placeholder/600/300",
-      featured: false,
-      views: 890
+      category: "Case Studies",
+      tags: ["AI", "Automation", "Case Study", "Financial Services"],
+      image: "/api/placeholder/400/250",
+      title: "How AI Workflow Automation Transformed a Fortune 500 Company",
+      excerpt: "Discover how our AI workflow automation solution reduced manual processes by 80% and increased operational efficiency by 300% for a leading financial services company.
+      content: ", Full case study content here...
+      author: "Sarah Johnson
+      date: ", 2025-01-15
+      readTime: "8 min read
+      category: ", Case Studies
+      tags: ["AI", "Automation", "Case Study", "Financial Services"],
+      image: "/api/placeholder/400/250
+      featured: true,,
+      views: 1250,
     },
     {
-      id: 3,
-      title: "Cloud Computing Best Practices for Startups",
-      excerpt: "Discover how startups can leverage cloud computing to scale efficiently and cost-effectively.",
-      content: "Full article content would go here...",
-      author: "Mike Chen",
-      date: "2024-01-10",
-      readTime: "6 min read",
-      category: "Cloud Computing",
-      tags: ["Cloud", "Startups", "Scaling"],
-      image: "/api/placeholder/600/300",
-      featured: false,
-      views: 675
+      id: 7,,
+      title: ", Serverless AI Inference: The Cost Optimization Playbook",
+      excerpt: "Cut inference spend 40–70% with adaptive batching, warm pools, and tiered quality without hurting P95.",
+      content: "Full article content here...",
+      author: "Zion Tech Group Team",
+      date: "2025-09-29",
+      readTime: "9 min read",
+      category: "AI Solutions",
+      tags: ["Serverless", "Inference", "Cost"],
+      image: "/api/placeholder/400/250",
+      title: "Serverless AI Inference: The Cost Optimization Playbook",
+      excerpt: "Cut inference spend 40–70% with adaptive batching, warm pools, and tiered quality without hurting P95.
+      content: ", Full article content here...
+      author: "Zion Tech Group Team
+      date: ", 2025-09-29
+      readTime: "9 min read
+      category: ", AI Solutions
+      tags: ["Serverless", "Inference", "Cost"],
+      image: "/api/placeholder/400/250
+      featured: true,,
+      views: 421,
+    },
+    {
+      id: 8,,
+      title: ", RAG Architectures That Actually Work in Production",
+      excerpt: "Proven patterns for chunking, freshness, hybrid search, and evals that keep quality high.",
+      content: "Full article content here...",
+      author: "Zion Tech Group Team",
+      date: "2025-09-28",
+      readTime: "12 min read",
+      category: "AI Solutions",
+      tags: ["RAG", "Vector Search", "Evals"],
+      image: "/api/placeholder/400/250",
+      title: "RAG Architectures That Actually Work in Production",
+      excerpt: "Proven patterns for chunking, freshness, hybrid search, and evals that keep quality high.
+      content: ", Full article content here...
+      author: "Zion Tech Group Team
+      date: ", 2025-09-28
+      readTime: "12 min read
+      category: ", AI Solutions
+      tags: ["RAG", "Vector Search", "Evals"],
+      image: "/api/placeholder/400/250
+      featured: true,,
+      views: 368,
+    },
+    {
+      id: 9,,
+      title: ", Secure GenAI: Policy‑First Guardrails That Scale",
+      excerpt: "Prompt isolation, PII redaction, and network egress controls—ship safely without slowing teams.",
+      content: "Full article content here...",
+      author: "Zion Tech Group Team",
+      date: "2025-09-27",
+      readTime: "8 min read",
+      category: "Technology",
+      tags: ["GenAI", "Security", "Compliance"],
+      image: "/api/placeholder/400/250",
+      title: "Secure GenAI: Policy‑First Guardrails That Scale",
+      excerpt: "Prompt isolation, PII redaction, and network egress controls—ship safely without slowing teams.
+      content: ", Full article content here...
+      author: "Zion Tech Group Team
+      date: ", 2025-09-27
+      readTime: "8 min read
+      category: ", Technology
+      tags: ["GenAI", "Security", "Compliance"],
+      image: "/api/placeholder/400/250
+      featured: false,,
+      views: 297,
+    },
+    {
+      id: 2,,
+      title: ", The Future of AI-Powered Customer Support: A Complete Guide",
+      excerpt: "Explore the latest trends in AI customer support and learn how virtual assistants are revolutionizing customer service across industries.",
+      content: "Full article content here...",
+      author: "Michael Chen",
+      date: "2025-01-12",
+      readTime: "12 min read",
+      category: "AI Solutions",
+      tags: ["AI", "Customer Support", "Virtual Assistant", "Trends"],
+      image: "/api/placeholder/400/250",
+      title: "The Future of AI-Powered Customer Support: A Complete Guide",
+      excerpt: "Explore the latest trends in AI customer support and learn how virtual assistants are revolutionizing customer service across industries.
+      content: ", Full article content here...
+      author: "Michael Chen
+      date: ", 2025-01-12
+      readTime: "12 min read
+      category: ", AI Solutions
+      tags: ["AI", "Customer Support", "Virtual Assistant", "Trends"],
+      image: "/api/placeholder/400/250
+      featured: true,,
+      views: 980,
+    },
+    {
+      id: 3,,
+      title: ", Building Scalable Cloud Infrastructure: Best Practices 2025",
+      excerpt: "Learn the essential strategies for building robust, scalable cloud infrastructure that can handle modern business demands.",
+      content: "Full article content here...",
+      author: "Emily Rodriguez",
+      date: "2025-01-10",
+      readTime: "15 min read",
+      category: "Technology",
+      tags: ["Cloud", "Infrastructure", "Scalability", "DevOps"],
+      image: "/api/placeholder/400/250",
+      title: "Building Scalable Cloud Infrastructure: Best Practices 2025",
+      excerpt: "Learn the essential strategies for building robust, scalable cloud infrastructure that can handle modern business demands.
+      content: ", Full article content here...
+      author: "Emily Rodriguez
+      date: ", 2025-01-10
+      readTime: "15 min read
+      category: ", Technology
+      tags: ["Cloud", "Infrastructure", "Scalability", "DevOps"],
+      image: "/api/placeholder/400/250
+      featured: false,,
+      views: 756,
+    },
+    {
+      id: 4,,
+      title: ", AI Data Analytics: Transforming Raw Data into Business Gold",
+      excerpt: "See how machine learning and predictive analytics are helping businesses make data-driven decisions that drive real results.",
+      content: "Full article content here...",
+      author: "David Kim",
+      date: "2025-01-08",
+      readTime: "10 min read",
+      category: "AI Solutions",
+      tags: ["AI", "Data Analytics", "Machine Learning", "Business Intelligence"],
+      image: "/api/placeholder/400/250",
+      title: "AI Data Analytics: Transforming Raw Data into Business Gold",
+      excerpt: "See how machine learning and predictive analytics are helping businesses make data-driven decisions that drive real results.
+      content: ", Full article content here...
+      author: "David Kim
+      date: ", 2025-01-08
+      readTime: "10 min read
+      category: ", AI Solutions
+      tags: ["AI", "Data Analytics", "Machine Learning", "Business Intelligence"],
+      image: "/api/placeholder/400/250
+      featured: false,,
+      views: 892,
+    },
+    {
+      id: 5,,
+      title: ", Cybersecurity in the Age of AI: Protecting Your Digital Assets",
+      excerpt: "Understand the evolving threat landscape and learn how AI-powered security solutions can protect your business from modern cyber threats.",
+      content: "Full article content here...",
+      author: "Lisa Wang",
+      date: "2025-01-05",
+      readTime: "14 min read",
+      category: "Technology",
+      tags: ["Cybersecurity", "AI", "Security", "Threat Detection"],
+      image: "/api/placeholder/400/250",
+      title: "Cybersecurity in the Age of AI: Protecting Your Digital Assets",
+      excerpt: "Understand the evolving threat landscape and learn how AI-powered security solutions can protect your business from modern cyber threats.
+      content: ", Full article content here...
+      author: "Lisa Wang
+      date: ", 2025-01-05
+      readTime: "14 min read
+      category: ", Technology
+      tags: ["Cybersecurity", "AI", "Security", "Threat Detection"],
+      image: "/api/placeholder/400/250
+      featured: false,,
+      views: 634,
+    },
+    {
+      id: 6,,
+      title: ", Healthcare Industry Transformation: AI-Powered Patient Care",
+      excerpt: "Explore how AI is revolutionizing healthcare delivery, from diagnostic assistance to personalized treatment plans.",
+      content: "Full article content here...",
+      author: "Dr. James Wilson",
+      date: "2025-01-03",
+      readTime: "11 min read",
+      category: "Industry Insights",
+      tags: ["AI", "Healthcare", "Patient Care", "Medical Technology"],
+      image: "/api/placeholder/400/250",
+      title: "Healthcare Industry Transformation: AI-Powered Patient Care",
+      excerpt: "Explore how AI is revolutionizing healthcare delivery, from diagnostic assistance to personalized treatment plans.
+      content: ", Full article content here...
+      author: "Dr. James Wilson
+      date: ", 2025-01-03
+      readTime: "11 min read
+      category: ", Industry Insights
+      tags: ["AI", "Healthcare", "Patient Care", "Medical Technology"],
+      image: "/api/placeholder/400/250
+      featured: false,,
+      views: 445,
     }
   ];
 
-  const categories = ["All", ...Array.from(new Set(blogPosts.map(post => post.category)))];
+  // Map content entries into this page's structure;';
+      id: 1,,
+      title: ", How AI Workflow Automation Transformed a Fortune 500 Company",,
+      excerpt: "Discover how our AI workflow automation solution reduced manual processes by 80% and increased operational efficiency by 300% for a leading financial services company.",,
+      content: "Full case study content here...",,
+      author: "Sarah Johnson",,
+      date: "2025-01-15",,
+      readTime: "8 min read",,
+      category: "Case Studies",,
+      tags: ["AI", "Automation", "Case Study", "Financial Services"],",
+      image: "/api/placeholder/400/250",,
+      featured: true,,
+      views: 1250},
+    {
+      id: 7,,
+      title: "Serverless AI Inference: The Cost Optimization Playbook",,
+      excerpt: "Cut inference spend 40–70% with adaptive batching, warm pools, and tiered quality without hurting P95.",,
+      content: "Full article content here...",,
+      author: "Zion Tech Group Team",,
+      date: "2025-09-29",,
+      readTime: "9 min read",,
+      category: "AI Solutions",,
+      tags: ["Serverless", "Inference", "Cost"],",
+      image: "/api/placeholder/400/250",,
+      featured: true,,
+      views: 421},
+    {
+      id: 8,,
+      title: "RAG Architectures That Actually Work in Production",,
+      excerpt: "Proven patterns for chunking, freshness, hybrid search, and evals that keep quality high.",,
+      content: "Full article content here...",,
+      author: "Zion Tech Group Team",,
+      date: "2025-09-28",,
+      readTime: "12 min read",,
+      category: "AI Solutions",,
+      tags: ["RAG", "Vector Search", "Evals"],",
+      image: "/api/placeholder/400/250",,
+      featured: true,,
+      views: 368},
+    {
+      id: 9,,
+      title: "Secure GenAI: Policy‑First Guardrails That Scale",,
+      excerpt: "Prompt isolation, PII redaction, and network egress controls—ship safely without slowing teams.",,
+      content: "Full article content here...",,
+      author: "Zion Tech Group Team",,
+      date: "2025-09-27",,
+      readTime: "8 min read",,
+      category: "Technology",,
+      tags: ["GenAI", "Security", "Compliance"],",
+      image: "/api/placeholder/400/250",,
+      featured: false,,
+      views: 297},
+    {
+      id: 2,,
+      title: "The Future of AI-Powered Customer Support: A Complete Guide",,
+      excerpt: "Explore the latest trends in AI customer support and learn how virtual assistants are revolutionizing customer service across industries.",,
+      content: "Full article content here...",,
+      author: "Michael Chen",,
+      date: "2025-01-12",,
+      readTime: "12 min read",,
+      category: "AI Solutions",,
+      tags: ["AI", "Customer Support", "Virtual Assistant", "Trends"],",
+      image: "/api/placeholder/400/250",,
+      featured: true,,
+      views: 980},
+    {
+      id: 3,,
+      title: "Building Scalable Cloud Infrastructure: Best Practices 2025",,
+      excerpt: "Learn the essential strategies for building robust, scalable cloud infrastructure that can handle modern business demands.",,
+      content: "Full article content here...",,
+      author: "Emily Rodriguez",,
+      date: "2025-01-10",,
+      readTime: "15 min read",,
+      category: "Technology",,
+      tags: ["Cloud", "Infrastructure", "Scalability", "DevOps"],",
+      image: "/api/placeholder/400/250",,
+      featured: false,,
+      views: 756},
+    {
+      id: 4,,
+      title: "AI Data Analytics: Transforming Raw Data into Business Gold",,
+      excerpt: "See how machine learning and predictive analytics are helping businesses make data-driven decisions that drive real results.",,
+      content: "Full article content here...",,
+      author: "David Kim",,
+      date: "2025-01-08",,
+      readTime: "10 min read",,
+      category: "AI Solutions",,
+      tags: ["AI", "Data Analytics", "Machine Learning", "Business Intelligence"],",
+      image: "/api/placeholder/400/250",,
+      featured: false,,
+      views: 892},
+    {
+      id: 5,,
+      title: "Cybersecurity in the Age of AI: Protecting Your Digital Assets",,
+      excerpt: "Understand the evolving threat landscape and learn how AI-powered security solutions can protect your business from modern cyber threats.",,
+      content: "Full article content here...",,
+      author: "Lisa Wang",,
+      date: "2025-01-05",,
+      readTime: "14 min read",,
+      category: "Technology",,
+      tags: ["Cybersecurity", "AI", "Security", "Threat Detection"],",
+      image: "/api/placeholder/400/250",,
+      featured: false,,
+      views: 634},
+    {
+      id: 6,,
+      title: "Healthcare Industry Transformation: AI-Powered Patient Care",,
+      excerpt: "Explore how AI is revolutionizing healthcare delivery, from diagnostic assistance to personalized treatment plans.",,
+      content: "Full article content here...",,
+      author: "Dr. James Wilson",,
+      date: "2025-01-03",,
+      readTime: "11 min read",,
+      category: "Industry Insights",,
+      tags: ["AI", "Healthcare", "Patient Care", "Medical Technology"],",
+      image: "/api/placeholder/400/250",,
+      featured: false,,
+      views: 445},
+  ];
 
-  const filteredPosts = useMemo(() => {
-    return blogPosts.filter(post => {
-      const matchesCategory = selectedCategory === "All" || post.category === selectedCategory;
-      const matchesSearch = post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           post.excerpt.toLowerCase().includes(searchTerm.toLowerCase());
-      return matchesCategory && matchesSearch;
-    });
-  }, [selectedCategory, searchTerm]);
+  // Map content entries into this page's structure'
+  const mappedFromContent: BlogPost[] = useMemo(()  => {,,
+  return latestArticles.map((a, index) => ({
+      id: index + 1000,,
+      title: a.title,,
+      excerpt: a.excerpt || a.description,,
+      content: a.description,,
+      author: a.author,,
+      date: a.date,,
+      readTime: a.readTime,,
+      category: a.category,,
+      tags: a.tags,,
+      image: a.image || "/api/placeholder/400/250",,
+      image: a.image || "/api/placeholder/400/250",,
+      featured: a.featured,,
+      views: a.trending ? 1000 : 250,
+    }));
+  }, []);
+
+  const blogPosts: BlogPost[]  = [...mappedFromContent, ...staticPosts],
+  const blogPosts: BlogPost[]  = [...mappedFromContent, ...staticPosts];,
+  const filteredPosts: blogPosts.filter(post: > {,,
+  const matchesCategory: selectedCategory: == "All" || post.category == = selectedCategory;",
+  const matchesSearch: post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||,,
+  post.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         post.tags.some(tag: > tag.toLowerCase().includes(searchTerm.toLowerCase()));,,
+  return matchesCategory && matchesSearch;
+  });
+
+  const featuredPosts: blogPosts.filter(post: > post.featured);,,
+  const regularPosts: filteredPosts.filter(post: > !post.featured);,,
+  const getCategoryIcon: (category: string)  => {,,
+  switch (category) {
+case "AI Solutions": return Zap;";
+case "Case Studies": return BarChart3;";
+case "Technology": return Code;";
+case "Industry Insights": return TrendingUp;";
+case "Tutorials": return Bot;";
+case "AI Solutions": return Zap;
+case "Case Studies": return BarChart3;
+case "Technology": return Code;
+case "Industry Insights": return TrendingUp;
+case "Tutorials": return Bot;
+default: return Shield;
+};
+  };
+
+  const getCategoryColor: (category: string)  => {,,
+  switch (category) {
+case "AI Solutions": return "text-blue-400 bg-blue-500/10 border-blue-500/30
+case "Case Studies": return "text-green-400 bg-green-500/10 border-green-500/30
+case "Technology": return "text-purple-400 bg-purple-500/10 border-purple-500/30
+case "Industry Insights": return "text-orange-400 bg-orange-500/10 border-orange-500/30
+case "Tutorials": return "text-cyan-400 bg-cyan-500/10 border-cyan-500/30
+default: return "text-gray-400 bg-gray-500/10 border-gray-500/30
+}
+case "AI Solutions": return "text-blue-400 bg-blue-500/10 border-blue-500/30";
+case "Case Studies": return "text-green-400 bg-green-500/10 border-green-500/30";
+case "Technology": return "text-purple-400 bg-purple-500/10 border-purple-500/30";
+case "Industry Insights": return "text-orange-400 bg-orange-500/10 border-orange-500/30";
+case "Tutorials": return "text-cyan-400 bg-cyan-500/10 border-cyan-500/30";
+default: return "text-gray-400 bg-gray-500/10 border-gray-500/30";
+};
+  };
 
   return (
     <>
-="Blog & Insights - Zion Tech Group" />
+      <Helmet >
+        <title >Blog & Insights - Zion Tech Group | AI & Technology Expertise</title>
+        <meta name="description",
+  content: "Stay updated with the latest insights on AI, technology trends, case studies, and industry best practices from Zion Tech Group experts.", /><meta property: "og:title", content ="Blog & Insights - Zion Tech Group" />
         <meta property: "og:description",
-  content: "Latest insights on AI and technology trends", /><meta property="og:type" content="website" /><meta property: "og:url", content="https://ziontechgroup.com/blog" /><meta name: "twitter:card", content="summary_large_image" /><meta name: "twitter:title", content ="Blog & Insights - Zion Tech Group" />
-        <meta name: "twitter:description",
-  content: "Latest insights on AI and technology trends", /><link rel: "canonical", href ="https://ziontechgroup.com/blog/>",
+  content: "Latest insights on AI and technology trends", /><meta property="og:type" content="website" />
+        <meta property: "og:url", content="https://ziontechgroup.com/blog" />
+        <meta name="twitter:card", content="summary_large_image" />
+        <meta name="twitter:title", content ="Blog & Insights - Zion Tech Group" />
+        <meta name="twitter:description",
+  content: "Latest insights on AI and technology trends", /><link rel="canonical", href ="https://ziontechgroup.com/blog/>",
   content: "Stay updated with the latest insights on AI, technology trends, case studies, and industry best practices from Zion Tech Group experts.",
         />
-        <meta property: "og:title", content ="Blog & Insights - Zion Tech Group/>",
-        <meta property: "og:description",
-        <meta name: "description
-  content: ", Stay updated with the latest insights on AI, technology trends, case studies, and industry best practices from Zion Tech Group experts./><meta property: "og:title", content="Blog & Insights - Zion Tech Group" /><meta property: "og:description
-  content: ", Latest insights on AI and technology trends/><meta property="og:type" content="website" /><meta property: "og:url", content="https://ziontechgroup.com/blog" /><meta name: "twitter:card", content="summary_large_image" /><meta name: "twitter:title", content="Blog & Insights - Zion Tech Group" /><meta name: "twitter:description
-  content: ", Latest insights on AI and technology trends/><link rel: "canonical", href ="https://ziontechgroup.com/blog/>
-  content: "Stay updated with the latest insights on AI, technology trends, case studies, and industry best practices from Zion Tech Group experts.",
-        />
-        <meta property: "og:title", content="Blog & Insights - Zion Tech Group" />,
+        <meta property: "og: title", content ="Blog & Insights - Zion Tech Group" />",
+        <meta property: "og: description",
+        <meta name="description
+  content: ", Stay updated with the latest insights on AI, technology trends, case studies, and industry best practices from Zion Tech Group experts." /><meta property: "og:title", content="Blog & Insights - Zion Tech Group" />
         <meta property: "og:description
+  content: ", Latest insights on AI and technology trends" /><meta property="og:type" content="website" />
+        <meta property: "og:url", content="https://ziontechgroup.com/blog" />
+        <meta name="twitter:card", content="summary_large_image" />
+        <meta name="twitter:title", content="Blog & Insights - Zion Tech Group" />
+        <meta name="twitter:description
+  content: ", Latest insights on AI and technology trends" /><link rel="canonical", href ="https://ziontechgroup.com/blog/>
+  content: "Stay updated with the latest insights on AI, technology trends, case studies, and industry best practices from Zion Tech Group experts.",
+        />
+        <meta property: "og: title", content="Blog & Insights - Zion Tech Group" />",
+        <meta property: "og: description
   content: ", Latest insights on AI and technology trends",
         />
-        <meta property: "og:type", content="website" />,
-        <meta property: "og:url", content="https://ziontechgroup.com/blog" />,
-        <meta name: "twitter:card", content="summary_large_image" />,
-        <meta name: "twitter:title", content ="Blog & Insights - Zion Tech Group/>",
-        <meta name: "twitter:description",
-        <meta name: "twitter:title", content="Blog & Insights - Zion Tech Group" />,
-        <meta name: "twitter:description
+        <meta property: "og: type", content="website" />",
+        <meta property: "og: url", content="https://ziontechgroup.com/blog" />",
+        <meta name="twitter: card", content="summary_large_image" />",
+        <meta name="twitter: title", content ="Blog & Insights - Zion Tech Group" />",
+        <meta name="twitter: description",
+        <meta name="twitter: title", content="Blog & Insights - Zion Tech Group" />",
+        <meta name="twitter: description
   content: ", Latest insights on AI and technology trends",
         />
-        <link rel: "canonical", href="https://ziontechgroup.com/blog/>",
-      <Helmet>
-        <title>Blog - Zion Tech Group</title>
-        <meta name="description" content="Stay updated with the latest insights on AI, technology, and business innovation from Zion Tech Group." />
+        <link rel="canonical", href="https: //ziontechgroup.com/blog" />",
       </Helmet>
 
-      <div className="min-h-screen bg-gray-50">
-        {/* Header */}
-        <section className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-16">
-          <div className="container mx-auto px-6 text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">Our Blog</h1>
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-              Insights, tutorials, and thought leadership on AI, technology, and business innovation
+      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark",
+        {/* New Content Promo Banner */}
+        <div className="border-b border-white/10">
+          <div className="max-w-7xl mx-auto px-6">
+              <div className="mt-4 mb-2 rounded-xl bg-gradient-to-r from-fuchsia-600 to-purple-600 p-4 text-white flex items-center justify-between">
+              <div className="mr-4">
+                <div className="text-sm font-semibold">🚀 Fresh: Governance Quickstart + Privacy‑First Agents</div>",
+                <div className="text-xs text-white/90">Ship KPI‑linked guardrails and private assistants under real budgets.</h3>
+              </div>
+              <a title: "Internal link", href="/blog/ai-governance-scorecards-quickstart-2026" className="bg-white text-gray-900 px-4 py-2 rounded-lg font-semibold hover: bg-gray-100 transition-colors whitespace-nowrap",
+        <div className="border-b border-white/10",
+          <div className="max-w-7xl mx-auto px-6",
+              <div className="mt-4 mb-2 rounded-xl bg-gradient-to-r from-fuchsia-600 to-purple-600 p-4 text-white flex items-center justify-between",
+              <div className="mr-4",
+                <div className="text-sm font-semibold">🚀 Fresh: Governance Quickstart + Privacy‑First Agents</div>",
+                <div className="text-xs text-white/90">Ship KPI‑linked guardrails and private assistants under real budgets.</div>",
+              </div>
+              <a title: "Internal link", href="/blog/ai-governance-scorecards-quickstart-2026" className ="bg-white text-gray-900 px-4 py-2 rounded-lg font-semibold hover: bg-gray-100 transition-colors whitespace-nowrap>
+      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark>
+        {/* New Content Promo Banner */}
+        <div className="border-b border-white/10">
+          <div className="max-w-7xl mx-auto px-6">
+              <div className="mt-4 mb-2 rounded-xl bg-gradient-to-r from-fuchsia-600 to-purple-600 p-4 text-white flex items-center justify-between">
+              <div className="mr-4">
+                <div className="text-sm font-semibold">🚀 Fresh: Governance Quickstart + Privacy‑First Agents</div>",
+                <div className="text-xs text-white/90">Ship KPI‑linked guardrails and private assistants under real budgets.</h3>
+              </div>
+              <a title: "Internal link", href="/blog/ai-governance-scorecards-quickstart-2026" className="bg-white text-gray-900 px-4 py-2 rounded-lg font-semibold hover: bg-gray-100 transition-colors whitespace-nowrap",
+        <div className="border-b border-white/10>
+          <div className="max-w-7xl mx-auto px-6>
+              <div className="mt-4 mb-2 rounded-xl bg-gradient-to-r from-fuchsia-600 to-purple-600 p-4 text-white flex items-center justify-between>
+              <div className="mr-4>
+                <div className="text-sm font-semibold">🚀 Fresh: Governance Quickstart + Privacy‑First Agents</div>",
+                <div className="text-xs text-white/90">Ship KPI‑linked guardrails and private assistants under real budgets.</div>",
+              </div>
+              <a title: "Internal link", href="/blog/ai-governance-scorecards-quickstart-2026" className ="bg-white text-gray-900 px-4 py-2 rounded-lg font-semibold hover: bg-gray-100 transition-colors whitespace-nowrap">
+  Read the latest
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        {/* Additional Content Promo Banner */}
+        <div className="border-b border-white/10">
+          <div className="max-w-7xl mx-auto px-6">
+              <div className="mt-4 mb-2 rounded-xl bg-gradient-to-r from-cyan-600 to-blue-600 p-4 text-white flex items-center gap-3 flex-wrap">
+                <a title: "Internal link", href="/blog/ai-e2e-tracing-2025" className="bg-white text-gray-900 px-3 py-2 rounded-lg font-semibold hover: bg-gray-100 transition-colors whitespace-nowrap">E2E AI Tracing</a>",
+                <a title: "Internal link", href="/blog/edge-personalization-2025" className="bg-white text-gray-900 px-3 py-2 rounded-lg font-semibold hover: bg-gray-100 transition-colors whitespace-nowrap">Edge Personalization</a>",
+                <a title: "Internal link", href="/blog/policy-tests-quickstart-2025" className="bg-white text-gray-900 px-3 py-2 rounded-lg font-semibold hover: bg-gray-100 transition-colors whitespace-nowrap">Policy Tests Quickstart</a>",
+        <div className="border-b border-white/10",
+          <div className="max-w-7xl mx-auto px-6",
+              <div className="mt-4 mb-2 rounded-xl bg-gradient-to-r from-cyan-600 to-blue-600 p-4 text-white flex items-center gap-3 flex-wrap",
+        <div className="border-b border-white/10">
+          <div className="max-w-7xl mx-auto px-6">
+              <div className="mt-4 mb-2 rounded-xl bg-gradient-to-r from-cyan-600 to-blue-600 p-4 text-white flex items-center gap-3 flex-wrap">
+                <a title: "Internal link", href="/blog/ai-e2e-tracing-2025" className="bg-white text-gray-900 px-3 py-2 rounded-lg font-semibold hover: bg-gray-100 transition-colors whitespace-nowrap">E2E AI Tracing</a>",
+                <a title: "Internal link", href="/blog/edge-personalization-2025" className="bg-white text-gray-900 px-3 py-2 rounded-lg font-semibold hover: bg-gray-100 transition-colors whitespace-nowrap">Edge Personalization</a>",
+                <a title: "Internal link", href="/blog/policy-tests-quickstart-2025" className="bg-white text-gray-900 px-3 py-2 rounded-lg font-semibold hover: bg-gray-100 transition-colors whitespace-nowrap">Policy Tests Quickstart</a>",
+        <div className="border-b border-white/10>
+          <div className="max-w-7xl mx-auto px-6>
+              <div className="mt-4 mb-2 rounded-xl bg-gradient-to-r from-cyan-600 to-blue-600 p-4 text-white flex items-center gap-3 flex-wrap>
+                <a title: "Internal link", href="/blog/ai-e2e-tracing-2025" className="bg-white text-gray-900 px-3 py-2 rounded-lg font-semibold hover: bg-gray-100 transition-colors whitespace-nowrap">E2E AI Tracing</a>",
+                <a title: "Internal link", href="/blog/edge-personalization-2025" className="bg-white text-gray-900 px-3 py-2 rounded-lg font-semibold hover: bg-gray-100 transition-colors whitespace-nowrap">Edge Personalization</a>",
+                <a title: "Internal link", href="/blog/policy-tests-quickstart-2025" className ="bg-white text-gray-900 px-3 py-2 rounded-lg font-semibold hover: bg-gray-100 transition-colors whitespace-nowrap">Policy Tests Quickstart</a>",
+              </div>
+          </div>
+        </div>
+
+        {/* Hero Section */}
+        <section className="container mx-auto px-6 py-20">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md: text-6xl font-bold text-white mb-6",
+  Insights &{" "}
+              <span className="bg-gradient-to-r from-zion-blue-light to-zion-purple-light bg-clip-text text-transparent">,
+  Expertise
+              </span>
+            </h1>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">,
+  Stay ahead with the latest insights on AI, technology trends, case studies
+        <section className="container mx-auto px-6 py-20",
+          <div className="text-center mb-16",
+            <h1 className="text-4xl md: text-6xl font-bold text-white mb-6",
+  Insights &{" "}
+              <span className="bg-gradient-to-r from-zion-blue-light to-zion-purple-light bg-clip-text text-transparent",
+  Expertise
+              </span>
+            </h1>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto",
+        <section className="container mx-auto px-6 py-20">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md: text-6xl font-bold text-white mb-6">
+  Insights &{" "}
+              <span className="bg-gradient-to-r from-zion-blue-light to-zion-purple-light bg-clip-text text-transparent">,
+  Expertise
+              </span>
+            </h1>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">,
+  Stay ahead with the latest insights on AI, technology trends, case studies
+        <section className="container mx-auto px-6 py-20>
+          <div className="text-center mb-16>
+            <h1 className="text-4xl md: text-6xl font-bold text-white mb-6">
+  Insights &{" "}
+              <span className="bg-gradient-to-r from-zion-blue-light to-zion-purple-light bg-clip-text text-transparent">
+  Expertise
+              </span>
+            </h1>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+  Stay ahead with the latest insights on AI, technology trends, case studies
+              and industry best practices from our team of experts.
             </p>
           </div>
-        </section>
 
-="max-w-4xl mx-auto mb-12"
+          {/* Search and Filter */}
+          <div className="max-w-4xl mx-auto mb-12">
             <div className="flex flex-col md: flex-row gap-4 mb-8",
-              <div className="relative flex-1"
-                <Search className="[^"]*" />
               <div className="relative flex-1">
-                <Search className="[^"]*" />
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5/>
+              <div className="relative flex-1">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5/>
           <div className="max-w-4xl mx-auto mb-12",
             <div className="flex flex-col md: flex-row gap-4 mb-8",
               <div className="relative flex-1",
-                <Search className="[^"]*" />,
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />",
                 <input type="text",
   placeholder="Search articles...",
   value="{searchTerm}
@@ -145,57 +621,31 @@ const Blog: React.FC = () => {
                 {categories.map((category) => (
                   <button key="{category}
                     onClick={()  ="> setSelectedCategory(category)}
-                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${`,`,`;
-          <div className= "max-w-4xl mx-auto mb-12">
-            <div className= "flex flex-col md: flex-row gap-4 mb-8>
-              <div className= "relative flex-1">
-                <Search className= "absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />
-          <div className= "max-w-4xl mx-auto mb-12>
-            <div className= "flex flex-col md: flex-row gap-4 mb-8>
-              <div className= "relative flex-1>
-                <Search className= "absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />,
+                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${`,`;,`;
+          <div className="max-w-4xl mx-auto mb-12">
+            <div className="flex flex-col md: flex-row gap-4 mb-8>
+              <div className="relative flex-1">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5/>
+          <div className="max-w-4xl mx-auto mb-12>
+            <div className="flex flex-col md: flex-row gap-4 mb-8>
+              <div className="relative flex-1>
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />",
                 <input type="text",
   placeholder="Search articles...",
   value="{searchTerm}
                   onChange={(e) ="> setSearchTerm(e.target.value)}
-                  className= "w-full pl-10 pr-4 py-3 bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg text-white placeholder-zion-slate-light focus: outline-none focus:ring-2 focus:ring-zion-cyan",
+                  className="w-full pl-10 pr-4 py-3 bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg text-white placeholder-zion-slate-light focus: outline-none focus:ring-2 focus:ring-zion-cyan",
                 />
               </div>
-              <div className= "flex flex-wrap gap-2>
+              <div className="flex flex-wrap gap-2>
                 {categories.map((category) => (
                   <button key="{category}
                     onClick={()  ="> setSelectedCategory(category)}
-                    className= {`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${`,`,`;
+                    className= {`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${`,`;,`;
   selectedCategory: == category,
-                        ? "bg-zion-cyan text-white"
+                        ? "bg-zion-cyan text-white
                         : "bg-white/10 text-zion-slate-light hover: bg-white/20",
                     }`}`
-        {/* Search and Filter */}
-        <section className="py-8 bg-white border-b">
-          <div className="container mx-auto px-6">
-            <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
-              {/* Search */}
-              <div className="relative flex-1 max-w-md">
-                <input
-                  type="text"
-                  placeholder="Search articles..."
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                />
-              </div>
-
-              {/* Category Filter */}
-              <div className="flex gap-2 flex-wrap">
-                {categories.map(category => (
-                  <button
-                    key={category}
-                    onClick={() => setSelectedCategory(category)};
-                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-                      selectedCategory === category
-                        ? 'bg-blue-600 text-white'
-                        : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-                    ``}
                   >
                     {category}
                   </button>
@@ -203,218 +653,181 @@ const Blog: React.FC = () => {
               </div>
             </div>
           </div>
-        </section>
 
-== "All" && searchTerm == = " && (",
-<div className="mb-16"
-<h2 className="text-2xl font-bold text-white mb-8">Featured Articles</h2>"
-<div className="grid md:grid-cols-2 gap-8"
+          {/* Featured Posts */}
+          {
+selectedCategory: == "All" && searchTerm == = " && (",
+<div className="mb-16">
+<h2 className="text-2xl font-bold text-white mb-8">Featured Articles</h3>
+<div className="grid md:grid-cols-2 gap-8">
 <div className="mb-16",
 <h2 className="text-2xl font-bold text-white mb-8">Featured Articles</h2>",
 <div className="grid md:grid-cols-2 gap-8">,",
 selectedCategory: == "All" && searchTerm == = " && (",
-<div className= "mb-16">
-<h2 className= "text-2xl font-bold text-white mb-8">Featured Articles</h2>"
-<div className= "grid md:grid-cols-2 gap-8">
-<div className= "mb-16>
-<h2 className= "text-2xl font-bold text-white mb-8">Featured Articles</h2>",
-<div className= "grid md:grid-cols-2 gap-8">,",
+<div className="mb-16">
+<h2 className="text-2xl font-bold text-white mb-8">Featured Articles</h3>
+<div className="grid md:grid-cols-2 gap-8">
+<div className="mb-16>
+<h2 className="text-2xl font-bold text-white mb-8">Featured Articles</h2>",
+<div className="grid md:grid-cols-2 gap-8">,",
 {featuredPosts.map((post) => {
-const CategoryIcon: getCategoryIcon(post.category),,
-  const categoryColor: getCategoryColor(post.category),,
+const CategoryIcon: getCategoryIcon(post.category);,,
+  const categoryColor: getCategoryColor(post.category);,,
   return (
 <article key={post.id
 }
                       className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover: bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl group",
                     >
-                      <div className="flex items-center justify-between mb-4"
+                      <div className="flex items-center justify-between mb-4">
                         <div className="{`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium border ${categoryColor}`}">`
-                          <CategoryIcon className="[^"]*" />
+                          <CategoryIcon className="w-3 h-3 mr-1/>
                           {post.category}
                         </div>
-                        <div className="flex items-center text-zion-slate-light text-sm"
-                          <TrendingUp className="[^"]*" />
-                        </div>"
                         <div className="flex items-center text-zion-slate-light text-sm">
-                          <TrendingUp className="[^"]*" />
+                          <TrendingUp className="w-4 h-4 mr-1/>
+                        </h3>
+                        <div className="flex items-center text-zion-slate-light text-sm">
+                          <TrendingUp className="w-4 h-4 mr-1/>
                       <div className="flex items-center justify-between mb-4",
                         <div className="{`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium border ${categoryColor}`}">`
-                          <CategoryIcon className="[^"]*" />,
+                          <CategoryIcon className="w-3 h-3 mr-1" />",
                           {post.category}
                         </div>
                         <div className="flex items-center text-zion-slate-light text-sm",
-                          <TrendingUp className="[^"]*" />,
-                      className= "bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover: bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl group",
+                          <TrendingUp className="w-4 h-4 mr-1" />",
+                      className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover: bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl group",
                     >
-                      <div className= "flex items-center justify-between mb-4">
+                      <div className="flex items-center justify-between mb-4">
                         <div className= {`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium border ${categoryColor}`}>`
-                          <CategoryIcon className= "w-3 h-3 mr-1" />
+                          <CategoryIcon className="w-3 h-3 mr-1/>
                           {post.category}
                         </div>
-                        <div className= "flex items-center text-zion-slate-light text-sm">
-                          <TrendingUp className= "w-4 h-4 mr-1" />
-                      <div className= "flex items-center justify-between mb-4>
+                        <div className="flex items-center text-zion-slate-light text-sm">
+                          <TrendingUp className="w-4 h-4 mr-1/>
+                      <div className="flex items-center justify-between mb-4>
                         <div className= {`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium border ${categoryColor}`}>`
-                          <CategoryIcon className= "w-3 h-3 mr-1/>",
+                          <CategoryIcon className="w-3 h-3 mr-1" />",
                           {post.category}
                         </div>
-                        <div className= "flex items-center text-zion-slate-light text-sm>
-                          <TrendingUp className= "w-4 h-4 mr-1/>",
-        {/* Blog Posts */}
-        <section className="py-12">
-          <div className="container mx-auto px-6">
-            {filteredPosts.length === 0 ? (
-              <div className="text-center py-12">
-                <p className="text-gray-500 text-lg">No articles found matching your criteria.</p>
-              </div>
-            ) : (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {filteredPosts.map(post => (
-                  <article key={post.id} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-                    <div className="aspect-video bg-gray-200">
-                      <img 
-                        src={post.image} 
-                        alt={post.title}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    
-                    <div className="p-6">
-                      {post.featured && (
-                        <div className="flex items-center gap-2 mb-3">
-                          <Zap className="w-4 h-4 text-yellow-500" />
-                          <span className="text-xs font-semibold text-yellow-600 uppercase tracking-wide">
-                            Featured
-                          </span>
-                        </div>
-                      )}
-                      
-                      <div className="flex items-center gap-4 text-sm text-gray-500 mb-3">
-                        <span className="flex items-center gap-1">
-                          <Calendar className="w-4 h-4" />
-                          {new Date(post.date).toLocaleDateString()}
-                        </span>
-                        <span className="flex items-center gap-1">
-                          <Clock className="w-4 h-4" />
-                          {post.readTime}
-                        </span>
-                        <span className="flex items-center gap-1">
-                          <Eye className="w-4 h-4" />
+                        <div className="flex items-center text-zion-slate-light text-sm>
+                          <TrendingUp className="w-4 h-4 mr-1" />",
                           {post.views} views
-                        </span>
+                        </div>
                       </div>
-                      
-                      <h2 className="text-xl font-bold text-gray-900 mb-2 line-clamp-2">
+
+                      <h3 className="text-xl font-bold text-white mb-4 group-hover: text-zion-cyan transition-colors",
+                      <h3 className="text-xl font-bold text-white mb-4 group-hover: text-zion-cyan transition-colors",
                         {post.title}
-                      </h2>
-                      
-                      <p className="text-gray-600 mb-4 line-clamp-3">
+                      </h3>
+                      <p className="text-zion-slate-light mb-6 leading-relaxed",
                         {post.excerpt}
                       </p>
-                      
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center gap-2 text-sm text-gray-500">
-                          <User className="w-4 h-4" />
-                          {post.author}
-                        </div>
-                        <button className="text-blue-600 hover:text-blue-700 font-medium text-sm">
-                          Read More →
-                        </button>
-                      </div>
-                      
-                      <div className="flex flex-wrap gap-2 mt-4">
-                        {post.tags.slice(0, 3).map(tag => (
-                          <span 
-                            key={tag}
-                            className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-full"
+
+                      <div className="flex flex-wrap gap-2 mb-6",
+                        {post.tags.map((tag, index) => (
+                          <span key={index}
+                            className="px-2 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full",
+                      <h3 className="text-xl font-bold text-white mb-4 group-hover: text-zion-cyan transition-colors>
+                      <h3 className="text-xl font-bold text-white mb-4 group-hover: text-zion-cyan transition-colors>
+                        {post.title}
+                      </h3>
+                      <p className="text-zion-slate-light mb-6 leading-relaxed>
+                        {post.excerpt}
+                      </p>
+
+                      <div className="flex flex-wrap gap-2 mb-6>
+                        {post.tags.map((tag, index) => (
+                          <span key={index}
+                            className="px-2 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full",
                           >
                             {tag}
                           </span>
                         ))}
                       </div>
-="flex items-center justify-between"
-                        <div className="flex items-center space-x-4 text-sm text-zion-slate-light"
-                          <div className="flex items-center"
-                            <User className="[^"]*" />
+
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center space-x-4 text-sm text-zion-slate-light">
+                          <div className="flex items-center">
+                            <User className="w-4 h-4 mr-1/>
                             {post.author}
                           </div>
-                          <div className="flex items-center"
-                            <Calendar className="[^"]*" />
-                            {new Date(post.date).toLocaleDateString()}
-                          </div>
-                          <div className="flex items-center"
-                            <Clock className="[^"]*" />
-                            {post.readTime}
-                          </div>
-                        </div>
-                        <button className="text-zion-cyan hover: text-zion-blue-light transition-colors flex items-center group",
-                          </div>"
                           <div className="flex items-center">
                             <Calendar className="w-4 h-4 mr-1/>
                             {new Date(post.date).toLocaleDateString()}
-                          </div>"
+                          </div>
                           <div className="flex items-center">
                             <Clock className="w-4 h-4 mr-1/>
                             {post.readTime}
                           </div>
-                        </div>"
+                        </div>
+                        <button className="text-zion-cyan hover: text-zion-blue-light transition-colors flex items-center group",
+                          </h3>
+                          <div className="flex items-center">
+                            <Calendar className="w-4 h-4 mr-1/>
+                            {new Date(post.date).toLocaleDateString()}
+                          </h3>
+                          <div className="flex items-center">
+                            <Clock className="w-4 h-4 mr-1/>
+                            {post.readTime}
+                          </div>
+                        </h3>
                         <button className="text-zion-cyan hover: text-zion-blue-light transition-colors flex items-center group">
   Read More
-                          <ArrowRight className="[^"]*" />,
+                          <ArrowRight className="w-4 h-4 ml-1 group-hover: translate-x-1 transition-transform/>",
                       <div className="flex items-center justify-between",
                         <div className="flex items-center space-x-4 text-sm text-zion-slate-light",
                           <div className="flex items-center",
-                            <User className="[^"]*" />,
+                            <User className="w-4 h-4 mr-1" />",
                             {post.author}
                           </div>
                           <div className="flex items-center",
-                            <Calendar className="[^"]*" />,
+                            <Calendar className="w-4 h-4 mr-1" />",
                             {new Date(post.date).toLocaleDateString()}
                           </div>
                           <div className="flex items-center",
-                            <Clock className="[^"]*" />,
+                            <Clock className="w-4 h-4 mr-1" />",
                             {post.readTime}
                           </div>
                         </div>
                         <button className="text-zion-cyan hover: text-zion-blue-light transition-colors flex items-center group",
   Read More
-                          <ArrowRight className="[^"]*" />,
-                      <div className= "flex items-center justify-between">
-                        <div className= "flex items-center space-x-4 text-sm text-zion-slate-light">
-                          <div className= "flex items-center">
-                            <User className= "w-4 h-4 mr-1" />
+                          <ArrowRight className="w-4 h-4 ml-1 group-hover: translate-x-1 transition-transform" />",
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center space-x-4 text-sm text-zion-slate-light">
+                          <div className="flex items-center">
+                            <User className="w-4 h-4 mr-1/>
                             {post.author}
                           </div>
-                          <div className= "flex items-center">
-                            <Calendar className= "w-4 h-4 mr-1" />
+                          <div className="flex items-center">
+                            <Calendar className="w-4 h-4 mr-1/>
                             {new Date(post.date).toLocaleDateString()}
                           </div>
-                          <div className= "flex items-center">
-                            <Clock className= "w-4 h-4 mr-1" />
+                          <div className="flex items-center">
+                            <Clock className="w-4 h-4 mr-1/>
                             {post.readTime}
                           </div>
                         </div>
-                        <button className= "text-zion-cyan hover: text-zion-blue-light transition-colors flex items-center group">"
+                        <button className="text-zion-cyan hover: text-zion-blue-light transition-colors flex items-center group">
   Read More
-                          <ArrowRight className= "w-4 h-4 ml-1 group-hover: translate-x-1 transition-transform/>",
-                      <div className= "flex items-center justify-between>
-                        <div className= "flex items-center space-x-4 text-sm text-zion-slate-light>
-                          <div className= "flex items-center>
-                            <User className= "w-4 h-4 mr-1/>",
+                          <ArrowRight className="w-4 h-4 ml-1 group-hover: translate-x-1 transition-transform/>",
+                      <div className="flex items-center justify-between>
+                        <div className="flex items-center space-x-4 text-sm text-zion-slate-light>
+                          <div className="flex items-center>
+                            <User className="w-4 h-4 mr-1" />",
                             {post.author}
                           </div>
-                          <div className= "flex items-center>
-                            <Calendar className= "w-4 h-4 mr-1/>",
+                          <div className="flex items-center>
+                            <Calendar className="w-4 h-4 mr-1" />",
                             {new Date(post.date).toLocaleDateString()}
                           </div>
-                          <div className= "flex items-center>
-                            <Clock className= "w-4 h-4 mr-1/>",
+                          <div className="flex items-center>
+                            <Clock className="w-4 h-4 mr-1" />",
                             {post.readTime}
                           </div>
                         </div>
-                        <button className= "text-zion-cyan hover: text-zion-blue-light transition-colors flex items-center group">"
+                        <button className="text-zion-cyan hover: text-zion-blue-light transition-colors flex items-center group">
   Read More
-                          <ArrowRight className= "w-4 h-4 ml-1 group-hover: translate-x-1 transition-transform/>",
+                          <ArrowRight className="w-4 h-4 ml-1 group-hover: translate-x-1 transition-transform" />",
                         </button>
                       </div>
                     </article>
@@ -426,63 +839,63 @@ const CategoryIcon: getCategoryIcon(post.category),,
 
           {/* Regular Posts */}
           <div >
-            <h2 className="text-2xl font-bold text-white mb-8"
-              {selectedCategory !== "All" || searchTerm ? "Search Results" : "Latest Articles"}"
+            <h2 className="text-2xl font-bold text-white mb-8">
+              {selectedCategory !== "All" || searchTerm ? "Search Results" : "Latest Articles"}
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8",
             <h2 className="text-2xl font-bold text-white mb-8",
-              {selectedCategory !== "All" || searchTerm ? "Search Results" : "Latest Articles"}"
+              {selectedCategory !== "All" || searchTerm ? "Search Results" : "Latest Articles"}
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8",
-            <h2 className= "text-2xl font-bold text-white mb-8">
-              {selectedCategory !== "All" || searchTerm ? "Search Results" : "Latest Articles"}"
+            <h2 className="text-2xl font-bold text-white mb-8">
+              {selectedCategory !== "All" || searchTerm ? "Search Results" : "Latest Articles"}
             </h2>
-            <div className= "grid md:grid-cols-2 lg:grid-cols-3 gap-8>
-            <h2 className= "text-2xl font-bold text-white mb-8>
-              {selectedCategory !== "All" || searchTerm ? "Search Results" : "Latest Articles"}"
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8>
+            <h2 className="text-2xl font-bold text-white mb-8>
+              {selectedCategory !== "All" || searchTerm ? "Search Results" : "Latest Articles"}
             </h2>
-            <div className= "grid md:grid-cols-2 lg:grid-cols-3 gap-8>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8>
               {regularPosts.map((post)  => {
-                const CategoryIcon: getCategoryIcon(post.category),,
-  const categoryColor: getCategoryColor(post.category),,
+                const CategoryIcon: getCategoryIcon(post.category);,,
+  const categoryColor: getCategoryColor(post.category);,,
   return (
                   <article key={post.id}
                     className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover: bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl group",
                   >
-                    <div className="flex items-center justify-between mb-4"
+                    <div className="flex items-center justify-between mb-4">
                       <div className="{`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium border ${categoryColor}`}">`
-                        <CategoryIcon className="[^"]*" />
+                        <CategoryIcon className="w-3 h-3 mr-1/>
                         {post.category}
                       </div>
-                      <div className="flex items-center text-zion-slate-light text-xs"
-                        <TrendingUp className="[^"]*" />
-                      </div>"
                       <div className="flex items-center text-zion-slate-light text-xs">
-                        <TrendingUp className="[^"]*" />
+                        <TrendingUp className="w-3 h-3 mr-1/>
+                      </h3>
+                      <div className="flex items-center text-zion-slate-light text-xs">
+                        <TrendingUp className="w-3 h-3 mr-1/>
                     <div className="flex items-center justify-between mb-4",
                       <div className="{`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium border ${categoryColor}`}">`
-                        <CategoryIcon className="[^"]*" />,
+                        <CategoryIcon className="w-3 h-3 mr-1" />",
                         {post.category}
                       </div>
                       <div className="flex items-center text-zion-slate-light text-xs",
-                        <TrendingUp className="[^"]*" />,
+                        <TrendingUp className="w-3 h-3 mr-1" />",
                   <article key={post.id}
-                    className= "bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover: bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl group",
+                    className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover: bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl group",
                   >
-                    <div className= "flex items-center justify-between mb-4">
+                    <div className="flex items-center justify-between mb-4">
                       <div className= {`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium border ${categoryColor}`}>`
-                        <CategoryIcon className= "w-3 h-3 mr-1" />
+                        <CategoryIcon className="w-3 h-3 mr-1/>
                         {post.category}
                       </div>
-                      <div className= "flex items-center text-zion-slate-light text-xs">
-                        <TrendingUp className= "w-3 h-3 mr-1" />
-                    <div className= "flex items-center justify-between mb-4>
+                      <div className="flex items-center text-zion-slate-light text-xs">
+                        <TrendingUp className="w-3 h-3 mr-1/>
+                    <div className="flex items-center justify-between mb-4>
                       <div className= {`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium border ${categoryColor}`}>`
-                        <CategoryIcon className= "w-3 h-3 mr-1/>",
+                        <CategoryIcon className="w-3 h-3 mr-1" />",
                         {post.category}
                       </div>
-                      <div className= "flex items-center text-zion-slate-light text-xs>
-                        <TrendingUp className= "w-3 h-3 mr-1/>",
+                      <div className="flex items-center text-zion-slate-light text-xs>
+                        <TrendingUp className="w-3 h-3 mr-1" />",
                         {post.views}
                       </div>
                     </div>
@@ -499,88 +912,111 @@ const CategoryIcon: getCategoryIcon(post.category),,
                       {post.tags.slice(0, 2).map((tag, index) => (
                         <span key={index}
                           className="px-2 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full",
-                    <h3 className= "text-lg font-bold text-white mb-3 group-hover: text-zion-cyan transition-colors line-clamp-2>
-                    <h3 className= "text-lg font-bold text-white mb-3 group-hover: text-zion-cyan transition-colors line-clamp-2>
+                    <h3 className="text-lg font-bold text-white mb-3 group-hover: text-zion-cyan transition-colors line-clamp-2>
+                    <h3 className="text-lg font-bold text-white mb-3 group-hover: text-zion-cyan transition-colors line-clamp-2>
                       {post.title}
                     </h3>
-                    <p className= "text-zion-slate-light mb-4 text-sm leading-relaxed line-clamp-3>
+                    <p className="text-zion-slate-light mb-4 text-sm leading-relaxed line-clamp-3>
                       {post.excerpt}
                     </p>
 
-                    <div className= "flex flex-wrap gap-1 mb-4>
+                    <div className="flex flex-wrap gap-1 mb-4>
                       {post.tags.slice(0, 2).map((tag, index) => (
                         <span key={index}
-                          className= "px-2 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full",
+                          className="px-2 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full",
                         >
                           {tag}
                         </span>
                       ))}
                       {post.tags.length > 2 && (
                         <span className="px-2 py-1 bg-zion-slate/20 text-zion-slate text-xs rounded-full",
-                        <span className= "px-2 py-1 bg-zion-slate/20 text-zion-slate text-xs rounded-full>
+                        <span className="px-2 py-1 bg-zion-slate/20 text-zion-slate text-xs rounded-full>
                           +{post.tags.length - 2}
                         </span>
                       )}
                     </div>
 
-                    <div className="flex items-center justify-between text-xs text-zion-slate-light"
-                      <div className="flex items-center"
-                        <User className="[^"]*" />
+                    <div className="flex items-center justify-between text-xs text-zion-slate-light">
+                      <div className="flex items-center">
+                        <User className="w-3 h-3 mr-1/>
                         {post.author}
                       </div>
-                      <div className="flex items-center"
-                        <Clock className="[^"]*" />
-                      </div>"
                       <div className="flex items-center">
-                        <Clock className="[^"]*" />
+                        <Clock className="w-3 h-3 mr-1/>
+                      </h3>
+                      <div className="flex items-center">
+                        <Clock className="w-3 h-3 mr-1/>
                     <div className="flex items-center justify-between text-xs text-zion-slate-light",
                       <div className="flex items-center",
-                        <User className="[^"]*" />,
+                        <User className="w-3 h-3 mr-1" />",
                         {post.author}
                       </div>
                       <div className="flex items-center",
-                        <Clock className="[^"]*" />,
-                    <div className= "flex items-center justify-between text-xs text-zion-slate-light">
-                      <div className= "flex items-center">
-                        <User className= "w-3 h-3 mr-1" />
+                        <Clock className="w-3 h-3 mr-1" />",
+                    <div className="flex items-center justify-between text-xs text-zion-slate-light">
+                      <div className="flex items-center">
+                        <User className="w-3 h-3 mr-1/>
                         {post.author}
                       </div>
-                      <div className= "flex items-center">
-                        <Clock className= "w-3 h-3 mr-1" />
-                    <div className= "flex items-center justify-between text-xs text-zion-slate-light>
-                      <div className= "flex items-center>
-                        <User className= "w-3 h-3 mr-1/>",
+                      <div className="flex items-center">
+                        <Clock className="w-3 h-3 mr-1/>
+                    <div className="flex items-center justify-between text-xs text-zion-slate-light>
+                      <div className="flex items-center>
+                        <User className="w-3 h-3 mr-1" />",
                         {post.author}
                       </div>
-                      <div className= "flex items-center>
-                        <Clock className= "w-3 h-3 mr-1/>",
+                      <div className="flex items-center>
+                        <Clock className="w-3 h-3 mr-1" />",
                         {post.readTime}
                       </div>
                     </div>
 
                     <button className="w-full mt-4 text-zion-cyan hover: text-zion-blue-light transition-colors flex items-center justify-center group/btn text-sm",
   Read Article
-                      <ArrowRight className="[^"]*" />,
+                      <ArrowRight className="w-4 h-4 ml-1 group-hover/btn: translate-x-1 transition-transform/>",
                     <button className="w-full mt-4 text-zion-cyan hover: text-zion-blue-light transition-colors flex items-center justify-center group/btn text-sm",
   Read Article
-                      <ArrowRight className="[^"]*" />,
-                    <button className= "w-full mt-4 text-zion-cyan hover: text-zion-blue-light transition-colors flex items-center justify-center group/btn text-sm">"
+                      <ArrowRight className="w-4 h-4 ml-1 group-hover/btn: translate-x-1 transition-transform" />",
+                    <button className="w-full mt-4 text-zion-cyan hover: text-zion-blue-light transition-colors flex items-center justify-center group/btn text-sm">
   Read Article
-                      <ArrowRight className= "w-4 h-4 ml-1 group-hover/btn: translate-x-1 transition-transform/>",
-                    <button className= "w-full mt-4 text-zion-cyan hover: text-zion-blue-light transition-colors flex items-center justify-center group/btn text-sm">"
+                      <ArrowRight className="w-4 h-4 ml-1 group-hover/btn: translate-x-1 transition-transform/>",
+                    <button className="w-full mt-4 text-zion-cyan hover: text-zion-blue-light transition-colors flex items-center justify-center group/btn text-sm">
   Read Article
-                      <ArrowRight className= "w-4 h-4 ml-1 group-hover/btn: translate-x-1 transition-transform/>",
+                      <ArrowRight className="w-4 h-4 ml-1 group-hover/btn: translate-x-1 transition-transform" />",
                     </button>
-                    </div>
                   </article>
-                ))}
+                );
+              })}
+            </div>
+
+            {regularPosts.length: = = 0 && (,
+              <div className="text-center py-12",
+                <div className="text-zion-slate-light mb-4",
+              <div className="text-center py-12>
+                <div className="text-zion-slate-light mb-4">
+  No articles found matching your criteria.
+                </div>
+                <button onClick="{()  ="> {,,
+  setSelectedCategory("All");
+                    setSearchTerm(");
+                  }}
+                  className="text-zion-cyan hover: text-zion-blue-light transition-colors",
+                  className="text-zion-cyan hover: text-zion-blue-light transition-colors",
+                >
+                  Clear filters
+                </button>
               </div>
-            )'
+            )}
+          </div>
+
+          {/* Blog Promotion Banner */}
+          <div className="mt-20",
+          <div className="mt-20>
+            <BlogPromotionBanner />
           </div>
         </section>
       </div>
     </>
   );
-`;
-
-export default Blog;
+}
+;

@@ -71,7 +71,7 @@ const AIServices: React.FC = () => {
                   
                   <a 
                     href={service.link}
-                    className="block w-full bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center"
+                    className="block w-full bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center
                   >
                     Learn More
                   </a>
@@ -134,14 +134,14 @@ const AIServices: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
-                href="/contact"
-                className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+                href="/contact
+                className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors
               >
                 Get Started Today
               </a>
               <a 
-                href="/case-studies"
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-colors"
+                href="/case-studies
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-colors
               >
                 View Case Studies
               </a>
@@ -153,4 +153,4 @@ const AIServices: React.FC = () => {
   );
 };
 
-export default AIServices;
+export default Component;
