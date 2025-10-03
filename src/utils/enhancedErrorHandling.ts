@@ -28,7 +28,6 @@ export interface ErrorReport {
 class EnhancedErrorHandler {
   private errors: ErrorInfo[] = [];
   private maxErrors = 100;
-  // private isInitialized = false;
 
   constructor() {
     this.initialize();

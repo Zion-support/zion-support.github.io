@@ -11,7 +11,20 @@ import {
   Clock,
   Star,
   Smartphone,
-  Globe
+  Globe,
+  MapPin,
+  Users,
+  FileText,
+  CreditCard,
+  ShoppingCart,
+  Camera,
+  Mic,
+  Video,
+  Headphones,
+  Wifi,
+  Battery,
+  Wrench,
+  Tool
 } from 'lucide-react';
 
 export default function AdditionalServices() {
@@ -2184,8 +2197,8 @@ export default function AdditionalServices() {
 
   const phoneHref = 'tel:+13024640950';
   const emailHref = 'mailto:kleber@ziontechgroup.com';
-  // const websiteUrl = 'https://ziontechgroup.com';
-  // const address = '364 E Main St STE 1008, Middletown DE 19709';
+  const websiteUrl = 'https://ziontechgroup.com';
+  const address = '364 E Main St STE 1008, Middletown DE 19709';
 
   return (
     <>
