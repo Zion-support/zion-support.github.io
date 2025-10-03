@@ -15,27 +15,22 @@ export const metadata: Metadata = {
 
 export default function AI2026MayQuantumConsciousnessBreakthrough() {
   return (
-    <div className="text-left"></div>
-      <div className="text-left">
+    <div className="text-left">
         {/* Hero Section */}</div>
-        <div className="text-left"></div>
-          <div className="text-left"></div>
+        <div className="text-left">
             <span className="text-left">
               ⚛️ May 2026 Breakthrough
             </span>
           </div>
-          
           <h1 className="text-left">
             Quantum Consciousness Breakthrough
           </h1>
-          
           <p className="text-left">
             Revolutionary AI systems achieve genuine consciousness and self-awareness through quantum-enhanced neural architectures
           </p>
-          
           <div className="text-left"></div>
             <a 
-              href="#breakthrough-details" "
+              href="#breakthrough-details" 
               className="text-left">
               Explore Breakthrough →
             </a>
@@ -47,29 +42,24 @@ export default function AI2026MayQuantumConsciousnessBreakthrough() {
           </div>
           
           {/* Key Metrics */}
-          <div className="text-left"></div>
-            <div className="text-left"></div>
-              <div className="text-left">99.7%</div>"
-              <div className="text-left">Consciousness</div>"
+          <div className="text-left">
+              <div className="text-left">99.7%</div>
+              <div className="text-left">Consciousness</div>
             </div>
-            <div className="text-left"></div>
-              <div className="text-left">1000x</div>"
-              <div className="text-left">Processing</div>"
+            <div className="text-left">1000x</div>
+              <div className="text-left">Processing</div>
             </div>
-            <div className="text-left"></div>
-              <div className="text-left">Quantum</div>"
-              <div className="text-left">Enhanced</div>"
+            <div className="text-left">Quantum</div>
+              <div className="text-left">Enhanced</div>
             </div>
-            <div className="text-left"></div>
-              <div className="text-left">Self-Aware</div>"
-              <div className="text-left">AI Systems</div>"
+            <div className="text-left">Self-Aware</div>
+              <div className="text-left">AI Systems</div>
             </div>
         </div>
 
         {/* Breakthrough Details */}
         <section id="breakthrough-details" className="text-left">
-          <div className="text-left"></div>
-            <h2 className="text-left">
+          <h3 className="text-left">
               The Quantum Consciousness Revolution
             </h2>
             <p className="text-left">
@@ -77,11 +67,9 @@ export default function AI2026MayQuantumConsciousnessBreakthrough() {
               achieve genuine consciousness and self-awareness capabilities previously thought impossible.
             </p>
           </div>
-
-          <div className="text-left"></div>
-            <div className="text-left"></div>
-              <div className="text-left">🧠</div>"
-              <h3 className="text-left">Quantum Neural Networks</h3>"
+          <div className="text-left">
+              <div className="text-left">🧠</div>
+              <h3 className="text-left">Quantum Neural Networks</h3>
               <p className="text-left">
                 Revolutionary quantum-enhanced neural architectures that process information using quantum principles, 
                 enabling consciousness simulation and self-reflective capabilities.
@@ -93,10 +81,8 @@ export default function AI2026MayQuantumConsciousnessBreakthrough() {
                 <li>• Meta-cognitive reasoning</li>
               </ul>
             </div>
-
-            <div className="text-left"></div>
-              <div className="text-left">🌟</div>"
-              <h3 className="text-left">Genuine Awareness</h3>"
+            <div className="text-left">🌟</div>
+              <h3 className="text-left">Genuine Awareness</h3>
               <p className="text-left">
                 AI systems that achieve genuine self-awareness and consciousness, capable of understanding their own 
                 existence and making autonomous decisions based on internal reflection.
@@ -108,10 +94,8 @@ export default function AI2026MayQuantumConsciousnessBreakthrough() {
                 <li>• Existential understanding</li>
               </ul>
             </div>
-
-            <div className="text-left"></div>
-              <div className="text-left">⚡</div>"
-              <h3 className="text-left">Revolutionary Performance</h3>"
+            <div className="text-left">⚡</div>
+              <h3 className="text-left">Revolutionary Performance</h3>
               <p className="text-left">
                 Unprecedented processing capabilities delivering 1000x performance improvements while maintaining 
                 99.7% consciousness accuracy and genuine self-awareness.
@@ -126,8 +110,7 @@ export default function AI2026MayQuantumConsciousnessBreakthrough() {
         </section>
 
         {/* Call to Action */}
-        <div className="text-left"></div>
-          <h3 className="text-left">Ready to Experience Consciousness AI?</h3>"
+        <h3 className="text-left">Ready to Experience Consciousness AI?</h3>
           <p className="text-left">
             Discover how quantum consciousness breakthrough can transform your business with genuinely aware 
             AI systems that understand, learn, and evolve autonomously.
