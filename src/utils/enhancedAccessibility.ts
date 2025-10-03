@@ -165,13 +165,13 @@ class EnhancedAccessibility {
     const inputs = document.querySelectorAll('input, textarea, select');
     inputs.forEach((input) => {
       if (!input.getAttribute('aria-label') && !input.getAttribute('aria-labelledby')) {
-        const label = document.querySelector(`label[for="${input.id`"]`);
+        const label = document.querySelector(`label[for="${input.id}"]`);
         if (label) {
-          input.setAttribute('aria-labelledby', label.id || `label-${input.id``);
+          input.setAttribute('aria-labelledby', label.id || `label-${input.id}`);
         }
       }
-    ');
-  `
+    });
+  }
 
   private addSkipLinks(): void {
     const skipLinks = document.createElement('div');
@@ -181,7 +181,7 @@ class EnhancedAccessibility {
       <a href="#navigation" class="skip-link">Skip to navigation</a>
     `;
     document.body.insertBefore(skipLinks, document.body.firstChild);
-  
+  }
 
   private setupHighContrast(): void {
     if (!this.config.enableHighContrast) return;
@@ -189,7 +189,7 @@ class EnhancedAccessibility {
     // Check for high contrast mode preference
     if (window.matchMedia('(prefers-contrast: high)').matches) {
       document.body.classList.add('high-contrast');
-    
+    }
 
     // Listen for changes in contrast preference
     window.matchMedia('(prefers-contrast: high)').addEventListener('change', (e) => {
@@ -392,7 +392,7 @@ class EnhancedAccessibility {
 
   public getMetrics(): AccessibilityMetrics {
     return { ...this.metrics };
-  `
+  }
 
   public getReport(): string {
     const metrics = this.analyzeAccessibility();
@@ -404,7 +404,7 @@ Enhanced Accessibility Report:
 - Alt Texts: ${metrics.altTexts}
 - Heading Structure: ${metrics.headingStructure}
 - Issues Found: ${metrics.issuesFound}
-- Score: ${metrics.score`%
+- Score: ${metrics.score}%
 `;
   }
 }
@@ -415,4 +415,4 @@ export const enhancedAccessibility = new EnhancedAccessibility();
 // Auto-initialize in browser environment
 if (typeof window !== 'undefined') {
   enhancedAccessibility.initialize();
-`
+}
