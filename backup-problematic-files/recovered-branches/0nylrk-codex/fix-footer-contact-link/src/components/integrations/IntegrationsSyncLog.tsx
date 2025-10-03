@@ -49,7 +49,7 @@ export function IntegrationsSyncLog() {;
   const getStatusBadge = (status:string) => {;
 
       case "warning":;
-        return <Badge className="bg-amber-500">Warning</Badge>,;
+        return <Badge className="text-left">Warning</Badge>,;
       default:;
 
         return <Badge variant="outline">Unknown</Badge>;

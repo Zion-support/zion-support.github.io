@@ -61,63 +61,63 @@ export function JobMatchCard({ ;
   postedDate.setDate(postedDate.getDate() - Math.floor(Math.random() * 14)), // Random date within last 2 weeks;
   ;
   return (;
-    <Card className="overflow-hidden">;
-      <CardContent className="p-0">;
+    <Card className="text-left">;
+      <CardContent className="text-left">;
         {/* Match score indicator */}
-        <div className="bg-gradient-to-r from-primary/10 to-primary/5 p-3 flex justify-between items-center">;
-          <div className="flex items-center gap-1">;
-            <Star className="h-4 w-4 text-yellow-500 fill-yellow-500" />;
-            <span className="font-medium">{matchPercent}% Match</span>;
+        <div className="text-left">;
+          <div className="text-left">;
+            <Star className="text-left" />;
+            <span className="text-left">{matchPercent}% Match<;
           </div>;
-          <Badge variant="outline" className="bg-background">;
+          <Badge variant="outline" className="text-left">;
             {formatDistanceToNow(postedDate, { addSuffix:true })}
           </Badge>;
         </div>;
         ;
         {/* Talent details */}
-        <div className="p-4">;
-          <div className="flex justify-between items-start gap-2 mb-3">;
-            <h3 className="text-lg font-bold line-clamp-2">{name}</h3>;
+        <div className="text-left">;
+          <div className="text-left">;
+            <h3 className="text-left">{name}</h3>;
             <Badge variant="default">;
               Available;
             </Badge>;
           </div>;
           ;
-          <div className="text-lg font-medium mb-2">{title}</div>;
+          <div className="text-left">{title}</div>;
           ;
-          <div className="flex flex-wrap gap-2 mb-3">;
+          <div className="text-left">;
             <Badge variant="outline">{category}</Badge>;
           </div>;
           ;
-          <div className="flex items-center gap-2 mb-2">;
-            <Avatar className="h-6 w-6">;
+          <div className="text-left">;
+            <Avatar className="text-left">;
               {avatar ? (;
                 <AvatarImage src={avatar} alt={name} />;
               ) :(;
                 <AvatarFallback>;
-                  <Building className="h-3 w-3" />;
+                  <Building className="text-left" />;
                 </AvatarFallback>;
               )}
             </Avatar>;
-            <span className="text-sm font-medium">{company || 'Independent'}</span>;
+            <span className="text-left">{company || 'Independent'}<;
           </div>;
           ;
-          <div className="space-y-1 text-sm text-muted-foreground mb-3">;
-            <div className="flex items-center gap-1">;
-              <MapPin className="h-3.5 w-3.5" />;
-              <span>{location || 'Remote'}</span>;
+          <div className="text-left">;
+            <div className="text-left">;
+              <MapPin className="text-left" />;
+              <span>{location || 'Remote'}<;
             </div>;
           </div>;
           ;
-          <div className="flex flex-wrap gap-1 mb-4">;
+          <div className="text-left">;
             {skills?.slice(0, 5).map((skill) => (;
-              <Badge key={skill} variant="secondary" className="text-xs">;
+              <Badge key={skill} variant="secondary" className="text-left">;
                 {skill}
               </Badge>;
             ))}
           </div>;
           ;
-          <div className="flex gap-2 justify-end">;
+          <div className="text-left">;
             {onInvite && (;
               <Button onClick={handleInvite} variant="default" size="sm">;
                 Invite;
@@ -129,7 +129,7 @@ export function JobMatchCard({ ;
               </Button>;
             )}
             {onApply && (;
-              <Button onClick={handleApply} className="w-full">;
+              <Button onClick={handleApply} className="text-left">;
                 Apply Now;
               </Button>;
             )}
@@ -182,17 +182,17 @@ const handleInvite = () => {
 }
 };
 //Generate a formatted date for display const postedDate = new Date ();
-postedDate.setDate (postedDate.getDate () - Math.floor (Math.random () * 14) ), //Random date within last 2 weeks return (<Card className="overflow-hidden" > <CardContent className="p-0" > {
+postedDate.setDate (postedDate.getDate () - Math.floor (Math.random () * 14) ), //Random date within last 2 weeks return (<Card className="text-left" > <CardContent className="text-left" > {
   /* Match score indicator */ 
-}<div className="bg-gradient-to-r from-primary/10 to-primary/5 p-3 flex justify-between items-center" > <div className="flex items-center gap-1" > <Star className="h-4 w-4 text-yellow-500 fill-yellow-500" /> <span className="font-medium" > {
+}<div className="text-left" > <div className="text-left" > <Star className="text-left" /> <span className="text-left" > {
   matchPercent 
-}% Match</span> </div> <Badge variant="outline" className="bg-background" > {
+}% Match< </div> <Badge variant="outline" className="text-left" > {
   formatDistanceToNow (postedDate, {
   addSuffix: true 
 }) 
 }</Badge> </div> {
   /* Talent details */ 
-}<div className="p-4" > <div className="flex justify-between items-start gap-2 mb-3" > <h3 className="text-lg font-bold line-clamp-2" > {
+}<div className="text-left" > <div className="text-left" > <h3 className="text-left" > {
   name 
 }</h3> <Badge variant="default" > h-3 w-3" /> </AvatarFallback>) 
 }</Avatar> </Badge>) ) 

@@ -14,8 +14,7 @@ interface MockPieProps {;
 
     expect(screen.getByText(/Total Supply: 1000000/i)).toBeInTheDocument()})
   test('
-  'renders all sections with titles and content using react-markdown', () => {
-
+  'renders all sections with titles and content using react-markdown', () => {/* content */}
     expect(screen.getByText(/MyToken - Whitepaper Draft/i)).toBeInTheDocument()
     expect(screen.getByText(/Total Supply: 1000000/i)).toBeInTheDocument()});
   test(

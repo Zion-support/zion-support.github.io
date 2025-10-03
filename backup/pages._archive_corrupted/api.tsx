@@ -3,7 +3,7 @@
 
 
 
-          <div className="space-y-6">
+          <div className="text-left">
 
               <div key={index} className=\"bg-white border border-gray-200 rounded-lg p-6 shadow-sm\">
                 <div className=\"flex items-center justify-between mb-4\">
@@ -16,10 +16,10 @@
           <div className=\"max-w-4xl mx-auto px-6 text-center\">
             <h2 className=\"text-3xl font-bold text-gray-900 mb-4\">Need Help with Integration?</h2>
             <p className=\"text-gray-600 text-xl mb-8\">
-        <section className="py-16 bg-gray-50">
-          <div className="max-w-4xl mx-auto px-6 text-center">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Need Help with Integration?</h2>
-            <p className="text-gray-600 text-xl mb-8">
+        <section className="text-left">
+          <div className="text-left">
+            <h2 className="text-left">Need Help with Integration?</h2>
+            <p className="text-left">
               Our team is here to help you integrate our APIs into your applications.
 
 

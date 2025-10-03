@@ -1,6 +1,6 @@
 import { ServiceVariant } from '../types/service-variants';
 
-export interface InnovativeEnergyService {
+export interface InnovativeEnergyService {/* content */}
   id: string;
   name: string;
   tagline: string;
@@ -27,7 +27,7 @@ export interface InnovativeEnergyService {
   marketSize: string;
   growthRate: string;
   variant: ServiceVariant;
-  contactInfo: {
+  contactInfo: {/* content */}
     mobile: string;
     email: string;
     address: string;
@@ -41,7 +41,7 @@ export interface InnovativeEnergyService {
   reviews: number;
 }
 
-const contact = {
+const contact = {/* content */}
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -49,7 +49,7 @@ const contact = {
 };
 
 export const innovativeEnergyServices: InnovativeEnergyService[] = [
-  {
+  {/* content */}
     id: 'ai-powered-energy-optimization',
     name: 'AI-Powered Energy Optimization',
     tagline: 'Intelligent energy optimization with AI-powered analytics and smart grid management',
@@ -94,7 +94,7 @@ export const innovativeEnergyServices: InnovativeEnergyService[] = [
     rating: 4.8,
     reviews: 189
   },
-  {
+  {/* content */}
     id: 'quantum-energy-storage',
     name: 'Quantum Energy Storage Platform',
     tagline: 'Quantum-powered energy storage with advanced battery optimization and grid stabilization',
@@ -139,7 +139,7 @@ export const innovativeEnergyServices: InnovativeEnergyService[] = [
     rating: 4.6,
     reviews: 6
   },
-  {
+  {/* content */}
     id: 'solar-energy-optimization',
     name: 'Solar Energy Optimization Platform',
     tagline: 'Advanced solar energy optimization with AI-powered panel management and efficiency tracking',
@@ -184,7 +184,7 @@ export const innovativeEnergyServices: InnovativeEnergyService[] = [
     rating: 4.7,
     reviews: 156
   },
-  {
+  {/* content */}
     id: 'wind-energy-management',
     name: 'Wind Energy Management Platform',
     tagline: 'Intelligent wind energy management with AI-powered turbine optimization and predictive maintenance',
@@ -229,7 +229,7 @@ export const innovativeEnergyServices: InnovativeEnergyService[] = [
     rating: 4.6,
     reviews: 134
   },
-  {
+  {/* content */}
     id: 'sustainability-analytics-platform',
     name: 'Sustainability Analytics Platform',
     tagline: 'Comprehensive sustainability analytics with carbon tracking and environmental impact assessment',

@@ -188,17 +188,17 @@ return: a.price - b.price'      case;';
                       <div className='flex items-center justify-between text-sm>'
                         <span className='text-zion-cyan font-medium'>
                           {service.category}
-                        </span>'
+                        <'
                         <span``
                           className={`px-2 py-1 rounded-full text-xs font-medium ${
 
                         >{service.innovationLevel}
-                        </span>
+                        <
                       </div>`
                       {/* ROI & Market Price */}
                       <div className='flex items-center justify-between text-sm>'
                         <div className='flex items-center gap-1 text-zion-green>'
-                          <TrendingUp className='w-4 h-4'  />                          <span>ROI: {service.roi}</span>'
+                          <TrendingUp className='w-4 h-4'  />                          <span>ROI: {service.roi}<'
                         </div>''
                         <div className='text-zion-slate-light'>
                           Market: {service.marketPrice}
@@ -224,10 +224,10 @@ return: a.price - b.price'      case;';
                       <div className='flex items-center gap-4 text-sm text-zion-slate-light>'
                         <div className='flex items-center gap-1>'
                           <Clock className='w-4 h-4'  />
-                          <span>{service.estimatedDelivery}</span>'
+                          <span>{service.estimatedDelivery}<'
                         </div>''
                         <div className='flex items-center gap-1>'
-                          <Star className='w-4 h-4 text-zion-cyan'  />                          <span>{service.supportLevel}</span>
+                          <Star className='w-4 h-4 text-zion-cyan'  />                          <span>{service.supportLevel}<
                         </div>
                       </div>'
                       <Link``

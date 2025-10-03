@@ -1,6 +1,6 @@
 import { ServiceVariant } from '../types/service-variants';
 
-export interface InnovativeEdgeComputingService {
+export interface InnovativeEdgeComputingService {/* content */}
   id: string;
   name: string;
   tagline: string;
@@ -27,7 +27,7 @@ export interface InnovativeEdgeComputingService {
   marketSize: string;
   growthRate: string;
   variant: ServiceVariant;
-  contactInfo: {
+  contactInfo: {/* content */}
     mobile: string;
     email: string;
     address: string;
@@ -41,7 +41,7 @@ export interface InnovativeEdgeComputingService {
   reviews: number;
 }
 
-const contact = {
+const contact = {/* content */}
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -49,7 +49,7 @@ const contact = {
 };
 
 export const innovativeEdgeComputingServices: InnovativeEdgeComputingService[] = [
-  {
+  {/* content */}
     id: 'ai-powered-edge-computing',
     name: 'AI-Powered Edge Computing',
     tagline: 'Intelligent edge computing with AI-powered optimization and real-time processing',
@@ -94,7 +94,7 @@ export const innovativeEdgeComputingServices: InnovativeEdgeComputingService[] =
     rating: 4.8,
     reviews: 178
   },
-  {
+  {/* content */}
     id: 'quantum-edge-optimization',
     name: 'Quantum Edge Optimization',
     tagline: 'Quantum-powered edge optimization for network efficiency and computational performance',
@@ -139,7 +139,7 @@ export const innovativeEdgeComputingServices: InnovativeEdgeComputingService[] =
     rating: 4.7,
     reviews: 3
   },
-  {
+  {/* content */}
     id: '5g-edge-computing-platform',
     name: '5G Edge Computing Platform',
     tagline: 'Advanced 5G edge computing platform with ultra-low latency and high bandwidth',
@@ -184,7 +184,7 @@ export const innovativeEdgeComputingServices: InnovativeEdgeComputingService[] =
     rating: 4.6,
     reviews: 123
   },
-  {
+  {/* content */}
     id: 'edge-ai-platform',
     name: 'Edge AI Platform',
     tagline: 'Intelligent edge AI platform with on-device machine learning and real-time inference',
@@ -229,7 +229,7 @@ export const innovativeEdgeComputingServices: InnovativeEdgeComputingService[] =
     rating: 4.7,
     reviews: 145
   },
-  {
+  {/* content */}
     id: 'edge-security-platform',
     name: 'Edge Security Platform',
     tagline: 'Comprehensive edge security platform with threat detection and device protection',

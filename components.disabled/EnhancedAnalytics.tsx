@@ -128,8 +128,8 @@ className='bg-white dark: bg-gray-800 p-4 rounded-lg shadow border border-gray-2
           transition={{ delay: 0.5 }}
 
   'Home' : page.page}
-  '                  </span>'                </div>'
-                <span className='text-sm font-semibold text-gray-900 dark:text-white>                  {formatNumber(page.views)}                </span></div>
+  '                  <'                </div>'
+                <span className='text-sm font-semibold text-gray-900 dark:text-white>                  {formatNumber(page.views)}                <</div>
 
             ))}
           </div>

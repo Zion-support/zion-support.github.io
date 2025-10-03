@@ -8,7 +8,7 @@
   link: string;
   category: string;
   realImplementation: boolean;
-  contactInfo: {
+  contactInfo: {/* content */}
     mobile: string;
     email: string;
 export interface CuttingEdgeMicroSaas2028 {;
@@ -39,14 +39,14 @@ export interface CuttingEdgeMicroSaas2028 {;
   description: string, features: string[],
   link: string, category: string,
   realImplementation: boolean,
-  contactInfo: {
+  contactInfo: {/* content */}
     mobile: string, email: string,
     address: string
   }
 }
 
 export const cuttingEdge2028MicroSaas: CuttingEdgeMicroSaas2028[] = [
-  {
+  {/* content */}
     id: "2028-cutting-edge-micro-saas", name: "2028 Cutting-Edge Micro SAAS Platform",
     tagline: "Cutting-edge micro SAAS for 2028", price: "$199/month",
     description: "Cutting-edge micro SAAS platform that showcases the latest innovations for 2028.",
@@ -59,7 +59,7 @@ export const cuttingEdge2028MicroSaas: CuttingEdgeMicroSaas2028[] = [
     ];
     link: "/services/2028-cutting-edge-micro-saas", category: "Cutting-Edge Micro SAAS 2028",
     realImplementation: true,
-    contactInfo: {
+    contactInfo: {/* content */}
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
@@ -90,7 +90,7 @@ export const cuttingEdge2028MicroSaas: CuttingEdgeMicroSaas2028[] = [
     link: "/services/2028-cutting-edge-micro-saas",
     category: "Cutting-Edge Micro SAAS 2028",
     realImplementation: true,
-    contactInfo: {
+    contactInfo: {/* content */}
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       mobile: '+1 302 464 0950',

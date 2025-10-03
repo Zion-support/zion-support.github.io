@@ -1,4 +1,4 @@
-title = "AI Writing Assistant",
+title = "AI Writing Assistant
   defaultPrompt,
   systemPrompt,
   onAccept,
@@ -71,21 +71,20 @@ origin/cursor/automate-test-improve-and-merge-code-2533
         type="button"
         onClick={onOpen}
       {isOpen && ("
-        <div className="fixed inset-0 z-50 flex items-center justify-center">"
-          <div className="absolute inset-0 bg-black/50" onClick={onClose} />"
-          <div className="relative z-10 w-full max-w-2xl rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black shadow-xl">"
-            <div className="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-gray-800">"
-
-              <h3 className="text-base font-semibold">{title}</h3>
+        <div className="text-left">"
+          <div className="text-left" onClick={onClose} />"
+          <div className="text-left">"
+            <div className="text-left">"
+              <h3 className="text-left">{title}</h3>
       {isOpen && (;"
-        <div className="fixed inset-0 z-50 flex items-center justify-center">;"
-          <div className="absolute inset-0 bg-black/50" onClick={onClose} />;"
-          <div className="relative z-10 w-full max-w-2xl rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black shadow-xl">;"
-            <div className="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-gray-800">;"
-              <h3 className="text-base font-semibold">{title}</h3>;
+        <div className="text-left">;"
+          <div className="text-left" onClick={onClose} />;"
+          <div className="text-left">;"
+            <div className="text-left">;"
+              <h3 className="text-left">{title}</h3>;
               <button;
                 onClick={onClose}"
-                className="text-sm opacity-70 hover:opacity-100">;
+                className="text-left">;
 
                   Operator prompt;
                 </label>;
@@ -101,7 +100,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   Accept;
                 </button>;
               </div>;"
-              {error && <div className="text-red-600 text-sm">{error}</div>}
+              {error && <div className="text-left">{error}</div>}
               <div>;
 
 <div className='fixed inset-0 z-50 flex items-center justify-center'>
@@ -177,7 +176,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
 origin/cursor/automate-test-improve-and-merge-code-2533
                 <label
 
-                  className="block text-xs font-medium mb-1"
+                  className="text-left"
                   Output (markdown);
                 </label>;
                 {isEditing ? (;
@@ -211,7 +210,7 @@ value={output}
     </>;
   );
 }"
-                  <pre className="w-full rounded-md border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-3 text-sm whitespace-pre-wrap">{output || 'No content yet. Click Generate.'}</pre>
+                  <pre className="text-left">{output || 'No content yet. Click Generate.'}</pre>
                     onChange={e => setOutput(e.target.value)}
                     rows={12}
                     className='w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 p-2 text-sm'

@@ -3,59 +3,77 @@
 const fs = require('fs');
 const path = require('path');
 
-// List of files that need fixing
-const filesToFix = [
-  'pages/ai-services.tsx',
-  'pages/blog.tsx', 
-  'pages/help.tsx',
-  'pages/it-services.tsx',
-  'pages/micro-saas.tsx',
-  'pages/pricing.tsx',
-  'pages/privacy.tsx',
-  'pages/services/ai-development.tsx',
-  'pages/services/cloud-services.tsx',
-  'pages/services/web-development.tsx',
-  'pages/terms.tsx',
-  'components/ContactForm.tsx',
-  'components/TestimonialsSection.tsx'
-];
-
-function fixStringLiterals(content) {
-  // Fix corrupted string literals in JavaScript/TypeScript code
-  content = content.replace(/= &apos;([^&]+)&apos;/g, "= '$1'");
-  content = content.replace(/&apos;([^&]+)&apos;/g, "'$1'");
-  content = content.replace(/= &quot;([^&]+)&quot;/g, '= "$1");
-  content = content.replace(/&quot;([^&]+)&quot;/g, '"$1");
-  
-  return content}
-
-function fixFile(filePath) {
+function fixStringLiterals(filePath) {
   try {
-    if (!fs.existsSync(filePath)) {
-      console.log(`File not found: ${filePath}`);
-      return false}
-    
     let content = fs.readFileSync(filePath, 'utf8');
-    const originalContent = content;
     
-    content = fixStringLiterals(content);
+    // Fix unterminated string literals by removing trailing quotes
+    content = content.replace(/([^\\])"([^"]*)"\s*$/gm, '$1"$2"');
+    content = content.replace(/([^\\])"([^"]*)"\s*$/gm, '$1"$2"');
     
-    if (content !== originalContent) {
-      fs.writeFileSync(filePath, content);
-      console.log(`Fixed string literals in: ${filePath}`);
-      return true}
+    // Fix specific patterns like "string", -> "string",
+    content = content.replace(/"([^"]*)",\s*$/gm, '"$1",');
     
-    return false} catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-    return false}
+    // Fix specific patterns like "string"\s*$ -> "string"
+    content = content.replace(/"([^"]*)"\s*$/gm, '"$1"');
+    
+    // Fix JSX attribute issues
+    content = content.replace(/className="([^"]*)"\s*$/gm, 'className="$1"');
+    content = content.replace(/href="([^"]*)"\s*$/gm, 'href="$1"');
+    content = content.replace(/src="([^"]*)"\s*$/gm, 'src="$1"');
+    
+    if (content !== fs.readFileSync(filePath, 'utf8')) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed: ${filePath}`);
+      return true;
+    }
+  } catch (error) {
+    console.error(`Error processing ${filePath}:`, error.message);
+  }
+  return false;
 }
 
-console.log('Fixing corrupted string literals...');
+function findTsxFiles(dir) {
+  const files = [];
+  
+  function traverse(currentDir) {
+    try {
+      const items = fs.readdirSync(currentDir);
+      
+      for (const item of items) {
+        const fullPath = path.join(currentDir, item);
+        try {
+          const stat = fs.statSync(fullPath);
+          
+          if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+            traverse(fullPath);
+          } else if (stat.isFile() && item.endsWith('.tsx')) {
+            files.push(fullPath);
+          }
+        } catch (error) {
+          // Skip files that can't be accessed
+          console.warn(`Skipping ${fullPath}: ${error.message}`);
+        }
+      }
+    } catch (error) {
+      console.warn(`Cannot read directory ${currentDir}: ${error.message}`);
+    }
+  }
+  
+  traverse(dir);
+  return files;
+}
 
+// Get all .tsx files
+const tsxFiles = findTsxFiles(process.cwd());
 let fixedCount = 0;
-filesToFix.forEach(filePath => {
-  if (fixFile(filePath)) {
-    fixedCount++}
-});
 
-console.log(`Fixed string literals in ${fixedCount} files`);
+console.log(`Found ${tsxFiles.length} .tsx files to process...`);
+
+for (const file of tsxFiles) {
+  if (fixStringLiterals(file)) {
+    fixedCount++;
+  }
+}
+
+console.log(`Fixed ${fixedCount} files.`);

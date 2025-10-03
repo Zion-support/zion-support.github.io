@@ -14,9 +14,8 @@
   link: string;
 
 
-  {
-
-  {
+  {/* content */}
+  {/* content */}
     id: 'neuromorphic-computing'
     name: 'Neuromorphic Computing Platform'
     description:
@@ -59,7 +58,7 @@
     link: 'https://ziontechgroup.com/services/neuromorphic-computing'
     tags: ['Neuromorphic Computing', 'AI', 'Edge Computing', 'IoT', 'Robotics']
   }
-  {
+  {/* content */}
     id: 'synthetic-biology-platform'
     name: 'Synthetic Biology Platform'
     description:
@@ -113,7 +112,7 @@
   implementation_time: string;
   roi: string;
   link: string;
-  {
+  {/* content */}
     id: 'synthetic - biology - platform',
     name: 'Synthetic Biology Platform',
     description:;
@@ -167,7 +166,7 @@
       'Research',
     ],
   },
-  {
+  {/* content */}
     id: 'quantum - sensors - network',
     name: 'Quantum Sensors Network',
     description:;
@@ -209,7 +208,7 @@
       'Research'
     ]
   }
-  {
+  {/* content */}
     id: 'quantum-sensors-network'
     name: 'Quantum Sensors Network'
     description:
@@ -260,7 +259,7 @@
       'Navigation',
     ],
   },
-  {
+  {/* content */}
     id: 'brain - computer - interface',
     name: 'Brain - Computer Interface Platform',
     description:;
@@ -299,7 +298,7 @@
       'Navigation'
     ]
   }
-  {
+  {/* content */}
     id: 'brain-computer-interface'
     name: 'Brain-Computer Interface Platform'
     description:
@@ -349,7 +348,7 @@
       'Research',
     ],
   },
-  {
+  {/* content */}
     id: 'quantum - internet - security',
     name: 'Quantum Internet Security Platform',
     description:;
@@ -403,7 +402,7 @@
       'Financial',
     ],
   },
-  {
+  {/* content */}
     id: 'autonomous - robotics - platform',
     name: 'Autonomous Robotics Platform',
     description:;
@@ -442,10 +441,10 @@
       'Research'
     ]
   }
-  {
+  {/* content */}
     ]
   }
-  {
+  {/* content */}
       'Manufacturing companies',
       'Logistics companies',
       'Agricultural companies',
@@ -464,8 +463,7 @@
 
     tags: ['Robotics', 'AI', 'Automation', 'Manufacturing', 'Logistics'],
   },
-  {
-
+  {/* content */}
     id: 'quantum - materials - discovery',
     name: 'Quantum Materials Discovery Platform',
     description:;
@@ -520,7 +518,7 @@
       'Innovation',
     ],
   },
-  {
+  {/* content */}
     id: 'quantum - financial - modeling',
     name: 'Quantum Financial Modeling Platform',
     description:;
@@ -572,7 +570,7 @@
       'Modeling',
     ],
   },
-  {
+  {/* content */}
     id: 'quantum - climate - modeling',
     name: 'Quantum Climate Modeling Platform',
     description:;

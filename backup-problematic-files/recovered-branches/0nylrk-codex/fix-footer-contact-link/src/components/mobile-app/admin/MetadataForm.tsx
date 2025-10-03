@@ -41,13 +41,13 @@ export const MetadataForm:React.FC<MetadataFormProps> = ({ form }) => {;
   const longDescription = watch("longDescription"),;
 ;
   return (;
-    <Card className="bg-zion-blue border-zion-purple/30">;
+    <Card className="text-left">;
       <CardHeader>;
         <CardTitle>App Metadata</CardTitle>;
       </CardHeader>;
       <CardContent>;
         <Form {...form}>;
-          <div className="space-y-4">;
+          <div className="text-left">;
             <FormField;
               control={control}
               name="appTitle";
@@ -95,7 +95,7 @@ export const MetadataForm:React.FC<MetadataFormProps> = ({ form }) => {;
                   <FormControl>;
                     <Textarea ;
                       placeholder="Detailed description of your app";
-                      className="min-h-32";
+                      className="text-left";
                       maxLength={maxDescriptionLength}
                       {...field}
                     />;
@@ -113,24 +113,24 @@ export const MetadataForm:React.FC<MetadataFormProps> = ({ form }) => {;
                 id="keywords";
                 placeholder="Add keywords (press Enter or comma to add)";
                 onKeyDown={addKeyword}
-                className="mb-2";
+                className="text-left";
               />;
               ;
-              <div className="flex flex-wrap gap-2 mt-2">;
+              <div className="text-left">;
                 {keywords.map((keyword, index) => (;
-                  <Badge key={index} className="bg-zion-purple/60 hover:bg-zion-purple">;
+                  <Badge key={index} className="text-left">;
                     {keyword}
                     <button ;
                       type="button";
                       onClick={() => removeKeyword(keyword)}
-                      className="ml-1 hover:text-red-300";
+                      className="text-left";
                     >;
-                      <X className="h-3 w-3" />;
+                      <X className="text-left" />;
                     </button>;
                   </Badge>;
                 ))}
               </div>;
-              <FormDescription className="mt-2">;
+              <FormDescription className="text-left">;
                 Add keywords to improve discoverability (max 100 characters total);
               </FormDescription>;
             </div>;
@@ -172,7 +172,7 @@ if (value && !keywords.includes (value) ) {
 }/ {;
   maxDescriptionLength ;
 }characters </FormDescription> </FormItem>) ;
-}/> <div> <FormLabel htmlFor="keywords" >Keywords</FormLabel> <Input className="mb-2" /> <div className="flex flex-wrap gap-2 mt-2"> > <X className="h-3 w-3" /> </button> </Badge>) ) ";"}</div> <FormDescription className="mt-2" > Add keywords to improve discoverability (max 100 characters total) </FormDescription> </div> <FormField <FormItem> <FormLabel>App Version</FormLabel> <FormControl> <Input /> </FormControl> </FormItem>) ;
+}/> <div> <FormLabel htmlFor="keywords" >Keywords</FormLabel> <Input className="text-left" /> <div className="text-left"> > <X className="text-left" /> </button> </Badge>) ) ";"}</div> <FormDescription className="text-left" > Add keywords to improve discoverability (max 100 characters total) </FormDescription> </div> <FormField <FormItem> <FormLabel>App Version</FormLabel> <FormControl> <Input /> </FormControl> </FormItem>) ;
 }/> </div> </Form> </CardContent> </Card>) ;
 :temp_broken_files/mobile-app/admin/MetadataForm.tsx
 };"'"

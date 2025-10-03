@@ -23,78 +23,78 @@ export const metadata = {
 
 export default function AIAutonomousManufacturing2026() {
   return (
-    <div className="max-w-4xl mx-auto px-4 py-12">
-      <article className="prose prose-lg max-w-none">
+    <div className="text-left">
+      <article className="text-left">
         {/* Header */}
-        <header className="mb-12">
-          <div className="flex items-center gap-3 mb-6">
-            <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-4 py-2 rounded-full text-sm font-bold">
+        <header className="text-left">
+          <div className="text-left">
+            <span className="text-left">
               🏭 MANUFACTURING AI
-            </span>
-            <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">
+            <
+            <span className="text-left">
               January 25, 2026
-            </span>
+            <
           </div>
-          <h1 className="text-5xl font-bold text-gray-900 mb-6 leading-tight">
+          <h1 className="text-left">
             AI Autonomous Manufacturing 2026: 
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-emerald-600">
+            <span className="text-left">
               {' '}The Complete Guide to Self-Healing Factories
-            </span>
+            <
           </h1>
-          <p className="text-xl text-gray-600 leading-relaxed">
+          <p className="text-left">
             Transform your manufacturing operations with autonomous AI systems that achieve 99.9% uptime, 
             85% cost reduction, and $50M+ ROI. Complete implementation guide with real-world case studies.
           </p>
         </header>
 
         {/* Key Stats */}
-        <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl p-8 mb-12 border border-green-200">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">🚀 Proven Results</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-green-600">99.9%</div>
-              <div className="text-sm text-gray-600">Uptime</div>
+        <div className="text-left">
+          <h2 className="text-left">🚀 Proven Results</h2>
+          <div className="text-left">
+            <div className="text-left">
+              <div className="text-left">99.9%</div>
+              <div className="text-left">Uptime</div>
             </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-emerald-600">85%</div>
-              <div className="text-sm text-gray-600">Cost Reduction</div>
+            <div className="text-left">
+              <div className="text-left">85%</div>
+              <div className="text-left">Cost Reduction</div>
             </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-blue-600">$50M+</div>
-              <div className="text-sm text-gray-600">ROI</div>
+            <div className="text-left">
+              <div className="text-left">$50M+</div>
+              <div className="text-left">ROI</div>
             </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-purple-600">6mo</div>
-              <div className="text-sm text-gray-600">Implementation</div>
+            <div className="text-left">
+              <div className="text-left">6mo</div>
+              <div className="text-left">Implementation</div>
             </div>
           </div>
         </div>
 
         {/* Table of Contents */}
-        <div className="bg-gray-50 rounded-xl p-8 mb-12">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">📋 Table of Contents</h2>
-          <ul className="space-y-3">
-            <li><a href="#introduction" className="text-blue-600 hover:text-blue-800">1. The Manufacturing Revolution</a></li>
-            <li><a href="#autonomous-systems" className="text-blue-600 hover:text-blue-800">2. AI Autonomous Systems Architecture</a></li>
-            <li><a href="#implementation" className="text-blue-600 hover:text-blue-800">3. Implementation Roadmap</a></li>
-            <li><a href="#case-studies" className="text-blue-600 hover:text-blue-800">4. Real-World Success Stories</a></li>
-            <li><a href="#roi-calculator" className="text-blue-600 hover:text-blue-800">5. ROI Calculator & Business Case</a></li>
-            <li><a href="#next-steps" className="text-blue-600 hover:text-blue-800">6. Getting Started</a></li>
+        <div className="text-left">
+          <h2 className="text-left">📋 Table of Contents</h2>
+          <ul className="text-left">
+            <li><a href="#introduction" className="text-left">1. The Manufacturing Revolution</a></li>
+            <li><a href="#autonomous-systems" className="text-left">2. AI Autonomous Systems Architecture</a></li>
+            <li><a href="#implementation" className="text-left">3. Implementation Roadmap</a></li>
+            <li><a href="#case-studies" className="text-left">4. Real-World Success Stories</a></li>
+            <li><a href="#roi-calculator" className="text-left">5. ROI Calculator & Business Case</a></li>
+            <li><a href="#next-steps" className="text-left">6. Getting Started</a></li>
           </ul>
         </div>
 
         {/* Introduction */}
-        <section id="introduction" className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">🏭 The Manufacturing Revolution</h2>
-          <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+        <section id="introduction" className="text-left">
+          <h2 className="text-left">🏭 The Manufacturing Revolution</h2>
+          <p className="text-left">
             Manufacturing is experiencing its most significant transformation since the Industrial Revolution. 
             AI-powered autonomous systems are creating self-healing factories that operate with unprecedented 
             efficiency, reliability, and cost-effectiveness.
           </p>
-          <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+          <p className="text-left">
             Leading manufacturers are achieving remarkable results:
           </p>
-          <ul className="list-disc pl-6 space-y-3 text-gray-700 mb-8">
+          <ul className="text-left">
             <li><strong>99.9% uptime</strong> through predictive maintenance and autonomous recovery</li>
             <li><strong>85% reduction</strong> in unplanned downtime and maintenance costs</li>
             <li><strong>$50M+ ROI</strong> within the first 18 months of implementation</li>
@@ -104,16 +104,16 @@ export default function AIAutonomousManufacturing2026() {
         </section>
 
         {/* Autonomous Systems */}
-        <section id="autonomous-systems" className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">🤖 AI Autonomous Systems Architecture</h2>
-          <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+        <section id="autonomous-systems" className="text-left">
+          <h2 className="text-left">🤖 AI Autonomous Systems Architecture</h2>
+          <p className="text-left">
             Our autonomous manufacturing architecture consists of four core layers:
           </p>
           
-          <div className="grid md:grid-cols-2 gap-8 mb-8">
-            <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">🔍 Predictive Analytics Layer</h3>
-              <ul className="space-y-2 text-gray-700">
+          <div className="text-left">
+            <div className="text-left">
+              <h3 className="text-left">🔍 Predictive Analytics Layer</h3>
+              <ul className="text-left">
                 <li>• Real-time sensor data analysis</li>
                 <li>• Machine learning-based failure prediction</li>
                 <li>• Anomaly detection algorithms</li>
@@ -121,9 +121,9 @@ export default function AIAutonomousManufacturing2026() {
               </ul>
             </div>
             
-            <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">⚡ Autonomous Response Layer</h3>
-              <ul className="space-y-2 text-gray-700">
+            <div className="text-left">
+              <h3 className="text-left">⚡ Autonomous Response Layer</h3>
+              <ul className="text-left">
                 <li>• Self-healing system capabilities</li>
                 <li>• Automated maintenance scheduling</li>
                 <li>• Dynamic resource allocation</li>
@@ -131,9 +131,9 @@ export default function AIAutonomousManufacturing2026() {
               </ul>
             </div>
             
-            <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">🔄 Process Optimization Layer</h3>
-              <ul className="space-y-2 text-gray-700">
+            <div className="text-left">
+              <h3 className="text-left">🔄 Process Optimization Layer</h3>
+              <ul className="text-left">
                 <li>• Continuous process improvement</li>
                 <li>• Energy consumption optimization</li>
                 <li>• Quality control automation</li>
@@ -141,9 +141,9 @@ export default function AIAutonomousManufacturing2026() {
               </ul>
             </div>
             
-            <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">📊 Intelligence Layer</h3>
-              <ul className="space-y-2 text-gray-700">
+            <div className="text-left">
+              <h3 className="text-left">📊 Intelligence Layer</h3>
+              <ul className="text-left">
                 <li>• Advanced analytics and reporting</li>
                 <li>• Business intelligence dashboards</li>
                 <li>• Performance benchmarking</li>
@@ -154,141 +154,141 @@ export default function AIAutonomousManufacturing2026() {
         </section>
 
         {/* Implementation */}
-        <section id="implementation" className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">📋 Implementation Roadmap</h2>
-          <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+        <section id="implementation" className="text-left">
+          <h2 className="text-left">📋 Implementation Roadmap</h2>
+          <p className="text-left">
             Our proven 6-month implementation roadmap ensures successful deployment:
           </p>
           
-          <div className="space-y-6">
-            <div className="flex gap-6 p-6 bg-blue-50 rounded-xl border border-blue-200">
-              <div className="flex-shrink-0 w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">
+          <div className="text-left">
+            <div className="text-left">
+              <div className="text-left">
                 1
               </div>
               <div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Assessment & Planning (Month 1)</h3>
-                <p className="text-gray-700">Comprehensive facility audit, technology assessment, and strategic planning</p>
+                <h3 className="text-left">Assessment & Planning (Month 1)</h3>
+                <p className="text-left">Comprehensive facility audit, technology assessment, and strategic planning</p>
               </div>
             </div>
             
-            <div className="flex gap-6 p-6 bg-green-50 rounded-xl border border-green-200">
-              <div className="flex-shrink-0 w-12 h-12 bg-green-600 text-white rounded-full flex items-center justify-center font-bold">
+            <div className="text-left">
+              <div className="text-left">
                 2
               </div>
               <div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Infrastructure Setup (Month 2)</h3>
-                <p className="text-gray-700">Sensor deployment, network infrastructure, and cloud platform setup</p>
+                <h3 className="text-left">Infrastructure Setup (Month 2)</h3>
+                <p className="text-left">Sensor deployment, network infrastructure, and cloud platform setup</p>
               </div>
             </div>
             
-            <div className="flex gap-6 p-6 bg-purple-50 rounded-xl border border-purple-200">
-              <div className="flex-shrink-0 w-12 h-12 bg-purple-600 text-white rounded-full flex items-center justify-center font-bold">
+            <div className="text-left">
+              <div className="text-left">
                 3
               </div>
               <div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">AI Model Development (Month 3)</h3>
-                <p className="text-gray-700">Custom AI model training, testing, and validation for your specific processes</p>
+                <h3 className="text-left">AI Model Development (Month 3)</h3>
+                <p className="text-left">Custom AI model training, testing, and validation for your specific processes</p>
               </div>
             </div>
             
-            <div className="flex gap-6 p-6 bg-orange-50 rounded-xl border border-orange-200">
-              <div className="flex-shrink-0 w-12 h-12 bg-orange-600 text-white rounded-full flex items-center justify-center font-bold">
+            <div className="text-left">
+              <div className="text-left">
                 4
               </div>
               <div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Pilot Deployment (Month 4)</h3>
-                <p className="text-gray-700">Limited rollout on critical production lines with real-time monitoring</p>
+                <h3 className="text-left">Pilot Deployment (Month 4)</h3>
+                <p className="text-left">Limited rollout on critical production lines with real-time monitoring</p>
               </div>
             </div>
             
-            <div className="flex gap-6 p-6 bg-red-50 rounded-xl border border-red-200">
-              <div className="flex-shrink-0 w-12 h-12 bg-red-600 text-white rounded-full flex items-center justify-center font-bold">
+            <div className="text-left">
+              <div className="text-left">
                 5
               </div>
               <div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Full Deployment (Month 5)</h3>
-                <p className="text-gray-700">Complete facility rollout with comprehensive monitoring and optimization</p>
+                <h3 className="text-left">Full Deployment (Month 5)</h3>
+                <p className="text-left">Complete facility rollout with comprehensive monitoring and optimization</p>
               </div>
             </div>
             
-            <div className="flex gap-6 p-6 bg-teal-50 rounded-xl border border-teal-200">
-              <div className="flex-shrink-0 w-12 h-12 bg-teal-600 text-white rounded-full flex items-center justify-center font-bold">
+            <div className="text-left">
+              <div className="text-left">
                 6
               </div>
               <div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Optimization & Support (Month 6+)</h3>
-                <p className="text-gray-700">Continuous optimization, staff training, and ongoing support</p>
+                <h3 className="text-left">Optimization & Support (Month 6+)</h3>
+                <p className="text-left">Continuous optimization, staff training, and ongoing support</p>
               </div>
             </div>
           </div>
         </section>
 
         {/* Case Studies */}
-        <section id="case-studies" className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">🏆 Real-World Success Stories</h2>
+        <section id="case-studies" className="text-left">
+          <h2 className="text-left">🏆 Real-World Success Stories</h2>
           
-          <div className="space-y-8">
-            <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl p-8 border border-green-200">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Fortune 500 Automotive Manufacturer</h3>
-              <div className="grid md:grid-cols-3 gap-6 mb-6">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-green-600">$75M</div>
-                  <div className="text-sm text-gray-600">Annual Savings</div>
+          <div className="text-left">
+            <div className="text-left">
+              <h3 className="text-left">Fortune 500 Automotive Manufacturer</h3>
+              <div className="text-left">
+                <div className="text-left">
+                  <div className="text-left">$75M</div>
+                  <div className="text-left">Annual Savings</div>
                 </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-emerald-600">99.8%</div>
-                  <div className="text-sm text-gray-600">Uptime</div>
+                <div className="text-left">
+                  <div className="text-left">99.8%</div>
+                  <div className="text-left">Uptime</div>
                 </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-blue-600">12mo</div>
-                  <div className="text-sm text-gray-600">ROI Period</div>
+                <div className="text-left">
+                  <div className="text-left">12mo</div>
+                  <div className="text-left">ROI Period</div>
                 </div>
               </div>
-              <p className="text-gray-700">
+              <p className="text-left">
                 "The autonomous AI system transformed our production line. We achieved 99.8% uptime and 
                 reduced maintenance costs by 85%. The ROI was realized in just 12 months."
               </p>
-              <p className="text-sm text-gray-600 mt-2">— CTO, Fortune 500 Automotive Manufacturer</p>
+              <p className="text-left">— CTO, Fortune 500 Automotive Manufacturer</p>
             </div>
             
-            <div className="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-xl p-8 border border-blue-200">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Global Electronics Manufacturer</h3>
-              <div className="grid md:grid-cols-3 gap-6 mb-6">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-blue-600">$45M</div>
-                  <div className="text-sm text-gray-600">Cost Reduction</div>
+            <div className="text-left">
+              <h3 className="text-left">Global Electronics Manufacturer</h3>
+              <div className="text-left">
+                <div className="text-left">
+                  <div className="text-left">$45M</div>
+                  <div className="text-left">Cost Reduction</div>
                 </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-cyan-600">95%</div>
-                  <div className="text-sm text-gray-600">Quality Improvement</div>
+                <div className="text-left">
+                  <div className="text-left">95%</div>
+                  <div className="text-left">Quality Improvement</div>
                 </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-green-600">18mo</div>
-                  <div className="text-sm text-gray-600">Full Deployment</div>
+                <div className="text-left">
+                  <div className="text-left">18mo</div>
+                  <div className="text-left">Full Deployment</div>
                 </div>
               </div>
-              <p className="text-gray-700">
+              <p className="text-left">
                 "The predictive maintenance capabilities saved us millions in unplanned downtime. 
                 Quality defects dropped by 95% through AI-powered inspection systems."
               </p>
-              <p className="text-sm text-gray-600 mt-2">— VP of Operations, Global Electronics Manufacturer</p>
+              <p className="text-left">— VP of Operations, Global Electronics Manufacturer</p>
             </div>
           </div>
         </section>
 
         {/* ROI Calculator */}
-        <section id="roi-calculator" className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">💰 ROI Calculator & Business Case</h2>
-          <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+        <section id="roi-calculator" className="text-left">
+          <h2 className="text-left">💰 ROI Calculator & Business Case</h2>
+          <p className="text-left">
             Calculate your potential ROI with our comprehensive business case framework:
           </p>
           
-          <div className="bg-white border border-gray-200 rounded-xl p-8 shadow-sm">
-            <h3 className="text-xl font-bold text-gray-900 mb-6">Typical ROI Metrics</h3>
-            <div className="grid md:grid-cols-2 gap-8">
+          <div className="text-left">
+            <h3 className="text-left">Typical ROI Metrics</h3>
+            <div className="text-left">
               <div>
-                <h4 className="font-bold text-gray-900 mb-4">Cost Savings</h4>
-                <ul className="space-y-2 text-gray-700">
+                <h4 className="text-left">Cost Savings</h4>
+                <ul className="text-left">
                   <li>• 85% reduction in unplanned downtime</li>
                   <li>• 70% decrease in maintenance costs</li>
                   <li>• 60% reduction in energy consumption</li>
@@ -296,8 +296,8 @@ export default function AIAutonomousManufacturing2026() {
                 </ul>
               </div>
               <div>
-                <h4 className="font-bold text-gray-900 mb-4">Revenue Impact</h4>
-                <ul className="space-y-2 text-gray-700">
+                <h4 className="text-left">Revenue Impact</h4>
+                <ul className="text-left">
                   <li>• 99.9% uptime increases production capacity</li>
                   <li>• Faster time-to-market for new products</li>
                   <li>• Enhanced customer satisfaction</li>
@@ -309,28 +309,28 @@ export default function AIAutonomousManufacturing2026() {
         </section>
 
         {/* Next Steps */}
-        <section id="next-steps" className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">🚀 Getting Started</h2>
-          <p className="text-lg text-gray-700 mb-8 leading-relaxed">
+        <section id="next-steps" className="text-left">
+          <h2 className="text-left">🚀 Getting Started</h2>
+          <p className="text-left">
             Ready to transform your manufacturing operations? Here's how to get started:
           </p>
           
-          <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-xl p-8 text-white">
-            <h3 className="text-2xl font-bold mb-4">Ready to Achieve 99.9% Uptime?</h3>
-            <p className="text-lg mb-6 opacity-95">
+          <div className="text-left">
+            <h3 className="text-left">Ready to Achieve 99.9% Uptime?</h3>
+            <p className="text-left">
               Schedule a free consultation with our AI manufacturing experts to discuss your specific needs 
               and create a custom implementation plan.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="text-left">
               <a
                 href="tel:+13024640950"
-                className="bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors text-center"
+                className="text-left"
               >
                 📞 Call +1 302 464 0950
               </a>
               <a
                 href="mailto:kleber@ziontechgroup.com"
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-blue-600 transition-colors text-center"
+                className="text-left"
               >
                 📧 Schedule Consultation
               </a>
@@ -339,26 +339,26 @@ export default function AIAutonomousManufacturing2026() {
         </section>
 
         {/* Related Articles */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">📚 Related Articles</h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            <Link href="/blog/ai-predictive-maintenance-2026" className="group">
-              <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
-                <h3 className="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors mb-2">
+        <section className="text-left">
+          <h2 className="text-left">📚 Related Articles</h2>
+          <div className="text-left">
+            <Link href="/blog/ai-predictive-maintenance-2026" className="text-left">
+              <div className="text-left">
+                <h3 className="text-left">
                   AI Predictive Maintenance 2026
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-left">
                   Prevent equipment failures before they happen with AI-powered predictive maintenance systems.
                 </p>
               </div>
             </Link>
             
-            <Link href="/case-studies/manufacturing-ai-transformation-2026" className="group">
-              <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
-                <h3 className="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors mb-2">
+            <Link href="/case-studies/manufacturing-ai-transformation-2026" className="text-left">
+              <div className="text-left">
+                <h3 className="text-left">
                   Manufacturing AI Transformation Case Study
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-left">
                   Real-world success story of a Fortune 500 manufacturer achieving $18M ROI.
                 </p>
               </div>

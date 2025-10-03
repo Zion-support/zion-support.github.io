@@ -9,13 +9,19 @@ export const metadata = {
 
 export default function AINextGenerationAutomation2026() {
   return (
-    <div className="max-w-4xl mx-auto px-4 py-12">
+    <div>/* content */}
+  return (
+    <div>
+      <div></div>
+      <div></div>
+    </div>
+    <div className="text-left"></div>
       {/* Header */}
-      <div className="text-center mb-12">
+      <div className="text-left"></div>
               </div>
             </div>
           </div>
 
     </div>
   );
-}
+})

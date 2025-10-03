@@ -3,8 +3,7 @@
 
 
 export const real2026Q2Additions = [
-  {
-
+  {/* content */}
       'Jira',
       'ServiceNow',
       'Slack',
@@ -24,11 +23,9 @@ export const real2026Q2Additions = [
     link: 'https://ziontechgroup.com / services / ai - governance - compliance - hub',
 
   },
-  {
-
-
+  {/* content */}
 export const real2026Q2Additions = [
-  {
+  {/* content */}
     id: 'ai-governance-compliance-hub'
     name: 'AI Governance & Compliance Hub'
     category: 'AI & Data'
@@ -67,7 +64,7 @@ export const real2026Q2Additions = [
     roi: 'Reduce audit prep by 60% and non-compliance risk by 40%'
     link: 'https://ziontechgroup.com/services/ai-governance-compliance-hub'
   }
-  {
+  {/* content */}
     id: 'ai-synthetic-data-factory'
     name: 'AI Synthetic Data Factory'
     category: 'AI & Data'
@@ -98,7 +95,7 @@ export const real2026Q2Additions = [
     roi: 'Cut data collection costs by 50% and improve model accuracy by 8%'
     link: 'https://ziontechgroup.com/services/ai-synthetic-data-factory'
   }
-  {
+  {/* content */}
     id: 'ecommerce-returns-orchestrator'
     name: 'E‑commerce Returns Orchestrator'
     category: 'Developer Tools'
@@ -128,7 +125,7 @@ export const real2026Q2Additions = [
     roi: 'Reduce manual handling by 70% and increase exchanges by 20%'
     link: 'https://ziontechgroup.com/services/ecommerce-returns-orchestrator'
   }
-  {
+  {/* content */}
     id: 'ai-analytics-observability-kit'
     name: 'AI Analytics Observability Kit'
     category: 'Observability'
@@ -166,7 +163,7 @@ export const real2026Q2Additions = [
     roi: 'Cut token spend by 25% and improve response quality by 12%'
     link: 'https://ziontechgroup.com/services/ai-analytics-observability-kit'
   }
-  {
+  {/* content */}
     id: 'cloud-cost-anomaly-guard'
     name: 'Cloud Cost Anomaly Guard'
     category: 'Cloud & FinOps'
@@ -196,7 +193,7 @@ export const real2026Q2Additions = [
     roi: 'Reduce cloud waste by 30% within 60 days'
     link: 'https://ziontechgroup.com/services/cloud-cost-anomaly-guard'
   }
-  {
+  {/* content */}
     id: 'secure-pdf-signing-api'
     name: 'Secure PDF Signing API'
     category: 'Developer Tools'
@@ -225,7 +222,7 @@ export const real2026Q2Additions = [
     roi: 'Accelerate time-to-sign by 50% and cut manual errors by 70%'
     link: 'https://ziontechgroup.com/services/secure-pdf-signing-api'
   }
-  {
+  {/* content */}
     id: 'status-slo-plus'
     name: 'Status Pages + SLO Pro'
     category: 'Quality & Monitoring'
@@ -255,7 +252,7 @@ export const real2026Q2Additions = [
     roi: 'Improve uptime communications and reduce churn risk'
     link: 'https://ziontechgroup.com/services/status-slo-plus'
   }
-  {
+  {/* content */}
     id: 'vendor-risk-automation-pro'
     name: 'Vendor Risk Automation Pro'
     category: 'Quality & Monitoring'
@@ -285,7 +282,7 @@ export const real2026Q2Additions = [
     roi: 'Shorten sales cycles by 20% and reduce vendor risk exposure'
     link: 'https://ziontechgroup.com/services/vendor-risk-automation-pro'
   }
-  {
+  {/* content */}
     id: 'ai-docs-search-answers'
     name: 'AI Docs Search & Answers'
     category: 'Developer Tools'
@@ -314,7 +311,7 @@ export const real2026Q2Additions = [
     roi: 'Reduce tickets by 30% and improve time-to-answer'
     link: 'https://ziontechgroup.com/services/ai-docs-search-answers'
   }
-  {
+  {/* content */}
     id: 'msp-remote-device-ops'
     name: 'MSP Remote Device Ops'
     category: 'Cloud & FinOps'
@@ -334,9 +331,7 @@ export const real2026Q2Additions = [
 
 
 export const real2026Q2Additions = [
-  {
-
-
+  {/* content */}
       'Jira',
       'ServiceNow',
       'Slack',
@@ -356,8 +351,7 @@ export const real2026Q2Additions = [
     link: 'https://ziontechgroup.com / services / ai - governance - compliance - hub',
 
   },
-  {
-
+  {/* content */}
     id: 'ai - synthetic - data - factory',
     name: 'AI Synthetic Data Factory',
     category: 'AI & Data',
@@ -403,10 +397,8 @@ export const real2026Q2Additions = [
     link: 'https://ziontechgroup.com / services / ai - synthetic - data - factory',
 
   },
-  {
-
-  {
-
+  {/* content */}
+  {/* content */}
     id: 'ecommerce - returns - orchestrator',
     name: 'E‑commerce Returns Orchestrator',
     category: 'Developer Tools',
@@ -423,7 +415,7 @@ export const real2026Q2Additions = [
     ],
     use_cases: [;
 
-  {
+  {/* content */}
       'DTC brands returns automation',
       'Marketplace return SLAs',
       'Reduce WISMO support',
@@ -440,12 +432,10 @@ export const real2026Q2Additions = [
     link: 'https://ziontechgroup.com / services / ecommerce - returns - orchestrator',
 
   },
-  {
-
-  {
-
+  {/* content */}
+  {/* content */}
 export const real2026Q2Additions = [
-  {
+  {/* content */}
     id: 'ai - synthetic - data - factory',
     name: 'AI Synthetic Data Factory',
     category: 'AI & Data',
@@ -476,7 +466,7 @@ export const real2026Q2Additions = [
     roi: 'Cut data collection costs by 50% and improve model accuracy by 8%',
     link: 'https://ziontechgroup.com / services / ai - synthetic - data - factory',
   },
-  {
+  {/* content */}
     id: 'ecommerce - returns - orchestrator',
     name: 'E‑commerce Returns Orchestrator',
     category: 'Developer Tools',
@@ -506,7 +496,7 @@ export const real2026Q2Additions = [
     roi: 'Reduce manual handling by 70% and increase exchanges by 20%',
     link: 'https://ziontechgroup.com / services / ecommerce - returns - orchestrator',
   },
-  {
+  {/* content */}
     id: 'ai - analytics - observability - kit',
     name: 'AI Analytics Observability Kit',
     category: 'Observability',
@@ -547,11 +537,10 @@ export const real2026Q2Additions = [
     link: 'https://ziontechgroup.com / services / ai - analytics - observability - kit',
 
   },
-  {
-
+  {/* content */}
     link: 'https://ziontechgroup.com / services / ai - analytics - observability - kit',
   },
-  {
+  {/* content */}
     id: 'cloud - cost - anomaly - guard',
     name: 'Cloud Cost Anomaly Guard',
     category: 'Cloud & FinOps',
@@ -584,11 +573,10 @@ export const real2026Q2Additions = [
     link: 'https://ziontechgroup.com / services / cloud - cost - anomaly - guard',
 
   },
-  {
-
+  {/* content */}
     link: 'https://ziontechgroup.com / services / cloud - cost - anomaly - guard',
   },
-  {
+  {/* content */}
     id: 'secure - pdf - signing - api',
     name: 'Secure PDF Signing API',
     category: 'Developer Tools',
@@ -620,10 +608,9 @@ export const real2026Q2Additions = [
     link: 'https://ziontechgroup.com / services / secure - pdf - signing - api',
 
   },
-  {
-
+  {/* content */}
   },
-  {
+  {/* content */}
     id: 'status - slo - plus',
     name: 'Status Pages + SLO Pro',
     category: 'Quality & Monitoring',
@@ -656,12 +643,11 @@ export const real2026Q2Additions = [
     link: 'https://ziontechgroup.com / services / status - slo - plus',
 
   },
-  {
-
+  {/* content */}
       'Third-party risk programs',
     link: 'https://ziontechgroup.com / services / status - slo - plus',
   },
-  {
+  {/* content */}
       'Third-party risk programs',
     id: 'vendor - risk - automation - pro',
     name: 'Vendor Risk Automation Pro',
@@ -695,11 +681,10 @@ export const real2026Q2Additions = [
     link: 'https://ziontechgroup.com / services / vendor - risk - automation - pro',
 
   },
-  {
-
+  {/* content */}
     link: 'https://ziontechgroup.com / services / vendor - risk - automation - pro',
   },
-  {
+  {/* content */}
     id: 'ai - docs - search - answers',
     name: 'AI Docs Search & Answers',
     category: 'Developer Tools',
@@ -731,10 +716,9 @@ export const real2026Q2Additions = [
     link: 'https://ziontechgroup.com / services / ai - docs - search - answers',
 
   },
-  {
-
+  {/* content */}
   },
-  {
+  {/* content */}
     id: 'msp - remote - device - ops',
     name: 'MSP Remote Device Ops',
     category: 'Cloud & FinOps',
@@ -785,7 +769,7 @@ export const real2026Q2Additions = [
     roi: 'Cut data collection costs by 50% and improve model accuracy by 8%'
     link: 'https://ziontechgroup.com/services/ai-synthetic-data-factory'
   }
-  {
+  {/* content */}
     id: 'ecommerce-returns-orchestrator'
     name: 'E‑commerce Returns Orchestrator'
     category: 'Developer Tools'
@@ -815,7 +799,7 @@ export const real2026Q2Additions = [
     roi: 'Reduce manual handling by 70% and increase exchanges by 20%'
     link: 'https://ziontechgroup.com/services/ecommerce-returns-orchestrator'
   }
-  {
+  {/* content */}
     id: 'ai-analytics-observability-kit'
     name: 'AI Analytics Observability Kit'
     category: 'Observability'
@@ -853,7 +837,7 @@ export const real2026Q2Additions = [
     roi: 'Cut token spend by 25% and improve response quality by 12%'
     link: 'https://ziontechgroup.com/services/ai-analytics-observability-kit'
   }
-  {
+  {/* content */}
     id: 'cloud-cost-anomaly-guard'
     name: 'Cloud Cost Anomaly Guard'
     category: 'Cloud & FinOps'
@@ -883,7 +867,7 @@ export const real2026Q2Additions = [
     roi: 'Reduce cloud waste by 30% within 60 days'
     link: 'https://ziontechgroup.com/services/cloud-cost-anomaly-guard'
   }
-  {
+  {/* content */}
     id: 'secure-pdf-signing-api'
     name: 'Secure PDF Signing API'
     category: 'Developer Tools'
@@ -912,7 +896,7 @@ export const real2026Q2Additions = [
     roi: 'Accelerate time-to-sign by 50% and cut manual errors by 70%'
     link: 'https://ziontechgroup.com/services/secure-pdf-signing-api'
   }
-  {
+  {/* content */}
     id: 'status-slo-plus'
     name: 'Status Pages + SLO Pro'
     category: 'Quality & Monitoring'
@@ -942,7 +926,7 @@ export const real2026Q2Additions = [
     roi: 'Improve uptime communications and reduce churn risk'
     link: 'https://ziontechgroup.com/services/status-slo-plus'
   }
-  {
+  {/* content */}
     id: 'vendor-risk-automation-pro'
     name: 'Vendor Risk Automation Pro'
     category: 'Quality & Monitoring'
@@ -972,7 +956,7 @@ export const real2026Q2Additions = [
     roi: 'Shorten sales cycles by 20% and reduce vendor risk exposure'
     link: 'https://ziontechgroup.com/services/vendor-risk-automation-pro'
   }
-  {
+  {/* content */}
     id: 'ai-docs-search-answers'
     name: 'AI Docs Search & Answers'
     category: 'Developer Tools'
@@ -1001,7 +985,7 @@ export const real2026Q2Additions = [
     roi: 'Reduce tickets by 30% and improve time-to-answer'
     link: 'https://ziontechgroup.com/services/ai-docs-search-answers'
   }
-  {
+  {/* content */}
     id: 'msp-remote-device-ops'
     name: 'MSP Remote Device Ops'
     category: 'Cloud & FinOps'

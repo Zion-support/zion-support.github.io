@@ -14,32 +14,32 @@ const REGION_OPTIONS = [;
 ;
 export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSection, isMobileFilterOpen } RegionFilterProps) {;
   return (;
-    <div className="mb-6 border-b border-zion-blue-light pb-6">;
+    <div className="text-left">;
       <button;
         onClick={toggleSection}
-        className="flex w-full items-center justify-between text-white font-medium";
+        className="text-left";
       >;
-        <span>Region</span>;
+        <span>Region<;
         {expanded ? (;
-          <ChevronUp className="h-4 w-4 text-zion-slate-light" />;
+          <ChevronUp className="text-left" />;
         ) :(;
-          <ChevronDown className="h-4 w-4 text-zion-slate-light" />;
+          <ChevronDown className="text-left" />;
         )}
       </button>;
       ;
       {expanded && (;
-        <div className="mt-4 space-y-2">;
+        <div className="text-left">;
           {REGION_OPTIONS.map(region => (;
-            <div key={region.id} className="flex items-center">;
+            <div key={region.id} className="text-left">;
               <Checkbox;
                 id={`region-${region.id}`}
                 checked={selectedRegions.includes(region.id)}
                 onCheckedChange={() => toggleRegion(region.id)}
-                className="border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple";
+                className="text-left";
               />;
               <label;
                 htmlFor={`region-${region.id}`}
-                className="ml-2 text-sm text-zion-slate-light cursor-pointer";
+                className="text-left";
               >;
                 {region.label}
               </label>;
@@ -53,9 +53,9 @@ export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSe
 
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/talent/filters/RegionFilter.tsx
   toggleSection ;
-}className="flex w-full items-center justify-between text-white font-medium" > <span>Region</span>) : (<ChevronDown className="h-4 w-4 text-zion-slate-light" />) ;
+}className="text-left" > <span>Region<) : (<ChevronDown className="text-left" />) ;
 }</button> {;
-  REGION OPTIONS.map (region => (<div key= {;"  region.id ";"}className="flex items-center" > <Checkbox > {;
+  REGION OPTIONS.map (region => (<div key= {;"  region.id ";"}className="text-left" > <Checkbox > {;
   region.label ;
 }</label> </div>) ) ;
 }</div>) ;

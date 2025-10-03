@@ -16,92 +16,92 @@ export const metadata = {
 
 export default function EdgeAIComputing2026() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-cyan-50">
+    <div className="text-left">
       {/* Header Navigation */}
-      <nav className="bg-white/90 backdrop-blur-sm border-b border-gray-200 sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-6 py-4">
-          <Link href="/blog" className="inline-flex items-center gap-2 text-cyan-600 hover:text-cyan-700 font-semibold transition-colors">
-            <ArrowLeft className="w-5 h-5" />
-            <span>Back to Blog</span>
+      <nav className="text-left">
+        <div className="text-left">
+          <Link href="/blog" className="text-left">
+            <ArrowLeft className="text-left" />
+            <span>Back to Blog<
           </Link>
         </div>
       </nav>
 
-      <article className="max-w-4xl mx-auto px-6 py-16">
+      <article className="text-left">
         {/* Article Header */}
-        <header className="mb-12">
-          <div className="flex items-center gap-3 mb-6">
-            <span className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white text-sm font-bold rounded-full">
+        <header className="text-left">
+          <div className="text-left">
+            <span className="text-left">
               🆕 NEW • September 30, 2025
-            </span>
-            <span className="px-4 py-2 bg-gradient-to-r from-green-500 to-emerald-500 text-white text-sm font-bold rounded-full flex items-center gap-1">
-              <TrendingUp className="w-4 h-4" />
+            <
+            <span className="text-left">
+              <TrendingUp className="text-left" />
               HOT TOPIC
-            </span>
+            <
           </div>
           
-          <h1 className="text-5xl md:text-6xl font-extrabold text-gray-900 mb-6 leading-tight">
+          <h1 className="text-left">
             Edge AI Computing 2026: Ultra-Low Latency Intelligence
           </h1>
           
-          <p className="text-2xl text-gray-600 mb-8 leading-relaxed">
+          <p className="text-left">
             Transform your infrastructure with edge AI. Achieve sub-5ms latency, 90% bandwidth savings, 
             and 99.99% availability by processing intelligence at the source.
           </p>
 
-          <div className="flex items-center gap-6 text-gray-600 pb-8 border-b border-gray-200">
-            <div className="flex items-center gap-2">
-              <Cpu className="w-5 h-5 text-cyan-600" />
-              <span className="font-semibold">17 min read</span>
+          <div className="text-left">
+            <div className="text-left">
+              <Cpu className="text-left" />
+              <span className="text-left">17 min read<
             </div>
             <div>
-              <span className="font-semibold">Published:</span> September 30, 2025
+              <span className="text-left">Published:< September 30, 2025
             </div>
             <div>
-              <span className="font-semibold">Category:</span> Edge AI
+              <span className="text-left">Category:< Edge AI
             </div>
           </div>
         </header>
 
         {/* Key Metrics Banner */}
-        <div className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white rounded-2xl p-8 mb-12">
-          <h2 className="text-3xl font-bold mb-6 text-center">Edge AI Performance Metrics</h2>
-          <div className="grid md:grid-cols-4 gap-6">
+        <div className="text-left">
+          <h2 className="text-left">Edge AI Performance Metrics</h2>
+          <div className="text-left">
             {[
               { metric: '<5ms', label: 'Latency' },
               { metric: '90%', label: 'Bandwidth Savings' },
               { metric: '99.99%', label: 'Availability' },
               { metric: '75%', label: 'Cost Reduction' }
             ].map((stat, i) => (
-              <div key={i} className="text-center">
-                <div className="text-4xl font-extrabold mb-2">{stat.metric}</div>
-                <div className="text-sm opacity-90">{stat.label}</div>
+              <div key={i} className="text-left">
+                <div className="text-left">{stat.metric}</div>
+                <div className="text-left">{stat.label}</div>
               </div>
             ))}
           </div>
         </div>
 
         {/* Main Content */}
-        <div className="prose prose-lg max-w-none">
-          <section className="mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-              <CloudOff className="w-8 h-8 text-cyan-600" />
+        <div className="text-left">
+          <section className="text-left">
+            <h2 className="text-left">
+              <CloudOff className="text-left" />
               Why Edge AI Matters
             </h2>
-            <p className="text-gray-700 leading-relaxed mb-4">
+            <p className="text-left">
               Traditional cloud-based AI introduces latency, bandwidth costs, and reliability concerns. Edge AI 
               brings intelligence to the point of data generation—manufacturing floors, retail stores, vehicles, 
               smart cities, and IoT devices—enabling real-time decisions without cloud dependencies.
             </p>
-            <p className="text-gray-700 leading-relaxed mb-6">
+            <p className="text-left">
               By 2026, edge AI deployments have matured from experimental to mission-critical, powering autonomous 
               systems that demand split-second decisions, operate in disconnected environments, and process sensitive 
               data locally for privacy and compliance.
             </p>
 
-            <div className="bg-gradient-to-r from-cyan-50 to-blue-50 rounded-xl p-8 mb-8 border-2 border-cyan-200">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Edge AI Advantages:</h3>
-              <ul className="space-y-3">
+            <div className="text-left">
+              <h3 className="text-left">Edge AI Advantages:</h3>
+              <ul className="text-left">
                 {[
                   'Ultra-low latency for real-time applications (<5ms)',
                   'Reduced bandwidth costs (up to 90% savings)',
@@ -109,116 +109,116 @@ export default function EdgeAIComputing2026() {
                   'Offline operation and resilience',
                   'Scalability without cloud infrastructure growth'
                 ].map((item, i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    <CheckCircle className="w-6 h-6 text-green-600 flex-shrink-0 mt-1" />
-                    <span className="text-gray-800">{item}</span>
+                  <li key={i} className="text-left">
+                    <CheckCircle className="text-left" />
+                    <span className="text-left">{item}<
                   </li>
                 ))}
               </ul>
             </div>
           </section>
 
-          <section className="mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-              <Zap className="w-8 h-8 text-cyan-600" />
+          <section className="text-left">
+            <h2 className="text-left">
+              <Zap className="text-left" />
               Enterprise Edge AI Use Cases
             </h2>
             
-            <div className="space-y-6">
-              <div className="bg-white rounded-xl shadow-lg p-6 border-l-4 border-cyan-500">
-                <h3 className="text-2xl font-bold text-gray-900 mb-3">Smart Manufacturing & Industry 4.0</h3>
-                <p className="text-gray-700 mb-4">
+            <div className="text-left">
+              <div className="text-left">
+                <h3 className="text-left">Smart Manufacturing & Industry 4.0</h3>
+                <p className="text-left">
                   Deploy AI at production lines for real-time quality inspection, predictive maintenance, and 
                   autonomous process optimization. Edge AI enables microsecond-level control without cloud latency.
                 </p>
-                <div className="grid md:grid-cols-3 gap-4 mt-4">
-                  <div className="bg-cyan-50 p-4 rounded-lg">
-                    <div className="text-2xl font-bold text-cyan-600">98%</div>
-                    <div className="text-sm text-gray-700">Defect Detection</div>
+                <div className="text-left">
+                  <div className="text-left">
+                    <div className="text-left">98%</div>
+                    <div className="text-left">Defect Detection</div>
                   </div>
-                  <div className="bg-blue-50 p-4 rounded-lg">
-                    <div className="text-2xl font-bold text-blue-600">60%</div>
-                    <div className="text-sm text-gray-700">Downtime Reduction</div>
+                  <div className="text-left">
+                    <div className="text-left">60%</div>
+                    <div className="text-left">Downtime Reduction</div>
                   </div>
-                  <div className="bg-green-50 p-4 rounded-lg">
-                    <div className="text-2xl font-bold text-green-600">&lt;2ms</div>
-                    <div className="text-sm text-gray-700">Response Time</div>
+                  <div className="text-left">
+                    <div className="text-left">&lt;2ms</div>
+                    <div className="text-left">Response Time</div>
                   </div>
                 </div>
               </div>
 
-              <div className="bg-white rounded-xl shadow-lg p-6 border-l-4 border-blue-500">
-                <h3 className="text-2xl font-bold text-gray-900 mb-3">Autonomous Vehicles & Transportation</h3>
-                <p className="text-gray-700 mb-4">
+              <div className="text-left">
+                <h3 className="text-left">Autonomous Vehicles & Transportation</h3>
+                <p className="text-left">
                   Vehicle edge AI processes sensor data, makes split-second driving decisions, and coordinates with 
                   other vehicles—all without relying on cellular connectivity or cloud processing.
                 </p>
-                <div className="grid md:grid-cols-3 gap-4 mt-4">
-                  <div className="bg-purple-50 p-4 rounded-lg">
-                    <div className="text-2xl font-bold text-purple-600">&lt;5ms</div>
-                    <div className="text-sm text-gray-700">Decision Latency</div>
+                <div className="text-left">
+                  <div className="text-left">
+                    <div className="text-left">&lt;5ms</div>
+                    <div className="text-left">Decision Latency</div>
                   </div>
-                  <div className="bg-blue-50 p-4 rounded-lg">
-                    <div className="text-2xl font-bold text-blue-600">99.99%</div>
-                    <div className="text-sm text-gray-700">Reliability</div>
+                  <div className="text-left">
+                    <div className="text-left">99.99%</div>
+                    <div className="text-left">Reliability</div>
                   </div>
-                  <div className="bg-green-50 p-4 rounded-lg">
-                    <div className="text-2xl font-bold text-green-600">100%</div>
-                    <div className="text-sm text-gray-700">Offline Operation</div>
+                  <div className="text-left">
+                    <div className="text-left">100%</div>
+                    <div className="text-left">Offline Operation</div>
                   </div>
                 </div>
               </div>
 
-              <div className="bg-white rounded-xl shadow-lg p-6 border-l-4 border-green-500">
-                <h3 className="text-2xl font-bold text-gray-900 mb-3">Retail & Customer Experience</h3>
-                <p className="text-gray-700 mb-4">
+              <div className="text-left">
+                <h3 className="text-left">Retail & Customer Experience</h3>
+                <p className="text-left">
                   Edge AI powers real-time customer analytics, smart checkouts, inventory management, and personalized 
                   experiences—all processed in-store for privacy and performance.
                 </p>
-                <div className="grid md:grid-cols-3 gap-4 mt-4">
-                  <div className="bg-green-50 p-4 rounded-lg">
-                    <div className="text-2xl font-bold text-green-600">35%</div>
-                    <div className="text-sm text-gray-700">Revenue Increase</div>
+                <div className="text-left">
+                  <div className="text-left">
+                    <div className="text-left">35%</div>
+                    <div className="text-left">Revenue Increase</div>
                   </div>
-                  <div className="bg-orange-50 p-4 rounded-lg">
-                    <div className="text-2xl font-bold text-orange-600">50%</div>
-                    <div className="text-sm text-gray-700">Checkout Time Cut</div>
+                  <div className="text-left">
+                    <div className="text-left">50%</div>
+                    <div className="text-left">Checkout Time Cut</div>
                   </div>
-                  <div className="bg-blue-50 p-4 rounded-lg">
-                    <div className="text-2xl font-bold text-blue-600">90%</div>
-                    <div className="text-sm text-gray-700">Data Privacy</div>
+                  <div className="text-left">
+                    <div className="text-left">90%</div>
+                    <div className="text-left">Data Privacy</div>
                   </div>
                 </div>
               </div>
 
-              <div className="bg-white rounded-xl shadow-lg p-6 border-l-4 border-purple-500">
-                <h3 className="text-2xl font-bold text-gray-900 mb-3">Healthcare & Medical Devices</h3>
-                <p className="text-gray-700 mb-4">
+              <div className="text-left">
+                <h3 className="text-left">Healthcare & Medical Devices</h3>
+                <p className="text-left">
                   Medical edge AI enables real-time patient monitoring, diagnostic assistance, and emergency response 
                   while maintaining HIPAA compliance through local processing of sensitive health data.
                 </p>
-                <div className="grid md:grid-cols-3 gap-4 mt-4">
-                  <div className="bg-red-50 p-4 rounded-lg">
-                    <div className="text-2xl font-bold text-red-600">95%</div>
-                    <div className="text-sm text-gray-700">Diagnostic Accuracy</div>
+                <div className="text-left">
+                  <div className="text-left">
+                    <div className="text-left">95%</div>
+                    <div className="text-left">Diagnostic Accuracy</div>
                   </div>
-                  <div className="bg-purple-50 p-4 rounded-lg">
-                    <div className="text-2xl font-bold text-purple-600">&lt;1s</div>
-                    <div className="text-sm text-gray-700">Alert Time</div>
+                  <div className="text-left">
+                    <div className="text-left">&lt;1s</div>
+                    <div className="text-left">Alert Time</div>
                   </div>
-                  <div className="bg-green-50 p-4 rounded-lg">
-                    <div className="text-2xl font-bold text-green-600">100%</div>
-                    <div className="text-sm text-gray-700">Data Privacy</div>
+                  <div className="text-left">
+                    <div className="text-left">100%</div>
+                    <div className="text-left">Data Privacy</div>
                   </div>
                 </div>
               </div>
             </div>
           </section>
 
-          <section className="mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Edge AI Technology Stack</h2>
+          <section className="text-left">
+            <h2 className="text-left">Edge AI Technology Stack</h2>
             
-            <div className="space-y-6">
+            <div className="text-left">
               {[
                 {
                   component: 'Edge Hardware',
@@ -265,14 +265,14 @@ export default function EdgeAIComputing2026() {
                   ]
                 }
               ].map((stack, i) => (
-                <div key={i} className="bg-gradient-to-r from-gray-50 to-cyan-50 rounded-xl p-6 border-l-4 border-cyan-500">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{stack.component}</h3>
-                  <p className="text-gray-600 mb-4 italic">{stack.description}</p>
-                  <ul className="space-y-2">
+                <div key={i} className="text-left">
+                  <h3 className="text-left">{stack.component}</h3>
+                  <p className="text-left">{stack.description}</p>
+                  <ul className="text-left">
                     {stack.technologies.map((item, j) => (
-                      <li key={j} className="flex items-start gap-3">
-                        <CheckCircle className="w-5 h-5 text-cyan-600 flex-shrink-0 mt-1" />
-                        <span className="text-gray-700">{item}</span>
+                      <li key={j} className="text-left">
+                        <CheckCircle className="text-left" />
+                        <span className="text-left">{item}<
                       </li>
                     ))}
                   </ul>
@@ -281,50 +281,50 @@ export default function EdgeAIComputing2026() {
             </div>
           </section>
 
-          <section className="mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Deployment Success Story</h2>
+          <section className="text-left">
+            <h2 className="text-left">Deployment Success Story</h2>
             
-            <div className="bg-gradient-to-br from-cyan-600 to-blue-600 text-white rounded-2xl p-8 mb-6">
-              <h3 className="text-2xl font-bold mb-4">Global Automotive Manufacturer</h3>
-              <p className="text-lg mb-6 opacity-90">
+            <div className="text-left">
+              <h3 className="text-left">Global Automotive Manufacturer</h3>
+              <p className="text-left">
                 Deployed edge AI across 150 manufacturing plants with 10,000+ edge devices for quality control, 
                 predictive maintenance, and production optimization. Results after 18 months:
               </p>
-              <div className="grid md:grid-cols-4 gap-6">
+              <div className="text-left">
                 {[
                   { metric: '$120M', label: 'Annual Savings' },
                   { metric: '98%', label: 'Quality Improvement' },
                   { metric: '65%', label: 'Downtime Reduction' },
                   { metric: '<3ms', label: 'Average Latency' }
                 ].map((stat, i) => (
-                  <div key={i} className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
-                    <div className="text-3xl font-extrabold mb-2">{stat.metric}</div>
-                    <div className="text-sm">{stat.label}</div>
+                  <div key={i} className="text-left">
+                    <div className="text-left">{stat.metric}</div>
+                    <div className="text-left">{stat.label}</div>
                   </div>
                 ))}
               </div>
             </div>
 
-            <div className="bg-blue-50 rounded-xl p-6 border-l-4 border-blue-500">
-              <p className="text-gray-700 italic text-lg">
+            <div className="text-left">
+              <p className="text-left">
                 "Edge AI transformed our manufacturing operations. Real-time quality control and predictive 
                 maintenance run autonomously on the factory floor, with no cloud dependencies. We've eliminated 
                 production delays and reduced defects to near-zero levels."
               </p>
-              <p className="text-gray-900 font-bold mt-4">— VP of Manufacturing Operations</p>
+              <p className="text-left">— VP of Manufacturing Operations</p>
             </div>
           </section>
 
-          <section className="mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Edge AI vs Cloud AI Comparison</h2>
+          <section className="text-left">
+            <h2 className="text-left">Edge AI vs Cloud AI Comparison</h2>
             
-            <div className="overflow-x-auto">
-              <table className="w-full border-collapse bg-white rounded-xl shadow-lg overflow-hidden">
-                <thead className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white">
+            <div className="text-left">
+              <table className="text-left">
+                <thead className="text-left">
                   <tr>
-                    <th className="p-4 text-left">Metric</th>
-                    <th className="p-4 text-center">Edge AI</th>
-                    <th className="p-4 text-center">Cloud AI</th>
+                    <th className="text-left">Metric</th>
+                    <th className="text-left">Edge AI</th>
+                    <th className="text-left">Cloud AI</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -337,9 +337,9 @@ export default function EdgeAIComputing2026() {
                     { metric: 'Model Updates', edge: 'Federated Learning', cloud: 'Centralized' }
                   ].map((row, i) => (
                     <tr key={i} className={i % 2 === 0 ? 'bg-gray-50' : 'bg-white'}>
-                      <td className="p-4 font-semibold text-gray-900">{row.metric}</td>
-                      <td className="p-4 text-center text-green-600 font-bold">{row.edge}</td>
-                      <td className="p-4 text-center text-gray-600">{row.cloud}</td>
+                      <td className="text-left">{row.metric}</td>
+                      <td className="text-left">{row.edge}</td>
+                      <td className="text-left">{row.cloud}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -349,24 +349,24 @@ export default function EdgeAIComputing2026() {
         </div>
 
         {/* Call to Action */}
-        <div className="mt-16 bg-gradient-to-r from-cyan-600 to-blue-600 rounded-2xl p-12 text-white text-center">
-          <h2 className="text-4xl font-bold mb-6">Deploy Edge AI in Your Enterprise</h2>
-          <p className="text-xl mb-8 opacity-90">
+        <div className="text-left">
+          <h2 className="text-left">Deploy Edge AI in Your Enterprise</h2>
+          <p className="text-left">
             Unlock ultra-low latency and cost savings. Our edge AI experts are ready to architect your solution.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="text-left">
             <Link
               href="/contact"
-              className="bg-white text-cyan-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-colors shadow-lg inline-flex items-center justify-center gap-2"
+              className="text-left"
             >
-              <span>Start Edge AI Project</span>
-              <ArrowLeft className="w-5 h-5 rotate-180" />
+              <span>Start Edge AI Project<
+              <ArrowLeft className="text-left" />
             </Link>
             <Link
               href="/services"
-              className="border-2 border-white text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-cyan-600 transition-colors inline-flex items-center justify-center gap-2"
+              className="text-left"
             >
-              <span>View Edge AI Services</span>
+              <span>View Edge AI Services<
             </Link>
           </div>
         </div>

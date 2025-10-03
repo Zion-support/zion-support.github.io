@@ -10,15 +10,14 @@
       const lcp = lcpEntries[0] as PerformanceEntry;
 
       const clsEntries = window && window.performance.getEntriesByType("layout-shift");
-      const cls = clsEntries && clsEntries.reduce((acc, entry) => {
+      const cls = clsEntries && clsEntries.reduce((acc, entry) => {/* content */}
         return acc + (entry as PerformanceEntry & { value: number }).value;
       }, 0);
 
       const fidEntries = window && window.performance.getEntriesByType("first-input");
 
       const fid = fidEntries[0] as PerformanceEventTiming;
-      setMetrics({
-
+      setMetrics({/* content */}
         loadTime: navigation && navigation.loadEventEnd - navigation && navigation.loadEventStart,
         firstContentfulPaint: fcp ? fcp && fcp.startTime : 0,
         largestContentfulPaint: lcp ? lcp && lcp.startTime : 0,

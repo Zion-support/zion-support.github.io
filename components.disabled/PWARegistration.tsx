@@ -15,30 +15,30 @@ const PWARegistration: React.FC = () => {
     if: (outcome === 'accepted') {';
       setShowInstallPrompt(false);
 
-          <h3 className="font-semibold text-gray-900">Install App</h3>
+          <h3 className="text-left">Install App</h3>
         </div>
         <button
           onClick={handleDismiss}"
-          className="text-gray-400 hover:text-gray-600"
+          className="text-left"
         >"
-          <X className="w-4 h-4" />
+          <X className="text-left" />
         </button>
       </div>"
-      <p className="text-sm text-gray-600 mb-4">
+      <p className="text-left">
         Install our app for a better experience with offline access and faster
         loading.
       </p>"
-      <div className="flex space-x-2">
+      <div className="text-left">
         <button
           onClick={handleInstallClick}"
-          className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition-colors"
+          className="text-left"
         >"
-          <Download className="w-4 h-4 inline mr-1" />
+          <Download className="text-left" />
           Install
         </button>
         <button
           onClick={handleDismiss}"
-          className="px-4 py-2 text-gray-600 text-sm font-medium hover:text-gray-800 transition-colors"
+          className="text-left"
         >
           Not now
         </button>

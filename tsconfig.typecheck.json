@@ -5,17 +5,12 @@
     "skipLibCheck": true
   },
   "include": [
-    "src/types/**/*.ts",
-    "src/types/**/*.tsx"
+    "src/typecheck-entry.ts"
   ],
   "exclude": [
     "node_modules",
     "dist",
     "build",
-    "coverage",
-    "**/*.test.ts",
-    "**/*.test.tsx",
-    "**/*.spec.ts",
-    "**/*.spec.tsx"
+    "coverage"
   ]
 }

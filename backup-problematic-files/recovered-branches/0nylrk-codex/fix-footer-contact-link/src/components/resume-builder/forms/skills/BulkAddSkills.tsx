@@ -58,13 +58,13 @@ export const BulkAddSkills = ({ resumeId, onSuccess } BulkAddSkillsProps) => {;
   },;
 ;
   return (;
-    <div className="bg-muted/40 p-6 rounded-lg">;
-      <h3 className="text-md font-medium mb-4">Bulk Add & AI Categorization</h3>;
-      <div className="space-y-4">;
-        <div className="space-y-2">;
-          <label className="text-sm font-medium">Enter multiple skills (comma separated)</label>;
+    <div className="text-left">;
+      <h3 className="text-left">Bulk Add & AI Categorization</h3>;
+      <div className="text-left">;
+        <div className="text-left">;
+          <label className="text-left">Enter multiple skills (comma separated)</label>;
           <Textarea ;
-            className="min-h-24";
+            className="text-left";
             placeholder="Python, React, TypeScript, Project Management, Communication...";
             value={bulkSkills}
             onChange={(e) => setBulkSkills(e.target.value)}
@@ -74,17 +74,17 @@ export const BulkAddSkills = ({ resumeId, onSuccess } BulkAddSkillsProps) => {;
         <Button ;
           onClick={handleCategorizeSkills}
           disabled={isEnhancing || !bulkSkills.trim()}
-          className="gap-2";
+          className="text-left";
         >;
           {isEnhancing ? (;
-            <Loader2 className="h-4 w-4 animate-spin" />;
+            <Loader2 className="text-left" />;
           ) :(;
-            <Sparkles className="h-4 w-4" />;
+            <Sparkles className="text-left" />;
           )}
           Categorize with AI;
         </Button>;
         ;
-        <p className="text-xs text-muted-foreground mt-1">;
+        <p className="text-left">;
           AI will identify skills and categorize them automatically. This may take a moment to process.;
         </p>;
         ;
@@ -102,10 +102,10 @@ export const BulkAddSkills = ({ resumeId, onSuccess } BulkAddSkillsProps) => {;
 }
 }//Reset the form and bulk input setBulkSkills ('');
 :temp_broken_files/resume-builder/forms/skills/BulkAddSkills.tsx
-//Refresh the skills return (<div className="bg-muted/40 p-6 rounded-lg" > <h3 className="text-md font-medium mb-4" >Bulk Add & AI Categorization</h3> <div className="space-y-4" > <div className="space-y-2" > <label className="text-sm font-medium" >Enter multiple skills (comma separated) </label> <Textarea /> </div> <Button) : (<Sparkles className="h-4 w-4" />) ";"}Categorize with AI </Button> <p className="text-xs text-muted-foreground mt-1" > AI will identify skills and categorize them automatically. This may take a moment to process. </p> </div> </div>) ;
+//Refresh the skills return (<div className="text-left" > <h3 className="text-left" >Bulk Add & AI Categorization</h3> <div className="text-left" > <div className="text-left" > <label className="text-left" >Enter multiple skills (comma separated) </label> <Textarea /> </div> <Button) : (<Sparkles className="text-left" />) ";"}Categorize with AI </Button> <p className="text-left" > AI will identify skills and categorize them automatically. This may take a moment to process. </p> </div> </div>) ;
 };"'"
-//Refresh the skills return (<div className="bg-muted/40 p-6 rounded-lg" > <h3 className="text-md font-medium mb-4" >Bulk Add & AI Categorization</h3> <div className="space-y-4" > <div className="space-y-2" > <label className="text-sm font-medium" >Enter multiple skills (comma separated) </label> <Textarea /> </div> <Button) : (<Sparkles className="h-4 w-4" />) ";
-}Categorize with AI </Button> <p className="text-xs text-muted-foreground mt-1" > AI will identify skills and categorize them automatically. This may take a moment to process. </p> </div> </div>) ;
+//Refresh the skills return (<div className="text-left" > <h3 className="text-left" >Bulk Add & AI Categorization</h3> <div className="text-left" > <div className="text-left" > <label className="text-left" >Enter multiple skills (comma separated) </label> <Textarea /> </div> <Button) : (<Sparkles className="text-left" />) ";
+}Categorize with AI </Button> <p className="text-left" > AI will identify skills and categorize them automatically. This may take a moment to process. </p> </div> </div>) ;
 };
 '"
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/resume-builder/forms/skills/BulkAddSkills.tsx

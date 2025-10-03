@@ -34,9 +34,9 @@ const MainLayout: React.FC<MainLayoutProps> = ({
           'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap' ]}
       />
       <AccessibilityEnhancer>
-        <div className="min-h-screen flex flex-col">
+        <div className="text-left">
           <Header />
-          <main id="main-content" className="flex-grow" role="main">
+          <main id="main-content" className="text-left" role="main">
             {children}
           </main>
           <Footer />

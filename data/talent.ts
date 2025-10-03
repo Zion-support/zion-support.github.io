@@ -1,4 +1,4 @@
-export type TalentProfile = {
+export type TalentProfile = {/* content */}
   slug: string;
   name: string;
   title: string;
@@ -17,7 +17,7 @@ export type TalentProfile = {
 // Stub talent data - placeholder for missing functionality
 export const TALENT_PROFILES = [
 
-  {
+  {/* content */}
     slug: 'ava-chen',
     name: 'Ava Chen',
     title: 'Senior LLM Engineer',
@@ -32,7 +32,7 @@ export const TALENT_PROFILES = [
     rating: 4.9,
     bookings: 42,
   },
-  {
+  {/* content */}
     slug: 'marco-silva',
     name: 'Marco Silva',
     title: 'Cloud Solutions Architect',
@@ -47,7 +47,7 @@ export const TALENT_PROFILES = [
     rating: 4.8,
     bookings: 36,
   },
-  {
+  {/* content */}
     slug: 'nina-patel',
     name: 'Nina Patel',
     title: 'Data Scientist • GenAI',
@@ -62,7 +62,7 @@ export const TALENT_PROFILES = [
     rating: 4.7,
     bookings: 28,
   },
-  {
+  {/* content */}
     slug: 'kenji-yamada',
     name: 'Kenji Yamada',
     title: 'Full‑Stack AI Engineer',
@@ -77,7 +77,7 @@ export const TALENT_PROFILES = [
     rating: 4.85,
     bookings: 31,
   },
-  {
+  {/* content */}
     slug: 'lena-mueller',
     name: 'Lena Müller',
     title: 'Security Engineer',

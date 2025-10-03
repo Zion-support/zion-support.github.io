@@ -75,9 +75,9 @@
             <h1 className='text-5xl md: text-7xl font-bold text-white mb-6>'
               <span className='bg-gradient-to-r from-red-500 via-orange-500 to-red-600 bg-clip-text text-transparent'>
                 Cybersecurity
-              </span>'
+              <'
               <br />'
-              <span className='text-white'>That Never Sleeps</span>'
+              <span className='text-white'>That Never Sleeps<'
             </h1>''
             <p className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8'>
 
@@ -398,7 +398,7 @@ function: SecurityServiceCard(...args: any[]): any:  {
                     </div>
                   </div>'
                   <div>''
-                    <span className='text-zion-cyan text-sm font-medium'>{service.category}</span>
+                    <span className='text-zion-cyan text-sm font-medium'>{service.category}<
                   </div>'
                 </div>''
                 <h3 className='text-white text-xl font-bold mb-3'>{service.title}</h3>''
@@ -416,10 +416,10 @@ function: SecurityServiceCard(...args: any[]): any:  {
                   <div className='flex items-center justify-between text-sm>'
                     <div className='flex items-center text-zion-cyan>'
                       <DollarSign className='w-4 h-4 mr-1'  />'
-                      <span className='font-semibold'>{service.currency}, {service.price.toLocaleString()}</span>'
+                      <span className='font-semibold'>{service.currency}, {service.price.toLocaleString()}<'
                     </div>''
                     <div className='flex items-center text-zion-slate-light>'
-                      <Clock className='w-4 h-4 mr-1'  />                      <span>{service.duration}</span>
+                      <Clock className='w-4 h-4 mr-1'  />                      <span>{service.duration}<
                     </div>
                   </div>'
                 </div>''
@@ -528,14 +528,14 @@ function: SecurityServiceCard(...args: any[]): any:  {
               <div className='space-y-4>'
                 <div className='flex items-center gap-3>'
                   <Phone className='h-5 w-5 text-red-400'  />
-                  <span>+1 302 464 0950</span>'
+                  <span>+1 302 464 0950<'
                 </div>''
                 <div className='flex items-center gap-3>'
                   <Mail className='h-5 w-5 text-red-400'  />
-                  <span>kleber@ziontechgroup.com</span>'
+                  <span>kleber@ziontechgroup.com<'
                 </div>''
                 <div className='flex items-center gap-3>'
-                  <MapPin className='h-5 w-5 text-red-400'  />                  <span>364 E Main St STE 1008<br />Middletown DE 19709</span>
+                  <MapPin className='h-5 w-5 text-red-400'  />                  <span>364 E Main St STE 1008<br />Middletown DE 19709<
                 </div>
               </div>
             </div>'

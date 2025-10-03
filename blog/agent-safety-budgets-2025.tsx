@@ -2,9 +2,15 @@ import React from 'react';
 
 export default function AgentSafetyBudgets2025() {
   return (
-    <main className="prose lg:prose-xl max-w-4xl mx-auto py-12">
+    <div>/* content */}
+  return (
+    <div>
+      <div></div>
+      <div></div>
+    </div>
+    <main className="text-left">
       <h1>Agent Safety Budgets (2025): Practical Guardrails That Ship</h1>
-      <p>
+      <p></p>
         A pragmatic playbook for constraining autonomous agents with safety, privacy, and cost budgets
         linked directly to business KPIs. Learn how to define policies, simulate outcomes, and enforce
         constraints at runtime with auditable telemetry.
@@ -17,7 +23,7 @@ export default function AgentSafetyBudgets2025() {
         <li>Privacy: redaction policies, on-device inference tiers</li>
       </ul>
       <h2>Implementation Notes</h2>
-      <p>
+      <p></p>
         Ship policy-as-code and couple it to pre-merge tests and runtime enforcement with structured logs
         and dashboards for product, security, and compliance stakeholders.
       </p>
@@ -25,3 +31,4 @@ export default function AgentSafetyBudgets2025() {
   );
 }
 
+)

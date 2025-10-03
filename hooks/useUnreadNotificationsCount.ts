@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react';
 
-export function useUnreadNotificationsCount() {
+export function useUnreadNotificationsCount() {/* content */}
   const [unreadCount, setUnreadCount] = useState(0);
 
-  useEffect(() => {
+  useEffect(() => {/* content */}
     // Simulate fetching unread notifications count
     // In a real app, this would fetch from an API
-    const fetchUnreadCount = () => {
+    const fetchUnreadCount = () => {/* content */}
       // Simulate random unread count for demo purposes
       const randomCount = Math.floor(Math.random() * 5);
       setUnreadCount(randomCount);

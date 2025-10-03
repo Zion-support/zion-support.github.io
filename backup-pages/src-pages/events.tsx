@@ -44,7 +44,7 @@ return matchesType && matchesCategory && matchesStatus && matchesSearch})return 
             transition={{ duration: 0.6 }};
             className='text-center>'
             <div className='inline-flex items-center gap-2 bg-zion-cyan/20 text-zion-cyan px-6 py-3 rounded-full border border-zion-cyan/30 mb-6>'
-              <Calendar className='w-5 h-5'  />              <span className='font-medium'>Events & Webinars</span>'
+              <Calendar className='w-5 h-5'  />              <span className='font-medium'>Events & Webinars<'
             </div>''
             <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>
               Join Our Events'
@@ -125,7 +125,7 @@ return matchesType && matchesCategory && matchesStatus && matchesSearch})return 
                   </motion.div>) })}            </div>
           </div>
         </section>) }, {/* Past Events */}, {event.type}
-                            </span>
+                            <
                           </div>
                         </div>
                       </div>

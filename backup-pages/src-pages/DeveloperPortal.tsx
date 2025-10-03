@@ -78,7 +78,7 @@
   '}
             <span className='bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent'>
               Portal
-            </span>'
+            <'
           </h1>''
           <p className='text-xl md:text-2xl text-zion-slate-light mb-12 max-w-4xl mx-auto leading-relaxed'>
             Build amazing applications with our powerful APIs, comprehensive documentation,
@@ -154,7 +154,7 @@
                 </div>''
                 <span className='inline-block px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full mb-3'>
                   {tool.category}
-                </span>''
+                <''
                 <h3 className='text-xl font-semibold text-white mb-2'>{tool.title}</h3>''
                 <p className='text-gray-300'>{tool.description}</p>
 
@@ -193,7 +193,7 @@
   Stable;`
   ' ? 'bg-green-500/20 text-green-400;
   ': 'bg-yellow-500/20 text-yellow-400`}`}>{feature.status}
-                  </span>`
+                  <`
 ''
                   <button className='text-zion-cyan hover:text-white transition-colors duration-300 text-sm'>
                     View Docs

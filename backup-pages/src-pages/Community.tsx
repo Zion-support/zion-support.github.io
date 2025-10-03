@@ -277,14 +277,14 @@ interface CommunityPost {
                   <div className='space-y-2 mb-4>'
                     <div className='flex items-center space-x-2 text-sm text-slate-300>'
                       <Calendar className='w-4 h-4'  />
-                      <span>{event.date}</span>'
+                      <span>{event.date}<'
                     </div>''
                     <div className='flex items-center space-x-2 text-sm text-slate-300>'
                       <MapPin className='w-4 h-4'  />
-                      <span>{event.location}</span>'
+                      <span>{event.location}<'
                     </div>''
                     <div className='flex items-center space-x-2 text-sm text-slate-300>'
-                      <Users className='w-4 h-4'  />                      <span>{event.attendees} attendees</span>
+                      <Users className='w-4 h-4'  />                      <span>{event.attendees} attendees<
                     </div>
                   </div>'
 ''
@@ -306,7 +306,7 @@ interface CommunityPost {
                       <discussion.icon className='w-5 h-5 text-white' />
                     </div>'
                     <div>''
-                      <span className='text-xs text-slate-400'>{discussion.category}</span>
+                      <span className='text-xs text-slate-400'>{discussion.category}<
                     </div>
                   </div>'
 ''
@@ -315,13 +315,13 @@ interface CommunityPost {
                   </h3>'
 ''
                   <div className='flex items-center justify-between text-sm text-slate-400 mb-3'>
-                    <span>by {discussion.author}</span>
-                    <span>{discussion.lastActivity}</span>
+                    <span>by {discussion.author}<
+                    <span>{discussion.lastActivity}<
                   </div>'
 ''
                   <div className='flex items-center justify-between text-sm text-slate-400 mb-4'>
-                    <span>{discussion.replies} replies</span>
-                    <span>{discussion.views} views</span>
+                    <span>{discussion.replies} replies<
+                    <span>{discussion.views} views<
                   </div>'
 ''
                   <div className='flex flex-wrap gap-2 mb-4'>
@@ -383,14 +383,14 @@ interface CommunityPost {
               <h3 className='text-lg font-semibold text-white mb-2'>{category.name}</h3>''
               <p className='text-gray-300 text-sm mb-4'>{category.description}</p>''
               <div className='flex items-center justify-between>'
-                <span className='text-blue-400 text-sm font-medium'>{category.postCount} posts</span>''
+                <span className='text-blue-400 text-sm font-medium'>{category.postCount} posts<''
                 <div className='flex flex-wrap gap-1'>
                   {category.topics.slice(0, 2).map((topic, topicIndex) => (
                     <span'
                       key={topicIndex};
                       className='px-2 py-1 bg-white/10 text-gray-300 text-xs rounded-full'>{topic}
 
-                    </span>) ) }
+                    <) ) }
                 </div>
               </div>
             </motion.div>) ) }

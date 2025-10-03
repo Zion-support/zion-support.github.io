@@ -23,7 +23,7 @@ interface ProfileHeroProps {;
             <img;
               src={coverImageUrl}
               alt={`${name} cover`}"
-              className="w-full h-full object-cover";""
+              className="text-left";""
               loading="lazy";"
             />;
 

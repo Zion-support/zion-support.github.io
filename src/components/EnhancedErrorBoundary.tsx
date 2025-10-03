@@ -1,23 +1,32 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
+/**
+ * Enhanced Error Boundary Component
+ * Comprehensive error handling with performance monitoring and user feedback
+ */
 
+import React, { Component, ReactNode, ErrorInfo } from 'react';
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
+  showDetails?: boolean;
 }
 
 interface State {
   hasError: boolean;
   error: Error | null;
   errorInfo: ErrorInfo | null;
-  errorCount: number;
+  errorId: string;
 }
 
-/**
- * Enhanced Error Boundary with automatic recovery and user-friendly UI
- */
+// Analytics utilities (mock implementation)
+const analyticsUtils = {
+  trackEvent: (event: string, data: Record<string, unknown>) => {
+    console.log('Analytics Event:', event, data);
+  }
+};
 class EnhancedErrorBoundary extends Component<Props, State> {
-  private resetTimeout: NodeJS.Timeout | null = null;
+  private retryCount = 0;
+  private maxRetries = 3;
 
   constructor(props: Props) {
     super(props);
@@ -25,163 +34,156 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       hasError: false,
       error: null,
       errorInfo: null,
-      errorCount: 0,
+      errorId: ''
     };
   }
 
   static getDerivedStateFromError(error: Error): Partial<State> {
+    // Generate unique error ID
+    const errorId = `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+    
     return {
       hasError: true,
       error,
+      errorId
     };
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary:', error, errorInfo);
-    }
+    const { onError } = this.props;
 
     // Update state with error info
-    this.setState((prevState) => ({
-      errorInfo,
-      errorCount: prevState.errorCount + 1,
-    }));
+    this.setState({ errorInfo });
 
-    // Call custom error handler if provided
-    if (this.props.onError) {
-      this.props.onError(error, errorInfo);
-    }
+    // Generate unique error ID
+    const errorId = `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
 
-    // Auto-reset after multiple errors (circuit breaker pattern)
-    if (this.state.errorCount >= 3) {
-      this.scheduleReset();
-    }
-
-    // Send error to monitoring service in production
-    if (process.env.NODE_ENV === 'production') {
-      this.logErrorToService(error, errorInfo);
-    }
-  }
-
-  componentWillUnmount() {
-    if (this.resetTimeout) {
-      clearTimeout(this.resetTimeout);
-    }
-  }
-
-  private scheduleReset() {
-    // Reset after 5 seconds to prevent infinite error loops
-    this.resetTimeout = setTimeout(() => {
-      this.handleReset();
-    }, 5000);
-  }
-
-  private logErrorToService(error: Error, errorInfo: ErrorInfo) {
-    // Placeholder for error tracking service (e.g., Sentry, LogRocket)
-    const errorData = {
-      message: error.message,
-      stack: error.stack,
-      componentStack: errorInfo.componentStack,
+    // Create error details object for potential future use
+    const _errorDetails = {
+      errorId,
       timestamp: new Date().toISOString(),
       userAgent: navigator.userAgent,
       url: window.location.href,
+      retryCount: this.retryCount
     };
+    console.log('Error details:', _errorDetails);
 
-    // Send to your error tracking service
-    console.error('Error logged:', errorData);
+
+    // Send to analytics
+    analyticsUtils.trackEvent('error_boundary_caught', {
+      error_id: errorId,
+      error_message: error.message,
+      error_stack: error.stack?.substring(0, 500), // Truncate for analytics
+      component_stack: errorInfo.componentStack?.substring(0, 500) || '',
+      retry_count: this.retryCount
+    });
+
+    // Log security event if suspicious
+    // if (securityMonitoring.detectSuspiciousActivity(errorDetails)) {
+    //   securityMonitoring.logSecurityEvent('suspicious_error', errorDetails);
+    // }
+
+    // Call custom error handler
+    if (onError) {
+      onError(error, errorInfo);
+    }
   }
 
-  handleReset = () => {
-    this.setState({
-      hasError: false,
-      error: null,
-      errorInfo: null,
-      errorCount: 0,
-    });
+  handleRetry = () => {
+    if (this.retryCount < this.maxRetries) {
+      this.retryCount++;
+      this.setState({
+        hasError: false,
+        error: null,
+        errorInfo: null,
+        errorId: ''
+      });
+
+      // Track retry attempt
+      analyticsUtils.trackEvent('error_boundary_retry', {
+        error_id: this.state.errorId,
+        retry_count: this.retryCount
+      });
+    }
   };
 
-  handleReload = () => {
-    window.location.reload();
+  handleReportError = () => {
+    const { error, errorInfo, errorId } = this.state;
+    
+    // In a real application, this would send to an error reporting service
+    const errorReport = {
+      errorId,
+      message: error?.message,
+      stack: error?.stack,
+      componentStack: errorInfo?.componentStack,
+      timestamp: new Date().toISOString(),
+      userAgent: navigator.userAgent,
+      url: window.location.href
+    };
+
+    // Track error report
+    analyticsUtils.trackEvent('error_boundary_report', {
+      error_id: errorId,
+      reported: true
+    });
+
+    // For demo purposes, copy to clipboard
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(JSON.stringify(errorReport, null, 2));
+      alert('Error details copied to clipboard');
+    } else {
+      console.log('Error Report:', errorReport);
+      alert('Error details logged to console');
+    }
   };
 
   render() {
-    if (this.state.hasError) {
+    const { hasError } = this.state;
+    const { children, fallback } = this.props;
+
+    if (hasError) {
       // Use custom fallback if provided
-      if (this.props.fallback) {
-        return this.props.fallback;
+      if (fallback) {
+        return fallback;
       }
 
       // Default error UI
       return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 flex items-center justify-center p-6">
-          <div className="max-w-2xl w-full bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 shadow-2xl">
-            <div className="flex items-center justify-center mb-6">
-              <div className="bg-red-500/20 p-4 rounded-full">
-                <AlertTriangle className="w-12 h-12 text-red-400" />
+        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-red-50 to-orange-50">
+          <div className="max-w-md w-full mx-4">
+            <div className="bg-white rounded-2xl shadow-xl p-8 text-center">
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-red-100 mb-4">
+                <svg className="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
+                </svg>
+              </div>
+              <h1 className="text-2xl font-bold text-gray-900 mb-2">
+                Oops! Something went wrong
+              </h1>
+              <p className="text-gray-600 mb-6">
+                We're sorry for the inconvenience. Please try refreshing the page.
+              </p>
+              <div className="space-y-3">
+                <button
+                  onClick={this.handleRetry}
+                  className="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
+                  disabled={this.retryCount >= this.maxRetries}
+                >
+                  {this.retryCount >= this.maxRetries ? 'Max Retries Reached' : 'Retry'}
+                </button>
+                <button
+                  onClick={this.handleReportError}
+                  className="w-full border-2 border-red-600 text-red-600 hover:bg-red-50 font-semibold py-3 px-6 rounded-lg transition-colors">
+                  Report Error
+                </button>
               </div>
             </div>
-
-            <h1 className="text-3xl font-bold text-white text-center mb-4">
-              Oops! Something went wrong
-            </h1>
-
-            <p className="text-gray-300 text-center mb-8">
-              We're sorry for the inconvenience. Our team has been notified and we're working on fixing this issue.
-            </p>
-
-            {process.env.NODE_ENV === 'development' && this.state.error && (
-              <div className="bg-red-900/30 border border-red-500/30 rounded-lg p-4 mb-6 overflow-auto max-h-60">
-                <p className="text-red-300 font-mono text-sm mb-2">
-                  <strong>Error:</strong> {this.state.error.message}
-                </p>
-                {this.state.error.stack && (
-                  <pre className="text-red-400 text-xs overflow-auto">
-                    {this.state.error.stack}
-                  </pre>
-                )}
-              </div>
-            )}
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button
-                onClick={this.handleReset}
-                className="flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
-              >
-                <RefreshCw className="w-5 h-5" />
-                Try Again
-              </button>
-
-              <button
-                onClick={this.handleReload}
-                className="flex items-center justify-center gap-2 bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
-              >
-                <RefreshCw className="w-5 h-5" />
-                Reload Page
-              </button>
-
-              <Link
-                to="/"
-                className="flex items-center justify-center gap-2 bg-gray-700 hover:bg-gray-800 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
-              >
-                <Home className="w-5 h-5" />
-                Go Home
-              </Link>
-            </div>
-
-            {this.state.errorCount >= 3 && (
-              <div className="mt-6 text-center">
-                <p className="text-yellow-400 text-sm">
-                  Multiple errors detected. Page will auto-reset in 5 seconds...
-                </p>
-              </div>
-            )}
           </div>
         </div>
       );
     }
 
-    return this.props.children;
+    return children;
   }
 }
 
