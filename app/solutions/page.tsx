@@ -2,30 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
   ArrowRight, 
-  CheckCircle, 
-  Star, 
-  Users, 
-  Zap, 
   Shield, 
-  Globe, 
-  BarChart3,
-  Brain,
-  Cpu,
-  Cloud,
-  Database,
-  Lock,
-  TrendingUp,
-  Award,
-  Target,
-  Rocket,
   Building,
   Briefcase,
-  Home,
   Heart,
   DollarSign,
   Factory,
   ShoppingCart,
-  GraduationCap,
   Truck
 } from 'lucide-react';
 

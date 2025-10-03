@@ -2,16 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
   ArrowRight, 
-  CheckCircle, 
   Star, 
   Users, 
   Zap, 
   Shield, 
   Globe, 
-  BarChart3,
-  Brain,
-  Cpu,
-  Cloud,
   Database,
   Lock,
   TrendingUp,
@@ -23,9 +18,9 @@ import {
   Mail,
   Phone,
   MapPin,
-  Calendar,
   GraduationCap,
-  Briefcase
+  Briefcase,
+  Lightbulb
 } from 'lucide-react';
 
 export const metadata = {

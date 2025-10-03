@@ -1,4 +1,5 @@
 import { useEffect, useRef, useCallback, useState } from 'react';
+
 /**
  * Performance monitoring hook for React components
  */
@@ -39,7 +40,7 @@ export const useMemoizedCallback = <T extends (...args: any[]) => any>(
   deps: React.DependencyList
 ): T => {
   const ref = useRef<T>();
-  
+
   useEffect(() => {
     ref.current = callback;
   }, deps);
@@ -107,7 +108,7 @@ export const useIntersectionObserver = (
     const observer = new IntersectionObserver(
       ([entry]) => {
         setIsIntersecting(entry.isIntersecting);
-      ',
+      },
       {
         threshold: 0.1,
         rootMargin: '50px',
@@ -134,7 +135,7 @@ export const useVisibility = () => {
   useEffect(() => {
     const handleVisibilityChange = () => {
       setIsVisible(!document.hidden);
-    ';
+    };
 
     document.addEventListener('visibilitychange', handleVisibilityChange);
 
@@ -144,7 +145,7 @@ export const useVisibility = () => {
   }, []);
 
   return isVisible;
-';
+};
 
 /**
  * Hook for managing network status
@@ -167,7 +168,7 @@ export const useNetworkStatus = () => {
       
       const handleConnectionChange = () => {
         setConnectionType(connection.effectiveType || 'unknown');
-      ';
+      };
 
       connection.addEventListener('change', handleConnectionChange);
 
@@ -176,7 +177,7 @@ export const useNetworkStatus = () => {
         window.removeEventListener('offline', handleOffline);
         connection.removeEventListener('change', handleConnectionChange);
       };
-    };
+    }
 
     return () => {
       window.removeEventListener('online', handleOnline);
@@ -195,7 +196,7 @@ export const useMemoryInfo = () => {
     usedJSHeapSize: number;
     totalJSHeapSize: number;
     jsHeapSizeLimit: number;
-  ' | null>(null);
+  } | null>(null);
 
   useEffect(() => {
     if ('memory' in performance) {
@@ -249,7 +250,7 @@ export const useComponentLifecycle = (componentName: string) => {
   useEffect(() => {
     renderStartTime.current = performance.now();
     markRender();
-  };
+  });
 
   useEffect(() => {
     const renderTime = performance.now() - renderStartTime.current;
