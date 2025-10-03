@@ -42,7 +42,7 @@ function App(): JSX.Element {
   return (
     <ErrorBoundary>
       <Router>
-        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+        <div className="min-h-screen bg-slate-950">
           <Header />
           
           {/* 🌌🌌🌌 BREAKING: OCTOBER 2025 QUANTUM CONSCIOUSNESS SINGULARITY BREAKTHROUGH - ABSOLUTE #1 TOP PRIORITY! 🌌🌌🌌 */}

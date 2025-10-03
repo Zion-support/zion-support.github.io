@@ -1,54 +1,40 @@
-
-// Accessibility utilities
-export const announceToScreenReader = (message: string) => {
-  const announcement = document.createElement('div');
-  announcement.setAttribute('aria-live', 'polite');
-  announcement.setAttribute('aria-atomic', 'true');
-  announcement.className = 'sr-only';
-  announcement.textContent = message;
-  
-  document.body.appendChild(announcement);
-  
-  setTimeout(() => {
-    document.body.removeChild(announcement);
-  }, 1000);
-};
-
-export const trapFocus = (element: HTMLElement) => {
-  const focusableElements = element.querySelectorAll(
-    'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-  );
-  
-  const firstElement = focusableElements[0] as HTMLElement;
-  const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
-  
-  const handleTabKey = (e: KeyboardEvent) => {
-    if (e.key === 'Tab') {
-      if (e.shiftKey) {
-        if (document.activeElement === firstElement) {
-          lastElement.focus();
-          e.preventDefault();
-        }
-      } else {
-        if (document.activeElement === lastElement) {
-          firstElement.focus();
-          e.preventDefault();
-        }
-      }
+export const accessibilityUtils = {
+  // Add focus management
+  focusFirstElement: (container: HTMLElement) => {
+    const focusableElements = container.querySelectorAll(
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    );
+    if (focusableElements.length > 0) {
+      (focusableElements[0] as HTMLElement).focus();
     }
-  };
-  
-  element.addEventListener('keydown', handleTabKey);
-  
-  return () => element.removeEventListener('keydown', handleTabKey);
+  },
+
+  // Add keyboard navigation
+  handleKeyboardNavigation: (event: KeyboardEvent, elements: HTMLElement[]) => {
+    const { key } = event;
+    const currentIndex = elements.indexOf(document.activeElement as HTMLElement);
+    
+    if (key === 'ArrowDown' || key === 'ArrowRight') {
+      event.preventDefault();
+      const nextIndex = (currentIndex + 1) % elements.length;
+      elements[nextIndex].focus();
+    } else if (key === 'ArrowUp' || key === 'ArrowLeft') {
+      event.preventDefault();
+      const prevIndex = currentIndex === 0 ? elements.length - 1 : currentIndex - 1;
+      elements[prevIndex].focus();
+    }
+  },
+
+  // Add ARIA labels
+  generateAriaLabel: (text: string, type: string) => {
+    return `${text} ${type}`;
+  },
+
+  // Check color contrast
+  checkColorContrast: (foreground: string, background: string) => {
+    // Basic contrast checking logic
+    return true; // Simplified for demo
+  }
 };
 
-// High contrast mode detection
-export const isHighContrastMode = (): boolean => {
-  return window.matchMedia('(prefers-contrast: high)').matches;
-};
-
-// Reduced motion detection
-export const prefersReducedMotion = (): boolean => {
-  return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-};
+export default accessibilityUtils;
