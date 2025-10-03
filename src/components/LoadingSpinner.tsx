@@ -37,7 +37,7 @@ const PageLoader = memo<PageLoaderProps>(({
   className = '' 
 }) => {
   return (
-    <div className={`flex flex-col items-center justify-center min-h-screen bg-slate-950 text-white ${className}`} role="status" aria-label="Page loading">
+      <div className={`flex flex-col items-center justify-center min-h-screen bg-slate-950 text-white ${className}`} role="status" aria-label="Page loading">
       <div 
         className="w-16 h-16 border-8 border-blue-500 border-t-transparent rounded-full animate-spin mb-4"
         aria-hidden="true" />
@@ -60,8 +60,8 @@ const SkeletonLoader = memo<SkeletonLoaderProps>(({ lines = 3, className = '' })
         <div
           key={index}
           className={`h-4 bg-gray-300 rounded mb-2 ${
-            index === lines - 1 ? 'w-3/4' : 'w-full'
-          }`}
+            index === lines - 1 ? 'w-3/4' : 'w-full'}
+          `}
           aria-hidden="true" />
       ))}
       <span className="sr-only">Loading content...</span>
@@ -79,12 +79,15 @@ interface InlineSpinnerProps {
 const InlineSpinner = memo<InlineSpinnerProps>(({ size = 'sm', className = '' }) => {
   const sizeClasses = {
     xs: 'w-3 h-3 border',
-    sm: 'w-4 h-4 border-2'
+    sm: 'w-4 h-4 border-2',
+  
+    md: 'w-6 h-6 border-2',
+    lg: 'w-8 h-8 border-3'
   };
 
   return (
     <div 
-      className={`${sizeClasses[size]} border-current border-t-transparent rounded-full animate-spin ${className}`}
+      className={`${sizeClasses[size]} border-current border-t-transparent rounded-full animate-spin ${className`}
       role="status"
       aria-label="Loading"
       aria-hidden="true" />
@@ -92,4 +95,5 @@ const InlineSpinner = memo<InlineSpinnerProps>(({ size = 'sm', className = '' })
 });
 
 InlineSpinner.displayName = 'InlineSpinner';
+
 export { LoadingSpinner, PageLoader, SkeletonLoader, InlineSpinner };
