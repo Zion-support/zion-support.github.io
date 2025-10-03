@@ -1,4 +1,16 @@
-// @ts-nocheck
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { 
+  ArrowRight, 
+  Calendar, 
+  Clock, 
+  User, 
+  Tag,
+  TrendingUp,
+  Brain,
+  Zap,
+  Rocket
+} from 'lucide-react';
 
 const posts = [
   {

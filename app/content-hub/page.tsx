@@ -1,314 +1,235 @@
-// @ts-nocheck
+export default function ContentHubPage() {
+  return (
+    <div className="max-w-6xl mx-auto px-6 py-12">
+      <h1 className="text-3xl font-bold text-gray-900 mb-4">Content Hub</h1>
+      <p className="text-gray-600">Curated articles, case studies, and resources from Zion Tech Group.</p>
+    </div>
+  );
+}
+
 import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Content Hub: Revolutionary AI Breakthroughs 2026-2027 | Zion Tech Group',
-  description: 'Discover all revolutionary AI breakthroughs, case studies, and guides. $5.8T in proven ROI across Fortune 500 companies. Quantum Neural Superintelligence, Meta-Intelligence, and Universal Consciousness.',
-  keywords: 'AI content hub, revolutionary breakthroughs, $5.8T ROI, Fortune 500, quantum AI, meta-intelligence, universal consciousness',
-  authors: [{ name: 'Zion Tech Group' }],
-  openGraph: {
-    title: 'Content Hub: Revolutionary AI Breakthroughs 2026-2027',
-    description: 'Discover all revolutionary AI breakthroughs, case studies, and guides. $5.8T in proven ROI across Fortune 500 companies.',
-    url: 'https://ziontechgroup.com/content-hub',
-    siteName: 'Zion Tech Group',
-    locale: 'en_US',
-    type: 'website',
-  },
+  title: 'Content Hub | Zion Tech Group',
+  description: 'Discover all AI breakthroughs, case studies, and guides.',
 };
 
 export default function ContentHub() {
-  const featuredContent = [
-    {
-        { title: 'AI 2027 Transcendent Meta-Intelligence Breakthrough: $1.8T Success', slug: '/blog/ai-2027-transcendent-meta-intelligence-breakthrough', readTime: '32 min', featured: true, isNew: true },
-        { title: 'AI 2028 Omnipotent Superintelligence Breakthrough: $3.2T Success', slug: '/blog/ai-2028-omnipotent-superintelligence-breakthrough', readTime: '36 min', featured: true, isNew: true },
-        { title: 'Neural Adaptive Systems: The $89B Enterprise AI Revolution', slug: '/blog/ai-2025-oct-neural-adaptive-systems-enterprise-revolution', readTime: '24 min', featured: true, isNew: false },
-=======
-        { title: 'AI 2027 Quantum AI Breakthrough: The $500B Enterprise Transformation Revolution', slug: '/blog/ai-2027-quantum-ai-breakthrough-enterprise-transformation', readTime: '35 min', featured: true, isNew: true },
-        { title: 'AI 2027 Autonomous Enterprise Operations: The 99.9% Automation Revolution', slug: '/blog/ai-2027-autonomous-enterprise-operations-revolution', readTime: '32 min', featured: true, isNew: true },
-        { title: 'Neural Adaptive Systems: The $89B Enterprise AI Revolution', slug: '/blog/ai-2025-oct-neural-adaptive-systems-enterprise-revolution', readTime: '24 min', featured: true },
-        { title: 'AI Agent Swarms Enterprise Orchestration 2026', slug: '/blog/ai-agent-swarms-enterprise-orchestration-2026', readTime: '28 min', featured: true },
-        { title: 'Quantum-Enhanced AI Enterprise Breakthrough 2026', slug: '/blog/quantum-enhanced-ai-enterprise-breakthrough-2026', readTime: '32 min', featured: true },
-        { title: 'Agentic Workflow Orchestration 2026', slug: '/blog/agentic-workflow-orchestration-2026', readTime: '16 min', featured: true },
-        { title: 'AI Enterprise Agents Blueprint 2026', slug: '/blog/ai-enterprise-agents-blueprint-2026', readTime: '18 min', featured: true },
-        { title: 'AI Agent Observability 2026', slug: '/blog/ai-agent-observability-2026', readTime: '18 min', featured: true },
-        { title: 'AI Enterprise Automation 2026', slug: '/blog/ai-enterprise-automation-2026', readTime: '18 min', featured: true },
-        { title: 'AI Multimodal Enterprise Solutions 2026', slug: '/blog/ai-multimodal-enterprise-2026', readTime: '15 min', featured: true },
-        { title: 'AI Implementation Playbook 2026', slug: '/blog/ai-implementation-playbook-2026', readTime: '12 min', featured: true },
-        { title: 'AI Governance Maturity Model 2026', slug: '/blog/ai-governance-maturity-model-2026', readTime: '14 min', featured: true },
-        { title: 'AI Autonomous Agents 2025', slug: '/blog/ai-autonomous-agents-2025', readTime: '18 min', featured: false },
-        { title: 'AI Governance Framework 2025', slug: '/blog/ai-governance-framework-2025', readTime: '15 min', featured: false },
-      ]
-=======
-      title: "AI 2026-2027 Revolutionary Breakthrough: Comprehensive Guide",
-      description: "The ultimate guide to $5.8T in proven ROI through revolutionary AI breakthroughs",
-      url: "/blog/ai-2026-2027-revolutionary-breakthrough-comprehensive-guide",
-      type: "Guide",
-      roi: "$5.8T",
-      badge: "COMPREHENSIVE",
-      color: "from-purple-500 to-indigo-500"
-    },
-    {
-      title: "$5.8T Revolutionary Success Story",
-      description: "How Fortune 500 companies achieved unprecedented ROI through AI breakthroughs",
-      url: "/case-studies/ai-2026-2027-revolutionary-breakthrough-5-8-trillion-success",
-      type: "Case Study",
-      roi: "$5.8T",
-      badge: "REVOLUTIONARY",
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      title: "Quantum Neural Superintelligence Enterprise Breakthrough",
-      description: "$1.2T breakthrough in quantum-enhanced neural processing",
-      url: "/blog/ai-2027-quantum-neural-superintelligence-enterprise-breakthrough",
-      type: "Breakthrough",
-      roi: "$1.2T",
-      badge: "QUANTUM",
-      color: "from-cyan-500 to-blue-500"
-    },
-    {
-      title: "Transcendent Meta-Intelligence Breakthrough",
-      description: "$1.8T self-evolving AI consciousness revolution",
-      url: "/blog/ai-2027-transcendent-meta-intelligence-breakthrough",
-      type: "Breakthrough",
-      roi: "$1.8T",
-      badge: "META-INTELLIGENCE",
-      color: "from-purple-500 to-indigo-500"
-    },
-    {
-      title: "Universal Consciousness Singularity Achievement",
-      description: "$2.8T cross-dimensional intelligence fusion breakthrough",
-      url: "/blog/ai-2028-universal-consciousness-singularity-breakthrough",
-      type: "Breakthrough",
-      roi: "$2.8T",
-      badge: "SINGULARITY",
-      color: "from-blue-500 to-indigo-500"
-    },
-    {
-      title: "Ultimate Autonomous Business Intelligence Revolution",
-      description: "$500B autonomous operations transformation",
-      url: "/blog/ai-2026-ultimate-autonomous-business-intelligence-revolution",
-      type: "Revolution",
-      roi: "$500B",
-      badge: "AUTONOMOUS",
-      color: "from-green-500 to-blue-500"
-    }
-  ];
-
-  const contentCategories = [
-    {
-      title: "Revolutionary Breakthroughs",
-      description: "The latest AI breakthroughs transforming enterprise operations",
-      icon: "🚀",
-      count: "25+",
-      color: "from-purple-500 to-indigo-500"
-    },
-    {
-      title: "Success Stories",
-      description: "Proven ROI results from Fortune 500 implementations",
-      icon: "🏆",
-      count: "50+",
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      title: "Implementation Guides",
-      description: "Step-by-step guides for enterprise AI transformation",
-      icon: "📖",
-      count: "15+",
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      title: "Quantum AI",
-      description: "Quantum-enhanced AI systems and consciousness",
-      icon: "⚛️",
-      count: "12+",
-      color: "from-cyan-500 to-blue-500"
-    }
+  const featured = [
+    { title: 'AI 2027 Quantum AI Breakthrough', url: '/blog/ai-2027-quantum-ai-breakthrough-enterprise-transformation' },
+    { title: 'Agentic Workflow Orchestration 2026', url: '/blog/agentic-workflow-orchestration-2026' },
+    { title: 'AI Enterprise Automation 2026', url: '/blog/ai-enterprise-automation-2026' },
   ];
 
   return (
-    <div className="max-w-6xl mx-auto px-4 py-8">
+    <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white rounded-2xl p-8 mb-8">
-        <div className="text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
-            Revolutionary Content Hub
-          </h1>
-          <h2 className="text-2xl md:text-3xl font-semibold mb-6">
-            AI 2026-2027 Breakthroughs: $5.8T in Proven Success
-          </h2>
-          <div className="flex flex-wrap justify-center gap-4 mb-6">
-            <span className="bg-gradient-to-r from-green-400 to-emerald-500 text-white px-6 py-3 rounded-full text-lg font-bold animate-pulse">
-              $5.8T TOTAL ROI
-            </span>
-            <span className="bg-gradient-to-r from-cyan-400 to-blue-500 text-white px-6 py-3 rounded-full text-lg font-bold animate-pulse">
-              100+ ARTICLES
-            </span>
-            <span className="bg-gradient-to-r from-purple-400 to-indigo-500 text-white px-6 py-3 rounded-full text-lg font-bold animate-pulse">
-              FORTUNE 500
-            </span>
+      <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              Content Hub
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Access our comprehensive library of AI resources, guides, and implementation blueprints
+            </p>
+            <div className="flex flex-wrap justify-center gap-4 text-sm">
+              <div className="bg-blue-600 px-4 py-2 rounded-full">
+                <span className="font-semibold">500+</span> Resources Available
+              </div>
+              <div className="bg-green-600 px-4 py-2 rounded-full">
+                <span className="font-semibold">50+</span> Implementation Guides
+              </div>
+              <div className="bg-purple-600 px-4 py-2 rounded-full">
+                <span className="font-semibold">100+</span> Case Studies
+              </div>
+            </div>
           </div>
-          <p className="text-xl md:text-2xl opacity-90 max-w-4xl mx-auto">
-            Discover the complete collection of revolutionary AI breakthroughs, success stories, 
-            and implementation guides that have transformed enterprise operations worldwide.
-          </p>
         </div>
       </div>
 
-      {/* Featured Content */}
-      <section className="mb-12">
-        <h3 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">
-          <span className="text-purple-600 mr-3">⭐</span>
-          Featured Revolutionary Content
-        </h3>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {featuredContent.map((content, index) => (
-            <Link 
-              key={index}
-              href={content.url}
-              className="group bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
-            >
-              <div className="p-6">
-                <div className="flex items-center justify-between mb-4">
-                  <span className="bg-gradient-to-r text-white px-3 py-1 rounded-full text-sm font-semibold" 
-                        style={{background: `linear-gradient(to right, var(--tw-gradient-stops))`}}>
-                    {content.type}
-                  </span>
-                  <span className={`bg-gradient-to-r ${content.color} text-white px-3 py-1 rounded-full text-sm font-bold animate-pulse`}>
-                    {content.badge}
-                  </span>
-                </div>
-                
-                <h4 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
-                  {content.title}
-                </h4>
-                
-                <p className="text-gray-600 text-sm mb-4 line-clamp-3">
-                  {content.description}
-                </p>
-                
-                <div className="flex items-center justify-between">
-                  <div className="text-2xl font-bold text-green-600">
-                    {content.roi}
-                  </div>
-                  <div className="text-blue-600 font-semibold group-hover:text-blue-800 transition-colors">
-                    Read More →
-                  </div>
-                </div>
-              </div>
-            </Link>
-          ))}
-        </div>
-      </section>
+      {/* Featured Resources */}
+      <div className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Featured Resources
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Our most popular and impactful resources for AI transformation
+            </p>
+          </div>
 
-      {/* Content Categories */}
-      <section className="mb-12">
-        <h3 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">
-          <span className="text-blue-600 mr-3">📚</span>
-          Content Categories
-        </h3>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {contentCategories.map((category, index) => (
-            <div 
-              key={index}
-              className={`bg-gradient-to-br ${category.color} text-white rounded-xl p-6 hover:shadow-lg transition-all duration-300 transform hover:scale-105`}
-            >
-              <div className="text-4xl mb-4">{category.icon}</div>
-              <h4 className="text-xl font-bold mb-2">{category.title}</h4>
-              <p className="text-sm opacity-90 mb-4">{category.description}</p>
-              <div className="flex items-center justify-between">
-                <div className="text-2xl font-bold">{category.count}</div>
-                <div className="text-sm opacity-90">Articles</div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {featuredResources.map((resource, index) => (
+              <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <div className="p-6">
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
+                      {resource.category}
+                    </span>
+                    <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
+                      {resource.type}
+                    </span>
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+                    {resource.title}
+                  </h3>
+                  <p className="text-gray-600 mb-4">
+                    {resource.description}
+                  </p>
+                  <Link 
+                    href={resource.link}
+                    className="text-blue-600 hover:text-blue-800 font-medium text-sm flex items-center gap-1"
+                  >
+                    Access Resource
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </Link>
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Quick Access Links */}
-      <section className="mb-12">
-        <h3 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">
-          <span className="text-green-600 mr-3">🔗</span>
-          Quick Access to Revolutionary Content
-        </h3>
-        <div className="bg-gradient-to-r from-gray-50 to-blue-50 rounded-xl p-8">
-          <div className="grid md:grid-cols-3 gap-6">
-            <div>
-              <h4 className="text-xl font-semibold text-gray-800 mb-4">Latest Breakthroughs</h4>
-              <div className="space-y-3">
-                <Link href="/blog/ai-2026-2027-revolutionary-breakthrough-comprehensive-guide" className="block text-blue-600 hover:text-blue-800 transition-colors">
-                  → AI 2026-2027 Comprehensive Guide
-                </Link>
-                <Link href="/blog/ai-2027-quantum-neural-superintelligence-enterprise-breakthrough" className="block text-blue-600 hover:text-blue-800 transition-colors">
-                  → Quantum Neural Superintelligence
-                </Link>
-                <Link href="/blog/ai-2027-transcendent-meta-intelligence-breakthrough" className="block text-blue-600 hover:text-blue-800 transition-colors">
-                  → Transcendent Meta-Intelligence
-                </Link>
-                <Link href="/blog/ai-2028-universal-consciousness-singularity-breakthrough" className="block text-blue-600 hover:text-blue-800 transition-colors">
-                  → Universal Consciousness
-                </Link>
-              </div>
-            </div>
-            
-            <div>
-              <h4 className="text-xl font-semibold text-gray-800 mb-4">Top Success Stories</h4>
-              <div className="space-y-3">
-                <Link href="/case-studies/ai-2026-2027-revolutionary-breakthrough-5-8-trillion-success" className="block text-green-600 hover:text-green-800 transition-colors">
-                  → $5.8T Revolutionary Success
-                </Link>
-                <Link href="/case-studies/ai-2027-quantum-neural-superintelligence-500-billion-success" className="block text-green-600 hover:text-green-800 transition-colors">
-                  → $500B Quantum Success
-                </Link>
-                <Link href="/case-studies/ai-2027-transcendent-meta-intelligence-1-8-trillion-success" className="block text-green-600 hover:text-green-800 transition-colors">
-                  → $1.8T Meta-Intelligence Success
-                </Link>
-                <Link href="/case-studies/ai-2028-universal-consciousness-singularity-2-8-trillion-success" className="block text-green-600 hover:text-green-800 transition-colors">
-                  → $2.8T Singularity Success
-                </Link>
-              </div>
-            </div>
-            
-            <div>
-              <h4 className="text-xl font-semibold text-gray-800 mb-4">Implementation Guides</h4>
-              <div className="space-y-3">
-                <Link href="/guides/ai-2026-implementation-roadmap" className="block text-purple-600 hover:text-purple-800 transition-colors">
-                  → AI 2026 Implementation Roadmap
-                </Link>
-                <Link href="/guides/ai-2027-implementation-roadmap" className="block text-purple-600 hover:text-purple-800 transition-colors">
-                  → AI 2027 Implementation Roadmap
-                </Link>
-                <Link href="/guides/autonomous-business-processes-implementation-guide-2026" className="block text-purple-600 hover:text-purple-800 transition-colors">
-                  → Autonomous Business Processes
-                </Link>
-                <Link href="/blog" className="block text-purple-600 hover:text-purple-800 transition-colors">
-                  → View All Blog Posts
-                </Link>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
-      </section>
+      </div>
 
-      {/* Call to Action */}
-      <div className="bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-xl p-8 text-center">
-        <h3 className="text-3xl font-bold mb-4">Ready to Transform Your Enterprise?</h3>
-        <p className="text-xl mb-6 opacity-90">
-          Join the Fortune 500 companies that have achieved $5.8T in ROI through revolutionary AI breakthroughs
-        </p>
-        <div className="flex flex-wrap justify-center gap-4">
-          <Link 
-            href="/contact" 
-            className="bg-white text-orange-600 px-8 py-4 rounded-full text-lg font-bold hover:bg-gray-100 transition-colors"
-          >
-            Start Your Transformation
-          </Link>
-          <Link 
-            href="/blog/ai-2026-2027-revolutionary-breakthrough-comprehensive-guide" 
-            className="bg-orange-600 text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-orange-700 transition-colors border-2 border-white"
-          >
-            Read Complete Guide
-          </Link>
+      {/* Resource Categories */}
+      <div className="py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Resource Categories
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Explore our organized collection of AI resources and documentation
+            </p>
+          </div>
+
+          <div className="space-y-12">
+            {resourceCategories.map((category, index) => (
+              <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden">
+                <div className="p-6 border-b border-gray-200">
+                  <div className="flex items-center gap-3 mb-2">
+                    <span className="text-2xl">{category.icon}</span>
+                    <h3 className="text-2xl font-bold text-gray-900">
+                      {category.title}
+                    </h3>
+                  </div>
+                  <p className="text-gray-600">
+                    {category.description}
+                  </p>
+                </div>
+                <div className="p-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {category.resources.map((resource, resourceIndex) => (
+                      <div key={resourceIndex} className="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow duration-300">
+                        <div className="flex items-center justify-between mb-2">
+                          <span className="bg-gray-100 text-gray-800 px-2 py-1 rounded text-xs font-medium">
+                            {resource.type}
+                          </span>
+                        </div>
+                        <h4 className="font-bold text-gray-900 mb-2">
+                          {resource.title}
+                        </h4>
+                        <p className="text-gray-600 text-sm mb-3">
+                          {resource.description}
+                        </p>
+                        <Link 
+                          href={resource.link}
+                          className="text-blue-600 hover:text-blue-800 font-medium text-sm flex items-center gap-1"
+                        >
+                          Access Resource
+                          <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                          </svg>
+                        </Link>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Quick Access Section */}
+      <div className="bg-blue-50 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Quick Access
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Popular resources and quick links for immediate access
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <Link 
+              href="/guides"
+              className="bg-white rounded-lg p-6 text-center hover:shadow-md transition-shadow duration-300"
+            >
+              <div className="text-3xl mb-3">📚</div>
+              <h3 className="font-bold text-gray-900 mb-2">Implementation Guides</h3>
+              <p className="text-gray-600 text-sm">Step-by-step AI implementation guides</p>
+            </Link>
+            
+            <Link 
+              href="/case-studies"
+              className="bg-white rounded-lg p-6 text-center hover:shadow-md transition-shadow duration-300"
+            >
+              <div className="text-3xl mb-3">📊</div>
+              <h3 className="font-bold text-gray-900 mb-2">Case Studies</h3>
+              <p className="text-gray-600 text-sm">Real-world success stories and ROI examples</p>
+            </Link>
+            
+            <Link 
+              href="/blog"
+              className="bg-white rounded-lg p-6 text-center hover:shadow-md transition-shadow duration-300"
+            >
+              <div className="text-3xl mb-3">📝</div>
+              <h3 className="font-bold text-gray-900 mb-2">Blog & Insights</h3>
+              <p className="text-gray-600 text-sm">Latest AI trends and breakthrough insights</p>
+            </Link>
+            
+            <Link 
+              href="/services"
+              className="bg-white rounded-lg p-6 text-center hover:shadow-md transition-shadow duration-300"
+            >
+              <div className="text-3xl mb-3">⚙️</div>
+              <h3 className="font-bold text-gray-900 mb-2">Services</h3>
+              <p className="text-gray-600 text-sm">Explore our AI and IT services</p>
+            </Link>
+          </div>
+        </div>
+      </div>
+
+      {/* CTA Section */}
+      <div className="bg-blue-600 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            Need Custom Resources?
+          </h2>
+          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+            Contact us for custom implementation guides, technical documentation, or specialized resources for your organization
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
+              href="/contact"
+              className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200"
+            >
+              Request Custom Resources
+            </Link>
+            <Link 
+              href="/services"
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors duration-200"
+            >
+              Explore Our Services
+            </Link>
+          </div>
         </div>
       </div>
     </div>

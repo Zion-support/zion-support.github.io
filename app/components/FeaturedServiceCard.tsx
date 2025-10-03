@@ -35,8 +35,7 @@ export default function FeaturedServiceCard({
           <li key={index}>• {feature}</li>
         ))}
       </ul>
-      <div className="flex justify-between items-center">
-        <div className="text-blue-600 font-bold">{price}</div>
+      <div className="flex justify-end">
         <Link href={href} className="text-blue-600 font-semibold hover:text-blue-700">
           Learn More →
         </Link>

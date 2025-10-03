@@ -1,7 +1,6 @@
-// @ts-nocheck
-import { Link } from "react-router-dom";
-
-const Page = () => {
+import React from 'react'
+import { Link } from 'react-router-dom'
+const Page: React.FC = () => {
   return (
     <div className="container mx-auto px-6 py-12 text-white">
       <h1 className="text-3xl font-bold mb-4">E2E AI Tracing v2 — From Token to KPI with Budgets</h1>
@@ -25,8 +24,6 @@ const Page = () => {
         <Link to="/blog" className="text-cyan-300 underline">Back to Blog</Link>
       </div>
     </div>
-  );
-};
-
-export default Page;
-
+  )
+}
+export default Page

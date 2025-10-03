@@ -1,5 +1,0 @@
-export: interface Real2026Q4NewService {
-  id: string;
-   name: string;
-   tagline: string;
-
