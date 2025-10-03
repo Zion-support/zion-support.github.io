@@ -11,9 +11,9 @@ const RollbackGuardrailsBlueprint2025: React.FC = () => {
 const RollbackGuardrailsBlueprint2025: React.FC = () => {
   return (
 <<<<<<< HEAD
-    <article className="prose prose-invert max-w-3xl mx-auto py-10">",
+    <article className="prose prose-invert max-w-3xl mx-auto py-10",
 =======
-    <article className= "prose prose-invert max-w-3xl mx-auto py-10">",
+    <article className= "prose prose-invert max-w-3xl mx-auto py-10>
 >>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
       <h1 >Runtime Rollback Guardrails: Ship Fast, Revert Instantly</h1>,,
       <p >

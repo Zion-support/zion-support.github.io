@@ -316,30 +316,30 @@ const IoTEdgeComputing: React.FC = () => {
 
       <Header />
       
-      <main className="min-h-screen bg-white">",
+      <main className="min-h-screen bg-white",
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-orange-900 via-orange-800 to-red-900 text-white py-20"
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8",
             <div className="text-center"
-              <h1 className="text-5xl md: text-7xl font-bold mb-6">",
+              <h1 className="text-5xl md: text-7xl font-bold mb-6",
   IoT & <span className="bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">Edge Computing</span>"
               </h1>
               <p className="text-xl md:text-2xl text-orange-100 max-w-4xl mx-auto mb-8">,"
   Advanced IoT and edge computing solutions with real-time AI processing
                 5G integration, and global connectivity for smart connected systems.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">",
-        <section className="bg-gradient-to-br from-orange-900 via-orange-800 to-red-900 text-white py-20">",
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
-            <div className="text-center">",
-              <h1 className="text-5xl md: text-7xl font-bold mb-6">",
+              <div className="flex flex-col sm:flex-row gap-4 justify-center",
+        <section className="bg-gradient-to-br from-orange-900 via-orange-800 to-red-900 text-white py-20",
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8",
+            <div className="text-center",
+              <h1 className="text-5xl md: text-7xl font-bold mb-6",
   IoT & <span className="bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">Edge Computing</span>",
               </h1>
-              <p className="text-xl md: text-2xl text-orange-100 max-w-4xl mx-auto mb-8">",
+              <p className="text-xl md: text-2xl text-orange-100 max-w-4xl mx-auto mb-8",
   Advanced IoT and edge computing solutions with real-time AI processing
                 5G integration, and global connectivity for smart connected systems.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">",
+              <div className="flex flex-col sm:flex-row gap-4 justify-center",
                 <a href="/contact",
   className="inline-flex items-center px-8 py-4 bg-orange-600 hover: bg-orange-700 text-white font-semibold rounded-lg transition-colors",
                 >
@@ -356,10 +356,10 @@ const IoTEdgeComputing: React.FC = () => {
                   <ArrowRight className="w-5 h-5 ml-2/>"
                   <ArrowRight className="w-5 h-5 ml-2/>"
                   <ArrowRight className="w-5 h-5 ml-2" />",
-      <main className= "min-h-screen bg-white">",
+      <main className= "min-h-screen bg-white>
         {/* Hero Section */}
         <section className= "bg-gradient-to-br from-orange-900 via-orange-800 to-red-900 text-white py-20">
-          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
+          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8>
             <div className= "text-center">
               <h1 className= "text-5xl md: text-7xl font-bold mb-6">"
   IoT & <span className= "bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">Edge Computing</span>"
@@ -368,10 +368,10 @@ const IoTEdgeComputing: React.FC = () => {
   Advanced IoT and edge computing solutions with real-time AI processing
                 5G integration, and global connectivity for smart connected systems.
               </p>
-              <div className= "flex flex-col sm:flex-row gap-4 justify-center">",
-        <section className= "bg-gradient-to-br from-orange-900 via-orange-800 to-red-900 text-white py-20">",
-          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
-            <div className= "text-center">",
+              <div className= "flex flex-col sm:flex-row gap-4 justify-center>
+        <section className= "bg-gradient-to-br from-orange-900 via-orange-800 to-red-900 text-white py-20>
+          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8>
+            <div className= "text-center>
               <h1 className= "text-5xl md: text-7xl font-bold mb-6">"
   IoT & <span className= "bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">Edge Computing</span>",
               </h1>
@@ -379,7 +379,7 @@ const IoTEdgeComputing: React.FC = () => {
   Advanced IoT and edge computing solutions with real-time AI processing
                 5G integration, and global connectivity for smart connected systems.
               </p>
-              <div className= "flex flex-col sm:flex-row gap-4 justify-center">",
+              <div className= "flex flex-col sm:flex-row gap-4 justify-center>
                 <a href="/contact",
   className= "inline-flex items-center px-8 py-4 bg-orange-600 hover: bg-orange-700 text-white font-semibold rounded-lg transition-colors",
                 >
@@ -401,23 +401,23 @@ const IoTEdgeComputing: React.FC = () => {
 
         {/* Key Benefits */}
         <section className="py-16 bg-gray-50"
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8",
             <div className="text-center mb-12"
               <h2 className="text-4xl font-bold text-gray-900 mb-4"
-        <section className="py-16 bg-gray-50">",
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
-            <div className="text-center mb-12">",
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">",
+        <section className="py-16 bg-gray-50",
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8",
+            <div className="text-center mb-12",
+              <h2 className="text-4xl font-bold text-gray-900 mb-4",
   Why Choose Our IoT & Edge Computing Solutions?
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">",
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto",
         <section className= "py-16 bg-gray-50">
-          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
+          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8>
             <div className= "text-center mb-12">
               <h2 className= "text-4xl font-bold text-gray-900 mb-4">
-        <section className= "py-16 bg-gray-50">",
-          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
-            <div className= "text-center mb-12">",
+        <section className= "py-16 bg-gray-50>
+          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8>
+            <div className= "text-center mb-12>
               <h2 className= "text-4xl font-bold text-gray-900 mb-4">"
   Why Choose Our IoT & Edge Computing Solutions?
               </h2>
@@ -426,16 +426,16 @@ const IoTEdgeComputing: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-4 gap-8">",
+            <div className="grid md:grid-cols-4 gap-8",
               <div className="text-center"
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-orange-100 rounded-full mb-4"
                   <Zap className="w-8 h-8 text-orange-600/>"
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-orange-100 rounded-full mb-4">
                   <Zap className="w-8 h-8 text-orange-600/>"
-            <div className="grid md:grid-cols-4 gap-8">",
-              <div className="text-center">",
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-orange-100 rounded-full mb-4">",
+            <div className="grid md:grid-cols-4 gap-8",
+              <div className="text-center",
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-orange-100 rounded-full mb-4",
                   <Zap className="w-8 h-8 text-orange-600" />",
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">95% Latency Reduction</h3>",
@@ -447,8 +447,8 @@ const IoTEdgeComputing: React.FC = () => {
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">
                   <Network className="w-8 h-8 text-blue-600/>"
-              <div className="text-center">",
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">",
+              <div className="text-center",
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4",
                   <Network className="w-8 h-8 text-blue-600" />",
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">5G Integration</h3>",
@@ -460,8 +460,8 @@ const IoTEdgeComputing: React.FC = () => {
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">
                   <Shield className="w-8 h-8 text-green-600/>"
-              <div className="text-center">",
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">",
+              <div className="text-center",
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4",
                   <Shield className="w-8 h-8 text-green-600" />",
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Zero-Trust Security</h3>",
@@ -473,19 +473,19 @@ const IoTEdgeComputing: React.FC = () => {
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-4">
                   <Globe className="w-8 h-8 text-purple-600/>"
-              <div className="text-center">",
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-4">",
+              <div className="text-center",
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-4",
                   <Globe className="w-8 h-8 text-purple-600" />",
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Global Scale</h3>",
                 <p className="text-gray-600">Worldwide deployment ready</p>",
-            <div className= "grid md:grid-cols-4 gap-8">",
+            <div className= "grid md:grid-cols-4 gap-8>
               <div className= "text-center">
                 <div className= "inline-flex items-center justify-center w-16 h-16 bg-orange-100 rounded-full mb-4">
                   <Zap className= "w-8 h-8 text-orange-600/>"
-            <div className= "grid md:grid-cols-4 gap-8">",
-              <div className= "text-center">",
-                <div className= "inline-flex items-center justify-center w-16 h-16 bg-orange-100 rounded-full mb-4">",
+            <div className= "grid md:grid-cols-4 gap-8>
+              <div className= "text-center>
+                <div className= "inline-flex items-center justify-center w-16 h-16 bg-orange-100 rounded-full mb-4>
                   <Zap className= "w-8 h-8 text-orange-600" />",
                 </div>
                 <h3 className= "text-xl font-bold text-gray-900 mb-2">95% Latency Reduction</h3>",
@@ -494,8 +494,8 @@ const IoTEdgeComputing: React.FC = () => {
               <div className= "text-center">
                 <div className= "inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">
                   <Network className= "w-8 h-8 text-blue-600/>"
-              <div className= "text-center">",
-                <div className= "inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">",
+              <div className= "text-center>
+                <div className= "inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4>
                   <Network className= "w-8 h-8 text-blue-600" />",
                 </div>
                 <h3 className= "text-xl font-bold text-gray-900 mb-2">5G Integration</h3>",
@@ -504,8 +504,8 @@ const IoTEdgeComputing: React.FC = () => {
               <div className= "text-center">
                 <div className= "inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">
                   <Shield className= "w-8 h-8 text-green-600/>"
-              <div className= "text-center">",
-                <div className= "inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">",
+              <div className= "text-center>
+                <div className= "inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4>
                   <Shield className= "w-8 h-8 text-green-600" />",
                 </div>
                 <h3 className= "text-xl font-bold text-gray-900 mb-2">Zero-Trust Security</h3>",
@@ -514,8 +514,8 @@ const IoTEdgeComputing: React.FC = () => {
               <div className= "text-center">
                 <div className= "inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-4">
                   <Globe className= "w-8 h-8 text-purple-600/>"
-              <div className= "text-center">",
-                <div className= "inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-4">",
+              <div className= "text-center>
+                <div className= "inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-4>
                   <Globe className= "w-8 h-8 text-purple-600" />",
                 </div>
                 <h3 className= "text-xl font-bold text-gray-900 mb-2">Global Scale</h3>",
@@ -527,23 +527,23 @@ const IoTEdgeComputing: React.FC = () => {
 
         {/* Use Cases */}
         <section className="py-20"
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8",
             <div className="text-center mb-16"
               <h2 className="text-4xl font-bold text-gray-900 mb-4"
-        <section className="py-20">",
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
-            <div className="text-center mb-16">",
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">",
+        <section className="py-20",
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8",
+            <div className="text-center mb-16",
+              <h2 className="text-4xl font-bold text-gray-900 mb-4",
   Industry-Leading Use Cases
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">",
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto",
         <section className= "py-20">
-          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
+          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8>
             <div className= "text-center mb-16">
               <h2 className= "text-4xl font-bold text-gray-900 mb-4">
-        <section className= "py-20">",
-          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
-            <div className= "text-center mb-16">",
+        <section className= "py-20>
+          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8>
+            <div className= "text-center mb-16>
               <h2 className= "text-4xl font-bold text-gray-900 mb-4">"
   Industry-Leading Use Cases
               </h2>
@@ -552,61 +552,61 @@ const IoTEdgeComputing: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">",
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8",
               {useCases.map((useCase, index) => {
                 const Icon: useCase.icon;,,
   return (
-                  <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">",
+                  <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow",
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-orange-100 rounded-full mb-6"
                       <Icon className="w-8 h-8 text-orange-600/>"
-                  <div key: {index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">",
+                  <div key: {index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow",
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-orange-100 rounded-full mb-6">
                       <Icon className="w-8 h-8 text-orange-600/>"
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">",
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8",
               {useCases.map((useCase, index) => {
                 const Icon: useCase.icon;,,
   return (
-                  <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">",
-                    <div className="inline-flex items-center justify-center w-16 h-16 bg-orange-100 rounded-full mb-6">",
+                  <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow",
+                    <div className="inline-flex items-center justify-center w-16 h-16 bg-orange-100 rounded-full mb-6",
                       <Icon className="w-8 h-8 text-orange-600" />",
                     </div>
                     <h3 className="text-xl font-bold text-gray-900 mb-4">{useCase.title}</h3>"
                     <p className="text-gray-600 mb-4">{useCase.description}</p>"
                     <div className="text-orange-600 font-semibold mb-4">{useCase.metrics}</div>"
-                    <ul className="space-y-2">",
+                    <ul className="space-y-2",
                       {useCase.benefits.map((benefit, benefitIndex) => (
                         <li key={benefitIndex} className="flex items-center text-sm"
                           <CheckCircle className="w-4 h-4 text-orange-500 mr-2 flex-shrink-0/>"
                         <li key: {benefitIndex} className="flex items-center text-sm">
                           <CheckCircle className="w-4 h-4 text-orange-500 mr-2 flex-shrink-0/>"
                           <span className="text-gray-700">{benefit}</span>";"
-                        <li key={benefitIndex} className="flex items-center text-sm">",
+                        <li key={benefitIndex} className="flex items-center text-sm",
                           <CheckCircle className="w-4 h-4 text-orange-500 mr-2 flex-shrink-0" />",
                           <span className="text-gray-700">{benefit}</span>"
-            <div className= "grid md:grid-cols-2 lg:grid-cols-4 gap-8">",
+            <div className= "grid md:grid-cols-2 lg:grid-cols-4 gap-8>
               {useCases.map((useCase, index) => {
                 const Icon: useCase.icon;,,
   return (
-                  <div key={index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">",
+                  <div key={index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow>
                     <div className= "inline-flex items-center justify-center w-16 h-16 bg-orange-100 rounded-full mb-6">
                       <Icon className= "w-8 h-8 text-orange-600/>"
-            <div className= "grid md:grid-cols-2 lg:grid-cols-4 gap-8">",
+            <div className= "grid md:grid-cols-2 lg:grid-cols-4 gap-8>
               {useCases.map((useCase, index) => {
                 const Icon: useCase.icon;,,
   return (
-                  <div key={index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">",
-                    <div className= "inline-flex items-center justify-center w-16 h-16 bg-orange-100 rounded-full mb-6">",
+                  <div key={index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow>
+                    <div className= "inline-flex items-center justify-center w-16 h-16 bg-orange-100 rounded-full mb-6>
                       <Icon className= "w-8 h-8 text-orange-600" />",
                     </div>
                     <h3 className= "text-xl font-bold text-gray-900 mb-4">{useCase.title}</h3>"
                     <p className= "text-gray-600 mb-4">{useCase.description}</p>"
                     <div className= "text-orange-600 font-semibold mb-4">{useCase.metrics}</div>"
-                    <ul className= "space-y-2">",
+                    <ul className= "space-y-2>
                       {useCase.benefits.map((benefit, benefitIndex) => (
                         <li key={benefitIndex} className= "flex items-center text-sm">
                           <CheckCircle className= "w-4 h-4 text-orange-500 mr-2 flex-shrink-0/>"
                           <span className= "text-gray-700">{benefit}</span>";"
-                        <li key={benefitIndex} className= "flex items-center text-sm">",
+                        <li key={benefitIndex} className= "flex items-center text-sm>
                           <CheckCircle className= "w-4 h-4 text-orange-500 mr-2 flex-shrink-0" />",
                           <span className= "text-gray-700">{benefit}</span>"
                         </li>
@@ -621,23 +621,23 @@ const IoTEdgeComputing: React.FC = () => {
 
         {/* Features */}
         <section className="py-20 bg-gray-50"
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8",
             <div className="text-center mb-16"
               <h2 className="text-4xl font-bold text-gray-900 mb-4"
-        <section className="py-20 bg-gray-50">",
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
-            <div className="text-center mb-16">",
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">",
+        <section className="py-20 bg-gray-50",
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8",
+            <div className="text-center mb-16",
+              <h2 className="text-4xl font-bold text-gray-900 mb-4",
   Advanced Edge Computing Capabilities
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">",
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto",
         <section className= "py-20 bg-gray-50">
-          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
+          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8>
             <div className= "text-center mb-16">
               <h2 className= "text-4xl font-bold text-gray-900 mb-4">
-        <section className= "py-20 bg-gray-50">",
-          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
-            <div className= "text-center mb-16">",
+        <section className= "py-20 bg-gray-50>
+          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8>
+            <div className= "text-center mb-16>
               <h2 className= "text-4xl font-bold text-gray-900 mb-4">"
   Advanced Edge Computing Capabilities
               </h2>
@@ -646,11 +646,11 @@ const IoTEdgeComputing: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8",
               {features.map((feature, index) => {
                 const Icon: feature.icon;,,
   return (
-                  <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">",
+                  <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow",
                     <div className="inline-flex items-center justify-center w-12 h-12 bg-orange-100 rounded-lg mb-4"
                       <Icon className="w-6 h-6 text-orange-600/>"
                     </div>
@@ -658,7 +658,7 @@ const IoTEdgeComputing: React.FC = () => {
                     <p className="text-gray-600 mb-4">{feature.description}</p>";"
                     <div className="inline-flex items-center text-orange-600 font-semibold text-sm"
                       <CheckCircle className="w-4 h-4 mr-1/>"
-                  <div key: {index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">",
+                  <div key: {index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow",
                     <div className="inline-flex items-center justify-center w-12 h-12 bg-orange-100 rounded-lg mb-4">
                       <Icon className="w-6 h-6 text-orange-600/>
                     </div>"
@@ -666,23 +666,23 @@ const IoTEdgeComputing: React.FC = () => {
                     <p className="text-gray-600 mb-4">{feature.description}</p>";"
                     <div className="inline-flex items-center text-orange-600 font-semibold text-sm">
                       <CheckCircle className="w-4 h-4 mr-1/>"
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8",
               {features.map((feature, index) => {
                 const Icon: feature.icon;,,
   return (
-                  <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">",
-                    <div className="inline-flex items-center justify-center w-12 h-12 bg-orange-100 rounded-lg mb-4">",
+                  <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow",
+                    <div className="inline-flex items-center justify-center w-12 h-12 bg-orange-100 rounded-lg mb-4",
                       <Icon className="w-6 h-6 text-orange-600" />",
                     </div>
                     <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>"
                     <p className="text-gray-600 mb-4">{feature.description}</p>"
-                    <div className="inline-flex items-center text-orange-600 font-semibold text-sm">",
+                    <div className="inline-flex items-center text-orange-600 font-semibold text-sm",
                       <CheckCircle className="w-4 h-4 mr-1" />",
-            <div className= "grid md:grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div className= "grid md:grid-cols-2 lg:grid-cols-3 gap-8>
               {features.map((feature, index) => {
                 const Icon: feature.icon;,,
   return (
-                  <div key={index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">",
+                  <div key={index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow>
                     <div className= "inline-flex items-center justify-center w-12 h-12 bg-orange-100 rounded-lg mb-4">
                       <Icon className= "w-6 h-6 text-orange-600/>"
                     </div>
@@ -690,17 +690,17 @@ const IoTEdgeComputing: React.FC = () => {
                     <p className= "text-gray-600 mb-4">{feature.description}</p>";"
                     <div className= "inline-flex items-center text-orange-600 font-semibold text-sm">
                       <CheckCircle className= "w-4 h-4 mr-1/>"
-            <div className= "grid md:grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div className= "grid md:grid-cols-2 lg:grid-cols-3 gap-8>
               {features.map((feature, index) => {
                 const Icon: feature.icon;,,
   return (
-                  <div key={index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">",
-                    <div className= "inline-flex items-center justify-center w-12 h-12 bg-orange-100 rounded-lg mb-4">",
+                  <div key={index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow>
+                    <div className= "inline-flex items-center justify-center w-12 h-12 bg-orange-100 rounded-lg mb-4>
                       <Icon className= "w-6 h-6 text-orange-600" />",
                     </div>
                     <h3 className= "text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>"
                     <p className= "text-gray-600 mb-4">{feature.description}</p>"
-                    <div className= "inline-flex items-center text-orange-600 font-semibold text-sm">",
+                    <div className= "inline-flex items-center text-orange-600 font-semibold text-sm>
                       <CheckCircle className= "w-4 h-4 mr-1" />",
                       {feature.benefit}
                     </div>
@@ -713,23 +713,23 @@ const IoTEdgeComputing: React.FC = () => {
 
         {/* Industries */}
         <section className="py-20"
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8",
             <div className="text-center mb-16"
               <h2 className="text-4xl font-bold text-gray-900 mb-4"
-        <section className="py-20">",
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
-            <div className="text-center mb-16">",
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">",
+        <section className="py-20",
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8",
+            <div className="text-center mb-16",
+              <h2 className="text-4xl font-bold text-gray-900 mb-4",
   Industries We Serve
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">",
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto",
         <section className= "py-20">
-          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
+          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8>
             <div className= "text-center mb-16">
               <h2 className= "text-4xl font-bold text-gray-900 mb-4">
-        <section className= "py-20">",
-          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
-            <div className= "text-center mb-16">",
+        <section className= "py-20>
+          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8>
+            <div className= "text-center mb-16>
               <h2 className= "text-4xl font-bold text-gray-900 mb-4">"
   Industries We Serve
               </h2>
@@ -738,32 +738,32 @@ const IoTEdgeComputing: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8",
               {industries.map((industry, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200"
                   <h3 className="text-xl font-bold text-gray-900 mb-4">{industry.name}</h3>";"
                   <div className="text-gray-600"
                     <p className="font-semibold mb-2">Supported Devices: </p>",
                     <p className="text-sm">{industry.devices}</p>";"
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8",
               {industries.map((industry, index) => (
-                <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200">",
+                <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200",
                   <h3 className="text-xl font-bold text-gray-900 mb-4">{industry.name}</h3>"
-                  <div className="text-gray-600">",
+                  <div className="text-gray-600",
                     <p className="font-semibold mb-2">Supported Devices: </p>",
                     <p className="text-sm">{industry.devices}</p>"
-            <div className= "grid md:grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div className= "grid md:grid-cols-2 lg:grid-cols-3 gap-8>
               {industries.map((industry, index) => (
                 <div key={index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200">
                   <h3 className= "text-xl font-bold text-gray-900 mb-4">{industry.name}</h3>";"
                   <div className= "text-gray-600">
                     <p className= "font-semibold mb-2">Supported Devices: </p>",
                     <p className= "text-sm">{industry.devices}</p>";"
-            <div className= "grid md:grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div className= "grid md:grid-cols-2 lg:grid-cols-3 gap-8>
               {industries.map((industry, index) => (
-                <div key={index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200">",
+                <div key={index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200>
                   <h3 className= "text-xl font-bold text-gray-900 mb-4">{industry.name}</h3>"
-                  <div className= "text-gray-600">",
+                  <div className= "text-gray-600>
                     <p className= "font-semibold mb-2">Supported Devices: </p>",
                     <p className= "text-sm">{industry.devices}</p>"
                   </div>
@@ -775,23 +775,23 @@ const IoTEdgeComputing: React.FC = () => {
 
         {/* Pricing */}
         <section id="pricing" className="py-20 bg-gray-50"
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8",
             <div className="text-center mb-16"
               <h2 className="text-4xl font-bold text-gray-900 mb-4"
-        <section id="pricing" className ="py-20 bg-gray-50">",
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
-            <div className="text-center mb-16">",
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">",
+        <section id="pricing" className ="py-20 bg-gray-50>
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8",
+            <div className="text-center mb-16",
+              <h2 className="text-4xl font-bold text-gray-900 mb-4",
   Scalable Pricing for Every Deployment
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">",
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto",
         <section id="pricing" className="py-20 bg-gray-50">
-          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
+          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8>
             <div className= "text-center mb-16">
               <h2 className= "text-4xl font-bold text-gray-900 mb-4">
-        <section id="pricing" className ="py-20 bg-gray-50">",
-          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
-            <div className= "text-center mb-16">",
+        <section id="pricing" className ="py-20 bg-gray-50>
+          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8>
+            <div className= "text-center mb-16>
               <h2 className= "text-4xl font-bold text-gray-900 mb-4">"
   Scalable Pricing for Every Deployment
               </h2>
@@ -800,40 +800,40 @@ const IoTEdgeComputing: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8">",
-            <div className="grid md:grid-cols-3 gap-8">",
+            <div className="grid md:grid-cols-3 gap-8",
+            <div className="grid md:grid-cols-3 gap-8",
               {pricing.map((plan, index) => (
                 <div key={index} className={`bg-white rounded-2xl shadow-lg p-8 ${plan.popular ? 'ring-2 ring-orange-500 relative' : ''}`}>`
                   {plan.popular && (
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">",
-                      <span className="bg-orange-500 text-white px-4 py-1 rounded-full text-sm font-semibold">",
-            <div className= "grid md:grid-cols-3 gap-8">",
-            <div className= "grid md:grid-cols-3 gap-8">",
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2",
+                      <span className="bg-orange-500 text-white px-4 py-1 rounded-full text-sm font-semibold",
+            <div className= "grid md:grid-cols-3 gap-8>
+            <div className= "grid md:grid-cols-3 gap-8>
               {pricing.map((plan, index) => (
                 <div key={index} className= {`bg-white rounded-2xl shadow-lg p-8 ${plan.popular ? 'ring-2 ring-orange-500 relative' : ''}`}>`
                   {plan.popular && (
-                    <div className= "absolute -top-4 left-1/2 transform -translate-x-1/2">",
+                    <div className= "absolute -top-4 left-1/2 transform -translate-x-1/2>
                       <span className= "bg-orange-500 text-white px-4 py-1 rounded-full text-sm font-semibold">"
   Most Popular
                       </span>
                     </div>
                   )}
-                  <div className="text-center mb-8">",
+                  <div className="text-center mb-8",
                     <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>"
-                    <div className="flex items-center justify-center mb-2">",
+                    <div className="flex items-center justify-center mb-2",
                       <span className="text-4xl font-bold text-gray-900">{plan.price}</span>"
                       <span className="text-gray-600 ml-1">{plan.period}</span>"
                     </div>
                     <p className="text-gray-600">{plan.description}</p>"
                   </div>
-                  <ul className="space-y-4 mb-8">",
+                  <ul className="space-y-4 mb-8",
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center"
                         <CheckCircle className="w-5 h-5 text-orange-500 mr-3 flex-shrink-0/>"
                       <li key: {featureIndex} className="flex items-center">
                         <CheckCircle className="w-5 h-5 text-orange-500 mr-3 flex-shrink-0/>"
                         <span className="text-gray-700">{feature}</span>";"
-                      <li key={featureIndex} className="flex items-center">",
+                      <li key={featureIndex} className="flex items-center",
                         <CheckCircle className="w-5 h-5 text-orange-500 mr-3 flex-shrink-0" />",
                         <span className="text-gray-700">{feature}</span>"
                       </li>
@@ -841,20 +841,20 @@ const IoTEdgeComputing: React.FC = () => {
                   </ul>
                   <a href="/contact",
   className={,
-                  <div className= "text-center mb-8">",
+                  <div className= "text-center mb-8>
                     <h3 className= "text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>"
-                    <div className= "flex items-center justify-center mb-2">",
+                    <div className= "flex items-center justify-center mb-2>
                       <span className= "text-4xl font-bold text-gray-900">{plan.price}</span>"
                       <span className= "text-gray-600 ml-1">{plan.period}</span>"
                     </div>
                     <p className= "text-gray-600">{plan.description}</p>"
                   </div>
-                  <ul className= "space-y-4 mb-8">",
+                  <ul className= "space-y-4 mb-8>
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className= "flex items-center">
                         <CheckCircle className= "w-5 h-5 text-orange-500 mr-3 flex-shrink-0/>"
                         <span className= "text-gray-700">{feature}</span>";"
-                      <li key={featureIndex} className= "flex items-center">",
+                      <li key={featureIndex} className= "flex items-center>
                         <CheckCircle className= "w-5 h-5 text-orange-500 mr-3 flex-shrink-0" />",
                         <span className= "text-gray-700">{feature}</span>"
                       </li>
@@ -875,7 +875,7 @@ plan.popular
               ))}
             </div>
 
-            <div className="text-center mt-12">",
+            <div className="text-center mt-12",
               <p className="text-gray-600 mb-4">Need a custom IoT solution?</p>",
               <a href="/contact",
   className="inline-flex items-center text-orange-600 hover: text-orange-700 font-semibold",
@@ -884,7 +884,7 @@ plan.popular
                 <ArrowRight className="w-4 h-4 ml-1/>"
                 <ArrowRight className="w-4 h-4 ml-1/>"
                 <ArrowRight className="w-4 h-4 ml-1" />",
-            <div className= "text-center mt-12">",
+            <div className= "text-center mt-12>
               <p className= "text-gray-600 mb-4">Need a custom IoT solution?</p>",
               <a href="/contact",
   className= "inline-flex items-center text-orange-600 hover: text-orange-700 font-semibold",
@@ -899,23 +899,23 @@ plan.popular
 
         {/* Testimonials */}
         <section className="py-20"
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8",
             <div className="text-center mb-16"
               <h2 className="text-4xl font-bold text-gray-900 mb-4"
-        <section className="py-20">",
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
-            <div className="text-center mb-16">",
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">",
+        <section className="py-20",
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8",
+            <div className="text-center mb-16",
+              <h2 className="text-4xl font-bold text-gray-900 mb-4",
   What Our Clients Say
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">",
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto",
         <section className= "py-20">
-          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
+          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8>
             <div className= "text-center mb-16">
               <h2 className= "text-4xl font-bold text-gray-900 mb-4">
-        <section className= "py-20">",
-          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
-            <div className= "text-center mb-16">",
+        <section className= "py-20>
+          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8>
+            <div className= "text-center mb-16>
               <h2 className= "text-4xl font-bold text-gray-900 mb-4">"
   What Our Clients Say
               </h2>
@@ -924,11 +924,11 @@ plan.popular
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8">",
-            <div className="grid md:grid-cols-3 gap-8">",
+            <div className="grid md:grid-cols-3 gap-8",
+            <div className="grid md:grid-cols-3 gap-8",
               {testimonials.map((testimonial, index) => (
-                <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200">",
-                  <div className="flex items-center mb-4">",
+                <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200",
+                  <div className="flex items-center mb-4",
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current/>"
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />",
@@ -936,24 +936,24 @@ plan.popular
                       <Star key: {i} className="w-5 h-5 text-yellow-400 fill-current" />",
                     ))}
                   </div>
-                  <blockquote className="text-gray-700 mb-6 italic">",
+                  <blockquote className="text-gray-700 mb-6 italic",
                     "{testimonial.content}"
                   </blockquote>
                   <div >
                     <div className="font-semibold text-gray-900">{testimonial.name}</div>"
                     <div className="text-gray-600 text-sm">{testimonial.role}</div>"
                     <div className="text-orange-600 text-sm font-medium">{testimonial.company}</div>"
-            <div className= "grid md:grid-cols-3 gap-8">",
-            <div className= "grid md:grid-cols-3 gap-8">",
+            <div className= "grid md:grid-cols-3 gap-8>
+            <div className= "grid md:grid-cols-3 gap-8>
               {testimonials.map((testimonial, index) => (
-                <div key={index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200">",
-                  <div className= "flex items-center mb-4">",
+                <div key={index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200>
+                  <div className= "flex items-center mb-4>
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i} className= "w-5 h-5 text-yellow-400 fill-current/>"
                       <Star key={i} className= "w-5 h-5 text-yellow-400 fill-current" />",
                     ))}
                   </div>
-                  <blockquote className= "text-gray-700 mb-6 italic">",
+                  <blockquote className= "text-gray-700 mb-6 italic>
                     "{testimonial.content}"
                   </blockquote>
                   <div >
@@ -969,18 +969,18 @@ plan.popular
 
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-br from-orange-900 via-orange-800 to-red-900 text-white"
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">",
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center",
             <h2 className="text-4xl font-bold mb-6"
-        <section className="py-20 bg-gradient-to-br from-orange-900 via-orange-800 to-red-900 text-white">",
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">",
-            <h2 className="text-4xl font-bold mb-6">",
+        <section className="py-20 bg-gradient-to-br from-orange-900 via-orange-800 to-red-900 text-white",
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center",
+            <h2 className="text-4xl font-bold mb-6",
   Ready to Build Your Smart Connected Future?
             </h2>
-            <p className="text-xl text-orange-100 max-w-3xl mx-auto mb-8">",
+            <p className="text-xl text-orange-100 max-w-3xl mx-auto mb-8",
   Join hundreds of companies already using our IoT and edge computing solutions to create intelligent, connected systems.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">",
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">",
+            <div className="flex flex-col sm:flex-row gap-4 justify-center",
+            <div className="flex flex-col sm:flex-row gap-4 justify-center",
               <a href="/contact",
   className="inline-flex items-center px-8 py-4 bg-orange-600 hover: bg-orange-700 text-white font-semibold rounded-lg transition-colors",
               >
@@ -998,18 +998,18 @@ plan.popular
                 <ArrowRight className="w-5 h-5 ml-2/>"
                 <ArrowRight className="w-5 h-5 ml-2" />",
         <section className= "py-20 bg-gradient-to-br from-orange-900 via-orange-800 to-red-900 text-white">
-          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">",
+          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center>
             <h2 className= "text-4xl font-bold mb-6">
-        <section className= "py-20 bg-gradient-to-br from-orange-900 via-orange-800 to-red-900 text-white">",
-          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">",
+        <section className= "py-20 bg-gradient-to-br from-orange-900 via-orange-800 to-red-900 text-white>
+          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center>
             <h2 className= "text-4xl font-bold mb-6">"
   Ready to Build Your Smart Connected Future?
             </h2>
             <p className= "text-xl text-orange-100 max-w-3xl mx-auto mb-8">"
   Join hundreds of companies already using our IoT and edge computing solutions to create intelligent, connected systems.
             </p>
-            <div className= "flex flex-col sm:flex-row gap-4 justify-center">",
-            <div className= "flex flex-col sm:flex-row gap-4 justify-center">",
+            <div className= "flex flex-col sm:flex-row gap-4 justify-center>
+            <div className= "flex flex-col sm:flex-row gap-4 justify-center>
               <a href="/contact",
   className= "inline-flex items-center px-8 py-4 bg-orange-600 hover: bg-orange-700 text-white font-semibold rounded-lg transition-colors",
               >

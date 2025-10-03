@@ -1,30 +1,30 @@
-import React from "react";"
-import { Helmet } from "react-helmet-async";"
+import React from "react";
+import { Helmet } from "react-helmet-async";
 import { Users, CheckCircle, ArrowRight, DollarSign, Clock, Star, TrendingUp, Lock, Smartphone, Cloud, Database, Cpu, Target, Rocket } from "lucide-react"
 ;
 export default function AIMicroSAAS(): React.JSX.Element {
-  const microSaaSServices: [,
+  const microSaaSServices: [
     {
-      id="ai-content-optimizer",
+      id: "ai-content-optimizer",
       name: "AI Content Optimizer Pro",
       blurb: "AI-powered content creation and optimization platform for marketing teams",
       price: "$299 - $1,499/month",
       eta: "1-2 weeks",
       category: "Content AI",
-      icon: undefined,,
-      icon: FileText,,
-      features: [,,
-        "AI-generated blog posts, social media content, and email campaigns",;"
-        "SEO optimization with real-time keyword analysis",;"
-        "Brand voice consistency across all content",;"
-        "A/B testing and performance analytics",;"
-        "Multi-language content generation with cultural adaptation",;"
+      
+      icon: FileText,
+      features: [,
+        "AI-generated blog posts, social media content, and email campaigns",
+        "SEO optimization with real-time keyword analysis",
+        "Brand voice consistency across all content",
+        "A/B testing and performance analytics",
+        "Multi-language content generation with cultural adaptation",
         "Content calendar automation and scheduling"
       ]
-      benefits: [,,
-        "10x faster content creation",;"
-        "40% improvement in engagement rates",;"
-        "60% reduction in content production costs",;"
+      benefits: [,
+        "10x faster content creation",
+        "40% improvement in engagement rates",
+        "60% reduction in content production costs",
       id: "ai-content-optimizer",
       name: "AI Content Optimizer Pro",
       blurb: "AI-powered content creation and optimization platform for marketing teams",
@@ -50,26 +50,26 @@ export default function AIMicroSAAS(): React.JSX.Element {
       link: "/contact",
     },
     {
-      id="smart-automation-hub",
+      id: "smart-automation-hub",
       name: "Smart Automation Hub",
       blurb: "No-code automation platform for business process optimization",
       price: "$199 - $999/month",
       eta: "1-2 weeks",
       category: "Process Automation",
-      icon: undefined,,
-      icon: Zap,,
-      features: [,,
-        "Visual workflow builder with drag-and-drop interface",;"
-        "500+ pre-built integrations (Slack, Salesforce, HubSpot, etc.)",;"
-        "AI-powered process discovery and optimization suggestions",;"
-        "Real-time monitoring and performance analytics",;"
-        "Custom trigger and action creation",;"
+      
+      icon: Zap,
+      features: [,
+        "Visual workflow builder with drag-and-drop interface",
+        "500+ pre-built integrations (Slack, Salesforce, HubSpot, etc.)",
+        "AI-powered process discovery and optimization suggestions",
+        "Real-time monitoring and performance analytics",
+        "Custom trigger and action creation",
         "Multi-user collaboration and approval workflows"
       ]
-      benefits: [,,
-        "75% reduction in manual tasks",;"
-        "50% faster process execution",;"
-        "99.9% uptime guarantee",;"
+      benefits: [,
+        "75% reduction in manual tasks",
+        "50% faster process execution",
+        "99.9% uptime guarantee",
         "ROI visible within 30 days"
       ]
       useCases: ["HR departments", "Sales teams", "Customer support", "Operations"],"
@@ -77,26 +77,26 @@ export default function AIMicroSAAS(): React.JSX.Element {
       link: "/contact",
     },
     {
-      id="ai-analytics-dashboard",
+      id: "ai-analytics-dashboard",
       name: "AI Analytics Dashboard",
       blurb: "Intelligent business intelligence platform with predictive analytics",
       price: "$399 - $1,999/month",
       eta: "2-3 weeks",
       category: "Business Intelligence",
-      icon: undefined,,
-      icon: BarChart3,,
-      features: [,,
-        "Real-time data visualization and custom dashboards",;"
-        "AI-powered insights and anomaly detection",;"
-        "Predictive analytics and forecasting",;"
-        "Natural language query interface",;"
-        "Automated report generation and distribution",;"
+      
+      icon: BarChart3,
+      features: [,
+        "Real-time data visualization and custom dashboards",
+        "AI-powered insights and anomaly detection",
+        "Predictive analytics and forecasting",
+        "Natural language query interface",
+        "Automated report generation and distribution",
         "Multi-source data integration (CRM, ERP, social media)"
       ]
-      benefits: [,,
-        "300% faster decision making",;"
-        "25% increase in revenue through insights",;"
-        "90% reduction in report generation time",;"
+      benefits: [,
+        "300% faster decision making",
+        "25% increase in revenue through insights",
+        "90% reduction in report generation time",
         "Proactive issue identification"
       ]
       useCases: ["C-level executives", "Marketing managers", "Sales directors", "Operations teams"],"
@@ -104,26 +104,26 @@ export default function AIMicroSAAS(): React.JSX.Element {
       link: "/contact",
     },
     {
-      id="customer-intelligence-platform",
+      id: "customer-intelligence-platform",
       name: "Customer Intelligence Platform",
       blurb: "AI-powered customer behavior analysis and personalization engine",
       price: "$599 - $2,499/month",
       eta: "2-4 weeks",
       category: "Customer Analytics",
-      icon: undefined,,
-      icon: Users,,
-      features: [,,
-        "Real-time customer journey mapping",;"
-        "AI-powered segmentation and targeting",;"
-        "Predictive customer lifetime value modeling",;"
-        "Churn prediction and prevention strategies",;"
-        "Personalized content and product recommendations",;"
+      
+      icon: Users,
+      features: [,
+        "Real-time customer journey mapping",
+        "AI-powered segmentation and targeting",
+        "Predictive customer lifetime value modeling",
+        "Churn prediction and prevention strategies",
+        "Personalized content and product recommendations",
         "Multi-channel customer interaction tracking"
       ]
-      benefits: [,,
-        "35% increase in customer retention",;"
-        "45% improvement in conversion rates",;"
-        "60% reduction in customer acquisition costs",;"
+      benefits: [,
+        "35% increase in customer retention",
+        "45% improvement in conversion rates",
+        "60% reduction in customer acquisition costs",
         "Real-time personalization at scale"
       ]
       useCases: ["E-commerce platforms", "SaaS companies", "Retail chains", "Financial services"],"
@@ -131,26 +131,26 @@ export default function AIMicroSAAS(): React.JSX.Element {
       link: "/contact",
     },
     {
-      id="ai-security-monitor",
+      id: "ai-security-monitor",
       name: "AI Security Monitor",
       blurb: "Advanced threat detection and cybersecurity automation platform",
       price: "$799 - $3,999/month",
       eta: "2-3 weeks",
       category: "Cybersecurity",
-      icon: undefined,,
-      icon: Shield,,
-      features: [,,
-        "AI-powered threat detection and response",;"
-        "Automated incident response workflows",;"
-        "Vulnerability assessment and patch management",;"
-        "Compliance monitoring (GDPR, HIPAA, SOC 2)",;"
-        "Real-time security dashboard and alerts",;"
+      
+      icon: Shield,
+      features: [,
+        "AI-powered threat detection and response",
+        "Automated incident response workflows",
+        "Vulnerability assessment and patch management",
+        "Compliance monitoring (GDPR, HIPAA, SOC 2)",
+        "Real-time security dashboard and alerts",
         "Zero-trust architecture implementation"
       ]
-      benefits: [,,
-        "99.9% threat detection accuracy",;"
-        "80% faster incident response",;"
-        "50% reduction in security breaches",;"
+      benefits: [,
+        "99.9% threat detection accuracy",
+        "80% faster incident response",
+        "50% reduction in security breaches",
         "Automated compliance reporting"
       ]
       useCases: ["Healthcare organizations", "Financial institutions", "Government agencies", "Enterprise companies"],"
@@ -158,26 +158,26 @@ export default function AIMicroSAAS(): React.JSX.Element {
       link: "/contact",
     },
     {
-      id="voice-ai-assistant",
+      id: "voice-ai-assistant",
       name: "Voice AI Assistant Platform",
       blurb: "Enterprise-grade voice AI for customer service and internal operations",
       price: "$1,299 - $4,999/month",
       eta: "3-4 weeks",
       category: "Voice AI",
-      icon: undefined,,
-      icon: MessageSquare,,
-      features: [,,
-        "Natural language processing with 95% accuracy",;"
-        "Multi-language support with accent adaptation",;"
-        "Custom voice training and brand voice creation",;"
-        "Integration with existing phone systems and CRM",;"
-        "Real-time transcription and sentiment analysis",;"
+      
+      icon: MessageSquare,
+      features: [,
+        "Natural language processing with 95% accuracy",
+        "Multi-language support with accent adaptation",
+        "Custom voice training and brand voice creation",
+        "Integration with existing phone systems and CRM",
+        "Real-time transcription and sentiment analysis",
         "Escalation to human agents when needed"
       ]
-      benefits: [,,
-        "24/7 customer service availability",;"
-        "70% reduction in call center costs",;"
-        "90% customer satisfaction scores",;"
+      benefits: [,
+        "24/7 customer service availability",
+        "70% reduction in call center costs",
+        "90% customer satisfaction scores",
         "Instant response to customer inquiries"
       ]
       useCases: ["Call centers", "Healthcare providers", "Financial services", "E-commerce support"],"
@@ -186,7 +186,7 @@ export default function AIMicroSAAS(): React.JSX.Element {
     }
   ];
 
-  const additionalServices: [,
+  const additionalServices: [
     {
       name: "AI Document Processor",
       description: "Intelligent document analysis and data extraction",
@@ -309,7 +309,7 @@ export default function AIMicroSAAS(): React.JSX.Element {
         <section className="container mx-auto px-6 py-12"
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8"
             {microSaaSServices.map((service)  => {
-              const Icon: service.icon;,,
+              const Icon: service.icon;,
   return (
                 <div key={service.id} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300"
                   <div className="flex items-start gap-4 mb-6"
@@ -339,7 +339,7 @@ export default function AIMicroSAAS(): React.JSX.Element {
         <section className= "container mx-auto px-6 py-12">
           <div className= "grid grid-cols-1 lg:grid-cols-2 gap-8">
             {microSaaSServices.map((service)  => {
-              const Icon: service.icon;,,
+              const Icon: service.icon;,
   return (
                 <div key={service.id} className= "bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300">
                   <div className= "flex items-start gap-4 mb-6">

@@ -12,8 +12,8 @@ export default function NextGenSecurityOperations2025(): void {
         <link rel: "canonical", href ="https: //ziontechgroup.com/blog/ai-2025-oct-next-gen-security-operations" />",
       </Helmet>
 
-      <article className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">",
-        <div className="container mx-auto px-4 py-12 max-w-4xl">",
+      <article className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white",
+        <div className="container mx-auto px-4 py-12 max-w-4xl",
           <Link to: "/blog",
   className="inline-flex items-center text-purple-400 hover: text-purple-300 mb-8 transition-colors",
           >
@@ -24,21 +24,21 @@ export default function NextGenSecurityOperations2025(): void {
   Back to Blog
           </Link>
 
-          <header className="mb-12">",
-            <div className="flex items-center gap-4 mb-6">",
-              <span className="px-4 py-2 bg-purple-500/20 text-purple-300 rounded-full text-sm font-semibold border border-purple-500/30">",
+          <header className="mb-12",
+            <div className="flex items-center gap-4 mb-6",
+              <span className="px-4 py-2 bg-purple-500/20 text-purple-300 rounded-full text-sm font-semibold border border-purple-500/30",
   AI Security Operations
               </span>
               <span className="text-gray-400">October 1, 2025</span>",
             </div>
             
-            <h1 className="text-5xl md: text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 text-transparent bg-clip-text leading-tight">",
+            <h1 className="text-5xl md: text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 text-transparent bg-clip-text leading-tight",
   Next-Gen AI Security Operations: The $2.3B Defense Shield,
             </h1>
             
             <p className="text-xl text-gray-300 leading-relaxed">,"
-      <article className= "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">",
-        <div className= "container mx-auto px-4 py-12 max-w-4xl">",
+      <article className= "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white>
+        <div className= "container mx-auto px-4 py-12 max-w-4xl>
           <Link to: "/blog",
   className= "inline-flex items-center text-purple-400 hover: text-purple-300 mb-8 transition-colors",
           >
@@ -47,8 +47,8 @@ export default function NextGenSecurityOperations2025(): void {
   Back to Blog
           </Link>
 
-          <header className= "mb-12">",
-            <div className= "flex items-center gap-4 mb-6">",
+          <header className= "mb-12>
+            <div className= "flex items-center gap-4 mb-6>
               <span className= "px-4 py-2 bg-purple-500/20 text-purple-300 rounded-full text-sm font-semibold border border-purple-500/30">"
   AI Security Operations
               </span>
@@ -85,7 +85,7 @@ export default function NextGenSecurityOperations2025(): void {
                 </li>
                 <li className="flex items-start gap-3"
                   <AlertTriangle className="h-6 w-6 text-red-400 mt-1 flex-shrink-0/>"
-            <h1 className="text-5xl md: text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 text-transparent bg-clip-text leading-tight">",
+            <h1 className="text-5xl md: text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 text-transparent bg-clip-text leading-tight",
               </h2>"
               <ul className="space-y-4 text-lg">
                 <li className="flex items-start gap-3">
@@ -106,7 +106,7 @@ export default function NextGenSecurityOperations2025(): void {
   Next-Gen AI Security Operations: The $2.3B Defense Shield,
             </h1>
             
-            <p className="text-xl text-gray-300 leading-relaxed">",
+            <p className="text-xl text-gray-300 leading-relaxed",
           <div className= "prose prose-invert prose-lg max-w-none">
             <div className= "bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/20 rounded-xl p-8 mb-12">
               <h2 className= "text-3xl font-bold mb-6 flex items-center gap-3">
@@ -137,47 +137,47 @@ export default function NextGenSecurityOperations2025(): void {
             </p>
           </header>
 
-          <div className="prose prose-invert prose-lg max-w-none">",
-            <div className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/20 rounded-xl p-8 mb-12">",
-              <h2 className="text-3xl font-bold mb-6 flex items-center gap-3">",
+          <div className="prose prose-invert prose-lg max-w-none",
+            <div className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/20 rounded-xl p-8 mb-12",
+              <h2 className="text-3xl font-bold mb-6 flex items-center gap-3",
                 <Shield className="h-8 w-8 text-purple-400" />",
   Security Impact
               </h2>
-              <ul className="space-y-4 text-lg">",
-                <li className="flex items-start gap-3">",
+              <ul className="space-y-4 text-lg",
+                <li className="flex items-start gap-3",
                   <Lock className="h-6 w-6 text-green-400 mt-1 flex-shrink-0" />",
                   <span ><strong >99.97% Threat Detection: </strong> AI identifies sophisticated attacks that evade traditional security tools</span>,
                 </li>
-                <li className="flex items-start gap-3">",
+                <li className="flex items-start gap-3",
                   <Zap className="h-6 w-6 text-yellow-400 mt-1 flex-shrink-0" />",
                   <span ><strong >Sub-Second Response: </strong> Autonomous containment and remediation blocks threats instantly</span>,
                 </li>
-                <li className="flex items-start gap-3">",
+                <li className="flex items-start gap-3",
                   <DollarSign className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />",
                   <span ><strong >$2.3B+ Protected: </strong> Average value of assets secured and breaches prevented annually</span>,
                 </li>
-                <li className="flex items-start gap-3">",
+                <li className="flex items-start gap-3",
                   <AlertTriangle className="h-6 w-6 text-red-400 mt-1 flex-shrink-0" />",
-          <div className= "prose prose-invert prose-lg max-w-none">",
-            <div className= "bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/20 rounded-xl p-8 mb-12">",
-              <h2 className= "text-3xl font-bold mb-6 flex items-center gap-3">",
+          <div className= "prose prose-invert prose-lg max-w-none>
+            <div className= "bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/20 rounded-xl p-8 mb-12>
+              <h2 className= "text-3xl font-bold mb-6 flex items-center gap-3>
                 <Shield className= "h-8 w-8 text-purple-400" />",
   Security Impact
               </h2>
-              <ul className= "space-y-4 text-lg">",
-                <li className= "flex items-start gap-3">",
+              <ul className= "space-y-4 text-lg>
+                <li className= "flex items-start gap-3>
                   <Lock className= "h-6 w-6 text-green-400 mt-1 flex-shrink-0" />",
                   <span ><strong >99.97% Threat Detection: </strong> AI identifies sophisticated attacks that evade traditional security tools</span>,
                 </li>
-                <li className= "flex items-start gap-3">",
+                <li className= "flex items-start gap-3>
                   <Zap className= "h-6 w-6 text-yellow-400 mt-1 flex-shrink-0" />",
                   <span ><strong >Sub-Second Response: </strong> Autonomous containment and remediation blocks threats instantly</span>,
                 </li>
-                <li className= "flex items-start gap-3">",
+                <li className= "flex items-start gap-3>
                   <DollarSign className= "h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />",
                   <span ><strong >$2.3B+ Protected: </strong> Average value of assets secured and breaches prevented annually</span>,
                 </li>
-                <li className= "flex items-start gap-3">",
+                <li className= "flex items-start gap-3>
                   <AlertTriangle className= "h-6 w-6 text-red-400 mt-1 flex-shrink-0" />",
                   <span ><strong >95% Faster MTTR: </strong> Mean time to resolution reduced from hours to minutes</span>,
                 </li>
@@ -188,21 +188,21 @@ export default function NextGenSecurityOperations2025(): void {
               <h2 className="text-3xl font-bold mb-6 text-purple-300">The Security Crisis</h2>"
               <p className="text-gray-300 mb-4 leading-relaxed">,"
   Cyber threats have evolved beyond human capacity to defend. Modern attacks leverage AI, operate at machine speed
-            <section className="mb-12">",
+            <section className="mb-12",
               <h2 className="text-3xl font-bold mb-6 text-purple-300">The Security Crisis</h2>",
-              <p className="text-gray-300 mb-4 leading-relaxed">",
+              <p className="text-gray-300 mb-4 leading-relaxed",
             <section className= "mb-12">
               <h2 className= "text-3xl font-bold mb-6 text-purple-300">The Security Crisis</h2>"
               <p className= "text-gray-300 mb-4 leading-relaxed">,"
   Cyber threats have evolved beyond human capacity to defend. Modern attacks leverage AI, operate at machine speed
-            <section className= "mb-12">",
+            <section className= "mb-12>
               <h2 className= "text-3xl font-bold mb-6 text-purple-300">The Security Crisis</h2>",
               <p className= "text-gray-300 mb-4 leading-relaxed">"
   Cyber threats have evolved beyond human capacity to defend. Modern attacks leverage AI, operate at machine speed
                 and exploit vulnerabilities faster than security teams can respond. The average enterprise faces 4,800+ security 
                 alerts daily, with security analysts spending 73% of their time on false positives while real threats slip through.
               </p>
-              <p className="text-gray-300 mb-4 leading-relaxed">",
+              <p className="text-gray-300 mb-4 leading-relaxed",
               <p className= "text-gray-300 mb-4 leading-relaxed">"
   The average data breach now costs $4.45M and takes 287 days to identify and contain. Traditional Security 
                 Operations Centers (SOCs) cannot scale to meet modern threat volumes. Only AI-powered autonomous security 
@@ -215,27 +215,27 @@ export default function NextGenSecurityOperations2025(): void {
               <div className="bg-slate-800/50 rounded-xl p-6 mb-6 border border-purple-500/20"
                 <h3 className="text-2xl font-bold mb-4 text-pink-300">1. Intelligent Threat Detection</h3>"
                 <p className="text-gray-300 mb-4"
-            <section className="mb-12">",
+            <section className="mb-12",
               <h2 className="text-3xl font-bold mb-6 text-purple-300">The Autonomous SecOps Architecture</h2>",
-              <div className="bg-slate-800/50 rounded-xl p-6 mb-6 border border-purple-500/20">",
+              <div className="bg-slate-800/50 rounded-xl p-6 mb-6 border border-purple-500/20",
                 <h3 className="text-2xl font-bold mb-4 text-pink-300">1. Intelligent Threat Detection</h3>",
-                <p className="text-gray-300 mb-4">",
+                <p className="text-gray-300 mb-4",
             <section className= "mb-12">
               <h2 className= "text-3xl font-bold mb-6 text-purple-300">The Autonomous SecOps Architecture</h2>"
               <div className= "bg-slate-800/50 rounded-xl p-6 mb-6 border border-purple-500/20">
                 <h3 className= "text-2xl font-bold mb-4 text-pink-300">1. Intelligent Threat Detection</h3>"
                 <p className= "text-gray-300 mb-4">
-            <section className= "mb-12">",
+            <section className= "mb-12>
               <h2 className= "text-3xl font-bold mb-6 text-purple-300">The Autonomous SecOps Architecture</h2>",
-              <div className= "bg-slate-800/50 rounded-xl p-6 mb-6 border border-purple-500/20">",
+              <div className= "bg-slate-800/50 rounded-xl p-6 mb-6 border border-purple-500/20>
                 <h3 className= "text-2xl font-bold mb-4 text-pink-300">1. Intelligent Threat Detection</h3>",
                 <p className= "text-gray-300 mb-4">"
   Advanced ML models analyze network traffic, user behavior, system logs, and threat intelligence in real-time 
                   to detect anomalies and known attack patterns. Deep learning identifies sophisticated threats including 
                   zero-days, APTs, insider threats, and novel attack techniques that signature-based systems miss completely.
                 </p>
-                <ul className="list-disc list-inside space-y-2 text-gray-300 ml-4">",
-                <ul className= "list-disc list-inside space-y-2 text-gray-300 ml-4">",
+                <ul className="list-disc list-inside space-y-2 text-gray-300 ml-4",
+                <ul className= "list-disc list-inside space-y-2 text-gray-300 ml-4>
                   <li >Behavioral analytics baseline normal patterns across 500+ dimensions</li>
                   <li >Anomaly detection identifies deviations within milliseconds</li>
                   <li >Threat classification categorizes attacks with 99.97% accuracy</li>
@@ -243,18 +243,18 @@ export default function NextGenSecurityOperations2025(): void {
                 </ul>
               </div>
 
-              <div className="bg-slate-800/50 rounded-xl p-6 mb-6 border border-purple-500/20">",
+              <div className="bg-slate-800/50 rounded-xl p-6 mb-6 border border-purple-500/20",
                 <h3 className="text-2xl font-bold mb-4 text-pink-300">2. Autonomous Incident Response</h3>",
-                <p className="text-gray-300 mb-4">",
-              <div className= "bg-slate-800/50 rounded-xl p-6 mb-6 border border-purple-500/20">",
+                <p className="text-gray-300 mb-4",
+              <div className= "bg-slate-800/50 rounded-xl p-6 mb-6 border border-purple-500/20>
                 <h3 className= "text-2xl font-bold mb-4 text-pink-300">2. Autonomous Incident Response</h3>",
                 <p className= "text-gray-300 mb-4">"
   AI agents automatically investigate alerts, correlate evidence across systems, determine attack scope, and 
                   execute response playbooks without human intervention. Machine-speed response contains threats in seconds 
                   rather than hours, preventing lateral movement and data exfiltration.
                 </p>
-                <ul className="list-disc list-inside space-y-2 text-gray-300 ml-4">",
-                <ul className= "list-disc list-inside space-y-2 text-gray-300 ml-4">",
+                <ul className="list-disc list-inside space-y-2 text-gray-300 ml-4",
+                <ul className= "list-disc list-inside space-y-2 text-gray-300 ml-4>
                   <li >Automated triage and investigation reduce analyst workload by 94%</li>
                   <li >Dynamic playbook execution adapts to attack characteristics</li>
                   <li >Intelligent containment isolates threats without disrupting business</li>
@@ -262,18 +262,18 @@ export default function NextGenSecurityOperations2025(): void {
                 </ul>
               </div>
 
-              <div className="bg-slate-800/50 rounded-xl p-6 mb-6 border border-purple-500/20">",
+              <div className="bg-slate-800/50 rounded-xl p-6 mb-6 border border-purple-500/20",
                 <h3 className="text-2xl font-bold mb-4 text-pink-300">3. Predictive Vulnerability Management</h3>",
-                <p className="text-gray-300 mb-4">",
-              <div className= "bg-slate-800/50 rounded-xl p-6 mb-6 border border-purple-500/20">",
+                <p className="text-gray-300 mb-4",
+              <div className= "bg-slate-800/50 rounded-xl p-6 mb-6 border border-purple-500/20>
                 <h3 className= "text-2xl font-bold mb-4 text-pink-300">3. Predictive Vulnerability Management</h3>",
                 <p className= "text-gray-300 mb-4">"
   AI continuously scans infrastructure, applications, and configurations to identify vulnerabilities and 
                   misconfigurations. ML models predict which vulnerabilities are most likely to be exploited based on threat 
                   intelligence, attack trends, and asset criticality—prioritizing remediation efforts on the 2% that matter.
                 </p>
-                <ul className="list-disc list-inside space-y-2 text-gray-300 ml-4">",
-                <ul className= "list-disc list-inside space-y-2 text-gray-300 ml-4">",
+                <ul className="list-disc list-inside space-y-2 text-gray-300 ml-4",
+                <ul className= "list-disc list-inside space-y-2 text-gray-300 ml-4>
                   <li >Continuous asset discovery maintains real-time inventory</li>
                   <li >Risk scoring prioritizes remediation based on exploit probability</li>
                   <li >Automated patching applies fixes during maintenance windows</li>
@@ -285,22 +285,22 @@ export default function NextGenSecurityOperations2025(): void {
                 <h3 className="text-2xl font-bold mb-4 text-pink-300">4. Threat Intelligence Fusion</h3>"
                 <p className="text-gray-300 mb-4">,"
   AI aggregates and analyzes threat intelligence from hundreds of sources—commercial feeds, open source intel
-              <div className="bg-slate-800/50 rounded-xl p-6 mb-6 border border-purple-500/20">",
+              <div className="bg-slate-800/50 rounded-xl p-6 mb-6 border border-purple-500/20",
                 <h3 className="text-2xl font-bold mb-4 text-pink-300">4. Threat Intelligence Fusion</h3>",
-                <p className="text-gray-300 mb-4">",
+                <p className="text-gray-300 mb-4",
               <div className= "bg-slate-800/50 rounded-xl p-6 mb-6 border border-purple-500/20">
                 <h3 className= "text-2xl font-bold mb-4 text-pink-300">4. Threat Intelligence Fusion</h3>"
                 <p className= "text-gray-300 mb-4">,"
   AI aggregates and analyzes threat intelligence from hundreds of sources—commercial feeds, open source intel
-              <div className= "bg-slate-800/50 rounded-xl p-6 mb-6 border border-purple-500/20">",
+              <div className= "bg-slate-800/50 rounded-xl p-6 mb-6 border border-purple-500/20>
                 <h3 className= "text-2xl font-bold mb-4 text-pink-300">4. Threat Intelligence Fusion</h3>",
                 <p className= "text-gray-300 mb-4">"
   AI aggregates and analyzes threat intelligence from hundreds of sources—commercial feeds, open source intel
                   dark web monitoring, and internal telemetry. NLP models extract actionable insights, identify emerging 
                   threats, and automatically update detection rules and response playbooks.
                 </p>
-                <ul className="list-disc list-inside space-y-2 text-gray-300 ml-4">",
-                <ul className= "list-disc list-inside space-y-2 text-gray-300 ml-4">",
+                <ul className="list-disc list-inside space-y-2 text-gray-300 ml-4",
+                <ul className= "list-disc list-inside space-y-2 text-gray-300 ml-4>
                   <li >Indicator enrichment provides full context for investigations</li>
                   <li >Adversary profiling maps TTPs to known threat actors</li>
                   <li >Predictive threat modeling anticipates next-generation attacks</li>
@@ -311,28 +311,28 @@ export default function NextGenSecurityOperations2025(): void {
 
             <section className="mb-12"
               <h2 className="text-3xl font-bold mb-6 text-purple-300">Enterprise Success Stories</h2>"
-              <div className="grid md:grid-cols-2 gap-6 mb-8">",
+              <div className="grid md:grid-cols-2 gap-6 mb-8",
                 <div className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-xl p-6 border border-purple-500/30"
                   <h3 className="text-2xl font-bold mb-4 text-purple-300">Global Financial Institution</h3>"
                   <ul className="space-y-3 text-gray-300"
-            <section className="mb-12">",
+            <section className="mb-12",
               <h2 className="text-3xl font-bold mb-6 text-purple-300">Enterprise Success Stories</h2>",
-              <div className="grid md:grid-cols-2 gap-6 mb-8">",
-                <div className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-xl p-6 border border-purple-500/30">",
+              <div className="grid md:grid-cols-2 gap-6 mb-8",
+                <div className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-xl p-6 border border-purple-500/30",
                   <h3 className="text-2xl font-bold mb-4 text-purple-300">Global Financial Institution</h3>",
-                  <ul className="space-y-3 text-gray-300">",
+                  <ul className="space-y-3 text-gray-300",
             <section className= "mb-12">
               <h2 className= "text-3xl font-bold mb-6 text-purple-300">Enterprise Success Stories</h2>"
-              <div className= "grid md:grid-cols-2 gap-6 mb-8">",
+              <div className= "grid md:grid-cols-2 gap-6 mb-8>
                 <div className= "bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-xl p-6 border border-purple-500/30">
                   <h3 className= "text-2xl font-bold mb-4 text-purple-300">Global Financial Institution</h3>"
                   <ul className= "space-y-3 text-gray-300">
-            <section className= "mb-12">",
+            <section className= "mb-12>
               <h2 className= "text-3xl font-bold mb-6 text-purple-300">Enterprise Success Stories</h2>",
-              <div className= "grid md:grid-cols-2 gap-6 mb-8">",
-                <div className= "bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-xl p-6 border border-purple-500/30">",
+              <div className= "grid md:grid-cols-2 gap-6 mb-8>
+                <div className= "bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-xl p-6 border border-purple-500/30>
                   <h3 className= "text-2xl font-bold mb-4 text-purple-300">Global Financial Institution</h3>",
-                  <ul className= "space-y-3 text-gray-300">",
+                  <ul className= "space-y-3 text-gray-300>
                     <li >• Zero successful breaches in 24 months of operation</li>
                     <li >• $3.7B in protected assets and prevented fraud</li>
                     <li >• 97% reduction in security analyst burnout and turnover</li>
@@ -340,12 +340,12 @@ export default function NextGenSecurityOperations2025(): void {
                     <li >• MTTR improved from 6 hours to 90 seconds</li>
                   </ul>
                 </div>
-                <div className="bg-gradient-to-br from-pink-500/20 to-red-500/20 rounded-xl p-6 border border-pink-500/30">",
+                <div className="bg-gradient-to-br from-pink-500/20 to-red-500/20 rounded-xl p-6 border border-pink-500/30",
                   <h3 className="text-2xl font-bold mb-4 text-pink-300">Healthcare Enterprise</h3>",
-                  <ul className="space-y-3 text-gray-300">",
-                <div className= "bg-gradient-to-br from-pink-500/20 to-red-500/20 rounded-xl p-6 border border-pink-500/30">",
+                  <ul className="space-y-3 text-gray-300",
+                <div className= "bg-gradient-to-br from-pink-500/20 to-red-500/20 rounded-xl p-6 border border-pink-500/30>
                   <h3 className= "text-2xl font-bold mb-4 text-pink-300">Healthcare Enterprise</h3>",
-                  <ul className= "space-y-3 text-gray-300">",
+                  <ul className= "space-y-3 text-gray-300>
                     <li >• 99.99% ransomware prevention rate</li>
                     <li >• $890M in avoided breach and ransom costs</li>
                     <li >• 100% HIPAA compliance maintained automatically</li>
@@ -361,21 +361,21 @@ export default function NextGenSecurityOperations2025(): void {
               <div className="bg-slate-800/50 rounded-xl p-6 mb-6 border border-purple-500/20"
                 <h3 className="text-2xl font-bold mb-4 text-pink-300">Phase 1: Assessment (Weeks 1-4)</h3>",
                 <ul className="list-disc list-inside space-y-2 text-gray-300 ml-4"
-            <section className="mb-12">",
+            <section className="mb-12",
               <h2 className="text-3xl font-bold mb-6 text-purple-300">Implementation Roadmap</h2>",
-              <div className="bg-slate-800/50 rounded-xl p-6 mb-6 border border-purple-500/20">",
+              <div className="bg-slate-800/50 rounded-xl p-6 mb-6 border border-purple-500/20",
                 <h3 className="text-2xl font-bold mb-4 text-pink-300">Phase 1: Assessment (Weeks 1-4)</h3>",
-                <ul className="list-disc list-inside space-y-2 text-gray-300 ml-4">",
+                <ul className="list-disc list-inside space-y-2 text-gray-300 ml-4",
             <section className= "mb-12">
               <h2 className= "text-3xl font-bold mb-6 text-purple-300">Implementation Roadmap</h2>"
               <div className= "bg-slate-800/50 rounded-xl p-6 mb-6 border border-purple-500/20">
                 <h3 className= "text-2xl font-bold mb-4 text-pink-300">Phase 1: Assessment (Weeks 1-4)</h3>",
                 <ul className= "list-disc list-inside space-y-2 text-gray-300 ml-4">
-            <section className= "mb-12">",
+            <section className= "mb-12>
               <h2 className= "text-3xl font-bold mb-6 text-purple-300">Implementation Roadmap</h2>",
-              <div className= "bg-slate-800/50 rounded-xl p-6 mb-6 border border-purple-500/20">",
+              <div className= "bg-slate-800/50 rounded-xl p-6 mb-6 border border-purple-500/20>
                 <h3 className= "text-2xl font-bold mb-4 text-pink-300">Phase 1: Assessment (Weeks 1-4)</h3>",
-                <ul className= "list-disc list-inside space-y-2 text-gray-300 ml-4">",
+                <ul className= "list-disc list-inside space-y-2 text-gray-300 ml-4>
                   <li >Current security posture evaluation and gap analysis</li>
                   <li >Data source integration planning across SIEM, EDR, firewalls</li>
                   <li >Use case prioritization based on risk and ROI</li>
@@ -386,15 +386,15 @@ export default function NextGenSecurityOperations2025(): void {
               <div className="bg-slate-800/50 rounded-xl p-6 mb-6 border border-purple-500/20"
                 <h3 className="text-2xl font-bold mb-4 text-pink-300">Phase 2: Deployment (Weeks 5-12)</h3>",
                 <ul className="list-disc list-inside space-y-2 text-gray-300 ml-4"
-              <div className="bg-slate-800/50 rounded-xl p-6 mb-6 border border-purple-500/20">",
+              <div className="bg-slate-800/50 rounded-xl p-6 mb-6 border border-purple-500/20",
                 <h3 className="text-2xl font-bold mb-4 text-pink-300">Phase 2: Deployment (Weeks 5-12)</h3>",
-                <ul className="list-disc list-inside space-y-2 text-gray-300 ml-4">",
+                <ul className="list-disc list-inside space-y-2 text-gray-300 ml-4",
               <div className= "bg-slate-800/50 rounded-xl p-6 mb-6 border border-purple-500/20">
                 <h3 className= "text-2xl font-bold mb-4 text-pink-300">Phase 2: Deployment (Weeks 5-12)</h3>",
                 <ul className= "list-disc list-inside space-y-2 text-gray-300 ml-4">
-              <div className= "bg-slate-800/50 rounded-xl p-6 mb-6 border border-purple-500/20">",
+              <div className= "bg-slate-800/50 rounded-xl p-6 mb-6 border border-purple-500/20>
                 <h3 className= "text-2xl font-bold mb-4 text-pink-300">Phase 2: Deployment (Weeks 5-12)</h3>",
-                <ul className= "list-disc list-inside space-y-2 text-gray-300 ml-4">",
+                <ul className= "list-disc list-inside space-y-2 text-gray-300 ml-4>
                   <li >AI detection models deployed in monitoring mode</li>
                   <li >Behavioral baselines established across users and systems</li>
                   <li >Automated response playbooks configured and tested</li>
@@ -405,15 +405,15 @@ export default function NextGenSecurityOperations2025(): void {
               <div className="bg-slate-800/50 rounded-xl p-6 mb-6 border border-purple-500/20"
                 <h3 className="text-2xl font-bold mb-4 text-pink-300">Phase 3: Optimization (Weeks 13-24)</h3>",
                 <ul className="list-disc list-inside space-y-2 text-gray-300 ml-4"
-              <div className="bg-slate-800/50 rounded-xl p-6 mb-6 border border-purple-500/20">",
+              <div className="bg-slate-800/50 rounded-xl p-6 mb-6 border border-purple-500/20",
                 <h3 className="text-2xl font-bold mb-4 text-pink-300">Phase 3: Optimization (Weeks 13-24)</h3>",
-                <ul className="list-disc list-inside space-y-2 text-gray-300 ml-4">",
+                <ul className="list-disc list-inside space-y-2 text-gray-300 ml-4",
               <div className= "bg-slate-800/50 rounded-xl p-6 mb-6 border border-purple-500/20">
                 <h3 className= "text-2xl font-bold mb-4 text-pink-300">Phase 3: Optimization (Weeks 13-24)</h3>",
                 <ul className= "list-disc list-inside space-y-2 text-gray-300 ml-4">
-              <div className= "bg-slate-800/50 rounded-xl p-6 mb-6 border border-purple-500/20">",
+              <div className= "bg-slate-800/50 rounded-xl p-6 mb-6 border border-purple-500/20>
                 <h3 className= "text-2xl font-bold mb-4 text-pink-300">Phase 3: Optimization (Weeks 13-24)</h3>",
-                <ul className= "list-disc list-inside space-y-2 text-gray-300 ml-4">",
+                <ul className= "list-disc list-inside space-y-2 text-gray-300 ml-4>
                   <li >Autonomous response activated for verified threat types</li>
                   <li >Continuous model tuning based on environment specifics</li>
                   <li >Advanced capabilities enabled: threat hunting, predictive analytics</li>,
@@ -422,10 +422,10 @@ export default function NextGenSecurityOperations2025(): void {
               </div>
             </section>
 
-            <section className="mb-12">",
+            <section className="mb-12",
               <h2 className="text-3xl font-bold mb-6 text-purple-300">The Future of Security Operations</h2>",
-              <p className="text-gray-300 mb-4 leading-relaxed">",
-            <section className= "mb-12">",
+              <p className="text-gray-300 mb-4 leading-relaxed",
+            <section className= "mb-12>
               <h2 className= "text-3xl font-bold mb-6 text-purple-300">The Future of Security Operations</h2>",
               <p className= "text-gray-300 mb-4 leading-relaxed">"
   AI-powered autonomous security operations are not a luxury—they are a necessity for survival in the modern 
@@ -433,7 +433,7 @@ export default function NextGenSecurityOperations2025(): void {
                 processes is like bringing a knife to a gunfight.
               </p>
               <p className="text-gray-300 mb-4 leading-relaxed"
-              <p className="text-gray-300 mb-4 leading-relaxed">",
+              <p className="text-gray-300 mb-4 leading-relaxed",
               <p className= "text-gray-300 mb-4 leading-relaxed">
               <p className= "text-gray-300 mb-4 leading-relaxed">"
   Leading enterprises have achieved security postures that were unimaginable just two years ago: near-perfect,,
@@ -442,10 +442,10 @@ export default function NextGenSecurityOperations2025(): void {
               </p>
             </section>
 
-            <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-xl p-8 mt-12">",
+            <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-xl p-8 mt-12",
               <h2 className="text-3xl font-bold mb-4 text-purple-300">Ready to Transform Your Security Operations?</h2>",
-              <p className="text-gray-300 mb-6">",
-            <div className= "bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-xl p-8 mt-12">",
+              <p className="text-gray-300 mb-6",
+            <div className= "bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-xl p-8 mt-12>
               <h2 className= "text-3xl font-bold mb-4 text-purple-300">Ready to Transform Your Security Operations?</h2>",
               <p className= "text-gray-300 mb-6">"
   Discover how Zion Tech Group can deploy autonomous AI security operations that protect your enterprise 
