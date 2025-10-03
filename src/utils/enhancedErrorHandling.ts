@@ -63,7 +63,7 @@ class EnhancedErrorHandler {
       });
     });
 
-    this.isInitialized = true;
+    // this.isInitialized = true;
   }
 
   private determineSeverity(error: any): 'low' | 'medium' | 'high' | 'critical' {

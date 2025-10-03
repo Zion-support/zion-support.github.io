@@ -1,7 +1,5 @@
 'use client';
 
-// import React from 'react';
-
 export default function WebinarsPage() {
   return (
     <section className="py-12">

@@ -7,10 +7,10 @@ import tseslint from 'typescript-eslint';
 export default tseslint.config(
   { 
     ignores: [
-      'node_modules/',
-      '.next/',
-      'out/',
-      'dist/',
+      'dist', 
+      'node_modules/', 
+      '.next/', 
+      'out/', 
       'build/',
       'src/pages/services/',
       'src/pages/solutions/',
@@ -29,23 +29,15 @@ export default tseslint.config(
       '*.config.js',
       '*.config.ts',
       '*.config.cjs',
-      '*.config.mjs'
+      '*.config.mjs',
     ]
   },
   {
     extends: [js.configs.recommended, ...tseslint.configs.recommended],
     files: ['**/*.{ts,tsx}'],
     languageOptions: {
-      ecmaVersion: 2021,
-      globals: {
-        ...globals.browser,
-        ...globals.node,
-      },
-      parserOptions: {
-        ecmaFeatures: {
-          jsx: true,
-        },
-      },
+      ecmaVersion: 2020,
+      globals: globals.browser,
     },
     plugins: {
       'react-hooks': reactHooks,
@@ -53,27 +45,14 @@ export default tseslint.config(
     },
     rules: {
       ...reactHooks.configs.recommended.rules,
-      ...js.configs.recommended.rules,
-      ...tseslint.configs.recommended.rules,
-      'react/react-in-jsx-scope': 'off',
-      'react/prop-types': 'off',
-      '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
-      '@typescript-eslint/explicit-function-return-type': 'off',
-      '@typescript-eslint/explicit-module-boundary-types': 'off',
-      'no-unused-vars': 'off',
-      'no-console': 'warn',
-      'no-undef': 'off',
-      'react-hooks/rules-of-hooks': 'error',
-      'react-hooks/exhaustive-deps': 'warn',
       'react-refresh/only-export-components': [
         'warn',
         { allowConstantExport: true },
       ],
-    },
-    settings: {
-      react: {
-        version: 'detect',
-      },
+      '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
+      '@typescript-eslint/explicit-function-return-type': 'off',
+      '@typescript-eslint/explicit-module-boundary-types': 'off',
+      'no-console': 'warn',
     },
   },
 );
