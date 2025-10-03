@@ -150,7 +150,7 @@ export const mockSessionStorage = (): void => {
  */
 export const mockLocation = (url: string): void => {
   delete (window as any).location;
-  window.location = Object.assign(new URL(url), {
+  (window as any).location = Object.assign(new URL(url), {
     assign: jest.fn(),
     replace: jest.fn(),
     reload: jest.fn(),
@@ -274,9 +274,9 @@ export const advanceTimersByTime = (msToRun: number): void => {
  * Wait for all async operations to complete
  */
 export const waitForAsyncOperations = async (timeout = 5000): Promise<void> => {
-  await waitFor(() => {
+  await waitFor(async () => {
     // Check if there are any pending promises
-    return Promise.resolve().then(() => true);
+    return await Promise.resolve().then(() => true);
   }, timeout);
 };
 
