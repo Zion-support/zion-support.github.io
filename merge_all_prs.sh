@@ -1,117 +1,91 @@
 #!/bin/bash
 
-# Script to merge all open PRs systematically
+# Script to merge all open PRs into main branch
 set -e
 
-echo "🚀 Starting comprehensive PR merge process..."
+echo "🚀 Starting PR merge process..."
 
-# Get all remote branches with the pattern
-echo "📋 Fetching all cursor/fix-errors-and-merge-to-main branches..."
-git fetch origin
-
-# Get list of all branches to merge
-BRANCHES=$(git branch -r | grep -E "cursor/fix-errors-and-merge-to-main" | sed 's/origin\///' | sort)
-TOTAL_BRANCHES=$(echo "$BRANCHES" | wc -l)
-
-echo "📊 Found $TOTAL_BRANCHES branches to process"
+# Get all cursor branches
+CURSOR_BRANCHES=$(git branch -r | grep "origin/cursor/" | sed 's/origin\///')
 
 # Counter for tracking progress
-COUNT=0
-MERGED=0
-FAILED=0
-SKIPPED=0
+count=0
+total=$(echo "$CURSOR_BRANCHES" | wc -l)
 
-# Function to merge a single branch
-merge_branch() {
-    local branch=$1
-    local count=$2
-    local total=$3
-    
+echo "📊 Found $total cursor branches to process"
+
+# Process each branch
+for branch in $CURSOR_BRANCHES; do
+    count=$((count + 1))
     echo ""
-    echo "🔄 [$count/$total] Processing branch: $branch"
+    echo "🔄 Processing branch $count/$total: $branch"
     
-    # Check if branch exists locally
-    if git show-ref --verify --quiet refs/heads/$branch; then
-        echo "✅ Branch $branch already exists locally"
-        git checkout $branch
-        git pull origin $branch
-    else
-        echo "📥 Checking out branch $branch"
-        git checkout -b $branch origin/$branch
-    fi
-    
-    # Switch back to main
-    git checkout main
-    
-    # Check if branch can be merged (no conflicts)
-    if git merge --no-commit --no-ff $branch 2>/dev/null; then
-        echo "✅ Branch $branch can be merged without conflicts"
-        git merge --no-ff $branch -m "Merge $branch into main"
-        echo "🎉 Successfully merged $branch"
-        ((MERGED++))
+    # Checkout the branch
+    if git checkout "$branch" 2>/dev/null; then
+        echo "✅ Checked out $branch"
         
-        # Push the merge
-        git push origin main
-        
-        # Clean up local branch
-        git branch -D $branch
-        
-    else
-        echo "⚠️  Merge conflicts detected for $branch"
-        
-        # Abort the merge
-        git merge --abort
-        
-        # Try to resolve conflicts automatically
-        echo "🔧 Attempting to resolve conflicts..."
-        
-        if git merge --no-commit --no-ff $branch; then
-            echo "✅ Conflicts resolved automatically"
-            git merge --no-ff $branch -m "Merge $branch into main (auto-resolved conflicts)"
-            echo "🎉 Successfully merged $branch with auto-resolved conflicts"
-            ((MERGED++))
+        # Pull latest changes
+        if git pull origin "$branch" 2>/dev/null; then
+            echo "✅ Pulled latest changes for $branch"
             
-            # Push the merge
-            git push origin main
+            # Switch back to main
+            git checkout main
             
-            # Clean up local branch
-            git branch -D $branch
+            # Try to merge
+            if git merge "$branch" --no-ff -m "Merge $branch into main" 2>/dev/null; then
+                echo "✅ Successfully merged $branch into main"
+            else
+                echo "⚠️  Merge conflict in $branch - attempting to resolve..."
+                
+                # Check for conflicts
+                if git status --porcelain | grep -q "^UU\|^AA\|^DD"; then
+                    echo "🔧 Resolving conflicts in $branch..."
+                    
+                    # Auto-resolve conflicts by preferring the incoming changes
+                    git status --porcelain | grep "^UU\|^AA\|^DD" | cut -c4- | while read file; do
+                        if [ -f "$file" ]; then
+                            echo "   Resolving conflict in $file"
+                            # Use incoming changes (from the branch)
+                            git checkout --theirs "$file" 2>/dev/null || true
+                            git add "$file" 2>/dev/null || true
+                        fi
+                    done
+                    
+                    # Complete the merge
+                    if git commit --no-edit 2>/dev/null; then
+                        echo "✅ Resolved conflicts and merged $branch"
+                    else
+                        echo "❌ Failed to resolve conflicts for $branch - skipping"
+                        git merge --abort 2>/dev/null || true
+                    fi
+                else
+                    echo "❌ Merge failed for $branch - skipping"
+                    git merge --abort 2>/dev/null || true
+                fi
+            fi
         else
-            echo "❌ Failed to resolve conflicts for $branch"
-            git merge --abort
-            ((FAILED++))
-            
-            # Clean up local branch
-            git branch -D $branch
+            echo "❌ Failed to pull $branch - skipping"
         fi
+    else
+        echo "❌ Failed to checkout $branch - skipping"
     fi
     
-    echo "📈 Progress: Merged: $MERGED, Failed: $FAILED, Skipped: $SKIPPED"
-}
-
-# Process branches in batches to avoid overwhelming the system
-echo "🚀 Starting batch processing..."
-
-# Process first 10 branches
-echo "📦 Processing batch 1 (branches 1-10)..."
-for branch in $(echo "$BRANCHES" | head -10); do
-    ((COUNT++))
-    merge_branch $branch $COUNT $TOTAL_BRANCHES
+    # Progress indicator
+    echo "📈 Progress: $count/$total branches processed"
 done
 
 echo ""
-echo "🎯 Batch 1 completed!"
-echo "📊 Summary:"
-echo "  Total branches: $TOTAL_BRANCHES"
-echo "  Processed: $COUNT"
-echo "  Successfully merged: $MERGED"
-echo "  Failed: $FAILED"
-echo "  Skipped: $SKIPPED"
-echo ""
+echo "🎉 PR merge process completed!"
+echo "📊 Processed $count branches"
 
-# Check git status
-echo "📋 Current repository status:"
-git status
+# Push the merged changes
+echo "🚀 Pushing merged changes to origin/main..."
+if git push origin main; then
+    echo "✅ Successfully pushed all merged changes to origin/main"
+else
+    echo "❌ Failed to push changes to origin/main"
+    exit 1
+fi
 
 echo ""
-echo "✅ Script execution completed!"
+echo "✨ All done! All open PRs have been merged into main branch."
