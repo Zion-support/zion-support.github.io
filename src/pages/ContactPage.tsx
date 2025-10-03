@@ -76,12 +76,6 @@ const ContactPage: React.FC = () => {
                       value={formData.name}
                       onChange={handleChange}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
-<<<<<<< HEAD
-=======
-=======
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200
->>>>>>> cursor/fix-errors-and-merge-to-main-6d85"
->>>>>>> 488cb15bd61969d3b6299d682d1dbb55e5c5e5cc
                       placeholder="Your full name"
                     />
                   </div>
@@ -97,12 +91,6 @@ const ContactPage: React.FC = () => {
                       value={formData.email}
                       onChange={handleChange}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
-<<<<<<< HEAD
-=======
-=======
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200
->>>>>>> cursor/fix-errors-and-merge-to-main-6d85"
->>>>>>> 488cb15bd61969d3b6299d682d1dbb55e5c5e5cc
                       placeholder="your@email.com"
                     />
                   </div>
@@ -120,12 +108,6 @@ const ContactPage: React.FC = () => {
                       value={formData.company}
                       onChange={handleChange}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
-<<<<<<< HEAD
-=======
-=======
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200
->>>>>>> cursor/fix-errors-and-merge-to-main-6d85"
->>>>>>> 488cb15bd61969d3b6299d682d1dbb55e5c5e5cc
                       placeholder="Your company name"
                     />
                   </div>
@@ -140,12 +122,6 @@ const ContactPage: React.FC = () => {
                       value={formData.phone}
                       onChange={handleChange}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
-<<<<<<< HEAD
-=======
-=======
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200
->>>>>>> cursor/fix-errors-and-merge-to-main-6d85"
->>>>>>> 488cb15bd61969d3b6299d682d1dbb55e5c5e5cc
                       placeholder="+1 (555) 123-4567"
                     />
                   </div>
@@ -161,16 +137,8 @@ const ContactPage: React.FC = () => {
                     value={formData.service}
                     onChange={handleChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
-<<<<<<< HEAD
                   >
-                    <option value=">Select a service</option>
-=======
-=======
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200
->>>>>>> cursor/fix-errors-and-merge-to-main-6d85
-                  >"
-                    <option value=">Select a service</option>
->>>>>>> 488cb15bd61969d3b6299d682d1dbb55e5c5e5cc
+                    <option value="">Select a service</option>
                     <option value="ai-services">AI Services</option>
                     <option value="it-services">IT Services</option>
                     <option value="micro-saas">Micro SaaS</option>
@@ -193,12 +161,6 @@ const ContactPage: React.FC = () => {
                     value={formData.message}
                     onChange={handleChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
-<<<<<<< HEAD
-=======
-=======
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200
->>>>>>> cursor/fix-errors-and-merge-to-main-6d85"
->>>>>>> 488cb15bd61969d3b6299d682d1dbb55e5c5e5cc
                     placeholder="Tell us about your project and how we can help..."
                   />
                 </div>
@@ -206,14 +168,7 @@ const ContactPage: React.FC = () => {
                 <button
                   type="submit"
                   className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center"
-<<<<<<< HEAD
                 >
-=======
-=======
-                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover: from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center
->>>>>>> cursor/fix-errors-and-merge-to-main-6d85
-                >"
->>>>>>> 488cb15bd61969d3b6299d682d1dbb55e5c5e5cc
                   <Send className="h-5 w-5 mr-2" />
                   Send Message
                 </button>

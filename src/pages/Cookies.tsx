@@ -2,25 +2,21 @@ import React from 'react';
 ;
 const CookiesPage: React.FC = () => {
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gray-50"
       <section className="bg-gradient-to-r from-gray-600 to-gray-800 text-white py-16"
         <div className="container mx-auto px-6 text-center"
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Cookie Policy</h1>";,"
           <p className="text-xl text-gray-100 max-w-3xl mx-auto">,";,"
-=======
     <div className= "min-h-screen bg-gray-50">
       <section className= "bg-gradient-to-r from-gray-600 to-gray-800 text-white py-16">
         <div className= "container mx-auto px-6 text-center">
           <h1 className= "text-4xl md:text-5xl font-bold mb-4">Cookie Policy</h1>";,"
           <p className= "text-xl text-gray-100 max-w-3xl mx-auto">,";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Learn about how we use cookies and similar technologies on our website.
           </p>
         </div>
       </section>
 
-<<<<<<< HEAD
       <div className="container mx-auto px-6 py-20"
         <div className="max-w-4xl mx-auto"
           <div className="bg-white p-8 rounded-xl shadow-sm"
@@ -39,7 +35,6 @@ const CookiesPage: React.FC = () => {
               </p>
               <h3 className="text-xl font-bold text-gray-900 mb-4">Managing Cookies</h3>";,"
               <p className="text-gray-600">,";,"
-=======
       <div className= "container mx-auto px-6 py-20">
         <div className= "max-w-4xl mx-auto">
           <div className= "bg-white p-8 rounded-xl shadow-sm">
@@ -58,7 +53,6 @@ const CookiesPage: React.FC = () => {
               </p>
               <h3 className= "text-xl font-bold text-gray-900 mb-4">Managing Cookies</h3>";,"
               <p className= "text-gray-600">,";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   You can control and delete cookies through your browser settings.
               </p>
             </div>

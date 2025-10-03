@@ -242,7 +242,6 @@ const ComprehensiveServices: React.FC = () => {
   const ServiceCard: ({ service }: { service: any })  => {
     const Icon: service.icon;,,,
   return (
-<<<<<<< HEAD
       <div className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 overflow-hidden"
         <div className: {`bg-gradient-to-br ${service.color} p-6 text-white`}>`;`;
           {Icon ? <Icon className="w-12 h-12 mb-4" /> : <span className ="w-12 h-12 mb-4">🧩</span>}";"
@@ -254,7 +253,6 @@ const ComprehensiveServices: React.FC = () => {
             </span>
             <Link to: {service.link}
               className="text-white hover:text-white/80 transition-colors",
-=======
       <div className= "bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 overflow-hidden">
         <div className= {`bg-gradient-to-br ${service.color} p-6 text-white`}>`;`;
           {Icon ? <Icon className= "w-12 h-12 mb-4" /> : <span className ="w-12 h-12 mb-4">🧩</span>}";"
@@ -266,27 +264,23 @@ const ComprehensiveServices: React.FC = () => {
             </span>
             <Link to: {service.link}
               className= "text-white hover:text-white/80 transition-colors",
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
             >
               Learn More →
             </Link>
           </div>
         </div>
-<<<<<<< HEAD
         <div className="p-6"
           <h4 className="font-semibold text-gray-800 mb-3">Key Features:</h4>";,"
           <ul className="space-y-2"
             {service.features.map((feature: string, index: number)  => (,,
               <li key={index} className="flex items-center text-sm text-gray-600"
                 <span className="w-4 h-4 text-green-500 mr-2 flex-shrink-0">✔️</span>";,"
-=======
         <div className= "p-6">
           <h4 className= "font-semibold text-gray-800 mb-3">Key Features:</h4>";,"
           <ul className= "space-y-2">
             {service.features.map((feature: string, index: number)  => (,,
               <li key={index} className= "flex items-center text-sm text-gray-600">
                 <span className= "w-4 h-4 text-green-500 mr-2 flex-shrink-0">✔️</span>";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                 {feature}
               </li>
             ))}
@@ -297,7 +291,6 @@ const ComprehensiveServices: React.FC = () => {
   };
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50"
       <div className="container mx-auto px-4 py-12"
         {/* Header */}
@@ -306,7 +299,6 @@ const ComprehensiveServices: React.FC = () => {
   Comprehensive <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Services</span>";,"
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">,";,"
-=======
     <div className= "min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
       <div className= "container mx-auto px-4 py-12">
         {/* Header */}
@@ -315,12 +307,10 @@ const ComprehensiveServices: React.FC = () => {
   Comprehensive <span className= "bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Services</span>";,"
           </h1>
           <p className= "text-xl text-gray-600 max-w-3xl mx-auto mb-8">,";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Discover our full range of cutting-edge AI, micro SaaS, and IT solutions designed to transform your business operations and drive measurable results.
           </p>
           
           {/* Contact CTA */}
-<<<<<<< HEAD
           <div className="bg-white rounded-lg shadow-lg p-6 max-w-2xl mx-auto"
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Ready to Get Started?</h2>";,"
             <p className="text-gray-600 mb-6">Contact us today for a free consultation and custom pricing.</p>";,"
@@ -332,7 +322,6 @@ const ComprehensiveServices: React.FC = () => {
               </a>
               <a href="mailto:kleber@ziontechgroup.com" ,";,"
   className="border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors text-center",
-=======
           <div className= "bg-white rounded-lg shadow-lg p-6 max-w-2xl mx-auto">
             <h2 className= "text-2xl font-bold text-gray-900 mb-4">Ready to Get Started?</h2>";,"
             <p className= "text-gray-600 mb-6">Contact us today for a free consultation and custom pricing.</p>";,"
@@ -344,23 +333,18 @@ const ComprehensiveServices: React.FC = () => {
               </a>
               <a href="mailto:kleber@ziontechgroup.com" ,";,"
   className= "border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors text-center",
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
               >
                 Email Us
               </a>
             </div>
-<<<<<<< HEAD
             <p className="text-sm text-gray-500 mt-4">,";,"
-=======
             <p className= "text-sm text-gray-500 mt-4">,";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   364 E Main St STE 1008, Middletown, DE 19709
             </p>
           </div>
         </div>
 
         {/* Micro SaaS Services */}
-<<<<<<< HEAD
         <section className="mb-16"
           <div className="text-center mb-12"
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Micro SaaS Solutions</h2>";,"
@@ -369,7 +353,6 @@ const ComprehensiveServices: React.FC = () => {
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
-=======
         <section className= "mb-16">
           <div className= "text-center mb-12">
             <h2 className= "text-3xl font-bold text-gray-900 mb-4">Micro SaaS Solutions</h2>";,"
@@ -378,7 +361,6 @@ const ComprehensiveServices: React.FC = () => {
             </p>
           </div>
           <div className= "grid md:grid-cols-2 lg:grid-cols-3 gap-8">
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
             {microSaasServices.map((service)  => (
               <ServiceCard key="{service.id} service: {service} /">
             ))}
@@ -386,7 +368,6 @@ const ComprehensiveServices: React.FC = () => {
         </section>
 
         {/* AI Services */}
-<<<<<<< HEAD
         <section className="mb-16"
           <div className="text-center mb-12"
             <h2 className="text-3xl font-bold text-gray-900 mb-4">AI & Machine Learning Services</h2>";,"
@@ -395,7 +376,6 @@ const ComprehensiveServices: React.FC = () => {
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
-=======
         <section className= "mb-16">
           <div className= "text-center mb-12">
             <h2 className= "text-3xl font-bold text-gray-900 mb-4">AI & Machine Learning Services</h2>";,"
@@ -404,7 +384,6 @@ const ComprehensiveServices: React.FC = () => {
             </p>
           </div>
           <div className= "grid md:grid-cols-2 lg:grid-cols-3 gap-8">
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
             {aiServices.map((service)  => (
               <ServiceCard key="{service.id} service: {service} /">
             ))}
@@ -412,7 +391,6 @@ const ComprehensiveServices: React.FC = () => {
         </section>
 
         {/* IT Services */}
-<<<<<<< HEAD
         <section className="mb-16"
           <div className="text-center mb-12"
             <h2 className="text-3xl font-bold text-gray-900 mb-4">IT & Technology Services</h2>";,"
@@ -421,7 +399,6 @@ const ComprehensiveServices: React.FC = () => {
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
-=======
         <section className= "mb-16">
           <div className= "text-center mb-12">
             <h2 className= "text-3xl font-bold text-gray-900 mb-4">IT & Technology Services</h2>";,"
@@ -430,7 +407,6 @@ const ComprehensiveServices: React.FC = () => {
             </p>
           </div>
           <div className= "grid md:grid-cols-2 lg:grid-cols-3 gap-8">
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
             {itServices.map((service)  => (
               <ServiceCard key="{service.id} service: {service} /">
             ))}
@@ -438,7 +414,6 @@ const ComprehensiveServices: React.FC = () => {
         </section>
 
         {/* Why Choose Us */}
-<<<<<<< HEAD
         <section className="bg-white rounded-xl shadow-lg p-8 mb-16"
           <div className="text-center mb-12"
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose Zion Tech Group?</h2>";,"
@@ -474,7 +449,6 @@ const ComprehensiveServices: React.FC = () => {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">Custom Solutions</h3>";,"
               <p className="text-gray-600">Tailored solutions designed for your specific needs</p>";,"
-=======
         <section className= "bg-white rounded-xl shadow-lg p-8 mb-16">
           <div className= "text-center mb-12">
             <h2 className= "text-3xl font-bold text-gray-900 mb-4">Why Choose Zion Tech Group?</h2>";,"
@@ -510,13 +484,11 @@ const ComprehensiveServices: React.FC = () => {
               </div>
               <h3 className= "text-xl font-bold text-gray-900 mb-2">Custom Solutions</h3>";,"
               <p className= "text-gray-600">Tailored solutions designed for your specific needs</p>";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
             </div>
           </div>
         </section>
 
         {/* Final CTA */}
-<<<<<<< HEAD
         <section className="text-center"
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-8 text-white"
             <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h2>";,"
@@ -531,7 +503,6 @@ const ComprehensiveServices: React.FC = () => {
               </a>
               <a href="mailto:kleber@ziontechgroup.com" ,";,"
   className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors text-center",
-=======
         <section className= "text-center">
           <div className= "bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-8 text-white">
             <h2 className= "text-3xl font-bold mb-4">Ready to Transform Your Business?</h2>";,"
@@ -546,7 +517,6 @@ const ComprehensiveServices: React.FC = () => {
               </a>
               <a href="mailto:kleber@ziontechgroup.com" ,";,"
   className= "border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors text-center",
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
               >
                 Email Us Today
               </a>
