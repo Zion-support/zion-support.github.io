@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
 import React, { memo } from 'react';
->>>>>>> b0266c0c1be3ec9050e7ba803edc6a65b0904e57
 
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg';
@@ -15,17 +11,6 @@ const LoadingSpinner = memo<LoadingSpinnerProps>(({
   text = 'Loading...', 
   className = '' 
 }) => {
-<<<<<<< HEAD
-  const sizeStyles = {
-    small: 'w-4 h-4',
-    medium: 'w-8 h-8',
-    large: 'w-12 h-12'
-  };
-
-  return (
-    <div className={`inline-block animate-spin rounded-full border-2 border-solid border-current border-r-transparent ${sizeStyles[size]} ${className}`} 
-         style={{ borderTopColor: color }}>
-=======
   const sizeClasses = {
     sm: 'w-6 h-6 border-2',
     md: 'w-12 h-12 border-4',
@@ -39,17 +24,10 @@ const LoadingSpinner = memo<LoadingSpinnerProps>(({
         aria-hidden="true"
       />
       <span className="ml-4 text-lg text-gray-600 sr-only">{text}</span>
->>>>>>> b0266c0c1be3ec9050e7ba803edc6a65b0904e57
     </div>
   );
 });
 
-<<<<<<< HEAD
-// Export PageLoader as an alias for LoadingSpinner
-export const PageLoader = LoadingSpinner;
-
-export default LoadingSpinner;
-=======
 LoadingSpinner.displayName = 'LoadingSpinner';
 
 interface PageLoaderProps {
@@ -74,54 +52,5 @@ const PageLoader = memo<PageLoaderProps>(({
 
 PageLoader.displayName = 'PageLoader';
 
-// Optimized skeleton loader for better perceived performance
-interface SkeletonLoaderProps {
-  lines?: number;
-  className?: string;
-}
-
-const SkeletonLoader = memo<SkeletonLoaderProps>(({ lines = 3, className = '' }) => {
-  return (
-    <div className={`animate-pulse ${className}`} role="status" aria-label="Content loading">
-      {Array.from({ length: lines }).map((_, index) => (
-        <div
-          key={index}
-          className={`h-4 bg-gray-300 rounded mb-2 ${
-            index === lines - 1 ? 'w-3/4' : 'w-full'
-          }`}
-          aria-hidden="true"
-        />
-      ))}
-      <span className="sr-only">Loading content...</span>
-    </div>
-  );
-});
-
-SkeletonLoader.displayName = 'SkeletonLoader';
-
-// Inline spinner for buttons and small components
-interface InlineSpinnerProps {
-  size?: 'xs' | 'sm';
-  className?: string;
-}
-
-const InlineSpinner = memo<InlineSpinnerProps>(({ size = 'sm', className = '' }) => {
-  const sizeClasses = {
-    xs: 'w-3 h-3 border',
-    sm: 'w-4 h-4 border-2'
-  };
-
-  return (
-    <div 
-      className={`${sizeClasses[size]} border-current border-t-transparent rounded-full animate-spin ${className}`}
-      role="status"
-      aria-label="Loading"
-      aria-hidden="true"
-    />
-  );
-});
-
-InlineSpinner.displayName = 'InlineSpinner';
-
-export { LoadingSpinner, PageLoader, SkeletonLoader, InlineSpinner };
->>>>>>> b0266c0c1be3ec9050e7ba803edc6a65b0904e57
+export { PageLoader };
+export default LoadingSpinner;
