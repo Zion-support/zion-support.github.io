@@ -76,30 +76,30 @@ const AIVirtualAssistant: React.FC = () => {
 
       <Header />
       
-      <main className="min-h-screen bg-white">",
+      <main className="min-h-screen bg-white",
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-purple-900 via-purple-800 to-pink-900 text-white py-20"
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8",
             <div className="text-center"
-              <h1 className="text-5xl md: text-7xl font-bold mb-6">",
+              <h1 className="text-5xl md: text-7xl font-bold mb-6",
   AI Virtual <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Assistant</span>"
               </h1>
               <p className="text-xl md:text-2xl text-purple-100 max-w-4xl mx-auto mb-8">,"
   Deploy AI-powered virtual assistants that handle customer inquiries 24/7 with 95% accuracy
                 support 120+ languages, and seamlessly integrate with your existing systems.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">",
-        <section className="bg-gradient-to-br from-purple-900 via-purple-800 to-pink-900 text-white py-20">",
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
-            <div className="text-center">",
-              <h1 className="text-5xl md: text-7xl font-bold mb-6">",
+              <div className="flex flex-col sm:flex-row gap-4 justify-center",
+        <section className="bg-gradient-to-br from-purple-900 via-purple-800 to-pink-900 text-white py-20",
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8",
+            <div className="text-center",
+              <h1 className="text-5xl md: text-7xl font-bold mb-6",
   AI Virtual <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Assistant</span>",
               </h1>
-              <p className="text-xl md: text-2xl text-purple-100 max-w-4xl mx-auto mb-8">",
+              <p className="text-xl md: text-2xl text-purple-100 max-w-4xl mx-auto mb-8",
   Deploy AI-powered virtual assistants that handle customer inquiries 24/7 with 95% accuracy
                 support 120+ languages, and seamlessly integrate with your existing systems.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">",
+              <div className="flex flex-col sm:flex-row gap-4 justify-center",
                 <a href="/contact",
   className="inline-flex items-center px-8 py-4 bg-purple-600 hover: bg-purple-700 text-white font-semibold rounded-lg transition-colors",
                 >
@@ -116,10 +116,10 @@ const AIVirtualAssistant: React.FC = () => {
                   <ArrowRight className="w-5 h-5 ml-2/>"
                   <ArrowRight className="w-5 h-5 ml-2/>"
                   <ArrowRight className="w-5 h-5 ml-2" />",
-      <main className= "min-h-screen bg-white">",
+      <main className= "min-h-screen bg-white>
         {/* Hero Section */}
         <section className= "bg-gradient-to-br from-purple-900 via-purple-800 to-pink-900 text-white py-20">
-          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
+          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8>
             <div className= "text-center">
               <h1 className= "text-5xl md: text-7xl font-bold mb-6">"
   AI Virtual <span className= "bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Assistant</span>"
@@ -128,10 +128,10 @@ const AIVirtualAssistant: React.FC = () => {
   Deploy AI-powered virtual assistants that handle customer inquiries 24/7 with 95% accuracy
                 support 120+ languages, and seamlessly integrate with your existing systems.
               </p>
-              <div className= "flex flex-col sm:flex-row gap-4 justify-center">",
-        <section className= "bg-gradient-to-br from-purple-900 via-purple-800 to-pink-900 text-white py-20">",
-          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
-            <div className= "text-center">",
+              <div className= "flex flex-col sm:flex-row gap-4 justify-center>
+        <section className= "bg-gradient-to-br from-purple-900 via-purple-800 to-pink-900 text-white py-20>
+          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8>
+            <div className= "text-center>
               <h1 className= "text-5xl md: text-7xl font-bold mb-6">"
   AI Virtual <span className= "bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Assistant</span>",
               </h1>
@@ -139,7 +139,7 @@ const AIVirtualAssistant: React.FC = () => {
   Deploy AI-powered virtual assistants that handle customer inquiries 24/7 with 95% accuracy
                 support 120+ languages, and seamlessly integrate with your existing systems.
               </p>
-              <div className= "flex flex-col sm:flex-row gap-4 justify-center">",
+              <div className= "flex flex-col sm:flex-row gap-4 justify-center>
                 <a href="/contact",
   className= "inline-flex items-center px-8 py-4 bg-purple-600 hover: bg-purple-700 text-white font-semibold rounded-lg transition-colors",
                 >
@@ -161,23 +161,23 @@ const AIVirtualAssistant: React.FC = () => {
 
         {/* Key Benefits */}
         <section className="py-16 bg-gray-50"
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8",
             <div className="text-center mb-12"
               <h2 className="text-4xl font-bold text-gray-900 mb-4"
-        <section className="py-16 bg-gray-50">",
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
-            <div className="text-center mb-12">",
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">",
+        <section className="py-16 bg-gray-50",
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8",
+            <div className="text-center mb-12",
+              <h2 className="text-4xl font-bold text-gray-900 mb-4",
   Why Choose Our AI Virtual Assistant?
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">",
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto",
         <section className= "py-16 bg-gray-50">
-          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
+          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8>
             <div className= "text-center mb-12">
               <h2 className= "text-4xl font-bold text-gray-900 mb-4">
-        <section className= "py-16 bg-gray-50">",
-          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
-            <div className= "text-center mb-12">",
+        <section className= "py-16 bg-gray-50>
+          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8>
+            <div className= "text-center mb-12>
               <h2 className= "text-4xl font-bold text-gray-900 mb-4">"
   Why Choose Our AI Virtual Assistant?
               </h2>
@@ -186,16 +186,16 @@ const AIVirtualAssistant: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-4 gap-8">",
+            <div className="grid md:grid-cols-4 gap-8",
               <div className="text-center"
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-4"
                   <MessageCircle className="w-8 h-8 text-purple-600/>"
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-4">
                   <MessageCircle className="w-8 h-8 text-purple-600/>"
-            <div className="grid md:grid-cols-4 gap-8">",
-              <div className="text-center">",
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-4">",
+            <div className="grid md:grid-cols-4 gap-8",
+              <div className="text-center",
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-4",
                   <MessageCircle className="w-8 h-8 text-purple-600" />",
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">95% Accuracy</h3>",
@@ -207,8 +207,8 @@ const AIVirtualAssistant: React.FC = () => {
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">
                   <Clock className="w-8 h-8 text-blue-600/>"
-              <div className="text-center">",
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">",
+              <div className="text-center",
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4",
                   <Clock className="w-8 h-8 text-blue-600" />",
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Instant Response</h3>",
@@ -220,8 +220,8 @@ const AIVirtualAssistant: React.FC = () => {
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">
                   <Globe className="w-8 h-8 text-green-600/>"
-              <div className="text-center">",
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">",
+              <div className="text-center",
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4",
                   <Globe className="w-8 h-8 text-green-600" />",
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">120+ Languages</h3>",
@@ -233,19 +233,19 @@ const AIVirtualAssistant: React.FC = () => {
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-orange-100 rounded-full mb-4">
                   <Shield className="w-8 h-8 text-orange-600/>"
-              <div className="text-center">",
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-orange-100 rounded-full mb-4">",
+              <div className="text-center",
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-orange-100 rounded-full mb-4",
                   <Shield className="w-8 h-8 text-orange-600" />",
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Enterprise Security</h3>",
                 <p className="text-gray-600">Bank-grade encryption and compliance</p>",
-            <div className= "grid md:grid-cols-4 gap-8">",
+            <div className= "grid md:grid-cols-4 gap-8>
               <div className= "text-center">
                 <div className= "inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-4">
                   <MessageCircle className= "w-8 h-8 text-purple-600/>"
-            <div className= "grid md:grid-cols-4 gap-8">",
-              <div className= "text-center">",
-                <div className= "inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-4">",
+            <div className= "grid md:grid-cols-4 gap-8>
+              <div className= "text-center>
+                <div className= "inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-4>
                   <MessageCircle className= "w-8 h-8 text-purple-600" />",
                 </div>
                 <h3 className= "text-xl font-bold text-gray-900 mb-2">95% Accuracy</h3>",
@@ -254,8 +254,8 @@ const AIVirtualAssistant: React.FC = () => {
               <div className= "text-center">
                 <div className= "inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">
                   <Clock className= "w-8 h-8 text-blue-600/>"
-              <div className= "text-center">",
-                <div className= "inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">",
+              <div className= "text-center>
+                <div className= "inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4>
                   <Clock className= "w-8 h-8 text-blue-600" />",
                 </div>
                 <h3 className= "text-xl font-bold text-gray-900 mb-2">Instant Response</h3>",
@@ -264,8 +264,8 @@ const AIVirtualAssistant: React.FC = () => {
               <div className= "text-center">
                 <div className= "inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">
                   <Globe className= "w-8 h-8 text-green-600/>"
-              <div className= "text-center">",
-                <div className= "inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">",
+              <div className= "text-center>
+                <div className= "inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4>
                   <Globe className= "w-8 h-8 text-green-600" />",
                 </div>
                 <h3 className= "text-xl font-bold text-gray-900 mb-2">120+ Languages</h3>",
@@ -274,8 +274,8 @@ const AIVirtualAssistant: React.FC = () => {
               <div className= "text-center">
                 <div className= "inline-flex items-center justify-center w-16 h-16 bg-orange-100 rounded-full mb-4">
                   <Shield className= "w-8 h-8 text-orange-600/>"
-              <div className= "text-center">",
-                <div className= "inline-flex items-center justify-center w-16 h-16 bg-orange-100 rounded-full mb-4">",
+              <div className= "text-center>
+                <div className= "inline-flex items-center justify-center w-16 h-16 bg-orange-100 rounded-full mb-4>
                   <Shield className= "w-8 h-8 text-orange-600" />",
                 </div>
                 <h3 className= "text-xl font-bold text-gray-900 mb-2">Enterprise Security</h3>",
@@ -287,23 +287,23 @@ const AIVirtualAssistant: React.FC = () => {
 
         {/* Features */}
         <section className="py-20"
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8",
             <div className="text-center mb-16"
               <h2 className="text-4xl font-bold text-gray-900 mb-4"
-        <section className="py-20">",
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
-            <div className="text-center mb-16">",
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">",
+        <section className="py-20",
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8",
+            <div className="text-center mb-16",
+              <h2 className="text-4xl font-bold text-gray-900 mb-4",
   Advanced AI Capabilities
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">",
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto",
         <section className= "py-20">
-          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
+          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8>
             <div className= "text-center mb-16">
               <h2 className= "text-4xl font-bold text-gray-900 mb-4">
-        <section className= "py-20">",
-          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
-            <div className= "text-center mb-16">",
+        <section className= "py-20>
+          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8>
+            <div className= "text-center mb-16>
               <h2 className= "text-4xl font-bold text-gray-900 mb-4">"
   Advanced AI Capabilities
               </h2>
@@ -312,11 +312,11 @@ const AIVirtualAssistant: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8",
               {features.map((feature, index) => {
                 const Icon: feature.icon;,,
   return (
-                  <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">",
+                  <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow",
                     <div className="inline-flex items-center justify-center w-12 h-12 bg-purple-100 rounded-lg mb-4"
                       <Icon className="w-6 h-6 text-purple-600/>"
                     </div>
@@ -324,7 +324,7 @@ const AIVirtualAssistant: React.FC = () => {
                     <p className="text-gray-600 mb-4">{feature.description}</p>";"
                     <div className="inline-flex items-center text-green-600 font-semibold text-sm"
                       <CheckCircle className="w-4 h-4 mr-1/>"
-                  <div key: {index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">",
+                  <div key: {index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow",
                     <div className="inline-flex items-center justify-center w-12 h-12 bg-purple-100 rounded-lg mb-4">
                       <Icon className="w-6 h-6 text-purple-600/>
                     </div>"
@@ -332,23 +332,23 @@ const AIVirtualAssistant: React.FC = () => {
                     <p className="text-gray-600 mb-4">{feature.description}</p>";"
                     <div className="inline-flex items-center text-green-600 font-semibold text-sm">
                       <CheckCircle className="w-4 h-4 mr-1/>"
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8",
               {features.map((feature, index) => {
                 const Icon: feature.icon;,,
   return (
-                  <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">",
-                    <div className="inline-flex items-center justify-center w-12 h-12 bg-purple-100 rounded-lg mb-4">",
+                  <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow",
+                    <div className="inline-flex items-center justify-center w-12 h-12 bg-purple-100 rounded-lg mb-4",
                       <Icon className="w-6 h-6 text-purple-600" />",
                     </div>
                     <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>"
                     <p className="text-gray-600 mb-4">{feature.description}</p>"
-                    <div className="inline-flex items-center text-green-600 font-semibold text-sm">",
+                    <div className="inline-flex items-center text-green-600 font-semibold text-sm",
                       <CheckCircle className="w-4 h-4 mr-1" />",
-            <div className= "grid md:grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div className= "grid md:grid-cols-2 lg:grid-cols-3 gap-8>
               {features.map((feature, index) => {
                 const Icon: feature.icon;,,
   return (
-                  <div key={index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">",
+                  <div key={index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow>
                     <div className= "inline-flex items-center justify-center w-12 h-12 bg-purple-100 rounded-lg mb-4">
                       <Icon className= "w-6 h-6 text-purple-600/>"
                     </div>
@@ -356,17 +356,17 @@ const AIVirtualAssistant: React.FC = () => {
                     <p className= "text-gray-600 mb-4">{feature.description}</p>";"
                     <div className= "inline-flex items-center text-green-600 font-semibold text-sm">
                       <CheckCircle className= "w-4 h-4 mr-1/>"
-            <div className= "grid md:grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div className= "grid md:grid-cols-2 lg:grid-cols-3 gap-8>
               {features.map((feature, index) => {
                 const Icon: feature.icon;,,
   return (
-                  <div key={index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">",
-                    <div className= "inline-flex items-center justify-center w-12 h-12 bg-purple-100 rounded-lg mb-4">",
+                  <div key={index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow>
+                    <div className= "inline-flex items-center justify-center w-12 h-12 bg-purple-100 rounded-lg mb-4>
                       <Icon className= "w-6 h-6 text-purple-600" />",
                     </div>
                     <h3 className= "text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>"
                     <p className= "text-gray-600 mb-4">{feature.description}</p>"
-                    <div className= "inline-flex items-center text-green-600 font-semibold text-sm">",
+                    <div className= "inline-flex items-center text-green-600 font-semibold text-sm>
                       <CheckCircle className= "w-4 h-4 mr-1" />",
                       {feature.benefit}
                     </div>
@@ -379,18 +379,18 @@ const AIVirtualAssistant: React.FC = () => {
 
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-br from-purple-900 via-purple-800 to-pink-900 text-white"
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">",
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center",
             <h2 className="text-4xl font-bold mb-6"
-        <section className="py-20 bg-gradient-to-br from-purple-900 via-purple-800 to-pink-900 text-white">",
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">",
-            <h2 className="text-4xl font-bold mb-6">",
+        <section className="py-20 bg-gradient-to-br from-purple-900 via-purple-800 to-pink-900 text-white",
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center",
+            <h2 className="text-4xl font-bold mb-6",
   Ready to Transform Your Customer Experience?
             </h2>
-            <p className="text-xl text-purple-100 max-w-3xl mx-auto mb-8">",
+            <p className="text-xl text-purple-100 max-w-3xl mx-auto mb-8",
   Join hundreds of companies already using our AI virtual assistant to provide exceptional customer service 24/7.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">",
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">",
+            <div className="flex flex-col sm:flex-row gap-4 justify-center",
+            <div className="flex flex-col sm:flex-row gap-4 justify-center",
               <a href="/contact",
   className="inline-flex items-center px-8 py-4 bg-purple-600 hover: bg-purple-700 text-white font-semibold rounded-lg transition-colors",
               >
@@ -408,18 +408,18 @@ const AIVirtualAssistant: React.FC = () => {
                 <ArrowRight className="w-5 h-5 ml-2/>"
                 <ArrowRight className="w-5 h-5 ml-2" />",
         <section className= "py-20 bg-gradient-to-br from-purple-900 via-purple-800 to-pink-900 text-white">
-          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">",
+          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center>
             <h2 className= "text-4xl font-bold mb-6">
-        <section className= "py-20 bg-gradient-to-br from-purple-900 via-purple-800 to-pink-900 text-white">",
-          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">",
+        <section className= "py-20 bg-gradient-to-br from-purple-900 via-purple-800 to-pink-900 text-white>
+          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center>
             <h2 className= "text-4xl font-bold mb-6">"
   Ready to Transform Your Customer Experience?
             </h2>
             <p className= "text-xl text-purple-100 max-w-3xl mx-auto mb-8">"
   Join hundreds of companies already using our AI virtual assistant to provide exceptional customer service 24/7.
             </p>
-            <div className= "flex flex-col sm:flex-row gap-4 justify-center">",
-            <div className= "flex flex-col sm:flex-row gap-4 justify-center">",
+            <div className= "flex flex-col sm:flex-row gap-4 justify-center>
+            <div className= "flex flex-col sm:flex-row gap-4 justify-center>
               <a href="/contact",
   className= "inline-flex items-center px-8 py-4 bg-purple-600 hover: bg-purple-700 text-white font-semibold rounded-lg transition-colors",
               >

@@ -279,83 +279,83 @@ export default function NewServices2026() {
   const newServices = [
     // AI-Powered Micro SaaS Solutions
     {
-      category: 'AI-Powered Micro SaaS',';,
-      icon: Brain,,
-      color: 'purple',';,
+      category: 'AI-Powered Micro SaaS',
+      icon: Brain,
+      color: 'purple',
       services: [,
         {
-          name: 'AI-Powered Email Subject Line Optimizer Pro',';,
-          description: 'Generate high-converting email subject lines using advanced AI analysis of industry performance data and A/B testing.',';,
-          price: '$49 - $299/month',';,
-          delivery: '1 week',';,
-          features: [,
-            'AI-generated subject lines for 40+ industries',';
-            'A/B testing with statistical significance analysis',';
-            'Open rate prediction and optimization',';
-            'Integration with major email platforms (Mailchimp, Constant Contact, SendGrid)',';
-            'Performance analytics and recommendations',';
-            'Compliance with CAN-SPAM and GDPR regulations',';
-            'Multi-language support for global campaigns',';
-            'Real-time performance monitoring and alerts'],
-,
-          benefits: [,
-            'Average 23% increase in email open rates',';
-            '40% improvement in click-through rates',';
-            '60% reduction in email marketing costs',';
+          name: 'AI-Powered Email Subject Line Optimizer Pro',
+          description: 'Generate high-converting email subject lines using advanced AI analysis of industry performance data and A/B testing.',
+          price: '$49 - $299/month',
+          delivery: '1 week',
+          features: [
+            'AI-generated subject lines for 40+ industries',
+            'A/B testing with statistical significance analysis',
+            'Open rate prediction and optimization',
+            'Integration with major email platforms (Mailchimp, Constant Contact, SendGrid)',
+            'Performance analytics and recommendations',
+            'Compliance with CAN-SPAM and GDPR regulations',
+            'Multi-language support for global campaigns',
+            'Real-time performance monitoring and alerts'
+          ],
+          benefits: [
+            'Average 23% increase in email open rates',
+            '40% improvement in click-through rates',
+            '60% reduction in email marketing costs',
             'Automated optimization saves 10+ hours weekly'
           ],
-          useCases: ['E-commerce brands', 'SaaS companies', 'Marketing agencies', 'Non-profits'],';,
-          marketSize: '$7.5B email marketing market',';,
+          useCases: ['E-commerce brands', 'SaaS companies', 'Marketing agencies', 'Non-profits'],
+          marketSize: '$7.5B email marketing market',
           roi: '400% ROI within 3 months',
         },
         {
-          name: 'Smart Meeting Analytics Platform',';,
-          description: 'AI-powered meeting insights, productivity tracking, and automated follow-up generation for remote teams.',';,
-          price: '$99 - $499/month',';,
-          delivery: '2 weeks',';,
-          features: [,
-            'Real-time meeting transcription and analysis',';
-            'Action item extraction and automatic assignment',';
-            'Meeting effectiveness scoring and optimization',';
-            'Calendar optimization suggestions',';
-            'Integration with Zoom, Teams, Google Meet, Webex',';
-            'Team productivity dashboards and reporting',';
-            'Sentiment analysis and engagement tracking',';
-            'Automated meeting summaries and distribution'],
-,
-          benefits: [,
-            '35% reduction in meeting time waste',';
-            '50% improvement in action item completion',';
-            '25% increase in team productivity',';
+          name: 'Smart Meeting Analytics Platform',
+          description: 'AI-powered meeting insights, productivity tracking, and automated follow-up generation for remote teams.',
+          price: '$99 - $499/month',
+          delivery: '2 weeks',
+          features: [
+            'Real-time meeting transcription and analysis',
+            'Action item extraction and automatic assignment',
+            'Meeting effectiveness scoring and optimization',
+            'Calendar optimization suggestions',
+            'Integration with Zoom, Teams, Google Meet, Webex',
+            'Team productivity dashboards and reporting',
+            'Sentiment analysis and engagement tracking',
+            'Automated meeting summaries and distribution'
+          ],
+          benefits: [
+            '35% reduction in meeting time waste',
+            '50% improvement in action item completion',
+            '25% increase in team productivity',
             'Automated follow-ups save 5+ hours weekly'
           ],
-          useCases: ['Remote teams', 'Consulting firms', 'Sales organizations', 'Project managers'],';,
-          marketSize: '$4.2B meeting software market',';,
+          useCases: ['Remote teams', 'Consulting firms', 'Sales organizations', 'Project managers'],
+          marketSize: '$4.2B meeting software market',
           roi: '300% ROI within 6 months',
         },
         {
-          name: 'AI Healthcare Appointment Intelligence',';,
-          description: 'AI-driven appointment scheduling with patient preference learning, no-show prediction, and optimization.',';,
-          price: '$199 - $999/month',';,
-          delivery: '3 weeks',';,
-          features: [,
-            'Smart scheduling with patient preferences and history',';
-            'No-show prediction and prevention strategies',';
-            'Wait time optimization and queue management',';
-            'HIPAA-compliant patient communication',';
-            'Revenue optimization through intelligent scheduling',';
-            'Integration with major EHR systems (Epic, Cerner, Allscripts)',';
-            'Multi-provider scheduling coordination',';
-            'Real-time availability updates and notifications'],
-,
-          benefits: [,
-            '28% reduction in no-show rates',';
-            '15% increase in revenue through optimized scheduling',';
-            '40% reduction in administrative overhead',';
+          name: 'AI Healthcare Appointment Intelligence',
+          description: 'AI-driven appointment scheduling with patient preference learning, no-show prediction, and optimization.',
+          price: '$199 - $999/month',
+          delivery: '3 weeks',
+          features: [
+            'Smart scheduling with patient preferences and history',
+            'No-show prediction and prevention strategies',
+            'Wait time optimization and queue management',
+            'HIPAA-compliant patient communication',
+            'Revenue optimization through intelligent scheduling',
+            'Integration with major EHR systems (Epic, Cerner, Allscripts)',
+            'Multi-provider scheduling coordination',
+            'Real-time availability updates and notifications'
+          ],
+          benefits: [
+            '28% reduction in no-show rates',
+            '15% increase in revenue through optimized scheduling',
+            '40% reduction in administrative overhead',
             '95% patient satisfaction improvement'
           ],
-          useCases: ['Medical practices', 'Dental offices', 'Mental health providers', 'Specialty clinics'],';,
-          marketSize: '$3.8B healthcare scheduling market',';,
+          useCases: ['Medical practices', 'Dental offices', 'Mental health providers', 'Specialty clinics'],
+          marketSize: '$3.8B healthcare scheduling market',
           roi: '250% ROI within 4 months',
         },
         {
