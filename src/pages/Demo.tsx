@@ -101,7 +101,6 @@ const Demo: React.FC: ()  => {,,,
   ];
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gray-50"
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-600 via-purple-600 to-teal-600 text-white py-20"
@@ -125,7 +124,6 @@ const Demo: React.FC: ()  => {,,,
               </div>
               <div className="flex items-center"
                 <Play className="w-5 h-5 mr-2" />";,"
-=======
     <div className= "min-h-screen bg-gray-50">
       {/* Hero Section */}
       <section className= "bg-gradient-to-br from-blue-600 via-purple-600 to-teal-600 text-white py-20">
@@ -149,7 +147,6 @@ const Demo: React.FC: ()  => {,,,
               </div>
               <div className= "flex items-center">
                 <Play className= "w-5 h-5 mr-2" />";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                 <span >Live demonstration</span>
               </div>
             </div>
@@ -158,7 +155,6 @@ const Demo: React.FC: ()  => {,,,
       </section>
 
       {/* Demo Features */}
-<<<<<<< HEAD
       <section className="py-20 bg-white"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
           <div className="text-center mb-16"
@@ -166,7 +162,6 @@ const Demo: React.FC: ()  => {,,,
   What You'll See in the Demo';';
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">,";,"
-=======
       <section className= "py-20 bg-white">
         <div className= "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className= "text-center mb-16">
@@ -174,26 +169,22 @@ const Demo: React.FC: ()  => {,,,
   What You'll See in the Demo';';
             </h2>
             <p className= "text-xl text-gray-600 max-w-2xl mx-auto">,";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Get a comprehensive overview of our AI solutions tailored to your business
             </p>
           </div>
           
-<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
             {demoFeatures.map((feature, index) => (
               <div key={index} className="text-center"
                 <div className="text-4xl mb-4">{feature.icon}</div>";"
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>";"
                 <p className="text-gray-600">{feature.description}</p>";"
-=======
           <div className= "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {demoFeatures.map((feature, index) => (
               <div key: {index} className= "text-center">
                 <div className= "text-4xl mb-4">{feature.icon}</div>";"
                 <h3 className= "text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>";"
                 <p className= "text-gray-600">{feature.description}</p>";"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
               </div>
             ))}
           </div>
@@ -201,7 +192,6 @@ const Demo: React.FC: ()  => {,,,
       </section>
 
       {/* Demo Form */}
-<<<<<<< HEAD
       <section className="py-20 bg-gray-50"
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8"
           <div className="bg-white rounded-lg shadow-lg p-8"
@@ -210,7 +200,6 @@ const Demo: React.FC: ()  => {,,,
   Book Your Demo
               </h2>
               <p className="text-gray-600">,";,"
-=======
       <section className= "py-20 bg-gray-50">
         <div className= "max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className= "bg-white rounded-lg shadow-lg p-8">
@@ -219,31 +208,26 @@ const Demo: React.FC: ()  => {,,,
   Book Your Demo
               </h2>
               <p className= "text-gray-600">,";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Fill out the form below and we'll contact you to schedule your personalized demo';';
               </p>
             </div>
 
-<<<<<<< HEAD
             <form onSubmit={handleSubmit} className="space-y-6"
               {/* Personal Information */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6"
                 <div >
                   <label htmlFor: "firstName" className="block text-sm font-medium text-gray-700 mb-2">,";,"
-=======
             <form onSubmit: {handleSubmit} className= "space-y-6">
               {/* Personal Information */}
               <div className= "grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div >
                   <label htmlFor: "firstName" className= "block text-sm font-medium text-gray-700 mb-2">,";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   First Name *
                   </label>
                   <input type="text",";,"
   id="firstName",";,"
   name: "firstName",";,"
   required
-<<<<<<< HEAD
                     value={formData.firstName}
                     onChange={handleInputChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent","
@@ -251,7 +235,6 @@ const Demo: React.FC: ()  => {,,,
                 </div>
                 <div >
                   <label htmlFor: "lastName" className="block text-sm font-medium text-gray-700 mb-2">,";,"
-=======
                     value: {formData.firstName}
                     onChange: {handleInputChange}
                     className= "w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent","
@@ -259,42 +242,34 @@ const Demo: React.FC: ()  => {,,,
                 </div>
                 <div >
                   <label htmlFor: "lastName" className= "block text-sm font-medium text-gray-700 mb-2">,";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Last Name *
                   </label>
                   <input type="text",";,"
   id="lastName",";,"
   name: "lastName",";,"
   required
-<<<<<<< HEAD
                     value={formData.lastName}
                     onChange={handleInputChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent","
-=======
                     value: {formData.lastName}
                     onChange: {handleInputChange}
                     className= "w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                   />
                 </div>
               </div>
 
-<<<<<<< HEAD
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6"
                 <div >
                   <label htmlFor: "email" className="block text-sm font-medium text-gray-700 mb-2">,";,"
-=======
               <div className= "grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div >
                   <label htmlFor: "email" className= "block text-sm font-medium text-gray-700 mb-2">,";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Email Address *
                   </label>
                   <input type="email",";,"
   id="email",";,"
   name: "email",";,"
   required
-<<<<<<< HEAD
                     value={formData.email}
                     onChange={handleInputChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent","
@@ -302,7 +277,6 @@ const Demo: React.FC: ()  => {,,,
                 </div>
                 <div >
                   <label htmlFor: "phone" className="block text-sm font-medium text-gray-700 mb-2">,";,"
-=======
                     value: {formData.email}
                     onChange: {handleInputChange}
                     className= "w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent","
@@ -310,42 +284,34 @@ const Demo: React.FC: ()  => {,,,
                 </div>
                 <div >
                   <label htmlFor: "phone" className= "block text-sm font-medium text-gray-700 mb-2">,";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Phone Number
                   </label>
                   <input type="tel",";,"
   id="phone",";,"
   name: "phone",";,"
-<<<<<<< HEAD
   value={formData.phone}
                     onChange={handleInputChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent","
-=======
   value: {formData.phone}
                     onChange: {handleInputChange}
                     className= "w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                   />
                 </div>
               </div>
 
               {/* Company Information */}
-<<<<<<< HEAD
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6"
                 <div >
                   <label htmlFor: "company" className="block text-sm font-medium text-gray-700 mb-2">,";,"
-=======
               <div className= "grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div >
                   <label htmlFor: "company" className= "block text-sm font-medium text-gray-700 mb-2">,";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Company Name *
                   </label>
                   <input type="text",";,"
   id="company",";,"
   name: "company",";,"
   required
-<<<<<<< HEAD
                     value={formData.company}
                     onChange={handleInputChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent","
@@ -353,7 +319,6 @@ const Demo: React.FC: ()  => {,,,
                 </div>
                 <div >
                   <label htmlFor: "jobTitle" className="block text-sm font-medium text-gray-700 mb-2">,";,"
-=======
                     value: {formData.company}
                     onChange: {handleInputChange}
                     className= "w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent","
@@ -361,49 +326,39 @@ const Demo: React.FC: ()  => {,,,
                 </div>
                 <div >
                   <label htmlFor: "jobTitle" className= "block text-sm font-medium text-gray-700 mb-2">,";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Job Title *
                   </label>
                   <input type="text",";,"
   id="jobTitle",";,"
   name: "jobTitle",";,"
   required
-<<<<<<< HEAD
                     value={formData.jobTitle}
                     onChange={handleInputChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent","
-=======
                     value: {formData.jobTitle}
                     onChange: {handleInputChange}
                     className= "w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                   />
                 </div>
               </div>
 
-<<<<<<< HEAD
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6"
                 <div >
                   <label htmlFor: "companySize" className="block text-sm font-medium text-gray-700 mb-2">,";,"
-=======
               <div className= "grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div >
                   <label htmlFor: "companySize" className= "block text-sm font-medium text-gray-700 mb-2">,";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Company Size *
                   </label>
                   <select id="companySize",";,"
   name: "companySize",";,"
   required
-<<<<<<< HEAD
                     value={formData.companySize}
                     onChange={handleInputChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent","
-=======
                     value: {formData.companySize}
                     onChange: {handleInputChange}
                     className= "w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                   >
                     <option value: ">Select company size</option>";,"
                     {companySizes.map((size)  => (
@@ -412,25 +367,19 @@ const Demo: React.FC: ()  => {,,,
                   </select>
                 </div>
                 <div >
-<<<<<<< HEAD
                   <label htmlFor: "useCase" className="block text-sm font-medium text-gray-700 mb-2">,";,"
-=======
                   <label htmlFor: "useCase" className= "block text-sm font-medium text-gray-700 mb-2">,";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Primary Use Case *
                   </label>
                   <select id="useCase",";,"
   name: "useCase",";,"
   required
-<<<<<<< HEAD
                     value={formData.useCase}
                     onChange={handleInputChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent","
-=======
                     value: {formData.useCase}
                     onChange: {handleInputChange}
                     className= "w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                   >
                     <option value: ">Select use case</option>";,"
                     {useCases.map((useCase)  => (
@@ -441,21 +390,17 @@ const Demo: React.FC: ()  => {,,,
               </div>
 
               {/* Scheduling */}
-<<<<<<< HEAD
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6"
                 <div >
                   <label htmlFor: "preferredDate" className="block text-sm font-medium text-gray-700 mb-2">,";,"
-=======
               <div className= "grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div >
                   <label htmlFor: "preferredDate" className= "block text-sm font-medium text-gray-700 mb-2">,";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Preferred Date
                   </label>
                   <input type="date",";,"
   id="preferredDate",";,"
   name: "preferredDate",";,"
-<<<<<<< HEAD
   value={formData.preferredDate}
                     onChange={handleInputChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent","
@@ -463,7 +408,6 @@ const Demo: React.FC: ()  => {,,,
                 </div>
                 <div >
                   <label htmlFor: "preferredTime" className="block text-sm font-medium text-gray-700 mb-2">,";,"
-=======
   value: {formData.preferredDate}
                     onChange: {handleInputChange}
                     className= "w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent","
@@ -471,20 +415,16 @@ const Demo: React.FC: ()  => {,,,
                 </div>
                 <div >
                   <label htmlFor: "preferredTime" className= "block text-sm font-medium text-gray-700 mb-2">,";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Preferred Time
                   </label>
                   <select id="preferredTime",";,"
   name: "preferredTime",";,"
-<<<<<<< HEAD
   value={formData.preferredTime}
                     onChange={handleInputChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent","
-=======
   value: {formData.preferredTime}
                     onChange: {handleInputChange}
                     className= "w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                   >
                     <option value: ">Select time</option>";,"
                     {timeSlots.map((time)  => (
@@ -493,24 +433,18 @@ const Demo: React.FC: ()  => {,,,
                   </select>
                 </div>
                 <div >
-<<<<<<< HEAD
                   <label htmlFor: "timeZone" className="block text-sm font-medium text-gray-700 mb-2">,";,"
-=======
                   <label htmlFor: "timeZone" className= "block text-sm font-medium text-gray-700 mb-2">,";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Time Zone
                   </label>
                   <select id="timeZone",";,"
   name: "timeZone",";,"
-<<<<<<< HEAD
   value={formData.timeZone}
                     onChange={handleInputChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent","
-=======
   value: {formData.timeZone}
                     onChange: {handleInputChange}
                     className= "w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                   >
                     <option value: ">Select timezone</option>";,"
                     <option value: "EST">Eastern Time (EST)</option>";,"
@@ -523,17 +457,13 @@ const Demo: React.FC: ()  => {,,,
               </div>
 
               <div >
-<<<<<<< HEAD
                 <label htmlFor: "message" className="block text-sm font-medium text-gray-700 mb-2">,";,"
-=======
                 <label htmlFor: "message" className= "block text-sm font-medium text-gray-700 mb-2">,";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Additional Information
                 </label>
                 <textarea id="message",";,"
   name: "message",";,"
   rows: {4}
-<<<<<<< HEAD
                   value={formData.message}
                   onChange={handleInputChange}
                   placeholder="Tell us about your specific needs, challenges, or questions...","
@@ -548,7 +478,6 @@ const Demo: React.FC: ()  => {,,,
                   Schedule My Demo
                 </button>
                 <p className="text-sm text-gray-500 mt-4"
-=======
                   value: {formData.message}
                   onChange: {handleInputChange}
                   placeholder: "Tell us about your specific needs, challenges, or questions...","
@@ -563,7 +492,6 @@ const Demo: React.FC: ()  => {,,,
                   Schedule My Demo
                 </button>
                 <p className= "text-sm text-gray-500 mt-4">
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                   * Required fields. We'll contact you within 24 hours to confirm your demo time.';';
                 </p>
               </div>
@@ -573,7 +501,6 @@ const Demo: React.FC: ()  => {,,,
       </section>
 
       {/* Testimonials */}
-<<<<<<< HEAD
       <section className="py-20 bg-white"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
           <div className="text-center mb-16"
@@ -581,7 +508,6 @@ const Demo: React.FC: ()  => {,,,
   What Our Clients Say
             </h2>
             <p className="text-xl text-gray-600">,";,"
-=======
       <section className= "py-20 bg-white">
         <div className= "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className= "text-center mb-16">
@@ -589,12 +515,10 @@ const Demo: React.FC: ()  => {,,,
   What Our Clients Say
             </h2>
             <p className= "text-xl text-gray-600">,";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   See what happens when you schedule a demo
             </p>
           </div>
           
-<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8"
             {testimonials.map((testimonial, index) => (
               <div key={index} className="bg-gray-50 rounded-lg p-8"
@@ -607,7 +531,6 @@ const Demo: React.FC: ()  => {,,,
                 <div >
                   <p className="font-semibold text-gray-900">{testimonial.name}</p>";"
                   <p className="text-gray-600">{testimonial.role}, {testimonial.company}</p>";"
-=======
           <div className= "grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <div key: {index} className= "bg-gray-50 rounded-lg p-8">
@@ -620,7 +543,6 @@ const Demo: React.FC: ()  => {,,,
                 <div >
                   <p className= "font-semibold text-gray-900">{testimonial.name}</p>";"
                   <p className= "text-gray-600">{testimonial.role}, {testimonial.company}</p>";"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                 </div>
               </div>
             ))}
@@ -629,7 +551,6 @@ const Demo: React.FC: ()  => {,,,
       </section>
 
       {/* CTA Section */}
-<<<<<<< HEAD
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">,";,"
@@ -641,7 +562,6 @@ const Demo: React.FC: ()  => {,,,
           <div className="flex flex-col sm:flex-row gap-4 justify-center"
             <Link to: "/contact",";,"
   className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors","
-=======
       <section className= "py-20 bg-gradient-to-r from-blue-600 to-purple-600">
         <div className= "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className= "text-3xl md:text-4xl font-bold text-white mb-4">,";,"
@@ -653,16 +573,12 @@ const Demo: React.FC: ()  => {,,,
           <div className= "flex flex-col sm:flex-row gap-4 justify-center">
             <Link to: "/contact",";,"
   className= "bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
             >
               Contact Us Now
             </Link>
             <Link to: "/case-studies",";,"
-<<<<<<< HEAD
   className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors","
-=======
   className= "border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
             >
               View Success Stories
             </Link>
@@ -737,7 +653,6 @@ const Demo: React.FC: ()  => {,,,
           <meta name: "description" content ="Thank you for requesting a demo. We'll contact you soon to schedule your personalized demonstration." />";,"
         </Helmet>
 
-<<<<<<< HEAD
         <div className="min-h-screen bg-gray-50 flex items-center justify-center"
           <div className="max-w-md mx-auto text-center"
             <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6"
@@ -752,7 +667,6 @@ const Demo: React.FC: ()  => {,,,
             <div className="space-y-4"
               <Link to: "/",";,"
   className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors","
-=======
         <div className= "min-h-screen bg-gray-50 flex items-center justify-center">
           <div className= "max-w-md mx-auto text-center">
             <div className= "w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -767,16 +681,12 @@ const Demo: React.FC: ()  => {,,,
             <div className= "space-y-4">
               <Link to: "/",";,"
   className= "inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
               >
                 Return to Home
               </Link>
               <Link to: "/contact",";,"
-<<<<<<< HEAD
   className="block text-blue-600 hover:text-blue-700 font-semibold","
-=======
   className= "block text-blue-600 hover:text-blue-700 font-semibold","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
               >
                 Contact Us Directly
               </Link>
@@ -796,7 +706,6 @@ const Demo: React.FC: ()  => {,,,
         <link rel: "canonical" href ="https://ziontechgroup.com/demo" />";,"
       </Helmet>
 
-<<<<<<< HEAD
       <div className="min-h-screen bg-gray-50"
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20"
@@ -819,7 +728,6 @@ const Demo: React.FC: ()  => {,,,
                 </div>
                 <div className="flex items-center"
                   <Star className="h-4 w-4 mr-2" />,";,"
-=======
       <div className= "min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className= "bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
@@ -842,7 +750,6 @@ const Demo: React.FC: ()  => {,,,
                 </div>
                 <div className= "flex items-center">
                   <Star className= "h-4 w-4 mr-2" />,";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Customized demo
                 </div>
               </div>
@@ -851,7 +758,6 @@ const Demo: React.FC: ()  => {,,,
         </section>
 
         {/* Demo Form */}
-<<<<<<< HEAD
         <section className="py-20 px-4 sm:px-6 lg:px-8"
           <div className="max-w-4xl mx-auto"
             <div className="bg-white rounded-lg shadow-lg p-8"
@@ -860,7 +766,6 @@ const Demo: React.FC: ()  => {,,,
   Schedule Your Demo
                 </h2>
                 <p className="text-gray-600">,";,"
-=======
         <section className= "py-20 px-4 sm:px-6 lg:px-8">
           <div className= "max-w-4xl mx-auto">
             <div className= "bg-white rounded-lg shadow-lg p-8">
@@ -869,24 +774,20 @@ const Demo: React.FC: ()  => {,,,
   Schedule Your Demo
                 </h2>
                 <p className= "text-gray-600">,";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Fill out the form below and we'll contact you to schedule your personalized demonstration.';';
                 </p>
               </div>
 
-<<<<<<< HEAD
               <form onSubmit={handleSubmit} className="space-y-6"
                 {/* Personal Information */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6"
                   <div >
                     <label htmlFor: "firstName" className="block text-sm font-medium text-gray-700 mb-1">,";,"
-=======
               <form onSubmit: {handleSubmit} className= "space-y-6">
                 {/* Personal Information */}
                 <div className= "grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div >
                     <label htmlFor: "firstName" className= "block text-sm font-medium text-gray-700 mb-1">,";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   First Name *
                     </label>
                     <input type="text",";,"
@@ -895,19 +796,16 @@ const Demo: React.FC: ()  => {,,,
   value={formData.firstName}
                       onChange={handleInputChange}
                       required
-<<<<<<< HEAD
                       className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500","
                     />
                   </div>
                   <div >
                     <label htmlFor: "lastName" className="block text-sm font-medium text-gray-700 mb-1">,";,"
-=======
                       className= "w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500","
                     />
                   </div>
                   <div >
                     <label htmlFor: "lastName" className= "block text-sm font-medium text-gray-700 mb-1">,";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Last Name *
                     </label>
                     <input type="text",";,"
@@ -916,24 +814,18 @@ const Demo: React.FC: ()  => {,,,
   value={formData.lastName}
                       onChange={handleInputChange}
                       required
-<<<<<<< HEAD
                       className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500","
-=======
                       className= "w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                     />
                   </div>
                 </div>
 
-<<<<<<< HEAD
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6"
                   <div >
                     <label htmlFor: "email" className="block text-sm font-medium text-gray-700 mb-1">,";,"
-=======
                 <div className= "grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div >
                     <label htmlFor: "email" className= "block text-sm font-medium text-gray-700 mb-1">,";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Email Address *
                     </label>
                     <input type="email",";,"
@@ -942,43 +834,34 @@ const Demo: React.FC: ()  => {,,,
   value={formData.email}
                       onChange={handleInputChange}
                       required
-<<<<<<< HEAD
                       className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500","
                     />
                   </div>
                   <div >
                     <label htmlFor: "phone" className="block text-sm font-medium text-gray-700 mb-1">,";,"
-=======
                       className= "w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500","
                     />
                   </div>
                   <div >
                     <label htmlFor: "phone" className= "block text-sm font-medium text-gray-700 mb-1">,";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Phone Number
                     </label>
                     <input type="tel",";,"
   id="phone",";,"
   name: "phone",";,"
-<<<<<<< HEAD
   value={formData.phone}
                       onChange={handleInputChange}
                       className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500","
-=======
   value: {formData.phone}
                       onChange: {handleInputChange}
                       className= "w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                     />
                   </div>
                 </div>
 
                 <div >
-<<<<<<< HEAD
                   <label htmlFor: "company" className="block text-sm font-medium text-gray-700 mb-1">,";,"
-=======
                   <label htmlFor: "company" className= "block text-sm font-medium text-gray-700 mb-1">,";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Company *
                   </label>
                   <input type="text",";,"
@@ -987,33 +870,24 @@ const Demo: React.FC: ()  => {,,,
   value={formData.company}
                     onChange={handleInputChange}
                     required
-<<<<<<< HEAD
                     className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500","
-=======
                     className= "w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                   />
                 </div>
 
                 <div >
-<<<<<<< HEAD
                   <label htmlFor: "useCase" className="block text-sm font-medium text-gray-700 mb-1">,";,"
-=======
                   <label htmlFor: "useCase" className= "block text-sm font-medium text-gray-700 mb-1">,";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Primary Use Case
                   </label>
                   <select id="useCase",";,"
   name: "useCase",";,"
-<<<<<<< HEAD
   value={formData.useCase}
                     onChange={handleInputChange}
                     className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500","
-=======
   value: {formData.useCase}
                     onChange: {handleInputChange}
                     className= "w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                   >
                     <option value: ">Select a use case</option>";,"
                     {useCases.map((useCase)  => (
@@ -1024,28 +898,22 @@ const Demo: React.FC: ()  => {,,,
                   </select>
                 </div>
 
-<<<<<<< HEAD
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6"
                   <div >
                     <label htmlFor: "preferredTime" className="block text-sm font-medium text-gray-700 mb-1">,";,"
-=======
                 <div className= "grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div >
                     <label htmlFor: "preferredTime" className= "block text-sm font-medium text-gray-700 mb-1">,";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Preferred Time Slot
                     </label>
                     <select id="preferredTime",";,"
   name: "preferredTime",";,"
-<<<<<<< HEAD
   value={formData.preferredTime}
                       onChange={handleInputChange}
                       className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500","
-=======
   value: {formData.preferredTime}
                       onChange: {handleInputChange}
                       className= "w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                     >
                       <option value: ">Select a time</option>";,"
                       {timeSlots.map((time)  => (
@@ -1056,24 +924,18 @@ const Demo: React.FC: ()  => {,,,
                     </select>
                   </div>
                   <div >
-<<<<<<< HEAD
                     <label htmlFor: "timeZone" className="block text-sm font-medium text-gray-700 mb-1">,";,"
-=======
                     <label htmlFor: "timeZone" className= "block text-sm font-medium text-gray-700 mb-1">,";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Time Zone
                     </label>
                     <select id="timeZone",";,"
   name: "timeZone",";,"
-<<<<<<< HEAD
   value={formData.timeZone}
                       onChange={handleInputChange}
                       className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500","
-=======
   value: {formData.timeZone}
                       onChange: {handleInputChange}
                       className= "w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                     >
                       <option value: ">Select time zone</option>";,"
                       <option value: "EST">Eastern Time (EST)</option>";,"
@@ -1089,11 +951,8 @@ const Demo: React.FC: ()  => {,,,
                 </div>
 
                 <div >
-<<<<<<< HEAD
                   <label htmlFor: "message" className="block text-sm font-medium text-gray-700 mb-1">,";,"
-=======
                   <label htmlFor: "message" className= "block text-sm font-medium text-gray-700 mb-1">,";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Additional Information
                   </label>
                   <textarea id="message",";,"
@@ -1101,7 +960,6 @@ const Demo: React.FC: ()  => {,,,
   value={formData.message}
                     onChange={handleInputChange}
                     rows: {4}
-<<<<<<< HEAD
                     placeholder="Tell us about your specific needs, challenges, or questions...","
                     className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500","
                   />
@@ -1112,7 +970,6 @@ const Demo: React.FC: ()  => {,,,
   className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors","
                   >
                     <Play className="mr-2 h-5 w-5" />,";,"
-=======
                     placeholder: "Tell us about your specific needs, challenges, or questions...","
                     className= "w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500","
                   />
@@ -1123,7 +980,6 @@ const Demo: React.FC: ()  => {,,,
   className= "inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors","
                   >
                     <Play className= "mr-2 h-5 w-5" />,";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Request Demo
                   </button>
                 </div>
@@ -1133,7 +989,6 @@ const Demo: React.FC: ()  => {,,,
         </section>
 
         {/* Benefits Section */}
-<<<<<<< HEAD
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white"
           <div className="max-w-7xl mx-auto"
             <div className="text-center mb-16"
@@ -1141,7 +996,6 @@ const Demo: React.FC: ()  => {,,,
   Why Schedule a Demo?
               </h2>
               <p className="text-xl text-gray-600">,";,"
-=======
         <section className= "py-20 px-4 sm:px-6 lg:px-8 bg-white">
           <div className= "max-w-7xl mx-auto">
             <div className= "text-center mb-16">
@@ -1149,12 +1003,10 @@ const Demo: React.FC: ()  => {,,,
   Why Schedule a Demo?
               </h2>
               <p className= "text-xl text-gray-600">,";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   See firsthand how our solutions can transform your business
               </p>
             </div>
 
-<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8"
               <div className="text-center"
                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4"
@@ -1164,7 +1016,6 @@ const Demo: React.FC: ()  => {,,,
   Personalized Experience
                 </h3>
                 <p className="text-gray-600">,";,"
-=======
             <div className= "grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className= "text-center">
                 <div className= "w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -1174,12 +1025,10 @@ const Demo: React.FC: ()  => {,,,
   Personalized Experience
                 </h3>
                 <p className= "text-gray-600">,";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Our experts tailor the demonstration to your specific industry and use cases.
                 </p>
               </div>
 
-<<<<<<< HEAD
               <div className="text-center"
                 <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4"
                   <CheckCircle className="h-8 w-8 text-green-600" />";,"
@@ -1188,7 +1037,6 @@ const Demo: React.FC: ()  => {,,,
   Real-World Examples
                 </h3>
                 <p className="text-gray-600">,";,"
-=======
               <div className= "text-center">
                 <div className= "w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <CheckCircle className= "h-8 w-8 text-green-600" />";,"
@@ -1197,12 +1045,10 @@ const Demo: React.FC: ()  => {,,,
   Real-World Examples
                 </h3>
                 <p className= "text-gray-600">,";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   See our solutions in action with real business scenarios and case studies.
                 </p>
               </div>
 
-<<<<<<< HEAD
               <div className="text-center"
                 <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4"
                   <Mail className="h-8 w-8 text-purple-600" />";,"
@@ -1211,7 +1057,6 @@ const Demo: React.FC: ()  => {,,,
   Expert Q&A
                 </h3>
                 <p className="text-gray-600">,";,"
-=======
               <div className= "text-center">
                 <div className= "w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Mail className= "h-8 w-8 text-purple-600" />";,"
@@ -1220,7 +1065,6 @@ const Demo: React.FC: ()  => {,,,
   Expert Q&A
                 </h3>
                 <p className= "text-gray-600">,";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Get answers to your specific questions from our technical experts.
                 </p>
               </div>

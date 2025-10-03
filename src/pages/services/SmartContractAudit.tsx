@@ -332,7 +332,6 @@ const SmartContractAudit: React.FC: ()  => {,,,
 
       <Header />
       
-<<<<<<< HEAD
       <main className="min-h-screen bg-white">","
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-red-900 via-orange-800 to-yellow-900 text-white py-20"
@@ -370,7 +369,6 @@ const SmartContractAudit: React.FC: ()  => {,,,
                   View Pricing
                   <ArrowRight className="w-5 h-5 ml-2/>";,"
                   <ArrowRight className="w-5 h-5 ml-2" />","
-=======
       <main className= "min-h-screen bg-white">","
         {/* Hero Section */}
         <section className= "bg-gradient-to-br from-red-900 via-orange-800 to-yellow-900 text-white py-20">
@@ -408,7 +406,6 @@ const SmartContractAudit: React.FC: ()  => {,,,
                   View Pricing
                   <ArrowRight className= "w-5 h-5 ml-2/>";,"
                   <ArrowRight className= "w-5 h-5 ml-2" />","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                 </a>
               </div>
             </div>
@@ -416,7 +413,6 @@ const SmartContractAudit: React.FC: ()  => {,,,
         </section>
 
         {/* Key Benefits */}
-<<<<<<< HEAD
         <section className="py-16 bg-gray-50"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
             <div className="text-center mb-12"
@@ -428,7 +424,6 @@ const SmartContractAudit: React.FC: ()  => {,,,
   Why Choose Our Smart Contract Auditing Services?
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">",";,"
-=======
         <section className= "py-16 bg-gray-50">
           <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
             <div className= "text-center mb-12">
@@ -440,12 +435,10 @@ const SmartContractAudit: React.FC: ()  => {,,,
   Why Choose Our Smart Contract Auditing Services?
               </h2>
               <p className= "text-xl text-gray-600 max-w-3xl mx-auto"">"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Protect your blockchain project with industry-leading security expertise and comprehensive analysis.
               </p>
             </div>
 
-<<<<<<< HEAD
             <div className="grid md: grid-cols-4 gap-8">","
               <div className="text-center"
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-red-100 rounded-full mb-4"
@@ -487,7 +480,6 @@ const SmartContractAudit: React.FC: ()  => {,,,
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">100% Compliance</h3>","
                 <p className="text-gray-600">Meet all regulatory standards</p>","
-=======
             <div className= "grid md: grid-cols-4 gap-8">","
               <div className= "text-center">
                 <div className= "inline-flex items-center justify-center w-16 h-16 bg-red-100 rounded-full mb-4">
@@ -529,14 +521,12 @@ const SmartContractAudit: React.FC: ()  => {,,,
                 </div>
                 <h3 className= "text-xl font-bold text-gray-900 mb-2">100% Compliance</h3>","
                 <p className= "text-gray-600">Meet all regulatory standards</p>","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
               </div>
             </div>
           </div>
         </section>
 
         {/* Audit Types */}
-<<<<<<< HEAD
         <section className="py-20"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
             <div className="text-center mb-16"
@@ -548,7 +538,6 @@ const SmartContractAudit: React.FC: ()  => {,,,
   Specialized Audit Services
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">",";,"
-=======
         <section className= "py-20">
           <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
             <div className= "text-center mb-16">
@@ -560,12 +549,10 @@ const SmartContractAudit: React.FC: ()  => {,,,
   Specialized Audit Services
               </h2>
               <p className= "text-xl text-gray-600 max-w-3xl mx-auto"">"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Expert auditing for all types of blockchain projects and smart contract implementations.
               </p>
             </div>
 
-<<<<<<< HEAD
             <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">","
               {auditTypes.map((audit, index) => {
                 const Icon: audit.icon;,,,
@@ -600,7 +587,6 @@ const SmartContractAudit: React.FC: ()  => {,,,
                           <li key={vulnIndex} className="flex items-center text-sm">","
                             <AlertTriangle className="w-4 h-4 text-orange-500 mr-2 flex-shrink-0" />","
                             <span className="text-gray-700">{vuln}</span>"
-=======
             <div className= "grid md: grid-cols-2 lg:grid-cols-4 gap-8">","
               {auditTypes.map((audit, index) => {
                 const Icon: audit.icon;,,,
@@ -635,7 +621,6 @@ const SmartContractAudit: React.FC: ()  => {,,,
                           <li key: {vulnIndex} className= "flex items-center text-sm">","
                             <AlertTriangle className= "w-4 h-4 text-orange-500 mr-2 flex-shrink-0" />","
                             <span className= "text-gray-700">{vuln}</span>"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                           </li>
                         ))}
                       </ul>
@@ -648,7 +633,6 @@ const SmartContractAudit: React.FC: ()  => {,,,
         </section>
 
         {/* Process */}
-<<<<<<< HEAD
         <section className="py-20 bg-gray-50"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
             <div className="text-center mb-16"
@@ -660,7 +644,6 @@ const SmartContractAudit: React.FC: ()  => {,,,
   Our Audit Process
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">",";,"
-=======
         <section className= "py-20 bg-gray-50">
           <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
             <div className= "text-center mb-16">
@@ -672,12 +655,10 @@ const SmartContractAudit: React.FC: ()  => {,,,
   Our Audit Process
               </h2>
               <p className= "text-xl text-gray-600 max-w-3xl mx-auto"">"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Systematic approach ensuring comprehensive security analysis and detailed reporting.
               </p>
             </div>
 
-<<<<<<< HEAD
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">","
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">","
               {process.map((step, index) => (
@@ -687,7 +668,6 @@ const SmartContractAudit: React.FC: ()  => {,,,
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">{step.title}</h3>"
                   <p className="text-gray-600">{step.description}</p>"
-=======
             <div className= "grid md: grid-cols-2 lg:grid-cols-3 gap-8">","
             <div className= "grid md: grid-cols-2 lg:grid-cols-3 gap-8">","
               {process.map((step, index) => (
@@ -697,7 +677,6 @@ const SmartContractAudit: React.FC: ()  => {,,,
                   </div>
                   <h3 className= "text-xl font-bold text-gray-900 mb-3">{step.title}</h3>"
                   <p className= "text-gray-600">{step.description}</p>"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                 </div>
               ))}
             </div>
@@ -705,7 +684,6 @@ const SmartContractAudit: React.FC: ()  => {,,,
         </section>
 
         {/* Features */}
-<<<<<<< HEAD
         <section className="py-20"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
             <div className="text-center mb-16"
@@ -717,7 +695,6 @@ const SmartContractAudit: React.FC: ()  => {,,,
   Advanced Security Analysis
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">",";,"
-=======
         <section className= "py-20">
           <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
             <div className= "text-center mb-16">
@@ -729,12 +706,10 @@ const SmartContractAudit: React.FC: ()  => {,,,
   Advanced Security Analysis
               </h2>
               <p className= "text-xl text-gray-600 max-w-3xl mx-auto"">"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Comprehensive security testing using cutting-edge tools and expert manual review.
               </p>
             </div>
 
-<<<<<<< HEAD
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">","
               {features.map((feature, index) => {
                 const Icon: feature.icon;,,,
@@ -759,7 +734,6 @@ const SmartContractAudit: React.FC: ()  => {,,,
                     <p className="text-gray-600 mb-4">{feature.description}</p>"
                     <div className="inline-flex items-center text-green-600 font-semibold text-sm">","
                       <CheckCircle className="w-4 h-4 mr-1" />","
-=======
             <div className= "grid md: grid-cols-2 lg:grid-cols-3 gap-8">","
               {features.map((feature, index) => {
                 const Icon: feature.icon;,,,
@@ -784,7 +758,6 @@ const SmartContractAudit: React.FC: ()  => {,,,
                     <p className= "text-gray-600 mb-4">{feature.description}</p>"
                     <div className= "inline-flex items-center text-green-600 font-semibold text-sm">","
                       <CheckCircle className= "w-4 h-4 mr-1" />","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                       {feature.benefit}
                     </div>
                   </div>
@@ -795,7 +768,6 @@ const SmartContractAudit: React.FC: ()  => {,,,
         </section>
 
         {/* Pricing */}
-<<<<<<< HEAD
         <section id="pricing" className="py-20 bg-gray-50"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
             <div className="text-center mb-16"
@@ -807,7 +779,6 @@ const SmartContractAudit: React.FC: ()  => {,,,
   Transparent Pricing for Every Project Size
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">",";,"
-=======
         <section id: "pricing" className="py-20 bg-gray-50">
           <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
             <div className= "text-center mb-16">
@@ -819,12 +790,10 @@ const SmartContractAudit: React.FC: ()  => {,,,
   Transparent Pricing for Every Project Size
               </h2>
               <p className= "text-xl text-gray-600 max-w-3xl mx-auto"">"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Choose the audit package that fits your smart contract complexity and security requirements.
               </p>
             </div>
 
-<<<<<<< HEAD
             <div className="grid md: grid-cols-3 gap-8">","
             <div className="grid md: grid-cols-3 gap-8">","
               {pricing.map((plan, index) => (
@@ -832,7 +801,6 @@ const SmartContractAudit: React.FC: ()  => {,,,
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">","
                       <span className="bg-red-500 text-white px-4 py-1 rounded-full text-sm font-semibold">",";,"
-=======
             <div className= "grid md: grid-cols-3 gap-8">","
             <div className= "grid md: grid-cols-3 gap-8">","
               {pricing.map((plan, index) => (
@@ -840,12 +808,10 @@ const SmartContractAudit: React.FC: ()  => {,,,
                   {plan.popular && (
                     <div className= "absolute -top-4 left-1/2 transform -translate-x-1/2">","
                       <span className= "bg-red-500 text-white px-4 py-1 rounded-full text-sm font-semibold"">"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Most Popular
                       </span>
                     </div>
                   )}
-<<<<<<< HEAD
                   <div className="text-center mb-8">","
                     <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>"
                     <div className="flex items-center justify-center mb-2">","
@@ -867,7 +833,6 @@ const SmartContractAudit: React.FC: ()  => {,,,
                   </ul>
                   <a href="/contact",";,"
   className: {,,
-=======
                   <div className= "text-center mb-8">","
                     <h3 className= "text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>"
                     <div className= "flex items-center justify-center mb-2">","
@@ -889,7 +854,6 @@ const SmartContractAudit: React.FC: ()  => {,,,
                   </ul>
                   <a href: "/contact",";,"
   className= {,,
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
 `w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${`
 plan.popular
 ? 'bg-red-600 text-white hover: bg-red-700',';,
@@ -903,7 +867,6 @@ plan.popular
               ))}
             </div>
 
-<<<<<<< HEAD
             <div className="text-center mt-12">","
               <p className="text-gray-600 mb-4">Need a custom audit solution?</p>","
               <a href="/contact",";,"
@@ -912,7 +875,6 @@ plan.popular
                 Contact our Security Team
                 <ArrowRight className="w-4 h-4 ml-1/>";,"
                 <ArrowRight className="w-4 h-4 ml-1" />","
-=======
             <div className= "text-center mt-12">","
               <p className= "text-gray-600 mb-4">Need a custom audit solution?</p>","
               <a href: "/contact",";,"
@@ -921,14 +883,12 @@ plan.popular
                 Contact our Security Team
                 <ArrowRight className= "w-4 h-4 ml-1/>";,"
                 <ArrowRight className= "w-4 h-4 ml-1" />","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
               </a>
             </div>
           </div>
         </section>
 
         {/* Testimonials */}
-<<<<<<< HEAD
         <section className="py-20"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
             <div className="text-center mb-16"
@@ -940,7 +900,6 @@ plan.popular
   What Our Clients Say
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">",";,"
-=======
         <section className= "py-20">
           <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
             <div className= "text-center mb-16">
@@ -952,12 +911,10 @@ plan.popular
   What Our Clients Say
               </h2>
               <p className= "text-xl text-gray-600 max-w-3xl mx-auto"">"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Join dozens of successful blockchain projects that trust our security expertise.
               </p>
             </div>
 
-<<<<<<< HEAD
             <div className="grid md: grid-cols-3 gap-8">","
             <div className="grid md: grid-cols-3 gap-8">","
               {testimonials.map((testimonial, index) => (
@@ -975,7 +932,6 @@ plan.popular
                     <div className="font-semibold text-gray-900">{testimonial.name}</div>"
                     <div className="text-gray-600 text-sm">{testimonial.role}</div>"
                     <div className="text-red-600 text-sm font-medium">{testimonial.company}</div>"
-=======
             <div className= "grid md: grid-cols-3 gap-8">","
             <div className= "grid md: grid-cols-3 gap-8">","
               {testimonials.map((testimonial, index) => (
@@ -993,7 +949,6 @@ plan.popular
                     <div className= "font-semibold text-gray-900">{testimonial.name}</div>"
                     <div className= "text-gray-600 text-sm">{testimonial.role}</div>"
                     <div className= "text-red-600 text-sm font-medium">{testimonial.company}</div>"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                   </div>
                 </div>
               ))}
@@ -1002,7 +957,6 @@ plan.popular
         </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
         <section className="py-20 bg-gradient-to-br from-red-900 via-orange-800 to-yellow-900 text-white"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">","
             <h2 className="text-4xl font-bold mb-6"
@@ -1029,7 +983,6 @@ plan.popular
                 View Audit Reports
                 <ArrowRight className="w-5 h-5 ml-2/>";,"
                 <ArrowRight className="w-5 h-5 ml-2" />","
-=======
         <section className= "py-20 bg-gradient-to-br from-red-900 via-orange-800 to-yellow-900 text-white">
           <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">","
             <h2 className= "text-4xl font-bold mb-6">
@@ -1056,7 +1009,6 @@ plan.popular
                 View Audit Reports
                 <ArrowRight className= "w-5 h-5 ml-2/>";,"
                 <ArrowRight className= "w-5 h-5 ml-2" />","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
               </a>
             </div>
           </div>

@@ -49,28 +49,24 @@ const ServicesPage: React.FC: ()  => {,,,
         <meta name: "description" content ="Comprehensive AI and technology services from Zion Tech Group. AI services, micro SaaS development, IT infrastructure, and consulting solutions." />";,"
       </Helmet>
       
-<<<<<<< HEAD
       <div className="min-h-screen bg-gray-50"
         {/* Header */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16"
           <div className="container mx-auto px-6 text-center"
             <h1 className="text-4xl md:text-5xl font-bold mb-4">Our Services</h1>";,"
             <p className="text-xl text-blue-100 max-w-3xl mx-auto">,";,"
-=======
       <div className= "min-h-screen bg-gray-50">
         {/* Header */}
         <section className= "bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">
           <div className= "container mx-auto px-6 text-center">
             <h1 className= "text-4xl md:text-5xl font-bold mb-4">Our Services</h1>";,"
             <p className= "text-xl text-blue-100 max-w-3xl mx-auto">,";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Comprehensive technology solutions designed to accelerate your digital transformation and drive business growth.
             </p>
           </div>
         </section>
 
         {/* Services Grid */}
-<<<<<<< HEAD
         <section className="py-20"
           <div className="container mx-auto px-6"
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
@@ -83,7 +79,6 @@ const ServicesPage: React.FC: ()  => {,,,
                     {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm text-gray-700"
                         <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>";,"
-=======
         <section className= "py-20">
           <div className= "container mx-auto px-6">
             <div className= "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -96,18 +91,14 @@ const ServicesPage: React.FC: ()  => {,,,
                     {service.features.map((feature, featureIndex) => (
                       <li key: {featureIndex} className= "flex items-center text-sm text-gray-700">
                         <span className= "w-2 h-2 bg-blue-500 rounded-full mr-3"></span>";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                         {feature}
                       </li>
                     ))}
                   </ul>
                   
                   <Link to: "/contact" ,";,"
-<<<<<<< HEAD
   className="text-blue-600 font-semibold hover:text-blue-800 transition-colors","
-=======
   className= "text-blue-600 font-semibold hover:text-blue-800 transition-colors","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                   >
                     Learn More →
                   </Link>
@@ -118,7 +109,6 @@ const ServicesPage: React.FC: ()  => {,,,
         </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
         <section className="py-20 bg-blue-600 text-white"
           <div className="container mx-auto px-6 text-center"
             <h2 className="text-4xl font-bold mb-4">Ready to Get Started?</h2>";,"
@@ -128,7 +118,6 @@ const ServicesPage: React.FC: ()  => {,,,
             <div className="flex flex-col sm:flex-row gap-4 justify-center"
               <Link to: "/contact" ,";,"
   className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors","
-=======
         <section className= "py-20 bg-blue-600 text-white">
           <div className= "container mx-auto px-6 text-center">
             <h2 className= "text-4xl font-bold mb-4">Ready to Get Started?</h2>";,"
@@ -138,16 +127,12 @@ const ServicesPage: React.FC: ()  => {,,,
             <div className= "flex flex-col sm:flex-row gap-4 justify-center">
               <Link to: "/contact" ,";,"
   className= "bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
               >
                 Contact Us
               </Link>
               <Link to: "/solutions" ,";,"
-<<<<<<< HEAD
   className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors","
-=======
   className= "border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
               >
                 View Solutions
               </Link>

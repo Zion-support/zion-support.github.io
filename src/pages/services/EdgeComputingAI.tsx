@@ -320,7 +320,6 @@ const EdgeComputingAI: React.FC: ()  => {,,,
 
       <Header />
       
-<<<<<<< HEAD
       <main className="min-h-screen bg-white">","
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-teal-900 via-cyan-800 to-blue-900 text-white py-20"
@@ -358,7 +357,6 @@ const EdgeComputingAI: React.FC: ()  => {,,,
                   View Pricing
                   <ArrowRight className="w-5 h-5 ml-2/>";,"
                   <ArrowRight className="w-5 h-5 ml-2" />","
-=======
       <main className= "min-h-screen bg-white">","
         {/* Hero Section */}
         <section className= "bg-gradient-to-br from-teal-900 via-cyan-800 to-blue-900 text-white py-20">
@@ -396,7 +394,6 @@ const EdgeComputingAI: React.FC: ()  => {,,,
                   View Pricing
                   <ArrowRight className= "w-5 h-5 ml-2/>";,"
                   <ArrowRight className= "w-5 h-5 ml-2" />","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                 </a>
               </div>
             </div>
@@ -404,7 +401,6 @@ const EdgeComputingAI: React.FC: ()  => {,,,
         </section>
 
         {/* Key Benefits */}
-<<<<<<< HEAD
         <section className="py-16 bg-gray-50"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
             <div className="text-center mb-12"
@@ -416,7 +412,6 @@ const EdgeComputingAI: React.FC: ()  => {,,,
   Why Choose Edge Computing AI?
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">",";,"
-=======
         <section className= "py-16 bg-gray-50">
           <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
             <div className= "text-center mb-12">
@@ -428,12 +423,10 @@ const EdgeComputingAI: React.FC: ()  => {,,,
   Why Choose Edge Computing AI?
               </h2>
               <p className= "text-xl text-gray-600 max-w-3xl mx-auto"">"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Bring intelligence closer to your data sources for unprecedented speed and reliability.
               </p>
             </div>
 
-<<<<<<< HEAD
             <div className="grid md: grid-cols-4 gap-8">","
               <div className="text-center"
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-teal-100 rounded-full mb-4"
@@ -475,7 +468,6 @@ const EdgeComputingAI: React.FC: ()  => {,,,
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Unlimited Scale</h3>","
                 <p className="text-gray-600">Deploy thousands of edge nodes</p>","
-=======
             <div className= "grid md: grid-cols-4 gap-8">","
               <div className= "text-center">
                 <div className= "inline-flex items-center justify-center w-16 h-16 bg-teal-100 rounded-full mb-4">
@@ -517,14 +509,12 @@ const EdgeComputingAI: React.FC: ()  => {,,,
                 </div>
                 <h3 className= "text-xl font-bold text-gray-900 mb-2">Unlimited Scale</h3>","
                 <p className= "text-gray-600">Deploy thousands of edge nodes</p>","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
               </div>
             </div>
           </div>
         </section>
 
         {/* Use Cases */}
-<<<<<<< HEAD
         <section className="py-20"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
             <div className="text-center mb-16"
@@ -536,7 +526,6 @@ const EdgeComputingAI: React.FC: ()  => {,,,
   Industry Applications
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">",";,"
-=======
         <section className= "py-20">
           <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
             <div className= "text-center mb-16">
@@ -548,12 +537,10 @@ const EdgeComputingAI: React.FC: ()  => {,,,
   Industry Applications
               </h2>
               <p className= "text-xl text-gray-600 max-w-3xl mx-auto"">"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Edge AI solutions transforming operations across multiple industries.
               </p>
             </div>
 
-<<<<<<< HEAD
             <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">","
               {useCases.map((useCase, index) => {
                 const Icon: useCase.icon;,,,
@@ -579,7 +566,6 @@ const EdgeComputingAI: React.FC: ()  => {,,,
                         <li key={benefitIndex} className="flex items-center text-sm">","
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />","
                           <span className="text-gray-700">{benefit}</span>"
-=======
             <div className= "grid md: grid-cols-2 lg:grid-cols-4 gap-8">","
               {useCases.map((useCase, index) => {
                 const Icon: useCase.icon;,,,
@@ -605,7 +591,6 @@ const EdgeComputingAI: React.FC: ()  => {,,,
                         <li key: {benefitIndex} className= "flex items-center text-sm">","
                           <CheckCircle className= "w-4 h-4 text-green-500 mr-2 flex-shrink-0" />","
                           <span className= "text-gray-700">{benefit}</span>"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                         </li>
                       ))}
                     </ul>
@@ -617,7 +602,6 @@ const EdgeComputingAI: React.FC: ()  => {,,,
         </section>
 
         {/* Technologies */}
-<<<<<<< HEAD
         <section className="py-20 bg-gray-50"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
             <div className="text-center mb-16"
@@ -629,7 +613,6 @@ const EdgeComputingAI: React.FC: ()  => {,,,
   Supported Technologies
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">",";,"
-=======
         <section className= "py-20 bg-gray-50">
           <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
             <div className= "text-center mb-16">
@@ -641,26 +624,22 @@ const EdgeComputingAI: React.FC: ()  => {,,,
   Supported Technologies
               </h2>
               <p className= "text-xl text-gray-600 max-w-3xl mx-auto"">"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Leverage cutting-edge edge computing platforms and frameworks.
               </p>
             </div>
 
-<<<<<<< HEAD
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">","
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">","
               {technologies.map((tech, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200">","
                   <h3 className="text-xl font-bold text-gray-900 mb-4">{tech.name}</h3>"
                   <p className="text-gray-600">{tech.description}</p>"
-=======
             <div className= "grid md: grid-cols-2 lg:grid-cols-3 gap-8">","
             <div className= "grid md: grid-cols-2 lg:grid-cols-3 gap-8">","
               {technologies.map((tech, index) => (
                 <div key: {index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200">","
                   <h3 className= "text-xl font-bold text-gray-900 mb-4">{tech.name}</h3>"
                   <p className= "text-gray-600">{tech.description}</p>"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                 </div>
               ))}
             </div>
@@ -668,7 +647,6 @@ const EdgeComputingAI: React.FC: ()  => {,,,
         </section>
 
         {/* Features */}
-<<<<<<< HEAD
         <section className="py-20"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
             <div className="text-center mb-16"
@@ -680,7 +658,6 @@ const EdgeComputingAI: React.FC: ()  => {,,,
   Advanced Edge Computing Features
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">",";,"
-=======
         <section className= "py-20">
           <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
             <div className= "text-center mb-16">
@@ -692,12 +669,10 @@ const EdgeComputingAI: React.FC: ()  => {,,,
   Advanced Edge Computing Features
               </h2>
               <p className= "text-xl text-gray-600 max-w-3xl mx-auto"">"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Powerful capabilities that make edge AI deployment seamless and efficient.
               </p>
             </div>
 
-<<<<<<< HEAD
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">","
               {features.map((feature, index) => {
                 const Icon: feature.icon;,,,
@@ -722,7 +697,6 @@ const EdgeComputingAI: React.FC: ()  => {,,,
                     <p className="text-gray-600 mb-4">{feature.description}</p>"
                     <div className="inline-flex items-center text-green-600 font-semibold text-sm">","
                       <CheckCircle className="w-4 h-4 mr-1" />","
-=======
             <div className= "grid md: grid-cols-2 lg:grid-cols-3 gap-8">","
               {features.map((feature, index) => {
                 const Icon: feature.icon;,,,
@@ -747,7 +721,6 @@ const EdgeComputingAI: React.FC: ()  => {,,,
                     <p className= "text-gray-600 mb-4">{feature.description}</p>"
                     <div className= "inline-flex items-center text-green-600 font-semibold text-sm">","
                       <CheckCircle className= "w-4 h-4 mr-1" />","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                       {feature.benefit}
                     </div>
                   </div>
@@ -758,7 +731,6 @@ const EdgeComputingAI: React.FC: ()  => {,,,
         </section>
 
         {/* Pricing */}
-<<<<<<< HEAD
         <section id="pricing" className="py-20 bg-gray-50"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
             <div className="text-center mb-16"
@@ -770,7 +742,6 @@ const EdgeComputingAI: React.FC: ()  => {,,,
   Transparent Pricing for Every Scale
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">",";,"
-=======
         <section id: "pricing" className="py-20 bg-gray-50">
           <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
             <div className= "text-center mb-16">
@@ -782,12 +753,10 @@ const EdgeComputingAI: React.FC: ()  => {,,,
   Transparent Pricing for Every Scale
               </h2>
               <p className= "text-xl text-gray-600 max-w-3xl mx-auto"">"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Choose the plan that fits your edge computing needs and deployment scale.
               </p>
             </div>
 
-<<<<<<< HEAD
             <div className="grid md: grid-cols-3 gap-8">","
             <div className="grid md: grid-cols-3 gap-8">","
               {pricing.map((plan, index) => (
@@ -795,7 +764,6 @@ const EdgeComputingAI: React.FC: ()  => {,,,
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">","
                       <span className="bg-teal-500 text-white px-4 py-1 rounded-full text-sm font-semibold">",";,"
-=======
             <div className= "grid md: grid-cols-3 gap-8">","
             <div className= "grid md: grid-cols-3 gap-8">","
               {pricing.map((plan, index) => (
@@ -803,12 +771,10 @@ const EdgeComputingAI: React.FC: ()  => {,,,
                   {plan.popular && (
                     <div className= "absolute -top-4 left-1/2 transform -translate-x-1/2">","
                       <span className= "bg-teal-500 text-white px-4 py-1 rounded-full text-sm font-semibold"">"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Most Popular
                       </span>
                     </div>
                   )}
-<<<<<<< HEAD
                   <div className="text-center mb-8">","
                     <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>"
                     <div className="flex items-center justify-center mb-2">","
@@ -830,7 +796,6 @@ const EdgeComputingAI: React.FC: ()  => {,,,
                   </ul>
                   <a href="/contact",";,"
   className: {,,
-=======
                   <div className= "text-center mb-8">","
                     <h3 className= "text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>"
                     <div className= "flex items-center justify-center mb-2">","
@@ -852,7 +817,6 @@ const EdgeComputingAI: React.FC: ()  => {,,,
                   </ul>
                   <a href: "/contact",";,"
   className= {,,
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
 `w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${`
 plan.popular
 ? 'bg-teal-600 text-white hover: bg-teal-700',';,
@@ -866,7 +830,6 @@ plan.popular
               ))}
             </div>
 
-<<<<<<< HEAD
             <div className="text-center mt-12">","
               <p className="text-gray-600 mb-4">Need a custom edge solution?</p>","
               <a href="/contact",";,"
@@ -875,7 +838,6 @@ plan.popular
                 Contact our Edge Computing Team
                 <ArrowRight className="w-4 h-4 ml-1/>";,"
                 <ArrowRight className="w-4 h-4 ml-1" />","
-=======
             <div className= "text-center mt-12">","
               <p className= "text-gray-600 mb-4">Need a custom edge solution?</p>","
               <a href: "/contact",";,"
@@ -884,14 +846,12 @@ plan.popular
                 Contact our Edge Computing Team
                 <ArrowRight className= "w-4 h-4 ml-1/>";,"
                 <ArrowRight className= "w-4 h-4 ml-1" />","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
               </a>
             </div>
           </div>
         </section>
 
         {/* Testimonials */}
-<<<<<<< HEAD
         <section className="py-20"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
             <div className="text-center mb-16"
@@ -903,7 +863,6 @@ plan.popular
   What Our Clients Say
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">",";,"
-=======
         <section className= "py-20">
           <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
             <div className= "text-center mb-16">
@@ -915,12 +874,10 @@ plan.popular
   What Our Clients Say
               </h2>
               <p className= "text-xl text-gray-600 max-w-3xl mx-auto"">"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Join leading companies already using our edge computing AI solutions.
               </p>
             </div>
 
-<<<<<<< HEAD
             <div className="grid md: grid-cols-3 gap-8">","
             <div className="grid md: grid-cols-3 gap-8">","
               {testimonials.map((testimonial, index) => (
@@ -938,7 +895,6 @@ plan.popular
                     <div className="font-semibold text-gray-900">{testimonial.name}</div>"
                     <div className="text-gray-600 text-sm">{testimonial.role}</div>"
                     <div className="text-teal-600 text-sm font-medium">{testimonial.company}</div>"
-=======
             <div className= "grid md: grid-cols-3 gap-8">","
             <div className= "grid md: grid-cols-3 gap-8">","
               {testimonials.map((testimonial, index) => (
@@ -956,7 +912,6 @@ plan.popular
                     <div className= "font-semibold text-gray-900">{testimonial.name}</div>"
                     <div className= "text-gray-600 text-sm">{testimonial.role}</div>"
                     <div className= "text-teal-600 text-sm font-medium">{testimonial.company}</div>"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                   </div>
                 </div>
               ))}
@@ -965,7 +920,6 @@ plan.popular
         </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
         <section className="py-20 bg-gradient-to-br from-teal-900 via-cyan-800 to-blue-900 text-white"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">","
             <h2 className="text-4xl font-bold mb-6"
@@ -992,7 +946,6 @@ plan.popular
                 View Success Stories
                 <ArrowRight className="w-5 h-5 ml-2/>";,"
                 <ArrowRight className="w-5 h-5 ml-2" />","
-=======
         <section className= "py-20 bg-gradient-to-br from-teal-900 via-cyan-800 to-blue-900 text-white">
           <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">","
             <h2 className= "text-4xl font-bold mb-6">
@@ -1019,7 +972,6 @@ plan.popular
                 View Success Stories
                 <ArrowRight className= "w-5 h-5 ml-2/>";,"
                 <ArrowRight className= "w-5 h-5 ml-2" />","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
               </a>
             </div>
           </div>

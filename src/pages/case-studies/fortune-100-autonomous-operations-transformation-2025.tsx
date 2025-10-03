@@ -11,7 +11,6 @@ const Fortune100AutonomousOperationsTransformation: () => {
         <meta name: "description",";,"
   content: "Fortune 100 financial services company creates $650M annual value through AI-powered autonomous operations. 85% cost reduction, 99.7% accuracy, 40+ workflows in 90 days." /><meta name: "keywords",";,"
   content: "autonomous operations case study, AI transformation, business automation, operational efficiency, Fortune 100, ROI" /></Helmet>";,"
-<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900">","
         <Header />
 
@@ -23,7 +22,6 @@ const Fortune100AutonomousOperationsTransformation: () => {
           >
             <ArrowLeft className="w-4 h-4 mr-2/>";,"
             <ArrowLeft className="w-4 h-4 mr-2" />",";,"
-=======
       <div className= "min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900">","
         <Header />
 
@@ -35,12 +33,10 @@ const Fortune100AutonomousOperationsTransformation: () => {
           >
             <ArrowLeft className= "w-4 h-4 mr-2/>";,"
             <ArrowLeft className= "w-4 h-4 mr-2" />",";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Back to Case Studies
           </Link>
 
           {/* Header */}
-<<<<<<< HEAD
           <div className="max-w-5xl mx-auto mb-16">","
             <div className="flex items-center gap-4 mb-6 flex-wrap">","
               <span className="px-4 py-2 bg-green-500/20 text-green-300 rounded-full text-sm font-semibold border border-green-500/30">","
@@ -56,7 +52,6 @@ const Fortune100AutonomousOperationsTransformation: () => {
   Fortune 100 Enterprise: <span className="block text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400 mt-2">","
             <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 leading-tight">",";,"
   Fortune 100 Enterprise: <span className="block text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400 mt-2">","
-=======
           <div className= "max-w-5xl mx-auto mb-16">","
             <div className= "flex items-center gap-4 mb-6 flex-wrap">","
               <span className= "px-4 py-2 bg-green-500/20 text-green-300 rounded-full text-sm font-semibold border border-green-500/30">","
@@ -72,21 +67,16 @@ const Fortune100AutonomousOperationsTransformation: () => {
   Fortune 100 Enterprise: <span className= "block text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400 mt-2">","
             <h1 className= "text-5xl md: text-6xl font-bold text-white mb-6 leading-tight"">"
   Fortune 100 Enterprise: <span className= "block text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400 mt-2">","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                 $650M Value Creation Through Autonomous Business Operations
               </span>
             </h1>
 
-<<<<<<< HEAD
             <p className="text-xl text-blue-200 leading-relaxed mb-8">",";,"
-=======
             <p className= "text-xl text-blue-200 leading-relaxed mb-8"">"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   A Fortune 100 financial services company partnered with Zion Tech Group to transform their global operations through AI-powered autonomous business operations. In just 90 days, we deployed 40+ autonomous workflows that eliminated 85% of manual processes and created $650M in annual value.
             </p>
 
             {/* Key Metrics */}
-<<<<<<< HEAD
             <div className="grid grid-cols-2 md: grid-cols-4 gap-6">","
               <div className="bg-gradient-to-br from-green-900/60 to-emerald-900/60 backdrop-blur-sm rounded-xl p-6 border border-green-400/30"
                 <DollarSign className="w-8 h-8 text-green-400 mb-2/>";,"
@@ -127,7 +117,6 @@ const Fortune100AutonomousOperationsTransformation: () => {
                 <Users className="w-8 h-8 text-orange-400 mb-2" />","
                 <div className="text-3xl font-bold text-white mb-1">3,611%</div>","
                 <div className="text-orange-200 text-sm">3-Year ROI</div>","
-=======
             <div className= "grid grid-cols-2 md: grid-cols-4 gap-6">","
               <div className= "bg-gradient-to-br from-green-900/60 to-emerald-900/60 backdrop-blur-sm rounded-xl p-6 border border-green-400/30">
                 <DollarSign className= "w-8 h-8 text-green-400 mb-2/>";,"
@@ -168,13 +157,11 @@ const Fortune100AutonomousOperationsTransformation: () => {
                 <Users className= "w-8 h-8 text-orange-400 mb-2" />","
                 <div className= "text-3xl font-bold text-white mb-1">3,611%</div>","
                 <div className= "text-orange-200 text-sm">3-Year ROI</div>","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
               </div>
             </div>
           </div>
 
           {/* Executive Summary */}
-<<<<<<< HEAD
           <div className="max-w-5xl mx-auto mb-16"
             <div className="bg-gradient-to-br from-blue-900/60 to-purple-900/60 backdrop-blur-sm rounded-2xl p-8 md: p-12 border border-blue-400/30">","
               <h2 className="text-3xl font-bold text-white mb-6">Executive Summary</h2>";,"
@@ -189,7 +176,6 @@ const Fortune100AutonomousOperationsTransformation: () => {
   A Fortune 100 financial services company with 80,000+ employees globally faced mounting operational challenges: 2.3M manual transactions per month, $420M in annual operational costs growing at 15% YoY, and a 3.2% error rate costing $45M annually.,,,
               </p>
               <p className="text-blue-100 text-lg leading-relaxed">",";,"
-=======
           <div className= "max-w-5xl mx-auto mb-16">
             <div className= "bg-gradient-to-br from-blue-900/60 to-purple-900/60 backdrop-blur-sm rounded-2xl p-8 md: p-12 border border-blue-400/30">","
               <h2 className= "text-3xl font-bold text-white mb-6">Executive Summary</h2>";,"
@@ -204,14 +190,12 @@ const Fortune100AutonomousOperationsTransformation: () => {
   A Fortune 100 financial services company with 80,000+ employees globally faced mounting operational challenges: 2.3M manual transactions per month, $420M in annual operational costs growing at 15% YoY, and a 3.2% error rate costing $45M annually.,,,
               </p>
               <p className= "text-blue-100 text-lg leading-relaxed"">"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Through our autonomous business operations platform, we transformed their entire enterprise in 12 months, with the initial deployment completed in just 90 days. The results exceeded all expectations: $650M in annual value creation, 85% cost reduction, 99.7% accuracy, and complete transformation of business operations across finance, HR, operations, sales, and support.,,,
               </p>
             </div>
           </div>
 
           {/* The Challenge */}
-<<<<<<< HEAD
           <div className="max-w-5xl mx-auto mb-16"
             <h2 className="text-4xl font-bold text-white mb-8">The Challenge</h2>";,"
             <div className="grid md: grid-cols-2 gap-8 mb-8">","
@@ -244,7 +228,6 @@ const Fortune100AutonomousOperationsTransformation: () => {
                   </li>
                   <li className="flex items-start gap-2">","
                     <div className="w-2 h-2 bg-red-400 rounded-full mt-2"></div>","
-=======
           <div className= "max-w-5xl mx-auto mb-16">
             <h2 className= "text-4xl font-bold text-white mb-8">The Challenge</h2>";,"
             <div className= "grid md: grid-cols-2 gap-8 mb-8">","
@@ -277,13 +260,11 @@ const Fortune100AutonomousOperationsTransformation: () => {
                   </li>
                   <li className= "flex items-start gap-2">","
                     <div className= "w-2 h-2 bg-red-400 rounded-full mt-2"></div>","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                     <span >3.2% error rate costing $45M/year in remediation</span>
                   </li>
                 </ul>
               </div>
 
-<<<<<<< HEAD
               <div className="bg-gradient-to-br from-yellow-900/40 to-amber-900/40 backdrop-blur-sm rounded-xl p-8 border border-yellow-400/30"
                 <h3 className="text-2xl font-bold text-white mb-4">Strategic Imperatives</h3>";,"
                 <ul className="space-y-3 text-yellow-100"
@@ -326,7 +307,6 @@ const Fortune100AutonomousOperationsTransformation: () => {
                   </li>
                   <li className="flex items-start gap-2">","
                     <CheckCircle className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0" />","
-=======
               <div className= "bg-gradient-to-br from-yellow-900/40 to-amber-900/40 backdrop-blur-sm rounded-xl p-8 border border-yellow-400/30">
                 <h3 className= "text-2xl font-bold text-white mb-4">Strategic Imperatives</h3>";,"
                 <ul className= "space-y-3 text-yellow-100">
@@ -369,7 +349,6 @@ const Fortune100AutonomousOperationsTransformation: () => {
                   </li>
                   <li className= "flex items-start gap-2">","
                     <CheckCircle className= "w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0" />","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                     <span >Maintain regulatory compliance across all jurisdictions</span>
                   </li>
                 </ul>
@@ -378,7 +357,6 @@ const Fortune100AutonomousOperationsTransformation: () => {
           </div>
 
           {/* The Solution */}
-<<<<<<< HEAD
           <div className="max-w-5xl mx-auto mb-16"
             <h2 className="text-4xl font-bold text-white mb-8">The Solution</h2>";,"
             <div className="bg-gradient-to-br from-blue-900/60 to-cyan-900/60 backdrop-blur-sm rounded-2xl p-8 md: p-12 border border-blue-400/30 mb-8">","
@@ -424,7 +402,6 @@ const Fortune100AutonomousOperationsTransformation: () => {
                   <div >
                     <h4 className="text-xl font-semibold text-white mb-2">Governance & Observability</h4>","
                     <p className="text-blue-200 text-sm">Full audit trail, real-time dashboards, anomaly detection, compliance automation</p>","
-=======
           <div className= "max-w-5xl mx-auto mb-16">
             <h2 className= "text-4xl font-bold text-white mb-8">The Solution</h2>";,"
             <div className= "bg-gradient-to-br from-blue-900/60 to-cyan-900/60 backdrop-blur-sm rounded-2xl p-8 md: p-12 border border-blue-400/30 mb-8">","
@@ -470,13 +447,11 @@ const Fortune100AutonomousOperationsTransformation: () => {
                   <div >
                     <h4 className= "text-xl font-semibold text-white mb-2">Governance & Observability</h4>","
                     <p className= "text-blue-200 text-sm">Full audit trail, real-time dashboards, anomaly detection, compliance automation</p>","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                   </div>
                 </div>
               </div>
             </div>
 
-<<<<<<< HEAD
             <div className="bg-gradient-to-br from-green-900/60 to-emerald-900/60 backdrop-blur-sm rounded-2xl p-8 border border-green-400/30">","
               <h3 className="text-2xl font-bold text-white mb-6">90-Day Implementation Timeline</h3>","
               <div className="space-y-6">","
@@ -501,7 +476,6 @@ const Fortune100AutonomousOperationsTransformation: () => {
                 <div >
                   <h4 className="text-lg font-semibold text-green-300 mb-2">Phase 3: Launch & Scale (Days 61-90)</h4>","
                   <p className="text-green-100 text-sm">Pilot deployment of 5 workflows, validation, full-scale rollout to 40+ workflows</p>","
-=======
             <div className= "bg-gradient-to-br from-green-900/60 to-emerald-900/60 backdrop-blur-sm rounded-2xl p-8 border border-green-400/30">","
               <h3 className= "text-2xl font-bold text-white mb-6">90-Day Implementation Timeline</h3>","
               <div className= "space-y-6">","
@@ -526,14 +500,12 @@ const Fortune100AutonomousOperationsTransformation: () => {
                 <div >
                   <h4 className= "text-lg font-semibold text-green-300 mb-2">Phase 3: Launch & Scale (Days 61-90)</h4>","
                   <p className= "text-green-100 text-sm">Pilot deployment of 5 workflows, validation, full-scale rollout to 40+ workflows</p>","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                 </div>
               </div>
             </div>
           </div>
 
           {/* The Results */}
-<<<<<<< HEAD
           <div className="max-w-5xl mx-auto mb-16"
             <h2 className="text-4xl font-bold text-white mb-8">The Results: Transformational Impact</h2>","
             {/* Financial Impact */}
@@ -562,7 +534,6 @@ const Fortune100AutonomousOperationsTransformation: () => {
                   <div className="text-4xl font-bold text-green-300 mb-2">$443M</div>","
                   <div className="text-green-100 font-semibold mb-3">Cost Savings</div>","
                   <ul className="space-y-2 text-green-200 text-sm">","
-=======
           <div className= "max-w-5xl mx-auto mb-16">
             <h2 className= "text-4xl font-bold text-white mb-8">The Results: Transformational Impact</h2>","
             {/* Financial Impact */}
@@ -591,7 +562,6 @@ const Fortune100AutonomousOperationsTransformation: () => {
                   <div className= "text-4xl font-bold text-green-300 mb-2">$443M</div>","
                   <div className= "text-green-100 font-semibold mb-3">Cost Savings</div>","
                   <ul className= "space-y-2 text-green-200 text-sm">","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                     <li >• $320M labor costs</li>
                     <li >• $42M error remediation</li>
                     <li >• $38M infrastructure</li>
@@ -599,17 +569,14 @@ const Fortune100AutonomousOperationsTransformation: () => {
                   </ul>
                 </div>
                 
-<<<<<<< HEAD
                 <div className="bg-blue-800/30 rounded-xl p-6 border border-blue-400/30">","
                   <div className="text-4xl font-bold text-blue-300 mb-2">$265M</div>","
                   <div className="text-blue-100 font-semibold mb-3">Revenue Acceleration</div>","
                   <ul className="space-y-2 text-blue-200 text-sm">","
-=======
                 <div className= "bg-blue-800/30 rounded-xl p-6 border border-blue-400/30">","
                   <div className= "text-4xl font-bold text-blue-300 mb-2">$265M</div>","
                   <div className= "text-blue-100 font-semibold mb-3">Revenue Acceleration</div>","
                   <ul className= "space-y-2 text-blue-200 text-sm">","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                     <li >• $95M faster deal cycles</li>
                     <li >• $62M improved win rates</li>
                     <li >• $48M cross-sell/upsell</li>
@@ -617,17 +584,14 @@ const Fortune100AutonomousOperationsTransformation: () => {
                   </ul>
                 </div>
                 
-<<<<<<< HEAD
                 <div className="bg-purple-800/30 rounded-xl p-6 border border-purple-400/30">","
                   <div className="text-4xl font-bold text-purple-300 mb-2">$55M</div>","
                   <div className="text-purple-100 font-semibold mb-3">Risk Reduction</div>","
                   <ul className="space-y-2 text-purple-200 text-sm">","
-=======
                 <div className= "bg-purple-800/30 rounded-xl p-6 border border-purple-400/30">","
                   <div className= "text-4xl font-bold text-purple-300 mb-2">$55M</div>","
                   <div className= "text-purple-100 font-semibold mb-3">Risk Reduction</div>","
                   <ul className= "space-y-2 text-purple-200 text-sm">","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                     <li >• $25M compliance</li>
                     <li >• $18M fraud prevention</li>
                     <li >• $12M operational risk</li>
@@ -637,7 +601,6 @@ const Fortune100AutonomousOperationsTransformation: () => {
             </div>
 
             {/* Operational Excellence */}
-<<<<<<< HEAD
             <div className="grid md: grid-cols-2 gap-8 mb-8">","
               <div className="bg-gradient-to-br from-blue-900/60 to-cyan-900/60 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30"
                 <h3 className="text-2xl font-bold text-white mb-6">Speed & Scale</h3>";,"
@@ -671,7 +634,6 @@ const Fortune100AutonomousOperationsTransformation: () => {
                     <div >
                       <div className="text-white font-semibold">2x Transaction Volume</div>","
                       <div className="text-blue-200 text-sm">2.3M → 4.8M/month capacity</div>","
-=======
             <div className= "grid md: grid-cols-2 gap-8 mb-8">","
               <div className= "bg-gradient-to-br from-blue-900/60 to-cyan-900/60 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30">
                 <h3 className= "text-2xl font-bold text-white mb-6">Speed & Scale</h3>";,"
@@ -705,13 +667,11 @@ const Fortune100AutonomousOperationsTransformation: () => {
                     <div >
                       <div className= "text-white font-semibold">2x Transaction Volume</div>","
                       <div className= "text-blue-200 text-sm">2.3M → 4.8M/month capacity</div>","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                     </div>
                   </li>
                 </ul>
               </div>
 
-<<<<<<< HEAD
               <div className="bg-gradient-to-br from-purple-900/60 to-pink-900/60 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30"
                 <h3 className="text-2xl font-bold text-white mb-6">Quality & Accuracy</h3>";,"
                 <ul className="space-y-3"
@@ -743,7 +703,6 @@ const Fortune100AutonomousOperationsTransformation: () => {
                     <div >
                       <div className="text-white font-semibold">98.5% SLA Compliance</div>","
                       <div className="text-purple-200 text-sm">vs. 87% baseline</div>","
-=======
               <div className= "bg-gradient-to-br from-purple-900/60 to-pink-900/60 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30">
                 <h3 className= "text-2xl font-bold text-white mb-6">Quality & Accuracy</h3>";,"
                 <ul className= "space-y-3">
@@ -775,7 +734,6 @@ const Fortune100AutonomousOperationsTransformation: () => {
                     <div >
                       <div className= "text-white font-semibold">98.5% SLA Compliance</div>","
                       <div className= "text-purple-200 text-sm">vs. 87% baseline</div>","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                     </div>
                   </li>
                 </ul>
@@ -783,7 +741,6 @@ const Fortune100AutonomousOperationsTransformation: () => {
             </div>
 
             {/* Customer & Employee Impact */}
-<<<<<<< HEAD
             <div className="bg-gradient-to-br from-orange-900/60 to-red-900/60 backdrop-blur-sm rounded-xl p-8 border border-orange-400/30"
               <h3 className="text-2xl font-bold text-white mb-6">Customer & Employee Experience</h3>";,"
               <div className="grid md: grid-cols-2 gap-8">","
@@ -816,7 +773,6 @@ const Fortune100AutonomousOperationsTransformation: () => {
                     </li>
                     <li className="flex items-center gap-2">","
                       <div className="w-2 h-2 bg-orange-400 rounded-full"></div>","
-=======
             <div className= "bg-gradient-to-br from-orange-900/60 to-red-900/60 backdrop-blur-sm rounded-xl p-8 border border-orange-400/30">
               <h3 className= "text-2xl font-bold text-white mb-6">Customer & Employee Experience</h3>";,"
               <div className= "grid md: grid-cols-2 gap-8">","
@@ -849,13 +805,11 @@ const Fortune100AutonomousOperationsTransformation: () => {
                     </li>
                     <li className= "flex items-center gap-2">","
                       <div className= "w-2 h-2 bg-orange-400 rounded-full"></div>","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                       <span >First Contact Resolution: +45%</span>,,
                     </li>
                   </ul>
                 </div>
                 <div >
-<<<<<<< HEAD
                   <h4 className="text-lg font-semibold text-red-300 mb-4">Employee Impact</h4>","
                   <ul className="space-y-2 text-red-100">","
                     <li className="flex items-center gap-2">","
@@ -868,7 +822,6 @@ const Fortune100AutonomousOperationsTransformation: () => {
                     </li>
                     <li className="flex items-center gap-2">","
                       <div className="w-2 h-2 bg-red-400 rounded-full"></div>","
-=======
                   <h4 className= "text-lg font-semibold text-red-300 mb-4">Employee Impact</h4>","
                   <ul className= "space-y-2 text-red-100">","
                     <li className= "flex items-center gap-2">","
@@ -881,7 +834,6 @@ const Fortune100AutonomousOperationsTransformation: () => {
                     </li>
                     <li className= "flex items-center gap-2">","
                       <div className= "w-2 h-2 bg-red-400 rounded-full"></div>","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                       <span >2,500+ employees reskilled</span>
                     </li>
                   </ul>
@@ -891,7 +843,6 @@ const Fortune100AutonomousOperationsTransformation: () => {
           </div>
 
           {/* Key Learnings */}
-<<<<<<< HEAD
           <div className="max-w-5xl mx-auto mb-16"
             <h2 className="text-4xl font-bold text-white mb-8">Key Learnings & Best Practices</h2>";,"
             <div className="space-y-6"
@@ -932,7 +883,6 @@ const Fortune100AutonomousOperationsTransformation: () => {
                   </li>
                   <li className="flex items-start gap-3">","
                     <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>","
-=======
           <div className= "max-w-5xl mx-auto mb-16">
             <h2 className= "text-4xl font-bold text-white mb-8">Key Learnings & Best Practices</h2>";,"
             <div className= "space-y-6">
@@ -973,13 +923,11 @@ const Fortune100AutonomousOperationsTransformation: () => {
                   </li>
                   <li className= "flex items-start gap-3">","
                     <div className= "w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                     <span ><strong >Governance & Risk: </strong> Human-in-the-loop for high-risk decisions, comprehensive audit trails</span>,,
                   </li>
                 </ul>
               </div>
 
-<<<<<<< HEAD
               <div className="bg-gradient-to-br from-yellow-900/60 to-orange-900/60 backdrop-blur-sm rounded-xl p-8 border border-yellow-400/30">","
                 <h3 className="text-xl font-bold text-white mb-4">⚠️ Pitfalls Avoided</h3>","
                 <ul className="space-y-3 text-yellow-100">","
@@ -997,7 +945,6 @@ const Fortune100AutonomousOperationsTransformation: () => {
                   </li>
                   <li className="flex items-start gap-3">","
                     <div className="w-2 h-2 bg-yellow-400 rounded-full mt-2 flex-shrink-0"></div>","
-=======
               <div className= "bg-gradient-to-br from-yellow-900/60 to-orange-900/60 backdrop-blur-sm rounded-xl p-8 border border-yellow-400/30">","
                 <h3 className= "text-xl font-bold text-white mb-4">⚠️ Pitfalls Avoided</h3>","
                 <ul className= "space-y-3 text-yellow-100">","
@@ -1015,7 +962,6 @@ const Fortune100AutonomousOperationsTransformation: () => {
                   </li>
                   <li className= "flex items-start gap-3">","
                     <div className= "w-2 h-2 bg-yellow-400 rounded-full mt-2 flex-shrink-0"></div>","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                     <span >Business-led transformation rather than treating as IT project</span>
                   </li>
                 </ul>
@@ -1024,7 +970,6 @@ const Fortune100AutonomousOperationsTransformation: () => {
           </div>
 
           {/* CTA Section */}
-<<<<<<< HEAD
           <div className="max-w-5xl mx-auto">","
             <div className="bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-12 text-center">","
               <h2 className="text-4xl font-bold text-white mb-6">",";,"
@@ -1045,7 +990,6 @@ const Fortune100AutonomousOperationsTransformation: () => {
                 </Link>
                 <Link to: "/contact",";,"
   className="inline-flex items-center justify-center gap-2 border-2 border-white text-white hover: bg-white hover:text-green-600 px-8 py-4 rounded-lg font-bold text-lg transition-all","
-=======
           <div className= "max-w-5xl mx-auto">","
             <div className= "bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-12 text-center">","
               <h2 className= "text-4xl font-bold text-white mb-6"">"
@@ -1066,21 +1010,17 @@ const Fortune100AutonomousOperationsTransformation: () => {
                 </Link>
                 <Link to: "/contact",";,"
   className= "inline-flex items-center justify-center gap-2 border-2 border-white text-white hover: bg-white hover:text-green-600 px-8 py-4 rounded-lg font-bold text-lg transition-all","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                 >
                   Schedule Consultation
                 </Link>
               </div>
 
-<<<<<<< HEAD
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">","
                 <p className="text-white font-bold text-lg mb-2">🎁 Special Launch Offer</p>","
                 <p className="text-green-100">",";,"
-=======
               <div className= "bg-white/10 backdrop-blur-sm rounded-xl p-6">","
                 <p className= "text-white font-bold text-lg mb-2">🎁 Special Launch Offer</p>","
                 <p className= "text-green-100"">"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   50% OFF implementation + FREE 30-day proof of concept through December 2025
                 </p>
               </div>
@@ -1088,7 +1028,6 @@ const Fortune100AutonomousOperationsTransformation: () => {
           </div>
 
           {/* Related Content */}
-<<<<<<< HEAD
           <div className="max-w-5xl mx-auto mt-16"
             <h2 className="text-3xl font-bold text-white mb-8">Related Resources</h2>";,"
             <div className="grid md: grid-cols-2 gap-6">","
@@ -1111,7 +1050,6 @@ const Fortune100AutonomousOperationsTransformation: () => {
   Read Guide <ArrowRight className="w-4 h-4 ml-2 group-hover: translate-x-1 transition-transform/>","
                 <div className="flex items-center text-blue-300 font-semibold text-sm">",";,"
   Read Guide <ArrowRight className="w-4 h-4 ml-2 group-hover: translate-x-1 transition-transform" />","
-=======
           <div className= "max-w-5xl mx-auto mt-16">
             <h2 className= "text-3xl font-bold text-white mb-8">Related Resources</h2>";,"
             <div className= "grid md: grid-cols-2 gap-6">","
@@ -1134,12 +1072,10 @@ const Fortune100AutonomousOperationsTransformation: () => {
   Read Guide <ArrowRight className= "w-4 h-4 ml-2 group-hover: translate-x-1 transition-transform/>","
                 <div className= "flex items-center text-blue-300 font-semibold text-sm"">"
   Read Guide <ArrowRight className= "w-4 h-4 ml-2 group-hover: translate-x-1 transition-transform" />","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                 </div>
               </Link>
 
               <Link to: "/services/autonomous-business-operations",";,"
-<<<<<<< HEAD
   className="bg-gradient-to-br from-green-900/60 to-emerald-900/60 backdrop-blur-sm rounded-xl p-6 border border-green-400/30 hover: border-green-400/60 transition-all group","
               >
                 <div className="text-green-400 text-sm font-semibold mb-2 uppercase">Service</div>";,"
@@ -1155,7 +1091,6 @@ const Fortune100AutonomousOperationsTransformation: () => {
   Explore Service <ArrowRight className="w-4 h-4 ml-2 group-hover: translate-x-1 transition-transform/>","
                 <div className="flex items-center text-green-300 font-semibold text-sm">",";,"
   Explore Service <ArrowRight className="w-4 h-4 ml-2 group-hover: translate-x-1 transition-transform" />","
-=======
   className= "bg-gradient-to-br from-green-900/60 to-emerald-900/60 backdrop-blur-sm rounded-xl p-6 border border-green-400/30 hover: border-green-400/60 transition-all group","
               >
                 <div className= "text-green-400 text-sm font-semibold mb-2 uppercase">Service</div>";,"
@@ -1171,7 +1106,6 @@ const Fortune100AutonomousOperationsTransformation: () => {
   Explore Service <ArrowRight className= "w-4 h-4 ml-2 group-hover: translate-x-1 transition-transform/>","
                 <div className= "flex items-center text-green-300 font-semibold text-sm"">"
   Explore Service <ArrowRight className= "w-4 h-4 ml-2 group-hover: translate-x-1 transition-transform" />","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                 </div>
               </Link>
             </div>

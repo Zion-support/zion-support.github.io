@@ -233,7 +233,6 @@ export default function ITServices(): React.JSX.Element {
         <link rel: "canonical" href ="https://ziontechgroup.com/it-services" />";,"
       </Helmet>
 
-<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white"
         {/* Hero Section */}
         <section className="container mx-auto px-6 py-16"
@@ -260,7 +259,6 @@ export default function ITServices(): React.JSX.Element {
               </div>
               <div className="flex items-center"
                 <CheckCircle className="h-4 w-4 text-green-400 mr-2" />";,"
-=======
       <div className= "min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
         {/* Hero Section */}
         <section className= "container mx-auto px-6 py-16">
@@ -287,7 +285,6 @@ export default function ITServices(): React.JSX.Element {
               </div>
               <div className= "flex items-center">
                 <CheckCircle className= "h-4 w-4 text-green-400 mr-2" />";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                 <span >Proven Results</span>
               </div>
             </div>
@@ -295,7 +292,6 @@ export default function ITServices(): React.JSX.Element {
         </section>
 
         {/* Main Services Grid */}
-<<<<<<< HEAD
         <section className="container mx-auto px-6 py-12"
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8"
             {itServices.map((service)  => {
@@ -326,7 +322,6 @@ export default function ITServices(): React.JSX.Element {
                         {service.features.slice(0, 4).map((feature, idx) => (
                           <li key={idx} className="flex items-center text-sm text-slate-300"
                             <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />";,"
-=======
         <section className= "container mx-auto px-6 py-12">
           <div className= "grid grid-cols-1 lg:grid-cols-2 gap-8">
             {itServices.map((service)  => {
@@ -357,16 +352,12 @@ export default function ITServices(): React.JSX.Element {
                         {service.features.slice(0, 4).map((feature, idx) => (
                           <li key: {idx} className= "flex items-center text-sm text-slate-300">
                             <CheckCircle className= "w-3 h-3 text-green-400 mr-2 flex-shrink-0" />";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                             <span >{feature}</span>
                           </li>
                         ))}
                         {service.features.length > 4 && (
-<<<<<<< HEAD
                           <li className="text-xs text-slate-400 ml-5"
-=======
                           <li className= "text-xs text-slate-400 ml-5">
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                             +{service.features.length - 4} more features
                           </li>
                         )}
@@ -374,19 +365,16 @@ export default function ITServices(): React.JSX.Element {
                     </div>
 
                     <div >
-<<<<<<< HEAD
                       <h4 className="text-sm font-semibold text-fuchsia-400 mb-2">Measurable Benefits:</h4>";,"
                       <ul className="space-y-1"
                         {service.benefits.map((benefit, idx) => (
                           <li key={idx} className="flex items-center text-sm text-slate-300"
                             <TrendingUp className="w-3 h-3 text-fuchsia-400 mr-2 flex-shrink-0" />";,"
-=======
                       <h4 className= "text-sm font-semibold text-fuchsia-400 mb-2">Measurable Benefits:</h4>";,"
                       <ul className= "space-y-1">
                         {service.benefits.map((benefit, idx) => (
                           <li key: {idx} className= "flex items-center text-sm text-slate-300">
                             <TrendingUp className= "w-3 h-3 text-fuchsia-400 mr-2 flex-shrink-0" />";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                             <span >{benefit}</span>
                           </li>
                         ))}
@@ -394,7 +382,6 @@ export default function ITServices(): React.JSX.Element {
                     </div>
                   </div>
 
-<<<<<<< HEAD
                   <div className="flex items-center justify-between mb-6"
                     <div className="text-left"
                       <div className="text-lg font-semibold text-cyan-400">{service.price}</div>";"
@@ -412,7 +399,6 @@ export default function ITServices(): React.JSX.Element {
                     <div className="flex flex-wrap gap-2"
                       {service.useCases.map((useCase, idx) => (
                         <span key={idx} className="text-xs bg-slate-700/50 text-slate-300 px-2 py-1 rounded"
-=======
                   <div className= "flex items-center justify-between mb-6">
                     <div className= "text-left">
                       <div className= "text-lg font-semibold text-cyan-400">{service.price}</div>";"
@@ -430,7 +416,6 @@ export default function ITServices(): React.JSX.Element {
                     <div className= "flex flex-wrap gap-2">
                       {service.useCases.map((useCase, idx) => (
                         <span key: {idx} className= "text-xs bg-slate-700/50 text-slate-300 px-2 py-1 rounded">
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                           {useCase}
                         </span>
                       ))}
@@ -443,22 +428,18 @@ export default function ITServices(): React.JSX.Element {
         </section>
 
         {/* Industry Solutions */}
-<<<<<<< HEAD
         <section className="container mx-auto px-6 py-12"
           <div className="text-center mb-12"
             <h2 className="text-3xl font-bold text-white mb-4">Industry-Specific Solutions</h2>";,"
             <p className="text-blue-100 max-w-2xl mx-auto">,";,"
-=======
         <section className= "container mx-auto px-6 py-12">
           <div className= "text-center mb-12">
             <h2 className= "text-3xl font-bold text-white mb-4">Industry-Specific Solutions</h2>";,"
             <p className= "text-blue-100 max-w-2xl mx-auto">,";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Tailored IT solutions designed for specific industry requirements and compliance needs
             </p>
           </div>
 
-<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
             {industrySolutions.map((solution, idx) => {
               const Icon: solution.icon;,,,
@@ -472,7 +453,6 @@ export default function ITServices(): React.JSX.Element {
                     {solution.solutions.map((item, sIdx) => (
                       <li key={sIdx} className="flex items-center text-sm text-slate-300"
                         <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />";,"
-=======
           <div className= "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {industrySolutions.map((solution, idx) => {
               const Icon: solution.icon;,,,
@@ -486,7 +466,6 @@ export default function ITServices(): React.JSX.Element {
                     {solution.solutions.map((item, sIdx) => (
                       <li key: {sIdx} className= "flex items-center text-sm text-slate-300">
                         <CheckCircle className= "w-3 h-3 text-green-400 mr-2 flex-shrink-0" />";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                         <span >{item}</span>
                       </li>
                     ))}
@@ -498,22 +477,18 @@ export default function ITServices(): React.JSX.Element {
         </section>
 
         {/* Additional Services */}
-<<<<<<< HEAD
         <section className="container mx-auto px-6 py-12"
           <div className="text-center mb-12"
             <h2 className="text-3xl font-bold text-white mb-4">Additional IT Services</h2>";,"
             <p className="text-blue-100 max-w-2xl mx-auto">,";,"
-=======
         <section className= "container mx-auto px-6 py-12">
           <div className= "text-center mb-12">
             <h2 className= "text-3xl font-bold text-white mb-4">Additional IT Services</h2>";,"
             <p className= "text-blue-100 max-w-2xl mx-auto">,";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Comprehensive IT support services to keep your infrastructure running smoothly
             </p>
           </div>
 
-<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
             {additionalITServices.map((service, idx) => (
               <div key={idx} className="bg-slate-800/30 backdrop-blur-sm rounded-xl p-6 border border-slate-700/30 hover:border-cyan-500/30 transition-all duration-300"
@@ -523,7 +498,6 @@ export default function ITServices(): React.JSX.Element {
                   {service.features.map((feature, fIdx) => (
                     <div key={fIdx} className="flex items-center text-xs text-slate-400"
                       <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />";,"
-=======
           <div className= "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {additionalITServices.map((service, idx) => (
               <div key: {idx} className= "bg-slate-800/30 backdrop-blur-sm rounded-xl p-6 border border-slate-700/30 hover:border-cyan-500/30 transition-all duration-300">
@@ -533,40 +507,32 @@ export default function ITServices(): React.JSX.Element {
                   {service.features.map((feature, fIdx) => (
                     <div key: {fIdx} className= "flex items-center text-xs text-slate-400">
                       <CheckCircle className= "w-3 h-3 text-green-400 mr-2 flex-shrink-0" />";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                       <span >{feature}</span>
                     </div>
                   ))}
                 </div>
-<<<<<<< HEAD
                 <div className="text-cyan-400 font-semibold text-sm">{service.price}</div>";"
-=======
                 <div className= "text-cyan-400 font-semibold text-sm">{service.price}</div>";"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
               </div>
             ))}
           </div>
         </section>
 
         {/* Contact Section */}
-<<<<<<< HEAD
         <section className="container mx-auto px-6 py-16"
           <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-2xl p-8 border border-cyan-500/20"
             <div className="text-center mb-8"
               <h2 className="text-3xl font-bold text-white mb-4">Ready to Modernize Your IT Infrastructure?</h2>";,"
               <p className="text-blue-100 max-w-2xl mx-auto">,";,"
-=======
         <section className= "container mx-auto px-6 py-16">
           <div className= "bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-2xl p-8 border border-cyan-500/20">
             <div className= "text-center mb-8">
               <h2 className= "text-3xl font-bold text-white mb-4">Ready to Modernize Your IT Infrastructure?</h2>";,"
               <p className= "text-blue-100 max-w-2xl mx-auto">,";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Get a comprehensive IT assessment and custom solution proposal. Most projects start with a detailed infrastructure analysis.
               </p>
             </div>
             
-<<<<<<< HEAD
             <div className="grid md:grid-cols-3 gap-6 text-center"
               <div >
                 <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center mx-auto mb-4"
@@ -607,7 +573,6 @@ export default function ITServices(): React.JSX.Element {
                 </a>
               </div>
               <p className="text-sm text-slate-400">,";,"
-=======
             <div className= "grid md:grid-cols-3 gap-6 text-center">
               <div >
                 <div className= "w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center mx-auto mb-4">
@@ -648,7 +613,6 @@ export default function ITServices(): React.JSX.Element {
                 </a>
               </div>
               <p className= "text-sm text-slate-400">,";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   364 E Main St STE 1008, Middletown DE 19709
               </p>
             </div>

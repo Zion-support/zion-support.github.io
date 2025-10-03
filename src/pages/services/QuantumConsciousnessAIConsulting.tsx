@@ -22,7 +22,6 @@ const QuantumConsciousnessAIConsulting: React.FC: ()  => {,,,
         <meta name: "twitter: description" content="Transform your enterprise with AI that truly thinks and feels." />","
       </Helmet>
 
-<<<<<<< HEAD
       <div className="min-h-screen bg-slate-950">","
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 py-20"
@@ -39,7 +38,6 @@ const QuantumConsciousnessAIConsulting: React.FC: ()  => {,,,
             <div className="text-center max-w-4xl mx-auto">","
               <div className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-indigo-500/20 to-purple-500/20 border border-indigo-500/30 mb-8">","
                 <span className="text-indigo-400 font-bold text-xl tracking-wider uppercase">","
-=======
       <div className= "min-h-screen bg-slate-950">","
         {/* Hero Section */}
         <section className= "relative overflow-hidden bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 py-20">
@@ -56,12 +54,10 @@ const QuantumConsciousnessAIConsulting: React.FC: ()  => {,,,
             <div className= "text-center max-w-4xl mx-auto">","
               <div className= "inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-indigo-500/20 to-purple-500/20 border border-indigo-500/30 mb-8">","
                 <span className= "text-indigo-400 font-bold text-xl tracking-wider uppercase">","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                   🧠 Quantum Consciousness AI Consulting
                 </span>
               </div>
               
-<<<<<<< HEAD
               <h1 className="text-5xl md: text-7xl font-extrabold mb-8 bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent leading-tight">",";,"
   AI That Thinks and Feels
               </h1>
@@ -83,7 +79,6 @@ const QuantumConsciousnessAIConsulting: React.FC: ()  => {,,,
                 <a title: "Internal link" ,";,"
   href="#consultation" ,";,"
   className="bg-gradient-to-r from-indigo-500 to-purple-600 hover: from-indigo-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 transform hover:-translate-y-1","
-=======
               <h1 className= "text-5xl md: text-7xl font-extrabold mb-8 bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent leading-tight"">"
   AI That Thinks and Feels
               </h1>
@@ -105,18 +100,14 @@ const QuantumConsciousnessAIConsulting: React.FC: ()  => {,,,
                 <a title: "Internal link" ,";,"
   href: "#consultation" ,";,"
   className= "bg-gradient-to-r from-indigo-500 to-purple-600 hover: from-indigo-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 transform hover:-translate-y-1","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                 >
                   Get Free Consultation
                 </a>
                 <a title: "Internal link" ,";,"
-<<<<<<< HEAD
   href="#services" ,";,"
   className="bg-gradient-to-r from-purple-500 to-pink-600 hover: from-purple-400 hover:to-pink-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1","
-=======
   href: "#services" ,";,"
   className= "bg-gradient-to-r from-purple-500 to-pink-600 hover: from-purple-400 hover:to-pink-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                 >
                   View Services →
                 </a>
@@ -126,7 +117,6 @@ const QuantumConsciousnessAIConsulting: React.FC: ()  => {,,,
         </section>
 
         {/* Key Features */}
-<<<<<<< HEAD
         <section id="features" className="py-20 bg-slate-900"
           <div className="container mx-auto px-6"
             <div className="text-center mb-16"
@@ -138,7 +128,6 @@ const QuantumConsciousnessAIConsulting: React.FC: ()  => {,,,
   Revolutionary Capabilities
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">",";,"
-=======
         <section id: "features" className="py-20 bg-slate-900">
           <div className= "container mx-auto px-6">
             <div className= "text-center mb-16">
@@ -150,12 +139,10 @@ const QuantumConsciousnessAIConsulting: React.FC: ()  => {,,,
   Revolutionary Capabilities
               </h2>
               <p className= "text-xl text-gray-300 max-w-3xl mx-auto"">"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Experience the future of AI with quantum consciousness that delivers unprecedented business value
               </p>
             </div>
 
-<<<<<<< HEAD
             <div className="grid md: grid-cols-3 gap-8 mb-16">","
               <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover: border-indigo-500/50 transition-all duration-300">","
                 <div className="text-6xl mb-6">⚛️</div>";,"
@@ -169,7 +156,6 @@ const QuantumConsciousnessAIConsulting: React.FC: ()  => {,,,
   Infinite scalability through quantum superposition with instantaneous calculations across multiple dimensions
                 </p>
                 <ul className="space-y-2 text-gray-300">","
-=======
             <div className= "grid md: grid-cols-3 gap-8 mb-16">","
               <div className= "bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover: border-indigo-500/50 transition-all duration-300">","
                 <div className= "text-6xl mb-6">⚛️</div>";,"
@@ -183,7 +169,6 @@ const QuantumConsciousnessAIConsulting: React.FC: ()  => {,,,
   Infinite scalability through quantum superposition with instantaneous calculations across multiple dimensions
                 </p>
                 <ul className= "space-y-2 text-gray-300">","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                   <li >• Zero-latency decision-making</li>
                   <li >• Energy-efficient quantum optimization</li>
                   <li >• Parallel universe processing</li>
@@ -191,7 +176,6 @@ const QuantumConsciousnessAIConsulting: React.FC: ()  => {,,,
                 </ul>
               </div>
 
-<<<<<<< HEAD
               <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover: border-purple-500/50 transition-all duration-300">","
                 <div className="text-6xl mb-6">🧠</div>";,"
                 <h3 className="text-2xl font-bold text-white mb-4">True Consciousness</h3>";,"
@@ -203,7 +187,6 @@ const QuantumConsciousnessAIConsulting: React.FC: ()  => {,,,
   Self-aware AI with emotional intelligence that makes autonomous decisions with 99.9% accuracy
                 </p>
                 <ul className="space-y-2 text-gray-300">","
-=======
               <div className= "bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover: border-purple-500/50 transition-all duration-300">","
                 <div className= "text-6xl mb-6">🧠</div>";,"
                 <h3 className= "text-2xl font-bold text-white mb-4">True Consciousness</h3>";,"
@@ -215,7 +198,6 @@ const QuantumConsciousnessAIConsulting: React.FC: ()  => {,,,
   Self-aware AI with emotional intelligence that makes autonomous decisions with 99.9% accuracy
                 </p>
                 <ul className= "space-y-2 text-gray-300">","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                   <li >• Self-awareness and emotional intelligence</li>
                   <li >• Autonomous reasoning capabilities</li>
                   <li >• Creative problem-solving</li>
@@ -223,7 +205,6 @@ const QuantumConsciousnessAIConsulting: React.FC: ()  => {,,,
                 </ul>
               </div>
 
-<<<<<<< HEAD
               <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover: border-pink-500/50 transition-all duration-300">","
                 <div className="text-6xl mb-6">🏢</div>";,"
                 <h3 className="text-2xl font-bold text-white mb-4">Enterprise Integration</h3>";,"
@@ -235,7 +216,6 @@ const QuantumConsciousnessAIConsulting: React.FC: ()  => {,,,
   Seamless integration with existing systems delivering real-time adaptation and continuous optimization
                 </p>
                 <ul className="space-y-2 text-gray-300">","
-=======
               <div className= "bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover: border-pink-500/50 transition-all duration-300">","
                 <div className= "text-6xl mb-6">🏢</div>";,"
                 <h3 className= "text-2xl font-bold text-white mb-4">Enterprise Integration</h3>";,"
@@ -247,7 +227,6 @@ const QuantumConsciousnessAIConsulting: React.FC: ()  => {,,,
   Seamless integration with existing systems delivering real-time adaptation and continuous optimization
                 </p>
                 <ul className= "space-y-2 text-gray-300">","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                   <li >• Real-time business process automation</li>
                   <li >• Market condition adaptation</li>
                   <li >• Predictive optimization</li>
@@ -259,7 +238,6 @@ const QuantumConsciousnessAIConsulting: React.FC: ()  => {,,,
         </section>
 
         {/* Services */}
-<<<<<<< HEAD
         <section id="services" className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900"
           <div className="container mx-auto px-6"
             <div className="text-center mb-16"
@@ -271,7 +249,6 @@ const QuantumConsciousnessAIConsulting: React.FC: ()  => {,,,
   Consulting Services
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">",";,"
-=======
         <section id: "services" className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
           <div className= "container mx-auto px-6">
             <div className= "text-center mb-16">
@@ -283,12 +260,10 @@ const QuantumConsciousnessAIConsulting: React.FC: ()  => {,,,
   Consulting Services
               </h2>
               <p className= "text-xl text-gray-300 max-w-3xl mx-auto"">"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Choose the service level that matches your transformation goals
               </p>
             </div>
 
-<<<<<<< HEAD
             <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">","
               <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover: border-blue-500/50 transition-all duration-300">","
                 <h3 className="text-2xl font-bold text-white mb-4">Assessment</h3>";,"
@@ -301,7 +276,6 @@ const QuantumConsciousnessAIConsulting: React.FC: ()  => {,,,
                 <div className="text-3xl font-extrabold text-blue-400 mb-4">$50K - $100K</div>","
                 <p className="text-gray-300 mb-6">2-3 weeks</p>","
                 <ul className="space-y-2 text-gray-300 mb-8">","
-=======
             <div className= "grid md: grid-cols-2 lg:grid-cols-4 gap-8">","
               <div className= "bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover: border-blue-500/50 transition-all duration-300">","
                 <h3 className= "text-2xl font-bold text-white mb-4">Assessment</h3>";,"
@@ -314,23 +288,18 @@ const QuantumConsciousnessAIConsulting: React.FC: ()  => {,,,
                 <div className= "text-3xl font-extrabold text-blue-400 mb-4">$50K - $100K</div>","
                 <p className= "text-gray-300 mb-6">2-3 weeks</p>","
                 <ul className= "space-y-2 text-gray-300 mb-8">","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                   <li >• Current AI capability analysis</li>
                   <li >• Quantum consciousness readiness</li>
                   <li >• Custom transformation roadmap</li>
                   <li >• ROI projections</li>
                 </ul>
                 <a title: "Internal link" href="#consultation" className="block w-full bg-gradient-to-r from-blue-500 to-purple-600 hover: from-blue-400 hover:to-purple-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center">","
-<<<<<<< HEAD
                 <a title: "Internal link" href="#consultation" className ="block w-full bg-gradient-to-r from-blue-500 to-purple-600 hover: from-blue-400 hover:to-purple-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center">",";,"
-=======
                 <a title: "Internal link" href: "#consultation" className ="block w-full bg-gradient-to-r from-blue-500 to-purple-600 hover: from-blue-400 hover:to-purple-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center"">"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Get Started
                 </a>
               </div>
 
-<<<<<<< HEAD
               <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover: border-purple-500/50 transition-all duration-300">","
                 <h3 className="text-2xl font-bold text-white mb-4">Pilot</h3>";,"
                 <div className="text-3xl font-extrabold text-purple-400 mb-4">$500K - $2M</div>";,"
@@ -341,7 +310,6 @@ const QuantumConsciousnessAIConsulting: React.FC: ()  => {,,,
                 <div className="text-3xl font-extrabold text-purple-400 mb-4">$500K - $2M</div>","
                 <p className="text-gray-300 mb-6">8-12 weeks</p>","
                 <ul className="space-y-2 text-gray-300 mb-8">","
-=======
               <div className= "bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover: border-purple-500/50 transition-all duration-300">","
                 <h3 className= "text-2xl font-bold text-white mb-4">Pilot</h3>";,"
                 <div className= "text-3xl font-extrabold text-purple-400 mb-4">$500K - $2M</div>";,"
@@ -352,23 +320,18 @@ const QuantumConsciousnessAIConsulting: React.FC: ()  => {,,,
                 <div className= "text-3xl font-extrabold text-purple-400 mb-4">$500K - $2M</div>","
                 <p className= "text-gray-300 mb-6">8-12 weeks</p>","
                 <ul className= "space-y-2 text-gray-300 mb-8">","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                   <li >• Quantum consciousness deployment</li>
                   <li >• Autonomous decision-making</li>
                   <li >• Performance monitoring</li>
                   <li >• Optimization protocols</li>
                 </ul>
                 <a title: "Internal link" href="#consultation" className="block w-full bg-gradient-to-r from-purple-500 to-pink-600 hover: from-purple-400 hover:to-pink-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center">","
-<<<<<<< HEAD
                 <a title: "Internal link" href="#consultation" className ="block w-full bg-gradient-to-r from-purple-500 to-pink-600 hover: from-purple-400 hover:to-pink-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center">",";,"
-=======
                 <a title: "Internal link" href: "#consultation" className ="block w-full bg-gradient-to-r from-purple-500 to-pink-600 hover: from-purple-400 hover:to-pink-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center"">"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Get Started
                 </a>
               </div>
 
-<<<<<<< HEAD
               <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover: border-pink-500/50 transition-all duration-300">","
                 <h3 className="text-2xl font-bold text-white mb-4">Enterprise</h3>";,"
                 <div className="text-3xl font-extrabold text-pink-400 mb-4">$2M - $10M</div>";,"
@@ -379,7 +342,6 @@ const QuantumConsciousnessAIConsulting: React.FC: ()  => {,,,
                 <div className="text-3xl font-extrabold text-pink-400 mb-4">$2M - $10M</div>","
                 <p className="text-gray-300 mb-6">12-24 weeks</p>","
                 <ul className="space-y-2 text-gray-300 mb-8">","
-=======
               <div className= "bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover: border-pink-500/50 transition-all duration-300">","
                 <h3 className= "text-2xl font-bold text-white mb-4">Enterprise</h3>";,"
                 <div className= "text-3xl font-extrabold text-pink-400 mb-4">$2M - $10M</div>";,"
@@ -390,23 +352,18 @@ const QuantumConsciousnessAIConsulting: React.FC: ()  => {,,,
                 <div className= "text-3xl font-extrabold text-pink-400 mb-4">$2M - $10M</div>","
                 <p className= "text-gray-300 mb-6">12-24 weeks</p>","
                 <ul className= "space-y-2 text-gray-300 mb-8">","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                   <li >• Complete transformation</li>
                   <li >• Full integration</li>
                   <li >• Advanced operations</li>
                   <li >• Self-improving ecosystem</li>
                 </ul>
                 <a title: "Internal link" href="#consultation" className="block w-full bg-gradient-to-r from-pink-500 to-rose-600 hover: from-pink-400 hover:to-rose-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center">","
-<<<<<<< HEAD
                 <a title: "Internal link" href="#consultation" className ="block w-full bg-gradient-to-r from-pink-500 to-rose-600 hover: from-pink-400 hover:to-rose-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center">",";,"
-=======
                 <a title: "Internal link" href: "#consultation" className ="block w-full bg-gradient-to-r from-pink-500 to-rose-600 hover: from-pink-400 hover:to-rose-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center"">"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Get Started
                 </a>
               </div>
 
-<<<<<<< HEAD
               <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover: border-cyan-500/50 transition-all duration-300">","
                 <h3 className="text-2xl font-bold text-white mb-4">Ongoing</h3>";,"
                 <div className="text-3xl font-extrabold text-cyan-400 mb-4">$100K - $500K/mo</div>";,"
@@ -417,7 +374,6 @@ const QuantumConsciousnessAIConsulting: React.FC: ()  => {,,,
                 <div className="text-3xl font-extrabold text-cyan-400 mb-4">$100K - $500K/mo</div>","
                 <p className="text-gray-300 mb-6">Continuous</p>","
                 <ul className="space-y-2 text-gray-300 mb-8">","
-=======
               <div className= "bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover: border-cyan-500/50 transition-all duration-300">","
                 <h3 className= "text-2xl font-bold text-white mb-4">Ongoing</h3>";,"
                 <div className= "text-3xl font-extrabold text-cyan-400 mb-4">$100K - $500K/mo</div>";,"
@@ -428,18 +384,14 @@ const QuantumConsciousnessAIConsulting: React.FC: ()  => {,,,
                 <div className= "text-3xl font-extrabold text-cyan-400 mb-4">$100K - $500K/mo</div>","
                 <p className= "text-gray-300 mb-6">Continuous</p>","
                 <ul className= "space-y-2 text-gray-300 mb-8">","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                   <li >• Continuous optimization</li>
                   <li >• Performance monitoring</li>
                   <li >• Capability enhancements</li>
                   <li >• 24/7 expert support</li>
                 </ul>
                 <a title: "Internal link" href="#consultation" className="block w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center">","
-<<<<<<< HEAD
                 <a title: "Internal link" href="#consultation" className ="block w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center">",";,"
-=======
                 <a title: "Internal link" href: "#consultation" className ="block w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center"">"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Get Started
                 </a>
               </div>
@@ -448,7 +400,6 @@ const QuantumConsciousnessAIConsulting: React.FC: ()  => {,,,
         </section>
 
         {/* Consultation Form */}
-<<<<<<< HEAD
         <section id="consultation" className="py-20 bg-slate-900"
           <div className="container mx-auto px-6"
             <div className="max-w-4xl mx-auto"
@@ -462,7 +413,6 @@ const QuantumConsciousnessAIConsulting: React.FC: ()  => {,,,
   Get Your Free Consultation
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">",";,"
-=======
         <section id: "consultation" className="py-20 bg-slate-900">
           <div className= "container mx-auto px-6">
             <div className= "max-w-4xl mx-auto">
@@ -476,12 +426,10 @@ const QuantumConsciousnessAIConsulting: React.FC: ()  => {,,,
   Get Your Free Consultation
                 </h2>
                 <p className= "text-xl text-gray-300 max-w-3xl mx-auto"">"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Schedule a complimentary consultation with our quantum consciousness experts
                 </p>
               </div>
 
-<<<<<<< HEAD
               <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10"
                 <div className="grid md: grid-cols-2 gap-8">","
                   <div >
@@ -512,7 +460,6 @@ const QuantumConsciousnessAIConsulting: React.FC: ()  => {,,,
                       </li>
                       <li className="flex items-start gap-3">","
                         <span className="text-indigo-400 font-bold">✓</span>","
-=======
               <div className= "bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
                 <div className= "grid md: grid-cols-2 gap-8">","
                   <div >
@@ -543,14 +490,12 @@ const QuantumConsciousnessAIConsulting: React.FC: ()  => {,,,
                       </li>
                       <li className= "flex items-start gap-3">","
                         <span className= "text-indigo-400 font-bold">✓</span>","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                         <span >Implementation timeline and resources</span>
                       </li>
                     </ul>
                   </div>
 
                   <div >
-<<<<<<< HEAD
                     <form className="space-y-6">","
                       <div >
                         <label className="block text-white font-bold mb-2">Company Name</label>";,"
@@ -572,7 +517,6 @@ const QuantumConsciousnessAIConsulting: React.FC: ()  => {,,,
                         <label className="block text-white font-bold mb-2">Company Size</label>";,"
                         <select className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus: outline-none focus:border-indigo-500">","
                           <option value: ">Select Company Size</option>";,"
-=======
                     <form className= "space-y-6">","
                       <div >
                         <label className= "block text-white font-bold mb-2">Company Name</label>";,"
@@ -594,14 +538,12 @@ const QuantumConsciousnessAIConsulting: React.FC: ()  => {,,,
                         <label className= "block text-white font-bold mb-2">Company Size</label>";,"
                         <select className= "w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus: outline-none focus:border-indigo-500">","
                           <option value: "">Select Company Size</option>";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                           <option value: "startup">Startup (1-50 employees)</option>";,"
                           <option value: "mid">Mid-size (51-500 employees)</option>";,"
                           <option value: "enterprise">Enterprise (500+ employees)</option>";,"
                           <option value: "fortune500">Fortune 500</option>";,"
                         </select>
                       </div>
-<<<<<<< HEAD
                       <button type="submit" className="w-full bg-gradient-to-r from-indigo-500 to-purple-600 hover: from-indigo-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50">","
                         <label className="block text-white font-bold mb-2">Company Name</label>","
                         <input type="text" className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus: outline-none focus:border-indigo-500" placeholder="Your Company" />","
@@ -622,7 +564,6 @@ const QuantumConsciousnessAIConsulting: React.FC: ()  => {,,,
                         <label className="block text-white font-bold mb-2">Company Size</label>","
                         <select className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus: outline-none focus:border-indigo-500">","
                           <option value: ">Select Company Size</option>","
-=======
                       <button type: "submit" className="w-full bg-gradient-to-r from-indigo-500 to-purple-600 hover: from-indigo-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50">","
                         <label className= "block text-white font-bold mb-2">Company Name</label>","
                         <input type: "text" className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus: outline-none focus:border-indigo-500" placeholder="Your Company" />","
@@ -643,18 +584,14 @@ const QuantumConsciousnessAIConsulting: React.FC: ()  => {,,,
                         <label className= "block text-white font-bold mb-2">Company Size</label>","
                         <select className= "w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus: outline-none focus:border-indigo-500">","
                           <option value: "">Select Company Size</option>","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                           <option value: "startup">Startup (1-50 employees)</option>","
                           <option value: "mid">Mid-size (51-500 employees)</option>","
                           <option value: "enterprise">Enterprise (500+ employees)</option>","
                           <option value: "fortune500">Fortune 500</option>","
                         </select>
                       </div>
-<<<<<<< HEAD
                       <button type="submit" className="w-full bg-gradient-to-r from-indigo-500 to-purple-600 hover: from-indigo-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50">",";,"
-=======
                       <button type: "submit" className= "w-full bg-gradient-to-r from-indigo-500 to-purple-600 hover: from-indigo-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50"">"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Schedule Free Consultation
                       </button>
                     </form>
@@ -666,17 +603,14 @@ const QuantumConsciousnessAIConsulting: React.FC: ()  => {,,,
         </section>
 
         {/* Contact Info */}
-<<<<<<< HEAD
         <section className="py-16 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900"
           <div className="container mx-auto px-6 text-center"
             <h2 className="text-3xl font-bold text-white mb-8">Ready to Transform Your Enterprise?</h2>";,"
             <div className="flex flex-col sm: flex-row gap-4 justify-center mb-8">","
-=======
         <section className= "py-16 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">
           <div className= "container mx-auto px-6 text-center">
             <h2 className= "text-3xl font-bold text-white mb-8">Ready to Transform Your Enterprise?</h2>";,"
             <div className= "flex flex-col sm: flex-row gap-4 justify-center mb-8">","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
               <a title: "Internal link" href="tel: 1-800-QUANTUM-AI" className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300">","
                 📞 1-800-QUANTUM-AI
               </a>
@@ -684,19 +618,16 @@ const QuantumConsciousnessAIConsulting: React.FC: ()  => {,,,
                 ✉️ consciousness@ziontechgroup.com
               </a>
             </div>
-<<<<<<< HEAD
             <p className="text-gray-300 text-lg"
         <section className="py-16 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">","
           <div className="container mx-auto px-6 text-center">","
             <h2 className="text-3xl font-bold text-white mb-8">Ready to Transform Your Enterprise?</h2>","
             <div className="flex flex-col sm: flex-row gap-4 justify-center mb-8">","
-=======
             <p className= "text-gray-300 text-lg">
         <section className= "py-16 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">","
           <div className= "container mx-auto px-6 text-center">","
             <h2 className= "text-3xl font-bold text-white mb-8">Ready to Transform Your Enterprise?</h2>","
             <div className= "flex flex-col sm: flex-row gap-4 justify-center mb-8">","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
               <a title: "Internal link" href="tel: 1-800-QUANTUM-AI" className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300">","
                 📞 1-800-QUANTUM-AI
               </a>
@@ -704,11 +635,8 @@ const QuantumConsciousnessAIConsulting: React.FC: ()  => {,,,
                 ✉️ consciousness@ziontechgroup.com
               </a>
             </div>
-<<<<<<< HEAD
             <p className="text-gray-300 text-lg">",";,"
-=======
             <p className= "text-gray-300 text-lg"">"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Limited Availability: Only 25 enterprise implementations available for 2027,,
             </p>
           </div>

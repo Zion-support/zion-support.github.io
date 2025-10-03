@@ -3,42 +3,33 @@ import React from "react";
 
 export default function GenAICostOptimizationV4(): React.JSX.Element {
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">","
-=======
     <div className= "min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
       <Helmet >
         <title >GenAI Cost Optimization v4 — 60–80% Savings, Stable Quality</title>
         <meta name: "description" content ="Tiered routing, semantic caches, selective distillation, and eval-gated fallbacks to slash cost while preserving UX KPIs." /><link rel: "canonical" href="https://ziontechgroup.com/blog/genai-2025-oct-01-cost-optimization-v4/>","
       </Helmet>
 
-<<<<<<< HEAD
       <div className="container mx-auto px-6 py-16"
         <h1 className="text-4xl md: text-5xl font-bold mb-4">GenAI Cost Optimization v4</h1>","
         <p className="text-zion-slate-light mb-8">Tier Routing • Semantic Caches • Distillation • Eval-Gated Fallbacks</p>";,"
         <div className="prose prose-invert max-w-3xl"
-=======
       <div className= "container mx-auto px-6 py-16">
         <h1 className= "text-4xl md: text-5xl font-bold mb-4">GenAI Cost Optimization v4</h1>","
         <p className= "text-zion-slate-light mb-8">Tier Routing • Semantic Caches • Distillation • Eval-Gated Fallbacks</p>";,"
         <div className= "prose prose-invert max-w-3xl">
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
         <meta name: "description" content ="Tiered routing, semantic caches, selective distillation, and eval-gated fallbacks to slash cost while preserving UX KPIs." />","
         <link rel: "canonical" href ="https: //ziontechgroup.com/blog/genai-2025-oct-01-cost-optimization-v4" />","
       </Helmet>
 
-<<<<<<< HEAD
       <div className="container mx-auto px-6 py-16">","
         <h1 className="text-4xl md: text-5xl font-bold mb-4">GenAI Cost Optimization v4</h1>","
         <p className="text-zion-slate-light mb-8">Tier Routing • Semantic Caches • Distillation • Eval-Gated Fallbacks</p>","
         <div className="prose prose-invert max-w-3xl">","
-=======
       <div className= "container mx-auto px-6 py-16">","
         <h1 className= "text-4xl md: text-5xl font-bold mb-4">GenAI Cost Optimization v4</h1>","
         <p className= "text-zion-slate-light mb-8">Tier Routing • Semantic Caches • Distillation • Eval-Gated Fallbacks</p>","
         <div className= "prose prose-invert max-w-3xl">","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
           <p >
             Cut inference spend by 60–80% while preserving product KPIs. This blueprint covers cost-aware routers, semantic
             caches, selective distillation, and eval-gated fallbacks that keep quality stable under variable traffic.

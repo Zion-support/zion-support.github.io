@@ -6,7 +6,6 @@ const AIMLOpsAutomation: () => {
         <title >AI MLOps Automation Services | Zion Tech Group</title>
         <meta name: "description" ,";,"
   content: "Enterprise MLOps automation with 99.9% reliability. Deploy, monitor, and scale ML models with automated pipelines, real-time monitoring, and intelligent optimization." /><meta name: "keywords" content ="MLOps, AI automation, ML deployment, model monitoring, CI/CD for ML, automated ML pipelines" /></Helmet>";,"
-<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white dark: from-gray-900 dark:to-gray-800">","
         {/* Hero Section */};
         <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20"
@@ -17,7 +16,6 @@ const AIMLOpsAutomation: () => {
   AI MLOps Automation
               </h1>
               <p className="text-xl md: text-2xl mb-8 max-w-3xl mx-auto">",";,"
-=======
       <div className= "min-h-screen bg-gradient-to-b from-gray-50 to-white dark: from-gray-900 dark:to-gray-800">","
         {/* Hero Section */};
         <section className= "relative overflow-hidden bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
@@ -28,13 +26,11 @@ const AIMLOpsAutomation: () => {
   AI MLOps Automation
               </h1>
               <p className= "text-xl md: text-2xl mb-8 max-w-3xl mx-auto"">"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   content: "Enterprise MLOps automation with 99.9% reliability. Deploy, monitor, and scale ML models with automated pipelines, real-time monitoring, and intelligent optimization.","
         />
         <meta name: "keywords" content ="MLOps, AI automation, ML deployment, model monitoring, CI/CD for ML, automated ML pipelines" />","
       </Helmet>
 
-<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white dark: from-gray-900 dark:to-gray-800">","
         {/* Hero Section */};
         <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">","
@@ -58,7 +54,6 @@ const AIMLOpsAutomation: () => {
                 <a title: "Internal link",";,"
   href="#features",";,"
   className="inline-flex items-center px-8 py-3 bg-transparent border-2 border-white text-white rounded-lg font-semibold hover: bg-white hover:text-blue-600 transition-colors","
-=======
       <div className= "min-h-screen bg-gradient-to-b from-gray-50 to-white dark: from-gray-900 dark:to-gray-800">","
         {/* Hero Section */};
         <section className= "relative overflow-hidden bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">","
@@ -82,7 +77,6 @@ const AIMLOpsAutomation: () => {
                 <a title: "Internal link",";,"
   href: "#features",";,"
   className= "inline-flex items-center px-8 py-3 bg-transparent border-2 border-white text-white rounded-lg font-semibold hover: bg-white hover:text-blue-600 transition-colors","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                 >
                   Learn More
                 </a>
@@ -92,7 +86,6 @@ const AIMLOpsAutomation: () => {
         </section>
 
         {/* Key Metrics */}
-<<<<<<< HEAD
         <section className="py-16 bg-white dark: bg-gray-800">","
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
             <div className="grid grid-cols-1 md: grid-cols-4 gap-8 text-center">","
@@ -129,7 +122,6 @@ const AIMLOpsAutomation: () => {
               <div className="p-6">","
                 <div className="text-4xl font-bold text-blue-600 mb-2">72%</div>","
                 <div className="text-gray-600 dark: text-gray-300">Cost Reduction</div>","
-=======
         <section className= "py-16 bg-white dark: bg-gray-800">","
           <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
             <div className= "grid grid-cols-1 md: grid-cols-4 gap-8 text-center">","
@@ -166,14 +158,12 @@ const AIMLOpsAutomation: () => {
               <div className= "p-6">","
                 <div className= "text-4xl font-bold text-blue-600 mb-2">72%</div>","
                 <div className= "text-gray-600 dark: text-gray-300">Cost Reduction</div>","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
               </div>
             </div>
           </div>
         </section>
 
         {/* Features Section */}
-<<<<<<< HEAD
         <section id="features" className="py-20 bg-gray-50 dark: bg-gray-900">","
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
             <div className="text-center mb-16"
@@ -184,7 +174,6 @@ const AIMLOpsAutomation: () => {
             <div className="text-center mb-16">","
               <h2 className="text-4xl font-bold mb-4">Comprehensive MLOps Platform</h2>","
               <p className="text-xl text-gray-600 dark: text-gray-300 max-w-3xl mx-auto">",";,"
-=======
         <section id: "features" className="py-20 bg-gray-50 dark: bg-gray-900">","
           <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
             <div className= "text-center mb-16">
@@ -195,12 +184,10 @@ const AIMLOpsAutomation: () => {
             <div className= "text-center mb-16">","
               <h2 className= "text-4xl font-bold mb-4">Comprehensive MLOps Platform</h2>","
               <p className= "text-xl text-gray-600 dark: text-gray-300 max-w-3xl mx-auto"">"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   End-to-end automation for the entire ML lifecycle - from development to production
               </p>
             </div>
 
-<<<<<<< HEAD
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">","
               {/* Automated Pipelines */}
               <div className="bg-white dark: bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow">","
@@ -241,7 +228,6 @@ const AIMLOpsAutomation: () => {
                   <li className="flex items-start">","
                     <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-1" />","
                     <span className="text-gray-700 dark: text-gray-300">Instant rollback on failure</span>","
-=======
             <div className= "grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">","
               {/* Automated Pipelines */}
               <div className= "bg-white dark: bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow">","
@@ -282,13 +268,11 @@ const AIMLOpsAutomation: () => {
                   <li className= "flex items-start">","
                     <CheckCircle className= "h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-1" />","
                     <span className= "text-gray-700 dark: text-gray-300">Instant rollback on failure</span>","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                   </li>
                 </ul>
               </div>
 
               {/* Real-time Monitoring */}
-<<<<<<< HEAD
               <div className="bg-white dark: bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow">","
                 <TrendingUp className="h-12 w-12 text-blue-600 mb-4/>";,"
                 <h3 className="text-2xl font-bold mb-4">Real-time Model Monitoring</h3>";,"
@@ -325,7 +309,6 @@ const AIMLOpsAutomation: () => {
                   <li className="flex items-start">","
                     <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-1" />","
                     <span className="text-gray-700 dark: text-gray-300">Automated retraining triggers</span>","
-=======
               <div className= "bg-white dark: bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow">","
                 <TrendingUp className= "h-12 w-12 text-blue-600 mb-4/>";,"
                 <h3 className= "text-2xl font-bold mb-4">Real-time Model Monitoring</h3>";,"
@@ -362,13 +345,11 @@ const AIMLOpsAutomation: () => {
                   <li className= "flex items-start">","
                     <CheckCircle className= "h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-1" />","
                     <span className= "text-gray-700 dark: text-gray-300">Automated retraining triggers</span>","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                   </li>
                 </ul>
               </div>
 
               {/* Model Registry */}
-<<<<<<< HEAD
               <div className="bg-white dark: bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow">","
                 <Shield className="h-12 w-12 text-blue-600 mb-4/>";,"
                 <h3 className="text-2xl font-bold mb-4">Centralized Model Registry</h3>";,"
@@ -405,7 +386,6 @@ const AIMLOpsAutomation: () => {
                   <li className="flex items-start">","
                     <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-1" />","
                     <span className="text-gray-700 dark: text-gray-300">Compliance audit trails</span>","
-=======
               <div className= "bg-white dark: bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow">","
                 <Shield className= "h-12 w-12 text-blue-600 mb-4/>";,"
                 <h3 className= "text-2xl font-bold mb-4">Centralized Model Registry</h3>";,"
@@ -442,13 +422,11 @@ const AIMLOpsAutomation: () => {
                   <li className= "flex items-start">","
                     <CheckCircle className= "h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-1" />","
                     <span className= "text-gray-700 dark: text-gray-300">Compliance audit trails</span>","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                   </li>
                 </ul>
               </div>
 
               {/* Feature Store */}
-<<<<<<< HEAD
               <div className="bg-white dark: bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow">","
                 <Users className="h-12 w-12 text-blue-600 mb-4/>";,"
                 <h3 className="text-2xl font-bold mb-4">Enterprise Feature Store</h3>";,"
@@ -485,7 +463,6 @@ const AIMLOpsAutomation: () => {
                   <li className="flex items-start">","
                     <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-1" />","
                     <span className="text-gray-700 dark: text-gray-300">Training-serving consistency</span>","
-=======
               <div className= "bg-white dark: bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow">","
                 <Users className= "h-12 w-12 text-blue-600 mb-4/>";,"
                 <h3 className= "text-2xl font-bold mb-4">Enterprise Feature Store</h3>";,"
@@ -522,13 +499,11 @@ const AIMLOpsAutomation: () => {
                   <li className= "flex items-start">","
                     <CheckCircle className= "h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-1" />","
                     <span className= "text-gray-700 dark: text-gray-300">Training-serving consistency</span>","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                   </li>
                 </ul>
               </div>
 
               {/* Auto-scaling */}
-<<<<<<< HEAD
               <div className="bg-white dark: bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow">","
                 <Zap className="h-12 w-12 text-blue-600 mb-4/>";,"
                 <h3 className="text-2xl font-bold mb-4">Intelligent Auto-scaling</h3>";,"
@@ -565,7 +540,6 @@ const AIMLOpsAutomation: () => {
                   <li className="flex items-start">","
                     <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-1" />","
                     <span className="text-gray-700 dark: text-gray-300">Zero downtime scaling</span>","
-=======
               <div className= "bg-white dark: bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow">","
                 <Zap className= "h-12 w-12 text-blue-600 mb-4/>";,"
                 <h3 className= "text-2xl font-bold mb-4">Intelligent Auto-scaling</h3>";,"
@@ -602,13 +576,11 @@ const AIMLOpsAutomation: () => {
                   <li className= "flex items-start">","
                     <CheckCircle className= "h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-1" />","
                     <span className= "text-gray-700 dark: text-gray-300">Zero downtime scaling</span>","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                   </li>
                 </ul>
               </div>
 
               {/* Experiment Tracking */}
-<<<<<<< HEAD
               <div className="bg-white dark: bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow">","
                 <TrendingUp className="h-12 w-12 text-blue-600 mb-4/>";,"
                 <h3 className="text-2xl font-bold mb-4">Experiment Tracking</h3>";,"
@@ -645,7 +617,6 @@ const AIMLOpsAutomation: () => {
                   <li className="flex items-start">","
                     <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-1" />","
                     <span className="text-gray-700 dark: text-gray-300">Reproducibility</span>","
-=======
               <div className= "bg-white dark: bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow">","
                 <TrendingUp className= "h-12 w-12 text-blue-600 mb-4/>";,"
                 <h3 className= "text-2xl font-bold mb-4">Experiment Tracking</h3>";,"
@@ -682,7 +653,6 @@ const AIMLOpsAutomation: () => {
                   <li className= "flex items-start">","
                     <CheckCircle className= "h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-1" />","
                     <span className= "text-gray-700 dark: text-gray-300">Reproducibility</span>","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                   </li>
                 </ul>
               </div>
@@ -691,7 +661,6 @@ const AIMLOpsAutomation: () => {
         </section>
 
         {/* Use Cases */}
-<<<<<<< HEAD
         <section className="py-20 bg-white dark: bg-gray-800">","
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
             <div className="text-center mb-16"
@@ -702,7 +671,6 @@ const AIMLOpsAutomation: () => {
             <div className="text-center mb-16">","
               <h2 className="text-4xl font-bold mb-4">Proven Use Cases</h2>","
               <p className="text-xl text-gray-600 dark: text-gray-300">",";,"
-=======
         <section className= "py-20 bg-white dark: bg-gray-800">","
           <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
             <div className= "text-center mb-16">
@@ -713,12 +681,10 @@ const AIMLOpsAutomation: () => {
             <div className= "text-center mb-16">","
               <h2 className= "text-4xl font-bold mb-4">Proven Use Cases</h2>","
               <p className= "text-xl text-gray-600 dark: text-gray-300"">"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Real-world results from enterprise deployments
               </p>
             </div>
 
-<<<<<<< HEAD
             <div className="grid grid-cols-1 md: grid-cols-2 gap-8">","
               <div className="bg-gradient-to-br from-blue-50 to-purple-50 dark: from-gray-700 dark:to-gray-600 p-8 rounded-xl">","
                 <h3 className="text-2xl font-bold mb-4">Financial Services</h3>";,"
@@ -753,7 +719,6 @@ const AIMLOpsAutomation: () => {
                   </li>
                   <li className="flex items-start">","
                     <CheckCircle className="h-5 w-5 text-green-600 mr-2 flex-shrink-0 mt-1" />","
-=======
             <div className= "grid grid-cols-1 md: grid-cols-2 gap-8">","
               <div className= "bg-gradient-to-br from-blue-50 to-purple-50 dark: from-gray-700 dark:to-gray-600 p-8 rounded-xl">","
                 <h3 className= "text-2xl font-bold mb-4">Financial Services</h3>";,"
@@ -788,13 +753,11 @@ const AIMLOpsAutomation: () => {
                   </li>
                   <li className= "flex items-start">","
                     <CheckCircle className= "h-5 w-5 text-green-600 mr-2 flex-shrink-0 mt-1" />","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                     <span >Full regulatory compliance</span>
                   </li>
                 </ul>
               </div>
 
-<<<<<<< HEAD
               <div className="bg-gradient-to-br from-green-50 to-blue-50 dark: from-gray-700 dark:to-gray-600 p-8 rounded-xl">","
                 <h3 className="text-2xl font-bold mb-4">E-Commerce</h3>";,"
                 <p className="text-gray-700 dark: text-gray-200 mb-4">",";,"
@@ -827,7 +790,6 @@ const AIMLOpsAutomation: () => {
                   </li>
                   <li className="flex items-start">","
                     <CheckCircle className="h-5 w-5 text-green-600 mr-2 flex-shrink-0 mt-1" />","
-=======
               <div className= "bg-gradient-to-br from-green-50 to-blue-50 dark: from-gray-700 dark:to-gray-600 p-8 rounded-xl">","
                 <h3 className= "text-2xl font-bold mb-4">E-Commerce</h3>";,"
                 <p className= "text-gray-700 dark: text-gray-200 mb-4"">"
@@ -860,7 +822,6 @@ const AIMLOpsAutomation: () => {
                   </li>
                   <li className= "flex items-start">","
                     <CheckCircle className= "h-5 w-5 text-green-600 mr-2 flex-shrink-0 mt-1" />","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                     <span >Sub-100ms prediction latency</span>
                   </li>
                 </ul>
@@ -870,7 +831,6 @@ const AIMLOpsAutomation: () => {
         </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white"
           <div className="max-w-4xl mx-auto text-center px-4 sm: px-6 lg:px-8">","
             <h2 className="text-4xl font-bold mb-6"
@@ -892,7 +852,6 @@ const AIMLOpsAutomation: () => {
               </Link>
               <Link to: "/blog",";,"
   className="inline-flex items-center px-8 py-3 bg-transparent border-2 border-white text-white rounded-lg font-semibold hover: bg-white hover:text-blue-600 transition-colors","
-=======
         <section className= "py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
           <div className= "max-w-4xl mx-auto text-center px-4 sm: px-6 lg:px-8">","
             <h2 className= "text-4xl font-bold mb-6">
@@ -914,7 +873,6 @@ const AIMLOpsAutomation: () => {
               </Link>
               <Link to: "/blog",";,"
   className= "inline-flex items-center px-8 py-3 bg-transparent border-2 border-white text-white rounded-lg font-semibold hover: bg-white hover:text-blue-600 transition-colors","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
               >
                 Read Our Blog
               </Link>

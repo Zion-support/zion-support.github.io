@@ -2,7 +2,6 @@
 
 export default function Page(): void {
   return (
-<<<<<<< HEAD
     <main className="min-h-screen bg-white text-gray-900"
       <section className="container mx-auto px-6 py-16"
         <div className="max-w-3xl"
@@ -18,7 +17,6 @@ export default function Page(): void {
             online policy gates—without sacrificing quality or developer velocity.
           </p>
           <div className="prose prose-indigo">","
-=======
     <main className= "min-h-screen bg-white text-gray-900">
       <section className= "container mx-auto px-6 py-16">
         <div className= "max-w-3xl">
@@ -34,7 +32,6 @@ export default function Page(): void {
             online policy gates—without sacrificing quality or developer velocity.
           </p>
           <div className= "prose prose-indigo">","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
             <h2 >What You Will Learn</h2>
             <ul >
               <li >Right‑size offline suites to what predicts outcomes</li>

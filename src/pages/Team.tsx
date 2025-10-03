@@ -9,7 +9,6 @@ const Team: React.FC: ()  => {,,,
         <meta name: "description" content ="Meet the talented professionals behind Zion Tech Group's innovative solutions." />";,"
       </Helmet>
       
-<<<<<<< HEAD
       <div className="py-20 px-4"
         <div className="max-w-4xl mx-auto text-center"
           <h1 className="text-4xl font-bold text-gray-900 mb-6">Our Team - Zion Tech Group</h1>";,"
@@ -18,7 +17,6 @@ const Team: React.FC: ()  => {,,,
           </p>
           <div className="bg-white p-8 rounded-xl shadow-lg"
             <p className="text-gray-600">,";,"
-=======
       <div className= "py-20 px-4">
         <div className= "max-w-4xl mx-auto text-center">
           <h1 className= "text-4xl font-bold text-gray-900 mb-6">Our Team - Zion Tech Group</h1>";,"
@@ -27,7 +25,6 @@ const Team: React.FC: ()  => {,,,
           </p>
           <div className= "bg-white p-8 rounded-xl shadow-lg">
             <p className= "text-gray-600">,";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   We're working hard to bring you the best content and features. Thank you for your patience.';';
             </p>
           </div>

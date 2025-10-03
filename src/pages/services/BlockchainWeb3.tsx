@@ -317,7 +317,6 @@ const BlockchainWeb3: React.FC: ()  => {,,,
 
       <Header />
       
-<<<<<<< HEAD
       <main className="min-h-screen bg-white">","
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-indigo-900 via-indigo-800 to-purple-900 text-white py-20"
@@ -355,7 +354,6 @@ const BlockchainWeb3: React.FC: ()  => {,,,
                   View Pricing
                   <ArrowRight className="w-5 h-5 ml-2/>";,"
                   <ArrowRight className="w-5 h-5 ml-2" />","
-=======
       <main className= "min-h-screen bg-white">","
         {/* Hero Section */}
         <section className= "bg-gradient-to-br from-indigo-900 via-indigo-800 to-purple-900 text-white py-20">
@@ -393,7 +391,6 @@ const BlockchainWeb3: React.FC: ()  => {,,,
                   View Pricing
                   <ArrowRight className= "w-5 h-5 ml-2/>";,"
                   <ArrowRight className= "w-5 h-5 ml-2" />","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                 </a>
               </div>
             </div>
@@ -401,7 +398,6 @@ const BlockchainWeb3: React.FC: ()  => {,,,
         </section>
 
         {/* Key Benefits */}
-<<<<<<< HEAD
         <section className="py-16 bg-gray-50"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
             <div className="text-center mb-12"
@@ -413,7 +409,6 @@ const BlockchainWeb3: React.FC: ()  => {,,,
   Why Choose Our Blockchain & Web3 Services?
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">",";,"
-=======
         <section className= "py-16 bg-gray-50">
           <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
             <div className= "text-center mb-12">
@@ -425,12 +420,10 @@ const BlockchainWeb3: React.FC: ()  => {,,,
   Why Choose Our Blockchain & Web3 Services?
               </h2>
               <p className= "text-xl text-gray-600 max-w-3xl mx-auto"">"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Transform your business with cutting-edge blockchain technology and Web3 innovation.
               </p>
             </div>
 
-<<<<<<< HEAD
             <div className="grid md: grid-cols-4 gap-8">","
               <div className="text-center"
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-indigo-100 rounded-full mb-4"
@@ -472,7 +465,6 @@ const BlockchainWeb3: React.FC: ()  => {,,,
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Web3 Ready</h3>","
                 <p className="text-gray-600">Future-proof solutions</p>","
-=======
             <div className= "grid md: grid-cols-4 gap-8">","
               <div className= "text-center">
                 <div className= "inline-flex items-center justify-center w-16 h-16 bg-indigo-100 rounded-full mb-4">
@@ -514,14 +506,12 @@ const BlockchainWeb3: React.FC: ()  => {,,,
                 </div>
                 <h3 className= "text-xl font-bold text-gray-900 mb-2">Web3 Ready</h3>","
                 <p className= "text-gray-600">Future-proof solutions</p>","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
               </div>
             </div>
           </div>
         </section>
 
         {/* Services */}
-<<<<<<< HEAD
         <section className="py-20"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
             <div className="text-center mb-16"
@@ -533,7 +523,6 @@ const BlockchainWeb3: React.FC: ()  => {,,,
   Comprehensive Blockchain Services
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">",";,"
-=======
         <section className= "py-20">
           <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
             <div className= "text-center mb-16">
@@ -545,12 +534,10 @@ const BlockchainWeb3: React.FC: ()  => {,,,
   Comprehensive Blockchain Services
               </h2>
               <p className= "text-xl text-gray-600 max-w-3xl mx-auto"">"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   End-to-end blockchain and Web3 solutions for modern decentralized applications.
               </p>
             </div>
 
-<<<<<<< HEAD
             <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">","
               {services.map((service, index) => {
                 const Icon: service.icon;,,,
@@ -577,7 +564,6 @@ const BlockchainWeb3: React.FC: ()  => {,,,
                         <li key={benefitIndex} className="flex items-center text-sm">","
                           <CheckCircle className="w-4 h-4 text-indigo-500 mr-2 flex-shrink-0" />","
                           <span className="text-gray-700">{benefit}</span>"
-=======
             <div className= "grid md: grid-cols-2 lg:grid-cols-4 gap-8">","
               {services.map((service, index) => {
                 const Icon: service.icon;,,,
@@ -604,7 +590,6 @@ const BlockchainWeb3: React.FC: ()  => {,,,
                         <li key: {benefitIndex} className= "flex items-center text-sm">","
                           <CheckCircle className= "w-4 h-4 text-indigo-500 mr-2 flex-shrink-0" />","
                           <span className= "text-gray-700">{benefit}</span>"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                         </li>
                       ))}
                     </ul>
@@ -616,7 +601,6 @@ const BlockchainWeb3: React.FC: ()  => {,,,
         </section>
 
         {/* Features */}
-<<<<<<< HEAD
         <section className="py-20 bg-gray-50"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
             <div className="text-center mb-16"
@@ -628,7 +612,6 @@ const BlockchainWeb3: React.FC: ()  => {,,,
   Advanced Blockchain Capabilities
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">",";,"
-=======
         <section className= "py-20 bg-gray-50">
           <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
             <div className= "text-center mb-16">
@@ -640,12 +623,10 @@ const BlockchainWeb3: React.FC: ()  => {,,,
   Advanced Blockchain Capabilities
               </h2>
               <p className= "text-xl text-gray-600 max-w-3xl mx-auto"">"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Powerful features that make your blockchain solutions secure, scalable, and future-proof.
               </p>
             </div>
 
-<<<<<<< HEAD
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">","
               {features.map((feature, index) => {
                 const Icon: feature.icon;,,,
@@ -670,7 +651,6 @@ const BlockchainWeb3: React.FC: ()  => {,,,
                     <p className="text-gray-600 mb-4">{feature.description}</p>"
                     <div className="inline-flex items-center text-indigo-600 font-semibold text-sm">","
                       <CheckCircle className="w-4 h-4 mr-1" />","
-=======
             <div className= "grid md: grid-cols-2 lg:grid-cols-3 gap-8">","
               {features.map((feature, index) => {
                 const Icon: feature.icon;,,,
@@ -695,7 +675,6 @@ const BlockchainWeb3: React.FC: ()  => {,,,
                     <p className= "text-gray-600 mb-4">{feature.description}</p>"
                     <div className= "inline-flex items-center text-indigo-600 font-semibold text-sm">","
                       <CheckCircle className= "w-4 h-4 mr-1" />","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                       {feature.benefit}
                     </div>
                   </div>
@@ -706,7 +685,6 @@ const BlockchainWeb3: React.FC: ()  => {,,,
         </section>
 
         {/* Technologies */}
-<<<<<<< HEAD
         <section className="py-20"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
             <div className="text-center mb-16"
@@ -718,7 +696,6 @@ const BlockchainWeb3: React.FC: ()  => {,,,
   Supported Blockchain Technologies
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">",";,"
-=======
         <section className= "py-20">
           <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
             <div className= "text-center mb-16">
@@ -730,12 +707,10 @@ const BlockchainWeb3: React.FC: ()  => {,,,
   Supported Blockchain Technologies
               </h2>
               <p className= "text-xl text-gray-600 max-w-3xl mx-auto"">"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Expertise across all major blockchain networks and protocols.
               </p>
             </div>
 
-<<<<<<< HEAD
             <div className="grid grid-cols-2 md: grid-cols-3 lg:grid-cols-4 gap-6">","
               {technologies.map((tech, index) => (
                 <div key={index} className="bg-white p-6 rounded-xl shadow-md border border-gray-200 text-center hover: shadow-lg transition-shadow">","
@@ -749,7 +724,6 @@ const BlockchainWeb3: React.FC: ()  => {,,,
                   </div>
                   <div className="font-semibold text-gray-900 mb-1">{tech.name}</div>"
                   <div className="text-sm text-gray-600">{tech.type}</div>"
-=======
             <div className= "grid grid-cols-2 md: grid-cols-3 lg:grid-cols-4 gap-6">","
               {technologies.map((tech, index) => (
                 <div key: {index} className= "bg-white p-6 rounded-xl shadow-md border border-gray-200 text-center hover: shadow-lg transition-shadow">","
@@ -763,7 +737,6 @@ const BlockchainWeb3: React.FC: ()  => {,,,
                   </div>
                   <div className= "font-semibold text-gray-900 mb-1">{tech.name}</div>"
                   <div className= "text-sm text-gray-600">{tech.type}</div>"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                 </div>
               ))}
             </div>
@@ -771,7 +744,6 @@ const BlockchainWeb3: React.FC: ()  => {,,,
         </section>
 
         {/* Pricing */}
-<<<<<<< HEAD
         <section id="pricing" className="py-20 bg-gray-50"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
             <div className="text-center mb-16"
@@ -783,7 +755,6 @@ const BlockchainWeb3: React.FC: ()  => {,,,
   Transparent Blockchain Development Pricing
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">",";,"
-=======
         <section id: "pricing" className="py-20 bg-gray-50">
           <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
             <div className= "text-center mb-16">
@@ -795,12 +766,10 @@ const BlockchainWeb3: React.FC: ()  => {,,,
   Transparent Blockchain Development Pricing
               </h2>
               <p className= "text-xl text-gray-600 max-w-3xl mx-auto"">"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Choose the plan that fits your blockchain project complexity and scale.
               </p>
             </div>
 
-<<<<<<< HEAD
             <div className="grid md: grid-cols-3 gap-8">","
             <div className="grid md: grid-cols-3 gap-8">","
               {pricing.map((plan, index) => (
@@ -808,7 +777,6 @@ const BlockchainWeb3: React.FC: ()  => {,,,
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">","
                       <span className="bg-indigo-500 text-white px-4 py-1 rounded-full text-sm font-semibold">",";,"
-=======
             <div className= "grid md: grid-cols-3 gap-8">","
             <div className= "grid md: grid-cols-3 gap-8">","
               {pricing.map((plan, index) => (
@@ -816,12 +784,10 @@ const BlockchainWeb3: React.FC: ()  => {,,,
                   {plan.popular && (
                     <div className= "absolute -top-4 left-1/2 transform -translate-x-1/2">","
                       <span className= "bg-indigo-500 text-white px-4 py-1 rounded-full text-sm font-semibold"">"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Most Popular
                       </span>
                     </div>
                   )}
-<<<<<<< HEAD
                   <div className="text-center mb-8">","
                     <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>"
                     <div className="flex items-center justify-center mb-2">","
@@ -843,7 +809,6 @@ const BlockchainWeb3: React.FC: ()  => {,,,
                   </ul>
                   <a href="/contact",";,"
   className: {,,
-=======
                   <div className= "text-center mb-8">","
                     <h3 className= "text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>"
                     <div className= "flex items-center justify-center mb-2">","
@@ -865,7 +830,6 @@ const BlockchainWeb3: React.FC: ()  => {,,,
                   </ul>
                   <a href: "/contact",";,"
   className= {,,
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
 `w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${`
 plan.popular
 ? 'bg-indigo-600 text-white hover: bg-indigo-700',';,
@@ -879,7 +843,6 @@ plan.popular
               ))}
             </div>
 
-<<<<<<< HEAD
             <div className="text-center mt-12">","
               <p className="text-gray-600 mb-4">Need a custom blockchain solution?</p>","
               <a href="/contact",";,"
@@ -888,7 +851,6 @@ plan.popular
                 Contact our Blockchain Experts
                 <ArrowRight className="w-4 h-4 ml-1/>";,"
                 <ArrowRight className="w-4 h-4 ml-1" />","
-=======
             <div className= "text-center mt-12">","
               <p className= "text-gray-600 mb-4">Need a custom blockchain solution?</p>","
               <a href: "/contact",";,"
@@ -897,14 +859,12 @@ plan.popular
                 Contact our Blockchain Experts
                 <ArrowRight className= "w-4 h-4 ml-1/>";,"
                 <ArrowRight className= "w-4 h-4 ml-1" />","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
               </a>
             </div>
           </div>
         </section>
 
         {/* Testimonials */}
-<<<<<<< HEAD
         <section className="py-20"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
             <div className="text-center mb-16"
@@ -916,7 +876,6 @@ plan.popular
   What Our Clients Say
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">",";,"
-=======
         <section className= "py-20">
           <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
             <div className= "text-center mb-16">
@@ -928,12 +887,10 @@ plan.popular
   What Our Clients Say
               </h2>
               <p className= "text-xl text-gray-600 max-w-3xl mx-auto"">"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Join hundreds of satisfied customers who have launched successful blockchain and Web3 projects with our expertise.
               </p>
             </div>
 
-<<<<<<< HEAD
             <div className="grid md: grid-cols-3 gap-8">","
             <div className="grid md: grid-cols-3 gap-8">","
               {testimonials.map((testimonial, index) => (
@@ -951,7 +908,6 @@ plan.popular
                     <div className="font-semibold text-gray-900">{testimonial.name}</div>"
                     <div className="text-gray-600 text-sm">{testimonial.role}</div>"
                     <div className="text-indigo-600 text-sm font-medium">{testimonial.company}</div>"
-=======
             <div className= "grid md: grid-cols-3 gap-8">","
             <div className= "grid md: grid-cols-3 gap-8">","
               {testimonials.map((testimonial, index) => (
@@ -969,7 +925,6 @@ plan.popular
                     <div className= "font-semibold text-gray-900">{testimonial.name}</div>"
                     <div className= "text-gray-600 text-sm">{testimonial.role}</div>"
                     <div className= "text-indigo-600 text-sm font-medium">{testimonial.company}</div>"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                   </div>
                 </div>
               ))}
@@ -978,7 +933,6 @@ plan.popular
         </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
         <section className="py-20 bg-gradient-to-br from-indigo-900 via-indigo-800 to-purple-900 text-white"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">","
             <h2 className="text-4xl font-bold mb-6"
@@ -1005,7 +959,6 @@ plan.popular
                 View Success Stories
                 <ArrowRight className="w-5 h-5 ml-2/>";,"
                 <ArrowRight className="w-5 h-5 ml-2" />","
-=======
         <section className= "py-20 bg-gradient-to-br from-indigo-900 via-indigo-800 to-purple-900 text-white">
           <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">","
             <h2 className= "text-4xl font-bold mb-6">
@@ -1032,7 +985,6 @@ plan.popular
                 View Success Stories
                 <ArrowRight className= "w-5 h-5 ml-2/>";,"
                 <ArrowRight className= "w-5 h-5 ml-2" />","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
               </a>
             </div>
           </div>

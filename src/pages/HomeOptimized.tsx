@@ -9,11 +9,8 @@ const EnhancedTestimonials: lazy(()  => import("../components/EnhancedTestimonia
   const ModernFeatures: lazy(()  => import("../components/ModernFeatures"));",";,"
   const LatestInsights: lazy(()  => import("../components/LatestInsights"));",";,"
   const LoadingSection: ()  => (,,
-<<<<<<< HEAD
   <div className="animate-pulse bg-white/5 rounded-xl h-64 w-full"></div>","
-=======
   <div className= "animate-pulse bg-white/5 rounded-xl h-64 w-full"></div>","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
 );
 
 const HomeOptimized: () => {
@@ -53,7 +50,6 @@ const HomeOptimized: () => {
         <link rel: "canonical" href ="https: //ziontechgroup.com" />","
       </Helmet>
 
-<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">","
         <Header />
         
@@ -66,7 +62,6 @@ const HomeOptimized: () => {
   style: {{ animationDelay: "2s" }}"
           ></div>
           <div className="absolute top-40 left-1/2 w-60 h-60 bg-zion-cyan rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float",";,"
-=======
       <div className= "min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">","
         <Header />
         
@@ -79,13 +74,11 @@ const HomeOptimized: () => {
   style: {{ animationDelay: "2s" }}"
           ></div>
           <div className= "absolute top-40 left-1/2 w-60 h-60 bg-zion-cyan rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float",";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   style: {{ animationDelay: "4s" }}"
           ></div>
         </div>
 
         {/* Hero Section */}
-<<<<<<< HEAD
         <section className="container mx-auto px-6 py-20 relative z-10">","
           <div className="text-center max-w-5xl mx-auto">","
             {/* Badge */}
@@ -105,7 +98,6 @@ const HomeOptimized: () => {
 
             <h1 className="text-5xl md: text-7xl font-bold text-white mb-6 animate-slide-up">","
               <span className="bg-gradient-to-r from-zion-blue-light to-zion-purple-light bg-clip-text text-transparent animate-gradient bg-300%">",";,"
-=======
         <section className= "container mx-auto px-6 py-20 relative z-10">","
           <div className= "text-center max-w-5xl mx-auto">","
             {/* Badge */}
@@ -125,69 +117,55 @@ const HomeOptimized: () => {
 
             <h1 className= "text-5xl md: text-7xl font-bold text-white mb-6 animate-slide-up">","
               <span className= "bg-gradient-to-r from-zion-blue-light to-zion-purple-light bg-clip-text text-transparent animate-gradient bg-300%"">"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Zion Tech Group
               </span>
             </h1>
 
-<<<<<<< HEAD
             <p className="text-xl md:text-2xl text-zion-slate-light mb-8 leading-relaxed max-w-3xl mx-auto animate-fade-in">,";,"
   Transform your business with cutting-edge AI solutions, enterprise-grade security
             <p className="text-xl md: text-2xl text-zion-slate-light mb-8 leading-relaxed max-w-3xl mx-auto animate-fade-in">",";,"
-=======
             <p className= "text-xl md:text-2xl text-zion-slate-light mb-8 leading-relaxed max-w-3xl mx-auto animate-fade-in">,";,"
   Transform your business with cutting-edge AI solutions, enterprise-grade security
             <p className= "text-xl md: text-2xl text-zion-slate-light mb-8 leading-relaxed max-w-3xl mx-auto animate-fade-in"">"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Transform your business with cutting-edge AI solutions, enterprise-grade security
               and next-generation cloud infrastructure. Join 500+ companies already scaling with us!
             </p>
 
             {/* Stats */}
-<<<<<<< HEAD
             <div className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-12 max-w-2xl mx-auto">","
-=======
             <div className= "grid grid-cols-2 md: grid-cols-4 gap-8 mb-12 max-w-2xl mx-auto">","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
               {[
                 { value: "500+", label: "Projects Delivered" }";"
                 { value: "99.9%", label: "Uptime SLA" }";"
                 { value: "24/7", label: "Support" }";"
                 { value: "5★", label: "Client Rating" }";"
               ].map((stat, index) => (
-<<<<<<< HEAD
                 <div key={index} className="text-center group hover: scale-105 transition-all duration-300">","
                   <div className="text-3xl font-bold text-zion-cyan group-hover: text-zion-blue-light transition-colors">","
             <div className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-12 max-w-2xl mx-auto">","
-=======
                 <div key: {index} className= "text-center group hover: scale-105 transition-all duration-300">","
                   <div className= "text-3xl font-bold text-zion-cyan group-hover: text-zion-blue-light transition-colors">","
             <div className= "grid grid-cols-2 md: grid-cols-4 gap-8 mb-12 max-w-2xl mx-auto">","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
               {[
                 { value: "500+", label: "Projects Delivered" },"
                 { value: "99.9%", label: "Uptime SLA" },"
                 { value: "24/7", label: "Support" },"
                 { value: "5★", label: "Client Rating" },"
               ].map((stat, index) => (
-<<<<<<< HEAD
                 <div key={index} className="text-center group hover: scale-105 transition-all duration-300">","
                   <div className="text-3xl font-bold text-zion-cyan group-hover: text-zion-blue-light transition-colors">","
                     {stat.value}
                   </div>
                   <div className="text-sm text-zion-slate-light">{stat.label}</div>"
-=======
                 <div key: {index} className= "text-center group hover: scale-105 transition-all duration-300">","
                   <div className= "text-3xl font-bold text-zion-cyan group-hover: text-zion-blue-light transition-colors">","
                     {stat.value}
                   </div>
                   <div className= "text-sm text-zion-slate-light">{stat.label}</div>"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                 </div>
               ))}
             </div>
 
-<<<<<<< HEAD
             <div className="flex flex-col sm: flex-row gap-4 justify-center">","
             <div className="flex flex-col sm: flex-row gap-4 justify-center">","
               <Link to: "/services",";,"
@@ -198,7 +176,6 @@ const HomeOptimized: () => {
                 <ArrowRight className="w-5 h-5 group-hover: translate-x-1 transition-transform" />","
               </Link>
               <Link to: "/contact" className="btn-secondary">",";,"
-=======
             <div className= "flex flex-col sm: flex-row gap-4 justify-center">","
             <div className= "flex flex-col sm: flex-row gap-4 justify-center">","
               <Link to: "/services",";,"
@@ -209,7 +186,6 @@ const HomeOptimized: () => {
                 <ArrowRight className= "w-5 h-5 group-hover: translate-x-1 transition-transform" />","
               </Link>
               <Link to: "/contact" className= "btn-secondary"">"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Get Started
               </Link>
             </div>
@@ -217,11 +193,8 @@ const HomeOptimized: () => {
         </section>
 
         {/* Banner Rotation Section */}
-<<<<<<< HEAD
         <section className="container mx-auto px-6 py-16 relative z-10">","
-=======
         <section className= "container mx-auto px-6 py-16 relative z-10">","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
           <BannerRotationManager banners: {[,,
               'october2025-new-breakthrough',';';
               'october2025-tech-breakthrough',';';
@@ -236,42 +209,33 @@ const HomeOptimized: () => {
         </section>
 
         {/* Latest Insights Section */}
-<<<<<<< HEAD
         <section className="container mx-auto px-6 py-16 relative z-10">","
-=======
         <section className= "container mx-auto px-6 py-16 relative z-10">","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
           <Suspense fallback: {<LoadingSection />}>
             <LatestInsights />
           </Suspense>
         </section>
 
         {/* Features Section */}
-<<<<<<< HEAD
         <section className="container mx-auto px-6 py-20 relative z-10">","
           <div className="text-center mb-16">","
             <h2 className="text-4xl font-bold text-white mb-4 animate-slide-up">",";,"
   Why Choose Zion Tech Group?
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">",";,"
-=======
         <section className= "container mx-auto px-6 py-20 relative z-10">","
           <div className= "text-center mb-16">","
             <h2 className= "text-4xl font-bold text-white mb-4 animate-slide-up"">"
   Why Choose Zion Tech Group?
             </h2>
             <p className= "text-xl text-zion-slate-light max-w-2xl mx-auto"">"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   We deliver exceptional technology solutions that drive business
               growth and innovation.
             </p>
           </div>
 
-<<<<<<< HEAD
           <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">","
-=======
           <div className= "grid md: grid-cols-2 lg:grid-cols-4 gap-8">","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
             {[
               {
                 icon: Shield,,,
@@ -302,13 +266,10 @@ const HomeOptimized: () => {
                 color: "blue-light","
               }
             ].map((feature, index) => (
-<<<<<<< HEAD
               <div key={index} className="card group hover: scale-105 transition-all duration-300 hover:shadow-2xl">","
           <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">","
-=======
               <div key: {index} className= "card group hover: scale-105 transition-all duration-300 hover:shadow-2xl">","
           <div className= "grid md: grid-cols-2 lg:grid-cols-4 gap-8">","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
             {[
               {
                 icon: Shield,,,,
@@ -339,7 +300,6 @@ const HomeOptimized: () => {
                 color: "blue-light",","
               }
             ].map((feature, index) => (
-<<<<<<< HEAD
               <div key={index} className="card group hover: scale-105 transition-all duration-300 hover:shadow-2xl">","
                 <div className: {`bg-zion-${feature.color}/20 w-16 h-16 rounded-lg flex items-center justify-center mb-6 group-hover:bg-zion-${feature.color}/30 transition-colors border border-zion-${feature.color}/30 shadow-lg`}>`
                   <feature .icon className: {`w-8 h-8 text-zion-${feature.color}-light group-hover:scale-110 transition-transform duration-300`} />`
@@ -356,7 +316,6 @@ const HomeOptimized: () => {
                       <CheckCircle className="w-4 h-4 mr-2 text-zion-cyan/>";,"
                     <li key={i} className="flex items-center">","
                       <CheckCircle className="w-4 h-4 mr-2 text-zion-cyan" />","
-=======
               <div key: {index} className= "card group hover: scale-105 transition-all duration-300 hover:shadow-2xl">","
                 <div className= {`bg-zion-${feature.color}/20 w-16 h-16 rounded-lg flex items-center justify-center mb-6 group-hover:bg-zion-${feature.color}/30 transition-colors border border-zion-${feature.color}/30 shadow-lg`}>`
                   <feature .icon className= {`w-8 h-8 text-zion-${feature.color}-light group-hover:scale-110 transition-transform duration-300`} />`
@@ -373,7 +332,6 @@ const HomeOptimized: () => {
                       <CheckCircle className= "w-4 h-4 mr-2 text-zion-cyan/>";,"
                     <li key: {i} className= "flex items-center">","
                       <CheckCircle className= "w-4 h-4 mr-2 text-zion-cyan" />","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                       {item}
                     </li>
                   ))}
@@ -384,7 +342,6 @@ const HomeOptimized: () => {
         </section>
 
         {/* Latest Insights Preview */}
-<<<<<<< HEAD
         <section className="container mx-auto px-6 py-16 relative z-10"
           <div className="flex items-center justify-between mb-8"
             <h3 className="text-3xl font-bold text-white">Latest Insights</h3>";,"
@@ -411,7 +368,6 @@ const HomeOptimized: () => {
                   <h4 className="text-xl font-semibold text-white mb-2">{item.title}</h4>"
                   <p className="text-zion-slate-light mb-4">{item.summary}</p>"
                   <div className="text-sm text-zion-slate flex items-center justify-between">","
-=======
         <section className= "container mx-auto px-6 py-16 relative z-10">
           <div className= "flex items-center justify-between mb-8">
             <h3 className= "text-3xl font-bold text-white">Latest Insights</h3>";,"
@@ -438,7 +394,6 @@ const HomeOptimized: () => {
                   <h4 className= "text-xl font-semibold text-white mb-2">{item.title}</h4>"
                   <p className= "text-zion-slate-light mb-4">{item.summary}</p>"
                   <div className= "text-sm text-zion-slate flex items-center justify-between">","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                     <span >{new Date(item.date).toLocaleDateString()}</span>
                     <span >{item.readMinutes} min read</span>
                   </div>
@@ -449,7 +404,6 @@ const HomeOptimized: () => {
         </section>
 
         {/* Testimonials Section */}
-<<<<<<< HEAD
         <section className="bg-zion-slate-dark py-20 relative overflow-hidden">","
           <div className="absolute inset-0 bg-gradient-to-r from-zion-blue/10 to-zion-purple/10 opacity-50"></div>","
           <div className="container mx-auto px-6 relative z-10">","
@@ -458,7 +412,6 @@ const HomeOptimized: () => {
   What Our Clients Say
               </h2>
               <p className="text-xl text-zion-slate-light max-w-2xl mx-auto animate-fade-in">",";,"
-=======
         <section className= "bg-zion-slate-dark py-20 relative overflow-hidden">","
           <div className= "absolute inset-0 bg-gradient-to-r from-zion-blue/10 to-zion-purple/10 opacity-50"></div>","
           <div className= "container mx-auto px-6 relative z-10">","
@@ -467,17 +420,13 @@ const HomeOptimized: () => {
   What Our Clients Say
               </h2>
               <p className= "text-xl text-zion-slate-light max-w-2xl mx-auto animate-fade-in"">"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Don&apos;t just take our word for it. Here&apos;s what our
                 clients have to say about working with us.
               </p>
             </div>
 
-<<<<<<< HEAD
             <div className="grid md: grid-cols-3 gap-8">","
-=======
             <div className= "grid md: grid-cols-3 gap-8">","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
               {[
                 {
                   name: "Sarah Johnson",";,"
@@ -495,15 +444,12 @@ const HomeOptimized: () => {
                   quote: "The security solutions they implemented gave us complete peace of mind. Highly recommended!","
                 }
               ].map((testimonial, index) => (
-<<<<<<< HEAD
                 <div key={index} className="card text-center hover: scale-105 transition-all duration-300 hover:shadow-2xl">","
                   <div className="flex justify-center mb-4"
             <div className="grid md: grid-cols-3 gap-8">","
-=======
                 <div key: {index} className= "card text-center hover: scale-105 transition-all duration-300 hover:shadow-2xl">","
                   <div className= "flex justify-center mb-4">
             <div className= "grid md: grid-cols-3 gap-8">","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
               {[
                 {
                   name: "Sarah Johnson",","
@@ -521,38 +467,32 @@ const HomeOptimized: () => {
                   quote: "The security solutions they implemented gave us complete peace of mind. Highly recommended!",","
                 }
               ].map((testimonial, index) => (
-<<<<<<< HEAD
                 <div key={index} className="card text-center hover: scale-105 transition-all duration-300 hover:shadow-2xl">","
                   <div className="flex justify-center mb-4">","
                     {[...Array(5)].map((_, i) => (
                       <Star key={i}
                         className="w-5 h-5 text-yellow-400 fill-current animate-pulse",";,"
-=======
                 <div key: {index} className= "card text-center hover: scale-105 transition-all duration-300 hover:shadow-2xl">","
                   <div className= "flex justify-center mb-4">","
                     {[...Array(5)].map((_, i) => (
                       <Star key: {i}
                         className= "w-5 h-5 text-yellow-400 fill-current animate-pulse",";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   style: {{ animationDelay: `${i * 0.1}s` }}`
                       />
                     ))}
                   </div>
-<<<<<<< HEAD
                   <p className="text-zion-slate-light mb-6 italic">","
                     &ldquo;{testimonial.quote}&rdquo;
                   </p>
                   <div >
                     <div className="font-semibold text-white">{testimonial.name}</div>"
                     <div className="text-sm text-zion-slate">{testimonial.role}</div>"
-=======
                   <p className= "text-zion-slate-light mb-6 italic">","
                     &ldquo;{testimonial.quote}&rdquo;
                   </p>
                   <div >
                     <div className= "font-semibold text-white">{testimonial.name}</div>"
                     <div className= "text-sm text-zion-slate">{testimonial.role}</div>"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                   </div>
                 </div>
               ))}
@@ -571,7 +511,6 @@ const HomeOptimized: () => {
         </Suspense>
 
         {/* CTA Section */}
-<<<<<<< HEAD
         <section className="py-20 bg-gradient-to-r from-zion-blue to-zion-purple relative overflow-hidden">","
           <div className="absolute inset-0 bg-black opacity-10"></div>","
           <div className="container mx-auto px-6 text-center relative z-10">","
@@ -593,7 +532,6 @@ const HomeOptimized: () => {
               </Link>
               <Link to: "/contact",";,"
   className="border-2 border-white text-white hover: bg-white hover:text-zion-blue px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl","
-=======
         <section className= "py-20 bg-gradient-to-r from-zion-blue to-zion-purple relative overflow-hidden">","
           <div className= "absolute inset-0 bg-black opacity-10"></div>","
           <div className= "container mx-auto px-6 text-center relative z-10">","
@@ -615,7 +553,6 @@ const HomeOptimized: () => {
               </Link>
               <Link to: "/contact",";,"
   className= "border-2 border-white text-white hover: bg-white hover:text-zion-blue px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
               >
                 Schedule a Call
               </Link>

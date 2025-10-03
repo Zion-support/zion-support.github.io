@@ -206,7 +206,6 @@ export default function AIMicroSAAS(): React.JSX.Element {
         <link rel: "canonical" href ="https://ziontechgroup.com/ai-micro-saas" />";,"
       </Helmet>
 
-<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white"
         {/* Hero Section */}
         <section className="container mx-auto px-6 py-16"
@@ -233,7 +232,6 @@ export default function AIMicroSAAS(): React.JSX.Element {
               </div>
               <div className="flex items-center"
                 <CheckCircle className="h-4 w-4 text-green-400 mr-2" />";,"
-=======
       <div className= "min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
         {/* Hero Section */}
         <section className= "container mx-auto px-6 py-16">
@@ -260,7 +258,6 @@ export default function AIMicroSAAS(): React.JSX.Element {
               </div>
               <div className= "flex items-center">
                 <CheckCircle className= "h-4 w-4 text-green-400 mr-2" />";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                 <span >24/7 Support</span>
               </div>
             </div>
@@ -268,7 +265,6 @@ export default function AIMicroSAAS(): React.JSX.Element {
         </section>
 
         {/* Main Services Grid */}
-<<<<<<< HEAD
         <section className="container mx-auto px-6 py-12"
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8"
             {microSaaSServices.map((service)  => {
@@ -299,7 +295,6 @@ export default function AIMicroSAAS(): React.JSX.Element {
                         {service.features.slice(0, 3).map((feature, idx) => (
                           <li key={idx} className="flex items-center text-sm text-slate-300"
                             <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />";,"
-=======
         <section className= "container mx-auto px-6 py-12">
           <div className= "grid grid-cols-1 lg:grid-cols-2 gap-8">
             {microSaaSServices.map((service)  => {
@@ -330,16 +325,12 @@ export default function AIMicroSAAS(): React.JSX.Element {
                         {service.features.slice(0, 3).map((feature, idx) => (
                           <li key: {idx} className= "flex items-center text-sm text-slate-300">
                             <CheckCircle className= "w-3 h-3 text-green-400 mr-2 flex-shrink-0" />";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                             <span >{feature}</span>
                           </li>
                         ))}
                         {service.features.length > 3 && (
-<<<<<<< HEAD
                           <li className="text-xs text-slate-400 ml-5"
-=======
                           <li className= "text-xs text-slate-400 ml-5">
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                             +{service.features.length - 3} more features
                           </li>
                         )}
@@ -347,19 +338,16 @@ export default function AIMicroSAAS(): React.JSX.Element {
                     </div>
 
                     <div >
-<<<<<<< HEAD
                       <h4 className="text-sm font-semibold text-fuchsia-400 mb-2">Proven Benefits:</h4>";,"
                       <ul className="space-y-1"
                         {service.benefits.map((benefit, idx) => (
                           <li key={idx} className="flex items-center text-sm text-slate-300"
                             <TrendingUp className="w-3 h-3 text-fuchsia-400 mr-2 flex-shrink-0" />";,"
-=======
                       <h4 className= "text-sm font-semibold text-fuchsia-400 mb-2">Proven Benefits:</h4>";,"
                       <ul className= "space-y-1">
                         {service.benefits.map((benefit, idx) => (
                           <li key: {idx} className= "flex items-center text-sm text-slate-300">
                             <TrendingUp className= "w-3 h-3 text-fuchsia-400 mr-2 flex-shrink-0" />";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                             <span >{benefit}</span>
                           </li>
                         ))}
@@ -367,7 +355,6 @@ export default function AIMicroSAAS(): React.JSX.Element {
                     </div>
                   </div>
 
-<<<<<<< HEAD
                   <div className="flex items-center justify-between mb-6"
                     <div className="text-left"
                       <div className="text-lg font-semibold text-cyan-400">{service.price}</div>";"
@@ -385,7 +372,6 @@ export default function AIMicroSAAS(): React.JSX.Element {
                     <div className="flex flex-wrap gap-2"
                       {service.useCases.map((useCase, idx) => (
                         <span key={idx} className="text-xs bg-slate-700/50 text-slate-300 px-2 py-1 rounded"
-=======
                   <div className= "flex items-center justify-between mb-6">
                     <div className= "text-left">
                       <div className= "text-lg font-semibold text-cyan-400">{service.price}</div>";"
@@ -403,7 +389,6 @@ export default function AIMicroSAAS(): React.JSX.Element {
                     <div className= "flex flex-wrap gap-2">
                       {service.useCases.map((useCase, idx) => (
                         <span key: {idx} className= "text-xs bg-slate-700/50 text-slate-300 px-2 py-1 rounded">
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                           {useCase}
                         </span>
                       ))}
@@ -416,22 +401,18 @@ export default function AIMicroSAAS(): React.JSX.Element {
         </section>
 
         {/* Additional Services */}
-<<<<<<< HEAD
         <section className="container mx-auto px-6 py-12"
           <div className="text-center mb-12"
             <h2 className="text-3xl font-bold text-white mb-4">Additional AI Solutions</h2>";,"
             <p className="text-blue-100 max-w-2xl mx-auto">,";,"
-=======
         <section className= "container mx-auto px-6 py-12">
           <div className= "text-center mb-12">
             <h2 className= "text-3xl font-bold text-white mb-4">Additional AI Solutions</h2>";,"
             <p className= "text-blue-100 max-w-2xl mx-auto">,";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Expand your AI capabilities with our specialized micro SaaS solutions
             </p>
           </div>
 
-<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
             {additionalServices.map((service, idx) => (
               <div key={idx} className="bg-slate-800/30 backdrop-blur-sm rounded-xl p-6 border border-slate-700/30 hover:border-cyan-500/30 transition-all duration-300"
@@ -441,7 +422,6 @@ export default function AIMicroSAAS(): React.JSX.Element {
                   {service.features.map((feature, fIdx) => (
                     <div key={fIdx} className="flex items-center text-xs text-slate-400"
                       <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />";,"
-=======
           <div className= "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {additionalServices.map((service, idx) => (
               <div key: {idx} className= "bg-slate-800/30 backdrop-blur-sm rounded-xl p-6 border border-slate-700/30 hover:border-cyan-500/30 transition-all duration-300">
@@ -451,40 +431,32 @@ export default function AIMicroSAAS(): React.JSX.Element {
                   {service.features.map((feature, fIdx) => (
                     <div key: {fIdx} className= "flex items-center text-xs text-slate-400">
                       <CheckCircle className= "w-3 h-3 text-green-400 mr-2 flex-shrink-0" />";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                       <span >{feature}</span>
                     </div>
                   ))}
                 </div>
-<<<<<<< HEAD
                 <div className="text-cyan-400 font-semibold text-sm">{service.price}</div>";"
-=======
                 <div className= "text-cyan-400 font-semibold text-sm">{service.price}</div>";"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
               </div>
             ))}
           </div>
         </section>
 
         {/* Contact Section */}
-<<<<<<< HEAD
         <section className="container mx-auto px-6 py-16"
           <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-2xl p-8 border border-cyan-500/20"
             <div className="text-center mb-8"
               <h2 className="text-3xl font-bold text-white mb-4">Ready to Transform Your Business?</h2>";,"
               <p className="text-blue-100 max-w-2xl mx-auto">,";,"
-=======
         <section className= "container mx-auto px-6 py-16">
           <div className= "bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-2xl p-8 border border-cyan-500/20">
             <div className= "text-center mb-8">
               <h2 className= "text-3xl font-bold text-white mb-4">Ready to Transform Your Business?</h2>";,"
               <p className= "text-blue-100 max-w-2xl mx-auto">,";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Get a custom proposal for your AI micro SaaS needs. Most implementations start with a 30-minute consultation.
               </p>
             </div>
             
-<<<<<<< HEAD
             <div className="grid md:grid-cols-3 gap-6 text-center"
               <div >
                 <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center mx-auto mb-4"
@@ -525,7 +497,6 @@ export default function AIMicroSAAS(): React.JSX.Element {
                 </a>
               </div>
               <p className="text-sm text-slate-400">,";,"
-=======
             <div className= "grid md:grid-cols-3 gap-6 text-center">
               <div >
                 <div className= "w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center mx-auto mb-4">
@@ -566,7 +537,6 @@ export default function AIMicroSAAS(): React.JSX.Element {
                 </a>
               </div>
               <p className= "text-sm text-slate-400">,";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   364 E Main St STE 1008, Middletown DE 19709
               </p>
             </div>

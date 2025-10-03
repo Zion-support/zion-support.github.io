@@ -320,7 +320,6 @@ const AIEmailMarketing: React.FC: ()  => {,,,
 
       <Header />
       
-<<<<<<< HEAD
       <main className="min-h-screen bg-white">","
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-emerald-900 via-green-800 to-teal-900 text-white py-20"
@@ -358,7 +357,6 @@ const AIEmailMarketing: React.FC: ()  => {,,,
                   View Pricing
                   <ArrowRight className="w-5 h-5 ml-2/>";,"
                   <ArrowRight className="w-5 h-5 ml-2" />","
-=======
       <main className= "min-h-screen bg-white">","
         {/* Hero Section */}
         <section className= "bg-gradient-to-br from-emerald-900 via-green-800 to-teal-900 text-white py-20">
@@ -396,7 +394,6 @@ const AIEmailMarketing: React.FC: ()  => {,,,
                   View Pricing
                   <ArrowRight className= "w-5 h-5 ml-2/>";,"
                   <ArrowRight className= "w-5 h-5 ml-2" />","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                 </a>
               </div>
             </div>
@@ -404,7 +401,6 @@ const AIEmailMarketing: React.FC: ()  => {,,,
         </section>
 
         {/* Key Benefits */}
-<<<<<<< HEAD
         <section className="py-16 bg-gray-50"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
             <div className="text-center mb-12"
@@ -416,7 +412,6 @@ const AIEmailMarketing: React.FC: ()  => {,,,
   Why Choose AI Email Marketing?
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">",";,"
-=======
         <section className= "py-16 bg-gray-50">
           <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
             <div className= "text-center mb-12">
@@ -428,12 +423,10 @@ const AIEmailMarketing: React.FC: ()  => {,,,
   Why Choose AI Email Marketing?
               </h2>
               <p className= "text-xl text-gray-600 max-w-3xl mx-auto"">"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Leverage artificial intelligence to create more effective, personalized, and profitable email campaigns.
               </p>
             </div>
 
-<<<<<<< HEAD
             <div className="grid md: grid-cols-4 gap-8">","
               <div className="text-center"
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-emerald-100 rounded-full mb-4"
@@ -475,7 +468,6 @@ const AIEmailMarketing: React.FC: ()  => {,,,
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">98% Deliverability</h3>","
                 <p className="text-gray-600">Advanced inbox placement optimization</p>","
-=======
             <div className= "grid md: grid-cols-4 gap-8">","
               <div className= "text-center">
                 <div className= "inline-flex items-center justify-center w-16 h-16 bg-emerald-100 rounded-full mb-4">
@@ -517,14 +509,12 @@ const AIEmailMarketing: React.FC: ()  => {,,,
                 </div>
                 <h3 className= "text-xl font-bold text-gray-900 mb-2">98% Deliverability</h3>","
                 <p className= "text-gray-600">Advanced inbox placement optimization</p>","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
               </div>
             </div>
           </div>
         </section>
 
         {/* Use Cases */}
-<<<<<<< HEAD
         <section className="py-20"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
             <div className="text-center mb-16"
@@ -536,7 +526,6 @@ const AIEmailMarketing: React.FC: ()  => {,,,
   Industry Applications
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">",";,"
-=======
         <section className= "py-20">
           <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
             <div className= "text-center mb-16">
@@ -548,12 +537,10 @@ const AIEmailMarketing: React.FC: ()  => {,,,
   Industry Applications
               </h2>
               <p className= "text-xl text-gray-600 max-w-3xl mx-auto"">"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   AI email marketing solutions tailored for different industries and business models.
               </p>
             </div>
 
-<<<<<<< HEAD
             <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">","
               {useCases.map((useCase, index) => {
                 const Icon: useCase.icon;,,,
@@ -579,7 +566,6 @@ const AIEmailMarketing: React.FC: ()  => {,,,
                         <li key={benefitIndex} className="flex items-center text-sm">","
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />","
                           <span className="text-gray-700">{benefit}</span>"
-=======
             <div className= "grid md: grid-cols-2 lg:grid-cols-4 gap-8">","
               {useCases.map((useCase, index) => {
                 const Icon: useCase.icon;,,,
@@ -605,7 +591,6 @@ const AIEmailMarketing: React.FC: ()  => {,,,
                         <li key: {benefitIndex} className= "flex items-center text-sm">","
                           <CheckCircle className= "w-4 h-4 text-green-500 mr-2 flex-shrink-0" />","
                           <span className= "text-gray-700">{benefit}</span>"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                         </li>
                       ))}
                     </ul>
@@ -617,7 +602,6 @@ const AIEmailMarketing: React.FC: ()  => {,,,
         </section>
 
         {/* Capabilities */}
-<<<<<<< HEAD
         <section className="py-20 bg-gray-50"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
             <div className="text-center mb-16"
@@ -629,7 +613,6 @@ const AIEmailMarketing: React.FC: ()  => {,,,
   AI-Powered Capabilities
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">",";,"
-=======
         <section className= "py-20 bg-gray-50">
           <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
             <div className= "text-center mb-16">
@@ -641,26 +624,22 @@ const AIEmailMarketing: React.FC: ()  => {,,,
   AI-Powered Capabilities
               </h2>
               <p className= "text-xl text-gray-600 max-w-3xl mx-auto"">"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Advanced artificial intelligence features that make your email marketing more effective.
               </p>
             </div>
 
-<<<<<<< HEAD
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">","
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">","
               {capabilities.map((capability, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200">","
                   <h3 className="text-xl font-bold text-gray-900 mb-4">{capability.title}</h3>"
                   <p className="text-gray-600">{capability.description}</p>"
-=======
             <div className= "grid md: grid-cols-2 lg:grid-cols-3 gap-8">","
             <div className= "grid md: grid-cols-2 lg:grid-cols-3 gap-8">","
               {capabilities.map((capability, index) => (
                 <div key: {index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200">","
                   <h3 className= "text-xl font-bold text-gray-900 mb-4">{capability.title}</h3>"
                   <p className= "text-gray-600">{capability.description}</p>"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                 </div>
               ))}
             </div>
@@ -668,7 +647,6 @@ const AIEmailMarketing: React.FC: ()  => {,,,
         </section>
 
         {/* Features */}
-<<<<<<< HEAD
         <section className="py-20"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
             <div className="text-center mb-16"
@@ -680,7 +658,6 @@ const AIEmailMarketing: React.FC: ()  => {,,,
   Comprehensive Email Marketing Features
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">",";,"
-=======
         <section className= "py-20">
           <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
             <div className= "text-center mb-16">
@@ -692,12 +669,10 @@ const AIEmailMarketing: React.FC: ()  => {,,,
   Comprehensive Email Marketing Features
               </h2>
               <p className= "text-xl text-gray-600 max-w-3xl mx-auto"">"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Everything you need to create, send, and optimize high-performing email campaigns.
               </p>
             </div>
 
-<<<<<<< HEAD
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">","
               {features.map((feature, index) => {
                 const Icon: feature.icon;,,,
@@ -722,7 +697,6 @@ const AIEmailMarketing: React.FC: ()  => {,,,
                     <p className="text-gray-600 mb-4">{feature.description}</p>"
                     <div className="inline-flex items-center text-green-600 font-semibold text-sm">","
                       <CheckCircle className="w-4 h-4 mr-1" />","
-=======
             <div className= "grid md: grid-cols-2 lg:grid-cols-3 gap-8">","
               {features.map((feature, index) => {
                 const Icon: feature.icon;,,,
@@ -747,7 +721,6 @@ const AIEmailMarketing: React.FC: ()  => {,,,
                     <p className= "text-gray-600 mb-4">{feature.description}</p>"
                     <div className= "inline-flex items-center text-green-600 font-semibold text-sm">","
                       <CheckCircle className= "w-4 h-4 mr-1" />","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                       {feature.benefit}
                     </div>
                   </div>
@@ -758,7 +731,6 @@ const AIEmailMarketing: React.FC: ()  => {,,,
         </section>
 
         {/* Pricing */}
-<<<<<<< HEAD
         <section id="pricing" className="py-20 bg-gray-50"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
             <div className="text-center mb-16"
@@ -770,7 +742,6 @@ const AIEmailMarketing: React.FC: ()  => {,,,
   Affordable Pricing for Every Business
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">",";,"
-=======
         <section id: "pricing" className="py-20 bg-gray-50">
           <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
             <div className= "text-center mb-16">
@@ -782,12 +753,10 @@ const AIEmailMarketing: React.FC: ()  => {,,,
   Affordable Pricing for Every Business
               </h2>
               <p className= "text-xl text-gray-600 max-w-3xl mx-auto"">"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Choose the plan that fits your email marketing needs and subscriber count.
               </p>
             </div>
 
-<<<<<<< HEAD
             <div className="grid md: grid-cols-3 gap-8">","
             <div className="grid md: grid-cols-3 gap-8">","
               {pricing.map((plan, index) => (
@@ -795,7 +764,6 @@ const AIEmailMarketing: React.FC: ()  => {,,,
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">","
                       <span className="bg-emerald-500 text-white px-4 py-1 rounded-full text-sm font-semibold">",";,"
-=======
             <div className= "grid md: grid-cols-3 gap-8">","
             <div className= "grid md: grid-cols-3 gap-8">","
               {pricing.map((plan, index) => (
@@ -803,12 +771,10 @@ const AIEmailMarketing: React.FC: ()  => {,,,
                   {plan.popular && (
                     <div className= "absolute -top-4 left-1/2 transform -translate-x-1/2">","
                       <span className= "bg-emerald-500 text-white px-4 py-1 rounded-full text-sm font-semibold"">"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Most Popular
                       </span>
                     </div>
                   )}
-<<<<<<< HEAD
                   <div className="text-center mb-8">","
                     <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>"
                     <div className="flex items-center justify-center mb-2">","
@@ -830,7 +796,6 @@ const AIEmailMarketing: React.FC: ()  => {,,,
                   </ul>
                   <a href="/contact",";,"
   className: {,,
-=======
                   <div className= "text-center mb-8">","
                     <h3 className= "text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>"
                     <div className= "flex items-center justify-center mb-2">","
@@ -852,7 +817,6 @@ const AIEmailMarketing: React.FC: ()  => {,,,
                   </ul>
                   <a href: "/contact",";,"
   className= {,,
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
 `w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${`
 plan.popular
 ? 'bg-emerald-600 text-white hover: bg-emerald-700',';,
@@ -866,7 +830,6 @@ plan.popular
               ))}
             </div>
 
-<<<<<<< HEAD
             <div className="text-center mt-12">","
               <p className="text-gray-600 mb-4">Need a custom email marketing solution?</p>","
               <a href="/contact",";,"
@@ -875,7 +838,6 @@ plan.popular
                 Contact our Marketing Team
                 <ArrowRight className="w-4 h-4 ml-1/>";,"
                 <ArrowRight className="w-4 h-4 ml-1" />","
-=======
             <div className= "text-center mt-12">","
               <p className= "text-gray-600 mb-4">Need a custom email marketing solution?</p>","
               <a href: "/contact",";,"
@@ -884,14 +846,12 @@ plan.popular
                 Contact our Marketing Team
                 <ArrowRight className= "w-4 h-4 ml-1/>";,"
                 <ArrowRight className= "w-4 h-4 ml-1" />","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
               </a>
             </div>
           </div>
         </section>
 
         {/* Testimonials */}
-<<<<<<< HEAD
         <section className="py-20"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
             <div className="text-center mb-16"
@@ -903,7 +863,6 @@ plan.popular
   What Our Clients Say
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">",";,"
-=======
         <section className= "py-20">
           <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
             <div className= "text-center mb-16">
@@ -915,12 +874,10 @@ plan.popular
   What Our Clients Say
               </h2>
               <p className= "text-xl text-gray-600 max-w-3xl mx-auto"">"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Join hundreds of companies already using our AI email marketing to boost their campaigns.
               </p>
             </div>
 
-<<<<<<< HEAD
             <div className="grid md: grid-cols-3 gap-8">","
             <div className="grid md: grid-cols-3 gap-8">","
               {testimonials.map((testimonial, index) => (
@@ -938,7 +895,6 @@ plan.popular
                     <div className="font-semibold text-gray-900">{testimonial.name}</div>"
                     <div className="text-gray-600 text-sm">{testimonial.role}</div>"
                     <div className="text-emerald-600 text-sm font-medium">{testimonial.company}</div>"
-=======
             <div className= "grid md: grid-cols-3 gap-8">","
             <div className= "grid md: grid-cols-3 gap-8">","
               {testimonials.map((testimonial, index) => (
@@ -956,7 +912,6 @@ plan.popular
                     <div className= "font-semibold text-gray-900">{testimonial.name}</div>"
                     <div className= "text-gray-600 text-sm">{testimonial.role}</div>"
                     <div className= "text-emerald-600 text-sm font-medium">{testimonial.company}</div>"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                   </div>
                 </div>
               ))}
@@ -965,7 +920,6 @@ plan.popular
         </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
         <section className="py-20 bg-gradient-to-br from-emerald-900 via-green-800 to-teal-900 text-white"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">","
             <h2 className="text-4xl font-bold mb-6"
@@ -992,7 +946,6 @@ plan.popular
                 View Success Stories
                 <ArrowRight className="w-5 h-5 ml-2/>";,"
                 <ArrowRight className="w-5 h-5 ml-2" />","
-=======
         <section className= "py-20 bg-gradient-to-br from-emerald-900 via-green-800 to-teal-900 text-white">
           <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">","
             <h2 className= "text-4xl font-bold mb-6">
@@ -1019,7 +972,6 @@ plan.popular
                 View Success Stories
                 <ArrowRight className= "w-5 h-5 ml-2/>";,"
                 <ArrowRight className= "w-5 h-5 ml-2" />","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
               </a>
             </div>
           </div>

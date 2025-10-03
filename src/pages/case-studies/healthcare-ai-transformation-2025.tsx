@@ -11,7 +11,6 @@ const HealthcareAITransformation: () => {
         <meta name: "description",";,"
   content: "Major healthcare network achieves $124M cost savings and 87% faster patient processing through comprehensive AI transformation. 3.8M patients, 450 facilities, 96% satisfaction." /><meta name: "keywords",";,"
   content: "healthcare AI, medical AI transformation, patient care automation, healthcare cost reduction, clinical decision support" /></Helmet>";,"
-<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">","
         <Header />
 
@@ -23,7 +22,6 @@ const HealthcareAITransformation: () => {
           >
             <ArrowLeft className="w-4 h-4 mr-2/>";,"
             <ArrowLeft className="w-4 h-4 mr-2" />",";,"
-=======
       <div className= "min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">","
         <Header />
 
@@ -35,12 +33,10 @@ const HealthcareAITransformation: () => {
           >
             <ArrowLeft className= "w-4 h-4 mr-2/>";,"
             <ArrowLeft className= "w-4 h-4 mr-2" />",";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Back to Case Studies
           </Link>
 
           {/* Header */}
-<<<<<<< HEAD
           <div className="max-w-5xl mx-auto mb-16">","
             <div className="flex items-center gap-4 mb-6 flex-wrap">","
               <span className="px-4 py-2 bg-green-500/20 text-green-300 rounded-full text-sm font-semibold border border-green-500/30">","
@@ -56,7 +52,6 @@ const HealthcareAITransformation: () => {
   Healthcare AI Transformation: <span className="block text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-pink-400 to-blue-400 mt-2">","
             <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 leading-tight">",";,"
   Healthcare AI Transformation: <span className="block text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-pink-400 to-blue-400 mt-2">","
-=======
           <div className= "max-w-5xl mx-auto mb-16">","
             <div className= "flex items-center gap-4 mb-6 flex-wrap">","
               <span className= "px-4 py-2 bg-green-500/20 text-green-300 rounded-full text-sm font-semibold border border-green-500/30">","
@@ -72,23 +67,18 @@ const HealthcareAITransformation: () => {
   Healthcare AI Transformation: <span className= "block text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-pink-400 to-blue-400 mt-2">","
             <h1 className= "text-5xl md: text-6xl font-bold text-white mb-6 leading-tight"">"
   Healthcare AI Transformation: <span className= "block text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-pink-400 to-blue-400 mt-2">","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                 $124M Saved, 3.8M Patients Served Better
               </span>
             </h1>
 
-<<<<<<< HEAD
             <p className="text-xl text-zion-slate-light leading-relaxed mb-8">",";,"
-=======
             <p className= "text-xl text-zion-slate-light leading-relaxed mb-8"">"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   How a major healthcare network with 450 facilities transformed patient care, operational 
               efficiency, and clinical outcomes through enterprise AI—achieving 87% faster processing
               $124M cost savings, and 96% patient satisfaction while serving 3.8M patients annually.
             </p>
 
             {/* Key Metrics Banner */}
-<<<<<<< HEAD
             <div className="grid md: grid-cols-4 gap-6">","
               <div className="bg-green-900/40 rounded-xl p-6 border border-green-500/30 text-center"
                 <div className="text-4xl font-bold text-green-400 mb-2">$124M</div>";,"
@@ -109,7 +99,6 @@ const HealthcareAITransformation: () => {
               <div className="bg-purple-900/40 rounded-xl p-6 border border-purple-500/30 text-center">","
                 <div className="text-4xl font-bold text-purple-400 mb-2">3.8M</div>","
                 <div className="text-sm text-zion-slate-light">Patients Served/Year</div>","
-=======
             <div className= "grid md: grid-cols-4 gap-6">","
               <div className= "bg-green-900/40 rounded-xl p-6 border border-green-500/30 text-center">
                 <div className= "text-4xl font-bold text-green-400 mb-2">$124M</div>";,"
@@ -130,13 +119,11 @@ const HealthcareAITransformation: () => {
               <div className= "bg-purple-900/40 rounded-xl p-6 border border-purple-500/30 text-center">","
                 <div className= "text-4xl font-bold text-purple-400 mb-2">3.8M</div>","
                 <div className= "text-sm text-zion-slate-light">Patients Served/Year</div>","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
               </div>
             </div>
           </div>
 
           {/* Content */}
-<<<<<<< HEAD
           <div className="max-w-5xl mx-auto space-y-12 text-zion-slate-light">","
             {/* Client Profile */}
             <section >
@@ -218,7 +205,6 @@ const HealthcareAITransformation: () => {
                       </li>
                       <li className="flex items-start gap-2">","
                         <span className="text-red-400 mt-1">•</span>","
-=======
           <div className= "max-w-5xl mx-auto space-y-12 text-zion-slate-light">","
             {/* Client Profile */}
             <section >
@@ -300,7 +286,6 @@ const HealthcareAITransformation: () => {
                       </li>
                       <li className= "flex items-start gap-2">","
                         <span className= "text-red-400 mt-1">•</span>","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                         <span >Staff burnout: 43% of nurses reporting severe stress</span>,,
                       </li>
                     </ul>
@@ -311,18 +296,14 @@ const HealthcareAITransformation: () => {
 
             {/* Solution Overview */}
             <section >
-<<<<<<< HEAD
               <h2 className="text-3xl font-bold text-white mb-6">🎯 Comprehensive AI Transformation</h2>","
               <p className="text-lg leading-relaxed mb-6">",";,"
-=======
               <h2 className= "text-3xl font-bold text-white mb-6">🎯 Comprehensive AI Transformation</h2>","
               <p className= "text-lg leading-relaxed mb-6"">"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Zion Tech Group deployed an integrated AI platform spanning patient intake, clinical 
                 decision support, administrative automation, and predictive care across all 450 facilities.
               </p>
               
-<<<<<<< HEAD
               <div className="grid md: grid-cols-2 gap-6">","
                 <div className="bg-gradient-to-br from-blue-900/40 to-cyan-900/40 rounded-xl p-6 border border-blue-500/30"
                   <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2"
@@ -330,7 +311,6 @@ const HealthcareAITransformation: () => {
   AI-Powered Patient Intake
                   </h3>
                   <p className="mb-4">,";,"
-=======
               <div className= "grid md: grid-cols-2 gap-6">","
                 <div className= "bg-gradient-to-br from-blue-900/40 to-cyan-900/40 rounded-xl p-6 border border-blue-500/30">
                   <h3 className= "text-xl font-bold text-white mb-4 flex items-center gap-2">
@@ -338,12 +318,10 @@ const HealthcareAITransformation: () => {
   AI-Powered Patient Intake
                   </h3>
                   <p className= "mb-4">,";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Intelligent intake system using NLP to automatically process patient information
                     insurance verification, and medical history—reducing registration time from 24 
                     minutes to 3 minutes.
                   </p>
-<<<<<<< HEAD
                   <ul className="space-y-2 text-sm"
                     <li className="flex items-center gap-2"
                       <CheckCircle className="w-4 h-4 text-green-400/>";,"
@@ -362,7 +340,6 @@ const HealthcareAITransformation: () => {
   AI-Powered Patient Intake
                   </h3>
                   <p className="mb-4">",";,"
-=======
                   <ul className= "space-y-2 text-sm">
                     <li className= "flex items-center gap-2">
                       <CheckCircle className= "w-4 h-4 text-green-400/>";,"
@@ -381,12 +358,10 @@ const HealthcareAITransformation: () => {
   AI-Powered Patient Intake
                   </h3>
                   <p className= "mb-4"">"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Intelligent intake system using NLP to automatically process patient information
                     insurance verification, and medical history—reducing registration time from 24 
                     minutes to 3 minutes.
                   </p>
-<<<<<<< HEAD
                   <ul className="space-y-2 text-sm">","
                     <li className="flex items-center gap-2">","
                       <CheckCircle className="w-4 h-4 text-green-400" />","
@@ -398,7 +373,6 @@ const HealthcareAITransformation: () => {
                     </li>
                     <li className="flex items-center gap-2">","
                       <CheckCircle className="w-4 h-4 text-green-400" />","
-=======
                   <ul className= "space-y-2 text-sm">","
                     <li className= "flex items-center gap-2">","
                       <CheckCircle className= "w-4 h-4 text-green-400" />","
@@ -410,13 +384,11 @@ const HealthcareAITransformation: () => {
                     </li>
                     <li className= "flex items-center gap-2">","
                       <CheckCircle className= "w-4 h-4 text-green-400" />","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                       <span >Zero paperwork—fully digital process</span>
                     </li>
                   </ul>
                 </div>
 
-<<<<<<< HEAD
                 <div className="bg-gradient-to-br from-purple-900/40 to-pink-900/40 rounded-xl p-6 border border-purple-500/30"
                   <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2"
                     <Zap className="w-6 h-6 text-purple-400/>";,"
@@ -451,7 +423,6 @@ const HealthcareAITransformation: () => {
                     </li>
                     <li className="flex items-center gap-2">","
                       <CheckCircle className="w-4 h-4 text-green-400" />","
-=======
                 <div className= "bg-gradient-to-br from-purple-900/40 to-pink-900/40 rounded-xl p-6 border border-purple-500/30">
                   <h3 className= "text-xl font-bold text-white mb-4 flex items-center gap-2">
                     <Zap className= "w-6 h-6 text-purple-400/>";,"
@@ -486,13 +457,11 @@ const HealthcareAITransformation: () => {
                     </li>
                     <li className= "flex items-center gap-2">","
                       <CheckCircle className= "w-4 h-4 text-green-400" />","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                       <span >Early detection of 12,000+ critical conditions</span>
                     </li>
                   </ul>
                 </div>
 
-<<<<<<< HEAD
                 <div className="bg-gradient-to-br from-green-900/40 to-teal-900/40 rounded-xl p-6 border border-green-500/30"
                   <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2"
                     <Target className="w-6 h-6 text-green-400/>";,"
@@ -527,7 +496,6 @@ const HealthcareAITransformation: () => {
                     </li>
                     <li className="flex items-center gap-2">","
                       <CheckCircle className="w-4 h-4 text-green-400" />","
-=======
                 <div className= "bg-gradient-to-br from-green-900/40 to-teal-900/40 rounded-xl p-6 border border-green-500/30">
                   <h3 className= "text-xl font-bold text-white mb-4 flex items-center gap-2">
                     <Target className= "w-6 h-6 text-green-400/>";,"
@@ -562,13 +530,11 @@ const HealthcareAITransformation: () => {
                     </li>
                     <li className= "flex items-center gap-2">","
                       <CheckCircle className= "w-4 h-4 text-green-400" />","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                       <span >99.2% claims first-pass approval rate</span>
                     </li>
                   </ul>
                 </div>
 
-<<<<<<< HEAD
                 <div className="bg-gradient-to-br from-red-900/40 to-orange-900/40 rounded-xl p-6 border border-red-500/30"
                   <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2"
                     <Users className="w-6 h-6 text-red-400/>";,"
@@ -603,7 +569,6 @@ const HealthcareAITransformation: () => {
                     </li>
                     <li className="flex items-center gap-2">","
                       <CheckCircle className="w-4 h-4 text-green-400" />","
-=======
                 <div className= "bg-gradient-to-br from-red-900/40 to-orange-900/40 rounded-xl p-6 border border-red-500/30">
                   <h3 className= "text-xl font-bold text-white mb-4 flex items-center gap-2">
                     <Users className= "w-6 h-6 text-red-400/>";,"
@@ -638,7 +603,6 @@ const HealthcareAITransformation: () => {
                     </li>
                     <li className= "flex items-center gap-2">","
                       <CheckCircle className= "w-4 h-4 text-green-400" />","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                       <span >$35M avoided through preventive care</span>
                     </li>
                   </ul>
@@ -648,7 +612,6 @@ const HealthcareAITransformation: () => {
 
             {/* Results */}
             <section >
-<<<<<<< HEAD
               <h2 className="text-3xl font-bold text-white mb-6">📊 Transformational Results</h2>";,"
               <div className="bg-gradient-to-r from-green-900/40 to-blue-900/40 rounded-xl p-8 border-2 border-green-500/40 mb-8"
                 <h3 className="text-2xl font-bold text-white mb-6 text-center">💰 Financial Impact (Annual)</h3>";,"
@@ -675,7 +638,6 @@ const HealthcareAITransformation: () => {
                     <div className="text-5xl font-bold text-cyan-400 mb-2">$35M</div>","
                     <div className="text-lg text-white font-semibold mb-1">Preventive Care Savings</div>","
                     <div className="text-sm text-zion-slate-light">Readmission avoidance</div>","
-=======
               <h2 className= "text-3xl font-bold text-white mb-6">📊 Transformational Results</h2>";,"
               <div className= "bg-gradient-to-r from-green-900/40 to-blue-900/40 rounded-xl p-8 border-2 border-green-500/40 mb-8">
                 <h3 className= "text-2xl font-bold text-white mb-6 text-center">💰 Financial Impact (Annual)</h3>";,"
@@ -702,12 +664,10 @@ const HealthcareAITransformation: () => {
                     <div className= "text-5xl font-bold text-cyan-400 mb-2">$35M</div>","
                     <div className= "text-lg text-white font-semibold mb-1">Preventive Care Savings</div>","
                     <div className= "text-sm text-zion-slate-light">Readmission avoidance</div>","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                   </div>
                 </div>
               </div>
 
-<<<<<<< HEAD
               <div className="grid md: grid-cols-2 gap-6">","
                 <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-blue-500/30"
                   <h3 className="text-xl font-bold text-white mb-4">⚡ Operational Efficiency</h3>";,"
@@ -736,7 +696,6 @@ const HealthcareAITransformation: () => {
                     <li className="flex justify-between">","
                       <span >Staff Productivity</span>
                       <span className="text-blue-400 font-bold">142% ↑</span>","
-=======
               <div className= "grid md: grid-cols-2 gap-6">","
                 <div className= "bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-blue-500/30">
                   <h3 className= "text-xl font-bold text-white mb-4">⚡ Operational Efficiency</h3>";,"
@@ -765,12 +724,10 @@ const HealthcareAITransformation: () => {
                     <li className= "flex justify-between">","
                       <span >Staff Productivity</span>
                       <span className= "text-blue-400 font-bold">142% ↑</span>","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                     </li>
                   </ul>
                 </div>
 
-<<<<<<< HEAD
                 <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-pink-500/30">","
                   <h3 className="text-xl font-bold text-white mb-4">❤️ Patient Care Quality</h3>","
                   <ul className="space-y-3">","
@@ -793,7 +750,6 @@ const HealthcareAITransformation: () => {
                     <li className="flex justify-between">","
                       <span >Staff Burnout</span>
                       <span className="text-green-400 font-bold">67% ↓</span>","
-=======
                 <div className= "bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-pink-500/30">","
                   <h3 className= "text-xl font-bold text-white mb-4">❤️ Patient Care Quality</h3>","
                   <ul className= "space-y-3">","
@@ -816,7 +772,6 @@ const HealthcareAITransformation: () => {
                     <li className= "flex justify-between">","
                       <span >Staff Burnout</span>
                       <span className= "text-green-400 font-bold">67% ↓</span>","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                     </li>
                   </ul>
                 </div>
@@ -824,7 +779,6 @@ const HealthcareAITransformation: () => {
             </section>
 
             {/* Testimonial */}
-<<<<<<< HEAD
             <section className="bg-gradient-to-r from-blue-900/60 to-purple-900/60 rounded-2xl p-10 border-2 border-blue-500/40"
               <div className="text-center mb-6"
                 <div className="text-6xl mb-4">💬</div>";,"
@@ -835,7 +789,6 @@ const HealthcareAITransformation: () => {
               <div className="text-center mb-6">","
                 <div className="text-6xl mb-4">💬</div>","
                 <p className="text-2xl text-white font-semibold italic mb-6">","
-=======
             <section className= "bg-gradient-to-r from-blue-900/60 to-purple-900/60 rounded-2xl p-10 border-2 border-blue-500/40">
               <div className= "text-center mb-6">
                 <div className= "text-6xl mb-4">💬</div>";,"
@@ -846,26 +799,21 @@ const HealthcareAITransformation: () => {
               <div className= "text-center mb-6">","
                 <div className= "text-6xl mb-4">💬</div>","
                 <p className= "text-2xl text-white font-semibold italic mb-6">","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                   "This AI transformation has been nothing short of revolutionary for our network. "
                   We're providing better care, faster service, and spending $124M less per year. '
                   Our staff are happier, our patients are healthier, and our organization is thriving. 
                   Zion Tech Group didn't just deliver technology—they transformed our entire operation."
                 </p>
-<<<<<<< HEAD
                 <div className="text-white font-bold text-lg">Dr. Maria Santos</div>","
                 <div className="text-zion-slate-light">Chief Medical Officer & VP of Operations</div>","
                 <div className="text-zion-cyan text-sm mt-1">Major Healthcare Network</div>","
-=======
                 <div className= "text-white font-bold text-lg">Dr. Maria Santos</div>","
                 <div className= "text-zion-slate-light">Chief Medical Officer & VP of Operations</div>","
                 <div className= "text-zion-cyan text-sm mt-1">Major Healthcare Network</div>","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
               </div>
             </section>
 
             {/* Call to Action */}
-<<<<<<< HEAD
             <section className="bg-gradient-to-r from-red-900/60 to-pink-900/60 rounded-2xl p-12 border-2 border-red-500/40 text-center"
               <Heart className="w-16 h-16 text-red-400 mx-auto mb-6/>";,"
               <h2 className="text-4xl font-bold text-white mb-6"
@@ -875,7 +823,6 @@ const HealthcareAITransformation: () => {
   Transform Your Healthcare Organization
               </h2>
               <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">",";,"
-=======
             <section className= "bg-gradient-to-r from-red-900/60 to-pink-900/60 rounded-2xl p-12 border-2 border-red-500/40 text-center">
               <Heart className= "w-16 h-16 text-red-400 mx-auto mb-6/>";,"
               <h2 className= "text-4xl font-bold text-white mb-6">
@@ -885,12 +832,10 @@ const HealthcareAITransformation: () => {
   Transform Your Healthcare Organization
               </h2>
               <p className= "text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto"">"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Ready to improve patient outcomes, reduce costs, and empower your healthcare 
                 professionals with AI? Schedule a consultation to explore how we can transform 
                 your organization.
               </p>
-<<<<<<< HEAD
               <div className="flex flex-col sm: flex-row gap-4 justify-center">","
               <div className="flex flex-col sm: flex-row gap-4 justify-center">","
                 <Link to: "/contact",";,"
@@ -905,7 +850,6 @@ const HealthcareAITransformation: () => {
                 >
                   <TrendingUp className="w-5 h-5/>";,"
                   <TrendingUp className="w-5 h-5" />",";,"
-=======
               <div className= "flex flex-col sm: flex-row gap-4 justify-center">","
               <div className= "flex flex-col sm: flex-row gap-4 justify-center">","
                 <Link to: "/contact",";,"
@@ -920,7 +864,6 @@ const HealthcareAITransformation: () => {
                 >
                   <TrendingUp className= "w-5 h-5/>";,"
                   <TrendingUp className= "w-5 h-5" />",";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   View More Success Stories
                 </Link>
               </div>

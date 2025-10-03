@@ -8,7 +8,6 @@ const GlobalFinTechAITransformation: () => {
         <meta name: "description",";,"
   content: "Fortune 500 digital banking platform achieves $127M annual value through AI transformation. 94.7% fraud detection, 15.2x ROI, 10x customer growth enabled." /><meta name: "keywords",";,"
   content: "fintech AI, digital banking, fraud detection, AI transformation case study, financial services AI" /></Helmet>";,"
-<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">","
         <Header />
 
@@ -36,7 +35,6 @@ const GlobalFinTechAITransformation: () => {
   Global FinTech AI Transformation: <span className="block text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400 mt-2">","
             <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 leading-tight">",";,"
   Global FinTech AI Transformation: <span className="block text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400 mt-2">","
-=======
       <div className= "min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">","
         <Header />
 
@@ -64,23 +62,18 @@ const GlobalFinTechAITransformation: () => {
   Global FinTech AI Transformation: <span className= "block text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400 mt-2">","
             <h1 className= "text-5xl md: text-6xl font-bold text-white mb-6 leading-tight"">"
   Global FinTech AI Transformation: <span className= "block text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400 mt-2">","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                 $127M Annual Value Creation
               </span>
             </h1>
 
-<<<<<<< HEAD
             <p className="text-xl text-zion-slate-light leading-relaxed mb-8">",";,"
-=======
             <p className= "text-xl text-zion-slate-light leading-relaxed mb-8"">"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   How a Fortune 500 digital banking platform leveraged AI to transform operations, achieving $127M in 
               annual value, 94% fraud detection accuracy, and 10x customer growth through intelligent automation 
               and predictive analytics.
             </p>
 
             {/* Key Metrics Banner */};
-<<<<<<< HEAD
             <div className="grid md: grid-cols-4 gap-6">","
               <div className="bg-green-900/40 rounded-xl p-6 border border-green-500/30 text-center"
                 <div className="text-4xl font-bold text-green-400 mb-2">$127M</div>";,"
@@ -101,7 +94,6 @@ const GlobalFinTechAITransformation: () => {
               <div className="bg-cyan-900/40 rounded-xl p-6 border border-cyan-500/30 text-center">","
                 <div className="text-4xl font-bold text-cyan-400 mb-2">10x</div>","
                 <div className="text-sm text-zion-slate-light">Customer Growth Enabled</div>","
-=======
             <div className= "grid md: grid-cols-4 gap-6">","
               <div className= "bg-green-900/40 rounded-xl p-6 border border-green-500/30 text-center">
                 <div className= "text-4xl font-bold text-green-400 mb-2">$127M</div>";,"
@@ -122,12 +114,10 @@ const GlobalFinTechAITransformation: () => {
               <div className= "bg-cyan-900/40 rounded-xl p-6 border border-cyan-500/30 text-center">","
                 <div className= "text-4xl font-bold text-cyan-400 mb-2">10x</div>","
                 <div className= "text-sm text-zion-slate-light">Customer Growth Enabled</div>","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
               </div>
             </div>
           </div>
 
-<<<<<<< HEAD
           <div className="max-w-5xl mx-auto space-y-12 text-zion-slate-light">","
             {/* Client Profile */}
             <section >
@@ -178,7 +168,6 @@ const GlobalFinTechAITransformation: () => {
                       </li>
                       <li className="flex items-start gap-2">","
                         <span className="text-red-400">❌</span>","
-=======
           <div className= "max-w-5xl mx-auto space-y-12 text-zion-slate-light">","
             {/* Client Profile */}
             <section >
@@ -229,7 +218,6 @@ const GlobalFinTechAITransformation: () => {
                       </li>
                       <li className= "flex items-start gap-2">","
                         <span className= "text-red-400">❌</span>","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                         <span >Limited scalability for growth</span>
                       </li>
                     </ul>
@@ -240,19 +228,16 @@ const GlobalFinTechAITransformation: () => {
 
             {/* Solution Overview */}
             <section >
-<<<<<<< HEAD
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3"
                 <Target className="w-8 h-8 text-blue-400/>,";,"
   AI Transformation Initiatives
               </h2>
               <div className="grid md: grid-cols-2 gap-6">","
-=======
               <h2 className= "text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Target className= "w-8 h-8 text-blue-400/>,";,"
   AI Transformation Initiatives
               </h2>
               <div className= "grid md: grid-cols-2 gap-6">","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                 {[
                   {
                     title: "Real-Time Fraud Detection Platform",",";,"
@@ -285,7 +270,6 @@ const GlobalFinTechAITransformation: () => {
                     results: ["100% automated reporting", "Zero regulatory fines", "$8.4M cost reduction", "100% policy compliance"]","
                   }
                 ].map((initiative, index) => (
-<<<<<<< HEAD
                   <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-zion-cyan/20 hover: border-zion-cyan/50 transition-all">","
                     <div className="flex items-start gap-3 mb-4"
                       <div className="text-3xl">{initiative.icon}</div>";"
@@ -295,7 +279,6 @@ const GlobalFinTechAITransformation: () => {
   AI Transformation Initiatives
               </h2>
               <div className="grid md: grid-cols-2 gap-6">","
-=======
                   <div key: {index} className= "bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-zion-cyan/20 hover: border-zion-cyan/50 transition-all">","
                     <div className= "flex items-start gap-3 mb-4">
                       <div className= "text-3xl">{initiative.icon}</div>";"
@@ -305,7 +288,6 @@ const GlobalFinTechAITransformation: () => {
   AI Transformation Initiatives
               </h2>
               <div className= "grid md: grid-cols-2 gap-6">","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                 {[
                   {
                     title: "Real-Time Fraud Detection Platform",","
@@ -338,7 +320,6 @@ const GlobalFinTechAITransformation: () => {
                     results: ["100% automated reporting", "Zero regulatory fines", "$8.4M cost reduction", "100% policy compliance"]","
                   }
                 ].map((initiative, index) => (
-<<<<<<< HEAD
                   <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-zion-cyan/20 hover: border-zion-cyan/50 transition-all">","
                     <div className="flex items-start gap-3 mb-4">","
                       <div className="text-3xl">{initiative.icon}</div>"
@@ -352,7 +333,6 @@ const GlobalFinTechAITransformation: () => {
                         <li key={rIndex} className="flex items-start gap-2">","
                           <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />","
                           <span className="text-sm">{result}</span>"
-=======
                   <div key: {index} className= "bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-zion-cyan/20 hover: border-zion-cyan/50 transition-all">","
                     <div className= "flex items-start gap-3 mb-4">","
                       <div className= "text-3xl">{initiative.icon}</div>"
@@ -366,7 +346,6 @@ const GlobalFinTechAITransformation: () => {
                         <li key: {rIndex} className= "flex items-start gap-2">","
                           <CheckCircle className= "w-5 h-5 text-green-400 flex-shrink-0 mt-1" />","
                           <span className= "text-sm">{result}</span>"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                         </li>
                       ))}
                     </ul>
@@ -377,13 +356,10 @@ const GlobalFinTechAITransformation: () => {
 
             {/* Implementation Journey */}
             <section >
-<<<<<<< HEAD
               <h2 className="text-3xl font-bold text-white mb-6">📅 Implementation Journey</h2>","
               <div className="space-y-6">","
-=======
               <h2 className= "text-3xl font-bold text-white mb-6">📅 Implementation Journey</h2>","
               <div className= "space-y-6">","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                 {[
                   {
                     phase: "Phase 1: Foundation",",";,"
@@ -420,7 +396,6 @@ const GlobalFinTechAITransformation: () => {
                     results: ["$127M annual run rate", "15.2x ROI achieved", "Industry-leading capabilities", "Self-sustaining AI program"]","
                   }
                 ].map((phase, index) => (
-<<<<<<< HEAD
                   <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-zion-cyan/30">","
                     <div className="flex flex-wrap items-center justify-between gap-4 mb-4">","
                       <h3 className="text-2xl font-bold text-white">{phase.phase}</h3>"
@@ -440,7 +415,6 @@ const GlobalFinTechAITransformation: () => {
                         {phase.results.map((result, rIndex) => (
                           <li key={rIndex} className="flex items-start gap-2">","
                             <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />","
-=======
                   <div key: {index} className= "bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-zion-cyan/30">","
                     <div className= "flex flex-wrap items-center justify-between gap-4 mb-4">","
                       <h3 className= "text-2xl font-bold text-white">{phase.phase}</h3>"
@@ -460,7 +434,6 @@ const GlobalFinTechAITransformation: () => {
                         {phase.results.map((result, rIndex) => (
                           <li key: {rIndex} className= "flex items-start gap-2">","
                             <CheckCircle className= "w-5 h-5 text-green-400 flex-shrink-0 mt-1" />","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                             <span >{result}</span>
                           </li>
                         ))}
@@ -473,7 +446,6 @@ const GlobalFinTechAITransformation: () => {
 
             {/* Results & Business Impact */}
             <section >
-<<<<<<< HEAD
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3"
                 <TrendingUp className="w-8 h-8 text-green-400/>,";,"
   Results & Business Impact
@@ -534,7 +506,6 @@ const GlobalFinTechAITransformation: () => {
                     <li className="flex justify-between items-center pt-3 border-t border-white/20">","
                       <span className="font-bold">ROI: </span>","
                       <span className="text-purple-400 font-bold text-2xl">15.2x</span>","
-=======
               <h2 className= "text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <TrendingUp className= "w-8 h-8 text-green-400/>,";,"
   Results & Business Impact
@@ -595,12 +566,10 @@ const GlobalFinTechAITransformation: () => {
                     <li className= "flex justify-between items-center pt-3 border-t border-white/20">","
                       <span className= "font-bold">ROI: </span>","
                       <span className= "text-purple-400 font-bold text-2xl">15.2x</span>","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                     </li>
                   </ul>
                 </div>
 
-<<<<<<< HEAD
                 <div className="bg-gradient-to-br from-blue-900/40 to-purple-900/40 rounded-xl p-6 border border-blue-500/30"
                   <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2"
                     <Shield className="w-6 h-6 text-blue-400/>,";,"
@@ -649,7 +618,6 @@ const GlobalFinTechAITransformation: () => {
                     </li>
                     <li className="flex items-start gap-2">","
                       <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />","
-=======
                 <div className= "bg-gradient-to-br from-blue-900/40 to-purple-900/40 rounded-xl p-6 border border-blue-500/30">
                   <h3 className= "text-xl font-bold text-white mb-4 flex items-center gap-2">
                     <Shield className= "w-6 h-6 text-blue-400/>,";,"
@@ -698,7 +666,6 @@ const GlobalFinTechAITransformation: () => {
                     </li>
                     <li className= "flex items-start gap-2">","
                       <CheckCircle className= "w-5 h-5 text-green-400 flex-shrink-0 mt-1" />","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                       <span ><strong >Scalability: </strong> Ready for 10x customer growth</span>,,
                     </li>
                   </ul>
@@ -708,7 +675,6 @@ const GlobalFinTechAITransformation: () => {
 
             {/* Client Testimonials */}
             <section >
-<<<<<<< HEAD
               <h2 className="text-3xl font-bold text-white mb-6">💬 Client Testimonials</h2>";,"
               <div className="space-y-6"
                 <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-zion-cyan/30"
@@ -718,7 +684,6 @@ const GlobalFinTechAITransformation: () => {
               <div className="space-y-6">","
                 <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-zion-cyan/30">","
                   <p className="text-lg text-zion-slate-light italic mb-4">","
-=======
               <h2 className= "text-3xl font-bold text-white mb-6">💬 Client Testimonials</h2>";,"
               <div className= "space-y-6">
                 <div className= "bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-zion-cyan/30">
@@ -728,12 +693,10 @@ const GlobalFinTechAITransformation: () => {
               <div className= "space-y-6">","
                 <div className= "bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-zion-cyan/30">","
                   <p className= "text-lg text-zion-slate-light italic mb-4">","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                     "Our partnership with Zion Tech Group has been transformational. They didn't just implement AI technology—they '
                     helped us reimagine our entire business model. The $127M in annual value is significant, but the strategic 
                     positioning and capabilities we've built are invaluable. We're now leading the industry in AI-powered banking."
                   </p>
-<<<<<<< HEAD
                   <div className="flex items-center gap-3">","
                     <div className="w-12 h-12 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 flex items-center justify-center">","
                       <span className="text-white font-bold text-xl">CT</span>","
@@ -741,7 +704,6 @@ const GlobalFinTechAITransformation: () => {
                     <div >
                       <div className="text-white font-semibold">Chief Technology Officer</div>","
                       <div className="text-zion-slate-light text-sm">Client Company</div>","
-=======
                   <div className= "flex items-center gap-3">","
                     <div className= "w-12 h-12 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 flex items-center justify-center">","
                       <span className= "text-white font-bold text-xl">CT</span>","
@@ -749,27 +711,22 @@ const GlobalFinTechAITransformation: () => {
                     <div >
                       <div className= "text-white font-semibold">Chief Technology Officer</div>","
                       <div className= "text-zion-slate-light text-sm">Client Company</div>","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                     </div>
                   </div>
                 </div>
 
-<<<<<<< HEAD
                 <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-zion-cyan/30"
                   <p className="text-lg text-zion-slate-light italic mb-4"
                 <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-zion-cyan/30">","
                   <p className="text-lg text-zion-slate-light italic mb-4">","
-=======
                 <div className= "bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-zion-cyan/30">
                   <p className= "text-lg text-zion-slate-light italic mb-4">
                 <div className= "bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-zion-cyan/30">","
                   <p className= "text-lg text-zion-slate-light italic mb-4">","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                     "The fraud detection platform alone paid for the entire initiative. Going from 8% fraud rates to less than 1% "
                     was game-changing. Our customers are happier, our losses are down 92%, and our team can focus on strategic 
                     work instead of chasing fraud."
                   </p>
-<<<<<<< HEAD
                   <div className="flex items-center gap-3">","
                     <div className="w-12 h-12 rounded-full bg-gradient-to-r from-red-500 to-orange-500 flex items-center justify-center">","
                       <span className="text-white font-bold text-xl">RM</span>","
@@ -777,7 +734,6 @@ const GlobalFinTechAITransformation: () => {
                     <div >
                       <div className="text-white font-semibold">Head of Risk Management</div>","
                       <div className="text-zion-slate-light text-sm">Client Company</div>","
-=======
                   <div className= "flex items-center gap-3">","
                     <div className= "w-12 h-12 rounded-full bg-gradient-to-r from-red-500 to-orange-500 flex items-center justify-center">","
                       <span className= "text-white font-bold text-xl">RM</span>","
@@ -785,7 +741,6 @@ const GlobalFinTechAITransformation: () => {
                     <div >
                       <div className= "text-white font-semibold">Head of Risk Management</div>","
                       <div className= "text-zion-slate-light text-sm">Client Company</div>","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                     </div>
                   </div>
                 </div>
@@ -793,7 +748,6 @@ const GlobalFinTechAITransformation: () => {
             </section>
 
             {/* CTA Section */}
-<<<<<<< HEAD
             <section className="bg-gradient-to-r from-blue-900/40 via-purple-900/40 to-cyan-900/40 rounded-xl p-8 border-2 border-blue-500/50">","
               <div className="text-center">","
                 <h2 className="text-3xl font-bold text-white mb-4">Ready to Transform Your Organization with AI?</h2>","
@@ -810,7 +764,6 @@ const GlobalFinTechAITransformation: () => {
                   </Link>
                   <Link to: "/services",";,"
   className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-bold rounded-lg border border-blue-500/30 hover: bg-white/20 transition-all","
-=======
             <section className= "bg-gradient-to-r from-blue-900/40 via-purple-900/40 to-cyan-900/40 rounded-xl p-8 border-2 border-blue-500/50">","
               <div className= "text-center">","
                 <h2 className= "text-3xl font-bold text-white mb-4">Ready to Transform Your Organization with AI?</h2>","
@@ -827,7 +780,6 @@ const GlobalFinTechAITransformation: () => {
                   </Link>
                   <Link to: "/services",";,"
   className= "inline-flex items-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-bold rounded-lg border border-blue-500/30 hover: bg-white/20 transition-all","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                   >
                     View Our Services
                   </Link>

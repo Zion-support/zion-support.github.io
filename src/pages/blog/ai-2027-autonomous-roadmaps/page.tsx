@@ -3,42 +3,33 @@ import React from "react";
 
 export default function AIAutonomousRoadmaps2027(): React.JSX.Element {
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">","
-=======
     <div className= "min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
       <Helmet >
         <title >AI 2027: Autonomous Roadmaps that Prove ROI</title>,,
         <meta name: "description" content ="Outcome‑led bets, KPI scorecards, budgets, and rollback — a practical 2027 roadmap system." /><link rel: "canonical" href="https://ziontechgroup.com/blog/ai-2027-autonomous-roadmaps/>","
       </Helmet>
 
-<<<<<<< HEAD
       <div className="container mx-auto px-6 py-16"
         <h1 className="text-4xl md: text-5xl font-bold mb-4">AI 2027: Autonomous Roadmaps that Prove ROI</h1>","
         <p className="text-zion-slate-light mb-8">Bets → KPIs → budgets → rollback</p>";,"
         <div className="prose prose-invert max-w-3xl"
-=======
       <div className= "container mx-auto px-6 py-16">
         <h1 className= "text-4xl md: text-5xl font-bold mb-4">AI 2027: Autonomous Roadmaps that Prove ROI</h1>","
         <p className= "text-zion-slate-light mb-8">Bets → KPIs → budgets → rollback</p>";,"
         <div className= "prose prose-invert max-w-3xl">
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
         <meta name: "description" content ="Outcome‑led bets, KPI scorecards, budgets, and rollback — a practical 2027 roadmap system." />","
         <link rel: "canonical" href ="https: //ziontechgroup.com/blog/ai-2027-autonomous-roadmaps" />","
       </Helmet>
 
-<<<<<<< HEAD
       <div className="container mx-auto px-6 py-16">","
         <h1 className="text-4xl md: text-5xl font-bold mb-4">AI 2027: Autonomous Roadmaps that Prove ROI</h1>","
         <p className="text-zion-slate-light mb-8">Bets → KPIs → budgets → rollback</p>","
         <div className="prose prose-invert max-w-3xl">","
-=======
       <div className= "container mx-auto px-6 py-16">","
         <h1 className= "text-4xl md: text-5xl font-bold mb-4">AI 2027: Autonomous Roadmaps that Prove ROI</h1>","
         <p className= "text-zion-slate-light mb-8">Bets → KPIs → budgets → rollback</p>","
         <div className= "prose prose-invert max-w-3xl">","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
           <p >
             Design outcome‑led AI roadmaps that link strategic bets to KPI scorecards, explicit budgets, and instant rollback.
           </p>

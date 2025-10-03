@@ -8,7 +8,6 @@ const NextGenIntelligentAutomationBreakthrough: () => {
         <meta name: "description",";,"
   content: "Discover next-generation intelligent automation revolutionizing business with 94% accuracy, 85% cost reduction, and 10x productivity gains through AI-powered workflows." /><meta name: "keywords",";,"
   content: "intelligent automation, RPA, AI workflows, process automation, hyperautomation, digital transformation" /></Helmet>";,"
-<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">","
         <Header />
 
@@ -36,7 +35,6 @@ const NextGenIntelligentAutomationBreakthrough: () => {
             <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 leading-tight">",";,"
   Next-Gen Intelligent Automation Breakthrough
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-cyan-400 mt-2 text-4xl">",";,"
-=======
       <div className= "min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">","
         <Header />
 
@@ -64,36 +62,28 @@ const NextGenIntelligentAutomationBreakthrough: () => {
             <h1 className= "text-5xl md: text-6xl font-bold text-white mb-6 leading-tight"">"
   Next-Gen Intelligent Automation Breakthrough
               <span className= "block text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-cyan-400 mt-2 text-4xl"">"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   How AI-Powered Workflows Are Redefining Business Operations
               </span>
             </h1>
 
-<<<<<<< HEAD
             <p className="text-xl text-zion-slate-light leading-relaxed mb-8">,";,"
-=======
             <p className= "text-xl text-zion-slate-light leading-relaxed mb-8">,";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Organizations deploying next-generation automation are achieving 94% accuracy, 85% cost reductions
               and 10x productivity gains through AI-powered workflows that learn, adapt, and optimize autonomously.
             </p>
 
-<<<<<<< HEAD
             <div className="flex items-center gap-4 mb-12"
               <div className="w-12 h-12 rounded-full bg-gradient-to-r from-green-500 to-cyan-500 flex items-center justify-center"
                 <Brain className="w-6 h-6 text-white/>";,"
             <p className="text-xl text-zion-slate-light leading-relaxed mb-8">",";,"
-=======
             <div className= "flex items-center gap-4 mb-12">
               <div className= "w-12 h-12 rounded-full bg-gradient-to-r from-green-500 to-cyan-500 flex items-center justify-center">
                 <Brain className= "w-6 h-6 text-white/>";,"
             <p className= "text-xl text-zion-slate-light leading-relaxed mb-8"">"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Organizations deploying next-generation automation are achieving 94% accuracy, 85% cost reductions
               and 10x productivity gains through AI-powered workflows that learn, adapt, and optimize autonomously.
             </p>
 
-<<<<<<< HEAD
             <div className="flex items-center gap-4 mb-12">","
               <div className="w-12 h-12 rounded-full bg-gradient-to-r from-green-500 to-cyan-500 flex items-center justify-center">","
                 <Brain className="w-6 h-6 text-white" />","
@@ -101,7 +91,6 @@ const NextGenIntelligentAutomationBreakthrough: () => {
               <div >
                 <div className="text-white font-semibold">Marcus Rodriguez</div>","
                 <div className="text-zion-slate-light text-sm">VP of Automation Solutions, Zion Tech Group</div>","
-=======
             <div className= "flex items-center gap-4 mb-12">","
               <div className= "w-12 h-12 rounded-full bg-gradient-to-r from-green-500 to-cyan-500 flex items-center justify-center">","
                 <Brain className= "w-6 h-6 text-white" />","
@@ -109,47 +98,36 @@ const NextGenIntelligentAutomationBreakthrough: () => {
               <div >
                 <div className= "text-white font-semibold">Marcus Rodriguez</div>","
                 <div className= "text-zion-slate-light text-sm">VP of Automation Solutions, Zion Tech Group</div>","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
               </div>
             </div>
 
             {/* Key Metrics */};
-<<<<<<< HEAD
             <div className="grid md: grid-cols-4 gap-4 mb-12">","
-=======
             <div className= "grid md: grid-cols-4 gap-4 mb-12">","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
               {[
                 { value: "$3.2T", label: "Automation Market 2025" }";"
                 { value: "85%", label: "Cost Reduction" }";"
                 { value: "94%", label: "Accuracy Rate" }";"
                 { value: "10x", label: "Productivity Gain" }";"
-<<<<<<< HEAD
             <div className="grid md: grid-cols-4 gap-4 mb-12">","
-=======
             <div className= "grid md: grid-cols-4 gap-4 mb-12">","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
               {[
                 { value: "$3.2T", label: "Automation Market 2025" },"
                 { value: "85%", label: "Cost Reduction" },"
                 { value: "94%", label: "Accuracy Rate" },"
                 { value: "10x", label: "Productivity Gain" }"
               ].map((metric, index) => (
-<<<<<<< HEAD
                 <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-zion-cyan/30 text-center">","
                   <div className="text-3xl font-bold text-cyan-400 mb-2">{metric.value}</div>"
                   <div className="text-sm text-zion-slate-light">{metric.label}</div>"
-=======
                 <div key: {index} className= "bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-zion-cyan/30 text-center">","
                   <div className= "text-3xl font-bold text-cyan-400 mb-2">{metric.value}</div>"
                   <div className= "text-sm text-zion-slate-light">{metric.label}</div>"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                 </div>
               ))}
             </div>
 
             {/* Content */}
-<<<<<<< HEAD
             <div className="prose prose-invert prose-lg max-w-none space-y-8 text-zion-slate-light">","
               <section >
                 <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3"
@@ -167,7 +145,6 @@ const NextGenIntelligentAutomationBreakthrough: () => {
                     <div >
                       <h3 className="text-xl font-bold text-white mb-4">Traditional RPA (2015-2020)</h3>","
                       <ul className="space-y-2">","
-=======
             <div className= "prose prose-invert prose-lg max-w-none space-y-8 text-zion-slate-light">","
               <section >
                 <h2 className= "text-3xl font-bold text-white mb-6 flex items-center gap-3">
@@ -185,7 +162,6 @@ const NextGenIntelligentAutomationBreakthrough: () => {
                     <div >
                       <h3 className= "text-xl font-bold text-white mb-4">Traditional RPA (2015-2020)</h3>","
                       <ul className= "space-y-2">","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                         <li >❌ Rule-based automation</li>
                         <li >❌ Structured data only</li>
                         <li >❌ Manual process mapping</li>
@@ -194,7 +170,6 @@ const NextGenIntelligentAutomationBreakthrough: () => {
                       </ul>
                     </div>
                     <div >
-<<<<<<< HEAD
                       <h3 className="text-xl font-bold text-white mb-4">Intelligent Automation (2025)</h3>";,"
                       <ul className="space-y-2"
                         <li className="flex items-start gap-2"
@@ -235,7 +210,6 @@ const NextGenIntelligentAutomationBreakthrough: () => {
                         </li>
                         <li className="flex items-start gap-2">","
                           <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />","
-=======
                       <h3 className= "text-xl font-bold text-white mb-4">Intelligent Automation (2025)</h3>";,"
                       <ul className= "space-y-2">
                         <li className= "flex items-start gap-2">
@@ -276,7 +250,6 @@ const NextGenIntelligentAutomationBreakthrough: () => {
                         </li>
                         <li className= "flex items-start gap-2">","
                           <CheckCircle className= "w-5 h-5 text-green-400 flex-shrink-0 mt-1" />","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                           <span >Unlimited scalability</span>
                         </li>
                       </ul>
@@ -286,7 +259,6 @@ const NextGenIntelligentAutomationBreakthrough: () => {
               </section>
 
               <section >
-<<<<<<< HEAD
                 <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3"
                   <Brain className="w-8 h-8 text-purple-400/>";,"
                 <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">","
@@ -294,7 +266,6 @@ const NextGenIntelligentAutomationBreakthrough: () => {
   Next-Gen Automation Capabilities
                 </h2>
                 <div className="grid gap-6">","
-=======
                 <h2 className= "text-3xl font-bold text-white mb-6 flex items-center gap-3">
                   <Brain className= "w-8 h-8 text-purple-400/>";,"
                 <h2 className= "text-3xl font-bold text-white mb-6 flex items-center gap-3">","
@@ -302,7 +273,6 @@ const NextGenIntelligentAutomationBreakthrough: () => {
   Next-Gen Automation Capabilities
                 </h2>
                 <div className= "grid gap-6">","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                   {[
                     {
                       title: "Cognitive Process Automation",",";,"
@@ -330,21 +300,18 @@ const NextGenIntelligentAutomationBreakthrough: () => {
                       icon: "🎯","
                     }
                   ].map((capability, index) => (
-<<<<<<< HEAD
                     <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-zion-cyan/20 hover: border-zion-cyan/50 transition-all">","
                       <div className="flex items-start gap-4"
                         <div className="text-4xl">{capability.icon}</div>";"
                         <div className="flex-1"
                           <h3 className="text-xl font-bold text-white mb-3">{capability.title}</h3>";"
                           <p className="text-zion-slate-light">{capability.description}</p>";"
-=======
                     <div key: {index} className= "bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-zion-cyan/20 hover: border-zion-cyan/50 transition-all">","
                       <div className= "flex items-start gap-4">
                         <div className= "text-4xl">{capability.icon}</div>";"
                         <div className= "flex-1">
                           <h3 className= "text-xl font-bold text-white mb-3">{capability.title}</h3>";"
                           <p className= "text-zion-slate-light">{capability.description}</p>";"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                       title: "Cognitive Process Automation",","
                       description: "AI systems that understand, learn, and make decisions like humans. 99.8% accuracy in document processing across any format.",","
                       icon: "🧠","
@@ -370,21 +337,18 @@ const NextGenIntelligentAutomationBreakthrough: () => {
                       icon: "🎯","
                     }
                   ].map((capability, index) => (
-<<<<<<< HEAD
                     <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-zion-cyan/20 hover: border-zion-cyan/50 transition-all">","
                       <div className="flex items-start gap-4">","
                         <div className="text-4xl">{capability.icon}</div>"
                         <div className="flex-1">","
                           <h3 className="text-xl font-bold text-white mb-3">{capability.title}</h3>"
                           <p className="text-zion-slate-light">{capability.description}</p>"
-=======
                     <div key: {index} className= "bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-zion-cyan/20 hover: border-zion-cyan/50 transition-all">","
                       <div className= "flex items-start gap-4">","
                         <div className= "text-4xl">{capability.icon}</div>"
                         <div className= "flex-1">","
                           <h3 className= "text-xl font-bold text-white mb-3">{capability.title}</h3>"
                           <p className= "text-zion-slate-light">{capability.description}</p>"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                         </div>
                       </div>
                     </div>
@@ -393,7 +357,6 @@ const NextGenIntelligentAutomationBreakthrough: () => {
               </section>
 
               <section >
-<<<<<<< HEAD
                 <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3"
                   <TrendingUp className="w-8 h-8 text-green-400/>";,"
                 <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">","
@@ -401,7 +364,6 @@ const NextGenIntelligentAutomationBreakthrough: () => {
   Industry Applications & Results
                 </h2>
                 <div className="grid gap-6">","
-=======
                 <h2 className= "text-3xl font-bold text-white mb-6 flex items-center gap-3">
                   <TrendingUp className= "w-8 h-8 text-green-400/>";,"
                 <h2 className= "text-3xl font-bold text-white mb-6 flex items-center gap-3">","
@@ -409,7 +371,6 @@ const NextGenIntelligentAutomationBreakthrough: () => {
   Industry Applications & Results
                 </h2>
                 <div className= "grid gap-6">","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                   {[
                     {
                       industry: "Financial Services",",";,"
@@ -458,7 +419,6 @@ const NextGenIntelligentAutomationBreakthrough: () => {
                       results: ["Order Processing: 99.8% automation", "Fulfillment: 80% faster", "Revenue: 28% increase"]","
                     }
                   ].map((app, index) => (
-<<<<<<< HEAD
                     <div key={index} className="bg-gradient-to-r from-blue-900/40 to-purple-900/40 rounded-xl p-6 border border-blue-500/30">","
                       <div className="flex flex-wrap items-center justify-between gap-4 mb-4">","
                         <h3 className="text-2xl font-bold text-white">{app.industry}</h3>"
@@ -467,7 +427,6 @@ const NextGenIntelligentAutomationBreakthrough: () => {
                             {app.savings} savings
                           </span>
                           <span className="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-lg text-sm font-semibold">","
-=======
                     <div key: {index} className= "bg-gradient-to-r from-blue-900/40 to-purple-900/40 rounded-xl p-6 border border-blue-500/30">","
                       <div className= "flex flex-wrap items-center justify-between gap-4 mb-4">","
                         <h3 className= "text-2xl font-bold text-white">{app.industry}</h3>"
@@ -476,26 +435,22 @@ const NextGenIntelligentAutomationBreakthrough: () => {
                             {app.savings} savings
                           </span>
                           <span className= "px-3 py-1 bg-blue-500/20 text-blue-300 rounded-lg text-sm font-semibold">","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                             {app.automation} automated
                           </span>
                         </div>
                       </div>
-<<<<<<< HEAD
                       <ul className="space-y-2">","
                         {app.results.map((result, rIndex) => (
                           <li key={rIndex} className="flex items-start gap-2"
                             <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1/>";,"
                           <li key={rIndex} className="flex items-start gap-2">","
                             <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />","
-=======
                       <ul className= "space-y-2">","
                         {app.results.map((result, rIndex) => (
                           <li key: {rIndex} className= "flex items-start gap-2">
                             <CheckCircle className= "w-5 h-5 text-green-400 flex-shrink-0 mt-1/>";,"
                           <li key: {rIndex} className= "flex items-start gap-2">","
                             <CheckCircle className= "w-5 h-5 text-green-400 flex-shrink-0 mt-1" />","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                             <span >{result}</span>
                           </li>
                         ))}
@@ -505,7 +460,6 @@ const NextGenIntelligentAutomationBreakthrough: () => {
                 </div>
               </section>
 
-<<<<<<< HEAD
               <section className="bg-gradient-to-r from-green-900/40 via-blue-900/40 to-purple-900/40 rounded-xl p-8 border-2 border-green-500/50"
                 <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3"
                   <Rocket className="w-8 h-8 text-green-400/>,";,"
@@ -535,7 +489,6 @@ const NextGenIntelligentAutomationBreakthrough: () => {
                   </Link>
                   <Link to: "/services/real-time-cognitive-automation",";,"
   className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white/10 backdrop-blur-sm text-white font-bold rounded-lg border border-green-500/30 hover: bg-white/20 transition-all","
-=======
               <section className= "bg-gradient-to-r from-green-900/40 via-blue-900/40 to-purple-900/40 rounded-xl p-8 border-2 border-green-500/50">
                 <h2 className= "text-3xl font-bold text-white mb-6 flex items-center gap-3">
                   <Rocket className= "w-8 h-8 text-green-400/>,";,"
@@ -565,7 +518,6 @@ const NextGenIntelligentAutomationBreakthrough: () => {
                   </Link>
                   <Link to: "/services/real-time-cognitive-automation",";,"
   className= "inline-flex items-center justify-center gap-2 px-6 py-3 bg-white/10 backdrop-blur-sm text-white font-bold rounded-lg border border-green-500/30 hover: bg-white/20 transition-all","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                   >
                     View Automation Platform
                   </Link>

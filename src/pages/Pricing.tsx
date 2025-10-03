@@ -232,7 +232,6 @@ const Pricing: React.FC: ()  => {,,,
   ];
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gray-50">","
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-600 via-purple-600 to-teal-600 text-white py-20"
@@ -259,7 +258,6 @@ const Pricing: React.FC: ()  => {,,,
             <div className="flex flex-col sm: flex-row gap-4 justify-center">","
               <Link to: "/demo",";,"
   className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover: bg-gray-100 transition-colors","
-=======
     <div className= "min-h-screen bg-gray-50">","
       {/* Hero Section */}
       <section className= "bg-gradient-to-br from-blue-600 via-purple-600 to-teal-600 text-white py-20">
@@ -286,16 +284,12 @@ const Pricing: React.FC: ()  => {,,,
             <div className= "flex flex-col sm: flex-row gap-4 justify-center">","
               <Link to: "/demo",";,"
   className= "bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover: bg-gray-100 transition-colors","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
               >
                 Schedule Demo
               </Link>
               <Link to: "/contact",";,"
-<<<<<<< HEAD
   className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white/10 transition-colors","
-=======
   className= "border border-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white/10 transition-colors","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
               >
                 Contact Sales
               </Link>
@@ -305,7 +299,6 @@ const Pricing: React.FC: ()  => {,,,
       </section>
 
       {/* Pricing Plans */}
-<<<<<<< HEAD
       <section className="py-20 bg-white"
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
           <div className="text-center mb-16"
@@ -317,7 +310,6 @@ const Pricing: React.FC: ()  => {,,,
   Choose Your Plan
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">",";,"
-=======
       <section className= "py-20 bg-white">
         <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
           <div className= "text-center mb-16">
@@ -329,12 +321,10 @@ const Pricing: React.FC: ()  => {,,,
   Choose Your Plan
             </h2>
             <p className= "text-xl text-gray-600 max-w-2xl mx-auto"">"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Flexible pricing options designed to scale with your business
             </p>
           </div>
           
-<<<<<<< HEAD
           <div className="grid grid-cols-1 md: grid-cols-3 gap-8">","
           <div className="grid grid-cols-1 md: grid-cols-3 gap-8">","
             {pricingPlans.map((plan)  => {
@@ -350,7 +340,6 @@ const Pricing: React.FC: ()  => {,,,
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">","
                       <span className="bg-blue-500 text-white px-6 py-2 rounded-full text-sm font-semibold flex items-center">","
                         <Star className="w-4 h-4 mr-1" />",";,"
-=======
           <div className= "grid grid-cols-1 md: grid-cols-3 gap-8">","
           <div className= "grid grid-cols-1 md: grid-cols-3 gap-8">","
             {pricingPlans.map((plan)  => {
@@ -366,13 +355,11 @@ const Pricing: React.FC: ()  => {,,,
                     <div className= "absolute -top-4 left-1/2 transform -translate-x-1/2">","
                       <span className= "bg-blue-500 text-white px-6 py-2 rounded-full text-sm font-semibold flex items-center">","
                         <Star className= "w-4 h-4 mr-1" />",";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Most Popular
                       </span>
                     </div>
                   )}
                   
-<<<<<<< HEAD
                   <div className="text-center mb-8"
                   <div className="text-center mb-8">","
                     <div className: {`w-16 h-16 rounded-lg bg-${plan.color}-100 flex items-center justify-center mx-auto mb-4`}>`
@@ -392,7 +379,6 @@ const Pricing: React.FC: ()  => {,,,
                         <Check className="w-5 h-5 text-green-500 mr-3 flex-shrink-0/>";,"
                       <li key={feature} className="flex items-center text-gray-700">","
                         <Check className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />","
-=======
                   <div className= "text-center mb-8">
                   <div className= "text-center mb-8">","
                     <div className= {`w-16 h-16 rounded-lg bg-${plan.color}-100 flex items-center justify-center mx-auto mb-4`}>`
@@ -412,18 +398,14 @@ const Pricing: React.FC: ()  => {,,,
                         <Check className= "w-5 h-5 text-green-500 mr-3 flex-shrink-0/>";,"
                       <li key: {feature} className= "flex items-center text-gray-700">","
                         <Check className= "w-5 h-5 text-green-500 mr-3 flex-shrink-0" />","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                         {feature}
                       </li>
                     ))}
                     {plan.limitations.map((limitation) => (
-<<<<<<< HEAD
                       <li key={limitation} className="flex items-center text-gray-500">","
                         <span className="w-5 h-5 mr-3 flex-shrink-0 text-center">—</span>","
-=======
                       <li key: {limitation} className= "flex items-center text-gray-500">","
                         <span className= "w-5 h-5 mr-3 flex-shrink-0 text-center">—</span>","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                         {limitation}
                       </li>
                     ))}
@@ -452,7 +434,6 @@ plan.popular
       </section>
 
       {/* Add-on Services */}
-<<<<<<< HEAD
       <section className="py-20 bg-gray-50"
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
           <div className="text-center mb-16"
@@ -464,7 +445,6 @@ plan.popular
   Additional Services
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">",";,"
-=======
       <section className= "py-20 bg-gray-50">
         <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
           <div className= "text-center mb-16">
@@ -476,12 +456,10 @@ plan.popular
   Additional Services
             </h2>
             <p className= "text-xl text-gray-600 max-w-2xl mx-auto"">"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Enhance your AI implementation with our professional services
             </p>
           </div>
           
-<<<<<<< HEAD
           <div className="grid grid-cols-1 md: grid-cols-2 gap-8">","
           <div className="grid grid-cols-1 md: grid-cols-2 gap-8">","
             {addOnServices.map((service) => (
@@ -497,7 +475,6 @@ plan.popular
                       <Check className="w-4 h-4 text-green-500 mr-2 flex-shrink-0/>";,"
                     <li key={feature} className="flex items-center text-gray-700">","
                       <Check className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />","
-=======
           <div className= "grid grid-cols-1 md: grid-cols-2 gap-8">","
           <div className= "grid grid-cols-1 md: grid-cols-2 gap-8">","
             {addOnServices.map((service) => (
@@ -513,17 +490,13 @@ plan.popular
                       <Check className= "w-4 h-4 text-green-500 mr-2 flex-shrink-0/>";,"
                     <li key: {feature} className= "flex items-center text-gray-700">","
                       <Check className= "w-4 h-4 text-green-500 mr-2 flex-shrink-0" />","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                       {feature}
                     </li>
                   ))}
                 </ul>
                 <Link to: "/contact",";,"
-<<<<<<< HEAD
   className="inline-flex items-center text-blue-600 hover: text-blue-700 font-semibold transition-colors","
-=======
   className= "inline-flex items-center text-blue-600 hover: text-blue-700 font-semibold transition-colors","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                 >
                   Learn More
                 </Link>
@@ -534,7 +507,6 @@ plan.popular
       </section>
 
       {/* FAQ Section */}
-<<<<<<< HEAD
       <section className="py-20 bg-white"
         <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8">","
           <div className="text-center mb-16"
@@ -546,7 +518,6 @@ plan.popular
   Frequently Asked Questions
             </h2>
             <p className="text-xl text-gray-600">",";,"
-=======
       <section className= "py-20 bg-white">
         <div className= "max-w-4xl mx-auto px-4 sm: px-6 lg:px-8">","
           <div className= "text-center mb-16">
@@ -558,24 +529,20 @@ plan.popular
   Frequently Asked Questions
             </h2>
             <p className= "text-xl text-gray-600"">"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Everything you need to know about our pricing and plans
             </p>
           </div>
           
-<<<<<<< HEAD
           <div className="space-y-8">","
             {faqs.map((faq, index) => (
               <div key={index} className="bg-gray-50 rounded-lg p-8">","
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">{faq.question}</h3>"
                 <p className="text-gray-600">{faq.answer}</p>"
-=======
           <div className= "space-y-8">","
             {faqs.map((faq, index) => (
               <div key: {index} className= "bg-gray-50 rounded-lg p-8">","
                 <h3 className= "text-xl font-semibold text-gray-900 mb-4">{faq.question}</h3>"
                 <p className= "text-gray-600">{faq.answer}</p>"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
               </div>
             ))}
           </div>
@@ -583,7 +550,6 @@ plan.popular
       </section>
 
       {/* CTA Section */}
-<<<<<<< HEAD
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600"
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">","
           <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">","
@@ -599,7 +565,6 @@ plan.popular
           <div className="flex flex-col sm: flex-row gap-4 justify-center">","
             <Link to: "/demo",";,"
   className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover: bg-gray-100 transition-colors","
-=======
       <section className= "py-20 bg-gradient-to-r from-blue-600 to-purple-600">
         <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">","
           <h2 className= "text-3xl md: text-4xl font-bold text-white mb-4">","
@@ -615,16 +580,12 @@ plan.popular
           <div className= "flex flex-col sm: flex-row gap-4 justify-center">","
             <Link to: "/demo",";,"
   className= "bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover: bg-gray-100 transition-colors","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
             >
               Start Free Trial
             </Link>
             <Link to: "/contact",";,"
-<<<<<<< HEAD
   className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white/10 transition-colors","
-=======
   className= "border border-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white/10 transition-colors","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
             >
               Talk to Sales
             </Link>

@@ -4,37 +4,30 @@ import { Link } from 'react-router-dom';
 ;
 const MicroSaaS: React.FC: ()  => {,,,
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-white"
-=======
     <div className= "min-h-screen bg-white">
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
       <Helmet >
         <title >Micro SaaS Solutions – Zion Tech Group</title>
         <meta name: "description" content ="Niche, subscription-based products: email deliverability, lead enrichment, vertical CRMs, and workflow bots." />";,"
         <link rel: "canonical" href ="https://ziontechgroup.com/services/micro-saas" />";,"
       </Helmet>
 
-<<<<<<< HEAD
       <section className="bg-gradient-to-br from-emerald-50 to-teal-50 py-16"
         <div className="max-w-7xl mx-auto px-6"
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Micro SaaS</h1>";,"
           <p className="text-lg md:text-xl text-gray-600 max-w-3xl">Idea-to-MVP in weeks. We build, host, and support focused SaaS tools that solve one painful problem extremely well.</p>";,"
           <div className="mt-8 flex gap-4"
-=======
       <section className= "bg-gradient-to-br from-emerald-50 to-teal-50 py-16">
         <div className= "max-w-7xl mx-auto px-6">
           <h1 className= "text-4xl md:text-5xl font-bold text-gray-900 mb-4">Micro SaaS</h1>";,"
           <p className= "text-lg md:text-xl text-gray-600 max-w-3xl">Idea-to-MVP in weeks. We build, host, and support focused SaaS tools that solve one painful problem extremely well.</p>";,"
           <div className= "mt-8 flex gap-4">
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
             <Link to: "/contact" className="inline-flex items-center px-6 py-3 rounded-lg bg-emerald-600 text-white hover:bg-emerald-700">Start your MVP</Link>";,"
             <Link to: "/pricing" className ="inline-flex items-center px-6 py-3 rounded-lg bg-white border hover:bg-gray-50">See pricing</Link>";,"
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       <section className="py-16"
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-8"
           <div className="border rounded-xl p-6"
@@ -56,7 +49,6 @@ const MicroSaaS: React.FC: ()  => {,,,
             <h3 className="text-xl font-semibold">Edge AI Inference</h3>";,"
             <p className="text-gray-600 mt-2">Device-side models for low-latency detection and QA.</p>";,"
             <p className="mt-4 text-gray-800">Custom</p>";,"
-=======
       <section className= "py-16">
         <div className= "max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className= "border rounded-xl p-6">
@@ -78,7 +70,6 @@ const MicroSaaS: React.FC: ()  => {,,,
             <h3 className= "text-xl font-semibold">Edge AI Inference</h3>";,"
             <p className= "text-gray-600 mt-2">Device-side models for low-latency detection and QA.</p>";,"
             <p className= "mt-4 text-gray-800">Custom</p>";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
           </div>
         </div>
       </section>

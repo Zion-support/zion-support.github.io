@@ -272,7 +272,6 @@ const CloudDevOps: React.FC: ()  => {,,,
 
       <Header />
       
-<<<<<<< HEAD
       <main className="min-h-screen bg-white">","
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-green-900 via-green-800 to-blue-900 text-white py-20"
@@ -310,7 +309,6 @@ const CloudDevOps: React.FC: ()  => {,,,
                   View Pricing
                   <ArrowRight className="w-5 h-5 ml-2/>";,"
                   <ArrowRight className="w-5 h-5 ml-2" />","
-=======
       <main className= "min-h-screen bg-white">","
         {/* Hero Section */}
         <section className= "bg-gradient-to-br from-green-900 via-green-800 to-blue-900 text-white py-20">
@@ -348,7 +346,6 @@ const CloudDevOps: React.FC: ()  => {,,,
                   View Pricing
                   <ArrowRight className= "w-5 h-5 ml-2/>";,"
                   <ArrowRight className= "w-5 h-5 ml-2" />","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                 </a>
               </div>
             </div>
@@ -356,7 +353,6 @@ const CloudDevOps: React.FC: ()  => {,,,
         </section>
 
         {/* Key Benefits */}
-<<<<<<< HEAD
         <section className="py-16 bg-gray-50"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
             <div className="text-center mb-12"
@@ -368,7 +364,6 @@ const CloudDevOps: React.FC: ()  => {,,,
   Why Choose Our Cloud & DevOps Services?
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">",";,"
-=======
         <section className= "py-16 bg-gray-50">
           <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
             <div className= "text-center mb-12">
@@ -380,12 +375,10 @@ const CloudDevOps: React.FC: ()  => {,,,
   Why Choose Our Cloud & DevOps Services?
               </h2>
               <p className= "text-xl text-gray-600 max-w-3xl mx-auto"">"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Transform your infrastructure with proven methodologies and cutting-edge automation.
               </p>
             </div>
 
-<<<<<<< HEAD
             <div className="grid md: grid-cols-4 gap-8">","
               <div className="text-center"
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4"
@@ -427,7 +420,6 @@ const CloudDevOps: React.FC: ()  => {,,,
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Multi-Cloud</h3>","
                 <p className="text-gray-600">AWS, Azure, GCP expertise</p>","
-=======
             <div className= "grid md: grid-cols-4 gap-8">","
               <div className= "text-center">
                 <div className= "inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">
@@ -469,14 +461,12 @@ const CloudDevOps: React.FC: ()  => {,,,
                 </div>
                 <h3 className= "text-xl font-bold text-gray-900 mb-2">Multi-Cloud</h3>","
                 <p className= "text-gray-600">AWS, Azure, GCP expertise</p>","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
               </div>
             </div>
           </div>
         </section>
 
         {/* Services */}
-<<<<<<< HEAD
         <section className="py-20"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
             <div className="text-center mb-16"
@@ -488,7 +478,6 @@ const CloudDevOps: React.FC: ()  => {,,,
   Comprehensive Cloud & DevOps Services
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">",";,"
-=======
         <section className= "py-20">
           <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
             <div className= "text-center mb-16">
@@ -500,12 +489,10 @@ const CloudDevOps: React.FC: ()  => {,,,
   Comprehensive Cloud & DevOps Services
               </h2>
               <p className= "text-xl text-gray-600 max-w-3xl mx-auto"">"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   End-to-end solutions for modern cloud infrastructure and deployment automation.
               </p>
             </div>
 
-<<<<<<< HEAD
             <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">","
               {services.map((service, index) => {
                 const Icon: service.icon;,,,
@@ -531,7 +518,6 @@ const CloudDevOps: React.FC: ()  => {,,,
                         <li key={benefitIndex} className="flex items-center text-sm">","
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />","
                           <span className="text-gray-700">{benefit}</span>"
-=======
             <div className= "grid md: grid-cols-2 lg:grid-cols-4 gap-8">","
               {services.map((service, index) => {
                 const Icon: service.icon;,,,
@@ -557,7 +543,6 @@ const CloudDevOps: React.FC: ()  => {,,,
                         <li key: {benefitIndex} className= "flex items-center text-sm">","
                           <CheckCircle className= "w-4 h-4 text-green-500 mr-2 flex-shrink-0" />","
                           <span className= "text-gray-700">{benefit}</span>"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                         </li>
                       ))}
                     </ul>
@@ -569,7 +554,6 @@ const CloudDevOps: React.FC: ()  => {,,,
         </section>
 
         {/* Features */}
-<<<<<<< HEAD
         <section className="py-20 bg-gray-50"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
             <div className="text-center mb-16"
@@ -581,7 +565,6 @@ const CloudDevOps: React.FC: ()  => {,,,
   Advanced Capabilities
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">",";,"
-=======
         <section className= "py-20 bg-gray-50">
           <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
             <div className= "text-center mb-16">
@@ -593,12 +576,10 @@ const CloudDevOps: React.FC: ()  => {,,,
   Advanced Capabilities
               </h2>
               <p className= "text-xl text-gray-600 max-w-3xl mx-auto"">"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Powerful features that make your infrastructure truly scalable and resilient.
               </p>
             </div>
 
-<<<<<<< HEAD
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">","
               {features.map((feature, index) => {
                 const Icon: feature.icon;,,,
@@ -623,7 +604,6 @@ const CloudDevOps: React.FC: ()  => {,,,
                     <p className="text-gray-600 mb-4">{feature.description}</p>"
                     <div className="inline-flex items-center text-green-600 font-semibold text-sm">","
                       <CheckCircle className="w-4 h-4 mr-1" />","
-=======
             <div className= "grid md: grid-cols-2 lg:grid-cols-3 gap-8">","
               {features.map((feature, index) => {
                 const Icon: feature.icon;,,,
@@ -648,7 +628,6 @@ const CloudDevOps: React.FC: ()  => {,,,
                     <p className= "text-gray-600 mb-4">{feature.description}</p>"
                     <div className= "inline-flex items-center text-green-600 font-semibold text-sm">","
                       <CheckCircle className= "w-4 h-4 mr-1" />","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                       {feature.benefit}
                     </div>
                   </div>
@@ -659,7 +638,6 @@ const CloudDevOps: React.FC: ()  => {,,,
         </section>
 
         {/* Pricing */}
-<<<<<<< HEAD
         <section id="pricing" className="py-20"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
             <div className="text-center mb-16"
@@ -671,7 +649,6 @@ const CloudDevOps: React.FC: ()  => {,,,
   Transparent Pricing for Every Scale
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">",";,"
-=======
         <section id: "pricing" className="py-20">
           <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
             <div className= "text-center mb-16">
@@ -683,12 +660,10 @@ const CloudDevOps: React.FC: ()  => {,,,
   Transparent Pricing for Every Scale
               </h2>
               <p className= "text-xl text-gray-600 max-w-3xl mx-auto"">"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Choose the plan that fits your infrastructure needs and growth stage.
               </p>
             </div>
 
-<<<<<<< HEAD
             <div className="grid md: grid-cols-3 gap-8">","
             <div className="grid md: grid-cols-3 gap-8">","
               {pricing.map((plan, index) => (
@@ -696,7 +671,6 @@ const CloudDevOps: React.FC: ()  => {,,,
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">","
                       <span className="bg-green-500 text-white px-4 py-1 rounded-full text-sm font-semibold">",";,"
-=======
             <div className= "grid md: grid-cols-3 gap-8">","
             <div className= "grid md: grid-cols-3 gap-8">","
               {pricing.map((plan, index) => (
@@ -704,12 +678,10 @@ const CloudDevOps: React.FC: ()  => {,,,
                   {plan.popular && (
                     <div className= "absolute -top-4 left-1/2 transform -translate-x-1/2">","
                       <span className= "bg-green-500 text-white px-4 py-1 rounded-full text-sm font-semibold"">"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Most Popular
                       </span>
                     </div>
                   )}
-<<<<<<< HEAD
                   <div className="text-center mb-8">","
                     <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>"
                     <div className="flex items-center justify-center mb-2">","
@@ -731,7 +703,6 @@ const CloudDevOps: React.FC: ()  => {,,,
                   </ul>
                   <a href="/contact",";,"
   className: {,,
-=======
                   <div className= "text-center mb-8">","
                     <h3 className= "text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>"
                     <div className= "flex items-center justify-center mb-2">","
@@ -753,7 +724,6 @@ const CloudDevOps: React.FC: ()  => {,,,
                   </ul>
                   <a href: "/contact",";,"
   className= {,,
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
 `w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${`
 plan.popular
 ? 'bg-green-600 text-white hover: bg-green-700',';,
@@ -767,7 +737,6 @@ plan.popular
               ))}
             </div>
 
-<<<<<<< HEAD
             <div className="text-center mt-12">","
               <p className="text-gray-600 mb-4">Need a custom solution?</p>","
               <a href="/contact",";,"
@@ -776,7 +745,6 @@ plan.popular
                 Contact our Enterprise Team
                 <ArrowRight className="w-4 h-4 ml-1/>";,"
                 <ArrowRight className="w-4 h-4 ml-1" />","
-=======
             <div className= "text-center mt-12">","
               <p className= "text-gray-600 mb-4">Need a custom solution?</p>","
               <a href: "/contact",";,"
@@ -785,14 +753,12 @@ plan.popular
                 Contact our Enterprise Team
                 <ArrowRight className= "w-4 h-4 ml-1/>";,"
                 <ArrowRight className= "w-4 h-4 ml-1" />","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
               </a>
             </div>
           </div>
         </section>
 
         {/* Testimonials */}
-<<<<<<< HEAD
         <section className="py-20 bg-gray-50"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
             <div className="text-center mb-16"
@@ -804,7 +770,6 @@ plan.popular
   What Our Clients Say
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">",";,"
-=======
         <section className= "py-20 bg-gray-50">
           <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
             <div className= "text-center mb-16">
@@ -816,12 +781,10 @@ plan.popular
   What Our Clients Say
               </h2>
               <p className= "text-xl text-gray-600 max-w-3xl mx-auto"">"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Join hundreds of satisfied customers who have transformed their infrastructure with our DevOps expertise.
               </p>
             </div>
 
-<<<<<<< HEAD
             <div className="grid md: grid-cols-3 gap-8">","
             <div className="grid md: grid-cols-3 gap-8">","
               {testimonials.map((testimonial, index) => (
@@ -839,7 +802,6 @@ plan.popular
                     <div className="font-semibold text-gray-900">{testimonial.name}</div>"
                     <div className="text-gray-600 text-sm">{testimonial.role}</div>"
                     <div className="text-green-600 text-sm font-medium">{testimonial.company}</div>"
-=======
             <div className= "grid md: grid-cols-3 gap-8">","
             <div className= "grid md: grid-cols-3 gap-8">","
               {testimonials.map((testimonial, index) => (
@@ -857,7 +819,6 @@ plan.popular
                     <div className= "font-semibold text-gray-900">{testimonial.name}</div>"
                     <div className= "text-gray-600 text-sm">{testimonial.role}</div>"
                     <div className= "text-green-600 text-sm font-medium">{testimonial.company}</div>"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                   </div>
                 </div>
               ))}
@@ -866,7 +827,6 @@ plan.popular
         </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
         <section className="py-20 bg-gradient-to-br from-green-900 via-green-800 to-blue-900 text-white"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">","
             <h2 className="text-4xl font-bold mb-6"
@@ -893,7 +853,6 @@ plan.popular
                 View Case Studies
                 <ArrowRight className="w-5 h-5 ml-2/>";,"
                 <ArrowRight className="w-5 h-5 ml-2" />","
-=======
         <section className= "py-20 bg-gradient-to-br from-green-900 via-green-800 to-blue-900 text-white">
           <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">","
             <h2 className= "text-4xl font-bold mb-6">
@@ -920,7 +879,6 @@ plan.popular
                 View Case Studies
                 <ArrowRight className= "w-5 h-5 ml-2/>";,"
                 <ArrowRight className= "w-5 h-5 ml-2" />","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
               </a>
             </div>
           </div>

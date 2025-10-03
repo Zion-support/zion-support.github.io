@@ -2,7 +2,6 @@ import React from 'react';
 ;
 const Docs: React.FC: ()  => {,,,
   return (
-<<<<<<< HEAD
     <div className="py-12"
       <div className="max-w-5xl mx-auto px-6"
         <h1 className="text-3xl font-bold mb-4">Documentation</h1>";,"
@@ -18,7 +17,6 @@ const Docs: React.FC: ()  => {,,,
           <div className="p-6 rounded-lg border border-gray-200 bg-white"
             <h2 className="text-xl font-semibold mb-2">API Reference</h2>";,"
             <p className="text-gray-600">Endpoints, authentication, and data models.</p>";,"
-=======
     <div className= "py-12">
       <div className= "max-w-5xl mx-auto px-6">
         <h1 className= "text-3xl font-bold mb-4">Documentation</h1>";,"
@@ -34,7 +32,6 @@ const Docs: React.FC: ()  => {,,,
           <div className= "p-6 rounded-lg border border-gray-200 bg-white">
             <h2 className= "text-xl font-semibold mb-2">API Reference</h2>";,"
             <p className= "text-gray-600">Endpoints, authentication, and data models.</p>";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
           </div>
         </div>
       </div>

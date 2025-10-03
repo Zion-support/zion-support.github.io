@@ -9,7 +9,6 @@ const Consulting: React.FC: ()  => {,,,
         <meta name: "description" content ="Advisory and implementation consulting across AI, Cloud, Cybersecurity, and Transformation." />";,"
         <link rel: "canonical" href ="https://ziontechgroup.com/services/consulting" />";,"
       </Helmet>
-<<<<<<< HEAD
       <section className="py-16"
         <div className="container mx-auto px-6 max-w-5xl"
           <h1 className="text-4xl font-bold mb-6">Consulting Services</h1>";,"
@@ -33,7 +32,6 @@ const Consulting: React.FC: ()  => {,,,
             <div className="p-6 border rounded-lg bg-white"
               <h2 className="text-xl font-semibold mb-2">Transformation</h2>";,"
               <p className="text-gray-700">Operating model, change management, and capability uplift programs.</p>";,"
-=======
       <section className= "py-16">
         <div className= "container mx-auto px-6 max-w-5xl">
           <h1 className= "text-4xl font-bold mb-6">Consulting Services</h1>";,"
@@ -57,7 +55,6 @@ const Consulting: React.FC: ()  => {,,,
             <div className= "p-6 border rounded-lg bg-white">
               <h2 className= "text-xl font-semibold mb-2">Transformation</h2>";,"
               <p className= "text-gray-700">Operating model, change management, and capability uplift programs.</p>";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
             </div>
           </div>
         </div>

@@ -11,7 +11,6 @@ const RealTimeCognitiveAutomation: () => {
         <meta name: "description",";,"
   content: "Transform operations with Real-Time Cognitive Automation Platform. 94% accuracy, 85% cost reduction, 10x productivity gains. AI-powered workflows that learn and optimize autonomously." /><meta name: "keywords",";,"
   content: "cognitive automation, intelligent automation, RPA, AI workflows, process automation, business automation, hyperautomation" /></Helmet>";,"
-<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">","
         <Header />
 
@@ -23,7 +22,6 @@ const RealTimeCognitiveAutomation: () => {
           >
             <ArrowLeft className="w-4 h-4 mr-2/>";,"
             <ArrowLeft className="w-4 h-4 mr-2" />",";,"
-=======
       <div className= "min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">","
         <Header />
 
@@ -35,12 +33,10 @@ const RealTimeCognitiveAutomation: () => {
           >
             <ArrowLeft className= "w-4 h-4 mr-2/>";,"
             <ArrowLeft className= "w-4 h-4 mr-2" />",";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Back to Services
           </Link>
 
           {/* Header */}
-<<<<<<< HEAD
           <div className="max-w-5xl mx-auto mb-16">","
             <div className="flex items-center gap-4 mb-6 flex-wrap">","
               <span className="px-4 py-2 bg-purple-500/20 text-purple-300 rounded-full text-sm font-semibold border border-purple-500/30">","
@@ -56,7 +52,6 @@ const RealTimeCognitiveAutomation: () => {
             <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 leading-tight">",";,"
   Real-Time Cognitive Automation Platform
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400 mt-2">",";,"
-=======
           <div className= "max-w-5xl mx-auto mb-16">","
             <div className= "flex items-center gap-4 mb-6 flex-wrap">","
               <span className= "px-4 py-2 bg-purple-500/20 text-purple-300 rounded-full text-sm font-semibold border border-purple-500/30">","
@@ -72,26 +67,21 @@ const RealTimeCognitiveAutomation: () => {
             <h1 className= "text-5xl md: text-6xl font-bold text-white mb-6 leading-tight"">"
   Real-Time Cognitive Automation Platform
               <span className= "block text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400 mt-2"">"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Transform Business Operations with Intelligent Automation
               </span>
             </h1>
 
-<<<<<<< HEAD
             <p className="text-xl text-zion-slate-light leading-relaxed mb-8">,";,"
   Revolutionize your business operations with AI-powered workflows that deliver instant decision-making
             <p className="text-xl text-zion-slate-light leading-relaxed mb-8">",";,"
-=======
             <p className= "text-xl text-zion-slate-light leading-relaxed mb-8">,";,"
   Revolutionize your business operations with AI-powered workflows that deliver instant decision-making
             <p className= "text-xl text-zion-slate-light leading-relaxed mb-8"">"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Revolutionize your business operations with AI-powered workflows that deliver instant decision-making
               self-learning automation, and 99.97% accuracy. Achieve 87% cost reduction and 10x productivity gains.
             </p>
 
             {/* Key Metrics Banner */}
-<<<<<<< HEAD
             <div className="grid md: grid-cols-4 gap-6">","
               <div className="bg-purple-900/40 rounded-xl p-6 border border-purple-500/30 text-center hover: scale-105 transition-transform">","
                 <div className="text-4xl font-bold text-purple-400 mb-2">94%</div>";,"
@@ -124,7 +114,6 @@ const RealTimeCognitiveAutomation: () => {
               <div className="bg-cyan-900/40 rounded-xl p-6 border border-cyan-500/30 text-center hover: scale-105 transition-transform">","
                 <div className="text-4xl font-bold text-cyan-400 mb-2">6 Mo</div>","
                 <div className="text-sm text-zion-slate-light">Average ROI Time</div>","
-=======
             <div className= "grid md: grid-cols-4 gap-6">","
               <div className= "bg-purple-900/40 rounded-xl p-6 border border-purple-500/30 text-center hover: scale-105 transition-transform">","
                 <div className= "text-4xl font-bold text-purple-400 mb-2">94%</div>";,"
@@ -157,13 +146,11 @@ const RealTimeCognitiveAutomation: () => {
               <div className= "bg-cyan-900/40 rounded-xl p-6 border border-cyan-500/30 text-center hover: scale-105 transition-transform">","
                 <div className= "text-4xl font-bold text-cyan-400 mb-2">6 Mo</div>","
                 <div className= "text-sm text-zion-slate-light">Average ROI Time</div>","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
               </div>
             </div>
           </div>
 
           {/* Content */}
-<<<<<<< HEAD
           <div className="max-w-5xl mx-auto space-y-12 text-zion-slate-light">","
             {/* Business Impact */}
             <section >
@@ -205,7 +192,6 @@ const RealTimeCognitiveAutomation: () => {
                       </li>
                       <li className="flex items-start gap-2">","
                         <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />","
-=======
           <div className= "max-w-5xl mx-auto space-y-12 text-zion-slate-light">","
             {/* Business Impact */}
             <section >
@@ -247,13 +233,11 @@ const RealTimeCognitiveAutomation: () => {
                       </li>
                       <li className= "flex items-start gap-2">","
                         <CheckCircle className= "w-5 h-5 text-green-400 flex-shrink-0 mt-1" />","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                         <span >Live process optimization</span>
                       </li>
                     </ul>
                   </div>
                   <div >
-<<<<<<< HEAD
                     <h3 className="text-xl font-bold text-white mb-4">🧠 Self-Learning Systems</h3>";,"
                     <ul className="space-y-3"
                       <li className="flex items-start gap-2"
@@ -278,7 +262,6 @@ const RealTimeCognitiveAutomation: () => {
                       </li>
                       <li className="flex items-start gap-2">","
                         <CheckCircle className="w-5 h-5 text-blue-400 flex-shrink-0 mt-1" />","
-=======
                     <h3 className= "text-xl font-bold text-white mb-4">🧠 Self-Learning Systems</h3>";,"
                     <ul className= "space-y-3">
                       <li className= "flex items-start gap-2">
@@ -303,7 +286,6 @@ const RealTimeCognitiveAutomation: () => {
                       </li>
                       <li className= "flex items-start gap-2">","
                         <CheckCircle className= "w-5 h-5 text-blue-400 flex-shrink-0 mt-1" />","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                         <span >Autonomous error correction</span>
                       </li>
                     </ul>
@@ -314,19 +296,16 @@ const RealTimeCognitiveAutomation: () => {
 
             {/* Platform Capabilities */}
             <section >
-<<<<<<< HEAD
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3"
                 <Brain className="w-8 h-8 text-purple-400/>,";,"
   Platform Capabilities
               </h2>
               <div className="grid md: grid-cols-2 gap-6">","
-=======
               <h2 className= "text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Brain className= "w-8 h-8 text-purple-400/>,";,"
   Platform Capabilities
               </h2>
               <div className= "grid md: grid-cols-2 gap-6">","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                 {[
                   {
                     title: "Intelligent Document Processing",",";,"
@@ -359,7 +338,6 @@ const RealTimeCognitiveAutomation: () => {
                     icon: "🔌","
                   }
                 ].map((capability, index) => (
-<<<<<<< HEAD
                   <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-zion-cyan/20 hover: border-zion-cyan/50 transition-all">","
                     <div className="text-4xl mb-4">{capability.icon}</div>";"
                     <h3 className="text-xl font-bold text-white mb-3">{capability.title}</h3>";"
@@ -369,7 +347,6 @@ const RealTimeCognitiveAutomation: () => {
   Platform Capabilities
               </h2>
               <div className="grid md: grid-cols-2 gap-6">","
-=======
                   <div key: {index} className= "bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-zion-cyan/20 hover: border-zion-cyan/50 transition-all">","
                     <div className= "text-4xl mb-4">{capability.icon}</div>";"
                     <h3 className= "text-xl font-bold text-white mb-3">{capability.title}</h3>";"
@@ -379,7 +356,6 @@ const RealTimeCognitiveAutomation: () => {
   Platform Capabilities
               </h2>
               <div className= "grid md: grid-cols-2 gap-6">","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                 {[
                   {
                     title: "Intelligent Document Processing",","
@@ -412,17 +388,14 @@ const RealTimeCognitiveAutomation: () => {
                     icon: "🔌","
                   }
                 ].map((capability, index) => (
-<<<<<<< HEAD
                   <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-zion-cyan/20 hover: border-zion-cyan/50 transition-all">","
                     <div className="text-4xl mb-4">{capability.icon}</div>"
                     <h3 className="text-xl font-bold text-white mb-3">{capability.title}</h3>"
                     <p className="text-zion-slate-light">{capability.description}</p>"
-=======
                   <div key: {index} className= "bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-zion-cyan/20 hover: border-zion-cyan/50 transition-all">","
                     <div className= "text-4xl mb-4">{capability.icon}</div>"
                     <h3 className= "text-xl font-bold text-white mb-3">{capability.title}</h3>"
                     <p className= "text-zion-slate-light">{capability.description}</p>"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                   </div>
                 ))}
               </div>
@@ -430,13 +403,10 @@ const RealTimeCognitiveAutomation: () => {
 
             {/* Industry Solutions */}
             <section >
-<<<<<<< HEAD
               <h2 className="text-3xl font-bold text-white mb-6">🏭 Industry Solutions</h2>","
               <div className="space-y-6">","
-=======
               <h2 className= "text-3xl font-bold text-white mb-6">🏭 Industry Solutions</h2>","
               <div className= "space-y-6">","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                 {[
                   {
                     industry: "Financial Services",",";,"
@@ -485,7 +455,6 @@ const RealTimeCognitiveAutomation: () => {
                     highlights: ["Order processing: 99.8% automation", "Customer service: 89% auto-resolution", "Returns: 95% automated"]","
                   }
                 ].map((solution, index) => (
-<<<<<<< HEAD
                   <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-zion-cyan/30">","
                     <div className="flex flex-wrap items-center justify-between gap-4 mb-4">","
                       <h3 className="text-2xl font-bold text-white">{solution.industry}</h3>"
@@ -494,7 +463,6 @@ const RealTimeCognitiveAutomation: () => {
                           {solution.savings} annual savings
                         </div>
                         <div className="px-4 py-2 bg-blue-500/20 text-blue-300 rounded-lg text-sm font-semibold">","
-=======
                   <div key: {index} className= "bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-zion-cyan/30">","
                     <div className= "flex flex-wrap items-center justify-between gap-4 mb-4">","
                       <h3 className= "text-2xl font-bold text-white">{solution.industry}</h3>"
@@ -503,26 +471,22 @@ const RealTimeCognitiveAutomation: () => {
                           {solution.savings} annual savings
                         </div>
                         <div className= "px-4 py-2 bg-blue-500/20 text-blue-300 rounded-lg text-sm font-semibold">","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                           {solution.automation} automation
                         </div>
                       </div>
                     </div>
-<<<<<<< HEAD
                     <ul className="space-y-2">","
                       {solution.highlights.map((highlight, hIndex) => (
                         <li key={hIndex} className="flex items-start gap-2"
                           <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1/>";,"
                         <li key={hIndex} className="flex items-start gap-2">","
                           <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />","
-=======
                     <ul className= "space-y-2">","
                       {solution.highlights.map((highlight, hIndex) => (
                         <li key: {hIndex} className= "flex items-start gap-2">
                           <CheckCircle className= "w-5 h-5 text-green-400 flex-shrink-0 mt-1/>";,"
                         <li key: {hIndex} className= "flex items-start gap-2">","
                           <CheckCircle className= "w-5 h-5 text-green-400 flex-shrink-0 mt-1" />","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                           <span >{highlight}</span>
                         </li>
                       ))}
@@ -534,19 +498,16 @@ const RealTimeCognitiveAutomation: () => {
 
             {/* Pricing Packages */}
             <section >
-<<<<<<< HEAD
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3"
                 <DollarSign className="w-8 h-8 text-green-400/>,";,"
   Pricing & Packages
               </h2>
               <div className="grid md: grid-cols-3 gap-6">","
-=======
               <h2 className= "text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <DollarSign className= "w-8 h-8 text-green-400/>,";,"
   Pricing & Packages
               </h2>
               <div className= "grid md: grid-cols-3 gap-6">","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                 {[
                   {
                     name: "Business Starter",",";,"
@@ -563,19 +524,16 @@ const RealTimeCognitiveAutomation: () => {
                     name: "Enterprise",",";,"
                     price: "$49,999",",";,"
                     features: ["Unlimited transactions", "Unlimited workflows", "Custom AI models", "Dedicated team", "99.97% SLA"]",";,"
-<<<<<<< HEAD
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">","
                 <DollarSign className="w-8 h-8 text-green-400" />",";,"
   Pricing & Packages
               </h2>
               <div className="grid md: grid-cols-3 gap-6">","
-=======
               <h2 className= "text-3xl font-bold text-white mb-6 flex items-center gap-3">","
                 <DollarSign className= "w-8 h-8 text-green-400" />",";,"
   Pricing & Packages
               </h2>
               <div className= "grid md: grid-cols-3 gap-6">","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                 {[
                   {
                     name: "Business Starter",","
@@ -594,7 +552,6 @@ const RealTimeCognitiveAutomation: () => {
                     features: ["Unlimited transactions", "Unlimited workflows", "Custom AI models", "Dedicated team", "99.97% SLA"]","
                   }
                 ].map((pkg, index) => (
-<<<<<<< HEAD
                   <div key={index} className: {`bg-white/5 backdrop-blur-sm rounded-xl p-6 border ${pkg.popular ? 'border-purple-500/50 ring-2 ring-purple-500/30' : 'border-zion-cyan/30'}`}>`
                     {pkg.popular && (
                       <div className="bg-purple-500/20 text-purple-300 text-xs font-bold px-3 py-1 rounded-full inline-block mb-4">",";,"
@@ -609,7 +566,6 @@ const RealTimeCognitiveAutomation: () => {
                           <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1/>";,"
                         <li key={fIndex} className="flex items-start gap-2">","
                           <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />","
-=======
                   <div key: {index} className= {`bg-white/5 backdrop-blur-sm rounded-xl p-6 border ${pkg.popular ? 'border-purple-500/50 ring-2 ring-purple-500/30' : 'border-zion-cyan/30'}`}>`
                     {pkg.popular && (
                       <div className= "bg-purple-500/20 text-purple-300 text-xs font-bold px-3 py-1 rounded-full inline-block mb-4"">"
@@ -624,7 +580,6 @@ const RealTimeCognitiveAutomation: () => {
                           <CheckCircle className= "w-5 h-5 text-green-400 flex-shrink-0 mt-1/>";,"
                         <li key: {fIndex} className= "flex items-start gap-2">","
                           <CheckCircle className= "w-5 h-5 text-green-400 flex-shrink-0 mt-1" />","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                           <span >{feature}</span>
                         </li>
                       ))}
@@ -636,7 +591,6 @@ const RealTimeCognitiveAutomation: () => {
 
             {/* Limited Time Offer */}
             <section >
-<<<<<<< HEAD
               <div className="bg-gradient-to-r from-purple-900/40 via-pink-900/40 to-cyan-900/40 rounded-xl p-8 border-2 border-purple-500/50"
                 <div className="flex items-center justify-between flex-wrap gap-6"
                   <div className="flex-1"
@@ -679,7 +633,6 @@ const RealTimeCognitiveAutomation: () => {
                       </li>
                     </ul>
                     <p className="text-sm text-zion-slate-light mt-4">",";,"
-=======
               <div className= "bg-gradient-to-r from-purple-900/40 via-pink-900/40 to-cyan-900/40 rounded-xl p-8 border-2 border-purple-500/50">
                 <div className= "flex items-center justify-between flex-wrap gap-6">
                   <div className= "flex-1">
@@ -722,25 +675,21 @@ const RealTimeCognitiveAutomation: () => {
                       </li>
                     </ul>
                     <p className= "text-sm text-zion-slate-light mt-4"">"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Limited to first 30 customers. Annual contract required.
                     </p>
                   </div>
                   <div >
                     <Link to: "/contact",";,"
-<<<<<<< HEAD
   className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-bold rounded-lg hover: from-purple-600 hover:to-cyan-600 transition-all transform hover:scale-105","
                     >
                       Get Started Today
                       <Zap className="w-5 h-5/>";,"
                       <Zap className="w-5 h-5" />","
-=======
   className= "inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-bold rounded-lg hover: from-purple-600 hover:to-cyan-600 transition-all transform hover:scale-105","
                     >
                       Get Started Today
                       <Zap className= "w-5 h-5/>";,"
                       <Zap className= "w-5 h-5" />","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                     </Link>
                   </div>
                 </div>
@@ -748,7 +697,6 @@ const RealTimeCognitiveAutomation: () => {
             </section>
 
             {/* CTA Section */}
-<<<<<<< HEAD
             <section className="text-center">","
               <h2 className="text-3xl font-bold text-white mb-6">Ready to Transform Your Operations?</h2>","
               <p className="text-xl text-zion-slate-light mb-8">",";,"
@@ -764,7 +712,6 @@ const RealTimeCognitiveAutomation: () => {
                 </Link>
                 <Link to: "/contact",";,"
   className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-bold rounded-lg border border-zion-cyan/30 hover: bg-white/20 transition-all","
-=======
             <section className= "text-center">","
               <h2 className= "text-3xl font-bold text-white mb-6">Ready to Transform Your Operations?</h2>","
               <p className= "text-xl text-zion-slate-light mb-8"">"
@@ -780,7 +727,6 @@ const RealTimeCognitiveAutomation: () => {
                 </Link>
                 <Link to: "/contact",";,"
   className= "inline-flex items-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-bold rounded-lg border border-zion-cyan/30 hover: bg-white/20 transition-all","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                 >
                   Request Live Demo
                 </Link>

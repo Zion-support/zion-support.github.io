@@ -21,7 +21,6 @@ const ServicesCatalog: React.FC: ()  => {,,,
         keywords: "services pricing, AI pricing, IT rates, micro SaaS pricing" ,"
         canonical: "https://ziontechgroup.com/services/catalog","
       />
-<<<<<<< HEAD
       <main className="py-12 sm:py-16"
         <div className="container mx-auto px-6"
           <div className="max-w-7xl mx-auto"
@@ -35,7 +34,6 @@ const ServicesCatalog: React.FC: ()  => {,,,
                     <th className="px-4 py-3 font-medium">Service</th>";,"
                     <th className="px-4 py-3 font-medium">Typical Price</th>";,"
                     <th className="px-4 py-3 font-medium">Action</th>";,"
-=======
       <main className= "py-12 sm:py-16">
         <div className= "container mx-auto px-6">
           <div className= "max-w-7xl mx-auto">
@@ -49,12 +47,10 @@ const ServicesCatalog: React.FC: ()  => {,,,
                     <th className= "px-4 py-3 font-medium">Service</th>";,"
                     <th className= "px-4 py-3 font-medium">Typical Price</th>";,"
                     <th className= "px-4 py-3 font-medium">Action</th>";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                   </tr>
                 </thead>
                 <tbody >
                   {rows.map((r) => (
-<<<<<<< HEAD
                     <tr key={r.group + r.name} className="border-t"
                       <td className="px-4 py-3 text-sm text-gray-700">{r.group}</td>";"
                       <td className="px-4 py-3 text-sm text-gray-900">{r.name}</td>";"
@@ -62,7 +58,6 @@ const ServicesCatalog: React.FC: ()  => {,,,
                       <td className="px-4 py-3 text-sm"
                         <a href: {r.link} className="text-blue-600 hover:underline mr-4">Learn more</a>";,"
                         <a href="/contact" className="text-blue-600 hover:underline">Get a quote</a>";,"
-=======
                     <tr key: {r.group + r.name} className= "border-t">
                       <td className= "px-4 py-3 text-sm text-gray-700">{r.group}</td>";"
                       <td className= "px-4 py-3 text-sm text-gray-900">{r.name}</td>";"
@@ -70,7 +65,6 @@ const ServicesCatalog: React.FC: ()  => {,,,
                       <td className= "px-4 py-3 text-sm">
                         <a href: {r.link} className= "text-blue-600 hover:underline mr-4">Learn more</a>";,"
                         <a href: "/contact" className="text-blue-600 hover:underline">Get a quote</a>";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                       </td>
                     </tr>
                   ))}
@@ -78,7 +72,6 @@ const ServicesCatalog: React.FC: ()  => {,,,
               </table>
             </div>
 
-<<<<<<< HEAD
             <div className="mt-8 bg-blue-50 border border-blue-100 rounded-lg p-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4"
               <div >
                 <p className="text-lg font-semibold text-blue-900">Need custom pricing or a bundled offer?</p>";,"
@@ -87,7 +80,6 @@ const ServicesCatalog: React.FC: ()  => {,,,
               <div className="flex gap-3"
                 <a href="/contact" className="px-5 py-2 rounded-md bg-blue-600 text-white hover:bg-blue-700">Contact Sales</a>";,"
                 <a href="/demo" className ="px-5 py-2 rounded-md border border-blue-600 text-blue-600 hover:bg-blue-50">Book a Demo</a>";,"
-=======
             <div className= "mt-8 bg-blue-50 border border-blue-100 rounded-lg p-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
               <div >
                 <p className= "text-lg font-semibold text-blue-900">Need custom pricing or a bundled offer?</p>";,"
@@ -96,7 +88,6 @@ const ServicesCatalog: React.FC: ()  => {,,,
               <div className= "flex gap-3">
                 <a href: "/contact" className="px-5 py-2 rounded-md bg-blue-600 text-white hover:bg-blue-700">Contact Sales</a>";,"
                 <a href: "/demo" className ="px-5 py-2 rounded-md border border-blue-600 text-blue-600 hover:bg-blue-50">Book a Demo</a>";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
               </div>
             </div>
           </div>

@@ -16,7 +16,6 @@ const ZeroTrustAISecurityFramework2025: () => {
         />
       </Helmet>
 
-<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900/30 to-slate-900"
         {/* Hero Section */};
         <div className="relative overflow-hidden bg-gradient-to-r from-red-600 to-orange-600 py-16"
@@ -48,7 +47,6 @@ const ZeroTrustAISecurityFramework2025: () => {
                   🛡️ Zero Trust
                 </span>
                 <span className="px-4 py-2 bg-emerald-500/30 backdrop-blur-sm rounded-full text-white text-sm font-medium">","
-=======
       <div className= "min-h-screen bg-gradient-to-br from-slate-900 via-red-900/30 to-slate-900">
         {/* Hero Section */};
         <div className= "relative overflow-hidden bg-gradient-to-r from-red-600 to-orange-600 py-16">
@@ -80,12 +78,10 @@ const ZeroTrustAISecurityFramework2025: () => {
                   🛡️ Zero Trust
                 </span>
                 <span className= "px-4 py-2 bg-emerald-500/30 backdrop-blur-sm rounded-full text-white text-sm font-medium">","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                   ⭐ Featured
                 </span>
               </div>
 
-<<<<<<< HEAD
               <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 leading-tight">",";,"
   Zero-Trust AI Security Framework: Protecting Models, Data & Inference Pipelines,,
               </h1>
@@ -116,7 +112,6 @@ const ZeroTrustAISecurityFramework2025: () => {
                 </div>
                 <div className="flex items-center">","
                   <TrendingUp className="w-5 h-5 mr-2" />","
-=======
               <h1 className= "text-4xl md: text-5xl font-bold text-white mb-6 leading-tight"">"
   Zero-Trust AI Security Framework: Protecting Models, Data & Inference Pipelines,,
               </h1>
@@ -147,7 +142,6 @@ const ZeroTrustAISecurityFramework2025: () => {
                 </div>
                 <div className= "flex items-center">","
                   <TrendingUp className= "w-5 h-5 mr-2" />","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                   <span >Mission Critical</span>
                 </div>
               </div>
@@ -156,7 +150,6 @@ const ZeroTrustAISecurityFramework2025: () => {
         </div>
 
         {/* Content */}
-<<<<<<< HEAD
         <article className="container mx-auto px-6 py-16 max-w-4xl">","
           <div className="prose prose-invert prose-lg max-w-none">","
             {/* Threat Landscape */}
@@ -173,7 +166,6 @@ const ZeroTrustAISecurityFramework2025: () => {
   The AI Security Crisis
               </h2>
               <p className="text-gray-300 leading-relaxed mb-4">",";,"
-=======
         <article className= "container mx-auto px-6 py-16 max-w-4xl">","
           <div className= "prose prose-invert prose-lg max-w-none">","
             {/* Threat Landscape */}
@@ -190,25 +182,20 @@ const ZeroTrustAISecurityFramework2025: () => {
   The AI Security Crisis
               </h2>
               <p className= "text-gray-300 leading-relaxed mb-4"">"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   AI systems face unprecedented security challenges: model theft, data poisoning, adversarial attacks,,,,
                 and prompt injection. Traditional perimeter security fails for distributed AI architectures.
                 Zero-trust frameworks are now mandatory for enterprise AI deployments.
               </p>
-<<<<<<< HEAD
               <div className="bg-red-500/20 border border-red-500/30 rounded p-4">","
                 <p className="text-red-300 font-semibold">","
-=======
               <div className= "bg-red-500/20 border border-red-500/30 rounded p-4">","
                 <p className= "text-red-300 font-semibold">","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                   🚨 67% of enterprises report AI-related security incidents in 2025 (Gartner)
                 </p>
               </div>
             </div>
 
             {/* Core Principles */}
-<<<<<<< HEAD
             <section className="mb-12"
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center"
                 <ShieldCheck className="w-8 h-8 mr-3 text-emerald-400/>";,"
@@ -238,7 +225,6 @@ const ZeroTrustAISecurityFramework2025: () => {
                       ✓ Short-lived JWT tokens (5-15 minute expiry) with refresh rotation
                     </p>
                     <p className="text-sm text-emerald-400 font-mono">","
-=======
             <section className= "mb-12">
               <h2 className= "text-3xl font-bold text-white mb-6 flex items-center">
                 <ShieldCheck className= "w-8 h-8 mr-3 text-emerald-400/>";,"
@@ -268,13 +254,11 @@ const ZeroTrustAISecurityFramework2025: () => {
                       ✓ Short-lived JWT tokens (5-15 minute expiry) with refresh rotation
                     </p>
                     <p className= "text-sm text-emerald-400 font-mono">","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                       ✓ Continuous authentication with behavioral analysis
                     </p>
                   </div>
                 </div>
 
-<<<<<<< HEAD
                 <div className="bg-slate-800/50 p-6 rounded-lg border border-slate-700">","
                   <h3 className="text-xl font-semibold text-white mb-3 flex items-center">","
                     <span className="text-2xl mr-2">2️⃣</span>",";,"
@@ -292,7 +276,6 @@ const ZeroTrustAISecurityFramework2025: () => {
                       → Policy-as-Code with Open Policy Agent (OPA)
                     </p>
                     <p className="text-sm text-cyan-400 font-mono">","
-=======
                 <div className= "bg-slate-800/50 p-6 rounded-lg border border-slate-700">","
                   <h3 className= "text-xl font-semibold text-white mb-3 flex items-center">","
                     <span className= "text-2xl mr-2">2️⃣</span>",";,"
@@ -310,13 +293,11 @@ const ZeroTrustAISecurityFramework2025: () => {
                       → Policy-as-Code with Open Policy Agent (OPA)
                     </p>
                     <p className= "text-sm text-cyan-400 font-mono">","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                       → Just-in-time (JIT) privilege escalation with approval workflows
                     </p>
                   </div>
                 </div>
 
-<<<<<<< HEAD
                 <div className="bg-slate-800/50 p-6 rounded-lg border border-slate-700">","
                   <h3 className="text-xl font-semibold text-white mb-3 flex items-center">","
                     <span className="text-2xl mr-2">3️⃣</span>",";,"
@@ -334,7 +315,6 @@ const ZeroTrustAISecurityFramework2025: () => {
                       🔥 Real-time anomaly detection with SIEM integration
                     </p>
                     <p className="text-sm text-orange-400 font-mono">","
-=======
                 <div className= "bg-slate-800/50 p-6 rounded-lg border border-slate-700">","
                   <h3 className= "text-xl font-semibold text-white mb-3 flex items-center">","
                     <span className= "text-2xl mr-2">3️⃣</span>",";,"
@@ -352,13 +332,11 @@ const ZeroTrustAISecurityFramework2025: () => {
                       🔥 Real-time anomaly detection with SIEM integration
                     </p>
                     <p className= "text-sm text-orange-400 font-mono">","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                       🔥 Automated incident response playbooks (PagerDuty, Tines)
                     </p>
                   </div>
                 </div>
 
-<<<<<<< HEAD
                 <div className="bg-slate-800/50 p-6 rounded-lg border border-slate-700">","
                   <h3 className="text-xl font-semibold text-white mb-3 flex items-center">","
                     <span className="text-2xl mr-2">4️⃣</span>",";,"
@@ -376,7 +354,6 @@ const ZeroTrustAISecurityFramework2025: () => {
                       🔐 AES-256 encryption for data at rest (S3, EBS, GCS)
                     </p>
                     <p className="text-sm text-purple-400 font-mono">","
-=======
                 <div className= "bg-slate-800/50 p-6 rounded-lg border border-slate-700">","
                   <h3 className= "text-xl font-semibold text-white mb-3 flex items-center">","
                     <span className= "text-2xl mr-2">4️⃣</span>",";,"
@@ -394,7 +371,6 @@ const ZeroTrustAISecurityFramework2025: () => {
                       🔐 AES-256 encryption for data at rest (S3, EBS, GCS)
                     </p>
                     <p className= "text-sm text-purple-400 font-mono">","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                       🔐 Confidential VMs (AMD SEV, Intel TDX) for sensitive inference
                     </p>
                   </div>
@@ -403,7 +379,6 @@ const ZeroTrustAISecurityFramework2025: () => {
             </section>
 
             {/* Implementation Architecture */}
-<<<<<<< HEAD
             <section className="mb-12"
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center"
                 <Lock className="w-8 h-8 mr-3 text-blue-400/>,";,"
@@ -444,7 +419,6 @@ const ZeroTrustAISecurityFramework2025: () => {
                         All humans and services get unique identities.
                       </p>
                       <p className="text-sm text-emerald-400">",";,"
-=======
             <section className= "mb-12">
               <h2 className= "text-3xl font-bold text-white mb-6 flex items-center">
                 <Lock className= "w-8 h-8 mr-3 text-blue-400/>,";,"
@@ -485,13 +459,11 @@ const ZeroTrustAISecurityFramework2025: () => {
                         All humans and services get unique identities.
                       </p>
                       <p className= "text-sm text-emerald-400"">"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Tools: Keycloak, Okta, AWS IAM Identity Center,,,
                       </p>
                     </div>
                   </div>
 
-<<<<<<< HEAD
                   <div className="flex items-start">","
                     <div className="flex-shrink-0 w-16 h-16 bg-orange-500/20 rounded-lg flex items-center justify-center mr-4">","
                       <span className="text-3xl">🛡️</span>","
@@ -509,7 +481,6 @@ const ZeroTrustAISecurityFramework2025: () => {
                         Every microservice authenticated before communication.
                       </p>
                       <p className="text-sm text-cyan-400">",";,"
-=======
                   <div className= "flex items-start">","
                     <div className= "flex-shrink-0 w-16 h-16 bg-orange-500/20 rounded-lg flex items-center justify-center mr-4">","
                       <span className= "text-3xl">🛡️</span>","
@@ -527,13 +498,11 @@ const ZeroTrustAISecurityFramework2025: () => {
                         Every microservice authenticated before communication.
                       </p>
                       <p className= "text-sm text-cyan-400"">"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Tools: Istio, Linkerd, Cilium, Consul Connect,,,
                       </p>
                     </div>
                   </div>
 
-<<<<<<< HEAD
                   <div className="flex items-start">","
                     <div className="flex-shrink-0 w-16 h-16 bg-yellow-500/20 rounded-lg flex items-center justify-center mr-4">","
                       <span className="text-3xl">📋</span>","
@@ -551,7 +520,6 @@ const ZeroTrustAISecurityFramework2025: () => {
                         OPA evaluates policies in real-time.
                       </p>
                       <p className="text-sm text-blue-400">",";,"
-=======
                   <div className= "flex items-start">","
                     <div className= "flex-shrink-0 w-16 h-16 bg-yellow-500/20 rounded-lg flex items-center justify-center mr-4">","
                       <span className= "text-3xl">📋</span>","
@@ -569,13 +537,11 @@ const ZeroTrustAISecurityFramework2025: () => {
                         OPA evaluates policies in real-time.
                       </p>
                       <p className= "text-sm text-blue-400"">"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Tools: Open Policy Agent, Kong Gateway, AWS API Gateway,,,
                       </p>
                     </div>
                   </div>
 
-<<<<<<< HEAD
                   <div className="flex items-start">","
                     <div className="flex-shrink-0 w-16 h-16 bg-green-500/20 rounded-lg flex items-center justify-center mr-4">","
                       <span className="text-3xl">🔍</span>","
@@ -593,7 +559,6 @@ const ZeroTrustAISecurityFramework2025: () => {
                         suspicious patterns (unusual data access, model queries).
                       </p>
                       <p className="text-sm text-purple-400">",";,"
-=======
                   <div className= "flex items-start">","
                     <div className= "flex-shrink-0 w-16 h-16 bg-green-500/20 rounded-lg flex items-center justify-center mr-4">","
                       <span className= "text-3xl">🔍</span>","
@@ -611,13 +576,11 @@ const ZeroTrustAISecurityFramework2025: () => {
                         suspicious patterns (unusual data access, model queries).
                       </p>
                       <p className= "text-sm text-purple-400"">"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Tools: Datadog Security, Splunk SIEM, Wiz, Lacework,,,
                       </p>
                     </div>
                   </div>
 
-<<<<<<< HEAD
                   <div className="flex items-start">","
                     <div className="flex-shrink-0 w-16 h-16 bg-purple-500/20 rounded-lg flex items-center justify-center mr-4">","
                       <span className="text-3xl">📜</span>","
@@ -635,7 +598,6 @@ const ZeroTrustAISecurityFramework2025: () => {
                         Automated compliance reporting (SOC 2, ISO 27001, GDPR).
                       </p>
                       <p className="text-sm text-pink-400">",";,"
-=======
                   <div className= "flex items-start">","
                     <div className= "flex-shrink-0 w-16 h-16 bg-purple-500/20 rounded-lg flex items-center justify-center mr-4">","
                       <span className= "text-3xl">📜</span>","
@@ -653,7 +615,6 @@ const ZeroTrustAISecurityFramework2025: () => {
                         Automated compliance reporting (SOC 2, ISO 27001, GDPR).
                       </p>
                       <p className= "text-sm text-pink-400"">"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Tools: AWS CloudTrail, GCP Audit Logs, Vanta, Drata,,,
                       </p>
                     </div>
@@ -663,7 +624,6 @@ const ZeroTrustAISecurityFramework2025: () => {
             </section>
 
             {/* Attack Vectors & Mitigations */}
-<<<<<<< HEAD
             <section className="mb-12"
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center"
                 <Shield className="w-8 h-8 mr-3 text-red-400/>,";,"
@@ -696,7 +656,6 @@ const ZeroTrustAISecurityFramework2025: () => {
                   <div className="bg-slate-900/70 p-4 rounded">","
                     <p className="text-emerald-400 font-semibold mb-2">Mitigations: </p>","
                     <ul className="text-sm text-gray-300 space-y-1">","
-=======
             <section className= "mb-12">
               <h2 className= "text-3xl font-bold text-white mb-6 flex items-center">
                 <Shield className= "w-8 h-8 mr-3 text-red-400/>,";,"
@@ -729,7 +688,6 @@ const ZeroTrustAISecurityFramework2025: () => {
                   <div className= "bg-slate-900/70 p-4 rounded">","
                     <p className= "text-emerald-400 font-semibold mb-2">Mitigations: </p>","
                     <ul className= "text-sm text-gray-300 space-y-1">","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                       <li >• Input sanitization with LLM guardrails (NeMo Guardrails, Llama Guard)</li>
                       <li >• Prompt templates with variable substitution (no direct user input)</li>
                       <li >• Separate system prompts from user prompts with clear delimiters</li>
@@ -738,7 +696,6 @@ const ZeroTrustAISecurityFramework2025: () => {
                   </div>
                 </div>
 
-<<<<<<< HEAD
                 <div className="bg-orange-500/10 border-l-4 border-orange-500 p-6 rounded-r-lg">","
                   <h3 className="text-xl font-bold text-white mb-3">☠️ Data Poisoning</h3>","
                   <p className="text-gray-300 mb-3">",";,"
@@ -750,7 +707,6 @@ const ZeroTrustAISecurityFramework2025: () => {
                   <div className="bg-slate-900/70 p-4 rounded">","
                     <p className="text-cyan-400 font-semibold mb-2">Mitigations: </p>","
                     <ul className="text-sm text-gray-300 space-y-1">","
-=======
                 <div className= "bg-orange-500/10 border-l-4 border-orange-500 p-6 rounded-r-lg">","
                   <h3 className= "text-xl font-bold text-white mb-3">☠️ Data Poisoning</h3>","
                   <p className= "text-gray-300 mb-3"">"
@@ -762,7 +718,6 @@ const ZeroTrustAISecurityFramework2025: () => {
                   <div className= "bg-slate-900/70 p-4 rounded">","
                     <p className= "text-cyan-400 font-semibold mb-2">Mitigations: </p>","
                     <ul className= "text-sm text-gray-300 space-y-1">","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                       <li >• Data provenance tracking with cryptographic signatures</li>
                       <li >• Outlier detection on training datasets (Isolation Forest, LOF)</li>
                       <li >• Differential privacy during training (DP-SGD) to limit single-sample impact</li>
@@ -771,7 +726,6 @@ const ZeroTrustAISecurityFramework2025: () => {
                   </div>
                 </div>
 
-<<<<<<< HEAD
                 <div className="bg-purple-500/10 border-l-4 border-purple-500 p-6 rounded-r-lg">","
                   <h3 className="text-xl font-bold text-white mb-3">🕵️ Model Extraction</h3>","
                   <p className="text-gray-300 mb-3">",";,"
@@ -783,7 +737,6 @@ const ZeroTrustAISecurityFramework2025: () => {
                   <div className="bg-slate-900/70 p-4 rounded">","
                     <p className="text-blue-400 font-semibold mb-2">Mitigations: </p>","
                     <ul className="text-sm text-gray-300 space-y-1">","
-=======
                 <div className= "bg-purple-500/10 border-l-4 border-purple-500 p-6 rounded-r-lg">","
                   <h3 className= "text-xl font-bold text-white mb-3">🕵️ Model Extraction</h3>","
                   <p className= "text-gray-300 mb-3"">"
@@ -795,7 +748,6 @@ const ZeroTrustAISecurityFramework2025: () => {
                   <div className= "bg-slate-900/70 p-4 rounded">","
                     <p className= "text-blue-400 font-semibold mb-2">Mitigations: </p>","
                     <ul className= "text-sm text-gray-300 space-y-1">","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                       <li >• Rate limiting (per user/API key) with adaptive throttling</li>
                       <li >• Query pattern analysis to detect scraping (abnormal distributions)</li>
                       <li >• Watermarking model outputs for traceability</li>
@@ -807,7 +759,6 @@ const ZeroTrustAISecurityFramework2025: () => {
             </section>
 
             {/* Results */}
-<<<<<<< HEAD
             <section className="mb-12"
               <div className="bg-gradient-to-r from-emerald-500/20 to-blue-500/20 p-8 rounded-lg border border-emerald-500/30"
                 <h2 className="text-3xl font-bold text-white mb-6">Security Posture Improvements</h2>";,"
@@ -831,7 +782,6 @@ const ZeroTrustAISecurityFramework2025: () => {
                   <div >
                     <p className="text-5xl font-bold text-cyan-400 mb-2">$4.8M</p>","
                     <p className="text-gray-300">Average prevented breach costs per year</p>","
-=======
             <section className= "mb-12">
               <div className= "bg-gradient-to-r from-emerald-500/20 to-blue-500/20 p-8 rounded-lg border border-emerald-500/30">
                 <h2 className= "text-3xl font-bold text-white mb-6">Security Posture Improvements</h2>";,"
@@ -855,14 +805,12 @@ const ZeroTrustAISecurityFramework2025: () => {
                   <div >
                     <p className= "text-5xl font-bold text-cyan-400 mb-2">$4.8M</p>","
                     <p className= "text-gray-300">Average prevented breach costs per year</p>","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                   </div>
                 </div>
               </div>
             </section>
 
             {/* CTA */}
-<<<<<<< HEAD
             <section className="text-center">","
               <div className="bg-gradient-to-r from-red-600 to-orange-600 p-8 rounded-lg">","
                 <h2 className="text-3xl font-bold text-white mb-4">",";,"
@@ -877,7 +825,6 @@ const ZeroTrustAISecurityFramework2025: () => {
                   Request Security Assessment
                   <ArrowLeft className="w-5 h-5 ml-2 rotate-180/>";,"
                   <ArrowLeft className="w-5 h-5 ml-2 rotate-180" />","
-=======
             <section className= "text-center">","
               <div className= "bg-gradient-to-r from-red-600 to-orange-600 p-8 rounded-lg">","
                 <h2 className= "text-3xl font-bold text-white mb-4"">"
@@ -892,7 +839,6 @@ const ZeroTrustAISecurityFramework2025: () => {
                   Request Security Assessment
                   <ArrowLeft className= "w-5 h-5 ml-2 rotate-180/>";,"
                   <ArrowLeft className= "w-5 h-5 ml-2 rotate-180" />","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                 </Link>
               </div>
             </section>

@@ -11,7 +11,6 @@ const AIIntelligentDocumentProcessing: () => {
         <meta name: "description",";,"
   content: "Transform document processing with AI achieving 98.5% accuracy, 95% automation, and $2.8M+ annual savings. Extract, classify, and process any document type at scale." /><meta name: "keywords",";,"
   content: "intelligent document processing, IDP, OCR, document AI, document automation, invoice processing, contract analysis, GPT-4 Vision, Claude Vision" /></Helmet>";,"
-<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">","
         <Header />
 
@@ -23,7 +22,6 @@ const AIIntelligentDocumentProcessing: () => {
           >
             <ArrowLeft className="w-4 h-4 mr-2/>";,"
             <ArrowLeft className="w-4 h-4 mr-2" />",";,"
-=======
       <div className= "min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">","
         <Header />
 
@@ -35,12 +33,10 @@ const AIIntelligentDocumentProcessing: () => {
           >
             <ArrowLeft className= "w-4 h-4 mr-2/>";,"
             <ArrowLeft className= "w-4 h-4 mr-2" />",";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Back to Services
           </Link>
 
           {/* Hero Section */}
-<<<<<<< HEAD
           <div className="max-w-5xl mx-auto text-center mb-16"
             <div className="inline-flex items-center px-6 py-3 rounded-full bg-blue-500/20 text-blue-300 text-sm font-semibold mb-8 border border-blue-500/30"
               <FileText className="w-5 h-5 mr-2/>";,"
@@ -57,7 +53,6 @@ const AIIntelligentDocumentProcessing: () => {
             <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 leading-tight">",";,"
   AI Intelligent Document Processing
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400 mt-2">",";,"
-=======
           <div className= "max-w-5xl mx-auto text-center mb-16">
             <div className= "inline-flex items-center px-6 py-3 rounded-full bg-blue-500/20 text-blue-300 text-sm font-semibold mb-8 border border-blue-500/30">
               <FileText className= "w-5 h-5 mr-2/>";,"
@@ -74,27 +69,22 @@ const AIIntelligentDocumentProcessing: () => {
             <h1 className= "text-5xl md: text-6xl font-bold text-white mb-6 leading-tight"">"
   AI Intelligent Document Processing
               <span className= "block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400 mt-2"">"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Automate 95% of Document Workflows
               </span>
             </h1>
 
-<<<<<<< HEAD
             <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto leading-relaxed">,";,"
   Transform manual document processing with AI achieving 98.5% accuracy, 95% automation
             <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto leading-relaxed">",";,"
-=======
             <p className= "text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto leading-relaxed">,";,"
   Transform manual document processing with AI achieving 98.5% accuracy, 95% automation
             <p className= "text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto leading-relaxed"">"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Transform manual document processing with AI achieving 98.5% accuracy, 95% automation
               and $2.8M+ annual savings. Extract, classify, and process any document type at scale 
               with GPT-4 Vision and Claude AI.
             </p>
 
             {/* Quick Stats */}
-<<<<<<< HEAD
             <div className="grid md: grid-cols-4 gap-6 mb-8">","
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-blue-400/30"
                 <div className="text-3xl font-bold text-blue-400 mb-2">98.5%</div>";,"
@@ -129,7 +119,6 @@ const AIIntelligentDocumentProcessing: () => {
               </Link>
               <Link to: "/contact",";,"
   className="border-2 border-blue-400 text-blue-400 hover: bg-blue-400/10 px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105","
-=======
             <div className= "grid md: grid-cols-4 gap-6 mb-8">","
               <div className= "bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-blue-400/30">
                 <div className= "text-3xl font-bold text-blue-400 mb-2">98.5%</div>";,"
@@ -164,7 +153,6 @@ const AIIntelligentDocumentProcessing: () => {
               </Link>
               <Link to: "/contact",";,"
   className= "border-2 border-blue-400 text-blue-400 hover: bg-blue-400/10 px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
               >
                 Schedule Demo
               </Link>
@@ -172,7 +160,6 @@ const AIIntelligentDocumentProcessing: () => {
           </div>
 
           {/* Problem/Solution */}
-<<<<<<< HEAD
           <div className="max-w-6xl mx-auto mb-20"
             <div className="grid md: grid-cols-2 gap-8">","
               <div className="bg-red-900/20 rounded-2xl p-8 border border-red-500/30"
@@ -203,7 +190,6 @@ const AIIntelligentDocumentProcessing: () => {
                   </li>
                   <li className="flex items-start gap-2">","
                     <span className="text-red-400 mt-1">•</span>","
-=======
           <div className= "max-w-6xl mx-auto mb-20">
             <div className= "grid md: grid-cols-2 gap-8">","
               <div className= "bg-red-900/20 rounded-2xl p-8 border border-red-500/30">
@@ -234,13 +220,11 @@ const AIIntelligentDocumentProcessing: () => {
                   </li>
                   <li className= "flex items-start gap-2">","
                     <span className= "text-red-400 mt-1">•</span>","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                     <span >Compliance risks from missed information</span>
                   </li>
                 </ul>
               </div>
 
-<<<<<<< HEAD
               <div className="bg-green-900/20 rounded-2xl p-8 border border-green-500/30"
                 <h2 className="text-2xl font-bold text-white mb-4">✅ Our AI-Powered Solution</h2>";,"
                 <ul className="space-y-3 text-zion-slate-light"
@@ -283,7 +267,6 @@ const AIIntelligentDocumentProcessing: () => {
                   </li>
                   <li className="flex items-start gap-2">","
                     <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />","
-=======
               <div className= "bg-green-900/20 rounded-2xl p-8 border border-green-500/30">
                 <h2 className= "text-2xl font-bold text-white mb-4">✅ Our AI-Powered Solution</h2>";,"
                 <ul className= "space-y-3 text-zion-slate-light">
@@ -326,7 +309,6 @@ const AIIntelligentDocumentProcessing: () => {
                   </li>
                   <li className= "flex items-start gap-2">","
                     <CheckCircle className= "w-5 h-5 text-green-400 mt-1 flex-shrink-0" />","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                     <span >100% audit trail and compliance tracking</span>
                   </li>
                 </ul>
@@ -335,7 +317,6 @@ const AIIntelligentDocumentProcessing: () => {
           </div>
 
           {/* Core Capabilities */}
-<<<<<<< HEAD
           <div className="max-w-6xl mx-auto mb-20"
             <h2 className="text-4xl font-bold text-white mb-12 text-center">🎯 Core Capabilities</h2>";,"
             <div className="grid md: grid-cols-3 gap-8">","
@@ -359,7 +340,6 @@ const AIIntelligentDocumentProcessing: () => {
                   emails, and more. Handles handwriting, poor scans, and complex layouts.
                 </p>
                 <ul className="space-y-2 text-sm text-zion-slate-light">","
-=======
           <div className= "max-w-6xl mx-auto mb-20">
             <h2 className= "text-4xl font-bold text-white mb-12 text-center">🎯 Core Capabilities</h2>";,"
             <div className= "grid md: grid-cols-3 gap-8">","
@@ -383,7 +363,6 @@ const AIIntelligentDocumentProcessing: () => {
                   emails, and more. Handles handwriting, poor scans, and complex layouts.
                 </p>
                 <ul className= "space-y-2 text-sm text-zion-slate-light">","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                   <li >• 150+ supported document types</li>
                   <li >• Multi-language support (95+ languages)</li>
                   <li >• Table and checkbox extraction</li>
@@ -391,7 +370,6 @@ const AIIntelligentDocumentProcessing: () => {
                 </ul>
               </div>
 
-<<<<<<< HEAD
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover: scale-105 transition-all">","
                 <div className="bg-purple-500/20 w-16 h-16 rounded-lg flex items-center justify-center mb-6 border border-purple-500/30"
                   <Zap className="w-8 h-8 text-purple-400/>";,"
@@ -405,7 +383,6 @@ const AIIntelligentDocumentProcessing: () => {
                   document types and routing rules, improving accuracy over time.
                 </p>
                 <ul className="space-y-2 text-sm text-zion-slate-light">","
-=======
               <div className= "bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover: scale-105 transition-all">","
                 <div className= "bg-purple-500/20 w-16 h-16 rounded-lg flex items-center justify-center mb-6 border border-purple-500/30">
                   <Zap className= "w-8 h-8 text-purple-400/>";,"
@@ -419,7 +396,6 @@ const AIIntelligentDocumentProcessing: () => {
                   document types and routing rules, improving accuracy over time.
                 </p>
                 <ul className= "space-y-2 text-sm text-zion-slate-light">","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                   <li >• 99.2% classification accuracy</li>
                   <li >• Custom taxonomy support</li>
                   <li >• Automatic workflow routing</li>
@@ -427,7 +403,6 @@ const AIIntelligentDocumentProcessing: () => {
                 </ul>
               </div>
 
-<<<<<<< HEAD
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-green-400/30 hover: scale-105 transition-all">","
                 <div className="bg-green-500/20 w-16 h-16 rounded-lg flex items-center justify-center mb-6 border border-green-500/30"
                   <CheckCircle className="w-8 h-8 text-green-400/>";,"
@@ -441,7 +416,6 @@ const AIIntelligentDocumentProcessing: () => {
                   Enrich documents with additional context and metadata.
                 </p>
                 <ul className="space-y-2 text-sm text-zion-slate-light">","
-=======
               <div className= "bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-green-400/30 hover: scale-105 transition-all">","
                 <div className= "bg-green-500/20 w-16 h-16 rounded-lg flex items-center justify-center mb-6 border border-green-500/30">
                   <CheckCircle className= "w-8 h-8 text-green-400/>";,"
@@ -455,7 +429,6 @@ const AIIntelligentDocumentProcessing: () => {
                   Enrich documents with additional context and metadata.
                 </p>
                 <ul className= "space-y-2 text-sm text-zion-slate-light">","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                   <li >• Real-time validation rules</li>
                   <li >• Database lookups and matching</li>
                   <li >• Duplicate detection</li>
@@ -466,7 +439,6 @@ const AIIntelligentDocumentProcessing: () => {
           </div>
 
           {/* Use Cases */}
-<<<<<<< HEAD
           <div className="max-w-6xl mx-auto mb-20"
             <h2 className="text-4xl font-bold text-white mb-12 text-center">💼 Enterprise Use Cases</h2>";,"
             <div className="space-y-6"
@@ -478,7 +450,6 @@ const AIIntelligentDocumentProcessing: () => {
                   <div className="flex-1"
                     <h3 className="text-2xl font-bold text-white mb-3">Accounts Payable Automation</h3>";,"
                     <p className="text-zion-slate-light mb-4">,";,"
-=======
           <div className= "max-w-6xl mx-auto mb-20">
             <h2 className= "text-4xl font-bold text-white mb-12 text-center">💼 Enterprise Use Cases</h2>";,"
             <div className= "space-y-6">
@@ -490,12 +461,10 @@ const AIIntelligentDocumentProcessing: () => {
                   <div className= "flex-1">
                     <h3 className= "text-2xl font-bold text-white mb-3">Accounts Payable Automation</h3>";,"
                     <p className= "text-zion-slate-light mb-4">,";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Process invoices 10x faster with 98% accuracy. Extract vendor, line items, PO matching
                       GL coding, and approval routing automatically. Reduce processing costs from $15-20 per 
                       invoice to under $1.
                     </p>
-<<<<<<< HEAD
                     <div className="grid md: grid-cols-3 gap-4 text-sm">","
                       <div className="bg-blue-900/30 rounded-lg p-3 border border-blue-500/20"
                         <div className="font-bold text-blue-400 mb-1">92% Faster</div>";,"
@@ -511,7 +480,6 @@ const AIIntelligentDocumentProcessing: () => {
                   <div className="flex-1">","
                     <h3 className="text-2xl font-bold text-white mb-3">Accounts Payable Automation</h3>","
                     <p className="text-zion-slate-light mb-4">",";,"
-=======
                     <div className= "grid md: grid-cols-3 gap-4 text-sm">","
                       <div className= "bg-blue-900/30 rounded-lg p-3 border border-blue-500/20">
                         <div className= "font-bold text-blue-400 mb-1">92% Faster</div>";,"
@@ -527,12 +495,10 @@ const AIIntelligentDocumentProcessing: () => {
                   <div className= "flex-1">","
                     <h3 className= "text-2xl font-bold text-white mb-3">Accounts Payable Automation</h3>","
                     <p className= "text-zion-slate-light mb-4"">"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Process invoices 10x faster with 98% accuracy. Extract vendor, line items, PO matching
                       GL coding, and approval routing automatically. Reduce processing costs from $15-20 per 
                       invoice to under $1.
                     </p>
-<<<<<<< HEAD
                     <div className="grid md: grid-cols-3 gap-4 text-sm">","
                       <div className="bg-blue-900/30 rounded-lg p-3 border border-blue-500/20">","
                         <div className="font-bold text-blue-400 mb-1">92% Faster</div>","
@@ -545,7 +511,6 @@ const AIIntelligentDocumentProcessing: () => {
                       <div className="bg-blue-900/30 rounded-lg p-3 border border-blue-500/20">","
                         <div className="font-bold text-blue-400 mb-1">99.1% Touchless</div>","
                         <div className="text-zion-slate-light">Processing Rate</div>","
-=======
                     <div className= "grid md: grid-cols-3 gap-4 text-sm">","
                       <div className= "bg-blue-900/30 rounded-lg p-3 border border-blue-500/20">","
                         <div className= "font-bold text-blue-400 mb-1">92% Faster</div>","
@@ -558,14 +523,12 @@ const AIIntelligentDocumentProcessing: () => {
                       <div className= "bg-blue-900/30 rounded-lg p-3 border border-blue-500/20">","
                         <div className= "font-bold text-blue-400 mb-1">99.1% Touchless</div>","
                         <div className= "text-zion-slate-light">Processing Rate</div>","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
 
-<<<<<<< HEAD
               <div className="bg-gradient-to-r from-purple-900/40 to-pink-900/40 rounded-xl p-8 border border-purple-500/30"
                 <div className="flex items-start gap-6"
                   <div className="bg-purple-500/20 p-4 rounded-lg border border-purple-500/30"
@@ -597,7 +560,6 @@ const AIIntelligentDocumentProcessing: () => {
                       <div className="bg-purple-900/30 rounded-lg p-3 border border-purple-500/20">","
                         <div className="font-bold text-purple-400 mb-1">Zero Missed</div>","
                         <div className="text-zion-slate-light">Renewal Deadlines</div>","
-=======
               <div className= "bg-gradient-to-r from-purple-900/40 to-pink-900/40 rounded-xl p-8 border border-purple-500/30">
                 <div className= "flex items-start gap-6">
                   <div className= "bg-purple-500/20 p-4 rounded-lg border border-purple-500/30">
@@ -629,14 +591,12 @@ const AIIntelligentDocumentProcessing: () => {
                       <div className= "bg-purple-900/30 rounded-lg p-3 border border-purple-500/20">","
                         <div className= "font-bold text-purple-400 mb-1">Zero Missed</div>","
                         <div className= "text-zion-slate-light">Renewal Deadlines</div>","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
 
-<<<<<<< HEAD
               <div className="bg-gradient-to-r from-green-900/40 to-teal-900/40 rounded-xl p-8 border border-green-500/30"
                 <div className="flex items-start gap-6"
                   <div className="bg-green-500/20 p-4 rounded-lg border border-green-500/30"
@@ -668,7 +628,6 @@ const AIIntelligentDocumentProcessing: () => {
                       <div className="bg-green-900/30 rounded-lg p-3 border border-green-500/20">","
                         <div className="font-bold text-green-400 mb-1">$1.4M Added</div>","
                         <div className="text-zion-slate-light">Annual Revenue</div>","
-=======
               <div className= "bg-gradient-to-r from-green-900/40 to-teal-900/40 rounded-xl p-8 border border-green-500/30">
                 <div className= "flex items-start gap-6">
                   <div className= "bg-green-500/20 p-4 rounded-lg border border-green-500/30">
@@ -700,7 +659,6 @@ const AIIntelligentDocumentProcessing: () => {
                       <div className= "bg-green-900/30 rounded-lg p-3 border border-green-500/20">","
                         <div className= "font-bold text-green-400 mb-1">$1.4M Added</div>","
                         <div className= "text-zion-slate-light">Annual Revenue</div>","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                       </div>
                     </div>
                   </div>
@@ -710,7 +668,6 @@ const AIIntelligentDocumentProcessing: () => {
           </div>
 
           {/* ROI Calculator */}
-<<<<<<< HEAD
           <div className="max-w-6xl mx-auto mb-20"
             <h2 className="text-4xl font-bold text-white mb-12 text-center">💰 ROI Calculator</h2>";,"
             <div className="bg-gradient-to-r from-green-900/40 to-blue-900/40 rounded-2xl p-10 border border-green-500/30"
@@ -748,7 +705,6 @@ const AIIntelligentDocumentProcessing: () => {
                     <div className="border-t border-white/20 pt-4 flex justify-between items-center text-xl">","
                       <strong className="text-white">First Year Total: </strong>","
                       <strong className="text-white">$85K</strong>","
-=======
           <div className= "max-w-6xl mx-auto mb-20">
             <h2 className= "text-4xl font-bold text-white mb-12 text-center">💰 ROI Calculator</h2>";,"
             <div className= "bg-gradient-to-r from-green-900/40 to-blue-900/40 rounded-2xl p-10 border border-green-500/30">
@@ -786,12 +742,10 @@ const AIIntelligentDocumentProcessing: () => {
                     <div className= "border-t border-white/20 pt-4 flex justify-between items-center text-xl">","
                       <strong className= "text-white">First Year Total: </strong>","
                       <strong className= "text-white">$85K</strong>","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                     </div>
                   </div>
                 </div>
                 <div >
-<<<<<<< HEAD
                   <h3 className="text-2xl font-bold text-white mb-6">Your Savings (Year 1)</h3>";,"
                   <div className="space-y-4"
                     <div className="flex justify-between items-center text-lg"
@@ -826,7 +780,6 @@ const AIIntelligentDocumentProcessing: () => {
                     <div className="border-t border-white/20 pt-4 flex justify-between items-center text-xl">","
                       <strong className="text-white">Total Value: </strong>","
                       <strong className="text-green-400">$890K</strong>","
-=======
                   <h3 className= "text-2xl font-bold text-white mb-6">Your Savings (Year 1)</h3>";,"
                   <div className= "space-y-4">
                     <div className= "flex justify-between items-center text-lg">
@@ -861,32 +814,27 @@ const AIIntelligentDocumentProcessing: () => {
                     <div className= "border-t border-white/20 pt-4 flex justify-between items-center text-xl">","
                       <strong className= "text-white">Total Value: </strong>","
                       <strong className= "text-green-400">$890K</strong>","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                     </div>
                   </div>
                 </div>
               </div>
-<<<<<<< HEAD
               <div className="mt-10 text-center"
                 <div className="text-4xl font-bold text-green-400 mb-2">947% ROI</div>";,"
                 <div className="text-xl text-white">Payback Period: 1.2 months • Net Value: $805K/year</div>","
               <div className="mt-10 text-center">","
                 <div className="text-4xl font-bold text-green-400 mb-2">947% ROI</div>","
                 <div className="text-xl text-white">Payback Period: 1.2 months • Net Value: $805K/year</div>","
-=======
               <div className= "mt-10 text-center">
                 <div className= "text-4xl font-bold text-green-400 mb-2">947% ROI</div>";,"
                 <div className= "text-xl text-white">Payback Period: 1.2 months • Net Value: $805K/year</div>","
               <div className= "mt-10 text-center">","
                 <div className= "text-4xl font-bold text-green-400 mb-2">947% ROI</div>","
                 <div className= "text-xl text-white">Payback Period: 1.2 months • Net Value: $805K/year</div>","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
               </div>
             </div>
           </div>
 
           {/* Pricing */}
-<<<<<<< HEAD
           <div className="max-w-6xl mx-auto mb-20"
             <h2 className="text-4xl font-bold text-white mb-12 text-center">💎 Transparent Pricing</h2>";,"
             <div className="grid md: grid-cols-3 gap-8">","
@@ -935,7 +883,6 @@ const AIIntelligentDocumentProcessing: () => {
                   </li>
                   <li className="flex items-start gap-2">","
                     <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />","
-=======
           <div className= "max-w-6xl mx-auto mb-20">
             <h2 className= "text-4xl font-bold text-white mb-12 text-center">💎 Transparent Pricing</h2>";,"
             <div className= "grid md: grid-cols-3 gap-8">","
@@ -984,22 +931,17 @@ const AIIntelligentDocumentProcessing: () => {
                   </li>
                   <li className= "flex items-start gap-2">","
                     <CheckCircle className= "w-5 h-5 text-green-400 flex-shrink-0" />","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                     <span >Email support</span>
                   </li>
                 </ul>
                 <Link to: "/contact",";,"
-<<<<<<< HEAD
   className="block text-center bg-blue-600 hover: bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all","
-=======
   className= "block text-center bg-blue-600 hover: bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                 >
                   Start Free Trial
                 </Link>
               </div>
 
-<<<<<<< HEAD
               <div className="bg-gradient-to-br from-purple-900/40 to-blue-900/40 rounded-xl p-8 border-2 border-purple-400 relative">","
                 <div className="absolute top-0 right-0 bg-purple-500 text-white px-4 py-1 rounded-bl-lg rounded-tr-lg text-sm font-semibold">",";,"
   Most Popular
@@ -1047,7 +989,6 @@ const AIIntelligentDocumentProcessing: () => {
                   </li>
                   <li className="flex items-start gap-2">","
                     <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />","
-=======
               <div className= "bg-gradient-to-br from-purple-900/40 to-blue-900/40 rounded-xl p-8 border-2 border-purple-400 relative">","
                 <div className= "absolute top-0 right-0 bg-purple-500 text-white px-4 py-1 rounded-bl-lg rounded-tr-lg text-sm font-semibold"">"
   Most Popular
@@ -1095,22 +1036,17 @@ const AIIntelligentDocumentProcessing: () => {
                   </li>
                   <li className= "flex items-start gap-2">","
                     <CheckCircle className= "w-5 h-5 text-green-400 flex-shrink-0" />","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                     <span >99.9% SLA guarantee</span>
                   </li>
                 </ul>
                 <Link to: "/contact",";,"
-<<<<<<< HEAD
   className="block text-center bg-purple-600 hover: bg-purple-700 text-white px-6 py-3 rounded-lg font-semibold transition-all","
-=======
   className= "block text-center bg-purple-600 hover: bg-purple-700 text-white px-6 py-3 rounded-lg font-semibold transition-all","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                 >
                   Start Free Trial
                 </Link>
               </div>
 
-<<<<<<< HEAD
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-green-400/30">","
                 <div className="text-center mb-6">","
                   <h3 className="text-2xl font-bold text-white mb-2">Enterprise</h3>","
@@ -1155,7 +1091,6 @@ const AIIntelligentDocumentProcessing: () => {
                   </li>
                   <li className="flex items-start gap-2">","
                     <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />","
-=======
               <div className= "bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-green-400/30">","
                 <div className= "text-center mb-6">","
                   <h3 className= "text-2xl font-bold text-white mb-2">Enterprise</h3>","
@@ -1200,16 +1135,12 @@ const AIIntelligentDocumentProcessing: () => {
                   </li>
                   <li className= "flex items-start gap-2">","
                     <CheckCircle className= "w-5 h-5 text-green-400 flex-shrink-0" />","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                     <span >24/7 premium support</span>
                   </li>
                 </ul>
                 <Link to: "/contact",";,"
-<<<<<<< HEAD
   className="block text-center bg-green-600 hover: bg-green-700 text-white px-6 py-3 rounded-lg font-semibold transition-all","
-=======
   className= "block text-center bg-green-600 hover: bg-green-700 text-white px-6 py-3 rounded-lg font-semibold transition-all","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                 >
                   Contact Sales
                 </Link>
@@ -1218,7 +1149,6 @@ const AIIntelligentDocumentProcessing: () => {
           </div>
 
           {/* CTA */}
-<<<<<<< HEAD
           <div className="max-w-4xl mx-auto text-center bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12">","
             <h2 className="text-4xl font-bold text-white mb-4">",";,"
   Ready to Automate Your Document Processing?
@@ -1238,7 +1168,6 @@ const AIIntelligentDocumentProcessing: () => {
               </Link>
               <Link to: "/contact",";,"
   className="border-2 border-white text-white hover: bg-white/10 px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105 text-lg","
-=======
           <div className= "max-w-4xl mx-auto text-center bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12">","
             <h2 className= "text-4xl font-bold text-white mb-4"">"
   Ready to Automate Your Document Processing?
@@ -1258,16 +1187,12 @@ const AIIntelligentDocumentProcessing: () => {
               </Link>
               <Link to: "/contact",";,"
   className= "border-2 border-white text-white hover: bg-white/10 px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105 text-lg","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
               >
                 Schedule Demo
               </Link>
             </div>
-<<<<<<< HEAD
             <p className="text-white/70 text-sm mt-6">","
-=======
             <p className= "text-white/70 text-sm mt-6">","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
               ✓ No credit card required ✓ Full feature access ✓ Cancel anytime ✓ 24/7 support
             </p>
           </div>

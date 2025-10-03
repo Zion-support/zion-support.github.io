@@ -112,11 +112,8 @@ publishedAt: '2025-01-05'
         />
         <link rel: "canonical" href ="https://ziontechgroup.com" />";,"
         {/* Enhanced Structured Data */}
-<<<<<<< HEAD
         <script type="application/ld+json"
-=======
         <script type: "application/ld+json">
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
           {JSON.stringify({
             "@context": "https: //schema.org",";,"
             "@type": "Organization",";"
@@ -319,19 +316,16 @@ publishedAt: '2025-01-05'
         <link rel: "dns-prefetch" href ="//github.com" />";,"
       </Helmet>
       
-<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-teal-50"
         <Header />
         
         {/* 🚀 SEPTEMBER 30, 2025 - MEGA BREAKTHROUGH ANNOUNCEMENT */}
         <div className="container mx-auto px-6 pt-8"
-=======
       <div className= "min-h-screen bg-gradient-to-br from-blue-50 via-white to-teal-50">
         <Header />
         
         {/* 🚀 SEPTEMBER 30, 2025 - MEGA BREAKTHROUGH ANNOUNCEMENT */}
         <div className= "container mx-auto px-6 pt-8">
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
           <September30MegaBanner2025 />
         </div>
         
@@ -349,17 +343,14 @@ publishedAt: '2025-01-05'
         />
         <NewContentPromoBanner />
         {/* Fresh content banner promoting brand-new articles */}
-<<<<<<< HEAD
         <div className="container mx-auto px-6 mt-6"
           <NewContentAdvertisingBanner />
           {/* Inline promo for new service */}
           <div className="mt-4"
-=======
         <div className= "container mx-auto px-6 mt-6">
           <NewContentAdvertisingBanner />
           {/* Inline promo for new service */}
           <div className= "mt-4">
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
             <ContentPromotionBanner variant: "info",";,"
   title: "🧪 New Service: Edge Experimentation Suite",";,"
   description: "Privacy‑first A/B testing at <100ms with scoped IDs and on‑device metrics.",";,"
@@ -369,7 +360,6 @@ publishedAt: '2025-01-05'
             />
           </div>
         </div>
-<<<<<<< HEAD
         <div className="container mx-auto px-6 mt-6"
           <TrendingContentBanner />
           {/* Inline promotion for brand-new content */}
@@ -398,7 +388,6 @@ publishedAt: '2025-01-05'
                 <div className="text-rose-300 text-xs mb-2">Analytics</div>";,"
                 <div className="text-white font-semibold">Edge 2026: Consentless Metrics v2</div>";,"
                 <div className="text-zion-slate-light text-sm mt-1">Zero‑PII signals at &lt;100ms with scoped IDs, edge aggregation, DP.</div>";,"
-=======
         <div className= "container mx-auto px-6 mt-6">
           <TrendingContentBanner />
           {/* Inline promotion for brand-new content */}
@@ -427,14 +416,12 @@ publishedAt: '2025-01-05'
                 <div className= "text-rose-300 text-xs mb-2">Analytics</div>";,"
                 <div className= "text-white font-semibold">Edge 2026: Consentless Metrics v2</div>";,"
                 <div className= "text-zion-slate-light text-sm mt-1">Zero‑PII signals at &lt;100ms with scoped IDs, edge aggregation, DP.</div>";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
               </Link>
             </div>
           </div>
         </div>
 
         {/* Newly added content promo */}
-<<<<<<< HEAD
         <div className="container mx-auto px-6 mt-6"
           <div className="rounded-xl border border-white/10 bg-white/5 p-6"
             <div className="text-white text-sm mb-4">Just added</div>";,"
@@ -453,7 +440,6 @@ publishedAt: '2025-01-05'
                 <div className="text-emerald-300 text-xs mb-2">FinTech AI</div>";,"
                 <div className="text-white font-semibold">AI Financial Modeling 2027</div>";,"
                 <div className="text-zion-slate-light text-sm mt-1">95%+ accuracy with KPI‑linked scorecards, evals, and rollback.</div>";,"
-=======
         <div className= "container mx-auto px-6 mt-6">
           <div className= "rounded-xl border border-white/10 bg-white/5 p-6">
             <div className= "text-white text-sm mb-4">Just added</div>";,"
@@ -472,63 +458,44 @@ publishedAt: '2025-01-05'
                 <div className= "text-emerald-300 text-xs mb-2">FinTech AI</div>";,"
                 <div className= "text-white font-semibold">AI Financial Modeling 2027</div>";,"
                 <div className= "text-zion-slate-light text-sm mt-1">95%+ accuracy with KPI‑linked scorecards, evals, and rollback.</div>";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
               </Link>
             </div>
           </div>
         </div>
         
         {/* OCTOBER 2025 MEGA LAUNCH - 7 Revolutionary Articles */}
-<<<<<<< HEAD
         <div className="container mx-auto px-6 mt-6"
-=======
         <div className= "container mx-auto px-6 mt-6">
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
           <October2025MegaLaunchBanner />
         </div>
         
         {/* SEPTEMBER 30, 2025 - 5 Revolutionary AI Breakthroughs */}
-<<<<<<< HEAD
         <div className="container mx-auto px-6 mt-6 mb-6"
-=======
         <div className= "container mx-auto px-6 mt-6 mb-6">
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
           <September30NewContentMegaBanner />
         </div>
         
         {/* BREAKTHROUGH CONTENT 2026 - September 30, 2025 */}
-<<<<<<< HEAD
         <div className="container mx-auto px-6 mt-6"
-=======
         <div className= "container mx-auto px-6 mt-6">
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
           <Revolutionary2026ContentMegaBanner />
         </div>
         
         {/* New Comprehensive Promotional Banner */}
-<<<<<<< HEAD
         <div className="container mx-auto px-6 mt-6"
-=======
         <div className= "container mx-auto px-6 mt-6">
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
           <ComprehensivePromoBanner variant: "hero" showCount={4} />";"
         </div>
         
         {/* New Articles Promotional Banner */}
-<<<<<<< HEAD
         <div className="container mx-auto px-6 mt-6"
-=======
         <div className= "container mx-auto px-6 mt-6">
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
           <NewArticlesPromoBanner variant: "premium" showCount={3} />";"
         </div>
         
         {/* New Services Promotional Banner */}
-<<<<<<< HEAD
         <div className="container mx-auto px-6 mt-6"
-=======
         <div className= "container mx-auto px-6 mt-6">
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
           <NewServicesPromoBanner variant: "showcase" showCount ={3} featuredOnly: {true} />";"
         </div>
         
@@ -541,27 +508,23 @@ publishedAt: '2025-01-05'
   dismissible: {true}
         />
         {/* Animated background elements */}
-<<<<<<< HEAD
         <div className="absolute inset-0 overflow-hidden"
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-zion-blue rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"></div>";,"
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-zion-purple rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float",";,"
   style: {{ animationDelay: "2s" }}";"
           ></div>
           <div className="absolute top-40 left-1/2 w-60 h-60 bg-zion-cyan rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float",";,"
-=======
         <div className= "absolute inset-0 overflow-hidden">
           <div className= "absolute -top-40 -right-40 w-80 h-80 bg-zion-blue rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"></div>";,"
           <div className= "absolute -bottom-40 -left-40 w-80 h-80 bg-zion-purple rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float",";,"
   style: {{ animationDelay: "2s" }}";"
           ></div>
           <div className= "absolute top-40 left-1/2 w-60 h-60 bg-zion-cyan rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float",";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   style: {{ animationDelay: "4s" }}";"
           ></div>
         </div>
 
         {/* Hero Section */}
-<<<<<<< HEAD
         <section className="relative bg-gradient-to-br from-blue-50 to-indigo-100 py-20"
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
             <div className="text-center"
@@ -576,7 +539,6 @@ publishedAt: '2025-01-05'
               </h1>
               
               <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">,";,"
-=======
         <section className= "relative bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
           <div className= "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className= "text-center">
@@ -591,29 +553,22 @@ publishedAt: '2025-01-05'
               </h1>
               
               <p className= "text-xl text-gray-600 mb-8 max-w-3xl mx-auto">,";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Transform your business with cutting-edge AI, micro SaaS, and enterprise IT solutions. 
                 Build faster, scale smarter, and achieve unprecedented results.
               </p>
               
-<<<<<<< HEAD
               <div className="flex flex-col sm:flex-row gap-4 justify-center"
                 <Link to: "/services" ,";,"
   className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors","
-=======
               <div className= "flex flex-col sm:flex-row gap-4 justify-center">
                 <Link to: "/services" ,";,"
   className= "bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                 >
                   Explore Services
                 </Link>
                 <Link to: "/contact" ,";,"
-<<<<<<< HEAD
   className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors","
-=======
   className= "border border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                 >
                   Get Started
                 </Link>
@@ -623,7 +578,6 @@ publishedAt: '2025-01-05'
         </section>
 
         {/* Featured Services */}
-<<<<<<< HEAD
         <section className="py-20 bg-white"
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
             <div className="text-center mb-16"
@@ -631,7 +585,6 @@ publishedAt: '2025-01-05'
   Our Core Services
               </h2>
               <p className="text-xl text-gray-600 max-w-2xl mx-auto">,";,"
-=======
         <section className= "py-20 bg-white">
           <div className= "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className= "text-center mb-16">
@@ -639,12 +592,10 @@ publishedAt: '2025-01-05'
   Our Core Services
               </h2>
               <p className= "text-xl text-gray-600 max-w-2xl mx-auto">,";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Comprehensive solutions designed to accelerate your digital transformation
               </p>
             </div>
             
-<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-200 hover:border-blue-300"
                 <div className="text-center mb-6"
@@ -672,7 +623,6 @@ publishedAt: '2025-01-05'
                   <li className="flex items-center gap-3"
                     <span className="w-5 h-5 text-green-600">✔️</span>";,"
                     <span className="text-gray-700">Predictive Analytics</span>";,"
-=======
             <div className= "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className= "bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-200 hover:border-blue-300">
                 <div className= "text-center mb-6">
@@ -700,35 +650,27 @@ publishedAt: '2025-01-05'
                   <li className= "flex items-center gap-3">
                     <span className= "w-5 h-5 text-green-600">✔️</span>";,"
                     <span className= "text-gray-700">Predictive Analytics</span>";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                   </li>
                 </ul>
                 
                 <Link to: "/services/ai-services",";,"
-<<<<<<< HEAD
   className="block w-full text-center py-3 px-4 rounded-lg font-semibold bg-blue-600 text-white hover:bg-blue-700 transition-colors","
-=======
   className= "block w-full text-center py-3 px-4 rounded-lg font-semibold bg-blue-600 text-white hover:bg-blue-700 transition-colors","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                 >
                   Learn More
                 </Link>
               </div>
               
-<<<<<<< HEAD
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-blue-300 ring-2 ring-blue-100 relative"
                 <div className="absolute -top-3 left-1/2 transform -translate-x-1/2"
                   <span className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-bold">,";,"
-=======
               <div className= "bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-blue-300 ring-2 ring-blue-100 relative">
                 <div className= "absolute -top-3 left-1/2 transform -translate-x-1/2">
                   <span className= "bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-bold">,";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Most Popular
                   </span>
                 </div>
                 
-<<<<<<< HEAD
                 <div className="text-center mb-6"
                   <div className="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-4"
                     <span className="w-8 h-8 text-purple-600">🚀</span>";,"
@@ -754,7 +696,6 @@ publishedAt: '2025-01-05'
                   <li className="flex items-center gap-3"
                     <CheckCircle className="w-5 h-5 text-green-600" />";,"
                     <span className="text-gray-700">API-First Approach</span>";,"
-=======
                 <div className= "text-center mb-6">
                   <div className= "w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-4">
                     <span className= "w-8 h-8 text-purple-600">🚀</span>";,"
@@ -780,22 +721,17 @@ publishedAt: '2025-01-05'
                   <li className= "flex items-center gap-3">
                     <CheckCircle className= "w-5 h-5 text-green-600" />";,"
                     <span className= "text-gray-700">API-First Approach</span>";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                   </li>
                 </ul>
                 
                 <Link to: "/services/micro-saas",";,"
-<<<<<<< HEAD
   className="block w-full text-center py-3 px-4 rounded-lg font-semibold bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 transition-colors","
-=======
   className= "block w-full text-center py-3 px-4 rounded-lg font-semibold bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 transition-colors","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                 >
                   Learn More
                 </Link>
               </div>
               
-<<<<<<< HEAD
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-200 hover:border-blue-300"
                 <div className="text-center mb-6"
                   <div className="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-4"
@@ -822,7 +758,6 @@ publishedAt: '2025-01-05'
                   <li className="flex items-center gap-3"
                     <CheckCircle className="w-5 h-5 text-green-600" />";,"
                     <span className="text-gray-700">Security & Compliance</span>";,"
-=======
               <div className= "bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-200 hover:border-blue-300">
                 <div className= "text-center mb-6">
                   <div className= "w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-4">
@@ -849,16 +784,12 @@ publishedAt: '2025-01-05'
                   <li className= "flex items-center gap-3">
                     <CheckCircle className= "w-5 h-5 text-green-600" />";,"
                     <span className= "text-gray-700">Security & Compliance</span>";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                   </li>
                 </ul>
                 
                 <Link to: "/services/it-services",";,"
-<<<<<<< HEAD
   className="block w-full text-center py-3 px-4 rounded-lg font-semibold bg-blue-600 text-white hover:bg-blue-700 transition-colors","
-=======
   className= "block w-full text-center py-3 px-4 rounded-lg font-semibold bg-blue-600 text-white hover:bg-blue-700 transition-colors","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                 >
                   Learn More
                 </Link>
@@ -868,7 +799,6 @@ publishedAt: '2025-01-05'
         </section>
 
         {/* Success Stories */}
-<<<<<<< HEAD
         <section className="py-20 bg-gray-50"
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
             <div className="text-center mb-16"
@@ -876,7 +806,6 @@ publishedAt: '2025-01-05'
   Success Stories
               </h2>
               <p className="text-xl text-gray-600 max-w-2xl mx-auto">,";,"
-=======
         <section className= "py-20 bg-gray-50">
           <div className= "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className= "text-center mb-16">
@@ -884,12 +813,10 @@ publishedAt: '2025-01-05'
   Success Stories
               </h2>
               <p className= "text-xl text-gray-600 max-w-2xl mx-auto">,";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Real results from our enterprise clients
               </p>
             </div>
             
-<<<<<<< HEAD
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8"
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8 border border-gray-200"
                 <div className="mb-6"
@@ -900,7 +827,6 @@ publishedAt: '2025-01-05'
                     <div >
                       <h3 className="text-xl font-bold text-gray-900">Global Manufacturing Corp</h3>";,"
                       <p className="text-gray-500 text-sm">Manufacturing</p>";,"
-=======
             <div className= "grid grid-cols-1 lg:grid-cols-2 gap-8">
               <div className= "bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8 border border-gray-200">
                 <div className= "mb-6">
@@ -911,12 +837,10 @@ publishedAt: '2025-01-05'
                     <div >
                       <h3 className= "text-xl font-bold text-gray-900">Global Manufacturing Corp</h3>";,"
                       <p className= "text-gray-500 text-sm">Manufacturing</p>";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                     </div>
                   </div>
                 </div>
                 
-<<<<<<< HEAD
                 <div className="space-y-4"
                   <div >
                     <h4 className="font-semibold text-gray-900 mb-2">Challenge:</h4>";,"
@@ -937,7 +861,6 @@ publishedAt: '2025-01-05'
                     <div className="text-center"
                       <div className="text-2xl font-bold text-green-600 mb-1">$25M Annual Savings</div>";,"
                       <div className="text-xs text-gray-500 uppercase tracking-wide">Key Metric</div>";,"
-=======
                 <div className= "space-y-4">
                   <div >
                     <h4 className= "font-semibold text-gray-900 mb-2">Challenge:</h4>";,"
@@ -958,13 +881,11 @@ publishedAt: '2025-01-05'
                     <div className= "text-center">
                       <div className= "text-2xl font-bold text-green-600 mb-1">$25M Annual Savings</div>";,"
                       <div className= "text-xs text-gray-500 uppercase tracking-wide">Key Metric</div>";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                     </div>
                   </div>
                 </div>
               </div>
               
-<<<<<<< HEAD
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8 border border-gray-200"
                 <div className="mb-6"
                   <div className="flex items-center gap-3 mb-4"
@@ -974,7 +895,6 @@ publishedAt: '2025-01-05'
                     <div >
                       <h3 className="text-xl font-bold text-gray-900">HealthTech Solutions</h3>";,"
                       <p className="text-gray-500 text-sm">Healthcare</p>";,"
-=======
               <div className= "bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-8 border border-gray-200">
                 <div className= "mb-6">
                   <div className= "flex items-center gap-3 mb-4">
@@ -984,12 +904,10 @@ publishedAt: '2025-01-05'
                     <div >
                       <h3 className= "text-xl font-bold text-gray-900">HealthTech Solutions</h3>";,"
                       <p className= "text-gray-500 text-sm">Healthcare</p>";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                     </div>
                   </div>
                 </div>
                 
-<<<<<<< HEAD
                 <div className="space-y-4"
                   <div >
                     <h4 className="font-semibold text-gray-900 mb-2">Challenge:</h4>";,"
@@ -1010,7 +928,6 @@ publishedAt: '2025-01-05'
                     <div className="text-center"
                       <div className="text-2xl font-bold text-green-600 mb-1">95% Patient Satisfaction</div>";,"
                       <div className="text-xs text-gray-500 uppercase tracking-wide">Key Metric</div>";,"
-=======
                 <div className= "space-y-4">
                   <div >
                     <h4 className= "font-semibold text-gray-900 mb-2">Challenge:</h4>";,"
@@ -1031,7 +948,6 @@ publishedAt: '2025-01-05'
                     <div className= "text-center">
                       <div className= "text-2xl font-bold text-green-600 mb-1">95% Patient Satisfaction</div>";,"
                       <div className= "text-xs text-gray-500 uppercase tracking-wide">Key Metric</div>";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                     </div>
                   </div>
                 </div>
@@ -1041,7 +957,6 @@ publishedAt: '2025-01-05'
         </section>
 
         {/* Content Showcase */}
-<<<<<<< HEAD
         <section className="py-20 bg-white"
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
             <div className="text-center mb-16"
@@ -1049,7 +964,6 @@ publishedAt: '2025-01-05'
   Featured Content
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">,";,"
-=======
         <section className= "py-20 bg-white">
           <div className= "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className= "text-center mb-16">
@@ -1057,31 +971,26 @@ publishedAt: '2025-01-05'
   Featured Content
               </h2>
               <p className= "text-xl text-gray-600 max-w-3xl mx-auto">,";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Explore our latest AI insights, breakthrough technologies, and success stories
               </p>
             </div>
             
-<<<<<<< HEAD
             <div className="grid md:grid-cols-3 gap-8"
               {latestInsights.map((item) => (
                 <Link key={item.id} to: "/blog" className ="group"
                   <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-200 hover:border-blue-200"
                     <div className="flex items-center gap-2 mb-4"
                       <span className: {`px-2 py-1 rounded-full text-xs font-semibold ${,,`;,`;
-=======
             <div className= "grid md:grid-cols-3 gap-8">
               {latestInsights.map((item) => (
                 <Link key: {item.id} to: "/blog" className ="group">
                   <div className= "bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-200 hover:border-blue-200">
                     <div className= "flex items-center gap-2 mb-4">
                       <span className= {`px-2 py-1 rounded-full text-xs font-semibold ${,,`;,`;
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   item.featured ? 'bg-red-100 text-red-800' : 'bg-blue-100 text-blue-800'
                       }`}>`;`;
                         {item.featured ? 'Featured' : item.category}';';
                       </span>
-<<<<<<< HEAD
                       <span className="text-sm text-gray-500">{item.readMinutes} min read</span>";"
                     </div>
                     
@@ -1095,7 +1004,6 @@ publishedAt: '2025-01-05'
                     </p>
                     
                     <div className="text-blue-600 font-semibold group-hover:text-blue-700 transition-colors">,";,"
-=======
                       <span className= "text-sm text-gray-500">{item.readMinutes} min read</span>";"
                     </div>
                     
@@ -1109,7 +1017,6 @@ publishedAt: '2025-01-05'
                     </p>
                     
                     <div className= "text-blue-600 font-semibold group-hover:text-blue-700 transition-colors">,";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Read More →
                     </div>
                   </div>
@@ -1117,15 +1024,12 @@ publishedAt: '2025-01-05'
               ))}
             </div>
             
-<<<<<<< HEAD
             <div className="text-center mt-12"
               <Link to: "/blog",";,"
   className="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl","
-=======
             <div className= "text-center mt-12">
               <Link to: "/blog",";,"
   className= "inline-block bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
               >
                 Explore All Content
               </Link>
@@ -1134,7 +1038,6 @@ publishedAt: '2025-01-05'
         </section>
 
         {/* Case Studies Preview */}
-<<<<<<< HEAD
         <section className="py-20 bg-gray-50"
           <div className="container mx-auto px-6"
             <div className="text-center mb-12"
@@ -1144,7 +1047,6 @@ publishedAt: '2025-01-05'
               </div>
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Success Stories</h2>";,"
               <p className="text-xl text-gray-600 max-w-2xl mx-auto">,";,"
-=======
         <section className= "py-20 bg-gray-50">
           <div className= "container mx-auto px-6">
             <div className= "text-center mb-12">
@@ -1154,12 +1056,10 @@ publishedAt: '2025-01-05'
               </div>
               <h2 className= "text-3xl font-bold text-gray-900 mb-4">Success Stories</h2>";,"
               <p className= "text-xl text-gray-600 max-w-2xl mx-auto">,";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   See how Fortune 500 companies are transforming their operations with our breakthrough AI solutions. New: Enterprise AI Platform Modernization, Multi-Modal AI, Edge AI Deployment & More.,,
               </p>
             </div>
             
-<<<<<<< HEAD
             <div className="grid md:grid-cols-3 gap-8 mb-12"
               <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition-shadow"
                 <div className="flex items-center mb-4"
@@ -1209,7 +1109,6 @@ publishedAt: '2025-01-05'
   className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-xl transition-all duration-300 hover:scale-105 inline-flex items-center gap-2","
               >
                 <span className="w-5 h-5">🏆</span>,";,"
-=======
             <div className= "grid md:grid-cols-3 gap-8 mb-12">
               <div className= "bg-white rounded-xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition-shadow">
                 <div className= "flex items-center mb-4">
@@ -1259,14 +1158,12 @@ publishedAt: '2025-01-05'
   className= "bg-gradient-to-r from-green-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-xl transition-all duration-300 hover:scale-105 inline-flex items-center gap-2","
               >
                 <span className= "w-5 h-5">🏆</span>,";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   View All Success Stories
               </Link>
             </div>
           </div>
         </section>
         {/* New Content Promo */}
-<<<<<<< HEAD
         <section className="py-20 bg-white"
           <div className="container mx-auto px-6"
             <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-8 md:p-12 text-white"
@@ -1278,7 +1175,6 @@ publishedAt: '2025-01-05'
                 <Link to: "/blog" className="bg-white text-indigo-700 hover:bg-indigo-50 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 self-start md:self-auto">,";,"
   Read the latest
                   <span className="w-5 h-5">›</span>";,"
-=======
         <section className= "py-20 bg-white">
           <div className= "container mx-auto px-6">
             <div className= "bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-8 md:p-12 text-white">
@@ -1290,12 +1186,10 @@ publishedAt: '2025-01-05'
                 <Link to: "/blog" className= "bg-white text-indigo-700 hover:bg-indigo-50 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 self-start md:self-auto">,";,"
   Read the latest
                   <span className= "w-5 h-5">›</span>";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                 </Link>
               </div>
 
               {/* Inline featured list (auto-curated highlights) */}
-<<<<<<< HEAD
               <div className="mt-8 grid gap-6 md:grid-cols-3"
                 <div className="bg-white/10 rounded-xl p-5"
                   <div className="text-sm text-purple-200 mb-1">Observability</div>";,"
@@ -1308,7 +1202,6 @@ publishedAt: '2025-01-05'
                 <div className="bg-white/10 rounded-xl p-5"
                   <div className="text-sm text-blue-200 mb-1">AI Governance</div>";,"
                   <div className="font-semibold text-white">Policy Tests Quickstart</div>";,"
-=======
               <div className= "mt-8 grid gap-6 md:grid-cols-3">
                 <div className= "bg-white/10 rounded-xl p-5">
                   <div className= "text-sm text-purple-200 mb-1">Observability</div>";,"
@@ -1321,7 +1214,6 @@ publishedAt: '2025-01-05'
                 <div className= "bg-white/10 rounded-xl p-5">
                   <div className= "text-sm text-blue-200 mb-1">AI Governance</div>";,"
                   <div className= "font-semibold text-white">Policy Tests Quickstart</div>";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                 </div>
               </div>
             </div>
@@ -1329,21 +1221,18 @@ publishedAt: '2025-01-05'
         </section>
 
         {/* New Services Promotional Section */}
-<<<<<<< HEAD
         <section className="py-20 bg-gradient-to-r from-emerald-50 to-teal-50 relative overflow-hidden"
           <div className="absolute inset-0 bg-gradient-to-r from-emerald-100/20 to-teal-100/20"></div>";,"
           <div className="container mx-auto px-6 relative z-10"
             <div className="text-center"
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Latest AI Services</h2>";,"
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">,";,"
-=======
         <section className= "py-20 bg-gradient-to-r from-emerald-50 to-teal-50 relative overflow-hidden">
           <div className= "absolute inset-0 bg-gradient-to-r from-emerald-100/20 to-teal-100/20"></div>";,"
           <div className= "container mx-auto px-6 relative z-10">
             <div className= "text-center">
               <h2 className= "text-3xl font-bold text-gray-900 mb-4">Latest AI Services</h2>";,"
               <p className= "text-xl text-gray-600 max-w-3xl mx-auto">,";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Discover our newest AI-powered solutions designed to accelerate your digital transformation.
               </p>
             </div>
@@ -1355,21 +1244,18 @@ publishedAt: '2025-01-05'
         <NewServicesShowcase />
 
         {/* Latest Articles Promotional Section */}
-<<<<<<< HEAD
         <section className="py-20 bg-gradient-to-r from-purple-50 to-indigo-50 relative overflow-hidden"
           <div className="absolute inset-0 bg-gradient-to-r from-purple-100/20 to-indigo-100/20"></div>";,"
           <div className="container mx-auto px-6 relative z-10"
             <div className="text-center"
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Latest Articles & Insights</h2>";,"
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">,";,"
-=======
         <section className= "py-20 bg-gradient-to-r from-purple-50 to-indigo-50 relative overflow-hidden">
           <div className= "absolute inset-0 bg-gradient-to-r from-purple-100/20 to-indigo-100/20"></div>";,"
           <div className= "container mx-auto px-6 relative z-10">
             <div className= "text-center">
               <h2 className= "text-3xl font-bold text-gray-900 mb-4">Latest Articles & Insights</h2>";,"
               <p className= "text-xl text-gray-600 max-w-3xl mx-auto">,";,"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Stay ahead with our latest AI insights, technical guides, and industry best practices.
               </p>
             </div>
@@ -1382,7 +1268,6 @@ publishedAt: '2025-01-05'
         {/* Success Stories Showcase */}
         <SuccessStoriesShowcase />
         {/* CTA Section */}
-<<<<<<< HEAD
         <section className="py-20 bg-blue-600"
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">,";,"
@@ -1394,7 +1279,6 @@ publishedAt: '2025-01-05'
             <div className="flex flex-col sm:flex-row gap-4 justify-center"
               <Link to: "/contact" ,";,"
   className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors","
-=======
         <section className= "py-20 bg-blue-600">
           <div className= "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className= "text-3xl md:text-4xl font-bold text-white mb-4">,";,"
@@ -1406,16 +1290,12 @@ publishedAt: '2025-01-05'
             <div className= "flex flex-col sm:flex-row gap-4 justify-center">
               <Link to: "/contact" ,";,"
   className= "bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
               >
                 Start Your Project
               </Link>
               <Link to: "/case-studies" ,";,"
-<<<<<<< HEAD
   className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors","
-=======
   className= "border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
               >
                 View Case Studies
               </Link>

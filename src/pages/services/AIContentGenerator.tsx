@@ -17,7 +17,6 @@ const AIContentGenerator: React.FC: ()  => {,,,
         <meta name: "description" content ="Generate high-quality blog posts, social media content, and marketing copy with advanced AI. Includes SEO optimization and brand voice training." />","
       </Helmet>
       
-<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">","
         <div className="container mx-auto px-4 py-12">","
           {/* Header */}
@@ -52,7 +51,6 @@ const AIContentGenerator: React.FC: ()  => {,,,
                 </a>
                 <a href="mailto: kleber@ziontechgroup.com",";,"
   className="border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-semibold hover: bg-blue-50 transition-colors text-center","
-=======
       <div className= "min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">","
         <div className= "container mx-auto px-4 py-12">","
           {/* Header */}
@@ -87,7 +85,6 @@ const AIContentGenerator: React.FC: ()  => {,,,
                 </a>
                 <a href: "mailto: kleber@ziontechgroup.com",";,"
   className= "border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-semibold hover: bg-blue-50 transition-colors text-center","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                 >
                   Email Us
                 </a>
@@ -96,7 +93,6 @@ const AIContentGenerator: React.FC: ()  => {,,,
           </div>
 
           {/* Features */}
-<<<<<<< HEAD
           <section className="mb-16"
             <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Key Features</h2>";,"
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">","
@@ -166,7 +162,6 @@ const AIContentGenerator: React.FC: ()  => {,,,
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Quality Assurance</h3>","
                 <p className="text-gray-600">Built-in quality checks ensure content meets your standards before publication.</p>","
-=======
           <section className= "mb-16">
             <h2 className= "text-3xl font-bold text-center text-gray-900 mb-12">Key Features</h2>";,"
             <div className= "grid md: grid-cols-2 lg:grid-cols-3 gap-8">","
@@ -236,13 +231,11 @@ const AIContentGenerator: React.FC: ()  => {,,,
                 </div>
                 <h3 className= "text-xl font-bold text-gray-900 mb-3">Quality Assurance</h3>","
                 <p className= "text-gray-600">Built-in quality checks ensure content meets your standards before publication.</p>","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
               </div>
             </div>
           </section>
 
           {/* Pricing */}
-<<<<<<< HEAD
           <section className="mb-16"
             <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Pricing Plans</h2>";,"
             <div className="grid md: grid-cols-3 gap-8">","
@@ -290,7 +283,6 @@ const AIContentGenerator: React.FC: ()  => {,,,
                 </ul>
                 <a href="tel: +13024640950",";,"
   className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover: bg-blue-700 transition-colors text-center block","
-=======
           <section className= "mb-16">
             <h2 className= "text-3xl font-bold text-center text-gray-900 mb-12">Pricing Plans</h2>";,"
             <div className= "grid md: grid-cols-3 gap-8">","
@@ -338,12 +330,10 @@ const AIContentGenerator: React.FC: ()  => {,,,
                 </ul>
                 <a href: "tel: +13024640950",";,"
   className= "w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover: bg-blue-700 transition-colors text-center block","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                 >
                   Get Started
                 </a>
               </div>
-<<<<<<< HEAD
               <div className="bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg shadow-lg p-8 text-white relative">","
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">","
                   <span className="bg-yellow-400 text-gray-900 px-4 py-1 rounded-full text-sm font-semibold">Most Popular</span>","
@@ -395,7 +385,6 @@ const AIContentGenerator: React.FC: ()  => {,,,
                 </ul>
                 <a href="tel: +13024640950",";,"
   className="w-full bg-white text-blue-600 py-3 rounded-lg font-semibold hover: bg-gray-100 transition-colors text-center block","
-=======
               <div className= "bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg shadow-lg p-8 text-white relative">","
                 <div className= "absolute -top-4 left-1/2 transform -translate-x-1/2">","
                   <span className= "bg-yellow-400 text-gray-900 px-4 py-1 rounded-full text-sm font-semibold">Most Popular</span>","
@@ -447,12 +436,10 @@ const AIContentGenerator: React.FC: ()  => {,,,
                 </ul>
                 <a href: "tel: +13024640950",";,"
   className= "w-full bg-white text-blue-600 py-3 rounded-lg font-semibold hover: bg-gray-100 transition-colors text-center block","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                 >
                   Get Started
                 </a>
               </div>
-<<<<<<< HEAD
               <div className="bg-white rounded-lg shadow-lg p-8"
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Enterprise</h3>";,"
                 <div className="text-3xl font-bold text-blue-600 mb-6">Custom</div>";,"
@@ -502,7 +489,6 @@ const AIContentGenerator: React.FC: ()  => {,,,
                 </ul>
                 <a href="mailto: kleber@ziontechgroup.com",";,"
   className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover: bg-blue-700 transition-colors text-center block","
-=======
               <div className= "bg-white rounded-lg shadow-lg p-8">
                 <h3 className= "text-2xl font-bold text-gray-900 mb-4">Enterprise</h3>";,"
                 <div className= "text-3xl font-bold text-blue-600 mb-6">Custom</div>";,"
@@ -552,7 +538,6 @@ const AIContentGenerator: React.FC: ()  => {,,,
                 </ul>
                 <a href: "mailto: kleber@ziontechgroup.com",";,"
   className= "w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover: bg-blue-700 transition-colors text-center block","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                 >
                   Contact Sales
                 </a>
@@ -561,7 +546,6 @@ const AIContentGenerator: React.FC: ()  => {,,,
           </section>
 
           {/* Contact Section */}
-<<<<<<< HEAD
           <section className="bg-white rounded-xl shadow-lg p-8">","
             <div className="text-center">","
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Ready to Get Started?</h2>","
@@ -577,7 +561,6 @@ const AIContentGenerator: React.FC: ()  => {,,,
                 </a>
                 <a href="mailto: kleber@ziontechgroup.com",";,"
   className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold hover: bg-blue-50 transition-colors text-center","
-=======
           <section className= "bg-white rounded-xl shadow-lg p-8">","
             <div className= "text-center">","
               <h2 className= "text-3xl font-bold text-gray-900 mb-4">Ready to Get Started?</h2>","
@@ -593,16 +576,12 @@ const AIContentGenerator: React.FC: ()  => {,,,
                 </a>
                 <a href: "mailto: kleber@ziontechgroup.com",";,"
   className= "border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold hover: bg-blue-50 transition-colors text-center","
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                 >
                   Email Us
                 </a>
               </div>
-<<<<<<< HEAD
               <p className="text-sm text-gray-500 mt-6">",";,"
-=======
               <p className= "text-sm text-gray-500 mt-6"">"
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   364 E Main St STE 1008, Middletown, DE 19709
               </p>
             </div>
