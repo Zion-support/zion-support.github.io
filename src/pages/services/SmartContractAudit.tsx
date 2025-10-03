@@ -1,13 +1,3 @@
-import React from 'react'';
-import { Helmet } from 'react-helmet-async'';
-import { Globe } from 'lucide-react'';
-import Header from '../../components/Header'';
-import Footer from '../../components/Footer'';
-import React from 'react';'
-import { Helmet } from 'react-helmet-async';'
-import { Globe } from 'lucide-react';'
-import Header from '../../components/Header';'
-import Footer from '../../components/Footer';'
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
@@ -25,23 +15,19 @@ import {
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 
-const SmartContractAudit: React.FC: ()  => {,,
-  const features: [,
+const SmartContractAudit: React.FC = () => {
+  const features = [
     {
-      icon: Shield,,
-      title: "Comprehensive Security Analysis",","
-      description: "Deep code analysis using static analysis, dynamic testing, and formal verification to identify vulnerabilities.",","
-      title: "Comprehensive Security Analysis",","
-      description: "Deep code analysis using static analysis, dynamic testing, and formal verification to identify vulnerabilities.",","
-      benefit: "99.8% vulnerability detection rate","
+      icon: Shield,
+      title: "Comprehensive Security Analysis",
+      description: "Deep code analysis using static analysis, dynamic testing, and formal verification to identify vulnerabilities.",
+      benefit: "99.8% vulnerability detection rate"
     },
     {
-      icon: Search,,
-      title: "Automated Vulnerability Scanning",","
-      description: "AI-powered scanning tools that detect common smart contract vulnerabilities and security patterns.",","
-      title: "Automated Vulnerability Scanning",","
-      description: "AI-powered scanning tools that detect common smart contract vulnerabilities and security patterns.",","
-      benefit: "100+ vulnerability patterns detected","
+      icon: Search,
+      title: "Automated Vulnerability Scanning",
+      description: "AI-powered scanning tools that detect common smart contract vulnerabilities and security patterns.",
+      benefit: "100+ vulnerability patterns detected"
     },
     {
       icon: Clock,
@@ -72,7 +58,8 @@ const SmartContractAudit: React.FC: ()  => {,,
       features: [
         "Automated vulnerability scanning",
         "Basic code review",
-        "Security report",
+        "Security report"
+      ],
       popular: false
     },
     {
@@ -83,7 +70,8 @@ const SmartContractAudit: React.FC: ()  => {,,
       features: [
         "Full automated scanning",
         "Manual code review",
-        "Detailed security report",
+        "Detailed security report"
+      ],
       popular: true
     },
     {
@@ -135,6 +123,7 @@ const SmartContractAudit: React.FC: ()  => {,,
       
       <Header />
       
+      <main>
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-red-900 via-orange-800 to-yellow-900 text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -278,17 +267,22 @@ const SmartContractAudit: React.FC: ()  => {,,
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-br from-red-900 via-orange-800 to-yellow-900 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-4xl font-bold mb-6">Ready to Secure Your Smart Contracts?</h2>
+            <p className="text-xl mb-8 max-w-3xl mx-auto">
+              Get comprehensive security analysis and vulnerability detection for your smart contracts.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="/contact"
                 className="bg-white text-red-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
+                Get Audit Quote
               </a>
               <a 
                 href="/case-studies"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-red-900 transition-colors"
               >
+                View Case Studies
               </a>
             </div>
           </div>

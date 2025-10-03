@@ -38,6 +38,8 @@ const EnterpriseSolutionsPage: React.FC = () => {
       title: "Enterprise Support",
       description: "24/7 enterprise-grade support and maintenance services to ensure optimal system performance.",
       icon: "🛠️",
+      features: ["24/7 Support", "System Maintenance", "Performance Optimization", "Technical Assistance"]
+    }
   ];
 
   return (
