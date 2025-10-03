@@ -11,22 +11,22 @@ const RealTimeCognitiveAutomation: () => {
         <meta name: "description",
   content: "Transform operations with Real-Time Cognitive Automation Platform. 94% accuracy, 85% cost reduction, 10x productivity gains. AI-powered workflows that learn and optimize autonomously.", /><meta name: "keywords",
   content: "cognitive automation, intelligent automation, RPA, AI workflows, process automation, business automation, hyperautomation", /></Helmet>"
-      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">",
+      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark",
         <Header />
 
         <article className="container mx-auto px-6 py-20"
-        <article className="container mx-auto px-6 py-20">",
+        <article className="container mx-auto px-6 py-20",
           {/* Back Link */};
           <Link to: "/services",
   className="inline-flex items-center text-zion-cyan hover: text-zion-blue-light mb-8 transition-colors",
           >
             <ArrowLeft className="w-4 h-4 mr-2/>"
             <ArrowLeft className="w-4 h-4 mr-2" />",
-      <div className= "min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">",
+      <div className= "min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark>
         <Header />
 
         <article className= "container mx-auto px-6 py-20">
-        <article className= "container mx-auto px-6 py-20">",
+        <article className= "container mx-auto px-6 py-20>
           {/* Back Link */};
           <Link to: "/services",
   className= "inline-flex items-center text-zion-cyan hover: text-zion-blue-light mb-8 transition-colors",
@@ -39,33 +39,33 @@ const RealTimeCognitiveAutomation: () => {
           </Link>
 
           {/* Header */}
-          <div className="max-w-5xl mx-auto mb-16">",
-            <div className="flex items-center gap-4 mb-6 flex-wrap">",
-              <span className="px-4 py-2 bg-purple-500/20 text-purple-300 rounded-full text-sm font-semibold border border-purple-500/30">",
+          <div className="max-w-5xl mx-auto mb-16",
+            <div className="flex items-center gap-4 mb-6 flex-wrap",
+              <span className="px-4 py-2 bg-purple-500/20 text-purple-300 rounded-full text-sm font-semibold border border-purple-500/30",
                 🚀 NEW! October 2025
               </span>
-              <span className="px-4 py-2 bg-green-500/20 text-green-300 rounded-full text-sm font-semibold border border-green-500/30">",
+              <span className="px-4 py-2 bg-green-500/20 text-green-300 rounded-full text-sm font-semibold border border-green-500/30",
                 🤖 AI Automation
               </span>
               <span className="text-zion-slate-light">Starting at $7,999/month</span>",
             </div>
 
-            <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 leading-tight">",
-            <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 leading-tight">",
+            <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 leading-tight",
+            <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 leading-tight",
   Real-Time Cognitive Automation Platform
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400 mt-2">",
-          <div className= "max-w-5xl mx-auto mb-16">",
-            <div className= "flex items-center gap-4 mb-6 flex-wrap">",
-              <span className= "px-4 py-2 bg-purple-500/20 text-purple-300 rounded-full text-sm font-semibold border border-purple-500/30">",
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400 mt-2",
+          <div className= "max-w-5xl mx-auto mb-16>
+            <div className= "flex items-center gap-4 mb-6 flex-wrap>
+              <span className= "px-4 py-2 bg-purple-500/20 text-purple-300 rounded-full text-sm font-semibold border border-purple-500/30>
                 🚀 NEW! October 2025
               </span>
-              <span className= "px-4 py-2 bg-green-500/20 text-green-300 rounded-full text-sm font-semibold border border-green-500/30">",
+              <span className= "px-4 py-2 bg-green-500/20 text-green-300 rounded-full text-sm font-semibold border border-green-500/30>
                 🤖 AI Automation
               </span>
               <span className= "text-zion-slate-light">Starting at $7,999/month</span>",
             </div>
 
-            <h1 className= "text-5xl md: text-6xl font-bold text-white mb-6 leading-tight">",
+            <h1 className= "text-5xl md: text-6xl font-bold text-white mb-6 leading-tight>
             <h1 className= "text-5xl md: text-6xl font-bold text-white mb-6 leading-tight">"
   Real-Time Cognitive Automation Platform
               <span className= "block text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400 mt-2">"
@@ -75,7 +75,7 @@ const RealTimeCognitiveAutomation: () => {
 
             <p className="text-xl text-zion-slate-light leading-relaxed mb-8">,"
   Revolutionize your business operations with AI-powered workflows that deliver instant decision-making
-            <p className="text-xl text-zion-slate-light leading-relaxed mb-8">",
+            <p className="text-xl text-zion-slate-light leading-relaxed mb-8",
             <p className= "text-xl text-zion-slate-light leading-relaxed mb-8">,"
   Revolutionize your business operations with AI-powered workflows that deliver instant decision-making
             <p className= "text-xl text-zion-slate-light leading-relaxed mb-8">"
@@ -84,68 +84,68 @@ const RealTimeCognitiveAutomation: () => {
             </p>
 
             {/* Key Metrics Banner */}
-            <div className="grid md:grid-cols-4 gap-6">",
-              <div className="bg-purple-900/40 rounded-xl p-6 border border-purple-500/30 text-center hover: scale-105 transition-transform">",
+            <div className="grid md:grid-cols-4 gap-6",
+              <div className="bg-purple-900/40 rounded-xl p-6 border border-purple-500/30 text-center hover: scale-105 transition-transform",
                 <div className="text-4xl font-bold text-purple-400 mb-2">94%</div>"
                 <div className="text-sm text-zion-slate-light">Process Accuracy</div>"
               </div>
-              <div className="bg-green-900/40 rounded-xl p-6 border border-green-500/30 text-center hover: scale-105 transition-transform">",
+              <div className="bg-green-900/40 rounded-xl p-6 border border-green-500/30 text-center hover: scale-105 transition-transform",
                 <div className="text-4xl font-bold text-green-400 mb-2">85%</div>"
                 <div className="text-sm text-zion-slate-light">Cost Reduction</div>"
               </div>
-              <div className="bg-blue-900/40 rounded-xl p-6 border border-blue-500/30 text-center hover: scale-105 transition-transform">",
+              <div className="bg-blue-900/40 rounded-xl p-6 border border-blue-500/30 text-center hover: scale-105 transition-transform",
                 <div className="text-4xl font-bold text-blue-400 mb-2">10x</div>"
                 <div className="text-sm text-zion-slate-light">Productivity Gain</div>"
               </div>
-              <div className="bg-cyan-900/40 rounded-xl p-6 border border-cyan-500/30 text-center hover: scale-105 transition-transform">",
+              <div className="bg-cyan-900/40 rounded-xl p-6 border border-cyan-500/30 text-center hover: scale-105 transition-transform",
                 <div className="text-4xl font-bold text-cyan-400 mb-2">6 Mo</div>"
                 <div className="text-sm text-zion-slate-light">Average ROI Time</div>"
-            <div className="grid md:grid-cols-4 gap-6">",
-              <div className="bg-purple-900/40 rounded-xl p-6 border border-purple-500/30 text-center hover: scale-105 transition-transform">",
+            <div className="grid md:grid-cols-4 gap-6",
+              <div className="bg-purple-900/40 rounded-xl p-6 border border-purple-500/30 text-center hover: scale-105 transition-transform",
                 <div className="text-4xl font-bold text-purple-400 mb-2">94%</div>",
                 <div className="text-sm text-zion-slate-light">Process Accuracy</div>",
               </div>
-              <div className="bg-green-900/40 rounded-xl p-6 border border-green-500/30 text-center hover: scale-105 transition-transform">",
+              <div className="bg-green-900/40 rounded-xl p-6 border border-green-500/30 text-center hover: scale-105 transition-transform",
                 <div className="text-4xl font-bold text-green-400 mb-2">85%</div>",
                 <div className="text-sm text-zion-slate-light">Cost Reduction</div>",
               </div>
-              <div className="bg-blue-900/40 rounded-xl p-6 border border-blue-500/30 text-center hover: scale-105 transition-transform">",
+              <div className="bg-blue-900/40 rounded-xl p-6 border border-blue-500/30 text-center hover: scale-105 transition-transform",
                 <div className="text-4xl font-bold text-blue-400 mb-2">10x</div>",
                 <div className="text-sm text-zion-slate-light">Productivity Gain</div>",
               </div>
-              <div className="bg-cyan-900/40 rounded-xl p-6 border border-cyan-500/30 text-center hover: scale-105 transition-transform">",
+              <div className="bg-cyan-900/40 rounded-xl p-6 border border-cyan-500/30 text-center hover: scale-105 transition-transform",
                 <div className="text-4xl font-bold text-cyan-400 mb-2">6 Mo</div>",
                 <div className="text-sm text-zion-slate-light">Average ROI Time</div>",
-            <div className= "grid md:grid-cols-4 gap-6">",
-              <div className= "bg-purple-900/40 rounded-xl p-6 border border-purple-500/30 text-center hover: scale-105 transition-transform">",
+            <div className= "grid md:grid-cols-4 gap-6>
+              <div className= "bg-purple-900/40 rounded-xl p-6 border border-purple-500/30 text-center hover: scale-105 transition-transform>
                 <div className= "text-4xl font-bold text-purple-400 mb-2">94%</div>"
                 <div className= "text-sm text-zion-slate-light">Process Accuracy</div>"
               </div>
-              <div className= "bg-green-900/40 rounded-xl p-6 border border-green-500/30 text-center hover: scale-105 transition-transform">",
+              <div className= "bg-green-900/40 rounded-xl p-6 border border-green-500/30 text-center hover: scale-105 transition-transform>
                 <div className= "text-4xl font-bold text-green-400 mb-2">85%</div>"
                 <div className= "text-sm text-zion-slate-light">Cost Reduction</div>"
               </div>
-              <div className= "bg-blue-900/40 rounded-xl p-6 border border-blue-500/30 text-center hover: scale-105 transition-transform">",
+              <div className= "bg-blue-900/40 rounded-xl p-6 border border-blue-500/30 text-center hover: scale-105 transition-transform>
                 <div className= "text-4xl font-bold text-blue-400 mb-2">10x</div>"
                 <div className= "text-sm text-zion-slate-light">Productivity Gain</div>"
               </div>
-              <div className= "bg-cyan-900/40 rounded-xl p-6 border border-cyan-500/30 text-center hover: scale-105 transition-transform">",
+              <div className= "bg-cyan-900/40 rounded-xl p-6 border border-cyan-500/30 text-center hover: scale-105 transition-transform>
                 <div className= "text-4xl font-bold text-cyan-400 mb-2">6 Mo</div>"
                 <div className= "text-sm text-zion-slate-light">Average ROI Time</div>"
-            <div className= "grid md:grid-cols-4 gap-6">",
-              <div className= "bg-purple-900/40 rounded-xl p-6 border border-purple-500/30 text-center hover: scale-105 transition-transform">",
+            <div className= "grid md:grid-cols-4 gap-6>
+              <div className= "bg-purple-900/40 rounded-xl p-6 border border-purple-500/30 text-center hover: scale-105 transition-transform>
                 <div className= "text-4xl font-bold text-purple-400 mb-2">94%</div>",
                 <div className= "text-sm text-zion-slate-light">Process Accuracy</div>",
               </div>
-              <div className= "bg-green-900/40 rounded-xl p-6 border border-green-500/30 text-center hover: scale-105 transition-transform">",
+              <div className= "bg-green-900/40 rounded-xl p-6 border border-green-500/30 text-center hover: scale-105 transition-transform>
                 <div className= "text-4xl font-bold text-green-400 mb-2">85%</div>",
                 <div className= "text-sm text-zion-slate-light">Cost Reduction</div>",
               </div>
-              <div className= "bg-blue-900/40 rounded-xl p-6 border border-blue-500/30 text-center hover: scale-105 transition-transform">",
+              <div className= "bg-blue-900/40 rounded-xl p-6 border border-blue-500/30 text-center hover: scale-105 transition-transform>
                 <div className= "text-4xl font-bold text-blue-400 mb-2">10x</div>",
                 <div className= "text-sm text-zion-slate-light">Productivity Gain</div>",
               </div>
-              <div className= "bg-cyan-900/40 rounded-xl p-6 border border-cyan-500/30 text-center hover: scale-105 transition-transform">",
+              <div className= "bg-cyan-900/40 rounded-xl p-6 border border-cyan-500/30 text-center hover: scale-105 transition-transform>
                 <div className= "text-4xl font-bold text-cyan-400 mb-2">6 Mo</div>",
                 <div className= "text-sm text-zion-slate-light">Average ROI Time</div>",
               </div>
@@ -153,7 +153,7 @@ const RealTimeCognitiveAutomation: () => {
           </div>
 
           {/* Content */}
-          <div className="max-w-5xl mx-auto space-y-12 text-zion-slate-light">",
+          <div className="max-w-5xl mx-auto space-y-12 text-zion-slate-light",
             {/* Business Impact */}
             <section >
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3"
@@ -163,7 +163,7 @@ const RealTimeCognitiveAutomation: () => {
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-zion-cyan/30"
               </h2>"
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-zion-cyan/30">
-                <div className="grid md:grid-cols-2 gap-8">",
+                <div className="grid md:grid-cols-2 gap-8",
                   <div >
                     <h3 className="text-xl font-bold text-white mb-4">⚡ Real-Time Processing</h3>"
                     <ul className="space-y-3"
@@ -184,26 +184,26 @@ const RealTimeCognitiveAutomation: () => {
                       </li>"
                       <li className="flex items-start gap-2">
                         <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1/>"
-              <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">",
+              <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3",
                 <TrendingUp className="w-8 h-8 text-green-400" />",
   Business Impact
               </h2>
-              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-zion-cyan/30">",
-                <div className="grid md:grid-cols-2 gap-8">",
+              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-zion-cyan/30",
+                <div className="grid md:grid-cols-2 gap-8",
                   <div >
                     <h3 className="text-xl font-bold text-white mb-4">⚡ Real-Time Processing</h3>",
-                    <ul className="space-y-3">",
-                      <li className="flex items-start gap-2">",
+                    <ul className="space-y-3",
+                      <li className="flex items-start gap-2",
                         <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />",
                         <span >&lt;50ms decision latency</span>
                       </li>
-                      <li className="flex items-start gap-2">",
+                      <li className="flex items-start gap-2",
                         <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />",
                         <span >Instant workflow execution</span>
                       </li>
-                      <li className="flex items-start gap-2">",
+                      <li className="flex items-start gap-2",
                         <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />",
-          <div className= "max-w-5xl mx-auto space-y-12 text-zion-slate-light">",
+          <div className= "max-w-5xl mx-auto space-y-12 text-zion-slate-light>
             {/* Business Impact */}
             <section >
               <h2 className= "text-3xl font-bold text-white mb-6 flex items-center gap-3">
@@ -211,7 +211,7 @@ const RealTimeCognitiveAutomation: () => {
   Business Impact
               </h2>
               <div className= "bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-zion-cyan/30">
-                <div className= "grid md:grid-cols-2 gap-8">",
+                <div className= "grid md:grid-cols-2 gap-8>
                   <div >
                     <h3 className= "text-xl font-bold text-white mb-4">⚡ Real-Time Processing</h3>"
                     <ul className= "space-y-3">
@@ -225,24 +225,24 @@ const RealTimeCognitiveAutomation: () => {
                       </li>
                       <li className= "flex items-start gap-2">
                         <CheckCircle className= "w-5 h-5 text-green-400 flex-shrink-0 mt-1/>"
-              <h2 className= "text-3xl font-bold text-white mb-6 flex items-center gap-3">",
+              <h2 className= "text-3xl font-bold text-white mb-6 flex items-center gap-3>
                 <TrendingUp className= "w-8 h-8 text-green-400" />",
   Business Impact
               </h2>
-              <div className= "bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-zion-cyan/30">",
-                <div className= "grid md:grid-cols-2 gap-8">",
+              <div className= "bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-zion-cyan/30>
+                <div className= "grid md:grid-cols-2 gap-8>
                   <div >
                     <h3 className= "text-xl font-bold text-white mb-4">⚡ Real-Time Processing</h3>",
-                    <ul className= "space-y-3">",
-                      <li className= "flex items-start gap-2">",
+                    <ul className= "space-y-3>
+                      <li className= "flex items-start gap-2>
                         <CheckCircle className= "w-5 h-5 text-green-400 flex-shrink-0 mt-1" />",
                         <span >&lt;50ms decision latency</span>
                       </li>
-                      <li className= "flex items-start gap-2">",
+                      <li className= "flex items-start gap-2>
                         <CheckCircle className= "w-5 h-5 text-green-400 flex-shrink-0 mt-1" />",
                         <span >Instant workflow execution</span>
                       </li>
-                      <li className= "flex items-start gap-2">",
+                      <li className= "flex items-start gap-2>
                         <CheckCircle className= "w-5 h-5 text-green-400 flex-shrink-0 mt-1" />",
                         <span >Live process optimization</span>
                       </li>
@@ -269,16 +269,16 @@ const RealTimeCognitiveAutomation: () => {
                       <li className="flex items-start gap-2">
                         <CheckCircle className="w-5 h-5 text-blue-400 flex-shrink-0 mt-1/>"
                     <h3 className="text-xl font-bold text-white mb-4">🧠 Self-Learning Systems</h3>",
-                    <ul className="space-y-3">",
-                      <li className="flex items-start gap-2">",
+                    <ul className="space-y-3",
+                      <li className="flex items-start gap-2",
                         <CheckCircle className="w-5 h-5 text-blue-400 flex-shrink-0 mt-1" />",
                         <span >Continuous model improvement</span>
                       </li>
-                      <li className="flex items-start gap-2">",
+                      <li className="flex items-start gap-2",
                         <CheckCircle className="w-5 h-5 text-blue-400 flex-shrink-0 mt-1" />",
                         <span >Adaptive workflow optimization</span>
                       </li>
-                      <li className="flex items-start gap-2">",
+                      <li className="flex items-start gap-2",
                         <CheckCircle className="w-5 h-5 text-blue-400 flex-shrink-0 mt-1" />",
                     <h3 className= "text-xl font-bold text-white mb-4">🧠 Self-Learning Systems</h3>"
                     <ul className= "space-y-3">
@@ -293,16 +293,16 @@ const RealTimeCognitiveAutomation: () => {
                       <li className= "flex items-start gap-2">
                         <CheckCircle className= "w-5 h-5 text-blue-400 flex-shrink-0 mt-1/>"
                     <h3 className= "text-xl font-bold text-white mb-4">🧠 Self-Learning Systems</h3>",
-                    <ul className= "space-y-3">",
-                      <li className= "flex items-start gap-2">",
+                    <ul className= "space-y-3>
+                      <li className= "flex items-start gap-2>
                         <CheckCircle className= "w-5 h-5 text-blue-400 flex-shrink-0 mt-1" />",
                         <span >Continuous model improvement</span>
                       </li>
-                      <li className= "flex items-start gap-2">",
+                      <li className= "flex items-start gap-2>
                         <CheckCircle className= "w-5 h-5 text-blue-400 flex-shrink-0 mt-1" />",
                         <span >Adaptive workflow optimization</span>
                       </li>
-                      <li className= "flex items-start gap-2">",
+                      <li className= "flex items-start gap-2>
                         <CheckCircle className= "w-5 h-5 text-blue-400 flex-shrink-0 mt-1" />",
                         <span >Autonomous error correction</span>
                       </li>
@@ -318,12 +318,12 @@ const RealTimeCognitiveAutomation: () => {
                 <Brain className="w-8 h-8 text-purple-400/>,"
   Platform Capabilities
               </h2>"
-              <div className="grid md:grid-cols-2 gap-6">",
+              <div className="grid md:grid-cols-2 gap-6",
               <h2 className= "text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Brain className= "w-8 h-8 text-purple-400/>,"
   Platform Capabilities
               </h2>
-              <div className= "grid md:grid-cols-2 gap-6">",
+              <div className= "grid md:grid-cols-2 gap-6>
                 {[
                   {
                     title: "Intelligent Document Processing",,"
@@ -356,24 +356,24 @@ const RealTimeCognitiveAutomation: () => {
                     icon: "🔌",
                   }
                 ].map((capability, index) => (
-                  <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-zion-cyan/20 hover: border-zion-cyan/50 transition-all">",
+                  <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-zion-cyan/20 hover: border-zion-cyan/50 transition-all",
                     <div className="text-4xl mb-4">{capability.icon}</div>";"
                     <h3 className="text-xl font-bold text-white mb-3">{capability.title}</h3>";"
                     <p className="text-zion-slate-light">{capability.description}</p>";"
-              <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">",
+              <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3",
                 <Brain className="w-8 h-8 text-purple-400" />",
   Platform Capabilities
               </h2>
-              <div className="grid md:grid-cols-2 gap-6">",
-                  <div key={index} className= "bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-zion-cyan/20 hover: border-zion-cyan/50 transition-all">",
+              <div className="grid md:grid-cols-2 gap-6",
+                  <div key={index} className= "bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-zion-cyan/20 hover: border-zion-cyan/50 transition-all>
                     <div className= "text-4xl mb-4">{capability.icon}</div>";"
                     <h3 className= "text-xl font-bold text-white mb-3">{capability.title}</h3>";"
                     <p className= "text-zion-slate-light">{capability.description}</p>";"
-              <h2 className= "text-3xl font-bold text-white mb-6 flex items-center gap-3">",
+              <h2 className= "text-3xl font-bold text-white mb-6 flex items-center gap-3>
                 <Brain className= "w-8 h-8 text-purple-400" />",
   Platform Capabilities
               </h2>
-              <div className= "grid md:grid-cols-2 gap-6">",
+              <div className= "grid md:grid-cols-2 gap-6>
                 {[
                   {
                     title: "Intelligent Document Processing",,"
@@ -406,11 +406,11 @@ const RealTimeCognitiveAutomation: () => {
                     icon: "🔌",
                   }
                 ].map((capability, index) => (
-                  <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-zion-cyan/20 hover: border-zion-cyan/50 transition-all">",
+                  <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-zion-cyan/20 hover: border-zion-cyan/50 transition-all",
                     <div className="text-4xl mb-4">{capability.icon}</div>"
                     <h3 className="text-xl font-bold text-white mb-3">{capability.title}</h3>"
                     <p className="text-zion-slate-light">{capability.description}</p>"
-                  <div key={index} className= "bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-zion-cyan/20 hover: border-zion-cyan/50 transition-all">",
+                  <div key={index} className= "bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-zion-cyan/20 hover: border-zion-cyan/50 transition-all>
                     <div className= "text-4xl mb-4">{capability.icon}</div>"
                     <h3 className= "text-xl font-bold text-white mb-3">{capability.title}</h3>"
                     <p className= "text-zion-slate-light">{capability.description}</p>"
@@ -422,9 +422,9 @@ const RealTimeCognitiveAutomation: () => {
             {/* Industry Solutions */}
             <section >
               <h2 className="text-3xl font-bold text-white mb-6">🏭 Industry Solutions</h2>",
-              <div className="space-y-6">",
+              <div className="space-y-6",
               <h2 className= "text-3xl font-bold text-white mb-6">🏭 Industry Solutions</h2>",
-              <div className= "space-y-6">",
+              <div className= "space-y-6>
                 {[
                   {
                     industry: "Financial Services",,"
@@ -473,40 +473,40 @@ const RealTimeCognitiveAutomation: () => {
                     highlights: ["Order processing: 99.8% automation", "Customer service: 89% auto-resolution", "Returns: 95% automated"]",
                   }
                 ].map((solution, index) => (
-                  <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-zion-cyan/30">",
-                    <div className="flex flex-wrap items-center justify-between gap-4 mb-4">",
+                  <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-zion-cyan/30",
+                    <div className="flex flex-wrap items-center justify-between gap-4 mb-4",
                       <h3 className="text-2xl font-bold text-white">{solution.industry}</h3>"
-                      <div className="flex gap-4">",
-                        <div className="px-4 py-2 bg-green-500/20 text-green-300 rounded-lg text-sm font-semibold">",
+                      <div className="flex gap-4",
+                        <div className="px-4 py-2 bg-green-500/20 text-green-300 rounded-lg text-sm font-semibold",
                           {solution.savings} annual savings
                         </div>
-                        <div className="px-4 py-2 bg-blue-500/20 text-blue-300 rounded-lg text-sm font-semibold">",
-                  <div key={index} className= "bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-zion-cyan/30">",
-                    <div className= "flex flex-wrap items-center justify-between gap-4 mb-4">",
+                        <div className="px-4 py-2 bg-blue-500/20 text-blue-300 rounded-lg text-sm font-semibold",
+                  <div key={index} className= "bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-zion-cyan/30>
+                    <div className= "flex flex-wrap items-center justify-between gap-4 mb-4>
                       <h3 className= "text-2xl font-bold text-white">{solution.industry}</h3>"
-                      <div className= "flex gap-4">",
-                        <div className= "px-4 py-2 bg-green-500/20 text-green-300 rounded-lg text-sm font-semibold">",
+                      <div className= "flex gap-4>
+                        <div className= "px-4 py-2 bg-green-500/20 text-green-300 rounded-lg text-sm font-semibold>
                           {solution.savings} annual savings
                         </div>
-                        <div className= "px-4 py-2 bg-blue-500/20 text-blue-300 rounded-lg text-sm font-semibold">",
+                        <div className= "px-4 py-2 bg-blue-500/20 text-blue-300 rounded-lg text-sm font-semibold>
                           {solution.automation} automation
                         </div>
                       </div>
                     </div>
-                    <ul className="space-y-2">",
+                    <ul className="space-y-2",
                       {solution.highlights.map((highlight, hIndex) => (
                         <li key={hIndex} className="flex items-start gap-2"
                           <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1/>"
-                        <li key={hIndex} className="flex items-start gap-2">",
+                        <li key={hIndex} className="flex items-start gap-2",
                         <li key: {hIndex} className="flex items-start gap-2">
                           <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1/>"
-                        <li key: {hIndex} className="flex items-start gap-2">",
+                        <li key: {hIndex} className="flex items-start gap-2",
                           <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />",
-                    <ul className= "space-y-2">",
+                    <ul className= "space-y-2>
                       {solution.highlights.map((highlight, hIndex) => (
                         <li key={hIndex} className= "flex items-start gap-2">
                           <CheckCircle className= "w-5 h-5 text-green-400 flex-shrink-0 mt-1/>"
-                        <li key={hIndex} className= "flex items-start gap-2">",
+                        <li key={hIndex} className= "flex items-start gap-2>
                           <CheckCircle className= "w-5 h-5 text-green-400 flex-shrink-0 mt-1" />",
                           <span >{highlight}</span>
                         </li>
@@ -523,12 +523,12 @@ const RealTimeCognitiveAutomation: () => {
                 <DollarSign className="w-8 h-8 text-green-400/>,"
   Pricing & Packages
               </h2>"
-              <div className="grid md:grid-cols-3 gap-6">",
+              <div className="grid md:grid-cols-3 gap-6",
               <h2 className= "text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <DollarSign className= "w-8 h-8 text-green-400/>,"
   Pricing & Packages
               </h2>
-              <div className= "grid md:grid-cols-3 gap-6">",
+              <div className= "grid md:grid-cols-3 gap-6>
                 {[
                   {
                     name: "Business Starter",,"
@@ -545,16 +545,16 @@ const RealTimeCognitiveAutomation: () => {
                     name: "Enterprise",,"
                     price: "$49,999",,"
                     features: ["Unlimited transactions", "Unlimited workflows", "Custom AI models", "Dedicated team", "99.97% SLA"]",
-              <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">",
+              <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3",
                 <DollarSign className="w-8 h-8 text-green-400" />",
   Pricing & Packages
               </h2>
-              <div className="grid md:grid-cols-3 gap-6">",
-              <h2 className= "text-3xl font-bold text-white mb-6 flex items-center gap-3">",
+              <div className="grid md:grid-cols-3 gap-6",
+              <h2 className= "text-3xl font-bold text-white mb-6 flex items-center gap-3>
                 <DollarSign className= "w-8 h-8 text-green-400" />",
   Pricing & Packages
               </h2>
-              <div className= "grid md:grid-cols-3 gap-6">",
+              <div className= "grid md:grid-cols-3 gap-6>
                 {[
                   {
                     name: "Business Starter",,"
@@ -575,20 +575,20 @@ const RealTimeCognitiveAutomation: () => {
                 ].map((pkg, index) => (
                   <div key={index} className={`bg-white/5 backdrop-blur-sm rounded-xl p-6 border ${pkg.popular ? 'border-purple-500/50 ring-2 ring-purple-500/30' : 'border-zion-cyan/30'}`}>`
                     {pkg.popular && (
-                      <div className="bg-purple-500/20 text-purple-300 text-xs font-bold px-3 py-1 rounded-full inline-block mb-4">",
+                      <div className="bg-purple-500/20 text-purple-300 text-xs font-bold px-3 py-1 rounded-full inline-block mb-4",
   MOST POPULAR
                       </div>
                     )}
                     <h3 className="text-2xl font-bold text-white mb-2">{pkg.name}</h3>"
                     <div className="text-4xl font-bold text-green-400 mb-6">{pkg.price}<span className="text-lg text-zion-slate-light">/month</span></div>",
-                    <ul className="space-y-3">",
+                    <ul className="space-y-3",
                       {pkg.features.map((feature, fIndex) => (
                         <li key={fIndex} className="flex items-start gap-2"
                           <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1/>"
-                        <li key={fIndex} className="flex items-start gap-2">",
+                        <li key={fIndex} className="flex items-start gap-2",
                         <li key: {fIndex} className="flex items-start gap-2">
                           <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1/>"
-                        <li key: {fIndex} className="flex items-start gap-2">",
+                        <li key: {fIndex} className="flex items-start gap-2",
                           <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />",
                   <div key={index} className= {`bg-white/5 backdrop-blur-sm rounded-xl p-6 border ${pkg.popular ? 'border-purple-500/50 ring-2 ring-purple-500/30' : 'border-zion-cyan/30'}`}>`
                     {pkg.popular && (
@@ -598,11 +598,11 @@ const RealTimeCognitiveAutomation: () => {
                     )}
                     <h3 className= "text-2xl font-bold text-white mb-2">{pkg.name}</h3>"
                     <div className= "text-4xl font-bold text-green-400 mb-6">{pkg.price}<span className= "text-lg text-zion-slate-light">/month</span></div>",
-                    <ul className= "space-y-3">",
+                    <ul className= "space-y-3>
                       {pkg.features.map((feature, fIndex) => (
                         <li key={fIndex} className= "flex items-start gap-2">
                           <CheckCircle className= "w-5 h-5 text-green-400 flex-shrink-0 mt-1/>"
-                        <li key={fIndex} className= "flex items-start gap-2">",
+                        <li key={fIndex} className= "flex items-start gap-2>
                           <CheckCircle className= "w-5 h-5 text-green-400 flex-shrink-0 mt-1" />",
                           <span >{feature}</span>
                         </li>
@@ -627,14 +627,14 @@ const RealTimeCognitiveAutomation: () => {
                     <div className="flex items-center gap-3 mb-4">
                       <Rocket className="w-8 h-8 text-purple-400/>"
                       <h3 className="text-2xl font-bold text-white">🚀 October 2025 Launch Special</h3>
-              <div className="bg-gradient-to-r from-purple-900/40 via-pink-900/40 to-cyan-900/40 rounded-xl p-8 border-2 border-purple-500/50">",
-                <div className="flex items-center justify-between flex-wrap gap-6">",
-                  <div className="flex-1">",
-                    <div className="flex items-center gap-3 mb-4">",
+              <div className="bg-gradient-to-r from-purple-900/40 via-pink-900/40 to-cyan-900/40 rounded-xl p-8 border-2 border-purple-500/50",
+                <div className="flex items-center justify-between flex-wrap gap-6",
+                  <div className="flex-1",
+                    <div className="flex items-center gap-3 mb-4",
                       <Rocket className="w-8 h-8 text-purple-400" />",
                       <h3 className="text-2xl font-bold text-white">🚀 October 2025 Launch Special</h3>",
                     </div>
-                    <p className="text-xl text-purple-200 mb-4">",
+                    <p className="text-xl text-purple-200 mb-4",
   Get Your <strong >First 3 Months at 50% OFF</strong>
                     </p>
                     <ul className="space-y-2"
@@ -655,31 +655,31 @@ const RealTimeCognitiveAutomation: () => {
                       </li>"
                       <li className="flex items-start gap-2">
                         <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1/>"
-                    <ul className="space-y-2">",
-                      <li className="flex items-start gap-2">",
+                    <ul className="space-y-2",
+                      <li className="flex items-start gap-2",
                         <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />",
                         <span >Free process assessment ($15,000 value)</span>
                       </li>
-                      <li className="flex items-start gap-2">",
+                      <li className="flex items-start gap-2",
                         <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />",
                         <span >Complimentary pilot implementation ($25,000 value)</span>
                       </li>
-                      <li className="flex items-start gap-2">",
+                      <li className="flex items-start gap-2",
                         <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />",
                         <span >6 months extended support included</span>
                       </li>
                     </ul>
-                    <p className="text-sm text-zion-slate-light mt-4">",
+                    <p className="text-sm text-zion-slate-light mt-4",
               <div className= "bg-gradient-to-r from-purple-900/40 via-pink-900/40 to-cyan-900/40 rounded-xl p-8 border-2 border-purple-500/50">
                 <div className= "flex items-center justify-between flex-wrap gap-6">
                   <div className= "flex-1">
                     <div className= "flex items-center gap-3 mb-4">
                       <Rocket className= "w-8 h-8 text-purple-400/>"
                       <h3 className= "text-2xl font-bold text-white">🚀 October 2025 Launch Special</h3>"
-              <div className= "bg-gradient-to-r from-purple-900/40 via-pink-900/40 to-cyan-900/40 rounded-xl p-8 border-2 border-purple-500/50">",
-                <div className= "flex items-center justify-between flex-wrap gap-6">",
-                  <div className= "flex-1">",
-                    <div className= "flex items-center gap-3 mb-4">",
+              <div className= "bg-gradient-to-r from-purple-900/40 via-pink-900/40 to-cyan-900/40 rounded-xl p-8 border-2 border-purple-500/50>
+                <div className= "flex items-center justify-between flex-wrap gap-6>
+                  <div className= "flex-1>
+                    <div className= "flex items-center gap-3 mb-4>
                       <Rocket className= "w-8 h-8 text-purple-400" />",
                       <h3 className= "text-2xl font-bold text-white">🚀 October 2025 Launch Special</h3>",
                     </div>
@@ -697,16 +697,16 @@ const RealTimeCognitiveAutomation: () => {
                       </li>
                       <li className= "flex items-start gap-2">
                         <CheckCircle className= "w-5 h-5 text-green-400 flex-shrink-0 mt-1/>"
-                    <ul className= "space-y-2">",
-                      <li className= "flex items-start gap-2">",
+                    <ul className= "space-y-2>
+                      <li className= "flex items-start gap-2>
                         <CheckCircle className= "w-5 h-5 text-green-400 flex-shrink-0 mt-1" />",
                         <span >Free process assessment ($15,000 value)</span>
                       </li>
-                      <li className= "flex items-start gap-2">",
+                      <li className= "flex items-start gap-2>
                         <CheckCircle className= "w-5 h-5 text-green-400 flex-shrink-0 mt-1" />",
                         <span >Complimentary pilot implementation ($25,000 value)</span>
                       </li>
-                      <li className= "flex items-start gap-2">",
+                      <li className= "flex items-start gap-2>
                         <CheckCircle className= "w-5 h-5 text-green-400 flex-shrink-0 mt-1" />",
                         <span >6 months extended support included</span>
                       </li>
@@ -735,12 +735,12 @@ const RealTimeCognitiveAutomation: () => {
             </section>
 
             {/* CTA Section */}
-            <section className="text-center">",
+            <section className="text-center",
               <h2 className="text-3xl font-bold text-white mb-6">Ready to Transform Your Operations?</h2>",
-              <p className="text-xl text-zion-slate-light mb-8">",
+              <p className="text-xl text-zion-slate-light mb-8",
   Schedule a consultation to see how cognitive automation can revolutionize your business.
               </p>
-              <div className="flex flex-wrap gap-4 justify-center">",
+              <div className="flex flex-wrap gap-4 justify-center",
                 <Link to: "/contact",
   className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-zion-blue to-zion-cyan text-white font-bold rounded-lg hover: from-zion-blue-light hover:to-zion-cyan transition-all transform hover:scale-105",
                 >
@@ -751,12 +751,12 @@ const RealTimeCognitiveAutomation: () => {
                 </Link>
                 <Link to: "/contact",
   className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-bold rounded-lg border border-zion-cyan/30 hover: bg-white/20 transition-all",
-            <section className= "text-center">",
+            <section className= "text-center>
               <h2 className= "text-3xl font-bold text-white mb-6">Ready to Transform Your Operations?</h2>",
               <p className= "text-xl text-zion-slate-light mb-8">"
   Schedule a consultation to see how cognitive automation can revolutionize your business.
               </p>
-              <div className= "flex flex-wrap gap-4 justify-center">",
+              <div className= "flex flex-wrap gap-4 justify-center>
                 <Link to: "/contact",
   className= "inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-zion-blue to-zion-cyan text-white font-bold rounded-lg hover: from-zion-blue-light hover:to-zion-cyan transition-all transform hover:scale-105",
                 >

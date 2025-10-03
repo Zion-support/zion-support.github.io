@@ -6,24 +6,24 @@ const Page: () => {
     <div className="container mx-auto px-6 py-12 text-white"
       <h1 className="text-3xl font-bold mb-4">GenAI 2025: Policy Tests Quickstart v2</h1>",
       <p className="text-zion-slate-light mb-6"
-    <div className="container mx-auto px-6 py-12 text-white">",
+    <div className="container mx-auto px-6 py-12 text-white",
       <h1 className="text-3xl font-bold mb-4">GenAI 2025: Policy Tests Quickstart v2</h1>",
-      <p className="text-zion-slate-light mb-6">",;,"
+      <p className="text-zion-slate-light mb-6",;,"
   Lightweight CI policy tests wired to KPIs so you can ship faster without regressions. v2 adds
         budgetaware gates, eval scorecards, and rollback hooks.
       </p>
-      <div className="space-y-4 text-zion-slate-light">",
+      <div className="space-y-4 text-zion-slate-light",
 =======
     <div className= "container mx-auto px-6 py-12 text-white">
       <h1 className= "text-3xl font-bold mb-4">GenAI 2025: Policy Tests Quickstart v2</h1>",
       <p className= "text-zion-slate-light mb-6">
-    <div className= "container mx-auto px-6 py-12 text-white">",
+    <div className= "container mx-auto px-6 py-12 text-white>
       <h1 className= "text-3xl font-bold mb-4">GenAI 2025: Policy Tests Quickstart v2</h1>",
       <p className= "text-zion-slate-light mb-6">"
   Lightweight CI policy tests wired to KPIs so you can ship faster without regressions. v2 adds
         budgetaware gates, eval scorecards, and rollback hooks.
       </p>
-      <div className= "space-y-4 text-zion-slate-light">",
+      <div className= "space-y-4 text-zion-slate-light>
 >>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
         <p >
           Start by defining guardrail checks for prompts, tools, and data egress. Run them in PR and on
@@ -35,9 +35,9 @@ const Page: () => {
         </p>
       </div>
 <<<<<<< HEAD
-      <div className="mt-8">",
+      <div className="mt-8",
 =======
-      <div className= "mt-8">",
+      <div className= "mt-8>
 >>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
         <Link to: "/blog", className ="text-cyan-300 underline">Back to Blog</Link>",
       </div>
