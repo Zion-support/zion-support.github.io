@@ -4,8 +4,8 @@ export async function simulateAction<T = any>(
   connection: ProviderConnection,
   action: string,
   details: Record<string, any> = {}
-): Promise<{ log: SyncLogEntry, result: T }> {
-  const log: SyncLogEntry = {
+): Promise<{ log: SyncLogEntry, result: T }> {/* content */}
+  const log: SyncLogEntry = {/* content */}
     id: uuidv4(),
     timestamp: Date.now(),
     providerId: connection.providerId,
@@ -18,20 +18,20 @@ export async function simulateAction<T = any>(
 }
 
 // CRM actions
-export const crm = {
-  async syncContact(connection: ProviderConnection, contact: Record<string, any>) {
+export const crm = {/* content */}
+  async syncContact(connection: ProviderConnection, contact: Record<string, any>) {/* content */}
     return simulateAction(connection, 'crm.syncContact', { contact });
   },
-  async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {
+  async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {/* content */}
     return simulateAction(connection, 'crm.addProjectNote', { note });
   },
-  async addEmailTouchpoint(connection: ProviderConnection, touch: Record<string, any>) {
+  async addEmailTouchpoint(connection: ProviderConnection, touch: Record<string, any>) {/* content */}
     return simulateAction(connection, 'crm.addEmailTouchpoint', { touch });
   }
 };
 // ATS actions
-export const ats = {
-  async pushApplicant(connection: ProviderConnection, applicant: Record<string, any>) {
+export const ats = {/* content */}
+  async pushApplicant(connection: ProviderConnection, applicant: Record<string, any>) {/* content */}
     return simulateAction(connection, 'ats.pushApplicant', { applicant });
     return simulateAction(connection, 'ats.updateStatus', { change });
   }

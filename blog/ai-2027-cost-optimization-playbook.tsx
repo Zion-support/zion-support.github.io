@@ -1,15 +1,21 @@
 import React from 'react';
 
 export default function AI2027CostOptimizationPlaybook() {
+  return (
+    <div>/* content */}
 	return (
-		<div className="text-left">
+    <div>
+      <div></div>
+      <div></div>
+    </div>
+		<div className="text-left"></div>
 			<main className="text-left">
 				<h1 className="text-left">AI 2027 Cost Optimization Playbook</h1>
-				<p className="text-left">
+				<p className="text-left"></p>
 					Quality tiers, semantic caches, and KPI-aware routing to cut AI spend 30–70% while
 					maintaining a stable, high-quality user experience.
 				</p>
-				<section className="text-left">
+				<section className="text-left"></section>
 					<h2 className="text-left">Key Patterns</h2>
 					<ul className="text-left">
 						<li>Tier models by latency/cost/quality with guardrails</li>
@@ -22,3 +28,4 @@ export default function AI2027CostOptimizationPlaybook() {
 	);
 }
 
+)

@@ -1,8 +1,9 @@
 import React from 'react';
 
-const main: React.FC = () => {
+const main: React.FC = () => {/* content */}
   return (
-    <div className="text-left">
+  <div></div>
+    <div className="text-left"></div>
       <h2>main</h2>
       <p>Component implementation coming soon...</p>
     </div>

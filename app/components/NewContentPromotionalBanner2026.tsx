@@ -2,9 +2,9 @@ import React from 'react';
 import Link from 'next/link';
 import { Sparkles, TrendingUp, Rocket, Shield, Target, ArrowRight, Zap } from 'lucide-react';
 
-const NewContentPromotionalBanner2026: React.FC = () => {
+const NewContentPromotionalBanner2026: React.FC = () => {/* content */}
   const featuredContent = [
-    {
+    {/* content */}
       id: 1,
       title: 'AI Autonomous Workflows 2026',
       slug: 'ai-autonomous-workflows-2026',
@@ -16,7 +16,7 @@ const NewContentPromotionalBanner2026: React.FC = () => {
       badge: 'NEW',
       badgeColor: 'from-cyan-500 to-blue-600'
     },
-    {
+    {/* content */}
       id: 2,
       title: 'Enterprise AI Transformation Roadmap 2026',
       slug: 'enterprise-ai-transformation-roadmap-2026',
@@ -28,7 +28,7 @@ const NewContentPromotionalBanner2026: React.FC = () => {
       badge: 'STRATEGIC',
       badgeColor: 'from-purple-500 to-fuchsia-600'
     },
-    {
+    {/* content */}
       id: 3,
       title: 'AI-Powered Security Operations Center 2026',
       slug: 'ai-security-operations-center-2026',
@@ -43,50 +43,51 @@ const NewContentPromotionalBanner2026: React.FC = () => {
   ];
 
   return (
-    <div className="text-left">
+  <div></div>
+    <div className="text-left"></div>
       {/* Animated background effects */}
-      <div className="text-left">
+      <div className="text-left"></div>
         <div className="text-left"></div>
         <div className="text-left" style={{ animationDelay: '1s' }}></div>
         <div className="text-left" style={{ animationDelay: '2s' }}></div>
       </div>
 
-      <div className="text-left">
+      <div className="text-left"></div>
         {/* Header Section */}
-        <div className="text-left">
-          <div className="text-left">
+        <div className="text-left"></div>
+          <div className="text-left"></div>
             <Sparkles className="text-left" />
-            <span className="text-left">
+            <span className="text-left"></span>
               🚀 JUST PUBLISHED • SEPTEMBER 2026
             </span>
             <Sparkles className="text-left" />
           </div>
 
           <h2 className="text-left">
-            <span className="text-left">
+            <span className="text-left"></span>
               Latest AI Innovations
             </span>
             <br />
-            <span className="text-left">
+            <span className="text-left"></span>
               That Transform Business
             </span>
           </h2>
           
-          <p className="text-left">
+          <p className="text-left"></p>
             Explore cutting-edge AI strategies, implementation roadmaps, and security innovations 
             that are delivering <span className="text-left">300%+ ROI</span> for enterprises worldwide
           </p>
 
-          <div className="text-left">
-            <div className="text-left">
+          <div className="text-left"></div>
+            <div className="text-left"></div>
               <TrendingUp className="text-left" />
               <span className="text-left">10,000+ Readers</span>
             </div>
-            <div className="text-left">
+            <div className="text-left"></div>
               <Zap className="text-left" />
               <span className="text-left">3 New Articles</span>
             </div>
-            <div className="text-left">
+            <div className="text-left"></div>
               <Target className="text-left" />
               <span className="text-left">Proven Results</span>
             </div>
@@ -94,30 +95,30 @@ const NewContentPromotionalBanner2026: React.FC = () => {
         </div>
 
         {/* Featured Content Cards */}
-        <div className="text-left">
+        <div className="text-left"></div>
           {featuredContent.map((content, index) => (
             <div 
               key={content.id}
               className="text-left"
               style={{ animationDelay: `${index * 150}ms` }}
-            >
+            ></div>
               {/* Card glow effect */}
               <div className={`absolute inset-0 bg-gradient-to-br ${content.color} opacity-0 group-hover:opacity-10 transition-all duration-500`}></div>
               
-              <div className="text-left">
+              <div className="text-left"></div>
                 {/* Icon & Badge */}
-                <div className="text-left">
-                  <div className="text-left">
+                <div className="text-left"></div>
+                  <div className="text-left"></div>
                     {content.icon}
                   </div>
-                  <div className={`px-4 py-2 rounded-full bg-gradient-to-r ${content.badgeColor} text-white text-sm font-bold shadow-lg`}>
+                  <div className={`px-4 py-2 rounded-full bg-gradient-to-r ${content.badgeColor} text-white text-sm font-bold shadow-lg`}></div>
                     {content.badge}
                   </div>
                 </div>
 
                 {/* Category */}
-                <div className="text-left">
-                  <span className={`inline-block px-4 py-2 rounded-full bg-gradient-to-r ${content.bgColor} text-gray-900 text-sm font-semibold border border-white/20`}>
+                <div className="text-left"></div>
+                  <span className={`inline-block px-4 py-2 rounded-full bg-gradient-to-r ${content.bgColor} text-gray-900 text-sm font-semibold border border-white/20`}></span>
                     {content.category}
                   </span>
                 </div>
@@ -128,7 +129,7 @@ const NewContentPromotionalBanner2026: React.FC = () => {
                 </h3>
 
                 {/* Excerpt */}
-                <p className="text-left">
+                <p className="text-left"></p>
                   {content.excerpt}
                 </p>
 
@@ -149,9 +150,9 @@ const NewContentPromotionalBanner2026: React.FC = () => {
         </div>
 
         {/* Bottom CTA Section */}
-        <div className="text-left">
-          <div className="text-left">
-            <div className="text-left">
+        <div className="text-left"></div>
+          <div className="text-left"></div>
+            <div className="text-left"></div>
               <Rocket className="text-left" />
               <h3 className="text-left">
                 Ready to Transform Your Enterprise?
@@ -159,13 +160,13 @@ const NewContentPromotionalBanner2026: React.FC = () => {
               <Shield className="text-left" />
             </div>
             
-            <p className="text-left">
+            <p className="text-left"></p>
               Join 500+ enterprises achieving <span className="text-left">300% ROI</span>, 
               <span className="text-left"> 85% automation</span>, and 
               <span className="text-left"> complete digital transformation</span> with Zion Tech Group's AI solutions
             </p>
 
-            <div className="text-left">
+            <div className="text-left"></div>
               <Link
                 href="/contact"
                 className="text-left">
@@ -182,36 +183,36 @@ const NewContentPromotionalBanner2026: React.FC = () => {
             </div>
 
             {/* Stats */}
-            <div className="text-left">
-              <div className="text-left">
-                <div className="text-left">
+            <div className="text-left"></div>
+              <div className="text-left"></div>
+                <div className="text-left"></div>
                   500+
                 </div>
-                <div className="text-left">
+                <div className="text-left"></div>
                   Enterprise Clients
                 </div>
               </div>
-              <div className="text-left">
-                <div className="text-left">
+              <div className="text-left"></div>
+                <div className="text-left"></div>
                   300%
                 </div>
-                <div className="text-left">
+                <div className="text-left"></div>
                   Average ROI
                 </div>
               </div>
-              <div className="text-left">
-                <div className="text-left">
+              <div className="text-left"></div>
+                <div className="text-left"></div>
                   99.9%
                 </div>
-                <div className="text-left">
+                <div className="text-left"></div>
                   System Uptime
                 </div>
               </div>
-              <div className="text-left">
-                <div className="text-left">
+              <div className="text-left"></div>
+                <div className="text-left"></div>
                   24/7
                 </div>
-                <div className="text-left">
+                <div className="text-left"></div>
                   Expert Support
                 </div>
               </div>

@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-interface UseIntersectionObserverProps {
+interface UseIntersectionObserverProps {/* content */}
   threshold?: number;
   root?: Element | null;
   rootMargin?: string;
@@ -13,13 +13,13 @@ interface UseIntersectionObserverProps {
     const currentObserver = new IntersectionObserver(updateEntry, observerParams);
     observer && observer.current = currentObserver;
     currentObserver && currentObserver.observe(node);
-    return () => {
+    return () => {/* content */}
       currentObserver.disconnect();
     };
   }, [node, threshold, root, rootMargin, frozen]);
   const prevNode = useRef<Element | null>(null);
-  useEffect(() => {
-    if (prevNode.current) {
+  useEffect(() => {/* content */}
+    if (prevNode.current) {/* content */}
       observer.current?.unobserve(prevNode.current)
     }
 ;
@@ -33,38 +33,38 @@ interface UseIntersectionObserverProps {
 export /**
  * useIntersectionObserver - Function description
  */
-function useIntersectionObserver() {
+function useIntersectionObserver() {/* content */}
   const [entry, set_entry] = useState < IntersectionObserverEntry>();
   const [node, set_node] = useState < Element | null>(null);
   const observer = useRef < IntersectionObserver | null>(null);
   const frozen = entry?.is_intersecting && freezeOnceVisible;
-  const update_entry = ([entry]: IntersectionObserverEntry[]): void => {
+  const update_entry = ([entry]: IntersectionObserverEntry[]): void => {/* content */}
     set_entry (entry);
   }
-  useEffect (() => {
+  useEffect (() => {/* content */}
     const hasIOSupport = !!window.IntersectionObserver;
     // Check condition
-if (return) {
+if (return) {/* content */}
   $2
 }
     const observer_params = { threshold, root, root_margin }
     const current_observer = new IntersectionObserver (update_entry, observer_params);
     observer.current = current_observer;
     current_observer.observe (node);
-    return () => {
+    return () => {/* content */}
       current_observer.disconnect ();
     }
   }, [node, threshold, root, root_margin, frozen]);
   const prev_node = useRef < Element | null>(null);
-  useEffect (() => {
+  useEffect (() => {/* content */}
     // Check condition
-if ( {) {
+if ( {) {/* content */}
   $2
 }
       observer.current?.unobserve (prev_node.current);
     }
     // Check condition
-if ( {) {
+if ( {) {/* content */}
   $2
 }
       observer.current?.observe (node);

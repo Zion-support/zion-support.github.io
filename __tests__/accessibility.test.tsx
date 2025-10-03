@@ -3,14 +3,14 @@ import { describe, test, expect } from '@jest/globals';
 import { AccessibilityProvider } from '../components/AccessibilityProvider';
 
 const TestComponent = () => (
-  <div>
+  <div></div>
     <h1>Test Heading</h1>
     <button>Test Button</button>
   </div>
 );
 
-describe('Accessibility Tests', () => {
-  test('renders with accessibility provider', () => {
+describe('Accessibility Tests', () => {/* content */}
+  test('renders with accessibility provider', () => {/* content */}
     render(
       <AccessibilityProvider>
         <TestComponent />

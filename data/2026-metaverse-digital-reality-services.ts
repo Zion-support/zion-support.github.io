@@ -1,5 +1,5 @@
 export const metaverseDigitalRealityServices2026 = [
-  {
+  {/* content */}
     name: 'Metaverse Development Platform 2026',
     path: '/services/metaverse-development-platform-2026',
     description: 'Complete metaverse development and deployment solution',
@@ -11,13 +11,13 @@ export const metaverseDigitalRealityServices2026 = [
       'Virtual commerce integration',
       'Multi-platform deployment'
     ],
-    pricing: {
+    pricing: {/* content */}
       starter: '$399/month',
       professional: '$799/month',
       enterprise: 'Custom'
     }
   },
-  {
+  {/* content */}
     name: 'Digital Reality Solutions 2026',
     path: '/services/digital-reality-solutions-2026',
     description: 'Advanced AR/VR and mixed reality services',
@@ -29,7 +29,7 @@ export const metaverseDigitalRealityServices2026 = [
       'Mixed reality integration',
       'Spatial computing solutions'
     ],
-    pricing: {
+    pricing: {/* content */}
       starter: '$299/month',
       professional: '$599/month',
       enterprise: 'Custom'
@@ -44,7 +44,7 @@ export const metaverseDigitalCategories2026 = [
   'Digital Twins'
 ];
 
-export const metaverseDigitalStats2026 = {
+export const metaverseDigitalStats2026 = {/* content */}
   totalServices: 2,
   categories: 4,
   averageRating: 4.7,

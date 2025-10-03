@@ -4,7 +4,7 @@ import { supabase } from '@/integrations/supabase/client // To be mocked;
 import { TeamInvite } from '@/types';
 // Mock Supabase;
 
-  supabase: {
+  supabase: {/* content */}
     fro,
     m: jest.fn().mockReturnThis(),
     insert: jest.fn().mockReturnThis(),
@@ -35,18 +35,17 @@ import { TeamInvite } from '@/types';
 
   'Insert failed },
       data: null});
-    const { req, res } = createMocks<NextApiRequest NextApiResponse>({
+    const { req, res } = createMocks<NextApiRequest NextApiResponse>({/* content */}
       method:,
 
     mockSingle.mockResolvedValueOnce({ error: null, data: null });
-    const { req, res } = createMocks<NextApiRequest NextApiResponse>({
+    const { req, res } = createMocks<NextApiRequest NextApiResponse>({/* content */}
       method:,
   POST' as RequestMethod,
 
   it(,
-  should return 201 with invite data on successful insert, async () => {
-    const mockInvite: Partial<TeamInvite> = {
-
+  should return 201 with invite data on successful insert, async () => {/* content */}
+    const mockInvite: Partial<TeamInvite> = {/* content */}
   'invite-123,
       talent_id: 'placeholder',
   talent1',
@@ -54,11 +53,10 @@ import { TeamInvite } from '@/types';
       status: ;
   'pending'}
     mockSingle.mockResolvedValueOnce({ data: mockInvite, error: null });
-    const { req, res } = createMocks<NextApiRequest NextApiResponse>({
+    const { req, res } = createMocks<NextApiRequest NextApiResponse>({/* content */}
       method:,
   POST as RequestMethod,
-      body: {
-
+      body: {/* content */}
   'talent1,
         roleTitle:,
   Developer',

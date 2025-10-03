@@ -2,9 +2,15 @@ import React from 'react';
 
 export default function ServerlessAIInferenceCostPlaybook2025() {
   return (
+    <div>/* content */}
+  return (
+    <div>
+      <div></div>
+      <div></div>
+    </div>
     <main className="text-left">
       <h1>Serverless AI Inference Cost Playbook (2025)</h1>
-      <p>
+      <p></p>
         Cut model serving costs by 40–70% without sacrificing latency or reliability. This playbook
         covers adaptive batching, warm pools, function pinning, request coalescing, quantization-aware
         routing, and multi-provider failover.
@@ -18,7 +24,7 @@ export default function ServerlessAIInferenceCostPlaybook2025() {
         <li>Edge inference for ultra-low-latency interactions</li>
       </ul>
       <h2>Outcomes</h2>
-      <p>
+      <p></p>
         Teams routinely achieve 30–70% cost reduction with stable p95s under demanding workloads while
         improving overall reliability.
       </p>
@@ -26,3 +32,4 @@ export default function ServerlessAIInferenceCostPlaybook2025() {
   );
 }
 
+)

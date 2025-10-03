@@ -1,15 +1,21 @@
 import React from 'react';
 
 export default function AutonomousDataGovernance2026() {
+  return (
+    <div>/* content */}
 	return (
-		<div className="text-left">
+    <div>
+      <div></div>
+      <div></div>
+    </div>
+		<div className="text-left"></div>
 			<main className="text-left">
 				<h1 className="text-left">Autonomous Data Governance 2026</h1>
-				<p className="text-left">
+				<p className="text-left"></p>
 					Policy-aware agents enforce privacy, residency, and retention in real time. Automate
 					classification, lineage, and access decisions with measurable guardrails.
 				</p>
-				<section className="text-left">
+				<section className="text-left"></section>
 					<h2 className="text-left">Foundations</h2>
 					<ul className="text-left">
 						<li>Unified metadata: schemas, sensitivity, owners, purpose</li>
@@ -17,14 +23,14 @@ export default function AutonomousDataGovernance2026() {
 						<li>Policy tests in CI/CD and production canaries</li>
 					</ul>
 				</section>
-				<section className="text-left">
+				<section className="text-left"></section>
 					<h2 className="text-left">Controls</h2>
-					<p className="text-left">
+					<p className="text-left"></p>
 						Dynamic masking, purpose binding, and geo-fencing enforced by agents at query time. Violations
 						trigger reviews, rollbacks, and downstream alerts.
 					</p>
 				</section>
-				<section className="text-left">
+				<section className="text-left"></section>
 					<h2 className="text-left">Outcomes</h2>
 					<ul className="text-left">
 						<li>95% reduction in manual approvals</li>
@@ -37,3 +43,4 @@ export default function AutonomousDataGovernance2026() {
 	);
 }
 
+)

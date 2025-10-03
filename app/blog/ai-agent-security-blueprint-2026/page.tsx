@@ -8,17 +8,21 @@ export const metadata = {
 
 export default function Page() {
   return (
-<<<<<<< HEAD
-    <article className="text-left">
+    <div>/* content */}
+  return (
+    <div>
+      <div></div>
+      <div></div>
+    </div>
+    <article className="text-left"></a>
       <header className="text-left">
         <div className="text-left">January 2026 • 14 min read</div>
         <h1 className="text-left">
-=======
     <article className="text-left"></article>
       <header className="text-left"></header>
         <div className="text-left">January 2026 • 14 min read</div>"
         <h1 className="text-left"></h1>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-cc0a
+origin/cursor/fix-errors-and-merge-to-main-cc0a
           AI Agent Security Blueprint 2026
         </h1>
         <p className="text-left"></p>
@@ -27,29 +31,25 @@ export default function Page() {
         </p>
       </header>
       <div className="text-left"></div>
-<<<<<<< HEAD
-        <section className="text-left">
+        <section className="text-left"></section>
           <h2 className="text-left">Threat Model</h2>
-          <p className="text-left">
-=======
+          <p className="text-left"></p>
         <section className="text-left"></section>
           <h2 className="text-left">Threat Model</h2>"
           <p className="text-left"></p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-cc0a
+origin/cursor/fix-errors-and-merge-to-main-cc0a
             Consider prompt injection, tool misuse, data exfiltration, privilege escalation, and supply‑chain risks.
             Design controls assuming compromise and focus on blast‑radius reduction.
           </p>
         </section>
-<<<<<<< HEAD
-        <section className="text-left">
+        <section className="text-left"></section>
           <h2 className="text-left">Core Controls</h2>
           <ul className="text-left">
-=======
 
         <section className="text-left"></section>
           <h2 className="text-left">Core Controls</h2>"
           <ul className="text-left"></ul>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-cc0a
+origin/cursor/fix-errors-and-merge-to-main-cc0a
             <li>Identity and policy per agent and per tool</li>
             <li>Network egress allow‑lists and content scanning</li>
             <li>Secrets vault with time‑bound, scope‑bound tokens</li>
@@ -57,26 +57,20 @@ export default function Page() {
             <li>Action logs with signed, immutable storage</li>
           </ul>
         </section>
-<<<<<<< HEAD
-        <section className="text-left">
+        <section className="text-left"></section>
           <h2 className="text-left">Observability</h2>
-          <p className="text-left">
-=======
-
+          <p className="text-left"></p>
         <section className="text-left"></section>
           <h2 className="text-left">Observability</h2>"
           <p className="text-left"></p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-cc0a
+origin/cursor/fix-errors-and-merge-to-main-cc0a
             Capture traces across prompts, tools, and outcomes. Attach policy events, approvals, and budget usage.
             Alert on anomaly patterns and policy violations with automated containment.
           </p>
         </section>
-<<<<<<< HEAD
-        <section className="text-left">
-=======
-
         <section className="text-left"></section>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-cc0a
+        <section className="text-left"></section>
+origin/cursor/fix-errors-and-merge-to-main-cc0a
           <a
             href="/contact"
             className="text-left"></a>
@@ -87,4 +81,4 @@ export default function Page() {
   );
 }
 
-</div>
+</div>)

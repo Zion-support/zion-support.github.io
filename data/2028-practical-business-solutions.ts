@@ -8,7 +8,7 @@
   link: string;
   category: string;
   realImplementation: boolean;
-  contactInfo: {
+  contactInfo: {/* content */}
     mobile: string;
     email: string;
 export interface PracticalBusinessSolution2028 {;
@@ -39,14 +39,14 @@ export interface PracticalBusinessSolution2028 {;
   description: string, features: string[],
   link: string, category: string,
   realImplementation: boolean,
-  contactInfo: {
+  contactInfo: {/* content */}
     mobile: string, email: string,
     address: string
   }
 }
 
 export const practicalBusinessSolutions2028: PracticalBusinessSolution2028[] = [
-  {
+  {/* content */}
     id: "2028-practical-business-solution", name: "2028 Practical Business Solution Platform",
     tagline: "Practical business solutions for 2028", price: "$249/month",
     description: "Practical business solution platform that provides real-world solutions for 2028.",
@@ -59,7 +59,7 @@ export const practicalBusinessSolutions2028: PracticalBusinessSolution2028[] = [
     ];
     link: "/services/2028-practical-business-solution", category: "Practical Business Solutions 2028",
     realImplementation: true,
-    contactInfo: {
+    contactInfo: {/* content */}
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
@@ -90,7 +90,7 @@ export const practicalBusinessSolutions2028: PracticalBusinessSolution2028[] = [
     link: "/services/2028-practical-business-solution",
     category: "Practical Business Solutions 2028",
     realImplementation: true,
-    contactInfo: {
+    contactInfo: {/* content */}
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       mobile: '+1 302 464 0950',

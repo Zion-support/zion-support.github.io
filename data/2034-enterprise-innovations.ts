@@ -24,8 +24,7 @@
   contact: string;
 
 
-  {
-
+  {/* content */}
     id: 'ai - autonomous - devops - platform',
     name: 'AI Autonomous DevOps Platform',
     description:;
@@ -62,7 +61,7 @@
 
 
 
-  {
+  {/* content */}
       'Advanced AI algorithms',
       'Machine learning systems',
       'Automation frameworks',
@@ -115,8 +114,7 @@
     website: 'https://ziontechgroup.com / ai - autonomous - devops - platform',
 
   },
-  {
-
+  {/* content */}
     id: 'quantum - edge - computing - orchestrator',
     name: 'Quantum Edge Computing Orchestrator',
     description:;
@@ -152,7 +150,7 @@
     technology: [;
 
   },
-  {
+  {/* content */}
       'Quantum algorithms',
       'Edge computing frameworks',
       'AI orchestration',
@@ -188,8 +186,7 @@
     website: 'https://ziontechgroup.com / quantum - edge - computing - orchestrator',
 
   },
-  {
-
+  {/* content */}
     id: 'ai - powered - it - operations - center',
     name: 'AI - Powered IT Operations Center',
     description:;
@@ -260,8 +257,7 @@
     website: 'https://ziontechgroup.com / ai - powered - it - operations - center',
 
   },
-  {
-
+  {/* content */}
     id: 'quantum - blockchain - infrastructure',
     name: 'Quantum Blockchain Infrastructure Platform',
     description:;
@@ -349,8 +345,7 @@
     website: 'https://ziontechgroup.com / quantum - blockchain - infrastructure',
 
   },
-  {
-
+  {/* content */}
     id: 'ai - autonomous - data - center',
     name: 'AI Autonomous Data Center Platform',
     description:;

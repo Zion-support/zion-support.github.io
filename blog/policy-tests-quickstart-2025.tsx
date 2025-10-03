@@ -11,12 +11,13 @@ export const metadata = {
 	tags: ['Governance', 'CI/CD', 'Policy Tests']
 };
 
-const PolicyTestsQuickstart2025 = () => {
+const PolicyTestsQuickstart2025 = () => {/* content */}
 	return (
-		<article className="text-left">
+  <div></div>
+		<article className="text-left"></a>
 			<header className="text-left">
-				<div className="text-left">
-					<span className="text-left">
+				<div className="text-left"></div>
+					<span className="text-left"></span>
 						{metadata.category}
 					<
 					<span className="text-left">{metadata.readTime} read<
@@ -25,15 +26,15 @@ const PolicyTestsQuickstart2025 = () => {
 					{metadata.title}
 				</h1>
 				<p className="text-left">{metadata.description}</p>
-				<div className="text-left">
+				<div className="text-left"></div>
 					<span>By {metadata.author}<
 					<span>•<
 					<time dateTime={metadata.date}>{new Date(metadata.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</time>
 				</div>
 			</header>
 
-			<div className="text-left">
-				<section className="text-left">
+			<div className="text-left"></div>
+				<section className="text-left"></section>
 					<h2 className="text-left">What to Test</h2>
 					<ul className="text-left">
 						<li>Prompt safety and output constraints</li>
@@ -41,7 +42,7 @@ const PolicyTestsQuickstart2025 = () => {
 						<li>Budget limits and fallback routes</li>
 					</ul>
 				</section>
-				<section className="text-left">
+				<section className="text-left"></section>
 					<h2 className="text-left">How to Wire It</h2>
 					<p className="text-left">Run suites offline, enforce checks in PRs, and gate releases with online canaries. Tie every check to a KPI so guardrails speed teams up.</p>
 				</section>

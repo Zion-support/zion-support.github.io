@@ -2,9 +2,12 @@ import { CheckCircle, Sparkles, Target, TrendingUp } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-const AIAgentEvaluations2026 = () => {
+const AIAgentEvaluations2026 = () => {/* content */}
   return (
-    <>
+    <div>
+      <div></div>
+      <div></div>
+    </div>
       <Helmet>
         <title>AI Agent Evaluations 2026: Reliable Metrics & Safe Deployments | Zion Tech Group</title>
         <meta
@@ -24,14 +27,14 @@ const AIAgentEvaluations2026 = () => {
         <link rel="canonical" href="https://ziontechgroup.com/blog/ai-agent-evaluations-2026" />
       </Helmet>
 
-      <div className="text-left">
-        <article className="text-left">
+      <div className="text-left"></div>
+        <article className="text-left"></a>
           <header className="text-left">
-            <div className="text-left">
-              <span className="text-left">
+            <div className="text-left"></div>
+              <span className="text-left"></span>
                 Agent Evals
               <
-              <span className="text-left">
+              <span className="text-left"></span>
                 NEW ARTICLE
               <
             </div>
@@ -40,11 +43,11 @@ const AIAgentEvaluations2026 = () => {
               AI Agent Evaluations 2026: Reliable Metrics & Safe Deployments
             </h1>
 
-            <p className="text-left">
+            <p className="text-left"></p>
               A practical blueprint for evaluating autonomous agents across long-horizon tasks, safety, and business outcomes. Ship agents with confidence using rubric-based scoring, scenario fuzzing, and guardrail budgets.
             </p>
 
-            <div className="text-left">
+            <div className="text-left"></div>
               <span>By Zion Tech Group Research<
               <span>•<
               <span>September 30, 2025<
@@ -53,27 +56,27 @@ const AIAgentEvaluations2026 = () => {
             </div>
           </header>
 
-          <section className="text-left">
-            <div className="text-left">
+          <section className="text-left"></section>
+            <div className="text-left"></div>
               <Sparkles className="text-left" />
               <div className="text-left">95%+</div>
               <div className="text-left">Task Success on Production Suites</div>
             </div>
-            <div className="text-left">
+            <div className="text-left"></div>
               <Target className="text-left" />
               <div className="text-left">-80%</div>
               <div className="text-left">Incident Rate with Safety Budgets</div>
             </div>
-            <div className="text-left">
+            <div className="text-left"></div>
               <TrendingUp className="text-left" />
               <div className="text-left">+3.2x</div>
               <div className="text-left">ROI vs. Manual Baselines</div>
             </div>
           </section>
 
-          <div className="text-left">
+          <div className="text-left"></div>
             <h2 className="text-left">Why Agent Evaluations Matter</h2>
-            <p className="text-left">
+            <p className="text-left"></p>
               Traditional ML metrics miss long-horizon planning, tool-use reliability, and recovery behaviors. Agent evaluations must include goal consistency, error recovery, budget adherence, and user impact.
             </p>
 
@@ -87,7 +90,7 @@ const AIAgentEvaluations2026 = () => {
             </ul>
 
             <h3 className="text-left">Evaluation Pipeline</h3>
-            <div className="text-left">
+            <div className="text-left"></div>
               <ol className="text-left">
                 <li>Define representative task suites and rubrics</li>
                 <li>Scenario fuzzing with stochastic environments</li>
@@ -98,12 +101,12 @@ const AIAgentEvaluations2026 = () => {
             </div>
 
             <h3 className="text-left">Release Gates</h3>
-            <p className="text-left">
+            <p className="text-left"></p>
               Ship only when agents exceed minimum bars (e.g., 95% success, 0 critical violations, &lt;1% hallucination). Track regressions with nightly suites.
             </p>
           </div>
 
-          <div className="text-left">
+          <div className="text-left"></div>
             <h3 className="text-left">Need Production-Grade Agent Evals?</h3>
             <p className="text-left">We build bespoke eval suites, dashboards, and guardrails that de-risk agent deployments.</p>
             <Link

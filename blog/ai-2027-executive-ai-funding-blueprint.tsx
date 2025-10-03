@@ -1,14 +1,20 @@
 import React from 'react';
 
 export default function ExecutiveAIFundingBlueprint2027() {
+  return (
+    <div>/* content */}
 	return (
-		<div className="text-left">
+    <div>
+      <div></div>
+      <div></div>
+    </div>
+		<div className="text-left"></div>
 			<main className="text-left">
 				<h1 className="text-left">Executive AI Funding Blueprint 2027</h1>
-				<p className="text-left">
+				<p className="text-left"></p>
 					KPI‑linked scorecards, budgets, and governance gates that prove ROI and keep delivery fast.
 				</p>
-				<section className="text-left">
+				<section className="text-left"></section>
 					<h2 className="text-left">What you’ll learn</h2>
 					<ul className="text-left">
 						<li>Design KPI‑linked scorecards with clear budget triggers</li>
@@ -21,3 +27,4 @@ export default function ExecutiveAIFundingBlueprint2027() {
 	);
 }
 
+)

@@ -4,7 +4,13 @@ import October2025NewContentShowcase from '../components/October2025NewContentSh
 
 export default function Home() {
   return (
+    <div>/* content */}
+  return (
     <div>
+      <div></div>
+      <div></div>
+    </div>
+    <div></div>
       <main>
         <h1>Welcome to Zion Tech Group</h1>
         <p>Advanced IT Solutions & AI Services</p>
@@ -18,4 +24,4 @@ export default function Home() {
       <October2025NewContentShowcase />
     </div>
   );
-}
+})

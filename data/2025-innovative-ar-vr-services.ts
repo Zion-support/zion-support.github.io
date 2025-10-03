@@ -1,6 +1,6 @@
 import { ServiceVariant } from '../types/service-variants';
 
-export interface InnovativeARVRService {
+export interface InnovativeARVRService {/* content */}
   id: string;
   name: string;
   tagline: string;
@@ -27,7 +27,7 @@ export interface InnovativeARVRService {
   marketSize: string;
   growthRate: string;
   variant: ServiceVariant;
-  contactInfo: {
+  contactInfo: {/* content */}
     mobile: string;
     email: string;
     address: string;
@@ -41,7 +41,7 @@ export interface InnovativeARVRService {
   reviews: number;
 }
 
-const contact = {
+const contact = {/* content */}
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -49,7 +49,7 @@ const contact = {
 };
 
 export const innovativeARVRServices: InnovativeARVRService[] = [
-  {
+  {/* content */}
     id: 'ai-powered-ar-platform',
     name: 'AI-Powered AR Platform',
     tagline: 'Intelligent augmented reality platform with AI-powered content generation and spatial computing',
@@ -94,7 +94,7 @@ export const innovativeARVRServices: InnovativeARVRService[] = [
     rating: 4.8,
     reviews: 178
   },
-  {
+  {/* content */}
     id: 'quantum-vr-optimization',
     name: 'Quantum VR Optimization',
     tagline: 'Quantum-powered virtual reality optimization for immersive experiences and performance enhancement',
@@ -139,7 +139,7 @@ export const innovativeARVRServices: InnovativeARVRService[] = [
     rating: 4.7,
     reviews: 4
   },
-  {
+  {/* content */}
     id: 'metaverse-ar-vr-platform',
     name: 'Metaverse AR/VR Platform',
     tagline: 'Immersive metaverse platform with AR/VR integration and virtual world creation',
@@ -184,7 +184,7 @@ export const innovativeARVRServices: InnovativeARVRService[] = [
     rating: 4.6,
     reviews: 89
   },
-  {
+  {/* content */}
     id: 'ai-powered-vr-content-creation',
     name: 'AI-Powered VR Content Creation',
     tagline: 'Intelligent VR content creation with AI-powered generation and optimization',
@@ -229,7 +229,7 @@ export const innovativeARVRServices: InnovativeARVRService[] = [
     rating: 4.7,
     reviews: 134
   },
-  {
+  {/* content */}
     id: 'ar-vr-enterprise-platform',
     name: 'AR/VR Enterprise Platform',
     tagline: 'Comprehensive AR/VR enterprise platform with business applications and training solutions',

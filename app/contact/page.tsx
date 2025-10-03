@@ -1,7 +1,8 @@
 import React from 'react';
 
-const ContactPage: React.FC = () => {
+const ContactPage: React.FC = () => {/* content */}
   return (
+  <div></div>
     <div className="min-h-screen bg-slate-50 py-16"></div>
       <div className="container mx-auto px-4"></div>
         <h1 className="text-4xl font-bold text-gray-900 mb-8 text-center">
@@ -57,7 +58,7 @@ const ContactPage: React.FC = () => {
               </div>
               <div></div>
                 <h4 className="font-medium text-gray-900">Address</h4>
-                <p className="text-gray-600">
+                <p className="text-gray-600"></p>
                   123 Tech Street<br />
                   Innovation City, IC 12345
                 </p>

@@ -8,7 +8,7 @@
   link: string;
   category: string;
   realImplementation: boolean;
-  contactInfo: {
+  contactInfo: {/* content */}
     mobile: string;
     email: string;
 export interface EnterpriseItService {;
@@ -39,14 +39,14 @@ export interface EnterpriseItService {;
   description: string, features: string[],
   link: string, category: string,
   realImplementation: boolean,
-  contactInfo: {
+  contactInfo: {/* content */}
     mobile: string, email: string,
     address: string
   }
 }
 
 export const enterpriseITServices: EnterpriseItService[] = [
-  {
+  {/* content */}
     id: "enterprise-architecture", name: "Enterprise Architecture Consulting",
     tagline: "Strategic IT architecture for large organizations", price: "$150/hour",
     description: "Comprehensive enterprise architecture consulting services for digital transformation.",
@@ -59,7 +59,7 @@ export const enterpriseITServices: EnterpriseItService[] = [
     ];
     link: "/services/enterprise-architecture", category: "Enterprise IT",
     realImplementation: true,
-    contactInfo: {
+    contactInfo: {/* content */}
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
@@ -90,7 +90,7 @@ export const enterpriseITServices: EnterpriseItService[] = [
     link: "/services/enterprise-architecture",
     category: "Enterprise IT",
     realImplementation: true,
-    contactInfo: {
+    contactInfo: {/* content */}
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       mobile: '+1 302 464 0950',

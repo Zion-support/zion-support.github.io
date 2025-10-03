@@ -8,14 +8,14 @@
  * - Banner components
  */
 
-export interface ContentValidationResult {
+export interface ContentValidationResult {/* content */}
   isValid: boolean;
   errors: string[];
   warnings: string[];
   score: number; // 0-100
 }
 
-export interface ContentMetadata {
+export interface ContentMetadata {/* content */}
   title: string;
   description?: string;
   value?: number; // In billions
@@ -28,7 +28,7 @@ export interface ContentMetadata {
   hasCode?: boolean;
 }
 
-export class ContentValidator {
+export class ContentValidator {/* content */}
   private readonly minTitleLength = 10;
   private readonly maxTitleLength = 120;
   private readonly minDescriptionLength = 50;
@@ -39,54 +39,54 @@ export class ContentValidator {
   /**
    * Validate content metadata
    */
-  validateMetadata(metadata: ContentMetadata): ContentValidationResult {
+  validateMetadata(metadata: ContentMetadata): ContentValidationResult {/* content */}
     const errors: string[] = [];
     const warnings: string[] = [];
     let score = 100;
 
     // Title validation
-    if (!metadata.title || metadata.title.trim().length === 0) {
+    if (!metadata.title || metadata.title.trim().length === 0) {/* content */}
       errors.push('Title is required');
       score -= 20;
-    } else if (metadata.title.length < this.minTitleLength) {
+    } else if (metadata.title.length < this.minTitleLength) {/* content */}
       errors.push(`Title too short (min ${this.minTitleLength} characters)`);
       score -= 10;
-    } else if (metadata.title.length > this.maxTitleLength) {
+    } else if (metadata.title.length > this.maxTitleLength) {/* content */}
       warnings.push(`Title too long (max ${this.maxTitleLength} characters recommended)`);
       score -= 5;
     }
 
     // Description validation
-    if (metadata.description) {
-      if (metadata.description.length < this.minDescriptionLength) {
+    if (metadata.description) {/* content */}
+      if (metadata.description.length < this.minDescriptionLength) {/* content */}
         warnings.push(`Description too short (min ${this.minDescriptionLength} characters recommended)`);
         score -= 5;
-      } else if (metadata.description.length > this.maxDescriptionLength) {
+      } else if (metadata.description.length > this.maxDescriptionLength) {/* content */}
         warnings.push(`Description too long (max ${this.maxDescriptionLength} characters recommended)`);
         score -= 3;
       }
-    } else {
+    } else {/* content */}
       warnings.push('Description missing - recommended for SEO');
       score -= 10;
     }
 
     // Value proposition validation
-    if (metadata.value !== undefined) {
-      if (metadata.value <= 0) {
+    if (metadata.value !== undefined) {/* content */}
+      if (metadata.value <= 0) {/* content */}
         errors.push('Value must be positive');
         score -= 15;
-      } else if (metadata.value > 10000) {
+      } else if (metadata.value > 10000) {/* content */}
         warnings.push('Extremely high value - verify accuracy');
         score -= 2;
       }
     }
 
     // ROI validation
-    if (metadata.roi !== undefined) {
-      if (metadata.roi <= 0) {
+    if (metadata.roi !== undefined) {/* content */}
+      if (metadata.roi <= 0) {/* content */}
         errors.push('ROI must be positive');
         score -= 15;
-      } else if (metadata.roi > 50000) {
+      } else if (metadata.roi > 50000) {/* content */}
         warnings.push('Extremely high ROI - verify accuracy');
         score -= 2;
       }
@@ -94,46 +94,46 @@ export class ContentValidator {
 
     // Publish date validation
     const now = new Date();
-    if (metadata.publishDate > now) {
+    if (metadata.publishDate > now) {/* content */}
       warnings.push('Future publish date detected');
       score -= 5;
-    } else {
+    } else {/* content */}
       const ageInDays = (now.getTime() - metadata.publishDate.getTime()) / (1000 * 60 * 60 * 24);
-      if (ageInDays > 365) {
+      if (ageInDays > 365) {/* content */}
         warnings.push('Content is over 1 year old - consider updating');
         score -= 3;
       }
     }
 
     // Tags validation
-    if (!metadata.tags || metadata.tags.length === 0) {
+    if (!metadata.tags || metadata.tags.length === 0) {/* content */}
       warnings.push('No tags specified - add tags for better discoverability');
       score -= 8;
-    } else if (metadata.tags.length > 10) {
+    } else if (metadata.tags.length > 10) {/* content */}
       warnings.push('Too many tags (max 10 recommended)');
       score -= 3;
     }
 
     // Word count validation
-    if (metadata.wordCount !== undefined) {
-      if (metadata.wordCount < this.minWordCount) {
+    if (metadata.wordCount !== undefined) {/* content */}
+      if (metadata.wordCount < this.minWordCount) {/* content */}
         warnings.push(`Content too short (min ${this.minWordCount} words recommended)`);
         score -= 10;
-      } else if (metadata.wordCount < this.recommendedWordCount) {
+      } else if (metadata.wordCount < this.recommendedWordCount) {/* content */}
         warnings.push(`Consider expanding content (${this.recommendedWordCount}+ words optimal for SEO)`);
         score -= 5;
       }
     }
 
     // Media validation
-    if (!metadata.hasImages && metadata.category !== 'service') {
+    if (!metadata.hasImages && metadata.category !== 'service') {/* content */}
       warnings.push('No images detected - add visuals for better engagement');
       score -= 5;
     }
 
     score = Math.max(0, Math.min(100, score));
 
-    return {
+    return {/* content */}
       isValid: errors.length === 0,
       errors,
       warnings,
@@ -144,36 +144,36 @@ export class ContentValidator {
   /**
    * Validate banner component
    */
-  validateBanner(bannerData: {
+  validateBanner(bannerData: {/* content */}
     title: string;
     value?: number;
     links: Array<{ text: string; url: string }>;
     hasCallToAction: boolean;
-  }): ContentValidationResult {
+  }): ContentValidationResult {/* content */}
     const errors: string[] = [];
     const warnings: string[] = [];
     let score = 100;
 
     // Title validation
-    if (!bannerData.title || bannerData.title.trim().length === 0) {
+    if (!bannerData.title || bannerData.title.trim().length === 0) {/* content */}
       errors.push('Banner title is required');
       score -= 25;
     }
 
     // Links validation
-    if (!bannerData.links || bannerData.links.length === 0) {
+    if (!bannerData.links || bannerData.links.length === 0) {/* content */}
       warnings.push('No links in banner - consider adding navigation');
       score -= 15;
-    } else {
-      bannerData.links.forEach((link, index) => {
-        if (!link.text || link.text.trim().length === 0) {
+    } else {/* content */}
+      bannerData.links.forEach((link, index) => {/* content */}
+        if (!link.text || link.text.trim().length === 0) {/* content */}
           errors.push(`Link ${index + 1} missing text`);
           score -= 10;
         }
-        if (!link.url || link.url.trim().length === 0) {
+        if (!link.url || link.url.trim().length === 0) {/* content */}
           errors.push(`Link ${index + 1} missing URL`);
           score -= 10;
-        } else if (!this.isValidUrl(link.url)) {
+        } else if (!this.isValidUrl(link.url)) {/* content */}
           warnings.push(`Link ${index + 1} has potentially invalid URL: ${link.url}`);
           score -= 5;
         }
@@ -181,20 +181,20 @@ export class ContentValidator {
     }
 
     // Call to action validation
-    if (!bannerData.hasCallToAction) {
+    if (!bannerData.hasCallToAction) {/* content */}
       warnings.push('No clear call-to-action - consider adding one for better conversion');
       score -= 10;
     }
 
     // Value validation
-    if (bannerData.value !== undefined && bannerData.value > 0) {
+    if (bannerData.value !== undefined && bannerData.value > 0) {/* content */}
       // Bonus for showing value
       score = Math.min(100, score + 5);
     }
 
     score = Math.max(0, Math.min(100, score));
 
-    return {
+    return {/* content */}
       isValid: errors.length === 0,
       errors,
       warnings,
@@ -205,15 +205,15 @@ export class ContentValidator {
   /**
    * Validate URL format
    */
-  private isValidUrl(url: string): boolean {
+  private isValidUrl(url: string): boolean {/* content */}
     // Allow relative URLs
     if (url.startsWith('/')) return true;
     
     // Validate absolute URLs
-    try {
+    try {/* content */}
       new URL(url);
       return true;
-    } catch {
+    } catch {/* content */}
       return false;
     }
   }
@@ -221,19 +221,19 @@ export class ContentValidator {
   /**
    * Validate content consistency across related items
    */
-  validateContentConsistency(contents: ContentMetadata[]): {
+  validateContentConsistency(contents: ContentMetadata[]): {/* content */}
     duplicateTitles: string[];
     inconsistentDates: boolean;
     categoryDistribution: Record<string, number>;
     recommendations: string[];
-  } {
+  } {/* content */}
     const titles = new Map<string, number>();
     const duplicateTitles: string[] = [];
     const categoryDistribution: Record<string, number> = {};
     const recommendations: string[] = [];
 
     // Check for duplicate titles
-    contents.forEach(content => {
+    contents.forEach(content => {/* content */}
       const titleLower = content.title.toLowerCase();
       titles.set(titleLower, (titles.get(titleLower) || 0) + 1);
       
@@ -241,26 +241,26 @@ export class ContentValidator {
       categoryDistribution[content.category] = (categoryDistribution[content.category] || 0) + 1;
     });
 
-    titles.forEach((count, title) => {
-      if (count > 1) {
+    titles.forEach((count, title) => {/* content */}
+      if (count > 1) {/* content */}
         duplicateTitles.push(title);
       }
     });
 
     // Check date consistency
     const dates = contents.map(c => c.publishDate.getTime()).sort();
-    const inconsistentDates = dates.some((date, i) => {
+    const inconsistentDates = dates.some((date, i) => {/* content */}
       if (i === 0) return false;
       const daysDiff = (date - dates[i - 1]) / (1000 * 60 * 60 * 24);
       return daysDiff > 180; // Gap of more than 6 months
     });
 
     // Generate recommendations
-    if (duplicateTitles.length > 0) {
+    if (duplicateTitles.length > 0) {/* content */}
       recommendations.push(`Found ${duplicateTitles.length} duplicate titles - ensure unique titles for each content piece`);
     }
 
-    if (inconsistentDates) {
+    if (inconsistentDates) {/* content */}
       recommendations.push('Inconsistent publishing schedule detected - maintain regular content cadence');
     }
 
@@ -268,15 +268,15 @@ export class ContentValidator {
     const blogPercentage = (categoryDistribution.blog || 0) / totalContent * 100;
     const caseStudyPercentage = (categoryDistribution['case-study'] || 0) / totalContent * 100;
 
-    if (blogPercentage < 30) {
+    if (blogPercentage < 30) {/* content */}
       recommendations.push('Low blog content ratio - consider publishing more thought leadership articles');
     }
 
-    if (caseStudyPercentage < 20) {
+    if (caseStudyPercentage < 20) {/* content */}
       recommendations.push('Low case study ratio - showcase more client successes');
     }
 
-    return {
+    return {/* content */}
       duplicateTitles,
       inconsistentDates,
       categoryDistribution,
@@ -287,7 +287,7 @@ export class ContentValidator {
   /**
    * Generate content quality report
    */
-  generateQualityReport(contents: ContentMetadata[]): {
+  generateQualityReport(contents: ContentMetadata[]): {/* content */}
     averageScore: number;
     totalContent: number;
     highQuality: number; // Score >= 80
@@ -295,7 +295,7 @@ export class ContentValidator {
     lowQuality: number; // Score < 60
     topIssues: Array<{ issue: string; count: number }>;
     recommendations: string[];
-  } {
+  } {/* content */}
     const validations = contents.map(c => this.validateMetadata(c));
     const totalContent = contents.length;
     
@@ -306,7 +306,7 @@ export class ContentValidator {
     
     const issueMap = new Map<string, number>();
 
-    validations.forEach(validation => {
+    validations.forEach(validation => {/* content */}
       totalScore += validation.score;
       
       if (validation.score >= 80) highQuality++;
@@ -314,7 +314,7 @@ export class ContentValidator {
       else lowQuality++;
 
       // Collect issues
-      [...validation.errors, ...validation.warnings].forEach(issue => {
+      [...validation.errors, ...validation.warnings].forEach(issue => {/* content */}
         issueMap.set(issue, (issueMap.get(issue) || 0) + 1);
       });
     });
@@ -329,19 +329,19 @@ export class ContentValidator {
 
     const recommendations: string[] = [];
     
-    if (averageScore < 70) {
+    if (averageScore < 70) {/* content */}
       recommendations.push('Overall content quality is below target - review and improve existing content');
     }
 
-    if (lowQuality > totalContent * 0.2) {
+    if (lowQuality > totalContent * 0.2) {/* content */}
       recommendations.push(`${lowQuality} pieces of low-quality content detected - prioritize improvements`);
     }
 
-    if (topIssues.length > 0) {
+    if (topIssues.length > 0) {/* content */}
       recommendations.push(`Most common issue: ${topIssues[0].issue} (${topIssues[0].count} instances)`);
     }
 
-    return {
+    return {/* content */}
       averageScore: Math.round(averageScore * 10) / 10,
       totalContent,
       highQuality,

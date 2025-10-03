@@ -2,7 +2,7 @@
 
 
 export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
-  {const contact = {
+  {const contact = {/* content */}
 	mobile: '+1 302 464 0950';
 	email: 'kleber@ziontechgroup && ziontechgroup.com';
 	address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -10,32 +10,30 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
 };
 
 export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
-  {
-
-
-const contact = {
+  {/* content */}
+const contact = {/* content */}
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com',};
 
-const contact = {
+const contact = {/* content */}
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com',}
 export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
-  {const contact = {
+  {const contact = {/* content */}
 	mobile: '+1 302 464 0950';
 export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
-  {const contact = {
+  {const contact = {/* content */}
 	mobile: '+1 302 464 0950';
 	email: 'kleber@ziontechgroup && ziontechgroup.com';
 	address: '364 E Main St STE 1008 Middletown DE 19709',
 	website: 'https://ziontechgroup && ziontechgroup.com'
 };
 export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
-  {
+  {/* content */}
     id: 'managed-ml-feature-store-starter'
     name: 'Managed ML Feature Store Starter'
     tagline: 'Production-ready feature store with governance and lineage'
@@ -86,7 +84,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     realService: true
     technology: ['Feast-compatible, PostgreSQL, Redis, Next.js'];
 export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
-  {
+  {/* content */}
     description:
       'Spin up a governed feature store with versioning, lineage, validation, and online/offline consistency. Includes SDKs and CI checks.'
     features: [
@@ -130,7 +128,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
 
     reviews: 4
   }
-  {
+  {/* content */}
     id: 'agentic-browser-recorder-pro';
     name: 'Agentic Browser Recorder Pro'
     tagline: 'Record workflows, export resilient agent scripts with retries';
@@ -210,7 +208,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4.7,
     reviews: 4;
   }
-  {
+  {/* content */}
     id: 'agentic - browser - recorder - pro';
     name: 'Agentic Browser Recorder Pro',
     tagline: 'Record workflows, export resilient agent scripts with retries';
@@ -247,7 +245,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4.6,
     reviews: 3;
   }
-  {
+  {/* content */}
     id: 'sso - scim - accelerator';
     name: 'SSO + SCIM Accelerator';
     tagline: 'Enterprise SSO and user provisioning templates and adapters';
@@ -275,7 +273,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4.8,
     reviews: 9;
   }
-  {
+  {/* content */}
     id: 'ai - rag - starter - blueprint';
     name: 'AI RAG Starter Blueprint';
     tagline: 'Production - ready retrieval augmented generation stack with evals';
@@ -328,7 +326,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4.8,
     reviews: 7;
   }
-  {
+  {/* content */}
     id: 'browser - automation - copilot';
     name: 'Browser Automation Copilot';
     tagline: 'Headless browser workflows with resilient selectors and retries';
@@ -378,7 +376,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4.6,
     reviews: 12;
   }
-  {
+  {/* content */}
     id: 'cloud - cost - anomaly - guard';
     name: 'Cloud Cost Anomaly Guard';
     tagline: 'Proactive anomaly detection and slack alerts for cloud spend';
@@ -426,7 +424,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
 
     reviews: 5
   }
-  {
+  {/* content */}
     id: 'serverless-batch-orchestrator-pro';
     name: 'Serverless Batch Orchestrator'
     tagline: 'Cron-scale workflows with retries, DLQs, and cost-aware scheduling';
@@ -469,7 +467,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4.7,
     reviews: 5;
   }
-  {
+  {/* content */}
     id: 'serverless - batch - orchestrator - pro';
     name: 'Serverless Batch Orchestrator',
     tagline: 'Cron - scale workflows with retries, DLQs, and cost - aware scheduling';
@@ -506,7 +504,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4.6,
     reviews: 14;
   }
-  {
+  {/* content */}
     id: 'seo - technical - auditor - pro';
     name: 'SEO Technical Auditor Pro';
     tagline: 'Edge - rendered crawler with Core Web Vitals and schema fixes';
@@ -560,7 +558,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4.7,
     reviews: 31;
   }
-  {
+  {/* content */}
     id: 'gdpr - cookie - consent - manager - pro';
     name: 'GDPR Cookie Consent Manager Pro';
     tagline: 'Compliant consent banners with IAB TCF and regional policies';
@@ -614,7 +612,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
 
     reviews: 16
   }
-  {
+  {/* content */}
     id: 'ai-meeting-notes-summarizer-pro';
     name: 'AI Meeting Notes Summarizer'
     tagline: 'Auto-recording, diarization, action items, and CRM sync';
@@ -657,7 +655,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
 
     reviews: 52
   }
-  {
+  {/* content */}
     id: 'ai-code-migration-assistant-pro';
     name: 'AI Code Migration Assistant'
     tagline: 'Framework upgrades, typed refactors, and safe PR generation';
@@ -687,7 +685,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4.5,
     reviews: 16;
   }
-  {
+  {/* content */}
     id: 'ai - meeting - notes - summarizer - pro';
     name: 'AI Meeting Notes Summarizer',
     tagline: 'Auto - recording, diarization, action items, and CRM sync';
@@ -724,7 +722,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4.6,
     reviews: 52;
   }
-  {
+  {/* content */}
     id: 'ai - code - migration - assistant - pro';
     name: 'AI Code Migration Assistant',
     tagline: 'Framework upgrades, typed refactors, and safe PR generation';
@@ -764,14 +762,14 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
 
     reviews: 10
   }
-  {
+  {/* content */}
     id: 'incident-statuspage-automation-pro';
     name: 'Incident StatusPage Automation'
     tagline: 'SLO-aware updates, RCA templates, and subscriber comms';
     rating: 4.5,
     reviews: 10;
   }
-  {
+  {/* content */}
     id: 'incident - statuspage - automation - pro';
     name: 'Incident StatusPage Automation',
     tagline: 'SLO - aware updates, RCA templates, and subscriber comms';
@@ -812,7 +810,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     integrations: ['Statuspage, Freshstatus, Better Uptime'];
     reviews: 12
   }
-  {
+  {/* content */}
     id: 'multi-cloud-backup-automation-pro';
     name: 'Multi-Cloud Backup Automation'
     tagline: 'Policy-based snapshots, immutability, and cross-cloud recovery';
@@ -853,7 +851,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
 
     reviews: 8
   }
-  {
+  {/* content */}
     id: 'customer-feedback-insights-pro';
     name: 'Customer Feedback Insights'
     tagline: 'NLP tagging, themes, and voice-of-customer dashboards';
@@ -871,7 +869,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4.6,
     reviews: 12;
   }
-  {
+  {/* content */}
     id: 'multi - cloud - backup - automation - pro';
     name: 'Multi - Cloud Backup Automation',
     tagline: 'Policy - based snapshots, immutability, and cross - cloud recovery';
@@ -908,7 +906,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4.7,
     reviews: 8;
   }
-  {
+  {/* content */}
     id: 'customer - feedback - insights - pro';
     name: 'Customer Feedback Insights',
     tagline: 'NLP tagging, themes, and voice - of - customer dashboards';
@@ -971,7 +969,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4.5,
     reviews: 24;
   }
-  {
+  {/* content */}
     id: 'ai - sales - sequences - pro';
     name: 'AI Sales Sequences';
     tagline: 'Persona - aware sequences with channel optimization';
@@ -1018,7 +1016,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
 
     reviews: 77
   }
-  {
+  {/* content */}
     id: 'data-pipeline-optimizer-pro';
     name: 'Data Pipeline Optimizer'
     tagline: 'Throughput tuning, schema drift alerts, and cost guards';
@@ -1066,7 +1064,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4.8,
     reviews: 77;
   }
-  {
+  {/* content */}
     id: 'data - pipeline - optimizer - pro';
     name: 'Data Pipeline Optimizer',
     tagline: 'Throughput tuning, schema drift alerts, and cost guards';
@@ -1103,7 +1101,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4.4,
     reviews: 6;
   }
-  {
+  {/* content */}
     id: 'sso - rapid - integration - pro';
     name: 'SSO Rapid Integration';
     tagline: 'One - click SAML / OIDC setup with branded login and SCIM';
@@ -1140,7 +1138,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
   }
 
 
-  {
+  {/* content */}
     id: 'finops-cost-anomaly-guard';
     name: 'FinOps Cost Anomaly Guard'
     tagline: 'Detect, alert, and remediate cloud cost spikes in real-time';
@@ -1171,7 +1169,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4.7,
     reviews: 19;
   }
-  {
+  {/* content */}
     id: 'finops - cost - anomaly - guard';
     name: 'FinOps Cost Anomaly Guard',
     tagline: 'Detect, alert, and remediate cloud cost spikes in real - time';
@@ -1216,7 +1214,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4.7,
     reviews: 6;
   }
-  {
+  {/* content */}
     id: 'gdpr - dsar - automation - suite';
     name: 'GDPR DSAR Automation Suite';
     tagline: 'Automate data subject access requests with auditability';
@@ -1257,7 +1255,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     integrations: ['Salesforce, HubSpot, G Suite, Zendesk'];
     reviews: 5
   }
-  {
+  {/* content */}
     id: 'incident-copilot-pro';
     name: 'Incident Copilot Pro'
     tagline: 'AI-assisted on-call with runbooks, timelines, and auto-postmortems';
@@ -1294,7 +1292,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4.8,
     reviews: 5;
   }
-  {
+  {/* content */}
     id: 'incident - copilot - pro';
     name: 'Incident Copilot Pro',
     tagline: 'AI - assisted on - call with runbooks, timelines, and auto - postmortems';
@@ -1341,7 +1339,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4.7,
     reviews: 4;
   }
-  {
+  {/* content */}
     id: 'ai - sales - prospecting - studio';
     name: 'AI Sales Prospecting Studio';
     tagline: 'Personalized multi - channel outreach with compliance and warm - up';
@@ -1382,7 +1380,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     integrations: ['HubSpot, Salesforce, SendGrid, LinkedIn'];
     reviews: 10
   }
-  {
+  {/* content */}
     id: 'data-contracts-health-monitor';
     name: 'Data Contracts Health Monitor'
     tagline: 'Keep schemas, SLAs, and lineage compliant across teams';
@@ -1419,7 +1417,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4.8,
     reviews: 10;
   }
-  {
+  {/* content */}
     id: 'data - contracts - health - monitor';
     name: 'Data Contracts Health Monitor',
     tagline: 'Keep schemas, SLAs, and lineage compliant across teams';
@@ -1466,7 +1464,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4.6,
     reviews: 3;
   }
-  {
+  {/* content */}
     id: 'ai - powered - email - responder';
     name: 'AI - Powered Email Responder';
     tagline: 'Automate inbox triage and replies with policy guardrails';
@@ -1517,7 +1515,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4.7,
     reviews: 3;
   }
-  {
+  {/* content */}
     id: 'mobile - first - survey - tool';
     name: 'Mobile - First Survey Tool';
     tagline: 'Responsive surveys with branching logic and real - time analytics';
@@ -1549,7 +1547,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
 
     reviews: 2
   }
-  {
+  {/* content */}
     id: 'ecommerce-returns-management-saas';
     name: 'E‑commerce Returns Management SaaS'
     tagline: 'Automate RMAs, labels, and refunds with analytics';
@@ -1605,7 +1603,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4.6,
     reviews: 2;
   }
-  {
+  {/* content */}
     id: 'ecommerce - returns - management - saas';
     name: 'E‑commerce Returns Management SaaS',
     tagline: 'Automate RMAs, labels, and refunds with analytics';
@@ -1646,7 +1644,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4.7,
     reviews: 2;
   }
-  {
+  {/* content */}
     id: 'ai - email - responder - pro';
     name: 'AI Email Responder Pro';
     tagline: 'Categorize and draft replies to routine emails with safety';
@@ -1703,7 +1701,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4.7,
     reviews: 14;
   }
-  {
+  {/* content */}
     id: 'mobile - first - survey - studio';
     name: 'Mobile‑First Survey Studio';
     tagline: 'Conversational surveys that adapt in real - time';
@@ -1736,7 +1734,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     integrations: ['Slack, HubSpot, Zapier, Webhooks'];
     reviews: 6
   }
-  {
+  {/* content */}
     id: 'affiliate-tracking-hub';
     name: 'Affiliate Tracking Hub'
     tagline: 'Referrals, payouts, and fraud checks for SMBs';
@@ -1771,7 +1769,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4.6,
     reviews: 6;
   }
-  {
+  {/* content */}
     id: 'affiliate - tracking - hub';
     name: 'Affiliate Tracking Hub',
     tagline: 'Referrals, payouts, and fraud checks for SMBs';
@@ -1803,7 +1801,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     integrations: ['Stripe, Shopify, WooCommerce'];
     reviews: 5
   }
-  {
+  {/* content */}
     id: 'podcast-transcription-studio';
     name: 'Podcast Transcription Studio'
     use_cases: ['Affiliate sales, referrals, partnerships'];
@@ -1820,7 +1818,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4.5,
     reviews: 5;
   }
-  {
+  {/* content */}
     id: 'podcast - transcription - studio';
     name: 'Podcast Transcription Studio',
     tagline: 'Fast, accurate transcripts with speakers and chapters';
@@ -1853,7 +1851,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
 
     reviews: 9
   }
-  {
+  {/* content */}
     id: 'ecommerce-returns-portal';
     name: 'E‑commerce Returns Portal'
     color: 'from - pink - 600 to - rose - 700';
@@ -1881,7 +1879,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4.6,
     reviews: 9;
   }
-  {
+  {/* content */}
     id: 'ecommerce - returns - portal';
     name: 'E‑commerce Returns Portal',
     tagline: 'Return labels, status tracking, and analytics';
@@ -1922,7 +1920,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
 
     reviews: 7
   }
-  {
+  {/* content */}
     id: 'msP-it-helpdesk-lite';
     name: 'MSP IT Helpdesk Lite'
     real_service: true,
@@ -1942,7 +1940,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4.5,
     reviews: 7;
   }
-  {
+  {/* content */}
     id: 'ms_p - it - helpdesk - lite';
     name: 'MSP IT Helpdesk Lite',
     tagline: 'Ticketing, knowledge base, and client portal';
@@ -1983,7 +1981,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
 
     reviews: 8
   }
-  {
+  {/* content */}
     id: 'ai-privacy-compliance-copilot';
     name: 'AI Privacy & Compliance Copilot'
     tagline: 'Automate DPIAs, RoPA, and DSAR workflows with auditable AI';
@@ -2026,7 +2024,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4.5,
     reviews: 8;
   }
-  {
+  {/* content */}
     id: 'ai - privacy - compliance - copilot';
     name: 'AI Privacy & Compliance Copilot',
     tagline: 'Automate DPIAs, RoPA, and DSAR workflows with auditable AI';
@@ -2057,7 +2055,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
 
     reviews: 6
   }
-  {
+  {/* content */}
     id: 'sales-copilot-for-outreach';
     name: 'Sales Copilot for Outreach'
     tagline: 'Sequencing, personalization, and meeting notes—done for you';
@@ -2094,7 +2092,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4.7,
     reviews: 6;
   }
-  {
+  {/* content */}
     id: 'sales - copilot - for - outreach';
     name: 'Sales Copilot for Outreach',
     tagline: 'Sequencing, personalization, and meeting notes—done for you';
@@ -2135,7 +2133,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4.6,
     reviews: 12;
   }
-  {
+  {/* content */}
     id: 'security - evidence - automation - lite';
     name: 'Security Evidence Automation Lite';
     tagline: 'SOC2 / ISO evidence capture with zero - spreadsheet workflows';
@@ -2184,13 +2182,13 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
 
     reviews: 7
   }
-  {
+  {/* content */}
     id: 'ai-product-research-analyst';
     name: 'AI Product Research Analyst'
     rating: 4.5,
     reviews: 7;
   }
-  {
+  {/* content */}
     id: 'ai - product - research - analyst';
     name: 'AI Product Research Analyst',
     tagline: 'Summarize markets, competitors, and user feedback automatically';
@@ -2236,13 +2234,13 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
 
     reviews: 10
   }
-  {
+  {/* content */}
     id: 'marketing-brief-generator-pro';
     name: 'Marketing Brief Generator Pro'
     rating: 4.6,
     reviews: 10;
   }
-  {
+  {/* content */}
     id: 'marketing - brief - generator - pro';
     name: 'Marketing Brief Generator Pro',
     tagline: 'Campaign briefs from goals, audiences, and assets in minutes';
@@ -2288,7 +2286,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
 
     reviews: 9
   }
-  {
+  {/* content */}
     id: 'customer-feedback-hub';
     name: 'Customer Feedback Hub'
     tagline: 'Collect, tag, and route feedback across channels with AI';
@@ -2312,7 +2310,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4.5,
     reviews: 9;
   }
-  {
+  {/* content */}
     id: 'customer - feedback - hub';
     name: 'Customer Feedback Hub',
     tagline: 'Collect, tag, and route feedback across channels with AI';
@@ -2353,7 +2351,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4.6,
     reviews: 8;
   }
-  {
+  {/* content */}
     id: 'real - time - feature - flags - lite';
     name: 'Real - Time Feature Flags Lite';
     tagline: 'Simple edge - evaluated flags with audit and SDKs';
@@ -2401,7 +2399,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4.5,
     reviews: 5;
   }
-  {
+  {/* content */}
     id: 'ai - legal - clause - recommender';
     name: 'AI Legal Clause Recommender';
     tagline: 'Suggest clauses and redlines with risk explanations';
@@ -2447,7 +2445,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
 
     reviews: 4
   }
-  {
+  {/* content */}
     id: 'ai-incident-analysis-bot';
     name: 'AI Incident Analysis Bot'
     tagline: 'Summarize incidents, find regressions, and propose remediations';
@@ -2471,7 +2469,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4.5,
     reviews: 4;
   }
-  {
+  {/* content */}
     id: 'ai - incident - analysis - bot';
     name: 'AI Incident Analysis Bot',
     tagline: 'Summarize incidents, find regressions, and propose remediations';
@@ -2510,13 +2508,13 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
 
     reviews: 3
   }
-  {
+  {/* content */}
     id: 'ai-data-quality-monitor';
     name: 'AI Data Quality Monitor'
     rating: 4.6,
     reviews: 3;
   }
-  {
+  {/* content */}
     id: 'ai - data - quality - monitor';
     name: 'AI Data Quality Monitor',
     tagline: 'Detect schema drifts, null spikes, and anomalies continuously';
@@ -2564,7 +2562,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4.6,
     reviews: 6;
   }
-  {
+  {/* content */}
     id: 'ai - ux - copy - optimizer';
     name: 'AI UX Copy Optimizer';
     tagline: 'Test and optimize product copy for activation and conversion';
@@ -2610,13 +2608,13 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
 
     reviews: 5
   }
-  {
+  {/* content */}
     id: 'ai-governance-policy-center';
     name: 'AI Governance Policy Center'
     rating: 4.5,
     reviews: 5;
   }
-  {
+  {/* content */}
     id: 'ai - governance - policy - center';
     name: 'AI Governance Policy Center',
     tagline: 'Register models, risks, prompts, and controls in one place';
@@ -2694,8 +2692,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.7,
     reviews: 4,
   },
-  {
-
+  {/* content */}
     id: 'agentic - browser - recorder - pro',
     name: 'Agentic Browser Recorder Pro',
     tagline: 'Record workflows; export resilient agent scripts with retries',
@@ -2742,8 +2739,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.6,
     reviews: 3,
   },
-  {
-
+  {/* content */}
       'SAML/OIDC providers ready-to-go',
     id: 'sso - scim - accelerator',
     name: 'SSO + SCIM Accelerator',
@@ -2790,8 +2786,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.8,
     reviews: 2,
   },
-  {
-
+  {/* content */}
     id: 'api - performance - optimizer - pro',
     name: 'API Performance Optimizer Pro',
     tagline:;
@@ -2840,8 +2835,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.8,
     reviews: 9,
   },
-  {
-
+  {/* content */}
     id: 'ai - rag - starter - blueprint',
     name: 'AI RAG Starter Blueprint',
     tagline: 'Production - ready retrieval augmented generation stack with evals',
@@ -2888,8 +2882,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.8,
     reviews: 7,
   },
-  {
-
+  {/* content */}
       'Step-based DSL',
     id: 'browser - automation - copilot',
     name: 'Browser Automation Copilot',
@@ -2940,8 +2933,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.6,
     reviews: 12,
   },
-  {
-
+  {/* content */}
     id: 'cloud - cost - anomaly - guard',
     name: 'Cloud Cost Anomaly Guard',
     tagline: 'Proactive anomaly detection and slack alerts for cloud spend',
@@ -2987,8 +2979,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.7,
     reviews: 5,
   },
-  {
-
+  {/* content */}
     id: 'serverless - batch - orchestrator - pro',
     name: 'Serverless Batch Orchestrator',
     tagline:;
@@ -3037,8 +3028,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.6,
     reviews: 14,
   },
-  {
-
+  {/* content */}
     id: 'seo - technical - auditor - pro',
     name: 'SEO Technical Auditor Pro',
     tagline: 'Edge - rendered crawler with Core Web Vitals and schema fixes',
@@ -3086,8 +3076,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.7,
     reviews: 31,
   },
-  {
-
+  {/* content */}
     id: 'gdpr - cookie - consent - manager - pro',
     name: 'GDPR Cookie Consent Manager Pro',
     tagline: 'Compliant consent banners with IAB TCF and regional policies',
@@ -3134,8 +3123,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.5,
     reviews: 16,
   },
-  {
-
+  {/* content */}
       'Auto-record & transcribe',
     id: 'ai - meeting - notes - summarizer - pro',
     name: 'AI Meeting Notes Summarizer',
@@ -3186,8 +3174,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.6,
     reviews: 52,
   },
-  {
-
+  {/* content */}
     id: 'ai - code - migration - assistant - pro',
     name: 'AI Code Migration Assistant',
     tagline: 'Framework upgrades, typed refactors, and safe PR generation',
@@ -3238,8 +3225,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.5,
     reviews: 10,
   },
-  {
-
+  {/* content */}
       'SLO-triggered updates',
     id: 'incident - statuspage - automation - pro',
     name: 'Incident StatusPage Automation',
@@ -3287,8 +3273,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.6,
     reviews: 12,
   },
-  {
-
+  {/* content */}
     id: 'multi - cloud - backup - automation - pro',
     name: 'Multi - Cloud Backup Automation',
     tagline: 'Policy - based snapshots, immutability, and cross - cloud recovery',
@@ -3335,8 +3320,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.7,
     reviews: 8,
   },
-  {
-
+  {/* content */}
     id: 'customer - feedback - insights - pro',
     name: 'Customer Feedback Insights',
     tagline: 'NLP tagging, themes, and voice - of - customer dashboards',
@@ -3382,8 +3366,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.5,
     reviews: 24,
   },
-  {
-
+  {/* content */}
     id: 'ai - sales - sequences - pro',
     name: 'AI Sales Sequences',
     tagline: 'Persona - aware sequences with channel optimization',
@@ -3429,8 +3412,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.8,
     reviews: 77,
   },
-  {
-
+  {/* content */}
     id: 'data - pipeline - optimizer - pro',
     name: 'Data Pipeline Optimizer',
     tagline: 'Throughput tuning, schema drift alerts, and cost guards',
@@ -3476,8 +3458,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.4,
     reviews: 6,
   },
-  {
-
+  {/* content */}
     id: 'sso - rapid - integration - pro',
     name: 'SSO Rapid Integration',
     tagline: 'One - click SAML / OIDC setup with branded login and SCIM',
@@ -3524,8 +3505,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.7,
     reviews: 19,
   },
-  {
-
+  {/* content */}
       'Real-time anomaly detection',
     id: 'finops - cost - anomaly - guard',
     name: 'FinOps Cost Anomaly Guard',
@@ -3594,8 +3574,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.7,
     reviews: 6,
   },
-  {
-
+  {/* content */}
     id: 'gdpr - dsar - automation - suite',
     name: 'GDPR DSAR Automation Suite',
     tagline: 'Automate data subject access requests with auditability',
@@ -3645,8 +3624,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.8,
     reviews: 5,
   },
-  {
-
+  {/* content */}
     id: 'incident - copilot - pro',
     name: 'Incident Copilot Pro',
     tagline:;
@@ -3695,8 +3673,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.7,
     reviews: 4,
   },
-  {
-
+  {/* content */}
     id: 'ai - sales - prospecting - studio',
     name: 'AI Sales Prospecting Studio',
     tagline: 'Personalized multi - channel outreach with compliance and warm - up',
@@ -3743,8 +3720,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.8,
     reviews: 10,
   },
-  {
-
+  {/* content */}
     id: 'data - contracts - health - monitor',
     name: 'Data Contracts Health Monitor',
     tagline: 'Keep schemas, SLAs, and lineage compliant across teams',
@@ -3792,8 +3768,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.6,
     reviews: 3,
   },
-  {
-
+  {/* content */}
     id: 'ai - powered - email - responder',
     name: 'AI - Powered Email Responder',
     tagline: 'Automate inbox triage and replies with policy guardrails',
@@ -3840,8 +3815,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.7,
     reviews: 3,
   },
-  {
-
+  {/* content */}
     id: 'mobile - first - survey - tool',
     name: 'Mobile - First Survey Tool',
     tagline: 'Responsive surveys with branching logic and real - time analytics',
@@ -3886,8 +3860,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.6,
     reviews: 2,
   },
-  {
-
+  {/* content */}
     id: 'ecommerce - returns - management - saas',
     name: 'E‑commerce Returns Management SaaS',
     tagline: 'Automate RMAs, labels, and refunds with analytics',
@@ -3933,8 +3906,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.7,
     reviews: 2,
   },
-  {
-
+  {/* content */}
       'Faster setup than bespoke Gmail/Outlook add-ins; safer defaults for SMBs.',
     targetAudience: 'Support, sales, operations, founders',
     trialDays: 14,
@@ -3986,8 +3958,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.7,
     reviews: 14,
   },
-  {
-
+  {/* content */}
     id: 'mobile - first - survey - studio',
     name: 'Mobile‑First Survey Studio',
     tagline: 'Conversational surveys that adapt in real - time',
@@ -4033,8 +4004,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.6,
     reviews: 6,
   },
-  {
-
+  {/* content */}
     id: 'affiliate - tracking - hub',
     name: 'Affiliate Tracking Hub',
     tagline: 'Referrals, payouts, and fraud checks for SMBs',
@@ -4079,8 +4049,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.5,
     reviews: 5,
   },
-  {
-
+  {/* content */}
     id: 'podcast - transcription - studio',
     name: 'Podcast Transcription Studio',
     tagline: 'Fast, accurate transcripts with speakers and chapters',
@@ -4127,8 +4096,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.6,
     reviews: 9,
   },
-  {
-
+  {/* content */}
     id: 'ecommerce - returns - portal',
     name: 'E‑commerce Returns Portal',
     tagline: 'Return labels, status tracking, and analytics',
@@ -4175,8 +4143,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.5,
     reviews: 7,
   },
-  {
-
+  {/* content */}
     id: 'ms_p - it - helpdesk - lite',
     name: 'MSP IT Helpdesk Lite',
     tagline: 'Ticketing, knowledge base, and client portal',
@@ -4222,8 +4189,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.5,
     reviews: 8,
   },
-  {
-
+  {/* content */}
     id: 'ai - privacy - compliance - copilot',
     name: 'AI Privacy & Compliance Copilot',
     tagline: 'Automate DPIAs, RoPA, and DSAR workflows with auditable AI',
@@ -4274,8 +4240,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.7,
     reviews: 6,
   },
-  {
-
+  {/* content */}
     id: 'sales - copilot - for - outreach',
     name: 'Sales Copilot for Outreach',
     tagline: 'Sequencing, personalization, and meeting notes—done for you',
@@ -4322,8 +4287,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.6,
     reviews: 12,
   },
-  {
-
+  {/* content */}
       'Cloud config collectors (AWS/GCP/Azure)',
     id: 'security - evidence - automation - lite',
     name: 'Security Evidence Automation Lite',
@@ -4372,8 +4336,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.5,
     reviews: 7,
   },
-  {
-
+  {/* content */}
     id: 'ai - product - research - analyst',
     name: 'AI Product Research Analyst',
     tagline: 'Summarize markets, competitors, and user feedback automatically',
@@ -4418,8 +4381,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.6,
     reviews: 10,
   },
-  {
-
+  {/* content */}
     id: 'marketing - brief - generator - pro',
     name: 'Marketing Brief Generator Pro',
     tagline: 'Campaign briefs from goals, audiences, and assets in minutes',
@@ -4465,8 +4427,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.5,
     reviews: 9,
   },
-  {
-
+  {/* content */}
       'NPS/CSAT and feedback widgets',
     id: 'customer - feedback - hub',
     name: 'Customer Feedback Hub',
@@ -4514,8 +4475,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.6,
     reviews: 8,
   },
-  {
-
+  {/* content */}
     id: 'real - time - feature - flags - lite',
     name: 'Real - Time Feature Flags Lite',
     tagline: 'Simple edge - evaluated flags with audit and SDKs',
@@ -4560,8 +4520,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.5,
     reviews: 5,
   },
-  {
-
+  {/* content */}
     id: 'ai - legal - clause - recommender',
     name: 'AI Legal Clause Recommender',
     tagline: 'Suggest clauses and redlines with risk explanations',
@@ -4607,8 +4566,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.5,
     reviews: 4,
   },
-  {
-
+  {/* content */}
     id: 'ai - incident - analysis - bot',
     name: 'AI Incident Analysis Bot',
     tagline: 'Summarize incidents, find regressions, and propose remediations',
@@ -4658,8 +4616,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.6,
     reviews: 3,
   },
-  {
-
+  {/* content */}
     id: 'ai - data - quality - monitor',
     name: 'AI Data Quality Monitor',
     tagline: 'Detect schema drifts, null spikes, and anomalies continuously',
@@ -4705,8 +4662,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.6,
     reviews: 6,
   },
-  {
-
+  {/* content */}
     id: 'ai - ux - copy - optimizer',
     name: 'AI UX Copy Optimizer',
     tagline: 'Test and optimize product copy for activation and conversion',
@@ -4752,8 +4708,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.5,
     reviews: 5,
   },
-  {
-
+  {/* content */}
     id: 'ai - governance - policy - center',
     name: 'AI Governance Policy Center',
     tagline: 'Register models, risks, prompts, and controls in one place',
@@ -4837,7 +4792,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4.7,
     reviews: 4
   };
-  {
+  {/* content */}
     id: 'agentic-browser-recorder-pro', name: 'Agentic Browser Recorder Pro',
     tagline: 'Record workflows, export resilient agent scripts with retries',
     price: '$89', period: '/month',
@@ -4864,7 +4819,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4.6,
     reviews: 3
   };
-  {
+  {/* content */}
     id: 'sso-scim-accelerator', name: 'SSO + SCIM Accelerator',
     tagline: 'Enterprise SSO and user provisioning templates and adapters', price: '$299',
     period: '/month',
@@ -4943,7 +4898,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     roi: 'Reduce DSAR processing time by 70–90%',
     competitors: ['Transcend, OneTrust, DataGrail'];
   },
-  {
+  {/* content */}
     id: 'agentic-browser-recorder-pro',
     name: 'Agentic Browser Recorder Pro',
     tagline: 'Record workflows, export resilient agent scripts with retries',
@@ -4974,7 +4929,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4.7,
     reviews: 4
   };
-  {
+  {/* content */}
     id: 'ai-sales-prospecting-studio', name: 'AI Sales Prospecting Studio',
     tagline: 'Personalized multi-channel outreach with compliance and warm-up', price: '$99',
     period: '/month',
@@ -5004,7 +4959,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4.8,
     reviews: 10
   };
-  {
+  {/* content */}
     id: 'data-contracts-health-monitor', name: 'Data Contracts Health Monitor',
     tagline: 'Keep schemas, SLAs, and lineage compliant across teams',
     price: '$119', period: '/month',
@@ -5034,7 +4989,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4.6,
     reviews: 3
   };
-  {
+  {/* content */}
     id: 'ai-powered-email-responder', name: 'AI-Powered Email Responder',
     tagline: 'Automate inbox triage and replies with policy guardrails', price: '$39',
     period: '/month',
@@ -5059,7 +5014,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4.7,
     reviews: 3
   };
-  {
+  {/* content */}
     id: 'mobile-first-survey-tool', name: 'Mobile-First Survey Tool',
     tagline: 'Responsive surveys with branching logic and real-time analytics', price: '$25',
     period: '/month',
@@ -5084,7 +5039,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4.6,
     reviews: 2
   };
-  {
+  {/* content */}
     id: 'ecommerce-returns-management-saas', name: 'E‑commerce Returns Management SaaS',
     tagline: 'Automate RMAs, labels, and refunds with analytics',
     price: '$49', period: '/month',
@@ -5108,7 +5063,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4.7,
     reviews: 2
   };
-  {
+  {/* content */}
     id: 'ai-email-responder-pro', name: 'AI Email Responder Pro',
     tagline: 'Categorize and draft replies to routine emails with safety', price: '$39',
     period: '/month',
@@ -5138,7 +5093,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4.7,
     reviews: 14
   };
-  {
+  {/* content */}
     id: 'mobile-first-survey-studio', name: 'Mobile‑First Survey Studio',
     tagline: 'Conversational surveys that adapt in real-time', price: '$29',
     period: '/month',
@@ -5168,7 +5123,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4.6,
     reviews: 6
   };
-  {
+  {/* content */}
     id: 'affiliate-tracking-hub', name: 'Affiliate Tracking Hub',
     tagline: 'Referrals, payouts, and fraud checks for SMBs',
     price: '$59', period: '/month',
@@ -5197,7 +5152,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4.5,
     reviews: 5
   };
-  {
+  {/* content */}
     id: 'podcast-transcription-studio', name: 'Podcast Transcription Studio',
     tagline: 'Fast, accurate transcripts with speakers and chapters',
     price: '$19', period: '/month',
@@ -5227,7 +5182,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4.6,
     reviews: 9
   };
-  {
+  {/* content */}
     id: 'ecommerce-returns-portal', name: 'E‑commerce Returns Portal',
     tagline: 'Return labels, status tracking, and analytics',
     price: '$49', period: '/month',
@@ -5252,7 +5207,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
 
 
   },
-  {
+  {/* content */}
     id: 'agentic-browser-recorder-pro',
     name: 'Agentic Browser Recorder Pro',
 
@@ -5291,7 +5246,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     reviews: 3
 
   },
-  {
+  {/* content */}
     id: 'sso-scim-accelerator',
     name: 'SSO + SCIM Accelerator',
     tagline: 'Enterprise SSO and user provisioning templates and adapters',
@@ -5335,7 +5290,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     reviews: 2
 
   },
-  {
+  {/* content */}
     id: 'api-performance-optimizer-pro',
     name: 'API Performance Optimizer Pro',
     tagline: 'Latency reduction, rate-limit tuning, and load testing as-a-service',
@@ -5379,7 +5334,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     reviews: 9
 
   },
-  {
+  {/* content */}
     id: 'ai-rag-starter-blueprint',
     name: 'AI RAG Starter Blueprint',
     tagline: 'Production-ready retrieval augmented generation stack with evals',
@@ -5420,7 +5375,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     reviews: 7
 
   },
-  {
+  {/* content */}
     id: 'browser-automation-copilot',
     name: 'Browser Automation Copilot',
     tagline: 'Headless browser workflows with resilient selectors and retries',
@@ -5462,7 +5417,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     reviews: 12
 
   },
-  {
+  {/* content */}
     id: 'cloud-cost-anomaly-guard',
     name: 'Cloud Cost Anomaly Guard',
     tagline: 'Proactive anomaly detection and slack alerts for cloud spend',
@@ -5503,7 +5458,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     reviews: 5
 
   },
-  {
+  {/* content */}
     id: 'serverless-batch-orchestrator-pro',
     name: 'Serverless Batch Orchestrator',
     tagline: 'Cron-scale workflows with retries, DLQs, and cost-aware scheduling',
@@ -5546,7 +5501,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     reviews: 14
 
   },
-  {
+  {/* content */}
     id: 'seo-technical-auditor-pro',
     name: 'SEO Technical Auditor Pro',
     tagline: 'Edge-rendered crawler with Core Web Vitals and schema fixes',
@@ -5589,7 +5544,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     reviews: 31
 
   },
-  {
+  {/* content */}
     id: 'gdpr-cookie-consent-manager-pro',
     name: 'GDPR Cookie Consent Manager Pro',
     tagline: 'Compliant consent banners with IAB TCF and regional policies',
@@ -5630,7 +5585,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     reviews: 16
 
   },
-  {
+  {/* content */}
     id: 'ai-meeting-notes-summarizer-pro',
     name: 'AI Meeting Notes Summarizer',
     tagline: 'Auto-recording, diarization, action items, and CRM sync',
@@ -5672,7 +5627,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     reviews: 52
 
   },
-  {
+  {/* content */}
     id: 'ai-code-migration-assistant-pro',
     name: 'AI Code Migration Assistant',
     tagline: 'Framework upgrades, typed refactors, and safe PR generation',
@@ -5717,7 +5672,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     reviews: 10
 
   },
-  {
+  {/* content */}
     id: 'incident-statuspage-automation-pro',
     name: 'Incident StatusPage Automation',
     tagline: 'SLO-aware updates, RCA templates, and subscriber comms',
@@ -5758,7 +5713,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     reviews: 12
 
   },
-  {
+  {/* content */}
     id: 'multi-cloud-backup-automation-pro',
     name: 'Multi-Cloud Backup Automation',
     tagline: 'Policy-based snapshots, immutability, and cross-cloud recovery',
@@ -5799,7 +5754,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     reviews: 8
 
   },
-  {
+  {/* content */}
     id: 'customer-feedback-insights-pro',
     name: 'Customer Feedback Insights',
     tagline: 'NLP tagging, themes, and voice-of-customer dashboards',
@@ -5840,7 +5795,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     reviews: 24
 
   },
-  {
+  {/* content */}
     id: 'ai-sales-sequences-pro',
     name: 'AI Sales Sequences',
     tagline: 'Persona-aware sequences with channel optimization',
@@ -5881,7 +5836,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     reviews: 77
 
   },
-  {
+  {/* content */}
     id: 'data-pipeline-optimizer-pro',
     name: 'Data Pipeline Optimizer',
     tagline: 'Throughput tuning, schema drift alerts, and cost guards',
@@ -5922,7 +5877,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     reviews: 6
 
   },
-  {
+  {/* content */}
     id: 'sso-rapid-integration-pro',
     name: 'SSO Rapid Integration',
     tagline: 'One-click SAML/OIDC setup with branded login and SCIM',
@@ -5964,7 +5919,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
   }
   ,
 
-  {
+  {/* content */}
     id: 'finops-cost-anomaly-guard',
     name: 'FinOps Cost Anomaly Guard',
     tagline: 'Detect, alert, and remediate cloud cost spikes in real-time',
@@ -6015,7 +5970,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     reviews: 6
 
   },
-  {
+  {/* content */}
     id: 'gdpr-dsar-automation-suite',
     name: 'GDPR DSAR Automation Suite',
     tagline: 'Automate data subject access requests with auditability',
@@ -6058,7 +6013,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     reviews: 5
 
   },
-  {
+  {/* content */}
     id: 'incident-copilot-pro',
     name: 'Incident Copilot Pro',
     tagline: 'AI-assisted on-call with runbooks, timelines, and auto-postmortems',
@@ -6101,7 +6056,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     reviews: 4
 
   },
-  {
+  {/* content */}
     id: 'ai-sales-prospecting-studio',
     name: 'AI Sales Prospecting Studio',
     tagline: 'Personalized multi-channel outreach with compliance and warm-up',
@@ -6144,7 +6099,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     reviews: 10
 
   },
-  {
+  {/* content */}
     id: 'data-contracts-health-monitor',
     name: 'Data Contracts Health Monitor',
     tagline: 'Keep schemas, SLAs, and lineage compliant across teams',
@@ -6187,7 +6142,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     reviews: 3
 
   },
-  {
+  {/* content */}
     id: 'ai-powered-email-responder',
     name: 'AI-Powered Email Responder',
     tagline: 'Automate inbox triage and replies with policy guardrails',
@@ -6231,7 +6186,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     reviews: 3
 
   },
-  {
+  {/* content */}
     id: 'mobile-first-survey-tool',
     name: 'Mobile-First Survey Tool',
     tagline: 'Responsive surveys with branching logic and real-time analytics',
@@ -6273,7 +6228,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     reviews: 2
 
   },
-  {
+  {/* content */}
     id: 'ecommerce-returns-management-saas',
     name: 'E‑commerce Returns Management SaaS',
     tagline: 'Automate RMAs, labels, and refunds with analytics',
@@ -6315,7 +6270,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     reviews: 2
 
   },
-  {
+  {/* content */}
     id: 'ai-email-responder-pro',
     name: 'AI Email Responder Pro',
     tagline: 'Categorize and draft replies to routine emails with safety',
@@ -6356,7 +6311,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     reviews: 14
 
   },
-  {
+  {/* content */}
     id: 'mobile-first-survey-studio',
     name: 'Mobile‑First Survey Studio',
     tagline: 'Conversational surveys that adapt in real-time',
@@ -6397,7 +6352,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     reviews: 6
 
   },
-  {
+  {/* content */}
     id: 'affiliate-tracking-hub',
     name: 'Affiliate Tracking Hub',
     tagline: 'Referrals, payouts, and fraud checks for SMBs',
@@ -6438,7 +6393,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     reviews: 5
 
   },
-  {
+  {/* content */}
     id: 'podcast-transcription-studio',
     name: 'Podcast Transcription Studio',
     tagline: 'Fast, accurate transcripts with speakers and chapters',
@@ -6479,7 +6434,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     reviews: 9
 
   },
-  {
+  {/* content */}
     id: 'ecommerce-returns-portal',
     name: 'E‑commerce Returns Portal',
     tagline: 'Return labels, status tracking, and analytics',
@@ -6520,7 +6475,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     reviews: 7
 
   },
-  {
+  {/* content */}
     id: 'msP-it-helpdesk-lite',
     name: 'MSP IT Helpdesk Lite',
     tagline: 'Ticketing, knowledge base, and client portal',
@@ -6561,7 +6516,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     reviews: 8
 
   },
-  {
+  {/* content */}
     id: 'ai-privacy-compliance-copilot',
     name: 'AI Privacy & Compliance Copilot',
     tagline: 'Automate DPIAs, RoPA, and DSAR workflows with auditable AI',
@@ -6605,7 +6560,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     reviews: 6
 
   },
-  {
+  {/* content */}
     id: 'sales-copilot-for-outreach',
     name: 'Sales Copilot for Outreach',
     tagline: 'Sequencing, personalization, and meeting notes—done for you',
@@ -6649,7 +6604,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     reviews: 12
 
   },
-  {
+  {/* content */}
     id: 'security-evidence-automation-lite',
     name: 'Security Evidence Automation Lite',
     tagline: 'SOC2/ISO evidence capture with zero-spreadsheet workflows',
@@ -6693,7 +6648,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     reviews: 7
 
   },
-  {
+  {/* content */}
     id: 'ai-product-research-analyst',
     name: 'AI Product Research Analyst',
     tagline: 'Summarize markets, competitors, and user feedback automatically',
@@ -6735,7 +6690,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     reviews: 10
 
   },
-  {
+  {/* content */}
     id: 'marketing-brief-generator-pro',
     name: 'Marketing Brief Generator Pro',
     tagline: 'Campaign briefs from goals, audiences, and assets in minutes',
@@ -6779,7 +6734,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     reviews: 9
 
   },
-  {
+  {/* content */}
     id: 'customer-feedback-hub',
     name: 'Customer Feedback Hub',
     tagline: 'Collect, tag, and route feedback across channels with AI',
@@ -6822,7 +6777,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     reviews: 8
 
   },
-  {
+  {/* content */}
     id: 'real-time-feature-flags-lite',
     name: 'Real-Time Feature Flags Lite',
     tagline: 'Simple edge-evaluated flags with audit and SDKs',
@@ -6867,7 +6822,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     reviews: 5
 
   },
-  {
+  {/* content */}
     id: 'ai-legal-clause-recommender',
     name: 'AI Legal Clause Recommender',
     tagline: 'Suggest clauses and redlines with risk explanations',
@@ -6911,7 +6866,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     reviews: 4
 
   },
-  {
+  {/* content */}
     id: 'ai-incident-analysis-bot',
     name: 'AI Incident Analysis Bot',
     tagline: 'Summarize incidents, find regressions, and propose remediations',
@@ -6955,7 +6910,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     reviews: 3
 
   },
-  {
+  {/* content */}
     id: 'ai-data-quality-monitor',
     name: 'AI Data Quality Monitor',
     tagline: 'Detect schema drifts, null spikes, and anomalies continuously',
@@ -7002,7 +6957,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     reviews: 6
 
   },
-  {
+  {/* content */}
     id: 'ai-ux-copy-optimizer',
     name: 'AI UX Copy Optimizer',
     tagline: 'Test and optimize product copy for activation and conversion',
@@ -7049,7 +7004,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     reviews: 5
 
   },
-  {
+  {/* content */}
     id: 'ai-governance-policy-center',
     name: 'AI Governance Policy Center',
     tagline: 'Register models, risks, prompts, and controls in one place',
@@ -7092,7 +7047,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     customers: 5,
     reviews: 8
   };
-  {
+  {/* content */}
     id: 'real-time-feature-flags-lite', name: 'Real-Time Feature Flags Lite',
     tagline: 'Simple edge-evaluated flags with audit and SDKs', price: '$59',
     period: '/month',
@@ -7115,7 +7070,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     customers: 10, rating: 4.5,
     reviews: 5
   };
-  {
+  {/* content */}
     id: 'ai-legal-clause-recommender', name: 'AI Legal Clause Recommender',
     tagline: 'Suggest clauses and redlines with risk explanations', price: '$179',
     period: '/month',
@@ -7139,7 +7094,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     customers: 8, rating: 4.5,
     reviews: 4
   };
-  {
+  {/* content */}
     id: 'ai-incident-analysis-bot', name: 'AI Incident Analysis Bot',
     tagline: 'Summarize incidents, find regressions, and propose remediations',
     price: '$129', period: '/month',
@@ -7162,7 +7117,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     customers: 7, rating: 4.6,
     reviews: 3
   };
-  {
+  {/* content */}
     id: 'ai-data-quality-monitor', name: 'AI Data Quality Monitor',
     tagline: 'Detect schema drifts, null spikes, and anomalies continuously',
     price: '$169', period: '/month',
@@ -7186,7 +7141,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4.6,
     reviews: 6
   };
-  {
+  {/* content */}
     id: 'ai-ux-copy-optimizer', name: 'AI UX Copy Optimizer',
     tagline: 'Test and optimize product copy for activation and conversion', price: '$59',
     period: '/month',
@@ -7209,7 +7164,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     customers: 14, rating: 4.5,
     reviews: 5
   };
-  {
+  {/* content */}
     id: 'ai-governance-policy-center', name: 'AI Governance Policy Center',
     tagline: 'Register models, risks, prompts, and controls in one place',
     price: '$249', period: '/month',
@@ -7284,7 +7239,7 @@ reviews: 2
 };
 
 export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
-  {
+  {/* content */}
     id: 'managed-ml-feature-store-starter',
     name: 'Managed ML Feature Store Starter',
     tagline: 'Production-ready feature store with governance and lineage',
@@ -7329,7 +7284,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4.7,
     reviews: 4
   },
-  {
+  {/* content */}
     id: 'agentic-browser-recorder-pro',
     name: 'Agentic Browser Recorder Pro',
     tagline: 'Record workflows; export resilient agent scripts with retries',
@@ -7381,7 +7336,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     reviews: 3,
     reviews: 3
   },
-  {
+  {/* content */}
     id: 'sso-scim-accelerator',
     name: 'SSO + SCIM Accelerator',
     tagline: 'Enterprise SSO and user provisioning templates and adapters',
@@ -7433,7 +7388,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     reviews: 2,
     reviews: 2
   },
-  {
+  {/* content */}
     id: 'api-performance-optimizer-pro',
     name: 'API Performance Optimizer Pro',
     tagline:
@@ -7494,7 +7449,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4.8,
     reviews: 9
   },
-  {
+  {/* content */}
     id: 'ai-rag-starter-blueprint',
     name: 'AI RAG Starter Blueprint',
     tagline: 'Production-ready retrieval augmented generation stack with evals',
@@ -7548,7 +7503,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4.8,
     reviews: 7
   },
-  {
+  {/* content */}
     id: 'browser-automation-copilot',
     name: 'Browser Automation Copilot',
     tagline: 'Headless browser workflows with resilient selectors and retries',
@@ -7605,7 +7560,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4.6,
     reviews: 12
   },
-  {
+  {/* content */}
     id: 'cloud-cost-anomaly-guard',
     name: 'Cloud Cost Anomaly Guard',
     tagline: 'Proactive anomaly detection and slack alerts for cloud spend',
@@ -7655,7 +7610,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     reviews: 5,
     reviews: 5
   },
-  {
+  {/* content */}
     id: 'serverless-batch-orchestrator-pro',
     name: 'Serverless Batch Orchestrator',
     tagline:
@@ -7716,7 +7671,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4.6,
     reviews: 14
   },
-  {
+  {/* content */}
     id: 'seo-technical-auditor-pro',
     name: 'SEO Technical Auditor Pro',
     tagline: 'Edge-rendered crawler with Core Web Vitals and schema fixes',
@@ -7773,7 +7728,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4.7,
     reviews: 31
   },
-  {
+  {/* content */}
     id: 'gdpr-cookie-consent-manager-pro',
     name: 'GDPR Cookie Consent Manager Pro',
     tagline: 'Compliant consent banners with IAB TCF and regional policies',
@@ -7827,7 +7782,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4.5,
     reviews: 16
   },
-  {
+  {/* content */}
     id: 'ai-meeting-notes-summarizer-pro',
     name: 'AI Meeting Notes Summarizer',
     tagline: 'Auto-recording, diarization, action items, and CRM sync',
@@ -7884,7 +7839,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4.6,
     reviews: 52
   },
-  {
+  {/* content */}
     id: 'ai-code-migration-assistant-pro',
     name: 'AI Code Migration Assistant',
     tagline: 'Framework upgrades, typed refactors, and safe PR generation',
@@ -7942,7 +7897,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4.5,
     reviews: 10
   },
-  {
+  {/* content */}
     id: 'incident-statuspage-automation-pro',
     name: 'Incident StatusPage Automation',
     tagline: 'SLO-aware updates, RCA templates, and subscriber comms',
@@ -7996,7 +7951,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4.6,
     reviews: 12
   },
-  {
+  {/* content */}
     id: 'multi-cloud-backup-automation-pro',
     name: 'Multi-Cloud Backup Automation',
     tagline: 'Policy-based snapshots, immutability, and cross-cloud recovery',
@@ -8050,7 +8005,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4.7,
     reviews: 8
   },
-  {
+  {/* content */}
     id: 'customer-feedback-insights-pro',
     name: 'Customer Feedback Insights',
     tagline: 'NLP tagging, themes, and voice-of-customer dashboards',
@@ -8100,7 +8055,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     reviews: 24,
     reviews: 24
   },
-  {
+  {/* content */}
     id: 'ai-sales-sequences-pro',
     name: 'AI Sales Sequences',
     tagline: 'Persona-aware sequences with channel optimization',
@@ -8150,7 +8105,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     reviews: 77,
     reviews: 77
   },
-  {
+  {/* content */}
     id: 'data-pipeline-optimizer-pro',
     name: 'Data Pipeline Optimizer',
     tagline: 'Throughput tuning, schema drift alerts, and cost guards',
@@ -8200,7 +8155,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     reviews: 6,
     reviews: 6
   },
-  {
+  {/* content */}
     id: 'sso-rapid-integration-pro',
     name: 'SSO Rapid Integration',
     tagline: 'One-click SAML/OIDC setup with branded login and SCIM',
@@ -8256,7 +8211,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     reviews: 19
   }
   ,
-  {
+  {/* content */}
     id: 'finops-cost-anomaly-guard',
     name: 'FinOps Cost Anomaly Guard',
     tagline: 'Detect, alert, and remediate cloud cost spikes in real-time',
@@ -8323,7 +8278,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4.7,
     reviews: 6
   },
-  {
+  {/* content */}
     id: 'gdpr-dsar-automation-suite',
     name: 'GDPR DSAR Automation Suite',
     tagline: 'Automate data subject access requests with auditability',
@@ -8380,7 +8335,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4.8,
     reviews: 5
   },
-  {
+  {/* content */}
     id: 'incident-copilot-pro',
     name: 'Incident Copilot Pro',
     tagline:
@@ -8441,7 +8396,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4.7,
     reviews: 4
   },
-  {
+  {/* content */}
     id: 'ai-sales-prospecting-studio',
     name: 'AI Sales Prospecting Studio',
     tagline: 'Personalized multi-channel outreach with compliance and warm-up',
@@ -8494,7 +8449,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     reviews: 10,
     reviews: 10
   },
-  {
+  {/* content */}
     id: 'data-contracts-health-monitor',
     name: 'Data Contracts Health Monitor',
     tagline: 'Keep schemas, SLAs, and lineage compliant across teams',
@@ -8551,7 +8506,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4.6,
     reviews: 3
   },
-  {
+  {/* content */}
     id: 'ai-powered-email-responder',
     name: 'AI-Powered Email Responder',
     tagline: 'Automate inbox triage and replies with policy guardrails',
@@ -8612,7 +8567,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4.7,
     reviews: 3
   },
-  {
+  {/* content */}
     id: 'mobile-first-survey-tool',
     name: 'Mobile-First Survey Tool',
     tagline: 'Responsive surveys with branching logic and real-time analytics',
@@ -8666,7 +8621,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     reviews: 2,
     reviews: 2
   },
-  {
+  {/* content */}
     id: 'ecommerce-returns-management-saas',
     name: 'E‑commerce Returns Management SaaS',
     tagline: 'Automate RMAs, labels, and refunds with analytics',
@@ -8724,7 +8679,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4.7,
     reviews: 2
   },
-  {
+  {/* content */}
     id: 'ai-email-responder-pro',
     name: 'AI Email Responder Pro',
     tagline: 'Categorize and draft replies to routine emails with safety',
@@ -8780,7 +8735,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4.7,
     reviews: 14
   },
-  {
+  {/* content */}
     id: 'mobile-first-survey-studio',
     name: 'Mobile‑First Survey Studio',
     tagline: 'Conversational surveys that adapt in real-time',
@@ -8832,7 +8787,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     reviews: 6,
     reviews: 6
   },
-  {
+  {/* content */}
     id: 'affiliate-tracking-hub',
     name: 'Affiliate Tracking Hub',
     tagline: 'Referrals, payouts, and fraud checks for SMBs',
@@ -8881,7 +8836,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     reviews: 5,
     reviews: 5
   },
-  {
+  {/* content */}
     id: 'podcast-transcription-studio',
     name: 'Podcast Transcription Studio',
     tagline: 'Fast, accurate transcripts with speakers and chapters',
@@ -8937,7 +8892,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4.6,
     reviews: 9
   },
-  {
+  {/* content */}
     id: 'ecommerce-returns-portal',
     name: 'E‑commerce Returns Portal',
     tagline: 'Return labels, status tracking, and analytics',
@@ -8993,7 +8948,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4.5,
     reviews: 7
   },
-  {
+  {/* content */}
     id: 'msP-it-helpdesk-lite',
     name: 'MSP IT Helpdesk Lite',
     tagline: 'Ticketing, knowledge base, and client portal',
@@ -9045,7 +9000,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     reviews: 8,
     reviews: 8
   },
-  {
+  {/* content */}
     id: 'ai-privacy-compliance-copilot',
     name: 'AI Privacy & Compliance Copilot',
     tagline: 'Automate DPIAs, RoPA, and DSAR workflows with auditable AI',
@@ -9110,7 +9065,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4.7,
     reviews: 6
   },
-  {
+  {/* content */}
     id: 'sales-copilot-for-outreach',
     name: 'Sales Copilot for Outreach',
     tagline: 'Sequencing, personalization, and meeting notes—done for you',
@@ -9171,7 +9126,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     rating: 4.6,
     reviews: 12
   },
-  {
+  {/* content */}
     id: 'security-evidence-automation-lite',
     name: 'Security Evidence Automation Lite',
     tagline: 'SOC2/ISO evidence capture with zero-spreadsheet workflows',
@@ -9228,7 +9183,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     reviews: 7,
     reviews: 7
   },
-  {
+  {/* content */}
     id: 'ai-product-research-analyst',
     name: 'AI Product Research Analyst',
     tagline: 'Summarize markets, competitors, and user feedback automatically',
@@ -9282,7 +9237,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     reviews: 10,
     reviews: 10
   },
-  {
+  {/* content */}
     id: 'marketing-brief-generator-pro',
     name: 'Marketing Brief Generator Pro',
     tagline: 'Campaign briefs from goals, audiences, and assets in minutes',
@@ -9339,7 +9294,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     reviews: 9,
     reviews: 9
   },
-  {
+  {/* content */}
     id: 'customer-feedback-hub',
     name: 'Customer Feedback Hub',
     tagline: 'Collect, tag, and route feedback across channels with AI',
@@ -9393,7 +9348,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     reviews: 8,
     reviews: 8
   },
-  {
+  {/* content */}
     id: 'real-time-feature-flags-lite',
     name: 'Real-Time Feature Flags Lite',
     tagline: 'Simple edge-evaluated flags with audit and SDKs',
@@ -9448,7 +9403,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     reviews: 5,
     reviews: 5
   },
-  {
+  {/* content */}
     id: 'ai-legal-clause-recommender',
     name: 'AI Legal Clause Recommender',
     tagline: 'Suggest clauses and redlines with risk explanations',
@@ -9505,7 +9460,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     reviews: 4,
     reviews: 4
   },
-  {
+  {/* content */}
     id: 'ai-incident-analysis-bot',
     name: 'AI Incident Analysis Bot',
     tagline: 'Summarize incidents, find regressions, and propose remediations',
@@ -9566,7 +9521,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     reviews: 3,
     reviews: 3
   },
-  {
+  {/* content */}
     id: 'ai-data-quality-monitor',
     name: 'AI Data Quality Monitor',
     tagline: 'Detect schema drifts, null spikes, and anomalies continuously',
@@ -9624,7 +9579,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     reviews: 6,
     reviews: 6
   },
-  {
+  {/* content */}
     id: 'ai-ux-copy-optimizer',
     name: 'AI UX Copy Optimizer',
     tagline: 'Test and optimize product copy for activation and conversion',
@@ -9682,7 +9637,7 @@ export const newlyAddedServices: EnhancedRealMicroSaasService[] = [
     reviews: 5,
     reviews: 5
   },
-  {
+  {/* content */}
     id: 'ai-governance-policy-center',
     name: 'AI Governance Policy Center',
     tagline: 'Register models, risks, prompts, and controls in one place',

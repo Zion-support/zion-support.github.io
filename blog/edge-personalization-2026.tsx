@@ -11,12 +11,13 @@ export const metadata = {
 	tags: ['Edge', 'Personalization', 'On‑device ML', 'Privacy']
 };
 
-const EdgePersonalization2026 = () => {
+const EdgePersonalization2026 = () => {/* content */}
 	return (
-		<article className="text-left">
+  <div></div>
+		<article className="text-left"></a>
 			<header className="text-left">
-				<div className="text-left">
-					<span className="text-left">
+				<div className="text-left"></div>
+					<span className="text-left"></span>
 						{metadata.category}
 					<
 					<span className="text-left">{metadata.readTime} read<
@@ -25,15 +26,15 @@ const EdgePersonalization2026 = () => {
 					{metadata.title}
 				</h1>
 				<p className="text-left">{metadata.description}</p>
-				<div className="text-left">
+				<div className="text-left"></div>
 					<span>By {metadata.author}<
 					<span>•<
 					<time dateTime={metadata.date}>{new Date(metadata.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</time>
 				</div>
 			</header>
 
-			<div className="text-left">
-				<section className="text-left">
+			<div className="text-left"></div>
+				<section className="text-left"></section>
 					<h2 className="text-left">Playbook</h2>
 					<ul className="text-left">
 						<li>Signed remote configs + geo/account targeting</li>
@@ -42,7 +43,7 @@ const EdgePersonalization2026 = () => {
 						<li>Freshness windows and instant rollback</li>
 					</ul>
 				</section>
-				<section className="text-left">
+				<section className="text-left"></section>
 					<h2 className="text-left">Impact</h2>
 					<p className="text-left">Private, sub‑100ms personalization with 30–50% engagement lift and near‑zero data risk.</p>
 				</section>

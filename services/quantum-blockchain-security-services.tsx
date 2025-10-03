@@ -2,49 +2,55 @@ import React from 'react';
 
 export default function QuantumBlockchainSecurityServices() {
   return (
-    <div className="text-left">
+    <div>/* content */}
+  return (
+    <div>
+      <div></div>
+      <div></div>
+    </div>
+    <div className="text-left"></div>
       <header className="text-left">
-        <div className="text-left">
-          <div className="text-left">
-            <div className="text-left">
-              <span className="text-left">
+        <div className="text-left"></div>
+          <div className="text-left"></div>
+            <div className="text-left"></div>
+              <span className="text-left"></span>
                 🔐 Quantum-Blockchain Security Services
               <
             </div>
             <h1 className="text-left">
               Enterprise Quantum-Resistant Blockchain Security
             </h1>
-            <p className="text-left">
+            <p className="text-left"></p>
               Protect Your Digital Assets Against Current and Future Quantum Computing Threats
             </p>
-            <div className="text-left">
+            <div className="text-left"></div>
               <a 
                 href="/contact"
                 className="text-left"
-              >
+              ></a>
                 Schedule Consultation
               </a>
               <a 
                 href="/case-studies/global-bank-quantum-blockchain-transformation-2025"
                 className="text-left"
-              >
+              ></a>
                 View Case Study →
               </a>
             </div>
-            <div className="text-left">
-              <div className="text-left">
+            <div className="text-left"></div>
+              <div className="text-left"></div>
                 <div className="text-left">99.99%</div>
                 <div className="text-left">Threat Prevention</div>
               </div>
-              <div className="text-left">
+              <div className="text-left"></div>
                 <div className="text-left">$2.8B</div>
                 <div className="text-left">Assets Secured</div>
               </div>
-              <div className="text-left">
+              <div className="text-left"></div>
                 <div className="text-left">&lt;50ms</div>
                 <div className="text-left">Transaction Speed</div>
               </div>
-              <div className="text-left">
+              <div className="text-left"></div>
                 <div className="text-left">1,847%</div>
                 <div className="text-left">3-Year ROI</div>
               </div>
@@ -53,22 +59,22 @@ export default function QuantumBlockchainSecurityServices() {
         </div>
       </header>
 
-      <section className="text-left">
-        <div className="text-left">
-          <div className="text-left">
+      <section className="text-left"></section>
+        <div className="text-left"></div>
+          <div className="text-left"></div>
             <h2 className="text-left">
               Comprehensive Security Solutions
             </h2>
-            <p className="text-left">
+            <p className="text-left"></p>
               End-to-end quantum-resistant blockchain security for enterprise-scale operations
             </p>
           </div>
 
-          <div className="text-left">
-            <div className="text-left">
+          <div className="text-left"></div>
+            <div className="text-left"></div>
               <div className="text-left">🔐</div>
               <h3 className="text-left">Post-Quantum Cryptography</h3>
-              <p className="text-left">
+              <p className="text-left"></p>
                 NIST-approved lattice-based encryption algorithms resistant to quantum computing attacks. 
                 Future-proof security protecting assets for 50+ years.
               </p>
@@ -80,10 +86,10 @@ export default function QuantumBlockchainSecurityServices() {
               </ul>
             </div>
 
-            <div className="text-left">
+            <div className="text-left"></div>
               <div className="text-left">⚡</div>
               <h3 className="text-left">Quantum-Enhanced Blockchain</h3>
-              <p className="text-left">
+              <p className="text-left"></p>
                 Revolutionary consensus mechanisms achieving 100,000+ TPS with mathematical finality. 
                 Quantum entanglement for instant validation.
               </p>
@@ -95,10 +101,10 @@ export default function QuantumBlockchainSecurityServices() {
               </ul>
             </div>
 
-            <div className="text-left">
+            <div className="text-left"></div>
               <div className="text-left">🛡️</div>
               <h3 className="text-left">24/7 Security Operations</h3>
-              <p className="text-left">
+              <p className="text-left"></p>
                 AI-powered threat detection and quantum security operations center providing 
                 continuous monitoring and instant response.
               </p>
@@ -113,13 +119,13 @@ export default function QuantumBlockchainSecurityServices() {
         </div>
       </section>
 
-      <section className="text-left">
-        <div className="text-left">
+      <section className="text-left"></section>
+        <div className="text-left"></div>
           <h2 className="text-left">
             Implementation Packages
           </h2>
-          <div className="text-left">
-            <div className="text-left">
+          <div className="text-left"></div>
+            <div className="text-left"></div>
               <h3 className="text-left">Essential Security</h3>
               <div className="text-left">$450K</div>
               <ul className="text-left">
@@ -143,13 +149,13 @@ export default function QuantumBlockchainSecurityServices() {
               <a 
                 href="/contact?package=essential"
                 className="text-left"
-              >
+              ></a>
                 Get Started
               </a>
             </div>
 
-            <div className="text-left">
-              <div className="text-left">
+            <div className="text-left"></div>
+              <div className="text-left"></div>
                 MOST POPULAR
               </div>
               <h3 className="text-left">Enterprise Security</h3>
@@ -179,12 +185,12 @@ export default function QuantumBlockchainSecurityServices() {
               <a 
                 href="/contact?package=enterprise"
                 className="text-left"
-              >
+              ></a>
                 Schedule Consultation
               </a>
             </div>
 
-            <div className="text-left">
+            <div className="text-left"></div>
               <h3 className="text-left">Global Scale</h3>
               <div className="text-left">Custom</div>
               <ul className="text-left">
@@ -212,7 +218,7 @@ export default function QuantumBlockchainSecurityServices() {
               <a 
                 href="/contact?package=global"
                 className="text-left"
-              >
+              ></a>
                 Contact Sales
               </a>
             </div>
@@ -220,41 +226,41 @@ export default function QuantumBlockchainSecurityServices() {
         </div>
       </section>
 
-      <section className="text-left">
-        <div className="text-left">
-          <div className="text-left">
+      <section className="text-left"></section>
+        <div className="text-left"></div>
+          <div className="text-left"></div>
             <h2 className="text-left">
               Why Choose Zion Tech Group?
             </h2>
-            <p className="text-left">
+            <p className="text-left"></p>
               Industry-leading expertise in quantum-resistant security and blockchain technology
             </p>
-            <div className="text-left">
-              <div className="text-left">
+            <div className="text-left"></div>
+              <div className="text-left"></div>
                 <div className="text-left">🏆</div>
                 <h3 className="text-left">Proven Track Record</h3>
-                <p className="text-left">
+                <p className="text-left"></p>
                   $2.8B+ in secured assets across 50+ enterprise deployments with zero security breaches
                 </p>
               </div>
-              <div className="text-left">
+              <div className="text-left"></div>
                 <div className="text-left">🚀</div>
                 <h3 className="text-left">Rapid Implementation</h3>
-                <p className="text-left">
+                <p className="text-left"></p>
                   6-month average deployment timeline with minimal disruption to operations
                 </p>
               </div>
-              <div className="text-left">
+              <div className="text-left"></div>
                 <div className="text-left">💰</div>
                 <h3 className="text-left">Exceptional ROI</h3>
-                <p className="text-left">
+                <p className="text-left"></p>
                   1,847% average 3-year ROI with 87% reduction in security costs
                 </p>
               </div>
-              <div className="text-left">
+              <div className="text-left"></div>
                 <div className="text-left">🎯</div>
                 <h3 className="text-left">100% Compliance</h3>
-                <p className="text-left">
+                <p className="text-left"></p>
                   NIST, SEC, and international regulatory standards with automated compliance monitoring
                 </p>
               </div>
@@ -262,7 +268,7 @@ export default function QuantumBlockchainSecurityServices() {
             <a 
               href="/contact"
               className="text-left"
-            >
+            ></a>
               Transform Your Security Today →
             </a>
           </div>
@@ -271,3 +277,4 @@ export default function QuantumBlockchainSecurityServices() {
     </div>
   );
 }
+)

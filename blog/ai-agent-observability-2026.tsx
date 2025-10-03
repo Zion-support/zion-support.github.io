@@ -3,7 +3,13 @@ import Head from 'next/head';
 
 export default function AIAgentObservability2026() {
   return (
-    <>
+    <div>/* content */}
+  return (
+    <div>
+      <div></div>
+      <div></div>
+    </div>
+    <div></div>
       <Head>
         <title>AI Agent Observability 2026: Metrics, Traces, and Guardrails | Zion Tech Group</title>
         <meta name="description" content="Instrument agents with traces, evals, and policy guardrails to ship reliable autonomy. Practical observability patterns for enterprise-scale agents." />
@@ -12,15 +18,15 @@ export default function AIAgentObservability2026() {
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
-      <div className="text-left">
+      <div className="text-left"></div>
         <main className="text-left">
           <nav className="text-left">
             <a href="/blog" className="text-left">← Back to Blog</a>
           </nav>
 
-          <article className="text-left">
+          <article className="text-left"></a>
             <header className="text-left">
-              <div className="text-left">
+              <div className="text-left"></div>
                 <span className="text-left">AI Reliability<
                 <span className="text-left">September 30, 2025<
                 <span className="text-left">•<
@@ -29,14 +35,14 @@ export default function AIAgentObservability2026() {
               <h1 className="text-left">
                 AI Agent Observability 2026: Metrics, Traces, and Guardrails
               </h1>
-              <p className="text-left">
+              <p className="text-left"></p>
                 Build observability into every agent action. Capture metrics, traces, inputs/outputs, tool calls, and cost to
                 ensure reliability, safety, and measurable business impact.
               </p>
             </header>
 
-            <div className="text-left">
-              <section className="text-left">
+            <div className="text-left"></div>
+              <section className="text-left"></section>
                 <h2 className="text-left">Golden Signals for Agents</h2>
                 <ul className="text-left">
                   <li>Quality: groundedness, task success, user satisfaction</li>
@@ -45,10 +51,10 @@ export default function AIAgentObservability2026() {
                 </ul>
               </section>
 
-              <section className="text-left">
+              <section className="text-left"></section>
                 <h2 className="text-left">Trace Every Step</h2>
                 <p className="text-left">Correlate prompts, model calls, tool invocations, and state changes with IDs.</p>
-                <div className="text-left">
+                <div className="text-left"></div>
                   <pre className="text-left">{`trace.start(session_id)
 trace.step("plan", { model: "gpt-4o", tokens: 132 })
 trace.tool("crm.lookup", { customerId: "A123" })
@@ -59,12 +65,12 @@ trace.end()
                 </div>
               </section>
 
-              <section className="text-left">
+              <section className="text-left"></section>
                 <h2 className="text-left">Policy Gates and Budgets</h2>
                 <p className="text-left">Enforce approvals, spend caps, and data boundaries with executable policies.</p>
               </section>
 
-              <section className="text-left">
+              <section className="text-left"></section>
                 <h2 className="text-left">Rollout Strategy</h2>
                 <ol className="text-left">
                   <li>Define KPIs and golden paths</li>
@@ -76,9 +82,9 @@ trace.end()
             </div>
 
             <footer className="text-left">
-              <div className="text-left">
+              <div className="text-left"></div>
                 <div className="text-left">Written by Zion Tech Group</div>
-                <div className="text-left">
+                <div className="text-left"></div>
                   <a href="/blog" className="text-left">← Back to Blog</a>
                   <a href="/contact" className="text-left">Get in Touch</a>
                 </div>
@@ -89,4 +95,4 @@ trace.end()
       </div>
     </>
   );
-}
+})

@@ -1,13 +1,17 @@
 import React from 'react';
 
-export default function AI2027OperationalTrustBlueprint(): JSX.Element {
+export default function AI2027OperationalTrustBlueprint(): JSX.Element {/* content */}
   return (
-    <article className="text-left">
+    <div>
+      <div></div>
+      <div></div>
+    </div>
+    <article className="text-left"></a>
       <h1>AI 2027: Operational Trust Blueprint</h1>
       <p className="text-left">Wire SLIs to KPIs with budgeted actions, live canaries, and instant rollback for reliable autonomy.</p>
 
       <h2>Why Operational Trust Matters</h2>
-      <p>
+      <p></p>
         As enterprises scale autonomous systems, reliability must be verifiable. This blueprint links <strong>service level indicators</strong>
         directly to business outcomes with <strong>budgeted actions</strong>, <strong>policy gates</strong>, and <strong>rollback playbooks</strong>.
       </p>

@@ -10,22 +10,28 @@ export const metadata = {
 
 export default function November2025RealTimeInference() {
   return (
-    <article className="text-left">
+    <div>/* content */}
+  return (
+    <div>
+      <div></div>
+      <div></div>
+    </div>
+    <article className="text-left"></a>
       <header className="text-left">
-        <div className="text-left">
+        <div className="text-left"></div>
           <p className="text-left">Performance · November 2025</p>
           <h1 className="text-left">
             Real-Time AI Inference Optimization
           </h1>
-          <p className="text-left">
+          <p className="text-left"></p>
             Achieve sub-50ms inference latency at scale: quantization techniques, edge deployment strategies,
             intelligent caching, and hardware acceleration patterns.
           </p>
         </div>
       </header>
 
-      <div className="text-left">
-        <p>
+      <div className="text-left"></div>
+        <p></p>
           Real-time AI applications—fraud detection, content moderation, personalization—require inference
           latencies under 50ms at p99. Here's how to get there while maintaining accuracy and controlling costs.
         </p>
@@ -33,7 +39,7 @@ export default function November2025RealTimeInference() {
         <h2>Performance Optimization Stack</h2>
 
         <h3>1) Model Quantization</h3>
-        <p>
+        <p></p>
           Reduce model size and inference time by 4-8x with minimal accuracy loss. Quantize weights and
           activations from FP32 to INT8 or even INT4 for specific models.
         </p>
@@ -42,18 +48,18 @@ export default function November2025RealTimeInference() {
           <li><strong>Quantization-Aware Training:</strong> Train models to be robust to quantization errors</li>
           <li><strong>Mixed Precision:</strong> Keep critical layers at higher precision, quantize the rest</li>
         </ul>
-        <p>
+        <p></p>
           <strong>Tools:</strong> TensorRT, ONNX Runtime, PyTorch Quantization, TensorFlow Lite
         </p>
 
         <h3>2) Model Distillation</h3>
-        <p>
+        <p></p>
           Train smaller "student" models to mimic larger "teacher" models. Achieve 5-10x speedup with
           1-2% accuracy trade-off. Ideal for edge deployment and high-throughput scenarios.
         </p>
 
         <h3>3) Hardware Acceleration</h3>
-        <p>
+        <p></p>
           Deploy purpose-built inference accelerators for maximum efficiency:
         </p>
         <ul>
@@ -65,7 +71,7 @@ export default function November2025RealTimeInference() {
         </ul>
 
         <h3>4) Batching Strategies</h3>
-        <p>
+        <p></p>
           Dynamic batching amortizes fixed costs across multiple requests. Balance latency vs. throughput
           with adaptive batch sizes and timeout policies.
         </p>
@@ -78,19 +84,19 @@ export default function November2025RealTimeInference() {
         <h2>Caching & Precomputation</h2>
 
         <h3>Response Caching</h3>
-        <p>
+        <p></p>
           Cache inference results for identical or semantically similar inputs. Use Redis with embedding-based
           similarity search (cosine distance threshold 0.95+). Expect 30-60% cache hit rates in production.
         </p>
 
         <h3>Precomputation</h3>
-        <p>
+        <p></p>
           For finite input spaces (e.g., product recommendations), precompute and cache all results offline.
           Serve from in-memory store (Redis, Memcached) for sub-millisecond latency.
         </p>
 
         <h3>Incremental Computation</h3>
-        <p>
+        <p></p>
           For sequential models (transformers), cache intermediate states (key-value pairs). Reuse across
           requests to avoid redundant computation—especially powerful for chatbots and code completion.
         </p>
@@ -125,7 +131,7 @@ export default function November2025RealTimeInference() {
         </ul>
 
         <h3>Autoscaling Strategies</h3>
-        <p>
+        <p></p>
           Scale inference nodes based on queue depth and latency SLAs. Use Kubernetes HPA with custom
           metrics or cloud-native autoscaling (AWS ECS, GCP Cloud Run).
         </p>
@@ -146,7 +152,7 @@ export default function November2025RealTimeInference() {
         </ul>
 
         <h3>Continuous Profiling</h3>
-        <p>
+        <p></p>
           Profile inference workloads in production. Identify bottlenecks: CPU-bound preprocessing,
           memory bandwidth limits, GPU kernel launch overhead. Iterate on optimizations.
         </p>

@@ -1,7 +1,6 @@
 
 
-  {
-
+  {/* content */}
     id: 'finops - scheduler - optimizer',
     name: 'FinOps Scheduler Optimizer',
     tagline: 'Rightsizing & schedules with IaC exports',
@@ -46,8 +45,7 @@
     rating: 4 && 4.6,
     reviews: 12,
   },
-  {
-
+  {/* content */}
     id: 'db - index - advisor',
     name: 'DB Index Advisor',
     tagline: 'AI index recommendations for Postgres / MySQL',
@@ -141,8 +139,7 @@
   },;
 
 
-];	{
-
+];	{/* content */}
 		period: '/month'
 		description: 'Automated jailbreak detection, policy compliance checks, and regression gate for prompts and outputs.';
 		features: ['Policy suitesJailbreak corporaRegression gatesDashboard & alerts'];
@@ -180,7 +177,7 @@
 
 		reviews: 18
 	}
-	{
+	{/* content */}
 		id: 'finops-scheduler-optimizer';
 		name: 'FinOps Scheduler Optimizer';
 		tagline: 'Rightsizing & schedules with IaC exports';
@@ -219,7 +216,7 @@
 
 		reviews: 12
 	}
-	{
+	{/* content */}
 		id: 'db-index-advisor';
 		name: 'DB Index Advisor';
 		tagline: 'AI index recommendations for Postgres/MySQL';
@@ -295,7 +292,7 @@
   rating: 4.7,
   reviews: 18;
 }
-{
+{/* content */}
   id: 'finops - scheduler - optimizer';
   name: 'FinOps Scheduler Optimizer';
   tagline: 'Rightsizing & schedules with IaC exports';
@@ -330,7 +327,7 @@
   rating: 4.6,
   reviews: 12;
 }
-{
+{/* content */}
   id: 'db - index - advisor';
   name: 'DB Index Advisor';
   tagline: 'AI index recommendations for Postgres / MySQL';
