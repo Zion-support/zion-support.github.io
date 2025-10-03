@@ -25,6 +25,7 @@ class ErrorBoundary extends Component<Props, State> {
   public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     // Log error to console in development
     if (import.meta.env.DEV) {
+      // eslint-disable-next-line no-console
       console.error("ErrorBoundary caught an error: ", error, errorInfo);
     }
 
