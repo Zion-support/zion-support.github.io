@@ -1,57 +1,14 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
+import React from 'react';
 
-interface Props {
-  children: ReactNode;
-  fallback?: ReactNode;
+interface AdvancedErrorBoundaryProps {
+  className?: string;
 }
 
-interface State {
-  hasError: boolean;
-  error?: Error;
-  errorInfo?: ErrorInfo;
+export default function AdvancedErrorBoundary({ className = '' }: AdvancedErrorBoundaryProps) {
+  return (
+    <div className={`bg-blue-100 p-4 rounded-lg ${className}`}>
+      <h3 className="text-lg font-semibold text-blue-800">AdvancedErrorBoundary</h3>
+      <p className="text-blue-600">This component is under development.</p>
+    </div>
+  );
 }
-
-export class AdvancedErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-
-  static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
-  }
-
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    this.setState({ error, errorInfo });
-    
-    // Log error to monitoring service
-    console.error('Error caught by boundary:', error, errorInfo);
-    
-    // Send to error tracking service
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as any).gtag('event', 'exception', {
-        description: error.toString(),
-        fatal: false,
-      });
-    }
-  }
-
-  render() {
-    if (this.state.hasError) {
-      return this.props.fallback || (
-        <div className="error-boundary">
-          <h2>Something went wrong.</h2>
-          <details style={{ whiteSpace: 'pre-wrap' }}>
-            {this.state.error && this.state.error.toString()}
-            <br />
-            {this.state.errorInfo?.componentStack}
-          </details>
-        </div>
-      );
-    }
-
-    return this.props.children;
-  }
-}
-
-export default AdvancedErrorBoundary;

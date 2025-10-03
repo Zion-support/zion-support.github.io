@@ -1,19 +1,14 @@
 import React from 'react';
 
-const ConsensusIntelligenceBreakthroughBanner: React.FC = () => {/* content */}
-  return (
-  <div></div>
-    <div className="text-left"></div>
-      <div className="text-left"></div>
-        <h2 className="text-left">
-          🧠 Consensus Intelligence Breakthrough
-        </h2>
-        <p className="text-left"></p>
-          Revolutionary AI consensus algorithms that enable distributed decision-making 
-          with unprecedented accuracy and efficiency.
-        </p>
-      </div>
-  );
-};
+interface ConsensusIntelligenceBreakthroughBannerProps {
+  className?: string;
+}
 
-export default ConsensusIntelligenceBreakthroughBanner;</div>
+export default function ConsensusIntelligenceBreakthroughBanner({ className = '' }: ConsensusIntelligenceBreakthroughBannerProps) {
+  return (
+    <div className={`bg-blue-100 p-4 rounded-lg ${className}`}>
+      <h3 className="text-lg font-semibold text-blue-800">ConsensusIntelligenceBreakthroughBanner</h3>
+      <p className="text-blue-600">This component is under development.</p>
+    </div>
+  );
+}

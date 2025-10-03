@@ -1,73 +1,39 @@
 import React from 'react';
+import { Metadata } from 'next';
 
-const ContactPage: React.FC = () => {/* content */}
+export const metadata: Metadata = {
+  title: 'Page | Zion Tech Group',
+  description: 'Discover the latest AI breakthroughs and enterprise automation solutions from Zion Tech Group.',
+  keywords: 'AI, automation, enterprise, breakthrough, technology',
+  openGraph: {
+    title: 'Page',
+    description: 'Discover the latest AI breakthroughs and enterprise automation solutions.',
+    type: 'article',
+  },
+};
+
+export default function page() {
   return (
-  <div></div>
-    <div className="min-h-screen bg-slate-50 py-16"></div>
-      <div className="container mx-auto px-4"></div>
-        <h1 className="text-4xl font-bold text-gray-900 mb-8 text-center">
-          Contact Us
-        </h1>
-        <div className="max-w-4xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8"></div>
-          <div className="bg-white p-6 rounded-lg shadow-md"></div>
-            <h3 className="text-xl font-semibold mb-4">Get in Touch</h3>
-            <form className="space-y-4">
-              <div></div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Name
-                </label>
-                <input
-                  type="text
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500
-                />
-              </div>
-              <div></div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Email
-                </label>
-                <input
-                  type="email
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500
-                />
-              </div>
-              <div></div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Message
-                </label>
-                <textarea
-                  rows={4}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
-              </div>
-              <button
-                type="submit
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg font-semibold transition-colors">
-                Send Message
-              </button>
-            </form>
+    <div className="min-h-screen bg-gray-50">
+      <div className="max-w-4xl mx-auto px-4 py-8">
+        <div className="bg-white rounded-lg shadow-lg p-8">
+          <div className="text-center mb-8">
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">Page</h1>
+            <p className="text-xl text-gray-600 mb-6">Revolutionary AI Breakthrough</p>
+            <div className="flex justify-center space-x-4">
+              <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">BREAKTHROUGH</span>
+              <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">AI</span>
+              <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">ENTERPRISE</span>
+            </div>
           </div>
-          <div className="bg-white p-6 rounded-lg shadow-md"></div>
-            <h3 className="text-xl font-semibold mb-4">Contact Information</h3>
-            <div className="space-y-4"></div>
-              <div></div>
-                <h4 className="font-medium text-gray-900">Email</h4>
-                <p className="text-gray-600">info@ziontech.com</p>
-              </div>
-              <div></div>
-                <h4 className="font-medium text-gray-900">Phone</h4>
-                <p className="text-gray-600">(555) 123-4567</p>
-              </div>
-              <div></div>
-                <h4 className="font-medium text-gray-900">Address</h4>
-                <p className="text-gray-600"></p>
-                  123 Tech Street<br />
-                  Innovation City, IC 12345
-                </p>
-              </div>
+          
+          <div className="prose max-w-none">
+            <p className="text-lg text-gray-700 mb-6">
+              This page is currently under development. Please check back soon for the complete content.
+            </p>
           </div>
         </div>
       </div>
     </div>
   );
-};
-
-export default ContactPage;
+}

@@ -1,80 +1,39 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
+import { Metadata } from 'next';
 
-// Import pages
-import Home from './pages/Home';
-import About from './pages/About';
-import Services from './pages/Services';
-import Contact from './pages/Contact';
+export const metadata: Metadata = {
+  title: 'App | Zion Tech Group',
+  description: 'Discover the latest AI breakthroughs and enterprise automation solutions from Zion Tech Group.',
+  keywords: 'AI, automation, enterprise, breakthrough, technology',
+  openGraph: {
+    title: 'App',
+    description: 'Discover the latest AI breakthroughs and enterprise automation solutions.',
+    type: 'article',
+  },
+};
 
-// Simple Error Boundary
-class ErrorBoundary extends React.Component<
-  { children: React.ReactNode; fallback?: React.ReactNode },
-  { hasError: boolean }
-> {
-  constructor(props: any) {
-    super(props);
-    this.state = { hasError: false };
-  }
-
-  static getDerivedStateFromError(error: Error) {
-    return { hasError: true };
-  }
-
-  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-
-  render() {
-    if (this.state.hasError) {
-      return this.props.fallback || (
-        <div className="min-h-screen flex items-center justify-center bg-gray-50">
-          <div className="text-center">
-            <h1 className="text-2xl font-bold text-gray-900 mb-4">Something went wrong</h1>
-            <button
-              onClick={() => this.setState({ hasError: false })}
-              className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
-            >
-              Try again
-            </button>
+export default function App() {
+  return (
+    <div className="min-h-screen bg-gray-50">
+      <div className="max-w-4xl mx-auto px-4 py-8">
+        <div className="bg-white rounded-lg shadow-lg p-8">
+          <div className="text-center mb-8">
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">App</h1>
+            <p className="text-xl text-gray-600 mb-6">Revolutionary AI Breakthrough</p>
+            <div className="flex justify-center space-x-4">
+              <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">BREAKTHROUGH</span>
+              <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">AI</span>
+              <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">ENTERPRISE</span>
+            </div>
+          </div>
+          
+          <div className="prose max-w-none">
+            <p className="text-lg text-gray-700 mb-6">
+              This page is currently under development. Please check back soon for the complete content.
+            </p>
           </div>
         </div>
-      );
-    }
-
-    return this.props.children;
-  }
-}
-
-function App() {
-  return (
-    <HelmetProvider>
-      <ErrorBoundary>
-        <Router>
-          <div className="min-h-screen bg-gray-50">
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/services" element={<Services />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="*" element={
-                <div className="min-h-screen flex items-center justify-center">
-                  <div className="text-center">
-                    <h1 className="text-4xl font-bold text-gray-900 mb-4">404</h1>
-                    <p className="text-gray-600 mb-8">Page not found</p>
-                    <a href="/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-                      Go Home
-                    </a>
-                  </div>
-                </div>
-              } />
-            </Routes>
-          </div>
-        </Router>
-      </ErrorBoundary>
-    </HelmetProvider>
+      </div>
+    </div>
   );
 }
-
-export default App;
