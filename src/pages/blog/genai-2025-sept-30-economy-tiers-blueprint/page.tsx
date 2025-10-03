@@ -1,18 +1,26 @@
-export default function Page() {
+import React from 'react';
+import React from 'react';
+// @ts-nocheck
+
+const Page: () => {
   return (
-    <div className="min-h-screen bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto p-6">
-        <h1 className="text-4xl font-bold mb-6">Page</h1>
-        <p className="text-gray-300 mb-8">
-          Content coming soon...
+        <p>
+          Route traffic by SLA with quality tiers and cache hot paths semantically. Add online eval
+          gates wired to KPIs to prevent regressions. Use budget‑aware routing to keep bills
+          predictable without hurting outcomes.
         </p>
-=======
-        <div className="text-center">
-          <a href="/blog" className="text-cyan-300 underline hover:text-cyan-200">
-            Back to Blog
-          </a>
-        </div>
+          <li>Tiered model routing by latency, cost, and quality budgets</li>
+          <li>Semantic caches with freshness windows and warm pools</li>
+          <li>Eval gates that trigger deterministic rollback</li>
+          <li>Scorecards correlating with business KPIs</li>
+        </ul>
+      </div>
+        <Link to="/blog" className ="text-cyan-300 underline">Back to Blog</Link>",
       </div>
     </div>
   );
-}
+};
+
+export default Page;
+
+;

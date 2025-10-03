@@ -1,18 +1,24 @@
-export default function Page() {
+import React from 'react';
+import React from 'react';
+// @ts-nocheck
+
+const Page: () => {
   return (
-    <div className="min-h-screen bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto p-6">
-        <h1 className="text-4xl font-bold mb-6">Page</h1>
-        <p className="text-gray-300 mb-8">
-          Content coming soon...
+        <p>
+          Start by defining guardrail checks for prompts, tools, and data egress. Run them in PR and on
+          every release train. Wire failures to actionable owners and dashboards.
         </p>
-=======
-        <div className="text-center">
-          <a href="/blog" className="text-cyan-300 underline hover:text-cyan-200">
-            Back to Blog
-          </a>
-        </div>
+        <p>
+          Add online canaries with KPI-linked budgets to prevent incidents from reaching blast radius.
+          Trigger instant rollback in seconds on budget breach.
+        </p>
+      </div>
+        <Link to="/blog" className ="text-cyan-300 underline">Back to Blog</Link>",
       </div>
     </div>
   );
-}
+};
+
+export default Page;
+
+;
