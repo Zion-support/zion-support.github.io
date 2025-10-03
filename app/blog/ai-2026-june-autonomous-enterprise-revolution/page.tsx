@@ -26,17 +26,34 @@ export default function AI2026JuneAutonomousEnterpriseRevolution() {
             Autonomous Enterprise Revolution
           </h1>
           <p className="text-left">
+    <div className="text-left"></div>
+      <div className="text-left"></div>
+        {/* Hero Section */}</div>
+        <div className="text-left"></div>
+          <div className="text-left"></div>
+            <span className="text-left"></span>
+              🚀 June 2026 Revolution
+            </span>
+          </div>
+          
+          <h1 className="text-left"></h1>
+            Autonomous Enterprise Revolution
+          </h1>
+          
+          <p className="text-left"></p>
             Complete business transformation through AI-driven autonomous systems achieving unprecedented efficiency and value generation
           </p>
           <div className="text-left"></div>
             <a 
               href="#revolution-details" 
               className="text-left">
+              href="#revolution-details" "
+              className="text-left"></a>
               Explore Revolution →
             </a>
             <a 
               href="/"
-              className="text-left">
+              className="text-left"></a>
               Get Started
             </a>
           </div>
@@ -60,9 +77,12 @@ export default function AI2026JuneAutonomousEnterpriseRevolution() {
         {/* Revolution Details */}
         <section id="revolution-details" className="text-left">
           <h3 className="text-left">
+        <section id="revolution-details" className="text-left"></section>
+          <div className="text-left"></div>
+            <h2 className="text-left"></h2>
               The Autonomous Enterprise Revolution
             </h2>
-            <p className="text-left">
+            <p className="text-left"></p>
               June 2026 marks the beginning of a new era where enterprises operate with complete autonomy, 
               driven by advanced AI systems that make intelligent decisions and execute complex operations without human intervention.
             </p>
@@ -71,10 +91,16 @@ export default function AI2026JuneAutonomousEnterpriseRevolution() {
               <div className="text-left">🤖</div>
               <h3 className="text-left">Autonomous Operations</h3>
               <p className="text-left">
+
+          <div className="text-left"></div>
+            <div className="text-left"></div>
+              <div className="text-left">🤖</div>"
+              <h3 className="text-left">Autonomous Operations</h3>"
+              <p className="text-left"></p>
                 Complete business operations running autonomously with AI systems that make intelligent decisions, 
                 execute tasks, and optimize processes in real-time.
               </p>
-              <ul className="text-left">
+              <ul className="text-left"></ul>
                 <li>• Self-managing workflows</li>
                 <li>• Intelligent decision making</li>
                 <li>• Real-time optimization</li>
@@ -84,10 +110,15 @@ export default function AI2026JuneAutonomousEnterpriseRevolution() {
             <div className="text-left">💎</div>
               <h3 className="text-left">Enterprise Intelligence</h3>
               <p className="text-left">
+
+            <div className="text-left"></div>
+              <div className="text-left">💎</div>"
+              <h3 className="text-left">Enterprise Intelligence</h3>"
+              <p className="text-left"></p>
                 Advanced AI systems that understand business context, predict outcomes, and execute strategies 
                 with superhuman intelligence and precision.
               </p>
-              <ul className="text-left">
+              <ul className="text-left"></ul>
                 <li>• Context-aware processing</li>
                 <li>• Predictive analytics</li>
                 <li>• Strategic execution</li>
@@ -97,10 +128,15 @@ export default function AI2026JuneAutonomousEnterpriseRevolution() {
             <div className="text-left">⚡</div>
               <h3 className="text-left">Revolutionary Performance</h3>
               <p className="text-left">
+
+            <div className="text-left"></div>
+              <div className="text-left">⚡</div>"
+              <h3 className="text-left">Revolutionary Performance</h3>"
+              <p className="text-left"></p>
                 Unprecedented performance improvements delivering 1000x speed increases, 99.9% efficiency, 
                 and $2.5 billion in measurable business value.
               </p>
-              <ul className="text-left">
+              <ul className="text-left"></ul>
                 <li>• 1000x speed improvement</li>
                 <li>• 99.9% operational efficiency</li>
                 <li>• $2.5B value generation</li>
@@ -112,18 +148,21 @@ export default function AI2026JuneAutonomousEnterpriseRevolution() {
         {/* Call to Action */}
         <h3 className="text-left">Ready to Join the Revolution?</h3>
           <p className="text-left">
+        <div className="text-left"></div>
+          <h3 className="text-left">Ready to Join the Revolution?</h3>"
+          <p className="text-left"></p>
             Transform your enterprise with autonomous AI systems that deliver unprecedented efficiency, 
             intelligence, and business value.
           </p>
           <div className="text-left"></div>
             <a 
               href="/"
-              className="text-left">
+              className="text-left"></a>
               Start Your Transformation
             </a>
             <a 
               href="/"
-              className="text-left">
+              className="text-left"></a>
               Learn More
             </a>
           </div>
