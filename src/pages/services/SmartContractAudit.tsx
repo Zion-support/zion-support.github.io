@@ -1,6 +1,6 @@
-import React from 'react;
-import { Helmet } from 'react-helmet-async;
-import { Globe, Shield, Search, AlertTriangle, CheckCircle, Clock, Users, ArrowRight } from 'lucide-react;
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Globe, Shield, Search, AlertTriangle, CheckCircle, Clock, Users, ArrowRight } from 'lucide-react';
 import Header from '../../components/Header;
 import Footer from '../../components/Footer;
 const SmartContractAudit: React.FC = () => {

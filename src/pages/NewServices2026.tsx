@@ -1,5 +1,5 @@
-import React from 'react;
-import { Helmet } from 'react-helmet-async;
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { 
   Brain, 
   Code, 
@@ -270,7 +270,7 @@ import {
   BlueFootedBooby,
   PeruvianBooby,
   AbbottBooby
-} from 'lucide-react;
+} from 'lucide-react';
 export default function NewServices2026() {
   const title = 'New Services 2026 — Zion Tech Group;
   const description = 'Revolutionary micro SaaS, IT, and AI services for 2026. Cutting-edge solutions with proven ROI and fast implementation.;

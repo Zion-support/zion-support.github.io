@@ -1,5 +1,5 @@
-import React from 'react;
-import { Helmet } from 'react-helmet-async;
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import {
   Award,
   CheckCircle,
@@ -13,7 +13,7 @@ import {
   Globe,
   Code,
   Zap
-} from 'lucide-react;
+} from 'lucide-react';
 const About: React.FC = () => {
   const stats = [
     { number: '10+', label: 'Years Experience', icon: Award },

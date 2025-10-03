@@ -1,7 +1,7 @@
-import React from 'react;
-import { Link } from 'react-router-dom;
-import { Brain, Zap, Shield, Cloud, Database, Users, BarChart3, Cog, Target, Rocket } from 'lucide-react;
-import { Helmet } from 'react-helmet-async;
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Brain, Zap, Shield, Cloud, Database, Users, BarChart3, Cog, Target, Rocket } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 const AISolutions: React.FC = () => {
   const aiSolutions = [
     {

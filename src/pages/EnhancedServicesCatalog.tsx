@@ -1,5 +1,5 @@
-import React from 'react;
-import { Helmet } from 'react-helmet-async;
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { 
   Brain, 
   Code, 
@@ -270,7 +270,7 @@ import {
   BlueFootedBooby,
   PeruvianBooby,
   AbbottBooby
-} from 'lucide-react;
+} from 'lucide-react';
 export default function EnhancedServicesCatalog() {
   const title = 'Enhanced Services Catalog — Zion Tech Group;
   const description = 'Comprehensive catalog of micro SaaS, IT, and AI services with transparent pricing, proven ROI, and fast delivery.;
