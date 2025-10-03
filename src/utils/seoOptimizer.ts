@@ -24,45 +24,45 @@ export const generateMetaTags = (metadata: SEOMetadata): string => {
   const tags: string[] = [];
   
   // Basic meta tags
-  tags.push(`<title>${escapeHtml(metadata.title)`</title>`);
-  tags.push(`<meta name="description" content="${escapeHtml(metadata.description)`" />`);
+  tags.push(`<title>${escapeHtml(metadata.title)}</title>`);
+  tags.push(`<meta name="description" content="${escapeHtml(metadata.description)}" />`);
   
   if (metadata.keywords && metadata.keywords.length > 0) {
-    tags.push(`<meta name="keywords" content="${metadata.keywords.join(', ')`" />`);
-  `
+    tags.push(`<meta name="keywords" content="${metadata.keywords.join(', ')}" />`);
+  }
   
   if (metadata.author) {
-    tags.push(`<meta name="author" content="${escapeHtml(metadata.author)`" />`);
-  `
+    tags.push(`<meta name="author" content="${escapeHtml(metadata.author)}" />`);
+  }
   
   if (metadata.canonicalUrl) {
-    tags.push(`<link rel="canonical" href="${escapeHtml(metadata.canonicalUrl)`/>`);
-  "
+    tags.push(`<link rel="canonical" href="${escapeHtml(metadata.canonicalUrl)}" />`);
+  }
 
   // Open Graph tags
-  tags.push(`<meta property="og:title" content="${escapeHtml(metadata.ogTitle || metadata.title)`" />`);
-  tags.push(`<meta property="og:description" content="${escapeHtml(metadata.ogDescription || metadata.description)`" />`);
-  tags.push(`<meta property="og:type" content="${metadata.ogType || 'website'`" />`);
+  tags.push(`<meta property="og:title" content="${escapeHtml(metadata.ogTitle || metadata.title)}" />`);
+  tags.push(`<meta property="og:description" content="${escapeHtml(metadata.ogDescription || metadata.description)}" />`);
+  tags.push(`<meta property="og:type" content="${metadata.ogType || 'website'}" />`);
   
   if (metadata.ogImage) {
-    tags.push(`<meta property="og:image" content="${escapeHtml(metadata.ogImage)`" />`);
-  `
+    tags.push(`<meta property="og:image" content="${escapeHtml(metadata.ogImage)}" />`);
+  }
   
   if (metadata.canonicalUrl) {
-    tags.push(`<meta property="og:url" content="${escapeHtml(metadata.canonicalUrl)`" />`);
-  `
+    tags.push(`<meta property="og:url" content="${escapeHtml(metadata.canonicalUrl)}" />`);
+  }
 
   // Twitter Card tags
-  tags.push(`<meta name="twitter:card" content="${metadata.twitterCard || 'summary_large_image'`" />`);
-  tags.push(`<meta name="twitter:title" content="${escapeHtml(metadata.twitterTitle || metadata.title)`" />`);
-  tags.push(`<meta name="twitter:description" content="${escapeHtml(metadata.twitterDescription || metadata.description)`" />`);
+  tags.push(`<meta name="twitter:card" content="${metadata.twitterCard || 'summary_large_image'}" />`);
+  tags.push(`<meta name="twitter:title" content="${escapeHtml(metadata.twitterTitle || metadata.title)}" />`);
+  tags.push(`<meta name="twitter:description" content="${escapeHtml(metadata.twitterDescription || metadata.description)}" />`);
   
   if (metadata.twitterImage || metadata.ogImage) {
-    tags.push(`<meta name="twitter:image" content="${escapeHtml(metadata.twitterImage || metadata.ogImage || '')`" />`);
-  };
+    tags.push(`<meta name="twitter:image" content="${escapeHtml(metadata.twitterImage || metadata.ogImage || '')}" />`);
+  }
   
   return tags.join('\n');
-';
+};
 
 /**
  * Generate structured data (JSON-LD)
@@ -72,9 +72,9 @@ export const generateStructuredData = (type: string, data: Record<string, unknow
     '@context': 'https://schema.org',
     '@type': type,
     ...data
-  ` as Record<string, unknown>;
+  } as Record<string, unknown>;
   
-  return `<script type="application/ld+json">${JSON.stringify(structuredData, null, 2)`</script>`;
+  return `<script type="application/ld+json">${JSON.stringify(structuredData, null, 2)}</script>`;
 };
 
 export const generateArticleStructuredData = (article: {
