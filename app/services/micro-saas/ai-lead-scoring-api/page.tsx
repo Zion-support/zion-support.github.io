@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { Link } from 'react-router-dom';
 
 export const metadata = {
@@ -87,7 +87,7 @@ export default function Page() {
   );
 }
 
-import React from 'react';
+// import React from 'react';
 import { Link } from 'react-router-dom';
 
 export default function AILeadScoringAPIPage() {

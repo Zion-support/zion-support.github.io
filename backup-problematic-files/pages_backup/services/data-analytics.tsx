@@ -17,7 +17,7 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-import React from 'react';
+// import React from 'react';
 import Layout from "../../components/Layout";";
 import {motion} from 'framer-motion';
 import Layout from '../../components/Layout';

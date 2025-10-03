@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 
 export const metadata = {
   title: 'Agent Release Guardrails v3 (2026)',

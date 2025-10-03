@@ -2,7 +2,7 @@ import type { NextPage } from \'next.ts\'; import Head from \'next/head.ts\'; im
 }
 
 export default Products};
-import React from 'react';
+// import React from 'react';
 interface ProductsProps {
   // Add props here as needed
 

@@ -25,7 +25,7 @@ export default ReviewCard;
 }</div> </div>) }
 ;
 const ReviewCard: React.FC < Props> = ({ review, on_report }) => {
-  return (import React from 'react';
+  return (// import React from 'react';
 import StarRating from './StarRating';
 import type { PublicReview } from '../../types / reviews';
 import {Star} from 'lucide-react';
@@ -121,7 +121,7 @@ export default ReviewCard;        {review && review.categories?.wouldWorkWithAga
       </div>;
     </div>;
   )}export default ReviewCard;
-> Report abuse </button> </div>)}</div> </div>) }const "ReviewCard": React.FC < Props> = ({ review, on_report }) => {return (import React from 'react';'
+> Report abuse </button> </div>)}</div> </div>) }const "ReviewCard": React.FC < Props> = ({ review, on_report }) => {return (// import React from 'react';'
   )
 };
 export default ReviewCard;

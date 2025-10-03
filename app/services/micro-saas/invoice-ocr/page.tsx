@@ -1,5 +1,5 @@
 "use client"
-import React from 'react';
+// import React from 'react';
 // Metadata handled by React Helmet
 import { DollarSign, FileText, CheckCircle, Shield, BarChart3, Phone, Mail, MapPin } from 'lucide-react';
 
@@ -90,8 +90,8 @@ export default function InvoiceOCRPage() {
   );
 }
 
-import React from 'react';
-import Head from 'next/head';
+// import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { DollarSign, CheckCircle, Shield, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
 

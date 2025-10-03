@@ -1,5 +1,7 @@
-import React from 'react';
-import { Brain, TrendingUp, Shield, Cloud, BarChart3, Database, Users, Target, Zap, Rocket, Globe, Phone, Mail, MapPin, ArrowRight, Server } from 'lucide-react';
+// import React from 'react';
+import Link from 'next/link';
+import type { Metadata } from 'next';
+import { Brain, Shield, Database, Users, Target, Zap, Rocket, Globe, Phone, Mail, MapPin, ArrowRight, Server } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Zion Tech Group - Revolutionary AI Solutions for Enterprise',

@@ -1,5 +1,10 @@
-import React from 'react';
-import { Metadata } from 'next';
+// import React from 'react';
+// Metadata interface for React Helmet
+interface Metadata {
+  title?: string;
+  description?: string;
+  keywords?: string;
+}
 import { Link } from 'react-router-dom';
 import { 
   CheckCircle, 

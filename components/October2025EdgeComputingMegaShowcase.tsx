@@ -1,7 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Cpu, Zap, Shield, DollarSign, TrendingUp, CheckCircle, ArrowRight, Star, Globe } from "lucide-react";
-
+import { Cpu, TrendingUp, CheckCircle, ArrowRight, Star, Globe } from 'lucide-react';
 export default function October2025EdgeComputingMegaShowcase() {
   return (
     <motion.section

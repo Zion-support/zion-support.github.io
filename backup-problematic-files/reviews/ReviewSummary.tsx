@@ -5,7 +5,7 @@
 
 const ReviewSummary: React.FC<Props> = ({ summary }) => {
 
-    <div className='enhanced-card flex items-center justify-between'>import React from 'react';
+    <div className='enhanced-card flex items-center justify-between'>// import React from 'react';
 </div>
 
 

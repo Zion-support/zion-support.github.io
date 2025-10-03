@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import type { NextPage } from 'next';
 import Link from 'next/link';
 import MainLayout from '../../components/layout/MainLayout';

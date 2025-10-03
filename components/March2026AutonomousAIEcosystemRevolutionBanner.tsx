@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { ArrowRight, Brain, Zap, Target, TrendingUp } from 'lucide-react';
 
 const March2026AutonomousAIEcosystemRevolutionBanner: React.FC = () => {

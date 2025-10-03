@@ -1,31 +1,24 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
   ArrowRight, 
-  CheckCircle, 
-  Star, 
   Users, 
-  Zap, 
-  Shield, 
-  Globe, 
-  BarChart3,
-  Brain,
-  Cpu,
-  Cloud,
-  Database,
-  Lock,
-  TrendingUp,
+  Shield,
+  Cloud, 
   Award,
   Target,
-  Rocket,
   Linkedin,
   Twitter,
   Mail,
   Phone,
   MapPin,
-  Calendar,
+  Brain,
+  Cpu,
+  Cloud,
   GraduationCap,
-  Briefcase
+  Briefcase,
+  Lightbulb,
+  Brain,
+  Cpu
 } from 'lucide-react';
 
 export const metadata = {

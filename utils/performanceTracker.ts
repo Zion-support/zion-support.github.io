@@ -50,7 +50,7 @@ export class PerformanceTracker {
         const fidObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           entries.forEach((entry: any) => {
-            this.metrics.fid = entry.processingStart - entry.startTime;
+            this.metrics.fid = entry.startTime - entry.startTime;
           });
         });
         fidObserver.observe({ entryTypes: ['first-input'] });

@@ -17,7 +17,7 @@
     description: 'Professional development and teaching support tools'
   }
 import {GraduationCap,, Users,, BookOpen,, Laptop,, Globe} from 'lucide-react';
-import React from 'react';
+// import React from 'react';
 import Layout from '../../components/Layout';';
 import {GraduationCap,, Users,, BookOpen,, Laptop,, Globe,, CheckCircle,, ArrowRight} from 'lucide-react';
 import {GraduationCap,, Users,, BookOpen,, CheckCircle,, ArrowRight} from 'lucide-react';

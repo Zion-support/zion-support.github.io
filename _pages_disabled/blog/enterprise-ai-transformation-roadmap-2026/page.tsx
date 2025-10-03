@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { Link } from 'react-router-dom';
 import { Sparkles, TrendingUp, Target, Rocket, Shield, BarChart3, CheckCircle, ArrowRight } from 'lucide-react';
 

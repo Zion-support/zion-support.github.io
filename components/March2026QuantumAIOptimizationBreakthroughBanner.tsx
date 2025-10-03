@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { ArrowRight, Zap, Target, TrendingUp, Brain, Atom } from 'lucide-react';
 
 const March2026QuantumAIOptimizationBreakthroughBanner: React.FC = () => {

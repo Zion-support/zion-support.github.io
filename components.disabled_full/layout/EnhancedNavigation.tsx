@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-import { Menu, X, ChevronDown  } from 'lucide-react';
+import { ChevronDown } from 'lucide-react';
 const mainNavLinks = [;
   { href: '/';,}
   label: 'Home' ;},{ href: '/services';,}
@@ -10,8 +10,8 @@ const mainNavLinks = [;
   label: 'Blog' ;},{ href: '/about';,}
   label: 'About' ;},{ href: '/contact';,}
   label: 'Contact' ;}
-import { Menu, X, ChevronDown } from 'lucide-react';
-  { href: '/', label: 'Home' },
+import { ChevronDown } from 'lucide-react';
+{ href: '/', label: 'Home' },
   { href: '/services', label: 'Services' },
   { href: '/products', label: 'Products' },
   { href: '/blog', label: 'Blog' },
@@ -21,7 +21,7 @@ import { Menu, X, ChevronDown } from 'lucide-react';
 const EnhancedNavigation: React.FC = () => {
 
 import { Link } from 'react-router-dom';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { ChevronDown } from 'lucide-react';
 const mainNavLinks = [{ "href": '/', "label": 'Home' },
   { "href": '/services', "label": 'Services' },
   { "href": '/products', "label": 'Products' },

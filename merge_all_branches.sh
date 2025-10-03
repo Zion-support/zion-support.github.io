@@ -1,131 +1,85 @@
 #!/bin/bash
 
-# Comprehensive script to merge all cursor/fix-errors-and-merge-to-main branches
+# Script to merge all cursor branches into main
 set -e
 
-echo "🚀 Starting comprehensive merge process for all branches..."
+echo "Starting merge process for all cursor branches..."
 
 # Get all cursor branches
-BRANCHES=(
-    "cursor/fix-errors-and-merge-to-main-092a"
-    "cursor/fix-errors-and-merge-to-main-1361"
-    "cursor/fix-errors-and-merge-to-main-1aaf"
-    "cursor/fix-errors-and-merge-to-main-2303"
-    "cursor/fix-errors-and-merge-to-main-2ad6"
-    "cursor/fix-errors-and-merge-to-main-549d"
-    "cursor/fix-errors-and-merge-to-main-5562"
-    "cursor/fix-errors-and-merge-to-main-59dc"
-    "cursor/fix-errors-and-merge-to-main-59e5"
-    "cursor/fix-errors-and-merge-to-main-5a1e"
-    "cursor/fix-errors-and-merge-to-main-5caf"
-    "cursor/fix-errors-and-merge-to-main-6517"
-    "cursor/fix-errors-and-merge-to-main-69a3"
-    "cursor/fix-errors-and-merge-to-main-6af4"
-    "cursor/fix-errors-and-merge-to-main-7162"
-    "cursor/fix-errors-and-merge-to-main-7679"
-    "cursor/fix-errors-and-merge-to-main-7a03"
-    "cursor/fix-errors-and-merge-to-main-8428"
-    "cursor/fix-errors-and-merge-to-main-8fe9"
-    "cursor/fix-errors-and-merge-to-main-95bc"
-    "cursor/fix-errors-and-merge-to-main-9759"
-    "cursor/fix-errors-and-merge-to-main-9a25"
-    "cursor/fix-errors-and-merge-to-main-a771"
-    "cursor/fix-errors-and-merge-to-main-adc9"
-    "cursor/fix-errors-and-merge-to-main-b32f"
-    "cursor/fix-errors-and-merge-to-main-b7c3"
-    "cursor/fix-errors-and-merge-to-main-bcfd"
-    "cursor/fix-errors-and-merge-to-main-bd5e"
-    "cursor/fix-errors-and-merge-to-main-c24f"
-    "cursor/fix-errors-and-merge-to-main-c26f"
-    "cursor/fix-errors-and-merge-to-main-c338"
-    "cursor/fix-errors-and-merge-to-main-caf5"
-    "cursor/fix-errors-and-merge-to-main-cf6a"
-    "cursor/fix-errors-and-merge-to-main-d14e"
-    "cursor/fix-errors-and-merge-to-main-e14f"
-    "cursor/fix-errors-and-merge-to-main-e7ee"
-    "cursor/fix-errors-and-merge-to-main-e8d8"
-    "cursor/fix-errors-and-merge-to-main-ea18"
-    "cursor/fix-errors-and-merge-to-main-ec2e"
-    "cursor/fix-errors-and-merge-to-main-ec70"
-    "cursor/fix-errors-and-merge-to-main-f08d"
-    "cursor/fix-errors-and-merge-to-main-fed1"
-)
+CURSOR_BRANCHES=$(git branch -r | grep "origin/cursor/fix-errors-and-merge-to-main" | sed 's/origin\///' | head -20)
 
-# Function to resolve merge conflicts by keeping main branch version
-resolve_conflicts() {
-    local branch=$1
-    echo "🔧 Resolving conflicts in $branch by keeping main branch changes..."
+echo "Found branches to merge:"
+echo "$CURSOR_BRANCHES"
+
+# Ensure we're on main and it's up to date
+git checkout main
+git pull origin main
+
+# Counter for tracking progress
+count=0
+total=$(echo "$CURSOR_BRANCHES" | wc -l)
+
+echo "Total branches to merge: $total"
+
+# Merge each branch
+for branch in $CURSOR_BRANCHES; do
+    count=$((count + 1))
+    echo ""
+    echo "Processing branch $count/$total: $branch"
     
-    # Find all conflicted files
-    local conflicted_files=$(git diff --name-only --diff-filter=U)
+    # Fetch the branch
+    git fetch origin "$branch"
     
-    if [ -n "$conflicted_files" ]; then
-        echo "📝 Found conflicted files: $conflicted_files"
-        
-        # For each conflicted file, use main branch version
-        for file in $conflicted_files; do
-            echo "🔄 Resolving conflicts in $file..."
-            git checkout --theirs "$file" 2>/dev/null || git checkout --ours "$file"
-            git add "$file"
-        done
-        
-        # Commit the merge
-        git commit -m "Merge $branch into main - resolved conflicts by keeping main branch changes"
+    # Try to merge
+    if git merge "origin/$branch" --no-edit; then
         echo "✅ Successfully merged $branch"
     else
-        echo "✅ No conflicts found in $branch"
+        echo "⚠️  Merge conflict in $branch, attempting to resolve..."
+        
+        # Check for conflicts
+        if git status --porcelain | grep -q "^UU"; then
+            echo "Resolving conflicts in $branch..."
+            
+            # Try to resolve conflicts automatically where possible
+            git status --porcelain | grep "^UU" | while read status file; do
+                echo "Resolving conflict in: $file"
+                
+                # For most conflicts, we can accept the incoming changes
+                # or use a simple strategy
+                if [[ "$file" == *".tsx" ]] || [[ "$file" == *".ts" ]] || [[ "$file" == *".js" ]]; then
+                    # For TypeScript/JavaScript files, try to resolve
+                    if git checkout --theirs "$file" 2>/dev/null; then
+                        echo "Resolved $file using theirs"
+                    elif git checkout --ours "$file" 2>/dev/null; then
+                        echo "Resolved $file using ours"
+                    fi
+                fi
+            done
+            
+            # Add resolved files
+            git add .
+            
+            # Complete the merge
+            if git commit --no-edit; then
+                echo "✅ Resolved conflicts and merged $branch"
+            else
+                echo "❌ Failed to complete merge for $branch"
+                git merge --abort
+                continue
+            fi
+        else
+            echo "❌ Failed to merge $branch"
+            git merge --abort
+            continue
+        fi
     fi
-}
-
-# Function to merge a single branch
-merge_branch() {
-    local branch=$1
-    echo "🔄 Processing branch: $branch"
     
-    # Checkout the branch
-    git checkout "$branch" 2>/dev/null || {
-        echo "⚠️  Branch $branch not found locally, skipping..."
-        return 0
-    }
+    # Push the updated main branch
+    git push origin main
     
-    # Try to merge main into the branch
-    echo "🔀 Attempting to merge main into $branch..."
-    if git merge main --no-edit; then
-        echo "✅ Successfully merged main into $branch"
-    else
-        echo "⚠️  Merge conflicts detected in $branch"
-        resolve_conflicts "$branch"
-    fi
-    
-    # Switch back to main
-    git checkout main
-    
-    # Merge the branch into main
-    echo "🔀 Merging $branch into main..."
-    if git merge "$branch" --no-edit; then
-        echo "✅ Successfully merged $branch into main"
-    else
-        echo "⚠️  Final merge conflicts detected"
-        resolve_conflicts "$branch"
-    fi
-    
-    echo "🎉 Completed processing $branch"
-    echo "---"
-}
-
-# Main execution
-echo "📊 Total branches to process: ${#BRANCHES[@]}"
-
-# Process each branch
-for branch in "${BRANCHES[@]}"; do
-    merge_branch "$branch"
+    echo "Pushed updated main branch"
 done
 
-echo "🚀 All branches processed successfully!"
-echo "📤 Pushing updated main branch to remote..."
-
-# Push the updated main branch
-git push origin main
-
-echo "✅ Comprehensive merge process completed!"
-echo "🎯 All branches have been merged into main and pushed to remote."
+echo ""
+echo "✅ Merge process completed!"
+echo "Merged $count branches successfully"

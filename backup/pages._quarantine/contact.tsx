@@ -1,7 +1,7 @@
-import React from 'react';
+// import React from 'react';
 import dynamic from 'next/dynamic';
 import { motion } from 'framer-motion';
-import { Phone, Mail, MapPin, Clock, ArrowRight, Send } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Send } from 'lucide-react';
 const SEO = dynamic(() => import('../src/components/SEO'), { "ssr": false })
 const PageTransition = dynamic(() => import('../src/components/PageTransition'), { "ssr": false })
 }
@@ -115,7 +115,8 @@ const "ContactPage": React.FC = () => {
 import React from 'react'''
 import dynamic from 'next/dynamic'''
 import { motion } from 'framer-motion'''
-import { Phone, Mail, MapPin, Clock, ArrowRight, Send } from 'lucide-react'''
+import { Phone, Mail, MapPin, Clock, Send } from 'lucide-react';
+''
 const SEO = dynamic(() => import('../src/components/SEO'), { "ssr": false })""
 const PageTransition = dynamic(() => import('../src/components/PageTransition'), { "ssr": false })"
 export default function ContactPage() {
@@ -526,7 +527,8 @@ export default function ContactPage() {
 }
 
 export default ContactPage
-import React from 'react' import dynamic from 'next/dynamic' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send } from 'lucide-react' const SEO = dynamic(() => import('../src/components/SEO'),{ ssr: false }) const PageTransition = dynamic(() => import('../src/components/PageTransition'),{ ssr: false })
+import React from 'react' import dynamic from 'next/dynamic' import { motion } from 'framer-motion' import { Phone, Mail, MapPin, Clock, Send } from 'lucide-react';
+const SEO = dynamic(() => import('../src/components/SEO'),{ ssr: false }) const PageTransition = dynamic(() => import('../src/components/PageTransition'),{ ssr: false })
 }
 }
 

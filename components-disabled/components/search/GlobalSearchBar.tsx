@@ -1,4 +1,4 @@
-import React from 'react';'
+// import React from 'react';'
 import { useEffect, useMemo, useRef, useState } from 'react';'
 import { useRouter } from 'next/router';'
 export default function GlobalSearchBar() {;

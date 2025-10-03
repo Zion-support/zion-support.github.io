@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import Head from 'next/head';
 import { Globe, Phone, Mail, MapPin, Check, ArrowRight, Star } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';

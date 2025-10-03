@@ -1,7 +1,11 @@
-import React from 'react';
+// import React from 'react';
 import { Link } from 'react-router-dom';
-import { Metadata } from 'next';
-
+// Metadata interface for React Helmet
+interface Metadata {
+  title?: string;
+  description?: string;
+  keywords?: string;
+}
 export const metadata: Metadata = {
   title: 'AI Blockchain Integration 2025 | Smart Contracts & DeFi | Zion Tech Group',
   description: 'Revolutionary AI-powered blockchain solutions with intelligent smart contracts, DeFi optimization, and 10,000 TPS throughput. Achieve 99.9% transaction success with enterprise blockchain.',

@@ -7,7 +7,7 @@ export default function SecurityPage() {
   );
 }
 
-import React from 'react';
+// import React from 'react';
 // Metadata handled by React Helmet
 
 export const metadata: Metadata = {

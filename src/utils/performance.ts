@@ -1,0 +1,395 @@
+/**
+ * Performance monitoring and optimization utilities for Zion Tech Group
+ */
+
+export interface PerformanceMetrics {
+  loadTime: number;
+  firstContentfulPaint: number;
+  largestContentfulPaint: number;
+  firstInputDelay: number;
+  cumulativeLayoutShift: number;
+  timeToInteractive: number;
+  bundleSize: number;
+  resourceCount: number;
+}
+
+export interface PerformanceConfig {
+  enableMonitoring: boolean;
+  sampleRate: number;
+  reportUrl?: string;
+  thresholds: PerformanceThresholds;
+}
+
+export interface PerformanceThresholds {
+  loadTime: number; // ms
+  firstContentfulPaint: number; // ms
+  largestContentfulPaint: number; // ms
+  firstInputDelay: number; // ms
+  cumulativeLayoutShift: number; // score
+}
+
+export class PerformanceMonitor {
+  private static instance: PerformanceMonitor;
+  private config: PerformanceConfig;
+  private metrics: Partial<PerformanceMetrics> = {};
+  private observers: PerformanceObserver[] = [];
+
+  private constructor(config: PerformanceConfig) {
+    this.config = config;
+    this.initializeMonitoring();
+  }
+
+  static getInstance(config?: PerformanceConfig): PerformanceMonitor {
+    if (!PerformanceMonitor.instance) {
+      PerformanceMonitor.instance = new PerformanceMonitor(
+        config || PerformanceMonitor.getDefaultConfig()
+      );
+    }
+    return PerformanceMonitor.instance;
+  }
+
+  private static getDefaultConfig(): PerformanceConfig {
+    return {
+      enableMonitoring: true,
+      sampleRate: 1.0,
+      thresholds: {
+        loadTime: 3000,
+        firstContentfulPaint: 1800,
+        largestContentfulPaint: 2500,
+        firstInputDelay: 100,
+        cumulativeLayoutShift: 0.1
+      }
+    };
+  }
+
+  private initializeMonitoring(): void {
+    if (!this.config.enableMonitoring || typeof window === 'undefined') {
+      return;
+    }
+
+    // Monitor page load performance
+    window.addEventListener('load', () => {
+      setTimeout(() => this.measurePageLoad(), 1000);
+    });
+
+    // Monitor Core Web Vitals
+    this.observeLCP();
+    this.observeFID();
+    this.observeCLS();
+    this.observeFCP();
+
+    // Monitor resource loading
+    this.observeResources();
+  }
+
+  private measurePageLoad(): void {
+    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    if (navigation) {
+      this.metrics.loadTime = navigation.loadEventEnd - navigation.fetchStart;
+      this.metrics.timeToInteractive = navigation.domInteractive - navigation.fetchStart;
+    }
+
+    // Measure bundle size
+    const scripts = document.querySelectorAll('script[src]');
+    let totalSize = 0;
+    scripts.forEach(script => {
+      const src = (script as HTMLScriptElement).src;
+      if (src.includes('assets/') || src.includes('chunks/')) {
+        // Estimate size based on common patterns
+        totalSize += 50000; // Average chunk size
+      }
+    });
+    this.metrics.bundleSize = totalSize;
+    this.metrics.resourceCount = performance.getEntriesByType('resource').length;
+
+    this.reportMetrics();
+  }
+
+  private observeLCP(): void {
+    if ('PerformanceObserver' in window) {
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        const lastEntry = entries[entries.length - 1];
+        this.metrics.largestContentfulPaint = lastEntry.startTime;
+      });
+      observer.observe({ entryTypes: ['largest-contentful-paint'] });
+      this.observers.push(observer);
+    }
+  }
+
+  private observeFID(): void {
+    if ('PerformanceObserver' in window) {
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach(entry => {
+          this.metrics.firstInputDelay = entry.startTime - entry.startTime;
+        });
+      });
+      observer.observe({ entryTypes: ['first-input'] });
+      this.observers.push(observer);
+    }
+  }
+
+  private observeCLS(): void {
+    if ('PerformanceObserver' in window) {
+      let clsValue = 0;
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach(entry => {
+          if (!(entry as any).hadRecentInput) {
+            clsValue += (entry as any).value;
+          }
+        });
+        this.metrics.cumulativeLayoutShift = clsValue;
+      });
+      observer.observe({ entryTypes: ['layout-shift'] });
+      this.observers.push(observer);
+    }
+  }
+
+  private observeFCP(): void {
+    if ('PerformanceObserver' in window) {
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
+        if (fcpEntry) {
+          this.metrics.firstContentfulPaint = fcpEntry.startTime;
+        }
+      });
+      observer.observe({ entryTypes: ['paint'] });
+      this.observers.push(observer);
+    }
+  }
+
+  private observeResources(): void {
+    if ('PerformanceObserver' in window) {
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach(entry => {
+          // Monitor slow resources
+          if (entry.duration > 1000) {
+            console.warn('Slow resource detected:', {
+              name: entry.name,
+              duration: entry.duration,
+              size: (entry as any).transferSize
+            });
+          }
+        });
+      });
+      observer.observe({ entryTypes: ['resource'] });
+      this.observers.push(observer);
+    }
+  }
+
+  private reportMetrics(): void {
+    if (Math.random() > this.config.sampleRate) {
+      return;
+    }
+
+    const report = {
+      metrics: this.metrics,
+      timestamp: new Date().toISOString(),
+      url: window.location.href,
+      userAgent: navigator.userAgent,
+      thresholds: this.config.thresholds,
+      violations: this.checkThresholds()
+    };
+
+    // In development, log to console
+    if (import.meta.env.DEV) {
+      console.log('Performance Metrics:', report);
+    }
+
+    // In production, send to analytics service
+    if (import.meta.env.PROD && this.config.reportUrl) {
+      this.sendToAnalytics(report);
+    }
+
+    // Store locally for debugging
+    this.storeLocally(report);
+  }
+
+  private checkThresholds(): string[] {
+    const violations: string[] = [];
+    const metrics = this.metrics;
+    const thresholds = this.config.thresholds;
+
+    if (metrics.loadTime && metrics.loadTime > thresholds.loadTime) {
+      violations.push(`Load time ${metrics.loadTime}ms exceeds threshold ${thresholds.loadTime}ms`);
+    }
+
+    if (metrics.firstContentfulPaint && metrics.firstContentfulPaint > thresholds.firstContentfulPaint) {
+      violations.push(`FCP ${metrics.firstContentfulPaint}ms exceeds threshold ${thresholds.firstContentfulPaint}ms`);
+    }
+
+    if (metrics.largestContentfulPaint && metrics.largestContentfulPaint > thresholds.largestContentfulPaint) {
+      violations.push(`LCP ${metrics.largestContentfulPaint}ms exceeds threshold ${thresholds.largestContentfulPaint}ms`);
+    }
+
+    if (metrics.firstInputDelay && metrics.firstInputDelay > thresholds.firstInputDelay) {
+      violations.push(`FID ${metrics.firstInputDelay}ms exceeds threshold ${thresholds.firstInputDelay}ms`);
+    }
+
+    if (metrics.cumulativeLayoutShift && metrics.cumulativeLayoutShift > thresholds.cumulativeLayoutShift) {
+      violations.push(`CLS ${metrics.cumulativeLayoutShift} exceeds threshold ${thresholds.cumulativeLayoutShift}`);
+    }
+
+    return violations;
+  }
+
+  private async sendToAnalytics(report: any): Promise<void> {
+    try {
+      await fetch(this.config.reportUrl!, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(report)
+      });
+    } catch (error) {
+      console.error('Failed to send performance metrics:', error);
+    }
+  }
+
+  private storeLocally(report: any): void {
+    try {
+      const existingReports = JSON.parse(localStorage.getItem('performance-reports') || '[]');
+      existingReports.unshift(report);
+      existingReports.splice(50); // Keep only last 50 reports
+      localStorage.setItem('performance-reports', JSON.stringify(existingReports));
+    } catch (error) {
+      console.error('Failed to store performance metrics locally:', error);
+    }
+  }
+
+  public getMetrics(): Partial<PerformanceMetrics> {
+    return { ...this.metrics };
+  }
+
+  public getPerformanceScore(): number {
+    const metrics = this.metrics;
+    const thresholds = this.config.thresholds;
+    let score = 100;
+
+    // Deduct points for each threshold violation
+    if (metrics.loadTime && metrics.loadTime > thresholds.loadTime) {
+      score -= 20;
+    }
+    if (metrics.firstContentfulPaint && metrics.firstContentfulPaint > thresholds.firstContentfulPaint) {
+      score -= 20;
+    }
+    if (metrics.largestContentfulPaint && metrics.largestContentfulPaint > thresholds.largestContentfulPaint) {
+      score -= 20;
+    }
+    if (metrics.firstInputDelay && metrics.firstInputDelay > thresholds.firstInputDelay) {
+      score -= 20;
+    }
+    if (metrics.cumulativeLayoutShift && metrics.cumulativeLayoutShift > thresholds.cumulativeLayoutShift) {
+      score -= 20;
+    }
+
+    return Math.max(0, score);
+  }
+
+  public destroy(): void {
+    this.observers.forEach(observer => observer.disconnect());
+    this.observers = [];
+  }
+}
+
+/**
+ * Image optimization utilities
+ */
+export class ImageOptimizer {
+  static async optimizeImage(
+    src: string,
+    options: {
+      width?: number;
+      height?: number;
+      quality?: number;
+      format?: 'webp' | 'avif' | 'jpeg' | 'png';
+    } = {}
+  ): Promise<string> {
+    // const { width, height, quality = 80, format = 'webp' } = options;
+
+    // For now, return the original src
+    // In a real implementation, this would use a service like Cloudinary or ImageKit
+    return src;
+  }
+
+  static createResponsiveImage(src: string, alt: string, sizes: string[]): string {
+    const baseSrc = src.replace(/\.[^/.]+$/, '');
+    const extension = src.split('.').pop();
+
+    const srcset = sizes
+      .map(size => `${baseSrc}-${size}w.${extension} ${size}w`)
+      .join(', ');
+
+    return `<img src="${src}" srcset="${srcset}" alt="${alt}" loading="lazy/>`;
+  }
+
+  static preloadCriticalImages(imageUrls: string[]): void {
+    imageUrls.forEach(url => {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.as = 'image';
+      link.href = url;
+      document.head.appendChild(link);
+    });
+  }
+}
+
+/**
+ * Bundle analysis utilities
+ */
+export class BundleAnalyzer {
+  static analyzeBundle(): void {
+    if (import.meta.env.DEV) {
+      console.log('Bundle Analysis:');
+      
+      // Analyze loaded scripts
+      const scripts = document.querySelectorAll('script[src]');
+      console.log(`Scripts loaded: ${scripts.length}`);
+      
+      // Analyze loaded stylesheets
+      const styles = document.querySelectorAll('link[rel="stylesheet"]');
+      console.log(`Stylesheets loaded: ${styles.length}`);
+      
+      // Analyze resource timing
+      const resources = performance.getEntriesByType('resource');
+      const totalSize = resources.reduce((sum, resource) => {
+        return sum + ((resource as any).transferSize || 0);
+      }, 0);
+      
+      console.log(`Total resource size: ${(totalSize / 1024 / 1024).toFixed(2)} MB`);
+      console.log(`Total resources: ${resources.length}`);
+    }
+  }
+
+  static getLargestResources(limit: number = 10): any[] {
+    const resources = performance.getEntriesByType('resource');
+    return resources
+      .filter(resource => (resource as any).transferSize > 0)
+      .sort((a, b) => (b as any).transferSize - (a as any).transferSize)
+      .slice(0, limit)
+      .map(resource => ({
+        name: resource.name,
+        size: (resource as any).transferSize,
+        duration: resource.duration
+      }));
+  }
+}
+
+/**
+ * Initialize performance monitoring
+ */
+export function initializePerformanceMonitoring(config?: PerformanceConfig): PerformanceMonitor {
+  return PerformanceMonitor.getInstance(config);
+}
+
+export default {
+  PerformanceMonitor,
+  ImageOptimizer,
+  BundleAnalyzer,
+  initializePerformanceMonitoring
+};

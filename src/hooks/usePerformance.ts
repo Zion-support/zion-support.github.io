@@ -1,266 +1,125 @@
-import { useEffect, useRef, useCallback, useState } from 'react';';
-/**;
- * Performance monitoring hook for React components;
- */;
-export const usePerformanceMonitor = (componentName: string) => {;
-  const mountTime = useRef<number>(Date.now());
-  const renderCount = useRef<number>(0);
-;
-  useEffect(() => {;
-    mountTime.current = Date.now();
-    renderCount.current = 0;
-;
-    return () => {;
-      const unmountTime = Date.now();
-      const totalTime = unmountTime - mountTime.current;
-;
-      if (import.meta.env.DEV) {;
-        console.log(`[Performance] ${componentName`:`, {;
-          renderCount: renderCount.current,;
-          totalTime: `${totalTime`ms`,;
-          avgRenderTime: `${totalTime / renderCount.current`;
+import { useEffect, useState } from 'react';
+
+interface PerformanceMetrics {
+  loadTime: number;
+  domContentLoaded: number;
+  firstPaint: number;
+  firstContentfulPaint: number;
+  largestContentfulPaint: number;
+  cumulativeLayoutShift: number;
+  firstInputDelay: number;
+  timeToInteractive: number;
+}
+
+export const usePerformance = () => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const collectMetrics = () => {
+      if (typeof window === 'undefined' || !window.performance) {
+        setIsLoading(false);
+        return;
+      }
+
+      const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const paintEntries = window.performance.getEntriesByType('paint');
+
+      const performanceMetrics: PerformanceMetrics = {
+        loadTime: navigation.loadEventEnd - navigation.fetchStart,
+        domContentLoaded: navigation.domContentLoadedEventEnd - navigation.fetchStart,
+        firstPaint: paintEntries.find(entry => entry.name === 'first-paint')?.startTime || 0,
+        firstContentfulPaint: paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
+        largestContentfulPaint: 0,
+        cumulativeLayoutShift: 0,
+        firstInputDelay: 0,
+        timeToInteractive: 0,
+      };
+
+      // Collect Web Vitals if available
+      if ('web-vitals' in window) {
+        import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+          getCLS((metric) => {
+            setMetrics(prev => prev ? { ...prev, cumulativeLayoutShift: metric.value } : null);
+          });
+
+          getFID((metric) => {
+            setMetrics(prev => prev ? { ...prev, firstInputDelay: metric.value } : null);
+          });
+
+          getFCP((metric) => {
+            setMetrics(prev => prev ? { ...prev, firstContentfulPaint: metric.value } : null);
+          });
+
+          getLCP((metric) => {
+            setMetrics(prev => prev ? { ...prev, largestContentfulPaint: metric.value } : null);
+          });
+
+          getTTFB((metric) => {
+            setMetrics(prev => prev ? { ...prev, timeToInteractive: metric.value } : null);
+          });
         });
       }
+
+      setMetrics(performanceMetrics);
+      setIsLoading(false);
     };
-  }, [componentName]);
-;
-  const markRender = useCallback(() => {;
-    renderCount.current += 1;
-  }, []);
-;
-  return { markRender };
-};
-;
-/**;
- * Hook for optimizing expensive calculations with memoization;
- */;
-export const useMemoizedCallback = <T extends (...args: any[]) => any>(;
-  callback: T,;
-  deps: React.DependencyList;
-): T => {;
-  const ref = useRef<T>();
-;
-  useEffect(() => {;
-    ref.current = callback;
-  }, deps);
-;
-  return useCallback(((...args: any[]) => {;
-    return ref.current?.(...args);
-  }) as T, []);
-};
-;
-/**;
- * Hook for debounced values;
- */;
-export const useDebounce = <T>(value: T, delay: number): T => {;
-  const [debouncedValue, setDebouncedValue] = useState<T>(value);
-;
-  useEffect(() => {;
-    const handler = setTimeout(() => {;
-      setDebouncedValue(value);
-    }, delay);
-;
-    return () => {;
-      clearTimeout(handler);
-    };
-  }, [value, delay]);
-;
-  return debouncedValue;
-};
-;
-/**;
- * Hook for throttled values;
- */;
-export const useThrottle = <T>(value: T, limit: number): T => {;
-  const [throttledValue, setThrottledValue] = useState<T>(value);
-  const lastRan = useRef<number>(Date.now());
-;
-  useEffect(() => {;
-    const handler = setTimeout(() => {;
-      if (Date.now() - lastRan.current >= limit) {;
-        setThrottledValue(value);
-        lastRan.current = Date.now();
-      }
-    }, limit - (Date.now() - lastRan.current));
-;
-    return () => {;
-      clearTimeout(handler);
-    };
-  }, [value, limit]);
-;
-  return throttledValue;
-};
-;
-/**;
- * Hook for intersection observer (lazy loading);
- */;
-export const useIntersectionObserver = (;
-  elementRef: React.RefObject<Element>,;
-  options: IntersectionObserverInit = {}
-) => {;
-  const [isIntersecting, setIsIntersecting] = useState(false);
-;
-  useEffect(() => {;
-    const element = elementRef.current;
-    if (!element) return;
-;
-    const observer = new IntersectionObserver(;
-      ([entry]) => {;
-        setIsIntersecting(entry.isIntersecting);
-      ',';
-      {;
-        threshold: 0.1,;
-        rootMargin: '50px',';
-        ...options;
-      }
-    );
-;
-    observer.observe(element);
-;
-    return () => {;
-      observer.unobserve(element);
-    };
-  }, [elementRef, options]);
-;
-  return isIntersecting;
-};
-;
-/**;
- * Hook for managing visibility state;
- */;
-export const useVisibility = () => {;
-  const [isVisible, setIsVisible] = useState(!document.hidden);
-;
-  useEffect(() => {;
-    const handleVisibilityChange = () => {;
-      setIsVisible(!document.hidden);
-    ';';
-;
-    document.addEventListener('visibilitychange', handleVisibilityChange);';
-;
-    return () => {;
-      document.removeEventListener('visibilitychange', handleVisibilityChange);';
-    };
-  }, []);
-;
-  return isVisible;
-';';
-;
-/**;
- * Hook for managing network status;
- */;
-export const useNetworkStatus = () => {;
-  const [isOnline, setIsOnline] = useState(navigator.onLine);
-  const [connectionType, setConnectionType] = useState<string>('unknown');';
-;
-  useEffect(() => {;
-    const handleOnline = () => setIsOnline(true);
-    const handleOffline = () => setIsOnline(false);
-;
-    window.addEventListener('online', handleOnline);';
-    window.addEventListener('offline', handleOffline);';
-;
-    // Check connection type if available;
-    if ('connection' in navigator) {';
-      const connection = (navigator as any).connection;
-      setConnectionType(connection.effectiveType || 'unknown');';
-;
-      const handleConnectionChange = () => {;
-        setConnectionType(connection.effectiveType || 'unknown');';
-      ';';
-;
-      connection.addEventListener('change', handleConnectionChange);';
-;
-      return () => {;
-        window.removeEventListener('online', handleOnline);';
-        window.removeEventListener('offline', handleOffline);';
-        connection.removeEventListener('change', handleConnectionChange);';
-      };
-    };
-;
-    return () => {;
-      window.removeEventListener('online', handleOnline);';
-      window.removeEventListener('offline', handleOffline);';
-    };
-  }, []);
-;
-  return { isOnline, connectionType };
-};
-;
-/**;
- * Hook for managing memory usage (if available);
- */;
-export const useMemoryInfo = () => {;
-  const [memoryInfo, setMemoryInfo] = useState<{;
-    usedJSHeapSize: number;
-    totalJSHeapSize: number;
-    jsHeapSizeLimit: number;
-  ' | null>(null);';
-;
-  useEffect(() => {;
-    if ('memory' in performance) {';
-      const updateMemoryInfo = () => {;
-        const memory = (performance as any).memory;
-        setMemoryInfo({;
-          usedJSHeapSize: memory.usedJSHeapSize,;
-          totalJSHeapSize: memory.totalJSHeapSize,;
-          jsHeapSizeLimit: memory.jsHeapSizeLimit;
-        });
-      };
-;
-      updateMemoryInfo();
-      const interval = setInterval(updateMemoryInfo, 5000);
-;
-      return () => clearInterval(interval);
+
+    // Collect metrics after page load
+    if (document.readyState === 'complete') {
+      collectMetrics();
+    } else {
+      window.addEventListener('load', collectMetrics);
     }
+
+    return () => {
+      window.removeEventListener('load', collectMetrics);
+    };
   }, []);
-;
-  return memoryInfo;
-};
-;
-/**;
- * Hook for optimizing component re-renders;
- */;
-export const useOptimizedCallback = <T extends (...args: any[]) => any>(;
-  callback: T,;
-  deps: React.DependencyList;
-): T => {;
-  const callbackRef = useRef<T>(callback);
-  const depsRef = useRef(deps);
-;
-  // Update callback ref when dependencies change;
-  useEffect(() => {;
-    callbackRef.current = callback;
-    depsRef.current = deps;
-  }, [callback, deps]);
-;
-  return useCallback(((...args: any[]) => {;
-    return callbackRef.current(...args);
-  }) as T, []);
-};
-;
-/**;
- * Hook for managing component lifecycle performance;
- */;
-export const useComponentLifecycle = (componentName: string) => {;
-  const { markRender } = usePerformanceMonitor(componentName);
-  const renderStartTime = useRef<number>(0);
-;
-  useEffect(() => {;
-    renderStartTime.current = performance.now();
-    markRender();
-  `);
-;
-  useEffect(() => {;
-    const renderTime = performance.now() - renderStartTime.current;
-;
-    if (import.meta.env.DEV && renderTime > 16) {;
-      console.warn(`[Performance] ${componentName} render took ${renderTime.toFixed(2)`ms (target: <16ms)`);
+
+  const logMetrics = () => {
+    if (metrics) {
+      console.group('🚀 Performance Metrics');
+      console.log(`Load Time: ${metrics.loadTime.toFixed(2)}ms`);
+      console.log(`DOM Content Loaded: ${metrics.domContentLoaded.toFixed(2)}ms`);
+      console.log(`First Paint: ${metrics.firstPaint.toFixed(2)}ms`);
+      console.log(`First Contentful Paint: ${metrics.firstContentfulPaint.toFixed(2)}ms`);
+      console.log(`Largest Contentful Paint: ${metrics.largestContentfulPaint.toFixed(2)}ms`);
+      console.log(`Cumulative Layout Shift: ${metrics.cumulativeLayoutShift.toFixed(4)}`);
+      console.log(`First Input Delay: ${metrics.firstInputDelay.toFixed(2)}ms`);
+      console.log(`Time to Interactive: ${metrics.timeToInteractive.toFixed(2)}ms`);
+      console.groupEnd();
     }
-  });
-;
-  return {;
-    markRender,;
-    renderStartTime: renderStartTime.current;
+  };
+
+  const getPerformanceScore = () => {
+    if (!metrics) return 0;
+
+    let score = 100;
+    
+    // FCP scoring (0-100)
+    if (metrics.firstContentfulPaint > 3000) score -= 20;
+    else if (metrics.firstContentfulPaint > 1800) score -= 10;
+    
+    // LCP scoring (0-100)
+    if (metrics.largestContentfulPaint > 4000) score -= 25;
+    else if (metrics.largestContentfulPaint > 2500) score -= 15;
+    
+    // CLS scoring (0-100)
+    if (metrics.cumulativeLayoutShift > 0.25) score -= 25;
+    else if (metrics.cumulativeLayoutShift > 0.1) score -= 15;
+    
+    // FID scoring (0-100)
+    if (metrics.firstInputDelay > 300) score -= 20;
+    else if (metrics.firstInputDelay > 100) score -= 10;
+    
+    return Math.max(0, Math.round(score));
+  };
+
+  return {
+    metrics,
+    isLoading,
+    logMetrics,
+    performanceScore: getPerformanceScore(),
   };
 };

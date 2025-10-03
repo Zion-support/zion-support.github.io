@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 
 export const metadata = {
   title: 'Real-Time Fraud Detection Revolution 2025 — 99.97% Accuracy at Sub-Millisecond Speed',

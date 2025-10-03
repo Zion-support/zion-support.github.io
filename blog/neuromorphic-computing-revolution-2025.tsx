@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { ArrowLeft, Calendar, Clock, User, Brain, Zap, TrendingUp } from 'lucide-react';
 
 const NeuromorphicComputingRevolution2025: React.FC = () => {

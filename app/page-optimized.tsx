@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { UnifiedBanner, bannerConfigurations } from './components/UnifiedBannerSystem';
 import { LazyWrapper } from './components/LazyLoader';
 import { SEOOptimizer } from './components/SEOOptimizer';

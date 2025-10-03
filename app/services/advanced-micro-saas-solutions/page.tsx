@@ -1,7 +1,11 @@
-import React from 'react';
+// import React from 'react';
 import { Link } from 'react-router-dom';
-import { Metadata } from 'next';
-
+// Metadata interface for React Helmet
+interface Metadata {
+  title?: string;
+  description?: string;
+  keywords?: string;
+}
 export const metadata: Metadata = {
   title: 'Advanced Micro SaaS Solutions | Zion Tech Group',
   description: 'Cutting-edge micro SaaS platforms for modern businesses. AI-powered tools, automation suites, and specialized business applications.',

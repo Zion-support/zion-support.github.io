@@ -1,4 +1,3 @@
-import React from 'react';
 
 export const metadata = {
   title: 'Terms of Service - Zion Tech Group',

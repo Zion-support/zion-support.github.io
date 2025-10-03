@@ -28,6 +28,6 @@ export default function Page() {
 }
 
 // @ts-nocheck
-import React from 'react';
+// import React from 'react';
 
 

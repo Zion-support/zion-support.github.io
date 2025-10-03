@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { User } from 'lucide-react';
 
 // Common interfaces for better type safety
