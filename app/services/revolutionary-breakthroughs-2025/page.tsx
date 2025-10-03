@@ -29,15 +29,15 @@ export default function RevolutionaryBreakthroughs2025() {
             <div className="text-left">
               <div className="text-left">
                 <Sparkles className="text-left" />
-                <span className="text-left">REVOLUTIONARY BREAKTHROUGHS<"
+                <span className="text-left">REVOLUTIONARY BREAKTHROUGHS</span>
               </div>
               <div className="text-left">
                 <TrendingUp className="text-left" />
-                <span className="text-left">6 BREAKTHROUGH TECHNOLOGIES<"
+                <span className="text-left">6 BREAKTHROUGH TECHNOLOGIES</span>
               </div>
               <div className="text-left">
                 <Star className="text-left" />
-                <span className="text-left">LIMITED EARLY ACCESS<"
+                <span className="text-left">LIMITED EARLY ACCESS</span>
               </div>
 
             <h1 className="text-left">

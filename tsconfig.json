@@ -32,7 +32,22 @@
       "@types/*": ["./src/types/*"]
     }
   },
-  "include": ["src", "app"],
-  "exclude": ["app/blog/**/*"],
+  "include": ["app"],
+  "exclude": [
+    "app/blog/**/*",
+    "app/components/NewContentPromotionalBanner2026.tsx",
+    "app/components/NewestContent2025Banner.tsx",
+    "app/components/UltimateBusinessIntelligence2025Banner.tsx",
+    "app/components/UltimateBusinessIntelligenceShowcase2025.tsx",
+    "app/components/September30NewContent2025Banner.tsx",
+    "app/contact/**/*",
+    "app/enterprise/**/*",
+    "app/guides/**/*",
+    "app/services/**/*",
+    "app/services-advertising/**/*",
+    "app/not-found.tsx",
+    "app/page-minimal.tsx",
+    "app/page-optimized.tsx"
+  ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
