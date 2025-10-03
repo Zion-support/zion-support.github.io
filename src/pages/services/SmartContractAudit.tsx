@@ -6,9 +6,10 @@ import {
   AlertTriangle, 
   CheckCircle, 
   Clock, 
+  Users, 
   Star, 
-  Phone, 
-  ArrowRight 
+  ArrowRight, 
+  Phone 
 } from 'lucide-react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
@@ -43,11 +44,17 @@ const SmartContractAudit: React.FC = () => {
       icon: Clock,
       title: "Fast Turnaround",
       description: "Rapid audit completion with detailed reports delivered within 5-10 business days.",
-      benefit: "5-10 business day delivery"
+      benefit: "5-10 day delivery guarantee"
+    },
+    {
+      icon: Users,
+      title: "Expert Team",
+      description: "Certified blockchain security experts with extensive experience in smart contract auditing.",
+      benefit: "50+ successful audits completed"
     }
   ];
 
-  const pricingPlans = [
+  const pricing = [
     {
       name: "Basic Audit",
       price: "$2,500",
@@ -63,7 +70,7 @@ const SmartContractAudit: React.FC = () => {
         "Standard compliance check",
         "Up to 500 lines of code"
       ],
-      popular: false,
+      popular: false
     },
     {
       name: "Professional Audit",
@@ -82,28 +89,28 @@ const SmartContractAudit: React.FC = () => {
         "Gas optimization analysis",
         "Architecture review"
       ],
-      popular: true,
+      popular: true
     },
     {
       name: "Enterprise Audit",
       price: "$25,000",
       period: "one-time",
-      description: "Complete audit solution for enterprise blockchain projects",
+      description: "Complete security assessment for enterprise-grade blockchain solutions",
       features: [
-        "End-to-end security analysis",
-        "Multi-contract system review",
-        "Formal verification",
-        "Executive summary report",
+        "Comprehensive security analysis",
+        "Advanced penetration testing",
+        "Formal verification methods",
+        "Executive security report",
         "Dedicated security consultant",
         "Unlimited revisions",
         "Full regulatory compliance",
-        "Unlimited lines of code",
+        "Unlimited code lines",
         "Performance optimization",
         "Architecture & design review",
-        "Post-deployment monitoring",
-        "Security training included"
+        "Post-audit support",
+        "Security training session"
       ],
-      popular: false,
+      popular: false
     }
   ];
 
@@ -111,23 +118,26 @@ const SmartContractAudit: React.FC = () => {
     {
       name: "Sarah Chen",
       role: "CTO",
-      company: "DeFi Protocol",
-      content: "Zion's smart contract audit saved us from potential vulnerabilities that could have cost millions. Their expertise is unmatched.",
-      rating: 5
+      company: "DeFi Protocol Inc.",
+      content: "Zion's smart contract audit saved us from a critical vulnerability that could have cost millions. Their thorough analysis and clear recommendations were invaluable.",
+      rating: 5,
+      avatar: "SC"
     },
     {
       name: "Michael Rodriguez",
-      role: "Founder",
-      company: "NFT Marketplace",
-      content: "Professional, thorough, and fast. The audit report was comprehensive and actionable. Highly recommended.",
-      rating: 5
+      role: "Blockchain Architect",
+      company: "Crypto Exchange Pro",
+      content: "Professional, thorough, and incredibly detailed. The audit report was comprehensive and helped us improve our security posture significantly.",
+      rating: 5,
+      avatar: "MR"
     },
     {
       name: "Emily Watson",
-      role: "Head of Security",
-      company: "Enterprise Blockchain",
-      content: "The team's attention to detail and deep understanding of smart contract security impressed us. Excellent service.",
-      rating: 5
+      role: "Founder",
+      company: "NFT Marketplace",
+      content: "Fast turnaround, excellent communication, and detailed findings. Highly recommend their smart contract auditing services.",
+      rating: 5,
+      avatar: "EW"
     }
   ];
 
@@ -135,69 +145,67 @@ const SmartContractAudit: React.FC = () => {
     <>
       <Helmet>
         <title>Smart Contract Audit Services | Zion Tech Group</title>
-        <meta name="description" content="Professional smart contract audit services with 99.8% vulnerability detection rate. Comprehensive security analysis, automated scanning, and compliance verification." />
-        <meta name="keywords" content="smart contract audit, blockchain security, vulnerability assessment, DeFi security, smart contract testing" />
+        <meta name="description" content="Professional smart contract auditing services with comprehensive security analysis, vulnerability scanning, and compliance verification. Trusted by leading blockchain projects." />
+        <meta name="keywords" content="smart contract audit, blockchain security, vulnerability assessment, DeFi audit, compliance verification" />
+        <link rel="canonical" href="https://ziontechgroup.com/services/smart-contract-audit" />
       </Helmet>
       
       <Header />
       
       <main className="min-h-screen bg-white">
         {/* Hero Section */}
-        <section className="py-20 bg-gradient-to-br from-red-900 via-orange-800 to-yellow-900 text-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <h1 className="text-5xl font-bold mb-6">
-                Smart Contract Audit Services
-              </h1>
-              <p className="text-xl text-red-100 max-w-3xl mx-auto mb-8">
-                Secure your blockchain applications with our comprehensive smart contract audit services. 
-                Expert analysis, automated scanning, and detailed reporting to protect your assets.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a 
-                  href="/contact" 
-                  className="bg-white text-red-900 px-8 py-3 rounded-lg font-semibold hover:bg-red-50 transition-colors inline-flex items-center"
-                >
-                  <Phone className="w-5 h-5 mr-2" />
-                  Get Audit Quote
-                </a>
-                <a 
-                  href="/case-studies" 
-                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-red-900 transition-colors inline-flex items-center"
-                >
-                  View Case Studies
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </a>
-              </div>
+        <section className="relative py-20 bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white overflow-hidden">
+          <div className="absolute inset-0 bg-black opacity-20"></div>
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+              Smart Contract Audit Services
+            </h1>
+            <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto mb-8">
+              Comprehensive security analysis and vulnerability assessment for your blockchain projects
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a 
+                href="/contact" 
+                className="bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-300 flex items-center justify-center"
+              >
+                <Phone className="w-5 h-5 mr-2" />
+                Get Free Quote
+              </a>
+              <a 
+                href="/case-studies" 
+                className="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 rounded-lg font-semibold transition-colors duration-300 flex items-center justify-center"
+              >
+                View Case Studies
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </a>
             </div>
           </div>
         </section>
 
         {/* Features Section */}
-        <section className="py-20">
+        <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-gray-900 mb-4">
-                Comprehensive Audit Features
+                Why Choose Our Smart Contract Audits?
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Our multi-layered approach ensures maximum security coverage for your smart contracts
+                Our comprehensive auditing process combines automated tools with expert manual analysis to ensure maximum security for your blockchain projects.
               </p>
             </div>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => {
-                const Icon = feature.icon;
+                const IconComponent = feature.icon;
                 return (
-                  <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
+                  <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow duration-300">
                     <div className="flex items-center mb-4">
-                      <Icon className="w-6 h-6 text-red-600 mr-3" />
-                      <h3 className="text-xl font-semibold text-gray-900">{feature.title}</h3>
+                      <IconComponent className="w-8 h-8 text-blue-600 mr-3" />
+                      <h3 className="text-xl font-bold text-gray-900">{feature.title}</h3>
                     </div>
                     <p className="text-gray-600 mb-4">{feature.description}</p>
-                    <div className="flex items-center text-green-600">
-                      <CheckCircle className="w-4 h-4 mr-1" />
-                      <span className="text-sm font-medium">{feature.benefit}</span>
+                    <div className="bg-green-50 border border-green-200 rounded-lg p-3">
+                      <p className="text-green-800 font-semibold text-sm">{feature.benefit}</p>
                     </div>
                   </div>
                 );
@@ -207,94 +215,93 @@ const SmartContractAudit: React.FC = () => {
         </section>
 
         {/* Pricing Section */}
-        <section id="pricing" className="py-20 bg-gray-50">
+        <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-gray-900 mb-4">
-                Audit Pricing Plans
+                Smart Contract Audit Pricing
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Choose the audit package that fits your project requirements
+                Choose the audit package that best fits your project requirements and budget
               </p>
             </div>
             
-            <div className="grid md:grid-cols-3 gap-8">
-              {pricingPlans.map((plan, index) => (
-                <div key={index} className={`bg-white rounded-2xl shadow-lg p-8 ${plan.popular ? 'ring-2 ring-red-500 relative' : ''}`}>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {pricing.map((plan, planIndex) => (
+                <div key={planIndex} className={`bg-white p-8 rounded-xl shadow-lg border-2 transition-all duration-300 hover:shadow-xl ${
+                  plan.popular ? 'border-blue-500 relative' : 'border-gray-200'
+                }`}>
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-red-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                      <span className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                         Most Popular
                       </span>
                     </div>
                   )}
                   
-                  <div className="text-center mb-8">
+                  <div className="text-center mb-6">
                     <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
-                    <div className="text-4xl font-bold text-red-600 mb-2">{plan.price}</div>
+                    <div className="mb-4">
+                      <span className="text-4xl font-bold text-gray-900">{plan.price}</span>
+                      <span className="text-gray-600 ml-2">/{plan.period}</span>
+                    </div>
                     <p className="text-gray-600">{plan.description}</p>
                   </div>
                   
-                  <ul className="space-y-4 mb-8">
+                  <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm">
+                      <li key={featureIndex} className="flex items-center">
                         <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
-                        <span>{feature}</span>
+                        <span className="text-gray-700">{feature}</span>
                       </li>
                     ))}
                   </ul>
                   
                   <a 
                     href="/contact" 
-                    className="block w-full bg-red-600 text-white text-center py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors"
+                    className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-colors duration-300 ${
+                      plan.popular 
+                        ? 'bg-blue-600 hover:bg-blue-700 text-white' 
+                        : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
+                    }`}
                   >
                     Request Quote
                   </a>
                 </div>
               ))}
             </div>
-            
-            <div className="text-center mt-12">
-              <a 
-                href="/contact" 
-                className="inline-flex items-center bg-gray-900 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors"
-              >
-                Need Custom Solution?
-                <ArrowRight className="w-4 h-4 ml-1" />
-              </a>
-            </div>
           </div>
         </section>
 
         {/* Testimonials Section */}
-        <section className="py-20">
+        <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-gray-900 mb-4">
-                Client Testimonials
+                What Our Clients Say
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                See what our clients say about our smart contract audit services
+                Trusted by leading blockchain projects and DeFi protocols worldwide
               </p>
             </div>
             
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200">
-                  <div className="flex mb-4">
+                  <div className="flex items-center mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                     ))}
-                    {[...Array(5 - testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 text-yellow-400" />
-                    ))}
                   </div>
-                  
-                  <p className="text-gray-600 mb-6 italic">"{testimonial.content}"</p>
-                  
-                  <div>
-                    <div className="font-semibold text-gray-900">{testimonial.name}</div>
-                    <div className="text-sm text-gray-600">{testimonial.role}, {testimonial.company}</div>
+                  <p className="text-gray-700 mb-6 italic">"{testimonial.content}"</p>
+                  <div className="flex items-center">
+                    <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                      {testimonial.avatar}
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-gray-900">{testimonial.name}</h4>
+                      <p className="text-gray-600 text-sm">{testimonial.role}, {testimonial.company}</p>
+                    </div>
                   </div>
                 </div>
               ))}
@@ -309,23 +316,21 @@ const SmartContractAudit: React.FC = () => {
               Ready to Secure Your Smart Contracts?
             </h2>
             <p className="text-xl text-red-100 max-w-3xl mx-auto mb-8">
-              Get started with a professional smart contract audit today. 
-              Protect your blockchain assets with our expert security analysis.
+              Get a comprehensive security audit for your blockchain project. Contact us today for a free consultation.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="/contact" 
-                className="bg-white text-red-900 px-8 py-3 rounded-lg font-semibold hover:bg-red-50 transition-colors inline-flex items-center"
+                className="bg-white text-red-900 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors duration-300 flex items-center justify-center"
               >
                 <Phone className="w-5 h-5 mr-2" />
-                Start Your Audit
+                Contact Us Now
               </a>
               <a 
                 href="/case-studies" 
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-red-900 transition-colors inline-flex items-center"
+                className="border-2 border-white text-white hover:bg-white hover:text-red-900 px-8 py-4 rounded-lg font-semibold transition-colors duration-300 flex items-center justify-center"
               >
-                View Success Stories
+                View Case Studies
                 <ArrowRight className="w-5 h-5 ml-2" />
               </a>
             </div>
