@@ -154,7 +154,7 @@ export const mockLocation = (url: string): void => {
     assign: jest.fn(),
     replace: jest.fn(),
     reload: jest.fn(),
-  });
+  }) as any;
 };
 
 /**
@@ -274,10 +274,9 @@ export const advanceTimersByTime = (msToRun: number): void => {
  * Wait for all async operations to complete
  */
 export const waitForAsyncOperations = async (timeout = 5000): Promise<void> => {
-  await waitFor(() => {
-    // Check if there are any pending promises
-    return Promise.resolve().then(() => true);
-  }, timeout);
+  await new Promise<void>((resolve) => {
+    setTimeout(resolve, timeout);
+  });
 };
 
 /**
