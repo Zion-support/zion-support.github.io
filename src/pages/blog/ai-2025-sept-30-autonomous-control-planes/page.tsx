@@ -2,11 +2,7 @@ import React from "react";
 
 export default function AIAutonomousControlPlanes2025(): React.JSX.Element {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">",
-=======
     <div className= "min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">",
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
       <Helmet >
         <title >AI 2025: Autonomous Control Planes — Budgets, Gates, Rollback</title>,,
         <meta name: "description",;,"
@@ -15,22 +11,6 @@ export default function AIAutonomousControlPlanes2025(): React.JSX.Element {
         />
       </Helmet>
 
-<<<<<<< HEAD
-      <div className="container mx-auto px-6 py-16"
-        <h1 className="text-4xl md: text-5xl font-bold mb-4">",;,"
-  href="https: //ziontechgroup.com/blog/ai-2025-sept-30-autonomous-control-planes",
-        />
-      </Helmet>
-
-      <div className="container mx-auto px-6 py-16">",
-        <h1 className="text-4xl md: text-5xl font-bold mb-4">",;,"
-  AI 2025: Autonomous Control Planes,,
-        </h1>
-        <p className="text-zion-slate-light mb-8">",;,"
-  Budgets, policy gates, and instant rollback for safe, scalable autonomy.
-        </p>
-        <div className="prose prose-invert max-w-3xl">",
-=======
       <div className= "container mx-auto px-6 py-16">
         <h1 className= "text-4xl md: text-5xl font-bold mb-4">"
   href="https: //ziontechgroup.com/blog/ai-2025-sept-30-autonomous-control-planes",
@@ -45,7 +25,6 @@ export default function AIAutonomousControlPlanes2025(): React.JSX.Element {
   Budgets, policy gates, and instant rollback for safe, scalable autonomy.
         </p>
         <div className= "prose prose-invert max-w-3xl">",
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
           <p >
             This guide shows how to operate AI platforms with autonomous control planes that
             keep teams fast and incidents contained. Wire scorecards to KPIs, enforce

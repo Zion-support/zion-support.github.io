@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-// @ts-nocheck
-=======
 export default function ContentHubPage() {
   return (
     <div className="max-w-6xl mx-auto px-6 py-12">
@@ -10,7 +7,6 @@ export default function ContentHubPage() {
   );
 }
 
->>>>>>> b0266c0c1be3ec9050e7ba803edc6a65b0904e57
 import React from 'react';
 import Link from 'next/link';
 
@@ -27,17 +23,6 @@ export default function ContentHub() {
   ];
 
   return (
-<<<<<<< HEAD
-    <div className="max-w-6xl mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-6">Revolutionary Content Hub</h1>
-      <ul className="list-disc pl-6 space-y-2">
-        {featured.map(item => (
-          <li key={item.url}>
-            <a href={item.url} className="text-blue-600 underline">{item.title}</a>
-          </li>
-        ))}
-      </ul>
-=======
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white py-20">
@@ -247,7 +232,6 @@ export default function ContentHub() {
           </div>
         </div>
       </div>
->>>>>>> b0266c0c1be3ec9050e7ba803edc6a65b0904e57
     </div>
   );
 }

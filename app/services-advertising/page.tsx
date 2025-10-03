@@ -1,8 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import ServicesAdvertisingPromo from '../../components/ServicesAdvertisingPromo';
-import AIAdvertisingBanner from '../../components/AIAdvertisingBanner';
-=======
 import Link from 'next/link';
 import { Metadata } from 'next';
 
@@ -11,7 +7,6 @@ export const metadata: Metadata = {
   description: 'Comprehensive overview of all Zion Tech Group services with competitive pricing, market comparisons, and ROI benefits. Contact us for custom quotes.',
   keywords: 'AI services pricing, micro SaaS pricing, IT services cost, technology consulting rates, enterprise solutions pricing',
 };
->>>>>>> b0266c0c1be3ec9050e7ba803edc6a65b0904e57
 
 export default function ServicesAdvertisingPage() {
   return (
@@ -82,8 +77,6 @@ export default function ServicesAdvertisingPage() {
               <a href="/terms" className="hover:text-purple-400 transition-colors">Terms of Service</a>
               <a href="/contact" className="hover:text-purple-400 transition-colors">Contact Us</a>
             </div>
-<<<<<<< HEAD
-=======
             <div>
               <h4 className="text-lg font-semibold mb-4">Services</h4>
               <div className="space-y-2">
@@ -114,7 +107,6 @@ export default function ServicesAdvertisingPage() {
           <div className="border-t border-gray-700 mt-8 pt-4 text-center text-gray-400">
             © {new Date().getFullYear()} Zion Tech Group. All rights reserved. | 
             <Link href="https://ziontechgroup.com" className="hover:text-white ml-1">ziontechgroup.com</Link>
->>>>>>> b0266c0c1be3ec9050e7ba803edc6a65b0904e57
           </div>
         </div>
       </footer>
