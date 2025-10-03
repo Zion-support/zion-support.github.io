@@ -3,7 +3,7 @@
  * Comprehensive error handling with performance monitoring and user feedback
  */
 
-import React, { Component, ErrorInfo, ReactNode } from 'react';
+import { Component, ErrorInfo, ReactNode } from 'react';
 import { securityMonitoring } from '../utils/securityEnhancements';
 import { analyticsUtils } from '../utils/seoOptimizations';
 
