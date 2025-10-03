@@ -14,8 +14,8 @@ export const metadata = {
 
 export default function AIMegaTrends20252026() {
   return (
-    <div className="text-left"></div>
-      <div className="text-left"></div>
+    <div className="text-left">
+      <div className="text-left">
         <h1 className="text-left">AI 2025-2026 Mega Trends Breakthrough</h1>
         <p className="text-left">Revolutionary Enterprise Transformation Guide</p>
         <div className="text-left"></div>
