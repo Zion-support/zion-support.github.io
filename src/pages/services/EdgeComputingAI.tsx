@@ -337,30 +337,30 @@ const EdgeComputingAI: React.FC = () => {
 
       <Header />
       
-      <main className="min-h-screen bg-white">",
+      <main className="min-h-screen bg-white",
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-teal-900 via-cyan-800 to-blue-900 text-white py-20"
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8",
             <div className="text-center"
-              <h1 className="text-5xl md: text-7xl font-bold mb-6">",
+              <h1 className="text-5xl md: text-7xl font-bold mb-6",
   Edge Computing <span className="bg-gradient-to-r from-teal-400 to-blue-400 bg-clip-text text-transparent">AI</span>"
               </h1>
-              <p className="text-xl md: text-2xl text-teal-100 max-w-4xl mx-auto mb-8">",
+              <p className="text-xl md: text-2xl text-teal-100 max-w-4xl mx-auto mb-8",
   Deploy AI at the edge for real-time processing with sub-10ms response times. 
                 Transform your IoT, industrial, and smart city applications with distributed intelligence.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">",
-        <section className="bg-gradient-to-br from-teal-900 via-cyan-800 to-blue-900 text-white py-20">",
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
-            <div className="text-center">",
-              <h1 className="text-5xl md: text-7xl font-bold mb-6">",
+              <div className="flex flex-col sm:flex-row gap-4 justify-center",
+        <section className="bg-gradient-to-br from-teal-900 via-cyan-800 to-blue-900 text-white py-20",
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8",
+            <div className="text-center",
+              <h1 className="text-5xl md: text-7xl font-bold mb-6",
   Edge Computing <span className="bg-gradient-to-r from-teal-400 to-blue-400 bg-clip-text text-transparent">AI</span>",
               </h1>
-              <p className="text-xl md: text-2xl text-teal-100 max-w-4xl mx-auto mb-8">",
+              <p className="text-xl md: text-2xl text-teal-100 max-w-4xl mx-auto mb-8",
   Deploy AI at the edge for real-time processing with sub-10ms response times. 
                 Transform your IoT, industrial, and smart city applications with distributed intelligence.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">",
+              <div className="flex flex-col sm:flex-row gap-4 justify-center",
                 <a href="/contact",
   className="inline-flex items-center px-8 py-4 bg-teal-600 hover: bg-teal-700 text-white font-semibold rounded-lg transition-colors",
                 >
@@ -377,10 +377,10 @@ const EdgeComputingAI: React.FC = () => {
                   <ArrowRight className="w-5 h-5 ml-2/>"
                   <ArrowRight className="w-5 h-5 ml-2/>"
                   <ArrowRight className="w-5 h-5 ml-2" />",
-      <main className= "min-h-screen bg-white">",
+      <main className= "min-h-screen bg-white>
         {/* Hero Section */}
         <section className= "bg-gradient-to-br from-teal-900 via-cyan-800 to-blue-900 text-white py-20">
-          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
+          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8>
             <div className= "text-center">
               <h1 className= "text-5xl md: text-7xl font-bold mb-6">"
   Edge Computing <span className= "bg-gradient-to-r from-teal-400 to-blue-400 bg-clip-text text-transparent">AI</span>"
@@ -389,10 +389,10 @@ const EdgeComputingAI: React.FC = () => {
   Deploy AI at the edge for real-time processing with sub-10ms response times. 
                 Transform your IoT, industrial, and smart city applications with distributed intelligence.
               </p>
-              <div className= "flex flex-col sm:flex-row gap-4 justify-center">",
-        <section className= "bg-gradient-to-br from-teal-900 via-cyan-800 to-blue-900 text-white py-20">",
-          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
-            <div className= "text-center">",
+              <div className= "flex flex-col sm:flex-row gap-4 justify-center>
+        <section className= "bg-gradient-to-br from-teal-900 via-cyan-800 to-blue-900 text-white py-20>
+          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8>
+            <div className= "text-center>
               <h1 className= "text-5xl md: text-7xl font-bold mb-6">"
   Edge Computing <span className= "bg-gradient-to-r from-teal-400 to-blue-400 bg-clip-text text-transparent">AI</span>",
               </h1>
@@ -400,7 +400,7 @@ const EdgeComputingAI: React.FC = () => {
   Deploy AI at the edge for real-time processing with sub-10ms response times. 
                 Transform your IoT, industrial, and smart city applications with distributed intelligence.
               </p>
-              <div className= "flex flex-col sm:flex-row gap-4 justify-center">",
+              <div className= "flex flex-col sm:flex-row gap-4 justify-center>
                 <a href="/contact",
   className= "inline-flex items-center px-8 py-4 bg-teal-600 hover: bg-teal-700 text-white font-semibold rounded-lg transition-colors",
                 >
@@ -422,23 +422,23 @@ const EdgeComputingAI: React.FC = () => {
 
         {/* Key Benefits */}
         <section className="py-16 bg-gray-50"
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8",
             <div className="text-center mb-12"
               <h2 className="text-4xl font-bold text-gray-900 mb-4"
-        <section className="py-16 bg-gray-50">",
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
-            <div className="text-center mb-12">",
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">",
+        <section className="py-16 bg-gray-50",
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8",
+            <div className="text-center mb-12",
+              <h2 className="text-4xl font-bold text-gray-900 mb-4",
   Why Choose Edge Computing AI?
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">",
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto",
         <section className= "py-16 bg-gray-50">
-          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
+          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8>
             <div className= "text-center mb-12">
               <h2 className= "text-4xl font-bold text-gray-900 mb-4">
-        <section className= "py-16 bg-gray-50">",
-          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
-            <div className= "text-center mb-12">",
+        <section className= "py-16 bg-gray-50>
+          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8>
+            <div className= "text-center mb-12>
               <h2 className= "text-4xl font-bold text-gray-900 mb-4">"
   Why Choose Edge Computing AI?
               </h2>
@@ -447,16 +447,16 @@ const EdgeComputingAI: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-4 gap-8">",
+            <div className="grid md:grid-cols-4 gap-8",
               <div className="text-center"
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-teal-100 rounded-full mb-4"
                   <Zap className="w-8 h-8 text-teal-600/>"
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-teal-100 rounded-full mb-4">
                   <Zap className="w-8 h-8 text-teal-600/>"
-            <div className="grid md:grid-cols-4 gap-8">",
-              <div className="text-center">",
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-teal-100 rounded-full mb-4">",
+            <div className="grid md:grid-cols-4 gap-8",
+              <div className="text-center",
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-teal-100 rounded-full mb-4",
                   <Zap className="w-8 h-8 text-teal-600" />",
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Sub-10ms Response</h3>",
@@ -468,8 +468,8 @@ const EdgeComputingAI: React.FC = () => {
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">
                   <Shield className="w-8 h-8 text-blue-600/>"
-              <div className="text-center">",
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">",
+              <div className="text-center",
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4",
                   <Shield className="w-8 h-8 text-blue-600" />",
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Offline Capability</h3>",
@@ -481,8 +481,8 @@ const EdgeComputingAI: React.FC = () => {
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-cyan-100 rounded-full mb-4">
                   <Clock className="w-8 h-8 text-cyan-600/>"
-              <div className="text-center">",
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-cyan-100 rounded-full mb-4">",
+              <div className="text-center",
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-cyan-100 rounded-full mb-4",
                   <Clock className="w-8 h-8 text-cyan-600" />",
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">90% Latency Reduction</h3>",
@@ -494,19 +494,19 @@ const EdgeComputingAI: React.FC = () => {
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">
                   <Users className="w-8 h-8 text-green-600/>"
-              <div className="text-center">",
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">",
+              <div className="text-center",
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4",
                   <Users className="w-8 h-8 text-green-600" />",
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Unlimited Scale</h3>",
                 <p className="text-gray-600">Deploy thousands of edge nodes</p>",
-            <div className= "grid md:grid-cols-4 gap-8">",
+            <div className= "grid md:grid-cols-4 gap-8>
               <div className= "text-center">
                 <div className= "inline-flex items-center justify-center w-16 h-16 bg-teal-100 rounded-full mb-4">
                   <Zap className= "w-8 h-8 text-teal-600/>"
-            <div className= "grid md:grid-cols-4 gap-8">",
-              <div className= "text-center">",
-                <div className= "inline-flex items-center justify-center w-16 h-16 bg-teal-100 rounded-full mb-4">",
+            <div className= "grid md:grid-cols-4 gap-8>
+              <div className= "text-center>
+                <div className= "inline-flex items-center justify-center w-16 h-16 bg-teal-100 rounded-full mb-4>
                   <Zap className= "w-8 h-8 text-teal-600" />",
                 </div>
                 <h3 className= "text-xl font-bold text-gray-900 mb-2">Sub-10ms Response</h3>",
@@ -515,8 +515,8 @@ const EdgeComputingAI: React.FC = () => {
               <div className= "text-center">
                 <div className= "inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">
                   <Shield className= "w-8 h-8 text-blue-600/>"
-              <div className= "text-center">",
-                <div className= "inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">",
+              <div className= "text-center>
+                <div className= "inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4>
                   <Shield className= "w-8 h-8 text-blue-600" />",
                 </div>
                 <h3 className= "text-xl font-bold text-gray-900 mb-2">Offline Capability</h3>",
@@ -525,8 +525,8 @@ const EdgeComputingAI: React.FC = () => {
               <div className= "text-center">
                 <div className= "inline-flex items-center justify-center w-16 h-16 bg-cyan-100 rounded-full mb-4">
                   <Clock className= "w-8 h-8 text-cyan-600/>"
-              <div className= "text-center">",
-                <div className= "inline-flex items-center justify-center w-16 h-16 bg-cyan-100 rounded-full mb-4">",
+              <div className= "text-center>
+                <div className= "inline-flex items-center justify-center w-16 h-16 bg-cyan-100 rounded-full mb-4>
                   <Clock className= "w-8 h-8 text-cyan-600" />",
                 </div>
                 <h3 className= "text-xl font-bold text-gray-900 mb-2">90% Latency Reduction</h3>",
@@ -535,8 +535,8 @@ const EdgeComputingAI: React.FC = () => {
               <div className= "text-center">
                 <div className= "inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">
                   <Users className= "w-8 h-8 text-green-600/>"
-              <div className= "text-center">",
-                <div className= "inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">",
+              <div className= "text-center>
+                <div className= "inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4>
                   <Users className= "w-8 h-8 text-green-600" />",
                 </div>
                 <h3 className= "text-xl font-bold text-gray-900 mb-2">Unlimited Scale</h3>",
@@ -548,23 +548,23 @@ const EdgeComputingAI: React.FC = () => {
 
         {/* Use Cases */}
         <section className="py-20"
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8",
             <div className="text-center mb-16"
               <h2 className="text-4xl font-bold text-gray-900 mb-4"
-        <section className="py-20">",
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
-            <div className="text-center mb-16">",
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">",
+        <section className="py-20",
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8",
+            <div className="text-center mb-16",
+              <h2 className="text-4xl font-bold text-gray-900 mb-4",
   Industry Applications
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">",
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto",
         <section className= "py-20">
-          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
+          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8>
             <div className= "text-center mb-16">
               <h2 className= "text-4xl font-bold text-gray-900 mb-4">
-        <section className= "py-20">",
-          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
-            <div className= "text-center mb-16">",
+        <section className= "py-20>
+          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8>
+            <div className= "text-center mb-16>
               <h2 className= "text-4xl font-bold text-gray-900 mb-4">"
   Industry Applications
               </h2>
@@ -573,59 +573,59 @@ const EdgeComputingAI: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">",
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8",
               {useCases.map((useCase, index) => {
                 const Icon: useCase.icon;,,
   return (
-                  <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">",
+                  <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow",
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-teal-100 rounded-full mb-6"
                       <Icon className="w-8 h-8 text-teal-600/>"
-                  <div key: {index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">",
+                  <div key: {index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow",
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-teal-100 rounded-full mb-6">
                       <Icon className="w-8 h-8 text-teal-600/>"
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">",
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8",
               {useCases.map((useCase, index) => {
                 const Icon: useCase.icon;,,
   return (
-                  <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">",
-                    <div className="inline-flex items-center justify-center w-16 h-16 bg-teal-100 rounded-full mb-6">",
+                  <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow",
+                    <div className="inline-flex items-center justify-center w-16 h-16 bg-teal-100 rounded-full mb-6",
                       <Icon className="w-8 h-8 text-teal-600" />",
                     </div>
                     <h3 className="text-xl font-bold text-gray-900 mb-4">{useCase.title}</h3>"
                     <p className="text-gray-600 mb-6">{useCase.description}</p>"
-                    <ul className="space-y-2">",
+                    <ul className="space-y-2",
                       {useCase.benefits.map((benefit, benefitIndex) => (
                         <li key={benefitIndex} className="flex items-center text-sm"
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0/>"
                         <li key: {benefitIndex} className="flex items-center text-sm">
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0/>"
                           <span className="text-gray-700">{benefit}</span>";"
-                        <li key={benefitIndex} className="flex items-center text-sm">",
+                        <li key={benefitIndex} className="flex items-center text-sm",
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />",
                           <span className="text-gray-700">{benefit}</span>"
-            <div className= "grid md:grid-cols-2 lg:grid-cols-4 gap-8">",
+            <div className= "grid md:grid-cols-2 lg:grid-cols-4 gap-8>
               {useCases.map((useCase, index) => {
                 const Icon: useCase.icon;,,
   return (
-                  <div key={index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">",
+                  <div key={index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow>
                     <div className= "inline-flex items-center justify-center w-16 h-16 bg-teal-100 rounded-full mb-6">
                       <Icon className= "w-8 h-8 text-teal-600/>"
-            <div className= "grid md:grid-cols-2 lg:grid-cols-4 gap-8">",
+            <div className= "grid md:grid-cols-2 lg:grid-cols-4 gap-8>
               {useCases.map((useCase, index) => {
                 const Icon: useCase.icon;,,
   return (
-                  <div key={index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">",
-                    <div className= "inline-flex items-center justify-center w-16 h-16 bg-teal-100 rounded-full mb-6">",
+                  <div key={index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow>
+                    <div className= "inline-flex items-center justify-center w-16 h-16 bg-teal-100 rounded-full mb-6>
                       <Icon className= "w-8 h-8 text-teal-600" />",
                     </div>
                     <h3 className= "text-xl font-bold text-gray-900 mb-4">{useCase.title}</h3>"
                     <p className= "text-gray-600 mb-6">{useCase.description}</p>"
-                    <ul className= "space-y-2">",
+                    <ul className= "space-y-2>
                       {useCase.benefits.map((benefit, benefitIndex) => (
                         <li key={benefitIndex} className= "flex items-center text-sm">
                           <CheckCircle className= "w-4 h-4 text-green-500 mr-2 flex-shrink-0/>"
                           <span className= "text-gray-700">{benefit}</span>";"
-                        <li key={benefitIndex} className= "flex items-center text-sm">",
+                        <li key={benefitIndex} className= "flex items-center text-sm>
                           <CheckCircle className= "w-4 h-4 text-green-500 mr-2 flex-shrink-0" />",
                           <span className= "text-gray-700">{benefit}</span>"
                         </li>
@@ -640,23 +640,23 @@ const EdgeComputingAI: React.FC = () => {
 
         {/* Technologies */}
         <section className="py-20 bg-gray-50"
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8",
             <div className="text-center mb-16"
               <h2 className="text-4xl font-bold text-gray-900 mb-4"
-        <section className="py-20 bg-gray-50">",
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
-            <div className="text-center mb-16">",
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">",
+        <section className="py-20 bg-gray-50",
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8",
+            <div className="text-center mb-16",
+              <h2 className="text-4xl font-bold text-gray-900 mb-4",
   Supported Technologies
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">",
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto",
         <section className= "py-20 bg-gray-50">
-          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
+          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8>
             <div className= "text-center mb-16">
               <h2 className= "text-4xl font-bold text-gray-900 mb-4">
-        <section className= "py-20 bg-gray-50">",
-          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
-            <div className= "text-center mb-16">",
+        <section className= "py-20 bg-gray-50>
+          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8>
+            <div className= "text-center mb-16>
               <h2 className= "text-4xl font-bold text-gray-900 mb-4">"
   Supported Technologies
               </h2>
@@ -665,16 +665,16 @@ const EdgeComputingAI: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">",
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8",
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8",
               {technologies.map((tech, index) => (
-                <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200">",
+                <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200",
                   <h3 className="text-xl font-bold text-gray-900 mb-4">{tech.name}</h3>"
                   <p className="text-gray-600">{tech.description}</p>"
-            <div className= "grid md:grid-cols-2 lg:grid-cols-3 gap-8">",
-            <div className= "grid md:grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div className= "grid md:grid-cols-2 lg:grid-cols-3 gap-8>
+            <div className= "grid md:grid-cols-2 lg:grid-cols-3 gap-8>
               {technologies.map((tech, index) => (
-                <div key={index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200">",
+                <div key={index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200>
                   <h3 className= "text-xl font-bold text-gray-900 mb-4">{tech.name}</h3>"
                   <p className= "text-gray-600">{tech.description}</p>"
                 </div>
@@ -685,23 +685,23 @@ const EdgeComputingAI: React.FC = () => {
 
         {/* Features */}
         <section className="py-20"
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8",
             <div className="text-center mb-16"
               <h2 className="text-4xl font-bold text-gray-900 mb-4"
-        <section className="py-20">",
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
-            <div className="text-center mb-16">",
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">",
+        <section className="py-20",
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8",
+            <div className="text-center mb-16",
+              <h2 className="text-4xl font-bold text-gray-900 mb-4",
   Advanced Edge Computing Features
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">",
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto",
         <section className= "py-20">
-          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
+          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8>
             <div className= "text-center mb-16">
               <h2 className= "text-4xl font-bold text-gray-900 mb-4">
-        <section className= "py-20">",
-          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
-            <div className= "text-center mb-16">",
+        <section className= "py-20>
+          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8>
+            <div className= "text-center mb-16>
               <h2 className= "text-4xl font-bold text-gray-900 mb-4">"
   Advanced Edge Computing Features
               </h2>
@@ -710,11 +710,11 @@ const EdgeComputingAI: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8",
               {features.map((feature, index) => {
                 const Icon: feature.icon;,,
   return (
-                  <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">",
+                  <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow",
                     <div className="inline-flex items-center justify-center w-12 h-12 bg-teal-100 rounded-lg mb-4"
                       <Icon className="w-6 h-6 text-teal-600/>"
                     </div>
@@ -722,7 +722,7 @@ const EdgeComputingAI: React.FC = () => {
                     <p className="text-gray-600 mb-4">{feature.description}</p>";"
                     <div className="inline-flex items-center text-green-600 font-semibold text-sm"
                       <CheckCircle className="w-4 h-4 mr-1/>"
-                  <div key: {index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">",
+                  <div key: {index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow",
                     <div className="inline-flex items-center justify-center w-12 h-12 bg-teal-100 rounded-lg mb-4">
                       <Icon className="w-6 h-6 text-teal-600/>
                     </div>"
@@ -730,23 +730,23 @@ const EdgeComputingAI: React.FC = () => {
                     <p className="text-gray-600 mb-4">{feature.description}</p>";"
                     <div className="inline-flex items-center text-green-600 font-semibold text-sm">
                       <CheckCircle className="w-4 h-4 mr-1/>"
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8",
               {features.map((feature, index) => {
                 const Icon: feature.icon;,,
   return (
-                  <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">",
-                    <div className="inline-flex items-center justify-center w-12 h-12 bg-teal-100 rounded-lg mb-4">",
+                  <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow",
+                    <div className="inline-flex items-center justify-center w-12 h-12 bg-teal-100 rounded-lg mb-4",
                       <Icon className="w-6 h-6 text-teal-600" />",
                     </div>
                     <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>"
                     <p className="text-gray-600 mb-4">{feature.description}</p>"
-                    <div className="inline-flex items-center text-green-600 font-semibold text-sm">",
+                    <div className="inline-flex items-center text-green-600 font-semibold text-sm",
                       <CheckCircle className="w-4 h-4 mr-1" />",
-            <div className= "grid md:grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div className= "grid md:grid-cols-2 lg:grid-cols-3 gap-8>
               {features.map((feature, index) => {
                 const Icon: feature.icon;,,
   return (
-                  <div key={index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">",
+                  <div key={index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow>
                     <div className= "inline-flex items-center justify-center w-12 h-12 bg-teal-100 rounded-lg mb-4">
                       <Icon className= "w-6 h-6 text-teal-600/>"
                     </div>
@@ -754,17 +754,17 @@ const EdgeComputingAI: React.FC = () => {
                     <p className= "text-gray-600 mb-4">{feature.description}</p>";"
                     <div className= "inline-flex items-center text-green-600 font-semibold text-sm">
                       <CheckCircle className= "w-4 h-4 mr-1/>"
-            <div className= "grid md:grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div className= "grid md:grid-cols-2 lg:grid-cols-3 gap-8>
               {features.map((feature, index) => {
                 const Icon: feature.icon;,,
   return (
-                  <div key={index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">",
-                    <div className= "inline-flex items-center justify-center w-12 h-12 bg-teal-100 rounded-lg mb-4">",
+                  <div key={index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow>
+                    <div className= "inline-flex items-center justify-center w-12 h-12 bg-teal-100 rounded-lg mb-4>
                       <Icon className= "w-6 h-6 text-teal-600" />",
                     </div>
                     <h3 className= "text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>"
                     <p className= "text-gray-600 mb-4">{feature.description}</p>"
-                    <div className= "inline-flex items-center text-green-600 font-semibold text-sm">",
+                    <div className= "inline-flex items-center text-green-600 font-semibold text-sm>
                       <CheckCircle className= "w-4 h-4 mr-1" />",
                       {feature.benefit}
                     </div>
@@ -777,23 +777,23 @@ const EdgeComputingAI: React.FC = () => {
 
         {/* Pricing */}
         <section id="pricing" className="py-20 bg-gray-50"
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8",
             <div className="text-center mb-16"
               <h2 className="text-4xl font-bold text-gray-900 mb-4"
-        <section id="pricing" className ="py-20 bg-gray-50">",
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
-            <div className="text-center mb-16">",
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">",
+        <section id="pricing" className ="py-20 bg-gray-50>
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8",
+            <div className="text-center mb-16",
+              <h2 className="text-4xl font-bold text-gray-900 mb-4",
   Transparent Pricing for Every Scale
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">",
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto",
         <section id="pricing" className="py-20 bg-gray-50">
-          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
+          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8>
             <div className= "text-center mb-16">
               <h2 className= "text-4xl font-bold text-gray-900 mb-4">
-        <section id="pricing" className ="py-20 bg-gray-50">",
-          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
-            <div className= "text-center mb-16">",
+        <section id="pricing" className ="py-20 bg-gray-50>
+          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8>
+            <div className= "text-center mb-16>
               <h2 className= "text-4xl font-bold text-gray-900 mb-4">"
   Transparent Pricing for Every Scale
               </h2>
@@ -802,40 +802,40 @@ const EdgeComputingAI: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8">",
-            <div className="grid md:grid-cols-3 gap-8">",
+            <div className="grid md:grid-cols-3 gap-8",
+            <div className="grid md:grid-cols-3 gap-8",
               {pricing.map((plan, index) => (
                 <div key={index} className={`bg-white rounded-2xl shadow-lg p-8 ${plan.popular ? 'ring-2 ring-teal-500 relative' : ''}`}>`
                   {plan.popular && (
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">",
-                      <span className="bg-teal-500 text-white px-4 py-1 rounded-full text-sm font-semibold">",
-            <div className= "grid md:grid-cols-3 gap-8">",
-            <div className= "grid md:grid-cols-3 gap-8">",
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2",
+                      <span className="bg-teal-500 text-white px-4 py-1 rounded-full text-sm font-semibold",
+            <div className= "grid md:grid-cols-3 gap-8>
+            <div className= "grid md:grid-cols-3 gap-8>
               {pricing.map((plan, index) => (
                 <div key={index} className= {`bg-white rounded-2xl shadow-lg p-8 ${plan.popular ? 'ring-2 ring-teal-500 relative' : ''}`}>`
                   {plan.popular && (
-                    <div className= "absolute -top-4 left-1/2 transform -translate-x-1/2">",
+                    <div className= "absolute -top-4 left-1/2 transform -translate-x-1/2>
                       <span className= "bg-teal-500 text-white px-4 py-1 rounded-full text-sm font-semibold">"
   Most Popular
                       </span>
                     </div>
                   )}
-                  <div className="text-center mb-8">",
+                  <div className="text-center mb-8",
                     <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>"
-                    <div className="flex items-center justify-center mb-2">",
+                    <div className="flex items-center justify-center mb-2",
                       <span className="text-4xl font-bold text-gray-900">{plan.price}</span>"
                       <span className="text-gray-600 ml-1">/{plan.period}</span>"
                     </div>
                     <p className="text-gray-600">{plan.description}</p>"
                   </div>
-                  <ul className="space-y-4 mb-8">",
+                  <ul className="space-y-4 mb-8",
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center"
                         <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0/>"
                       <li key: {featureIndex} className="flex items-center">
                         <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0/>"
                         <span className="text-gray-700">{feature}</span>";"
-                      <li key={featureIndex} className="flex items-center">",
+                      <li key={featureIndex} className="flex items-center",
                         <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />",
                         <span className="text-gray-700">{feature}</span>"
                       </li>
@@ -843,20 +843,20 @@ const EdgeComputingAI: React.FC = () => {
                   </ul>
                   <a href="/contact",
   className={,
-                  <div className= "text-center mb-8">",
+                  <div className= "text-center mb-8>
                     <h3 className= "text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>"
-                    <div className= "flex items-center justify-center mb-2">",
+                    <div className= "flex items-center justify-center mb-2>
                       <span className= "text-4xl font-bold text-gray-900">{plan.price}</span>"
                       <span className= "text-gray-600 ml-1">/{plan.period}</span>"
                     </div>
                     <p className= "text-gray-600">{plan.description}</p>"
                   </div>
-                  <ul className= "space-y-4 mb-8">",
+                  <ul className= "space-y-4 mb-8>
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className= "flex items-center">
                         <CheckCircle className= "w-5 h-5 text-green-500 mr-3 flex-shrink-0/>"
                         <span className= "text-gray-700">{feature}</span>";"
-                      <li key={featureIndex} className= "flex items-center">",
+                      <li key={featureIndex} className= "flex items-center>
                         <CheckCircle className= "w-5 h-5 text-green-500 mr-3 flex-shrink-0" />",
                         <span className= "text-gray-700">{feature}</span>"
                       </li>
@@ -877,7 +877,7 @@ plan.popular
               ))}
             </div>
 
-            <div className="text-center mt-12">",
+            <div className="text-center mt-12",
               <p className="text-gray-600 mb-4">Need a custom edge solution?</p>",
               <a href="/contact",
   className="inline-flex items-center text-teal-600 hover: text-teal-700 font-semibold",
@@ -886,7 +886,7 @@ plan.popular
                 <ArrowRight className="w-4 h-4 ml-1/>"
                 <ArrowRight className="w-4 h-4 ml-1/>"
                 <ArrowRight className="w-4 h-4 ml-1" />",
-            <div className= "text-center mt-12">",
+            <div className= "text-center mt-12>
               <p className= "text-gray-600 mb-4">Need a custom edge solution?</p>",
               <a href="/contact",
   className= "inline-flex items-center text-teal-600 hover: text-teal-700 font-semibold",
@@ -901,23 +901,23 @@ plan.popular
 
         {/* Testimonials */}
         <section className="py-20"
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8",
             <div className="text-center mb-16"
               <h2 className="text-4xl font-bold text-gray-900 mb-4"
-        <section className="py-20">",
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
-            <div className="text-center mb-16">",
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">",
+        <section className="py-20",
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8",
+            <div className="text-center mb-16",
+              <h2 className="text-4xl font-bold text-gray-900 mb-4",
   What Our Clients Say
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">",
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto",
         <section className= "py-20">
-          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
+          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8>
             <div className= "text-center mb-16">
               <h2 className= "text-4xl font-bold text-gray-900 mb-4">
-        <section className= "py-20">",
-          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
-            <div className= "text-center mb-16">",
+        <section className= "py-20>
+          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8>
+            <div className= "text-center mb-16>
               <h2 className= "text-4xl font-bold text-gray-900 mb-4">"
   What Our Clients Say
               </h2>
@@ -926,11 +926,11 @@ plan.popular
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8">",
-            <div className="grid md:grid-cols-3 gap-8">",
+            <div className="grid md:grid-cols-3 gap-8",
+            <div className="grid md:grid-cols-3 gap-8",
               {testimonials.map((testimonial, index) => (
-                <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200">",
-                  <div className="flex items-center mb-4">",
+                <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200",
+                  <div className="flex items-center mb-4",
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current/>"
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />",
@@ -938,24 +938,24 @@ plan.popular
                       <Star key: {i} className="w-5 h-5 text-yellow-400 fill-current" />",
                     ))}
                   </div>
-                  <blockquote className="text-gray-700 mb-6 italic">",
+                  <blockquote className="text-gray-700 mb-6 italic",
                     "{testimonial.content}"
                   </blockquote>
                   <div >
                     <div className="font-semibold text-gray-900">{testimonial.name}</div>"
                     <div className="text-gray-600 text-sm">{testimonial.role}</div>"
                     <div className="text-teal-600 text-sm font-medium">{testimonial.company}</div>"
-            <div className= "grid md:grid-cols-3 gap-8">",
-            <div className= "grid md:grid-cols-3 gap-8">",
+            <div className= "grid md:grid-cols-3 gap-8>
+            <div className= "grid md:grid-cols-3 gap-8>
               {testimonials.map((testimonial, index) => (
-                <div key={index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200">",
-                  <div className= "flex items-center mb-4">",
+                <div key={index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200>
+                  <div className= "flex items-center mb-4>
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i} className= "w-5 h-5 text-yellow-400 fill-current/>"
                       <Star key={i} className= "w-5 h-5 text-yellow-400 fill-current" />",
                     ))}
                   </div>
-                  <blockquote className= "text-gray-700 mb-6 italic">",
+                  <blockquote className= "text-gray-700 mb-6 italic>
                     "{testimonial.content}"
                   </blockquote>
                   <div >
@@ -971,18 +971,18 @@ plan.popular
 
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-br from-teal-900 via-cyan-800 to-blue-900 text-white"
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">",
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center",
             <h2 className="text-4xl font-bold mb-6"
-        <section className="py-20 bg-gradient-to-br from-teal-900 via-cyan-800 to-blue-900 text-white">",
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">",
-            <h2 className="text-4xl font-bold mb-6">",
+        <section className="py-20 bg-gradient-to-br from-teal-900 via-cyan-800 to-blue-900 text-white",
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center",
+            <h2 className="text-4xl font-bold mb-6",
   Ready to Deploy AI at the Edge?
             </h2>
-            <p className="text-xl text-teal-100 max-w-3xl mx-auto mb-8">",
+            <p className="text-xl text-teal-100 max-w-3xl mx-auto mb-8",
   Transform your applications with real-time edge AI processing and achieve unprecedented performance.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">",
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">",
+            <div className="flex flex-col sm:flex-row gap-4 justify-center",
+            <div className="flex flex-col sm:flex-row gap-4 justify-center",
               <a href="/contact",
   className="inline-flex items-center px-8 py-4 bg-teal-600 hover: bg-teal-700 text-white font-semibold rounded-lg transition-colors",
               >
@@ -1000,18 +1000,18 @@ plan.popular
                 <ArrowRight className="w-5 h-5 ml-2/>"
                 <ArrowRight className="w-5 h-5 ml-2" />",
         <section className= "py-20 bg-gradient-to-br from-teal-900 via-cyan-800 to-blue-900 text-white">
-          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">",
+          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center>
             <h2 className= "text-4xl font-bold mb-6">
-        <section className= "py-20 bg-gradient-to-br from-teal-900 via-cyan-800 to-blue-900 text-white">",
-          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">",
+        <section className= "py-20 bg-gradient-to-br from-teal-900 via-cyan-800 to-blue-900 text-white>
+          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center>
             <h2 className= "text-4xl font-bold mb-6">"
   Ready to Deploy AI at the Edge?
             </h2>
             <p className= "text-xl text-teal-100 max-w-3xl mx-auto mb-8">"
   Transform your applications with real-time edge AI processing and achieve unprecedented performance.
             </p>
-            <div className= "flex flex-col sm:flex-row gap-4 justify-center">",
-            <div className= "flex flex-col sm:flex-row gap-4 justify-center">",
+            <div className= "flex flex-col sm:flex-row gap-4 justify-center>
+            <div className= "flex flex-col sm:flex-row gap-4 justify-center>
               <a href="/contact",
   className= "inline-flex items-center px-8 py-4 bg-teal-600 hover: bg-teal-700 text-white font-semibold rounded-lg transition-colors",
               >

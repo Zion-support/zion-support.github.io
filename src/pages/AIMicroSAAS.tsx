@@ -1,10 +1,5 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
-import { Users, CheckCircle, ArrowRight, DollarSign, Clock, Star, TrendingUp, Lock, Smartphone, Cloud, Database, Cpu, Target, Rocket, FileText } from "lucide-react";
-
-export default function AIMicroSAAS(): React.JSX.Element {
-  const microSaaSServices = [
-    {
       id: "ai-content-optimizer",
       name: "AI Content Optimizer Pro",
       blurb: "AI-powered content creation and optimization platform for marketing teams",
@@ -19,38 +14,6 @@ export default function AIMicroSAAS(): React.JSX.Element {
         "A/B testing and performance analytics",
     },
     {
-      id: "smart-analytics-dashboard",
-      name: "Smart Analytics Dashboard",
-      blurb: "Comprehensive analytics platform with AI-driven insights for data-driven decisions",
-      price: "$199 - $999/month",
-      eta: "2-3 weeks",
-      category: "Analytics",
-      icon: TrendingUp,
-      features: [
-        "Real-time data visualization and reporting",
-        "AI-powered predictive analytics",
-        "Custom dashboard creation",
-        "Automated report generation",
-        "Multi-platform data integration",
-        "Advanced filtering and segmentation"
-      ]
-    },
-    {
-      id: "ai-customer-support",
-      name: "AI Customer Support Suite",
-      blurb: "Intelligent customer service automation with natural language processing",
-      price: "$399 - $1,999/month",
-      eta: "3-4 weeks",
-      category: "Customer Service",
-      icon: Users,
-      features: [
-        "24/7 AI-powered chatbot",
-        "Natural language processing",
-        "Ticket routing and prioritization",
-        "Sentiment analysis and escalation",
-        "Knowledge base integration",
-        "Performance analytics and insights"
-      ]
     },
     {
       id: "automated-workflow-engine",
@@ -89,27 +52,6 @@ export default function AIMicroSAAS(): React.JSX.Element {
           </div>
         </section>
 
-        {/* Services Grid */}
-        <section className="py-20">
-          <div className="container mx-auto px-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-              {microSaaSServices.map((service) => (
-                <div key={service.id} className="bg-white p-8 rounded-xl shadow-sm hover:shadow-lg transition-shadow">
-                  <div className="flex items-center mb-4">
-                    <service.icon className="w-8 h-8 text-blue-600 mr-3" />
-                    <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
-                      {service.category}
-                    </span>
-                  </div>
-                  
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{service.name}</h3>
-                  <p className="text-gray-600 mb-4">{service.blurb}</p>
-                  
-                  <div className="flex items-center justify-between mb-6">
-                    <div className="flex items-center text-green-600">
-                      <DollarSign className="w-4 h-4 mr-1" />
-                      <span className="font-semibold">{service.price}</span>
-                    </div>
                     </div>
                   </div>
                   
