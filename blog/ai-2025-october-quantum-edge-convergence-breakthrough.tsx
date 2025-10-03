@@ -278,13 +278,13 @@ export default function QuantumEdgeConvergenceBreakthrough() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
-              href="/contact" 
+              href="/contact"
               className="bg-white hover:bg-gray-100 text-cyan-600 font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg"
             >
               Schedule Free Assessment
             </a>
             <a 
-              href="/case-studies/fortune-100-quantum-edge-847m-success" 
+              href="/case-studies/fortune-100-quantum-edge-847m-success"
               className="bg-cyan-500/20 hover:bg-cyan-500/30 border-2 border-white text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               View Success Story →

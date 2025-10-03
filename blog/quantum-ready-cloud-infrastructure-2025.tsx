@@ -305,7 +305,7 @@ export default function QuantumReadyCloudInfrastructure2025() {
                     <li>Staff training and ongoing support</li>
                   </ul>
                   <a 
-                    href="/contact" 
+                    href="/contact"
                     className="inline-block bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-lg font-semibold hover:shadow-xl transition-all duration-300"
                   >
                     Request Quantum Readiness Assessment

@@ -126,7 +126,6 @@ export default function AI2027NeuromorphicBreakthroughSuccess() {
         </div>
 
         <h2 className="text-3xl font-bold text-gray-900 mt-8 mb-4">The Results</h2>"
-        
         <div className="bg-gradient-to-r from-green-50 to-blue-50 p-6 rounded-lg mb-8">"
           <h3 className="text-2xl font-bold text-gray-900 mb-6">📊 Quantified Impact</h3>"
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">"

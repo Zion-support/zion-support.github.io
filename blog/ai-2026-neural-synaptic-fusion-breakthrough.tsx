@@ -309,19 +309,19 @@ export default function AI2026NeuralSynapticFusionBreakthrough() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a 
-                    href="/contact" 
+                    href="/contact"
                     className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 transform hover:-translate-y-1"
                   >
                     Get Started Today
                   </a>
                   <a 
-                    href="/services/neural-synaptic-fusion-ai-services" 
+                    href="/services/neural-synaptic-fusion-ai-services"
                     className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
                   >
                     Explore Services →
                   </a>
                   <a 
-                    href="/case-studies/ai-2026-neural-synaptic-fusion-2-4-billion-roi-success" 
+                    href="/case-studies/ai-2026-neural-synaptic-fusion-2-4-billion-roi-success"
                     className="border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
                   >
                     View Case Study

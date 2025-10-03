@@ -191,15 +191,12 @@ export default function AgenticAIEnterpriseTransformation2025() {
 {`1. Thought: "User wants to book a meeting. I need to check calendar availability."
    Action: query_calendar(start_date="2025-10-20", duration="1h")
    Observation: "3 available slots: 10am, 2pm, 4pm"
-
 2. Thought: "Found available times. Should check attendee preferences."
    Action: get_user_preferences(user_id="john_doe")
    Observation: "Prefers morning meetings, avoids Fridays"
-
 3. Thought: "10am slot matches preferences. Will book and send confirmation."
    Action: book_meeting(time="10am", attendees=["john_doe", "jane_smith"])
    Observation: "Meeting booked successfully, ID: MTG-12345"
-
 4. Final: "Meeting booked for October 20 at 10am. Confirmation sent to all attendees."`}
                 </pre>
               </div>
@@ -364,7 +361,7 @@ export default function AgenticAIEnterpriseTransformation2025() {
                   </div>
                 </div>
                 <a 
-                  href="/contact" 
+                  href="/contact"
                   className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-xl transition-all"
                 >
                   Schedule Your Free Assessment →

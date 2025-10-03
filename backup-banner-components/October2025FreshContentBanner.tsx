@@ -59,7 +59,7 @@ export default function October2025FreshContentBanner() {
                 </div>
               </div>
               <Link 
-                href="/blog/ai-2025-october-multi-agent-collaboration-systems" 
+                href="/blog/ai-2025-october-multi-agent-collaboration-systems"
                 className="text-blue-300 text-sm font-semibold hover:text-blue-200 inline-flex items-center gap-2"
               >
                 Read Full Guide →
@@ -89,7 +89,7 @@ export default function October2025FreshContentBanner() {
                 </div>
               </div>
               <Link 
-                href="/blog/ai-2025-october-enterprise-cost-optimization" 
+                href="/blog/ai-2025-october-enterprise-cost-optimization"
                 className="text-green-300 text-sm font-semibold hover:text-green-200 inline-flex items-center gap-2"
               >
                 Read Full Guide →
@@ -119,7 +119,7 @@ export default function October2025FreshContentBanner() {
                 </div>
               </div>
               <Link 
-                href="/blog/ai-2025-october-real-time-operations" 
+                href="/blog/ai-2025-october-real-time-operations"
                 className="text-purple-300 text-sm font-semibold hover:text-purple-200 inline-flex items-center gap-2"
               >
                 Read Full Guide →
@@ -131,13 +131,13 @@ export default function October2025FreshContentBanner() {
           <div className="text-center">
             <div className="inline-flex flex-col sm:flex-row gap-4">
               <Link 
-                href="/contact" 
+                href="/contact"
                 className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
               >
                 Get Started Today
               </Link>
               <Link 
-                href="/blog" 
+                href="/blog"
                 className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
               >
                 Explore All Content

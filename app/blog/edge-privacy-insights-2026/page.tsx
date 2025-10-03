@@ -11,7 +11,6 @@ export default function EdgePrivacyInsights2026() {
       <main className="max-w-4xl mx-auto px-6 py-16">"
         <h1 className="text-4xl font-extrabold mb-4">Edge Privacy Insights 2026</h1>"
         <p className="text-white/70 mb-8">Actionable metrics without collecting PII.</p>"
-
         <section className="space-y-6">"
           <p className="text-slate-300">Design analytics that teams trust and regulators approve. Use scoped identifiers, edge aggregation, and differential privacy noise to extract insights without handling raw PII.</p>"
           <ul className="list-disc list-inside space-y-2 text-slate-300">"

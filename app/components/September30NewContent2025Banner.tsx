@@ -112,7 +112,6 @@ const September30NewContent2025Banner: React.FC = () => {
             >
               {/* Card glow effect */}
               <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/0 via-purple-500/0 to-fuchsia-500/0 group-hover:from-cyan-500/10 group-hover:via-purple-500/10 group-hover:to-fuchsia-500/10 transition-all duration-500"></div>"
-              
               <div className="relative p-8">"
                 {/* Icon & Badge */}
                 <div className="flex items-start justify-between mb-6">"
@@ -175,7 +174,6 @@ const September30NewContent2025Banner: React.FC = () => {
             >
               {/* Card glow effect */}
               <div className="absolute inset-0 bg-gradient-to-br from-purple-500/0 via-fuchsia-500/0 to-pink-500/0 group-hover:from-purple-500/10 group-hover:via-fuchsia-500/10 group-hover:to-pink-500/10 transition-all duration-500"></div>"
-              
               <div className="relative p-8">"
                 {/* Icon & Badge */}
                 <div className="flex items-start justify-between mb-6">"

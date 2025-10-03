@@ -364,13 +364,13 @@ const SyntheticDataGenerationEnterprise: React.FC = () => {
           </ul>
           <div className="flex gap-4">
             <a 
-              href="/contact" 
+              href="/contact"
               className="bg-white text-green-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition"
             >
               Start Your Synthetic Data Project
             </a>
             <a 
-              href="/services/synthetic-data" 
+              href="/services/synthetic-data"
               className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition"
             >
               Explore Solutions

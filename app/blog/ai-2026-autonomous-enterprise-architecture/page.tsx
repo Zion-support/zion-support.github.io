@@ -81,7 +81,6 @@ export default function AI2026AutonomousEnterpriseArchitecture() {
         <div className="max-w-4xl mx-auto">"
           <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-slate-700/50 rounded-3xl p-8 md:p-12">"
             <h2 className="text-3xl font-bold text-white mb-8">The Autonomous Architecture Revolution</h2>"
-            
             <div className="space-y-6 text-gray-300 leading-relaxed">"
               <p>
                 In 2026, enterprise architecture is undergoing a fundamental transformation. Traditional 

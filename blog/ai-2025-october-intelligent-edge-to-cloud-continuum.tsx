@@ -378,13 +378,13 @@ export default function AI2025OctoberIntelligentEdgeToCloudContinuum() {
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <a 
-              href="/contact" 
+              href="/contact"
               className="bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-emerald-500/50"
             >
               Schedule Consultation
             </a>
             <a 
-              href="/services/edge-computing" 
+              href="/services/edge-computing"
               className="bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-8 rounded-xl border border-emerald-500/30 transition-all duration-300"
             >
               Explore Services

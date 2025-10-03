@@ -91,7 +91,7 @@ export default function AIQuantumSecurityBlockchain2025() {
         
         <p className="text-gray-700 leading-relaxed mb-6">
           Current RSA and ECC encryption methods that protect 99% of internet traffic can be broken by quantum computers 
-          running Shor's algorithm in minutes. With quantum computers expected to reach "cryptographic relevance" 
+          running Shor's algorithm in minutes. With quantum computers expected to reach "cryptographic relevance"
           by 2030, enterprises must act now to protect sensitive data that requires long-term confidentiality.
         </p>
 

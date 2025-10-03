@@ -299,7 +299,7 @@ export default function AdvancedFederatedLearningPrivacyAI2025() {
                   while maintaining absolute privacy compliance. Let's design your privacy-preserving AI architecture.
                 </p>
                 <a 
-                  href="/contact" 
+                  href="/contact"
                   className="inline-block bg-gradient-to-r from-emerald-500 to-teal-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-2xl transition-all duration-300 hover:scale-105"
                 >
                   Schedule Privacy AI Consultation →

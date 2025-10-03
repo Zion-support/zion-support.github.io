@@ -17,13 +17,13 @@ const HomePage: React.FC = () => {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link 
-            to="/services" 
+            to="/services"
             className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors focus-visible:focus"
           >
             Explore Services
           </Link>
           <a 
-            href="https://ziontechgroup.com" 
+            href="https://ziontechgroup.com"
             className="border-2 border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:border-gray-400 transition-colors focus-visible:focus"
           >
             Visit Main Site
@@ -34,22 +34,22 @@ const HomePage: React.FC = () => {
       <section className="py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <Card 
-            title="Micro SaaS" 
-            href="/services/micro-saas" 
-            description="End-to-end product engineering with billing, auth, analytics and growth." 
-            icon="🚀" 
+            title="Micro SaaS"
+            href="/services/micro-saas"
+            description="End-to-end product engineering with billing, auth, analytics and growth."
+            icon="🚀"
           />
           <Card 
-            title="AI Services" 
-            href="/services/ai-services" 
-            description="LLM apps, RAG, agents, fine-tuning, evals, data pipelines and MLOps." 
-            icon="🤖" 
+            title="AI Services"
+            href="/services/ai-services"
+            description="LLM apps, RAG, agents, fine-tuning, evals, data pipelines and MLOps."
+            icon="🤖"
           />
           <Card 
-            title="IT Services" 
-            href="/services/it-services" 
-            description="Cloud migration, DevOps, SRE, security hardening and cost optimization." 
-            icon="⚙️" 
+            title="IT Services"
+            href="/services/it-services"
+            description="Cloud migration, DevOps, SRE, security hardening and cost optimization."
+            icon="⚙️"
           />
         </div>
       </section>
@@ -63,20 +63,20 @@ const HomePage: React.FC = () => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           <FeatureCard 
-            title="Fast Delivery" 
-            description="Rapid prototyping and deployment with modern tools and practices." 
+            title="Fast Delivery"
+            description="Rapid prototyping and deployment with modern tools and practices."
           />
           <FeatureCard 
-            title="Scalable Architecture" 
-            description="Built for growth with cloud-native, microservices architecture." 
+            title="Scalable Architecture"
+            description="Built for growth with cloud-native, microservices architecture."
           />
           <FeatureCard 
-            title="24/7 Support" 
-            description="Round-the-clock monitoring and support for your critical systems." 
+            title="24/7 Support"
+            description="Round-the-clock monitoring and support for your critical systems."
           />
           <FeatureCard 
-            title="Cost Effective" 
-            description="Optimized solutions that reduce operational costs and improve efficiency." 
+            title="Cost Effective"
+            description="Optimized solutions that reduce operational costs and improve efficiency."
           />
         </div>
       </section>

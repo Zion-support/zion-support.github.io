@@ -90,7 +90,7 @@ export default function VectorDatabasesAIApplications2025() {
                       and get relevant results even if the exact words don't match.
                     </p>
                     <div className="bg-white/5 rounded p-3 text-sm text-white/70 mt-3">
-                      <strong className="text-purple-400">Example:</strong> E-commerce search "gifts for tech enthusiasts" 
+                      <strong className="text-purple-400">Example:</strong> E-commerce search "gifts for tech enthusiasts"
                       returns relevant gadgets, dev tools, and smart devices—not just items containing those exact words.
                       <div className="mt-2 text-cyan-400">Result: 45% increase in search conversion, 30% higher AOV</div>
                     </div>

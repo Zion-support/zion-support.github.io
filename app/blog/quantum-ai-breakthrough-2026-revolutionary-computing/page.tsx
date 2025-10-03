@@ -77,7 +77,6 @@ export default function QuantumAIBreakthrough2026() {
         <div className="container mx-auto px-6">"
           <div className="max-w-4xl mx-auto">"
             <div className="prose prose-invert prose-lg max-w-none">"
-              
               <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">"
                 The Quantum-Neural Revolution Begins
               </h2>
@@ -188,10 +187,10 @@ export default function QuantumAIBreakthrough2026() {
 
               <div className="space-y-4 mb-8">"
                 {[
-                  { phase: "Discovery", title= "Quantum AI Assessment", duration: "1-2 weeks", description: "Evaluate your specific use cases and quantum AI potential" },"
-                  { phase: "Design", title= "Custom Quantum Architecture", duration: "2-4 weeks", description: "Design tailored quantum-neural solutions for your challenges" },"
-                  { phase: "Development", title= "Quantum AI Implementation", duration: "4-8 weeks", description: "Build and deploy your custom quantum AI systems" },"
-                  { phase: "Optimization", title= "Continuous Enhancement", duration: "Ongoing", description: "Evolve and optimize quantum AI performance continuously" }"
+                  { phase: "Discovery> title= "Quantum AI Assessment> duration: "1-2 weeks> description: "Evaluate your specific use cases and quantum AI potential" },"
+                  { phase: "Design> title= "Custom Quantum Architecture> duration: "2-4 weeks> description: "Design tailored quantum-neural solutions for your challenges" },"
+                  { phase: "Development> title= "Quantum AI Implementation> duration: "4-8 weeks> description: "Build and deploy your custom quantum AI systems" },"
+                  { phase: "Optimization> title= "Continuous Enhancement> duration: "Ongoing> description: "Evolve and optimize quantum AI performance continuously" }"
                 ].map((phase, index) => (
                   <div key={index} className="flex items-start gap-4 p-4 bg-white/5 rounded-xl border border-white/10">"
                     <div className="bg-gradient-to-r from-purple-500 to-blue-500 text-white font-bold px-3 py-1 rounded-full text-sm">"

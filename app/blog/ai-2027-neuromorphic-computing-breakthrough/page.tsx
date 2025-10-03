@@ -116,7 +116,6 @@ export default function AI2027NeuromorphicComputingBreakthrough() {
         </div>
 
         <h3 className="text-2xl font-bold text-gray-900 mt-6 mb-4">Real-World Applications</h3>"
-        
         <div className="space-y-6 mb-8">"
           <div className="bg-white border border-gray-200 rounded-lg p-6">"
             <h4 className="text-xl font-bold text-gray-900 mb-3">🏭 Autonomous Manufacturing</h4>"

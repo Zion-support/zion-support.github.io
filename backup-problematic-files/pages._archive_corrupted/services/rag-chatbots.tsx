@@ -116,7 +116,6 @@ import React from 'react'; import Link from 'next/link'; import { MessageCircle,
           <div className="flex items-center gap-3 mb-6">"
             <div className="p-3 rounded-lg bg-purple-600 text-white w-fit">"
               <MessageCircle className="w-6 h-6" />"
-
             <h1 className="text-3xl font-bold text-gray-900">RAG Knowledge Chatbots</h1>"
           <p className="text-gray-700 text-lg max-w-3xl">"
 </p>

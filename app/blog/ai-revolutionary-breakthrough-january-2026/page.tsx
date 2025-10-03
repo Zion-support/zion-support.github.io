@@ -102,7 +102,6 @@ export default function AIRevolutionaryBreakthrough2026() {
       <main className="py-20">"
         <div className="container mx-auto px-6">"
           <div className="max-w-4xl mx-auto">"
-            
             {/* Article Meta */}
             <div className="flex items-center gap-6 mb-12 text-gray-600">"
               <div className="flex items-center gap-2">"

@@ -87,7 +87,6 @@ export default function February2025QuantumAIBreakthroughPage() {
 
             <div className="bg-gradient-to-r from-indigo-500/10 to-purple-500/10 backdrop-blur-sm rounded-2xl p-8 border border-indigo-500/20 mb-12">"
               <h2 className="text-3xl font-bold text-white mb-6">Revolutionary Performance Metrics</h2>"
-              
               <div className="grid md:grid-cols-2 gap-8 mb-8">"
                 <div>
                   <h3 className="text-xl font-bold text-indigo-400 mb-4">300% Performance Improvement</h3>"
@@ -110,7 +109,6 @@ export default function February2025QuantumAIBreakthroughPage() {
 
             <div className="bg-gradient-to-r from-blue-500/10 to-cyan-500/10 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/20 mb-12">"
               <h2 className="text-3xl font-bold text-white mb-6">Enterprise Implementation Success Stories</h2>"
-              
               <div className="space-y-8">"
                 <div className="bg-white/5 rounded-xl p-6 border border-white/10">"
                   <h3 className="text-xl font-bold text-white mb-4">🏦 Global Financial Services Leader</h3>"
@@ -146,7 +144,6 @@ export default function February2025QuantumAIBreakthroughPage() {
 
             <div className="bg-gradient-to-r from-emerald-500/10 to-teal-500/10 backdrop-blur-sm rounded-2xl p-8 border border-emerald-500/20 mb-12">"
               <h2 className="text-3xl font-bold text-white mb-6">Implementation Roadmap</h2>"
-              
               <div className="grid md:grid-cols-3 gap-6">"
                 <div className="bg-white/5 rounded-xl p-6 border border-white/10">"
                   <h3 className="text-lg font-bold text-emerald-400 mb-4">Week 1-4: Foundation Setup</h3>"
@@ -177,7 +174,6 @@ export default function February2025QuantumAIBreakthroughPage() {
 
             <div className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/20 mb-12">"
               <h2 className="text-3xl font-bold text-white mb-6">ROI Analysis and Business Impact</h2>"
-              
               <div className="grid md:grid-cols-3 gap-6">"
                 <div className="text-center">"
                   <div className="text-4xl font-extrabold text-purple-400 mb-2">20-30%</div>"

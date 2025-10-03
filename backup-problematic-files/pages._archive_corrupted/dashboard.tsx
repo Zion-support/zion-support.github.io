@@ -34,13 +34,11 @@ import React,{ useState } from 'react' import dynamic from 'next/dynamic' import
       "icon": <Cloud className="w-6 h-6"  />"
       "icon": <Zap className="w-6 h-6"  />"
       "icon": <Shield className="w-6 h-6"  />"
-
     <>"
       <SEO title="Dashboard - Zion Tech Group"""
         description="Zion Tech Group dashboard showing project status, revenue, and key performance metrics."""
         keywords="dashboard, projects, revenue, metrics, Zion Tech Group"""
         canonical=""https": //ziontechgroup.com/dashboard""
-
        />
 
       <PageTransition>
@@ -56,7 +54,6 @@ import React,{ useState } from 'react' import dynamic from 'next/dynamic' import
                 animate={{ "opacity": 1, "y": 0 }}""
                 transition={{ "duration": 0.6 }}""
                 className="flex items-center justify-between""
-
               >
 </motion>
                 <div>
@@ -71,8 +68,6 @@ import React,{ useState } from 'react' import dynamic from 'next/dynamic' import
                     className="bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold flex items-center gap-2""
 </motion>"
                     <ArrowRight className="w-5 h-5"  />"
-
-
                   </motion.button>
               </motion.div>
 
@@ -135,7 +130,6 @@ import React,{ useState } from 'react' import dynamic from 'next/dynamic' import
                           <div className="text-right">"
                             <p className="font-semibold text-gray-900">{service.revenue}</p>""
                             <p className="text-sm text-gray-600">Revenue</p>"
-
           </section>
         </main>
       

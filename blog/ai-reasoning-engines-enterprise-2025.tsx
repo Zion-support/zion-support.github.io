@@ -310,7 +310,7 @@ export default function AIReasoningEngines2025() {
                     prompting in action with real examples.
                   </p>
                   <a 
-                    href="/contact" 
+                    href="/contact"
                     className="bg-white text-violet-600 px-8 py-3 rounded-lg font-semibold hover:bg-violet-50 transition-colors inline-block"
                   >
                     Register for Free Workshop →

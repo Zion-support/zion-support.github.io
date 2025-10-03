@@ -48,7 +48,6 @@ export default function AISalesForecastingInventory() {
               </ul>
 
               <h2 className="text-xl font-semibold">Integrations</h2>""
-
                 <li>Shopify, Magento, BigCommerce</li>
                 <li>Netsuite, QuickBooks, Odoo, SAP</li>
                 <li>Snowflake, BigQuery, Redshift</li>
@@ -65,7 +64,6 @@ export default function AISalesForecastingInventory() {
             <div className="mt-4 flex gap-3">"
               <Link href="/contact" className="px-5 py-2 rounded-lg bg-blue-600 text-white">Contact""
               <a href=""https": //ziontechgroup.com/services" className="px-5 py-2 rounded-lg border">All Services</a>"
-
         </section>
       </main>
     </>

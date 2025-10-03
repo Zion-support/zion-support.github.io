@@ -53,7 +53,6 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     const { onError } = this.props;
-    const { errorId } = this.state;
 
     // Update state with error info
     this.setState({ errorInfo });
@@ -62,7 +61,7 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
     analyticsUtils.trackEvent('error_boundary_caught', {
       error_id: errorId,
       error_message: error.message,
-      error_stack: error.stack?.substring(0, 500), // Truncate for analytics
+      error_stack: error.stack?.substring(0, 500),
       component_stack: errorInfo.componentStack?.substring(0, 500) || '',
       retry_count: this.retryCount
     });
@@ -70,14 +69,6 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
     // Call custom error handler
     if (onError) {
       onError(error, errorInfo);
-    }
-
-    // Send to analytics (placeholder for analytics integration)
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'exception', {
-        description: error.toString(),
-        fatal: false
-      });
     }
   }
 
@@ -91,8 +82,13 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
         errorId: ''
       });
 
+<<<<<<< HEAD
       // Track retry attempt
       analyticsUtils.trackEvent('error_boundary_retry', {
+=======
+      // Track retry attempt (placeholder)
+      console.log('Error boundary retry:', {
+>>>>>>> b77d6e85dedf0119e2c452a12dd454b506696d80
         error_id: this.state.errorId,
         retry_count: this.retryCount
       });
@@ -113,8 +109,13 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
       url: window.location.href
     };
 
+<<<<<<< HEAD
     // Track error report
     analyticsUtils.trackEvent('error_boundary_report', {
+=======
+    // Track error report (placeholder)
+    console.log('Error boundary report:', {
+>>>>>>> b77d6e85dedf0119e2c452a12dd454b506696d80
       error_id: errorId,
       reported: true
     });

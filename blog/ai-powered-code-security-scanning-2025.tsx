@@ -179,7 +179,6 @@ export default function AIPoweredCodeSecurityScanning2025() {
                   <pre className="text-xs text-gray-300 overflow-x-auto">
 {`❌ Vulnerable Code:
 query = f"SELECT * FROM users WHERE id = {user_id}"
-
 ✓ AI Suggestion:
 query = "SELECT * FROM users WHERE id = ?"
 cursor.execute(query, (user_id,))`}
@@ -375,13 +374,13 @@ cursor.execute(query, (user_id,))`}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
-              href="/contact" 
+              href="/contact"
               className="bg-gradient-to-r from-red-500 to-orange-600 hover:from-red-400 hover:to-orange-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-red-500/50 transform hover:-translate-y-1"
             >
               Start Free Security Scan
             </a>
             <a 
-              href="/case-studies" 
+              href="/case-studies"
               className="border-2 border-red-500 text-red-400 hover:bg-red-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               View Security Case Studies

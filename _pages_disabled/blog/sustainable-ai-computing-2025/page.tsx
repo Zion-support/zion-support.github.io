@@ -149,7 +149,7 @@ export default function SustainableAIComputingPage() {
                   <div className="bg-white p-4 rounded-lg border-2 border-emerald-200">
                     <p className="text-sm text-gray-600 italic">
                       "We reduced model training from 10,000 GPU hours to 500 while improving accuracy 2%. 
-                      Energy costs dropped $250K per model—with better results." 
+                      Energy costs dropped $250K per model—with better results."
                       <span className="font-semibold">— ML Lead, Fortune 100 Tech Company</span>
                     </p>
                   </div>
@@ -333,7 +333,7 @@ export default function SustainableAIComputingPage() {
 
                   <p className="text-green-700 text-sm italic">
                     "Sustainability wasn't just good ethics—it improved our product and profits. Green AI 
-                    runs faster, costs less, and customers love it. Our valuation increased $500M." 
+                    runs faster, costs less, and customers love it. Our valuation increased $500M."
                     <span className="font-semibold">— CEO, Enterprise SaaS</span>
                   </p>
                 </div>
@@ -385,7 +385,7 @@ export default function SustainableAIComputingPage() {
 
                   <p className="text-blue-700 text-sm italic">
                     "Sustainable AI let us do MORE research at LOWER cost with ZERO guilt. We're training 
-                    models 3x faster while using 95% less energy." 
+                    models 3x faster while using 95% less energy."
                     <span className="font-semibold">— Director, AI Research Center</span>
                   </p>
                 </div>
@@ -437,7 +437,7 @@ export default function SustainableAIComputingPage() {
 
                   <p className="text-amber-700 text-sm italic">
                     "Sustainable AI transformed our operations AND our brand. We're carbon-negative while 
-                    competitors burn fossil fuels. Customers choosing us based on sustainability alone." 
+                    competitors burn fossil fuels. Customers choosing us based on sustainability alone."
                     <span className="font-semibold">— Chief Sustainability Officer</span>
                   </p>
                 </div>

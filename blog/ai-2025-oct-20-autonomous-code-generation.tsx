@@ -10,8 +10,8 @@ const AutonomousCodeGeneration = () => {
       <Helmet>
         <title>Autonomous Code Generation 2025 — AI Writes Production Code at 10x Developer Velocity</title>
         <meta 
-          name="description" 
-          content="Master autonomous AI code generation with proven production strategies. Achieve 10x development velocity, 95% code quality, and 80% reduction in bugs. Complete guide with real-world implementations, safety patterns, and best practices." 
+          name="description"
+          content="Master autonomous AI code generation with proven production strategies. Achieve 10x development velocity, 95% code quality, and 80% reduction in bugs. Complete guide with real-world implementations, safety patterns, and best practices."
         />
         <meta name="keywords" content="AI code generation, autonomous coding, AI developers, code generation, LLM coding, software development AI, production code generation, developer productivity" />
         <link rel="canonical" href="https://ziontechgroup.com/blog/ai-2025-oct-20-autonomous-code-generation" />

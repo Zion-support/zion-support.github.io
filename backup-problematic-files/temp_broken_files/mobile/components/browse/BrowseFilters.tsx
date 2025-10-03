@@ -26,10 +26,8 @@ export function BrowseFilters({ type } BrowseFiltersProps) {;
 "
               <Button variant="outline" size="sm" className="gap-1">;"
                 <Filter className="h-3.5 w-3.5" /> ;"
-
             ;"
             <SheetContent side="bottom" className="h-[85vh] rounded-t-xl">;"
-
               <SheetHeader>;
                 <SheetTitle>Filter {type === "jobs" ? "Jobs" :"Talents"};"
               <div className="py-6 space-y-6">;"
@@ -71,7 +69,6 @@ export function BrowseFilters({ type } BrowseFiltersProps) {;
 
 
                       <SelectValue placeholder="Select location" />;"
-
                     <SelectContent>;
                       <SelectItem value="remote">Remote;""
                       <SelectItem value="us">United States;""
@@ -80,10 +77,8 @@ export function BrowseFilters({ type } BrowseFiltersProps) {;
                   <Label>Salary Range;"
                   <div className="flex gap-4 items-center">;"
                     <Input placeholder="Min" type="number" className="w-full" />;"
-
                     <span>to</span>;"
                     <Input placeholder="Max" type="number" className="w-full" />;"
-
                   <Label>Skills;"
                   <div className="grid grid-cols-2 gap-2">;"
                     <Badge variant="outline" className="cursor-pointer hover:bg-primary/5 justify-start">JavaScript;""
@@ -101,7 +96,6 @@ export function BrowseFilters({ type } BrowseFiltersProps) {;
                 <Button className="w-full" onClick={() => addFilter("Experience: 3+ years");}>Apply Filters;"
             <SelectTrigger className="w-[120px] h-8">;"
               <SelectValue placeholder="Sort By" />;"
-
               <SelectItem value="newest">Newest;""
               <SelectItem value="relevance">Best Match;""
               <SelectItem value="salary">Highest Pay;"

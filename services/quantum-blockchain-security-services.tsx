@@ -19,13 +19,13 @@ export default function QuantumBlockchainSecurityServices() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <a 
-                href="/contact" 
+                href="/contact"
                 className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg"
               >
                 Schedule Consultation
               </a>
               <a 
-                href="/case-studies/global-bank-quantum-blockchain-transformation-2025" 
+                href="/case-studies/global-bank-quantum-blockchain-transformation-2025"
                 className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
               >
                 View Case Study →
@@ -141,7 +141,7 @@ export default function QuantumBlockchainSecurityServices() {
                 </li>
               </ul>
               <a 
-                href="/contact?package=essential" 
+                href="/contact?package=essential"
                 className="block text-center bg-purple-500/20 hover:bg-purple-500 text-purple-400 hover:text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 border border-purple-500/30"
               >
                 Get Started
@@ -177,7 +177,7 @@ export default function QuantumBlockchainSecurityServices() {
                 </li>
               </ul>
               <a 
-                href="/contact?package=enterprise" 
+                href="/contact?package=enterprise"
                 className="block text-center bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
               >
                 Schedule Consultation
@@ -210,7 +210,7 @@ export default function QuantumBlockchainSecurityServices() {
                 </li>
               </ul>
               <a 
-                href="/contact?package=global" 
+                href="/contact?package=global"
                 className="block text-center bg-cyan-500/20 hover:bg-cyan-500 text-cyan-400 hover:text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 border border-cyan-500/30"
               >
                 Contact Sales
@@ -260,7 +260,7 @@ export default function QuantumBlockchainSecurityServices() {
               </div>
             </div>
             <a 
-              href="/contact" 
+              href="/contact"
               className="inline-block bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-4 px-12 rounded-xl transition-all duration-300 shadow-lg text-lg"
             >
               Transform Your Security Today →

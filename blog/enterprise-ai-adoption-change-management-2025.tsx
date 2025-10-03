@@ -293,13 +293,13 @@ export default function EnterpriseAIAdoptionChangeManagement2025() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
-              href="/contact" 
+              href="/contact"
               className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105"
             >
               Schedule Strategy Session
             </a>
             <a 
-              href="/blog" 
+              href="/blog"
               className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
             >
               Explore More Guides

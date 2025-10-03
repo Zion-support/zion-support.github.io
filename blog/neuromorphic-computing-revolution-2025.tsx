@@ -145,7 +145,7 @@ const NeuromorphicComputingRevolution2025: React.FC = () => {
                 Zion Tech's neuromorphic engineering team can help you leverage this breakthrough technology.
               </p>
               <a 
-                href="/contact" 
+                href="/contact"
                 className="inline-block bg-white text-purple-600 font-bold py-4 px-8 rounded-xl hover:bg-gray-100 transition-all duration-300 shadow-lg"
               >
                 Get Started Today

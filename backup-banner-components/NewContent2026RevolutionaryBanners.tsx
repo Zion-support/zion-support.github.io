@@ -491,7 +491,7 @@ export const Ultimate2026ContentShowcaseBanner = () => (
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link 
-            href="/blog" 
+            href="/blog"
             className="inline-block bg-white text-indigo-600 px-10 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all hover:scale-105 shadow-lg"
           >
             View All Articles & Insights →

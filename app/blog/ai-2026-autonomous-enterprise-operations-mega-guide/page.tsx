@@ -81,7 +81,6 @@ export default function AutonomousEnterpriseOperationsGuide() {
           <div className="max-w-4xl mx-auto">"
             <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">"
               <h2 className="text-3xl font-bold text-white mb-6">🚀 The Autonomous Operations Framework</h2>"
-              
               <div className="space-y-8">"
                 <div>
                   <h3 className="text-2xl font-bold text-blue-400 mb-4">Phase 1: Foundation & Assessment (Months 1-3)</h3>"

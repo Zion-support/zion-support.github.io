@@ -190,13 +190,13 @@ export default function RealTimeAIAnalytics2026() {
           </p>
           <div className="flex flex-wrap gap-4">
             <Link 
-              href="/contact" 
+              href="/contact"
               className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Get Started
             </Link>
             <Link 
-              href="/services" 
+              href="/services"
               className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
             >
               View Services

@@ -351,7 +351,7 @@ export default function AISecurityMeshZeroTrust2025() {
                   Zion Tech Group's security experts will design a comprehensive AI Security Mesh tailored to your organization's unique requirements and risk profile.
                 </p>
                 <a 
-                  href="/contact" 
+                  href="/contact"
                   className="inline-block bg-gradient-to-r from-red-500 to-orange-500 text-white font-bold py-4 px-8 rounded-xl hover:from-red-600 hover:to-orange-600 transition-all duration-300 transform hover:scale-105"
                 >
                   Get Your Security Assessment →

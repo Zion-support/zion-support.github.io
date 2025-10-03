@@ -50,13 +50,13 @@ export default function Fortune500AITransformation2025() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
-                href="#transformation-results" 
+                href="#transformation-results"
                 className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
               >
                 View Results
               </a>
               <a 
-                href="/contact" 
+                href="/contact"
                 className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
               >
                 Start Your Transformation
@@ -405,7 +405,7 @@ export default function Fortune500AITransformation2025() {
             </p>
             
             <a 
-              href="/contact" 
+              href="/contact"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50"
             >
               <span>Start Your Transformation</span>
@@ -427,13 +427,13 @@ export default function Fortune500AITransformation2025() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
-              href="/contact" 
+              href="/contact"
               className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50"
             >
               Schedule Consultation
             </a>
             <a 
-              href="/services" 
+              href="/services"
               className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               Explore Our Services

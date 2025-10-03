@@ -44,7 +44,6 @@ export default function AICybersecurity2026() {
         </div>
 
         <h2 className="text-3xl font-bold text-gray-900 mb-6">The AI Security Revolution</h2>"
-        
         <p className="text-gray-700 mb-6">"
           Traditional cybersecurity approaches are no longer sufficient against sophisticated AI-powered attacks. 
           The new paradigm requires AI-powered defenses that can adapt, learn, and respond in real-time to 
@@ -52,7 +51,6 @@ export default function AICybersecurity2026() {
         </p>
 
         <h3 className="text-2xl font-bold text-gray-900 mb-4">Advanced Threat Detection</h3>"
-        
         <div className="grid md:grid-cols-2 gap-6 mb-8">"
           <div className="bg-white border border-gray-200 rounded-lg p-6">"
             <h4 className="text-xl font-bold text-red-600 mb-3">🎯 Detection Capabilities</h4>"
@@ -75,7 +73,6 @@ export default function AICybersecurity2026() {
         </div>
 
         <h3 className="text-2xl font-bold text-gray-900 mb-4">Zero-Trust Architecture</h3>"
-        
         <div className="bg-gray-50 p-6 rounded-lg mb-8">"
           <h4 className="text-xl font-bold text-gray-900 mb-4">Core Principles</h4>"
           <div className="grid md:grid-cols-3 gap-4">"
@@ -95,7 +92,6 @@ export default function AICybersecurity2026() {
         </div>
 
         <h2 className="text-3xl font-bold text-gray-900 mb-6">AI-Powered Security Solutions</h2>"
-        
         <div className="space-y-6 mb-8">"
           <div className="border-l-4 border-red-500 pl-6">"
             <h3 className="text-xl font-bold text-gray-900 mb-2">Behavioral Analytics</h3>"
@@ -121,7 +117,6 @@ export default function AICybersecurity2026() {
         </div>
 
         <h2 className="text-3xl font-bold text-gray-900 mb-6">Implementation Strategies</h2>"
-        
         <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-6 rounded-xl mb-8">"
           <h3 className="text-2xl font-bold text-gray-900 mb-4">Best Practices for AI Security</h3>"
           <ol className="text-gray-700 space-y-3">"
@@ -134,7 +129,6 @@ export default function AICybersecurity2026() {
         </div>
 
         <h2 className="text-3xl font-bold text-gray-900 mb-6">ROI and Business Impact</h2>"
-        
         <div className="grid md:grid-cols-2 gap-6 mb-8">"
           <div className="bg-white border border-gray-200 rounded-lg p-6">"
             <h4 className="text-xl font-bold text-green-600 mb-3">💰 Cost Savings</h4>"
@@ -157,7 +151,6 @@ export default function AICybersecurity2026() {
         </div>
 
         <h2 className="text-3xl font-bold text-gray-900 mb-6">Future Security Landscape</h2>"
-        
         <p className="text-gray-700 mb-6">"
           The future of cybersecurity will be defined by AI-human collaboration, where intelligent systems 
           handle routine threats while human experts focus on complex, strategic security challenges. 

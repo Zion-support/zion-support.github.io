@@ -83,7 +83,6 @@ export default function UltraIntelligentAutonomousSystemsPage() {
           </div>
 
           <h2 className="text-3xl font-bold text-white mb-6">The Ultra-Intelligence Revolution</h2>"
-          
           <h3 className="text-2xl font-bold text-purple-400 mb-4">What Makes UIAS Revolutionary</h3>"
           <p className="text-gray-300 mb-6">"
             Our Ultra-Intelligent Autonomous Systems represent the pinnacle of AI development, featuring:
@@ -98,7 +97,6 @@ export default function UltraIntelligentAutonomousSystemsPage() {
           </ul>
 
           <h3 className="text-2xl font-bold text-purple-400 mb-4">Key Technical Breakthroughs</h3>"
-          
           <div className="grid md:grid-cols-3 gap-6 mb-8">"
             <div className="bg-gradient-to-br from-purple-900/20 to-indigo-900/20 rounded-xl p-6 border border-purple-500/20">"
               <h4 className="text-xl font-bold text-purple-400 mb-3">Meta-Cognitive Processing</h4>"
@@ -129,7 +127,6 @@ export default function UltraIntelligentAutonomousSystemsPage() {
           </div>
 
           <h2 className="text-3xl font-bold text-white mb-6">Real-World Impact</h2>"
-          
           <h3 className="text-2xl font-bold text-purple-400 mb-4">Fortune 500 Implementation Results</h3>"
           <p className="text-gray-300 mb-6">"
             Our UIAS implementation across Fortune 500 companies has delivered:
@@ -158,7 +155,6 @@ export default function UltraIntelligentAutonomousSystemsPage() {
           </div>
 
           <h2 className="text-3xl font-bold text-white mb-6">Implementation Roadmap</h2>"
-          
           <div className="space-y-6 mb-8">"
             <div className="bg-gradient-to-r from-purple-500/10 to-indigo-500/10 rounded-xl p-6 border border-purple-500/20">"
               <h3 className="text-xl font-bold text-purple-400 mb-3">Phase 1: Foundation (Months 1-3)</h3>"
@@ -198,7 +194,6 @@ export default function UltraIntelligentAutonomousSystemsPage() {
           </div>
 
           <h2 className="text-3xl font-bold text-white mb-6">ROI and Value Proposition</h2>"
-          
           <div className="grid md:grid-cols-2 gap-6 mb-8">"
             <div className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-xl p-6 border border-green-500/30">"
               <h3 className="text-xl font-bold text-green-400 mb-4">Immediate Benefits</h3>"

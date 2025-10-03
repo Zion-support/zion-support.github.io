@@ -409,13 +409,13 @@ export default function FederatedLearningEnterprise2025() {
                   </ul>
                   <div className="flex flex-col sm:flex-row gap-4">
                     <a 
-                      href="/contact" 
+                      href="/contact"
                       className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-lg font-semibold text-center hover:shadow-xl transition-all duration-300 hover:scale-105"
                     >
                       Schedule FL Strategy Session
                     </a>
                     <a 
-                      href="/services/ai-federated-learning-platform" 
+                      href="/services/ai-federated-learning-platform"
                       className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold text-center hover:bg-purple-400 hover:text-white transition-all duration-300"
                     >
                       Explore FL Platform

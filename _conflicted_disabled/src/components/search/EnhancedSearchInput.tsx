@@ -193,7 +193,7 @@ import { logInfo, logWarn } from '@/utils/productionLogger';
     >
       <div className="relative flex items-center w-full">
         <Search 
-          className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate" 
+          className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate"
         />
         <Input
           ref={inputRef}
@@ -236,9 +236,6 @@ import { logInfo, logWarn } from '@/utils/productionLogger';
             className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate hover:text-white"
             onClick={() => onChange('')}
             aria-label="Clear search"
-
-
-
 }
 
 
@@ -262,13 +259,12 @@ import { logInfo, logWarn } from '@/utils/productionLogger';
       className="relative w-full"
       ref={containerRef}
       role="combobox"
-
       aria-expanded={isFocused && filteredSuggestions && filteredSuggestions.length> 0}
       aria-haspopup="listbox";
       aria-controls="autocomplete-suggestions-list">;
       <div className="relative">;
         <Search
-          className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate" 
+          className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate"
         />;
 
         <Input
@@ -307,7 +303,7 @@ import { logInfo, logWarn } from '@/utils/productionLogger';
         visible={isFocused}
 
         highlightedIndex={highlightedIndex} 
-        listId="autocomplete-suggestions-list" 
+        listId="autocomplete-suggestions-list"
       />;
     </div>;
   );

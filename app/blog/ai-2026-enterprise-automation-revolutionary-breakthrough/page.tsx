@@ -52,7 +52,6 @@ export default function AI2026EnterpriseAutomationRevolutionaryBreakthrough() {
 
         {/* Content Sections */}
         <div className="max-w-4xl mx-auto space-y-16">"
-          
           {/* The Breakthrough */}
           <section>
             <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">"

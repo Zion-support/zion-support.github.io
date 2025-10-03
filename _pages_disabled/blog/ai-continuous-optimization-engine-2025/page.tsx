@@ -64,13 +64,13 @@ export default function AIContinuousOptimizationEnginePage() {
           
           <div className="flex flex-wrap gap-4">
             <Link 
-              href="/contact" 
+              href="/contact"
               className="bg-green-400 text-emerald-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-green-300 transition-all transform hover:scale-105 shadow-xl"
             >
               🎯 Deploy Self-Optimization Now
             </Link>
             <Link 
-              href="/services/ai-business-intelligence-2025" 
+              href="/services/ai-business-intelligence-2025"
               className="bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/30 transition-all border-2 border-white"
             >
               Explore AI Solutions →
@@ -445,13 +445,13 @@ export default function AIContinuousOptimizationEnginePage() {
 
             <div className="flex flex-wrap gap-4">
               <Link 
-                href="/contact" 
+                href="/contact"
                 className="bg-green-400 text-emerald-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-green-300 transition-all transform hover:scale-105 shadow-xl"
               >
                 🚀 Start Continuous Optimization
               </Link>
               <Link 
-                href="/case-studies" 
+                href="/case-studies"
                 className="bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/30 transition-all border-2 border-white"
               >
                 View Success Stories →

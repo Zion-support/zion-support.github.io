@@ -302,13 +302,13 @@ export default function ZeroTrustAISecurityFramework2025() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <a 
-                    href="/contact" 
+                    href="/contact"
                     className="bg-gradient-to-r from-red-500 to-orange-600 hover:from-red-400 hover:to-orange-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center"
                   >
                     Schedule Security Assessment
                   </a>
                   <a 
-                    href="/case-studies/fortune-500-zero-trust-ai-security-success" 
+                    href="/case-studies/fortune-500-zero-trust-ai-security-success"
                     className="bg-white/10 hover:bg-white/20 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 border border-red-400/30 text-center"
                   >
                     View Case Studies

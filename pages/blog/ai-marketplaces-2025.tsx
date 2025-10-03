@@ -137,13 +137,13 @@ const AIMarketplaces2025: NextPage = () => {,,,
               </p>
               <div className="flex flex-col sm: flex-row gap-4">";,";,";,
                 <Link 
-                  href="/contact" 
+                  href="/contact"
                   className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover: bg-gray-100 transition-colors text-center",";,";,
                 >
                   Get Started Today
                 </Link>
                 <Link 
-                  href="/services/ai-development" 
+                  href="/services/ai-development"
                   className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover: bg-white hover:text-blue-600 transition-colors text-center",";,";,
                 >
                   Learn About Our AI Services

@@ -37,13 +37,13 @@ export default function AI2026JuneMegaEnterpriseAutomation() {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <a 
-              href="#automation-framework" 
+              href="#automation-framework"
               className="bg-gradient-to-r from-emerald-500 to-cyan-600 hover:from-emerald-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-emerald-500/50 transform hover:-translate-y-1"
             >
               Explore Framework →
             </a>
             <a 
-              href="/contact" 
+              href="/contact"
               className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 transform hover:-translate-y-1"
             >
               Get Implementation Guide
@@ -307,24 +307,24 @@ export default function AI2026JuneMegaEnterpriseAutomation() {
                   <div>
                     <label className="block text-gray-300 mb-2">Annual Revenue ($M)</label>
                     <input 
-                      type="number" 
-                      placeholder="1000" 
+                      type="number"
+                      placeholder="1000"
                       className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400"
                     />
                   </div>
                   <div>
                     <label className="block text-gray-300 mb-2">Current Automation Level (%)</label>
                     <input 
-                      type="number" 
-                      placeholder="30" 
+                      type="number"
+                      placeholder="30"
                       className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400"
                     />
                   </div>
                   <div>
                     <label className="block text-gray-300 mb-2">Number of Employees</label>
                     <input 
-                      type="number" 
-                      placeholder="10000" 
+                      type="number"
+                      placeholder="10000"
                       className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400"
                     />
                   </div>
@@ -367,13 +367,13 @@ export default function AI2026JuneMegaEnterpriseAutomation() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
-              href="/contact" 
+              href="/contact"
               className="bg-gradient-to-r from-emerald-500 to-cyan-600 hover:from-emerald-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-emerald-500/50 transform hover:-translate-y-1"
             >
               Get Free Consultation
             </a>
             <a 
-              href="/case-studies/fortune-500-ai-2026-breakthrough-mega-success" 
+              href="/case-studies/fortune-500-ai-2026-breakthrough-mega-success"
               className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 transform hover:-translate-y-1"
             >
               View Success Stories →

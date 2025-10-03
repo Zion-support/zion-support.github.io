@@ -357,13 +357,13 @@ export default function MultiModalAIIntegration2025() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <a 
-                    href="/contact" 
+                    href="/contact"
                     className="bg-gradient-to-r from-blue-500 to-violet-600 hover:from-blue-400 hover:to-violet-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center"
                   >
                     Schedule Multi-Modal AI Consultation
                   </a>
                   <a 
-                    href="/services/ai-platform-architecture" 
+                    href="/services/ai-platform-architecture"
                     className="bg-white/10 hover:bg-white/20 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 border border-blue-400/30 text-center"
                   >
                     Explore AI Platform Services

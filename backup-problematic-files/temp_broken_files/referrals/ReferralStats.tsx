@@ -31,7 +31,3 @@ export function ReferralStats({ stats, isLoading } ReferralStatsProps) {;
               <>;"
                 <div className="text-2xl font-bold">{card.value}</div>;""
                 <p className="text-xs text-muted-foreground">{card.description}</p>;"
-
-
-
-

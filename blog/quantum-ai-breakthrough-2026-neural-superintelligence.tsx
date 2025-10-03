@@ -265,13 +265,13 @@ const QuantumAIBreakthrough2026NeuralSuperintelligence = () => {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link 
-                to="/contact" 
+                to="/contact"
                 className="px-8 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all"
               >
                 Explore Quantum AI Solutions
               </Link>
               <Link 
-                to="/services/quantum-ai" 
+                to="/services/quantum-ai"
                 className="px-8 py-3 border border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-all"
               >
                 View Services

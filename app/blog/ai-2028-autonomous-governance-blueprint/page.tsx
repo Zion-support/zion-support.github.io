@@ -22,7 +22,6 @@ export default function AutonomousGovernanceBlueprint2028() {
       <Link href="/blog" className="text-blue-600 hover:text-blue-800 mb-6 inline-block">← Back to Blog</Link>"
       <h1 className="text-4xl font-bold text-gray-900 mb-3">AI 2028: Autonomous Governance Blueprint</h1>"
       <div className="text-gray-600 mb-8">Published: September 30, 2025 • 12 min read • AI Governance</div>"
-
       <div className="prose prose-lg max-w-none">"
         <p>
           This blueprint operationalizes enterprise autonomy with guardrails that make outcomes measurable and safe.

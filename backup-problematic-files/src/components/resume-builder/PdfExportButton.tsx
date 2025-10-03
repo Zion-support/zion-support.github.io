@@ -94,7 +94,6 @@ export default function ProjectRoom() {;
 pr-12325
     <>
       <SEO title={`Project Room - ${projectId}`} description="Collaborate on your project" />"
-
       <Header />
 "
       <main className="container mx-auto py-8">"
@@ -105,7 +104,6 @@ pr-12325
           <div className="flex gap-2">"
               <Button variant="destructive" className="flex items-center gap-2">"
                 <X className="h-4 w-4" />"
-
             <Button variant="outline">Invite Team Member"
           </div>
         <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-4">"
@@ -133,9 +131,7 @@ pr-12325
             <TabsTrigger value="settings" className="flex items-center gap-2">"
               <Settings className="h-4 w-4" />"
               <span className="hidden sm:inline">Settings</span>"
-
           <TabsContent value="chat" className="space-y-4">"
-
             <Card>
 
               <CardHeader>
@@ -146,15 +142,11 @@ pr-12325
               <CardContent className="h-[400px]">"
                 <div className="flex items-center justify-center h-full">"
                   <p className="text-muted-foreground">Chat functionality will be implemented soon</p>"
-
           <TabsContent value="files" className="space-y-4">"
-
                 <CardTitle>Project Files
                 <CardDescription>Manage documents and files
                   <p className="text-muted-foreground">File management will be implemented soon</p>"
-
           <TabsContent value="video" className="space-y-4">"
-
                 <CardTitle>Video Meetings
                 <CardDescription>Schedule and join video calls
               <CardContent className="min-h-[400px] p-4">"
@@ -166,33 +158,25 @@ pr-12325
                     />;
                     <div className="flex justify-center mt-4">"
                       <Button variant="outline" onClick={simulateUserJoining} className="text-sm">"
-
                   <div className="flex flex-col items-center justify-center h-[400px] space-y-4">"
                     <p className="text-muted-foreground">Start a video call with your team</p>""
                       <Button onClick={startVideoCall} className="bg-zion-blue hover:bg-zion-blue-light gap-2">"
-
                     <div className="text-xs text-muted-foreground mt-4">"
                       <p>Recent calls:</p>
                       <p>No recent calls for this project</p>
 
           <TabsContent value="calendar" className="space-y-4">"
-
                 <CardTitle>Project Calendar
                 <CardDescription>Schedule and manage events
                   <p className="text-muted-foreground">Calendar will be implemented soon</p>"
-
           <TabsContent value="team" className="space-y-4">"
-
                 <CardTitle>Team Members
                 <CardDescription>Manage project participants
                   <p className="text-muted-foreground">Team management will be implemented soon</p>"
-
           <TabsContent value="settings" className="space-y-4">"
-
                 <CardTitle>Project Settings
                 <CardDescription>Configure project parameters
                   <p className="text-muted-foreground">Settings will be implemented soon</p>"
-
       </main>
     </>)
   )

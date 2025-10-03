@@ -28,5 +28,3 @@
 }/> </Button> </Link> <Link href=" #features"> <Button variant=" ghost"size=" lg"className=" text-white hover:bg-white/10" > See Features </Button> </Link> </div> </div> </div> </CardContent> </Card> </div> </div> </div> </div> </section>) ;
 };
 "
-
-

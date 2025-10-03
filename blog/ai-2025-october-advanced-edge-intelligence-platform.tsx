@@ -204,13 +204,13 @@ export default function AdvancedEdgeIntelligencePlatform2025() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a 
-                href="/contact" 
+                href="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 text-center"
               >
                 Schedule Consultation
               </a>
               <a 
-                href="/case-studies/fortune-500-edge-intelligence-platform-success-2025" 
+                href="/case-studies/fortune-500-edge-intelligence-platform-success-2025"
                 className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 text-center"
               >
                 View Case Study

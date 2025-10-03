@@ -60,7 +60,6 @@ export default function AIMetaCognitiveReasoning2026() {
 
         <section className="mb-8">"
           <h2 className="text-2xl font-bold text-gray-900 mb-4">Enterprise Applications & ROI</h2>"
-          
           <div className="grid md:grid-cols-2 gap-6 mb-6">"
             <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">"
               <h3 className="text-lg font-semibold text-blue-900 mb-3">💰 Financial Services</h3>"

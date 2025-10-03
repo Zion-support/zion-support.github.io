@@ -9,8 +9,8 @@ const EnterpriseLLMFineTuning2025: React.FC = () => {
       <Helmet>
         <title>Enterprise LLM Fine-Tuning 2025: From Foundation to Domain Expert | Zion Tech Group</title>
         <meta 
-          name="description" 
-          content="Master enterprise LLM fine-tuning with LoRA, QLoRA, and RLHF. Achieve 95%+ accuracy on domain tasks at 10x lower cost than training from scratch." 
+          name="description"
+          content="Master enterprise LLM fine-tuning with LoRA, QLoRA, and RLHF. Achieve 95%+ accuracy on domain tasks at 10x lower cost than training from scratch."
         />
         <meta name="keywords" content="LLM Fine-Tuning, LoRA, QLoRA, RLHF, Enterprise AI, Foundation Models, Domain Adaptation, AI Training" />
         <link rel="canonical" href="https://ziontechgroup.com/blog/enterprise-llm-fine-tuning-2025" />

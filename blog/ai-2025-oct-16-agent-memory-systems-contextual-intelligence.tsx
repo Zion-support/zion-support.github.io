@@ -174,7 +174,6 @@ class LongTermMemory:
     def __init__(self, redis_client):
         self.redis = redis_client
         self.timeline_key = "timeline"
-    
     def record_episode(self, user_id, event_type, data):
         episode = {
             "timestamp": datetime.now().isoformat(),
@@ -379,7 +378,6 @@ def prune_memory_store(vector_store, threshold=0.3):
         3. User preferences expressed
         4. Action items or decisions made
         """
-        
         summary = await llm.generate(summary_prompt)
         
         # Store summary with references to original memories
@@ -575,13 +573,13 @@ def prune_memory_store(vector_store, threshold=0.3):
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <a 
-                    href="/contact" 
+                    href="/contact"
                     className="bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold text-center transition-colors"
                   >
                     Schedule Architecture Review
                   </a>
                   <a 
-                    href="/services/ai-platform-architecture" 
+                    href="/services/ai-platform-architecture"
                     className="border border-purple-400 text-purple-300 hover:bg-purple-500/10 px-6 py-3 rounded-lg font-semibold text-center transition-colors"
                   >
                     Explore AI Platform Services

@@ -77,7 +77,6 @@ export default function AI2026EnterpriseAutomationRevolution() {
       {/* Core Automation Technologies */}
       <div className="space-y-8 mb-12">"
         <h2 className="text-3xl font-bold text-gray-900 mb-6">Core Automation Technologies</h2>"
-        
         <div className="grid md:grid-cols-2 gap-8">"
           <div className="bg-gradient-to-br from-blue-50 to-purple-50 p-8 rounded-2xl border border-blue-200">"
             <div className="flex items-center gap-3 mb-4">"
@@ -197,7 +196,6 @@ export default function AI2026EnterpriseAutomationRevolution() {
       {/* Implementation Framework */}
       <div className="space-y-8 mb-12">"
         <h2 className="text-3xl font-bold text-gray-900 mb-6">Implementation Framework</h2>"
-        
         <div className="space-y-6">"
           <div className="flex gap-6 p-6 bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl border border-blue-200">"
             <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg flex-shrink-0">"

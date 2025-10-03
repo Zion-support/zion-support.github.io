@@ -344,7 +344,7 @@ export default function AIDigitalTwinEnterpriseOperations2025() {
                   operational excellence. Let's build your digital twin strategy together.
                 </p>
                 <a 
-                  href="/contact" 
+                  href="/contact"
                   className="inline-block bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-2xl transition-all duration-300 hover:scale-105"
                 >
                   Schedule Your Strategy Session →

@@ -266,13 +266,13 @@ const AI2025DecemberAdvancedAutonomousSystems = () => {
               
               <div className="mt-6 flex flex-col sm:flex-row gap-4">
                 <a 
-                  href="/contact" 
+                  href="/contact"
                   className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center"
                 >
                   Schedule Consultation
                 </a>
                 <a 
-                  href="/case-studies" 
+                  href="/case-studies"
                   className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center"
                 >
                   View Success Stories

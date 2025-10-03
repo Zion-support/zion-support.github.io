@@ -58,7 +58,6 @@ export default function Footer() {
                 <a href=mailto:kleber@ziontechgroup.com" className="hover:text-blue-400 transition-colors>"
               <div className="flex items-center">"
                 <MapPin className=w-4 h-4 mr-2 text-blue-400" />"
-
                 <span>364 E Main St STE 1008 Middletown DE 19709</span>
                 <span>
 </span>
@@ -78,20 +77,15 @@ export default function Footer() {
                   <ul className="space-y-1>"
                         <Link;
                           className="text-sm text-gray-300 hover:text-white transition-colors""
-
-                        
             <div className="space-y-3">;"
               <div className="flex items-center text-gray-300">;"
                 <Phone className="w-4 h-4 mr-3" />;"
-
                 <span>+1 302 464 0950</span>;
               </div>;"
                 <Mail className="w-4 h-4 mr-3" />;"
-
                 <span>kleber@ziontechgroup && ziontechgroup.com</span>;
               <div className="flex items-start text-gray-300">;"
                 <MapPin className="w-4 h-4 mr-3 mt-1 flex-shrink-0" />;"
-
                 <span>;
                   <br />;
                 </span>;
@@ -102,7 +96,6 @@ export default function Footer() {
                 <li key={link && link.name}>;
                     href={link && link.href}"
                     className="text-gray-300 hover:text-white transition-colors">;"
-
                   ;
                 </li>;
             </ul>;
@@ -112,26 +105,19 @@ export default function Footer() {
             <h3 className=text-lg font-semibold mb-6">Company</h3>""
             <ul className="space-y-3>"
                     className="text-gray-300 hover:text-blue-400 transition-colors duration-200""
-
-                  
-          
             <h4 className="text-lg font-semibold mb-4">Services</h4>""
 </ul>"
               <li><Link href="/ai-services" className="text-gray-300 hover:text-white">AI Services</li>""
               <li><Link href="/it-services" className="text-gray-300 hover:text-white">IT Services</li>""
               <li><Link href="/micro-saas" className="text-gray-300 hover:text-white">Micro SaaS</li>""
               <li><Link href="/consulting" className="text-gray-300 hover:text-white">Consulting</li>"
-          
             <h4 className="text-lg font-semibold mb-4">Contact</h4>""
             <div className="space-y-2 text-gray-300">"
                 <MapPin className="h-4 w-4 mr-2" />"
-
                 <span>364 E Main St STE 1008<br />Middletown DE 19709</span>
                 <Phone className="h-4 w-4 mr-2" />"
-
                 <span>+1 302 464 0950</span>
                 <Mail className="h-4 w-4 mr-2" />"
-
                 <span>kleber@ziontechgroup.com</span>"
           
 
@@ -145,17 +131,11 @@ export default function Footer() {
             <div className=text-gray-400 text-sm mb-4 md:mb-0">"
             <div className="flex space-x-6 text-sm>"
               <Link href="/privacy" className=text-gray-400 hover:text-white transition-colors">"
-
               <Link;"
                 href="/privacy"""
-
                 <Instagram className="w-5 h-5" />;"
-
               </a>;
             <div className="flex space-x-6 text-sm">;"
                 className="text-gray-400 hover:text-white transition-colors">;"
-
                 href="/terms"""
-
-
     </footer>)"

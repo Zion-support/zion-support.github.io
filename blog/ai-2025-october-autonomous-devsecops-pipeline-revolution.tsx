@@ -353,13 +353,13 @@ export default function AI2025OctoberAutonomousDevSecOpsPipelineRevolution() {
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <a 
-              href="/contact" 
+              href="/contact"
               className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50"
             >
               Schedule Consultation
             </a>
             <a 
-              href="/services/devsecops" 
+              href="/services/devsecops"
               className="bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-8 rounded-xl border border-cyan-500/30 transition-all duration-300"
             >
               Explore Services

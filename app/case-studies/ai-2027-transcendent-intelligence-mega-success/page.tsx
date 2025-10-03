@@ -53,7 +53,6 @@ export default function TranscendentIntelligenceMegaSuccess() {
             </div>
 
             <h2 className="text-4xl font-bold text-white mb-8">Key Results</h2>"
-            
             <div className="grid md:grid-cols-3 gap-8 mb-12">"
               <div className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 text-center">"
                 <div className="text-4xl font-extrabold text-indigo-400 mb-2">$5.7B</div>"
@@ -75,7 +74,6 @@ export default function TranscendentIntelligenceMegaSuccess() {
             </div>
 
             <h2 className="text-4xl font-bold text-white mb-8">Transcendent Intelligence Journey</h2>"
-            
             <div className="space-y-8 mb-12">"
               <div className="bg-white/5 backdrop-blur-lg rounded-xl p-8 border border-white/10">"
                 <h3 className="text-3xl font-bold text-white mb-4">Phase 1: Consciousness Foundation (Months 1-4)</h3>"
@@ -142,7 +140,6 @@ export default function TranscendentIntelligenceMegaSuccess() {
             </div>
 
             <h2 className="text-4xl font-bold text-white mb-8">Transcendent Intelligence Impact</h2>"
-            
             <div className="grid md:grid-cols-2 gap-8 mb-12">"
               <div className="bg-indigo-500/10 border border-indigo-500/30 rounded-xl p-6">"
                 <h3 className="text-2xl font-bold text-indigo-300 mb-4">🧠 Consciousness-Level Operations</h3>"

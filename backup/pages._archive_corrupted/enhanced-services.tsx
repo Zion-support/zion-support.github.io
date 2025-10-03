@@ -209,7 +209,6 @@ export default function EnhancedServices() {
       "benefits": "Handle 80% of inquiries automatically and improve satisfaction by 45%",
       "marketPrice": "Average market price: $2,500-10,000/month",
       "roi": "ROI: 32 0% through efficiency gains"
-
     }
   ]
   const stats = [{ "number": "500+", "label": "Projects Completed" },

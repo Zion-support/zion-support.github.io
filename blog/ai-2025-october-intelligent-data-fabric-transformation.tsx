@@ -283,13 +283,13 @@ export default function IntelligentDataFabricTransformation2025() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <a 
-                    href="/contact" 
+                    href="/contact"
                     className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center"
                   >
                     Schedule Assessment
                   </a>
                   <a 
-                    href="/services/data-engineering" 
+                    href="/services/data-engineering"
                     className="bg-white/10 hover:bg-white/20 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 border border-emerald-400/30 text-center"
                   >
                     Explore Data Services

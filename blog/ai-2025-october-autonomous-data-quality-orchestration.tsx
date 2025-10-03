@@ -295,7 +295,7 @@ export default function AutonomousDataQualityOrchestration2025() {
                   systems that ensure reliable, trustworthy data at scale.
                 </p>
                 <a 
-                  href="/contact" 
+                  href="/contact"
                   className="inline-block px-8 py-4 bg-gradient-to-r from-emerald-500 to-cyan-500 text-white font-bold rounded-lg hover:from-emerald-600 hover:to-cyan-600 transition-all transform hover:scale-105"
                 >
                   Start Your Data Quality Assessment →

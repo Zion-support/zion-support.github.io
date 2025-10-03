@@ -341,13 +341,13 @@ const RAGAtScaleEnterpriseImplementation2025: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a 
-                href="/contact" 
+                href="/contact"
                 className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 text-center"
               >
                 Schedule RAG Architecture Consultation
               </a>
               <a 
-                href="/services/rag-systems" 
+                href="/services/rag-systems"
                 className="border-2 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-purple-900 font-bold py-4 px-8 rounded-lg transition-all duration-300 text-center"
               >
                 Explore RAG Solutions

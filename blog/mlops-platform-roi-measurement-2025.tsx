@@ -9,8 +9,8 @@ const MLOpsPlatformROIMeasurement2025: React.FC = () => {
       <Helmet>
         <title>MLOps Platform ROI: Proving Value with Leading Indicators 2025 | Zion Tech Group</title>
         <meta 
-          name="description" 
-          content="Measure and prove MLOps platform ROI with scorecards, leading indicators, and business metrics. Transform platform investments into measurable business outcomes." 
+          name="description"
+          content="Measure and prove MLOps platform ROI with scorecards, leading indicators, and business metrics. Transform platform investments into measurable business outcomes."
         />
         <meta name="keywords" content="MLOps, Platform ROI, Platform Engineering, Metrics, Scorecards, Business Value, ML Infrastructure" />
         <link rel="canonical" href="https://ziontechgroup.com/blog/mlops-platform-roi-measurement-2025" />

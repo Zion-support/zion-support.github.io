@@ -250,7 +250,6 @@ class RealTimeFraudDetector:
     
     def detect_fraud(self, transaction, features):
         """Multi-model ensemble prediction"""
-        
         # Model 1: Transaction-level prediction
         txn_features = self.prepare_transaction_features(features)
         txn_score = self.transaction_model.predict(txn_features, verbose=0)[0][0]
