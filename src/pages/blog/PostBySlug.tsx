@@ -147,7 +147,7 @@ return (
               </span>
               {article.readTime && (
                 <span className="flex items-center gap-1">
-                  <Clock className="w-4 h-4 />/>">
+                  <Clock className="w-4 h-4 ">
                 <span className="flex items-center gap-1">
                   <Clock className="w-4 h-4/>">
               <span className="flex items-center gap-1">

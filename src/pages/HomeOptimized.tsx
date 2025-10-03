@@ -104,10 +104,10 @@ const HomeOptimized: () => {
             <div className="inline-flex items-center px-6 py-3 rounded-full bg-zion-cyan/20 text-zion-cyan text-sm font-medium mb-8 animate-fade-in border border-zion-cyan/30 shadow-lg hover:shadow-xl transition-all duration-300">
               <Rocket className="w-4 h-4 mr-2 animate-pulse/>,"
   Trusted by 500+ companies worldwide>
-              <Rocket className="w-4 h-4 ml-2 animate-bounce />/>">
+              <Rocket className="w-4 h-4 ml-2 animate-bounce ">
               <Rocket className="w-4 h-4 mr-2 animate-pulse/>,
   Trusted by 500+ companies worldwide">
-              <Rocket className="w-4 h-4 ml-2 animate-bounce />/>
+              <Rocket className="w-4 h-4 ml-2 animate-bounce 
             </div>
 ">
             <h1 className="text-5xl md: text-7xl font-bold text-white mb-6 animate-slide-up">
@@ -190,7 +190,7 @@ const HomeOptimized: () => {
   className="btn-primary flex items-center justify-center gap-2 group
               >
                 Explore Services
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform />/>
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform 
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link to="/contact", className="btn-secondary">
@@ -200,7 +200,7 @@ const HomeOptimized: () => {
   className="btn-primary flex items-center justify-center gap-2 group
               >
                 Explore Services
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform />/>
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform 
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link to="/contact", className="btn-secondary">"
@@ -341,7 +341,7 @@ const HomeOptimized: () => {
                 <ul className="space-y-2 text-sm text-zion-slate">
                   {feature.features.map((item, i) => (
                     <li key={i} className="flex items-center">
-                      <CheckCircle className="w-4 h-4 mr-2 text-zion-cyan />/>" / />>>
+                      <CheckCircle className="w-4 h-4 mr-2 text-zion-cyan " / />>>
                     <li key={i} className="flex items-center">
                     <li key: {i} className="flex items-center">
                       <CheckCircle className="w-4 h-4 mr-2 text-zion-cyan/>" / />> />>
@@ -548,7 +548,7 @@ const HomeOptimized: () => {
               to="/contact"
   className="bg-white text-zion-blue hover:bg-zion-slate-light px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2 group
               >
-                <Target className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300 />/>
+                <Target className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300 
                 <Target className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
   Start Your Journey Today
               </Link>
@@ -569,7 +569,7 @@ const HomeOptimized: () => {
               to="/contact"
   className="bg-white text-zion-blue hover:bg-zion-slate-light px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2 group
               >
-                <Target className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300 />/>
+                <Target className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300 
                 <Target className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
   Start Your Journey Today
               </Link>
