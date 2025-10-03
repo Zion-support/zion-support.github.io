@@ -37,16 +37,10 @@ const SmartAppointmentScheduler: React.FC = () => {
               </div>
               <p className="text-gray-600 mb-6">Perfect for hospitals, clinics, and private practices looking to modernize their appointment system.</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a 
-                  href="tel:+13024640950"
-                  className="bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors text-center"
-                >
+                <a href="tel:+13024640950" className="bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors text-center">
                   Call +1 302 464 0950
                 </a>
-                <a 
-                  href="mailto:kleber@ziontechgroup.com"
-                  className="border-2 border-green-600 text-green-600 px-6 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors text-center"
-                >
+                <a href="mailto:kleber@ziontechgroup.com" className="border-2 border-green-600 text-green-600 px-6 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors text-center">
                   Email Us
                 </a>
               </div>
@@ -127,10 +121,7 @@ const SmartAppointmentScheduler: React.FC = () => {
                     Email support
                   </li>
                 </ul>
-                <a 
-                  href="tel:+13024640950"
-                  className="w-full bg-green-600 text-white py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors text-center block"
-                >
+                <a href="tel:+13024640950" className="w-full bg-green-600 text-white py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors text-center block">
                   Get Started
                 </a>
               </div>
@@ -162,10 +153,7 @@ const SmartAppointmentScheduler: React.FC = () => {
                     Priority support
                   </li>
                 </ul>
-                <a 
-                  href="tel:+13024640950"
-                  className="w-full bg-white text-green-600 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center block"
-                >
+                <a href="tel:+13024640950" className="w-full bg-white text-green-600 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center block">
                   Get Started
                 </a>
               </div>
@@ -194,10 +182,7 @@ const SmartAppointmentScheduler: React.FC = () => {
                     White-label options
                   </li>
                 </ul>
-                <a 
-                  href="mailto:kleber@ziontechgroup.com"
-                  className="w-full bg-green-600 text-white py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors text-center block"
-                >
+                <a href="mailto:kleber@ziontechgroup.com" className="w-full bg-green-600 text-white py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors text-center block">
                   Contact Sales
                 </a>
               </div>
@@ -212,16 +197,10 @@ const SmartAppointmentScheduler: React.FC = () => {
                 Contact us today for a free consultation and to discuss your appointment scheduling needs.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a 
-                  href="tel:+13024640950"
-                  className="bg-green-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-green-700 transition-colors text-center"
-                >
+                <a href="tel:+13024640950" className="bg-green-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-green-700 transition-colors text-center">
                   Call +1 302 464 0950
                 </a>
-                <a 
-                  href="mailto:kleber@ziontechgroup.com"
-                  className="border-2 border-green-600 text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-green-50 transition-colors text-center"
-                >
+                <a href="mailto:kleber@ziontechgroup.com" className="border-2 border-green-600 text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-green-50 transition-colors text-center">
                   Email Us
                 </a>
               </div>
