@@ -190,4 +190,4 @@ const Header: React.FC = React.memo(() => {
   );
 });
 
-export default Header);
+export default Header;

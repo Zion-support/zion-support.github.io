@@ -210,4 +210,4 @@ const Footer: React.FC = React.memo(() => {
   );
 });
 
-export default Footer);
+export default Footer;
