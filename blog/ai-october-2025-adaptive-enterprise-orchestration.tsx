@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export default function AIOctober2025AdaptiveEnterpriseOrchestration() {
   return (
     <article className="min-h-screen bg-slate-950 text-white">

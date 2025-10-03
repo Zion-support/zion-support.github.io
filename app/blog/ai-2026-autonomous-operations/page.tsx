@@ -1,3 +1,19 @@
+// import React from 'react';
+// Metadata handled by React Helmet
+
+export const metadata: Metadata = {
+  title: 'Autonomous Operations: Revolutionary 98% Automation Rate Achievement | Zion Tech Group',
+  description: 'Discover how Autonomous Operations AI systems are achieving 98% automation rates and delivering $50M+ annual savings for enterprise operations.',
+  keywords: 'autonomous operations, enterprise automation, AI automation, autonomous AI, automation breakthrough 2026',
+  openGraph: {
+    title: 'Autonomous Operations: 98% Automation Rate',
+    description: 'Revolutionary autonomous AI systems achieving unprecedented automation levels in enterprise operations.',
+    type: 'article',
+    publishedTime: '2026-01-15T00:00:00Z',
+    authors: ['Zion Tech Group'],
+  },
+};
+
 export default function AutonomousOperations() {
   return (
     <div className="min-h-screen bg-slate-950">

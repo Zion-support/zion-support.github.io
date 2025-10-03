@@ -1,3 +1,5 @@
+// import React from 'react';
+
 const January2026NewContentBreakthroughBanner = () => {
   return (
     <section className="py-16 bg-gradient-to-r from-blue-900/40 via-purple-900/40 to-indigo-900/40 backdrop-blur-sm border-b border-blue-500/20">

@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export const metadata = {
   title: 'Real-Time AI Inference Optimization 2025: Sub-10ms Latency at Scale | Zion Tech Group',
   description: 'Achieve sub-10ms inference latency for LLMs and computer vision models while cutting costs 78%. Complete optimization guide covering model compression, hardware acceleration, and infrastructure architecture.',

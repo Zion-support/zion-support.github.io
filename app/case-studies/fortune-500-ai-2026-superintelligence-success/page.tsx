@@ -1,3 +1,19 @@
+// import React from 'react';
+// Metadata handled by React Helmet
+
+export const metadata: Metadata = {
+  title: 'Fortune 500 AI 2026 Superintelligence Success - $5.2B Value Generated - Zion Tech Group',
+  description: 'Discover how a Fortune 500 company achieved unprecedented success with our AI 2026 Superintelligence suite, generating $5.2B in measurable value and transforming their entire operation.',
+  keywords: 'Fortune 500, AI Success, Superintelligence, Case Study, Enterprise AI, $5.2B Value, AI 2026',
+  openGraph: {
+    title: 'Fortune 500 AI 2026 Superintelligence Success - $5.2B Value Generated',
+    description: 'Fortune 500 company achieves unprecedented success with AI 2026 Superintelligence suite.',
+    type: 'article',
+    publishedTime: '2026-01-25T00:00:00.000Z',
+    authors: ['Zion Tech Group'],
+  },
+};
+
 export default function Fortune500SuperintelligenceSuccessPage() {
   return (
     <div className="min-h-screen bg-slate-950 text-white">

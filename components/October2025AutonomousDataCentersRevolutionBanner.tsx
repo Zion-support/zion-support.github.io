@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export default function October2025AutonomousDataCentersRevolutionBanner() {
   return (
     <section className="relative py-16 bg-gradient-to-br from-emerald-950 via-teal-950 to-cyan-950 overflow-hidden border-y border-emerald-500/30">

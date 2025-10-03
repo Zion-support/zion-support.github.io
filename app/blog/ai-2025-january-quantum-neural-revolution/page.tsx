@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export default function AI2025JanuaryQuantumNeuralRevolution() {
   return (
     <div className="min-h-screen bg-slate-950">

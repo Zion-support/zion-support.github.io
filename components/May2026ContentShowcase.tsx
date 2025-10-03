@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export default function May2026ContentShowcase() {
   const contentItems = [
     {

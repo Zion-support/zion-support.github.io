@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export const metadata = {
   title: 'Autonomous Edge Intelligence Revolution 2025 — Distributed AI at the Edge',
   description: 'Deploy autonomous AI systems directly at the edge achieving 99.9% uptime, <5ms latency, and 94% cost reduction. Revolutionary edge intelligence transforming real-time decision-making across industries.',

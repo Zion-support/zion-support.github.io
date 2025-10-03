@@ -1,3 +1,4 @@
+// import React from 'react';
 import { Cloud, Zap, TrendingUp, Shield, Rocket } from 'lucide-react';
 
 const October2025CloudNativeRevolutionBanner = () => {

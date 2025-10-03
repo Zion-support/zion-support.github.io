@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export default function April2026MegaBreakthroughBanner() {
   return (
     <div className="bg-gradient-to-r from-purple-900/50 via-blue-900/50 to-cyan-900/50 rounded-xl p-8 border border-purple-500/30 text-center">

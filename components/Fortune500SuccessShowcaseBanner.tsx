@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export default function Fortune500SuccessShowcaseBanner() {
   return (
     <section className="py-16 bg-gradient-to-r from-green-900/50 via-blue-900/50 to-purple-900/50 border-b border-green-500/30">

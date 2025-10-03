@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export default function TranscendentIntelligence2027Banner() {
   return (
     <section className="py-16 bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 border-b border-indigo-500/30">

@@ -1,6 +1,13 @@
+// import React from 'react';
 import Head from 'next/head';
 import { Link } from 'react-router-dom';
-import { TrendingUp, CheckCircle, Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
+import { 
+  CreditCard, DollarSign, TrendingUp, Shield, Calculator, 
+  FileText, BarChart3, Clock, Users, CheckCircle, 
+  ArrowRight, Phone, Mail, MapPin, ExternalLink,
+  Zap, Target, Award, Globe, Smartphone
+} from 'lucide-react';
+
 export const metadata = {
   title: 'Financial Technology Solutions — Zion Tech Group',
   description: 'Comprehensive fintech micro SaaS solutions including payment processing, invoicing, expense tracking, and financial analytics.',

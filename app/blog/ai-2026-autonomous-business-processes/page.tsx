@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export const metadata = {
   title: 'AI 2026: Autonomous Business Process Orchestration - 95% Automation',
   description: 'Discover how Fortune 500 companies are achieving 95% business process automation with next-generation AI orchestration platforms. Real-world case studies and implementation strategies.',

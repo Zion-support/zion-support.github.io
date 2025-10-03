@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export default function February2026MultimodalAITransformationBanner() {
   return (
     <section className="py-16 bg-gradient-to-r from-violet-900/40 via-purple-900/40 to-pink-900/40 backdrop-blur-lg border-b border-violet-500/30">

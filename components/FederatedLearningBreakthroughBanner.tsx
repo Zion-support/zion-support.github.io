@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export default function FederatedLearningBreakthroughBanner() {
   return (
     <section className="py-20 bg-gradient-to-br from-blue-900/40 via-cyan-900/40 to-teal-900/40 border-y border-blue-500/30 relative overflow-hidden">

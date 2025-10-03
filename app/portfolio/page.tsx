@@ -7,8 +7,23 @@ export default function PortfolioPage() {
   );
 }
 
+// import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Star, Zap, Brain, Cpu, Cloud, Shield, Globe } from 'lucide-react';
+import { 
+  ExternalLink, 
+  ArrowRight, 
+  Star, 
+  Users, 
+  TrendingUp, 
+  Zap,
+  Brain,
+  Cpu,
+  Cloud,
+  Shield,
+  Globe,
+  Award
+} from 'lucide-react';
+
 export const metadata = {
   title: 'Portfolio — Zion Tech Group AI & IT Solutions Showcase',
   description: 'Explore our portfolio of successful AI implementations, enterprise transformations, and cutting-edge technology solutions delivering proven ROI.',

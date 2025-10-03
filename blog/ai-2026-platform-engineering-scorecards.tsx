@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export const metadata = {
 	title: 'Platform Engineering Scorecards 2026',
 	description: 'Track SLIs → KPIs with budgets, canaries, and rollback for platform engineering.'

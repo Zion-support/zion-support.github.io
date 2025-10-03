@@ -1,6 +1,18 @@
 // @ts-nocheck
+// import React from 'react';
+import { Metadata } from 'next';
 import { Link } from 'react-router-dom';
 
+export const metadata: Metadata = {
+  title: 'AI 2026 Ultimate Autonomous Revolution - $100 Billion Success Story',
+  description: 'How Fortune 100 companies achieved $100 billion ROI through revolutionary 99.99% autonomous AI systems with 1 million times performance boost.',
+  keywords: 'AI success story, $100B ROI, Fortune 100, autonomous systems, 99.99% automation, enterprise transformation',
+  openGraph: {
+    title: 'AI 2026 Ultimate Autonomous Revolution - $100 Billion Success Story',
+    description: 'Fortune 100 companies achieved $100 billion ROI through 99.99% autonomous AI systems.',
+    type: 'article',
+  },
+};
 
 export default function AI2026UltimateAutonomousRevolution100BillionSuccess() {
   return (
@@ -318,7 +330,7 @@ export default function AI2026UltimateAutonomousRevolution100BillionSuccess() {
           </h2>
           
           <div className="grid md:grid-cols-3 gap-8">
-            <Link href="/case-studies/ai-2026-ultra-intelligent-autonomous-systems-50-billion-success" className="group block rounded-xl border border-purple-500/20 bg-gradient-to-br from-purple-900/20 to-indigo-900/20 p-6 hover:border-purple-400/40 transition-all duration-300 hover:scale-105">
+            <Link to="/case-studies/ai-2026-ultra-intelligent-autonomous-systems-50-billion-success" className="group block rounded-xl border border-purple-500/20 bg-gradient-to-br from-purple-900/20 to-indigo-900/20 p-6 hover:border-purple-400/40 transition-all duration-300 hover:scale-105">
               <div className="flex items-center gap-2 mb-3">
                 <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-3 py-1 rounded-full text-xs font-bold">$50B SUCCESS</span>
                 <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold">FORTUNE 100</span>
@@ -328,7 +340,7 @@ export default function AI2026UltimateAutonomousRevolution100BillionSuccess() {
               <div className="text-purple-300 text-sm font-semibold group-hover:text-purple-200">Read Success Story →</div>
             </Link>
             
-            <Link href="/case-studies/ai-2026-quantum-neural-superintelligence-success" className="group block rounded-xl border border-indigo-500/20 bg-gradient-to-br from-indigo-900/20 to-purple-900/20 p-6 hover:border-indigo-400/40 transition-all duration-300 hover:scale-105">
+            <Link to="/case-studies/ai-2026-quantum-neural-superintelligence-success" className="group block rounded-xl border border-indigo-500/20 bg-gradient-to-br from-indigo-900/20 to-purple-900/20 p-6 hover:border-indigo-400/40 transition-all duration-300 hover:scale-105">
               <div className="flex items-center gap-2 mb-3">
                 <span className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-3 py-1 rounded-full text-xs font-bold">$25B SUCCESS</span>
                 <span className="bg-gradient-to-r from-cyan-400 to-blue-500 text-black px-3 py-1 rounded-full text-xs font-bold">QUANTUM AI</span>
@@ -338,7 +350,7 @@ export default function AI2026UltimateAutonomousRevolution100BillionSuccess() {
               <div className="text-indigo-300 text-sm font-semibold group-hover:text-indigo-200">Read Success Story →</div>
             </Link>
             
-            <Link href="/blog/ai-2026-ultimate-autonomous-revolution" className="group block rounded-xl border border-green-500/20 bg-gradient-to-br from-green-900/20 to-emerald-900/20 p-6 hover:border-green-400/40 transition-all duration-300 hover:scale-105">
+            <Link to="/blog/ai-2026-ultimate-autonomous-revolution" className="group block rounded-xl border border-green-500/20 bg-gradient-to-br from-green-900/20 to-emerald-900/20 p-6 hover:border-green-400/40 transition-all duration-300 hover:scale-105">
               <div className="flex items-center gap-2 mb-3">
                 <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-3 py-1 rounded-full text-xs font-bold">TECHNICAL</span>
                 <span className="bg-gradient-to-r from-purple-400 to-indigo-500 text-black px-3 py-1 rounded-full text-xs font-bold">BREAKTHROUGH</span>

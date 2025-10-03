@@ -1,3 +1,19 @@
+// import React from 'react';
+// Metadata handled by React Helmet
+
+export const metadata: Metadata = {
+  title: 'AI Trends 2026: Future Enterprise Transformation with Quantum Intelligence',
+  description: 'Explore the top AI trends shaping enterprise transformation in 2026, from quantum intelligence and conscious computing to autonomous operations and neuromorphic architectures.',
+  keywords: 'AI trends 2026, enterprise transformation, quantum intelligence, conscious computing, autonomous operations',
+  openGraph: {
+    title: 'AI Trends 2026: Future Enterprise Transformation with Quantum Intelligence',
+    description: 'Explore the top AI trends shaping enterprise transformation in 2026, from quantum intelligence and conscious computing to autonomous operations and neuromorphic architectures.',
+    type: 'article',
+    publishedTime: '2026-05-01T00:00:00.000Z',
+    authors: ['Zion Tech Group'],
+  },
+};
+
 export default function AITrends2026FutureEnterpriseTransformation() {
   return (
     <div className="min-h-screen bg-slate-950 text-white">

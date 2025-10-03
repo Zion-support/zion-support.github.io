@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export default function QuantumNeuralAIServices() {
   return (
     <article className="max-w-6xl mx-auto px-6 py-12 bg-slate-950 text-gray-100">

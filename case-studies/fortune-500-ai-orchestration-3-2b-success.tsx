@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export default function Fortune500AIOrchestration32BSuccess() {
   return (
     <article className="min-h-screen bg-gradient-to-br from-slate-950 via-purple-950 to-slate-950 text-white">

@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export const metadata = {
   title: 'Autonomous Agents for Ops | Zion Tech Group',
   description: 'Production-safe autonomous agents for SRE, SecOps, and DevOps with approvals and guardrails.',

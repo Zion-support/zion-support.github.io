@@ -1,6 +1,23 @@
 "use client"
+// import React from 'react';
 import { Link } from 'react-router-dom';
-import { Phone, Mail, CheckCircle, MessageSquare, Star, MapPin } from 'lucide-react';
+import { Metadata } from 'next';
+import { Phone, Mail, CheckCircle, MessageSquare, Brain, Shield, BarChart3, Globe, Users, Star, ArrowRight, MapPin } from 'lucide-react';
+
+export const metadata: Metadata = {
+  title: 'AI-Powered Customer Support Automation | Zion Tech Group',
+  description: 'Reduce support costs by 60% and boost CSAT with 24/7 AI agents, human handoff, analytics, and 50+ language support. Transparent pricing and fast setup.',
+  keywords: [
+    'AI customer support',
+    'AI chatbot',
+    'customer service automation',
+    'helpdesk automation',
+    'multilingual support AI',
+  ],
+  alternates: { canonical: 'https://ziontechgroup.com/services/micro-saas/ai-customer-support' },
+  robots: { index: true, follow: true },
+};
+
 export default function AICustomerSupportPage() {
   const contact = {
     phone: '+1 302 464 0950',

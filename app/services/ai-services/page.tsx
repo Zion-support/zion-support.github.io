@@ -1,5 +1,79 @@
+// import React from 'react';
+import { Metadata } from 'next';
 import { Link } from 'react-router-dom';
-import { Brain, CheckCircle, ArrowRight, DollarSign, Clock, Star, TrendingUp, Mail, Phone, Circle, Key } from 'lucide-react';
+import { 
+  Brain, 
+  Bot, 
+  MessageSquare, 
+  FileText, 
+  Users, 
+  BarChart3, 
+  Zap, 
+  Shield, 
+  Eye, 
+  Mic, 
+  Camera, 
+  Search, 
+  CheckCircle, 
+  ArrowRight, 
+  DollarSign,
+  Clock,
+  Star,
+  TrendingUp,
+  Settings,
+  Database,
+  Network,
+  Layers,
+  Globe,
+  Smartphone,
+  Mail,
+  Phone,
+  Calendar,
+  CreditCard,
+  Headphones,
+  Code,
+  Lock,
+  Target,
+  Activity,
+  PieChart,
+  LineChart,
+  RefreshCw,
+  Download,
+  Upload,
+  Play,
+  Pause,
+  Square,
+  Triangle,
+  Circle,
+  Hexagon,
+  Building,
+  Home,
+  Car,
+  Plane,
+  Ship,
+  Package,
+  Truck,
+  Wifi,
+  Monitor,
+  Server,
+  HardDrive,
+  Cpu,
+  MemoryStick,
+  Router,
+  Terminal,
+  GitBranch,
+  Container,
+  Docker,
+  Key,
+  AlertTriangle
+} from 'lucide-react';
+
+export const metadata: Metadata = {
+  title: 'AI Services & Solutions | Zion Tech Group - Advanced AI Consulting',
+  description: 'Advanced AI services including autonomous systems, machine learning, natural language processing, computer vision, and intelligent automation. Transform your business with AI.',
+  keywords: 'AI services, machine learning, natural language processing, computer vision, autonomous systems, AI consulting, intelligent automation',
+};
+
 export default function AIServicesPage() {
   const aiServices = [
     {
@@ -594,8 +668,7 @@ export default function AIServicesPage() {
                   </div>
 
                   <div className="flex gap-3">
-                    <Link 
-                      href={service.link}
+                    <Link to={service.link}
                       className="flex-1 inline-flex items-center justify-center px-4 py-2 bg-purple-600 text-white font-semibold rounded-lg hover:bg-purple-700 transition-colors text-sm"
                     >
                       Learn More

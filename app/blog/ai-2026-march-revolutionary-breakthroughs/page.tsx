@@ -1,3 +1,12 @@
+// import React from 'react';
+// Metadata handled by React Helmet
+
+export const metadata: Metadata = {
+  title: 'March 2026: Revolutionary AI Breakthroughs That Will Transform Enterprise | Zion Tech Group',
+  description: 'Discover the groundbreaking AI innovations of March 2026 that are revolutionizing enterprise operations with unprecedented efficiency and intelligence.',
+  keywords: 'AI, Enterprise, Breakthrough, 2026, Revolutionary, Meta-Cognitive AI, Quantum Neural Networks',
+};
+
 export default function March2026RevolutionaryBreakthroughsPage() {
   return (
     <div className="min-h-screen bg-slate-950">

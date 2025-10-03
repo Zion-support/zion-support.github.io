@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export const metadata = {
   title: 'Financial Services AI Transformation: $150M ROI Success Story',
   description: 'How a Fortune 100 bank achieved $150M annual ROI, 97.8% fraud detection accuracy, and 80% faster compliance through enterprise-wide AI transformation.',

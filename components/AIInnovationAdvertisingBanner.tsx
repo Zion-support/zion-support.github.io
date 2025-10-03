@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export default function AIInnovationAdvertisingBanner() {
   return (
     <section className="py-16 bg-gradient-to-r from-blue-900/40 via-purple-900/40 to-indigo-900/40">

@@ -1,6 +1,34 @@
+// import React from 'react';
 import Head from 'next/head';
 import { Link } from 'react-router-dom';
-import { CheckCircle, Phone, Mail, MapPin, Bot } from 'lucide-react';
+import { 
+  MessageSquare, 
+  Brain, 
+  Users, 
+  BarChart3, 
+  Zap, 
+  Shield, 
+  CheckCircle, 
+  ArrowRight, 
+  Phone,
+  Mail,
+  MapPin,
+  Star,
+  Clock,
+  Target,
+  Award,
+  Globe,
+  Smartphone,
+  Database,
+  Settings,
+  TrendingUp,
+  Headphones,
+  Bot,
+  Cpu,
+  Lock,
+  FileText
+} from 'lucide-react';
+
 export default function AICustomerSupportPage() {
   const title = 'AI-Powered Customer Support Automation — Zion Tech Group';
   const description = 'Intelligent chatbot with sentiment analysis, ticket routing, and escalation management. Reduce support costs by 60% and improve response time by 80%.';

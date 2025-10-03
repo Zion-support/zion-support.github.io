@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export default function EnterpriseSolutionsShowcase2026() {
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900/50 to-indigo-900/30">

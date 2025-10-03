@@ -1,3 +1,18 @@
+// import React from 'react';
+// Metadata handled by React Helmet
+
+export const metadata: Metadata = {
+  title: 'Quantum Consciousness Enterprise Success: $3.2B Value Generation',
+  description: 'Discover how a Fortune 500 company achieved $3.2 billion in measurable value using quantum consciousness AI systems, revolutionizing their business operations.',
+  keywords: 'quantum consciousness, enterprise success, $3.2B value, AI transformation, case study',
+  openGraph: {
+    title: 'Quantum Consciousness Enterprise Success: $3.2B Value Generation',
+    description: 'How a Fortune 500 company achieved $3.2 billion in value with quantum consciousness AI systems',
+    type: 'article',
+    publishedTime: '2026-05-01T00:00:00.000Z',
+  },
+};
+
 export default function QuantumConsciousnessEnterpriseSuccess() {
   return (
     <div className="min-h-screen bg-slate-950 text-white">

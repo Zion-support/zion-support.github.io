@@ -1,6 +1,8 @@
+// import React from 'react';
 import Head from 'next/head';
 import { Link } from 'react-router-dom';
-import { ActivitySquare, ChartBar, Bug, CheckCircle, MapPin } from 'lucide-react';
+import { ActivitySquare, ChartBar, Bug, CheckCircle, Phone, Mail, MapPin } from 'lucide-react';
+
 export default function ObservabilityPlatformPage() {
   const title = 'Observability Platform (Logs, Metrics, Traces, RUM) — Zion Tech Group';
   const description = 'Design and operate a unified observability stack with SLOs, alerting, tracing, and cost-optimized telemetry.';

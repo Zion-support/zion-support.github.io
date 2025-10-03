@@ -1,5 +1,12 @@
+// import React from 'react';
+import { Metadata } from 'next';
 import { Link } from 'react-router-dom';
 
+export const metadata: Metadata = {
+  title: 'AI Content Generation Tool | Zion Tech Group - Automated Content Creation',
+  description: 'Revolutionary AI-powered content generation platform for blogs, social media, and marketing materials. Save time with intelligent content creation.',
+  keywords: 'AI content generation, automated content creation, blog writing, social media content, marketing automation',
+};
 
 export default function AIContentGenerationToolPage() {
   return (
@@ -18,14 +25,12 @@ export default function AIContentGenerationToolPage() {
             Generate high-quality, SEO-optimized content for blogs, social media, and marketing materials in minutes.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/contact" 
+            <Link to="/contact" 
               className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
             >
               Start Free Trial
             </Link>
-            <Link 
-              href="#demo" 
+            <Link to="#demo" 
               className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-all duration-300"
             >
               Watch Demo
@@ -97,7 +102,7 @@ export default function AIContentGenerationToolPage() {
                 <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> Basic SEO optimization</li>
                 <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> Email support</li>
               </ul>
-              <Link href="/contact" className="w-full bg-gray-100 text-gray-800 py-3 rounded-lg font-semibold text-center block hover:bg-gray-200 transition-colors">
+              <Link to="/contact" className="w-full bg-gray-100 text-gray-800 py-3 rounded-lg font-semibold text-center block hover:bg-gray-200 transition-colors">
                 Get Started
               </Link>
             </div>
@@ -116,7 +121,7 @@ export default function AIContentGenerationToolPage() {
                 <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> Priority support</li>
                 <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> Multi-platform publishing</li>
               </ul>
-              <Link href="/contact" className="w-full bg-blue-500 text-white py-3 rounded-lg font-semibold text-center block hover:bg-blue-600 transition-colors">
+              <Link to="/contact" className="w-full bg-blue-500 text-white py-3 rounded-lg font-semibold text-center block hover:bg-blue-600 transition-colors">
                 Start Free Trial
               </Link>
             </div>
@@ -132,7 +137,7 @@ export default function AIContentGenerationToolPage() {
                 <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> Dedicated account manager</li>
                 <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> Custom integrations</li>
               </ul>
-              <Link href="/contact" className="w-full bg-purple-500 text-white py-3 rounded-lg font-semibold text-center block hover:bg-purple-600 transition-colors">
+              <Link to="/contact" className="w-full bg-purple-500 text-white py-3 rounded-lg font-semibold text-center block hover:bg-purple-600 transition-colors">
                 Contact Sales
               </Link>
             </div>
@@ -190,7 +195,7 @@ export default function AIContentGenerationToolPage() {
                 <span>Cancel anytime</span>
               </div>
             </div>
-            <Link href="/contact" className="mt-6 bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold inline-block hover:bg-gray-100 transition-colors">
+            <Link to="/contact" className="mt-6 bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold inline-block hover:bg-gray-100 transition-colors">
               Start Your Free Trial
             </Link>
           </div>

@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export const metadata = {
   title: 'Edge Analytics 2026: Consent-Safe Insights',
   description: 'Design analytics that respect privacy using scoped IDs, on-device aggregation, and differential privacy.',

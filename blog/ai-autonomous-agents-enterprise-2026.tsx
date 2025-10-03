@@ -1,3 +1,4 @@
+// import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Shield, Zap, TrendingUp, Brain, Clock, DollarSign } from 'lucide-react';
 

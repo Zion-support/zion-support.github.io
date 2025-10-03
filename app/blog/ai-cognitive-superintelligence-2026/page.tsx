@@ -1,5 +1,7 @@
+// import React from 'react';
 import { Link } from 'react-router-dom';
-import { Clock, Brain, Zap, Target, TrendingUp } from 'lucide-react';
+import { Clock, ArrowRight, Brain, Zap, Target, TrendingUp } from 'lucide-react';
+
 export const metadata = {
   title: 'AI Cognitive Superintelligence 2026: The Next Frontier of Human-AI Collaboration',
   description: 'Explore the revolutionary advances in AI cognitive superintelligence for 2026. Discover how next-generation AI systems are achieving human-level reasoning, creativity, and problem-solving capabilities.',

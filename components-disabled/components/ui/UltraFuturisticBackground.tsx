@@ -10,7 +10,7 @@ export default function UltraFuturisticBackground() {
 
 
 variant = 'quantum',;'
-'
+// import React from 'react';'
 variant = 'quantum',;'
 
 

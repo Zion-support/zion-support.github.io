@@ -1,6 +1,13 @@
+// import React from 'react';
 import Head from 'next/head';
 import { Link } from 'react-router-dom';
-import { MapPin, CheckCircle, Phone, Mail, ExternalLink, Brain, Route } from 'lucide-react';
+import { 
+  Truck, Package, MapPin, BarChart3, Clock, 
+  FileText, CheckCircle, ArrowRight, Phone, 
+  Mail, ExternalLink, Zap, Target, Award, 
+  Globe, Smartphone, Brain, Monitor, Shield, Route
+} from 'lucide-react';
+
 export const metadata = {
   title: 'Logistics & Supply Chain Solutions — Zion Tech Group',
   description: 'Comprehensive logistics micro SaaS solutions including route optimization, tracking, warehouse management, and supply chain analytics.',

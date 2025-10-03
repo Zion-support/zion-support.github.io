@@ -1,4 +1,31 @@
-import { TrendingUp, Shield, CheckCircle, Users } from 'lucide-react';
+// import React from 'react';
+// Metadata handled by React Helmet
+import { 
+  DollarSign, 
+  TrendingUp, 
+  PieChart, 
+  Shield, 
+  Target, 
+  CheckCircle, 
+  Zap, 
+  Star,
+  Smartphone,
+  Calendar,
+  MessageSquare,
+  FileText,
+  BarChart3,
+  Clock,
+  Bell,
+  Users,
+  Award
+} from 'lucide-react';
+
+export const metadata: Metadata = {
+  title: 'AI Financial Intelligence Platform | Zion Tech Group - Smart Financial Analytics',
+  description: 'Transform your financial management with AI-powered insights, automated budgeting, investment analysis, and intelligent financial planning. Make smarter financial decisions.',
+  keywords: 'AI financial platform, financial analytics, investment analysis, budgeting AI, financial planning, wealth management AI',
+};
+
 export default function AIFinancialIntelligencePlatform() {
   const features = [
     {

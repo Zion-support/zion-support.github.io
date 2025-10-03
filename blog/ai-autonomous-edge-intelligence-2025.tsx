@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export const metadata = {
   title: 'AI Autonomous Edge Intelligence: Real-Time Processing Revolution 2025 | Zion Tech',
   description: 'Explore how autonomous edge intelligence is revolutionizing real-time AI processing with 98% latency reduction, 85% bandwidth savings, and breakthrough privacy-preserving computing.',

@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export const metadata = {
   title: 'AI-Powered Cybersecurity Mesh 2025 — Autonomous Threat Defense at Scale',
   description: 'Deploy AI-powered cybersecurity mesh achieving 99.9% threat detection, sub-second response times, and 87% reduction in security incidents. Revolutionary autonomous defense systems protecting enterprise infrastructure 24/7.',

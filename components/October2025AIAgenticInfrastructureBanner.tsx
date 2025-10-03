@@ -1,3 +1,4 @@
+// import React from 'react';
 import { Brain, Network, Zap, TrendingUp } from 'lucide-react';
 
 export default function October2025AIAgenticInfrastructureBanner() {

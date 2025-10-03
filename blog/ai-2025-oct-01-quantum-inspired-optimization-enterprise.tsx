@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export const metadata = {
   title: 'Quantum-Inspired Optimization 2025 — Enterprise Problem Solving Revolution',
   description: 'Revolutionary quantum-inspired algorithms solving complex enterprise problems 1000x faster with 99.8% optimality, delivering $42M annual value through breakthrough optimization.',

@@ -1,5 +1,7 @@
+// import React from 'react';
 import { motion } from 'framer-motion';
-import { Sparkles, Rocket, ArrowRight, Star } from 'lucide-react';
+import { Sparkles, TrendingUp, Rocket, ArrowRight, Star } from 'lucide-react';
+
 export default function October2025NewContentMegaAdvertisingBanner() {
   return (
     <motion.div

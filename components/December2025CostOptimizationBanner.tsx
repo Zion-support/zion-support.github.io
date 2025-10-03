@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export default function December2025CostOptimizationBanner() {
   return (
     <section className="py-16 bg-gradient-to-r from-amber-900/30 via-orange-900/30 to-red-900/30 backdrop-blur-sm border-b border-amber-500/20">

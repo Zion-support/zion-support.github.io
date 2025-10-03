@@ -1,5 +1,7 @@
 'use client';
 import { Link } from 'react-router-dom';
+// import React from 'react';
+
 export const DigitalTwinsPromoBanner = () => {
   return (
     <div className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white py-6 px-4">

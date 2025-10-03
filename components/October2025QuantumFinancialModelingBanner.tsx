@@ -1,3 +1,5 @@
+// import React from 'react';
+
 const October2025QuantumFinancialModelingBanner = () => {
   return (
     <section className="py-16 bg-gradient-to-br from-emerald-900/30 via-blue-900/30 to-purple-900/30 backdrop-blur-sm border-b border-emerald-500/20">

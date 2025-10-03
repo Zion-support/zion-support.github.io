@@ -1,5 +1,16 @@
+// import React from 'react';
 import { Link } from 'react-router-dom';
-import { FileText, Image, Video, Mail, Phone, MapPin } from 'lucide-react';
+import { 
+  ArrowRight, 
+  Shield, 
+  FileText,
+  Image,
+  Video,
+  Mail,
+  Phone,
+  MapPin
+} from 'lucide-react';
+
 export const metadata = {
   title: 'Press Room - Zion Tech Group | Media Resources & Press Kit',
   description: 'Access press releases, media resources, company information, and press kit materials for Zion Tech Group.',

@@ -1,5 +1,7 @@
+// import React from 'react';
 import { Link } from 'react-router-dom';
-import { Rocket, ArrowRight, Star } from 'lucide-react';
+import { BookOpen, Briefcase, Wrench, Rocket, ArrowRight, Star } from 'lucide-react';
+
 const October2025NewContentLLMShowcase = () => {
   const content = [
     {

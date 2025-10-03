@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export const metadata = {
   title: 'Next‑Gen Multimodal Agents 2026: Vision + Language + Action | Zion Tech Group',
   description: 'Design and operate multimodal agents that see, read, and act. A 2026 enterprise blueprint for perception, reasoning, and control at scale.',

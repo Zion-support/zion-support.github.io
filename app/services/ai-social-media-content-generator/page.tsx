@@ -1,5 +1,7 @@
+// import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Zap, Users, TrendingUp, Clock, Shield, BarChart3 } from 'lucide-react';
+import { CheckCircle, Zap, Users, TrendingUp, DollarSign, Clock, Shield, BarChart3 } from 'lucide-react';
+
 export default function AISocialMediaContentGenerator() {
   return (
     <>

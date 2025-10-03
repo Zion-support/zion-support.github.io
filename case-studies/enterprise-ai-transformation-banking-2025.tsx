@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export const metadata = {
   title: 'Fortune 100 Banking AI Transformation: $5.2B Value Created | Zion Tech Group',
   description: 'How a global banking institution leveraged our AI platform to achieve $5.2B in value creation, 94% fraud detection accuracy, and 87% operational cost reduction across 127 countries.',

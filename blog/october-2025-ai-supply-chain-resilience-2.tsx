@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export const metadata = {
   title: 'October 2025: AI-Driven Supply Chain Resilience 2.0',
   description:

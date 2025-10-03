@@ -1,5 +1,7 @@
+// import React from 'react';
 import { motion } from 'framer-motion';
-import { Sparkles, Award } from 'lucide-react';
+import { Sparkles, TrendingUp, Zap, Globe, Award } from 'lucide-react';
+
 const October2025ContentMegaShowcaseBanner = () => {
   return (
     <motion.div

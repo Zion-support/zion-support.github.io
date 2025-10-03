@@ -1,3 +1,12 @@
+// import React from 'react';
+// Metadata handled by React Helmet
+
+export const metadata: Metadata = {
+  title: 'AI 2026 September Breakthrough: $12 Billion Enterprise Transformation Success',
+  description: 'Fortune 500 companies achieved $12 billion in measurable value using our September 2026 AI breakthrough technologies, featuring 99.97% autonomous operations and 4,500% ROI.',
+  keywords: 'AI 2026, September breakthrough, $12 billion success, Fortune 500, autonomous operations, enterprise transformation',
+};
+
 export default function September2026BreakthroughSuccess() {
   return (
     <div className="min-h-screen bg-slate-950 text-white">

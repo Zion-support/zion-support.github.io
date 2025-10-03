@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export default function October2025NewContentShowcaseBanner2() {
   return (
     <section className="bg-gradient-to-br from-red-600/20 via-emerald-600/20 to-green-600/20 backdrop-blur-xl py-20 border-y border-white/10">

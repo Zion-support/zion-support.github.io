@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export const metadata = {
   title: 'RLHF in Enterprise: Reinforcement Learning from Human Feedback Revolution 2025',
   description: 'Complete guide to implementing Reinforcement Learning from Human Feedback (RLHF) in enterprise environments. $127M success story, 94% accuracy improvement, and production-ready frameworks.',

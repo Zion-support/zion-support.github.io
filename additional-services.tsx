@@ -1,5 +1,48 @@
+// import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Code, Cloud, MessageSquare, CheckCircle, ArrowRight, DollarSign, Clock, Star, Smartphone, Globe } from 'lucide-react';
+import { 
+  Brain, 
+  Code, 
+  Cloud, 
+  Shield, 
+  Network, 
+  Server, 
+  BarChart3, 
+  Settings, 
+  Zap, 
+  Monitor, 
+  Search, 
+  MessageSquare, 
+  CheckCircle, 
+  ArrowRight, 
+  DollarSign,
+  Clock,
+  Star,
+  TrendingUp,
+  Smartphone,
+  Globe,
+  Lock,
+  Database,
+  Cpu,
+  Target,
+  Rocket,
+  Phone,
+  Mail,
+  MapPin,
+  Users,
+  FileText,
+  CreditCard,
+  ShoppingCart,
+  Camera,
+  Mic,
+  Video,
+  Headphones,
+  Wifi,
+  Battery,
+  Wrench,
+  Tool
+} from 'lucide-react';
+
 export default function AdditionalServices() {
   const title = 'Expanded Services Catalog — Zion Tech Group';
   const description = 'New micro SaaS, IT, and AI solutions added to our production-ready catalog with transparent pricing and fast delivery.';
@@ -2170,6 +2213,8 @@ export default function AdditionalServices() {
 
   const phoneHref = 'tel:+13024640950';
   const emailHref = 'mailto:kleber@ziontechgroup.com';
+  const websiteUrl = 'https://ziontechgroup.com';
+  const address = '364 E Main St STE 1008, Middletown DE 19709';
 
   return (
     <>

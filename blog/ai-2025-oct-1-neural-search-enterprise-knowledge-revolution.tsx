@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export const metadata = {
   title: 'Neural Search & Enterprise Knowledge Revolution 2025 — AI-Powered Discovery',
   description: 'Deploy neural search systems achieving 97% search accuracy, 89% faster knowledge discovery, and 94% employee productivity gains. Transform enterprise knowledge management with AI that understands context and intent.',

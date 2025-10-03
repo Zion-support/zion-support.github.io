@@ -1,3 +1,4 @@
+// import React from 'react';
 import { Globe, Users, Shield, TrendingUp } from 'lucide-react';
 
 export default function October2025DistributedAIEcosystemBanner() {

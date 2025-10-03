@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export const metadata = {
   title: 'AI Trends 2026: The Future of Enterprise Technology | Zion Tech Group',
   description: 'Discover the revolutionary AI trends shaping 2026. From autonomous enterprise systems to quantum-enhanced AI, explore how these breakthroughs are transforming business operations.',

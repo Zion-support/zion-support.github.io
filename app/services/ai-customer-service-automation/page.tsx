@@ -1,5 +1,35 @@
+// import React from 'react';
+import { Metadata } from 'next';
 import { Link } from 'react-router-dom';
-import { CheckCircle, Star, Phone, Mail, MapPin, Zap, Brain, MessageSquare } from 'lucide-react';
+import { 
+  CheckCircle, 
+  Star, 
+  DollarSign, 
+  Clock,
+  Phone,
+  Mail,
+  MapPin,
+  Zap,
+  Shield,
+  TrendingUp,
+  Users,
+  Globe,
+  Brain,
+  MessageSquare,
+  BarChart3,
+  Settings
+} from 'lucide-react';
+
+export const metadata: Metadata = {
+  title: 'AI Customer Service Automation - Zion Tech Group',
+  description: 'Transform customer support with intelligent automation. Advanced AI-powered customer service platform with 24/7 support and human-like interactions.',
+  keywords: 'AI customer service, automation, chatbot, customer support, AI assistant',
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
 export default function AICustomerServiceAutomation() {
   const contactInfo = {
     phone: '+1 302 464 0950',

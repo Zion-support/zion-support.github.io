@@ -1,5 +1,6 @@
-import React from 'react';
-import { ArrowRight, Sparkles, TrendingUp, Zap, Star, Target, DollarSign } from 'lucide-react';
+// import React from 'react';
+import { ArrowRight, Sparkles, TrendingUp, Zap, Star, Award, Target, DollarSign } from 'lucide-react';
+
 const AIAdvertisingBanner: React.FC = () => {
   const advertisingFeatures = [
     {

@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export default function April2026ConsciousComputingBanner() {
   return (
     <section className="py-12 bg-gradient-to-r from-indigo-900/50 via-purple-900/50 to-pink-900/50 border-b border-indigo-500/30">

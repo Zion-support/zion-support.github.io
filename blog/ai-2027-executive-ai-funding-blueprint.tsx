@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export default function ExecutiveAIFundingBlueprint2027() {
 	return (
 		<div className="min-h-screen bg-slate-950 text-white">

@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export const metadata = {
   title: 'Trustworthy Autonomous Agents 2026: Guardrails, Evals, and Policy Gates',
   description:

@@ -1,5 +1,83 @@
+// import React from 'react';
+import { Metadata } from 'next';
 import { Link } from 'react-router-dom';
-import { Cloud, CheckCircle, ArrowRight, DollarSign, Clock, Star, TrendingUp, Database, Mail, Phone, Code, Server, Network, Container, Kubernetes, Database as DB, Key, Circle } from 'lucide-react';
+import { 
+  Cloud, 
+  Shield, 
+  BarChart3, 
+  Users, 
+  FileText, 
+  Zap, 
+  Monitor, 
+  Search, 
+  MessageSquare, 
+  CheckCircle, 
+  ArrowRight, 
+  DollarSign,
+  Clock,
+  Star,
+  Globe,
+  Lock,
+  Target,
+  TrendingUp,
+  Settings,
+  Database,
+  Bot,
+  Smartphone,
+  Mail,
+  Phone,
+  Calendar,
+  CreditCard,
+  Headphones,
+  Code,
+  Layers,
+  Wifi,
+  Camera,
+  Mic,
+  MapPin,
+  ShoppingCart,
+  Package,
+  Truck,
+  Building,
+  Home,
+  Car,
+  Plane,
+  Ship,
+  Server,
+  Network,
+  HardDrive,
+  Cpu,
+  MemoryStick,
+  Router,
+  Terminal,
+  GitBranch,
+  Container,
+  Docker,
+  Kubernetes,
+  Database as DB,
+  Key,
+  Eye,
+  AlertTriangle,
+  Activity,
+  PieChart,
+  LineChart,
+  RefreshCw,
+  Download,
+  Upload,
+  Play,
+  Pause,
+  Square,
+  Triangle,
+  Circle,
+  Hexagon
+} from 'lucide-react';
+
+export const metadata: Metadata = {
+  title: 'IT Services & Solutions | Zion Tech Group - Enterprise IT Consulting',
+  description: 'Comprehensive IT services including cloud migration, DevOps, cybersecurity, platform engineering, and infrastructure automation. Transform your IT operations.',
+  keywords: 'IT consulting, cloud migration, DevOps, cybersecurity, platform engineering, infrastructure automation, IT services',
+};
+
 export default function ITServicesPage() {
   const itServices = [
     {
@@ -594,8 +672,7 @@ export default function ITServicesPage() {
                   </div>
 
                   <div className="flex gap-3">
-                    <Link 
-                      href={service.link}
+                    <Link to={service.link}
                       className="flex-1 inline-flex items-center justify-center px-4 py-2 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors text-sm"
                     >
                       Learn More

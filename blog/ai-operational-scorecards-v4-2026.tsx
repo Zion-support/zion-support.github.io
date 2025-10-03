@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export default function AIOperationalScorecardsV4_2026(): JSX.Element {
   return (
     <article className="prose max-w-3xl mx-auto py-12 px-6">

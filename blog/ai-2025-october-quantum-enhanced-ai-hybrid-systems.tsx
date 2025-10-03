@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export const metadata = {
   title: 'Quantum-Enhanced AI Systems 2025 — Hybrid Classical-Quantum Intelligence',
   description: 'Deploy quantum-enhanced AI achieving 10,000x speedup for optimization problems, 98.9% accuracy improvements, and $234M+ value creation. Revolutionary hybrid systems combining classical AI with quantum computing power.',

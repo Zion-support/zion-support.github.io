@@ -1,3 +1,4 @@
+// import React from 'react';
 import { Network, Cpu, Zap, TrendingUp } from 'lucide-react';
 
 export default function October2025NeuralAPIOrchestrationBanner() {

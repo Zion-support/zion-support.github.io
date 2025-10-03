@@ -1,3 +1,4 @@
+// import React from 'react';
 import { motion } from 'framer-motion';
 import { Brain, Zap, TrendingUp, ArrowRight, CheckCircle, Sparkles } from 'lucide-react';
 

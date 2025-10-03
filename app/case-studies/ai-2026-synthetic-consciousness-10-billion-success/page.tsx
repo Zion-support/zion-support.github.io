@@ -1,3 +1,4 @@
+// import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Brain, TrendingUp, DollarSign, Users, Target, Award } from 'lucide-react';
 

@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export default function IntelligentDataPipelineOrchestration2025() {
   return (
     <main className="container mx-auto px-6 py-12">

@@ -1,5 +1,61 @@
+// import React from 'react';
+import { Metadata } from 'next';
 import { Link } from 'react-router-dom';
-import { Cloud, CheckCircle, ArrowRight, Mail, Phone, Circle } from 'lucide-react';
+import { 
+  Cloud, 
+  Shield, 
+  BarChart3, 
+  Zap, 
+  CheckCircle, 
+  ArrowRight, 
+  DollarSign,
+  Clock,
+  Star,
+  TrendingUp,
+  Settings,
+  AlertTriangle,
+  Target,
+  Users,
+  Database,
+  Server,
+  Monitor,
+  Globe,
+  Smartphone,
+  Mail,
+  Phone,
+  Calendar,
+  FileText,
+  PieChart,
+  LineChart,
+  Activity,
+  CreditCard,
+  Lock,
+  Eye,
+  Bell,
+  Download,
+  Upload,
+  RefreshCw,
+  Play,
+  Pause,
+  Square,
+  Triangle,
+  Circle,
+  Hexagon,
+  Layers,
+  Wifi,
+  Building,
+  Home,
+  Car,
+  Plane,
+  Ship
+} from 'lucide-react';
+
+export const metadata: Metadata = {
+  title: 'Cloud Cost Guard - FinOps Automation Platform | Zion Tech Group',
+  description: 'Automated cloud cost anomaly detection, budget alerts, rightsizing, and savings recommendations across AWS, Azure, and GCP. Save 30-40% on cloud costs.',
+  keywords: 'cloud cost management, FinOps, AWS cost optimization, Azure cost control, GCP cost savings, cloud automation, budget alerts',
+};
+
 export default function CloudCostGuardPage() {
   const features = [
     {

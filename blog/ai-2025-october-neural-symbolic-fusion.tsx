@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export const metadata = {
   title: 'Neural-Symbolic Fusion 2025 — Combining Deep Learning with Logical Reasoning',
   description: 'Master neural-symbolic AI achieving 98% reasoning accuracy, 10x improved interpretability, and human-like problem solving. Bridge the gap between statistical learning and symbolic reasoning for next-generation AI systems.',

@@ -1,3 +1,17 @@
+// import React from 'react';
+// Metadata handled by React Helmet
+
+export const metadata: Metadata = {
+  title: 'Autonomous AI Operations Services 2026 | Zion Tech Group',
+  description: 'Deploy self-managing, self-healing AI systems that operate autonomously. Reduce downtime, optimize performance, and achieve 95% automation.',
+  keywords: 'autonomous AI, self-healing systems, enterprise automation, AI operations, intelligent automation',
+  openGraph: {
+    title: 'Autonomous AI Operations Services 2026',
+    description: 'Transform your operations with self-managing AI systems.',
+    type: 'website',
+  },
+};
+
 export default function AIAutonomousOperationsServices2026() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">

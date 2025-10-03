@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export default function October2025QuantumEdgeRevolutionMegaBanner() {
   return (
     <section className="py-16 bg-gradient-to-br from-cyan-900/30 via-blue-900/30 to-purple-900/30 backdrop-blur-sm border-y border-cyan-500/20">

@@ -1,3 +1,5 @@
+// import React from 'react';
+
 const AIRealTimeStreamingInference2026 = () => {
   return (
     <div className="container mx-auto px-6 py-16">

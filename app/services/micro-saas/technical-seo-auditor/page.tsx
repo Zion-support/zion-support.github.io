@@ -1,3 +1,4 @@
+// import React from 'react';
 import Head from 'next/head';
 import { Link } from 'react-router-dom';
 import { Search, CheckCircle, Activity, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';

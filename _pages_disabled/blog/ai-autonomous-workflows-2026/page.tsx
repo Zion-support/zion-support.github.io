@@ -1,5 +1,7 @@
+// import React from 'react';
 import { Link } from 'react-router-dom';
-import { Sparkles, TrendingUp, CheckCircle, ArrowRight } from 'lucide-react';
+import { Sparkles, TrendingUp, Zap, Target, BarChart3, CheckCircle, ArrowRight } from 'lucide-react';
+
 export const metadata = {
   title: 'AI Autonomous Workflows 2026: Transforming Enterprise Operations | Zion Tech Group',
   description: 'Discover how AI autonomous workflows are revolutionizing enterprise operations with 95% automation, 400% ROI, and seamless multi-system orchestration.',

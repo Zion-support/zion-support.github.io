@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export default function August2026MegaBreakthroughBanner() {
   return (
     <div className="bg-gradient-to-r from-emerald-500/20 to-teal-500/20 backdrop-blur-sm rounded-2xl p-8 border border-emerald-500/30 mb-12">

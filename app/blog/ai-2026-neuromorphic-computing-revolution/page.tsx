@@ -1,3 +1,20 @@
+// import React from 'react';
+// Metadata handled by React Helmet
+
+export const metadata: Metadata = {
+  title: '🧠 Neuromorphic Computing Revolution 2026: Brain-Inspired AI That Thinks Like Humans',
+  description: 'Discover the revolutionary neuromorphic computing breakthrough of 2026 that mimics human brain architecture. Achieve 99.7% neural efficiency, 1000x faster processing, and ultra-low power consumption. Transform your enterprise with brain-inspired AI.',
+  keywords: ['neuromorphic computing', 'brain-inspired AI', 'neural processing', 'AI efficiency', 'low power AI', 'enterprise AI transformation', 'cognitive computing'],
+  openGraph: {
+    title: '🧠 Neuromorphic Computing Revolution 2026: Brain-Inspired AI That Thinks Like Humans',
+    description: 'Revolutionary neuromorphic computing breakthrough delivering 99.7% neural efficiency and 1000x faster processing with brain-inspired architecture.',
+    type: 'article',
+    publishedTime: '2026-01-20T00:00:00.000Z',
+    authors: ['Zion Tech Group'],
+    tags: ['Neuromorphic Computing', 'Brain-Inspired AI', 'Cognitive Computing', 'Enterprise Innovation'],
+  },
+};
+
 export default function NeuromorphicComputingRevolution2026() {
   return (
     <div className="min-h-screen bg-slate-950 text-white">

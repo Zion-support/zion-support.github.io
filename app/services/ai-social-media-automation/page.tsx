@@ -1,5 +1,16 @@
+// import React from 'react';
+import { Metadata } from 'next';
 import { Link } from 'react-router-dom';
 
+export const metadata: Metadata = {
+  title: 'AI Social Media Automation Platform - Zion Tech Group',
+  description: 'Automate your social media presence with AI-powered content creation, scheduling, and engagement. Boost your online presence with intelligent social media management.',
+  keywords: 'social media automation, AI content creation, social media management, automated posting, social media analytics',
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function AISocialMediaAutomation() {
   const features = [
@@ -120,10 +131,10 @@ export default function AISocialMediaAutomation() {
             Transform your social media presence with AI-powered automation. Create, schedule, and engage with intelligent social media management that drives real results.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="#pricing" className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+            <Link to="#pricing" className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
               View Pricing
             </Link>
-            <Link href="/contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors">
+            <Link to="/contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors">
               Start Free Trial
             </Link>
           </div>
@@ -199,7 +210,7 @@ export default function AISocialMediaAutomation() {
                     </li>
                   ))}
                 </ul>
-                <Link href="/contact" className={`w-full block text-center py-3 rounded-lg font-semibold transition-colors ${
+                <Link to="/contact" className={`w-full block text-center py-3 rounded-lg font-semibold transition-colors ${
                   plan.popular 
                     ? 'bg-purple-600 text-white hover:bg-purple-700' 
                     : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
@@ -251,10 +262,10 @@ export default function AISocialMediaAutomation() {
             Join thousands of businesses already using AI to automate their social media presence. Start your free trial today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+            <Link to="/contact" className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
               Start Free Trial
             </Link>
-            <Link href="tel:+13024640950" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors">
+            <Link to="tel:+13024640950" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors">
               Call +1 302 464 0950
             </Link>
           </div>

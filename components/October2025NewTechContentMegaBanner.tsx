@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export default function October2025NewTechContentMegaBanner() {
   return (
     <section className="relative overflow-hidden bg-gradient-to-r from-emerald-900/40 via-teal-900/40 to-cyan-900/40 backdrop-blur-sm py-20 border-y border-emerald-500/30">

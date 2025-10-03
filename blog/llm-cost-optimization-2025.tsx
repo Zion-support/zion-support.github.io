@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export const metadata = {
   title: 'LLM Cost Optimization: Strategies to Reduce AI Inference Costs by 80%',
   description: 'Learn proven techniques to dramatically reduce your LLM costs while maintaining performance: model compression, caching, prompt optimization, and infrastructure choices.',

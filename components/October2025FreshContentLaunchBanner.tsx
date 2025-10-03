@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export default function October2025FreshContentLaunchBanner() {
   return (
     <div className="relative bg-gradient-to-br from-indigo-950 via-purple-950 to-blue-950 py-12 px-4 sm:px-6 lg:px-8 overflow-hidden">

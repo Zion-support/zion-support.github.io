@@ -1,5 +1,7 @@
+// import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Star, Zap } from 'lucide-react';
+import { Brain, Sparkles, Target, ArrowRight, Star, Zap } from 'lucide-react';
+
 const October2025ConsciousEnterpriseIntelligenceBanner = () => {
   const capabilities = [
     { icon: Brain, title: 'Business Context Awareness', desc: 'Deep understanding of your business' },

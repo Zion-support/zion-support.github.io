@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export default function November2025NewContentMegaBanner() {
   return (
     <section className="py-20 bg-gradient-to-br from-blue-950 via-cyan-950 to-teal-950 border-y-4 border-cyan-500/50 relative overflow-hidden">

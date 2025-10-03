@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export const metadata = {
   title: 'AI 2026: Neural Optimization Revolution — 1000x Performance, 90% Cost Down',
   description: 'How enterprises achieve 1000x inference performance and 90% cost reduction using graph-aware schedulers, predictive memory, and quantization-aware routing.',

@@ -1,5 +1,7 @@
+// import React from 'react';
 import { Link } from 'react-router-dom';
-import { Clock, Brain, Zap, Target } from 'lucide-react';
+import { Clock, ArrowRight, Brain, Zap, Target } from 'lucide-react';
+
 export const metadata = {
   title: 'AI Cognitive Computing Breakthrough 2026: Next-Gen Intelligence',
   description: 'Discover the revolutionary cognitive computing breakthrough that achieved 95% accuracy in complex reasoning tasks and $50M+ enterprise value.',

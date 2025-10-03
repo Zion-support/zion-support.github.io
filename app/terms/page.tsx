@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export const metadata = {
   title: 'Terms of Service - Zion Tech Group',
   description: 'Read the terms and conditions for using Zion Tech Group\'s AI, micro SaaS, and IT services.',

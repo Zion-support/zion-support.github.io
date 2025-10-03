@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export const metadata = {
   title: 'September 30, 2025: New Governed Agent Patterns for Reliable Autonomy',
   description:

@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export default function October2025AutonomousCodingBanner() {
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-purple-900/40 via-blue-900/40 to-indigo-900/40 backdrop-blur-sm py-16 border-y border-purple-500/20">

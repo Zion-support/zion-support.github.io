@@ -1,3 +1,4 @@
+// import React from 'react';
 import { Shield, CheckCircle, TrendingUp, Award, BookOpen, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
 

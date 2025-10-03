@@ -1,5 +1,30 @@
+// import React from 'react';
+import { Metadata } from 'next';
 import { Link } from 'react-router-dom';
-import { Shield, CheckCircle, ArrowRight, Star, Database, Globe } from 'lucide-react';
+import { 
+  Cpu, 
+  Brain, 
+  Zap, 
+  BarChart3, 
+  Shield, 
+  CheckCircle, 
+  ArrowRight, 
+  Star,
+  Activity,
+  Target,
+  TrendingUp,
+  Clock,
+  Users,
+  Database,
+  Globe
+} from 'lucide-react';
+
+export const metadata: Metadata = {
+  title: 'Autonomous Business Process Orchestrator | Zion Tech Group',
+  description: 'Revolutionary AI system that autonomously manages and optimizes entire business processes. Reduce execution time by 80% and eliminate human errors in routine tasks.',
+  keywords: 'autonomous AI, business process automation, AI orchestration, intelligent automation, process optimization',
+};
+
 export default function AutonomousOrchestratorPage() {
   const features = [
     {

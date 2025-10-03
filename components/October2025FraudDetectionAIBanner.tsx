@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export default function October2025FraudDetectionAIBanner() {
   return (
     <div className="relative overflow-hidden bg-gradient-to-br from-red-950 via-orange-950 to-slate-950 text-white py-16 px-6 mb-8">

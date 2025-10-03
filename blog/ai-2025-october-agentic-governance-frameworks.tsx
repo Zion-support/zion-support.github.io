@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export const metadata = {
   title: 'Agentic Governance Frameworks 2025 — Building Trust in Autonomous AI Systems',
   description: 'Implement enterprise-grade governance frameworks for autonomous AI agents with 99.9% compliance accuracy, real-time risk assessment, and automated policy enforcement. Navigate the regulatory landscape of agentic AI deployment.',

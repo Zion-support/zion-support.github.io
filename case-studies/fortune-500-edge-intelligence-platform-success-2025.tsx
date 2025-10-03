@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export default function Fortune500EdgeIntelligencePlatformSuccess2025() {
   return (
     <article className="min-h-screen bg-slate-950 text-white py-20">

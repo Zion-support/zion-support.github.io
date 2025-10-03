@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export const metadata = {
   title: 'AI-Accelerated Customer Experience 2025: 95% CSAT with Real-Time Intelligence',
   description: 'Enterprise guide to deploying AI for customer experience: real-time intent detection, autonomous workflows, and omnichannel personalization driving 95% CSAT and 40% cost reduction.',

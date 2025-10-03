@@ -1,5 +1,35 @@
+// import React from 'react';
 import { Link } from 'react-router-dom';
-import { Cloud, CheckCircle, ArrowRight, DollarSign, Clock, Star } from 'lucide-react';
+import { Metadata } from 'next';
+import { 
+  Brain, 
+  Code, 
+  Cloud, 
+  Shield, 
+  Zap, 
+  BarChart3, 
+  Users, 
+  MessageSquare, 
+  FileText, 
+  Smartphone, 
+  Globe, 
+  Lock, 
+  Monitor, 
+  Database, 
+  Cpu,
+  CheckCircle,
+  ArrowRight,
+  DollarSign,
+  Clock,
+  Star
+} from 'lucide-react';
+
+export const metadata: Metadata = {
+  title: 'Innovative Services Catalog | Zion Tech Group - Cutting-Edge Solutions',
+  description: 'Explore our latest micro SaaS, AI, and IT services including autonomous operations, quantum computing, and next-generation business intelligence solutions.',
+  keywords: 'micro SaaS, AI services, IT solutions, autonomous systems, quantum computing, business intelligence, cloud services',
+};
+
 export default function NewServicesCatalogPage() {
   const serviceCategories = [
     {
@@ -441,8 +471,7 @@ export default function NewServicesCatalogPage() {
                         </div>
 
                         {/* CTA */}
-                        <Link
-                          href={service.href}
+                        <Link to={service.href}
                           className={`inline-flex items-center justify-center w-full py-3 px-6 bg-${category.color}-600 text-white font-semibold rounded-lg hover:bg-${category.color}-700 transition-colors group`}
                         >
                           <span>Get Started</span>

@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import Link from 'next/link';
 import { ArrowRight, Shield, Zap, TrendingUp, Brain } from 'lucide-react';
 const February2026AutonomousInfrastructureBanner: React.FC = () => {

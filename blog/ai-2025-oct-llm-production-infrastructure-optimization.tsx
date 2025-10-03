@@ -1,5 +1,6 @@
+// import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Server, Cpu, TrendingDown, BarChart3, CheckCircle, ArrowRight, AlertTriangle } from 'lucide-react';
+import { Server, Cpu, Zap, TrendingDown, BarChart3, CheckCircle, ArrowRight, AlertTriangle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const LLMProductionInfrastructure = () => {

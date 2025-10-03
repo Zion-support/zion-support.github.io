@@ -1,5 +1,25 @@
+// import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Users, Zap, Shield, Globe, BarChart3, Brain, Cpu, Cloud, TrendingUp, Award, Target, Rocket } from 'lucide-react';
+import { 
+  ArrowRight, 
+  CheckCircle, 
+  Star, 
+  Users, 
+  Zap, 
+  Shield, 
+  Globe, 
+  BarChart3,
+  Brain,
+  Cpu,
+  Cloud,
+  Database,
+  Lock,
+  TrendingUp,
+  Award,
+  Target,
+  Rocket
+} from 'lucide-react';
+
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">

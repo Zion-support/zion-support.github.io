@@ -1,5 +1,50 @@
+// import React from 'react';
+import { Metadata } from 'next';
 import { Link } from 'react-router-dom';
-import { Mic, FileText, BarChart3, Brain, Globe, Users, CheckCircle, ArrowRight, DollarSign, Phone, Mail, MapPin, Star, TrendingUp, Target, Edit3, Settings, Monitor } from 'lucide-react';
+import { 
+  Mic, 
+  FileText, 
+  BarChart3, 
+  Brain, 
+  Zap, 
+  Shield, 
+  Globe, 
+  Users, 
+  CheckCircle, 
+  ArrowRight,
+  Clock,
+  DollarSign,
+  Phone,
+  Mail,
+  MapPin,
+  Star,
+  TrendingUp,
+  Target,
+  Database,
+  Eye,
+  Search,
+  Edit3,
+  Upload,
+  Download,
+  PieChart,
+  LineChart,
+  AlertTriangle,
+  Cpu,
+  Cloud,
+  Lock,
+  Settings,
+  Monitor,
+  Smartphone,
+  Tablet,
+  Laptop
+} from 'lucide-react';
+
+export const metadata: Metadata = {
+  title: 'Comprehensive Micro SaaS Solutions - Zion Tech Group | 50+ AI-Powered Micro SaaS',
+  description: 'Revolutionary micro SaaS solutions across AI automation, data analytics, cybersecurity, cloud infrastructure, e-commerce, healthcare, fintech, education, real estate, and logistics with proven ROI.',
+  keywords: 'micro SaaS, AI automation, data analytics, cybersecurity, cloud infrastructure, e-commerce SaaS, healthcare tech, fintech solutions, education technology, real estate tech, logistics solutions',
+};
+
 export default function ComprehensiveMicroSaaSSolutionsPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
@@ -23,15 +68,13 @@ export default function ComprehensiveMicroSaaSSolutionsPage() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link 
-                href="/contact" 
+              <Link to="/contact" 
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300"
               >
                 Get Started Today
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
-              <Link 
-                href="#solutions" 
+              <Link to="#solutions" 
                 className="inline-flex items-center px-8 py-4 border-2 border-gray-300 text-gray-700 font-semibold rounded-lg hover:border-blue-500 hover:text-blue-600 transition-all duration-300"
               >
                 Explore Solutions
@@ -90,8 +133,7 @@ export default function ComprehensiveMicroSaaSSolutionsPage() {
                   <span className="text-sm text-gray-600 ml-1">4.9/5</span>
                 </div>
               </div>
-              <Link 
-                href="/services/ai-voice-assistant-platform" 
+              <Link to="/services/ai-voice-assistant-platform" 
                 className="text-blue-600 font-semibold hover:text-blue-700 flex items-center"
               >
                 Learn More →
@@ -116,8 +158,7 @@ export default function ComprehensiveMicroSaaSSolutionsPage() {
                   <span className="text-sm text-gray-600 ml-1">4.8/5</span>
                 </div>
               </div>
-              <Link 
-                href="/services/ai-document-automation-platform" 
+              <Link to="/services/ai-document-automation-platform" 
                 className="text-green-600 font-semibold hover:text-green-700 flex items-center"
               >
                 Learn More →
@@ -142,8 +183,7 @@ export default function ComprehensiveMicroSaaSSolutionsPage() {
                   <span className="text-sm text-gray-600 ml-1">4.9/5</span>
                 </div>
               </div>
-              <Link 
-                href="/services/ai-business-intelligence-platform" 
+              <Link to="/services/ai-business-intelligence-platform" 
                 className="text-indigo-600 font-semibold hover:text-indigo-700 flex items-center"
               >
                 Learn More →
@@ -168,8 +208,7 @@ export default function ComprehensiveMicroSaaSSolutionsPage() {
                   <span className="text-sm text-gray-600 ml-1">4.7/5</span>
                 </div>
               </div>
-              <Link 
-                href="/services/ai-content-optimization-suite" 
+              <Link to="/services/ai-content-optimization-suite" 
                 className="text-purple-600 font-semibold hover:text-purple-700 flex items-center"
               >
                 Learn More →
@@ -194,8 +233,7 @@ export default function ComprehensiveMicroSaaSSolutionsPage() {
                   <span className="text-sm text-gray-600 ml-1">4.8/5</span>
                 </div>
               </div>
-              <Link 
-                href="/services/ai-lead-scoring-api" 
+              <Link to="/services/ai-lead-scoring-api" 
                 className="text-orange-600 font-semibold hover:text-orange-700 flex items-center"
               >
                 Learn More →
@@ -220,8 +258,7 @@ export default function ComprehensiveMicroSaaSSolutionsPage() {
                   <span className="text-sm text-gray-600 ml-1">4.9/5</span>
                 </div>
               </div>
-              <Link 
-                href="/services/ai-financial-forecasting-suite" 
+              <Link to="/services/ai-financial-forecasting-suite" 
                 className="text-green-600 font-semibold hover:text-green-700 flex items-center"
               >
                 Learn More →
@@ -384,8 +421,7 @@ export default function ComprehensiveMicroSaaSSolutionsPage() {
                 <li className="flex items-center"><CheckCircle className="w-5 h-5 text-green-500 mr-3" />Standard security</li>
                 <li className="flex items-center"><CheckCircle className="w-5 h-5 text-green-500 mr-3" />99.9% uptime</li>
               </ul>
-              <Link 
-                href="/contact" 
+              <Link to="/contact" 
                 className="w-full bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors text-center block"
               >
                 Get Started
@@ -411,8 +447,7 @@ export default function ComprehensiveMicroSaaSSolutionsPage() {
                 <li className="flex items-center"><CheckCircle className="w-5 h-5 text-green-500 mr-3" />Custom integrations</li>
                 <li className="flex items-center"><CheckCircle className="w-5 h-5 text-green-500 mr-3" />99.99% uptime</li>
               </ul>
-              <Link 
-                href="/contact" 
+              <Link to="/contact" 
                 className="w-full bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors text-center block"
               >
                 Get Started
@@ -436,8 +471,7 @@ export default function ComprehensiveMicroSaaSSolutionsPage() {
                 <li className="flex items-center"><CheckCircle className="w-5 h-5 text-green-500 mr-3" />On-premise deployment</li>
                 <li className="flex items-center"><CheckCircle className="w-5 h-5 text-green-500 mr-3" />SLA guarantees</li>
               </ul>
-              <Link 
-                href="/contact" 
+              <Link to="/contact" 
                 className="w-full bg-gray-800 text-white font-semibold py-3 px-6 rounded-lg hover:bg-gray-900 transition-colors text-center block"
               >
                 Contact Sales
@@ -457,15 +491,13 @@ export default function ComprehensiveMicroSaaSSolutionsPage() {
             Join thousands of businesses using our comprehensive micro SaaS solutions to drive growth and efficiency
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/contact" 
+            <Link to="/contact" 
               className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300"
             >
               Start Free Trial
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
-            <Link 
-              href="#solutions" 
+            <Link to="#solutions" 
               className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300"
             >
               Explore All Solutions

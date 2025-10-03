@@ -1,3 +1,4 @@
+// import React from 'react';
 import Link from 'next/link';
 import { Workflow, CheckCircle, ArrowRight, DollarSign, Clock } from 'lucide-react';
 }

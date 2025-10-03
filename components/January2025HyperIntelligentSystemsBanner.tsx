@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { motion } from 'framer-motion';
 import { Cpu, Globe, TrendingUp, Award, Star, Brain, Shield, Target } from 'lucide-react';
 const January2025HyperIntelligentSystemsBanner: React.FC = () => {

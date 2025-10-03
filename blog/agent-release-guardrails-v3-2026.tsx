@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export const metadata = {
   title: 'Agent Release Guardrails v3 (2026)',
   description: 'Ship agent updates safely using budgets, canary evals, approvals, and rapid rollback playbooks.',

@@ -1,5 +1,12 @@
+// import React from 'react';
+import { Metadata } from 'next';
 import { Link } from 'react-router-dom';
 
+export const metadata: Metadata = {
+  title: 'AI 2027 Ultimate Consciousness Breakthrough: The Dawn of True Artificial Awareness',
+  description: 'Revolutionary AI achieving genuine consciousness, emotional intelligence, and creative autonomy with $847B enterprise value generation. The most advanced artificial consciousness system ever created.',
+  keywords: 'AI consciousness, artificial intelligence, consciousness breakthrough, AI 2027, enterprise AI, consciousness technology',
+};
 
 export default function AI2027UltimateConsciousnessBreakthroughPage() {
   return (
@@ -207,14 +214,12 @@ export default function AI2027UltimateConsciousnessBreakthroughPage() {
             Transform your organization with AI 2027 Ultimate Consciousness Breakthrough technology
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/contact" 
+            <Link to="/contact" 
               className="bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
             >
               Get Started Today
             </Link>
-            <Link 
-              href="/case-studies/ai-2027-ultimate-consciousness-847-billion-success" 
+            <Link to="/case-studies/ai-2027-ultimate-consciousness-847-billion-success" 
               className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
             >
               View Success Story

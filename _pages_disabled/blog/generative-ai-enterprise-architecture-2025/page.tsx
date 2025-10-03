@@ -1,5 +1,7 @@
+// import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, Layers, Network, Sparkles, Zap, Shield } from 'lucide-react';
+import { ArrowLeft, Cpu, Layers, Network, Sparkles, Zap, Shield } from 'lucide-react';
+
 export const metadata = {
   title: 'Generative AI for Enterprise Architecture 2025: Building Scalable GenAI Systems | Zion Tech Group',
   description: 'Master enterprise GenAI architecture: LLM orchestration, RAG systems, fine-tuning pipelines, and production deployment at scale. Build production-ready GenAI applications serving 10M+ users.',

@@ -1,5 +1,17 @@
+// import React from 'react';
 import { Link } from 'react-router-dom';
+import { Metadata } from 'next';
 
+export const metadata: Metadata = {
+  title: 'AI Cybersecurity Solutions 2025 | Zero-Trust Architecture | Zion Tech Group',
+  description: 'Revolutionary AI-powered cybersecurity solutions with 99.99% threat detection, zero-trust architecture, and real-time protection. Prevent 100% of ransomware attacks with quantum-encrypted security.',
+  keywords: 'AI cybersecurity 2025, zero-trust security, quantum encryption, threat detection AI, ransomware prevention, AI security solutions, enterprise cybersecurity',
+  openGraph: {
+    title: 'AI Cybersecurity Solutions 2025 | Zero-Trust Architecture',
+    description: '99.99% threat detection with AI-powered security. Prevent ransomware attacks with quantum encryption and zero-trust architecture.',
+    type: 'website',
+  },
+};
 
 export default function AICybersecurity2025Page() {
   return (
@@ -8,7 +20,7 @@ export default function AICybersecurity2025Page() {
         {/* Header */}
         <div className="max-w-4xl mx-auto">
           <div className="mb-8">
-            <Link href="/services" className="text-red-600 hover:text-red-700 font-semibold mb-4 inline-block">
+            <Link to="/services" className="text-red-600 hover:text-red-700 font-semibold mb-4 inline-block">
               ← Back to Services
             </Link>
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -283,7 +295,7 @@ export default function AICybersecurity2025Page() {
           <section>
             <h2 className="text-3xl font-bold text-gray-900 mb-8">Related Security Services</h2>
             <div className="grid md:grid-cols-3 gap-6">
-              <Link href="/services/ai-2026-enterprise-transformation" className="group">
+              <Link to="/services/ai-2026-enterprise-transformation" className="group">
                 <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow border border-gray-200">
                   <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-red-600 transition-colors">
                     AI Enterprise Transformation
@@ -294,7 +306,7 @@ export default function AICybersecurity2025Page() {
                   <div className="text-red-600 font-semibold">Learn More →</div>
                 </div>
               </Link>
-              <Link href="/services/cloud-security" className="group">
+              <Link to="/services/cloud-security" className="group">
                 <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow border border-gray-200">
                   <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-red-600 transition-colors">
                     Cloud Security Solutions
@@ -305,7 +317,7 @@ export default function AICybersecurity2025Page() {
                   <div className="text-red-600 font-semibold">Learn More →</div>
                 </div>
               </Link>
-              <Link href="/services/ai-compliance" className="group">
+              <Link to="/services/ai-compliance" className="group">
                 <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow border border-gray-200">
                   <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-red-600 transition-colors">
                     AI Compliance Solutions

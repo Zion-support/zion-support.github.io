@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export const metadata = {
   title: 'AI-Powered Quantum Optimization 2025 — Enterprise Decision Intelligence Revolution',
   description: 'Harness quantum-inspired AI optimization achieving 10,000x faster complex decisions, 97.8% accuracy, and $3.8B value creation. Transform enterprise optimization with breakthrough hybrid quantum-classical systems.',

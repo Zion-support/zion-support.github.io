@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export const metadata = {
   title: 'Quantum-Enhanced AI Security Systems 2025 — Unbreakable Enterprise Protection',
   description: 'Deploy quantum-enhanced AI security achieving 99.99% threat detection, real-time quantum encryption, and predictive threat intelligence. Revolutionary cybersecurity for the autonomous enterprise era.',

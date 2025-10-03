@@ -1,3 +1,18 @@
+// import React from 'react';
+// Metadata handled by React Helmet
+
+export const metadata: Metadata = {
+  title: 'AI Enterprise Transformation: Complete Digital Overhaul Guide 2026 | Zion Tech Group',
+  description: 'Comprehensive guide to AI-driven enterprise transformation, covering strategy, implementation, and ROI optimization for modern businesses.',
+  keywords: 'AI transformation, enterprise AI, digital transformation, business intelligence, AI strategy',
+  openGraph: {
+    title: 'AI Enterprise Transformation: Complete Digital Overhaul Guide 2026',
+    description: 'Master the art of AI-driven enterprise transformation with our comprehensive guide.',
+    type: 'article',
+    publishedTime: '2025-01-30T00:00:00.000Z',
+  },
+};
+
 export default function AIEnterpriseTransformation2026() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">

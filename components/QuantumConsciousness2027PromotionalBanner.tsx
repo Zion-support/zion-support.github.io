@@ -1,4 +1,5 @@
 // @ts-nocheck
+// import React from 'react';
 import { Link } from 'react-router-dom';
 
 export function QuantumConsciousness2027PromotionalBanner() {

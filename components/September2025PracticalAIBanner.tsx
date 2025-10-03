@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export default function September2025PracticalAIBanner() {
   return (
     <section className="py-16 bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900 border-b border-blue-500/30">

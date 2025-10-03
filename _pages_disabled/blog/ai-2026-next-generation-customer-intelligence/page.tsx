@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export const metadata = {
   title: 'AI 2026: Next-Generation Customer Intelligence - 99% Predictive Accuracy',
   description: 'Revolutionary AI customer intelligence platforms achieving 99% predictive accuracy in customer behavior, lifetime value, and churn prediction. Transform your customer experience.',

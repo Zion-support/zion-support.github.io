@@ -1,6 +1,21 @@
+// import React from 'react';
+import { Metadata } from 'next';
 import { Link } from 'react-router-dom';
 import { Calendar, Clock, User, ArrowRight, Zap, Cpu, Shield, TrendingUp, Target, Brain } from 'lucide-react';
 
+export const metadata: Metadata = {
+  title: 'Quantum Computing 2026: Commercial Breakthrough & Enterprise Implementation | Zion Tech Group',
+  description: 'Discover how quantum computing has achieved commercial viability in 2026. Learn about quantum advantage, enterprise implementations, and the $47B quantum economy transforming industries.',
+  keywords: 'quantum computing 2026, quantum advantage, quantum enterprise, quantum breakthrough, quantum economy, quantum implementation, quantum AI, quantum algorithms',
+  openGraph: {
+    title: 'Quantum Computing 2026: Commercial Breakthrough & Enterprise Implementation',
+    description: 'Discover how quantum computing has achieved commercial viability in 2026 with real enterprise implementations and quantum advantage.',
+    type: 'article',
+    publishedTime: '2026-01-15T00:00:00.000Z',
+    authors: ['Zion Tech Group'],
+    tags: ['Quantum Computing', 'Quantum Advantage', 'Enterprise Implementation', 'Quantum Breakthrough', 'Quantum AI']
+  }
+};
 
 export default function QuantumComputing2026CommercialBreakthrough() {
   return (
@@ -283,15 +298,13 @@ export default function QuantumComputing2026CommercialBreakthrough() {
                 identify opportunities and implement quantum solutions for maximum competitive advantage.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
-                  href="/contact"
+                <Link to="/contact"
                   className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center gap-2"
                 >
                   Start Your Quantum Journey
                   <ArrowRight className="w-4 h-4" />
                 </Link>
-                <Link 
-                  href="/services/quantum-computing"
+                <Link to="/services/quantum-computing"
                   className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors flex items-center justify-center gap-2"
                 >
                   Explore Quantum Services
@@ -307,7 +320,7 @@ export default function QuantumComputing2026CommercialBreakthrough() {
         <div className="mt-16">
           <h3 className="text-2xl font-bold text-white mb-8 text-center">Related Articles</h3>
           <div className="grid md:grid-cols-3 gap-6">
-            <Link href="/blog/ai-2026-future-ai-landscape-mega-trends" className="group">
+            <Link to="/blog/ai-2026-future-ai-landscape-mega-trends" className="group">
               <div className="bg-gradient-to-r from-purple-900/50 to-blue-900/50 border border-purple-500/30 rounded-xl p-6 hover:border-purple-400/60 transition-colors">
                 <h4 className="text-lg font-semibold text-white mb-2 group-hover:text-purple-300 transition-colors">
                   AI 2026: Future AI Landscape
@@ -317,7 +330,7 @@ export default function QuantumComputing2026CommercialBreakthrough() {
                 </p>
               </div>
             </Link>
-            <Link href="/blog/quantum-ai-implementation-guide-2026" className="group">
+            <Link to="/blog/quantum-ai-implementation-guide-2026" className="group">
               <div className="bg-gradient-to-r from-blue-900/50 to-cyan-900/50 border border-blue-500/30 rounded-xl p-6 hover:border-blue-400/60 transition-colors">
                 <h4 className="text-lg font-semibold text-white mb-2 group-hover:text-blue-300 transition-colors">
                   Quantum AI Implementation Guide
@@ -327,7 +340,7 @@ export default function QuantumComputing2026CommercialBreakthrough() {
                 </p>
               </div>
             </Link>
-            <Link href="/blog/enterprise-quantum-security-2026" className="group">
+            <Link to="/blog/enterprise-quantum-security-2026" className="group">
               <div className="bg-gradient-to-r from-green-900/50 to-teal-900/50 border border-green-500/30 rounded-xl p-6 hover:border-green-400/60 transition-colors">
                 <h4 className="text-lg font-semibold text-white mb-2 group-hover:text-green-300 transition-colors">
                   Enterprise Quantum Security

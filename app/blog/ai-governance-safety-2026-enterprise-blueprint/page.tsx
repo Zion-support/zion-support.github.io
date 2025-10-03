@@ -1,3 +1,19 @@
+// import React from 'react';
+// Metadata handled by React Helmet
+
+export const metadata: Metadata = {
+  title: 'AI Governance & Safety 2026: Enterprise Blueprint for Responsible AI | Zion Tech Group',
+  description: 'Comprehensive enterprise blueprint for AI governance and safety in 2026, covering ethical AI frameworks, safety protocols, compliance standards, and responsible AI implementation strategies.',
+  keywords: 'AI governance, AI safety, ethical AI, responsible AI, AI compliance, enterprise AI governance, AI ethics framework',
+  openGraph: {
+    title: 'AI Governance & Safety 2026: Enterprise Blueprint for Responsible AI',
+    description: 'Master enterprise AI governance with our comprehensive 2026 blueprint covering ethical frameworks, safety protocols, and compliance standards.',
+    type: 'article',
+    publishedTime: '2026-01-30T00:00:00Z',
+    authors: ['Zion Tech Group'],
+  },
+};
+
 export default function AIGovernanceSafety2026EnterpriseBlueprintPage() {
   return (
     <div className="min-h-screen bg-slate-950 text-white">

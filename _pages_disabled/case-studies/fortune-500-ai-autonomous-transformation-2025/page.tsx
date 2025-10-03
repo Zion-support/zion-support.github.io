@@ -1,5 +1,7 @@
+// import React from 'react';
 import { Metadata } from 'next';
-import { TrendingUp, Zap, Shield, Users, DollarSign, CheckCircle, ArrowRight } from 'lucide-react';
+import { TrendingUp, Zap, Shield, Users, DollarSign, Clock, CheckCircle, ArrowRight } from 'lucide-react';
+
 export const metadata: Metadata = {
   title: 'Fortune 500 AI Autonomous Transformation: $2.3B Savings in 6 Months | Zion Tech Group',
   description: 'Discover how a Fortune 500 manufacturing giant achieved complete operational autonomy, 99.97% uptime, and $2.3B in cost savings through AI transformation.',

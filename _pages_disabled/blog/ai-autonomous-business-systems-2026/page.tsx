@@ -1,10 +1,13 @@
+// import React from 'react';
 import { Link } from 'react-router-dom';
-import { Clock, Bot, Zap, Target, TrendingUp, Cpu } from 'lucide-react';
+import { Clock, ArrowRight, Bot, Zap, Target, TrendingUp, Shield, Cpu } from 'lucide-react';
+
 export const metadata = {
   title: 'AI Autonomous Business Systems 2026: Complete Enterprise Automation Revolution',
   description: 'Transform your enterprise with AI autonomous business systems that achieve 99% automation, $15M+ ROI, and zero-touch operations across all business functions.',
   keywords: 'AI autonomous systems, business automation, enterprise AI, autonomous operations, AI transformation 2026',
-import { Clock, Bot, Zap, Target, TrendingUp, Cpu } from 'lucide-react';
+import { Clock, ArrowRight, Bot, Zap, Target, TrendingUp } from 'lucide-react';
+
 export const metadata = {
   title: 'AI Autonomous Business Systems 2026: Complete Business Automation',
   description: 'Revolutionary autonomous business systems that achieve 95% process automation and $15M+ ROI through intelligent workflow orchestration.',

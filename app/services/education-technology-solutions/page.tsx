@@ -1,6 +1,13 @@
+// import React from 'react';
 import Head from 'next/head';
 import { Link } from 'react-router-dom';
-import { Video, CheckCircle, Phone, Mail, MapPin, ExternalLink, Brain } from 'lucide-react';
+import { 
+  GraduationCap, BookOpen, Users, BarChart3, Video, 
+  FileText, Clock, CheckCircle, ArrowRight, Phone, 
+  Mail, MapPin, ExternalLink, Zap, Target, Award, 
+  Globe, Smartphone, Brain, Monitor
+} from 'lucide-react';
+
 export const metadata = {
   title: 'Education Technology Solutions — Zion Tech Group',
   description: 'Comprehensive EdTech micro SaaS solutions including LMS, student analytics, course creation, and virtual classroom platforms.',

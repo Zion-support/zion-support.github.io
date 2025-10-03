@@ -1,3 +1,4 @@
+// import React from 'react';
 import { motion } from 'framer-motion';
 import { Leaf, TrendingUp, Globe, ArrowRight, CheckCircle, Zap } from 'lucide-react';
 

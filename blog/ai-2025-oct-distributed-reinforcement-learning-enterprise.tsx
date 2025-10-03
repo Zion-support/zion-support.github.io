@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export const metadata = {
   title: 'Distributed Reinforcement Learning at Enterprise Scale 2025',
   description: 'Master distributed reinforcement learning for complex enterprise optimization. Achieve 1000x faster training, solve multi-agent coordination challenges, and unlock $5.2B in operational optimization through scalable RL systems.',

@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export const metadata = {
   title: 'Synthetic Data Generation Mastery 2025 — Privacy-Preserving AI Training at Scale',
   description: 'Deploy synthetic data generation systems achieving 99.8% statistical fidelity, zero privacy risks, and 95% cost reduction in data acquisition. Revolutionary approach to training enterprise AI models with unlimited high-quality data.',

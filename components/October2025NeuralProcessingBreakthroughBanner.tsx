@@ -1,3 +1,4 @@
+// import React from 'react';
 import { Cpu, Zap, Database, Rocket } from 'lucide-react';
 
 export default function October2025NeuralProcessingBreakthroughBanner() {

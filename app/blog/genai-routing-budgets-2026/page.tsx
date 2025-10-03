@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export const metadata = {
   title: 'GenAI Budget‑Aware Routing 2026',
   description: 'Stable UX under cost SLAs using quality tiers, caches, and eval signals.',

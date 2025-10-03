@@ -1,5 +1,6 @@
+// import React from 'react';
 import { motion } from 'framer-motion';
-import { Database, CheckCircle, ArrowRight, Sparkles } from 'lucide-react';
+import { Shield, Database, Brain, Lock, TrendingUp, CheckCircle, ArrowRight, Sparkles } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const October2025DataGovernanceShowcase = () => {

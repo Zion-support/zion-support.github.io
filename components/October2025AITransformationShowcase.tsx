@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export default function October2025AITransformationShowcase() {
   return (
     <div className="relative overflow-hidden bg-gradient-to-br from-slate-900/60 via-purple-900/40 to-rose-900/40 border border-purple-500/20 rounded-3xl p-10 mb-8">

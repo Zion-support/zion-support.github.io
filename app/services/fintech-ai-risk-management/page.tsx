@@ -1,5 +1,16 @@
+// import React from 'react';
+import { Metadata } from 'next';
 import { Link } from 'react-router-dom';
 
+export const metadata: Metadata = {
+  title: 'FinTech AI Risk Management Platform - Zion Tech Group',
+  description: 'Advanced AI-powered risk management platform for financial institutions. Detect fraud, assess credit risk, and ensure regulatory compliance.',
+  keywords: 'fintech AI, risk management, fraud detection, credit risk, financial compliance, AI banking, fintech solutions',
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function FinTechAIRiskManagement() {
   return (
@@ -156,7 +167,7 @@ export default function FinTechAIRiskManagement() {
               <li>• Email support</li>
               <li>• Basic reporting</li>
             </ul>
-            <Link href="/contact" className="w-full bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-700 transition-colors text-center block">
+            <Link to="/contact" className="w-full bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-700 transition-colors text-center block">
               Get Started
             </Link>
           </div>
@@ -172,7 +183,7 @@ export default function FinTechAIRiskManagement() {
               <li>• Advanced analytics</li>
               <li>• API access</li>
             </ul>
-            <Link href="/contact" className="w-full bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-700 transition-colors text-center block">
+            <Link to="/contact" className="w-full bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-700 transition-colors text-center block">
               Get Started
             </Link>
           </div>
@@ -187,7 +198,7 @@ export default function FinTechAIRiskManagement() {
               <li>• Custom integrations</li>
               <li>• SLA guarantee</li>
             </ul>
-            <Link href="/contact" className="w-full bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-700 transition-colors text-center block">
+            <Link to="/contact" className="w-full bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-700 transition-colors text-center block">
               Contact Sales
             </Link>
           </div>
@@ -246,10 +257,10 @@ export default function FinTechAIRiskManagement() {
           Join leading financial institutions using our AI risk management platform to protect assets, ensure compliance, and drive growth.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link href="/contact" className="bg-green-600 text-white py-3 px-8 rounded-lg hover:bg-green-700 transition-colors">
+          <Link to="/contact" className="bg-green-600 text-white py-3 px-8 rounded-lg hover:bg-green-700 transition-colors">
             Schedule Demo
           </Link>
-          <Link href="tel:+13024640950" className="bg-blue-600 text-white py-3 px-8 rounded-lg hover:bg-blue-700 transition-colors">
+          <Link to="tel:+13024640950" className="bg-blue-600 text-white py-3 px-8 rounded-lg hover:bg-blue-700 transition-colors">
             Call +1 302 464 0950
           </Link>
         </div>

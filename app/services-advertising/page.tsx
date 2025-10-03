@@ -1,5 +1,12 @@
+// import React from 'react';
 import { Link } from 'react-router-dom';
+import { Metadata } from 'next';
 
+export const metadata: Metadata = {
+  title: 'Services Advertising & Pricing | Zion Tech Group',
+  description: 'Comprehensive overview of all Zion Tech Group services with competitive pricing, market comparisons, and ROI benefits. Contact us for custom quotes.',
+  keywords: 'AI services pricing, micro SaaS pricing, IT services cost, technology consulting rates, enterprise solutions pricing',
+};
 
 export default function ServicesAdvertisingPage() {
   const serviceCategories = [
@@ -469,19 +476,19 @@ export default function ServicesAdvertisingPage() {
             <div>
               <h4 className="text-lg font-semibold mb-4">Services</h4>
               <div className="space-y-2">
-                <Link href="/services/ai-services-comprehensive" className="block text-gray-300 hover:text-blue-400">AI Services</Link>
-                <Link href="/services/advanced-micro-saas-solutions" className="block text-gray-300 hover:text-green-400">Micro SaaS</Link>
-                <Link href="/services/it-services-comprehensive" className="block text-gray-300 hover:text-purple-400">IT Services</Link>
-                <Link href="/services" className="block text-gray-300 hover:text-blue-400">All Services</Link>
+                <Link to="/services/ai-services-comprehensive" className="block text-gray-300 hover:text-blue-400">AI Services</Link>
+                <Link to="/services/advanced-micro-saas-solutions" className="block text-gray-300 hover:text-green-400">Micro SaaS</Link>
+                <Link to="/services/it-services-comprehensive" className="block text-gray-300 hover:text-purple-400">IT Services</Link>
+                <Link to="/services" className="block text-gray-300 hover:text-blue-400">All Services</Link>
               </div>
             </div>
             <div>
               <h4 className="text-lg font-semibold mb-4">Company</h4>
               <div className="space-y-2">
-                <Link href="/about" className="block text-gray-300 hover:text-blue-400">About Us</Link>
-                <Link href="/contact" className="block text-gray-300 hover:text-blue-400">Contact</Link>
-                <Link href="/case-studies" className="block text-gray-300 hover:text-blue-400">Case Studies</Link>
-                <Link href="/blog" className="block text-gray-300 hover:text-blue-400">Blog</Link>
+                <Link to="/about" className="block text-gray-300 hover:text-blue-400">About Us</Link>
+                <Link to="/contact" className="block text-gray-300 hover:text-blue-400">Contact</Link>
+                <Link to="/case-studies" className="block text-gray-300 hover:text-blue-400">Case Studies</Link>
+                <Link to="/blog" className="block text-gray-300 hover:text-blue-400">Blog</Link>
               </div>
             </div>
             <div>
@@ -495,7 +502,7 @@ export default function ServicesAdvertisingPage() {
           </div>
           <div className="border-t border-gray-700 mt-8 pt-4 text-center text-gray-400">
             © {new Date().getFullYear()} Zion Tech Group. All rights reserved. | 
-            <Link href="https://ziontechgroup.com" className="hover:text-white ml-1">ziontechgroup.com</Link>
+            <Link to="https://ziontechgroup.com" className="hover:text-white ml-1">ziontechgroup.com</Link>
           </div>
         </div>
       </footer>

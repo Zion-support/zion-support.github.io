@@ -1,3 +1,4 @@
+// import React from 'react';
 import { ArrowRight, Brain, Cpu, Zap, Target, TrendingUp, Users, Shield } from 'lucide-react';
 
 export default function AIMetaCognitiveRevolution2026() {

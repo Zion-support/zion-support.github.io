@@ -1,3 +1,12 @@
+// import React from 'react';
+// Metadata handled by React Helmet
+
+export const metadata: Metadata = {
+  title: 'AI 2026: Hyperintelligence Breakthrough - Zion Tech Group',
+  description: 'Discover the revolutionary AI hyperintelligence breakthrough achieving 10,000x cognitive enhancement and autonomous decision-making capabilities.',
+  keywords: ['AI 2026', 'hyperintelligence', 'cognitive enhancement', 'autonomous AI', 'breakthrough technology'],
+};
+
 export default function AI2026HyperintelligenceBreakthrough() {
   return (
     <div className="min-h-screen bg-slate-950 text-white">

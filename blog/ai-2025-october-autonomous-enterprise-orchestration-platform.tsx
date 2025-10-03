@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export const metadata = {
   title: 'Autonomous Enterprise Orchestration Platform 2025 — Self-Managing Business Operations',
   description: 'Deploy autonomous orchestration platforms achieving 97.8% operational automation, 83% cost reduction, and $312M+ value creation through self-managing business processes. Revolutionary end-to-end enterprise automation.',

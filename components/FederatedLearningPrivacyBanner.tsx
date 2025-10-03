@@ -1,3 +1,4 @@
+// import React from 'react';
 import { Link } from 'react-router-dom';
 import { Shield, Lock, Zap, TrendingUp } from 'lucide-react';
 

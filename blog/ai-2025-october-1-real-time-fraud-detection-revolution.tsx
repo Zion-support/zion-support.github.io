@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export const metadata = {
   title: 'Real-Time Fraud Detection Revolution 2025 — 99.97% Accuracy at Sub-Millisecond Speed',
   description: 'Deploy real-time AI fraud detection achieving 99.97% accuracy in under 1ms with $127M+ annual savings. Advanced behavioral analysis, anomaly detection, and adaptive learning preventing fraud before it happens.',

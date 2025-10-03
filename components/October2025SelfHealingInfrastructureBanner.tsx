@@ -1,3 +1,4 @@
+// import React from 'react';
 import { Activity, Shield, Zap, Sparkles, DollarSign, CheckCircle } from 'lucide-react';
 
 export default function October2025SelfHealingInfrastructureBanner() {

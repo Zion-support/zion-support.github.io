@@ -1,3 +1,5 @@
+// import React from 'react';
+
 const October2025NeuralMeshConsciousnessBanner = () => {
   return (
     <div className="bg-gradient-to-r from-pink-900 via-purple-900 to-indigo-900 text-white py-16 px-6">

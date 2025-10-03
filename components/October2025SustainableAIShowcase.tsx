@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export default function October2025SustainableAIShowcase() {
   return (
     <section className="py-12 bg-gradient-to-r from-green-900/30 via-emerald-900/30 to-teal-900/30 backdrop-blur-sm border-b border-green-500/20">

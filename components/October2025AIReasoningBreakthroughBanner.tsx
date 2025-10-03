@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export default function October2025AIReasoningBreakthroughBanner() {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 py-16 sm:py-20">

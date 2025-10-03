@@ -1,6 +1,44 @@
+// import React from 'react';
 import Head from 'next/head';
 import { Link } from 'react-router-dom';
-import { Cpu, Zap, CheckCircle, ArrowRight, Target, Phone, Mail, MapPin, Award, Key } from 'lucide-react';
+import { 
+  Cpu, 
+  Zap, 
+  Shield, 
+  Brain, 
+  CheckCircle, 
+  ArrowRight, 
+  DollarSign,
+  Clock,
+  Star,
+  Target,
+  Phone,
+  Mail,
+  MapPin,
+  Lock,
+  Database,
+  BarChart3,
+  Globe,
+  Users,
+  Award,
+  Rocket,
+  TrendingUp,
+  Activity,
+  AlertTriangle,
+  Key,
+  FileText,
+  Eye,
+  Mic,
+  Network,
+  Server,
+  HardDrive,
+  Wifi,
+  Building,
+  Heart,
+  ShoppingCart,
+  CreditCard
+} from 'lucide-react';
+
 export default function AIQuantumComputing2026Page() {
   const title = 'AI Quantum Computing Solutions 2026 — Zion Tech Group';
   const description = 'Revolutionary AI-powered quantum computing solutions for optimization, cryptography, drug discovery, and financial modeling. Breakthrough performance with quantum advantage.';

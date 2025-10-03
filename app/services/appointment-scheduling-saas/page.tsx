@@ -1,5 +1,36 @@
+// import React from 'react';
+import { Metadata } from 'next';
 import { Link } from 'react-router-dom';
-import { CheckCircle, Star, Clock, Phone, Mail, MapPin, Zap, Globe, Calendar, Clock3 } from 'lucide-react';
+import { 
+  CheckCircle, 
+  Star, 
+  DollarSign, 
+  Clock,
+  Phone,
+  Mail,
+  MapPin,
+  Zap,
+  Shield,
+  TrendingUp,
+  Users,
+  Globe,
+  Calendar,
+  Clock3,
+  CreditCard,
+  BarChart3,
+  Smartphone
+} from 'lucide-react';
+
+export const metadata: Metadata = {
+  title: 'Smart Appointment Scheduler - Zion Tech Group',
+  description: 'Streamline bookings with intelligent scheduling. Comprehensive appointment scheduling platform with AI-powered optimization and automated reminders.',
+  keywords: 'appointment scheduling, booking system, calendar integration, automated reminders, healthcare scheduling',
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
 export default function AppointmentSchedulingSaaS() {
   const contactInfo = {
     phone: '+1 302 464 0950',

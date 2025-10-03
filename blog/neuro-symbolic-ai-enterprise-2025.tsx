@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export const metadata = {
   title: 'Neuro-Symbolic AI for Enterprise: The Best of Both Worlds in 2025',
   description: 'Discover how neuro-symbolic AI combines neural networks with symbolic reasoning to achieve 95% accuracy, explainability, and reliability—solving enterprise AI's biggest challenges.',

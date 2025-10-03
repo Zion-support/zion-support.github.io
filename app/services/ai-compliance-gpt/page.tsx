@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export const metadata = {
   title: 'AI Compliance GPT | Zion Tech Group',
   description: 'Continuous compliance copilot for SOC 2, ISO 27001, HIPAA, and GDPR with policy drafting and evidence automation.',

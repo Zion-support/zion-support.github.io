@@ -1,3 +1,19 @@
+// import React from 'react';
+// Metadata handled by React Helmet
+
+export const metadata: Metadata = {
+  title: 'AI FinTech Transformation 2026: Complete Digital Banking Revolution',
+  description: 'Transform your financial services with AI-powered FinTech solutions. Achieve 95% automation, $5M+ savings, and digital banking revolution.',
+  keywords: 'AI FinTech, digital banking, financial automation, AI finance, fintech transformation, banking AI',
+  openGraph: {
+    title: 'AI FinTech Transformation 2026: Complete Digital Banking Revolution',
+    description: 'Transform your financial services with AI-powered FinTech solutions. Achieve 95% automation, $5M+ savings, and digital banking revolution.',
+    type: 'article',
+    publishedTime: '2026-01-20T10:00:00Z',
+    authors: ['Zion Tech Group'],
+  },
+};
+
 export default function AIFinTechTransformation2026() {
   return (
     <div className="min-h-screen bg-white">

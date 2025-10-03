@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export const metadata = {
   title: 'Sovereign AI Infrastructure 2025 — National AI Autonomy and Data Sovereignty Revolution',
   description: 'Build sovereign AI infrastructure achieving 99.95% data sovereignty, 100% regulatory compliance, and $2.4B cost savings. Transform national AI capabilities with complete independence and control.',

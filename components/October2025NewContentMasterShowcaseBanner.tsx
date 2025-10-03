@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { Link } from 'react-router-dom';
 import { Sparkles, TrendingUp, Award, ArrowRight, Zap } from 'lucide-react';
 const October2025NewContentMasterShowcaseBanner: React.FC = () => {

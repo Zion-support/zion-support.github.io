@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export const metadata = {
   title: 'Hyper-Personalization Engines — October 2025',
   description: 'Blueprint for real-time, privacy-safe hyper-personalization using retrieval, signals, and online learning.',

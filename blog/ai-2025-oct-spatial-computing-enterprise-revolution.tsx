@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export const metadata = {
   title: 'Spatial Computing & AI Enterprise Revolution 2025 — Immersive Intelligence at Scale',
   description: 'Deploy spatial computing and AI integration achieving 97% training efficiency, 85% operational cost reduction, and 12x productivity gains. Transform enterprise operations with immersive AI-powered 3D environments.',

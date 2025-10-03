@@ -1,3 +1,4 @@
+// import React from 'react';
 import Link from 'next/link';
 
 // AI Autonomous Manufacturing 2026 Banner

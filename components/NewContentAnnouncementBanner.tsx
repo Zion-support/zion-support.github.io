@@ -1,5 +1,6 @@
-import React from 'react';
-import { Sparkles, TrendingUp, Zap, Award, Calendar } from 'lucide-react';
+// import React from 'react';
+import { ArrowRight, Sparkles, TrendingUp, Zap, Star, Award, Calendar } from 'lucide-react';
+
 const NewContentAnnouncementBanner: React.FC = () => {
   return (
     <div className="bg-gradient-to-r from-yellow-500/10 via-orange-500/10 to-red-500/10 border-y border-yellow-500/20 py-4 relative overflow-hidden">

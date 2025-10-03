@@ -1,6 +1,50 @@
+// import React from 'react';
 import Head from 'next/head';
 import { Link } from 'react-router-dom';
-import { Zap, CheckCircle, ArrowRight, DollarSign, Phone, Mail, MapPin, TrendingUp, Activity } from 'lucide-react';
+import { 
+  Zap, 
+  Brain, 
+  Settings, 
+  BarChart3, 
+  CheckCircle, 
+  ArrowRight, 
+  DollarSign,
+  Clock,
+  Star,
+  Target,
+  Phone,
+  Mail,
+  MapPin,
+  Lock,
+  Database,
+  Globe,
+  Users,
+  Award,
+  Rocket,
+  TrendingUp,
+  Activity,
+  AlertTriangle,
+  Key,
+  FileText,
+  Eye,
+  Mic,
+  Network,
+  Server,
+  HardDrive,
+  Wifi,
+  Building,
+  Heart,
+  ShoppingCart,
+  CreditCard,
+  Cpu,
+  Monitor,
+  Shield,
+  PieChart,
+  Layers,
+  GitBranch,
+  Container
+} from 'lucide-react';
+
 export default function AIAutonomousBusinessOperationsPage() {
   const title = 'AI Autonomous Business Operations — Zion Tech Group';
   const description = 'Revolutionary AI-powered autonomous business operations that run themselves. Self-healing systems, intelligent automation, and autonomous decision-making for maximum efficiency.';

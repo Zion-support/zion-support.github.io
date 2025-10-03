@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export default function October2025UnifiedAIOrchestrationBanner() {
   return (
     <section className="py-16 bg-gradient-to-r from-blue-900/50 via-indigo-900/50 to-purple-900/50 border-y border-blue-500/30">

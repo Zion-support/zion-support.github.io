@@ -1,4 +1,28 @@
-import { CheckCircle, Database, Network, Key } from 'lucide-react';
+// import React from 'react';
+import { 
+  Shield, 
+  Lock, 
+  Eye, 
+  AlertTriangle, 
+  CheckCircle, 
+  ArrowRight,
+  Clock,
+  DollarSign,
+  Target,
+  Users,
+  Database,
+  Globe,
+  Smartphone,
+  BarChart3,
+  Settings,
+  Monitor,
+  Code,
+  FileText,
+  Network,
+  Key,
+  Search
+} from 'lucide-react';
+
 export default function CybersecurityCompliance() {
   const title = 'Cybersecurity & Compliance — Zion Tech Group';
   const description = 'Enterprise-grade cybersecurity solutions and compliance automation. Protect your business with advanced security measures.';

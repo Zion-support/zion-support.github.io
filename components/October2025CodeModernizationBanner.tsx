@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export default function October2025CodeModernizationBanner() {
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-emerald-900/30 via-teal-900/30 to-green-900/30 backdrop-blur-sm py-20 border-b border-emerald-500/20">

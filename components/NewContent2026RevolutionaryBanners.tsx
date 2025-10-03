@@ -1,5 +1,7 @@
+// import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Star } from 'lucide-react';
+import { ArrowRight, TrendingUp, Sparkles, Zap, Shield, Brain, Users, DollarSign, Clock, CheckCircle, Star } from 'lucide-react';
+
 // Revolutionary AI Enterprise Automation Banner
 export function RevolutionaryAIEnterpriseAutomationBanner() {
   return (

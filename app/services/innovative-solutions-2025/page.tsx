@@ -1,6 +1,15 @@
+// import React from 'react';
 import Head from 'next/head';
 import { Link } from 'react-router-dom';
-import { Brain, Code, Cloud, Network, CheckCircle, ArrowRight, Rocket, Mail, Phone, MapPin, ExternalLink } from 'lucide-react';
+import { 
+  Brain, Code, Cloud, Shield, Network, Server, BarChart3, Settings, 
+  Zap, Monitor, Search, MessageSquare, CheckCircle, ArrowRight, 
+  DollarSign, Clock, Users, Globe, Smartphone, Database, 
+  Lock, TrendingUp, Target, Lightbulb, Rocket, Cpu, 
+  Wifi, Eye, Headphones, FileText, Calendar, Mail,
+  Phone, MapPin, ExternalLink
+} from 'lucide-react';
+
 export const metadata = {
   title: 'Innovative Solutions 2025 — Zion Tech Group',
   description: 'Cutting-edge micro SaaS, AI, and IT solutions for modern businesses. Real implementations with proven ROI and transparent pricing.',

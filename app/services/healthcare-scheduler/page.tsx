@@ -1,5 +1,30 @@
+// import React from 'react';
+import { Metadata } from 'next';
 import { Link } from 'react-router-dom';
-import { Shield, CheckCircle, ArrowRight, Star, Activity, AlertCircle } from 'lucide-react';
+import { 
+  Users, 
+  Clock, 
+  Calendar, 
+  Shield, 
+  Brain, 
+  CheckCircle, 
+  ArrowRight, 
+  Star,
+  Phone,
+  Mail,
+  MapPin,
+  Activity,
+  Heart,
+  AlertCircle,
+  Smartphone
+} from 'lucide-react';
+
+export const metadata: Metadata = {
+  title: 'Healthcare Appointment AI Scheduler | Zion Tech Group',
+  description: 'Intelligent healthcare scheduling system with AI-powered optimization, patient preference learning, and HIPAA-compliant automation. Reduce no-show rates by 50%.',
+  keywords: 'healthcare scheduling, AI appointment system, medical scheduling, HIPAA compliant, patient management',
+};
+
 export default function HealthcareSchedulerPage() {
   const features = [
     {

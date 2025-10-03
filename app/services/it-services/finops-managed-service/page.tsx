@@ -1,6 +1,8 @@
+// import React from 'react';
 import Head from 'next/head';
 import { Link } from 'react-router-dom';
-import { TrendingUp, CheckCircle, ArrowRight, MapPin } from 'lucide-react';
+import { TrendingUp, CheckCircle, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
+
 export default function FinOpsManagedServicePage() {
   const title = 'FinOps Managed Service — Zion Tech Group';
   const description = 'Ongoing cloud cost optimization with budgets, unit economics, and actionable guardrails for AWS, Azure, and GCP.';

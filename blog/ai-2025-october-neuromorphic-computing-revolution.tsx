@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export const metadata = {
   title: 'Neuromorphic Computing Revolution 2025 — Brain-Inspired AI Processing at Scale',
   description: 'Deploy neuromorphic computing systems achieving 10,000x energy efficiency, 99.9% pattern recognition accuracy, and sub-millisecond response times. Revolutionary brain-inspired processing for next-generation AI workloads.',

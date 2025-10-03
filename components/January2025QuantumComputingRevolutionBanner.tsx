@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { motion } from 'framer-motion';
 import { Cpu, Zap, Shield, Target, TrendingUp, Star } from 'lucide-react';
 

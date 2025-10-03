@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export const metadata = {
 	title: 'Fortune 500 AI Transformation: $50M Annual Savings Case Study | Zion Tech Group',
 	description: 'How we helped a Fortune 500 manufacturing company achieve $50M annual savings, 95% process automation, and 300% ROI through comprehensive AI transformation.',

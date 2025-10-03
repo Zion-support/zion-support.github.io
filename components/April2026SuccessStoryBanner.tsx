@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export default function April2026SuccessStoryBanner() {
   return (
     <section className="py-16 bg-gradient-to-br from-green-900 via-emerald-900 to-teal-900 relative overflow-hidden">

@@ -1,3 +1,4 @@
+// import React from 'react';
 import { Cloud, Cpu, DollarSign, Sparkles, ArrowRight } from 'lucide-react';
 
 const October2025CloudInfrastructureMegaBanner = () => {

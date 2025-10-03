@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export default function October2025NeuralQuantumMegaShowcase() {
   return (
     <div className="relative bg-slate-900 py-16 sm:py-24">

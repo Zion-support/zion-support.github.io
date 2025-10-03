@@ -1,5 +1,7 @@
+// import React from 'react';
 import { Link } from 'react-router-dom';
-import { Zap, Brain, Shield, Rocket, Target } from 'lucide-react';
+import { ArrowRight, Zap, Brain, Shield, Rocket, Target } from 'lucide-react';
+
 export const metadata = {
   title: 'AI 2026 Mega Breakthroughs: The Revolutionary Technologies Reshaping Enterprise',
   description: 'Discover the groundbreaking AI technologies that will transform business in 2026. From quantum-enhanced AI to neural interfaces, explore the future of enterprise automation.',

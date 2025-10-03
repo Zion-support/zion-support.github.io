@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export const metadata = {
   title: 'AI Infrastructure Automation 2026: Self-Healing Systems with 99.99% Uptime',
   description: 'Complete guide to building autonomous AI-powered infrastructure that provisions, scales, and recovers automatically. Achieve 99.99% uptime and 70% cost reduction.',

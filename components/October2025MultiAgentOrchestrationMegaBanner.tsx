@@ -1,3 +1,4 @@
+// import React from 'react';
 import { Bot, Network, TrendingUp, Shield, Sparkles, Zap } from 'lucide-react';
 
 const October2025MultiAgentOrchestrationMegaBanner = () => {

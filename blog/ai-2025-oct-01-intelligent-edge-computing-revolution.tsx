@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export const metadata = {
   title: 'Intelligent Edge Computing Revolution — Real-Time AI at Scale (2025)',
   description: 'Achieve <5ms latency, 99.99% uptime, and 90% cost reduction with autonomous edge AI. A practical 2025 blueprint for enterprise deployment.',

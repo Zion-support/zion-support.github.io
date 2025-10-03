@@ -1,5 +1,31 @@
+// import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Settings, MessageSquare, CheckCircle, ArrowRight, DollarSign, Clock, Star, TrendingUp, Smartphone, Target, Rocket } from 'lucide-react';
+import { 
+  Brain, 
+  Code, 
+  Cloud, 
+  Shield, 
+  Network, 
+  Server, 
+  BarChart3, 
+  Settings, 
+  Zap, 
+  Monitor, 
+  Search, 
+  MessageSquare, 
+  CheckCircle, 
+  ArrowRight, 
+  DollarSign,
+  Clock,
+  Star,
+  TrendingUp,
+  Smartphone,
+  Globe,
+  Target,
+  Rocket,
+  Atom
+} from 'lucide-react';
+
 export default function ComprehensiveServices() {
   const title = 'Comprehensive AI, IT & Micro SaaS Services — Zion Tech Group';
   const description = 'Complete suite of cutting-edge AI services, comprehensive IT solutions, and innovative micro SaaS platforms. Enterprise-grade solutions with proven ROI and transparent pricing.';

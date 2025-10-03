@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { motion } from 'framer-motion';
 import { Star, Globe, Brain, Cpu, Bot } from 'lucide-react';
 const January2025NewContentAdvertisingMegaBanner: React.FC = () => {

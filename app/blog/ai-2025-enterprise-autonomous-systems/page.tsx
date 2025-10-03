@@ -1,4 +1,6 @@
 // @ts-nocheck
+// import React from 'react';
+
 export const metadata = {
 	title: 'AI-Powered Enterprise Autonomous Systems (2025) | Zion Tech Group',
 	description: 'Transform your enterprise with autonomous AI systems: 99.99% uptime, 90% efficiency gains, self-healing workflows, and compliant guardrails.',

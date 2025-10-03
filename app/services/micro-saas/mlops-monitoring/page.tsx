@@ -1,6 +1,13 @@
+// import React from 'react';
+// Metadata handled by React Helmet
 import * as Lucide from 'lucide-react';
 const { Activity, Bell, Database, BarChart3, Shield, CheckCircle, Mail, Phone, ArrowRight } = Lucide as any;
 
+export const metadata: Metadata = {
+  title: 'MLOps Monitoring | Zion Tech Group',
+  description: 'Production ML monitoring for drift, data quality, feature health, and performance regression with alerts.',
+  keywords: 'MLOps monitoring, model drift, data quality, feature store, ML observability',
+};
 
 export default function MLOpsMonitoringPage() {
   const contactInfo = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com' };

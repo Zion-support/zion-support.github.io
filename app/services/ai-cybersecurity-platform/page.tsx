@@ -1,5 +1,37 @@
+// import React from 'react';
+import { Metadata } from 'next';
 import { Link } from 'react-router-dom';
-import { CheckCircle, Star, Phone, Mail, MapPin, Zap, Shield, Lock } from 'lucide-react';
+import { 
+  CheckCircle, 
+  Star, 
+  DollarSign, 
+  Clock,
+  Phone,
+  Mail,
+  MapPin,
+  Zap,
+  Shield,
+  TrendingUp,
+  Users,
+  Globe,
+  Lock,
+  Eye,
+  AlertTriangle,
+  Activity,
+  Database,
+  Server
+} from 'lucide-react';
+
+export const metadata: Metadata = {
+  title: 'AI Cybersecurity Platform - Zion Tech Group',
+  description: 'Advanced threat detection and response with AI. Comprehensive cybersecurity platform with real-time monitoring and automated incident response.',
+  keywords: 'AI cybersecurity, threat detection, security automation, incident response, cybersecurity platform',
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
 export default function AICybersecurityPlatform() {
   const contactInfo = {
     phone: '+1 302 464 0950',

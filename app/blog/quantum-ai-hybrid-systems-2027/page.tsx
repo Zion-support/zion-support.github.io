@@ -1,3 +1,19 @@
+// import React from 'react';
+// Metadata handled by React Helmet
+
+export const metadata: Metadata = {
+  title: 'Quantum-AI Hybrid Systems 2027: The Convergence of Quantum Computing and Artificial Intelligence',
+  description: 'Discover the revolutionary quantum-AI hybrid systems of 2027 that combine quantum computing power with advanced AI algorithms. Explore how these systems are solving previously intractable problems.',
+  keywords: ['quantum AI', 'hybrid systems', 'quantum computing', 'artificial intelligence', 'quantum machine learning', 'enterprise solutions', '2027 breakthrough'],
+  openGraph: {
+    title: 'Quantum-AI Hybrid Systems 2027: The Convergence of Quantum Computing and Artificial Intelligence',
+    description: 'Discover the revolutionary quantum-AI hybrid systems of 2027 that combine quantum computing power with advanced AI algorithms.',
+    type: 'article',
+    publishedTime: '2027-02-15T00:00:00.000Z',
+    authors: ['Zion Tech Group'],
+  },
+};
+
 export default function QuantumAIHybridSystems2027() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900">

@@ -1,5 +1,7 @@
+// import React from 'react';
 import { Link } from 'react-router-dom';
-import { Clock, Cpu, Zap, Target, TrendingUp, Atom, Brain } from 'lucide-react';
+import { Clock, ArrowRight, Cpu, Zap, Target, TrendingUp, Atom, Brain } from 'lucide-react';
+
 export const metadata = {
   title: 'AI Quantum Hybrid Computing 2026: Revolutionary Processing Power',
   description: 'Discover the breakthrough in AI quantum hybrid computing that delivers 1000x faster processing, 99.9% accuracy, and $50M+ ROI for enterprise applications.',

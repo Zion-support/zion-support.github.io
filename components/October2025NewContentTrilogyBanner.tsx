@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export default function October2025NewContentTrilogyBanner() {
   return (
     <div className="bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white py-16 px-8 mb-12 rounded-2xl shadow-2xl">

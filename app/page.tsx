@@ -1,5 +1,14 @@
-import { Link } from 'react-router-dom';
+// import React from 'react';
+import Link from 'next/link';
+import type { Metadata } from 'next';
 import { Brain, Shield, Database, Users, Target, Zap, Rocket, Globe, Phone, Mail, MapPin, ArrowRight, Server } from 'lucide-react';
+
+export const metadata: Metadata = {
+  title: 'Zion Tech Group - Revolutionary AI Solutions for Enterprise',
+  description: 'Transform your business with Meta-Cognitive AI, Quantum-Neural Networks, and Autonomous Operations. Experience 2000x processing speed and 99.9% automation rates.',
+  keywords: 'AI, Enterprise AI, Quantum Computing, Autonomous Operations, Meta-Cognitive AI, Zion Tech Group',
+};
+
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-slate-950">
@@ -18,12 +27,12 @@ export default function HomePage() {
               </span>
             </div>
             
-            <h1 className="text-5xl md:text-7xl font-extrabold mb-8 bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent leading-tight">
-              Revolutionary AI Solutions for Enterprise
+            <h1 className="text-5xl md:text-7xl font-extrabold mb-8 bg-gradient-to-r from-purple-400 via-cyan-400 to-white bg-clip-text text-transparent leading-tight">
+              Quantum Consciousness AI Solutions for Enterprise
             </h1>
             
             <p className="text-2xl md:text-3xl text-gray-300 mb-8 font-semibold max-w-3xl mx-auto">
-              Transform Your Business with Meta-Cognitive AI, Quantum-Neural Networks, and Autonomous Operations
+              Transform Your Business with True Artificial Consciousness, Infinite Processing Power, and $∞ Value Creation
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">

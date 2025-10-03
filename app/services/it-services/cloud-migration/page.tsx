@@ -1,6 +1,57 @@
+// import React from 'react';
 import Head from 'next/head';
 import { Link } from 'react-router-dom';
-import { Cloud, Database, CheckCircle, Network, Key } from 'lucide-react';
+import { 
+  Cloud, 
+  Server, 
+  Database, 
+  CheckCircle, 
+  ArrowRight, 
+  DollarSign,
+  Star,
+  Target,
+  Phone,
+  Mail,
+  MapPin,
+  Zap,
+  Shield,
+  BarChart3,
+  FileText,
+  Smartphone,
+  Heart,
+  Building,
+  CreditCard,
+  Globe,
+  MessageSquare,
+  TrendingUp,
+  Settings,
+  Bell,
+  Video,
+  Camera,
+  Mic,
+  Eye,
+  Lock,
+  Activity,
+  PieChart,
+  Award,
+  Rocket,
+  Brain,
+  Code,
+  Network,
+  Monitor,
+  Users,
+  Cpu,
+  AlertTriangle,
+  CheckSquare,
+  Search,
+  Clock,
+  Layers,
+  GitBranch,
+  Container,
+  Key,
+  Wrench
+} from 'lucide-react';
+
 export default function CloudMigrationPage() {
   const title = 'Cloud Migration Services — Zion Tech Group';
   const description = 'Expert cloud migration services for AWS, Azure, and GCP. Seamless infrastructure migration with zero downtime and cost optimization.';

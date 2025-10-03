@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export default function NewContentPromotionalBanner() {
   return (
     <section className="py-16 bg-gradient-to-r from-indigo-900/40 via-purple-900/40 to-blue-900/40 backdrop-blur-sm border-b border-indigo-500/20">

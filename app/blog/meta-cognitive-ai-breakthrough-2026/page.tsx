@@ -1,3 +1,20 @@
+// import React from 'react';
+// Metadata handled by React Helmet
+
+export const metadata: Metadata = {
+  title: 'Meta-Cognitive AI Breakthrough 2026: AI That Thinks About Thinking',
+  description: 'Discover the revolutionary Meta-Cognitive AI breakthrough achieving 95% decision accuracy through AI that thinks about thinking. Learn how this technology is transforming enterprise operations.',
+  keywords: 'meta-cognitive AI, artificial intelligence, AI breakthrough, enterprise AI, decision accuracy, cognitive reasoning',
+  openGraph: {
+    title: 'Meta-Cognitive AI Breakthrough 2026: AI That Thinks About Thinking',
+    description: 'Revolutionary AI achieving 95% decision accuracy through meta-cognitive reasoning',
+    type: 'article',
+    publishedTime: '2026-01-15T00:00:00Z',
+    authors: ['Zion Tech Group'],
+    tags: ['AI', 'Meta-Cognitive', 'Breakthrough', 'Enterprise'],
+  },
+};
+
 export default function MetaCognitiveAIBreakthrough2026() {
   return (
     <div className="min-h-screen bg-slate-950 text-white">

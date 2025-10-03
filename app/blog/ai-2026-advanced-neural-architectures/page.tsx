@@ -1,3 +1,12 @@
+// import React from 'react';
+// Metadata handled by React Helmet
+
+export const metadata: Metadata = {
+  title: 'AI 2026: Advanced Neural Architectures Revolution | Zion Tech Group',
+  description: 'Discover revolutionary neural architecture breakthroughs achieving 1000x performance improvements with meta-cognitive reasoning and quantum-enhanced processing.',
+  keywords: 'AI 2026, neural architectures, meta-cognitive AI, quantum computing, enterprise AI',
+};
+
 export default function AI2026AdvancedNeuralArchitectures() {
   return (
     <main className="min-h-screen bg-slate-950 text-white">

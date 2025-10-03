@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export default function October2025AIEthicsGovernanceBanner() {
   return (
     <section className="relative py-16 bg-gradient-to-br from-purple-950 via-pink-950 to-rose-950 overflow-hidden border-y border-purple-500/30">

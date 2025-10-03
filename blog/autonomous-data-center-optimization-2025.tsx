@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export const metadata = {
   title: 'Autonomous Data Center Optimization 2025 — Self-Managing Infrastructure at Scale',
   description: 'Deploy autonomous AI systems achieving 94% cost reduction, 99.99% uptime, and zero human intervention. Revolutionary data center operations powered by predictive intelligence and self-healing infrastructure.',

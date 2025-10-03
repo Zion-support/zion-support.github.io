@@ -1,3 +1,4 @@
+// import React from 'react';
 import { BarChart3, Brain, TrendingUp, ArrowRight } from 'lucide-react';
 
 export default function February2026AutonomousBusinessIntelligenceBanner() {

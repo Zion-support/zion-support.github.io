@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export const metadata = {
   title: 'AI-Powered Quantum Computing Integration: The Enterprise Revolution of 2025',
   description: 'Discover how hybrid AI-quantum systems are solving previously impossible problems, achieving 1000x speedups, and unlocking $500B+ in enterprise value across finance, pharma, and logistics.',

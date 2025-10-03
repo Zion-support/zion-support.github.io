@@ -1,6 +1,13 @@
+// import React from 'react';
 import Head from 'next/head';
 import { Link } from 'react-router-dom';
-import { CheckCircle, Phone, Mail, MapPin, ExternalLink, Brain } from 'lucide-react';
+import { 
+  ShoppingCart, Package, Truck, BarChart3, Users, 
+  CreditCard, Globe, Clock, CheckCircle, ArrowRight, 
+  Phone, Mail, MapPin, ExternalLink, Zap, Target, 
+  Award, Smartphone, Brain, Monitor, Shield
+} from 'lucide-react';
+
 export const metadata = {
   title: 'E-commerce Technology Solutions — Zion Tech Group',
   description: 'Comprehensive e-commerce micro SaaS solutions including inventory management, customer service, analytics, and payment processing.',

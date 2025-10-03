@@ -1,4 +1,28 @@
-import { Cloud, CheckCircle, Database, Code, Container } from 'lucide-react';
+// import React from 'react';
+import { 
+  Cloud, 
+  Server, 
+  Shield, 
+  Zap, 
+  CheckCircle, 
+  ArrowRight,
+  Clock,
+  DollarSign,
+  Target,
+  Users,
+  Database,
+  Globe,
+  Smartphone,
+  BarChart3,
+  Settings,
+  Lock,
+  Monitor,
+  Code,
+  GitBranch,
+  Container,
+  Network
+} from 'lucide-react';
+
 export default function CloudInfrastructureDevOps() {
   const title = 'Cloud Infrastructure & DevOps — Zion Tech Group';
   const description = 'Enterprise-grade cloud infrastructure, DevOps automation, and CI/CD solutions. Scale your applications with confidence.';

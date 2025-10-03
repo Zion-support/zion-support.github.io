@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { Brain, Zap, TrendingUp, Shield, Clock } from 'lucide-react';
 
 const October2025AdaptiveNeuralConsciousnessBanner: React.FC = () => {

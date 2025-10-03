@@ -1,4 +1,6 @@
 // @ts-nocheck
+// import React from 'react';
+
 export const metadata = {
   title: 'Edge 2027: Real‑Time Feature Flags — <100ms, Zero‑PII Rollouts',
   description: 'Signed configs, scoped IDs, and on‑device telemetry for safe, private rollouts at global edge latency.',

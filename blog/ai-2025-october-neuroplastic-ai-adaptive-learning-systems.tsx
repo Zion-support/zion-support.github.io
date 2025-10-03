@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export const metadata = {
   title: 'Neuroplastic AI Systems 2025 — Self-Adapting Neural Networks, 99.2% Continuous Learning',
   description: 'Deploy neuroplastic AI achieving 99.2% continuous learning accuracy, 840% faster adaptation, and $4.8B value creation. Revolutionary self-modifying neural networks that evolve with changing data.',

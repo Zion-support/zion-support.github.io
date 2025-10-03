@@ -1,5 +1,6 @@
-import React from 'react';
-import { ArrowRight, BookOpen, Zap, Brain } from 'lucide-react';
+// import React from 'react';
+import { ArrowRight, BookOpen, TrendingUp, Zap, Target, Brain } from 'lucide-react';
+
 const March2026NewContentShowcaseBanner: React.FC = () => {
   return (
     <div className="relative overflow-hidden bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 border border-emerald-500/30 rounded-2xl p-8 mb-8">

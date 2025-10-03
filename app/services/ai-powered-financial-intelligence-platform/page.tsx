@@ -1,5 +1,77 @@
+// import React from 'react';
+import { Metadata } from 'next';
 import { Link } from 'react-router-dom';
-import { CheckCircle, ArrowRight, Circle, Key } from 'lucide-react';
+import { 
+  BarChart3, 
+  TrendingUp, 
+  DollarSign, 
+  Shield, 
+  Target, 
+  CheckCircle, 
+  ArrowRight, 
+  Clock,
+  Star,
+  Globe,
+  Lock,
+  Settings,
+  Database,
+  Bot,
+  Smartphone,
+  Mail,
+  Calendar,
+  CreditCard,
+  Headphones,
+  Code,
+  Layers,
+  Wifi,
+  Camera,
+  Mic,
+  MapPin,
+  ShoppingCart,
+  Package,
+  Truck,
+  Building,
+  Home,
+  Car,
+  Plane,
+  Ship,
+  Activity,
+  PieChart,
+  LineChart,
+  RefreshCw,
+  Download,
+  Upload,
+  Play,
+  Pause,
+  Square,
+  Triangle,
+  Circle,
+  Hexagon,
+  Monitor,
+  Server,
+  HardDrive,
+  Cpu,
+  MemoryStick,
+  Router,
+  Terminal,
+  GitBranch,
+  Container,
+  Docker,
+  Key,
+  AlertTriangle,
+  Users,
+  MessageSquare,
+  Eye,
+  Brain,
+  Zap
+} from 'lucide-react';
+
+export const metadata: Metadata = {
+  title: 'AI-Powered Financial Intelligence Platform | Zion Tech Group - Advanced Analytics',
+  description: 'Revolutionary AI platform for financial analysis, risk assessment, fraud detection, and automated trading. Transform your financial operations with intelligent automation.',
+  keywords: 'financial AI, risk assessment, fraud detection, automated trading, financial analytics, fintech AI, investment analysis',
+};
+
 export default function AIPoweredFinancialIntelligencePlatformPage() {
   const financialModules = [
     {
@@ -230,14 +302,12 @@ export default function AIPoweredFinancialIntelligencePlatformPage() {
               fraud detection, and automated trading. Achieve unprecedented accuracy and efficiency.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="/contact" 
+              <Link to="/contact" 
                 className="bg-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
               >
                 Start Free Trial
               </Link>
-              <Link 
-                href="#demo" 
+              <Link to="#demo" 
                 className="border border-green-600 text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors"
               >
                 Watch Demo
@@ -379,8 +449,7 @@ export default function AIPoweredFinancialIntelligencePlatformPage() {
                     </li>
                   ))}
                 </ul>
-                <Link
-                  href="/contact"
+                <Link to="/contact"
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
                     tier.popular
                       ? 'bg-green-600 text-white hover:bg-green-700'
@@ -448,14 +517,12 @@ export default function AIPoweredFinancialIntelligencePlatformPage() {
             Join leading financial institutions in achieving unprecedented accuracy and efficiency with AI
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/contact" 
+            <Link to="/contact" 
               className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Start Your Free Trial
             </Link>
-            <Link 
-              href="mailto:kleber@ziontechgroup.com" 
+            <Link to="mailto:kleber@ziontechgroup.com" 
               className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
             >
               Email kleber@ziontechgroup.com

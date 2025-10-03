@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export default function Ultimate2026ContentPromotionalBanner() {
   return (
     <section className="py-20 bg-gradient-to-r from-slate-900 via-purple-900/50 to-slate-900 border-y border-purple-500/30">

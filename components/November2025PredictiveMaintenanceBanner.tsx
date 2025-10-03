@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export default function November2025PredictiveMaintenanceBanner() {
   return (
     <section className="py-20 bg-gradient-to-r from-blue-900/50 via-cyan-900/50 to-teal-900/50 border-y border-cyan-500/30">

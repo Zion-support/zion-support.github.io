@@ -1,5 +1,16 @@
+// import React from 'react';
+import { Metadata } from 'next';
 import { Link } from 'react-router-dom';
 
+export const metadata: Metadata = {
+  title: 'AI Document Automation Platform - Zion Tech Group',
+  description: 'Automate document processing, data extraction, and workflow management with our AI-powered document automation platform. Reduce manual work by 90%.',
+  keywords: 'document automation, AI document processing, data extraction, workflow automation, OCR, intelligent document management',
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function AIDocumentAutomation() {
   return (
@@ -152,7 +163,7 @@ export default function AIDocumentAutomation() {
               <li>• Email support</li>
               <li>• Basic analytics</li>
             </ul>
-            <Link href="/contact" className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors text-center block">
+            <Link to="/contact" className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors text-center block">
               Get Started
             </Link>
           </div>
@@ -168,7 +179,7 @@ export default function AIDocumentAutomation() {
               <li>• Advanced analytics</li>
               <li>• API access</li>
             </ul>
-            <Link href="/contact" className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors text-center block">
+            <Link to="/contact" className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors text-center block">
               Get Started
             </Link>
           </div>
@@ -183,7 +194,7 @@ export default function AIDocumentAutomation() {
               <li>• Custom integrations</li>
               <li>• SLA guarantee</li>
             </ul>
-            <Link href="/contact" className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors text-center block">
+            <Link to="/contact" className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors text-center block">
               Contact Sales
             </Link>
           </div>
@@ -222,10 +233,10 @@ export default function AIDocumentAutomation() {
           Join hundreds of companies already using our AI document automation platform to streamline their workflows and reduce costs.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link href="/contact" className="bg-blue-600 text-white py-3 px-8 rounded-lg hover:bg-blue-700 transition-colors">
+          <Link to="/contact" className="bg-blue-600 text-white py-3 px-8 rounded-lg hover:bg-blue-700 transition-colors">
             Schedule Demo
           </Link>
-          <Link href="tel:+13024640950" className="bg-green-600 text-white py-3 px-8 rounded-lg hover:bg-green-700 transition-colors">
+          <Link to="tel:+13024640950" className="bg-green-600 text-white py-3 px-8 rounded-lg hover:bg-green-700 transition-colors">
             Call +1 302 464 0950
           </Link>
         </div>

@@ -1,5 +1,36 @@
+// import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Cpu, TrendingUp, Target, Rocket, Phone, Mail, MapPin, ExternalLink, Play, Activity, Target as TargetIcon } from 'lucide-react';
+import { 
+  ArrowRight, 
+  CheckCircle, 
+  Star, 
+  Users, 
+  Zap, 
+  Shield, 
+  Globe, 
+  BarChart3,
+  Brain,
+  Cpu,
+  Cloud,
+  Database,
+  Lock,
+  TrendingUp,
+  Award,
+  Target,
+  Rocket,
+  Phone,
+  Mail,
+  MapPin,
+  Clock,
+  DollarSign,
+  Headphones,
+  ExternalLink,
+  Download,
+  Play,
+  Activity,
+  Target as TargetIcon
+} from 'lucide-react';
+
 export const metadata = {
   title: 'AI Lead Scoring API — Zion Tech Group | $299/month',
   description: 'Real-time lead scoring API with 95% accuracy using behavioral, firmographic, and engagement signals. Score leads instantly with AI-powered intelligence.',

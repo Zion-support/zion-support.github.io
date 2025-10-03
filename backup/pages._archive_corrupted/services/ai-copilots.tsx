@@ -1,4 +1,5 @@
+// import React from 'react';
 import Link from 'next/link';
-import { Clock } from 'lucide-react';
+import { Brain, ArrowRight, CheckCircle, DollarSign, Clock } from 'lucide-react';
 }
 

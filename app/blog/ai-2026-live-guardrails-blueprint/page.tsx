@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export const metadata = {
   title: 'AI 2026: Live Guardrails Blueprint',
   description: 'Budgets, policy gates, KPI‑linked canaries, and instant rollback for safe autonomy.',

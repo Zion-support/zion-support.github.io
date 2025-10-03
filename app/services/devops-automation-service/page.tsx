@@ -1,5 +1,7 @@
+// import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Zap, Shield, BarChart3, Database, Server, GitBranch } from 'lucide-react';
+import { CheckCircle, Zap, Shield, Users, DollarSign, Clock, BarChart3, Database, Server, GitBranch } from 'lucide-react';
+
 export default function DevOpsAutomationService() {
   return (
     <>

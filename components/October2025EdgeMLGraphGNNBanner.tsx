@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export default function October2025EdgeMLGraphGNNBanner() {
   return (
     <section className="relative overflow-hidden bg-gradient-to-r from-rose-900/40 via-pink-900/40 to-fuchsia-900/40 backdrop-blur-sm py-16 border-y border-rose-500/30">

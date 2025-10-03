@@ -42,9 +42,10 @@ function getAllServices(): any () : Service[] {;
   params: {;
   slug ;)
 fallback: false ;"
+// import React from 'react';
 import Head from 'next/head';
 import Layout from '../../components/layout/Layout';
-import { Mail, MapPin, Phone, ExternalLink } from 'lucide-react';
+import { Check, Mail, MapPin, Phone, ExternalLink } from 'lucide-react';
 import { enhancedRealMicroSaasServices } from '../../data/enhanced-real-micro-saas-services';
 import { extraServices } from '../../data/extra-services';
 import { additionalEnhancedServices } from '../../data/additional-real-services';

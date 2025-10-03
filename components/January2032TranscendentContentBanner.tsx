@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export default function January2032TranscendentContentBanner() {
   return (
     <section className="py-20 bg-gradient-to-br from-slate-950 via-purple-950 to-slate-950 border-b border-purple-500/20">

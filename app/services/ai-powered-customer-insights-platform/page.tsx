@@ -1,5 +1,76 @@
+// import React from 'react';
+import { Metadata } from 'next';
 import { Link } from 'react-router-dom';
-import { CheckCircle, Circle } from 'lucide-react';
+import { 
+  Brain, 
+  Users, 
+  BarChart3, 
+  MessageSquare, 
+  TrendingUp, 
+  Target, 
+  Eye, 
+  Zap, 
+  CheckCircle, 
+  ArrowRight, 
+  DollarSign,
+  Clock,
+  Star,
+  Globe,
+  Lock,
+  Settings,
+  Database,
+  Bot,
+  Smartphone,
+  Mail,
+  Calendar,
+  CreditCard,
+  Headphones,
+  Code,
+  Layers,
+  Wifi,
+  Camera,
+  Mic,
+  MapPin,
+  ShoppingCart,
+  Package,
+  Truck,
+  Building,
+  Home,
+  Car,
+  Plane,
+  Ship,
+  Activity,
+  PieChart,
+  LineChart,
+  RefreshCw,
+  Download,
+  Upload,
+  Play,
+  Pause,
+  Square,
+  Triangle,
+  Circle,
+  Hexagon,
+  Monitor,
+  Server,
+  HardDrive,
+  Cpu,
+  MemoryStick,
+  Router,
+  Terminal,
+  GitBranch,
+  Container,
+  Docker,
+  Key,
+  AlertTriangle
+} from 'lucide-react';
+
+export const metadata: Metadata = {
+  title: 'AI-Powered Customer Insights Platform | Zion Tech Group - Advanced Analytics',
+  description: 'Transform customer data into actionable insights with our AI-powered analytics platform. Real-time sentiment analysis, predictive behavior modeling, and automated customer journey optimization.',
+  keywords: 'customer insights, AI analytics, sentiment analysis, predictive modeling, customer journey, behavioral analytics, CRM automation',
+};
+
 export default function AICustomerInsightsPlatformPage() {
   const features = [
     {
@@ -139,14 +210,12 @@ export default function AICustomerInsightsPlatformPage() {
               Predict behavior, optimize journeys, and drive growth with intelligent automation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="/contact" 
+              <Link to="/contact" 
                 className="bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
               >
                 Start Free Trial
               </Link>
-              <Link 
-                href="#demo" 
+              <Link to="#demo" 
                 className="border border-purple-600 text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors"
               >
                 Watch Demo
@@ -228,8 +297,7 @@ export default function AICustomerInsightsPlatformPage() {
                     </li>
                   ))}
                 </ul>
-                <Link
-                  href="/contact"
+                <Link to="/contact"
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
                     tier.popular
                       ? 'bg-purple-600 text-white hover:bg-purple-700'
@@ -284,14 +352,12 @@ export default function AICustomerInsightsPlatformPage() {
             Join hundreds of companies already using AI to understand their customers better
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/contact" 
+            <Link to="/contact" 
               className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Start Your Free Trial
             </Link>
-            <Link 
-              href="tel:+13024640950" 
+            <Link to="tel:+13024640950" 
               className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
             >
               Call +1 302 464 0950

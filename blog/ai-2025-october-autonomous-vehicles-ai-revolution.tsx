@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export const metadata = {
   title: 'Autonomous Vehicles AI Revolution 2025: Enterprise Fleet Management & Self-Driving Technology',
   description: 'Comprehensive guide to AI-powered autonomous vehicle technology for enterprise fleets. $8.7B market success, 99.94% safety accuracy, and complete implementation framework.',

@@ -1,5 +1,12 @@
+// import React from 'react';
+import { Metadata } from 'next';
 import { Link } from 'react-router-dom';
 
+export const metadata: Metadata = {
+  title: 'AI Customer Insights Platform | Zion Tech Group - Advanced Customer Analytics',
+  description: 'AI-powered customer insights platform for behavioral analysis, sentiment tracking, and predictive analytics. Transform customer data into actionable business intelligence.',
+  keywords: 'AI customer insights, behavioral analytics, sentiment analysis, predictive analytics, customer intelligence, business intelligence',
+};
 
 export default function AICustomerInsightsPlatformPage() {
   const features = [
@@ -163,14 +170,12 @@ export default function AICustomerInsightsPlatformPage() {
             Understand behavior, predict trends, and optimize customer experiences with advanced machine learning.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/contact" 
+            <Link to="/contact" 
               className="bg-emerald-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-emerald-700 transition-colors"
             >
               Start Free Trial
             </Link>
-            <Link 
-              href="/pricing" 
+            <Link to="/pricing" 
               className="border border-emerald-600 text-emerald-600 px-8 py-4 rounded-lg font-semibold hover:bg-emerald-50 transition-colors"
             >
               View Pricing
@@ -204,8 +209,7 @@ export default function AICustomerInsightsPlatformPage() {
                 </ul>
               </div>
               
-              <Link 
-                href="/contact"
+              <Link to="/contact"
                 className="inline-block w-full text-center bg-emerald-600 text-white py-3 rounded-lg font-semibold hover:bg-emerald-700 transition-colors"
               >
                 Start Free Trial
@@ -282,8 +286,7 @@ export default function AICustomerInsightsPlatformPage() {
                     </li>
                   ))}
                 </ul>
-                <Link 
-                  href="/contact"
+                <Link to="/contact"
                   className={`block w-full text-center py-3 rounded-lg font-semibold transition-colors ${
                     plan.popular
                       ? 'bg-emerald-600 text-white hover:bg-emerald-700'

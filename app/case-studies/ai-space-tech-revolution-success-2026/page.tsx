@@ -1,5 +1,7 @@
+// import React from 'react';
 import { Link } from 'react-router-dom';
-import { Rocket, Satellite, Globe, Zap, Award } from 'lucide-react';
+import { Rocket, Satellite, Globe, Star, Zap, Award } from 'lucide-react';
+
 export const metadata = {
   title: 'AI Space Tech Revolution: $100M Mission Success Case Study',
   description: 'Discover how AI-powered space technology enabled a $100M mission success. Learn about autonomous spacecraft, AI navigation, and the future of space exploration.',

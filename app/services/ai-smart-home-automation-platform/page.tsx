@@ -1,4 +1,31 @@
-import { Home, CheckCircle, Users, Award, TrendingUp } from 'lucide-react';
+// import React from 'react';
+// Metadata handled by React Helmet
+import { 
+  Home, 
+  Smartphone, 
+  Zap, 
+  Shield, 
+  Brain, 
+  CheckCircle, 
+  Star,
+  Calendar,
+  MessageSquare,
+  FileText,
+  BarChart3,
+  Clock,
+  Bell,
+  Users,
+  Award,
+  TrendingUp,
+  DollarSign
+} from 'lucide-react';
+
+export const metadata: Metadata = {
+  title: 'AI Smart Home Automation Platform | Zion Tech Group - Intelligent Home Control',
+  description: 'Transform your home with AI-powered automation, intelligent energy management, and smart device integration. Create the ultimate smart home experience.',
+  keywords: 'AI smart home, home automation, IoT platform, smart device control, energy management, home security AI',
+};
+
 export default function AISmartHomeAutomationPlatform() {
   const features = [
     {

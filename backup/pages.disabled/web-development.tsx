@@ -1,6 +1,8 @@
+// import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { Award, Best, Code, Globe, Regular, Smartphone, User, Users, Zap,  } from 'lucide-react';
+import { Award,Best,Code,Cross,Globe,Mobile,Regular,Smartphone,Today,User,Users,Zap,} from 'lucide-react';
+
 export default function WebDevelopment() {return (<>;
       <Head />;
         <title />Web Development Services - Zion Tech Group</title>;

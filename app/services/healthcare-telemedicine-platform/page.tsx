@@ -1,5 +1,38 @@
+// import React from 'react';
+import { Metadata } from 'next';
 import { Link } from 'react-router-dom';
-import { CheckCircle, Star, Phone, Mail, MapPin, Zap, Globe, Heart, Calendar, Stethoscope } from 'lucide-react';
+import { 
+  CheckCircle, 
+  Star, 
+  DollarSign, 
+  Clock,
+  Phone,
+  Mail,
+  MapPin,
+  Zap,
+  Shield,
+  TrendingUp,
+  Users,
+  Globe,
+  Heart,
+  Video,
+  FileText,
+  Calendar,
+  CreditCard,
+  Smartphone,
+  Stethoscope
+} from 'lucide-react';
+
+export const metadata: Metadata = {
+  title: 'Telemedicine Platform - Zion Tech Group',
+  description: 'Complete virtual healthcare solution with video consultations, patient management, and integrated billing. HIPAA compliant telemedicine platform.',
+  keywords: 'telemedicine, virtual healthcare, video consultations, patient management, HIPAA compliant, healthcare platform',
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
 export default function TelemedicinePlatform() {
   const contactInfo = {
     phone: '+1 302 464 0950',

@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export const metadata = {
   title: 'Agentic Runtime Safety 2026 — Budgets, Sandboxes, and Rollback',
   description: 'Budget risky actions, sandbox tools, and wire rollback so agent releases are safe by default.',

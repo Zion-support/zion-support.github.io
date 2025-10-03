@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export const metadata = {
   title: 'Explainable AI for Enterprise: Building Trust in AI Systems 2025 | Zion Tech',
   description: 'Learn how explainable AI (XAI) is transforming enterprise adoption with 96% stakeholder trust, 88% regulatory approval rates, and transparent decision-making.',

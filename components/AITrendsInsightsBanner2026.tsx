@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export default function AITrendsInsightsBanner2026() {
   return (
     <section className="py-20 bg-gradient-to-br from-cyan-900/30 via-blue-900/30 to-purple-900/30">

@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export default function October1st2025ContentSpotlight() {
   return (
     <section className="py-20 bg-gradient-to-br from-slate-950 via-indigo-950 to-purple-950 border-y border-indigo-500/30">

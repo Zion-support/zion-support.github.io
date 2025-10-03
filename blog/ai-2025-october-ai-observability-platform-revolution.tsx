@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export const metadata = {
   title: 'AI Observability Platform 2025 — Monitor, Debug & Optimize AI at Scale',
   description: 'Comprehensive AI observability achieving 99.7% model health detection, 92% faster incident resolution, and $84M cost savings through intelligent monitoring, automated debugging, and performance optimization.',

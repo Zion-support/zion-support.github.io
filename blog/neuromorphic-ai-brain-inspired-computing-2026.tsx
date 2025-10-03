@@ -1,3 +1,4 @@
+// import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Brain, Zap, TrendingUp, Battery, Clock, Cpu } from 'lucide-react';
 

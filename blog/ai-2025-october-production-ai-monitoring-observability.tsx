@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export default function AI2025OctoberProductionAIMonitoring() {
   return (
     <article className="min-h-screen bg-slate-950 text-white">

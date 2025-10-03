@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export default function UltimateContentAdvertisingBanner() {
   return (
     <section className="py-16 bg-gradient-to-r from-yellow-900/40 via-orange-900/40 to-red-900/40 border-b border-yellow-500/30">

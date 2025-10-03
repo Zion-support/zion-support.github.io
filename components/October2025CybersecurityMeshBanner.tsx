@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export default function October2025CybersecurityMeshBanner() {
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-purple-900/30 via-indigo-900/30 to-violet-900/30 backdrop-blur-sm py-20 border-b border-purple-500/20">

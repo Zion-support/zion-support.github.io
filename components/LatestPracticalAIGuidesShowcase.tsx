@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export default function LatestPracticalAIGuidesShowcase() {
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-blue-950 to-indigo-950">

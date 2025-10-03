@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export default function EdgeConsentlessExperiments2026Q4(): JSX.Element {
   return (
     <article className="prose prose-invert max-w-3xl mx-auto py-16 px-6">

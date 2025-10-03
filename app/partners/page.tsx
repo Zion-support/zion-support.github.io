@@ -1,5 +1,12 @@
+// import React from 'react';
+type Metadata = { title: string; description: string; keywords?: string[] };
 import { Link } from 'react-router-dom';
 
+export const metadata: Metadata = {
+  title: 'Partners | Zion Tech Group',
+  description: 'Strategic partnerships with cloud, AI, and security leaders to deliver reliable, scalable solutions.',
+  keywords: ['technology partners', 'cloud partners', 'AI partners', 'Zion Tech Group'],
+};
 
 export default function PartnersPage() {
   const partners = [

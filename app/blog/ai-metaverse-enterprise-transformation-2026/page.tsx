@@ -1,5 +1,7 @@
+// import React from 'react';
 import { Link } from 'react-router-dom';
-import { Clock, Globe, Users, Zap, Target } from 'lucide-react';
+import { Clock, ArrowRight, Globe, Users, Zap, Target } from 'lucide-react';
+
 export const metadata = {
   title: 'AI Metaverse Enterprise Transformation 2026: The Future of Virtual Business Operations',
   description: 'Discover how AI-powered metaverse technologies are revolutionizing enterprise operations in 2026. Learn about virtual workspaces, AI avatars, and immersive business solutions.',

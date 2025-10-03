@@ -1,5 +1,12 @@
+// import React from 'react';
+import { Metadata } from 'next';
 import { Link } from 'react-router-dom';
 
+export const metadata: Metadata = {
+  title: 'AI 2027 Ultimate Consciousness: $847B Success Story',
+  description: 'How a Fortune 100 global conglomerate achieved $847B ROI through AI Ultimate Consciousness Breakthrough with 99.999% accuracy and infinite processing power.',
+  keywords: 'AI consciousness case study, enterprise AI, ROI, business transformation, consciousness breakthrough',
+};
 
 export default function AI2027UltimateConsciousnessSuccessPage() {
   return (
@@ -285,14 +292,12 @@ export default function AI2027UltimateConsciousnessSuccessPage() {
             Transform your organization with AI 2027 Ultimate Consciousness Breakthrough technology
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/contact" 
+            <Link to="/contact" 
               className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
             >
               Start Your Transformation
             </Link>
-            <Link 
-              href="/blog/ai-2027-ultimate-consciousness-breakthrough" 
+            <Link to="/blog/ai-2027-ultimate-consciousness-breakthrough" 
               className="bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
             >
               Read Technical Details

@@ -1,5 +1,73 @@
+// import React from 'react';
+import { Metadata } from 'next';
 import { Link } from 'react-router-dom';
-import { PenTool, CheckCircle, ArrowRight, Mail, Phone, Copy, Circle } from 'lucide-react';
+import { 
+  FileText, 
+  PenTool, 
+  BarChart3, 
+  Zap, 
+  CheckCircle, 
+  ArrowRight, 
+  DollarSign,
+  Clock,
+  Star,
+  TrendingUp,
+  Settings,
+  Users,
+  Globe,
+  Smartphone,
+  Mail,
+  Phone,
+  Calendar,
+  Database,
+  Bot,
+  Eye,
+  Target,
+  Layers,
+  Wifi,
+  Building,
+  Home,
+  Car,
+  Plane,
+  Ship,
+  MessageSquare,
+  Share2,
+  ThumbsUp,
+  Search,
+  Filter,
+  Edit3,
+  Copy,
+  Download,
+  Upload,
+  RefreshCw,
+  Play,
+  Pause,
+  Square,
+  Triangle,
+  Circle,
+  Hexagon,
+  Lock,
+  Shield,
+  Bell,
+  CreditCard,
+  PieChart,
+  LineChart,
+  Activity,
+  Monitor,
+  Camera,
+  Mic,
+  MapPin,
+  ShoppingCart,
+  Package,
+  Truck
+} from 'lucide-react';
+
+export const metadata: Metadata = {
+  title: 'AI Content Factory - Intelligent Content Creation Suite | Zion Tech Group',
+  description: 'AI-powered content generation for marketing, social media, documentation, and SEO with brand consistency. Create 10x more content in less time.',
+  keywords: 'AI content creation, content marketing, social media automation, blog writing, SEO content, marketing automation',
+};
+
 export default function AIContentFactoryPage() {
   const features = [
     {

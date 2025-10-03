@@ -1,5 +1,7 @@
+// import React from 'react';
 import { Link } from 'react-router-dom';
-import { Clock, Bot, Target, TrendingUp, DollarSign, BarChart3 } from 'lucide-react';
+import { Clock, ArrowRight, Bot, Zap, Target, TrendingUp, DollarSign, Users, BarChart3 } from 'lucide-react';
+
 export const metadata = {
   title: 'AI Autonomous Business Systems Success 2026: $15M ROI Case Study',
   description: 'See how a Fortune 500 company achieved 99% automation, $15M ROI, and 85% cost reduction with AI autonomous business systems transformation.',

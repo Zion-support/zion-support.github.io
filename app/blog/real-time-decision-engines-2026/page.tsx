@@ -1,4 +1,6 @@
 // @ts-nocheck
+// import React from 'react';
+
 export const metadata = {
 	title: 'Real-Time Decision Engines 2026: 10M decisions/sec under 1ms',
 	description: 'Blueprint for ultra-low-latency decisioning with warm pools, intent prefetching, and budget-aware routes.'

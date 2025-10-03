@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export const metadata = {
   title: 'Autonomous FinOps 2025: Cut AI Spend 50–85% Safely',
   description: 'Blueprint for autonomous FinOps: routing tiers, semantic caches, eval scorecards, and policy budgets to slash AI costs without hurting quality.'

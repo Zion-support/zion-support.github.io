@@ -1,6 +1,8 @@
+// import React from 'react';
 import Head from 'next/head';
 import { Link } from 'react-router-dom';
-import { ClipboardCheck, FileCheck2, Shield, CheckCircle, MapPin } from 'lucide-react';
+import { ClipboardCheck, FileCheck2, Shield, CheckCircle, Phone, Mail, MapPin } from 'lucide-react';
+
 export default function ComplianceDocsGeneratorPage() {
   const title = 'Compliance Docs Generator (SOC 2, ISO 27001, HIPAA) — Zion Tech Group';
   const description = 'Generate and maintain audit-ready policies, procedures, and evidence with AI, mapped to SOC 2, ISO 27001, HIPAA, and GDPR.';

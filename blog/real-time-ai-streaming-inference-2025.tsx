@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export const metadata = {
   title: 'Real-Time AI Streaming Inference: Low-Latency Intelligence 2025 | Zion Tech',
   description: 'Explore real-time AI streaming inference architectures achieving sub-10ms latency, processing 1M+ requests/sec, and enabling next-gen responsive AI applications.',

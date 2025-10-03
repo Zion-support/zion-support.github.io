@@ -1,3 +1,4 @@
+// import React from 'react';
 import { Leaf, Recycle, Zap, ArrowRight } from 'lucide-react';
 
 export default function April2026SustainableAITransformationBanner() {

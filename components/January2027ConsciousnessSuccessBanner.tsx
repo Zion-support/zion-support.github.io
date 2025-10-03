@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export default function January2027ConsciousnessSuccessBanner() {
   return (
     <section className="py-16 bg-gradient-to-r from-green-900/40 via-blue-900/40 to-purple-900/40 backdrop-blur-sm border-b border-green-500/20">

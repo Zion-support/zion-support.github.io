@@ -1,3 +1,4 @@
+// import React from 'react';
 import { Sparkles, Rocket, TrendingUp, Award } from 'lucide-react';
 
 const October2025NewContentShowcaseMega = () => {

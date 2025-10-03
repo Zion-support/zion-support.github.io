@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export default function October2025CognitiveAIHighlightBanner() {
   return (
     <section className="bg-gradient-to-r from-indigo-900/30 via-purple-900/30 to-pink-900/30 backdrop-blur-sm py-12 border-b border-indigo-500/20">

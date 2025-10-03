@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export const metadata = {
   title: 'Intelligent AI Cost Governance — Autonomous FinOps Platform for 2025',
   description: 'Deploy autonomous AI cost governance achieving 87% reduction in cloud spend, real-time optimization, and predictive budget management. Revolutionary FinOps platform for enterprise AI at scale.',

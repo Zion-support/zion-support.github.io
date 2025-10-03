@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export default function AISyntheticDataGeneration2025() {
   return (
     <>

@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export default function Fortune500SuccessAdvertisingBanner() {
   return (
     <section className="relative overflow-hidden bg-gradient-to-r from-green-900 via-blue-900 to-purple-900 py-16">

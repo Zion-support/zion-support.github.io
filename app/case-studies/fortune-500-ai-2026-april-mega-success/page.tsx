@@ -1,3 +1,28 @@
+// import React from 'react';
+// Metadata handled by React Helmet
+
+export const metadata: Metadata = {
+  title: 'Fortune 500 AI 2026 April Mega Success: $5B Transformation with Conscious Computing',
+  description: 'Discover how a Fortune 500 company achieved $5 billion in measurable value using AI 2026 breakthrough technologies including conscious computing and quantum-neural fusion.',
+  keywords: 'Fortune 500, AI transformation, conscious computing, quantum-neural fusion, $5B success, enterprise AI, business transformation',
+  openGraph: {
+    title: 'Fortune 500 AI 2026 April Mega Success: $5B Transformation with Conscious Computing',
+    description: 'Fortune 500 company achieves $5B in measurable value using AI 2026 breakthrough technologies.',
+    type: 'article',
+    publishedTime: '2026-04-01T00:00:00.000Z',
+    authors: ['Zion Tech Group'],
+    tags: ['Fortune 500', 'AI Transformation', 'Conscious Computing', 'Business Success'],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Fortune 500 AI 2026 April Mega Success: $5B Transformation with Conscious Computing',
+    description: 'Fortune 500 company achieves $5B in measurable value using AI 2026 breakthrough technologies.',
+  },
+  alternates: {
+    canonical: '/case-studies/fortune-500-ai-2026-april-mega-success',
+  },
+};
+
 export default function Fortune500AI2026AprilMegaSuccess() {
   return (
     <div className="min-h-screen bg-slate-950 text-white">

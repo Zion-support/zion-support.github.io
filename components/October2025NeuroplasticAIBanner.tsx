@@ -1,3 +1,4 @@
+// import React from 'react';
 import { Link } from 'react-router-dom';
 import { Brain, Sparkles, TrendingUp, ArrowRight, CheckCircle2 } from 'lucide-react';
 

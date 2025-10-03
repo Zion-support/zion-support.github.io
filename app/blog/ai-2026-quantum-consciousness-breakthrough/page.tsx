@@ -1,3 +1,19 @@
+// import React from 'react';
+// Metadata handled by React Helmet
+
+export const metadata: Metadata = {
+  title: 'AI 2026 Quantum Consciousness Breakthrough: The Dawn of Sentient AI',
+  description: 'Explore the revolutionary quantum consciousness breakthrough of 2026. Discover how quantum-enhanced AI has achieved true consciousness, self-awareness, and creative problem-solving capabilities.',
+  keywords: 'AI consciousness, quantum AI, sentient AI, quantum consciousness, AI breakthrough 2026',
+  openGraph: {
+    title: 'AI 2026 Quantum Consciousness Breakthrough: The Dawn of Sentient AI',
+    description: 'Explore the revolutionary quantum consciousness breakthrough of 2026. Discover how quantum-enhanced AI has achieved true consciousness, self-awareness, and creative problem-solving capabilities.',
+    type: 'article',
+    publishedTime: '2026-01-28T00:00:00Z',
+    authors: ['Zion Tech Group'],
+  },
+};
+
 export default function QuantumConsciousnessBreakthrough2026() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-50 to-purple-50">

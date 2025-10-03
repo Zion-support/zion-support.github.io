@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export const metadata = {
   title: 'AI Operational Trust Scorecards 2026',
   description: 'Define SLIs tied to KPIs with budgets, guardrails, and rollback triggers to ensure safe autonomous operations.',

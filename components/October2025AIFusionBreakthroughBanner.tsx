@@ -1,5 +1,7 @@
+// import React from 'react';
 import { motion } from 'framer-motion';
-import { Sparkles, ArrowRight, Cpu } from 'lucide-react';
+import { Sparkles, Zap, TrendingUp, ArrowRight, Star, Cpu } from 'lucide-react';
+
 const October2025AIFusionBreakthroughBanner = () => {
   return (
     <motion.div

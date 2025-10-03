@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export default function NewContent2026MegaShowcaseBanner() {
   return (
     <section className="py-20 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 border-b border-indigo-500/30">

@@ -1,5 +1,7 @@
+// import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, Atom, Cpu, Zap, TrendingUp, Binary } from 'lucide-react';
+import { ArrowLeft, Atom, Cpu, Zap, TrendingUp, Shield, Binary } from 'lucide-react';
+
 export const metadata = {
   title: 'Quantum-Enhanced Machine Learning 2025: 1000x Performance Breakthrough | Zion Tech Group',
   description: 'Quantum computing meets machine learning: achieve 1000x speedup in optimization, drug discovery, and financial modeling. Early quantum advantage demonstrated in production systems.',

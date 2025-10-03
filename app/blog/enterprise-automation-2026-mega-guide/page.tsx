@@ -1,3 +1,19 @@
+// import React from 'react';
+// Metadata handled by React Helmet
+
+export const metadata: Metadata = {
+  title: 'Enterprise Automation 2026: Complete Mega Guide to 98% Automation Success',
+  description: 'The definitive guide to achieving 98% enterprise automation with meta-cognitive AI, autonomous operations, and self-healing systems. Transform your business with proven strategies and real-world case studies.',
+  keywords: 'enterprise automation, AI automation, meta-cognitive AI, autonomous operations, business process automation, digital transformation',
+  openGraph: {
+    title: 'Enterprise Automation 2026: Complete Mega Guide to 98% Automation Success',
+    description: 'The definitive guide to achieving 98% enterprise automation with meta-cognitive AI and autonomous operations.',
+    type: 'article',
+    publishedTime: '2026-01-20T00:00:00.000Z',
+    authors: ['Zion Tech Group'],
+  },
+};
+
 export default function EnterpriseAutomationMegaGuide() {
   return (
     <div className="min-h-screen bg-slate-950">

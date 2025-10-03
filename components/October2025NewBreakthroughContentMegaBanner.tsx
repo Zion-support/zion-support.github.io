@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { motion } from 'framer-motion';
 import { TrendingUp, ArrowRight, Sparkles } from 'lucide-react';
 const October2025NewBreakthroughContentMegaBanner: React.FC = () => {

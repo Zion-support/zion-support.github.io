@@ -1,3 +1,5 @@
+// import React from 'react';
+
 export const metadata = {
   title: 'Enterprise Knowledge Graphs 2025 — Connected Intelligence at Scale',
   description: 'Build enterprise knowledge graphs connecting 100M+ entities with 95% query accuracy and sub-100ms response times. Transform data silos into intelligent, connected knowledge networks with $127M proven value creation.',
