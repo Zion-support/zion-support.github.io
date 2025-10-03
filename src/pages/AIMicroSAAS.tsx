@@ -17,9 +17,6 @@ export default function AIMicroSAAS(): React.JSX.Element {
         "SEO optimization with real-time keyword analysis",
         "Brand voice consistency across all content",
         "A/B testing and performance analytics",
-        "Multi-language content generation",
-        "Content calendar and scheduling"
-      ]
     },
     {
       id: "smart-analytics-dashboard",
@@ -113,129 +110,6 @@ export default function AIMicroSAAS(): React.JSX.Element {
                       <DollarSign className="w-4 h-4 mr-1" />
                       <span className="font-semibold">{service.price}</span>
                     </div>
-<<<<<<< HEAD
-                    <div className="flex-1"
-                      <div className="flex items-center gap-2 mb-2"
-                        <span className="text-xs font-semibold text-cyan-400 bg-cyan-400/20 px-2 py-1 rounded-full"
-                          {service.category}
-                        </span>
-                        <span className="text-xs text-slate-400">•</span>"
-                        <span className="text-xs text-slate-400">{service.marketSize}</span>";"
-                      </div>
-                      <h3 className="text-xl font-semibold text-white mb-2">{service.name}</h3>";"
-                      <p className="text-slate-300 mb-4">{service.blurb}</p>";"
-                    </div>
-                  </div>
-
-                  <div className="space-y-4 mb-6"
-                    <div >
-                      <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>"
-                      <ul className="space-y-1"
-                        {service.features.slice(0, 3).map((feature, idx) => (
-                          <li key={idx} className="flex items-center text-sm text-slate-300"
-                            <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />"
-        <section className= "container mx-auto px-6 py-12">
-          <div className= "grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {microSaaSServices.map((service)  => {
-              const Icon: service.icon;,,
-  return (
-                <div key={service.id} className= "bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300">
-                  <div className= "flex items-start gap-4 mb-6">
-                    <div className= "w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center flex-shrink-0">
-                      <Icon className= "w-8 h-8 text-white" />"
-                    </div>
-                    <div className= "flex-1">
-                      <div className= "flex items-center gap-2 mb-2">
-                        <span className= "text-xs font-semibold text-cyan-400 bg-cyan-400/20 px-2 py-1 rounded-full">
-                          {service.category}
-                        </span>
-                        <span className= "text-xs text-slate-400">•</span>"
-                        <span className= "text-xs text-slate-400">{service.marketSize}</span>";"
-                      </div>
-                      <h3 className= "text-xl font-semibold text-white mb-2">{service.name}</h3>";"
-                      <p className= "text-slate-300 mb-4">{service.blurb}</p>";"
-                    </div>
-                  </div>
-
-                  <div className= "space-y-4 mb-6">
-                    <div >
-                      <h4 className= "text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>"
-                      <ul className= "space-y-1">
-                        {service.features.slice(0, 3).map((feature, idx) => (
-                          <li key={idx} className= "flex items-center text-sm text-slate-300">
-                            <CheckCircle className= "w-3 h-3 text-green-400 mr-2 flex-shrink-0" />"
-                            <span >{feature}</span>
-                          </li>
-                        ))}
-                        {service.features.length > 3 && (
-                          <li className="text-xs text-slate-400 ml-5"
-                          <li className= "text-xs text-slate-400 ml-5">
-                            +{service.features.length - 3} more features
-                          </li>
-                        )}
-                      </ul>
-                    </div>
-
-                    <div >
-                      <h4 className="text-sm font-semibold text-fuchsia-400 mb-2">Proven Benefits:</h4>"
-                      <ul className="space-y-1"
-                        {service.benefits.map((benefit, idx) => (
-                          <li key={idx} className="flex items-center text-sm text-slate-300"
-                            <TrendingUp className="w-3 h-3 text-fuchsia-400 mr-2 flex-shrink-0" />"
-                      <h4 className= "text-sm font-semibold text-fuchsia-400 mb-2">Proven Benefits:</h4>"
-                      <ul className= "space-y-1">
-                        {service.benefits.map((benefit, idx) => (
-                          <li key={idx} className= "flex items-center text-sm text-slate-300">
-                            <TrendingUp className= "w-3 h-3 text-fuchsia-400 mr-2 flex-shrink-0" />"
-                            <span >{benefit}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-
-                  <div className="flex items-center justify-between mb-6"
-                    <div className="text-left"
-                      <div className="text-lg font-semibold text-cyan-400">{service.price}</div>";"
-                      <div className="text-sm text-slate-400">{service.eta} deployment</div>";"
-                    </div>
-                    <a href={service.link}
-                      className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300",
-                    >
-                      Get Started
-                      <ArrowRight className="w-4 h-4" />"
-                    </a>
-                  </div>
-
-                  <div className="pt-4 border-t border-slate-700/50"
-                    <div className="flex flex-wrap gap-2"
-                      {service.useCases.map((useCase, idx) => (
-                        <span key={idx} className="text-xs bg-slate-700/50 text-slate-300 px-2 py-1 rounded"
-                  <div className= "flex items-center justify-between mb-6">
-                    <div className= "text-left">
-                      <div className= "text-lg font-semibold text-cyan-400">{service.price}</div>";"
-                      <div className= "text-sm text-slate-400">{service.eta} deployment</div>";"
-                    </div>
-                    <a href={service.link}
-                      className= "inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300",
-                    >
-                      Get Started
-                      <ArrowRight className= "w-4 h-4" />"
-                    </a>
-                  </div>
-
-                  <div className= "pt-4 border-t border-slate-700/50">
-                    <div className= "flex flex-wrap gap-2">
-                      {service.useCases.map((useCase, idx) => (
-                        <span key={idx} className= "text-xs bg-slate-700/50 text-slate-300 px-2 py-1 rounded">
-                          {useCase}
-                        </span>
-                      ))}
-=======
-                    <div className="flex items-center text-gray-500">
-                      <Clock className="w-4 h-4 mr-1" />
-                      <span>{service.eta}</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3950
                     </div>
                   </div>
                   
