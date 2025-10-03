@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'Neural-Symbolic AI Reasoning: Bridging Logic and Learning in 2026 | Zion Tech Group',

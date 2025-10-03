@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { Brain, Zap, Network, ArrowRight, Sparkles, Globe } from 'lucide-react';
 
 const December2025NeuralMeshConsciousnessBreakthroughBanner: React.FC = () => {
@@ -63,16 +63,14 @@ const December2025NeuralMeshConsciousnessBreakthroughBanner: React.FC = () => {
 
             {/* CTA buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link 
-                href="/blog/ai-2025-december-neural-mesh-consciousness-breakthrough"
+              <Link to="/blog/ai-2025-december-neural-mesh-consciousness-breakthrough"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
               >
                 <Brain className="w-5 h-5" />
                 Read Full Breakthrough
                 <ArrowRight className="w-4 h-4" />
               </Link>
-              <Link 
-                href="/case-studies/ai-2025-december-global-enterprise-quantum-consciousness-transformation-5-trillion-success"
+              <Link to="/case-studies/ai-2025-december-global-enterprise-quantum-consciousness-transformation-5-trillion-success"
                 className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 border border-white/20 hover:border-white/40"
               >
                 <Sparkles className="w-5 h-5" />

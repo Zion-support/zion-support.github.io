@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { ArrowRight, Sparkles, Brain, Zap } from 'lucide-react';
 
 export default function NewContent2026BreakthroughBanner() {
@@ -25,7 +25,7 @@ export default function NewContent2026BreakthroughBanner() {
 
         <div className="grid md:grid-cols-3 gap-8 mb-12">
           {/* Autonomous Systems */}
-          <Link href="/blog/ai-autonomous-enterprise-systems-2026" className="group">
+          <Link to="/blog/ai-autonomous-enterprise-systems-2026" className="group">
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 hover:scale-105">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl flex items-center justify-center">
@@ -59,7 +59,7 @@ export default function NewContent2026BreakthroughBanner() {
           </Link>
 
           {/* Cognitive Computing */}
-          <Link href="/blog/ai-cognitive-computing-breakthrough-2026" className="group">
+          <Link to="/blog/ai-cognitive-computing-breakthrough-2026" className="group">
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 hover:scale-105">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center">
@@ -93,7 +93,7 @@ export default function NewContent2026BreakthroughBanner() {
           </Link>
 
           {/* Success Case Study */}
-          <Link href="/case-studies/ai-cognitive-computing-success-2026" className="group">
+          <Link to="/case-studies/ai-cognitive-computing-success-2026" className="group">
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 hover:scale-105">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-12 h-12 bg-gradient-to-r from-teal-500 to-green-500 rounded-xl flex items-center justify-center">
@@ -128,8 +128,7 @@ export default function NewContent2026BreakthroughBanner() {
         </div>
 
         <div className="text-center">
-          <Link
-            href="/blog"
+          <Link to="/blog"
             className="inline-flex items-center bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg"
           >
             <Sparkles className="w-5 h-5 mr-2" />

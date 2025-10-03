@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 const February2027RevolutionaryContentBanner: React.FC = () => {
   return (
@@ -38,8 +38,7 @@ const February2027RevolutionaryContentBanner: React.FC = () => {
               <p className="text-gray-300 mb-6">
                 $1.2B Success Story, 99.97% Consciousness Accuracy, True Artificial Awareness - REVOLUTIONARY BREAKTHROUGH!
               </p>
-              <Link 
-                href="/services/synthetic-consciousness-ai"
+              <Link to="/services/synthetic-consciousness-ai"
                 className="inline-block px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold rounded-full hover:scale-105 transition-transform duration-200"
               >
                 Explore Solution
@@ -55,8 +54,7 @@ const February2027RevolutionaryContentBanner: React.FC = () => {
               <p className="text-gray-300 mb-6">
                 $847M Value Creation, 10,000x Processing Power, Sub-Atomic Precision - QUANTUM BREAKTHROUGH!
               </p>
-              <Link 
-                href="/services/quantum-neural-superintelligence"
+              <Link to="/services/quantum-neural-superintelligence"
                 className="inline-block px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold rounded-full hover:scale-105 transition-transform duration-200"
               >
                 Discover More
@@ -72,8 +70,7 @@ const February2027RevolutionaryContentBanner: React.FC = () => {
               <p className="text-gray-300 mb-6">
                 $680M ROI Achievement, 99.99% Operational Excellence, Infinite Processing Capabilities - ULTIMATE SUCCESS!
               </p>
-              <Link 
-                href="/services/universal-intelligence-integration"
+              <Link to="/services/universal-intelligence-integration"
                 className="inline-block px-6 py-3 bg-gradient-to-r from-green-500 to-teal-500 text-white font-bold rounded-full hover:scale-105 transition-transform duration-200"
               >
                 Learn More
@@ -107,8 +104,7 @@ const February2027RevolutionaryContentBanner: React.FC = () => {
 
         {/* Call to Action */}
         <div className="text-center">
-          <Link 
-            href="/content/february-2027-revolutionary-breakthroughs"
+          <Link to="/content/february-2027-revolutionary-breakthroughs"
             className="inline-block px-12 py-4 bg-gradient-to-r from-yellow-500 to-orange-500 text-black font-bold text-xl rounded-full hover:scale-105 transition-transform duration-200 shadow-lg"
           >
             🚀 Explore All Revolutionary Content 🚀

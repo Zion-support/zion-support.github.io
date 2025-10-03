@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function NewRevolutionaryContent2026Banner() {
   return (
@@ -36,14 +36,12 @@ export default function NewRevolutionaryContent2026Banner() {
               and $12.5B in value creation for Fortune 500 enterprises.
             </p>
             <div className="flex flex-wrap gap-2">
-              <Link 
-                href="/blog/ai-2026-revolutionary-edge-computing-breakthrough" 
+              <Link to="/blog/ai-2026-revolutionary-edge-computing-breakthrough" 
                 className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-colors"
               >
                 Read Blog Post
               </Link>
-              <Link 
-                href="/case-studies/ai-2026-edge-computing-12-5-billion-success" 
+              <Link to="/case-studies/ai-2026-edge-computing-12-5-billion-success" 
                 className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-colors"
               >
                 View Case Study
@@ -72,14 +70,12 @@ export default function NewRevolutionaryContent2026Banner() {
               $8.7B in value creation and 300x process speed improvements.
             </p>
             <div className="flex flex-wrap gap-2">
-              <Link 
-                href="/blog/ai-2026-next-generation-automation-platform" 
+              <Link to="/blog/ai-2026-next-generation-automation-platform" 
                 className="bg-purple-500 hover:bg-purple-600 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-colors"
               >
                 Read Blog Post
               </Link>
-              <Link 
-                href="/case-studies/ai-2026-automation-platform-8-7-billion-success" 
+              <Link to="/case-studies/ai-2026-automation-platform-8-7-billion-success" 
                 className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-colors"
               >
                 View Case Study
@@ -101,8 +97,7 @@ export default function NewRevolutionaryContent2026Banner() {
         </div>
 
         <div className="text-center mt-4">
-          <Link 
-            href="/contact" 
+          <Link to="/contact" 
             className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors inline-block"
           >
             Get Started Today

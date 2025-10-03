@@ -1,4 +1,4 @@
-import { Metadata } from 'next';
+// Metadata handled by React Helmet
 
 export const metadata: Metadata = {
   title: 'AI 2027: Quantum AI Security Revolution - Protect $847B Assets with Quantum-Resistant AI',

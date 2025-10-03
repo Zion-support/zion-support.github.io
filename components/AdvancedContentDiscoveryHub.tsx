@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 const AdvancedContentDiscoveryHub: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -173,8 +173,7 @@ const AdvancedContentDiscoveryHub: React.FC = () => {
                 </p>
 
                 {/* Action Button */}
-                <Link 
-                  href={item.url}
+                <Link to={item.url}
                   className="inline-flex items-center bg-gradient-to-r from-blue-500 to-purple-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
                 >
                   {item.type === 'service' ? 'Explore Service' : 'Read More'}
@@ -243,8 +242,7 @@ const AdvancedContentDiscoveryHub: React.FC = () => {
         {/* Call to Action */}
         <div className="text-center mt-12">
           <div className="bg-gradient-to-r from-green-500 to-blue-500 p-1 rounded-full inline-block">
-            <Link 
-              href="/contact" 
+            <Link to="/contact" 
               className="bg-white text-gray-900 px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-50 transition-all duration-300 inline-flex items-center"
             >
               🚀 Get Personalized Recommendations

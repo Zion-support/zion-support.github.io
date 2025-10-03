@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'Platform Engineering Scorecards 2026: Measure What Matters',
@@ -162,7 +162,7 @@ export default function PlatformEngineeringScorecards2026Page() {
 
 function RelatedArticleCard({ title, description, href }: { title: string; description: string; href: string }) {
   return (
-    <Link href={href} className="block bg-white rounded-lg p-6 hover:shadow-lg transition-all duration-300">
+    <Link to={href} className="block bg-white rounded-lg p-6 hover:shadow-lg transition-all duration-300">
       <h3 className="text-xl font-bold text-gray-900 mb-3">{title}</h3>
       <p className="text-gray-600 mb-4">{description}</p>
       <span className="text-indigo-700 font-semibold">Read More →</span>

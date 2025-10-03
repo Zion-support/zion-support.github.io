@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function December2025ContentShowcaseBanner() {
   return (
@@ -23,8 +23,7 @@ export default function December2025ContentShowcaseBanner() {
               <div className="text-4xl mb-4">🤖</div>
               <h3 className="text-xl font-bold text-white mb-2">Autonomous Systems</h3>
               <p className="text-gray-300 text-sm mb-4">Achieve 99.9% enterprise automation with self-healing AI systems</p>
-              <Link 
-                href="/blog/ai-2025-december-advanced-autonomous-systems"
+              <Link to="/blog/ai-2025-december-advanced-autonomous-systems"
                 className="inline-block bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300 text-sm"
               >
                 Read Breakthrough →
@@ -34,8 +33,7 @@ export default function December2025ContentShowcaseBanner() {
               <div className="text-4xl mb-4">⚛️</div>
               <h3 className="text-xl font-bold text-white mb-2">Quantum Computing</h3>
               <p className="text-gray-300 text-sm mb-4">Breakthrough achievement of 1 million qubits with exponential AI gains</p>
-              <Link 
-                href="/blog/ai-2025-december-quantum-computing-breakthrough"
+              <Link to="/blog/ai-2025-december-quantum-computing-breakthrough"
                 className="inline-block bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300 text-sm"
               >
                 Explore Quantum →
@@ -45,8 +43,7 @@ export default function December2025ContentShowcaseBanner() {
               <div className="text-4xl mb-4">💰</div>
               <h3 className="text-xl font-bold text-white mb-2">$500M+ Success</h3>
               <p className="text-gray-300 text-sm mb-4">Fortune 100 companies achieve unprecedented value generation</p>
-              <Link 
-                href="/case-studies/ai-2025-december-autonomous-systems-500-million-success"
+              <Link to="/case-studies/ai-2025-december-autonomous-systems-500-million-success"
                 className="inline-block bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300 text-sm"
               >
                 View Success Story →

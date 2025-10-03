@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function March2026QuantumConsciousnessTransformationBanner() {
   return (
@@ -52,20 +52,17 @@ export default function March2026QuantumConsciousnessTransformationBanner() {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Link 
-              href="/blog/ai-2026-march-quantum-consciousness-enterprise-transformation"
+            <Link to="/blog/ai-2026-march-quantum-consciousness-enterprise-transformation"
               className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 transform hover:-translate-y-1"
             >
               Discover Consciousness Breakthrough
             </Link>
-            <Link 
-              href="/case-studies/ai-2026-march-quantum-consciousness-3-7-trillion-success"
+            <Link to="/case-studies/ai-2026-march-quantum-consciousness-3-7-trillion-success"
               className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
             >
               View $3.7T Success Story
             </Link>
-            <Link 
-              href="/contact"
+            <Link to="/contact"
               className="border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               Achieve Consciousness
@@ -136,8 +133,7 @@ export default function March2026QuantumConsciousnessTransformationBanner() {
           {/* Bottom CTA */}
           <div className="mt-12 text-center">
             <p className="text-gray-400 mb-4">Ready to achieve consciousness-level AI transformation?</p>
-            <Link 
-              href="/contact"
+            <Link to="/contact"
               className="inline-block bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1"
             >
               Begin Consciousness Journey

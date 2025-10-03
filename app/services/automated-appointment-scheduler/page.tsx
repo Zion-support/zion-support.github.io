@@ -1,0 +1,270 @@
+import React from 'react';
+import { Metadata } from 'next';
+import { Link } from 'react-router-dom';
+
+export const metadata: Metadata = {
+  title: 'Automated Appointment Scheduler | Zion Tech Group - Smart Scheduling Solution',
+  description: 'Revolutionary appointment scheduling system with calendar integration, automated reminders, and intelligent booking optimization.',
+  keywords: 'appointment scheduling, booking system, calendar integration, automated reminders, scheduling software',
+};
+
+export default function AutomatedAppointmentSchedulerPage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-100">
+      <div className="max-w-7xl mx-auto px-4 py-12">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-green-500 to-blue-600 rounded-full mb-6">
+            <span className="text-3xl">📅</span>
+          </div>
+          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+            Automated Appointment Scheduler
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+            Streamline your scheduling process with our intelligent appointment booking system. 
+            Reduce no-shows, eliminate double bookings, and provide seamless customer experiences.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link to="/contact" 
+              className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+            >
+              Start Free Trial
+            </Link>
+            <Link to="#demo" 
+              className="border-2 border-green-600 text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-green-600 hover:text-white transition-all duration-300"
+            >
+              Watch Demo
+            </Link>
+          </div>
+        </div>
+
+        {/* Features Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+            <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+              <span className="text-2xl">🔄</span>
+            </div>
+            <h3 className="text-xl font-semibold mb-3">Calendar Synchronization</h3>
+            <p className="text-gray-600">Seamlessly sync with Google Calendar, Outlook, Apple Calendar, and other popular calendar applications.</p>
+          </div>
+
+          <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+            <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+              <span className="text-2xl">📱</span>
+            </div>
+            <h3 className="text-xl font-semibold mb-3">Automated Reminders</h3>
+            <p className="text-gray-600">Send automated email and SMS reminders to reduce no-shows and improve customer satisfaction.</p>
+          </div>
+
+          <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+            <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+              <span className="text-2xl">🎨</span>
+            </div>
+            <h3 className="text-xl font-semibold mb-3">Customizable Booking Pages</h3>
+            <p className="text-gray-600">Create branded booking pages that match your website design and provide professional customer experience.</p>
+          </div>
+
+          <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+            <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
+              <span className="text-2xl">⚡</span>
+            </div>
+            <h3 className="text-xl font-semibold mb-3">Real-time Availability</h3>
+            <p className="text-gray-600">Show real-time availability to customers and automatically prevent double bookings across all calendars.</p>
+          </div>
+
+          <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+            <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
+              <span className="text-2xl">📊</span>
+            </div>
+            <h3 className="text-xl font-semibold mb-3">Analytics Dashboard</h3>
+            <p className="text-gray-600">Track booking patterns, no-show rates, and customer preferences with comprehensive analytics.</p>
+          </div>
+
+          <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+            <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
+              <span className="text-2xl">🔗</span>
+            </div>
+            <h3 className="text-xl font-semibold mb-3">CRM Integration</h3>
+            <p className="text-gray-600">Integrate with popular CRM systems like Salesforce, HubSpot, and Pipedrive for seamless workflow.</p>
+          </div>
+        </div>
+
+        {/* Pricing Section */}
+        <div className="bg-white rounded-2xl p-8 shadow-xl mb-16">
+          <h2 className="text-3xl font-bold text-center mb-8">Flexible Pricing Plans</h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="border-2 border-gray-200 rounded-xl p-6 hover:border-green-500 transition-colors">
+              <h3 className="text-xl font-semibold mb-4">Solo</h3>
+              <div className="text-3xl font-bold mb-4">$25<span className="text-lg text-gray-500">/month</span></div>
+              <ul className="space-y-3 mb-6">
+                <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> 1 user</li>
+                <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> 100 appointments/month</li>
+                <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> Basic calendar sync</li>
+                <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> Email reminders</li>
+                <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> Custom booking page</li>
+              </ul>
+              <Link to="/contact" className="w-full bg-gray-100 text-gray-800 py-3 rounded-lg font-semibold text-center block hover:bg-gray-200 transition-colors">
+                Get Started
+              </Link>
+            </div>
+
+            <div className="border-2 border-green-500 rounded-xl p-6 relative">
+              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                <span className="bg-green-500 text-white px-4 py-1 rounded-full text-sm font-semibold">Most Popular</span>
+              </div>
+              <h3 className="text-xl font-semibold mb-4">Professional</h3>
+              <div className="text-3xl font-bold mb-4">$75<span className="text-lg text-gray-500">/month</span></div>
+              <ul className="space-y-3 mb-6">
+                <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> 5 users</li>
+                <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> 1,000 appointments/month</li>
+                <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> Advanced calendar sync</li>
+                <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> SMS & email reminders</li>
+                <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> Analytics dashboard</li>
+                <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> CRM integration</li>
+                <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> Priority support</li>
+              </ul>
+              <Link to="/contact" className="w-full bg-green-500 text-white py-3 rounded-lg font-semibold text-center block hover:bg-green-600 transition-colors">
+                Start Free Trial
+              </Link>
+            </div>
+
+            <div className="border-2 border-gray-200 rounded-xl p-6 hover:border-blue-500 transition-colors">
+              <h3 className="text-xl font-semibold mb-4">Enterprise</h3>
+              <div className="text-3xl font-bold mb-4">$200<span className="text-lg text-gray-500">/month</span></div>
+              <ul className="space-y-3 mb-6">
+                <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> Unlimited users</li>
+                <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> Unlimited appointments</li>
+                <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> White-label solution</li>
+                <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> API access</li>
+                <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> Custom integrations</li>
+                <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> Dedicated support</li>
+                <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> Advanced analytics</li>
+              </ul>
+              <Link to="/contact" className="w-full bg-blue-500 text-white py-3 rounded-lg font-semibold text-center block hover:bg-blue-600 transition-colors">
+                Contact Sales
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        {/* Benefits Section */}
+        <div className="grid md:grid-cols-2 gap-12 mb-16">
+          <div>
+            <h2 className="text-3xl font-bold mb-6">Transform Your Scheduling Process</h2>
+            <div className="space-y-6">
+              <div className="flex items-start">
+                <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-4 mt-1">
+                  <span className="text-green-600 font-bold">1</span>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold mb-2">Reduce No-Shows by 40%</h3>
+                  <p className="text-gray-600">Automated reminders and intelligent scheduling reduce no-show rates and improve customer satisfaction.</p>
+                </div>
+              </div>
+              <div className="flex items-start">
+                <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-4 mt-1">
+                  <span className="text-blue-600 font-bold">2</span>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold mb-2">Save 5+ Hours Per Week</h3>
+                  <p className="text-gray-600">Eliminate back-and-forth scheduling emails and phone calls with automated booking processes.</p>
+                </div>
+              </div>
+              <div className="flex items-start">
+                <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center mr-4 mt-1">
+                  <span className="text-purple-600 font-bold">3</span>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold mb-2">Professional Customer Experience</h3>
+                  <p className="text-gray-600">Provide 24/7 booking availability with branded pages that enhance your professional image.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl p-8 text-white">
+            <h3 className="text-2xl font-bold mb-4">Perfect for Any Business</h3>
+            <p className="mb-6">Whether you're a healthcare provider, consultant, service business, or salon owner, our scheduler adapts to your needs.</p>
+            <div className="space-y-4">
+              <div className="flex items-center">
+                <span className="text-green-300 mr-3">✓</span>
+                <span>Healthcare & Medical</span>
+              </div>
+              <div className="flex items-center">
+                <span className="text-green-300 mr-3">✓</span>
+                <span>Professional Services</span>
+              </div>
+              <div className="flex items-center">
+                <span className="text-green-300 mr-3">✓</span>
+                <span>Beauty & Wellness</span>
+              </div>
+              <div className="flex items-center">
+                <span className="text-green-300 mr-3">✓</span>
+                <span>Education & Training</span>
+              </div>
+            </div>
+            <Link to="/contact" className="mt-6 bg-white text-green-600 px-6 py-3 rounded-lg font-semibold inline-block hover:bg-gray-100 transition-colors">
+              Start Your Free Trial
+            </Link>
+          </div>
+        </div>
+
+        {/* Integration Section */}
+        <div className="bg-white rounded-2xl p-8 shadow-xl mb-16">
+          <h2 className="text-3xl font-bold text-center mb-8">Seamless Integrations</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gray-100 rounded-lg mx-auto mb-3 flex items-center justify-center">
+                <span className="text-2xl">📅</span>
+              </div>
+              <p className="text-sm font-medium">Google Calendar</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gray-100 rounded-lg mx-auto mb-3 flex items-center justify-center">
+                <span className="text-2xl">📧</span>
+              </div>
+              <p className="text-sm font-medium">Outlook</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gray-100 rounded-lg mx-auto mb-3 flex items-center justify-center">
+                <span className="text-2xl">🍎</span>
+              </div>
+              <p className="text-sm font-medium">Apple Calendar</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gray-100 rounded-lg mx-auto mb-3 flex items-center justify-center">
+                <span className="text-2xl">💼</span>
+              </div>
+              <p className="text-sm font-medium">Salesforce</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gray-100 rounded-lg mx-auto mb-3 flex items-center justify-center">
+                <span className="text-2xl">🔗</span>
+              </div>
+              <p className="text-sm font-medium">HubSpot</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gray-100 rounded-lg mx-auto mb-3 flex items-center justify-center">
+                <span className="text-2xl">📱</span>
+              </div>
+              <p className="text-sm font-medium">Zapier</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Contact Section */}
+        <div className="text-center bg-white rounded-2xl p-8 shadow-xl">
+          <h2 className="text-3xl font-bold mb-4">Ready to Streamline Your Scheduling?</h2>
+          <p className="text-xl text-gray-600 mb-8">Contact our team to learn more about our Automated Appointment Scheduler</p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="tel:+13024640950" className="bg-green-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-green-700 transition-colors">
+              Call: +1 302 464 0950
+            </a>
+            <a href="mailto:kleber@ziontechgroup.com" className="border-2 border-green-600 text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-green-600 hover:text-white transition-colors">
+              Email: kleber@ziontechgroup.com
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}

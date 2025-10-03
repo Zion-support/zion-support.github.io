@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { DollarSign } from 'lucide-react';
 
 export const metadata = {
@@ -19,7 +19,7 @@ export const metadata = {
 export default function AICostOptimizationPlaybook2027() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
-      <Link href="/blog" className="text-blue-600 hover:text-blue-800 mb-6 inline-block">← Back to Blog</Link>
+      <Link to="/blog" className="text-blue-600 hover:text-blue-800 mb-6 inline-block">← Back to Blog</Link>
       <h1 className="text-4xl font-bold text-gray-900 mb-3">AI 2027 Cost Optimization Playbook</h1>
       <div className="text-gray-600 mb-8">Published: September 30, 2025 • 13 min read • Cost Optimization</div>
 
@@ -47,7 +47,7 @@ export default function AICostOptimizationPlaybook2027() {
         <div className="bg-emerald-50 border-l-4 border-emerald-500 p-6 rounded">
           <h3 className="m-0">Need a proven rollout?</h3>
           <p className="m-0">We implement cost controls with guardrails and value stream analytics in weeks.</p>
-          <Link href="/services" className="inline-block mt-3 bg-emerald-600 hover:bg-emerald-700 text-white px-5 py-3 rounded">Explore Services</Link>
+          <Link to="/services" className="inline-block mt-3 bg-emerald-600 hover:bg-emerald-700 text-white px-5 py-3 rounded">Explore Services</Link>
         </div>
       </div>
     </div>

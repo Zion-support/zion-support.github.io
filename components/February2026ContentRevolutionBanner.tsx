@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowRight, Star, TrendingUp, Zap, Target, Award } from 'lucide-react';
 
@@ -127,8 +127,7 @@ const February2026ContentRevolutionBanner: React.FC = () => {
             transition={{ duration: 0.8, delay: 1.0 }}
             className="flex flex-col sm:flex-row gap-6 justify-center items-center"
           >
-            <Link
-              href="/blog/ai-2026-advanced-neural-superintelligence-breakthrough"
+            <Link to="/blog/ai-2026-advanced-neural-superintelligence-breakthrough"
               className="group inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-bold text-lg rounded-full transition-all duration-300 hover:scale-105 hover:shadow-2xl"
             >
               <Zap className="w-6 h-6" />
@@ -136,8 +135,7 @@ const February2026ContentRevolutionBanner: React.FC = () => {
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
 
-            <Link
-              href="/case-studies/fortune-500-ai-transformation-success-story"
+            <Link to="/case-studies/fortune-500-ai-transformation-success-story"
               className="group inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold text-lg rounded-full transition-all duration-300 hover:scale-105 hover:shadow-2xl"
             >
               <Award className="w-6 h-6" />

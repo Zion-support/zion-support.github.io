@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 const January2025NextGenerationAISystemsBanner: React.FC = () => {
   return (
@@ -59,8 +59,7 @@ const January2025NextGenerationAISystemsBanner: React.FC = () => {
             </p>
             <div className="flex items-center justify-between">
               <div className="text-sm text-gray-400">12 min read</div>
-              <Link
-                href="/blog/ai-2025-january-next-generation-ai-systems-revolution"
+              <Link to="/blog/ai-2025-january-next-generation-ai-systems-revolution"
                 className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300 text-sm"
               >
                 Read Article →
@@ -84,8 +83,7 @@ const January2025NextGenerationAISystemsBanner: React.FC = () => {
             </p>
             <div className="flex items-center justify-between">
               <div className="text-sm text-gray-400">15 min read</div>
-              <Link
-                href="/blog/ai-2025-january-autonomous-business-intelligence-revolution"
+              <Link to="/blog/ai-2025-january-autonomous-business-intelligence-revolution"
                 className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300 text-sm"
               >
                 Read Article →
@@ -109,8 +107,7 @@ const January2025NextGenerationAISystemsBanner: React.FC = () => {
             </p>
             <div className="flex items-center justify-between">
               <div className="text-sm text-gray-400">18 min read</div>
-              <Link
-                href="/case-studies/ai-2025-january-next-generation-ai-systems-2-8-billion-success"
+              <Link to="/case-studies/ai-2025-january-next-generation-ai-systems-2-8-billion-success"
                 className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300 text-sm"
               >
                 View Case Study →
@@ -130,20 +127,17 @@ const January2025NextGenerationAISystemsBanner: React.FC = () => {
               Get your free consultation and discover how we can help you achieve similar success.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
+              <Link to="/contact"
                 className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 transform hover:-translate-y-1"
               >
                 Get Free Consultation
               </Link>
-              <Link
-                href="/services/ai-solutions"
+              <Link to="/services/ai-solutions"
                 className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
               >
                 Explore AI Solutions →
               </Link>
-              <Link
-                href="/case-studies"
+              <Link to="/case-studies"
                 className="border-2 border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
               >
                 View All Success Stories

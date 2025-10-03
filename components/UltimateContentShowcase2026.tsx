@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 const UltimateContentShowcase2026 = () => {
   return (
@@ -43,8 +43,7 @@ const UltimateContentShowcase2026 = () => {
             </p>
             <div className="flex items-center justify-between">
               <div className="text-sm text-gray-400">15 min read</div>
-              <Link
-                href="/blog/ai-2026-july-ultimate-breakthrough-revolution"
+              <Link to="/blog/ai-2026-july-ultimate-breakthrough-revolution"
                 className="text-purple-300 font-semibold hover:text-purple-200 transition-colors"
               >
                 Read Breakthrough →
@@ -64,8 +63,7 @@ const UltimateContentShowcase2026 = () => {
             </p>
             <div className="flex items-center justify-between">
               <div className="text-sm text-gray-400">18 min read</div>
-              <Link
-                href="/blog/ai-2026-august-revolutionary-breakthrough-announcement"
+              <Link to="/blog/ai-2026-august-revolutionary-breakthrough-announcement"
                 className="text-blue-300 font-semibold hover:text-blue-200 transition-colors"
               >
                 Read Breakthrough →
@@ -85,8 +83,7 @@ const UltimateContentShowcase2026 = () => {
             </p>
             <div className="flex items-center justify-between">
               <div className="text-sm text-gray-400">25 min read</div>
-              <Link
-                href="/case-studies/ai-2026-july-ultimate-breakthrough-100-billion-success"
+              <Link to="/case-studies/ai-2026-july-ultimate-breakthrough-100-billion-success"
                 className="text-green-300 font-semibold hover:text-green-200 transition-colors"
               >
                 Read Success Story →
@@ -106,8 +103,7 @@ const UltimateContentShowcase2026 = () => {
             </p>
             <div className="flex items-center justify-between">
               <div className="text-sm text-gray-400">30 min read</div>
-              <Link
-                href="/case-studies/ai-2026-august-consciousness-integration-mega-success"
+              <Link to="/case-studies/ai-2026-august-consciousness-integration-mega-success"
                 className="text-cyan-300 font-semibold hover:text-cyan-200 transition-colors"
               >
                 Read Success Story →
@@ -127,8 +123,7 @@ const UltimateContentShowcase2026 = () => {
             </p>
             <div className="flex items-center justify-between">
               <div className="text-sm text-gray-400">20 min read</div>
-              <Link
-                href="/blog/ai-2026-april-mega-breakthrough-revolution"
+              <Link to="/blog/ai-2026-april-mega-breakthrough-revolution"
                 className="text-orange-300 font-semibold hover:text-orange-200 transition-colors"
               >
                 Read Breakthrough →
@@ -148,8 +143,7 @@ const UltimateContentShowcase2026 = () => {
             </p>
             <div className="flex items-center justify-between">
               <div className="text-sm text-gray-400">22 min read</div>
-              <Link
-                href="/blog/ai-2026-march-mega-breakthrough-revolution"
+              <Link to="/blog/ai-2026-march-mega-breakthrough-revolution"
                 className="text-pink-300 font-semibold hover:text-pink-200 transition-colors"
               >
                 Read Breakthrough →
@@ -170,8 +164,7 @@ const UltimateContentShowcase2026 = () => {
             <p className="text-gray-300 mb-4">
               Discover the latest revolutionary AI technologies and breakthrough innovations that are reshaping the future.
             </p>
-            <Link
-              href="/blog"
+            <Link to="/blog"
               className="text-blue-400 font-semibold hover:text-blue-300 transition-colors"
             >
               Explore All Breakthroughs →
@@ -188,8 +181,7 @@ const UltimateContentShowcase2026 = () => {
             <p className="text-gray-300 mb-4">
               Learn from real-world success stories of companies achieving billions in value through AI transformation.
             </p>
-            <Link
-              href="/case-studies"
+            <Link to="/case-studies"
               className="text-green-400 font-semibold hover:text-green-300 transition-colors"
             >
               View All Success Stories →
@@ -206,8 +198,7 @@ const UltimateContentShowcase2026 = () => {
             <p className="text-gray-300 mb-4">
               Explore the future of AI and technology trends that will shape the next decade of innovation.
             </p>
-            <Link
-              href="/blog/ai-2026-future-trends-breakthrough"
+            <Link to="/blog/ai-2026-future-trends-breakthrough"
               className="text-orange-400 font-semibold hover:text-orange-300 transition-colors"
             >
               Discover Future Trends →
@@ -218,14 +209,12 @@ const UltimateContentShowcase2026 = () => {
         {/* Call to Action */}
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/contact" 
+            <Link to="/contact" 
               className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
             >
               Start Your AI Transformation
             </Link>
-            <Link 
-              href="/blog" 
+            <Link to="/blog" 
               className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
             >
               Explore All Content →

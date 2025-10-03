@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 const QuantumConsciousnessFusion2026Banner: React.FC = () => {
   return (
@@ -52,20 +52,17 @@ const QuantumConsciousnessFusion2026Banner: React.FC = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Link 
-              href="/blog/ai-2026-quantum-consciousness-fusion-revolution" 
+            <Link to="/blog/ai-2026-quantum-consciousness-fusion-revolution" 
               className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 transform hover:-translate-y-1"
             >
               Read Consciousness Guide →
             </Link>
-            <Link 
-              href="/case-studies/ai-2026-quantum-consciousness-fusion-25-billion-success" 
+            <Link to="/case-studies/ai-2026-quantum-consciousness-fusion-25-billion-success" 
               className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
             >
               View $25B Success Story →
             </Link>
-            <Link 
-              href="/contact" 
+            <Link to="/contact" 
               className="border-2 border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               Begin Consciousness Journey
@@ -204,14 +201,12 @@ const QuantumConsciousnessFusion2026Banner: React.FC = () => {
               Join 50+ Fortune 100 companies already transcending with Quantum Consciousness Fusion
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="/contact" 
+              <Link to="/contact" 
                 className="bg-gradient-to-r from-indigo-600 to-purple-700 hover:from-indigo-500 hover:to-purple-600 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 transform hover:-translate-y-1"
               >
                 Schedule Consciousness Consultation
               </Link>
-              <Link 
-                href="/blog/ai-2026-quantum-consciousness-fusion-revolution" 
+              <Link to="/blog/ai-2026-quantum-consciousness-fusion-revolution" 
                 className="bg-gradient-to-r from-purple-600 to-pink-700 hover:from-purple-500 hover:to-pink-600 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
               >
                 Read Full Consciousness Guide

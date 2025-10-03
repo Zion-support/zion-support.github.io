@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'Verifiable Edge Analytics 2026 — Zero‑PII, Signed Attestations',
@@ -63,7 +63,7 @@ export default function VerifiableEdgeAnalytics2026() {
           <h3 className="text-2xl font-bold mb-3">Make Analytics Verifiable</h3>
           <p className="opacity-90 mb-6">Adopt signed pipelines, zero‑PII patterns, and live KPIs without slowing teams.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="bg-white text-green-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">Talk to Experts</Link>
+            <Link to="/contact" className="bg-white text-green-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">Talk to Experts</Link>
             <a href="tel:+13024640950" className="border-2 border-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-700 transition-colors">Call +1 302 464 0950</a>
           </div>
         </div>

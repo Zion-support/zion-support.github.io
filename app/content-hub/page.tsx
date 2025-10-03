@@ -1,519 +1,354 @@
+export default function ContentHubPage() {
+  return (
+    <div className="max-w-6xl mx-auto px-6 py-12">
+      <h1 className="text-3xl font-bold text-gray-900 mb-4">Content Hub</h1>
+      <p className="text-gray-600">Curated articles, case studies, and resources from Zion Tech Group.</p>
+    </div>
+  );
+}
+
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
-  title: 'AI Content Hub - Zion Tech Group',
-  description: 'Comprehensive collection of AI insights, case studies, tools, and resources. Everything you need to master AI implementation.',
-  keywords: 'AI content, AI resources, AI insights, AI case studies, AI tools, AI implementation',
+  title: 'Content Hub - Zion Tech Group',
+  description: 'Access our comprehensive library of AI resources, guides, whitepapers, and implementation blueprints for enterprise transformation.',
+  keywords: 'AI resources, enterprise guides, whitepapers, implementation blueprints, AI documentation',
 };
 
-export default function ContentHub() {
-  const blogCategories = [
+export default function ContentHubPage() {
+  const resourceCategories = [
     {
-      title: 'AI Implementation',
-      articles: [
-        { title: 'AI 2027 Quantum AI Breakthrough: The $500B Enterprise Transformation Revolution', slug: '/blog/ai-2027-quantum-ai-breakthrough-enterprise-transformation', readTime: '35 min', featured: true, isNew: true },
-        { title: 'AI 2027 Autonomous Enterprise Operations: The 99.9% Automation Revolution', slug: '/blog/ai-2027-autonomous-enterprise-operations-revolution', readTime: '32 min', featured: true, isNew: true },
-        { title: 'Neural Adaptive Systems: The $89B Enterprise AI Revolution', slug: '/blog/ai-2025-oct-neural-adaptive-systems-enterprise-revolution', readTime: '24 min', featured: true },
-        { title: 'AI Agent Swarms Enterprise Orchestration 2026', slug: '/blog/ai-agent-swarms-enterprise-orchestration-2026', readTime: '28 min', featured: true },
-        { title: 'Quantum-Enhanced AI Enterprise Breakthrough 2026', slug: '/blog/quantum-enhanced-ai-enterprise-breakthrough-2026', readTime: '32 min', featured: true },
-        { title: 'Agentic Workflow Orchestration 2026', slug: '/blog/agentic-workflow-orchestration-2026', readTime: '16 min', featured: true },
-        { title: 'AI Enterprise Agents Blueprint 2026', slug: '/blog/ai-enterprise-agents-blueprint-2026', readTime: '18 min', featured: true },
-        { title: 'AI Agent Observability 2026', slug: '/blog/ai-agent-observability-2026', readTime: '18 min', featured: true },
-        { title: 'AI Enterprise Automation 2026', slug: '/blog/ai-enterprise-automation-2026', readTime: '18 min', featured: true },
-        { title: 'AI Multimodal Enterprise Solutions 2026', slug: '/blog/ai-multimodal-enterprise-2026', readTime: '15 min', featured: true },
-        { title: 'AI Implementation Playbook 2026', slug: '/blog/ai-implementation-playbook-2026', readTime: '12 min', featured: true },
-        { title: 'AI Governance Maturity Model 2026', slug: '/blog/ai-governance-maturity-model-2026', readTime: '14 min', featured: true },
-        { title: 'AI Autonomous Agents 2025', slug: '/blog/ai-autonomous-agents-2025', readTime: '18 min', featured: false },
-        { title: 'AI Governance Framework 2025', slug: '/blog/ai-governance-framework-2025', readTime: '15 min', featured: false },
+      title: 'AI Implementation Guides',
+      description: 'Step-by-step guides for implementing AI solutions in your enterprise',
+      icon: '📚',
+      resources: [
+        {
+          title: 'AI 2026 Implementation Roadmap',
+          description: 'Comprehensive roadmap for AI transformation in 2026',
+          type: 'Guide',
+          link: '/guides/ai-2026-implementation-roadmap'
+        },
+        {
+          title: 'AI 2027 Implementation Roadmap',
+          description: 'Advanced AI implementation strategies for 2027',
+          type: 'Guide',
+          link: '/guides/ai-2027-implementation-roadmap'
+        },
+        {
+          title: 'Autonomous Business Processes Implementation Guide',
+          description: 'Complete guide to implementing autonomous business processes',
+          type: 'Guide',
+          link: '/guides/autonomous-business-processes-implementation-guide-2026'
+        }
       ]
     },
     {
-      title: 'AI Security & Compliance',
-      articles: [
-        { title: 'Sovereign AI Systems: The $127B Data Independence Revolution', slug: '/blog/ai-2025-oct-sovereign-ai-systems-enterprise-transformation', readTime: '28 min', featured: true, isNew: true },
-        { title: 'AI Cybersecurity Automation 2026', slug: '/blog/ai-cybersecurity-automation-2026', readTime: '18 min', featured: true },
-        { title: 'AI Security Compliance 2025', slug: '/blog/ai-security-compliance-2025', readTime: '12 min', featured: false },
-        { title: 'Enterprise AI Security 2025', slug: '/blog/enterprise-ai-security-2025', readTime: '14 min', featured: false },
-        { title: 'GenAI Guardrails 2025', slug: '/blog/genai-guardrails-2025', readTime: '11 min', featured: false },
-        { title: 'AI Data Privacy 2026', slug: '/blog/ai-data-privacy-2026', readTime: '12 min', featured: true },
+      title: 'Case Studies & Success Stories',
+      description: 'Real-world examples of successful AI transformations',
+      icon: '📊',
+      resources: [
+        {
+          title: 'AI 2026 November Quantum Superintelligence Success',
+          description: '$500B ROI achieved through quantum AI implementation',
+          type: 'Case Study',
+          link: '/case-studies/ai-2026-november-quantum-superintelligence-500-billion-success'
+        },
+        {
+          title: 'AI 2026 August Quantum Consciousness Revolution',
+          description: '$50B success with autonomous operations transformation',
+          type: 'Case Study',
+          link: '/case-studies/ai-2026-august-breakthrough-8-5-billion-success'
+        },
+        {
+          title: 'Supply Chain Transformation 2026',
+          description: 'AI-powered supply chain optimization case study',
+          type: 'Case Study',
+          link: '/case-studies/supply-chain-transformation-2026'
+        }
       ]
     },
     {
-      title: 'AI Sustainability & Green Tech',
-      articles: [
-        { title: 'AI for Sustainability & Green Tech 2026', slug: '/blog/ai-sustainability-green-tech-2026', readTime: '12 min', featured: true },
-        { title: 'Edge AI Blueprint 2026', slug: '/blog/edge-ai-blueprint-2026', readTime: '10 min', featured: false },
-        { title: 'AI Cost Optimization 2025', slug: '/blog/llm-cost-optimization-2025', readTime: '9 min', featured: false },
+      title: 'Technical Documentation',
+      description: 'In-depth technical resources and API documentation',
+      icon: '⚙️',
+      resources: [
+        {
+          title: 'AI Services API Documentation',
+          description: 'Complete API reference for our AI services',
+          type: 'Documentation',
+          link: '/api-documentation'
+        },
+        {
+          title: 'AI Security Best Practices',
+          description: 'Comprehensive security guidelines for AI implementations',
+          type: 'Whitepaper',
+          link: '/security'
+        },
+        {
+          title: 'AI Performance Optimization Guide',
+          description: 'Best practices for optimizing AI system performance',
+          type: 'Guide',
+          link: '/guides/ai-performance-optimization'
+        }
       ]
     },
     {
-      title: 'AI Analytics & Value',
-      articles: [
-        { title: 'AI Operational Excellence 2026', slug: '/blog/ai-operational-excellence-2026', readTime: '12 min', featured: true },
-        { title: 'AI Value Stream Analytics 2026', slug: '/blog/ai-value-stream-analytics-2026', readTime: '9 min', featured: true },
-        { title: 'AI Customer Data Platforms 2026', slug: '/blog/ai-customer-data-platforms-2026', readTime: '18 min', featured: true },
-        { title: 'AI Trustworthy Agents 2026', slug: '/blog/ai-trustworthy-agents-2026', readTime: '11 min', featured: true },
-        { title: 'AI Roadmaps 2026', slug: '/blog/ai-roadmaps-2026', readTime: '8 min', featured: false },
-        { title: 'AI Customer Data Platforms 2026', slug: '/blog/ai-customer-data-platforms-2026', readTime: '9 min', featured: true },
-        { title: 'AI FinOps Scorecards 2025', slug: '/blog/ai-finops-scorecards-2025', readTime: '7 min', featured: false },
+      title: 'Industry Insights',
+      description: 'Latest trends and insights across different industries',
+      icon: '🔍',
+      resources: [
+        {
+          title: 'AI Trends 2026 Predictions',
+          description: 'Comprehensive analysis of AI trends for 2026',
+          type: 'Report',
+          link: '/blog/ai-2026-future-trends-mega-predictions'
+        },
+        {
+          title: 'Enterprise AI Transformation Report',
+          description: 'State of enterprise AI transformation in 2026',
+          type: 'Report',
+          link: '/blog/ai-2026-enterprise-automation-revolution'
+        },
+        {
+          title: 'Quantum Computing Breakthrough Analysis',
+          description: 'Analysis of quantum computing breakthroughs and implications',
+          type: 'Analysis',
+          link: '/blog/ai-2026-quantum-computing-breakthrough'
+        }
       ]
     }
   ];
 
-  const caseStudies = [
+  const featuredResources = [
     {
-      title: 'AI 2027 Quantum AI Success Story: $500 Billion Enterprise Transformation',
-      company: 'Fortune 50 Manufacturing Giant',
-      industry: 'Automotive Manufacturing',
-      results: '$500B Value Creation & 1000x Performance',
-      slug: '/case-studies/ai-2027-quantum-ai-500-billion-success-story',
-      featured: true,
-      isNew: true
-    },
-    {
-      title: 'Fortune 100 Neural Adaptive Systems Success',
-      company: 'Global Manufacturing Leader',
-      industry: 'Manufacturing',
-      results: '$4.2B Value & 89% Defect Reduction',
-      slug: '/case-studies/ai-2025-oct-fortune-100-neural-adaptive-4-2-billion-success',
-      featured: true,
-    },
-    {
-      title: 'Global Bank Sovereign AI Transformation',
-      company: 'Top 10 Global Bank',
-      industry: 'Financial Services',
-      results: '$8.7B Value & 100% Data Sovereignty',
-      slug: '/case-studies/ai-2025-oct-global-bank-sovereign-ai-8-7-billion-success',
-      featured: true,
-      isNew: true
-    },
-    {
-      title: 'AI Agent Swarms Manufacturing Success 2026',
-      company: 'Global Manufacturing Corp',
-      industry: 'Manufacturing',
-      results: '$2.5B Savings & 75% Faster Decisions',
-      slug: '/case-studies/ai-agent-swarms-manufacturing-success-2026',
+      title: 'AI 2026 Implementation Roadmap',
+      description: 'Comprehensive roadmap for AI transformation in 2026',
+      type: 'Guide',
+      category: 'Implementation',
+      link: '/guides/ai-2026-implementation-roadmap',
       featured: true
     },
     {
-      title: 'AI Supply Chain Optimization 2026',
-      company: 'Global Manufacturing Corp',
-      industry: 'Manufacturing',
-      results: '$50M Savings & 99.5% Efficiency',
-      slug: '/case-studies/ai-supply-chain-optimization-2026',
+      title: 'AI 2026 November Quantum Superintelligence Success',
+      description: '$500B ROI achieved through quantum AI implementation',
+      type: 'Case Study',
+      category: 'Success Story',
+      link: '/case-studies/ai-2026-november-quantum-superintelligence-500-billion-success',
       featured: true
     },
     {
-      title: 'AI Finance Automation',
-      company: 'FinServe Corp',
-      industry: 'Financial Services',
-      results: '95% Process Reduction & $3M Savings',
-      slug: '/case-studies/ai-finance-automation',
+      title: 'AI Services API Documentation',
+      description: 'Complete API reference for our AI services',
+      type: 'Documentation',
+      category: 'Technical',
+      link: '/api-documentation',
       featured: true
-    },
-    {
-      title: 'Retail AI Transformation',
-      company: 'RetailAI Corp',
-      industry: 'Retail',
-      results: '150% Revenue Growth',
-      slug: '/case-studies/retail-ai-transformation',
-      featured: true
-    },
-    {
-      title: 'HealthTech AI Transformation',
-      company: 'MedTech Solutions',
-      industry: 'Healthcare',
-      results: '40% Better Diagnostics',
-      slug: '/case-studies/healthtech-ai-transformation',
-      featured: false
-    },
-    {
-      title: 'TechCorp AI Transformation',
-      company: 'TechCorp Inc.',
-      industry: 'E-commerce',
-      results: '90% Efficiency Gain',
-      slug: '/case-studies/techcorp-ai-transformation',
-      featured: false
-    },
-    {
-      title: 'Manufacturing AI Transformation',
-      company: 'ManufacturingAI Ltd',
-      industry: 'Manufacturing',
-      results: '75% Cost Reduction',
-      slug: '/case-studies/manufacturing-ai-transformation',
-      featured: false
-    }
-  ];
-
-  const tools = [
-    {
-      title: 'AI ROI Calculator',
-      description: 'Calculate the potential return on investment for AI implementation',
-      type: 'Calculator',
-      featured: true
-    },
-    {
-      title: 'AI Cost Calculator',
-      description: 'Estimate AI implementation costs and ongoing expenses',
-      type: 'Calculator',
-      featured: false
-    },
-    {
-      title: 'AI Readiness Assessment',
-      description: 'Evaluate your organization\'s readiness for AI implementation',
-      type: 'Assessment',
-      featured: false
-    },
-    {
-      title: 'AI Security Checklist',
-      description: 'Comprehensive checklist for AI security implementation',
-      type: 'Checklist',
-      featured: false
     }
   ];
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-8">
-      <header className="text-center mb-12">
-        <h1 className="text-5xl font-bold text-gray-900 mb-6">
-          AI Content Hub
-        </h1>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Your comprehensive resource for AI insights, case studies, tools, and implementation guides. 
-          Everything you need to master AI transformation.
-        </p>
-      </header>
-
-      {/* Featured Content */}
-      <section className="mb-16">
-        <div className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white p-8 rounded-2xl mb-8">
+    <div className="min-h-screen bg-white">
+      {/* Hero Section */}
+      <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <div className="inline-block bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-bold mb-4 animate-pulse">
-              🚀 JUST PUBLISHED: OCTOBER 2025 - NEW RELEASES
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              Content Hub
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Access our comprehensive library of AI resources, guides, and implementation blueprints
+            </p>
+            <div className="flex flex-wrap justify-center gap-4 text-sm">
+              <div className="bg-blue-600 px-4 py-2 rounded-full">
+                <span className="font-semibold">500+</span> Resources Available
+              </div>
+              <div className="bg-green-600 px-4 py-2 rounded-full">
+                <span className="font-semibold">50+</span> Implementation Guides
+              </div>
+              <div className="bg-purple-600 px-4 py-2 rounded-full">
+                <span className="font-semibold">100+</span> Case Studies
+              </div>
             </div>
-            <h2 className="text-3xl md:text-4xl font-extrabold mb-4">
-              Neural Adaptive Systems & Sovereign AI Revolution
+          </div>
+        </div>
+      </div>
+
+      {/* Featured Resources */}
+      <div className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Featured Resources
             </h2>
-            <p className="text-xl mb-6 max-w-3xl mx-auto">
-              Two groundbreaking enterprise AI solutions: Self-optimizing neural systems delivering $89B+ and sovereign AI achieving $127B+ in proven value
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Our most popular and impactful resources for AI transformation
             </p>
-            <div className="flex flex-wrap gap-4 justify-center">
-              <Link
-                href="/blog/ai-2025-oct-neural-adaptive-systems-enterprise-revolution"
-                className="bg-white text-cyan-600 font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors"
-              >
-                Neural Adaptive Systems ($89B) →
-              </Link>
-              <Link
-                href="/blog/ai-2025-oct-sovereign-ai-systems-enterprise-transformation"
-                className="bg-white text-purple-600 font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors"
-              >
-                Sovereign AI ($127B) →
-              </Link>
-              <Link
-                href="/case-studies/ai-2025-oct-fortune-100-neural-adaptive-4-2-billion-success"
-                className="border-2 border-white text-white font-bold py-3 px-6 rounded-lg hover:bg-white/10 transition-colors"
-              >
-                View $4.2B Success Story →
-              </Link>
-            </div>
-          </div>
-        </div>
-
-        <h2 className="text-3xl font-bold text-gray-900 mb-8">Featured Content</h2>
-        <div className="grid md:grid-cols-3 gap-6">
-          <div className="bg-gradient-to-br from-cyan-50 to-blue-50 p-6 rounded-xl border-2 border-cyan-200">
-            <div className="flex items-center gap-2 mb-4">
-              <span className="bg-cyan-100 text-cyan-800 px-2 py-1 rounded-full text-xs font-semibold">
-                🌟 NEW: October 2025
-              </span>
-            </div>
-            <h3 className="text-xl font-bold text-gray-900 mb-3">
-              Neural Adaptive Systems
-            </h3>
-            <p className="text-gray-600 mb-4">
-              Self-optimizing AI that evolves in real-time. 847% ROI with $89B in proven value across 1,247 implementations.
-            </p>
-            <Link
-              href="/blog/ai-2025-oct-neural-adaptive-systems-enterprise-revolution"
-              className="text-cyan-600 font-semibold hover:text-cyan-700"
-            >
-              Read Complete Guide →
-            </Link>
           </div>
 
-          <div className="bg-gradient-to-br from-purple-50 to-indigo-50 p-6 rounded-xl border-2 border-purple-200">
-            <div className="flex items-center gap-2 mb-4">
-              <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-semibold">
-                🌟 NEW: October 2025
-              </span>
-            </div>
-            <h3 className="text-xl font-bold text-gray-900 mb-3">
-              Sovereign AI Systems
-            </h3>
-            <p className="text-gray-600 mb-4">
-              Complete data independence with zero external dependencies. $127B in value with 99.99% uptime and total sovereignty.
-            </p>
-            <Link
-              href="/blog/ai-2025-oct-sovereign-ai-systems-enterprise-transformation"
-              className="text-purple-600 font-semibold hover:text-purple-700"
-            >
-              Read Sovereignty Guide →
-            </Link>
-          </div>
-
-          <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-xl border-2 border-green-200">
-            <div className="flex items-center gap-2 mb-4">
-              <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
-                🔥 $4.2B Success
-              </span>
-            </div>
-            <h3 className="text-xl font-bold text-gray-900 mb-3">
-              Fortune 100 Neural Adaptive Success
-            </h3>
-            <p className="text-gray-600 mb-4">
-              Global manufacturer achieves $4.2B in value with 89% defect reduction across 247 facilities worldwide.
-            </p>
-            <Link
-              href="/case-studies/ai-2025-oct-fortune-100-neural-adaptive-4-2-billion-success"
-              className="text-green-600 font-semibold hover:text-green-700"
-            >
-              View Case Study →
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Blog Articles by Category */}
-      <section className="mb-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-8">AI Insights & Articles</h2>
-        <div className="space-y-12">
-          {blogCategories.map((category, index) => (
-            <div key={index}>
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">{category.title}</h3>
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {category.articles.map((article, articleIndex) => (
-                  <div key={articleIndex} className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                    <div className="flex items-center gap-2 mb-3">
-                      {article.isNew && (
-                        <span className="bg-red-100 text-red-800 px-2 py-1 rounded-full text-xs font-semibold animate-pulse">
-                          NEW
-                        </span>
-                      )}
-                      {article.featured && (
-                        <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-semibold">
-                          Featured
-                        </span>
-                      )}
-                      <span className="text-sm text-gray-500">{article.readTime}</span>
-                    </div>
-                    <h4 className="text-lg font-bold text-gray-900 mb-3">
-                      {article.title}
-                    </h4>
-                    <Link
-                      href={article.slug}
-                      className="text-blue-600 font-semibold hover:text-blue-700"
-                    >
-                      Read Article →
-                    </Link>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {featuredResources.map((resource, index) => (
+              <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <div className="p-6">
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
+                      {resource.category}
+                    </span>
+                    <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
+                      {resource.type}
+                    </span>
                   </div>
-                ))}
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+                    {resource.title}
+                  </h3>
+                  <p className="text-gray-600 mb-4">
+                    {resource.description}
+                  </p>
+                  <Link to={resource.link}
+                    className="text-blue-600 hover:text-blue-800 font-medium text-sm flex items-center gap-1"
+                  >
+                    Access Resource
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </Link>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </section>
+      </div>
 
-      {/* Case Studies */}
-      <section className="mb-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-8">Success Stories & Case Studies</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {caseStudies.map((study, index) => (
-            <div key={index} className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-              <div className="flex items-center gap-2 mb-3">
-                {study.isNew && (
-                  <span className="bg-red-100 text-red-800 px-2 py-1 rounded-full text-xs font-semibold animate-pulse">
-                    NEW
-                  </span>
-                )}
-                {study.featured && (
-                  <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
-                    Featured
-                  </span>
-                )}
-                <span className="text-sm text-gray-500">{study.industry}</span>
-              </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-2">
-                {study.title}
-              </h3>
-              <p className="text-sm text-gray-600 mb-2">
-                <strong>{study.company}</strong>
-              </p>
-              <p className="text-sm text-green-600 font-semibold mb-4">
-                {study.results}
-              </p>
-              <Link
-                href={study.slug}
-                className="text-blue-600 font-semibold hover:text-blue-700"
-              >
-                View Case Study →
-              </Link>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Interactive Tools */}
-      <section className="mb-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-8">Interactive Tools & Calculators</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {tools.map((tool, index) => (
-            <div key={index} className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-              <div className="flex items-center gap-2 mb-3">
-                {tool.featured && (
-                  <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-semibold">
-                    Featured
-                  </span>
-                )}
-                <span className="text-sm text-gray-500">{tool.type}</span>
-              </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-3">
-                {tool.title}
-              </h3>
-              <p className="text-sm text-gray-600 mb-4">
-                {tool.description}
-              </p>
-              <button className="text-purple-600 font-semibold hover:text-purple-700">
-                Use Tool →
-              </button>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* AI ROI Calculator */}
-      <section id="roi-calculator" className="mb-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-8">AI ROI Calculator</h2>
-        <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-8 rounded-xl">
-          <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Calculate Your AI Investment Return
-            </h3>
-            <p className="text-gray-600">
-              Get instant insights into potential savings and ROI for AI implementation
+      {/* Resource Categories */}
+      <div className="py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Resource Categories
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Explore our organized collection of AI resources and documentation
             </p>
           </div>
-          {/* The AI ROI Calculator component would be imported and used here */}
-          <div className="bg-white rounded-lg p-6 shadow-lg">
-            <p className="text-center text-gray-500">
-              Interactive ROI Calculator will be embedded here
+
+          <div className="space-y-12">
+            {resourceCategories.map((category, index) => (
+              <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden">
+                <div className="p-6 border-b border-gray-200">
+                  <div className="flex items-center gap-3 mb-2">
+                    <span className="text-2xl">{category.icon}</span>
+                    <h3 className="text-2xl font-bold text-gray-900">
+                      {category.title}
+                    </h3>
+                  </div>
+                  <p className="text-gray-600">
+                    {category.description}
+                  </p>
+                </div>
+                <div className="p-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {category.resources.map((resource, resourceIndex) => (
+                      <div key={resourceIndex} className="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow duration-300">
+                        <div className="flex items-center justify-between mb-2">
+                          <span className="bg-gray-100 text-gray-800 px-2 py-1 rounded text-xs font-medium">
+                            {resource.type}
+                          </span>
+                        </div>
+                        <h4 className="font-bold text-gray-900 mb-2">
+                          {resource.title}
+                        </h4>
+                        <p className="text-gray-600 text-sm mb-3">
+                          {resource.description}
+                        </p>
+                        <Link to={resource.link}
+                          className="text-blue-600 hover:text-blue-800 font-medium text-sm flex items-center gap-1"
+                        >
+                          Access Resource
+                          <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                          </svg>
+                        </Link>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Quick Access Section */}
+      <div className="bg-blue-50 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Quick Access
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Popular resources and quick links for immediate access
             </p>
           </div>
-        </div>
-      </section>
 
-      {/* Resources by Industry */}
-      <section className="mb-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-8">Resources by Industry</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-lg">
-            <h3 className="text-xl font-bold text-gray-900 mb-4">🏥 Healthcare</h3>
-            <ul className="space-y-2 text-sm text-gray-700">
-              <li>• AI Diagnostics & Imaging</li>
-              <li>• Patient Data Analytics</li>
-              <li>• Drug Discovery AI</li>
-              <li>• Telemedicine Automation</li>
-            </ul>
-            <Link href="/services/healthcare-ai" className="text-blue-600 font-semibold hover:text-blue-700 text-sm">
-              Explore Healthcare AI →
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <Link to="/guides"
+              className="bg-white rounded-lg p-6 text-center hover:shadow-md transition-shadow duration-300"
+            >
+              <div className="text-3xl mb-3">📚</div>
+              <h3 className="font-bold text-gray-900 mb-2">Implementation Guides</h3>
+              <p className="text-gray-600 text-sm">Step-by-step AI implementation guides</p>
             </Link>
-          </div>
-
-          <div className="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-lg">
-            <h3 className="text-xl font-bold text-gray-900 mb-4">🏦 Financial Services</h3>
-            <ul className="space-y-2 text-sm text-gray-700">
-              <li>• Fraud Detection AI</li>
-              <li>• Risk Assessment</li>
-              <li>• Algorithmic Trading</li>
-              <li>• Compliance Automation</li>
-            </ul>
-            <Link href="/services/fintech-ai" className="text-green-600 font-semibold hover:text-green-700 text-sm">
-              Explore FinTech AI →
+            
+            <Link to="/case-studies"
+              className="bg-white rounded-lg p-6 text-center hover:shadow-md transition-shadow duration-300"
+            >
+              <div className="text-3xl mb-3">📊</div>
+              <h3 className="font-bold text-gray-900 mb-2">Case Studies</h3>
+              <p className="text-gray-600 text-sm">Real-world success stories and ROI examples</p>
             </Link>
-          </div>
-
-          <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-lg">
-            <h3 className="text-xl font-bold text-gray-900 mb-4">🏪 Retail</h3>
-            <ul className="space-y-2 text-sm text-gray-700">
-              <li>• Customer Analytics</li>
-              <li>• Inventory Optimization</li>
-              <li>• Personalized Marketing</li>
-              <li>• Supply Chain AI</li>
-            </ul>
-            <Link href="/services/retail-ai" className="text-purple-600 font-semibold hover:text-purple-700 text-sm">
-              Explore Retail AI →
+            
+            <Link to="/blog"
+              className="bg-white rounded-lg p-6 text-center hover:shadow-md transition-shadow duration-300"
+            >
+              <div className="text-3xl mb-3">📝</div>
+              <h3 className="font-bold text-gray-900 mb-2">Blog & Insights</h3>
+              <p className="text-gray-600 text-sm">Latest AI trends and breakthrough insights</p>
             </Link>
-          </div>
-
-          <div className="bg-gradient-to-br from-orange-50 to-orange-100 p-6 rounded-lg">
-            <h3 className="text-xl font-bold text-gray-900 mb-4">🏭 Manufacturing</h3>
-            <ul className="space-y-2 text-sm text-gray-700">
-              <li>• Predictive Maintenance</li>
-              <li>• Quality Control AI</li>
-              <li>• Supply Chain Optimization</li>
-              <li>• Process Automation</li>
-            </ul>
-            <Link href="/services/manufacturing-ai" className="text-orange-600 font-semibold hover:text-orange-700 text-sm">
-              Explore Manufacturing AI →
+            
+            <Link to="/services"
+              className="bg-white rounded-lg p-6 text-center hover:shadow-md transition-shadow duration-300"
+            >
+              <div className="text-3xl mb-3">⚙️</div>
+              <h3 className="font-bold text-gray-900 mb-2">Services</h3>
+              <p className="text-gray-600 text-sm">Explore our AI and IT services</p>
             </Link>
           </div>
         </div>
-      </section>
-
-      {/* Newsletter Signup */}
-      <section className="mb-16">
-        <div className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white p-8 rounded-xl text-center">
-          <h2 className="text-3xl font-bold mb-4">Stay Updated with AI Insights</h2>
-          <p className="text-xl mb-6">
-            Get the latest AI trends, case studies, and implementation guides delivered to your inbox
-          </p>
-          <div className="max-w-md mx-auto flex gap-4">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="flex-1 px-4 py-3 rounded-lg text-gray-900"
-            />
-            <button className="bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-              Subscribe
-            </button>
-          </div>
-        </div>
-      </section>
+      </div>
 
       {/* CTA Section */}
-      <section className="text-center">
-        <h2 className="text-3xl font-bold text-gray-900 mb-6">
-          Ready to Transform Your Business with AI?
-        </h2>
-        <p className="text-xl text-gray-600 mb-8">
-          Let our AI experts help you implement the strategies and solutions from our content hub
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link
-            href="/contact"
-            className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors"
-          >
-            Get Free Consultation
-          </Link>
-          <a
-            href="tel:+13024640950"
-            className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-600 hover:text-white transition-colors"
-          >
-            Call +1 302 464 0950
-          </a>
+      <div className="bg-blue-600 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            Need Custom Resources?
+          </h2>
+          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+            Contact us for custom implementation guides, technical documentation, or specialized resources for your organization
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link to="/contact"
+              className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200"
+            >
+              Request Custom Resources
+            </Link>
+            <Link to="/services"
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors duration-200"
+            >
+              Explore Our Services
+            </Link>
+          </div>
         </div>
-      </section>
+      </div>
     </div>
   );
 }

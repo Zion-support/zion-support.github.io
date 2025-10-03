@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { Zap, Brain, TrendingUp, Shield } from 'lucide-react';
 
 export default function NeuromorphicComputingRevolutionBanner() {
@@ -73,8 +73,7 @@ export default function NeuromorphicComputingRevolutionBanner() {
                 <span className="bg-green-500/20 text-green-300 px-3 py-1 rounded-full text-sm font-semibold">1000x Performance</span>
                 <span className="bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-sm font-semibold">Real-time Processing</span>
               </div>
-              <Link 
-                href="/blog/ai-2026-neuromorphic-computing-revolution"
+              <Link to="/blog/ai-2026-neuromorphic-computing-revolution"
                 className="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
               >
                 Read Full Article
@@ -97,8 +96,7 @@ export default function NeuromorphicComputingRevolutionBanner() {
                 <span className="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-sm font-semibold">Automotive Industry</span>
                 <span className="bg-yellow-500/20 text-yellow-300 px-3 py-1 rounded-full text-sm font-semibold">275% ROI</span>
               </div>
-              <Link 
-                href="/case-studies/neuromorphic-computing-manufacturing-success-2026"
+              <Link to="/case-studies/neuromorphic-computing-manufacturing-success-2026"
                 className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
               >
                 View Case Study
@@ -113,14 +111,12 @@ export default function NeuromorphicComputingRevolutionBanner() {
         {/* Call to Action */}
         <div className="text-center">
           <div className="inline-flex flex-col sm:flex-row gap-4 items-center">
-            <Link 
-              href="/services/neuromorphic-computing-enterprise-services"
+            <Link to="/services/neuromorphic-computing-enterprise-services"
               className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               🚀 Get Started with Neuromorphic Computing
             </Link>
-            <Link 
-              href="/contact"
+            <Link to="/contact"
               className="border-2 border-purple-400 hover:bg-purple-400/20 text-purple-200 px-8 py-4 rounded-full font-bold text-lg transition-all duration-300"
             >
               Schedule Consultation

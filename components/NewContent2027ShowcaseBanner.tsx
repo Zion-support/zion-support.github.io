@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function NewContent2027ShowcaseBanner() {
   return (
@@ -29,8 +29,7 @@ export default function NewContent2027ShowcaseBanner() {
             <div className="text-3xl mb-3">⚛️</div>
             <h3 className="text-xl font-bold mb-2">Quantum AI 2027</h3>
             <p className="text-sm opacity-90 mb-4">1000x faster processing with quantum neural networks</p>
-            <Link 
-              href="/blog/ai-2027-quantum-neural-networks"
+            <Link to="/blog/ai-2027-quantum-neural-networks"
               className="inline-block bg-white text-purple-600 px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Read Article
@@ -41,8 +40,7 @@ export default function NewContent2027ShowcaseBanner() {
             <div className="text-3xl mb-3">🧠</div>
             <h3 className="text-xl font-bold mb-2">Autonomous Intelligence</h3>
             <p className="text-sm opacity-90 mb-4">Self-optimizing AI systems delivering 300% ROI</p>
-            <Link 
-              href="/blog/ai-2026-autonomous-business-intelligence"
+            <Link to="/blog/ai-2026-autonomous-business-intelligence"
               className="inline-block bg-white text-purple-600 px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Read Guide
@@ -53,8 +51,7 @@ export default function NewContent2027ShowcaseBanner() {
             <div className="text-3xl mb-3">💰</div>
             <h3 className="text-xl font-bold mb-2">$500M Success Story</h3>
             <p className="text-sm opacity-90 mb-4">Fortune 100 quantum AI transformation results</p>
-            <Link 
-              href="/case-studies/ai-2027-quantum-breakthrough-success"
+            <Link to="/case-studies/ai-2027-quantum-breakthrough-success"
               className="inline-block bg-white text-purple-600 px-4 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               View Case Study
@@ -63,15 +60,13 @@ export default function NewContent2027ShowcaseBanner() {
         </div>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link 
-            href="/content-hub"
+          <Link to="/content-hub"
             className="bg-yellow-400 text-black px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-300 transition-colors"
           >
             🎯 Explore All New Content
           </Link>
           
-          <Link 
-            href="/services"
+          <Link to="/services"
             className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-600 transition-colors"
           >
             🚀 Get AI Solutions

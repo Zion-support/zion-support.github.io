@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 const AI2026QuantumEnhancedBIBanner: React.FC = () => {
   return (
@@ -37,8 +37,7 @@ const AI2026QuantumEnhancedBIBanner: React.FC = () => {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link 
-                href="/blog/ai-2026-quantum-enhanced-business-intelligence-revolution"
+              <Link to="/blog/ai-2026-quantum-enhanced-business-intelligence-revolution"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 rounded-lg font-semibold text-white transition-all duration-200 transform hover:scale-105"
               >
                 Read Full Article
@@ -46,8 +45,7 @@ const AI2026QuantumEnhancedBIBanner: React.FC = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
               </Link>
-              <Link 
-                href="/case-studies/ai-2026-fortune-500-quantum-bi-transformation-2-8-billion-success"
+              <Link to="/case-studies/ai-2026-fortune-500-quantum-bi-transformation-2-8-billion-success"
                 className="inline-flex items-center px-8 py-4 border-2 border-purple-400 hover:bg-purple-400/10 rounded-lg font-semibold text-white transition-all duration-200"
               >
                 View Case Study

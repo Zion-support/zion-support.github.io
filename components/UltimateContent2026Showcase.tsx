@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { ArrowRight, Star, TrendingUp, Zap, Target, Award, Brain, Bot, Atom } from 'lucide-react';
 
 export default function UltimateContent2026Showcase() {
@@ -42,7 +42,7 @@ export default function UltimateContent2026Showcase() {
               </div>
             </div>
             <div className="space-y-4 mb-6">
-              <Link href="/blog/ai-cognitive-computing-breakthrough-2026" className="group block">
+              <Link to="/blog/ai-cognitive-computing-breakthrough-2026" className="group block">
                 <div className="bg-white/5 hover:bg-white/10 rounded-xl p-4 transition-all duration-300 group-hover:scale-105">
                   <div className="flex items-center justify-between mb-2">
                     <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
@@ -59,7 +59,7 @@ export default function UltimateContent2026Showcase() {
                 </div>
               </Link>
               
-              <Link href="/blog/ai-quantum-hybrid-computing-2026" className="group block">
+              <Link to="/blog/ai-quantum-hybrid-computing-2026" className="group block">
                 <div className="bg-white/5 hover:bg-white/10 rounded-xl p-4 transition-all duration-300 group-hover:scale-105">
                   <div className="flex items-center justify-between mb-2">
                     <span className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
@@ -76,8 +76,7 @@ export default function UltimateContent2026Showcase() {
                 </div>
               </Link>
             </div>
-            <Link
-              href="/blog"
+            <Link to="/blog"
               className="inline-flex items-center bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 hover:scale-105"
             >
               Explore All Innovations
@@ -97,7 +96,7 @@ export default function UltimateContent2026Showcase() {
               </div>
             </div>
             <div className="space-y-4 mb-6">
-              <Link href="/blog/ai-autonomous-business-systems-2026" className="group block">
+              <Link to="/blog/ai-autonomous-business-systems-2026" className="group block">
                 <div className="bg-white/5 hover:bg-white/10 rounded-xl p-4 transition-all duration-300 group-hover:scale-105">
                   <div className="flex items-center justify-between mb-2">
                     <span className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
@@ -114,7 +113,7 @@ export default function UltimateContent2026Showcase() {
                 </div>
               </Link>
               
-              <Link href="/blog/ai-autonomous-enterprise-2026" className="group block">
+              <Link to="/blog/ai-autonomous-enterprise-2026" className="group block">
                 <div className="bg-white/5 hover:bg-white/10 rounded-xl p-4 transition-all duration-300 group-hover:scale-105">
                   <div className="flex items-center justify-between mb-2">
                     <span className="bg-gradient-to-r from-blue-500 to-green-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
@@ -131,8 +130,7 @@ export default function UltimateContent2026Showcase() {
                 </div>
               </Link>
             </div>
-            <Link
-              href="/blog"
+            <Link to="/blog"
               className="inline-flex items-center bg-gradient-to-r from-green-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 hover:scale-105"
             >
               Explore All Systems
@@ -152,7 +150,7 @@ export default function UltimateContent2026Showcase() {
               </div>
             </div>
             <div className="space-y-4 mb-6">
-              <Link href="/case-studies/ai-autonomous-business-systems-success-2026" className="group block">
+              <Link to="/case-studies/ai-autonomous-business-systems-success-2026" className="group block">
                 <div className="bg-white/5 hover:bg-white/10 rounded-xl p-4 transition-all duration-300 group-hover:scale-105">
                   <div className="flex items-center justify-between mb-2">
                     <span className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
@@ -169,7 +167,7 @@ export default function UltimateContent2026Showcase() {
                 </div>
               </Link>
               
-              <Link href="/case-studies/ai-quantum-optimization-2026" className="group block">
+              <Link to="/case-studies/ai-quantum-optimization-2026" className="group block">
                 <div className="bg-white/5 hover:bg-white/10 rounded-xl p-4 transition-all duration-300 group-hover:scale-105">
                   <div className="flex items-center justify-between mb-2">
                     <span className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
@@ -186,8 +184,7 @@ export default function UltimateContent2026Showcase() {
                 </div>
               </Link>
             </div>
-            <Link
-              href="/case-studies"
+            <Link to="/case-studies"
               className="inline-flex items-center bg-gradient-to-r from-orange-500 to-red-500 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 hover:scale-105"
             >
               View All Success Stories
@@ -241,8 +238,7 @@ export default function UltimateContent2026Showcase() {
             Join thousands of forward-thinking companies that are already leveraging these breakthrough AI technologies to achieve unprecedented growth and efficiency.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Link
-              href="/contact"
+            <Link to="/contact"
               className="bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 text-black px-8 py-4 rounded-lg font-bold text-lg hover:shadow-2xl transition-all duration-300 hover:scale-105"
             >
               <span className="flex items-center">
@@ -251,8 +247,7 @@ export default function UltimateContent2026Showcase() {
                 <ArrowRight className="w-5 h-5 ml-2" />
               </span>
             </Link>
-            <Link
-              href="/blog"
+            <Link to="/blog"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-slate-900 transition-colors"
             >
               Explore All Content

@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 const AIEnterpriseAutomationRevolutionBanner = () => {
   return (
@@ -42,14 +42,12 @@ const AIEnterpriseAutomationRevolutionBanner = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link
-                href="/services/ai-enterprise-automation"
+              <Link to="/services/ai-enterprise-automation"
                 className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-blue-700 hover:to-purple-700 transition-all shadow-lg hover:shadow-xl"
               >
                 Start Automation Journey
               </Link>
-              <Link
-                href="/case-studies/enterprise-automation-success"
+              <Link to="/case-studies/enterprise-automation-success"
                 className="border-2 border-gray-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-800 transition-colors"
               >
                 View Success Stories

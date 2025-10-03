@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function Revolutionary2026ContentShowcase() {
   const [activeTab, setActiveTab] = useState(0);
@@ -184,8 +184,7 @@ export default function Revolutionary2026ContentShowcase() {
               {/* CTA */}
               <div className="mt-8 pt-8 border-t border-gray-200">
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link
-                    href={contentItems[activeTab].href}
+                  <Link to={contentItems[activeTab].href}
                     className={`bg-gradient-to-r ${contentItems[activeTab].gradient} text-white px-8 py-4 rounded-xl font-bold text-lg hover:shadow-lg transition-all hover:scale-105 text-center`}
                   >
                     Read Full {contentItems[activeTab].type === 'SUCCESS' ? 'Case Study' : 'Article'} →

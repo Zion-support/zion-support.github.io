@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function AI2027AdvancedNeuralSuperintelligenceBreakthroughBanner() {
   return (
@@ -46,14 +46,12 @@ export default function AI2027AdvancedNeuralSuperintelligenceBreakthroughBanner(
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link 
-                href="/blog/ai-2027-advanced-neural-superintelligence-breakthrough"
+              <Link to="/blog/ai-2027-advanced-neural-superintelligence-breakthrough"
                 className="bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-black px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
               >
                 🚀 Learn About The Breakthrough
               </Link>
-              <Link 
-                href="/case-studies/ai-2027-advanced-neural-superintelligence-2-8-trillion-success"
+              <Link to="/case-studies/ai-2027-advanced-neural-superintelligence-2-8-trillion-success"
                 className="bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
               >
                 💰 View $2.8T Success Story
@@ -98,14 +96,12 @@ export default function AI2027AdvancedNeuralSuperintelligenceBreakthroughBanner(
             Discover how your enterprise can achieve similar breakthrough results
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/contact"
+            <Link to="/contact"
               className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
               📞 Schedule Free Consultation
             </Link>
-            <Link 
-              href="/blog/ai-2027-advanced-neural-superintelligence-breakthrough"
+            <Link to="/blog/ai-2027-advanced-neural-superintelligence-breakthrough"
               className="bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
               📖 Read Full Technical Details

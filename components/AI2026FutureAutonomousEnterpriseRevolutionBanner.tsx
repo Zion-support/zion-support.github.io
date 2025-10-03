@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function AI2026FutureAutonomousEnterpriseRevolutionBanner() {
   return (
@@ -105,7 +105,7 @@ export default function AI2026FutureAutonomousEnterpriseRevolutionBanner() {
         <div className="grid md:grid-cols-2 gap-8 mb-12">
           
           {/* Main Article */}
-          <Link href="/blog/ai-2026-future-autonomous-enterprise-revolution" className="group">
+          <Link to="/blog/ai-2026-future-autonomous-enterprise-revolution" className="group">
             <div className="bg-white rounded-2xl shadow-2xl overflow-hidden hover:shadow-3xl transition-all hover:scale-105 transform">
               <div className="bg-gradient-to-r from-emerald-600 to-teal-600 p-6 text-white">
                 <div className="flex items-center gap-2 mb-3">
@@ -174,7 +174,7 @@ export default function AI2026FutureAutonomousEnterpriseRevolutionBanner() {
                 </div>
               </div>
 
-              <Link href="/case-studies" className="block w-full bg-white text-emerald-600 text-center py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors">
+              <Link to="/case-studies" className="block w-full bg-white text-emerald-600 text-center py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors">
                 View All Success Stories →
               </Link>
             </div>
@@ -229,13 +229,13 @@ export default function AI2026FutureAutonomousEnterpriseRevolutionBanner() {
               Our AI services are already delivering autonomous enterprise capabilities to Fortune 500 companies worldwide.
             </p>
             <div className="grid md:grid-cols-2 gap-4">
-              <Link href="/services/autonomous-enterprise-systems" className="group">
+              <Link to="/services/autonomous-enterprise-systems" className="group">
                 <div className="bg-emerald-600 text-white p-4 rounded-lg hover:bg-emerald-700 transition-colors">
                   <h4 className="font-bold text-lg mb-2">🏢 Autonomous Enterprise Service</h4>
                   <p className="text-sm opacity-95">Complete transformation starting at $5M</p>
                 </div>
               </Link>
-              <Link href="/services/ai-automation-consulting" className="group">
+              <Link to="/services/ai-automation-consulting" className="group">
                 <div className="bg-teal-600 text-white p-4 rounded-lg hover:bg-teal-700 transition-colors">
                   <h4 className="font-bold text-lg mb-2">⚡ AI Automation Consulting</h4>
                   <p className="text-sm opacity-95">Strategic guidance starting at $500K</p>
