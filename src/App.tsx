@@ -1,16 +1,16 @@
-import React, { Suspense } from "react";
+import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ErrorBoundary from './components/ErrorBoundary';
 import { PageLoader } from './components/LoadingSpinner';
 
-// Lazy load pages for better performance
-const LazyHomePage = React.lazy(() => import('./pages/Home'));
-const LazyBlogPage = React.lazy(() => import('./pages/Blog'));
-const LazyCaseStudiesPage = React.lazy(() => import('./pages/CaseStudies'));
-const LazyContactPage = React.lazy(() => import('./pages/Contact'));
-const LazyServicesPage = React.lazy(() => import('./pages/Services'));
+// Lazy load components
+const LazyHomePage = React.lazy(() => import('./pages/HomePage'));
+const LazyBlogPage = React.lazy(() => import('./pages/BlogPage'));
+const LazyCaseStudiesPage = React.lazy(() => import('./pages/CaseStudiesPage'));
+const LazyContactPage = React.lazy(() => import('./pages/ContactPage'));
+const LazyServicesPage = React.lazy(() => import('./pages/ServicesPage'));
 
-function App(): React.JSX.Element {
+function App() {
   return (
     <ErrorBoundary>
       <Router>
