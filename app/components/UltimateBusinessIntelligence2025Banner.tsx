@@ -106,8 +106,8 @@ const UltimateBusinessIntelligence2025Banner = () => {
             className="text-left"
             aria-label="Dismiss banner"
           >
-            <svg className="text-left" fill="none" stroke="currentColor" viewBox="0 0 24 24">"
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />"
+            <svg className="text-left" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
         </div>
@@ -129,15 +129,15 @@ const UltimateBusinessIntelligence2025Banner = () => {
                 <div className="text-left">{currentContent.metrics.roi}</div>
                 <div className="text-left">ROI</div>
               </div>
-              <div className="text-left"></div>
+              <div className="text-left">
                 <div className="text-left">{currentContent.metrics.savings}</div>
                 <div className="text-left">Annual Savings</div>
               </div>
-              <div className="text-left"></div>
+              <div className="text-left">
                 <div className="text-left">{currentContent.metrics.accuracy}</div>
                 <div className="text-left">Accuracy</div>
               </div>
-              <div className="text-left"></div>
+              <div className="text-left">
                 <div className="text-left">{currentContent.metrics.speed || currentContent.metrics.timeline}</div>
                 <div className="text-left">{currentContent.metrics.speed ? 'Faster' : 'Timeline'}</div>
               </div>

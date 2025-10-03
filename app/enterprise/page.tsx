@@ -22,7 +22,7 @@ export default function EnterprisePage() {
             <div className="text-left"></div>
               <span className="text-left">
                 🏢 Enterprise AI Solutions
-              </span>/span>/span>
+              </span>
             </div>
             
             <h1 className="text-left">

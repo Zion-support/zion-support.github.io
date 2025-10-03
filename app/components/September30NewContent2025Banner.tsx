@@ -76,9 +76,9 @@ const September30NewContent2025Banner: React.FC = () => {
     <div className="text-left">
       {/* Animated background effects */}
       <div className="text-left">
-        <div className="text-left"></div>"
-        <div className="text-left" style={{ animationDelay: '2s' }}></div>"
-        <div className="text-left" style={{ animationDelay: '4s' }}></div>"
+        <div className="text-left"></div>
+        <div className="text-left" style={{ animationDelay: '2s' }}></div>
+        <div className="text-left" style={{ animationDelay: '4s' }}></div>
       </div>
 
       <div className="text-left">
@@ -159,7 +159,8 @@ const September30NewContent2025Banner: React.FC = () => {
                   <ArrowRight className="text-left" />
                 </Link>
               </div>
-            ))}
+            </div>
+          ))}
         </div>
 
         {/* Second Row */}

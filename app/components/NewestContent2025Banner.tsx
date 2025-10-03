@@ -6,9 +6,9 @@ const NewestContent2025Banner = () => {
     <section className="text-left">
       {/* Animated Background Effects */}
       <div className="text-left">
-        <div className="text-left">"
-        <div className="text-left" style={{ animationDelay: '2s' }}>"
-        <div className="text-left" style={{ animationDelay: '1s' }}>
+        <div className="text-left"></div>
+        <div className="text-left" style={{ animationDelay: '2s' }}></div>
+        <div className="text-left" style={{ animationDelay: '1s' }}></div>
 
       <div className="text-left">
         {/* Header */}
@@ -74,14 +74,18 @@ const NewestContent2025Banner = () => {
                 {/* Key Stats */}
                 <div className="text-left">
                   <div className="text-left">
-                    <div className="text-left">&lt;10ms</div>"
+                    <div className="text-left">&lt;10ms</div>
                     <div className="text-left">Latency</div>
+                  </div>
                   <div className="text-left">
-                    <div className="text-left">95%</div>"
+                    <div className="text-left">95%</div>
                     <div className="text-left">Bandwidth ↓</div>
+                  </div>
                   <div className="text-left">
-                    <div className="text-left">87%</div>"
+                    <div className="text-left">87%</div>
                     <div className="text-left">Cost ↓</div>
+                  </div>
+                </div>
 
                 {/* Meta Info */}
                 <div className="text-left">
@@ -94,13 +98,13 @@ const NewestContent2025Banner = () => {
                   <span>Read Full Article</span>
                   <span className="text-left">→</span>
                 </div>
+              </div>
             </div>
           </Link>
 
           {/* Article 2: Neural Networks */}
           <Link href="/blog/ai-neural-networks-enterprise-transformation-2025" className="text-left">
             <div className="text-left">
-              <div className="text-left">
               <div className="text-left">
                 <div className="text-left">
                   <div className="text-left">
@@ -115,6 +119,7 @@ const NewestContent2025Banner = () => {
                       NEW TODAY
                     </span>
                   </div>
+                </div>
 
                 <div className="text-left">
                   <span className="text-left">
