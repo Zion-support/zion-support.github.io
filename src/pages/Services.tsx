@@ -409,6 +409,7 @@ const Services: React.FC = () => {
       </div>
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
   )
 )
 }
@@ -416,5 +417,9 @@ const Services: React.FC = () => {
   );
 };
 >>>>>>> cursor/fix-errors-and-merge-to-main-3cef
+=======
+  );
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6873
 
 export default Services;

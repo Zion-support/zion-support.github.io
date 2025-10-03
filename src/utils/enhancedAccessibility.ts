@@ -1,4 +1,4 @@
-interface AccessibilityConfig {/* content */}
+interface AccessibilityConfig {
   enableAnnouncements: boolean;
   enableFormLabels: boolean;
   enableSkipLinks: boolean;
@@ -12,17 +12,17 @@ interface AccessibilityConfig {/* content */}
   enableTouchAccessibility: boolean;
 }
 
-interface AccessibilityMetrics {/* content */}
+interface AccessibilityMetrics {
   score: number;
   issues: string[];
   recommendations: string[];
 }
 
-export class EnhancedAccessibility {/* content */}
+export class EnhancedAccessibility {
   private config: AccessibilityConfig;
 
-  constructor(config: Partial<AccessibilityConfig> = {}) {/* content */}
-    this.config = {/* content */}
+  constructor(config: Partial<AccessibilityConfig> = {}) {
+    this.config = {
       enableAnnouncements: true,
       enableFormLabels: true,
       enableSkipLinks: true,
