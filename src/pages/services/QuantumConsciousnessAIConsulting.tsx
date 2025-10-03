@@ -26,7 +26,7 @@ const QuantumConsciousnessAIConsulting: React.FC = () => {
               <div className="text-left">
                 <span className="text-left">
                   🧠 Quantum Consciousness AI
-                <
+                </span>
               </div>
               
               <h1 className="text-left">
