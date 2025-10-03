@@ -85,33 +85,7 @@ export default function PostBySlug(): React.JSX.Element {
     }
     
     return undefined;
-<<<<<<< HEAD
-=======
-  }, [slug]);
 
-  // Mock article data - replace with actual data fetching logic
-  const mockArticle = {
-    slug: slug,
-    title: "Sample Article Title",
-    description: "This is a sample article description that provides an overview of the content.",
-    category: "Technology",
-    publishedAt: "2024-01-01",
-    readTime: "5 min read",
-    author: "Zion Tech Group Team",
-      content: `
-        <h2>Introduction</h2>
-        <p>This is a sample article content. In a real implementation, this would be fetched from a CMS or API.</p>
-        
-        <h2>Main Content</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        
-        <h2>Conclusion</h2>
-        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      `
-    };
-    
-    return mockArticle;
->>>>>>> cursor/fix-errors-and-merge-to-main-6873
   }, [slug]);
 
   if (!article) {
@@ -218,8 +192,5 @@ export default function PostBySlug(): React.JSX.Element {
       </div>
     </>
   );
-<<<<<<< HEAD
 }
-=======
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6873
+
