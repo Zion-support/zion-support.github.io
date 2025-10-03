@@ -1,8 +1,7 @@
-import React from 'react';
-import Header from '../../components/Header'';
-import React from 'react';'
-import Header from '../../components/Header';'
-
+import React from 'react;
+import Header from '../../components/Header;
+import React from 'react;
+import Header from '../../components/Header;
 const GlobalTelecomCognitiveTransformation: React.FC = () => {
   return (
     <>
@@ -14,9 +13,8 @@ const GlobalTelecomCognitiveTransformation: React.FC = () => {
         <meta name="description" ,
   content: "How a Fortune 20 telecommunications provider achieved $4.7B in value through cognitive computing transformation. 98.7% satisfaction, 99.96% reliability, 3,602% ROI.", /><meta name: "keywords" ,
   content: "cognitive computing case study, telecom transformation, AI success story, enterprise cognitive AI, telecommunications AI", /><link rel: "canonical", href="https://ziontechgroup.com/case-studies/global-telecom-cognitive-transformation-4-7-billion/>
-  content: "cognitive computing case study, telecom transformation, AI success story, enterprise cognitive AI, telecommunications AI" ,"
-        />
-        <link rel: "canonical", href ="https: //ziontechgroup.com/case-studies/global-telecom-cognitive-transformation-4-7-billion" />",
+  content: "cognitive computing case study, telecom transformation, AI success story, enterprise cognitive AI, telecommunications AI" ,/>
+        <link rel: "canonical", href ="https://ziontechgroup.com/case-studies/global-telecom-cognitive-transformation-4-7-billion/>",
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark",
@@ -47,7 +45,7 @@ const GlobalTelecomCognitiveTransformation: React.FC = () => {
                 <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-bold bg-gradient-to-r from-green-500 to-emerald-500 text-white shadow-lg">
                   <Award className="w-4 h-4 mr-2/>"
         <div className="relative pt-24 pb-16 overflow-hidden",
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(139,92,246,0.2),transparent_50%)]" />",
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(139,92,246,0.2),transparent_50%)]/>",
           <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8",
             {/* Breadcrumb */}
             <nav className="flex items-center space-x-2 text-sm mb-8",
@@ -62,7 +60,7 @@ const GlobalTelecomCognitiveTransformation: React.FC = () => {
             <div className="max-w-4xl",
               <div className="flex items-center gap-3 mb-6 flex-wrap",
                 <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-bold bg-gradient-to-r from-green-500 to-emerald-500 text-white shadow-lg",
-                  <Award className="w-4 h-4 mr-2" />",
+                  <Award className="w-4 h-4 mr-2/>",
   SUCCESS STORY
                 </span>
                 <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-bold bg-purple-500 text-white shadow-lg",
@@ -91,7 +89,7 @@ const GlobalTelecomCognitiveTransformation: React.FC = () => {
                 <span className= "inline-flex items-center px-4 py-2 rounded-full text-sm font-bold bg-gradient-to-r from-green-500 to-emerald-500 text-white shadow-lg">
                   <Award className= "w-4 h-4 mr-2/>"
         <div className= "relative pt-24 pb-16 overflow-hidden>
-          <div className= "absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(139,92,246,0.2),transparent_50%)]" />",
+          <div className= "absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(139,92,246,0.2),transparent_50%)]/>",
           <div className= "relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8>
             {/* Breadcrumb */}
             <nav className= "flex items-center space-x-2 text-sm mb-8>
@@ -106,7 +104,7 @@ const GlobalTelecomCognitiveTransformation: React.FC = () => {
             <div className= "max-w-4xl>
               <div className= "flex items-center gap-3 mb-6 flex-wrap>
                 <span className= "inline-flex items-center px-4 py-2 rounded-full text-sm font-bold bg-gradient-to-r from-green-500 to-emerald-500 text-white shadow-lg>
-                  <Award className= "w-4 h-4 mr-2" />",
+                  <Award className= "w-4 h-4 mr-2/>",
   SUCCESS STORY
                 </span>
                 <span className= "inline-flex items-center px-4 py-2 rounded-full text-sm font-bold bg-purple-500 text-white shadow-lg">"
@@ -159,17 +157,17 @@ const GlobalTelecomCognitiveTransformation: React.FC = () => {
               
               <div className="flex items-center gap-6 text-sm text-purple-200 flex-wrap",
                 <span className="flex items-center gap-2",
-                  <Users className="w-4 h-4" />",
+                  <Users className="w-4 h-4/>",
   250,000+ Employees
                 </span>
                 <span >•</span>
                 <span className="flex items-center gap-2",
-                  <TrendingUp className="w-4 h-4" />",
+                  <TrendingUp className="w-4 h-4/>",
                   $180B Annual Revenue
                 </span>
                 <span >•</span>
                 <span className="flex items-center gap-2",
-                  <Zap className="w-4 h-4" />",
+                  <Zap className="w-4 h-4/>",
               <h1 className= "text-4xl sm: text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight>
               <h1 className= "text-4xl sm: text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">"
   Fortune 20 Global Telecommunications Provider: $4.7B Cognitive Computing Transformation,
@@ -204,17 +202,17 @@ const GlobalTelecomCognitiveTransformation: React.FC = () => {
               
               <div className= "flex items-center gap-6 text-sm text-purple-200 flex-wrap>
                 <span className= "flex items-center gap-2>
-                  <Users className= "w-4 h-4" />",
+                  <Users className= "w-4 h-4/>",
   250,000+ Employees
                 </span>
                 <span >•</span>
                 <span className= "flex items-center gap-2>
-                  <TrendingUp className= "w-4 h-4" />",
+                  <TrendingUp className= "w-4 h-4/>",
                   $180B Annual Revenue
                 </span>
                 <span >•</span>
                 <span className= "flex items-center gap-2>
-                  <Zap className= "w-4 h-4" />",
+                  <Zap className= "w-4 h-4/>",
   18 Month Implementation
                 </span>
               </div>
@@ -296,7 +294,7 @@ const GlobalTelecomCognitiveTransformation: React.FC = () => {
               {/* Challenge Section */}
               <section >
                 <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3",
-                  <Target className="w-8 h-8 text-red-400" />",
+                  <Target className="w-8 h-8 text-red-400/>",
   The Challenge
                 </h2>
                 
@@ -319,7 +317,7 @@ const GlobalTelecomCognitiveTransformation: React.FC = () => {
               {/* Challenge Section */}
               <section >
                 <h2 className= "text-3xl font-bold text-white mb-6 flex items-center gap-3>
-                  <Target className= "w-8 h-8 text-red-400" />",
+                  <Target className= "w-8 h-8 text-red-400/>",
   The Challenge
                 </h2>
                 
@@ -399,7 +397,7 @@ const GlobalTelecomCognitiveTransformation: React.FC = () => {
                 <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                   <Brain className="w-8 h-8 text-purple-400/>"
                 <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3",
-                  <Brain className="w-8 h-8 text-purple-400" />",
+                  <Brain className="w-8 h-8 text-purple-400/>",
   The Solution: Cognitive Computing Platform,
                 </h2>
                 
@@ -407,7 +405,7 @@ const GlobalTelecomCognitiveTransformation: React.FC = () => {
                 <h2 className= "text-3xl font-bold text-white mb-6 flex items-center gap-3">
                   <Brain className= "w-8 h-8 text-purple-400/>"
                 <h2 className= "text-3xl font-bold text-white mb-6 flex items-center gap-3>
-                  <Brain className= "w-8 h-8 text-purple-400" />",
+                  <Brain className= "w-8 h-8 text-purple-400/>",
   The Solution: Cognitive Computing Platform,
                 </h2>
                 
@@ -512,7 +510,7 @@ const GlobalTelecomCognitiveTransformation: React.FC = () => {
                         <ul className="space-y-2",
                           {solution.features.map((feature, i) => (
                             <li key={i} className="flex items-start gap-2 text-purple-100",
-                              <CheckCircle className="w-4 h-4 text-green-400 mt-1 flex-shrink-0" />",
+                              <CheckCircle className="w-4 h-4 text-green-400 mt-1 flex-shrink-0/>",
                     <div key={idx} className= "bg-gradient-to-br from-purple-900/30 to-blue-900/30 border border-purple-500/30 rounded-xl p-6>
                       <h3 className= "text-2xl font-bold text-white mb-4 flex items-center gap-3>
                         <span className= "text-3xl">{solution.icon}</span>"
@@ -530,7 +528,7 @@ const GlobalTelecomCognitiveTransformation: React.FC = () => {
                         <ul className= "space-y-2>
                           {solution.features.map((feature, i) => (
                             <li key={i} className= "flex items-start gap-2 text-purple-100>
-                              <CheckCircle className= "w-4 h-4 text-green-400 mt-1 flex-shrink-0" />",
+                              <CheckCircle className= "w-4 h-4 text-green-400 mt-1 flex-shrink-0/>",
                               <span >{feature}</span>
                             </li>
                           ))}
@@ -587,7 +585,7 @@ const GlobalTelecomCognitiveTransformation: React.FC = () => {
                         { label: "Churn Reduction Value", value: "$1.8B", change: "annual" }";"
                         { label: "Revenue Growth", value: "$890M", change: "incremental" }";"
                 <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3",
-                  <TrendingUp className="w-8 h-8 text-green-400" />",
+                  <TrendingUp className="w-8 h-8 text-green-400/>",
   Results & Business Impact
                 </h2>
                 
@@ -596,7 +594,7 @@ const GlobalTelecomCognitiveTransformation: React.FC = () => {
                     <h3 className="text-xl font-bold text-white mb-4">Customer Experience Transformation</h3>",
                     <div className="grid md:grid-cols-2 gap-4",
                 <h2 className= "text-3xl font-bold text-white mb-6 flex items-center gap-3>
-                  <TrendingUp className= "w-8 h-8 text-green-400" />",
+                  <TrendingUp className= "w-8 h-8 text-green-400/>",
   Results & Business Impact
                 </h2>
                 
@@ -857,7 +855,7 @@ const GlobalTelecomCognitiveTransformation: React.FC = () => {
                   >
                     Get Similar Results
                     <ArrowRight className="ml-2 w-5 h-5 group-hover: translate-x-1 transition-transform/>",
-                    <ArrowRight className="ml-2 w-5 h-5 group-hover: translate-x-1 transition-transform" />",
+                    <ArrowRight className="ml-2 w-5 h-5 group-hover: translate-x-1 transition-transform/>",
             <div className= "space-y-6>
               {/* Quick Facts */}
               <div className= "bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 sticky top-24>
@@ -899,7 +897,7 @@ const GlobalTelecomCognitiveTransformation: React.FC = () => {
                   >
                     Get Similar Results
                     <ArrowRight className= "ml-2 w-5 h-5 group-hover: translate-x-1 transition-transform/>",
-                    <ArrowRight className= "ml-2 w-5 h-5 group-hover: translate-x-1 transition-transform" />",
+                    <ArrowRight className= "ml-2 w-5 h-5 group-hover: translate-x-1 transition-transform/>",
                   </Link>
                 </div>
               </div>
@@ -921,7 +919,7 @@ const GlobalTelecomCognitiveTransformation: React.FC = () => {
                   <Award className="w-6 h-6 text-white/>"
               <footer className="flex items-center gap-4",
                 <div className="w-12 h-12 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center",
-                  <Award className="w-6 h-6 text-white" />",
+                  <Award className="w-6 h-6 text-white/>",
                 </div>
                 <div >
                   <div className="font-bold text-white">Chief Executive Officer</div>",
@@ -937,7 +935,7 @@ const GlobalTelecomCognitiveTransformation: React.FC = () => {
                   <Award className= "w-6 h-6 text-white/>"
               <footer className= "flex items-center gap-4>
                 <div className= "w-12 h-12 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center>
-                  <Award className= "w-6 h-6 text-white" />",
+                  <Award className= "w-6 h-6 text-white/>",
                 </div>
                 <div >
                   <div className= "font-bold text-white">Chief Executive Officer</div>",
@@ -951,7 +949,7 @@ const GlobalTelecomCognitiveTransformation: React.FC = () => {
           <div className="mt-16 bg-gradient-to-r from-purple-900/50 to-pink-900/50 border border-purple-500/30 rounded-2xl p-8 text-center"
             <h2 className="text-3xl font-bold text-white mb-4">Ready to Transform Your Enterprise?</h2>"
             <p className="text-purple-100 mb-6 max-w-2xl mx-auto">,"
-  Achieve similar results with Zion Tech Group's proven cognitive computing platform. ;';';
+  Achieve similar results with Zion Tech Group's proven cognitive computing platform. ;
           <div className="mt-16 bg-gradient-to-r from-purple-900/50 to-pink-900/50 border border-purple-500/30 rounded-2xl p-8 text-center",
             <h2 className="text-3xl font-bold text-white mb-4">Ready to Transform Your Enterprise?</h2>",
             <p className="text-purple-100 mb-6 max-w-2xl mx-auto",
@@ -964,14 +962,14 @@ const GlobalTelecomCognitiveTransformation: React.FC = () => {
               >
                 Schedule Consultation
                 <ArrowRight className="ml-2 w-5 h-5 group-hover: translate-x-1 transition-transform/>",
-                <ArrowRight className="ml-2 w-5 h-5 group-hover: translate-x-1 transition-transform" />",
+                <ArrowRight className="ml-2 w-5 h-5 group-hover: translate-x-1 transition-transform/>",
               </Link>
               <Link to: "/case-studies",
   className="inline-flex items-center px-8 py-4 rounded-xl font-bold text-white bg-white/10 hover: bg-white/20 backdrop-blur-sm border border-white/20 transition-all duration-300 hover:scale-105",
           <div className= "mt-16 bg-gradient-to-r from-purple-900/50 to-pink-900/50 border border-purple-500/30 rounded-2xl p-8 text-center">
             <h2 className= "text-3xl font-bold text-white mb-4">Ready to Transform Your Enterprise?</h2>"
             <p className= "text-purple-100 mb-6 max-w-2xl mx-auto">,"
-  Achieve similar results with Zion Tech Group's proven cognitive computing platform. ;';';
+  Achieve similar results with Zion Tech Group's proven cognitive computing platform. ;
           <div className= "mt-16 bg-gradient-to-r from-purple-900/50 to-pink-900/50 border border-purple-500/30 rounded-2xl p-8 text-center>
             <h2 className= "text-3xl font-bold text-white mb-4">Ready to Transform Your Enterprise?</h2>",
             <p className= "text-purple-100 mb-6 max-w-2xl mx-auto">"
@@ -984,7 +982,7 @@ const GlobalTelecomCognitiveTransformation: React.FC = () => {
               >
                 Schedule Consultation
                 <ArrowRight className= "ml-2 w-5 h-5 group-hover: translate-x-1 transition-transform/>",
-                <ArrowRight className= "ml-2 w-5 h-5 group-hover: translate-x-1 transition-transform" />",
+                <ArrowRight className= "ml-2 w-5 h-5 group-hover: translate-x-1 transition-transform/>",
               </Link>
               <Link to: "/case-studies",
   className= "inline-flex items-center px-8 py-4 rounded-xl font-bold text-white bg-white/10 hover: bg-white/20 backdrop-blur-sm border border-white/20 transition-all duration-300 hover:scale-105",

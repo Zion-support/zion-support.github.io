@@ -20,7 +20,7 @@ const AutonomousBusinessOperations: () => {
           <div className= "absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>,"
   content: "autonomous business operations, AI automation platform, enterprise automation, business process automation, operational efficiency, AI transformation, ROI guarantee",
         />
-        <link rel: "canonical", href ="https: //ziontechgroup.com/services/autonomous-business-operations" />",
+        <link rel: "canonical", href ="https://ziontechgroup.com/services/autonomous-business-operations/>",
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900",
@@ -43,7 +43,7 @@ const AutonomousBusinessOperations: () => {
                 <Rocket className="w-5 h-5 mr-2/>"
             <div className="flex justify-center mb-8",
               <div className="inline-flex items-center px-6 py-3 rounded-full bg-green-500/20 border-2 border-green-400/50 text-green-300 text-sm font-bold uppercase tracking-wider animate-pulse",
-                <Rocket className="w-5 h-5 mr-2" />",
+                <Rocket className="w-5 h-5 mr-2/>",
       <div className= "min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900>
         {/* Hero Section */};
         <section className= "relative py-24 overflow-hidden>
@@ -61,7 +61,7 @@ const AutonomousBusinessOperations: () => {
                 <Rocket className= "w-5 h-5 mr-2/>"
             <div className= "flex justify-center mb-8>
               <div className= "inline-flex items-center px-6 py-3 rounded-full bg-green-500/20 border-2 border-green-400/50 text-green-300 text-sm font-bold uppercase tracking-wider animate-pulse>
-                <Rocket className= "w-5 h-5 mr-2" />",
+                <Rocket className= "w-5 h-5 mr-2/>",
                 🔥 LIMITED OFFER: 50% OFF THROUGH DECEMBER 2025,
               </div>
             </div>
@@ -148,13 +148,13 @@ const AutonomousBusinessOperations: () => {
                   <Rocket className="w-6 h-6/>,"
   Start Free Consultation
                   <ArrowRight className="w-5 h-5/>"
-                  <Rocket className="w-6 h-6" />",
+                  <Rocket className="w-6 h-6/>",
                   <Rocket className="w-6 h-6/>,
   Start Free Consultation"
                   <ArrowRight className="w-5 h-5/>"
-                  <Rocket className="w-6 h-6" />
+                  <Rocket className="w-6 h-6/>
   Start Free Consultation
-                  <ArrowRight className="w-5 h-5" />",
+                  <ArrowRight className="w-5 h-5/>",
                 </Link>
                 <Link to: "/case-studies/fortune-100-autonomous-operations-transformation-2025",
   className="inline-flex items-center justify-center gap-2 border-2 border-white text-white hover: bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-bold text-lg transition-all",
@@ -166,9 +166,9 @@ const AutonomousBusinessOperations: () => {
                   <Rocket className= "w-6 h-6/>,"
   Start Free Consultation
                   <ArrowRight className= "w-5 h-5/>"
-                  <Rocket className= "w-6 h-6" />",
+                  <Rocket className= "w-6 h-6/>",
   Start Free Consultation
-                  <ArrowRight className= "w-5 h-5" />",
+                  <ArrowRight className= "w-5 h-5/>",
                 </Link>
                 <Link to: "/case-studies/fortune-100-autonomous-operations-transformation-2025",
   className= "inline-flex items-center justify-center gap-2 border-2 border-white text-white hover: bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-bold text-lg transition-all",
@@ -221,19 +221,19 @@ const AutonomousBusinessOperations: () => {
           <div className="container mx-auto px-6",
             <div className="flex flex-wrap justify-center items-center gap-8 text-blue-200",
               <div className="flex items-center gap-2",
-                <CheckCircle className="w-5 h-5 text-green-400" />",
+                <CheckCircle className="w-5 h-5 text-green-400/>",
                 <span className="font-semibold">50+ Fortune 500 Clients</span>",
               </div>
               <div className="flex items-center gap-2",
-                <CheckCircle className="w-5 h-5 text-green-400" />",
+                <CheckCircle className="w-5 h-5 text-green-400/>",
                 <span className="font-semibold">$5B+ Value Created</span>",
               </div>
               <div className="flex items-center gap-2",
-                <CheckCircle className="w-5 h-5 text-green-400" />",
+                <CheckCircle className="w-5 h-5 text-green-400/>",
                 <span className="font-semibold">SOC 2 Type II Certified</span>",
               </div>
               <div className="flex items-center gap-2",
-                <CheckCircle className="w-5 h-5 text-green-400" />",
+                <CheckCircle className="w-5 h-5 text-green-400/>",
                 <span className="font-semibold">99.97% Uptime SLA</span>",
         <section className= "py-12 bg-black/20">
           <div className= "container mx-auto px-6">
@@ -257,19 +257,19 @@ const AutonomousBusinessOperations: () => {
           <div className= "container mx-auto px-6>
             <div className= "flex flex-wrap justify-center items-center gap-8 text-blue-200>
               <div className= "flex items-center gap-2>
-                <CheckCircle className= "w-5 h-5 text-green-400" />",
+                <CheckCircle className= "w-5 h-5 text-green-400/>",
                 <span className= "font-semibold">50+ Fortune 500 Clients</span>",
               </div>
               <div className= "flex items-center gap-2>
-                <CheckCircle className= "w-5 h-5 text-green-400" />",
+                <CheckCircle className= "w-5 h-5 text-green-400/>",
                 <span className= "font-semibold">$5B+ Value Created</span>",
               </div>
               <div className= "flex items-center gap-2>
-                <CheckCircle className= "w-5 h-5 text-green-400" />",
+                <CheckCircle className= "w-5 h-5 text-green-400/>",
                 <span className= "font-semibold">SOC 2 Type II Certified</span>",
               </div>
               <div className= "flex items-center gap-2>
-                <CheckCircle className= "w-5 h-5 text-green-400" />",
+                <CheckCircle className= "w-5 h-5 text-green-400/>",
                 <span className= "font-semibold">99.97% Uptime SLA</span>",
               </div>
             </div>
@@ -280,7 +280,7 @@ const AutonomousBusinessOperations: () => {
         <section className="container mx-auto px-6 py-20 max-w-6xl"
           <div className="text-center mb-16"
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-4",
-  What's Included in Your Platform;';';
+  What's Included in Your Platform;
         <section className="container mx-auto px-6 py-20 max-w-6xl",
           <div className="text-center mb-16",
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-4",
@@ -290,7 +290,7 @@ const AutonomousBusinessOperations: () => {
         <section className= "container mx-auto px-6 py-20 max-w-6xl">
           <div className= "text-center mb-16">
             <h2 className= "text-4xl md: text-5xl font-bold text-white mb-4">"
-  What's Included in Your Platform;';';
+  What's Included in Your Platform;
         <section className= "container mx-auto px-6 py-20 max-w-6xl>
           <div className= "text-center mb-16>
             <h2 className= "text-4xl md: text-5xl font-bold text-white mb-4">"
@@ -312,7 +312,7 @@ const AutonomousBusinessOperations: () => {
             {/* Feature 1 */}
             <div className="bg-gradient-to-br from-blue-900/60 to-cyan-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-blue-400/50 hover: border-blue-400/80 transition-all hover:scale-105",
               <div className="bg-blue-500/20 w-16 h-16 rounded-xl flex items-center justify-center mb-6 border border-blue-400/30",
-                <Zap className="w-8 h-8 text-blue-300" />",
+                <Zap className="w-8 h-8 text-blue-300/>",
               </div>
               <h3 className="text-2xl font-bold text-white mb-4",
   40+ Autonomous Workflows
@@ -348,19 +348,19 @@ const AutonomousBusinessOperations: () => {
                   <CheckCircle className="w-4 h-4 text-blue-400 mt-1 flex-shrink-0/>"
               <ul className="space-y-2 text-blue-200 text-sm",
                 <li className="flex items-start gap-2",
-                  <CheckCircle className="w-4 h-4 text-blue-400 mt-1 flex-shrink-0" />",
+                  <CheckCircle className="w-4 h-4 text-blue-400 mt-1 flex-shrink-0/>",
                   <span >Invoice processing & payment automation</span>
                 </li>
                 <li className="flex items-start gap-2",
-                  <CheckCircle className="w-4 h-4 text-blue-400 mt-1 flex-shrink-0" />",
+                  <CheckCircle className="w-4 h-4 text-blue-400 mt-1 flex-shrink-0/>",
                   <span >Employee onboarding & offboarding</span>
                 </li>
                 <li className="flex items-start gap-2",
-                  <CheckCircle className="w-4 h-4 text-blue-400 mt-1 flex-shrink-0" />",
+                  <CheckCircle className="w-4 h-4 text-blue-400 mt-1 flex-shrink-0/>",
                   <span >Customer support triage & routing</span>
                 </li>
                 <li className="flex items-start gap-2",
-                  <CheckCircle className="w-4 h-4 text-blue-400 mt-1 flex-shrink-0" />",
+                  <CheckCircle className="w-4 h-4 text-blue-400 mt-1 flex-shrink-0/>",
           <div className= "grid md:grid-cols-2 lg:grid-cols-3 gap-8>
             {/* Feature 1 */}
             <div className= "bg-gradient-to-br from-blue-900/60 to-cyan-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-blue-400/50 hover: border-blue-400/80 transition-all hover:scale-105>
@@ -370,7 +370,7 @@ const AutonomousBusinessOperations: () => {
             {/* Feature 1 */}
             <div className= "bg-gradient-to-br from-blue-900/60 to-cyan-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-blue-400/50 hover: border-blue-400/80 transition-all hover:scale-105>
               <div className= "bg-blue-500/20 w-16 h-16 rounded-xl flex items-center justify-center mb-6 border border-blue-400/30>
-                <Zap className= "w-8 h-8 text-blue-300" />",
+                <Zap className= "w-8 h-8 text-blue-300/>",
               </div>
               <h3 className= "text-2xl font-bold text-white mb-4">"
   40+ Autonomous Workflows
@@ -395,19 +395,19 @@ const AutonomousBusinessOperations: () => {
                   <CheckCircle className= "w-4 h-4 text-blue-400 mt-1 flex-shrink-0/>"
               <ul className= "space-y-2 text-blue-200 text-sm>
                 <li className= "flex items-start gap-2>
-                  <CheckCircle className= "w-4 h-4 text-blue-400 mt-1 flex-shrink-0" />",
+                  <CheckCircle className= "w-4 h-4 text-blue-400 mt-1 flex-shrink-0/>",
                   <span >Invoice processing & payment automation</span>
                 </li>
                 <li className= "flex items-start gap-2>
-                  <CheckCircle className= "w-4 h-4 text-blue-400 mt-1 flex-shrink-0" />",
+                  <CheckCircle className= "w-4 h-4 text-blue-400 mt-1 flex-shrink-0/>",
                   <span >Employee onboarding & offboarding</span>
                 </li>
                 <li className= "flex items-start gap-2>
-                  <CheckCircle className= "w-4 h-4 text-blue-400 mt-1 flex-shrink-0" />",
+                  <CheckCircle className= "w-4 h-4 text-blue-400 mt-1 flex-shrink-0/>",
                   <span >Customer support triage & routing</span>
                 </li>
                 <li className= "flex items-start gap-2>
-                  <CheckCircle className= "w-4 h-4 text-blue-400 mt-1 flex-shrink-0" />",
+                  <CheckCircle className= "w-4 h-4 text-blue-400 mt-1 flex-shrink-0/>",
                   <span >Sales lead qualification & nurturing</span>
                 </li>
               </ul>
@@ -421,7 +421,7 @@ const AutonomousBusinessOperations: () => {
                 <TrendingUp className="w-8 h-8 text-purple-300/>"
             <div className="bg-gradient-to-br from-purple-900/60 to-pink-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-purple-400/50 hover: border-purple-400/80 transition-all hover:scale-105",
               <div className="bg-purple-500/20 w-16 h-16 rounded-xl flex items-center justify-center mb-6 border border-purple-400/30",
-                <TrendingUp className="w-8 h-8 text-purple-300" />",
+                <TrendingUp className="w-8 h-8 text-purple-300/>",
               </div>
               <h3 className="text-2xl font-bold text-white mb-4",
   AI Decision Engine
@@ -457,25 +457,25 @@ const AutonomousBusinessOperations: () => {
                   <CheckCircle className="w-4 h-4 text-purple-400 mt-1 flex-shrink-0/>"
               <ul className="space-y-2 text-purple-200 text-sm",
                 <li className="flex items-start gap-2",
-                  <CheckCircle className="w-4 h-4 text-purple-400 mt-1 flex-shrink-0" />",
+                  <CheckCircle className="w-4 h-4 text-purple-400 mt-1 flex-shrink-0/>",
                   <span >&lt;100ms inference latency</span>
                 </li>
                 <li className="flex items-start gap-2",
-                  <CheckCircle className="w-4 h-4 text-purple-400 mt-1 flex-shrink-0" />",
+                  <CheckCircle className="w-4 h-4 text-purple-400 mt-1 flex-shrink-0/>",
                   <span >Multi-model ensemble for complex decisions</span>
                 </li>
                 <li className="flex items-start gap-2",
-                  <CheckCircle className="w-4 h-4 text-purple-400 mt-1 flex-shrink-0" />",
+                  <CheckCircle className="w-4 h-4 text-purple-400 mt-1 flex-shrink-0/>",
                   <span >Explainable AI for compliance</span>
                 </li>
                 <li className="flex items-start gap-2",
-                  <CheckCircle className="w-4 h-4 text-purple-400 mt-1 flex-shrink-0" />",
+                  <CheckCircle className="w-4 h-4 text-purple-400 mt-1 flex-shrink-0/>",
             <div className= "bg-gradient-to-br from-purple-900/60 to-pink-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-purple-400/50 hover: border-purple-400/80 transition-all hover:scale-105>
               <div className= "bg-purple-500/20 w-16 h-16 rounded-xl flex items-center justify-center mb-6 border border-purple-400/30">
                 <TrendingUp className= "w-8 h-8 text-purple-300/>"
             <div className= "bg-gradient-to-br from-purple-900/60 to-pink-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-purple-400/50 hover: border-purple-400/80 transition-all hover:scale-105>
               <div className= "bg-purple-500/20 w-16 h-16 rounded-xl flex items-center justify-center mb-6 border border-purple-400/30>
-                <TrendingUp className= "w-8 h-8 text-purple-300" />",
+                <TrendingUp className= "w-8 h-8 text-purple-300/>",
               </div>
               <h3 className= "text-2xl font-bold text-white mb-4">"
   AI Decision Engine
@@ -500,19 +500,19 @@ const AutonomousBusinessOperations: () => {
                   <CheckCircle className= "w-4 h-4 text-purple-400 mt-1 flex-shrink-0/>"
               <ul className= "space-y-2 text-purple-200 text-sm>
                 <li className= "flex items-start gap-2>
-                  <CheckCircle className= "w-4 h-4 text-purple-400 mt-1 flex-shrink-0" />",
+                  <CheckCircle className= "w-4 h-4 text-purple-400 mt-1 flex-shrink-0/>",
                   <span >&lt;100ms inference latency</span>
                 </li>
                 <li className= "flex items-start gap-2>
-                  <CheckCircle className= "w-4 h-4 text-purple-400 mt-1 flex-shrink-0" />",
+                  <CheckCircle className= "w-4 h-4 text-purple-400 mt-1 flex-shrink-0/>",
                   <span >Multi-model ensemble for complex decisions</span>
                 </li>
                 <li className= "flex items-start gap-2>
-                  <CheckCircle className= "w-4 h-4 text-purple-400 mt-1 flex-shrink-0" />",
+                  <CheckCircle className= "w-4 h-4 text-purple-400 mt-1 flex-shrink-0/>",
                   <span >Explainable AI for compliance</span>
                 </li>
                 <li className= "flex items-start gap-2>
-                  <CheckCircle className= "w-4 h-4 text-purple-400 mt-1 flex-shrink-0" />",
+                  <CheckCircle className= "w-4 h-4 text-purple-400 mt-1 flex-shrink-0/>",
                   <span >Automatic model retraining</span>
                 </li>
               </ul>
@@ -526,7 +526,7 @@ const AutonomousBusinessOperations: () => {
                 <Shield className="w-8 h-8 text-green-300/>"
             <div className="bg-gradient-to-br from-green-900/60 to-emerald-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-green-400/50 hover: border-green-400/80 transition-all hover:scale-105",
               <div className="bg-green-500/20 w-16 h-16 rounded-xl flex items-center justify-center mb-6 border border-green-400/30",
-                <Shield className="w-8 h-8 text-green-300" />",
+                <Shield className="w-8 h-8 text-green-300/>",
               </div>
               <h3 className="text-2xl font-bold text-white mb-4",
   Enterprise Security
@@ -562,25 +562,25 @@ const AutonomousBusinessOperations: () => {
                   <CheckCircle className="w-4 h-4 text-green-400 mt-1 flex-shrink-0/>"
               <ul className="space-y-2 text-green-200 text-sm",
                 <li className="flex items-start gap-2",
-                  <CheckCircle className="w-4 h-4 text-green-400 mt-1 flex-shrink-0" />",
+                  <CheckCircle className="w-4 h-4 text-green-400 mt-1 flex-shrink-0/>",
                   <span >End-to-end encryption</span>
                 </li>
                 <li className="flex items-start gap-2",
-                  <CheckCircle className="w-4 h-4 text-green-400 mt-1 flex-shrink-0" />",
+                  <CheckCircle className="w-4 h-4 text-green-400 mt-1 flex-shrink-0/>",
                   <span >Multi-factor authentication</span>
                 </li>
                 <li className="flex items-start gap-2",
-                  <CheckCircle className="w-4 h-4 text-green-400 mt-1 flex-shrink-0" />",
+                  <CheckCircle className="w-4 h-4 text-green-400 mt-1 flex-shrink-0/>",
                   <span >Role-based access controls</span>
                 </li>
                 <li className="flex items-start gap-2",
-                  <CheckCircle className="w-4 h-4 text-green-400 mt-1 flex-shrink-0" />",
+                  <CheckCircle className="w-4 h-4 text-green-400 mt-1 flex-shrink-0/>",
             <div className= "bg-gradient-to-br from-green-900/60 to-emerald-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-green-400/50 hover: border-green-400/80 transition-all hover:scale-105>
               <div className= "bg-green-500/20 w-16 h-16 rounded-xl flex items-center justify-center mb-6 border border-green-400/30">
                 <Shield className= "w-8 h-8 text-green-300/>"
             <div className= "bg-gradient-to-br from-green-900/60 to-emerald-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-green-400/50 hover: border-green-400/80 transition-all hover:scale-105>
               <div className= "bg-green-500/20 w-16 h-16 rounded-xl flex items-center justify-center mb-6 border border-green-400/30>
-                <Shield className= "w-8 h-8 text-green-300" />",
+                <Shield className= "w-8 h-8 text-green-300/>",
               </div>
               <h3 className= "text-2xl font-bold text-white mb-4">"
   Enterprise Security
@@ -605,19 +605,19 @@ const AutonomousBusinessOperations: () => {
                   <CheckCircle className= "w-4 h-4 text-green-400 mt-1 flex-shrink-0/>"
               <ul className= "space-y-2 text-green-200 text-sm>
                 <li className= "flex items-start gap-2>
-                  <CheckCircle className= "w-4 h-4 text-green-400 mt-1 flex-shrink-0" />",
+                  <CheckCircle className= "w-4 h-4 text-green-400 mt-1 flex-shrink-0/>",
                   <span >End-to-end encryption</span>
                 </li>
                 <li className= "flex items-start gap-2>
-                  <CheckCircle className= "w-4 h-4 text-green-400 mt-1 flex-shrink-0" />",
+                  <CheckCircle className= "w-4 h-4 text-green-400 mt-1 flex-shrink-0/>",
                   <span >Multi-factor authentication</span>
                 </li>
                 <li className= "flex items-start gap-2>
-                  <CheckCircle className= "w-4 h-4 text-green-400 mt-1 flex-shrink-0" />",
+                  <CheckCircle className= "w-4 h-4 text-green-400 mt-1 flex-shrink-0/>",
                   <span >Role-based access controls</span>
                 </li>
                 <li className= "flex items-start gap-2>
-                  <CheckCircle className= "w-4 h-4 text-green-400 mt-1 flex-shrink-0" />",
+                  <CheckCircle className= "w-4 h-4 text-green-400 mt-1 flex-shrink-0/>",
                   <span >Full audit trail & compliance reporting</span>
                 </li>
               </ul>
@@ -631,7 +631,7 @@ const AutonomousBusinessOperations: () => {
                 <Users className="w-8 h-8 text-orange-300/>"
             <div className="bg-gradient-to-br from-orange-900/60 to-red-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-orange-400/50 hover: border-orange-400/80 transition-all hover:scale-105",
               <div className="bg-orange-500/20 w-16 h-16 rounded-xl flex items-center justify-center mb-6 border border-orange-400/30",
-                <Users className="w-8 h-8 text-orange-300" />",
+                <Users className="w-8 h-8 text-orange-300/>",
               </div>
               <h3 className="text-2xl font-bold text-white mb-4",
   Expert Implementation Team
@@ -667,25 +667,25 @@ const AutonomousBusinessOperations: () => {
                   <CheckCircle className="w-4 h-4 text-orange-400 mt-1 flex-shrink-0/>"
               <ul className="space-y-2 text-orange-200 text-sm",
                 <li className="flex items-start gap-2",
-                  <CheckCircle className="w-4 h-4 text-orange-400 mt-1 flex-shrink-0" />",
+                  <CheckCircle className="w-4 h-4 text-orange-400 mt-1 flex-shrink-0/>",
                   <span >90-day deployment timeline</span>
                 </li>
                 <li className="flex items-start gap-2",
-                  <CheckCircle className="w-4 h-4 text-orange-400 mt-1 flex-shrink-0" />",
+                  <CheckCircle className="w-4 h-4 text-orange-400 mt-1 flex-shrink-0/>",
                   <span >Custom workflow development</span>
                 </li>
                 <li className="flex items-start gap-2",
-                  <CheckCircle className="w-4 h-4 text-orange-400 mt-1 flex-shrink-0" />",
+                  <CheckCircle className="w-4 h-4 text-orange-400 mt-1 flex-shrink-0/>",
                   <span >Change management & training</span>
                 </li>
                 <li className="flex items-start gap-2",
-                  <CheckCircle className="w-4 h-4 text-orange-400 mt-1 flex-shrink-0" />",
+                  <CheckCircle className="w-4 h-4 text-orange-400 mt-1 flex-shrink-0/>",
             <div className= "bg-gradient-to-br from-orange-900/60 to-red-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-orange-400/50 hover: border-orange-400/80 transition-all hover:scale-105>
               <div className= "bg-orange-500/20 w-16 h-16 rounded-xl flex items-center justify-center mb-6 border border-orange-400/30">
                 <Users className= "w-8 h-8 text-orange-300/>"
             <div className= "bg-gradient-to-br from-orange-900/60 to-red-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-orange-400/50 hover: border-orange-400/80 transition-all hover:scale-105>
               <div className= "bg-orange-500/20 w-16 h-16 rounded-xl flex items-center justify-center mb-6 border border-orange-400/30>
-                <Users className= "w-8 h-8 text-orange-300" />",
+                <Users className= "w-8 h-8 text-orange-300/>",
               </div>
               <h3 className= "text-2xl font-bold text-white mb-4">"
   Expert Implementation Team
@@ -710,19 +710,19 @@ const AutonomousBusinessOperations: () => {
                   <CheckCircle className= "w-4 h-4 text-orange-400 mt-1 flex-shrink-0/>"
               <ul className= "space-y-2 text-orange-200 text-sm>
                 <li className= "flex items-start gap-2>
-                  <CheckCircle className= "w-4 h-4 text-orange-400 mt-1 flex-shrink-0" />",
+                  <CheckCircle className= "w-4 h-4 text-orange-400 mt-1 flex-shrink-0/>",
                   <span >90-day deployment timeline</span>
                 </li>
                 <li className= "flex items-start gap-2>
-                  <CheckCircle className= "w-4 h-4 text-orange-400 mt-1 flex-shrink-0" />",
+                  <CheckCircle className= "w-4 h-4 text-orange-400 mt-1 flex-shrink-0/>",
                   <span >Custom workflow development</span>
                 </li>
                 <li className= "flex items-start gap-2>
-                  <CheckCircle className= "w-4 h-4 text-orange-400 mt-1 flex-shrink-0" />",
+                  <CheckCircle className= "w-4 h-4 text-orange-400 mt-1 flex-shrink-0/>",
                   <span >Change management & training</span>
                 </li>
                 <li className= "flex items-start gap-2>
-                  <CheckCircle className= "w-4 h-4 text-orange-400 mt-1 flex-shrink-0" />",
+                  <CheckCircle className= "w-4 h-4 text-orange-400 mt-1 flex-shrink-0/>",
                   <span >24/7 dedicated support</span>
                 </li>
               </ul>
@@ -736,7 +736,7 @@ const AutonomousBusinessOperations: () => {
                 <Clock className="w-8 h-8 text-cyan-300/>"
             <div className="bg-gradient-to-br from-cyan-900/60 to-blue-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-cyan-400/50 hover: border-cyan-400/80 transition-all hover:scale-105",
               <div className="bg-cyan-500/20 w-16 h-16 rounded-xl flex items-center justify-center mb-6 border border-cyan-400/30",
-                <Clock className="w-8 h-8 text-cyan-300" />",
+                <Clock className="w-8 h-8 text-cyan-300/>",
               </div>
               <h3 className="text-2xl font-bold text-white mb-4",
   Real-Time Observability
@@ -772,25 +772,25 @@ const AutonomousBusinessOperations: () => {
                   <CheckCircle className="w-4 h-4 text-cyan-400 mt-1 flex-shrink-0/>"
               <ul className="space-y-2 text-cyan-200 text-sm",
                 <li className="flex items-start gap-2",
-                  <CheckCircle className="w-4 h-4 text-cyan-400 mt-1 flex-shrink-0" />",
+                  <CheckCircle className="w-4 h-4 text-cyan-400 mt-1 flex-shrink-0/>",
                   <span >Live KPI dashboards</span>
                 </li>
                 <li className="flex items-start gap-2",
-                  <CheckCircle className="w-4 h-4 text-cyan-400 mt-1 flex-shrink-0" />",
+                  <CheckCircle className="w-4 h-4 text-cyan-400 mt-1 flex-shrink-0/>",
                   <span >Anomaly detection & alerting</span>
                 </li>
                 <li className="flex items-start gap-2",
-                  <CheckCircle className="w-4 h-4 text-cyan-400 mt-1 flex-shrink-0" />",
+                  <CheckCircle className="w-4 h-4 text-cyan-400 mt-1 flex-shrink-0/>",
                   <span >Performance analytics</span>
                 </li>
                 <li className="flex items-start gap-2",
-                  <CheckCircle className="w-4 h-4 text-cyan-400 mt-1 flex-shrink-0" />",
+                  <CheckCircle className="w-4 h-4 text-cyan-400 mt-1 flex-shrink-0/>",
             <div className= "bg-gradient-to-br from-cyan-900/60 to-blue-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-cyan-400/50 hover: border-cyan-400/80 transition-all hover:scale-105>
               <div className= "bg-cyan-500/20 w-16 h-16 rounded-xl flex items-center justify-center mb-6 border border-cyan-400/30">
                 <Clock className= "w-8 h-8 text-cyan-300/>"
             <div className= "bg-gradient-to-br from-cyan-900/60 to-blue-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-cyan-400/50 hover: border-cyan-400/80 transition-all hover:scale-105>
               <div className= "bg-cyan-500/20 w-16 h-16 rounded-xl flex items-center justify-center mb-6 border border-cyan-400/30>
-                <Clock className= "w-8 h-8 text-cyan-300" />",
+                <Clock className= "w-8 h-8 text-cyan-300/>",
               </div>
               <h3 className= "text-2xl font-bold text-white mb-4">"
   Real-Time Observability
@@ -815,19 +815,19 @@ const AutonomousBusinessOperations: () => {
                   <CheckCircle className= "w-4 h-4 text-cyan-400 mt-1 flex-shrink-0/>"
               <ul className= "space-y-2 text-cyan-200 text-sm>
                 <li className= "flex items-start gap-2>
-                  <CheckCircle className= "w-4 h-4 text-cyan-400 mt-1 flex-shrink-0" />",
+                  <CheckCircle className= "w-4 h-4 text-cyan-400 mt-1 flex-shrink-0/>",
                   <span >Live KPI dashboards</span>
                 </li>
                 <li className= "flex items-start gap-2>
-                  <CheckCircle className= "w-4 h-4 text-cyan-400 mt-1 flex-shrink-0" />",
+                  <CheckCircle className= "w-4 h-4 text-cyan-400 mt-1 flex-shrink-0/>",
                   <span >Anomaly detection & alerting</span>
                 </li>
                 <li className= "flex items-start gap-2>
-                  <CheckCircle className= "w-4 h-4 text-cyan-400 mt-1 flex-shrink-0" />",
+                  <CheckCircle className= "w-4 h-4 text-cyan-400 mt-1 flex-shrink-0/>",
                   <span >Performance analytics</span>
                 </li>
                 <li className= "flex items-start gap-2>
-                  <CheckCircle className= "w-4 h-4 text-cyan-400 mt-1 flex-shrink-0" />",
+                  <CheckCircle className= "w-4 h-4 text-cyan-400 mt-1 flex-shrink-0/>",
                   <span >ROI tracking & reporting</span>
                 </li>
               </ul>
@@ -841,13 +841,13 @@ const AutonomousBusinessOperations: () => {
                 <DollarSign className="w-8 h-8 text-indigo-300/>"
             <div className="bg-gradient-to-br from-indigo-900/60 to-purple-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-indigo-400/50 hover: border-indigo-400/80 transition-all hover:scale-105",
               <div className="bg-indigo-500/20 w-16 h-16 rounded-xl flex items-center justify-center mb-6 border border-indigo-400/30",
-                <DollarSign className="w-8 h-8 text-indigo-300" />",
+                <DollarSign className="w-8 h-8 text-indigo-300/>",
               </div>
               <h3 className="text-2xl font-bold text-white mb-4",
   ROI Guarantee
               </h3>
               <p className="text-indigo-100 mb-4">,"
-  We're so confident in our platform that we guarantee 300% ROI within 18 months, or your money back.;';';
+  We're so confident in our platform that we guarantee 300% ROI within 18 months, or your money back.;
               </p>
               <ul className="space-y-2 text-indigo-200 text-sm"
                 <li className="flex items-start gap-2"
@@ -881,31 +881,31 @@ const AutonomousBusinessOperations: () => {
               </p>
               <ul className="space-y-2 text-indigo-200 text-sm",
                 <li className="flex items-start gap-2",
-                  <CheckCircle className="w-4 h-4 text-indigo-400 mt-1 flex-shrink-0" />",
+                  <CheckCircle className="w-4 h-4 text-indigo-400 mt-1 flex-shrink-0/>",
                   <span >Detailed ROI modeling upfront</span>
                 </li>
                 <li className="flex items-start gap-2",
-                  <CheckCircle className="w-4 h-4 text-indigo-400 mt-1 flex-shrink-0" />",
+                  <CheckCircle className="w-4 h-4 text-indigo-400 mt-1 flex-shrink-0/>",
                   <span >Continuous value tracking</span>
                 </li>
                 <li className="flex items-start gap-2",
-                  <CheckCircle className="w-4 h-4 text-indigo-400 mt-1 flex-shrink-0" />",
+                  <CheckCircle className="w-4 h-4 text-indigo-400 mt-1 flex-shrink-0/>",
                   <span >Performance-based pricing options</span>
                 </li>
                 <li className="flex items-start gap-2",
-                  <CheckCircle className="w-4 h-4 text-indigo-400 mt-1 flex-shrink-0" />",
+                  <CheckCircle className="w-4 h-4 text-indigo-400 mt-1 flex-shrink-0/>",
             <div className= "bg-gradient-to-br from-indigo-900/60 to-purple-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-indigo-400/50 hover: border-indigo-400/80 transition-all hover:scale-105>
               <div className= "bg-indigo-500/20 w-16 h-16 rounded-xl flex items-center justify-center mb-6 border border-indigo-400/30">
                 <DollarSign className= "w-8 h-8 text-indigo-300/>"
             <div className= "bg-gradient-to-br from-indigo-900/60 to-purple-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-indigo-400/50 hover: border-indigo-400/80 transition-all hover:scale-105>
               <div className= "bg-indigo-500/20 w-16 h-16 rounded-xl flex items-center justify-center mb-6 border border-indigo-400/30>
-                <DollarSign className= "w-8 h-8 text-indigo-300" />",
+                <DollarSign className= "w-8 h-8 text-indigo-300/>",
               </div>
               <h3 className= "text-2xl font-bold text-white mb-4">"
   ROI Guarantee
               </h3>
               <p className= "text-indigo-100 mb-4">,"
-  We're so confident in our platform that we guarantee 300% ROI within 18 months, or your money back.;';';
+  We're so confident in our platform that we guarantee 300% ROI within 18 months, or your money back.;
               </p>
               <ul className= "space-y-2 text-indigo-200 text-sm">
                 <li className= "flex items-start gap-2">
@@ -927,19 +927,19 @@ const AutonomousBusinessOperations: () => {
               </p>
               <ul className= "space-y-2 text-indigo-200 text-sm>
                 <li className= "flex items-start gap-2>
-                  <CheckCircle className= "w-4 h-4 text-indigo-400 mt-1 flex-shrink-0" />",
+                  <CheckCircle className= "w-4 h-4 text-indigo-400 mt-1 flex-shrink-0/>",
                   <span >Detailed ROI modeling upfront</span>
                 </li>
                 <li className= "flex items-start gap-2>
-                  <CheckCircle className= "w-4 h-4 text-indigo-400 mt-1 flex-shrink-0" />",
+                  <CheckCircle className= "w-4 h-4 text-indigo-400 mt-1 flex-shrink-0/>",
                   <span >Continuous value tracking</span>
                 </li>
                 <li className= "flex items-start gap-2>
-                  <CheckCircle className= "w-4 h-4 text-indigo-400 mt-1 flex-shrink-0" />",
+                  <CheckCircle className= "w-4 h-4 text-indigo-400 mt-1 flex-shrink-0/>",
                   <span >Performance-based pricing options</span>
                 </li>
                 <li className= "flex items-start gap-2>
-                  <CheckCircle className= "w-4 h-4 text-indigo-400 mt-1 flex-shrink-0" />",
+                  <CheckCircle className= "w-4 h-4 text-indigo-400 mt-1 flex-shrink-0/>",
                   <span >Money-back guarantee</span>
                 </li>
               </ul>
@@ -1002,15 +1002,15 @@ const AutonomousBusinessOperations: () => {
                       <CheckCircle className="w-4 h-4 text-blue-400/>"
                   <div className="grid md:grid-cols-3 gap-4 text-sm",
                     <div className="flex items-center gap-2 text-blue-200",
-                      <CheckCircle className="w-4 h-4 text-blue-400" />",
+                      <CheckCircle className="w-4 h-4 text-blue-400/>",
                       <span >Process workshops</span>
                     </div>
                     <div className="flex items-center gap-2 text-blue-200",
-                      <CheckCircle className="w-4 h-4 text-blue-400" />",
+                      <CheckCircle className="w-4 h-4 text-blue-400/>",
                       <span >Data quality audit</span>
                     </div>
                     <div className="flex items-center gap-2 text-blue-200",
-                      <CheckCircle className="w-4 h-4 text-blue-400" />",
+                      <CheckCircle className="w-4 h-4 text-blue-400/>",
           <div className= "space-y-8>
             {/* Phase 1 */}
             <div className= "bg-gradient-to-r from-blue-900/60 to-cyan-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-blue-400/50>
@@ -1036,15 +1036,15 @@ const AutonomousBusinessOperations: () => {
                       <CheckCircle className= "w-4 h-4 text-blue-400/>"
                   <div className= "grid md:grid-cols-3 gap-4 text-sm>
                     <div className= "flex items-center gap-2 text-blue-200>
-                      <CheckCircle className= "w-4 h-4 text-blue-400" />",
+                      <CheckCircle className= "w-4 h-4 text-blue-400/>",
                       <span >Process workshops</span>
                     </div>
                     <div className= "flex items-center gap-2 text-blue-200>
-                      <CheckCircle className= "w-4 h-4 text-blue-400" />",
+                      <CheckCircle className= "w-4 h-4 text-blue-400/>",
                       <span >Data quality audit</span>
                     </div>
                     <div className= "flex items-center gap-2 text-blue-200>
-                      <CheckCircle className= "w-4 h-4 text-blue-400" />",
+                      <CheckCircle className= "w-4 h-4 text-blue-400/>",
                       <span >Custom ROI model</span>
                     </div>
                   </div>
@@ -1083,15 +1083,15 @@ const AutonomousBusinessOperations: () => {
                       <CheckCircle className="w-4 h-4 text-purple-400/>"
                   <div className="grid md:grid-cols-3 gap-4 text-sm",
                     <div className="flex items-center gap-2 text-purple-200",
-                      <CheckCircle className="w-4 h-4 text-purple-400" />",
+                      <CheckCircle className="w-4 h-4 text-purple-400/>",
                       <span >Cloud infrastructure</span>
                     </div>
                     <div className="flex items-center gap-2 text-purple-200",
-                      <CheckCircle className="w-4 h-4 text-purple-400" />",
+                      <CheckCircle className="w-4 h-4 text-purple-400/>",
                       <span >AI model training</span>
                     </div>
                     <div className="flex items-center gap-2 text-purple-200",
-                      <CheckCircle className="w-4 h-4 text-purple-400" />",
+                      <CheckCircle className="w-4 h-4 text-purple-400/>",
             <div className= "bg-gradient-to-r from-purple-900/60 to-pink-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-purple-400/50>
               <div className= "flex items-start gap-6>
                 <div className= "bg-purple-500 text-white font-bold text-2xl w-16 h-16 rounded-full flex items-center justify-center flex-shrink-0">"
@@ -1115,15 +1115,15 @@ const AutonomousBusinessOperations: () => {
                       <CheckCircle className= "w-4 h-4 text-purple-400/>"
                   <div className= "grid md:grid-cols-3 gap-4 text-sm>
                     <div className= "flex items-center gap-2 text-purple-200>
-                      <CheckCircle className= "w-4 h-4 text-purple-400" />",
+                      <CheckCircle className= "w-4 h-4 text-purple-400/>",
                       <span >Cloud infrastructure</span>
                     </div>
                     <div className= "flex items-center gap-2 text-purple-200>
-                      <CheckCircle className= "w-4 h-4 text-purple-400" />",
+                      <CheckCircle className= "w-4 h-4 text-purple-400/>",
                       <span >AI model training</span>
                     </div>
                     <div className= "flex items-center gap-2 text-purple-200>
-                      <CheckCircle className= "w-4 h-4 text-purple-400" />",
+                      <CheckCircle className= "w-4 h-4 text-purple-400/>",
                       <span >API integrations</span>
                     </div>
                   </div>
@@ -1162,15 +1162,15 @@ const AutonomousBusinessOperations: () => {
                       <CheckCircle className="w-4 h-4 text-green-400/>"
                   <div className="grid md:grid-cols-3 gap-4 text-sm",
                     <div className="flex items-center gap-2 text-green-200",
-                      <CheckCircle className="w-4 h-4 text-green-400" />",
+                      <CheckCircle className="w-4 h-4 text-green-400/>",
                       <span >Pilot workflows</span>
                     </div>
                     <div className="flex items-center gap-2 text-green-200",
-                      <CheckCircle className="w-4 h-4 text-green-400" />",
+                      <CheckCircle className="w-4 h-4 text-green-400/>",
                       <span >User training</span>
                     </div>
                     <div className="flex items-center gap-2 text-green-200",
-                      <CheckCircle className="w-4 h-4 text-green-400" />",
+                      <CheckCircle className="w-4 h-4 text-green-400/>",
             <div className= "bg-gradient-to-r from-green-900/60 to-emerald-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-green-400/50>
               <div className= "flex items-start gap-6>
                 <div className= "bg-green-500 text-white font-bold text-2xl w-16 h-16 rounded-full flex items-center justify-center flex-shrink-0">"
@@ -1194,15 +1194,15 @@ const AutonomousBusinessOperations: () => {
                       <CheckCircle className= "w-4 h-4 text-green-400/>"
                   <div className= "grid md:grid-cols-3 gap-4 text-sm>
                     <div className= "flex items-center gap-2 text-green-200>
-                      <CheckCircle className= "w-4 h-4 text-green-400" />",
+                      <CheckCircle className= "w-4 h-4 text-green-400/>",
                       <span >Pilot workflows</span>
                     </div>
                     <div className= "flex items-center gap-2 text-green-200>
-                      <CheckCircle className= "w-4 h-4 text-green-400" />",
+                      <CheckCircle className= "w-4 h-4 text-green-400/>",
                       <span >User training</span>
                     </div>
                     <div className= "flex items-center gap-2 text-green-200>
-                      <CheckCircle className= "w-4 h-4 text-green-400" />",
+                      <CheckCircle className= "w-4 h-4 text-green-400/>",
                       <span >Full production launch</span>
                     </div>
                   </div>
@@ -1272,19 +1272,19 @@ const AutonomousBusinessOperations: () => {
                   <CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0/>"
               <ul className="space-y-3 text-blue-100",
                 <li className="flex items-start gap-2",
-                  <CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />",
+                  <CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0/>",
                   <span >Platform licensing</span>
                 </li>
                 <li className="flex items-start gap-2",
-                  <CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />",
+                  <CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0/>",
                   <span >Implementation services</span>
                 </li>
                 <li className="flex items-start gap-2",
-                  <CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />",
+                  <CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0/>",
                   <span >Training & change management</span>
                 </li>
                 <li className="flex items-start gap-2",
-                  <CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />",
+                  <CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0/>",
           <div className= "grid md:grid-cols-2 gap-8 max-w-4xl mx-auto>
           <div className= "grid md:grid-cols-2 gap-8 max-w-4xl mx-auto>
             {/* Investment */}
@@ -1311,19 +1311,19 @@ const AutonomousBusinessOperations: () => {
                   <CheckCircle className= "w-5 h-5 text-blue-400 mt-1 flex-shrink-0/>"
               <ul className= "space-y-3 text-blue-100>
                 <li className= "flex items-start gap-2>
-                  <CheckCircle className= "w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />",
+                  <CheckCircle className= "w-5 h-5 text-blue-400 mt-1 flex-shrink-0/>",
                   <span >Platform licensing</span>
                 </li>
                 <li className= "flex items-start gap-2>
-                  <CheckCircle className= "w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />",
+                  <CheckCircle className= "w-5 h-5 text-blue-400 mt-1 flex-shrink-0/>",
                   <span >Implementation services</span>
                 </li>
                 <li className= "flex items-start gap-2>
-                  <CheckCircle className= "w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />",
+                  <CheckCircle className= "w-5 h-5 text-blue-400 mt-1 flex-shrink-0/>",
                   <span >Training & change management</span>
                 </li>
                 <li className= "flex items-start gap-2>
-                  <CheckCircle className= "w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />",
+                  <CheckCircle className= "w-5 h-5 text-blue-400 mt-1 flex-shrink-0/>",
                   <span >Ongoing support & optimization</span>
                 </li>
               </ul>
@@ -1364,19 +1364,19 @@ const AutonomousBusinessOperations: () => {
                   <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0/>"
               <ul className="space-y-3 text-green-100",
                 <li className="flex items-start gap-2",
-                  <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />",
+                  <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0/>",
                   <span >Cost savings (labor, errors, infrastructure)</span>
                 </li>
                 <li className="flex items-start gap-2",
-                  <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />",
+                  <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0/>",
                   <span >Revenue acceleration (faster cycles)</span>
                 </li>
                 <li className="flex items-start gap-2",
-                  <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />",
+                  <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0/>",
                   <span >Risk reduction (compliance, fraud)</span>
                 </li>
                 <li className="flex items-start gap-2",
-                  <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />",
+                  <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0/>",
             <div className= "bg-gradient-to-br from-green-900/60 to-emerald-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-green-400/50>
               <h3 className= "text-2xl font-bold text-white mb-6 text-center">Expected Returns</h3>",
               <div className= "text-center mb-6>
@@ -1400,19 +1400,19 @@ const AutonomousBusinessOperations: () => {
                   <CheckCircle className= "w-5 h-5 text-green-400 mt-1 flex-shrink-0/>"
               <ul className= "space-y-3 text-green-100>
                 <li className= "flex items-start gap-2>
-                  <CheckCircle className= "w-5 h-5 text-green-400 mt-1 flex-shrink-0" />",
+                  <CheckCircle className= "w-5 h-5 text-green-400 mt-1 flex-shrink-0/>",
                   <span >Cost savings (labor, errors, infrastructure)</span>
                 </li>
                 <li className= "flex items-start gap-2>
-                  <CheckCircle className= "w-5 h-5 text-green-400 mt-1 flex-shrink-0" />",
+                  <CheckCircle className= "w-5 h-5 text-green-400 mt-1 flex-shrink-0/>",
                   <span >Revenue acceleration (faster cycles)</span>
                 </li>
                 <li className= "flex items-start gap-2>
-                  <CheckCircle className= "w-5 h-5 text-green-400 mt-1 flex-shrink-0" />",
+                  <CheckCircle className= "w-5 h-5 text-green-400 mt-1 flex-shrink-0/>",
                   <span >Risk reduction (compliance, fraud)</span>
                 </li>
                 <li className= "flex items-start gap-2>
-                  <CheckCircle className= "w-5 h-5 text-green-400 mt-1 flex-shrink-0" />",
+                  <CheckCircle className= "w-5 h-5 text-green-400 mt-1 flex-shrink-0/>",
                   <span >Customer retention & satisfaction</span>
                 </li>
               </ul>
@@ -1449,7 +1449,7 @@ const AutonomousBusinessOperations: () => {
               Read Complete Case Study
               <ArrowRight className="w-5 h-5/>"
               <ArrowRight className="w-5 h-5/>"
-              <ArrowRight className="w-5 h-5" />",
+              <ArrowRight className="w-5 h-5/>",
         <section className= "container mx-auto px-6 py-20 max-w-6xl">
           <div className= "bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-12 text-center">
             <h2 className= "text-4xl font-bold text-white mb-4">
@@ -1466,7 +1466,7 @@ const AutonomousBusinessOperations: () => {
             >
               Read Complete Case Study
               <ArrowRight className= "w-5 h-5/>"
-              <ArrowRight className= "w-5 h-5" />",
+              <ArrowRight className= "w-5 h-5/>",
             </Link>
           </div>
         </section>
@@ -1492,13 +1492,13 @@ const AutonomousBusinessOperations: () => {
                 <Rocket className="w-5 h-5/>,"
   Schedule Free Consultation
                 <ArrowRight className="w-5 h-5/>"
-                <Rocket className="w-5 h-5" />",
+                <Rocket className="w-5 h-5/>",
                 <Rocket className="w-5 h-5/>,
   Schedule Free Consultation"
                 <ArrowRight className="w-5 h-5/>"
-                <Rocket className="w-5 h-5" />
+                <Rocket className="w-5 h-5/>
   Schedule Free Consultation
-                <ArrowRight className="w-5 h-5" />",
+                <ArrowRight className="w-5 h-5/>",
               </Link>
               <Link to: "/blog/ai-autonomous-business-operations-revolution-2025",
   className="inline-flex items-center justify-center gap-2 border-2 border-white text-white hover: bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-bold text-lg transition-all",
@@ -1522,9 +1522,9 @@ const AutonomousBusinessOperations: () => {
                 <Rocket className= "w-5 h-5/>,"
   Schedule Free Consultation
                 <ArrowRight className= "w-5 h-5/>"
-                <Rocket className= "w-5 h-5" />",
+                <Rocket className= "w-5 h-5/>",
   Schedule Free Consultation
-                <ArrowRight className= "w-5 h-5" />",
+                <ArrowRight className= "w-5 h-5/>",
               </Link>
               <Link to: "/blog/ai-autonomous-business-operations-revolution-2025",
   className= "inline-flex items-center justify-center gap-2 border-2 border-white text-white hover: bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-bold text-lg transition-all",

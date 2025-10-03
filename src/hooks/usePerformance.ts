@@ -1,5 +1,4 @@
-import { useEffect, useRef, useCallback, useState } from 'react';
-
+import { useEffect, useRef, useCallback, useState } from 'react;
 /**
  * Performance monitoring hook for React components
  */

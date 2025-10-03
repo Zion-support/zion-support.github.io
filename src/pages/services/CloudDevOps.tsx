@@ -1,14 +1,13 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Monitor } from 'lucide-react'';
-import Header from '../../components/Header'';
-import Footer from '../../components/Footer'';
-import React from 'react';'
-import { Helmet } from 'react-helmet-async';'
-import { Monitor } from 'lucide-react';'
-import Header from '../../components/Header';'
-import Footer from '../../components/Footer';'
-
+import React from 'react;
+import { Helmet } from 'react-helmet-async;
+import { Monitor } from 'lucide-react;
+import Header from '../../components/Header;
+import Footer from '../../components/Footer;
+import React from 'react;
+import { Helmet } from 'react-helmet-async;
+import { Monitor } from 'lucide-react;
+import Header from '../../components/Header;
+import Footer from '../../components/Footer;
 const CloudDevOps: React.FC = () => {
   const features: [,
     {
@@ -59,8 +58,6 @@ const CloudDevOps: React.FC = () => {
       description: "Intelligent auto-scaling based on demand patterns with predictive capacity planning.",,"
       benefit: "60% infrastructure savings",
     }],
-;
-
   const pricing: [,
     {
       name: "Startup",
@@ -278,13 +275,13 @@ const CloudDevOps: React.FC = () => {
       <Helmet >
         <title >Cloud & DevOps Services - Zion Tech Group | Enterprise Cloud Solutions</title>
         <meta name: "description",
-  content: "Expert Cloud & DevOps services including multi-cloud strategy, CI/CD automation, infrastructure as code, and advanced monitoring. 99.99% uptime SLA.", /><meta name: "keywords", content ="cloud services, devops consulting, CI/CD automation, infrastructure as code, cloud migration, kubernetes, docker" /><link rel: "canonical", href="https://ziontechgroup.com/services/cloud-devops/>",
+  content: "Expert Cloud & DevOps services including multi-cloud strategy, CI/CD automation, infrastructure as code, and advanced monitoring. 99.99% uptime SLA.", /><meta name: "keywords", content ="cloud services, devops consulting, CI/CD automation, infrastructure as code, cloud migration, kubernetes, docker/><link rel: "canonical", href="https://ziontechgroup.com/services/cloud-devops/>",
         <meta name: "description
-  content: ", Expert Cloud & DevOps services including multi-cloud strategy, CI/CD automation, infrastructure as code, and advanced monitoring. 99.99% uptime SLA." /><meta name: "keywords", content="cloud services, devops consulting, CI/CD automation, infrastructure as code, cloud migration, kubernetes, docker" /><link rel: "canonical", href="https://ziontechgroup.com/services/cloud-devops/>
+  content: ", Expert Cloud & DevOps services including multi-cloud strategy, CI/CD automation, infrastructure as code, and advanced monitoring. 99.99% uptime SLA./><meta name: "keywords", content="cloud services, devops consulting, CI/CD automation, infrastructure as code, cloud migration, kubernetes, docker" /><link rel: "canonical", href="https://ziontechgroup.com/services/cloud-devops/>
   content: "Expert Cloud & DevOps services including multi-cloud strategy, CI/CD automation, infrastructure as code, and advanced monitoring. 99.99% uptime SLA.",
         />
-        <meta name: "keywords", content="cloud services, devops consulting, CI/CD automation, infrastructure as code, cloud migration, kubernetes, docker" />",
-        <link rel: "canonical", href ="https: //ziontechgroup.com/services/cloud-devops" />",
+        <meta name: "keywords", content="cloud services, devops consulting, CI/CD automation, infrastructure as code, cloud migration, kubernetes, docker" />,
+        <link rel: "canonical", href ="https://ziontechgroup.com/services/cloud-devops/>",
       </Helmet>
 
       <Header />
@@ -317,9 +314,9 @@ const CloudDevOps: React.FC = () => {
   className="inline-flex items-center px-8 py-4 bg-green-600 hover: bg-green-700 text-white font-semibold rounded-lg transition-colors",
                 >
                   <Phone className="w-5 h-5 mr-2/>"
-                  <Phone className="w-5 h-5 mr-2" />",
+                  <Phone className="w-5 h-5 mr-2/>",
                   <Phone className="w-5 h-5 mr-2/>"
-                  <Phone className="w-5 h-5 mr-2" />
+                  <Phone className="w-5 h-5 mr-2/>
   Schedule Consultation
                 </a>
                 <a href="#pricing",
@@ -328,7 +325,7 @@ const CloudDevOps: React.FC = () => {
                   View Pricing
                   <ArrowRight className="w-5 h-5 ml-2/>"
                   <ArrowRight className="w-5 h-5 ml-2/>"
-                  <ArrowRight className="w-5 h-5 ml-2" />",
+                  <ArrowRight className="w-5 h-5 ml-2/>",
       <main className= "min-h-screen bg-white>
         {/* Hero Section */}
         <section className= "bg-gradient-to-br from-green-900 via-green-800 to-blue-900 text-white py-20">
@@ -357,7 +354,7 @@ const CloudDevOps: React.FC = () => {
   className= "inline-flex items-center px-8 py-4 bg-green-600 hover: bg-green-700 text-white font-semibold rounded-lg transition-colors",
                 >
                   <Phone className= "w-5 h-5 mr-2/>"
-                  <Phone className= "w-5 h-5 mr-2" />",
+                  <Phone className= "w-5 h-5 mr-2/>",
   Schedule Consultation
                 </a>
                 <a href="#pricing",
@@ -365,7 +362,7 @@ const CloudDevOps: React.FC = () => {
                 >
                   View Pricing
                   <ArrowRight className= "w-5 h-5 ml-2/>"
-                  <ArrowRight className= "w-5 h-5 ml-2" />",
+                  <ArrowRight className= "w-5 h-5 ml-2/>",
                 </a>
               </div>
             </div>
@@ -409,7 +406,7 @@ const CloudDevOps: React.FC = () => {
             <div className="grid md:grid-cols-4 gap-8",
               <div className="text-center",
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4",
-                  <TrendingUp className="w-8 h-8 text-green-600" />",
+                  <TrendingUp className="w-8 h-8 text-green-600/>",
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">40% Cost Reduction</h3>",
                 <p className="text-gray-600">Average infrastructure cost savings</p>",
@@ -422,7 +419,7 @@ const CloudDevOps: React.FC = () => {
                   <Zap className="w-8 h-8 text-blue-600/>"
               <div className="text-center",
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4",
-                  <Zap className="w-8 h-8 text-blue-600" />",
+                  <Zap className="w-8 h-8 text-blue-600/>",
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">90% Faster Deployments</h3>",
                 <p className="text-gray-600">Automated CI/CD pipelines</p>",
@@ -435,7 +432,7 @@ const CloudDevOps: React.FC = () => {
                   <Shield className="w-8 h-8 text-purple-600/>"
               <div className="text-center",
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-4",
-                  <Shield className="w-8 h-8 text-purple-600" />",
+                  <Shield className="w-8 h-8 text-purple-600/>",
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">99.99% Uptime</h3>",
                 <p className="text-gray-600">Enterprise-grade reliability</p>",
@@ -448,7 +445,7 @@ const CloudDevOps: React.FC = () => {
                   <Globe className="w-8 h-8 text-orange-600/>"
               <div className="text-center",
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-orange-100 rounded-full mb-4",
-                  <Globe className="w-8 h-8 text-orange-600" />",
+                  <Globe className="w-8 h-8 text-orange-600/>",
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Multi-Cloud</h3>",
                 <p className="text-gray-600">AWS, Azure, GCP expertise</p>",
@@ -459,7 +456,7 @@ const CloudDevOps: React.FC = () => {
             <div className= "grid md:grid-cols-4 gap-8>
               <div className= "text-center>
                 <div className= "inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4>
-                  <TrendingUp className= "w-8 h-8 text-green-600" />",
+                  <TrendingUp className= "w-8 h-8 text-green-600/>",
                 </div>
                 <h3 className= "text-xl font-bold text-gray-900 mb-2">40% Cost Reduction</h3>",
                 <p className= "text-gray-600">Average infrastructure cost savings</p>",
@@ -469,7 +466,7 @@ const CloudDevOps: React.FC = () => {
                   <Zap className= "w-8 h-8 text-blue-600/>"
               <div className= "text-center>
                 <div className= "inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4>
-                  <Zap className= "w-8 h-8 text-blue-600" />",
+                  <Zap className= "w-8 h-8 text-blue-600/>",
                 </div>
                 <h3 className= "text-xl font-bold text-gray-900 mb-2">90% Faster Deployments</h3>",
                 <p className= "text-gray-600">Automated CI/CD pipelines</p>",
@@ -479,7 +476,7 @@ const CloudDevOps: React.FC = () => {
                   <Shield className= "w-8 h-8 text-purple-600/>"
               <div className= "text-center>
                 <div className= "inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-4>
-                  <Shield className= "w-8 h-8 text-purple-600" />",
+                  <Shield className= "w-8 h-8 text-purple-600/>",
                 </div>
                 <h3 className= "text-xl font-bold text-gray-900 mb-2">99.99% Uptime</h3>",
                 <p className= "text-gray-600">Enterprise-grade reliability</p>",
@@ -489,7 +486,7 @@ const CloudDevOps: React.FC = () => {
                   <Globe className= "w-8 h-8 text-orange-600/>"
               <div className= "text-center>
                 <div className= "inline-flex items-center justify-center w-16 h-16 bg-orange-100 rounded-full mb-4>
-                  <Globe className= "w-8 h-8 text-orange-600" />",
+                  <Globe className= "w-8 h-8 text-orange-600/>",
                 </div>
                 <h3 className= "text-xl font-bold text-gray-900 mb-2">Multi-Cloud</h3>",
                 <p className= "text-gray-600">AWS, Azure, GCP expertise</p>",
@@ -527,7 +524,7 @@ const CloudDevOps: React.FC = () => {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8",
               {services.map((service, index) => {
-                const Icon: service.icon;,,
+                const Icon: service.icon,,
   return (
                   <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow",
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-6"
@@ -537,11 +534,11 @@ const CloudDevOps: React.FC = () => {
                       <Icon className="w-8 h-8 text-green-600/>"
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8",
               {services.map((service, index) => {
-                const Icon: service.icon;,,
+                const Icon: service.icon,,
   return (
                   <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow",
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-6",
-                      <Icon className="w-8 h-8 text-green-600" />",
+                      <Icon className="w-8 h-8 text-green-600/>",
                     </div>
                     <h3 className="text-xl font-bold text-gray-900 mb-4">{service.title}</h3>"
                     <p className="text-gray-600 mb-6">{service.description}</p>"
@@ -553,22 +550,22 @@ const CloudDevOps: React.FC = () => {
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0/>"
                           <span className="text-gray-700">{benefit}</span>";"
                         <li key={benefitIndex} className="flex items-center text-sm",
-                          <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />",
+                          <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0/>",
                           <span className="text-gray-700">{benefit}</span>"
             <div className= "grid md:grid-cols-2 lg:grid-cols-4 gap-8>
               {services.map((service, index) => {
-                const Icon: service.icon;,,
+                const Icon: service.icon,,
   return (
                   <div key={index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow>
                     <div className= "inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-6">
                       <Icon className= "w-8 h-8 text-green-600/>"
             <div className= "grid md:grid-cols-2 lg:grid-cols-4 gap-8>
               {services.map((service, index) => {
-                const Icon: service.icon;,,
+                const Icon: service.icon,,
   return (
                   <div key={index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow>
                     <div className= "inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-6>
-                      <Icon className= "w-8 h-8 text-green-600" />",
+                      <Icon className= "w-8 h-8 text-green-600/>",
                     </div>
                     <h3 className= "text-xl font-bold text-gray-900 mb-4">{service.title}</h3>"
                     <p className= "text-gray-600 mb-6">{service.description}</p>"
@@ -578,7 +575,7 @@ const CloudDevOps: React.FC = () => {
                           <CheckCircle className= "w-4 h-4 text-green-500 mr-2 flex-shrink-0/>"
                           <span className= "text-gray-700">{benefit}</span>";"
                         <li key={benefitIndex} className= "flex items-center text-sm>
-                          <CheckCircle className= "w-4 h-4 text-green-500 mr-2 flex-shrink-0" />",
+                          <CheckCircle className= "w-4 h-4 text-green-500 mr-2 flex-shrink-0/>",
                           <span className= "text-gray-700">{benefit}</span>"
                         </li>
                       ))}
@@ -619,7 +616,7 @@ const CloudDevOps: React.FC = () => {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8",
               {features.map((feature, index) => {
-                const Icon: feature.icon;,,
+                const Icon: feature.icon,,
   return (
                   <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow",
                     <div className="inline-flex items-center justify-center w-12 h-12 bg-green-100 rounded-lg mb-4"
@@ -639,19 +636,19 @@ const CloudDevOps: React.FC = () => {
                       <CheckCircle className="w-4 h-4 mr-1/>"
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8",
               {features.map((feature, index) => {
-                const Icon: feature.icon;,,
+                const Icon: feature.icon,,
   return (
                   <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow",
                     <div className="inline-flex items-center justify-center w-12 h-12 bg-green-100 rounded-lg mb-4",
-                      <Icon className="w-6 h-6 text-green-600" />",
+                      <Icon className="w-6 h-6 text-green-600/>",
                     </div>
                     <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>"
                     <p className="text-gray-600 mb-4">{feature.description}</p>"
                     <div className="inline-flex items-center text-green-600 font-semibold text-sm",
-                      <CheckCircle className="w-4 h-4 mr-1" />",
+                      <CheckCircle className="w-4 h-4 mr-1/>",
             <div className= "grid md:grid-cols-2 lg:grid-cols-3 gap-8>
               {features.map((feature, index) => {
-                const Icon: feature.icon;,,
+                const Icon: feature.icon,,
   return (
                   <div key={index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow>
                     <div className= "inline-flex items-center justify-center w-12 h-12 bg-green-100 rounded-lg mb-4">
@@ -663,16 +660,16 @@ const CloudDevOps: React.FC = () => {
                       <CheckCircle className= "w-4 h-4 mr-1/>"
             <div className= "grid md:grid-cols-2 lg:grid-cols-3 gap-8>
               {features.map((feature, index) => {
-                const Icon: feature.icon;,,
+                const Icon: feature.icon,,
   return (
                   <div key={index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow>
                     <div className= "inline-flex items-center justify-center w-12 h-12 bg-green-100 rounded-lg mb-4>
-                      <Icon className= "w-6 h-6 text-green-600" />",
+                      <Icon className= "w-6 h-6 text-green-600/>",
                     </div>
                     <h3 className= "text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>"
                     <p className= "text-gray-600 mb-4">{feature.description}</p>"
                     <div className= "inline-flex items-center text-green-600 font-semibold text-sm>
-                      <CheckCircle className= "w-4 h-4 mr-1" />",
+                      <CheckCircle className= "w-4 h-4 mr-1/>",
                       {feature.benefit}
                     </div>
                   </div>
@@ -743,7 +740,7 @@ const CloudDevOps: React.FC = () => {
                         <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0/>"
                         <span className="text-gray-700">{feature}</span>";"
                       <li key={featureIndex} className="flex items-center",
-                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />",
+                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0/>",
                         <span className="text-gray-700">{feature}</span>"
                       </li>
                     ))}
@@ -764,7 +761,7 @@ const CloudDevOps: React.FC = () => {
                         <CheckCircle className= "w-5 h-5 text-green-500 mr-3 flex-shrink-0/>"
                         <span className= "text-gray-700">{feature}</span>";"
                       <li key={featureIndex} className= "flex items-center>
-                        <CheckCircle className= "w-5 h-5 text-green-500 mr-3 flex-shrink-0" />",
+                        <CheckCircle className= "w-5 h-5 text-green-500 mr-3 flex-shrink-0/>",
                         <span className= "text-gray-700">{feature}</span>"
                       </li>
                     ))}
@@ -773,8 +770,8 @@ const CloudDevOps: React.FC = () => {
   className= {,
 `w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${`
 plan.popular
-? 'bg-green-600 text-white hover: bg-green-700',';,
-? 'bg-green-600 text-white hover: bg-green-700',',';,
+? 'bg-green-600 text-white hover: bg-green-700',',
+? 'bg-green-600 text-white hover: bg-green-700',',',
 : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
 }`}`
                   >
@@ -792,7 +789,7 @@ plan.popular
                 Contact our Enterprise Team
                 <ArrowRight className="w-4 h-4 ml-1/>"
                 <ArrowRight className="w-4 h-4 ml-1/>"
-                <ArrowRight className="w-4 h-4 ml-1" />",
+                <ArrowRight className="w-4 h-4 ml-1/>",
             <div className= "text-center mt-12>
               <p className= "text-gray-600 mb-4">Need a custom solution?</p>",
               <a href="/contact",
@@ -800,7 +797,7 @@ plan.popular
               >
                 Contact our Enterprise Team
                 <ArrowRight className= "w-4 h-4 ml-1/>"
-                <ArrowRight className= "w-4 h-4 ml-1" />",
+                <ArrowRight className= "w-4 h-4 ml-1/>",
               </a>
             </div>
           </div>
@@ -840,9 +837,9 @@ plan.popular
                   <div className="flex items-center mb-4",
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current/>"
-                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />",
+                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current/>",
                       <Star key: {i} className="w-5 h-5 text-yellow-400 fill-current/>"
-                      <Star key: {i} className="w-5 h-5 text-yellow-400 fill-current" />",
+                      <Star key: {i} className="w-5 h-5 text-yellow-400 fill-current/>",
                     ))}
                   </div>
                   <blockquote className="text-gray-700 mb-6 italic",
@@ -859,7 +856,7 @@ plan.popular
                   <div className= "flex items-center mb-4>
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i} className= "w-5 h-5 text-yellow-400 fill-current/>"
-                      <Star key={i} className= "w-5 h-5 text-yellow-400 fill-current" />",
+                      <Star key={i} className= "w-5 h-5 text-yellow-400 fill-current/>",
                     ))}
                   </div>
                   <blockquote className= "text-gray-700 mb-6 italic>
@@ -894,9 +891,9 @@ plan.popular
   className="inline-flex items-center px-8 py-4 bg-green-600 hover: bg-green-700 text-white font-semibold rounded-lg transition-colors",
               >
                 <Phone className="w-5 h-5 mr-2/>"
-                <Phone className="w-5 h-5 mr-2" />",
+                <Phone className="w-5 h-5 mr-2/>",
                 <Phone className="w-5 h-5 mr-2/>"
-                <Phone className="w-5 h-5 mr-2" />
+                <Phone className="w-5 h-5 mr-2/>
   Schedule Free Assessment
               </a>
               <a href="/case-studies",
@@ -905,7 +902,7 @@ plan.popular
                 View Case Studies
                 <ArrowRight className="w-5 h-5 ml-2/>"
                 <ArrowRight className="w-5 h-5 ml-2/>"
-                <ArrowRight className="w-5 h-5 ml-2" />",
+                <ArrowRight className="w-5 h-5 ml-2/>",
         <section className= "py-20 bg-gradient-to-br from-green-900 via-green-800 to-blue-900 text-white">
           <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center>
             <h2 className= "text-4xl font-bold mb-6">
@@ -923,7 +920,7 @@ plan.popular
   className= "inline-flex items-center px-8 py-4 bg-green-600 hover: bg-green-700 text-white font-semibold rounded-lg transition-colors",
               >
                 <Phone className= "w-5 h-5 mr-2/>"
-                <Phone className= "w-5 h-5 mr-2" />",
+                <Phone className= "w-5 h-5 mr-2/>",
   Schedule Free Assessment
               </a>
               <a href="/case-studies",
@@ -931,7 +928,7 @@ plan.popular
               >
                 View Case Studies
                 <ArrowRight className= "w-5 h-5 ml-2/>"
-                <ArrowRight className= "w-5 h-5 ml-2" />",
+                <ArrowRight className= "w-5 h-5 ml-2/>",
               </a>
             </div>
           </div>

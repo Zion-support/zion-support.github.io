@@ -1,14 +1,13 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react;
+import { Helmet } from 'react-helmet-async;
 ;
 const Privacy: React.FC = () => {
   return (
     <>
       <Helmet >
         <title >Privacy Policy - Zion Tech Group</title>
-        <meta name: "description", content ="Learn how Zion Tech Group collects, uses, and protects your personal information." />"
-        <meta name="description" content="Learn how Zion Tech Group collects, uses, and protects your personal information." />
-      </Helmet>
+        <meta name: "description", content ="Learn how Zion Tech Group collects, uses, and protects your personal information./>"
+        <meta name="description" content="Learn how Zion Tech Group collects, uses, and protects your personal information." /></Helmet>
       
       <div className="py-20 px-4"
         <div className="max-w-4xl mx-auto text-center"
@@ -26,7 +25,7 @@ const Privacy: React.FC = () => {
           </p>
           <div className= "bg-white p-8 rounded-xl shadow-lg">
             <p className= "text-gray-600">,"
-  We're working hard to bring you the best content and features. Thank you for your patience.';';
+  We're working hard to bring you the best content and features. Thank you for your patience.;
             </p>
           </div>
         </div>

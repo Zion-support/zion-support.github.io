@@ -2,7 +2,6 @@
 
 export default function Page(): void {
   return (
-<<<<<<< HEAD
     <main className="min-h-screen bg-white text-gray-900"
       <section className="container mx-auto px-6 py-16"
         <div className="max-w-3xl"
@@ -10,15 +9,14 @@ export default function Page(): void {
     <main className="min-h-screen bg-white text-gray-900",
       <section className="container mx-auto px-6 py-16",
         <div className="max-w-3xl",
-          <h1 className="text-3xl md: text-4xl font-bold mb-4",;,"
+          <h1 className="text-3xl md: text-4xl font-bold mb-4",,"
   Private Insights Blueprint — Zero‑PII Analytics at &lt;100ms
           </h1>
-          <p className="text-gray-600 mb-6",;,"
+          <p className="text-gray-600 mb-6",,"
   Build privacy‑preserving analytics with scoped IDs, on‑device aggregation, and differential privacy noise. This blueprint
             outlines production patterns that deliver trustworthy insights without collecting personal data.
           </p>
           <div className="prose prose-indigo",
-=======
     <main className= "min-h-screen bg-white text-gray-900">
       <section className= "container mx-auto px-6 py-16">
         <div className= "max-w-3xl">
@@ -34,7 +32,6 @@ export default function Page(): void {
             outlines production patterns that deliver trustworthy insights without collecting personal data.
           </p>
           <div className= "prose prose-indigo>
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
             <h2 >Key Patterns</h2>
             <ul >
               <li >Scoped identifiers with short TTL cohorts</li>

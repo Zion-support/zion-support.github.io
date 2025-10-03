@@ -1,6 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import React from 'react;
+import { Link } from 'react-router-dom;
+import { Helmet } from 'react-helmet-async;
 ;
 const ServicesPage: React.FC = () => {
   const services: [,
@@ -80,9 +80,8 @@ const ServicesPage: React.FC = () => {
     <>
       <Helmet >
         <title >Services - Zion Tech Group</title>
-        <meta name: "description", content ="Comprehensive AI and technology services from Zion Tech Group. AI services, micro SaaS development, IT infrastructure, and consulting solutions." />"
-        <meta name="description" content="Comprehensive AI and technology services from Zion Tech Group. AI services, micro SaaS development, IT infrastructure, and consulting solutions." />
-      </Helmet>
+        <meta name: "description", content ="Comprehensive AI and technology services from Zion Tech Group. AI services, micro SaaS development, IT infrastructure, and consulting solutions./>"
+        <meta name="description" content="Comprehensive AI and technology services from Zion Tech Group. AI services, micro SaaS development, IT infrastructure, and consulting solutions." /></Helmet>
       
       <div className="min-h-screen bg-gray-50"
         {/* Header */}
@@ -148,7 +147,7 @@ const ServicesPage: React.FC = () => {
           <div className="container mx-auto px-6 text-center"
             <h2 className="text-4xl font-bold mb-4">Ready to Get Started?</h2>"
             <p className="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">,"
-  Let's discuss your specific needs and how our services can help you achieve your goals.';';
+  Let's discuss your specific needs and how our services can help you achieve your goals.;
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"
               <Link to: "/contact" ,"
@@ -157,7 +156,7 @@ const ServicesPage: React.FC = () => {
           <div className= "container mx-auto px-6 text-center">
             <h2 className= "text-4xl font-bold mb-4">Ready to Get Started?</h2>"
             <p className= "text-xl mb-8 text-blue-100 max-w-2xl mx-auto">,"
-  Let's discuss your specific needs and how our services can help you achieve your goals.';';
+  Let's discuss your specific needs and how our services can help you achieve your goals.;
             </p>
             <div className= "flex flex-col sm:flex-row gap-4 justify-center">
               <Link to: "/contact" ,"

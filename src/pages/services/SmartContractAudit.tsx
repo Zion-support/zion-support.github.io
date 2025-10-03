@@ -1,9 +1,8 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Globe, Shield, Search, AlertTriangle, CheckCircle, Clock, Users, ArrowRight } from 'lucide-react';
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
-
+import React from 'react;
+import { Helmet } from 'react-helmet-async;
+import { Globe, Shield, Search, AlertTriangle, CheckCircle, Clock, Users, ArrowRight } from 'lucide-react;
+import Header from '../../components/Header;
+import Footer from '../../components/Footer;
 const SmartContractAudit: React.FC = () => {
   const features = [
     {
@@ -197,9 +196,7 @@ const SmartContractAudit: React.FC = () => {
     <>
       <Helmet>
         <title>Smart Contract Audit Services | Zion AI</title>
-        <meta name="description" content="Professional smart contract security auditing services. Comprehensive vulnerability assessment, compliance verification, and gas optimization for blockchain projects." />
-        <meta name="keywords" content="smart contract audit, blockchain security, vulnerability assessment, DeFi security, Web3 audit" />
-      </Helmet>
+        <meta name="description" content="Professional smart contract security auditing services. Comprehensive vulnerability assessment, compliance verification, and gas optimization for blockchain projects." /><meta name="keywords" content="smart contract audit, blockchain security, vulnerability assessment, DeFi security, Web3 audit" /></Helmet>
       
       <Header />
       
@@ -221,7 +218,7 @@ const SmartContractAudit: React.FC = () => {
                   className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-red-600 hover:bg-red-700 transition-colors"
                 >
                   Get Quote
-                  <ArrowRight className="ml-2 h-4 w-4" />
+                  <ArrowRight className="ml-2 h-4 w-4/>
                 </a>
                 <a
                   href="#features"
@@ -252,7 +249,7 @@ const SmartContractAudit: React.FC = () => {
                 return (
                   <div key={index} className="text-center">
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-red-100 rounded-full mb-4">
-                      <Icon className="h-8 w-8 text-red-600" />
+                      <Icon className="h-8 w-8 text-red-600/>
                     </div>
                     <h3 className="text-xl font-bold text-gray-900 mb-2">{feature.title}</h3>
                     <p className="text-gray-600 mb-3">{feature.description}</p>
@@ -284,13 +281,13 @@ const SmartContractAudit: React.FC = () => {
                 return (
                   <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow">
                     <div className="flex items-center mb-4">
-                      <Icon className="h-8 w-8 text-red-600 mr-3" />
+                      <Icon className="h-8 w-8 text-red-600 mr-3/>
                       <h3 className="text-xl font-bold text-gray-900">{audit.title}</h3>
                     </div>
                     <ul className="space-y-1">
                       {audit.vulnerabilities.map((vuln, vulnIndex) => (
                         <li key={vulnIndex} className="flex items-center text-sm">
-                          <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
+                          <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0/>
                           <span className="text-gray-700">{vuln}</span>
                         </li>
                       ))}
@@ -384,7 +381,7 @@ const SmartContractAudit: React.FC = () => {
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center">
-                        <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
+                        <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0/>
                         <span className="text-gray-700">{feature}</span>
                       </li>
                     ))}
@@ -408,7 +405,7 @@ const SmartContractAudit: React.FC = () => {
                 className="inline-flex items-center text-red-600 hover:text-red-700 font-semibold"
               >
                 Contact us for enterprise solutions
-                <ArrowRight className="w-4 h-4 ml-1" />
+                <ArrowRight className="w-4 h-4 ml-1/>
               </a>
             </div>
           </div>
@@ -429,7 +426,7 @@ const SmartContractAudit: React.FC = () => {
                 className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-red-600 hover:bg-red-700 transition-colors"
               >
                 Start Your Audit
-                <ArrowRight className="ml-2 h-4 w-4" />
+                <ArrowRight className="ml-2 h-4 w-4/>
               </a>
               <a
                 href="#pricing"

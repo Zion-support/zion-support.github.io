@@ -21,7 +21,7 @@ const GlobalRetailAITransformation: () => {
   className="inline-flex items-center text-zion-cyan hover: text-zion-blue-light mb-8 transition-colors",
           >
             <ArrowLeft className="w-4 h-4 mr-2/>"
-            <ArrowLeft className="w-4 h-4 mr-2" />",
+            <ArrowLeft className="w-4 h-4 mr-2/>",
       <div className= "min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark>
         <Header />
 
@@ -32,9 +32,9 @@ const GlobalRetailAITransformation: () => {
   className= "inline-flex items-center text-zion-cyan hover: text-zion-blue-light mb-8 transition-colors",
           >
             <ArrowLeft className= "w-4 h-4 mr-2/>"
-            <ArrowLeft className= "w-4 h-4 mr-2" />",
+            <ArrowLeft className= "w-4 h-4 mr-2/>",
             <ArrowLeft className="w-4 h-4 mr-2/>"
-            <ArrowLeft className="w-4 h-4 mr-2" />
+            <ArrowLeft className="w-4 h-4 mr-2/>
   Back to Case Studies
           </Link>
 
@@ -262,7 +262,7 @@ const GlobalRetailAITransformation: () => {
               <div className="grid md:grid-cols-2 gap-6",
                 <div className="bg-gradient-to-br from-blue-900/40 to-cyan-900/40 rounded-xl p-6 border border-blue-500/30",
                   <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2",
-                    <Zap className="w-6 h-6 text-blue-400" />",
+                    <Zap className="w-6 h-6 text-blue-400/>",
   AI Demand Forecasting
                   </h3>
                   <p className="mb-4",
@@ -289,19 +289,19 @@ const GlobalRetailAITransformation: () => {
                       <CheckCircle className="w-4 h-4 text-green-400/>"
                   <ul className="space-y-2 text-sm",
                     <li className="flex items-center gap-2",
-                      <CheckCircle className="w-4 h-4 text-green-400" />",
+                      <CheckCircle className="w-4 h-4 text-green-400/>",
                       <span >96% forecast accuracy (up from 67%)</span>
                     </li>
                     <li className="flex items-center gap-2",
-                      <CheckCircle className="w-4 h-4 text-green-400" />",
+                      <CheckCircle className="w-4 h-4 text-green-400/>",
                       <span >$2.1B reduction in inventory waste</span>
                     </li>
                     <li className="flex items-center gap-2",
-                      <CheckCircle className="w-4 h-4 text-green-400" />",
+                      <CheckCircle className="w-4 h-4 text-green-400/>",
               <div className= "grid md:grid-cols-2 gap-6>
                 <div className= "bg-gradient-to-br from-blue-900/40 to-cyan-900/40 rounded-xl p-6 border border-blue-500/30>
                   <h3 className= "text-xl font-bold text-white mb-4 flex items-center gap-2>
-                    <Zap className= "w-6 h-6 text-blue-400" />",
+                    <Zap className= "w-6 h-6 text-blue-400/>",
   AI Demand Forecasting
                   </h3>
                   <p className= "mb-4">"
@@ -321,15 +321,15 @@ const GlobalRetailAITransformation: () => {
                       <CheckCircle className= "w-4 h-4 text-green-400/>"
                   <ul className= "space-y-2 text-sm>
                     <li className= "flex items-center gap-2>
-                      <CheckCircle className= "w-4 h-4 text-green-400" />",
+                      <CheckCircle className= "w-4 h-4 text-green-400/>",
                       <span >96% forecast accuracy (up from 67%)</span>
                     </li>
                     <li className= "flex items-center gap-2>
-                      <CheckCircle className= "w-4 h-4 text-green-400" />",
+                      <CheckCircle className= "w-4 h-4 text-green-400/>",
                       <span >$2.1B reduction in inventory waste</span>
                     </li>
                     <li className= "flex items-center gap-2>
-                      <CheckCircle className= "w-4 h-4 text-green-400" />",
+                      <CheckCircle className= "w-4 h-4 text-green-400/>",
                       <span >87% fewer stockouts</span>
                     </li>
                   </ul>
@@ -343,7 +343,7 @@ const GlobalRetailAITransformation: () => {
                     <Users className="w-6 h-6 text-purple-400/>"
                 <div className="bg-gradient-to-br from-purple-900/40 to-pink-900/40 rounded-xl p-6 border border-purple-500/30",
                   <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2",
-                    <Users className="w-6 h-6 text-purple-400" />",
+                    <Users className="w-6 h-6 text-purple-400/>",
   Hyper-Personalization Engine
                   </h3>
                   <p className="mb-4",
@@ -370,21 +370,21 @@ const GlobalRetailAITransformation: () => {
                       <CheckCircle className="w-4 h-4 text-green-400/>"
                   <ul className="space-y-2 text-sm",
                     <li className="flex items-center gap-2",
-                      <CheckCircle className="w-4 h-4 text-green-400" />",
+                      <CheckCircle className="w-4 h-4 text-green-400/>",
                       <span >78% increase in customer satisfaction</span>
                     </li>
                     <li className="flex items-center gap-2",
-                      <CheckCircle className="w-4 h-4 text-green-400" />",
+                      <CheckCircle className="w-4 h-4 text-green-400/>",
                       <span >$1.8B incremental revenue</span>
                     </li>
                     <li className="flex items-center gap-2",
-                      <CheckCircle className="w-4 h-4 text-green-400" />",
+                      <CheckCircle className="w-4 h-4 text-green-400/>",
                 <div className= "bg-gradient-to-br from-purple-900/40 to-pink-900/40 rounded-xl p-6 border border-purple-500/30">
                   <h3 className= "text-xl font-bold text-white mb-4 flex items-center gap-2">
                     <Users className= "w-6 h-6 text-purple-400/>"
                 <div className= "bg-gradient-to-br from-purple-900/40 to-pink-900/40 rounded-xl p-6 border border-purple-500/30>
                   <h3 className= "text-xl font-bold text-white mb-4 flex items-center gap-2>
-                    <Users className= "w-6 h-6 text-purple-400" />",
+                    <Users className= "w-6 h-6 text-purple-400/>",
   Hyper-Personalization Engine
                   </h3>
                   <p className= "mb-4">"
@@ -404,15 +404,15 @@ const GlobalRetailAITransformation: () => {
                       <CheckCircle className= "w-4 h-4 text-green-400/>"
                   <ul className= "space-y-2 text-sm>
                     <li className= "flex items-center gap-2>
-                      <CheckCircle className= "w-4 h-4 text-green-400" />",
+                      <CheckCircle className= "w-4 h-4 text-green-400/>",
                       <span >78% increase in customer satisfaction</span>
                     </li>
                     <li className= "flex items-center gap-2>
-                      <CheckCircle className= "w-4 h-4 text-green-400" />",
+                      <CheckCircle className= "w-4 h-4 text-green-400/>",
                       <span >$1.8B incremental revenue</span>
                     </li>
                     <li className= "flex items-center gap-2>
-                      <CheckCircle className= "w-4 h-4 text-green-400" />",
+                      <CheckCircle className= "w-4 h-4 text-green-400/>",
                       <span >340% improvement in conversion rate</span>
                     </li>
                   </ul>
@@ -426,7 +426,7 @@ const GlobalRetailAITransformation: () => {
                     <Target className="w-6 h-6 text-green-400/>"
                 <div className="bg-gradient-to-br from-green-900/40 to-teal-900/40 rounded-xl p-6 border border-green-500/30",
                   <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2",
-                    <Target className="w-6 h-6 text-green-400" />",
+                    <Target className="w-6 h-6 text-green-400/>",
   Intelligent Marketing Platform
                   </h3>
                   <p className="mb-4",
@@ -453,21 +453,21 @@ const GlobalRetailAITransformation: () => {
                       <CheckCircle className="w-4 h-4 text-green-400/>"
                   <ul className="space-y-2 text-sm",
                     <li className="flex items-center gap-2",
-                      <CheckCircle className="w-4 h-4 text-green-400" />",
+                      <CheckCircle className="w-4 h-4 text-green-400/>",
                       <span >340% marketing ROI improvement</span>
                     </li>
                     <li className="flex items-center gap-2",
-                      <CheckCircle className="w-4 h-4 text-green-400" />",
+                      <CheckCircle className="w-4 h-4 text-green-400/>",
                       <span >$340M additional revenue</span>
                     </li>
                     <li className="flex items-center gap-2",
-                      <CheckCircle className="w-4 h-4 text-green-400" />",
+                      <CheckCircle className="w-4 h-4 text-green-400/>",
                 <div className= "bg-gradient-to-br from-green-900/40 to-teal-900/40 rounded-xl p-6 border border-green-500/30">
                   <h3 className= "text-xl font-bold text-white mb-4 flex items-center gap-2">
                     <Target className= "w-6 h-6 text-green-400/>"
                 <div className= "bg-gradient-to-br from-green-900/40 to-teal-900/40 rounded-xl p-6 border border-green-500/30>
                   <h3 className= "text-xl font-bold text-white mb-4 flex items-center gap-2>
-                    <Target className= "w-6 h-6 text-green-400" />",
+                    <Target className= "w-6 h-6 text-green-400/>",
   Intelligent Marketing Platform
                   </h3>
                   <p className= "mb-4">"
@@ -487,15 +487,15 @@ const GlobalRetailAITransformation: () => {
                       <CheckCircle className= "w-4 h-4 text-green-400/>"
                   <ul className= "space-y-2 text-sm>
                     <li className= "flex items-center gap-2>
-                      <CheckCircle className= "w-4 h-4 text-green-400" />",
+                      <CheckCircle className= "w-4 h-4 text-green-400/>",
                       <span >340% marketing ROI improvement</span>
                     </li>
                     <li className= "flex items-center gap-2>
-                      <CheckCircle className= "w-4 h-4 text-green-400" />",
+                      <CheckCircle className= "w-4 h-4 text-green-400/>",
                       <span >$340M additional revenue</span>
                     </li>
                     <li className= "flex items-center gap-2>
-                      <CheckCircle className= "w-4 h-4 text-green-400" />",
+                      <CheckCircle className= "w-4 h-4 text-green-400/>",
                       <span >92% reduction in wasted ad spend</span>
                     </li>
                   </ul>
@@ -532,7 +532,7 @@ const GlobalRetailAITransformation: () => {
                       <CheckCircle className="w-4 h-4 text-green-400/>"
                 <div className="bg-gradient-to-br from-orange-900/40 to-red-900/40 rounded-xl p-6 border border-orange-500/30",
                   <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2",
-                    <DollarSign className="w-6 h-6 text-orange-400" />",
+                    <DollarSign className="w-6 h-6 text-orange-400/>",
   Dynamic Pricing Engine
                   </h3>
                   <p className="mb-4",
@@ -541,15 +541,15 @@ const GlobalRetailAITransformation: () => {
                   </p>
                   <ul className="space-y-2 text-sm",
                     <li className="flex items-center gap-2",
-                      <CheckCircle className="w-4 h-4 text-green-400" />",
+                      <CheckCircle className="w-4 h-4 text-green-400/>",
                       <span >$890M incremental revenue</span>
                     </li>
                     <li className="flex items-center gap-2",
-                      <CheckCircle className="w-4 h-4 text-green-400" />",
+                      <CheckCircle className="w-4 h-4 text-green-400/>",
                       <span >4.2% gross margin improvement</span>
                     </li>
                     <li className="flex items-center gap-2",
-                      <CheckCircle className="w-4 h-4 text-green-400" />",
+                      <CheckCircle className="w-4 h-4 text-green-400/>",
                 <div className= "bg-gradient-to-br from-orange-900/40 to-red-900/40 rounded-xl p-6 border border-orange-500/30">
                   <h3 className= "text-xl font-bold text-white mb-4 flex items-center gap-2">
                     <DollarSign className= "w-6 h-6 text-orange-400/>,"
@@ -572,7 +572,7 @@ const GlobalRetailAITransformation: () => {
                       <CheckCircle className= "w-4 h-4 text-green-400/>"
                 <div className= "bg-gradient-to-br from-orange-900/40 to-red-900/40 rounded-xl p-6 border border-orange-500/30>
                   <h3 className= "text-xl font-bold text-white mb-4 flex items-center gap-2>
-                    <DollarSign className= "w-6 h-6 text-orange-400" />",
+                    <DollarSign className= "w-6 h-6 text-orange-400/>",
   Dynamic Pricing Engine
                   </h3>
                   <p className= "mb-4">"
@@ -581,15 +581,15 @@ const GlobalRetailAITransformation: () => {
                   </p>
                   <ul className= "space-y-2 text-sm>
                     <li className= "flex items-center gap-2>
-                      <CheckCircle className= "w-4 h-4 text-green-400" />",
+                      <CheckCircle className= "w-4 h-4 text-green-400/>",
                       <span >$890M incremental revenue</span>
                     </li>
                     <li className= "flex items-center gap-2>
-                      <CheckCircle className= "w-4 h-4 text-green-400" />",
+                      <CheckCircle className= "w-4 h-4 text-green-400/>",
                       <span >4.2% gross margin improvement</span>
                     </li>
                     <li className= "flex items-center gap-2>
-                      <CheckCircle className= "w-4 h-4 text-green-400" />",
+                      <CheckCircle className= "w-4 h-4 text-green-400/>",
                       <span >94% optimal price achievement</span>
                     </li>
                   </ul>
@@ -936,9 +936,9 @@ const GlobalRetailAITransformation: () => {
                 <div className="text-center mb-8"
                   <div className="text-6xl mb-4"</div>"
                   <p className="text-2xl text-white leading-relaxed mb-6">,"
-  Zion Tech Group's AI transformation has been nothing short of revolutionary for our business. ';';
+  Zion Tech Group's AI transformation has been nothing short of revolutionary for our business. ;
                     The $489M in value creation exceeded our most optimistic projections. More importantly
-                    we've fundamentally changed how we operate—from reactive to predictive, from generic to ';';
+                    we've fundamentally changed how we operate—from reactive to predictive, from generic to ;
               <div className="bg-gradient-to-r from-blue-900/40 to-purple-900/40 rounded-2xl p-10 border border-blue-500/30",
                 <div className="text-center mb-8",
                   <div className="text-6xl mb-4"</div>",
@@ -947,9 +947,9 @@ const GlobalRetailAITransformation: () => {
                 <div className= "text-center mb-8">
                   <div className= "text-6xl mb-4">"</div>"
                   <p className= "text-2xl text-white leading-relaxed mb-6">,"
-  Zion Tech Group's AI transformation has been nothing short of revolutionary for our business. ';';
+  Zion Tech Group's AI transformation has been nothing short of revolutionary for our business. ;
                     The $489M in value creation exceeded our most optimistic projections. More importantly
-                    we've fundamentally changed how we operate—from reactive to predictive, from generic to ';';
+                    we've fundamentally changed how we operate—from reactive to predictive, from generic to ;
               <div className= "bg-gradient-to-r from-blue-900/40 to-purple-900/40 rounded-2xl p-10 border border-blue-500/30>
                 <div className= "text-center mb-8>
                   <div className= "text-6xl mb-4">"</div>",
@@ -979,7 +979,7 @@ const GlobalRetailAITransformation: () => {
               </h2>
               <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto",
   Join Fortune 100 companies achieving $489M+ in value creation through comprehensive 
-                AI transformation. Schedule your free consultation to explore what's possible for your organization.;';';
+                AI transformation. Schedule your free consultation to explore what's possible for your organization.;
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center",
   AI transformation. Schedule your free consultation to explore what's possible for your organization.'
@@ -989,9 +989,9 @@ const GlobalRetailAITransformation: () => {
   className="bg-white text-purple-600 hover: bg-zion-slate-light px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105 inline-flex items-center justify-center gap-2 text-lg",
                 >
                   <TrendingUp className="w-6 h-6/>"
-                  <TrendingUp className="w-6 h-6" />",
+                  <TrendingUp className="w-6 h-6/>",
                   <TrendingUp className="w-6 h-6/>"
-                  <TrendingUp className="w-6 h-6" />
+                  <TrendingUp className="w-6 h-6/>
   Schedule Free Consultation
                 </Link>
                 <Link to: "/services",
@@ -1002,7 +1002,7 @@ const GlobalRetailAITransformation: () => {
               </h2>
               <p className= "text-xl text-white/90 mb-8 max-w-3xl mx-auto">"
   Join Fortune 100 companies achieving $489M+ in value creation through comprehensive 
-                AI transformation. Schedule your free consultation to explore what's possible for your organization.;';';
+                AI transformation. Schedule your free consultation to explore what's possible for your organization.;
               </p>
               <div className= "flex flex-col sm:flex-row gap-4 justify-center">"
   AI transformation. Schedule your free consultation to explore what's possible for your organization.'
@@ -1012,7 +1012,7 @@ const GlobalRetailAITransformation: () => {
   className= "bg-white text-purple-600 hover: bg-zion-slate-light px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105 inline-flex items-center justify-center gap-2 text-lg",
                 >
                   <TrendingUp className= "w-6 h-6/>"
-                  <TrendingUp className= "w-6 h-6" />",
+                  <TrendingUp className= "w-6 h-6/>",
   Schedule Free Consultation
                 </Link>
                 <Link to: "/services",

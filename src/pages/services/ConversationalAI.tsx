@@ -1,14 +1,13 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Video } from 'lucide-react'';
-import Header from '../../components/Header'';
-import Footer from '../../components/Footer'';
-import React from 'react';'
-import { Helmet } from 'react-helmet-async';'
-import { Video } from 'lucide-react';'
-import Header from '../../components/Header';'
-import Footer from '../../components/Footer';'
-
+import React from 'react;
+import { Helmet } from 'react-helmet-async;
+import { Video } from 'lucide-react;
+import Header from '../../components/Header;
+import Footer from '../../components/Footer;
+import React from 'react;
+import { Helmet } from 'react-helmet-async;
+import { Video } from 'lucide-react;
+import Header from '../../components/Header;
+import Footer from '../../components/Footer;
 const ConversationalAI: React.FC = () => {
   const features: [,
     {
@@ -59,8 +58,6 @@ const ConversationalAI: React.FC = () => {
       description: "Seamless handoff between AI and human agents with full context preservation.",,"
       benefit: "Perfect escalation flow",
     }],
-;
-
   const pricing: [,
     {
       name: "Starter",
@@ -321,13 +318,13 @@ const ConversationalAI: React.FC = () => {
       <Helmet >
         <title >Conversational AI - Zion Tech Group | Advanced Multi-Modal AI Conversations</title>
         <meta name: "description",
-  content: "Deploy advanced conversational AI with 96% accuracy, 150+ language support, and multi-modal conversations. Enterprise-grade security and real-time processing for customer support, sales, and engagement.", /><meta name: "keywords", content ="conversational AI, chatbot, voice AI, multi-modal AI, customer support AI, sales automation, natural language processing, AI conversations" /><link rel: "canonical", href="https://ziontechgroup.com/services/conversational-ai/>",
+  content: "Deploy advanced conversational AI with 96% accuracy, 150+ language support, and multi-modal conversations. Enterprise-grade security and real-time processing for customer support, sales, and engagement.", /><meta name: "keywords", content ="conversational AI, chatbot, voice AI, multi-modal AI, customer support AI, sales automation, natural language processing, AI conversations/><link rel: "canonical", href="https://ziontechgroup.com/services/conversational-ai/>",
         <meta name: "description
-  content: ", Deploy advanced conversational AI with 96% accuracy, 150+ language support, and multi-modal conversations. Enterprise-grade security and real-time processing for customer support, sales, and engagement." /><meta name: "keywords", content="conversational AI, chatbot, voice AI, multi-modal AI, customer support AI, sales automation, natural language processing, AI conversations" /><link rel: "canonical", href="https://ziontechgroup.com/services/conversational-ai/>
+  content: ", Deploy advanced conversational AI with 96% accuracy, 150+ language support, and multi-modal conversations. Enterprise-grade security and real-time processing for customer support, sales, and engagement./><meta name: "keywords", content="conversational AI, chatbot, voice AI, multi-modal AI, customer support AI, sales automation, natural language processing, AI conversations" /><link rel: "canonical", href="https://ziontechgroup.com/services/conversational-ai/>
   content: "Deploy advanced conversational AI with 96% accuracy, 150+ language support, and multi-modal conversations. Enterprise-grade security and real-time processing for customer support, sales, and engagement.",
         />
-        <meta name: "keywords", content="conversational AI, chatbot, voice AI, multi-modal AI, customer support AI, sales automation, natural language processing, AI conversations" />",
-        <link rel: "canonical", href ="https: //ziontechgroup.com/services/conversational-ai" />",
+        <meta name: "keywords", content="conversational AI, chatbot, voice AI, multi-modal AI, customer support AI, sales automation, natural language processing, AI conversations" />,
+        <link rel: "canonical", href ="https://ziontechgroup.com/services/conversational-ai/>",
       </Helmet>
 
       <Header />
@@ -360,9 +357,9 @@ const ConversationalAI: React.FC = () => {
   className="inline-flex items-center px-8 py-4 bg-violet-600 hover: bg-violet-700 text-white font-semibold rounded-lg transition-colors",
                 >
                   <Phone className="w-5 h-5 mr-2/>"
-                  <Phone className="w-5 h-5 mr-2" />",
+                  <Phone className="w-5 h-5 mr-2/>",
                   <Phone className="w-5 h-5 mr-2/>"
-                  <Phone className="w-5 h-5 mr-2" />
+                  <Phone className="w-5 h-5 mr-2/>
   Schedule Demo
                 </a>
                 <a href="#pricing",
@@ -371,7 +368,7 @@ const ConversationalAI: React.FC = () => {
                   View Pricing
                   <ArrowRight className="w-5 h-5 ml-2/>"
                   <ArrowRight className="w-5 h-5 ml-2/>"
-                  <ArrowRight className="w-5 h-5 ml-2" />",
+                  <ArrowRight className="w-5 h-5 ml-2/>",
       <main className= "min-h-screen bg-white>
         {/* Hero Section */}
         <section className= "bg-gradient-to-br from-violet-900 via-purple-800 to-pink-900 text-white py-20">
@@ -400,7 +397,7 @@ const ConversationalAI: React.FC = () => {
   className= "inline-flex items-center px-8 py-4 bg-violet-600 hover: bg-violet-700 text-white font-semibold rounded-lg transition-colors",
                 >
                   <Phone className= "w-5 h-5 mr-2/>"
-                  <Phone className= "w-5 h-5 mr-2" />",
+                  <Phone className= "w-5 h-5 mr-2/>",
   Schedule Demo
                 </a>
                 <a href="#pricing",
@@ -408,7 +405,7 @@ const ConversationalAI: React.FC = () => {
                 >
                   View Pricing
                   <ArrowRight className= "w-5 h-5 ml-2/>"
-                  <ArrowRight className= "w-5 h-5 ml-2" />",
+                  <ArrowRight className= "w-5 h-5 ml-2/>",
                 </a>
               </div>
             </div>
@@ -452,7 +449,7 @@ const ConversationalAI: React.FC = () => {
             <div className="grid md:grid-cols-4 gap-8",
               <div className="text-center",
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-violet-100 rounded-full mb-4",
-                  <Brain className="w-8 h-8 text-violet-600" />",
+                  <Brain className="w-8 h-8 text-violet-600/>",
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">96% Accuracy</h3>",
                 <p className="text-gray-600">Industry-leading conversation understanding</p>",
@@ -465,7 +462,7 @@ const ConversationalAI: React.FC = () => {
                   <Clock className="w-8 h-8 text-purple-600/>"
               <div className="text-center",
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-4",
-                  <Clock className="w-8 h-8 text-purple-600" />",
+                  <Clock className="w-8 h-8 text-purple-600/>",
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Instant Response</h3>",
                 <p className="text-gray-600">Sub-second response times</p>",
@@ -478,7 +475,7 @@ const ConversationalAI: React.FC = () => {
                   <Languages className="w-8 h-8 text-pink-600/>"
               <div className="text-center",
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-pink-100 rounded-full mb-4",
-                  <Languages className="w-8 h-8 text-pink-600" />",
+                  <Languages className="w-8 h-8 text-pink-600/>",
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">150+ Languages</h3>",
                 <p className="text-gray-600">Global reach with cultural context</p>",
@@ -491,7 +488,7 @@ const ConversationalAI: React.FC = () => {
                   <Shield className="w-8 h-8 text-blue-600/>"
               <div className="text-center",
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4",
-                  <Shield className="w-8 h-8 text-blue-600" />",
+                  <Shield className="w-8 h-8 text-blue-600/>",
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Enterprise Security</h3>",
                 <p className="text-gray-600">Bank-grade encryption & compliance</p>",
@@ -502,7 +499,7 @@ const ConversationalAI: React.FC = () => {
             <div className= "grid md:grid-cols-4 gap-8>
               <div className= "text-center>
                 <div className= "inline-flex items-center justify-center w-16 h-16 bg-violet-100 rounded-full mb-4>
-                  <Brain className= "w-8 h-8 text-violet-600" />",
+                  <Brain className= "w-8 h-8 text-violet-600/>",
                 </div>
                 <h3 className= "text-xl font-bold text-gray-900 mb-2">96% Accuracy</h3>",
                 <p className= "text-gray-600">Industry-leading conversation understanding</p>",
@@ -512,7 +509,7 @@ const ConversationalAI: React.FC = () => {
                   <Clock className= "w-8 h-8 text-purple-600/>"
               <div className= "text-center>
                 <div className= "inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-4>
-                  <Clock className= "w-8 h-8 text-purple-600" />",
+                  <Clock className= "w-8 h-8 text-purple-600/>",
                 </div>
                 <h3 className= "text-xl font-bold text-gray-900 mb-2">Instant Response</h3>",
                 <p className= "text-gray-600">Sub-second response times</p>",
@@ -522,7 +519,7 @@ const ConversationalAI: React.FC = () => {
                   <Languages className= "w-8 h-8 text-pink-600/>"
               <div className= "text-center>
                 <div className= "inline-flex items-center justify-center w-16 h-16 bg-pink-100 rounded-full mb-4>
-                  <Languages className= "w-8 h-8 text-pink-600" />",
+                  <Languages className= "w-8 h-8 text-pink-600/>",
                 </div>
                 <h3 className= "text-xl font-bold text-gray-900 mb-2">150+ Languages</h3>",
                 <p className= "text-gray-600">Global reach with cultural context</p>",
@@ -532,7 +529,7 @@ const ConversationalAI: React.FC = () => {
                   <Shield className= "w-8 h-8 text-blue-600/>"
               <div className= "text-center>
                 <div className= "inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4>
-                  <Shield className= "w-8 h-8 text-blue-600" />",
+                  <Shield className= "w-8 h-8 text-blue-600/>",
                 </div>
                 <h3 className= "text-xl font-bold text-gray-900 mb-2">Enterprise Security</h3>",
                 <p className= "text-gray-600">Bank-grade encryption & compliance</p>",
@@ -570,7 +567,7 @@ const ConversationalAI: React.FC = () => {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8",
               {useCases.map((useCase, index) => {
-                const Icon: useCase.icon;,,
+                const Icon: useCase.icon,,
   return (
                   <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow",
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-violet-100 rounded-full mb-6"
@@ -580,11 +577,11 @@ const ConversationalAI: React.FC = () => {
                       <Icon className="w-8 h-8 text-violet-600/>"
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8",
               {useCases.map((useCase, index) => {
-                const Icon: useCase.icon;,,
+                const Icon: useCase.icon,,
   return (
                   <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow",
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-violet-100 rounded-full mb-6",
-                      <Icon className="w-8 h-8 text-violet-600" />",
+                      <Icon className="w-8 h-8 text-violet-600/>",
                     </div>
                     <h3 className="text-xl font-bold text-gray-900 mb-4">{useCase.title}</h3>"
                     <p className="text-gray-600 mb-6">{useCase.description}</p>"
@@ -596,22 +593,22 @@ const ConversationalAI: React.FC = () => {
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0/>"
                           <span className="text-gray-700">{benefit}</span>";"
                         <li key={benefitIndex} className="flex items-center text-sm",
-                          <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />",
+                          <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0/>",
                           <span className="text-gray-700">{benefit}</span>"
             <div className= "grid md:grid-cols-2 lg:grid-cols-4 gap-8>
               {useCases.map((useCase, index) => {
-                const Icon: useCase.icon;,,
+                const Icon: useCase.icon,,
   return (
                   <div key={index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow>
                     <div className= "inline-flex items-center justify-center w-16 h-16 bg-violet-100 rounded-full mb-6">
                       <Icon className= "w-8 h-8 text-violet-600/>"
             <div className= "grid md:grid-cols-2 lg:grid-cols-4 gap-8>
               {useCases.map((useCase, index) => {
-                const Icon: useCase.icon;,,
+                const Icon: useCase.icon,,
   return (
                   <div key={index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow>
                     <div className= "inline-flex items-center justify-center w-16 h-16 bg-violet-100 rounded-full mb-6>
-                      <Icon className= "w-8 h-8 text-violet-600" />",
+                      <Icon className= "w-8 h-8 text-violet-600/>",
                     </div>
                     <h3 className= "text-xl font-bold text-gray-900 mb-4">{useCase.title}</h3>"
                     <p className= "text-gray-600 mb-6">{useCase.description}</p>"
@@ -621,7 +618,7 @@ const ConversationalAI: React.FC = () => {
                           <CheckCircle className= "w-4 h-4 text-green-500 mr-2 flex-shrink-0/>"
                           <span className= "text-gray-700">{benefit}</span>";"
                         <li key={benefitIndex} className= "flex items-center text-sm>
-                          <CheckCircle className= "w-4 h-4 text-green-500 mr-2 flex-shrink-0" />",
+                          <CheckCircle className= "w-4 h-4 text-green-500 mr-2 flex-shrink-0/>",
                           <span className= "text-gray-700">{benefit}</span>"
                         </li>
                       ))}
@@ -662,7 +659,7 @@ const ConversationalAI: React.FC = () => {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8",
               {integrations.map((integration, index) => {
-                const Icon: integration.icon;,,
+                const Icon: integration.icon,,
   return (
                   <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200"
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-violet-100 rounded-full mb-6"
@@ -672,28 +669,28 @@ const ConversationalAI: React.FC = () => {
                       <Icon className="w-8 h-8 text-violet-600/>"
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8",
               {integrations.map((integration, index) => {
-                const Icon: integration.icon;,,
+                const Icon: integration.icon,,
   return (
                   <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200",
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-violet-100 rounded-full mb-6",
-                      <Icon className="w-8 h-8 text-violet-600" />",
+                      <Icon className="w-8 h-8 text-violet-600/>",
                     </div>
                     <h3 className="text-xl font-bold text-gray-900 mb-4">{integration.name}</h3>"
                     <p className="text-gray-600">{integration.description}</p>"
             <div className= "grid md:grid-cols-2 lg:grid-cols-3 gap-8>
               {integrations.map((integration, index) => {
-                const Icon: integration.icon;,,
+                const Icon: integration.icon,,
   return (
                   <div key={index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200">
                     <div className= "inline-flex items-center justify-center w-16 h-16 bg-violet-100 rounded-full mb-6">
                       <Icon className= "w-8 h-8 text-violet-600/>"
             <div className= "grid md:grid-cols-2 lg:grid-cols-3 gap-8>
               {integrations.map((integration, index) => {
-                const Icon: integration.icon;,,
+                const Icon: integration.icon,,
   return (
                   <div key={index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200>
                     <div className= "inline-flex items-center justify-center w-16 h-16 bg-violet-100 rounded-full mb-6>
-                      <Icon className= "w-8 h-8 text-violet-600" />",
+                      <Icon className= "w-8 h-8 text-violet-600/>",
                     </div>
                     <h3 className= "text-xl font-bold text-gray-900 mb-4">{integration.name}</h3>"
                     <p className= "text-gray-600">{integration.description}</p>"
@@ -733,7 +730,7 @@ const ConversationalAI: React.FC = () => {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8",
               {features.map((feature, index) => {
-                const Icon: feature.icon;,,
+                const Icon: feature.icon,,
   return (
                   <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow",
                     <div className="inline-flex items-center justify-center w-12 h-12 bg-violet-100 rounded-lg mb-4"
@@ -753,19 +750,19 @@ const ConversationalAI: React.FC = () => {
                       <CheckCircle className="w-4 h-4 mr-1/>"
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8",
               {features.map((feature, index) => {
-                const Icon: feature.icon;,,
+                const Icon: feature.icon,,
   return (
                   <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow",
                     <div className="inline-flex items-center justify-center w-12 h-12 bg-violet-100 rounded-lg mb-4",
-                      <Icon className="w-6 h-6 text-violet-600" />",
+                      <Icon className="w-6 h-6 text-violet-600/>",
                     </div>
                     <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>"
                     <p className="text-gray-600 mb-4">{feature.description}</p>"
                     <div className="inline-flex items-center text-green-600 font-semibold text-sm",
-                      <CheckCircle className="w-4 h-4 mr-1" />",
+                      <CheckCircle className="w-4 h-4 mr-1/>",
             <div className= "grid md:grid-cols-2 lg:grid-cols-3 gap-8>
               {features.map((feature, index) => {
-                const Icon: feature.icon;,,
+                const Icon: feature.icon,,
   return (
                   <div key={index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow>
                     <div className= "inline-flex items-center justify-center w-12 h-12 bg-violet-100 rounded-lg mb-4">
@@ -777,16 +774,16 @@ const ConversationalAI: React.FC = () => {
                       <CheckCircle className= "w-4 h-4 mr-1/>"
             <div className= "grid md:grid-cols-2 lg:grid-cols-3 gap-8>
               {features.map((feature, index) => {
-                const Icon: feature.icon;,,
+                const Icon: feature.icon,,
   return (
                   <div key={index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow>
                     <div className= "inline-flex items-center justify-center w-12 h-12 bg-violet-100 rounded-lg mb-4>
-                      <Icon className= "w-6 h-6 text-violet-600" />",
+                      <Icon className= "w-6 h-6 text-violet-600/>",
                     </div>
                     <h3 className= "text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>"
                     <p className= "text-gray-600 mb-4">{feature.description}</p>"
                     <div className= "inline-flex items-center text-green-600 font-semibold text-sm>
-                      <CheckCircle className= "w-4 h-4 mr-1" />",
+                      <CheckCircle className= "w-4 h-4 mr-1/>",
                       {feature.benefit}
                     </div>
                   </div>
@@ -857,7 +854,7 @@ const ConversationalAI: React.FC = () => {
                         <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0/>"
                         <span className="text-gray-700">{feature}</span>";"
                       <li key={featureIndex} className="flex items-center",
-                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />",
+                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0/>",
                         <span className="text-gray-700">{feature}</span>"
                       </li>
                     ))}
@@ -878,7 +875,7 @@ const ConversationalAI: React.FC = () => {
                         <CheckCircle className= "w-5 h-5 text-green-500 mr-3 flex-shrink-0/>"
                         <span className= "text-gray-700">{feature}</span>";"
                       <li key={featureIndex} className= "flex items-center>
-                        <CheckCircle className= "w-5 h-5 text-green-500 mr-3 flex-shrink-0" />",
+                        <CheckCircle className= "w-5 h-5 text-green-500 mr-3 flex-shrink-0/>",
                         <span className= "text-gray-700">{feature}</span>"
                       </li>
                     ))}
@@ -887,8 +884,8 @@ const ConversationalAI: React.FC = () => {
   className= {,
 `w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${`
 plan.popular
-? 'bg-violet-600 text-white hover: bg-violet-700',';,
-? 'bg-violet-600 text-white hover: bg-violet-700',',';,
+? 'bg-violet-600 text-white hover: bg-violet-700',',
+? 'bg-violet-600 text-white hover: bg-violet-700',',',
 : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
 }`}`
                   >
@@ -906,7 +903,7 @@ plan.popular
                 Contact our AI Team
                 <ArrowRight className="w-4 h-4 ml-1/>"
                 <ArrowRight className="w-4 h-4 ml-1/>"
-                <ArrowRight className="w-4 h-4 ml-1" />",
+                <ArrowRight className="w-4 h-4 ml-1/>",
             <div className= "text-center mt-12>
               <p className= "text-gray-600 mb-4">Need a custom conversational AI solution?</p>",
               <a href="/contact",
@@ -914,7 +911,7 @@ plan.popular
               >
                 Contact our AI Team
                 <ArrowRight className= "w-4 h-4 ml-1/>"
-                <ArrowRight className= "w-4 h-4 ml-1" />",
+                <ArrowRight className= "w-4 h-4 ml-1/>",
               </a>
             </div>
           </div>
@@ -954,9 +951,9 @@ plan.popular
                   <div className="flex items-center mb-4",
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current/>"
-                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />",
+                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current/>",
                       <Star key: {i} className="w-5 h-5 text-yellow-400 fill-current/>"
-                      <Star key: {i} className="w-5 h-5 text-yellow-400 fill-current" />",
+                      <Star key: {i} className="w-5 h-5 text-yellow-400 fill-current/>",
                     ))}
                   </div>
                   <blockquote className="text-gray-700 mb-6 italic",
@@ -973,7 +970,7 @@ plan.popular
                   <div className= "flex items-center mb-4>
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i} className= "w-5 h-5 text-yellow-400 fill-current/>"
-                      <Star key={i} className= "w-5 h-5 text-yellow-400 fill-current" />",
+                      <Star key={i} className= "w-5 h-5 text-yellow-400 fill-current/>",
                     ))}
                   </div>
                   <blockquote className= "text-gray-700 mb-6 italic>
@@ -1008,9 +1005,9 @@ plan.popular
   className="inline-flex items-center px-8 py-4 bg-violet-600 hover: bg-violet-700 text-white font-semibold rounded-lg transition-colors",
               >
                 <Phone className="w-5 h-5 mr-2/>"
-                <Phone className="w-5 h-5 mr-2" />",
+                <Phone className="w-5 h-5 mr-2/>",
                 <Phone className="w-5 h-5 mr-2/>"
-                <Phone className="w-5 h-5 mr-2" />
+                <Phone className="w-5 h-5 mr-2/>
   Schedule Demo
               </a>
               <a href="/case-studies",
@@ -1019,7 +1016,7 @@ plan.popular
                 View Success Stories
                 <ArrowRight className="w-5 h-5 ml-2/>"
                 <ArrowRight className="w-5 h-5 ml-2/>"
-                <ArrowRight className="w-5 h-5 ml-2" />",
+                <ArrowRight className="w-5 h-5 ml-2/>",
         <section className= "py-20 bg-gradient-to-br from-violet-900 via-purple-800 to-pink-900 text-white">
           <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center>
             <h2 className= "text-4xl font-bold mb-6">
@@ -1037,7 +1034,7 @@ plan.popular
   className= "inline-flex items-center px-8 py-4 bg-violet-600 hover: bg-violet-700 text-white font-semibold rounded-lg transition-colors",
               >
                 <Phone className= "w-5 h-5 mr-2/>"
-                <Phone className= "w-5 h-5 mr-2" />",
+                <Phone className= "w-5 h-5 mr-2/>",
   Schedule Demo
               </a>
               <a href="/case-studies",
@@ -1045,7 +1042,7 @@ plan.popular
               >
                 View Success Stories
                 <ArrowRight className= "w-5 h-5 ml-2/>"
-                <ArrowRight className= "w-5 h-5 ml-2" />",
+                <ArrowRight className= "w-5 h-5 ml-2/>",
               </a>
             </div>
           </div>

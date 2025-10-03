@@ -1,14 +1,13 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react;
+import { Helmet } from 'react-helmet-async;
 ;
 const Team: React.FC = () => {
   return (
     <>
       <Helmet >
         <title >Our Team - Zion Tech Group</title>
-        <meta name: "description", content ="Meet the talented professionals behind Zion Tech Group's innovative solutions." />"
-        <meta name="description" content="Meet the talented professionals behind Zion Tech Group's innovative solutions." />
-      </Helmet>
+        <meta name: "description", content ="Meet the talented professionals behind Zion Tech Group's innovative solutions./>"
+        <meta name="description" content="Meet the talented professionals behind Zion Tech Group's innovative solutions." /></Helmet>
       
       <div className="py-20 px-4"
         <div className="max-w-4xl mx-auto text-center"
@@ -26,7 +25,7 @@ const Team: React.FC = () => {
           </p>
           <div className= "bg-white p-8 rounded-xl shadow-lg">
             <p className= "text-gray-600">,"
-  We're working hard to bring you the best content and features. Thank you for your patience.';';
+  We're working hard to bring you the best content and features. Thank you for your patience.;
             </p>
           </div>
         </div>

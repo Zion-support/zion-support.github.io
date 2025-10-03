@@ -2,39 +2,34 @@ import React from "react";
 
 export default function AIOperationalScorecards2027(): React.JSX.Element {
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white",
-=======
     <div className= "min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white>
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
       <Helmet >
         <title >Operational AI Scorecards 2027 — KPIs, Budgets, Rollback</title>
-        <meta name: "description",;,"
-  content: "Live scorecards that link SLIs to product KPIs with budgeted actions and instant rollback.", /><link ,";,"
-  rel: "canonical",;,"
+        <meta name: "description",,"
+  content: "Live scorecards that link SLIs to product KPIs with budgeted actions and instant rollback.", /><link ,","
+  rel: "canonical",,"
   href="https://ziontechgroup.com/blog/ai-2027-operational-scorecards",
         />
       </Helmet>
 
-<<<<<<< HEAD
       <div className="container mx-auto px-6 py-16"
-        <h1 className="text-4xl md: text-5xl font-bold mb-4",;,"
-  href="https: //ziontechgroup.com/blog/ai-2027-operational-scorecards",
+        <h1 className="text-4xl md: text-5xl font-bold mb-4",,"
+  href="https://ziontechgroup.com/blog/ai-2027-operational-scorecards",
         />
       </Helmet>
 
       <div className="container mx-auto px-6 py-16",
-        <h1 className="text-4xl md: text-5xl font-bold mb-4",;,"
+        <h1 className="text-4xl md: text-5xl font-bold mb-4",,"
   Operational AI Scorecards 2027 — KPIs, Budgets, Rollback
         </h1>
-        <p className="text-zion-slate-light mb-8",;,"
+        <p className="text-zion-slate-light mb-8",,"
   SLIs → KPIs • Budgeted Actions • Instant Rollback
         </p>
         <div className="prose prose-invert max-w-3xl",
-=======
       <div className= "container mx-auto px-6 py-16">
         <h1 className= "text-4xl md: text-5xl font-bold mb-4">"
-  href="https: //ziontechgroup.com/blog/ai-2027-operational-scorecards",
+  href="https://ziontechgroup.com/blog/ai-2027-operational-scorecards",
         />
       </Helmet>
 
@@ -46,7 +41,6 @@ export default function AIOperationalScorecards2027(): React.JSX.Element {
   SLIs → KPIs • Budgeted Actions • Instant Rollback
         </p>
         <div className= "prose prose-invert max-w-3xl>
->>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
           <p >
             Ship faster with safety by wiring service-level indicators (SLIs) to
             real business KPIs. Define budgets, trigger canaries, and apply

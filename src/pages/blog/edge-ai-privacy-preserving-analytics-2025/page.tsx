@@ -9,11 +9,11 @@ const Page: () => {
 >>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
       <Helmet >
         <title >Edge AI Privacy-Preserving Analytics 2025 — Zero PII</title>
-        <meta name: "description",;,"
+        <meta name: "description",,"
   content: "GDPR/CCPA compliant analytics: scoped IDs, on-device aggregation, and DP noise for 95%+ accuracy without PII.",
         />
         <link rel: "canonical", href="https://ziontechgroup.com/blog/edge-ai-privacy-preserving-analytics-2025/>",
-        <link rel: "canonical", href ="https: //ziontechgroup.com/blog/edge-ai-privacy-preserving-analytics-2025" />",
+        <link rel: "canonical", href ="https://ziontechgroup.com/blog/edge-ai-privacy-preserving-analytics-2025/>",
       </Helmet>
 
 <<<<<<< HEAD
@@ -21,7 +21,7 @@ const Page: () => {
         <div className="max-w-3xl mx-auto",
           <div className="mb-6 text-sm text-zion-slate-light">Edge • 8 min read • 2025-10-01</div>",
           <h1 className="text-4xl font-bold mb-4">Edge AI Privacy-Preserving Analytics (2025)</h1>",
-          <p className="text-zion-slate-light mb-6",;,"
+          <p className="text-zion-slate-light mb-6",,"
 =======
       <div className= "container mx-auto px-6 py-12>
         <div className= "max-w-3xl mx-auto>
@@ -50,7 +50,7 @@ const Page: () => {
 
 <<<<<<< HEAD
             <h2 className="text-2xl font-semibold">Results</h2>",
-            <p className="text-zion-slate-light",;,"
+            <p className="text-zion-slate-light",,"
 =======
             <h2 className= "text-2xl font-semibold">Results</h2>",
             <p className= "text-zion-slate-light">"

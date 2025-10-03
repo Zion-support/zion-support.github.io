@@ -9,22 +9,22 @@ const Page: () => {
 >>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
       <Helmet >
         <title >Generative AI Code Assistants 2025 — 10x Developer Productivity</title>
-        <meta name: "description",;,"
+        <meta name: "description",,"
   content: "Next-gen AI pair programming that writes production-ready code. Ship 5x faster with 40% fewer bugs.", /><link rel="canonical" href ="https://ziontechgroup.com/blog/generative-ai-code-assistants-2025/>",
       </Helmet>
 
 <<<<<<< HEAD
       <div className="container mx-auto px-6 py-12"
         <div className="max-w-3xl mx-auto"
-          <div className="mb-6 text-sm text-zion-slate-light">Engineering • 9 min read • 2025-10-01</div>";,"
-          <h1 className="text-4xl font-bold mb-4">Generative AI Code Assistants (2025)</h1>";,"
-          <p className="text-zion-slate-light mb-6">,";,"
+          <div className="mb-6 text-sm text-zion-slate-light">Engineering • 9 min read • 2025-10-01</div>","
+          <h1 className="text-4xl font-bold mb-4">Generative AI Code Assistants (2025)</h1>","
+          <p className="text-zion-slate-light mb-6">,","
 =======
       <div className= "container mx-auto px-6 py-12">
         <div className= "max-w-3xl mx-auto">
-          <div className= "mb-6 text-sm text-zion-slate-light">Engineering • 9 min read • 2025-10-01</div>";,"
-          <h1 className= "text-4xl font-bold mb-4">Generative AI Code Assistants (2025)</h1>";,"
-          <p className= "text-zion-slate-light mb-6">,";,"
+          <div className= "mb-6 text-sm text-zion-slate-light">Engineering • 9 min read • 2025-10-01</div>","
+          <h1 className= "text-4xl font-bold mb-4">Generative AI Code Assistants (2025)</h1>","
+          <p className= "text-zion-slate-light mb-6">,","
 >>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Proven patterns for integrating AI into the SDLC: requirements, scaffolding, tests-first, safe refactors,,
             and production-ready reviews with evaluator-backed quality gates.
@@ -32,16 +32,16 @@ const Page: () => {
 
 <<<<<<< HEAD
           <div className="space-y-6"
-            <h2 className="text-2xl font-semibold">Playbook</h2>";,"
-            <ul className="list-disc pl-6 text-zion-slate-light">,";,"
+            <h2 className="text-2xl font-semibold">Playbook</h2>","
+            <ul className="list-disc pl-6 text-zion-slate-light">,","
 =======
           <div className= "space-y-6">
-            <h2 className= "text-2xl font-semibold">Playbook</h2>";,"
-            <ul className= "list-disc pl-6 text-zion-slate-light">,";,"
+            <h2 className= "text-2xl font-semibold">Playbook</h2>","
+            <ul className= "list-disc pl-6 text-zion-slate-light">,","
 >>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   content: "Next-gen AI pair programming that writes production-ready code. Ship 5x faster with 40% fewer bugs.",
         />
-        <link rel: "canonical", href ="https: //ziontechgroup.com/blog/generative-ai-code-assistants-2025" />",
+        <link rel: "canonical", href ="https://ziontechgroup.com/blog/generative-ai-code-assistants-2025/>",
       </Helmet>
 
 <<<<<<< HEAD
@@ -49,7 +49,7 @@ const Page: () => {
         <div className="max-w-3xl mx-auto",
           <div className="mb-6 text-sm text-zion-slate-light">Engineering • 9 min read • 2025-10-01</div>",
           <h1 className="text-4xl font-bold mb-4">Generative AI Code Assistants (2025)</h1>",
-          <p className="text-zion-slate-light mb-6",;,"
+          <p className="text-zion-slate-light mb-6",,"
 =======
       <div className= "container mx-auto px-6 py-12>
         <div className= "max-w-3xl mx-auto>
@@ -78,7 +78,7 @@ const Page: () => {
 
 <<<<<<< HEAD
             <h2 className="text-2xl font-semibold">Impact</h2>",
-            <p className="text-zion-slate-light",;,"
+            <p className="text-zion-slate-light",,"
 =======
             <h2 className= "text-2xl font-semibold">Impact</h2>",
             <p className= "text-zion-slate-light">"

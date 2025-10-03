@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
-
+import React, { useState } from 'react;
+import { Mail, Phone, MapPin, Clock, Send, CheckCircle } from 'lucide-react;
 const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -8,8 +7,7 @@ const ContactPage: React.FC = () => {
     company: '',
     phone: '',
     service: '',
-    message: '',
-  });
+    message: '});
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -33,8 +31,7 @@ const ContactPage: React.FC = () => {
         company: '',
         phone: '',
         service: '',
-        message: '',
-      });
+        message: '});
     }, 3000);
   };
 
@@ -57,7 +54,7 @@ const ContactPage: React.FC = () => {
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Send us a Message</h2>
             {isSubmitted ? (
               <div className="text-center py-8">
-                <CheckCircle className="h-16 w-16 text-green-500 mx-auto mb-4" />
+                <CheckCircle className="h-16 w-16 text-green-500 mx-auto mb-4/>
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">Message Sent!</h3>
                 <p className="text-gray-600">Thank you for contacting us. We'll get back to you within 24 hours.</p>
               </div>
@@ -82,8 +79,7 @@ const ContactPage: React.FC = () => {
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200
 >>>>>>> cursor/fix-errors-and-merge-to-main-6d85"
 >>>>>>> 488cb15bd61969d3b6299d682d1dbb55e5c5e5cc
-                      placeholder="Your full name"
-                    />
+                      placeholder="Your full name/>
                   </div>
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
@@ -103,8 +99,7 @@ const ContactPage: React.FC = () => {
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200
 >>>>>>> cursor/fix-errors-and-merge-to-main-6d85"
 >>>>>>> 488cb15bd61969d3b6299d682d1dbb55e5c5e5cc
-                      placeholder="your@email.com"
-                    />
+                      placeholder="your@email.com/>
                   </div>
                 </div>
 
@@ -126,8 +121,7 @@ const ContactPage: React.FC = () => {
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200
 >>>>>>> cursor/fix-errors-and-merge-to-main-6d85"
 >>>>>>> 488cb15bd61969d3b6299d682d1dbb55e5c5e5cc
-                      placeholder="Your company name"
-                    />
+                      placeholder="Your company name/>
                   </div>
                   <div>
                     <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
@@ -146,8 +140,7 @@ const ContactPage: React.FC = () => {
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200
 >>>>>>> cursor/fix-errors-and-merge-to-main-6d85"
 >>>>>>> 488cb15bd61969d3b6299d682d1dbb55e5c5e5cc
-                      placeholder="+1 (555) 123-4567"
-                    />
+                      placeholder="+1 (555) 123-4567/>
                   </div>
                 </div>
 
@@ -199,8 +192,7 @@ const ContactPage: React.FC = () => {
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200
 >>>>>>> cursor/fix-errors-and-merge-to-main-6d85"
 >>>>>>> 488cb15bd61969d3b6299d682d1dbb55e5c5e5cc
-                    placeholder="Tell us about your project and how we can help..."
-                  />
+                    placeholder="Tell us about your project and how we can help.../>
                 </div>
 
                 <button
@@ -214,7 +206,7 @@ const ContactPage: React.FC = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-6d85
                 >"
 >>>>>>> 488cb15bd61969d3b6299d682d1dbb55e5c5e5cc
-                  <Send className="h-5 w-5 mr-2" />
+                  <Send className="h-5 w-5 mr-2/>
                   Send Message
                 </button>
               </form>
@@ -227,7 +219,7 @@ const ContactPage: React.FC = () => {
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Contact Information</h3>
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
-                  <Mail className="h-6 w-6 text-blue-600 mt-1" />
+                  <Mail className="h-6 w-6 text-blue-600 mt-1/>
                   <div>
                     <h4 className="font-semibold text-gray-900">Email</h4>
                     <p className="text-gray-600">contact@ziontechgroup.com</p>
@@ -236,7 +228,7 @@ const ContactPage: React.FC = () => {
                 </div>
                 
                 <div className="flex items-start space-x-4">
-                  <Phone className="h-6 w-6 text-blue-600 mt-1" />
+                  <Phone className="h-6 w-6 text-blue-600 mt-1/>
                   <div>
                     <h4 className="font-semibold text-gray-900">Phone</h4>
                     <p className="text-gray-600">+1 (555) 123-4567</p>
@@ -245,7 +237,7 @@ const ContactPage: React.FC = () => {
                 </div>
                 
                 <div className="flex items-start space-x-4">
-                  <MapPin className="h-6 w-6 text-blue-600 mt-1" />
+                  <MapPin className="h-6 w-6 text-blue-600 mt-1/>
                   <div>
                     <h4 className="font-semibold text-gray-900">Address</h4>
                     <p className="text-gray-600">
@@ -257,7 +249,7 @@ const ContactPage: React.FC = () => {
                 </div>
                 
                 <div className="flex items-start space-x-4">
-                  <Clock className="h-6 w-6 text-blue-600 mt-1" />
+                  <Clock className="h-6 w-6 text-blue-600 mt-1/>
                   <div>
                     <h4 className="font-semibold text-gray-900">Business Hours</h4>
                     <p className="text-gray-600">
@@ -274,23 +266,23 @@ const ContactPage: React.FC = () => {
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Why Choose Us?</h3>
               <ul className="space-y-3">
                 <li className="flex items-center space-x-3">
-                  <CheckCircle className="h-5 w-5 text-green-500" />
+                  <CheckCircle className="h-5 w-5 text-green-500/>
                   <span className="text-gray-700">24/7 Support & Monitoring</span>
                 </li>
                 <li className="flex items-center space-x-3">
-                  <CheckCircle className="h-5 w-5 text-green-500" />
+                  <CheckCircle className="h-5 w-5 text-green-500/>
                   <span className="text-gray-700">Enterprise-Grade Security</span>
                 </li>
                 <li className="flex items-center space-x-3">
-                  <CheckCircle className="h-5 w-5 text-green-500" />
+                  <CheckCircle className="h-5 w-5 text-green-500/>
                   <span className="text-gray-700">Scalable Solutions</span>
                 </li>
                 <li className="flex items-center space-x-3">
-                  <CheckCircle className="h-5 w-5 text-green-500" />
+                  <CheckCircle className="h-5 w-5 text-green-500/>
                   <span className="text-gray-700">Rapid Deployment</span>
                 </li>
                 <li className="flex items-center space-x-3">
-                  <CheckCircle className="h-5 w-5 text-green-500" />
+                  <CheckCircle className="h-5 w-5 text-green-500/>
                   <span className="text-gray-700">Custom Development</span>
                 </li>
               </ul>

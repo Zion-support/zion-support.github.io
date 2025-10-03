@@ -9,27 +9,27 @@ const Page: () => {
 >>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
       <Helmet >
         <title >Intelligent Automation Breakthrough 2025: From Tickets to Outcomes</title>,,
-        <meta name: "description",;,"
+        <meta name: "description",,"
   content: "Shift from manual tickets to outcome‑driven automation with safe agent runbooks, budgets, and instant rollback.", /><link rel: "canonical", href ="https://ziontechgroup.com/blog/ai-2025-oct-intelligent-automation-breakthrough/>",
       </Helmet>
 
 <<<<<<< HEAD
       <div className="container mx-auto px-6 py-12"
         <div className="max-w-3xl mx-auto"
-          <div className="mb-6 text-sm text-zion-slate-light">Automation • 8 min read • 2025-10-01</div>";,"
-          <h1 className="text-4xl font-bold mb-4">Intelligent Automation Breakthrough 2025</h1>";,"
-          <p className="text-zion-slate-light mb-6">,";,"
+          <div className="mb-6 text-sm text-zion-slate-light">Automation • 8 min read • 2025-10-01</div>","
+          <h1 className="text-4xl font-bold mb-4">Intelligent Automation Breakthrough 2025</h1>","
+          <p className="text-zion-slate-light mb-6">,","
 =======
       <div className= "container mx-auto px-6 py-12">
         <div className= "max-w-3xl mx-auto">
-          <div className= "mb-6 text-sm text-zion-slate-light">Automation • 8 min read • 2025-10-01</div>";,"
-          <h1 className= "text-4xl font-bold mb-4">Intelligent Automation Breakthrough 2025</h1>";,"
-          <p className= "text-zion-slate-light mb-6">,";,"
+          <div className= "mb-6 text-sm text-zion-slate-light">Automation • 8 min read • 2025-10-01</div>","
+          <h1 className= "text-4xl font-bold mb-4">Intelligent Automation Breakthrough 2025</h1>","
+          <p className= "text-zion-slate-light mb-6">,","
 >>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Go beyond scripts with agents that plan, execute, and recover safely. Learn production patterns for approvals
           content: "Shift from manual tickets to outcome‑driven automation with safe agent runbooks, budgets, and instant rollback.",
         />
-        <link rel: "canonical", href ="https: //ziontechgroup.com/blog/ai-2025-oct-intelligent-automation-breakthrough" />",
+        <link rel: "canonical", href ="https://ziontechgroup.com/blog/ai-2025-oct-intelligent-automation-breakthrough/>",
       </Helmet>
 
 <<<<<<< HEAD
@@ -37,7 +37,7 @@ const Page: () => {
         <div className="max-w-3xl mx-auto",
           <div className="mb-6 text-sm text-zion-slate-light">Automation • 8 min read • 2025-10-01</div>",
           <h1 className="text-4xl font-bold mb-4">Intelligent Automation Breakthrough 2025</h1>",
-          <p className="text-zion-slate-light mb-6",;,"
+          <p className="text-zion-slate-light mb-6",,"
 =======
       <div className= "container mx-auto px-6 py-12>
         <div className= "max-w-3xl mx-auto>
@@ -65,7 +65,7 @@ const Page: () => {
 
 <<<<<<< HEAD
             <h2 className="text-2xl font-semibold">Measuring Outcomes</h2>",
-            <p className="text-zion-slate-light",;,"
+            <p className="text-zion-slate-light",,"
   Track time‑to‑resolution, cost per action, incident avoidance, and value realized—not just tasks completed.
             </p>
 

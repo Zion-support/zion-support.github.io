@@ -1,22 +1,21 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Calendar, Clock, User, Mail, Phone, CheckCircle, Star, Play } from 'lucide-react';
+import React, { useState } from 'react;
+import { Link } from 'react-router-dom;
+import { Calendar, Clock, User, Mail, Phone, CheckCircle, Star, Play } from 'lucide-react;
 ;
 const Demo: React.FC = () => {
   const [formData, setFormData] = useState({
-    firstName: '',';,';,
-    lastName: '',';,';,
-    email: '',';,';,
-    company: '',';,';,
-    phone: '',';,';,
-    jobTitle: '',';,';,
-    companySize: '',';,';,
-    useCase: '',';,';,
-    preferredDate: '',';,';,
-    preferredTime: '',';,';,
-    timeZone: '',';,';,
-    message: '',';,
-  });
+    firstName: '',',',
+    lastName: '',',',
+    email: '',',',
+    company: '',',',
+    phone: '',',',
+    jobTitle: '',',',
+    companySize: '',',',
+    useCase: '',',',
+    preferredDate: '',',',
+    preferredTime: '',',',
+    timeZone: '',',',
+    message: '});
 
   const handleInputChange: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>)  => {,,
   setFormData({
@@ -27,76 +26,70 @@ const Demo: React.FC = () => {
 
   const handleSubmit: (e: React.FormEvent)  => {,,
   e.preventDefault();
-    console.log('Form submitted: ', formData);';,';,
-  };
+    console.log('Form submitted: ', formData);};
 
   const demoFeatures: [,
     {
-      title: 'AI-Powered Automation',';,';,
-      description: 'See how our AI can automate your repetitive tasks and workflows',';,';,
-      icon: '🤖',';,
-    },
+      title: 'AI-Powered Automation',',',
+      description: 'See how our AI can automate your repetitive tasks and workflows',',',
+      icon: '🤖},
     {
-      title: 'Real-time Analytics',';,';,
-      description: 'Experience our advanced analytics and reporting capabilities',';,';,
-      icon: '📊',';,
-    },
+      title: 'Real-time Analytics',',',
+      description: 'Experience our advanced analytics and reporting capabilities',',',
+      icon: '📊},
     {
-      title: 'Custom Integrations',';,';,
-      description: 'Learn how we can integrate with your existing systems',';,';,
-      icon: '🔗',';,
-    },
+      title: 'Custom Integrations',',',
+      description: 'Learn how we can integrate with your existing systems',',',
+      icon: '🔗},
     {
-      title: 'Security & Compliance',';,';,
-      description: 'Understand our enterprise-grade security and compliance features',';,';,
-      icon: '🔒',';,
-    }
+      title: 'Security & Compliance',',',
+      description: 'Understand our enterprise-grade security and compliance features',',',
+      icon: '🔒}
   ];
 
   const testimonials: [,
     {
-      name: 'Sarah Johnson',';,';,
-      company: 'TechCorp',';,';,
-      role: 'CTO',';,';,
-      content: 'The demo showed us exactly how AI could transform our operations. The ROI was clear from day one.',';,';,
+      name: 'Sarah Johnson',',',
+      company: 'TechCorp',',',
+      role: 'CTO',',',
+      content: 'The demo showed us exactly how AI could transform our operations. The ROI was clear from day one.',',',
       rating: 5,
     },
     {
-      name: 'Michael Chen',';,';,
-      company: 'FinanceFlow',';,';,
-      role: 'VP of Operations',';,';,
+      name: 'Michael Chen',',',
+      company: 'FinanceFlow',',',
+      role: 'VP of Operations',',',
       content: "Zion Tech Group's demo was eye-opening. We saw immediate value and signed up the same week.",
       rating: 5,
     },
     {
-      name: 'Emily Rodriguez',';,';,
-      company: 'HealthTech Solutions',';,';,
-      role: 'CEO',';,';,
-      content: 'The personalized demo addressed all our specific needs. Highly recommend scheduling one.',';,';,
+      name: 'Emily Rodriguez',',',
+      company: 'HealthTech Solutions',',',
+      role: 'CEO',',',
+      content: 'The personalized demo addressed all our specific needs. Highly recommend scheduling one.',',',
       rating: 5,
     }
   ];
 
   const timeSlots: [,
-    '9: 00 AM', '10:00 AM', '11:00 AM', '12:00 PM',';,';,
-    '1: 00 PM', '2:00 PM', '3:00 PM', '4:00 PM',';,
-  ];
+    '9: 00 AM', '10:00 AM', '11:00 AM', '12:00 PM',',',
+    '1: 00 PM', '2:00 PM', '3:00 PM', '4:00 PM];
 
   const companySizes: [,
-    '1-10 employees',';';
-    '11-50 employees',';';
-    '51-200 employees',';';
-    '201-1000 employees',';';
+    '1-10 employees',
+    '11-50 employees',
+    '51-200 employees',
+    '201-1000 employees',
     '1000+ employees'
   ];
 
   const useCases: [,
-    'Process Automation',';';
-    'Data Analytics',';';
-    'Customer Service',';';
-    'Supply Chain Optimization',';';
-    'Predictive Maintenance',';';
-    'Document Processing',';';
+    'Process Automation',
+    'Data Analytics',
+    'Customer Service',
+    'Supply Chain Optimization',
+    'Predictive Maintenance',
+    'Document Processing',
     'Other'
   ];
 
@@ -115,15 +108,15 @@ const Demo: React.FC = () => {
             </p>
             <div className="flex items-center justify-center space-x-8 text-blue-100"
               <div className="flex items-center"
-                <Calendar className="w-5 h-5 mr-2" />"
+                <Calendar className="w-5 h-5 mr-2/>"
                 <span >30 minutes</span>
               </div>
               <div className="flex items-center"
-                <User className="w-5 h-5 mr-2" />"
+                <User className="w-5 h-5 mr-2/>"
                 <span >1-on-1 with expert</span>
               </div>
               <div className="flex items-center"
-                <Play className="w-5 h-5 mr-2" />"
+                <Play className="w-5 h-5 mr-2/>"
     <div className= "min-h-screen bg-gray-50">
       {/* Hero Section */}
       <section className= "bg-gradient-to-br from-blue-600 via-purple-600 to-teal-600 text-white py-20">
@@ -138,15 +131,15 @@ const Demo: React.FC = () => {
             </p>
             <div className= "flex items-center justify-center space-x-8 text-blue-100">
               <div className= "flex items-center">
-                <Calendar className= "w-5 h-5 mr-2" />"
+                <Calendar className= "w-5 h-5 mr-2/>"
                 <span >30 minutes</span>
               </div>
               <div className= "flex items-center">
-                <User className= "w-5 h-5 mr-2" />"
+                <User className= "w-5 h-5 mr-2/>"
                 <span >1-on-1 with expert</span>
               </div>
               <div className= "flex items-center">
-                <Play className= "w-5 h-5 mr-2" />"
+                <Play className= "w-5 h-5 mr-2/>"
                 <span >Live demonstration</span>
               </div>
             </div>
@@ -159,14 +152,14 @@ const Demo: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
           <div className="text-center mb-16"
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">,"
-  What You'll See in the Demo';';
+  What You'll See in the Demo;
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">,"
       <section className= "py-20 bg-white">
         <div className= "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className= "text-center mb-16">
             <h2 className= "text-3xl md:text-4xl font-bold text-gray-900 mb-4">,"
-  What You'll See in the Demo';';
+  What You'll See in the Demo;
             </h2>
             <p className= "text-xl text-gray-600 max-w-2xl mx-auto">,"
   Get a comprehensive overview of our AI solutions tailored to your business
@@ -208,7 +201,7 @@ const Demo: React.FC = () => {
   Book Your Demo
               </h2>
               <p className= "text-gray-600">,"
-  Fill out the form below and we'll contact you to schedule your personalized demo';';
+  Fill out the form below and we'll contact you to schedule your personalized demo;
               </p>
             </div>
 
@@ -488,7 +481,7 @@ const Demo: React.FC = () => {
                   Schedule My Demo
                 </button>
                 <p className= "text-sm text-gray-500 mt-4">
-                  * Required fields. We'll contact you within 24 hours to confirm your demo time.';';
+                  * Required fields. We'll contact you within 24 hours to confirm your demo time.;
                 </p>
               </div>
             </form>
@@ -520,7 +513,7 @@ const Demo: React.FC = () => {
               <div key={index} className="bg-gray-50 rounded-lg p-8"
                 <div className="flex items-center mb-4"
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />"
+                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current/>"
                   ))}
                 </div>
                 <p className="text-gray-700 mb-6 italic"{testimonial.content}"</p>";"
@@ -532,7 +525,7 @@ const Demo: React.FC = () => {
               <div key={index} className= "bg-gray-50 rounded-lg p-8">
                 <div className= "flex items-center mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className= "w-5 h-5 text-yellow-400 fill-current" />"
+                    <Star key={i} className= "w-5 h-5 text-yellow-400 fill-current/>"
                   ))}
                 </div>
                 <p className= "text-gray-700 mb-6 italic">"{testimonial.content}"</p>";"
@@ -586,30 +579,28 @@ const Demo: React.FC = () => {
 };
 
 export default Demo;
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Calendar, Clock, User, Mail, Phone, CheckCircle, Star, Play } from 'lucide-react'';
-import { Helmet } from 'react-helmet-async';
+import React, { useState } from 'react;
+import { Link } from 'react-router-dom;
+import { Calendar, Clock, User, Mail, Phone, CheckCircle, Star, Play } from 'lucide-react;
+import { Helmet } from 'react-helmet-async;
 ;
 const Demo: React.FC = () => {
   const [formData, setFormData] = useState({
-    firstName: '',';,';,
-    lastName: '',';,';,
-    email: '',';,';,
-    phone: '',';,';,
-    company: '',';,';,
-    useCase: '',';,';,
-    preferredTime: '',';,';,
-    timeZone: '',';,';,
-    message: '',';,
-  });
+    firstName: '',',',
+    lastName: '',',',
+    email: '',',',
+    phone: '',',',
+    company: '',',',
+    useCase: '',',',
+    preferredTime: '',',',
+    timeZone: '',',',
+    message: '});
 
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleInputChange: (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>)  => {,,
   const { name, value } = e.target;
-    setFormData(prev: > ({,
-      ...prev
+    setFormData(prev: > ({ ...prev
       [name]: value
     }));
   };
@@ -617,43 +608,41 @@ const Demo: React.FC = () => {
   const handleSubmit: (e: React.FormEvent)  => {,,
   e.preventDefault();
     // Handle form submission here
-    console.log('Demo request submitted: ', formData);';,';,
+    console.log('Demo request submitted: ', formData);',',
     setIsSubmitted(true);
   };
 
   const useCases: [,
-    'AI Automation',';';
-    'Cybersecurity Solutions',';';
-    'Cloud Infrastructure',';';
-    'Data Analytics',';';
-    'DevOps Services',';';
-    'Digital Transformation',';';
+    'AI Automation',
+    'Cybersecurity Solutions',
+    'Cloud Infrastructure',
+    'Data Analytics',
+    'DevOps Services',
+    'Digital Transformation',
     'Other'
   ];
 
   const timeSlots: [,
-    '9: 00 AM - 10:00 AM',';,';,
-    '10: 00 AM - 11:00 AM',';,';,
-    '11: 00 AM - 12:00 PM',';,';,
-    '1: 00 PM - 2:00 PM',';,';,
-    '2: 00 PM - 3:00 PM',';,';,
-    '3: 00 PM - 4:00 PM',';,';,
-    '4: 00 PM - 5:00 PM',';,
-  ];
+    '9: 00 AM - 10:00 AM',',',
+    '10: 00 AM - 11:00 AM',',',
+    '11: 00 AM - 12:00 PM',',',
+    '1: 00 PM - 2:00 PM',',',
+    '2: 00 PM - 3:00 PM',',',
+    '3: 00 PM - 4:00 PM',',',
+    '4: 00 PM - 5:00 PM];
 
   if (isSubmitted) {
     return (
       <>
         <Helmet >
           <title >Demo Request Submitted - Zion Tech Group</title>
-          <meta name: "description", content ="Thank you for requesting a demo. We'll contact you soon to schedule your personalized demonstration." />"
-          <meta name="description" content="Thank you for requesting a demo. We'll contact you soon to schedule your personalized demonstration." />
-        </Helmet>
+          <meta name: "description", content ="Thank you for requesting a demo. We'll contact you soon to schedule your personalized demonstration./>"
+          <meta name="description" content="Thank you for requesting a demo. We'll contact you soon to schedule your personalized demonstration." /></Helmet>
 
         <div className="min-h-screen bg-gray-50 flex items-center justify-center"
           <div className="max-w-md mx-auto text-center"
             <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6"
-              <CheckCircle className="h-8 w-8 text-green-600" />"
+              <CheckCircle className="h-8 w-8 text-green-600/>"
             </div>
             <h1 className="text-3xl font-bold text-gray-900 mb-4">,"
   Demo Request Submitted!
@@ -667,7 +656,7 @@ const Demo: React.FC = () => {
         <div className= "min-h-screen bg-gray-50 flex items-center justify-center">
           <div className= "max-w-md mx-auto text-center">
             <div className= "w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-              <CheckCircle className= "h-8 w-8 text-green-600" />"
+              <CheckCircle className= "h-8 w-8 text-green-600/>"
             </div>
             <h1 className= "text-3xl font-bold text-gray-900 mb-4">,"
   Demo Request Submitted!
@@ -698,12 +687,9 @@ const Demo: React.FC = () => {
     <>
       <Helmet >
         <title >Request a Demo - Zion Tech Group</title>
-        <meta name: "description", content="Schedule a personalized demonstration of our AI and IT solutions. See how our technology can transform your business." />"
-        <meta name: "keywords", content ="demo, demonstration, AI solutions, technology showcase, business transformation" />"
-        <link rel: "canonical", href ="https://ziontechgroup.com/demo" />"
-        <meta name="description" content="Schedule a personalized demonstration of our AI and IT solutions. See how our technology can transform your business." />
-        <meta name: "keywords", content="demo, demonstration, AI solutions, technology showcase, business transformation" />
-        <link rel: "canonical", href ="https://ziontechgroup.com/demo" />
+        <meta name: "description", content="Schedule a personalized demonstration of our AI and IT solutions. See how our technology can transform your business." /><meta name: "keywords", content ="demo, demonstration, AI solutions, technology showcase, business transformation/>"
+        <link rel: "canonical", href ="https://ziontechgroup.com/demo/>"
+        <meta name="description" content="Schedule a personalized demonstration of our AI and IT solutions. See how our technology can transform your business." /><meta name: "keywords", content="demo, demonstration, AI solutions, technology showcase, business transformation" /><link rel: "canonical", href ="https://ziontechgroup.com/demo/>
       </Helmet>
 
       <div className="min-h-screen bg-gray-50"
@@ -719,15 +705,15 @@ const Demo: React.FC = () => {
               </p>
               <div className="flex items-center justify-center space-x-8 text-sm"
                 <div className="flex items-center"
-                  <Clock className="h-4 w-4 mr-2" />,"
+                  <Clock className="h-4 w-4 mr-2/>,"
   30-minute session
                 </div>
                 <div className="flex items-center"
-                  <User className="h-4 w-4 mr-2" />,"
+                  <User className="h-4 w-4 mr-2/>,"
   Expert presenter
                 </div>
                 <div className="flex items-center"
-                  <Star className="h-4 w-4 mr-2" />,"
+                  <Star className="h-4 w-4 mr-2/>,"
       <div className= "min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className= "bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
@@ -741,15 +727,15 @@ const Demo: React.FC = () => {
               </p>
               <div className= "flex items-center justify-center space-x-8 text-sm">
                 <div className= "flex items-center">
-                  <Clock className= "h-4 w-4 mr-2" />,"
+                  <Clock className= "h-4 w-4 mr-2/>,"
   30-minute session
                 </div>
                 <div className= "flex items-center">
-                  <User className= "h-4 w-4 mr-2" />,"
+                  <User className= "h-4 w-4 mr-2/>,"
   Expert presenter
                 </div>
                 <div className= "flex items-center">
-                  <Star className= "h-4 w-4 mr-2" />,"
+                  <Star className= "h-4 w-4 mr-2/>,"
   Customized demo
                 </div>
               </div>
@@ -774,7 +760,7 @@ const Demo: React.FC = () => {
   Schedule Your Demo
                 </h2>
                 <p className= "text-gray-600">,"
-  Fill out the form below and we'll contact you to schedule your personalized demonstration.';';
+  Fill out the form below and we'll contact you to schedule your personalized demonstration.;
                 </p>
               </div>
 
@@ -966,7 +952,7 @@ const Demo: React.FC = () => {
                   <button type="submit",
   className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors",
                   >
-                    <Play className="mr-2 h-5 w-5" />,"
+                    <Play className="mr-2 h-5 w-5/>,"
                     placeholder="Tell us about your specific needs, challenges, or questions...",
                     className= "w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500",
                   />
@@ -976,7 +962,7 @@ const Demo: React.FC = () => {
                   <button type="submit",
   className= "inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors",
                   >
-                    <Play className= "mr-2 h-5 w-5" />,"
+                    <Play className= "mr-2 h-5 w-5/>,"
   Request Demo
                   </button>
                 </div>
@@ -1007,7 +993,7 @@ const Demo: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8"
               <div className="text-center"
                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4"
-                  <User className="h-8 w-8 text-blue-600" />"
+                  <User className="h-8 w-8 text-blue-600/>"
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">,"
   Personalized Experience
@@ -1016,7 +1002,7 @@ const Demo: React.FC = () => {
             <div className= "grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className= "text-center">
                 <div className= "w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <User className= "h-8 w-8 text-blue-600" />"
+                  <User className= "h-8 w-8 text-blue-600/>"
                 </div>
                 <h3 className= "text-xl font-semibold text-gray-900 mb-2">,"
   Personalized Experience
@@ -1028,7 +1014,7 @@ const Demo: React.FC = () => {
 
               <div className="text-center"
                 <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4"
-                  <CheckCircle className="h-8 w-8 text-green-600" />"
+                  <CheckCircle className="h-8 w-8 text-green-600/>"
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">,"
   Real-World Examples
@@ -1036,7 +1022,7 @@ const Demo: React.FC = () => {
                 <p className="text-gray-600">,"
               <div className= "text-center">
                 <div className= "w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <CheckCircle className= "h-8 w-8 text-green-600" />"
+                  <CheckCircle className= "h-8 w-8 text-green-600/>"
                 </div>
                 <h3 className= "text-xl font-semibold text-gray-900 mb-2">,"
   Real-World Examples
@@ -1048,7 +1034,7 @@ const Demo: React.FC = () => {
 
               <div className="text-center"
                 <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4"
-                  <Mail className="h-8 w-8 text-purple-600" />"
+                  <Mail className="h-8 w-8 text-purple-600/>"
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">,"
   Expert Q&A
@@ -1056,7 +1042,7 @@ const Demo: React.FC = () => {
                 <p className="text-gray-600">,"
               <div className= "text-center">
                 <div className= "w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Mail className= "h-8 w-8 text-purple-600" />"
+                  <Mail className= "h-8 w-8 text-purple-600/>"
                 </div>
                 <h3 className= "text-xl font-semibold text-gray-900 mb-2">,"
   Expert Q&A

@@ -1,5 +1,4 @@
-import React from 'react';
-
+import React from 'react;
 const SEOSplitTesting: React.FC = () => {
   return (
     <section className="max-w-5xl mx-auto">

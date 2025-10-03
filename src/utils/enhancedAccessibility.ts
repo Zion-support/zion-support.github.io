@@ -156,8 +156,8 @@ class EnhancedAccessibility {
     const announcement = document.createElement('div');
     announcement.setAttribute('aria-live', 'polite');
     announcement.setAttribute('aria-atomic', 'true');
-    announcement.className = 'sr-only';
-    announcement.id = 'announcements';
+    announcement.className = 'sr-only;
+    announcement.id = 'announcements;
     document.body.appendChild(announcement);
   }
 
@@ -175,7 +175,7 @@ class EnhancedAccessibility {
 
   private addSkipLinks(): void {
     const skipLinks = document.createElement('div');
-    skipLinks.className = 'skip-links';
+    skipLinks.className = 'skip-links;
     skipLinks.innerHTML = `
       <a href="#main-content" class="skip-link">Skip to main content</a>
       <a href="#navigation" class="skip-link">Skip to navigation</a>
@@ -243,8 +243,7 @@ class EnhancedAccessibility {
     if (!this.config.enableTextScaling) return;
 
     // Support for text scaling
-    document.body.style.fontSize = '100%';
-    
+    document.body.style.fontSize = '100%;
     // Listen for text scaling changes
     const observer = new ResizeObserver(() => {
       this.updateTextScaling();
@@ -292,8 +291,8 @@ class EnhancedAccessibility {
       const rect = element.getBoundingClientRect();
       
       if (rect.width < 44 || rect.height < 44) {
-        element.style.minWidth = '44px';
-        element.style.minHeight = '44px';
+        element.style.minWidth = '44px;
+        element.style.minHeight = '44px;
       }
     });
   }

@@ -1,6 +1,19 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
-import { FileText, Zap, Shield, BarChart3, Users, Settings } from "lucide-react";
+import { 
+  FileText, 
+  Zap, 
+  Shield, 
+  BarChart3, 
+  Users, 
+  Settings,
+  Rocket, 
+  CheckCircle, 
+  ArrowRight, 
+  Lock, 
+  TrendingUp, 
+  Database 
+} from "lucide-react";
 
 const AIMicroSAAS: React.FC = () => {
   const microSaaSProducts = [
@@ -153,13 +166,14 @@ const AIMicroSAAS: React.FC = () => {
                   <ul className="space-y-2 mb-6">
                     {product.features.map((feature, index) => (
                       <li key={index} className="flex items-start">
-                        <span className="text-green-500 mr-2">✓</span>
+                        <CheckCircle className="text-green-500 mr-2 mt-0.5 w-4 h-4 flex-shrink-0" />
                         <span className="text-gray-600 text-sm">{feature}</span>
                       </li>
                     ))}
                   </ul>
-                  <button className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                  <button className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors flex items-center justify-center">
                     Get Started
+                    <ArrowRight className="ml-2 w-4 h-4" />
                   </button>
                 </div>
               ))}
@@ -176,7 +190,7 @@ const AIMicroSAAS: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="text-center">
                 <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Zap className="w-8 h-8 text-blue-600" />
+                  <Rocket className="w-8 h-8 text-blue-600" />
                 </div>
                 <h3 className="text-xl font-bold mb-3">Rapid Deployment</h3>
                 <p className="text-gray-600">
@@ -185,7 +199,7 @@ const AIMicroSAAS: React.FC = () => {
               </div>
               <div className="text-center">
                 <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Shield className="w-8 h-8 text-green-600" />
+                  <Lock className="w-8 h-8 text-green-600" />
                 </div>
                 <h3 className="text-xl font-bold mb-3">Enterprise Security</h3>
                 <p className="text-gray-600">
@@ -194,7 +208,7 @@ const AIMicroSAAS: React.FC = () => {
               </div>
               <div className="text-center">
                 <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <BarChart3 className="w-8 h-8 text-purple-600" />
+                  <TrendingUp className="w-8 h-8 text-purple-600" />
                 </div>
                 <h3 className="text-xl font-bold mb-3">Scalable Architecture</h3>
                 <p className="text-gray-600">
@@ -219,15 +233,19 @@ const AIMicroSAAS: React.FC = () => {
                 </p>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
                   <div className="bg-gray-50 p-4 rounded-lg">
+                    <Database className="w-8 h-8 text-blue-600 mx-auto mb-2" />
                     <div className="text-sm font-medium text-gray-700">CRM Systems</div>
                   </div>
                   <div className="bg-gray-50 p-4 rounded-lg">
+                    <Settings className="w-8 h-8 text-green-600 mx-auto mb-2" />
                     <div className="text-sm font-medium text-gray-700">Project Management</div>
                   </div>
                   <div className="bg-gray-50 p-4 rounded-lg">
+                    <Users className="w-8 h-8 text-purple-600 mx-auto mb-2" />
                     <div className="text-sm font-medium text-gray-700">Communication Tools</div>
                   </div>
                   <div className="bg-gray-50 p-4 rounded-lg">
+                    <BarChart3 className="w-8 h-8 text-orange-600 mx-auto mb-2" />
                     <div className="text-sm font-medium text-gray-700">Analytics Platforms</div>
                   </div>
                 </div>

@@ -13,8 +13,8 @@ export interface ErrorInfo {
   url: string;
   userId?: string;
   sessionId?: string;
-  severity: 'low' | 'medium' | 'high' | 'critical';
-  category: 'javascript' | 'network' | 'resource' | 'promise' | 'react' | 'unknown';
+  severity: 'low' | 'medium' | 'high' | 'critical;
+  category: 'javascript' | 'network' | 'resource' | 'promise' | 'react' | 'unknown;
 }
 
 export interface ErrorReport {
@@ -68,26 +68,24 @@ class EnhancedErrorHandler {
   }
 
   private determineSeverity(error: any): 'low' | 'medium' | 'high' | 'critical' {
-    if (!error) return 'low';
-
-    const message = error.message?.toLowerCase() || '';
-    
+    if (!error) return 'low;
+    const message = error.message?.toLowerCase() || ;
     // Critical errors
     if (message.includes('chunk') || message.includes('loading') || message.includes('network')) {
-      return 'critical';
+      return 'critical;
     }
     
     // High severity errors
     if (message.includes('syntax') || message.includes('reference') || message.includes('type')) {
-      return 'high';
+      return 'high;
     }
     
     // Medium severity errors
     if (message.includes('warning') || message.includes('deprecated')) {
-      return 'medium';
+      return 'medium;
     }
     
-    return 'low';
+    return 'low;
   }
 
   private handleError(errorInfo: ErrorInfo): void {

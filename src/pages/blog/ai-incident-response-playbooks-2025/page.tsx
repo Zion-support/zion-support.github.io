@@ -1,6 +1,5 @@
-import React from 'react';
-import React from 'react';'
-
+import React from 'react;
+import React from 'react;
 const AIIncidentResponsePlaybooks2025: React.FC = () => {
   return (
 <<<<<<< HEAD
@@ -21,14 +20,14 @@ const AIIncidentResponsePlaybooks2025: React.FC = () => {
             <span >7 min read</span>
           </div>
 <<<<<<< HEAD
-          <h1 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6",;,"
+          <h1 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6",,"
   AI Incident Response Playbooks: Contain in &lt;60s with Confidence,,
           </h1>
           <p className="text-xl text-gray-600 leading-relaxed"
-          <h1 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6",;,"
+          <h1 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6",,"
   AI Incident Response Playbooks: Contain in &lt;60s with Confidence,,
           </h1>
-          <p className="text-xl text-gray-600 leading-relaxed",;,"
+          <p className="text-xl text-gray-600 leading-relaxed",,"
 =======
           <h1 className= "text-4xl md: text-5xl font-bold text-gray-900 mb-6">"
   AI Incident Response Playbooks: Contain in &lt;60s with Confidence,,
@@ -68,7 +67,7 @@ const AIIncidentResponsePlaybooks2025: React.FC = () => {
 =======
           <pre className= "text-sm overflow-x-auto">
 >>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
-{`playbook: name: contain-compromised-credential,,`;,`;
+{`playbook: name: contain-compromised-credential,,`,`;
   budget: low,,,
   approvals: - security_oncall,,,
   steps: - verify_signal: oidc-anomaly,,
@@ -83,7 +82,7 @@ const AIIncidentResponsePlaybooks2025: React.FC = () => {
 =======
           <pre className= "text-sm overflow-x-auto>
 >>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
-{`playbook: name: contain-compromised-credential,`,`;,`;
+{`playbook: name: contain-compromised-credential,`,`,`;
   budget: low,,,
   approvals: - security_oncall,,,
   steps: - verify_signal: oidc-anomaly,,,
@@ -112,7 +111,7 @@ const AIIncidentResponsePlaybooks2025: React.FC = () => {
 <<<<<<< HEAD
         <div className="mt-12 text-center bg-gray-900 text-white rounded-lg p-8",
           <h2 className="text-2xl font-bold mb-4">Ready to Operationalize Playbooks?</h2>",
-          <p className="text-gray-300 mb-6",;,"
+          <p className="text-gray-300 mb-6",,"
   We help teams design budgeted actions, wire approvals, and ship safe automations fast.
           </p>
           <div className="flex flex-wrap justify-center gap-4"

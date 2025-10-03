@@ -1,13 +1,8 @@
 import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { Brain, TrendingUp, Shield, Cloud, BarChart3, Database, Users, Target, Zap, Rocket, Globe, Phone, Mail, MapPin, ArrowRight, Server } from 'lucide-react';
 
-export const metadata: Metadata = {
-  title: 'Zion Tech Group - Revolutionary AI Solutions for Enterprise',
-  description: 'Transform your business with Meta-Cognitive AI, Quantum-Neural Networks, and Autonomous Operations. Experience 2000x processing speed and 99.9% automation rates.',
-  keywords: 'AI, Enterprise AI, Quantum Computing, Autonomous Operations, Meta-Cognitive AI, Zion Tech Group',
-};
+// Metadata would be handled by React Router or a head management library
 
 export default function HomePage() {
   return (
@@ -37,19 +32,19 @@ export default function HomePage() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link 
-                href="/contact" 
+                to="/contact" 
                 className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
               >
                 Get Started Today
               </Link>
               <Link 
-                href="/services" 
+                to="/services" 
                 className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
               >
                 Explore Our Services →
               </Link>
               <a 
-                href="tel:+13024640950" 
+                to="tel:+13024640950" 
                 className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
               >
                 Call: +1 302 464 0950
@@ -107,7 +102,7 @@ export default function HomePage() {
                 <li>• Quantum parallelism</li>
               </ul>
               <Link 
-                href="/blog/ai-2026-june-mega-breakthrough-revolution"
+                to="/blog/ai-2026-june-mega-breakthrough-revolution"
                 className="inline-block bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
               >
                 Learn More →
@@ -128,7 +123,7 @@ export default function HomePage() {
                 <li>• Complete enterprise autonomy</li>
               </ul>
               <Link 
-                href="/blog/ai-2026-quantum-consciousness-autonomous-enterprise"
+                to="/blog/ai-2026-quantum-consciousness-autonomous-enterprise"
                 className="inline-block bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
               >
                 Get Guide →
@@ -149,7 +144,7 @@ export default function HomePage() {
                 <li>• 4200% ROI</li>
               </ul>
               <Link 
-                href="/case-studies/fortune-500-ai-2026-mega-transformation-success"
+                to="/case-studies/fortune-500-ai-2026-mega-transformation-success"
                 className="inline-block bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
               >
                 View Case Study →
@@ -263,7 +258,7 @@ export default function HomePage() {
           {/* New Comprehensive Services Links */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
             <Link 
-              href="/services/comprehensive-micro-saas-solutions" 
+              to="/services/comprehensive-micro-saas-solutions" 
               className="bg-gradient-to-br from-cyan-50 to-blue-100 p-8 rounded-xl border border-cyan-200 hover:shadow-lg transition-all duration-300"
             >
               <div className="flex items-center mb-4">
@@ -288,7 +283,7 @@ export default function HomePage() {
             </Link>
 
             <Link 
-              href="/services/comprehensive-it-services" 
+              to="/services/comprehensive-it-services" 
               className="bg-gradient-to-br from-purple-50 to-indigo-100 p-8 rounded-xl border border-purple-200 hover:shadow-lg transition-all duration-300"
             >
               <div className="flex items-center mb-4">
@@ -326,14 +321,14 @@ export default function HomePage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
-              href="/contact" 
+              to="/contact" 
               className="inline-flex items-center justify-center px-6 md:px-8 py-3 md:py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 text-sm md:text-base"
             >
               Get Started Today
               <Rocket className="ml-2 w-4 md:w-5 h-4 md:h-5" />
             </Link>
             <Link 
-              href="/services" 
+              to="/services" 
               className="inline-flex items-center justify-center px-6 md:px-8 py-3 md:py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 text-sm md:text-base"
             >
               Explore Solutions
@@ -360,7 +355,7 @@ export default function HomePage() {
                 <Phone className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>
-              <a href="tel:+13024640950" className="text-blue-100 hover:text-white transition-colors font-medium">
+              <a to="tel:+13024640950" className="text-blue-100 hover:text-white transition-colors font-medium">
                 +1 302 464 0950
               </a>
             </div>
@@ -370,7 +365,7 @@ export default function HomePage() {
                 <Mail className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">Email Us</h3>
-              <a href="mailto:kleber@ziontechgroup.com" className="text-blue-100 hover:text-white transition-colors font-medium">
+              <a to="mailto:kleber@ziontechgroup.com" className="text-blue-100 hover:text-white transition-colors font-medium">
                 kleber@ziontechgroup.com
               </a>
             </div>
@@ -380,7 +375,7 @@ export default function HomePage() {
                 <Globe className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-lg font-semibold text-white mb-2">Visit Us</h3>
-              <a href="https://ziontechgroup.com" className="text-blue-100 hover:text-white transition-colors font-medium">
+              <a to="https://ziontechgroup.com" className="text-blue-100 hover:text-white transition-colors font-medium">
                 ziontechgroup.com
               </a>
             </div>
@@ -400,14 +395,14 @@ export default function HomePage() {
           <div className="text-center">
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                href="/contact" 
+                to="/contact" 
                 className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 shadow-lg"
               >
                 Get Free Consultation
                 <Rocket className="ml-2 w-5 h-5" />
               </Link>
               <Link 
-                href="/services" 
+                to="/services" 
                 className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300"
               >
                 Explore All Services
@@ -428,19 +423,19 @@ export default function HomePage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                href="/contact" 
+                to="/contact" 
                 className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
               >
                 Get Started Today
               </Link>
               <Link 
-                href="/services" 
+                to="/services" 
                 className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
               >
                 Explore Our Services →
               </Link>
               <a 
-                href="tel:+13024640950" 
+                to="tel:+13024640950" 
                 className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
               >
                 Call: +1 302 464 0950
@@ -451,13 +446,13 @@ export default function HomePage() {
             <div className="mt-8 text-center">
               <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-4">
                 <a 
-                  href="tel:+13024640950" 
+                  to="tel:+13024640950" 
                   className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/20 transition-colors"
                 >
                   📞 +1 302 464 0950
                 </a>
                 <a 
-                  href="mailto:kleber@ziontechgroup.com" 
+                  to="mailto:kleber@ziontechgroup.com" 
                   className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/20 transition-colors"
                 >
                   ✉️ kleber@ziontechgroup.com
@@ -465,10 +460,10 @@ export default function HomePage() {
               </div>
               <div className="text-sm text-gray-300 space-y-1">
                 <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
-                <p>🌐 Website: <a href="https://ziontechgroup.com" className="text-blue-400 hover:underline">https://ziontechgroup.com</a></p>
+                <p>🌐 Website: <a to="https://ziontechgroup.com" className="text-blue-400 hover:underline">https://ziontechgroup.com</a></p>
                 <p className="text-xs text-gray-400">Available 24/7 for enterprise clients • Free consultation for projects over $10K</p>
               </div>
-              <Link href="/case-studies" className="text-blue-400 hover:underline">
+              <Link to="/case-studies" className="text-blue-400 hover:underline">
                 View $5.2B Success Story
               </Link>
             </div>

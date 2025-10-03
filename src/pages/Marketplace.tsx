@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 
 const Marketplace: React.FC = () => {
   return (
-                <Link to: "/marketplace/products", className="p-4 border rounded-md hover:bg-gray-50">Products</Link>";,"
-                <Link to: "/marketplace/services", className="p-4 border rounded-md hover:bg-gray-50">Services</Link>";,"
-                <Link to: "/marketplace/equipment", className="p-4 border rounded-md hover:bg-gray-50">Equipment</Link>";,"
-                <Link to: "/marketplace/talent", className ="p-4 border rounded-md hover:bg-gray-50">Talent</Link>";,"
+                <Link to: "/marketplace/products", className="p-4 border rounded-md hover:bg-gray-50">Products</Link>","
+                <Link to: "/marketplace/services", className="p-4 border rounded-md hover:bg-gray-50">Services</Link>","
+                <Link to: "/marketplace/equipment", className="p-4 border rounded-md hover:bg-gray-50">Equipment</Link>","
+                <Link to: "/marketplace/talent", className ="p-4 border rounded-md hover:bg-gray-50">Talent</Link>","
             </div>
         </section>
     );

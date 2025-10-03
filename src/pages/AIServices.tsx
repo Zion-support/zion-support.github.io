@@ -1,52 +1,44 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
+import React from 'react;
+import { Helmet } from 'react-helmet-async;
 const AIServices: React.FC = () => {
   const services = [
     {
       name: 'RAG Chatbots for Documents',
       price: '$2,000 - $8,000/mo',
       features: ['Secure retrieval', 'Multi-source connectors', 'Guardrails', 'Analytics dashboard'],
-      link: 'https://ziontechgroup.com/services/ai-services',
-    },
+      link: 'https://ziontechgroup.com/services/ai-services},
     {
       name: 'Intelligent Document Processing (IDP)',
       price: '$1,500 - $6,000/mo',
       features: ['OCR + layout parsing', 'Entity extraction', 'Validation flows', 'Export to ERP/CRM'],
-      link: 'https://ziontechgroup.com/services/ai-services',
-    },
+      link: 'https://ziontechgroup.com/services/ai-services},
     {
       name: 'AI-Powered Workflow Automation',
       price: '$3,000 - $12,000/mo',
       features: ['Process mining', 'RPA integration', 'Decision automation', 'Performance monitoring'],
-      link: 'https://ziontechgroup.com/services/ai-services',
-    },
+      link: 'https://ziontechgroup.com/services/ai-services},
     {
       name: 'Predictive Analytics & Forecasting',
       price: '$2,500 - $10,000/mo',
       features: ['Time series analysis', 'Anomaly detection', 'Custom models', 'Real-time insights'],
-      link: 'https://ziontechgroup.com/services/ai-services',
-    },
+      link: 'https://ziontechgroup.com/services/ai-services},
     {
       name: 'AI Content Generation & Optimization',
       price: '$1,000 - $5,000/mo',
       features: ['Multi-language support', 'Brand voice training', 'SEO optimization', 'Content analytics'],
-      link: 'https://ziontechgroup.com/services/ai-services',
-    },
+      link: 'https://ziontechgroup.com/services/ai-services},
     {
       name: 'Computer Vision & Image Processing',
       price: '$2,000 - $8,000/mo',
       features: ['Object detection', 'Image classification', 'Quality control', 'Automated tagging'],
-      link: 'https://ziontechgroup.com/services/ai-services',
-    }
+      link: 'https://ziontechgroup.com/services/ai-services}
   ];
 
   return (
     <>
       <Helmet>
         <title>AI Services - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive AI services including RAG chatbots, document processing, workflow automation, and predictive analytics for enterprise solutions." />
-      </Helmet>
+        <meta name="description" content="Comprehensive AI services including RAG chatbots, document processing, workflow automation, and predictive analytics for enterprise solutions." /></Helmet>
 
       <div className="min-h-screen bg-gray-50">
         {/* Header */}
