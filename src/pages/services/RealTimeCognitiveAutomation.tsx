@@ -1,9 +1,10 @@
+import React from "react";
 import { Link } from "react-router-dom";
 import Header from "../../../components/Header";
 import { Helmet } from "react-helmet-async";
 import { ArrowLeft, Brain, CheckCircle, Zap, TrendingUp, DollarSign, Rocket } from "lucide-react";
 
-const RealTimeCognitiveAutomation = () => {
+const RealTimeCognitiveAutomation: React.FC = () => {
   return (
     <>
       <Helmet>
