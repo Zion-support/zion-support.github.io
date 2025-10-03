@@ -32,17 +32,10 @@
       "@types/*": ["./src/types/*"]
     }
   },
-<<<<<<< HEAD
   "include": ["src", "app"],
   "exclude": [
     "app/blog/**/*",
     "app/components/**/*",
-=======
-  "include": ["src", "app"],
-  "exclude": [
-    "app/blog/**/*",
-    "app/components/**/*",
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7443
     "app/contact/**/*",
     "app/enterprise/**/*",
     "app/guides/**/*",
