@@ -1,12 +1,9 @@
-import React from 'react';
-import Head from 'next/head';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { 
-  Brain, Bot, Cpu, Eye, MessageSquare, FileText, 
-  BarChart3, Shield, Zap, Target, Lightbulb, Rocket,
-  CheckCircle, ArrowRight, Star, Award, Phone, Mail, MapPin,
-  Network, Database, Globe, Users, Settings, Activity,
-  Microscope, Layers, Workflow, Monitor, Lock, TrendingUp
+  Brain, Cpu, Eye, Shield, Target, Lightbulb, Rocket,
+  CheckCircle, Star, Phone, Mail, MapPin,
+  Network, Users, Microscope, Code
 } from 'lucide-react';
 
 export const metadata = {

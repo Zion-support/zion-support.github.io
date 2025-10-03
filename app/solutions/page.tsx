@@ -9,7 +9,13 @@ import {
   DollarSign,
   Factory,
   ShoppingCart,
-  Truck
+  Truck,
+  Brain,
+  Cpu,
+  BarChart3,
+  Cloud,
+  Database,
+  Rocket
 } from 'lucide-react';
 
 export const metadata = {
