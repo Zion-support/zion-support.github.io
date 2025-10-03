@@ -7,7 +7,6 @@ import { visualizer } from 'rollup-plugin-visualizer'
 export default defineConfig({
   plugins: [
     react({
-<<<<<<< HEAD
       jsxRuntime: 'automatic',
       babel: {
         plugins: [
@@ -15,9 +14,6 @@ export default defineConfig({
           ['@babel/plugin-proposal-decorators', { legacy: true }],
         ],
       },
-=======
-      jsxRuntime: 'automatic'
->>>>>>> cursor/fix-errors-and-merge-to-main-4add
     }),
     visualizer({
       filename: 'dist/stats.html',

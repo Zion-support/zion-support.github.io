@@ -9,33 +9,33 @@ import { Helmet } from 'react-helmet-async';
 export const seoUtils = {
   // Generate structured data for organization
   generateOrganizationSchema: () => ({
-    "@context": "https://schema.org
-    "@type": "Organization
-    "name": "Zion Tech Group
-    "url": "https://zion.app
-    "logo": "https://zion.app/logo.png
-    "description": "Advanced AI and IT Solutions for Enterprise
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Zion Tech Group",
+    "url": "https://zion.app",
+    "logo": "https://zion.app/logo.png",
+    "description": "Advanced AI and IT Solutions for Enterprise",
     "address": {
-      "@type": "PostalAddress
+      "@type": "PostalAddress",
       "addressCountry": "US"
     },
     "contactPoint": {
-      "@type": "ContactPoint
-      "telephone": "+1-XXX-XXX-XXXX
+      "@type": "ContactPoint",
+      "telephone": "+1-XXX-XXX-XXXX",
       "contactType": "customer service"
     },
     "sameAs": [
-      "https://twitter.com/ziontech
+      "https://twitter.com/ziontech",
       "https://linkedin.com/company/zion-tech"
     ]
   }),
 
   // Generate breadcrumb structured data
   generateBreadcrumbSchema: (items: Array<{name: string, url: string}>) => ({
-    "@context": "https://schema.org
-    "@type": "BreadcrumbList
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
     "itemListElement": items.map((item, index) => ({
-      "@type": "ListItem
+      "@type": "ListItem",
       "position": index + 1,
       "name": item.name,
       "item": item.url
@@ -44,13 +44,13 @@ export const seoUtils = {
 
   // Generate FAQ structured data
   generateFAQSchema: (faqs: Array<{question: string, answer: string}>) => ({
-    "@context": "https://schema.org
-    "@type": "FAQPage
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
     "mainEntity": faqs.map(faq => ({
-      "@type": "Question
+      "@type": "Question",
       "name": faq.question,
       "acceptedAnswer": {
-        "@type": "Answer
+        "@type": "Answer",
         "text": faq.answer
       }
     }))
@@ -58,7 +58,7 @@ export const seoUtils = {
 
   // Generate article structured data
   generateArticleSchema: (article: {
-    title= string;
+    title: string;
     description: string;
     author: string;
     datePublished: string;
@@ -66,12 +66,12 @@ export const seoUtils = {
     image?: string;
     url: string;
   }) => ({
-    "@context": "https://schema.org
-    "@type": "Article
+    "@context": "https://schema.org",
+    "@type": "Article",
     "headline": article.title,
     "description": article.description,
     "author": {
-      "@type": "Person
+      "@type": "Person",
       "name": article.author
     },
     "datePublished": article.datePublished,
@@ -79,10 +79,10 @@ export const seoUtils = {
     "image": article.image,
     "url": article.url,
     "publisher": {
-      "@type": "Organization
-      "name": "Zion Tech Group
+      "@type": "Organization",
+      "name": "Zion Tech Group",
       "logo": {
-        "@type": "ImageObject
+        "@type": "ImageObject",
         "url": "https://zion.app/logo.png"
       }
     }
@@ -203,17 +203,10 @@ export const performanceSEO = {
 // Analytics and tracking utilities
 export const analyticsUtils = {
   // Track page views
-<<<<<<< HEAD
   trackPageView: (url: string, title: string) => {
     if (typeof window !== 'undefined' && (window as Window & { gtag?: Function }).gtag) {
       (window as Window & { gtag: Function }).gtag('config', 'GA_MEASUREMENT_ID', {
         page_title: title,
-=======
-  trackPageView: (url: string, title= string) => {
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('config', 'GA_MEASUREMENT_ID', {
-        page_title= title,
->>>>>>> cursor/fix-errors-and-merge-to-main-075c
         page_location: url
       });
     }
@@ -231,7 +224,7 @@ export const analyticsUtils = {
     if (typeof window !== 'undefined' && (window as any).gtag) {
       (window as any).gtag('event', 'conversion', {
         send_to: conversionId,
-        value=value
+        value: value
       });
     }
   }
@@ -246,7 +239,7 @@ export const coreWebVitals = {
     const trackMetric = (metric: any) => {
       analyticsUtils.trackEvent('core_web_vitals', {
         metric_name: metric.name,
-        metric_value=Math.round(metric.value),
+        metric_value: Math.round(metric.value),
         metric_id: metric.id,
         metric_delta: metric.delta
       });
