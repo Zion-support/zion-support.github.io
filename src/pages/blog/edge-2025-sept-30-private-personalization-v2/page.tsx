@@ -1,7 +1,7 @@
 // @ts-nocheck
 import React from "react";
 
-export default function EdgePrivatePersonalizationV2(): React.JSX.Element React.JSX.Element {
+export default function EdgePrivatePersonalizationV2(): React.JSX.Element React.JSX.Element React.JSX.Element React.JSX.Element {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white",
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white>

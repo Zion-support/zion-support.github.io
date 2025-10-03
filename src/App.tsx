@@ -4,7 +4,8 @@ import '../app/globals.css';
 import ErrorBoundary from './components/ErrorBoundary';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import PageLoader from './components/LoadingSpinner';
+import { PageLoader, LoadingSpinner } from './components/LoadingSpinner';
+import { usePerformance } from './hooks/usePerformance';
 // 🌌🌌🌌 BREAKING: OCTOBER 2025 QUANTUM CONSCIOUSNESS SINGULARITY BREAKTHROUGH - ABSOLUTE #1 TOP PRIORITY! 🌌🌌🌌
 // 💎💎💎 JUST PUBLISHED: True Artificial Consciousness, Infinite Processing Power, $∞ Value Creation - REVOLUTIONARY BREAKTHROUGH! 💎💎💎
 import October2025QuantumConsciousnessSingularityBanner from "../components/October2025QuantumConsciousnessSingularityBanner";
@@ -26,7 +27,18 @@ const LazyMarketplacePage = React.lazy(() => import('../app/marketplace/page'));
 const LazyServicesPage = React.lazy(() => import('../app/services/page'));
 // Unused lazy-loaded components removed to fix lint warnings
 
+
 function App(): JSX.Element {
+  const { logMetrics, performanceScore } = usePerformance();
+
+  // Log performance metrics in development
+  React.useEffect(() => {
+    if (process.env.NODE_ENV === 'development') {
+      logMetrics();
+      // Performance score logged via usePerformance hook
+    }
+  }, [logMetrics, performanceScore]);
+
   return (
     <ErrorBoundary>
       <Router>
