@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";"
+import React, { Suspense } from "react";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ErrorBoundary from './components/ErrorBoundary';
 import { PageLoader } from './components/LoadingSpinner';
@@ -24,13 +24,13 @@ function App(): React.JSX.Element {
               <Route path="/services" element={<LazyServicesPage />} />"
               
               {/* Service-specific routes */}
-              <Route path="/services/quantum-consciousness-ai-consulting" element={>"
+              <Route path="/services/quantum-consciousness-ai-consulting" element={
                 React.createElement(React.lazy(() => import('./pages/services/QuantumConsciousnessAIConsulting')))
               } />
-              <Route path="/services/ai-workflow-automation" element={>"
+              <Route path="/services/ai-workflow-automation" element={
                 React.createElement(React.lazy(() => import('./pages/services/AIWorkflowAutomation')))
               } />
-              <Route path="/services/ai-virtual-assistant" element={>"
+              <Route path="/services/ai-virtual-assistant" element={
                 React.createElement(React.lazy(() => import('./pages/services/AIVirtualAssistant')))
               } />
               <Route path="/services/ai-mlops-automation" element={>"
