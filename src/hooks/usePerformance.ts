@@ -39,7 +39,7 @@ export const useMemoizedCallback = <T extends (...args: any[]) => any>(
   callback: T,
   deps: React.DependencyList
 ): T => {
-  const ref = useRef<T>();
+  const ref = useRef<T | null>(null);
 
   useEffect(() => {
     ref.current = callback;
