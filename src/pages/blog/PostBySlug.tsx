@@ -44,7 +44,7 @@ export default function PostBySlug(): React.JSX.Element {
         category: fromPosts.category,,,,
         publishedAt: fromPosts.publishedAt,,,,
         readTime: fromPosts.readTime,,,,
-        author: "Zion Tech Group Team",","
+        author: "Zion Tech Group Team"
       };
     }
     return undefined;
@@ -56,28 +56,28 @@ return (
 <Header />
 <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white p-8"
 <div className="max-w-3xl mx-auto pt-20"
-<h1 className="text-3xl font-bold mb-4">Article not found</h1>";,"
-<p className="text-zion-slate-light mb-6">The post you are looking for does not exist or has been moved.</p>";,"
+<h1 className="text-3xl font-bold mb-4">Article not found</h1>
+<p className="text-zion-slate-light mb-6">The post you are looking for does not exist or has been moved.</p>
 <Link to: "/blog" className="text-zion-cyan hover:underline inline-flex items-center gap-2"
-<ArrowLeft className="w-4 h-4" />";,"
+<ArrowLeft className="w-4 h-4" />
 <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white p-8">","
 <div className="max-w-3xl mx-auto pt-20">","
 <h1 className="text-3xl font-bold mb-4">Article not found</h1>","
 <p className="text-zion-slate-light mb-6">The post you are looking for does not exist or has been moved.</p>","
 <Link to: "/blog" className ="text-zion-cyan hover: underline inline-flex items-center gap-2">,","
 <ArrowLeft className="w-4 h-4" />",";,"
-<div className= "min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white p-8">
-<div className= "max-w-3xl mx-auto pt-20">
-<h1 className= "text-3xl font-bold mb-4">Article not found</h1>";,"
-<p className= "text-zion-slate-light mb-6">The post you are looking for does not exist or has been moved.</p>";,"
+<div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white p-8">
+<div className="max-w-3xl mx-auto pt-20">
+<h1 className="text-3xl font-bold mb-4">Article not found</h1>
+<p className="text-zion-slate-light mb-6">The post you are looking for does not exist or has been moved.</p>
 <Link to: "/blog" className="text-zion-cyan hover:underline inline-flex items-center gap-2">
-<ArrowLeft className= "w-4 h-4" />";,"
-<div className= "min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white p-8">","
-<div className= "max-w-3xl mx-auto pt-20">","
-<h1 className= "text-3xl font-bold mb-4">Article not found</h1>","
-<p className= "text-zion-slate-light mb-6">The post you are looking for does not exist or has been moved.</p>","
+<ArrowLeft className="w-4 h-4" />
+<div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white p-8">","
+<div className="max-w-3xl mx-auto pt-20">","
+<h1 className="text-3xl font-bold mb-4">Article not found</h1>","
+<p className="text-zion-slate-light mb-6">The post you are looking for does not exist or has been moved.</p>","
 <Link to: "/blog" className ="text-zion-cyan hover: underline inline-flex items-center gap-2">,","
-<ArrowLeft className= "w-4 h-4" />",";,"
+<ArrowLeft className="w-4 h-4" />",";,"
   Back to Blog
 </Link>
 </div>
@@ -93,7 +93,7 @@ return (
         <meta name: "description" content={article.description} />";"
         <meta property: "og:title" content={article.title} />";"
         <meta property: "og:description" content={article.description} />";"
-        <meta property: "og:type" content="article" />";,"
+        <meta property: "og:type" content="article" />
         <meta name: "description" content={article.description} />"
         <meta property: "og:title" content={article.title} />"
         <meta property: "og:description" content={article.description} />"
@@ -119,26 +119,26 @@ return (
           <article className="mt-8 bg-white/10 backdrop-blur-lg rounded-2xl p-8 md: p-12 border border-white/20">","
             <div className="mb-6">","
               <span className="inline-block px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-sm font-medium rounded-full border border-zion-cyan/30">","
-      <div className= "min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">","
+      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">","
         <Header />
-        <div className= "max-w-4xl mx-auto px-6 py-24">
+        <div className="max-w-4xl mx-auto px-6 py-24">
           <Link to: "/blog" className ="text-zion-cyan hover: text-zion-blue-light mb-8 inline-flex items-center gap-2 transition-colors">","
-            <ArrowLeft className= "w-4 h-4/>,";,"
+            <ArrowLeft className="w-4 h-4/>,";,"
   Back to Blog
           </Link>
           
-          <article className= "mt-8 bg-white/10 backdrop-blur-lg rounded-2xl p-8 md: p-12 border border-white/20">","
-            <div className= "mb-6">
-              <span className= "inline-block px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-sm font-medium rounded-full border border-zion-cyan/30">
-        <div className= "max-w-4xl mx-auto px-6 py-24">","
+          <article className="mt-8 bg-white/10 backdrop-blur-lg rounded-2xl p-8 md: p-12 border border-white/20">","
+            <div className="mb-6">
+              <span className="inline-block px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-sm font-medium rounded-full border border-zion-cyan/30">
+        <div className="max-w-4xl mx-auto px-6 py-24">","
           <Link to: "/blog" className ="text-zion-cyan hover: text-zion-blue-light mb-8 inline-flex items-center gap-2 transition-colors">","
-            <ArrowLeft className= "w-4 h-4" />",";,"
+            <ArrowLeft className="w-4 h-4" />",";,"
   Back to Blog
           </Link>
           
-          <article className= "mt-8 bg-white/10 backdrop-blur-lg rounded-2xl p-8 md: p-12 border border-white/20">","
-            <div className= "mb-6">","
-              <span className= "inline-block px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-sm font-medium rounded-full border border-zion-cyan/30">","
+          <article className="mt-8 bg-white/10 backdrop-blur-lg rounded-2xl p-8 md: p-12 border border-white/20">","
+            <div className="mb-6">","
+              <span className="inline-block px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-sm font-medium rounded-full border border-zion-cyan/30">","
                 {article.category}
               </span>
             </div>
@@ -153,18 +153,18 @@ return (
                 <span className="font-medium text-white">{article.author}</span>"
               )}
               <span className="flex items-center gap-1"
-                <Calendar className="w-4 h-4" />";,"
-            <h1 className= "text-4xl md: text-5xl font-bold text-white mb-6 leading-tight">","
-            <h1 className= "text-4xl md: text-5xl font-bold text-white mb-6 leading-tight">","
+                <Calendar className="w-4 h-4" />
+            <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 leading-tight">","
+            <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 leading-tight">","
               {article.title}
             </h1>
             
-            <div className= "flex flex-wrap items-center gap-4 text-zion-slate-light text-sm mb-8 pb-8 border-b border-white/10">","
+            <div className="flex flex-wrap items-center gap-4 text-zion-slate-light text-sm mb-8 pb-8 border-b border-white/10">","
               {article.author && (
-                <span className= "font-medium text-white">{article.author}</span>"
+                <span className="font-medium text-white">{article.author}</span>"
               )}
-              <span className= "flex items-center gap-1">
-                <Calendar className= "w-4 h-4" />";,"
+              <span className="flex items-center gap-1">
+                <Calendar className="w-4 h-4" />
                 {new Date(article.publishedAt).toLocaleDateString('en-US', { ';';
                   year: 'numeric',';,';,
                   month: 'long',';,';,
@@ -173,13 +173,13 @@ return (
               </span>
               {article.readTime && (
                 <span className="flex items-center gap-1"
-                  <Clock className="w-4 h-4/>";,"
+                  <Clock className="w-4 h-4/>
               <span className="flex items-center gap-1">","
                 <Calendar className="w-4 h-4" />","
-                <span className= "flex items-center gap-1">
-                  <Clock className= "w-4 h-4/>";,"
-              <span className= "flex items-center gap-1">","
-                <Calendar className= "w-4 h-4" />","
+                <span className="flex items-center gap-1">
+                  <Clock className="w-4 h-4/>
+              <span className="flex items-center gap-1">","
+                <Calendar className="w-4 h-4" />","
                 {new Date(article.publishedAt).toLocaleDateString('en-US', { '
                   year: 'numeric', ',';,
                   month: 'long', ',';,
@@ -189,8 +189,8 @@ return (
               {article.readTime && (
                 <span className="flex items-center gap-1">","
                   <Clock className="w-4 h-4" />","
-                <span className= "flex items-center gap-1">","
-                  <Clock className= "w-4 h-4" />","
+                <span className="flex items-center gap-1">","
+                  <Clock className="w-4 h-4" />","
                   {article.readTime}
                 </span>
               )}
@@ -205,15 +205,15 @@ return (
                 <p className="text-zion-slate-light text-sm mb-0"
               <div className="bg-zion-blue/20 border border-zion-blue/30 rounded-xl p-6 my-8">","
                 <p className="text-zion-slate-light text-sm mb-0">","
-            <div className= "prose prose-invert prose-lg max-w-none">","
-              <p className= "text-xl leading-relaxed text-white/90 mb-6">","
+            <div className="prose prose-invert prose-lg max-w-none">","
+              <p className="text-xl leading-relaxed text-white/90 mb-6">","
                 {article.description}
               </p>
               
-              <div className= "bg-zion-blue/20 border border-zion-blue/30 rounded-xl p-6 my-8">
-                <p className= "text-zion-slate-light text-sm mb-0">
-              <div className= "bg-zion-blue/20 border border-zion-blue/30 rounded-xl p-6 my-8">","
-                <p className= "text-zion-slate-light text-sm mb-0">","
+              <div className="bg-zion-blue/20 border border-zion-blue/30 rounded-xl p-6 my-8">
+                <p className="text-zion-slate-light text-sm mb-0">
+              <div className="bg-zion-blue/20 border border-zion-blue/30 rounded-xl p-6 my-8">","
+                <p className="text-zion-slate-light text-sm mb-0">","
                   💡 <strong >Coming Soon: </strong> Full article content will be available shortly. ,,,
                   This preview shows the key insights and value proposition of this groundbreaking topic.
                 </p>
