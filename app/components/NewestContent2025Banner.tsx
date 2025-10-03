@@ -6,9 +6,9 @@ const NewestContent2025Banner = () => {
     <section className="text-left">
       {/* Animated Background Effects */}
       <div className="text-left">
-        <div className="text-left">"
-        <div className="text-left" style={{ animationDelay: '2s' }}>"
-        <div className="text-left" style={{ animationDelay: '1s' }}>
+        <div className="text-left"></div>
+        <div className="text-left" style={{ animationDelay: '2s' }}></div>
+        <div className="text-left" style={{ animationDelay: '1s' }}></div>
 
       <div className="text-left">
         {/* Header */}
@@ -74,14 +74,18 @@ const NewestContent2025Banner = () => {
                 {/* Key Stats */}
                 <div className="text-left">
                   <div className="text-left">
-                    <div className="text-left">&lt;10ms</div>"
+                    <div className="text-left">&lt;10ms</div>
                     <div className="text-left">Latency</div>
+                  </div>
                   <div className="text-left">
-                    <div className="text-left">95%</div>"
+                    <div className="text-left">95%</div>
                     <div className="text-left">Bandwidth ↓</div>
+                  </div>
                   <div className="text-left">
-                    <div className="text-left">87%</div>"
+                    <div className="text-left">87%</div>
                     <div className="text-left">Cost ↓</div>
+                  </div>
+                </div>
 
                 {/* Meta Info */}
                 <div className="text-left">
@@ -94,6 +98,7 @@ const NewestContent2025Banner = () => {
                   <span>Read Full Article</span>
                   <span className="text-left">→</span>
                 </div>
+              </div>
             </div>
           </Link>
 
@@ -133,14 +138,18 @@ const NewestContent2025Banner = () => {
 
                 <div className="text-left">
                   <div className="text-left">
-                    <div className="text-left">98.5%</div>"
+                    <div className="text-left">98.5%</div>
                     <div className="text-left">Accuracy</div>
+                  </div>
                   <div className="text-left">
-                    <div className="text-left">10x</div>"
+                    <div className="text-left">10x</div>
                     <div className="text-left">ROI</div>
+                  </div>
                   <div className="text-left">
-                    <div className="text-left">85%</div>"
+                    <div className="text-left">85%</div>
                     <div className="text-left">Efficiency</div>
+                  </div>
+                </div>
 
                 <div className="text-left">
                   <span>⏱️ 40 min read</span>
@@ -190,14 +199,18 @@ const NewestContent2025Banner = () => {
 
                 <div className="text-left">
                   <div className="text-left">
-                    <div className="text-left">99.99%</div>"
+                    <div className="text-left">99.99%</div>
                     <div className="text-left">Security</div>
+                  </div>
                   <div className="text-left">
-                    <div className="text-left">&lt;1ms</div>"
+                    <div className="text-left">&lt;1ms</div>
                     <div className="text-left">Overhead</div>
+                  </div>
                   <div className="text-left">
-                    <div className="text-left">Zero</div>"
+                    <div className="text-left">Zero</div>
                     <div className="text-left">Breaches</div>
+                  </div>
+                </div>
 
                 <div className="text-left">
                   <span>⏱️ 45 min read</span>
