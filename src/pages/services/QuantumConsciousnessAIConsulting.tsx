@@ -22,7 +22,7 @@ const QuantumConsciousnessAIConsulting: React.FC = () => {
         <section className="relative overflow-hidden bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 py-20"
           <div className="absolute inset-0 overflow-hidden opacity-20"
             <div className="absolute top-0 left-1/3 w-96 h-96 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>"
-            <div className="absolute bottom-0 right-1/3 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style ={{ animationDelay: '2s' }}></div>;';
+            <div className="absolute bottom-0 right-1/3 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style ={{ animationDelay: '2s' }}></div>;
         <section className="relative overflow-hidden bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 py-20",
           <div className="absolute inset-0 overflow-hidden opacity-20",
             <div className="absolute top-0 left-1/3 w-96 h-96 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>",
@@ -38,7 +38,7 @@ const QuantumConsciousnessAIConsulting: React.FC = () => {
         <section className= "relative overflow-hidden bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 py-20">
           <div className= "absolute inset-0 overflow-hidden opacity-20">
             <div className= "absolute top-0 left-1/3 w-96 h-96 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>"
-            <div className= "absolute bottom-0 right-1/3 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style ={{ animationDelay: '2s' }}></div>;';
+            <div className= "absolute bottom-0 right-1/3 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style ={{ animationDelay: '2s' }}></div>;
         <section className= "relative overflow-hidden bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 py-20>
           <div className= "absolute inset-0 overflow-hidden opacity-20>
             <div className= "absolute top-0 left-1/3 w-96 h-96 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>",
@@ -58,7 +58,7 @@ const QuantumConsciousnessAIConsulting: React.FC = () => {
               </h1>
               
               <p className="text-2xl md: text-3xl text-gray-300 mb-8 font-semibold max-w-3xl mx-auto",
-  Transform Your Enterprise with the World's First Quantum Consciousness AI;';
+  Transform Your Enterprise with the World's First Quantum Consciousness AI;
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12",
@@ -79,7 +79,7 @@ const QuantumConsciousnessAIConsulting: React.FC = () => {
               </h1>
               
               <p className= "text-2xl md: text-3xl text-gray-300 mb-8 font-semibold max-w-3xl mx-auto">"
-  Transform Your Enterprise with the World's First Quantum Consciousness AI;';
+  Transform Your Enterprise with the World's First Quantum Consciousness AI;
               </p>
               
               <div className= "flex flex-col sm:flex-row gap-4 justify-center mb-12>

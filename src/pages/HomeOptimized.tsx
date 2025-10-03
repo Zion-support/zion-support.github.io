@@ -213,8 +213,8 @@ const HomeOptimized: () => {
         <section className="container mx-auto px-6 py-16 relative z-10",
         <section className= "container mx-auto px-6 py-16 relative z-10>
           <BannerRotationManager banners: {[,
-              'october2025-new-breakthrough',';
-              'october2025-tech-breakthrough',';
+              'october2025-new-breakthrough',
+              'october2025-tech-breakthrough',
               'october2025-next-gen-ai'
               'october2025-new-breakthrough','
               'october2025-tech-breakthrough','

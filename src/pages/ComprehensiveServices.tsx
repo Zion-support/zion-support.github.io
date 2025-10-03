@@ -14,8 +14,7 @@ const ComprehensiveServices: React.FC = () => {
       pricing: 'Starting at $29/month',',',
       icon: FileText,,,
       color: 'from-blue-600 to-purple-600',',',
-      link: '/services/ai-content-generator',',
-    },
+      link: '/services/ai-content-generator',},
     {
       id: 'smart-appointment-scheduler',',',
       title: 'Smart Appointment Scheduler',',',
@@ -24,8 +23,7 @@ const ComprehensiveServices: React.FC = () => {
       pricing: 'Starting at $49/month',',',
       icon: Users,,,
       color: 'from-green-600 to-teal-600',',',
-      link: '/services/smart-appointment-scheduler',',
-    },
+      link: '/services/smart-appointment-scheduler',},
     {
       id: 'ai-email-marketing',',',
       title: 'AI Email Marketing Platform',',',
@@ -34,8 +32,7 @@ const ComprehensiveServices: React.FC = () => {
       pricing: 'Starting at $79/month',',',
       icon: Mail,,,
       color: 'from-emerald-600 to-green-600',',',
-      link: '/services/ai-email-marketing',',
-    },
+      link: '/services/ai-email-marketing',},
     {
       id: 'api-integration-hub',',',
       title: 'API Integration Hub',',',
@@ -44,8 +41,7 @@ const ComprehensiveServices: React.FC = () => {
       pricing: 'Starting at $39/month',',',
       icon: Code,,,
       color: 'from-orange-600 to-red-600',',',
-      link: '/services/api-integration-hub',',
-    },
+      link: '/services/api-integration-hub',},
     {
       id: 'remote-collaboration-suite',',',
       title: 'Remote Collaboration Suite',',',
@@ -54,8 +50,7 @@ const ComprehensiveServices: React.FC = () => {
       pricing: 'Starting at $19/user/month',',',
       icon: Globe,,,
       color: 'from-purple-600 to-pink-600',',',
-      link: '/services/remote-collaboration-suite',',
-    },
+      link: '/services/remote-collaboration-suite',},
     {
       id: 'smart-contract-audit',',',
       title: 'Smart Contract Audit Service',',',
@@ -64,8 +59,7 @@ const ComprehensiveServices: React.FC = () => {
       pricing: 'Starting at $2,500',',',
       icon: Shield,,,
       color: 'from-red-600 to-orange-600',',',
-      link: '/services/smart-contract-audit',',
-    }
+      link: '/services/smart-contract-audit',}
   ];
 
   const aiServices: [,,
@@ -78,8 +72,7 @@ const ComprehensiveServices: React.FC = () => {
       icon: undefined,,,
       icon: Zap,,,
       color: 'from-blue-600 to-purple-600',',',
-      link: '/services/ai-workflow-automation',',
-    },
+      link: '/services/ai-workflow-automation',},
     {
       id: 'ai-virtual-assistant',',',
       title: 'AI Virtual Assistant',',',
@@ -89,8 +82,7 @@ const ComprehensiveServices: React.FC = () => {
       icon: undefined,,,
       icon: Bot,,,
       color: 'from-purple-600 to-pink-600',',',
-      link: '/services/ai-virtual-assistant',',
-    },
+      link: '/services/ai-virtual-assistant',},
     {
       id: 'ai-predictive-analytics',',',
       title: 'AI Predictive Analytics',',',
@@ -100,8 +92,7 @@ const ComprehensiveServices: React.FC = () => {
       icon: undefined,,,
       icon: BarChart3,,,
       color: 'from-indigo-600 to-purple-600',',',
-      link: '/services/ai-predictive-analytics',',
-    },
+      link: '/services/ai-predictive-analytics',},
     {
       id: 'conversational-ai',',',
       title: 'Conversational AI',',',
@@ -111,8 +102,7 @@ const ComprehensiveServices: React.FC = () => {
       icon: undefined,,,
       icon: MessageCircle,,,
       color: 'from-violet-600 to-pink-600',',',
-      link: '/services/conversational-ai',',
-    },
+      link: '/services/conversational-ai',},
     {
       id: 'ai-data-analytics',',',
       title: 'AI Data Analytics Platform',',',
@@ -122,8 +112,7 @@ const ComprehensiveServices: React.FC = () => {
       icon: undefined,,,
       icon: BarChart3,,,
       color: 'from-green-600 to-teal-600',',',
-      link: '/services/ai-data-analytics',',
-    },
+      link: '/services/ai-data-analytics',},
     {
       id: 'edge-computing-ai',',',
       title: 'Edge Computing AI',',',
@@ -133,8 +122,7 @@ const ComprehensiveServices: React.FC = () => {
       icon: undefined,,,
       icon: Cpu,,,
       color: 'from-teal-600 to-blue-600',',',
-      link: '/services/edge-computing-ai',',
-    },
+      link: '/services/edge-computing-ai',},
     {
       id: 'ai-document-processing',',',
       title: 'Intelligent Document Processing',',',
@@ -144,8 +132,7 @@ const ComprehensiveServices: React.FC = () => {
       icon: undefined,,,
       icon: FileText,,,
       color: 'from-indigo-600 to-blue-600',',',
-      link: '/services/ai-document-processing',',
-    },
+      link: '/services/ai-document-processing',},
     {
       id: 'ai-cognitive-automation',',',
       title: 'Real-Time Cognitive Automation',',',
@@ -155,8 +142,7 @@ const ComprehensiveServices: React.FC = () => {
       icon: undefined,,,
       icon: Brain,,,
       color: 'from-cyan-600 to-blue-600',',',
-      link: '/services/ai-cognitive-automation',',
-    },
+      link: '/services/ai-cognitive-automation',},
     {
       id: 'ai-cybersecurity',',',
       title: 'Advanced Cybersecurity AI',',',
@@ -166,8 +152,7 @@ const ComprehensiveServices: React.FC = () => {
       icon: undefined,,,
       icon: Shield,,,
       color: 'from-red-600 to-orange-600',',',
-      link: '/services/ai-cybersecurity',',
-    }
+      link: '/services/ai-cybersecurity',}
   ];
 
   const itServices: [,,
@@ -180,8 +165,7 @@ const ComprehensiveServices: React.FC = () => {
       icon: undefined,,,
       icon: Cloud,,,
       color: 'from-blue-600 to-cyan-600',',',
-      link: '/services/cloud-migration',',
-    },
+      link: '/services/cloud-migration',},
     {
       id: 'devops-automation',',',
       title: 'DevOps Automation',',',
@@ -191,8 +175,7 @@ const ComprehensiveServices: React.FC = () => {
       icon: undefined,,,
       icon: Settings,,,
       color: 'from-green-600 to-emerald-600',',',
-      link: '/services/devops-automation',',
-    },
+      link: '/services/devops-automation',},
     {
       id: 'database-optimization',',',
       title: 'Database Optimization',',',
@@ -202,8 +185,7 @@ const ComprehensiveServices: React.FC = () => {
       icon: undefined,,,
       icon: Database,,,
       color: 'from-purple-600 to-violet-600',',',
-      link: '/services/database-optimization',',
-    },
+      link: '/services/database-optimization',},
     {
       id: 'mobile-app-development',',',
       title: 'Mobile App Development',',',
@@ -213,8 +195,7 @@ const ComprehensiveServices: React.FC = () => {
       icon: undefined,,,
       icon: Smartphone,,,
       color: 'from-pink-600 to-rose-600',',',
-      link: '/services/mobile-app-development',',
-    },
+      link: '/services/mobile-app-development',},
     {
       id: 'quantum-computing',',',
       title: 'Quantum Computing Solutions',',',
@@ -224,8 +205,7 @@ const ComprehensiveServices: React.FC = () => {
       icon: undefined,,,
       icon: Cpu,,,
       color: 'from-indigo-600 to-purple-600',',',
-      link: '/services/quantum-computing',',
-    },
+      link: '/services/quantum-computing',},
     {
       id: 'blockchain-web3',',',
       title: 'Blockchain & Web3 Development',',',
@@ -235,8 +215,7 @@ const ComprehensiveServices: React.FC = () => {
       icon: undefined,,,
       icon: Lock,,,
       color: 'from-yellow-600 to-orange-600',',',
-      link: '/services/blockchain-web3',',
-    }
+      link: '/services/blockchain-web3',}
   ];
 
   const ServiceCard: ({ service }: { service: any })  => {
@@ -521,7 +500,7 @@ const ComprehensiveServices: React.FC = () => {
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-8 text-white"
             <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h2>","
             <p className="text-xl mb-8 opacity-90">,","
-  Let's discuss how our technology solutions can drive your success.';
+  Let's discuss how our technology solutions can drive your success.;
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"
               <a href="tel:+13024640950" ,","
@@ -536,7 +515,7 @@ const ComprehensiveServices: React.FC = () => {
           <div className= "bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-8 text-white">
             <h2 className= "text-3xl font-bold mb-4">Ready to Transform Your Business?</h2>","
             <p className= "text-xl mb-8 opacity-90">,","
-  Let's discuss how our technology solutions can drive your success.';
+  Let's discuss how our technology solutions can drive your success.;
             </p>
             <div className= "flex flex-col sm:flex-row gap-4 justify-center">
               <a href="tel:+13024640950" ,","

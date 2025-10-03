@@ -13,15 +13,15 @@ const Pricing: React.FC = () => {
       icon: Zap,,
       color: 'blue',',',
       features: [,,
-        'Basic AI Automation',';
-        'Email Support',';
-        'Up to 5 Users',';
-        'Standard Analytics',';
-        'Basic Integrations',';
+        'Basic AI Automation',
+        'Email Support',
+        'Up to 5 Users',
+        'Standard Analytics',
+        'Basic Integrations',
         'Monthly Reports'],
 
       limitations: [,,
-        'Limited API Calls',';
+        'Limited API Calls',
         'Basic Customization'
       ]
       cta: 'Start Free Trial',',',
@@ -35,13 +35,13 @@ const Pricing: React.FC = () => {
       icon: Shield,,
       color: 'green',',',
       features: [,,
-        'Advanced AI Automation',';
-        'Priority Support',';
-        'Up to 25 Users',';
-        'Advanced Analytics',';
-        'Custom Integrations',';
-        'Weekly Reports',';
-        'Training Sessions',';
+        'Advanced AI Automation',
+        'Priority Support',
+        'Up to 25 Users',
+        'Advanced Analytics',
+        'Custom Integrations',
+        'Weekly Reports',
+        'Training Sessions',
         'API Access'],
 
       limitations: [],,
@@ -56,15 +56,15 @@ const Pricing: React.FC = () => {
       icon: Crown,,
       color: 'purple',',',
       features: [,,
-        'Unlimited AI Automation',';
-        '24/7 Dedicated Support',';
-        'Unlimited Users',';
-        'Custom Analytics',';
-        'White-label Solutions',';
-        'Real-time Reports',';
-        'Dedicated Account Manager',';
-        'Full API Access',';
-        'Custom Development',';
+        'Unlimited AI Automation',
+        '24/7 Dedicated Support',
+        'Unlimited Users',
+        'Custom Analytics',
+        'White-label Solutions',
+        'Real-time Reports',
+        'Dedicated Account Manager',
+        'Full API Access',
+        'Custom Development',
         'SLA Guarantee'],
 
       limitations: [],,
@@ -148,20 +148,17 @@ const Pricing: React.FC = () => {
       name: 'Custom AI Model Development',',',',
       description: 'Bespoke AI models tailored to your specific business needs',',',',
       price: 'From $5,000',',',',
-      features: ['Custom Model Architecture', 'Domain-Specific Training', 'Performance Optimization']',',
-    },
+      features: ['Custom Model Architecture', 'Domain-Specific Training', 'Performance Optimization']',},
     {
       name: 'Data Migration & Integration',',',',
       description: 'Seamless migration of your existing data and systems',',',',
       price: 'From $2,500',',',',
-      features: ['Data Assessment', 'Migration Planning', 'System Integration']',',
-    },
+      features: ['Data Assessment', 'Migration Planning', 'System Integration']',},
     {
       name: 'Training & Certification',',',',
       description: 'Comprehensive training for your team on AI best practices',',',',
       price: 'From $1,500',',',',
-      features: ['Custom Training Programs', 'Certification Courses', 'Ongoing Support']',',
-    },
+      features: ['Custom Training Programs', 'Certification Courses', 'Ongoing Support']',},
     {
       name: 'Priority Support',',',',
       description: 'Enhanced support with faster response times',',',',
@@ -170,63 +167,54 @@ const Pricing: React.FC = () => {
       name: 'Custom AI Model Development',',',
       description: 'Bespoke AI models tailored to your specific business needs',',',
       price: 'From $5,000',',',
-      features: ['Custom Model Architecture', 'Domain-Specific Training', 'Performance Optimization']',',
-    },
+      features: ['Custom Model Architecture', 'Domain-Specific Training', 'Performance Optimization']',},
     {
       name: 'Data Migration & Integration',',',
       description: 'Seamless migration of your existing data and systems',',',
       price: 'From $2,500',',',
-      features: ['Data Assessment', 'Migration Planning', 'System Integration']',',
-    },
+      features: ['Data Assessment', 'Migration Planning', 'System Integration']',},
     {
       name: 'Training & Certification',',',
       description: 'Comprehensive training for your team on AI best practices',',',
       price: 'From $1,500',',',
-      features: ['Custom Training Programs', 'Certification Courses', 'Ongoing Support']',',
-    },
+      features: ['Custom Training Programs', 'Certification Courses', 'Ongoing Support']',},
     {
       name: 'Priority Support',',',
       description: 'Enhanced support with faster response times',',',
       price: 'From $500/month',',',
-      features: ['Priority Response', 'Dedicated Support Channel', 'Extended Hours']',',
-    }
+      features: ['Priority Response', 'Dedicated Support Channel', 'Extended Hours']',}
   ];
 
   const faqs: [,
     {
       question: 'What is included in the free trial?',',',',
-      answer: 'The free trial includes access to all Starter plan features for 14 days, with no credit card required.},';
+      answer: 'The free trial includes access to all Starter plan features for 14 days, with no credit card required.},
     {
       question: 'Can I upgrade or downgrade my plan anytime?',',',',
-      answer: 'Yes, you can change your plan at any time. Changes take effect immediately, and we\'ll prorate any billing differences.},';
+      answer: 'Yes, you can change your plan at any time. Changes take effect immediately, and we\'ll prorate any billing differences.},
     {
       question: 'Do you offer custom pricing for large organizations?',',',',
-      answer: 'Absolutely! We offer custom pricing for Enterprise customers with volume discounts and specialized requirements.},';
+      answer: 'Absolutely! We offer custom pricing for Enterprise customers with volume discounts and specialized requirements.},
     {
       question: 'What kind of support do you provide?',',',',
-      answer: 'We provide email support for Starter plans, priority support for Professional plans, and 24/7 dedicated support for Enterprise customers.},';
+      answer: 'We provide email support for Starter plans, priority support for Professional plans, and 24/7 dedicated support for Enterprise customers.},
     {
       question: 'Are there any setup fees?',',',',
-      answer: 'No setup fees for Starter and Professional plans. Enterprise plans may include setup fees depending on custom requirements.},';
+      answer: 'No setup fees for Starter and Professional plans. Enterprise plans may include setup fees depending on custom requirements.},
       question: 'What is included in the free trial?',',',
-      answer: 'The free trial includes access to all Starter plan features for 14 days, with no credit card required.',',
-    },
+      answer: 'The free trial includes access to all Starter plan features for 14 days, with no credit card required.',},
     {
       question: 'Can I upgrade or downgrade my plan anytime?',',',
-      answer: 'Yes, you can change your plan at any time. Changes take effect immediately, and we\'ll prorate any billing differences.',',
-    },
+      answer: 'Yes, you can change your plan at any time. Changes take effect immediately, and we\'ll prorate any billing differences.',},
     {
       question: 'Do you offer custom pricing for large organizations?',',',
-      answer: 'Absolutely! We offer custom pricing for Enterprise customers with volume discounts and specialized requirements.',',
-    },
+      answer: 'Absolutely! We offer custom pricing for Enterprise customers with volume discounts and specialized requirements.',},
     {
       question: 'What kind of support do you provide?',',',
-      answer: 'We provide email support for Starter plans, priority support for Professional plans, and 24/7 dedicated support for Enterprise customers.',',
-    },
+      answer: 'We provide email support for Starter plans, priority support for Professional plans, and 24/7 dedicated support for Enterprise customers.',},
     {
       question: 'Are there any setup fees?',',',
-      answer: 'No setup fees for Starter and Professional plans. Enterprise plans may include setup fees depending on custom requirements.',',
-    }
+      answer: 'No setup fees for Starter and Professional plans. Enterprise plans may include setup fees depending on custom requirements.',}
   ];
 
   return (
@@ -415,7 +403,7 @@ const Pricing: React.FC = () => {
                     ))}
                   </ul>
 
-                  <Link to: {plan.name == = 'Enterprise' ? '/contact' : '/demo'};';
+                  <Link to: {plan.name == = 'Enterprise' ? '/contact' : '/demo'};
                     className= {,
 `block w-full text-center px-6 py-3 rounded-lg font-semibold transition-colors ${`
 plan.popular

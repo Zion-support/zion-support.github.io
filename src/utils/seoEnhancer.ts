@@ -117,7 +117,7 @@ export const generateMetaDescription = (content: string, maxLength: number = 160
   const text = content.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
   const sentences = text.split(/[.!?]+/).filter(s => s.trim().length > 0);
   
-  let description = ';
+  let description = ;
   for (const sentence of sentences) {
     const candidate = description + sentence.trim() + '. ;
     if (candidate.length <= maxLength) {

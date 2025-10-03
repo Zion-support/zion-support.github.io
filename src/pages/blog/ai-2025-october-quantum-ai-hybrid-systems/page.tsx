@@ -102,7 +102,7 @@ const QuantumAIHybrid2025: () => {
                 <h2 className="text-3xl font-bold text-white mb-6">The Quantum-AI Revolution is Here</h2>"
                 <div className="bg-gradient-to-r from-purple-500/20 to-cyan-500/20 border border-purple-400/30 rounded-xl p-6 mb-6"
                   <p className="text-white text-lg leading-relaxed">,"
-  Quantum-AI hybrid systems are no longer theoretical—they're delivering <strong >1000x processing speed</strong>';
+  Quantum-AI hybrid systems are no longer theoretical—they're delivering <strong >1000x processing speed</strong>;
             <p className="text-xl text-gray-300 mb-8 leading-relaxed",
             <div className= "flex flex-wrap justify-center gap-4 text-sm text-gray-400">
               <div className= "flex items-center"><Clock className="w-4 h-4 mr-2/>15 min read</div>"
@@ -117,7 +117,7 @@ const QuantumAIHybrid2025: () => {
                 <h2 className= "text-3xl font-bold text-white mb-6">The Quantum-AI Revolution is Here</h2>"
                 <div className= "bg-gradient-to-r from-purple-500/20 to-cyan-500/20 border border-purple-400/30 rounded-xl p-6 mb-6">
                   <p className= "text-white text-lg leading-relaxed">,"
-  Quantum-AI hybrid systems are no longer theoretical—they're delivering <strong >1000x processing speed</strong>';
+  Quantum-AI hybrid systems are no longer theoretical—they're delivering <strong >1000x processing speed</strong>;
             <p className= "text-xl text-gray-300 mb-8 leading-relaxed">"
   Discover how quantum-AI hybrid systems are revolutionizing enterprise computing. Learn implementation strategies
               real-world applications, and ROI optimization for 1000x processing speed gains.

@@ -403,7 +403,7 @@ const AutonomousBusinessOperationsRevolution2025: () => {
               <p className="text-yellow-100 font-semibold text-lg"
             <div className= "bg-yellow-500/10 border-l-4 border-yellow-400 p-6 rounded-r-xl mb-8">
               <p className= "text-yellow-100 font-semibold text-lg">
-                ⚠️ Companies that don't adopt ABO will face extinction-level competitive disadvantages by 2027.;';
+                ⚠️ Companies that don't adopt ABO will face extinction-level competitive disadvantages by 2027.;
               </p>
             </div>
 

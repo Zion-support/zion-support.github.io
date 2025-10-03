@@ -936,9 +936,9 @@ const GlobalRetailAITransformation: () => {
                 <div className="text-center mb-8"
                   <div className="text-6xl mb-4"</div>"
                   <p className="text-2xl text-white leading-relaxed mb-6">,"
-  Zion Tech Group's AI transformation has been nothing short of revolutionary for our business. ';
+  Zion Tech Group's AI transformation has been nothing short of revolutionary for our business. ;
                     The $489M in value creation exceeded our most optimistic projections. More importantly
-                    we've fundamentally changed how we operate—from reactive to predictive, from generic to ';
+                    we've fundamentally changed how we operate—from reactive to predictive, from generic to ;
               <div className="bg-gradient-to-r from-blue-900/40 to-purple-900/40 rounded-2xl p-10 border border-blue-500/30",
                 <div className="text-center mb-8",
                   <div className="text-6xl mb-4"</div>",
@@ -947,9 +947,9 @@ const GlobalRetailAITransformation: () => {
                 <div className= "text-center mb-8">
                   <div className= "text-6xl mb-4">"</div>"
                   <p className= "text-2xl text-white leading-relaxed mb-6">,"
-  Zion Tech Group's AI transformation has been nothing short of revolutionary for our business. ';
+  Zion Tech Group's AI transformation has been nothing short of revolutionary for our business. ;
                     The $489M in value creation exceeded our most optimistic projections. More importantly
-                    we've fundamentally changed how we operate—from reactive to predictive, from generic to ';
+                    we've fundamentally changed how we operate—from reactive to predictive, from generic to ;
               <div className= "bg-gradient-to-r from-blue-900/40 to-purple-900/40 rounded-2xl p-10 border border-blue-500/30>
                 <div className= "text-center mb-8>
                   <div className= "text-6xl mb-4">"</div>",
@@ -979,7 +979,7 @@ const GlobalRetailAITransformation: () => {
               </h2>
               <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto",
   Join Fortune 100 companies achieving $489M+ in value creation through comprehensive 
-                AI transformation. Schedule your free consultation to explore what's possible for your organization.;';
+                AI transformation. Schedule your free consultation to explore what's possible for your organization.;
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center",
   AI transformation. Schedule your free consultation to explore what's possible for your organization.'
@@ -1002,7 +1002,7 @@ const GlobalRetailAITransformation: () => {
               </h2>
               <p className= "text-xl text-white/90 mb-8 max-w-3xl mx-auto">"
   Join Fortune 100 companies achieving $489M+ in value creation through comprehensive 
-                AI transformation. Schedule your free consultation to explore what's possible for your organization.;';
+                AI transformation. Schedule your free consultation to explore what's possible for your organization.;
               </p>
               <div className= "flex flex-col sm:flex-row gap-4 justify-center">"
   AI transformation. Schedule your free consultation to explore what's possible for your organization.'

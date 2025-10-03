@@ -1,8 +1,8 @@
 import React from 'react;
 import { Helmet } from 'react-helmet-async;
-import { Zap } from 'lucide-react';
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
+import { Zap } from 'lucide-react;
+import Header from '../../components/Header;
+import Footer from '../../components/Footer;
 import React from 'react;
 import { Helmet } from 'react-helmet-async;
 import { Zap } from 'lucide-react;

@@ -326,12 +326,12 @@ const AutonomousEnterpriseMesh2026: React.FC = () => {
 
             <h3 className="text-2xl font-bold text-white mb-6">The Future is Autonomous</h3>"
             <p className="text-gray-300 mb-6 leading-relaxed">,"
-  The Autonomous Enterprise Mesh represents more than just technological advancement—it's a fundamental reimagining ;';
+  The Autonomous Enterprise Mesh represents more than just technological advancement—it's a fundamental reimagining ;
             <h3 className="text-2xl font-bold text-white mb-6">The Future is Autonomous</h3>",
             <p className="text-gray-300 mb-6 leading-relaxed",
             <h3 className= "text-2xl font-bold text-white mb-6">The Future is Autonomous</h3>"
             <p className= "text-gray-300 mb-6 leading-relaxed">,"
-  The Autonomous Enterprise Mesh represents more than just technological advancement—it's a fundamental reimagining ;';
+  The Autonomous Enterprise Mesh represents more than just technological advancement—it's a fundamental reimagining ;
             <h3 className= "text-2xl font-bold text-white mb-6">The Future is Autonomous</h3>",
             <p className= "text-gray-300 mb-6 leading-relaxed">"
   The Autonomous Enterprise Mesh represents more than just technological advancement—it's a fundamental reimagining '
@@ -342,8 +342,8 @@ const AutonomousEnterpriseMesh2026: React.FC = () => {
             <p className="text-gray-300 mb-8 leading-relaxed",
             <p className= "text-gray-300 mb-8 leading-relaxed">"
   The era of human-dependent business operations is ending. The future belongs to self-organizing, intelligent systems 
-              that can adapt, learn, and optimize in real-time. The Autonomous Enterprise Mesh is not just the future—it's the present';
-              and it's transforming businesses today.';
+              that can adapt, learn, and optimize in real-time. The Autonomous Enterprise Mesh is not just the future—it's the present;
+              and it's transforming businesses today.;
               that can adapt, learn, and optimize in real-time. The Autonomous Enterprise Mesh is not just the future—it's the present, '
               and it's transforming businesses today.'
             </p>

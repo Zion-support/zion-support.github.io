@@ -152,9 +152,9 @@ export const generateFAQStructuredData = (faqs: Array<{ question: string; answer
 export const generateSitemapXML = (urls: Array<{ loc: string; lastmod?: string; changefreq?: string; priority?: number }>): string => {
   const urlsXml = urls
     .map((url) => {
-      const lastmod = url.lastmod ? `<lastmod>${url.lastmod}</lastmod>` : ';
-      const changefreq = url.changefreq ? `<changefreq>${url.changefreq}</changefreq>` : ';
-      const priority = url.priority !== undefined ? `<priority>${url.priority}</priority>` : ';
+      const lastmod = url.lastmod ? `<lastmod>${url.lastmod}</lastmod>` : ;
+      const changefreq = url.changefreq ? `<changefreq>${url.changefreq}</changefreq>` : ;
+      const priority = url.priority !== undefined ? `<priority>${url.priority}</priority>` : ;
       return `<url>\n  <loc>${escapeHtml(url.loc)}</loc>\n  ${lastmod}\n  ${changefreq}\n  ${priority}\n</url>`;
     })
     .join('\n');

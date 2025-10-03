@@ -272,8 +272,8 @@ import {
   AbbottBooby
 } from 'lucide-react;
 export default function EnhancedServicesCatalog() {
-  const title = 'Enhanced Services Catalog — Zion Tech Group';
-  const description = 'Comprehensive catalog of micro SaaS, IT, and AI services with transparent pricing, proven ROI, and fast delivery.';
+  const title = 'Enhanced Services Catalog — Zion Tech Group;
+  const description = 'Comprehensive catalog of micro SaaS, IT, and AI services with transparent pricing, proven ROI, and fast delivery.;
   const serviceCategories = [
     {
       id: 'ai-micro-saas',',

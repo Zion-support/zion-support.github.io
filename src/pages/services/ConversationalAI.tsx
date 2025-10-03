@@ -1,8 +1,8 @@
 import React from 'react;
 import { Helmet } from 'react-helmet-async;
-import { Video } from 'lucide-react';
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
+import { Video } from 'lucide-react;
+import Header from '../../components/Header;
+import Footer from '../../components/Footer;
 import React from 'react;
 import { Helmet } from 'react-helmet-async;
 import { Video } from 'lucide-react;

@@ -707,7 +707,7 @@ const GlobalFinTechAITransformation: () => {
               <h2 className="text-3xl font-bold text-white mb-6">💬 Client Testimonials</h2>"
               <div className="space-y-6"
                 <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-zion-cyan/30"
-                  <p className="text-lg text-zion-slate-light italic mb-4"Our partnership with Zion Tech Group has been transformational. They didn't just implement AI technology—they ;';
+                  <p className="text-lg text-zion-slate-light italic mb-4"Our partnership with Zion Tech Group has been transformational. They didn't just implement AI technology—they ;
               <h2 className="text-3xl font-bold text-white mb-6">💬 Client Testimonials</h2>",
               <div className="space-y-6",
                 <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-zion-cyan/30",
@@ -716,7 +716,7 @@ const GlobalFinTechAITransformation: () => {
               <div className= "space-y-6">
                 <div className= "bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-zion-cyan/30">
                   <p className= "text-lg text-zion-slate-light italic mb-4">
-                    "Our partnership with Zion Tech Group has been transformational. They didn't just implement AI technology—they ;';
+                    "Our partnership with Zion Tech Group has been transformational. They didn't just implement AI technology—they ;
               <h2 className= "text-3xl font-bold text-white mb-6">💬 Client Testimonials</h2>",
               <div className= "space-y-6>
                 <div className= "bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-zion-cyan/30>

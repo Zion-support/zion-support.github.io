@@ -1,5 +1,5 @@
 import React from 'react;
-import Header from '../../../components/Header';
+import Header from '../../../components/Header;
 import React from 'react;
 import Header from '../../../components/Header;
 const CognitiveComputingTransformation: React.FC = () => {
@@ -824,7 +824,7 @@ const CognitiveComputingTransformation: React.FC = () => {
           <div className="mt-16 bg-gradient-to-r from-purple-900/50 to-pink-900/50 border border-purple-500/30 rounded-2xl p-8 text-center"
             <h2 className="text-3xl font-bold text-white mb-4">Transform Your Enterprise with Cognitive AI</h2>"
             <p className="text-purple-100 mb-6 max-w-2xl mx-auto">,"
-  Zion Tech Group's Cognitive Computing Platform enables rapid deployment of human-like AI intelligence. ;';
+  Zion Tech Group's Cognitive Computing Platform enables rapid deployment of human-like AI intelligence. ;
           <div className="mt-16 bg-gradient-to-r from-purple-900/50 to-pink-900/50 border border-purple-500/30 rounded-2xl p-8 text-center",
             <h2 className="text-3xl font-bold text-white mb-4">Transform Your Enterprise with Cognitive AI</h2>",
             <p className="text-purple-100 mb-6 max-w-2xl mx-auto",
@@ -844,7 +844,7 @@ const CognitiveComputingTransformation: React.FC = () => {
           <div className= "mt-16 bg-gradient-to-r from-purple-900/50 to-pink-900/50 border border-purple-500/30 rounded-2xl p-8 text-center">
             <h2 className= "text-3xl font-bold text-white mb-4">Transform Your Enterprise with Cognitive AI</h2>"
             <p className= "text-purple-100 mb-6 max-w-2xl mx-auto">,"
-  Zion Tech Group's Cognitive Computing Platform enables rapid deployment of human-like AI intelligence. ;';
+  Zion Tech Group's Cognitive Computing Platform enables rapid deployment of human-like AI intelligence. ;
           <div className= "mt-16 bg-gradient-to-r from-purple-900/50 to-pink-900/50 border border-purple-500/30 rounded-2xl p-8 text-center>
             <h2 className= "text-3xl font-bold text-white mb-4">Transform Your Enterprise with Cognitive AI</h2>",
             <p className= "text-purple-100 mb-6 max-w-2xl mx-auto">"

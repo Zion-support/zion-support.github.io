@@ -9,78 +9,72 @@ const Partners: React.FC = () => {
       category: 'Cloud Platform',',',',
       description: 'Strategic cloud and AI partnership',',',',
       logo: '/images/partners/microsoft.png',',',',
-      website: 'https://microsoft.com},';
+      website: 'https://microsoft.com},
     {
       name: 'Amazon Web Services',',',',
       category: 'Cloud Infrastructure',',',',
       description: 'AWS Advanced Technology Partner',',',',
       logo: '/images/partners/aws.png',',',',
-      website: 'https://aws.amazon.com},';
+      website: 'https://aws.amazon.com},
     {
       name: 'Google Cloud',',',',
       category: 'AI & Machine Learning',',',',
       description: 'Google Cloud AI/ML Specialization Partner',',',',
       logo: '/images/partners/google-cloud.png',',',',
-      website: 'https://cloud.google.com},';
+      website: 'https://cloud.google.com},
     {
       name: 'IBM',',',',
       category: 'Enterprise AI',',',',
       description: 'IBM Business Partner for AI Solutions',',',',
       logo: '/images/partners/ibm.png',',',',
-      website: 'https://ibm.com},';
+      website: 'https://ibm.com},
     {
       name: 'Salesforce',',',',
       category: 'CRM Integration',',',',
       description: 'Salesforce Consulting Partner',',',',
       logo: '/images/partners/salesforce.png',',',',
-      website: 'https://salesforce.com},';
+      website: 'https://salesforce.com},
     {
       name: 'ServiceNow',',',',
       category: 'IT Service Management',',',',
       description: 'ServiceNow Implementation Partner',',',',
       logo: '/images/partners/servicenow.png',',',',
-      website: 'https://servicenow.com},';
+      website: 'https://servicenow.com},
       name: 'Microsoft',',',
       category: 'Cloud Platform',',',
       description: 'Strategic cloud and AI partnership',',',
       logo: '/images/partners/microsoft.png',',',
-      website: 'https://microsoft.com',',
-    },
+      website: 'https://microsoft.com',},
     {
       name: 'Amazon Web Services',',',
       category: 'Cloud Infrastructure',',',
       description: 'AWS Advanced Technology Partner',',',
       logo: '/images/partners/aws.png',',',
-      website: 'https://aws.amazon.com',',
-    },
+      website: 'https://aws.amazon.com',},
     {
       name: 'Google Cloud',',',
       category: 'AI & Machine Learning',',',
       description: 'Google Cloud AI/ML Specialization Partner',',',
       logo: '/images/partners/google-cloud.png',',',
-      website: 'https://cloud.google.com',',
-    },
+      website: 'https://cloud.google.com',},
     {
       name: 'IBM',',',
       category: 'Enterprise AI',',',
       description: 'IBM Business Partner for AI Solutions',',',
       logo: '/images/partners/ibm.png',',',
-      website: 'https://ibm.com',',
-    },
+      website: 'https://ibm.com',},
     {
       name: 'Salesforce',',',
       category: 'CRM Integration',',',
       description: 'Salesforce Consulting Partner',',',
       logo: '/images/partners/salesforce.png',',',
-      website: 'https://salesforce.com',',
-    },
+      website: 'https://salesforce.com',},
     {
       name: 'ServiceNow',',',
       category: 'IT Service Management',',',
       description: 'ServiceNow Implementation Partner',',',
       logo: '/images/partners/servicenow.png',',',
-      website: 'https://servicenow.com',',
-    }
+      website: 'https://servicenow.com',}
   ];
 
   const partnershipTypes: [,,
@@ -89,7 +83,7 @@ const Partners: React.FC = () => {
       description: 'Leading technology providers and platform partners',',',
       icon: '🔧',',',
       benefits: [,,,
-        'Access to cutting-edge technology',';
+        'Access to cutting-edge technology',
         'Joint go-to-market strategies'
       title: 'Technology Partners',',',
       description: 'Leading technology providers and platform partners',',',
@@ -105,7 +99,7 @@ const Partners: React.FC = () => {
       description: 'Specialized solution providers and integrators',',',
       icon: '🤝',',',
       benefits: [,,,
-        'Complementary solution offerings',';
+        'Complementary solution offerings',
         'Joint customer implementations'
       title: 'Solution Partners',',',
       description: 'Specialized solution providers and integrators',',',
@@ -121,7 +115,7 @@ const Partners: React.FC = () => {
       description: 'Resellers and distribution partners',',',
       icon: '📈',',',
       benefits: [,,,
-        'Extended market reach',';
+        'Extended market reach',
         'Local customer support'
       title: 'Channel Partners',',',
       description: 'Resellers and distribution partners',',',

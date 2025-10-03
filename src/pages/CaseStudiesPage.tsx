@@ -25,7 +25,7 @@ const CaseStudiesPage: React.FC = () => {
           </p>
           <div className= "bg-white p-8 rounded-xl shadow-lg">
             <p className= "text-gray-600">,"
-  We're working hard to bring you the best content and features. Thank you for your patience.';
+  We're working hard to bring you the best content and features. Thank you for your patience.;
             </p>
           </div>
         </div>

@@ -441,7 +441,7 @@ export default function EnterpriseBlockchainIntegration2025Page(): void {
           <section className="mb-12 bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10"
             <h2 className="text-3xl font-bold text-white mb-6">Ready to Build Trust at Scale?</h2>","
             <p className="text-gray-300 leading-relaxed mb-6">,","
-  Let's discuss how blockchain can transform your business operations. Our blockchain architects and engineers will help you identify the highest-impact use cases and design a solution that delivers measurable ROI.;';
+  Let's discuss how blockchain can transform your business operations. Our blockchain architects and engineers will help you identify the highest-impact use cases and design a solution that delivers measurable ROI.;
             </p>
             <div className="flex flex-col sm:flex-row gap-4",
               <a title: "Internal link", href="/contact" className ="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-emerald-600 to-teal-600 hover: from-emerald-700 hover:to-teal-700 text-white font-semibold rounded-xl transition-all transform hover:scale-105 shadow-xl>,"
@@ -462,7 +462,7 @@ export default function EnterpriseBlockchainIntegration2025Page(): void {
           <section className= "mb-12 bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
             <h2 className= "text-3xl font-bold text-white mb-6">Ready to Build Trust at Scale?</h2>","
             <p className= "text-gray-300 leading-relaxed mb-6">,","
-  Let's discuss how blockchain can transform your business operations. Our blockchain architects and engineers will help you identify the highest-impact use cases and design a solution that delivers measurable ROI.;';
+  Let's discuss how blockchain can transform your business operations. Our blockchain architects and engineers will help you identify the highest-impact use cases and design a solution that delivers measurable ROI.;
             </p>
             <div className= "flex flex-col sm:flex-row gap-4>
               <a title: "Internal link", href="/contact" className ="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-emerald-600 to-teal-600 hover: from-emerald-700 hover:to-teal-700 text-white font-semibold rounded-xl transition-all transform hover:scale-105 shadow-xl">"

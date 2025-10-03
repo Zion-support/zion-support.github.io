@@ -131,9 +131,9 @@ const CognitiveAutomationEnterpriseRevolution: () => {
             <section >
               <h2 className="text-3xl font-bold text-white mb-6">🚀 The Cognitive Automation Era Has Arrived</h2>"
               <p className="text-lg leading-relaxed mb-4">,"
-  In 2025, we're witnessing a fundamental shift in how enterprises operate. The era of simple ';
+  In 2025, we're witnessing a fundamental shift in how enterprises operate. The era of simple ;
                 robotic process automation (RPA) is giving way to <strong className="text-white">cognitive automation</strong> "
-                —intelligent systems that don't just execute tasks, but understand context, make decisions';
+                —intelligent systems that don't just execute tasks, but understand context, make decisions;
               <h2 className="text-3xl font-bold text-white mb-6">🚀 The Cognitive Automation Era Has Arrived</h2>",
               <p className="text-lg leading-relaxed mb-4",
   In 2025, we're witnessing a fundamental shift in how enterprises operate. The era of simple '
@@ -147,9 +147,9 @@ const CognitiveAutomationEnterpriseRevolution: () => {
             <section >
               <h2 className= "text-3xl font-bold text-white mb-6">🚀 The Cognitive Automation Era Has Arrived</h2>"
               <p className= "text-lg leading-relaxed mb-4">,"
-  In 2025, we're witnessing a fundamental shift in how enterprises operate. The era of simple ';
+  In 2025, we're witnessing a fundamental shift in how enterprises operate. The era of simple ;
                 robotic process automation (RPA) is giving way to <strong className= "text-white">cognitive automation</strong> "
-                —intelligent systems that don't just execute tasks, but understand context, make decisions';
+                —intelligent systems that don't just execute tasks, but understand context, make decisions;
               <h2 className= "text-3xl font-bold text-white mb-6">🚀 The Cognitive Automation Era Has Arrived</h2>",
               <p className= "text-lg leading-relaxed mb-4">"
   In 2025, we're witnessing a fundamental shift in how enterprises operate. The era of simple '

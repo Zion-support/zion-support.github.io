@@ -270,10 +270,10 @@ import {
   BlueFootedBooby,
   PeruvianBooby,
   AbbottBooby
-} from 'lucide-react';
+} from 'lucide-react;
 export default function NewServices2026() {
-  const title = 'New Services 2026 — Zion Tech Group';
-  const description = 'Revolutionary micro SaaS, IT, and AI services for 2026. Cutting-edge solutions with proven ROI and fast implementation.';
+  const title = 'New Services 2026 — Zion Tech Group;
+  const description = 'Revolutionary micro SaaS, IT, and AI services for 2026. Cutting-edge solutions with proven ROI and fast implementation.;
   const newServices = [
     // AI-Powered Micro SaaS Solutions
     {

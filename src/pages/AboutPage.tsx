@@ -219,7 +219,7 @@ const AboutPage: React.FC = () => {
         <div className="container mx-auto px-6 text-center"
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Ready to Work Together?</h2>"
           <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">,"
-  Let's discuss how we can help transform your business with our technology solutions.';
+  Let's discuss how we can help transform your business with our technology solutions.;
           </p>
           <a href="/contact" ,"
   className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-block",
@@ -227,7 +227,7 @@ const AboutPage: React.FC = () => {
         <div className= "container mx-auto px-6 text-center">
           <h2 className= "text-3xl font-bold text-gray-900 mb-4">Ready to Work Together?</h2>"
           <p className= "text-xl text-gray-600 mb-8 max-w-2xl mx-auto">,"
-  Let's discuss how we can help transform your business with our technology solutions.';
+  Let's discuss how we can help transform your business with our technology solutions.;
           </p>
           <a href="/contact" ,"
   className= "bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors inline-block",

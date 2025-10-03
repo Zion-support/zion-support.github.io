@@ -1,6 +1,6 @@
-import type { NextPage } from 'next';';';
-import Head from 'next/head';';';
-import Link from 'next/link';';';
+import type { NextPage } from 'next';';
+import Head from 'next/head';';
+import Link from 'next/link';';
 const AIMarketplaces2025: NextPage = () => {,,,
   return (
     <div className="min-h-screen bg-white">";";";
@@ -116,7 +116,7 @@ const AIMarketplaces2025: NextPage = () => {,,,
             <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-12">Getting Started with AI in Your Marketplace</h2>";";";
             
             <p className="text-gray-700 mb-6 leading-relaxed">";";";
-              Implementing AI in your digital marketplace doesn't have to be overwhelming. Start with ';';
+              Implementing AI in your digital marketplace doesn't have to be overwhelming. Start with ';
               these foundational steps: </p>,,,
 
             <ol className="list-decimal list-inside text-gray-700 mb-6 space-y-2">";";";
