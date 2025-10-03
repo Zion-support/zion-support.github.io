@@ -1,14 +1,6 @@
 // import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  ArrowRight, 
-  Shield, 
-  ShoppingCart,
-  DollarSign,
-  Star as StarIcon,
-  Heart,
-  Share2
-} from 'lucide-react';
+import { ArrowRight, Shield, ShoppingCart, DollarSign, Star as StarIcon, Heart, Share2, Users, Rocket, CheckCircle, Brain, Cpu, BarChart3, Cloud, Zap, Database } from 'lucide-react';
 
 export const metadata = {
   title: 'AI Marketplace - Zion Tech Group | AI Solutions & Tools',
