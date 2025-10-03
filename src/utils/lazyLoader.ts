@@ -1,5 +1,4 @@
 
-import { lazy, Suspense, ComponentType } from 'react';
 
 // Lazy loading wrapper with loading state
 export const lazyLoad = <T extends ComponentType<any>>(
