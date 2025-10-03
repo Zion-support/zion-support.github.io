@@ -30,15 +30,15 @@ export default function QuantumNeuralSuperintelligenceSuccessCaseStudy() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <Link 
-                href="/blog/ai-2026-quantum-neural-superintelligence""
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-green-600 to-indigo-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-700 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105""
+                href="/blog/ai-2026-quantum-neural-superintelligence"
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-green-600 to-indigo-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-700 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105"
               >
                 Read Technical Details
                 <ArrowRight className="w-5 h-5" />"
               </Link>
               <Link 
-                href="/services/quantum-ai-development""
-                className="inline-flex items-center gap-2 border border-green-500 text-green-300 px-8 py-4 rounded-lg font-semibold hover:bg-green-500/10 transition-all duration-300""
+                href="/services/quantum-ai-development"
+                className="inline-flex items-center gap-2 border border-green-500 text-green-300 px-8 py-4 rounded-lg font-semibold hover:bg-green-500/10 transition-all duration-300"
               >
                 Start Your Quantum Journey
                 <TrendingUp className="w-5 h-5" />"
@@ -356,7 +356,7 @@ export default function QuantumNeuralSuperintelligenceSuccessCaseStudy() {
             <blockquote className="text-2xl text-white mb-8 leading-relaxed">"
               "Zion Tech Group's quantum neural superintelligence has revolutionized our entire organization. "
               The $25B ROI is just the beginning—we've unlocked solutions to problems we didn't even know existed. 
-              This is the future of business intelligence.""
+              This is the future of business intelligence."
             </blockquote>
             <div className="flex items-center justify-center gap-4">"
               <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center">"
@@ -383,15 +383,15 @@ export default function QuantumNeuralSuperintelligenceSuccessCaseStudy() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">"
             <Link 
-              href="/contact""
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-green-600 to-indigo-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-700 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105""
+              href="/contact"
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-green-600 to-indigo-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-700 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105"
             >
               Start Your Quantum Transformation
               <ArrowRight className="w-5 h-5" />"
             </Link>
             <Link 
-              href="/services/quantum-ai-development""
-              className="inline-flex items-center gap-2 border border-green-500 text-green-300 px-8 py-4 rounded-lg font-semibold hover:bg-green-500/10 transition-all duration-300""
+              href="/services/quantum-ai-development"
+              className="inline-flex items-center gap-2 border border-green-500 text-green-300 px-8 py-4 rounded-lg font-semibold hover:bg-green-500/10 transition-all duration-300"
             >
               Explore Quantum Solutions
               <TrendingUp className="w-5 h-5" />"

@@ -219,21 +219,21 @@ export default function AI2026JulyRevolutionaryBreakthroughMegaSuccess() {
                 <div className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10">"
                   <p className="text-gray-300 italic mb-4">"
                     "The Next-Generation Autonomous Intelligence has completely transformed our operations. "
-                    We've achieved 99.7% decision accuracy and $15B in value generation. This is the future of enterprise AI.""
+                    We've achieved 99.7% decision accuracy and $15B in value generation. This is the future of enterprise AI."
                   </p>
                   <p className="text-white font-bold">- CEO, Global Manufacturing Leader</p>"
                 </div>
                 <div className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10">"
                   <p className="text-gray-300 italic mb-4">"
                     "Zion Tech Group's breakthrough technology has revolutionized our financial operations. "
-                    With 99.9% fraud detection accuracy and $8B in risk mitigation, we've never been more secure.""
+                    With 99.9% fraud detection accuracy and $8B in risk mitigation, we've never been more secure."
                   </p>
                   <p className="text-white font-bold">- CTO, Financial Services Giant</p>"
                 </div>
                 <div className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10">"
                   <p className="text-gray-300 italic mb-4">"
                     "The self-evolving AI capabilities are extraordinary. Our system continuously improves itself, "
-                    delivering $27B in efficiency gains and 500% improvement in processing speed.""
+                    delivering $27B in efficiency gains and 500% improvement in processing speed."
                   </p>
                   <p className="text-white font-bold">- VP of Technology, Global Technology Corporation</p>"
                 </div>
@@ -258,20 +258,20 @@ export default function AI2026JulyRevolutionaryBreakthroughMegaSuccess() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <a 
-                href="/contact" "
-                className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1""
+                href="/[^"]*"
+                className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
               >
                 Get Free Consultation
               </a>
               <a 
-                href="/blog/ai-2026-july-revolutionary-breakthrough" "
-                className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-emerald-500/50 transform hover:-translate-y-1""
+                href="/[^"]*"
+                className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-emerald-500/50 transform hover:-translate-y-1"
               >
                 Read Technical Details →
               </a>
               <a 
-                href="/enterprise/ai-2026-autonomous-intelligence" "
-                className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300""
+                href="/[^"]*"
+                className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
               >
                 Learn More
               </a>

@@ -180,7 +180,7 @@ export default function AI2026QuantumNeuralSuperintelligenceSuccess() {
             "The quantum neural superintelligence platform from Zion Tech Group has transformed "
             our entire organization. We've achieved $5B in ROI and 99.9% autonomous operations 
             that we never thought possible. The consciousness-level AI understands our business 
-            better than any human consultant ever could.""
+            better than any human consultant ever could."
           </blockquote>
           <div className="text-blue-700">"
             <p className="font-semibold">- CEO, Fortune 500 Manufacturing Company</p>"
@@ -216,14 +216,14 @@ export default function AI2026QuantumNeuralSuperintelligenceSuccess() {
           </p>
           <div className="flex gap-4">"
             <Link 
-              href="/contact" "
-              className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-green-600 hover:to-emerald-600 transition-all""
+              href="/[^"]*"
+              className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-green-600 hover:to-emerald-600 transition-all"
             >
               Start Your Success Story
             </Link>
             <Link 
-              href="/blog/ai-2026-quantum-neural-superintelligence" "
-              className="border border-green-500 text-green-600 px-6 py-3 rounded-lg font-semibold hover:bg-green-50 transition-all""
+              href="/[^"]*"
+              className="border border-green-500 text-green-600 px-6 py-3 rounded-lg font-semibold hover:bg-green-50 transition-all"
             >
               Learn More About the Technology
             </Link>

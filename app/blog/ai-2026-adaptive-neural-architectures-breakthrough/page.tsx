@@ -37,19 +37,19 @@ export default function AdaptiveNeuralArchitecturesPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">"
               <a 
                 href="#content" "
-                className="bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1""
+                className="bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
               >
                 Read Full Article
               </a>
               <a 
-                href="/case-studies/ai-2026-adaptive-neural-architectures-25-billion-success" "
-                className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1""
+                href="/[^"]*"
+                className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
               >
                 View $25B Success Story →
               </a>
               <a 
-                href="/contact" "
-                className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300""
+                href="/[^"]*"
+                className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
               >
                 Start Your Evolution
               </a>
@@ -188,14 +188,14 @@ export default function AdaptiveNeuralArchitecturesPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">"
                 <a 
-                  href="/contact" "
-                  className="bg-white text-blue-600 font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors""
+                  href="/[^"]*"
+                  className="bg-white text-blue-600 font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors"
                 >
                   Contact Our AI Specialists
                 </a>
                 <a 
-                  href="/case-studies/ai-2026-adaptive-neural-architectures-25-billion-success" "
-                  className="border-2 border-white text-white font-bold py-3 px-6 rounded-lg hover:bg-white hover:text-blue-600 transition-colors""
+                  href="/[^"]*"
+                  className="border-2 border-white text-white font-bold py-3 px-6 rounded-lg hover:bg-white hover:text-blue-600 transition-colors"
                 >
                   View Success Stories
                 </a>

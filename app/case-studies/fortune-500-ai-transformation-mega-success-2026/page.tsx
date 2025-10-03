@@ -425,14 +425,14 @@ export default function Fortune500AITransformationMegaSuccess2026() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <Link 
-                href="/blog" "
-                className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors""
+                href="/[^"]*"
+                className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
                 Read More Success Stories
               </Link>
               <Link 
-                href="/contact" "
-                className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors""
+                href="/[^"]*"
+                className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
               >
                 Start Your AI Transformation
               </Link>

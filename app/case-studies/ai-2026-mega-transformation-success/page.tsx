@@ -307,7 +307,7 @@ export default function AIMegaTransformationSuccess() {
           <p className="text-xl italic mb-6 max-w-3xl mx-auto">"
             "The AI transformation exceeded our wildest expectations. We not only solved our "
             immediate challenges but positioned ourselves as the industry leader. The $50M 
-            additional revenue is just the beginning of what's possible with AI.""
+            additional revenue is just the beginning of what's possible with AI."
           </p>
           <div className="text-lg font-semibold">Sarah Johnson</div>"
           <div className="text-gray-400">Chief Technology Officer</div>"
@@ -351,15 +351,15 @@ export default function AIMegaTransformationSuccess() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">"
           <Link
-            href="/contact""
-            className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors flex items-center justify-center gap-2""
+            href="/contact"
+            className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors flex items-center justify-center gap-2"
           >
             Start Your Transformation
             <ArrowRight className="w-5 h-5" />"
           </Link>
           <a
-            href="tel:+13024640950""
-            className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-green-600 transition-colors""
+            href="tel:+13024640950"
+            className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-green-600 transition-colors"
           >
             Call +1 302 464 0950
           </a>

@@ -267,14 +267,14 @@ export default function AI2027QuantumNeuralNetworks() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4">"
             <Link 
-              href="/contact" "
-              className="bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center""
+              href="/[^"]*"
+              className="bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center"
             >
               Start Your Quantum Journey
             </Link>
             <Link 
-              href="/services/ai-2027-quantum-enterprise-solutions" "
-              className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors text-center""
+              href="/[^"]*"
+              className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors text-center"
             >
               Explore Quantum Services
             </Link>

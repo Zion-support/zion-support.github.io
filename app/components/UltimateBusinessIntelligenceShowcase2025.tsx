@@ -131,7 +131,7 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
           {filteredContent.map((item) => (
             <div
               key={item.id}
-              className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1""
+              className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
             >
               {/* Content Type Badge */}
               <div className="p-4 pb-0">"
@@ -177,7 +177,7 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
                   {item.tags.slice(0, 3).map((tag) => (
                     <span
                       key={tag}
-                      className="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs""
+                      className="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs"
                     >
                       {tag}
                     </span>
@@ -188,7 +188,7 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
                 <div className="space-y-3">"
                   <Link
                     href={item.url}
-                    className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 text-center block""
+                    className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 text-center block"
                   >
                     Read {item.type}
                   </Link>
@@ -214,14 +214,14 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <Link
-                href="/contact""
-                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors""
+                href="/contact"
+                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors"
               >
                 Get Free Consultation
               </Link>
               <Link
-                href="/resources""
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors""
+                href="/resources"
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
               >
                 Download Guide
               </Link>

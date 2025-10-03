@@ -120,14 +120,14 @@ export default function AI2026AutonomousEnterpriseArchitecture() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">"
                 <Link 
-                  href="/contact" "
-                  className="px-8 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-xl hover:from-purple-700 hover:to-blue-700 transition-all duration-300 text-center""
+                  href="/[^"]*"
+                  className="px-8 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-xl hover:from-purple-700 hover:to-blue-700 transition-all duration-300 text-center"
                 >
                   Get Started Today
                 </Link>
                 <Link 
-                  href="/services/ai-enterprise-solutions" "
-                  className="px-8 py-3 border border-purple-500 text-purple-400 font-semibold rounded-xl hover:bg-purple-500/10 transition-all duration-300 text-center""
+                  href="/[^"]*"
+                  className="px-8 py-3 border border-purple-500 text-purple-400 font-semibold rounded-xl hover:bg-purple-500/10 transition-all duration-300 text-center"
                 >
                   Learn More
                 </Link>
@@ -178,8 +178,8 @@ export default function AI2026AutonomousEnterpriseArchitecture() {
         {/* Back to Blog */}
         <div className="text-center mt-16">"
           <Link 
-            href="/blog" "
-            className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-slate-700 to-slate-800 text-white font-semibold rounded-xl hover:from-slate-600 hover:to-slate-700 transition-all duration-300""
+            href="/[^"]*"
+            className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-slate-700 to-slate-800 text-white font-semibold rounded-xl hover:from-slate-600 hover:to-slate-700 transition-all duration-300"
           >
             <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">"
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />"

@@ -269,7 +269,7 @@ export default function Fortune500SuperintelligenceSuccessPage() {
                 "The AI 2026 Superintelligence suite has completely transformed our organization. "
                 We've achieved results that we never thought possible - $5.2 billion in measurable 
                 value, 99.7% operational efficiency, and a complete reimagining of how we do business. 
-                This isn't just an improvement; it's a revolution.""
+                This isn't just an improvement; it's a revolution."
               </blockquote>
               <div className="flex items-center gap-4">"
                 <div className="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center text-2xl font-bold text-white">"
@@ -338,14 +338,14 @@ export default function Fortune500SuperintelligenceSuccessPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">"
                 <a 
-                  href="/contact" "
-                  className="bg-white text-green-600 hover:bg-green-50 font-bold py-3 px-8 rounded-xl transition-all duration-300""
+                  href="/[^"]*"
+                  className="bg-white text-green-600 hover:bg-green-50 font-bold py-3 px-8 rounded-xl transition-all duration-300"
                 >
                   Get Free Consultation
                 </a>
                 <a 
-                  href="/blog/ai-2026-consensus-intelligence-breakthrough" "
-                  className="border-2 border-white text-white hover:bg-white hover:text-green-600 font-bold py-3 px-8 rounded-xl transition-all duration-300""
+                  href="/[^"]*"
+                  className="border-2 border-white text-white hover:bg-white hover:text-green-600 font-bold py-3 px-8 rounded-xl transition-all duration-300"
                 >
                   Learn More About AI 2026
                 </a>

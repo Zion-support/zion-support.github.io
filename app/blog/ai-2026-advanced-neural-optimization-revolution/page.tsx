@@ -170,14 +170,14 @@ export default function BlogPost() {
           </p>
           <div className="flex flex-wrap gap-4">"
             <Link 
-              href="/contact" "
-              className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-indigo-700 transition-all""
+              href="/[^"]*"
+              className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-indigo-700 transition-all"
             >
               Schedule Consultation
             </Link>
             <Link 
-              href="/case-studies/ai-2026-neural-optimization-mega-success" "
-              className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-green-700 hover:to-emerald-700 transition-all""
+              href="/[^"]*"
+              className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-green-700 hover:to-emerald-700 transition-all"
             >
               View Success Stories
             </Link>

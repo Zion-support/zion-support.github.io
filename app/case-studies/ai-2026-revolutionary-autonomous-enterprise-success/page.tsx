@@ -254,14 +254,14 @@ export default function AI2026RevolutionaryAutonomousEnterpriseSuccess() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4">"
             <Link 
-              href="/services/ai-2026-revolutionary-autonomous-enterprise-systems" "
-              className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-indigo-700 transition-all duration-200 text-center""
+              href="/[^"]*"
+              className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-indigo-700 transition-all duration-200 text-center"
             >
               Start Your Transformation
             </Link>
             <Link 
-              href="/blog/ai-2026-revolutionary-autonomous-enterprise-systems" "
-              className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-200 text-center""
+              href="/[^"]*"
+              className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-200 text-center"
             >
               Read Full Article
             </Link>

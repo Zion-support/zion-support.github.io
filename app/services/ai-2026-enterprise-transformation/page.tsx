@@ -229,7 +229,7 @@ export default function AI2026EnterpriseTransformationPage() {
                   <p className="text-green-100 mb-6 leading-relaxed">"
                     "Our AI transformation with Zion Tech Group has been revolutionary. We achieved $100M "
                     in annual savings and 400% ROI within 18 months. The quantum AI computing and autonomous 
-                    systems have fundamentally transformed our operations.""
+                    systems have fundamentally transformed our operations."
                   </p>
                   <div className="flex items-center gap-4">"
                     <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">"
@@ -275,14 +275,14 @@ export default function AI2026EnterpriseTransformationPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">"
                 <a
-                  href="tel:+13024640950""
-                  className="bg-white text-indigo-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors shadow-lg hover:shadow-xl""
+                  href="tel:+13024640950"
+                  className="bg-white text-indigo-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors shadow-lg hover:shadow-xl"
                 >
                   Call +1 302 464 0950
                 </a>
                 <a
-                  href="mailto:kleber@ziontechgroup.com""
-                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-indigo-600 transition-colors""
+                  href="mailto:kleber@ziontechgroup.com"
+                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-indigo-600 transition-colors"
                 >
                   Email Us
                 </a>

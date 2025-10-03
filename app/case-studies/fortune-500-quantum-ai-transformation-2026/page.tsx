@@ -247,25 +247,25 @@ export default function Fortune500QuantumAITransformation2026() {
                   phase: "Months 1-3", "
                   title= "Assessment & Strategy", "
                   description: "Comprehensive analysis of current operations and quantum AI implementation strategy"
-                  results: "Identified $5B optimization potential""
+                  results: "Identified $5B optimization potential"
                 },
                 { 
                   phase: "Months 4-6", "
                   title= "Pilot Implementation", "
                   description: "Deployed quantum AI systems in key manufacturing lines"
-                  results: "50% improvement in pilot operations""
+                  results: "50% improvement in pilot operations"
                 },
                 { 
                   phase: "Months 7-12", "
                   title= "Enterprise Rollout", "
                   description: "Scaled quantum AI across all manufacturing facilities globally"
-                  results: "95% automation achieved""
+                  results: "95% automation achieved"
                 },
                 { 
                   phase: "Months 13-18", "
                   title= "Optimization & Growth", "
                   description: "Fine-tuned systems and expanded capabilities for maximum impact"
-                  results: "$10B revenue impact realized""
+                  results: "$10B revenue impact realized"
                 }
               ].map((phase, index) => (
                 <div key={index} className="flex items-start gap-6 p-6 bg-white/5 rounded-xl border border-white/10">"
@@ -293,7 +293,7 @@ export default function Fortune500QuantumAITransformation2026() {
             <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/20 rounded-2xl p-8 text-center">"
               <div className="text-6xl mb-4">💬</div>"
               <blockquote className="text-2xl font-semibold text-gray-300 mb-6 italic">"
-                "Zion Tech Group's quantum AI transformation has revolutionized our entire operation. The $10B revenue impact exceeded our wildest expectations. We've not only caught up with the competition but have become the industry leader.""
+                "Zion Tech Group's quantum AI transformation has revolutionized our entire operation. The $10B revenue impact exceeded our wildest expectations. We've not only caught up with the competition but have become the industry leader."
               </blockquote>
               <div className="text-lg text-blue-400 font-semibold">"
                 — CEO, Fortune 500 Manufacturing Company
@@ -314,14 +314,14 @@ export default function Fortune500QuantumAITransformation2026() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">"
             <Link 
-              href="/contact" "
-              className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1""
+              href="/[^"]*"
+              className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
             >
               Start Your Transformation
             </Link>
             <Link 
-              href="/services" "
-              className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300""
+              href="/[^"]*"
+              className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               Explore Our Services
             </Link>
@@ -335,15 +335,15 @@ export default function Fortune500QuantumAITransformation2026() {
           <div className="max-w-4xl mx-auto">"
             <div className="flex flex-col sm:flex-row justify-between items-center gap-4">"
               <Link 
-                href="/case-studies" "
-                className="flex items-center gap-2 text-green-400 hover:text-green-300 transition-colors""
+                href="/[^"]*"
+                className="flex items-center gap-2 text-green-400 hover:text-green-300 transition-colors"
               >
                 <ArrowRight className="w-4 h-4 rotate-180" />"
                 Back to Case Studies
               </Link>
               <Link 
-                href="/blog" "
-                className="flex items-center gap-2 bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300""
+                href="/[^"]*"
+                className="flex items-center gap-2 bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
               >
                 Read More Success Stories
                 <ArrowRight className="w-4 h-4" />"

@@ -77,11 +77,11 @@ export default function InteractiveAIROICalculator() {
                 Number of Employees
               </label>
               <input
-                type="number""
+                type="number"
                 value={inputs.currentEmployees}
                 onChange={(e) => handleInputChange('currentEmployees', parseInt(e.target.value) || 0)}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent""
-                min="1""
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                min="1"
               />
             </div>
 
@@ -90,12 +90,12 @@ export default function InteractiveAIROICalculator() {
                 Average Annual Salary ($)
               </label>
               <input
-                type="number""
+                type="number"
                 value={inputs.averageSalary}
                 onChange={(e) => handleInputChange('averageSalary', parseInt(e.target.value) || 0)}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent""
-                min="10000""
-                step="1000""
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                min="10000"
+                step="1000"
               />
             </div>
 
@@ -104,12 +104,12 @@ export default function InteractiveAIROICalculator() {
                 Current Productivity Level (%)
               </label>
               <input
-                type="number""
+                type="number"
                 value={inputs.currentProductivity}
                 onChange={(e) => handleInputChange('currentProductivity', parseInt(e.target.value) || 0)}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent""
-                min="1""
-                max="200""
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                min="1"
+                max="200"
               />
             </div>
 
@@ -118,12 +118,12 @@ export default function InteractiveAIROICalculator() {
                 AI Implementation Cost ($)
               </label>
               <input
-                type="number""
+                type="number"
                 value={inputs.aiImplementationCost}
                 onChange={(e) => handleInputChange('aiImplementationCost', parseInt(e.target.value) || 0)}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent""
-                min="10000""
-                step="10000""
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                min="10000"
+                step="10000"
               />
             </div>
 
@@ -132,12 +132,12 @@ export default function InteractiveAIROICalculator() {
                 Implementation Timeline (months)
               </label>
               <input
-                type="number""
+                type="number"
                 value={inputs.timeToImplement}
                 onChange={(e) => handleInputChange('timeToImplement', parseInt(e.target.value) || 0)}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent""
-                min="1""
-                max="36""
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                min="1"
+                max="36"
               />
             </div>
           </div>

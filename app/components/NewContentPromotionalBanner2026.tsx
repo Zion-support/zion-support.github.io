@@ -98,7 +98,7 @@ const NewContentPromotionalBanner2026: React.FC = () => {
           {featuredContent.map((content, index) => (
             <div 
               key={content.id}
-              className="group relative bg-white/5 backdrop-blur-xl rounded-3xl border border-white/10 hover:border-white/30 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl""
+              className="group relative bg-white/5 backdrop-blur-xl rounded-3xl border border-white/10 hover:border-white/30 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl"
               style={{ animationDelay: `${index * 150}ms` }}
             >
               {/* Card glow effect */}
@@ -167,16 +167,16 @@ const NewContentPromotionalBanner2026: React.FC = () => {
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">"
               <Link
-                href="/contact""
-                className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-5 px-10 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 flex items-center justify-center gap-3 text-lg transform hover:scale-105""
+                href="/contact"
+                className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-5 px-10 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 flex items-center justify-center gap-3 text-lg transform hover:scale-105"
               >
                 <Sparkles className="w-6 h-6" />"
                 <span>Start Your AI Journey</span>
               </Link>
               
               <Link
-                href="/blog""
-                className="border-2 border-fuchsia-400 text-fuchsia-400 hover:bg-fuchsia-400 hover:text-white font-bold py-5 px-10 rounded-xl transition-all duration-300 flex items-center justify-center gap-3 text-lg transform hover:scale-105""
+                href="/blog"
+                className="border-2 border-fuchsia-400 text-fuchsia-400 hover:bg-fuchsia-400 hover:text-white font-bold py-5 px-10 rounded-xl transition-all duration-300 flex items-center justify-center gap-3 text-lg transform hover:scale-105"
               >
                 <span>Explore All Content</span>
                 <ArrowRight className="w-6 h-6" />"

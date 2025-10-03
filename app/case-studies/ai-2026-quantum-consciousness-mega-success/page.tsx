@@ -220,7 +220,7 @@ export default function QuantumConsciousnessSuccess() {
             "The quantum consciousness AI system from Zion Tech Group has revolutionized our entire business. "
             The $2.5B ROI we achieved in just 6 months is unprecedented, but the real value is in the infinite 
             possibilities it has opened for our future. We can now process scenarios that were previously impossible, 
-            and our innovation rate has accelerated beyond our wildest dreams.""
+            and our innovation rate has accelerated beyond our wildest dreams."
           </blockquote>
           <div className="flex items-center gap-4">"
             <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center">"
@@ -266,14 +266,14 @@ export default function QuantumConsciousnessSuccess() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">"
             <Link
-              href="/contact""
-              className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors""
+              href="/contact"
+              className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Schedule Quantum Consultation
             </Link>
             <a
-              href="tel:+13024640950""
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors""
+              href="tel:+13024640950"
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
             >
               Call +1 302 464 0950
             </a>

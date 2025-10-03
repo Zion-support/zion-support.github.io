@@ -247,7 +247,7 @@ export default function AutonomousBIFortune500Success() {
             "The autonomous business intelligence platform from Zion Tech Group has transformed our "
             entire analytics operation. We've achieved $50M in ROI while automating 95% of our 
             routine BI tasks. The predictive capabilities have given us a significant competitive 
-            advantage in the market.""
+            advantage in the market."
           </blockquote>
           <div className="flex items-center">"
             <div>
@@ -288,14 +288,14 @@ export default function AutonomousBIFortune500Success() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">"
             <Link
-              href="/services/ai-autonomous-business-intelligence""
-              className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors""
+              href="/services/ai-autonomous-business-intelligence"
+              className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Explore Our Solutions
             </Link>
             <a
-              href="tel:+13024640950""
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors""
+              href="tel:+13024640950"
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
             >
               Call +1 302 464 0950
             </a>

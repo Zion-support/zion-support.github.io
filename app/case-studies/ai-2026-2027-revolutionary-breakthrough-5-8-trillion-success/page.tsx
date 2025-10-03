@@ -289,7 +289,7 @@ export default function AI20262027RevolutionaryBreakthrough58TrillionSuccess() {
               <div className="text-sm text-gray-600 mb-3">Global Manufacturing Leader</div>"
               <blockquote className="text-gray-700 italic">"
                 "The revolutionary AI breakthrough transformed our entire operation. We achieved $847B in ROI "
-                and now operate at 99.9% autonomy. This is the future of enterprise operations.""
+                and now operate at 99.9% autonomy. This is the future of enterprise operations."
               </blockquote>
               <div className="text-2xl font-bold text-green-600 mt-3">$847B ROI</div>"
             </div>
@@ -298,7 +298,7 @@ export default function AI20262027RevolutionaryBreakthrough58TrillionSuccess() {
               <div className="text-sm text-gray-600 mb-3">Financial Services Giant</div>"
               <blockquote className="text-gray-700 italic">"
                 "Quantum Neural Superintelligence gave us 10,000x performance improvement. Our decision-making "
-                is now instant and our $1.2T ROI proves the revolutionary impact.""
+                is now instant and our $1.2T ROI proves the revolutionary impact."
               </blockquote>
               <div className="text-2xl font-bold text-green-600 mt-3">$1.2T ROI</div>"
             </div>
@@ -307,7 +307,7 @@ export default function AI20262027RevolutionaryBreakthrough58TrillionSuccess() {
               <div className="text-sm text-gray-600 mb-3">Technology Conglomerate</div>"
               <blockquote className="text-gray-700 italic">"
                 "Universal Consciousness integration achieved the impossible. We reached $2.8T ROI and "
-                achieved true singularity in our operations. This is revolutionary.""
+                achieved true singularity in our operations. This is revolutionary."
               </blockquote>
               <div className="text-2xl font-bold text-green-600 mt-3">$2.8T ROI</div>"
             </div>
@@ -316,7 +316,7 @@ export default function AI20262027RevolutionaryBreakthrough58TrillionSuccess() {
               <div className="text-sm text-gray-600 mb-3">Healthcare Innovation Leader</div>"
               <blockquote className="text-gray-700 italic">"
                 "Transcendent Meta-Intelligence revolutionized our research capabilities. We achieved $1.8T ROI "
-                and now have self-evolving AI that continuously improves our outcomes.""
+                and now have self-evolving AI that continuously improves our outcomes."
               </blockquote>
               <div className="text-2xl font-bold text-green-600 mt-3">$1.8T ROI</div>"
             </div>
@@ -332,14 +332,14 @@ export default function AI20262027RevolutionaryBreakthrough58TrillionSuccess() {
         </p>
         <div className="flex flex-wrap justify-center gap-4">"
           <Link 
-            href="/contact" "
-            className="bg-white text-orange-600 px-8 py-4 rounded-full text-lg font-bold hover:bg-gray-100 transition-colors""
+            href="/[^"]*"
+            className="bg-white text-orange-600 px-8 py-4 rounded-full text-lg font-bold hover:bg-gray-100 transition-colors"
           >
             Start Your Transformation
           </Link>
           <Link 
-            href="/blog/ai-2026-2027-revolutionary-breakthrough-comprehensive-guide" "
-            className="bg-orange-600 text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-orange-700 transition-colors border-2 border-white""
+            href="/[^"]*"
+            className="bg-orange-600 text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-orange-700 transition-colors border-2 border-white"
           >
             Read Full Guide
           </Link>

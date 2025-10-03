@@ -196,14 +196,14 @@ export default function UniversalConsciousnessSingularityBreakthrough() {
           </p>
           <div className="flex flex-wrap gap-4">"
             <Link 
-              href="/services/ai-2028-universal-consciousness-singularity-solutions" "
-              className="bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition-colors""
+              href="/[^"]*"
+              className="bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition-colors"
             >
               Explore Solutions
             </Link>
             <Link 
-              href="/case-studies/ai-2028-universal-consciousness-singularity-2-8-trillion-success" "
-              className="bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-colors""
+              href="/[^"]*"
+              className="bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-colors"
             >
               View Success Story
             </Link>

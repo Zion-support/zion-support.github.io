@@ -231,8 +231,8 @@ export default function Fortune100TransformationPage() {
                 Contact Zion Tech Group to begin your hyperconscious enterprise transformation. The future of business is waiting.
               </p>
               <a 
-                href="/contact" "
-                className="inline-block bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1""
+                href="/[^"]*"
+                className="inline-block bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
               >
                 Start Your Transformation
               </a>

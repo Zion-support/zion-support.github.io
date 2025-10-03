@@ -63,13 +63,13 @@ export default function AIRevolutionaryBreakthrough2026() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">"
               <a 
                 href="#breakthrough-details" "
-                className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1""
+                className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
               >
                 Explore Breakthrough Details
               </a>
               <a 
-                href="/contact" "
-                className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300""
+                href="/[^"]*"
+                className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
               >
                 Schedule Implementation Call
               </a>
@@ -363,14 +363,14 @@ export default function AIRevolutionaryBreakthrough2026() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">"
                 <a
-                  href="tel:+13024640950""
-                  className="bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all hover:scale-105 shadow-lg""
+                  href="tel:+13024640950"
+                  className="bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all hover:scale-105 shadow-lg"
                 >
                   📞 Call +1 302 464 0950
                 </a>
                 <a
-                  href="/contact""
-                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-blue-600 transition-all hover:scale-105""
+                  href="/contact"
+                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-blue-600 transition-all hover:scale-105"
                 >
                   Schedule Implementation Consultation
                 </a>

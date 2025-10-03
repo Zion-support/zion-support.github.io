@@ -210,20 +210,20 @@ export default function March2026BreakthroughMegaSuccessPage() {
               </p>
               <div className="flex flex-wrap justify-center gap-4">"
                 <a
-                  href="/contact""
-                  className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1""
+                  href="/contact"
+                  className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
                 >
                   Get Free Consultation
                 </a>
                 <a
-                  href="/services/ai-2026-march-breakthrough-consulting""
-                  className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-emerald-500/50 transform hover:-translate-y-1""
+                  href="/services/ai-2026-march-breakthrough-consulting"
+                  className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-emerald-500/50 transform hover:-translate-y-1"
                 >
                   Get Consulting Services
                 </a>
                 <a
-                  href="/blog/ai-2026-march-revolutionary-breakthroughs""
-                  className="border-2 border-green-500 text-green-300 hover:bg-green-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300""
+                  href="/blog/ai-2026-march-revolutionary-breakthroughs"
+                  className="border-2 border-green-500 text-green-300 hover:bg-green-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
                 >
                   Read March Breakthroughs
                 </a>

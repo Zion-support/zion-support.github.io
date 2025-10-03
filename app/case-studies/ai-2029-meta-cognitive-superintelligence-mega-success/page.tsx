@@ -162,7 +162,7 @@ export default function AIMetaCognitiveSuperintelligenceMegaSuccess() {
         
         <div className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white p-8 rounded-xl mb-8">"
           <blockquote className="text-xl italic mb-4">"
-            "The meta-cognitive superintelligence breakthrough from Zion Tech Group has completely transformed our organization. The $10B ROI achievement exceeded all expectations, and the 1,000,000x performance improvements have revolutionized how we operate. This is the future of business intelligence.""
+            "The meta-cognitive superintelligence breakthrough from Zion Tech Group has completely transformed our organization. The $10B ROI achievement exceeded all expectations, and the 1,000,000x performance improvements have revolutionized how we operate. This is the future of business intelligence."
           </blockquote>
           <div className="text-purple-100">"
             <div className="font-bold">CEO, Fortune 500 Technology Company</div>"
@@ -190,14 +190,14 @@ export default function AIMetaCognitiveSuperintelligenceMegaSuccess() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4">"
             <a 
-              href="/contact" "
-              className="bg-white text-green-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors text-center""
+              href="/[^"]*"
+              className="bg-white text-green-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors text-center"
             >
               Contact Zion Tech Group
             </a>
             <a 
-              href="/blog/ai-2029-meta-cognitive-superintelligence-breakthrough" "
-              className="bg-yellow-400 text-black px-8 py-3 rounded-lg font-bold hover:bg-yellow-300 transition-colors text-center""
+              href="/[^"]*"
+              className="bg-yellow-400 text-black px-8 py-3 rounded-lg font-bold hover:bg-yellow-300 transition-colors text-center"
             >
               Learn About the Technology
             </a>

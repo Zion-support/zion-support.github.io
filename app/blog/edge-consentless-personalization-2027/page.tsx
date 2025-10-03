@@ -1,5 +1,5 @@
-"use client""
-import Link from "next/link""
+"use client"
+import Link from "next/link"
 export default function Page() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-gray-50 to-white">"

@@ -94,22 +94,22 @@ const InnovationLabFramework = {
   ideation: {
     aiBrainstorming: "GPT-4 + Custom Innovation Models"
     marketAnalysis: "Real-time Data Streams + ML Predictions"
-    conceptGeneration: "Generative AI + Design Thinking AI""
+    conceptGeneration: "Generative AI + Design Thinking AI"
   },
   design: {
     autonomousDesign: "AutoCAD AI + Generative Design"
     simulation: "ANSYS AI + Digital Twin Technology"
-    optimization: "Genetic Algorithms + ML Optimization""
+    optimization: "Genetic Algorithms + ML Optimization"
   },
   prototyping: {
     rapidPrototyping: "3D Printing + AI Quality Control"
     virtualTesting: "VR/AR + Physics Simulation AI"
-    iteration: "Automated Feedback Loops + Learning Systems""
+    iteration: "Automated Feedback Loops + Learning Systems"
   },
   marketValidation: {
     predictiveAnalytics: "Consumer Behavior AI + Market Modeling"
     aTesting: "AI-Powered Experiments + Statistical Analysis"
-    feedback: "Sentiment Analysis + Social Media Intelligence""
+    feedback: "Sentiment Analysis + Social Media Intelligence"
   }
 };`}
 						</pre>
@@ -267,14 +267,14 @@ const InnovationLabFramework = {
 						</p>
 						<div className="flex flex-col sm:flex-row gap-4 justify-center">"
 							<a 
-								href="/contact" "
-								className="bg-white text-purple-600 font-bold py-3 px-8 rounded-xl hover:bg-gray-100 transition-colors""
+								href="/[^"]*"
+								className="bg-white text-purple-600 font-bold py-3 px-8 rounded-xl hover:bg-gray-100 transition-colors"
 							>
 								Get Innovation Assessment
 							</a>
 							<a 
-								href="/services/ai-innovation-labs" "
-								className="border-2 border-white text-white font-bold py-3 px-8 rounded-xl hover:bg-white hover:text-purple-600 transition-colors""
+								href="/[^"]*"
+								className="border-2 border-white text-white font-bold py-3 px-8 rounded-xl hover:bg-white hover:text-purple-600 transition-colors"
 							>
 								Explore Innovation Labs
 							</a>

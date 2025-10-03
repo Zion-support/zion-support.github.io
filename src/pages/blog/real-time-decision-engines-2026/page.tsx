@@ -1,17 +1,17 @@
-import React from "react""
-import { Helmet } from "react-helmet-async""
+import React from "react"
+import { Helmet } from "react-helmet-async"
 export default function RealTimeDecisionEngines2026(): JSX.Element {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">"
       <Helmet>
         <title>Real‑Time Decision Engines 2026 — 10M decisions/sec under 1ms</title>
         <meta 
-          name="description""
-          content="Achieve 10M decisions/sec under 1ms with warm pools, intent prefetching, and layered caches.""
+          name="description"
+          content="Achieve 10M decisions/sec under 1ms with warm pools, intent prefetching, and layered caches."
         />
         <link 
-          rel="canonical""
-          href="https://ziontechgroup.com/blog/real-time-decision-engines-2026""
+          rel="canonical"
+          href="https://ziontechgroup.com/blog/real-time-decision-engines-2026"
         />
       </Helmet>
 

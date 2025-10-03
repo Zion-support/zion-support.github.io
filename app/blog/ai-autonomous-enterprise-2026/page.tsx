@@ -121,7 +121,7 @@ export default function AIAutonomousEnterprise2026() {
             <p className="text-yellow-700">"
               "After implementing autonomous AI systems across our manufacturing operations, we achieved 85% reduction in downtime, "
               60% improvement in efficiency, and $15M in cost savings within the first year. The system now manages our entire 
-              production line with minimal human oversight.""
+              production line with minimal human oversight."
             </p>
             <p className="text-yellow-700 text-sm mt-2">— Sarah Chen, CTO, Global Manufacturing Corp</p>"
           </div>
@@ -217,14 +217,14 @@ export default function AIAutonomousEnterprise2026() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">"
               <Link
-                href="/contact""
-                className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center""
+                href="/contact"
+                className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center"
               >
                 Get Free Consultation
               </Link>
               <Link
-                href="/case-studies/ai-autonomous-enterprise-success-2026""
-                className="bg-white/20 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/30 transition-colors text-center""
+                href="/case-studies/ai-autonomous-enterprise-success-2026"
+                className="bg-white/20 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/30 transition-colors text-center"
               >
                 View Success Stories
               </Link>

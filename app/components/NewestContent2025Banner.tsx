@@ -249,15 +249,15 @@ const NewestContent2025Banner = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">"
                 <a
-                  href="tel:+13024640950""
-                  className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 flex items-center justify-center gap-2""
+                  href="tel:+13024640950"
+                  className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 flex items-center justify-center gap-2"
                 >
                   <span className="text-2xl">📞</span>"
                   <span>Call +1 302 464 0950</span>
                 </a>
                 <a
-                  href="mailto:kleber@ziontechgroup.com""
-                  className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2""
+                  href="mailto:kleber@ziontechgroup.com"
+                  className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2"
                 >
                   <span className="text-2xl">📧</span>"
                   <span>Get Expert Consultation</span>

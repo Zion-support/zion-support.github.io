@@ -42,14 +42,14 @@ export default function Fortune500AI2026MayBreakthroughSuccess() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">"
               <a 
-                href="/contact" "
-                className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1""
+                href="/[^"]*"
+                className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
               >
                 Replicate This Success
               </a>
               <a 
-                href="/blog/ai-2026-may-revolutionary-breakthrough" "
-                className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-emerald-500/50 transform hover:-translate-y-1""
+                href="/[^"]*"
+                className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-emerald-500/50 transform hover:-translate-y-1"
               >
                 Read Technical Details →
               </a>
@@ -272,7 +272,7 @@ export default function Fortune500AI2026MayBreakthroughSuccess() {
                 <h2 className="text-3xl font-bold text-white mb-6">Executive Testimonial</h2>"
                 <div className="bg-gradient-to-r from-blue-500/20 to-purple-500/20 backdrop-blur-sm rounded-xl p-8 border border-blue-500/30 mb-8">"
                   <blockquote className="text-xl text-gray-300 italic mb-6">"
-                    "The May 2026 AI breakthrough from Zion Tech Group has transformed our entire organization. The $5.2 billion in value generated in just 90 days exceeded our wildest expectations. This isn't just an improvement—it's a complete paradigm shift in how we operate.""
+                    "The May 2026 AI breakthrough from Zion Tech Group has transformed our entire organization. The $5.2 billion in value generated in just 90 days exceeded our wildest expectations. This isn't just an improvement—it's a complete paradigm shift in how we operate."
                   </blockquote>
                   <div className="flex items-center gap-4">"
                     <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-xl">"
@@ -312,20 +312,20 @@ export default function Fortune500AI2026MayBreakthroughSuccess() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <a 
-                href="/contact" "
-                className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1""
+                href="/[^"]*"
+                className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
               >
                 Start Your Transformation
               </a>
               <a 
-                href="/blog/ai-2026-may-revolutionary-breakthrough" "
-                className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-emerald-500/50 transform hover:-translate-y-1""
+                href="/[^"]*"
+                className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-emerald-500/50 transform hover:-translate-y-1"
               >
                 Learn Technical Details →
               </a>
               <a 
-                href="/case-studies" "
-                className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300""
+                href="/[^"]*"
+                className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
               >
                 View All Success Stories
               </a>

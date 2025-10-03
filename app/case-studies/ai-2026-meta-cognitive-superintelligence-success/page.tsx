@@ -40,13 +40,13 @@ export default function MetaCognitiveSuccessPage() {
             <div className="flex flex-wrap justify-center gap-4">"
               <a 
                 href="#case-study-details" "
-                className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1""
+                className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
               >
                 Read Full Case Study →
               </a>
               <a 
-                href="/contact" "
-                className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300""
+                href="/[^"]*"
+                className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
               >
                 Get Similar Results
               </a>
@@ -216,7 +216,7 @@ export default function MetaCognitiveSuccessPage() {
             
             <div className="bg-gradient-to-r from-purple-900/50 to-blue-900/50 backdrop-blur-lg rounded-2xl p-8 border border-purple-500/30 mb-8">"
               <blockquote className="text-xl text-gray-300 italic mb-4">"
-                "The meta-cognitive superintelligence platform has transformed our entire organization. We've achieved levels of efficiency and performance that were previously impossible. The $8.7 billion in value generated has positioned us as the undisputed leader in our industry. This is the most successful technology implementation in our company's history.""
+                "The meta-cognitive superintelligence platform has transformed our entire organization. We've achieved levels of efficiency and performance that were previously impossible. The $8.7 billion in value generated has positioned us as the undisputed leader in our industry. This is the most successful technology implementation in our company's history."
               </blockquote>
               <cite className="text-lg text-purple-400 font-bold">— CEO, Fortune 500 Technology Conglomerate</cite>"
             </div>
@@ -253,14 +253,14 @@ export default function MetaCognitiveSuccessPage() {
           </p>
           <div className="flex flex-wrap justify-center gap-4">"
             <a 
-              href="/contact" "
-              className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1""
+              href="/[^"]*"
+              className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
             >
               Get Free Consultation
             </a>
             <a 
-              href="/blog" "
-              className="bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1""
+              href="/[^"]*"
+              className="bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
             >
               Read More Case Studies →
             </a>

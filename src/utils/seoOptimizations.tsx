@@ -17,16 +17,16 @@ export const seoUtils = {
     "description": "Advanced AI and IT Solutions for Enterprise","
     "address": {"
       "@type": "PostalAddress","
-      "addressCountry": "US""
+      "addressCountry": "US"
     },
     "contactPoint": {"
       "@type": "ContactPoint","
       "telephone": "+1-XXX-XXX-XXXX","
-      "contactType": "customer service""
+      "contactType": "customer service"
     },
     "sameAs": ["
       "https://twitter.com/ziontech","
-      "https://linkedin.com/company/zion-tech""
+      "https://linkedin.com/company/zion-tech"
     ]
   }),
 
@@ -83,7 +83,7 @@ export const seoUtils = {
       "name": "Zion Tech Group","
       "logo": {"
         "@type": "ImageObject","
-        "url": "https://zion.app/logo.png""
+        "url": "https://zion.app/logo.png"
       }
     }
   })
