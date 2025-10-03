@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { Calendar, Clock, User, ArrowRight, TrendingUp, Brain, Zap, Shield, Globe, Target } from 'lucide-react';
 
-export const metadata: Metadata = {/* content */}
+export const metadata: Metadata = {
   title: 'AI 2026: The Future AI Landscape - Mega Trends & Revolutionary Breakthroughs | Zion Tech Group',
   description: 'Explore the revolutionary AI trends shaping 2026. Discover quantum consciousness, autonomous enterprise systems, neural superintelligence, and the future of AI-driven business transformation.',
   keywords: 'AI 2026, artificial intelligence trends, quantum consciousness, autonomous enterprise, neural superintelligence, AI breakthrough, future AI landscape, AI predictions 2026',

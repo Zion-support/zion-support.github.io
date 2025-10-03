@@ -2,7 +2,7 @@ import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 
-export const metadata: Metadata = {/* content */}
+export const metadata: Metadata = {
   title: 'January 2026 Autonomous Business Intelligence Revolution | Zion Tech Group',
   description: 'Revolutionary autonomous BI systems that provide real-time insights, predictive analytics, and automated decision support for enterprise operations.',
   keywords: ['autonomous BI', 'business intelligence', 'predictive analytics', 'enterprise AI', 'real-time insights'],

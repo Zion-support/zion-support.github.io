@@ -28,37 +28,59 @@ export default function PostBySlug(): React.JSX.Element {
       date: "2026-01-10",
       readTime: "12 min read",
       author: "Zion Tech Group Team"
+    },
+    {
+      slug: "ai-autonomous-operations-2025",
+      title: "AI Autonomous Operations 2025",
+      description: "Revolutionary autonomous operations delivering 99.9% operational autonomy and $2.7B ROI",
+      category: "Autonomous Operations",
+      date: "2025-12-20",
+      readTime: "10 min read",
+      author: "Zion Tech Group Team"
+    },
+    {
+      slug: "quantum-ai-breakthrough-2026",
+      title: "Quantum AI Breakthrough 2026",
+      description: "Next-generation quantum AI systems delivering unprecedented computational power",
+      category: "Quantum Computing",
+      date: "2026-01-05",
+      readTime: "15 min read",
+      author: "Zion Tech Group Team"
     }
   ];
 
   const staticPosts = [
     {
-      slug: "ai-governance-framework-enterprise-2025",
-      title: "AI Governance Framework for Enterprise 2025",
-      description: "Comprehensive framework for implementing AI governance in enterprise environments",
-      category: "AI Governance",
-      publishedAt: "2025-12-20",
-      readTime: "10 min read"
+      slug: "ai-platform-architecture",
+      title: "AI Platform Architecture",
+      description: "Build scalable, enterprise-grade AI platforms with robust architecture",
+      category: "Platform Architecture",
+      publishedAt: "2025-12-15",
+      readTime: "8 min read",
+      author: "Zion Tech Group Team"
     }
   ];
 
+  // Find article by slug
   const article = React.useMemo(() => {
     if (!slug) return undefined;
-    
-    const fromLatest = latestArticles.find((a) => a.slug === slug);
+
+    // Check latest articles first
+    const fromLatest = latestArticles.find((article) => article.slug === slug);
     if (fromLatest) {
       return {
         slug: fromLatest.slug,
         title: fromLatest.title,
-        description: fromLatest.description || fromLatest.excerpt,
+        description: fromLatest.description,
         category: fromLatest.category,
         publishedAt: fromLatest.date,
         readTime: fromLatest.readTime,
         author: fromLatest.author
       };
     }
-    
-    const fromBlogPosts = blogPosts.find((p) => p.slug === slug);
+
+    // Check blog posts
+    const fromBlogPosts = blogPosts.find((post) => post.slug === slug);
     if (fromBlogPosts) {
       return {
         slug: fromBlogPosts.slug,
@@ -70,7 +92,8 @@ export default function PostBySlug(): React.JSX.Element {
         author: fromBlogPosts.author
       };
     }
-    
+
+    // Check static posts
     const fromPosts = staticPosts.find((p) => p.slug === slug);
     if (fromPosts) {
       return {
@@ -83,21 +106,16 @@ export default function PostBySlug(): React.JSX.Element {
         author: "Zion Tech Group Team"
       };
     }
-    
-    return undefined;
-<<<<<<< HEAD
-=======
-  }, [slug]);
 
-  // Mock article data - replace with actual data fetching logic
-  const mockArticle = {
-    slug: slug,
-    title: "Sample Article Title",
-    description: "This is a sample article description that provides an overview of the content.",
-    category: "Technology",
-    publishedAt: "2024-01-01",
-    readTime: "5 min read",
-    author: "Zion Tech Group Team",
+    // Return mock article if not found
+    return {
+      slug: slug,
+      title: "Sample Article Title",
+      description: "This is a sample article description that provides an overview of the content.",
+      category: "Technology",
+      publishedAt: "2024-01-01",
+      readTime: "5 min read",
+      author: "Zion Tech Group Team",
       content: `
         <h2>Introduction</h2>
         <p>This is a sample article content. In a real implementation, this would be fetched from a CMS or API.</p>
@@ -109,9 +127,6 @@ export default function PostBySlug(): React.JSX.Element {
         <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
       `
     };
-    
-    return mockArticle;
->>>>>>> cursor/fix-errors-and-merge-to-main-6873
   }, [slug]);
 
   if (!article) {
@@ -124,7 +139,7 @@ export default function PostBySlug(): React.JSX.Element {
             <p className="text-gray-600 mb-8">The article you're looking for doesn't exist.</p>
             <a 
               href="/blog" 
-              className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+              className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700"
             >
               Back to Blog
             </a>
@@ -137,89 +152,57 @@ export default function PostBySlug(): React.JSX.Element {
   return (
     <>
       <Header />
-      <div className="min-h-screen bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 py-8">
-          {/* Article Header */}
-          <div className="bg-white rounded-lg shadow-lg p-8 mb-8">
+      <div className="min-h-screen bg-white">
+        <article className="max-w-4xl mx-auto px-4 py-12">
+          <header className="mb-8">
             <div className="mb-4">
-              <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
+              <span className="inline-block bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">
                 {article.category}
               </span>
             </div>
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
               {article.title}
             </h1>
-            <div className="flex items-center text-gray-600 mb-6">
-              <span className="mr-4">By {article.author}</span>
-              <span className="mr-4">•</span>
-              <span className="mr-4">{new Date(article.publishedAt).toLocaleDateString()}</span>
-              <span>•</span>
-              <span className="ml-4">{article.readTime}</span>
-            </div>
-            <p className="text-xl text-gray-700 leading-relaxed">
+            <p className="text-xl text-gray-600 mb-6">
               {article.description}
             </p>
+            <div className="flex items-center text-sm text-gray-500">
+              <span>{article.author}</span>
+              <span className="mx-2">•</span>
+              <span>{article.publishedAt}</span>
+              <span className="mx-2">•</span>
+              <span>{article.readTime}</span>
+            </div>
+          </header>
+
+          <div className="prose prose-lg max-w-none">
+            {article.content ? (
+              <div dangerouslySetInnerHTML={{ __html: article.content }} />
+            ) : (
+              <div>
+                <h2>Article Content</h2>
+                <p>This article content would be loaded from a CMS or API in a real implementation.</p>
+                <p>For now, this is a placeholder to demonstrate the article layout and structure.</p>
+              </div>
+            )}
           </div>
 
-          {/* Article Content */}
-          <div className="bg-white rounded-lg shadow-lg p-8">
-            <div className="prose prose-lg max-w-none">
-              <h2>Article Content</h2>
-              <p>
-                This is where the full article content would be displayed. In a real application, 
-                this content would be fetched from a CMS or markdown files and rendered appropriately.
-              </p>
-              <p>
-                The article content would include detailed information about the topic, 
-                formatted with proper headings, paragraphs, lists, and other content elements.
-              </p>
-              <h3>Key Points</h3>
-              <ul>
-                <li>Comprehensive coverage of the topic</li>
-                <li>Real-world examples and case studies</li>
-                <li>Actionable insights and recommendations</li>
-                <li>Expert analysis and commentary</li>
-              </ul>
-              <p>
-                This placeholder content demonstrates the structure and styling that would be 
-                applied to the actual article content.
-              </p>
+          <footer className="mt-12 pt-8 border-t border-gray-200">
+            <div className="flex items-center justify-between">
+              <div>
+                <p className="text-sm text-gray-500">Written by {article.author}</p>
+                <p className="text-sm text-gray-500">Published on {article.publishedAt}</p>
+              </div>
+              <a 
+                href="/blog" 
+                className="inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50"
+              >
+                Back to Blog
+              </a>
             </div>
-          </div>
-
-          {/* Related Articles */}
-          <div className="mt-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">Related Articles</h3>
-            <div className="grid md:grid-cols-3 gap-6">
-              {latestArticles.slice(0, 3).map((relatedArticle, index) => (
-                <div key={index} className="bg-white rounded-lg shadow-lg p-6">
-                  <div className="mb-3">
-                    <span className="bg-gray-100 text-gray-800 px-2 py-1 rounded text-xs font-medium">
-                      {relatedArticle.category}
-                    </span>
-                  </div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">
-                    {relatedArticle.title}
-                  </h4>
-                  <p className="text-gray-600 text-sm mb-4">
-                    {relatedArticle.excerpt}
-                  </p>
-                  <a 
-                    href={`/blog/${relatedArticle.slug}`}
-                    className="text-blue-600 hover:text-blue-800 font-medium"
-                  >
-                    Read More →
-                  </a>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
+          </footer>
+        </article>
       </div>
     </>
   );
-<<<<<<< HEAD
 }
-=======
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6873

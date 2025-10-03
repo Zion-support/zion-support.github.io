@@ -1,7 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {/* content */}
+export const metadata: Metadata = {
   title: 'Meta-Cognitive AI: The Revolutionary Breakthrough Transforming Enterprise Decision-Making | Zion Tech Group',
   description: 'Discover how Meta-Cognitive AI systems are achieving 95% decision accuracy and transforming enterprise operations with self-reflective reasoning capabilities.',
   keywords: 'meta-cognitive AI, enterprise AI, decision-making AI, cognitive reasoning, AI breakthrough 2026',

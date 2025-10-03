@@ -1,7 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {/* content */}
+export const metadata: Metadata = {
   title: 'AI 2026: Consensus Intelligence Breakthrough - Zion Tech Group',
   description: 'Discover the revolutionary Consensus Intelligence system that enables AI agents to reach unanimous decisions through quantum-accelerated consensus protocols, delivering 99.9% accuracy in complex enterprise scenarios.',
   keywords: 'AI 2026, Consensus Intelligence, Quantum AI, Enterprise AI, Decision Making, AI Agents, Quantum Computing',

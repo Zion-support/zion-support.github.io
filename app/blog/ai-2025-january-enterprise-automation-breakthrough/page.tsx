@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {/* content */}
+export const metadata: Metadata = {
   title: 'AI 2025: Enterprise Automation Breakthrough - Revolutionary Business Transformation',
   description: 'Discover how Fortune 500 companies achieved 95% operational efficiency gains through advanced AI automation systems. Learn practical deployment strategies and proven frameworks for enterprise transformation.',
   keywords: 'AI automation, enterprise transformation, Fortune 500, business intelligence, operational efficiency, AI deployment, machine learning, artificial intelligence',

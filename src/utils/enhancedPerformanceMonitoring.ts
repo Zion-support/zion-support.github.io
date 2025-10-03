@@ -3,7 +3,7 @@
  * Provides comprehensive performance tracking and optimization
  */
 
-export interface PerformanceMetrics {/* content */}
+export interface PerformanceMetrics {
   loadTime: number;
   firstContentfulPaint: number;
   largestContentfulPaint: number;
@@ -19,7 +19,7 @@ export interface PerformanceMetrics {/* content */}
   timestamp: number;
 }
 
-export interface PerformanceAlert {/* content */}
+export interface PerformanceAlert {
   type: 'warning' | 'error' | 'info';
   message: string;
   metric: keyof PerformanceMetrics;
@@ -28,138 +28,207 @@ export interface PerformanceAlert {/* content */}
   timestamp: number;
 }
 
-class EnhancedPerformanceMonitor {/* content */}
-  private metrics: PerformanceMetrics[] = [];
+export class EnhancedPerformanceMonitoring {
+  private metrics: PerformanceMetrics;
   private alerts: PerformanceAlert[] = [];
   private observers: PerformanceObserver[] = [];
-  // private _isMonitoring = false;
+  private thresholds: Partial<PerformanceMetrics> = {
+    loadTime: 3000,
+    firstContentfulPaint: 1500,
+    largestContentfulPaint: 2500,
+    firstInputDelay: 100,
+    cumulativeLayoutShift: 0.1,
+    timeToInteractive: 3800,
+    totalBlockingTime: 200,
+    speedIndex: 3000,
+    memoryUsage: 50 * 1024 * 1024, // 50MB
+    networkRequests: 50,
+    domNodes: 1000,
+    jsHeapSize: 100 * 1024 * 1024, // 100MB
+  };
 
-  constructor() {/* content */}
-    this.initializeObservers();
+  constructor() {
+    this.metrics = this.getInitialMetrics();
+    this.init();
   }
 
-  private initializeObservers(): void {/* content */}
-    // Observe navigation timing
-    if ('PerformanceObserver' in window) {/* content */}
-      try {/* content */}
-        const navObserver = new PerformanceObserver((list) => {/* content */}
-          const entries = list.getEntries();
-          entries.forEach((entry) => {/* content */}
-            if (entry.entryType === 'navigation') {/* content */}
-              this.processNavigationTiming(entry as PerformanceNavigationTiming);
-            }
-          });
-        });
-        navObserver.observe({ entryTypes: ['navigation'] });
-        this.observers.push(navObserver);
-      } catch (error) {/* content */}
-        console.warn('Navigation timing observer failed:', error);
-      }
+  private getInitialMetrics(): PerformanceMetrics {
+    return {
+      loadTime: 0,
+      firstContentfulPaint: 0,
+      largestContentfulPaint: 0,
+      firstInputDelay: 0,
+      cumulativeLayoutShift: 0,
+      timeToInteractive: 0,
+      totalBlockingTime: 0,
+      speedIndex: 0,
+      memoryUsage: 0,
+      networkRequests: 0,
+      domNodes: 0,
+      jsHeapSize: 0,
+      timestamp: Date.now(),
+    };
+  }
+
+  private init(): void {
+    if (typeof window === 'undefined') return;
+
+    try {
+      this.observeNavigationTiming();
+      this.observePaintTiming();
+      this.observeLayoutShift();
+      this.observeResourceTiming();
+      this.observeMemoryUsage();
+      this.observeDOMChanges();
+    } catch (error) {
+      console.error('Performance monitoring initialization failed:', error);
     }
   }
 
-  private processNavigationTiming(entry: PerformanceNavigationTiming): void {/* content */}
-    const metrics: Partial<PerformanceMetrics> = {/* content */}
-      loadTime: entry.loadEventEnd - entry.loadEventStart,
-      timeToInteractive: entry.domInteractive - (entry as PerformanceNavigationTiming & { navigationStart: number }).navigationStart,
-      timestamp: Date.now()
-    };
-
-    this.addMetrics(metrics as PerformanceMetrics);
+  private observeNavigationTiming(): void {
+    if ('PerformanceObserver' in window) {
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach((entry) => {
+          if (entry.entryType === 'navigation') {
+            const navEntry = entry as PerformanceNavigationTiming;
+            this.metrics.loadTime = navEntry.loadEventEnd - navEntry.loadEventStart;
+            this.metrics.timeToInteractive = navEntry.domInteractive - navEntry.fetchStart;
+          }
+        });
+      });
+      
+      observer.observe({ entryTypes: ['navigation'] });
+      this.observers.push(observer);
+    }
   }
 
-  private addMetrics(newMetrics: PerformanceMetrics): void {/* content */}
-    this.metrics.push(newMetrics);
-    this.checkThresholds(newMetrics);
+  private observePaintTiming(): void {
+    if ('PerformanceObserver' in window) {
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach((entry) => {
+          if (entry.name === 'first-contentful-paint') {
+            this.metrics.firstContentfulPaint = entry.startTime;
+          } else if (entry.name === 'largest-contentful-paint') {
+            this.metrics.largestContentfulPaint = entry.startTime;
+          }
+        });
+      });
+      
+      observer.observe({ entryTypes: ['paint'] });
+      this.observers.push(observer);
+    }
+  }
+
+  private observeLayoutShift(): void {
+    if ('PerformanceObserver' in window) {
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach((entry) => {
+          if (entry.entryType === 'layout-shift' && !(entry as any).hadRecentInput) {
+            this.metrics.cumulativeLayoutShift += (entry as any).value;
+          }
+        });
+      });
+      
+      observer.observe({ entryTypes: ['layout-shift'] });
+      this.observers.push(observer);
+    }
+  }
+
+  private observeResourceTiming(): void {
+    if ('PerformanceObserver' in window) {
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        this.metrics.networkRequests = entries.length;
+      });
+      
+      observer.observe({ entryTypes: ['resource'] });
+      this.observers.push(observer);
+    }
+  }
+
+  private observeMemoryUsage(): void {
+    if ('memory' in performance) {
+      const memory = (performance as any).memory;
+      this.metrics.memoryUsage = memory.usedJSHeapSize;
+      this.metrics.jsHeapSize = memory.totalJSHeapSize;
+    }
+  }
+
+  private observeDOMChanges(): void {
+    const observer = new MutationObserver(() => {
+      this.metrics.domNodes = document.querySelectorAll('*').length;
+    });
     
-    // Keep only last 100 metrics
-    if (this.metrics.length > 100) {/* content */}
-      this.metrics = this.metrics.slice(-100);
-    }
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true,
+    });
   }
 
-  private checkThresholds(metrics: PerformanceMetrics): void {/* content */}
-    const thresholds = {/* content */}
-      loadTime: 3000,
-      firstContentfulPaint: 1500,
-      largestContentfulPaint: 2500,
-      firstInputDelay: 100,
-      cumulativeLayoutShift: 0.1,
-      timeToInteractive: 3800,
-      totalBlockingTime: 200,
-      speedIndex: 3000
-    };
+  public getMetrics(): PerformanceMetrics {
+    return { ...this.metrics };
+  }
 
-    Object.entries(thresholds).forEach(([key, threshold]) => {/* content */}
-      const value = metrics[key as keyof PerformanceMetrics];
-      if (typeof value === 'number' && value > threshold) {/* content */}
-        this.addAlert({/* content */}
-          type: value > threshold * 1.5 ? 'error' : 'warning',
-          message: `${key} exceeded threshold: ${value}ms > ${threshold}ms`,
-          metric: key as keyof PerformanceMetrics,
-          value,
-          threshold,
-          timestamp: Date.now()
-        });
+  public getAlerts(): PerformanceAlert[] {
+    return [...this.alerts];
+  }
+
+  public checkThresholds(): void {
+    Object.entries(this.thresholds).forEach(([metric, threshold]) => {
+      const value = this.metrics[metric as keyof PerformanceMetrics];
+      if (value > threshold!) {
+        this.createAlert('warning', `${metric} exceeded threshold`, metric as keyof PerformanceMetrics, value, threshold!);
       }
     });
   }
 
-  private addAlert(alert: PerformanceAlert): void {/* content */}
-    this.alerts.push(alert);
+  private createAlert(type: 'warning' | 'error' | 'info', message: string, metric: keyof PerformanceMetrics, value: number, threshold: number): void {
+    const alert: PerformanceAlert = {
+      type,
+      message,
+      metric,
+      value,
+      threshold,
+      timestamp: Date.now(),
+    };
     
-    // Keep only last 50 alerts
-    if (this.alerts.length > 50) {/* content */}
-      this.alerts = this.alerts.slice(-50);
-    }
-
-    // Log critical alerts
-    if (alert.type === 'error') {/* content */}
-      console.error('Performance Alert:', alert);
-    }
+    this.alerts.push(alert);
   }
 
-  public startMonitoring(): void {/* content */}
-    // this._isMonitoring = true;
-    console.log('Enhanced performance monitoring started');
+  public generateReport(): string {
+    const metrics = this.getMetrics();
+    const alerts = this.getAlerts();
+    
+    return `
+Performance Report - ${new Date().toISOString()}
+===============================================
+
+Metrics:
+- Load Time: ${metrics.loadTime}ms
+- First Contentful Paint: ${metrics.firstContentfulPaint}ms
+- Largest Contentful Paint: ${metrics.largestContentfulPaint}ms
+- First Input Delay: ${metrics.firstInputDelay}ms
+- Cumulative Layout Shift: ${metrics.cumulativeLayoutShift}
+- Time to Interactive: ${metrics.timeToInteractive}ms
+- Total Blocking Time: ${metrics.totalBlockingTime}ms
+- Speed Index: ${metrics.speedIndex}ms
+- Memory Usage: ${(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB
+- Network Requests: ${metrics.networkRequests}
+- DOM Nodes: ${metrics.domNodes}
+- JS Heap Size: ${(metrics.jsHeapSize / 1024 / 1024).toFixed(2)}MB
+
+Alerts: ${alerts.length}
+${alerts.map(alert => `- ${alert.type.toUpperCase()}: ${alert.message}`).join('\n')}
+    `;
   }
 
-  public stopMonitoring(): void {/* content */}
-    // this._isMonitoring = false;
+  public destroy(): void {
     this.observers.forEach(observer => observer.disconnect());
     this.observers = [];
-    console.log('Enhanced performance monitoring stopped');
-  }
-
-  public getMetrics(): PerformanceMetrics[] {/* content */}
-    return [...this.metrics];
-  }
-
-  public getAlerts(): PerformanceAlert[] {/* content */}
-    return [...this.alerts];
-  }
-
-  public getLatestMetrics(): PerformanceMetrics | null {/* content */}
-    return this.metrics.length > 0 ? this.metrics[this.metrics.length - 1] : null;
-  }
-
-  public exportReport(): string {/* content */}
-    const latest = this.getLatestMetrics();
-    const alerts = this.getAlerts();
-
-    return JSON.stringify({/* content */}
-      latest,
-      alerts,
-      timestamp: Date.now(),
-      totalMetrics: this.metrics.length
-    }, null, 2);
   }
 }
 
-// Export singleton instance
-export const enhancedPerformanceMonitor = new EnhancedPerformanceMonitor();
-
-// Auto-start monitoring in browser environment
-if (typeof window !== 'undefined') {/* content */}
-  enhancedPerformanceMonitor.startMonitoring();
-}
+export default EnhancedPerformanceMonitoring;

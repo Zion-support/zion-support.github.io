@@ -1,7 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {/* content */}
+export const metadata: Metadata = {
   title: 'AI 2026: Autonomous Agent Factories - The Future of Enterprise Automation',
   description: 'Discover how autonomous agent factories are revolutionizing enterprise automation in 2026. Learn about self-replicating AI systems, agent orchestration, and achieving 95% automation rates with breakthrough agent factory architectures.',
   keywords: 'autonomous agent factories, AI automation 2026, enterprise AI agents, agent orchestration, self-replicating AI, AI agent systems',
