@@ -7,7 +7,7 @@ export const metadata = {
 
 export default function Page() {
 	return (
-		<main className="max-w-3xl mx-auto px-4 py-12 prose prose-invert">"
+		<main className="text-left">"
 			<h1>Edge 2026: Attested Analytics</h1>
 			<p>
 				Deliver decision‑grade analytics without PII. Use scoped identifiers, device‑side aggregation,

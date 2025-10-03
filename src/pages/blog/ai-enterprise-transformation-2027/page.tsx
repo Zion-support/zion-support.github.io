@@ -1,7 +1,7 @@
 import React from "react"
 export default function AIEnterpriseTransformation2027(): JSX.Element {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">"
+    <div className="text-left">"
       <Helmet >
         <title >AI Enterprise Transformation 2027 — Plan, Fund, Scale</title>
         <meta name="description">"
@@ -10,20 +10,20 @@ export default function AIEnterpriseTransformation2027(): JSX.Element {
         />
       </Helmet>
 
-      <div className="container mx-auto px-6 py-16">"
-        <h1 className="text-4xl md: text-5xl font-bold mb-4">"
+      <div className="text-left">"
+        <h1 className="text-left">"
   href="https: //ziontechgroup.com/blog/ai-enterprise-transformation-2027"
         />
       </Helmet>
 
-      <div className="container mx-auto px-6 py-16">"
-        <h1 className="text-4xl md: text-5xl font-bold mb-4">"
+      <div className="text-left">"
+        <h1 className="text-left">"
   AI Enterprise Transformation 2027
         </h1>
-        <p className="text-zion-slate-light mb-8">"
+        <p className="text-left">"
   KPI Scorecards • Budgeted Actions • Governance for Delivery Velocity
         </p>
-        <div className="prose prose-invert max-w-3xl">"
+        <div className="text-left">"
           <p >
             Build an executive-ready roadmap for AI initiatives with
             KPI-linked scorecards, budget controls, and rollout guardrails.

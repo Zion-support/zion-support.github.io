@@ -118,11 +118,11 @@ const PWARegistration: React.FC = () => {
             <div className="flex items-center space-x-4 mb-4>
               <div className=flex items-center text-sm text-gray-600">
                 <Smartphone className="w-4 h-4 mr-1 />
-                <span>Mobile</span>
+                <span>Mobile<
               </div>
               <div className=flex items-center text-sm text-gray-600">
                 <Monitor className="w-4 h-4 mr-1 />
-                <span>Desktop</span>
+                <span>Desktop<
               </div>
             </div>
 
@@ -261,11 +261,11 @@ interface BeforeInstallPromptEvent extends Event {
             <div className="flex items-center space-x-4 mb-4>
               <div className=flex items-center text-sm text-gray-600">
                 <Smartphone className="w-4 h-4 mr-1 />
-                <span>Mobile</span>
+                <span>Mobile<
               </div>
               <div className=flex items-center text-sm text-gray-600">
                 <Monitor className="w-4 h-4 mr-1 />
-                <span>Desktop</span>
+                <span>Desktop<
               </div>
             </div>
 

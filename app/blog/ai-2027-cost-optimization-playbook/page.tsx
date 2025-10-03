@@ -18,11 +18,11 @@ export const metadata = {
 
 export default function AICostOptimizationPlaybook2027() {
   return (
-    <div className="max-w-4xl mx-auto px-4 py-8">"
-      <Link href="/blog" className="text-blue-600 hover:text-blue-800 mb-6 inline-block">← Back to Blog</Link>"
-      <h1 className="text-4xl font-bold text-gray-900 mb-3">AI 2027 Cost Optimization Playbook</h1>"
-      <div className="text-gray-600 mb-8">Published: September 30, 2025 • 13 min read • Cost Optimization</div>"
-      <div className="prose prose-lg max-w-none">"
+    <div className="text-left">"
+      <Link href="/blog" className="text-left">← Back to Blog</Link>"
+      <h1 className="text-left">AI 2027 Cost Optimization Playbook</h1>"
+      <div className="text-left">Published: September 30, 2025 • 13 min read • Cost Optimization</div>"
+      <div className="text-left">"
         <p>
           This playbook provides pragmatic techniques to reduce AI costs by 30–70% while improving reliability.
           It covers model tiering, intelligent routing, prompt caching, quantization, and evaluation-driven guardrails.
@@ -43,10 +43,10 @@ export default function AICostOptimizationPlaybook2027() {
           <li>Wire policy tests that block budget overruns before merge</li>
         </ul>
 
-        <div className="bg-emerald-50 border-l-4 border-emerald-500 p-6 rounded">"
-          <h3 className="m-0">Need a proven rollout?</h3>"
-          <p className="m-0">We implement cost controls with guardrails and value stream analytics in weeks.</p>"
-          <Link href="/services" className="inline-block mt-3 bg-emerald-600 hover:bg-emerald-700 text-white px-5 py-3 rounded">Explore Services</Link>"
+        <div className="text-left">"
+          <h3 className="text-left">Need a proven rollout?</h3>"
+          <p className="text-left">We implement cost controls with guardrails and value stream analytics in weeks.</p>"
+          <Link href="/services" className="text-left">Explore Services</Link>"
         </div>
       </div>
     </div>

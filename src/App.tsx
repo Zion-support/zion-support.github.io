@@ -14,7 +14,7 @@ function App(): React.JSX.Element {
   return (
     <ErrorBoundary>
       <Router>
-        <div className="min-h-screen bg-slate-950 text-white">
+        <div className="text-left">
           <Suspense fallback={<PageLoader />}>
             <Routes>
               <Route path="/" element={<LazyHomePage />} />
@@ -57,11 +57,11 @@ function App(): React.JSX.Element {
               
               {/* 404 fallback */}
               <Route path="*" element={
-                <div className="min-h-screen flex items-center justify-center">
-                  <div className="text-center">
-                    <h1 className="text-4xl font-bold mb-4">404 - Page Not Found</h1>
-                    <p className="text-gray-400 mb-8">The page you're looking for doesn't exist.</p>
-                    <a href="/" className="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg transition-colors">
+                <div className="text-left">
+                  <div className="text-left">
+                    <h1 className="text-left">404 - Page Not Found</h1>
+                    <p className="text-left">The page you're looking for doesn't exist.</p>
+                    <a href="/" className="text-left">
                       Go Home
                     </a>
                   </div>

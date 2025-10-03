@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function AgentSafetyBudgets2025() {
   return (
-    <main className="prose lg:prose-xl max-w-4xl mx-auto py-12">
+    <main className="text-left">
       <h1>Agent Safety Budgets (2025): Practical Guardrails That Ship</h1>
       <p>
         A pragmatic playbook for constraining autonomous agents with safety, privacy, and cost budgets

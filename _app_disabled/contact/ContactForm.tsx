@@ -28,28 +28,28 @@
     }
   }
   return (
-    <div className="max-w-4xl mx-auto">
+    <div className="text-left">
       {/* Hero Section */}
-      <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">
+      <div className="text-left">
+        <h1 className="text-left">
             
-            <div className="space-y-4">
-              <div className="flex items-center space-x-3">
+            <div className="text-left">
+              <div className="text-left">
               </div>
               
-              <div className="flex items-center space-x-3">
+              <div className="text-left">
               </div>
               
-              <div className="flex items-center space-x-3">
+              <div className="text-left">
               </div>
               
-              <div className="flex items-center space-x-3">
+              <div className="text-left">
               </div>
             </div>
 
 
             <div>
-              <label htmlFor="budget" className="block text-sm font-medium text-gray-700 mb-2">
+              <label htmlFor="budget" className="text-left">
                 Project Budget
               </label>
               <select
@@ -57,7 +57,7 @@
                 name="budget"
                 value={formData.budget}
                 onChange={handleChange}
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="text-left"
               >
                 <option value="">Select budget range</option>
                 <option value="under-10k">Under $10,000</option>
@@ -68,7 +68,7 @@
             </div>
 
             <div>
-              <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+              <label htmlFor="message" className="text-left">
                 Project Description *
               </label>
               <textarea
@@ -78,7 +78,7 @@
                 rows={5}
                 value={formData.message}
                 onChange={handleChange}
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="text-left"
                 placeholder="Tell us about your project requirements, goals, and any specific challenges you're facing..."
               />
             </div>
@@ -86,7 +86,7 @@
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full bg-blue-600 text-white py-3 px-6 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="text-left"
             >
               {isSubmitting ? 'Sending...' : 'Send Message'}
             </button>

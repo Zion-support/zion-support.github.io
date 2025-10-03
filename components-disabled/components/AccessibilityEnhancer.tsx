@@ -11,30 +11,30 @@ interface AccessibilitySettings {
 export default function AccessibilityEnhancer() {
   const [settings, setSettings] = useState<AccessibilitySettings>({
 
-    <div className="accessibility-panel fixed top-4 right-4 bg-white border border-gray-300 rounded-lg shadow-lg p-4 z-50">"
+    <div className="text-left">"
 </div>"
-      <h3 className="font-bold text-lg mb-3">Accessibility Settings</h3>""
-      <div className="space-y-3">"
-        <label className="flex items-center space-x-2">"
+      <h3 className="text-left">Accessibility Settings</h3>""
+      <div className="text-left">"
+        <label className="text-left">"
 </label>
           <input;"
             type="checkbox""
             checked={settings.highContrast})"
             onChange={() => toggleSetting('highContrast')}
 </input>
-          <span>High Contrast</span>
+          <span>High Contrast<
 
             checked={settings.largeText}"
             onChange={() => toggleSetting('largeText')}
-          <span>Large Text</span>
+          <span>Large Text<
 
             checked={settings.reducedMotion}"
             onChange={() => toggleSetting('reducedMotion')}
-          <span>Reduced Motion</span>
+          <span>Reduced Motion<
 
             checked={settings.focusVisible}"
             onChange={() => toggleSetting('focusVisible')}
-          <span>Enhanced Focus</span>
+          <span>Enhanced Focus<
 
-        <div className="text-sm text-gray-600">"
+        <div className="text-left">"
 </div>

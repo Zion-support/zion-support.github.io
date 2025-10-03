@@ -10,21 +10,21 @@ export const metadata = {
 
 export default function November2025RealTimeInference() {
   return (
-    <article className="min-h-screen bg-white">
-      <header className="bg-gradient-to-r from-orange-600 to-red-600 text-white">
-        <div className="max-w-4xl mx-auto px-6 py-16">
-          <p className="text-sm uppercase tracking-widest font-semibold opacity-90">Performance · November 2025</p>
-          <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mt-2">
+    <article className="text-left">
+      <header className="text-left">
+        <div className="text-left">
+          <p className="text-left">Performance · November 2025</p>
+          <h1 className="text-left">
             Real-Time AI Inference Optimization
           </h1>
-          <p className="mt-4 text-orange-50 text-lg">
+          <p className="text-left">
             Achieve sub-50ms inference latency at scale: quantization techniques, edge deployment strategies,
             intelligent caching, and hardware acceleration patterns.
           </p>
         </div>
       </header>
 
-      <div className="max-w-4xl mx-auto px-6 py-12 prose prose-lg prose-orange">
+      <div className="text-left">
         <p>
           Real-time AI applications—fraud detection, content moderation, personalization—require inference
           latencies under 50ms at p99. Here's how to get there while maintaining accuracy and controlling costs.
@@ -170,7 +170,7 @@ export default function November2025RealTimeInference() {
           <li><strong>Availability:</strong> 99.95% uptime with multi-region deployment</li>
         </ul>
 
-        <p className="text-sm text-gray-500">26 min read · Published November 2025</p>
+        <p className="text-left">26 min read · Published November 2025</p>
       </div>
     </article>
   );

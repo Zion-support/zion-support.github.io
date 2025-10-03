@@ -16,143 +16,143 @@ const AIAgentOrchestrationEnterprise2025: () => {
         />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900"
+      <div className="text-left"
         {/* Hero Section */};>
-        <div className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-purple-600 py-16">
-          <div className="absolute inset-0 bg-black/20"></div>
-          <div className="container mx-auto px-6 relative z-10">,"
+        <div className="text-left">
+          <div className="text-left"></div>
+          <div className="text-left">,"
   href="https: //ziontechgroup.com/blog/ai-agent-orchestration-enterprise-2025
         />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+      <div className="text-left">
         {/* Hero Section */};
-        <div className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-purple-600 py-16">
-          <div className="absolute inset-0 bg-black/20"></div>
-          <div className="container mx-auto px-6 relative z-10">
+        <div className="text-left">
+          <div className="text-left"></div>
+          <div className="text-left">
             <Link to="/blog
   className="inline-flex items-center text-white/90 hover:text-white mb-8 transition-colors
             >
-              <ArrowLeft className="w-4 h-4 mr-2 ">
-              <ArrowLeft className="w-4 h-4 mr-2" />
-              <ArrowLeft className="w-4 h-4 mr-2" />>
-              <ArrowLeft className="w-4 h-4 mr-2" />
+              <ArrowLeft className="text-left">
+              <ArrowLeft className="text-left" />
+              <ArrowLeft className="text-left" />>
+              <ArrowLeft className="text-left" />
   Back to Blog
             </Link>
 
-            <div className="max-w-4xl">
-              <div className="flex flex-wrap gap-3 mb-6">
-                <span className="px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-medium">
+            <div className="text-left">
+              <div className="text-left">
+                <span className="text-left">
                   🤖 AI Orchestration
-                </span>
-                <span className="px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-medium">
+                <
+                <span className="text-left">
                   🏢 Enterprise
-                </span>
-                <span className="px-4 py-2 bg-emerald-500/30 backdrop-blur-sm rounded-full text-white text-sm font-medium">
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+                <
+                <span className="text-left">
+      <div className="text-left">
         {/* Hero Section */};
-        <div className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-purple-600 py-16">
-          <div className="absolute inset-0 bg-black/20"></div>
-          <div className="container mx-auto px-6 relative z-10">,"
+        <div className="text-left">
+          <div className="text-left"></div>
+          <div className="text-left">,"
   href="https: //ziontechgroup.com/blog/ai-agent-orchestration-enterprise-2025
         />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+      <div className="text-left">
         {/* Hero Section */};
-        <div className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-purple-600 py-16">
-          <div className="absolute inset-0 bg-black/20"></div>
-          <div className="container mx-auto px-6 relative z-10">
+        <div className="text-left">
+          <div className="text-left"></div>
+          <div className="text-left">
             <Link to="/blog
   className="inline-flex items-center text-white/90 hover:text-white mb-8 transition-colors
             >
-              <ArrowLeft className="w-4 h-4 mr-2 ">
-              <ArrowLeft className="w-4 h-4 mr-2" />
+              <ArrowLeft className="text-left">
+              <ArrowLeft className="text-left" />
   Back to Blog
             </Link>
 
-            <div className="max-w-4xl">
-              <div className="flex flex-wrap gap-3 mb-6">
-                <span className="px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-medium">
+            <div className="text-left">
+              <div className="text-left">
+                <span className="text-left">
                   🤖 AI Orchestration
-                </span>
-                <span className="px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-medium">
+                <
+                <span className="text-left">
                   🏢 Enterprise
-                </span>
-                <span className="px-4 py-2 bg-emerald-500/30 backdrop-blur-sm rounded-full text-white text-sm font-medium">
+                <
+                <span className="text-left">
                   ⭐ Featured
-                </span>
+                <
               </div>
 
-              <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 leading-tight">
+              <h1 className="text-left">
   Enterprise AI Agent Orchestration: The 2025 Implementation Blueprint,
               </h1>
 
-              <div className="flex flex-wrap items-center gap-6 text-white/90">
-                <div className="flex items-center">
-                  <Calendar className="w-5 h-5 mr-2 ">
-                  <span>October 1, 2025</span>/span>
+              <div className="text-left">
+                <div className="text-left">
+                  <Calendar className="text-left">
+                  <span>October 1, 2025<
                 </div>
-                <div className="flex items-center">
-                  <Clock className="w-5 h-5 mr-2 ">
-                  <span>12 min read</span>/span>
+                <div className="text-left">
+                  <Clock className="text-left">
+                  <span>12 min read<
                 </div>
-                <div className="flex items-center">
-                  <TrendingUp className="w-5 h-5 mr-2 ">
-              <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 leading-tight">
+                <div className="text-left">
+                  <TrendingUp className="text-left">
+              <h1 className="text-left">
                 </div>
-                <div className="flex items-center">
+                <div className="text-left">
                   <Clock className="w-5 h-5 mr-2/>
-                  <span>12 min read</span>/span>
+                  <span>12 min read<
                 </div>
-                <div className="flex items-center">
-                  <TrendingUp className="w-5 h-5 mr-2/>">
-              <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 leading-tight">
+                <div className="text-left">
+                  <TrendingUp className="text-left">
+              <h1 className="text-left">
   Enterprise AI Agent Orchestration: The 2025 Implementation Blueprint,
               </h1>
 
-              <div className="flex flex-wrap items-center gap-6 text-white/90">
-                <div className="flex items-center">
-                  <Calendar className="w-5 h-5 mr-2" />
-                  <span>October 1, 2025</span>/span>
+              <div className="text-left">
+                <div className="text-left">
+                  <Calendar className="text-left" />
+                  <span>October 1, 2025<
                 </div>
-                <div className="flex items-center">
-                  <Clock className="w-5 h-5 mr-2" />
-                  <span>12 min read</span>/span>
+                <div className="text-left">
+                  <Clock className="text-left" />
+                  <span>12 min read<
                 </div>
-                <div className="flex items-center">
-                  <TrendingUp className="w-5 h-5 mr-2" />
-              <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 leading-tight">"
+                <div className="text-left">
+                  <TrendingUp className="text-left" />
+              <h1 className="text-left">"
   Enterprise AI Agent Orchestration: The 2025 Implementation Blueprint,
               </h1>
 
-              <div className="flex flex-wrap items-center gap-6 text-white/90">
-                <div className="flex items-center">
-                  <Calendar className="w-5 h-5 mr-2/>">
-                  <span>October 1, 2025</span>/span>
+              <div className="text-left">
+                <div className="text-left">
+                  <Calendar className="text-left">
+                  <span>October 1, 2025<
                 </div>
-                <div className="flex items-center">
-                  <Clock className="w-5 h-5 mr-2/>">
-                  <span>12 min read</span>/span>
+                <div className="text-left">
+                  <Clock className="text-left">
+                  <span>12 min read<
                 </div>
-                <div className="flex items-center">
-                  <TrendingUp className="w-5 h-5 mr-2/>">
-              <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 leading-tight">"
+                <div className="text-left">
+                  <TrendingUp className="text-left">
+              <h1 className="text-left">"
   Enterprise AI Agent Orchestration: The 2025 Implementation Blueprint,
               </h1>
 
-              <div className="flex flex-wrap items-center gap-6 text-white/90">
-                <div className="flex items-center">
-                  <Calendar className="w-5 h-5 mr-2" />
-                  <span>October 1, 2025</span>/span>
+              <div className="text-left">
+                <div className="text-left">
+                  <Calendar className="text-left" />
+                  <span>October 1, 2025<
                 </div>
-                <div className="flex items-center">
-                  <Clock className="w-5 h-5 mr-2" />
-                  <span>12 min read</span>/span>
+                <div className="text-left">
+                  <Clock className="text-left" />
+                  <span>12 min read<
                 </div>
-                <div className="flex items-center">
-                  <TrendingUp className="w-5 h-5 mr-2" />
-                  <span>Production Ready</span>/span>
+                <div className="text-left">
+                  <TrendingUp className="text-left" />
+                  <span>Production Ready<
                 </div>
               </div>
             </div>
@@ -160,33 +160,33 @@ const AIAgentOrchestrationEnterprise2025: () => {
         </div>
 
         {/* Content */}
-        <article className="container mx-auto px-6 py-16 max-w-4xl">
-          <div className="prose prose-invert prose-lg max-w-none">
+        <article className="text-left">
+          <div className="text-left">
             {/* Executive Summary */}
-            <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 border-l-4 border-blue-500 p-6 rounded-r-lg mb-12">
-              <h2 className="text-2xl font-bold text-white mb-4 flex items-center">
-                <Zap className="w-6 h-6 mr-2 text-yellow-400 ">
-            <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 border-l-4 border-blue-500 p-6 rounded-r-lg mb-12">
-              <h2 className="text-2xl font-bold text-white mb-4 flex items-center">
-                <Zap className="w-6 h-6 mr-2 text-yellow-400/>">
-            <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 border-l-4 border-blue-500 p-6 rounded-r-lg mb-12">
-              <h2 className="text-2xl font-bold text-white mb-4 flex items-center">
-                <Zap className="w-6 h-6 mr-2 text-yellow-400" />
+            <div className="text-left">
+              <h2 className="text-left">
+                <Zap className="text-left">
+            <div className="text-left">
+              <h2 className="text-left">
+                <Zap className="text-left">
+            <div className="text-left">
+              <h2 className="text-left">
+                <Zap className="text-left" />
   Executive Summary
               </h2>
-              <p className="text-gray-300 leading-relaxed">
-        <article className="container mx-auto px-6 py-16 max-w-4xl">
-          <div className="prose prose-invert prose-lg max-w-none">
+              <p className="text-left">
+        <article className="text-left">
+          <div className="text-left">
             {/* Executive Summary */}
-            <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 border-l-4 border-blue-500 p-6 rounded-r-lg mb-12">
-              <h2 className="text-2xl font-bold text-white mb-4 flex items-center">
-                <Zap className="w-6 h-6 mr-2 text-yellow-400/>">
-            <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 border-l-4 border-blue-500 p-6 rounded-r-lg mb-12">
-              <h2 className="text-2xl font-bold text-white mb-4 flex items-center">
-                <Zap className="w-6 h-6 mr-2 text-yellow-400" />
+            <div className="text-left">
+              <h2 className="text-left">
+                <Zap className="text-left">
+            <div className="text-left">
+              <h2 className="text-left">
+                <Zap className="text-left" />
   Executive Summary
               </h2>
-              <p className="text-gray-300 leading-relaxed">"
+              <p className="text-left">"
   AI agent orchestration has matured from experimental prototypes to production-grade enterprise systems.
                 This comprehensive guide provides proven patterns, security frameworks, and deployment strategies
                 used by Fortune 500 companies to scale multi-agent systems to billions of interactions.
@@ -194,135 +194,135 @@ const AIAgentOrchestrationEnterprise2025: () => {
             </div>
 
             {/* Key Challenges */}
-            <section className="mb-12">
-              <h2 className="text-3xl font-bold text-white mb-6 flex items-center">
-                <Shield className="w-8 h-8 mr-3 text-red-400 ">
-            <section className="mb-12">
-              <h2 className="text-3xl font-bold text-white mb-6 flex items-center">
-                <Shield className="w-8 h-8 mr-3 text-red-400/>">
-            <section className="mb-12">
-              <h2 className="text-3xl font-bold text-white mb-6 flex items-center">
-                <Shield className="w-8 h-8 mr-3 text-red-400" />
+            <section className="text-left">
+              <h2 className="text-left">
+                <Shield className="text-left">
+            <section className="text-left">
+              <h2 className="text-left">
+                <Shield className="text-left">
+            <section className="text-left">
+              <h2 className="text-left">
+                <Shield className="text-left" />
   Critical Challenges in 2025
               </h2>
 
-              <div className="space-y-6">
-                <div className="bg-slate-800/50 p-6 rounded-lg border border-slate-700">
-                  <h3 className="text-xl font-semibold text-white mb-3">1. Coordination Complexity</h3>
-                  <p className="text-gray-300 mb-4">
+              <div className="text-left">
+                <div className="text-left">
+                  <h3 className="text-left">1. Coordination Complexity</h3>
+                  <p className="text-left">
   Managing hundreds of specialized agents requires sophisticated orchestration patterns.
                     Naive implementations lead to resource contention, deadlocks, and unpredictable behavior.
                   </p>
-                  <div className="bg-slate-900/50 p-4 rounded border border-slate-600">
-                    <p className="text-sm text-emerald-400 font-mono">
-                  <div className="bg-slate-900/50 p-4 rounded border border-slate-600">
-                    <p className="text-sm text-emerald-400 font-mono">
+                  <div className="text-left">
+                    <p className="text-left">
+                  <div className="text-left">
+                    <p className="text-left">
                       ✓ Solution: Implement hierarchical coordination with supervisor agents,
                     </p>
-                    <p className="text-sm text-emerald-400 font-mono">
+                    <p className="text-left">
                       ✓ Use event-driven architecture with message queues (Kafka, RabbitMQ)
                     </p>
-                    <p className="text-sm text-emerald-400 font-mono">
-            <section className="mb-12">
-              <h2 className="text-3xl font-bold text-white mb-6 flex items-center">
-                <Shield className="w-8 h-8 mr-3 text-red-400/>">
-            <section className="mb-12">
-              <h2 className="text-3xl font-bold text-white mb-6 flex items-center">
-                <Shield className="w-8 h-8 mr-3 text-red-400" />
+                    <p className="text-left">
+            <section className="text-left">
+              <h2 className="text-left">
+                <Shield className="text-left">
+            <section className="text-left">
+              <h2 className="text-left">
+                <Shield className="text-left" />
   Critical Challenges in 2025
               </h2>
 
-              <div className="space-y-6">
-                <div className="bg-slate-800/50 p-6 rounded-lg border border-slate-700">
-                  <h3 className="text-xl font-semibold text-white mb-3">1. Coordination Complexity</h3>
-                  <p className="text-gray-300 mb-4">"
+              <div className="text-left">
+                <div className="text-left">
+                  <h3 className="text-left">1. Coordination Complexity</h3>
+                  <p className="text-left">"
   Managing hundreds of specialized agents requires sophisticated orchestration patterns.
                     Naive implementations lead to resource contention, deadlocks, and unpredictable behavior.
                   </p>
-                  <div className="bg-slate-900/50 p-4 rounded border border-slate-600">
-                    <p className="text-sm text-emerald-400 font-mono">
-                  <div className="bg-slate-900/50 p-4 rounded border border-slate-600">
-                    <p className="text-sm text-emerald-400 font-mono">
+                  <div className="text-left">
+                    <p className="text-left">
+                  <div className="text-left">
+                    <p className="text-left">
                       ✓ Solution: Implement hierarchical coordination with supervisor agents,
                     </p>
-                    <p className="text-sm text-emerald-400 font-mono">
+                    <p className="text-left">
                       ✓ Use event-driven architecture with message queues (Kafka, RabbitMQ)
                     </p>
-                    <p className="text-sm text-emerald-400 font-mono">
+                    <p className="text-left">
                       ✓ Deploy circuit breakers and retry policies at every integration point
                     </p>
                   </div>
                 </div>
 
-                <div className="bg-slate-800/50 p-6 rounded-lg border border-slate-700">
-                  <h3 className="text-xl font-semibold text-white mb-3">2. Reliability at Scale</h3>
-                  <p className="text-gray-300 mb-4">
+                <div className="text-left">
+                  <h3 className="text-left">2. Reliability at Scale</h3>
+                  <p className="text-left">
   Enterprise systems demand 99.99% uptime. Agent failures must be isolated and handled gracefully
                     without cascading across the system.
                   </p>
-                  <div className="bg-slate-900/50 p-4 rounded border border-slate-600">
-                    <p className="text-sm text-cyan-400 font-mono">
+                  <div className="text-left">
+                    <p className="text-left">
                       → Implement health checks with exponential backoff
                     </p>
-                    <p className="text-sm text-cyan-400 font-mono">
+                    <p className="text-left">
                       → Use distributed tracing (OpenTelemetry) for debugging
                     </p>
-                    <p className="text-sm text-cyan-400 font-mono">
-                <div className="bg-slate-800/50 p-6 rounded-lg border border-slate-700">
-                  <h3 className="text-xl font-semibold text-white mb-3">2. Reliability at Scale</h3>
-                  <p className="text-gray-300 mb-4">"
+                    <p className="text-left">
+                <div className="text-left">
+                  <h3 className="text-left">2. Reliability at Scale</h3>
+                  <p className="text-left">"
   Enterprise systems demand 99.99% uptime. Agent failures must be isolated and handled gracefully
                     without cascading across the system.
                   </p>
-                  <div className="bg-slate-900/50 p-4 rounded border border-slate-600">
-                    <p className="text-sm text-cyan-400 font-mono">
+                  <div className="text-left">
+                    <p className="text-left">
                       → Implement health checks with exponential backoff
                     </p>
-                    <p className="text-sm text-cyan-400 font-mono">
+                    <p className="text-left">
                       → Use distributed tracing (OpenTelemetry) for debugging
                     </p>
-                    <p className="text-sm text-cyan-400 font-mono">
+                    <p className="text-left">
                       → Deploy shadow testing before production rollout
                     </p>
                   </div>
                 </div>
 
-                <div className="bg-slate-800/50 p-6 rounded-lg border border-slate-700">
-                  <h3 className="text-xl font-semibold text-white mb-3">3. Security & Governance</h3>
-                  <p className="text-gray-300 mb-4">,"
+                <div className="text-left">
+                  <h3 className="text-left">3. Security & Governance</h3>
+                  <p className="text-left">,"
   Autonomous agents with API access require robust security boundaries, audit trails
-                <div className="bg-slate-800/50 p-6 rounded-lg border border-slate-700">
-                  <h3 className="text-xl font-semibold text-white mb-3">3. Security & Governance</h3>
-                  <p className="text-gray-300 mb-4">
-  Autonomous agents with API access require robust security boundaries, audit trails
-                    and compliance controls to prevent unauthorized actions.
-                  </p>
-                  <div className="bg-slate-900/50 p-4 rounded border border-slate-600">
-                    <p className="text-sm text-orange-400 font-mono">
-                      🔒 Zero-trust architecture with JWT-based authentication
-                    </p>
-                    <p className="text-sm text-orange-400 font-mono">
-                      🔒 Role-based access control (RBAC) per agent type
-                    </p>
-                    <p className="text-sm text-orange-400 font-mono">
-                <div className="bg-slate-800/50 p-6 rounded-lg border border-slate-700">
-                  <h3 className="text-xl font-semibold text-white mb-3">3. Security & Governance</h3>
-                  <p className="text-gray-300 mb-4">,"
-  Autonomous agents with API access require robust security boundaries, audit trails
-                <div className="bg-slate-800/50 p-6 rounded-lg border border-slate-700">
-                  <h3 className="text-xl font-semibold text-white mb-3">3. Security & Governance</h3>
-                  <p className="text-gray-300 mb-4">"
+                <div className="text-left">
+                  <h3 className="text-left">3. Security & Governance</h3>
+                  <p className="text-left">
   Autonomous agents with API access require robust security boundaries, audit trails
                     and compliance controls to prevent unauthorized actions.
                   </p>
-                  <div className="bg-slate-900/50 p-4 rounded border border-slate-600">
-                    <p className="text-sm text-orange-400 font-mono">
+                  <div className="text-left">
+                    <p className="text-left">
                       🔒 Zero-trust architecture with JWT-based authentication
                     </p>
-                    <p className="text-sm text-orange-400 font-mono">
+                    <p className="text-left">
                       🔒 Role-based access control (RBAC) per agent type
                     </p>
-                    <p className="text-sm text-orange-400 font-mono">
+                    <p className="text-left">
+                <div className="text-left">
+                  <h3 className="text-left">3. Security & Governance</h3>
+                  <p className="text-left">,"
+  Autonomous agents with API access require robust security boundaries, audit trails
+                <div className="text-left">
+                  <h3 className="text-left">3. Security & Governance</h3>
+                  <p className="text-left">"
+  Autonomous agents with API access require robust security boundaries, audit trails
+                    and compliance controls to prevent unauthorized actions.
+                  </p>
+                  <div className="text-left">
+                    <p className="text-left">
+                      🔒 Zero-trust architecture with JWT-based authentication
+                    </p>
+                    <p className="text-left">
+                      🔒 Role-based access control (RBAC) per agent type
+                    </p>
+                    <p className="text-left">
                       🔒 Real-time audit logging with immutable append-only stores
                     </p>
                   </div>
@@ -331,109 +331,109 @@ const AIAgentOrchestrationEnterprise2025: () => {
             </section>
 
             {/* Architecture Patterns */}
-            <section className="mb-12">
-              <h2 className="text-3xl font-bold text-white mb-6 flex items-center">
-                <Network className="w-8 h-8 mr-3 text-purple-400 ,"
+            <section className="text-left">
+              <h2 className="text-left">
+                <Network className="text-left"
   Production-Grade Architecture Patterns
               </h2>
 
-              <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-lg border border-slate-700 mb-6">
-                <h3 className="text-2xl font-semibold text-white mb-4">Hierarchical Orchestration Model</h3>
-                <p className="text-gray-300 mb-6">
-              <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-lg border border-slate-700 mb-6">
-                <h3 className="text-2xl font-semibold text-white mb-4">Hierarchical Orchestration Model</h3>
-                <p className="text-gray-300 mb-6">
-            <section className="mb-12">
-              <h2 className="text-3xl font-bold text-white mb-6 flex items-center">
-                <Network className="w-8 h-8 mr-3 text-purple-400" />
+              <div className="text-left">
+                <h3 className="text-left">Hierarchical Orchestration Model</h3>
+                <p className="text-left">
+              <div className="text-left">
+                <h3 className="text-left">Hierarchical Orchestration Model</h3>
+                <p className="text-left">
+            <section className="text-left">
+              <h2 className="text-left">
+                <Network className="text-left" />
   Production-Grade Architecture Patterns
               </h2>
 
-              <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-lg border border-slate-700 mb-6">
-                <h3 className="text-2xl font-semibold text-white mb-4">Hierarchical Orchestration Model</h3>
-                <p className="text-gray-300 mb-6">
+              <div className="text-left">
+                <h3 className="text-left">Hierarchical Orchestration Model</h3>
+                <p className="text-left">
   The most successful enterprise deployments use a three-tier hierarchy: </p>
-                <div className="space-y-4">
-                  <div className="flex items-start">
-                    <div className="flex-shrink-0 w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mr-4">
-                      <span className="text-2xl">🎯</span>
+                <div className="text-left">
+                  <div className="text-left">
+                    <div className="text-left">
+                      <span className="text-left">🎯<
                     </div>
                     <div >
-                      <h4 className="text-lg font-semibold text-white mb-2">Orchestrator Layer</h4>"
-                      <p className="text-gray-400">,"
+                      <h4 className="text-left">Orchestrator Layer</h4>"
+                      <p className="text-left">,"
   Master coordinators that decompose complex tasks, assign to specialist agents
-                      <h4 className="text-lg font-semibold text-white mb-2">Orchestrator Layer</h4>
-                      <p className="text-gray-400">
-            <section className="mb-12">
-              <h2 className="text-3xl font-bold text-white mb-6 flex items-center">
-                <Network className="w-8 h-8 mr-3 text-purple-400/>,"
+                      <h4 className="text-left">Orchestrator Layer</h4>
+                      <p className="text-left">
+            <section className="text-left">
+              <h2 className="text-left">
+                <Network className="text-left"
   Production-Grade Architecture Patterns
               </h2>
 
-              <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-lg border border-slate-700 mb-6">
-                <h3 className="text-2xl font-semibold text-white mb-4">Hierarchical Orchestration Model</h3>
-                <p className="text-gray-300 mb-6">
-            <section className="mb-12">
-              <h2 className="text-3xl font-bold text-white mb-6 flex items-center">
-                <Network className="w-8 h-8 mr-3 text-purple-400" />
+              <div className="text-left">
+                <h3 className="text-left">Hierarchical Orchestration Model</h3>
+                <p className="text-left">
+            <section className="text-left">
+              <h2 className="text-left">
+                <Network className="text-left" />
   Production-Grade Architecture Patterns
               </h2>
 
-              <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-lg border border-slate-700 mb-6">
-                <h3 className="text-2xl font-semibold text-white mb-4">Hierarchical Orchestration Model</h3>
-                <p className="text-gray-300 mb-6">"
+              <div className="text-left">
+                <h3 className="text-left">Hierarchical Orchestration Model</h3>
+                <p className="text-left">"
   The most successful enterprise deployments use a three-tier hierarchy: </p>
-                <div className="space-y-4">
-                  <div className="flex items-start">
-                    <div className="flex-shrink-0 w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mr-4">
-                      <span className="text-2xl">🎯</span>
+                <div className="text-left">
+                  <div className="text-left">
+                    <div className="text-left">
+                      <span className="text-left">🎯<
                     </div>
                     <div >
-                      <h4 className="text-lg font-semibold text-white mb-2">Orchestrator Layer</h4>"
-                      <p className="text-gray-400">,"
+                      <h4 className="text-left">Orchestrator Layer</h4>"
+                      <p className="text-left">,"
   Master coordinators that decompose complex tasks, assign to specialist agents
-                      <h4 className="text-lg font-semibold text-white mb-2">Orchestrator Layer</h4>
-                      <p className="text-gray-400">"
+                      <h4 className="text-left">Orchestrator Layer</h4>
+                      <p className="text-left">"
   Master coordinators that decompose complex tasks, assign to specialist agents
                         and aggregate results. Built with LangGraph or custom state machines.
                       </p>
                     </div>
                   </div>
 
-                  <div className="flex items-start">
-                    <div className="flex-shrink-0 w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mr-4">
-                      <span className="text-2xl">⚡</span>
+                  <div className="text-left">
+                    <div className="text-left">
+                      <span className="text-left">⚡<
                     </div>
                     <div >
-                      <h4 className="text-lg font-semibold text-white mb-2">Specialist Agents</h4>
-                      <p className="text-gray-400">
-                  <div className="flex items-start">
-                    <div className="flex-shrink-0 w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mr-4">
-                      <span className="text-2xl">⚡</span>
+                      <h4 className="text-left">Specialist Agents</h4>
+                      <p className="text-left">
+                  <div className="text-left">
+                    <div className="text-left">
+                      <span className="text-left">⚡<
                     </div>
                     <div >
-                      <h4 className="text-lg font-semibold text-white mb-2">Specialist Agents</h4>
-                      <p className="text-gray-400">"
+                      <h4 className="text-left">Specialist Agents</h4>
+                      <p className="text-left">"
   Domain-specific workers (data retrieval, analysis, code generation) that execute
                         atomic operations. Each agent has narrow, well-defined capabilities.
                       </p>
                     </div>
                   </div>
 
-                  <div className="flex items-start">
-                    <div className="flex-shrink-0 w-12 h-12 bg-emerald-500/20 rounded-lg flex items-center justify-center mr-4">
-                      <span className="text-2xl">🛠️</span>
+                  <div className="text-left">
+                    <div className="text-left">
+                      <span className="text-left">🛠️<
                     </div>
                     <div >
-                      <h4 className="text-lg font-semibold text-white mb-2">Tool Layer</h4>
-                      <p className="text-gray-400">
-                  <div className="flex items-start">
-                    <div className="flex-shrink-0 w-12 h-12 bg-emerald-500/20 rounded-lg flex items-center justify-center mr-4">
-                      <span className="text-2xl">🛠️</span>
+                      <h4 className="text-left">Tool Layer</h4>
+                      <p className="text-left">
+                  <div className="text-left">
+                    <div className="text-left">
+                      <span className="text-left">🛠️<
                     </div>
                     <div >
-                      <h4 className="text-lg font-semibold text-white mb-2">Tool Layer</h4>
-                      <p className="text-gray-400">"
+                      <h4 className="text-left">Tool Layer</h4>
+                      <p className="text-left">"
   Sandboxed execution environment for API calls, database queries, and external integrations.
                         All actions logged and rate-limited for security.
                       </p>
@@ -442,18 +442,18 @@ const AIAgentOrchestrationEnterprise2025: () => {
                 </div>
               </div>
 
-              <div className="bg-blue-500/10 border border-blue-500/30 rounded-lg p-6">
-                <p className="text-blue-300 font-semibold mb-2">💡 Pro Tip: </p>
-                <p className="text-gray-300">
-              <div className="bg-blue-500/10 border border-blue-500/30 rounded-lg p-6">
-                <p className="text-blue-300 font-semibold mb-2">💡 Pro Tip: </p>
-                <p className="text-gray-300">
-              <div className="bg-blue-500/10 border border-blue-500/30 rounded-lg p-6">
-                <p className="text-blue-300 font-semibold mb-2">💡 Pro Tip: </p>
-                <p className="text-gray-300">
-              <div className="bg-blue-500/10 border border-blue-500/30 rounded-lg p-6">
-                <p className="text-blue-300 font-semibold mb-2">💡 Pro Tip: </p>
-                <p className="text-gray-300">"
+              <div className="text-left">
+                <p className="text-left">💡 Pro Tip: </p>
+                <p className="text-left">
+              <div className="text-left">
+                <p className="text-left">💡 Pro Tip: </p>
+                <p className="text-left">
+              <div className="text-left">
+                <p className="text-left">💡 Pro Tip: </p>
+                <p className="text-left">
+              <div className="text-left">
+                <p className="text-left">💡 Pro Tip: </p>
+                <p className="text-left">"
   Use a graph-based orchestration framework (LangGraph, AutoGen) for complex workflows.
                   For simpler use cases, a well-structured queue system (Celery, BullMQ) often outperforms
                   heavyweight solutions.
@@ -462,48 +462,48 @@ const AIAgentOrchestrationEnterprise2025: () => {
             </section>
 
             {/* Implementation Blueprint */}
-            <section className="mb-12">
-              <h2 className="text-3xl font-bold text-white mb-6 flex items-center">
-                <GitBranch className="w-8 h-8 mr-3 text-emerald-400 ,"
+            <section className="text-left">
+              <h2 className="text-left">
+                <GitBranch className="text-left"
   90-Day Implementation Blueprint
               </h2>
 
-              <div className="space-y-6">
-                <div className="bg-slate-800/50 p-6 rounded-lg border-l-4 border-emerald-500">
-              <div className="space-y-6">
-                <div className="bg-slate-800/50 p-6 rounded-lg border-l-4 border-emerald-500">
-                  <h3 className="text-xl font-bold text-white mb-3">Phase 1: Foundation (Days 1-30)</h3>
-                  <ul className="space-y-2 text-gray-300">
-            <section className="mb-12">
-              <h2 className="text-3xl font-bold text-white mb-6 flex items-center">
-                <GitBranch className="w-8 h-8 mr-3 text-emerald-400" />
+              <div className="text-left">
+                <div className="text-left">
+              <div className="text-left">
+                <div className="text-left">
+                  <h3 className="text-left">Phase 1: Foundation (Days 1-30)</h3>
+                  <ul className="text-left">
+            <section className="text-left">
+              <h2 className="text-left">
+                <GitBranch className="text-left" />
   90-Day Implementation Blueprint
               </h2>
 
-              <div className="space-y-6">
-                <div className="bg-slate-800/50 p-6 rounded-lg border-l-4 border-emerald-500">
-                  <h3 className="text-xl font-bold text-white mb-3">Phase 1: Foundation (Days 1-30)</h3>
-                  <ul className="space-y-2 text-gray-300">
-            <section className="mb-12">
-              <h2 className="text-3xl font-bold text-white mb-6 flex items-center">
-                <GitBranch className="w-8 h-8 mr-3 text-emerald-400/>,"
+              <div className="text-left">
+                <div className="text-left">
+                  <h3 className="text-left">Phase 1: Foundation (Days 1-30)</h3>
+                  <ul className="text-left">
+            <section className="text-left">
+              <h2 className="text-left">
+                <GitBranch className="text-left"
   90-Day Implementation Blueprint
               </h2>
 
-              <div className="space-y-6">
-                <div className="bg-slate-800/50 p-6 rounded-lg border-l-4 border-emerald-500">
-                  <h3 className="text-xl font-bold text-white mb-3">Phase 1: Foundation (Days 1-30)</h3>
-                  <ul className="space-y-2 text-gray-300">
-            <section className="mb-12">
-              <h2 className="text-3xl font-bold text-white mb-6 flex items-center">
-                <GitBranch className="w-8 h-8 mr-3 text-emerald-400" />
+              <div className="text-left">
+                <div className="text-left">
+                  <h3 className="text-left">Phase 1: Foundation (Days 1-30)</h3>
+                  <ul className="text-left">
+            <section className="text-left">
+              <h2 className="text-left">
+                <GitBranch className="text-left" />
   90-Day Implementation Blueprint
               </h2>
 
-              <div className="space-y-6">
-                <div className="bg-slate-800/50 p-6 rounded-lg border-l-4 border-emerald-500">
-                  <h3 className="text-xl font-bold text-white mb-3">Phase 1: Foundation (Days 1-30)</h3>
-                  <ul className="space-y-2 text-gray-300">
+              <div className="text-left">
+                <div className="text-left">
+                  <h3 className="text-left">Phase 1: Foundation (Days 1-30)</h3>
+                  <ul className="text-left">
                     <li >✓ Deploy message queue infrastructure (Kafka cluster with 3+ brokers)</li>
                     <li >✓ Implement authentication service with OAuth 2.0</li>
                     <li >✓ Set up observability stack (Prometheus, Grafana, Jaeger)</li>
@@ -512,18 +512,18 @@ const AIAgentOrchestrationEnterprise2025: () => {
                   </ul>
                 </div>
 
-                <div className="bg-slate-800/50 p-6 rounded-lg border-l-4 border-blue-500">
-                  <h3 className="text-xl font-bold text-white mb-3">Phase 2: Scale (Days 31-60)</h3>
-                  <ul className="space-y-2 text-gray-300">
-                <div className="bg-slate-800/50 p-6 rounded-lg border-l-4 border-blue-500">
-                  <h3 className="text-xl font-bold text-white mb-3">Phase 2: Scale (Days 31-60)</h3>
-                  <ul className="space-y-2 text-gray-300">
-                <div className="bg-slate-800/50 p-6 rounded-lg border-l-4 border-blue-500">
-                  <h3 className="text-xl font-bold text-white mb-3">Phase 2: Scale (Days 31-60)</h3>
-                  <ul className="space-y-2 text-gray-300">
-                <div className="bg-slate-800/50 p-6 rounded-lg border-l-4 border-blue-500">
-                  <h3 className="text-xl font-bold text-white mb-3">Phase 2: Scale (Days 31-60)</h3>
-                  <ul className="space-y-2 text-gray-300">
+                <div className="text-left">
+                  <h3 className="text-left">Phase 2: Scale (Days 31-60)</h3>
+                  <ul className="text-left">
+                <div className="text-left">
+                  <h3 className="text-left">Phase 2: Scale (Days 31-60)</h3>
+                  <ul className="text-left">
+                <div className="text-left">
+                  <h3 className="text-left">Phase 2: Scale (Days 31-60)</h3>
+                  <ul className="text-left">
+                <div className="text-left">
+                  <h3 className="text-left">Phase 2: Scale (Days 31-60)</h3>
+                  <ul className="text-left">
                     <li >✓ Horizontal scaling with Kubernetes StatefulSets</li>
                     <li >✓ Implement circuit breakers and fallback strategies</li>
                     <li >✓ Deploy shadow testing environment (10% traffic)</li>
@@ -532,18 +532,18 @@ const AIAgentOrchestrationEnterprise2025: () => {
                   </ul>
                 </div>
 
-                <div className="bg-slate-800/50 p-6 rounded-lg border-l-4 border-purple-500">
-                  <h3 className="text-xl font-bold text-white mb-3">Phase 3: Production (Days 61-90)</h3>
-                  <ul className="space-y-2 text-gray-300">
-                <div className="bg-slate-800/50 p-6 rounded-lg border-l-4 border-purple-500">
-                  <h3 className="text-xl font-bold text-white mb-3">Phase 3: Production (Days 61-90)</h3>
-                  <ul className="space-y-2 text-gray-300">
-                <div className="bg-slate-800/50 p-6 rounded-lg border-l-4 border-purple-500">
-                  <h3 className="text-xl font-bold text-white mb-3">Phase 3: Production (Days 61-90)</h3>
-                  <ul className="space-y-2 text-gray-300">
-                <div className="bg-slate-800/50 p-6 rounded-lg border-l-4 border-purple-500">
-                  <h3 className="text-xl font-bold text-white mb-3">Phase 3: Production (Days 61-90)</h3>
-                  <ul className="space-y-2 text-gray-300">
+                <div className="text-left">
+                  <h3 className="text-left">Phase 3: Production (Days 61-90)</h3>
+                  <ul className="text-left">
+                <div className="text-left">
+                  <h3 className="text-left">Phase 3: Production (Days 61-90)</h3>
+                  <ul className="text-left">
+                <div className="text-left">
+                  <h3 className="text-left">Phase 3: Production (Days 61-90)</h3>
+                  <ul className="text-left">
+                <div className="text-left">
+                  <h3 className="text-left">Phase 3: Production (Days 61-90)</h3>
+                  <ul className="text-left">
                     <li >✓ Full production deployment with canary releases</li>
                     <li >✓ Implement A/B testing framework for agent improvements</li>
                     <li >✓ Set up compliance monitoring and audit trails</li>
@@ -555,87 +555,87 @@ const AIAgentOrchestrationEnterprise2025: () => {
             </section>
 
             {/* ROI Section */}
-            <section className="mb-12">
-              <div className="bg-gradient-to-r from-emerald-500/20 to-blue-500/20 p-8 rounded-lg border border-emerald-500/30">
-                <h2 className="text-3xl font-bold text-white mb-6">Measured ROI & Business Impact</h2>"
-                <div className="grid md:grid-cols-2 gap-6">
-            <section className="mb-12">
-              <div className="bg-gradient-to-r from-emerald-500/20 to-blue-500/20 p-8 rounded-lg border border-emerald-500/30">
-                <h2 className="text-3xl font-bold text-white mb-6">Measured ROI & Business Impact</h2>
-                <div className="grid md:grid-cols-2 gap-6">
+            <section className="text-left">
+              <div className="text-left">
+                <h2 className="text-left">Measured ROI & Business Impact</h2>"
+                <div className="text-left">
+            <section className="text-left">
+              <div className="text-left">
+                <h2 className="text-left">Measured ROI & Business Impact</h2>
+                <div className="text-left">
                   <div >
-                    <p className="text-4xl font-bold text-emerald-400 mb-2">78%</p>
-                    <p className="text-gray-300">Reduction in manual workflow execution time</p>
+                    <p className="text-left">78%</p>
+                    <p className="text-left">Reduction in manual workflow execution time</p>
                   </div>
                   <div >
-                    <p className="text-4xl font-bold text-blue-400 mb-2">$2.4M</p>
-                    <p className="text-gray-300">Average annual cost savings per Fortune 500 deployment</p>
+                    <p className="text-left">$2.4M</p>
+                    <p className="text-left">Average annual cost savings per Fortune 500 deployment</p>
                   </div>
                   <div >
-                    <p className="text-4xl font-bold text-purple-400 mb-2">99.97%</p>
-                    <p className="text-gray-300">Uptime achieved in production environments</p>
+                    <p className="text-left">99.97%</p>
+                    <p className="text-left">Uptime achieved in production environments</p>
                   </div>
                   <div >
-                    <p className="text-4xl font-bold text-cyan-400 mb-2">3.2x</p>
-                    <p className="text-gray-300">Improvement in developer productivity</p>
-            <section className="mb-12">
-              <div className="bg-gradient-to-r from-emerald-500/20 to-blue-500/20 p-8 rounded-lg border border-emerald-500/30">
-                <h2 className="text-3xl font-bold text-white mb-6">Measured ROI & Business Impact</h2>"
-                <div className="grid md:grid-cols-2 gap-6">
-            <section className="mb-12">
-              <div className="bg-gradient-to-r from-emerald-500/20 to-blue-500/20 p-8 rounded-lg border border-emerald-500/30">
-                <h2 className="text-3xl font-bold text-white mb-6">Measured ROI & Business Impact</h2>
-                <div className="grid md:grid-cols-2 gap-6">
+                    <p className="text-left">3.2x</p>
+                    <p className="text-left">Improvement in developer productivity</p>
+            <section className="text-left">
+              <div className="text-left">
+                <h2 className="text-left">Measured ROI & Business Impact</h2>"
+                <div className="text-left">
+            <section className="text-left">
+              <div className="text-left">
+                <h2 className="text-left">Measured ROI & Business Impact</h2>
+                <div className="text-left">
                   <div >
-                    <p className="text-4xl font-bold text-emerald-400 mb-2">78%</p>
-                    <p className="text-gray-300">Reduction in manual workflow execution time</p>
+                    <p className="text-left">78%</p>
+                    <p className="text-left">Reduction in manual workflow execution time</p>
                   </div>
                   <div >
-                    <p className="text-4xl font-bold text-blue-400 mb-2">$2.4M</p>
-                    <p className="text-gray-300">Average annual cost savings per Fortune 500 deployment</p>
+                    <p className="text-left">$2.4M</p>
+                    <p className="text-left">Average annual cost savings per Fortune 500 deployment</p>
                   </div>
                   <div >
-                    <p className="text-4xl font-bold text-purple-400 mb-2">99.97%</p>
-                    <p className="text-gray-300">Uptime achieved in production environments</p>
+                    <p className="text-left">99.97%</p>
+                    <p className="text-left">Uptime achieved in production environments</p>
                   </div>
                   <div >
-                    <p className="text-4xl font-bold text-cyan-400 mb-2">3.2x</p>
-                    <p className="text-gray-300">Improvement in developer productivity</p>
+                    <p className="text-left">3.2x</p>
+                    <p className="text-left">Improvement in developer productivity</p>
                   </div>
                 </div>
               </div>
             </section>
 
             {/* CTA */}
-            <section className="text-center">
-              <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-8 rounded-lg">
-                <h2 className="text-3xl font-bold text-white mb-4">
+            <section className="text-left">
+              <div className="text-left">
+                <h2 className="text-left">
   Ready to Deploy Enterprise AI Agents?
                 </h2>
-                <p className="text-xl text-white/90 mb-6">
+                <p className="text-left">
   Our team has deployed agent orchestration systems for 50+ Fortune 500 companies.
                 </p>
                 to="/contact"
   className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors
                 >
                   Schedule Architecture Review
-                  <ArrowLeft className="w-5 h-5 ml-2 rotate-180 ">
-                  <ArrowLeft className="w-5 h-5 ml-2 rotate-180/>">
-                  <ArrowLeft className="w-5 h-5 ml-2 rotate-180" />
-            <section className="text-center">
-              <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-8 rounded-lg">
-                <h2 className="text-3xl font-bold text-white mb-4">"
+                  <ArrowLeft className="text-left">
+                  <ArrowLeft className="text-left">
+                  <ArrowLeft className="text-left" />
+            <section className="text-left">
+              <div className="text-left">
+                <h2 className="text-left">"
   Ready to Deploy Enterprise AI Agents?
                 </h2>
-                <p className="text-xl text-white/90 mb-6">"
+                <p className="text-left">"
   Our team has deployed agent orchestration systems for 50+ Fortune 500 companies.
                 </p>
                 to="/contact"
   className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors
                 >
                   Schedule Architecture Review
-                  <ArrowLeft className="w-5 h-5 ml-2 rotate-180 ">
-                  <ArrowLeft className="w-5 h-5 ml-2 rotate-180" />
+                  <ArrowLeft className="text-left">
+                  <ArrowLeft className="text-left" />
                 </Link>
               </div>
             </section>

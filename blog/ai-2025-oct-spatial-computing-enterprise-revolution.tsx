@@ -11,14 +11,14 @@ export const metadata = {
 
 export default function BlogPost() {
   return (
-    <article className="prose prose-invert max-w-none">
+    <article className="text-left">
       <h1>🌐 Spatial Computing & AI Enterprise Revolution 2025: Immersive Intelligence at Scale</h1>
       
-      <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 border border-cyan-500/30 rounded-lg p-6 my-8">
-        <h3 className="text-2xl font-bold text-cyan-300 mt-0">🚀 Revolutionary Integration</h3>
-        <p className="text-lg">
-          <strong>Spatial computing + AI</strong> achieving <span className="text-green-400 font-bold">97% training efficiency</span>, 
-          <span className="text-green-400 font-bold"> 85% operational cost reduction</span>, and <span className="text-green-400 font-bold">12x productivity gains</span> through 
+      <div className="text-left">
+        <h3 className="text-left">🚀 Revolutionary Integration</h3>
+        <p className="text-left">
+          <strong>Spatial computing + AI</strong> achieving <span className="text-left">97% training efficiency<, 
+          <span className="text-left"> 85% operational cost reduction<, and <span className="text-left">12x productivity gains< through 
           immersive 3D environments where humans and AI agents collaborate seamlessly in mixed reality.
         </p>
       </div>
@@ -88,9 +88,9 @@ export default function BlogPost() {
 
       <h2>📊 Performance Metrics</h2>
       
-      <div className="bg-slate-800/50 border border-slate-700 rounded-lg p-6 my-6">
-        <h3 className="text-xl font-bold text-cyan-300 mt-0">Real-World Impact</h3>
-        <ul className="space-y-2">
+      <div className="text-left">
+        <h3 className="text-left">Real-World Impact</h3>
+        <ul className="text-left">
           <li><strong>Training Efficiency:</strong> 97% skill retention vs. 34% traditional methods</li>
           <li><strong>Operational Cost Reduction:</strong> 85% decrease in travel and logistics</li>
           <li><strong>Productivity Gains:</strong> 12x improvement in complex tasks</li>
@@ -143,8 +143,8 @@ export default function BlogPost() {
 
       <h2>💰 Business ROI</h2>
       
-      <div className="bg-gradient-to-r from-green-600/20 to-emerald-600/20 border border-green-500/30 rounded-lg p-6 my-8">
-        <h3 className="text-2xl font-bold text-green-300 mt-0">📈 Value Creation</h3>
+      <div className="text-left">
+        <h3 className="text-left">📈 Value Creation</h3>
         <ul>
           <li><strong>Training Cost Reduction:</strong> $47M saved from 89% faster onboarding</li>
           <li><strong>Travel Cost Elimination:</strong> $89M saved with virtual collaboration</li>
@@ -203,8 +203,8 @@ export default function BlogPost() {
 
       <h2>🌟 Global Manufacturing Success</h2>
       
-      <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 border border-blue-500/30 rounded-lg p-6 my-8">
-        <h3 className="text-2xl font-bold text-blue-300 mt-0">🏆 Fortune 100 Automotive Manufacturer</h3>
+      <div className="text-left">
+        <h3 className="text-left">🏆 Fortune 100 Automotive Manufacturer</h3>
         <p>
           Global automotive leader deployed spatial computing + AI across operations:
         </p>
@@ -234,9 +234,9 @@ export default function BlogPost() {
         <li>AI agents as full spatial participants in daily work</li>
       </ul>
 
-      <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 border border-purple-500/30 rounded-lg p-6 my-8">
-        <h3 className="text-2xl font-bold text-purple-300 mt-0">🚀 Enter the Spatial Future</h3>
-        <p className="text-lg">
+      <div className="text-left">
+        <h3 className="text-left">🚀 Enter the Spatial Future</h3>
+        <p className="text-left">
           Transform your enterprise with spatial computing and AI that revolutionizes how work gets done. 
           Contact Zion Tech Group to deploy immersive intelligence platforms that deliver breakthrough 
           productivity, quality, and collaboration outcomes.

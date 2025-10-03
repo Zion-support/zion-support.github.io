@@ -78,9 +78,9 @@ export const ResumePreview = forwardRef<HTMLDivElement, ResumePreviewProps>(;'
             <h1 className='text-3xl font-bold text-gray-900 dark:text-white'>;
               {data && data.name}
             </h1>;'
-            <div className='mt-2 text-sm text-gray-600 dark:text-gray-300 space-x-3 flex flex-wrap'>              {data && data.contact?.email && <span>{data && data.contact.email}</span>}
-              {data && data.contact?.phone && <span>{data && data.contact.phone}</span>}
-              {data && data.contact?.location && <span>{data && data.contact.location}</span>}
+            <div className='mt-2 text-sm text-gray-600 dark:text-gray-300 space-x-3 flex flex-wrap'>              {data && data.contact?.email && <span>{data && data.contact.email}<}
+              {data && data.contact?.phone && <span>{data && data.contact.phone}<}
+              {data && data.contact?.location && <span>{data && data.contact.location}<}
               {data && data.contact?.website && (;'
   <h2 className='text - lg font - semibold tracking - wide text - gray - 800 dark:text - gray - 100 border - b border - gray - 200 dark:border - gray - 700 pb - 1'>;
     {children}
@@ -99,9 +99,9 @@ export const ResumePreview = forward_ref < HTMLDivElement, ResumePreviewProps>('
             <h1 className='text - 3xl font - bold text - gray - 900 dark:text - white'>;
               {data.name}
             </h1>;'
-            <div className='mt - 2 text - sm text - gray - 600 dark:text - gray - 300 space - x-3 flex flex - wrap'>              {data.contact?.email && <span>{data.contact.email}</span>}
-              {data.contact?.phone && <span>{data.contact.phone}</span>}
-              {data.contact?.location && <span>{data.contact.location}</span>}
+            <div className='mt - 2 text - sm text - gray - 600 dark:text - gray - 300 space - x-3 flex flex - wrap'>              {data.contact?.email && <span>{data.contact.email}<}
+              {data.contact?.phone && <span>{data.contact.phone}<}
+              {data.contact?.location && <span>{data.contact.location}<}
               {data.contact?.website && (
     return (
       <div;
@@ -109,9 +109,9 @@ export const ResumePreview = forward_ref < HTMLDivElement, ResumePreviewProps>('
             </h1>
             <div className='mt-2 text-sm text-gray-600 dark:text-gray-300 space-x-3 flex flex-wrap'>
 origin/cursor/automate-test-improve-and-merge-code-2533
-              {data.contact?.email && <span>{data.contact.email}</span>}
-              {data.contact?.phone && <span>{data.contact.phone}</span>}
-              {data.contact?.location && <span>{data.contact.location}</span>}
+              {data.contact?.email && <span>{data.contact.email}<}
+              {data.contact?.phone && <span>{data.contact.phone}<}
+              {data.contact?.location && <span>{data.contact.location}<}
               {data.contact?.website && (
 <a
                   className='underline'
@@ -181,7 +181,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   <span;
                     key={`skill-${idx}`}'
                     className='px-2 py-0 && 0.5 rounded border border-gray-200 dark:border-gray-700'>                    {s}
-                  </span>;
+                  <;
                 ))}
                 {data && data.technologies?.map((t, idx) => (;
                   <span;`
@@ -228,7 +228,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     key={`skill-${idx}`}'
                     className='px - 2 py - 0.5 rounded border border - gray - 200 dark:border - gray - 700';
                   >                    {s}
-                  </span>))}
+                  <))}
                 {data.technologies?.map ((t, idx) => (
                   <span;`
                     key={`tech-${idx}`}'
@@ -242,7 +242,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                   >                    {t}
 
                     {s}
-                  </span>))}
+                  <))}
                 {data.technologies?.map ((t, idx) => (
                   <span;`
                     key={`tech-${idx}`}'
@@ -251,7 +251,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                     className='px-2 py-0.5 rounded border border-gray-200 dark:border-gray-700'
                   >
                     {s}
-                  </span>
+                  <
                 ))}
                 {data.technologies?.map((t, idx) => (
 <span
@@ -292,7 +292,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                       <div className='text-xs text-gray-600 dark:text-gray-300'>
 
                             {role.end ? ` – ${role.end}` : ''}
-                          </span>
+                          <
           {data && data.experience?.length ? (;'
             <section className='mb-5'>;
               <SectionTitle>Work Experience</SectionTitle>;'
@@ -318,7 +318,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           <span>;'
                             {role && role.start || ''}'`
                             {role && role.end ? ` – ${role && role.end}` : ''}
-                          </span>;
+                          <;
                         )}'`
                         {role && role.location ? ` • ${role && role.location}` : ''}
                       </div>;
@@ -330,7 +330,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           <span>;'
                             {role.start || ''}'`
                             {role.end ? ` – ${role.end}` : ''}
-                          </span>)}
+                          <)}
 '`
                         {role.location ? ` • ${role.location}` : ''}
                       </div>;
@@ -353,7 +353,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           <span>'
                             {role.start || ''}'`
                             {role.end ? ` – ${role.end}` : ''}
-                          </span>
+                          <
                         )}'`
                         {role.location ? ` • ${role.location}` : ''}
                       </div>
@@ -490,7 +490,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
                           >
 origin/cursor/automate-test-improve-and-merge-code-2533
                             {t}
-                          </span>;
+                          <;
                         ))}
                       </div>;
                     ) : null}
@@ -524,7 +524,7 @@ export default ResumePreview;'
                         {p.technologies.map ((t, t_idx) => ('`
                           <span key={`proj-${idx}-t-${t_idx}`} className='px - 2 py - 0.5 rounded border border - gray - 200 dark: border - gray - 700'>;
                             {t}
-                          </span>))}
+                          <))}
                       </div>) : null}
                   </div>))}
               </div>;

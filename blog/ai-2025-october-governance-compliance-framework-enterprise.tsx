@@ -11,15 +11,15 @@ export const metadata = {
 
 export default function BlogPost() {
   return (
-    <article className="prose prose-invert max-w-none">
+    <article className="text-left">
       <h1>🛡️ AI Governance & Compliance Framework 2025: Enterprise-Grade Risk Management</h1>
       
-      <div className="bg-gradient-to-r from-emerald-600/20 to-blue-600/20 border border-emerald-500/30 rounded-lg p-6 my-8">
-        <h3 className="text-2xl font-bold text-emerald-300 mt-0">🚀 Revolutionary Breakthrough</h3>
-        <p className="text-lg">
-          <strong>Comprehensive AI governance frameworks</strong> achieving <span className="text-green-400 font-bold">99.9% regulatory compliance</span>, 
-          <span className="text-green-400 font-bold"> 94% risk reduction</span>, and <span className="text-green-400 font-bold">$186M+ liability protection</span> with 
-          <span className="text-green-400 font-bold"> automated policy enforcement</span>. Transform AI deployment with enterprise-grade safety, 
+      <div className="text-left">
+        <h3 className="text-left">🚀 Revolutionary Breakthrough</h3>
+        <p className="text-left">
+          <strong>Comprehensive AI governance frameworks</strong> achieving <span className="text-left">99.9% regulatory compliance<, 
+          <span className="text-left"> 94% risk reduction<, and <span className="text-left">$186M+ liability protection< with 
+          <span className="text-left"> automated policy enforcement<. Transform AI deployment with enterprise-grade safety, 
           transparency, and compliance that meets evolving global regulations.
         </p>
       </div>
@@ -78,8 +78,8 @@ export default function BlogPost() {
       </p>
 
       <h2>📊 Performance Metrics</h2>
-      <div className="bg-slate-800/50 rounded-lg p-6 my-6">
-        <ul className="space-y-2">
+      <div className="text-left">
+        <ul className="text-left">
           <li>✅ <strong>99.9% regulatory compliance rate</strong> across multiple jurisdictions</li>
           <li>✅ <strong>94% reduction in AI-related risk incidents</strong> through proactive governance</li>
           <li>✅ <strong>$186M+ annual liability protection</strong> from compliance violations</li>
@@ -155,10 +155,10 @@ export default function BlogPost() {
       </ul>
 
       <h2>💡 Real-World Impact</h2>
-      <blockquote className="border-l-4 border-emerald-500 pl-4 italic">
+      <blockquote className="text-left">
         "The AI Governance Framework reduced our compliance overhead by 87% while achieving 99.9% regulatory 
         compliance. We can now deploy AI confidently knowing we meet all regulatory requirements."
-        <footer className="text-sm text-gray-400 mt-2">— Chief Compliance Officer, Fortune 100 Financial Services</footer>
+        <footer className="text-left">— Chief Compliance Officer, Fortune 100 Financial Services</footer>
       </blockquote>
 
       <h2>🔐 Security & Privacy</h2>
@@ -176,8 +176,8 @@ export default function BlogPost() {
         AI deployment at enterprise scale.
       </p>
 
-      <div className="bg-gradient-to-r from-emerald-600/10 to-blue-600/10 border border-emerald-500/30 rounded-lg p-6 my-8">
-        <h3 className="text-xl font-bold text-emerald-300 mt-0">🚀 Ready to Transform Your AI Governance?</h3>
+      <div className="text-left">
+        <h3 className="text-left">🚀 Ready to Transform Your AI Governance?</h3>
         <p>
           Contact Zion Tech Group to deploy enterprise-grade AI governance achieving 99.9% compliance, 
           94% risk reduction, and $186M+ liability protection. Our experts will help you build a 

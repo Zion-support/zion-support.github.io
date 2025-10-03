@@ -17,52 +17,52 @@ export const metadata = {
 
 export default function AICloudFinOps2025() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-orange-950 to-slate-950">
+    <div className="text-left">
       {/* Hero Section */}
-      <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-orange-500/10 via-amber-500/10 to-yellow-500/10 animate-pulse"></div>
-        <div className="container mx-auto px-6 py-20 relative z-10">
-          <Link href="/blog" className="inline-flex items-center text-orange-400 hover:text-orange-300 mb-8 transition-colors">
-            <ArrowLeft className="w-4 h-4 mr-2" />
+      <div className="text-left">
+        <div className="text-left"></div>
+        <div className="text-left">
+          <Link href="/blog" className="text-left">
+            <ArrowLeft className="text-left" />
             Back to Blog
           </Link>
           
-          <div className="max-w-4xl">
-            <div className="flex items-center gap-3 mb-6">
-              <span className="px-4 py-2 rounded-full bg-gradient-to-r from-orange-500/20 to-amber-500/20 border border-orange-500/30 text-orange-400 text-sm font-semibold">
+          <div className="text-left">
+            <div className="text-left">
+              <span className="text-left">
                 💰 CLOUD COST BREAKTHROUGH
-              </span>
-              <span className="px-4 py-2 rounded-full bg-yellow-500/20 border border-yellow-500/30 text-yellow-400 text-sm font-semibold">
+              <
+              <span className="text-left">
                 September 30, 2025
-              </span>
+              <
             </div>
             
-            <h1 className="text-5xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-orange-400 via-amber-400 to-yellow-400 bg-clip-text text-transparent leading-tight">
+            <h1 className="text-left">
               AI-Powered Cloud FinOps 2025: Achieving 60% Cost Reduction Through Autonomous Optimization
             </h1>
             
-            <p className="text-xl text-gray-300 leading-relaxed mb-8">
+            <p className="text-left">
               Revolutionary AI-driven cloud financial operations platform achieving 60% cost reduction for Fortune 500 
               enterprises. Automated resource optimization, predictive scaling, and real-time cost anomaly detection 
               transforming cloud economics at scale.
             </p>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              <div className="bg-white/5 backdrop-blur-lg rounded-xl p-4 border border-white/10">
-                <div className="text-3xl font-bold text-orange-400 mb-1">60%</div>
-                <div className="text-sm text-gray-400">Average Cost Reduction</div>
+            <div className="text-left">
+              <div className="text-left">
+                <div className="text-left">60%</div>
+                <div className="text-left">Average Cost Reduction</div>
               </div>
-              <div className="bg-white/5 backdrop-blur-lg rounded-xl p-4 border border-white/10">
-                <div className="text-3xl font-bold text-amber-400 mb-1">$450M</div>
-                <div className="text-sm text-gray-400">Annual Savings</div>
+              <div className="text-left">
+                <div className="text-left">$450M</div>
+                <div className="text-left">Annual Savings</div>
               </div>
-              <div className="bg-white/5 backdrop-blur-lg rounded-xl p-4 border border-white/10">
-                <div className="text-3xl font-bold text-yellow-400 mb-1">Real-time</div>
-                <div className="text-sm text-gray-400">Cost Visibility</div>
+              <div className="text-left">
+                <div className="text-left">Real-time</div>
+                <div className="text-left">Cost Visibility</div>
               </div>
-              <div className="bg-white/5 backdrop-blur-lg rounded-xl p-4 border border-white/10">
-                <div className="text-3xl font-bold text-orange-400 mb-1">100%</div>
-                <div className="text-sm text-gray-400">Automated Optimization</div>
+              <div className="text-left">
+                <div className="text-left">100%</div>
+                <div className="text-left">Automated Optimization</div>
               </div>
             </div>
           </div>
@@ -70,45 +70,45 @@ export default function AICloudFinOps2025() {
       </div>
 
       {/* Main Content */}
-      <div className="container mx-auto px-6 py-16">
-        <div className="max-w-4xl mx-auto">
+      <div className="text-left">
+        <div className="text-left">
           
           {/* The Cloud Cost Crisis */}
-          <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 mb-12">
-            <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-              <Cloud className="w-8 h-8 text-orange-400" />
+          <div className="text-left">
+            <h2 className="text-left">
+              <Cloud className="text-left" />
               The Enterprise Cloud Cost Challenge
             </h2>
-            <div className="space-y-4 text-gray-300 leading-relaxed">
+            <div className="text-left">
               <p>
                 Cloud spending has spiraled out of control for most enterprises. The average company wastes 30-60% of 
                 their cloud budget on unused resources, over-provisioned instances, and inefficient architectures. 
                 Manual cost optimization is impossible at scale with thousands of resources across multiple cloud providers.
               </p>
-              <div className="grid md:grid-cols-3 gap-4 mt-6">
-                <div className="bg-red-500/10 border border-red-500/30 rounded-lg p-4 text-center">
-                  <div className="text-3xl font-bold text-red-400 mb-2">35%</div>
-                  <div className="text-sm text-gray-400">Average Cloud Waste</div>
+              <div className="text-left">
+                <div className="text-left">
+                  <div className="text-left">35%</div>
+                  <div className="text-left">Average Cloud Waste</div>
                 </div>
-                <div className="bg-red-500/10 border border-red-500/30 rounded-lg p-4 text-center">
-                  <div className="text-3xl font-bold text-red-400 mb-2">$28B</div>
-                  <div className="text-sm text-gray-400">Annual Wasted Spend</div>
+                <div className="text-left">
+                  <div className="text-left">$28B</div>
+                  <div className="text-left">Annual Wasted Spend</div>
                 </div>
-                <div className="bg-red-500/10 border border-red-500/30 rounded-lg p-4 text-center">
-                  <div className="text-3xl font-bold text-red-400 mb-2">80%</div>
-                  <div className="text-sm text-gray-400">Resources Underutilized</div>
+                <div className="text-left">
+                  <div className="text-left">80%</div>
+                  <div className="text-left">Resources Underutilized</div>
                 </div>
               </div>
             </div>
           </div>
 
           {/* AI FinOps Capabilities */}
-          <div className="bg-gradient-to-br from-orange-500/10 to-amber-500/10 rounded-2xl p-8 border border-orange-500/20 mb-12">
-            <h2 className="text-3xl font-bold text-white mb-8 flex items-center gap-3">
-              <Zap className="w-8 h-8 text-yellow-400" />
+          <div className="text-left">
+            <h2 className="text-left">
+              <Zap className="text-left" />
               AI-Powered FinOps Capabilities
             </h2>
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="text-left">
               {[
                 {
                   title: 'Autonomous Resource Rightsizing',
@@ -177,15 +177,15 @@ export default function AICloudFinOps2025() {
                   ]
                 }
               ].map((capability, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10">
-                  <div className="text-4xl mb-4">{capability.icon}</div>
-                  <h3 className="text-xl font-bold text-white mb-3">{capability.title}</h3>
-                  <p className="text-gray-400 mb-4 text-sm">{capability.description}</p>
-                  <ul className="space-y-2">
+                <div key={index} className="text-left">
+                  <div className="text-left">{capability.icon}</div>
+                  <h3 className="text-left">{capability.title}</h3>
+                  <p className="text-left">{capability.description}</p>
+                  <ul className="text-left">
                     {capability.benefits.map((benefit, i) => (
-                      <li key={i} className="text-gray-300 text-sm flex items-start gap-2">
-                        <span className="text-green-400 mt-1">✓</span>
-                        <span>{benefit}</span>
+                      <li key={i} className="text-left">
+                        <span className="text-left">✓<
+                        <span>{benefit}<
                       </li>
                     ))}
                   </ul>
@@ -195,12 +195,12 @@ export default function AICloudFinOps2025() {
           </div>
 
           {/* Implementation Results */}
-          <div className="bg-gradient-to-br from-green-500/10 to-emerald-500/10 rounded-2xl p-8 border border-green-500/20 mb-12">
-            <h2 className="text-3xl font-bold text-white mb-8 flex items-center gap-3">
-              <TrendingDown className="w-8 h-8 text-green-400" />
+          <div className="text-left">
+            <h2 className="text-left">
+              <TrendingDown className="text-left" />
               Real Enterprise Results
             </h2>
-            <div className="space-y-6">
+            <div className="text-left">
               {[
                 {
                   company: 'Fortune 100 Retailer',
@@ -239,25 +239,25 @@ export default function AICloudFinOps2025() {
                   ]
                 }
               ].map((result, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10">
-                  <div className="flex items-start justify-between mb-4">
+                <div key={index} className="text-left">
+                  <div className="text-left">
                     <div>
-                      <h3 className="text-2xl font-bold text-green-400 mb-2">{result.company}</h3>
-                      <div className="text-gray-400 text-sm space-y-1">
-                        <div>Initial Cloud Spend: <span className="text-white font-semibold">{result.cloudSpend}</span></div>
-                        <div>Annual Savings: <span className="text-green-400 font-semibold">{result.savings}</span></div>
-                        <div>Implementation Time: <span className="text-white font-semibold">{result.timeline}</span></div>
+                      <h3 className="text-left">{result.company}</h3>
+                      <div className="text-left">
+                        <div>Initial Cloud Spend: <span className="text-left">{result.cloudSpend}<</div>
+                        <div>Annual Savings: <span className="text-left">{result.savings}<</div>
+                        <div>Implementation Time: <span className="text-left">{result.timeline}<</div>
                       </div>
                     </div>
-                    <div className="bg-green-500/20 rounded-full p-4 border border-green-500/30">
-                      <DollarSign className="w-8 h-8 text-green-400" />
+                    <div className="text-left">
+                      <DollarSign className="text-left" />
                     </div>
                   </div>
-                  <div className="space-y-2">
+                  <div className="text-left">
                     {result.details.map((detail, i) => (
-                      <div key={i} className="text-gray-300 text-sm flex items-start gap-2">
-                        <span className="text-green-400 mt-1">•</span>
-                        <span>{detail}</span>
+                      <div key={i} className="text-left">
+                        <span className="text-left">•<
+                        <span>{detail}<
                       </div>
                     ))}
                   </div>
@@ -267,12 +267,12 @@ export default function AICloudFinOps2025() {
           </div>
 
           {/* Getting Started */}
-          <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 mb-12">
-            <h2 className="text-3xl font-bold text-white mb-8 flex items-center gap-3">
-              <BarChart3 className="w-8 h-8 text-amber-400" />
+          <div className="text-left">
+            <h2 className="text-left">
+              <BarChart3 className="text-left" />
               AI FinOps Implementation Roadmap
             </h2>
-            <div className="space-y-6">
+            <div className="text-left">
               {[
                 {
                   phase: 'Phase 1: Cost Visibility (Weeks 1-4)',
@@ -311,13 +311,13 @@ export default function AICloudFinOps2025() {
                   ]
                 }
               ].map((phase, index) => (
-                <div key={index} className="border-l-4 border-orange-500 pl-6">
-                  <h3 className="text-xl font-bold text-orange-400 mb-4">{phase.phase}</h3>
-                  <ul className="space-y-2">
+                <div key={index} className="text-left">
+                  <h3 className="text-left">{phase.phase}</h3>
+                  <ul className="text-left">
                     {phase.actions.map((action, i) => (
-                      <li key={i} className="text-gray-300 flex items-start gap-2">
-                        <LineChart className="w-5 h-5 text-amber-400 mt-1 flex-shrink-0" />
-                        <span>{action}</span>
+                      <li key={i} className="text-left">
+                        <LineChart className="text-left" />
+                        <span>{action}<
                       </li>
                     ))}
                   </ul>
@@ -327,27 +327,27 @@ export default function AICloudFinOps2025() {
           </div>
 
           {/* CTA */}
-          <div className="bg-gradient-to-r from-orange-500 via-amber-500 to-yellow-500 rounded-2xl p-8 text-center">
-            <h2 className="text-3xl font-bold text-white mb-4">
+          <div className="text-left">
+            <h2 className="text-left">
               Slash Your Cloud Costs by 60%
             </h2>
-            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+            <p className="text-left">
               Our FinOps experts have optimized cloud spending for 100+ enterprises, delivering $2.5B+ in cumulative 
               savings. Get a free cloud cost assessment and discover your optimization potential.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="text-left">
               <Link
                 href="/contact"
-                className="bg-white text-orange-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg inline-flex items-center justify-center gap-2"
+                className="text-left"
               >
-                <span>Get Free Cost Assessment</span>
-                <ArrowLeft className="w-5 h-5 rotate-180" />
+                <span>Get Free Cost Assessment<
+                <ArrowLeft className="text-left" />
               </Link>
               <Link
                 href="/services"
-                className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-orange-600 font-bold py-4 px-8 rounded-xl transition-all duration-300 inline-flex items-center justify-center gap-2"
+                className="text-left"
               >
-                <span>Explore FinOps Services</span>
+                <span>Explore FinOps Services<
               </Link>
             </div>
           </div>

@@ -9,22 +9,22 @@ export const metadata = {
 
 export default function Page() {
   return (
-    <main className="min-h-screen bg-white">"
-      <section className="py-16 bg-gradient-to-r from-fuchsia-600/10 to-purple-600/10 border-b border-gray-200">"
-        <div className="max-w-4xl mx-auto px-6">"
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-900">"
-            Agent Release Guardrails 2026: <span className="text-fuchsia-700">Budgets, Approvals, and Instant Rollback</span>"
+    <main className="text-left">"
+      <section className="text-left">"
+        <div className="text-left">"
+          <h1 className="text-left">"
+            Agent Release Guardrails 2026: <span className="text-left">Budgets, Approvals, and Instant Rollback<"
           </h1>
-          <p className="text-gray-600 mt-4">"
+          <p className="text-left">"
             Ship reliable agent updates using <strong>budgeted actions</strong>, <strong>human approvals</strong>, CI policy tests,
             and <strong>one‑click rollback</strong> wired to outcome KPIs.
           </p>
-          <div className="mt-6 text-sm text-gray-500">7 min read • AI Operations • Published Sep 30, 2025</div>"
+          <div className="text-left">7 min read • AI Operations • Published Sep 30, 2025</div>"
         </div>
       </section>
 
-      <section className="py-12">"
-        <div className="max-w-4xl mx-auto px-6 prose prose-lg">"
+      <section className="text-left">"
+        <div className="text-left">"
           <h2>Release Checklist</h2>
           <ul>
             <li>Policy tests and evals passed in CI</li>
@@ -40,10 +40,10 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="py-12 bg-gray-50 border-t border-gray-200">"
-        <div className="max-w-4xl mx-auto px-6 flex items-center justify-between">"
-          <Link href="/blog" className="text-fuchsia-700 font-semibold hover:text-fuchsia-800">← Back to Blog</Link>"
-          <Link href="/blog/edge-consentless-experiments-2026-q4" className="text-purple-700 font-semibold hover:text-purple-800">Next: Consentless Experiments →</Link>"
+      <section className="text-left">"
+        <div className="text-left">"
+          <Link href="/blog" className="text-left">← Back to Blog</Link>"
+          <Link href="/blog/edge-consentless-experiments-2026-q4" className="text-left">Next: Consentless Experiments →</Link>"
         </div>
       </section>
     </main>

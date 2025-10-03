@@ -219,16 +219,16 @@ pr-12325
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
           <div className=\"text-center mb-16\">
             <h1 className=\"text-4xl font-bold text-gray-900 mb-4\">
-      <div className="min-h-screen bg-gray-50 py-12">
-        <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">
+      <div className="text-left">
+        <div className="text-left"sm": px-6 lg:px-8">
+          <div className="text-left">
+            <h1 className="text-left">
               Simple, Transparent Pricing
 
           <div className=\"grid grid-cols-1 \"md\": grid-cols-3 gap-8 mb-16\">
-          <div className="grid grid-cols-1 "md": grid-cols-3 gap-8 mb-16">
+          <div className="text-left"md": grid-cols-3 gap-8 mb-16">
           <div className=\"grid grid-cols-1 \"md\": grid-cols-3 gap-8 mb-16\">
-          <div className="grid grid-cols-1 "md": grid-cols-3 gap-8 mb-16">
+          <div className="text-left"md": grid-cols-3 gap-8 mb-16">
             {pricingPlans.map((plan, index) => (
               <div
                 key={plan.name}
@@ -240,11 +240,11 @@ pr-12325
                   <div className=\"absolute -top-4 left-1/2 transform -translate-x-1/2\">
                     <span className=\"bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-medium\">
                       Most Popular
-                    </span>
+                    <
                   </div>
                 )}
           <div className=\"grid grid-cols-1 \"md\": grid-cols-3 gap-8 mb-16\">
-          <div className="grid grid-cols-1 "md": grid-cols-3 gap-8 mb-16">
+          <div className="text-left"md": grid-cols-3 gap-8 mb-16">
 
           <div className=\"grid grid-cols-1 \"md\": grid-cols-3 gap-8 mb-16\">
 
@@ -388,10 +388,10 @@ export default function PricingPage() {;
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">;
           <div className=\"text-center mb-16\">;
             <h1 className=\"text-4xl font-bold text-gray-900 mb-4\">;
-      <div className="min-h-screen bg-gray-50 py-12">;
-        <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8">;
-          <div className="text-center mb-16">;
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">;
+      <div className="text-left">;
+        <div className="text-left"sm": px-6 lg:px-8">;
+          <div className="text-left">;
+            <h1 className="text-left">;
               Simple, Transparent Pricing;
             </h1>;
             <p className=\"text-xl text-gray-600 max-w-3xl mx-auto\">;
@@ -399,13 +399,13 @@ export default function PricingPage() {;
             </p>;
           </div>;
           <div className=\"grid grid-cols-1 \"md\": grid-cols-3 gap-8 mb-16\">;
-          <div className="grid grid-cols-1 "md": grid-cols-3 gap-8 mb-16">;
+          <div className="text-left"md": grid-cols-3 gap-8 mb-16">;
           <div className=\"grid grid-cols-1 \"md\": grid-cols-3 gap-8 mb-16\">;
-          <div className="grid grid-cols-1 "md": grid-cols-3 gap-8 mb-16">;
+          <div className="text-left"md": grid-cols-3 gap-8 mb-16">;
           <div className=\"grid grid-cols-1 \"md\": grid-cols-3 gap-8 mb-16\">;
-          <div className="grid grid-cols-1 "md": grid-cols-3 gap-8 mb-16">;
+          <div className="text-left"md": grid-cols-3 gap-8 mb-16">;
             {pricingPlans && pricingPlans.map((plan, index) => (;
-          <div className="grid grid-cols-1 "md": grid-cols-3 gap-8 mb-16">            {pricingPlans.map((plan, index) => (
+          <div className="text-left"md": grid-cols-3 gap-8 mb-16">            {pricingPlans.map((plan, index) => (
               <div
                 key={plan.name}
                 className={`relative bg-white rounded-2xl shadow-lg p-8 ${
@@ -416,7 +416,7 @@ export default function PricingPage() {;
                   <div className=\"absolute -top-4 left-1/2 transform -translate-x-1/2\">
                     <span className=\"bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-medium\">
                       Most Popular
-                    </span>
+                    <
                   </div>
                 )}
 
@@ -425,20 +425,20 @@ export default function PricingPage() {;
                   <h3 className=\"text-2xl font-bold text-gray-900 mb-2\">{plan.name}</h3>
                   <p className=\"text-gray-600 mb-4\">{plan.description}</p>
                   <div className=\"mb-4\">
-                    <span className=\"text-4xl font-bold text-gray-900\">{plan.price}</span>
-                    <span className=\"text-gray-600 ml-2\">{plan.period}</span>
+                    <span className=\"text-4xl font-bold text-gray-900\">{plan.price}<
+                    <span className=\"text-gray-600 ml-2\">{plan.period}<
                   </div>
                 </div>
                 <ul className=\"space-y-4 mb-8\">
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
-                  <p className="text-gray-600 mb-4">{plan.description}</p>
-                  <div className="mb-4">
-                    <span className="text-4xl font-bold text-gray-900">{plan.price}</span>
-                    <span className="text-gray-600 ml-2">{plan.period}</span>
+                <div className="text-left">
+                  <h3 className="text-left">{plan.name}</h3>
+                  <p className="text-left">{plan.description}</p>
+                  <div className="text-left">
+                    <span className="text-left">{plan.price}<
+                    <span className="text-left">{plan.period}<
                   </div>
                 </div>
-                <ul className="space-y-4 mb-8">
+                <ul className="text-left">
                   {plan.features.map((feature, featureIndex) => (
 
                   ))}
@@ -462,24 +462,24 @@ export default function PricingPage() {;
                   <h3 className=\"text-2xl font-bold text-gray-900 mb-2\">{plan && plan.name}</h3>;
                   <p className=\"text-gray-600 mb-4\">{plan && plan.description}</p>;
                   <div className=\"mb-4\">;
-                    <span className=\"text-4xl font-bold text-gray-900\">{plan && plan.price}</span>;
-                    <span className=\"text-gray-600 ml-2\">{plan && plan.period}</span>;
+                    <span className=\"text-4xl font-bold text-gray-900\">{plan && plan.price}<;
+                    <span className=\"text-gray-600 ml-2\">{plan && plan.period}<;
                   </div>;
                 </div>;
                 <ul className=\"space-y-4 mb-8\">;
-                <div className="text-center mb-8">;
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan && plan.name}</h3>;
-                  <p className="text-gray-600 mb-4">{plan && plan.description}</p>;
-                  <div className="mb-4">;
-                    <span className="text-4xl font-bold text-gray-900">{plan && plan.price}</span>;
-                    <span className="text-gray-600 ml-2">{plan && plan.period}</span>;
+                <div className="text-left">;
+                  <h3 className="text-left">{plan && plan.name}</h3>;
+                  <p className="text-left">{plan && plan.description}</p>;
+                  <div className="text-left">;
+                    <span className="text-left">{plan && plan.price}<;
+                    <span className="text-left">{plan && plan.period}<;
                   </div>;
                 </div>;
-                <ul className="space-y-4 mb-8">;
+                <ul className="text-left">;
                   {plan && plan.features.map((feature, featureIndex) => (;
                     <li key={featureIndex} className=\"flex items-center\">;
                       <CheckCircle className=\"w-5 h-5 text-green-500 mr-3 flex-shrink-0\" />;
-                      <span className=\"text-gray-600\">{feature}</span>;
+                      <span className=\"text-gray-600\">{feature}<;
                     </li>;
                   ))}
                 </ul>;
@@ -497,8 +497,8 @@ export default function PricingPage() {;
 
           <div className=\"text-center\">
             <h2 className=\"text-3xl font-bold text-gray-900 mb-4\">
-          <div className="text-center">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+          <div className="text-left">
+            <h2 className="text-left">
               Ready to Get Started?
 
             </h2>

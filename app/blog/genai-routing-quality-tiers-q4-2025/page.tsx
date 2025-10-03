@@ -8,23 +8,23 @@ export const metadata = {
 
 export default function GenAIRoutingQualityTiersQ42025Page() {
   return (
-    <div className="min-h-screen bg-slate-950 text-white">"
-      <main className="max-w-3xl mx-auto px-6 py-16">"
-        <div className="mb-8">"
-          <Link href="/blog" className="text-fuchsia-300 hover:text-fuchsia-200">← Back to Blog</Link>"
+    <div className="text-left">"
+      <main className="text-left">"
+        <div className="text-left">"
+          <Link href="/blog" className="text-left">← Back to Blog</Link>"
         </div>
-        <header className="mb-6">"
-          <div className="flex items-center gap-3 text-sm text-white/60 mb-3">"
-            <span className="px-3 py-1 rounded-full bg-fuchsia-500/20 text-fuchsia-300 border border-fuchsia-500/30">GenAI</span>"
-            <span>September 30, 2025</span>
-            <span>8 min read</span>
+        <header className="text-left">"
+          <div className="text-left">"
+            <span className="text-left">GenAI<"
+            <span>September 30, 2025<
+            <span>8 min read<
           </div>
-          <h1 className="text-4xl font-extrabold leading-tight">GenAI Routing Quality Tiers Q4 2025: Predictable Cost, Stable UX</h1>"
-          <p className="text-white/70 mt-3">"
+          <h1 className="text-left">GenAI Routing Quality Tiers Q4 2025: Predictable Cost, Stable UX</h1>"
+          <p className="text-left">"
             Route by SLO with model tiers, caches, and budget‑aware policies. Keep UX steady while controlling spend.
           </p>
         </header>
-        <article className="prose prose-invert prose-slate max-w-none">"
+        <article className="text-left">"
           <h2>Tiered Models & Policies</h2>
           <p>
             Define quality tiers per product flow. Use policies to select models by SLA, cost ceilings, and guardrail requirements.
@@ -43,12 +43,12 @@ export default function GenAIRoutingQualityTiersQ42025Page() {
             <li>Cost per successful task</li>
           </ul>
         </article>
-        <footer className="mt-12 pt-6 border-t border-white/10 text-white/70">"
+        <footer className="text-left">"
           <p>
             Continue exploring: {' '}
-            <Link href="/blog/ai-operational-trust-q4-2025" className="text-emerald-300 hover:text-emerald-200">AI Operational Trust</Link>"
+            <Link href="/blog/ai-operational-trust-q4-2025" className="text-left">AI Operational Trust</Link>"
             {' '}•{' '}
-            <Link href="/blog/edge-consentless-analytics-q4-2025" className="text-cyan-300 hover:text-cyan-200">Consentless Edge Analytics</Link>"
+            <Link href="/blog/edge-consentless-analytics-q4-2025" className="text-left">Consentless Edge Analytics</Link>"
           </p>
         </footer>
       </main>

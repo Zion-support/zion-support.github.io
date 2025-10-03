@@ -11,17 +11,17 @@ export const metadata = {
 
 export default function BlogPost() {
   return (
-    <article className="prose prose-invert max-w-none">
+    <article className="text-left">
       <h1>🔒 Privacy-Preserving AI: Enterprise Deployment Guide 2025</h1>
       
-      <div className="bg-gradient-to-r from-indigo-600/20 to-violet-600/20 border border-indigo-500/30 rounded-lg p-6 my-8">
-        <h3 className="text-2xl font-bold text-indigo-300 mt-0">🚀 Revolutionary Breakthrough</h3>
-        <p className="text-lg">
+      <div className="text-left">
+        <h3 className="text-left">🚀 Revolutionary Breakthrough</h3>
+        <p className="text-left">
           <strong>Privacy-Preserving AI</strong> enables breakthrough applications while protecting sensitive data. 
-          Achieve <span className="text-green-400 font-bold">100% regulatory compliance</span>, 
-          <span className="text-green-400 font-bold"> 99.9% model accuracy</span> (vs. traditional approaches), and unlock 
-          <span className="text-green-400 font-bold"> $4.7B in previously inaccessible AI value</span> through 
-          <span className="text-green-400 font-bold"> federated learning and differential privacy</span>. Train on 
+          Achieve <span className="text-left">100% regulatory compliance<, 
+          <span className="text-left"> 99.9% model accuracy< (vs. traditional approaches), and unlock 
+          <span className="text-left"> $4.7B in previously inaccessible AI value< through 
+          <span className="text-left"> federated learning and differential privacy<. Train on 
           sensitive data without ever exposing it.
         </p>
       </div>
@@ -104,8 +104,8 @@ export default function BlogPost() {
 
       <h2>📊 Proven Business Impact</h2>
       
-      <div className="bg-gray-800/50 rounded-lg p-6 my-6">
-        <h3 className="text-xl font-bold text-green-400">Healthcare Consortium Success Story</h3>
+      <div className="text-left">
+        <h3 className="text-left">Healthcare Consortium Success Story</h3>
         <p>
           15 hospitals deployed federated learning for rare disease diagnosis:
         </p>
@@ -153,7 +153,7 @@ export default function BlogPost() {
 
       <h2>🔐 Security Architecture</h2>
       
-      <pre className="bg-gray-900 p-4 rounded-lg overflow-x-auto">
+      <pre className="text-left">
 {`Privacy-Preserving AI Stack:
 ┌─────────────────────────────────────┐
 │   Application Layer                 │
@@ -179,15 +179,15 @@ export default function BlogPost() {
 
       <h2>📈 Privacy-Utility Trade-offs</h2>
       
-      <div className="bg-gray-800/50 rounded-lg p-6 my-6">
-        <h3 className="text-xl font-bold text-indigo-400">Optimizing for Your Use Case</h3>
+      <div className="text-left">
+        <h3 className="text-left">Optimizing for Your Use Case</h3>
         <ul>
           <li><strong>Strong Privacy (ε=0.1):</strong> 94-97% accuracy, maximum protection</li>
           <li><strong>Balanced (ε=1.0):</strong> 97-99% accuracy, practical for most applications</li>
           <li><strong>Weak Privacy (ε=10):</strong> 99-99.5% accuracy, minimal but provable protection</li>
           <li><strong>No Privacy:</strong> 99.5-100% accuracy, regulatory/trust risks</li>
         </ul>
-        <p className="text-sm italic mt-4">
+        <p className="text-left">
           ε (epsilon) represents the privacy budget in differential privacy—lower values provide stronger guarantees.
         </p>
       </div>
@@ -232,9 +232,9 @@ export default function BlogPost() {
         <li>Custom privacy-utility optimization for your specific requirements</li>
       </ul>
 
-      <div className="bg-gradient-to-r from-indigo-600/20 to-violet-600/20 border border-indigo-500/30 rounded-lg p-6 my-8">
-        <h3 className="text-2xl font-bold text-indigo-300 mt-0">📞 Deploy AI with Confidence</h3>
-        <p className="text-lg mb-0">
+      <div className="text-left">
+        <h3 className="text-left">📞 Deploy AI with Confidence</h3>
+        <p className="text-left">
           Contact us today to explore how privacy-preserving AI can unlock sensitive data for 
           breakthrough applications while maintaining zero-trust security and full regulatory compliance.
         </p>

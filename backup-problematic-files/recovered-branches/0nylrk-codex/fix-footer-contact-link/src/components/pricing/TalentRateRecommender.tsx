@@ -71,7 +71,7 @@ export const TalentRateRecommender:React.FC<TalentRateRecommenderProps> = ({;
   },;
 ;
   return (;
-    <div className="space-y-4">;
+    <div className="text-left">;
       <div>;
         {!suggestion && !isLoading ? (;
           <Button;
@@ -79,9 +79,9 @@ export const TalentRateRecommender:React.FC<TalentRateRecommenderProps> = ({;
             variant="outline";
             onClick={generateSuggestion}
             disabled={skills.length === 0 || yearsExperience <= 0}
-            className="w-full";
+            className="text-left";
           >;
-            <Sparkles className="h-4 w-4 mr-2" /> Optimize Rate with AI;
+            <Sparkles className="text-left" /> Optimize Rate with AI;
           </Button>;
         ) :(;
           <PricingSuggestionBox;
@@ -113,7 +113,7 @@ if (suggestion) {
 }
 }
 };
-return (<div className="space-y-4" > <div> {";"  !suggestion && !isLoading ? (<Button type="button" variant="outline" onClick={;"  generateSuggestion ";"}> <Sparkles className="h-4 w-4 mr-2" /> Optimize Rate with AI </Button>) : (<PricingSuggestionBox suggestion= {;
+return (<div className="text-left" > <div> {";"  !suggestion && !isLoading ? (<Button type="button" variant="outline" onClick={;"  generateSuggestion ";"}> <Sparkles className="text-left" /> Optimize Rate with AI </Button>) : (<PricingSuggestionBox suggestion= {;
   suggestion ;
 }isLoading= {;
   isLoading ;

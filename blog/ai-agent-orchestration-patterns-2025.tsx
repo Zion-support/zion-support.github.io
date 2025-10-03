@@ -2,10 +2,10 @@ import React from 'react';
 
 export default function AIAgentOrchestrationPatterns2025() {
   return (
-    <main className="prose lg:prose-xl max-w-4xl mx-auto py-12 px-6">
+    <main className="text-left">
       <h1>AI Agent Orchestration Patterns (2025): Building Scalable Multi-Agent Systems</h1>
       
-      <p className="text-xl font-semibold text-gray-700 dark:text-gray-300">
+      <p className="text-left">
         A comprehensive guide to designing, deploying, and orchestrating autonomous AI agents at enterprise scale.
         Learn proven patterns for agent coordination, resource management, and fault tolerance that Fortune 500 companies
         are using to achieve $500M+ in annual savings.
@@ -192,8 +192,8 @@ export default function AIAgentOrchestrationPatterns2025() {
         organization-wide for maximum impact.
       </p>
 
-      <div className="bg-blue-50 dark:bg-blue-900 p-6 rounded-lg mt-8">
-        <h3 className="text-xl font-bold mb-4">Ready to Transform Your Enterprise?</h3>
+      <div className="text-left">
+        <h3 className="text-left">Ready to Transform Your Enterprise?</h3>
         <p>
           Our team of experts can help you design, build, and deploy production-grade agent orchestration
           systems. Contact us today for a free consultation and ROI assessment.

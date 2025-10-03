@@ -9,20 +9,20 @@ export default function QuantumMLAccelerationBreakthrough() {
         <meta name="description" content="Revolutionary quantum-accelerated machine learning achieving 50,000x faster training with 99.97% accuracy. Breakthrough technology transforming AI development." />
       </Helmet>
       
-      <article className="max-w-4xl mx-auto px-4 py-12">
-        <header className="mb-8">
-          <h1 className="text-4xl font-bold mb-4">Quantum ML Acceleration: 50,000x Faster Training Revolution</h1>
-          <p className="text-xl text-gray-600 dark:text-gray-400">
+      <article className="text-left">
+        <header className="text-left">
+          <h1 className="text-left">Quantum ML Acceleration: 50,000x Faster Training Revolution</h1>
+          <p className="text-left">
             Breakthrough quantum computing integration achieves unprecedented ML training speeds with $12.7B market impact
           </p>
-          <div className="flex gap-4 mt-4 text-sm text-gray-500">
-            <span>October 1, 2025</span>
-            <span>•</span>
-            <span>Quantum AI</span>
+          <div className="text-left">
+            <span>October 1, 2025<
+            <span>•<
+            <span>Quantum AI<
           </div>
         </header>
 
-        <div className="prose prose-lg dark:prose-invert max-w-none">
+        <div className="text-left">
           <h2>The Quantum Advantage</h2>
           <p>
             Our Quantum ML Acceleration platform leverages quantum annealing and variational quantum eigensolvers 

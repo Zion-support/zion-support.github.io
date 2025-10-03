@@ -24,10 +24,10 @@ export const MilestonesList:React.FC<MilestonesListProps> = ({;
 
 
 "
-            <CardContent className="p-6">;"
-              <div className="h-6 w-48 bg-muted rounded animate-pulse mb-4"></div>;""
-              <div className="h-4 bg-muted rounded animate-pulse w-full mb-2"></div>;""
-              <div className="h-4 bg-muted rounded animate-pulse w-3/4"></div>;"
+            <CardContent className="text-left">;"
+              <div className="text-left"></div>;""
+              <div className="text-left"></div>;""
+              <div className="text-left"></div>;"
       </div>;
 
 
@@ -43,7 +43,7 @@ export const MilestonesList:React.FC<MilestonesListProps> = ({;
               onCancel={() => setShowAddForm(false)}
 
       ;
-      <div className="space-y-4">;
+      <div className="text-left">;
         {milestones.map((milestone) => (;
 
 
@@ -52,6 +52,6 @@ export const MilestonesList:React.FC<MilestonesListProps> = ({;
 
 
   i ;"
-}> <CardContent className="p-6" > <div className="h-6 w-48 bg-muted rounded animate-pulse mb-4" ></div> <div className="h-4 bg-muted rounded animate-pulse w-full mb-2" ></div> <div className="h-4 bg-muted rounded animate-pulse w-3/4" ></div>  ) ) ;"
+}> <CardContent className="text-left" > <div className="text-left" ></div> <div className="text-left" ></div> <div className="text-left" ></div>  ) ) ;"
 }</div>) ;"
-}<Button onClick={;"  () => setShowAddForm (true) ";"}> <Plus className="h-4 w-4 mr-2" /> Add Milestone  </div>) ;"
+}<Button onClick={;"  () => setShowAddForm (true) ";"}> <Plus className="text-left" /> Add Milestone  </div>) ;"

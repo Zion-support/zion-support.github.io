@@ -3,20 +3,20 @@ import Link from 'next/link';
 
 export default function EnterpriseAIRoadmap2025() {
   return (
-    <main className="min-h-screen bg-slate-950 text-white">
-      <article className="max-w-4xl mx-auto px-6 py-16">
-        <header className="mb-8">
-          <p className="text-sm text-gray-400">September 30, 2025 • 16 min read</p>
-          <h1 className="text-4xl md:text-5xl font-extrabold leading-tight bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
+    <main className="text-left">
+      <article className="text-left">
+        <header className="text-left">
+          <p className="text-left">September 30, 2025 • 16 min read</p>
+          <h1 className="text-left">
             Enterprise AI Roadmap 2025: From Pilots to Measurable Outcomes
           </h1>
-          <p className="mt-4 text-gray-300 text-lg">
+          <p className="text-left">
             A pragmatic, budget-aware roadmap to scale reliable AI across the enterprise with guardrails,
             online evaluations, and value stream analytics.
           </p>
         </header>
 
-        <section className="prose prose-invert prose-emerald max-w-none">
+        <section className="text-left">
           <h2>Why Most AI Programs Stall</h2>
           <p>
             Initiatives often stall due to unclear ownership, missing reliability practices, and runaway costs.
@@ -47,18 +47,18 @@ export default function EnterpriseAIRoadmap2025() {
           </p>
         </section>
 
-        <hr className="my-10 border-white/10" />
+        <hr className="text-left" />
 
-        <aside className="bg-emerald-500/10 border border-emerald-400/20 rounded-xl p-6">
-          <h3 className="text-xl font-bold text-emerald-300 mb-2">Next up</h3>
-          <ul className="list-disc pl-6 text-gray-300 space-y-1">
+        <aside className="text-left">
+          <h3 className="text-left">Next up</h3>
+          <ul className="text-left">
             <li>
-              <Link href="/blog/ai-2025-september-30-new-governed-agent-patterns" className="text-emerald-300 hover:text-emerald-200">
+              <Link href="/blog/ai-2025-september-30-new-governed-agent-patterns" className="text-left">
                 Governed Agent Patterns (Sep 30, 2025)
               </Link>
             </li>
             <li>
-              <Link href="/blog/ai-2025-september-30-autonomous-finops-scorecards" className="text-emerald-300 hover:text-emerald-200">
+              <Link href="/blog/ai-2025-september-30-autonomous-finops-scorecards" className="text-left">
                 Autonomous FinOps Scorecards (Sep 30, 2025)
               </Link>
             </li>

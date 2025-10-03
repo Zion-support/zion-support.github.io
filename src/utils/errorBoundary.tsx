@@ -42,7 +42,7 @@ export class EnhancedErrorBoundary extends React.Component<ErrorBoundaryProps, E
   render() {
     if (this.state.hasError) {
       return (
-        <div className="error-boundary">"
+        <div className="text-left">"
           <h2>Something went wrong.</h2>
           <details style={{ whiteSpace: 'pre-wrap' }}>
             {this.state.error && this.state.error.toString()}

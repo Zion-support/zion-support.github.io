@@ -67,7 +67,7 @@ const Footer: React.FC = () => {
     phone: '+1 302 464 0950',
     address: '364 E Main St STE 1008, Middletown DE 19709' };
   return (
-    <footer className="bg-slate-900 border-t border-slate-700">
+    <footer className="text-left">
       {/* Main Footer Content */}
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
         <div className='grid grid-cols-1 lg:grid-cols-4 gap-12'>
@@ -76,86 +76,86 @@ const Footer: React.FC = () => {
             <Link href='/' className='flex items-center space-x-2 mb-6'>
               <div className='w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center'>
                 <Brain className='w-6 h-6 text-white' />
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
+      <div className="text-left">
+        <div className="text-left">
           {/* Company Info */}
-          <div className="lg:col-span-1">
-            <Link href="/" className="flex items-center space-x-2 mb-6">
-              <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
-                <Brain className="w-6 h-6 text-white" />
+          <div className="text-left">
+            <Link href="/" className="text-left">
+              <div className="text-left">
+                <Brain className="text-left" />
               </div>
-              <span className="text-2xl font-bold text-white">
+              <span className="text-left">
                 Zion Tech Group
-              </span>
+              <
             </Link>
-            <p className="text-gray-300 mb-6 leading-relaxed">
+            <p className="text-left">
               Leading provider of AI-powered solutions and technology services.
               We help businesses transform and innovate with cutting-edge
               artificial intelligence.
             </p>
-            <div className="space-y-3 mb-6">
-              <div className="flex items-center text-gray-300">
-                <Mail className="w-4 h-4 mr-3 text-blue-400" />
+            <div className="text-left">
+              <div className="text-left">
+                <Mail className="text-left" />
                 <a
                   href={`mailto:${contactInfo.email}`}
-                  className="hover:text-white transition-colors"
+                  className="text-left"
                 >
                   {contactInfo.email}
                 </a>
               </div>
-              <div className="flex items-center text-gray-300">
-                <Phone className="w-4 h-4 mr-3 text-blue-400" />
+              <div className="text-left">
+                <Phone className="text-left" />
                 <a
                   href={`tel:${contactInfo.phone}`}
-                  className="hover:text-white transition-colors"
+                  className="text-left"
                 >
                   {contactInfo.phone}
                 </a>
               </div>
-              <div className="flex items-center text-gray-300">
-                <MapPin className="w-4 h-4 mr-3 text-blue-400" />
-                <span>{contactInfo.address}</span>
+              <div className="text-left">
+                <MapPin className="text-left" />
+                <span>{contactInfo.address}<
               </div>
             </div>
             {/* Social Links */}
-            <div className="flex space-x-4">
+            <div className="text-left">
               {socialLinks.map(social => (
                 <a
                   key={social.name}
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-gray-400 hover:text-white transition-colors"
+                  className="text-left"
                   aria-label={social.name}
                 >
-                  <social.icon className="w-5 h-5" />
+                  <social.icon className="text-left" />
                 </a>
               ))}
             </div>
           </div>
 
           {/* Services */}
-          <div className="lg:col-span-2">
-            <h3 className="text-xl font-bold text-white mb-6">Our Services</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="text-left">
+            <h3 className="text-left">Our Services</h3>
+            <div className="text-left">
               {serviceCategories.map(category => (
                 <div key={category.title}>
-                  <div className="flex items-center mb-4">
+                  <div className="text-left">
                     <category.icon
                       className={`w-5 h-5 mr-2 ${category.color}`}
                     />
-                    <h4 className="text-white font-semibold">
+                    <h4 className="text-left">
                       {category.title}
                     </h4>
                   </div>
-                  <ul className="space-y-2">
+                  <ul className="text-left">
                     {category.services.map(service => (
                       <li key={service.name}>
                         <Link
                           href={service.href}
-                          className="text-gray-300 hover:text-white transition-colors text-sm flex items-center group"
+                          className="text-left"
                         >
-                          <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                          <ArrowRight className="text-left" />
                           {service.name}
                         </Link>
                       </li>
@@ -167,35 +167,35 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Quick Links & Newsletter */}
-          <div className="lg:col-span-1">
-            <h3 className="text-xl font-bold text-white mb-6">Quick Links</h3>
-            <div className="grid grid-cols-2 gap-4 mb-8">
+          <div className="text-left">
+            <h3 className="text-left">Quick Links</h3>
+            <div className="text-left">
               {quickLinks.map(link => (
                 <Link
                   key={link.name}
                   href={link.href}
-                  className="text-gray-300 hover:text-white transition-colors text-sm"
+                  className="text-left"
                 >
                   {link.name}
                 </Link>
               ))}
             </div>
             {/* Newsletter Signup */}
-            <div className="bg-slate-800 rounded-lg p-6">
-              <h4 className="text-white font-semibold mb-3">Stay Updated</h4>
-              <p className="text-gray-300 text-sm mb-4">
+            <div className="text-left">
+              <h4 className="text-left">Stay Updated</h4>
+              <p className="text-left">
                 Get the latest AI insights and technology trends delivered to
                 your inbox.
               </p>
-              <div className="space-y-3">
+              <div className="text-left">
                 <input
                   type="email"
                   placeholder="Enter your email"
-                  className="w-full px-3 py-2 rounded-lg bg-slate-700 border border-slate-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm"
+                  className="text-left"
                 />
                 <Button
                   size="sm"
-                  className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white"
+                  className="text-left"
                 >
                   Subscribe
                 </Button>
@@ -206,53 +206,53 @@ const Footer: React.FC = () => {
       </div>
 
       {/* Stats Section */}
-      <div className="border-t border-slate-700 py-8">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+      <div className="text-left">
+        <div className="text-left">
+          <div className="text-left">
             <div>
-              <div className="text-3xl font-bold text-white mb-2">500+</div>
-              <div className="text-gray-400 text-sm">Projects Completed</div>
+              <div className="text-left">500+</div>
+              <div className="text-left">Projects Completed</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-white mb-2">50+</div>
-              <div className="text-gray-400 text-sm">Happy Clients</div>
+              <div className="text-left">50+</div>
+              <div className="text-left">Happy Clients</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-white mb-2">99.9%</div>
-              <div className="text-gray-400 text-sm">Uptime Guarantee</div>
+              <div className="text-left">99.9%</div>
+              <div className="text-left">Uptime Guarantee</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-white mb-2">24/7</div>
-              <div className="text-gray-400 text-sm">Support Available</div>
+              <div className="text-left">24/7</div>
+              <div className="text-left">Support Available</div>
             </div>
           </div>
         </div>
       </div>
 
       {/* Bottom Footer */}
-      <div className="border-t border-slate-700 py-6">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row items-center justify-between">
-            <div className="flex items-center space-x-6 mb-4 md:mb-0">
-              <p className="text-gray-400 text-sm">
+      <div className="text-left">
+        <div className="text-left">
+          <div className="text-left">
+            <div className="text-left">
+              <p className="text-left">
                 © {currentYear} Zion Tech Group. All rights reserved.
               </p>
-              <div className="flex items-center space-x-4">
+              <div className="text-left">
                 {legalLinks.map(link => (
                   <Link
                     key={link.name}
                     href={link.href}
-                    className="text-gray-400 hover:text-white transition-colors text-sm"
+                    className="text-left"
                   >
                     {link.name}
                   </Link>
                 ))}
               </div>
             </div>
-            <div className="flex items-center space-x-2 text-gray-400 text-sm">
-              <span>Made with</span>
-              <Heart className="w-4 h-4 text-red-500" />
-              <span>by Zion Tech Group</span>
+            <div className="text-left">
+              <span>Made with<
+              <Heart className="text-left" />
+              <span>by Zion Tech Group<
             </div>
           </div>
         </div>

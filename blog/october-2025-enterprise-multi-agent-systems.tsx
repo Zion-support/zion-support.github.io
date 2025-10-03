@@ -10,21 +10,21 @@ export const metadata = {
 
 export default function October2025EnterpriseMultiAgentSystems() {
   return (
-    <article className="min-h-screen bg-white">
-      <header className="bg-gradient-to-r from-purple-600 to-pink-600 text-white">
-        <div className="max-w-4xl mx-auto px-6 py-16">
-          <p className="text-sm uppercase tracking-widest font-semibold opacity-90">Architecture · October 2025</p>
-          <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mt-2">
+    <article className="text-left">
+      <header className="text-left">
+        <div className="text-left">
+          <p className="text-left">Architecture · October 2025</p>
+          <h1 className="text-left">
             Enterprise Multi-Agent Systems Architecture
           </h1>
-          <p className="mt-4 text-purple-50 text-lg">
+          <p className="text-left">
             Production-proven patterns for orchestrating autonomous AI agents at scale—with safety, observability,
             and cost control built in from day one.
           </p>
         </div>
       </header>
 
-      <div className="max-w-4xl mx-auto px-6 py-12 prose prose-lg prose-purple">
+      <div className="text-left">
         <p>
           Multi-agent systems represent the next evolution of enterprise AI—moving from single-purpose models
           to collaborative networks of specialized agents. Here's how to build them right.
@@ -125,7 +125,7 @@ export default function October2025EnterpriseMultiAgentSystems() {
           <li><strong>Scale:</strong> Remove gates, horizontal expansion, continuous learning (6-12 months)</li>
         </ol>
 
-        <p className="text-sm text-gray-500">28 min read · Published October 2025</p>
+        <p className="text-left">28 min read · Published October 2025</p>
       </div>
     </article>
   );

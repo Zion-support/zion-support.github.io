@@ -14,18 +14,18 @@ export const metadata = {
 
 export default function Page() {
 	return (
-		<div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">"
-			<div className="max-w-3xl mx-auto px-4 py-12">"
-				<div className="mb-8 text-sm text-blue-700">January 2027 • 14 min read</div>"
-				<h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">"
+		<div className="text-left">"
+			<div className="text-left">"
+				<div className="text-left">January 2027 • 14 min read</div>"
+				<h1 className="text-left">"
 					AI Enterprise Transformation 2027
 				</h1>
-				<p className="text-xl text-gray-700 mb-8">"
+				<p className="text-left">"
 					A pragmatic roadmap to ship AI that matters: reliable systems, policy‑driven guardrails,
 					and metrics that prove value across customer experience, operations, and platforms.
 				</p>
 
-				<div className="prose prose-lg max-w-none">"
+				<div className="text-left">"
 					<h2>Why 2027 is Different</h2>
 					<p>
 						Teams move beyond pilots to durable platforms. Success requires product thinking, clear
@@ -61,9 +61,9 @@ export default function Page() {
 					</ul>
 				</div>
 
-				<div className="mt-10 p-6 bg-white rounded-xl border border-gray-200">"
-					<h3 className="text-xl font-semibold mb-2">Next up</h3>"
-					<ul className="list-disc pl-6 text-blue-700">"
+				<div className="text-left">"
+					<h3 className="text-left">Next up</h3>"
+					<ul className="text-left">"
 						<li>
 							<Link href="/content-hub">Explore the Content Hub</Link>"
 						</li>

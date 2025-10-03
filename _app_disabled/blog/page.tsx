@@ -83,13 +83,13 @@ const categories = [
 
 export default function BlogPage() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="text-left">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-600 via-purple-700 to-indigo-800 text-white py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">Our Blog</h1>
-            <p className="text-xl text-blue-100 mb-8">
+      <section className="text-left">
+        <div className="text-left">
+          <div className="text-left">
+            <h1 className="text-left">Our Blog</h1>
+            <p className="text-left">
               Latest insights, trends, and updates from the world of AI, technology, and business innovation.
             </p>
           </div>
@@ -97,11 +97,11 @@ export default function BlogPage() {
       </section>
 
       {/* Blog Content */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
+      <section className="text-left">
+        <div className="text-left">
+          <div className="text-left">
             {/* Categories Filter */}
-            <div className="flex flex-wrap gap-4 mb-12 justify-center">
+            <div className="text-left">
               {categories.map((category) => (
                 <button
                   key={category}
@@ -115,41 +115,41 @@ export default function BlogPage() {
             </div>
 
             {/* Blog Posts Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="text-left">
               {blogPosts.map((post) => (
                 <article
                   key={post.id}
-                  className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+                  className="text-left"
                 >
-                  <div className="h-48 bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center">
-                    <div className="text-4xl text-gray-400">📝</div>
+                  <div className="text-left">
+                    <div className="text-left">📝</div>
                   </div>
-                  <div className="p-6">
-                    <div className="flex items-center text-sm text-gray-500 mb-3">
-                      <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-medium">
+                  <div className="text-left">
+                    <div className="text-left">
+                      <span className="text-left">
                         {post.category}
-                      </span>
+                      <
                     </div>
-                    <h2 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">{post.title}</h2>
-                    <p className="text-gray-600 mb-4 line-clamp-3">{post.excerpt}</p>
-                    <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
-                      <div className="flex items-center">
-                        <User className="h-4 w-4 mr-1" />
-                        <span>{post.author}</span>
+                    <h2 className="text-left">{post.title}</h2>
+                    <p className="text-left">{post.excerpt}</p>
+                    <div className="text-left">
+                      <div className="text-left">
+                        <User className="text-left" />
+                        <span>{post.author}<
                       </div>
-                      <div className="flex items-center">
-                        <Calendar className="h-4 w-4 mr-1" />
-                        <span>{new Date(post.date).toLocaleDateString()}</span>
+                      <div className="text-left">
+                        <Calendar className="text-left" />
+                        <span>{new Date(post.date).toLocaleDateString()}<
                       </div>
                     </div>
-                    <div className="flex items-center justify-between">
-                      <span className="text-sm text-gray-500">{post.readTime}</span>
+                    <div className="text-left">
+                      <span className="text-left">{post.readTime}<
                       <Link
                         href={`/blog/${post.id}`}
-                        className="text-blue-600 hover:text-blue-700 font-medium inline-flex items-center"
+                        className="text-left"
                       >
                         Read More
-                        <ArrowRight className="ml-1 h-4 w-4" />
+                        <ArrowRight className="text-left" />
                       </Link>
                     </div>
                   </div>
@@ -158,8 +158,8 @@ export default function BlogPage() {
             </div>
 
             {/* Load More Button */}
-            <div className="text-center mt-12">
-              <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200">
+            <div className="text-left">
+              <button className="text-left">
                 Load More Posts
               </button>
             </div>
@@ -168,20 +168,20 @@ export default function BlogPage() {
       </section>
 
       {/* Newsletter Signup */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Stay Updated</h2>
-            <p className="text-xl text-gray-600 mb-8">
+      <section className="text-left">
+        <div className="text-left">
+          <div className="text-left">
+            <h2 className="text-left">Stay Updated</h2>
+            <p className="text-left">
               Subscribe to our newsletter for the latest insights and updates from the world of technology.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+            <div className="text-left">
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="text-left"
               />
-              <button className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200">
+              <button className="text-left">
                 Subscribe
               </button>
             </div>

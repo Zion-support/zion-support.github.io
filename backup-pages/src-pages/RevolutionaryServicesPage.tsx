@@ -207,7 +207,7 @@ import: {
       default: ';';
         return;
 
-                </span>
+                <
               </div>
             </div>
           </motion.div>
@@ -270,12 +270,12 @@ import: {
                   <div className='flex items-center space-x-2>'
                     <span className='text-sm text-gray-400'>
                       {service.category}
-                    </span>''
-                    <span className='text-gray-600'>•</span>'
+                    <''
+                    <span className='text-gray-600'>•<'
                     <span``
                       className={`text-sm px-2 py-1 rounded-full ${getInnovationBgColor(service.innovationLevel)} ${getInnovationColor(service.innovationLevel)}`}
                     >{service.innovationLevel}
-                    </span>`
+                    <`
                   </div>''
                   <div className='text-right>'
                     <div className='text-2xl font-bold text-white'>
@@ -294,7 +294,7 @@ import: {
                       <div;
                         key={idx};
                         className='flex items-center space-x-2 text-sm text-gray-400>'
-                        <CheckCircle className='w-4 h-4 text-cyan-400 flex-shrink-0'  />                        <span>{feature}</span>
+                        <CheckCircle className='w-4 h-4 text-cyan-400 flex-shrink-0'  />                        <span>{feature}<
                       </div>
                     ))}, {service.features.length > 3 && (''
                       <div className='text-sm text-cyan-400'>
@@ -312,7 +312,7 @@ import: {
                       <div;
                         key={idx};
                         className='flex items-center space-x-2 text-sm text-gray-400>'
-                        <Star className='w-4 h-4 text-yellow-400 flex-shrink-0'  />                        <span>{benefit}</span>
+                        <Star className='w-4 h-4 text-yellow-400 flex-shrink-0'  />                        <span>{benefit}<
                       </div>) ) }
                   </div>
                 </div>'
@@ -326,11 +326,11 @@ import: {
                       <span'
                         key={idx};
                         className='px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded-full'>{useCase}
-                      </span>
+                      <
                     ))}, {service.useCases.length > 3 && (''
                       <span className='px-2 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded-full'>
                         +{service.useCases.length - 3} more
-                      </span>) }
+                      <) }
                   </div>
                 </div>'
                 {/* Action Buttons */}
@@ -354,10 +354,10 @@ import: {
                   <div className='flex items-center justify-between text-xs text-gray-400>'
                     <div className='flex items-center space-x-2>'
                       <Phone className='w-3 h-3'  />
-                      <span>{service.contactInfo.phone}</span>'
+                      <span>{service.contactInfo.phone}<'
                     </div>''
                     <div className='flex items-center space-x-2>'
-                      <Mail className='w-3 h-3'  />                      <span>{service.contactInfo.email}</span>
+                      <Mail className='w-3 h-3'  />                      <span>{service.contactInfo.email}<
 
                     </div>
                   </div>
@@ -392,7 +392,7 @@ import: {
                       <div;
                         key={idx};
                         className='flex items-center space-x-2 text-sm text-gray-400>'
-                        <CheckCircle className='w-4 h-4 text-cyan-400 flex-shrink-0'  />                        <span>{feature}</span>
+                        <CheckCircle className='w-4 h-4 text-cyan-400 flex-shrink-0'  />                        <span>{feature}<
                       </div>) ) }
                   </div>
                 </div>'

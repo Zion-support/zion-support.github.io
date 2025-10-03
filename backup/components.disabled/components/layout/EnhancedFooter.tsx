@@ -152,7 +152,7 @@ const EnhancedFooter: React.FC = () => {
                   364 E Main St STE 1008
                   <br />
                   Middletown DE 19709
-                </span>
+                <
               </div>
             </div>
           </div>
@@ -330,7 +330,7 @@ import Link from next/link';
                   364 E Main St STE 1008
                   <br />
                   Middletown DE 19709
-                </span>
+                <
               </div>
             </div>
           </div>

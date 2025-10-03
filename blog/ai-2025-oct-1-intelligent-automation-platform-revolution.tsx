@@ -11,15 +11,15 @@ export const metadata = {
 
 export default function BlogPost() {
   return (
-    <article className="prose prose-invert max-w-none">
+    <article className="text-left">
       <h1>🤖 Intelligent Automation Platform Revolution 2025: End-to-End AI-Powered Automation</h1>
       
-      <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 border border-purple-500/30 rounded-lg p-6 my-8">
-        <h3 className="text-2xl font-bold text-purple-300 mt-0">🚀 Revolutionary Breakthrough</h3>
-        <p className="text-lg">
-          <strong>Intelligent automation platforms</strong> achieving <span className="text-green-400 font-bold">98% process automation</span>, 
-          <span className="text-green-400 font-bold"> 76% cost reduction</span>, and <span className="text-green-400 font-bold">99.5% accuracy</span> through 
-          <span className="text-green-400 font-bold"> AI-powered workflows</span>. Transform every aspect of enterprise operations 
+      <div className="text-left">
+        <h3 className="text-left">🚀 Revolutionary Breakthrough</h3>
+        <p className="text-left">
+          <strong>Intelligent automation platforms</strong> achieving <span className="text-left">98% process automation<, 
+          <span className="text-left"> 76% cost reduction<, and <span className="text-left">99.5% accuracy< through 
+          <span className="text-left"> AI-powered workflows<. Transform every aspect of enterprise operations 
           with automation that thinks, learns, and adapts.
         </p>
       </div>
@@ -86,9 +86,9 @@ export default function BlogPost() {
 
       <h2>📊 Performance Metrics</h2>
       
-      <div className="bg-slate-800/50 border border-slate-700 rounded-lg p-6 my-6">
-        <h3 className="text-xl font-bold text-purple-300 mt-0">Real-World Results</h3>
-        <ul className="space-y-2">
+      <div className="text-left">
+        <h3 className="text-left">Real-World Results</h3>
+        <ul className="text-left">
           <li><strong>Process Automation:</strong> 98% of repetitive tasks fully automated</li>
           <li><strong>Cost Reduction:</strong> 76% decrease in operational costs</li>
           <li><strong>Accuracy:</strong> 99.5% accuracy vs. 94% with manual processes</li>
@@ -140,8 +140,8 @@ export default function BlogPost() {
 
       <h2>💰 Business Impact</h2>
       
-      <div className="bg-gradient-to-r from-green-600/20 to-emerald-600/20 border border-green-500/30 rounded-lg p-6 my-8">
-        <h3 className="text-2xl font-bold text-green-300 mt-0">📈 ROI Analysis</h3>
+      <div className="text-left">
+        <h3 className="text-left">📈 ROI Analysis</h3>
         <ul>
           <li><strong>Labor Cost Reduction:</strong> $14.7M annual savings from automation</li>
           <li><strong>Error Prevention:</strong> $8.4M saved from improved accuracy</li>
@@ -199,8 +199,8 @@ export default function BlogPost() {
 
       <h2>🌟 Success Story</h2>
       
-      <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 border border-blue-500/30 rounded-lg p-6 my-8">
-        <h3 className="text-2xl font-bold text-blue-300 mt-0">🏆 Global Financial Services Leader</h3>
+      <div className="text-left">
+        <h3 className="text-left">🏆 Global Financial Services Leader</h3>
         <p>
           Fortune 50 financial institution deployed intelligent automation across operations:
         </p>
@@ -230,9 +230,9 @@ export default function BlogPost() {
         <li>Sentient process intelligence with reasoning capabilities</li>
       </ul>
 
-      <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 border border-purple-500/30 rounded-lg p-6 my-8">
-        <h3 className="text-2xl font-bold text-purple-300 mt-0">🚀 Start Your Automation Journey</h3>
-        <p className="text-lg">
+      <div className="text-left">
+        <h3 className="text-left">🚀 Start Your Automation Journey</h3>
+        <p className="text-left">
           Transform your enterprise with intelligent automation that delivers immediate ROI and 
           continuous improvement. Contact Zion Tech Group to deploy cutting-edge automation platforms 
           that revolutionize operations.

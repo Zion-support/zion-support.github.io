@@ -14,31 +14,31 @@ export const metadata = {
 
 export default function QuantumMLEnterpriseGuide() {
   return (
-    <article className="prose prose-lg max-w-4xl mx-auto px-4 py-12">
+    <article className="text-left">
       <h1>Quantum Machine Learning Enterprise Breakthrough 2025: Practical Implementation Guide</h1>
       
-      <div className="text-sm text-gray-600 mb-8">
+      <div className="text-left">
         Published on {metadata.date} • {metadata.readTime} • By {metadata.author}
       </div>
 
-      <div className="bg-gradient-to-r from-purple-50 to-pink-50 p-6 rounded-lg mb-8 border-l-4 border-purple-500">
-        <h3 className="text-xl font-bold text-purple-900 mb-3">⚛️ Fortune 100 Financial Institution Success Story</h3>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+      <div className="text-left">
+        <h3 className="text-left">⚛️ Fortune 100 Financial Institution Success Story</h3>
+        <div className="text-left">
           <div>
-            <div className="text-3xl font-bold text-purple-700">$427M</div>
-            <div className="text-sm text-gray-700">Annual Value</div>
+            <div className="text-left">$427M</div>
+            <div className="text-left">Annual Value</div>
           </div>
           <div>
-            <div className="text-3xl font-bold text-blue-700">10,000x</div>
-            <div className="text-sm text-gray-700">Speedup vs Classical</div>
+            <div className="text-left">10,000x</div>
+            <div className="text-left">Speedup vs Classical</div>
           </div>
           <div>
-            <div className="text-3xl font-bold text-green-700">99.7%</div>
-            <div className="text-sm text-gray-700">Prediction Accuracy</div>
+            <div className="text-left">99.7%</div>
+            <div className="text-left">Prediction Accuracy</div>
           </div>
           <div>
-            <div className="text-3xl font-bold text-orange-700">2,847%</div>
-            <div className="text-sm text-gray-700">ROI</div>
+            <div className="text-left">2,847%</div>
+            <div className="text-left">ROI</div>
           </div>
         </div>
       </div>
@@ -71,7 +71,7 @@ export default function QuantumMLEnterpriseGuide() {
       <h2>Enterprise Applications Driving Value</h2>
 
       <h3>1. Financial Portfolio Optimization</h3>
-      <div className="bg-blue-50 p-6 rounded-lg my-6">
+      <div className="text-left">
         <p><strong>Fortune 100 Investment Bank Implementation:</strong></p>
         <ul>
           <li><strong>$427M Annual Value:</strong> From improved portfolio performance and risk management</li>
@@ -84,7 +84,7 @@ export default function QuantumMLEnterpriseGuide() {
       </div>
 
       <h3>2. Drug Discovery & Molecular Simulation</h3>
-      <div className="bg-green-50 p-6 rounded-lg my-6">
+      <div className="text-left">
         <p><strong>Global Pharmaceutical Company Success:</strong></p>
         <ul>
           <li><strong>$2.8B Savings:</strong> In drug development costs through accelerated discovery</li>
@@ -96,7 +96,7 @@ export default function QuantumMLEnterpriseGuide() {
       </div>
 
       <h3>3. Supply Chain Optimization</h3>
-      <div className="bg-orange-50 p-6 rounded-lg my-6">
+      <div className="text-left">
         <p><strong>Multinational Logistics Corporation:</strong></p>
         <ul>
           <li><strong>$847M Annual Savings:</strong> Through optimal routing and inventory management</li>
@@ -108,7 +108,7 @@ export default function QuantumMLEnterpriseGuide() {
       </div>
 
       <h3>4. Fraud Detection & Cybersecurity</h3>
-      <div className="bg-red-50 p-6 rounded-lg my-6">
+      <div className="text-left">
         <p><strong>Leading Payment Processor Implementation:</strong></p>
         <ul>
           <li><strong>$1.2B in Fraud Prevention:</strong> Enhanced detection of sophisticated attacks</li>
@@ -179,7 +179,7 @@ export default function QuantumMLEnterpriseGuide() {
 
       <h2>Technical Deep Dive: Quantum Kernel Methods</h2>
 
-      <div className="bg-purple-50 p-6 rounded-lg my-6">
+      <div className="text-left">
         <h3>Example: Quantum Support Vector Machine</h3>
         <p>
           Traditional SVMs use classical kernel functions to map data into high-dimensional spaces. 
@@ -197,21 +197,21 @@ export default function QuantumMLEnterpriseGuide() {
 
       <h2>Common Challenges & Solutions</h2>
 
-      <div className="bg-yellow-50 p-6 rounded-lg my-6 border-l-4 border-yellow-500">
+      <div className="text-left">
         <h3>Challenge: Quantum Hardware Noise & Errors</h3>
         <p><strong>Problem:</strong> Current quantum computers suffer from decoherence and gate errors</p>
         <p><strong>Solution:</strong> Implement error mitigation techniques, use noise-aware training, 
         and leverage quantum error correction codes as they become available</p>
       </div>
 
-      <div className="bg-blue-50 p-6 rounded-lg my-6 border-l-4 border-blue-500">
+      <div className="text-left">
         <h3>Challenge: Limited Qubit Count</h3>
         <p><strong>Problem:</strong> Today's quantum computers have 50-1000 qubits, limiting problem size</p>
         <p><strong>Solution:</strong> Use hybrid algorithms that decompose problems, apply quantum 
         computing to bottleneck subroutines, and plan for scaling as hardware improves</p>
       </div>
 
-      <div className="bg-green-50 p-6 rounded-lg my-6 border-l-4 border-green-500">
+      <div className="text-left">
         <h3>Challenge: Talent Scarcity</h3>
         <p><strong>Problem:</strong> Few experts in both quantum computing and machine learning</p>
         <p><strong>Solution:</strong> Partner with quantum computing companies, invest in training 
@@ -220,7 +220,7 @@ export default function QuantumMLEnterpriseGuide() {
 
       <h2>ROI Analysis & Cost Considerations</h2>
 
-      <div className="bg-gray-50 p-6 rounded-lg my-6">
+      <div className="text-left">
         <h3>Investment Requirements:</h3>
         <ul>
           <li><strong>Quantum Cloud Access:</strong> $50K-500K/year depending on usage</li>
@@ -279,12 +279,12 @@ export default function QuantumMLEnterpriseGuide() {
         <li><strong>Scale & Optimize:</strong> Expand based on demonstrated ROI</li>
       </ol>
 
-      <div className="bg-gradient-to-r from-purple-50 to-pink-50 p-8 rounded-lg my-8 border-l-4 border-purple-500">
+      <div className="text-left">
         <h2>Ready to Unlock Quantum Machine Learning Advantage?</h2>
-        <p className="text-lg mb-4">
+        <p className="text-left">
           Join Fortune 100 companies achieving $427M+ in value through quantum-enhanced AI.
         </p>
-        <p className="text-sm text-gray-600">
+        <p className="text-left">
           Contact Zion Tech Group for a quantum machine learning assessment and implementation roadmap 
           tailored to your enterprise needs.
         </p>

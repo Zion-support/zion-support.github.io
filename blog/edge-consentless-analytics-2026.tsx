@@ -8,7 +8,7 @@ export const metadata = {
 
 export default function BlogPost() {
   return (
-    <article className="prose prose-invert max-w-none">
+    <article className="text-left">
       <h1>Edge Analytics 2026: Consent-Safe Insights</h1>
       <p>
         Build privacy-first analytics without user-level identifiers by combining scoped

@@ -25,7 +25,7 @@ const QuantumCybersecurityMeshArchitectureArticle = () => {
       >
         <section>
           <h2>🛡️ The Quantum Security Revolution</h2>
-          <p className="text-lg font-semibold text-blue-600 dark:text-blue-400 my-4">
+          <p className="text-left">
             $12.4B Breach Prevention | 99.99% Threat Detection | Sub-Millisecond Response | 4,700% Security ROI
           </p>
           <p>
@@ -41,7 +41,7 @@ const QuantumCybersecurityMeshArchitectureArticle = () => {
           <p>
             Enterprise cybersecurity faces unprecedented challenges in 2025:
           </p>
-          <ul className="list-disc pl-6 space-y-2 my-4">
+          <ul className="text-left">
             <li><strong>Attack Sophistication:</strong> AI-powered attacks evolve faster than traditional defenses</li>
             <li><strong>Distributed Infrastructure:</strong> Cloud, edge, and hybrid environments create vast attack surfaces</li>
             <li><strong>Quantum Threats:</strong> Emerging quantum computers threaten current encryption standards</li>
@@ -60,30 +60,30 @@ const QuantumCybersecurityMeshArchitectureArticle = () => {
             Quantum cybersecurity mesh architecture combines quantum computing, advanced AI, and distributed security principles to create adaptive, intelligent defense systems that evolve faster than threats.
           </p>
           
-          <h3 className="text-2xl font-bold mt-6 mb-3">Revolutionary Security Capabilities</h3>
-          <div className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700 p-6 rounded-lg my-6">
-            <ul className="space-y-3">
-              <li><strong className="text-blue-600 dark:text-blue-400">Quantum Encryption:</strong> Post-quantum cryptography protecting against quantum computing attacks</li>
-              <li><strong className="text-blue-600 dark:text-blue-400">AI Threat Intelligence:</strong> Machine learning models analyzing 847 billion security events daily</li>
-              <li><strong className="text-blue-600 dark:text-blue-400">Zero-Trust Architecture:</strong> Identity-based security with continuous verification and least-privilege access</li>
-              <li><strong className="text-blue-600 dark:text-blue-400">Distributed Security Mesh:</strong> Decentralized security policies enforced at every node</li>
-              <li><strong className="text-blue-600 dark:text-blue-400">Autonomous Response:</strong> AI-driven threat neutralization in sub-millisecond timeframes</li>
-              <li><strong className="text-blue-600 dark:text-blue-400">Predictive Defense:</strong> Quantum algorithms forecasting attack vectors before they materialize</li>
-              <li><strong className="text-blue-600 dark:text-blue-400">Self-Healing Systems:</strong> Automatic vulnerability patching and configuration hardening</li>
+          <h3 className="text-left">Revolutionary Security Capabilities</h3>
+          <div className="text-left">
+            <ul className="text-left">
+              <li><strong className="text-left">Quantum Encryption:</strong> Post-quantum cryptography protecting against quantum computing attacks</li>
+              <li><strong className="text-left">AI Threat Intelligence:</strong> Machine learning models analyzing 847 billion security events daily</li>
+              <li><strong className="text-left">Zero-Trust Architecture:</strong> Identity-based security with continuous verification and least-privilege access</li>
+              <li><strong className="text-left">Distributed Security Mesh:</strong> Decentralized security policies enforced at every node</li>
+              <li><strong className="text-left">Autonomous Response:</strong> AI-driven threat neutralization in sub-millisecond timeframes</li>
+              <li><strong className="text-left">Predictive Defense:</strong> Quantum algorithms forecasting attack vectors before they materialize</li>
+              <li><strong className="text-left">Self-Healing Systems:</strong> Automatic vulnerability patching and configuration hardening</li>
             </ul>
           </div>
         </section>
 
         <section>
           <h2>💎 Real-World Success: Global Financial Institution</h2>
-          <p className="text-lg font-semibold text-green-600 dark:text-green-400 my-4">
+          <p className="text-left">
             Fortune 50 Bank Prevents $12.4B in Breaches with Quantum Security Mesh
           </p>
-          <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg my-6">
-            <p className="mb-4"><strong>Challenge:</strong> A Fortune 50 global financial institution with $2.8 trillion in assets faced 284,000 cyber attacks daily, including advanced persistent threats, ransomware, insider threats, and state-sponsored attacks. Traditional security infrastructure resulted in $847M annually in breach-related losses, compliance violations, and reputation damage.</p>
+          <div className="text-left">
+            <p className="text-left"><strong>Challenge:</strong> A Fortune 50 global financial institution with $2.8 trillion in assets faced 284,000 cyber attacks daily, including advanced persistent threats, ransomware, insider threats, and state-sponsored attacks. Traditional security infrastructure resulted in $847M annually in breach-related losses, compliance violations, and reputation damage.</p>
             
-            <p className="mb-4"><strong>Implementation:</strong> Deployed quantum-enhanced cybersecurity mesh architecture:</p>
-            <ul className="list-disc pl-6 space-y-2 mb-4">
+            <p className="text-left"><strong>Implementation:</strong> Deployed quantum-enhanced cybersecurity mesh architecture:</p>
+            <ul className="text-left">
               <li>Quantum key distribution (QKD) for unbreakable encryption across 12,000+ endpoints</li>
               <li>AI-driven threat intelligence analyzing 847B security events per day</li>
               <li>Zero-trust architecture with identity-based microsegmentation</li>
@@ -93,8 +93,8 @@ const QuantumCybersecurityMeshArchitectureArticle = () => {
               <li>Predictive defense systems forecasting attack patterns 72 hours in advance</li>
             </ul>
             
-            <p className="mb-4"><strong>Results (24 Months):</strong></p>
-            <ul className="list-disc pl-6 space-y-2 mb-4 text-green-600 dark:text-green-400 font-semibold">
+            <p className="text-left"><strong>Results (24 Months):</strong></p>
+            <ul className="text-left">
               <li>$12.4B in prevented security breaches and fraud</li>
               <li>99.99% threat detection accuracy (up from 83%)</li>
               <li>0.3ms average threat response time (vs. 4.2 hours previously)</li>
@@ -110,12 +110,12 @@ const QuantumCybersecurityMeshArchitectureArticle = () => {
 
         <section>
           <h2>🏗️ Quantum Security Mesh Architecture</h2>
-          <h3 className="text-2xl font-bold mt-6 mb-3">Core Components</h3>
+          <h3 className="text-left">Core Components</h3>
           
-          <div className="space-y-6 my-6">
-            <div className="border-l-4 border-blue-500 pl-4">
-              <h4 className="text-xl font-bold mb-2">1. Quantum Cryptographic Layer</h4>
-              <ul className="list-disc pl-6 space-y-1">
+          <div className="text-left">
+            <div className="text-left">
+              <h4 className="text-left">1. Quantum Cryptographic Layer</h4>
+              <ul className="text-left">
                 <li>Post-quantum cryptography algorithms (CRYSTALS-Kyber, CRYSTALS-Dilithium)</li>
                 <li>Quantum key distribution for unbreakable encryption</li>
                 <li>Quantum random number generation for cryptographic keys</li>
@@ -123,9 +123,9 @@ const QuantumCybersecurityMeshArchitectureArticle = () => {
               </ul>
             </div>
 
-            <div className="border-l-4 border-purple-500 pl-4">
-              <h4 className="text-xl font-bold mb-2">2. AI Threat Intelligence Engine</h4>
-              <ul className="list-disc pl-6 space-y-1">
+            <div className="text-left">
+              <h4 className="text-left">2. AI Threat Intelligence Engine</h4>
+              <ul className="text-left">
                 <li>Deep learning models analyzing global threat patterns</li>
                 <li>Natural language processing for dark web intelligence gathering</li>
                 <li>Behavioral analytics detecting insider threats</li>
@@ -133,9 +133,9 @@ const QuantumCybersecurityMeshArchitectureArticle = () => {
               </ul>
             </div>
 
-            <div className="border-l-4 border-green-500 pl-4">
-              <h4 className="text-xl font-bold mb-2">3. Zero-Trust Security Framework</h4>
-              <ul className="list-disc pl-6 space-y-1">
+            <div className="text-left">
+              <h4 className="text-left">3. Zero-Trust Security Framework</h4>
+              <ul className="text-left">
                 <li>Identity-centric security with continuous authentication</li>
                 <li>Microsegmentation isolating workloads and data</li>
                 <li>Least-privilege access control with dynamic policy enforcement</li>
@@ -143,9 +143,9 @@ const QuantumCybersecurityMeshArchitectureArticle = () => {
               </ul>
             </div>
 
-            <div className="border-l-4 border-orange-500 pl-4">
-              <h4 className="text-xl font-bold mb-2">4. Distributed Security Mesh</h4>
-              <ul className="list-disc pl-6 space-y-1">
+            <div className="text-left">
+              <h4 className="text-left">4. Distributed Security Mesh</h4>
+              <ul className="text-left">
                 <li>Decentralized policy enforcement at every node</li>
                 <li>Service mesh integration for microservices security</li>
                 <li>Edge security with autonomous threat response</li>
@@ -153,9 +153,9 @@ const QuantumCybersecurityMeshArchitectureArticle = () => {
               </ul>
             </div>
 
-            <div className="border-l-4 border-red-500 pl-4">
-              <h4 className="text-xl font-bold mb-2">5. Autonomous Response System</h4>
-              <ul className="list-disc pl-6 space-y-1">
+            <div className="text-left">
+              <h4 className="text-left">5. Autonomous Response System</h4>
+              <ul className="text-left">
                 <li>Real-time threat detection and classification</li>
                 <li>Automated incident response playbooks</li>
                 <li>Self-healing infrastructure with automatic patching</li>
@@ -167,33 +167,33 @@ const QuantumCybersecurityMeshArchitectureArticle = () => {
 
         <section>
           <h2>📊 Implementation Framework</h2>
-          <div className="bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-gray-800 dark:to-gray-700 p-6 rounded-lg my-6">
-            <h3 className="text-xl font-bold mb-4">Phase 1: Foundation (Months 1-3)</h3>
-            <ul className="list-disc pl-6 space-y-2">
+          <div className="text-left">
+            <h3 className="text-left">Phase 1: Foundation (Months 1-3)</h3>
+            <ul className="text-left">
               <li>Security posture assessment and gap analysis</li>
               <li>Zero-trust architecture design</li>
               <li>Quantum cryptography infrastructure deployment</li>
               <li>Identity and access management modernization</li>
             </ul>
 
-            <h3 className="text-xl font-bold mb-4 mt-6">Phase 2: Intelligence Layer (Months 4-6)</h3>
-            <ul className="list-disc pl-6 space-y-2">
+            <h3 className="text-left">Phase 2: Intelligence Layer (Months 4-6)</h3>
+            <ul className="text-left">
               <li>AI threat intelligence platform deployment</li>
               <li>Security data lake and analytics pipeline</li>
               <li>Machine learning model training and validation</li>
               <li>Threat hunting and detection rule development</li>
             </ul>
 
-            <h3 className="text-xl font-bold mb-4 mt-6">Phase 3: Mesh Architecture (Months 7-9)</h3>
-            <ul className="list-disc pl-6 space-y-2">
+            <h3 className="text-left">Phase 3: Mesh Architecture (Months 7-9)</h3>
+            <ul className="text-left">
               <li>Distributed security mesh implementation</li>
               <li>Service mesh integration</li>
               <li>Policy engine and enforcement points</li>
               <li>Multi-cloud security orchestration</li>
             </ul>
 
-            <h3 className="text-xl font-bold mb-4 mt-6">Phase 4: Automation & Optimization (Months 10-12)</h3>
-            <ul className="list-disc pl-6 space-y-2">
+            <h3 className="text-left">Phase 4: Automation & Optimization (Months 10-12)</h3>
+            <ul className="text-left">
               <li>Autonomous response system activation</li>
               <li>Predictive defense capabilities</li>
               <li>Continuous optimization and tuning</li>
@@ -205,10 +205,10 @@ const QuantumCybersecurityMeshArchitectureArticle = () => {
         <section>
           <h2>🎯 Industry-Specific Applications</h2>
           
-          <div className="grid md:grid-cols-2 gap-6 my-6">
-            <div className="bg-blue-50 dark:bg-gray-800 p-6 rounded-lg">
-              <h3 className="text-xl font-bold mb-3 text-blue-600 dark:text-blue-400">Financial Services</h3>
-              <ul className="space-y-2 text-sm">
+          <div className="text-left">
+            <div className="text-left">
+              <h3 className="text-left">Financial Services</h3>
+              <ul className="text-left">
                 <li>✓ Transaction security and fraud prevention</li>
                 <li>✓ Regulatory compliance (PCI-DSS, SOX, GDPR)</li>
                 <li>✓ Customer data protection</li>
@@ -216,9 +216,9 @@ const QuantumCybersecurityMeshArchitectureArticle = () => {
               </ul>
             </div>
 
-            <div className="bg-green-50 dark:bg-gray-800 p-6 rounded-lg">
-              <h3 className="text-xl font-bold mb-3 text-green-600 dark:text-green-400">Healthcare</h3>
-              <ul className="space-y-2 text-sm">
+            <div className="text-left">
+              <h3 className="text-left">Healthcare</h3>
+              <ul className="text-left">
                 <li>✓ Patient data protection (HIPAA compliance)</li>
                 <li>✓ Medical device security</li>
                 <li>✓ Research data safeguarding</li>
@@ -226,9 +226,9 @@ const QuantumCybersecurityMeshArchitectureArticle = () => {
               </ul>
             </div>
 
-            <div className="bg-purple-50 dark:bg-gray-800 p-6 rounded-lg">
-              <h3 className="text-xl font-bold mb-3 text-purple-600 dark:text-purple-400">Manufacturing</h3>
-              <ul className="space-y-2 text-sm">
+            <div className="text-left">
+              <h3 className="text-left">Manufacturing</h3>
+              <ul className="text-left">
                 <li>✓ Industrial control system (ICS) protection</li>
                 <li>✓ Intellectual property security</li>
                 <li>✓ Supply chain security</li>
@@ -236,9 +236,9 @@ const QuantumCybersecurityMeshArchitectureArticle = () => {
               </ul>
             </div>
 
-            <div className="bg-orange-50 dark:bg-gray-800 p-6 rounded-lg">
-              <h3 className="text-xl font-bold mb-3 text-orange-600 dark:text-orange-400">Critical Infrastructure</h3>
-              <ul className="space-y-2 text-sm">
+            <div className="text-left">
+              <h3 className="text-left">Critical Infrastructure</h3>
+              <ul className="text-left">
                 <li>✓ SCADA system security</li>
                 <li>✓ Energy grid protection</li>
                 <li>✓ Transportation network security</li>
@@ -250,8 +250,8 @@ const QuantumCybersecurityMeshArchitectureArticle = () => {
 
         <section>
           <h2>💡 Key Success Factors</h2>
-          <div className="bg-gradient-to-r from-yellow-50 to-orange-50 dark:from-gray-800 dark:to-gray-700 p-6 rounded-lg my-6">
-            <ul className="space-y-3">
+          <div className="text-left">
+            <ul className="text-left">
               <li><strong>Executive Commitment:</strong> Security transformation requires C-suite sponsorship and organizational alignment</li>
               <li><strong>Architecture First:</strong> Design zero-trust principles into architecture from the ground up</li>
               <li><strong>Data Quality:</strong> Security AI requires comprehensive, high-quality threat intelligence</li>
@@ -267,7 +267,7 @@ const QuantumCybersecurityMeshArchitectureArticle = () => {
           <p>
             As we advance toward 2026 and beyond, quantum cybersecurity mesh architecture will become the standard for enterprise security:
           </p>
-          <ul className="list-disc pl-6 space-y-2 my-4">
+          <ul className="text-left">
             <li><strong>Quantum Internet:</strong> Secure quantum communication networks resistant to all known attacks</li>
             <li><strong>AI Security Autonomy:</strong> Fully autonomous security systems requiring minimal human oversight</li>
             <li><strong>Predictive Defense:</strong> Forecasting and preventing attacks before they occur</li>
@@ -281,7 +281,7 @@ const QuantumCybersecurityMeshArchitectureArticle = () => {
           <p>
             Zion Tech Group has pioneered quantum-enhanced cybersecurity mesh implementations for Fortune 500 enterprises globally. Our proven methodology combines:
           </p>
-          <ul className="list-disc pl-6 space-y-2 my-4">
+          <ul className="text-left">
             <li>Quantum cryptography infrastructure design and deployment</li>
             <li>AI-driven threat intelligence platform development</li>
             <li>Zero-trust architecture transformation</li>
@@ -289,15 +289,15 @@ const QuantumCybersecurityMeshArchitectureArticle = () => {
             <li>Autonomous response system integration</li>
             <li>Continuous optimization and threat hunting</li>
           </ul>
-          <div className="bg-blue-600 dark:bg-blue-700 text-white p-6 rounded-lg my-6">
-            <p className="text-xl font-bold mb-2">Ready to Transform Your Enterprise Security?</p>
+          <div className="text-left">
+            <p className="text-left">Ready to Transform Your Enterprise Security?</p>
             <p>Contact our quantum security experts for a comprehensive security assessment and implementation roadmap.</p>
           </div>
         </section>
 
         <section>
           <h2>📚 Additional Resources</h2>
-          <ul className="list-disc pl-6 space-y-2">
+          <ul className="text-left">
             <li>Quantum Cryptography Standards and Best Practices (NIST Post-Quantum Cryptography)</li>
             <li>Zero Trust Architecture Framework (NIST SP 800-207)</li>
             <li>AI-Powered Security Operations Center Design</li>

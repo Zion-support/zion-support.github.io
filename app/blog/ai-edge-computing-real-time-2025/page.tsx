@@ -9,37 +9,37 @@ export const metadata = {
 
 export default function AIEdgeComputingRealTime2025Page() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-cyan-950 text-white">"
-      <main className="container mx-auto px-6 py-12">"
-        <nav className="mb-8">"
-          <Link href="/blog" className="text-cyan-300 hover:text-cyan-200 transition-colors">"
+    <div className="text-left">"
+      <main className="text-left">"
+        <nav className="text-left">"
+          <Link href="/blog" className="text-left">"
             ← Back to Blog
           </Link>
         </nav>
 
-        <article className="max-w-4xl mx-auto">"
-          <header className="mb-12">"
-            <div className="flex items-center gap-3 mb-4">"
-              <span className="px-3 py-1 bg-cyan-400/20 text-cyan-200 text-sm rounded-full border border-cyan-400/30">"
+        <article className="text-left">"
+          <header className="text-left">"
+            <div className="text-left">"
+              <span className="text-left">"
                 Edge AI & Real-Time
-              </span>
-              <span className="text-white/60 text-sm">September 30, 2025</span>"
-              <span className="text-white/60 text-sm">•</span>"
-              <span className="text-white/60 text-sm">35 min read</span>"
+              <
+              <span className="text-left">September 30, 2025<"
+              <span className="text-left">•<"
+              <span className="text-left">35 min read<"
             </div>
-            <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-300 to-blue-300 bg-clip-text text-transparent">"
+            <h1 className="text-left">"
               AI Edge Computing Real-Time Intelligence 2025
             </h1>
-            <p className="text-xl text-white/80">"
+            <p className="text-left">"
               Deploy intelligence at the source with sub‑10ms latency. Achieve 95% bandwidth reduction, 87% cost
               savings, and enhanced privacy compliance at enterprise scale.
             </p>
           </header>
 
-          <div className="prose prose-invert prose-lg max-w-none">"
-            <section className="mb-12">"
-              <h2 className="text-3xl font-bold mb-4 text-cyan-300">Why Edge Now</h2>"
-              <ul className="space-y-3 text-white/85">"
+          <div className="text-left">"
+            <section className="text-left">"
+              <h2 className="text-left">Why Edge Now</h2>"
+              <ul className="text-left">"
                 <li>
                   <strong>Latency:</strong> On‑device and on‑prem inference enables experiences that require {'<'}10ms response times.
                 </li>
@@ -52,23 +52,23 @@ export default function AIEdgeComputingRealTime2025Page() {
               </ul>
             </section>
 
-            <section className="mb-12">"
-              <h2 className="text-3xl font-bold mb-4 text-blue-300">Reference Blueprint</h2>"
-              <div className="grid md:grid-cols-2 gap-6">"
-                <div className="bg-white/5 border border-white/10 rounded-xl p-6">"
-                  <h3 className="font-semibold mb-2">Edge Runtime</h3>"
-                  <p className="text-white/75">Quantized models, streaming adapters, secure update channel, offline cache.</p>"
+            <section className="text-left">"
+              <h2 className="text-left">Reference Blueprint</h2>"
+              <div className="text-left">"
+                <div className="text-left">"
+                  <h3 className="text-left">Edge Runtime</h3>"
+                  <p className="text-left">Quantized models, streaming adapters, secure update channel, offline cache.</p>"
                 </div>
-                <div className="bg-white/5 border border-white/10 rounded-xl p-6">"
-                  <h3 className="font-semibold mb-2">Control Plane</h3>"
-                  <p className="text-white/75">Policy guardrails, cost router, observability, and incident automation.</p>"
+                <div className="text-left">"
+                  <h3 className="text-left">Control Plane</h3>"
+                  <p className="text-left">Policy guardrails, cost router, observability, and incident automation.</p>"
                 </div>
               </div>
             </section>
 
-            <section className="mb-12">"
-              <h2 className="text-3xl font-bold mb-4 text-emerald-300">Outcomes</h2>"
-              <ul className="list-disc list-inside space-y-2 text-white/85">"
+            <section className="text-left">"
+              <h2 className="text-left">Outcomes</h2>"
+              <ul className="text-left">"
                 <li>P95 latency &lt; 10ms across critical flows</li>
                 <li>Bandwidth reduced by up to 95% with on‑device filtering</li>
                 <li>87% compute cost reduction via quantization and batching</li>
@@ -76,10 +76,10 @@ export default function AIEdgeComputingRealTime2025Page() {
             </section>
           </div>
 
-          <div className="mt-12 bg-white/5 border border-white/10 rounded-xl p-6">"
-            <h3 className="text-xl font-bold mb-2">Need help architecting edge AI?</h3>"
-            <p className="text-white/80 mb-4">Our team delivers secure, low‑latency edge platforms with measurable ROI.</p>"
-            <Link href="/contact" className="text-cyan-300 hover:text-cyan-200 font-semibold">"
+          <div className="text-left">"
+            <h3 className="text-left">Need help architecting edge AI?</h3>"
+            <p className="text-left">Our team delivers secure, low‑latency edge platforms with measurable ROI.</p>"
+            <Link href="/contact" className="text-left">"
               Talk to experts →
             </Link>
           </div>

@@ -9,18 +9,18 @@ export const metadata = {
 
 export default function Page() {
   return (
-    <main className="max-w-4xl mx-auto px-4 py-12">"
-      <div className="mb-8">"
-        <span className="inline-block text-xs px-3 py-1 rounded-full bg-cyan-100 text-cyan-800 border border-cyan-200 mr-2">Analytics</span>"
-        <span className="inline-block text-xs px-3 py-1 rounded-full bg-blue-100 text-blue-800 border border-blue-200">2026</span>"
+    <main className="text-left">"
+      <div className="text-left">"
+        <span className="text-left">Analytics<"
+        <span className="text-left">2026<"
       </div>
-      <h1 className="text-4xl font-bold mb-4">Edge Analytics 2026: Consent‑Safe Insights</h1>"
-      <p className="text-gray-600 text-lg mb-8">"
+      <h1 className="text-left">Edge Analytics 2026: Consent‑Safe Insights</h1>"
+      <p className="text-left">"
         Build privacy‑first analytics using scoped identifiers, on‑device aggregation, and DP noise. Unlock
         product insights globally without collecting PII—delivering sub‑100ms experiences.
       </p>
 
-      <div className="prose prose-invert max-w-none">"
+      <div className="text-left">"
         <h2>Architecture Overview</h2>
         <ul>
           <li>Scoped IDs derived from device secrets and per‑app salts</li>
@@ -42,9 +42,9 @@ export default function Page() {
         </ul>
       </div>
 
-      <div className="mt-10 flex gap-4">"
-        <Link href="/blog" className="inline-block bg-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-cyan-700">Explore More Articles</Link>"
-        <Link href="/contact" className="inline-block border-2 border-cyan-600 text-cyan-600 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-600 hover:text-white">Talk to an Expert</Link>"
+      <div className="text-left">"
+        <Link href="/blog" className="text-left">Explore More Articles</Link>"
+        <Link href="/contact" className="text-left">Talk to an Expert</Link>"
       </div>
     </main>
   );

@@ -2,10 +2,10 @@ import React from 'react';
 
 export default function AutonomousDatabaseOptimizationBreakthrough2025() {
   return (
-    <main className="prose lg:prose-xl max-w-4xl mx-auto py-12 px-4">
+    <main className="text-left">
       <h1>Autonomous Database Optimization: The 2025 Breakthrough in Data Infrastructure</h1>
       
-      <p className="lead text-xl text-gray-700 dark:text-gray-300">
+      <p className="text-left">
         Discover how AI-driven autonomous databases are eliminating manual tuning, achieving 99.99%
         uptime, and reducing costs by 85% while delivering 50x performance improvements.
       </p>
@@ -96,9 +96,9 @@ export default function AutonomousDatabaseOptimizationBreakthrough2025() {
       </ul>
 
       <h2>Performance Benchmarks</h2>
-      <div className="bg-blue-50 dark:bg-blue-900 p-6 rounded-lg my-6">
-        <h3 className="mt-0">Proven Results Across 3,700+ Deployments:</h3>
-        <ul className="mb-0">
+      <div className="text-left">
+        <h3 className="text-left">Proven Results Across 3,700+ Deployments:</h3>
+        <ul className="text-left">
           <li>Average uptime: 99.97% - 99.999%</li>
           <li>Query performance improvement: 15x - 50x</li>
           <li>Cost reduction: 65% - 85%</li>
@@ -189,9 +189,9 @@ export default function AutonomousDatabaseOptimizationBreakthrough2025() {
         <li>Self-evolving data models</li>
       </ul>
 
-      <div className="bg-green-50 dark:bg-green-900 p-6 rounded-lg my-8">
-        <h3 className="mt-0">Ready to Revolutionize Your Data Infrastructure?</h3>
-        <p className="mb-0">
+      <div className="text-left">
+        <h3 className="text-left">Ready to Revolutionize Your Data Infrastructure?</h3>
+        <p className="text-left">
           Experience the power of autonomous database optimization. Our team can assess your
           current infrastructure and deploy a proof-of-concept within 2-3 weeks. Discover how
           you can achieve 50x performance improvement while reducing costs by 85%.

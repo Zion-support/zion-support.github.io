@@ -13,21 +13,21 @@ const REGION_OPTIONS = [;"
 ],;
 export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSection, isMobileFilterOpen } RegionFilterProps) {;
   return (;"
-    <div className="mb-6 border-b border-zion-blue-light pb-6">;"
+    <div className="text-left">;"
 </div>
       <button;
         onClick={toggleSection}"
-        className="flex w-full items-center justify-between text-white font-medium";"
+        className="text-left";"
       >;
 </button>
-        <span>Region</span>;"
-          <ChevronUp className="h-4 w-4 text-zion-slate-light" />;"
+        <span>Region<;"
+          <ChevronUp className="text-left" />;"
 "
-          <ChevronDown className="h-4 w-4 text-zion-slate-light" />;"
+          <ChevronDown className="text-left" />;"
       </button>;"
-        <div className="mt-4 space-y-2">;"
+        <div className="text-left">;"
 </div>"
-            <div key={region.id} className="flex items-center">;"
+            <div key={region.id} className="text-left">;"
               <Checkbox;
                 id={`region-${region.id}`})
                 checked={selectedRegions.includes(region.id)}
@@ -35,7 +35,7 @@ export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSe
 
               <label;`;
                 htmlFor={`region-${region.id}`}"
-                className="ml-2 text-sm text-zion-slate-light cursor-pointer";"
+                className="text-left";"
 </label>
 
               </label>;

@@ -5,9 +5,9 @@ export const metadata = {
 
 export default function Page() {
   return (
-    <article className="prose prose-invert max-w-3xl mx-auto py-10">"
+    <article className="text-left">"
       <h1>AI Governance in Real Time 2026: Live Canaries + PR Policy Tests</h1>
-      <p className="text-sm opacity-70">Published: 2025-09-30 • Category: AI Governance • 7 min read</p>"
+      <p className="text-left">Published: 2025-09-30 • Category: AI Governance • 7 min read</p>"
       <p>
         Real‑time governance operationalizes responsible AI: PR policy checks prevent regressions pre‑merge and live
         canaries validate behavior post‑deploy. The result is faster iteration with measurable safety guarantees.
@@ -25,7 +25,7 @@ export default function Page() {
         thresholds. Pair with dashboards leaders trust.
       </p>
 
-      <p className="mt-8">See our scorecards quickstart and related articles on observability and risk control.</p>"
+      <p className="text-left">See our scorecards quickstart and related articles on observability and risk control.</p>"
     </article>
   );
 }

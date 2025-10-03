@@ -9,16 +9,16 @@ export default function October2025RealTimeIntelligenceBanner() {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: 0.2 }}
-      className="relative overflow-hidden bg-gradient-to-br from-cyan-900 via-blue-900 to-teal-950 rounded-2xl shadow-2xl mb-12 border border-cyan-500/20"
+      className="text-left"
     >
       {/* Animated circuit board pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+      <div className="text-left">
+        <svg className="text-left" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <pattern id="circuit" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
-              <path d="M 0 50 L 50 50 L 50 0" stroke="currentColor" fill="none" strokeWidth="1" className="text-cyan-400" />
-              <path d="M 50 100 L 50 50 L 100 50" stroke="currentColor" fill="none" strokeWidth="1" className="text-blue-400" />
-              <circle cx="50" cy="50" r="3" fill="currentColor" className="text-cyan-300" />
+              <path d="M 0 50 L 50 50 L 50 0" stroke="currentColor" fill="none" strokeWidth="1" className="text-left" />
+              <path d="M 50 100 L 50 50 L 100 50" stroke="currentColor" fill="none" strokeWidth="1" className="text-left" />
+              <circle cx="50" cy="50" r="3" fill="currentColor" className="text-left" />
             </pattern>
           </defs>
           <rect width="100%" height="100%" fill="url(#circuit)" />
@@ -26,11 +26,11 @@ export default function October2025RealTimeIntelligenceBanner() {
       </div>
 
       {/* Pulse effects */}
-      <div className="absolute inset-0">
+      <div className="text-left">
         {[...Array(5)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-2 h-2 bg-cyan-400 rounded-full"
+            className="text-left"
             style={{
               left: `${20 + i * 20}%`,
               top: '50%',
@@ -48,11 +48,11 @@ export default function October2025RealTimeIntelligenceBanner() {
         ))}
       </div>
 
-      <div className="relative z-10 p-8 md:p-12">
-        <div className="flex flex-col lg:flex-row items-start lg:items-center gap-6">
+      <div className="text-left">
+        <div className="text-left">
           {/* Icon section */}
-          <div className="flex-shrink-0">
-            <div className="relative">
+          <div className="text-left">
+            <div className="text-left">
               <motion.div
                 animate={{
                   scale: [1, 1.1, 1],
@@ -62,87 +62,87 @@ export default function October2025RealTimeIntelligenceBanner() {
                   duration: 3,
                   repeat: Infinity,
                 }}
-                className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl blur-xl"
+                className="text-left"
               />
-              <div className="relative bg-gradient-to-br from-cyan-600 to-blue-600 p-6 rounded-2xl">
-                <Brain className="w-16 h-16 text-white" />
+              <div className="text-left">
+                <Brain className="text-left" />
               </div>
             </div>
           </div>
 
           {/* Content section */}
-          <div className="flex-1">
-            <div className="flex items-center gap-2 mb-3">
-              <Zap className="w-5 h-5 text-yellow-400" />
-              <span className="text-yellow-400 font-semibold text-sm uppercase tracking-wider">
+          <div className="text-left">
+            <div className="text-left">
+              <Zap className="text-left" />
+              <span className="text-left">
                 ⚡ Real-Time Revolution • October 2025
-              </span>
+              <
             </div>
 
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-left">
               Real-Time Enterprise Intelligence Systems
             </h2>
 
-            <p className="text-cyan-100 text-lg mb-6 leading-relaxed max-w-4xl">
-              Experience the future of business intelligence with <span className="font-bold text-white">sub-100ms decision-making</span>, 
-              <span className="font-bold text-white"> 96.7% predictive accuracy</span>, and <span className="font-bold text-white">autonomous 
-              intelligence</span> that transforms enterprise operations in real-time.
+            <p className="text-left">
+              Experience the future of business intelligence with <span className="text-left">sub-100ms decision-making<, 
+              <span className="text-left"> 96.7% predictive accuracy<, and <span className="text-left">autonomous 
+              intelligence< that transforms enterprise operations in real-time.
             </p>
 
             {/* Key highlights */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-cyan-400/20">
-                <div className="flex items-center gap-2 mb-2">
-                  <Zap className="w-4 h-4 text-yellow-400" />
-                  <div className="text-2xl font-bold text-white">&lt;100ms</div>
+            <div className="text-left">
+              <div className="text-left">
+                <div className="text-left">
+                  <Zap className="text-left" />
+                  <div className="text-left">&lt;100ms</div>
                 </div>
-                <div className="text-cyan-200 text-sm">Decision Speed</div>
+                <div className="text-left">Decision Speed</div>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-blue-400/20">
-                <div className="text-2xl font-bold text-white mb-1">96.7%</div>
-                <div className="text-blue-200 text-sm">Accuracy</div>
+              <div className="text-left">
+                <div className="text-left">96.7%</div>
+                <div className="text-left">Accuracy</div>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-green-400/20">
-                <div className="text-2xl font-bold text-white mb-1">400%+</div>
-                <div className="text-green-200 text-sm">First Year ROI</div>
+              <div className="text-left">
+                <div className="text-left">400%+</div>
+                <div className="text-left">First Year ROI</div>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-purple-400/20">
-                <div className="text-2xl font-bold text-white mb-1">$47M+</div>
-                <div className="text-purple-200 text-sm">Proven Savings</div>
+              <div className="text-left">
+                <div className="text-left">$47M+</div>
+                <div className="text-left">Proven Savings</div>
               </div>
             </div>
 
             {/* Industry success badges */}
-            <div className="flex flex-wrap gap-2 mb-6">
-              <span className="bg-white/10 backdrop-blur-sm text-white text-xs font-medium px-3 py-1 rounded-full border border-white/20">
+            <div className="text-left">
+              <span className="text-left">
                 🏦 Financial Services
-              </span>
-              <span className="bg-white/10 backdrop-blur-sm text-white text-xs font-medium px-3 py-1 rounded-full border border-white/20">
+              <
+              <span className="text-left">
                 🛒 Retail & E-commerce
-              </span>
-              <span className="bg-white/10 backdrop-blur-sm text-white text-xs font-medium px-3 py-1 rounded-full border border-white/20">
+              <
+              <span className="text-left">
                 🏥 Healthcare
-              </span>
-              <span className="bg-white/10 backdrop-blur-sm text-white text-xs font-medium px-3 py-1 rounded-full border border-white/20">
+              <
+              <span className="text-left">
                 🏭 Manufacturing
-              </span>
+              <
             </div>
 
             {/* CTA buttons */}
-            <div className="flex flex-wrap gap-4">
+            <div className="text-left">
               <Link
                 to="/blog/ai-2025-oct-real-time-enterprise-intelligence"
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-white font-semibold px-8 py-3 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                className="text-left"
               >
                 Explore the Technology
-                <Sparkles className="w-5 h-5" />
+                <Sparkles className="text-left" />
               </Link>
               <Link
                 to="/contact"
-                className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white font-semibold px-8 py-3 rounded-lg transition-all duration-300 border border-white/20"
+                className="text-left"
               >
                 Schedule Demo
-                <TrendingUp className="w-5 h-5" />
+                <TrendingUp className="text-left" />
               </Link>
             </div>
           </div>
@@ -151,7 +151,7 @@ export default function October2025RealTimeIntelligenceBanner() {
 
       {/* Bottom accent with animated gradient */}
       <motion.div
-        className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-cyan-500 via-blue-500 to-teal-500"
+        className="text-left"
         animate={{
           backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'],
         }}

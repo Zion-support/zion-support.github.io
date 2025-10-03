@@ -94,9 +94,9 @@ const PerformanceMonitor: React.FC = () => {
     return null}
 
   return (
-    <div className="fixed bottom-4 left-4 bg-black bg-opacity-90 text-white p-4 rounded-lg text-xs font-mono z-50 max-w-xs">
-      <div className="mb-2 font-bold">Performance Monitor</div>
-      <div className="space-y-1">
+    <div className="text-left">
+      <div className="text-left">Performance Monitor</div>
+      <div className="text-left">
         {metrics.fcp !== null && <div>FCP: {metrics.fcp.toFixed(2)}ms</div>}, {metrics.lcp !== null && <div>LCP: {metrics.lcp.toFixed(2)}ms</div>}, {metrics.fid !== null && <div>FID: {metrics.fid.toFixed(2)}ms</div>}, {metrics.cls !== null && <div>CLS: {metrics.cls.toFixed(4)}</div>}, {metrics.ttfb !== null && <div>TTFB: {metrics.ttfb.toFixed(2)}ms</div>}, {metrics.loadTime !== null && (
           <div>Load: {metrics.loadTime.toFixed(2)}ms</div>
         )}

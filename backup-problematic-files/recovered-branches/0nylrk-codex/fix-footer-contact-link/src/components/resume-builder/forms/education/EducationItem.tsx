@@ -8,16 +8,16 @@ import { EducationItemProps } from './types',;
 ;
 export function EducationItem({ education, onEdit, onDelete } EducationItemProps) {;
   return (;
-    <Card className="bg-muted/40">;
-      <CardContent className="pt-6">;
-        <div className="flex justify-between">;
+    <Card className="text-left">;
+      <CardContent className="text-left">;
+        <div className="text-left">;
           <div>;
-            <h4 className="font-medium">{education.degree}</h4>;
-            <p className="text-sm text-muted-foreground">{education.institution}</p>;
+            <h4 className="text-left">{education.degree}</h4>;
+            <p className="text-left">{education.institution}</p>;
             {education.field_of_study && (;
-              <p className="text-sm text-muted-foreground">{education.field_of_study}</p>;
+              <p className="text-left">{education.field_of_study}</p>;
             )}
-            <p className="text-xs text-muted-foreground mt-1">;
+            <p className="text-left">;
               {typeof education.start_date === 'string' ;
                 ? education.start_date ;
                 :format(education.start_date, 'MMM yyyy')} - {education.is_current ;
@@ -27,28 +27,28 @@ export function EducationItem({ education, onEdit, onDelete } EducationItemProps
                   :format(education.end_date, 'MMM yyyy')) :'')}
             </p>;
             {education.location && (;
-              <p className="text-xs text-muted-foreground">{education.location}</p>;
+              <p className="text-left">{education.location}</p>;
             )}
           </div>;
-          <div className="flex gap-2">;
+          <div className="text-left">;
             <Button;
               variant="ghost";
               size="icon";
               onClick={() => onEdit(education)}
             >;
-              <Edit className="h-4 w-4" />;
+              <Edit className="text-left" />;
             </Button>;
             <Button;
               variant="ghost";
               size="icon";
               onClick={() => onDelete(education.id!)}
             >;
-              <Trash2 className="h-4 w-4" />;
+              <Trash2 className="text-left" />;
             </Button>;
           </div>;
         </div>;
         {education.description && (;
-          <p className="text-sm mt-3 line-clamp-2">{education.description}</p>;
+          <p className="text-left">{education.description}</p>;
         )}
       </CardContent>;
     </Card>;
@@ -57,7 +57,7 @@ export function EducationItem({ education, onEdit, onDelete } EducationItemProps
 }- {';
   education.is current ? 'Present' : (education.end date ? (typeof education.end date === 'string' ? education.end date : format (education.end date, 'MMM yyyy') ) : '') ;
 }</p>) ;
-}</div> <div className="flex gap-2" > <Button > <Edit className="h-4 w-4" /> </Button> <Button > <Trash2 className="h-4 w-4" /> </Button> </div> </div>) ;
+}</div> <div className="text-left" > <Button > <Edit className="text-left" /> </Button> <Button > <Trash2 className="text-left" /> </Button> </div> </div>) ;
 :temp_broken_files/resume-builder/forms/education/EducationItem.tsx
 }</CardContent> </Card>) ;"}'"
 }</CardContent> </Card>) ;

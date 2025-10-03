@@ -7,7 +7,7 @@ export const metadata = {
 
 export default function Page() {
 	return (
-		<main className="max-w-3xl mx-auto px-4 py-12 prose prose-invert">"
+		<main className="text-left">"
 			<h1>AI 2026: Runtime Rollback Blueprint</h1>
 			<p>
 				Ship faster with safety budgets and deterministic rollback triggers wired to live KPIs. This

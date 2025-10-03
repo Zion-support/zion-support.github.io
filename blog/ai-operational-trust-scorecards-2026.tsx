@@ -8,7 +8,7 @@ export const metadata = {
 
 export default function BlogPost() {
   return (
-    <article className="prose prose-invert max-w-none">
+    <article className="text-left">
       <h1>AI Operational Trust Scorecards 2026</h1>
       <p>
         Establish measurable guardrails for autonomous and agentic systems by mapping

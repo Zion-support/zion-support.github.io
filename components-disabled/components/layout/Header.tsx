@@ -1,8 +1,8 @@
           {/* Mobile Menu Button */}
-          <div className=""lg":hidden">"
+          <div className="text-left"lg":hidden">"
             <button,
 onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-700 "hover":text-blue-600 transition-colors duration-200""
+              className="text-left"hover":text-blue-600 transition-colors duration-200""
             </svg>
           </button>
         </div>
@@ -71,26 +71,26 @@ const navigation = [;
   const isActive = ("href": string) => router.pathname === href;
 
 return (;
-    <header className="bg-white shadow-lg sticky top-0 z-50">"
+    <header className="text-left">"
       {/* Top Contact Bar */}
-      <div className="bg-gray-900 text-white py-2">"
-        <div className="max-w-7xl mx-auto px-4 "sm":px-6 "lg":px-8">"
-          <div className="flex justify-between items-center text-sm">"
-            <div className="flex items-center space-x-6">"
-              <div className="flex items-center">"
-                <Phone className="h-4 w-4 mr-2" />"
-                <span>+1 (555) 123-4567</span>
+      <div className="text-left">"
+        <div className="text-left"sm":px-6 "lg":px-8">"
+          <div className="text-left">"
+            <div className="text-left">"
+              <div className="text-left">"
+                <Phone className="text-left" />"
+                <span>+1 (555) 123-4567<
               </div>
-              <div className="flex items-center">"
-                <Mail className="h-4 w-4 mr-2" />"
-                <span>info@ziontechgroup.com</span>
+              <div className="text-left">"
+                <Mail className="text-left" />"
+                <span>info@ziontechgroup.com<
               </div>
             </div>
-            <div className="hidden "md":flex items-center space-x-4">"
-              <span>Trusted by 500+ companies</span>
-              <div className="flex items-center">"
-                <Star className="h-4 w-4 text-yellow-400 mr-1" />"
-                <span>4.9/5 Rating</span>
+            <div className="text-left"md":flex items-center space-x-4">"
+              <span>Trusted by 500+ companies<
+              <div className="text-left">"
+                <Star className="text-left" />"
+                <span>4.9/5 Rating<
               </div>
             </div>
           </div>
@@ -98,26 +98,26 @@ return (;
       </div>
 
       {/* Main Navigation */}
-      <nav className="max-w-7xl mx-auto px-4 "sm":px-6 "lg":px-8">"
-        <div className="flex justify-between items-center h-16">"
+      <nav className="text-left"sm":px-6 "lg":px-8">"
+        <div className="text-left">"
           {/* Logo */}
-          <div className="flex items-center">"
-            <Link href="/" className="flex items-center">"
-              <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">"
-                <span className="text-white font-bold text-xl">Z</span>"
+          <div className="text-left">"
+            <Link href="/" className="text-left">"
+              <div className="text-left">"
+                <span className="text-left">Z<"
               </div>
-              <span className="ml-3 text-2xl font-bold text-gray-900">Zion Tech Group</span>"
+              <span className="text-left">Zion Tech Group<"
             </Link>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden "lg":flex items-center space-x-8">"
+          <div className="text-left"lg":flex items-center space-x-8">"
             {navigation.map((item) => (
-              <div key={item.name} className="relative">"
+              <div key={item.name} className="text-left">"
                 {item.hasDropdown ? (
                   <div
 }
-className="flex items-center space-x-1 text-gray-700 "hover":text-blue-600 cursor-pointer transition-colors duration-200""
+className="text-left"hover":text-blue-600 cursor-pointer transition-colors duration-200""
                     onMouseEnter={() => {
                       }
                       if (item.name === 'Services') setIsServicesOpen(true);'
@@ -129,8 +129,8 @@ className="flex items-center space-x-1 text-gray-700 "hover":text-blue-600 curso
                       if (item.name === 'Solutions') setIsSolutionsOpen(false);'
                     }
                   >
-                    <span className="font-medium">{item.name}</span>"
-                    <ChevronDown className="h-4 w-4" />"
+                    <span className="text-left">{item.name}<"
+                    <ChevronDown className="text-left" />"
                   </div>
                 ) : (
                   <Link,
@@ -150,20 +150,20 @@ href={item.href}
 initial={ "opacity": 0, "y": 10 }
                         animate={ "opacity": 1, "y": 0 }
                         exit={ "opacity": 0, "y": 10 }
-                        className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-200 py-4""
+                        className="text-left""
                         onMouseEnter={() => setIsServicesOpen(true)}
                         onMouseLeave={() => setIsServicesOpen(false)}
                       >
-                        <div className="grid grid-cols-2 gap-2">"
+                        <div className="text-left">"
                           {item.children?.map((child) => (
                             <Link
 }
 key={child.name}
                               href={child.href}
-                              className="flex items-center px-4 py-3 text-gray-700 "hover":bg-gray-50 "hover":text-blue-600 transition-colors duration-200""
+                              className="text-left"hover":bg-gray-50 "hover":text-blue-600 transition-colors duration-200""
                             >
-                              <child.icon className="h-5 w-5 mr-3 text-blue-500" />"
-                              <span className="text-sm font-medium">{child.name}</span>"
+                              <child.icon className="text-left" />"
+                              <span className="text-left">{child.name}<"
                             </Link>
                           ))}
                         </div>
@@ -180,20 +180,20 @@ key={child.name}
 initial={ "opacity": 0, "y": 10 }
                         animate={ "opacity": 1, "y": 0 }
                         exit={ "opacity": 0, "y": 10 }
-                        className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-xl border border-gray-200 py-4""
+                        className="text-left""
                         onMouseEnter={() => setIsSolutionsOpen(true)}
                         onMouseLeave={() => setIsSolutionsOpen(false)}
                       >
-                        <div className="grid grid-cols-2 gap-2">"
+                        <div className="text-left">"
                           {item.children?.map((child) => (
                             <Link
 }
 key={child.name}
                               href={child.href}
-                              className="flex items-center px-4 py-3 text-gray-700 "hover":bg-gray-50 "hover":text-blue-600 transition-colors duration-200""
+                              className="text-left"hover":bg-gray-50 "hover":text-blue-600 transition-colors duration-200""
                             >
-                              <child.icon className="h-5 w-5 mr-3 text-blue-500" />"
-                              <span className="text-sm font-medium">{child.name}</span>"
+                              <child.icon className="text-left" />"
+                              <span className="text-left">{child.name}<"
                             </Link>
                           ))}
                         </div>
@@ -206,23 +206,23 @@ key={child.name}
           </div>
 
           {/* CTA Button */}
-          <div className="hidden "lg":flex items-center space-x-4">"
+          <div className="text-left"lg":flex items-center space-x-4">"
             <Link,
 href="/contact""
-              className="inline-flex items-center px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg "hover":from-blue-700 "hover":to-purple-700 transition-all duration-300 shadow-lg "hover":shadow-xl""
+              className="text-left"hover":from-blue-700 "hover":to-purple-700 transition-all duration-300 shadow-lg "hover":shadow-xl""
             >
               Get Started
-              <ArrowRight className="ml-2 h-4 w-4" />"
+              <ArrowRight className="text-left" />"
             </Link>
           </div>
 
           {/* Mobile Menu Button */}
-          <div className=""lg":hidden">"
+          <div className="text-left"lg":hidden">"
             <button,
 onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-700 "hover":text-blue-600 transition-colors duration-200""
+              className="text-left"hover":text-blue-600 transition-colors duration-200""
             >
-              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}"
+              {isMenuOpen ? <X className="text-left" /> : <Menu className="text-left" />}"
             </button>
           </div>
         </div>
@@ -237,5 +237,5 @@ onClick={() => setIsMenuOpen(!isMenuOpen)}
 initial={ "opacity": 0, "height": 0 }
               animate={ "opacity": 1, "height": 'auto' }'
               exit={ "opacity": 0, "height": 0 }
-              className=""lg":hidden border-t border-gray-200""
+              className="text-left"lg":hidden border-t border-gray-200""
             >

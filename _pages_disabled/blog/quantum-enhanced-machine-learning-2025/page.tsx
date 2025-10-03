@@ -17,52 +17,52 @@ export const metadata = {
 
 export default function QuantumML2025() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-indigo-950 to-slate-950">
+    <div className="text-left">
       {/* Hero Section */}
-      <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
-        <div className="container mx-auto px-6 py-20 relative z-10">
-          <Link href="/blog" className="inline-flex items-center text-indigo-400 hover:text-indigo-300 mb-8 transition-colors">
-            <ArrowLeft className="w-4 h-4 mr-2" />
+      <div className="text-left">
+        <div className="text-left"></div>
+        <div className="text-left">
+          <Link href="/blog" className="text-left">
+            <ArrowLeft className="text-left" />
             Back to Blog
           </Link>
           
-          <div className="max-w-4xl">
-            <div className="flex items-center gap-3 mb-6">
-              <span className="px-4 py-2 rounded-full bg-gradient-to-r from-indigo-500/20 to-purple-500/20 border border-indigo-500/30 text-indigo-400 text-sm font-semibold">
+          <div className="text-left">
+            <div className="text-left">
+              <span className="text-left">
                 ⚛️ QUANTUM BREAKTHROUGH
-              </span>
-              <span className="px-4 py-2 rounded-full bg-pink-500/20 border border-pink-500/30 text-pink-400 text-sm font-semibold">
+              <
+              <span className="text-left">
                 September 30, 2025
-              </span>
+              <
             </div>
             
-            <h1 className="text-5xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent leading-tight">
+            <h1 className="text-left">
               Quantum-Enhanced Machine Learning 2025: Achieving 1000x Performance Gains
             </h1>
             
-            <p className="text-xl text-gray-300 leading-relaxed mb-8">
+            <p className="text-left">
               The convergence of quantum computing and machine learning is here. Leading enterprises are achieving 
               1000x speedup in optimization problems, drug discovery, and financial modeling. Real quantum advantage 
               demonstrated in production systems processing classical ML limitations.
             </p>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              <div className="bg-white/5 backdrop-blur-lg rounded-xl p-4 border border-white/10">
-                <div className="text-3xl font-bold text-indigo-400 mb-1">1000x</div>
-                <div className="text-sm text-gray-400">Performance Gain</div>
+            <div className="text-left">
+              <div className="text-left">
+                <div className="text-left">1000x</div>
+                <div className="text-left">Performance Gain</div>
               </div>
-              <div className="bg-white/5 backdrop-blur-lg rounded-xl p-4 border border-white/10">
-                <div className="text-3xl font-bold text-purple-400 mb-1">127+</div>
-                <div className="text-sm text-gray-400">Quantum Qubits</div>
+              <div className="text-left">
+                <div className="text-left">127+</div>
+                <div className="text-left">Quantum Qubits</div>
               </div>
-              <div className="bg-white/5 backdrop-blur-lg rounded-xl p-4 border border-white/10">
-                <div className="text-3xl font-bold text-pink-400 mb-1">$2.5B</div>
-                <div className="text-sm text-gray-400">Value Unlocked</div>
+              <div className="text-left">
+                <div className="text-left">$2.5B</div>
+                <div className="text-left">Value Unlocked</div>
               </div>
-              <div className="bg-white/5 backdrop-blur-lg rounded-xl p-4 border border-white/10">
-                <div className="text-3xl font-bold text-violet-400 mb-1">50ms</div>
-                <div className="text-sm text-gray-400">Query Latency</div>
+              <div className="text-left">
+                <div className="text-left">50ms</div>
+                <div className="text-left">Query Latency</div>
               </div>
             </div>
           </div>
@@ -70,16 +70,16 @@ export default function QuantumML2025() {
       </div>
 
       {/* Main Content */}
-      <div className="container mx-auto px-6 py-16">
-        <div className="max-w-4xl mx-auto">
+      <div className="text-left">
+        <div className="text-left">
           
           {/* Quantum Advantage Areas */}
-          <div className="bg-gradient-to-br from-indigo-500/10 to-purple-500/10 rounded-2xl p-8 border border-indigo-500/20 mb-12">
-            <h2 className="text-3xl font-bold text-white mb-8 flex items-center gap-3">
-              <Atom className="w-8 h-8 text-indigo-400" />
+          <div className="text-left">
+            <h2 className="text-left">
+              <Atom className="text-left" />
               Proven Quantum Advantage Applications
             </h2>
-            <div className="space-y-8">
+            <div className="text-left">
               {[
                 {
                   title: '1. Optimization at Scale',
@@ -130,26 +130,26 @@ export default function QuantumML2025() {
                   result: 'Google: Quantum ML models achieving 97% accuracy on previously unsolvable tasks'
                 }
               ].map((area, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10">
-                  <div className="flex items-center gap-3 mb-4">
-                    <span className="text-4xl">{area.icon}</span>
+                <div key={index} className="text-left">
+                  <div className="text-left">
+                    <span className="text-left">{area.icon}<
                     <div>
-                      <h3 className="text-2xl font-bold text-white">{area.title}</h3>
-                      <p className="text-gray-400 text-sm mt-1">{area.description}</p>
+                      <h3 className="text-left">{area.title}</h3>
+                      <p className="text-left">{area.description}</p>
                     </div>
                   </div>
-                  <ul className="space-y-2 mb-4">
+                  <ul className="text-left">
                     {area.applications.map((app, i) => (
-                      <li key={i} className="text-gray-300 flex items-start gap-2 text-sm">
-                        <Binary className="w-4 h-4 text-indigo-400 mt-1 flex-shrink-0" />
-                        <span>{app}</span>
+                      <li key={i} className="text-left">
+                        <Binary className="text-left" />
+                        <span>{app}<
                       </li>
                     ))}
                   </ul>
-                  <div className="bg-gradient-to-r from-indigo-500/20 to-purple-500/20 rounded-lg p-4 border border-indigo-500/30">
-                    <div className="flex items-center gap-2 text-green-400 font-semibold">
-                      <TrendingUp className="w-5 h-5" />
-                      <span>{area.result}</span>
+                  <div className="text-left">
+                    <div className="text-left">
+                      <TrendingUp className="text-left" />
+                      <span>{area.result}<
                     </div>
                   </div>
                 </div>
@@ -158,85 +158,85 @@ export default function QuantumML2025() {
           </div>
 
           {/* Quantum ML Tech Stack */}
-          <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 mb-12">
-            <h2 className="text-3xl font-bold text-white mb-8 flex items-center gap-3">
-              <Cpu className="w-8 h-8 text-purple-400" />
+          <div className="text-left">
+            <h2 className="text-left">
+              <Cpu className="text-left" />
               Quantum ML Technology Stack
             </h2>
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="space-y-4">
-                <h3 className="text-xl font-bold text-indigo-400 mb-4">Quantum Hardware</h3>
-                <div className="bg-slate-900 rounded-lg p-4 space-y-3">
-                  <div className="flex items-center justify-between">
-                    <span className="text-gray-300">IBM Quantum</span>
-                    <span className="text-indigo-400 font-semibold">127 qubits</span>
+            <div className="text-left">
+              <div className="text-left">
+                <h3 className="text-left">Quantum Hardware</h3>
+                <div className="text-left">
+                  <div className="text-left">
+                    <span className="text-left">IBM Quantum<
+                    <span className="text-left">127 qubits<
                   </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-gray-300">Google Sycamore</span>
-                    <span className="text-purple-400 font-semibold">70 qubits</span>
+                  <div className="text-left">
+                    <span className="text-left">Google Sycamore<
+                    <span className="text-left">70 qubits<
                   </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-gray-300">AWS Braket</span>
-                    <span className="text-pink-400 font-semibold">Cloud Access</span>
+                  <div className="text-left">
+                    <span className="text-left">AWS Braket<
+                    <span className="text-left">Cloud Access<
                   </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-gray-300">IonQ Trapped Ion</span>
-                    <span className="text-cyan-400 font-semibold">32 qubits</span>
+                  <div className="text-left">
+                    <span className="text-left">IonQ Trapped Ion<
+                    <span className="text-left">32 qubits<
                   </div>
                 </div>
               </div>
 
-              <div className="space-y-4">
-                <h3 className="text-xl font-bold text-purple-400 mb-4">Software Frameworks</h3>
-                <div className="bg-slate-900 rounded-lg p-4 space-y-3">
-                  <div className="flex items-center justify-between">
-                    <span className="text-gray-300">Qiskit (IBM)</span>
-                    <span className="text-indigo-400 font-semibold">Circuit Design</span>
+              <div className="text-left">
+                <h3 className="text-left">Software Frameworks</h3>
+                <div className="text-left">
+                  <div className="text-left">
+                    <span className="text-left">Qiskit (IBM)<
+                    <span className="text-left">Circuit Design<
                   </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-gray-300">PennyLane</span>
-                    <span className="text-purple-400 font-semibold">Quantum ML</span>
+                  <div className="text-left">
+                    <span className="text-left">PennyLane<
+                    <span className="text-left">Quantum ML<
                   </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-gray-300">TensorFlow Quantum</span>
-                    <span className="text-pink-400 font-semibold">Hybrid Models</span>
+                  <div className="text-left">
+                    <span className="text-left">TensorFlow Quantum<
+                    <span className="text-left">Hybrid Models<
                   </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-gray-300">Cirq (Google)</span>
-                    <span className="text-cyan-400 font-semibold">NISQ Algorithms</span>
+                  <div className="text-left">
+                    <span className="text-left">Cirq (Google)<
+                    <span className="text-left">NISQ Algorithms<
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="mt-6 bg-gradient-to-r from-indigo-500/10 to-purple-500/10 rounded-lg p-6 border border-indigo-500/20">
-              <h3 className="text-xl font-bold text-white mb-4">Hybrid Classical-Quantum Architecture</h3>
-              <p className="text-gray-300 leading-relaxed mb-4">
+            <div className="text-left">
+              <h3 className="text-left">Hybrid Classical-Quantum Architecture</h3>
+              <p className="text-left">
                 Optimal approach combines classical preprocessing, quantum computation for bottleneck tasks, 
                 and classical post-processing. Quantum Processing Units (QPUs) handle specific subroutines 
                 where quantum advantage is demonstrated, while classical GPUs manage data preparation and final inference.
               </p>
-              <div className="flex items-center gap-4 text-sm">
-                <div className="flex items-center gap-2">
-                  <Zap className="w-4 h-4 text-yellow-400" />
-                  <span className="text-gray-400">Classical preprocessing on GPUs</span>
+              <div className="text-left">
+                <div className="text-left">
+                  <Zap className="text-left" />
+                  <span className="text-left">Classical preprocessing on GPUs<
                 </div>
-                <div className="flex items-center gap-2">
-                  <Atom className="w-4 h-4 text-indigo-400" />
-                  <span className="text-gray-400">Quantum optimization on QPUs</span>
+                <div className="text-left">
+                  <Atom className="text-left" />
+                  <span className="text-left">Quantum optimization on QPUs<
                 </div>
-                <div className="flex items-center gap-2">
-                  <Cpu className="w-4 h-4 text-purple-400" />
-                  <span className="text-gray-400">Classical post-processing</span>
+                <div className="text-left">
+                  <Cpu className="text-left" />
+                  <span className="text-left">Classical post-processing<
                 </div>
               </div>
             </div>
           </div>
 
           {/* Getting Started */}
-          <div className="bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-2xl p-8 border border-purple-500/20 mb-12">
-            <h2 className="text-3xl font-bold text-white mb-6">Quantum ML Implementation Path</h2>
-            <div className="space-y-6">
+          <div className="text-left">
+            <h2 className="text-left">Quantum ML Implementation Path</h2>
+            <div className="text-left">
               {[
                 {
                   step: 'Step 1: Problem Identification',
@@ -263,36 +263,36 @@ export default function QuantumML2025() {
                   description: 'Deploy hybrid system with orchestration layer managing quantum job submission, result retrieval, and fallback to classical methods when necessary.'
                 }
               ].map((phase, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10">
-                  <h3 className="text-xl font-bold text-purple-400 mb-3">{phase.step}</h3>
-                  <p className="text-gray-300 leading-relaxed">{phase.description}</p>
+                <div key={index} className="text-left">
+                  <h3 className="text-left">{phase.step}</h3>
+                  <p className="text-left">{phase.description}</p>
                 </div>
               ))}
             </div>
           </div>
 
           {/* CTA */}
-          <div className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-2xl p-8 text-center">
-            <h2 className="text-3xl font-bold text-white mb-4">
+          <div className="text-left">
+            <h2 className="text-left">
               Explore Quantum ML for Your Enterprise
             </h2>
-            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+            <p className="text-left">
               Our quantum computing researchers have implemented quantum ML solutions for leading enterprises. 
               Discover how quantum advantage can transform your most challenging problems.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="text-left">
               <Link
                 href="/contact"
-                className="bg-white text-indigo-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg inline-flex items-center justify-center gap-2"
+                className="text-left"
               >
-                <span>Schedule Quantum Consultation</span>
-                <ArrowLeft className="w-5 h-5 rotate-180" />
+                <span>Schedule Quantum Consultation<
+                <ArrowLeft className="text-left" />
               </Link>
               <Link
                 href="/services"
-                className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-indigo-600 font-bold py-4 px-8 rounded-xl transition-all duration-300 inline-flex items-center justify-center gap-2"
+                className="text-left"
               >
-                <span>Explore Quantum Services</span>
+                <span>Explore Quantum Services<
               </Link>
             </div>
           </div>

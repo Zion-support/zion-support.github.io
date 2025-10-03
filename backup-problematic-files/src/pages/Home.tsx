@@ -3,36 +3,36 @@ import { Link } from 'react-router-dom';
 
 const HomePage: React.FC = () => {
   return (
-    <div className="animate-fade-in">
-      <section className="text-center py-12 md:py-20">
-        <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+    <div className="text-left">
+      <section className="text-left">
+        <h1 className="text-left">
           Build and scale with{' '}
-          <span className="text-blue-600">AI</span>,{' '}
-          <span className="text-green-600">Micro SaaS</span>{' '}
+          <span className="text-left">AI<,{' '}
+          <span className="text-left">Micro SaaS<{' '}
           and{' '}
-          <span className="text-purple-600">Enterprise IT</span>
+          <span className="text-left">Enterprise IT<
         </h1>
-        <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
+        <p className="text-left">
           We design, build and operate production-grade platforms: AI copilots, data/ML pipelines, automation, cloud infra, and secure micro SaaS products.
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="text-left">
           <Link 
             to="/services"
-            className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors focus-visible:focus"
+            className="text-left"
           >
             Explore Services
           </Link>
           <a 
             href="https://ziontechgroup.com"
-            className="border-2 border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:border-gray-400 transition-colors focus-visible:focus"
+            className="text-left"
           >
             Visit Main Site
           </a>
         </div>
       </section>
 
-      <section className="py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <section className="text-left">
+        <div className="text-left">
           <Card 
             title="Micro SaaS"
             href="/services/micro-saas"
@@ -54,14 +54,14 @@ const HomePage: React.FC = () => {
         </div>
       </section>
 
-      <section className="py-12 bg-gray-50 rounded-lg">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose Zion Tech Group?</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+      <section className="text-left">
+        <div className="text-left">
+          <h2 className="text-left">Why Choose Zion Tech Group?</h2>
+          <p className="text-left">
             We combine technical expertise with business acumen to deliver solutions that drive real results.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="text-left">
           <FeatureCard 
             title="Fast Delivery"
             description="Rapid prototyping and deployment with modern tools and practices."
@@ -93,11 +93,11 @@ function Card({ title, description, href, icon }: {
   return (
     <Link 
       to={href} 
-      className="group border border-gray-200 rounded-xl p-6 block hover:border-blue-300 hover:shadow-lg transition-all duration-200 bg-white"
+      className="text-left"
     >
-      <div className="text-4xl mb-4">{icon}</div>
-      <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">{title}</h3>
-      <p className="text-gray-600 leading-relaxed">{description}</p>
+      <div className="text-left">{icon}</div>
+      <h3 className="text-left">{title}</h3>
+      <p className="text-left">{description}</p>
     </Link>
   );
 }
@@ -107,9 +107,9 @@ function FeatureCard({ title, description }: {
   description: string; 
 }) {
   return (
-    <div className="text-center p-6">
-      <h3 className="text-lg font-semibold text-gray-900 mb-3">{title}</h3>
-      <p className="text-gray-600">{description}</p>
+    <div className="text-left">
+      <h3 className="text-left">{title}</h3>
+      <p className="text-left">{description}</p>
     </div>
   );
 }

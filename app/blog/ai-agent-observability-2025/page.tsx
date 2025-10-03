@@ -26,37 +26,37 @@ export default function AIAgentObservability2025Page() {
         <link rel="canonical" href="https://ziontechgroup.com/blog/ai-agent-observability-2025" />"
       </Head>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-950 via-blue-950 to-indigo-950 text-white">"
-        <main className="container mx-auto px-6 py-12">"
-          <nav className="mb-8">"
-            <Link href="/blog" className="text-cyan-400 hover:text-cyan-300 transition-colors">"
+      <div className="text-left">"
+        <main className="text-left">"
+          <nav className="text-left">"
+            <Link href="/blog" className="text-left">"
               ← Back to Blog
             </Link>
           </nav>
 
-          <article className="max-w-4xl mx-auto">"
-            <header className="mb-12">"
-              <div className="flex items-center gap-3 mb-4">"
-                <span className="px-3 py-1 bg-cyan-400/20 text-cyan-300 text-sm rounded-full border border-cyan-400/30">"
+          <article className="text-left">"
+            <header className="text-left">"
+              <div className="text-left">"
+                <span className="text-left">"
                   AI Observability
-                </span>
-                <span className="text-white/60 text-sm">September 30, 2025</span>"
-                <span className="text-white/60 text-sm">•</span>"
-                <span className="text-white/60 text-sm">10 min read</span>"
+                <
+                <span className="text-left">September 30, 2025<"
+                <span className="text-left">•<"
+                <span className="text-left">10 min read<"
               </div>
-              <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-indigo-400 bg-clip-text text-transparent">"
+              <h1 className="text-left">"
                 AI Agent Observability 2025: Metrics, Traces, and Safety Signals
               </h1>
-              <p className="text-xl text-white/80">"
+              <p className="text-left">"
                 Production agents require deep visibility across prompts, tools, plans, memory, and safety controls. This
                 guide provides a concise blueprint for telemetry that boosts reliability, safety, and cost efficiency.
               </p>
             </header>
 
-            <div className="prose prose-invert prose-lg max-w-none">"
-              <section className="mb-12">"
-                <h2 className="text-3xl font-bold mb-4 text-cyan-300">Core Signals</h2>"
-                <ul className="space-y-3 text-white/85">"
+            <div className="text-left">"
+              <section className="text-left">"
+                <h2 className="text-left">Core Signals</h2>"
+                <ul className="text-left">"
                   <li><strong>Prompt Quality:</strong> input length, redactions, PII flags, jailbreak risk</li>
                   <li><strong>Tool Traces:</strong> tool name, latency, arguments, failures, retries</li>
                   <li><strong>Episode Timeline:</strong> steps, branches, cancellations, human-in-the-loop events</li>
@@ -66,35 +66,35 @@ export default function AIAgentObservability2025Page() {
                 </ul>
               </section>
 
-              <section className="mb-12">"
-                <h2 className="text-3xl font-bold mb-4 text-indigo-300">SLOs and Error Budgets</h2>"
-                <p className="text-white/80 mb-4">"
+              <section className="text-left">"
+                <h2 className="text-left">SLOs and Error Budgets</h2>"
+                <p className="text-left">"
                   Define SLOs for latency, success rate, policy adherence, and cost per task. Track error budgets per
                   agent capability and gate new releases when burn rate exceeds thresholds.
                 </p>
-                <div className="grid md:grid-cols-2 gap-6">"
-                  <div className="bg-white/5 border border-white/10 rounded-xl p-6">"
-                    <h3 className="font-semibold mb-2">Reliability SLO</h3>"
-                    <p className="text-white/70">P95 end-to-end latency ≤ 2.5s, success ≥ 99.5%</p>"
+                <div className="text-left">"
+                  <div className="text-left">"
+                    <h3 className="text-left">Reliability SLO</h3>"
+                    <p className="text-left">P95 end-to-end latency ≤ 2.5s, success ≥ 99.5%</p>"
                   </div>
-                  <div className="bg-white/5 border border-white/10 rounded-xl p-6">"
-                    <h3 className="font-semibold mb-2">Safety SLO</h3>"
-                    <p className="text-white/70">Policy violation rate ≤ 0.01%, injection escape = 0</p>"
+                  <div className="text-left">"
+                    <h3 className="text-left">Safety SLO</h3>"
+                    <p className="text-left">Policy violation rate ≤ 0.01%, injection escape = 0</p>"
                   </div>
                 </div>
               </section>
 
-              <section className="mb-12">"
-                <h2 className="text-3xl font-bold mb-4 text-fuchsia-300">Incident Response</h2>"
-                <p className="text-white/80 mb-4">"
+              <section className="text-left">"
+                <h2 className="text-left">Incident Response</h2>"
+                <p className="text-left">"
                   Capture episode replays, redaction diffs, and failing tool spans. Auto-create tickets with rich context
                   and route to owners by capability. Provide buttons for rollback, guardrail tighten, or traffic shift.
                 </p>
               </section>
 
-              <section className="mb-12">"
-                <h2 className="text-3xl font-bold mb-4 text-emerald-300">Reference Telemetry Schema</h2>"
-                <pre className="bg-black/40 rounded-xl p-4 overflow-x-auto text-sm">"
+              <section className="text-left">"
+                <h2 className="text-left">Reference Telemetry Schema</h2>"
+                <pre className="text-left">"
 {`{
   episodeId: string,
   agentName: string,
@@ -114,15 +114,15 @@ export default function AIAgentObservability2025Page() {
                 </pre>
               </section>
 
-              <section className="mb-12">"
-                <div className="bg-white/5 border border-white/10 rounded-xl p-6">"
-                  <h3 className="text-xl font-bold mb-2">Get Implementation Support</h3>"
-                  <p className="text-white/80 mb-4">We help enterprises productionize agent telemetry in weeks, not months.</p>"
-                  <div className="flex gap-4">"
-                    <Link href="/contact" className="px-6 py-3 rounded-lg bg-cyan-500 text-white font-semibold hover:bg-cyan-400">"
+              <section className="text-left">"
+                <div className="text-left">"
+                  <h3 className="text-left">Get Implementation Support</h3>"
+                  <p className="text-left">We help enterprises productionize agent telemetry in weeks, not months.</p>"
+                  <div className="text-left">"
+                    <Link href="/contact" className="text-left">"
                       Talk to an Expert
                     </Link>
-                    <Link href="/blog" className="px-6 py-3 rounded-lg bg-white/10 border border-white/20 hover:bg-white/20">"
+                    <Link href="/blog" className="text-left">"
                       More Articles
                     </Link>
                   </div>
@@ -130,14 +130,14 @@ export default function AIAgentObservability2025Page() {
               </section>
             </div>
 
-            <footer className="mt-16 pt-8 border-t border-white/20">"
-              <div className="flex items-center justify-between">"
-                <div className="text-white/60 text-sm">Written by Zion Tech Group</div>"
-                <div className="flex gap-4">"
-                  <Link href="/blog" className="text-cyan-400 hover:text-cyan-300 transition-colors">"
+            <footer className="text-left">"
+              <div className="text-left">"
+                <div className="text-left">Written by Zion Tech Group</div>"
+                <div className="text-left">"
+                  <Link href="/blog" className="text-left">"
                     ← Back to Blog
                   </Link>
-                  <Link href="/contact" className="text-fuchsia-400 hover:text-fuchsia-300 transition-colors">"
+                  <Link href="/contact" className="text-left">"
                     Get in Touch
                   </Link>
                 </div>

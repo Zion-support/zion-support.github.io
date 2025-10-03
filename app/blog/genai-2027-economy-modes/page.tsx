@@ -7,7 +7,7 @@ export const metadata = {
 
 export default function Page() {
 	return (
-		<main className="max-w-3xl mx-auto px-4 py-12 prose prose-invert">"
+		<main className="text-left">"
 			<h1>GenAI 2027: Economy Modes</h1>
 			<p>
 				Adopt budget‑aware routing with quality tiers, semantic caches, and deterministic fallbacks. Keep

@@ -16,37 +16,37 @@ export const metadata = {
 
 export default function AIGovernanceLiveScorecards2026() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-indigo-950 to-slate-950 text-white">"
-      <main className="container mx-auto px-6 py-12">"
-        <nav className="mb-8">"
-          <Link href="/blog" className="text-emerald-300 hover:text-emerald-200 transition-colors">"
+    <div className="text-left">"
+      <main className="text-left">"
+        <nav className="text-left">"
+          <Link href="/blog" className="text-left">"
             ← Back to Blog
           </Link>
         </nav>
 
-        <article className="max-w-4xl mx-auto">"
-          <header className="mb-10">"
-            <div className="flex items-center gap-3 mb-4 flex-wrap">"
-              <span className="px-3 py-1 bg-emerald-400/20 text-emerald-300 text-sm rounded-full border border-emerald-400/30">"
+        <article className="text-left">"
+          <header className="text-left">"
+            <div className="text-left">"
+              <span className="text-left">"
                 AI Governance
-              </span>
-              <span className="text-white/60 text-sm">January 30, 2026</span>"
-              <span className="text-white/60 text-sm">•</span>"
-              <span className="text-white/60 text-sm">14 min read</span>"
+              <
+              <span className="text-left">January 30, 2026<"
+              <span className="text-left">•<"
+              <span className="text-left">14 min read<"
             </div>
-            <h1 className="text-4xl md:text-5xl font-extrabold mb-4 bg-gradient-to-r from-emerald-300 to-cyan-300 bg-clip-text text-transparent">"
+            <h1 className="text-left">"
               Live Scorecards + CI Policy Tests: Stop Regressions Before They Ship
             </h1>
-            <p className="text-lg text-white/80">"
+            <p className="text-left">"
               Build CI policy tests and live scorecards for latency, cost, and correctness. Enforce guardrails with
               measurable SLOs and rollback playbooks, keeping velocity high without sacrificing reliability.
             </p>
           </header>
 
-          <div className="prose prose-invert prose-lg max-w-none space-y-10">"
+          <div className="text-left">"
             <section>
-              <h2 className="text-2xl md:text-3xl font-bold mb-3 text-emerald-300">Scorecard Design</h2>"
-              <ul className="space-y-2 text-white/80">"
+              <h2 className="text-left">Scorecard Design</h2>"
+              <ul className="text-left">"
                 <li>• Pair cost, latency, and quality metrics per workflow</li>
                 <li>• Track drift with golden tasks and periodic adversarial tests</li>
                 <li>• Gate deployment on SLO adherence and budget thresholds</li>
@@ -54,34 +54,34 @@ export default function AIGovernanceLiveScorecards2026() {
             </section>
 
             <section>
-              <h2 className="text-2xl md:text-3xl font-bold mb-3 text-cyan-300">CI Policy Tests</h2>"
-              <ul className="space-y-2 text-white/80">"
+              <h2 className="text-left">CI Policy Tests</h2>"
+              <ul className="text-left">"
                 <li>• Must-cite and schema validation for structured outputs</li>
                 <li>• Red-team prompts to prevent jailbreak and leakage</li>
                 <li>• Canary evals wired to rollout and rollback automation</li>
               </ul>
             </section>
 
-            <section className="bg-gradient-to-br from-emerald-500/20 to-cyan-500/20 border border-emerald-500/30 rounded-2xl p-8">"
-              <h2 className="text-3xl font-bold mb-3 text-center">Need Production-Grade Guardrails?</h2>"
-              <p className="text-center text-white/80 mb-6 text-lg">"
+            <section className="text-left">"
+              <h2 className="text-left">Need Production-Grade Guardrails?</h2>"
+              <p className="text-left">"
                 We implement scorecards and CI policy tests end-to-end with dashboards, alerts, and automated rollbacks.
               </p>
-              <div className="flex justify-center gap-4">"
-                <a href="/contact" className="bg-gradient-to-r from-emerald-500 to-cyan-600 hover:from-emerald-400 hover:to-cyan-500 text-white font-bold py-3 px-6 rounded-xl transition-all">"
+              <div className="text-left">"
+                <a href="/contact" className="text-left">"
                   Talk to an Expert
                 </a>
-                <a href="/blog" className="border-2 border-emerald-500 text-emerald-300 hover:bg-emerald-500 hover:text-white font-bold py-3 px-6 rounded-xl transition-all">"
+                <a href="/blog" className="text-left">"
                   More Insights
                 </a>
               </div>
             </section>
           </div>
 
-          <footer className="mt-14 pt-8 border-t border-white/10">"
-            <div className="flex items-center justify-between">"
-              <div className="text-white/60 text-sm">Written by Zion Tech Group Governance Team</div>"
-              <a href="/contact" className="text-emerald-300 hover:text-emerald-200 transition-colors">Get in Touch</a>"
+          <footer className="text-left">"
+            <div className="text-left">"
+              <div className="text-left">Written by Zion Tech Group Governance Team</div>"
+              <a href="/contact" className="text-left">Get in Touch</a>"
             </div>
           </footer>
         </article>

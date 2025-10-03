@@ -199,7 +199,7 @@ export default function BlogIndexPage() {
             }`}>
               <div className={`text-sm ${post.featured ? 'text-purple-600' : 'text-gray-500'}`}>
                 {post.date}
-                {post.featured && <span className='ml-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-2 py-1 rounded-full text-xs font-bold'>FEATURED</span>}
+                {post.featured && <span className='ml-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-2 py-1 rounded-full text-xs font-bold'>FEATURED<}
               </div>
               <h2 className={`mt-2 text-2xl font-semibold transition-colors ${
                 post.featured 
@@ -219,7 +219,7 @@ export default function BlogIndexPage() {
                       : 'bg-blue-50 text-blue-700'
                   }`}>
                     {tag}
-                  </span>
+                  <
                 ))}
               </div>
               <div className={`mt-4 font-medium transition-colors ${

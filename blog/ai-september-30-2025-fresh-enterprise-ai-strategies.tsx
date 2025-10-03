@@ -10,21 +10,21 @@ export const metadata = {
 
 export default function September302025FreshEnterpriseAIStrategies() {
   return (
-    <article className="min-h-screen bg-white">
-      <header className="bg-gradient-to-r from-emerald-600 to-cyan-700 text-white">
-        <div className="max-w-4xl mx-auto px-6 py-16">
-          <p className="text-sm uppercase tracking-widest font-semibold opacity-90">Featured · September 30, 2025</p>
-          <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mt-2">
+    <article className="text-left">
+      <header className="text-left">
+        <div className="text-left">
+          <p className="text-left">Featured · September 30, 2025</p>
+          <h1 className="text-left">
             Fresh Enterprise AI Strategies for 2026
           </h1>
-          <p className="mt-4 text-emerald-50 text-lg">
+          <p className="text-left">
             Practical guidance to ship reliable, affordable, and measurable AI across operations, platforms,
             and customer experience—without runaway costs.
           </p>
         </div>
       </header>
 
-      <div className="max-w-4xl mx-auto px-6 py-12 prose prose-lg prose-emerald">
+      <div className="text-left">
         <p>
           2026 will reward organizations that make AI reliability, fiscal discipline, and closed-loop learning
           first-class citizens. Below are four implementation patterns we see repeatedly driving outsized ROI.
@@ -65,7 +65,7 @@ export default function September302025FreshEnterpriseAIStrategies() {
           <li>Adopt policy-driven agents with approval gates and audit logs</li>
         </ul>
 
-        <p className="text-sm text-gray-500">18 min read · Updated September 30, 2025</p>
+        <p className="text-left">18 min read · Updated September 30, 2025</p>
       </div>
     </article>
   );

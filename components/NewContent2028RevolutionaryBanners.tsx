@@ -49,17 +49,17 @@ export default function PromotionalBanner({
     <div className={`relative ${backgroundColor} ${textColor} py-3 px-4 transition-all duration-300 ${
       isClosing ? 'opacity-0 transform -translate-y-full' : 'opacity-100 transform translate-y-0'
     }`}>
-      <div className="container mx-auto max-w-6xl">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-3">
-            <span className="inline-flex h-2 w-2 rounded-full bg-white animate-pulse"></span>
-            <span className="font-medium text-sm md:text-base">{message}</span>
+      <div className="text-left">
+        <div className="text-left">
+          <div className="text-left">
+            <span className="text-left"><
+            <span className="text-left">{message}<
           </div>
           
-          <div className="flex items-center space-x-3">
+          <div className="text-left">
             <Link
               href={ctaLink}
-              className="bg-white/20 hover:bg-white/30 px-4 py-1.5 rounded-full text-sm font-semibold transition-colors duration-200 border border-white/30"
+              className="text-left"
             >
               {ctaText}
             </Link>
@@ -67,10 +67,10 @@ export default function PromotionalBanner({
             {showClose && (
               <button
                 onClick={handleClose}
-                className="hover:bg-white/20 p-1 rounded-full transition-colors duration-200"
+                className="text-left"
                 aria-label="Close banner"
               >
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="text-left" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 </svg>
               </button>

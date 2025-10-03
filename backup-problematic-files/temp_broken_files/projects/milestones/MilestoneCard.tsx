@@ -22,9 +22,9 @@ interface MilestoneCardProps {;
 
     <Card>;
 
-      <CardHeader className="pb-2">;"
+      <CardHeader className="text-left">;"
 "
-        <div className="flex justify-between items-start">;"
+        <div className="text-left">;"
 </div>
           <div>;
 
@@ -61,9 +61,9 @@ interface MilestoneCardProps {;
 onApprove?: (id: string) => Promise<void>;
 onReject?: (id: string) => Promise<void> ;
 </void>"
-case 'rejected': ;"}return (<Card> <CardHeader className="pb-2" > <div className="flex justify-between items-start" > <div> </p>) ;"
+case 'rejected': ;"}return (<Card> <CardHeader className="text-left" > <div className="text-left" > <div> </p>) ;"
 }</div> isUnderDispute && disputeStatus && (<DisputeStatusBadge status= {;)"
-  disputeStatus ;"}/>) ";"}</div> </div>  </div>  <CardFooter className="pt-2 flex justify-between" > <div> {';
+  disputeStatus ;"}/>) ";"}</div> </div>  </div>  <CardFooter className="text-left" > <div> {';
 
   status !== 'completed' && status !== 'rejected' && (<RaiseDisputeButton projectId= {;
 

@@ -9,18 +9,18 @@ export const metadata = {
 
 export default function Page() {
   return (
-    <article className="py-16">"
-      <div className="max-w-3xl mx-auto px-4">"
-        <header className="mb-8">"
-          <div className="flex items-center gap-3 mb-4">"
-            <span className="inline-block bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-xs font-bold">NEW 2028 INSIGHT</span>"
-            <span className="text-sm text-gray-500">11 min read</span>"
+    <article className="text-left">"
+      <div className="text-left">"
+        <header className="text-left">"
+          <div className="text-left">"
+            <span className="text-left">NEW 2028 INSIGHT<"
+            <span className="text-left">11 min read<"
           </div>
-          <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">AI 2028: Self‑Healing Platforms</h1>"
-          <p className="text-lg text-gray-600">Predictive scaling, budget guards, and one‑click rollback for <strong>99.995% uptime</strong> at lower cost.</p>"
+          <h1 className="text-left">AI 2028: Self‑Healing Platforms</h1>"
+          <p className="text-left">Predictive scaling, budget guards, and one‑click rollback for <strong>99.995% uptime</strong> at lower cost.</p>"
         </header>
 
-        <section className="prose max-w-none">"
+        <section className="text-left">"
           <h2>Blueprint Overview</h2>
           <p>Combine demand forecasting, budget‑aware routing, and automated rollback to keep reliability high while controlling spend.</p>
           <h3>Control Loops</h3>
@@ -37,9 +37,9 @@ export default function Page() {
           </ul>
         </section>
 
-        <footer className="mt-12 border-t border-gray-200 pt-6 flex items-center justify-between">"
-          <Link href="/blog" className="text-indigo-600 font-semibold hover:text-indigo-700">← Back to Blog</Link>"
-          <Link href="/content-hub" className="text-gray-600 hover:text-gray-800">Explore All Content →</Link>"
+        <footer className="text-left">"
+          <Link href="/blog" className="text-left">← Back to Blog</Link>"
+          <Link href="/content-hub" className="text-left">Explore All Content →</Link>"
         </footer>
       </div>
     </article>

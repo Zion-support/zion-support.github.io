@@ -11,15 +11,15 @@ export const metadata = {
 
 export default function BlogPost() {
   return (
-    <article className="prose prose-invert max-w-none">
+    <article className="text-left">
       <h1>🧬 Neural Architecture Evolution 2025: Self-Designing AI Models Breakthrough</h1>
       
-      <div className="bg-gradient-to-r from-emerald-600/20 to-blue-600/20 border border-emerald-500/30 rounded-lg p-6 my-8">
-        <h3 className="text-2xl font-bold text-emerald-300 mt-0">🚀 Revolutionary Breakthrough</h3>
-        <p className="text-lg">
-          <strong>Self-evolving neural architectures</strong> achieving <span className="text-green-400 font-bold">10,000x faster model design</span>, 
-          <span className="text-green-400 font-bold"> 97% accuracy improvement</span>, and <span className="text-green-400 font-bold">$25M annual savings</span> through 
-          <span className="text-green-400 font-bold"> autonomous AI model evolution</span>. Transform your ML operations with AI systems that 
+      <div className="text-left">
+        <h3 className="text-left">🚀 Revolutionary Breakthrough</h3>
+        <p className="text-left">
+          <strong>Self-evolving neural architectures</strong> achieving <span className="text-left">10,000x faster model design<, 
+          <span className="text-left"> 97% accuracy improvement<, and <span className="text-left">$25M annual savings< through 
+          <span className="text-left"> autonomous AI model evolution<. Transform your ML operations with AI systems that 
           design, optimize, and evolve themselves without human intervention.
         </p>
       </div>
@@ -78,8 +78,8 @@ export default function BlogPost() {
       </p>
 
       <h2>📊 Performance Metrics</h2>
-      <div className="bg-slate-800/50 rounded-lg p-6 my-6">
-        <ul className="space-y-2">
+      <div className="text-left">
+        <ul className="text-left">
           <li>✅ <strong>10,000x faster architecture discovery</strong> compared to manual design</li>
           <li>✅ <strong>97% accuracy improvement</strong> over baseline models</li>
           <li>✅ <strong>$25M annual savings</strong> in ML engineering costs</li>
@@ -146,7 +146,7 @@ export default function BlogPost() {
       <h2>🌟 Real-World Success Stories</h2>
       
       <h3>Fortune 100 Retailer - Computer Vision</h3>
-      <div className="bg-blue-900/30 border border-blue-500/30 rounded-lg p-6 my-6">
+      <div className="text-left">
         <p><strong>Challenge:</strong> Improve product recognition accuracy for automated checkout systems</p>
         <p><strong>Solution:</strong> Neural architecture evolution for custom vision models</p>
         <p><strong>Results:</strong></p>
@@ -159,7 +159,7 @@ export default function BlogPost() {
       </div>
 
       <h3>Financial Services - Fraud Detection</h3>
-      <div className="bg-purple-900/30 border border-purple-500/30 rounded-lg p-6 my-6">
+      <div className="text-left">
         <p><strong>Challenge:</strong> Real-time fraud detection with 99%+ accuracy and sub-50ms latency</p>
         <p><strong>Solution:</strong> Evolved neural architectures for time-series anomaly detection</p>
         <p><strong>Results:</strong></p>
@@ -190,20 +190,20 @@ export default function BlogPost() {
       </ul>
 
       <h2>🚀 Get Started Today</h2>
-      <div className="bg-gradient-to-r from-emerald-900/40 to-blue-900/40 border border-emerald-500/30 rounded-lg p-8 my-8">
-        <h3 className="text-2xl font-bold text-emerald-300 mt-0">Transform Your ML Operations</h3>
-        <p className="text-lg mb-4">
+      <div className="text-left">
+        <h3 className="text-left">Transform Your ML Operations</h3>
+        <p className="text-left">
           Join leading enterprises leveraging neural architecture evolution to achieve breakthrough AI performance 
           while reducing costs by up to $25M annually.
         </p>
-        <ul className="space-y-2 text-lg">
+        <ul className="text-left">
           <li>🎯 <strong>Free consultation:</strong> Architecture assessment and ROI analysis</li>
           <li>🛠️ <strong>Proof of concept:</strong> 4-week pilot on your data</li>
           <li>📊 <strong>Full deployment:</strong> End-to-end implementation support</li>
           <li>🔄 <strong>Ongoing optimization:</strong> Continuous evolution pipeline</li>
         </ul>
-        <div className="mt-6">
-          <a href="/contact" className="inline-block bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 px-8 rounded-lg transition-colors">
+        <div className="text-left">
+          <a href="/contact" className="text-left">
             Schedule Your Consultation →
           </a>
         </div>
@@ -217,12 +217,12 @@ export default function BlogPost() {
         <li><a href="/services/neural-architecture-evolution">Neural Architecture Evolution Service</a></li>
       </ul>
 
-      <div className="bg-yellow-900/30 border border-yellow-500/30 rounded-lg p-6 my-8">
-        <p className="text-yellow-300 font-bold mb-2">⚡ Limited Time Offer</p>
+      <div className="text-left">
+        <p className="text-left">⚡ Limited Time Offer</p>
         <p>
           First 10 enterprises to sign up receive <strong>50% off implementation costs</strong> plus 
           6 months of free architecture evolution optimization. 
-          <a href="/contact" className="text-yellow-400 hover:text-yellow-300 underline ml-2">Apply now →</a>
+          <a href="/contact" className="text-left">Apply now →</a>
         </p>
       </div>
     </article>

@@ -1,7 +1,7 @@
 import React from "react"
 export default function LLMSupplyChains2025(): JSX.Element {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">"
+    <div className="text-left">"
       <Helmet >
         <title >Sept 30, 2025: AI Supply Chains — 99.5% Forecasts, 85% Inventory Cut</title>,
         <meta name="description">"
@@ -10,8 +10,8 @@ export default function LLMSupplyChains2025(): JSX.Element {
         />
       </Helmet>
 
-      <div className="container mx-auto px-6 py-16">"
-        <h1 className="text-4xl md: text-5xl font-bold mb-4">"
+      <div className="text-left">"
+        <h1 className="text-left">"
   AI Supply Chains: 99.5% Forecasts, 85% Inventory Reduction,,
         </h1>
         <p>;,
@@ -19,15 +19,15 @@ export default function LLMSupplyChains2025(): JSX.Element {
         />
       </Helmet>
 
-      <div className="container mx-auto px-6 py-16">"
-        <h1 className="text-4xl md: text-5xl font-bold mb-4">"
+      <div className="text-left">"
+        <h1 className="text-left">"
   AI Supply Chains: 99.5% Forecasts, 85% Inventory Reduction,,
         </h1>
-        <p className="text-zion-slate-light mb-8">"
+        <p className="text-left">"
   Outcome-led architecture: live freshness windows, quality budgets, and rollback,,
           to avoid downstream regressions while accelerating cycle time.
         </p>
-        <div className="prose prose-invert max-w-3xl">"
+        <div className="text-left">"
           <p >
             This guide details how to design AI-first supply chains that ship safely and
             measurably improve KPIs. We combine freshness windows for data staleness control

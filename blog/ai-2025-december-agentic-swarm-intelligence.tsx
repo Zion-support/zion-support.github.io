@@ -15,61 +15,61 @@ export default function AIAgenticSwarmIntelligence2025() {
         <link rel="canonical" href="https://ziontechgroup.com/blog/ai-2025-december-agentic-swarm-intelligence" />
       </Helmet>
 
-      <article className="min-h-screen bg-gradient-to-br from-purple-50 via-pink-50 to-rose-50">
-        <div className="container mx-auto px-6 py-12">
+      <article className="text-left">
+        <div className="text-left">
           {/* Back Button */}
           <Link
             to="/blog"
-            className="inline-flex items-center text-purple-600 hover:text-purple-800 mb-8 group"
+            className="text-left"
           >
-            <ArrowLeft className="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform" />
+            <ArrowLeft className="text-left" />
             Back to Blog
           </Link>
 
           {/* Article Header */}
-          <header className="max-w-4xl mx-auto mb-12">
-            <div className="flex flex-wrap gap-2 mb-6">
-              <span className="bg-purple-100 text-purple-700 px-4 py-2 rounded-full text-sm font-semibold">
+          <header className="text-left">
+            <div className="text-left">
+              <span className="text-left">
                 Agentic AI
-              </span>
-              <span className="bg-pink-100 text-pink-700 px-4 py-2 rounded-full text-sm font-semibold">
+              <
+              <span className="text-left">
                 Swarm Intelligence
-              </span>
-              <span className="bg-rose-100 text-rose-700 px-4 py-2 rounded-full text-sm font-semibold">
+              <
+              <span className="text-left">
                 Multi-Agent Systems
-              </span>
+              <
             </div>
 
-            <h1 className="text-5xl font-bold text-gray-900 mb-6 leading-tight">
+            <h1 className="text-left">
               Agentic Swarm Intelligence 2025 — Deploy Self-Coordinating AI Agent Networks for 500% Productivity Gains
             </h1>
 
-            <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+            <p className="text-left">
               Revolutionary breakthrough in distributed AI systems enabling self-coordinating agent networks that achieve 
               500% productivity gains through emergent behaviors and collective intelligence. Complete guide to production deployment.
             </p>
 
-            <div className="flex flex-wrap items-center gap-6 text-gray-600">
-              <div className="flex items-center">
-                <Calendar className="w-5 h-5 mr-2" />
-                <span>December 1, 2025</span>
+            <div className="text-left">
+              <div className="text-left">
+                <Calendar className="text-left" />
+                <span>December 1, 2025<
               </div>
-              <div className="flex items-center">
-                <Clock className="w-5 h-5 mr-2" />
-                <span>22 min read</span>
+              <div className="text-left">
+                <Clock className="text-left" />
+                <span>22 min read<
               </div>
-              <div className="flex items-center">
-                <BookOpen className="w-5 h-5 mr-2" />
-                <span>Expert Guide</span>
+              <div className="text-left">
+                <BookOpen className="text-left" />
+                <span>Expert Guide<
               </div>
             </div>
           </header>
 
           {/* Article Content */}
-          <div className="max-w-4xl mx-auto prose prose-lg prose-purple">
-            <div className="bg-gradient-to-r from-purple-600 to-pink-600 text-white p-8 rounded-2xl mb-12">
-              <h2 className="text-3xl font-bold text-white mb-4">🤖 Breakthrough Achievements</h2>
-              <ul className="space-y-3 text-lg">
+          <div className="text-left">
+            <div className="text-left">
+              <h2 className="text-left">🤖 Breakthrough Achievements</h2>
+              <ul className="text-left">
                 <li>✅ <strong>500% Productivity Gains</strong> — Self-coordinating agent networks</li>
                 <li>✅ <strong>99.5% Task Success</strong> — Distributed problem-solving at scale</li>
                 <li>✅ <strong>90% Cost Reduction</strong> — Efficient resource allocation and load balancing</li>
@@ -227,19 +227,19 @@ export default function AIAgenticSwarmIntelligence2025() {
               <li>Continuously tune coordination parameters based on real-world feedback</li>
             </ul>
 
-            <div className="bg-purple-50 border-l-4 border-purple-500 p-6 my-8">
-              <h3 className="text-purple-900 font-bold mb-2">🚀 Deploy Swarm Intelligence in Your Organization</h3>
-              <p className="text-purple-800 mb-4">
+            <div className="text-left">
+              <h3 className="text-left">🚀 Deploy Swarm Intelligence in Your Organization</h3>
+              <p className="text-left">
                 Partner with Zion Tech Group to implement cutting-edge swarm intelligence systems. 
                 Our experts will guide you through architecture design, deployment, and optimization 
                 to achieve transformative productivity gains.
               </p>
               <Link
                 to="/contact"
-                className="inline-flex items-center bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
+                className="text-left"
               >
                 Start Your Swarm Transformation
-                <TrendingUp className="w-5 h-5 ml-2" />
+                <TrendingUp className="text-left" />
               </Link>
             </div>
 
@@ -265,11 +265,11 @@ export default function AIAgenticSwarmIntelligence2025() {
           </div>
 
           {/* Social Share */}
-          <div className="max-w-4xl mx-auto mt-12 pt-8 border-t border-gray-200">
-            <div className="flex items-center justify-between">
-              <span className="text-gray-600 font-semibold">Share this article:</span>
-              <button className="flex items-center gap-2 text-purple-600 hover:text-purple-800">
-                <Share2 className="w-5 h-5" />
+          <div className="text-left">
+            <div className="text-left">
+              <span className="text-left">Share this article:<
+              <button className="text-left">
+                <Share2 className="text-left" />
                 Share
               </button>
             </div>

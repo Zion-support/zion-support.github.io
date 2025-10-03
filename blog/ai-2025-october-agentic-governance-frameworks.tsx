@@ -11,15 +11,15 @@ export const metadata = {
 
 export default function BlogPost() {
   return (
-    <article className="prose prose-invert max-w-none">
+    <article className="text-left">
       <h1>⚖️ Agentic Governance Frameworks 2025: Building Trust in Autonomous AI Systems</h1>
       
-      <div className="bg-gradient-to-r from-emerald-600/20 to-blue-600/20 border border-emerald-500/30 rounded-lg p-6 my-8">
-        <h3 className="text-2xl font-bold text-emerald-300 mt-0">🛡️ Enterprise-Grade AI Governance</h3>
-        <p className="text-lg">
-          <strong>Comprehensive governance frameworks</strong> achieving <span className="text-green-400 font-bold">99.9% compliance accuracy</span>, 
-          <span className="text-green-400 font-bold"> real-time risk assessment</span>, and <span className="text-green-400 font-bold">automated policy enforcement</span> across 
-          <span className="text-green-400 font-bold"> autonomous AI agents</span>. Build trustworthy AI systems that meet regulatory requirements 
+      <div className="text-left">
+        <h3 className="text-left">🛡️ Enterprise-Grade AI Governance</h3>
+        <p className="text-left">
+          <strong>Comprehensive governance frameworks</strong> achieving <span className="text-left">99.9% compliance accuracy<, 
+          <span className="text-left"> real-time risk assessment<, and <span className="text-left">automated policy enforcement< across 
+          <span className="text-left"> autonomous AI agents<. Build trustworthy AI systems that meet regulatory requirements 
           while maximizing innovation velocity.
         </p>
       </div>
@@ -88,8 +88,8 @@ export default function BlogPost() {
       </p>
 
       <h2>📊 Governance Metrics</h2>
-      <div className="bg-slate-800/50 rounded-lg p-6 my-6">
-        <ul className="space-y-2">
+      <div className="text-left">
+        <ul className="text-left">
           <li>✅ <strong>99.9% compliance accuracy</strong> across all regulatory frameworks</li>
           <li>✅ <strong>100% audit coverage</strong> of agent actions with immutable trails</li>
           <li>✅ <strong>92% reduction in governance overhead</strong> through automation</li>
@@ -152,9 +152,9 @@ export default function BlogPost() {
 
       <h2>💼 Enterprise Value Proposition</h2>
       
-      <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 border border-purple-500/30 rounded-lg p-6 my-8">
-        <h3 className="text-xl font-bold text-purple-300 mt-0">Business Impact</h3>
-        <ul className="space-y-2">
+      <div className="text-left">
+        <h3 className="text-left">Business Impact</h3>
+        <ul className="text-left">
           <li><strong>Regulatory confidence:</strong> Deploy AI agents knowing compliance is guaranteed</li>
           <li><strong>Risk reduction:</strong> Prevent costly policy violations before they occur</li>
           <li><strong>Audit readiness:</strong> Instant documentation for regulators and auditors</li>
@@ -192,14 +192,14 @@ export default function BlogPost() {
         The technology exists. The frameworks are proven. The question is: will you lead or follow?
       </p>
 
-      <div className="bg-blue-600/20 border border-blue-500/30 rounded-lg p-6 my-8">
-        <h3 className="text-xl font-bold text-blue-300 mt-0">🚀 Ready to Build Trustworthy AI?</h3>
-        <p className="mb-4">
+      <div className="text-left">
+        <h3 className="text-left">🚀 Ready to Build Trustworthy AI?</h3>
+        <p className="text-left">
           Partner with Zion Tech Group to implement enterprise-grade agentic governance frameworks. Our experts 
           will help you navigate regulatory requirements, establish robust oversight mechanisms, and build AI 
           systems your stakeholders can trust.
         </p>
-        <p className="font-semibold text-blue-300">
+        <p className="text-left">
           Contact us today for a governance maturity assessment and custom implementation roadmap.
         </p>
       </div>

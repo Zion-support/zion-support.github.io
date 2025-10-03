@@ -11,14 +11,14 @@ export const metadata = {
 
 export default function BlogPost() {
   return (
-    <article className="prose prose-invert max-w-none">
+    <article className="text-left">
       <h1>🚛 Agentic Procurement & Supply Chain Revolution 2025: Autonomous Intelligence at Scale</h1>
       
-      <div className="bg-gradient-to-r from-orange-600/20 to-red-600/20 border border-orange-500/30 rounded-lg p-6 my-8">
-        <h3 className="text-2xl font-bold text-orange-300 mt-0">🚀 Revolutionary Transformation</h3>
-        <p className="text-lg">
-          <strong>Agentic AI for supply chain</strong> achieving <span className="text-green-400 font-bold">99.1% demand forecast accuracy</span>, 
-          <span className="text-green-400 font-bold"> 82% cost reduction</span>, and <span className="text-green-400 font-bold">96% on-time delivery</span> through 
+      <div className="text-left">
+        <h3 className="text-left">🚀 Revolutionary Transformation</h3>
+        <p className="text-left">
+          <strong>Agentic AI for supply chain</strong> achieving <span className="text-left">99.1% demand forecast accuracy<, 
+          <span className="text-left"> 82% cost reduction<, and <span className="text-left">96% on-time delivery< through 
           swarms of autonomous AI agents that manage procurement, logistics, inventory, and supplier relationships end-to-end.
         </p>
       </div>
@@ -105,9 +105,9 @@ export default function BlogPost() {
 
       <h2>📊 Performance Metrics</h2>
       
-      <div className="bg-slate-800/50 border border-slate-700 rounded-lg p-6 my-6">
-        <h3 className="text-xl font-bold text-orange-300 mt-0">Real-World Results</h3>
-        <ul className="space-y-2">
+      <div className="text-left">
+        <h3 className="text-left">Real-World Results</h3>
+        <ul className="text-left">
           <li><strong>Forecast Accuracy:</strong> 99.1% vs. 76% traditional methods</li>
           <li><strong>Cost Reduction:</strong> 82% decrease in total supply chain costs</li>
           <li><strong>On-Time Delivery:</strong> 96% vs. 78% baseline</li>
@@ -165,8 +165,8 @@ export default function BlogPost() {
 
       <h2>💰 Business Value</h2>
       
-      <div className="bg-gradient-to-r from-green-600/20 to-emerald-600/20 border border-green-500/30 rounded-lg p-6 my-8">
-        <h3 className="text-2xl font-bold text-green-300 mt-0">📈 ROI Breakdown</h3>
+      <div className="text-left">
+        <h3 className="text-left">📈 ROI Breakdown</h3>
         <ul>
           <li><strong>Inventory Optimization:</strong> $427M working capital freed</li>
           <li><strong>Procurement Savings:</strong> $284M from better sourcing and negotiation</li>
@@ -205,8 +205,8 @@ export default function BlogPost() {
 
       <h2>🌟 Fortune 100 Retail Success</h2>
       
-      <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 border border-blue-500/30 rounded-lg p-6 my-8">
-        <h3 className="text-2xl font-bold text-blue-300 mt-0">🏆 Global Retail Giant</h3>
+      <div className="text-left">
+        <h3 className="text-left">🏆 Global Retail Giant</h3>
         <p>
           Leading retail organization deployed agentic supply chain AI across operations:
         </p>
@@ -236,9 +236,9 @@ export default function BlogPost() {
         <li>Fully autonomous supply chain with human strategic guidance only</li>
       </ul>
 
-      <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 border border-purple-500/30 rounded-lg p-6 my-8">
-        <h3 className="text-2xl font-bold text-purple-300 mt-0">🚀 Transform Your Supply Chain</h3>
-        <p className="text-lg">
+      <div className="text-left">
+        <h3 className="text-left">🚀 Transform Your Supply Chain</h3>
+        <p className="text-left">
           Deploy agentic AI that revolutionizes supply chain operations with unprecedented accuracy, 
           efficiency, and resilience. Contact Zion Tech Group to implement autonomous intelligence 
           platforms that deliver breakthrough supply chain performance and ROI.

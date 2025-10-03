@@ -2,10 +2,10 @@ import React from 'react';
 
 export default function MultimodalAISystems2025() {
   return (
-    <main className="prose lg:prose-xl max-w-4xl mx-auto py-12 px-6">
+    <main className="text-left">
       <h1>Multimodal AI Systems (2025): Beyond Text to Universal Intelligence</h1>
       
-      <p className="text-xl font-semibold text-gray-700 dark:text-gray-300">
+      <p className="text-left">
         Build next-generation AI systems that understand text, images, audio, video, and sensor data
         simultaneously. Unified multimodal models are revolutionizing industries with $15.7B+ in proven
         value creation. Learn architecture patterns, model selection, and production deployment strategies
@@ -356,8 +356,8 @@ export default function MultimodalAISystems2025() {
         AI journey today and gain a 5-year competitive advantage.
       </p>
 
-      <div className="bg-indigo-50 dark:bg-indigo-900 p-6 rounded-lg mt-8">
-        <h3 className="text-xl font-bold mb-4">🎨 Ready to Go Multimodal?</h3>
+      <div className="text-left">
+        <h3 className="text-left">🎨 Ready to Go Multimodal?</h3>
         <p>
           Our AI engineers have built multimodal systems processing billions of interactions for
           Fortune 500 companies. Get a free consultation and custom architecture design for your

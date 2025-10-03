@@ -2,18 +2,18 @@ import React from 'react';
 
 export default function NextGenAIObservabilityPlatform() {
   return (
-    <article className="max-w-4xl mx-auto px-4 py-12">
-      <header className="mb-8">
-        <h1 className="text-4xl font-bold mb-4">Next-Gen AI Observability: Intelligent Monitoring at Scale</h1>
-        <div className="flex items-center gap-4 text-gray-600">
+    <article className="text-left">
+      <header className="text-left">
+        <h1 className="text-left">Next-Gen AI Observability: Intelligent Monitoring at Scale</h1>
+        <div className="text-left">
           <time dateTime="2025-10-02">October 2, 2025</time>
-          <span>•</span>
-          <span>14 min read</span>
+          <span>•<
+          <span>14 min read<
         </div>
       </header>
 
-      <div className="prose prose-lg max-w-none">
-        <p className="lead text-xl mb-6">
+      <div className="text-left">
+        <p className="text-left">
           Discover how next-generation AI observability platforms are transforming system monitoring 
           with intelligent analysis, predictive insights, and automated incident response, delivering 
           $3.7B in value through 96% faster problem resolution.
@@ -114,7 +114,7 @@ export default function NextGenAIObservabilityPlatform() {
         <h2>Technical Architecture</h2>
         
         <h3>AI-Powered Analysis Engine</h3>
-        <pre className="bg-slate-900 text-slate-100 p-4 rounded-lg overflow-x-auto">
+        <pre className="text-left">
 {`// Next-Gen Observability Platform
 class IntelligentObservability {
   private models: {
@@ -317,14 +317,14 @@ class IntelligentObservability {
           teams to rapid resolution.
         </p>
 
-        <div className="mt-12 p-6 bg-blue-50 rounded-lg">
-          <h3 className="text-xl font-bold mb-4">Transform Your Observability Strategy</h3>
+        <div className="text-left">
+          <h3 className="text-left">Transform Your Observability Strategy</h3>
           <p>
             Our experts can help you implement next-generation AI observability tailored to your 
             infrastructure. We've delivered billions in value for Fortune 500 companies through 
             intelligent monitoring and predictive analytics.
           </p>
-          <button className="mt-4 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
+          <button className="text-left">
             Get Started Today
           </button>
         </div>

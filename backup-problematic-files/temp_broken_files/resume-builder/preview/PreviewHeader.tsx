@@ -28,10 +28,10 @@ interface PreviewHeaderProps {;
       <Button ;
         variant="outline" ;"
         onClick={onBack} ;"
-        className="gap-2 no-print";"
+        className="text-left";"
       >;
 "
-        <ArrowLeft className="h-4 w-4" />;"
+        <ArrowLeft className="text-left" />;"
       ;"`;
       <div className={`flex ${isMobile ? 'flex-col' :'flex-row'} space-${isMobile ? 'y-2' :'x-2'} no-print`}>;
         <PdfExportButton resume={resume} />;

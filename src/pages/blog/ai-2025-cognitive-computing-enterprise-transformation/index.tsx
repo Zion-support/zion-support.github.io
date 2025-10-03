@@ -17,365 +17,365 @@ const CognitiveComputingTransformation: React.FC = () => {
         <link rel: "canonical", href ="https: //ziontechgroup.com/blog/ai-2025-cognitive-computing-enterprise-transformation" />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">
+      <div className="text-left">
         <Header />
         
         {/* Hero Section */}
-        <div className="relative pt-24 pb-16 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(139,92,246,0.2),transparent_50%)] ">
-        <div className="relative pt-24 pb-16 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(139,92,246,0.2),transparent_50%)]/>">
-          <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
+        <div className="text-left">
+          <div className="text-left">
+        <div className="text-left">
+          <div className="text-left">
+          <div className="text-left">
             {/* Breadcrumb */}
-            <nav className="flex items-center space-x-2 text-sm mb-8">
-              <Link to="/", className="text-purple-300 hover:text-white transition-colors">Home</Link>
-              <span className="text-purple-400">/</span>"
-              <Link to="/blog", className="text-purple-300 hover:text-white transition-colors">Blog</Link>
-              <span className="text-purple-400">/</span>"
-              <span className="text-white">Cognitive Computing</span>"
+            <nav className="text-left">
+              <Link to="/", className="text-left">Home</Link>
+              <span className="text-left">/<"
+              <Link to="/blog", className="text-left">Blog</Link>
+              <span className="text-left">/<"
+              <span className="text-left">Cognitive Computing<"
             </nav>
             
             {/* Article Header */}
-            <div className="max-w-4xl">
-              <div className="flex items-center gap-3 mb-6 flex-wrap">
-                <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-bold bg-gradient-to-r from-pink-500 to-purple-500 text-white shadow-lg">
-                  <Brain className="w-4 h-4 mr-2 ,"
+            <div className="text-left">
+              <div className="text-left">
+                <span className="text-left">
+                  <Brain className="text-left"
   COGNITIVE AI
-                </span>
-                <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-bold bg-green-500 text-white shadow-lg">
-                  <Award className="w-4 h-4 mr-2 "
-                </span>"
-                <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-bold bg-green-500 text-white shadow-lg">
+                <
+                <span className="text-left">
+                  <Award className="text-left"
+                <"
+                <span className="text-left">
                   <Award className="w-4 h-4 mr-2/>
                   $1.2B+ VALUE
-                </span>">
-                <span className="text-purple-300 text-sm">Published: October 1, 2025</span>
+                <">
+                <span className="text-left">Published: October 1, 2025<
               </div>
               
-              <h1 className="text-4xl sm: text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+              <h1 className="text-left">
   Cognitive Computing Enterprise Transformation: AI That Thinks Like Humans,
               </h1>
               
-              <p className="text-xl text-purple-100 leading-relaxed mb-8">,"
-  Leading organizations are achieving <span className="font-bold text-green-300">98.5% decision accuracy</span>"
-                <span className="font-bold text-green-300"> $1.2B+ in annual value</span>, and "
-                <span className="font-bold text-green-300"> 92% faster problem-solving</span> by deploying cognitive AI platforms that understand, reason, and learn like humans."
-        <div className="relative pt-24 pb-16 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(139,92,246,0.2),transparent_50%)]" />
-          <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
+              <p className="text-left">,"
+  Leading organizations are achieving <span className="text-left">98.5% decision accuracy<"
+                <span className="text-left"> $1.2B+ in annual value<, and "
+                <span className="text-left"> 92% faster problem-solving< by deploying cognitive AI platforms that understand, reason, and learn like humans."
+        <div className="text-left">
+          <div className="text-left" />
+          <div className="text-left">
             {/* Breadcrumb */}
-            <nav className="flex items-center space-x-2 text-sm mb-8">
-              <Link to="/", className="text-purple-300 hover:text-white transition-colors">Home</Link>
-              <span className="text-purple-400">/</span>
-              <Link to="/blog", className="text-purple-300 hover:text-white transition-colors">Blog</Link>
-              <span className="text-purple-400">/</span>
-              <span className="text-white">Cognitive Computing</span>
+            <nav className="text-left">
+              <Link to="/", className="text-left">Home</Link>
+              <span className="text-left">/<
+              <Link to="/blog", className="text-left">Blog</Link>
+              <span className="text-left">/<
+              <span className="text-left">Cognitive Computing<
             </nav>
             
             {/* Article Header */}
-            <div className="max-w-4xl">
-              <div className="flex items-center gap-3 mb-6 flex-wrap">
-                <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-bold bg-gradient-to-r from-pink-500 to-purple-500 text-white shadow-lg">
-                  <Brain className="w-4 h-4 mr-2" />
+            <div className="text-left">
+              <div className="text-left">
+                <span className="text-left">
+                  <Brain className="text-left" />
   COGNITIVE AI
-                </span>
-                <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-bold bg-green-500 text-white shadow-lg">
-                  <Award className="w-4 h-4 mr-2" />
+                <
+                <span className="text-left">
+                  <Award className="text-left" />
                   $1.2B+ VALUE
-                </span>
-                <span className="text-purple-300 text-sm">Published: October 1, 2025</span>
+                <
+                <span className="text-left">Published: October 1, 2025<
               </div>
               
-              <h1 className="text-4xl sm: text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+              <h1 className="text-left">
   Cognitive Computing Enterprise Transformation: AI That Thinks Like Humans,
               </h1>
               
-              <p className="text-xl text-purple-100 leading-relaxed mb-8">
-  Leading organizations are achieving <span className="font-bold text-green-300">98.5% decision accuracy</span>, 
-                <span className="font-bold text-green-300"> $1.2B+ in annual value</span>, and 
-                <span className="font-bold text-green-300"> 92% faster problem-solving</span> by deploying cognitive AI platforms that understand, reason, and learn like humans.
+              <p className="text-left">
+  Leading organizations are achieving <span className="text-left">98.5% decision accuracy<, 
+                <span className="text-left"> $1.2B+ in annual value<, and 
+                <span className="text-left"> 92% faster problem-solving< by deploying cognitive AI platforms that understand, reason, and learn like humans.
               </p>
               
-              <div className="flex items-center gap-4 text-sm text-purple-200">
-      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">
+              <div className="text-left">
+      <div className="text-left">
         <Header />
         
         {/* Hero Section */}
-        <div className="relative pt-24 pb-16 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(139,92,246,0.2),transparent_50%)]/>">
-          <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
+        <div className="text-left">
+          <div className="text-left">
+          <div className="text-left">
             {/* Breadcrumb */}
-            <nav className="flex items-center space-x-2 text-sm mb-8">
-              <Link to="/", className="text-purple-300 hover:text-white transition-colors">Home</Link>
-              <span className="text-purple-400">/</span>"
-              <Link to="/blog", className="text-purple-300 hover:text-white transition-colors">Blog</Link>
-              <span className="text-purple-400">/</span>"
-              <span className="text-white">Cognitive Computing</span>"
+            <nav className="text-left">
+              <Link to="/", className="text-left">Home</Link>
+              <span className="text-left">/<"
+              <Link to="/blog", className="text-left">Blog</Link>
+              <span className="text-left">/<"
+              <span className="text-left">Cognitive Computing<"
             </nav>
             
             {/* Article Header */}
-            <div className="max-w-4xl">
-              <div className="flex items-center gap-3 mb-6 flex-wrap">
-                <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-bold bg-gradient-to-r from-pink-500 to-purple-500 text-white shadow-lg">
-                  <Brain className="w-4 h-4 mr-2/>,"
+            <div className="text-left">
+              <div className="text-left">
+                <span className="text-left">
+                  <Brain className="text-left"
   COGNITIVE AI
-                </span>
-                <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-bold bg-green-500 text-white shadow-lg">
-                  <Award className="w-4 h-4 mr-2/>"
+                <
+                <span className="text-left">
+                  <Award className="text-left"
                   $1.2B+ VALUE
-                </span>
-                <span className="text-purple-300 text-sm">Published: October 1, 2025</span>
+                <
+                <span className="text-left">Published: October 1, 2025<
               </div>
               
-              <h1 className="text-4xl sm: text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">"
+              <h1 className="text-left">"
   Cognitive Computing Enterprise Transformation: AI That Thinks Like Humans,
               </h1>
               
-              <p className="text-xl text-purple-100 leading-relaxed mb-8">,"
-  Leading organizations are achieving <span className="font-bold text-green-300">98.5% decision accuracy</span>"
-                <span className="font-bold text-green-300"> $1.2B+ in annual value</span>, and "
-                <span className="font-bold text-green-300"> 92% faster problem-solving</span> by deploying cognitive AI platforms that understand, reason, and learn like humans."
-        <div className="relative pt-24 pb-16 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(139,92,246,0.2),transparent_50%)]" />
-          <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
+              <p className="text-left">,"
+  Leading organizations are achieving <span className="text-left">98.5% decision accuracy<"
+                <span className="text-left"> $1.2B+ in annual value<, and "
+                <span className="text-left"> 92% faster problem-solving< by deploying cognitive AI platforms that understand, reason, and learn like humans."
+        <div className="text-left">
+          <div className="text-left" />
+          <div className="text-left">
             {/* Breadcrumb */}
-            <nav className="flex items-center space-x-2 text-sm mb-8">
-              <Link to="/", className="text-purple-300 hover:text-white transition-colors">Home</Link>
-              <span className="text-purple-400">/</span>
-              <Link to="/blog", className="text-purple-300 hover:text-white transition-colors">Blog</Link>
-              <span className="text-purple-400">/</span>
-              <span className="text-white">Cognitive Computing</span>
+            <nav className="text-left">
+              <Link to="/", className="text-left">Home</Link>
+              <span className="text-left">/<
+              <Link to="/blog", className="text-left">Blog</Link>
+              <span className="text-left">/<
+              <span className="text-left">Cognitive Computing<
             </nav>
             
             {/* Article Header */}
-            <div className="max-w-4xl">
-              <div className="flex items-center gap-3 mb-6 flex-wrap">
-                <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-bold bg-gradient-to-r from-pink-500 to-purple-500 text-white shadow-lg">
-                  <Brain className="w-4 h-4 mr-2" />
+            <div className="text-left">
+              <div className="text-left">
+                <span className="text-left">
+                  <Brain className="text-left" />
   COGNITIVE AI
-                </span>
-                <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-bold bg-green-500 text-white shadow-lg">
-                  <Award className="w-4 h-4 mr-2" />
+                <
+                <span className="text-left">
+                  <Award className="text-left" />
                   $1.2B+ VALUE
-                </span>
-                <span className="text-purple-300 text-sm">Published: October 1, 2025</span>
+                <
+                <span className="text-left">Published: October 1, 2025<
               </div>
               
-              <h1 className="text-4xl sm: text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">"
+              <h1 className="text-left">"
   Cognitive Computing Enterprise Transformation: AI That Thinks Like Humans,
               </h1>
               
-              <p className="text-xl text-purple-100 leading-relaxed mb-8">"
-  Leading organizations are achieving <span className="font-bold text-green-300">98.5% decision accuracy</span>, 
-                <span className="font-bold text-green-300"> $1.2B+ in annual value</span>, and 
-                <span className="font-bold text-green-300"> 92% faster problem-solving</span> by deploying cognitive AI platforms that understand, reason, and learn like humans.
+              <p className="text-left">"
+  Leading organizations are achieving <span className="text-left">98.5% decision accuracy<, 
+                <span className="text-left"> $1.2B+ in annual value<, and 
+                <span className="text-left"> 92% faster problem-solving< by deploying cognitive AI platforms that understand, reason, and learn like humans.
               </p>
               
-              <div className="flex items-center gap-4 text-sm text-purple-200">
-                <span>📖 15 minute read</span>/span>
-                <span>•</span>/span>
-                <span>🎯 Enterprise Strategy</span>/span>
-                <span>•</span>/span>
-                <span>⚡ Implementation Guide</span>/span>
+              <div className="text-left">
+                <span>📖 15 minute read<
+                <span>•<
+                <span>🎯 Enterprise Strategy<
+                <span>•<
+                <span>⚡ Implementation Guide<
               </div>
             </div>
           </div>
         </div>
         
         {/* Stats Bar */}
-        <div className="bg-white/5 backdrop-blur-sm border-y border-white/10 py-8">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-        <div className="bg-white/5 backdrop-blur-sm border-y border-white/10 py-8">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div className="text-left">
+          <div className="text-left">
+            <div className="text-left">
+        <div className="text-left">
+          <div className="text-left">
+            <div className="text-left">
               <div >
-                <div className="text-3xl font-bold text-green-400 mb-1">98.5%</div>
-                <div className="text-sm text-purple-200">Decision Accuracy</div>
+                <div className="text-left">98.5%</div>
+                <div className="text-left">Decision Accuracy</div>
               </div>
               <div >
-                <div className="text-3xl font-bold text-yellow-400 mb-1">$1.2B+</div>
-                <div className="text-sm text-purple-200">Annual Value</div>
+                <div className="text-left">$1.2B+</div>
+                <div className="text-left">Annual Value</div>
               </div>
               <div >
-                <div className="text-3xl font-bold text-pink-400 mb-1">92%</div>
-                <div className="text-sm text-purple-200">Faster Problem-Solving</div>
+                <div className="text-left">92%</div>
+                <div className="text-left">Faster Problem-Solving</div>
               </div>
               <div >
-                <div className="text-3xl font-bold text-blue-400 mb-1">3,675%</div>
-                <div className="text-sm text-purple-200">ROI Over 3 Years</div>
-        <div className="bg-white/5 backdrop-blur-sm border-y border-white/10 py-8">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-        <div className="bg-white/5 backdrop-blur-sm border-y border-white/10 py-8">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div className="text-left">3,675%</div>
+                <div className="text-left">ROI Over 3 Years</div>
+        <div className="text-left">
+          <div className="text-left">
+            <div className="text-left">
+        <div className="text-left">
+          <div className="text-left">
+            <div className="text-left">
               <div >
-                <div className="text-3xl font-bold text-green-400 mb-1">98.5%</div>
-                <div className="text-sm text-purple-200">Decision Accuracy</div>
+                <div className="text-left">98.5%</div>
+                <div className="text-left">Decision Accuracy</div>
               </div>
               <div >
-                <div className="text-3xl font-bold text-yellow-400 mb-1">$1.2B+</div>
-                <div className="text-sm text-purple-200">Annual Value</div>
+                <div className="text-left">$1.2B+</div>
+                <div className="text-left">Annual Value</div>
               </div>
               <div >
-                <div className="text-3xl font-bold text-pink-400 mb-1">92%</div>
-                <div className="text-sm text-purple-200">Faster Problem-Solving</div>
+                <div className="text-left">92%</div>
+                <div className="text-left">Faster Problem-Solving</div>
               </div>
               <div >
-                <div className="text-3xl font-bold text-blue-400 mb-1">3,675%</div>
-                <div className="text-sm text-purple-200">ROI Over 3 Years</div>
+                <div className="text-left">3,675%</div>
+                <div className="text-left">ROI Over 3 Years</div>
               </div>
             </div>
           </div>
         </div>
         
         {/* Main Content */}
-        <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 py-16">
-          <div className="prose prose-lg prose-invert max-w-none">
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 mb-12">
-              <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-3">
-                <Lightbulb className="w-8 h-8 text-yellow-400 ,"
+        <div className="text-left">
+          <div className="text-left">
+            <div className="text-left">
+              <h2 className="text-left">
+                <Lightbulb className="text-left"
   What is Cognitive Computing?
               </h2>
-              <p className="text-purple-100 leading-relaxed mb-4">,"
+              <p className="text-left">,"
   Cognitive computing represents a paradigm shift from rule-based systems to intelligent platforms that: </p>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-3 text-purple-100">
-                  <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0 " / />> />>
-                  <span></span>strong className="text-white">Understand context</strong> through natural language processing</span>"
+              <ul className="text-left">
+                <li className="text-left">
+                  <CheckCircle className="text-left" / />> />>
+                  <span><strong className="text-left">Understand context</strong> through natural language processing<"
                 </li>
-                <li className="flex items-start gap-3 text-purple-100">
-                  <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0 " / />> />>
-                  <span></span>strong className="text-white">Learn continuously</strong> from interactions and feedback</span>"
+                <li className="text-left">
+                  <CheckCircle className="text-left" / />> />>
+                  <span><strong className="text-left">Learn continuously</strong> from interactions and feedback<"
                 </li>
-                <li className="flex items-start gap-3 text-purple-100">
-                  <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0 " / />> />>
-                  <span></span>strong className="text-white">Reason probabilistically</strong> to handle uncertainty</span>"
+                <li className="text-left">
+                  <CheckCircle className="text-left" / />> />>
+                  <span><strong className="text-left">Reason probabilistically</strong> to handle uncertainty<"
                 </li>
-                <li className="flex items-start gap-3 text-purple-100">
-                  <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0 " / />> />>
-                  <span></span>strong className="text-white">Explain decisions</strong> with transparent logic</span>"
+                <li className="text-left">
+                  <CheckCircle className="text-left" / />> />>
+                  <span><strong className="text-left">Explain decisions</strong> with transparent logic<"
               </h2>"
-              <p className="text-purple-100 leading-relaxed mb-4">,
+              <p className="text-left">,
   Cognitive computing represents a paradigm shift from rule-based systems to intelligent platforms that: </p>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-3 text-purple-100">
-                  <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0/>" / />> />>
-                  <span></span>strong className="text-white">Understand context</strong> through natural language processing</span>
+              <ul className="text-left">
+                <li className="text-left">
+                  <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0/>>
+                  <span><strong className="text-left">Understand context</strong> through natural language processing<
                 </li>
-                <li className="flex items-start gap-3 text-purple-100">
-                  <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0/>" / />> />>
-                  <span></span>strong className="text-white">Learn continuously</strong> from interactions and feedback</span>
+                <li className="text-left">
+                  <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0/>>
+                  <span><strong className="text-left">Learn continuously</strong> from interactions and feedback<
                 </li>
-                <li className="flex items-start gap-3 text-purple-100">
-                  <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0/>" / />> />>
-                  <span></span>strong className="text-white">Reason probabilistically</strong> to handle uncertainty</span>
+                <li className="text-left">
+                  <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0/>>
+                  <span><strong className="text-left">Reason probabilistically</strong> to handle uncertainty<
                 </li>
-                <li className="flex items-start gap-3 text-purple-100">
-                  <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0/>" / />> />>
-                  <span></span>strong className="text-white">Explain decisions</strong> with transparent logic</span>
-        <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 py-16">
-          <div className="prose prose-lg prose-invert max-w-none">
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 mb-12">
-              <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-3">
-                <Lightbulb className="w-8 h-8 text-yellow-400" />
+                <li className="text-left">
+                  <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0/>>
+                  <span><strong className="text-left">Explain decisions</strong> with transparent logic<
+        <div className="text-left">
+          <div className="text-left">
+            <div className="text-left">
+              <h2 className="text-left">
+                <Lightbulb className="text-left" />
   What is Cognitive Computing?
               </h2>
-              <p className="text-purple-100 leading-relaxed mb-4">
+              <p className="text-left">
   Cognitive computing represents a paradigm shift from rule-based systems to intelligent platforms that: </p>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-3 text-purple-100">
-                  <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" /> / />> />
-                  <span></span>strong className="text-white">Understand context</strong> through natural language processing</span>
+              <ul className="text-left">
+                <li className="text-left">
+                  <CheckCircle className="text-left" /> / />> />
+                  <span><strong className="text-left">Understand context</strong> through natural language processing<
                 </li>
-                <li className="flex items-start gap-3 text-purple-100">
-                  <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" /> / />> />
-                  <span></span>strong className="text-white">Learn continuously</strong> from interactions and feedback</span>
+                <li className="text-left">
+                  <CheckCircle className="text-left" /> / />> />
+                  <span><strong className="text-left">Learn continuously</strong> from interactions and feedback<
                 </li>
-                <li className="flex items-start gap-3 text-purple-100">
-                  <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" /> / />> />
-                  <span></span>strong className="text-white">Reason probabilistically</strong> to handle uncertainty</span>
+                <li className="text-left">
+                  <CheckCircle className="text-left" /> / />> />
+                  <span><strong className="text-left">Reason probabilistically</strong> to handle uncertainty<
                 </li>
-                <li className="flex items-start gap-3 text-purple-100">
-                  <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" /> / />> />
-                  <span></span>strong className="text-white">Explain decisions</strong> with transparent logic</span>
-        <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 py-16">
-          <div className="prose prose-lg prose-invert max-w-none">
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 mb-12">
-              <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-3">
-                <Lightbulb className="w-8 h-8 text-yellow-400/>,"
+                <li className="text-left">
+                  <CheckCircle className="text-left" /> / />> />
+                  <span><strong className="text-left">Explain decisions</strong> with transparent logic<
+        <div className="text-left">
+          <div className="text-left">
+            <div className="text-left">
+              <h2 className="text-left">
+                <Lightbulb className="text-left"
   What is Cognitive Computing?
               </h2>
-              <p className="text-purple-100 leading-relaxed mb-4">,"
+              <p className="text-left">,"
   Cognitive computing represents a paradigm shift from rule-based systems to intelligent platforms that: </p>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-3 text-purple-100">
-                  <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0/>" / />> />>
-                  <span></span>strong className="text-white">Understand context</strong> through natural language processing</span>"
+              <ul className="text-left">
+                <li className="text-left">
+                  <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0/>>
+                  <span><strong className="text-left">Understand context</strong> through natural language processing<"
                 </li>
-                <li className="flex items-start gap-3 text-purple-100">
-                  <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0/>" / />> />>
-                  <span></span>strong className="text-white">Learn continuously</strong> from interactions and feedback</span>"
+                <li className="text-left">
+                  <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0/>>
+                  <span><strong className="text-left">Learn continuously</strong> from interactions and feedback<"
                 </li>
-                <li className="flex items-start gap-3 text-purple-100">
-                  <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0/>" / />> />>
-                  <span></span>strong className="text-white">Reason probabilistically</strong> to handle uncertainty</span>"
+                <li className="text-left">
+                  <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0/>>
+                  <span><strong className="text-left">Reason probabilistically</strong> to handle uncertainty<"
                 </li>
-                <li className="flex items-start gap-3 text-purple-100">
-                  <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0/>" / />> />>
-                  <span></span>strong className="text-white">Explain decisions</strong> with transparent logic</span>"
-        <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 py-16">
-          <div className="prose prose-lg prose-invert max-w-none">
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 mb-12">
-              <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-3">
-                <Lightbulb className="w-8 h-8 text-yellow-400" />
+                <li className="text-left">
+                  <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0/>>
+                  <span><strong className="text-left">Explain decisions</strong> with transparent logic<"
+        <div className="text-left">
+          <div className="text-left">
+            <div className="text-left">
+              <h2 className="text-left">
+                <Lightbulb className="text-left" />
   What is Cognitive Computing?
               </h2>
-              <p className="text-purple-100 leading-relaxed mb-4">"
+              <p className="text-left">"
   Cognitive computing represents a paradigm shift from rule-based systems to intelligent platforms that: </p>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-3 text-purple-100">
-                  <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" /> / />> />
-                  <span></span>strong className="text-white">Understand context</strong> through natural language processing</span>
+              <ul className="text-left">
+                <li className="text-left">
+                  <CheckCircle className="text-left" /> / />> />
+                  <span><strong className="text-left">Understand context</strong> through natural language processing<
                 </li>
-                <li className="flex items-start gap-3 text-purple-100">
-                  <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" /> / />> />
-                  <span></span>strong className="text-white">Learn continuously</strong> from interactions and feedback</span>
+                <li className="text-left">
+                  <CheckCircle className="text-left" /> / />> />
+                  <span><strong className="text-left">Learn continuously</strong> from interactions and feedback<
                 </li>
-                <li className="flex items-start gap-3 text-purple-100">
-                  <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" /> / />> />
-                  <span></span>strong className="text-white">Reason probabilistically</strong> to handle uncertainty</span>
+                <li className="text-left">
+                  <CheckCircle className="text-left" /> / />> />
+                  <span><strong className="text-left">Reason probabilistically</strong> to handle uncertainty<
                 </li>
-                <li className="flex items-start gap-3 text-purple-100">
-                  <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" /> / />> />
-                  <span></span>strong className="text-white">Explain decisions</strong> with transparent logic</span>
+                <li className="text-left">
+                  <CheckCircle className="text-left" /> / />> />
+                  <span><strong className="text-left">Explain decisions</strong> with transparent logic<
                 </li>
               </ul>
             </div>
             
-            <div className="space-y-12">
+            <div className="text-left">
               <section >
-                <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                  <Sparkles className="w-8 h-8 text-yellow-400 ">
-                <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                  <Sparkles className="w-8 h-8 text-yellow-400/>">
-                <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                  <Sparkles className="w-8 h-8 text-yellow-400" />
+                <h2 className="text-left">
+                  <Sparkles className="text-left">
+                <h2 className="text-left">
+                  <Sparkles className="text-left">
+                <h2 className="text-left">
+                  <Sparkles className="text-left" />
   Core Capabilities
                 </h2>
                 
-                <div className="grid gap-6">
-            <div className="space-y-12">
+                <div className="text-left">
+            <div className="text-left">
               <section >
-                <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                  <Sparkles className="w-8 h-8 text-yellow-400/>">
-                <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                  <Sparkles className="w-8 h-8 text-yellow-400" />
+                <h2 className="text-left">
+                  <Sparkles className="text-left">
+                <h2 className="text-left">
+                  <Sparkles className="text-left" />
   Core Capabilities
                 </h2>
                 
-                <div className="grid gap-6">
+                <div className="text-left">
                   {[
                     {
                       title= "Natural Language Understanding
@@ -436,23 +436,23 @@ const CognitiveComputingTransformation: React.FC = () => {
                   ].map((capability, idx) => (
                         {capability.title}
                       </h3>
-                      <ul className="space-y-2">
+                      <ul className="text-left">
                         {capability.features.map((feature, i) => (
-                          <li key={i} className="flex items-start gap-2 text-purple-100">
-                            <span className="text-green-400 mt-1">✓</span>
-                    <div key={idx} className="bg-gradient-to-br from-purple-900/30 to-blue-900/30 border border-purple-500/30 rounded-xl p-6 hover:border-purple-500/50 transition-all">
-                      <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-3">
-                        <span className="text-3xl">{capability.icon}</span>";"
-                    <div key={idx} className="bg-gradient-to-br from-purple-900/30 to-blue-900/30 border border-purple-500/30 rounded-xl p-6 hover:border-purple-500/50 transition-all">
-                      <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-3">
-                        <span className="text-3xl">{capability.icon}</span>"
+                          <li key={i} className="text-left">
+                            <span className="text-left">✓<
+                    <div key={idx} className="text-left">
+                      <h3 className="text-left">
+                        <span className="text-left">{capability.icon}<";"
+                    <div key={idx} className="text-left">
+                      <h3 className="text-left">
+                        <span className="text-left">{capability.icon}<"
                         {capability.title}
                       </h3>
-                      <ul className="space-y-2">
+                      <ul className="text-left">
                         {capability.features.map((feature, i) => (
-                          <li key={i} className="flex items-start gap-2 text-purple-100">
-                            <span className="text-green-400 mt-1">✓</span>
-                            <span>{feature}</span>/span>
+                          <li key={i} className="text-left">
+                            <span className="text-left">✓<
+                            <span>{feature}<
                           </li>
                         ))}
                       </ul>
@@ -462,24 +462,24 @@ const CognitiveComputingTransformation: React.FC = () => {
               </section>
               
               <section >
-                <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                  <TrendingUp className="w-8 h-8 text-green-400 ">
-                <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                  <TrendingUp className="w-8 h-8 text-green-400/>">
-                <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                  <TrendingUp className="w-8 h-8 text-green-400" />
+                <h2 className="text-left">
+                  <TrendingUp className="text-left">
+                <h2 className="text-left">
+                  <TrendingUp className="text-left">
+                <h2 className="text-left">
+                  <TrendingUp className="text-left" />
   Enterprise Applications
                 </h2>
                 
-                <div className="space-y-6">
-                <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                  <TrendingUp className="w-8 h-8 text-green-400/>">
-                <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                  <TrendingUp className="w-8 h-8 text-green-400" />
+                <div className="text-left">
+                <h2 className="text-left">
+                  <TrendingUp className="text-left">
+                <h2 className="text-left">
+                  <TrendingUp className="text-left" />
   Enterprise Applications
                 </h2>
                 
-                <div className="space-y-6">
+                <div className="text-left">
                   {[
                     {
                       title= "Intelligent Decision Support
@@ -518,10 +518,10 @@ const CognitiveComputingTransformation: React.FC = () => {
                       }
                     }
                   ].map((app, idx) => (
-                    <div key={idx} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:border-purple-500/50 transition-all">
-                      <div className="flex items-start justify-between mb-4">,"
-                    <div key={idx} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:border-purple-500/50 transition-all">
-                      <div className="flex items-start justify-between mb-4">,"
+                    <div key={idx} className="text-left">
+                      <div className="text-left">,"
+                    <div key={idx} className="text-left">
+                      <div className="text-left">,"
   title= "Intelligent Decision Support",,"
                       industry: "Financial Services",,"
                       impact: {,,
@@ -552,37 +552,37 @@ const CognitiveComputingTransformation: React.FC = () => {
                       }
                     }
                   ].map((app, idx) => (
-                    <div key={idx} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:border-purple-500/50 transition-all">
-                      <div className="flex items-start justify-between mb-4">
+                    <div key={idx} className="text-left">
+                      <div className="text-left">
                         <div >
-                          <h3 className="text-xl font-bold text-white mb-1">{app.title}</h3>
-                          <p className="text-sm text-purple-300">{app.industry} Use Case</p>"
+                          <h3 className="text-left">{app.title}</h3>
+                          <p className="text-left">{app.industry} Use Case</p>"
                         </div>
-                        <Award className="w-8 h-8 text-yellow-400/>">
-                        <Award className="w-8 h-8 text-yellow-400 ">
-                        <Award className="w-8 h-8 text-yellow-400" />
+                        <Award className="text-left">
+                        <Award className="text-left">
+                        <Award className="text-left" />
                       </div>
                       
-                      <div className="grid grid-cols-2 gap-3">
+                      <div className="text-left">
                         {Object.entries(app.impact).map(([key, value], i) => (
-                          <div key={i} className="bg-gradient-to-br from-green-900/20 to-emerald-900/20 border border-green-500/30 rounded-lg p-3">
-                            <div className="text-xs text-purple-300 mb-1 capitalize">{key}:</div>
-                            <div className="text-sm font-bold text-green-300">{value}</div>
-                    <div key={idx} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:border-purple-500/50 transition-all">
-                      <div className="flex items-start justify-between mb-4">
+                          <div key={i} className="text-left">
+                            <div className="text-left">{key}:</div>
+                            <div className="text-left">{value}</div>
+                    <div key={idx} className="text-left">
+                      <div className="text-left">
                         <div >
-                          <h3 className="text-xl font-bold text-white mb-1">{app.title}</h3>
-                          <p className="text-sm text-purple-300">{app.industry} Use Case</p>"
+                          <h3 className="text-left">{app.title}</h3>
+                          <p className="text-left">{app.industry} Use Case</p>"
                         </div>
-                        <Award className="w-8 h-8 text-yellow-400/>">
-                        <Award className="w-8 h-8 text-yellow-400" />
+                        <Award className="text-left">
+                        <Award className="text-left" />
                       </div>
                       
-                      <div className="grid grid-cols-2 gap-3">
+                      <div className="text-left">
                         {Object.entries(app.impact).map(([key, value], i) => (
-                          <div key={i} className="bg-gradient-to-br from-green-900/20 to-emerald-900/20 border border-green-500/30 rounded-lg p-3">
-                            <div className="text-xs text-purple-300 mb-1 capitalize">{key}:</div>
-                            <div className="text-sm font-bold text-green-300">{value}</div>
+                          <div key={i} className="text-left">
+                            <div className="text-left">{key}:</div>
+                            <div className="text-left">{value}</div>
                           </div>
                         ))}
                       </div>
@@ -592,10 +592,10 @@ const CognitiveComputingTransformation: React.FC = () => {
               </section>
               
               <section >
-                <h2 className="text-3xl font-bold text-white mb-6">Implementation Roadmap</h2>"
-                <div className="space-y-4">
-                <h2 className="text-3xl font-bold text-white mb-6">Implementation Roadmap</h2>"
-                <div className="space-y-4">
+                <h2 className="text-left">Implementation Roadmap</h2>"
+                <div className="text-left">
+                <h2 className="text-left">Implementation Roadmap</h2>"
+                <div className="text-left">
                   {[
                     {
                       phase: "Phase 1: Foundation",,"
@@ -619,10 +619,10 @@ const CognitiveComputingTransformation: React.FC = () => {
                       phase: "Phase 4: Optimization",,"
                       duration: "Months 13+",,"
                       investment: "$5-10M/year",,"
-                <h2 className="text-3xl font-bold text-white mb-6">Implementation Roadmap</h2>
-                <div className="space-y-4">
-                <h2 className="text-3xl font-bold text-white mb-6">Implementation Roadmap</h2>
-                <div className="space-y-4">
+                <h2 className="text-left">Implementation Roadmap</h2>
+                <div className="text-left">
+                <h2 className="text-left">Implementation Roadmap</h2>
+                <div className="text-left">
                   {[
                     {
                       phase: "Phase 1: Foundation",,"
@@ -649,144 +649,144 @@ const CognitiveComputingTransformation: React.FC = () => {
                       objectives: "Continuous improvement, new use cases, self-service capabilities
                     }
                   ].map((phase, idx) => (
-                    <div key={idx} className="bg-gradient-to-r from-purple-900/30 to-blue-900/30 border-l-4 border-purple-500 rounded-lg p-6">
-                      <div className="flex items-start justify-between mb-3">
+                    <div key={idx} className="text-left">
+                      <div className="text-left">
                         <div >
-                          <h3 className="text-lg font-bold text-white mb-1">{phase.phase}</h3>
-                          <p className="text-sm text-purple-300">{phase.duration}</p>"
+                          <h3 className="text-left">{phase.phase}</h3>
+                          <p className="text-left">{phase.duration}</p>"
                         </div>
-                        <span className="text-sm font-bold text-yellow-400">{phase.investment}</span>"
+                        <span className="text-left">{phase.investment}<"
                       </div>
-                      <p className="text-purple-100 text-sm">{phase.objectives}</p>"
-                    <div key={idx} className="bg-gradient-to-r from-purple-900/30 to-blue-900/30 border-l-4 border-purple-500 rounded-lg p-6">
-                      <div className="flex items-start justify-between mb-3">
+                      <p className="text-left">{phase.objectives}</p>"
+                    <div key={idx} className="text-left">
+                      <div className="text-left">
                         <div >
-                          <h3 className="text-lg font-bold text-white mb-1">{phase.phase}</h3>
-                          <p className="text-sm text-purple-300">{phase.duration}</p>"
+                          <h3 className="text-left">{phase.phase}</h3>
+                          <p className="text-left">{phase.duration}</p>"
                         </div>
-                        <span className="text-sm font-bold text-yellow-400">{phase.investment}</span>"
+                        <span className="text-left">{phase.investment}<"
                       </div>
-                      <p className="text-purple-100 text-sm">{phase.objectives}</p>"
+                      <p className="text-left">{phase.objectives}</p>"
                     </div>
                   ))}
                 </div>
               </section>
               
               <section >
-                <h2 className="text-3xl font-bold text-white mb-6">ROI & Business Case</h2>"
-                <div className="grid md:grid-cols-2 gap-6 mb-6">
-                  <div className="bg-gradient-to-br from-red-900/20 to-orange-900/20 border border-red-500/30 rounded-xl p-6">
-                    <h3 className="text-xl font-bold text-white mb-4">Total 3-Year Investment</h3>
-                    <ul className="space-y-2 text-purple-100">
-                      <li className="flex justify-between"><span>Infrastructure: </span>/span><span className="font-bold">$12-18M</span></li>
-                      <li className="flex justify-between"><span>Implementation: </span>/span><span className="font-bold">$20-30M</span></li>
-                      <li className="flex justify-between"><span>Change Management: </span>/span><span className="font-bold">$5-8M</span></li>
-                      <li className="flex justify-between"><span>Operations: </span>/span><span className="font-bold">$15-20M</span></li>
-                      <li className="flex justify-between pt-2 border-t border-red-500/30"><span className="font-bold">Total: </span><span className="font-bold text-xl">$52-76M</span></li>
+                <h2 className="text-left">ROI & Business Case</h2>"
+                <div className="text-left">
+                  <div className="text-left">
+                    <h3 className="text-left">Total 3-Year Investment</h3>
+                    <ul className="text-left">
+                      <li className="text-left"><span>Infrastructure: <<span className="text-left">$12-18M<</li>
+                      <li className="text-left"><span>Implementation: <<span className="text-left">$20-30M<</li>
+                      <li className="text-left"><span>Change Management: <<span className="text-left">$5-8M<</li>
+                      <li className="text-left"><span>Operations: <<span className="text-left">$15-20M<</li>
+                      <li className="text-left"><span className="text-left">Total: <<span className="text-left">$52-76M<</li>
                     </ul>
                   </div>
                   
-                  <div className="bg-gradient-to-br from-green-900/20 to-emerald-900/20 border border-green-500/30 rounded-xl p-6">
-                    <h3 className="text-xl font-bold text-white mb-4">3-Year Value Creation</h3>
-                    <ul className="space-y-2 text-purple-100">
-                      <li className="flex justify-between"><span>Efficiency gains: </span>/span><span className="font-bold text-green-300">$840M</span></li>
-                      <li className="flex justify-between"><span>Revenue growth: </span>/span><span className="font-bold text-green-300">$1.2B</span></li>
-                      <li className="flex justify-between"><span>Risk reduction: </span>/span><span className="font-bold text-green-300">$450M</span></li>
-                      <li className="flex justify-between"><span>CX improvement: </span>/span><span className="font-bold text-green-300">$380M</span></li>
-                      <li className="flex justify-between pt-2 border-t border-green-500/30"><span className="font-bold">Total Value: </span><span className="font-bold text-xl text-green-300">$2.87B</span></li>
-                <h2 className="text-3xl font-bold text-white mb-6">ROI & Business Case</h2>
-                <div className="grid md:grid-cols-2 gap-6 mb-6">
-                  <div className="bg-gradient-to-br from-red-900/20 to-orange-900/20 border border-red-500/30 rounded-xl p-6">
-                    <h3 className="text-xl font-bold text-white mb-4">Total 3-Year Investment</h3>
-                    <ul className="space-y-2 text-purple-100">
-                      <li className="flex justify-between"><span>Infrastructure: </span>/span><span className="font-bold">$12-18M</span></li>
-                      <li className="flex justify-between"><span>Implementation: </span>/span><span className="font-bold">$20-30M</span></li>
-                      <li className="flex justify-between"><span>Change Management: </span>/span><span className="font-bold">$5-8M</span></li>
-                      <li className="flex justify-between"><span>Operations: </span>/span><span className="font-bold">$15-20M</span></li>
-                      <li className="flex justify-between pt-2 border-t border-red-500/30"><span className="font-bold">Total: </span><span className="font-bold text-xl">$52-76M</span></li>
+                  <div className="text-left">
+                    <h3 className="text-left">3-Year Value Creation</h3>
+                    <ul className="text-left">
+                      <li className="text-left"><span>Efficiency gains: <<span className="text-left">$840M<</li>
+                      <li className="text-left"><span>Revenue growth: <<span className="text-left">$1.2B<</li>
+                      <li className="text-left"><span>Risk reduction: <<span className="text-left">$450M<</li>
+                      <li className="text-left"><span>CX improvement: <<span className="text-left">$380M<</li>
+                      <li className="text-left"><span className="text-left">Total Value: <<span className="text-left">$2.87B<</li>
+                <h2 className="text-left">ROI & Business Case</h2>
+                <div className="text-left">
+                  <div className="text-left">
+                    <h3 className="text-left">Total 3-Year Investment</h3>
+                    <ul className="text-left">
+                      <li className="text-left"><span>Infrastructure: <<span className="text-left">$12-18M<</li>
+                      <li className="text-left"><span>Implementation: <<span className="text-left">$20-30M<</li>
+                      <li className="text-left"><span>Change Management: <<span className="text-left">$5-8M<</li>
+                      <li className="text-left"><span>Operations: <<span className="text-left">$15-20M<</li>
+                      <li className="text-left"><span className="text-left">Total: <<span className="text-left">$52-76M<</li>
                     </ul>
                   </div>
                   
-                  <div className="bg-gradient-to-br from-green-900/20 to-emerald-900/20 border border-green-500/30 rounded-xl p-6">
-                    <h3 className="text-xl font-bold text-white mb-4">3-Year Value Creation</h3>
-                    <ul className="space-y-2 text-purple-100">
-                      <li className="flex justify-between"><span>Efficiency gains: </span>/span><span className="font-bold text-green-300">$840M</span></li>
-                      <li className="flex justify-between"><span>Revenue growth: </span>/span><span className="font-bold text-green-300">$1.2B</span></li>
-                      <li className="flex justify-between"><span>Risk reduction: </span>/span><span className="font-bold text-green-300">$450M</span></li>
-                      <li className="flex justify-between"><span>CX improvement: </span>/span><span className="font-bold text-green-300">$380M</span></li>
-                      <li className="flex justify-between pt-2 border-t border-green-500/30"><span className="font-bold">Total Value: </span><span className="font-bold text-xl text-green-300">$2.87B</span></li>
-                <h2 className="text-3xl font-bold text-white mb-6">ROI & Business Case</h2>"
-                <div className="grid md:grid-cols-2 gap-6 mb-6">
-                  <div className="bg-gradient-to-br from-red-900/20 to-orange-900/20 border border-red-500/30 rounded-xl p-6">
-                    <h3 className="text-xl font-bold text-white mb-4">Total 3-Year Investment</h3>
-                    <ul className="space-y-2 text-purple-100">
-                      <li className="flex justify-between"><span>Infrastructure: </span>/span><span className="font-bold">$12-18M</span></li>
-                      <li className="flex justify-between"><span>Implementation: </span>/span><span className="font-bold">$20-30M</span></li>
-                      <li className="flex justify-between"><span>Change Management: </span>/span><span className="font-bold">$5-8M</span></li>
-                      <li className="flex justify-between"><span>Operations: </span>/span><span className="font-bold">$15-20M</span></li>
-                      <li className="flex justify-between pt-2 border-t border-red-500/30"><span className="font-bold">Total: </span><span className="font-bold text-xl">$52-76M</span></li>
+                  <div className="text-left">
+                    <h3 className="text-left">3-Year Value Creation</h3>
+                    <ul className="text-left">
+                      <li className="text-left"><span>Efficiency gains: <<span className="text-left">$840M<</li>
+                      <li className="text-left"><span>Revenue growth: <<span className="text-left">$1.2B<</li>
+                      <li className="text-left"><span>Risk reduction: <<span className="text-left">$450M<</li>
+                      <li className="text-left"><span>CX improvement: <<span className="text-left">$380M<</li>
+                      <li className="text-left"><span className="text-left">Total Value: <<span className="text-left">$2.87B<</li>
+                <h2 className="text-left">ROI & Business Case</h2>"
+                <div className="text-left">
+                  <div className="text-left">
+                    <h3 className="text-left">Total 3-Year Investment</h3>
+                    <ul className="text-left">
+                      <li className="text-left"><span>Infrastructure: <<span className="text-left">$12-18M<</li>
+                      <li className="text-left"><span>Implementation: <<span className="text-left">$20-30M<</li>
+                      <li className="text-left"><span>Change Management: <<span className="text-left">$5-8M<</li>
+                      <li className="text-left"><span>Operations: <<span className="text-left">$15-20M<</li>
+                      <li className="text-left"><span className="text-left">Total: <<span className="text-left">$52-76M<</li>
                     </ul>
                   </div>
                   
-                  <div className="bg-gradient-to-br from-green-900/20 to-emerald-900/20 border border-green-500/30 rounded-xl p-6">
-                    <h3 className="text-xl font-bold text-white mb-4">3-Year Value Creation</h3>
-                    <ul className="space-y-2 text-purple-100">
-                      <li className="flex justify-between"><span>Efficiency gains: </span>/span><span className="font-bold text-green-300">$840M</span></li>
-                      <li className="flex justify-between"><span>Revenue growth: </span>/span><span className="font-bold text-green-300">$1.2B</span></li>
-                      <li className="flex justify-between"><span>Risk reduction: </span>/span><span className="font-bold text-green-300">$450M</span></li>
-                      <li className="flex justify-between"><span>CX improvement: </span>/span><span className="font-bold text-green-300">$380M</span></li>
-                      <li className="flex justify-between pt-2 border-t border-green-500/30"><span className="font-bold">Total Value: </span><span className="font-bold text-xl text-green-300">$2.87B</span></li>
-                <h2 className="text-3xl font-bold text-white mb-6">ROI & Business Case</h2>
-                <div className="grid md:grid-cols-2 gap-6 mb-6">
-                  <div className="bg-gradient-to-br from-red-900/20 to-orange-900/20 border border-red-500/30 rounded-xl p-6">
-                    <h3 className="text-xl font-bold text-white mb-4">Total 3-Year Investment</h3>
-                    <ul className="space-y-2 text-purple-100">
-                      <li className="flex justify-between"><span>Infrastructure: </span>/span><span className="font-bold">$12-18M</span></li>
-                      <li className="flex justify-between"><span>Implementation: </span>/span><span className="font-bold">$20-30M</span></li>
-                      <li className="flex justify-between"><span>Change Management: </span>/span><span className="font-bold">$5-8M</span></li>
-                      <li className="flex justify-between"><span>Operations: </span>/span><span className="font-bold">$15-20M</span></li>
-                      <li className="flex justify-between pt-2 border-t border-red-500/30"><span className="font-bold">Total: </span><span className="font-bold text-xl">$52-76M</span></li>
+                  <div className="text-left">
+                    <h3 className="text-left">3-Year Value Creation</h3>
+                    <ul className="text-left">
+                      <li className="text-left"><span>Efficiency gains: <<span className="text-left">$840M<</li>
+                      <li className="text-left"><span>Revenue growth: <<span className="text-left">$1.2B<</li>
+                      <li className="text-left"><span>Risk reduction: <<span className="text-left">$450M<</li>
+                      <li className="text-left"><span>CX improvement: <<span className="text-left">$380M<</li>
+                      <li className="text-left"><span className="text-left">Total Value: <<span className="text-left">$2.87B<</li>
+                <h2 className="text-left">ROI & Business Case</h2>
+                <div className="text-left">
+                  <div className="text-left">
+                    <h3 className="text-left">Total 3-Year Investment</h3>
+                    <ul className="text-left">
+                      <li className="text-left"><span>Infrastructure: <<span className="text-left">$12-18M<</li>
+                      <li className="text-left"><span>Implementation: <<span className="text-left">$20-30M<</li>
+                      <li className="text-left"><span>Change Management: <<span className="text-left">$5-8M<</li>
+                      <li className="text-left"><span>Operations: <<span className="text-left">$15-20M<</li>
+                      <li className="text-left"><span className="text-left">Total: <<span className="text-left">$52-76M<</li>
                     </ul>
                   </div>
                   
-                  <div className="bg-gradient-to-br from-green-900/20 to-emerald-900/20 border border-green-500/30 rounded-xl p-6">
-                    <h3 className="text-xl font-bold text-white mb-4">3-Year Value Creation</h3>
-                    <ul className="space-y-2 text-purple-100">
-                      <li className="flex justify-between"><span>Efficiency gains: </span>/span><span className="font-bold text-green-300">$840M</span></li>
-                      <li className="flex justify-between"><span>Revenue growth: </span>/span><span className="font-bold text-green-300">$1.2B</span></li>
-                      <li className="flex justify-between"><span>Risk reduction: </span>/span><span className="font-bold text-green-300">$450M</span></li>
-                      <li className="flex justify-between"><span>CX improvement: </span>/span><span className="font-bold text-green-300">$380M</span></li>
-                      <li className="flex justify-between pt-2 border-t border-green-500/30"><span className="font-bold">Total Value: </span><span className="font-bold text-xl text-green-300">$2.87B</span></li>
+                  <div className="text-left">
+                    <h3 className="text-left">3-Year Value Creation</h3>
+                    <ul className="text-left">
+                      <li className="text-left"><span>Efficiency gains: <<span className="text-left">$840M<</li>
+                      <li className="text-left"><span>Revenue growth: <<span className="text-left">$1.2B<</li>
+                      <li className="text-left"><span>Risk reduction: <<span className="text-left">$450M<</li>
+                      <li className="text-left"><span>CX improvement: <<span className="text-left">$380M<</li>
+                      <li className="text-left"><span className="text-left">Total Value: <<span className="text-left">$2.87B<</li>
                     </ul>
                   </div>
                 </div>
                 
-                <div className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 border border-purple-500/30 rounded-xl p-8 text-center">
-                  <div className="grid grid-cols-2 gap-8">
+                <div className="text-left">
+                  <div className="text-left">
                     <div >
-                      <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400 mb-2">
+                      <div className="text-left">
   3,675% ROI
                       </div>
-                      <div className="text-purple-200">Over 3 Years</div>
+                      <div className="text-left">Over 3 Years</div>
                     </div>
                     <div >
-                      <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-400 mb-2">
+                      <div className="text-left">
   7-9 Months
                       </div>
-                      <div className="text-purple-200">Payback Period</div>
-                <div className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 border border-purple-500/30 rounded-xl p-8 text-center">
-                  <div className="grid grid-cols-2 gap-8">
+                      <div className="text-left">Payback Period</div>
+                <div className="text-left">
+                  <div className="text-left">
                     <div >
-                      <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400 mb-2">"
+                      <div className="text-left">"
   3,675% ROI
                       </div>
-                      <div className="text-purple-200">Over 3 Years</div>
+                      <div className="text-left">Over 3 Years</div>
                     </div>
                     <div >
-                      <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-400 mb-2">"
+                      <div className="text-left">"
   7-9 Months
                       </div>
-                      <div className="text-purple-200">Payback Period</div>
+                      <div className="text-left">Payback Period</div>
                     </div>
                   </div>
                 </div>
@@ -798,33 +798,33 @@ const CognitiveComputingTransformation: React.FC = () => {
   Zion Tech Group's Cognitive Computing Platform enables rapid deployment of human-like AI intelligence. '
               Achieve 98.5%+ decision accuracy and $1.2B+ in annual value creation.
             </p>
-            <div className="flex flex-wrap gap-4 justify-center">
+            <div className="text-left">
               to="/contact"
   className="inline-flex items-center px-8 py-4 rounded-xl font-bold text-white bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 shadow-xl hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105 group
               >
                 Schedule Assessment
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform 
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="text-left" />
               </Link>
               <Link to="/services/cognitive-computing-transformation
   className="inline-flex items-center px-8 py-4 rounded-xl font-bold text-white bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 transition-all duration-300 hover:scale-105>
-          <div className="mt-16 bg-gradient-to-r from-purple-900/50 to-pink-900/50 border border-purple-500/30 rounded-2xl p-8 text-center">
-            <h2 className="text-3xl font-bold text-white mb-4">Transform Your Enterprise with Cognitive AI</h2>"
-            <p className="text-purple-100 mb-6 max-w-2xl mx-auto">,"
+          <div className="text-left">
+            <h2 className="text-left">Transform Your Enterprise with Cognitive AI</h2>"
+            <p className="text-left">,"
   Zion Tech Group's Cognitive Computing Platform enables rapid deployment of human-like AI intelligence. ;';';
-          <div className="mt-16 bg-gradient-to-r from-purple-900/50 to-pink-900/50 border border-purple-500/30 rounded-2xl p-8 text-center">
-            <h2 className="text-3xl font-bold text-white mb-4">Transform Your Enterprise with Cognitive AI</h2>
-            <p className="text-purple-100 mb-6 max-w-2xl mx-auto">"
+          <div className="text-left">
+            <h2 className="text-left">Transform Your Enterprise with Cognitive AI</h2>
+            <p className="text-left">"
   Zion Tech Group's Cognitive Computing Platform enables rapid deployment of human-like AI intelligence. '
               Achieve 98.5%+ decision accuracy and $1.2B+ in annual value creation.
             </p>
-            <div className="flex flex-wrap gap-4 justify-center">
+            <div className="text-left">
               to="/contact"
   className="inline-flex items-center px-8 py-4 rounded-xl font-bold text-white bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 shadow-xl hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105 group
               >
                 Schedule Assessment
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform 
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="text-left" />
               </Link>
               <Link to="/services/cognitive-computing-transformation
   className="inline-flex items-center px-8 py-4 rounded-xl font-bold text-white bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 transition-all duration-300 hover:scale-105
@@ -835,53 +835,53 @@ const CognitiveComputingTransformation: React.FC = () => {
           </div>
           
           {/* Related Content */}
-          <div className="mt-16">
-            <h2 className="text-2xl font-bold text-white mb-6">Related Content</h2>"
-            <div className="grid md:grid-cols-2 gap-6">
-          <div className="mt-16">
-            <h2 className="text-2xl font-bold text-white mb-6">Related Content</h2>
-            <div className="grid md:grid-cols-2 gap-6">
+          <div className="text-left">
+            <h2 className="text-left">Related Content</h2>"
+            <div className="text-left">
+          <div className="text-left">
+            <h2 className="text-left">Related Content</h2>
+            <div className="text-left">
               <Link to="/blog/ai-2025-multiagent-enterprise-orchestration-revolution
   className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:border-purple-500/50 transition-all group
               >
-                <div className="flex items-center gap-3 mb-3">
-                  <Brain className="w-6 h-6 text-blue-400 ">
-                  <span className="text-sm font-semibold text-purple-300">BLOG POST</span>"
-                <div className="flex items-center gap-3 mb-3">
-                  <Brain className="w-6 h-6 text-blue-400/>">
-                  <span className="text-sm font-semibold text-purple-300">BLOG POST</span>
+                <div className="text-left">
+                  <Brain className="text-left">
+                  <span className="text-left">BLOG POST<"
+                <div className="text-left">
+                  <Brain className="text-left">
+                  <span className="text-left">BLOG POST<
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">
-                <div className="flex items-center gap-3 mb-3">
-                  <Brain className="w-6 h-6 text-blue-400" />
-                  <span className="text-sm font-semibold text-purple-300">BLOG POST</span>
+                <h3 className="text-left">
+                <div className="text-left">
+                  <Brain className="text-left" />
+                  <span className="text-left">BLOG POST<
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">
+                <h3 className="text-left">
   Multi-Agent Enterprise Orchestration Revolution
                 </h3>
-                <p className="text-purple-100 text-sm">
-          <div className="mt-16">
-            <h2 className="text-2xl font-bold text-white mb-6">Related Content</h2>"
-            <div className="grid md:grid-cols-2 gap-6">
-          <div className="mt-16">
-            <h2 className="text-2xl font-bold text-white mb-6">Related Content</h2>
-            <div className="grid md:grid-cols-2 gap-6">
+                <p className="text-left">
+          <div className="text-left">
+            <h2 className="text-left">Related Content</h2>"
+            <div className="text-left">
+          <div className="text-left">
+            <h2 className="text-left">Related Content</h2>
+            <div className="text-left">
               <Link to="/blog/ai-2025-multiagent-enterprise-orchestration-revolution
   className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:border-purple-500/50 transition-all group
               >
-                <div className="flex items-center gap-3 mb-3">
-                  <Brain className="w-6 h-6 text-blue-400/>">
-                  <span className="text-sm font-semibold text-purple-300">BLOG POST</span>"
+                <div className="text-left">
+                  <Brain className="text-left">
+                  <span className="text-left">BLOG POST<"
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">
-                <div className="flex items-center gap-3 mb-3">
-                  <Brain className="w-6 h-6 text-blue-400" />
-                  <span className="text-sm font-semibold text-purple-300">BLOG POST</span>
+                <h3 className="text-left">
+                <div className="text-left">
+                  <Brain className="text-left" />
+                  <span className="text-left">BLOG POST<
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">"
+                <h3 className="text-left">"
   Multi-Agent Enterprise Orchestration Revolution
                 </h3>
-                <p className="text-purple-100 text-sm">"
+                <p className="text-left">"
   Coordinated AI agent teams achieving 97.8% automation and $847M+ value.
                 </p>
               </Link>
@@ -889,37 +889,37 @@ const CognitiveComputingTransformation: React.FC = () => {
               <Link to="/case-studies/global-telecom-cognitive-transformation-4-7-billion
   className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:border-purple-500/50 transition-all group
               >
-                <div className="flex items-center gap-3 mb-3">
-                  <Award className="w-6 h-6 text-green-400 ">
-                  <span className="text-sm font-semibold text-purple-300">CASE STUDY</span>"
-                <div className="flex items-center gap-3 mb-3">
-                  <Award className="w-6 h-6 text-green-400/>">
-                  <span className="text-sm font-semibold text-purple-300">CASE STUDY</span>
+                <div className="text-left">
+                  <Award className="text-left">
+                  <span className="text-left">CASE STUDY<"
+                <div className="text-left">
+                  <Award className="text-left">
+                  <span className="text-left">CASE STUDY<
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">
-                <div className="flex items-center gap-3 mb-3">
-                  <Award className="w-6 h-6 text-green-400" />
-                  <span className="text-sm font-semibold text-purple-300">CASE STUDY</span>
+                <h3 className="text-left">
+                <div className="text-left">
+                  <Award className="text-left" />
+                  <span className="text-left">CASE STUDY<
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">
+                <h3 className="text-left">
   Fortune 20 Telecom: $4.7B Cognitive Transformation,
                 </h3>
-                <p className="text-purple-100 text-sm">
+                <p className="text-left">
   className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:border-purple-500/50 transition-all group
               >
-                <div className="flex items-center gap-3 mb-3">
-                  <Award className="w-6 h-6 text-green-400/>">
-                  <span className="text-sm font-semibold text-purple-300">CASE STUDY</span>"
+                <div className="text-left">
+                  <Award className="text-left">
+                  <span className="text-left">CASE STUDY<"
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">
-                <div className="flex items-center gap-3 mb-3">
-                  <Award className="w-6 h-6 text-green-400" />
-                  <span className="text-sm font-semibold text-purple-300">CASE STUDY</span>
+                <h3 className="text-left">
+                <div className="text-left">
+                  <Award className="text-left" />
+                  <span className="text-left">CASE STUDY<
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">"
+                <h3 className="text-left">"
   Fortune 20 Telecom: $4.7B Cognitive Transformation,
                 </h3>
-                <p className="text-purple-100 text-sm">"
+                <p className="text-left">"
   Real-world cognitive computing success with 98.7% satisfaction and 3,602% ROI.
                 </p>
               </Link>

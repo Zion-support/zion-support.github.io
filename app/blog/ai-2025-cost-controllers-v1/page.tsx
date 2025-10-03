@@ -7,10 +7,10 @@ export const metadata = {
 
 export default function Page() {
   return (
-    <main className="max-w-3xl mx-auto px-4 py-12">"
-      <h1 className="text-4xl font-bold mb-4">AI Cost Controllers v1 (2025)</h1>"
-      <p className="text-gray-600 mb-6">Budgets, tiers, and guardrails for predictable spend with steady UX.</p>"
-      <div className="prose prose-invert">"
+    <main className="text-left">"
+      <h1 className="text-left">AI Cost Controllers v1 (2025)</h1>"
+      <p className="text-left">Budgets, tiers, and guardrails for predictable spend with steady UX.</p>"
+      <div className="text-left">"
         <p>
           Implement budget‑aware routing with quality tiers and semantic caching. Add policy tests that block merges
           when cost budgets or latency SLOs are at risk.

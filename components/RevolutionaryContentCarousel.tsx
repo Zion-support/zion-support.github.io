@@ -84,9 +84,9 @@ export default function RevolutionaryContentCarousel() {
   };
 
   return (
-    <div className="relative bg-white rounded-2xl shadow-2xl overflow-hidden">
+    <div className="text-left">
       {/* Slide Container */}
-      <div className="relative h-96 md:h-[500px] overflow-hidden">
+      <div className="text-left">
         {contentSlides.map((slide, index) => (
           <div
             key={index}
@@ -100,48 +100,48 @@ export default function RevolutionaryContentCarousel() {
           >
             <div className={`h-full bg-gradient-to-br ${slide.gradient} text-white relative overflow-hidden`}>
               {/* Background Pattern */}
-              <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent"></div>
-              <div className="absolute top-4 right-4 w-32 h-32 bg-white/10 rounded-full blur-3xl"></div>
-              <div className="absolute bottom-4 left-4 w-24 h-24 bg-white/10 rounded-full blur-2xl"></div>
+              <div className="text-left"></div>
+              <div className="text-left"></div>
+              <div className="text-left"></div>
               
-              <div className="relative z-10 h-full flex flex-col justify-center px-8 md:px-12">
-                <div className="max-w-4xl">
+              <div className="text-left">
+                <div className="text-left">
                   {/* Badge */}
-                  <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-bold mb-4">
-                    <span>{slide.icon}</span>
-                    <span>{slide.badge}</span>
+                  <div className="text-left">
+                    <span>{slide.icon}<
+                    <span>{slide.badge}<
                   </div>
                   
                   {/* Title */}
-                  <h2 className="text-3xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
+                  <h2 className="text-left">
                     {slide.title}
                   </h2>
                   
                   {/* Subtitle */}
-                  <h3 className="text-xl md:text-2xl font-semibold mb-4 text-blue-100">
+                  <h3 className="text-left">
                     {slide.subtitle}
                   </h3>
                   
                   {/* Description */}
-                  <p className="text-lg md:text-xl mb-6 text-blue-50 max-w-3xl">
+                  <p className="text-left">
                     {slide.description}
                   </p>
                   
                   {/* Metrics */}
-                  <div className="flex flex-wrap gap-4 mb-8">
-                    <div className="bg-white/20 backdrop-blur-sm rounded-lg px-4 py-2">
-                      <div className="text-2xl font-bold text-green-400">{slide.roi}</div>
-                      <div className="text-sm text-blue-100">Total ROI</div>
+                  <div className="text-left">
+                    <div className="text-left">
+                      <div className="text-left">{slide.roi}</div>
+                      <div className="text-left">Total ROI</div>
                     </div>
-                    <div className="bg-white/20 backdrop-blur-sm rounded-lg px-4 py-2">
-                      <div className="text-sm text-blue-100">{slide.metrics}</div>
+                    <div className="text-left">
+                      <div className="text-left">{slide.metrics}</div>
                     </div>
                   </div>
                   
                   {/* CTA Button */}
                   <Link 
                     href={slide.url}
-                    className="inline-block bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-4 rounded-full text-lg font-bold hover:from-yellow-500 hover:to-orange-600 transition-all transform hover:scale-105 shadow-lg"
+                    className="text-left"
                   >
                     Discover More →
                   </Link>
@@ -153,7 +153,7 @@ export default function RevolutionaryContentCarousel() {
       </div>
       
       {/* Navigation Dots */}
-      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+      <div className="text-left">
         {contentSlides.map((_, index) => (
           <button
             key={index}
@@ -171,28 +171,28 @@ export default function RevolutionaryContentCarousel() {
       {/* Navigation Arrows */}
       <button
         onClick={prevSlide}
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white p-3 rounded-full transition-all duration-300 hover:scale-110"
+        className="text-left"
         aria-label="Previous slide"
       >
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="text-left" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
         </svg>
       </button>
       
       <button
         onClick={nextSlide}
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white p-3 rounded-full transition-all duration-300 hover:scale-110"
+        className="text-left"
         aria-label="Next slide"
       >
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="text-left" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
         </svg>
       </button>
       
       {/* Progress Bar */}
-      <div className="absolute bottom-0 left-0 w-full h-1 bg-white/20">
+      <div className="text-left">
         <div 
-          className="h-full bg-gradient-to-r from-yellow-400 to-orange-500 transition-all duration-100 ease-linear"
+          className="text-left"
           style={{ width: `${((currentSlide + 1) / contentSlides.length) * 100}%` }}
         />
       </div>

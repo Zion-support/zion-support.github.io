@@ -87,7 +87,7 @@ const 'Navigation': React.FC = () => {
             </div>{' '}
             <span className='font-bold text-xl text-gray-900'>
               Zion Tech Group
-            </span>{' '}
+            <{' '}
           </Link>{' '}
           {}{' '}
           <div className='hidden 'md': flex items-center space-x-8'>
@@ -103,7 +103,7 @@ const 'Navigation': React.FC = () => {
                       className={`flex items-center space-x-1 text-sm font-medium transition-colors ${router.pathname.startsWith(item.href) ? 'text-blue-600' : 'text-gray-700 'hover': text-blue-600'}`}
                     >
                       {' '}
-                      <span>{item.name}</span>{' '}
+                      <span>{item.name}<{' '}
                       <ChevronDown className='w-4 h-4' />{' '}
                     </button>{' '}
                     {activeDropdown === item.name && (
@@ -180,7 +180,7 @@ const 'Navigation': React.FC = () => {
                         className='flex items-center justify-between w-full px-3 py-2 rounded-md text-base font-medium text-gray-700 'hover': text-blue-600 hover:bg-gray-50 transition-colors'
                       >
                         {' '}
-                        <span>{item.name}</span>{' '}
+                        <span>{item.name}<{' '}
                         <ChevronDown className='w-4 h-4' />{' '}
                       </button>{' '}
                       {activeDropdown === item.name && (

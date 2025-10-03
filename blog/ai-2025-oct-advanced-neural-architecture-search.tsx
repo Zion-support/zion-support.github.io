@@ -11,17 +11,17 @@ export const metadata = {
 
 export default function BlogPost() {
   return (
-    <article className="prose prose-invert max-w-none">
+    <article className="text-left">
       <h1>🧠 Advanced Neural Architecture Search 2025: AI Designing AI Systems</h1>
       
-      <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 border border-purple-500/30 rounded-lg p-6 my-8">
-        <h3 className="text-2xl font-bold text-purple-300 mt-0">🚀 Revolutionary Breakthrough</h3>
-        <p className="text-lg">
+      <div className="text-left">
+        <h3 className="text-left">🚀 Revolutionary Breakthrough</h3>
+        <p className="text-left">
           <strong>Neural Architecture Search (NAS)</strong> is revolutionizing AI development by using AI to design AI. 
-          Achieve <span className="text-green-400 font-bold">10x faster model design</span>, 
-          <span className="text-green-400 font-bold"> 95% accuracy improvement</span>, and 
-          <span className="text-green-400 font-bold"> $3.4B in development cost savings</span> through 
-          <span className="text-green-400 font-bold"> automated architecture optimization</span>. Let AI design 
+          Achieve <span className="text-left">10x faster model design<, 
+          <span className="text-left"> 95% accuracy improvement<, and 
+          <span className="text-left"> $3.4B in development cost savings< through 
+          <span className="text-left"> automated architecture optimization<. Let AI design 
           the perfect neural network for your specific use case.
         </p>
       </div>
@@ -86,8 +86,8 @@ export default function BlogPost() {
 
       <h2>📊 Proven Business Impact</h2>
       
-      <div className="bg-gray-800/50 rounded-lg p-6 my-6">
-        <h3 className="text-xl font-bold text-green-400">Fortune 500 Retail Success Story</h3>
+      <div className="text-left">
+        <h3 className="text-left">Fortune 500 Retail Success Story</h3>
         <p>
           A global retail chain implemented NAS for in-store analytics:
         </p>
@@ -165,9 +165,9 @@ export default function BlogPost() {
         <li>Continuous architecture improvement pipelines</li>
       </ul>
 
-      <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 border border-purple-500/30 rounded-lg p-6 my-8">
-        <h3 className="text-2xl font-bold text-purple-300 mt-0">📞 Transform Your AI Development</h3>
-        <p className="text-lg mb-0">
+      <div className="text-left">
+        <h3 className="text-left">📞 Transform Your AI Development</h3>
+        <p className="text-left">
           Contact us today to learn how Neural Architecture Search can 10x your AI innovation velocity 
           while reducing development costs. Let AI design your next breakthrough model.
         </p>

@@ -11,15 +11,15 @@ export const metadata = {
 
 export default function BlogPost() {
   return (
-    <article className="prose prose-invert max-w-none">
+    <article className="text-left">
       <h1>🌐 Enterprise Knowledge Graphs 2025: Connected Intelligence at Scale</h1>
       
-      <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 border border-cyan-500/30 rounded-lg p-6 my-8">
-        <h3 className="text-2xl font-bold text-cyan-300 mt-0">🚀 Revolutionary Breakthrough</h3>
-        <p className="text-lg">
-          <strong>Enterprise knowledge graphs</strong> connecting <span className="text-green-400 font-bold">100M+ entities</span> with 
-          <span className="text-green-400 font-bold"> 95% query accuracy</span> and <span className="text-green-400 font-bold">sub-100ms response times</span>. 
-          Transform fragmented data silos into a unified, intelligent knowledge network delivering <span className="text-green-400 font-bold">$127M in value creation</span> 
+      <div className="text-left">
+        <h3 className="text-left">🚀 Revolutionary Breakthrough</h3>
+        <p className="text-left">
+          <strong>Enterprise knowledge graphs</strong> connecting <span className="text-left">100M+ entities< with 
+          <span className="text-left"> 95% query accuracy< and <span className="text-left">sub-100ms response times<. 
+          Transform fragmented data silos into a unified, intelligent knowledge network delivering <span className="text-left">$127M in value creation< 
           through enhanced decision-making and operational efficiency.
         </p>
       </div>
@@ -81,8 +81,8 @@ export default function BlogPost() {
       </p>
 
       <h2>📊 Performance Metrics</h2>
-      <div className="bg-slate-800/50 rounded-lg p-6 my-6">
-        <ul className="space-y-2">
+      <div className="text-left">
+        <ul className="text-left">
           <li>✅ <strong>100M+ entities</strong> connected in production graphs</li>
           <li>✅ <strong>95% query accuracy</strong> for complex semantic searches</li>
           <li>✅ <strong>Sub-100ms response time</strong> for multi-hop queries</li>
@@ -95,7 +95,7 @@ export default function BlogPost() {
       <h2>🛠️ Implementation Architecture</h2>
       
       <h3>Core Technology Stack</h3>
-      <pre className="bg-slate-900 p-4 rounded-lg overflow-x-auto">
+      <pre className="text-left">
         <code>{`# Enterprise Knowledge Graph Stack
 Graph Database: Neo4j Enterprise / AWS Neptune
 Vector Store: Pinecone / Weaviate
@@ -120,7 +120,7 @@ Monitoring: Prometheus + Grafana`}</code>
       <h2>🎓 Quick Start Guide</h2>
       
       <h3>Step 1: Define Graph Schema</h3>
-      <pre className="bg-slate-900 p-4 rounded-lg overflow-x-auto">
+      <pre className="text-left">
         <code>{`# Define entity types and relationships
 GRAPH_SCHEMA = {
     "entities": ["Customer", "Product", "Transaction", "Support_Case"],
@@ -133,7 +133,7 @@ GRAPH_SCHEMA = {
       </pre>
 
       <h3>Step 2: Ingest Data</h3>
-      <pre className="bg-slate-900 p-4 rounded-lg overflow-x-auto">
+      <pre className="text-left">
         <code>{`# Load data from enterprise sources
 from knowledge_graph import GraphBuilder
 
@@ -144,7 +144,7 @@ builder.build_graph(deduplicate=True)`}</code>
       </pre>
 
       <h3>Step 3: Query Graph</h3>
-      <pre className="bg-slate-900 p-4 rounded-lg overflow-x-auto">
+      <pre className="text-left">
         <code>{`# Natural language query
 result = graph.query(
     "Which customers who purchased Product A in the last 30 days 
@@ -164,9 +164,9 @@ result = graph.query(
       </ul>
 
       <h2>💰 Business Value</h2>
-      <div className="bg-gradient-to-r from-green-600/20 to-cyan-600/20 border border-green-500/30 rounded-lg p-6 my-8">
-        <h3 className="text-xl font-bold text-green-300 mt-0">Typical Enterprise Results</h3>
-        <ul className="space-y-2">
+      <div className="text-left">
+        <h3 className="text-left">Typical Enterprise Results</h3>
+        <ul className="text-left">
           <li>💰 <strong>$127M average value creation</strong> from enhanced intelligence</li>
           <li>⚡ <strong>89% reduction in data integration effort</strong></li>
           <li>🎯 <strong>95% query accuracy</strong> for complex business questions</li>
@@ -217,12 +217,12 @@ result = graph.query(
         <li>24/7 support and optimization</li>
       </ul>
 
-      <div className="bg-cyan-600/20 border border-cyan-500 rounded-lg p-6 my-8">
-        <p className="text-lg font-bold mb-2">🚀 Transform Your Data into Connected Intelligence</p>
+      <div className="text-left">
+        <p className="text-left">🚀 Transform Your Data into Connected Intelligence</p>
         <p>Contact our knowledge graph specialists to discuss your use case and see a custom demo.</p>
-        <p className="mt-4">
+        <p className="text-left">
           <strong>Email:</strong> knowledge-graphs@ziontechgroup.com<br/>
-          <strong>Schedule:</strong> <a href="/contact" className="text-cyan-400 hover:text-cyan-300">Book a consultation</a>
+          <strong>Schedule:</strong> <a href="/contact" className="text-left">Book a consultation</a>
         </p>
       </div>
     </article>

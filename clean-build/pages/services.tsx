@@ -99,16 +99,16 @@ export default function Services() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
+      <div className="text-left">
         {/* Hero Section */}
-        <section className="relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
-          <div className="relative container mx-auto px-4 py-20 lg:py-32">
-            <div className="text-center max-w-4xl mx-auto">
-              <h1 className="text-5xl lg:text-7xl font-bold text-white mb-8 leading-tight">
-                Our <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Services</span>
+        <section className="text-left">
+          <div className="text-left"></div>
+          <div className="text-left">
+            <div className="text-left">
+              <h1 className="text-left">
+                Our <span className="text-left">Services<
               </h1>
-              <p className="text-xl lg:text-2xl text-gray-300 mb-12 leading-relaxed">
+              <p className="text-left">
                 Comprehensive technology solutions designed to accelerate your business growth 
                 and digital transformation. From web development to AI integration, we've got you covered.
               </p>
@@ -117,25 +117,25 @@ export default function Services() {
         </section>
 
         {/* Services Grid */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <section className="text-left">
+          <div className="text-left">
+            <div className="text-left">
               {services.map((service, index) => (
-                <div key={index} className="card group hover:scale-105 transition-all duration-300">
-                  <div className="flex items-start space-x-6">
-                    <div className="w-20 h-20 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center text-3xl flex-shrink-0">
+                <div key={index} className="text-left">
+                  <div className="text-left">
+                    <div className="text-left">
                       {service.icon}
                     </div>
-                    <div className="flex-1">
-                      <h3 className="text-3xl font-bold text-white mb-4">{service.title}</h3>
-                      <p className="text-gray-300 mb-6 text-lg leading-relaxed">{service.description}</p>
+                    <div className="text-left">
+                      <h3 className="text-left">{service.title}</h3>
+                      <p className="text-left">{service.description}</p>
                       
-                      <div className="mb-6">
-                        <h4 className="text-lg font-semibold text-white mb-3">Key Features:</h4>
-                        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                      <div className="text-left">
+                        <h4 className="text-left">Key Features:</h4>
+                        <ul className="text-left">
                           {service.features.map((feature, featureIndex) => (
-                            <li key={featureIndex} className="text-gray-400 flex items-center">
-                              <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 flex-shrink-0"></span>
+                            <li key={featureIndex} className="text-left">
+                              <span className="text-left"><
                               {feature}
                             </li>
                           ))}
@@ -143,12 +143,12 @@ export default function Services() {
                       </div>
 
                       <div>
-                        <h4 className="text-lg font-semibold text-white mb-3">Technologies:</h4>
-                        <div className="flex flex-wrap gap-2">
+                        <h4 className="text-left">Technologies:</h4>
+                        <div className="text-left">
                           {service.technologies.map((tech, techIndex) => (
-                            <span key={techIndex} className="px-3 py-1 bg-slate-700 text-gray-300 rounded-full text-sm">
+                            <span key={techIndex} className="text-left">
                               {tech}
-                            </span>
+                            <
                           ))}
                         </div>
                       </div>
@@ -161,54 +161,54 @@ export default function Services() {
         </section>
 
         {/* Process Section */}
-        <section className="py-20 bg-slate-800/50">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-                Our <span className="gradient-text">Process</span>
+        <section className="text-left">
+          <div className="text-left">
+            <div className="text-left">
+              <h2 className="text-left">
+                Our <span className="text-left">Process<
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className="text-left">
                 A proven methodology that ensures successful project delivery and client satisfaction.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-white">
+            <div className="text-left">
+              <div className="text-left">
+                <div className="text-left">
                   1
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4">Discovery</h3>
-                <p className="text-gray-300">
+                <h3 className="text-left">Discovery</h3>
+                <p className="text-left">
                   We start by understanding your business goals, requirements, and challenges to create a tailored solution.
                 </p>
               </div>
 
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-white">
+              <div className="text-left">
+                <div className="text-left">
                   2
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4">Planning</h3>
-                <p className="text-gray-300">
+                <h3 className="text-left">Planning</h3>
+                <p className="text-left">
                   We create a detailed project plan with timelines, milestones, and deliverables to ensure smooth execution.
                 </p>
               </div>
 
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-white">
+              <div className="text-left">
+                <div className="text-left">
                   3
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4">Development</h3>
-                <p className="text-gray-300">
+                <h3 className="text-left">Development</h3>
+                <p className="text-left">
                   Our expert team builds your solution using agile methodologies with regular updates and feedback.
                 </p>
               </div>
 
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-orange-600 to-red-600 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-white">
+              <div className="text-left">
+                <div className="text-left">
                   4
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4">Launch</h3>
-                <p className="text-gray-300">
+                <h3 className="text-left">Launch</h3>
+                <p className="text-left">
                   We deploy your solution and provide ongoing support to ensure optimal performance and user satisfaction.
                 </p>
               </div>
@@ -217,18 +217,18 @@ export default function Services() {
         </section>
 
         {/* Industries Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-                Industries We <span className="gradient-text">Serve</span>
+        <section className="text-left">
+          <div className="text-left">
+            <div className="text-left">
+              <h2 className="text-left">
+                Industries We <span className="text-left">Serve<
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className="text-left">
                 We have experience working across various industries, delivering tailored solutions for each sector.
               </p>
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+            <div className="text-left">
               {[
                 { name: 'Healthcare', icon: '🏥' },
                 { name: 'Finance', icon: '💰' },
@@ -237,9 +237,9 @@ export default function Services() {
                 { name: 'Manufacturing', icon: '🏭' },
                 { name: 'Real Estate', icon: '🏠' }
               ].map((industry, index) => (
-                <div key={index} className="card text-center group hover:scale-105 transition-all duration-300">
-                  <div className="text-4xl mb-4">{industry.icon}</div>
-                  <h3 className="text-lg font-semibold text-white">{industry.name}</h3>
+                <div key={index} className="text-left">
+                  <div className="text-left">{industry.icon}</div>
+                  <h3 className="text-left">{industry.name}</h3>
                 </div>
               ))}
             </div>
@@ -247,20 +247,20 @@ export default function Services() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+        <section className="text-left">
+          <div className="text-left">
+            <h2 className="text-left">
               Ready to Get Started?
             </h2>
-            <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
+            <p className="text-left">
               Let's discuss how our services can help transform your business. 
               Contact us today for a free consultation and project estimate.
             </p>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <Link href="/contact" className="btn-primary">
+            <div className="text-left">
+              <Link href="/contact" className="text-left">
                 Get Free Consultation
               </Link>
-              <Link href="/pricing" className="btn-secondary">
+              <Link href="/pricing" className="text-left">
                 View Pricing
               </Link>
             </div>

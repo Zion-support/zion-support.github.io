@@ -1763,7 +1763,7 @@ export default function MicroSaaS() {;
             <div className=\'flex items-center justify-center mb-6\'>;
               <Code className=\'h-12 w-12 text-orange-600 mr-4\'  />;
               <Award className=\'h-6 w-6 text-orange-600 mr-2\'  />;
-              <span className=\'text-base font-semibold leading-7 text-orange-600\'>Micro SaaS</span>;
+              <span className=\'text-base font-semibold leading-7 text-orange-600\'>Micro SaaS<;
             </div>;
             <h1 className=\'text-4xl font-bold tracking-tight text-gray-900 sm: tex t-6xl\'>;
               Micro SaaS Solutions;
@@ -1782,7 +1782,7 @@ export default function MicroSaaS() {;
               <Link
                 href=\'/pricing-guide\'
                 className=\'text-sm font-semibold leading-6 text-gray-900 hover: tex t-orange-600\'>;
-                View Pricing <span aria-hidden=\'true\'>→</span>;
+                View Pricing <span aria-hidden=\'true\'>→<;
               </Link>;
             </div>;
           </div>;
@@ -1876,7 +1876,7 @@ export default function MicroSaaS() {;
                   {service && service.features.map((feature, featureIndex) => (;
                     <li key={featureIndex} className=\'flex items-center gap-x-3\'>;
                       <CheckCircle className=\'h-4 w-4 text-orange-600 flex-shrink-0\'  />;
-                      <span className=\'text-sm text-gray-700\'>{feature}</span>;
+                      <span className=\'text-sm text-gray-700\'>{feature}<;
                     </li>;
                   ))}
                 </ul>;
@@ -1884,7 +1884,7 @@ export default function MicroSaaS() {;
                   <div className=\'flex items-center space-x-4 text-sm text-gray-500\'>;
                     <div className=\'flex items-center space-x-1\'>;
                       <Clock className=\'h-4 w-4\'  />;
-                      <span>{service && service.delivery}</span>;
+                      <span>{service && service.delivery}<;
                     </div>;
                     <div className=\'font-semibold text-orange-600\'>{service && service.pricing}</div>;
                   </div>;
@@ -1914,28 +1914,28 @@ export default function MicroSaaS() {;
           <div className=\'grid grid-cols-1 gap-8 sm: gri d-cols-2 lg: gri d-cols-4\'>;
             <div className=\'text-center\'>;
               <div className=\'flex items-center justify-center h-16 w-16 rounded-full bg-orange-100 mx-auto mb-4\'>;
-                <span className=\'text-2xl font-bold text-orange-600\'>1</span>;
+                <span className=\'text-2xl font-bold text-orange-600\'>1<;
               </div>;
               <h3 className=\'text-lg font-semibold text-gray-900 mb-2\'>Discovery</h3>;
               <p className=\'text-gray-600\'>Requirements gathering and project planning</p>;
             </div>;
             <div className=\'text-center\'>;
               <div className=\'flex items-center justify-center h-16 w-16 rounded-full bg-orange-100 mx-auto mb-4\'>;
-                <span className=\'text-2xl font-bold text-orange-600\'>2</span>;
+                <span className=\'text-2xl font-bold text-orange-600\'>2<;
               </div>;
               <h3 className=\'text-lg font-semibold text-gray-900 mb-2\'>Design</h3>;
               <p className=\'text-gray-600\'>UI/UX design and system architecture</p>;
             </div>;
             <div className=\'text-center\'>;
               <div className=\'flex items-center justify-center h-16 w-16 rounded-full bg-orange-100 mx-auto mb-4\'>;
-                <span className=\'text-2xl font-bold text-orange-600\'>3</span>;
+                <span className=\'text-2xl font-bold text-orange-600\'>3<;
               </div>;
               <h3 className=\'text-lg font-semibold text-gray-900 mb-2\'>Development</h3>;
               <p className=\'text-gray-600\'>Agile development with regular updates</p>;
             </div>;
             <div className=\'text-center\'>;
               <div className=\'flex items-center justify-center h-16 w-16 rounded-full bg-orange-100 mx-auto mb-4\'>;
-                <span className=\'text-2xl font-bold text-orange-600\'>4</span>;
+                <span className=\'text-2xl font-bold text-orange-600\'>4<;
               </div>;
               <h3 className=\'text-lg font-semibold text-gray-900 mb-2\'>Deployment</h3>;
               <p className=\'text-gray-600\'>Testing, deployment, and ongoing support</p>;
@@ -1964,7 +1964,7 @@ export default function MicroSaaS() {;
                 href=\'tel:+13024640950\'
                 className=\'text-sm font-semibold leading-6 text-white hover: tex t-orange-100\'
               >
-                Call +1 302 464 0950 <span aria-hidden=\'true\'>→</span>
+                Call +1 302 464 0950 <span aria-hidden=\'true\'>→<
               </a>
             </div>
           </div>

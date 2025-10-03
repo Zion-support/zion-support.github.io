@@ -20,7 +20,7 @@ interface ChatMessageProps {;
 
             />;
 "
-            <AvatarFallback className="bg-zion-purple text-white">Z;"
+            <AvatarFallback className="text-left">Z;"
           </>;)
 
 

@@ -17,11 +17,11 @@ export const metadata = {
 
 export default function ProductionAgentGuardrailsPage() {
   return (
-    <div className="max-w-4xl mx-auto px-4 py-8">"
-      <Link href="/blog" className="text-blue-600 hover:text-blue-800 mb-6 inline-block">← Back to Blog</Link>"
-      <h1 className="text-4xl font-bold text-gray-900 mb-3">Production Agent Guardrails — October 2, 2025</h1>"
-      <div className="text-gray-600 mb-8">Published: October 2, 2025 • 15 min read • Implementation Guide</div>"
-      <div className="prose prose-lg max-w-none">"
+    <div className="text-left">"
+      <Link href="/blog" className="text-left">← Back to Blog</Link>"
+      <h1 className="text-left">Production Agent Guardrails — October 2, 2025</h1>"
+      <div className="text-left">Published: October 2, 2025 • 15 min read • Implementation Guide</div>"
+      <div className="text-left">"
         <p>
           Ship agentic workflows with confidence. This guide distills battle‑tested patterns for approvals, verifiers,
           budgets, online evaluations, and instant rollback—so autonomy improves outcomes without increasing risk or cost.
@@ -51,10 +51,10 @@ export default function ProductionAgentGuardrailsPage() {
           <li>Scale by domain with shared policy, logging, and budgets</li>
         </ol>
 
-        <div className="bg-emerald-50 border-l-4 border-emerald-600 p-6 rounded">"
-          <h3 className="m-0">Need production‑grade guardrails?</h3>"
-          <p className="m-0">We implement approvals, verifiers, routing, and tracing tailored to your KPIs.</p>"
-          <Link href="/services" className="inline-block mt-3 bg-emerald-600 hover:bg-emerald-700 text-white px-5 py-3 rounded">Explore Services</Link>"
+        <div className="text-left">"
+          <h3 className="text-left">Need production‑grade guardrails?</h3>"
+          <p className="text-left">We implement approvals, verifiers, routing, and tracing tailored to your KPIs.</p>"
+          <Link href="/services" className="text-left">Explore Services</Link>"
         </div>
       </div>
     </div>

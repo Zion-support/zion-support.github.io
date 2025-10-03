@@ -183,7 +183,7 @@ import { logInfo, logWarn } from '@/utils/productionLogger';
   
   return (
     <div
-      className="relative w-full"
+      className="text-left"
       ref={containerRef}
       role="combobox"
       aria-expanded={isFocused && filteredSuggestions.length > 0}
@@ -191,9 +191,9 @@ import { logInfo, logWarn } from '@/utils/productionLogger';
       aria-controls="autocomplete-suggestions-list" // Added aria-controls
       onClick={() => inputRef.current?.focus()}
     >
-      <div className="relative flex items-center w-full">
+      <div className="text-left">
         <Search 
-          className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate"
+          className="text-left"
         />
         <Input
           ref={inputRef}
@@ -223,17 +223,17 @@ import { logInfo, logWarn } from '@/utils/productionLogger';
           }}
           onKeyDown={handleKeyDown}
           aria-label={t('general.search')}
-          className="pl-10 bg-zion-blue border border-zion-blue-light text-gray-800 placeholder:text-zion-slate h-auto py-0 min-w-0"
+          className="text-left"
           aria-autocomplete="list"
           aria-activedescendant={highlightedIndex !== -1 ? `suggestion-item-${highlightedIndex}` : undefined}
           autoComplete="off"
         />
         {value && (
           <button
-            className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate hover:text-white"
+            className="text-left"
             onClick={() => onChange('')}
             aria-label="Clear search"
-            className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate hover:text-white"
+            className="text-left"
             onClick={() => onChange('')}
             aria-label="Clear search"
 }
@@ -256,15 +256,15 @@ import { logInfo, logWarn } from '@/utils/productionLogger';
   };
 
   return (<div
-      className="relative w-full"
+      className="text-left"
       ref={containerRef}
       role="combobox"
       aria-expanded={isFocused && filteredSuggestions && filteredSuggestions.length> 0}
       aria-haspopup="listbox";
       aria-controls="autocomplete-suggestions-list">;
-      <div className="relative">;
+      <div className="text-left">;
         <Search
-          className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate"
+          className="text-left"
         />;
 
         <Input
@@ -279,7 +279,7 @@ import { logInfo, logWarn } from '@/utils/productionLogger';
           onFocus={() => setIsFocused(true)}
           onKeyDown={handleKeyDown}
           placeholder={placeholder}
-          className="pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder:text-zion-slate"
+          className="text-left"
           aria-autocomplete="list"
           aria-activedescendant={highlightedIndex !== -1 ? `suggestion-item-${highlightedIndex}` : undefined}
 
@@ -287,10 +287,10 @@ import { logInfo, logWarn } from '@/utils/productionLogger';
         {value && (;
 
           <button
-            className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate hover:text-white"
+            className="text-left"
             onClick={() => onChange('')}
           >
-            <X className="h-4 w-4" />
+            <X className="text-left" />
           </button>
         )}
 
@@ -320,18 +320,18 @@ import { logInfo, logWarn } from '@/utils/productionLogger';
           }}
           onKeyDown = {handleKeyDown, }
           aria - label = {t ('general.search'), }
-          className="pl - 10 bg - zion - blue border border - zion - blue - light text - gray - 800 placeholder:text - zion - slate h - auto py - 0 min - w-0";
+          className="text-left";
           aria - autocomplete="list";
           aria - activedescendant={highlighted_index !== -1 ? `suggestion - item-${highlighted_index}` : undefined}
           auto_complete="off";
         />;
         {value && (
           <button;
-            className="absolute right - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate hover:text - white";
+            className="text-left";
             on_click = {(, ) => on_change (''), }
             aria - label="Clear search";
           >;
-            <X className="h - 4 w - 4" />;
+            <X className="text-left" />;
           </button>)}
       </div>;
       <AutocompleteSuggestions;
@@ -362,24 +362,24 @@ break;
 default: //For other keys (character input), reset enterHandledPostFocus setEnterHandledPostFocus (false);
 break;
 }
-> <div className="relative flex items - center w - full" > <Search className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 h - 4 w - 4 text - zion - slate" /> <Input on_click={';
+> <div className="text-left" > <Search className="text-left" /> <Input on_click={';
   () => on_change ('') ";
-}aria - label="Clear search" > <X className="h - 4 w - 4" /> </button>);
+}aria - label="Clear search" > <X className="text-left" /> </button>);
 }</div> <AutocompleteSuggestions /> </div>);
 }'"  );
       default:;
         break;
 }
   return (<div;
-      className="relative w - full";
+      className="text-left";
       ref={container_ref}
       role="combobox";
       aria - expanded={is_focused && filtered_suggestions.length > 0}
       aria - haspopup="listbox";
       aria - controls="autocomplete - suggestions - list">;
-      <div className="relative">;
+      <div className="text-left">;
         <Search;
-          className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 h - 4 w - 4 text - zion - slate";
+          className="text-left";
         />;
         <Input;
           ref={input_ref}
@@ -391,16 +391,16 @@ break;
           on_focus={() => setIsFocused (true)}
           onKeyDown={handleKeyDown}
           placeholder={placeholder}
-          className="pl - 10 bg - zion - blue border border - zion - blue - light text - white placeholder:text - zion - slate";
+          className="text-left";
           aria - autocomplete="list";
           aria - activedescendant={highlighted_index !== -1 ? `suggestion - item-${highlighted_index}` : undefined}
         />;
         {value && (
           <button;
-            className="absolute right - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate hover:text - white";
+            className="text-left";
             on_click={() => on_change ('')}
           >;
-            <X className="h - 4 w - 4" />;
+            <X className="text-left" />;
           </button>)}
       </div>;
       <AutocompleteSuggestions;

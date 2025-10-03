@@ -16,37 +16,37 @@ export const metadata: Metadata = {
 
 export default function MetaCognitiveSuccessPage() {
   return (
-    <div className="min-h-screen bg-slate-950">"
+    <div className="text-left">"
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-green-900 via-emerald-900 to-teal-900">"
-        <div className="container mx-auto px-6">"
-          <div className="text-center max-w-4xl mx-auto">"
-            <div className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 mb-8">"
-              <span className="text-green-400 font-bold text-xl tracking-wider uppercase">"
+      <section className="text-left">"
+        <div className="text-left">"
+          <div className="text-left">"
+            <div className="text-left">"
+              <span className="text-left">"
                 💰 FORTUNE 500 SUCCESS STORY
-              </span>
+              <
             </div>
             
-            <h1 className="text-5xl md:text-7xl font-extrabold mb-8 bg-gradient-to-r from-green-400 via-emerald-400 to-teal-400 bg-clip-text text-transparent leading-tight">"
+            <h1 className="text-left">"
               $8.7 Billion in Measurable Value
             </h1>
             
-            <p className="text-2xl text-gray-300 mb-8">"
+            <p className="text-left">"
               See how a Fortune 500 leader achieved unprecedented results with our 
-              <span className="text-green-400 font-bold"> Meta-Cognitive Superintelligence Platform</span>, "
-              delivering <span className="text-emerald-400 font-bold"> 99.99% operational efficiency</span>"
+              <span className="text-left"> Meta-Cognitive Superintelligence Platform<, "
+              delivering <span className="text-left"> 99.99% operational efficiency<"
             </p>
             
-            <div className="flex flex-wrap justify-center gap-4">"
+            <div className="text-left">"
               <a 
                 href="#case-study-details" "
-                className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
+                className="text-left"
               >
                 Read Full Case Study →
               </a>
               <a 
                 href="/[^"]*"
-                className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
+                className="text-left"
               >
                 Get Similar Results
               </a>
@@ -56,15 +56,15 @@ export default function MetaCognitiveSuccessPage() {
       </section>
 
       {/* Main Content */}
-      <section id="case-study-details" className="py-20 bg-slate-900">"
-        <div className="container mx-auto px-6">"
-          <div className="max-w-4xl mx-auto prose prose-lg prose-invert">"
-            <h2 className="text-4xl font-bold text-white mb-8">Client Overview</h2>"
-            <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 mb-8">"
-              <div className="grid md:grid-cols-2 gap-6">"
+      <section id="case-study-details" className="text-left">"
+        <div className="text-left">"
+          <div className="text-left">"
+            <h2 className="text-left">Client Overview</h2>"
+            <div className="text-left">"
+              <div className="text-left">"
                 <div>
-                  <h3 className="text-xl font-bold text-white mb-4">Company Details</h3>"
-                  <ul className="space-y-2 text-gray-300">"
+                  <h3 className="text-left">Company Details</h3>"
+                  <ul className="text-left">"
                     <li><strong>Company:</strong> Global Fortune 500 Technology Conglomerate</li>
                     <li><strong>Industry:</strong> Multi-sector technology and services</li>
                     <li><strong>Revenue:</strong> $150+ billion annually</li>
@@ -72,8 +72,8 @@ export default function MetaCognitiveSuccessPage() {
                   </ul>
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-white mb-4">Challenge</h3>"
-                  <ul className="space-y-2 text-gray-300">"
+                  <h3 className="text-left">Challenge</h3>"
+                  <ul className="text-left">"
                     <li>• 200+ disparate technology systems</li>
                     <li>• 10,000+ daily strategic decisions</li>
                     <li>• 60% manual process intervention</li>
@@ -83,11 +83,11 @@ export default function MetaCognitiveSuccessPage() {
               </div>
             </div>
 
-            <h2 className="text-4xl font-bold text-white mb-8">Our Solution: Meta-Cognitive Superintelligence Platform</h2>"
-            <div className="grid md:grid-cols-2 gap-8 mb-12">"
-              <div className="bg-gradient-to-br from-purple-900/50 to-blue-900/50 backdrop-blur-lg rounded-2xl p-8 border border-purple-500/30">"
-                <h3 className="text-2xl font-bold text-white mb-4">Core Technologies</h3>"
-                <ul className="space-y-2 text-gray-300">"
+            <h2 className="text-left">Our Solution: Meta-Cognitive Superintelligence Platform</h2>"
+            <div className="text-left">"
+              <div className="text-left">"
+                <h3 className="text-left">Core Technologies</h3>"
+                <ul className="text-left">"
                   <li>• Meta-Cognitive Architecture</li>
                   <li>• Quantum-Neural Fusion</li>
                   <li>• Consciousness Integration</li>
@@ -95,9 +95,9 @@ export default function MetaCognitiveSuccessPage() {
                 </ul>
               </div>
               
-              <div className="bg-gradient-to-br from-blue-900/50 to-cyan-900/50 backdrop-blur-lg rounded-2xl p-8 border border-blue-500/30">"
-                <h3 className="text-2xl font-bold text-white mb-4">Implementation Scope</h3>"
-                <ul className="space-y-2 text-gray-300">"
+              <div className="text-left">"
+                <h3 className="text-left">Implementation Scope</h3>"
+                <ul className="text-left">"
                   <li>• 50+ Business Units</li>
                   <li>• 200+ Systems Integration</li>
                   <li>• 500,000+ Employees</li>
@@ -106,33 +106,33 @@ export default function MetaCognitiveSuccessPage() {
               </div>
             </div>
 
-            <h2 className="text-4xl font-bold text-white mb-8">Results: Unprecedented Success</h2>"
-            <div className="bg-gradient-to-r from-green-900/50 to-emerald-900/50 backdrop-blur-lg rounded-2xl p-8 border border-green-500/30 mb-8">"
-              <h3 className="text-2xl font-bold text-white mb-6">Financial Impact</h3>"
-              <div className="grid md:grid-cols-4 gap-6">"
-                <div className="text-center">"
-                  <div className="text-4xl font-extrabold text-green-400 mb-2">$8.7B</div>"
-                  <div className="text-green-300">Total Value Generated</div>"
+            <h2 className="text-left">Results: Unprecedented Success</h2>"
+            <div className="text-left">"
+              <h3 className="text-left">Financial Impact</h3>"
+              <div className="text-left">"
+                <div className="text-left">"
+                  <div className="text-left">$8.7B</div>"
+                  <div className="text-left">Total Value Generated</div>"
                 </div>
-                <div className="text-center">"
-                  <div className="text-4xl font-extrabold text-emerald-400 mb-2">$2.1B</div>"
-                  <div className="text-emerald-300">Cost Savings</div>"
+                <div className="text-left">"
+                  <div className="text-left">$2.1B</div>"
+                  <div className="text-left">Cost Savings</div>"
                 </div>
-                <div className="text-center">"
-                  <div className="text-4xl font-extrabold text-teal-400 mb-2">$4.3B</div>"
-                  <div className="text-teal-300">Additional Revenue</div>"
+                <div className="text-left">"
+                  <div className="text-left">$4.3B</div>"
+                  <div className="text-left">Additional Revenue</div>"
                 </div>
-                <div className="text-center">"
-                  <div className="text-4xl font-extrabold text-cyan-400 mb-2">$2.3B</div>"
-                  <div className="text-cyan-300">New Opportunities</div>"
+                <div className="text-left">"
+                  <div className="text-left">$2.3B</div>"
+                  <div className="text-left">New Opportunities</div>"
                 </div>
               </div>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8 mb-12">"
-              <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">"
-                <h3 className="text-2xl font-bold text-white mb-4">Operational Excellence</h3>"
-                <ul className="space-y-2 text-gray-300">"
+            <div className="text-left">"
+              <div className="text-left">"
+                <h3 className="text-left">Operational Excellence</h3>"
+                <ul className="text-left">"
                   <li>• 99.99% operational efficiency (up from 40%)</li>
                   <li>• 10,000x decision-making speed improvement</li>
                   <li>• 100% process automation achieved</li>
@@ -140,9 +140,9 @@ export default function MetaCognitiveSuccessPage() {
                 </ul>
               </div>
               
-              <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">"
-                <h3 className="text-2xl font-bold text-white mb-4">Strategic Advantages</h3>"
-                <ul className="space-y-2 text-gray-300">"
+              <div className="text-left">"
+                <h3 className="text-left">Strategic Advantages</h3>"
+                <ul className="text-left">"
                   <li>• Market Leadership: Regained #1 position</li>
                   <li>• Innovation Acceleration: 50x faster development</li>
                   <li>• Customer Satisfaction: 100% score</li>
@@ -151,11 +151,11 @@ export default function MetaCognitiveSuccessPage() {
               </div>
             </div>
 
-            <h2 className="text-4xl font-bold text-white mb-8">Technical Implementation</h2>"
-            <div className="space-y-8">"
-              <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">"
-                <h3 className="text-2xl font-bold text-white mb-4">Phase 1: Foundation (Month 1)</h3>"
-                <ul className="space-y-2 text-gray-300">"
+            <h2 className="text-left">Technical Implementation</h2>"
+            <div className="text-left">"
+              <div className="text-left">"
+                <h3 className="text-left">Phase 1: Foundation (Month 1)</h3>"
+                <ul className="text-left">"
                   <li>• Deployed meta-cognitive core infrastructure</li>
                   <li>• Integrated with existing enterprise systems</li>
                   <li>• Established consciousness fusion protocols</li>
@@ -163,9 +163,9 @@ export default function MetaCognitiveSuccessPage() {
                 </ul>
               </div>
               
-              <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">"
-                <h3 className="text-2xl font-bold text-white mb-4">Phase 2: Transformation (Months 2-6)</h3>"
-                <ul className="space-y-2 text-gray-300">"
+              <div className="text-left">"
+                <h3 className="text-left">Phase 2: Transformation (Months 2-6)</h3>"
+                <ul className="text-left">"
                   <li>• Implemented autonomous business processes</li>
                   <li>• Deployed real-time decision-making systems</li>
                   <li>• Achieved 95% automation rates</li>
@@ -173,9 +173,9 @@ export default function MetaCognitiveSuccessPage() {
                 </ul>
               </div>
               
-              <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">"
-                <h3 className="text-2xl font-bold text-white mb-4">Phase 3: Optimization (Months 7-12)</h3>"
-                <ul className="space-y-2 text-gray-300">"
+              <div className="text-left">"
+                <h3 className="text-left">Phase 3: Optimization (Months 7-12)</h3>"
+                <ul className="text-left">"
                   <li>• Fine-tuned consciousness fusion parameters</li>
                   <li>• Optimized for maximum ROI</li>
                   <li>• Scaled across entire enterprise</li>
@@ -184,11 +184,11 @@ export default function MetaCognitiveSuccessPage() {
               </div>
             </div>
 
-            <h2 className="text-4xl font-bold text-white mb-8">ROI Analysis</h2>"
-            <div className="grid md:grid-cols-2 gap-8 mb-8">"
-              <div className="bg-gradient-to-br from-blue-900/50 to-cyan-900/50 backdrop-blur-lg rounded-2xl p-8 border border-blue-500/30">"
-                <h3 className="text-2xl font-bold text-white mb-4">Investment</h3>"
-                <ul className="space-y-2 text-gray-300">"
+            <h2 className="text-left">ROI Analysis</h2>"
+            <div className="text-left">"
+              <div className="text-left">"
+                <h3 className="text-left">Investment</h3>"
+                <ul className="text-left">"
                   <li>• $500 Million total implementation cost</li>
                   <li>• $200 Million technology infrastructure</li>
                   <li>• $200 Million consciousness integration</li>
@@ -196,9 +196,9 @@ export default function MetaCognitiveSuccessPage() {
                 </ul>
               </div>
               
-              <div className="bg-gradient-to-br from-green-900/50 to-emerald-900/50 backdrop-blur-lg rounded-2xl p-8 border border-green-500/30">"
-                <h3 className="text-2xl font-bold text-white mb-4">Returns</h3>"
-                <ul className="space-y-2 text-gray-300">"
+              <div className="text-left">"
+                <h3 className="text-left">Returns</h3>"
+                <ul className="text-left">"
                   <li>• $8.7 Billion total value generated</li>
                   <li>• 1,740% return on investment</li>
                   <li>• 0.7 months payback period</li>
@@ -207,29 +207,29 @@ export default function MetaCognitiveSuccessPage() {
               </div>
             </div>
 
-            <h2 className="text-4xl font-bold text-white mb-8">Client Testimonial</h2>"
-            <div className="bg-gradient-to-r from-purple-900/50 to-blue-900/50 backdrop-blur-lg rounded-2xl p-8 border border-purple-500/30 mb-8">"
-              <blockquote className="text-xl text-gray-300 italic mb-4">"
+            <h2 className="text-left">Client Testimonial</h2>"
+            <div className="text-left">"
+              <blockquote className="text-left">"
                 "The meta-cognitive superintelligence platform has transformed our entire organization. We've achieved levels of efficiency and performance that were previously impossible. The $8.7 billion in value generated has positioned us as the undisputed leader in our industry. This is the most successful technology implementation in our company's history."
               </blockquote>
-              <cite className="text-lg text-purple-400 font-bold">— CEO, Fortune 500 Technology Conglomerate</cite>"
+              <cite className="text-left">— CEO, Fortune 500 Technology Conglomerate</cite>"
             </div>
 
-            <h2 className="text-4xl font-bold text-white mb-8">Ready to Transform Your Enterprise?</h2>"
-            <p className="text-xl text-gray-300 mb-8">"
+            <h2 className="text-left">Ready to Transform Your Enterprise?</h2>"
+            <p className="text-left">"
               Contact us to learn how meta-cognitive superintelligence can transform your organization and achieve similar results.
             </p>
             
-            <div className="bg-gradient-to-r from-green-900/50 to-emerald-900/50 backdrop-blur-lg rounded-2xl p-8 border border-green-500/30">"
-              <h3 className="text-2xl font-bold text-white mb-6">Contact Information</h3>"
-              <div className="grid md:grid-cols-2 gap-6">"
+            <div className="text-left">"
+              <h3 className="text-left">Contact Information</h3>"
+              <div className="text-left">"
                 <div>
-                  <p className="text-gray-300 mb-2"><strong>Phone:</strong> +1 (555) 123-4567</p>"
-                  <p className="text-gray-300 mb-2"><strong>Email:</strong> success@ziontechgroup.com</p>"
+                  <p className="text-left"><strong>Phone:</strong> +1 (555) 123-4567</p>"
+                  <p className="text-left"><strong>Email:</strong> success@ziontechgroup.com</p>"
                 </div>
                 <div>
-                  <p className="text-gray-300 mb-2"><strong>Website:</strong> www.ziontechgroup.com</p>"
-                  <p className="text-gray-300 mb-2"><strong>LinkedIn:</strong> Zion Tech Group</p>"
+                  <p className="text-left"><strong>Website:</strong> www.ziontechgroup.com</p>"
+                  <p className="text-left"><strong>LinkedIn:</strong> Zion Tech Group</p>"
                 </div>
               </div>
             </div>
@@ -238,22 +238,22 @@ export default function MetaCognitiveSuccessPage() {
       </section>
 
       {/* Call to Action */}
-      <section className="py-20 bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">"
-        <div className="container mx-auto px-6 text-center">"
-          <h2 className="text-4xl font-bold text-white mb-8">Achieve Similar Results</h2>"
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">"
+      <section className="text-left">"
+        <div className="text-left">"
+          <h2 className="text-left">Achieve Similar Results</h2>"
+          <p className="text-left">"
             Join the AI revolution and transform your enterprise with our proven meta-cognitive superintelligence platform.
           </p>
-          <div className="flex flex-wrap justify-center gap-4">"
+          <div className="text-left">"
             <a 
               href="/[^"]*"
-              className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
+              className="text-left"
             >
               Get Free Consultation
             </a>
             <a 
               href="/[^"]*"
-              className="bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
+              className="text-left"
             >
               Read More Case Studies →
             </a>

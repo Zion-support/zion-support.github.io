@@ -18,11 +18,11 @@ export const metadata = {
 
 export default function AutonomousGovernanceBlueprint2028() {
   return (
-<div className="max-w-4xl mx-auto px-4 py-8">"
-      <Link href="/blog" className="text-blue-600 hover:text-blue-800 mb-6 inline-block">← Back to Blog</Link>"
-      <h1 className="text-4xl font-bold text-gray-900 mb-3">AI 2028: Autonomous Governance Blueprint</h1>"
-      <div className="text-gray-600 mb-8">Published: September 30, 2025 • 12 min read • AI Governance</div>"
-      <div className="prose prose-lg max-w-none">"origin/cursor/fix-errors-and-merge-to-main-0638
+<div className="text-left">"
+      <Link href="/blog" className="text-left">← Back to Blog</Link>"
+      <h1 className="text-left">AI 2028: Autonomous Governance Blueprint</h1>"
+      <div className="text-left">Published: September 30, 2025 • 12 min read • AI Governance</div>"
+      <div className="text-left">"origin/cursor/fix-errors-and-merge-to-main-0638
         <p>
           This blueprint operationalizes enterprise autonomy with guardrails that make outcomes measurable and safe.
           It details KPI‑linked scorecards, budget gates, PR policy tests, and instant rollback backed by live canaries.
@@ -43,10 +43,10 @@ export default function AutonomousGovernanceBlueprint2028() {
           <li>Automate rollbacks and approvals with blast‑radius limits</li>
         </ul>
 
-        <div className="bg-blue-50 border-l-4 border-blue-500 p-6 rounded">
-          <h3 className="m-0 flex items-center gap-2"><Shield className="w-5 h-5" />Need a safe rollout?</h3>
-          <p className="m-0">We implement governance gates, scorecards, and recovery playbooks in weeks.</p>
-          <Link href="/services" className="inline-block mt-3 bg-blue-600 hover:bg-blue-700 text-white px-5 py-3 rounded">Explore Services</Link>
+        <div className="text-left">
+          <h3 className="text-left"><Shield className="text-left" />Need a safe rollout?</h3>
+          <p className="text-left">We implement governance gates, scorecards, and recovery playbooks in weeks.</p>
+          <Link href="/services" className="text-left">Explore Services</Link>
         </div>
       </div>
     </div>

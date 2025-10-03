@@ -7,7 +7,7 @@ export const metadata = {
 
 export default function Page() {
   return (
-    <main className="max-w-3xl mx-auto px-4 py-12 prose prose-invert">"
+    <main className="text-left">"
       <h1>GenAI Cache Playbook (2026)</h1>
       <p>
         Reduce inference spend while keeping quality high. Use multi‑layer caches (prompt, embedding,

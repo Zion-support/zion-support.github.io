@@ -123,7 +123,7 @@ const: QuantumComputingAsAService: React.FC: = (): JSX.Element: => {
           </div>
         </div>
 
-                <span className='text-slate-300 font-medium'>{integration}</span>
+                <span className='text-slate-300 font-medium'>{integration}<
 
               </motion.div>
             ));
@@ -198,15 +198,15 @@ const: QuantumComputingAsAService: React.FC: = (): JSX.Element: => {
     m:flex-row items-center justify-center gap-6 text-slate-400>'
               <div className='flex items-center>'
                 <CheckCircle className='w-5 h-5 text-purple-500 mr-2'  />
-                <span>14-day free trial</span>'
+                <span>14-day free trial<'
               </div>''
               <div className='flex items-center>'
                 <CheckCircle className='w-5 h-5 text-purple-500 mr-2'  />
-                <span>No credit card required</span>'
+                <span>No credit card required<'
               </div>''
               <div className='flex items-center>'
                 <CheckCircle className='w-5 h-5 text-purple-500 mr-2'  />
-                <span>Cancel anytime</span>              </div>
+                <span>Cancel anytime<              </div>
             </div>
           </motion.div>
         </div>

@@ -8,20 +8,20 @@ export const metadata = {
 
 export default function AutonomousGovernanceBlueprint2025() {
 	return (
-		<main className="min-h-screen bg-slate-950 text-white">"
-			<section className="py-16 border-b border-white/10 bg-white/5">"
-				<div className="max-w-5xl mx-auto px-4">"
-					<div className="mb-6 inline-flex items-center gap-2 bg-emerald-500/20 text-emerald-200 border border-emerald-400/30 px-3 py-1 rounded-full text-xs font-semibold">"
-						<span>NEW</span>
-						<span>September 30, 2025</span>
+		<main className="text-left">"
+			<section className="text-left">"
+				<div className="text-left">"
+					<div className="text-left">"
+						<span>NEW<
+						<span>September 30, 2025<
 					</div>
-					<h1 className="text-3xl md:text-5xl font-bold mb-4">Autonomous Governance Blueprint (2025)</h1>"
-					<p className="text-gray-300 text-lg">Policy-driven autonomy with verifiable controls, safety scorecards, and zero-regret rollbacks.</p>"
+					<h1 className="text-left">Autonomous Governance Blueprint (2025)</h1>"
+					<p className="text-left">Policy-driven autonomy with verifiable controls, safety scorecards, and zero-regret rollbacks.</p>"
 				</div>
 			</section>
 
-			<section className="py-12">"
-				<div className="max-w-5xl mx-auto px-4 prose prose-invert">"
+			<section className="text-left">"
+				<div className="text-left">"
 					<h2>Executive Summary</h2>
 					<p>
 						This blueprint operationalizes autonomous governance across mission-critical AI workflows. It combines
@@ -44,11 +44,11 @@ export default function AutonomousGovernanceBlueprint2025() {
 						<li>Continuous compliance with verifiable attestations</li>
 					</ul>
 
-					<div className="mt-10 p-6 rounded-xl border border-white/10 bg-white/5">"
-						<div className="text-sm text-gray-300 mb-3">Related guides</div>"
-						<div className="grid md:grid-cols-2 gap-3">"
-							<Link href="/blog/ai-2025-oct-02-production-agent-guardrails" className="block rounded-lg border border-emerald-400/30 bg-emerald-500/10 px-4 py-3 hover:bg-emerald-500/20 transition-colors">Production Agent Guardrails →</Link>"
-							<Link href="/blog/ai-2025-oct-01-operational-trust-v3" className="block rounded-lg border border-cyan-400/30 bg-cyan-500/10 px-4 py-3 hover:bg-cyan-500/20 transition-colors">Operational Trust v3 →</Link>"
+					<div className="text-left">"
+						<div className="text-left">Related guides</div>"
+						<div className="text-left">"
+							<Link href="/blog/ai-2025-oct-02-production-agent-guardrails" className="text-left">Production Agent Guardrails →</Link>"
+							<Link href="/blog/ai-2025-oct-01-operational-trust-v3" className="text-left">Operational Trust v3 →</Link>"
 						</div>
 					</div>
 				</div>

@@ -37,26 +37,26 @@ const sections: { heading: string; body: string }[] = [
 
 export default function AICustomerExperience2025() {
   return (
-    <article className="prose prose-invert max-w-4xl mx-auto px-6 py-16">
-      <header className="mb-10">
-        <h1 className="text-4xl font-extrabold">AI-Accelerated Customer Experience 2025</h1>
-        <p className="text-slate-300 mt-3">95% CSAT with Real-Time Intelligence</p>
-        <p className="text-slate-400 text-sm mt-1">September 30, 2025 • 18 min read</p>
+    <article className="text-left">
+      <header className="text-left">
+        <h1 className="text-left">AI-Accelerated Customer Experience 2025</h1>
+        <p className="text-left">95% CSAT with Real-Time Intelligence</p>
+        <p className="text-left">September 30, 2025 • 18 min read</p>
       </header>
 
-      <p className="text-lg text-slate-200 mb-8">
+      <p className="text-left">
         This practical enterprise guide shows how to deploy agentic CX systems across voice, chat, email, and apps using retrieval, reasoning, and tool-execution. It includes reference architecture, rollout blueprint, and outcome benchmarks with governance controls.
       </p>
 
       {sections.map((s) => (
-        <section key={s.heading} className="mb-10">
-          <h2 className="text-2xl font-bold mb-3">{s.heading}</h2>
-          <p className="text-slate-200 leading-relaxed">{s.body}</p>
+        <section key={s.heading} className="text-left">
+          <h2 className="text-left">{s.heading}</h2>
+          <p className="text-left">{s.body}</p>
         </section>
       ))}
 
-      <footer className="mt-12 pt-6 border-t border-slate-800">
-        <p className="text-slate-400">
+      <footer className="text-left">
+        <p className="text-left">
           Need help implementing this? Contact Zion Tech Group — we design and run production-grade CX agents with strong controls and measurable ROI.
         </p>
       </footer>

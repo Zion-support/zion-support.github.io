@@ -12,99 +12,99 @@ export default function AgenticRAGSystemsEnterprise2025() {
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
-      <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
-        <main className="container mx-auto px-6 py-12">
-          <nav className="mb-8">
-            <a href="/blog" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+      <div className="text-left">
+        <main className="text-left">
+          <nav className="text-left">
+            <a href="/blog" className="text-left">
               ← Back to Blog
             </a>
           </nav>
 
-          <article className="max-w-4xl mx-auto">
-            <header className="mb-12">
-              <div className="flex items-center gap-3 mb-4 flex-wrap">
-                <span className="px-3 py-1 bg-purple-400/20 text-purple-400 text-sm rounded-full border border-purple-400/30">
+          <article className="text-left">
+            <header className="text-left">
+              <div className="text-left">
+                <span className="text-left">
                   AI Agents & Knowledge Systems
-                </span>
-                <span className="text-white/60 text-sm">October 1, 2025</span>
-                <span className="text-white/60 text-sm">•</span>
-                <span className="text-white/60 text-sm">26 min read</span>
+                <
+                <span className="text-left">October 1, 2025<
+                <span className="text-left">•<
+                <span className="text-left">26 min read<
               </div>
 
-              <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-purple-400 to-fuchsia-400 bg-clip-text text-transparent">
+              <h1 className="text-left">
                 Agentic RAG Systems: Autonomous AI That Actually Knows Your Business
               </h1>
 
-              <p className="text-xl text-white/80">
+              <p className="text-left">
                 Agentic RAG systems represent the convergence of autonomous AI agents and Retrieval-Augmented Generation, 
                 enabling enterprises to deploy AI that independently researches, synthesizes, and acts on organizational 
                 knowledge with 96% accuracy—transforming how knowledge work gets done.
               </p>
             </header>
 
-            <div className="prose prose-invert prose-lg max-w-none">
-              <section className="mb-12">
-                <h2 className="text-3xl font-bold mb-6 text-cyan-400">Beyond Traditional RAG: The Agentic Revolution</h2>
-                <p className="text-white/80 mb-4">
+            <div className="text-left">
+              <section className="text-left">
+                <h2 className="text-left">Beyond Traditional RAG: The Agentic Revolution</h2>
+                <p className="text-left">
                   Traditional RAG systems improved AI accuracy by grounding responses in retrieved documents. While 
                   effective, they remained reactive—waiting for user queries and returning static answers from a single 
                   search pass.
                 </p>
-                <p className="text-white/80 mb-4">
+                <p className="text-left">
                   Agentic RAG systems transform this paradigm by deploying autonomous AI agents that actively reason 
                   about information needs, execute multi-step research plans, synthesize findings across sources, and 
                   take action—all without human intervention. These systems don't just answer questions; they proactively 
                   solve complex knowledge problems.
                 </p>
-                <div className="bg-gradient-to-r from-purple-500/10 to-fuchsia-500/10 border border-purple-500/30 rounded-lg p-6 my-8">
-                  <h3 className="text-xl font-bold text-purple-400 mb-4">🤖 Agentic RAG Capabilities</h3>
-                  <ul className="space-y-2 text-white/80">
-                    <li><strong className="text-white">Autonomous Research:</strong> AI agents independently plan and execute multi-step research strategies</li>
-                    <li><strong className="text-white">Dynamic Source Selection:</strong> Intelligently choose and query the most relevant knowledge sources</li>
-                    <li><strong className="text-white">Iterative Refinement:</strong> Continuously improve answers through self-critique and additional research</li>
-                    <li><strong className="text-white">Multi-Document Synthesis:</strong> Combine insights from dozens of sources into coherent analysis</li>
-                    <li><strong className="text-white">Action Execution:</strong> Go beyond answers to complete tasks, update systems, and trigger workflows</li>
+                <div className="text-left">
+                  <h3 className="text-left">🤖 Agentic RAG Capabilities</h3>
+                  <ul className="text-left">
+                    <li><strong className="text-left">Autonomous Research:</strong> AI agents independently plan and execute multi-step research strategies</li>
+                    <li><strong className="text-left">Dynamic Source Selection:</strong> Intelligently choose and query the most relevant knowledge sources</li>
+                    <li><strong className="text-left">Iterative Refinement:</strong> Continuously improve answers through self-critique and additional research</li>
+                    <li><strong className="text-left">Multi-Document Synthesis:</strong> Combine insights from dozens of sources into coherent analysis</li>
+                    <li><strong className="text-left">Action Execution:</strong> Go beyond answers to complete tasks, update systems, and trigger workflows</li>
                   </ul>
                 </div>
               </section>
 
-              <section className="mb-12">
-                <h2 className="text-3xl font-bold mb-6 text-cyan-400">The Agentic RAG Architecture</h2>
-                <p className="text-white/80 mb-4">
+              <section className="text-left">
+                <h2 className="text-left">The Agentic RAG Architecture</h2>
+                <p className="text-left">
                   Modern Agentic RAG systems implement sophisticated multi-agent architectures:
                 </p>
-                <div className="space-y-4 mb-6">
-                  <div className="bg-slate-800/50 rounded-lg p-6 border-l-4 border-cyan-500">
-                    <h3 className="text-xl font-bold text-white mb-2">🧠 Planning Agent</h3>
-                    <p className="text-white/80">
+                <div className="text-left">
+                  <div className="text-left">
+                    <h3 className="text-left">🧠 Planning Agent</h3>
+                    <p className="text-left">
                       Analyzes complex queries, breaks them into sub-tasks, and develops multi-step research strategies. 
                       Uses chain-of-thought reasoning to determine what information is needed and how to obtain it.
                     </p>
                   </div>
-                  <div className="bg-slate-800/50 rounded-lg p-6 border-l-4 border-purple-500">
-                    <h3 className="text-xl font-bold text-white mb-2">🔍 Retrieval Agent</h3>
-                    <p className="text-white/80">
+                  <div className="text-left">
+                    <h3 className="text-left">🔍 Retrieval Agent</h3>
+                    <p className="text-left">
                       Executes sophisticated searches across multiple knowledge sources—databases, documents, APIs, and 
                       real-time data streams. Employs vector search, semantic search, and traditional queries in parallel.
                     </p>
                   </div>
-                  <div className="bg-slate-800/50 rounded-lg p-6 border-l-4 border-fuchsia-500">
-                    <h3 className="text-xl font-bold text-white mb-2">📊 Analysis Agent</h3>
-                    <p className="text-white/80">
+                  <div className="text-left">
+                    <h3 className="text-left">📊 Analysis Agent</h3>
+                    <p className="text-left">
                       Synthesizes retrieved information, identifies patterns and contradictions, assesses source reliability, 
                       and generates insights. Performs statistical analysis and logical reasoning on aggregated data.
                     </p>
                   </div>
-                  <div className="bg-slate-800/50 rounded-lg p-6 border-l-4 border-orange-500">
-                    <h3 className="text-xl font-bold text-white mb-2">✅ Verification Agent</h3>
-                    <p className="text-white/80">
+                  <div className="text-left">
+                    <h3 className="text-left">✅ Verification Agent</h3>
+                    <p className="text-left">
                       Validates findings through self-critique, fact-checking, and confidence scoring. Identifies knowledge 
                       gaps and triggers additional research when needed. Ensures accuracy before finalizing responses.
                     </p>
                   </div>
-                  <div className="bg-slate-800/50 rounded-lg p-6 border-l-4 border-green-500">
-                    <h3 className="text-xl font-bold text-white mb-2">⚡ Action Agent</h3>
-                    <p className="text-white/80">
+                  <div className="text-left">
+                    <h3 className="text-left">⚡ Action Agent</h3>
+                    <p className="text-left">
                       Executes tasks based on research findings—updating databases, generating reports, sending notifications, 
                       creating tickets, or triggering workflows. Converts knowledge into automated action.
                     </p>
@@ -112,58 +112,58 @@ export default function AgenticRAGSystemsEnterprise2025() {
                 </div>
               </section>
 
-              <section className="mb-12">
-                <h2 className="text-3xl font-bold mb-6 text-cyan-400">Enterprise Use Cases</h2>
-                <p className="text-white/80 mb-4">
+              <section className="text-left">
+                <h2 className="text-left">Enterprise Use Cases</h2>
+                <p className="text-left">
                   Agentic RAG systems are transforming knowledge work across industries:
                 </p>
-                <div className="grid md:grid-cols-2 gap-6 mb-6">
-                  <div className="bg-gradient-to-br from-cyan-500/10 to-blue-500/10 border border-cyan-500/30 rounded-lg p-6">
-                    <h3 className="text-2xl font-bold text-cyan-400 mb-4">📈 Market Research & Intelligence</h3>
-                    <p className="text-white/80 mb-4">
+                <div className="text-left">
+                  <div className="text-left">
+                    <h3 className="text-left">📈 Market Research & Intelligence</h3>
+                    <p className="text-left">
                       AI agents continuously monitor markets, competitors, and industry trends—autonomously generating 
                       reports, identifying opportunities, and alerting stakeholders to critical developments.
                     </p>
-                    <ul className="space-y-2 text-white/80 text-sm">
+                    <ul className="text-left">
                       <li>✓ 85% reduction in research time</li>
                       <li>✓ 24/7 competitive intelligence monitoring</li>
                       <li>✓ Automatic synthesis of 100+ sources daily</li>
                       <li>✓ Proactive opportunity identification</li>
                     </ul>
                   </div>
-                  <div className="bg-gradient-to-br from-purple-500/10 to-fuchsia-500/10 border border-fuchsia-500/30 rounded-lg p-6">
-                    <h3 className="text-2xl font-bold text-fuchsia-400 mb-4">⚖️ Legal Research & Compliance</h3>
-                    <p className="text-white/80 mb-4">
+                  <div className="text-left">
+                    <h3 className="text-left">⚖️ Legal Research & Compliance</h3>
+                    <p className="text-left">
                       Agents research case law, analyze regulatory changes, and provide comprehensive legal analysis—reducing 
                       attorney research time from days to minutes while maintaining 96% accuracy.
                     </p>
-                    <ul className="space-y-2 text-white/80 text-sm">
+                    <ul className="text-left">
                       <li>✓ 90% faster legal research</li>
                       <li>✓ Continuous regulatory monitoring</li>
                       <li>✓ Automatic precedent identification</li>
                       <li>✓ Compliance impact analysis</li>
                     </ul>
                   </div>
-                  <div className="bg-gradient-to-br from-orange-500/10 to-red-500/10 border border-orange-500/30 rounded-lg p-6">
-                    <h3 className="text-2xl font-bold text-orange-400 mb-4">🏥 Clinical Decision Support</h3>
-                    <p className="text-white/80 mb-4">
+                  <div className="text-left">
+                    <h3 className="text-left">🏥 Clinical Decision Support</h3>
+                    <p className="text-left">
                       Medical AI agents research patient conditions across clinical literature, guidelines, and databases—providing 
                       evidence-based recommendations that improve diagnostic accuracy by 40%.
                     </p>
-                    <ul className="space-y-2 text-white/80 text-sm">
+                    <ul className="text-left">
                       <li>✓ 40% improved diagnostic accuracy</li>
                       <li>✓ Real-time guideline updates</li>
                       <li>✓ Personalized treatment recommendations</li>
                       <li>✓ Automatic literature review</li>
                     </ul>
                   </div>
-                  <div className="bg-gradient-to-br from-green-500/10 to-emerald-500/10 border border-green-500/30 rounded-lg p-6">
-                    <h3 className="text-2xl font-bold text-green-400 mb-4">🔧 Technical Support & Documentation</h3>
-                    <p className="text-white/80 mb-4">
+                  <div className="text-left">
+                    <h3 className="text-left">🔧 Technical Support & Documentation</h3>
+                    <p className="text-left">
                       Support agents autonomously research technical issues across documentation, tickets, and knowledge bases—resolving 
                       70% of incidents without human intervention.
                     </p>
-                    <ul className="space-y-2 text-white/80 text-sm">
+                    <ul className="text-left">
                       <li>✓ 70% autonomous issue resolution</li>
                       <li>✓ 5-minute average resolution time</li>
                       <li>✓ Cross-system knowledge synthesis</li>
@@ -173,32 +173,32 @@ export default function AgenticRAGSystemsEnterprise2025() {
                 </div>
               </section>
 
-              <section className="mb-12">
-                <h2 className="text-3xl font-bold mb-6 text-cyan-400">Performance Metrics & ROI</h2>
-                <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/30 rounded-lg p-6 my-8">
-                  <h3 className="text-xl font-bold text-cyan-400 mb-4">📊 Enterprise Impact</h3>
-                  <div className="grid md:grid-cols-3 gap-6">
+              <section className="text-left">
+                <h2 className="text-left">Performance Metrics & ROI</h2>
+                <div className="text-left">
+                  <h3 className="text-left">📊 Enterprise Impact</h3>
+                  <div className="text-left">
                     <div>
-                      <div className="text-4xl font-bold text-cyan-400 mb-2">96%</div>
-                      <div className="text-white/80">Answer Accuracy</div>
-                      <div className="text-white/60 text-sm mt-2">Validated against expert human responses</div>
+                      <div className="text-left">96%</div>
+                      <div className="text-left">Answer Accuracy</div>
+                      <div className="text-left">Validated against expert human responses</div>
                     </div>
                     <div>
-                      <div className="text-4xl font-bold text-purple-400 mb-2">85%</div>
-                      <div className="text-white/80">Time Savings</div>
-                      <div className="text-white/60 text-sm mt-2">Reduction in knowledge work duration</div>
+                      <div className="text-left">85%</div>
+                      <div className="text-left">Time Savings</div>
+                      <div className="text-left">Reduction in knowledge work duration</div>
                     </div>
                     <div>
-                      <div className="text-4xl font-bold text-fuchsia-400 mb-2">$3.2M</div>
-                      <div className="text-white/80">Annual Savings</div>
-                      <div className="text-white/60 text-sm mt-2">Per 1,000 knowledge workers</div>
+                      <div className="text-left">$3.2M</div>
+                      <div className="text-left">Annual Savings</div>
+                      <div className="text-left">Per 1,000 knowledge workers</div>
                     </div>
                   </div>
                 </div>
-                <p className="text-white/80 mb-4">
+                <p className="text-left">
                   A Fortune 500 professional services firm deployed Agentic RAG across 5,000 consultants:
                 </p>
-                <ul className="space-y-2 text-white/80 mb-6">
+                <ul className="text-left">
                   <li>• Research time reduced from 8 hours to 45 minutes per project</li>
                   <li>• 95% of routine research fully automated</li>
                   <li>• $15M annual productivity gains</li>
@@ -207,128 +207,128 @@ export default function AgenticRAGSystemsEnterprise2025() {
                 </ul>
               </section>
 
-              <section className="mb-12">
-                <h2 className="text-3xl font-bold mb-6 text-cyan-400">Advanced Agentic RAG Techniques</h2>
-                <p className="text-white/80 mb-4">
+              <section className="text-left">
+                <h2 className="text-left">Advanced Agentic RAG Techniques</h2>
+                <p className="text-left">
                   Cutting-edge Agentic RAG systems employ sophisticated methods:
                 </p>
-                <ul className="space-y-4 text-white/80 mb-6">
+                <ul className="text-left">
                   <li>
-                    <strong className="text-white">Hierarchical Planning:</strong> Multi-level agent coordination where high-level 
+                    <strong className="text-left">Hierarchical Planning:</strong> Multi-level agent coordination where high-level 
                     agents delegate sub-tasks to specialized agents, enabling complex workflows with dozens of steps.
                   </li>
                   <li>
-                    <strong className="text-white">Adaptive Retrieval Strategies:</strong> Dynamic adjustment of search methods based 
+                    <strong className="text-left">Adaptive Retrieval Strategies:</strong> Dynamic adjustment of search methods based 
                     on query complexity, source availability, and time constraints—optimizing for speed vs. comprehensiveness.
                   </li>
                   <li>
-                    <strong className="text-white">Multi-Modal Knowledge Integration:</strong> Synthesis across text, images, tables, 
+                    <strong className="text-left">Multi-Modal Knowledge Integration:</strong> Synthesis across text, images, tables, 
                     code, and structured data—enabling comprehensive understanding of complex technical domains.
                   </li>
                   <li>
-                    <strong className="text-white">Temporal Reasoning:</strong> Understanding time-sensitive information, tracking 
+                    <strong className="text-left">Temporal Reasoning:</strong> Understanding time-sensitive information, tracking 
                     changes across versions, and reasoning about historical context vs. current state.
                   </li>
                   <li>
-                    <strong className="text-white">Uncertainty Quantification:</strong> Explicit confidence scores for each claim, 
+                    <strong className="text-left">Uncertainty Quantification:</strong> Explicit confidence scores for each claim, 
                     identification of conflicting sources, and transparent communication of knowledge gaps.
                   </li>
                   <li>
-                    <strong className="text-white">Continuous Learning:</strong> Agents that improve through usage, learning from 
+                    <strong className="text-left">Continuous Learning:</strong> Agents that improve through usage, learning from 
                     user feedback, correction signals, and successful research patterns over time.
                   </li>
                 </ul>
               </section>
 
-              <section className="mb-12">
-                <h2 className="text-3xl font-bold mb-6 text-cyan-400">Implementation Best Practices</h2>
-                <p className="text-white/80 mb-4">
+              <section className="text-left">
+                <h2 className="text-left">Implementation Best Practices</h2>
+                <p className="text-left">
                   Successful Agentic RAG deployment requires careful planning:
                 </p>
-                <div className="space-y-4 mb-6">
-                  <div className="bg-slate-800/50 rounded-lg p-6">
-                    <h3 className="text-xl font-bold text-cyan-400 mb-3">1. Knowledge Source Preparation</h3>
-                    <p className="text-white/80 mb-3">
+                <div className="text-left">
+                  <div className="text-left">
+                    <h3 className="text-left">1. Knowledge Source Preparation</h3>
+                    <p className="text-left">
                       Catalog and structure organizational knowledge sources. Clean and enrich documents with metadata. 
                       Establish data pipelines for real-time ingestion. Implement access controls and security boundaries.
                     </p>
-                    <span className="text-white/60 text-sm">Critical for retrieval accuracy and security</span>
+                    <span className="text-left">Critical for retrieval accuracy and security<
                   </div>
-                  <div className="bg-slate-800/50 rounded-lg p-6">
-                    <h3 className="text-xl font-bold text-purple-400 mb-3">2. Agent Orchestration Design</h3>
-                    <p className="text-white/80 mb-3">
+                  <div className="text-left">
+                    <h3 className="text-left">2. Agent Orchestration Design</h3>
+                    <p className="text-left">
                       Define agent roles, responsibilities, and interaction protocols. Design escalation paths and 
                       human-in-the-loop triggers. Establish performance monitoring and quality assurance processes.
                     </p>
-                    <span className="text-white/60 text-sm">Ensures reliable autonomous operation</span>
+                    <span className="text-left">Ensures reliable autonomous operation<
                   </div>
-                  <div className="bg-slate-800/50 rounded-lg p-6">
-                    <h3 className="text-xl font-bold text-fuchsia-400 mb-3">3. Evaluation Framework</h3>
-                    <p className="text-white/80 mb-3">
+                  <div className="text-left">
+                    <h3 className="text-left">3. Evaluation Framework</h3>
+                    <p className="text-left">
                       Build comprehensive test sets covering diverse use cases. Implement automated accuracy measurement. 
                       Establish expert review processes for critical decisions. Track latency, cost, and quality metrics.
                     </p>
-                    <span className="text-white/60 text-sm">Maintains quality and drives continuous improvement</span>
+                    <span className="text-left">Maintains quality and drives continuous improvement<
                   </div>
-                  <div className="bg-slate-800/50 rounded-lg p-6">
-                    <h3 className="text-xl font-bold text-orange-400 mb-3">4. Phased Rollout</h3>
-                    <p className="text-white/80 mb-3">
+                  <div className="text-left">
+                    <h3 className="text-left">4. Phased Rollout</h3>
+                    <p className="text-left">
                       Start with read-only research applications before enabling actions. Begin with power users who 
                       provide feedback. Gradually expand scope and automation level based on proven performance.
                     </p>
-                    <span className="text-white/60 text-sm">De-risks deployment and builds confidence</span>
+                    <span className="text-left">De-risks deployment and builds confidence<
                   </div>
                 </div>
               </section>
 
-              <section className="mb-12">
-                <h2 className="text-3xl font-bold mb-6 text-cyan-400">The Future of Agentic RAG</h2>
-                <p className="text-white/80 mb-4">
+              <section className="text-left">
+                <h2 className="text-left">The Future of Agentic RAG</h2>
+                <p className="text-left">
                   Next-generation Agentic RAG systems will deliver revolutionary capabilities:
                 </p>
-                <ul className="space-y-3 text-white/80 mb-6">
+                <ul className="text-left">
                   <li>
-                    <strong className="text-white">Proactive Knowledge Agents:</strong> AI that anticipates information needs before 
+                    <strong className="text-left">Proactive Knowledge Agents:</strong> AI that anticipates information needs before 
                     they're expressed, delivering insights to users before they even ask.
                   </li>
                   <li>
-                    <strong className="text-white">Cross-Organization Collaboration:</strong> Agents that securely research across 
+                    <strong className="text-left">Cross-Organization Collaboration:</strong> Agents that securely research across 
                     organizational boundaries using federated learning and encrypted collaboration protocols.
                   </li>
                   <li>
-                    <strong className="text-white">Scientific Discovery Acceleration:</strong> Research agents that generate and test 
+                    <strong className="text-left">Scientific Discovery Acceleration:</strong> Research agents that generate and test 
                     hypotheses, design experiments, and synthesize findings—accelerating R&D cycles by 10x.
                   </li>
                   <li>
-                    <strong className="text-white">Personalized Knowledge Assistants:</strong> Agents that learn individual work styles, 
+                    <strong className="text-left">Personalized Knowledge Assistants:</strong> Agents that learn individual work styles, 
                     preferences, and expertise—customizing research and recommendations to each user.
                   </li>
                   <li>
-                    <strong className="text-white">Multi-Agent Reasoning:</strong> Teams of specialized agents collaborating on complex 
+                    <strong className="text-left">Multi-Agent Reasoning:</strong> Teams of specialized agents collaborating on complex 
                     problems through negotiation, debate, and consensus-building—mimicking human expert panels.
                   </li>
                 </ul>
               </section>
 
-              <section className="mb-12 bg-gradient-to-r from-purple-600/20 to-fuchsia-600/20 border border-purple-500/50 rounded-lg p-8">
-                <h2 className="text-3xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-fuchsia-400">
+              <section className="text-left">
+                <h2 className="text-left">
                   Transform Knowledge Work with Zion Tech Group
                 </h2>
-                <p className="text-white/90 text-lg mb-6">
+                <p className="text-left">
                   Deploy enterprise-grade Agentic RAG systems that revolutionize how your organization handles knowledge. 
                   Our autonomous AI agents deliver 96% accuracy, 85% time savings, and $3.2M+ annual ROI per 1,000 
                   knowledge workers. Transform research, analysis, and decision-making starting today.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4">
+                <div className="text-left">
                   <a
                     href="/contact"
-                    className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold rounded-lg transition-all duration-300 shadow-lg hover:shadow-cyan-500/50"
+                    className="text-left"
                   >
                     Schedule Demo
                   </a>
                   <a
                     href="/services"
-                    className="inline-flex items-center justify-center px-8 py-4 border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-bold rounded-lg transition-all duration-300"
+                    className="text-left"
                   >
                     Explore Agentic AI Solutions
                   </a>

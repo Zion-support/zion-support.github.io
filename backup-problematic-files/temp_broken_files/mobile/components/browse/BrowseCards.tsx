@@ -22,65 +22,65 @@ interface BrowseItem {;
 export function BrowseCards({ items, type, onViewDetails } BrowseCardsProps) {;
   const [savedItems, setSavedItems] = useState<string[]>([]),;
 </string>"
-    <div className="space-y-4 pb-24">;"
+    <div className="text-left">;"
 </div>"
-        <Card key={item.id} className="overflow-hidden">;"
+        <Card key={item.id} className="text-left">;"
 "
-          <CardContent className="p-0">;"
-            <div className="p-4">;"
-              <div className="flex justify-between">;"
-                <div className="flex items-center gap-3">;"
-                    <Avatar className="h-12 w-12">;"
+          <CardContent className="text-left">;"
+            <div className="text-left">;"
+              <div className="text-left">;"
+                <div className="text-left">;"
+                    <Avatar className="text-left">;"
                       <AvatarImage src={item.image} alt={item.title} />;
 
                       <AvatarFallback>{item.title.charAt(0).toUpperCase()};
                     ;"
-                    <div className="h-12 w-12 rounded-md bg-primary/10 flex items-center justify-center">;"
-                      <span className="text-primary font-semibold">JOB</span>;"
-                    <h3 className="font-medium">{item.title}</h3>;""
-                    <p className="text-sm text-muted-foreground">{item.subtitle}</p>;"
+                    <div className="text-left">;"
+                      <span className="text-left">JOB<;"
+                    <h3 className="text-left">{item.title}</h3>;""
+                    <p className="text-left">{item.subtitle}</p>;"
                 <button ;"
-                  className="h-8 w-8 flex items-center justify-center";"
+                  className="text-left";"
                   onClick={() => toggleSaved(item.id)}
 </button>"
-                    <BookmarkCheck className="h-5 w-5 text-primary" />;"
-                    <Bookmark className="h-5 w-5 text-muted-foreground" />;"
+                    <BookmarkCheck className="text-left" />;"
+                    <Bookmark className="text-left" />;"
                 </button>;
               </div>;"
-              <div className="mt-3 flex flex-wrap gap-1">;"
+              <div className="text-left">;"
 </div>
                   <Badge ;
                     key={index} ;"
                     variant="outline" ;""
-                    className="text-xs font-normal";"
+                    className="text-left";"
                   >;
 
-              <p className="mt-3 text-sm line-clamp-2">{item.description}</p>;""
-              <div className="mt-3 flex flex-wrap gap-3 text-xs text-muted-foreground">;"
-                  <div className="flex items-center gap-1">;"
-                    <MapPin className="h-3 w-3" />;"
-                    <span>{item.location}</span>;
-                    <DollarSign className="h-3 w-3" />;"
-                    <span>{item.price}</span>;
-                    <Clock className="h-3 w-3" />;"
-                    <span>{item.timePosted}</span>;
-                  <div className="ml-auto bg-primary/10 text-primary rounded-full px-2 py-0.5">;"
-            <div className="border-t border-border p-3 flex justify-end">;"
+              <p className="text-left">{item.description}</p>;""
+              <div className="text-left">;"
+                  <div className="text-left">;"
+                    <MapPin className="text-left" />;"
+                    <span>{item.location}<;
+                    <DollarSign className="text-left" />;"
+                    <span>{item.price}<;
+                    <Clock className="text-left" />;"
+                    <span>{item.timePosted}<;
+                  <div className="text-left">;"
+            <div className="text-left">;"
               <Button ;"
                 size="sm";"
 subtitle: string;,
   description: string;
 
 
-                View Details <ChevronRight className="h-4 w-4" />;"
+                View Details <ChevronRight className="text-left" />;"
 pr-12325
   const [savedItems, setSavedItems] = useState<string[]> ([]);
-setSavedItems (prev => prev.includes (id) ? prev.filter (itemId => itemId !== id) ) : (<div className="h-12 w-12 rounded-md bg-primary/10 flex items-center justify-center" > <span className="text-primary font-semibold" >JOB</span> </div>) ";"}<div> </div> </div> <button) : (<Bookmark className="h-5 w-5 text-muted-foreground" />) ;""
-}</button> </div> <Badge key= {;"  index ";"}variant="outline" className="text-xs font-normal" >{;"
+setSavedItems (prev => prev.includes (id) ? prev.filter (itemId => itemId !== id) ) : (<div className="text-left" > <span className="text-left" >JOB< </div>) ";"}<div> </div> </div> <button) : (<Bookmark className="text-left" />) ;""
+}</button> </div> <Badge key= {;"  index ";"}variant="outline" className="text-left" >{;"
 }) ) ;
 }</div> <span >{;
-</span>
-}</span> </div>) ;
+<
+}< </div>) ;
 }<span >{;
 
 

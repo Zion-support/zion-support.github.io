@@ -21,28 +21,28 @@ export default function FeaturedServiceCard({
   return (
     <div className={`bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border ${popular ? 'border-blue-300 ring-2 ring-blue-100' : 'border-gray-200'} hover:border-blue-300 relative`}>
       {popular && (
-        <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-          <span className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-bold">
+        <div className="text-left">
+          <span className="text-left">
             Most Popular
-          </span>
+          <
         </div>
       )}
       
-      <div className="text-center mb-6">
-        <h3 className="text-xl font-bold text-gray-900 mb-3">{title}</h3>
-        <p className="text-gray-600 mb-4">{description}</p>
-        <div className="text-3xl font-bold text-blue-600 mb-4">{price}</div>
+      <div className="text-left">
+        <h3 className="text-left">{title}</h3>
+        <p className="text-left">{description}</p>
+        <div className="text-left">{price}</div>
       </div>
       
-      <ul className="space-y-3 mb-6">
+      <ul className="text-left">
         {features.map((feature, index) => (
-          <li key={index} className="flex items-center gap-3">
-            <div className="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
-              <svg className="w-3 h-3 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+          <li key={index} className="text-left">
+            <div className="text-left">
+              <svg className="text-left" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
               </svg>
             </div>
-            <span className="text-gray-700">{feature}</span>
+            <span className="text-left">{feature}<
           </li>
         ))}
       </ul>

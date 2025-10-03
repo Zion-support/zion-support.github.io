@@ -77,7 +77,7 @@ import: { Home, Briefcase, '  Users, Phone',;
   '  ]
   const renderNavSection = (title: anyanyanyanyanyanyanyanyanyanyanyanyanystring, items[], sectionKey: string)               => ('
     <div key={sectionKey} className='mb-6>      <button'        onClick={() => toggleSection(sectionKey)}
-        className='flex items-center justify-between w-full px-3 py-2 text-left text-gray-300 hover: text-white transition-colors duration-200 font-medium''      >'        <span className='text-sm font-semibold uppercase tracking-wide'>{title}</span>'        {expandedSections.includes(sectionKey) ? ('          <ChevronDown className='w-4 h-4' />        ) : ('          <ChevronRight className='w-4 h-4' />        )}      </button>
+        className='flex items-center justify-between w-full px-3 py-2 text-left text-gray-300 hover: text-white transition-colors duration-200 font-medium''      >'        <span className='text-sm font-semibold uppercase tracking-wide'>{title}<'        {expandedSections.includes(sectionKey) ? ('          <ChevronDown className='w-4 h-4' />        ) : ('          <ChevronRight className='w-4 h-4' />        )}      </button>
       {expandedSections.includes(sectionKey) && ('
         <div className='mt-2 space-y-1>          {items.map((item) => ('            <Link;
 
@@ -117,7 +117,7 @@ import: { Home, Briefcase, '  Users, Phone',;
 
   rel={contact.href.startsWith('http;
   ') ? 'noopener noreferrer;
-  ': '}                className='flex items-center gap-2 text-xs text-zion-slate-light hover:text-zion-cyan transition-colors duration-200''              >'                <contact.icon className='w-3 h-3' />                <span className='truncate'>{contact.text}</span>'              </a>'            ))}
+  ': '}                className='flex items-center gap-2 text-xs text-zion-slate-light hover:text-zion-cyan transition-colors duration-200''              >'                <contact.icon className='w-3 h-3' />                <span className='truncate'>{contact.text}<'              </a>'            ))}
           </div>
           {/* Social Links */}
           <div className='flex items-center gap-3 mb-4>            {socialLinks.map((social) => ('              <a

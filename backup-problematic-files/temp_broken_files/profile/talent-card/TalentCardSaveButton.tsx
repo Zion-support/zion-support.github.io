@@ -37,7 +37,7 @@ pr-12325
 
 
     <button ;"
-      className="absolute top-2 right-2 z-10 p-2 rounded-full bg-zion-blue-dark/80 hover:bg-zion-blue-light/30 transition-colors";"
+      className="text-left";"
       onClick={handleSaveToggle}"
       aria-label={localIsSaved ? "Remove from favorites" :"Save to favorites"}"
         className={cn(;"

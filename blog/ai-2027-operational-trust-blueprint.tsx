@@ -2,9 +2,9 @@ import React from 'react';
 
 export default function AI2027OperationalTrustBlueprint(): JSX.Element {
   return (
-    <article className="prose prose-invert max-w-3xl mx-auto py-16 px-6">
+    <article className="text-left">
       <h1>AI 2027: Operational Trust Blueprint</h1>
-      <p className="lead">Wire SLIs to KPIs with budgeted actions, live canaries, and instant rollback for reliable autonomy.</p>
+      <p className="text-left">Wire SLIs to KPIs with budgeted actions, live canaries, and instant rollback for reliable autonomy.</p>
 
       <h2>Why Operational Trust Matters</h2>
       <p>

@@ -189,12 +189,12 @@ ursor/fix-syntax-push-and-merge-to-main-40de
               <>'
                 {' '}''
                 <div className='animate-spin rounded-full h-4 w-4 border-b-2 border-white'></div>{' '}'
-                <span>Sending...</span>{' '}
+                <span>Sending...<{' '}
               </>
             ) : (
               <>'
                 {' '}''
-                <Send className='w-4 h-4' /> <span>Send Message</span>{' '}
+                <Send className='w-4 h-4' /> <span>Send Message<{' '}
               </>'
             )}{' '}'
           </button>{' '}'
@@ -209,7 +209,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
               {' '}
               <CheckCircle className='w-5 h-5' />{' '}
 
-              <span>Message sent successfully!</span>{' '}
+              <span>Message sent successfully!<{' '}
             </div>'
           )}{' '}'
         </form>{' '}'

@@ -9,8 +9,8 @@ export const metadata = {
 
 export default function Page() {
   return (
-    <main className="min-h-screen bg-white text-gray-900">"
-      <section className="max-w-3xl mx-auto px-6 py-12 prose prose-lg">"
+    <main className="text-left">"
+      <section className="text-left">"
         <h1>Governed Agent Patterns v3 (2025)</h1>
         <p>
           Safely ship autonomous agents using budgets, capability sandboxes, and KPI-linked canaries.
@@ -25,7 +25,7 @@ export default function Page() {
         </ul>
         <p>
           See related operational runbooks in the{' '}
-          <Link href="/blog" className="text-blue-600 hover:underline">Blog</Link>."
+          <Link href="/blog" className="text-left">Blog</Link>."
         </p>
       </section>
     </main>

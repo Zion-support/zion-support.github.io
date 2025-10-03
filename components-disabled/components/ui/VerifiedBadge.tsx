@@ -28,7 +28,7 @@ origin/cursor/automate-test-improve-and-merge-code-2533
           </svg>
 
           {label}
-        </span>;
+        <;
       ))}
     </div>;
 
@@ -63,7 +63,7 @@ if (return null) {}
           <svg xmlns='http://www.w3.org / 2000 / svg' view_box='0 0 24 24' fill='current_color' className='w - 4 h - 4'>;'
             <path fill_rule='evenodd' d='M2.25 12c0 - 5.385 4.365 - 9.75 9.75 - 9.75S21.75 6.615 21.75 12 17.385 21.75 12 21.75 2.25 17.385 2.25 12Zm13.36 - 1.28a.75.75 0 0 0 - 1.06 - 1.06L11 13.17l - 1.47 - 1.47a.75.75 0 0 0 - 1.06 1.06l2 2a.75.75 0 0 0 1.06 0l4.08 - 4.08Z' clip_rule='evenodd' />;
           {label}
-        </span>))}
+        <))}
     </div>);
 }
 

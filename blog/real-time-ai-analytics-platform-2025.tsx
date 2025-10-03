@@ -2,10 +2,10 @@ import React from 'react';
 
 export default function RealTimeAIAnalyticsPlatform2025() {
   return (
-    <main className="prose lg:prose-xl max-w-4xl mx-auto py-12 px-6">
+    <main className="text-left">
       <h1>Real-Time AI Analytics Platform (2025): Stream Processing at Scale</h1>
       
-      <p className="text-xl font-semibold text-gray-700 dark:text-gray-300">
+      <p className="text-left">
         Build production-grade real-time analytics platforms powered by AI and stream processing.
         Process billions of events per day with sub-100ms latency for instant insights and automated
         decision-making. Architecture patterns proven at companies processing 10TB+ data daily with
@@ -321,8 +321,8 @@ export default function RealTimeAIAnalyticsPlatform2025() {
         billions of events daily while delivering massive business value.
       </p>
 
-      <div className="bg-purple-50 dark:bg-purple-900 p-6 rounded-lg mt-8">
-        <h3 className="text-xl font-bold mb-4">⚡ Ready to Go Real-Time?</h3>
+      <div className="text-left">
+        <h3 className="text-left">⚡ Ready to Go Real-Time?</h3>
         <p>
           Our architects have built real-time analytics platforms for Fortune 500 companies processing
           petabytes of data. Get a free architecture review and ROI analysis. Transform your business
