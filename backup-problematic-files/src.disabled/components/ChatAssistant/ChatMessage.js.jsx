@@ -1,1 +1,0 @@
-export default ChatMessage.js;
