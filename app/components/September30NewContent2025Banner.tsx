@@ -76,9 +76,9 @@ const September30NewContent2025Banner: React.FC = () => {
     <div className="text-left">
       {/* Animated background effects */}
       <div className="text-left">
-        <div className="text-left"></div>"
-        <div className="text-left" style={{ animationDelay: '2s' }}></div>"
-        <div className="text-left" style={{ animationDelay: '4s' }}></div>"
+        <div className="text-left"></div>
+        <div className="text-left" style={{ animationDelay: '2s' }}></div>
+        <div className="text-left" style={{ animationDelay: '4s' }}></div>
       </div>
 
       <div className="text-left">
@@ -159,6 +159,7 @@ const September30NewContent2025Banner: React.FC = () => {
                   <ArrowRight className="text-left" />
                 </Link>
               </div>
+            </div>
           ))}
         </div>
 
@@ -217,6 +218,7 @@ const September30NewContent2025Banner: React.FC = () => {
                   <ArrowRight className="text-left" />
                 </Link>
               </div>
+            </div>
           ))}
         </div>
 
@@ -245,6 +247,7 @@ const September30NewContent2025Banner: React.FC = () => {
                   <ArrowRight className="text-left" />
                 </Link>
               </div>
+            </div>
           </div>
 
         {/* Stats Section */}
@@ -256,15 +259,17 @@ const September30NewContent2025Banner: React.FC = () => {
             { value='1000x', label: 'Performance Gains', icon: '🚀' }
           ].map((stat, index) => (
             <div key={index} className="text-left">
-              <div className="text-left">{stat.icon}</div>"
+              <div className="text-left">{stat.icon}</div>
               <div className="text-left">
                 {stat.value}
               </div>
               <div className="text-left">
                 {stat.label}
               </div>
+            </div>
           ))}
         </div>
+      </div>
     </div>
   );
 };
