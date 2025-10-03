@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Header from "../../components/Header";
+import Header from "../../../components/Header";
 import { Helmet } from "react-helmet-async";
 import { ArrowLeft, TrendingUp, Brain, Zap, CheckCircle } from "lucide-react";
 
