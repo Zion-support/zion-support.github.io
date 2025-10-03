@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-10-03T15:19:57.635Z",
+  "timestamp": "2025-10-03T15:48:21.327Z",
   "analysis": {
     "ariaLabels": {
       "found": 1,
@@ -22,7 +22,7 @@
       "missing": []
     },
     "focusManagement": {
-      "found": 40,
+      "found": 42,
       "missing": []
     }
   },
