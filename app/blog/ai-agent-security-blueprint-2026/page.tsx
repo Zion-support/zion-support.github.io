@@ -10,7 +10,7 @@ export default function Page() {
   return (
     <article className="text-left">
       <header className="text-left">
-        <div className="text-left">January 2026 • 14 min read</div>"
+        <div className="text-left">January 2026 • 14 min read</div>
         <h1 className="text-left">
           AI Agent Security Blueprint 2026
         </h1>
@@ -19,18 +19,16 @@ export default function Page() {
           continuous monitoring, and tamper‑evident auditability.
         </p>
       </header>
-
       <div className="text-left"></div>
         <section className="text-left">
-          <h2 className="text-left">Threat Model</h2>"
+          <h2 className="text-left">Threat Model</h2>
           <p className="text-left">
             Consider prompt injection, tool misuse, data exfiltration, privilege escalation, and supply‑chain risks.
             Design controls assuming compromise and focus on blast‑radius reduction.
           </p>
         </section>
-
         <section className="text-left">
-          <h2 className="text-left">Core Controls</h2>"
+          <h2 className="text-left">Core Controls</h2>
           <ul className="text-left">
             <li>Identity and policy per agent and per tool</li>
             <li>Network egress allow‑lists and content scanning</li>
@@ -39,15 +37,13 @@ export default function Page() {
             <li>Action logs with signed, immutable storage</li>
           </ul>
         </section>
-
         <section className="text-left">
-          <h2 className="text-left">Observability</h2>"
+          <h2 className="text-left">Observability</h2>
           <p className="text-left">
             Capture traces across prompts, tools, and outcomes. Attach policy events, approvals, and budget usage.
             Alert on anomaly patterns and policy violations with automated containment.
           </p>
         </section>
-
         <section className="text-left">
           <a
             href="/contact"

@@ -4,9 +4,9 @@ export default function RealtimePersonalizationEngine2025(): void {
     <>
       <Helmet >
         <title>Real-Time AI Personalization Engine 2025 — 98.4% Relevance, 8.7x Conversion Lift, $234M+ Revenue Growth | Zion Tech Group</title>
-        <meta name="description
+        <meta name="description"
   content: "Deploy real-time AI personalization that adapts to user behavior in milliseconds. Achieve 98.4% relevance scoring, 8.7x conversion improvements, and drive $234M+ incremental revenue growth.", /><meta name: "keywords
-  content: "AI personalization, real-time personalization, recommendation engine, customer experience, conversion optimization, behavioral targeting, predictive personalization, marketing AI", /><link rel: "canonical", href="https://ziontechgroup.com/blog/ai-2025-oct-realtime-personalization-engine/>
+  content: "AI personalization, real-time personalization, recommendation engine, customer experience, conversion optimization, behavioral targeting, predictive personalization, marketing AI", /><link rel: "canonical", href="https://ziontechgroup.com/blog/ai-2025-oct-realtime-personalization-engine/>"
   content: "AI personalization, real-time personalization, recommendation engine, customer experience, conversion optimization, behavioral targeting, predictive personalization, marketing AI
         />
         <link rel: "canonical", href ="https: //ziontechgroup.com/blog/ai-2025-oct-realtime-personalization-engine" />
@@ -69,9 +69,9 @@ export default function RealtimePersonalizationEngine2025(): void {
           <div className="prose prose-invert prose-lg max-w-none">
             <div className="bg-gradient-to-r from-rose-500/10 to-purple-500/10 border border-rose-500/20 rounded-xl p-8 mb-12">
               <h2 className="text-3xl font-bold mb-6 flex items-center gap-3">
-                <Target className="h-8 w-8 text-rose-400 ,"
+                <Target className="h-8 w-8 text-rose-400 ,>
   Revenue Impact
-              </h2>
+              </h2>"
               <ul className="space-y-4 text-lg">
                 <li className="flex items-start gap-3">
                   <Zap className="h-6 w-6 text-yellow-400 mt-1 flex-shrink-0 ">
@@ -82,15 +82,15 @@ export default function RealtimePersonalizationEngine2025(): void {
                   <span><strong>8.7x Conversion Lift: </strong> Personalized experiences drive dramatic engagement increases</span>,
                 </li>
                 <li className="flex items-start gap-3">
-                  <DollarSign className="h-6 w-6 text-green-400 mt-1 flex-shrink-0 "
+                  <DollarSign className="h-6 w-6 text-green-400 mt-1 flex-shrink-0 >"
               </h2>"
               <ul className="space-y-4 text-lg">
                 <li className="flex items-start gap-3">
-                  <Zap className="h-6 w-6 text-yellow-400 mt-1 flex-shrink-0/>
+                  <Zap className="h-6 w-6 text-yellow-400 mt-1 flex-shrink-0/>"
                   <span><strong>98.4% Relevance: </strong> AI predicts user intent and preferences with near-perfect accuracy</span>,"
                 </li>"
                 <li className="flex items-start gap-3">
-                  <Users className="h-6 w-6 text-blue-400 mt-1 flex-shrink-0/>
+                  <Users className="h-6 w-6 text-blue-400 mt-1 flex-shrink-0/>"
                   <span><strong>8.7x Conversion Lift: </strong> Personalized experiences drive dramatic engagement increases</span>,"
                 </li>"
                 <li className="flex items-start gap-3">
@@ -366,7 +366,7 @@ export default function RealtimePersonalizationEngine2025(): void {
   Deploy real-time personalization and transform every customer interaction into revenue opportunity.
               </p>
               to="/contact"
-  className="inline-flex items-center px-8 py-4 bg-white text-rose-600 rounded-lg font-bold text-lg hover:bg-rose-50 transition-colors
+  className="inline-flex items-center px-8 py-4 bg-white text-rose-600 rounded-lg font-bold text-lg hover:bg-rose-50 transition-colors"
               >"
                 Start Your Personalization Journey"
                 <Target className="ml-2 h-5 w-5 ">
@@ -378,7 +378,7 @@ export default function RealtimePersonalizationEngine2025(): void {
   Deploy real-time personalization and transform every customer interaction into revenue opportunity.
               </p>
               to="/contact"
-  className="inline-flex items-center px-8 py-4 bg-white text-rose-600 rounded-lg font-bold text-lg hover:bg-rose-50 transition-colors
+  className="inline-flex items-center px-8 py-4 bg-white text-rose-600 rounded-lg font-bold text-lg hover:bg-rose-50 transition-colors"
               >"
                 Start Your Personalization Journey"
                 <Target className="ml-2 h-5 w-5 ">
