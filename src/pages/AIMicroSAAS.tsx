@@ -1,12 +1,9 @@
 import React from "react";
-import { Helmet } from "react-helmet-async";
-import { FileText, Rocket, CheckCircle, ArrowRight, Database } from "lucide-react";
-
 const AIMicroSAAS: React.FC = () => {
   const services = [
     {
       id: "ai-content-optimizer",
-      name="AI Content Optimizer Pro",
+      name: "AI Content Optimizer Pro",
       blurb: "AI-powered content creation and optimization platform for marketing teams",
       price: "$299 - $1,499/month",
       eta: "1-2 weeks",
@@ -21,7 +18,7 @@ const AIMicroSAAS: React.FC = () => {
     },
     {
       id: "automated-workflow-engine",
-      name="Automated Workflow Engine",
+      name: "Automated Workflow Engine",
       blurb: "Streamline business processes with intelligent workflow automation",
       price: "$299 - $1,299/month",
       eta: "2-3 weeks",
@@ -33,7 +30,7 @@ const AIMicroSAAS: React.FC = () => {
         "Third-party integrations",
         "Real-time monitoring and alerts",
         "Custom triggers and actions",
-        "Performance optimization suggestions
+        "Performance optimization suggestions"
       ]
     }
   ];

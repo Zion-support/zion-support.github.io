@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 
 // Import all banner components
 import October2025DigitalTwinsBreakthroughBanner from './October2025DigitalTwinsBreakthroughBanner';

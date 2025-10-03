@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { ArrowRight, Zap, Brain, Target, TrendingUp, Shield } from 'lucide-react';
 
 export default function January2026UltraIntelligentAutonomousSystemsRevolutionBanner() {

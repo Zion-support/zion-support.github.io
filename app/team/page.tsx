@@ -1,17 +1,11 @@
 import { Link } from 'react-router-dom';
 import { 
   ArrowRight, 
-  Star, 
   Users, 
-  Zap, 
-  Shield, 
-  Globe, 
-  Database,
-  Lock,
-  TrendingUp,
+  Shield,
+  Cloud, 
   Award,
   Target,
-  Rocket,
   Linkedin,
   Twitter,
   Mail,
@@ -22,7 +16,9 @@ import {
   Cloud,
   GraduationCap,
   Briefcase,
-  Lightbulb
+  Lightbulb,
+  Brain,
+  Cpu
 } from 'lucide-react';
 
 export const metadata = {

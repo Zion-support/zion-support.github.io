@@ -11,14 +11,13 @@ import {
   Zap,
   Sparkles
 } from "lucide-react";
-import { Helmet } from "react-helmet";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 // Fallback form in environments without the enhanced component
 const ContactFormComponent: React.FC = () => null;
 
-export default function Contact(): React.JSX.Element {
+export default function Contact(): React.JSX.Element React.JSX.Element {
   const contactInfo = [
     {
       icon: <Mail className="w-6 h-6" />,

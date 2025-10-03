@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { Network, DollarSign, Zap, Award, ArrowRight, Sparkles } from 'lucide-react';
 
 export default function October2025NeuralMeshMegaShowcase() {

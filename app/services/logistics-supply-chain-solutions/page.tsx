@@ -1,5 +1,5 @@
-import React from 'react';
-import Head from 'next/head';
+// import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
   Truck, Package, MapPin, BarChart3, Clock, 

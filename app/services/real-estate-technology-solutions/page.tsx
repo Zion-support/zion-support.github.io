@@ -1,10 +1,10 @@
-import React from 'react';
-import Head from 'next/head';
+// import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
   Home, MapPin, Users, BarChart3, Camera, 
-  FileText, Clock, CheckCircle, ArrowRight, Phone, 
-  Mail, ExternalLink, Zap, Target, Award, 
+  FileText, CheckCircle, Phone, 
+  Mail, ExternalLink, 
   Globe, Smartphone, Brain, Monitor, Shield, Search
 } from 'lucide-react';
 
@@ -170,12 +170,7 @@ export default function RealEstateTechnologySolutions() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900">
-      <Head>
-        <title>Real Estate Technology Solutions — Zion Tech Group</title>
-        <meta name="description" content="Comprehensive real estate micro SaaS solutions including property management, lead generation, CRM, and virtual tours." />
-        <meta name="keywords" content="real estate technology, property management, lead generation, real estate CRM, virtual tours, micro SaaS" />
-        <link rel="canonical" href={`${websiteHref}/services/real-estate-technology-solutions`} />
-      </Head>
+      {/* Head tags would be handled by a layout component */}
 
       {/* Hero Section */}
       <section className="relative py-20 px-4">

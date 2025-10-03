@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { Link } from 'react-router-dom';
 
 const QuantumNeuralSuperintelligence2027Banner: React.FC = () => {

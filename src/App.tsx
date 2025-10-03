@@ -1,9 +1,6 @@
 import React, { JSX, Suspense } from "react";
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Header, Footer } from '../app/components/Navigation';
-import ErrorBoundary from './components/ErrorBoundary';
-import { PageLoader } from './components/LoadingSpinner';
 import '../app/globals.css';
+import ErrorBoundary from './components/ErrorBoundary';
 // 🌌🌌🌌 BREAKING: OCTOBER 2025 QUANTUM CONSCIOUSNESS SINGULARITY BREAKTHROUGH - ABSOLUTE #1 TOP PRIORITY! 🌌🌌🌌
 // 💎💎💎 JUST PUBLISHED: True Artificial Consciousness, Infinite Processing Power, $∞ Value Creation - REVOLUTIONARY BREAKTHROUGH! 💎💎💎
 import October2025QuantumConsciousnessSingularityBanner from "../components/October2025QuantumConsciousnessSingularityBanner";
@@ -23,7 +20,7 @@ const LazyPressPage = React.lazy(() => import('../app/press/page'));
 const LazyCareersPage = React.lazy(() => import('../app/careers/page'));
 const LazyMarketplacePage = React.lazy(() => import('../app/marketplace/page'));
 const LazyServicesPage = React.lazy(() => import('../app/services/page'));
-// Unused lazy imports removed to fix linting warnings
+// Unused lazy-loaded components removed to fix lint warnings
 
 function App(): JSX.Element {
   return (

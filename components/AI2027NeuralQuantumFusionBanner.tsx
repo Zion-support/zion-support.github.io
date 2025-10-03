@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { ArrowRight, Cpu, Zap, Atom, Infinity } from 'lucide-react';
 
 const AI2027NeuralQuantumFusionBanner: React.FC = () => {

@@ -1,6 +1,11 @@
-import React from 'react';
+// import React from 'react';
 import { Link } from 'react-router-dom';
-import { Metadata } from 'next';
+// Metadata interface for React Helmet
+interface Metadata {
+  title?: string;
+  description?: string;
+  keywords?: string;
+}
 import { 
   Brain, 
   Code, 

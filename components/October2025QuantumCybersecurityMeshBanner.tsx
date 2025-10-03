@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { Shield, Lock, Zap, TrendingUp } from 'lucide-react';
 
 export default function October2025QuantumCybersecurityMeshBanner() {

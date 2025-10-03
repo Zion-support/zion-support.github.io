@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 
 const AutonomousBIRevolutionBanner2026: React.FC = () => {
   return (

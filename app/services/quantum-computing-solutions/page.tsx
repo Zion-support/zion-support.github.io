@@ -1,5 +1,10 @@
-import React from 'react';
-import { Metadata } from 'next';
+// import React from 'react';
+// Metadata interface for React Helmet
+interface Metadata {
+  title?: string;
+  description?: string;
+  keywords?: string;
+}
 import { Link } from 'react-router-dom';
 import { 
   Atom, 
@@ -27,9 +32,6 @@ import {
   Layers,
   Wifi,
   Camera,
-  Mic,
-  MapPin,
-  ShoppingCart,
   Package,
   Truck,
   Building,
@@ -40,30 +42,8 @@ import {
   Activity,
   PieChart,
   LineChart,
-  RefreshCw,
-  Download,
-  Upload,
-  Play,
-  Pause,
-  Square,
-  Triangle,
-  Circle,
-  Hexagon,
-  Monitor,
-  Server,
-  HardDrive,
-  MemoryStick,
-  Router,
-  Terminal,
-  GitBranch,
-  Container,
-  Docker,
-  Key,
-  AlertTriangle,
-  Users,
-  MessageSquare,
-  TrendingUp,
-  Eye
+  Brain,
+  Cloud
 } from 'lucide-react';
 
 export const metadata: Metadata = {

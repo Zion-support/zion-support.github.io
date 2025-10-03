@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Network, Globe, Cpu, Zap, Sparkles, ArrowRight, Activity } from 'lucide-react';

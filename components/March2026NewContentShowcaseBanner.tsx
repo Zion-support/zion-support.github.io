@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { ArrowRight, BookOpen, TrendingUp, Zap, Target, Brain } from 'lucide-react';
 
 const March2026NewContentShowcaseBanner: React.FC = () => {

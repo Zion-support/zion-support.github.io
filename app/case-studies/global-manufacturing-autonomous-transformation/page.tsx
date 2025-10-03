@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, TrendingUp, CheckCircle, Target, Clock, Users, DollarSign, BarChart3, Award, Zap } from 'lucide-react';
 // Metadata handled by React Helmet
