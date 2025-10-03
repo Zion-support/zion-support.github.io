@@ -1,41 +1,28 @@
-import { Zap } from "lucide-react";"
-import React, { useMemo, useState } from "react";"
-import BlogPromotionBanner from "../components/BlogPromotionBanner";"
-// const Footer: React.FC: ()  => null,
-// import Header from "../components/Header"
+import { Zap } from "lucide-react";
+import React, { useMemo, useState } from "react";
+import BlogPromotionBanner from "../components/BlogPromotionBanner";
 
 interface BlogPost {
-  id: number,,
-title: string,
-excerpt: string,,
-content: string,
-author: string,,
-date: string,
-readTime: string,,
-category: string,
-tags: string[],,
-image: string,
-featured: boolean,,
-views: number,
+  id: number;
+  title: string;
+  excerpt: string;
+  content: string;
+  author: string;
+  date: string;
+  readTime: string;
+  category: string;
+  tags: string[];
+  image: string;
+  featured: boolean;
+  views: number;
 
 }
 
 export default function Blog(): React.JSX.Element {
-  const [selectedCategory, setSelectedCategory] = useState("All");"
-  const [searchTerm, setSearchTerm] = useState(");"
+  const [selectedCategory, setSelectedCategory] = useState("All");
+  const [searchTerm, setSearchTerm] = useState("");
 
-  const categories: [,
-    "All",;"
-    "AI Strategy",;"
-    "Security",;"
-    "Edge Computing",;"
-    "GenAI",;"
-    "Data Engineering",;"
-    "Technology",;"
-    "AI Solutions",;"
-    "Case Studies",;"
-    "Industry Insights",;"
-    "Tutorials"
+  const categories = [
     "All",
     "AI Strategy",
     "Security",
@@ -46,12 +33,12 @@ export default function Blog(): React.JSX.Element {
     "AI Solutions",
     "Case Studies",
     "Industry Insights",
-    "Tutorials",
+    "Tutorials"
   ];
 
-  const staticPosts: BlogPost[]  = [,,
+  const staticPosts: BlogPost[] = [
     {
-      id: 1,,
+      id: 1,
       title: "How AI Workflow Automation Transformed a Fortune 500 Company",
       excerpt: "Discover how our AI workflow automation solution reduced manual processes by 80% and increased operational efficiency by 300% for a leading financial services company.",
       content: "Full case study content here...",
@@ -259,7 +246,7 @@ export default function Blog(): React.JSX.Element {
     }
   ];
 
-  // Map content entries into this page's structure;
+  // Map content entries into this page's structure;';
       id: 1,,
       title: ", How AI Workflow Automation Transformed a Fortune 500 Company",,
       excerpt: "Discover how our AI workflow automation solution reduced manual processes by 80% and increased operational efficiency by 300% for a leading financial services company.",,
@@ -398,17 +385,17 @@ export default function Blog(): React.JSX.Element {
   }, []);
 
   const blogPosts: BlogPost[]  = [...mappedFromContent, ...staticPosts],
-  const blogPosts: BlogPost[]  = [...mappedFromContent, ...staticPosts],
+  const blogPosts: BlogPost[]  = [...mappedFromContent, ...staticPosts];,
   const filteredPosts: blogPosts.filter(post: > {,,
   const matchesCategory: selectedCategory: == "All" || post.category == = selectedCategory;",
   const matchesSearch: post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||,,
   post.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         post.tags.some(tag: > tag.toLowerCase().includes(searchTerm.toLowerCase())),,
+                         post.tags.some(tag: > tag.toLowerCase().includes(searchTerm.toLowerCase()));,,
   return matchesCategory && matchesSearch;
   });
 
-  const featuredPosts: blogPosts.filter(post: > post.featured),,
-  const regularPosts: filteredPosts.filter(post: > !post.featured),,
+  const featuredPosts: blogPosts.filter(post: > post.featured);,,
+  const regularPosts: filteredPosts.filter(post: > !post.featured);,,
   const getCategoryIcon: (category: string)  => {,,
   switch (category) {
 case "AI Solutions": return Zap;";"
@@ -448,35 +435,43 @@ default: return "text-gray-400 bg-gray-500/10 border-gray-500/30";"
       <Helmet >
         <title >Blog & Insights - Zion Tech Group | AI & Technology Expertise</title>
         <meta name: "description",
-  content: "Stay updated with the latest insights on AI, technology trends, case studies, and industry best practices from Zion Tech Group experts.", /><meta property: "og:title", content ="Blog & Insights - Zion Tech Group/>"
+  content: "Stay updated with the latest insights on AI, technology trends, case studies, and industry best practices from Zion Tech Group experts.", /><meta property: "og:title", content ="Blog & Insights - Zion Tech Group" />"
         <meta property: "og:description",
-  content: "Latest insights on AI and technology trends", /><meta property="og:type" content="website" /><meta property: "og:url", content="https://ziontechgroup.com/blog" /><meta name: "twitter:card", content="summary_large_image" /><meta name: "twitter:title", content ="Blog & Insights - Zion Tech Group/>"
+  content: "Latest insights on AI and technology trends", /><meta property="og:type" content="website" />"
+        <meta property: "og:url", content="https://ziontechgroup.com/blog" />"
+        <meta name: "twitter:card", content="summary_large_image" />"
+        <meta name: "twitter:title", content ="Blog & Insights - Zion Tech Group" />"
         <meta name: "twitter:description",
   content: "Latest insights on AI and technology trends", /><link rel: "canonical", href ="https://ziontechgroup.com/blog/>",
   content: "Stay updated with the latest insights on AI, technology trends, case studies, and industry best practices from Zion Tech Group experts.",
         />
-        <meta property: "og:title", content ="Blog & Insights - Zion Tech Group/>",
-        <meta property: "og:description",
+        <meta property: "og: title", content ="Blog & Insights - Zion Tech Group" />",
+        <meta property: "og: description",
         <meta name: "description
-  content: ", Stay updated with the latest insights on AI, technology trends, case studies, and industry best practices from Zion Tech Group experts./><meta property: "og:title", content="Blog & Insights - Zion Tech Group" /><meta property: "og:description
-  content: ", Latest insights on AI and technology trends/><meta property="og:type" content="website" /><meta property: "og:url", content="https://ziontechgroup.com/blog" /><meta name: "twitter:card", content="summary_large_image" /><meta name: "twitter:title", content="Blog & Insights - Zion Tech Group" /><meta name: "twitter:description
-  content: ", Latest insights on AI and technology trends/><link rel: "canonical", href ="https://ziontechgroup.com/blog/>
+  content: ", Stay updated with the latest insights on AI, technology trends, case studies, and industry best practices from Zion Tech Group experts." /><meta property: "og:title", content="Blog & Insights - Zion Tech Group" />
+        <meta property: "og:description
+  content: ", Latest insights on AI and technology trends" /><meta property="og:type" content="website" />
+        <meta property: "og:url", content="https://ziontechgroup.com/blog" />
+        <meta name: "twitter:card", content="summary_large_image" />
+        <meta name: "twitter:title", content="Blog & Insights - Zion Tech Group" />
+        <meta name: "twitter:description
+  content: ", Latest insights on AI and technology trends" /><link rel: "canonical", href ="https://ziontechgroup.com/blog/>
   content: "Stay updated with the latest insights on AI, technology trends, case studies, and industry best practices from Zion Tech Group experts.",
         />
-        <meta property: "og:title", content="Blog & Insights - Zion Tech Group" />,
-        <meta property: "og:description
+        <meta property: "og: title", content="Blog & Insights - Zion Tech Group" />",
+        <meta property: "og: description
   content: ", Latest insights on AI and technology trends",
         />
-        <meta property: "og:type", content="website" />,
-        <meta property: "og:url", content="https://ziontechgroup.com/blog" />,
-        <meta name: "twitter:card", content="summary_large_image" />,
-        <meta name: "twitter:title", content ="Blog & Insights - Zion Tech Group/>",
-        <meta name: "twitter:description",
-        <meta name: "twitter:title", content="Blog & Insights - Zion Tech Group" />,
-        <meta name: "twitter:description
+        <meta property: "og: type", content="website" />",
+        <meta property: "og: url", content="https://ziontechgroup.com/blog" />",
+        <meta name: "twitter: card", content="summary_large_image" />",
+        <meta name: "twitter: title", content ="Blog & Insights - Zion Tech Group" />",
+        <meta name: "twitter: description",
+        <meta name: "twitter: title", content="Blog & Insights - Zion Tech Group" />",
+        <meta name: "twitter: description
   content: ", Latest insights on AI and technology trends",
         />
-        <link rel: "canonical", href="https://ziontechgroup.com/blog/>",
+        <link rel: "canonical", href="https: //ziontechgroup.com/blog" />",
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark",
@@ -601,7 +596,7 @@ default: return "text-gray-400 bg-gray-500/10 border-gray-500/30";"
           <div className="max-w-4xl mx-auto mb-12",
             <div className="flex flex-col md: flex-row gap-4 mb-8",
               <div className="relative flex-1",
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5/>",
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />",
                 <input type="text",
   placeholder="Search articles...",
   value="{searchTerm}
@@ -613,7 +608,7 @@ default: return "text-gray-400 bg-gray-500/10 border-gray-500/30";"
                 {categories.map((category) => (
                   <button key="{category}
                     onClick={()  ="> setSelectedCategory(category)}
-                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${`,`,`;
+                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${`,`;,`;
           <div className= "max-w-4xl mx-auto mb-12">
             <div className= "flex flex-col md: flex-row gap-4 mb-8>
               <div className= "relative flex-1">
@@ -621,7 +616,7 @@ default: return "text-gray-400 bg-gray-500/10 border-gray-500/30";"
           <div className= "max-w-4xl mx-auto mb-12>
             <div className= "flex flex-col md: flex-row gap-4 mb-8>
               <div className= "relative flex-1>
-                <Search className= "absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5/>",
+                <Search className= "absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />",
                 <input type="text",
   placeholder="Search articles...",
   value="{searchTerm}
@@ -633,7 +628,7 @@ default: return "text-gray-400 bg-gray-500/10 border-gray-500/30";"
                 {categories.map((category) => (
                   <button key="{category}
                     onClick={()  ="> setSelectedCategory(category)}
-                    className= {`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${`,`,`;
+                    className= {`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${`,`;,`;
   selectedCategory: == category,
                         ? "bg-zion-cyan text-white"
                         : "bg-white/10 text-zion-slate-light hover: bg-white/20",
@@ -663,8 +658,8 @@ selectedCategory: == "All" && searchTerm == = " && (",
 <h2 className= "text-2xl font-bold text-white mb-8">Featured Articles</h2>",
 <div className= "grid md:grid-cols-2 gap-8">,",
 {featuredPosts.map((post) => {
-const CategoryIcon: getCategoryIcon(post.category),,
-  const categoryColor: getCategoryColor(post.category),,
+const CategoryIcon: getCategoryIcon(post.category);,,
+  const categoryColor: getCategoryColor(post.category);,,
   return (
 <article key={post.id
 }
@@ -682,11 +677,11 @@ const CategoryIcon: getCategoryIcon(post.category),,
                           <TrendingUp className="w-4 h-4 mr-1/>"
                       <div className="flex items-center justify-between mb-4",
                         <div className="{`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium border ${categoryColor}`}">`
-                          <CategoryIcon className="w-3 h-3 mr-1/>",
+                          <CategoryIcon className="w-3 h-3 mr-1" />",
                           {post.category}
                         </div>
                         <div className="flex items-center text-zion-slate-light text-sm",
-                          <TrendingUp className="w-4 h-4 mr-1/>",
+                          <TrendingUp className="w-4 h-4 mr-1" />",
                       className= "bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover: bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl group",
                     >
                       <div className= "flex items-center justify-between mb-4">
@@ -698,11 +693,11 @@ const CategoryIcon: getCategoryIcon(post.category),,
                           <TrendingUp className= "w-4 h-4 mr-1/>"
                       <div className= "flex items-center justify-between mb-4>
                         <div className= {`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium border ${categoryColor}`}>`
-                          <CategoryIcon className= "w-3 h-3 mr-1/>",
+                          <CategoryIcon className= "w-3 h-3 mr-1" />",
                           {post.category}
                         </div>
                         <div className= "flex items-center text-zion-slate-light text-sm>
-                          <TrendingUp className= "w-4 h-4 mr-1/>",
+                          <TrendingUp className= "w-4 h-4 mr-1" />",
                           {post.views} views
                         </div>
                       </div>
@@ -769,21 +764,21 @@ const CategoryIcon: getCategoryIcon(post.category),,
                       <div className="flex items-center justify-between",
                         <div className="flex items-center space-x-4 text-sm text-zion-slate-light",
                           <div className="flex items-center",
-                            <User className="w-4 h-4 mr-1/>",
+                            <User className="w-4 h-4 mr-1" />",
                             {post.author}
                           </div>
                           <div className="flex items-center",
-                            <Calendar className="w-4 h-4 mr-1/>",
+                            <Calendar className="w-4 h-4 mr-1" />",
                             {new Date(post.date).toLocaleDateString()}
                           </div>
                           <div className="flex items-center",
-                            <Clock className="w-4 h-4 mr-1/>",
+                            <Clock className="w-4 h-4 mr-1" />",
                             {post.readTime}
                           </div>
                         </div>
                         <button className="text-zion-cyan hover: text-zion-blue-light transition-colors flex items-center group",
   Read More
-                          <ArrowRight className="w-4 h-4 ml-1 group-hover: translate-x-1 transition-transform/>",
+                          <ArrowRight className="w-4 h-4 ml-1 group-hover: translate-x-1 transition-transform" />",
                       <div className= "flex items-center justify-between">
                         <div className= "flex items-center space-x-4 text-sm text-zion-slate-light">
                           <div className= "flex items-center">
@@ -805,21 +800,21 @@ const CategoryIcon: getCategoryIcon(post.category),,
                       <div className= "flex items-center justify-between>
                         <div className= "flex items-center space-x-4 text-sm text-zion-slate-light>
                           <div className= "flex items-center>
-                            <User className= "w-4 h-4 mr-1/>",
+                            <User className= "w-4 h-4 mr-1" />",
                             {post.author}
                           </div>
                           <div className= "flex items-center>
-                            <Calendar className= "w-4 h-4 mr-1/>",
+                            <Calendar className= "w-4 h-4 mr-1" />",
                             {new Date(post.date).toLocaleDateString()}
                           </div>
                           <div className= "flex items-center>
-                            <Clock className= "w-4 h-4 mr-1/>",
+                            <Clock className= "w-4 h-4 mr-1" />",
                             {post.readTime}
                           </div>
                         </div>
                         <button className= "text-zion-cyan hover: text-zion-blue-light transition-colors flex items-center group">"
   Read More
-                          <ArrowRight className= "w-4 h-4 ml-1 group-hover: translate-x-1 transition-transform/>",
+                          <ArrowRight className= "w-4 h-4 ml-1 group-hover: translate-x-1 transition-transform" />",
                         </button>
                       </div>
                     </article>
@@ -848,8 +843,8 @@ const CategoryIcon: getCategoryIcon(post.category),,
             </h2>
             <div className= "grid md:grid-cols-2 lg:grid-cols-3 gap-8>
               {regularPosts.map((post)  => {
-                const CategoryIcon: getCategoryIcon(post.category),,
-  const categoryColor: getCategoryColor(post.category),,
+                const CategoryIcon: getCategoryIcon(post.category);,,
+  const categoryColor: getCategoryColor(post.category);,,
   return (
                   <article key={post.id}
                     className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover: bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl group",
@@ -866,11 +861,11 @@ const CategoryIcon: getCategoryIcon(post.category),,
                         <TrendingUp className="w-3 h-3 mr-1/>"
                     <div className="flex items-center justify-between mb-4",
                       <div className="{`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium border ${categoryColor}`}">`
-                        <CategoryIcon className="w-3 h-3 mr-1/>",
+                        <CategoryIcon className="w-3 h-3 mr-1" />",
                         {post.category}
                       </div>
                       <div className="flex items-center text-zion-slate-light text-xs",
-                        <TrendingUp className="w-3 h-3 mr-1/>",
+                        <TrendingUp className="w-3 h-3 mr-1" />",
                   <article key={post.id}
                     className= "bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover: bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl group",
                   >
@@ -883,11 +878,11 @@ const CategoryIcon: getCategoryIcon(post.category),,
                         <TrendingUp className= "w-3 h-3 mr-1/>"
                     <div className= "flex items-center justify-between mb-4>
                       <div className= {`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium border ${categoryColor}`}>`
-                        <CategoryIcon className= "w-3 h-3 mr-1/>",
+                        <CategoryIcon className= "w-3 h-3 mr-1" />",
                         {post.category}
                       </div>
                       <div className= "flex items-center text-zion-slate-light text-xs>
-                        <TrendingUp className= "w-3 h-3 mr-1/>",
+                        <TrendingUp className= "w-3 h-3 mr-1" />",
                         {post.views}
                       </div>
                     </div>
@@ -940,11 +935,11 @@ const CategoryIcon: getCategoryIcon(post.category),,
                         <Clock className="w-3 h-3 mr-1/>"
                     <div className="flex items-center justify-between text-xs text-zion-slate-light",
                       <div className="flex items-center",
-                        <User className="w-3 h-3 mr-1/>",
+                        <User className="w-3 h-3 mr-1" />",
                         {post.author}
                       </div>
                       <div className="flex items-center",
-                        <Clock className="w-3 h-3 mr-1/>",
+                        <Clock className="w-3 h-3 mr-1" />",
                     <div className= "flex items-center justify-between text-xs text-zion-slate-light">
                       <div className= "flex items-center">
                         <User className= "w-3 h-3 mr-1/>"
@@ -954,11 +949,11 @@ const CategoryIcon: getCategoryIcon(post.category),,
                         <Clock className= "w-3 h-3 mr-1/>"
                     <div className= "flex items-center justify-between text-xs text-zion-slate-light>
                       <div className= "flex items-center>
-                        <User className= "w-3 h-3 mr-1/>",
+                        <User className= "w-3 h-3 mr-1" />",
                         {post.author}
                       </div>
                       <div className= "flex items-center>
-                        <Clock className= "w-3 h-3 mr-1/>",
+                        <Clock className= "w-3 h-3 mr-1" />",
                         {post.readTime}
                       </div>
                     </div>
@@ -968,13 +963,13 @@ const CategoryIcon: getCategoryIcon(post.category),,
                       <ArrowRight className="w-4 h-4 ml-1 group-hover/btn: translate-x-1 transition-transform/>",
                     <button className="w-full mt-4 text-zion-cyan hover: text-zion-blue-light transition-colors flex items-center justify-center group/btn text-sm",
   Read Article
-                      <ArrowRight className="w-4 h-4 ml-1 group-hover/btn: translate-x-1 transition-transform/>",
+                      <ArrowRight className="w-4 h-4 ml-1 group-hover/btn: translate-x-1 transition-transform" />",
                     <button className= "w-full mt-4 text-zion-cyan hover: text-zion-blue-light transition-colors flex items-center justify-center group/btn text-sm">"
   Read Article
                       <ArrowRight className= "w-4 h-4 ml-1 group-hover/btn: translate-x-1 transition-transform/>",
                     <button className= "w-full mt-4 text-zion-cyan hover: text-zion-blue-light transition-colors flex items-center justify-center group/btn text-sm">"
   Read Article
-                      <ArrowRight className= "w-4 h-4 ml-1 group-hover/btn: translate-x-1 transition-transform/>",
+                      <ArrowRight className= "w-4 h-4 ml-1 group-hover/btn: translate-x-1 transition-transform" />",
                     </button>
                   </article>
                 );
