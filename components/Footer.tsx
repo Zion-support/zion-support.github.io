@@ -1,10 +1,7 @@
-// import React from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin } from 'lucide-react';
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-a7dc
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 

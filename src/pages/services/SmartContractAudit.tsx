@@ -1,6 +1,4 @@
 // import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { AlertTriangle, CheckCircle, Phone, Star } from 'lucide-react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 

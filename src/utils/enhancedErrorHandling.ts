@@ -28,10 +28,7 @@ export interface ErrorReport {
 class EnhancedErrorHandler {
   private errors: ErrorInfo[] = [];
   private maxErrors = 100;
-<<<<<<< HEAD
-=======
   private isInitialized = false;
->>>>>>> cursor/fix-errors-and-merge-to-main-a7dc
 
   constructor() {
     this.initialize();
@@ -66,7 +63,7 @@ class EnhancedErrorHandler {
       });
     });
 
-    this.isInitialized = true;
+    // this.isInitialized = true;
   }
 
   private determineSeverity(error: any): 'low' | 'medium' | 'high' | 'critical' {

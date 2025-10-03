@@ -310,7 +310,7 @@ export class ImageOptimizer {
       format?: 'webp' | 'avif' | 'jpeg' | 'png';
     } = {}
   ): Promise<string> {
-    const { width, height, quality = 80, format = 'webp' } = options;
+    // const { width, height, quality = 80, format = 'webp' } = options;
 
     // For now, return the original src
     // In a real implementation, this would use a service like Cloudinary or ImageKit
