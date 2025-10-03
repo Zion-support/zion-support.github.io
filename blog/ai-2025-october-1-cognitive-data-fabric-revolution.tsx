@@ -2,18 +2,18 @@ import React from 'react';
 
 export default function CognitiveDataFabricRevolution() {
   return (
-    <article className="max-w-4xl mx-auto px-4 py-12">
-      <header className="mb-8">
-        <h1 className="text-4xl font-bold mb-4">Cognitive Data Fabric: Autonomous Enterprise Data Intelligence</h1>
-        <div className="flex items-center gap-4 text-gray-600">
+    <article className="text-left">
+      <header className="text-left">
+        <h1 className="text-left">Cognitive Data Fabric: Autonomous Enterprise Data Intelligence</h1>
+        <div className="text-left">
           <time dateTime="2025-10-01">October 1, 2025</time>
-          <span>•</span>
-          <span>14 min read</span>
+          <span>•<
+          <span>14 min read<
         </div>
       </header>
 
-      <div className="prose prose-lg max-w-none">
-        <p className="lead text-xl mb-6">
+      <div className="text-left">
+        <p className="text-left">
           Discover how cognitive data fabric is transforming enterprise data management, delivering 
           $4.8B in value through autonomous data operations and achieving 97% data quality at scale.
         </p>
@@ -297,13 +297,13 @@ export default function CognitiveDataFabricRevolution() {
           whether to adopt this technology, but how quickly you can implement it to stay competitive.
         </p>
 
-        <div className="mt-12 p-6 bg-emerald-50 rounded-lg">
-          <h3 className="text-xl font-bold mb-4">Ready to Transform Your Data Operations?</h3>
-          <p className="mb-4">
+        <div className="text-left">
+          <h3 className="text-left">Ready to Transform Your Data Operations?</h3>
+          <p className="text-left">
             Schedule a consultation with our data fabric experts to learn how cognitive data fabric 
             can revolutionize your enterprise data strategy.
           </p>
-          <button className="bg-emerald-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-emerald-700 transition">
+          <button className="text-left">
             Request Data Assessment
           </button>
         </div>

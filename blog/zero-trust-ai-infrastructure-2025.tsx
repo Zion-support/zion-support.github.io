@@ -2,10 +2,10 @@ import React from 'react';
 
 export default function ZeroTrustAIInfrastructure2025() {
   return (
-    <main className="prose lg:prose-xl max-w-4xl mx-auto py-12 px-6">
+    <main className="text-left">
       <h1>Zero Trust AI Infrastructure (2025): Secure-by-Design Architecture</h1>
       
-      <p className="text-xl font-semibold text-gray-700 dark:text-gray-300">
+      <p className="text-left">
         Build impenetrable AI infrastructure with zero-trust security principles. Never trust, always verify
         every component, user, and data access. Architecture patterns used by defense contractors, financial
         institutions, and healthcare providers to achieve 100% compliance and zero breaches while processing
@@ -349,8 +349,8 @@ export default function ZeroTrustAIInfrastructure2025() {
         secure, compliant, and ready for the most demanding enterprise use cases.
       </p>
 
-      <div className="bg-green-50 dark:bg-green-900 p-6 rounded-lg mt-8">
-        <h3 className="text-xl font-bold mb-4">🔒 Secure Your AI Infrastructure</h3>
+      <div className="text-left">
+        <h3 className="text-left">🔒 Secure Your AI Infrastructure</h3>
         <p>
           Our security architects have built zero-trust systems for defense contractors, banks, and
           healthcare providers. Get a free security assessment and customized implementation roadmap.

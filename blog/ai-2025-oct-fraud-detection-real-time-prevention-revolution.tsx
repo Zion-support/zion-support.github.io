@@ -18,33 +18,33 @@ export default function FraudDetectionRealTimePreventionRevolution2025() {
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-950 via-red-950 to-orange-950 text-white">
-        <main className="container mx-auto px-6 py-12">
-          <nav className="mb-8">
-            <a href="/blog" className="text-red-400 hover:text-red-300 transition-colors">
+      <div className="text-left">
+        <main className="text-left">
+          <nav className="text-left">
+            <a href="/blog" className="text-left">
               ← Back to Blog
             </a>
           </nav>
           
-          <article className="max-w-4xl mx-auto">
-            <header className="mb-12">
-              <div className="flex items-center gap-3 mb-4 flex-wrap">
-                <span className="px-3 py-1 bg-red-400/20 text-red-400 text-sm rounded-full border border-red-400/30">
+          <article className="text-left">
+            <header className="text-left">
+              <div className="text-left">
+                <span className="text-left">
                   Fraud Detection AI
-                </span>
-                <span className="px-3 py-1 bg-orange-400/20 text-orange-400 text-sm rounded-full border border-orange-400/30">
+                <
+                <span className="text-left">
                   Real-Time Prevention
-                </span>
-                <span className="text-white/60 text-sm">October 1, 2025</span>
-                <span className="text-white/60 text-sm">•</span>
-                <span className="text-white/60 text-sm">22 min read</span>
+                <
+                <span className="text-left">October 1, 2025<
+                <span className="text-left">•<
+                <span className="text-left">22 min read<
               </div>
               
-              <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-red-400 via-orange-400 to-yellow-400 bg-clip-text text-transparent leading-tight">
+              <h1 className="text-left">
                 Real-Time Fraud Detection AI Revolution 2025: $47B Savings with 99.94% Accuracy
               </h1>
               
-              <p className="text-xl text-white/80 leading-relaxed">
+              <p className="text-left">
                 Financial fraud is evolving at an unprecedented pace, but AI-powered detection systems are 
                 staying ahead. Leading enterprises are deploying next-generation fraud prevention platforms 
                 that analyze 100M+ transactions per hour with sub-100ms latency, achieving 99.94% detection 
@@ -52,110 +52,110 @@ export default function FraudDetectionRealTimePreventionRevolution2025() {
               </p>
             </header>
             
-            <section className="prose prose-invert max-w-none">
-              <div className="bg-gradient-to-r from-red-500/10 to-orange-500/10 border border-red-500/30 rounded-2xl p-8 mb-12">
-                <h2 className="text-3xl font-bold text-red-400 mb-6">🛡️ Enterprise Success Metrics</h2>
-                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                  <div className="bg-white/5 rounded-xl p-6 backdrop-blur-sm">
-                    <div className="text-4xl font-extrabold text-red-400 mb-2">$47B</div>
-                    <div className="text-white/70">Fraud Prevented</div>
+            <section className="text-left">
+              <div className="text-left">
+                <h2 className="text-left">🛡️ Enterprise Success Metrics</h2>
+                <div className="text-left">
+                  <div className="text-left">
+                    <div className="text-left">$47B</div>
+                    <div className="text-left">Fraud Prevented</div>
                   </div>
-                  <div className="bg-white/5 rounded-xl p-6 backdrop-blur-sm">
-                    <div className="text-4xl font-extrabold text-orange-400 mb-2">99.94%</div>
-                    <div className="text-white/70">Detection Accuracy</div>
+                  <div className="text-left">
+                    <div className="text-left">99.94%</div>
+                    <div className="text-left">Detection Accuracy</div>
                   </div>
-                  <div className="bg-white/5 rounded-xl p-6 backdrop-blur-sm">
-                    <div className="text-4xl font-extrabold text-yellow-400 mb-2">96%</div>
-                    <div className="text-white/70">Fewer False Positives</div>
+                  <div className="text-left">
+                    <div className="text-left">96%</div>
+                    <div className="text-left">Fewer False Positives</div>
                   </div>
-                  <div className="bg-white/5 rounded-xl p-6 backdrop-blur-sm">
-                    <div className="text-4xl font-extrabold text-green-400 mb-2">&lt;100ms</div>
-                    <div className="text-white/70">Real-Time Detection</div>
+                  <div className="text-left">
+                    <div className="text-left">&lt;100ms</div>
+                    <div className="text-left">Real-Time Detection</div>
                   </div>
                 </div>
               </div>
 
-              <h2 className="text-3xl font-bold text-white mb-6">The Fraud Detection Crisis</h2>
-              <p className="text-lg text-white/80 leading-relaxed mb-6">
+              <h2 className="text-left">The Fraud Detection Crisis</h2>
+              <p className="text-left">
                 Financial fraud is costing the global economy over $5 trillion annually and growing at 18% 
                 year-over-year. Traditional rule-based systems can't keep up with sophisticated fraud tactics, 
                 resulting in massive losses and customer frustration from false declines.
               </p>
 
-              <div className="bg-red-900/20 border border-red-500/30 rounded-xl p-6 mb-8">
-                <h3 className="text-2xl font-bold text-red-400 mb-4">🚨 The Fraud Landscape Today</h3>
-                <ul className="space-y-3">
-                  <li className="flex items-start gap-3">
-                    <span className="text-red-400 text-xl mt-1">⚠️</span>
-                    <span className="text-white/80"><strong>Account Takeover</strong>: 137% increase in sophisticated account compromise attempts</span>
+              <div className="text-left">
+                <h3 className="text-left">🚨 The Fraud Landscape Today</h3>
+                <ul className="text-left">
+                  <li className="text-left">
+                    <span className="text-left">⚠️<
+                    <span className="text-left"><strong>Account Takeover</strong>: 137% increase in sophisticated account compromise attempts<
                   </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-red-400 text-xl mt-1">⚠️</span>
-                    <span className="text-white/80"><strong>Synthetic Identity</strong>: $6B annual losses from AI-generated fake identities</span>
+                  <li className="text-left">
+                    <span className="text-left">⚠️<
+                    <span className="text-left"><strong>Synthetic Identity</strong>: $6B annual losses from AI-generated fake identities<
                   </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-red-400 text-xl mt-1">⚠️</span>
-                    <span className="text-white/80"><strong>Payment Fraud</strong>: Real-time payment fraud up 245% with instant payment systems</span>
+                  <li className="text-left">
+                    <span className="text-left">⚠️<
+                    <span className="text-left"><strong>Payment Fraud</strong>: Real-time payment fraud up 245% with instant payment systems<
                   </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-red-400 text-xl mt-1">⚠️</span>
-                    <span className="text-white/80"><strong>False Positives</strong>: 89% of fraud alerts are false, costing $118B in lost revenue</span>
+                  <li className="text-left">
+                    <span className="text-left">⚠️<
+                    <span className="text-left"><strong>False Positives</strong>: 89% of fraud alerts are false, costing $118B in lost revenue<
                   </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-red-400 text-xl mt-1">⚠️</span>
-                    <span className="text-white/80"><strong>Detection Speed</strong>: Average 3.7 days to detect fraud—far too slow for modern threats</span>
+                  <li className="text-left">
+                    <span className="text-left">⚠️<
+                    <span className="text-left"><strong>Detection Speed</strong>: Average 3.7 days to detect fraud—far too slow for modern threats<
                   </li>
                 </ul>
               </div>
 
-              <h2 className="text-3xl font-bold text-white mb-6">The AI-Powered Solution</h2>
-              <p className="text-lg text-white/80 leading-relaxed mb-6">
+              <h2 className="text-left">The AI-Powered Solution</h2>
+              <p className="text-left">
                 Next-generation fraud detection leverages multiple AI techniques working in concert:
               </p>
 
-              <div className="grid md:grid-cols-2 gap-6 mb-8">
-                <div className="bg-gradient-to-br from-red-500/10 to-orange-500/10 border border-red-500/30 rounded-xl p-6">
-                  <h3 className="text-xl font-bold text-red-400 mb-3">🧠 Deep Learning Models</h3>
-                  <p className="text-white/70 mb-3">
+              <div className="text-left">
+                <div className="text-left">
+                  <h3 className="text-left">🧠 Deep Learning Models</h3>
+                  <p className="text-left">
                     Neural networks analyze transaction patterns with 99.94% accuracy
                   </p>
-                  <ul className="space-y-2 text-sm text-white/60">
+                  <ul className="text-left">
                     <li>• Transformer-based sequence analysis</li>
                     <li>• Graph neural networks for relationship mapping</li>
                     <li>• Anomaly detection with autoencoders</li>
                   </ul>
                 </div>
 
-                <div className="bg-gradient-to-br from-orange-500/10 to-yellow-500/10 border border-orange-500/30 rounded-xl p-6">
-                  <h3 className="text-xl font-bold text-orange-400 mb-3">⚡ Real-Time Scoring</h3>
-                  <p className="text-white/70 mb-3">
+                <div className="text-left">
+                  <h3 className="text-left">⚡ Real-Time Scoring</h3>
+                  <p className="text-left">
                     Sub-100ms inference for instant fraud decisions at transaction time
                   </p>
-                  <ul className="space-y-2 text-sm text-white/60">
+                  <ul className="text-left">
                     <li>• Edge deployment for ultra-low latency</li>
                     <li>• Streaming feature computation</li>
                     <li>• Dynamic risk scoring engines</li>
                   </ul>
                 </div>
 
-                <div className="bg-gradient-to-br from-yellow-500/10 to-green-500/10 border border-yellow-500/30 rounded-xl p-6">
-                  <h3 className="text-xl font-bold text-yellow-400 mb-3">🔍 Behavioral Biometrics</h3>
-                  <p className="text-white/70 mb-3">
+                <div className="text-left">
+                  <h3 className="text-left">🔍 Behavioral Biometrics</h3>
+                  <p className="text-left">
                     Continuous authentication through device and user behavior patterns
                   </p>
-                  <ul className="space-y-2 text-sm text-white/60">
+                  <ul className="text-left">
                     <li>• Mouse movement & typing analysis</li>
                     <li>• Device fingerprinting & TLS profiling</li>
                     <li>• Session anomaly detection</li>
                   </ul>
                 </div>
 
-                <div className="bg-gradient-to-br from-green-500/10 to-blue-500/10 border border-green-500/30 rounded-xl p-6">
-                  <h3 className="text-xl font-bold text-green-400 mb-3">🕸️ Network Analysis</h3>
-                  <p className="text-white/70 mb-3">
+                <div className="text-left">
+                  <h3 className="text-left">🕸️ Network Analysis</h3>
+                  <p className="text-left">
                     Graph-based fraud ring detection and entity relationship mapping
                   </p>
-                  <ul className="space-y-2 text-sm text-white/60">
+                  <ul className="text-left">
                     <li>• Community detection algorithms</li>
                     <li>• Link prediction for fraud networks</li>
                     <li>• Temporal graph analysis</li>
@@ -163,10 +163,10 @@ export default function FraudDetectionRealTimePreventionRevolution2025() {
                 </div>
               </div>
 
-              <h2 className="text-3xl font-bold text-white mb-6">Technical Architecture</h2>
+              <h2 className="text-left">Technical Architecture</h2>
               
-              <div className="bg-slate-900/50 border border-white/10 rounded-xl p-6 mb-8 overflow-x-auto">
-                <pre className="text-sm text-white/80">
+              <div className="text-left">
+                <pre className="text-left">
 {`# Real-Time Fraud Detection Pipeline
 
 from kafka import KafkaConsumer, KafkaProducer
@@ -377,15 +377,15 @@ if __name__ == "__main__":
                 </pre>
               </div>
 
-              <h2 className="text-3xl font-bold text-white mb-6">Enterprise Results: Fortune 100 Financial Institution</h2>
+              <h2 className="text-left">Enterprise Results: Fortune 100 Financial Institution</h2>
               
-              <div className="bg-gradient-to-r from-green-500/10 to-blue-500/10 border border-green-500/30 rounded-xl p-8 mb-8">
-                <h3 className="text-2xl font-bold text-green-400 mb-4">📊 Transformation Metrics</h3>
+              <div className="text-left">
+                <h3 className="text-left">📊 Transformation Metrics</h3>
                 
-                <div className="grid md:grid-cols-2 gap-8">
+                <div className="text-left">
                   <div>
-                    <h4 className="text-lg font-semibold text-white mb-3">Before AI Implementation</h4>
-                    <ul className="space-y-2 text-white/70">
+                    <h4 className="text-left">Before AI Implementation</h4>
+                    <ul className="text-left">
                       <li>❌ $847M annual fraud losses</li>
                       <li>❌ 73% detection accuracy</li>
                       <li>❌ 89% false positive rate</li>
@@ -396,8 +396,8 @@ if __name__ == "__main__":
                   </div>
                   
                   <div>
-                    <h4 className="text-lg font-semibold text-white mb-3">After AI Implementation</h4>
-                    <ul className="space-y-2 text-white/70">
+                    <h4 className="text-left">After AI Implementation</h4>
+                    <ul className="text-left">
                       <li>✅ $47M fraud losses (94% reduction)</li>
                       <li>✅ 99.94% detection accuracy</li>
                       <li>✅ 3.6% false positive rate (96% reduction)</li>
@@ -408,19 +408,19 @@ if __name__ == "__main__":
                   </div>
                 </div>
                 
-                <div className="mt-6 pt-6 border-t border-green-500/30">
-                  <p className="text-xl font-semibold text-green-400 mb-2">Total Financial Impact</p>
-                  <p className="text-3xl font-bold text-white">$2.7B Annual Value Created</p>
-                  <p className="text-white/60 mt-2">ROI: 18.7x | Payback Period: 19 days</p>
+                <div className="text-left">
+                  <p className="text-left">Total Financial Impact</p>
+                  <p className="text-left">$2.7B Annual Value Created</p>
+                  <p className="text-left">ROI: 18.7x | Payback Period: 19 days</p>
                 </div>
               </div>
 
-              <h2 className="text-3xl font-bold text-white mb-6">Industry-Specific Applications</h2>
+              <h2 className="text-left">Industry-Specific Applications</h2>
               
-              <div className="space-y-6 mb-8">
-                <div className="bg-blue-900/20 border border-blue-500/30 rounded-xl p-6">
-                  <h3 className="text-xl font-bold text-blue-400 mb-3">🏦 Banking & Financial Services</h3>
-                  <ul className="space-y-2 text-white/70">
+              <div className="text-left">
+                <div className="text-left">
+                  <h3 className="text-left">🏦 Banking & Financial Services</h3>
+                  <ul className="text-left">
                     <li><strong>Account Takeover Prevention</strong>: 99.1% detection of sophisticated takeover attempts</li>
                     <li><strong>Payment Fraud</strong>: Real-time blocking of ACH, wire, and instant payment fraud</li>
                     <li><strong>Credit Card Fraud</strong>: Sub-50ms authorization fraud checks, 99.7% accuracy</li>
@@ -428,9 +428,9 @@ if __name__ == "__main__":
                   </ul>
                 </div>
 
-                <div className="bg-purple-900/20 border border-purple-500/30 rounded-xl p-6">
-                  <h3 className="text-xl font-bold text-purple-400 mb-3">🛒 E-Commerce & Retail</h3>
-                  <ul className="space-y-2 text-white/70">
+                <div className="text-left">
+                  <h3 className="text-left">🛒 E-Commerce & Retail</h3>
+                  <ul className="text-left">
                     <li><strong>Payment Fraud</strong>: 97.8% detection of stolen card usage</li>
                     <li><strong>Return Fraud</strong>: AI detection of fraudulent return patterns, $127M saved</li>
                     <li><strong>Promo Abuse</strong>: Multi-account detection preventing coupon abuse</li>
@@ -438,9 +438,9 @@ if __name__ == "__main__":
                   </ul>
                 </div>
 
-                <div className="bg-red-900/20 border border-red-500/30 rounded-xl p-6">
-                  <h3 className="text-xl font-bold text-red-400 mb-3">🏥 Healthcare & Insurance</h3>
-                  <ul className="space-y-2 text-white/70">
+                <div className="text-left">
+                  <h3 className="text-left">🏥 Healthcare & Insurance</h3>
+                  <ul className="text-left">
                     <li><strong>Claims Fraud</strong>: $890M in fraudulent claims prevented annually</li>
                     <li><strong>Provider Fraud</strong>: Detection of billing schemes and unbundling</li>
                     <li><strong>Identity Theft</strong>: Real-time verification preventing medical identity theft</li>
@@ -448,9 +448,9 @@ if __name__ == "__main__":
                   </ul>
                 </div>
 
-                <div className="bg-green-900/20 border border-green-500/30 rounded-xl p-6">
-                  <h3 className="text-xl font-bold text-green-400 mb-3">🎮 Gaming & Entertainment</h3>
-                  <ul className="space-y-2 text-white/70">
+                <div className="text-left">
+                  <h3 className="text-left">🎮 Gaming & Entertainment</h3>
+                  <ul className="text-left">
                     <li><strong>Payment Fraud</strong>: Real-time detection of stolen payment methods</li>
                     <li><strong>Chargebacks</strong>: 67% reduction in chargeback rates</li>
                     <li><strong>Bonus Abuse</strong>: Detection of multi-accounting and promo exploitation</li>
@@ -459,12 +459,12 @@ if __name__ == "__main__":
                 </div>
               </div>
 
-              <h2 className="text-3xl font-bold text-white mb-6">Implementation Roadmap</h2>
+              <h2 className="text-left">Implementation Roadmap</h2>
               
-              <div className="space-y-4 mb-8">
-                <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 border-l-4 border-blue-500 rounded-r-xl p-6">
-                  <h3 className="text-xl font-bold text-blue-400 mb-2">Phase 1: Foundation (Months 1-2)</h3>
-                  <ul className="space-y-2 text-white/70">
+              <div className="text-left">
+                <div className="text-left">
+                  <h3 className="text-left">Phase 1: Foundation (Months 1-2)</h3>
+                  <ul className="text-left">
                     <li>✓ Data pipeline infrastructure setup</li>
                     <li>✓ Historical data analysis & labeling</li>
                     <li>✓ Feature engineering framework</li>
@@ -472,9 +472,9 @@ if __name__ == "__main__":
                   </ul>
                 </div>
 
-                <div className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 border-l-4 border-purple-500 rounded-r-xl p-6">
-                  <h3 className="text-xl font-bold text-purple-400 mb-2">Phase 2: Model Development (Months 3-4)</h3>
-                  <ul className="space-y-2 text-white/70">
+                <div className="text-left">
+                  <h3 className="text-left">Phase 2: Model Development (Months 3-4)</h3>
+                  <ul className="text-left">
                     <li>✓ Deep learning model training</li>
                     <li>✓ Graph neural network deployment</li>
                     <li>✓ Behavioral biometrics integration</li>
@@ -482,9 +482,9 @@ if __name__ == "__main__":
                   </ul>
                 </div>
 
-                <div className="bg-gradient-to-r from-pink-500/10 to-red-500/10 border-l-4 border-pink-500 rounded-r-xl p-6">
-                  <h3 className="text-xl font-bold text-pink-400 mb-2">Phase 3: Real-Time Deployment (Months 5-6)</h3>
-                  <ul className="space-y-2 text-white/70">
+                <div className="text-left">
+                  <h3 className="text-left">Phase 3: Real-Time Deployment (Months 5-6)</h3>
+                  <ul className="text-left">
                     <li>✓ Streaming infrastructure deployment</li>
                     <li>✓ Low-latency model serving</li>
                     <li>✓ Shadow mode testing (parallel to existing systems)</li>
@@ -492,9 +492,9 @@ if __name__ == "__main__":
                   </ul>
                 </div>
 
-                <div className="bg-gradient-to-r from-red-500/10 to-orange-500/10 border-l-4 border-red-500 rounded-r-xl p-6">
-                  <h3 className="text-xl font-bold text-red-400 mb-2">Phase 4: Optimization (Months 7-12)</h3>
-                  <ul className="space-y-2 text-white/70">
+                <div className="text-left">
+                  <h3 className="text-left">Phase 4: Optimization (Months 7-12)</h3>
+                  <ul className="text-left">
                     <li>✓ Continuous model retraining</li>
                     <li>✓ Explainability dashboard deployment</li>
                     <li>✓ Advanced graph features</li>
@@ -503,12 +503,12 @@ if __name__ == "__main__":
                 </div>
               </div>
 
-              <h2 className="text-3xl font-bold text-white mb-6">Key Success Factors</h2>
+              <h2 className="text-left">Key Success Factors</h2>
               
-              <div className="grid md:grid-cols-2 gap-6 mb-8">
-                <div className="bg-white/5 rounded-xl p-6 backdrop-blur-sm">
-                  <h3 className="text-xl font-bold text-orange-400 mb-3">🎯 Technical Excellence</h3>
-                  <ul className="space-y-2 text-white/70 text-sm">
+              <div className="text-left">
+                <div className="text-left">
+                  <h3 className="text-left">🎯 Technical Excellence</h3>
+                  <ul className="text-left">
                     <li>• Sub-100ms inference latency</li>
                     <li>• 99.99% system uptime</li>
                     <li>• Horizontal scalability to 100M+ TPS</li>
@@ -517,9 +517,9 @@ if __name__ == "__main__":
                   </ul>
                 </div>
 
-                <div className="bg-white/5 rounded-xl p-6 backdrop-blur-sm">
-                  <h3 className="text-xl font-bold text-yellow-400 mb-3">🔍 Data Quality</h3>
-                  <ul className="space-y-2 text-white/70 text-sm">
+                <div className="text-left">
+                  <h3 className="text-left">🔍 Data Quality</h3>
+                  <ul className="text-left">
                     <li>• Comprehensive labeling (confirmed fraud)</li>
                     <li>• Multi-source data integration</li>
                     <li>• Real-time data validation</li>
@@ -528,9 +528,9 @@ if __name__ == "__main__":
                   </ul>
                 </div>
 
-                <div className="bg-white/5 rounded-xl p-6 backdrop-blur-sm">
-                  <h3 className="text-xl font-bold text-green-400 mb-3">🧠 Model Innovation</h3>
-                  <ul className="space-y-2 text-white/70 text-sm">
+                <div className="text-left">
+                  <h3 className="text-left">🧠 Model Innovation</h3>
+                  <ul className="text-left">
                     <li>• Transformer-based sequence models</li>
                     <li>• Graph neural networks</li>
                     <li>• Multi-modal ensemble techniques</li>
@@ -539,9 +539,9 @@ if __name__ == "__main__":
                   </ul>
                 </div>
 
-                <div className="bg-white/5 rounded-xl p-6 backdrop-blur-sm">
-                  <h3 className="text-xl font-bold text-blue-400 mb-3">🤝 Operational Integration</h3>
-                  <ul className="space-y-2 text-white/70 text-sm">
+                <div className="text-left">
+                  <h3 className="text-left">🤝 Operational Integration</h3>
+                  <ul className="text-left">
                     <li>• Fraud analyst workflow integration</li>
                     <li>• Customer service tooling</li>
                     <li>• Automated case management</li>
@@ -551,34 +551,34 @@ if __name__ == "__main__":
                 </div>
               </div>
 
-              <div className="bg-gradient-to-r from-red-500/20 to-orange-500/20 border border-red-500/30 rounded-2xl p-8 mb-8">
-                <h2 className="text-3xl font-bold text-red-400 mb-6">🚀 Ready to Transform Your Fraud Prevention?</h2>
-                <p className="text-lg text-white/80 mb-6">
+              <div className="text-left">
+                <h2 className="text-left">🚀 Ready to Transform Your Fraud Prevention?</h2>
+                <p className="text-left">
                   Join Fortune 500 companies achieving 99.94% fraud detection accuracy while reducing false 
                   positives by 96%. Our AI-powered fraud prevention platform delivers measurable results in 
                   weeks, not years.
                 </p>
                 
-                <div className="grid md:grid-cols-3 gap-4">
-                  <a href="/contact" className="bg-red-500 hover:bg-red-600 text-white font-bold py-4 px-6 rounded-xl text-center transition-all transform hover:scale-105">
+                <div className="text-left">
+                  <a href="/contact" className="text-left">
                     Get Started Today
                   </a>
-                  <a href="/services/fraud-detection-ai" className="bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-6 rounded-xl text-center border border-white/30 transition-all">
+                  <a href="/services/fraud-detection-ai" className="text-left">
                     Explore Solutions
                   </a>
-                  <a href="/case-studies" className="bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-6 rounded-xl text-center border border-white/30 transition-all">
+                  <a href="/case-studies" className="text-left">
                     View Case Studies
                   </a>
                 </div>
                 
-                <p className="text-sm text-white/60 mt-6 text-center">
+                <p className="text-left">
                   Free fraud detection assessment • 30-day pilot program • Risk-free trial
                 </p>
               </div>
 
-              <div className="border-t border-white/10 pt-8">
-                <h3 className="text-xl font-bold text-white mb-4">About This Article</h3>
-                <p className="text-white/60 text-sm">
+              <div className="text-left">
+                <h3 className="text-left">About This Article</h3>
+                <p className="text-left">
                   Published October 1, 2025 | Based on real-world deployments at Fortune 500 financial 
                   institutions processing 100M+ transactions daily. Results and metrics validated through 
                   independent audits.

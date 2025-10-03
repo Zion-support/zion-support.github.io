@@ -7,14 +7,14 @@ export const metadata = {
 
 export default function Page() {
 	return (
-		<main className="min-h-screen bg-white text-gray-900">"
-			<section className="py-16">"
-				<div className="max-w-3xl mx-auto px-4">"
-					<p className="text-sm text-gray-500">AI Operations • 2025-09-30</p>"
-					<h1 className="text-3xl md:text-5xl font-bold mt-2">Autonomous Change Control — Gates, Budgets, Rollback</h1>"
-					<p className="mt-4 text-lg text-gray-700">A practical blueprint to ship fast without regressions using CI policy tests, KPI-linked canaries, budgeted actions, and instant rollback.</p>"
-					<hr className="my-8 border-gray-200" />"
-					<article className="prose prose-slate max-w-none">"
+		<main className="text-left">"
+			<section className="text-left">"
+				<div className="text-left">"
+					<p className="text-left">AI Operations • 2025-09-30</p>"
+					<h1 className="text-left">Autonomous Change Control — Gates, Budgets, Rollback</h1>"
+					<p className="text-left">A practical blueprint to ship fast without regressions using CI policy tests, KPI-linked canaries, budgeted actions, and instant rollback.</p>"
+					<hr className="text-left" />"
+					<article className="text-left">"
 						<h2>Why autonomous change control</h2>
 						<p>As AI surfaces evolve quickly, organizations need lightweight but effective guardrails that enable weekly releases without quality regressions. This guide shows how to wire policy tests, live canaries, and rollback playbooks to KPIs.</p>
 						<h3>Key components</h3>

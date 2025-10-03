@@ -11,15 +11,15 @@ export const metadata = {
 
 export default function BlogPost() {
   return (
-    <article className="prose prose-invert max-w-none">
+    <article className="text-left">
       <h1>🤖 Intelligent Automation Orchestration 2025: Enterprise Process Revolution</h1>
       
-      <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 border border-cyan-500/30 rounded-lg p-6 my-8">
-        <h3 className="text-2xl font-bold text-cyan-300 mt-0">🚀 Revolutionary Breakthrough</h3>
-        <p className="text-lg">
-          <strong>AI-powered automation orchestration platform</strong> achieving <span className="text-green-400 font-bold">98% process automation</span>, 
-          <span className="text-green-400 font-bold"> 85% cost reduction</span>, and <span className="text-green-400 font-bold">$67M annual savings</span> through 
-          <span className="text-green-400 font-bold"> intelligent coordination</span> of RPA, AI, and human tasks across enterprise workflows.
+      <div className="text-left">
+        <h3 className="text-left">🚀 Revolutionary Breakthrough</h3>
+        <p className="text-left">
+          <strong>AI-powered automation orchestration platform</strong> achieving <span className="text-left">98% process automation<, 
+          <span className="text-left"> 85% cost reduction<, and <span className="text-left">$67M annual savings< through 
+          <span className="text-left"> intelligent coordination< of RPA, AI, and human tasks across enterprise workflows.
           Transform operations with self-learning automation that adapts, optimizes, and scales autonomously.
         </p>
       </div>
@@ -78,8 +78,8 @@ export default function BlogPost() {
       </p>
 
       <h2>📊 Performance Metrics</h2>
-      <div className="bg-slate-800/50 rounded-lg p-6 my-6">
-        <ul className="space-y-2">
+      <div className="text-left">
+        <ul className="text-left">
           <li>✅ <strong>98% process automation rate</strong> across enterprise workflows</li>
           <li>✅ <strong>85% operational cost reduction</strong> through intelligent orchestration</li>
           <li>✅ <strong>$67M annual savings</strong> for typical enterprise deployment</li>
@@ -146,7 +146,7 @@ export default function BlogPost() {
       <h2>🌟 Customer Success Stories</h2>
       
       <h3>Global Insurance Company - Claims Processing</h3>
-      <div className="bg-blue-900/30 border border-blue-500/30 rounded-lg p-6 my-6">
+      <div className="text-left">
         <p><strong>Challenge:</strong> Process 500K+ annual claims with 72-hour turnaround and 15% error rate</p>
         <p><strong>Solution:</strong> End-to-end claims automation with AI-powered fraud detection</p>
         <p><strong>Results:</strong></p>
@@ -160,7 +160,7 @@ export default function BlogPost() {
       </div>
 
       <h3>Healthcare Provider - Patient Onboarding</h3>
-      <div className="bg-green-900/30 border border-green-500/30 rounded-lg p-6 my-6">
+      <div className="text-left">
         <p><strong>Challenge:</strong> 45-minute patient registration process with high error rates</p>
         <p><strong>Solution:</strong> Intelligent automation of registration, verification, and scheduling</p>
         <p><strong>Results:</strong></p>
@@ -174,7 +174,7 @@ export default function BlogPost() {
       </div>
 
       <h3>Manufacturing - Order-to-Cash</h3>
-      <div className="bg-purple-900/30 border border-purple-500/30 rounded-lg p-6 my-6">
+      <div className="text-left">
         <p><strong>Challenge:</strong> 12-day order-to-cash cycle with 18% error rate causing revenue delays</p>
         <p><strong>Solution:</strong> Orchestrated automation of order entry, fulfillment, and invoicing</p>
         <p><strong>Results:</strong></p>
@@ -207,57 +207,57 @@ export default function BlogPost() {
       </ul>
 
       <h2>💰 Financial Impact</h2>
-      <div className="bg-slate-800/50 rounded-lg p-6 my-6">
-        <h3 className="text-xl font-bold text-green-400 mt-0">3-Year ROI Projection</h3>
-        <div className="grid grid-cols-3 gap-4 mt-4">
+      <div className="text-left">
+        <h3 className="text-left">3-Year ROI Projection</h3>
+        <div className="text-left">
           <div>
-            <p className="font-bold text-yellow-400">Year 1:</p>
-            <ul className="text-sm">
+            <p className="text-left">Year 1:</p>
+            <ul className="text-left">
               <li>Investment: $2.5M</li>
               <li>Savings: $22M</li>
               <li><strong>Net: +$19.5M</strong></li>
             </ul>
           </div>
           <div>
-            <p className="font-bold text-yellow-400">Year 2:</p>
-            <ul className="text-sm">
+            <p className="text-left">Year 2:</p>
+            <ul className="text-left">
               <li>Investment: $1.2M</li>
               <li>Savings: $45M</li>
               <li><strong>Net: +$43.8M</strong></li>
             </ul>
           </div>
           <div>
-            <p className="font-bold text-yellow-400">Year 3:</p>
-            <ul className="text-sm">
+            <p className="text-left">Year 3:</p>
+            <ul className="text-left">
               <li>Investment: $800K</li>
               <li>Savings: $67M</li>
               <li><strong>Net: +$66.2M</strong></li>
             </ul>
           </div>
         </div>
-        <p className="mt-4 text-lg font-bold text-green-400">
+        <p className="text-left">
           3-Year Total: $129.5M Net Value | ROI: 2,889%
         </p>
       </div>
 
       <h2>🚀 Transform Your Enterprise Operations</h2>
-      <div className="bg-gradient-to-r from-cyan-900/40 to-blue-900/40 border border-cyan-500/30 rounded-lg p-8 my-8">
-        <h3 className="text-2xl font-bold text-cyan-300 mt-0">Start Your Automation Journey</h3>
-        <p className="text-lg mb-4">
+      <div className="text-left">
+        <h3 className="text-left">Start Your Automation Journey</h3>
+        <p className="text-left">
           Join enterprise leaders achieving 98% process automation and $67M+ annual savings through 
           intelligent automation orchestration. Begin transforming your operations today.
         </p>
-        <ul className="space-y-2 text-lg">
+        <ul className="text-left">
           <li>🔍 <strong>Free assessment:</strong> Identify your top 20 automation opportunities</li>
           <li>🧪 <strong>Rapid pilot:</strong> Automate 3 processes in 8 weeks</li>
           <li>🚀 <strong>Full deployment:</strong> Enterprise-wide automation program</li>
           <li>📊 <strong>Center of Excellence:</strong> Build internal automation capabilities</li>
         </ul>
-        <div className="mt-6 flex gap-4">
-          <a href="/contact" className="inline-block bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-8 rounded-lg transition-colors">
+        <div className="text-left">
+          <a href="/contact" className="text-left">
             Schedule Discovery Call →
           </a>
-          <a href="/resources/automation-roi-calculator" className="inline-block border-2 border-cyan-600 text-cyan-400 hover:bg-cyan-600 hover:text-white font-bold py-3 px-8 rounded-lg transition-colors">
+          <a href="/resources/automation-roi-calculator" className="text-left">
             Calculate Your ROI
           </a>
         </div>
@@ -271,12 +271,12 @@ export default function BlogPost() {
         <li><a href="/services/intelligent-automation-platform">Intelligent Automation Platform Service</a></li>
       </ul>
 
-      <div className="bg-yellow-900/30 border border-yellow-500/30 rounded-lg p-6 my-8">
-        <p className="text-yellow-300 font-bold mb-2">⚡ Q4 2025 Special Offer</p>
+      <div className="text-left">
+        <p className="text-left">⚡ Q4 2025 Special Offer</p>
         <p>
           Launch your automation program before year-end and receive: <strong>30% implementation discount</strong>, 
           free process mining assessment ($150K value), and 12 months of premium support. 
-          <a href="/contact" className="text-yellow-400 hover:text-yellow-300 underline ml-2">Start today →</a>
+          <a href="/contact" className="text-left">Start today →</a>
         </p>
       </div>
     </article>

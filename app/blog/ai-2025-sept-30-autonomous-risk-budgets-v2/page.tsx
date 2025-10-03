@@ -6,17 +6,17 @@ export const metadata = {
 
 export default function AutonomousRiskBudgetsV2Page() {
   return (
-    <main className="min-h-screen bg-slate-950 text-white">"
-      <article className="max-w-3xl mx-auto px-4 py-16">"
-        <header className="mb-10">"
-          <p className="text-sm text-white/60">Published Sep 30, 2025</p>"
-          <h1 className="text-4xl font-extrabold mt-2">Autonomous Risk Budgets V2</h1>"
-          <p className="text-white/70 mt-3">"
+    <main className="text-left">"
+      <article className="text-left">"
+        <header className="text-left">"
+          <p className="text-left">Published Sep 30, 2025</p>"
+          <h1 className="text-left">Autonomous Risk Budgets V2</h1>"
+          <p className="text-left">"
             Dynamic guardrails and live scorecards that minimize incidents while maintaining speed.
           </p>
         </header>
 
-        <section className="prose prose-invert prose-slate max-w-none">"
+        <section className="text-left">"
           <h2>Operational risk budgets</h2>
           <p>
             Risk budgets set explicit allowances for failure modes (e.g., hallucinations, latency

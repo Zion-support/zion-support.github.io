@@ -13,18 +13,18 @@ export const metadata = {
 
 export default function AgentSafetyRunbooks2026Page() {
 	return (
-		<div className="min-h-screen bg-slate-950 text-white">"
-			<main className="max-w-3xl mx-auto px-6 py-16">"
-				<div className="mb-8">"
-					<div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-fuchsia-500/10 border border-fuchsia-400/20 text-fuchsia-300 text-xs font-semibold">"
-						<span>New • Sep 2025</span>
+		<div className="text-left">"
+			<main className="text-left">"
+				<div className="text-left">"
+					<div className="text-left">"
+						<span>New • Sep 2025<
 					</div>
-					<h1 className="text-4xl font-extrabold mt-4 mb-3">Agent Safety Runbooks 2026</h1>"
-					<p className="text-slate-300">Approvals, budgeted actions, and KPI‑linked canaries for safe agent releases.</p>"
-					<div className="mt-3 text-slate-400 text-sm">7 min read • Category: AI Governance</div>"
+					<h1 className="text-left">Agent Safety Runbooks 2026</h1>"
+					<p className="text-left">Approvals, budgeted actions, and KPI‑linked canaries for safe agent releases.</p>"
+					<div className="text-left">7 min read • Category: AI Governance</div>"
 				</div>
 
-				<div className="prose prose-invert prose-slate max-w-none">"
+				<div className="text-left">"
 					<h2>Release Readiness</h2>
 					<ul>
 						<li>Risk budgets per tool and action</li>
@@ -35,8 +35,8 @@ export default function AgentSafetyRunbooks2026Page() {
 					<p>Define explicit rollback conditions tied to SLOs and observed regressions.</p>
 				</div>
 
-				<div className="mt-12">"
-					<Link href="/blog" className="inline-block bg-white text-fuchsia-700 px-6 py-3 rounded-lg font-bold hover:bg-fuchsia-50">"
+				<div className="text-left">"
+					<Link href="/blog" className="text-left">"
 						← Back to Blog
 					</Link>
 				</div>

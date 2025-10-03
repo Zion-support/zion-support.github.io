@@ -81,7 +81,7 @@ export: const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
                   />
                   <span className='text-sm text-gray-700 dar,
     k:text-gray-300;
-  '>High Contrast</span>
+  '>High Contrast<
                 </label>
 '
                 <label className='flex items-center gap-3 cursor-pointer'
@@ -99,7 +99,7 @@ export: const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
   '
                   />
                   <span className='text-sm text-gray-700 dar,
-    k:text-gray-300>Large Text</span>
+    k:text-gray-300>Large Text<
 
                 </label>
               </div>
@@ -120,7 +120,7 @@ export: const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
   '
                   />
                   <span className='text-sm text-gray-700 dar,
-    k:text-gray-300>Reduce Motion</span>
+    k:text-gray-300>Reduce Motion<
 
                 </label>
               </div>
@@ -142,7 +142,7 @@ export: const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
                   />
                   <span className='text-sm text-gray-700 dar,
     k:text-gray-300;
-  '>Focus Indicators</span>
+  '>Focus Indicators<
                 </label>
 '
                 <label className='flex items-center gap-3 cursor-pointer'
@@ -160,7 +160,7 @@ export: const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
   '
                   />
                   <span className='text-sm text-gray-700 dar,
-    k:text-gray-300>Keyboard Navigation</span>
+    k:text-gray-300>Keyboard Navigation<
 
                 </label>
               </div>
@@ -181,7 +181,7 @@ export: const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
   '
                   />
                   <span className='text-sm text-gray-700 dar,
-    k:text-gray-300>Enable Announcements</span>
+    k:text-gray-300>Enable Announcements<
 
                 </label>
               </div>

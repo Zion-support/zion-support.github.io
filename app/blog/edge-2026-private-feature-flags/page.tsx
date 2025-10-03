@@ -7,7 +7,7 @@ export const metadata = {
 
 export default function Page() {
 	return (
-		<main className="max-w-3xl mx-auto px-4 py-12 prose prose-invert">"
+		<main className="text-left">"
 			<h1>Edge Private Feature Flags (2026)</h1>
 			<p>
 				Roll out features globally with zero PII using scoped identifiers, on‑device aggregation, and

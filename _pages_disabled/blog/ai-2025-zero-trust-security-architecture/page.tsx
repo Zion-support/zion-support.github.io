@@ -18,46 +18,46 @@ export const metadata: Metadata = {
 
 export default function ZeroTrustAISecurity2025() {
   return (
-    <div className="min-h-screen bg-slate-950">
+    <div className="text-left">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-red-900 to-slate-900 py-20">
-        <div className="absolute inset-0 overflow-hidden opacity-20">
-          <div className="absolute top-0 left-1/3 w-96 h-96 bg-red-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-0 right-1/3 w-96 h-96 bg-orange-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+      <section className="text-left">
+        <div className="text-left">
+          <div className="text-left"></div>
+          <div className="text-left" style={{ animationDelay: '2s' }}></div>
         </div>
         
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-red-500/20 to-orange-500/20 border border-red-500/30 mb-8">
-              <Shield className="w-5 h-5 text-red-400" />
-              <span className="text-red-400 font-bold text-sm tracking-wider uppercase">
+        <div className="text-left">
+          <div className="text-left">
+            <div className="text-left">
+              <Shield className="text-left" />
+              <span className="text-left">
                 🛡️ CRITICAL SECURITY RESEARCH • January 30, 2025
-              </span>
+              <
             </div>
             
-            <h1 className="text-5xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-red-400 via-orange-400 to-yellow-400 bg-clip-text text-transparent leading-tight">
+            <h1 className="text-left">
               Zero-Trust AI Security Architecture
             </h1>
             
-            <p className="text-2xl text-gray-300 mb-8 font-semibold">
+            <p className="text-left">
               The 2025 Enterprise Blueprint for Unbreakable AI Protection
             </p>
             
-            <p className="text-xl text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-left">
               Protect your AI systems against sophisticated attacks with zero-trust architecture. 
               Deployed across 1000+ enterprises, achieving 99.97% threat prevention and complete model integrity.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="text-left">
               <a 
                 href="#security-framework"
-                className="bg-gradient-to-r from-red-500 to-orange-600 hover:from-red-400 hover:to-orange-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-red-500/50 transform hover:-translate-y-1"
+                className="text-left"
               >
                 View Security Framework
               </a>
               <a 
                 href="/contact"
-                className="border-2 border-red-500 text-red-400 hover:bg-red-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
+                className="text-left"
               >
                 Get Security Assessment
               </a>
@@ -67,55 +67,55 @@ export default function ZeroTrustAISecurity2025() {
       </section>
 
       {/* Threat Landscape Section */}
-      <section className="py-20 bg-slate-900/50">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-extrabold mb-6 bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent">
+      <section className="text-left">
+        <div className="text-left">
+          <div className="text-left">
+            <h2 className="text-left">
               The AI Security Crisis: 2025 Threat Landscape
             </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+            <p className="text-left">
               AI systems face unprecedented security challenges. Our zero-trust architecture provides comprehensive protection against all known and emerging threats.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="text-left">
             {[
               {
-                icon: <AlertTriangle className="w-12 h-12 text-red-400" />,
+                icon: <AlertTriangle className="text-left" />,
                 title: 'Adversarial Attacks',
                 description: 'Sophisticated input manipulation to fool AI models',
                 impact: '97% of models vulnerable',
                 solution: 'Real-time adversarial detection'
               },
               {
-                icon: <Lock className="w-12 h-12 text-orange-400" />,
+                icon: <Lock className="text-left" />,
                 title: 'Model Theft',
                 description: 'Intellectual property theft of trained models',
                 impact: '$2.3B annual losses',
                 solution: 'Encrypted model distribution'
               },
               {
-                icon: <Eye className="w-12 h-12 text-yellow-400" />,
+                icon: <Eye className="text-left" />,
                 title: 'Data Poisoning',
                 description: 'Malicious training data manipulation',
                 impact: '89% accuracy degradation',
                 solution: 'Data integrity validation'
               },
               {
-                icon: <Users className="w-12 h-12 text-purple-400" />,
+                icon: <Users className="text-left" />,
                 title: 'Privacy Breaches',
                 description: 'Sensitive data exposure through AI systems',
                 impact: '67% compliance violations',
                 solution: 'Differential privacy protection'
               }
             ].map((threat, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-red-500/50 transition-all duration-300">
-                <div className="mb-4">{threat.icon}</div>
-                <h3 className="text-xl font-bold text-white mb-3">{threat.title}</h3>
-                <p className="text-gray-400 mb-4 text-sm leading-relaxed">{threat.description}</p>
-                <div className="space-y-2">
-                  <div className="text-red-400 text-sm font-semibold">Impact: {threat.impact}</div>
-                  <div className="text-green-400 text-sm font-semibold">Solution: {threat.solution}</div>
+              <div key={index} className="text-left">
+                <div className="text-left">{threat.icon}</div>
+                <h3 className="text-left">{threat.title}</h3>
+                <p className="text-left">{threat.description}</p>
+                <div className="text-left">
+                  <div className="text-left">Impact: {threat.impact}</div>
+                  <div className="text-left">Solution: {threat.solution}</div>
                 </div>
               </div>
             ))}
@@ -124,16 +124,16 @@ export default function ZeroTrustAISecurity2025() {
       </section>
 
       {/* Zero-Trust Framework */}
-      <section id="security-framework" className="py-20">
-        <div className="container mx-auto px-6">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl font-extrabold mb-12 text-center bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent">
+      <section id="security-framework" className="text-left">
+        <div className="text-left">
+          <div className="text-left">
+            <h2 className="text-left">
               Zero-Trust AI Security Framework
             </h2>
 
-            <div className="grid lg:grid-cols-2 gap-12">
+            <div className="text-left">
               {/* Framework Components */}
-              <div className="space-y-8">
+              <div className="text-left">
                 {[
                   {
                     step: '01',
@@ -180,20 +180,20 @@ export default function ZeroTrustAISecurity2025() {
                     ]
                   }
                 ].map((component, index) => (
-                  <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10">
-                    <div className="flex items-start gap-4">
-                      <div className="flex-shrink-0">
-                        <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-orange-600 rounded-full flex items-center justify-center text-white font-bold">
+                  <div key={index} className="text-left">
+                    <div className="text-left">
+                      <div className="text-left">
+                        <div className="text-left">
                           {component.step}
                         </div>
                       </div>
-                      <div className="flex-1">
-                        <h3 className="text-xl font-bold text-white mb-3">{component.title}</h3>
-                        <p className="text-gray-400 mb-4 text-sm leading-relaxed">{component.description}</p>
-                        <ul className="space-y-2">
+                      <div className="text-left">
+                        <h3 className="text-left">{component.title}</h3>
+                        <p className="text-left">{component.description}</p>
+                        <ul className="text-left">
                           {component.features.map((feature, idx) => (
-                            <li key={idx} className="flex items-center gap-2 text-gray-300 text-sm">
-                              <CheckCircle className="w-4 h-4 text-green-400" />
+                            <li key={idx} className="text-left">
+                              <CheckCircle className="text-left" />
                               {feature}
                             </li>
                           ))}
@@ -205,43 +205,43 @@ export default function ZeroTrustAISecurity2025() {
               </div>
 
               {/* Implementation Benefits */}
-              <div className="space-y-8">
-                <div className="bg-gradient-to-br from-red-900/30 to-orange-900/30 rounded-2xl p-8 border border-red-500/20">
-                  <h3 className="text-2xl font-bold text-white mb-6">Security Metrics Achieved</h3>
-                  <div className="space-y-6">
+              <div className="text-left">
+                <div className="text-left">
+                  <h3 className="text-left">Security Metrics Achieved</h3>
+                  <div className="text-left">
                     {[
                       { metric: '99.97%', label: 'Threat Prevention Rate' },
                       { metric: '0.03s', label: 'Average Response Time' },
                       { metric: '100%', label: 'Compliance Coverage' },
                       { metric: '24/7', label: 'Automated Monitoring' }
                     ].map((metric, index) => (
-                      <div key={index} className="flex items-center justify-between">
-                        <span className="text-gray-300">{metric.label}</span>
-                        <span className="text-2xl font-bold bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent">
+                      <div key={index} className="text-left">
+                        <span className="text-left">{metric.label}<
+                        <span className="text-left">
                           {metric.metric}
-                        </span>
+                        <
                       </div>
                     ))}
                   </div>
                 </div>
 
-                <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
-                  <h3 className="text-2xl font-bold text-white mb-6">Implementation Timeline</h3>
-                  <div className="space-y-4">
+                <div className="text-left">
+                  <h3 className="text-left">Implementation Timeline</h3>
+                  <div className="text-left">
                     {[
                       { phase: 'Phase 1', duration: '2 weeks', description: 'Security assessment and architecture design' },
                       { phase: 'Phase 2', duration: '4 weeks', description: 'Core security components deployment' },
                       { phase: 'Phase 3', duration: '3 weeks', description: 'Monitoring and automation setup' },
                       { phase: 'Phase 4', duration: '2 weeks', description: 'Testing and optimization' }
                     ].map((phase, index) => (
-                      <div key={index} className="flex items-center gap-4">
-                        <div className="w-3 h-3 bg-gradient-to-r from-red-500 to-orange-600 rounded-full"></div>
-                        <div className="flex-1">
-                          <div className="flex items-center gap-2 mb-1">
-                            <span className="text-white font-semibold">{phase.phase}</span>
-                            <span className="text-gray-400 text-sm">({phase.duration})</span>
+                      <div key={index} className="text-left">
+                        <div className="text-left"></div>
+                        <div className="text-left">
+                          <div className="text-left">
+                            <span className="text-left">{phase.phase}<
+                            <span className="text-left">({phase.duration})<
                           </div>
-                          <p className="text-gray-400 text-sm">{phase.description}</p>
+                          <p className="text-left">{phase.description}</p>
                         </div>
                       </div>
                     ))}
@@ -254,14 +254,14 @@ export default function ZeroTrustAISecurity2025() {
       </section>
 
       {/* Success Stories */}
-      <section className="py-20 bg-gradient-to-br from-red-900/30 to-orange-900/30">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-extrabold mb-8 text-white">
+      <section className="text-left">
+        <div className="text-left">
+          <div className="text-left">
+            <h2 className="text-left">
               Proven Results Across Industries
             </h2>
             
-            <div className="grid md:grid-cols-3 gap-8 mb-12">
+            <div className="text-left">
               {[
                 {
                   industry: 'Financial Services',
@@ -282,62 +282,62 @@ export default function ZeroTrustAISecurity2025() {
                   savings: '$2.1B'
                 }
               ].map((result, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10">
-                  <h3 className="text-xl font-bold text-white mb-4">{result.industry}</h3>
-                  <div className="space-y-3">
-                    <div className="flex justify-between">
-                      <span className="text-gray-400">Clients Protected:</span>
-                      <span className="text-white font-semibold">{result.clients}</span>
+                <div key={index} className="text-left">
+                  <h3 className="text-left">{result.industry}</h3>
+                  <div className="text-left">
+                    <div className="text-left">
+                      <span className="text-left">Clients Protected:<
+                      <span className="text-left">{result.clients}<
                     </div>
-                    <div className="flex justify-between">
-                      <span className="text-gray-400">Threat Prevention:</span>
-                      <span className="text-green-400 font-semibold">{result.protection}</span>
+                    <div className="text-left">
+                      <span className="text-left">Threat Prevention:<
+                      <span className="text-left">{result.protection}<
                     </div>
-                    <div className="flex justify-between">
-                      <span className="text-gray-400">Cost Savings:</span>
-                      <span className="text-blue-400 font-semibold">{result.savings}</span>
+                    <div className="text-left">
+                      <span className="text-left">Cost Savings:<
+                      <span className="text-left">{result.savings}<
                     </div>
                   </div>
                 </div>
               ))}
             </div>
 
-            <p className="text-xl text-gray-300 mb-8">
+            <p className="text-left">
               Over 1000+ enterprises trust our zero-trust AI security architecture to protect 
               their most critical AI systems and sensitive data.
             </p>
             
             <a 
               href="/case-studies/ai-security-transformation-2025"
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-red-500 to-orange-600 hover:from-red-400 hover:to-orange-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-red-500/50"
+              className="text-left"
             >
-              <Shield className="w-5 h-5" />
-              <span>View Security Case Studies</span>
+              <Shield className="text-left" />
+              <span>View Security Case Studies<
             </a>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-6 text-center">
-          <h2 className="text-4xl font-extrabold mb-6 text-white">
+      <section className="text-left">
+        <div className="text-left">
+          <h2 className="text-left">
             Secure Your AI Systems Today
           </h2>
-          <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
+          <p className="text-left">
             Don't wait for a security breach. Implement zero-trust AI security architecture 
             and protect your enterprise from the growing threat landscape.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="text-left">
             <a 
               href="/contact"
-              className="bg-gradient-to-r from-red-500 to-orange-600 hover:from-red-400 hover:to-orange-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-red-500/50"
+              className="text-left"
             >
               Get Security Assessment
             </a>
             <a 
               href="/services"
-              className="border-2 border-red-500 text-red-400 hover:bg-red-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
+              className="text-left"
             >
               Explore Security Services
             </a>
@@ -346,14 +346,14 @@ export default function ZeroTrustAISecurity2025() {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 bg-slate-950 border-t border-white/10">
-        <div className="container mx-auto px-6">
-          <div className="text-center text-gray-400">
-            <p className="mb-4">© 2025 Zion Tech Group. All rights reserved.</p>
-            <div className="flex justify-center gap-6 text-sm">
-              <a href="/privacy" className="hover:text-blue-400 transition-colors">Privacy Policy</a>
-              <a href="/terms" className="hover:text-blue-400 transition-colors">Terms of Service</a>
-              <a href="/contact" className="hover:text-blue-400 transition-colors">Contact Us</a>
+      <footer className="text-left">
+        <div className="text-left">
+          <div className="text-left">
+            <p className="text-left">© 2025 Zion Tech Group. All rights reserved.</p>
+            <div className="text-left">
+              <a href="/privacy" className="text-left">Privacy Policy</a>
+              <a href="/terms" className="text-left">Terms of Service</a>
+              <a href="/contact" className="text-left">Contact Us</a>
             </div>
           </div>
         </div>

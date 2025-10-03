@@ -11,14 +11,14 @@ export const metadata = {
 
 export default function BlogPost() {
   return (
-    <article className="prose prose-invert max-w-none">
+    <article className="text-left">
       <h1>🧠 Neuro-Symbolic AI Enterprise Breakthrough 2025: The Future of Reliable AI</h1>
       
-      <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 rounded-lg p-6 my-8">
-        <h3 className="text-2xl font-bold text-blue-300 mt-0">🚀 Revolutionary Breakthrough</h3>
-        <p className="text-lg">
-          <strong>Neuro-symbolic AI systems</strong> achieving <span className="text-green-400 font-bold">99.7% reasoning accuracy</span>, 
-          <span className="text-green-400 font-bold"> 96% explainability</span>, and <span className="text-green-400 font-bold">89% reduction in hallucinations</span> by 
+      <div className="text-left">
+        <h3 className="text-left">🚀 Revolutionary Breakthrough</h3>
+        <p className="text-left">
+          <strong>Neuro-symbolic AI systems</strong> achieving <span className="text-left">99.7% reasoning accuracy<, 
+          <span className="text-left"> 96% explainability<, and <span className="text-left">89% reduction in hallucinations< by 
           combining the learning power of neural networks with the logical reasoning of symbolic AI. The next evolution in enterprise AI.
         </p>
       </div>
@@ -89,9 +89,9 @@ export default function BlogPost() {
 
       <h2>📊 Performance Breakthrough</h2>
       
-      <div className="bg-slate-800/50 border border-slate-700 rounded-lg p-6 my-6">
-        <h3 className="text-xl font-bold text-purple-300 mt-0">Real-World Results</h3>
-        <ul className="space-y-2">
+      <div className="text-left">
+        <h3 className="text-left">Real-World Results</h3>
+        <ul className="text-left">
           <li><strong>Reasoning Accuracy:</strong> 99.7% vs. 84% for pure neural networks</li>
           <li><strong>Explainability:</strong> 96% of decisions fully explainable</li>
           <li><strong>Hallucination Reduction:</strong> 89% fewer false or unreliable outputs</li>
@@ -150,8 +150,8 @@ export default function BlogPost() {
 
       <h2>💰 Business Value</h2>
       
-      <div className="bg-gradient-to-r from-green-600/20 to-emerald-600/20 border border-green-500/30 rounded-lg p-6 my-8">
-        <h3 className="text-2xl font-bold text-green-300 mt-0">📈 ROI Impact</h3>
+      <div className="text-left">
+        <h3 className="text-left">📈 ROI Impact</h3>
         <ul>
           <li><strong>Reliability Improvement:</strong> 89% reduction in AI errors and hallucinations</li>
           <li><strong>Regulatory Compliance:</strong> $47M+ saved from violation prevention</li>
@@ -190,8 +190,8 @@ export default function BlogPost() {
 
       <h2>🌟 Fortune 500 Success Story</h2>
       
-      <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 border border-blue-500/30 rounded-lg p-6 my-8">
-        <h3 className="text-2xl font-bold text-blue-300 mt-0">🏆 Global Healthcare Enterprise</h3>
+      <div className="text-left">
+        <h3 className="text-left">🏆 Global Healthcare Enterprise</h3>
         <p>
           Leading healthcare organization deployed neuro-symbolic AI for clinical decision support:
         </p>
@@ -221,9 +221,9 @@ export default function BlogPost() {
         <li>Federated neuro-symbolic learning across organizations</li>
       </ul>
 
-      <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 border border-purple-500/30 rounded-lg p-6 my-8">
-        <h3 className="text-2xl font-bold text-purple-300 mt-0">🚀 Deploy Trustworthy AI</h3>
-        <p className="text-lg">
+      <div className="text-left">
+        <h3 className="text-left">🚀 Deploy Trustworthy AI</h3>
+        <p className="text-left">
           Transform your enterprise with neuro-symbolic AI that combines the best of learning and reasoning. 
           Contact Zion Tech Group to deploy reliable, explainable AI systems that meet the highest 
           standards of enterprise trust and regulatory compliance.

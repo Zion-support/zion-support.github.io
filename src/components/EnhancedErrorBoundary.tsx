@@ -4,7 +4,6 @@
  */
 
 import React, { Component, ReactNode, ErrorInfo } from 'react';
-
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
@@ -25,7 +24,6 @@ const analyticsUtils = {
     console.log('Analytics Event:', event, data);
   }
 };
-
 class EnhancedErrorBoundary extends Component<Props, State> {
   private retryCount = 0;
   private maxRetries = 3;
@@ -53,7 +51,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     const { onError } = this.props;
-    const { errorId } = this.state;
 
     // Update state with error info
     this.setState({ errorInfo });
@@ -149,31 +146,31 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 
       // Default error UI
       return (
-        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-red-50 to-orange-50">
-          <div className="max-w-md w-full mx-4">
-            <div className="bg-white rounded-2xl shadow-xl p-8 text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-red-100 mb-4">
-                <svg className="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div className="text-left">
+          <div className="text-left">
+            <div className="text-left">
+              <div className="text-left">
+                <svg className="text-left" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
                 </svg>
               </div>
-              <h1 className="text-2xl font-bold text-gray-900 mb-2">
+              <h1 className="text-left">
                 Oops! Something went wrong
               </h1>
-              <p className="text-gray-600 mb-6">
+              <p className="text-left">
                 We're sorry for the inconvenience. Please try refreshing the page.
               </p>
-              <div className="space-y-3">
+              <div className="text-left">
                 <button
                   onClick={this.handleRetry}
-                  className="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
+                  className="text-left"
                   disabled={this.retryCount >= this.maxRetries}
                 >
                   {this.retryCount >= this.maxRetries ? 'Max Retries Reached' : 'Retry'}
                 </button>
                 <button
                   onClick={this.handleReportError}
-                  className="w-full border-2 border-red-600 text-red-600 hover:bg-red-50 font-semibold py-3 px-6 rounded-lg transition-colors"
+                  className="text-left"
                 >
                   Report Error
                 </button>

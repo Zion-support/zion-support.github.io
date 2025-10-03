@@ -7,7 +7,7 @@ export const metadata = {
 
 export default function ArticlePage() {
 	return (
-		<div className="prose prose-invert max-w-3xl mx-auto px-6 py-16">
+		<div className="text-left">
 			<h1>Platform Engineering Scorecards 2026</h1>
 			<p>
 				Wire service-level indicators to product KPIs with cost/error budgets, live canaries, and

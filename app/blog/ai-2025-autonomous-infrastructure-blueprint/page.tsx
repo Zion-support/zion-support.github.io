@@ -7,7 +7,7 @@ export const metadata = {
 
 export default function Page() {
 	return (
-		<main className="max-w-3xl mx-auto px-4 py-12 prose prose-invert">"
+		<main className="text-left">"
 			<h1>Autonomous Infrastructure 2025</h1>
 			<p>
 				Design production infrastructure that provisions, heals, and scales automatically with

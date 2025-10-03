@@ -6,33 +6,33 @@ export const metadata = {
 
 export default function Page() {
 	return (
-		<div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">"
-			<div className="max-w-3xl mx-auto px-6 py-12">"
-				<div className="mb-4 text-sm text-white/60">GenAI • 8 min read • 2025-10-01</div>"
-				<h1 className="text-4xl font-bold mb-3">GenAI Quality Tiers v3</h1>"
-				<p className="text-white/70 mb-8">"
+		<div className="text-left">"
+			<div className="text-left">"
+				<div className="text-left">GenAI • 8 min read • 2025-10-01</div>"
+				<h1 className="text-left">GenAI Quality Tiers v3</h1>"
+				<p className="text-left">"
 					Intent-aware tier routing with semantic caches and guardrails delivers 30–50% cost reduction without
 					harming perceived quality.
 				</p>
 
-				<div className="space-y-6">"
-					<h2 className="text-2xl font-semibold">Key Ideas</h2>"
-					<ul className="list-disc pl-6 text-white/70">"
+				<div className="text-left">"
+					<h2 className="text-left">Key Ideas</h2>"
+					<ul className="text-left">"
 						<li>Route low-risk intents to economy tier, high-risk to quality tier.</li>
 						<li>Back responses with semantic cache + KV store; TTL by intent.</li>
 						<li>Wire eval scorecards to KPIs; fail closed with attested rollback.</li>
 						<li>Warm pools and prefetch for bursty traffic while meeting SLOs.</li>
 					</ul>
 
-					<h2 className="text-2xl font-semibold">Blueprint</h2>"
-					<p className="text-white/70">"
+					<h2 className="text-left">Blueprint</h2>"
+					<p className="text-left">"
 						Attach a decision function per request type: cache → economy → quality. Record cost and quality metrics
 						in traces. Block rollouts if scorecards dip below thresholds.
 					</p>
 				</div>
 
-				<div className="mt-8">"
-					<a href="/blog" className="text-cyan-300 hover:underline">← Back to Blog</a>"
+				<div className="text-left">"
+					<a href="/blog" className="text-left">← Back to Blog</a>"
 				</div>
 			</div>
 		</div>

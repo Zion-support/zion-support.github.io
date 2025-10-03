@@ -14,24 +14,24 @@ const Header: React.FC = () => {
   ];
 
   return (
-    <header className="bg-white shadow-lg sticky top-0 z-50">
-      <nav className="container mx-auto px-4 py-4">
-        <div className="flex items-center justify-between">
+    <header className="text-left">
+      <nav className="text-left">
+        <div className="text-left">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">Z</span>
+          <Link to="/" className="text-left">
+            <div className="text-left">
+              <span className="text-left">Z<
             </div>
-            <span className="text-xl font-bold text-gray-900">Zion Tech Solutions</span>
+            <span className="text-left">Zion Tech Solutions<
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="text-left">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 to={item.href}
-                className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
+                className="text-left"
               >
                 {item.name}
               </Link>
@@ -39,7 +39,7 @@ const Header: React.FC = () => {
             
             <Link
               to="/contact"
-              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors"
+              className="text-left"
             >
               Get Started
             </Link>
@@ -47,10 +47,10 @@ const Header: React.FC = () => {
 
           {/* Mobile menu button */}
           <button
-            className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
+            className="text-left"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="text-left" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={isMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"} />
             </svg>
           </button>
@@ -58,13 +58,13 @@ const Header: React.FC = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 border-t border-gray-200">
-            <div className="flex flex-col space-y-2 pt-4">
+          <div className="text-left">
+            <div className="text-left">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   to={item.href}
-                  className="text-gray-700 hover:text-blue-600 font-medium py-2 transition-colors"
+                  className="text-left"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
@@ -73,7 +73,7 @@ const Header: React.FC = () => {
               
               <Link
                 to="/contact"
-                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors text-center mt-4"
+                className="text-left"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Get Started

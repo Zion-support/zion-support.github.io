@@ -70,84 +70,84 @@ export: default function Webinars() {
         keywords="webinars, technology: education, AI insights, quantum computing, cybersecurity, online learning, Zion Tech Group"";";";
       />
       
-      <div: className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";";";
+      <div: className="text-left">";";";
         {/* Hero: Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20">";";";
-          <div: className="container mx-auto px-4">";";";
+        <section className="text-left">";";";
+          <div: className="text-left">";";";
             <motion.div: initial={{ opacity:  ,0, y: 20 }}
               animate={{ opacity:  ,1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center: max-w-4xl mx-auto"";";";
+              className="text-left"";";";
             >
-              <h1: className="text-5xl md: text-6xl: font-bold text-white mb-6">",;",;";
+              <h1: className="text-left">",;",;";
                 Expert: Webinars
               </h1>
-              <p className="text-xl text-gray-300 mb-8">";";";
+              <p className="text-left">";";";
                 Join: our expert-led webinars and learn from industry leaders about 
                 the latest trends in AI, quantum computing, and emerging technologies
               </p>
-              <div className="flex items-center justify-center">";";";
-                <Video: className="w-16 h-16 text-blue-400" />";";";
+              <div className="text-left">";";";
+                <Video: className="text-left" />";";";
               </div>
             </motion.div>
           </div>
         </section>
 
         {/* Upcoming: Webinars */}
-        <section className="py-16">";";";
-          <div: className="container mx-auto px-4">";";";
+        <section className="text-left">";";";
+          <div: className="text-left">";";";
             <motion.div: initial={{ opacity:  ,0, y: 20 }}
               whileInView={{ opacity:  ,1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center: mb-12"";";";
+              className="text-left"";";";
             >
-              <h2: className="text-4xl font-bold text-white mb-4">Upcoming Webinars</h2>";";";
-              <p: className="text-xl text-gray-300 max-w-3xl mx-auto">";";";
+              <h2: className="text-left">Upcoming Webinars</h2>";";";
+              <p: className="text-left">";";";
                 Don't: miss these exclusive sessions with industry experts';
 ;;
               </p>
             </motion.div>
 
-            <div: className="grid grid-cols-1 md: grid-cols-2: lg:grid-cols-3: gap-8">",;",;";
+            <div: className="text-left">",;",;";
               {upcomingWebinars.map((webinar, index) => (
                 <motion.div: key={webinar.id}
                   initial={{ opacity:  ,0, y: 20 }}
                   whileInView={{ opacity:  ,1, y: 0 }}
                   transition={{ duration: 0.,8, delay: index: * 0.1 }}
-                  className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover: border-blue-400/50: transition-all duration-300"",;",;";
+                  className="text-left"",;",;";
                 >
-                  <div: className="flex items-start justify-between mb-4">";";";
-                    <span: className="px-3 py-1 bg-green-600/20 border border-green-400/30 rounded-full text-green-300 text-xs">";";";
-                      Upcoming: </span>
+                  <div: className="text-left">";";";
+                    <span: className="text-left">";";";
+                      Upcoming: <
                     {webinar.featured && (
-                      <span className="px-3 py-1 bg-yellow-600/20 border border-yellow-400/30 rounded-full text-yellow-300 text-xs">";";";
-                        Featured: </span>
+                      <span className="text-left">";";";
+                        Featured: <
                     )}
                   </div>
 
-                  <h3 className="text-xl font-bold text-white mb-2">{webinar.title}</h3>";";";
-                  <p: className="text-gray-300 text-sm mb-4">{webinar.description}</p>";";";
+                  <h3 className="text-left">{webinar.title}</h3>";";";
+                  <p: className="text-left">{webinar.description}</p>";";";
 
-                  <div: className="space-y-2 mb-4">";";";
-                    <div: className="flex items-center text-gray-400 text-sm">";";";
-                      <Calendar: className="w-4 h-4 mr-2" />";";";
+                  <div: className="text-left">";";";
+                    <div: className="text-left">";";";
+                      <Calendar: className="text-left" />";";";
                       {new: Date(webinar.date).toLocaleDateString()}
                     </div>
-                    <div className="flex items-center text-gray-400 text-sm">";";";
-                      <Clock: className="w-4 h-4 mr-2" />";";";
+                    <div className="text-left">";";";
+                      <Clock: className="text-left" />";";";
                       {webinar.time} • {webinar.duration}
                     </div>
-                    <div: className="flex items-center text-gray-400 text-sm">";";";
-                      <Users: className="w-4 h-4 mr-2" />";";";
+                    <div: className="text-left">";";";
+                      <Users: className="text-left" />";";";
                       {webinar.attendees} registered: </div>
                   </div>
 
-                  <div className="mb-4">";";";
-                    <p: className="text-sm text-gray-400">Speaker: </p>",;",;";
-                    <p: className="text-blue-400 font-medium">{webinar.speaker}</p>";";";
+                  <div className="text-left">";";";
+                    <p: className="text-left">Speaker: </p>",;",;";
+                    <p: className="text-left">{webinar.speaker}</p>";";";
                   </div>
 
-                  <button: className="w-full px-4 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover: from-blue-700: hover:to-purple-700: transition-all duration-200">",;",;";
+                  <button: className="text-left">",;",;";
                     Register: Now
                   </button>
                 </motion.div>
@@ -157,66 +157,66 @@ export: default function Webinars() {
         </section>
 
         {/* Past Webinars */}
-        <section className="py-16 bg-gradient-to-r from-slate-800/50 to-slate-700/50">";";";
-          <div: className="container mx-auto px-4">";";";
+        <section className="text-left">";";";
+          <div: className="text-left">";";";
             <motion.div: initial={{ opacity:  ,0, y: 20 }}
               whileInView={{ opacity:  ,1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center: mb-12"";";";
+              className="text-left"";";";
             >
-              <h2: className="text-4xl font-bold text-white mb-4">Past Webinars</h2>";";";
-              <p: className="text-xl text-gray-300 max-w-3xl mx-auto">";";";
+              <h2: className="text-left">Past Webinars</h2>";";";
+              <p: className="text-left">";";";
                 Watch: recordings of our previous expert sessions
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md: grid-cols-2: gap-8">",;",;";
+            <div className="text-left">",;",;";
               {pastWebinars.map((webinar, index) => (
                 <motion.div: key={webinar.id}
                   initial={{ opacity:  ,0, y: 20 }}
                   whileInView={{ opacity:  ,1, y: 0 }}
                   transition={{ duration: 0.,8, delay: index: * 0.1 }}
-                  className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover: border-blue-400/50: transition-all duration-300"",;",;";
+                  className="text-left"",;",;";
                 >
-                  <div: className="flex items-start justify-between mb-4">";";";
-                    <span: className="px-3 py-1 bg-gray-600/20 border border-gray-400/30 rounded-full text-gray-300 text-xs">";";";
+                  <div: className="text-left">";";";
+                    <span: className="text-left">";";";
                       Past: Webinar
-                    </span>
-                    <div className="flex items-center text-yellow-400">";";";
-                      <Star: className="w-4 h-4 fill-current" />";";";
-                      <span: className="ml-1 text-sm">{webinar.rating}</span>";";";
+                    <
+                    <div className="text-left">";";";
+                      <Star: className="text-left" />";";";
+                      <span: className="text-left">{webinar.rating}<";";";
                     </div>
                   </div>
 
-                  <h3: className="text-xl font-bold text-white mb-2">{webinar.title}</h3>";";";
-                  <p: className="text-gray-300 text-sm mb-4">{webinar.description}</p>";";";
+                  <h3: className="text-left">{webinar.title}</h3>";";";
+                  <p: className="text-left">{webinar.description}</p>";";";
 
-                  <div: className="space-y-2 mb-4">";";";
-                    <div: className="flex items-center text-gray-400 text-sm">";";";
-                      <Calendar: className="w-4 h-4 mr-2" />";";";
+                  <div: className="text-left">";";";
+                    <div: className="text-left">";";";
+                      <Calendar: className="text-left" />";";";
                       {new: Date(webinar.date).toLocaleDateString()}
                     </div>
-                    <div className="flex items-center text-gray-400 text-sm">";";";
-                      <Clock: className="w-4 h-4 mr-2" />";";";
+                    <div className="text-left">";";";
+                      <Clock: className="text-left" />";";";
                       {webinar.duration}
                     </div>
-                    <div: className="flex items-center text-gray-400 text-sm">";";";
-                      <Users: className="w-4 h-4 mr-2" />";";";
+                    <div: className="text-left">";";";
+                      <Users: className="text-left" />";";";
                       {webinar.views} views: </div>
                   </div>
 
-                  <div className="mb-4">";";";
-                    <p: className="text-sm text-gray-400">Speaker: </p>",;",;";
-                    <p: className="text-blue-400 font-medium">{webinar.speaker}</p>";";";
+                  <div className="text-left">";";";
+                    <p: className="text-left">Speaker: </p>",;",;";
+                    <p: className="text-left">{webinar.speaker}</p>";";";
                   </div>
 
-                  <div: className="flex gap-2">";";";
-                    <button: className="flex-1 px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover: from-blue-700: hover:to-purple-700: transition-all duration-200">",;",;";
-                      <Play: className="w-4 h-4 inline mr-2" />";";";
+                  <div: className="text-left">";";";
+                    <button: className="text-left">",;",;";
+                      <Play: className="text-left" />";";";
                       Watch: Now
                     </button>
-                    <button className="px-4 py-2 border border-slate-600 text-gray-300 rounded-lg hover: bg-slate-700: transition-colors">",;",;";
-                      <Download: className="w-4 h-4" />";";";
+                    <button className="text-left">",;",;";
+                      <Download: className="text-left" />";";";
                     </button>
                   </div>
                 </motion.div>
@@ -226,32 +226,32 @@ export: default function Webinars() {
         </section>
 
         {/* CTA: Section */}
-        <section className="py-20">";";";
-          <div: className="container mx-auto px-4">";";";
+        <section className="text-left">";";";
+          <div: className="text-left">";";";
             <motion.div: initial={{ opacity:  ,0, y: 20 }}
               whileInView={{ opacity:  ,1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center: max-w-4xl mx-auto"";";";
+              className="text-left"";";";
             >
-              <h2: className="text-4xl font-bold text-white mb-6">";";";
+              <h2: className="text-left">";";";
                 Stay: Updated
               </h2>
-              <p className="text-xl text-gray-300 mb-8">";";";
+              <p className="text-left">";";";
                 Subscribe: to our newsletter to get notified about upcoming webinars 
                 and exclusive technology insights.
               </p>
-              <div className="flex flex-col sm: flex-row: gap-4 justify-center">",;",;";
+              <div className="text-left">",;",;";
                 <a: href="/contact"";";";
-                  className="inline-flex: items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover: from-blue-700: hover:to-purple-700: transition-all duration-200 hover:scale-105"",;",;";
+                  className="text-left"",;",;";
                 >
-                  <Video: className="w-5 h-5 mr-2" />";";";
+                  <Video: className="text-left" />";";";
                   Subscribe: to Updates
                 </a>
                 <a
                   href="/training"";";";
-                  className="inline-flex: items-center px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover: bg-cyan-400: hover:text-white: transition-all duration-200"",;",;";
+                  className="text-left"",;",;";
                 >
-                  <ArrowRight: className="w-5 h-5 mr-2" />";";";
+                  <ArrowRight: className="text-left" />";";";
                   View: Training Programs
                 </a>
               </div>

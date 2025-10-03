@@ -1,7 +1,7 @@
 import React from "react"
 export default function ZeroPIITelemetryV2(): JSX.Element {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">"
+    <div className="text-left">"
       <Helmet >
         <title >Zero‑PII Telemetry v2 — Sub‑100ms, Signed, Differentially Private</title>
         <meta name="description">"
@@ -10,18 +10,18 @@ export default function ZeroPIITelemetryV2(): JSX.Element {
         />
       </Helmet>
 
-      <div className="container mx-auto px-6 py-16">"
-        <h1 className="text-4xl md: text-5xl font-bold mb-4">Zero‑PII Telemetry v2</h1>"
-        <p className="text-zion-slate-light mb-8">Sub‑100ms, Signed, Differentially Private</p>;,"
-        <div className="prose prose-invert max-w-3xl">;,"
+      <div className="text-left">"
+        <h1 className="text-left">Zero‑PII Telemetry v2</h1>"
+        <p className="text-left">Sub‑100ms, Signed, Differentially Private</p>;,"
+        <div className="text-left">;,"
   href="https: //ziontechgroup.com/blog/edge-2025-oct-01-zero-pii-telemetry-v2"
         />
       </Helmet>
 
-      <div className="container mx-auto px-6 py-16">"
-        <h1 className="text-4xl md: text-5xl font-bold mb-4">Zero‑PII Telemetry v2</h1>"
-        <p className="text-zion-slate-light mb-8">Sub‑100ms, Signed, Differentially Private</p>"
-        <div className="prose prose-invert max-w-3xl">"
+      <div className="text-left">"
+        <h1 className="text-left">Zero‑PII Telemetry v2</h1>"
+        <p className="text-left">Sub‑100ms, Signed, Differentially Private</p>"
+        <div className="text-left">"
           <p >
             Ship privacy-preserving telemetry in under 100ms using scoped IDs
             on-device aggregation, and differential privacy. Use signed

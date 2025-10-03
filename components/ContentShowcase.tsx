@@ -78,22 +78,22 @@ interface ContentShowcaseProps {
   
 
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
-      <div className="max-w-6xl mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">
+    <section className="text-left">
+      <div className="text-left">
+        <div className="text-left">
+          <h2 className="text-left">
             Featured Content
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-left">
             Explore our latest AI insights, breakthrough technologies, and success stories
           </p>
         </div>
         
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="text-left">
           {featuredContent.map((item) => (
-            <Link key={item.id} href={item.href} className="group">
-              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-200 hover:border-blue-200">
-                <div className="flex items-center gap-2 mb-4">
+            <Link key={item.id} href={item.href} className="text-left">
+              <div className="text-left">
+                <div className="text-left">
                   <span className={`px-2 py-1 rounded-full text-xs font-semibold ${
                     item.color === 'red' ? 'bg-red-100 text-red-800' :
                     item.color === 'purple' ? 'bg-purple-100 text-purple-800' :
@@ -101,21 +101,21 @@ interface ContentShowcaseProps {
                     'bg-gray-100 text-gray-800'
                   }`}>
                     {item.category}
-                  </span>
-                  <span className="text-sm text-gray-500">{item.readTime}</span>
+                  <
+                  <span className="text-left">{item.readTime}<
                 </div>
                 
-                <div className="text-4xl mb-4">{item.image}</div>
+                <div className="text-left">{item.image}</div>
                 
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                <h3 className="text-left">
                   {item.title}
                 </h3>
                 
-                <p className="text-gray-600 mb-4 text-sm leading-relaxed">
+                <p className="text-left">
                   {item.excerpt}
                 </p>
                 
-                <div className="text-blue-600 font-semibold group-hover:text-blue-700 transition-colors">
+                <div className="text-left">
                   Read More →
                 </div>
               </div>
@@ -123,10 +123,10 @@ interface ContentShowcaseProps {
           ))}
         </div>
         
-        <div className="text-center mt-12">
+        <div className="text-left">
           <Link
             href="/content-hub"
-            className="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl"
+            className="text-left"
           >
             Explore All Content
           </Link>

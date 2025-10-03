@@ -9,37 +9,37 @@ export const metadata = {
 
 export default function AIVoiceInterfacesEnterprise2026Page() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-blue-950 to-indigo-950 text-white">"
-      <main className="container mx-auto px-6 py-12">"
-        <nav className="mb-8">"
-          <Link href="/blog" className="text-indigo-300 hover:text-indigo-200 transition-colors">"
+    <div className="text-left">"
+      <main className="text-left">"
+        <nav className="text-left">"
+          <Link href="/blog" className="text-left">"
             ← Back to Blog
           </Link>
         </nav>
 
-        <article className="max-w-4xl mx-auto">"
-          <header className="mb-12">"
-            <div className="flex items-center gap-3 mb-4">"
-              <span className="px-3 py-1 bg-indigo-400/20 text-indigo-300 text-sm rounded-full border border-indigo-400/30">"
+        <article className="text-left">"
+          <header className="text-left">"
+            <div className="text-left">"
+              <span className="text-left">"
                 Implementation Guide
-              </span>
-              <span className="text-white/60 text-sm">September 30, 2025</span>"
-              <span className="text-white/60 text-sm">•</span>"
-              <span className="text-white/60 text-sm">18 min read</span>"
+              <
+              <span className="text-left">September 30, 2025<"
+              <span className="text-left">•<"
+              <span className="text-left">18 min read<"
             </div>
-            <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-indigo-300 to-purple-300 bg-clip-text text-transparent">"
+            <h1 className="text-left">"
               AI Voice Interfaces for the Enterprise (2026)
             </h1>
-            <p className="text-xl text-white/80">"
+            <p className="text-left">"
               Architect reliable, privacy‑preserving voice experiences with low latency STT, expressive TTS, locale
               adaptation, and policy guardrails across 50+ languages.
             </p>
           </header>
 
-          <div className="prose prose-invert prose-lg max-w-none">"
-            <section className="mb-12">"
-              <h2 className="text-3xl font-bold mb-4 text-indigo-300">Architecture</h2>"
-              <ul className="space-y-3 text-white/85">"
+          <div className="text-left">"
+            <section className="text-left">"
+              <h2 className="text-left">Architecture</h2>"
+              <ul className="text-left">"
                 <li>Streaming STT with endpointing and profanity filtering.</li>
                 <li>Intent router with few‑shot prompting and entity extraction.</li>
                 <li>Guardrails with PII redaction and policy checks.</li>
@@ -48,23 +48,23 @@ export default function AIVoiceInterfacesEnterprise2026Page() {
               </ul>
             </section>
 
-            <section className="mb-12">"
-              <h2 className="text-3xl font-bold mb-4 text-purple-300">SLAs & Budgets</h2>"
-              <div className="grid md:grid-cols-2 gap-6">"
-                <div className="bg-white/5 border border-white/10 rounded-xl p-6">"
-                  <h3 className="font-semibold mb-2">Latency Targets</h3>"
-                  <p className="text-white/70">ASR partials ≤ 300ms • Final ≤ 900ms • Response start ≤ 1.2s</p>"
+            <section className="text-left">"
+              <h2 className="text-left">SLAs & Budgets</h2>"
+              <div className="text-left">"
+                <div className="text-left">"
+                  <h3 className="text-left">Latency Targets</h3>"
+                  <p className="text-left">ASR partials ≤ 300ms • Final ≤ 900ms • Response start ≤ 1.2s</p>"
                 </div>
-                <div className="bg-white/5 border border-white/10 rounded-xl p-6">"
-                  <h3 className="font-semibold mb-2">Quality & Privacy</h3>"
-                  <p className="text-white/70">WER ≤ 2% • On‑device redaction • Per‑locale eval packs</p>"
+                <div className="text-left">"
+                  <h3 className="text-left">Quality & Privacy</h3>"
+                  <p className="text-left">WER ≤ 2% • On‑device redaction • Per‑locale eval packs</p>"
                 </div>
               </div>
             </section>
 
-            <section className="mb-12">"
-              <h2 className="text-3xl font-bold mb-4 text-fuchsia-300">Deployment Checklist</h2>"
-              <ol className="list-decimal list-inside space-y-3 text-white/85">"
+            <section className="text-left">"
+              <h2 className="text-left">Deployment Checklist</h2>"
+              <ol className="text-left">"
                 <li>Choose providers for ASR, LLM, and TTS with fallback routes.</li>
                 <li>Implement session recorder with consent and retention policy.</li>
                 <li>Set up evals for locale coverage and redaction accuracy.</li>
@@ -73,10 +73,10 @@ export default function AIVoiceInterfacesEnterprise2026Page() {
             </section>
           </div>
 
-          <div className="mt-12 bg-white/5 border border-white/10 rounded-xl p-6">"
-            <h3 className="text-xl font-bold mb-2">We can help</h3>"
-            <p className="text-white/80 mb-4">From pilot to global rollout, we harden voice AI with reliability and privacy.</p>"
-            <Link href="/contact" className="text-indigo-300 hover:text-indigo-200 font-semibold">Talk to experts →</Link>"
+          <div className="text-left">"
+            <h3 className="text-left">We can help</h3>"
+            <p className="text-left">From pilot to global rollout, we harden voice AI with reliability and privacy.</p>"
+            <Link href="/contact" className="text-left">Talk to experts →</Link>"
           </div>
         </article>
       </main>

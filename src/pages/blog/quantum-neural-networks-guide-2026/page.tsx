@@ -2,7 +2,7 @@ import React from "react"
 import { Helmet } from "react-helmet-async"
 export default function QuantumNeuralNetworksGuide2026(): JSX.Element {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">"
+    <div className="text-left">"
       <Helmet>
         <title>Quantum‑Neural Networks Guide 2026 — 1000x processing speed</title>
         <meta 
@@ -15,10 +15,10 @@ export default function QuantumNeuralNetworksGuide2026(): JSX.Element {
         />
       </Helmet>
 
-      <div className="container mx-auto px-6 py-16">"
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">Quantum‑Neural Networks Guide 2026</h1>"
-        <p className="text-zion-slate-light mb-8">1000x processing speed achieved</p>"
-        <div className="prose prose-invert max-w-3xl">"
+      <div className="text-left">"
+        <h1 className="text-left">Quantum‑Neural Networks Guide 2026</h1>"
+        <p className="text-left">1000x processing speed achieved</p>"
+        <div className="text-left">"
           <p>
             Quantum‑neural networks combine quantum computing with neural networks to achieve unprecedented processing speeds and capabilities. This comprehensive guide covers implementation, best practices, and real-world applications.
           </p>

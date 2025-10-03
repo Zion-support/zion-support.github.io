@@ -8,7 +8,7 @@ export const metadata = {
 
 export default function Page() {
   return (
-    <main className="max-w-4xl mx-auto px-4 py-12 prose prose-invert">"
+    <main className="text-left">"
       <h1>GenAI Routing v1 (2025)</h1>
       <p>
         Establish predictable costs and a stable UX by routing requests through tiered models and semantic caches with
@@ -23,7 +23,7 @@ export default function Page() {
       </ul>
       <p>
         Explore more GenAI playbooks on the{' '}
-        <Link href="/blog" className="font-semibold">blog</Link>."
+        <Link href="/blog" className="text-left">blog</Link>."
       </p>
     </main>
   );

@@ -57,32 +57,32 @@ export default function InteractiveAI2026Calculator() {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-indigo-50 via-white to-purple-50">
-      <div className="max-w-6xl mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">
+    <section className="text-left">
+      <div className="text-left">
+        <div className="text-left">
+          <h2 className="text-left">
             AI ROI Calculator 2026
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-left">
             Calculate the potential return on investment for AI transformation in your organization. 
             Get personalized projections based on industry trends and 2026 AI capabilities.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="text-left">
           {/* Input Form */}
-          <div className="bg-white rounded-xl shadow-lg p-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">Enter Your Details</h3>
+          <div className="text-left">
+            <h3 className="text-left">Enter Your Details</h3>
             
-            <div className="space-y-6">
+            <div className="text-left">
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">
+                <label className="text-left">
                   Company Size
                 </label>
                 <select
                   value={inputs.companySize}
                   onChange={(e) => setInputs({...inputs, companySize: e.target.value})}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="text-left"
                 >
                   <option value="small">Small (1-50 employees)</option>
                   <option value="medium">Medium (51-500 employees)</option>
@@ -92,13 +92,13 @@ export default function InteractiveAI2026Calculator() {
               </div>
 
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">
+                <label className="text-left">
                   Industry
                 </label>
                 <select
                   value={inputs.industry}
                   onChange={(e) => setInputs({...inputs, industry: e.target.value})}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="text-left"
                 >
                   <option value="manufacturing">Manufacturing</option>
                   <option value="healthcare">Healthcare</option>
@@ -109,7 +109,7 @@ export default function InteractiveAI2026Calculator() {
               </div>
 
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">
+                <label className="text-left">
                   Current Efficiency Level (%)
                 </label>
                 <input
@@ -118,44 +118,44 @@ export default function InteractiveAI2026Calculator() {
                   max="90"
                   value={inputs.currentEfficiency}
                   onChange={(e) => setInputs({...inputs, currentEfficiency: parseInt(e.target.value)})}
-                  className="w-full"
+                  className="text-left"
                 />
-                <div className="flex justify-between text-sm text-gray-500 mt-1">
-                  <span>20%</span>
-                  <span className="font-semibold text-blue-600">{inputs.currentEfficiency}%</span>
-                  <span>90%</span>
+                <div className="text-left">
+                  <span>20%<
+                  <span className="text-left">{inputs.currentEfficiency}%<
+                  <span>90%<
                 </div>
               </div>
 
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">
+                <label className="text-left">
                   Annual Operational Costs ($)
                 </label>
                 <input
                   type="number"
                   value={inputs.currentCosts}
                   onChange={(e) => setInputs({...inputs, currentCosts: parseInt(e.target.value) || 0})}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="text-left"
                   placeholder="1000000"
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-semibold text-gray-700 mb-2">
+                <label className="text-left">
                   Planned AI Investment ($)
                 </label>
                 <input
                   type="number"
                   value={inputs.aiInvestment}
                   onChange={(e) => setInputs({...inputs, aiInvestment: parseInt(e.target.value) || 0})}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="text-left"
                   placeholder="500000"
                 />
               </div>
 
               <button
                 onClick={calculateROI}
-                className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 px-6 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl"
+                className="text-left"
               >
                 Calculate AI ROI
               </button>
@@ -163,59 +163,59 @@ export default function InteractiveAI2026Calculator() {
           </div>
 
           {/* Results */}
-          <div className="bg-white rounded-xl shadow-lg p-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">Projected Results</h3>
+          <div className="text-left">
+            <h3 className="text-left">Projected Results</h3>
             
             {results ? (
-              <div className="space-y-6">
-                <div className="bg-gradient-to-r from-green-50 to-blue-50 p-6 rounded-lg">
-                  <div className="text-center mb-4">
-                    <div className="text-4xl font-bold text-green-600 mb-2">
+              <div className="text-left">
+                <div className="text-left">
+                  <div className="text-left">
+                    <div className="text-left">
                       {results.roi}%
                     </div>
-                    <div className="text-gray-600 font-semibold">Projected ROI</div>
+                    <div className="text-left">Projected ROI</div>
                   </div>
                 </div>
 
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="bg-blue-50 p-4 rounded-lg text-center">
-                    <div className="text-2xl font-bold text-blue-600 mb-1">
+                <div className="text-left">
+                  <div className="text-left">
+                    <div className="text-left">
                       {results.efficiencyGain}%
                     </div>
-                    <div className="text-sm text-gray-600">Efficiency Gain</div>
+                    <div className="text-left">Efficiency Gain</div>
                   </div>
-                  <div className="bg-purple-50 p-4 rounded-lg text-center">
-                    <div className="text-2xl font-bold text-purple-600 mb-1">
+                  <div className="text-left">
+                    <div className="text-left">
                       {results.paybackPeriod}m
                     </div>
-                    <div className="text-sm text-gray-600">Payback Period</div>
+                    <div className="text-left">Payback Period</div>
                   </div>
                 </div>
 
-                <div className="space-y-4">
-                  <div className="flex justify-between items-center p-4 bg-gray-50 rounded-lg">
-                    <span className="font-semibold text-gray-700">Cost Savings</span>
-                    <span className="text-xl font-bold text-green-600">
+                <div className="text-left">
+                  <div className="text-left">
+                    <span className="text-left">Cost Savings<
+                    <span className="text-left">
                       ${results.costSavings.toLocaleString()}
-                    </span>
+                    <
                   </div>
-                  <div className="flex justify-between items-center p-4 bg-gray-50 rounded-lg">
-                    <span className="font-semibold text-gray-700">Revenue Increase</span>
-                    <span className="text-xl font-bold text-blue-600">
+                  <div className="text-left">
+                    <span className="text-left">Revenue Increase<
+                    <span className="text-left">
                       ${results.revenueIncrease.toLocaleString()}
-                    </span>
+                    <
                   </div>
-                  <div className="flex justify-between items-center p-4 bg-gradient-to-r from-green-50 to-blue-50 rounded-lg border-2 border-green-200">
-                    <span className="font-bold text-gray-900">Total Annual Benefits</span>
-                    <span className="text-2xl font-bold text-green-600">
+                  <div className="text-left">
+                    <span className="text-left">Total Annual Benefits<
+                    <span className="text-left">
                       ${results.totalBenefits.toLocaleString()}
-                    </span>
+                    <
                   </div>
                 </div>
 
-                <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-6 rounded-lg">
-                  <h4 className="font-bold text-gray-900 mb-3">2026 AI Advantages</h4>
-                  <ul className="space-y-2 text-sm text-gray-700">
+                <div className="text-left">
+                  <h4 className="text-left">2026 AI Advantages</h4>
+                  <ul className="text-left">
                     <li>• Quantum AI processing for 1000x speed improvements</li>
                     <li>• Autonomous decision-making systems</li>
                     <li>• Real-time edge computing capabilities</li>
@@ -225,11 +225,11 @@ export default function InteractiveAI2026Calculator() {
                 </div>
               </div>
             ) : (
-              <div className="text-center py-12">
-                <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">📊</span>
+              <div className="text-left">
+                <div className="text-left">
+                  <span className="text-left">📊<
                 </div>
-                <p className="text-gray-500">
+                <p className="text-left">
                   Enter your details and click "Calculate AI ROI" to see your personalized projections.
                 </p>
               </div>
@@ -237,22 +237,22 @@ export default function InteractiveAI2026Calculator() {
           </div>
         </div>
 
-        <div className="text-center mt-12">
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-8 rounded-xl">
-            <h3 className="text-2xl font-bold mb-4">Ready to Start Your AI Transformation?</h3>
-            <p className="text-lg opacity-90 mb-6">
+        <div className="text-left">
+          <div className="text-left">
+            <h3 className="text-left">Ready to Start Your AI Transformation?</h3>
+            <p className="text-left">
               Our AI experts can help you achieve these results with proven implementation strategies.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="text-left">
               <a
                 href="tel:+13024640950"
-                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                className="text-left"
               >
                 Call +1 302 464 0950
               </a>
               <a
                 href="mailto:kleber@ziontechgroup.com"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+                className="text-left"
               >
                 Get Free Consultation
               </a>

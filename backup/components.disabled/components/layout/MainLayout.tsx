@@ -35,7 +35,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({
       <AccessibilityEnhancer>
         <div className="min-h-screen flex flex-col>
           <Header />
-          <main id=main-content" className="flex-grow role=main">
+          <main id=main-content" className="text-left">
             {children}
           </main>
           <Footer />
@@ -78,7 +78,7 @@ interface MainLayoutProps {
       <AccessibilityEnhancer>
         <div className="min-h-screen flex flex-col>
           <Header />
-          <main id=main-content" className="flex-grow role=main">
+          <main id=main-content" className="text-left">
             {children}
           </main>
           <Footer />

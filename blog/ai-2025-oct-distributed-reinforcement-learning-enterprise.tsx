@@ -11,17 +11,17 @@ export const metadata = {
 
 export default function BlogPost() {
   return (
-    <article className="prose prose-invert max-w-none">
+    <article className="text-left">
       <h1>⚡ Distributed Reinforcement Learning at Enterprise Scale 2025</h1>
       
-      <div className="bg-gradient-to-r from-emerald-600/20 to-teal-600/20 border border-emerald-500/30 rounded-lg p-6 my-8">
-        <h3 className="text-2xl font-bold text-emerald-300 mt-0">🚀 Revolutionary Breakthrough</h3>
-        <p className="text-lg">
+      <div className="text-left">
+        <h3 className="text-left">🚀 Revolutionary Breakthrough</h3>
+        <p className="text-left">
           <strong>Distributed Reinforcement Learning</strong> enables enterprise-scale autonomous optimization. 
-          Achieve <span className="text-green-400 font-bold">1000x faster training</span>, 
-          <span className="text-green-400 font-bold"> solve complex multi-agent coordination</span>, and unlock 
-          <span className="text-green-400 font-bold"> $5.2B in operational optimization</span> through 
-          <span className="text-green-400 font-bold"> massively parallel RL systems</span>. Transform decision-making 
+          Achieve <span className="text-left">1000x faster training<, 
+          <span className="text-left"> solve complex multi-agent coordination<, and unlock 
+          <span className="text-left"> $5.2B in operational optimization< through 
+          <span className="text-left"> massively parallel RL systems<. Transform decision-making 
           with AI agents that learn optimal strategies from experience at unprecedented scale.
         </p>
       </div>
@@ -96,8 +96,8 @@ export default function BlogPost() {
 
       <h2>📊 Proven Business Impact</h2>
       
-      <div className="bg-gray-800/50 rounded-lg p-6 my-6">
-        <h3 className="text-xl font-bold text-green-400">Global Logistics Leader Success</h3>
+      <div className="text-left">
+        <h3 className="text-left">Global Logistics Leader Success</h3>
         <p>
           International shipping company deployed distributed RL for fleet optimization:
         </p>
@@ -112,7 +112,7 @@ export default function BlogPost() {
       <h2>🛠️ Implementation Architecture</h2>
       
       <h3>Distributed Training Infrastructure</h3>
-      <pre className="bg-gray-900 p-4 rounded-lg overflow-x-auto">
+      <pre className="text-left">
 {`Architecture Components:
 ├── Experience Collectors (1000s of actors)
 │   ├── Environment interaction
@@ -160,8 +160,8 @@ export default function BlogPost() {
 
       <h2>📈 Performance Metrics</h2>
       
-      <div className="bg-gray-800/50 rounded-lg p-6 my-6">
-        <h3 className="text-xl font-bold text-emerald-400">Training Efficiency Improvements</h3>
+      <div className="text-left">
+        <h3 className="text-left">Training Efficiency Improvements</h3>
         <ul>
           <li><strong>Wall-clock time:</strong> 1000x reduction vs. single-agent training</li>
           <li><strong>Sample efficiency:</strong> 10-100x fewer environment interactions</li>
@@ -210,9 +210,9 @@ export default function BlogPost() {
         <li>Training and support for your ML engineering teams</li>
       </ul>
 
-      <div className="bg-gradient-to-r from-emerald-600/20 to-teal-600/20 border border-emerald-500/30 rounded-lg p-6 my-8">
-        <h3 className="text-2xl font-bold text-emerald-300 mt-0">📞 Scale Your Decision Intelligence</h3>
-        <p className="text-lg mb-0">
+      <div className="text-left">
+        <h3 className="text-left">📞 Scale Your Decision Intelligence</h3>
+        <p className="text-left">
           Contact us today to explore how distributed reinforcement learning can optimize your most 
           complex operational challenges. Let autonomous agents discover strategies beyond human intuition.
         </p>

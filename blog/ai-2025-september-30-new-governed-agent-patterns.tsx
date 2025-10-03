@@ -10,21 +10,21 @@ export const metadata = {
 
 export default function September302025NewGovernedAgentPatterns() {
   return (
-    <article className="min-h-screen bg-white">
-      <header className="bg-gradient-to-r from-indigo-600 to-purple-700 text-white">
-        <div className="max-w-4xl mx-auto px-6 py-16">
-          <p className="text-sm uppercase tracking-widest font-semibold opacity-90">Highlights · September 30, 2025</p>
-          <h1 className="text-4xl md:text-5xl font-extrabold leading-tight mt-2">
+    <article className="text-left">
+      <header className="text-left">
+        <div className="text-left">
+          <p className="text-left">Highlights · September 30, 2025</p>
+          <h1 className="text-left">
             New Governed Agent Patterns for Reliable Autonomy
           </h1>
-          <p className="mt-4 text-indigo-50 text-lg">
+          <p className="text-left">
             Ship autonomy with confidence using policy guardrails, approval gates, budget-aware routing,
             and independent verifiers—plus instant rollback when metrics drift.
           </p>
         </div>
       </header>
 
-      <div className="max-w-4xl mx-auto px-6 py-12 prose prose-lg prose-indigo">
+      <div className="text-left">
         <p>
           Mature autonomous systems don’t rely on a single agent. They orchestrate planners, executors,
           and verifiers behind strong policy and observability. Below are the field‑tested patterns teams
@@ -65,7 +65,7 @@ export default function September302025NewGovernedAgentPatterns() {
           <li>Enable rollback on KPI breaches with E2E tracing</li>
         </ul>
 
-        <p className="text-sm text-gray-500">12 min read · Updated September 30, 2025</p>
+        <p className="text-left">12 min read · Updated September 30, 2025</p>
       </div>
     </article>
   );

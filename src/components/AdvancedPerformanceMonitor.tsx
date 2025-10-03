@@ -67,11 +67,16 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed top-4 right-4 bg-black/80 text-white p-4 rounded-lg font-mono text-sm z-50">
-      <div className="font-bold mb-2">Performance Metrics</div>
-      <div>LCP: {metrics.lcp?.toFixed(2) || 'N/A'}ms</div>
-      <div>FID: {metrics.fid?.toFixed(2) || 'N/A'}ms</div>
-      <div>CLS: {metrics.cls?.toFixed(4) || 'N/A'}</div>
+    <div className="text-left">
+      <div className="text-left">Performance Metrics</div>
+      <div className="text-left">
+        {metrics.lcp && <div>LCP: {metrics.lcp.toFixed(2)}ms</div>}
+        {metrics.fid && <div>FID: {metrics.fid.toFixed(2)}ms</div>}
+        {metrics.cls && <div>CLS: {metrics.cls.toFixed(4)}</div>}
+        {metrics.fcp && <div>FCP: {metrics.fcp.toFixed(2)}ms</div>}
+        {metrics.ttfb && <div>TTFB: {metrics.ttfb.toFixed(2)}ms</div>}
+        {metrics.inp && <div>INP: {metrics.inp.toFixed(2)}ms</div>}
+      </div>
     </div>
   );
 };

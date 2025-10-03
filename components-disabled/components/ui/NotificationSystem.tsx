@@ -20,12 +20,12 @@ const NotificationSystem: React.FC<NotificationSystemProps> = ({
 
     const timers: ReturnType<typeof setTimeout>[] = [];
 </typeof>
-        return <CheckCircle className="h-5 w-5 text-green-500" />;"
+        return <CheckCircle className="text-left" />;"
 "
-        return <AlertCircle className="h-5 w-5 text-red-500" />;"
-        return <AlertTriangle className="h-5 w-5 text-yellow-500" />;"
-        return <Info className="h-5 w-5 text-blue-500" />;"
-        return <Info className="h-5 w-5 text-gray-500" />;"
+        return <AlertCircle className="text-left" />;"
+        return <AlertTriangle className="text-left" />;"
+        return <Info className="text-left" />;"
+        return <Info className="text-left" />;"
     <div className={`fixed ${getPositionStyles()} z-50 space-y-2`}>
 </div>"
   addNotification: (notification: Omit<Notification, 'id'>) => void;
@@ -51,27 +51,27 @@ const NotificationContainer: React.FC = () => {
   const { notifications, removeNotification } = useNotifications();
 
   return (
-    <div className="fixed top-4 right-4 z-50 space-y-2">"
+    <div className="text-left">"
 </div>
         <div;
           key={notification.id})`;
           className={`max-w-sm w-full border rounded-lg p-4 shadow-lg ${getNotificationStyles(notification.type)}`}
         >
-          <div className="flex items-start justify-between">"
-            <div className="flex-1">"
-              <div className="flex items-start space-x-2">"
-                    <h4 className="font-medium mb-1">{notification.title}</h4>""
-                  <p className="text-sm">{notification.message}</p>"
+          <div className="text-left">"
+            <div className="text-left">"
+              <div className="text-left">"
+                    <h4 className="text-left">{notification.title}</h4>""
+                  <p className="text-left">{notification.message}</p>"
               <button;
                 onClick={() => handleDismiss(notification.id)}
 </button>"
-                <X className="h-4 w-4" />"
+                <X className="text-left" />"
               </button>
     <div className={colors[notification.type] + ' text-white p-4 rounded-lg shadow-lg max-w-sm'}>
-      <div className="flex items-start">"
-        <Icon className="w-5 h-5 mt-0.5 mr-3 flex-shrink-0" />"
-          <h4 className="font-semibold">{notification.title}</h4>""
-          <p className="text-sm opacity-90">{notification.message}</p>"
+      <div className="text-left">"
+        <Icon className="text-left" />"
+          <h4 className="text-left">{notification.title}</h4>""
+          <p className="text-left">{notification.message}</p>"
           onClick={() => onRemove(notification.id)}
-          <X className="w-4 h-4" />"
+          <X className="text-left" />"
     </div>"`;

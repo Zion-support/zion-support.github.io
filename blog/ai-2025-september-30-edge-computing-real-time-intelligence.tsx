@@ -3,20 +3,20 @@ import Link from 'next/link';
 
 export default function EdgeComputingRealTimeIntelligence2025() {
   return (
-    <main className="min-h-screen bg-slate-950 text-white">
-      <article className="max-w-4xl mx-auto px-6 py-16">
-        <header className="mb-8">
-          <p className="text-sm text-gray-400">September 30, 2025 • 14 min read</p>
-          <h1 className="text-4xl md:text-5xl font-extrabold leading-tight bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+    <main className="text-left">
+      <article className="text-left">
+        <header className="text-left">
+          <p className="text-left">September 30, 2025 • 14 min read</p>
+          <h1 className="text-left">
             AI-Powered Edge Computing: Real-Time Intelligence at the Network Edge
           </h1>
-          <p className="mt-4 text-gray-300 text-lg">
+          <p className="text-left">
             Discover how edge AI is revolutionizing real-time decision-making with sub-millisecond latency,
             distributed intelligence, and autonomous edge orchestration for modern enterprises.
           </p>
         </header>
 
-        <section className="prose prose-invert prose-purple max-w-none">
+        <section className="text-left">
           <h2>The Rise of Edge Intelligence</h2>
           <p>
             Cloud-centric AI is hitting physical limits. Network latency, bandwidth costs, and data sovereignty
@@ -87,23 +87,23 @@ export default function EdgeComputingRealTimeIntelligence2025() {
           </p>
         </section>
 
-        <hr className="my-10 border-white/10" />
+        <hr className="text-left" />
 
-        <aside className="bg-purple-500/10 border border-purple-400/20 rounded-xl p-6">
-          <h3 className="text-xl font-bold text-purple-300 mb-2">Related Articles</h3>
-          <ul className="list-disc pl-6 text-gray-300 space-y-1">
+        <aside className="text-left">
+          <h3 className="text-left">Related Articles</h3>
+          <ul className="text-left">
             <li>
-              <Link href="/blog/ai-2025-september-30-autonomous-database-operations" className="text-purple-300 hover:text-purple-200">
+              <Link href="/blog/ai-2025-september-30-autonomous-database-operations" className="text-left">
                 Autonomous Database Operations & Self-Healing Systems (Sep 30, 2025)
               </Link>
             </li>
             <li>
-              <Link href="/blog/ai-2025-september-30-multimodal-enterprise-workflows" className="text-purple-300 hover:text-purple-200">
+              <Link href="/blog/ai-2025-september-30-multimodal-enterprise-workflows" className="text-left">
                 Multi-Modal AI Integration for Enterprise Workflows (Sep 30, 2025)
               </Link>
             </li>
             <li>
-              <Link href="/blog/ai-edge-intelligence-2025" className="text-purple-300 hover:text-purple-200">
+              <Link href="/blog/ai-edge-intelligence-2025" className="text-left">
                 Edge AI: The Next Frontier of Intelligent Computing
               </Link>
             </li>

@@ -12,12 +12,12 @@ export const metadata = {
 
 const RealTimeAdaptiveSystems2025 = () => {
   return (
-    <article className="prose prose-lg max-w-4xl mx-auto">
+    <article className="text-left">
       <h1>Real-Time Adaptive AI Systems 2025 — Self-Learning Infrastructure That Evolves</h1>
       
-      <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border-l-4 border-blue-600 p-6 my-8 rounded-r-lg">
-        <h3 className="text-blue-900 mt-0">🎯 Key Results</h3>
-        <ul className="text-blue-800 space-y-2 mb-0">
+      <div className="text-left">
+        <h3 className="text-left">🎯 Key Results</h3>
+        <ul className="text-left">
           <li>✅ <strong>99.99% Uptime:</strong> Self-healing systems that recover in seconds</li>
           <li>✅ <strong>80% Auto-Remediation:</strong> Resolve issues before users notice</li>
           <li>✅ <strong>Sub-Second Adaptation:</strong> Real-time model retraining and deployment</li>
@@ -36,7 +36,7 @@ const RealTimeAdaptiveSystems2025 = () => {
       <h2>🏗️ Architecture: Self-Learning Infrastructure</h2>
       
       <h3>1. Continuous Learning Pipeline</h3>
-      <pre className="bg-gray-900 text-gray-100 p-6 rounded-lg overflow-x-auto">
+      <pre className="text-left">
 {`# Real-Time Adaptive Model System
 import numpy as np
 from sklearn.linear_model import SGDClassifier
@@ -163,7 +163,7 @@ class AdaptiveFeatureEngine:
       </pre>
 
       <h3>2. Auto-Remediation System</h3>
-      <pre className="bg-gray-900 text-gray-100 p-6 rounded-lg overflow-x-auto">
+      <pre className="text-left">
 {`# Intelligent Auto-Remediation
 from typing import Dict, List
 import asyncio
@@ -267,7 +267,7 @@ class AutoRemediationEngine:
       </pre>
 
       <h3>3. Performance Optimization System</h3>
-      <pre className="bg-gray-900 text-gray-100 p-6 rounded-lg overflow-x-auto">
+      <pre className="text-left">
 {`# Continuous Performance Optimization
 class PerformanceOptimizer:
     """
@@ -335,9 +335,9 @@ class PerformanceOptimizer:
 
       <h2>📊 Production Results</h2>
       
-      <div className="bg-green-50 border-l-4 border-green-600 p-6 my-8">
-        <h3 className="text-green-900 mt-0">Real-World Impact</h3>
-        <ul className="text-green-800 space-y-3">
+      <div className="text-left">
+        <h3 className="text-left">Real-World Impact</h3>
+        <ul className="text-left">
           <li><strong>E-commerce Platform:</strong> Reduced downtime from 45 min/month to 30 seconds</li>
           <li><strong>FinTech Company:</strong> 80% of incidents auto-remediated without human intervention</li>
           <li><strong>SaaS Provider:</strong> Performance improved 45% through continuous optimization</li>
@@ -375,9 +375,9 @@ class PerformanceOptimizer:
         over time—all while reducing operational overhead and costs.
       </p>
 
-      <div className="bg-blue-50 border-l-4 border-blue-600 p-6 my-8">
-        <h3 className="text-blue-900 mt-0">🎯 Ready to Build Adaptive Systems?</h3>
-        <p className="text-blue-800">
+      <div className="text-left">
+        <h3 className="text-left">🎯 Ready to Build Adaptive Systems?</h3>
+        <p className="text-left">
           Contact Zion Tech Group to implement real-time adaptive AI systems that evolve 
           with your business. Our experts will help you build infrastructure that learns, 
           adapts, and optimizes itself automatically.

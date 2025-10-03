@@ -9,10 +9,10 @@ const AIMLOpsAutomation: React.FC = () => {
         <meta name="description" content="Automate machine learning operations with self-healing pipelines and intelligent monitoring." />"
       </Helmet>
       
-      <div className="min-h-screen bg-slate-950">"
-        <div className="container mx-auto px-4 py-16">"
-          <h1 className="text-4xl font-bold mb-8 text-center">AI MLOps Automation</h1>"
-          <p className="text-gray-400 text-center">Coming soon - Automated MLOps solutions</p>"
+      <div className="text-left">"
+        <div className="text-left">"
+          <h1 className="text-left">AI MLOps Automation</h1>"
+          <p className="text-left">Coming soon - Automated MLOps solutions</p>"
         </div>
       </div>
     </>

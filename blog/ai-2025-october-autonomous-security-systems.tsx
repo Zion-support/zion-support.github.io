@@ -12,12 +12,12 @@ export const metadata = {
 
 const AutonomousSecuritySystems2025 = () => {
   return (
-    <article className="prose prose-lg max-w-4xl mx-auto">
+    <article className="text-left">
       <h1>Autonomous Security Systems 2025 — AI That Defends Your Infrastructure</h1>
       
-      <div className="bg-gradient-to-r from-red-50 to-orange-50 border-l-4 border-red-600 p-6 my-8 rounded-r-lg">
-        <h3 className="text-red-900 mt-0">🎯 Key Results</h3>
-        <ul className="text-red-800 space-y-2 mb-0">
+      <div className="text-left">
+        <h3 className="text-left">🎯 Key Results</h3>
+        <ul className="text-left">
           <li>✅ <strong>99.8% Detection Rate:</strong> Catch threats others miss</li>
           <li>✅ <strong>Sub-Second Response:</strong> Block attacks in real-time</li>
           <li>✅ <strong>95% Auto-Remediation:</strong> Fix vulnerabilities automatically</li>
@@ -36,7 +36,7 @@ const AutonomousSecuritySystems2025 = () => {
       <h2>🏗️ Architecture: Intelligent Defense System</h2>
       
       <h3>1. Real-Time Threat Detection</h3>
-      <pre className="bg-gray-900 text-gray-100 p-6 rounded-lg overflow-x-auto">
+      <pre className="text-left">
 {`# Autonomous Threat Detection System
 import numpy as np
 from sklearn.ensemble import IsolationForest
@@ -276,7 +276,7 @@ class ZeroTrustEnforcer:
       </pre>
 
       <h3>2. Intelligent Incident Response</h3>
-      <pre className="bg-gray-900 text-gray-100 p-6 rounded-lg overflow-x-auto">
+      <pre className="text-left">
 {`# Autonomous Incident Response
 class AutonomousIncidentResponder:
     """
@@ -333,9 +333,9 @@ class AutonomousIncidentResponder:
 
       <h2>📊 Production Results</h2>
       
-      <div className="bg-green-50 border-l-4 border-green-600 p-6 my-8">
-        <h3 className="text-green-900 mt-0">Real-World Impact</h3>
-        <ul className="text-green-800 space-y-3">
+      <div className="text-left">
+        <h3 className="text-left">Real-World Impact</h3>
+        <ul className="text-left">
           <li><strong>Financial Institution:</strong> Blocked 12,000+ attacks automatically with 99.8% accuracy</li>
           <li><strong>Healthcare Provider:</strong> Reduced incident response time from 4 hours to 45 seconds</li>
           <li><strong>E-commerce Platform:</strong> Prevented $8.5M in fraud through predictive defense</li>
@@ -374,9 +374,9 @@ class AutonomousIncidentResponder:
         your security team.
       </p>
 
-      <div className="bg-red-50 border-l-4 border-red-600 p-6 my-8">
-        <h3 className="text-red-900 mt-0">🎯 Ready to Deploy Autonomous Security?</h3>
-        <p className="text-red-800">
+      <div className="text-left">
+        <h3 className="text-left">🎯 Ready to Deploy Autonomous Security?</h3>
+        <p className="text-left">
           Contact Zion Tech Group to implement AI-powered security systems that protect your 
           infrastructure 24/7. Our security experts will help you build defenses that detect, 
           respond to, and prevent threats automatically.

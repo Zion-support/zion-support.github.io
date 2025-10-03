@@ -1,7 +1,7 @@
 import React from "react"
 export default function AICausalEvalsBlueprint2025(): JSX.Element {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">"
+    <div className="text-left">"
       <Helmet >
         <title >AI 2025: Causal Evals Blueprint — KPIs, Budgets, Rollback</title>,
         <meta name="description">"
@@ -10,20 +10,20 @@ export default function AICausalEvalsBlueprint2025(): JSX.Element {
         />
       </Helmet>
 
-      <div className="container mx-auto px-6 py-16">"
-        <h1 className="text-4xl md: text-5xl font-bold mb-4">"
+      <div className="text-left">"
+        <h1 className="text-left">"
   href="https: //ziontechgroup.com/blog/ai-2025-sept-30-causal-evals-blueprint"
         />
       </Helmet>
 
-      <div className="container mx-auto px-6 py-16">"
-        <h1 className="text-4xl md: text-5xl font-bold mb-4">"
+      <div className="text-left">"
+        <h1 className="text-left">"
   AI 2025: Causal Evals Blueprint — KPIs, Budgets, Rollback,,
         </h1>
-        <p className="text-zion-slate-light mb-8">"
+        <p className="text-left">"
   Policy Tests • Causal Graphs • KPI‑Linked Canaries • Instant Rollback
         </p>
-        <div className="prose prose-invert max-w-3xl">"
+        <div className="text-left">"
           <p >
             Ship safer AI changes by validating causal impact on business KPIs before
             and after release. This blueprint shows how to design golden tasks

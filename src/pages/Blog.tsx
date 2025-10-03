@@ -10,10 +10,10 @@ const Blog: React.FC = () => {
         <meta name="description" content="Latest insights on AI, quantum computing, and enterprise technology solutions." />"
       </Helmet>
       
-      <div className="min-h-screen bg-slate-950">"
-        <div className="container mx-auto px-4 py-16">"
-          <h1 className="text-4xl font-bold mb-8 text-center">Blog</h1>"
-          <p className="text-gray-400 text-center">Coming soon - Latest insights and updates</p>"
+      <div className="text-left">"
+        <div className="text-left">"
+          <h1 className="text-left">Blog</h1>"
+          <p className="text-left">Coming soon - Latest insights and updates</p>"
         </div>
       </div>
     </>

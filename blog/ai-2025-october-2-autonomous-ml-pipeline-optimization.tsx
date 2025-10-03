@@ -2,18 +2,18 @@ import React from 'react';
 
 export default function AutonomousMLPipelineOptimization() {
   return (
-    <article className="max-w-4xl mx-auto px-4 py-12">
-      <header className="mb-8">
-        <h1 className="text-4xl font-bold mb-4">Autonomous ML Pipeline Optimization: Self-Improving AI Systems</h1>
-        <div className="flex items-center gap-4 text-gray-600">
+    <article className="text-left">
+      <header className="text-left">
+        <h1 className="text-left">Autonomous ML Pipeline Optimization: Self-Improving AI Systems</h1>
+        <div className="text-left">
           <time dateTime="2025-10-02">October 2, 2025</time>
-          <span>•</span>
-          <span>15 min read</span>
+          <span>•<
+          <span>15 min read<
         </div>
       </header>
 
-      <div className="prose prose-lg max-w-none">
-        <p className="lead text-xl mb-6">
+      <div className="text-left">
+        <p className="text-left">
           Learn how autonomous ML pipeline optimization is revolutionizing machine learning operations 
           with self-tuning models, automated feature engineering, and intelligent resource management, 
           achieving 94% faster model deployment and $2.8B in operational savings.
@@ -127,7 +127,7 @@ export default function AutonomousMLPipelineOptimization() {
         <h2>Technical Architecture</h2>
         
         <h3>Autonomous Pipeline Framework</h3>
-        <pre className="bg-slate-900 text-slate-100 p-4 rounded-lg overflow-x-auto">
+        <pre className="text-left">
 {`// Autonomous ML Pipeline Optimizer
 class AutonomousMLPipeline {
   private optimizers: {
@@ -355,14 +355,14 @@ class AutonomousMLPipeline {
           and lower costs than their competitors.
         </p>
 
-        <div className="mt-12 p-6 bg-blue-50 rounded-lg">
-          <h3 className="text-xl font-bold mb-4">Accelerate Your ML Operations</h3>
+        <div className="text-left">
+          <h3 className="text-left">Accelerate Your ML Operations</h3>
           <p>
             Our MLOps experts can help you implement autonomous pipeline optimization tailored to 
             your organization's needs. We've helped Fortune 500 companies achieve 10x faster model 
             deployment and billions in operational savings.
           </p>
-          <button className="mt-4 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
+          <button className="text-left">
             Schedule a Demo
           </button>
         </div>

@@ -32,41 +32,41 @@ const BlogArticleLayout: React.FC<BlogArticleLayoutProps> = ({
         ))}
       </Helmet>
       
-      <article className="max-w-4xl mx-auto px-6 py-12">
-        <header className="mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+      <article className="text-left">
+        <header className="text-left">
+          <h1 className="text-left">
             {title}
           </h1>
-          <div className="flex flex-wrap items-center gap-4 text-gray-400 mb-8">
+          <div className="text-left">
             {author && (
-              <span className="flex items-center gap-2">
-                <span>By {author}</span>
-              </span>
+              <span className="text-left">
+                <span>By {author}<
+              <
             )}
             {publishDate && (
-              <span className="flex items-center gap-2">
-                <span>{new Date(publishDate).toLocaleDateString()}</span>
-              </span>
+              <span className="text-left">
+                <span>{new Date(publishDate).toLocaleDateString()}<
+              <
             )}
           </div>
           {tags.length > 0 && (
-            <div className="flex flex-wrap gap-2 mb-8">
+            <div className="text-left">
               {tags.map(tag => (
                 <span
                   key={tag}
-                  className="px-3 py-1 bg-blue-600/20 text-blue-300 rounded-full text-sm"
+                  className="text-left"
                 >
                   {tag}
-                </span>
+                <
               ))}
             </div>
           )}
-          <p className="text-xl text-gray-300 leading-relaxed">
+          <p className="text-left">
             {description}
           </p>
         </header>
         
-        <div className="prose prose-lg prose-invert max-w-none">
+        <div className="text-left">
           {children}
         </div>
       </article>

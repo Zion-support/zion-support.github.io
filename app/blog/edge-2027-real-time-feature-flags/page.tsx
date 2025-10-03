@@ -8,12 +8,12 @@ export const metadata = {
 
 export default function Page() {
   return (
-    <main className="min-h-screen bg-slate-950 text-white">"
-      <section className="py-20">"
-        <div className="max-w-3xl mx-auto px-6">"
-          <h1 className="text-4xl font-extrabold mb-4">Edge 2027: Real‑Time Feature Flags</h1>"
-          <p className="text-slate-300 mb-6">Private, sub‑100ms rollouts using signed configs, scoped identifiers, and on‑device metrics.</p>"
-          <div className="prose prose-invert">"
+    <main className="text-left">"
+      <section className="text-left">"
+        <div className="text-left">"
+          <h1 className="text-left">Edge 2027: Real‑Time Feature Flags</h1>"
+          <p className="text-left">Private, sub‑100ms rollouts using signed configs, scoped identifiers, and on‑device metrics.</p>"
+          <div className="text-left">"
             <p>
               Deliver safe experimentation globally without PII. This blueprint covers sig‑verified configs, scoped IDs,
               device‑local aggregation, and DP noise to meet compliance while keeping rollouts fast.

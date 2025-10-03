@@ -11,20 +11,20 @@ export const metadata = {
 
 export default function BlogPost() {
   return (
-    <article className="prose prose-invert max-w-none">
+    <article className="text-left">
       <h1>🔮 Synthetic Data Generation Mastery 2025: Privacy-Preserving AI Training at Scale</h1>
       
-      <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 border border-cyan-500/30 rounded-lg p-6 my-8">
-        <h3 className="text-2xl font-bold text-cyan-300 mt-0">🚀 Revolutionary Breakthrough</h3>
-        <p className="text-lg">
-          <strong>Synthetic data generation systems</strong> achieving <span className="text-green-400 font-bold">99.8% statistical fidelity</span>, 
-          <span className="text-green-400 font-bold"> zero privacy risks</span>, and <span className="text-green-400 font-bold">95% cost reduction</span> in 
-          <span className="text-green-400 font-bold"> data acquisition</span>. Transform AI development with unlimited high-quality training data that 
+      <div className="text-left">
+        <h3 className="text-left">🚀 Revolutionary Breakthrough</h3>
+        <p className="text-left">
+          <strong>Synthetic data generation systems</strong> achieving <span className="text-left">99.8% statistical fidelity<, 
+          <span className="text-left"> zero privacy risks<, and <span className="text-left">95% cost reduction< in 
+          <span className="text-left"> data acquisition<. Transform AI development with unlimited high-quality training data that 
           preserves privacy, eliminates bias, and accelerates model performance.
         </p>
-        <div className="mt-4 p-4 bg-cyan-900/30 rounded">
-          <p className="text-xl font-bold text-green-400 mb-2">💰 Proven ROI: $4.3B Value Creation</p>
-          <p className="text-sm">Global healthcare leader: 99.8% model accuracy with synthetic data, 100% GDPR compliance, 18-month deployment</p>
+        <div className="text-left">
+          <p className="text-left">💰 Proven ROI: $4.3B Value Creation</p>
+          <p className="text-left">Global healthcare leader: 99.8% model accuracy with synthetic data, 100% GDPR compliance, 18-month deployment</p>
         </div>
       </div>
 
@@ -69,8 +69,8 @@ export default function BlogPost() {
         Generate unlimited synthetic patient records, medical images, and clinical notes for AI model training without 
         privacy risks. Enable healthcare AI innovation while maintaining 100% HIPAA compliance.
       </p>
-      <div className="bg-blue-900/20 border border-blue-500/30 rounded p-4 my-4">
-        <p className="font-bold">Case Study: Diagnostic AI</p>
+      <div className="text-left">
+        <p className="text-left">Case Study: Diagnostic AI</p>
         <p>Generated 10M synthetic patient records achieving 99.8% statistical fidelity. Trained diagnostic models 
         reaching 97.3% accuracy—matching real-data performance with zero privacy concerns.</p>
       </div>
@@ -80,8 +80,8 @@ export default function BlogPost() {
         Create synthetic transaction data, customer profiles, and fraud scenarios for model training. Accelerate 
         financial AI development while eliminating exposure of sensitive customer information.
       </p>
-      <div className="bg-blue-900/20 border border-blue-500/30 rounded p-4 my-4">
-        <p className="font-bold">Case Study: Fraud Detection</p>
+      <div className="text-left">
+        <p className="text-left">Case Study: Fraud Detection</p>
         <p>Synthetic transaction data including 100+ rare fraud patterns. Improved fraud detection accuracy by 34% 
         while reducing false positives by 67%—all without exposing real customer data.</p>
       </div>
@@ -91,16 +91,16 @@ export default function BlogPost() {
         Generate synthetic sensor data, driving scenarios, and edge cases for autonomous vehicle and robotics training. 
         Create infinite training scenarios including rare and dangerous situations impossible to capture in real world.
       </p>
-      <div className="bg-blue-900/20 border border-blue-500/30 rounded p-4 my-4">
-        <p className="font-bold">Case Study: Autonomous Driving</p>
+      <div className="text-left">
+        <p className="text-left">Case Study: Autonomous Driving</p>
         <p>Generated 100B synthetic driving frames including 10,000+ edge cases. Improved safety-critical detection 
         by 84% and reduced real-world testing costs by 95%.</p>
       </div>
 
       <h2>📊 Performance Metrics</h2>
-      <div className="bg-gradient-to-r from-green-900/20 to-blue-900/20 border border-green-500/30 rounded-lg p-6 my-6">
-        <h3 className="text-xl font-bold text-green-300 mt-0">Proven Results</h3>
-        <ul className="space-y-2">
+      <div className="text-left">
+        <h3 className="text-left">Proven Results</h3>
+        <ul className="text-left">
           <li>🎯 <strong>99.8% statistical fidelity</strong> to real data distributions</li>
           <li>🔐 <strong>100% privacy preservation</strong> with zero data leakage</li>
           <li>💰 <strong>95% cost reduction</strong> vs real data acquisition</li>
@@ -163,12 +163,12 @@ export default function BlogPost() {
       </ul>
 
       <h2>💼 Business Impact</h2>
-      <div className="bg-gradient-to-r from-yellow-900/20 to-orange-900/20 border border-yellow-500/30 rounded-lg p-6 my-6">
-        <h3 className="text-xl font-bold text-yellow-300 mt-0">Global Healthcare Leader Success Story</h3>
-        <p className="text-lg mb-4">
+      <div className="text-left">
+        <h3 className="text-left">Global Healthcare Leader Success Story</h3>
+        <p className="text-left">
           Major healthcare organization deployed enterprise synthetic data platform for AI development across 12 therapeutic areas.
         </p>
-        <ul className="space-y-2">
+        <ul className="text-left">
           <li>💰 <strong>$4.3B total value creation</strong> from accelerated AI development</li>
           <li>🎯 <strong>99.8% statistical fidelity</strong> to real patient data</li>
           <li>🔐 <strong>100% HIPAA compliance</strong> with zero privacy incidents</li>
@@ -262,19 +262,19 @@ export default function BlogPost() {
       </ul>
 
       <h2>📞 Get Started Today</h2>
-      <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 border border-cyan-500/30 rounded-lg p-6 my-8">
-        <h3 className="text-2xl font-bold text-cyan-300 mt-0">Unlock Unlimited AI Training Data</h3>
-        <p className="text-lg mb-4">
+      <div className="text-left">
+        <h3 className="text-left">Unlock Unlimited AI Training Data</h3>
+        <p className="text-left">
           Our synthetic data generation experts will design and deploy a privacy-preserving data generation platform 
           tailored to your specific needs, delivering 99.8% fidelity, 100% compliance, and 95% cost reduction.
         </p>
-        <ul className="space-y-2">
+        <ul className="text-left">
           <li>✅ Free data landscape assessment and ROI analysis</li>
           <li>✅ Proof-of-concept synthetic data generation in 30 days</li>
           <li>✅ Full production platform with quality assurance</li>
           <li>✅ Guaranteed privacy compliance and model accuracy</li>
         </ul>
-        <p className="mt-4 text-xl font-bold text-green-400">
+        <p className="text-left">
           Contact us today to revolutionize your AI development with synthetic data!
         </p>
       </div>

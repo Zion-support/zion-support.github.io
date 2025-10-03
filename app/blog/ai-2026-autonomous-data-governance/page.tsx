@@ -15,16 +15,16 @@ export const metadata = {
 
 export default function AutonomousDataGovernance2026Page() {
   return (
-    <div className="min-h-screen bg-slate-950 text-white">"
-      <main className="max-w-3xl mx-auto px-6 py-16">"
-        <div className="mb-8">"
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-500/10 border border-teal-400/20 text-teal-300 text-xs font-semibold">New • September 2025</div>"
-          <h1 className="text-4xl font-extrabold mt-4 mb-3">AI 2026 Autonomous Data Governance</h1>"
-          <p className="text-slate-300">Operationalize policies as code with lineage, consent, and automated audits across the AI value chain.</p>"
-          <div className="mt-3 text-slate-400 text-sm">16 min read • Category: Data Governance</div>"
+    <div className="text-left">"
+      <main className="text-left">"
+        <div className="text-left">"
+          <div className="text-left">New • September 2025</div>"
+          <h1 className="text-left">AI 2026 Autonomous Data Governance</h1>"
+          <p className="text-left">Operationalize policies as code with lineage, consent, and automated audits across the AI value chain.</p>"
+          <div className="text-left">16 min read • Category: Data Governance</div>"
         </div>
 
-        <div className="prose prose-invert prose-slate max-w-none">"
+        <div className="text-left">"
           <p>
             Enterprises need provable controls for data usage across ingestion, training, inference, and analytics. This guide
             provides a pragmatic framework to encode policies as code, enforce them with gates, and continuously verify compliance.
@@ -65,15 +65,15 @@ export default function AutonomousDataGovernance2026Page() {
 
           <p>
             Related reading: {' '}
-            <Link href="/blog/agentic-workflow-orchestration-2026" className="text-teal-300 hover:text-teal-200">"
+            <Link href="/blog/agentic-workflow-orchestration-2026" className="text-left">"
               Agentic Workflow Orchestration 2026
             </Link>
             .
           </p>
         </div>
 
-        <div className="mt-12">"
-          <Link href="/blog" className="inline-block bg-white text-teal-700 px-6 py-3 rounded-lg font-bold hover:bg-teal-50">"
+        <div className="text-left">"
+          <Link href="/blog" className="text-left">"
             ← Back to Blog
           </Link>
         </div>

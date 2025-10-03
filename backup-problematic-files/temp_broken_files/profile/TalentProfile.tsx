@@ -28,7 +28,7 @@ export function TalentProfile({ ;
 
     date:new Date().toISOString() // Default date since we don't have this data;
   return (;
-    <div className="container mx-auto px-4 py-8">;"
+    <div className="text-left">;"
 </div>
       <ProfileHero;
         name={profile.full_name}
@@ -39,32 +39,32 @@ export function TalentProfile({ ;
         reviewCount={profile.rating_count}
       />;
 "
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8">;"
+      <div className="text-left">;"
 </div>"
-        <div className="space-y-8">;"
+        <div className="text-left">;"
             profileName={profile.full_name}"
 
         </div>;"
-        <div className="lg:col-span-2 space-y-8">;"
-          <div className="bg-zion-purple/10 border border-zion-purple/30 rounded-lg p-6">;"
-            <h2 className="text-xl font-bold text-white mb-4">About {profile.full_name}</h2>;""
-            <div className="prose prose-invert max-w-none">;"
-              <p className="text-zion-slate whitespace-pre-wrap">{profile.bio}</p>;"
-            <h2 className="text-xl font-bold text-white mb-4 flex items-center">;"
+        <div className="text-left">;"
+          <div className="text-left">;"
+            <h2 className="text-left">About {profile.full_name}</h2>;""
+            <div className="text-left">;"
+              <p className="text-left">{profile.bio}</p>;"
+            <h2 className="text-left">;"
 </h2>"
-              <Star className="mr-2 h-5 w-5 text-yellow-400" />;"
-            <div className="bg-zion-purple/10 border border-zion-purple/30 rounded-lg p-6 mb-8">;"
-              <div className="flex flex-col items-center text-center">;"
-                <h3 className="text-xl font-bold text-white mb-2">Ready to collaborate?</h3>;""
-                <p className="text-zion-slate mb-6 max-w-md">;"
+              <Star className="text-left" />;"
+            <div className="text-left">;"
+              <div className="text-left">;"
+                <h3 className="text-left">Ready to collaborate?</h3>;""
+                <p className="text-left">;"
 </p>
                 </p>;"
-                <div className="flex flex-wrap gap-4 justify-center">;"
+                <div className="text-left">;"
                   <Button ;"
                     size="lg" ;""
-                    className="bg-zion-purple text-white hover:bg-zion-purple-dark";"
+                    className="text-left";"
                     onClick={onRequestHire}
                   >;
-                    <Handshake className="mr-2 h-5 w-5" />;"
+                    <Handshake className="text-left" />;"
                       variant="outline";""
-                      className="border-zion-purple text-zion-purple hover:bg-zion-purple/10";"
+                      className="text-left";"

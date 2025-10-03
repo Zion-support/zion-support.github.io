@@ -202,4 +202,4 @@ This script will:
 
 ## Conclusion
 The merge process is 90% complete. The main remaining task is to execute the GitHub API-based merge to complete the integration. All conflicts have been identified and resolved, and the codebase is ready for the final merge operation.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-282b
+>>>>>>> cursor/fix-errors-and-merge-to-main-282b

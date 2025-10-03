@@ -11,14 +11,14 @@ export const metadata = {
 
 export default function BlogPost() {
   return (
-    <article className="prose prose-invert max-w-none">
+    <article className="text-left">
       <h1>⚖️ Autonomous Compliance Automation 2025: Regulatory Excellence Revolution</h1>
       
-      <div className="bg-gradient-to-r from-amber-600/20 to-orange-600/20 border border-amber-500/30 rounded-lg p-6 my-8">
-        <h3 className="text-2xl font-bold text-amber-300 mt-0">🚀 Revolutionary Breakthrough</h3>
-        <p className="text-lg">
-          <strong>Autonomous compliance automation</strong> achieving <span className="text-orange-400 font-bold">99.94% regulatory accuracy</span>, 
-          <span className="text-orange-400 font-bold"> 87% cost reduction</span>, and <span className="text-orange-400 font-bold">$2.7B savings</span>. 
+      <div className="text-left">
+        <h3 className="text-left">🚀 Revolutionary Breakthrough</h3>
+        <p className="text-left">
+          <strong>Autonomous compliance automation</strong> achieving <span className="text-left">99.94% regulatory accuracy<, 
+          <span className="text-left"> 87% cost reduction<, and <span className="text-left">$2.7B savings<. 
           Transform compliance operations with self-learning AI that monitors, interprets, and adapts to evolving regulations across 147 jurisdictions automatically.
         </p>
       </div>
@@ -93,9 +93,9 @@ export default function BlogPost() {
 
       <h2>📊 Performance Metrics</h2>
       
-      <div className="bg-slate-800/50 border border-slate-700 rounded-lg p-6 my-8">
-        <h3 className="text-xl font-bold text-amber-400 mt-0">Proven Results</h3>
-        <ul className="space-y-2">
+      <div className="text-left">
+        <h3 className="text-left">Proven Results</h3>
+        <ul className="text-left">
           <li>✅ <strong>99.94%</strong> regulatory interpretation accuracy</li>
           <li>✅ <strong>87%</strong> compliance cost reduction vs. manual processes</li>
           <li>✅ <strong>$2.7B</strong> savings across 3,247 enterprise deployments</li>
@@ -169,9 +169,9 @@ export default function BlogPost() {
 
       <h2>💼 Business Impact</h2>
       
-      <div className="bg-gradient-to-r from-amber-900/30 to-orange-900/30 border border-amber-600/40 rounded-lg p-6 my-8">
-        <h3 className="text-xl font-bold text-amber-300 mt-0">Typical Business Outcomes</h3>
-        <ul className="space-y-3">
+      <div className="text-left">
+        <h3 className="text-left">Typical Business Outcomes</h3>
+        <ul className="text-left">
           <li><strong>Cost Reduction:</strong> 87% lower compliance costs vs. manual processes</li>
           <li><strong>Accuracy:</strong> 99.94% regulatory interpretation accuracy</li>
           <li><strong>Efficiency:</strong> 95% reduction in compliance team workload</li>
@@ -259,17 +259,17 @@ export default function BlogPost() {
         <li><strong>Continuous optimization:</strong> Refine and expand automation over time</li>
       </ul>
 
-      <div className="bg-gradient-to-r from-amber-600 to-orange-600 rounded-lg p-8 my-8 text-center">
-        <h3 className="text-2xl font-bold text-white mt-0">Ready to Achieve Compliance Excellence?</h3>
-        <p className="text-lg text-amber-100 mb-6">
+      <div className="text-left">
+        <h3 className="text-left">Ready to Achieve Compliance Excellence?</h3>
+        <p className="text-left">
           Join 3,247 enterprises achieving 99.94% accuracy and $2.7B in compliance savings
         </p>
-        <a href="/contact" className="inline-block px-8 py-4 bg-white text-amber-600 font-bold rounded-lg hover:bg-amber-50 transition-colors">
+        <a href="/contact" className="text-left">
           Schedule Your Compliance Automation Demo →
         </a>
       </div>
 
-      <p className="text-sm text-gray-400 italic">
+      <p className="text-left">
         Last updated: October 1, 2025 | © 2025 Zion Tech Group. All rights reserved.
       </p>
     </article>

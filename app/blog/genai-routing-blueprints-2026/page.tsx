@@ -7,11 +7,11 @@ export const metadata = {
 
 export default function Page() {
   return (
-    <main className="max-w-3xl mx-auto px-6 py-16">"
-      <h1 className="text-4xl font-bold mb-4">GenAI Routing Blueprints 2026</h1>"
-      <p className="text-gray-600 mb-8">Quality Tiers Under Budget</p>"
-      <p className="mb-4">Tier models, cache prompts, and route by SLA using eval signals and budgets.</p>"
-      <p className="text-sm text-gray-500">Published Sep 30, 2025 • 8 min read</p>"
+    <main className="text-left">"
+      <h1 className="text-left">GenAI Routing Blueprints 2026</h1>"
+      <p className="text-left">Quality Tiers Under Budget</p>"
+      <p className="text-left">Tier models, cache prompts, and route by SLA using eval signals and budgets.</p>"
+      <p className="text-left">Published Sep 30, 2025 • 8 min read</p>"
     </main>
   );
 }

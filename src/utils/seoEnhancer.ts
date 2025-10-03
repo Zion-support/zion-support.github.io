@@ -199,11 +199,7 @@ export const countSyllables = (word: string): number => {
   let previousWasVowel = false;
   for (let i = 0; i < word.length; i++) {
     const isVowel = vowels.includes(word[i].toLowerCase());
-<<<<<<< HEAD
-  if (isVowel && !previousWasVowel) {
-=======
     if (isVowel && !previousWasVowel) {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0638
       count++;
     }
     previousWasVowel = isVowel;
@@ -217,8 +213,7 @@ export const countSyllables = (word: string): number => {
   return Math.max(1, count);
 };
 
-<<<<<<< HEAD
-export const generateStructuredData = (type: string, data: any): string => {
+export const generateStructuredData = (type: string, data: Record<string, unknown>): string => {
   const schema = {
     '@context': 'https://schema.org',
     '@type': type,
@@ -228,8 +223,6 @@ export const generateStructuredData = (type: string, data: any): string => {
   return `<script type="application/ld+json">${JSON.stringify(schema, null, 2)}</script>`
 };
 
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0638
 export const optimizeImages = (images: string[]): string[] => {
   return images.map(image => {
     // Add WebP format suggestion

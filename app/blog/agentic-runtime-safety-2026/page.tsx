@@ -7,13 +7,13 @@ export const metadata = {
 
 export default function AgenticRuntimeSafety2026() {
   return (
-    <div className="min-h-screen bg-slate-950 text-white">"
-      <main className="max-w-4xl mx-auto px-6 py-16">"
-        <h1 className="text-4xl font-extrabold mb-4">Agentic Runtime Safety 2026</h1>"
-        <p className="text-white/70 mb-8">Budgets, sandboxes, and instant rollback for safe autonomy.</p>"
-        <section className="space-y-6">"
-          <p className="text-slate-300">Operate agent systems confidently with explicit budgets, sandboxed tools, and automated rollback paths tied to KPI-linked canaries.</p>"
-          <ul className="list-disc list-inside space-y-2 text-slate-300">"
+    <div className="text-left">"
+      <main className="text-left">"
+        <h1 className="text-left">Agentic Runtime Safety 2026</h1>"
+        <p className="text-left">Budgets, sandboxes, and instant rollback for safe autonomy.</p>"
+        <section className="text-left">"
+          <p className="text-left">Operate agent systems confidently with explicit budgets, sandboxed tools, and automated rollback paths tied to KPI-linked canaries.</p>"
+          <ul className="text-left">"
             <li>Budgeted actions with approvals and audit trails</li>
             <li>Isolated tool sandboxes with least-privilege access</li>
             <li>Rollback orchestration triggered by live canary signals</li>

@@ -27,13 +27,13 @@ const categories = [
   {
     id: 'all',
     name: 'All Services',
-    icon: <LayoutGrid className="w-6 h-6" />,"
+    icon: <LayoutGrid className="text-left" />,"
 "
-    icon: <Building className="w-6 h-6" />,"
-    icon: <Globe className="w-6 h-6" />,"
-    icon: <Shield className="w-6 h-6" />,"
-    icon: <Brain className="w-6 h-6" />,"
-    icon: <Zap className="w-6 h-6" />,"
+    icon: <Building className="text-left" />,"
+    icon: <Globe className="text-left" />,"
+    icon: <Shield className="text-left" />,"
+    icon: <Brain className="text-left" />,"
+    icon: <Zap className="text-left" />,"
 ]"
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [filteredServices, setFilteredServices] = useState(allServices);
@@ -75,50 +75,50 @@ const categories = [
       }`}
     >
 </motion>
-        <div className="absolute top-4 right-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-semibold flex items-center gap-1">"
+        <div className="text-left">"
 </div>"
-          <Star className="w-4 h-4" />"
+          <Star className="text-left" />"
         </div>`;
       <div className={`h-32 bg-gradient-to-br ${service.color} flex items-center justify-center`}>
-        <span className="text-4xl">{service.icon}</span>"
+        <span className="text-left">{service.icon}<"
       </div>
-      <div className="p-6">"
-        <div className="flex items-start justify-between mb-3">"
-          <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">"
+      <div className="text-left">"
+        <div className="text-left">"
+          <h3 className="text-left">"
 </h3>
-        <p className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-2">"
+        <p className="text-left">"
 </p>
-        <div className="flex items-center justify-between mb-4">"
-          <span className="text-2xl font-bold text-gray-900 dark:text-white">"
-</span>
-          </span>"
-          <span className="text-sm text-gray-500 dark:text-gray-400">"
-        <div className="space-y-3 mb-6">"
-          <div className="flex items-center gap-2">"
-            <CheckCircle className="w-4 h-4 text-green-500" />"
-            <span className="text-sm text-gray-600 dark:text-gray-400">"
-            <Users className="w-4 h-4 text-blue-500" />"
-            <Star className="w-4 h-4 text-yellow-500" />"
-        <div className="mb-6">"
-          <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Key Features:</h4>""
-          <div className="space-y-1">"
-              <div key={index} className="flex items-center gap-2">"
-                <Check className="w-3 h-3 text-green-500" />"
-                <span className="text-sm text-gray-600 dark:text-gray-400">{feature}</span>"
-          <h4 className="font-semibold text-gray-900 dark:text-white mb-2">ROI & Benefits:</h4>""
-          <p className="text-sm text-gray-600 dark:text-gray-400">"
-          <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Market Position:</h4>""
-        <div className="flex items-center justify-between">"
+        <div className="text-left">"
+          <span className="text-left">"
+<
+          <"
+          <span className="text-left">"
+        <div className="text-left">"
+          <div className="text-left">"
+            <CheckCircle className="text-left" />"
+            <span className="text-left">"
+            <Users className="text-left" />"
+            <Star className="text-left" />"
+        <div className="text-left">"
+          <h4 className="text-left">Key Features:</h4>""
+          <div className="text-left">"
+              <div key={index} className="text-left">"
+                <Check className="text-left" />"
+                <span className="text-left">{feature}<"
+          <h4 className="text-left">ROI & Benefits:</h4>""
+          <p className="text-left">"
+          <h4 className="text-left">Market Position:</h4>""
+        <div className="text-left">"
           <a;
             href={service.link}"
-            className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105""
+            className="text-left""
 </a>"
-            <ArrowRight className="w-4 h-4" />"
+            <ArrowRight className="text-left" />"
           </a>
 
           <a;`;
             href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}"
-            className="inline-flex items-center gap-2 bg-gray-100 dark: bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300""
+            className="text-left""
     </motion.div>)
 
   const ServiceList = ({ service }: { service: any }) => (
@@ -126,72 +126,72 @@ const categories = [
       animate={ opacity: 1, x: 0 }
       transition={ duration: 0.5 }`;
       className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700 ${"
-        <div className="flex items-start gap-6">"
+        <div className="text-left">"
           <div className={`w-20 h-20 bg-gradient-to-br ${service.color} rounded-xl flex items-center justify-center flex-shrink-0`}>
-            <span className="text-3xl">{service.icon}</span>"
-          <div className="flex-1">"
+            <span className="text-left">{service.icon}<"
+          <div className="text-left">"
               <div>
 </h3>"
-                    <span className="ml-3 bg-blue-500 text-white px-2 py-1 rounded-full text-xs font-semibold">"
-                <p className="text-gray-600 dark:text-gray-300 mb-3">"
-              <div className="text-right">"
-                <div className="text-2xl font-bold text-gray-900 dark:text-white">"
-                <div className="text-sm text-gray-500 dark:text-gray-400">"
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">"
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">"
-                <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">"
-            <div className="flex items-center gap-4">"
+                    <span className="text-left">"
+                <p className="text-left">"
+              <div className="text-left">"
+                <div className="text-left">"
+                <div className="text-left">"
+            <div className="text-left">"
+            <div className="text-left">"
+                <p className="text-left">"
+            <div className="text-left">"
   return ("
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">"
+    <div className="text-left">"
       <SEO;"
         title="2025 Advanced Services Showcase - Zion Tech Group"""
         description="Discover our comprehensive portfolio of advanced AI services, micro SAAS solutions, and cutting-edge IT infrastructure. Real, innovative, and market-ready solutions for modern businesses."""
         keywords={["AI services", "micro SAAS", "IT infrastructure", "quantum computing", "enterprise solutions", "Zion Tech Group"]}"
       />
-      <div className="relative overflow-hidden bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700">"
-        <div className="absolute inset-0 bg-black opacity-20"></div>""
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">"
-          <div className="text-center">"
+      <div className="text-left">"
+        <div className="text-left"></div>""
+        <div className="text-left">"
+          <div className="text-left">"
             <motion.h1;
               transition={ duration: 0.8 }"
-              className="text-4xl md:text-6xl font-bold text-white mb-6""
+              className="text-left""
             </motion.h1>
             <motion.p;
               transition={ duration: 0.8, delay: 0.2 }"
-              className="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto""
+              className="text-left""
             </motion.p>
               transition={ duration: 0.8, delay: 0.4 }"
-              className="flex flex-col sm:flex-row gap-4 justify-center items-center""
+              className="text-left""
 </motion>"
-              <div className="flex items-center gap-2 text-white">"
-                <CheckCircle className="w-5 h-5 text-green-300" />"
-                <span>30+ New Services</span>
+              <div className="text-left">"
+                <CheckCircle className="text-left" />"
+                <span>30+ New Services<
 
-                <span>Real Implementations</span>
+                <span>Real Implementations<
 
-                <span>Market Validated</span>
+                <span>Market Validated<
             </motion.div>
-      <div className="bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700">"
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">"
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">"
-            <div className="flex items-center gap-6">"
-                <Phone className="w-5 h-5 text-blue-600" />"
-                <span className="text-gray-700 dark:text-gray-300">{contactInfo.mobile}</span>"
-                <Mail className="w-5 h-5 text-blue-600" />"
-                <span className="text-gray-700 dark:text-gray-300">{contactInfo.email}</span>"
-                <MapPin className="w-5 h-5 text-blue-600" />"
-                <span className="text-gray-700 dark:text-gray-300">{contactInfo.address}</span>"
+      <div className="text-left">"
+        <div className="text-left">"
+          <div className="text-left">"
+            <div className="text-left">"
+                <Phone className="text-left" />"
+                <span className="text-left">{contactInfo.mobile}<"
+                <Mail className="text-left" />"
+                <span className="text-left">{contactInfo.email}<"
+                <MapPin className="text-left" />"
+                <span className="text-left">{contactInfo.address}<"
                 href={`mailto:${contactInfo.email}?subject=Services Inquiry`}"
-                className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-all duration-300""
+                className="text-left""
                 href={contactInfo.website}"
                 target="_blank"""
                 rel="noopener noreferrer"""
-                className="inline-flex items-center gap-2 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-6 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300""
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">"
-        <div className="mb-8">"
-          <div className="flex flex-col lg:flex-row gap-6 items-start lg:items-center justify-between">"
-              <div className="relative max-w-md">"
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />"
+                className="text-left""
+      <div className="text-left">"
+        <div className="text-left">"
+          <div className="text-left">"
+              <div className="text-left">"
+                <Search className="text-left" />"
                 <input;"
                   type="text"""
                   placeholder="Search services...""
@@ -201,9 +201,9 @@ const categories = [
                 <button;"
                   onClick={() => setViewMode('grid')}
 </button>
-                  <LayoutGrid className="w-5 h-5" />"
+                  <LayoutGrid className="text-left" />"
                   onClick={() => setViewMode('list')}
-                  <List className="w-5 h-5" />"
+                  <List className="text-left" />"
     <motion.div;"
         <div className='mb-6'>;
           <h4 className='font-semibold text-gray-900 dark:text-white mb-2'>;
@@ -220,22 +220,22 @@ const categories = [
           </a>;
             href={`mailto:${contactInfo && contactInfo.email}?subject=Inquiry about ${service && service.name}`}
             className='inline-flex items-center gap-2 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300'>            {service && service.roi}
-        <div className="mb-6">;"
-          <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Market Position:</h4>;""
-          <p className="text-sm text-gray-600 dark:text-gray-400">;"
+        <div className="text-left">;"
+          <h4 className="text-left">Market Position:</h4>;""
+          <p className="text-left">;"
         </div>;"
-        <div className="flex items-center justify-between">;"
+        <div className="text-left">;"
             href={service && service.link}"
-            className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">;"
-            <ArrowRight className="w-4 h-4" />;"
+            className="text-left">;"
+            <ArrowRight className="text-left" />;"
           </a>;"
     icon: <Grid className='w - 6 h - 6' />,
 
-    icon: <Building className="w - 6 h - 6" />,"
-    icon: <Globe className="w - 6 h - 6" />,"
-    icon: <Shield className="w - 6 h - 6" />,"
-    icon: <Brain className="w - 6 h - 6" />,"
-    icon: <Atom className="w - 6 h - 6" />,"
+    icon: <Building className="text-left" />,"
+    icon: <Globe className="text-left" />,"
+    icon: <Shield className="text-left" />,"
+    icon: <Brain className="text-left" />,"
+    icon: <Atom className="text-left" />,"
     icon: <Building className='w - 6 h - 6' />,
 
     icon: <Globe className='w - 6 h - 6' />,
@@ -314,7 +314,7 @@ if ()
         </div>)}
       <div;`;
         className={`h - 32 bg - gradient - to - br ${service.color} flex items - center justify - center`}
-        <span className='text - 4xl'>{service.icon}</span>;
+        <span className='text - 4xl'>{service.icon}<;
       <div className='p - 6'>;
         <div className='flex items - start justify - between mb - 3'>;
           <h3 className='text - xl font - bold text - gray - 900 dark:text - white mb - 2'>;
@@ -322,7 +322,7 @@ if ()
         <p className='text - gray - 600 dark:text - gray - 300 mb - 4 line - clamp - 2'>;
         <div className='flex items - center justify - between mb - 4'>;
           <span className='text - 2xl font - bold text - gray - 900 dark:text - white'>;
-          </span>;
+          <;
           <span className='text - sm text - gray - 500 dark:text - gray - 400'>;
         <div className='space - y-3 mb - 6'>;
           <div className='flex items - center gap - 2'>;
@@ -337,22 +337,22 @@ if ()
         </div>          Popular;
         </div>)}`;
       <div className={`h - 32 bg - gradient - to - br ${service.color} flex items - center justify - center`}>;
-        <span className="text - 4xl">{service.icon}</span>;"
-      <div className="p - 6">;"
-        <div className="flex items - start justify - between mb - 3">;"
-          <h3 className="text - xl font - bold text - gray - 900 dark:text - white mb - 2">;"
-        <p className="text - gray - 600 dark:text - gray - 300 mb - 4 line - clamp - 2">;"
+        <span className="text-left">{service.icon}<;"
+      <div className="text-left">;"
+        <div className="text-left">;"
+          <h3 className="text-left">;"
+        <p className="text-left">;"
         </p>;"
-        <div className="flex items - center justify - between mb - 4">;"
-          <span className="text - 2xl font - bold text - gray - 900 dark:text - white">;"
-          </span>;"
-          <span className="text - sm text - gray - 500 dark:text - gray - 400">;"
-        <div className="space - y-3 mb - 6">;"
-          <div className="flex items - center gap - 2">;"
-            <CheckCircle className="w - 4 h - 4 text - green - 500" />;"
-            <span className="text - sm text - gray - 600 dark:text - gray - 400">;"
-            <Users className="w - 4 h - 4 text - blue - 500" />;"
-            <Star className="w - 4 h - 4 text - yellow - 500" />;"
+        <div className="text-left">;"
+          <span className="text-left">;"
+          <;"
+          <span className="text-left">;"
+        <div className="text-left">;"
+          <div className="text-left">;"
+            <CheckCircle className="text-left" />;"
+            <span className="text-left">;"
+            <Users className="text-left" />;"
+            <Star className="text-left" />;"
         <div className='mb - 6'>;
           <h4 className='font - semibold text - gray - 900 dark:text - white mb - 2'>;
           <div className='space - y-1'>;
@@ -361,14 +361,14 @@ if ()
 
                 </div>))}
               <span className='text - sm text - gray - 500 dark:text - gray - 400'>                +{getServiceFeatures (service).length - 3} more features;
-        <div className="mb - 6">;"
-          <h4 className="font - semibold text - gray - 900 dark:text - white mb - 2">Key Features:</h4>;""
-          <div className="space - y-1">;"
-              <div key={index} className="flex items - center gap - 2">;"
-                <Check className="w - 3 h - 3 text - green - 500" />;"
-                <span className="text - sm text - gray - 600 dark:text - gray - 400">{feature}</span>;"
+        <div className="text-left">;"
+          <h4 className="text-left">Key Features:</h4>;""
+          <div className="text-left">;"
+              <div key={index} className="text-left">;"
+                <Check className="text-left" />;"
+                <span className="text-left">{feature}<;"
               </div>))}"
-              </span>)}
+              <)}
           <p className='text - sm text - gray - 600 dark:text - gray - 400'>;
         <div className='flex items - center justify - between'>;
             href={service.link}
@@ -377,13 +377,13 @@ if ()
 
             href={`mailto:${contact_info.email}?subject = Inquiry about ${service.name}`}
             className='inline - flex items - center gap - 2 bg - gray - 100 dark:bg - gray - 700 text - gray - 700 dark:text - gray - 300 px - 4 py - 3 rounded - lg font - semibold hover:bg - gray - 200 dark:hover:bg - gray - 600 transition - all duration - 300'          >            {service.roi}
-          <h4 className="font - semibold text - gray - 900 dark:text - white mb - 2">Market Position:</h4>;""
-          <p className="text - sm text - gray - 600 dark:text - gray - 400">;"
-        <div className="flex items - center justify - between">;"
-            className="inline - flex items - center gap - 2 bg - gradient - to - r from - blue - 600 to - purple - 600 text - white px - 6 py - 3 rounded - lg font - semibold hover:from - blue - 700 hover:to - purple - 700 transition - all duration - 300 transform hover:scale - 105";"
-            <ArrowRight className="w - 4 h - 4" />;"
+          <h4 className="text-left">Market Position:</h4>;""
+          <p className="text-left">;"
+        <div className="text-left">;"
+            className="text-left";"
+            <ArrowRight className="text-left" />;"
             href={`mailto:${contact_info.email}?subject = Inquiry about ${service.name}`}"
-            className="inline - flex items - center gap - 2 bg - gray - 100 dark: bg - gray - 700 text - gray - 700 dark:text - gray - 300 px - 4 py - 3 rounded - lg font - semibold hover:bg - gray - 200 dark:hover:bg - gray - 600 transition - all duration - 300";"
+            className="text-left";"
       <div className='relative overflow-hidden bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700'>;
         <div className='absolute inset-0 bg-black opacity-20'></div>;
         <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24'>;
@@ -400,72 +400,72 @@ if ()
               transition={ duration: 0 && 0.8, delay: 0 && 0.4 }
               className='flex flex-col sm:flex-row gap-4 justify-center items-center'>;
               <div className='flex items-center gap-2 text-white'>;
-                <CheckCircle className='w-5 h-5 text-green-300' />                <span>30+ New Services</span>;
+                <CheckCircle className='w-5 h-5 text-green-300' />                <span>30+ New Services<;
 
                 <CheckCircle className='w-5 h-5 text-green-300' />;
 
-                <span>Real Implementations</span>;
-                <CheckCircle className='w-5 h-5 text-green-300' />                <span>Market Validated</span>              <div className="flex items-center gap-2 text-white">;"
-                <CheckCircle className="w-5 h-5 text-green-300" />;"
-                <span>Market Validated</span>;
+                <span>Real Implementations<;
+                <CheckCircle className='w-5 h-5 text-green-300' />                <span>Market Validated<              <div className="text-left">;"
+                <CheckCircle className="text-left" />;"
+                <span>Market Validated<;
             </motion && motion.div>;
                 href={`mailto:${contactInfo && contactInfo.email}?subject=Services Inquiry`}"
-                className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-all duration-300">;"
+                className="text-left">;"
                 href={contactInfo && contactInfo.website}"
                 rel="noopener noreferrer""
                 Visit Website;
                   <Grid className='w-5 h-5' />                </button>                <button;
 
-                  <Grid className="w-5 h-5" />;"
+                  <Grid className="text-left" />;"
                 </button>;
-          <div className="mt-6">;"
-            <div className="flex flex-wrap gap-3">;"
-          <div className="mt-6">"
-            <div className="flex flex-wrap gap-3">"
+          <div className="text-left">;"
+            <div className="text-left">;"
+          <div className="text-left">"
+            <div className="text-left">"
                 <button;
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
-          <div className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700">"
-            <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">"
-                <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">"
+          <div className="text-left">"
+            <div className="text-left">"
+                <h2 className="text-left">"
 </h2>
                 </h2>"
-                <p className="text-gray-600 dark:text-gray-400">"
-              <div className="flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400">"
-                  <TrendingUp className="w-4 h-4 text-green-500" />"
-                  <span>Market Growth: 150%+ YoY</span>
-                  <Award className="w-4 h-4 text-blue-500" />"
-                  <span>4.8+ Average Rating</span>
-        <div className="space-y-6">"
-            <div className="text-center py-12">"
-              <div className="text-gray-400 dark:text-gray-500 text-6xl mb-4">🔍</div>""
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">"
+                <p className="text-left">"
+              <div className="text-left">"
+                  <TrendingUp className="text-left" />"
+                  <span>Market Growth: 150%+ YoY<
+                  <Award className="text-left" />"
+                  <span>4.8+ Average Rating<
+        <div className="text-left">"
+            <div className="text-left">"
+              <div className="text-left">🔍</div>""
+              <h3 className="text-left">"
             <AnimatePresence>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">"
+                <div className="text-left">"
           <ServiceCard key={service.id} service={service} />
 
                     <ServiceList key={service.id} service={service} />
 
             
-        <div className="mt-16 text-center">"
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-white">"
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">"
-            <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">"
+        <div className="text-left">"
+          <div className="text-left">"
+            <h2 className="text-left">"
+            <p className="text-left">"
               <div className='flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400'>;
                 <div className='flex items-center gap-2'>;
                   <TrendingUp className='w-4 h-4 text-green-500' />;
 
-                  <span>Market Growth: 150%+ YoY</span>;
-                  <Award className='w-4 h-4 text-blue-500' />                  <span>4 && 4.8+ Average Rating</span>              <div>;
+                  <span>Market Growth: 150%+ YoY<;
+                  <Award className='w-4 h-4 text-blue-500' />                  <span>4 && 4.8+ Average Rating<              <div>;
 
-                <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">;"
+                <h2 className="text-left">;"
                 </h2>;"
-                <p className="text-gray-600 dark:text-gray-400">;"
-              <div className="flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400">;"
-                <div className="flex items-center gap-2">;"
-                  <TrendingUp className="w-4 h-4 text-green-500" />;"
-                  <Award className="w-4 h-4 text-blue-500" />;"
-                  <span>4 && 4.8+ Average Rating</span>;
+                <p className="text-left">;"
+              <div className="text-left">;"
+                <div className="text-left">;"
+                  <TrendingUp className="text-left" />;"
+                  <Award className="text-left" />;"
+                  <span>4 && 4.8+ Average Rating<;
                 </button>))}
         <div className='mb - 8'>;
           <div className='bg - white dark:bg - gray - 800 rounded - xl p - 6 border border - gray - 200 dark:border - gray - 700'>;
@@ -477,15 +477,15 @@ if ()
               <div className='flex items - center gap - 4 text - sm text - gray - 600 dark:text - gray - 400'>;
                   <TrendingUp className='w - 4 h - 4 text - green - 500' />;
 
-                  <span > Market Growth: 150%+ YoY</span>;
-                  <Award className='w - 4 h - 4 text - blue - 500' />                  <span > 4.8+ Average Rating</span>              <div>;
+                  <span > Market Growth: 150%+ YoY<;
+                  <Award className='w - 4 h - 4 text - blue - 500' />                  <span > 4.8+ Average Rating<              <div>;
 
-                <h2 className="text - 2xl font - bold text - gray - 900 dark:text - white mb - 2">;"
-                <p className="text - gray - 600 dark:text - gray - 400">;"
-              <div className="flex items - center gap - 4 text - sm text - gray - 600 dark:text - gray - 400">;"
-                  <TrendingUp className="w - 4 h - 4 text - green - 500" />;"
-                  <Award className="w - 4 h - 4 text - blue - 500" />;"
-                  <span > 4.8+ Average Rating</span>;
+                <h2 className="text-left">;"
+                <p className="text-left">;"
+              <div className="text-left">;"
+                  <TrendingUp className="text-left" />;"
+                  <Award className="text-left" />;"
+                  <span > 4.8+ Average Rating<;
             ;"
         <div className='mt-16 text-center'>;
           <div className='bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-white'>;
@@ -497,26 +497,26 @@ if ()
                 <ArrowRight className='w-5 h-5' />;
 
 </p>"
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">"
+            <div className="text-left">"
                 href={`mailto:${contactInfo.email}?subject=Business Transformation Consultation`}"
-                className="inline-flex items-center gap-2 bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105""
-                <ArrowRight className="w-5 h-5" />"
+                className="text-left""
+                <ArrowRight className="text-left" />"
                 href={`tel:${contactInfo.mobile}`}"
-                className="inline-flex items-center gap-2 bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover: bg-white hover:text-blue-600 transition-all duration-300""
-                <Phone className="w-5 h-5" />"
-                <ArrowRight className="w-5 h-5" />;"
+                className="text-left""
+                <Phone className="text-left" />"
+                <ArrowRight className="text-left" />;"
                 href={`tel:${contactInfo && contactInfo.mobile}`}"
-                className="inline-flex items-center gap-2 bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover: bg-white hover:text-blue-600 transition-all duration-300">;"
-                <Phone className="w-5 h-5" />;"
-            <p className="text - xl text - blue - 100 mb - 8 max - w-3xl mx - auto">;"
-            <div className="flex flex - col sm:flex - row gap - 4 justify - center items - center">;"
+                className="text-left">;"
+                <Phone className="text-left" />;"
+            <p className="text-left">;"
+            <div className="text-left">;"
                 href={`mailto:${contact_info.email}?subject = Business Transformation Consultation`}"
-                className="inline - flex items - center gap - 2 bg - white text - blue - 600 px - 8 py - 4 rounded - lg font - bold text - lg hover:bg - gray - 100 transition - all duration - 300 transform hover:scale - 105";"
-                <ArrowRight className="w - 5 h - 5" />;"
+                className="text-left";"
+                <ArrowRight className="text-left" />;"
                 href={`tel:${contact_info.mobile}`}"
-                className="inline - flex items - center gap - 2 bg - transparent border - 2 border - white text - white px - 8 py - 4 rounded - lg font - bold text - lg hover: bg - white hover:text - blue - 600 transition - all duration - 300";"
-                <Phone className="w - 5 h - 5" />;"
-          <button className="px - 8 py - 4 bg - white text - blue - 600 rounded - xl font - semibold hover:bg - gray - 100 transition - all duration - 300">;"
+                className="text-left";"
+                <Phone className="text-left" />;"
+          <button className="text-left">;"
         </motion.div>;
     </div>);        </div>;
     </div>);"

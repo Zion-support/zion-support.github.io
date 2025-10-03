@@ -9,31 +9,31 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
   },;
 ;
   return (;
-    <div className="mb-6 border-b border-zion-blue-light pb-6">;
+    <div className="text-left">;
       <button;
         onClick={toggleSection}
-        className="flex w-full items-center justify-between text-white font-medium";
+        className="text-left";
       >;
-        <span>Hourly Rate</span>;
+        <span>Hourly Rate<;
         {expanded ? (;
-          <ChevronUp className="h-4 w-4 text-zion-slate-light" />;
+          <ChevronUp className="text-left" />;
         ) :(;
-          <ChevronDown className="h-4 w-4 text-zion-slate-light" />;
+          <ChevronDown className="text-left" />;
         )}
       </button>;
       ;
       {expanded && (;
-        <div className="mt-6">;
-          <div className="flex justify-between text-sm text-zion-slate-light mb-2">;
-            <span>${priceRange[0]}/hr</span>;
-            <span>${priceRange[1]}/hr</span>;
+        <div className="text-left">;
+          <div className="text-left">;
+            <span>${priceRange[0]}/hr<;
+            <span>${priceRange[1]}/hr<;
           </div>;
           <Slider ;            value={[priceRange[0], priceRange[1]]}
             min={50}
             max={200}
             step={5}
             onValueChange={handleChange}
-            className="mt-6";
+            className="text-left";
           />;
         </div>;
       )}
@@ -45,12 +45,12 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
   const handleChange = (values: number[]) => {
   setPriceRange ([values[0], values[1]]) 
 };
-mb-6 border-b border-zion-blue-light pb-6"> <button) : (<ChevronDown className=" h-4 w-4 text-zion-slate-light" />) ;
+mb-6 border-b border-zion-blue-light pb-6"> <button) : (<ChevronDown className="text-left" />) ;
 }</button> <span>$ {;
   priceRange[0] ;
-}/hr</span> <span>$ {;
+}/hr< <span>$ {;
   priceRange[1] ;
-}/hr</span> </div> <Slider /> </div>) ;
+}/hr< </div> <Slider /> </div>) ;
 :temp_broken_files/talent/filters/PriceFilter.tsx
 }</div>) ;"}"
 }</div>) ;

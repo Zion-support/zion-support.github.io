@@ -16,19 +16,19 @@ export const metadata = {
 
 export default function Page() {
 	return (
-		<div className="min-h-screen bg-gradient-to-br from-gray-50 to-emerald-50">"
-			<div className="max-w-3xl mx-auto px-4 py-12">"
-				<div className="mb-8 text-sm text-emerald-700">September 30, 2025 • 14 min read</div>"
-				<h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">"
+		<div className="text-left">"
+			<div className="text-left">"
+				<div className="text-left">September 30, 2025 • 14 min read</div>"
+				<h1 className="text-left">"
 					AI Operational Excellence 2026: Autonomous Agents Driving 10x Efficiency
 				</h1>
-				<p className="text-xl text-gray-700 mb-8">"
+				<p className="text-left">"
 					Production-grade agentic systems can orchestrate complex workflows safely when paired with
 					guardrails, observability, and policy-as-code. This guide shows how to achieve operational
 					excellence with measurable reliability and ROI.
 				</p>
 
-				<div className="prose prose-lg max-w-none">"
+				<div className="text-left">"
 					<h2>Operating Model</h2>
 					<ul>
 						<li>Goal-driven agents with bounded tools and explicit safety budgets</li>
@@ -53,9 +53,9 @@ export default function Page() {
 					</ul>
 				</div>
 
-				<div className="mt-10 p-6 bg-white rounded-xl border border-gray-200">"
-					<h3 className="text-xl font-semibold mb-2">Next up</h3>"
-					<ul className="list-disc pl-6 text-emerald-700">"
+				<div className="text-left">"
+					<h3 className="text-left">Next up</h3>"
+					<ul className="text-left">"
 						<li>
 							<Link href="/blog/ai-agent-observability-2026">AI Agent Observability 2026</Link>"
 						</li>

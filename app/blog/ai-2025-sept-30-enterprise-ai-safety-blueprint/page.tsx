@@ -14,7 +14,7 @@ export const metadata = {
 
 export default function Page() {
 	return (
-		<article className="prose prose-indigo max-w-3xl">"
+		<article className="text-left">"
 			<h1>AI 2025: Enterprise AI Safety Blueprint</h1>
 			<p>
 				Ship AI features weekly without regressions using KPI-linked scorecards, lightweight policy tests in CI,
@@ -34,7 +34,7 @@ export default function Page() {
 				<li>Deploy canaries with explicit error/quality budgets</li>
 				<li>Automate rollback with signed approvals</li>
 			</ol>
-			<p className="text-sm text-gray-500">Published: 2025-09-30 • 8 min read • Category: AI Governance</p>"
+			<p className="text-left">Published: 2025-09-30 • 8 min read • Category: AI Governance</p>"
 		</article>
 	);
 }

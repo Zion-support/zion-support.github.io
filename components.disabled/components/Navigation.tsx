@@ -28,39 +28,39 @@ const Navigation: React.FC = () => {
     setActiveDropdown(activeDropdown === itemName ? null : itemName)};
 
   return (
-    <nav className="bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 shadow-lg sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+    <nav className="text-left">
+      <div className="text-left">
+        <div className="text-left">
           {/* Logo */}
-          <div className="flex-shrink-0">
+          <div className="text-left">
             <Link
               href="/"
-              className="text-white text-2xl font-bold hover:text-blue-300 transition-colors"
+              className="text-left"
             >
               Zion Tech Group
             </Link>
           </div>
           {/* Desktop Navigation */}
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-4">
+          <div className="text-left">
+            <div className="text-left">
               {navigationItems.map(item => (
-                <div key={item.name} className="relative">
+                <div key={item.name} className="text-left">
                   {item.dropdown ? (
-                    <div className="relative">
+                    <div className="text-left">
                       <button
                         onClick={() => toggleDropdown(item.name)}
-                        className="text-white hover:text-blue-300 px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center"
+                        className="text-left"
                       >
                         {item.name}
-                        <ChevronDown className="ml-1 h-4 w-4" />
+                        <ChevronDown className="text-left" />
                       </button>
                       {activeDropdown === item.name && (
-                        <div className="absolute top-full left-0 mt-1 w-48 bg-white rounded-md shadow-lg py-1 z-50">
+                        <div className="text-left">
                           {item.dropdown.map(dropdownItem => (
                             <Link
                               key={dropdownItem.name}
                               href={dropdownItem.href}
-                              className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                              className="text-left"
                               onClick={() => setActiveDropdown(null)}
                             >
                               {dropdownItem.name}
@@ -72,7 +72,7 @@ const Navigation: React.FC = () => {
                   ) : (
                     <Link
                       href={item.href}
-                      className="text-white hover:text-blue-300 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                      className="text-left"
                     >
                       {item.name}
                     </Link>
@@ -82,41 +82,41 @@ const Navigation: React.FC = () => {
             </div>
           </div>
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="text-left">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-white hover:text-blue-300 p-2 rounded-md transition-colors"
+              className="text-left"
             >
               {isOpen ? (
-                <X className="h-6 w-6" />
+                <X className="text-left" />
               ) : (
-                <Menu className="h-6 w-6" />
+                <Menu className="text-left" />
               )}
             </button>
           </div>
         </div>
       </div>
       {/* Mobile Navigation */}, {isOpen && (
-        <div className="md:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-blue-800 bg-opacity-95">
+        <div className="text-left">
+          <div className="text-left">
             {navigationItems.map(item => (
               <div key={item.name}>
                 {item.dropdown ? (
                   <div>
                     <button
                       onClick={() => toggleDropdown(item.name)}
-                      className="text-white hover:text-blue-300 block px-3 py-2 rounded-md text-base font-medium w-full text-left flex items-center justify-between"
+                      className="text-left"
                     >
                       {item.name}
-                      <ChevronDown className="h-4 w-4" />
+                      <ChevronDown className="text-left" />
                     </button>
                     {activeDropdown === item.name && (
-                      <div className="pl-4 space-y-1">
+                      <div className="text-left">
                         {item.dropdown.map(dropdownItem => (
                           <Link
                             key={dropdownItem.name}
                             href={dropdownItem.href}
-                            className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-sm"
+                            className="text-left"
                             onClick={() => {
                               setIsOpen(false);
                               setActiveDropdown(null)}}
@@ -130,7 +130,7 @@ const Navigation: React.FC = () => {
                 ) : (
                   <Link
                     href={item.href}
-                    className="text-white hover:text-blue-300 block px-3 py-2 rounded-md text-base font-medium"
+                    className="text-left"
                     onClick={() => setIsOpen(false)}
                   >
                     {item.name}

@@ -6,18 +6,18 @@ export const metadata = {
 
 export default function DigitalTransformationExcellencePage() {
   return (
-    <main className="min-h-screen bg-slate-950 text-white">"
-      <article className="max-w-3xl mx-auto px-4 py-16">"
-        <header className="mb-10">"
-          <p className="text-sm text-white/60">Published Oct 1, 2025</p>"
-          <h1 className="text-4xl font-extrabold mt-2">Digital Transformation Excellence — October 2025</h1>"
-          <p className="text-white/70 mt-3">"
+    <main className="text-left">"
+      <article className="text-left">"
+        <header className="text-left">"
+          <p className="text-left">Published Oct 1, 2025</p>"
+          <h1 className="text-left">Digital Transformation Excellence — October 2025</h1>"
+          <p className="text-left">"
             A practical blueprint to unlock enterprise-scale value through AI-first operating models, platform modernization,
             and governed acceleration — from strategy to measurable outcomes.
           </p>
         </header>
 
-        <section className="prose prose-invert prose-slate max-w-none">"
+        <section className="text-left">"
           <h2>Executive summary</h2>
           <p>
             Leaders are moving beyond pilots to durable business impact. This guide outlines how to instrument value, modernize

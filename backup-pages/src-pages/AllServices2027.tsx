@@ -100,14 +100,14 @@
                 Transform your business with cutting-edge artificial intelligence solutions.;
 
                   <CheckCircle className='w-5 h-5 text-green-400'  />'
-                  <span className='text-gray-300'>Machine Learning Models</span>'
+                  <span className='text-gray-300'>Machine Learning Models<'
                 </div>''
                 <div className='flex items-center space-x-3>'
                   <CheckCircle className='w-5 h-5 text-green-400'  />'
-                  <span className='text-gray-300'>Natural Language Processing</span>'
+                  <span className='text-gray-300'>Natural Language Processing<'
                 </div>''
                 <div className='flex items-center space-x-3>'
-                  <CheckCircle className='w-5 h-5 text-green-400'  />                  <span className='text-gray-300'>Computer Vision</span>
+                  <CheckCircle className='w-5 h-5 text-green-400'  />                  <span className='text-gray-300'>Computer Vision<
 
                 </div>
               </div>
@@ -122,14 +122,14 @@
                 Protect your digital assets with enterprise-grade security solutions.;
 
                   <CheckCircle className='w-5 h-5 text-green-400'  />'
-                  <span className='text-gray-300'>Threat Detection</span>'
+                  <span className='text-gray-300'>Threat Detection<'
                 </div>''
                 <div className='flex items-center space-x-3>'
                   <CheckCircle className='w-5 h-5 text-green-400'  />'
-                  <span className='text-gray-300'>Incident Response</span>'
+                  <span className='text-gray-300'>Incident Response<'
                 </div>''
                 <div className='flex items-center space-x-3>'
-                  <CheckCircle className='w-5 h-5 text-green-400'  />                  <span className='text-gray-300'>Compliance automation</span>
+                  <CheckCircle className='w-5 h-5 text-green-400'  />                  <span className='text-gray-300'>Compliance automation<
 
                 </div>
               </div>
@@ -138,14 +138,14 @@
             <motion.div;
 
                   <CheckCircle className='w-5 h-5 text-green-400'  />'
-                  <span className='text-gray-300'>Quantum computing access</span>'
+                  <span className='text-gray-300'>Quantum computing access<'
                 </div>''
                 <div className='flex items-center space-x-3>'
                   <CheckCircle className='w-5 h-5 text-green-400'  />'
-                  <span className='text-gray-300'>Blockchain development</span>'
+                  <span className='text-gray-300'>Blockchain development<'
                 </div>''
                 <div className='flex items-center space-x-3>'
-                  <CheckCircle className='w-5 h-5 text-green-400'  />                  <span className='text-gray-300'>IoT and edge computing</span>
+                  <CheckCircle className='w-5 h-5 text-green-400'  />                  <span className='text-gray-300'>IoT and edge computing<
 
                 </div>
               </div>
@@ -154,14 +154,14 @@
             <motion.div;
 
                   <CheckCircle className='w-5 h-5 text-green-400'  />'
-                  <span className='text-gray-300'>DevOps automation</span>'
+                  <span className='text-gray-300'>DevOps automation<'
                 </div>''
                 <div className='flex items-center space-x-3>'
                   <CheckCircle className='w-5 h-5 text-green-400'  />'
-                  <span className='text-gray-300'>Cloud infrastructure</span>'
+                  <span className='text-gray-300'>Cloud infrastructure<'
                 </div>''
                 <div className='flex items-center space-x-3>'
-                  <CheckCircle className='w-5 h-5 text-green-400'  />                  <span className='text-gray-300'>Performance optimization</span>
+                  <CheckCircle className='w-5 h-5 text-green-400'  />                  <span className='text-gray-300'>Performance optimization<
 
                 </div>
               </div>
@@ -220,11 +220,11 @@ const ServiceCard: React.FC<{ servic,
         {/* Category Badge */}
         <div className='absolute top-4 left-4 flex items-center space-x-2 bg-cyan-500/90 backdrop-blur-sm px-3 py-1 rounded-full>
           {getCategoryIcon(service.category)}
-          <span className='text-white text-sm font-medium'>{service.category}</span>
+          <span className='text-white text-sm font-medium'>{service.category}<
         </div>'
         {/* AI Score Badge */}
         <div className='absolute top-4 right-4 bg-purple-500/90 backdrop-blur-sm px-3 py-1 rounded-full>'
-          <span className='text-white text-sm font-medium'>AI Score: {service.aiScore}</span>
+          <span className='text-white text-sm font-medium'>AI Score: {service.aiScore}<
         </div>
       </div>'
       {/* Service Content */}
@@ -237,15 +237,15 @@ const ServiceCard: React.FC<{ servic,
             {service.features.slice(0, 2).map((feature: string, index: number)  => (
               <span;
 
-                <CheckCircle className='w-3 h-3'  />                <span>{feature}</span>
-              </span>) ) }
+                <CheckCircle className='w-3 h-3'  />                <span>{feature}<
+              <) ) }
           </div>
         </div>'
         {/* Pricing */}
         <div className='flex items-center justify-between mb-4>'
           <div className='text-2xl font-bold text-cyan-400>
             ${service.price}
-            <span className='text-sm text-gray-400 font-normal'>/month</span>'
+            <span className='text-sm text-gray-400 font-normal'>/month<'
           </div>''
           <div className='text-sm text-gray-400'>
             Market: {service.marketPrice}
@@ -256,7 +256,7 @@ const ServiceCard: React.FC<{ servic,
           <Link;
             to={service.website};
             className='flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-center py-3 px-4 rounded-lg font-medium hover: from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center space-x-2';
-            <span>Learn More</span>''
+            <span>Learn More<''
             <ArrowRight className='w-4 h-4'  />          </Link>'
           <Link''
             to='/contact';

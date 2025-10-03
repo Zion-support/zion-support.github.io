@@ -34,16 +34,16 @@ export function FilterSidebar({;
   return (;
     <>;
       {/* Filter header */}
-      <div className="flex items-center justify-between mb-6">;
-        <h3 className="text-lg font-semibold text-white flex items-center">;
-          <Filter className="h-4 w-4 mr-2 text-zion-purple" />;
+      <div className="text-left">;
+        <h3 className="text-left">;
+          <Filter className="text-left" />;
           Filters;
         </h3>;
         <Button ;
           variant="ghost" ;
           size="sm" ;
           onClick={clearFilters}
-          className="h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent";
+          className="text-left";
         >;
           Clear All;
         </Button>;
@@ -103,7 +103,7 @@ export function FilterSidebar({;
       {isMobileFilterOpen && (;
         <Button ;
           onClick={() => window.dispatchEvent(new CustomEvent('closeMobileFilter'))}
-          className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4";
+          className="text-left";
         >;
           Apply Filters;
         </Button>;
@@ -131,7 +131,7 @@ clearFilters;
 isMobileFilterOpen ;
 }: FilterSidebarProps) {;
   return (<> /* Filter header */ ;
-}<div className="flex items-center justify-between mb-6" > <h3 className="text-lg font-semibold text-white flex items-center" > <Filter className="h-4 w-4 mr-2 text-zion-purple" /> Filters </h3> <Button > Clear All </Button> </div> {;
+}<div className="text-left" > <h3 className="text-left" > <Filter className="text-left" /> Filters </h3> <Button > Clear All </Button> </div> {;
   /* Search */ ;
 }<SearchFilter searchTerm= {;
   searchTerm ;
@@ -205,11 +205,11 @@ isMobileFilterOpen ;
   isMobileFilterOpen ;
 }/> {;
 :temp_broken_files/talent/FilterSidebar.tsx
-  isMobileFilterOpen && (<Button onClick={';"  () => window.dispatchEvent (new CustomEvent ('closeMobileFilter') ) ";"}className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4" > Apply Filters </Button>) ;
+  isMobileFilterOpen && (<Button onClick={';"  () => window.dispatchEvent (new CustomEvent ('closeMobileFilter') ) ";"}className="text-left" > Apply Filters </Button>) ;
 }</>) ;"}'"
   isMobileFilterOpen && (<Button onClick={';
   () => window.dispatchEvent (new CustomEvent ('closeMobileFilter') ) ";
-}className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4" > Apply Filters </Button>) ;
+}className="text-left" > Apply Filters </Button>) ;
 }</>) ;
 }'"
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/talent/FilterSidebar.tsx

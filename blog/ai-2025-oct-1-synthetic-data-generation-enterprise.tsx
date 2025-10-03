@@ -13,32 +13,32 @@ export const metadata = {
 
 const SyntheticDataGenerationEnterprise: React.FC = () => {
   return (
-    <article className="max-w-4xl mx-auto px-4 py-12">
-      <header className="mb-8">
-        <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">
+    <article className="text-left">
+      <header className="text-left">
+        <h1 className="text-left">
           Synthetic Data Generation: Solving AI's Biggest Challenge
         </h1>
-        <div className="flex gap-4 text-sm text-gray-600 mb-6">
-          <span>📅 {metadata.date}</span>
-          <span>⏱️ {metadata.readTime}</span>
-          <span>✍️ {metadata.author}</span>
+        <div className="text-left">
+          <span>📅 {metadata.date}<
+          <span>⏱️ {metadata.readTime}<
+          <span>✍️ {metadata.author}<
         </div>
-        <div className="flex gap-2 flex-wrap">
+        <div className="text-left">
           {metadata.tags.map((tag) => (
             <span
               key={tag}
-              className="px-3 py-1 bg-green-100 text-green-800 rounded-full text-xs font-semibold"
+              className="text-left"
             >
               {tag}
-            </span>
+            <
           ))}
         </div>
       </header>
 
-      <div className="prose prose-lg max-w-none">
-        <div className="bg-gradient-to-r from-green-50 to-blue-50 p-6 rounded-lg mb-8">
-          <h2 className="text-2xl font-bold mb-4">📊 Executive Summary</h2>
-          <ul className="space-y-2">
+      <div className="text-left">
+        <div className="text-left">
+          <h2 className="text-left">📊 Executive Summary</h2>
+          <ul className="text-left">
             <li>💰 <strong>$127B Market Size:</strong> Synthetic data generation market by 2028</li>
             <li>🔒 <strong>100% Privacy Compliant:</strong> Zero real personal data exposure</li>
             <li>⚡ <strong>1000x Faster Dataset Creation:</strong> Generate millions of samples in hours</li>
@@ -83,10 +83,10 @@ const SyntheticDataGenerationEnterprise: React.FC = () => {
 
         <h2>Synthetic Data Generation Techniques</h2>
 
-        <div className="bg-gray-50 p-6 rounded-lg my-6">
-          <h3 className="text-xl font-bold mb-4">🔬 Core Technologies</h3>
+        <div className="text-left">
+          <h3 className="text-left">🔬 Core Technologies</h3>
           
-          <h4 className="font-semibold mt-4">1. Generative Adversarial Networks (GANs)</h4>
+          <h4 className="text-left">1. Generative Adversarial Networks (GANs)</h4>
           <p>
             <strong>How it works:</strong> Two neural networks compete—one generates synthetic data, 
             the other tries to distinguish synthetic from real. This adversarial process produces 
@@ -95,7 +95,7 @@ const SyntheticDataGenerationEnterprise: React.FC = () => {
           <p><strong>Best for:</strong> Images, time-series data, structured data</p>
           <p><strong>Accuracy:</strong> 96-99% indistinguishable from real data</p>
 
-          <h4 className="font-semibold mt-4">2. Variational Autoencoders (VAEs)</h4>
+          <h4 className="text-left">2. Variational Autoencoders (VAEs)</h4>
           <p>
             <strong>How it works:</strong> Learns compressed representations of data, then generates 
             new samples by sampling from the learned distribution.
@@ -103,7 +103,7 @@ const SyntheticDataGenerationEnterprise: React.FC = () => {
           <p><strong>Best for:</strong> Continuous data, multimodal distributions, anomaly detection</p>
           <p><strong>Advantages:</strong> More stable training, better control over generated distributions</p>
 
-          <h4 className="font-semibold mt-4">3. Diffusion Models</h4>
+          <h4 className="text-left">3. Diffusion Models</h4>
           <p>
             <strong>How it works:</strong> Gradually adds noise to data, then learns to reverse the 
             process to generate new samples.
@@ -111,7 +111,7 @@ const SyntheticDataGenerationEnterprise: React.FC = () => {
           <p><strong>Best for:</strong> High-fidelity images, complex multimodal data</p>
           <p><strong>Quality:</strong> State-of-the-art generation quality (99.4% accuracy)</p>
 
-          <h4 className="font-semibold mt-4">4. Large Language Models (LLMs)</h4>
+          <h4 className="text-left">4. Large Language Models (LLMs)</h4>
           <p>
             <strong>How it works:</strong> Uses pre-trained language models to generate synthetic text, 
             documents, and structured data.
@@ -208,10 +208,10 @@ const SyntheticDataGenerationEnterprise: React.FC = () => {
 
         <h2>Benefits of Synthetic Data</h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
-          <div className="bg-green-50 p-4 rounded-lg">
-            <h4 className="font-bold text-green-800">💰 Cost Advantages</h4>
-            <ul className="mt-2 space-y-2">
+        <div className="text-left">
+          <div className="text-left">
+            <h4 className="text-left">💰 Cost Advantages</h4>
+            <ul className="text-left">
               <li>97% lower than traditional data collection</li>
               <li>No data licensing or acquisition costs</li>
               <li>Eliminate anonymization expenses</li>
@@ -219,9 +219,9 @@ const SyntheticDataGenerationEnterprise: React.FC = () => {
             </ul>
           </div>
           
-          <div className="bg-blue-50 p-4 rounded-lg">
-            <h4 className="font-bold text-blue-800">⚡ Speed & Scale</h4>
-            <ul className="mt-2 space-y-2">
+          <div className="text-left">
+            <h4 className="text-left">⚡ Speed & Scale</h4>
+            <ul className="text-left">
               <li>1000x faster dataset creation</li>
               <li>Generate unlimited samples on demand</li>
               <li>Instant edge case creation</li>
@@ -229,9 +229,9 @@ const SyntheticDataGenerationEnterprise: React.FC = () => {
             </ul>
           </div>
 
-          <div className="bg-purple-50 p-4 rounded-lg">
-            <h4 className="font-bold text-purple-800">🔒 Privacy & Compliance</h4>
-            <ul className="mt-2 space-y-2">
+          <div className="text-left">
+            <h4 className="text-left">🔒 Privacy & Compliance</h4>
+            <ul className="text-left">
               <li>100% GDPR, CCPA, HIPAA compliant</li>
               <li>Zero personal data exposure</li>
               <li>No consent requirements</li>
@@ -239,9 +239,9 @@ const SyntheticDataGenerationEnterprise: React.FC = () => {
             </ul>
           </div>
 
-          <div className="bg-red-50 p-4 rounded-lg">
-            <h4 className="font-bold text-red-800">🎯 Quality & Control</h4>
-            <ul className="mt-2 space-y-2">
+          <div className="text-left">
+            <h4 className="text-left">🎯 Quality & Control</h4>
+            <ul className="text-left">
               <li>Remove historical biases</li>
               <li>Perfect data balance and representation</li>
               <li>Controllable edge case generation</li>
@@ -252,10 +252,10 @@ const SyntheticDataGenerationEnterprise: React.FC = () => {
 
         <h2>Implementation Roadmap</h2>
 
-        <div className="bg-blue-50 p-6 rounded-lg my-6">
-          <h3 className="text-xl font-bold mb-4">📋 Step-by-Step Guide</h3>
+        <div className="text-left">
+          <h3 className="text-left">📋 Step-by-Step Guide</h3>
           
-          <h4 className="font-semibold mt-4">Step 1: Assessment & Planning (Weeks 1-2)</h4>
+          <h4 className="text-left">Step 1: Assessment & Planning (Weeks 1-2)</h4>
           <ul>
             <li>Identify use cases and data requirements</li>
             <li>Evaluate existing data quality and availability</li>
@@ -264,7 +264,7 @@ const SyntheticDataGenerationEnterprise: React.FC = () => {
             <li>Establish validation frameworks</li>
           </ul>
 
-          <h4 className="font-semibold mt-4">Step 2: Model Development (Weeks 3-6)</h4>
+          <h4 className="text-left">Step 2: Model Development (Weeks 3-6)</h4>
           <ul>
             <li>Train synthetic data generation models</li>
             <li>Validate statistical fidelity to real data</li>
@@ -273,7 +273,7 @@ const SyntheticDataGenerationEnterprise: React.FC = () => {
             <li>Build generation pipelines</li>
           </ul>
 
-          <h4 className="font-semibold mt-4">Step 3: Integration & Deployment (Weeks 7-10)</h4>
+          <h4 className="text-left">Step 3: Integration & Deployment (Weeks 7-10)</h4>
           <ul>
             <li>Integrate with ML training pipelines</li>
             <li>Deploy automated generation workflows</li>
@@ -282,7 +282,7 @@ const SyntheticDataGenerationEnterprise: React.FC = () => {
             <li>Train teams on synthetic data usage</li>
           </ul>
 
-          <h4 className="font-semibold mt-4">Step 4: Scale & Optimize (Weeks 11+)</h4>
+          <h4 className="text-left">Step 4: Scale & Optimize (Weeks 11+)</h4>
           <ul>
             <li>Expand to additional use cases</li>
             <li>Continuously improve generation quality</li>
@@ -350,28 +350,28 @@ const SyntheticDataGenerationEnterprise: React.FC = () => {
           <li><strong>Causal Synthetic Data:</strong> Generation preserving causal relationships for better AI reasoning</li>
         </ul>
 
-        <div className="bg-gradient-to-r from-green-600 to-blue-600 text-white p-8 rounded-lg my-8">
-          <h2 className="text-2xl font-bold mb-4">📊 Unlock Your AI Potential with Synthetic Data</h2>
-          <p className="mb-4">
+        <div className="text-left">
+          <h2 className="text-left">📊 Unlock Your AI Potential with Synthetic Data</h2>
+          <p className="text-left">
             Zion Tech Group specializes in enterprise synthetic data solutions. We help organizations:
           </p>
-          <ul className="space-y-2 mb-6">
+          <ul className="text-left">
             <li>✅ Generate domain-specific synthetic datasets</li>
             <li>✅ Ensure 100% privacy compliance (GDPR, HIPAA, CCPA)</li>
             <li>✅ Accelerate AI development by 10x</li>
             <li>✅ Reduce data costs by 97%</li>
             <li>✅ Eliminate data acquisition bottlenecks</li>
           </ul>
-          <div className="flex gap-4">
+          <div className="text-left">
             <a 
               href="/contact"
-              className="bg-white text-green-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition"
+              className="text-left"
             >
               Start Your Synthetic Data Project
             </a>
             <a 
               href="/services/synthetic-data"
-              className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition"
+              className="text-left"
             >
               Explore Solutions
             </a>
@@ -391,12 +391,12 @@ const SyntheticDataGenerationEnterprise: React.FC = () => {
           the only question is how quickly you'll adopt it.
         </p>
 
-        <div className="mt-8 p-6 bg-gray-100 rounded-lg">
-          <p className="font-semibold mb-2">📚 Related Resources:</p>
+        <div className="text-left">
+          <p className="text-left">📚 Related Resources:</p>
           <ul>
-            <li><a href="/blog/ai-2025-october-enterprise-ai-governance-framework" className="text-blue-600 hover:underline">AI Governance Framework</a></li>
-            <li><a href="/blog/ai-2025-generative-ai-governance-blueprint" className="text-blue-600 hover:underline">Generative AI Governance</a></li>
-            <li><a href="/services/ai-ml-development" className="text-blue-600 hover:underline">AI/ML Development Services</a></li>
+            <li><a href="/blog/ai-2025-october-enterprise-ai-governance-framework" className="text-left">AI Governance Framework</a></li>
+            <li><a href="/blog/ai-2025-generative-ai-governance-blueprint" className="text-left">Generative AI Governance</a></li>
+            <li><a href="/services/ai-ml-development" className="text-left">AI/ML Development Services</a></li>
           </ul>
         </div>
       </div>

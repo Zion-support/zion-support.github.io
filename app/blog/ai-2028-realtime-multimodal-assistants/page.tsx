@@ -7,7 +7,7 @@ export const metadata = {
 
 export default function Page() {
   return (
-    <main className="max-w-3xl mx-auto px-4 py-12 prose prose-invert">"
+    <main className="text-left">"
       <h1>Real‑Time Multimodal Assistants (2028): Voice + Vision + Touch</h1>
       <p>
         Build assistants that see, hear, and act in real time. This guide covers unified embeddings,

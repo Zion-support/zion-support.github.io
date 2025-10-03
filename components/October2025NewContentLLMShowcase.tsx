@@ -67,90 +67,90 @@ const October2025NewContentLLMShowcase = () => {
   ];
 
   return (
-    <div className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="text-left">
+      <div className="text-left">
         {/* Header */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center space-x-2 bg-yellow-500/20 backdrop-blur-sm border border-yellow-500/50 rounded-full px-6 py-2 mb-6">
-            <Star className="w-5 h-5 text-yellow-400 fill-yellow-400" />
-            <span className="text-yellow-400 font-semibold text-sm uppercase tracking-wider">
+        <div className="text-left">
+          <div className="text-left">
+            <Star className="text-left" />
+            <span className="text-left">
               New Content Published: October 1, 2025
-            </span>
-            <Star className="w-5 h-5 text-yellow-400 fill-yellow-400" />
+            <
+            <Star className="text-left" />
           </div>
           
-          <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-4">
+          <h2 className="text-left">
             Enterprise LLM Orchestration
           </h2>
-          <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-left">
             Complete resource library for implementing multi-model AI strategies that deliver 
-            <span className="text-yellow-400 font-bold"> $8.2B value creation</span> and 
-            <span className="text-green-400 font-bold"> 1,840% ROI</span>
+            <span className="text-left"> $8.2B value creation< and 
+            <span className="text-left"> 1,840% ROI<
           </p>
         </div>
 
         {/* Content Grid */}
-        <div className="grid md:grid-cols-2 gap-8 mb-12">
+        <div className="text-left">
           {content.map((item, index) => {
             const Icon = item.icon;
             return (
               <Link
                 key={index}
                 to={item.link}
-                className="group relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 hover:border-gray-600 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl"
+                className="text-left"
               >
                 {/* Gradient Accent */}
                 <div className={`absolute top-0 left-0 w-full h-1 bg-gradient-to-r ${item.color} rounded-t-2xl`}></div>
                 
                 {/* Icon & Type */}
-                <div className="flex items-center justify-between mb-4">
+                <div className="text-left">
                   <div className={`p-3 rounded-xl bg-gradient-to-br ${item.color} bg-opacity-10`}>
-                    <Icon className="w-8 h-8 text-white" />
+                    <Icon className="text-left" />
                   </div>
-                  <span className="text-sm font-semibold text-gray-400 uppercase tracking-wider">
+                  <span className="text-left">
                     {item.type}
-                  </span>
+                  <
                 </div>
 
                 {/* Title */}
-                <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-yellow-400 group-hover:to-orange-400 transition-all">
+                <h3 className="text-left">
                   {item.title}
                 </h3>
 
                 {/* Description */}
-                <p className="text-gray-300 mb-4 leading-relaxed">
+                <p className="text-left">
                   {item.description}
                 </p>
 
                 {/* Highlights */}
-                <ul className="space-y-2 mb-6">
+                <ul className="text-left">
                   {item.highlights.map((highlight, idx) => (
-                    <li key={idx} className="flex items-start text-sm text-gray-400">
-                      <ArrowRight className="w-4 h-4 mr-2 mt-0.5 text-green-400 flex-shrink-0" />
-                      <span>{highlight}</span>
+                    <li key={idx} className="text-left">
+                      <ArrowRight className="text-left" />
+                      <span>{highlight}<
                     </li>
                   ))}
                 </ul>
 
                 {/* Tags & Read Time */}
-                <div className="flex flex-wrap items-center gap-2 mb-4">
+                <div className="text-left">
                   {item.tags.map((tag, idx) => (
                     <span
                       key={idx}
-                      className="px-3 py-1 bg-gray-700/50 text-gray-300 text-xs font-medium rounded-full"
+                      className="text-left"
                     >
                       {tag}
-                    </span>
+                    <
                   ))}
-                  <span className="ml-auto text-sm text-gray-500">
+                  <span className="text-left">
                     📖 {item.readTime}
-                  </span>
+                  <
                 </div>
 
                 {/* CTA */}
                 <div className={`flex items-center font-semibold bg-gradient-to-r ${item.color} bg-clip-text text-transparent group-hover:translate-x-2 transition-transform`}>
                   Read More
-                  <ArrowRight className="w-5 h-5 ml-2 text-white" />
+                  <ArrowRight className="text-left" />
                 </div>
               </Link>
             );
@@ -158,38 +158,38 @@ const October2025NewContentLLMShowcase = () => {
         </div>
 
         {/* Summary Stats */}
-        <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 backdrop-blur-md rounded-2xl p-8 border border-indigo-500/30">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div className="text-left">
+          <div className="text-left">
             <div>
-              <div className="text-4xl font-bold text-yellow-400 mb-2">4</div>
-              <div className="text-sm text-gray-300">Comprehensive Resources</div>
+              <div className="text-left">4</div>
+              <div className="text-left">Comprehensive Resources</div>
             </div>
             <div>
-              <div className="text-4xl font-bold text-green-400 mb-2">$8.2B</div>
-              <div className="text-sm text-gray-300">Proven Value Creation</div>
+              <div className="text-left">$8.2B</div>
+              <div className="text-left">Proven Value Creation</div>
             </div>
             <div>
-              <div className="text-4xl font-bold text-blue-400 mb-2">1,840%</div>
-              <div className="text-sm text-gray-300">Demonstrated ROI</div>
+              <div className="text-left">1,840%</div>
+              <div className="text-left">Demonstrated ROI</div>
             </div>
             <div>
-              <div className="text-4xl font-bold text-purple-400 mb-2">73%</div>
-              <div className="text-sm text-gray-300">Cost Reduction</div>
+              <div className="text-left">73%</div>
+              <div className="text-left">Cost Reduction</div>
             </div>
           </div>
         </div>
 
         {/* Bottom CTA */}
-        <div className="mt-12 text-center">
+        <div className="text-left">
           <Link
             to="/contact"
-            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 font-bold text-lg rounded-full hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105"
+            className="text-left"
           >
-            <Rocket className="w-6 h-6 mr-2" />
+            <Rocket className="text-left" />
             Start Your Transformation Today
-            <ArrowRight className="w-6 h-6 ml-2" />
+            <ArrowRight className="text-left" />
           </Link>
-          <p className="mt-4 text-gray-400 text-sm">
+          <p className="text-left">
             Schedule your complimentary assessment • Receive $128,500 in bonus value
           </p>
         </div>

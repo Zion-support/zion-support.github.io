@@ -2,10 +2,10 @@ import React from 'react';
 
 export default function AutonomousModelOptimization2025() {
   return (
-    <main className="container mx-auto px-6 py-12">
-      <h1 className="text-3xl font-bold mb-4">Autonomous ML Model Optimization 2025</h1>
-      <p className="text-gray-700 mb-6">Self-tuning ML models that automatically optimize hyperparameters, architecture, and training strategies — achieving 95% accuracy with 80% less compute.</p>
-      <section className="prose prose-invert max-w-none">
+    <main className="text-left">
+      <h1 className="text-left">Autonomous ML Model Optimization 2025</h1>
+      <p className="text-left">Self-tuning ML models that automatically optimize hyperparameters, architecture, and training strategies — achieving 95% accuracy with 80% less compute.</p>
+      <section className="text-left">
         <h2>Overview</h2>
         <p>
           Autonomous model optimization represents the next frontier in machine learning operations. This comprehensive guide explores

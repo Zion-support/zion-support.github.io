@@ -2,18 +2,18 @@ import React from 'react';
 
 export default function QuantumNeuralOrchestrationRevolution() {
   return (
-    <article className="max-w-4xl mx-auto px-4 py-12">
-      <header className="mb-8">
-        <h1 className="text-4xl font-bold mb-4">Quantum-Neural Orchestration: The Next Frontier in Enterprise AI</h1>
-        <div className="flex items-center gap-4 text-gray-600">
+    <article className="text-left">
+      <header className="text-left">
+        <h1 className="text-left">Quantum-Neural Orchestration: The Next Frontier in Enterprise AI</h1>
+        <div className="text-left">
           <time dateTime="2025-10-01">October 1, 2025</time>
-          <span>•</span>
-          <span>15 min read</span>
+          <span>•<
+          <span>15 min read<
         </div>
       </header>
 
-      <div className="prose prose-lg max-w-none">
-        <p className="lead text-xl mb-6">
+      <div className="text-left">
+        <p className="text-left">
           Discover how quantum-neural orchestration is revolutionizing enterprise AI systems, 
           delivering $3.2B in measurable value and achieving 99.97% accuracy in complex decision-making scenarios.
         </p>
@@ -167,13 +167,13 @@ export default function QuantumNeuralOrchestrationRevolution() {
           you can implement it to capture value and outpace competition.
         </p>
 
-        <div className="mt-12 p-6 bg-blue-50 rounded-lg">
-          <h3 className="text-xl font-bold mb-4">Ready to Get Started?</h3>
-          <p className="mb-4">
+        <div className="text-left">
+          <h3 className="text-left">Ready to Get Started?</h3>
+          <p className="text-left">
             Contact our quantum-neural orchestration experts to discuss how this technology 
             can transform your enterprise AI initiatives.
           </p>
-          <button className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
+          <button className="text-left">
             Schedule Consultation
           </button>
         </div>

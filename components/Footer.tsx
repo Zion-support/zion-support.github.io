@@ -37,32 +37,32 @@ const Footer: React.FC = () => {
   ];
 
   return (
-    <footer className="bg-gray-900 text-white">
-      <div className="container mx-auto px-4 py-16">
-        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
+    <footer className="text-left">
+      <div className="text-left">
+        <div className="text-left">
           {/* Company Info */}
-          <div className="lg:col-span-2">
-            <Link href="/" className="flex items-center space-x-2 mb-6">
-              <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">Z</span>
+          <div className="text-left">
+            <Link href="/" className="text-left">
+              <div className="text-left">
+                <span className="text-left">Z<
               </div>
-              <span className="text-xl font-bold">Zion Tech Solutions</span>
+              <span className="text-left">Zion Tech Solutions<
             </Link>
             
-            <p className="text-gray-400 mb-6 leading-relaxed">
+            <p className="text-left">
               Leading technology solutions provider helping businesses transform their digital presence 
               with cutting-edge AI, cloud architecture, and innovative development services.
             </p>
 
-            <div className="flex space-x-4">
+            <div className="text-left">
               {socialLinks.map((social) => (
                 <a
                   key={social.name}
                   href={social.href}
-                  className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gray-700 transition-colors"
+                  className="text-left"
                   aria-label={social.name}
                 >
-                  <span className="text-lg">{social.icon}</span>
+                  <span className="text-left">{social.icon}<
                 </a>
               ))}
             </div>
@@ -70,13 +70,13 @@ const Footer: React.FC = () => {
 
           {/* Services */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Services</h3>
-            <ul className="space-y-2">
+            <h3 className="text-left">Services</h3>
+            <ul className="text-left">
               {footerLinks.services.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-gray-400 hover:text-white transition-colors"
+                    className="text-left"
                   >
                     {link.name}
                   </Link>
@@ -87,13 +87,13 @@ const Footer: React.FC = () => {
 
           {/* Company */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Company</h3>
-            <ul className="space-y-2">
+            <h3 className="text-left">Company</h3>
+            <ul className="text-left">
               {footerLinks.company.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-gray-400 hover:text-white transition-colors"
+                    className="text-left"
                   >
                     {link.name}
                   </Link>
@@ -104,13 +104,13 @@ const Footer: React.FC = () => {
 
           {/* Resources */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Resources</h3>
-            <ul className="space-y-2">
+            <h3 className="text-left">Resources</h3>
+            <ul className="text-left">
               {footerLinks.resources.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-gray-400 hover:text-white transition-colors"
+                    className="text-left"
                   >
                     {link.name}
                   </Link>
@@ -121,21 +121,21 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Newsletter Signup */}
-        <div className="border-t border-gray-800 mt-12 pt-8">
-          <div className="grid md:grid-cols-2 gap-8 items-center">
+        <div className="text-left">
+          <div className="text-left">
             <div>
-              <h3 className="text-xl font-semibold mb-2">Stay Updated</h3>
-              <p className="text-gray-400">
+              <h3 className="text-left">Stay Updated</h3>
+              <p className="text-left">
                 Get the latest technology insights and industry updates delivered to your inbox.
               </p>
             </div>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="text-left">
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white placeholder-gray-400"
+                className="text-left"
               />
-              <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors whitespace-nowrap">
+              <button className="text-left">
                 Subscribe
               </button>
             </div>
@@ -143,18 +143,18 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-400 text-sm">
+        <div className="text-left">
+          <p className="text-left">
             © {currentYear} Zion Tech Solutions. All rights reserved.
           </p>
-          <div className="flex space-x-6 mt-4 md:mt-0">
-            <Link href="/terms" className="text-gray-400 hover:text-white text-sm transition-colors">
+          <div className="text-left">
+            <Link href="/terms" className="text-left">
               Terms of Service
             </Link>
-            <Link href="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">
+            <Link href="/privacy" className="text-left">
               Privacy Policy
             </Link>
-            <Link href="/cookies" className="text-gray-400 hover:text-white text-sm transition-colors">
+            <Link href="/cookies" className="text-left">
               Cookie Policy
             </Link>
           </div>

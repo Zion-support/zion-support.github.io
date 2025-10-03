@@ -2,7 +2,7 @@ import React from "react"
 import { Helmet } from "react-helmet-async"
 export default function RealTimeDecisionEngines2026(): JSX.Element {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">"
+    <div className="text-left">"
       <Helmet>
         <title>Real‑Time Decision Engines 2026 — 10M decisions/sec under 1ms</title>
         <meta 
@@ -15,10 +15,10 @@ export default function RealTimeDecisionEngines2026(): JSX.Element {
         />
       </Helmet>
 
-      <div className="container mx-auto px-6 py-16">"
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">Real‑Time Decision Engines 2026</h1>"
-        <p className="text-zion-slate-light mb-8">Warm Pools • Intent Prefetching • Layered Caches</p>"
-        <div className="prose prose-invert max-w-3xl">"
+      <div className="text-left">"
+        <h1 className="text-left">Real‑Time Decision Engines 2026</h1>"
+        <p className="text-left">Warm Pools • Intent Prefetching • Layered Caches</p>"
+        <div className="text-left">"
           <p>
             Blueprint for ultra‑low latency decision engines: persistent warm pools,
             cache hierarchies, and predictive prefetching to meet sub‑millisecond SLOs.

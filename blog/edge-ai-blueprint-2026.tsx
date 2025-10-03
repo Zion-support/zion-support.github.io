@@ -7,7 +7,7 @@ export const metadata = {
 
 export default function ArticlePage() {
 	return (
-		<div className="prose prose-invert max-w-3xl mx-auto px-6 py-16">
+		<div className="text-left">
 			<h1>Edge AI Blueprint 2026</h1>
 			<p>
 				Deliver private, real-time AI at the edge. Achieve &lt;100ms interactions with scoped identifiers,

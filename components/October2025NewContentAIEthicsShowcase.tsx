@@ -52,96 +52,96 @@ const October2025NewContentAIEthicsShowcase = () => {
   ];
 
   return (
-    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="text-left">
+      <div className="text-left">
         {/* Header */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-6 py-2 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full mb-6 animate-pulse">
-            <Star className="w-5 h-5 text-slate-900" />
-            <span className="font-black text-slate-900 text-sm">
+        <div className="text-left">
+          <div className="text-left">
+            <Star className="text-left" />
+            <span className="text-left">
               BREAKTHROUGH CONTENT - OCTOBER 1, 2025
-            </span>
+            <
           </div>
           
-          <h2 className="text-5xl md:text-6xl font-black mb-6">
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400">
+          <h2 className="text-left">
+            <span className="text-left">
               AI Ethics & Governance
-            </span>
+            <
             <br />
-            <span className="text-white">Complete Resource Library</span>
+            <span className="text-left">Complete Resource Library<
           </h2>
           
-          <p className="text-xl text-purple-200 max-w-3xl mx-auto mb-8">
+          <p className="text-left">
             Everything you need to transform AI ethics from compliance burden to competitive advantage. 
             Proven frameworks, real success stories, and actionable implementation guides.
           </p>
 
           {/* Key Stats */}
-          <div className="flex flex-wrap justify-center gap-6 mb-8">
-            <div className="px-6 py-3 bg-white/10 backdrop-blur-sm rounded-lg border border-purple-400">
-              <span className="text-2xl font-black text-green-400">$8.7B</span>
-              <span className="text-sm text-purple-200 ml-2">Value Proven</span>
+          <div className="text-left">
+            <div className="text-left">
+              <span className="text-left">$8.7B<
+              <span className="text-left">Value Proven<
             </div>
-            <div className="px-6 py-3 bg-white/10 backdrop-blur-sm rounded-lg border border-blue-400">
-              <span className="text-2xl font-black text-blue-400">18,400%</span>
-              <span className="text-sm text-purple-200 ml-2">ROI Achieved</span>
+            <div className="text-left">
+              <span className="text-left">18,400%<
+              <span className="text-left">ROI Achieved<
             </div>
-            <div className="px-6 py-3 bg-white/10 backdrop-blur-sm rounded-lg border border-yellow-400">
-              <span className="text-2xl font-black text-yellow-400">30 Days</span>
-              <span className="text-sm text-purple-200 ml-2">To Operational</span>
+            <div className="text-left">
+              <span className="text-left">30 Days<
+              <span className="text-left">To Operational<
             </div>
           </div>
         </div>
 
         {/* Content Cards */}
-        <div className="grid md:grid-cols-3 gap-8 mb-12">
+        <div className="text-left">
           {contentItems.map((item, index) => {
             const Icon = item.icon;
             return (
               <Link
                 key={index}
                 to={item.link}
-                className="group relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border-2 border-purple-500/30 hover:border-yellow-400 transition-all duration-300 transform hover:scale-105 hover:-translate-y-2 shadow-2xl"
+                className="text-left"
               >
                 {/* Badge */}
-                <div className="absolute top-4 right-4 px-3 py-1 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full text-xs font-bold">
+                <div className="text-left">
                   {item.badge}
                 </div>
 
                 {/* Icon */}
                 <div className={`inline-flex p-4 bg-gradient-to-br ${item.color} rounded-2xl mb-6 shadow-lg`}>
-                  <Icon className="w-8 h-8 text-white" />
+                  <Icon className="text-left" />
                 </div>
 
                 {/* Type */}
-                <div className="text-purple-400 font-bold text-sm mb-2 uppercase tracking-wider">
+                <div className="text-left">
                   {item.type}
                 </div>
 
                 {/* Title */}
-                <h3 className="text-2xl font-black mb-4 group-hover:text-yellow-300 transition-colors">
+                <h3 className="text-left">
                   {item.title}
                 </h3>
 
                 {/* Description */}
-                <p className="text-purple-200 mb-6 leading-relaxed">
+                <p className="text-left">
                   {item.description}
                 </p>
 
                 {/* Highlights */}
-                <div className="space-y-2 mb-6">
+                <div className="text-left">
                   {item.highlights.map((highlight, idx) => (
-                    <div key={idx} className="flex items-center gap-2 text-sm">
-                      <CheckCircle2 className="w-4 h-4 text-green-400 flex-shrink-0" />
-                      <span className="text-purple-100">{highlight}</span>
+                    <div key={idx} className="text-left">
+                      <CheckCircle2 className="text-left" />
+                      <span className="text-left">{highlight}<
                     </div>
                   ))}
                 </div>
 
                 {/* CTA */}
-                <div className="flex items-center gap-2 text-yellow-400 font-bold group-hover:gap-4 transition-all">
-                  <span>Explore Now</span>
-                  <ArrowRight className="w-5 h-5" />
+                <div className="text-left">
+                  <span>Explore Now<
+                  <ArrowRight className="text-left" />
                 </div>
 
                 {/* Glow Effect */}
@@ -152,56 +152,56 @@ const October2025NewContentAIEthicsShowcase = () => {
         </div>
 
         {/* Why This Matters */}
-        <div className="bg-gradient-to-br from-purple-600 to-indigo-700 rounded-3xl p-10 border-2 border-yellow-400 mb-12">
-          <h3 className="text-3xl font-black text-center mb-8">
-            Why AI Ethics Is Your <span className="text-yellow-300">Competitive Advantage</span>
+        <div className="text-left">
+          <h3 className="text-left">
+            Why AI Ethics Is Your <span className="text-left">Competitive Advantage<
           </h3>
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="text-left">
             <div>
-              <h4 className="text-xl font-bold mb-4 flex items-center gap-2">
-                <span className="text-3xl">📈</span>
+              <h4 className="text-left">
+                <span className="text-left">📈<
                 Business Impact
               </h4>
-              <ul className="space-y-3 text-purple-100">
-                <li className="flex items-start gap-2">
-                  <CheckCircle2 className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
-                  <span><strong>4,780% average ROI</strong> on ethics investments</span>
+              <ul className="text-left">
+                <li className="text-left">
+                  <CheckCircle2 className="text-left" />
+                  <span><strong>4,780% average ROI</strong> on ethics investments<
                 </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle2 className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
-                  <span><strong>$247M average savings</strong> in avoided regulatory fines</span>
+                <li className="text-left">
+                  <CheckCircle2 className="text-left" />
+                  <span><strong>$247M average savings</strong> in avoided regulatory fines<
                 </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle2 className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
-                  <span><strong>34% increase</strong> in customer lifetime value</span>
+                <li className="text-left">
+                  <CheckCircle2 className="text-left" />
+                  <span><strong>34% increase</strong> in customer lifetime value<
                 </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle2 className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
-                  <span><strong>2.8x faster</strong> AI deployment cycles</span>
+                <li className="text-left">
+                  <CheckCircle2 className="text-left" />
+                  <span><strong>2.8x faster</strong> AI deployment cycles<
                 </li>
               </ul>
             </div>
             <div>
-              <h4 className="text-xl font-bold mb-4 flex items-center gap-2">
-                <span className="text-3xl">⚡</span>
+              <h4 className="text-left">
+                <span className="text-left">⚡<
                 Risk Mitigation
               </h4>
-              <ul className="space-y-3 text-purple-100">
-                <li className="flex items-start gap-2">
-                  <CheckCircle2 className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0" />
-                  <span><strong>99.8% compliance</strong> across all AI systems</span>
+              <ul className="text-left">
+                <li className="text-left">
+                  <CheckCircle2 className="text-left" />
+                  <span><strong>99.8% compliance</strong> across all AI systems<
                 </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle2 className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0" />
-                  <span><strong>94% reduction</strong> in bias-related incidents</span>
+                <li className="text-left">
+                  <CheckCircle2 className="text-left" />
+                  <span><strong>94% reduction</strong> in bias-related incidents<
                 </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle2 className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0" />
-                  <span><strong>Zero critical failures</strong> in production</span>
+                <li className="text-left">
+                  <CheckCircle2 className="text-left" />
+                  <span><strong>Zero critical failures</strong> in production<
                 </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle2 className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0" />
-                  <span><strong>Industry leadership</strong> positioning</span>
+                <li className="text-left">
+                  <CheckCircle2 className="text-left" />
+                  <span><strong>Industry leadership</strong> positioning<
                 </li>
               </ul>
             </div>
@@ -209,30 +209,30 @@ const October2025NewContentAIEthicsShowcase = () => {
         </div>
 
         {/* CTA */}
-        <div className="text-center">
-          <h3 className="text-3xl font-black mb-6">
-            Ready to Lead in <span className="text-yellow-400">AI Ethics</span>?
+        <div className="text-left">
+          <h3 className="text-left">
+            Ready to Lead in <span className="text-left">AI Ethics<?
           </h3>
-          <p className="text-xl text-purple-200 mb-8 max-w-2xl mx-auto">
+          <p className="text-left">
             Join 240+ Fortune 500 companies that have transformed AI ethics into competitive advantage
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="text-left">
             <Link
               to="/guides/ai-ethics-implementation-quick-start-guide-2025"
-              className="px-10 py-5 bg-gradient-to-r from-yellow-400 to-orange-500 text-slate-900 rounded-xl font-black text-lg hover:from-yellow-300 hover:to-orange-400 transition-all transform hover:scale-105 shadow-2xl flex items-center justify-center gap-2"
+              className="text-left"
             >
-              <Sparkles className="w-6 h-6" />
-              <span>Start Your 30-Day Journey</span>
-              <ArrowRight className="w-6 h-6" />
+              <Sparkles className="text-left" />
+              <span>Start Your 30-Day Journey<
+              <ArrowRight className="text-left" />
             </Link>
             <Link
               to="/contact"
-              className="px-10 py-5 bg-white/10 backdrop-blur-sm border-2 border-white/30 rounded-xl font-bold text-lg hover:bg-white/20 transition-all flex items-center justify-center gap-2"
+              className="text-left"
             >
-              <span>Get Expert Assessment</span>
+              <span>Get Expert Assessment<
             </Link>
           </div>
-          <p className="text-sm text-purple-300 mt-6 font-semibold">
+          <p className="text-left">
             ⚡ Limited to 20 new engagements in Q4 2025 • Act now
           </p>
         </div>

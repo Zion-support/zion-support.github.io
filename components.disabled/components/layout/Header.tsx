@@ -36,40 +36,40 @@ const Header: React.FC = () => {
   const navigation = [
   { name: 'Home', href: '/' }, { name: 'Services', href: '/services', hasDropdown: true }, { name: 'Pricing', href: '/pricing-guide' }, { name: 'About', href: '/about' }, { name: 'Contact', href: '/contact' } ];
   return (
-    <header className="bg-white shadow-sm sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+    <header className="text-left">
+      <div className="text-left">
+        <div className="text-left">
           {/* Logo */}
-          <div className="flex-shrink-0">
-            <Link href="/" className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
-                <Brain className="w-5 h-5 text-white" />
+          <div className="text-left">
+            <Link href="/" className="text-left">
+              <div className="text-left">
+                <Brain className="text-left" />
               </div>
-              <span className="text-xl font-bold text-gray-900">
+              <span className="text-left">
                 Zion Tech Group
-              </span>
+              <
             </Link>
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:block">
-            <div className="ml-10 flex items-baseline space-x-8">
+          <nav className="text-left">
+            <div className="text-left">
               {navigation.map(item => (
-                <div key={item.name} className="relative">
+                <div key={item.name} className="text-left">
                   {item.hasDropdown ? (
                     <div
-                      className="relative"
+                      className="text-left"
                       onMouseEnter={() => setIsServicesOpen(true)}
                       onMouseLeave={() => setIsServicesOpen(false)}
                     >
-                      <button className="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium flex items-center">
+                      <button className="text-left">
                         {item.name}
-                        <ChevronDown className="ml-1 h-4 w-4" />
+                        <ChevronDown className="text-left" />
                       </button>
                       {isServicesOpen && (
-                        <div className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
-                          <div className="px-4 py-2 border-b border-gray-100">
-                            <h3 className="text-sm font-semibold text-gray-900">
+                        <div className="text-left">
+                          <div className="text-left">
+                            <h3 className="text-left">
                               Our Services
                             </h3>
                           </div>
@@ -77,18 +77,18 @@ const Header: React.FC = () => {
                             <Link
                               key={service.name}
                               href={service.href}
-                              className="flex items-center px-4 py-3 hover:bg-gray-50 transition-colors"
+                              className="text-left"
                             >
                               {service.icon && (
-                                <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-100 mr-3">
-                                  <service.icon className="h-4 w-4 text-blue-600" />
+                                <div className="text-left">
+                                  <service.icon className="text-left" />
                                 </div>
                               )}
                               <div>
-                                <div className="text-sm font-medium text-gray-900">
+                                <div className="text-left">
                                   {service.name}
                                 </div>
-                                <div className="text-xs text-gray-500">
+                                <div className="text-left">
                                   {service.description}
                                 </div>
                               </div>
@@ -100,7 +100,7 @@ const Header: React.FC = () => {
                   ) : (
                     <Link
                       href={item.href}
-                      className="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
+                      className="text-left"
                     >
                       {item.name}
                     </Link>
@@ -111,56 +111,56 @@ const Header: React.FC = () => {
           </nav>
 
           {/* Contact Info & CTA */}
-          <div className="hidden lg:flex items-center space-x-4">
-            <div className="flex items-center space-x-2 text-sm text-gray-600">
-              <Phone className="h-4 w-4" />
-              <a href="tel:+13024640950" className="hover:text-blue-600">
+          <div className="text-left">
+            <div className="text-left">
+              <Phone className="text-left" />
+              <a href="tel:+13024640950" className="text-left">
                 +1 302 464 0950
               </a>
             </div>
             <Link
               href="/contact"
-              className="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition-colors"
+              className="text-left"
             >
               Get Started
             </Link>
           </div>
 
           {/* Mobile menu button */}
-          <div className="lg:hidden">
+          <div className="text-left">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-900 hover:text-blue-600 p-2"
+              className="text-left"
             >
               {isMenuOpen ? (
-                <X className="h-6 w-6" />
+                <X className="text-left" />
               ) : (
-                <Menu className="h-6 w-6" />
+                <Menu className="text-left" />
               )}
             </button>
           </div>
         </div>
 
         {/* Mobile Navigation */}, {isMenuOpen && (
-          <div className="lg:hidden border-t border-gray-200 py-4">
-            <div className="space-y-2">
+          <div className="text-left">
+            <div className="text-left">
               {navigation.map(item => (
                 <div key={item.name}>
                   {item.hasDropdown ? (
                     <div>
-                      <div className="text-gray-900 px-3 py-2 text-sm font-medium">
+                      <div className="text-left">
                         {item.name}
                       </div>
-                      <div className="ml-4 space-y-1">
+                      <div className="text-left">
                         {services.map(service => (
                           <Link
                             key={service.name}
                             href={service.href}
-                            className="flex items-center px-3 py-2 text-sm text-gray-600 hover:text-blue-600"
+                            className="text-left"
                             onClick={() => setIsMenuOpen(false)}
                           >
                             {service.icon && (
-                              <service.icon className="h-4 w-4 mr-2 text-blue-600" />
+                              <service.icon className="text-left" />
                             )}, {service.name}
                           </Link>
                         ))}
@@ -169,7 +169,7 @@ const Header: React.FC = () => {
                   ) : (
                     <Link
                       href={item.href}
-                      className="block text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium"
+                      className="text-left"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       {item.name}
@@ -178,25 +178,25 @@ const Header: React.FC = () => {
                 </div>
               ))}
             </div>
-            <div className="mt-4 pt-4 border-t border-gray-200">
-              <div className="flex items-center space-x-2 text-sm text-gray-600 px-3 py-2">
-                <Phone className="h-4 w-4" />
-                <a href="tel:+13024640950" className="hover:text-blue-600">
+            <div className="text-left">
+              <div className="text-left">
+                <Phone className="text-left" />
+                <a href="tel:+13024640950" className="text-left">
                   +1 302 464 0950
                 </a>
               </div>
-              <div className="flex items-center space-x-2 text-sm text-gray-600 px-3 py-2">
-                <Mail className="h-4 w-4" />
+              <div className="text-left">
+                <Mail className="text-left" />
                 <a
                   href="mailto:kleber@ziontechgroup.com"
-                  className="hover:text-blue-600"
+                  className="text-left"
                 >
                   kleber@ziontechgroup.com
                 </a>
               </div>
               <Link
                 href="/contact"
-                className="block bg-blue-600 text-white px-3 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition-colors mt-2 mx-3 text-center"
+                className="text-left"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Get Started

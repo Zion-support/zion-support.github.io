@@ -20,58 +20,58 @@ export const metadata = {
 
 export default function AIOrchestrationMegaAgentsPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+    <div className="text-left">
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 text-white overflow-hidden">
-        <div className="absolute inset-0 bg-black opacity-20"></div>
-        <div className="relative max-w-6xl mx-auto px-4">
-          <div className="flex items-center gap-3 mb-6">
-            <span className="bg-yellow-400 text-purple-900 px-4 py-2 rounded-full text-sm font-bold uppercase tracking-wide animate-pulse">
+      <section className="text-left">
+        <div className="text-left"></div>
+        <div className="text-left">
+          <div className="text-left">
+            <span className="text-left">
               🔥 BREAKING — OCT 2025
-            </span>
-            <span className="bg-purple-500 text-white px-4 py-2 rounded-full text-sm font-bold uppercase tracking-wide">
+            <
+            <span className="text-left">
               MEGA-AGENT REVOLUTION
-            </span>
+            <
           </div>
           
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+          <h1 className="text-left">
             AI Orchestration Mega-Agents: The Future of Autonomous Enterprise Systems
           </h1>
           
-          <p className="text-2xl text-purple-100 mb-8 leading-relaxed">
+          <p className="text-left">
             How next-generation AI mega-agents are delivering 95% autonomy, $25M ROI, 
             and 80% operational cost reduction through intelligent orchestration
           </p>
           
-          <div className="flex flex-wrap gap-4 mb-8">
-            <div className="bg-white/10 backdrop-blur-sm px-6 py-3 rounded-lg">
-              <div className="text-3xl font-bold text-yellow-400">95%</div>
-              <div className="text-sm text-purple-200">Autonomy Level</div>
+          <div className="text-left">
+            <div className="text-left">
+              <div className="text-left">95%</div>
+              <div className="text-left">Autonomy Level</div>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm px-6 py-3 rounded-lg">
-              <div className="text-3xl font-bold text-green-400">$25M</div>
-              <div className="text-sm text-purple-200">Average ROI</div>
+            <div className="text-left">
+              <div className="text-left">$25M</div>
+              <div className="text-left">Average ROI</div>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm px-6 py-3 rounded-lg">
-              <div className="text-3xl font-bold text-blue-400">80%</div>
-              <div className="text-sm text-purple-200">Cost Reduction</div>
+            <div className="text-left">
+              <div className="text-left">80%</div>
+              <div className="text-left">Cost Reduction</div>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm px-6 py-3 rounded-lg">
-              <div className="text-3xl font-bold text-pink-400">99.8%</div>
-              <div className="text-sm text-purple-200">Accuracy</div>
+            <div className="text-left">
+              <div className="text-left">99.8%</div>
+              <div className="text-left">Accuracy</div>
             </div>
           </div>
           
-          <div className="flex flex-wrap gap-4">
+          <div className="text-left">
             <Link 
               href="/contact"
-              className="bg-yellow-400 text-purple-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-300 transition-all transform hover:scale-105 shadow-xl"
+              className="text-left"
             >
               🚀 Start Your Mega-Agent Transformation
             </Link>
             <Link 
               href="/services/ai-business-intelligence-2025"
-              className="bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/30 transition-all border-2 border-white"
+              className="text-left"
             >
               Explore AI Services →
             </Link>
@@ -80,11 +80,11 @@ export default function AIOrchestrationMegaAgentsPage() {
       </section>
 
       {/* Main Content */}
-      <article className="max-w-4xl mx-auto px-4 py-16">
+      <article className="text-left">
         {/* Introduction */}
-        <section className="mb-12">
-          <div className="bg-gradient-to-r from-purple-50 to-blue-50 border-l-4 border-purple-600 p-6 rounded-lg mb-8">
-            <p className="text-xl text-gray-800 leading-relaxed">
+        <section className="text-left">
+          <div className="text-left">
+            <p className="text-left">
               <strong>October 2025 Update:</strong> The era of single-purpose AI agents is over. 
               Welcome to the age of <strong>AI Orchestration Mega-Agents</strong> — sophisticated 
               systems that coordinate hundreds of specialized agents to deliver autonomous enterprise 
@@ -92,7 +92,7 @@ export default function AIOrchestrationMegaAgentsPage() {
             </p>
           </div>
 
-          <p className="text-lg text-gray-700 leading-relaxed mb-6">
+          <p className="text-left">
             In the rapidly evolving landscape of enterprise AI, a paradigm shift is underway. 
             Traditional AI implementations relied on isolated agents performing specific tasks. 
             Today's breakthrough? <strong>Mega-agents</strong> that orchestrate entire ecosystems 
@@ -101,71 +101,71 @@ export default function AIOrchestrationMegaAgentsPage() {
         </section>
 
         {/* What Are Mega-Agents */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">
+        <section className="text-left">
+          <h2 className="text-left">
             🤖 What Are AI Orchestration Mega-Agents?
           </h2>
           
-          <div className="bg-white rounded-xl shadow-lg p-8 mb-6 border border-gray-200">
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+          <div className="text-left">
+            <p className="text-left">
               AI Orchestration Mega-Agents are advanced AI systems that function as "conductors"
               of agent orchestras — coordinating, managing, and optimizing the work of hundreds 
               or thousands of specialized AI agents to achieve complex business objectives.
             </p>
 
-            <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-gradient-to-br from-purple-50 to-indigo-50 p-6 rounded-lg">
-                <h3 className="text-xl font-bold text-purple-900 mb-3 flex items-center gap-2">
+            <div className="text-left">
+              <div className="text-left">
+                <h3 className="text-left">
                   🎯 Key Capabilities
                 </h3>
-                <ul className="space-y-2 text-gray-700">
-                  <li className="flex items-start gap-2">
-                    <span className="text-purple-600">•</span>
-                    <span>Dynamic agent spawning and termination</span>
+                <ul className="text-left">
+                  <li className="text-left">
+                    <span className="text-left">•<
+                    <span>Dynamic agent spawning and termination<
                   </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-purple-600">•</span>
-                    <span>Real-time workload distribution</span>
+                  <li className="text-left">
+                    <span className="text-left">•<
+                    <span>Real-time workload distribution<
                   </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-purple-600">•</span>
-                    <span>Cross-domain knowledge synthesis</span>
+                  <li className="text-left">
+                    <span className="text-left">•<
+                    <span>Cross-domain knowledge synthesis<
                   </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-purple-600">•</span>
-                    <span>Autonomous error recovery</span>
+                  <li className="text-left">
+                    <span className="text-left">•<
+                    <span>Autonomous error recovery<
                   </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-purple-600">•</span>
-                    <span>Predictive resource allocation</span>
+                  <li className="text-left">
+                    <span className="text-left">•<
+                    <span>Predictive resource allocation<
                   </li>
                 </ul>
               </div>
 
-              <div className="bg-gradient-to-br from-blue-50 to-cyan-50 p-6 rounded-lg">
-                <h3 className="text-xl font-bold text-blue-900 mb-3 flex items-center gap-2">
+              <div className="text-left">
+                <h3 className="text-left">
                   💡 Business Impact
                 </h3>
-                <ul className="space-y-2 text-gray-700">
-                  <li className="flex items-start gap-2">
-                    <span className="text-blue-600">•</span>
-                    <span>95%+ autonomous operations</span>
+                <ul className="text-left">
+                  <li className="text-left">
+                    <span className="text-left">•<
+                    <span>95%+ autonomous operations<
                   </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-blue-600">•</span>
-                    <span>80% operational cost reduction</span>
+                  <li className="text-left">
+                    <span className="text-left">•<
+                    <span>80% operational cost reduction<
                   </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-blue-600">•</span>
-                    <span>10x faster decision-making</span>
+                  <li className="text-left">
+                    <span className="text-left">•<
+                    <span>10x faster decision-making<
                   </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-blue-600">•</span>
-                    <span>24/7 continuous optimization</span>
+                  <li className="text-left">
+                    <span className="text-left">•<
+                    <span>24/7 continuous optimization<
                   </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-blue-600">•</span>
-                    <span>Zero-touch incident resolution</span>
+                  <li className="text-left">
+                    <span className="text-left">•<
+                    <span>Zero-touch incident resolution<
                   </li>
                 </ul>
               </div>
@@ -174,54 +174,54 @@ export default function AIOrchestrationMegaAgentsPage() {
         </section>
 
         {/* Architecture */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">
+        <section className="text-left">
+          <h2 className="text-left">
             🏗️ Mega-Agent Architecture: The Three-Layer Model
           </h2>
 
-          <div className="space-y-6">
-            <div className="bg-gradient-to-r from-yellow-50 to-orange-50 border-l-4 border-yellow-500 p-6 rounded-lg">
-              <h3 className="text-2xl font-bold text-gray-900 mb-3">
+          <div className="text-left">
+            <div className="text-left">
+              <h3 className="text-left">
                 Layer 1: Strategic Intelligence Layer
               </h3>
-              <p className="text-gray-700 mb-4">
+              <p className="text-left">
                 The top-level mega-agent that sets objectives, monitors global KPIs, and makes 
                 strategic decisions about resource allocation and priority management.
               </p>
-              <div className="bg-white rounded-lg p-4">
-                <p className="font-mono text-sm text-gray-800">
+              <div className="text-left">
+                <p className="text-left">
                   <strong>Functions:</strong> Goal definition → Strategy formulation → 
                   Resource allocation → Performance monitoring → Adaptive replanning
                 </p>
               </div>
             </div>
 
-            <div className="bg-gradient-to-r from-purple-50 to-pink-50 border-l-4 border-purple-500 p-6 rounded-lg">
-              <h3 className="text-2xl font-bold text-gray-900 mb-3">
+            <div className="text-left">
+              <h3 className="text-left">
                 Layer 2: Tactical Orchestration Layer
               </h3>
-              <p className="text-gray-700 mb-4">
+              <p className="text-left">
                 Mid-level mega-agents that translate strategic goals into coordinated actions, 
                 managing teams of specialized agents across domains.
               </p>
-              <div className="bg-white rounded-lg p-4">
-                <p className="font-mono text-sm text-gray-800">
+              <div className="text-left">
+                <p className="text-left">
                   <strong>Functions:</strong> Task decomposition → Agent coordination → 
                   Workflow optimization → Inter-agent communication → Bottleneck resolution
                 </p>
               </div>
             </div>
 
-            <div className="bg-gradient-to-r from-green-50 to-emerald-50 border-l-4 border-green-500 p-6 rounded-lg">
-              <h3 className="text-2xl font-bold text-gray-900 mb-3">
+            <div className="text-left">
+              <h3 className="text-left">
                 Layer 3: Execution Agent Layer
               </h3>
-              <p className="text-gray-700 mb-4">
+              <p className="text-left">
                 Hundreds of specialized agents that perform specific tasks — from data analysis 
                 to customer service to code deployment — all coordinated by tactical mega-agents.
               </p>
-              <div className="bg-white rounded-lg p-4">
-                <p className="font-mono text-sm text-gray-800">
+              <div className="text-left">
+                <p className="text-left">
                   <strong>Functions:</strong> Task execution → Data processing → 
                   Real-time feedback → Local optimization → Error reporting
                 </p>
@@ -231,52 +231,52 @@ export default function AIOrchestrationMegaAgentsPage() {
         </section>
 
         {/* Real-World Results */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">
+        <section className="text-left">
+          <h2 className="text-left">
             📊 Real-World Mega-Agent Results
           </h2>
 
-          <div className="grid md:grid-cols-2 gap-6 mb-8">
-            <div className="bg-gradient-to-br from-blue-600 to-indigo-600 text-white p-8 rounded-xl shadow-xl">
-              <h3 className="text-2xl font-bold mb-4">🏭 Global Manufacturing Corp</h3>
-              <div className="space-y-3">
-                <div className="flex justify-between items-center">
-                  <span className="text-blue-100">Autonomous Operations</span>
-                  <span className="text-3xl font-bold">96%</span>
+          <div className="text-left">
+            <div className="text-left">
+              <h3 className="text-left">🏭 Global Manufacturing Corp</h3>
+              <div className="text-left">
+                <div className="text-left">
+                  <span className="text-left">Autonomous Operations<
+                  <span className="text-left">96%<
                 </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-blue-100">Cost Reduction</span>
-                  <span className="text-3xl font-bold">$32M</span>
+                <div className="text-left">
+                  <span className="text-left">Cost Reduction<
+                  <span className="text-left">$32M<
                 </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-blue-100">Efficiency Gain</span>
-                  <span className="text-3xl font-bold">85%</span>
+                <div className="text-left">
+                  <span className="text-left">Efficiency Gain<
+                  <span className="text-left">85%<
                 </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-blue-100">Implementation Time</span>
-                  <span className="text-2xl font-bold">4 months</span>
+                <div className="text-left">
+                  <span className="text-left">Implementation Time<
+                  <span className="text-left">4 months<
                 </div>
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-purple-600 to-pink-600 text-white p-8 rounded-xl shadow-xl">
-              <h3 className="text-2xl font-bold mb-4">💰 FinTech Leader</h3>
-              <div className="space-y-3">
-                <div className="flex justify-between items-center">
-                  <span className="text-purple-100">Transaction Processing</span>
-                  <span className="text-3xl font-bold">10M/day</span>
+            <div className="text-left">
+              <h3 className="text-left">💰 FinTech Leader</h3>
+              <div className="text-left">
+                <div className="text-left">
+                  <span className="text-left">Transaction Processing<
+                  <span className="text-left">10M/day<
                 </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-purple-100">Fraud Detection Rate</span>
-                  <span className="text-3xl font-bold">99.97%</span>
+                <div className="text-left">
+                  <span className="text-left">Fraud Detection Rate<
+                  <span className="text-left">99.97%<
                 </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-purple-100">Response Time</span>
-                  <span className="text-3xl font-bold">12ms</span>
+                <div className="text-left">
+                  <span className="text-left">Response Time<
+                  <span className="text-left">12ms<
                 </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-purple-100">ROI First Year</span>
-                  <span className="text-2xl font-bold">$28M</span>
+                <div className="text-left">
+                  <span className="text-left">ROI First Year<
+                  <span className="text-left">$28M<
                 </div>
               </div>
             </div>
@@ -284,12 +284,12 @@ export default function AIOrchestrationMegaAgentsPage() {
         </section>
 
         {/* Implementation Guide */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">
+        <section className="text-left">
+          <h2 className="text-left">
             🚀 6-Phase Mega-Agent Implementation Roadmap
           </h2>
 
-          <div className="space-y-4">
+          <div className="text-left">
             {[
               {
                 phase: 'Phase 1: Assessment & Design',
@@ -322,18 +322,18 @@ export default function AIOrchestrationMegaAgentsPage() {
                 tasks: ['Performance monitoring', 'Agent evolution', 'Capability expansion', 'Strategic enhancement']
               }
             ].map((phase, idx) => (
-              <div key={idx} className="bg-white rounded-lg shadow-md p-6 border-l-4 border-indigo-500">
-                <div className="flex items-center justify-between mb-3">
-                  <h3 className="text-xl font-bold text-gray-900">{phase.phase}</h3>
-                  <span className="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-semibold">
+              <div key={idx} className="text-left">
+                <div className="text-left">
+                  <h3 className="text-left">{phase.phase}</h3>
+                  <span className="text-left">
                     {phase.duration}
-                  </span>
+                  <
                 </div>
-                <ul className="grid md:grid-cols-2 gap-2">
+                <ul className="text-left">
                   {phase.tasks.map((task, taskIdx) => (
-                    <li key={taskIdx} className="flex items-start gap-2 text-gray-700">
-                      <span className="text-indigo-600 mt-1">✓</span>
-                      <span>{task}</span>
+                    <li key={taskIdx} className="text-left">
+                      <span className="text-left">✓<
+                      <span>{task}<
                     </li>
                   ))}
                 </ul>
@@ -343,16 +343,16 @@ export default function AIOrchestrationMegaAgentsPage() {
         </section>
 
         {/* Benefits */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">
+        <section className="text-left">
+          <h2 className="text-left">
             💎 Transformative Benefits of Mega-Agent Orchestration
           </h2>
 
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-xl border border-green-200">
-              <div className="text-4xl mb-3">💰</div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Cost Optimization</h3>
-              <ul className="space-y-2 text-gray-700">
+          <div className="text-left">
+            <div className="text-left">
+              <div className="text-left">💰</div>
+              <h3 className="text-left">Cost Optimization</h3>
+              <ul className="text-left">
                 <li>• 80% reduction in operational costs</li>
                 <li>• 90% decrease in human errors</li>
                 <li>• 95% automation of routine tasks</li>
@@ -360,10 +360,10 @@ export default function AIOrchestrationMegaAgentsPage() {
               </ul>
             </div>
 
-            <div className="bg-gradient-to-br from-blue-50 to-cyan-50 p-6 rounded-xl border border-blue-200">
-              <div className="text-4xl mb-3">⚡</div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Speed & Agility</h3>
-              <ul className="space-y-2 text-gray-700">
+            <div className="text-left">
+              <div className="text-left">⚡</div>
+              <h3 className="text-left">Speed & Agility</h3>
+              <ul className="text-left">
                 <li>• 10x faster decision-making</li>
                 <li>• Real-time adaptation to change</li>
                 <li>• Instant scaling up or down</li>
@@ -371,10 +371,10 @@ export default function AIOrchestrationMegaAgentsPage() {
               </ul>
             </div>
 
-            <div className="bg-gradient-to-br from-purple-50 to-pink-50 p-6 rounded-xl border border-purple-200">
-              <div className="text-4xl mb-3">🎯</div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Strategic Advantage</h3>
-              <ul className="space-y-2 text-gray-700">
+            <div className="text-left">
+              <div className="text-left">🎯</div>
+              <h3 className="text-left">Strategic Advantage</h3>
+              <ul className="text-left">
                 <li>• First-mover advantage in your industry</li>
                 <li>• Unprecedented operational intelligence</li>
                 <li>• Continuous learning & improvement</li>
@@ -385,42 +385,42 @@ export default function AIOrchestrationMegaAgentsPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="mb-12">
-          <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 text-white rounded-2xl p-10 shadow-2xl">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+        <section className="text-left">
+          <div className="text-left">
+            <h2 className="text-left">
               Ready to Transform Your Enterprise with Mega-Agent Orchestration?
             </h2>
-            <p className="text-xl text-purple-100 mb-8 leading-relaxed">
+            <p className="text-left">
               Join the Fortune 500 companies already leveraging mega-agent systems to achieve 
               95%+ autonomous operations and $25M+ annual ROI. Our AI experts will design and 
               implement a custom mega-agent solution tailored to your business needs.
             </p>
             
-            <div className="grid md:grid-cols-3 gap-4 mb-8">
-              <div className="bg-white/10 backdrop-blur-sm p-4 rounded-lg text-center">
-                <div className="text-3xl font-bold text-yellow-400 mb-1">300+</div>
-                <div className="text-sm text-purple-200">Successful Deployments</div>
+            <div className="text-left">
+              <div className="text-left">
+                <div className="text-left">300+</div>
+                <div className="text-left">Successful Deployments</div>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm p-4 rounded-lg text-center">
-                <div className="text-3xl font-bold text-green-400 mb-1">$2.5B</div>
-                <div className="text-sm text-purple-200">Total Client ROI</div>
+              <div className="text-left">
+                <div className="text-left">$2.5B</div>
+                <div className="text-left">Total Client ROI</div>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm p-4 rounded-lg text-center">
-                <div className="text-3xl font-bold text-blue-400 mb-1">98%</div>
-                <div className="text-sm text-purple-200">Client Satisfaction</div>
+              <div className="text-left">
+                <div className="text-left">98%</div>
+                <div className="text-left">Client Satisfaction</div>
               </div>
             </div>
 
-            <div className="flex flex-wrap gap-4">
+            <div className="text-left">
               <Link 
                 href="/contact"
-                className="bg-yellow-400 text-purple-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-300 transition-all transform hover:scale-105 shadow-xl"
+                className="text-left"
               >
                 🚀 Schedule Strategy Session
               </Link>
               <Link 
                 href="/case-studies"
-                className="bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/30 transition-all border-2 border-white"
+                className="text-left"
               >
                 View Success Stories →
               </Link>
@@ -430,34 +430,34 @@ export default function AIOrchestrationMegaAgentsPage() {
 
         {/* Related Content */}
         <section>
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">🔗 Related AI Insights</h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            <Link href="/blog/ai-autonomous-systems-2026" className="group">
-              <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-all transform hover:-translate-y-1 border border-gray-200">
-                <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-purple-600">
+          <h2 className="text-left">🔗 Related AI Insights</h2>
+          <div className="text-left">
+            <Link href="/blog/ai-autonomous-systems-2026" className="text-left">
+              <div className="text-left">
+                <h3 className="text-left">
                   AI Autonomous Systems 2026
                 </h3>
-                <p className="text-gray-600 text-sm">
+                <p className="text-left">
                   Comprehensive guide to implementing fully autonomous AI systems
                 </p>
               </div>
             </Link>
-            <Link href="/blog/ai-enterprise-transformation-2026" className="group">
-              <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-all transform hover:-translate-y-1 border border-gray-200">
-                <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-purple-600">
+            <Link href="/blog/ai-enterprise-transformation-2026" className="text-left">
+              <div className="text-left">
+                <h3 className="text-left">
                   Enterprise AI Transformation
                 </h3>
-                <p className="text-gray-600 text-sm">
+                <p className="text-left">
                   Step-by-step roadmap for enterprise-wide AI adoption
                 </p>
               </div>
             </Link>
-            <Link href="/services/ai-business-intelligence-2025" className="group">
-              <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-all transform hover:-translate-y-1 border border-gray-200">
-                <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-purple-600">
+            <Link href="/services/ai-business-intelligence-2025" className="text-left">
+              <div className="text-left">
+                <h3 className="text-left">
                   AI Business Intelligence Services
                 </h3>
-                <p className="text-gray-600 text-sm">
+                <p className="text-left">
                   Explore our comprehensive AI transformation services
                 </p>
               </div>

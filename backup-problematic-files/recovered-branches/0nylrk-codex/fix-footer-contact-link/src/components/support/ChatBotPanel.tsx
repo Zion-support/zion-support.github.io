@@ -212,9 +212,9 @@ export function ChatBotPanel() {;
   },;
 ;
   return (;
-    <div className="flex flex-col h-full">;
-      <ScrollArea className="flex-1 p-4" ref={scrollAreaRef}>;
-        <div className="flex flex-col gap-4">;
+    <div className="text-left">;
+      <ScrollArea className="text-left" ref={scrollAreaRef}>;
+        <div className="text-left">;
           {messages.map((message) => (;
             <ChatMessage;
               key={message.id}              message={message.content}
@@ -224,19 +224,19 @@ export function ChatBotPanel() {;
           ))}
           ;
           {isLoading && (;
-            <div className="flex items-center justify-center py-2">;
-              <Loader2 className="h-5 w-5 animate-spin text-zion-purple" />;
+            <div className="text-left">;
+              <Loader2 className="text-left" />;
             </div>;
           )}
         </div>;
       </ScrollArea>;
       ;
       {messages.length === 1 && (;
-        <div className="px-4 py-3">;
+        <div className="text-left">;
           <p className={cn("text-sm mb-2", theme === "dark" ? "text-gray-300" :"text-gray-600")}>;
             Suggested questions:;
           </p>;
-          <div className="flex flex-wrap gap-2">;
+          <div className="text-left">;
             {QUICK_REPLIES.map((reply) => (;
               <QuickReplyButton;
                 key={reply.id}
@@ -248,15 +248,15 @@ export function ChatBotPanel() {;
       )}
       ;
       {failedAttempts >= 3 && (;
-        <div className="px-4 py-3 border-t border-zion-purple/10">;
+        <div className="text-left">;
           <p className={cn("text-sm mb-2 font-medium", theme === "dark" ? "text-gray-300" :"text-gray-600")}>;
             Need more help?;
           </p>;
-          <div className="flex gap-2">;
+          <div className="text-left">;
             <Button ;
               onClick={handleEscalateToLiveAgent}
               size="sm";
-              className="bg-zion-purple hover:bg-zion-purple-light text-white";
+              className="text-left";
             >;
               Chat with Live Agent;
             </Button>;
@@ -280,7 +280,7 @@ export function ChatBotPanel() {;
             e.preventDefault(),;
             handleSendMessage(),;
           }}
-          className="flex items-center gap-2";
+          className="text-left";
         >;
           <Input;
             ref={inputRef}
@@ -298,9 +298,9 @@ export function ChatBotPanel() {;
             type="submit";
             size="icon";
             disabled={isLoading || !inputValue.trim()}
-            className="bg-zion-cyan hover:bg-zion-cyan/80 text-white";
+            className="text-left";
           >;
-            <Send className="h-4 w-4" />;
+            <Send className="text-left" />;
           </Button>;
         </form>;
       </div>;
@@ -419,6 +419,6 @@ timestamp: new Date ()
   () => handleQuickReply (reply.text) 
 }/>) ) 
 }</div> </div>) 
-}Need more help? </p> <div className="flex gap-2" > <Button > Chat with Live Agent </Button> <Button > Email Support </Button> </div> </div>) 
+}Need more help? </p> <div className="text-left" > <Button > Chat with Live Agent </Button> <Button > Email Support </Button> </div> </div>) 
 }h-4 w-4" /> </Button> </form> </div> </div>) 
 }

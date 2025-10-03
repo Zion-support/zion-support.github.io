@@ -11,14 +11,14 @@ export const metadata = {
 
 export default function BlogPost() {
   return (
-    <article className="prose prose-invert max-w-none">
+    <article className="text-left">
       <h1>🌱 Green AI & Sustainable Computing 2025: Carbon-Neutral AI Revolution</h1>
       
-      <div className="bg-gradient-to-r from-green-600/20 to-lime-600/20 border border-green-500/30 rounded-lg p-6 my-8">
-        <h3 className="text-2xl font-bold text-green-300 mt-0">🚀 Revolutionary Breakthrough</h3>
-        <p className="text-lg">
-          <strong>Green AI and sustainable computing</strong> achieving <span className="text-green-400 font-bold">89% energy reduction</span>, 
-          <span className="text-green-400 font-bold"> carbon-neutral operations</span>, and <span className="text-green-400 font-bold">$3.7B cost savings</span>. 
+      <div className="text-left">
+        <h3 className="text-left">🚀 Revolutionary Breakthrough</h3>
+        <p className="text-left">
+          <strong>Green AI and sustainable computing</strong> achieving <span className="text-left">89% energy reduction<, 
+          <span className="text-left"> carbon-neutral operations<, and <span className="text-left">$3.7B cost savings<. 
           Transform AI infrastructure with revolutionary energy efficiency, renewable integration, and environmental responsibility at enterprise scale.
         </p>
       </div>
@@ -79,9 +79,9 @@ export default function BlogPost() {
 
       <h2>📊 Performance Metrics</h2>
       
-      <div className="bg-slate-800/50 border border-slate-700 rounded-lg p-6 my-8">
-        <h3 className="text-xl font-bold text-green-400 mt-0">Proven Results</h3>
-        <ul className="space-y-2">
+      <div className="text-left">
+        <h3 className="text-left">Proven Results</h3>
+        <ul className="text-left">
           <li>✅ <strong>89%</strong> energy reduction in AI operations</li>
           <li>✅ <strong>100%</strong> carbon-neutral operations with renewable energy</li>
           <li>✅ <strong>$3.7B</strong> cost savings from efficiency improvements</li>
@@ -120,8 +120,8 @@ export default function BlogPost() {
 
       <h2>💰 ROI Analysis</h2>
       
-      <div className="bg-green-900/30 border-l-4 border-green-500 p-6 my-8">
-        <h3 className="text-xl font-bold text-green-300 mt-0">Investment Returns</h3>
+      <div className="text-left">
+        <h3 className="text-left">Investment Returns</h3>
         <ul>
           <li><strong>Energy cost savings:</strong> $3.7B annually from 89% energy reduction</li>
           <li><strong>Carbon credits:</strong> $847M from emissions reductions</li>
@@ -189,13 +189,13 @@ export default function BlogPost() {
         <li><strong>Global green AI standard:</strong> Universal certification for sustainable AI</li>
       </ul>
 
-      <div className="bg-gradient-to-r from-green-600/20 to-lime-600/20 border border-green-500/30 rounded-lg p-6 my-8">
-        <h3 className="text-2xl font-bold text-green-300 mt-0">🎯 Ready to Go Green?</h3>
-        <p className="text-lg">
+      <div className="text-left">
+        <h3 className="text-left">🎯 Ready to Go Green?</h3>
+        <p className="text-left">
           Join 3,247 enterprises achieving 89% energy reduction, carbon-neutral operations, and $3.7B cost savings 
           with green AI and sustainable computing. Transform your AI infrastructure while protecting the planet.
         </p>
-        <p className="text-green-300 font-semibold mb-0">
+        <p className="text-left">
           Contact Zion Tech Group today for a green AI assessment and implementation roadmap.
         </p>
       </div>

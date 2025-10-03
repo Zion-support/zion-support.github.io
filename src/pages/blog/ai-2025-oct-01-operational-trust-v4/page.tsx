@@ -1,7 +1,7 @@
 import React from "react"
 export default function OperationalTrustV4(): JSX.Element {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">"
+    <div className="text-left">"
       <Helmet >
         <title >Operational Trust Scorecards v4 — SLIs → KPIs with Budgets</title>
         <meta name="description">"
@@ -10,18 +10,18 @@ export default function OperationalTrustV4(): JSX.Element {
         />
       </Helmet>
 
-      <div className="container mx-auto px-6 py-16">"
-        <h1 className="text-4xl md: text-5xl font-bold mb-4">Operational Trust Scorecards v4</h1>"
-        <p className="text-zion-slate-light mb-8">SLIs → KPIs with Budgets</p>;,"
-        <div className="prose prose-invert max-w-3xl">;,"
+      <div className="text-left">"
+        <h1 className="text-left">Operational Trust Scorecards v4</h1>"
+        <p className="text-left">SLIs → KPIs with Budgets</p>;,"
+        <div className="text-left">;,"
   href="https: //ziontechgroup.com/blog/ai-2025-oct-01-operational-trust-v4"
         />
       </Helmet>
 
-      <div className="container mx-auto px-6 py-16">"
-        <h1 className="text-4xl md: text-5xl font-bold mb-4">Operational Trust Scorecards v4</h1>"
-        <p className="text-zion-slate-light mb-8">SLIs → KPIs with Budgets</p>"
-        <div className="prose prose-invert max-w-3xl">"
+      <div className="text-left">"
+        <h1 className="text-left">Operational Trust Scorecards v4</h1>"
+        <p className="text-left">SLIs → KPIs with Budgets</p>"
+        <div className="text-left">"
           <p >
             Upgrade operational scorecards with KPI alignment, budgeted actions, and
             rollback hooks that prevent regressions without slowing delivery.
@@ -33,10 +33,10 @@ export default function OperationalTrustV4(): JSX.Element {
           </p>
         </div>
 =======
-        <div className="mt-8">"
-          <Link to="/blog" className="text-cyan-300 hover: underline">← Back to Blog</Link>"
-        <div className="mt-8">"
-          <Link to="/blog" className="text-cyan-300 hover: underline">← Back to Blog</Link>"
+        <div className="text-left">"
+          <Link to="/blog" className="text-left">← Back to Blog</Link>"
+        <div className="text-left">"
+          <Link to="/blog" className="text-left">← Back to Blog</Link>"
         </div>
       </div>
     </div>

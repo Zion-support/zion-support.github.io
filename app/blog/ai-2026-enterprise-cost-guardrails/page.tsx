@@ -7,7 +7,7 @@ export const metadata = {
 
 export default function Page() {
   return (
-    <main className="max-w-3xl mx-auto px-4 py-12 prose prose-invert">"
+    <main className="text-left">"
       <h1>Enterprise Cost Guardrails (2026)</h1>
       <p>
         Design cost guardrails that preserve user experience. Use routing policies, quality tiers,

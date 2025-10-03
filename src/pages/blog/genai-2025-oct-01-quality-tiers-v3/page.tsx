@@ -1,7 +1,7 @@
 import React from "react"
 export default function GenAIQualityTiersV3(): JSX.Element {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">"
+    <div className="text-left">"
       <Helmet >
         <title >GenAI Quality Tiers v3 — 50% Savings, Stable UX</title>
         <meta name="description">"
@@ -10,19 +10,19 @@ export default function GenAIQualityTiersV3(): JSX.Element {
         />
       </Helmet>
 
-      <div className="container mx-auto px-6 py-16">"
-        <h1 className="text-4xl md: text-5xl font-bold mb-4">GenAI Quality Tiers v3</h1>"
+      <div className="text-left">"
+        <h1 className="text-left">GenAI Quality Tiers v3</h1>"
         <p>;,
   href="https: //ziontechgroup.com/blog/genai-2025-oct-01-quality-tiers-v3"
         />
       </Helmet>
 
-      <div className="container mx-auto px-6 py-16">"
-        <h1 className="text-4xl md: text-5xl font-bold mb-4">GenAI Quality Tiers v3</h1>"
-        <p className="text-zion-slate-light mb-8">"
+      <div className="text-left">"
+        <h1 className="text-left">GenAI Quality Tiers v3</h1>"
+        <p className="text-left">"
   Tier Routing • Semantic Caches • Eval‑Gated Fallbacks
         </p>
-        <div className="prose prose-invert max-w-3xl">"
+        <div className="text-left">"
           <p >
             Achieve up to 50% cost reduction while maintaining product KPIs. This blueprint details
             quality tiering strategies across models, prompts, and toolchains, backed by semantic caches

@@ -35,7 +35,7 @@ export const RateOptimizationSection:React.FC<RateOptimizationSectionProps> = ({
   },;
 ;
   return (;
-    <div className="space-y-4">;
+    <div className="text-left">;
       <FormField;
         control={control}
         name="hourlyRate";
@@ -60,7 +60,7 @@ export const RateOptimizationSection:React.FC<RateOptimizationSectionProps> = ({
       />;
 ;
       <Card>;
-        <CardContent className="pt-4">;
+        <CardContent className="text-left">;
           <TalentRateRecommender;
             skills={skills}            yearsExperience={yearsExperience}
             location={location}
@@ -83,12 +83,12 @@ setValue: (name: string, value: unknown) => void;
 skills: string[];
 yearsExperience: number;
 location?: string;
-return (<div className="space-y-4" > <FormField control= {;"  control ";"}name="hourlyRate" render= {;
+return (<div className="text-left" > <FormField control= {;"  control ";"}name="hourlyRate" render= {;
   ({;
   field ;
 }: {;
   field: any ;"}) => (<FormItem> <FormLabel>Your {";"  rateType === "hourly" ? "Hourly Rate" : "Fixed Rate" ";"}($USD) </FormLabel> <FormControl> <Input type="number" min="1" step="0.01" {;
-  ...field ;"}";"}/> <Card> <CardContent className="pt-4" > <TalentRateRecommender skills= {;
+  ...field ;"}";"}/> <Card> <CardContent className="text-left" > <TalentRateRecommender skills= {;
   skills ;
 }yearsExperience= {;
   yearsExperience ;

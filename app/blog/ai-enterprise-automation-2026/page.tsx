@@ -8,61 +8,61 @@ export const metadata = {
 
 export default function AIEnterpriseAutomation2026() {
   return (
-    <article className="max-w-4xl mx-auto px-4 py-12">"
-      <div className="prose prose-lg max-w-none">"
-        <header className="mb-12">"
-          <div className="flex items-center gap-2 mb-4">"
-            <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">"
+    <article className="text-left">"
+      <div className="text-left">"
+        <header className="text-left">"
+          <div className="text-left">"
+            <span className="text-left">"
               Automation
-            </span>
-            <span className="text-gray-500">•</span>"
-            <span className="text-gray-600">September 29, 2025</span>"
+            <
+            <span className="text-left">•<"
+            <span className="text-left">September 29, 2025<"
           </div>
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">"
+          <h1 className="text-left">"
             AI Enterprise Automation 2026: Complete Business Process Transformation
           </h1>
-          <p className="text-xl text-gray-600 leading-relaxed">"
+          <p className="text-left">"
             A field-tested approach to automate complex workflows across finance, operations, and customer
             experience. Achieve 95% efficiency, 60% cost reduction, and world-class reliability.
           </p>
-          <div className="flex items-center gap-6 mt-8 text-sm text-gray-500">"
-            <span>18 min read</span>
-            <span>•</span>
-            <span>Enterprise Automation</span>
-            <span>•</span>
-            <span>Zero-Touch Ops</span>
+          <div className="text-left">"
+            <span>18 min read<
+            <span>•<
+            <span>Enterprise Automation<
+            <span>•<
+            <span>Zero-Touch Ops<
           </div>
         </header>
 
-        <section className="mb-12">"
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Automation Domains</h2>"
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">"
-            <div className="bg-white border border-gray-200 rounded-lg p-6">"
-              <div className="text-3xl mb-3">💳</div>"
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Finance</h3>"
-              <p className="text-gray-600">AP/AR, reconciliation, anomaly detection, and continuous close.</p>"
+        <section className="text-left">"
+          <h2 className="text-left">Automation Domains</h2>"
+          <div className="text-left">"
+            <div className="text-left">"
+              <div className="text-left">💳</div>"
+              <h3 className="text-left">Finance</h3>"
+              <p className="text-left">AP/AR, reconciliation, anomaly detection, and continuous close.</p>"
             </div>
-            <div className="bg-white border border-gray-200 rounded-lg p-6">"
-              <div className="text-3xl mb-3">🏭</div>"
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Operations</h3>"
-              <p className="text-gray-600">Intelligent routing, escalations, and automated approvals.</p>"
+            <div className="text-left">"
+              <div className="text-left">🏭</div>"
+              <h3 className="text-left">Operations</h3>"
+              <p className="text-left">Intelligent routing, escalations, and automated approvals.</p>"
             </div>
-            <div className="bg-white border border-gray-200 rounded-lg p-6">"
-              <div className="text-3xl mb-3">🤝</div>"
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Customer Experience</h3>"
-              <p className="text-gray-600">Personalized support, case resolution, and proactive outreach.</p>"
+            <div className="text-left">"
+              <div className="text-left">🤝</div>"
+              <h3 className="text-left">Customer Experience</h3>"
+              <p className="text-left">Personalized support, case resolution, and proactive outreach.</p>"
             </div>
-            <div className="bg-white border border-gray-200 rounded-lg p-6">"
-              <div className="text-3xl mb-3">🧠</div>"
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Knowledge</h3>"
-              <p className="text-gray-600">Grounded assistants with retrieval and approvals for actions.</p>"
+            <div className="text-left">"
+              <div className="text-left">🧠</div>"
+              <h3 className="text-left">Knowledge</h3>"
+              <p className="text-left">Grounded assistants with retrieval and approvals for actions.</p>"
             </div>
           </div>
         </section>
 
-        <section className="mb-12">"
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Outcome Metrics</h2>"
-          <ul className="list-disc list-inside text-gray-700 space-y-2">"
+        <section className="text-left">"
+          <h2 className="text-left">Outcome Metrics</h2>"
+          <ul className="text-left">"
             <li>95% automation rate on targeted workflows</li>
             <li>60% cost reduction and 300% productivity gains</li>
             <li>Under 2% exception rate with human-in-the-loop reviews</li>
@@ -70,26 +70,26 @@ export default function AIEnterpriseAutomation2026() {
           </ul>
         </section>
 
-        <section className="mb-12">"
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Adoption Plan</h2>"
-          <div className="space-y-6">"
-            <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-lg">"
-              <h3 className="text-xl font-semibold mb-2">Wave 1: High-ROI Use Cases</h3>"
-              <ul className="list-disc list-inside text-gray-700 space-y-1">"
+        <section className="text-left">"
+          <h2 className="text-left">Adoption Plan</h2>"
+          <div className="text-left">"
+            <div className="text-left">"
+              <h3 className="text-left">Wave 1: High-ROI Use Cases</h3>"
+              <ul className="text-left">"
                 <li>Invoice processing, customer triage, and provisioning</li>
                 <li>Guardrails, approvals, and regression evals</li>
               </ul>
             </div>
-            <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-lg">"
-              <h3 className="text-xl font-semibold mb-2">Wave 2: Platformization</h3>"
-              <ul className="list-disc list-inside text-gray-700 space-y-1">"
+            <div className="text-left">"
+              <h3 className="text-left">Wave 2: Platformization</h3>"
+              <ul className="text-left">"
                 <li>Templates, golden paths, and cost/quality dashboards</li>
                 <li>Central model routing and caching</li>
               </ul>
             </div>
-            <div className="bg-gradient-to-br from-orange-50 to-pink-50 p-6 rounded-lg">"
-              <h3 className="text-xl font-semibold mb-2">Wave 3: Enterprise Scale</h3>"
-              <ul className="list-disc list-inside text-gray-700 space-y-1">"
+            <div className="text-left">"
+              <h3 className="text-left">Wave 3: Enterprise Scale</h3>"
+              <ul className="text-left">"
                 <li>Cross-domain orchestration and autonomy levels</li>
                 <li>Quarterly operating reviews and continuous optimization</li>
               </ul>
@@ -97,12 +97,12 @@ export default function AIEnterpriseAutomation2026() {
           </div>
         </section>
 
-        <div className="bg-gradient-to-r from-green-600 to-blue-600 rounded-xl p-8 text-white text-center">"
-          <h2 className="text-2xl font-bold mb-4">Automate Your Enterprise with Confidence</h2>"
-          <p className="text-lg mb-6 opacity-90">We design and implement AI automation that delivers measurable business outcomes.</p>"
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">"
-            <a href="/contact" className="bg-white text-green-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">Start a Conversation</a>"
-            <a href="/services/ai-workflow-automation" className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-700 transition-colors">Explore Automation Services</a>"
+        <div className="text-left">"
+          <h2 className="text-left">Automate Your Enterprise with Confidence</h2>"
+          <p className="text-left">We design and implement AI automation that delivers measurable business outcomes.</p>"
+          <div className="text-left">"
+            <a href="/contact" className="text-left">Start a Conversation</a>"
+            <a href="/services/ai-workflow-automation" className="text-left">Explore Automation Services</a>"
           </div>
         </div>
       </div>

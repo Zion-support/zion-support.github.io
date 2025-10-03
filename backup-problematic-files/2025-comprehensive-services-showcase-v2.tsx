@@ -71,7 +71,7 @@ import { emergingTechBreakthroughs2025V2 } from '../data/2025-emerging-tech-brea
     {
       id: 'it-infrastructure'
       name: 'IT Infrastructure Services'
-      icon: <Cloud className="w-8 h-8" />
+      icon: <Cloud className="text-left" />
       color: 'from-purple-500 to-pink-500'
       services: innovativeITServices2025ExpansionV2
       description: 'Advanced IT infrastructure and security solutions'
@@ -79,7 +79,7 @@ import { emergingTechBreakthroughs2025V2 } from '../data/2025-emerging-tech-brea
     {
       id: 'ai-services'
       name: 'AI & Machine Learning'
-      icon: <Brain className="w-8 h-8" />
+      icon: <Brain className="text-left" />
       color: 'from-green-500 to-emerald-500'
       services: innovativeAIServices2025ExpansionV2
       description: 'Intelligent AI solutions for business transformation'
@@ -87,7 +87,7 @@ import { emergingTechBreakthroughs2025V2 } from '../data/2025-emerging-tech-brea
     {
       id: 'industry-solutions'
       name: 'Industry Solutions'
-      icon: <Building className="w-8 h-8" />
+      icon: <Building className="text-left" />
       color: 'from-orange-500 to-red-500'
       services: industrySpecificSolutions2025V2
       description: 'Specialized solutions for specific industries'
@@ -95,7 +95,7 @@ import { emergingTechBreakthroughs2025V2 } from '../data/2025-emerging-tech-brea
     {
       id: 'emerging-tech'
       name: 'Emerging Technology'
-      icon: <Atom className="w-8 h-8" />
+      icon: <Atom className="text-left" />
       color: 'from-indigo-500 to-purple-500'
       services: emergingTechBreakthroughs2025V2
       description: 'Breakthrough technologies of the future'
@@ -177,7 +177,7 @@ export default function ComprehensiveServicesShowcase2025V2() {
     {
       id: 'micro-saas',
       name: 'Innovative Micro SAAS',
-      icon: <Smartphone className="w-8 h-8" />,
+      icon: <Smartphone className="text-left" />,
       color: 'from-blue-500 to-cyan-500',
       services: innovativeMicroSaas2025ExpansionV2,
       description: 'Cutting-edge micro SAAS solutions for modern businesses'
@@ -187,7 +187,7 @@ export default function ComprehensiveServicesShowcase2025V2() {
     {
       id: 'it-infrastructure',
       name: 'IT Infrastructure Services',
-      icon: <Cloud className="w-8 h-8" />,
+      icon: <Cloud className="text-left" />,
       color: 'from-purple-500 to-pink-500',
       services: innovativeITServices2025ExpansionV2,
       description: 'Advanced IT infrastructure and security solutions'
@@ -196,7 +196,7 @@ export default function ComprehensiveServicesShowcase2025V2() {
     {
       id: 'ai-services',
       name: 'AI & Machine Learning',
-      icon: <Brain className="w-8 h-8" />,
+      icon: <Brain className="text-left" />,
       color: 'from-green-500 to-emerald-500',
       services: innovativeAIServices2025ExpansionV2,
       description: 'Intelligent AI solutions for business transformation'
@@ -205,7 +205,7 @@ export default function ComprehensiveServicesShowcase2025V2() {
     {
       id: 'industry-solutions',
       name: 'Industry Solutions',
-      icon: <Building className="w-8 h-8" />,
+      icon: <Building className="text-left" />,
       color: 'from-orange-500 to-red-500',
       services: industrySpecificSolutions2025V2,
       description: 'Specialized solutions for specific industries'
@@ -214,7 +214,7 @@ export default function ComprehensiveServicesShowcase2025V2() {
     {
       id: 'emerging-tech',
       name: 'Emerging Technology',
-      icon: <Atom className="w-8 h-8" />,
+      icon: <Atom className="text-left" />,
       color: 'from-indigo-500 to-purple-500',
       services: emergingTechBreakthroughs2025V2,
 
@@ -243,15 +243,15 @@ export default function ComprehensiveServicesShowcase2025V2() {
       <section className='relative py-20 px-4 overflow-hidden'>
         <div className='max-w-7xl mx-auto text-center'>
           <motion.h1
-            className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6'            initial={{ opacity: 0, y: 30 }}      <section className="relative py-20 px-4 overflow-hidden">
-        <div className="max-w-7xl mx-auto text-center">
+            className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6'            initial={{ opacity: 0, y: 30 }}      <section className="text-left">
+        <div className="text-left">
           <motion.h1 
-            className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6"
+            className="text-left"
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
   };
 
-  return (_<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+  return (_<div className="text-left">
       <SEO 
         title="2025 Comprehensive Services Showcase V2 | Zion Tech Group"
         description="Discover our comprehensive portfolio of innovative micro SAAS, _IT infrastructure, _AI services, _industry solutions, _and emerging technology breakthroughs. Transform your business with cutting-edge solutions."
@@ -259,10 +259,10 @@ export default function ComprehensiveServicesShowcase2025V2() {
       />
       
       {_/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden">
-        <div className="max-w-7xl mx-auto text-center">
+      <section className="text-left">
+        <div className="text-left">
           <motion.h1
-            className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6"
+            className="text-left"
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             initial={_{ opacity: 0, _y: 30}}
@@ -278,7 +278,7 @@ export default function ComprehensiveServicesShowcase2025V2() {
           </motion.h1>
 
           <motion.p 
-            className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto"
+            className="text-left"
             initial={_{ opacity: 0, _y: 20}}
             animate={_{ opacity: 1, _y: 0}}
             transition={_{ duration: 0.8, _delay: 0.2}}
@@ -286,7 +286,7 @@ export default function ComprehensiveServicesShowcase2025V2() {
             Experience the future of technology with our revolutionary portfolio of innovative micro SAAS, _IT infrastructure, _AI services, _industry solutions, _and emerging technology breakthroughs.
           </motion.p>
           <motion.div 
-            className="flex flex-col sm:flex-row gap-4 justify-center"
+            className="text-left"
             initial={_{ opacity: 0, _y: 20}}
             animate={_{ opacity: 1, _y: 0}}
             transition={_{ duration: 0.8, _delay: 0.4}}
@@ -299,11 +299,11 @@ export default function ComprehensiveServicesShowcase2025V2() {
               Explore Services
             </a>
       {_/* Contact Information */}
-      <section id="contact" className="py-16 px-4 bg-black/20">
+      <section id="contact" className="text-left">
 
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="text-left">
           <motion.h2
-            className="text-3xl md:text-4xl font-bold text-white mb-8"
+            className="text-left"
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
@@ -314,12 +314,12 @@ export default function ComprehensiveServicesShowcase2025V2() {
             className='grid md:grid-cols-3 gap-8'            initial={{ opacity: 0, y: 20 }}          <motion.div
               className='px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200'>            <a
               href="#services"
-              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg">;
+              className="text-left">;
               Explore Services;
             </a>;
             <a
               href="#contact"
-              className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200"
+              className="text-left"
               Get Started
             </a>
           </motion.div>
@@ -329,10 +329,10 @@ export default function ComprehensiveServicesShowcase2025V2() {
       <section id='contact' className='py-16 px-4 bg-black/20'>
         <div className='max-w-4xl mx-auto text-center'>
           <motion.h2
-            className='text-3xl md:text-4xl font-bold text-white mb-8'            initial={{ opacity: 0, y: 20 }}      <section id="contact" className="py-16 px-4 bg-black/20">
-        <div className="max-w-4xl mx-auto text-center">
+            className='text-3xl md:text-4xl font-bold text-white mb-8'            initial={{ opacity: 0, y: 20 }}      <section id="contact" className="text-left">
+        <div className="text-left">
           <motion.h2
-            className="text-3xl md:text-4xl font-bold text-white mb-8"
+            className="text-left"
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
@@ -343,12 +343,12 @@ export default function ComprehensiveServicesShowcase2025V2() {
             className='grid md:grid-cols-3 gap-8'            initial={{ opacity: 0, y: 20 }}          <motion.div
               className='px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200'>            <a
               href="#services"
-              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg">;
+              className="text-left">;
               Explore Services;
             </a>;
             <a
               href="#contact"
-              className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200"
+              className="text-left"
               Get Started
             </a>;
           </motion && motion.div>;
@@ -384,10 +384,10 @@ export default function ComprehensiveServicesShowcase2025V2() {
               <h3 className='text - xl font - semibold text - white mb - 2'>;
                 Visit Us;
               </h3>;
-              <p className='text - cyan - 400 text - lg'>{contact_info.address}</p>            </div>            <div className="text - center">;
-              <MapPin className="w - 12 h - 12 text - cyan - 400 mx - auto mb - 4" />;
-              <h3 className="text - xl font - semibold text - white mb - 2">Visit Us</h3>;
-              <p className="text - cyan - 400 text - lg">{contact_info.address}</p>;
+              <p className='text - cyan - 400 text - lg'>{contact_info.address}</p>            </div>            <div className="text-left">;
+              <MapPin className="text-left" />;
+              <h3 className="text-left">Visit Us</h3>;
+              <p className="text-left">{contact_info.address}</p>;
           </motion.div>;
         </div>;
       </section>;
@@ -395,10 +395,10 @@ export default function ComprehensiveServicesShowcase2025V2() {
       <section id='services' className='py - 20 px - 4'>;
         <div className='max - w-7xl mx - auto'>;
           <motion.h2;
-            className='text - 4xl md:text - 5xl font - bold text - white text - center mb - 16'            initial={{ opacity: 0, coordinate_y: 20 }}      <section id="services" className="py - 20 px - 4">;
-        <div className="max - w-7xl mx - auto">;
+            className='text - 4xl md:text - 5xl font - bold text - white text - center mb - 16'            initial={{ opacity: 0, coordinate_y: 20 }}      <section id="services" className="text-left">;
+        <div className="text-left">;
           <motion.h2;
-            className="text - 4xl md:text - 5xl font - bold text - white text - center mb - 16";
+            className="text-left";
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
@@ -428,11 +428,11 @@ export default function ComprehensiveServicesShowcase2025V2() {
                     {category.description}
 
 
-        <div className="max-w-7xl mx-auto">
+        <div className="text-left">
           <motion.h2 
-            className="text-4xl md:text-5xl font-bold text-white text-center mb-16"
+            className="text-left"
             whileInView={{ opacity: 1, y: 0 }}
-            className="grid md:grid-cols-3 gap-8"
+            className="text-left"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
     ...emergingTechBreakthroughs2025V2;
@@ -450,7 +450,7 @@ export default function ComprehensiveServicesShowcase2025V2() {
     {
       id: 'it - infrastructure',
       name: 'IT Infrastructure Services',
-      icon: <Cloud className="w - 8 h - 8" />,
+      icon: <Cloud className="text-left" />,
       color: 'from - purple - 500 to - pink - 500',
       services: innovativeITServices2025ExpansionV2,
       description: 'Advanced IT infrastructure and security solutions';
@@ -458,7 +458,7 @@ export default function ComprehensiveServicesShowcase2025V2() {
     {
       id: 'ai - services',
       name: 'AI & Machine Learning',
-      icon: <Brain className="w - 8 h - 8" />,
+      icon: <Brain className="text-left" />,
       color: 'from - green - 500 to - emerald - 500',
       services: innovativeAIServices2025ExpansionV2,
       description: 'Intelligent AI solutions for business transformation';
@@ -466,7 +466,7 @@ export default function ComprehensiveServicesShowcase2025V2() {
     {
       id: 'industry - solutions',
       name: 'Industry Solutions',
-      icon: <Building className="w - 8 h - 8" />,
+      icon: <Building className="text-left" />,
       color: 'from - orange - 500 to - red - 500',
       services: industrySpecificSolutions2025V2,
       description: 'Specialized solutions for specific industries';
@@ -474,7 +474,7 @@ export default function ComprehensiveServicesShowcase2025V2() {
     {
       id: 'emerging - tech',
       name: 'Emerging Technology',
-      icon: <Atom className="w - 8 h - 8" />,
+      icon: <Atom className="text-left" />,
       color: 'from - indigo - 500 to - purple - 500',
       services: emergingTechBreakthroughs2025V2,
       description: 'Breakthrough technologies of the future',
@@ -536,10 +536,10 @@ export default function ComprehensiveServicesShowcase2025V2() {
       <section className='relative py - 20 px - 4 overflow - hidden'>;
         <div className='max - w-7xl mx - auto text - center'>;
           <motion.h1;
-            className='text - 5xl md:text - 7xl font - bold bg - gradient - to - r from - cyan - 400 via - blue - 500 to - purple - 600 bg - clip - text text - transparent mb - 6'            initial={{ opacity: 0, coordinate_y: 30 }}      <section className="relative py - 20 px - 4 overflow - hidden">;
-        <div className="max - w-7xl mx - auto text - center">;
+            className='text - 5xl md:text - 7xl font - bold bg - gradient - to - r from - cyan - 400 via - blue - 500 to - purple - 600 bg - clip - text text - transparent mb - 6'            initial={{ opacity: 0, coordinate_y: 30 }}      <section className="text-left">;
+        <div className="text-left">;
           <motion.h1;
-            className="text - 5xl md:text - 7xl font - bold bg - gradient - to - r from - cyan - 400 via - blue - 500 to - purple - 600 bg - clip - text text - transparent mb - 6";
+            className="text-left";
             animate={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.8 }}
           >;
@@ -552,7 +552,7 @@ export default function ComprehensiveServicesShowcase2025V2() {
             animate={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >          <motion.p;
-            className="text - xl md:text - 2xl text - gray - 300 mb - 8 max - w-4xl mx - auto";
+            className="text-left";
             initial={{ opacity: 0, coordinate_y: 20 }}
             animate={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -569,7 +569,7 @@ export default function ComprehensiveServicesShowcase2025V2() {
             IT infrastructure, AI services, industry solutions, and emerging technology breakthroughs.;
           </motion.p>;
           <motion.div;
-            className="flex flex - col sm:flex - row gap - 4 justify - center";
+            className="text-left";
             animate={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >;
@@ -583,13 +583,13 @@ export default function ComprehensiveServicesShowcase2025V2() {
               href='#contact';
               className='px - 8 py - 4 border - 2 border - cyan - 500 text - cyan - 400 font - semibold rounded - lg hover:bg - cyan - 500 hover:text - white transition - all duration - 200'            >            <a;
               href="#services";
-              className="px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white font - semibold rounded - lg hover:from - cyan - 600 hover:to - blue - 600 transition - all duration - 200 hover:scale - 105 shadow - lg";
+              className="text-left";
             >;
               Explore Services;
             </a>;
             <a;
               href="#contact";
-              className="px - 8 py - 4 border - 2 border - cyan - 500 text - cyan - 400 font - semibold rounded - lg hover:bg - cyan - 500 hover:text - white transition - all duration - 200";
+              className="text-left";
               Get Started;
             </a>;
           </motion.div>;
@@ -599,10 +599,10 @@ export default function ComprehensiveServicesShowcase2025V2() {
       <section id='contact' className='py - 16 px - 4 bg - black / 20'>;
         <div className='max - w-4xl mx - auto text - center'>;
           <motion.h2;
-            className='text - 3xl md:text - 4xl font - bold text - white mb - 8'            initial={{ opacity: 0, coordinate_y: 20 }}      <section id="contact" className="py - 16 px - 4 bg - black / 20">;
-        <div className="max - w-4xl mx - auto text - center">;
+            className='text - 3xl md:text - 4xl font - bold text - white mb - 8'            initial={{ opacity: 0, coordinate_y: 20 }}      <section id="contact" className="text-left">;
+        <div className="text-left">;
           <motion.h2;
-            className="text - 3xl md:text - 4xl font - bold text - white mb - 8";
+            className="text-left";
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -614,10 +614,10 @@ export default function ComprehensiveServicesShowcase2025V2() {
               </h3>
 
       {_/* Contact Information */}
-      <section id="contact" className="py-16 px-4 bg-black/20">
-        <div className="max-w-4xl mx-auto text-center">
+      <section id="contact" className="text-left">
+        <div className="text-left">
           <motion.h2 
-            className="text-3xl md:text-4xl font-bold text-white mb-8"
+            className="text-left"
             initial={_{ opacity: 0, _y: 20}}
             whileInView={_{ opacity: 1, _y: 0}}
             viewport={_{ once: true}}
@@ -626,30 +626,30 @@ export default function ComprehensiveServicesShowcase2025V2() {
             Ready to Transform Your Business?
           </motion.h2>
           <motion.div 
-            className="grid md:grid-cols-3 gap-8"
+            className="text-left"
             initial={_{ opacity: 0, _y: 20}}
             whileInView={_{ opacity: 1, _y: 0}}
             viewport={_{ once: true}}
             transition={_{ duration: 0.6, _delay: 0.2}}
           >
-            <div className="text-center">
-              <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Call Us</h3>
-              <p className="text-cyan-400 text-lg">{_contactInfo.mobile}</p>
+            <div className="text-left">
+              <Phone className="text-left" />
+              <h3 className="text-left">Call Us</h3>
+              <p className="text-left">{_contactInfo.mobile}</p>
             </div>
-            <div className="text-center">
-              <Mail className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Email Us</h3>
-              <p className="text-cyan-400 text-lg">{_contactInfo.email}</p>
+            <div className="text-left">
+              <Mail className="text-left" />
+              <h3 className="text-left">Email Us</h3>
+              <p className="text-left">{_contactInfo.email}</p>
             </div>
             <div className='text-center'>
               <MapPin className='w-12 h-12 text-cyan-400 mx-auto mb-4' />
               <h3 className='text-xl font-semibold text-white mb-2'>
                 Visit Us
               </h3>
-              <p className='text-cyan-400 text-lg'>{contactInfo.address}</p>            </div>            <div className="text-center">
-              <MapPin className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Visit Us</h3>
+              <p className='text-cyan-400 text-lg'>{contactInfo.address}</p>            </div>            <div className="text-left">
+              <MapPin className="text-left" />
+              <h3 className="text-left">Visit Us</h3>
             className='space-y-20'
             variants={staggerContainer}
             initial='initial'
@@ -671,10 +671,10 @@ export default function ComprehensiveServicesShowcase2025V2() {
               <h3 className='text - xl font - semibold text - white mb - 2'>;
                 Visit Us;
               </h3>;
-              <p className='text - cyan - 400 text - lg'>{contact_info.address}</p>            </div>            <div className="text - center">;
-              <MapPin className="w - 12 h - 12 text - cyan - 400 mx - auto mb - 4" />;
-              <h3 className="text - xl font - semibold text - white mb - 2">Visit Us</h3>;
-              <p className="text - cyan - 400 text - lg">{contact_info.address}</p>;
+              <p className='text - cyan - 400 text - lg'>{contact_info.address}</p>            </div>            <div className="text-left">;
+              <MapPin className="text-left" />;
+              <h3 className="text-left">Visit Us</h3>;
+              <p className="text-left">{contact_info.address}</p>;
           </motion.div>;
         </div>;
       </section>;
@@ -682,14 +682,14 @@ export default function ComprehensiveServicesShowcase2025V2() {
       <section id='services' className='py - 20 px - 4'>;
         <div className='max - w-7xl mx - auto'>;
           <motion.h2;
-            className='text - 4xl md:text - 5xl font - bold text - white text - center mb - 16'            initial={{ opacity: 0, coordinate_y: 20 }}      <section id="services" className="py - 20 px - 4">;
-        <div className="max - w-7xl mx - auto">;
+            className='text - 4xl md:text - 5xl font - bold text - white text - center mb - 16'            initial={{ opacity: 0, coordinate_y: 20 }}      <section id="services" className="text-left">;
+        <div className="text-left">;
           <motion.h2;
-            className="text - 4xl md:text - 5xl font - bold text - white text - center mb - 16";
+            className="text-left";
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             viewport={{ once: true }}
 
-              <p className="text-cyan-400 text-lg">{_contactInfo.address}</p>
+              <p className="text-left">{_contactInfo.address}</p>
             </div>
 
           </motion.div>
@@ -697,11 +697,11 @@ export default function ComprehensiveServicesShowcase2025V2() {
       </section>
 
       {_/* Services by Category */}
-      <section id="services" className="py-20 px-4">
+      <section id="services" className="text-left">
 
-        <div className="max-w-7xl mx-auto">
+        <div className="text-left">
           <motion.h2
-            className="text-4xl md:text-5xl font-bold text-white text-center mb-16"
+            className="text-left"
             initial={_{ opacity: 0, _y: 20}}
             whileInView={_{ opacity: 1, _y: 0}}
             viewport={_{ once: true}}
@@ -711,7 +711,7 @@ export default function ComprehensiveServicesShowcase2025V2() {
           </motion.h2>
           
           <motion.div 
-            className="space-y-20"
+            className="text-left"
             variants={_staggerContainer}
             initial="initial"
             whileInView="animate"
@@ -720,24 +720,24 @@ export default function ComprehensiveServicesShowcase2025V2() {
 
           >
             {_serviceCategories.map((category) => (_<motion.div key={category.id} variants={_fadeInUp}>
-                <div className="text-center mb-12">
+                <div className="text-left">
                   <div className={_`inline-flex p-4 rounded-2xl bg-gradient-to-r ${category.color} mb-6`}>
                     {_category.icon}
                   </div>
-                  <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                  <h3 className="text-left">
                     {_category.name}
                   </h3>
-                  <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                  <p className="text-left">
                     {_category.description}
                   </p>
                 </div>
 
                 
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="text-left">
                   {_category.services.map((service) => (
 
                 
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="text-left">
                   {_category.services.map((service) => (
                     <motion.div
                   </p>;
@@ -747,8 +747,8 @@ export default function ComprehensiveServicesShowcase2025V2() {
                     <motion.div;
                       key={service.id}
                       
-                      <div className="mb-6">
-                        <div className="text-2xl font-bold text-white mb-2">
+                      <div className="text-left">
+                        <div className="text-left">
                           Starting at {_(service as any).pricing?.starter || service.price}
 
 
@@ -851,22 +851,22 @@ export default function ComprehensiveServicesShowcase2025V2() {
           >;
             {service_categories.map ((category) => (
               <motion.div key={category.id} variants={fadeInUp}>;
-                <div className="text - center mb - 12">;
+                <div className="text-left">;
                   <div className={`inline - flex p - 4 rounded - 2xl bg - gradient - to - r ${category.color} mb - 6`}>;
                     {category.icon}
                   </div>;
-                  <h3 className="text - 3xl md:text - 4xl font - bold text - white mb - 4">;
+                  <h3 className="text-left">;
                     {category.name}
                   </h3>;
-                  <p className="text - xl text - gray - 300 max - w-3xl mx - auto">;
+                  <p className="text-left">;
                     {category.description}
                   </p>;
                 </div>;
-                <div className="grid md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
+                <div className="text-left">;
                   {category.services.map ((service) => (
                     <motion.div;
             viewport={{ once: true }}
-              <p className="text-cyan-400 text-lg">{_contactInfo.address}</p>
+              <p className="text-left">{_contactInfo.address}</p>
             </div>
 
           </motion.div>
@@ -874,10 +874,10 @@ export default function ComprehensiveServicesShowcase2025V2() {
       </section>
 
       {_/* Services by Category */}
-      <section id="services" className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
+      <section id="services" className="text-left">
+        <div className="text-left">
           <motion.h2
-            className="text-4xl md:text-5xl font-bold text-white text-center mb-16"
+            className="text-left"
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
@@ -891,8 +891,8 @@ export default function ComprehensiveServicesShowcase2025V2() {
             whileInView='animate'
 
                         </div>
-                        <div className="flex items-center text-sm text-green-400">
-                          <Star className="w-4 h-4 mr-2" />
+                        <div className="text-left">
+                          <Star className="text-left" />
                           {_service.growthRate}
                         </div>
                       </div>
@@ -912,7 +912,7 @@ export default function ComprehensiveServicesShowcase2025V2() {
                       </div>
                       <a
                         href={_`/services/${service.slug}`}
-                        className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-200"
+                        className="text-left"
                       >
                         Learn More <ArrowRight className='w-4 h-4 ml-2' />                      </a>            variants={staggerContainer}
             initial="initial"
@@ -944,42 +944,42 @@ export default function ComprehensiveServicesShowcase2025V2() {
                       <a;
                     {category.icon}
                   </div>
-                  <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                  <h3 className="text-left">
                     {category.name}
                   </h3>
-                  <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                  <p className="text-left">
                     {category.description}
                   </p>
                 </div>
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="text-left">
                   {category.services.map((service) => (
                     <motion.div
                       key={service.id}
-                      className="bg-black/30 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-500/50 transition-all duration-300 hover:scale-105"
+                      className="text-left"
                       whileHover={{ y: -5 }}>;
-                      <h4 className="text-xl font-semibold text-white mb-3">;
+                      <h4 className="text-left">;
                         {service && service.title}
                       </h4>;
-                      <p className="text-gray-300 mb-4">;
+                      <p className="text-left">;
                         {service && service.description}
                       </p>;
 
-                      <div className="space-y-3 mb-6">;
-                        <div className="flex items-center text-sm text-cyan-400">;
-                          <TrendingUp className="w-4 h-4 mr-2" />;
+                      <div className="text-left">;
+                        <div className="text-left">;
+                          <TrendingUp className="text-left" />;
                           {service && service.marketSize}
                         </div>;
-                        <div className="flex items-center text-sm text-green-400">;
-                          <Star className="w-4 h-4 mr-2" />;
+                        <div className="text-left">;
+                          <Star className="text-left" />;
                           {service && service.growthRate}
                         </div>;
                       </div>;
 
-                      <div className="mb-6">;
-                        <div className="text-2xl font-bold text-white mb-2">;
+                      <div className="text-left">;
+                        <div className="text-left">;
                           Starting at {(service as any).pricing?.starter || service && service.price}
                         </div>;
-                        <div className="text-sm text-gray-400">;
+                        <div className="text-left">;
                           {(service as any).pricing?.professional ? ;
                             `Professional: ${(service as any).pricing && pricing.professional} | Enterprise: ${(service as any).pricing && pricing.enterprise}` :;
                             `${service && service.price} ${service && service.period}`;
@@ -999,77 +999,77 @@ export default function ComprehensiveServicesShowcase2025V2() {
           >;
             {service_categories.map ((category) => (
               <motion.div key={category.id} variants={fadeInUp}>;
-                <div className="text - center mb - 12">;
+                <div className="text-left">;
                   <div className={`inline - flex p - 4 rounded - 2xl bg - gradient - to - r ${category.color} mb - 6`}>;
 
                     {category.icon}
                   </div>;
-                  <h3 className="text - 3xl md:text - 4xl font - bold text - white mb - 4">;
+                  <h3 className="text-left">;
                     {category.name}
                   </h3>;
-                  <p className="text - xl text - gray - 300 max - w-3xl mx - auto">;
+                  <p className="text-left">;
                     {category.description}
 
                   </p>;
                 </div>;
-                <div className="grid md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
+                <div className="text-left">;
                   {category.services.map ((service) => (
                     <motion.div;
 
                       key={service.id}
-                      className="bg - black / 30 backdrop - blur - xl border border - cyan - 500 / 20 rounded - 2xl p - 6 hover:border - cyan - 500 / 50 transition - all duration - 300 hover:scale - 105";
+                      className="text-left";
                       while_hover={{ coordinate_y: -5 }}
                     >;
-                      <h4 className="text - xl font - semibold text - white mb - 3">;
+                      <h4 className="text-left">;
                         {service.title}
                       </h4>;
-                      <p className="text - gray - 300 mb - 4">;
+                      <p className="text-left">;
                         {service.description}
 
           >;
             {serviceCategories && serviceCategories.map((category) => (;
               <motion && motion.div key={category && category.id} variants={fadeInUp}>;
-                <div className="text-center mb-12">;
+                <div className="text-left">;
                   <div className={`inline-flex p-4 rounded-2xl bg-gradient-to-r ${category && category.color} mb-6`}>;
                     {category && category.icon}
                   </div>;
-                  <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">;
+                  <h3 className="text-left">;
                     {category && category.name}
                   </h3>;
-                  <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
+                  <p className="text-left">;
                     {category && category.description}
                   </p>;
                 </div>;
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
+                <div className="text-left">;
                   {category && category.services.map((service) => (;
                     <motion&& motion.div
                       key={service && service.id}
-                      className="bg-black/30 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-500/50 transition-all duration-300 hover:scale-105"
+                      className="text-left"
                       whileHover={{ y: -5 }}>;
-                      <h4 className="text-xl font-semibold text-white mb-3">;
+                      <h4 className="text-left">;
                         {service && service.title}
                       </h4>;
-                      <p className="text-gray-300 mb-4">;
+                      <p className="text-left">;
                         {service && service.description}
                       </p>;
 
-                      <div className="space-y-3 mb-6">;
-                        <div className="flex items-center text-sm text-cyan-400">;
-                          <TrendingUp className="w-4 h-4 mr-2" />;
+                      <div className="text-left">;
+                        <div className="text-left">;
+                          <TrendingUp className="text-left" />;
                           {service && service.marketSize}
                         </div>;
-                        <div className="flex items-center text-sm text-green-400">;
-                          <Star className="w-4 h-4 mr-2" />;
+                        <div className="text-left">;
+                          <Star className="text-left" />;
                           {service && service.growthRate}
                         </div>;
                       </div>;
 
-                      <div className="mb-6">;
-                        <div className="text-2xl font-bold text-white mb-2">;
+                      <div className="text-left">;
+                        <div className="text-left">;
                           Starting at {(service as any).pricing?.starter || service && service.price}
                         </div>;
-                        <div className="text-sm text-gray-400">;
+                        <div className="text-left">;
                           {(service as any).pricing?.professional ? ;
                             `Professional: ${(service as any).pricing && pricing.professional} | Enterprise: ${(service as any).pricing && pricing.enterprise}` :;
                             `${service && service.price} ${service && service.period}`;
@@ -1077,11 +1077,11 @@ export default function ComprehensiveServicesShowcase2025V2() {
                         </div>;
                       </div>;
       {_/* Market Statistics */}
-      <section className="py-20 px-4 bg-black/20">
+      <section className="text-left">
 
-        <div className="max-w-7xl mx-auto">
+        <div className="text-left">
           <motion.h2
-            className="text-4xl md:text-5xl font-bold text-white text-center mb-16"
+            className="text-left"
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
@@ -1098,10 +1098,10 @@ export default function ComprehensiveServicesShowcase2025V2() {
       <section className='py-20 px-4 bg-black/20'>
         <div className='max-w-7xl mx-auto'>
           <motion.h2
-            className='text-4xl md:text-5xl font-bold text-white text-center mb-16'            initial={{ opacity: 0, y: 20 }}      <section className="py-20 px-4 bg-black/20">
-        <div className="max-w-7xl mx-auto">
+            className='text-4xl md:text-5xl font-bold text-white text-center mb-16'            initial={{ opacity: 0, y: 20 }}      <section className="text-left">
+        <div className="text-left">
           <motion.h2
-            className="text-4xl md:text-5xl font-bold text-white text-center mb-16"
+            className="text-left"
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
@@ -1115,10 +1115,10 @@ export default function ComprehensiveServicesShowcase2025V2() {
       <section className='py-20 px-4 bg-black/20'>;
         <div className='max-w-7xl mx-auto'>;
           <motion&& motion.h2
-            className='text-4xl md:text-5xl font-bold text-white text-center mb-16'            initial={{ opacity: 0, y: 20 }}      <section className="py-20 px-4 bg-black/20">;
-        <div className="max-w-7xl mx-auto">;
+            className='text-4xl md:text-5xl font-bold text-white text-center mb-16'            initial={{ opacity: 0, y: 20 }}      <section className="text-left">;
+        <div className="text-left">;
           <motion&& motion.h2 
-            className="text-4xl md:text-5xl font-bold text-white text-center mb-16"
+            className="text-left"
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0 && 0.6 }}>;
@@ -1128,28 +1128,28 @@ export default function ComprehensiveServicesShowcase2025V2() {
           <motion&& motion.div
             className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'            initial={{ opacity: 0, y: 20 }}          
           <motion && motion.div 
-            className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
+            className="text-left"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
+            className="text-left"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
                       </p>;
-                      <div className="space - y-3 mb - 6">;
-                        <div className="flex items - center text - sm text - cyan - 400">;
-                          <TrendingUp className="w - 4 h - 4 mr - 2" />;
+                      <div className="text-left">;
+                        <div className="text-left">;
+                          <TrendingUp className="text-left" />;
                           {service.market_size}
                         </div>;
-                        <div className="flex items - center text - sm text - green - 400">;
-                          <Star className="w - 4 h - 4 mr - 2" />;
+                        <div className="text-left">;
+                          <Star className="text-left" />;
                           {service.growth_rate}
                         </div>;
                       </div>;
-                      <div className="mb - 6">;
-                        <div className="text - 2xl font - bold text - white mb - 2">;
+                      <div className="text-left">;
+                        <div className="text-left">;
                           Starting at {(service as any).pricing?.starter || service.price}
                         </div>;
-                        <div className="text - sm text - gray - 400">;
+                        <div className="text-left">;
                           {(service as any).pricing?.professional ?;
                             `Professional: ${(service as any).pricing.professional} | Enterprise: ${(service as any).pricing.enterprise}` :;
                             `${service.price} ${service.period}`;
@@ -1158,9 +1158,9 @@ export default function ComprehensiveServicesShowcase2025V2() {
                       </div>;
                       <a;
                         href={`/services/${service.slug}`}
-                        className="inline - flex items - center text - cyan - 400 hover:text - cyan - 300 transition - colors duration - 200";
+                        className="text-left";
                       >;
-                        Learn More <ArrowRight className="w - 4 h - 4 ml - 2" />;
+                        Learn More <ArrowRight className="text-left" />;
                       </a>;
                     </motion.div>))}
                 </div>;
@@ -1172,10 +1172,10 @@ export default function ComprehensiveServicesShowcase2025V2() {
       <section className='py - 20 px - 4 bg - black / 20'>;
         <div className='max - w-7xl mx - auto'>;
           <motion.h2;
-            className='text - 4xl md:text - 5xl font - bold text - white text - center mb - 16'            initial={{ opacity: 0, coordinate_y: 20 }}      <section className="py - 20 px - 4 bg - black / 20">;
-        <div className="max - w-7xl mx - auto">;
+            className='text - 4xl md:text - 5xl font - bold text - white text - center mb - 16'            initial={{ opacity: 0, coordinate_y: 20 }}      <section className="text-left">;
+        <div className="text-left">;
           <motion.h2;
-            className="text - 4xl md:text - 5xl font - bold text - white text - center mb - 16";
+            className="text-left";
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -1188,7 +1188,7 @@ export default function ComprehensiveServicesShowcase2025V2() {
           </motion.h2>
           
           <motion.div 
-            className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
+            className="text-left"
             initial={_{ opacity: 0, _y: 20}}
             whileInView={_{ opacity: 1, _y: 0}}
             viewport={_{ once: true}}
@@ -1217,17 +1217,17 @@ export default function ComprehensiveServicesShowcase2025V2() {
                 5
               </div>
               <div className='text-white text-lg'>Service Categories</div>            </div>            </div>
-            <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-blue-400 mb-2">$150B+</div>
-              <div className="text-white text-lg">Total Addressable Market</div>
+            <div className="text-left">
+              <div className="text-left">$150B+</div>
+              <div className="text-left">Total Addressable Market</div>
             </div>
-            <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-purple-400 mb-2">40%+</div>
-              <div className="text-white text-lg">Average Annual Growth</div>
+            <div className="text-left">
+              <div className="text-left">40%+</div>
+              <div className="text-left">Average Annual Growth</div>
             </div>
-            <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-green-400 mb-2">5</div>
-              <div className="text-white text-lg">Service Categories</div>
+            <div className="text-left">
+              <div className="text-left">5</div>
+              <div className="text-left">Service Categories</div>
             </div>
           </motion.div>
         </div>
@@ -1236,13 +1236,13 @@ export default function ComprehensiveServicesShowcase2025V2() {
       <section className='py-20 px-4'>
         <div className='max-w-4xl mx-auto text-center'>
           <motion.h2
-            className='text-4xl md:text-5xl font-bold text-white mb-6'            initial={{ opacity: 0, y: 20 }}      <section className="py-20 px-4">
+            className='text-4xl md:text-5xl font-bold text-white mb-6'            initial={{ opacity: 0, y: 20 }}      <section className="text-left">
           >
             Ready to Lead the Future?
           </motion.h2>
           <motion.p
             className='text-xl text-gray-300 mb-8'            initial={{ opacity: 0, y: 20 }}          <motion.p
-            className="text-xl text-gray-300 mb-8"
+            className="text-left"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -1254,7 +1254,7 @@ export default function ComprehensiveServicesShowcase2025V2() {
             Ready to Lead the Future?
           </motion.h2>
           <motion.p 
-            className="text-xl text-gray-300 mb-8"
+            className="text-left"
             initial={_{ opacity: 0, _y: 20}}
             whileInView={_{ opacity: 1, _y: 0}}
             viewport={_{ once: true}}
@@ -1276,13 +1276,13 @@ export default function ComprehensiveServicesShowcase2025V2() {
             <a
               href='https://ziontechgroup.com'
               className='px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200'            >              href={`mailto:${contactInfo.email}`}
-              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover: from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg"
+              className="text-left"
             >
               Contact Our Team
             </a>
             <a
               href="https://ziontechgroup.com"
-              className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200"
+              className="text-left"
             >
               Visit Website
             </a>
@@ -1295,13 +1295,13 @@ export default function ComprehensiveServicesShowcase2025V2() {
 }
               href='https://ziontechgroup && ziontechgroup.com'
               className='px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200'>              href={`mailto:${contactInfo && contactInfo.email}`}
-              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover: from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg";
+              className="text-left";
             >;
               Contact Our Team;
             </a>;
             <a
               href="https://ziontechgroup && ziontechgroup.com"
-              className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200">;
+              className="text-left">;
               Visit Website;
             </a>;
           </motion && motion.div>;
@@ -1334,17 +1334,17 @@ export default function ComprehensiveServicesShowcase2025V2() {
                 5;
               </div>;
               <div className='text - white text - lg'>Service Categories</div>            </div>            </div>;
-            <div className="text - center">;
-              <div className="text - 4xl md:text - 5xl font - bold text - blue - 400 mb - 2">$150B+</div>;
-              <div className="text - white text - lg">Total Addressable Market</div>;
+            <div className="text-left">;
+              <div className="text-left">$150B+</div>;
+              <div className="text-left">Total Addressable Market</div>;
             </div>;
-            <div className="text - center">;
-              <div className="text - 4xl md:text - 5xl font - bold text - purple - 400 mb - 2">40%+</div>;
-              <div className="text - white text - lg">Average Annual Growth</div>;
+            <div className="text-left">;
+              <div className="text-left">40%+</div>;
+              <div className="text-left">Average Annual Growth</div>;
             </div>;
-            <div className="text - center">;
-              <div className="text - 4xl md:text - 5xl font - bold text - green - 400 mb - 2">5</div>;
-              <div className="text - white text - lg">Service Categories</div>;
+            <div className="text-left">;
+              <div className="text-left">5</div>;
+              <div className="text-left">Service Categories</div>;
             </div>;
           </motion.div>;
         </div>;
@@ -1353,10 +1353,10 @@ export default function ComprehensiveServicesShowcase2025V2() {
       <section className='py - 20 px - 4'>;
         <div className='max - w-4xl mx - auto text - center'>;
           <motion.h2;
-            className='text - 4xl md:text - 5xl font - bold text - white mb - 6'            initial={{ opacity: 0, coordinate_y: 20 }}      <section className="py - 20 px - 4">;
-        <div className="max - w-4xl mx - auto text - center">;
+            className='text - 4xl md:text - 5xl font - bold text - white mb - 6'            initial={{ opacity: 0, coordinate_y: 20 }}      <section className="text-left">;
+        <div className="text-left">;
           <motion.h2;
-            className="text - 4xl md:text - 5xl font - bold text - white mb - 6";
+            className="text-left";
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
@@ -1365,7 +1365,7 @@ export default function ComprehensiveServicesShowcase2025V2() {
           </motion.h2>;
           <motion.p;
             className='text - xl text - gray - 300 mb - 8'            initial={{ opacity: 0, coordinate_y: 20 }}          <motion.p;
-            className="text - xl text - gray - 300 mb - 8";
+            className="text-left";
             initial={{ opacity: 0, coordinate_y: 20 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             viewport={{ once: true }}
@@ -1378,7 +1378,7 @@ export default function ComprehensiveServicesShowcase2025V2() {
             className='flex flex - col sm:flex - row gap - 4 justify - center'            initial={{ opacity: 0, coordinate_y: 20 }}            Join thousands of businesses already transforming their operations with our cutting - edge solutions.;
           </motion.p>;
           <motion.div;
-            className="flex flex - col sm:flex - row gap - 4 justify - center";
+            className="text-left";
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.4 }}
@@ -1392,13 +1392,13 @@ export default function ComprehensiveServicesShowcase2025V2() {
             <a;
               href='https://ziontechgroup.com';
               className='px - 8 py - 4 border - 2 border - cyan - 500 text - cyan - 400 font - semibold rounded - lg hover:bg - cyan - 500 hover:text - white transition - all duration - 200'            >              href={`mailto:${contact_info.email}`}
-              className="px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white font - semibold rounded - lg hover: from - cyan - 600 hover:to - blue - 600 transition - all duration - 200 hover:scale - 105 shadow - lg";
+              className="text-left";
             >;
               Contact Our Team;
             </a>;
             <a;
               href="https://ziontechgroup.com";
-              className="px - 8 py - 4 border - 2 border - cyan - 500 text - cyan - 400 font - semibold rounded - lg hover:bg - cyan - 500 hover:text - white transition - all duration - 200";
+              className="text-left";
             >;
               Visit Website;
             </a>;

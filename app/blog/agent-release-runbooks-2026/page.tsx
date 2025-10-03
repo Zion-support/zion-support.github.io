@@ -16,37 +16,37 @@ export const metadata = {
 
 export default function AgentReleaseRunbooks2026() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-fuchsia-950 via-purple-950 to-indigo-950 text-white">"
-      <main className="container mx-auto px-6 py-12">"
-        <nav className="mb-8">"
-          <Link href="/blog" className="text-fuchsia-300 hover:text-fuchsia-200 transition-colors">"
+    <div className="text-left">"
+      <main className="text-left">"
+        <nav className="text-left">"
+          <Link href="/blog" className="text-left">"
             ← Back to Blog
           </Link>
         </nav>
 
-        <article className="max-w-4xl mx-auto">"
-          <header className="mb-10">"
-            <div className="flex items-center gap-3 mb-4 flex-wrap">"
-              <span className="px-3 py-1 bg-fuchsia-400/20 text-fuchsia-300 text-sm rounded-full border border-fuchsia-400/30">"
+        <article className="text-left">"
+          <header className="text-left">"
+            <div className="text-left">"
+              <span className="text-left">"
                 AI Operations
-              </span>
-              <span className="text-white/60 text-sm">January 30, 2026</span>"
-              <span className="text-white/60 text-sm">•</span>"
-              <span className="text-white/60 text-sm">15 min read</span>"
+              <
+              <span className="text-left">January 30, 2026<"
+              <span className="text-left">•<"
+              <span className="text-left">15 min read<"
             </div>
-            <h1 className="text-4xl md:text-5xl font-extrabold mb-4 bg-gradient-to-r from-fuchsia-300 to-purple-300 bg-clip-text text-transparent">"
+            <h1 className="text-left">"
               Agent Release Runbooks: Approvals, Budgets, and Instant Rollback
             </h1>
-            <p className="text-lg text-white/80">"
+            <p className="text-left">"
               Ship autonomous capabilities with confidence using standardized approvals, budget guards, KPI-linked
               canary evals, and automated rollback playbooks.
             </p>
           </header>
 
-          <div className="prose prose-invert prose-lg max-w-none space-y-10">"
+          <div className="text-left">"
             <section>
-              <h2 className="text-2xl md:text-3xl font-bold mb-3 text-fuchsia-300">Release Controls</h2>"
-              <ul className="space-y-2 text-white/80">"
+              <h2 className="text-left">Release Controls</h2>"
+              <ul className="text-left">"
                 <li>• Budget ceilings per action and per tenant</li>
                 <li>• Approval workflows by risk category and scope</li>
                 <li>• Canary gates tied to KPI scorecards and evals</li>
@@ -54,34 +54,34 @@ export default function AgentReleaseRunbooks2026() {
             </section>
 
             <section>
-              <h2 className="text-2xl md:text-3xl font-bold mb-3 text-purple-300">Rollback Playbooks</h2>"
-              <ul className="space-y-2 text-white/80">"
+              <h2 className="text-left">Rollback Playbooks</h2>"
+              <ul className="text-left">"
                 <li>• Automated rollback on KPI regressions or budget breach</li>
                 <li>• Manual override with audit trails and postmortems</li>
                 <li>• Progressive rollout stages with pause and resume</li>
               </ul>
             </section>
 
-            <section className="bg-gradient-to-br from-fuchsia-500/20 to-purple-500/20 border border-fuchsia-500/30 rounded-2xl p-8">"
-              <h2 className="text-3xl font-bold mb-3 text-center">Need Safe Agent Releases?</h2>"
-              <p className="text-center text-white/80 mb-6 text-lg">"
+            <section className="text-left">"
+              <h2 className="text-left">Need Safe Agent Releases?</h2>"
+              <p className="text-left">"
                 We design and implement release guardrails for enterprise agent platforms with measurable outcomes.
               </p>
-              <div className="flex justify-center gap-4">"
-                <a href="/contact" className="bg-gradient-to-r from-fuchsia-500 to-purple-600 hover:from-fuchsia-400 hover:to-purple-500 text-white font-bold py-3 px-6 rounded-xl transition-all">"
+              <div className="text-left">"
+                <a href="/contact" className="text-left">"
                   Talk to an Expert
                 </a>
-                <a href="/blog" className="border-2 border-fuchsia-500 text-fuchsia-300 hover:bg-fuchsia-500 hover:text-white font-bold py-3 px-6 rounded-xl transition-all">"
+                <a href="/blog" className="text-left">"
                   More Insights
                 </a>
               </div>
             </section>
           </div>
 
-          <footer className="mt-14 pt-8 border-t border-white/10">"
-            <div className="flex items-center justify-between">"
-              <div className="text-white/60 text-sm">Written by Zion Tech Group AI Ops Team</div>"
-              <a href="/contact" className="text-fuchsia-300 hover:text-fuchsia-200 transition-colors">Get in Touch</a>"
+          <footer className="text-left">"
+            <div className="text-left">"
+              <div className="text-left">Written by Zion Tech Group AI Ops Team</div>"
+              <a href="/contact" className="text-left">Get in Touch</a>"
             </div>
           </footer>
         </article>

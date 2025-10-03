@@ -1,13 +1,13 @@
 export default function Page() {
   return (
-    <div className="min-h-screen bg-gray-900 text-white">"
-      <div className="max-w-7xl mx-auto p-6">"
-        <h1 className="text-4xl font-bold mb-6">Page</h1>"
-        <p className="text-gray-300 mb-8">"
+    <div className="text-left">"
+      <div className="text-left">"
+        <h1 className="text-left">Page</h1>"
+        <p className="text-left">"
           Content coming soon...
         </p>
-        <div className="text-center">"
-          <a href="/blog" className="text-cyan-300 underline hover:text-cyan-200">"
+        <div className="text-left">"
+          <a href="/blog" className="text-left">"
             Back to Blog
           </a>
         </div>

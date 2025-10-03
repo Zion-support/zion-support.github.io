@@ -39,73 +39,73 @@ const NewContentShowcaseBanner: React.FC = () => {
   ];
 
   return (
-    <div className="bg-gradient-to-br from-gray-50 to-blue-50 py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="text-left">
+      <div className="text-left">
         {/* Header */}
-        <div className="text-center mb-12">
-          <div className="flex items-center justify-center mb-4">
-            <div className="flex items-center space-x-2 bg-blue-100 text-blue-800 rounded-full px-4 py-2">
-              <Calendar className="w-5 h-5" />
-              <span className="text-sm font-medium">Latest Content - January 2026</span>
+        <div className="text-left">
+          <div className="text-left">
+            <div className="text-left">
+              <Calendar className="text-left" />
+              <span className="text-left">Latest Content - January 2026<
             </div>
           </div>
           
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-left">
             Revolutionary AI Content
           </h2>
           
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-left">
             Explore the latest breakthroughs in AI technology, enterprise transformation success stories, and cutting-edge innovations that are reshaping industries.
           </p>
         </div>
 
         {/* Content Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <div className="text-left">
           {newContent.map((content, index) => (
             <div 
               key={index}
-              className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100 overflow-hidden"
+              className="text-left"
             >
               {/* Featured badge */}
               {content.featured && (
-                <div className="absolute top-4 right-4 z-10">
-                  <span className="bg-gradient-to-r from-purple-600 to-blue-600 text-white text-xs font-semibold px-3 py-1 rounded-full">
+                <div className="text-left">
+                  <span className="text-left">
                     Featured
-                  </span>
+                  <
                 </div>
               )}
               
-              <div className="p-6">
+              <div className="text-left">
                 {/* Category */}
-                <div className="flex items-center mb-3">
-                  <span className="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full">
+                <div className="text-left">
+                  <span className="text-left">
                     {content.category}
-                  </span>
+                  <
                 </div>
                 
                 {/* Title */}
-                <h3 className="text-lg font-bold text-gray-900 mb-3 line-clamp-2">
+                <h3 className="text-left">
                   {content.title}
                 </h3>
                 
                 {/* Excerpt */}
-                <p className="text-gray-600 text-sm mb-4 line-clamp-3">
+                <p className="text-left">
                   {content.excerpt}
                 </p>
                 
                 {/* Read time */}
-                <div className="flex items-center text-gray-500 text-sm mb-4">
-                  <Clock className="w-4 h-4 mr-1" />
+                <div className="text-left">
+                  <Clock className="text-left" />
                   {content.readTime}
                 </div>
                 
                 {/* CTA */}
                 <Link 
                   href={content.href}
-                  className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium text-sm transition-colors duration-200"
+                  className="text-left"
                 >
                   Read More
-                  <ArrowRight className="ml-1 w-4 h-4" />
+                  <ArrowRight className="text-left" />
                 </Link>
               </div>
             </div>
@@ -113,65 +113,65 @@ const NewContentShowcaseBanner: React.FC = () => {
         </div>
 
         {/* Statistics */}
-        <div className="bg-white rounded-2xl shadow-lg p-8 mb-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mx-auto mb-4">
-                <BookOpen className="w-8 h-8 text-blue-600" />
+        <div className="text-left">
+          <div className="text-left">
+            <div className="text-left">
+              <div className="text-left">
+                <BookOpen className="text-left" />
               </div>
-              <div className="text-2xl font-bold text-gray-900 mb-2">50+</div>
-              <div className="text-sm text-gray-600">New Articles Published</div>
+              <div className="text-left">50+</div>
+              <div className="text-left">New Articles Published</div>
             </div>
             
-            <div className="text-center">
-              <div className="flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mx-auto mb-4">
-                <Award className="w-8 h-8 text-green-600" />
+            <div className="text-left">
+              <div className="text-left">
+                <Award className="text-left" />
               </div>
-              <div className="text-2xl font-bold text-gray-900 mb-2">300%</div>
-              <div className="text-sm text-gray-600">Average ROI Achieved</div>
+              <div className="text-left">300%</div>
+              <div className="text-left">Average ROI Achieved</div>
             </div>
             
-            <div className="text-center">
-              <div className="flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mx-auto mb-4">
-                <Users className="w-8 h-8 text-purple-600" />
+            <div className="text-left">
+              <div className="text-left">
+                <Users className="text-left" />
               </div>
-              <div className="text-2xl font-bold text-gray-900 mb-2">10K+</div>
-              <div className="text-sm text-gray-600">Enterprise Readers</div>
+              <div className="text-left">10K+</div>
+              <div className="text-left">Enterprise Readers</div>
             </div>
             
-            <div className="text-center">
-              <div className="flex items-center justify-center w-16 h-16 bg-yellow-100 rounded-full mx-auto mb-4">
-                <Calendar className="w-8 h-8 text-yellow-600" />
+            <div className="text-left">
+              <div className="text-left">
+                <Calendar className="text-left" />
               </div>
-              <div className="text-2xl font-bold text-gray-900 mb-2">24/7</div>
-              <div className="text-sm text-gray-600">Content Updates</div>
+              <div className="text-left">24/7</div>
+              <div className="text-left">Content Updates</div>
             </div>
           </div>
         </div>
 
         {/* CTA Section */}
-        <div className="text-center">
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
-            <h3 className="text-2xl font-bold mb-4">
+        <div className="text-left">
+          <div className="text-left">
+            <h3 className="text-left">
               Stay Ahead of the AI Revolution
             </h3>
-            <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
+            <p className="text-left">
               Get the latest insights, case studies, and breakthrough innovations delivered directly to your inbox. Join thousands of enterprise leaders transforming their organizations with AI.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="text-left">
               <Link 
                 href="/blog"
-                className="inline-flex items-center px-8 py-3 bg-white text-blue-600 font-semibold rounded-xl hover:bg-blue-50 transition-colors duration-200"
+                className="text-left"
               >
                 Explore All Content
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <ArrowRight className="text-left" />
               </Link>
               <Link 
                 href="/case-studies"
-                className="inline-flex items-center px-8 py-3 bg-white/20 backdrop-blur-sm text-white font-semibold rounded-xl border border-white/30 hover:bg-white/30 transition-colors duration-200"
+                className="text-left"
               >
                 View Case Studies
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <ArrowRight className="text-left" />
               </Link>
             </div>
           </div>

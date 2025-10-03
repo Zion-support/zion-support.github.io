@@ -11,15 +11,15 @@ export const metadata = {
 
 export default function BlogPost() {
   return (
-    <article className="prose prose-invert max-w-none">
+    <article className="text-left">
       <h1>⚡ Distributed Inference Optimization 2025: Serving AI at Internet Scale</h1>
       
-      <div className="bg-gradient-to-r from-amber-600/20 to-orange-600/20 border border-amber-500/30 rounded-lg p-6 my-8">
-        <h3 className="text-2xl font-bold text-amber-300 mt-0">🌐 Global-Scale AI Serving</h3>
-        <p className="text-lg">
-          <strong>Distributed inference systems</strong> achieving <span className="text-green-400 font-bold">10M+ inferences per second</span>, 
-          <span className="text-green-400 font-bold"> sub-20ms global latency</span>, <span className="text-green-400 font-bold">95% cost reduction</span>, and 
-          <span className="text-green-400 font-bold"> 99.99% availability</span>. Deploy AI models at internet scale with edge computing, 
+      <div className="text-left">
+        <h3 className="text-left">🌐 Global-Scale AI Serving</h3>
+        <p className="text-left">
+          <strong>Distributed inference systems</strong> achieving <span className="text-left">10M+ inferences per second<, 
+          <span className="text-left"> sub-20ms global latency<, <span className="text-left">95% cost reduction<, and 
+          <span className="text-left"> 99.99% availability<. Deploy AI models at internet scale with edge computing, 
           intelligent caching, and adaptive optimization.
         </p>
       </div>
@@ -96,8 +96,8 @@ export default function BlogPost() {
       </p>
 
       <h2>📊 Benchmark Results</h2>
-      <div className="bg-slate-800/50 rounded-lg p-6 my-6">
-        <ul className="space-y-2">
+      <div className="text-left">
+        <ul className="text-left">
           <li>✅ <strong>10M+ inferences per second</strong> on global infrastructure</li>
           <li>✅ <strong>Sub-20ms P99 latency</strong> worldwide with edge deployment</li>
           <li>✅ <strong>95% cost reduction</strong> vs naive cloud-only deployment</li>
@@ -184,9 +184,9 @@ export default function BlogPost() {
 
       <h2>💼 Business Impact</h2>
       
-      <div className="bg-gradient-to-r from-rose-600/20 to-pink-600/20 border border-rose-500/30 rounded-lg p-6 my-8">
-        <h3 className="text-xl font-bold text-rose-300 mt-0">Enterprise ROI</h3>
-        <ul className="space-y-2">
+      <div className="text-left">
+        <h3 className="text-left">Enterprise ROI</h3>
+        <ul className="text-left">
           <li><strong>Infrastructure savings:</strong> 95% cost reduction vs centralized serving</li>
           <li><strong>Improved user experience:</strong> Sub-20ms latency drives 40% engagement increase</li>
           <li><strong>Global reach:</strong> Serve users worldwide with consistent performance</li>
@@ -242,14 +242,14 @@ export default function BlogPost() {
         The only question is: how fast can you deploy it?
       </p>
 
-      <div className="bg-amber-600/20 border border-amber-500/30 rounded-lg p-6 my-8">
-        <h3 className="text-xl font-bold text-amber-300 mt-0">🚀 Deploy AI at Internet Scale</h3>
-        <p className="mb-4">
+      <div className="text-left">
+        <h3 className="text-left">🚀 Deploy AI at Internet Scale</h3>
+        <p className="text-left">
           Zion Tech Group builds production-grade distributed inference infrastructure that combines cutting-edge 
           optimization techniques with enterprise reliability. Our solutions deliver single-digit-millisecond 
           latency globally while reducing costs by 95%.
         </p>
-        <p className="font-semibold text-amber-300">
+        <p className="text-left">
           Contact us to optimize your AI serving infrastructure for internet-scale deployment.
         </p>
       </div>
