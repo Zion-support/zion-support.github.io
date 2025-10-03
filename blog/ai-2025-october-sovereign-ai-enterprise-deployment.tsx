@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 
 export const metadata = {
   title: 'Sovereign AI: The Enterprise Deployment Revolution of October 2025',

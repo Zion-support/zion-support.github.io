@@ -1,6 +1,6 @@
-import { Search, Filter, Star, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, Shield, Settings, Eye, Leaf, CreditCard, Heart, Truck, ShoppingCart, Phone, Mail, MapPin, Globe, Bot, Cpu, Network, Database as DatabaseIcon, Shield as ShieldIcon, Zap as ZapIcon, Building, Factory, Store, Car, Plane, Ship, Home, Hospital, Building2, GraduationCap, Calendar, FileText, BarChart3, Users as UsersIcon, CreditCard as CreditCardIcon, MessageSquare, Camera, Video, Music, BookOpen, Target, TrendingUp, PieChart, Activity, Zap as ZapIcon2, Server, ArrowRight, Rocket } from 'lucide-react';
-import { Search, Filter, Star, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, Shield, Settings, Eye, Leaf, CreditCard, Heart, Truck, ShoppingCart, Phone, Mail, MapPin, Globe, Bot, Cpu, Network, Database as DatabaseIcon, Shield as ShieldIcon, Zap as ZapIcon, Building, Factory, Store, Car, Plane, Ship, Home, Hospital, Building2, GraduationCap, Calendar, FileText, BarChart3, Users as UsersIcon, CreditCard as CreditCardIcon, MessageSquare, Camera, Video, Music, BookOpen, Target, TrendingUp, PieChart, Activity, Package, Wifi } from 'lucide-react';
-  // Micro SAAS Services data
+import { Search, Users, Zap, Database, Shield, CreditCard, Phone, Mail, MapPin, Database as DatabaseIcon, Shield as ShieldIcon, Zap as ZapIcon, Calendar, Users as UsersIcon, CreditCard as CreditCardIcon, Target, Zap as ZapIcon2, ArrowRight, Rocket } from 'lucide-react';
+import { Search, Users, Zap, Database, Shield, CreditCard, Phone, Mail, MapPin, Database as DatabaseIcon, Shield as ShieldIcon, Zap as ZapIcon, Calendar, Users as UsersIcon, CreditCard as CreditCardIcon, Target, Zap as ZapIcon2, ArrowRight, Rocket } from 'lucide-react';
+// Micro SAAS Services data
   const microSaasServices = [
     {
       id: 1,

@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { Sparkles, Brain, Eye, Rocket } from 'lucide-react';
 
 const October2025NewAIContentMegaBanner: React.FC = () => {

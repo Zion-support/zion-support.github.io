@@ -23,6 +23,7 @@ const LazyPressPage = React.lazy(() => import('../app/press/page'));
 const LazyCareersPage = React.lazy(() => import('../app/careers/page'));
 const LazyMarketplacePage = React.lazy(() => import('../app/marketplace/page'));
 const LazyServicesPage = React.lazy(() => import('../app/services/page'));
+// Unused lazy-loaded components removed to fix lint warnings
 
 function App(): JSX.Element {
   return (

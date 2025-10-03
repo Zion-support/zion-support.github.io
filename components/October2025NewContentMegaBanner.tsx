@@ -2,8 +2,7 @@
 
 import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
-import { Rocket, Sparkles, TrendingUp, Award, Heart, Factory, MessageCircle, ArrowRight } from 'lucide-react';
-
+import { Rocket, Sparkles, Heart, Factory, MessageCircle, ArrowRight } from 'lucide-react';
 export default function October2025NewContentMegaBanner() {
   const [isVisible, setIsVisible] = useState(true);
   const [isClosing, setIsClosing] = useState(false);

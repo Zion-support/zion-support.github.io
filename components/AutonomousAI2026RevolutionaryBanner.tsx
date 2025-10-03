@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 
 const AutonomousAI2026RevolutionaryBanner: React.FC = () => {
   return (

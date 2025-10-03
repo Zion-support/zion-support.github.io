@@ -2,7 +2,8 @@ import { Link } from 'react-router-dom';
 import { 
   ArrowRight, 
   Users, 
-  Shield, 
+  Shield,
+  Cloud, 
   Award,
   Target,
   Linkedin,
@@ -12,7 +13,9 @@ import {
   MapPin,
   GraduationCap,
   Briefcase,
-  Lightbulb
+  Lightbulb,
+  Brain,
+  Cpu
 } from 'lucide-react';
 
 export const metadata = {

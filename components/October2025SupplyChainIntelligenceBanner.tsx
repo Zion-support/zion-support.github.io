@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { Link } from 'react-router-dom';
 import { Truck, Network, BarChart3, ArrowRight, CheckCircle2 } from 'lucide-react';
 

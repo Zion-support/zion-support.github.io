@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { Link } from 'react-router-dom';
 import { Rocket, Satellite, Globe, Star, Zap, Award } from 'lucide-react';
 

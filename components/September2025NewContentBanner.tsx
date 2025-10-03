@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { Sparkles, Shield, Brain, Activity, TrendingUp, ArrowRight } from 'lucide-react';
 
 const September2025NewContentBanner = () => {

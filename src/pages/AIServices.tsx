@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { Helmet } from 'react-helmet-async';
 const AIServices: React.FC = () => {
   const services = [
@@ -6,32 +6,38 @@ const AIServices: React.FC = () => {
       name: 'RAG Chatbots for Documents',
       price: '$2,000 - $8,000/mo',
       features: ['Secure retrieval', 'Multi-source connectors', 'Guardrails', 'Analytics dashboard'],
-      link: 'https://ziontechgroup.com/services/ai-services},
+      link: 'https://ziontechgroup.com/services/ai-services'
+    },
     {
       name: 'Intelligent Document Processing (IDP)',
       price: '$1,500 - $6,000/mo',
       features: ['OCR + layout parsing', 'Entity extraction', 'Validation flows', 'Export to ERP/CRM'],
-      link: 'https://ziontechgroup.com/services/ai-services},
+      link: 'https://ziontechgroup.com/services/ai-services'
+    },
     {
       name: 'AI-Powered Workflow Automation',
       price: '$3,000 - $12,000/mo',
       features: ['Process mining', 'RPA integration', 'Decision automation', 'Performance monitoring'],
-      link: 'https://ziontechgroup.com/services/ai-services},
+      link: 'https://ziontechgroup.com/services/ai-services'
+    },
     {
       name: 'Predictive Analytics & Forecasting',
       price: '$2,500 - $10,000/mo',
       features: ['Time series analysis', 'Anomaly detection', 'Custom models', 'Real-time insights'],
-      link: 'https://ziontechgroup.com/services/ai-services},
+      link: 'https://ziontechgroup.com/services/ai-services'
+    },
     {
       name: 'AI Content Generation & Optimization',
       price: '$1,000 - $5,000/mo',
       features: ['Multi-language support', 'Brand voice training', 'SEO optimization', 'Content analytics'],
-      link: 'https://ziontechgroup.com/services/ai-services},
+      link: 'https://ziontechgroup.com/services/ai-services'
+    },
     {
       name: 'Computer Vision & Image Processing',
       price: '$2,000 - $8,000/mo',
       features: ['Object detection', 'Image classification', 'Quality control', 'Automated tagging'],
-      link: 'https://ziontechgroup.com/services/ai-services}
+      link: 'https://ziontechgroup.com/services/ai-services'
+    }
   ];
 
   return (
@@ -71,7 +77,7 @@ const AIServices: React.FC = () => {
                   
                   <a 
                     href={service.link}
-                    className="block w-full bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center
+                    className="block w-full bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center"
                   >
                     Learn More
                   </a>
@@ -134,14 +140,14 @@ const AIServices: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
-                href="/contact
-                className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors
+                href="/contact"
+                className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
               >
                 Get Started Today
               </a>
               <a 
-                href="/case-studies
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-colors
+                href="/case-studies"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-colors"
               >
                 View Case Studies
               </a>
@@ -153,4 +159,4 @@ const AIServices: React.FC = () => {
   );
 };
 
-export default Component;
+export default AIServices;

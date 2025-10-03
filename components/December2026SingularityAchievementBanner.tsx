@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 
 const December2026SingularityAchievementBanner: React.FC = () => {
   return (

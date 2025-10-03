@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { Eye, Camera, CheckCircle, TrendingUp } from 'lucide-react';
 
 const October2025ComputerVisionBanner: React.FC = () => {

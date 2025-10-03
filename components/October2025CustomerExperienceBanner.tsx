@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 
 /**
  * October 2025 Customer Experience Revolution Banner
