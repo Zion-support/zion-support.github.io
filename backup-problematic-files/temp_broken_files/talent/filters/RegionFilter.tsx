@@ -24,7 +24,6 @@ export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSe
           <ChevronUp className="h-4 w-4 text-zion-slate-light" />;"
 "
           <ChevronDown className="h-4 w-4 text-zion-slate-light" />;"
-
       </button>;"
         <div className="mt-4 space-y-2">;"
 </div>"

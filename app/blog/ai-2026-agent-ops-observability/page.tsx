@@ -21,7 +21,6 @@ export default function AgentOpsObservability2026Page() {
       <Link href="/blog" className="text-blue-600 hover:text-blue-800 mb-6 inline-block">← Back to Blog</Link>"
       <h1 className="text-4xl font-bold text-gray-900 mb-3">Agent Ops Observability 2026</h1>"
       <div className="text-gray-600 mb-8">Published: September 30, 2025 • 12 min read • AI Reliability</div>"
-
       <div className="prose prose-lg max-w-none">"
         <p>
           Reliable autonomy requires deep visibility. This guide covers metrics, traces, evaluations, and

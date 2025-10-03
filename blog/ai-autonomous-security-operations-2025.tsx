@@ -347,7 +347,7 @@ export default function AIAutonomousSecurityOperations2025() {
                   specialists will assess your environment and build a custom autonomous security solution.
                 </p>
                 <a 
-                  href="/contact" 
+                  href="/contact"
                   className="inline-block bg-gradient-to-r from-red-500 to-orange-500 text-white font-bold px-8 py-4 rounded-xl hover:from-red-600 hover:to-orange-600 transition-all transform hover:scale-105"
                 >
                   Schedule Autonomous SOC Consultation →

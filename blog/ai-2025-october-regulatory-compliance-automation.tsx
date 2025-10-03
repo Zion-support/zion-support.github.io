@@ -336,19 +336,19 @@ export default function AIRegulatoryCompliance2025() {
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <a 
-                    href="/contact" 
+                    href="/contact"
                     className="bg-gradient-to-r from-indigo-500 to-blue-600 hover:from-indigo-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
                   >
                     Schedule Compliance Assessment
                   </a>
                   <a 
-                    href="/case-studies/financial-services-compliance-transformation-2025" 
+                    href="/case-studies/financial-services-compliance-transformation-2025"
                     className="border-2 border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
                   >
                     View Case Studies
                   </a>
                   <a 
-                    href="/services/ai-compliance-automation" 
+                    href="/services/ai-compliance-automation"
                     className="bg-white/10 hover:bg-white/20 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
                   >
                     Explore Platform

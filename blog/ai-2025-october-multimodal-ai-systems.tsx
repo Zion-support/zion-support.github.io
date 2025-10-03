@@ -284,13 +284,13 @@ export default function MultimodalAISystems2025() {
                   
                   <div className="flex flex-wrap gap-4">
                     <a 
-                      href="/contact" 
+                      href="/contact"
                       className="px-6 py-3 bg-gradient-to-r from-violet-500 to-fuchsia-500 text-white font-semibold rounded-lg hover:from-violet-400 hover:to-fuchsia-400 transition-all shadow-lg hover:shadow-violet-500/50"
                     >
                       Get Expert Consultation
                     </a>
                     <a 
-                      href="/services/ai-solutions" 
+                      href="/services/ai-solutions"
                       className="px-6 py-3 bg-white/10 border border-violet-400/30 text-white font-semibold rounded-lg hover:bg-white/20 transition-all"
                     >
                       Explore AI Solutions

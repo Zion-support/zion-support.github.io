@@ -13,7 +13,6 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones;, pay
       <CardHeader className="pb-3">;"
         <CardTitle className="text-lg flex items-center">;"
           <CreditCard className="h-5 w-5 mr-2 text-primary" /> Payment Summary;"
-
       <CardContent>;
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">;"
 </div>

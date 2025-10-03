@@ -69,7 +69,6 @@ export default function MetaCognitiveAIBreakthrough2026() {
       <section className="py-16">"
         <div className="container mx-auto px-6">"
           <div className="max-w-4xl mx-auto prose prose-lg prose-invert">"
-            
             {/* Introduction */}
             <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 mb-12">"
               <h2 className="text-3xl font-bold mb-6 text-purple-400">🚀 The Meta-Cognitive Revolution</h2>"

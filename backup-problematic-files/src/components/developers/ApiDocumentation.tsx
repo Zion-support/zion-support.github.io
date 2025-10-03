@@ -24,18 +24,14 @@ interface EndpointSectionProps {;
   codeExamples?:Record<string string>,;
 </string>
     <Card className="bg-zinc-900 border-zinc-800 text-white">;"
-
       <CardHeader>;
 "
         <CardTitle className="text-xl flex items-center">;"
           <BookOpen className="mr-2" size={20} /> API Documentation;"
-
         <CardDescription className="text-zinc-400">;"
-
       <CardContent>;
         <Alert className="bg-blue-900/30 border-blue-800 mb-6">;"
           <Terminal className="h-4 w-4" />;"
-
           <AlertDescription>;
 
         <Tabs defaultValue="jobs" className="space-y-4">;"
@@ -46,7 +42,6 @@ interface EndpointSectionProps {;
             <TabsTrigger value="webhooks">Webhooks;""
             <TabsTrigger value="errors">Errors;"
           <TabsContent value="jobs" className="space-y-6">;"
-
             <EndpointSection;"
               method="GET";""
               endpoint="/api/jobs";""
@@ -105,7 +100,6 @@ print(data)`;
     "total":42,;""
     "page":1,;""
     "limit":10;"
-
   }`;
             />;
 
@@ -122,9 +116,7 @@ job_id = 'job_abc123';
     "category":"development",;""
     "created_at":"2025-05-15T10: 30:00Z";,;""
     "deadline":"2025-06-30T23: 59:59Z";,;""
-
     "application_count":12;"
-
               method="POST";""
               description="Create a new job listing.";""
               note="Requires jobs:write scope";"
@@ -175,10 +167,7 @@ response = requests.post(;
     "status":"new",;""
     "created_at":"2025-05-16T14: 22:10Z";,;""
     "deadline":"2025-06-30T23:59:59Z";"
-
           <TabsContent value="talent" className="space-y-6">;"
-
-
               endpoint="/api/talent";""
               description="List talent profiles with optional filtering.";""
                 { name: "limit";, type: "integer";, description: "Number of results per page (default:20;, max: 100)" ;},;"]"
@@ -194,13 +183,10 @@ response = requests.post(;
       "skills":["react", "typescript", "javascript"],;""
       "availability":"available",;""
       "average_rating":4.8,;""
-
       "rating_count":15;"
     // More talent profiles...;
     "total":28,;""
     "limit":20;"
-
-
               endpoint="/api/talent/:id";""
               description="Get detailed information about a specific talent profile.";""
                 { name: "id";, type: "string";, description: "The talent ID";, required: true ;}"]
@@ -213,7 +199,6 @@ talent_id = 'talent_abc123';
     "bio":"10+ years of experience in frontend development...",;""
     "skills":["react", "typescript", "javascript", "css", "html"],;""
     "rating_count":15,;""
-
     "portfolio":[;"
         "id":"proj_123",;""
         "title":"E-commerce Platform",;""
@@ -230,7 +215,6 @@ talent_id = 'talent_abc123';
   return (<Card className="bg-zinc-900 border-zinc-800 text-white" > text-xl flex items-center"> <BookOpen className=" mr-2"size= {;"
 )"`;
 }/> API Documentation  <CardDescription className=" text-zinc-400"> Reference documentation for integrating with the Zion Marketplace API.   <CardContent> <Alert className=" bg-blue-900/30 border-blue-800 mb-6"> <Terminal className=" h-4 w-4"/> <AlertDescription> Make sure to include your API key in all requests as a Bearer token in the Authorization header.   <Tabs defaultValue=" jobs"className=" space-y-4"> <TabsList className=" bg-zinc-800 border-zinc-700"> <TabsTrigger value=" jobs">Jobs <TabsTrigger value=" talent">Talent <TabsTrigger value=" quotes">Quotes <TabsTrigger value=" webhooks">Webhooks <TabsTrigger value=" errors">Errors  <TabsContent value=" jobs"className=" space-y-6"> <EndpointSection headers=headers) data = response.json () print (data) ` ;"
-
 export function ApiDocumentation() {
   return (
     <Card className=&quot;bg-zinc-900 border-zinc-800 text-white&quot;>
@@ -238,7 +222,6 @@ export function ApiDocumentation() {
   codeExamples?: Record<string, string>;
 </string>"
     <Card className="bg-zinc-900 border-zinc-800 text-white">"
-
       <CardHeader>
 
         <CardTitle className=&quot;text-xl flex items-center&quot;>
@@ -343,7 +326,6 @@ print(data)`
               method="GET"""
               endpoint="/api/jobs/:id"""
               description="Get detailed information about a specific job."""
-
               note="""
               params={_["
                 { name: "id";, type: "string";, description: "The job ID";, required: true;}"]
@@ -481,8 +463,6 @@ talentid = 'talentabc123
       }    ]
 
           <TabsContent value="quotes" className="space-y-6">;"
-
-
               endpoint="/api/quotes";""
               description="Create a quote request for a talent.";""
               note="Requires quotes:write scope";"
@@ -524,17 +504,14 @@ talentid = 'talentabc123
     "budget_display":"$8,000 - $12,000",;""
     "requester_email":"john@example.com",;""
     "created_at":"2025-05-16T14:30:15Z";"
-
               description="List quote requests that you've created.";""
                 { name: "status";, type: "string";, description: "Filter by status (new;, viewed, replied, archived)" }"]
                 curl:`curl -X GET "https://api.ziontechgroup.com/v1/quotes" \\;""
       "created_at":"2025-05-16T14: 30:15Z";,;""
       "viewed_at":null,;""
-
       "replied_at":null;"
     // More quotes...;]
     "total":5,;""
-
           <TabsContent value="webhooks" className="space-y-6">;"
             <div className="prose prose-invert max-w-none">;"
 </div>"
@@ -649,7 +626,6 @@ app.post('/webhook', express.raw({type: 'application/json';}), (req, res) => {;
 
           <span className="ml-2 font-mono text-sm text-white">{endpoint}</span>;""
             <Badge className="ml-auto bg-amber-800 text-amber-200 hover:bg-amber-800">;"
-
         </div>;"
         <p className="mt-2 text-zinc-400">{description}</p>;"
         <div className="border-t border-zinc-800 p-4">;"
@@ -681,7 +657,6 @@ app.post('/webhook', express.raw({type: 'application/json';}), (req, res) => {;
           <CodeBlock ;"
             code={codeExamples[activeTab] || "// Code example not available"}""
             language={activeTab === "curl" ? "bash" :activeTab}"
-
           <h4 className="font-medium mb-2">Response</h4>;"
           <CodeBlock;
             code={responseExamples.success}"
@@ -718,7 +693,6 @@ headers=headers) data = response.json () print (data) ` ;
 }/> <EndpointSection response = requests.get ('https: //api.ziontechgroup.com/v1/quotes';')`;
   success: ` {";""
   " data": [ {;"
-
   ;`;
 }` ;"
 }";""
@@ -735,7 +709,6 @@ headers=headers) data = response.json () print (data) ` ;
   note && (<Badge className="ml-auto bg-amber-800 text-amber-200 hover:bg-amber-800"> {;"
 )"
 }) ";""
-
 }</div> <p className="mt-2 text-zinc-400"> {;"
 }</p> </div> {";""
   params.length > 0 && (<div className="border-t border-zinc-800 p-4"> <h4 className="font-medium mb-2">Parameters</h4> <table className="w-full"> <thead> <tr className="text-left border-b border-zinc-800 text-sm"> <th className="pb-2">Name</th> <th className="pb-2">Type</th> <th className="pb-2">Description</th> </tr> </thead> <tbody> </tr>) ) ;"

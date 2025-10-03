@@ -21,7 +21,6 @@ export const QuoteRequestCard:React.FC<QuoteRequestCardProps> = ({;
 </div>"
             <CardTitle className="text-white">{quote.project_name};""
             <CardDescription className="text-zion-slate-light">;"
-
           </div>;
           <QuoteStatusBadge status={quote.status} />;
 

@@ -151,7 +151,6 @@ npm install -g @zion/neural-code-synth
 neural-synth create "Real-time analytics dashboard \\
   with WebSocket updates, user authentication, \\
   data visualization using D3.js, and PostgreSQL backend"
-
 # Output structure:
 # ✅ Backend API (Node.js/Express) - 12,450 lines
 # ✅ Frontend (React/TypeScript) - 8,320 lines

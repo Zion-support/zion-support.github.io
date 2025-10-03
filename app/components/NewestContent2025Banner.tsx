@@ -33,13 +33,11 @@ const NewestContent2025Banner = () => {
 
         {/* Featured Articles Grid */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">"
-          
           {/* Article 1: AI Edge Computing */}
           <Link href="/blog/ai-edge-computing-real-time-2025" className="group">"
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl border-2 border-white/20 hover:border-cyan-400 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/50">"
               {/* Card glow effect */}
               <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/0 via-blue-500/0 to-cyan-500/0 group-hover:from-cyan-500/20 group-hover:via-blue-500/20 group-hover:to-cyan-500/20 transition-all duration-500"></div>"
-              
               <div className="relative p-8">"
                 {/* Icon & Badges */}
                 <div className="flex items-start justify-between mb-6">"
@@ -110,7 +108,6 @@ const NewestContent2025Banner = () => {
           <Link href="/blog/ai-neural-networks-enterprise-transformation-2025" className="group">"
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl border-2 border-white/20 hover:border-purple-400 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/50">"
               <div className="absolute inset-0 bg-gradient-to-br from-purple-500/0 via-pink-500/0 to-purple-500/0 group-hover:from-purple-500/20 group-hover:via-pink-500/20 group-hover:to-purple-500/20 transition-all duration-500"></div>"
-              
               <div className="relative p-8">"
                 <div className="flex items-start justify-between mb-6">"
                   <div className="text-7xl group-hover:scale-110 transition-transform duration-300">"
@@ -174,7 +171,6 @@ const NewestContent2025Banner = () => {
           <Link href="/blog/ai-quantum-security-protocols-2026" className="group">"
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl border-2 border-white/20 hover:border-indigo-400 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-indigo-500/50 border-4 border-yellow-400/50">"
               <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/0 via-purple-500/0 to-indigo-500/0 group-hover:from-indigo-500/20 group-hover:via-purple-500/20 group-hover:to-indigo-500/20 transition-all duration-500"></div>"
-              
               <div className="relative p-8">"
                 <div className="flex items-start justify-between mb-6">"
                   <div className="text-7xl group-hover:scale-110 transition-transform duration-300">"

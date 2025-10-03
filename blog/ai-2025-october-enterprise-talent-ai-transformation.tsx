@@ -406,7 +406,7 @@ export default function EnterpriseAITalentDevelopment2025() {
                   <li>• Learning platform and content library (100+ hours of material)</li>
                 </ul>
                 <a 
-                  href="/contact" 
+                  href="/contact"
                   className="inline-block bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-3 px-8 rounded-xl transition-all duration-300"
                 >
                   Design Your AI Talent Program →

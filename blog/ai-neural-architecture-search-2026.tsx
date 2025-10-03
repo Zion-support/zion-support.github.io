@@ -192,13 +192,13 @@ export default function AINeural ArchitectureSearch2026() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <a 
-                    href="/contact" 
+                    href="/contact"
                     className="bg-violet-600 hover:bg-violet-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors text-center"
                   >
                     Schedule Consultation
                   </a>
                   <a 
-                    href="/services/ai-data-analytics" 
+                    href="/services/ai-data-analytics"
                     className="bg-white/10 hover:bg-white/20 text-white px-8 py-3 rounded-lg font-semibold transition-colors text-center border border-white/30"
                   >
                     Explore AI Services

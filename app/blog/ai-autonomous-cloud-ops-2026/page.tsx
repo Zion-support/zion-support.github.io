@@ -48,7 +48,6 @@ export default function AIAutonomousCloudOps2026() {
       <article className="max-w-4xl mx-auto px-4 py-12">"
         <div className="prose prose-lg max-w-none">"
           <h2 className="text-3xl font-bold text-gray-900 mb-6">The Future of Cloud Operations is Autonomous</h2>"
-          
           <p className="text-lg text-gray-700 mb-6">"
             In 2026, cloud operations are evolving beyond traditional DevOps practices. AI-driven autonomous 
             systems are revolutionizing how we manage infrastructure, achieving unprecedented levels of 
@@ -67,7 +66,6 @@ export default function AIAutonomousCloudOps2026() {
           </div>
 
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Core Components of Autonomous Cloud Operations</h2>"
-
           <h3 className="text-2xl font-bold text-gray-900 mb-4">1. AI-Powered Monitoring & Observability</h3>"
           <p className="text-gray-700 mb-6">"
             Advanced AI systems continuously monitor infrastructure health, application performance, 
@@ -99,7 +97,6 @@ export default function AIAutonomousCloudOps2026() {
           </p>
 
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Implementation Roadmap</h2>"
-
           <div className="grid md:grid-cols-2 gap-6 mb-8">"
             <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-6">"
               <h3 className="text-xl font-bold text-blue-900 mb-3">Phase 1: Foundation (Months 1-3)</h3>"
@@ -122,7 +119,6 @@ export default function AIAutonomousCloudOps2026() {
           </div>
 
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Success Metrics & ROI</h2>"
-
           <div className="overflow-x-auto mb-8">"
             <table className="w-full border-collapse border border-gray-300">"
               <thead>
@@ -157,7 +153,6 @@ export default function AIAutonomousCloudOps2026() {
           </div>
 
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Best Practices for 2026</h2>"
-
           <div className="space-y-6 mb-8">"
             <div className="bg-green-50 border-l-4 border-green-500 p-6">"
               <h3 className="text-lg font-bold text-green-900 mb-2">1. Start with Observability</h3>"

@@ -96,7 +96,6 @@ pr-12325
           />;
 "
             <Badge className="absolute top-2 right-2 bg-primary text-primary-foreground border-none">;"
-
             <Badge;
               variant={stockVariant as any}"
               className="absolute top-2 left-2";"
@@ -111,7 +110,6 @@ pr-12325
           <div className="flex justify-between items-center mb-2">;"
 </div>"
             <Badge variant="outline" className="bg-background text-foreground/80 border-primary/10">;"
-
               <RatingStars value={listing.rating} count={listing.reviewCount} />;            )}
 
           </div>;"
@@ -143,7 +141,6 @@ pr-12325
               )}
               variant="default";""
               className="bg-green-600 hover:bg-green-700 text-white";"
-
               <Button ;"
                 variant="outline" ;"
                 onClick={handleRequestQuote}"

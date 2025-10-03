@@ -348,13 +348,13 @@ const GenerativeAISecurityFramework2025: React.FC = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a 
-              href="/contact" 
+              href="/contact"
               className="bg-gradient-to-r from-red-500 to-orange-600 hover:from-red-400 hover:to-orange-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-red-500/50 text-center"
             >
               Schedule Security Assessment
             </a>
             <a 
-              href="/case-studies" 
+              href="/case-studies"
               className="border-2 border-red-500 text-red-400 hover:bg-red-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 text-center"
             >
               View Security Case Studies

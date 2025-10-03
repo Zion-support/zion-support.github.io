@@ -245,13 +245,13 @@ export default function GenerativeAIDataLakes2025() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <a 
-                    href="/contact" 
+                    href="/contact"
                     className="bg-gradient-to-r from-teal-500 to-emerald-600 hover:from-teal-400 hover:to-emerald-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center"
                   >
                     Schedule Data Assessment
                   </a>
                   <a 
-                    href="/case-studies" 
+                    href="/case-studies"
                     className="bg-white/10 hover:bg-white/20 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 border border-teal-400/30 text-center"
                   >
                     View Data Success Stories

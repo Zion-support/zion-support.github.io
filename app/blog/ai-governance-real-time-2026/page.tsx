@@ -8,7 +8,6 @@ export default function Page() {
     <article className="prose prose-invert max-w-3xl mx-auto py-10">"
       <h1>AI Governance in Real Time 2026: Live Canaries + PR Policy Tests</h1>
       <p className="text-sm opacity-70">Published: 2025-09-30 • Category: AI Governance • 7 min read</p>"
-
       <p>
         Real‑time governance operationalizes responsible AI: PR policy checks prevent regressions pre‑merge and live
         canaries validate behavior post‑deploy. The result is faster iteration with measurable safety guarantees.

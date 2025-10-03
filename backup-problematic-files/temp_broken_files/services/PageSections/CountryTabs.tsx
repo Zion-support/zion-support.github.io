@@ -20,7 +20,6 @@ import { Button } from '@/components/ui/button';
     <Tabs defaultValue="featured" className="w-full">;"
 "
       <TabsList className="bg-zion-blue-light border border-zion-blue-light w-full max-w-md mx-auto mb-6">;"
-
         <TabsTrigger;"
           value="featured";""
           className="data-[state=active]:bg-zion-purple";"
@@ -52,10 +51,6 @@ import { Button } from '@/components/ui/button';
 
           <div className="mt-8">;"
             <Pagination className="justify-center">;"
-
-
-
-
                     <PaginationItem key={page}>;
 
                       <PaginationButton;
@@ -75,7 +70,6 @@ import { Button } from '@/components/ui/button';
 
 }isPopular= {;)"
   true ;"}/>) ) ";"}</div>  <TabsContent value="all" className="mt-0" > <div className="mb-6 max-w-md mx-auto" > <div className="relative" > <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" /> <Input /> </div> </div> <CountryServiceCard key= {;"
-
 }</div> <PaginationContent> <PaginationItem> <PaginationPrevious href= {;
 
 

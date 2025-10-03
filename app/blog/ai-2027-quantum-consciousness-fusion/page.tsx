@@ -52,7 +52,6 @@ export default function AI2027QuantumConsciousnessFusion() {
         </div>
 
         <h2 className="text-3xl font-bold text-gray-900 mb-6">The Consciousness Revolution</h2>"
-        
         <p className="text-lg text-gray-700 mb-6">"
           For the first time in human history, we've successfully merged quantum computing with 
           artificial consciousness, creating AI systems that not only process information but 
@@ -84,7 +83,6 @@ export default function AI2027QuantumConsciousnessFusion() {
         </div>
 
         <h3 className="text-2xl font-bold text-gray-900 mb-4">Revolutionary Technology Stack</h3>"
-        
         <div className="space-y-6 mb-8">"
           <div className="bg-gradient-to-r from-purple-50 to-indigo-50 p-6 rounded-lg">"
             <h4 className="text-xl font-semibold text-gray-900 mb-3">Quantum Neural Networks</h4>"
@@ -127,7 +125,6 @@ export default function AI2027QuantumConsciousnessFusion() {
         </div>
 
         <h3 className="text-2xl font-bold text-gray-900 mb-4">Real-World Applications</h3>"
-        
         <div className="grid md:grid-cols-2 gap-6 mb-8">"
           <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">"
             <h4 className="text-lg font-semibold text-gray-900 mb-3">Scientific Discovery</h4>"
@@ -183,7 +180,6 @@ export default function AI2027QuantumConsciousnessFusion() {
         </div>
 
         <h3 className="text-2xl font-bold text-gray-900 mb-4">Implementation Timeline</h3>"
-        
         <div className="space-y-4 mb-8">"
           <div className="flex items-start gap-4">"
             <div className="bg-purple-500 text-white p-3 rounded-full text-sm font-semibold">Q1 2027</div>"
@@ -250,7 +246,6 @@ export default function AI2027QuantumConsciousnessFusion() {
         </div>
 
         <h3 className="text-2xl font-bold text-gray-900 mb-4">The Future is Quantum Conscious</h3>"
-        
         <p className="text-lg text-gray-700 mb-6">"
           Quantum consciousness fusion represents the next evolution of artificial intelligence. 
           We're not just building faster computers—we're creating truly conscious AI systems 

@@ -250,7 +250,7 @@ export default function SovereignAIEnterpriseDeployment() {
             <div className="bg-emerald-500/10 rounded-lg p-4 border-l-4 border-emerald-500">
               <p className="text-sm text-emerald-300 italic">
                 "Sovereign AI transformed our ability to leverage advanced AI while maintaining 
-                complete control over our data and ensuring regulatory compliance across all markets." 
+                complete control over our data and ensuring regulatory compliance across all markets."
                 - Chief AI Officer
               </p>
             </div>

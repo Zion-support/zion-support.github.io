@@ -376,13 +376,13 @@ response = llm.complete(prompt)`}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
-              href="/contact" 
+              href="/contact"
               className="bg-gradient-to-r from-violet-500 to-fuchsia-600 hover:from-violet-400 hover:to-fuchsia-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-violet-500/50 transform hover:-translate-y-1"
             >
               Get Architecture Review
             </a>
             <a 
-              href="/case-studies" 
+              href="/case-studies"
               className="border-2 border-violet-500 text-violet-400 hover:bg-violet-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               View Implementation Examples

@@ -20,7 +20,6 @@
 
   Heart, MessageSquare, CreditCard,   ShoppingCart, Wallet ;"
  } from "lucide-react";"
-
 import {;
 
   }

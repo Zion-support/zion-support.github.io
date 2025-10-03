@@ -50,13 +50,13 @@ export default function ZeroTrustAISecurity2025() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
-                href="#security-framework" 
+                href="#security-framework"
                 className="bg-gradient-to-r from-red-500 to-orange-600 hover:from-red-400 hover:to-orange-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-red-500/50 transform hover:-translate-y-1"
               >
                 View Security Framework
               </a>
               <a 
-                href="/contact" 
+                href="/contact"
                 className="border-2 border-red-500 text-red-400 hover:bg-red-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
               >
                 Get Security Assessment
@@ -308,7 +308,7 @@ export default function ZeroTrustAISecurity2025() {
             </p>
             
             <a 
-              href="/case-studies/ai-security-transformation-2025" 
+              href="/case-studies/ai-security-transformation-2025"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-red-500 to-orange-600 hover:from-red-400 hover:to-orange-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-red-500/50"
             >
               <Shield className="w-5 h-5" />
@@ -330,13 +330,13 @@ export default function ZeroTrustAISecurity2025() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
-              href="/contact" 
+              href="/contact"
               className="bg-gradient-to-r from-red-500 to-orange-600 hover:from-red-400 hover:to-orange-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-red-500/50"
             >
               Get Security Assessment
             </a>
             <a 
-              href="/services" 
+              href="/services"
               className="border-2 border-red-500 text-red-400 hover:bg-red-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               Explore Security Services

@@ -141,7 +141,7 @@ export default function AINextGenAgenticAISystems() {
               business needs. Our proven frameworks and expert guidance ensure successful deployment and maximum ROI.
             </p>
             <a 
-              href="/contact" 
+              href="/contact"
               className="inline-block bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-3 px-8 rounded-xl transition-all duration-300"
             >
               Schedule a Consultation

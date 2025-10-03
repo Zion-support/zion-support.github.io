@@ -342,13 +342,13 @@ const AIPoweredInfrastructureAsCode2025: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a 
-                href="/contact" 
+                href="/contact"
                 className="bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 text-center"
               >
                 Schedule Infrastructure Assessment
               </a>
               <a 
-                href="/services/ai-infrastructure-platform" 
+                href="/services/ai-infrastructure-platform"
                 className="border-2 border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-blue-900 font-bold py-4 px-8 rounded-lg transition-all duration-300 text-center"
               >
                 Explore AI IaC Solutions

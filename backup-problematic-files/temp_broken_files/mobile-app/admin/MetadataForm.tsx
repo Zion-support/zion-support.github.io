@@ -51,7 +51,6 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form ;}) => {;
                 className="mb-2";"
               <div className="flex flex-wrap gap-2 mt-2">;"
                   <Badge key={index} className="bg-zion-purple/60 hover:bg-zion-purple">;"
-
                     <button;"
                       type="button";"
                       onClick={() => removeKeyword(keyword)}

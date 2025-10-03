@@ -58,7 +58,6 @@ export default function QuantumAISecurityRevolution() {
         <article className="prose prose-lg prose-invert max-w-none">"
           <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 mb-8">"
             <h2 className="text-3xl font-bold text-white mb-6">The Quantum AI Security Crisis and Solution</h2>"
-            
             <p className="text-gray-300 mb-6 text-lg leading-relaxed">"
               As quantum computing advances, traditional encryption methods become vulnerable to quantum attacks. 
               The AI 2027 Quantum Security Revolution introduces quantum-resistant AI systems that protect enterprise 
@@ -85,7 +84,6 @@ export default function QuantumAISecurityRevolution() {
 
           <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 mb-8">"
             <h2 className="text-3xl font-bold text-white mb-6">Enterprise Security Transformation</h2>"
-            
             <div className="grid md:grid-cols-2 gap-6 mb-6">"
               <div className="bg-gradient-to-r from-red-500/10 to-orange-500/10 rounded-xl p-6 border border-red-500/20">"
                 <h3 className="text-xl font-bold text-red-400 mb-3">Before: Traditional Security</h3>"
@@ -113,7 +111,6 @@ export default function QuantumAISecurityRevolution() {
 
           <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 mb-8">"
             <h2 className="text-3xl font-bold text-white mb-6">Fortune 500 Security Success Stories</h2>"
-            
             <div className="space-y-6">"
               <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-xl p-6 border border-blue-500/20">"
                 <h3 className="text-xl font-bold text-blue-400 mb-3">Financial Services Leader</h3>"
@@ -152,7 +149,6 @@ export default function QuantumAISecurityRevolution() {
 
           <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 mb-8">"
             <h2 className="text-3xl font-bold text-white mb-6">Implementation Roadmap</h2>"
-            
             <div className="space-y-6">"
               <div className="bg-gradient-to-r from-indigo-500/10 to-blue-500/10 rounded-xl p-6 border border-indigo-500/20">"
                 <h3 className="text-xl font-bold text-indigo-400 mb-3">Phase 1: Security Assessment (Months 1-2)</h3>"
@@ -197,7 +193,6 @@ export default function QuantumAISecurityRevolution() {
 
           <div className="bg-gradient-to-r from-purple-500/20 to-indigo-500/20 backdrop-blur-lg rounded-2xl p-8 border border-purple-500/30 mb-8">"
             <h2 className="text-3xl font-bold text-white mb-6">The Future of Quantum AI Security</h2>"
-            
             <p className="text-gray-300 mb-6 text-lg leading-relaxed">"
               As quantum computing becomes more accessible, quantum AI security will become the standard for enterprise protection. 
               Early adopters will have a significant competitive advantage in the quantum era.

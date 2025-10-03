@@ -67,10 +67,6 @@ import {
               <Link;
                 href="/";"
                 className="text - gray - 700 "hover":text - blue - 600 font-medium transition-colors";"
-
-
-
-
                           <ArrowRight className="w - 4 h - 4 ml - 2" />;"
                         {solutions && solutions.map((solution, index) => {;
                           }

@@ -80,11 +80,9 @@ export const ActiveFiltersBar:React.FC<ActiveFiltersBarProps> = ({;
             className="h-4 w-4 p-0 hover:bg-transparent";"
             onClick={() => removeFilter(filter.key)}
             <X className="h-3 w-3" />;"
-
         size="sm";"
         onClick={onClearAll}"
         className="text-xs h-6 px-2";"
-
     </div>;
   activeFilters.map (filter => (<Badge key= {;
   filter.key ;

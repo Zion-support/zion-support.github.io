@@ -43,7 +43,6 @@ export default function March2026BreakthroughConsultingPage() {
         <div className="container mx-auto px-6">"
           <div className="max-w-4xl mx-auto prose prose-lg prose-invert">"
             <h2 className="text-4xl font-bold text-white mb-8">🚀 Revolutionary AI Consulting Services</h2>"
-            
             <div className="grid md:grid-cols-3 gap-8 mb-12">"
               <div className="bg-gradient-to-r from-purple-500/20 to-blue-500/20 backdrop-blur-sm rounded-xl p-6 border border-purple-500/30">"
                 <h3 className="text-2xl font-bold text-white mb-4">Meta-Cognitive AI Strategy</h3>"
@@ -86,7 +85,6 @@ export default function March2026BreakthroughConsultingPage() {
             </div>
 
             <h2 className="text-4xl font-bold text-white mb-8">💼 Our Consulting Methodology</h2>"
-            
             <div className="space-y-8 mb-12">"
               <div className="bg-gradient-to-r from-blue-500/20 to-purple-500/20 backdrop-blur-sm rounded-xl p-6 border border-blue-500/30">"
                 <h4 className="text-2xl font-bold text-white mb-4">Phase 1: Discovery & Assessment (2-4 weeks)</h4>"
@@ -154,7 +152,6 @@ export default function March2026BreakthroughConsultingPage() {
             </div>
 
             <h2 className="text-4xl font-bold text-white mb-8">🎯 Industry Expertise</h2>"
-            
             <div className="grid md:grid-cols-2 gap-8 mb-12">"
               <div className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 backdrop-blur-sm rounded-xl p-6 border border-green-500/30">"
                 <h4 className="text-2xl font-bold text-white mb-4">Manufacturing & Industrial</h4>"
@@ -198,7 +195,6 @@ export default function March2026BreakthroughConsultingPage() {
             </div>
 
             <h2 className="text-4xl font-bold text-white mb-8">📊 Proven Results</h2>"
-            
             <div className="grid md:grid-cols-2 gap-8 mb-12">"
               <div className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 backdrop-blur-sm rounded-xl p-6 border border-green-500/30">"
                 <h4 className="text-2xl font-bold text-white mb-4">Client Success Metrics</h4>"
@@ -222,7 +218,6 @@ export default function March2026BreakthroughConsultingPage() {
             </div>
 
             <h2 className="text-4xl font-bold text-white mb-8">🏆 Why Choose Zion Tech Group</h2>"
-            
             <div className="grid md:grid-cols-2 gap-8 mb-12">"
               <div className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 backdrop-blur-sm rounded-xl p-6 border border-cyan-500/30">"
                 <h4 className="text-2xl font-bold text-white mb-4">Unmatched Expertise</h4>"

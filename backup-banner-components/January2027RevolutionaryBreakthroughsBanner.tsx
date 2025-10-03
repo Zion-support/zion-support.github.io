@@ -121,19 +121,19 @@ export default function January2027RevolutionaryBreakthroughsBanner() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                href="/contact" 
+                href="/contact"
                 className="bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
               >
                 Schedule Consultation
               </Link>
               <Link 
-                href="/services" 
+                href="/services"
                 className="bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
               >
                 Explore Services
               </Link>
               <Link 
-                href="/case-studies" 
+                href="/case-studies"
                 className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
               >
                 View All Success Stories

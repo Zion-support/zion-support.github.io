@@ -244,7 +244,7 @@ const AdvancedContentDiscoveryHub: React.FC = () => {
         <div className="text-center mt-12">
           <div className="bg-gradient-to-r from-green-500 to-blue-500 p-1 rounded-full inline-block">
             <Link 
-              href="/contact" 
+              href="/contact"
               className="bg-white text-gray-900 px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-50 transition-all duration-300 inline-flex items-center"
             >
               🚀 Get Personalized Recommendations

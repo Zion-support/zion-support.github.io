@@ -332,7 +332,6 @@ title="Healthcare Solutions - Zion Tech Group""
       description="Advanced healthcare technology solutions for hospitals, clinics, and healthcare providers. HIPAA compliant and patient-focused.""
       keywords="healthcare solutions, HIPAA compliance, electronic health records, patient management, healthcare technology">;"
       <div className="min-h-screen bg-white">;"
-
         {/* Hero Section */}
     >
       <div className="min-h-screen bg-white">"

@@ -278,13 +278,13 @@ export default function AutonomousMultiAgentEnterpriseSystems2025() {
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4">
                     <a 
-                      href="/contact" 
+                      href="/contact"
                       className="inline-block bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 text-center shadow-lg hover:shadow-purple-500/50"
                     >
                       Schedule Strategy Session
                     </a>
                     <a 
-                      href="/services/ai-autonomous-operations" 
+                      href="/services/ai-autonomous-operations"
                       className="inline-block border-2 border-purple-400 text-purple-300 hover:bg-purple-400/20 font-bold py-4 px-8 rounded-xl transition-all duration-300 text-center"
                     >
                       Explore Multi-Agent Solutions

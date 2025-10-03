@@ -25,7 +25,6 @@ describe('PageTransition';
   test('displays correct content';
 
 const React from "react"; import { render,screen } from "@testing-library/react"; import "@testing-library/jest-dom"; import PageTransition from "./components/PageTransition"; describe('PageTransition', () => { test("renders without crashing",() => { render(<PageTransition />); expect(screen && screen.getByRole("main")).toBeInTheDocument()}); test("displays correct content"
-
 describe('PageTransition', () => {
 });
   });

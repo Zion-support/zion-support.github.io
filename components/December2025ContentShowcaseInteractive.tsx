@@ -216,19 +216,19 @@ const December2025ContentShowcaseInteractive: React.FC = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
-              href="/contact" 
+              href="/contact"
               className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
             >
               Start Your Transformation
             </a>
             <a 
-              href="/services" 
+              href="/services"
               className="bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
             >
               Explore Our Solutions →
             </a>
             <a 
-              href="/case-studies" 
+              href="/case-studies"
               className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               View All Success Stories

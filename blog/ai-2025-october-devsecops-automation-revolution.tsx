@@ -290,7 +290,7 @@ export default function AIDevSecOpsAutomationRevolution2025() {
 
               <div className="text-center py-8">
                 <a 
-                  href="/contact" 
+                  href="/contact"
                   className="inline-block px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-bold rounded-xl shadow-lg hover:shadow-purple-500/50 transition-all duration-300 transform hover:scale-105"
                 >
                   Schedule DevSecOps Consultation →

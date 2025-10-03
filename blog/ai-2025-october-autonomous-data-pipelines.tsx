@@ -12,8 +12,8 @@ const AutonomousDataPipelines2025 = () => {
       </div>
 
       <img 
-        src="/images/autonomous-data-pipelines-2025.jpg" 
-        alt="Autonomous Data Pipelines" 
+        src="/images/autonomous-data-pipelines-2025.jpg"
+        alt="Autonomous Data Pipelines"
         className="w-full rounded-lg shadow-lg mb-8"
       />
 

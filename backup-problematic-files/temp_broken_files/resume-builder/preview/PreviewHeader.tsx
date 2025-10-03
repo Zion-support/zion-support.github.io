@@ -32,7 +32,6 @@ interface PreviewHeaderProps {;
       >;
 "
         <ArrowLeft className="h-4 w-4" />;"
-
       ;"`;
       <div className={`flex ${isMobile ? 'flex-col' :'flex-row'} space-${isMobile ? 'y-2' :'x-2'} no-print`}>;
         <PdfExportButton resume={resume} />;

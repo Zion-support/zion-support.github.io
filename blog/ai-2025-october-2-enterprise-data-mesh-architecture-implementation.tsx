@@ -231,7 +231,7 @@ export default function EnterpriseDataMeshArchitecture2025() {
                   architectures. Let us guide your transformation journey.
                 </p>
                 <a 
-                  href="/contact" 
+                  href="/contact"
                   className="inline-block bg-gradient-to-r from-orange-500 to-amber-500 text-white font-bold py-4 px-8 rounded-xl hover:from-orange-600 hover:to-amber-600 transition-all duration-300 shadow-lg hover:shadow-xl"
                 >
                   Schedule Your Consultation

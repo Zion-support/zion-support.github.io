@@ -280,13 +280,13 @@ export default function AutonomousCloudInfrastructureOrchestration2025() {
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4">
                     <a 
-                      href="/contact" 
+                      href="/contact"
                       className="inline-block bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 text-center shadow-lg hover:shadow-emerald-500/50"
                     >
                       Get Infrastructure Assessment
                     </a>
                     <a 
-                      href="/services/ai-platform-architecture" 
+                      href="/services/ai-platform-architecture"
                       className="inline-block border-2 border-emerald-400 text-emerald-300 hover:bg-emerald-400/20 font-bold py-4 px-8 rounded-xl transition-all duration-300 text-center"
                     >
                       Explore Cloud Solutions

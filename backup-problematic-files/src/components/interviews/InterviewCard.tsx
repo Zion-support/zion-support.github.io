@@ -24,11 +24,9 @@ pr-12325
 
 } ;
 </p>  <CardContent className="pt-2" > <div className="space-y-3" > <div className="flex items-start gap-3" > <Clock className="h-4 w-4 mt-0.5 text-muted-foreground" /> <div> </p> </div> </div> <div> <p className="font-medium capitalize" > {;"
-
 }</p> </div> </div>) ;"
 }</div>) ";""
 }</div>  <AlertDialog> <AlertDialogTrigger asChild> <Button variant="outline" size="sm" className="w-full" > <X className="h-4 w-4 mr-2" /> Cancel Request   <AlertDialogContent className="bg-zion-blue-dark border-zion-blue-light text-white" > <AlertDialogHeader> <AlertDialogTitle>Cancel Interview Request <AlertDialogDescription> Are you sure you want to cancel this interview request? This action cannot be undone.   <AlertDialogFooter> <AlertDialogCancel>Go Back <AlertDialogAction onClick={;"
-
 }> Cancel Interview    ) ;
 }Decline  </div>) ;
   isInterviewConfirmed && !isInterviewPast && (<> {;)"

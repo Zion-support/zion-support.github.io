@@ -225,13 +225,13 @@ export default function AI2026AprilMegaBreakthroughRevolution() {
             
             <div className="flex flex-col sm:flex-row gap-4">
               <Link 
-                href="/contact" 
+                href="/contact"
                 className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1 text-center"
               >
                 Start Your Transformation
               </Link>
               <Link 
-                href="/case-studies/ai-2026-april-mega-breakthrough-15-billion-success" 
+                href="/case-studies/ai-2026-april-mega-breakthrough-15-billion-success"
                 className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 text-center"
               >
                 View Success Stories

@@ -326,7 +326,7 @@ export default function FinancialServicesAITransformation2026() {
               <strong>Issue:</strong> Resistance from 15,000+ employees concerned about AI replacing jobs.
             </p>
             <p className="text-gray-700">
-              <strong>Solution:</strong> Comprehensive reskilling program training employees as "AI augmented workers," 
+              <strong>Solution:</strong> Comprehensive reskilling program training employees as "AI augmented workers,"
               transparent communication about job transitions (redeployment, not reduction), and demonstrating AI as 
               productivity multiplier rather than replacement.
             </p>

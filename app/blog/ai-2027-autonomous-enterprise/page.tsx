@@ -82,10 +82,8 @@ export default function AI2027AutonomousEnterprise() {
 
           <section>
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Autonomous Enterprise Architecture</h2>"
-            
             <div className="bg-gray-50 p-6 rounded-lg mb-6">"
               <h3 className="text-xl font-bold text-gray-900 mb-4">The Four-Layer Autonomous Stack</h3>"
-              
               <div className="space-y-4">"
                 <div className="bg-white p-4 rounded-lg border-l-4 border-blue-500">"
                   <h4 className="font-bold text-blue-900 mb-2">1. Sensory Layer</h4>"
@@ -124,7 +122,6 @@ export default function AI2027AutonomousEnterprise() {
 
           <section>
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Industry Transformation Examples</h2>"
-            
             <div className="space-y-6 mb-6">"
               <div className="bg-gradient-to-r from-green-50 to-blue-50 p-6 rounded-lg">"
                 <h3 className="text-xl font-bold text-gray-900 mb-3">🏭 Manufacturing: Lights-Out Operations</h3>"
@@ -196,7 +193,6 @@ export default function AI2027AutonomousEnterprise() {
 
           <section>
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Implementation Roadmap</h2>"
-            
             <div className="space-y-4 mb-6">"
               <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-400">"
                 <h4 className="font-bold text-blue-800 mb-2">Phase 1: Foundation (Months 1-3)</h4>"
@@ -238,7 +234,6 @@ export default function AI2027AutonomousEnterprise() {
 
           <section>
             <h2 className="text-3xl font-bold text-gray-900 mb-4">ROI and Business Impact</h2>"
-            
             <div className="bg-gradient-to-r from-indigo-50 to-purple-50 p-6 rounded-lg mb-6">"
               <h3 className="text-xl font-bold text-gray-900 mb-4">Quantified Benefits of Autonomous Operations</h3>"
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">"

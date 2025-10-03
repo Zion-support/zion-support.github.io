@@ -294,13 +294,13 @@ export default function AICybersecurityThreatIntelligence2025() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
-              href="/contact" 
+              href="/contact"
               className="bg-red-500 hover:bg-red-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105"
             >
               Request Security Assessment
             </a>
             <a 
-              href="/blog" 
+              href="/blog"
               className="border-2 border-red-500 text-red-400 hover:bg-red-500 hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
             >
               Explore Security Guides

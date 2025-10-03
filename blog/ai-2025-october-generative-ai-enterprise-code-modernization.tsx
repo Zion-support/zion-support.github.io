@@ -382,7 +382,7 @@ const AI2025OctoberGenerativeAIEnterpriseCodeModernization = () => {
               </ol>
               
               <a 
-                href="/contact" 
+                href="/contact"
                 className="inline-block bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-3 px-8 rounded-xl transition-all duration-300"
               >
                 Schedule Modernization Assessment →

@@ -79,7 +79,6 @@ type Service = typeof enhancedRealMicroSaasServices[number];
 }<a href="/market-pricing" className="inline-block mt-2 text-cyan-300 hover: text-cyan-200">See average market prices →</a> return (<EnhancedLayout> <Head> <title>Service Not Found - Zion Tech Solutions</title>  </div>  return (<EnhancedLayout> <Head> <title> {;"
   service && service.name ;"
 }- Zion Tech Solutions</title>   <Link href="/services"><a className="text-sm text-blue-600 hover:underline">Back to Services</a> ;""
-
 }| Zion Tech Group</title>;)
 }/>  </li>) );
 }</ul> </div>) );

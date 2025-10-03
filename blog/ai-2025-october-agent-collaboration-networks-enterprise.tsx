@@ -283,13 +283,13 @@ export default function AIAgentCollaborationNetworksEnterprise2025() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <a 
-                    href="/contact" 
+                    href="/contact"
                     className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center"
                   >
                     Schedule Consultation
                   </a>
                   <a 
-                    href="/services/ai-automation" 
+                    href="/services/ai-automation"
                     className="bg-white/10 hover:bg-white/20 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 border border-purple-400/30 text-center"
                   >
                     Explore AI Services

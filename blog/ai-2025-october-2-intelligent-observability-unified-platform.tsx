@@ -193,7 +193,7 @@ export default function IntelligentObservabilityUnifiedPlatform2025() {
                   help you design and implement a unified platform tailored to your organization's needs.
                 </p>
                 <a 
-                  href="/contact" 
+                  href="/contact"
                   className="inline-block bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-bold py-4 px-8 rounded-xl hover:from-emerald-600 hover:to-teal-600 transition-all duration-300 shadow-lg hover:shadow-xl"
                 >
                   Get Started Today

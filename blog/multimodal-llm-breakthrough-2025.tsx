@@ -193,7 +193,7 @@ const MultimodalLLMBreakthrough2025: React.FC = () => {
                 Transform your business with cutting-edge multimodal AI solutions from Zion Tech.
               </p>
               <a 
-                href="/contact" 
+                href="/contact"
                 className="inline-block bg-white text-rose-600 font-bold py-4 px-8 rounded-xl hover:bg-gray-100 transition-all duration-300 shadow-lg"
               >
                 Schedule Demo

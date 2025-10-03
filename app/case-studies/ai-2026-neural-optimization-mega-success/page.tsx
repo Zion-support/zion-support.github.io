@@ -53,7 +53,6 @@ export default function CaseStudy() {
         </div>
 
         <h2 className="text-3xl font-bold text-white mb-6">🏢 Company Background</h2>"
-        
         <div className="bg-gradient-to-r from-blue-900/20 to-cyan-900/20 border border-blue-500/30 rounded-xl p-6 mb-8">"
           <h3 className="text-xl font-bold text-white mb-4">Client Profile</h3>"
           <div className="grid md:grid-cols-2 gap-6">"
@@ -81,7 +80,6 @@ export default function CaseStudy() {
         </div>
 
         <h2 className="text-3xl font-bold text-white mb-6">🎯 The Challenge</h2>"
-        
         <p className="text-gray-300 mb-6">"
           The client was facing significant challenges with their AI infrastructure that were impacting both 
           performance and profitability. Their 200+ production AI models were consuming massive computational 
@@ -98,14 +96,12 @@ export default function CaseStudy() {
         </ul>
 
         <h2 className="text-3xl font-bold text-white mb-6">💡 The Solution</h2>"
-        
         <p className="text-gray-300 mb-6">"
           We implemented our Advanced Neural Optimization Revolution across their entire AI infrastructure, 
           applying quantum-enhanced pruning, adaptive neural architecture search, and neuromorphic computing integration.
         </p>
 
         <h3 className="text-2xl font-bold text-white mb-4">Implementation Phases</h3>"
-        
         <div className="space-y-6 mb-8">"
           <div className="bg-gradient-to-r from-purple-900/20 to-indigo-900/20 border border-purple-500/30 rounded-xl p-6">"
             <h4 className="text-xl font-bold text-white mb-3">Phase 1: Assessment & Planning (Weeks 1-2)</h4>"
@@ -142,7 +138,6 @@ export default function CaseStudy() {
         </div>
 
         <h2 className="text-3xl font-bold text-white mb-6">📊 Results & Impact</h2>"
-        
         <div className="grid md:grid-cols-2 gap-6 mb-8">"
           <div className="bg-gradient-to-br from-green-900/20 to-emerald-900/20 border border-green-500/30 rounded-xl p-6">"
             <h4 className="text-xl font-bold text-white mb-4">Performance Improvements</h4>"
@@ -190,7 +185,6 @@ export default function CaseStudy() {
         </div>
 
         <h3 className="text-2xl font-bold text-white mb-4">Detailed Performance Metrics</h3>"
-        
         <div className="overflow-x-auto mb-8">"
           <table className="w-full border border-gray-600 rounded-lg">"
             <thead className="bg-gray-800">"
@@ -237,7 +231,6 @@ export default function CaseStudy() {
         </div>
 
         <h2 className="text-3xl font-bold text-white mb-6">💰 ROI Analysis</h2>"
-        
         <div className="bg-gradient-to-r from-yellow-900/20 to-orange-900/20 border border-yellow-500/30 rounded-xl p-6 mb-8">"
           <h3 className="text-xl font-bold text-white mb-4">12-Month ROI Breakdown</h3>"
           <div className="grid md:grid-cols-2 gap-6">"
@@ -267,7 +260,6 @@ export default function CaseStudy() {
         </div>
 
         <h2 className="text-3xl font-bold text-white mb-6">🎯 Key Success Factors</h2>"
-        
         <ul className="text-gray-300 space-y-4 mb-8">"
           <li>• <strong className="text-white">Executive Sponsorship:</strong> Strong leadership support ensured resource allocation and organizational alignment</li>"
           <li>• <strong className="text-white">Phased Approach:</strong> Gradual implementation minimized risk and allowed for continuous optimization</li>"
@@ -277,7 +269,6 @@ export default function CaseStudy() {
         </ul>
 
         <h2 className="text-3xl font-bold text-white mb-6">🔮 Future Roadmap</h2>"
-        
         <p className="text-gray-300 mb-6">"
           Building on this success, the client is now implementing additional AI optimization initiatives:
         </p>

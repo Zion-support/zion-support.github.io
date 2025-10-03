@@ -55,7 +55,6 @@ export default function MicroCRM() {
             <div className="mt-4 flex gap-3">"
               <Link href="/contact" className="px-5 py-2 rounded-lg bg-blue-600 text-white">Start trial""
               <a href=""https": //ziontechgroup.com/services" className="px-5 py-2 rounded-lg border">All Services</a>"
-
         </section>
       </main>
     </>

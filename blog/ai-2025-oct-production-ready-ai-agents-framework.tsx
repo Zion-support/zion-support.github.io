@@ -692,7 +692,7 @@ const ProductionReadyAIAgentsFramework: React.FC = () => {
             <li>✅ 90-day success guarantee</li>
           </ul>
           <a 
-            href="/contact" 
+            href="/contact"
             className="inline-block bg-white text-green-600 px-8 py-3 rounded-lg font-bold hover:bg-green-50 transition-colors"
           >
             Schedule Your Assessment →
