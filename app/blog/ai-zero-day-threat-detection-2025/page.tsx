@@ -1,5 +1,5 @@
-import React from 'react';
-import Link from 'next/link';
+// import React from 'react';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'AI-Powered Zero-Day Threat Detection: The Future of Cybersecurity in 2025',
@@ -25,7 +25,7 @@ export default function AIZeroDayThreatDetection() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
       <div className="mb-8">
-        <Link href="/blog" className="text-blue-600 hover:text-blue-700 mb-4 inline-block">
+        <Link to="/blog" className="text-blue-600 hover:text-blue-700 mb-4 inline-block">
           ← Back to Blog
         </Link>
         <div className="flex items-center gap-2 mb-4">
@@ -289,8 +289,7 @@ export default function AIZeroDayThreatDetection() {
             and achieve 99.97% protection with zero false positives.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/services/ai-cybersecurity"
+            <Link to="/services/ai-cybersecurity"
               className="bg-white text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Explore Security Solutions

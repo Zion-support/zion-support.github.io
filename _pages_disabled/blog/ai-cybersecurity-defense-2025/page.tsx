@@ -1,5 +1,5 @@
-import React from 'react';
-import Link from 'next/link';
+// import React from 'react';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'AI Cybersecurity Defense 2025: 99.8% Threat Detection & Zero-Day Protection | Zion Tech Group',

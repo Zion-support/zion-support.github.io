@@ -1,185 +1,208 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Zap, Mail, Phone, MapPin, Twitter, Linkedin, Github, Globe } from 'lucide-react';
+import { 
+  Twitter, 
+  Linkedin, 
+  Github, 
+  Mail, 
+  Phone, 
+  MapPin,
+  ArrowUp
+} from 'lucide-react';
 
-const ModernFooter: React.FC = () => {
+const Footer: React.FC = () => {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   const currentYear = new Date().getFullYear();
 
-  const footerSections = [
-    {
-      title: 'Solutions',
-      links: [
-        { label: 'Enterprise Solutions', path: '/solutions/enterprise' },
-        { label: 'SMB Solutions', path: '/solutions/smb' },
-        { label: 'Startup Solutions', path: '/solutions/startup' },
-        { label: 'Government Solutions', path: '/solutions/government' },
-        { label: 'Healthcare Solutions', path: '/solutions/healthcare' },
-        { label: 'Financial Solutions', path: '/solutions/financial' },
-      ]
-    },
-    {
-      title: 'Services',
-      links: [
-        { label: 'AI Workflow Automation', path: '/services/ai-workflow-automation' },
-        { label: 'AI Virtual Assistant', path: '/services/ai-virtual-assistant' },
-        { label: 'AI Data Analytics', path: '/services/ai-data-analytics' },
-        { label: 'Cybersecurity AI', path: '/services/advanced-cybersecurity-ai' },
-        { label: 'Quantum Computing', path: '/quantum-computing' },
-        { label: 'Cloud & DevOps', path: '/cloud-devops' },
-      ]
-    },
-    {
-      title: 'Resources',
-      links: [
-        { label: 'Case Studies', path: '/case-studies' },
-        { label: 'White Papers', path: '/white-papers' },
-        { label: 'Webinars', path: '/webinars' },
-        { label: 'Documentation', path: '/docs' },
-        { label: 'Developer Tools', path: '/developer-tools' },
-        { label: 'Training', path: '/training' },
-        { label: 'Blog', path: '/blog' },
-      ]
-    },
-    {
-      title: 'Company',
-      links: [
-        { label: 'About Us', path: '/about' },
-        { label: 'Our Team', path: '/team' },
-        { label: 'Partners', path: '/partners' },
-        { label: 'News & Events', path: '/news' },
-        { label: 'Press Kit', path: '/press' },
-        { label: 'Investors', path: '/investors' },
-        { label: 'Careers', path: '/careers' },
-      ]
-    }
-  ];
-
-  const quickActions = [
-    { label: 'View Pricing', path: '/pricing' },
-    { label: 'Schedule Demo', path: '/demo' },
-    { label: 'Get Support', path: '/support' },
-    { label: 'Request Quote', path: '/request-quote' },
-  ];
-
-  const legalLinks = [
-    { label: 'Privacy Policy', path: '/privacy' },
-    { label: 'Terms of Service', path: '/terms' },
-    { label: 'Cookie Policy', path: '/cookies' },
-  ];
+  const footerLinks = {
+    solutions: [
+      { name: 'AI Solutions', href: '/solutions/ai' },
+      { name: 'Cloud Computing', href: '/solutions/cloud' },
+      { name: 'Cybersecurity', href: '/solutions/security' },
+      { name: 'Data Analytics', href: '/solutions/analytics' },
+      { name: 'IoT Solutions', href: '/solutions/iot' }
+    ],
+    services: [
+      { name: 'Consulting', href: '/services/consulting' },
+      { name: 'Development', href: '/services/development' },
+      { name: 'Integration', href: '/services/integration' },
+      { name: 'Support', href: '/services/support' },
+      { name: 'Training', href: '/services/training' }
+    ],
+    resources: [
+      { name: 'Blog', href: '/blog' },
+      { name: 'Case Studies', href: '/case-studies' },
+      { name: 'Documentation', href: '/docs' },
+      { name: 'API Reference', href: '/api' },
+      { name: 'Community', href: '/community' }
+    ],
+    company: [
+      { name: 'About Us', href: '/about' },
+      { name: 'Team', href: '/team' },
+      { name: 'Careers', href: '/careers' },
+      { name: 'Press', href: '/press' },
+      { name: 'Contact', href: '/contact' }
+    ]
+  };
 
   const socialLinks = [
-    { icon: Twitter, href: 'https://twitter.com/ziontechgroup', label: 'Twitter' },
-    { icon: Linkedin, href: 'https://linkedin.com/company/zion-tech-group', label: 'LinkedIn' },
-    { icon: Github, href: 'https://github.com/ZionClouds', label: 'GitHub' },
-    { icon: Globe, href: 'https://ziontechgroup.com', label: 'Website' },
+    { name: 'Twitter', icon: Twitter, href: 'https://twitter.com/ziontechgroup' },
+    { name: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com/company/ziontechgroup' },
+    { name: 'GitHub', icon: Github, href: 'https://github.com/ziontechgroup' }
   ];
 
   return (
-    <footer className="bg-slate-900 border-t border-slate-800">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
+    <footer className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+      {/* Main Footer Content */}
+      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
           {/* Company Info */}
-          <div className="lg:col-span-2">
-            <Link to="/" className="flex items-center space-x-2 text-white hover:text-blue-400 transition-colors mb-4">
-              <Zap className="h-8 w-8 text-blue-400" />
-              <span className="text-xl font-bold">Zion Tech Group</span>
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <Link to="/" className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Z</span>
+              </div>
+              <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Zion Tech Group</span>
             </Link>
-            <p className="text-slate-400 mb-6 max-w-md">
-              Leading provider of cutting-edge AI and IT solutions that transform businesses. 
-              We deliver innovative technology solutions to help organizations thrive in the digital age.
-            </p>
             
+            <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              Leading provider of advanced AI and IT solutions. Transform your business with 
+              cutting-edge technology, automation, and intelligent systems.
+            </p>
+
             {/* Contact Info */}
-            <div className="space-y-3">
-              <div className="flex items-center space-x-3 text-slate-400">
-                <Mail className="h-4 w-4" />
-                <span>kleber@ziontechgroup.com</span>
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <Mail className="w-5 h-5" />
+                <span>contact@ziontechgroup.com</span>
               </div>
-              <div className="flex items-center space-x-3 text-slate-400">
-                <Phone className="h-4 w-4" />
-                <span>+1 302 464 0950</span>
+              <div className="flex items-center gap-2">
+                <Phone className="w-5 h-5" />
+                <span>+1 (555) ZION-TECH</span>
               </div>
-              <div className="flex items-center space-x-3 text-slate-400">
-                <MapPin className="h-4 w-4" />
-                <span>364 E Main St STE 1008, Middletown DE 19709</span>
+              <div className="flex items-center gap-2">
+                <MapPin className="w-5 h-5" />
+                <span>San Francisco, CA</span>
               </div>
             </div>
 
             {/* Social Links */}
-            <div className="flex space-x-4 mt-6">
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
               {socialLinks.map((social) => (
                 <a
-                  key={social.label}
+                  key={social.name}
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-slate-400 hover:text-blue-400 transition-colors"
-                  aria-label={social.label}
-                >
-                  <social.icon className="h-5 w-5" />
+                  className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                  <social.icon className="w-5 h-5" />
                 </a>
               ))}
             </div>
           </div>
 
-          {/* Footer Sections */}
-          {footerSections.map((section) => (
-            <div key={section.title}>
-              <h3 className="text-white font-semibold mb-4">{section.title}</h3>
-              <ul className="space-y-3">
-                {section.links.map((link) => (
-                  <li key={link.path}>
-                    <Link
-                      to={link.path}
-                      className="text-slate-400 hover:text-white transition-colors text-sm"
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
+          {/* Solutions */}
+          <div>
+            <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Solutions</h3>
+            <ul className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              {footerLinks.solutions.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    to={link.href}
+                    className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
 
-        {/* Quick Actions */}
-        <div className="mt-8 pt-8 border-t border-slate-800">
-          <div className="flex flex-wrap items-center justify-between">
-            <div className="flex flex-wrap gap-4 mb-4">
-              <span className="text-slate-400 text-sm font-medium">Quick Actions:</span>
-              {quickActions.map((action) => (
-                <Link
-                  key={action.path}
-                  to={action.path}
-                  className="text-blue-400 hover:text-blue-300 transition-colors text-sm"
-                >
-                  {action.label}
-                </Link>
+          {/* Services */}
+          <div>
+            <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Services</h3>
+            <ul className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              {footerLinks.services.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    to={link.href}
+                    className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                    {link.name}
+                  </Link>
+                </li>
               ))}
-            </div>
-            <div className="flex flex-wrap gap-4">
-              {legalLinks.map((link) => (
-                <Link
-                  key={link.path}
-                  to={link.path}
-                  className="text-slate-400 hover:text-white transition-colors text-sm"
-                >
-                  {link.label}
-                </Link>
+            </ul>
+          </div>
+
+          {/* Resources */}
+          <div>
+            <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Resources</h3>
+            <ul className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              {footerLinks.resources.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    to={link.href}
+                    className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                    {link.name}
+                  </Link>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         </div>
 
-        {/* Copyright */}
-        <div className="mt-8 pt-8 border-t border-slate-800">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-slate-400 text-sm">
+        {/* Newsletter Signup */}
+        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Stay Updated</h3>
+            <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              Get the latest insights on AI and technology trends.
+            </p>
+            <form className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="px-4 py-2 rounded-lg bg-slate-800 text-white placeholder-slate-400 border border-slate-700 focus:border-blue-500 focus:outline-none"
+              />
+              <button
+                type="submit"
+                className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                Subscribe
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      {/* Bottom Footer */}
+      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
               © {currentYear} Zion Tech Group. All rights reserved.
-            </p>
-            <p className="text-slate-500 text-sm mt-2 md:mt-0">
-              Built with cutting-edge AI and modern web technologies
-            </p>
+            </div>
+            
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <Link to="/privacy" className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                Privacy Policy
+              </Link>
+              <Link to="/terms" className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                Terms of Service
+              </Link>
+              <Link to="/cookies" className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                Cookie Policy
+              </Link>
+            </div>
+
+            {/* Back to Top Button */}
+            <button
+              onClick={scrollToTop}
+              className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <ArrowUp className="w-5 h-5" />
+              <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Back to Top</span>
+            </button>
           </div>
         </div>
       </div>
@@ -187,5 +210,4 @@ const ModernFooter: React.FC = () => {
   );
 };
 
-export default ModernFooter;
-
+export default Footer;

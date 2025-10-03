@@ -1,5 +1,5 @@
-import React from 'react';
-import Link from 'next/link';
+// import React from 'react';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'AI 2027: Quantum Computing Breakthrough for Enterprise - Zion Tech Group',
@@ -16,7 +16,7 @@ export default function AI2027QuantumBreakthroughEnterprise() {
   return (
     <div className="max-w-4xl mx-auto py-8 px-4">
       <div className="mb-8">
-        <Link href="/blog" className="text-blue-600 hover:text-blue-800 mb-4 inline-block">
+        <Link to="/blog" className="text-blue-600 hover:text-blue-800 mb-4 inline-block">
           ← Back to Blog
         </Link>
         <div className="flex items-center gap-2 mb-4">
@@ -262,20 +262,17 @@ export default function AI2027QuantumBreakthroughEnterprise() {
             Our quantum-AI experts are ready to guide you through this revolutionary transformation.
           </p>
           <div className="flex flex-wrap gap-4">
-            <Link 
-              href="/services/ai-2027-quantum-computing-solutions" 
+            <Link to="/services/ai-2027-quantum-computing-solutions" 
               className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-indigo-600 transition-colors"
             >
               Get Quantum AI Solutions
             </Link>
-            <Link 
-              href="/case-studies/quantum-ai-breakthrough-success" 
+            <Link to="/case-studies/quantum-ai-breakthrough-success" 
               className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-600 transition-colors"
             >
               View Success Stories
             </Link>
-            <Link 
-              href="/contact" 
+            <Link to="/contact" 
               className="bg-gray-800 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-900 transition-colors"
             >
               Contact Quantum Experts

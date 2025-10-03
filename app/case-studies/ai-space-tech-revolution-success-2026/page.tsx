@@ -1,5 +1,5 @@
-import React from 'react';
-import Link from 'next/link';
+// import React from 'react';
+import { Link } from 'react-router-dom';
 import { Rocket, Satellite, Globe, Star, Zap, Award } from 'lucide-react';
 
 export const metadata = {
@@ -393,8 +393,7 @@ export default function AISpaceTechRevolutionSuccess() {
           space missions and exploration capabilities.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link
-            href="/blog/ai-space-tech-2026"
+          <Link to="/blog/ai-space-tech-2026"
             className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
           >
             Read Space Tech Guide
@@ -412,7 +411,7 @@ export default function AISpaceTechRevolutionSuccess() {
       <div className="mt-12 pt-8 border-t border-gray-200">
         <h3 className="text-2xl font-bold text-gray-900 mb-6">Related Space Technology Content</h3>
         <div className="grid md:grid-cols-2 gap-6">
-          <Link href="/blog/ai-space-tech-2026" className="group">
+          <Link to="/blog/ai-space-tech-2026" className="group">
             <div className="bg-gradient-to-r from-purple-50 to-blue-50 p-6 rounded-lg border border-purple-200 hover:shadow-lg transition-shadow">
               <h4 className="font-semibold text-gray-900 group-hover:text-purple-600 mb-2">
                 AI Space Technology: The Future of Exploration
@@ -422,7 +421,7 @@ export default function AISpaceTechRevolutionSuccess() {
               </p>
             </div>
           </Link>
-          <Link href="/case-studies/ai-autonomous-spacecraft-success-2026" className="group">
+          <Link to="/case-studies/ai-autonomous-spacecraft-success-2026" className="group">
             <div className="bg-gradient-to-r from-blue-50 to-green-50 p-6 rounded-lg border border-blue-200 hover:shadow-lg transition-shadow">
               <h4 className="font-semibold text-gray-900 group-hover:text-blue-600 mb-2">
                 Autonomous Spacecraft: Mission Success Story

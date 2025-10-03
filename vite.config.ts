@@ -7,18 +7,12 @@ export default defineConfig({
   plugins: [
     react({
       jsxRuntime: 'automatic',
-      babel: {
-        plugins: [
-          ['@babel/plugin-transform-react-jsx', { runtime: 'automatic' }]
-        ]
-      }
     }),
   ],
   resolve: {
     alias: {
       '@': resolve(__dirname, 'src'),
       '@components': resolve(__dirname, 'components'),
-      '@app': resolve(__dirname, 'app'),
     },
   },
   build: {
@@ -31,6 +25,7 @@ export default defineConfig({
       input: {
         main: './index.html'
       },
+      external: ['next/link', 'next/image', 'next/router'],
       treeshake: {
         moduleSideEffects: false,
         propertyReadSideEffects: false,

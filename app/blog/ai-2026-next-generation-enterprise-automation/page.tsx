@@ -1,5 +1,5 @@
-import React from 'react';
-import Link from 'next/link';
+// import React from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowRight, Brain, Zap, Shield, TrendingUp, Users, Target, CheckCircle } from 'lucide-react';
 
 export default function AINextGenEnterpriseAutomation2026() {
@@ -202,14 +202,12 @@ export default function AINextGenEnterpriseAutomation2026() {
             Join the Fortune 500 companies already transforming their operations with Zion Tech Group's next-generation AI automation solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/contact" 
+            <Link to="/contact" 
               className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
             >
               Start Your Transformation
             </Link>
-            <Link 
-              href="/case-studies" 
+            <Link to="/case-studies" 
               className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               View Success Stories
@@ -223,15 +221,13 @@ export default function AINextGenEnterpriseAutomation2026() {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
-              <Link 
-                href="/blog" 
+              <Link to="/blog" 
                 className="flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors"
               >
                 <ArrowRight className="w-4 h-4 rotate-180" />
                 Back to Blog
               </Link>
-              <Link 
-                href="/services" 
+              <Link to="/services" 
                 className="flex items-center gap-2 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
               >
                 Explore Our Services

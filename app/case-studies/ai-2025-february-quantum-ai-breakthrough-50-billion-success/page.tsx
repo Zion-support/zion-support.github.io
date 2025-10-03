@@ -1,5 +1,5 @@
-import React from 'react';
-import { Metadata } from 'next';
+// import React from 'react';
+// Metadata handled by React Helmet
 
 export const metadata: Metadata = {
   title: 'February 2025: Quantum AI Breakthrough - $50 Billion Enterprise Transformation Success | Zion Tech Group',

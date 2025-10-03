@@ -1,18 +1,20 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 import {
   Mail,
   Phone,
   MapPin,
   Clock,
+  MessageSquare,
   Users,
   Award,
   Globe,
-  MessageSquare,
   Zap,
-  Sparkles,
+  Sparkles
 } from "lucide-react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+
 // Fallback form in environments without the enhanced component
 const ContactFormComponent: React.FC = () => null;
 
@@ -41,30 +43,30 @@ export default function Contact(): React.JSX.Element {
       title: "Response Time",
       details: "Within 24 hours",
       description: "We respond to all inquiries quickly",
-    },
+    }
   ];
 
   const stats = [
     {
       icon: <Users className="w-8 h-8" />,
       value: "500+",
-      label: "Happy Clients",
+      label: "Happy Clients"
     },
     {
       icon: <Award className="w-8 h-8" />,
       value: "99.9%",
-      label: "Satisfaction Rate",
+      label: "Satisfaction Rate"
     },
     {
       icon: <Globe className="w-8 h-8" />,
       value: "50+",
-      label: "Countries Served",
+      label: "Countries Served"
     },
     {
       icon: <Zap className="w-8 h-8" />,
       value: "24/7",
-      label: "Support Available",
-    },
+      label: "Support Available"
+    }
   ];
 
   return (
@@ -228,24 +230,20 @@ export default function Contact(): React.JSX.Element {
               {[
                 {
                   question: "How quickly can you start my project?",
-                  answer:
-                    "We typically begin new projects within 1-2 weeks of contract signing. Rush projects can be accommodated with additional planning.",
+                  answer: "We typically begin new projects within 1-2 weeks of contract signing. Rush projects can be accommodated with additional planning."
                 },
                 {
                   question: "What&apos;s your typical project timeline?",
-                  answer:
-                    "Project timelines vary based on complexity. Simple websites take 2-4 weeks, while complex AI implementations can take 3-6 months.",
+                  answer: "Project timelines vary based on complexity. Simple websites take 2-4 weeks, while complex AI implementations can take 3-6 months."
                 },
                 {
                   question: "Do you provide ongoing support?",
-                  answer:
-                    "Yes! We offer comprehensive support packages including maintenance, updates, and 24/7 monitoring for all our solutions.",
+                  answer: "Yes! We offer comprehensive support packages including maintenance, updates, and 24/7 monitoring for all our solutions."
                 },
                 {
                   question: "What technologies do you specialize in?",
-                  answer:
-                    "We specialize in AI/ML, cloud computing, cybersecurity, quantum computing, and modern web technologies like React, Node.js, and Python.",
-                },
+                  answer: "We specialize in AI/ML, cloud computing, cybersecurity, quantum computing, and modern web technologies like React, Node.js, and Python."
+                }
               ].map((faq, index) => (
                 <div
                   key={index}
@@ -283,14 +281,16 @@ export default function Contact(): React.JSX.Element {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a title="Internal link"
+                <a
+                  title="Internal link"
                   href="#contact-form"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-semibold hover:shadow-lg transition-all duration-300"
                 >
                   <MessageSquare className="w-5 h-5 mr-2" />
                   Start Your Project
                 </a>
-                <a title="Internal link"
+                <a
+                  title="Internal link"
                   href="tel:+15551234567"
                   className="inline-flex items-center px-8 py-4 border-2 border-white text-white rounded-xl font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300"
                 >

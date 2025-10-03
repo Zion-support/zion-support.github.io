@@ -1,5 +1,5 @@
-import React from 'react';
-import Link from 'next/link';
+// import React from 'react';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'Automated ML Pipelines 2026: End-to-End AI Development Automation',

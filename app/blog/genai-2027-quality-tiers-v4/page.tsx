@@ -1,5 +1,5 @@
 // @ts-nocheck
-import React from 'react';
+// import React from 'react';
 
 export const metadata = {
   title: 'GenAI 2027: Quality Tiers v4 — Stable UX Under Budget',

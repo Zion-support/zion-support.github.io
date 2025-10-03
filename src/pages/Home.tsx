@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { ArrowRight, Award, CheckCircle, Globe, Rocket, Shield, Sparkles, Star, Target, TrendingUp, Users, Zap } from "lucide-react";
+import { CheckCircle, Sparkles } from "lucide-react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
-const Home = () => {
+const Home: React.FC = () => {
   // Mock data for the homepage
   const latestInsights = [
     {
@@ -15,7 +15,7 @@ const Home = () => {
       category: 'AI Innovation',
       date: '2025-01-15',
       readMinutes: 25,
-      featured: true
+      featured: true,
     },
     {
       id: '2',
@@ -24,7 +24,7 @@ const Home = () => {
       category: 'Quantum Computing',
       date: '2025-01-10',
       readMinutes: 20,
-      featured: false
+      featured: false,
     },
     {
       id: '3',
@@ -33,31 +33,7 @@ const Home = () => {
       category: 'Success Story',
       date: '2025-01-05',
       readMinutes: 15,
-      featured: true
-    }
-  ];
-
-  const posts = [
-    {
-      slug: 'ai-revolution-2026',
-      title: 'AI Revolution 2026: The Next Frontier of Enterprise Intelligence',
-      description: 'Discover autonomous AI agents, neural interfaces, and predictive intelligence systems achieving 300% productivity gains.',
-      category: 'AI Innovation',
-      publishedAt: '2025-01-15'
-    },
-    {
-      slug: 'quantum-ai-breakthrough',
-      title: 'Quantum AI Breakthrough: Solving Impossible Problems in Seconds',
-      description: 'Explore quantum-enhanced AI delivering 500x faster results and revolutionizing computational capabilities.',
-      category: 'Quantum Computing',
-      publishedAt: '2025-01-10'
-    },
-    {
-      slug: 'manufacturing-success',
-      title: 'Manufacturing AI Transformation: $50M Savings & 95% Efficiency',
-      description: 'See how a Fortune 500 manufacturer achieved $50M annual savings and 95% efficiency improvements.',
-      category: 'Success Story',
-      publishedAt: '2025-01-05'
+      featured: true,
     }
   ];
 
@@ -65,66 +41,28 @@ const Home = () => {
     <>
       <Helmet>
         <title>Zion Tech Group - Leading AI & IT Solutions | Transform Your Business</title>
-        <meta
-          name="description"
-          content="Zion Tech Group delivers cutting-edge AI and IT solutions that transform businesses. NEW 2025: AI Workflow Automation, Quantum Computing, Edge AI, Zero Trust Security. Expert consulting services with proven results."
+        <meta 
+          name="description" 
+          content="Zion Tech Group delivers cutting-edge AI and IT solutions that transform businesses. Expert consulting services with proven results."
         />
-        <meta
-          name="keywords"
-          content="AI solutions, IT consulting, cybersecurity, machine learning, cloud infrastructure, digital transformation, AI workflow automation, quantum computing, edge AI, zero trust security, micro SAAS platforms, AI virtual assistant, data analytics"
+        <meta 
+          name="keywords" 
+          content="AI solutions, IT consulting, cybersecurity, machine learning, cloud infrastructure, digital transformation"
         />
         <meta property="og:title" content="Zion Tech Group - Leading AI & IT Solutions" />
-        <meta
-          property="og:description"
-          content="Transform your business with cutting-edge AI and IT solutions. NEW 2025: AI Workflow Automation, Quantum Computing, Edge AI, Zero Trust Security. Expert consulting with proven results."
+        <meta 
+          property="og:description" 
+          content="Transform your business with cutting-edge AI and IT solutions. Expert consulting with proven results."
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Zion Tech Group - Leading AI & IT Solutions" />
-        <meta
-          name="twitter:description"
-          content="Transform your business with cutting-edge AI and IT solutions. NEW 2025: AI Workflow Automation, Quantum Computing, Edge AI, Zero Trust Security."
+        <meta 
+          name="twitter:description" 
+          content="Transform your business with cutting-edge AI and IT solutions."
         />
         <link rel="canonical" href="https://ziontechgroup.com" />
-        
-        {/* Structured Data */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            "name": "Zion Tech Group",
-            "description": "Leading AI and IT solutions provider specializing in AI workflow automation, quantum computing, edge AI, and zero trust security.",
-            "url": "https://ziontechgroup.com",
-            "logo": "https://ziontechgroup.com/logo.png",
-            "contactPoint": {
-              "@type": "ContactPoint",
-              "telephone": "+1-302-464-0950",
-              "contactType": "customer service",
-              "availableLanguage": "English"
-            },
-            "sameAs": [
-              "https://linkedin.com/company/zion-tech-group",
-              "https://twitter.com/ziontechgroup"
-            ],
-            "foundingDate": "2020",
-            "numberOfEmployees": "50-100",
-            "address": {
-              "@type": "PostalAddress",
-              "addressCountry": "US"
-            },
-            "services": [
-              "AI Workflow Automation",
-              "AI Virtual Assistant",
-              "AI Data Analytics",
-              "Quantum Computing Consulting",
-              "Edge AI Solutions",
-              "Zero Trust Security",
-              "Cybersecurity",
-              "Cloud Infrastructure"
-            ]
-          })}
-        </script>
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-teal-50">
@@ -135,9 +73,9 @@ const Home = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <div className="inline-flex items-center px-6 py-3 rounded-full bg-blue-100 text-blue-800 text-sm font-medium mb-8">
-                <Sparkles className="w-4 h-4 mr-2" />
+                <span className="w-4 h-4 mr-2">✨</span>
                 Trusted by 500+ companies worldwide
-                <Rocket className="w-4 h-4 ml-2" />
+                <span className="w-4 h-4 ml-2">🚀</span>
               </div>
               
               <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
@@ -183,7 +121,7 @@ const Home = () => {
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-200 hover:border-blue-300">
                 <div className="text-center mb-6">
                   <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                    <Zap className="w-8 h-8 text-blue-600" />
+                    <span className="w-8 h-8 text-blue-600">⚡</span>
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">AI Services & Solutions</h3>
                   <p className="text-gray-600 mb-4">Advanced artificial intelligence solutions including machine learning, deep learning, and AI automation.</p>
@@ -192,25 +130,25 @@ const Home = () => {
                 
                 <ul className="space-y-3 mb-6">
                   <li className="flex items-center gap-3">
-                    <CheckCircle className="w-5 h-5 text-green-600" />
+                    <span className="w-5 h-5 text-green-600">✔️</span>
                     <span className="text-gray-700">Machine Learning Models</span>
                   </li>
                   <li className="flex items-center gap-3">
-                    <CheckCircle className="w-5 h-5 text-green-600" />
+                    <span className="w-5 h-5 text-green-600">✔️</span>
                     <span className="text-gray-700">Deep Learning Systems</span>
                   </li>
                   <li className="flex items-center gap-3">
-                    <CheckCircle className="w-5 h-5 text-green-600" />
+                    <span className="w-5 h-5 text-green-600">✔️</span>
                     <span className="text-gray-700">AI Automation</span>
                   </li>
                   <li className="flex items-center gap-3">
-                    <CheckCircle className="w-5 h-5 text-green-600" />
+                    <span className="w-5 h-5 text-green-600">✔️</span>
                     <span className="text-gray-700">Predictive Analytics</span>
                   </li>
                 </ul>
                 
-                <Link
-                  to="/services/ai-services"
+                <Link 
+                  to="/services/ai-services" 
                   className="block w-full text-center py-3 px-4 rounded-lg font-semibold bg-blue-600 text-white hover:bg-blue-700 transition-colors"
                 >
                   Learn More
@@ -226,7 +164,7 @@ const Home = () => {
                 
                 <div className="text-center mb-6">
                   <div className="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                    <Rocket className="w-8 h-8 text-purple-600" />
+                    <span className="w-8 h-8 text-purple-600">🚀</span>
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">Micro SaaS Solutions</h3>
                   <p className="text-gray-600 mb-4">Scalable software-as-a-service applications designed for rapid deployment and growth.</p>
@@ -252,8 +190,8 @@ const Home = () => {
                   </li>
                 </ul>
                 
-                <Link
-                  to="/services/micro-saas"
+                <Link 
+                  to="/services/micro-saas" 
                   className="block w-full text-center py-3 px-4 rounded-lg font-semibold bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 transition-colors"
                 >
                   Learn More
@@ -263,7 +201,7 @@ const Home = () => {
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-200 hover:border-blue-300">
                 <div className="text-center mb-6">
                   <div className="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                    <Shield className="w-8 h-8 text-green-600" />
+                    <span className="w-8 h-8 text-green-600">🛡️</span>
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">IT Services & Solutions</h3>
                   <p className="text-gray-600 mb-4">Comprehensive IT infrastructure, cloud migration, and DevOps services.</p>
@@ -289,8 +227,8 @@ const Home = () => {
                   </li>
                 </ul>
                 
-                <Link
-                  to="/services/it-services"
+                <Link 
+                  to="/services/it-services" 
                   className="block w-full text-center py-3 px-4 rounded-lg font-semibold bg-blue-600 text-white hover:bg-blue-700 transition-colors"
                 >
                   Learn More
@@ -418,7 +356,6 @@ const Home = () => {
                     </div>
                     
                     <div className="text-4xl mb-4">🚀</div>
-                    
                     <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
                       {item.title}
                     </h3>
@@ -436,8 +373,8 @@ const Home = () => {
             </div>
             
             <div className="text-center mt-12">
-              <Link
-                to="/blog"
+              <Link 
+                to="/blog" 
                 className="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl"
               >
                 Explore All Content

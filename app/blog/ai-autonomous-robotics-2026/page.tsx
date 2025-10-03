@@ -1,5 +1,5 @@
-import React from 'react';
-import Link from 'next/link';
+// import React from 'react';
+import { Link } from 'react-router-dom';
 import { Clock, ArrowRight, Bot, Zap, Target, TrendingUp } from 'lucide-react';
 
 export const metadata = {
@@ -309,14 +309,12 @@ export default function AIAutonomousRobotics2026() {
             Discover how AI autonomous robotics can revolutionize your business operations, increase efficiency, and unlock new possibilities for growth and innovation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <Link
-              href="/contact"
+            <Link to="/contact"
               className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center"
             >
               Schedule Consultation
             </Link>
-            <Link
-              href="/services/ai-autonomous-robotics"
+            <Link to="/services/ai-autonomous-robotics"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors text-center"
             >
               Learn More
@@ -329,7 +327,7 @@ export default function AIAutonomousRobotics2026() {
       <div className="mt-16 pt-8 border-t border-gray-200">
         <h3 className="text-2xl font-bold text-gray-900 mb-6">Related Content</h3>
         <div className="grid md:grid-cols-3 gap-6">
-          <Link href="/blog/ai-cognitive-superintelligence-2026" className="group">
+          <Link to="/blog/ai-cognitive-superintelligence-2026" className="group">
             <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
               <h4 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
                 AI Cognitive Superintelligence 2026
@@ -339,7 +337,7 @@ export default function AIAutonomousRobotics2026() {
               </p>
             </div>
           </Link>
-          <Link href="/blog/ai-metaverse-enterprise-transformation-2026" className="group">
+          <Link to="/blog/ai-metaverse-enterprise-transformation-2026" className="group">
             <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
               <h4 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
                 AI Metaverse Enterprise 2026
@@ -349,7 +347,7 @@ export default function AIAutonomousRobotics2026() {
               </p>
             </div>
           </Link>
-          <Link href="/case-studies/ai-autonomous-robotics-mega-success-2026" className="group">
+          <Link to="/case-studies/ai-autonomous-robotics-mega-success-2026" className="group">
             <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
               <h4 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
                 $300M Robotics Success Story

@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 
 export const metadata = {
   title: 'Autonomous Data Center Optimization 2025 — Self-Managing Infrastructure at Scale',

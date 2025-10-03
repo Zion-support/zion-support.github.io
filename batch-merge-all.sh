@@ -1,79 +1,95 @@
 #!/bin/bash
-# Efficient batch merge of all remaining PR branches
 
+# Comprehensive batch merge script for all remaining branches
 set -e
 
-echo "🚀 Starting batch merge of all PRs..."
+echo "Starting comprehensive batch merge of all remaining branches..."
 
-git checkout main
-git pull origin main
+# Get all cursor/fix-errors-and-merge-to-main branches
+all_branches=$(git branch -r | grep "cursor/fix-errors-and-merge-to-main" | head -200)
 
-# All remaining branches
-BRANCHES=(
-  "cursor/create-and-deploy-new-content-45fb"
-  "cursor/create-and-deploy-new-content-53f4"
-  "cursor/create-and-deploy-new-content-976a"
-  "cursor/create-and-deploy-new-content-3a9a"
-  "cursor/create-and-deploy-new-content-4eb2"
-  "cursor/create-and-deploy-new-content-84c6"
-  "cursor/create-and-deploy-new-content-db31"
-  "cursor/create-and-deploy-new-content-0d76"
-  "cursor/create-and-deploy-new-content-7a98"
-  "cursor/create-and-deploy-new-content-9ba7"
-  "cursor/create-and-deploy-new-content-6cb8"
-  "cursor/create-and-deploy-new-content-e11b"
-  "cursor/create-and-deploy-new-content-6b72"
-  "cursor/create-and-deploy-new-content-f136"
-  "ai-2027-content-integration"
-  "feature/revolutionary-2026-ai-content"
-  "ultimate-neural-fusion-content"
-)
+successful_merges=0
+failed_merges=0
+skipped_merges=0
 
-SUCCESS=0
-FAILED=0
+echo "Found $(echo "$all_branches" | wc -l) branches to process"
 
-for BRANCH in "${BRANCHES[@]}"; do
-  echo ""
-  echo "📦 Merging: $BRANCH"
-  
-  if git fetch origin "$BRANCH" 2>/dev/null; then
-    if git merge "origin/$BRANCH" --no-edit -m "Merge $BRANCH into main"; then
-      echo "✅ Merged successfully"
-      ((SUCCESS++))
-    else
-      echo "⚠️  Conflicts detected - auto-resolving..."
-      git checkout --ours .
-      git add .
-      if git commit --no-edit -m "Merge $BRANCH (conflicts resolved)"; then
-        echo "✅ Merged with conflict resolution"
-        ((SUCCESS++))
-      else
-        echo "❌ Failed to merge"
-        git merge --abort 2>/dev/null || true
-        ((FAILED++))
-      fi
+for branch in $all_branches; do
+    # Remove origin/ prefix
+    local_branch=$(echo $branch | sed 's/origin\///')
+    
+    echo "Processing branch: $local_branch"
+    
+    # Check if branch already exists locally
+    if git show-ref --verify --quiet refs/heads/$local_branch; then
+        echo "  ⏭️  Branch $local_branch already exists locally, skipping..."
+        ((skipped_merges++))
+        continue
     fi
-  else
-    echo "❌ Could not fetch branch"
-    ((FAILED++))
-  fi
-  
-  # Push every 3 successful merges
-  if [ $((SUCCESS % 3)) -eq 0 ] && [ $SUCCESS -gt 0 ]; then
-    echo "⬆️  Pushing to remote..."
-    git push origin main
-  fi
+    
+    # Try to checkout the branch
+    if git fetch origin $local_branch 2>/dev/null && git checkout -b $local_branch origin/$local_branch 2>/dev/null; then
+        git checkout main
+        
+        # Try to merge
+        if git merge --no-edit $local_branch 2>/dev/null; then
+            echo "  ✅ Successfully merged $local_branch"
+            ((successful_merges++))
+            
+            # Clean up the branch
+            git branch -d $local_branch 2>/dev/null || true
+        else
+            echo "  ❌ Merge conflict in $local_branch - attempting resolution..."
+            
+            # Get conflicted files
+            conflicted_files=$(git diff --name-only --diff-filter=U 2>/dev/null || echo "")
+            
+            if [ -n "$conflicted_files" ]; then
+                echo "    Resolving conflicts in: $conflicted_files"
+                
+                # Auto-resolve conflicts by keeping main branch version
+                for file in $conflicted_files; do
+                    if [ -f "$file" ]; then
+                        # Use git checkout --theirs to keep main branch version
+                        git checkout --theirs "$file" 2>/dev/null || true
+                        git add "$file" 2>/dev/null || true
+                    fi
+                done
+                
+                # Commit the resolution
+                if git commit --no-edit 2>/dev/null; then
+                    echo "    ✅ Auto-resolved conflicts for $local_branch"
+                    ((successful_merges++))
+                    git branch -d $local_branch 2>/dev/null || true
+                else
+                    echo "    ❌ Could not auto-resolve conflicts for $local_branch"
+                    git merge --abort 2>/dev/null || true
+                    ((failed_merges++))
+                fi
+            else
+                echo "    ❌ No conflicted files found for $local_branch"
+                git merge --abort 2>/dev/null || true
+                ((failed_merges++))
+            fi
+        fi
+        
+        git checkout main
+    else
+        echo "  ❌ Failed to checkout $local_branch"
+        ((failed_merges++))
+    fi
 done
 
 echo ""
-echo "========================================="
-echo "📊 Final Results"
-echo "========================================="
-echo "✅ Successfully merged: $SUCCESS branches"
-echo "❌ Failed: $FAILED branches"
+echo "=== COMPREHENSIVE MERGE SUMMARY ==="
+echo "Successful merges: $successful_merges"
+echo "Failed merges: $failed_merges"
+echo "Skipped merges: $skipped_merges"
+echo "Total processed: $((successful_merges + failed_merges + skipped_merges))"
+
 echo ""
+echo "Comprehensive batch merge completed!"
 
-echo "⬆️  Final push to remote..."
-git push origin main
-
-echo "✨ Batch merge complete!"
+# Check final status
+git status
+git log --oneline -5

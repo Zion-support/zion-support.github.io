@@ -1,5 +1,5 @@
-import React from 'react';
-import Link from 'next/link';
+// import React from 'react';
+import { Link } from 'react-router-dom';
 
       </div>;
       <p className="text-sm text-gray-600 mb-4">{description}</p>;

@@ -1,5 +1,5 @@
-import React from 'react';
-import Link from 'next/link';
+// import React from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowLeft, Clock, User, Calendar, Share2, Bookmark, TrendingUp, DollarSign, Target } from 'lucide-react';
 
 export const metadata = {
@@ -15,7 +15,7 @@ export default function AICognitiveComputingSuccess2026() {
       <div className="bg-gradient-to-r from-green-600 to-blue-600 text-white py-16">
         <div className="max-w-4xl mx-auto px-4">
           <div className="flex items-center gap-2 text-green-200 mb-4">
-            <Link href="/case-studies" className="flex items-center gap-1 hover:text-white transition-colors">
+            <Link to="/case-studies" className="flex items-center gap-1 hover:text-white transition-colors">
               <ArrowLeft className="w-4 h-4" />
               Back to Case Studies
             </Link>
@@ -281,14 +281,12 @@ export default function AICognitiveComputingSuccess2026() {
               Transform your organization with AI cognitive computing. Our expert team can help you implement similar systems that deliver measurable business value.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link
-                href="/services/ai-cognitive-computing"
+              <Link to="/services/ai-cognitive-computing"
                 className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center"
               >
                 Explore Cognitive AI Services
               </Link>
-              <Link
-                href="/contact"
+              <Link to="/contact"
                 className="border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors text-center"
               >
                 Schedule Consultation
@@ -315,7 +313,7 @@ export default function AICognitiveComputingSuccess2026() {
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-gray-900 mb-8">Related Case Studies</h2>
           <div className="grid md:grid-cols-3 gap-8">
-            <Link href="/case-studies/ai-autonomous-enterprise-success-2026" className="group">
+            <Link to="/case-studies/ai-autonomous-enterprise-success-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6">
                 <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
                   Autonomous Enterprise Success Case Study
@@ -327,7 +325,7 @@ export default function AICognitiveComputingSuccess2026() {
               </div>
             </Link>
             
-            <Link href="/case-studies/ai-quantum-optimization-2026" className="group">
+            <Link to="/case-studies/ai-quantum-optimization-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6">
                 <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
                   AI Quantum Optimization Success
@@ -339,7 +337,7 @@ export default function AICognitiveComputingSuccess2026() {
               </div>
             </Link>
             
-            <Link href="/case-studies/ai-sustainability-transformation-2026" className="group">
+            <Link to="/case-studies/ai-sustainability-transformation-2026" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6">
                 <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
                   AI Sustainability Transformation

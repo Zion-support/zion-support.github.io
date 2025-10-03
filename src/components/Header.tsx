@@ -1,238 +1,193 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, ChevronDown, Zap, Phone } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 
-const ModernHeader: React.FC = () => {
+const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const location = useLocation();
 
-  const toggleDropdown = (dropdown: string) => {
-    setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
-  };
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
 
-  const isActive = (path: string) => location.pathname === path;
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
-  const navigationItems = [
-    {
-      label: 'Home',
-      path: '/',
-    },
-    {
-      label: 'Solutions',
-      path: '/solutions',
+  useEffect(() => {
+    setIsMenuOpen(false);
+    setActiveDropdown(null);
+  }, [location.pathname]);
+
+  const navigation = [
+    { name: 'Home', href: '/' },
+    { name: 'Solutions', href: '/solutions' },
+    { name: 'Services', href: '/services' },
+    { 
+      name: 'Resources', 
+      href: '/resources',
       dropdown: [
-        { label: 'Enterprise Solutions', path: '/solutions/enterprise' },
-        { label: 'SMB Solutions', path: '/solutions/smb' },
-        { label: 'Startup Solutions', path: '/solutions/startup' },
-        { label: 'Government Solutions', path: '/solutions/government' },
-        { label: 'Healthcare Solutions', path: '/solutions/healthcare' },
-        { label: 'Financial Solutions', path: '/solutions/financial' },
-        { label: 'Manufacturing Solutions', path: '/solutions/manufacturing' },
-        { label: 'Retail Solutions', path: '/solutions/retail' },
-        { label: 'Education Solutions', path: '/solutions/education' },
-        { label: 'Transportation Solutions', path: '/solutions/transportation' },
+        { name: 'Blog', href: '/blog' },
+        { name: 'Case Studies', href: '/case-studies' },
+        { name: 'Documentation', href: '/docs' },
+        { name: 'API Reference', href: '/api' }
       ]
     },
-    {
-      label: 'Services',
-      path: '/services',
-      dropdown: [
-        { label: 'AI Content Generator Pro', path: '/services/ai-content-generator' },
-        { label: 'Smart Appointment Scheduler', path: '/services/smart-appointment-scheduler' },
-        { label: 'AI Workflow Automation', path: '/services/ai-workflow-automation' },
-        { label: 'AI Virtual Assistant', path: '/services/ai-virtual-assistant' },
-        { label: 'AI Data Analytics', path: '/services/ai-data-analytics' },
-        { label: 'Intelligent Document Processing', path: '/services/ai-intelligent-document-processing' },
-        { label: 'Real-Time Cognitive Automation', path: '/services/real-time-cognitive-automation' },
-        { label: 'Advanced Cybersecurity AI', path: '/services/advanced-cybersecurity-ai' },
-        { label: 'AI Solutions Hub', path: '/ai-solutions' },
-        { label: 'Quantum Computing', path: '/quantum-computing' },
-        { label: 'Cybersecurity Platform', path: '/cybersecurity' },
-        { label: 'Cloud & DevOps', path: '/cloud-devops' },
-        { label: 'IoT & Edge Computing', path: '/iot-edge-computing' },
-        { label: 'Digital Twin Solutions', path: '/digital-twin' },
-        { label: 'Blockchain & Web3', path: '/blockchain-web3' },
-        { label: 'Space Technology', path: '/space-tech' },
-      ]
-    },
-    {
-      label: 'Resources',
-      path: '/resources',
-      dropdown: [
-        { label: 'Case Studies', path: '/case-studies' },
-        { label: 'White Papers', path: '/white-papers' },
-        { label: 'Webinars', path: '/webinars' },
-        { label: 'Documentation', path: '/docs' },
-        { label: 'API Reference', path: '/docs/api' },
-        { label: 'Developer Tools', path: '/developer-tools' },
-        { label: 'Training & Certification', path: '/training' },
-        { label: 'Community Forum', path: '/community' },
-        { label: 'Blog', path: '/blog' },
-      ]
-    },
-    {
-      label: 'Company',
-      path: '/about',
-      dropdown: [
-        { label: 'About Us', path: '/about' },
-        { label: 'Our Team', path: '/team' },
-        { label: 'Partners', path: '/partners' },
-        { label: 'News & Events', path: '/news' },
-        { label: 'Press Kit', path: '/press' },
-        { label: 'Investor Relations', path: '/investors' },
-        { label: 'Sustainability', path: '/sustainability' },
-        { label: 'Diversity & Inclusion', path: '/diversity' },
-        { label: 'Careers', path: '/careers' },
-      ]
-    },
-    {
-      label: 'Contact',
-      path: '/contact',
-    },
+    { name: 'Team', href: '/team' },
+    { name: 'Careers', href: '/careers' },
+    { name: 'Contact', href: '/contact' }
   ];
 
+  const isActive = (href: string) => location.pathname === href;
+
   return (
-    <header className="bg-slate-900 border-b border-slate-800 sticky top-0 z-50 shadow-lg">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      isScrolled 
+        ? 'bg-slate-950/95 backdrop-blur-md border-b border-slate-800' 
+        : 'bg-transparent'
+    }`}>
+      <nav className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2 text-white hover:text-blue-400 transition-colors">
-            <Zap className="h-8 w-8 text-blue-400" />
-            <span className="text-xl font-bold">Zion Tech Group</span>
-          </Link>
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <Link 
+              to="/" 
+              className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Z</span>
+              </div>
+              <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Zion Tech Group</span>
+            </Link>
+          </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8">
-            {navigationItems.map((item) => (
-              <div key={item.label} className="relative">
-                {item.dropdown ? (
-                  <div className="relative">
-                    <button
-                      onClick={() => toggleDropdown(item.label)}
-                      className={`flex items-center space-x-1 px-3 py-2 text-sm font-medium rounded-md transition-colors ${
-                        isActive(item.path) || activeDropdown === item.label
-                          ? 'text-blue-400 bg-slate-800'
-                          : 'text-slate-300 hover:text-white hover:bg-slate-800'
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              {navigation.map((item) => (
+                <div key={item.name} className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                  {item.dropdown ? (
+                    <div
+                      className="relative"
+                      onMouseEnter={() => setActiveDropdown(item.name)}
+                      onMouseLeave={() => setActiveDropdown(null)}
+                    >
+                      <button className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                        <span>{item.name}</span>
+                        <ChevronDown className="w-4 h-4" />
+                      </button>
+                      
+                      {activeDropdown === item.name && (
+                        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                          {item.dropdown.map((subItem) => (
+                            <Link
+                              key={subItem.name}
+                              to={subItem.href}
+                              className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                              {subItem.name}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  ) : (
+                    <Link
+                      to={item.href}
+                      className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                        isActive(item.href)
+                          ? 'text-white bg-blue-600'
+                          : 'text-gray-300 hover:text-white hover:bg-slate-700'
                       }`}
                     >
-                      <span>{item.label}</span>
-                      <ChevronDown className="h-4 w-4" />
-                    </button>
-                    
-                    {activeDropdown === item.label && (
-                      <div className="absolute top-full left-0 mt-1 w-64 bg-slate-800 rounded-md shadow-lg border border-slate-700 py-2 z-50">
-                        {item.dropdown.map((dropdownItem) => (
-                          <Link
-                            key={dropdownItem.path}
-                            to={dropdownItem.path}
-                            className="block px-4 py-2 text-sm text-slate-300 hover:text-white hover:bg-slate-700 transition-colors"
-                            onClick={() => setActiveDropdown(null)}
-                          >
-                            {dropdownItem.label}
-                          </Link>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-                ) : (
-                  <Link
-                    to={item.path}
-                    className={`px-3 py-2 text-sm font-medium rounded-md transition-colors ${
-                      isActive(item.path)
-                        ? 'text-blue-400 bg-slate-800'
-                        : 'text-slate-300 hover:text-white hover:bg-slate-800'
-                    }`}
-                  >
-                    {item.label}
-                  </Link>
-                )}
-              </div>
-            ))}
-          </nav>
+                      {item.name}
+                    </Link>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
 
-          {/* CTA Buttons */}
-          <div className="hidden lg:flex items-center space-x-4">
-            <Link
-              to="/demo"
-              className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-slate-900 bg-blue-400 hover:bg-blue-500 transition-colors"
-            >
-              <Phone className="h-4 w-4 mr-2" />
-              Schedule Demo
-            </Link>
+          {/* CTA Button */}
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
             <Link
               to="/contact"
-              className="inline-flex items-center px-4 py-2 border border-slate-600 text-sm font-medium rounded-md text-white hover:bg-slate-800 transition-colors"
-            >
+              className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
               Get Started
             </Link>
           </div>
 
           {/* Mobile menu button */}
-          <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="lg:hidden p-2 rounded-md text-slate-300 hover:text-white hover:bg-slate-800 transition-colors"
-          >
-            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </button>
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="lg:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800 rounded-md mt-2">
-              {navigationItems.map((item) => (
-                <div key={item.label}>
-                  <Link
-                    to={item.path}
-                    className={`block px-3 py-2 text-base font-medium rounded-md transition-colors ${
-                      isActive(item.path)
-                        ? 'text-blue-400 bg-slate-700'
-                        : 'text-slate-300 hover:text-white hover:bg-slate-700'
-                    }`}
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    {item.label}
-                  </Link>
-                  {item.dropdown && (
-                    <div className="ml-4 mt-1 space-y-1">
-                      {item.dropdown.map((dropdownItem) => (
-                        <Link
-                          key={dropdownItem.path}
-                          to={dropdownItem.path}
-                          className="block px-3 py-2 text-sm text-slate-400 hover:text-white hover:bg-slate-700 rounded-md transition-colors"
-                          onClick={() => setIsMenuOpen(false)}
-                        >
-                          {dropdownItem.label}
-                        </Link>
-                      ))}
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              {navigation.map((item) => (
+                <div key={item.name}>
+                  {item.dropdown ? (
+                    <div>
+                      <button
+                        onClick={() => setActiveDropdown(
+                          activeDropdown === item.name ? null : item.name
+                        )}
+                        className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                        <span>{item.name}</span>
+                        <ChevronDown className={`w-4 h-4 transition-transform ${
+                          activeDropdown === item.name ? 'rotate-180' : ''
+                        }`} />
+                      </button>
+                      
+                      {activeDropdown === item.name && (
+                        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                          {item.dropdown.map((subItem) => (
+                            <Link
+                              key={subItem.name}
+                              to={subItem.href}
+                              className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                              {subItem.name}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
                     </div>
+                  ) : (
+                    <Link
+                      to={item.href}
+                      className={`block px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                        isActive(item.href)
+                          ? 'text-white bg-blue-600'
+                          : 'text-gray-300 hover:text-white hover:bg-slate-700'
+                      }`}
+                    >
+                      {item.name}
+                    </Link>
                   )}
                 </div>
               ))}
-              <div className="pt-4 border-t border-slate-700">
-                <Link
-                  to="/demo"
-                  className="block w-full text-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-slate-900 bg-blue-400 hover:bg-blue-500 transition-colors mb-2"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Schedule Demo
-                </Link>
+              
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 <Link
                   to="/contact"
-                  className="block w-full text-center px-4 py-2 border border-slate-600 text-sm font-medium rounded-md text-white hover:bg-slate-800 transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
-                >
+                  className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                   Get Started
                 </Link>
               </div>
             </div>
           </div>
         )}
-      </div>
+      </nav>
     </header>
   );
 };
 
-export default ModernHeader;
-
+export default Header;

@@ -50,7 +50,7 @@ export default ProductManagementChat;
         <p>Blog content coming soon...</p>
 
         <a href=&quot;/blog&quot;>Back to Blog</a>
-  return (import Link from 'next/link';
+  return (import { Link } from 'react-router-dom';
 import Seo from '../../components/seo/Seo';
 
 const ProductManagementChat: NextPage = () => {return ;

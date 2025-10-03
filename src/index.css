@@ -20,19 +20,26 @@
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
 }
 
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  width: 100%;
+  min-height: 100vh;
 }
 
+<<<<<<< HEAD
+=======
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+>>>>>>> 521215710f1b2caf83b9cc94fe97e9aada05ff37
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -44,6 +51,17 @@ body {
   button {
     background-color: #f9f9f9;
   }
+<<<<<<< HEAD
+=======
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+>>>>>>> 521215710f1b2caf83b9cc94fe97e9aada05ff37
 }
 
 .hidden {

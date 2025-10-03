@@ -1,5 +1,5 @@
-import React from 'react';
-import Link from 'next/link';
+// import React from 'react';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'AI Sovereign Cloud Platforms 2025: Complete Data Sovereignty & Compliance Guide | Zion Tech Group',

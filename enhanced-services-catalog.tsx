@@ -1,6 +1,6 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
+// import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import { 
   Brain, 
   Code, 
@@ -11,7 +11,6 @@ import {
   BarChart3, 
   Settings, 
   Zap, 
-  Monitor, 
   Search, 
   MessageSquare, 
   CheckCircle, 
@@ -32,7 +31,6 @@ import {
   Rocket,
   Cpu,
   FileText,
-  Camera,
   Mic,
   Eye,
   Heart,
@@ -44,10 +42,6 @@ import {
   GitBranch,
   Container,
   Key,
-  AlertTriangle,
-  CheckSquare,
-  PieChart,
-  Activity,
   Zap as Lightning,
   Package,
   Share2,
@@ -238,6 +232,63 @@ export default function EnhancedServicesCatalog() {
       benefits: 'Increase engagement by 50%, save 20 hours/week on content creation',
       marketPrice: '$300 - $5,000/month',
       link: '/services/micro-saas/social-media-management'
+    },
+    {
+      name: 'AI Contract Summarizer for SMBs',
+      description: 'Summarize lengthy contracts, extract key clauses, deadlines, and risks automatically.',
+      icon: FileText,
+      features: [
+        'Clause extraction and risk scoring',
+        'Deadline and obligation reminders',
+        'Comparison against standard templates',
+        'Multi-language legal document support',
+        'Export to PDF and Word with highlights',
+        'Integrations with Google Drive and SharePoint'
+      ],
+      pricing: '$99 - $799/month',
+      delivery: '1-2 weeks',
+      category: 'Legal Tech',
+      benefits: 'Reduce review time by 70%, lower legal costs',
+      marketPrice: '$200 - $1,500/month',
+      link: '/services/micro-saas/ai-contract-summarizer'
+    },
+    {
+      name: 'Technical SEO Auditor',
+      description: 'Automated site crawling, Core Web Vitals, schema, and backlink health with actionable fixes.',
+      icon: Search,
+      features: [
+        'Weekly automated crawls and issue tracker',
+        'Core Web Vitals and performance insights',
+        'Structured data/schema validation',
+        'Sitemap and robots checks',
+        'Backlink and anchor text analysis',
+        'Exportable developer-ready fix list'
+      ],
+      pricing: '$59 - $499/month',
+      delivery: 'Instant',
+      category: 'Marketing',
+      benefits: 'Improve SEO by 30%+, faster fixes for devs',
+      marketPrice: '$99 - $900/month',
+      link: '/services/micro-saas/technical-seo-auditor'
+    },
+    {
+      name: 'Invoice OCR & AP Automation',
+      description: 'Accurate invoice data capture, validation, and approval workflows with ERP export.',
+      icon: DollarSign,
+      features: [
+        'Line-item extraction and tax detection',
+        'Fraud and duplicate invoice checks',
+        'Multi-currency and vendor normalizations',
+        'Approval routing and audit trails',
+        'QuickBooks/Xero/NetSuite exports',
+        'SOC 2 ready controls'
+      ],
+      pricing: '$149 - $1,499/month',
+      delivery: '1-2 weeks',
+      category: 'Finance',
+      benefits: 'Cut AP processing cost by 60%, faster cycle time',
+      marketPrice: '$250 - $2,500/month',
+      link: '/services/micro-saas/invoice-ocr'
     },
     {
       name: 'Automated Email Marketing Platform',
@@ -447,6 +498,102 @@ export default function EnhancedServicesCatalog() {
       benefits: 'Reduce maintenance costs by 25%, improve space efficiency',
       marketPrice: '$800 - $15,000/month',
       link: '/services/micro-saas/facility-management'
+    }
+    ,
+    {
+      name: 'Privacy-Safe Analytics Suite',
+      description: 'Cookieless, GDPR/CCPA-compliant web/app analytics with funnel and attribution.',
+      icon: PieChart,
+      features: [
+        'Cookieless tracking and anonymization',
+        'UTM and multi-touch attribution',
+        'Funnel, cohort, and retention analysis',
+        'Embedded dashboards and exports',
+        'Role-based access and SSO',
+        'SDKs for web and mobile'
+      ],
+      pricing: '$49 - $799/month',
+      delivery: 'Instant - 1 week',
+      category: 'Analytics',
+      benefits: 'Actionable insights without invasive tracking; safer compliance posture',
+      marketPrice: '$99 - $1,500/month',
+      link: '/services/micro-saas/privacy-analytics'
+    },
+    {
+      name: 'Vendor Security Questionnaire Automation',
+      description: 'Automate SIG/CAIQ/DDQ security questionnaires with AI-assisted evidence mapping.',
+      icon: Shield,
+      features: [
+        'Upload questionnaires (XLSX/CSV/Portal)',
+        'Knowledge base with reusable answers',
+        'Evidence links and auto-mapping',
+        'Reviewer workflows and approvals',
+        'Export to vendor portals or PDFs',
+        'Audit trail and change history'
+      ],
+      pricing: '$299 - $2,200/month',
+      delivery: '1-2 weeks',
+      category: 'Security',
+      benefits: 'Cut completion time by 70%, respond consistently with less burnout',
+      marketPrice: '$500 - $5,000/month',
+      link: '/services/micro-saas/vendor-security-automation'
+    },
+    {
+      name: 'Local SEO Booster for Multi-location',
+      description: 'Automated GMB optimization, citation sync, and review response at scale.',
+      icon: Search,
+      features: [
+        'GMB post scheduling and A/B tests',
+        'Listing health and citation sync',
+        'AI review reply and escalation',
+        'Rank tracking by geo-grid',
+        'Photo/video optimization',
+        'Multi-brand, multi-location support'
+      ],
+      pricing: '$79 - $999/month',
+      delivery: '1 week',
+      category: 'Marketing',
+      benefits: 'Increase local visibility, boost foot traffic and calls',
+      marketPrice: '$120 - $1,800/month',
+      link: '/services/micro-saas/local-seo-booster'
+    },
+    {
+      name: 'Subscription Churn Rescue',
+      description: 'Payment retrials, dunning, and AI save-offers to reduce involuntary churn.',
+      icon: CreditCard,
+      features: [
+        'Smart payment retrials scheduling',
+        'Network tokenization and updater',
+        'AI offers and couponing',
+        'Webhook integration with Stripe/Chargebee',
+        'Churn prediction models',
+        'Compliance-ready receipts and emails'
+      ],
+      pricing: '$149 - $1,500/month',
+      delivery: '1-2 weeks',
+      category: 'FinOps',
+      benefits: 'Recover 20-40% of failed payments automatically',
+      marketPrice: '$300 - $3,000/month',
+      link: '/services/micro-saas/churn-rescue'
+    },
+    {
+      name: 'AI Knowledge Base Widget',
+      description: 'Site-embedded RAG bot grounded in your docs with guardrails and analytics.',
+      icon: Bot,
+      features: [
+        'Crawler + file ingestion with PII redaction',
+        'Vector and keyword hybrid retrieval',
+        'Prompt rules, citations, and guardrails',
+        'Feedback loop and answer ratings',
+        'Embeddable widget + JS SDK',
+        'Role-based content scoping'
+      ],
+      pricing: '$99 - $1,200/month',
+      delivery: '1 week',
+      category: 'Support',
+      benefits: 'Deflect 40-60% tickets; faster, cited answers 24/7',
+      marketPrice: '$200 - $2,500/month',
+      link: '/services/micro-saas/ai-knowledge-widget'
     }
   ];
 
@@ -680,6 +827,44 @@ export default function EnhancedServicesCatalog() {
       link: '/services/ai-services/cybersecurity-platform'
     },
     {
+      name: 'Enterprise RAG Knowledge Platform',
+      description: 'Secure Retrieval-Augmented Generation on your private data with governance and audit.',
+      icon: Database,
+      features: [
+        'Document ingestion with PII redaction',
+        'Vector search and hybrid retrieval',
+        'Prompt controls, guardrails, and audit logs',
+        'SSO, roles, and dataset scoping',
+        'Human-in-the-loop feedback',
+        'On-prem and cloud options'
+      ],
+      pricing: '$3,000 - $18,000/month',
+      delivery: '4-8 weeks',
+      category: 'GenAI',
+      benefits: 'Reduce search time by 80%, safer AI answers',
+      marketPrice: '$5,000 - $35,000/month',
+      link: '/services/ai-services/enterprise-rag-platform'
+    },
+    {
+      name: 'Agentic Sales Assistant',
+      description: 'Autonomous SDR workflows for prospecting, outreach, qualification, and CRM updates.',
+      icon: Target,
+      features: [
+        'Lead sourcing and enrichment',
+        'Personalized multi-step outreach',
+        'Meeting booking and objection handling',
+        'Auto logging to Salesforce/HubSpot',
+        'Safety guardrails and approval queues',
+        'KPI dashboards and A/B testing'
+      ],
+      pricing: '$1,200 - $7,500/month',
+      delivery: '2-4 weeks',
+      category: 'RevOps',
+      benefits: '2-3x pipeline, 50% less manual SDR work',
+      marketPrice: '$2,000 - $12,000/month',
+      link: '/services/ai-services/agentic-sales-assistant'
+    },
+    {
       name: 'AI-Powered Content Generation Suite',
       description: 'Advanced content creation including text, images, videos, and multimedia',
       icon: PenTool,
@@ -773,6 +958,83 @@ export default function EnhancedServicesCatalog() {
       benefits: 'Increase automation efficiency by 50%, reduce operational costs',
       marketPrice: '$20,000 - $150,000/month',
       link: '/services/ai-services/autonomous-robotics'
+    }
+    ,
+    {
+      name: 'Marketing Mix Modeling (MMM) + Incrementality',
+      description: 'Privacy-safe MMM to attribute impact across channels and optimize budgets.',
+      icon: BarChart3,
+      features: [
+        'Bayesian MMM with priors for small data',
+        'Geo experiments and switchback tests',
+        'Scenario planning and budget optimizers',
+        'ROAS, CAC, and LTV projections',
+        'CSV, API, and BigQuery connectors',
+        'Executive-ready reports'
+      ],
+      pricing: '$6,000 - $35,000/month',
+      delivery: '6-10 weeks',
+      category: 'Marketing Science',
+      benefits: 'Confident spend allocation; reduce wasted ad spend by 20-30%',
+      marketPrice: '$10,000 - $60,000/month',
+      link: '/services/ai-services/mmm-incrementality'
+    },
+    {
+      name: 'GenAI Safety & Governance Toolkit',
+      description: 'Guardrails, red-teaming, and policy enforcement for safe, enterprise GenAI.',
+      icon: Lock,
+      features: [
+        'Prompt and output filters',
+        'PII detection and masking',
+        'Policy packs (HIPAA, SOC2, GDPR)',
+        'Safety evals and red-teaming',
+        'Guarded tool-use and approvals',
+        'Audit logs and reproducibility'
+      ],
+      pricing: '$3,500 - $20,000/month',
+      delivery: '4-8 weeks',
+      category: 'AI Governance',
+      benefits: 'Ship AI safely faster; reduce risk of policy violations',
+      marketPrice: '$6,000 - $40,000/month',
+      link: '/services/ai-services/genai-governance'
+    },
+    {
+      name: 'Edge Vision Inference Platform',
+      description: 'Deploy compressed CV models to cameras/edge for low-latency detection and alerts.',
+      icon: Eye,
+      features: [
+        'ONNX/TensorRT quantization',
+        'OTA model updates and rollbacks',
+        'Offline-first buffering',
+        'Event rules and webhooks',
+        'Fleet management dashboards',
+        'Device health monitoring'
+      ],
+      pricing: '$2,500 - $18,000/month',
+      delivery: '4-8 weeks',
+      category: 'Edge AI',
+      benefits: 'Reduce bandwidth; real-time insights on-site',
+      marketPrice: '$5,000 - $35,000/month',
+      link: '/services/ai-services/edge-vision'
+    },
+    {
+      name: 'Agentic Backoffice Co-pilots',
+      description: 'Approval-gated agents that execute ops tasks across SaaS tools with traces.',
+      icon: Cpu,
+      features: [
+        'Toolformer-style tool selection',
+        'Human-in-the-loop approvals',
+        'Reproducible traces and logs',
+        'Rate limit and data guardrails',
+        'Playbooks and evaluation harness',
+        'SOC2-ready controls'
+      ],
+      pricing: '$1,200 - $9,500/month',
+      delivery: '2-5 weeks',
+      category: 'Agentic AI',
+      benefits: 'Automate repetitive ops; measurable throughput gains',
+      marketPrice: '$2,000 - $15,000/month',
+      link: '/services/ai-services/agentic-backoffice'
     }
   ];
 
@@ -1044,6 +1306,63 @@ export default function EnhancedServicesCatalog() {
       link: '/services/it-services/managed-support'
     },
     {
+      name: 'SOC 2 Readiness Program',
+      description: 'End-to-end SOC 2 readiness with gap analysis, controls, evidence, and audit support.',
+      icon: Shield,
+      features: [
+        'Readiness assessment and roadmap',
+        'Policy templates and control implementation',
+        'Evidence collection automation',
+        'Risk register and remediation tracking',
+        'Continuous monitoring setup',
+        'Auditor coordination and support'
+      ],
+      pricing: '$12,000 - $85,000/project',
+      delivery: '6-16 weeks',
+      category: 'Security & Compliance',
+      benefits: 'Achieve SOC 2 faster, reduce audit surprises',
+      marketPrice: '$20,000 - $120,000/project',
+      link: '/services/it-services/soc2-readiness'
+    },
+    {
+      name: 'Data Platform Modernization (dbt + Snowflake)',
+      description: 'Modern ELT with dbt, Snowflake/BigQuery, and governed metrics layer for reliable BI.',
+      icon: BarChart3,
+      features: [
+        'Warehouse migration and modeling',
+        'dbt transformation pipelines',
+        'Semantic layer and metrics governance',
+        'Orchestration and observability',
+        'Cost control and performance tuning',
+        'Data quality tests and SLAs'
+      ],
+      pricing: '$25,000 - $180,000/project',
+      delivery: '8-24 weeks',
+      category: 'Data',
+      benefits: 'Trustworthy analytics with lower costs',
+      marketPrice: '$40,000 - $300,000/project',
+      link: '/services/it-services/data-platform-modernization'
+    },
+    {
+      name: 'FinOps Managed Service',
+      description: 'Ongoing cloud cost optimization with budgets, unit economics, and actionable guardrails.',
+      icon: TrendingUp,
+      features: [
+        'Rightsizing and autoscaling policies',
+        'Idle resource detection and cleanup',
+        'Tagging hygiene and chargeback',
+        'Budget alerts and anomaly detection',
+        'Savings plans and RI strategy',
+        'Monthly executive reports'
+      ],
+      pricing: '$3,000 - $15,000/month',
+      delivery: '2-4 weeks onboarding',
+      category: 'Cloud',
+      benefits: 'Save 25-45% on cloud spend',
+      marketPrice: '$4,000 - $25,000/month',
+      link: '/services/it-services/finops-managed-service'
+    },
+    {
       name: 'Cloud Security & Compliance',
       description: 'Comprehensive cloud security with compliance management and monitoring',
       icon: Shield,
@@ -1100,6 +1419,64 @@ export default function EnhancedServicesCatalog() {
       marketPrice: '$40,000 - $300,000/project',
       link: '/services/it-services/legacy-modernization'
     }
+    ,
+    {
+      name: 'Zero-Trust Network Overhaul',
+      description: 'ZTNA rollout, identity-aware proxies, and microsegmentation to secure access.',
+      icon: Key,
+      features: [
+        'ZTNA design and deployment',
+        'IdP integration and SSO',
+        'Device posture checks',
+        'Network microsegmentation',
+        'Continuous verification',
+        'Runbooks and training'
+      ],
+      pricing: '$15,000 - $120,000/project',
+      delivery: '8-20 weeks',
+      category: 'Security',
+      benefits: 'Shrink attack surface and lateral movement risk',
+      marketPrice: '$25,000 - $200,000/project',
+      link: '/services/it-services/zero-trust'
+    },
+    {
+      name: 'SRE Reliability Accelerator',
+      description: 'SLIs/SLOs, error budgets, and incident tooling to improve uptime and MTTR.',
+      icon: Activity,
+      features: [
+        'Reliability scorecard and roadmap',
+        'SLIs/SLOs and error budgets',
+        'On-call and runbook improvements',
+        'Incident comms and retrospectives',
+        'Chaos and game days',
+        'Executive reporting'
+      ],
+      pricing: '$12,000 - $95,000/project',
+      delivery: '6-16 weeks',
+      category: 'SRE',
+      benefits: 'Lower incidents; faster recovery and fewer regressions',
+      marketPrice: '$20,000 - $150,000/project',
+      link: '/services/it-services/sre-accelerator'
+    },
+    {
+      name: 'Migration to Kubernetes (AKS/EKS/GKE)',
+      description: 'Plan, containerize, and migrate workloads with GitOps and IaC.',
+      icon: Container,
+      features: [
+        'Workload assessment and sizing',
+        'GitOps and IaC baselines',
+        'Security policies (OPA/Kyverno)',
+        'Observability and autoscaling',
+        'Cost controls and quotas',
+        'Runbooks and enablement'
+      ],
+      pricing: '$25,000 - $180,000/project',
+      delivery: '8-24 weeks',
+      category: 'Cloud Native',
+      benefits: 'Scalability, resilience, and team velocity',
+      marketPrice: '$40,000 - $300,000/project',
+      link: '/services/it-services/kubernetes-migration'
+    }
   ];
 
   const contactInfo = {
@@ -1118,13 +1495,13 @@ export default function EnhancedServicesCatalog() {
 
   return (
     <>
-      <Head>
+      <Helmet>
         <title>{title}</title>
         <meta name="description" content={description} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="canonical" href="https://ziontechgroup.com/services" />
         <link rel="icon" href="/favicon.ico" />
-      </Head>
+      </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-slate-50">
         {/* Header Section */}

@@ -1,5 +1,5 @@
-import React from 'react';
-import Head from 'next/head';
+// import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
 export default function NextGenMultimodalAgents2026() {
   return (

@@ -1,5 +1,4 @@
-import React from "react";
-
+import React from "react"
 export default function Page() {
   return (
     <main className="min-h-screen bg-slate-950 text-white">

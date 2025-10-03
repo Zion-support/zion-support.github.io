@@ -1,6 +1,6 @@
-import React from 'react';
+// import React from 'react';
 import { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata: Metadata = {
   title: 'AI 2026 Neural Consciousness Fusion: Revolutionary Breakthrough | Zion Tech Group',
@@ -40,14 +40,12 @@ export default function NeuralConsciousnessFusionBreakthrough() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link 
-                href="/contact" 
+              <Link to="/contact" 
                 className="bg-gradient-to-r from-purple-500 to-cyan-600 hover:from-purple-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
               >
                 Get Neural Consciousness AI →
               </Link>
-              <Link 
-                href="/case-studies/ai-2026-neural-consciousness-fusion-100-billion-success" 
+              <Link to="/case-studies/ai-2026-neural-consciousness-fusion-100-billion-success" 
                 className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 transform hover:-translate-y-1"
               >
                 View $100B Success Story →
@@ -176,8 +174,7 @@ export default function NeuralConsciousnessFusionBreakthrough() {
             </div>
 
             <div className="text-center mt-12">
-              <Link 
-                href="/contact"
+              <Link to="/contact"
                 className="inline-block bg-gradient-to-r from-purple-500 to-cyan-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:from-purple-400 hover:to-cyan-500 transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
               >
                 Implement Neural Consciousness AI →
@@ -193,7 +190,7 @@ export default function NeuralConsciousnessFusionBreakthrough() {
           <h2 className="text-3xl font-bold text-white text-center mb-12">Related Revolutionary Breakthroughs</h2>
           
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <Link href="/blog/ai-2026-quantum-consciousness-breakthrough" className="group block rounded-xl border border-purple-500/20 bg-gradient-to-br from-purple-900/20 to-indigo-900/20 p-6 hover:border-purple-400/40 transition-all duration-300 hover:scale-105">
+            <Link to="/blog/ai-2026-quantum-consciousness-breakthrough" className="group block rounded-xl border border-purple-500/20 bg-gradient-to-br from-purple-900/20 to-indigo-900/20 p-6 hover:border-purple-400/40 transition-all duration-300 hover:scale-105">
               <div className="flex items-center gap-2 mb-3">
                 <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-3 py-1 rounded-full text-xs font-bold">QUANTUM CONSCIOUSNESS</span>
               </div>
@@ -202,7 +199,7 @@ export default function NeuralConsciousnessFusionBreakthrough() {
               <div className="text-purple-300 text-sm font-semibold group-hover:text-purple-200">Explore Quantum Breakthrough →</div>
             </Link>
             
-            <Link href="/case-studies/ai-2026-neural-consciousness-fusion-100-billion-success" className="group block rounded-xl border border-green-500/20 bg-gradient-to-br from-green-900/20 to-emerald-900/20 p-6 hover:border-green-400/40 transition-all duration-300 hover:scale-105">
+            <Link to="/case-studies/ai-2026-neural-consciousness-fusion-100-billion-success" className="group block rounded-xl border border-green-500/20 bg-gradient-to-br from-green-900/20 to-emerald-900/20 p-6 hover:border-green-400/40 transition-all duration-300 hover:scale-105">
               <div className="flex items-center gap-2 mb-3">
                 <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-3 py-1 rounded-full text-xs font-bold">$100B SUCCESS</span>
               </div>
@@ -211,7 +208,7 @@ export default function NeuralConsciousnessFusionBreakthrough() {
               <div className="text-green-300 text-sm font-semibold group-hover:text-green-200">Read Success Story →</div>
             </Link>
             
-            <Link href="/blog/ai-2026-ultimate-consciousness-revolution" className="group block rounded-xl border border-cyan-500/20 bg-gradient-to-br from-cyan-900/20 to-blue-900/20 p-6 hover:border-cyan-400/40 transition-all duration-300 hover:scale-105">
+            <Link to="/blog/ai-2026-ultimate-consciousness-revolution" className="group block rounded-xl border border-cyan-500/20 bg-gradient-to-br from-cyan-900/20 to-blue-900/20 p-6 hover:border-cyan-400/40 transition-all duration-300 hover:scale-105">
               <div className="flex items-center gap-2 mb-3">
                 <span className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-3 py-1 rounded-full text-xs font-bold">ULTIMATE CONSCIOUSNESS</span>
               </div>

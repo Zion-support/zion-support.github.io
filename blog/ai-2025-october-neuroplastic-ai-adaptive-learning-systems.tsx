@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 
 export const metadata = {
   title: 'Neuroplastic AI Systems 2025 — Self-Adapting Neural Networks, 99.2% Continuous Learning',

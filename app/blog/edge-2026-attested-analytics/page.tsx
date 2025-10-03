@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
 	title: 'Edge 2026: Attested Analytics — Zero‑PII Insights with Signed Proofs',
@@ -19,11 +19,11 @@ export default function Page() {
 				<li>Latency: sub‑100ms collection and evaluation at the edge</li>
 			</ul>
 			<p>
-				Related reads: <Link href="/blog/edge-private-analytics-2027">Edge Private Analytics 2027</Link>{' '}
-				and <Link href="/blog/verifiable-edge-analytics-2026">Verifiable Edge Analytics 2026</Link>.
+				Related reads: <Link to="/blog/edge-private-analytics-2027">Edge Private Analytics 2027</Link>{' '}
+				and <Link to="/blog/verifiable-edge-analytics-2026">Verifiable Edge Analytics 2026</Link>.
 			</p>
 			<p>
-				Continue exploring in our <Link href="/blog">Blog</Link>.
+				Continue exploring in our <Link to="/blog">Blog</Link>.
 			</p>
 		</main>
 	);

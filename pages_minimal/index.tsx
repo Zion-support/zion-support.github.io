@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import LatestContentBanner2025 from '../src/components/LatestContentBanner2025';
 import October2025NewContentShowcase from '../components/October2025NewContentShowcase';
 

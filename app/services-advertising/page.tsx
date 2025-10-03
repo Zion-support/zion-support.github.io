@@ -1,5 +1,5 @@
-import React from 'react';
-import Link from 'next/link';
+// import React from 'react';
+import { Link } from 'react-router-dom';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -48,6 +48,40 @@ export default function ServicesAdvertisingPage() {
           benefits: ['95% accuracy in object detection', 'Real-time processing', 'Custom model training'],
           contactLink: 'mailto:kleber@ziontechgroup.com?subject=Computer Vision Quote'
         }
+        ,
+        {
+          name: 'Enterprise RAG Platform (Retrieval-Augmented Generation)',
+          description: 'Production-grade RAG architecture with evaluation, observability, and guardrails for enterprise search & assistants',
+          ourPrice: '$8,000 - $85,000/project',
+          marketPrice: '$10,000 - $120,000/project',
+          savings: 'Up to 30% savings',
+          roi: '3-6 months payback',
+          features: ['Domain Adapters & Vector DB', 'Grounded Answers w/ Citations', 'Safety Guardrails', 'Eval Harness & Observability'],
+          benefits: ['Reduce search time by 60%', 'Improve answer accuracy by 35-55%', 'Lower support costs by 25%+'],
+          contactLink: 'https://ziontechgroup.com/services/ai-services/enterprise-rag-platform'
+        },
+        {
+          name: 'Agentic Sales Assistant',
+          description: 'Autonomous multi-step agent that qualifies leads, drafts outreach, and books meetings integrated with your CRM',
+          ourPrice: '$3,500 - $25,000 setup + $499 - $2,999/month',
+          marketPrice: '$5,000 - $40,000 setup + $699 - $4,999/month',
+          savings: 'Up to 25% savings',
+          roi: '10x average pipeline lift',
+          features: ['Multi-Agent Workflows', 'CRM Integration', 'Compliance Safe-Mode', 'A/B Messaging'],
+          benefits: ['40% faster lead qualification', '25% more meetings', '35% reply-rate improvement'],
+          contactLink: 'https://ziontechgroup.com/services/ai-services/agentic-sales-assistant'
+        },
+        {
+          name: 'AI Time-Series Forecasting Suite',
+          description: 'Demand and financial forecasting with probabilistic models, holidays/events, and anomaly detection',
+          ourPrice: '$6,000 - $45,000/project',
+          marketPrice: '$8,000 - $65,000/project',
+          savings: '20-30% savings',
+          roi: '2-5 months payback',
+          features: ['Hierarchical Forecasts', 'Cold-Start Handling', 'Backtesting & MAPE/SMAPE', 'Alerting & What-If'],
+          benefits: ['15-30% inventory reduction', '3-7% margin improvement', 'Lower stockouts'],
+          contactLink: 'https://ziontechgroup.com/services/ai-financial-forecasting-suite'
+        }
       ]
     },
     {
@@ -88,6 +122,51 @@ export default function ServicesAdvertisingPage() {
           benefits: ['80% reduction in support tickets', '24/7 customer availability', '60% faster response times'],
           contactLink: 'mailto:kleber@ziontechgroup.com?subject=Customer Support AI Quote'
         }
+        ,
+        {
+          name: 'AI SEO Auditor & Brief Generator',
+          description: 'On-page SEO diagnostics with AI content briefs, internal link maps, and structured data fixes',
+          ourPrice: '$49 - $299/month',
+          marketPrice: '$29 - $499/month',
+          savings: 'Competitive pricing',
+          roi: '200-400% average ROI',
+          features: ['Topical Maps', 'Entity Coverage', 'Schema.org Suggestions', 'Briefs via API'],
+          benefits: ['+20-60% organic traffic', 'Faster content production', 'Reduced agency spend'],
+          contactLink: 'https://ziontechgroup.com/services/ai-content-optimization-platform'
+        },
+        {
+          name: 'Social Proof & Review Widget Pro',
+          description: 'Lightweight social proof widgets that boost conversions with verified reviews and live counters',
+          ourPrice: '$19 - $99/month',
+          marketPrice: '$9 - $199/month',
+          savings: 'Competitive pricing',
+          roi: '120-300% conversion lift potential',
+          features: ['Trust Badges', 'A/B Testing', 'Platform Integrations', 'Fraud Controls'],
+          benefits: ['+5-18% checkout conversion', 'Reduced bounce rate', 'Higher AOV'],
+          contactLink: 'https://ziontechgroup.com/services/advanced-micro-saas-solutions'
+        },
+        {
+          name: 'Compliance Policy Generator (SOC2/ISO/NIST)',
+          description: 'Automated policy drafts aligned to SOC2, ISO 27001, and NIST with versioning & evidence maps',
+          ourPrice: '$79 - $399/month',
+          marketPrice: '$99 - $799/month',
+          savings: 'Up to 40% savings',
+          roi: 'Faster audits, fewer consultant hours',
+          features: ['Policy Library', 'Gap Analyzer', 'Evidence Matrix', 'Reviewer Workflow'],
+          benefits: ['Cut audit prep by 50%', 'Standardize policies', 'Lower compliance costs'],
+          contactLink: 'https://ziontechgroup.com/services/it-services/soc2-readiness'
+        },
+        {
+          name: 'AI Experimentation & A/B Testing Optimizer',
+          description: 'Experiment design assistant with Bayesian analysis, guardrail metrics, and sequential testing',
+          ourPrice: '$59 - $349/month',
+          marketPrice: '$79 - $499/month',
+          savings: 'Competitive pricing',
+          roi: '3-10% revenue lift typical',
+          features: ['Bayesian Engine', 'Peeking-Safe Stats', 'Guardrails', 'Segment Insights'],
+          benefits: ['Ship winning variants faster', 'Avoid false positives', 'Improve UX KPIs'],
+          contactLink: 'https://ziontechgroup.com/services/ai-workflow-automation-platform'
+        }
       ]
     },
     {
@@ -127,6 +206,51 @@ export default function ServicesAdvertisingPage() {
           features: ['Security Assessment', 'Penetration Testing', 'Security Monitoring', 'Incident Response'],
           benefits: ['99.9% threat detection accuracy', '24/7 security monitoring', 'Compliance automation'],
           contactLink: 'mailto:kleber@ziontechgroup.com?subject=Cybersecurity Solutions Quote'
+        }
+        ,
+        {
+          name: 'FinOps Managed Service',
+          description: 'Continuous cloud cost optimization with rightsizing, commitment planning, and anomaly response',
+          ourPrice: '$2,500 - $15,000/month',
+          marketPrice: '$3,500 - $25,000/month',
+          savings: 'Up to 35% savings on infra',
+          roi: 'Immediate savings on cloud spend',
+          features: ['RI/SP Management', 'K8s Cost Allocation', 'Anomaly Detection', 'Showback/Chargeback'],
+          benefits: ['10-35% cloud savings', 'Governed usage', 'Fewer surprise bills'],
+          contactLink: 'https://ziontechgroup.com/services/it-services/finops-managed-service'
+        },
+        {
+          name: 'Data Platform Modernization',
+          description: 'Migrate legacy ETL/warehouses to modern lakehouse with streaming and governance',
+          ourPrice: '$25,000 - $250,000/project',
+          marketPrice: '$40,000 - $400,000/project',
+          savings: 'Up to 30% savings',
+          roi: 'Months to value with phased delivery',
+          features: ['Lakehouse Architecture', 'dbt/ELT Migration', 'Streaming Ingestion', 'Data Contracts'],
+          benefits: ['Faster analytics', 'Lower compute costs', 'Better data quality'],
+          contactLink: 'https://ziontechgroup.com/services/it-services/data-platform-modernization'
+        },
+        {
+          name: 'SOC 2 Readiness & Automation',
+          description: 'Readiness assessment, control implementation, and automated evidence collection with auditor handoff',
+          ourPrice: '$8,000 - $65,000/project',
+          marketPrice: '$12,000 - $95,000/project',
+          savings: 'Up to 25% savings',
+          roi: 'Pass audits faster',
+          features: ['Gap Analysis', 'Control Mapping', 'Ticket/Evidence Automation', 'Auditor Pack'],
+          benefits: ['Reduce audit cycle by 30-50%', 'Improved security posture', 'Lower risk'],
+          contactLink: 'https://ziontechgroup.com/services/it-services/soc2-readiness'
+        },
+        {
+          name: 'Cloud Migration Factory',
+          description: 'Standardized, low-risk app migration program with landing zones and IaC blueprints',
+          ourPrice: '$15,000 - $300,000/project',
+          marketPrice: '$20,000 - $450,000/project',
+          savings: 'Up to 25% savings',
+          roi: 'Reduced time-to-cloud',
+          features: ['Landing Zones', 'Pipelines & Golden Paths', 'IaC Modules', 'Cutover Playbooks'],
+          benefits: ['Fewer rollbacks', 'Predictable timelines', 'Hardened baselines'],
+          contactLink: 'https://ziontechgroup.com/services/it-services/cloud-migration'
         }
       ]
     }
@@ -259,10 +383,11 @@ export default function ServicesAdvertisingPage() {
 
                     {/* CTA */}
                     <div className="border-t pt-4">
-                      <a 
-                        href={service.contactLink}
-                        className={`w-full bg-${category.color}-600 text-white text-center py-3 px-6 rounded-lg font-semibold hover:bg-${category.color}-700 transition-colors block`}
-                      >
+                <a 
+                href={service.contactLink}
+                className={`w-full bg-${category.color}-600 text-white text-center py-3 px-6 rounded-lg font-semibold hover:bg-${category.color}-700 transition-colors block`}
+                aria-label={`Request custom quote for ${service.name}`}
+              >
                         Get Custom Quote
                       </a>
                     </div>
@@ -351,19 +476,19 @@ export default function ServicesAdvertisingPage() {
             <div>
               <h4 className="text-lg font-semibold mb-4">Services</h4>
               <div className="space-y-2">
-                <Link href="/services/ai-services-comprehensive" className="block text-gray-300 hover:text-blue-400">AI Services</Link>
-                <Link href="/services/advanced-micro-saas-solutions" className="block text-gray-300 hover:text-green-400">Micro SaaS</Link>
-                <Link href="/services/it-services-comprehensive" className="block text-gray-300 hover:text-purple-400">IT Services</Link>
-                <Link href="/services" className="block text-gray-300 hover:text-blue-400">All Services</Link>
+                <Link to="/services/ai-services-comprehensive" className="block text-gray-300 hover:text-blue-400">AI Services</Link>
+                <Link to="/services/advanced-micro-saas-solutions" className="block text-gray-300 hover:text-green-400">Micro SaaS</Link>
+                <Link to="/services/it-services-comprehensive" className="block text-gray-300 hover:text-purple-400">IT Services</Link>
+                <Link to="/services" className="block text-gray-300 hover:text-blue-400">All Services</Link>
               </div>
             </div>
             <div>
               <h4 className="text-lg font-semibold mb-4">Company</h4>
               <div className="space-y-2">
-                <Link href="/about" className="block text-gray-300 hover:text-blue-400">About Us</Link>
-                <Link href="/contact" className="block text-gray-300 hover:text-blue-400">Contact</Link>
-                <Link href="/case-studies" className="block text-gray-300 hover:text-blue-400">Case Studies</Link>
-                <Link href="/blog" className="block text-gray-300 hover:text-blue-400">Blog</Link>
+                <Link to="/about" className="block text-gray-300 hover:text-blue-400">About Us</Link>
+                <Link to="/contact" className="block text-gray-300 hover:text-blue-400">Contact</Link>
+                <Link to="/case-studies" className="block text-gray-300 hover:text-blue-400">Case Studies</Link>
+                <Link to="/blog" className="block text-gray-300 hover:text-blue-400">Blog</Link>
               </div>
             </div>
             <div>
@@ -377,7 +502,7 @@ export default function ServicesAdvertisingPage() {
           </div>
           <div className="border-t border-gray-700 mt-8 pt-4 text-center text-gray-400">
             © {new Date().getFullYear()} Zion Tech Group. All rights reserved. | 
-            <Link href="https://ziontechgroup.com" className="hover:text-white ml-1">ziontechgroup.com</Link>
+            <Link to="https://ziontechgroup.com" className="hover:text-white ml-1">ziontechgroup.com</Link>
           </div>
         </div>
       </footer>

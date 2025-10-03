@@ -1,5 +1,5 @@
-import React from 'react';
-import Link from 'next/link';
+// import React from 'react';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'AI 2028 Mega Transformation Success: $200M ROI Case Study - Zion Tech Group',
@@ -18,7 +18,7 @@ export default function AI2028MegaTransformationSuccess() {
     <div className="max-w-4xl mx-auto px-4 py-8">
       <div className="mb-8">
         <div className="flex items-center gap-2 text-sm text-gray-600 mb-4">
-          <Link href="/case-studies" className="hover:text-blue-600">Case Studies</Link>
+          <Link to="/case-studies" className="hover:text-blue-600">Case Studies</Link>
           <span>→</span>
           <span>AI 2028 Mega Transformation Success</span>
         </div>
@@ -318,14 +318,12 @@ export default function AI2028MegaTransformationSuccess() {
             AI 2028 technologies and transform your organization into an industry leader.
           </p>
           <div className="flex gap-4 justify-center">
-            <Link 
-              href="/contact" 
+            <Link to="/contact" 
               className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Get Your Transformation Started
             </Link>
-            <Link 
-              href="/services/ai-autonomous-operations-2026" 
+            <Link to="/services/ai-autonomous-operations-2026" 
               className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
             >
               Explore Our Services
@@ -336,11 +334,11 @@ export default function AI2028MegaTransformationSuccess() {
         <div className="mt-12 pt-8 border-t border-gray-200">
           <h3 className="text-xl font-bold text-gray-900 mb-4">Related Case Studies</h3>
           <div className="grid md:grid-cols-2 gap-4">
-            <Link href="/case-studies/ai-2027-autonomous-enterprise-success" className="block p-4 border border-gray-200 rounded-lg hover:border-blue-500 transition-colors">
+            <Link to="/case-studies/ai-2027-autonomous-enterprise-success" className="block p-4 border border-gray-200 rounded-lg hover:border-blue-500 transition-colors">
               <h4 className="font-semibold text-gray-900">AI 2027: $100M Autonomous Enterprise Success</h4>
               <p className="text-sm text-gray-600">Previous year's breakthrough transformation</p>
             </Link>
-            <Link href="/case-studies/quantum-ai-manufacturing-success" className="block p-4 border border-gray-200 rounded-lg hover:border-blue-500 transition-colors">
+            <Link to="/case-studies/quantum-ai-manufacturing-success" className="block p-4 border border-gray-200 rounded-lg hover:border-blue-500 transition-colors">
               <h4 className="font-semibold text-gray-900">Quantum AI Manufacturing Success</h4>
               <p className="text-sm text-gray-600">Quantum computing in manufacturing</p>
             </Link>
