@@ -60,10 +60,12 @@ const AIMicroSAAS: React.FC = () => {
               {services.map((service) => (
                 <div key={service.id} className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                   <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-                    <service.icon className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-                    <div>
-                      <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">{service.name}</h3>
-                      <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">{service.category}</span>
+                    <div className="flex items-center space-x-3">
+                      <service.icon className="w-8 h-8 text-zion-blue-light" />
+                      <div>
+                        <h3 className="text-lg font-semibold">{service.name}</h3>
+                        <span className="text-sm text-zion-blue-light">{service.category}</span>
+                      </div>
                     </div>
                   </div>
                   
