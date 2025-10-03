@@ -4,7 +4,6 @@
  */
 
 import React, { Component, ReactNode, ErrorInfo } from 'react';
-import { AlertTriangle } from 'lucide-react';
 
 interface Props {
   children: ReactNode;
@@ -21,6 +20,9 @@ interface State {
 }
 
 class EnhancedErrorBoundary extends Component<Props, State> {
+  private retryCount = 0;
+  private maxRetries = 3;
+
   constructor(props: Props) {
     super(props);
     this.state = {
@@ -48,18 +50,21 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     // Update state with error info
     this.setState({ errorInfo });
 
-    // Call custom error handler if provided
-    if (onError) {
-      onError(error, errorInfo);
-    }
+    // const errorDetails = {
+    //   timestamp: new Date().toISOString(),
+    //   userAgent: navigator.userAgent,
+    //   url: window.location.href,
+    //   retryCount: this.retryCount
+    // };
 
-    // Log error for debugging
-    console.error('Enhanced Error Boundary caught an error:', error, errorInfo);
-
-    // Log security event if suspicious
-    // if (securityMonitoring.detectSuspiciousActivity(errorDetails)) {
-    //   securityMonitoring.logSecurityEvent('suspicious_error', errorDetails);
-    // }
+    // Send to analytics (placeholder - would need actual analytics implementation)
+    console.log('Error boundary caught:', {
+      error_id: errorId,
+      error_message: error.message,
+      error_stack: error.stack?.substring(0, 500),
+      component_stack: errorInfo.componentStack?.substring(0, 500) || '',
+      retry_count: this.retryCount
+    });
 
     // Call custom error handler
     if (onError) {
@@ -77,8 +82,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {
         errorId: ''
       });
 
-      // Track retry attempt
-      analyticsUtils.trackEvent('error_boundary_retry', {
+      // Track retry attempt (placeholder)
+      console.log('Error boundary retry:', {
         error_id: this.state.errorId,
         retry_count: this.retryCount
       });
@@ -99,8 +104,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       url: window.location.href
     };
 
-    // Track error report
-    analyticsUtils.trackEvent('error_boundary_report', {
+    // Track error report (placeholder)
+    console.log('Error boundary report:', {
       error_id: errorId,
       reported: true
     });
@@ -127,31 +132,33 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 
       // Default error UI
       return (
-        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-red-50 to-orange-50">
-          <div className="max-w-md w-full mx-4">
-            <div className="bg-white rounded-2xl shadow-xl p-8 text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-red-100 mb-4">
-                <AlertTriangle className="w-8 h-8 text-red-600" />
-              </div>
-              <h1 className="text-2xl font-bold text-gray-900 mb-2">
-                Oops! Something went wrong
-              </h1>
-              <p className="text-gray-600 mb-6">
-                We're sorry for the inconvenience. Please try refreshing the page.
+        <div className="min-h-screen flex items-center justify-center bg-gray-100">
+          <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6">
+            <div className="text-center">
+              <h1 className="text-2xl font-bold text-red-600 mb-4">Something went wrong</h1>
+              <p className="text-gray-600 mb-4">
+                We're sorry, but something unexpected happened.
               </p>
-              <div className="space-y-3">
+              {showDetails && error && (
+                <div className="text-left bg-gray-100 p-4 rounded mb-4">
+                  <p className="text-sm font-mono text-red-600">{error.message}</p>
+                  <p className="text-xs text-gray-500 mt-2">Error ID: {errorId}</p>
+                </div>
+              )}
+              <div className="space-x-4">
                 <button
-                  onClick={() => window.location.reload()}
-                  className="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
+                  onClick={this.handleRetry}
+                  className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+                  disabled={this.retryCount >= this.maxRetries}
                 >
-                  Refresh Page
+                  Try Again ({this.maxRetries - this.retryCount} left)
                 </button>
-                <a
-                  href="/"
-                  className="block w-full border-2 border-red-600 text-red-600 hover:bg-red-50 font-semibold py-3 px-6 rounded-lg transition-colors"
+                <button
+                  onClick={this.handleReportError}
+                  className="bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-700"
                 >
-                  Go to Homepage
-                </a>
+                  Report Issue
+                </button>
               </div>
             </div>
           </div>

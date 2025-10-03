@@ -1,7 +1,7 @@
 import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ErrorBoundary from './components/ErrorBoundary';
-import { PageLoader } from './components/LoadingSpinner';
+import PageLoader from './components/PageLoader';
 
 // Lazy load pages
 const LazyHomePage = React.lazy(() => import('./pages/HomePage'));
