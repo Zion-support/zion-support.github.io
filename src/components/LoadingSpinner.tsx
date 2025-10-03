@@ -9,8 +9,8 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   size = 'md', 
   message = 'Loading...' 
 }) => {
-  const sizeClasses: {,
-  sm: 'w-8 h-8',
+  const sizeClasses: Record<string, string> = {
+    sm: 'w-8 h-8',
     md: 'w-12 h-12',
     lg: 'w-16 h-16',
   };
