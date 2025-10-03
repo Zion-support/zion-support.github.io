@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { Link } from 'react-router-dom';
 import { Sparkles, TrendingUp, DollarSign, Zap, Shield, Award } from 'lucide-react';
 

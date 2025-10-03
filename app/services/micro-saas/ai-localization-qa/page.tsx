@@ -1,6 +1,12 @@
-import React from 'react';
+// import React from 'react';
+// Metadata handled by React Helmet
 import { Globe, CheckCircle, ArrowRight, DollarSign, Clock } from 'lucide-react';
 
+export const metadata: Metadata = {
+  title: 'AI Localization QA | Zion Tech Group - Micro SaaS',
+  description: 'Automated linguistic QA checks for localized apps and content, flagging layout overflows, tone mismatches, and glossary violations.',
+  keywords: 'localization QA, linguistic QA, translation QA, glossary enforcement, TMS connector',
+};
 
 export default function AILocalizationQAPage() {
   const contact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com' } as const;

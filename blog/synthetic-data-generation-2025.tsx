@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { ArrowLeft, Calendar, Clock, User, Share2, BookmarkPlus, TrendingUp } from 'lucide-react';
 
 const SyntheticDataGeneration2025: React.FC = () => {

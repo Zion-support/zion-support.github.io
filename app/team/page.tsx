@@ -1,11 +1,9 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
   ArrowRight, 
-  Star, 
   Users, 
-  Zap, 
-  Shield, 
+  Shield,
+  Cloud, 
   Award,
   Target,
   Linkedin,
@@ -17,8 +15,7 @@ import {
   Briefcase,
   Lightbulb,
   Brain,
-  Cpu,
-  Cloud
+  Cpu
 } from 'lucide-react';
 
 export const metadata = {

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Clock, ArrowRight, Star, TrendingUp } from 'lucide-react';
-
+import { Clock, Star, TrendingUp } from 'lucide-react';
 interface ContentItem {
   id: string;
   title: string;

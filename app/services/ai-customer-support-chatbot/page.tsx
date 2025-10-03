@@ -1,6 +1,17 @@
-import React from 'react';
+// import React from 'react';
+// Metadata interface for React Helmet
+interface Metadata {
+  title?: string;
+  description?: string;
+  keywords?: string;
+}
 import { Link } from 'react-router-dom';
 
+export const metadata: Metadata = {
+  title: 'AI Customer Support Chatbot | Zion Tech Group - Intelligent Support Automation',
+  description: 'Revolutionary AI-powered customer support chatbot with natural language processing, 24/7 availability, and seamless human handoff.',
+  keywords: 'AI chatbot, customer support automation, conversational AI, NLP, customer service, support automation',
+};
 
 export default function AICustomerSupportChatbotPage() {
   return (
@@ -19,14 +30,12 @@ export default function AICustomerSupportChatbotPage() {
             reduce support costs, and deliver exceptional customer experiences 24/7.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/contact" 
+            <Link to="/contact" 
               className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
             >
               Start Free Trial
             </Link>
-            <Link 
-              href="#demo" 
+            <Link to="#demo" 
               className="border-2 border-purple-600 text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-purple-600 hover:text-white transition-all duration-300"
             >
               Watch Demo
@@ -99,7 +108,7 @@ export default function AICustomerSupportChatbotPage() {
                 <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> Basic analytics</li>
                 <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> Email support</li>
               </ul>
-              <Link href="/contact" className="w-full bg-gray-100 text-gray-800 py-3 rounded-lg font-semibold text-center block hover:bg-gray-200 transition-colors">
+              <Link to="/contact" className="w-full bg-gray-100 text-gray-800 py-3 rounded-lg font-semibold text-center block hover:bg-gray-200 transition-colors">
                 Get Started
               </Link>
             </div>
@@ -119,7 +128,7 @@ export default function AICustomerSupportChatbotPage() {
                 <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> API access</li>
                 <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> Priority support</li>
               </ul>
-              <Link href="/contact" className="w-full bg-purple-500 text-white py-3 rounded-lg font-semibold text-center block hover:bg-purple-600 transition-colors">
+              <Link to="/contact" className="w-full bg-purple-500 text-white py-3 rounded-lg font-semibold text-center block hover:bg-purple-600 transition-colors">
                 Start Free Trial
               </Link>
             </div>
@@ -136,7 +145,7 @@ export default function AICustomerSupportChatbotPage() {
                 <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> 24/7 phone support</li>
                 <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> Advanced security</li>
               </ul>
-              <Link href="/contact" className="w-full bg-pink-500 text-white py-3 rounded-lg font-semibold text-center block hover:bg-pink-600 transition-colors">
+              <Link to="/contact" className="w-full bg-pink-500 text-white py-3 rounded-lg font-semibold text-center block hover:bg-pink-600 transition-colors">
                 Contact Sales
               </Link>
             </div>
@@ -198,7 +207,7 @@ export default function AICustomerSupportChatbotPage() {
                 <span>Financial Services</span>
               </div>
             </div>
-            <Link href="/contact" className="mt-6 bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold inline-block hover:bg-gray-100 transition-colors">
+            <Link to="/contact" className="mt-6 bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold inline-block hover:bg-gray-100 transition-colors">
               Start Your Free Trial
             </Link>
           </div>
@@ -266,7 +275,7 @@ export default function AICustomerSupportChatbotPage() {
           </div>
           <div className="text-center mt-8">
             <p className="text-lg mb-4">Ready to see how much you can save?</p>
-            <Link href="/contact" className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+            <Link to="/contact" className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
               Get Your ROI Report
             </Link>
           </div>

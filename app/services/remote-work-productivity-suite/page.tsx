@@ -1,6 +1,21 @@
-import React from 'react';
+// import React from 'react';
+// Metadata interface for React Helmet
+interface Metadata {
+  title?: string;
+  description?: string;
+  keywords?: string;
+}
 import { Link } from 'react-router-dom';
 
+export const metadata: Metadata = {
+  title: 'Remote Work Productivity Suite - Zion Tech Group',
+  description: 'Comprehensive remote work solutions including meeting optimization, team onboarding, and productivity analytics for distributed teams.',
+  keywords: 'remote work, productivity tools, meeting optimization, team onboarding, distributed teams, collaboration software',
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function RemoteWorkProductivitySuite() {
   return (
@@ -138,14 +153,12 @@ export default function RemoteWorkProductivitySuite() {
           Join thousands of companies that have improved their remote work productivity with our comprehensive suite.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link 
-            href="/contact" 
+          <Link to="/contact" 
             className="bg-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
           >
             Start Free Trial
           </Link>
-          <Link 
-            href="https://ziontechgroup.com/services/remote-work-productivity-suite" 
+          <Link to="https://ziontechgroup.com/services/remote-work-productivity-suite" 
             className="border border-green-600 text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors"
           >
             Schedule Demo

@@ -1,6 +1,17 @@
-import React from 'react';
+// import React from 'react';
+// Metadata interface for React Helmet
+interface Metadata {
+  title?: string;
+  description?: string;
+  keywords?: string;
+}
 import { Link } from 'react-router-dom';
 
+export const metadata: Metadata = {
+  title: 'Automated Appointment Scheduler | Zion Tech Group - Smart Scheduling Solution',
+  description: 'Revolutionary appointment scheduling system with calendar integration, automated reminders, and intelligent booking optimization.',
+  keywords: 'appointment scheduling, booking system, calendar integration, automated reminders, scheduling software',
+};
 
 export default function AutomatedAppointmentSchedulerPage() {
   return (
@@ -19,14 +30,12 @@ export default function AutomatedAppointmentSchedulerPage() {
             Reduce no-shows, eliminate double bookings, and provide seamless customer experiences.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/contact" 
+            <Link to="/contact" 
               className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
             >
               Start Free Trial
             </Link>
-            <Link 
-              href="#demo" 
+            <Link to="#demo" 
               className="border-2 border-green-600 text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-green-600 hover:text-white transition-all duration-300"
             >
               Watch Demo
@@ -99,7 +108,7 @@ export default function AutomatedAppointmentSchedulerPage() {
                 <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> Email reminders</li>
                 <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> Custom booking page</li>
               </ul>
-              <Link href="/contact" className="w-full bg-gray-100 text-gray-800 py-3 rounded-lg font-semibold text-center block hover:bg-gray-200 transition-colors">
+              <Link to="/contact" className="w-full bg-gray-100 text-gray-800 py-3 rounded-lg font-semibold text-center block hover:bg-gray-200 transition-colors">
                 Get Started
               </Link>
             </div>
@@ -119,7 +128,7 @@ export default function AutomatedAppointmentSchedulerPage() {
                 <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> CRM integration</li>
                 <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> Priority support</li>
               </ul>
-              <Link href="/contact" className="w-full bg-green-500 text-white py-3 rounded-lg font-semibold text-center block hover:bg-green-600 transition-colors">
+              <Link to="/contact" className="w-full bg-green-500 text-white py-3 rounded-lg font-semibold text-center block hover:bg-green-600 transition-colors">
                 Start Free Trial
               </Link>
             </div>
@@ -136,7 +145,7 @@ export default function AutomatedAppointmentSchedulerPage() {
                 <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> Dedicated support</li>
                 <li className="flex items-center"><span className="text-green-500 mr-2">✓</span> Advanced analytics</li>
               </ul>
-              <Link href="/contact" className="w-full bg-blue-500 text-white py-3 rounded-lg font-semibold text-center block hover:bg-blue-600 transition-colors">
+              <Link to="/contact" className="w-full bg-blue-500 text-white py-3 rounded-lg font-semibold text-center block hover:bg-blue-600 transition-colors">
                 Contact Sales
               </Link>
             </div>
@@ -198,7 +207,7 @@ export default function AutomatedAppointmentSchedulerPage() {
                 <span>Education & Training</span>
               </div>
             </div>
-            <Link href="/contact" className="mt-6 bg-white text-green-600 px-6 py-3 rounded-lg font-semibold inline-block hover:bg-gray-100 transition-colors">
+            <Link to="/contact" className="mt-6 bg-white text-green-600 px-6 py-3 rounded-lg font-semibold inline-block hover:bg-gray-100 transition-colors">
               Start Your Free Trial
             </Link>
           </div>

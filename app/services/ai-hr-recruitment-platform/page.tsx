@@ -1,5 +1,11 @@
-import React from 'react';
+// import React from 'react';
+// Metadata handled by React Helmet
 
+export const metadata: Metadata = {
+  title: 'AI HR Recruitment Platform | Zion Tech Group',
+  description: 'Revolutionary AI-powered recruitment platform with intelligent candidate matching, automated screening, and bias-free hiring processes.',
+  keywords: 'AI recruitment, HR automation, candidate matching, bias-free hiring, talent acquisition, HR tech',
+};
 
 export default function AIHRRecruitmentPlatformPage() {
   return (

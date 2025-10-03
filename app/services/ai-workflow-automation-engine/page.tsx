@@ -1,4 +1,10 @@
-import React from 'react';
+// import React from 'react';
+// Metadata interface for React Helmet
+interface Metadata {
+  title?: string;
+  description?: string;
+  keywords?: string;
+}
 import { Link } from 'react-router-dom';
 import { 
   Zap, 
@@ -23,6 +29,15 @@ import {
   Database
 } from 'lucide-react';
 
+export const metadata: Metadata = {
+  title: 'AI Workflow Automation Engine - Zion Tech Group',
+  description: 'Revolutionary AI-powered workflow automation platform that eliminates manual tasks, reduces errors, and increases productivity by 400%.',
+  keywords: 'AI workflow automation, business process automation, RPA, intelligent automation, workflow optimization',
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function AIWorkflowAutomationEngine() {
   return (
@@ -41,14 +56,12 @@ export default function AIWorkflowAutomationEngine() {
           reduces errors by 95%, and increases productivity by 400% while learning and adapting to your business needs.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link 
-            href="mailto:kleber@ziontechgroup.com?subject=AI Workflow Automation Engine Inquiry"
+          <Link to="mailto:kleber@ziontechgroup.com?subject=AI Workflow Automation Engine Inquiry"
             className="bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors"
           >
             Automate Today
           </Link>
-          <Link 
-            href="tel:+13024640950"
+          <Link to="tel:+13024640950"
             className="border border-orange-600 text-orange-600 px-8 py-3 rounded-lg font-semibold hover:bg-orange-50 transition-colors"
           >
             Call +1 302 464 0950
@@ -227,8 +240,7 @@ export default function AIWorkflowAutomationEngine() {
                 Standard security
               </li>
             </ul>
-            <Link 
-              href="mailto:kleber@ziontechgroup.com?subject=Starter Plan - AI Workflow Automation"
+            <Link to="mailto:kleber@ziontechgroup.com?subject=Starter Plan - AI Workflow Automation"
               className="w-full bg-gray-900 text-white py-3 rounded-lg font-semibold text-center block hover:bg-gray-800 transition-colors"
             >
               Get Started
@@ -266,8 +278,7 @@ export default function AIWorkflowAutomationEngine() {
                 Advanced analytics
               </li>
             </ul>
-            <Link 
-              href="mailto:kleber@ziontechgroup.com?subject=Professional Plan - AI Workflow Automation"
+            <Link to="mailto:kleber@ziontechgroup.com?subject=Professional Plan - AI Workflow Automation"
               className="w-full bg-orange-600 text-white py-3 rounded-lg font-semibold text-center block hover:bg-orange-700 transition-colors"
             >
               Get Started
@@ -302,8 +313,7 @@ export default function AIWorkflowAutomationEngine() {
                 On-premise deployment
               </li>
             </ul>
-            <Link 
-              href="mailto:kleber@ziontechgroup.com?subject=Enterprise Plan - AI Workflow Automation"
+            <Link to="mailto:kleber@ziontechgroup.com?subject=Enterprise Plan - AI Workflow Automation"
               className="w-full bg-gray-900 text-white py-3 rounded-lg font-semibold text-center block hover:bg-gray-800 transition-colors"
             >
               Contact Sales
@@ -403,14 +413,12 @@ export default function AIWorkflowAutomationEngine() {
           Join thousands of businesses using our AI Workflow Automation Engine to eliminate manual tasks and boost productivity.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link 
-            href="mailto:kleber@ziontechgroup.com?subject=AI Workflow Automation Engine Demo Request"
+          <Link to="mailto:kleber@ziontechgroup.com?subject=AI Workflow Automation Engine Demo Request"
             className="bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors"
           >
             Schedule Demo
           </Link>
-          <Link 
-            href="tel:+13024640950"
+          <Link to="tel:+13024640950"
             className="border border-orange-600 text-orange-600 px-8 py-3 rounded-lg font-semibold hover:bg-orange-50 transition-colors"
           >
             Call +1 302 464 0950
@@ -418,7 +426,7 @@ export default function AIWorkflowAutomationEngine() {
         </div>
         <div className="mt-8 text-sm text-gray-500">
           <p>📍 364 E Main St STE 1008, Middletown, DE 19709</p>
-          <p>📧 kleber@ziontechgroup.com | 🌐 <Link href="https://ziontechgroup.com" className="text-orange-600 hover:underline">ziontechgroup.com</Link></p>
+          <p>📧 kleber@ziontechgroup.com | 🌐 <Link to="https://ziontechgroup.com" className="text-orange-600 hover:underline">ziontechgroup.com</Link></p>
         </div>
       </div>
     </div>

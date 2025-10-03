@@ -1,4 +1,10 @@
-import React from 'react';
+// import React from 'react';
+// Metadata interface for React Helmet
+interface Metadata {
+  title?: string;
+  description?: string;
+  keywords?: string;
+}
 import { Link } from 'react-router-dom';
 import { 
   CheckCircle, 
@@ -20,6 +26,15 @@ import {
   Smartphone
 } from 'lucide-react';
 
+export const metadata: Metadata = {
+  title: 'Smart Appointment Scheduler - Zion Tech Group',
+  description: 'Streamline bookings with intelligent scheduling. Comprehensive appointment scheduling platform with AI-powered optimization and automated reminders.',
+  keywords: 'appointment scheduling, booking system, calendar integration, automated reminders, healthcare scheduling',
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function AppointmentSchedulingSaaS() {
   const contactInfo = {

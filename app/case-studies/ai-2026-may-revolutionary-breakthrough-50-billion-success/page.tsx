@@ -1,8 +1,14 @@
-import React from 'react';
+// import React from 'react';
+// Metadata handled by React Helmet
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 
+export const metadata: Metadata = {
+  title: 'AI 2026 May Revolutionary Breakthrough: $50B Success Story - The Ultimate Meta-Cognitive Superintelligence Transformation',
+  description: 'How a Fortune 100 company achieved $50B ROI through the revolutionary May 2026 AI breakthrough, delivering meta-cognitive superintelligence and 10,000,000x processing power.',
+  keywords: 'Case Study, AI Success, 50B ROI, Fortune 100, May 2026, Meta-Cognitive Superintelligence',
+};
 
 export default function May2026RevolutionaryBreakthroughCaseStudyPage() {
   const filePath = path.join(process.cwd(), 'content', 'case-studies', 'ai-2026-may-revolutionary-breakthrough-50-billion-success.md');

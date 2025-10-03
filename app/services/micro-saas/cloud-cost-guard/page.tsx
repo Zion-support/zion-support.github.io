@@ -1,4 +1,10 @@
-import React from 'react';
+// import React from 'react';
+// Metadata interface for React Helmet
+interface Metadata {
+  title?: string;
+  description?: string;
+  keywords?: string;
+}
 import { Link } from 'react-router-dom';
 import { 
   Cloud, 
@@ -49,6 +55,11 @@ import {
   Ship
 } from 'lucide-react';
 
+export const metadata: Metadata = {
+  title: 'Cloud Cost Guard - FinOps Automation Platform | Zion Tech Group',
+  description: 'Automated cloud cost anomaly detection, budget alerts, rightsizing, and savings recommendations across AWS, Azure, and GCP. Save 30-40% on cloud costs.',
+  keywords: 'cloud cost management, FinOps, AWS cost optimization, Azure cost control, GCP cost savings, cloud automation, budget alerts',
+};
 
 export default function CloudCostGuardPage() {
   const features = [

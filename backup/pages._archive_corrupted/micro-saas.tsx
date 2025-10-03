@@ -112,7 +112,7 @@ class ErrorBoundary extends React.Component {
   }
 }
 \'AI-driven optimal posting time detection,Content performance prediction,Multi-platform scheduling and management,Hashtag optimization and trending analysis,Audience engagement analytics,Automated content repurposing\';
-import {Code,, Cloud,, Zap,, Users,, BarChart3,, Shield,, Smartphone,, Globe,, Database,, Settings,, CheckCircle,, ArrowRight,, Clock,, Award,, Star,, TrendingUp,, Target,, FileText,, MessageSquare,, Eye,, Brain,, Mail,, Phone,, MapPin,, Monitor,, Server,, Lock,, Cpu,, Network,, Terminal,, Calendar,, Building,, Truck,, GraduationCap,, Utensils,, PieChart,, Home,, ClipboardList,, Trash2} from 'lucide-react';
+import { Code, , , , , , , , , , , CheckCircle, , ArrowRight, , Clock, , Award, , , , , , , , , , , , , , , , , , Calendar, , , , , , , Home, ,  } from 'lucide-react';
 export default function MicroSaaS() {;
   const title = 'Micro SaaS Solutions — Zion Tech Group';
   const description = 'Custom micro SaaS applications and software solutions tailored to your business needs. Scalable, secure, and innovative.';

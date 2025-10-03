@@ -1,6 +1,21 @@
-import React from 'react';
+// import React from 'react';
+// Metadata interface for React Helmet
+interface Metadata {
+  title?: string;
+  description?: string;
+  keywords?: string;
+}
 import { Link } from 'react-router-dom';
 
+export const metadata: Metadata = {
+  title: 'Cloud-Native DevOps Platform - Zion Tech Group',
+  description: 'Enterprise-grade cloud-native DevOps platform with CI/CD automation, infrastructure as code, and advanced monitoring. Accelerate your development lifecycle.',
+  keywords: 'cloud-native DevOps, CI/CD automation, infrastructure as code, Kubernetes, container orchestration',
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function CloudNativeDevOpsPlatform() {
   return (
@@ -241,14 +256,12 @@ export default function CloudNativeDevOpsPlatform() {
           Join 150+ development teams using our Cloud-Native DevOps Platform to streamline their workflows.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link 
-            href="/contact" 
+          <Link to="/contact" 
             className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
           >
             Schedule Demo
           </Link>
-          <Link 
-            href="tel:+13024640950" 
+          <Link to="tel:+13024640950" 
             className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold border border-blue-600 hover:bg-blue-50 transition-colors"
           >
             Call +1 302 464 0950

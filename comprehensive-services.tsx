@@ -1,9 +1,9 @@
+// import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
   Brain, 
   Code, 
   Server, 
-  BarChart3, 
   Settings, 
   MessageSquare, 
   CheckCircle, 

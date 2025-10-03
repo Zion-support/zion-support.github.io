@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { Link } from 'react-router-dom';
 
 const NextGenAutonomousIntelligence2026Banner: React.FC = () => {

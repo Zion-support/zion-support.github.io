@@ -1,6 +1,19 @@
-import React from 'react';
+// import React from 'react';
+import { Metadata } from 'next';
 import { Link } from 'react-router-dom';
 
+export const metadata: Metadata = {
+  title: 'AI 2026: Autonomous Enterprise Architecture Revolution | Zion Tech Group',
+  description: 'Discover how autonomous enterprise architecture is revolutionizing business operations in 2026. Learn about self-healing systems, predictive infrastructure, and AI-driven architectural decisions.',
+  keywords: 'AI 2026, autonomous enterprise, enterprise architecture, self-healing systems, predictive infrastructure, AI-driven decisions',
+  openGraph: {
+    title: 'AI 2026: Autonomous Enterprise Architecture Revolution',
+    description: 'Revolutionary autonomous enterprise architecture transforming business operations',
+    type: 'article',
+    publishedTime: '2026-01-15T00:00:00Z',
+    authors: ['Zion Tech Group'],
+  },
+};
 
 export default function AI2026AutonomousEnterpriseArchitecture() {
   return (
@@ -106,14 +119,12 @@ export default function AI2026AutonomousEnterpriseArchitecture() {
                 solutions that revolutionize your business operations.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link 
-                  href="/contact" 
+                <Link to="/contact" 
                   className="px-8 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-xl hover:from-purple-700 hover:to-blue-700 transition-all duration-300 text-center"
                 >
                   Get Started Today
                 </Link>
-                <Link 
-                  href="/services/ai-enterprise-solutions" 
+                <Link to="/services/ai-enterprise-solutions" 
                   className="px-8 py-3 border border-purple-500 text-purple-400 font-semibold rounded-xl hover:bg-purple-500/10 transition-all duration-300 text-center"
                 >
                   Learn More
@@ -127,7 +138,7 @@ export default function AI2026AutonomousEnterpriseArchitecture() {
         <div className="mt-16">
           <h2 className="text-3xl font-bold text-white text-center mb-8">Related Content</h2>
           <div className="grid md:grid-cols-3 gap-6">
-            <Link href="/blog/ai-2026-autonomous-operations" className="group">
+            <Link to="/blog/ai-2026-autonomous-operations" className="group">
               <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-6 hover:border-purple-500/50 transition-all duration-300">
                 <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">
                   Autonomous Operations 2026
@@ -138,7 +149,7 @@ export default function AI2026AutonomousEnterpriseArchitecture() {
               </div>
             </Link>
 
-            <Link href="/blog/ai-2026-predictive-infrastructure" className="group">
+            <Link to="/blog/ai-2026-predictive-infrastructure" className="group">
               <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-6 hover:border-purple-500/50 transition-all duration-300">
                 <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">
                   Predictive Infrastructure
@@ -149,7 +160,7 @@ export default function AI2026AutonomousEnterpriseArchitecture() {
               </div>
             </Link>
 
-            <Link href="/blog/ai-2026-self-healing-systems" className="group">
+            <Link to="/blog/ai-2026-self-healing-systems" className="group">
               <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-6 hover:border-purple-500/50 transition-all duration-300">
                 <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">
                   Self-Healing Systems
@@ -164,8 +175,7 @@ export default function AI2026AutonomousEnterpriseArchitecture() {
 
         {/* Back to Blog */}
         <div className="text-center mt-16">
-          <Link 
-            href="/blog" 
+          <Link to="/blog" 
             className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-slate-700 to-slate-800 text-white font-semibold rounded-xl hover:from-slate-600 hover:to-slate-700 transition-all duration-300"
           >
             <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -1,17 +1,37 @@
+// import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
   Brain, 
   Code, 
   Cloud, 
+  Shield, 
+  Network, 
   Server, 
+  BarChart3, 
+  Settings, 
+  Zap, 
+  Monitor, 
+  Search, 
   MessageSquare, 
   CheckCircle, 
   ArrowRight, 
   DollarSign,
   Clock,
   Star,
+  TrendingUp,
   Smartphone,
   Globe,
+  Lock,
+  Database,
+  Cpu,
+  Target,
+  Rocket,
+  Phone,
+  Mail,
+  MapPin,
+  Users,
+  FileText,
+  CreditCard,
   ShoppingCart,
   Camera,
   Mic,
@@ -19,7 +39,8 @@ import {
   Headphones,
   Wifi,
   Battery,
-  Wrench
+  Wrench,
+  Tool
 } from 'lucide-react';
 
 export default function AdditionalServices() {

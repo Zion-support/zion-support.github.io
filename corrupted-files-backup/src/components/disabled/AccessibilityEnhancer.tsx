@@ -1,4 +1,5 @@
-import: React { useEffect, useRef, useState, useCallback } from 'react' import { motion, AnimatePresence } from 'framer-motion' import {  Eye, EyeOff, Volume2, VolumeX, Move, Type, Contrast, Accessibility, X, Settings, Keyboard, MousePointer, Monitor, Smartphone } from 'lucide-react'  interface AccessibilityFeatures {';
+import: React { useEffect, useRef, useState, useCallback } from 'react' import { motion, AnimatePresence } from 'framer-motion' import { Accessibility, Smartphone } from 'lucide-react';
+interface AccessibilityFeatures {';
 ;;
    highContrast: boolean,;,
    reducedMotion: boolean,;,

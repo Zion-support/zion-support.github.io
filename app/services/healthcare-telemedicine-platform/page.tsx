@@ -1,4 +1,10 @@
-import React from 'react';
+// import React from 'react';
+// Metadata interface for React Helmet
+interface Metadata {
+  title?: string;
+  description?: string;
+  keywords?: string;
+}
 import { Link } from 'react-router-dom';
 import { 
   CheckCircle, 
@@ -22,6 +28,15 @@ import {
   Stethoscope
 } from 'lucide-react';
 
+export const metadata: Metadata = {
+  title: 'Telemedicine Platform - Zion Tech Group',
+  description: 'Complete virtual healthcare solution with video consultations, patient management, and integrated billing. HIPAA compliant telemedicine platform.',
+  keywords: 'telemedicine, virtual healthcare, video consultations, patient management, HIPAA compliant, healthcare platform',
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function TelemedicinePlatform() {
   const contactInfo = {

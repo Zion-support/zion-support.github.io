@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 
 export default function October1st2025ContentSpotlight() {
   return (

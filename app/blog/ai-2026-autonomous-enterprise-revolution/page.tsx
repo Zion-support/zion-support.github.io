@@ -1,5 +1,19 @@
-import React from 'react';
+// import React from 'react';
+// Metadata handled by React Helmet
 
+export const metadata: Metadata = {
+  title: 'AI 2026: Autonomous Enterprise Revolution - Zion Tech Group',
+  description: 'Discover how AI 2026 is revolutionizing enterprise operations with 99% automation rates, self-healing systems, and autonomous decision-making capabilities.',
+  keywords: 'AI automation, enterprise revolution, autonomous operations, self-healing systems, business automation, AI 2026',
+  openGraph: {
+    title: 'AI 2026: Autonomous Enterprise Revolution',
+    description: 'Revolutionary AI automation achieving 99% enterprise autonomy with self-healing systems and autonomous decision-making.',
+    type: 'article',
+    publishedTime: '2026-01-15T00:00:00.000Z',
+    authors: ['Zion Tech Group'],
+    tags: ['AI Automation', 'Enterprise', 'Revolution', 'Autonomous', 'Business'],
+  },
+};
 
 export default function AI2026AutonomousEnterpriseRevolution() {
   return (

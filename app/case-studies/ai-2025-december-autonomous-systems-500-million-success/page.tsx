@@ -1,6 +1,12 @@
-import React from 'react';
+// import React from 'react';
+import { Metadata } from 'next';
 import { Link } from 'react-router-dom';
 
+export const metadata: Metadata = {
+  title: '$500M Success: December 2025 Autonomous Systems Implementation | Zion Tech Group',
+  description: 'How a Fortune 100 global conglomerate achieved $500M ROI through December 2025 autonomous systems with 99.99% automation and universal intelligence.',
+  keywords: 'autonomous systems success, $500M ROI, Fortune 100, December 2025, Zion Tech Group',
+};
 
 export default function December2025AutonomousSystems500MSuccess() {
   return (
@@ -278,8 +284,7 @@ export default function December2025AutonomousSystems500MSuccess() {
                 Discover how December 2025 autonomous systems can transform your enterprise operations 
                 and generate unprecedented ROI.
               </p>
-              <Link 
-                href="/contact" 
+              <Link to="/contact" 
                 className="inline-block bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50"
               >
                 Start Your Transformation
@@ -289,15 +294,13 @@ export default function December2025AutonomousSystems500MSuccess() {
             <div className="flex-1">
               <h3 className="text-xl font-bold text-white mb-4">Related Resources</h3>
               <div className="space-y-3">
-                <Link 
-                  href="/blog/ai-2025-december-advanced-autonomous-systems" 
+                <Link to="/blog/ai-2025-december-advanced-autonomous-systems" 
                   className="block p-4 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-lg border border-blue-500/30 hover:border-blue-400/50 transition-colors"
                 >
                   <div className="font-semibold text-blue-400">December 2025 Autonomous Systems</div>
                   <div className="text-sm text-gray-300">Complete technical overview</div>
                 </Link>
-                <Link 
-                  href="/blog/ai-2025-december-quantum-computing-breakthrough" 
+                <Link to="/blog/ai-2025-december-quantum-computing-breakthrough" 
                   className="block p-4 bg-gradient-to-r from-purple-500/20 to-indigo-500/20 rounded-lg border border-purple-500/30 hover:border-purple-400/50 transition-colors"
                 >
                   <div className="font-semibold text-purple-400">Quantum Computing Breakthrough</div>

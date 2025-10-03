@@ -64,7 +64,7 @@ export const usePerformance = (options: UsePerformanceOptions = {}) => {
         setMetrics(prev => {
           const newMetrics = { 
             ...prev, 
-            fid: entry.processingStart - entry.startTime 
+            fid: entry.startTime - entry.startTime 
           };
           onMetricUpdate?.(newMetrics);
           return newMetrics;

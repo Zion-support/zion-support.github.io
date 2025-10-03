@@ -1,7 +1,6 @@
-import React from 'react';
+// import React from 'react';
 import { motion } from 'framer-motion';
-import { TrendingUp, Zap, DollarSign, Target, ArrowRight, Sparkles } from 'lucide-react';
-
+import { ArrowRight, Sparkles } from 'lucide-react';
 const October2025RealTimePredictiveAnalyticsBanner: React.FC = () => {
   return (
     <motion.div

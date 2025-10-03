@@ -1,8 +1,7 @@
 
 import { GradientHeading } from "./GradientHeading";
 import Link from "next/link";
-import { Briefcase, HardDrive, Lightbulb, Users } from "lucide-react";
-
+import { Users } from 'lucide-react';
 const categories = [
   {
     description: "AI-powered solutions for automation, analytics, and intelligent decision making",

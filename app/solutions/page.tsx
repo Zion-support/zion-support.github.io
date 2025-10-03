@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
   ArrowRight, 
@@ -9,7 +9,14 @@ import {
   DollarSign,
   Factory,
   ShoppingCart,
-  Truck
+  Truck,
+  Rocket,
+  GraduationCap,
+  Brain,
+  Cpu,
+  BarChart3,
+  Cloud,
+  Database
 } from 'lucide-react';
 
 export const metadata = {

@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { ArrowRight, Sparkles, TrendingUp, Zap, Star, Award } from 'lucide-react';
 
 const January2026ContentBanner: React.FC = () => {

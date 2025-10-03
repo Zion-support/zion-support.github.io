@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 
 export default function BreakthroughContent2026Banner() {
   return (

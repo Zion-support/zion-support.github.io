@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { Link } from 'react-router-dom';
 import { Clock, ArrowRight, Bot, Zap, Target, TrendingUp } from 'lucide-react';
 

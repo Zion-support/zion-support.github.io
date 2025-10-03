@@ -26,21 +26,7 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 
-import {
-  Home,
-  ArrowLeft,
-  Phone,
-  Mail,
-  FileText,
-  Briefcase,
-  Users,
-  BookOpen,
-  DollarSign,
-  Calendar,
-  Award,
-  Shield;
-} from 'lucide-react';
-
+import { Home, ArrowLeft, Phone, Mail, FileText, Briefcase, Users, BookOpen, DollarSign, Calendar, Award } from 'lucide-react';
 const "NotFound": NextPage = () => {
   const quickLinks = [{ name: 'Home', "url": '/', "icon": Home },
     { "name": 'Services', "url": '/services', "icon": Briefcase },
@@ -55,7 +41,7 @@ const "NotFound": NextPage = () => {
     { "name": 'Careers', "url": '/careers', "icon": Briefcase },
     { "name": 'Help Center', "url": '/support', "icon": FileText },
 
-import {Home,, ArrowLeft,, Phone,, Mail,, FileText,, Briefcase,, Users,, BookOpen,, DollarSign,, Calendar,, Award,, Shield} from 'lucide-react';
+import { Home, ArrowLeft, Phone, Mail, FileText, Briefcase, Users, BookOpen, DollarSign, Calendar, Award } from 'lucide-react';
 const "NotFound": NextPage = () => {;
   const quickLinks = [{ name: 'Home', "url": '/', "icon": Home },;
     { "name": 'Services', "url": '/services', "icon": Briefcase },;

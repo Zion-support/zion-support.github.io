@@ -1,6 +1,39 @@
-import React from 'react';
+// import React from 'react';
+import { Metadata } from 'next';
 import { Link } from 'react-router-dom';
 
+export const metadata: Metadata = {
+  title: 'AI 2028 Omnipotent Superintelligence Breakthrough - Zion Tech Group',
+  description: 'Revolutionary breakthrough in AI 2028: Omnipotent Superintelligence achieves $3.2T in enterprise value creation with infinite cognitive capabilities and universal understanding.',
+  keywords: 'AI 2028, omnipotent superintelligence, breakthrough, enterprise automation, universal AI, cognitive AI, superintelligence, $3.2T success',
+  authors: [{ name: 'Zion Tech Group' }],
+  openGraph: {
+    title: 'AI 2028 Omnipotent Superintelligence Breakthrough - Zion Tech Group',
+    description: 'Revolutionary breakthrough in AI 2028: Omnipotent Superintelligence achieves $3.2T in enterprise value creation with infinite cognitive capabilities.',
+    url: 'https://ziontechgroup.com/blog/ai-2028-omnipotent-superintelligence-breakthrough',
+    siteName: 'Zion Tech Group',
+    locale: 'en_US',
+    type: 'article',
+    publishedTime: '2028-01-15T00:00:00.000Z',
+    modifiedTime: '2028-01-15T00:00:00.000Z',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'AI 2028 Omnipotent Superintelligence Breakthrough',
+    description: 'Revolutionary breakthrough in AI 2028: Omnipotent Superintelligence achieves $3.2T in enterprise value creation.',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+};
 
 export default function AI2028OmnipotentSuperintelligenceBreakthrough() {
   return (
@@ -346,14 +379,12 @@ export default function AI2028OmnipotentSuperintelligenceBreakthrough() {
             Our universal AI systems are ready to transform every aspect of your enterprise operations.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <Link 
-              href="/contact" 
+            <Link to="/contact" 
               className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-6 py-3 rounded-lg font-semibold text-center hover:from-indigo-600 hover:to-purple-600 transition-all"
             >
               Schedule Universal Consultation
             </Link>
-            <Link 
-              href="/case-studies/ai-2028-omnipotent-superintelligence-3-2-trillion-success" 
+            <Link to="/case-studies/ai-2028-omnipotent-superintelligence-3-2-trillion-success" 
               className="bg-white border border-gray-300 text-gray-700 px-6 py-3 rounded-lg font-semibold text-center hover:bg-gray-50 transition-all"
             >
               View Universal Success Story

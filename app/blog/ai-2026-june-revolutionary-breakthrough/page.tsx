@@ -1,5 +1,11 @@
-import React from 'react';
+// import React from 'react';
+// Metadata handled by React Helmet
 
+export const metadata: Metadata = {
+  title: 'AI 2026 June Revolutionary Breakthrough: The Future of Enterprise Intelligence',
+  description: 'Discover the latest AI breakthroughs transforming enterprise operations with quantum-neural fusion, autonomous decision-making, and 1000x performance improvements.',
+  keywords: ['AI 2026', 'quantum computing', 'neural networks', 'enterprise automation', 'artificial intelligence', 'business transformation'],
+};
 
 export default function AI2026JuneRevolutionaryBreakthrough() {
   return (

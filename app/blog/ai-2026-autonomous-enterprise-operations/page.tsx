@@ -1,5 +1,19 @@
-import React from 'react';
+// import React from 'react';
+// Metadata handled by React Helmet
 
+export const metadata: Metadata = {
+  title: '🤖 Autonomous Enterprise Operations 2026: Self-Managing AI Systems That Run Your Business',
+  description: 'Discover the revolutionary autonomous enterprise operations breakthrough of 2026. Achieve 99% automation rates, $100M+ annual savings, and self-healing systems that manage your entire enterprise infrastructure.',
+  keywords: ['autonomous operations', 'enterprise automation', 'self-healing systems', 'AI operations', 'autonomous infrastructure', 'enterprise AI', 'business automation'],
+  openGraph: {
+    title: '🤖 Autonomous Enterprise Operations 2026: Self-Managing AI Systems That Run Your Business',
+    description: 'Revolutionary autonomous enterprise operations delivering 99% automation rates and $100M+ annual savings with self-healing AI systems.',
+    type: 'article',
+    publishedTime: '2026-01-25T00:00:00.000Z',
+    authors: ['Zion Tech Group'],
+    tags: ['Autonomous Operations', 'Enterprise Automation', 'Self-Healing Systems', 'Business Intelligence'],
+  },
+};
 
 export default function AutonomousEnterpriseOperations2026() {
   return (

@@ -1,6 +1,12 @@
-import React from 'react';
+// import React from 'react';
+import { Metadata } from 'next';
 import { Link } from 'react-router-dom';
 
+export const metadata: Metadata = {
+  title: '$15.2 Billion Success: Ultra-Intelligent Autonomous Systems Transform Global Manufacturing | Zion Tech Group',
+  description: 'Fortune 50 global manufacturing conglomerate achieved $15.2 billion in value through Ultra-Intelligent Autonomous Systems with 99.99% operational autonomy.',
+  keywords: 'ultra-intelligent AI success, autonomous systems ROI, manufacturing transformation, Fortune 50 success, 15.2 billion value, 533% ROI',
+};
 
 export default function UltraIntelligentAutonomousSystemsSuccessPage() {
   return (
@@ -29,14 +35,12 @@ export default function UltraIntelligentAutonomousSystemsSuccessPage() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link 
-                href="/blog/ai-2026-ultra-intelligent-autonomous-systems-breakthrough" 
+              <Link to="/blog/ai-2026-ultra-intelligent-autonomous-systems-breakthrough" 
                 className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
               >
                 Read Full Breakthrough →
               </Link>
-              <Link 
-                href="/contact" 
+              <Link to="/contact" 
                 className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-emerald-500/50 transform hover:-translate-y-1"
               >
                 Get Started Today
@@ -303,14 +307,12 @@ export default function UltraIntelligentAutonomousSystemsSuccessPage() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="/contact" 
+              <Link to="/contact" 
                 className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
               >
                 Get Started Today
               </Link>
-              <Link 
-                href="/blog/ai-2026-ultra-intelligent-autonomous-systems-breakthrough" 
+              <Link to="/blog/ai-2026-ultra-intelligent-autonomous-systems-breakthrough" 
                 className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
               >
                 Read Full Breakthrough
@@ -329,8 +331,7 @@ export default function UltraIntelligentAutonomousSystemsSuccessPage() {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/contact" 
+            <Link to="/contact" 
               className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
             >
               Start Your Transformation

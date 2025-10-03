@@ -1,5 +1,18 @@
-import React from 'react';
+// import React from 'react';
+// Metadata handled by React Helmet
 
+export const metadata: Metadata = {
+  title: 'AI Retail Automation 2026: $8M ROI Case Study',
+  description: 'See how a Fortune 500 retailer achieved 98% automation, 300% productivity gains, and $8M annual ROI with AI retail automation.',
+  keywords: 'AI retail automation, retail AI, automation case study, retail transformation, AI ROI',
+  openGraph: {
+    title: 'AI Retail Automation 2026: $8M ROI Case Study',
+    description: 'See how a Fortune 500 retailer achieved 98% automation, 300% productivity gains, and $8M annual ROI with AI retail automation.',
+    type: 'article',
+    publishedTime: '2026-01-20T10:00:00Z',
+    authors: ['Zion Tech Group'],
+  },
+};
 
 export default function AIRetailAutomation2026() {
   return (

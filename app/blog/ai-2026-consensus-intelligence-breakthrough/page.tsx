@@ -1,5 +1,18 @@
-import React from 'react';
+// import React from 'react';
+// Metadata handled by React Helmet
 
+export const metadata: Metadata = {
+  title: 'AI 2026: Consensus Intelligence Breakthrough - Zion Tech Group',
+  description: 'Discover the revolutionary Consensus Intelligence system that enables AI agents to reach unanimous decisions through quantum-accelerated consensus protocols, delivering 99.9% accuracy in complex enterprise scenarios.',
+  keywords: 'AI 2026, Consensus Intelligence, Quantum AI, Enterprise AI, Decision Making, AI Agents, Quantum Computing',
+  openGraph: {
+    title: 'AI 2026: Consensus Intelligence Breakthrough',
+    description: 'Revolutionary AI system enabling unanimous decisions through quantum-accelerated consensus protocols.',
+    type: 'article',
+    publishedTime: '2026-01-15T00:00:00.000Z',
+    authors: ['Zion Tech Group'],
+  },
+};
 
 export default function ConsensusIntelligencePage() {
   return (

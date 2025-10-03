@@ -1,5 +1,18 @@
-import React from 'react';
+// import React from 'react';
+// Metadata handled by React Helmet
 
+export const metadata: Metadata = {
+  title: 'AI 2026 March Breakthrough: $5 Billion Success Story',
+  description: 'Global manufacturing leader achieves $5.2 billion in value generation with 500% ROI in just 6 months using our AI breakthrough suite.',
+  keywords: ['AI', 'Case Study', 'Success Story', 'Manufacturing', 'ROI', 'Value Generation', 'Breakthrough'],
+  openGraph: {
+    title: 'AI 2026 March Breakthrough: $5 Billion Success Story',
+    description: 'Global manufacturing leader achieves $5.2 billion in value generation with 500% ROI in just 6 months using our AI breakthrough suite.',
+    type: 'article',
+    publishedTime: '2026-03-01T00:00:00.000Z',
+    authors: ['Zion Tech Group'],
+  },
+};
 
 export default function March2026CaseStudyPage() {
   return (
