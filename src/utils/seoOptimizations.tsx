@@ -9,49 +9,49 @@ import { Helmet } from 'react-helmet-async';
 export const seoUtils = {
   // Generate structured data for organization
   generateOrganizationSchema: () => ({
-    "@context": "https://schema.org","
-    "@type": "Organization","
-    "name": "Zion Tech Group","
-    "url": "https://zion.app","
-    "logo": "https://zion.app/logo.png","
-    "description": "Advanced AI and IT Solutions for Enterprise","
-    "address": {"
-      "@type": "PostalAddress","
-      "addressCountry": "US""
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Zion Tech Group",
+    "url": "https://zion.app",
+    "logo": "https://zion.app/logo.png",
+    "description": "Advanced AI and IT Solutions for Enterprise",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "US"
     },
-    "contactPoint": {"
-      "@type": "ContactPoint","
-      "telephone": "+1-XXX-XXX-XXXX","
-      "contactType": "customer service""
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-XXX-XXX-XXXX",
+      "contactType": "customer service"
     },
-    "sameAs": ["
-      "https://twitter.com/ziontech","
-      "https://linkedin.com/company/zion-tech""
+    "sameAs": [
+      "https://twitter.com/ziontech",
+      "https://linkedin.com/company/zion-tech"
     ]
   }),
 
   // Generate breadcrumb structured data
   generateBreadcrumbSchema: (items: Array<{name: string, url: string}>) => ({
-    "@context": "https://schema.org","
-    "@type": "BreadcrumbList","
-    "itemListElement": items.map((item, index) => ({"
-      "@type": "ListItem","
-      "position": index + 1,"
-      "name": item.name,"
-      "item": item.url"
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": items.map((item, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "name": item.name,
+      "item": item.url
     }))
   }),
 
   // Generate FAQ structured data
   generateFAQSchema: (faqs: Array<{question: string, answer: string}>) => ({
-    "@context": "https://schema.org","
-    "@type": "FAQPage","
-    "mainEntity": faqs.map(faq => ({"
-      "@type": "Question","
-      "name": faq.question,"
-      "acceptedAnswer": {"
-        "@type": "Answer","
-        "text": faq.answer"
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
       }
     }))
   }),
@@ -66,24 +66,24 @@ export const seoUtils = {
     image?: string;
     url: string;
   }) => ({
-    "@context": "https://schema.org","
-    "@type": "Article","
-    "headline": article.title,"
-    "description": article.description,"
-    "author": {"
-      "@type": "Person","
-      "name": article.author"
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": article.title,
+    "description": article.description,
+    "author": {
+      "@type": "Person",
+      "name": article.author
     },
-    "datePublished": article.datePublished,"
-    "dateModified": article.dateModified,"
-    "image": article.image,"
-    "url": article.url,"
-    "publisher": {"
-      "@type": "Organization","
-      "name": "Zion Tech Group","
-      "logo": {"
-        "@type": "ImageObject","
-        "url": "https://zion.app/logo.png""
+    "datePublished": article.datePublished,
+    "dateModified": article.dateModified,
+    "image": article.image,
+    "url": article.url,
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://zion.app/logo.png"
       }
     }
   })
@@ -285,27 +285,27 @@ export const SEOComponent = ({
   return (
     <Helmet>
       <title>{fullTitle}</title>
-      <meta name="description" content={description} />"
-      <meta name="keywords" content={keywords} />"
-      <link rel="canonical" href={fullUrl} />"
+      <meta name="description" content={description} />
+      <meta name="keywords" content={keywords} />
+      <link rel="canonical" href={fullUrl} />
       
       {/* Open Graph */}
-      <meta property="og:type" content={type} />"
-      <meta property="og:title" content={fullTitle} />"
-      <meta property="og:description" content={description} />"
-      <meta property="og:url" content={fullUrl} />"
-      <meta property="og:image" content={fullImage} />"
-      <meta property="og:site_name" content={siteName} />"
+      <meta property="og:type" content={type} />
+      <meta property="og:title" content={fullTitle} />
+      <meta property="og:description" content={description} />
+      <meta property="og:url" content={fullUrl} />
+      <meta property="og:image" content={fullImage} />
+      <meta property="og:site_name" content={siteName} />
       
       {/* Twitter Card */}
-      <meta name="twitter:card" content="summary_large_image" />"
-      <meta name="twitter:title" content={fullTitle} />"
-      <meta name="twitter:description" content={description} />"
-      <meta name="twitter:image" content={fullImage} />"
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={fullTitle} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={fullImage} />
       
       {/* Structured Data */}
       {structuredData && (
-        <script type="application/ld+json">"
+        <script type="application/ld+json">
           {JSON.stringify(structuredData)}
         </script>
       )}
@@ -323,7 +323,7 @@ export const initializeSEO = () => {
   
   // Set up meta tags
   if (typeof document !== 'undefined') {
-    const viewport = document.querySelector('meta[name="viewport"]');"
+    const viewport = document.querySelector('meta[name="viewport"]');
     if (!viewport) {
       const meta = document.createElement('meta');
       meta.name = 'viewport';
