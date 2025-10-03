@@ -1,5 +1,18 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
+import { 
+  FileText, 
+  Rocket, 
+  CheckCircle, 
+  ArrowRight, 
+  Lock, 
+  TrendingUp, 
+  Database 
+} from "lucide-react";
+
+const AIMicroSAAS: React.FC = () => {
+  const services = [
+    {
       id: "ai-content-optimizer",
       name: "AI Content Optimizer Pro",
       blurb: "AI-powered content creation and optimization platform for marketing teams",
@@ -12,8 +25,9 @@ import { Helmet } from "react-helmet-async";
         "SEO optimization with real-time keyword analysis",
         "Brand voice consistency across all content",
         "A/B testing and performance analytics",
-    },
-    {
+        "Multi-language content generation",
+        "Content calendar automation"
+      ]
     },
     {
       id: "automated-workflow-engine",
@@ -52,24 +66,54 @@ import { Helmet } from "react-helmet-async";
           </div>
         </section>
 
+        {/* Services Grid */}
+        <section className="py-20">
+          <div className="container mx-auto px-6">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Our AI Micro-SaaS Solutions</h2>
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                Choose from our comprehensive suite of AI-powered tools designed to automate and optimize your business operations
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {services.map((service) => {
+                const IconComponent = service.icon;
+                return (
+                  <div key={service.id} className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+                    <div className="flex items-center mb-6">
+                      <div className="bg-blue-100 p-3 rounded-lg mr-4">
+                        <IconComponent className="w-8 h-8 text-blue-600" />
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-bold text-gray-900">{service.name}</h3>
+                        <span className="text-sm text-blue-600 font-medium">{service.category}</span>
+                      </div>
                     </div>
+                    
+                    <p className="text-gray-600 mb-4">{service.blurb}</p>
+                    
+                    <div className="flex justify-between items-center mb-4">
+                      <span className="text-2xl font-bold text-gray-900">{service.price}</span>
+                      <span className="text-sm text-gray-500">ETA: {service.eta}</span>
+                    </div>
+                    
+                    <ul className="space-y-2 mb-6">
+                      {service.features.map((feature, index) => (
+                        <li key={index} className="flex items-center text-sm text-gray-700">
+                          <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                    
+                    <button className="w-full bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors flex items-center justify-center">
+                      Get Started
+                      <ArrowRight className="w-4 h-4 ml-2" />
+                    </button>
                   </div>
-                  
-                  <ul className="space-y-2 mb-6">
-                    {service.features.map((feature, index) => (
-                      <li key={index} className="flex items-center text-sm text-gray-700">
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  
-                  <button className="w-full bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors flex items-center justify-center">
-                    Get Started
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </button>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         </section>
@@ -138,4 +182,6 @@ import { Helmet } from "react-helmet-async";
       </div>
     </>
   );
-}
+};
+
+export default AIMicroSAAS;
