@@ -67,6 +67,10 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 
     // Log to console in development
     if (import.meta.env.DEV) {
+<<<<<<< HEAD
+=======
+      // eslint-disable-next-line no-console
+>>>>>>> fbde9e94d144b4defb6e7dbab59f944a90e0d68b
       console.error('Error Boundary caught an error:', errorDetails);
     }
 
@@ -133,6 +137,10 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       navigator.clipboard.writeText(JSON.stringify(errorReport, null, 2));
       alert('Error details copied to clipboard');
     } else {
+<<<<<<< HEAD
+=======
+      // eslint-disable-next-line no-console
+>>>>>>> fbde9e94d144b4defb6e7dbab59f944a90e0d68b
       console.log('Error Report:', errorReport);
       alert('Error details logged to console');
     }
@@ -140,7 +148,11 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 
   render() {
     const { hasError, error, errorId } = this.state;
+<<<<<<< HEAD
     const { children, fallback } = this.props;
+=======
+    const { children, fallback, showDetails } = this.props;
+>>>>>>> fbde9e94d144b4defb6e7dbab59f944a90e0d68b
 
     if (hasError) {
       // Use custom fallback if provided

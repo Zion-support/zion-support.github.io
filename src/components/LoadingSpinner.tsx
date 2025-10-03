@@ -1,56 +1,65 @@
-import React, { memo } from 'react';
+import React from 'react';
 
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg';
-  text?: string;
+  message?: string;
   className?: string;
 }
 
-const LoadingSpinner = memo<LoadingSpinnerProps>(({ 
+export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
   size = 'md', 
-  text = 'Loading...', 
-  className = '' 
+  message = 'Loading...',
+  className = ''
 }) => {
   const sizeClasses = {
-    sm: 'w-6 h-6 border-2',
-    md: 'w-12 h-12 border-4',
-    lg: 'w-16 h-16 border-8'
+    sm: 'w-8 h-8',
+    md: 'w-12 h-12',
+    lg: 'w-16 h-16',
   };
 
   return (
-    <div className={`flex items-center justify-center h-full p-8 ${className}`} role="status" aria-label="Loading">
-      <div 
-        className={`${sizeClasses[size]} border-blue-500 border-t-transparent rounded-full animate-spin`}
-        aria-hidden="true"
-      />
-      <span className="ml-4 text-lg text-gray-600 sr-only">{text}</span>
+    <div className={`flex flex-col items-center justify-center min-h-[200px] ${className}`}>
+      <div className={`${sizeClasses[size]} animate-spin`}>
+        <svg className="w-full h-full" viewBox="0 0 24 24">
+          <circle
+            className="opacity-25"
+            cx="12"
+            cy="12"
+            r="10"
+            stroke="currentColor"
+            strokeWidth="4"
+            fill="none"
+          />
+          <path
+            className="opacity-75"
+            fill="currentColor"
+            d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+          />
+        </svg>
+      </div>
+      {message && (
+        <p className="mt-4 text-gray-600 text-sm font-medium">{message}</p>
+      )}
     </div>
   );
-});
+};
 
-LoadingSpinner.displayName = 'LoadingSpinner';
-
-interface PageLoaderProps {
-  text?: string;
-  className?: string;
-}
-
-const PageLoader = memo<PageLoaderProps>(({ 
-  text = 'Loading content...', 
-  className = '' 
-}) => {
+export const PageLoader: React.FC = () => {
   return (
-    <div className={`flex flex-col items-center justify-center min-h-screen bg-slate-950 text-white ${className}`} role="status" aria-label="Page loading">
-      <div 
-        className="w-16 h-16 border-8 border-blue-500 border-t-transparent rounded-full animate-spin mb-4"
-        aria-hidden="true"
-      />
-      <p className="text-xl font-semibold">{text}</p>
+    <div className="flex items-center justify-center min-h-screen bg-slate-950">
+      <div className="text-center">
+        <LoadingSpinner size="lg" />
+        <p className="mt-4 text-gray-400">Loading...</p>
+      </div>
     </div>
   );
-});
+};
 
+<<<<<<< HEAD
 PageLoader.displayName = 'PageLoader';
 
 export { PageLoader };
 export default LoadingSpinner;
+=======
+export default LoadingSpinner;
+>>>>>>> fbde9e94d144b4defb6e7dbab59f944a90e0d68b

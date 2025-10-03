@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+import React from 'react';
+import EnterpriseSolutionsBanner from '../../components/EnterpriseSolutionsBanner';
+=======
 export default function EnterpriseSolutionsPage() {
   return (
     <div className="max-w-6xl mx-auto px-6 py-12">
@@ -15,84 +19,31 @@ export const metadata = {
   description: 'Comprehensive enterprise AI and IT solutions designed for Fortune 500 companies. Transform your business with our advanced autonomous systems and quantum computing solutions.',
   keywords: 'enterprise AI, Fortune 500, autonomous systems, quantum computing, enterprise transformation, business intelligence',
 };
+>>>>>>> b0266c0c1be3ec9050e7ba803edc6a65b0904e57
 
 export default function EnterprisePage() {
-  const enterpriseSolutions = [
-    {
-      title: 'AI Autonomous Enterprise Operations',
-      description: 'Complete automation of enterprise operations with AI-powered autonomous systems',
-      features: ['Autonomous Decision Making', 'Self-Healing Infrastructure', 'Predictive Analytics', 'Real-time Optimization'],
-      roi: '$500B+',
-      link: '/services/ai-autonomous-operations-2026',
-      icon: '🤖'
-    },
-    {
-      title: 'Quantum Computing Solutions',
-      description: 'Revolutionary quantum computing implementations for enterprise-scale problems',
-      features: ['Quantum Optimization', 'Quantum Machine Learning', 'Quantum Security', 'Quantum Simulation'],
-      roi: '$50B+',
-      link: '/services/ai-quantum-computing-2026',
-      icon: '⚛️'
-    },
-    {
-      title: 'Autonomous Business Intelligence',
-      description: 'Self-evolving business intelligence systems that adapt and optimize continuously',
-      features: ['Autonomous Analytics', 'Self-Learning Models', 'Real-time Insights', 'Predictive Intelligence'],
-      roi: '$25B+',
-      link: '/services/ai-business-intelligence-2025',
-      icon: '🧠'
-    },
-    {
-      title: 'Enterprise AI Security Platform',
-      description: 'Advanced AI-powered security solutions for enterprise environments',
-      features: ['AI Threat Detection', 'Autonomous Response', 'Zero-Trust Architecture', 'Quantum-Safe Encryption'],
-      roi: '$15B+',
-      link: '/services/ai-cybersecurity-2025',
-      icon: '🔒'
-    },
-    {
-      title: 'Cloud Infrastructure Automation',
-      description: 'Fully automated cloud infrastructure management and optimization',
-      features: ['Autonomous Scaling', 'Cost Optimization', 'Performance Tuning', 'Disaster Recovery'],
-      roi: '$10B+',
-      link: '/services/ai-cloud-infrastructure-2025',
-      icon: '☁️'
-    },
-    {
-      title: 'Manufacturing AI Platform',
-      description: 'AI-powered manufacturing optimization and autonomous production systems',
-      features: ['Predictive Maintenance', 'Quality Control', 'Supply Chain Optimization', 'Autonomous Production'],
-      roi: '$8B+',
-      link: '/services/manufacturing-ai-platform',
-      icon: '🏭'
-    }
-  ];
-
-  const successMetrics = [
-    { metric: '$500B+', label: 'Total ROI Delivered', description: 'Across all enterprise implementations' },
-    { metric: '100+', label: 'Fortune 500 Clients', description: 'Successfully transformed' },
-    { metric: '99.9%', label: 'Uptime Achieved', description: 'Across all autonomous systems' },
-    { metric: '24/7', label: 'Autonomous Operations', description: 'Continuous optimization and monitoring' }
-  ];
-
-  const industries = [
-    { name: 'Financial Services', icon: '🏦', clients: '25+ Fortune 500' },
-    { name: 'Manufacturing', icon: '🏭', clients: '30+ Fortune 500' },
-    { name: 'Healthcare', icon: '🏥', clients: '20+ Fortune 500' },
-    { name: 'Technology', icon: '💻', clients: '35+ Fortune 500' },
-    { name: 'Retail', icon: '🛒', clients: '15+ Fortune 500' },
-    { name: 'Energy', icon: '⚡', clients: '10+ Fortune 500' }
-  ];
-
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-slate-950">
       {/* Hero Section */}
-      <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+      <header className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-indigo-900 to-blue-900 py-20">
+        <div className="absolute inset-0 overflow-hidden opacity-20">
+          <div className="absolute top-0 left-1/3 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-0 right-1/3 w-96 h-96 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+        </div>
+        
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="text-center max-w-5xl mx-auto">
+            <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-blue-500/20 to-indigo-500/20 border border-blue-500/30 mb-8">
+              <span className="text-blue-400 font-bold text-sm tracking-wider uppercase">
+                🏢 Enterprise AI Solutions
+              </span>
+            </div>
+            
+            <h1 className="text-6xl md:text-7xl font-extrabold mb-6 bg-gradient-to-r from-blue-400 via-cyan-400 to-indigo-400 bg-clip-text text-transparent leading-tight">
               Enterprise Solutions
             </h1>
+<<<<<<< HEAD
+=======
             <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-8">
               Transform your enterprise with our advanced AI and autonomous systems designed for Fortune 500 companies
             </p>
@@ -252,40 +203,52 @@ export default function EnterprisePage() {
                 Comprehensive analysis of your current systems and AI readiness
               </p>
             </div>
+>>>>>>> b0266c0c1be3ec9050e7ba803edc6a65b0904e57
             
-            <div className="text-center">
-              <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-green-600">2</span>
-              </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-2">Strategy</h3>
-              <p className="text-gray-600 text-sm">
-                Custom AI transformation strategy tailored to your enterprise needs
-              </p>
-            </div>
+            <p className="text-2xl md:text-3xl text-gray-300 mb-8 font-semibold">
+              Trusted by 500+ Fortune 500 Companies Worldwide
+            </p>
             
-            <div className="text-center">
-              <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-purple-600">3</span>
-              </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-2">Implementation</h3>
-              <p className="text-gray-600 text-sm">
-                Phased implementation with continuous monitoring and optimization
-              </p>
-            </div>
+            <p className="text-xl text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed">
+              Transform your enterprise with our proven AI solutions. Achieve $100M+ cost savings, 
+              500% productivity gains, and 99.9% system uptime with enterprise-grade security and compliance.
+            </p>
             
-            <div className="text-center">
-              <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-orange-600">4</span>
-              </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-2">Optimization</h3>
-              <p className="text-gray-600 text-sm">
-                Continuous optimization and scaling for maximum ROI
-              </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a 
+                href="/contact" 
+                className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
+              >
+                Schedule Enterprise Demo
+              </a>
+              <a 
+                href="#solutions" 
+                className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
+              >
+                View Solutions
+              </a>
             </div>
           </div>
         </div>
-      </div>
+      </header>
 
+<<<<<<< HEAD
+      {/* Enterprise Solutions Banner */}
+      <section id="solutions">
+        <EnterpriseSolutionsBanner />
+      </section>
+
+      {/* Footer */}
+      <footer className="py-12 bg-slate-950 border-t border-white/10">
+        <div className="container mx-auto px-6">
+          <div className="text-center text-gray-400">
+            <p className="mb-4">© 2025 Zion Tech Group. All rights reserved.</p>
+            <div className="flex justify-center gap-6 text-sm">
+              <a href="/privacy" className="hover:text-blue-400 transition-colors">Privacy Policy</a>
+              <a href="/terms" className="hover:text-blue-400 transition-colors">Terms of Service</a>
+              <a href="/contact" className="hover:text-blue-400 transition-colors">Contact Us</a>
+            </div>
+=======
       {/* CTA Section */}
       <div className="bg-blue-600 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -308,9 +271,10 @@ export default function EnterprisePage() {
             >
               View Success Stories
             </Link>
+>>>>>>> b0266c0c1be3ec9050e7ba803edc6a65b0904e57
           </div>
         </div>
-      </div>
+      </footer>
     </div>
   );
 }

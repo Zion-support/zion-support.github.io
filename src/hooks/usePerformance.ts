@@ -1,267 +1,242 @@
-import { useEffect, useRef, useCallback, useState } from 'react';
+import { useEffect, useState, useCallback } from 'react';
+import { PerformanceMetrics } from '../types';
 
-/**
- * Performance monitoring hook for React components
- */
-export const usePerformanceMonitor = (componentName: string) => {
-  const mountTime = useRef<number>(Date.now());
-  const renderCount = useRef<number>(0);
+interface UsePerformanceOptions {
+  enableMonitoring?: boolean;
+  reportInterval?: number;
+  onMetricUpdate?: (metrics: PerformanceMetrics) => void;
+}
 
-  useEffect(() => {
-    mountTime.current = Date.now();
-    renderCount.current = 0;
+export const usePerformance = (options: UsePerformanceOptions = {}) => {
+  const {
+    enableMonitoring = true,
+    reportInterval = 5000,
+    onMetricUpdate
+  } = options;
 
-    return () => {
-      const unmountTime = Date.now();
-      const totalTime = unmountTime - mountTime.current;
-      
-      if (import.meta.env.DEV) {
-        console.log(`[Performance] ${componentName}:`, {
-          renderCount: renderCount.current,
-          totalTime: `${totalTime}ms`,
-          avgRenderTime: `${totalTime / renderCount.current}ms`
-        });
-      }
-    };
-  }, [componentName]);
-
-  const markRender = useCallback(() => {
-    renderCount.current += 1;
-  }, []);
-
-  return { markRender };
-};
-
-/**
- * Hook for optimizing expensive calculations with memoization
- */
-export const useMemoizedCallback = <T extends (...args: any[]) => any>(
-  callback: T,
-  deps: React.DependencyList
-): T => {
-  const ref = useRef<T>();
-  
-  useEffect(() => {
-    ref.current = callback;
-  }, deps);
-
-  return useCallback(((...args: any[]) => {
-    return ref.current?.(...args);
-  }) as T, []);
-};
-
-/**
- * Hook for debounced values
- */
-export const useDebounce = <T>(value: T, delay: number): T => {
-  const [debouncedValue, setDebouncedValue] = useState<T>(value);
-
-  useEffect(() => {
-    const handler = setTimeout(() => {
-      setDebouncedValue(value);
-    }, delay);
-
-    return () => {
-      clearTimeout(handler);
-    };
-  }, [value, delay]);
-
-  return debouncedValue;
-};
-
-/**
- * Hook for throttled values
- */
-export const useThrottle = <T>(value: T, limit: number): T => {
-  const [throttledValue, setThrottledValue] = useState<T>(value);
-  const lastRan = useRef<number>(Date.now());
-
-  useEffect(() => {
-    const handler = setTimeout(() => {
-      if (Date.now() - lastRan.current >= limit) {
-        setThrottledValue(value);
-        lastRan.current = Date.now();
-      }
-    }, limit - (Date.now() - lastRan.current));
-
-    return () => {
-      clearTimeout(handler);
-    };
-  }, [value, limit]);
-
-  return throttledValue;
-};
-
-/**
- * Hook for intersection observer (lazy loading)
- */
-export const useIntersectionObserver = (
-  elementRef: React.RefObject<Element>,
-  options: IntersectionObserverInit = {}
-) => {
-  const [isIntersecting, setIsIntersecting] = useState(false);
-
-  useEffect(() => {
-    const element = elementRef.current;
-    if (!element) return;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setIsIntersecting(entry.isIntersecting);
-      },
-      {
-        threshold: 0.1,
-        rootMargin: '50px',
-        ...options
-      }
-    );
-
-    observer.observe(element);
-
-    return () => {
-      observer.unobserve(element);
-    };
-  }, [elementRef, options]);
-
-  return isIntersecting;
-};
-
-/**
- * Hook for managing visibility state
- */
-export const useVisibility = () => {
-  const [isVisible, setIsVisible] = useState(!document.hidden);
-
-  useEffect(() => {
-    const handleVisibilityChange = () => {
-      setIsVisible(!document.hidden);
-    };
-
-    document.addEventListener('visibilitychange', handleVisibilityChange);
-
-    return () => {
-      document.removeEventListener('visibilitychange', handleVisibilityChange);
-    };
-  }, []);
-
-  return isVisible;
-};
-
-/**
- * Hook for managing network status
- */
-export const useNetworkStatus = () => {
-  const [isOnline, setIsOnline] = useState(navigator.onLine);
-  const [connectionType, setConnectionType] = useState<string>('unknown');
-
-  useEffect(() => {
-    const handleOnline = () => setIsOnline(true);
-    const handleOffline = () => setIsOnline(false);
-
-    window.addEventListener('online', handleOnline);
-    window.addEventListener('offline', handleOffline);
-
-    // Check connection type if available
-    if ('connection' in navigator) {
-      const connection = (navigator as any).connection;
-      setConnectionType(connection.effectiveType || 'unknown');
-      
-      const handleConnectionChange = () => {
-        setConnectionType(connection.effectiveType || 'unknown');
-      };
-
-      connection.addEventListener('change', handleConnectionChange);
-
-      return () => {
-        window.removeEventListener('online', handleOnline);
-        window.removeEventListener('offline', handleOffline);
-        connection.removeEventListener('change', handleConnectionChange);
-      };
-    }
-
-    return () => {
-      window.removeEventListener('online', handleOnline);
-      window.removeEventListener('offline', handleOffline);
-    };
-  }, []);
-
-  return { isOnline, connectionType };
-};
-
-/**
- * Hook for managing memory usage (if available)
- */
-export const useMemoryInfo = () => {
-  const [memoryInfo, setMemoryInfo] = useState<{
-    usedJSHeapSize: number;
-    totalJSHeapSize: number;
-    jsHeapSizeLimit: number;
-  } | null>(null);
-
-  useEffect(() => {
-    if ('memory' in performance) {
-      const updateMemoryInfo = () => {
-        const memory = (performance as any).memory;
-        setMemoryInfo({
-          usedJSHeapSize: memory.usedJSHeapSize,
-          totalJSHeapSize: memory.totalJSHeapSize,
-          jsHeapSizeLimit: memory.jsHeapSizeLimit
-        });
-      };
-
-      updateMemoryInfo();
-      const interval = setInterval(updateMemoryInfo, 5000);
-
-      return () => clearInterval(interval);
-    }
-  }, []);
-
-  return memoryInfo;
-};
-
-/**
- * Hook for optimizing component re-renders
- */
-export const useOptimizedCallback = <T extends (...args: any[]) => any>(
-  callback: T,
-  deps: React.DependencyList
-): T => {
-  const callbackRef = useRef<T>(callback);
-  const depsRef = useRef(deps);
-
-  // Update callback ref when dependencies change
-  useEffect(() => {
-    callbackRef.current = callback;
-    depsRef.current = deps;
-  }, [callback, deps]);
-
-  return useCallback(((...args: any[]) => {
-    return callbackRef.current(...args);
-  }) as T, []);
-};
-
-/**
- * Hook for managing component lifecycle performance
- */
-export const useComponentLifecycle = (componentName: string) => {
-  const { markRender } = usePerformanceMonitor(componentName);
-  const renderStartTime = useRef<number>(0);
-
-  useEffect(() => {
-    renderStartTime.current = performance.now();
-    markRender();
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    fcp: null,
+    lcp: null,
+    fid: null,
+    cls: null,
+    ttfb: null
   });
 
-  useEffect(() => {
-    const renderTime = performance.now() - renderStartTime.current;
+  const [isSupported, setIsSupported] = useState(false);
+
+  const measureWebVitals = useCallback(() => {
+    if (typeof window === 'undefined' || !enableMonitoring) return;
+
+    setIsSupported('PerformanceObserver' in window);
+
+    if (!('PerformanceObserver' in window)) return;
+
+    // First Contentful Paint
+    const fcpObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
+      if (fcpEntry) {
+        setMetrics(prev => {
+          const newMetrics = { ...prev, fcp: fcpEntry.startTime };
+          onMetricUpdate?.(newMetrics);
+          return newMetrics;
+        });
+      }
+    });
+    fcpObserver.observe({ entryTypes: ['paint'] });
+
+    // Largest Contentful Paint
+    const lcpObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      const lastEntry = entries[entries.length - 1];
+      setMetrics(prev => {
+        const newMetrics = { ...prev, lcp: lastEntry.startTime };
+        onMetricUpdate?.(newMetrics);
+        return newMetrics;
+      });
+    });
+    lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+
+    // First Input Delay
+    const fidObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      entries.forEach((entry: any) => {
+        setMetrics(prev => {
+          const newMetrics = { 
+            ...prev, 
+            fid: entry.startTime - entry.startTime 
+          };
+          onMetricUpdate?.(newMetrics);
+          return newMetrics;
+        });
+      });
+    });
+    fidObserver.observe({ entryTypes: ['first-input'] });
+
+    // Cumulative Layout Shift
+    let clsValue = 0;
+    const clsObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      entries.forEach((entry: any) => {
+        if (!entry.hadRecentInput) {
+          clsValue += entry.value;
+          setMetrics(prev => {
+            const newMetrics = { ...prev, cls: clsValue };
+            onMetricUpdate?.(newMetrics);
+            return newMetrics;
+          });
+        }
+      });
+    });
+    clsObserver.observe({ entryTypes: ['layout-shift'] });
+
+    // Time to First Byte
+    const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    if (navigationEntry) {
+      setMetrics(prev => {
+        const newMetrics = { 
+          ...prev, 
+          ttfb: navigationEntry.responseStart - navigationEntry.requestStart 
+        };
+        onMetricUpdate?.(newMetrics);
+        return newMetrics;
+      });
+    }
+
+    // Cleanup function
+    return () => {
+      fcpObserver.disconnect();
+      lcpObserver.disconnect();
+      fidObserver.disconnect();
+      clsObserver.disconnect();
+    };
+  }, [enableMonitoring, onMetricUpdate]);
+
+  const getMemoryUsage = useCallback(() => {
+    if (typeof window === 'undefined' || !('memory' in performance)) {
+      return null;
+    }
     
-    if (import.meta.env.DEV && renderTime > 16) {
-      console.warn(`[Performance] ${componentName} render took ${renderTime.toFixed(2)}ms (target: <16ms)`);
+    const memory = (performance as any).memory;
+    return {
+      used: Math.round(memory.usedJSHeapSize / 1048576), // MB
+      total: Math.round(memory.totalJSHeapSize / 1048576), // MB
+      limit: Math.round(memory.jsHeapSizeLimit / 1048576) // MB
+    };
+  }, []);
+
+  const getResourceTiming = useCallback(() => {
+    if (typeof window === 'undefined') return [];
+
+    const resources = performance.getEntriesByType('resource');
+    return resources.map(resource => ({
+      name: resource.name,
+      duration: resource.duration,
+      size: (resource as any).transferSize || 0,
+      type: resource.initiatorType
+    }));
+  }, []);
+
+  const getNavigationTiming = useCallback(() => {
+    if (typeof window === 'undefined') return null;
+
+    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    if (!navigation) return null;
+
+    return {
+      domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
+      loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
+      totalTime: navigation.loadEventEnd - navigation.fetchStart,
+      dns: navigation.domainLookupEnd - navigation.domainLookupStart,
+      tcp: navigation.connectEnd - navigation.connectStart,
+      request: navigation.responseStart - navigation.requestStart,
+      response: navigation.responseEnd - navigation.responseStart,
+      domProcessing: navigation.domComplete - navigation.domLoading
+    };
+  }, []);
+
+  const clearMetrics = useCallback(() => {
+    setMetrics({
+      fcp: null,
+      lcp: null,
+      fid: null,
+      cls: null,
+      ttfb: null
+    });
+  }, []);
+
+  const isGoodPerformance = useCallback(() => {
+    const { fcp, lcp, fid, cls } = metrics;
+    
+    return {
+      fcp: fcp !== null && fcp < 1800, // Good FCP is under 1.8s
+      lcp: lcp !== null && lcp < 2500, // Good LCP is under 2.5s
+      fid: fid !== null && fid < 100,  // Good FID is under 100ms
+      cls: cls !== null && cls < 0.1   // Good CLS is under 0.1
+    };
+  }, [metrics]);
+
+  useEffect(() => {
+    if (!enableMonitoring) return;
+
+    const cleanup = measureWebVitals();
+    return cleanup;
+  }, [measureWebVitals, enableMonitoring]);
+
+  // Periodic reporting
+  useEffect(() => {
+    if (!enableMonitoring || !onMetricUpdate) return;
+
+    const interval = setInterval(() => {
+      onMetricUpdate(metrics);
+    }, reportInterval);
+
+    return () => clearInterval(interval);
+  }, [metrics, onMetricUpdate, reportInterval, enableMonitoring]);
+
+  const logMetrics = useCallback(() => {
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Performance Metrics:', metrics);
+      console.log('Good Performance:', isGoodPerformance());
     }
-  });
+  }, [metrics, isGoodPerformance]);
+
+  const performanceScore = useCallback(() => {
+    const { fcp, lcp, fid, cls } = metrics;
+    let score = 0;
+    let total = 0;
+    
+    if (fcp !== null) {
+      score += fcp < 1800 ? 100 : Math.max(0, 100 - (fcp - 1800) / 100);
+      total++;
+    }
+    if (lcp !== null) {
+      score += lcp < 2500 ? 100 : Math.max(0, 100 - (lcp - 2500) / 100);
+      total++;
+    }
+    if (fid !== null) {
+      score += fid < 100 ? 100 : Math.max(0, 100 - fid);
+      total++;
+    }
+    if (cls !== null) {
+      score += cls < 0.1 ? 100 : Math.max(0, 100 - cls * 1000);
+      total++;
+    }
+    
+    return total > 0 ? Math.round(score / total) : 0;
+  }, [metrics]);
 
   return {
-    markRender,
-    renderStartTime: renderStartTime.current
+    metrics,
+    isSupported,
+    getMemoryUsage,
+    getResourceTiming,
+    getNavigationTiming,
+    clearMetrics,
+    isGoodPerformance: isGoodPerformance(),
+    logMetrics,
+    performanceScore: performanceScore()
   };
 };
+
+export default usePerformance;

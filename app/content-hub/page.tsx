@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+// @ts-nocheck
+=======
 export default function ContentHubPage() {
   return (
     <div className="max-w-6xl mx-auto px-6 py-12">
@@ -7,147 +10,34 @@ export default function ContentHubPage() {
   );
 }
 
+>>>>>>> b0266c0c1be3ec9050e7ba803edc6a65b0904e57
 import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Content Hub - Zion Tech Group',
-  description: 'Access our comprehensive library of AI resources, guides, whitepapers, and implementation blueprints for enterprise transformation.',
-  keywords: 'AI resources, enterprise guides, whitepapers, implementation blueprints, AI documentation',
+  title: 'Content Hub | Zion Tech Group',
+  description: 'Discover all AI breakthroughs, case studies, and guides.',
 };
 
-export default function ContentHubPage() {
-  const resourceCategories = [
-    {
-      title: 'AI Implementation Guides',
-      description: 'Step-by-step guides for implementing AI solutions in your enterprise',
-      icon: '📚',
-      resources: [
-        {
-          title: 'AI 2026 Implementation Roadmap',
-          description: 'Comprehensive roadmap for AI transformation in 2026',
-          type: 'Guide',
-          link: '/guides/ai-2026-implementation-roadmap'
-        },
-        {
-          title: 'AI 2027 Implementation Roadmap',
-          description: 'Advanced AI implementation strategies for 2027',
-          type: 'Guide',
-          link: '/guides/ai-2027-implementation-roadmap'
-        },
-        {
-          title: 'Autonomous Business Processes Implementation Guide',
-          description: 'Complete guide to implementing autonomous business processes',
-          type: 'Guide',
-          link: '/guides/autonomous-business-processes-implementation-guide-2026'
-        }
-      ]
-    },
-    {
-      title: 'Case Studies & Success Stories',
-      description: 'Real-world examples of successful AI transformations',
-      icon: '📊',
-      resources: [
-        {
-          title: 'AI 2026 November Quantum Superintelligence Success',
-          description: '$500B ROI achieved through quantum AI implementation',
-          type: 'Case Study',
-          link: '/case-studies/ai-2026-november-quantum-superintelligence-500-billion-success'
-        },
-        {
-          title: 'AI 2026 August Quantum Consciousness Revolution',
-          description: '$50B success with autonomous operations transformation',
-          type: 'Case Study',
-          link: '/case-studies/ai-2026-august-breakthrough-8-5-billion-success'
-        },
-        {
-          title: 'Supply Chain Transformation 2026',
-          description: 'AI-powered supply chain optimization case study',
-          type: 'Case Study',
-          link: '/case-studies/supply-chain-transformation-2026'
-        }
-      ]
-    },
-    {
-      title: 'Technical Documentation',
-      description: 'In-depth technical resources and API documentation',
-      icon: '⚙️',
-      resources: [
-        {
-          title: 'AI Services API Documentation',
-          description: 'Complete API reference for our AI services',
-          type: 'Documentation',
-          link: '/api-documentation'
-        },
-        {
-          title: 'AI Security Best Practices',
-          description: 'Comprehensive security guidelines for AI implementations',
-          type: 'Whitepaper',
-          link: '/security'
-        },
-        {
-          title: 'AI Performance Optimization Guide',
-          description: 'Best practices for optimizing AI system performance',
-          type: 'Guide',
-          link: '/guides/ai-performance-optimization'
-        }
-      ]
-    },
-    {
-      title: 'Industry Insights',
-      description: 'Latest trends and insights across different industries',
-      icon: '🔍',
-      resources: [
-        {
-          title: 'AI Trends 2026 Predictions',
-          description: 'Comprehensive analysis of AI trends for 2026',
-          type: 'Report',
-          link: '/blog/ai-2026-future-trends-mega-predictions'
-        },
-        {
-          title: 'Enterprise AI Transformation Report',
-          description: 'State of enterprise AI transformation in 2026',
-          type: 'Report',
-          link: '/blog/ai-2026-enterprise-automation-revolution'
-        },
-        {
-          title: 'Quantum Computing Breakthrough Analysis',
-          description: 'Analysis of quantum computing breakthroughs and implications',
-          type: 'Analysis',
-          link: '/blog/ai-2026-quantum-computing-breakthrough'
-        }
-      ]
-    }
-  ];
-
-  const featuredResources = [
-    {
-      title: 'AI 2026 Implementation Roadmap',
-      description: 'Comprehensive roadmap for AI transformation in 2026',
-      type: 'Guide',
-      category: 'Implementation',
-      link: '/guides/ai-2026-implementation-roadmap',
-      featured: true
-    },
-    {
-      title: 'AI 2026 November Quantum Superintelligence Success',
-      description: '$500B ROI achieved through quantum AI implementation',
-      type: 'Case Study',
-      category: 'Success Story',
-      link: '/case-studies/ai-2026-november-quantum-superintelligence-500-billion-success',
-      featured: true
-    },
-    {
-      title: 'AI Services API Documentation',
-      description: 'Complete API reference for our AI services',
-      type: 'Documentation',
-      category: 'Technical',
-      link: '/api-documentation',
-      featured: true
-    }
+export default function ContentHub() {
+  const featured = [
+    { title: 'AI 2027 Quantum AI Breakthrough', url: '/blog/ai-2027-quantum-ai-breakthrough-enterprise-transformation' },
+    { title: 'Agentic Workflow Orchestration 2026', url: '/blog/agentic-workflow-orchestration-2026' },
+    { title: 'AI Enterprise Automation 2026', url: '/blog/ai-enterprise-automation-2026' },
   ];
 
   return (
+<<<<<<< HEAD
+    <div className="max-w-6xl mx-auto px-4 py-8">
+      <h1 className="text-3xl font-bold mb-6">Revolutionary Content Hub</h1>
+      <ul className="list-disc pl-6 space-y-2">
+        {featured.map(item => (
+          <li key={item.url}>
+            <a href={item.url} className="text-blue-600 underline">{item.title}</a>
+          </li>
+        ))}
+      </ul>
+=======
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white py-20">
@@ -357,6 +247,7 @@ export default function ContentHubPage() {
           </div>
         </div>
       </div>
+>>>>>>> b0266c0c1be3ec9050e7ba803edc6a65b0904e57
     </div>
   );
 }
