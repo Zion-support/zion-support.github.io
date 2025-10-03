@@ -1,6 +1,4 @@
 import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
 import { Brain, TrendingUp, Shield, Cloud, BarChart3, Database, Users, Target, Zap, Rocket, Globe, Phone, Mail, MapPin, ArrowRight, Server } from 'lucide-react';
 
 export const metadata: Metadata = {
