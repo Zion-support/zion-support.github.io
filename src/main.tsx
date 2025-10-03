@@ -1,6 +1,6 @@
-import React from "react
-import { createRoot } from "react-dom/client
-import App from "./AppSafe
+import React from "react";
+import { createRoot } from "react-dom/client";
+import App from "./AppSafe";
 async function reportWebVitals() {
   try {
     const { onCLS, onLCP, onFCP, onTTFB } = await import("web-vitals");
