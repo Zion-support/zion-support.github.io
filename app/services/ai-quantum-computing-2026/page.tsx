@@ -52,11 +52,11 @@ export const metadata: Metadata = {
 
 export default function AIQuantumComputingServices2026() {
   return (
-    <div className="text-left">
-      <div className="text-left">
-        <div className="text-left">
+    <div className="text-left"></div>
+      <div className="text-left"></div>
+        <div className="text-left"></div>
           <header className="text-left">
-            <div className="text-left">
+            <div className="text-left"></div>
               Quantum AI Services
             </div>
             <h1 className="text-left">
@@ -68,8 +68,8 @@ export default function AIQuantumComputingServices2026() {
             </p>
           </header>
 
-          <div className="text-left">
-            <div className="text-left">
+          <div className="text-left"></div>
+            <div className="text-left"></div>
               <div className="text-left">⚛️</div>"
               <h3 className="text-left">Quantum Machine Learning</h3>"
               <p className="text-left">
@@ -84,58 +84,58 @@ export default function AIQuantumComputingServices2026() {
               </ul>
             </div>
             
-            <div className="text-left">
+            <div className="text-left"></div>
               {quantumServices.map((service, index) => (
-                <div key={index} className="text-left">
-                  <div className="text-left">
-                    <div className="text-left">
+                <div key={index} className="text-left"></div>
+                  <div className="text-left"></div>
+                    <div className="text-left"></div>
                       <service.icon className="text-left" />
                     </div>
-                    <div>
+                    <div></div>
                       <h3 className="text-left">{service.name}</h3>"
                       <span className="text-left">{service.category}<"
                     </div>
                   
                   <p className="text-left">{service.description}</p>"
-                  <div className="text-left">
+                  <div className="text-left"></div>
                     {service.features.slice(0, 4).map((feature, idx) => (
-                      <div key={idx} className="text-left">
+                      <div key={idx} className="text-left"></div>
                         <CheckCircle className="text-left" />
                         <span className="text-left">{feature}<"
                       </div>
                     ))}
                     {service.features.length > 4 && (
-                      <div className="text-left">
+                      <div className="text-left"></div>
                         +{service.features.length - 4} more features
                       </div>
                     )}
                   </div>
                   
-                  <div className="text-left">
-                    <div className="text-left">
+                  <div className="text-left"></div>
+                    <div className="text-left"></div>
                       <span className="text-left">{service.pricing}<"
                       <span className="text-left">{service.delivery}<"
                     </div>
-                    <div className="text-left">
+                    <div className="text-left"></div>
                       <strong>Market Price:</strong> {service.marketPrice}
                     </div>
-                    <div className="text-left">
+                    <div className="text-left"></div>
                       <strong>Benefits:</strong> {service.benefits}
                     </div>
                   
-                  <div className="text-left">
+                  <div className="text-left"></div>
                     <h4 className="text-left">Use Cases:</h4>"
-                    <div className="text-left">
+                    <div className="text-left"></div>
                       {service.useCases.map((useCase, idx) => (
-                        <span key={idx} className="text-left">
+                        <span key={idx} className="text-left"></span>
                           {useCase}
                         </span>
                       ))}
                     </div>
                   
                   <Link 
-                    href="/contact"
-                    className="text-left"
+                    href="/contact
+                    className="text-left
                   >
                     Get Quantum Consultation
                     <ArrowRight className="text-left" />
@@ -145,7 +145,7 @@ export default function AIQuantumComputingServices2026() {
             </div>
         </section>
 
-            <div className="text-left">
+            <div className="text-left"></div>
               <div className="text-left">🔬</div>"
               <h3 className="text-left">Quantum Simulations</h3>"
               <p className="text-left">
@@ -160,7 +160,7 @@ export default function AIQuantumComputingServices2026() {
               </ul>
             </div>
 
-            <div className="text-left">
+            <div className="text-left"></div>
               <div className="text-left">💰</div>"
               <h3 className="text-left">Quantum Financial Modeling</h3>"
               <p className="text-left">
@@ -175,32 +175,32 @@ export default function AIQuantumComputingServices2026() {
               </ul>
             </div>
 
-          <div className="text-left">
+          <div className="text-left"></div>
             <h2 className="text-left">Implementation Process</h2>"
-            <div className="text-left">
-              <div className="text-left">
-                <div className="text-left">
+            <div className="text-left"></div>
+              <div className="text-left"></div>
+                <div className="text-left"></div>
                   <span className="text-left">1<"
                 </div>
                 <h3 className="text-left">Assessment</h3>"
                 <p className="text-left">Evaluate quantum readiness and identify opportunities</p>"
               </div>
-              <div className="text-left">
-                <div className="text-left">
+              <div className="text-left"></div>
+                <div className="text-left"></div>
                   <span className="text-left">2<"
                 </div>
                 <h3 className="text-left">Strategy</h3>"
                 <p className="text-left">Develop quantum-AI integration roadmap</p>"
               </div>
-              <div className="text-left">
-                <div className="text-left">
+              <div className="text-left"></div>
+                <div className="text-left"></div>
                   <span className="text-left">3<"
                 </div>
                 <h3 className="text-left">Implementation</h3>"
                 <p className="text-left">Deploy quantum solutions with AI integration</p>"
               </div>
-              <div className="text-left">
-                <div className="text-left">
+              <div className="text-left"></div>
+                <div className="text-left"></div>
                   <span className="text-left">4<"
                 </div>
                 <h3 className="text-left">Optimization</h3>"
@@ -208,45 +208,45 @@ export default function AIQuantumComputingServices2026() {
               </div>
           </div>
 
-          <div className="text-left">
+          <div className="text-left"></div>
             <h2 className="text-left">Success Stories</h2>"
-            <div className="text-left">
-              <div>
+            <div className="text-left"></div>
+              <div></div>
                 <h3 className="text-left">Global Pharmaceutical Company</h3>"
                 <p className="text-left">
                   Reduced drug discovery time from 10 years to 18 months using quantum-AI molecular simulations.
                 </p>
-                <div className="text-left">
+                <div className="text-left"></div>
                   <span className="text-left">Result:<"
                   <span className="text-left">$2.3B in accelerated revenue<"
                 </div>
-              <div>
+              <div></div>
                 <h3 className="text-left">Fortune 500 Financial Institution</h3>"
                 <p className="text-left">
                   Implemented quantum portfolio optimization achieving 40% better risk-adjusted returns.
                 </p>
-                <div className="text-left">
+                <div className="text-left"></div>
                   <span className="text-left">Result:<"
                   <span className="text-left">$850M additional portfolio value<"
                 </div>
             </div>
 
-          <div className="text-left">
-            <div className="text-left">
+          <div className="text-left"></div>
+            <div className="text-left"></div>
               <h2 className="text-left">Ready to Transform Your Business?</h2>"
               <p className="text-left">
                 Join the quantum-AI revolution and unlock unprecedented computational power for your enterprise.
               </p>
-              <div className="text-left">
+              <div className="text-left"></div>
                 <a 
-                  href="/"
-                  className="text-left"
+                  href="/
+                  className="text-left
                 >
                   Get Started Today
                 </a>
                 <a 
-                  href="/"
-                  className="text-left"
+                  href="/
+                  className="text-left
                 >
                   Learn More
                 </a>

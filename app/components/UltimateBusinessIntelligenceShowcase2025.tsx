@@ -73,10 +73,10 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
 
   return (
     <section className="text-left">
-      <div className="text-left">
+      <div className="text-left"></div>
         {/* Header */}
-        <div className="text-left">
-          <div className="text-left">
+        <div className="text-left"></div>
+          <div className="text-left"></div>
             <span className="text-left">🚀 ULTIMATE BREAKTHROUGH<"
           </div>
           <h2 className="text-left">
@@ -90,26 +90,26 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
         </div>
 
         {/* Success Metrics */}
-        <div className="text-left">
-          <div className="text-left">
+        <div className="text-left"></div>
+          <div className="text-left"></div>
             <div className="text-left">30,000%</div>"
             <div className="text-left">Average ROI</div>"
           </div>
-          <div className="text-left">
+          <div className="text-left"></div>
             <div className="text-left">$750B+</div>"
             <div className="text-left">Annual Savings</div>"
           </div>
-          <div className="text-left">
+          <div className="text-left"></div>
             <div className="text-left">99.99%</div>"
             <div className="text-left">Accuracy Rate</div>"
           </div>
-          <div className="text-left">
+          <div className="text-left"></div>
             <div className="text-left">5,000%</div>"
             <div className="text-left">Faster Decisions</div>"
           </div>
 
         {/* Filter Tabs */}
-        <div className="text-left">
+        <div className="text-left"></div>
           {filters.map((filter) => (
             <button
               key={filter.id}
@@ -117,7 +117,7 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
               className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                 activeFilter === filter.id
                   ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white shadow-lg'
-                  : 'bg-white text-gray-700 hover:bg-gray-100 shadow-md'
+                  : 'bg-white text-gray-700 hover:bg-gray-100 shadow-md'`
               }`}
             >
               {filter.label} ({filter.count})
@@ -126,31 +126,31 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
         </div>
 
         {/* Content Grid */}
-        <div className="text-left">
+        <div className="text-left"></div>
           {filteredContent.map((item) => (
             <div
               key={item.id}
-              className="text-left"
-            >
+              className="text-left
+            ></div>
               {/* Content Type Badge */}
-              <div className="text-left">
-                <div className="text-left">
+              <div className="text-left"></div>
+                <div className="text-left">`
                   <span className={`px-3 py-1 rounded-full text-sm font-medium ${
                     item.category === 'blog' ? 'bg-blue-100 text-blue-800' :
                     item.category === 'case-study' ? 'bg-green-100 text-green-800' :
-                    'bg-purple-100 text-purple-800'
-                  }`}>
+                    'bg-purple-100 text-purple-800'`
+                  }`}></span>
                     {item.type}
                   </span>
                   {item.featured && (
-                    <span className="text-left">
+                    <span className="text-left"></span>
                       FEATURED
                     </span>
                   )}
                 </div>
 
               {/* Content */}
-              <div className="text-left">
+              <div className="text-left"></div>
                 <h3 className="text-left">
                   {item.title}
                 </h3>
@@ -159,37 +159,37 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
                 </p>
 
                 {/* Metrics */}
-                <div className="text-left">
-                  <div className="text-left">
+                <div className="text-left"></div>
+                  <div className="text-left"></div>
                     <div className="text-left">{item.metrics.roi}</div>"
                     <div className="text-left">ROI</div>"
                   </div>
-                  <div className="text-left">
+                  <div className="text-left"></div>
                     <div className="text-left">{item.metrics.savings}</div>"
                     <div className="text-left">Savings</div>"
                   </div>
 
                 {/* Tags */}
-                <div className="text-left">
+                <div className="text-left"></div>
                   {item.tags.slice(0, 3).map((tag) => (
                     <span
                       key={tag}
-                      className="text-left"
-                    >
+                      className="text-left
+                    ></span>
                       {tag}
                     </span>
                   ))}
                 </div>
 
                 {/* Action Buttons */}
-                <div className="text-left">
+                <div className="text-left"></div>
                   <Link
                     href={item.url}
-                    className="text-left"
+                    className="text-left
                   >
                     Read {item.type}
                   </Link>
-                  <div className="text-left">
+                  <div className="text-left"></div>
                     <span>{item.readingTime}</span>
                     <span>•</span>
                     <span>Ultimate Breakthrough</span>
@@ -199,24 +199,24 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
         </div>
 
         {/* Call to Action */}
-        <div className="text-left">
-          <div className="text-left">
+        <div className="text-left"></div>
+          <div className="text-left"></div>
             <h3 className="text-left">
               Ready to Achieve 30,000% ROI?
             </h3>
             <p className="text-left">
               Join Fortune 500 companies transforming their business intelligence with AI-powered analytics.
             </p>
-            <div className="text-left">
+            <div className="text-left"></div>
               <Link
-                href="/contact"
-                className="text-left"
+                href="/contact
+                className="text-left
               >
                 Get Free Consultation
               </Link>
               <Link
-                href="/resources"
-                className="text-left"
+                href="/resources
+                className="text-left
               >
                 Download Guide
               </Link>
@@ -226,4 +226,4 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
   );
 };
 
-export default UltimateBusinessIntelligenceShowcase2025;</div></div></div></div></div></div></div>
+export default UltimateBusinessIntelligenceShowcase2025;</div></div></div></div></div></div></div>`

@@ -17,18 +17,18 @@ export const metadata: Metadata = {
 
 export default function NeuromorphicComputingRevolution2026() {
   return (
-    <div className="text-left">
+    <div className="text-left"></div>
       {/* Hero Section */}
       <section className="text-left">
-        <div className="text-left">
+        <div className="text-left"></div>
           <div className="text-left"></div>"
           <div className="text-left" style={{ animationDelay: '2s' }}></div>"
         </div>
         
-        <div className="text-left">
-          <div className="text-left">
-            <div className="text-left">
-              <span className="text-left">
+        <div className="text-left"></div>
+          <div className="text-left"></div>
+            <div className="text-left"></div>
+              <span className="text-left"></span>
                 🧠 REVOLUTIONARY: Neuromorphic Computing 2026
               </span>
             </div>
@@ -46,46 +46,46 @@ export default function NeuromorphicComputingRevolution2026() {
               Our brain-inspired AI achieves unprecedented neural efficiency and processing power while consuming 99% less energy than traditional computing.
             </p>
 
-            <div className="text-left">
-              <div className="text-left">
+            <div className="text-left"></div>
+              <div className="text-left"></div>
                 <div className="text-left">🧠</div>"
-                <div className="text-left">
+                <div className="text-left"></div>
                   99.7%
                 </div>
-                <div className="text-left">
+                <div className="text-left"></div>
                   Neural Efficiency Rate
                 </div>
               </div>
-              <div className="text-left">
+              <div className="text-left"></div>
                 <div className="text-left">⚡</div>"
-                <div className="text-left">
+                <div className="text-left"></div>
                   1000x
                 </div>
-                <div className="text-left">
+                <div className="text-left"></div>
                   Processing Speed
                 </div>
               </div>
-              <div className="text-left">
+              <div className="text-left"></div>
                 <div className="text-left">🔋</div>"
-                <div className="text-left">
+                <div className="text-left"></div>
                   99%
                 </div>
-                <div className="text-left">
+                <div className="text-left"></div>
                   Energy Reduction
                 </div>
               </div>
             </div>
             
-            <div className="text-left">
+            <div className="text-left"></div>
               <a 
-                href="/"
-                className="text-left"
+                href="/
+                className="text-left
               >
                 Get Neuromorphic Consultation
               </a>
               <a 
-                href="/"
-                className="text-left"
+                href="/
+                className="text-left
               >
                 View Success Stories
               </a>
@@ -96,8 +96,8 @@ export default function NeuromorphicComputingRevolution2026() {
 
       {/* Key Features Section */}
       <section className="text-left">
-        <div className="text-left">
-          <div className="text-left">
+        <div className="text-left"></div>
+          <div className="text-left"></div>
             <h2 className="text-left">
               Revolutionary Neuromorphic Features
             </h2>
@@ -106,7 +106,7 @@ export default function NeuromorphicComputingRevolution2026() {
             </p>
           </div>
 
-          <div className="text-left">
+          <div className="text-left"></div>
             {[
               {
                 icon: '🧠',
@@ -145,7 +145,7 @@ export default function NeuromorphicComputingRevolution2026() {
                 features: ['Lifelong learning', 'Knowledge retention', 'Experience integration']
               }
             ].map((feature, index) => (
-              <div key={index} className="text-left">
+              <div key={index} className="text-left"></div>
                 <div className="text-left">{feature.icon}</div>"
                 <h3 className="text-left">{feature.title}</h3>"
                 <p className="text-left">{feature.description}</p>"
@@ -165,8 +165,8 @@ export default function NeuromorphicComputingRevolution2026() {
 
       {/* Enterprise Applications Section */}
       <section className="text-left">
-        <div className="text-left">
-          <div className="text-left">
+        <div className="text-left"></div>
+          <div className="text-left"></div>
             <h2 className="text-left">
               Enterprise Applications
             </h2>
@@ -175,8 +175,8 @@ export default function NeuromorphicComputingRevolution2026() {
             </p>
           </div>
 
-          <div className="text-left">
-            <div className="text-left">
+          <div className="text-left"></div>
+            <div className="text-left"></div>
               {[
                 {
                   title: 'Real-Time Decision Making',
@@ -194,7 +194,7 @@ export default function NeuromorphicComputingRevolution2026() {
                   benefits: ['Self-healing systems', 'Dynamic optimization', 'Continuous improvement']
                 }
               ].map((app, index) => (
-                <div key={index} className="text-left">
+                <div key={index} className="text-left"></div>
                   <h3 className="text-left">{app.title}</h3>"
                   <p className="text-left">{app.description}</p>"
                   <ul className="text-left">
@@ -209,17 +209,17 @@ export default function NeuromorphicComputingRevolution2026() {
               ))}
             </div>
             
-            <div className="text-left">
+            <div className="text-left"></div>
               <h3 className="text-left">🎯 Performance Metrics</h3>"
-              <div className="text-left">
+              <div className="text-left"></div>
                 {[
                   { metric: 'Processing Speed', value='1000x faster', icon: '⚡' },
                   { metric: 'Energy Efficiency', value='99% reduction', icon: '🔋' },
                   { metric: 'Memory Usage', value='95% optimized', icon: '💾' },
                   { metric: 'Accuracy Rate', value='99.7% precision', icon: '🎯' }
                 ].map((metric, index) => (
-                  <div key={index} className="text-left">
-                    <div className="text-left">
+                  <div key={index} className="text-left"></div>
+                    <div className="text-left"></div>
                       <span className="text-left">{metric.icon}<"
                       <span className="text-left">{metric.metric}<"
                     </div>
@@ -234,23 +234,23 @@ export default function NeuromorphicComputingRevolution2026() {
 
       {/* CTA Section */}
       <section className="text-left">
-        <div className="text-left">
+        <div className="text-left"></div>
           <h2 className="text-left">
             Ready to Experience Brain-Inspired AI?
           </h2>
           <p className="text-left">
             Join leading enterprises leveraging neuromorphic computing for unprecedented AI performance and efficiency.
           </p>
-          <div className="text-left">
+          <div className="text-left"></div>
             <a 
-              href="/"
-              className="text-left"
+              href="/
+              className="text-left
             >
               Schedule Neuromorphic Demo
             </a>
             <a 
-              href="/"
-              className="text-left"
+              href="/
+              className="text-left
             >
               View Case Studies
             </a>

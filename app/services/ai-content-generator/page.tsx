@@ -9,10 +9,10 @@ export const metadata: Metadata = {
 
 export default function AIContentGeneratorPage() {
   return (
-    <div className="text-left">
+    <div className="text-left"></div>
       {/* Hero Section */}
       <section className="text-left">
-        <div className="text-left">
+        <div className="text-left"></div>
           <h1 className="text-left">
             AI Content Generator
           </h1>
@@ -20,16 +20,16 @@ export default function AIContentGeneratorPage() {
             Transform your content strategy with GPT-4 powered AI that creates high-quality, 
             SEO-optimized content for blogs, social media, and marketing campaigns.
           </p>
-          <div className="text-left">
+          <div className="text-left"></div>
             <a
-              href="tel:+13024640950"
-              className="text-left"
+              href="tel:+13024640950
+              className="text-left
             >
               Call +1 302 464 0950
             </a>
             <a
-              href="mailto:kleber@ziontechgroup.com?subject=AI Content Generator Inquiry"
-              className="text-left"
+              href="mailto:kleber@ziontechgroup.com?subject=AI Content Generator Inquiry
+              className="text-left
             >
               Get a Quote
             </a>
@@ -38,8 +38,8 @@ export default function AIContentGeneratorPage() {
 
       {/* Features Section */}
       <section className="text-left">
-        <div className="text-left">
-          <div className="text-left">
+        <div className="text-left"></div>
+          <div className="text-left"></div>
             <h2 className="text-left">
               Powerful AI Content Features
             </h2>
@@ -49,8 +49,8 @@ export default function AIContentGeneratorPage() {
             </p>
           </div>
 
-          <div className="text-left">
-            <div className="text-left">
+          <div className="text-left"></div>
+            <div className="text-left"></div>
               <div className="text-left">✍️</div>
               <h3 className="text-left">Blog Post Generation</h3>
               <p className="text-left">
@@ -64,7 +64,7 @@ export default function AIContentGeneratorPage() {
               </ul>
             </div>
 
-            <div className="text-left">
+            <div className="text-left"></div>
               <div className="text-left">📱</div>
               <h3 className="text-left">Social Media Content</h3>
               <p className="text-left">
@@ -78,7 +78,7 @@ export default function AIContentGeneratorPage() {
               </ul>
             </div>
 
-            <div className="text-left">
+            <div className="text-left"></div>
               <div className="text-left">🎯</div>
               <h3 className="text-left">Marketing Copy</h3>
               <p className="text-left">
@@ -92,7 +92,7 @@ export default function AIContentGeneratorPage() {
               </ul>
             </div>
 
-            <div className="text-left">
+            <div className="text-left"></div>
               <div className="text-left">🌍</div>
               <h3 className="text-left">Multi-language Support</h3>
               <p className="text-left">
@@ -106,7 +106,7 @@ export default function AIContentGeneratorPage() {
               </ul>
             </div>
 
-            <div className="text-left">
+            <div className="text-left"></div>
               <div className="text-left">🔍</div>
               <h3 className="text-left">SEO Optimization</h3>
               <p className="text-left">
@@ -120,7 +120,7 @@ export default function AIContentGeneratorPage() {
               </ul>
             </div>
 
-            <div className="text-left">
+            <div className="text-left"></div>
               <div className="text-left">📊</div>
               <h3 className="text-left">Content Analytics</h3>
               <p className="text-left">
@@ -138,8 +138,8 @@ export default function AIContentGeneratorPage() {
 
       {/* Pricing Section */}
       <section className="text-left">
-        <div className="text-left">
-          <div className="text-left">
+        <div className="text-left"></div>
+          <div className="text-left"></div>
             <h2 className="text-left">
               AI Content Generator Pricing
             </h2>
@@ -148,10 +148,10 @@ export default function AIContentGeneratorPage() {
             </p>
           </div>
 
-          <div className="text-left">
+          <div className="text-left"></div>
             {/* Basic Plan */}
-            <div className="text-left">
-              <div className="text-left">
+            <div className="text-left"></div>
+              <div className="text-left"></div>
                 <h3 className="text-left">Basic</h3>
                 <div className="text-left">$29</div>
                 <p className="text-left">per month</p>
@@ -183,19 +183,19 @@ export default function AIContentGeneratorPage() {
                 </li>
               </ul>
               <a
-                href="mailto:kleber@ziontechgroup.com?subject=AI Content Generator Basic Plan"
-                className="text-left"
+                href="mailto:kleber@ziontechgroup.com?subject=AI Content Generator Basic Plan
+                className="text-left
               >
                 Get Started
               </a>
             </div>
 
             {/* Professional Plan */}
-            <div className="text-left">
-              <div className="text-left">
+            <div className="text-left"></div>
+              <div className="text-left"></div>
                 <span className="text-left">Most Popular</span>
               </div>
-              <div className="text-left">
+              <div className="text-left"></div>
                 <h3 className="text-left">Professional</h3>
                 <div className="text-left">$99</div>
                 <p className="text-left">per month</p>
@@ -233,16 +233,16 @@ export default function AIContentGeneratorPage() {
                 </li>
               </ul>
               <a
-                href="mailto:kleber@ziontechgroup.com?subject=AI Content Generator Professional Plan"
-                className="text-left"
+                href="mailto:kleber@ziontechgroup.com?subject=AI Content Generator Professional Plan
+                className="text-left
               >
                 Get Started
               </a>
             </div>
 
             {/* Enterprise Plan */}
-            <div className="text-left">
-              <div className="text-left">
+            <div className="text-left"></div>
+              <div className="text-left"></div>
                 <h3 className="text-left">Enterprise</h3>
                 <div className="text-left">$299</div>
                 <p className="text-left">per month</p>
@@ -280,14 +280,14 @@ export default function AIContentGeneratorPage() {
                 </li>
               </ul>
               <a
-                href="mailto:kleber@ziontechgroup.com?subject=AI Content Generator Enterprise Plan"
-                className="text-left"
+                href="mailto:kleber@ziontechgroup.com?subject=AI Content Generator Enterprise Plan
+                className="text-left
               >
                 Contact Sales
               </a>
             </div>
 
-          <div className="text-left">
+          <div className="text-left"></div>
             <p className="text-left">
               All plans include 30-day free trial and money-back guarantee.
             </p>
@@ -299,23 +299,23 @@ export default function AIContentGeneratorPage() {
 
       {/* CTA Section */}
       <section className="text-left">
-        <div className="text-left">
+        <div className="text-left"></div>
           <h2 className="text-left">
             Ready to Scale Your Content Creation?
           </h2>
           <p className="text-left">
             Start generating high-quality, SEO-optimized content that drives traffic and conversions
           </p>
-          <div className="text-left">
+          <div className="text-left"></div>
             <a
-              href="tel:+13024640950"
-              className="text-left"
+              href="tel:+13024640950
+              className="text-left
             >
               Call +1 302 464 0950
             </a>
             <a
-              href="mailto:kleber@ziontechgroup.com?subject=AI Content Generator Inquiry"
-              className="text-left"
+              href="mailto:kleber@ziontechgroup.com?subject=AI Content Generator Inquiry
+              className="text-left
             >
               Get Started Today
             </a>
