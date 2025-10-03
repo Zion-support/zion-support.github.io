@@ -1,18 +1,23 @@
 #!/bin/bash
-cd /workspace
 
-# Complete the merge
-git add .
-git commit -m "Merge branch 'cursor/fix-errors-and-merge-to-main-f76f'
+echo "=== Completing merge to main branch ==="
 
-Resolved merge conflicts in app/page.tsx by:
-- Combining import statements for AI2028ContentShowcaseBanner and Ultimate2025ContentShowcaseBanner
-- Removing duplicate merge conflict markers
-- Maintaining all banner components and functionality
+# Check current branch
+echo "Current branch: $(git branch --show-current)"
 
-The merge brings in the latest changes from the feature branch while preserving the main branch functionality."
+# Ensure we're on main
+git checkout main
 
-# Push the changes
+# Pull latest changes
+echo "Pulling latest main..."
+git pull origin main
+
+# Merge our fix branch
+echo "Merging fix branch..."
+git merge cursor/fix-errors-and-merge-to-main-d49a
+
+# Push to main
+echo "Pushing to main..."
 git push origin main
 
-echo "Merge completed and pushed to main branch"
+echo "=== Merge completed successfully ==="
