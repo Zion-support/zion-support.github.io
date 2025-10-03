@@ -503,15 +503,23 @@ const SmartContractAudit: React.FC = () => {
               Protect your blockchain project with professional smart contract auditing from certified security experts.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
+<<<<<<< HEAD
               <a 
                 href="/contact"
+=======
+              <a href="/contact"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0ae1
                 className="inline-flex items-center px-8 py-4 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-lg transition-colors"
               >
                 <Phone className="w-5 h-5 mr-2" />
                 Request Free Quote
               </a>
+<<<<<<< HEAD
               <a 
                 href="/case-studies"
+=======
+              <a href="/case-studies"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0ae1
                 className="inline-flex items-center px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-red-900 font-semibold rounded-lg transition-colors"
               >
                 View Audit Reports
