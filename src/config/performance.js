@@ -1,34 +1,21 @@
-
-// Advanced Performance Optimizations
-export const advancedPerformanceConfig = {
-  // Service Worker for caching
-  enableServiceWorker: true,
-  
-  // Prefetching strategy
-  prefetchStrategy: {
-    critical: ['/home', '/services', '/about'],
-    optional: ['/blog', '/contact', '/pricing']
+module.exports = {
+  "cacheStrategies": {
+    "staticAssets": "1 year",
+    "apiResponses": "5 minutes",
+    "dynamicContent": "1 hour"
   },
-  
-  // Resource hints
-  resourceHints: {
-    preload: ['/fonts/main.woff2', '/images/hero.webp'],
-    prefetch: ['/api/services', '/api/testimonials'],
-    preconnect: ['https://fonts.googleapis.com', 'https://analytics.google.com']
+  "bundleOptimization": {
+    "codeSplitting": true,
+    "treeShaking": true,
+    "compression": "gzip, brotli",
+    "lazyLoading": true
   },
-  
-  // Bundle splitting
-  bundleSplitting: {
-    vendor: ['react', 'react-dom'],
-    ui: ['@headlessui/react', '@heroicons/react'],
-    utils: ['lodash', 'date-fns'],
-    charts: ['recharts', 'd3']
+  "imageOptimization": {
+    "webp": true,
+    "avif": true,
+    "lazyLoading": true,
+    "responsiveImages": true,
+    "qualityOptimization": 85
   },
-  
-  // Compression
-  compression: {
-    gzip: true,
-    brotli: true,
-    minify: true
-  }
+  "timestamp": "2025-10-03T14:56:25.331Z"
 };

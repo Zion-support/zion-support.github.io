@@ -1,42 +1,53 @@
-// Advanced bundle optimization
+// Bundle optimization utilities
 export const bundleOptimizer = {
   // Code splitting configuration
-  codeSplitting: {
+  getCodeSplittingConfig: () => ({
     chunks: 'all',
     cacheGroups: {
       vendor: {
         test: /[\\/]node_modules[\\/]/,
         name: 'vendors',
-        chunks: 'all'
+        chunks: 'all',
+        priority: 10
       },
       common: {
         name: 'common',
         minChunks: 2,
         chunks: 'all',
-        enforce: true
+        priority: 5
       }
     }
+  }),
+  
+  // Preload critical resources
+  preloadCriticalResources: () => {
+    const criticalResources = [
+      '/fonts/main-font.woff2',
+      '/images/hero-image.webp',
+      '/critical.css'
+    ];
+    
+    criticalResources.forEach(resource => {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.href = resource;
+      link.as = resource.endsWith('.css') ? 'style' : 'image';
+      document.head.appendChild(link);
+    });
   },
   
-  // Tree shaking optimization
-  treeShaking: {
-    usedExports: true,
-    sideEffects: false
-  },
-  
-  // Compression configuration
-  compression: {
-    gzip: true,
-    brotli: true,
-    threshold: 1024
-  },
-  
-  // Lazy loading configuration
-  lazyLoading: {
-    images: true,
-    components: true,
-    routes: true
+  // Resource hints
+  addResourceHints: () => {
+    const hints = [
+      { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
+      { rel: 'preconnect', href: 'https://api.zion.ai' },
+      { rel: 'prefetch', href: '/pages/about' }
+    ];
+    
+    hints.forEach(hint => {
+      const link = document.createElement('link');
+      Object.assign(link, hint);
+      document.head.appendChild(link);
+    });
   }
 };
-
-export default bundleOptimizer;
