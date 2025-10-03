@@ -1,5 +1,4 @@
 
-import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
 
 class PerformanceMonitor {
   private metrics: Map<string, number> = new Map();
