@@ -1,527 +1,416 @@
-#!/usr/bin/env node
-
-/**
- * Comprehensive Improvements Script
- * This script implements various improvements to the codebase including:
- * - Performance optimizations
- * - Security enhancements
- * - SEO improvements
- * - Code quality improvements
- * - Accessibility enhancements
- */
-
-import { execSync } from 'child_process';
+// Comprehensive code improvements and optimizations
 import fs from 'fs';
 import path from 'path';
+import { fileURLToPath } from 'url';
 
-console.log('🚀 Starting comprehensive improvements...');
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-// Performance optimizations
-function optimizePerformance() {
-  console.log('⚡ Implementing performance optimizations...');
-  
-  // Create performance monitoring utilities
-  const performanceUtils = `
-// Performance monitoring utilities
+console.log('🚀 Starting comprehensive code improvements...');
+
+// 1. Performance optimizations
+const performanceOptimizations = {
+  // Add performance monitoring
+  performanceMonitor: `
+// Performance monitoring utility
 export const performanceMonitor = {
-  mark: (name) => performance.mark(name),
-  measure: (name, startMark, endMark) => performance.measure(name, startMark, endMark),
-  getEntries: () => performance.getEntriesByType('measure'),
-  clear: () => performance.clearMarks() && performance.clearMeasures()
-};
-
-// Lazy loading utility
-export const lazyLoad = (importFn) => {
-  return React.lazy(() => importFn());
-};
-
-// Image optimization
-export const optimizeImage = (src, width, height) => {
-  if (src.includes('cloudinary') || src.includes('cdn')) {
-    return src;
+  measureRender: (componentName, renderFn) => {
+    const start = performance.now();
+    const result = renderFn();
+    const end = performance.now();
+    console.log(\`\${componentName} render time: \${end - start}ms\`);
+    return result;
+  },
+  
+  measureAsync: async (name, asyncFn) => {
+    const start = performance.now();
+    const result = await asyncFn();
+    const end = performance.now();
+    console.log(\`\${name} execution time: \${end - start}ms\`);
+    return result;
   }
-  return src;
+};
+`,
+  
+  // Lazy loading helper
+  lazyLoading: `
+// Lazy loading utility
+export const lazyLoadComponent = (importFn, fallback = null) => {
+  return React.lazy(() => importFn().catch(() => ({ 
+    default: () => fallback || <div>Loading...</div> 
+  })));
 };
 
-// Bundle optimization
-export const preloadCriticalResources = () => {
-  const criticalResources = [
-    '/src/styles/globals.css',
-    '/public/performance-monitor.js'
-  ];
+// Intersection observer for lazy loading
+export const useIntersectionObserver = (ref, options = {}) => {
+  const [isIntersecting, setIsIntersecting] = React.useState(false);
   
-  criticalResources.forEach(resource => {
-    const link = document.createElement('link');
-    link.rel = 'preload';
-    link.href = resource;
-    link.as = resource.endsWith('.css') ? 'style' : 'script';
-    document.head.appendChild(link);
-  });
-};
-`;
-
-  fs.writeFileSync('/workspace/src/utils/performanceOptimizations.js', performanceUtils);
-  console.log('   ✅ Performance utilities created');
-}
-
-// Security enhancements
-function enhanceSecurity() {
-  console.log('🔒 Implementing security enhancements...');
-  
-  const securityUtils = `
-// Security utilities
-export const securityEnhancer = {
-  // Content Security Policy
-  getCSP: () => ({
-    'default-src': ["'self'"],
-    'script-src': ["'self'", "'unsafe-inline'", "https://cdn.jsdelivr.net"],
-    'style-src': ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com"],
-    'font-src': ["'self'", "https://fonts.gstatic.com"],
-    'img-src': ["'self'", "data:", "https:"],
-    'connect-src': ["'self'", "https://api.github.com"]
-  }),
-  
-  // Sanitize user input
-  sanitizeInput: (input) => {
-    if (typeof input !== 'string') return input;
-    return input
-      .replace(/[<>]/g, '')
-      .replace(/javascript:/gi, '')
-      .replace(/on\w+=/gi, '');
-  },
-  
-  // Validate URLs
-  isValidUrl: (url) => {
-    try {
-      new URL(url);
-      return true;
-    } catch {
-      return false;
-    }
-  },
-  
-  // Rate limiting helper
-  rateLimit: (() => {
-    const requests = new Map();
-    return (key, limit = 100, windowMs = 60000) => {
-      const now = Date.now();
-      const windowStart = now - windowMs;
-      
-      if (!requests.has(key)) {
-        requests.set(key, []);
-      }
-      
-      const userRequests = requests.get(key);
-      const validRequests = userRequests.filter(time => time > windowStart);
-      
-      if (validRequests.length >= limit) {
-        return false;
-      }
-      
-      validRequests.push(now);
-      requests.set(key, validRequests);
-      return true;
-    };
-  })()
-};
-`;
-
-  fs.writeFileSync('/workspace/src/utils/security.js', securityUtils);
-  console.log('   ✅ Security utilities created');
-}
-
-// SEO improvements
-function improveSEO() {
-  console.log('🔍 Implementing SEO improvements...');
-  
-  const seoUtils = `
-// SEO utilities
-export const seoOptimizer = {
-  // Generate meta tags
-  generateMetaTags: (data) => {
-    const {
-      title = 'Zion AI - Advanced AI Solutions',
-      description = 'Leading provider of AI solutions, automation, and digital transformation services.',
-      keywords = 'AI, artificial intelligence, automation, digital transformation',
-      image = '/images/og-image.jpg',
-      url = typeof window !== 'undefined' ? window.location.href : ''
-    } = data;
+  React.useEffect(() => {
+    const observer = new IntersectionObserver(([entry]) => {
+      setIsIntersecting(entry.isIntersecting);
+    }, options);
     
-    return {
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+    
+    return () => observer.disconnect();
+  }, [ref, options]);
+  
+  return isIntersecting;
+};
+`
+};
+
+// 2. Security enhancements
+const securityEnhancements = {
+  // Content Security Policy
+  csp: `
+// Content Security Policy configuration
+export const cspConfig = {
+  'default-src': ["'self'"],
+  'script-src': ["'self'", "'unsafe-inline'", "https://www.googletagmanager.com"],
+  'style-src': ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com"],
+  'font-src': ["'self'", "https://fonts.gstatic.com"],
+  'img-src': ["'self'", "data:", "https:"],
+  'connect-src': ["'self'", "https://api.zion.ai"]
+};
+`,
+  
+  // Input sanitization
+  inputSanitization: `
+// Input sanitization utilities
+export const sanitizeInput = (input) => {
+  if (typeof input !== 'string') return input;
+  
+  return input
+    .replace(/[<>\"']/g, '') // Remove HTML characters
+    .replace(/javascript:/gi, '') // Remove javascript: protocol
+    .trim();
+};
+
+export const validateEmail = (email) => {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+};
+
+export const validateUrl = (url) => {
+  try {
+    new URL(url);
+    return true;
+  } catch {
+    return false;
+  }
+};
+`
+};
+
+// 3. SEO improvements
+const seoImprovements = {
+  // Meta tags generator
+  metaTags: `
+// SEO meta tags generator
+export const generateMetaTags = (pageData) => {
+  const {
+    title = 'Zion AI - Advanced AI Solutions',
+    description = 'Leading provider of AI-powered solutions for enterprises',
+    keywords = 'AI, artificial intelligence, machine learning, enterprise solutions',
+    image = '/images/og-default.jpg',
+    url = window.location.href
+  } = pageData;
+  
+  return {
+    title: \`\${title} | Zion AI\`,
+    description,
+    keywords,
+    openGraph: {
       title,
       description,
-      keywords,
-      'og:title': title,
-      'og:description': description,
-      'og:image': image,
-      'og:url': url,
-      'og:type': 'website',
-      'twitter:card': 'summary_large_image',
-      'twitter:title': title,
-      'twitter:description': description,
-      'twitter:image': image
-    };
-  },
-  
-  // Generate structured data
-  generateStructuredData: () => ({
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: 'Zion AI',
-    url: 'https://zion.app',
-    logo: 'https://zion.app/images/logo.png',
-    description: 'Leading provider of AI solutions and digital transformation services',
-    address: {
-      '@type': 'PostalAddress',
-      addressCountry: 'US'
+      image,
+      url,
+      type: 'website'
     },
-    contactPoint: {
-      '@type': 'ContactPoint',
-      contactType: 'customer service',
-      email: 'contact@zion.app'
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      image
     }
-  }),
-  
-  // Optimize images for SEO
-  optimizeImageSEO: (src, alt) => ({
-    src,
-    alt: alt || 'Zion AI',
-    loading: 'lazy',
-    decoding: 'async'
-  }),
-  
-  // Generate sitemap entry
-  generateSitemapEntry: (url, priority = 0.8, changefreq = 'weekly') => ({
-    url,
-    lastmod: new Date().toISOString(),
-    priority,
-    changefreq
-  })
+  };
 };
-`;
-
-  fs.writeFileSync('/workspace/src/utils/seo.js', seoUtils);
-  console.log('   ✅ SEO utilities created');
-}
-
-// Accessibility enhancements
-function enhanceAccessibility() {
-  console.log('♿ Implementing accessibility enhancements...');
+`,
   
-  const accessibilityUtils = `
+  // Structured data
+  structuredData: `
+// Structured data for SEO
+export const generateStructuredData = (type, data) => {
+  const baseSchema = {
+    '@context': 'https://schema.org',
+    '@type': type,
+    ...data
+  };
+  
+  return JSON.stringify(baseSchema);
+};
+
+export const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Zion AI',
+  url: 'https://zion.ai',
+  logo: 'https://zion.ai/images/logo.png',
+  description: 'Leading provider of AI-powered solutions',
+  sameAs: [
+    'https://twitter.com/zionai',
+    'https://linkedin.com/company/zionai'
+  ]
+};
+`
+};
+
+// 4. Accessibility improvements
+const accessibilityImprovements = {
+  // ARIA utilities
+  ariaUtils: `
 // Accessibility utilities
-export const accessibilityEnhancer = {
-  // ARIA labels
-  generateAriaLabel: (element, context) => {
-    const labels = {
-      button: (text) => \`\${text} button\`,
-      link: (text) => \`Link to \${text}\`,
-      heading: (level, text) => \`Heading level \${level}: \${text}\`,
-      image: (alt) => alt || 'Decorative image'
-    };
-    
-    return labels[element] ? labels[element](context) : context;
+export const accessibilityUtils = {
+  // Generate unique IDs for ARIA relationships
+  generateId: (prefix = 'element') => {
+    return \`\${prefix}-\${Math.random().toString(36).substr(2, 9)}\`;
   },
   
-  // Focus management
-  manageFocus: {
-    trap: (container) => {
-      const focusableElements = container.querySelectorAll(
-        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-      );
-      
-      const firstElement = focusableElements[0];
-      const lastElement = focusableElements[focusableElements.length - 1];
-      
-      const handleTabKey = (e) => {
-        if (e.key === 'Tab') {
-          if (e.shiftKey) {
-            if (document.activeElement === firstElement) {
-              lastElement.focus();
-              e.preventDefault();
-            }
-          } else {
-            if (document.activeElement === lastElement) {
-              firstElement.focus();
-              e.preventDefault();
-            }
-          }
-        }
-      };
-      
-      container.addEventListener('keydown', handleTabKey);
-      
-      return () => {
-        container.removeEventListener('keydown', handleTabKey);
-      };
-    },
-    
-    restore: (previousElement) => {
-      if (previousElement && typeof previousElement.focus === 'function') {
-        previousElement.focus();
-      }
-    }
-  },
-  
-  // Color contrast checker
-  checkContrast: (foreground, background) => {
-    // Simplified contrast ratio calculation
-    const getLuminance = (color) => {
-      const rgb = color.match(/\\d+/g).map(Number);
-      const [r, g, b] = rgb.map(c => {
-        c = c / 255;
-        return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);
-      });
-      return 0.2126 * r + 0.7152 * g + 0.0722 * b;
-    };
-    
-    const l1 = getLuminance(foreground);
-    const l2 = getLuminance(background);
-    const ratio = (Math.max(l1, l2) + 0.05) / (Math.min(l1, l2) + 0.05);
-    
-    return {
-      ratio,
-      level: ratio >= 7 ? 'AAA' : ratio >= 4.5 ? 'AA' : 'Fail'
-    };
-  },
-  
-  // Screen reader announcements
-  announce: (message) => {
+  // Announce changes to screen readers
+  announce: (message, priority = 'polite') => {
     const announcement = document.createElement('div');
-    announcement.setAttribute('aria-live', 'polite');
+    announcement.setAttribute('aria-live', priority);
     announcement.setAttribute('aria-atomic', 'true');
     announcement.className = 'sr-only';
     announcement.textContent = message;
     
     document.body.appendChild(announcement);
-    
-    setTimeout(() => {
-      document.body.removeChild(announcement);
-    }, 1000);
+    setTimeout(() => document.body.removeChild(announcement), 1000);
+  },
+  
+  // Keyboard navigation helpers
+  handleKeyboardNavigation: (event, elements, currentIndex, onSelect) => {
+    switch (event.key) {
+      case 'ArrowDown':
+        event.preventDefault();
+        const nextIndex = (currentIndex + 1) % elements.length;
+        onSelect(nextIndex);
+        break;
+      case 'ArrowUp':
+        event.preventDefault();
+        const prevIndex = currentIndex === 0 ? elements.length - 1 : currentIndex - 1;
+        onSelect(prevIndex);
+        break;
+      case 'Enter':
+      case ' ':
+        event.preventDefault();
+        onSelect(currentIndex);
+        break;
+    }
   }
 };
-`;
-
-  fs.writeFileSync('/workspace/src/utils/accessibility.js', accessibilityUtils);
-  console.log('   ✅ Accessibility utilities created');
-}
-
-// Code quality improvements
-function improveCodeQuality() {
-  console.log('📝 Implementing code quality improvements...');
+`,
   
-  // Create TypeScript types
-  const types = `
-// TypeScript type definitions
-export interface PerformanceMetrics {
-  loadTime: number;
-  firstContentfulPaint: number;
-  largestContentfulPaint: number;
-  cumulativeLayoutShift: number;
-}
-
-export interface SEOData {
-  title: string;
-  description: string;
-  keywords: string;
-  image?: string;
-  url?: string;
-}
-
-export interface SecurityConfig {
-  csp: Record<string, string[]>;
-  rateLimit: {
-    limit: number;
-    windowMs: number;
-  };
-}
-
-export interface AccessibilityConfig {
-  ariaLabels: boolean;
-  focusManagement: boolean;
-  colorContrast: boolean;
-}
-
-export interface AppConfig {
-  performance: PerformanceMetrics;
-  seo: SEOData;
-  security: SecurityConfig;
-  accessibility: AccessibilityConfig;
-}
-`;
-
-  fs.writeFileSync('/workspace/src/types/index.ts', types);
-  console.log('   ✅ TypeScript types created');
+  // Focus management
+  focusManagement: `
+// Focus management utilities
+export const focusManagement = {
+  // Trap focus within an element
+  trapFocus: (element) => {
+    const focusableElements = element.querySelectorAll(
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    );
+    
+    const firstElement = focusableElements[0];
+    const lastElement = focusableElements[focusableElements.length - 1];
+    
+    const handleTabKey = (e) => {
+      if (e.key === 'Tab') {
+        if (e.shiftKey) {
+          if (document.activeElement === firstElement) {
+            lastElement.focus();
+            e.preventDefault();
+          }
+        } else {
+          if (document.activeElement === lastElement) {
+            firstElement.focus();
+            e.preventDefault();
+          }
+        }
+      }
+    };
+    
+    element.addEventListener('keydown', handleTabKey);
+    firstElement?.focus();
+    
+    return () => element.removeEventListener('keydown', handleTabKey);
+  },
   
-  // Create error boundary
-  const errorBoundary = `
-import React, { Component, ErrorInfo, ReactNode } from 'react';
+  // Restore focus to previous element
+  restoreFocus: (previousElement) => {
+    if (previousElement && typeof previousElement.focus === 'function') {
+      previousElement.focus();
+    }
+  }
+};
+`
+};
 
-interface Props {
-  children: ReactNode;
-  fallback?: ReactNode;
-}
-
-interface State {
-  hasError: boolean;
-  error?: Error;
-}
-
-export class ErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
+// 5. Error handling improvements
+const errorHandling = {
+  // Error boundary component
+  errorBoundary: `
+// Enhanced error boundary
+export class EnhancedErrorBoundary extends React.Component {
+  constructor(props) {
     super(props);
-    this.state = { hasError: false };
+    this.state = { hasError: false, error: null, errorInfo: null };
   }
-
-  static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
   }
-
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+  
+  componentDidCatch(error, errorInfo) {
+    this.setState({
+      error,
+      errorInfo
+    });
+    
+    // Log error to monitoring service
     console.error('Error caught by boundary:', error, errorInfo);
     
-    // Log to external service if available
-    if (typeof window !== 'undefined' && window.gtag) {
+    // Send to error tracking service
+    if (window.gtag) {
       window.gtag('event', 'exception', {
-        description: error.message,
+        description: error.toString(),
         fatal: false
       });
     }
   }
-
+  
   render() {
     if (this.state.hasError) {
-      return this.props.fallback || (
+      return (
         <div className="error-boundary">
-          <h2>Something went wrong</h2>
-          <p>We're sorry, but something unexpected happened.</p>
+          <h2>Something went wrong.</h2>
+          <details style={{ whiteSpace: 'pre-wrap' }}>
+            {this.state.error && this.state.error.toString()}
+            <br />
+            {this.state.errorInfo.componentStack}
+          </details>
           <button onClick={() => window.location.reload()}>
             Reload Page
           </button>
         </div>
       );
     }
-
+    
     return this.props.children;
   }
 }
-`;
-
-  fs.writeFileSync('/workspace/src/components/ErrorBoundary.tsx', errorBoundary);
-  console.log('   ✅ Error boundary created');
-}
-
-// Create configuration files
-function createConfigFiles() {
-  console.log('⚙️ Creating configuration files...');
+`,
   
-  // Performance config
-  const performanceConfig = `
-export const performanceConfig = {
-  monitoring: {
-    enabled: true,
-    sampleRate: 0.1
-  },
-  optimization: {
-    lazyLoading: true,
-    imageOptimization: true,
-    bundleSplitting: true
-  },
-  metrics: {
-    targetLoadTime: 2000,
-    targetFCP: 1500,
-    targetLCP: 2500,
-    targetCLS: 0.1
-  }
+  // Async error handling
+  asyncErrorHandling: `
+// Async error handling utilities
+export const asyncErrorHandler = (asyncFn) => {
+  return async (...args) => {
+    try {
+      return await asyncFn(...args);
+    } catch (error) {
+      console.error('Async operation failed:', error);
+      
+      // Log to error tracking service
+      if (window.gtag) {
+        window.gtag('event', 'exception', {
+          description: error.toString(),
+          fatal: false
+        });
+      }
+      
+      throw error;
+    }
+  };
 };
-`;
 
-  fs.writeFileSync('/workspace/src/config/performance.js', performanceConfig);
-  
-  // SEO config
-  const seoConfig = `
-export const seoConfig = {
-  defaultTitle: 'Zion AI - Advanced AI Solutions',
-  defaultDescription: 'Leading provider of AI solutions, automation, and digital transformation services.',
-  defaultKeywords: 'AI, artificial intelligence, automation, digital transformation',
-  openGraph: {
-    type: 'website',
-    siteName: 'Zion AI'
-  },
-  twitter: {
-    card: 'summary_large_image',
-    site: '@ZionAI'
-  }
-};
-`;
-
-  fs.writeFileSync('/workspace/src/config/seo.js', seoConfig);
-  
-  // Security config
-  const securityConfig = `
-export const securityConfig = {
-  csp: {
-    'default-src': ["'self'"],
-    'script-src': ["'self'", "'unsafe-inline'"],
-    'style-src': ["'self'", "'unsafe-inline'"],
-    'img-src': ["'self'", "data:", "https:"]
-  },
-  rateLimit: {
-    limit: 100,
-    windowMs: 60000
-  }
-};
-`;
-
-  fs.writeFileSync('/workspace/src/config/security.js', securityConfig);
-  
-  console.log('   ✅ Configuration files created');
-}
-
-// Main execution
-async function runImprovements() {
-  try {
-    optimizePerformance();
-    enhanceSecurity();
-    improveSEO();
-    enhanceAccessibility();
-    improveCodeQuality();
-    createConfigFiles();
+export const withErrorHandling = (Component) => {
+  return (props) => {
+    const [error, setError] = React.useState(null);
     
-    console.log('✅ All improvements completed successfully!');
-    
-    // Generate improvement report
-    const report = {
-      timestamp: new Date().toISOString(),
-      improvements: [
-        'Performance optimizations',
-        'Security enhancements',
-        'SEO improvements',
-        'Accessibility enhancements',
-        'Code quality improvements',
-        'Configuration files'
-      ],
-      filesCreated: [
-        'src/utils/performanceOptimizations.js',
-        'src/utils/security.js',
-        'src/utils/seo.js',
-        'src/utils/accessibility.js',
-        'src/types/index.ts',
-        'src/components/ErrorBoundary.tsx',
-        'src/config/performance.js',
-        'src/config/seo.js',
-        'src/config/security.js'
-      ]
+    const handleError = (error) => {
+      setError(error);
+      console.error('Component error:', error);
     };
     
-    fs.writeFileSync('/workspace/improvements-report.json', JSON.stringify(report, null, 2));
-    console.log('📄 Improvement report saved to improvements-report.json');
+    if (error) {
+      return (
+        <div className="error-state">
+          <p>Something went wrong: {error.message}</p>
+          <button onClick={() => setError(null)}>Try Again</button>
+        </div>
+      );
+    }
     
-  } catch (error) {
-    console.error('❌ Error during improvements:', error);
-    process.exit(1);
-  }
-}
+    return <Component {...props} onError={handleError} />;
+  };
+};
+`
+};
 
-// Run the improvements
-runImprovements();
+// Write improvements to files
+const improvements = {
+  ...performanceOptimizations,
+  ...securityEnhancements,
+  ...seoImprovements,
+  ...accessibilityImprovements,
+  ...errorHandling
+};
+
+// Create directories if they don't exist
+const utilsDir = path.join(__dirname, '..', 'src', 'utils');
+const componentsDir = path.join(__dirname, '..', 'src', 'components');
+
+[utilsDir, componentsDir].forEach(dir => {
+  if (!fs.existsSync(dir)) {
+    fs.mkdirSync(dir, { recursive: true });
+  }
+});
+
+// Write utility files
+Object.entries(improvements).forEach(([name, content]) => {
+  const fileName = `${name}.ts`;
+  const filePath = path.join(utilsDir, fileName);
+  
+  try {
+    fs.writeFileSync(filePath, content.trim());
+    console.log(`✅ Created ${fileName}`);
+  } catch (error) {
+    console.error(`❌ Failed to create ${fileName}:`, error.message);
+  }
+});
+
+// Create improvement report
+const improvementReport = {
+  timestamp: new Date().toISOString(),
+  improvements: Object.keys(improvements),
+  summary: {
+    performance: Object.keys(performanceOptimizations).length,
+    security: Object.keys(securityEnhancements).length,
+    seo: Object.keys(seoImprovements).length,
+    accessibility: Object.keys(accessibilityImprovements).length,
+    errorHandling: Object.keys(errorHandling).length
+  }
+};
+
+fs.writeFileSync(
+  path.join(__dirname, '..', 'improvements-report.json'),
+  JSON.stringify(improvementReport, null, 2)
+);
+
+console.log('🎉 Comprehensive improvements completed!');
+console.log('📊 Summary:', improvementReport.summary);
+console.log('📝 Report saved to improvements-report.json');
