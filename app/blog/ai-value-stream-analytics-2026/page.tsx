@@ -17,16 +17,16 @@ export const metadata = {
 
 export default function Page() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
-      <div className="max-w-3xl mx-auto px-4 py-12">
-        <div className="mb-8 text-sm text-blue-700">September 30, 2025 • 9 min read</div>
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">AI Value Stream Analytics 2026</h1>
-        <p className="text-xl text-gray-700 mb-8">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">"
+      <div className="max-w-3xl mx-auto px-4 py-12">"
+        <div className="mb-8 text-sm text-blue-700">September 30, 2025 • 9 min read</div>"
+        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">AI Value Stream Analytics 2026</h1>"
+        <p className="text-xl text-gray-700 mb-8">"
           Connect the dots from tokens and dollars to user outcomes. Instrument your AI stack to track reliability,
           latency, cost, and quality—and tie those to business value per scenario.
         </p>
 
-        <div className="prose prose-lg max-w-none">
+        <div className="prose prose-lg max-w-none">"
           <h2>Metrics That Matter</h2>
           <ul>
             <li>Cost per successful task and cost per customer session</li>
@@ -49,14 +49,14 @@ export default function Page() {
           </ol>
         </div>
 
-        <div className="mt-10 p-6 bg-white rounded-xl border border-gray-200">
-          <h3 className="text-xl font-semibold mb-2">Next up</h3>
-          <ul className="list-disc pl-6 text-blue-700">
+        <div className="mt-10 p-6 bg-white rounded-xl border border-gray-200">"
+          <h3 className="text-xl font-semibold mb-2">Next up</h3>"
+          <ul className="list-disc pl-6 text-blue-700">"
             <li>
-              <Link href="/content-hub">Explore the Content Hub</Link>
+              <Link href="/content-hub">Explore the Content Hub</Link>"
             </li>
             <li>
-              <Link href="/blog/ai-roadmaps-2026">AI Roadmaps 2026</Link>
+              <Link href="/blog/ai-roadmaps-2026">AI Roadmaps 2026</Link>"
             </li>
           </ul>
         </div>

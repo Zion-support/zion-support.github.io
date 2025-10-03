@@ -9,21 +9,21 @@ export const metadata = {
 
 export default function Page() {
   return (
-    <main className="min-h-screen bg-white">
-      <section className="py-16 bg-gradient-to-r from-emerald-600/10 to-teal-600/10 border-b border-gray-200">
-        <div className="max-w-4xl mx-auto px-6">
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-900">
-            Edge Inference Warm Pools 2026: <span className="text-emerald-700">Sub‑100ms Global with Predictable Cost</span>
+    <main className="min-h-screen bg-white">"
+      <section className="py-16 bg-gradient-to-r from-emerald-600/10 to-teal-600/10 border-b border-gray-200">"
+        <div className="max-w-4xl mx-auto px-6">"
+          <h1 className="text-3xl md:text-4xl font-bold text-gray-900">"
+            Edge Inference Warm Pools 2026: <span className="text-emerald-700">Sub‑100ms Global with Predictable Cost</span>"
           </h1>
-          <p className="text-gray-600 mt-4">
+          <p className="text-gray-600 mt-4">"
             Use <strong>warm model pools</strong>, <strong>intent prefetching</strong>, and <strong>tiered caches</strong> to hit latency targets without runaway spend.
           </p>
-          <div className="mt-6 text-sm text-gray-500">6 min read • Edge Computing • Published Sep 30, 2025</div>
+          <div className="mt-6 text-sm text-gray-500">6 min read • Edge Computing • Published Sep 30, 2025</div>"
         </div>
       </section>
 
-      <section className="py-12">
-        <div className="max-w-4xl mx-auto px-6 prose prose-lg">
+      <section className="py-12">"
+        <div className="max-w-4xl mx-auto px-6 prose prose-lg">"
           <h2>Key Components</h2>
           <ol>
             <li>Regional warm pools sized via traffic forecasts</li>
@@ -39,10 +39,10 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="py-12 bg-gray-50 border-t border-gray-200">
-        <div className="max-w-4xl mx-auto px-6 flex items-center justify-between">
-          <Link href="/blog" className="text-emerald-700 font-semibold hover:text-emerald-800">← Back to Blog</Link>
-          <Link href="/blog/agent-release-guardrails-2026" className="text-teal-700 font-semibold hover:text-teal-800">Next: Agent Release Guardrails →</Link>
+      <section className="py-12 bg-gray-50 border-t border-gray-200">"
+        <div className="max-w-4xl mx-auto px-6 flex items-center justify-between">"
+          <Link href="/blog" className="text-emerald-700 font-semibold hover:text-emerald-800">← Back to Blog</Link>"
+          <Link href="/blog/agent-release-guardrails-2026" className="text-teal-700 font-semibold hover:text-teal-800">Next: Agent Release Guardrails →</Link>"
         </div>
       </section>
     </main>

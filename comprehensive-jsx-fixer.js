@@ -2,6 +2,7 @@
 
 import fs from 'fs';
 import path from 'path';
+import { glob } from 'glob';
 
 // Function to fix common JSX syntax errors
 function fixJsxErrors(content) {
@@ -30,6 +31,12 @@ function fixJsxErrors(content) {
     }
     return match;
   });
+  
+  // Fix property access syntax errors
+  fixed = fixed.replace(/\.(\w+)\[(\w+)\]/g, '.$1.$2');
+  
+  // Fix unterminated string literals
+  fixed = fixed.replace(/"([^"]*?)\n/g, '"$1"\n');
   
   // Remove duplicate imports
   const lines = fixed.split('\n');
@@ -60,13 +67,32 @@ function fixFile(filePath) {
   }
 }
 
-// List of critical files to fix
-const criticalFiles = [
-  '/workspace/src/pages/case-studies/healthcare-ai-transformation-2025.tsx',
-  '/workspace/src/pages/services/AutonomousDevOpsService.tsx'
-];
+// Find all TypeScript/TSX files with errors
+async function findAndFixFiles() {
+  try {
+    const patterns = [
+      '/workspace/src/**/*.tsx',
+      '/workspace/src/**/*.ts',
+      '/workspace/app/**/*.tsx',
+      '/workspace/app/**/*.ts'
+    ];
+    
+    let allFiles = [];
+    for (const pattern of patterns) {
+      const files = await glob(pattern);
+      allFiles = allFiles.concat(files);
+    }
+    
+    console.log(`Found ${allFiles.length} TypeScript/TSX files`);
+    
+    // Fix each file
+    allFiles.forEach(fixFile);
+    
+    console.log('🎉 Comprehensive JSX error fixing completed!');
+  } catch (error) {
+    console.error('Error finding files:', error);
+  }
+}
 
-// Fix each file
-criticalFiles.forEach(fixFile);
-
-console.log('🎉 JSX error fixing completed!');
+// Run the fix
+findAndFixFiles();

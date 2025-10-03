@@ -7,7 +7,7 @@ export const metadata = {
 
 export default function Page() {
 	return (
-		<main className="max-w-3xl mx-auto px-4 py-12 prose prose-invert">
+		<main className="max-w-3xl mx-auto px-4 py-12 prose prose-invert">"
 			<h1>AI 2026: Runtime Rollback Blueprint</h1>
 			<p>
 				Ship faster with safety budgets and deterministic rollback triggers wired to live KPIs. This
@@ -20,11 +20,11 @@ export default function Page() {
 				<li>Tooling: traces, approvals, and attestations for confident automation</li>
 			</ul>
 			<p>
-				Related reads: <Link href="/blog/ai-2026-live-guardrails-blueprint">Live Guardrails 2026</Link>{' '}
-				and <Link href="/blog/agent-release-runbooks-2026">Agent Release Runbooks 2026</Link>.
+				Related reads: <Link href="/blog/ai-2026-live-guardrails-blueprint">Live Guardrails 2026</Link>{' '}"
+				and <Link href="/blog/agent-release-runbooks-2026">Agent Release Runbooks 2026</Link>."
 			</p>
 			<p>
-				Continue exploring in our <Link href="/blog">Blog</Link>.
+				Continue exploring in our <Link href="/blog">Blog</Link>."
 			</p>
 		</main>
 	);

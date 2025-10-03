@@ -7,7 +7,7 @@ export const metadata = {
 
 export default function Page() {
 	return (
-		<main className="max-w-3xl mx-auto px-4 py-12 prose prose-invert">
+		<main className="max-w-3xl mx-auto px-4 py-12 prose prose-invert">"
 			<h1>Edge 2026: Attested Analytics</h1>
 			<p>
 				Deliver decision‑grade analytics without PII. Use scoped identifiers, device‑side aggregation,
@@ -19,11 +19,11 @@ export default function Page() {
 				<li>Latency: sub‑100ms collection and evaluation at the edge</li>
 			</ul>
 			<p>
-				Related reads: <Link href="/blog/edge-private-analytics-2027">Edge Private Analytics 2027</Link>{' '}
-				and <Link href="/blog/verifiable-edge-analytics-2026">Verifiable Edge Analytics 2026</Link>.
+				Related reads: <Link href="/blog/edge-private-analytics-2027">Edge Private Analytics 2027</Link>{' '}"
+				and <Link href="/blog/verifiable-edge-analytics-2026">Verifiable Edge Analytics 2026</Link>."
 			</p>
 			<p>
-				Continue exploring in our <Link href="/blog">Blog</Link>.
+				Continue exploring in our <Link href="/blog">Blog</Link>."
 			</p>
 		</main>
 	);
