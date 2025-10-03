@@ -66,9 +66,12 @@ export const seoUtils = {
     },
     "image": {
       "url": article.image || "https://zion.app/logo.png"
-    }
-  }
-});
+    },
+    "datePublished": article.datePublished,
+    "dateModified": article.dateModified,
+    "url": article.url
+  })
+};
 
 // Sitemap generation utilities
 export const sitemapUtils = {
@@ -82,208 +85,119 @@ export const sitemapUtils = {
     };
   },
 
-  // Generate robots.txt content
-  generateRobotsTxt: (sitemapUrl: string = 'https://zion.app/sitemap.xml') => {
-    return `User-agent: *
-Allow: /
-
-Sitemap: ${sitemapUrl}`;
+  // Generate full sitemap
+  generateSitemap: (entries: Array<{url: string, lastmod?: string, changefreq?: string, priority?: string}>) => {
+    return `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${entries.map(entry => `  <url>
+    <loc>${entry.url}</loc>
+    <lastmod>${entry.lastmod || new Date().toISOString().split('T')[0]}</lastmod>
+    <changefreq>${entry.changefreq || 'weekly'}</changefreq>
+    <priority>${entry.priority || '0.8'}</priority>
+  </url>`).join('\n')}
+</urlset>`;
   }
 };
 
-// URL optimization utilities
-export const urlUtils = {
-  // Generate canonical URL
-  generateCanonicalUrl: (path: string, baseUrl: string = 'https://zion.app') => {
-    return `${baseUrl}${path}`;
-  },
+// Meta tags generation utilities
+export const metaUtils = {
+  // Generate basic meta tags
+  generateBasicMeta: (title: string, description: string, url: string) => ({
+    title,
+    description,
+    url,
+    ogTitle: title,
+    ogDescription: description,
+    ogUrl: url,
+    ogType: 'website',
+    twitterCard: 'summary_large_image',
+    twitterTitle: title,
+    twitterDescription: description
+  }),
 
-  // Generate Open Graph URL
-  generateOGUrl: (path: string, baseUrl: string = 'https://zion.app') => {
-    return `${baseUrl}${path}`;
-  },
-
-  // Generate Twitter Card URL
-  generateTwitterUrl: (path: string, baseUrl: string = 'https://zion.app') => {
-    return `${baseUrl}${path}`;
-  }
-};
-
-// Content optimization utilities
-export const contentOptimization = {
-  // Extract keywords from content
-  extractKeywords: (content: string, minLength: number = 3): string[] => {
-    const words = content.toLowerCase()
-      .replace(/[^\w\s]/g, '')
-      .split(/\s+/)
-      .filter(word => word.length >= minLength);
-    
-    const wordCount = words.reduce((acc, word) => {
-      acc[word] = (acc[word] || 0) + 1;
-      return acc;
-    }, {} as Record<string, number>);
-    
-    return Object.entries(wordCount)
-      .sort(([,a], [,b]) => b - a)
-      .slice(0, 10)
-      .map(([word]) => word);
-  },
-
-  // Generate meta description
-  generateMetaDescription: (content: string, maxLength: number = 160): string => {
-    const cleanContent = content.replace(/<[^>]*>/g, '').trim();
-    if (cleanContent.length <= maxLength) return cleanContent;
-    
-    return cleanContent.substring(0, maxLength - 3) + '...';
-  },
-
-  // Generate title tag
-  generateTitle: (pageTitle: string, siteName: string = 'Zion Tech Group', separator: string = ' | '): string => {
-    return pageTitle ? `${pageTitle}${separator}${siteName}` : siteName;
-  }
-};
-
-// Performance SEO utilities
-export const performanceSEO = {
-  // Preload critical resources
-  preloadCriticalResources: () => {
-    const criticalResources = [
-      { href: '/fonts/inter.woff2', as: 'font', type: 'font/woff2' },
-      { href: '/css/critical.css', as: 'style' },
-      { href: '/images/logo.svg', as: 'image' }
-    ];
-
-    criticalResources.forEach(resource => {
-      const link = document.createElement('link');
-      link.rel = 'preload';
-      link.href = resource.href;
-      link.as = resource.as;
-      if (resource.type) link.type = resource.type;
-      document.head.appendChild(link);
-    });
-  },
-
-  // Optimize images for SEO
-  optimizeImageSEO: (src: string, alt: string, width?: number, height?: number): {
-    src: string;
-    alt: string;
-    width?: number;
-    height?: number;
-    loading: 'lazy';
-  } => {
-    return {
-      src: src.includes('?') ? src : `${src}?w=${width || 800}&h=${height || 600}&f=webp&q=85`,
-      alt,
-      width,
-      height,
-      loading: 'lazy' as const
-    };
-  }
-};
-
-// Analytics and tracking utilities
-export const analyticsUtils = {
-  // Track page views
-  trackPageView: (url: string, title: string) => {
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('config', 'GA_MEASUREMENT_ID', {
-        page_title: title,
-        page_location: url
-      });
-    }
-  },
-
-  // Track custom events
-  trackEvent: (eventName: string, parameters?: Record<string, unknown>) => {
-    if (typeof window !== 'undefined' && (window as Window & { gtag?: Function }).gtag) {
-      (window as Window & { gtag: Function }).gtag('event', eventName, parameters);
-    }
-  },
-
-  // Track conversion events
-  trackConversion: (conversionId: string, value?: number) => {
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'conversion', {
-        send_to: conversionId,
-        value=value
-      });
-    }
-  }
-};
-
-// Core Web Vitals tracking
-export const coreWebVitals = {
-  // Track Core Web Vitals
-  trackCoreWebVitals: () => {
-    if (typeof window === 'undefined') return;
-
-    const trackMetric = (metric: any) => {
-      analyticsUtils.trackEvent('core_web_vitals', {
-        metric_name: metric.name,
-        metric_value=Math.round(metric.value),
-        metric_id: metric.id,
-        metric_delta: metric.delta
-      });
-    };
-
-    // Import and track web vitals
-    import('web-vitals').then(({ onCLS, onFCP, onLCP, onTTFB }) => {
-      onCLS(trackMetric);
-      // onFID(trackMetric); // onFID is deprecated in newer web-vitals versions
-      onFCP(trackMetric);
-      onLCP(trackMetric);
-      onTTFB(trackMetric);
-    });
-  }
+  // Generate article meta tags
+  generateArticleMeta: (article: {
+    title: string;
+    description: string;
+    author: string;
+    datePublished: string;
+    dateModified: string;
+    image?: string;
+    url: string;
+  }) => ({
+    title: article.title,
+    description: article.description,
+    url: article.url,
+    ogTitle: article.title,
+    ogDescription: article.description,
+    ogUrl: article.url,
+    ogType: 'article',
+    ogImage: article.image || 'https://zion.app/logo.png',
+    articleAuthor: article.author,
+    articlePublishedTime: article.datePublished,
+    articleModifiedTime: article.dateModified,
+    twitterCard: 'summary_large_image',
+    twitterTitle: article.title,
+    twitterDescription: article.description,
+    twitterImage: article.image || 'https://zion.app/logo.png'
+  })
 };
 
 // SEO component for React
-export const SEOComponent = ({ 
-  title, 
-  description, 
-  keywords, 
-  image, 
-  url, 
-  type = 'website',
-  structuredData 
-}: {
-  title?: string;
-  description?: string;
-  keywords?: string;
+export const SEOComponent: React.FC<{
+  title: string;
+  description: string;
+  url: string;
+  type?: 'website' | 'article';
   image?: string;
-  url?: string;
-  type?: string;
+  author?: string;
+  datePublished?: string;
+  dateModified?: string;
   structuredData?: any;
+}> = ({
+  title,
+  description,
+  url,
+  type = 'website',
+  image,
+  author,
+  datePublished,
+  dateModified,
+  structuredData
 }) => {
-  const siteName = 'Zion Tech Group';
-  const siteUrl = 'https://zion.app';
-  const defaultImage = `${siteUrl}/images/og-default.jpg`;
-  
-  const fullTitle = title ? `${title} | ${siteName}` : siteName;
-  const fullUrl = url ? `${siteUrl}${url}` : siteUrl;
-  const fullImage = image ? `${siteUrl}${image}` : defaultImage;
+  const meta = type === 'article' && author && datePublished ? 
+    metaUtils.generateArticleMeta({
+      title,
+      description,
+      author,
+      datePublished,
+      dateModified: dateModified || datePublished,
+      image,
+      url
+    }) :
+    metaUtils.generateBasicMeta(title, description, url);
+
+  // Type assertion to handle the union type
+  const articleMeta = meta as any;
 
   return (
     <Helmet>
-      <title>{fullTitle}</title>
-      <meta name="description" content={description} />"
-      <meta name="keywords" content={keywords} />"
-      <link rel="canonical" href={fullUrl} />"
-      {/* Open Graph */}
-      <meta property="og:type" content={type} />"
-      <meta property="og:title" content={fullTitle} />"
-      <meta property="og:description" content={description} />"
-      <meta property="og:url" content={fullUrl} />"
-      <meta property="og:image" content={fullImage} />"
-      <meta property="og:site_name" content={siteName} />"
-      {/* Twitter Card */}
-      <meta name="twitter:card" content="summary_large_image" />"
-      <meta name="twitter:title" content={fullTitle} />"
-      <meta name="twitter:description" content={description} />"
-      <meta name="twitter:image" content={fullImage} />"
-      {/* Structured Data */}
+      <title>{meta.title}</title>
+      <meta name="description" content={meta.description} />
+      <meta property="og:title" content={meta.ogTitle} />
+      <meta property="og:description" content={meta.ogDescription} />
+      <meta property="og:url" content={meta.ogUrl} />
+      <meta property="og:type" content={meta.ogType} />
+      {articleMeta.ogImage && <meta property="og:image" content={articleMeta.ogImage} />}
+      {articleMeta.articleAuthor && <meta property="article:author" content={articleMeta.articleAuthor} />}
+      {articleMeta.articlePublishedTime && <meta property="article:published_time" content={articleMeta.articlePublishedTime} />}
+      {articleMeta.articleModifiedTime && <meta property="article:modified_time" content={articleMeta.articleModifiedTime} />}
+      <meta name="twitter:card" content={meta.twitterCard} />
+      <meta name="twitter:title" content={meta.twitterTitle} />
+      <meta name="twitter:description" content={meta.twitterDescription} />
+      {articleMeta.twitterImage && <meta name="twitter:image" content={articleMeta.twitterImage} />}
       {structuredData && (
-        <script type="application/ld+json">"
+        <script type="application/ld+json">
           {JSON.stringify(structuredData)}
         </script>
       )}
@@ -291,22 +205,55 @@ export const SEOComponent = ({
   );
 };
 
-// Initialize SEO optimizations
-export const initializeSEO = () => {
+// Performance optimization utilities
+export const performanceUtils = {
   // Preload critical resources
-  performanceSEO.preloadCriticalResources();
-  
-  // Track Core Web Vitals
-  coreWebVitals.trackCoreWebVitals();
-  
-  // Set up meta tags
-  if (typeof document !== 'undefined') {
-    const viewport = document.querySelector('meta[name="viewport"]');
-    if (!viewport) {
-      const meta = document.createElement('meta');
-      meta.name = 'viewport';
-      meta.content = 'width=device-width, initial-scale=1.0';
-      document.head.appendChild(meta);
-    }
+  preloadCriticalResources: (resources: Array<{href: string, as: string, type?: string}>) => {
+    return resources.map(resource => (
+      <link
+        key={resource.href}
+        rel="preload"
+        href={resource.href}
+        as={resource.as}
+        type={resource.type}
+      />
+    ));
+  },
+
+  // Generate critical CSS
+  generateCriticalCSS: (css: string) => {
+    return <style dangerouslySetInnerHTML={{ __html: css }} />;
   }
+};
+
+// Analytics utilities
+export const analyticsUtils = {
+  // Google Analytics 4
+  gtag: (command: string, targetId: string, config?: any) => {
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag(command, targetId, config);
+    }
+  },
+
+  // Track page views
+  trackPageView: (url: string, title: string) => {
+    analyticsUtils.gtag('config', 'GA_MEASUREMENT_ID', {
+      page_title: title,
+      page_location: url
+    });
+  },
+
+  // Track events
+  trackEvent: (eventName: string, parameters?: any) => {
+    analyticsUtils.gtag('event', eventName, parameters);
+  }
+};
+
+export default {
+  seoUtils,
+  sitemapUtils,
+  metaUtils,
+  SEOComponent,
+  performanceUtils,
+  analyticsUtils
 };

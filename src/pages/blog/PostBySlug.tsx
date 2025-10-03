@@ -1,203 +1,183 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 import Header from "../../components/Header";
+import { ArrowLeft, Clock, User, Calendar } from "lucide-react";
+
+// Mock data - in a real app, this would come from an API or CMS
+const latestArticles = [
+  {
+    slug: "ai-2025-oct-next-gen-security-operations",
+    title: "Next-Gen Security Operations with AI",
+    description: "Revolutionary AI-powered security operations for enterprise protection",
+    excerpt: "Discover how AI is transforming security operations...",
+    category: "AI Security",
+    date: "2025-10-02",
+    readTime: "8 min read",
+    author: "Zion Tech Group Team"
+  }
+];
+
+const blogPosts = [
+  {
+    slug: "quantum-ai-processing-2026",
+    title: "Quantum AI Processing Revolution 2026",
+    description: "The future of quantum-enhanced AI processing",
+    category: "Quantum AI",
+    date: "2026-01-15",
+    readTime: "12 min read",
+    author: "AI Research Team"
+  }
+];
+
+const staticPosts = [
+  {
+    slug: "ai-agent-mesh-orchestration-2025",
+    title: "AI Agent Mesh Orchestration",
+    description: "Advanced orchestration patterns for AI agent networks",
+    category: "AI Agents",
+    publishedAt: "2025-09-20",
+    readTime: "10 min read",
+    author: "Zion Tech Group Team"
+  }
+];
 
 export default function PostBySlug(): React.JSX.Element {
-  const { slug } = useParams();
+  const { slug } = useParams<{ slug: string }>();
 
-  const article: React.useMemo(()  => {,,
-  if (!slug) return undefined;
-    const fromLatest: latestArticles.find((a) => a.slug: = = slug);,,
-  if (fromLatest) {
+  const article = React.useMemo(() => {
+    if (!slug) return undefined;
+    
+    const fromLatest = latestArticles.find((a) => a.slug === slug);
+    if (fromLatest) {
       return {
-        slug: fromLatest.slug,,
-        title= fromLatest.title,,
-        description: fromLatest.description || fromLatest.excerpt,,
-        category: fromLatest.category,,
-        publishedAt: fromLatest.date,,
-        readTime: fromLatest.readTime,,
-        author: fromLatest.author};
-    }
-    const fromBlogPosts: blogPosts.find((p) => p.slug: = = slug);,,
-  if (fromBlogPosts) {
-      return {
-        slug: fromBlogPosts.slug,,
-        title= fromBlogPosts.title,,
-        description: fromBlogPosts.description,,
-        category: fromBlogPosts.category,,
-        publishedAt: fromBlogPosts.date,,
-        readTime: fromBlogPosts.readTime,,
-        author: fromBlogPosts.author};
-    }
-    const fromPosts: staticPosts.find((p) => p.slug: = = slug);,,
-  if (fromPosts) {
-      return {
-        slug: fromPosts.slug,,
-        title= fromPosts.title,,
-        description: fromPosts.description,,
-        category: fromPosts.category,,
-        publishedAt: fromPosts.publishedAt,,
-        readTime: fromPosts.readTime,,
-        author: "Zion Tech Group Team
-        slug: fromPosts.slug,,
-        title= fromPosts.title,,
-        description: fromPosts.description,,
-        category: fromPosts.category,,
-        publishedAt: fromPosts.publishedAt,,
-        readTime: fromPosts.readTime,,
-        author: "Zion Tech Group Team",,"
+        slug: fromLatest.slug,
+        title: fromLatest.title,
+        description: fromLatest.description || fromLatest.excerpt,
+        category: fromLatest.category,
+        publishedAt: fromLatest.date,
+        readTime: fromLatest.readTime,
+        author: fromLatest.author
       };
     }
+    
+    const fromBlogPosts = blogPosts.find((p) => p.slug === slug);
+    if (fromBlogPosts) {
+      return {
+        slug: fromBlogPosts.slug,
+        title: fromBlogPosts.title,
+        description: fromBlogPosts.description,
+        category: fromBlogPosts.category,
+        publishedAt: fromBlogPosts.date,
+        readTime: fromBlogPosts.readTime,
+        author: fromBlogPosts.author
+      };
+    }
+    
+    const fromPosts = staticPosts.find((p) => p.slug === slug);
+    if (fromPosts) {
+      return {
+        slug: fromPosts.slug,
+        title: fromPosts.title,
+        description: fromPosts.description,
+        category: fromPosts.category,
+        publishedAt: fromPosts.publishedAt,
+        readTime: fromPosts.readTime,
+        author: "Zion Tech Group Team"
+      };
+    }
+    
     return undefined;
   }, [slug]);
 
   if (!article) {
-return (
-<>
-<Header />
-<div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white p-8">
-<div className="max-w-3xl mx-auto pt-20">
-<h1 className="text-3xl font-bold mb-4">Article not found</h1>"
-<p className="text-zion-slate-light mb-6">The post you are looking for does not exist or has been moved.</p>"
-<Link to="/blog", className="text-zion-cyan hover:underline inline-flex items-center gap-2">
-<ArrowLeft className="w-4 h-4" />"
-<div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white p-8">
-<div className="max-w-3xl mx-auto pt-20">
-<h1 className="text-3xl font-bold mb-4">Article not found</h1>
-<p className="text-zion-slate-light mb-6">The post you are looking for does not exist or has been moved.</p>
-<Link to="/blog", className="text-zion-cyan hover:underline inline-flex items-center gap-2">,
-<ArrowLeft className="w-4 h-4" />
-<div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white p-8">
-<div className="max-w-3xl mx-auto pt-20">
-<h1 className="text-3xl font-bold mb-4">Article not found</h1>"
-<p className="text-zion-slate-light mb-6">The post you are looking for does not exist or has been moved.</p>"
-<Link to="/blog", className="text-zion-cyan hover:underline inline-flex items-center gap-2">
-<ArrowLeft className="w-4 h-4" />"
-<div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white p-8">
-<div className="max-w-3xl mx-auto pt-20">
-<h1 className="text-3xl font-bold mb-4">Article not found</h1>
-<p className="text-zion-slate-light mb-6">The post you are looking for does not exist or has been moved.</p>
-<Link to="/blog", className="text-zion-cyan hover:underline inline-flex items-center gap-2">,
-<ArrowLeft className="w-4 h-4" />
-  Back to Blog
-</Link>
-</div>
-</div>
-</>
-);
-}
+    return (
+      <>
+        <Header />
+        <div className="min-h-screen bg-slate-950 flex items-center justify-center">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-white mb-4">Article Not Found</h1>
+            <p className="text-gray-300 mb-8">The article you're looking for doesn't exist.</p>
+            <a 
+              href="/blog" 
+              className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300"
+            >
+              Back to Blog
+            </a>
+          </div>
+        </div>
+      </>
+    );
+  }
 
   return (
     <>
-      <Helmet >
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">
-        <Header />
-        <div className="max-w-4xl mx-auto px-6 py-24">
-          <Link to="/blog", className="text-zion-cyan hover:text-zion-blue-light mb-8 inline-flex items-center gap-2 transition-colors">
-            <ArrowLeft className="w-4 h-4/>,"
-  Back to Blog
-          </Link>
-          "
-          <article className="mt-8 bg-white/10 backdrop-blur-lg rounded-2xl p-8 md: p-12 border border-white/20">
-            <div className="mb-6">
-              <span className="inline-block px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-sm font-medium rounded-full border border-zion-cyan/30">
-        <div className="max-w-4xl mx-auto px-6 py-24">
-          <Link to="/blog", className="text-zion-cyan hover:text-zion-blue-light mb-8 inline-flex items-center gap-2 transition-colors">
-            <ArrowLeft className="w-4 h-4" />
-  Back to Blog
-          </Link>
-          
-          <article className="mt-8 bg-white/10 backdrop-blur-lg rounded-2xl p-8 md: p-12 border border-white/20">
-            <div className="mb-6">
-              <span className="inline-block px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-sm font-medium rounded-full border border-zion-cyan/30">
-      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">
-        <Header />
-        <div className="max-w-4xl mx-auto px-6 py-24">
-          <Link to="/blog", className="text-zion-cyan hover:text-zion-blue-light mb-8 inline-flex items-center gap-2 transition-colors">
-            <ArrowLeft className="w-4 h-4/>,"
-  Back to Blog
-          </Link>
-          
-          <article className="mt-8 bg-white/10 backdrop-blur-lg rounded-2xl p-8 md: p-12 border border-white/20">
-            <div className="mb-6">
-              <span className="inline-block px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-sm font-medium rounded-full border border-zion-cyan/30">
-        <div className="max-w-4xl mx-auto px-6 py-24">
-          <Link to="/blog", className="text-zion-cyan hover:text-zion-blue-light mb-8 inline-flex items-center gap-2 transition-colors">
-            <ArrowLeft className="w-4 h-4" />
-  Back to Blog
-          </Link>
-          
-          <article className="mt-8 bg-white/10 backdrop-blur-lg rounded-2xl p-8 md: p-12 border border-white/20">
-            <div className="mb-6">
-              <span className="inline-block px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-sm font-medium rounded-full border border-zion-cyan/30">
+      <Header />
+      <div className="min-h-screen bg-slate-950">
+        {/* Article Header */}
+        <div className="container mx-auto px-4 py-16">
+          <div className="max-w-4xl mx-auto">
+            <a 
+              href="/blog" 
+              className="inline-flex items-center text-purple-400 hover:text-purple-300 mb-8 transition-colors"
+            >
+              <ArrowLeft className="w-4 h-4 mr-2" />
+              Back to Blog
+            </a>
+            
+            <div className="mb-8">
+              <span className="inline-block bg-purple-600 text-white px-3 py-1 rounded-full text-sm font-medium mb-4">
                 {article.category}
               </span>
-            </div>
-            
-            <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 leading-tight">
-            <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 leading-tight">
-              {article.title}
-            </h1>
-            
-            <div className="flex flex-wrap items-center gap-4 text-zion-slate-light text-sm mb-8 pb-8 border-b border-white/10">
-              {article.author && (
-                <span className="font-medium text-white">{article.author}</span>"
-              )}
-                })}
-              </span>
-              {article.readTime && (
-                <span className="flex items-center gap-1">
-                  <Clock className="w-4 h-4 ">
-                <span className="flex items-center gap-1">
-                  <Clock className="w-4 h-4/>">
-              <span className="flex items-center gap-1">
-                <Calendar className="w-4 h-4" />
-                <span className="flex items-center gap-1">
-                  <Clock className="w-4 h-4/>">
-              <span className="flex items-center gap-1">
-                <Calendar className="w-4 h-4" />
-                {new Date(article.publishedAt).toLocaleDateString('en-US', { '
-                  year: 'numeric', ',';,
-                  month: 'long', ',';,
-                  day: 'numeric',';,
-                })}
-              </span>
-              {article.readTime && (
-                <span className="flex items-center gap-1">
-                  <Clock className="w-4 h-4" />
-                <span className="flex items-center gap-1">
-                  <Clock className="w-4 h-4" />
+              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                {article.title}
+              </h1>
+              <p className="text-xl text-gray-300 mb-8">
+                {article.description}
+              </p>
+              
+              <div className="flex flex-wrap items-center gap-6 text-gray-400">
+                <div className="flex items-center">
+                  <User className="w-4 h-4 mr-2" />
+                  {article.author}
+                </div>
+                <div className="flex items-center">
+                  <Calendar className="w-4 h-4 mr-2" />
+                  {new Date(article.publishedAt).toLocaleDateString()}
+                </div>
+                <div className="flex items-center">
+                  <Clock className="w-4 h-4 mr-2" />
                   {article.readTime}
-                </span>
-              )}
+                </div>
+              </div>
             </div>
-            
-            <div className="prose prose-invert prose-lg max-w-none">
-              <p className="text-xl leading-relaxed text-white/90 mb-6">
-                {article.description}
-              </p>
-              
-              <div className="bg-zion-blue/20 border border-zion-blue/30 rounded-xl p-6 my-8">
-                <p className="text-zion-slate-light text-sm mb-0">
-              <div className="bg-zion-blue/20 border border-zion-blue/30 rounded-xl p-6 my-8">
-                <p className="text-zion-slate-light text-sm mb-0">
-            <div className="prose prose-invert prose-lg max-w-none">
-              <p className="text-xl leading-relaxed text-white/90 mb-6">
-                {article.description}
-              </p>
-              
-              <div className="bg-zion-blue/20 border border-zion-blue/30 rounded-xl p-6 my-8">
-                <p className="text-zion-slate-light text-sm mb-0">
-              <div className="bg-zion-blue/20 border border-zion-blue/30 rounded-xl p-6 my-8">
-                <p className="text-zion-slate-light text-sm mb-0">
-                  💡 <strong >Coming Soon: </strong> Full article content will be available shortly. ,,
-                  This preview shows the key insights and value proposition of this groundbreaking topic.
+          </div>
+        </div>
+
+        {/* Article Content */}
+        <article className="container mx-auto px-4 pb-16">
+          <div className="max-w-4xl mx-auto">
+            <div className="prose prose-lg prose-invert max-w-none">
+              <div className="bg-slate-800 p-8 rounded-lg">
+                <h2 className="text-2xl font-bold text-white mb-4">Article Content</h2>
+                <p className="text-gray-300 leading-relaxed mb-6">
+                  This is a placeholder for the article content. In a real application, 
+                  this would contain the full article text, images, and other content 
+                  fetched from a CMS or API.
+                </p>
+                <p className="text-gray-300 leading-relaxed mb-6">
+                  The article would typically include detailed information about the topic, 
+                  code examples, diagrams, and other relevant content that provides value 
+                  to the reader.
+                </p>
+                <p className="text-gray-300 leading-relaxed">
+                  For now, this serves as a template showing how the article layout would 
+                  work with proper styling and structure.
                 </p>
               </div>
             </div>
-          </article>
-        </div>
+          </div>
+        </article>
       </div>
     </>
   );
-};
+}
