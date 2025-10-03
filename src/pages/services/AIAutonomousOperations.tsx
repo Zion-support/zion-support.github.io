@@ -1,63 +1,58 @@
+import React from 'react';
 
-const AIAutonomousOperations: React.FC = () => {
+const ServiceComponent: React.FC = () => {
   return (
-    <div className="min-h-screen bg-slate-950">
-      <div className="container mx-auto px-6 py-20">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-extrabold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
-            AI Autonomous Operations
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <div className="container mx-auto px-4 py-8">
+        <div className="max-w-4xl mx-auto">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">
+            Service Title
           </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Transform your business operations with fully autonomous AI systems that 
-            self-manage, self-optimize, and deliver unprecedented efficiency.
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50">
-            <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-4">
-              <div className="w-6 h-6 bg-blue-400 rounded"></div>
-            </div>
-            <h3 className="text-xl font-bold text-white mb-3">Autonomous Process Management</h3>
-            <p className="text-gray-300 mb-6">
-              AI systems that independently manage complex workflows, make decisions, 
-              and adapt to changing conditions without human intervention.
+          <div className="bg-white rounded-lg shadow-lg p-8">
+            <p className="text-lg text-gray-700 mb-6">
+              Service description content goes here.
             </p>
-          </div>
-
-          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50">
-            <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mb-4">
-              <div className="w-6 h-6 bg-purple-400 rounded"></div>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="space-y-4">
+                <h3 className="text-xl font-semibold text-gray-800">Features</h3>
+                <ul className="space-y-2">
+                  <li className="flex items-center">
+                    <span className="text-green-500 mr-2">✓</span>
+                    Feature 1
+                  </li>
+                  <li className="flex items-center">
+                    <span className="text-green-500 mr-2">✓</span>
+                    Feature 2
+                  </li>
+                  <li className="flex items-center">
+                    <span className="text-green-500 mr-2">✓</span>
+                    Feature 3
+                  </li>
+                </ul>
+              </div>
+              <div className="space-y-4">
+                <h3 className="text-xl font-semibold text-gray-800">Benefits</h3>
+                <ul className="space-y-2">
+                  <li className="flex items-center">
+                    <span className="text-blue-500 mr-2">→</span>
+                    Benefit 1
+                  </li>
+                  <li className="flex items-center">
+                    <span className="text-blue-500 mr-2">→</span>
+                    Benefit 2
+                  </li>
+                  <li className="flex items-center">
+                    <span className="text-blue-500 mr-2">→</span>
+                    Benefit 3
+                  </li>
+                </ul>
+              </div>
             </div>
-            <h3 className="text-xl font-bold text-white mb-3">Self-Optimizing Systems</h3>
-            <p className="text-gray-300 mb-6">
-              Continuous learning and optimization algorithms that improve performance, 
-              reduce costs, and enhance quality over time.
-            </p>
           </div>
-
-          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50">
-            <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center mb-4">
-              <div className="w-6 h-6 bg-cyan-400 rounded"></div>
-            </div>
-            <h3 className="text-xl font-bold text-white mb-3">Predictive Maintenance</h3>
-            <p className="text-gray-300 mb-6">
-              Advanced analytics that predict failures before they occur, 
-              scheduling maintenance and preventing costly downtime.
-            </p>
-          </div>
-        </div>
-
-        <div className="text-center">
-          <a 
-            href="/contact"
-            className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold rounded-xl transition-all transform hover:scale-105 shadow-xl">
-            Get Started with AI Operations
-          </a>
         </div>
       </div>
     </div>
   );
 };
 
-export default AIAutonomousOperations;
+export default ServiceComponent;
