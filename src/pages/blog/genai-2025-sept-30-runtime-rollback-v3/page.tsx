@@ -1,7 +1,7 @@
 
-export default function Page(): void {
+export default function Page() {
   return (
-        <p >
+        <p>
           This is a short placeholder article. Expand with runbooks for rollback triggers, evaluation gates
           and incident budgets that keep quality stable while iterating fast.
         </p>
@@ -11,5 +11,3 @@ export default function Page(): void {
     </div>
   );
 }
-
-;

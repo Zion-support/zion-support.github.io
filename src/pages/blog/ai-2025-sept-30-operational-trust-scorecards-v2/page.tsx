@@ -1,7 +1,7 @@
 
-export default function Page(): void {
+export default function Page() {
   return (
-        <p >
+        <p>
           This is a short placeholder article. Expand with detailed guidance on wiring SLIs to KPIs
           defining budgets, and implementing instant rollback with policy-tested fallbacks.
         </p>
@@ -11,5 +11,3 @@ export default function Page(): void {
     </div>
   );
 }
-
-;

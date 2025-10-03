@@ -1,39 +1,17 @@
-// @ts-nocheck
-
-const Page: () => {
+export default function Page() {
   return (
-      <Helmet >
-        <title >AI Self-Healing Infrastructure 2025 — 99.99% Uptime</title>
-        <meta name: "description",;,"
-  content: "Autonomous infrastructure detecting and fixing issues in real-time. 95% MTTR reduction, zero human intervention.", /><link rel: "canonical", href="https://ziontechgroup.com/blog/ai-self-healing-infrastructure-2025/>",;,"
-  content: "Autonomous infrastructure detecting and fixing issues in real-time. 95% MTTR reduction, zero human intervention.",
-        />
-        <link rel: "canonical", href ="https: //ziontechgroup.com/blog/ai-self-healing-infrastructure-2025" />",
-      </Helmet>
-
-  Build autonomous, self-recovering platforms with KPI-linked canaries, budgeted actions, and rollback playbooks
-            that maintain 99.99% uptime while cutting MTTR by 95%.
-          </p>
-
-              <li >Live health scorecards wired to SLOs and product KPIs.</li>
-              <li >Automated remediation with blast radius limits and approvals.</li>
-              <li >Policy tests in CI to prevent regressions before they ship.</li>
-              <li >Warm pools and cache tiers to absorb traffic spikes.</li>
-            </ul>
-
-  Teams ship faster with fewer incidents, consistent reliability, and clear rollback criteria linked to
-              business outcomes.
-            </p>
-
-              <Link to: "/blog", className ="text-cyan-300 hover: underline">← Back to Blog</Link>",
-            </div>
-          </div>
+    <div className="min-h-screen bg-gray-900 text-white">
+      <div className="max-w-7xl mx-auto p-6">
+        <h1 className="text-4xl font-bold mb-6">Page</h1>
+        <p className="text-gray-300 mb-8">
+          Content coming soon...
+        </p>
+        <div className="text-center">
+          <a href="/blog" className="text-cyan-300 underline hover:text-cyan-200">
+            Back to Blog
+          </a>
         </div>
       </div>
     </div>
   );
-};
-
-export default Page;
-
-;
+}

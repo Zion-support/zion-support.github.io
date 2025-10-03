@@ -1,7 +1,7 @@
 
-export default function Page(): void {
+export default function Page() {
   return (
-        <p >
+        <p>
           This is a short placeholder article. Expand with practical patterns for edge KV, signed configs
           and local telemetry that enable private, sub‑100ms experiences without collecting PII.
         </p>
@@ -11,5 +11,3 @@ export default function Page(): void {
     </div>
   );
 }
-
-;

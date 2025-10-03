@@ -48,7 +48,36 @@ export default function EnterprisePage() {
         </div>
       </header>
 
+      {/* Solutions Section */}
+      <section id="solutions" className="py-20 bg-slate-900">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">Enterprise Solutions</h2>
+            <p className="text-gray-400 text-lg">Comprehensive AI solutions for enterprise needs</p>
           </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-slate-800 p-8 rounded-xl">
+              <h3 className="text-2xl font-bold text-white mb-4">AI Automation</h3>
+              <p className="text-gray-400">Automate complex business processes with AI</p>
+            </div>
+            
+            <div className="bg-slate-800 p-8 rounded-xl">
+              <h3 className="text-2xl font-bold text-white mb-4">Data Analytics</h3>
+              <p className="text-gray-400">Advanced analytics and insights for decision making</p>
+            </div>
+            
+            <div className="bg-slate-800 p-8 rounded-xl">
+              <h3 className="text-2xl font-bold text-white mb-4">Security</h3>
+              <p className="text-gray-400">Enterprise-grade security and compliance</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer className="bg-slate-950 py-12">
+        <div className="container mx-auto px-6 text-center">
+          <p className="text-gray-400">© 2025 Zion Tech Group. All rights reserved.</p>
         </div>
       </footer>
     </div>
