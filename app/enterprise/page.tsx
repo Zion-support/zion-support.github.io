@@ -10,10 +10,10 @@ export const metadata = {
 export default function EnterprisePage() {
   return (
     <div className="text-left">
-      {/* Hero Section */}
+      {/* Hero Section */}</div>
       <header className="text-left">
         <div className="text-left">
-          <div className="text-left"></div>
+          <div className="text-left">
           <div className="text-left" style={{ animationDelay: '2s' }}></div>
         </div>
         

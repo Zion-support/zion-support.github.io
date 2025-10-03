@@ -76,16 +76,13 @@ const NewestContent2025Banner = () => {
                 <div className="text-left">
                   <div className="text-left">
                     <div className="text-left">&lt;10ms</div>"
-                    <div className="text-left">Latency</div>"
-                  </div>
+                    <div className="text-left">Latency</div></div>
                   <div className="text-left">
                     <div className="text-left">95%</div>"
-                    <div className="text-left">Bandwidth ↓</div>"
-                  </div>
+                    <div className="text-left">Bandwidth ↓</div></div>
                   <div className="text-left">
                     <div className="text-left">87%</div>"
-                    <div className="text-left">Cost ↓</div>"
-                  </div>
+                    <div className="text-left">Cost ↓</div></div>
 
                 {/* Meta Info */}
                 <div className="text-left">
@@ -138,16 +135,13 @@ const NewestContent2025Banner = () => {
                 <div className="text-left">
                   <div className="text-left">
                     <div className="text-left">98.5%</div>"
-                    <div className="text-left">Accuracy</div>"
-                  </div>
+                    <div className="text-left">Accuracy</div></div>
                   <div className="text-left">
                     <div className="text-left">10x</div>"
-                    <div className="text-left">ROI</div>"
-                  </div>
+                    <div className="text-left">ROI</div></div>
                   <div className="text-left">
                     <div className="text-left">85%</div>"
-                    <div className="text-left">Efficiency</div>"
-                  </div>
+                    <div className="text-left">Efficiency</div></div>
 
                 <div className="text-left">
                   <span>⏱️ 40 min read</span>
@@ -172,7 +166,7 @@ const NewestContent2025Banner = () => {
                   </div>
                   <div className="text-left">
                     <div className="text-left">
-                      <span className="text-left">🚨<"
+                      <span className="text-left">🚨</span>
                       <span>CRITICAL</span>
                     </div>
                     <span className="text-left">
@@ -198,16 +192,13 @@ const NewestContent2025Banner = () => {
                 <div className="text-left">
                   <div className="text-left">
                     <div className="text-left">99.99%</div>"
-                    <div className="text-left">Security</div>"
-                  </div>
+                    <div className="text-left">Security</div></div>
                   <div className="text-left">
                     <div className="text-left">&lt;1ms</div>"
-                    <div className="text-left">Overhead</div>"
-                  </div>
+                    <div className="text-left">Overhead</div></div>
                   <div className="text-left">
                     <div className="text-left">Zero</div>"
-                    <div className="text-left">Breaches</div>"
-                  </div>
+                    <div className="text-left">Breaches</div></div>
 
                 <div className="text-left">
                   <span>⏱️ 45 min read</span>
@@ -244,7 +235,7 @@ const NewestContent2025Banner = () => {
                 <a
                   href="mailto:kleber@ziontechgroup.com"
                   className="text-left">
-                  <span className="text-left">📧<"
+                  <span className="text-left">📧</span>
                   <span>Get Expert Consultation</span>
                 </a>
               </div>

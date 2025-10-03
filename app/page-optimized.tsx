@@ -102,12 +102,12 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       <div className="text-left">
-        {/* Unified Content Promotion - Replaces multiple redundant banners */}
+        {/* Unified Content Promotion - Replaces multiple redundant banners */}</div>
         <UnifiedContentPromotion />
 
         {/* Hero Section */}
         <section className="text-left">
-          <div className="text-left">
+          <div className="text-left"></div>
             <h1 className="text-left">
               Transform Your Business with
               <span className="text-left">
@@ -118,7 +118,7 @@ export default function HomePage() {
               Zion Tech Group delivers cutting-edge AI micro SaaS services, cloud automation, 
               and enterprise IT solutions that drive growth, efficiency, and innovation.
             </p>
-            <div className="text-left">
+            <div className="text-left"></div>
               <Link
                 href="/services"
                 className="text-left">
@@ -130,20 +130,20 @@ export default function HomePage() {
                 Call +1 302 464 0950
               </a>
             </div>
-            <div className="text-left">
-              <div>
+            <div className="text-left"></div>
+              <div></div>
                 <div className="text-left">500+</div>"
                 <div className="text-left">Projects Delivered</div>"
               </div>
-              <div>
+              <div></div>
                 <div className="text-left">99.9%</div>"
                 <div className="text-left">Uptime Guarantee</div>"
               </div>
-              <div>
+              <div></div>
                 <div className="text-left">24/7</div>"
                 <div className="text-left">Expert Support</div>"
               </div>
-              <div>
+              <div></div>
                 <div className="text-left">$2M+</div>"
                 <div className="text-left">Cost Savings</div>"
               </div>
@@ -162,17 +162,17 @@ export default function HomePage() {
 
         {/* Enhanced Newsletter Signup */}
         <section className="text-left">
-          <div className="text-left">
+          <div className="text-left"></div>
             <div className="text-left">
-              {/* Newsletter Signup */}
-              <div className="text-left">
+              {/* Newsletter Signup */}</div>
+              <div className="text-left"></div>
                 <h2 className="text-left">
                   Stay Ahead with AI & Tech Insights
                 </h2>
                 <p className="text-left">
                   Get weekly updates on AI trends, tech innovations, and exclusive service offers
                 </p>
-                <div className="text-left">
+                <div className="text-left"></div>
                   <input
                     type="email"
                     placeholder="Enter your email"
@@ -188,32 +188,32 @@ export default function HomePage() {
               </div>
 
               {/* Content Highlights */}
-              <div className="text-left">
+              <div className="text-left"></div>
                 <h3 className="text-left">Latest Content Highlights</h3>"
-                <div className="text-left">
+                <div className="text-left"></div>
                   <a href="/blog/ai-2026-enterprise-rag-guardrails" className="text-left">
                     <div className="text-left">🛡️</div>"
-                    <div>
+                    <div></div>
                       <h4 className="text-left">Enterprise RAG Guardrails 2026</h4>"
                       <p className="text-left">Safe, reliable RAG with verifiable citations</p>"
                     </div>
                   </a>
                   <a href="/blog/ai-2026-autonomous-enterprise-operations" className="text-left">
                     <div className="text-left">🏭</div>"
-                    <div>
+                    <div></div>
                       <h4 className="text-left">Autonomous Enterprise Operations 2026</h4>"
                       <p className="text-left">90% efficiency, 300% ROI with guardrailed agents</p>"
                     </div>
                   </a>
                   <a href="/blog/ai-cloud-cost-optimization-2025" className="text-left">
                     <div className="text-left">💸</div>"
-                    <div>
+                    <div></div>
                       <h4 className="text-left">AI Cloud Cost Optimization</h4>"
                       <p className="text-left">Cut spend by 70–85% with smart routing</p>"
                     </div>
                   </a>
                 </div>
-                <div className="text-left">
+                <div className="text-left"></div>
                   <Link
                     href="/blog"
                     className="text-left">
@@ -227,14 +227,14 @@ export default function HomePage() {
 
         {/* CTA Section */}
         <section className="text-left">
-          <div className="text-left">
+          <div className="text-left"></div>
             <h2 className="text-left">
               Ready to Transform Your Business?
             </h2>
             <p className="text-left">
               Let's discuss how our AI and IT solutions can drive your success
             </p>
-            <div className="text-left">
+            <div className="text-left"></div>
               <a
                 href="tel:+13024640950"
                 className="text-left">
@@ -246,7 +246,7 @@ export default function HomePage() {
                 Get Free Consultation
               </a>
             </div>
-            <div className="text-left">
+            <div className="text-left"></div>
               <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
               <p>📧 kleber@ziontechgroup.com | 📞 +1 302 464 0950</p>
             </div>

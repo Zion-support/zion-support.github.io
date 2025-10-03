@@ -77,15 +77,15 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
         {/* Header */}
         <div className="text-left">
           <div className="text-left">
-            <span className="text-left">🚀 ULTIMATE BREAKTHROUGH<"
+            <span className="text-left">🚀 ULTIMATE BREAKTHROUGH</span>
           </div>
           <h2 className="text-left">
             AI 2025: Ultimate Business Intelligence Revolution
           </h2>
           <p className="text-left">
             Discover the revolutionary AI-powered business intelligence that's delivering 
-            <span className="text-left"> 30,000% ROI< and "
-            <span className="text-left"> $750B+ in annual savings< across Fortune 500 companies."
+            <span className="text-left"> 30,000% ROI</span> and 
+            <span className="text-left"> $750B+ in annual savings</span> across Fortune 500 companies.
           </p>
         </div>
 
@@ -221,4 +221,4 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
   );
 };
 
-export default UltimateBusinessIntelligenceShowcase2025;</div></div></div></div></div></div></div>
+export default UltimateBusinessIntelligenceShowcase2025;
