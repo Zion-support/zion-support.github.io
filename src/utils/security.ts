@@ -175,7 +175,7 @@ export class CSRFProtection {
  * Security audit logging
  */
 export class SecurityLogger {
-    private static logLevel: 'info' | 'warn' | 'error' = 'warn';
+  private static logLevel: 'info' | 'warn' | 'error' = 'warn';
   static setLogLevel(level: 'info' | 'warn' | 'error'): void {
     this.logLevel = level;
   }

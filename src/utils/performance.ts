@@ -242,7 +242,7 @@ export class PerformanceMonitor {
       await fetch(this.config.reportUrl!, {
         method: 'POST',
         headers: {
-            'Content-Type': 'application/json',
+          'Content-Type': 'application/json'
         },
         body: JSON.stringify(report)
       });
@@ -303,12 +303,12 @@ export class PerformanceMonitor {
 export class ImageOptimizer {
   static async optimizeImage(
     src: string,
-    options: {
-      width?: number;
-      height?: number;
-      quality?: number;
+      options: {
+        width?: number;
+        height?: number;
+        quality?: number;
         format?: 'webp' | 'avif' | 'jpeg' | 'png';
-    } = {}
+      } = {}
   ): Promise<string> {
     const { width, height, quality = 80, format = 'webp' } = options;
 
@@ -331,8 +331,8 @@ export class ImageOptimizer {
   static preloadCriticalImages(imageUrls: string[]): void {
     imageUrls.forEach(url => {
       const link = document.createElement('link');
-        link.rel = 'preload';
-        link.as = 'image';
+      link.rel = 'preload';
+      link.as = 'image';
       link.href = url;
       document.head.appendChild(link);
     });
