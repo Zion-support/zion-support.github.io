@@ -11,15 +11,7 @@ import {
   Clock,
   Star,
   Smartphone,
-  Globe,
-  ShoppingCart,
-  Camera,
-  Mic,
-  Video,
-  Headphones,
-  Wifi,
-  Battery,
-  Wrench
+  Globe
 } from 'lucide-react';
 
 export default function AdditionalServices() {
@@ -2192,8 +2184,6 @@ export default function AdditionalServices() {
 
   const phoneHref = 'tel:+13024640950';
   const emailHref = 'mailto:kleber@ziontechgroup.com';
-  const websiteUrl = 'https://ziontechgroup.com';
-  const address = '364 E Main St STE 1008, Middletown DE 19709';
 
   return (
     <>
