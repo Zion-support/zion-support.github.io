@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'AI Autonomous Cloud-Native Infrastructure 2026: Self-Healing Systems & Zero-Downtime Operations',

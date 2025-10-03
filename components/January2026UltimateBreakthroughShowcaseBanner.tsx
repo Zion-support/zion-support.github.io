@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function January2026UltimateBreakthroughShowcaseBanner() {
   return (
@@ -48,14 +48,12 @@ export default function January2026UltimateBreakthroughShowcaseBanner() {
               <span className="bg-green-500/20 text-green-200 px-3 py-1 rounded-lg text-sm">Zero Downtime</span>
             </div>
             <div className="flex gap-3">
-              <Link
-                href="/blog/ai-2026-autonomous-cognitive-enterprise-breakthrough"
+              <Link to="/blog/ai-2026-autonomous-cognitive-enterprise-breakthrough"
                 className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-indigo-700 transition-all flex-1 text-center"
               >
                 Read Guide
               </Link>
-              <Link
-                href="/case-studies/ai-2026-autonomous-cognitive-enterprise-5-billion-success"
+              <Link to="/case-studies/ai-2026-autonomous-cognitive-enterprise-5-billion-success"
                 className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-green-700 hover:to-emerald-700 transition-all flex-1 text-center"
               >
                 $5.2B Success
@@ -84,14 +82,12 @@ export default function January2026UltimateBreakthroughShowcaseBanner() {
               <span className="bg-purple-500/20 text-purple-200 px-3 py-1 rounded-lg text-sm">Universal Solving</span>
             </div>
             <div className="flex gap-3">
-              <Link
-                href="/blog/ai-2026-quantum-neural-superintelligence-breakthrough"
+              <Link to="/blog/ai-2026-quantum-neural-superintelligence-breakthrough"
                 className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-700 hover:to-blue-700 transition-all flex-1 text-center"
               >
                 Read Guide
               </Link>
-              <Link
-                href="/case-studies/ai-2026-quantum-neural-superintelligence-15-billion-success"
+              <Link to="/case-studies/ai-2026-quantum-neural-superintelligence-15-billion-success"
                 className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-green-700 hover:to-emerald-700 transition-all flex-1 text-center"
               >
                 $15.8B Success
@@ -136,14 +132,12 @@ export default function January2026UltimateBreakthroughShowcaseBanner() {
               From autonomous enterprises to quantum superintelligence - the future starts now.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/services"
+              <Link to="/services"
                 className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-purple-700 hover:to-indigo-700 transition-all transform hover:scale-105 shadow-lg hover:shadow-xl"
               >
                 Explore Our Services →
               </Link>
-              <Link
-                href="/contact"
+              <Link to="/contact"
                 className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-green-700 hover:to-emerald-700 transition-all transform hover:scale-105 shadow-lg hover:shadow-xl"
               >
                 Start Your Transformation →

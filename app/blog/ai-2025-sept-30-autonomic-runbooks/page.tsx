@@ -1,5 +1,5 @@
 // @ts-nocheck
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function Page() {
   return (
@@ -28,8 +28,8 @@ export default function Page() {
           </article>
 
           <div className="mt-12 flex gap-4">
-            <Link href="/blog" className="px-4 py-2 rounded-lg bg-white text-slate-900 font-semibold">← All Posts</Link>
-            <Link href="/" className="px-4 py-2 rounded-lg border border-white/20">Home</Link>
+            <Link to="/blog" className="px-4 py-2 rounded-lg bg-white text-slate-900 font-semibold">← All Posts</Link>
+            <Link to="/" className="px-4 py-2 rounded-lg border border-white/20">Home</Link>
           </div>
         </div>
       </section>

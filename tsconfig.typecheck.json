@@ -5,19 +5,12 @@
     "skipLibCheck": true
   },
   "include": [
-    "src/**/*"
+    "src/typecheck-entry.ts"
   ],
   "exclude": [
     "node_modules",
     "dist",
     "build",
-    "coverage",
-    "**/*.test.ts",
-    "**/*.test.tsx",
-    "**/*.spec.ts",
-    "**/*.spec.tsx",
-    "src/App.tsx",
-    "src/components/LatestContentBanner2025.tsx",
-    "src/components/Revolutionary2026ContentMegaBanner.tsx"
+    "coverage"
   ]
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { BookOpen, FileText, Award, ArrowRight, Sparkles, Brain, Atom, TrendingUp } from 'lucide-react';
 
 const December2025ContentShowcaseMegaBanner: React.FC = () => {
@@ -63,8 +63,7 @@ const December2025ContentShowcaseMegaBanner: React.FC = () => {
                 </span>
                 <span>10,000x Faster</span>
               </div>
-              <Link 
-                href="/blog/ai-2025-december-neural-mesh-consciousness-breakthrough"
+              <Link to="/blog/ai-2025-december-neural-mesh-consciousness-breakthrough"
                 className="text-purple-400 hover:text-purple-300 transition-colors group-hover:translate-x-1 transform duration-200"
               >
                 <ArrowRight className="w-4 h-4" />
@@ -94,8 +93,7 @@ const December2025ContentShowcaseMegaBanner: React.FC = () => {
                 </span>
                 <span>1,000+ Qubits</span>
               </div>
-              <Link 
-                href="/blog/ai-2025-december-quantum-synthetic-consciousness-revolution"
+              <Link to="/blog/ai-2025-december-quantum-synthetic-consciousness-revolution"
                 className="text-cyan-400 hover:text-cyan-300 transition-colors group-hover:translate-x-1 transform duration-200"
               >
                 <ArrowRight className="w-4 h-4" />
@@ -125,8 +123,7 @@ const December2025ContentShowcaseMegaBanner: React.FC = () => {
                 </span>
                 <span>50+ Companies</span>
               </div>
-              <Link 
-                href="/case-studies/ai-2025-december-global-enterprise-quantum-consciousness-transformation-5-trillion-success"
+              <Link to="/case-studies/ai-2025-december-global-enterprise-quantum-consciousness-transformation-5-trillion-success"
                 className="text-green-400 hover:text-green-300 transition-colors group-hover:translate-x-1 transform duration-200"
               >
                 <ArrowRight className="w-4 h-4" />
@@ -170,8 +167,7 @@ const December2025ContentShowcaseMegaBanner: React.FC = () => {
                   ROI Framework
                 </span>
               </div>
-              <Link 
-                href="/guides/quantum-consciousness-implementation-roadmap-2026"
+              <Link to="/guides/quantum-consciousness-implementation-roadmap-2026"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
               >
                 <FileText className="w-5 h-5" />

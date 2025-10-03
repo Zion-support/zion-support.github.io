@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function NewOctoberContentBanner() {
   return (
@@ -41,8 +41,7 @@ export default function NewOctoberContentBanner() {
               <li>✓ 87% cost reduction strategies</li>
               <li>✓ Complete implementation roadmap</li>
             </ul>
-            <Link
-              href="/blog/ai-2025-october-digital-transformation-enterprise-excellence"
+            <Link to="/blog/ai-2025-october-digital-transformation-enterprise-excellence"
               className="inline-block bg-white text-cyan-700 font-bold py-3 px-8 rounded-lg hover:bg-cyan-50 transition-colors"
             >
               Read Complete Guide →
@@ -69,8 +68,7 @@ export default function NewOctoberContentBanner() {
               <li>✓ Kubernetes & microservices architecture</li>
               <li>✓ Complete technology stack guide</li>
             </ul>
-            <Link
-              href="/blog/ai-2025-october-cloud-native-ai-platform-excellence"
+            <Link to="/blog/ai-2025-october-cloud-native-ai-platform-excellence"
               className="inline-block bg-white text-blue-700 font-bold py-3 px-8 rounded-lg hover:bg-blue-50 transition-colors"
             >
               Read Platform Guide →
@@ -109,8 +107,7 @@ export default function NewOctoberContentBanner() {
                   <div className="text-xs text-green-200">Customers</div>
                 </div>
               </div>
-              <Link
-                href="/case-studies/ai-2025-oct-global-retail-digital-transformation-12-4-billion-success"
+              <Link to="/case-studies/ai-2025-oct-global-retail-digital-transformation-12-4-billion-success"
                 className="text-green-300 font-semibold hover:text-green-100 text-sm"
               >
                 View Full Case Study →
@@ -140,8 +137,7 @@ export default function NewOctoberContentBanner() {
                   <div className="text-xs text-blue-200">Performance</div>
                 </div>
               </div>
-              <Link
-                href="/case-studies/ai-2025-oct-fortune-50-cloud-native-platform-8-7-billion-success"
+              <Link to="/case-studies/ai-2025-oct-fortune-50-cloud-native-platform-8-7-billion-success"
                 className="text-blue-300 font-semibold hover:text-blue-100 text-sm"
               >
                 View Full Case Study →
@@ -153,14 +149,12 @@ export default function NewOctoberContentBanner() {
         {/* CTA Section */}
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link
-              href="/content-hub"
+            <Link to="/content-hub"
               className="bg-white text-purple-700 font-bold py-4 px-10 rounded-lg text-lg hover:bg-gray-100 transition-colors shadow-lg"
             >
               Explore All Content →
             </Link>
-            <Link
-              href="/contact"
+            <Link to="/contact"
               className="border-2 border-white text-white font-bold py-4 px-10 rounded-lg text-lg hover:bg-white/10 transition-colors"
             >
               Get Free Consultation

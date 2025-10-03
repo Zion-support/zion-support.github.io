@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function NewContent2026MegaBanner() {
   return (
@@ -29,8 +29,7 @@ export default function NewContent2026MegaBanner() {
             </p>
             <div className="flex items-center justify-between">
               <span className="text-xs text-blue-200">15 min read</span>
-              <Link 
-                href="/blog/ai-trends-2026-future-enterprise" 
+              <Link to="/blog/ai-trends-2026-future-enterprise" 
                 className="text-white font-semibold hover:text-blue-200 transition-colors"
               >
                 Read More →
@@ -49,8 +48,7 @@ export default function NewContent2026MegaBanner() {
             </p>
             <div className="flex items-center justify-between">
               <span className="text-xs text-blue-200">12 min read</span>
-              <Link 
-                href="/case-studies/enterprise-ai-transformation-mega-success-2026" 
+              <Link to="/case-studies/enterprise-ai-transformation-mega-success-2026" 
                 className="text-white font-semibold hover:text-green-200 transition-colors"
               >
                 Read Case Study →
@@ -69,8 +67,7 @@ export default function NewContent2026MegaBanner() {
             </p>
             <div className="flex items-center justify-between">
               <span className="text-xs text-blue-200">Interactive</span>
-              <Link 
-                href="/tools/ai-roi-calculator" 
+              <Link to="/tools/ai-roi-calculator" 
                 className="text-white font-semibold hover:text-purple-200 transition-colors"
               >
                 Calculate ROI →
@@ -87,14 +84,12 @@ export default function NewContent2026MegaBanner() {
               Join thousands of forward-thinking organizations that are already implementing these breakthrough AI technologies. Get started with a free consultation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="/contact" 
+              <Link to="/contact" 
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
               >
                 Get Free Consultation
               </Link>
-              <Link 
-                href="/blog" 
+              <Link to="/blog" 
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
               >
                 Explore All Content

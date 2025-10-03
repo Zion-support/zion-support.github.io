@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 const February2025QuantumAIBreakthroughBanner: React.FC = () => {
   return (
@@ -60,20 +60,17 @@ const February2025QuantumAIBreakthroughBanner: React.FC = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
-            <Link
-              href="/content/blog/ai-2025-february-quantum-ai-breakthrough-enterprise-transformation"
+            <Link to="/content/blog/ai-2025-february-quantum-ai-breakthrough-enterprise-transformation"
               className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
               📖 Read Full Article
             </Link>
-            <Link
-              href="/content/case-studies/ai-2025-february-quantum-ai-breakthrough-50-billion-success"
+            <Link to="/content/case-studies/ai-2025-february-quantum-ai-breakthrough-50-billion-success"
               className="bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-600 hover:to-indigo-700 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
               💰 View $50B Success Story
             </Link>
-            <Link
-              href="/services/quantum-ai-consultation"
+            <Link to="/services/quantum-ai-consultation"
               className="bg-gradient-to-r from-green-500 to-teal-600 hover:from-green-600 hover:to-teal-700 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
               🚀 Start Your Journey

@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 const January2026QuantumConsciousnessBIBanner = () => {
   return (
@@ -49,14 +49,12 @@ const January2026QuantumConsciousnessBIBanner = () => {
 
             {/* CTA buttons */}
             <div className="flex flex-wrap gap-4">
-              <Link 
-                href="/blog/ai-2026-january-quantum-consciousness-bi-breakthrough"
+              <Link to="/blog/ai-2026-january-quantum-consciousness-bi-breakthrough"
                 className="bg-gradient-to-r from-violet-500 to-cyan-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-violet-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105"
               >
                 Read Full Article
               </Link>
-              <Link 
-                href="/services/quantum-consciousness-bi"
+              <Link to="/services/quantum-consciousness-bi"
                 className="border border-violet-500 text-violet-300 px-6 py-3 rounded-lg font-semibold hover:bg-violet-500/10 transition-all duration-300"
               >
                 Explore Solutions

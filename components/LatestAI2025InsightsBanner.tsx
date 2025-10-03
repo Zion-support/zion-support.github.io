@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function LatestAI2025InsightsBanner() {
   return (
@@ -34,8 +34,7 @@ export default function LatestAI2025InsightsBanner() {
             </p>
             <div className="flex items-center justify-between">
               <div className="text-sm text-gray-500">Featured Article</div>
-              <Link
-                href="/blog/ai-2025-enterprise-automation-revolution"
+              <Link to="/blog/ai-2025-enterprise-automation-revolution"
                 className="text-cyan-600 font-semibold hover:text-cyan-700 transition-colors"
               >
                 Read More →
@@ -58,8 +57,7 @@ export default function LatestAI2025InsightsBanner() {
             </p>
             <div className="flex items-center justify-between">
               <div className="text-sm text-gray-500">New Guide</div>
-              <Link
-                href="/blog/ai-2025-multimodal-integration-guide"
+              <Link to="/blog/ai-2025-multimodal-integration-guide"
                 className="text-purple-600 font-semibold hover:text-purple-700 transition-colors"
               >
                 Read More →
@@ -82,8 +80,7 @@ export default function LatestAI2025InsightsBanner() {
             </p>
             <div className="flex items-center justify-between">
               <div className="text-sm text-gray-500">Case Study</div>
-              <Link
-                href="/case-studies/ai-2025-enterprise-transformation-success"
+              <Link to="/case-studies/ai-2025-enterprise-transformation-success"
                 className="text-green-600 font-semibold hover:text-green-700 transition-colors"
               >
                 Read More →
@@ -116,8 +113,7 @@ export default function LatestAI2025InsightsBanner() {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/services"
+            <Link to="/services"
               className="bg-white text-indigo-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors shadow-lg"
             >
               Explore AI Services

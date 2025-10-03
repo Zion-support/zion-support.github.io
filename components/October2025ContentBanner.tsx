@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function October2025ContentBanner() {
   return (
@@ -35,7 +35,7 @@ export default function October2025ContentBanner() {
           </h3>
           <div className="grid md:grid-cols-3 gap-6 mb-8">
             {/* Blog 1 */}
-            <Link href="/blog/ai-orchestration-mega-agents-2025" className="group">
+            <Link to="/blog/ai-orchestration-mega-agents-2025" className="group">
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 shadow-2xl hover:shadow-3xl transition-all transform hover:-translate-y-2 hover:bg-white/20 border border-white/20">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-14 h-14 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center text-2xl shadow-lg">
@@ -64,7 +64,7 @@ export default function October2025ContentBanner() {
             </Link>
 
             {/* Blog 2 */}
-            <Link href="/blog/ai-enterprise-supergraph-2025" className="group">
+            <Link to="/blog/ai-enterprise-supergraph-2025" className="group">
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 shadow-2xl hover:shadow-3xl transition-all transform hover:-translate-y-2 hover:bg-white/20 border border-white/20">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-14 h-14 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center text-2xl shadow-lg">
@@ -93,7 +93,7 @@ export default function October2025ContentBanner() {
             </Link>
 
             {/* Blog 3 */}
-            <Link href="/blog/ai-continuous-optimization-engine-2025" className="group">
+            <Link to="/blog/ai-continuous-optimization-engine-2025" className="group">
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 shadow-2xl hover:shadow-3xl transition-all transform hover:-translate-y-2 hover:bg-white/20 border border-white/20">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-14 h-14 bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl flex items-center justify-center text-2xl shadow-lg">
@@ -131,7 +131,7 @@ export default function October2025ContentBanner() {
           </h3>
           <div className="grid md:grid-cols-2 gap-6">
             {/* Case Study 1 */}
-            <Link href="/case-studies/quantum-pharma-ai-breakthrough-2025" className="group">
+            <Link to="/case-studies/quantum-pharma-ai-breakthrough-2025" className="group">
               <div className="bg-gradient-to-br from-pink-600/20 to-purple-600/20 backdrop-blur-sm rounded-xl p-8 shadow-2xl hover:shadow-3xl transition-all transform hover:-translate-y-2 border-2 border-pink-400/30 hover:border-pink-400">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-16 h-16 bg-gradient-to-br from-pink-500 to-purple-500 rounded-xl flex items-center justify-center text-3xl shadow-lg">
@@ -169,7 +169,7 @@ export default function October2025ContentBanner() {
             </Link>
 
             {/* Case Study 2 */}
-            <Link href="/case-studies/energy-giant-autonomous-grid-optimization-2025" className="group">
+            <Link to="/case-studies/energy-giant-autonomous-grid-optimization-2025" className="group">
               <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm rounded-xl p-8 shadow-2xl hover:shadow-3xl transition-all transform hover:-translate-y-2 border-2 border-cyan-400/30 hover:border-cyan-400">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center text-3xl shadow-lg">
@@ -218,14 +218,12 @@ export default function October2025ContentBanner() {
             design a custom solution that delivers measurable business value.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link 
-              href="/contact" 
+            <Link to="/contact" 
               className="bg-purple-900 text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-purple-800 transition-all transform hover:scale-105 shadow-xl"
             >
               🚀 Schedule Free Consultation
             </Link>
-            <Link 
-              href="/services/ai-business-intelligence-2025" 
+            <Link to="/services/ai-business-intelligence-2025" 
               className="bg-white text-purple-900 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all transform hover:scale-105 shadow-xl"
             >
               Explore AI Services →

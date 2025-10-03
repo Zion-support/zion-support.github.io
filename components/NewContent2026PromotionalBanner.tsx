@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function NewContent2026PromotionalBanner() {
   return (
@@ -28,14 +28,12 @@ export default function NewContent2026PromotionalBanner() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Link
-                href="/blog/ai-2026-autonomous-enterprise-systems"
+              <Link to="/blog/ai-2026-autonomous-enterprise-systems"
                 className="bg-white text-purple-600 px-6 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors shadow-lg"
               >
                 🧠 Read Autonomous AI Article
               </Link>
-              <Link
-                href="/case-studies/ai-2026-mega-transformation-success-story"
+              <Link to="/case-studies/ai-2026-mega-transformation-success-story"
                 className="border-2 border-white text-white px-6 py-3 rounded-lg font-bold hover:bg-white/10 transition-colors"
               >
                 💰 View $100M ROI Story

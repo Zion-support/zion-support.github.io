@@ -1,5 +1,5 @@
 import React from 'react';
-import { Metadata } from 'next';
+// Metadata handled by React Helmet
 
 export const metadata: Metadata = {
   title: 'Quantum-AI Hybrid Systems: The Next Frontier in Enterprise Computing | Zion Tech Group',

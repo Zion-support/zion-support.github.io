@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function AI2026QuantumConsciousnessRevolutionBanner() {
   return (
@@ -31,7 +31,7 @@ export default function AI2026QuantumConsciousnessRevolutionBanner() {
         
         <div className="grid md:grid-cols-3 gap-8 mb-12">
           {/* Quantum Consciousness Breakthrough */}
-          <Link href="/blog/ai-2026-quantum-consciousness-breakthrough" className="group">
+          <Link to="/blog/ai-2026-quantum-consciousness-breakthrough" className="group">
             <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:bg-white/15 transition-all transform hover:-translate-y-2 hover:shadow-2xl">
               <div className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -66,7 +66,7 @@ export default function AI2026QuantumConsciousnessRevolutionBanner() {
           </Link>
 
           {/* Consciousness Fusion Breakthrough */}
-          <Link href="/blog/ai-2026-consciousness-fusion-breakthrough" className="group">
+          <Link to="/blog/ai-2026-consciousness-fusion-breakthrough" className="group">
             <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:bg-white/15 transition-all transform hover:-translate-y-2 hover:shadow-2xl">
               <div className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -101,7 +101,7 @@ export default function AI2026QuantumConsciousnessRevolutionBanner() {
           </Link>
 
           {/* Quantum Success Story */}
-          <Link href="/case-studies/ai-2026-quantum-consciousness-mega-success" className="group">
+          <Link to="/case-studies/ai-2026-quantum-consciousness-mega-success" className="group">
             <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 hover:bg-white/15 transition-all transform hover:-translate-y-2 hover:shadow-2xl">
               <div className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-green-400 to-emerald-400 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -146,8 +146,7 @@ export default function AI2026QuantumConsciousnessRevolutionBanner() {
               Join the Fortune 100 companies achieving breakthrough results with revolutionary quantum consciousness AI
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
+              <Link to="/contact"
                 className="bg-white text-cyan-600 px-10 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors shadow-xl"
               >
                 Schedule Quantum Demo

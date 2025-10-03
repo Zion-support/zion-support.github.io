@@ -1,15 +1,31 @@
 User-agent: *
 Allow: /
 
+# Sitemap
 Sitemap: https://ziontechgroup.com/sitemap.xml
 
-# AI and IT Services Content
-Allow: /blog/
-Allow: /case-studies/
-Allow: /services/
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
 
-# Disallow admin and private areas
+# Disallow admin and private areas (if any exist in the future)
 Disallow: /admin/
+Disallow: /private/
 Disallow: /api/
 Disallow: /_next/
-Disallow: /private/
+Disallow: /_static/
+
+# Allow important pages
+Allow: /
+Allow: /about
+Allow: /portfolio
+Allow: /contact
+Allow: /services/
+Allow: /solutions/
+Allow: /blog/
+Allow: /case-studies/
+Allow: /guides/
+Allow: /content-hub/
+Allow: /privacy
+Allow: /terms
+Allow: /security
+Allow: /sitemap

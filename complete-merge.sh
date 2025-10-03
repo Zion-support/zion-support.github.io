@@ -1,31 +1,33 @@
 #!/bin/bash
+set -e
 
-echo "🚀 Completing the current merge..."
+echo "=== Complete Merge and PR Resolution Script ==="
+echo ""
 
-# Check current status
-echo "📍 Current git status:"
-git status
+# Step 1: Resolve current merge conflicts
+echo "Step 1: Resolving merge conflicts in current branch..."
+git add -A
+git commit -m "Resolve merge conflicts - keep new 2026 AI breakthrough content" || echo "No conflicts to commit"
 
-# Check if there are any unmerged files
-unmerged_files=$(git status --porcelain | grep "^UU" | awk '{print $2}')
+# Step 2: Merge current branch into main
+echo ""
+echo "Step 2: Merging current branch into main..."
+CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
+echo "Current branch: $CURRENT_BRANCH"
 
-if [ -n "$unmerged_files" ]; then
-    echo "⚠️  Found unmerged files:"
-    echo "$unmerged_files"
-    
-    # Resolve conflicts by keeping our changes
-    for file in $unmerged_files; do
-        echo "🔧 Resolving conflicts in: $file"
-        git checkout --ours "$file"
-        git add "$file"
-    done
-    
-    # Complete the merge
-    echo "✅ Completing merge..."
-    git commit -m "Merge remote main into feature branch - conflicts resolved"
-else
-    echo "✅ No conflicts found, completing merge..."
-    git commit -m "Merge remote main into feature branch"
-fi
+# Switch to main and merge
+git checkout main
+git pull origin main --no-edit || echo "Already up to date"
+git merge $CURRENT_BRANCH --no-edit -m "Merge $CURRENT_BRANCH: Add January and February 2026 AI breakthrough content"
 
-echo "🎉 Merge completed successfully!"
+# Step 3: Push to main
+echo ""
+echo "Step 3: Pushing to main branch..."
+git push origin main
+
+echo ""
+echo "=== Merge Complete! ==="
+echo "Next steps:"
+echo "1. Check GitHub for any remaining open PRs"
+echo "2. Merge them through GitHub UI or CLI"
+echo ""

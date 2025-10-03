@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function January2026AdaptiveNeuralArchitecturesBanner() {
   return (
@@ -48,20 +48,17 @@ export default function January2026AdaptiveNeuralArchitecturesBanner() {
           
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Link 
-              href="/blog/ai-2026-adaptive-neural-architectures-breakthrough" 
+            <Link to="/blog/ai-2026-adaptive-neural-architectures-breakthrough" 
               className="bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
             >
               Read Full Breakthrough →
             </Link>
-            <Link 
-              href="/case-studies/ai-2026-adaptive-neural-architectures-15-billion-success" 
+            <Link to="/case-studies/ai-2026-adaptive-neural-architectures-15-billion-success" 
               className="bg-gradient-to-r from-indigo-500 to-blue-600 hover:from-indigo-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 transform hover:-translate-y-1"
             >
               View $15.2B Success Story →
             </Link>
-            <Link 
-              href="/contact" 
+            <Link to="/contact" 
               className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               Get Implementation Guide

@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function January2026QuantumNeuralConsensusBreakthroughBanner() {
   return (
@@ -59,8 +59,7 @@ export default function January2026QuantumNeuralConsensusBreakthroughBanner() {
               <span className="bg-indigo-500/20 px-3 py-1 rounded-full text-indigo-300 text-sm">Neural Networks</span>
               <span className="bg-blue-500/20 px-3 py-1 rounded-full text-blue-300 text-sm">Multi-Agent AI</span>
             </div>
-            <Link 
-              href="/blog/ai-2026-january-quantum-neural-consensus-breakthrough"
+            <Link to="/blog/ai-2026-january-quantum-neural-consensus-breakthrough"
               className="inline-flex items-center bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50"
             >
               Read Technical Deep Dive →
@@ -82,8 +81,7 @@ export default function January2026QuantumNeuralConsensusBreakthroughBanner() {
               <span className="bg-emerald-500/20 px-3 py-1 rounded-full text-emerald-300 text-sm">Fortune 500</span>
               <span className="bg-teal-500/20 px-3 py-1 rounded-full text-teal-300 text-sm">$2.8B Success</span>
             </div>
-            <Link 
-              href="/case-studies/fortune-500-quantum-neural-consensus-2-8b-success"
+            <Link to="/case-studies/fortune-500-quantum-neural-consensus-2-8b-success"
               className="inline-flex items-center bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50"
             >
               View Success Story →
@@ -100,14 +98,12 @@ export default function January2026QuantumNeuralConsensusBreakthroughBanner() {
             Join leading enterprises in leveraging this revolutionary technology for unprecedented operational excellence and business value creation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/services/quantum-neural-consensus-implementation" 
+            <Link to="/services/quantum-neural-consensus-implementation" 
               className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-3 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50"
             >
               Explore Implementation Services
             </Link>
-            <Link 
-              href="/contact" 
+            <Link to="/contact" 
               className="border-2 border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white font-bold py-3 px-8 rounded-xl transition-all duration-300"
             >
               Schedule Consultation
@@ -117,7 +113,7 @@ export default function January2026QuantumNeuralConsensusBreakthroughBanner() {
 
         {/* Additional Resources */}
         <div className="mt-12 grid md:grid-cols-3 gap-6">
-          <Link href="/blog/ai-2026-autonomous-enterprise-operations" className="group">
+          <Link to="/blog/ai-2026-autonomous-enterprise-operations" className="group">
             <div className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-blue-500/50 transition-all duration-300 text-center">
               <div className="text-4xl mb-4">🏭</div>
               <h4 className="text-lg font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">
@@ -129,7 +125,7 @@ export default function January2026QuantumNeuralConsensusBreakthroughBanner() {
             </div>
           </Link>
           
-          <Link href="/services/enterprise-ai-transformation" className="group">
+          <Link to="/services/enterprise-ai-transformation" className="group">
             <div className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-emerald-500/50 transition-all duration-300 text-center">
               <div className="text-4xl mb-4">🚀</div>
               <h4 className="text-lg font-bold text-white mb-2 group-hover:text-emerald-400 transition-colors">
@@ -141,7 +137,7 @@ export default function January2026QuantumNeuralConsensusBreakthroughBanner() {
             </div>
           </Link>
           
-          <Link href="/case-studies" className="group">
+          <Link to="/case-studies" className="group">
             <div className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300 text-center">
               <div className="text-4xl mb-4">📊</div>
               <h4 className="text-lg font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">

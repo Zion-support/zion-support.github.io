@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function AINeuromorphicRevolutionBanner() {
   return (
@@ -44,14 +44,12 @@ export default function AINeuromorphicRevolutionBanner() {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link 
-                href="/blog/ai-neuromorphic-enterprise-computing-2026"
+              <Link to="/blog/ai-neuromorphic-enterprise-computing-2026"
                 className="bg-white text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-200 text-center"
               >
                 Explore Technology
               </Link>
-              <Link 
-                href="/case-studies/ai-neuromorphic-transformation-mega-success-2026"
+              <Link to="/case-studies/ai-neuromorphic-transformation-mega-success-2026"
                 className="bg-white/20 backdrop-blur-sm border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/30 transition-all duration-200 text-center"
               >
                 See $200M ROI Case Study

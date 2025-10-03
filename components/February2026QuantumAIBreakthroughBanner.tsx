@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 const February2026QuantumAIBreakthroughBanner: React.FC = () => {
   return (
@@ -43,15 +43,13 @@ const February2026QuantumAIBreakthroughBanner: React.FC = () => {
           </div>
           
           <div className="flex flex-col gap-3">
-            <Link 
-              href="/blog/ai-2026-quantum-enterprise-automation-breakthrough"
+            <Link to="/blog/ai-2026-quantum-enterprise-automation-breakthrough"
               className="bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-black font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
               Read Full Breakthrough →
             </Link>
             
-            <Link 
-              href="/case-studies/fortune-500-quantum-ai-transformation-success-story"
+            <Link to="/case-studies/fortune-500-quantum-ai-transformation-success-story"
               className="bg-white/20 hover:bg-white/30 text-white font-semibold py-2 px-4 rounded-lg transition-all duration-300 border border-white/30 hover:border-white/50"
             >
               View $12.4B Success Story

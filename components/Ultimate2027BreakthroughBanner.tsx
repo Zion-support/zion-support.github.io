@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function Ultimate2027BreakthroughBanner() {
   return (
@@ -108,14 +108,12 @@ export default function Ultimate2027BreakthroughBanner() {
 
         <div className="text-center">
           <div className="inline-flex flex-col sm:flex-row gap-6">
-            <Link
-              href="/blog/ai-2027-meta-cognitive-superintelligence-breakthrough"
+            <Link to="/blog/ai-2027-meta-cognitive-superintelligence-breakthrough"
               className="inline-block bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-10 py-5 rounded-xl font-bold text-xl hover:from-purple-700 hover:to-indigo-700 transition-all shadow-2xl hover:shadow-purple-500/25 hover:scale-105"
             >
               Explore Meta-Cognitive AI →
             </Link>
-            <Link
-              href="/case-studies/ai-2027-meta-cognitive-superintelligence-success"
+            <Link to="/case-studies/ai-2027-meta-cognitive-superintelligence-success"
               className="inline-block bg-gradient-to-r from-green-600 to-emerald-600 text-white px-10 py-5 rounded-xl font-bold text-xl hover:from-green-700 hover:to-emerald-700 transition-all shadow-2xl hover:shadow-green-500/25 hover:scale-105"
             >
               View $6.8B Success Story →

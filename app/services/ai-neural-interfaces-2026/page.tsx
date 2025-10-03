@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'AI Neural Interfaces 2026 Service | Direct Brain-Computer Integration | Zion Tech Group',
@@ -17,7 +17,7 @@ export default function AINeuralInterfacesService() {
   return (
     <div className="max-w-6xl mx-auto px-4 py-8">
       <div className="mb-8">
-        <Link href="/services" className="text-blue-600 hover:text-blue-800 mb-4 inline-block">
+        <Link to="/services" className="text-blue-600 hover:text-blue-800 mb-4 inline-block">
           ← Back to Services
         </Link>
         <div className="flex items-center gap-2 mb-4">
@@ -227,8 +227,7 @@ export default function AINeuralInterfacesService() {
               >
                 📧 Schedule Demo
               </a>
-              <Link
-                href="/case-studies/ai-neural-interface-success-2026"
+              <Link to="/case-studies/ai-neural-interface-success-2026"
                 className="block w-full text-purple-600 text-center py-2 font-semibold hover:underline"
               >
                 View Success Stories →
@@ -305,14 +304,12 @@ export default function AINeuralInterfacesService() {
           business results and operational excellence.
         </p>
         <div className="flex gap-4">
-          <Link
-            href="/services"
+          <Link to="/services"
             className="text-purple-600 hover:text-purple-800 font-semibold"
           >
             View All Services →
           </Link>
-          <Link
-            href="/case-studies"
+          <Link to="/case-studies"
             className="text-blue-600 hover:text-blue-800 font-semibold"
           >
             View Success Stories →

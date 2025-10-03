@@ -1,5 +1,5 @@
 import React { useState } from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { useRouter } from 'next/router';
 import {
   Home,

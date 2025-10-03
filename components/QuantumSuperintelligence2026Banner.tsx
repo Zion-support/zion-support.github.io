@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function QuantumSuperintelligence2026Banner() {
   return (
@@ -56,20 +56,17 @@ export default function QuantumSuperintelligence2026Banner() {
 
           {/* Call to Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
-            <Link 
-              href="/blog/ai-2026-quantum-superintelligence-breakthrough" 
+            <Link to="/blog/ai-2026-quantum-superintelligence-breakthrough" 
               className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-5 px-10 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1 text-xl"
             >
               Explore Quantum Superintelligence →
             </Link>
-            <Link 
-              href="/case-studies/ai-2026-quantum-superintelligence-10-billion-success" 
+            <Link to="/case-studies/ai-2026-quantum-superintelligence-10-billion-success" 
               className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-5 px-10 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1 text-xl"
             >
               View $10.2B Success Story →
             </Link>
-            <Link 
-              href="/contact" 
+            <Link to="/contact" 
               className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-5 px-10 rounded-xl transition-all duration-300 text-xl"
             >
               Get Quantum Consultation

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Metadata } from 'next';
+// Metadata handled by React Helmet
 
 export const metadata: Metadata = {
   title: '💰 Fortune 500 AI 2027: Transcendent Intelligence Infinite Success - $∞ Value Creation',

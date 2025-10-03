@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export default function January2026RevolutionaryContentMegaBanner() {
   return (
@@ -43,10 +43,10 @@ export default function January2026RevolutionaryContentMegaBanner() {
             <div className="text-2xl font-extrabold text-blue-400 mb-2">$5.2B</div>
             <div className="text-blue-300 text-xs mb-4">Proven Value Creation</div>
             <div className="flex flex-col gap-2">
-              <Link href="/blog/ai-2026-autonomous-cloud-orchestration-breakthrough" className="text-blue-300 text-sm font-semibold group-hover:text-blue-200 hover:underline">
+              <Link to="/blog/ai-2026-autonomous-cloud-orchestration-breakthrough" className="text-blue-300 text-sm font-semibold group-hover:text-blue-200 hover:underline">
                 Read Breakthrough →
               </Link>
-              <Link href="/case-studies/ai-2026-autonomous-cloud-orchestration-5-billion-success" className="text-green-300 text-sm font-semibold group-hover:text-green-200 hover:underline">
+              <Link to="/case-studies/ai-2026-autonomous-cloud-orchestration-5-billion-success" className="text-green-300 text-sm font-semibold group-hover:text-green-200 hover:underline">
                 View $5.2B Success →
               </Link>
             </div>
@@ -63,10 +63,10 @@ export default function January2026RevolutionaryContentMegaBanner() {
             <div className="text-2xl font-extrabold text-purple-400 mb-2">$8.5B</div>
             <div className="text-purple-300 text-xs mb-4">Global Success Value</div>
             <div className="flex flex-col gap-2">
-              <Link href="/blog/ai-2026-quantum-neural-optimization-revolution" className="text-purple-300 text-sm font-semibold group-hover:text-purple-200 hover:underline">
+              <Link to="/blog/ai-2026-quantum-neural-optimization-revolution" className="text-purple-300 text-sm font-semibold group-hover:text-purple-200 hover:underline">
                 Read Revolution →
               </Link>
-              <Link href="/case-studies/ai-2026-quantum-neural-optimization-8-billion-success" className="text-green-300 text-sm font-semibold group-hover:text-green-200 hover:underline">
+              <Link to="/case-studies/ai-2026-quantum-neural-optimization-8-billion-success" className="text-green-300 text-sm font-semibold group-hover:text-green-200 hover:underline">
                 View $8.5B Success →
               </Link>
             </div>
@@ -83,10 +83,10 @@ export default function January2026RevolutionaryContentMegaBanner() {
             <div className="text-2xl font-extrabold text-green-400 mb-2">$13.7B</div>
             <div className="text-green-300 text-xs mb-4">Total Proven Value</div>
             <div className="flex flex-col gap-2">
-              <Link href="/contact" className="text-green-300 text-sm font-semibold group-hover:text-green-200 hover:underline">
+              <Link to="/contact" className="text-green-300 text-sm font-semibold group-hover:text-green-200 hover:underline">
                 Get AI Suite →
               </Link>
-              <Link href="/services" className="text-blue-300 text-sm font-semibold group-hover:text-blue-200 hover:underline">
+              <Link to="/services" className="text-blue-300 text-sm font-semibold group-hover:text-blue-200 hover:underline">
                 View All Services →
               </Link>
             </div>
@@ -123,20 +123,17 @@ export default function January2026RevolutionaryContentMegaBanner() {
         {/* Call to Action */}
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Link 
-              href="/contact" 
+            <Link to="/contact" 
               className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
             >
               Transform Your Business Today
             </Link>
-            <Link 
-              href="/services" 
+            <Link to="/services" 
               className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
             >
               Explore AI Solutions →
             </Link>
-            <Link 
-              href="/case-studies" 
+            <Link to="/case-studies" 
               className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               View All Success Stories
