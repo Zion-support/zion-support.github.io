@@ -1,6 +1,5 @@
 import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { 
   Server, 
   Shield, 
@@ -47,12 +46,6 @@ import {
   GraduationCap,
   Truck
 } from 'lucide-react';
-
-export const metadata: Metadata = {
-  title: 'Comprehensive IT Services - Zion Tech Group | Professional IT Solutions & Support',
-  description: 'Complete IT services including cloud migration, cybersecurity, infrastructure management, digital transformation, software development, and 24/7 support with industry expertise.',
-  keywords: 'IT services, cloud migration, cybersecurity, infrastructure management, digital transformation, software development, IT support, DevOps, network management',
-};
 
 export default function ComprehensiveITServicesPage() {
   return (

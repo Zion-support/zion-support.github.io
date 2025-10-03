@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link ' from 'react-router-dom';
-import { Helmet ' from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 const RealTimeCognitiveAutomationPage: React.FC = () => {
   const automationFeatures = [
     {
@@ -231,6 +231,6 @@ const RealTimeCognitiveAutomationPage: React.FC = () => {
       </div>
     </>
   );
-';
+};
 
 export default RealTimeCognitiveAutomationPage;

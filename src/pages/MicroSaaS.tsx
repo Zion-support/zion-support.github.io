@@ -1,17 +1,17 @@
 import React from 'react';
-import { Helmet ' from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async';
 const MicroSaaS: React.FC = () => {
   const products = [
     {
       name: 'Email Deliverability Optimizer',
       price: '$149 - $799/mo',
       features: ['Reputation monitoring', 'Warm-up automation', 'SPF/DKIM/DMARC assistant', 'Seed testing'],
-      link: 'https://ziontechgroup.com/services/micro-saas',
+      link: 'https://ziontechgroup.com/services/micro-saas},
     {
       name: 'Sales Playbook Copilot',
       price: '$49 - $299/user/mo',
       features: ['Persona modeling', 'Sequence experiments', 'CRM sync', 'Deal risk alerts'],
-      link: 'https://ziontechgroup.com/services/micro-saas',
+      link: 'https://ziontechgroup.com/services/micro-saas},
     {
       name: 'Edge AI Inference Platform',
       price: '$499 - $2,499/mo',
@@ -37,7 +37,7 @@ const MicroSaaS: React.FC = () => {
                 </ul>
                 <a className="text-blue-600 hover:underline" href="/micro-saas">Learn more →</a>
               </div>
-            ))'},
+            ))}
           </div>
           <div className="mt-10 text-sm text-gray-600">
             <p>
@@ -48,7 +48,7 @@ const MicroSaaS: React.FC = () => {
       </section>
     </>
   );
-';
+};
 
 export default MicroSaaS;
 ;

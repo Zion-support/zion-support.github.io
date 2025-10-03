@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link ' from 'react-router-dom';
-import { Helmet ' from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 ;
 const HomeLite: React.FC = () => {
   return (
@@ -60,7 +60,7 @@ const HomeLite: React.FC = () => {
       </section>
     </div>
   );
-';
+};
 
 export default HomeLite;
 

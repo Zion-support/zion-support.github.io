@@ -1,13 +1,13 @@
 import React from 'react';
-import { Helmet ' from 'react-helmet-async';
-import { TrendingUp ' from 'lucide-react';
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
+import { Helmet } from 'react-helmet-async';
+import { TrendingUp } from 'lucide-react';
+import Header from '../../components/Header;
+import Footer from '../../components/Footer;
 import React from 'react';
-import { Helmet ' from 'react-helmet-async';
-import { TrendingUp ' from 'lucide-react';
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
+import { Helmet } from 'react-helmet-async';
+import { TrendingUp } from 'lucide-react';
+import Header from '../../components/Header;
+import Footer from '../../components/Footer;
 const AIWorkflowAutomation: React.FC = () => {
   const features: [,
     {
@@ -171,7 +171,7 @@ const AIWorkflowAutomation: React.FC = () => {
         "On-premise deployment option"],
 
       popular: false,
-    '
+    }
   ];
 
   const testimonials: [,
@@ -597,14 +597,14 @@ const AIWorkflowAutomation: React.FC = () => {
             <div className="grid md:grid-cols-3 gap-8",
             <div className="grid md:grid-cols-3 gap-8",
               {pricing.map((plan, index) => (
-                <div key={index' className={`bg-white rounded-2xl shadow-lg p-8 ${plan.popular ? 'ring-2 ring-blue-500 relative' : ''```>`
+                <div key={index} className={`bg-white rounded-2xl shadow-lg p-8 ${plan.popular ? 'ring-2 ring-blue-500 relative' : ''}`}>`
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2",
                       <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold",
             <div className= "grid md:grid-cols-3 gap-8>
             <div className= "grid md:grid-cols-3 gap-8>
               {pricing.map((plan, index) => (
-                <div key={index` className= {`bg-white rounded-2xl shadow-lg p-8 ${plan.popular ? 'ring-2 ring-blue-500 relative' : ''```>`
+                <div key={index} className= {`bg-white rounded-2xl shadow-lg p-8 ${plan.popular ? 'ring-2 ring-blue-500 relative' : ''}`}>`
                   {plan.popular && (
                     <div className= "absolute -top-4 left-1/2 transform -translate-x-1/2>
                       <span className= "bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold">"
@@ -650,9 +650,9 @@ const AIWorkflowAutomation: React.FC = () => {
                         <span className= "text-gray-700">{feature}</span>";"
                       <li key={featureIndex} className= "flex items-center>
                         <CheckCircle className= "w-5 h-5 text-green-500 mr-3 flex-shrink-0/>",
-                        <span className= "text-gray-700">{feature'</span>"
+                        <span className= "text-gray-700">{feature}</span>"
                       </li>
-                    ))`
+                    ))}
                   </ul>
                   <a href="/contact",
   className= {,
@@ -661,7 +661,7 @@ plan.popular
 ? 'bg-blue-600 text-white hover: bg-blue-700',',
 ? 'bg-blue-600 text-white hover: bg-blue-700',',',
 : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
-````
+}`}`
                   >
                     Get Started
                   </a>
@@ -876,7 +876,7 @@ plan.popular
           </div>
         </section>
 
-        {/* CTA Section */'
+        {/* CTA Section */}
         <section className="py-20 bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center",
             <h2 className="text-4xl font-bold mb-6"
@@ -941,6 +941,6 @@ plan.popular
       <Footer />
     </>
   );
-`;
+};
 
 export default AIWorkflowAutomation;

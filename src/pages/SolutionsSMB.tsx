@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet ' from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async';
 ;
 const SolutionsSMB: React.FC = () => {
   return (
@@ -17,7 +17,7 @@ const SolutionsSMB: React.FC = () => {
       </div>
     </>
   );
-';
+};
 
 export default SolutionsSMB;
 

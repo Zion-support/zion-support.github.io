@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet ' from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async';
 import {
   Award,
   CheckCircle,
@@ -13,32 +13,32 @@ import {
   Globe,
   Code,
   Zap
-' from 'lucide-react';
+} from 'lucide-react';
 const About: React.FC = () => {
   const stats = [
-    { number: '10+', label: 'Years Experience', icon: Award ',
-    { number: '500+', label: 'Projects Completed', icon: CheckCircle ',
-    { number: '50+', label: 'Happy Clients', icon: Users ',
-    { number: '99%', label: 'Client Satisfaction', icon: Star ',
+    { number: '10+', label: 'Years Experience', icon: Award },
+    { number: '500+', label: 'Projects Completed', icon: CheckCircle },
+    { number: '50+', label: 'Happy Clients', icon: Users },
+    { number: '99%', label: 'Client Satisfaction', icon: Star },
   ];
 
   const values = [
     {
       icon: Target,
       title: 'Innovation First',
-      description: 'We stay ahead of technology trends to deliver solutions that give you a competitive edge in the market.',
+      description: 'We stay ahead of technology trends to deliver solutions that give you a competitive edge in the market.},
     {
       icon: Lightbulb,
       title: 'Creative Problem Solving',
-      description: 'Our team approaches every challenge with creativity and out-of-the-box thinking to find the best solutions.',
+      description: 'Our team approaches every challenge with creativity and out-of-the-box thinking to find the best solutions.},
     {
       icon: Shield,
       title: 'Quality Assurance',
-      description: 'We maintain the highest standards of quality in all our projects, ensuring reliable and scalable solutions.',
+      description: 'We maintain the highest standards of quality in all our projects, ensuring reliable and scalable solutions.},
     {
       icon: Heart,
       title: 'Client-Centric Approach',
-      description: 'Your success is our success. We prioritize your needs and work closely with you to achieve your goals.',
+      description: 'Your success is our success. We prioritize your needs and work closely with you to achieve your goals.},
   ];
 
   const team = [
@@ -46,17 +46,17 @@ const About: React.FC = () => {
       name: 'Kleber Santos',
       role: 'CEO & Founder',
       image: '/images/team/kleber.jpg',
-      bio: 'Visionary leader with 10+ years in technology and business strategy.',
+      bio: 'Visionary leader with 10+ years in technology and business strategy.},
     {
       name: 'AI Development Team',
       role: 'Technical Experts',
       image: '/images/team/ai-team.jpg',
-      bio: 'Specialized in cutting-edge AI technologies and machine learning solutions.',
+      bio: 'Specialized in cutting-edge AI technologies and machine learning solutions.},
     {
       name: 'DevOps Engineers',
       role: 'Infrastructure Specialists',
       image: '/images/team/devops.jpg',
-      bio: 'Experts in cloud infrastructure, automation, and scalable system design.',
+      bio: 'Experts in cloud infrastructure, automation, and scalable system design.},
   ];
 
   return (
@@ -145,7 +145,7 @@ const About: React.FC = () => {
           </div>
         </section>
 
-        {/* Stats Section */"
+        {/* Stats Section */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
@@ -203,7 +203,7 @@ const About: React.FC = () => {
 
             <div className="grid md:grid-cols-3 gap-8">
               {team.map((member, index) => (
-                <div key={index' className="bg-gray-50 rounded-lg p-6 text-center">
+                <div key={index} className="bg-gray-50 rounded-lg p-6 text-center">
                   <div className="w-24 h-24 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full mx-auto mb-4 flex items-center justify-center">
                     <span className="text-white font-bold text-2xl">
                       {member.name.split(' ').map(n => n[0]).join('')}
@@ -218,7 +218,7 @@ const About: React.FC = () => {
           </div>
         </section>
 
-        {/* CTA Section */'
+        {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-700 text-white">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-4xl font-bold mb-4">
@@ -246,6 +246,6 @@ const About: React.FC = () => {
       </div>
     </>
   );
-';
+};
 
 export default About;

@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Clock, Send, CheckCircle ' from 'lucide-react';
+import React, { useState } from 'react;
+import { Mail, Phone, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
 const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -14,8 +14,8 @@ const ContactPage: React.FC = () => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
-    };,);
-  ';
+    });
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -33,11 +33,11 @@ const ContactPage: React.FC = () => {
         service: '',
         message: '});
     }, 3000);
-  };,;
+  };
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Hero Section */'
+      {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-800 text-white py-20">
         <div className="container mx-auto px-6 text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">Get In Touch</h1>
@@ -49,7 +49,7 @@ const ContactPage: React.FC = () => {
 
       <div className="container mx-auto px-6 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Contact Form */'
+          {/* Contact Form */}
           <div className="bg-white rounded-xl shadow-lg p-8">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Send us a Message</h2>
             {isSubmitted ? (
@@ -210,10 +210,10 @@ const ContactPage: React.FC = () => {
                   Send Message
                 </button>
               </form>
-            )"
+            )}
           </div>
 
-          {/* Contact Information */"
+          {/* Contact Information */}
           <div className="space-y-8">
             <div className="bg-white rounded-xl shadow-lg p-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Contact Information</h3>
@@ -292,6 +292,6 @@ const ContactPage: React.FC = () => {
       </div>
     </div>
   );
-';
+};
 
 export default ContactPage;

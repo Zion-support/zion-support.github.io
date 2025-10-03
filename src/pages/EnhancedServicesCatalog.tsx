@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet ' from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async';
 import { 
   Brain, 
   Code, 
@@ -270,7 +270,7 @@ import {
   BlueFootedBooby,
   PeruvianBooby,
   AbbottBooby
-' from 'lucide-react';
+} from 'lucide-react';
 export default function EnhancedServicesCatalog() {
   const title = 'Enhanced Services Catalog — Zion Tech Group;
   const description = 'Comprehensive catalog of micro SaaS, IT, and AI services with transparent pricing, proven ROI, and fast delivery.;
@@ -289,7 +289,7 @@ export default function EnhancedServicesCatalog() {
           features: ['AI-generated subject lines', 'A/B testing', 'Performance analytics'],',
           benefits: ['23% increase in open rates', '40% improvement in CTR'],',
           marketSize: '$7.5B email marketing',',
-          roi: '400% ROI in 3 months',
+          roi: '400% ROI in 3 months},
         {
           name: 'Smart Meeting Analytics',',
           price: '$99 - $499/month',',
@@ -297,7 +297,7 @@ export default function EnhancedServicesCatalog() {
           features: ['Real-time transcription', 'Action item extraction', 'Productivity dashboards'],',
           benefits: ['35% reduction in meeting waste', '50% improvement in follow-ups'],',
           marketSize: '$4.2B meeting software',',
-          roi: '300% ROI in 6 months',
+          roi: '300% ROI in 6 months},
         {
           name: 'Healthcare Appointment Intelligence',',
           price: '$199 - $999/month',',
@@ -305,7 +305,7 @@ export default function EnhancedServicesCatalog() {
           features: ['Smart scheduling', 'No-show prediction', 'Revenue optimization'],',
           benefits: ['28% reduction in no-shows', '15% revenue increase'],',
           marketSize: '$3.8B healthcare scheduling',',
-          roi: '250% ROI in 4 months',
+          roi: '250% ROI in 4 months},
         {
           name: 'AI Content Localization',',
           price: '$149 - $799/month',',
@@ -313,7 +313,7 @@ export default function EnhancedServicesCatalog() {
           features: ['Neural translation', 'Cultural adaptation', 'SEO optimization'],',
           benefits: ['40% faster global deployment', '60% cost reduction'],',
           marketSize: '$56B localization',',
-          roi: '500% ROI in 6 months',
+          roi: '500% ROI in 6 months},
         {
           name: 'Smart Inventory Forecasting',',
           price: '$299 - $1,499/month',',
@@ -321,9 +321,9 @@ export default function EnhancedServicesCatalog() {
           features: ['95% accurate forecasting', 'Automated reordering', 'Cost optimization'],',
           benefits: ['25% reduction in stockouts', '20% cost savings'],',
           marketSize: '$2.1B inventory management',',
-          roi: '400% ROI in 5 months'},
+          roi: '400% ROI in 5 months}
       ]
-    ',
+    },
     {
       id: 'advanced-ai',',
       title: 'Advanced AI Services',',
@@ -338,7 +338,7 @@ export default function EnhancedServicesCatalog() {
           features: ['Real-time monitoring', 'Automated reporting', 'Risk assessment'],',
           benefits: ['60% cost reduction', '90% fewer violations'],',
           marketSize: '$12.3B compliance software',',
-          roi: '600% ROI in 8 months',
+          roi: '600% ROI in 8 months},
         {
           name: 'Smart Lead Scoring Platform',',
           price: '$199 - $999/month',',
@@ -346,7 +346,7 @@ export default function EnhancedServicesCatalog() {
           features: ['Behavioral scoring', 'Predictive qualification', 'Automated nurturing'],',
           benefits: ['45% conversion improvement', '30% shorter sales cycles'],',
           marketSize: '$6.8B sales automation',',
-          roi: '350% ROI in 4 months',
+          roi: '350% ROI in 4 months},
         {
           name: 'AI Voice Analytics Platform',',
           price: '$399 - $2,499/month',',
@@ -354,7 +354,7 @@ export default function EnhancedServicesCatalog() {
           features: ['Sentiment analysis', 'Call quality monitoring', 'Compliance tracking'],',
           benefits: ['50% service quality improvement', '35% complaint reduction'],',
           marketSize: '$2.8B voice analytics',',
-          roi: '400% ROI in 6 months',
+          roi: '400% ROI in 6 months},
         {
           name: 'Predictive Maintenance AI',',
           price: '$1,200 - $6,000/month',',
@@ -362,7 +362,7 @@ export default function EnhancedServicesCatalog() {
           features: ['IoT sensor analysis', 'Failure prediction', 'Maintenance optimization'],',
           benefits: ['40% downtime reduction', '25% maintenance cost savings'],',
           marketSize: '$4.5B predictive maintenance',',
-          roi: '500% ROI in 12 months',
+          roi: '500% ROI in 12 months},
         {
           name: 'AI Content Moderation Suite',',
           price: '$299 - $1,999/month',',
@@ -370,9 +370,9 @@ export default function EnhancedServicesCatalog() {
           features: ['Multi-modal analysis', 'Real-time moderation', 'False positive reduction'],',
           benefits: ['70% cost reduction', '90% safety improvement'],',
           marketSize: '$3.2B content moderation',',
-          roi: '450% ROI in 5 months'},
+          roi: '450% ROI in 5 months}
       ]
-    ',
+    },
     {
       id: 'it-infrastructure',',
       title: 'IT Infrastructure Services',',
@@ -387,7 +387,7 @@ export default function EnhancedServicesCatalog() {
           features: ['Identity management', 'Micro-segmentation', 'Continuous monitoring'],',
           benefits: ['99.9% breach reduction', '50% overhead reduction'],',
           marketSize: '$31.8B zero trust security',',
-          roi: '800% ROI in 18 months',
+          roi: '800% ROI in 18 months},
         {
           name: 'Cloud Migration & Modernization',',
           price: '$8,000 - $45,000/month',',
@@ -395,7 +395,7 @@ export default function EnhancedServicesCatalog() {
           features: ['Application modernization', 'Containerization', 'Cost optimization'],',
           benefits: ['40% cost reduction', '60% performance improvement'],',
           marketSize: '$445B cloud computing',',
-          roi: '600% ROI in 24 months',
+          roi: '600% ROI in 24 months},
         {
           name: 'DevSecOps Pipeline Implementation',',
           price: '$3,200 - $15,000/month',',
@@ -403,7 +403,7 @@ export default function EnhancedServicesCatalog() {
           features: ['Security automation', 'Compliance reporting', 'Performance optimization'],',
           benefits: ['80% vulnerability reduction', '70% faster deployments'],',
           marketSize: '$7.8B DevSecOps',',
-          roi: '500% ROI in 12 months',
+          roi: '500% ROI in 12 months},
         {
           name: 'Disaster Recovery & Business Continuity',',
           price: '$2,800 - $18,000/month',',
@@ -411,7 +411,7 @@ export default function EnhancedServicesCatalog() {
           features: ['Multi-region backup', 'Automated failover', 'RTO/RPO optimization'],',
           benefits: ['99.99% continuity assurance', '80% recovery time reduction'],',
           marketSize: '$12.4B disaster recovery',',
-          roi: '1000% ROI during disasters',
+          roi: '1000% ROI during disasters},
         {
           name: 'API Gateway & Microservices Management',',
           price: '$1,500 - $8,500/month',',
@@ -419,9 +419,9 @@ export default function EnhancedServicesCatalog() {
           features: ['API management', 'Security policies', 'Performance monitoring'],',
           benefits: ['60% performance improvement', '50% overhead reduction'],',
           marketSize: '$4.1B API management',',
-          roi: '400% ROI in 8 months'},
+          roi: '400% ROI in 8 months}
       ]
-    ',
+    },
     {
       id: 'emerging-tech',',
       title: 'Emerging Technology Services',',
@@ -436,7 +436,7 @@ export default function EnhancedServicesCatalog() {
           features: ['AI avatar generation', 'Voice synthesis', 'Multi-language support'],',
           benefits: ['70% cost reduction', '90% faster creation'],',
           marketSize: '$15.7B video marketing',',
-          roi: '500% ROI in 6 months',
+          roi: '500% ROI in 6 months},
         {
           name: 'Smart Contract Analytics Platform',',
           price: '$499 - $2,999/month',',
@@ -444,7 +444,7 @@ export default function EnhancedServicesCatalog() {
           features: ['Real-time monitoring', 'Risk assessment', 'DeFi analytics'],',
           benefits: ['80% risk reduction', '60% performance improvement'],',
           marketSize: '$2.1B blockchain analytics',',
-          roi: '600% ROI in 8 months',
+          roi: '600% ROI in 8 months},
         {
           name: 'AI Energy Optimization Platform',',
           price: '$499 - $3,999/month',',
@@ -452,7 +452,7 @@ export default function EnhancedServicesCatalog() {
           features: ['Predictive analytics', 'Load balancing', 'Renewable integration'],',
           benefits: ['30% cost reduction', '25% efficiency improvement'],',
           marketSize: '$12.8B energy management',',
-          roi: '400% ROI in 12 months',
+          roi: '400% ROI in 12 months},
         {
           name: 'AI Legal Document Analyzer',',
           price: '$799 - $4,999/month',',
@@ -460,7 +460,7 @@ export default function EnhancedServicesCatalog() {
           features: ['Contract analysis', 'Risk assessment', 'Compliance checking'],',
           benefits: ['75% time reduction', '90% accuracy improvement'],',
           marketSize: '$12.4B legal tech',',
-          roi: '700% ROI in 10 months',
+          roi: '700% ROI in 10 months},
         {
           name: 'Smart Fleet Management Platform',',
           price: '$299 - $1,999/month',',
@@ -468,9 +468,9 @@ export default function EnhancedServicesCatalog() {
           features: ['GPS tracking', 'Predictive maintenance', 'Route optimization'],',
           benefits: ['25% cost reduction', '30% efficiency improvement'],',
           marketSize: '$5.8B fleet management',',
-          roi: '450% ROI in 12 months'},
+          roi: '450% ROI in 12 months}
       ]
-    ',
+    },
     {
       id: 'specialized-solutions',',
       title: 'Specialized Solutions',',
@@ -485,7 +485,7 @@ export default function EnhancedServicesCatalog() {
           features: ['Keyword research', 'Content optimization', 'Performance tracking'],',
           benefits: ['120% traffic increase', '60% ranking improvement'],',
           marketSize: '$6.8B SEO tools',',
-          roi: '300% ROI in 4 months',
+          roi: '300% ROI in 4 months},
         {
           name: 'Smart Property Management System',',
           price: '$199 - $999/month',',
@@ -493,7 +493,7 @@ export default function EnhancedServicesCatalog() {
           features: ['Tenant screening', 'Maintenance tracking', 'Payment processing'],',
           benefits: ['35% cost reduction', '40% efficiency improvement'],',
           marketSize: '$3.2B property management',',
-          roi: '250% ROI in 8 months',
+          roi: '250% ROI in 8 months},
         {
           name: 'AI-Powered Email Deliverability Optimizer',',
           price: '$149 - $799/month',',
@@ -501,7 +501,7 @@ export default function EnhancedServicesCatalog() {
           features: ['Deliverability monitoring', 'Reputation tracking', 'ISP optimization'],',
           benefits: ['40% deliverability improvement', '25% spam reduction'],',
           marketSize: '$7.5B email marketing',',
-          roi: '350% ROI in 6 months',
+          roi: '350% ROI in 6 months},
         {
           name: 'AI Privacy Policy & Terms Generator',',
           price: '$39 - $199/month',',
@@ -509,7 +509,7 @@ export default function EnhancedServicesCatalog() {
           features: ['Jurisdiction-aware policies', 'Auto-updates', 'Legal compliance'],',
           benefits: ['90% faster updates', '100% compliance assurance'],',
           marketSize: '$10.5B privacy tech',',
-          roi: '400% ROI in 3 months',
+          roi: '400% ROI in 3 months},
         {
           name: 'AI Proposal & SOW Writer',',
           price: '$29 - $149/month',',
@@ -517,9 +517,9 @@ export default function EnhancedServicesCatalog() {
           features: ['Requirements intake', 'Auto-scoping', 'Profitability guardrails'],',
           benefits: ['3x faster sales cycles', '50% proposal accuracy'],',
           marketSize: '$6.2B proposal software',',
-          roi: '500% ROI in 2 months'},
+          roi: '500% ROI in 2 months}
       ]
-    '
+    }
   ];
 
   const contactInfo = {
@@ -579,7 +579,7 @@ export default function EnhancedServicesCatalog() {
               return (
                 <div key={categoryIndex} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50">"
                   <div className="flex items-center gap-4 mb-8">"
-                    <div className="{`w-16 h-16 bg-gradient-to-br from-${category.color`-500 to-${category.color"-600 rounded-xl flex items-center justify-center`"">`;
+                    <div className="{`w-16 h-16 bg-gradient-to-br from-${category.color}-500 to-${category.color}-600 rounded-xl flex items-center justify-center`}">`;
                       <Icon className="w-8 h-8 text-white/>"
                     </div>
                     <div>
@@ -644,7 +644,7 @@ export default function EnhancedServicesCatalog() {
           </div>
         </section>
 
-        {/* Pricing Summary */`
+        {/* Pricing Summary */}
         <section className="container mx-auto px-6 py-16">"
           <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-2xl p-8 border border-cyan-500/20">"
             <div className="text-center mb-8">"
@@ -681,14 +681,14 @@ export default function EnhancedServicesCatalog() {
             <div className="text-center">"
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">"
                 <a 
-                  href={`tel:${contactInfo.phone``` `;
+                  href={`tel:${contactInfo.phone}`} `;
                   className="inline-flex items-center gap-2 bg-white text-slate-900 px-6 py-3 rounded-lg font-semibold hover:bg-slate-100 transition-colors
                 >"
                   <Smartphone className="w-4 h-4/>"
-                  {contactInfo.phone`
+                  {contactInfo.phone}
                 </a>
                 <a 
-                  href={`mailto:${contactInfo.email``` `;
+                  href={`mailto:${contactInfo.email}`} `;
                   className="inline-flex items-center gap-2 bg-slate-700 text-white px-6 py-3 rounded-lg font-semibold hover:bg-slate-600 transition-colors
                 >"
                   <MessageSquare className="w-4 h-4/>"
@@ -699,7 +699,7 @@ export default function EnhancedServicesCatalog() {
                 {contactInfo.address}
               </p>
               <p className="text-sm text-slate-400 mt-2">"
-                Visit our website: <a href={contactInfo.website'}, className="text-cyan-400 hover:underline">{contactInfo.website'</a>"
+                Visit our website: <a href={contactInfo.website} className="text-cyan-400 hover:underline">{contactInfo.website}</a>"
               </p>
             </div>
           </div>
@@ -707,4 +707,4 @@ export default function EnhancedServicesCatalog() {
       </div>
     </>
   );
-`;
+};

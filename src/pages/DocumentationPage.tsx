@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link ' from 'react-router-dom';
-import { Helmet ' from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 const DocumentationPage: React.FC = () => {
   const documentationSections = [
     {
@@ -68,7 +68,7 @@ const DocumentationPage: React.FC = () => {
         { title: "FAQ", href="/docs/faq" },"
         { title: "Contact Support", href="/contact" }"
       ]
-    '
+    }
   ];
 
   return (
@@ -130,12 +130,12 @@ const DocumentationPage: React.FC = () => {
                     ))}
                   </ul>
                 </div>
-              ))"
+              ))}
             </div>
           </div>
         </section>
 
-        {/* Popular Topics */""
+        {/* Popular Topics */}"
         <section className="py-20 bg-white">"
           <div className="container mx-auto px-6">"
             <div className="text-center mb-16">"
@@ -189,7 +189,7 @@ const DocumentationPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Support Section */'
+        {/* Support Section */}
         <section className="py-20 bg-gray-50">"
           <div className="container mx-auto px-6">"
             <div className="text-center mb-16">"
@@ -239,7 +239,7 @@ const DocumentationPage: React.FC = () => {
           </div>
         </section>
 
-        {/* CTA Section */""
+        {/* CTA Section */}"
         <section className="py-20 bg-gray-800 text-white">"
           <div className="container mx-auto px-6 text-center">"
             <h2 className="text-4xl font-bold mb-4">Ready to Get Started?</h2>"
@@ -265,6 +265,6 @@ const DocumentationPage: React.FC = () => {
       </div>
     </>
   );
-";
+};
 "
 export default DocumentationPage;
