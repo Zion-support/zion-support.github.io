@@ -1,1 +1,0 @@
-main().catch(console.error);
