@@ -1,25 +1,32 @@
 #!/bin/bash
 
-echo "Fixing TypeScript syntax errors..."
+# Script to fix syntax errors in app directory files
+echo "🔧 Fixing syntax errors in app directory files..."
 
-# Fix import statements
-find src -name "*.tsx" -type f -exec sed -i "s/from 'react-router-dom''/from 'react-router-dom'/g" {} \;
-find src -name "*.tsx" -type f -exec sed -i "s/from 'react-helmet-async''/from 'react-helmet-async'/g" {} \;
+# Function to fix import syntax in a file
+fix_import_syntax() {
+    local file="$1"
+    echo "🔧 Fixing import syntax in $file"
+    
+    # Add missing closing brace and React import if needed
+    if grep -q "from 'lucide-react'" "$file" && ! grep -q "^} from 'lucide-react'" "$file"; then
+        # Find the last import line and add closing brace
+        sed -i '/from '\''lucide-react'\''/a }' "$file" 2>/dev/null || true
+    fi
+    
+    # Add React import if missing
+    if ! grep -q "^import React" "$file"; then
+        sed -i '1i import React from '\''react'\'';' "$file" 2>/dev/null || true
+    fi
+    
+    echo "✅ Fixed import syntax in $file"
+}
 
-# Fix React.FC declarations
-find src -name "*.tsx" -type f -exec sed -i "s/React\.FC  = () => {/React.FC = () => {/g" {} \;
+# Fix each file with syntax errors
+fix_import_syntax "app/marketplace/page.tsx"
+fix_import_syntax "app/news/page.tsx" 
+fix_import_syntax "app/press/page.tsx"
+fix_import_syntax "app/resources/page.tsx"
+fix_import_syntax "app/solutions/page.tsx"
 
-# Fix malformed quotes and string literals
-find src -name "*.tsx" -type f -exec sed -i 's/",\"/\",/g' {} \;
-find src -name "*.tsx" -type f -exec sed -i 's/""/"/g' {} \;
-
-# Fix missing commas in object properties
-find src -name "*.tsx" -type f -exec sed -i 's/description: "\([^"]*\)"$/description: "\1",/g' {} \;
-find src -name "*.tsx" -type f -exec sed -i 's/icon: "\([^"]*\)"$/icon: "\1",/g' {} \;
-find src -name "*.tsx" -type f -exec sed -i 's/features: \[\([^]]*\)\]$/features: [\1],/g' {} \;
-
-# Fix JSX syntax issues
-find src -name "*.tsx" -type f -exec sed -i 's/target: "_blank"/target="_blank"/g' {} \;
-find src -name "*.tsx" -type f -exec sed -i 's/className = "\([^"]*\)">/className="\1">/g' {} \;
-
-echo "Syntax fixes completed!"
+echo "✅ Fixed syntax errors in app directory files"
