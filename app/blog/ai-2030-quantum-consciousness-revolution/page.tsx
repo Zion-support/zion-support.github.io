@@ -1,7 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {/* content */}
+export const metadata: Metadata = {
   title: 'AI 2030: Quantum Consciousness Revolution - Revolutionary 10,000,000x Performance Gains',
   description: 'Discover the revolutionary AI quantum consciousness revolution achieving 10,000,000x performance improvements through quantum-enhanced consciousness fusion and transcendent neural architectures.',
   keywords: 'AI quantum consciousness, transcendent AI, quantum neural revolution, 2030 breakthrough, consciousness fusion, quantum transcendence',

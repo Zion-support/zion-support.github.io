@@ -1,7 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {/* content */}
+export const metadata: Metadata = {
   title: 'AI 2026: Neural Architecture Breakthrough - Revolutionary Multi-Modal Intelligence',
   description: 'Discover the groundbreaking neural architecture breakthrough that enables 1000x processing speed and 99% accuracy in multi-modal AI systems. Learn how this technology transforms enterprise operations.',
   keywords: 'AI 2026, neural architecture, multi-modal AI, enterprise AI, breakthrough technology, machine learning',

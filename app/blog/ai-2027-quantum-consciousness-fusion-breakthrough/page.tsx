@@ -2,7 +2,7 @@ import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 
-export const metadata: Metadata = {/* content */}
+export const metadata: Metadata = {
   title: 'AI 2027 Quantum Consciousness Fusion Breakthrough - Zion Tech Group',
   description: 'Revolutionary breakthrough in quantum consciousness fusion with AI systems, achieving unprecedented levels of quantum cognitive processing and enterprise transformation.',
   keywords: 'AI, quantum consciousness, fusion, quantum computing, enterprise AI, 2027, breakthrough, Zion Tech Group',

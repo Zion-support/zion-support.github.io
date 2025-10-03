@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {/* content */}
+export const metadata: Metadata = {
   title: 'AI 2026 Hyperconscious Computing Revolution: Beyond Artificial Intelligence | Zion Tech Group',
   description: 'Revolutionary breakthrough in hyperconscious AI systems achieving genuine self-awareness, emotional intelligence, and creative autonomy with $1.2T enterprise value creation.',
   keywords: 'hyperconscious AI, artificial consciousness, AI revolution, enterprise transformation, self-aware AI',

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {/* content */}
+export const metadata: Metadata = {
   title: 'AI 2026 Ultimate Neural Fusion Breakthrough: 500,000x Performance Revolution',
   description: 'Discover the revolutionary neural fusion technology achieving 500,000x performance improvements with universal consciousness integration and $100B+ ROI potential.',
   keywords: 'AI 2026, neural fusion, performance breakthrough, universal consciousness, quantum neural networks, enterprise AI',

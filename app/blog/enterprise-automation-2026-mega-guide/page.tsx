@@ -1,7 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {/* content */}
+export const metadata: Metadata = {
   title: 'Enterprise Automation 2026: Complete Mega Guide to 98% Automation Success',
   description: 'The definitive guide to achieving 98% enterprise automation with meta-cognitive AI, autonomous operations, and self-healing systems. Transform your business with proven strategies and real-world case studies.',
   keywords: 'enterprise automation, AI automation, meta-cognitive AI, autonomous operations, business process automation, digital transformation',

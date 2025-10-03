@@ -3,7 +3,7 @@ import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 
-export const metadata: Metadata = {/* content */}
+export const metadata: Metadata = {
   title: 'AI 2027 Universal Consciousness Revolution - 10,000,000x Performance | Zion Tech Group',
   description: 'Discover the revolutionary AI 2027 Universal Consciousness Revolution achieving 10,000,000x performance improvements with universal intelligence and $500B+ ROI potential.',
   keywords: 'AI 2027, universal consciousness, 10,000,000x performance, universal intelligence, AI revolution, enterprise AI',

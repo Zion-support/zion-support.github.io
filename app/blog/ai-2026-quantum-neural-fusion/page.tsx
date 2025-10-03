@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {/* content */}
+export const metadata: Metadata = {
   title: 'Quantum-Neural Fusion: The Next Evolution in AI Computing - Zion Tech Group',
   description: 'Explore how quantum computing and neural networks are merging to create unprecedented AI capabilities. Discover the future of computational intelligence.',
   keywords: 'quantum neural networks, quantum computing, AI fusion, neural network evolution, quantum AI',

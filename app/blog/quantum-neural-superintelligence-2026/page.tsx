@@ -1,7 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {/* content */}
+export const metadata: Metadata = {
   title: 'Quantum Neural Superintelligence 2026 - Zion Tech Group',
   description: 'Explore the revolutionary Quantum Neural Superintelligence system that combines quantum computing with advanced neural networks to achieve superintelligent AI capabilities for enterprise applications.',
   keywords: 'Quantum AI, Neural Networks, Superintelligence, Quantum Computing, Enterprise AI, AI 2026, Quantum Neural',

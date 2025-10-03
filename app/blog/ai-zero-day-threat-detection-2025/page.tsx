@@ -11,7 +11,7 @@ export const metadata = {
     type: 'article',
     url: 'https://ziontechgroup.com/blog/ai-zero-day-threat-detection-2025',
     images: [
-      {/* content */}
+      
         url: '/og-ai-cybersecurity-2025.jpg',
         width: 1200,
         height: 630,

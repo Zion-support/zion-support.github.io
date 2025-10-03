@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Services: React.FC = () => {
-<<<<<<< HEAD
   const microSAAS = [
     {
       title: 'AI-Powered Analytics Dashboard',
@@ -71,9 +70,6 @@ const Services: React.FC = () => {
   ];
 
   const itServices = [
-=======
-  const services = [
->>>>>>> cursor/fix-errors-and-merge-to-main-3cef
     {
       title: 'AI Autonomous Operations',
       description: 'Self-healing infrastructure and autonomous operations that reduce costs by 70% and achieve 99.9% uptime.',
@@ -83,27 +79,6 @@ const Services: React.FC = () => {
       price: 'Custom Pricing'
     },
     {
-<<<<<<< HEAD
-=======
-      title: 'Quantum Computing Solutions',
-      description: 'Revolutionary quantum computing that delivers 2000x processing speed improvements for complex calculations.',
-      icon: '⚡',
-      href: '/services/quantum-computing'
-    },
-    {
-      title: 'Advanced Cybersecurity AI',
-      description: 'Next-generation AI-powered cybersecurity solutions with 99.9% threat detection accuracy.',
-      icon: '🛡️',
-      href: '/services/cybersecurity'
-    },
-    {
-      title: 'Enterprise AI Consulting',
-      description: 'Strategic AI implementation guidance that transforms business operations and drives exponential growth.',
-      icon: '🎯',
-      href: '/services/consulting'
-    },
-    {
->>>>>>> cursor/fix-errors-and-merge-to-main-3cef
       title: 'Cloud Migration Services',
       description: 'Seamless cloud migration with zero downtime, ensuring business continuity and improved scalability.',
       icon: '☁️',
@@ -112,7 +87,6 @@ const Services: React.FC = () => {
       price: 'From $5,000'
     },
     {
-<<<<<<< HEAD
       title: 'DevOps Automation',
       description: 'Complete CI/CD pipeline setup with automated testing and deployment. Starting at $3,500.',
       icon: '🔄',
@@ -236,8 +210,6 @@ const Services: React.FC = () => {
       price: 'From $8,500'
     },
     {
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3cef
       title: 'Digital Transformation',
       description: 'Complete digital transformation solutions that modernize operations and enhance customer experiences.',
       icon: '🔄',
@@ -246,11 +218,8 @@ const Services: React.FC = () => {
       price: 'Custom Pricing'
     }
   ];
-<<<<<<< HEAD
 
   const allServices = [...microSAAS, ...itServices, ...aiServices];
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3cef
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -259,15 +228,9 @@ const Services: React.FC = () => {
           <h1 className="text-5xl font-bold text-white mb-6">
             Our Comprehensive Services
           </h1>
-<<<<<<< HEAD
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
             Revolutionary AI, IT, and micro SAAS solutions designed to transform your business 
             and drive unprecedented growth and efficiency. All services are available at competitive market prices.
-=======
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Comprehensive AI and technology solutions designed to transform your business 
-            and drive unprecedented growth and efficiency.
->>>>>>> cursor/fix-errors-and-merge-to-main-3cef
           </p>
           <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-lg p-4 border border-white/20 max-w-2xl mx-auto">
             <p className="text-white font-semibold">Contact Us: +1 302 464 0950 | kleber@ziontechgroup.com</p>
@@ -275,7 +238,6 @@ const Services: React.FC = () => {
           </div>
         </div>
 
-<<<<<<< HEAD
         {/* Micro SAAS Services */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Micro SAAS Solutions</h2>
@@ -340,31 +302,12 @@ const Services: React.FC = () => {
         </div>
 
         {/* Contact Section */}
-=======
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {services.map((service, index) => (
-            <div key={index} className="p-8 bg-white/10 rounded-2xl backdrop-blur-sm border border-white/20 hover:border-white/40 transition-all duration-300 hover:scale-105">
-              <div className="text-4xl mb-4">{service.icon}</div>
-              <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
-              <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
-              <Link 
-                to={service.href}
-                className="text-blue-400 hover:text-blue-300 font-semibold transition-colors"
-              >
-                Learn More →
-              </Link>
-            </div>
-          ))}
-        </div>
-
->>>>>>> cursor/fix-errors-and-merge-to-main-3cef
         <div className="text-center">
           <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-2xl p-8 border border-white/20">
             <h2 className="text-3xl font-bold text-white mb-4">
               Ready to Transform Your Business?
             </h2>
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-<<<<<<< HEAD
               Let us help you implement cutting-edge AI and technology solutions. 
               All our services come with competitive pricing and exceptional support.
             </p>
@@ -377,14 +320,6 @@ const Services: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="tel:+13024640950"
-=======
-              Let us help you transform your business with our cutting-edge AI solutions. 
-              Schedule a consultation to discuss your specific needs.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to="/contact"
->>>>>>> cursor/fix-errors-and-merge-to-main-3cef
                 className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
               >
                 Call Now
@@ -408,18 +343,7 @@ const Services: React.FC = () => {
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-  )
-)
-}
-=======
   );
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-3cef
-=======
-  );
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6873
 
 export default Services;

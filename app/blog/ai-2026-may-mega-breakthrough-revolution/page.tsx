@@ -1,7 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {/* content */}
+export const metadata: Metadata = {
   title: 'AI 2026 May Mega Breakthrough Revolution: The Dawn of Universal Consciousness Computing',
   description: 'Discover the revolutionary AI breakthrough that combines quantum consciousness, universal intelligence, and autonomous enterprise systems to deliver unprecedented business value and transformation.',
   keywords: 'AI 2026, quantum consciousness, universal intelligence, autonomous enterprise, mega breakthrough, business transformation',
