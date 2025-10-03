@@ -28,18 +28,6 @@ const AutonomousDevOpsService: React.FC = () => {
         />
         <link rel="canonical" href="https://ziontechgroup.com/services/autonomous-devops" />
       </Helmet>
-      
-=======
-      <Helmet >
-        <title >Autonomous DevOps Services - 80% Faster Releases | Zion Tech Group</title>
-        <meta name: "description
-  content: "Transform your DevOps with autonomous self-optimizing CI/CD pipelines. Achieve 99.99% uptime, 80% faster releases, and eliminate manual intervention with AI-driven automation.", /><meta name: "keywords
-  content: "autonomous devops, self-healing ci/cd, automated pipelines, devops automation, zero downtime deployment, AI devops, intelligent automation", /><link rel: "canonical", href="https://ziontechgroup.com/services/autonomous-devops/>
-  content: "autonomous devops, self-healing ci/cd, automated pipelines, devops automation, zero downtime deployment, AI devops, intelligent automation
-        />
-        <link rel: "canonical", href ="https: //ziontechgroup.com/services/autonomous-devops" />
-      </Helmet>
->>>>>>> cursor/fix-errors-and-merge-to-main-075c
       <div className="min-h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-black text-white">
         <Header />
         

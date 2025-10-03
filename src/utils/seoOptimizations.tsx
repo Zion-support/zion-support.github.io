@@ -203,17 +203,10 @@ export const performanceSEO = {
 // Analytics and tracking utilities
 export const analyticsUtils = {
   // Track page views
-<<<<<<< HEAD
   trackPageView: (url: string, title: string) => {
-    if (typeof window !== 'undefined' && (window as Window & { gtag?: Function }).gtag) {
-      (window as Window & { gtag: Function }).gtag('config', 'GA_MEASUREMENT_ID', {
-        page_title: title,
-=======
-  trackPageView: (url: string, title= string) => {
     if (typeof window !== 'undefined' && (window as any).gtag) {
       (window as any).gtag('config', 'GA_MEASUREMENT_ID', {
-        page_title= title,
->>>>>>> cursor/fix-errors-and-merge-to-main-075c
+        page_title: title,
         page_location: url
       });
     }
