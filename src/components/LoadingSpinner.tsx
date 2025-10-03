@@ -23,29 +23,29 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
       {/* Animated spinner */}
       <div className={`${sizeClasses[size]} relative`}>
         {/* Outer ring */}
-        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white"></div>
+        <div className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white min-h-screen"></div>
         
         {/* Spinning ring */}
         <div className={`${sizeClasses[size]} rounded-full border-4 border-transparent border-t-blue-500 animate-spin`}></div>
         
         {/* Inner pulsing dot */}
-        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white"></div>
+        <div className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white min-h-screen">
+          <div className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white min-h-screen"></div>
         </div>
       </div>
       
       {/* Loading text */}
       {text && (
-        <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+        <p className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white min-h-screen">
           {text}
         </p>
       )}
       
       {/* Loading dots animation */}
-      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white"></div>
-        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white"></div>
-        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white"></div>
+      <div className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white min-h-screen">
+        <div className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white min-h-screen"></div>
+        <div className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white min-h-screen"></div>
+        <div className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white min-h-screen"></div>
       </div>
     </div>
   );
@@ -53,7 +53,7 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
 
 // Full page loader component
 export const PageLoader: React.FC = () => (
-  <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+  <div className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white min-h-screen">
     <LoadingSpinner size="xl" text="Loading page..." />
   </div>
 );
@@ -65,7 +65,7 @@ export const InlineLoader: React.FC = () => (
 
 // Button loader for form submissions
 export const ButtonLoader: React.FC = () => (
-  <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+  <div className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white min-h-screen">
     <LoadingSpinner size="sm" />
     <span>Processing...</span>
   </div>

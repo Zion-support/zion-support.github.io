@@ -37,14 +37,14 @@ class ErrorBoundary extends Component<Props, State> {
   render() {
     if (this.state.hasError) {
       return this.props.fallback || (
-        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-            <h2 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+        <div className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white min-h-screen">
+          <div className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white min-h-screen">
+            <h2 className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white min-h-screen">
               Something went wrong
             </h2>
             <button
               onClick={() => this.setState({ hasError: false })}
-              className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white min-h-screen">
               Try again
             </button>
           </div>

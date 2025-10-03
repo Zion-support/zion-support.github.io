@@ -49,43 +49,43 @@ const Header: React.FC = () => {
         ? 'bg-slate-950/95 backdrop-blur-md border-b border-slate-800' 
         : 'bg-transparent'
     }`}>
-      <nav className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+      <nav className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white min-h-screen">
+        <div className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white min-h-screen">
           {/* Logo */}
-          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white min-h-screen">
             <Link 
               to="/" 
-              className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-                <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Z</span>
+              className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white min-h-screen">
+              <div className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white min-h-screen">
+                <span className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white min-h-screen">Z</span>
               </div>
-              <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Zion Tech Group</span>
+              <span className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white min-h-screen">Zion Tech Group</span>
             </Link>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white min-h-screen">
+            <div className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white min-h-screen">
               {navigation.map((item) => (
-                <div key={item.name} className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <div key={item.name} className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white min-h-screen">
                   {item.dropdown ? (
                     <div
                       className="relative"
                       onMouseEnter={() => setActiveDropdown(item.name)}
                       onMouseLeave={() => setActiveDropdown(null)}
                     >
-                      <button className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                      <button className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white min-h-screen">
                         <span>{item.name}</span>
                         <ChevronDown className="w-4 h-4" />
                       </button>
                       
                       {activeDropdown === item.name && (
-                        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                        <div className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white min-h-screen">
                           {item.dropdown.map((subItem) => (
                             <Link
                               key={subItem.name}
                               to={subItem.href}
-                              className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                              className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white min-h-screen">
                               {subItem.name}
                             </Link>
                           ))}
@@ -110,19 +110,19 @@ const Header: React.FC = () => {
           </div>
 
           {/* CTA Button */}
-          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white min-h-screen">
             <Link
               to="/contact"
-              className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white min-h-screen">
               Get Started
             </Link>
           </div>
 
           {/* Mobile menu button */}
-          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white min-h-screen">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white min-h-screen">
               {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
@@ -130,8 +130,8 @@ const Header: React.FC = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white min-h-screen">
+            <div className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white min-h-screen">
               {navigation.map((item) => (
                 <div key={item.name}>
                   {item.dropdown ? (
@@ -140,7 +140,7 @@ const Header: React.FC = () => {
                         onClick={() => setActiveDropdown(
                           activeDropdown === item.name ? null : item.name
                         )}
-                        className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                        className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white min-h-screen">
                         <span>{item.name}</span>
                         <ChevronDown className={`w-4 h-4 transition-transform ${
                           activeDropdown === item.name ? 'rotate-180' : ''
@@ -148,12 +148,12 @@ const Header: React.FC = () => {
                       </button>
                       
                       {activeDropdown === item.name && (
-                        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                        <div className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white min-h-screen">
                           {item.dropdown.map((subItem) => (
                             <Link
                               key={subItem.name}
                               to={subItem.href}
-                              className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                              className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white min-h-screen">
                               {subItem.name}
                             </Link>
                           ))}
@@ -175,10 +175,10 @@ const Header: React.FC = () => {
                 </div>
               ))}
               
-              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <div className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white min-h-screen">
                 <Link
                   to="/contact"
-                  className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                  className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white min-h-screen">
                   Get Started
                 </Link>
               </div>

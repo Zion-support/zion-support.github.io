@@ -55,27 +55,27 @@ const Footer: React.FC = () => {
   ];
 
   return (
-    <footer className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+    <footer className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white min-h-screen">
       {/* Main Footer Content */}
-      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+      <div className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white min-h-screen">
+        <div className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white min-h-screen">
           {/* Company Info */}
-          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-            <Link to="/" className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-                <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Z</span>
+          <div className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white min-h-screen">
+            <Link to="/" className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white min-h-screen">
+              <div className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white min-h-screen">
+                <span className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white min-h-screen">Z</span>
               </div>
-              <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Zion Tech Group</span>
+              <span className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white min-h-screen">Zion Tech Group</span>
             </Link>
             
-            <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <p className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white min-h-screen">
               Leading provider of advanced AI and IT solutions. Transform your business with 
               cutting-edge technology, automation, and intelligent systems.
             </p>
 
             {/* Contact Info */}
-            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <div className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white min-h-screen">
+              <div className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white min-h-screen">
                 <Mail className="w-5 h-5" />
                 <span>contact@ziontechgroup.com</span>
               </div>
@@ -90,14 +90,14 @@ const Footer: React.FC = () => {
             </div>
 
             {/* Social Links */}
-            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <div className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white min-h-screen">
               {socialLinks.map((social) => (
                 <a
                   key={social.name}
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                  className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white min-h-screen">
                   <social.icon className="w-5 h-5" />
                 </a>
               ))}
@@ -106,13 +106,13 @@ const Footer: React.FC = () => {
 
           {/* Solutions */}
           <div>
-            <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Solutions</h3>
-            <ul className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <h3 className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white min-h-screen">Solutions</h3>
+            <ul className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white min-h-screen">
               {footerLinks.solutions.map((link) => (
                 <li key={link.name}>
                   <Link
                     to={link.href}
-                    className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                    className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white min-h-screen">
                     {link.name}
                   </Link>
                 </li>
@@ -122,13 +122,13 @@ const Footer: React.FC = () => {
 
           {/* Services */}
           <div>
-            <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Services</h3>
-            <ul className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <h3 className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white min-h-screen">Services</h3>
+            <ul className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white min-h-screen">
               {footerLinks.services.map((link) => (
                 <li key={link.name}>
                   <Link
                     to={link.href}
-                    className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                    className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white min-h-screen">
                     {link.name}
                   </Link>
                 </li>
@@ -138,13 +138,13 @@ const Footer: React.FC = () => {
 
           {/* Resources */}
           <div>
-            <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Resources</h3>
-            <ul className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <h3 className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white min-h-screen">Resources</h3>
+            <ul className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white min-h-screen">
               {footerLinks.resources.map((link) => (
                 <li key={link.name}>
                   <Link
                     to={link.href}
-                    className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                    className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white min-h-screen">
                     {link.name}
                   </Link>
                 </li>
@@ -154,13 +154,13 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Newsletter Signup */}
-        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-            <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Stay Updated</h3>
-            <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+        <div className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white min-h-screen">
+          <div className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white min-h-screen">
+            <h3 className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white min-h-screen">Stay Updated</h3>
+            <p className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white min-h-screen">
               Get the latest insights on AI and technology trends.
             </p>
-            <form className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <form className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white min-h-screen">
               <input
                 type="email"
                 placeholder="Enter your email"
@@ -168,7 +168,7 @@ const Footer: React.FC = () => {
               />
               <button
                 type="submit"
-                className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white min-h-screen">
                 Subscribe
               </button>
             </form>
@@ -177,21 +177,21 @@ const Footer: React.FC = () => {
       </div>
 
       {/* Bottom Footer */}
-      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+      <div className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white min-h-screen">
+        <div className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white min-h-screen">
+          <div className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white min-h-screen">
+            <div className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white min-h-screen">
               © {currentYear} Zion Tech Group. All rights reserved.
             </div>
             
-            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-              <Link to="/privacy" className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <div className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white min-h-screen">
+              <Link to="/privacy" className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white min-h-screen">
                 Privacy Policy
               </Link>
-              <Link to="/terms" className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <Link to="/terms" className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white min-h-screen">
                 Terms of Service
               </Link>
-              <Link to="/cookies" className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <Link to="/cookies" className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white min-h-screen">
                 Cookie Policy
               </Link>
             </div>
@@ -199,9 +199,9 @@ const Footer: React.FC = () => {
             {/* Back to Top Button */}
             <button
               onClick={scrollToTop}
-              className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white min-h-screen">
               <ArrowUp className="w-5 h-5" />
-              <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Back to Top</span>
+              <span className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white min-h-screen">Back to Top</span>
             </button>
           </div>
         </div>
