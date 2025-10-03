@@ -21,12 +21,14 @@ const Home: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="/services"
-                className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105">
+                className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
+              >
                 Explore Services
               </a>
               <a 
                 href="/contact"
-                className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300">
+                className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300"
+              >
                 Get Started
               </a>
             </div>
@@ -41,13 +43,13 @@ const Home: React.FC = () => {
             </div>
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-purple-500/20">
               <h3 className="text-xl font-bold mb-4 text-purple-400">Autonomous Operations</h3>
-              <p className="text-gray-300">
+              <p className="text-gray-300"></p>
                 Self-healing infrastructure and autonomous business operations that reduce costs by 70% while increasing efficiency.
               </p>
             </div>
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-purple-500/20">
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-purple-500/20"></div>
               <h3 className="text-xl font-bold mb-4 text-purple-400">Enterprise Solutions</h3>
-              <p className="text-gray-300">
+              <p className="text-gray-300"></p>
                 Comprehensive AI-powered solutions for Fortune 500 companies, delivering measurable ROI and competitive advantage.
               </p>
             </div>

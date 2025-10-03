@@ -6,9 +6,9 @@
 import { Helmet } from 'react-helmet-async';
 
 // Meta tags utilities
-export const seoUtils = {
+export const seoUtils = 
   // Generate structured data for organization
-  generateOrganizationSchema: () => ({
+  generateOrganizationSchema: () => (
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
@@ -21,10 +21,10 @@ export const seoUtils = {
   }),
 
   // Generate breadcrumb structured data
-  generateBreadcrumbSchema: (items: Array<{name: string, url: string}>) => ({
+  generateBreadcrumbSchema: (items: Array<{name: string, url: string}>) => (
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    "itemListElement": items.map((item, index) => ({
+    "itemListElement": items.map((item, index) => (
       "@type": "ListItem",
       "position": index + 1,
       "name": item.name,
@@ -33,13 +33,13 @@ export const seoUtils = {
   }),
 
   // Generate FAQ structured data
-  generateFAQSchema: (faqs: Array<{question: string, answer: string}>) => ({
+  generateFAQSchema: (faqs: Array<{question: string, answer: string}>) => (
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "mainEntity": faqs.map(faq => ({
+    "mainEntity": faqs.map(faq => (
       "@type": "Question",
       "name": faq.question,
-      "acceptedAnswer": {
+      "acceptedAnswer": 
         "@type": "Answer",
         "text": faq.answer
       }
@@ -47,7 +47,7 @@ export const seoUtils = {
   }),
 
   // Generate article structured data
-  generateArticleSchema: (article: {
+  generateArticleSchema: (article: 
     title: string;
     description: string;
     author: string;
@@ -55,26 +55,27 @@ export const seoUtils = {
     dateModified: string;
     image?: string;
     url: string;
-  }) => ({
+  }) => (
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": article.title,
     "description": article.description,
-    "author": {
+    "author": 
       "@type": "Person",
       "name": article.author
     },
-    "image": {
+    "image": 
       "url": article.image || "https://zion.app/logo.png"
     }
   })
+});
 };
 
 // Sitemap generation utilities
-export const sitemapUtils = {
+export const sitemapUtils = 
   // Generate sitemap entries
-  generateSitemapEntry: (url: string, lastmod?: string, changefreq?: string, priority?: string) => {
-    return {
+  generateSitemapEntry: (url: string, lastmod?: string, changefreq?: string, priority?: string) => 
+    return 
       url,
       lastmod: lastmod || new Date().toISOString().split('T')[0],
       changefreq: changefreq || 'weekly',
@@ -83,7 +84,7 @@ export const sitemapUtils = {
   },
 
   // Generate robots.txt content
-  generateRobotsTxt: (sitemapUrl: string = 'https://zion.app/sitemap.xml') => {
+  generateRobotsTxt: (sitemapUrl: string = 'https://zion.app/sitemap.xml') => 
     return `User-agent: *
 Allow: /
 
@@ -92,33 +93,33 @@ Sitemap: ${sitemapUrl}`;
 };
 
 // URL optimization utilities
-export const urlUtils = {
+export const urlUtils = 
   // Generate canonical URL
-  generateCanonicalUrl: (path: string, baseUrl: string = 'https://zion.app') => {
+  generateCanonicalUrl: (path: string, baseUrl: string = 'https://zion.app') => 
     return `${baseUrl}${path}`;
   },
 
   // Generate Open Graph URL
-  generateOGUrl: (path: string, baseUrl: string = 'https://zion.app') => {
+  generateOGUrl: (path: string, baseUrl: string = 'https://zion.app') => 
     return `${baseUrl}${path}`;
   },
 
   // Generate Twitter Card URL
-  generateTwitterUrl: (path: string, baseUrl: string = 'https://zion.app') => {
+  generateTwitterUrl: (path: string, baseUrl: string = 'https://zion.app') => 
     return `${baseUrl}${path}`;
   }
 };
 
 // Content optimization utilities
-export const contentOptimization = {
+export const contentOptimization = 
   // Extract keywords from content
-  extractKeywords: (content: string, minLength: number = 3): string[] => {
+  extractKeywords: (content: string, minLength: number = 3): string[] => 
     const words = content.toLowerCase()
       .replace(/[^\w\s]/g, '')
       .split(/\s+/)
       .filter(word => word.length >= minLength);
     
-    const wordCount = words.reduce((acc, word) => {
+    const wordCount = words.reduce((acc, word) => 
       acc[word] = (acc[word] || 0) + 1;
       return acc;
     }, {} as Record<string, number>);
@@ -130,7 +131,7 @@ export const contentOptimization = {
   },
 
   // Generate meta description
-  generateMetaDescription: (content: string, maxLength: number = 160): string => {
+  generateMetaDescription: (content: string, maxLength: number = 160): string => 
     const cleanContent = content.replace(/<[^>]*>/g, '').trim();
     if (cleanContent.length <= maxLength) return cleanContent;
     
@@ -138,22 +139,22 @@ export const contentOptimization = {
   },
 
   // Generate title tag
-  generateTitle: (pageTitle: string, siteName: string = 'Zion Tech Group', separator: string = ' | '): string => {
+  generateTitle: (pageTitle: string, siteName: string = 'Zion Tech Group', separator: string = ' | '): string => 
     return pageTitle ? `${pageTitle}${separator}${siteName}` : siteName;
   }
 };
 
 // Performance SEO utilities
-export const performanceSEO = {
+export const performanceSEO = 
   // Preload critical resources
-  preloadCriticalResources: () => {
+  preloadCriticalResources: () => 
     const criticalResources = [
       { href: '/fonts/inter.woff2', as: 'font', type: 'font/woff2' },
       { href: '/css/critical.css', as: 'style' },
       { href: '/images/logo.svg', as: 'image' }
     ];
 
-    criticalResources.forEach(resource => {
+    criticalResources.forEach(resource => 
       const link = document.createElement('link');
       link.rel = 'preload';
       link.href = resource.href;
@@ -164,14 +165,14 @@ export const performanceSEO = {
   },
 
   // Optimize images for SEO
-  optimizeImageSEO: (src: string, alt: string, width?: number, height?: number): {
+  optimizeImageSEO: (src: string, alt: string, width?: number, height?: number): 
     src: string;
     alt: string;
     width?: number;
     height?: number;
     loading: 'lazy';
-  } => {
-    return {
+  } => 
+    return 
       src: src.includes('?') ? src : `${src}?w=${width || 800}&h=${height || 600}&f=webp&q=85`,
       alt,
       width,
@@ -182,11 +183,11 @@ export const performanceSEO = {
 };
 
 // Analytics and tracking utilities
-export const analyticsUtils = {
+export const analyticsUtils = 
   // Track page views
-  trackPageView: (url: string, title: string) => {
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('config', 'GA_MEASUREMENT_ID', {
+  trackPageView: (url: string, title: string) => 
+    if (typeof window !== 'undefined' && (window as typeof window & { gtag?: Function }).gtag) 
+      (window as typeof window & { gtag: Function }).gtag('config', 'GA_MEASUREMENT_ID', 
         page_title: title,
         page_location: url
       });
@@ -194,16 +195,16 @@ export const analyticsUtils = {
   },
 
   // Track custom events
-  trackEvent: (eventName: string, parameters?: Record<string, unknown>) => {
-    if (typeof window !== 'undefined' && (window as Window & { gtag?: Function }).gtag) {
-      (window as any).gtag('event', eventName, parameters);
+  trackEvent: (eventName: string, parameters?: Record<string, unknown>) => 
+    if (typeof window !== 'undefined' && (window as Window & { gtag?: Function }).gtag) 
+      (window as Window & { gtag: Function }).gtag('event', eventName, parameters);
     }
   },
 
   // Track conversion events
-  trackConversion: (conversionId: string, value?: number) => {
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'conversion', {
+  trackConversion: (conversionId: string, value?: number) => 
+    if (typeof window !== 'undefined' && (window as typeof window & { gtag?: Function }).gtag) 
+      (window as typeof window & { gtag: Function }).gtag('event', 'conversion', 
         send_to: conversionId,
         value: value
       });
@@ -212,13 +213,13 @@ export const analyticsUtils = {
 };
 
 // Core Web Vitals tracking
-export const coreWebVitals = {
+export const coreWebVitals = 
   // Track Core Web Vitals
-  trackCoreWebVitals: () => {
+  trackCoreWebVitals: () => 
     if (typeof window === 'undefined') return;
 
-    const trackMetric = (metric: any) => {
-      analyticsUtils.trackEvent('core_web_vitals', {
+    const trackMetric = (metric: { name: string; value: number; id: string; delta: number }) => 
+      analyticsUtils.trackEvent('core_web_vitals', 
         metric_name: metric.name,
         metric_value: Math.round(metric.value),
         metric_id: metric.id,
@@ -227,7 +228,7 @@ export const coreWebVitals = {
     };
 
     // Import and track web vitals
-    import('web-vitals').then(({ onCLS, onFCP, onLCP, onTTFB }) => {
+    import('web-vitals').then(({ onCLS, onFCP, onLCP, onTTFB }) => 
       onCLS(trackMetric);
       // onFID(trackMetric); // onFID is deprecated in newer web-vitals versions
       onFCP(trackMetric);
@@ -238,7 +239,7 @@ export const coreWebVitals = {
 };
 
 // SEO component for React
-export const SEOComponent = ({ 
+export const SEOComponent = (
   title, 
   description, 
   keywords, 
@@ -246,15 +247,15 @@ export const SEOComponent = ({
   url, 
   type = 'website',
   structuredData 
-}: {
+}: 
   title?: string;
   description?: string;
   keywords?: string;
   image?: string;
   url?: string;
   type?: string;
-  structuredData?: any;
-}) => {
+  structuredData?: Record<string, unknown>;
+}) => 
   const siteName = 'Zion Tech Group';
   const siteUrl = 'https://zion.app';
   const defaultImage = `${siteUrl}/images/og-default.jpg`;
@@ -264,26 +265,27 @@ export const SEOComponent = ({
   const fullImage = image ? `${siteUrl}${image}` : defaultImage;
 
   return (
+  <div></div>
     <Helmet>
       <title>{fullTitle}</title>
-      <meta name="description" content={description} />"
-      <meta name="keywords" content={keywords} />"
-      <link rel="canonical" href={fullUrl} />"
+      <meta name="description" content={description} />
+      <meta name="keywords" content={keywords} />
+      <link rel="canonical" href={fullUrl} />
       {/* Open Graph */}
-      <meta property="og:type" content={type} />"
-      <meta property="og:title" content={fullTitle} />"
-      <meta property="og:description" content={description} />"
-      <meta property="og:url" content={fullUrl} />"
-      <meta property="og:image" content={fullImage} />"
-      <meta property="og:site_name" content={siteName} />"
+      <meta property="og:type" content={type} />
+      <meta property="og:title" content={fullTitle} />
+      <meta property="og:description" content={description} />
+      <meta property="og:url" content={fullUrl} />
+      <meta property="og:image" content={fullImage} />
+      <meta property="og:site_name" content={siteName} />
       {/* Twitter Card */}
-      <meta name="twitter:card" content="summary_large_image" />"
-      <meta name="twitter:title" content={fullTitle} />"
-      <meta name="twitter:description" content={description} />"
-      <meta name="twitter:image" content={fullImage} />"
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={fullTitle} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={fullImage} />
       {/* Structured Data */}
       {structuredData && (
-        <script type="application/ld+json">"
+        <script type="application/ld+json">
           {JSON.stringify(structuredData)}
         </script>
       )}
@@ -292,7 +294,7 @@ export const SEOComponent = ({
 };
 
 // Initialize SEO optimizations
-export const initializeSEO = () => {
+export const initializeSEO = () => 
   // Preload critical resources
   performanceSEO.preloadCriticalResources();
   
@@ -300,9 +302,9 @@ export const initializeSEO = () => {
   coreWebVitals.trackCoreWebVitals();
   
   // Set up meta tags
-  if (typeof document !== 'undefined') {
+  if (typeof document !== 'undefined') 
     const viewport = document.querySelector('meta[name="viewport"]');
-    if (!viewport) {
+    if (!viewport) 
       const meta = document.createElement('meta');
       meta.name = 'viewport';
       meta.content = 'width=device-width, initial-scale=1.0';
