@@ -13,32 +13,27 @@ const Header: React.FC = () => {
           <nav className="hidden md:flex space-x-8">
             <Link 
               to="/" 
-              className="text-gray-300 hover:text-white transition-colors"
-            >
+              className="text-gray-300 hover:text-white transition-colors">
               Home
             </Link>
             <Link 
               to="/about" 
-              className="text-gray-300 hover:text-white transition-colors"
-            >
+              className="text-gray-300 hover:text-white transition-colors">
               About
             </Link>
             <Link 
               to="/services" 
-              className="text-gray-300 hover:text-white transition-colors"
-            >
+              className="text-gray-300 hover:text-white transition-colors">
               Services
             </Link>
             <Link 
               to="/blog" 
-              className="text-gray-300 hover:text-white transition-colors"
-            >
+              className="text-gray-300 hover:text-white transition-colors">
               Blog
             </Link>
             <Link 
               to="/contact" 
-              className="text-gray-300 hover:text-white transition-colors"
-            >
+              className="text-gray-300 hover:text-white transition-colors">
               Contact
             </Link>
           </nav>
@@ -46,8 +41,7 @@ const Header: React.FC = () => {
           <div className="flex items-center space-x-4">
             <a 
               href="/contact" 
-              className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300"
-            >
+              className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300">
               Get Started
             </a>
           </div>

@@ -1,39 +1,33 @@
-import React from 'react';
-import { Metadata } from 'next';
+import React from "react";
 
-export const metadata: Metadata = {
-  title: 'Page | Zion Tech Group',
-  description: 'Discover the latest AI breakthroughs and enterprise automation solutions from Zion Tech Group.',
-  keywords: 'AI, automation, enterprise, breakthrough, technology',
-  openGraph: {
-    title: 'Page',
-    description: 'Discover the latest AI breakthroughs and enterprise automation solutions.',
-    type: 'article',
-  },
-};
-
-export default function page() {
+export default function GenAIEvalScorecards2028(): React.JSX.Element {
   return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="max-w-4xl mx-auto px-4 py-8">
-        <div className="bg-white rounded-lg shadow-lg p-8">
-          <div className="text-center mb-8">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">Page</h1>
-            <p className="text-xl text-gray-600 mb-6">Revolutionary AI Breakthrough</p>
-            <div className="flex justify-center space-x-4">
-              <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">BREAKTHROUGH</span>
-              <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">AI</span>
-              <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">ENTERPRISE</span>
-            </div>
-          </div>
-          
-          <div className="prose max-w-none">
-            <p className="text-lg text-gray-700 mb-6">
-              This page is currently under development. Please check back soon for the complete content.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
+    <div>
+      <Helmet>
+        <title>GenAI 2028: Eval Scorecards — KPIs You Can Trust</title>,
+        <meta name="description" content="Signed attestations, golden tasks, and budget‑linked guardrails for reliable GenAI in production." /><link rel="canonical", href=" " />
+      </Helmet>
+
+        <meta name="description" content="Signed attestations, golden tasks, and budget‑linked guardrails for reliable GenAI in production." />
+        <p className="text-zion-slate-light mb-8">Signed Attestations • Golden Tasks • Budgeted Guardrails</p>
+        <div>
+        <h1 className="text-4xl md: text-5xl font-bold mb-4">GenAI 2028: Eval Scorecards</h1>
+        <p className="text-zion-slate-light mb-8">Signed Attestations • Golden Tasks • Budgeted Guardrails</p>
+        <div>
+        <h1 className="text-4xl md: text-5xl font-bold mb-4">GenAI 2028: Eval Scorecards</h1>
+        <p className="text-zion-slate-light mb-8">Signed Attestations • Golden Tasks • Budgeted Guardrails</p>
+        <div className="prose prose-invert max-w-3xl">
+          <p >
+            Connect evaluation to outcomes with KPI‑aligned scorecards. Use signed attestations, golden tasks, and
+            budget‑linked guardrails to keep GenAI fast, safe, and predictable in production.
+          </p>
+          <p >
+            We detail datasets, drift signals, and rollback strategies that maintain quality at scale.
+          </p>
+  </div>
+  </div>
+  </div>
   );
-}
+};
+  </div>
+</li>

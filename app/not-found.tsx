@@ -1,39 +1,149 @@
+'use client';
+
 import React from 'react';
-import { Metadata } from 'next';
+import Link from 'next/link';
 
-export const metadata: Metadata = {
-  title: 'Not Found | Zion Tech Group',
-  description: 'Discover the latest AI breakthroughs and enterprise automation solutions from Zion Tech Group.',
-  keywords: 'AI, automation, enterprise, breakthrough, technology',
-  openGraph: {
-    title: 'Not Found',
-    description: 'Discover the latest AI breakthroughs and enterprise automation solutions.',
-    type: 'article',
-  },
-};
+export default function NotFound() {
+  const popularPages = [
+    {
+      title: 'AI Services',
+      description: 'Explore our comprehensive AI and IT solutions',
+      href: '/services',
+      icon: '🤖',
+    },
+    {
+      title: 'Blog & Insights',
+      description: 'Read about latest AI trends and innovations',
+      href: '/blog',
+      icon: '📚',
+    },
+    {
+      title: 'Case Studies',
+      description: 'See our success stories and client results',
+      href: '/case-studies',
+      icon: '📊',
+    },
+    {
+      title: 'Contact Us',
+      description: 'Get in touch with our AI experts',
+      href: '/contact',
+      icon: '📞',
+    },
+  ];
 
-export default function notfound() {
   return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="max-w-4xl mx-auto px-4 py-8">
-        <div className="bg-white rounded-lg shadow-lg p-8">
-          <div className="text-center mb-8">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">Not Found</h1>
-            <p className="text-xl text-gray-600 mb-6">Revolutionary AI Breakthrough</p>
-            <div className="flex justify-center space-x-4">
-              <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">BREAKTHROUGH</span>
-              <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">AI</span>
-              <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">ENTERPRISE</span>
-            </div>
-          </div>
-          
-          <div className="prose max-w-none">
-            <p className="text-lg text-gray-700 mb-6">
-              This page is currently under development. Please check back soon for the complete content.
-            </p>
-          </div>
+    <div className="text-left">
+      <div className="text-left">
+        {/* Error Code */}</div>
+        <div className="text-left">
+          <h1 className="text-left">
+            404
+          </h1>
+          <div className="text-left">🔍</div>"
         </div>
-      </div>
+
+        {/* Error Message */}
+        <div className="text-left">
+          <h2 className="text-left">
+            Oops! Page Not Found
+          </h2>
+          <p className="text-left">
+            The page you're looking for doesn't exist or has been moved. 
+            Don't worry, our AI can help you find what you need!
+          </p>
+        </div>
+
+        {/* Search Bar */}
+        <div className="text-left">
+          <div className="text-left">
+            <input
+              type="text"
+              placeholder="Search for AI services, articles, or case studies..."
+              className="text-left"
+              onKeyPress={(e) = /> {
+                if (e.key === 'Enter') {
+                  const searchTerm = (e.target as HTMLInputElement).value;
+                  if (searchTerm) {
+                    window.location.href = `/search?q=${encodeURIComponent(searchTerm)}`;
+                  }
+                }
+              }}
+            />
+            <button className="text-left">
+              Search
+            </button>
+          </div>
+
+        {/* Popular Pages */}
+        <div className="text-left">
+          <h3 className="text-left">
+            Popular Pages
+          </h3>
+          <div className="text-left">
+            {popularPages.map((page) => (</div>
+              <Link
+                key={page.href}
+                href={page.href}
+                className="text-left">
+                <div className="text-left">{page.icon}</div>"
+                <h4 className="text-left">
+                  {page.title}
+                </h4>
+                <p className="text-left">
+                  {page.description}
+                </p>
+              </Link>
+            ))}
+          </div>
+
+        {/* CTA Buttons */}
+        <div className="text-left">
+          <Link
+            href="/"
+            className="text-left">
+            ← Back to Home
+          </Link>
+          <a
+            href="tel:+13024640950"
+            className="text-left">
+            Call Support: +1 302 464 0950
+          </a>
+        </div>
+
+        {/* Help Section */}
+        <div className="text-left">
+          <h3 className="text-left">
+            Still need help?
+          </h3>
+          <p className="text-left">
+            Our AI support team is available 24/7 to assist you with any questions or concerns.
+          </p>
+          <div className="text-left">
+            <a
+              href="mailto:kleber@ziontechgroup.com"
+              className="text-left">
+              📧 Email: kleber@ziontechgroup.com
+            </a>
+            <span className="text-left">|>
+            <a
+              href="tel:+13024640950"
+              className="text-left">
+              📞 Phone: +1 302 464 0950
+            </a>
+          </div>
+
+        {/* Footer Note */}
+        <div className="text-left">
+          <p>Error Code: 404 | Page Not Found</p>
+          <p className="text-left">
+            If you believe this is an error, please{' '}
+            <a
+              href="mailto:kleber@ziontechgroup.com"
+              className="text-left">
+              contact our support team
+            </a>
+          </p>
+        </div>
     </div>
   );
-}
+}</div>

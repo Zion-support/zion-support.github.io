@@ -1,39 +1,35 @@
-import React from 'react';
-import { Metadata } from 'next';
+import React from "react";
 
-export const metadata: Metadata = {
-  title: 'Page | Zion Tech Group',
-  description: 'Discover the latest AI breakthroughs and enterprise automation solutions from Zion Tech Group.',
-  keywords: 'AI, automation, enterprise, breakthrough, technology',
-  openGraph: {
-    title: 'Page',
-    description: 'Discover the latest AI breakthroughs and enterprise automation solutions.',
-    type: 'article',
-  },
-};
-
-export default function page() {
+export default function PlatformRoiScorecardsV2(): React.JSX.Element {
   return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="max-w-4xl mx-auto px-4 py-8">
-        <div className="bg-white rounded-lg shadow-lg p-8">
-          <div className="text-center mb-8">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">Page</h1>
-            <p className="text-xl text-gray-600 mb-6">Revolutionary AI Breakthrough</p>
-            <div className="flex justify-center space-x-4">
-              <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">BREAKTHROUGH</span>
-              <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">AI</span>
-              <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">ENTERPRISE</span>
-            </div>
-          </div>
-          
-          <div className="prose max-w-none">
-            <p className="text-lg text-gray-700 mb-6">
-              This page is currently under development. Please check back soon for the complete content.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
+    <div>
+      <Helmet>
+        <title>Platform ROI Scorecards v2 — Proving Value in Weeks</title>
+        <meta name="description" content="KPI-linked developer scorecards, golden paths, and adoption funnels that quantify platform ROI in 4–8 weeks." /><link rel="canonical", href=" " />
+      </Helmet>
+
+        <meta name="description" content="KPI-linked developer scorecards, golden paths, and adoption funnels that quantify platform ROI in 4–8 weeks." />
+        <p className="text-zion-slate-light mb-8">Proving Value in Weeks</p>
+        <div>
+        <h1 className="text-4xl md: text-5xl font-bold mb-4">Platform ROI Scorecards v2</h1>
+        <p className="text-zion-slate-light mb-8">Proving Value in Weeks</p>
+        <div>
+        <h1 className="text-4xl md: text-5xl font-bold mb-4">Platform ROI Scorecards v2</h1>
+        <p className="text-zion-slate-light mb-8">Proving Value in Weeks</p>
+        <div className="prose prose-invert max-w-3xl">
+          <p >
+            This article presents a practical, KPI-linked approach for measuring platform impact through
+            developer journey scorecards, adoption funnels, and golden paths. Within 4–8 weeks, teams can
+            establish baselines, set explicit objectives, and quantify ROI using leading and lagging indicators.
+          </p>
+          <p >
+            Highlights: path time-to-first-value, change failure rate, paved road adoption, reliability and cost,,
+            scorecards, and an executive roll-up that ties platform investment to business outcomes.
+          </p>
+  </div>
+  </div>
+  </div>
   );
-}
+};
+  </div>
+</li>

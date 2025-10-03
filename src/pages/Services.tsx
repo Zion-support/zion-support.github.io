@@ -62,8 +62,7 @@ const Services: React.FC = () => {
               <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
               <Link 
                 to={service.href}
-                className="text-blue-400 hover:text-blue-300 font-semibold transition-colors"
-              >
+                className="text-blue-400 hover:text-blue-300 font-semibold transition-colors">
                 Learn More →
               </Link>
             </div>
@@ -82,14 +81,12 @@ const Services: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 to="/contact"
-                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
-              >
+                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
                 Schedule Consultation
               </Link>
               <Link 
                 to="/about"
-                className="border border-white/30 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300"
-              >
+                className="border border-white/30 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
                 Learn About Us
               </Link>
             </div>
