@@ -43,8 +43,10 @@ const CareersPage: React.FC = () => {
               <li>Cutting-edge technology stack</li>
             </ul>
           </div>
+        </div>
       </div>
+    </div>
   );
 };
 
-export default CareersPage;</div></div></div>
+export default CareersPage;

@@ -56,30 +56,30 @@ export default function AI2026ImplementationRoadmap() {
               <span key={tag} className="text-left">
                 <Tag className="text-left" />
                 {tag}
-              <
+              </span>
             ))}
           </div>
         </div>
 
         {/* Executive Summary */}
         <div className="text-left">
-          <h2 className="text-left">🎯 Executive Summary</h2>"
+          <h2 className="text-left">🎯 Executive Summary</h2>
           <div className="text-left">
             <div className="text-left">
-              <div className="text-left">$2.8T</div>"
-              <div className="text-left">AI market by 2026</div>"
+              <div className="text-left">$2.8T</div>
+              <div className="text-left">AI market by 2026</div>
             </div>
             <div className="text-left">
-              <div className="text-left">78%</div>"
-              <div className="text-left">Fortune 500 adoption</div>"
+              <div className="text-left">78%</div>
+              <div className="text-left">Fortune 500 adoption</div>
             </div>
             <div className="text-left">
-              <div className="text-left">156%</div>"
-              <div className="text-left">Average ROI</div>"
+              <div className="text-left">156%</div>
+              <div className="text-left">Average ROI</div>
             </div>
             <div className="text-left">
-              <div className="text-left">67%</div>"
-              <div className="text-left">Success rate</div>"
+              <div className="text-left">67%</div>
+              <div className="text-left">Success rate</div>
             </div>
           </div>
         </div>

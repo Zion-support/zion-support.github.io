@@ -75,7 +75,7 @@ export default function HomePage() {
                     <span className="text-left">
                       Featured Article
                     </span>
-                    <span className="text-left">20 min read<"
+                    <span className="text-left">20 min read</span>
                   </div>
                   <h3 className="text-left">
                     AI Enterprise Transformation 2026

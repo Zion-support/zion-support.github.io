@@ -88,45 +88,45 @@ export default function ImplementationGuide() {
             <div className="text-left">
               <ol className="text-left">
                 <li className="text-left">
-                  <span className="text-left">1<"
+                  <span className="text-left">1</span>
                   <Link href="#introduction" className="text-left">Introduction</Link>"
                 </li>
                 <li className="text-left">
-                  <span className="text-left">2<"
+                  <span className="text-left">2</span>
                   <Link href="#prerequisites" className="text-left">Prerequisites and Readiness Assessment</Link>"
                 </li>
                 <li className="text-left">
-                  <span className="text-left">3<"
+                  <span className="text-left">3</span>
                   <Link href="#strategic-planning" className="text-left">Strategic Planning and Architecture</Link>"
                 </li>
                 <li className="text-left">
-                  <span className="text-left">4<"
+                  <span className="text-left">4</span>
                   <Link href="#technology-stack" className="text-left">Technology Stack Selection</Link>"
                 </li>
                 <li className="text-left">
-                  <span className="text-left">5<"
+                  <span className="text-left">5</span>
                   <Link href="#implementation" className="text-left">Implementation Methodology</Link>"
                 </li>
               </ol>
               <ol className="text-left">
                 <li className="text-left">
-                  <span className="text-left">6<"
+                  <span className="text-left">6</span>
                   <Link href="#change-management" className="text-left">Change Management Strategy</Link>"
                 </li>
                 <li className="text-left">
-                  <span className="text-left">7<"
+                  <span className="text-left">7</span>
                   <Link href="#risk-management" className="text-left">Risk Management and Mitigation</Link>"
                 </li>
                 <li className="text-left">
-                  <span className="text-left">8<"
+                  <span className="text-left">8</span>
                   <Link href="#monitoring" className="text-left">Monitoring and Optimization</Link>"
                 </li>
                 <li className="text-left">
-                  <span className="text-left">9<"
+                  <span className="text-left">9</span>
                   <Link href="#scaling" className="text-left">Scaling and Evolution</Link>"
                 </li>
                 <li className="text-left">
-                  <span className="text-left">10<"
+                  <span className="text-left">10</span>
                   <Link href="#best-practices" className="text-left">Best Practices and Lessons Learned</Link>"
                 </li>
               </ol>
@@ -154,23 +154,23 @@ export default function ImplementationGuide() {
             <ul className="text-left">
               <li className="text-left">
                 <CheckCircle className="text-left" />
-                <span className="text-left"><strong>Self-analyze</strong> and identify optimization opportunities<"
+                <span className="text-left"><strong>Self-analyze</strong> and identify optimization opportunities</span>
               </li>
               <li className="text-left">
                 <CheckCircle className="text-left" />
-                <span className="text-left"><strong>Self-optimize</strong> based on real-time performance data<"
+                <span className="text-left"><strong>Self-optimize</strong> based on real-time performance data</span>
               </li>
               <li className="text-left">
                 <CheckCircle className="text-left" />
-                <span className="text-left"><strong>Self-heal</strong> from disruptions and adapt to changes<"
+                <span className="text-left"><strong>Self-heal</strong> from disruptions and adapt to changes</span>
               </li>
               <li className="text-left">
                 <CheckCircle className="text-left" />
-                <span className="text-left"><strong>Self-evolve</strong> through continuous learning and improvement<"
+                <span className="text-left"><strong>Self-evolve</strong> through continuous learning and improvement</span>
               </li>
               <li className="text-left">
                 <CheckCircle className="text-left" />
-                <span className="text-left"><strong>Self-govern</strong> within defined parameters and constraints<"
+                <span className="text-left"><strong>Self-govern</strong> within defined parameters and constraints</span>
               </li>
             </ul>
           </div>
@@ -189,19 +189,19 @@ export default function ImplementationGuide() {
               <ul className="text-left">
                 <li className="text-left">
                   <CheckCircle className="text-left" />
-                  <span className="text-left">Executive sponsorship with clear vision<"
+                  <span className="text-left">Executive sponsorship with clear vision</span>
                 </li>
                 <li className="text-left">
                   <CheckCircle className="text-left" />
-                  <span className="text-left">Cross-functional collaboration<"
+                  <span className="text-left">Cross-functional collaboration</span>
                 </li>
                 <li className="text-left">
                   <CheckCircle className="text-left" />
-                  <span className="text-left">Long-term commitment (18-24 months)<"
+                  <span className="text-left">Long-term commitment (18-24 months)</span>
                 </li>
                 <li className="text-left">
                   <CheckCircle className="text-left" />
-                  <span className="text-left">Investment willingness<"
+                  <span className="text-left">Investment willingness</span>
                 </li>
               </ul>
             </div>
@@ -211,19 +211,19 @@ export default function ImplementationGuide() {
               <ul className="text-left">
                 <li className="text-left">
                   <CheckCircle className="text-left" />
-                  <span className="text-left">Modern data architecture<"
+                  <span className="text-left">Modern data architecture</span>
                 </li>
                 <li className="text-left">
                   <CheckCircle className="text-left" />
-                  <span className="text-left">API-first systems<"
+                  <span className="text-left">API-first systems</span>
                 </li>
                 <li className="text-left">
                   <CheckCircle className="text-left" />
-                  <span className="text-left">Cloud-native infrastructure<"
+                  <span className="text-left">Cloud-native infrastructure</span>
                 </li>
                 <li className="text-left">
                   <CheckCircle className="text-left" />
-                  <span className="text-left">Robust security framework<"
+                  <span className="text-left">Robust security framework</span>
                 </li>
               </ul>
             </div>
@@ -233,19 +233,19 @@ export default function ImplementationGuide() {
               <ul className="text-left">
                 <li className="text-left">
                   <CheckCircle className="text-left" />
-                  <span className="text-left">Clean, consistent data<"
+                  <span className="text-left">Clean, consistent data</span>
                 </li>
                 <li className="text-left">
                   <CheckCircle className="text-left" />
-                  <span className="text-left">Data governance policies<"
+                  <span className="text-left">Data governance policies</span>
                 </li>
                 <li className="text-left">
                   <CheckCircle className="text-left" />
-                  <span className="text-left">Real-time data processing<"
+                  <span className="text-left">Real-time data processing</span>
                 </li>
                 <li className="text-left">
                   <CheckCircle className="text-left" />
-                  <span className="text-left">Data lineage and audit trails<"
+                  <span className="text-left">Data lineage and audit trails</span>
                 </li>
               </ul>
             </div>
@@ -332,19 +332,19 @@ export default function ImplementationGuide() {
               <ul className="text-left">
                 <li className="text-left">
                   <CheckCircle className="text-left" />
-                  <span className="text-left"><strong>Clear business objectives</strong> aligned with autonomous capabilities<"
+                  <span className="text-left"><strong>Clear business objectives</strong> aligned with autonomous capabilities</span>
                 </li>
                 <li className="text-left">
                   <CheckCircle className="text-left" />
-                  <span className="text-left"><strong>Executive commitment</strong> with adequate resources<"
+                  <span className="text-left"><strong>Executive commitment</strong> with adequate resources</span>
                 </li>
                 <li className="text-left">
                   <CheckCircle className="text-left" />
-                  <span className="text-left"><strong>Phased approach</strong> with measurable milestones<"
+                  <span className="text-left"><strong>Phased approach</strong> with measurable milestones</span>
                 </li>
                 <li className="text-left">
                   <CheckCircle className="text-left" />
-                  <span className="text-left"><strong>Continuous communication</strong> and stakeholder engagement<"
+                  <span className="text-left"><strong>Continuous communication</strong> and stakeholder engagement</span>
                 </li>
               </ul>
             </div>
@@ -354,19 +354,19 @@ export default function ImplementationGuide() {
               <ul className="text-left">
                 <li className="text-left">
                   <div className="text-left"></div>"
-                  <span className="text-left"><strong>Insufficient testing</strong> leading to system failures<"
+                  <span className="text-left"><strong>Insufficient testing</strong> leading to system failures</span>
                 </li>
                 <li className="text-left">
                   <div className="text-left"></div>"
-                  <span className="text-left"><strong>Poor data quality</strong> causing incorrect decisions<"
+                  <span className="text-left"><strong>Poor data quality</strong> causing incorrect decisions</span>
                 </li>
                 <li className="text-left">
                   <div className="text-left"></div>"
-                  <span className="text-left"><strong>Integration complexity</strong> delaying implementation<"
+                  <span className="text-left"><strong>Integration complexity</strong> delaying implementation</span>
                 </li>
                 <li className="text-left">
                   <div className="text-left"></div>"
-                  <span className="text-left"><strong>Insufficient change management</strong> causing resistance<"
+                  <span className="text-left"><strong>Insufficient change management</strong> causing resistance</span>
                 </li>
               </ul>
             </div>
@@ -412,7 +412,7 @@ export default function ImplementationGuide() {
                 <h3 className="text-left">AI-Powered Autonomous Business Processes</h3>"
                 <p className="text-left">Discover how AI-powered autonomous business processes are revolutionizing enterprise operations in 2026.</p>"
                 <div className="text-left">
-                  <span className="text-left">Read article<"
+                  <span className="text-left">Read article</span>
                   <ArrowLeft className="text-left" />
                 </div>
               </div>
@@ -423,7 +423,7 @@ export default function ImplementationGuide() {
                 <h3 className="text-left">Global Manufacturing Case Study</h3>"
                 <p className="text-left">See how a Fortune 500 manufacturer achieved 85% process automation with our solution.</p>"
                 <div className="text-left">
-                  <span className="text-left">View case study<"
+                  <span className="text-left">View case study</span>
                   <ArrowLeft className="text-left" />
                 </div>
               </div>
