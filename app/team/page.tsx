@@ -20,7 +20,9 @@ import {
   MapPin,
   GraduationCap,
   Briefcase,
-  Lightbulb
+  Lightbulb,
+  Brain,
+  Cloud
 } from 'lucide-react';
 
 export const metadata = {
