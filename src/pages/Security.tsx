@@ -1,11 +1,14 @@
-import React from "react";
+import React from "react
 ;
-const Security: React.FC: ()  => {,,,
+const Security: React.FC = () => {
   return (
-        <section className: "min-h-[40vh]">";,";,
-            <h1 className: "text-3xl font-bold mb-4">Security</h1>";,";,
-            <p className: "text-gray-700 mb-4">We follow best practices for security, including encryption, least privilege, and continuous monitoring.</p>";,";,
-            <ul className: "list-disc pl-6 space-y-2 text-gray-700">";,";,
+        <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <h1 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Security</h1>";,
+            <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">We follow best practices for security, including encryption, least privilege, and continuous monitoring.</p>";,
+            <ul className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <h1 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Security</h1>";,
+            <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">We follow best practices for security, including encryption, least privilege, and continuous monitoring.</p>";,
+            <ul className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 <li >Data encryption in transit and at rest</li>
                 <li >Security reviews and audits</li>
                 <li >Incident response procedures</li>
@@ -14,6 +17,6 @@ const Security: React.FC: ()  => {,,,
     );
 };
 
-export default Security;
+export default Component;
 
 ;

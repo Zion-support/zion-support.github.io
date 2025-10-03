@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'AI-Powered DevSecOps 2026: Autonomous Security at Scale | Zion Tech Group',
@@ -87,8 +87,8 @@ export default function AIPoweredDevSecOps2026Page() {
   );
 }
 
-import React from 'react';
-import Link from 'next/link';
+// import React from 'react';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'AI-Powered DevSecOps 2026: Autonomous Security at Scale',

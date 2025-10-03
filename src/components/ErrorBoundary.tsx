@@ -1,44 +1,56 @@
+
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 
 interface Props {
-  children?: ReactNode;
+  children: ReactNode;
+  fallback?: ReactNode;
 }
 
 interface State {
   hasError: boolean;
+  error?: Error;
 }
 
 class ErrorBoundary extends Component<Props, State> {
-  public state: State = {
-    hasError: false
-  };
-
-  public static getDerivedStateFromError(): State {
-    // Update state so the next render will show the fallback UI.
-    return { hasError: true };
+  constructor(props: Props) {
+    super(props);
+    this.state = { hasError: false };
   }
 
-  public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error("Uncaught error:", error, errorInfo);
-    // You can also log the error to an error reporting service
-    // logErrorToMyService(error, errorInfo);
+  static getDerivedStateFromError(error: Error): State {
+    return { hasError: true, error };
   }
 
-  public render() {
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    // Log to external service if available
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'exception', {
+        description: error.message,
+        fatal: false
+      });
+    }
+    
+    // In development, log to console for debugging
+    if (process.env.NODE_ENV === 'development') {
+      // eslint-disable-next-line no-console
+      console.error('Error caught by boundary:', error, errorInfo);
+    }
+  }
+
+  render() {
     if (this.state.hasError) {
-      // You can render any custom fallback UI
-      return (
-        <div className="flex flex-col items-center justify-center min-h-screen bg-red-900 text-white p-4">
-          <h1 className="text-4xl font-bold mb-4">Oops! Something went wrong.</h1>
-          <p className="text-lg text-center mb-6">
-            We're sorry for the inconvenience. Please try refreshing the page or contact support if the issue persists.
-          </p>
-          <button
-            className="bg-white text-red-700 font-semibold py-2 px-4 rounded-lg shadow hover:bg-gray-100 transition-colors"
-            onClick={() => window.location.reload()}
-          >
-            Refresh Page
-          </button>
+      return this.props.fallback || (
+        <div className="min-h-screen bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white flex items-center justify-center">
+          <div className="text-center">
+            <h2 className="text-2xl font-bold mb-4">Something went wrong</h2>
+            <p className="mb-6">We're sorry, but something unexpected happened.</p>
+            <button 
+              onClick={() => this.setState({ hasError: false })}
+              className="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors"
+            >
+              Try again
+            </button>
+          </div>
         </div>
       );
     }

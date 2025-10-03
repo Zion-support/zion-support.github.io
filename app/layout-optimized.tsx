@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { LazyWrapper } from './components/LazyLoader';
 import { SEOOptimizer } from './components/SEOOptimizer';
 import { AccessibilityEnhancer } from './components/AccessibilityEnhancer';

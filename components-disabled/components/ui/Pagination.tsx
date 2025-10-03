@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import EnhancedButton from './EnhancedButton';
 
 export type PaginationProps = any;

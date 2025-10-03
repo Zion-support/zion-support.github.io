@@ -1,5 +1,5 @@
-import React from 'react';
-import Link from 'next/link';
+// import React from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowLeft, Atom, Cpu, Zap, TrendingUp, Shield, Binary } from 'lucide-react';
 
 export const metadata = {

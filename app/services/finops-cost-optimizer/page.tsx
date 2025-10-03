@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 
 export const metadata = {
   title: 'FinOps Cloud Cost Optimizer | Zion Tech Group',

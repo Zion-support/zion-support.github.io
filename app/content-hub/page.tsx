@@ -7,8 +7,8 @@ export default function ContentHubPage() {
   );
 }
 
-import React from 'react';
-import Link from 'next/link';
+// import React from 'react';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'Content Hub - Zion Tech Group',
@@ -204,8 +204,7 @@ export default function ContentHubPage() {
                   <p className="text-gray-600 mb-4">
                     {resource.description}
                   </p>
-                  <Link 
-                    href={resource.link}
+                  <Link to={resource.link}
                     className="text-blue-600 hover:text-blue-800 font-medium text-sm flex items-center gap-1"
                   >
                     Access Resource
@@ -261,8 +260,7 @@ export default function ContentHubPage() {
                         <p className="text-gray-600 text-sm mb-3">
                           {resource.description}
                         </p>
-                        <Link 
-                          href={resource.link}
+                        <Link to={resource.link}
                           className="text-blue-600 hover:text-blue-800 font-medium text-sm flex items-center gap-1"
                         >
                           Access Resource
@@ -293,8 +291,7 @@ export default function ContentHubPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <Link 
-              href="/guides"
+            <Link to="/guides"
               className="bg-white rounded-lg p-6 text-center hover:shadow-md transition-shadow duration-300"
             >
               <div className="text-3xl mb-3">📚</div>
@@ -302,8 +299,7 @@ export default function ContentHubPage() {
               <p className="text-gray-600 text-sm">Step-by-step AI implementation guides</p>
             </Link>
             
-            <Link 
-              href="/case-studies"
+            <Link to="/case-studies"
               className="bg-white rounded-lg p-6 text-center hover:shadow-md transition-shadow duration-300"
             >
               <div className="text-3xl mb-3">📊</div>
@@ -311,8 +307,7 @@ export default function ContentHubPage() {
               <p className="text-gray-600 text-sm">Real-world success stories and ROI examples</p>
             </Link>
             
-            <Link 
-              href="/blog"
+            <Link to="/blog"
               className="bg-white rounded-lg p-6 text-center hover:shadow-md transition-shadow duration-300"
             >
               <div className="text-3xl mb-3">📝</div>
@@ -320,8 +315,7 @@ export default function ContentHubPage() {
               <p className="text-gray-600 text-sm">Latest AI trends and breakthrough insights</p>
             </Link>
             
-            <Link 
-              href="/services"
+            <Link to="/services"
               className="bg-white rounded-lg p-6 text-center hover:shadow-md transition-shadow duration-300"
             >
               <div className="text-3xl mb-3">⚙️</div>
@@ -342,14 +336,12 @@ export default function ContentHubPage() {
             Contact us for custom implementation guides, technical documentation, or specialized resources for your organization
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/contact"
+            <Link to="/contact"
               className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200"
             >
               Request Custom Resources
             </Link>
-            <Link 
-              href="/services"
+            <Link to="/services"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors duration-200"
             >
               Explore Our Services

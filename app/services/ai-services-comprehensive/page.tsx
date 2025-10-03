@@ -1,7 +1,11 @@
-import React from 'react';
-import Link from 'next/link';
-import { Metadata } from 'next';
-
+// import React from 'react';
+import { Link } from 'react-router-dom';
+// Metadata interface for React Helmet
+interface Metadata {
+  title?: string;
+  description?: string;
+  keywords?: string;
+}
 export const metadata: Metadata = {
   title: 'AI Services & Solutions | Zion Tech Group',
   description: 'Comprehensive AI services including machine learning, natural language processing, computer vision, and autonomous systems for enterprise applications.',
@@ -272,8 +276,7 @@ export default function AIServicesPage() {
                   </div>
                   
                   <div className="flex gap-2">
-                    <Link 
-                      href={service.href}
+                    <Link to={service.href}
                       className="flex-1 bg-purple-600 text-white text-center py-2 px-4 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
                     >
                       Learn More
@@ -361,10 +364,10 @@ export default function AIServicesPage() {
             <div>
               <h4 className="text-lg font-semibold mb-4">AI Services</h4>
               <div className="space-y-2">
-                <Link href="/services/machine-learning-development" className="block text-gray-300 hover:text-purple-400">Machine Learning</Link>
-                <Link href="/services/nlp-suite" className="block text-gray-300 hover:text-purple-400">Natural Language Processing</Link>
-                <Link href="/services/computer-vision" className="block text-gray-300 hover:text-purple-400">Computer Vision</Link>
-                <Link href="/services/autonomous-systems" className="block text-gray-300 hover:text-purple-400">Autonomous Systems</Link>
+                <Link to="/services/machine-learning-development" className="block text-gray-300 hover:text-purple-400">Machine Learning</Link>
+                <Link to="/services/nlp-suite" className="block text-gray-300 hover:text-purple-400">Natural Language Processing</Link>
+                <Link to="/services/computer-vision" className="block text-gray-300 hover:text-purple-400">Computer Vision</Link>
+                <Link to="/services/autonomous-systems" className="block text-gray-300 hover:text-purple-400">Autonomous Systems</Link>
               </div>
             </div>
           </div>

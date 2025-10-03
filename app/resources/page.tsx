@@ -1,29 +1,11 @@
-import React from 'react';
+// import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
   ArrowRight, 
-  CheckCircle, 
-  Star, 
-  Users, 
-  Zap, 
   Shield, 
-  Globe, 
-  BarChart3,
-  Brain,
-  Cpu,
-  Cloud,
-  Database,
-  Lock,
-  TrendingUp,
-  Award,
-  Target,
-  Rocket,
   Book,
   FileText,
   Video,
-  Download,
-  ExternalLink,
-  Search,
   Lightbulb,
   Clock
 } from 'lucide-react';

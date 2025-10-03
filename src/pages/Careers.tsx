@@ -1,13 +1,18 @@
-import React from "react";
+import React from "react
 ;
-const Careers: React.FC: ()  => {,,,
+const Careers: React.FC = () => {
   return (
-        <section className: "min-h-[40vh]">";,";,
-            <h1 className: "text-3xl font-bold mb-4">Careers</h1>";,";,
-            <p className: "text-gray-700 mb-6">,";,";,
+        <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <h1 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Careers</h1>";,
+            <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,";,
   Join Zion Tech Group to build enterprise-grade AI, micro SaaS, and IT solutions. Were always looking for talented engineers, designers, and product leaders.
             </p>
-            <ul className: "list-disc pl-6 space-y-2">";,";,
+            <ul className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <h1 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Careers</h1>";,
+            <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,";,
+  Join Zion Tech Group to build enterprise-grade AI, micro SaaS, and IT solutions. Were always looking for talented engineers, designers, and product leaders.
+            </p>
+            <ul className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 <li >Senior Full-Stack Engineer</li>
                 <li >AI/ML Engineer</li>
                 <li >Cloud/DevOps Engineer</li>
@@ -17,6 +22,6 @@ const Careers: React.FC: ()  => {,,,
     );
 };
 
-export default Careers;
+export default Component;
 
 ;

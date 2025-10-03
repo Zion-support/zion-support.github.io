@@ -1,5 +1,5 @@
-import React from 'react';
-import Link from 'next/link';
+// import React from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowLeft, Cpu, Layers, Network, Sparkles, Zap, Shield } from 'lucide-react';
 
 export const metadata = {

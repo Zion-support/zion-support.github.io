@@ -1,5 +1,5 @@
-import React from 'react';
-import { Metadata } from 'next';
+// import React from 'react';
+// Metadata handled by React Helmet
 import * as Lucide from 'lucide-react';
 const { Shield, Lock, FileText, CheckCircle, Mail, Phone, ArrowRight } = Lucide as any;
 

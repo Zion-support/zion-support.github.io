@@ -1,19 +1,74 @@
 import React from 'react';
 
-export function LoadingSpinner() {
-  return (
-    <div className="flex items-center justify-center h-full p-8">
-      <div className="w-12 h-12 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
-      <p className="ml-4 text-lg text-gray-600">Loading...</p>
-    </div>
-  );
+interface LoadingSpinnerProps {
+  size?: 'sm' | 'md' | 'lg' | 'xl';
+  className?: string;
+  text?: string;
 }
 
-export function PageLoader() {
+const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
+  size = 'md', 
+  className = '',
+  text = 'Loading...'
+}) => {
+  const sizeClasses = {
+    sm: 'w-4 h-4',
+    md: 'w-8 h-8',
+    lg: 'w-12 h-12',
+    xl: 'w-16 h-16'
+  };
+
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-slate-950 text-white">
-      <div className="w-16 h-16 border-8 border-blue-500 border-t-transparent rounded-full animate-spin mb-4"></div>
-      <p className="text-xl font-semibold">Loading content...</p>
+    <div className={`flex flex-col items-center justify-center p-8 ${className}`}>
+      {/* Animated spinner */}
+      <div className={`${sizeClasses[size]} relative`}>
+        {/* Outer ring */}
+        <div className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white min-h-screen"></div>
+        
+        {/* Spinning ring */}
+        <div className={`${sizeClasses[size]} rounded-full border-4 border-transparent border-t-blue-500 animate-spin`}></div>
+        
+        {/* Inner pulsing dot */}
+        <div className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white min-h-screen">
+          <div className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white min-h-screen"></div>
+        </div>
+      </div>
+      
+      {/* Loading text */}
+      {text && (
+        <p className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white min-h-screen">
+          {text}
+        </p>
+      )}
+      
+      {/* Loading dots animation */}
+      <div className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white min-h-screen">
+        <div className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white min-h-screen"></div>
+        <div className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white min-h-screen"></div>
+        <div className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white min-h-screen"></div>
+      </div>
     </div>
   );
-}
+};
+
+// Full page loader component
+export const PageLoader: React.FC = React.memo(() => (
+  <div className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white min-h-screen">
+    <LoadingSpinner size="xl" text="Loading page..." />
+  </div>
+));
+
+// Inline loader for smaller components
+export const InlineLoader: React.FC = React.memo(() => (
+  <LoadingSpinner size="sm" text="Loading..." className="p-4" />
+));
+
+// Button loader for form submissions
+export const ButtonLoader: React.FC = React.memo(() => (
+  <div className="flex items-center space-x-2">
+    <LoadingSpinner size="sm" />
+    <span>Processing...</span>
+  </div>
+));
+
+export default LoadingSpinner;

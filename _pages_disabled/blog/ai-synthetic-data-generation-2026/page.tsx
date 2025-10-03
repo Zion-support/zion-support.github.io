@@ -1,5 +1,5 @@
-import React from 'react';
-import Link from 'next/link';
+// import React from 'react';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'AI Synthetic Data Generation 2026: Privacy-Preserving AI Training at Enterprise Scale',

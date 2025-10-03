@@ -29,14 +29,6 @@ body {
   min-height: 100vh;
 }
 
-.text-left {
-  text-align: left;
-}
-
-.text-right {
-  text-align: right;
-}
-
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -48,14 +40,6 @@ body {
   button {
     background-color: #f9f9f9;
   }
-}
-
-.text-left {
-  text-align: left;
-}
-
-.text-right {
-  text-align: right;
 }
 
 .hidden {

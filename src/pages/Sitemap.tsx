@@ -1,7 +1,6 @@
-import React from 'react';';
-import { Link } from 'react-router-dom';
+// import React from 'react';
 ;
-const SitemapPage: React.FC: ()  => {,,,
+const SitemapPage: React.FC = () => {
   const pages: [,,
     { path: '/', title: 'Home' },';';
     { path: '/services', title: 'Services' },';';
@@ -19,26 +18,35 @@ const SitemapPage: React.FC: ()  => {,,,
   ];
 
   return (
-    <div className: "min-h-screen bg-gray-50">";,";,
-      <section className: "bg-gradient-to-r from-gray-600 to-gray-800 text-white py-16">";,";,
-        <div className: "container mx-auto px-6 text-center">";,";,
-          <h1 className: "text-4xl md:text-5xl font-bold mb-4">Sitemap</h1>";,";,
-          <p className: "text-xl text-gray-100 max-w-3xl mx-auto">,";,";,
+    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+      <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <h1 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Sitemap</h1>";,
+          <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,";,
+    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+      <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <h1 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Sitemap</h1>";,
+          <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,";,
   Navigate through all the pages on our website.
           </p>
         </div>
       </section>
 
-      <div className: "container mx-auto px-6 py-20">";,";,
-        <div className: "max-w-4xl mx-auto">";,";,
-          <div className: "bg-white p-8 rounded-xl shadow-sm">";,";,
-            <h2 className: "text-2xl font-bold text-gray-900 mb-6">All Pages</h2>";,";,
-            <div className: "grid grid-cols-1 md:grid-cols-2 gap-4">";,";,
+      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <h2 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">All Pages</h2>";,
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <h2 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">All Pages</h2>";,
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
               {pages.map((page, index) => (
-                <Link key: {index}
+                <Link key={index}
                   to: {page.path}
-                  className: "text-blue-600 hover:text-blue-800 hover:underline transition-colors",";,
-                >
+                  className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                   {page.title}
                 </Link>
               ))}
@@ -50,4 +58,4 @@ const SitemapPage: React.FC: ()  => {,,,
   );
 };
 
-export default SitemapPage;
+export default Component;

@@ -1,5 +1,5 @@
-import React from 'react';
-import Link from 'next/link';
+// import React from 'react';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'Quantum-AI Convergence 2027: Enterprise Breakthroughs in Hybrid Computing',

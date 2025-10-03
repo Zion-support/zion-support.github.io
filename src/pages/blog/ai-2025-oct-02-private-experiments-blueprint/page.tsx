@@ -1,12 +1,13 @@
-import React from 'react';';
-const PrivateExperimentsBlueprint2025: React.FC: ()  => {,,,
+// import React from 'react';
+const PrivateExperimentsBlueprint2025: React.FC = () => {
   return (
-    <article className: "prose prose-invert max-w-3xl mx-auto py-10">,";,";,
-  import React from 'react';'
+    <article className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,";,
+    <article className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,";,
+  // import React from 'react';
 
-const PrivateExperimentsBlueprint2025: React.FC: ()  => {,,,
+const PrivateExperimentsBlueprint2025: React.FC = () => {
   return (
-    <article className: "prose prose-invert max-w-3xl mx-auto py-10">",";,
+    <article className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
       <h1 >Private Experiments Blueprint: Zero‑PII Testing at the Edge</h1>,,
       <p >
         Learn how to run high‑velocity experiments without centralizing PII using edge‑signed configs
@@ -29,6 +30,6 @@ const PrivateExperimentsBlueprint2025: React.FC: ()  => {,,,
   );
 };
 
-export default PrivateExperimentsBlueprint2025;
+export default Component;
 
 ;

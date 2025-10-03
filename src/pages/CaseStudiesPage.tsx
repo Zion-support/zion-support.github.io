@@ -1,22 +1,30 @@
-import React from 'react';';
-import { Helmet } from 'react-helmet-async';
+// import React from 'react';
 ;
-const CaseStudiesPage: React.FC: ()  => {,,,
+const CaseStudiesPage: React.FC = () => {
   return (
     <>
       <Helmet >
         <title >Case Studies - Zion Tech Group</title>
-        <meta name: "description" content ="Explore real-world examples of how we've helped businesses achieve their goals." />";,";,
+        <meta name="description", content ="Explore real-world examples of how we've helped businesses achieve their goals." />
+        <meta name="description" content="Explore real-world examples of how we've helped businesses achieve their goals." />
       </Helmet>
       
-      <div className: "py-20 px-4">";,";,
-        <div className: "max-w-4xl mx-auto text-center">";,";,
-          <h1 className: "text-4xl font-bold text-gray-900 mb-6">Case Studies - Zion Tech Group</h1>";,";,
-          <p className: "text-xl text-gray-600 mb-8">,";,";,
+      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <h1 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Case Studies - Zion Tech Group</h3>
+          <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   This page is currently under development. Please check back soon for updates.
           </p>
-          <div className: "bg-white p-8 rounded-xl shadow-lg">";,";,
-            <p className: "text-gray-600">,";,";,
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
+      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <h1 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Case Studies - Zion Tech Group</h3>
+          <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
+  This page is currently under development. Please check back soon for updates.
+          </p>
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   We're working hard to bring you the best content and features. Thank you for your patience.';';
             </p>
           </div>
@@ -26,5 +34,5 @@ const CaseStudiesPage: React.FC: ()  => {,,,
   );
 };
 
-export default CaseStudiesPage;
+export default Component;
 ;

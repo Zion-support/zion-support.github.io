@@ -1,18 +1,14 @@
-import React from 'react';
+// import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import {
   Server,
   Shield,
   Cloud,
   Database,
-  Network,
   Wrench,
   Zap,
   CheckCircle,
   ArrowRight,
-  DollarSign,
-  Clock,
-  Star,
   Smartphone,
   BookOpen
 } from 'lucide-react';

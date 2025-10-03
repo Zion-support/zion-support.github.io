@@ -1,6 +1,11 @@
-import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+// import React from 'react';
+// Metadata interface for React Helmet
+interface Metadata {
+  title?: string;
+  description?: string;
+  keywords?: string;
+}
+import { Link } from 'react-router-dom';
 import { 
   Mic, 
   Volume2, 
@@ -49,15 +54,13 @@ export default function AIVoiceAssistantPlatformPage() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link 
-                href="/contact" 
+              <Link to="/contact" 
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300"
               >
                 Get Started Today
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
-              <Link 
-                href="#demo" 
+              <Link to="#demo" 
                 className="inline-flex items-center px-8 py-4 border-2 border-gray-300 text-gray-700 font-semibold rounded-lg hover:border-blue-500 hover:text-blue-600 transition-all duration-300"
               >
                 Watch Demo
@@ -308,8 +311,7 @@ export default function AIVoiceAssistantPlatformPage() {
                 <li className="flex items-center"><CheckCircle className="w-5 h-5 text-green-500 mr-3" />Email support</li>
                 <li className="flex items-center"><CheckCircle className="w-5 h-5 text-green-500 mr-3" />Standard security</li>
               </ul>
-              <Link 
-                href="/contact" 
+              <Link to="/contact" 
                 className="w-full bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors text-center block"
               >
                 Get Started
@@ -335,8 +337,7 @@ export default function AIVoiceAssistantPlatformPage() {
                 <li className="flex items-center"><CheckCircle className="w-5 h-5 text-green-500 mr-3" />API access</li>
                 <li className="flex items-center"><CheckCircle className="w-5 h-5 text-green-500 mr-3" />Enterprise security</li>
               </ul>
-              <Link 
-                href="/contact" 
+              <Link to="/contact" 
                 className="w-full bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors text-center block"
               >
                 Get Started
@@ -360,8 +361,7 @@ export default function AIVoiceAssistantPlatformPage() {
                 <li className="flex items-center"><CheckCircle className="w-5 h-5 text-green-500 mr-3" />On-premise deployment</li>
                 <li className="flex items-center"><CheckCircle className="w-5 h-5 text-green-500 mr-3" />SLA guarantees</li>
               </ul>
-              <Link 
-                href="/contact" 
+              <Link to="/contact" 
                 className="w-full bg-gray-800 text-white font-semibold py-3 px-6 rounded-lg hover:bg-gray-900 transition-colors text-center block"
               >
                 Contact Sales
@@ -381,15 +381,13 @@ export default function AIVoiceAssistantPlatformPage() {
             Join thousands of businesses using our AI voice assistant platform to enhance customer experiences
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/contact" 
+            <Link to="/contact" 
               className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300"
             >
               Start Free Trial
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
-            <Link 
-              href="#demo" 
+            <Link to="#demo" 
               className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300"
             >
               Schedule Demo

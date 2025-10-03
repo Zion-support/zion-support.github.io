@@ -1,5 +1,5 @@
-import React from 'react';
-import Link from 'next/link';
+// import React from 'react';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'Autonomous AI Infrastructure 2026: Self-Healing Systems & Zero-Touch Operations | Zion Tech Group',

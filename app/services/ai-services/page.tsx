@@ -1,6 +1,11 @@
-import React from 'react';
-import { Metadata } from 'next';
-import Link from 'next/link';
+// import React from 'react';
+// Metadata interface for React Helmet
+interface Metadata {
+  title?: string;
+  description?: string;
+  keywords?: string;
+}
+import { Link } from 'react-router-dom';
 import { 
   Brain, 
   Bot, 
@@ -668,8 +673,7 @@ export default function AIServicesPage() {
                   </div>
 
                   <div className="flex gap-3">
-                    <Link 
-                      href={service.link}
+                    <Link to={service.link}
                       className="flex-1 inline-flex items-center justify-center px-4 py-2 bg-purple-600 text-white font-semibold rounded-lg hover:bg-purple-700 transition-colors text-sm"
                     >
                       Learn More

@@ -1,5 +1,5 @@
-import React from 'react';
-import Link from 'next/link';
+// import React from 'react';
+import { Link } from 'react-router-dom';
 
 export const metadata = {
   title: 'Production Agent Guardrails — October 2, 2025 | Zion Tech Group',
@@ -18,7 +18,7 @@ export const metadata = {
 export default function ProductionAgentGuardrailsPage() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
-      <Link href="/blog" className="text-blue-600 hover:text-blue-800 mb-6 inline-block">← Back to Blog</Link>
+      <Link to="/blog" className="text-blue-600 hover:text-blue-800 mb-6 inline-block">← Back to Blog</Link>
       <h1 className="text-4xl font-bold text-gray-900 mb-3">Production Agent Guardrails — October 2, 2025</h1>
       <div className="text-gray-600 mb-8">Published: October 2, 2025 • 15 min read • Implementation Guide</div>
 
@@ -55,7 +55,7 @@ export default function ProductionAgentGuardrailsPage() {
         <div className="bg-emerald-50 border-l-4 border-emerald-600 p-6 rounded">
           <h3 className="m-0">Need production‑grade guardrails?</h3>
           <p className="m-0">We implement approvals, verifiers, routing, and tracing tailored to your KPIs.</p>
-          <Link href="/services" className="inline-block mt-3 bg-emerald-600 hover:bg-emerald-700 text-white px-5 py-3 rounded">Explore Services</Link>
+          <Link to="/services" className="inline-block mt-3 bg-emerald-600 hover:bg-emerald-700 text-white px-5 py-3 rounded">Explore Services</Link>
         </div>
       </div>
     </div>

@@ -1,5 +1,5 @@
-import React from 'react';
-import Link from 'next/link';
+// import React from 'react';
+import { Link } from 'react-router-dom';
 import { Shield } from 'lucide-react';
 
 export const metadata = {
@@ -19,7 +19,7 @@ export const metadata = {
 export default function AutonomousGovernanceBlueprint2028() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
-      <Link href="/blog" className="text-blue-600 hover:text-blue-800 mb-6 inline-block">← Back to Blog</Link>
+      <Link to="/blog" className="text-blue-600 hover:text-blue-800 mb-6 inline-block">← Back to Blog</Link>
       <h1 className="text-4xl font-bold text-gray-900 mb-3">AI 2028: Autonomous Governance Blueprint</h1>
       <div className="text-gray-600 mb-8">Published: September 30, 2025 • 12 min read • AI Governance</div>
 
@@ -47,7 +47,7 @@ export default function AutonomousGovernanceBlueprint2028() {
         <div className="bg-blue-50 border-l-4 border-blue-500 p-6 rounded">
           <h3 className="m-0 flex items-center gap-2"><Shield className="w-5 h-5" />Need a safe rollout?</h3>
           <p className="m-0">We implement governance gates, scorecards, and recovery playbooks in weeks.</p>
-          <Link href="/services" className="inline-block mt-3 bg-blue-600 hover:bg-blue-700 text-white px-5 py-3 rounded">Explore Services</Link>
+          <Link to="/services" className="inline-block mt-3 bg-blue-600 hover:bg-blue-700 text-white px-5 py-3 rounded">Explore Services</Link>
         </div>
       </div>
     </div>
