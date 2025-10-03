@@ -51,8 +51,6 @@ export default function Page() {
               </Link>
             </div>
           </div>
-        </article>
-      </div>
     </div>
   );
 }

@@ -347,20 +347,6 @@ export default function CognitiveSearchEnterprise2025(): void {
                     insights based on current tasks, upcoming meetings, or project activities.
                   </p>
                 </div>
-                <div className="bg-slate-800/50 rounded-xl p-6 border-l-4 border-pink-500">
-                  <h3 className="text-xl font-bold mb-3 text-pink-300">Enterprise Security & Compliance</h3>
-                  <p className="text-gray-300">,"
-  Row-level security ensures users only access information they're authorized to see. Complete audit trails ;';';
-                <div className="bg-slate-800/50 rounded-xl p-6 border-l-4 border-pink-500">
-                  <h3 className="text-xl font-bold mb-3 text-pink-300">Enterprise Security & Compliance</h3>
-                  <p className="text-gray-300">
-                <div className="bg-slate-800/50 rounded-xl p-6 border-l-4 border-pink-500">
-                  <h3 className="text-xl font-bold mb-3 text-pink-300">Enterprise Security & Compliance</h3>
-                  <p className="text-gray-300">,"
-  Row-level security ensures users only access information they're authorized to see. Complete audit trails ;';';
-                <div className="bg-slate-800/50 rounded-xl p-6 border-l-4 border-pink-500">
-                  <h3 className="text-xl font-bold mb-3 text-pink-300">Enterprise Security & Compliance</h3>
-                  <p className="text-gray-300">"
   Row-level security ensures users only access information they're authorized to see. Complete audit trails '
                     track all searches and access for compliance. Sensitive data remains encrypted and on-premises if required.
                   </p>
@@ -375,7 +361,6 @@ export default function CognitiveSearchEnterprise2025(): void {
               <h2 className="text-3xl font-bold mb-6 text-indigo-300">The Knowledge Competitive Advantage</h2>
               <p className="text-gray-300 mb-4 leading-relaxed">"
   Organizations that effectively leverage institutional knowledge make better decisions faster. Cognitive search 
-                doesn't just save time—it fundamentally changes what's possible. Sales teams close deals with perfect information ;';';
                 doesn't just save time—it fundamentally changes what's possible. Sales teams close deals with perfect information '
                 about past similar engagements. Engineers solve problems by finding solutions from across the organization. 
                 Leaders make data-driven decisions with comprehensive context.

@@ -1,6 +1,3 @@
-import { Link } from "react-router-dom";
-import Header from "../../../components/Header";"
-import { Link } from "react-router-dom";
 import Header from "../../../components/Header";"
 
 const AdaptiveLearningPlatforms: () => {
@@ -288,7 +285,6 @@ const AdaptiveLearningPlatforms: () => {
                   </h3>
                   <p className="mb-3">"
   Generate personalized learning materials on-demand. AI creates custom examples relevant 
-                    to the learner's role, industry, and experience level. Interactive simulations adapt ;';';
                     to individual skill levels.
                   </p>
                   <div className="bg-purple-900/20 rounded-lg p-4 border border-purple-500/30">

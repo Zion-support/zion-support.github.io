@@ -94,18 +94,6 @@ const EnterpriseAutomation2025: () => {
             </div>
           </div>
 
-          <article className=" / />> />max-w-4xl mx-auto">
-              <div className="flex items-center"><CheckCircle className="w-4 h-4 mr-2/>Featured</div>
-            </div>
-          </div>
-" / />> />>
-          <article className="max-w-4xl mx-auto">
-            <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 md: p-12 border border-white/10">
-              <section className="mb-12">
-                <h2 className="text-3xl font-bold text-white mb-6">Executive Summary</h2>"
-                <div className="bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 border border-emerald-400/30 rounded-xl p-6 mb-6">
-                  <p className="text-white text-lg leading-relaxed">,"
-  Enterprise AI automation is no longer a future aspiration—it's a present necessity. Companies implementing ';';
                     comprehensive AI automation strategies are seeing <strong >400-600% efficiency gains</strong>
             <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">
             <div className="flex flex-wrap justify-center gap-4 text-sm text-zion-slate">
@@ -204,7 +192,6 @@ const EnterpriseAutomation2025: () => {
                 <p className="text-zion-slate-light mb-6 leading-relaxed">,"
   The convergence of advanced AI models, edge computing, and enterprise-grade platforms has created 
                   an unprecedented opportunity for automation transformation. Unlike previous waves of automation that 
-                  focused on repetitive tasks, today's AI can handle complex decision-making, creative problem-solving';';
                   and adaptive learning.
                 </p>
                 

@@ -171,20 +171,6 @@ export default function AutonomousSupplyChainRevolution2025(): void {
               </ul>
             </div>
 
-            <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-blue-300">The Supply Chain Crisis</h2>"
-              <p className="text-gray-300 mb-4 leading-relaxed">,"
-  Global supply chains face unprecedented complexity and volatility. Traditional manual planning can't keep pace with ;';';
-            <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-blue-300">The Supply Chain Crisis</h2>
-              <p className="text-gray-300 mb-4 leading-relaxed">
-            <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-blue-300">The Supply Chain Crisis</h2>"
-              <p className="text-gray-300 mb-4 leading-relaxed">,"
-  Global supply chains face unprecedented complexity and volatility. Traditional manual planning can't keep pace with ;';';
-            <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-blue-300">The Supply Chain Crisis</h2>
-              <p className="text-gray-300 mb-4 leading-relaxed">"
   Global supply chains face unprecedented complexity and volatility. Traditional manual planning can't keep pace with '
                 modern dynamics—geopolitical shifts, climate events, demand volatility, and supplier disruptions create chaos that 
                 costs enterprises billions annually. The average Fortune 500 company loses $184M per year to supply chain inefficiencies.

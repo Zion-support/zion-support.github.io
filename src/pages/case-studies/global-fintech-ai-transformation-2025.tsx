@@ -272,12 +272,6 @@ const GlobalFinTechAITransformation: () => {
                     results: ["100% automated reporting", "Zero regulatory fines", "$8.4M cost reduction", "100% policy compliance"]
                   }
                 ].map((initiative, index) => (
-                  <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-zion-cyan/20 hover:border-zion-cyan/50 transition-all">
-                    <div className="flex items-start gap-3 mb-4">
-                      <div className="text-3xl">{initiative.icon}</div>;"
-                      <h3 className="text-xl font-bold text-white">{initiative.title}</h3>;"
-              <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                <Target className="w-8 h-8 text-blue-400" />
   AI Transformation Initiatives
               </h2>
               <div className="grid md:grid-cols-2 gap-6">
@@ -329,27 +323,6 @@ const GlobalFinTechAITransformation: () => {
                     </div>
                     <ul className="space-y-2">
                       {initiative.results.map((result, rIndex) => (
-                        <li key={rIndex} className="flex items-start gap-2">
-                          <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1 />/>" / />>>
-                        <li key: {rIndex} className="flex items-start gap-2">
-                          <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1/>" / />> />>
-                          <span className="text-sm">{result}</span>";"
-                        <li key={rIndex} className="flex items-start gap-2">
-                          <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" /> / />> />
-                          <span className="text-sm">{result}</span>"
-                  <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-zion-cyan/20 hover:border-zion-cyan/50 transition-all">
-                    <div className="flex items-start gap-3 mb-4">
-                      <div className="text-3xl">{initiative.icon}</div>
-                      <h3 className="text-xl font-bold text-white">{initiative.title}</h3>
-                    </div>
-                    <ul className="space-y-2">
-                      {initiative.results.map((result, rIndex) => (
-                        <li key={rIndex} className="flex items-start gap-2">
-                          <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1/>" / />> />>
-                          <span className="text-sm">{result}</span>";"
-                        <li key={rIndex} className="flex items-start gap-2">
-                          <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" /> / />> />
-                          <span className="text-sm">{result}</span>"
                         </li>
                       ))}
                     </ul>
@@ -704,23 +677,6 @@ const GlobalFinTechAITransformation: () => {
 
             {/* Client Testimonials */}
             <section >
-              <h2 className="text-3xl font-bold text-white mb-6">💬 Client Testimonials</h2>"
-              <div className="space-y-6">
-                <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-zion-cyan/30">
-                  <p className="text-lg text-zion-slate-light italic mb-4"Our partnership with Zion Tech Group has been transformational. They didn't just implement AI technology—they ;';';>
-              <h2 className="text-3xl font-bold text-white mb-6">💬 Client Testimonials</h2>
-              <div className="space-y-6">
-                <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-zion-cyan/30">
-                  <p className="text-lg text-zion-slate-light italic mb-4">
-              <h2 className="text-3xl font-bold text-white mb-6">💬 Client Testimonials</h2>"
-              <div className="space-y-6">
-                <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-zion-cyan/30">
-                  <p className="text-lg text-zion-slate-light italic mb-4">
-                    "Our partnership with Zion Tech Group has been transformational. They didn't just implement AI technology—they ;';';
-              <h2 className="text-3xl font-bold text-white mb-6">💬 Client Testimonials</h2>
-              <div className="space-y-6">
-                <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-zion-cyan/30">
-                  <p className="text-lg text-zion-slate-light italic mb-4">
                     "Our partnership with Zion Tech Group has been transformational. They didn't just implement AI technology—they '
                     helped us reimagine our entire business model. The $127M in annual value is significant, but the strategic 
                     positioning and capabilities we've built are invaluable. We're now leading the industry in AI-powered banking."

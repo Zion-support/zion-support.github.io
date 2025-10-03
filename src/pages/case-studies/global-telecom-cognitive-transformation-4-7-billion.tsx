@@ -1,5 +1,3 @@
-import React from 'react';
-import Header from '../../components/Header'';
 import React from 'react';'
 import Header from '../../components/Header';'
 
@@ -417,37 +415,16 @@ const GlobalTelecomCognitiveTransformation: React.FC = () => {
                       title= "Cognitive Customer Intelligence
                       icon: "❤️
                       features: [,,
-                      title= "Cognitive Customer Intelligence
-                      icon: "❤️
-                      features: [,,
-                        "Cognitive virtual assistant handling 2.3M daily interactions",;"
-                        "Personalization engine with 1-to-1 recommendations",;"
-                        "Predictive churn detection with 97.8% accuracy",;"
-                        "Automated issue resolution (85% success rate)"],
-
-                      tech: "GPT-4 fine-tuned, Knowledge graphs, Vector databases, Real-time ML
                     },
                     {
                       title= "Autonomous Network Intelligence
                       icon: "🌐
                       features: [,,
-                      title= "Autonomous Network Intelligence
-                      icon: "🌐
-                      features: [,,
-                        "Continuous monitoring of 500,000+ network elements",;"
-                        "Predictive failure detection (99.6% accuracy)",;"
-                        "Automated root cause analysis",;"
-                        "Self-healing network capabilities"],
-
-                      tech: "Unsupervised learning, Causal reasoning, Optimization algorithms
                     },
                     {
                       title= "Enterprise Cognitive Intelligence
                       icon: "📊
                       features: [,,
-                        "Real-time analytics across all business units",;"
-                        "Predictive modeling for market opportunities",;"
-                        "Competitive intelligence analysis",;"
                         "Scenario planning and simulation"
                       ]
                       tech: "Natural language queries, Automated insights, Causal inference
@@ -537,18 +514,6 @@ const GlobalTelecomCognitiveTransformation: React.FC = () => {
                         </ul>
                       </div>
                       
-                      <div className="bg-black/30 rounded-lg p-3">
-                        <p className="text-xs font-semibold text-purple-300 mb-1">Technology Stack: </p>
-                        <p className="text-sm text-purple-100">{solution.tech}</p>";"
-                      <div className="bg-black/30 rounded-lg p-3">
-                        <p className="text-xs font-semibold text-purple-300 mb-1">Technology Stack: </p>
-                        <p className="text-sm text-purple-100">{solution.tech}</p>"
-                      <div className="bg-black/30 rounded-lg p-3">
-                        <p className="text-xs font-semibold text-purple-300 mb-1">Technology Stack: </p>
-                        <p className="text-sm text-purple-100">{solution.tech}</p>";"
-                      <div className="bg-black/30 rounded-lg p-3">
-                        <p className="text-xs font-semibold text-purple-300 mb-1">Technology Stack: </p>
-                        <p className="text-sm text-purple-100">{solution.tech}</p>"
                       </div>
                     </div>
                   ))}
@@ -562,16 +527,6 @@ const GlobalTelecomCognitiveTransformation: React.FC = () => {
   Results & Business Impact
                 </h2>
                 
-                <div className="space-y-6">
-                  <div className="bg-gradient-to-br from-green-900/20 to-emerald-900/20 border border-green-500/30 rounded-xl p-6">
-                    <h3 className="text-xl font-bold text-white mb-4">Customer Experience Transformation</h3>
-                "
-                <div className="space-y-6">
-                  <div className="bg-gradient-to-br from-green-900/20 to-emerald-900/20 border border-green-500/30 rounded-xl p-6">
-                    <h3 className="text-xl font-bold text-white mb-4">Customer Experience Transformation</h3>
-                    <div className="grid md:grid-cols-2 gap-4">
-                <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                  <TrendingUp className="w-8 h-8 text-green-400/>,"
   Results & Business Impact
                 </h2>
                 
@@ -632,18 +587,6 @@ const GlobalTelecomCognitiveTransformation: React.FC = () => {
                     <h3 className="text-xl font-bold text-white mb-4">Network Operations Excellence</h3>
                     <div className="grid md:grid-cols-2 gap-4">
                       {[
-                        { label: "Network Availability", value="99.96%", change: "from 98.2%" }";"
-                        { label: "Mean Time to Resolve", value="18 min", change: "from 4.2 hrs" }";"
-                        { label: "Automated Resolution", value="87%", change: "of incidents" }";"
-                        { label: "Predictive Accuracy", value="99.6%", change: "for failures" }";"
-                        { label: "Downtime Reduction", value="$1.2B", change: "annual savings" }";"
-                        { label: "OPEX Optimization", value="$420M", change: "annual savings" }";"
-                  <div className="bg-gradient-to-br from-blue-900/20 to-cyan-900/20 border border-blue-500/30 rounded-xl p-6">
-                    <h3 className="text-xl font-bold text-white mb-4">Network Operations Excellence</h3>
-                    <div className="grid md:grid-cols-2 gap-4">
-                  <div className="bg-gradient-to-br from-blue-900/20 to-cyan-900/20 border border-blue-500/30 rounded-xl p-6">
-                    <h3 className="text-xl font-bold text-white mb-4">Network Operations Excellence</h3>
-                    <div className="grid md:grid-cols-2 gap-4">
                       {[
                         { label: "Network Availability", value="99.96%", change: "from 98.2%" },"
                         { label: "Mean Time to Resolve", value="18 min", change: "from 4.2 hrs" },"
@@ -672,18 +615,6 @@ const GlobalTelecomCognitiveTransformation: React.FC = () => {
                     <h3 className="text-xl font-bold text-white mb-4">Business Intelligence Revolution</h3>
                     <div className="grid md:grid-cols-2 gap-4">
                       {[
-                        { label: "Insight Generation Time", value="<1 hour", change: "from weeks" }";"
-                        { label: "Prediction Accuracy", value="98.5%", change: "market forecasts" }";"
-                        { label: "Data-Driven Decisions", value="99%", change: "from 60%" }";"
-                        { label: "Executive Satisfaction", value="97%", change: "with insights" }";"
-                        { label: "Opportunities Captured", value="$2.1B", change: "annual" }";"
-                        { label: "Decision Speed", value="10x", change: "faster" }";"
-                  <div className="bg-gradient-to-br from-purple-900/20 to-pink-900/20 border border-purple-500/30 rounded-xl p-6">
-                    <h3 className="text-xl font-bold text-white mb-4">Business Intelligence Revolution</h3>
-                    <div className="grid md:grid-cols-2 gap-4">
-                  <div className="bg-gradient-to-br from-purple-900/20 to-pink-900/20 border border-purple-500/30 rounded-xl p-6">
-                    <h3 className="text-xl font-bold text-white mb-4">Business Intelligence Revolution</h3>
-                    <div className="grid md:grid-cols-2 gap-4">
                       {[
                         { label: "Insight Generation Time", value="<1 hour", change: "from weeks" },"
                         { label: "Prediction Accuracy", value="98.5%", change: "market forecasts" },"
@@ -948,13 +879,6 @@ const GlobalTelecomCognitiveTransformation: React.FC = () => {
           </div>
           
           {/* CTA */}
-          <div className="mt-16 bg-gradient-to-r from-purple-900/50 to-pink-900/50 border border-purple-500/30 rounded-2xl p-8 text-center">
-            <h2 className="text-3xl font-bold text-white mb-4">Ready to Transform Your Enterprise?</h2>"
-            <p className="text-purple-100 mb-6 max-w-2xl mx-auto">,"
-  Achieve similar results with Zion Tech Group's proven cognitive computing platform. ;';';
-          <div className="mt-16 bg-gradient-to-r from-purple-900/50 to-pink-900/50 border border-purple-500/30 rounded-2xl p-8 text-center">
-            <h2 className="text-3xl font-bold text-white mb-4">Ready to Transform Your Enterprise?</h2>
-            <p className="text-purple-100 mb-6 max-w-2xl mx-auto">
   Achieve similar results with Zion Tech Group's proven cognitive computing platform. '
               Schedule a consultation to discover how we can help you reach your transformation goals.
             </p>

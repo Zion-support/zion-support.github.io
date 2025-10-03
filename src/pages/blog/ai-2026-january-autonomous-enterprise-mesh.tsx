@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import React from 'react';'
 
 const AutonomousEnterpriseMesh2026: React.FC = () => {
@@ -30,14 +30,6 @@ const AutonomousEnterpriseMesh2026: React.FC = () => {
 ;
 
   const stats: [,
-    { value="99.7%", label: "Operational Efficiency", color: "text-green-400" }";"
-    { value="Zero", label: "Human Intervention", color: "text-blue-400" }";"
-    { value="89%", label: "Cost Reduction", color: "text-purple-400" }";"
-    { value="1000x", label: "Scalability", color: "text-orange-400" }";"
-    { value="99.7%", label: "Operational Efficiency", color: "text-green-400" },"
-    { value="Zero", label: "Human Intervention", color: "text-blue-400" },"
-    { value="89%", label: "Cost Reduction", color: "text-purple-400" },"
-    { value="1000x", label: "Scalability", color: "text-orange-400" }"
   ];
 
   return (
@@ -259,19 +251,6 @@ const AutonomousEnterpriseMesh2026: React.FC = () => {
             <h3 className="text-2xl font-bold text-white mb-6">Key Features</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
               {features.map((feature, index) => (
-                <div key={index} className="p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:border-white/20 transition-all duration-300">
-                  <feature .icon className="w-8 h-8 text-purple-400 mb-4/>"
-                <div key: {index} className="p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:border-white/20 transition-all duration-300">
-                  <feature .icon className="w-8 h-8 text-purple-400 mb-4/>"
-                  <h4 className="text-xl font-semibold text-white mb-3">{feature.title}</h4>";"
-                  <p className="text-gray-300 leading-relaxed">{feature.description}</p>";"
-            <h3 className="text-2xl font-bold text-white mb-6">Key Features</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-              {features.map((feature, index) => (
-                <div key={index} className="p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:border-white/20 transition-all duration-300">
-                  <feature .icon className="w-8 h-8 text-purple-400 mb-4/>"
-                  <h4 className="text-xl font-semibold text-white mb-3">{feature.title}</h4>";"
-                  <p className="text-gray-300 leading-relaxed">{feature.description}</p>";"
               processes without any human intervention. The results speak for themselves: 89% cost reduction, 1000x scalability, ,,
               and zero human error operations.
             </p>
@@ -327,16 +306,6 @@ const AutonomousEnterpriseMesh2026: React.FC = () => {
               </ul>
             </div>
 
-            <h3 className="text-2xl font-bold text-white mb-6">The Future is Autonomous</h3>
-            <p className="text-gray-300 mb-6 leading-relaxed">,"
-  The Autonomous Enterprise Mesh represents more than just technological advancement—it's a fundamental reimagining ;';';
-            <h3 className="text-2xl font-bold text-white mb-6">The Future is Autonomous</h3>
-            <p className="text-gray-300 mb-6 leading-relaxed">
-            <h3 className="text-2xl font-bold text-white mb-6">The Future is Autonomous</h3>
-            <p className="text-gray-300 mb-6 leading-relaxed">,"
-  The Autonomous Enterprise Mesh represents more than just technological advancement—it's a fundamental reimagining ;';';
-            <h3 className="text-2xl font-bold text-white mb-6">The Future is Autonomous</h3>
-            <p className="text-gray-300 mb-6 leading-relaxed">"
   The Autonomous Enterprise Mesh represents more than just technological advancement—it's a fundamental reimagining '
               of how businesses operate. As we move forward, organizations that embrace this autonomous intelligence will gain 
               unprecedented competitive advantages, while those that resist will find themselves increasingly obsolete.
@@ -345,8 +314,6 @@ const AutonomousEnterpriseMesh2026: React.FC = () => {
             <p className="text-gray-300 mb-8 leading-relaxed">
             <p className="text-gray-300 mb-8 leading-relaxed">"
   The era of human-dependent business operations is ending. The future belongs to self-organizing, intelligent systems 
-              that can adapt, learn, and optimize in real-time. The Autonomous Enterprise Mesh is not just the future—it's the present';';
-              and it's transforming businesses today.';';
               that can adapt, learn, and optimize in real-time. The Autonomous Enterprise Mesh is not just the future—it's the present, '
               and it's transforming businesses today.'
             </p>
