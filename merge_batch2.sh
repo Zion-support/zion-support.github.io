@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# Comprehensive PR merge script
+# Continue merging additional branches in batch 2
 set -e
 
-echo "🚀 Starting comprehensive PR merge process..."
+echo "🚀 Starting batch 2 merge process..."
 
 # Function to merge a branch with conflict resolution
 merge_branch() {
@@ -71,9 +71,9 @@ merge_branch() {
     fi
 }
 
-# Get list of recent cursor branches
-echo "📋 Getting list of cursor branches..."
-branches=$(git branch -r | grep "cursor/fix-errors-and-merge-to-main" | sort -V | tail -20)
+# Get list of cursor branches (next batch)
+echo "📋 Getting list of cursor branches for batch 2..."
+branches=$(git branch -r | grep "cursor/fix-errors-and-merge-to-main" | sort -V | tail -40 | head -20)
 
 # Counter for tracking progress
 total=$(echo "$branches" | wc -l)
@@ -81,7 +81,7 @@ current=0
 successful=0
 failed=0
 
-echo "📊 Found $total branches to process"
+echo "📊 Found $total branches to process in batch 2"
 
 # Process each branch
 for branch in $branches; do
@@ -105,7 +105,7 @@ for branch in $branches; do
 done
 
 echo ""
-echo "📊 Merge Summary:"
+echo "📊 Batch 2 Merge Summary:"
 echo "  ✅ Successful: $successful"
 echo "  ❌ Failed: $failed"
 echo "  📦 Total: $total"
@@ -121,5 +121,5 @@ else
 fi
 
 echo ""
-echo "🎉 Comprehensive PR merge process completed!"
+echo "🎉 Batch 2 merge process completed!"
 echo "📊 Final stats: $successful successful merges, $failed failures"
