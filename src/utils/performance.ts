@@ -65,7 +65,7 @@ export class PerformanceMonitor {
   private initializeMonitoring(): void {
     if (!this.config.enableMonitoring || typeof window === 'undefined') {
       return;
-    };
+    }
 
     // Monitor page load performance
     window.addEventListener('load', () => {
@@ -80,7 +80,7 @@ export class PerformanceMonitor {
 
     // Monitor resource loading
     this.observeResources();
-  };
+  }
 
   private measurePageLoad(): void {
     const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
@@ -308,7 +308,7 @@ export class ImageOptimizer {
       height?: number;
       quality?: number;
       format?: 'webp' | 'avif' | 'jpeg' | 'png';
-    } = {};
+    } = {}
   ): Promise<string> {
     const { width, height, quality = 80, format = 'webp' } = options;
 
@@ -325,7 +325,7 @@ export class ImageOptimizer {
       .map(size => `${baseSrc}-${size}w.${extension} ${size}w`)
       .join(', ');
 
-    return `<img src="${src}" srcset="${srcset}" alt="${alt}" loading="lazy" />`;
+    return `<img src="${src}" srcset="${srcset}" alt="${alt}" loading="lazy/>`;
   }
 
   static preloadCriticalImages(imageUrls: string[]): void {
@@ -359,7 +359,7 @@ export class BundleAnalyzer {
       const resources = performance.getEntriesByType('resource');
       const totalSize = resources.reduce((sum, resource) => {
         return sum + ((resource as any).transferSize || 0);
-      `, 0);
+      }, 0);
       
       console.log(`Total resource size: ${(totalSize / 1024 / 1024).toFixed(2)} MB`);
       console.log(`Total resources: ${resources.length}`);
