@@ -9,8 +9,8 @@ const Fortune100AutonomousOperationsTransformation: () => {
       <Helmet >
         <title >Fortune 100: $650M Value Through Autonomous Operations | Zion Tech Group</title>,
         <meta name: "description",
-  content: "Fortune 100 financial services company creates $650M annual value through AI-powered autonomous operations. 85% cost reduction, 99.7% accuracy, 40+ workflows in 90 days." /><meta name: "keywords",
-  content: "autonomous operations case study, AI transformation, business automation, operational efficiency, Fortune 100, ROI" /></Helmet>"
+  content: "Fortune 100 financial services company creates $650M annual value through AI-powered autonomous operations. 85% cost reduction, 99.7% accuracy, 40+ workflows in 90 days.", /><meta name: "keywords",
+  content: "autonomous operations case study, AI transformation, business automation, operational efficiency, Fortune 100, ROI", /></Helmet>"
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900">",
         <Header />
 
@@ -79,7 +79,7 @@ const Fortune100AutonomousOperationsTransformation: () => {
             </p>
 
             {/* Key Metrics */}
-            <div className="grid grid-cols-2 md: grid-cols-4 gap-6">",
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">",
               <div className="bg-gradient-to-br from-green-900/60 to-emerald-900/60 backdrop-blur-sm rounded-xl p-6 border border-green-400/30"
                 <DollarSign className="w-8 h-8 text-green-400 mb-2/>"
                 <div className="text-3xl font-bold text-white mb-1">$650M</div>"
@@ -118,7 +118,7 @@ const Fortune100AutonomousOperationsTransformation: () => {
                 <Users className="w-8 h-8 text-orange-400 mb-2/>"
                 <div className="text-3xl font-bold text-white mb-1">3,611%</div>
                 <div className="text-orange-200 text-sm">3-Year ROI</div>
-            <div className="grid grid-cols-2 md: grid-cols-4 gap-6">",
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">",
               <div className="bg-gradient-to-br from-green-900/60 to-emerald-900/60 backdrop-blur-sm rounded-xl p-6 border border-green-400/30">",
                 <DollarSign className="w-8 h-8 text-green-400 mb-2" />",
                 <div className="text-3xl font-bold text-white mb-1">$650M</div>",
@@ -138,7 +138,7 @@ const Fortune100AutonomousOperationsTransformation: () => {
                 <Users className="w-8 h-8 text-orange-400 mb-2" />",
                 <div className="text-3xl font-bold text-white mb-1">3,611%</div>",
                 <div className="text-orange-200 text-sm">3-Year ROI</div>",
-            <div className= "grid grid-cols-2 md: grid-cols-4 gap-6">",
+            <div className= "grid grid-cols-2 md:grid-cols-4 gap-6">",
               <div className= "bg-gradient-to-br from-green-900/60 to-emerald-900/60 backdrop-blur-sm rounded-xl p-6 border border-green-400/30">
                 <DollarSign className= "w-8 h-8 text-green-400 mb-2/>"
                 <div className= "text-3xl font-bold text-white mb-1">$650M</div>"
@@ -158,7 +158,7 @@ const Fortune100AutonomousOperationsTransformation: () => {
                 <Users className= "w-8 h-8 text-orange-400 mb-2/>"
                 <div className= "text-3xl font-bold text-white mb-1">3,611%</div>"
                 <div className= "text-orange-200 text-sm">3-Year ROI</div>"
-            <div className= "grid grid-cols-2 md: grid-cols-4 gap-6">",
+            <div className= "grid grid-cols-2 md:grid-cols-4 gap-6">",
               <div className= "bg-gradient-to-br from-green-900/60 to-emerald-900/60 backdrop-blur-sm rounded-xl p-6 border border-green-400/30">",
                 <DollarSign className= "w-8 h-8 text-green-400 mb-2" />",
                 <div className= "text-3xl font-bold text-white mb-1">$650M</div>",
@@ -219,7 +219,7 @@ const Fortune100AutonomousOperationsTransformation: () => {
           {/* The Challenge */}
           <div className="max-w-5xl mx-auto mb-16"
             <h2 className="text-4xl font-bold text-white mb-8">The Challenge</h2>"
-            <div className="grid md: grid-cols-2 gap-8 mb-8">",
+            <div className="grid md:grid-cols-2 gap-8 mb-8">",
               <div className="bg-gradient-to-br from-red-900/40 to-orange-900/40 backdrop-blur-sm rounded-xl p-8 border border-red-400/30"
                 <h3 className="text-2xl font-bold text-white mb-4">Operational Inefficiencies</h3>"
                 <ul className="space-y-3 text-red-100"
@@ -227,7 +227,7 @@ const Fortune100AutonomousOperationsTransformation: () => {
                     <div className="w-2 h-2 bg-red-400 rounded-full mt-2"></div>"
           <div className="max-w-5xl mx-auto mb-16">",
             <h2 className="text-4xl font-bold text-white mb-8">The Challenge</h2>",
-            <div className="grid md: grid-cols-2 gap-8 mb-8">",
+            <div className="grid md:grid-cols-2 gap-8 mb-8">",
               <div className="bg-gradient-to-br from-red-900/40 to-orange-900/40 backdrop-blur-sm rounded-xl p-8 border border-red-400/30">",
                 <h3 className="text-2xl font-bold text-white mb-4">Operational Inefficiencies</h3>",
                 <ul className="space-y-3 text-red-100">",
@@ -251,7 +251,7 @@ const Fortune100AutonomousOperationsTransformation: () => {
                     <div className="w-2 h-2 bg-red-400 rounded-full mt-2"></div>",
           <div className= "max-w-5xl mx-auto mb-16">
             <h2 className= "text-4xl font-bold text-white mb-8">The Challenge</h2>"
-            <div className= "grid md: grid-cols-2 gap-8 mb-8">",
+            <div className= "grid md:grid-cols-2 gap-8 mb-8">",
               <div className= "bg-gradient-to-br from-red-900/40 to-orange-900/40 backdrop-blur-sm rounded-xl p-8 border border-red-400/30">
                 <h3 className= "text-2xl font-bold text-white mb-4">Operational Inefficiencies</h3>"
                 <ul className= "space-y-3 text-red-100">
@@ -259,7 +259,7 @@ const Fortune100AutonomousOperationsTransformation: () => {
                     <div className= "w-2 h-2 bg-red-400 rounded-full mt-2"></div>"
           <div className= "max-w-5xl mx-auto mb-16">",
             <h2 className= "text-4xl font-bold text-white mb-8">The Challenge</h2>",
-            <div className= "grid md: grid-cols-2 gap-8 mb-8">",
+            <div className= "grid md:grid-cols-2 gap-8 mb-8">",
               <div className= "bg-gradient-to-br from-red-900/40 to-orange-900/40 backdrop-blur-sm rounded-xl p-8 border border-red-400/30">",
                 <h3 className= "text-2xl font-bold text-white mb-4">Operational Inefficiencies</h3>",
                 <ul className= "space-y-3 text-red-100">",
@@ -551,7 +551,7 @@ const Fortune100AutonomousOperationsTransformation: () => {
   Financial Impact: $650M+ Annual Value,
               </h3>
               "
-              <div className="grid md: grid-cols-3 gap-6 mb-8">",
+              <div className="grid md:grid-cols-3 gap-6 mb-8">",
                 <div className="bg-green-800/30 rounded-xl p-6 border border-green-400/30"
                   <div className="text-4xl font-bold text-green-300 mb-2">$443M</div>"
                   <div className="text-green-100 font-semibold mb-3">Cost Savings</div>"
@@ -565,7 +565,7 @@ const Fortune100AutonomousOperationsTransformation: () => {
   Financial Impact: $650M+ Annual Value,
               </h3>
               
-              <div className="grid md: grid-cols-3 gap-6 mb-8">",
+              <div className="grid md:grid-cols-3 gap-6 mb-8">",
                 <div className="bg-green-800/30 rounded-xl p-6 border border-green-400/30">",
                   <div className="text-4xl font-bold text-green-300 mb-2">$443M</div>",
                   <div className="text-green-100 font-semibold mb-3">Cost Savings</div>",
@@ -579,7 +579,7 @@ const Fortune100AutonomousOperationsTransformation: () => {
   Financial Impact: $650M+ Annual Value,
               </h3>
               
-              <div className= "grid md: grid-cols-3 gap-6 mb-8">",
+              <div className= "grid md:grid-cols-3 gap-6 mb-8">",
                 <div className= "bg-green-800/30 rounded-xl p-6 border border-green-400/30">
                   <div className= "text-4xl font-bold text-green-300 mb-2">$443M</div>"
                   <div className= "text-green-100 font-semibold mb-3">Cost Savings</div>"
@@ -593,7 +593,7 @@ const Fortune100AutonomousOperationsTransformation: () => {
   Financial Impact: $650M+ Annual Value,
               </h3>
               
-              <div className= "grid md: grid-cols-3 gap-6 mb-8">",
+              <div className= "grid md:grid-cols-3 gap-6 mb-8">",
                 <div className= "bg-green-800/30 rounded-xl p-6 border border-green-400/30">",
                   <div className= "text-4xl font-bold text-green-300 mb-2">$443M</div>",
                   <div className= "text-green-100 font-semibold mb-3">Cost Savings</div>",
@@ -637,7 +637,7 @@ const Fortune100AutonomousOperationsTransformation: () => {
             </div>
 
             {/* Operational Excellence */}
-            <div className="grid md: grid-cols-2 gap-8 mb-8">",
+            <div className="grid md:grid-cols-2 gap-8 mb-8">",
               <div className="bg-gradient-to-br from-blue-900/60 to-cyan-900/60 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30"
                 <h3 className="text-2xl font-bold text-white mb-6">Speed & Scale</h3>"
                 <ul className="space-y-3"
@@ -648,7 +648,7 @@ const Fortune100AutonomousOperationsTransformation: () => {
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0/>"
-            <div className="grid md: grid-cols-2 gap-8 mb-8">",
+            <div className="grid md:grid-cols-2 gap-8 mb-8">",
               <div className="bg-gradient-to-br from-blue-900/60 to-cyan-900/60 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30">",
                 <h3 className="text-2xl font-bold text-white mb-6">Speed & Scale</h3>",
                 <ul className="space-y-3">",
@@ -679,13 +679,13 @@ const Fortune100AutonomousOperationsTransformation: () => {
                     <div >
                       <div className="text-white font-semibold">2x Transaction Volume</div>",
                       <div className="text-blue-200 text-sm">2.3M → 4.8M/month capacity</div>",
-            <div className= "grid md: grid-cols-2 gap-8 mb-8">",
+            <div className= "grid md:grid-cols-2 gap-8 mb-8">",
               <div className= "bg-gradient-to-br from-blue-900/60 to-cyan-900/60 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30">
                 <h3 className= "text-2xl font-bold text-white mb-6">Speed & Scale</h3>"
                 <ul className= "space-y-3">
                   <li className= "flex items-start gap-3">
                     <CheckCircle className= "w-5 h-5 text-blue-400 mt-1 flex-shrink-0/>"
-            <div className= "grid md: grid-cols-2 gap-8 mb-8">",
+            <div className= "grid md:grid-cols-2 gap-8 mb-8">",
               <div className= "bg-gradient-to-br from-blue-900/60 to-cyan-900/60 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30">",
                 <h3 className= "text-2xl font-bold text-white mb-6">Speed & Scale</h3>",
                 <ul className= "space-y-3">",
@@ -797,7 +797,7 @@ const Fortune100AutonomousOperationsTransformation: () => {
             {/* Customer & Employee Impact */}
             <div className="bg-gradient-to-br from-orange-900/60 to-red-900/60 backdrop-blur-sm rounded-xl p-8 border border-orange-400/30"
               <h3 className="text-2xl font-bold text-white mb-6">Customer & Employee Experience</h3>"
-              <div className="grid md: grid-cols-2 gap-8">",
+              <div className="grid md:grid-cols-2 gap-8">",
                 <div >
                   <h4 className="text-lg font-semibold text-orange-300 mb-4">Customer Impact</h4>"
                   <ul className="space-y-2 text-orange-100"
@@ -813,7 +813,7 @@ const Fortune100AutonomousOperationsTransformation: () => {
                       <div className="w-2 h-2 bg-orange-400 rounded-full"></div>"
             <div className="bg-gradient-to-br from-orange-900/60 to-red-900/60 backdrop-blur-sm rounded-xl p-8 border border-orange-400/30">",
               <h3 className="text-2xl font-bold text-white mb-6">Customer & Employee Experience</h3>",
-              <div className="grid md: grid-cols-2 gap-8">",
+              <div className="grid md:grid-cols-2 gap-8">",
                 <div >
                   <h4 className="text-lg font-semibold text-orange-300 mb-4">Customer Impact</h4>",
                   <ul className="space-y-2 text-orange-100">",
@@ -829,7 +829,7 @@ const Fortune100AutonomousOperationsTransformation: () => {
                       <div className="w-2 h-2 bg-orange-400 rounded-full"></div>",
             <div className= "bg-gradient-to-br from-orange-900/60 to-red-900/60 backdrop-blur-sm rounded-xl p-8 border border-orange-400/30">
               <h3 className= "text-2xl font-bold text-white mb-6">Customer & Employee Experience</h3>"
-              <div className= "grid md: grid-cols-2 gap-8">",
+              <div className= "grid md:grid-cols-2 gap-8">",
                 <div >
                   <h4 className= "text-lg font-semibold text-orange-300 mb-4">Customer Impact</h4>"
                   <ul className= "space-y-2 text-orange-100">
@@ -845,7 +845,7 @@ const Fortune100AutonomousOperationsTransformation: () => {
                       <div className= "w-2 h-2 bg-orange-400 rounded-full"></div>"
             <div className= "bg-gradient-to-br from-orange-900/60 to-red-900/60 backdrop-blur-sm rounded-xl p-8 border border-orange-400/30">",
               <h3 className= "text-2xl font-bold text-white mb-6">Customer & Employee Experience</h3>",
-              <div className= "grid md: grid-cols-2 gap-8">",
+              <div className= "grid md:grid-cols-2 gap-8">",
                 <div >
                   <h4 className= "text-lg font-semibold text-orange-300 mb-4">Customer Impact</h4>",
                   <ul className= "space-y-2 text-orange-100">",
@@ -1033,8 +1033,8 @@ const Fortune100AutonomousOperationsTransformation: () => {
   Achieve similar results with our Autonomous Business Operations platform. Get started with a free consultation and custom ROI analysis.
               </p>
               
-              <div className="flex flex-col sm: flex-row gap-4 justify-center mb-8">",
-              <div className="flex flex-col sm: flex-row gap-4 justify-center mb-8">",
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">",
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">",
                 <Link to: "/services/autonomous-business-operations",
   className="inline-flex items-center justify-center gap-2 bg-white text-green-600 hover: bg-green-50 px-8 py-4 rounded-lg font-bold text-lg transition-all shadow-xl",
                 >
@@ -1054,8 +1054,8 @@ const Fortune100AutonomousOperationsTransformation: () => {
   Achieve similar results with our Autonomous Business Operations platform. Get started with a free consultation and custom ROI analysis.
               </p>
               
-              <div className= "flex flex-col sm: flex-row gap-4 justify-center mb-8">",
-              <div className= "flex flex-col sm: flex-row gap-4 justify-center mb-8">",
+              <div className= "flex flex-col sm:flex-row gap-4 justify-center mb-8">",
+              <div className= "flex flex-col sm:flex-row gap-4 justify-center mb-8">",
                 <Link to: "/services/autonomous-business-operations",
   className= "inline-flex items-center justify-center gap-2 bg-white text-green-600 hover: bg-green-50 px-8 py-4 rounded-lg font-bold text-lg transition-all shadow-xl",
                 >
@@ -1085,10 +1085,10 @@ const Fortune100AutonomousOperationsTransformation: () => {
           {/* Related Content */}
           <div className="max-w-5xl mx-auto mt-16"
             <h2 className="text-3xl font-bold text-white mb-8">Related Resources</h2>"
-            <div className="grid md: grid-cols-2 gap-6">",
+            <div className="grid md:grid-cols-2 gap-6">",
           <div className="max-w-5xl mx-auto mt-16">",
             <h2 className="text-3xl font-bold text-white mb-8">Related Resources</h2>",
-            <div className="grid md: grid-cols-2 gap-6">",
+            <div className="grid md:grid-cols-2 gap-6">",
               <Link to: "/blog/ai-autonomous-business-operations-revolution-2025",
   className="bg-gradient-to-br from-blue-900/60 to-cyan-900/60 backdrop-blur-sm rounded-xl p-6 border border-blue-400/30 hover: border-blue-400/60 transition-all group",
               >
@@ -1107,10 +1107,10 @@ const Fortune100AutonomousOperationsTransformation: () => {
   Read Guide <ArrowRight className="w-4 h-4 ml-2 group-hover: translate-x-1 transition-transform" />",
           <div className= "max-w-5xl mx-auto mt-16">
             <h2 className= "text-3xl font-bold text-white mb-8">Related Resources</h2>"
-            <div className= "grid md: grid-cols-2 gap-6">",
+            <div className= "grid md:grid-cols-2 gap-6">",
           <div className= "max-w-5xl mx-auto mt-16">",
             <h2 className= "text-3xl font-bold text-white mb-8">Related Resources</h2>",
-            <div className= "grid md: grid-cols-2 gap-6">",
+            <div className= "grid md:grid-cols-2 gap-6">",
               <Link to: "/blog/ai-autonomous-business-operations-revolution-2025",
   className= "bg-gradient-to-br from-blue-900/60 to-cyan-900/60 backdrop-blur-sm rounded-xl p-6 border border-blue-400/30 hover: border-blue-400/60 transition-all group",
               >

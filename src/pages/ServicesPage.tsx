@@ -80,7 +80,7 @@ const ServicesPage: React.FC = () => {
     <>
       <Helmet >
         <title >Services - Zion Tech Group</title>
-        <meta name: "description" content ="Comprehensive AI and technology services from Zion Tech Group. AI services, micro SaaS development, IT infrastructure, and consulting solutions." />"
+        <meta name: "description", content ="Comprehensive AI and technology services from Zion Tech Group. AI services, micro SaaS development, IT infrastructure, and consulting solutions." />"
         <meta name="description" content="Comprehensive AI and technology services from Zion Tech Group. AI services, micro SaaS development, IT infrastructure, and consulting solutions." />
       </Helmet>
       

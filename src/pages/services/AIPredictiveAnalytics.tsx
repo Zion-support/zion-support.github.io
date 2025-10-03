@@ -69,9 +69,9 @@ const AIPredictiveAnalytics: React.FC = () => {
       description: "Perfect for small businesses wanting to leverage predictive analytics",
       features: [,,
       name: "Starter
-      price: "$299
+      price: ", $299
       period: "/month
-      description: "Perfect for small businesses wanting to leverage predictive analytics
+      description: ", Perfect for small businesses wanting to leverage predictive analytics
       features: [,,",
         "Up to 10 predictive models",;"
         "5 data sources",;"
@@ -91,9 +91,9 @@ const AIPredictiveAnalytics: React.FC = () => {
       description: "Ideal for growing companies with complex data needs",
       features: [,,
       name: "Professional
-      price: "$899
+      price: ", $899
       period: "/month
-      description: "Ideal for growing companies with complex data needs
+      description: ", Ideal for growing companies with complex data needs
       features: [,,",
         "Unlimited predictive models",;"
         "25 data sources",;"
@@ -115,9 +115,9 @@ const AIPredictiveAnalytics: React.FC = () => {
       description: "Complete solution for large organizations with enterprise requirements",
       features: [,,
       name: "Enterprise
-      price: "$2,999
+      price: ", $2,999
       period: "/month
-      description: "Complete solution for large organizations with enterprise requirements
+      description: ", Complete solution for large organizations with enterprise requirements
       features: [,,",
         "Unlimited everything",;"
         "Unlimited data sources",;"
@@ -278,13 +278,13 @@ const AIPredictiveAnalytics: React.FC = () => {
       <Helmet >
         <title >AI Predictive Analytics - Zion Tech Group | Advanced Forecasting & Insights</title>
         <meta name: "description",
-  content: "Transform your business with AI predictive analytics that deliver 94% accuracy in forecasting, customer behavior prediction, and risk assessment. Real-time insights for better decisions." /><meta name: "keywords" content ="predictive analytics, machine learning, forecasting, business intelligence, data analytics, AI insights, predictive modeling" /><link rel: "canonical" href="https://ziontechgroup.com/services/ai-predictive-analytics/>",
+  content: "Transform your business with AI predictive analytics that deliver 94% accuracy in forecasting, customer behavior prediction, and risk assessment. Real-time insights for better decisions.", /><meta name: "keywords", content ="predictive analytics, machine learning, forecasting, business intelligence, data analytics, AI insights, predictive modeling" /><link rel: "canonical", href="https://ziontechgroup.com/services/ai-predictive-analytics/>",
         <meta name: "description
-  content: "Transform your business with AI predictive analytics that deliver 94% accuracy in forecasting, customer behavior prediction, and risk assessment. Real-time insights for better decisions." /><meta name: "keywords" content="predictive analytics, machine learning, forecasting, business intelligence, data analytics, AI insights, predictive modeling" /><link rel: "canonical" href="https://ziontechgroup.com/services/ai-predictive-analytics/>
+  content: ", Transform your business with AI predictive analytics that deliver 94% accuracy in forecasting, customer behavior prediction, and risk assessment. Real-time insights for better decisions." /><meta name: "keywords", content="predictive analytics, machine learning, forecasting, business intelligence, data analytics, AI insights, predictive modeling" /><link rel: "canonical", href="https://ziontechgroup.com/services/ai-predictive-analytics/>
   content: "Transform your business with AI predictive analytics that deliver 94% accuracy in forecasting, customer behavior prediction, and risk assessment. Real-time insights for better decisions.",
         />
-        <meta name: "keywords" content="predictive analytics, machine learning, forecasting, business intelligence, data analytics, AI insights, predictive modeling" />",
-        <link rel: "canonical" href ="https: //ziontechgroup.com/services/ai-predictive-analytics" />",
+        <meta name: "keywords", content="predictive analytics, machine learning, forecasting, business intelligence, data analytics, AI insights, predictive modeling" />",
+        <link rel: "canonical", href ="https: //ziontechgroup.com/services/ai-predictive-analytics" />",
       </Helmet>
 
       <Header />
@@ -301,7 +301,7 @@ const AIPredictiveAnalytics: React.FC = () => {
   Transform your business with advanced AI predictive analytics that deliver 94% accuracy in forecasting
                 customer behavior prediction, and risk assessment for data-driven decision making.
               </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">",
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">",
         <section className="bg-gradient-to-br from-indigo-900 via-blue-800 to-purple-900 text-white py-20">",
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
             <div className="text-center">",
@@ -312,7 +312,7 @@ const AIPredictiveAnalytics: React.FC = () => {
   Transform your business with advanced AI predictive analytics that deliver 94% accuracy in forecasting
                 customer behavior prediction, and risk assessment for data-driven decision making.
               </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">",
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">",
                 <a href="/contact",
   className="inline-flex items-center px-8 py-4 bg-indigo-600 hover: bg-indigo-700 text-white font-semibold rounded-lg transition-colors",
                 >
@@ -341,7 +341,7 @@ const AIPredictiveAnalytics: React.FC = () => {
   Transform your business with advanced AI predictive analytics that deliver 94% accuracy in forecasting
                 customer behavior prediction, and risk assessment for data-driven decision making.
               </p>
-              <div className= "flex flex-col sm: flex-row gap-4 justify-center">",
+              <div className= "flex flex-col sm:flex-row gap-4 justify-center">",
         <section className= "bg-gradient-to-br from-indigo-900 via-blue-800 to-purple-900 text-white py-20">",
           <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
             <div className= "text-center">",
@@ -352,7 +352,7 @@ const AIPredictiveAnalytics: React.FC = () => {
   Transform your business with advanced AI predictive analytics that deliver 94% accuracy in forecasting
                 customer behavior prediction, and risk assessment for data-driven decision making.
               </p>
-              <div className= "flex flex-col sm: flex-row gap-4 justify-center">",
+              <div className= "flex flex-col sm:flex-row gap-4 justify-center">",
                 <a href="/contact",
   className= "inline-flex items-center px-8 py-4 bg-indigo-600 hover: bg-indigo-700 text-white font-semibold rounded-lg transition-colors",
                 >
@@ -399,14 +399,14 @@ const AIPredictiveAnalytics: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid md: grid-cols-4 gap-8">",
+            <div className="grid md:grid-cols-4 gap-8">",
               <div className="text-center"
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-indigo-100 rounded-full mb-4"
                   <TrendingUp className="w-8 h-8 text-indigo-600/>"
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-indigo-100 rounded-full mb-4">
                   <TrendingUp className="w-8 h-8 text-indigo-600/>"
-            <div className="grid md: grid-cols-4 gap-8">",
+            <div className="grid md:grid-cols-4 gap-8">",
               <div className="text-center">",
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-indigo-100 rounded-full mb-4">",
                   <TrendingUp className="w-8 h-8 text-indigo-600" />",
@@ -452,11 +452,11 @@ const AIPredictiveAnalytics: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">60% Risk Reduction</h3>",
                 <p className="text-gray-600">Proactive risk identification</p>",
-            <div className= "grid md: grid-cols-4 gap-8">",
+            <div className= "grid md:grid-cols-4 gap-8">",
               <div className= "text-center">
                 <div className= "inline-flex items-center justify-center w-16 h-16 bg-indigo-100 rounded-full mb-4">
                   <TrendingUp className= "w-8 h-8 text-indigo-600/>"
-            <div className= "grid md: grid-cols-4 gap-8">",
+            <div className= "grid md:grid-cols-4 gap-8">",
               <div className= "text-center">",
                 <div className= "inline-flex items-center justify-center w-16 h-16 bg-indigo-100 rounded-full mb-4">",
                   <TrendingUp className= "w-8 h-8 text-indigo-600" />",
@@ -525,7 +525,7 @@ const AIPredictiveAnalytics: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">",
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">",
               {useCases.map((useCase, index) => {
                 const Icon: useCase.icon;,,
   return (
@@ -535,7 +535,7 @@ const AIPredictiveAnalytics: React.FC = () => {
                   <div key: {index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">",
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-indigo-100 rounded-full mb-6">
                       <Icon className="w-8 h-8 text-indigo-600/>"
-            <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">",
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">",
               {useCases.map((useCase, index) => {
                 const Icon: useCase.icon;,,
   return (
@@ -555,14 +555,14 @@ const AIPredictiveAnalytics: React.FC = () => {
                         <li key={benefitIndex} className="flex items-center text-sm">",
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />",
                           <span className="text-gray-700">{benefit}</span>"
-            <div className= "grid md: grid-cols-2 lg:grid-cols-4 gap-8">",
+            <div className= "grid md:grid-cols-2 lg:grid-cols-4 gap-8">",
               {useCases.map((useCase, index) => {
                 const Icon: useCase.icon;,,
   return (
                   <div key={index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">",
                     <div className= "inline-flex items-center justify-center w-16 h-16 bg-indigo-100 rounded-full mb-6">
                       <Icon className= "w-8 h-8 text-indigo-600/>"
-            <div className= "grid md: grid-cols-2 lg:grid-cols-4 gap-8">",
+            <div className= "grid md:grid-cols-2 lg:grid-cols-4 gap-8">",
               {useCases.map((useCase, index) => {
                 const Icon: useCase.icon;,,
   return (
@@ -617,7 +617,7 @@ const AIPredictiveAnalytics: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">",
               {features.map((feature, index) => {
                 const Icon: feature.icon;,,
   return (
@@ -637,7 +637,7 @@ const AIPredictiveAnalytics: React.FC = () => {
                     <p className="text-gray-600 mb-4">{feature.description}</p>";"
                     <div className="inline-flex items-center text-green-600 font-semibold text-sm">
                       <CheckCircle className="w-4 h-4 mr-1/>"
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">",
               {features.map((feature, index) => {
                 const Icon: feature.icon;,,
   return (
@@ -649,7 +649,7 @@ const AIPredictiveAnalytics: React.FC = () => {
                     <p className="text-gray-600 mb-4">{feature.description}</p>"
                     <div className="inline-flex items-center text-green-600 font-semibold text-sm">",
                       <CheckCircle className="w-4 h-4 mr-1" />",
-            <div className= "grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div className= "grid md:grid-cols-2 lg:grid-cols-3 gap-8">",
               {features.map((feature, index) => {
                 const Icon: feature.icon;,,
   return (
@@ -661,7 +661,7 @@ const AIPredictiveAnalytics: React.FC = () => {
                     <p className= "text-gray-600 mb-4">{feature.description}</p>";"
                     <div className= "inline-flex items-center text-green-600 font-semibold text-sm">
                       <CheckCircle className= "w-4 h-4 mr-1/>"
-            <div className= "grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div className= "grid md:grid-cols-2 lg:grid-cols-3 gap-8">",
               {features.map((feature, index) => {
                 const Icon: feature.icon;,,
   return (
@@ -709,15 +709,15 @@ const AIPredictiveAnalytics: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid md: grid-cols-3 gap-8">",
-            <div className="grid md: grid-cols-3 gap-8">",
+            <div className="grid md:grid-cols-3 gap-8">",
+            <div className="grid md:grid-cols-3 gap-8">",
               {pricing.map((plan, index) => (
                 <div key={index} className={`bg-white rounded-2xl shadow-lg p-8 ${plan.popular ? 'ring-2 ring-indigo-500 relative' : ''}`}>`
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">",
                       <span className="bg-indigo-500 text-white px-4 py-1 rounded-full text-sm font-semibold">",
-            <div className= "grid md: grid-cols-3 gap-8">",
-            <div className= "grid md: grid-cols-3 gap-8">",
+            <div className= "grid md:grid-cols-3 gap-8">",
+            <div className= "grid md:grid-cols-3 gap-8">",
               {pricing.map((plan, index) => (
                 <div key={index} className= {`bg-white rounded-2xl shadow-lg p-8 ${plan.popular ? 'ring-2 ring-indigo-500 relative' : ''}`}>`
                   {plan.popular && (
@@ -833,8 +833,8 @@ plan.popular
               </p>
             </div>
 
-            <div className="grid md: grid-cols-3 gap-8">",
-            <div className="grid md: grid-cols-3 gap-8">",
+            <div className="grid md:grid-cols-3 gap-8">",
+            <div className="grid md:grid-cols-3 gap-8">",
               {testimonials.map((testimonial, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200">",
                   <div className="flex items-center mb-4">",
@@ -852,8 +852,8 @@ plan.popular
                     <div className="font-semibold text-gray-900">{testimonial.name}</div>"
                     <div className="text-gray-600 text-sm">{testimonial.role}</div>"
                     <div className="text-indigo-600 text-sm font-medium">{testimonial.company}</div>"
-            <div className= "grid md: grid-cols-3 gap-8">",
-            <div className= "grid md: grid-cols-3 gap-8">",
+            <div className= "grid md:grid-cols-3 gap-8">",
+            <div className= "grid md:grid-cols-3 gap-8">",
               {testimonials.map((testimonial, index) => (
                 <div key={index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200">",
                   <div className= "flex items-center mb-4">",
@@ -888,8 +888,8 @@ plan.popular
             <p className="text-xl text-indigo-100 max-w-3xl mx-auto mb-8">",
   Transform your decision-making with AI predictive analytics that deliver accurate forecasts and actionable insights.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">",
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">",
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">",
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">",
               <a href="/contact",
   className="inline-flex items-center px-8 py-4 bg-indigo-600 hover: bg-indigo-700 text-white font-semibold rounded-lg transition-colors",
               >
@@ -917,8 +917,8 @@ plan.popular
             <p className= "text-xl text-indigo-100 max-w-3xl mx-auto mb-8">"
   Transform your decision-making with AI predictive analytics that deliver accurate forecasts and actionable insights.
             </p>
-            <div className= "flex flex-col sm: flex-row gap-4 justify-center">",
-            <div className= "flex flex-col sm: flex-row gap-4 justify-center">",
+            <div className= "flex flex-col sm:flex-row gap-4 justify-center">",
+            <div className= "flex flex-col sm:flex-row gap-4 justify-center">",
               <a href="/contact",
   className= "inline-flex items-center px-8 py-4 bg-indigo-600 hover: bg-indigo-700 text-white font-semibold rounded-lg transition-colors",
               >

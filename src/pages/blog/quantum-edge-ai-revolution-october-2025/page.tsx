@@ -59,11 +59,11 @@ export default function QuantumEdgeAIRevolutionPage(): void {
             <p className="text-gray-300 leading-relaxed mb-4">",
   The convergence of quantum computing and edge AI represents the most significant breakthrough in enterprise technology since cloud computing. Organizations can now deploy quantum-accelerated AI models directly on edge devices, achieving unprecedented performance with sub-millisecond inference latency, 99.99% accuracy, and complete data privacy.
             </p>
-            <div className="grid md: grid-cols-2 gap-4 mt-6">",
+            <div className="grid md:grid-cols-2 gap-4 mt-6">",
               <div className="bg-cyan-500/10 rounded-xl p-6 border border-cyan-500/20"
                 <div className="text-2xl font-bold text-cyan-300 mb-2">$89M Average Savings</div>"
                 <p className="text-sm text-gray-300">Manufacturing enterprises reduce operational costs by 67% with quantum edge AI</p>"
-            <div className="grid md: grid-cols-2 gap-4 mt-6">",
+            <div className="grid md:grid-cols-2 gap-4 mt-6">",
               <div className="bg-cyan-500/10 rounded-xl p-6 border border-cyan-500/20">",
                 <div className="text-2xl font-bold text-cyan-300 mb-2">$89M Average Savings</div>",
                 <p className="text-sm text-gray-300">Manufacturing enterprises reduce operational costs by 67% with quantum edge AI</p>",
@@ -77,11 +77,11 @@ export default function QuantumEdgeAIRevolutionPage(): void {
             <p className= "text-gray-300 leading-relaxed mb-4">"
   The convergence of quantum computing and edge AI represents the most significant breakthrough in enterprise technology since cloud computing. Organizations can now deploy quantum-accelerated AI models directly on edge devices, achieving unprecedented performance with sub-millisecond inference latency, 99.99% accuracy, and complete data privacy.
             </p>
-            <div className= "grid md: grid-cols-2 gap-4 mt-6">",
+            <div className= "grid md:grid-cols-2 gap-4 mt-6">",
               <div className= "bg-cyan-500/10 rounded-xl p-6 border border-cyan-500/20">
                 <div className= "text-2xl font-bold text-cyan-300 mb-2">$89M Average Savings</div>"
                 <p className= "text-sm text-gray-300">Manufacturing enterprises reduce operational costs by 67% with quantum edge AI</p>"
-            <div className= "grid md: grid-cols-2 gap-4 mt-6">",
+            <div className= "grid md:grid-cols-2 gap-4 mt-6">",
               <div className= "bg-cyan-500/10 rounded-xl p-6 border border-cyan-500/20">",
                 <div className= "text-2xl font-bold text-cyan-300 mb-2">$89M Average Savings</div>",
                 <p className= "text-sm text-gray-300">Manufacturing enterprises reduce operational costs by 67% with quantum edge AI</p>",
@@ -155,7 +155,7 @@ export default function QuantumEdgeAIRevolutionPage(): void {
             <h2 className="text-3xl font-bold text-white mb-6">Real-World Impact: Manufacturing Success Story</h2>",
             <p className="text-gray-300 leading-relaxed mb-6">,"
   A Fortune 500 manufacturing company deployed our quantum edge AI platform across 2,500 production facilities, achieving remarkable results: </p>,
-            <div className="grid md: grid-cols-3 gap-4 mb-6">",
+            <div className="grid md:grid-cols-3 gap-4 mb-6">",
               <div className="bg-white/10 rounded-xl p-6"
                 <div className="text-3xl font-bold text-cyan-300 mb-2">67%</div>"
                 <p className="text-sm text-gray-300">Operational Cost Reduction</p>"
@@ -163,7 +163,7 @@ export default function QuantumEdgeAIRevolutionPage(): void {
             <h2 className="text-3xl font-bold text-white mb-6">Real-World Impact: Manufacturing Success Story</h2>",
             <p className="text-gray-300 leading-relaxed mb-6">",
   A Fortune 500 manufacturing company deployed our quantum edge AI platform across 2,500 production facilities, achieving remarkable results: </p>,
-            <div className="grid md: grid-cols-3 gap-4 mb-6">",
+            <div className="grid md:grid-cols-3 gap-4 mb-6">",
               <div className="bg-white/10 rounded-xl p-6">",
                 <div className="text-3xl font-bold text-cyan-300 mb-2">67%</div>",
                 <p className="text-sm text-gray-300">Operational Cost Reduction</p>",
@@ -182,7 +182,7 @@ export default function QuantumEdgeAIRevolutionPage(): void {
             <h2 className= "text-3xl font-bold text-white mb-6">Real-World Impact: Manufacturing Success Story</h2>",
             <p className= "text-gray-300 leading-relaxed mb-6">,"
   A Fortune 500 manufacturing company deployed our quantum edge AI platform across 2,500 production facilities, achieving remarkable results: </p>,
-            <div className= "grid md: grid-cols-3 gap-4 mb-6">",
+            <div className= "grid md:grid-cols-3 gap-4 mb-6">",
               <div className= "bg-white/10 rounded-xl p-6">
                 <div className= "text-3xl font-bold text-cyan-300 mb-2">67%</div>"
                 <p className= "text-sm text-gray-300">Operational Cost Reduction</p>"
@@ -190,7 +190,7 @@ export default function QuantumEdgeAIRevolutionPage(): void {
             <h2 className= "text-3xl font-bold text-white mb-6">Real-World Impact: Manufacturing Success Story</h2>",
             <p className= "text-gray-300 leading-relaxed mb-6">"
   A Fortune 500 manufacturing company deployed our quantum edge AI platform across 2,500 production facilities, achieving remarkable results: </p>,
-            <div className= "grid md: grid-cols-3 gap-4 mb-6">",
+            <div className= "grid md:grid-cols-3 gap-4 mb-6">",
               <div className= "bg-white/10 rounded-xl p-6">",
                 <div className= "text-3xl font-bold text-cyan-300 mb-2">67%</div>",
                 <p className= "text-sm text-gray-300">Operational Cost Reduction</p>",
@@ -327,25 +327,25 @@ export default function QuantumEdgeAIRevolutionPage(): void {
 
           <section className="mb-12"
             <h2 className="text-3xl font-bold text-white mb-6">Key Benefits for Enterprises</h2>"
-            <div className="grid md: grid-cols-2 gap-6">",
+            <div className="grid md:grid-cols-2 gap-6">",
               <div className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10"
                 <h3 className="text-xl font-bold text-cyan-300 mb-3">🚀 Performance Excellence</h3>"
                 <ul className="space-y-2 text-gray-300"
           <section className="mb-12">",
             <h2 className="text-3xl font-bold text-white mb-6">Key Benefits for Enterprises</h2>",
-            <div className="grid md: grid-cols-2 gap-6">",
+            <div className="grid md:grid-cols-2 gap-6">",
               <div className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10">",
                 <h3 className="text-xl font-bold text-cyan-300 mb-3">🚀 Performance Excellence</h3>",
                 <ul className="space-y-2 text-gray-300">",
           <section className= "mb-12">
             <h2 className= "text-3xl font-bold text-white mb-6">Key Benefits for Enterprises</h2>"
-            <div className= "grid md: grid-cols-2 gap-6">",
+            <div className= "grid md:grid-cols-2 gap-6">",
               <div className= "bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10">
                 <h3 className= "text-xl font-bold text-cyan-300 mb-3">🚀 Performance Excellence</h3>"
                 <ul className= "space-y-2 text-gray-300">
           <section className= "mb-12">",
             <h2 className= "text-3xl font-bold text-white mb-6">Key Benefits for Enterprises</h2>",
-            <div className= "grid md: grid-cols-2 gap-6">",
+            <div className= "grid md:grid-cols-2 gap-6">",
               <div className= "bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10">",
                 <h3 className= "text-xl font-bold text-cyan-300 mb-3">🚀 Performance Excellence</h3>",
                 <ul className= "space-y-2 text-gray-300">",
@@ -488,8 +488,8 @@ export default function QuantumEdgeAIRevolutionPage(): void {
                   <span >Scale deployment across your enterprise with continuous optimization</span>
                 </li>
               </ul>
-              <div className="flex flex-col sm: flex-row gap-4">",
-              <div className="flex flex-col sm: flex-row gap-4">",
+              <div className="flex flex-col sm:flex-row gap-4">",
+              <div className="flex flex-col sm:flex-row gap-4">",
                 <a title: "Internal link",
   href="/contact",
                 <a title: "Internal link",
@@ -526,8 +526,8 @@ export default function QuantumEdgeAIRevolutionPage(): void {
                   <span >Scale deployment across your enterprise with continuous optimization</span>
                 </li>
               </ul>
-              <div className= "flex flex-col sm: flex-row gap-4">",
-              <div className= "flex flex-col sm: flex-row gap-4">",
+              <div className= "flex flex-col sm:flex-row gap-4">",
+              <div className= "flex flex-col sm:flex-row gap-4">",
                 <a title: "Internal link",
   href="/contact",
   className= "inline-flex items-center justify-center px-8 py-4 font-bold text-white bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl hover: from-cyan-400 hover:to-blue-500 transition-all duration-300 shadow-lg hover:shadow-cyan-500/50",
@@ -554,37 +554,37 @@ export default function QuantumEdgeAIRevolutionPage(): void {
         <footer className="mt-16 pt-8 border-t border-white/10"
           <div className="flex flex-wrap gap-4 items-center justify-between"
             <div className="flex gap-4"
-              <a title: "Internal link" href="/blog" className="text-cyan-400 hover: text-cyan-300 transition-colors">← Back to Blog</a>",
+              <a title: "Internal link", href="/blog" className="text-cyan-400 hover: text-cyan-300 transition-colors">← Back to Blog</a>",
             </div>
             <div className="flex gap-3"
               <span className="text-gray-400 text-sm">Share: </span>",
-              <a title: "Internal link" href="#" className="text-gray-400 hover: text-cyan-400 transition-colors">Twitter</a>",
-              <a title: "Internal link" href="#" className="text-gray-400 hover: text-cyan-400 transition-colors">LinkedIn</a>",
+              <a title: "Internal link", href="#" className="text-gray-400 hover: text-cyan-400 transition-colors">Twitter</a>",
+              <a title: "Internal link", href="#" className="text-gray-400 hover: text-cyan-400 transition-colors">LinkedIn</a>",
         <footer className="mt-16 pt-8 border-t border-white/10">",
           <div className="flex flex-wrap gap-4 items-center justify-between">",
             <div className="flex gap-4">",
-              <a title: "Internal link" href="/blog" className="text-cyan-400 hover: text-cyan-300 transition-colors">← Back to Blog</a>",
+              <a title: "Internal link", href="/blog" className="text-cyan-400 hover: text-cyan-300 transition-colors">← Back to Blog</a>",
             </div>
             <div className="flex gap-3">",
               <span className="text-gray-400 text-sm">Share: </span>",
         <footer className= "mt-16 pt-8 border-t border-white/10">
           <div className= "flex flex-wrap gap-4 items-center justify-between">
             <div className= "flex gap-4">
-              <a title: "Internal link" href="/blog" className="text-cyan-400 hover: text-cyan-300 transition-colors">← Back to Blog</a>",
+              <a title: "Internal link", href="/blog" className="text-cyan-400 hover: text-cyan-300 transition-colors">← Back to Blog</a>",
             </div>
             <div className= "flex gap-3">
               <span className= "text-gray-400 text-sm">Share: </span>",
-              <a title: "Internal link" href="#" className="text-gray-400 hover: text-cyan-400 transition-colors">Twitter</a>",
-              <a title: "Internal link" href="#" className="text-gray-400 hover: text-cyan-400 transition-colors">LinkedIn</a>",
+              <a title: "Internal link", href="#" className="text-gray-400 hover: text-cyan-400 transition-colors">Twitter</a>",
+              <a title: "Internal link", href="#" className="text-gray-400 hover: text-cyan-400 transition-colors">LinkedIn</a>",
         <footer className= "mt-16 pt-8 border-t border-white/10">",
           <div className= "flex flex-wrap gap-4 items-center justify-between">",
             <div className= "flex gap-4">",
-              <a title: "Internal link" href="/blog" className="text-cyan-400 hover: text-cyan-300 transition-colors">← Back to Blog</a>",
+              <a title: "Internal link", href="/blog" className="text-cyan-400 hover: text-cyan-300 transition-colors">← Back to Blog</a>",
             </div>
             <div className= "flex gap-3">",
               <span className= "text-gray-400 text-sm">Share: </span>",
-              <a title: "Internal link" href="#" className="text-gray-400 hover: text-cyan-400 transition-colors">Twitter</a>",
-              <a title: "Internal link" href="#" className ="text-gray-400 hover: text-cyan-400 transition-colors">LinkedIn</a>",
+              <a title: "Internal link", href="#" className="text-gray-400 hover: text-cyan-400 transition-colors">Twitter</a>",
+              <a title: "Internal link", href="#" className ="text-gray-400 hover: text-cyan-400 transition-colors">LinkedIn</a>",
             </div>
           </div>
         </footer>

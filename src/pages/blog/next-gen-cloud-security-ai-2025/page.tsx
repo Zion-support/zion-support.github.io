@@ -63,7 +63,7 @@ export default function NextGenCloudSecurityAI2025Page(): void {
             <p className="text-gray-300 leading-relaxed mb-4">,";,"
   Traditional security approaches can't keep pace with modern cloud threats. AI-powered cloud security systems analyze 100 billion+ security events daily, detect threats before they materialize, and respond autonomously in milliseconds. Organizations implementing AI security reduce breaches by 99%, cut incident response time from hours to seconds, and achieve full regulatory compliance with automated evidence collection.;';';
             </p>
-            <div className="grid md: grid-cols-2 gap-4 mt-6">",
+            <div className="grid md:grid-cols-2 gap-4 mt-6">",
               <div className="bg-red-500/10 rounded-xl p-6 border border-red-500/20"
                 <div className="text-2xl font-bold text-red-300 mb-2">99.97% Detection Rate</div>";,"
                 <p className="text-sm text-gray-300">AI identifies threats invisible to traditional security tools</p>";,"
@@ -73,7 +73,7 @@ export default function NextGenCloudSecurityAI2025Page(): void {
             <p className="text-gray-300 leading-relaxed mb-4">",;,"
   Traditional security approaches can't keep pace with modern cloud threats. AI-powered cloud security systems analyze 100 billion+ security events daily, detect threats before they materialize, and respond autonomously in milliseconds. Organizations implementing AI security reduce breaches by 99%, cut incident response time from hours to seconds, and achieve full regulatory compliance with automated evidence collection.'
             </p>
-            <div className="grid md: grid-cols-2 gap-4 mt-6">",
+            <div className="grid md:grid-cols-2 gap-4 mt-6">",
               <div className="bg-red-500/10 rounded-xl p-6 border border-red-500/20">",
                 <div className="text-2xl font-bold text-red-300 mb-2">99.97% Detection Rate</div>",
                 <p className="text-sm text-gray-300">AI identifies threats invisible to traditional security tools</p>",
@@ -88,7 +88,7 @@ export default function NextGenCloudSecurityAI2025Page(): void {
             <p className= "text-gray-300 leading-relaxed mb-4">,";,"
   Traditional security approaches can't keep pace with modern cloud threats. AI-powered cloud security systems analyze 100 billion+ security events daily, detect threats before they materialize, and respond autonomously in milliseconds. Organizations implementing AI security reduce breaches by 99%, cut incident response time from hours to seconds, and achieve full regulatory compliance with automated evidence collection.;';';
             </p>
-            <div className= "grid md: grid-cols-2 gap-4 mt-6">",
+            <div className= "grid md:grid-cols-2 gap-4 mt-6">",
               <div className= "bg-red-500/10 rounded-xl p-6 border border-red-500/20">
                 <div className= "text-2xl font-bold text-red-300 mb-2">99.97% Detection Rate</div>";,"
                 <p className= "text-sm text-gray-300">AI identifies threats invisible to traditional security tools</p>";,"
@@ -98,7 +98,7 @@ export default function NextGenCloudSecurityAI2025Page(): void {
             <p className= "text-gray-300 leading-relaxed mb-4">"
   Traditional security approaches can't keep pace with modern cloud threats. AI-powered cloud security systems analyze 100 billion+ security events daily, detect threats before they materialize, and respond autonomously in milliseconds. Organizations implementing AI security reduce breaches by 99%, cut incident response time from hours to seconds, and achieve full regulatory compliance with automated evidence collection.'
             </p>
-            <div className= "grid md: grid-cols-2 gap-4 mt-6">",
+            <div className= "grid md:grid-cols-2 gap-4 mt-6">",
               <div className= "bg-red-500/10 rounded-xl p-6 border border-red-500/20">",
                 <div className= "text-2xl font-bold text-red-300 mb-2">99.97% Detection Rate</div>",
                 <p className= "text-sm text-gray-300">AI identifies threats invisible to traditional security tools</p>",
@@ -209,7 +209,7 @@ export default function NextGenCloudSecurityAI2025Page(): void {
             <h2 className="text-3xl font-bold text-white mb-6">Success Story: Healthcare Provider Transformation</h2>",
             <p className="text-gray-300 leading-relaxed mb-6">,";,"
   A national healthcare provider securing 10M+ patient records deployed our AI security platform: </p>,,
-            <div className="grid md: grid-cols-3 gap-4 mb-6">",
+            <div className="grid md:grid-cols-3 gap-4 mb-6">",
               <div className="bg-white/10 rounded-xl p-6"
                 <div className="text-3xl font-bold text-red-300 mb-2">Zero Breaches</div>";,"
                 <p className="text-sm text-gray-300">In 18 Months of Operation</p>";,"
@@ -217,7 +217,7 @@ export default function NextGenCloudSecurityAI2025Page(): void {
             <h2 className="text-3xl font-bold text-white mb-6">Success Story: Healthcare Provider Transformation</h2>",
             <p className="text-gray-300 leading-relaxed mb-6">",;,"
   A national healthcare provider securing 10M+ patient records deployed our AI security platform: </p>,,
-            <div className="grid md: grid-cols-3 gap-4 mb-6">",
+            <div className="grid md:grid-cols-3 gap-4 mb-6">",
               <div className="bg-white/10 rounded-xl p-6">",
                 <div className="text-3xl font-bold text-red-300 mb-2">Zero Breaches</div>",
                 <p className="text-sm text-gray-300">In 18 Months of Operation</p>",
@@ -237,7 +237,7 @@ export default function NextGenCloudSecurityAI2025Page(): void {
             <h2 className= "text-3xl font-bold text-white mb-6">Success Story: Healthcare Provider Transformation</h2>",
             <p className= "text-gray-300 leading-relaxed mb-6">,";,"
   A national healthcare provider securing 10M+ patient records deployed our AI security platform: </p>,,
-            <div className= "grid md: grid-cols-3 gap-4 mb-6">",
+            <div className= "grid md:grid-cols-3 gap-4 mb-6">",
               <div className= "bg-white/10 rounded-xl p-6">
                 <div className= "text-3xl font-bold text-red-300 mb-2">Zero Breaches</div>";,"
                 <p className= "text-sm text-gray-300">In 18 Months of Operation</p>";,"
@@ -245,7 +245,7 @@ export default function NextGenCloudSecurityAI2025Page(): void {
             <h2 className= "text-3xl font-bold text-white mb-6">Success Story: Healthcare Provider Transformation</h2>",
             <p className= "text-gray-300 leading-relaxed mb-6">"
   A national healthcare provider securing 10M+ patient records deployed our AI security platform: </p>,,
-            <div className= "grid md: grid-cols-3 gap-4 mb-6">",
+            <div className= "grid md:grid-cols-3 gap-4 mb-6">",
               <div className= "bg-white/10 rounded-xl p-6">",
                 <div className= "text-3xl font-bold text-red-300 mb-2">Zero Breaches</div>",
                 <p className= "text-sm text-gray-300">In 18 Months of Operation</p>",
@@ -348,20 +348,20 @@ export default function NextGenCloudSecurityAI2025Page(): void {
 <<<<<<< HEAD
           <section className="mb-12 bg-gradient-to-r from-red-500/20 to-yellow-500/20 rounded-2xl p-8 border border-red-500/30"
             <h2 className="text-3xl font-bold text-white mb-6">Threat Landscape 2025</h2>";,"
-            <div className="grid md: grid-cols-2 gap-6">",
+            <div className="grid md:grid-cols-2 gap-6">",
           <section className="mb-12 bg-gradient-to-r from-red-500/20 to-yellow-500/20 rounded-2xl p-8 border border-red-500/30">",
             <h2 className="text-3xl font-bold text-white mb-6">Threat Landscape 2025</h2>",
-            <div className="grid md: grid-cols-2 gap-6">",
+            <div className="grid md:grid-cols-2 gap-6">",
               <div >
                 <h3 className="text-xl font-bold text-red-300 mb-4">Emerging Threats</h3>",
                 <ul className="text-gray-300 space-y-2">",
 =======
           <section className= "mb-12 bg-gradient-to-r from-red-500/20 to-yellow-500/20 rounded-2xl p-8 border border-red-500/30">
             <h2 className= "text-3xl font-bold text-white mb-6">Threat Landscape 2025</h2>";,"
-            <div className= "grid md: grid-cols-2 gap-6">",
+            <div className= "grid md:grid-cols-2 gap-6">",
           <section className= "mb-12 bg-gradient-to-r from-red-500/20 to-yellow-500/20 rounded-2xl p-8 border border-red-500/30">",
             <h2 className= "text-3xl font-bold text-white mb-6">Threat Landscape 2025</h2>",
-            <div className= "grid md: grid-cols-2 gap-6">",
+            <div className= "grid md:grid-cols-2 gap-6">",
               <div >
                 <h3 className= "text-xl font-bold text-red-300 mb-4">Emerging Threats</h3>",
                 <ul className= "text-gray-300 space-y-2">",
@@ -469,20 +469,20 @@ export default function NextGenCloudSecurityAI2025Page(): void {
 <<<<<<< HEAD
           <section className="mb-12 bg-gradient-to-r from-red-500/10 to-orange-500/10 rounded-2xl p-8 border border-red-500/20"
             <h2 className="text-3xl font-bold text-white mb-6">ROI Analysis</h2>";,"
-            <div className="grid md: grid-cols-2 gap-6 mb-6">",
+            <div className="grid md:grid-cols-2 gap-6 mb-6">",
           <section className="mb-12 bg-gradient-to-r from-red-500/10 to-orange-500/10 rounded-2xl p-8 border border-red-500/20">",
             <h2 className="text-3xl font-bold text-white mb-6">ROI Analysis</h2>",
-            <div className="grid md: grid-cols-2 gap-6 mb-6">",
+            <div className="grid md:grid-cols-2 gap-6 mb-6">",
               <div >
                 <h4 className="text-lg font-bold text-red-300 mb-3">Risk Reduction</h4>",
                 <ul className="text-gray-300 space-y-2">",
 =======
           <section className= "mb-12 bg-gradient-to-r from-red-500/10 to-orange-500/10 rounded-2xl p-8 border border-red-500/20">
             <h2 className= "text-3xl font-bold text-white mb-6">ROI Analysis</h2>";,"
-            <div className= "grid md: grid-cols-2 gap-6 mb-6">",
+            <div className= "grid md:grid-cols-2 gap-6 mb-6">",
           <section className= "mb-12 bg-gradient-to-r from-red-500/10 to-orange-500/10 rounded-2xl p-8 border border-red-500/20">",
             <h2 className= "text-3xl font-bold text-white mb-6">ROI Analysis</h2>",
-            <div className= "grid md: grid-cols-2 gap-6 mb-6">",
+            <div className= "grid md:grid-cols-2 gap-6 mb-6">",
               <div >
                 <h4 className= "text-lg font-bold text-red-300 mb-3">Risk Reduction</h4>",
                 <ul className= "text-gray-300 space-y-2">",
@@ -522,42 +522,42 @@ export default function NextGenCloudSecurityAI2025Page(): void {
             <p className="text-gray-300 leading-relaxed mb-6">,";,"
   Don't wait for a breach to transform your security posture. Our security experts will conduct a complimentary security assessment and show you how AI-powered security can protect your organization.;';';
             </p>
-            <div className="flex flex-col sm: flex-row gap-4">",
-              <a title: "Internal link" href="/contact" className ="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-red-600 to-orange-600 hover: from-red-700 hover:to-orange-700 text-white font-semibold rounded-xl transition-all transform hover:scale-105 shadow-xl">",;,"
+            <div className="flex flex-col sm:flex-row gap-4">",
+              <a title: "Internal link", href="/contact" className ="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-red-600 to-orange-600 hover: from-red-700 hover:to-orange-700 text-white font-semibold rounded-xl transition-all transform hover:scale-105 shadow-xl">",;,"
   Get Free Security Assessment
               </a>
-              <a title: "Internal link" href="/demo" className ="inline-flex items-center justify-center px-8 py-4 bg-white/10 hover: bg-white/20 text-white font-semibold rounded-xl border border-white/20 transition-all">",
+              <a title: "Internal link", href="/demo" className ="inline-flex items-center justify-center px-8 py-4 bg-white/10 hover: bg-white/20 text-white font-semibold rounded-xl border border-white/20 transition-all">",
           <section className="mb-12 bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">",
             <h2 className="text-3xl font-bold text-white mb-6">Secure Your Cloud Today</h2>",
             <p className="text-gray-300 leading-relaxed mb-6">",;,"
   Don't wait for a breach to transform your security posture. Our security experts will conduct a complimentary security assessment and show you how AI-powered security can protect your organization.'
             </p>
-            <div className="flex flex-col sm: flex-row gap-4">",
-              <a title: "Internal link" href="/contact" className ="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-red-600 to-orange-600 hover: from-red-700 hover:to-orange-700 text-white font-semibold rounded-xl transition-all transform hover:scale-105 shadow-xl">",;,"
+            <div className="flex flex-col sm:flex-row gap-4">",
+              <a title: "Internal link", href="/contact" className ="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-red-600 to-orange-600 hover: from-red-700 hover:to-orange-700 text-white font-semibold rounded-xl transition-all transform hover:scale-105 shadow-xl">",;,"
   Get Free Security Assessment
               </a>
-              <a title: "Internal link" href="/demo" className ="inline-flex items-center justify-center px-8 py-4 bg-white/10 hover: bg-white/20 text-white font-semibold rounded-xl border border-white/20 transition-all">",;,"
+              <a title: "Internal link", href="/demo" className ="inline-flex items-center justify-center px-8 py-4 bg-white/10 hover: bg-white/20 text-white font-semibold rounded-xl border border-white/20 transition-all">",;,"
 =======
           <section className= "mb-12 bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
             <h2 className= "text-3xl font-bold text-white mb-6">Secure Your Cloud Today</h2>";,"
             <p className= "text-gray-300 leading-relaxed mb-6">,";,"
   Don't wait for a breach to transform your security posture. Our security experts will conduct a complimentary security assessment and show you how AI-powered security can protect your organization.;';';
             </p>
-            <div className= "flex flex-col sm: flex-row gap-4">",
-              <a title: "Internal link" href="/contact" className ="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-red-600 to-orange-600 hover: from-red-700 hover:to-orange-700 text-white font-semibold rounded-xl transition-all transform hover:scale-105 shadow-xl">"
+            <div className= "flex flex-col sm:flex-row gap-4">",
+              <a title: "Internal link", href="/contact" className ="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-red-600 to-orange-600 hover: from-red-700 hover:to-orange-700 text-white font-semibold rounded-xl transition-all transform hover:scale-105 shadow-xl">"
   Get Free Security Assessment
               </a>
-              <a title: "Internal link" href="/demo" className ="inline-flex items-center justify-center px-8 py-4 bg-white/10 hover: bg-white/20 text-white font-semibold rounded-xl border border-white/20 transition-all">",
+              <a title: "Internal link", href="/demo" className ="inline-flex items-center justify-center px-8 py-4 bg-white/10 hover: bg-white/20 text-white font-semibold rounded-xl border border-white/20 transition-all">",
           <section className= "mb-12 bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">",
             <h2 className= "text-3xl font-bold text-white mb-6">Secure Your Cloud Today</h2>",
             <p className= "text-gray-300 leading-relaxed mb-6">"
   Don't wait for a breach to transform your security posture. Our security experts will conduct a complimentary security assessment and show you how AI-powered security can protect your organization.'
             </p>
-            <div className= "flex flex-col sm: flex-row gap-4">",
-              <a title: "Internal link" href="/contact" className ="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-red-600 to-orange-600 hover: from-red-700 hover:to-orange-700 text-white font-semibold rounded-xl transition-all transform hover:scale-105 shadow-xl">"
+            <div className= "flex flex-col sm:flex-row gap-4">",
+              <a title: "Internal link", href="/contact" className ="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-red-600 to-orange-600 hover: from-red-700 hover:to-orange-700 text-white font-semibold rounded-xl transition-all transform hover:scale-105 shadow-xl">"
   Get Free Security Assessment
               </a>
-              <a title: "Internal link" href="/demo" className ="inline-flex items-center justify-center px-8 py-4 bg-white/10 hover: bg-white/20 text-white font-semibold rounded-xl border border-white/20 transition-all">"
+              <a title: "Internal link", href="/demo" className ="inline-flex items-center justify-center px-8 py-4 bg-white/10 hover: bg-white/20 text-white font-semibold rounded-xl border border-white/20 transition-all">"
 >>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Watch Platform Demo
               </a>

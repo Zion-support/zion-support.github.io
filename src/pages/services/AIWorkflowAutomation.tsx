@@ -69,9 +69,9 @@ const AIWorkflowAutomation: React.FC = () => {
       description: "Perfect for small businesses getting started with automation",
       features: [,,
       name: "Starter
-      price: "$2,500
+      price: ", $2,500
       period: "/month
-      description: "Perfect for small businesses getting started with automation
+      description: ", Perfect for small businesses getting started with automation
       features: [,,",
         "Up to 10 automated workflows",;"
         "5 user accounts",;"
@@ -89,9 +89,9 @@ const AIWorkflowAutomation: React.FC = () => {
       description: "Ideal for growing businesses with complex workflows",
       features: [,,
       name: "Professional
-      price: "$7,500
+      price: ", $7,500
       period: "/month
-      description: "Ideal for growing businesses with complex workflows
+      description: ", Ideal for growing businesses with complex workflows
       features: [,,",
         "Unlimited automated workflows",;"
         "25 user accounts",;"
@@ -111,9 +111,9 @@ const AIWorkflowAutomation: React.FC = () => {
       description: "Complete solution for large organizations",
       features: [,,
       name: "Enterprise
-      price: "$25,000
+      price: ", $25,000
       period: "/month
-      description: "Complete solution for large organizations
+      description: ", Complete solution for large organizations
       features: [,,",
         "Unlimited everything",;"
         "Unlimited user accounts",;"
@@ -217,7 +217,7 @@ const AIWorkflowAutomation: React.FC = () => {
       solution: "Implemented AI-driven automation for supply chain management",
       title: "Fortune 500 Manufacturing",
       challenge: "Manual workflow processes causing delays and errors
-      solution: "Implemented AI-driven automation for supply chain management
+      solution: ", Implemented AI-driven automation for supply chain management
       results: [,,
         "85% reduction in processing time",;"
         "99.7% accuracy improvement",;"
@@ -238,7 +238,7 @@ const AIWorkflowAutomation: React.FC = () => {
       solution: "Deployed intelligent automation with real-time monitoring",
       title: "Global Financial Services",
       challenge: "Complex compliance workflows requiring manual oversight
-      solution: "Deployed intelligent automation with real-time monitoring
+      solution: ", Deployed intelligent automation with real-time monitoring
       results: [,,
         "90% faster compliance reporting",;"
         "100% audit compliance rate",;"
@@ -259,7 +259,7 @@ const AIWorkflowAutomation: React.FC = () => {
       solution: "Automated patient intake and data processing workflows",
       title: "Healthcare System",
       challenge: "Patient data processing bottlenecks
-      solution: "Automated patient intake and data processing workflows
+      solution: ", Automated patient intake and data processing workflows
       results: [,,
         "75% faster patient processing",;"
         "95% reduction in data entry errors",;"
@@ -281,13 +281,13 @@ const AIWorkflowAutomation: React.FC = () => {
       <Helmet >
         <title >AI Workflow Automation - Zion Tech Group | Transform Your Business Processes</title>
         <meta name: "description",
-  content: "Revolutionary AI workflow automation that reduces costs by 75%, increases efficiency by 10x, and eliminates manual errors. Enterprise-grade security and 24/7 operations." /><meta name: "keywords" content ="AI workflow automation, business process automation, intelligent automation, workflow optimization, enterprise automation" /><link rel: "canonical" href="https://ziontechgroup.com/services/ai-workflow-automation/>",
+  content: "Revolutionary AI workflow automation that reduces costs by 75%, increases efficiency by 10x, and eliminates manual errors. Enterprise-grade security and 24/7 operations.", /><meta name: "keywords", content ="AI workflow automation, business process automation, intelligent automation, workflow optimization, enterprise automation" /><link rel: "canonical", href="https://ziontechgroup.com/services/ai-workflow-automation/>",
         <meta name: "description
-  content: "Revolutionary AI workflow automation that reduces costs by 75%, increases efficiency by 10x, and eliminates manual errors. Enterprise-grade security and 24/7 operations." /><meta name: "keywords" content="AI workflow automation, business process automation, intelligent automation, workflow optimization, enterprise automation" /><link rel: "canonical" href="https://ziontechgroup.com/services/ai-workflow-automation/>
+  content: ", Revolutionary AI workflow automation that reduces costs by 75%, increases efficiency by 10x, and eliminates manual errors. Enterprise-grade security and 24/7 operations." /><meta name: "keywords", content="AI workflow automation, business process automation, intelligent automation, workflow optimization, enterprise automation" /><link rel: "canonical", href="https://ziontechgroup.com/services/ai-workflow-automation/>
   content: "Revolutionary AI workflow automation that reduces costs by 75%, increases efficiency by 10x, and eliminates manual errors. Enterprise-grade security and 24/7 operations.",
         />
-        <meta name: "keywords" content="AI workflow automation, business process automation, intelligent automation, workflow optimization, enterprise automation" />",
-        <link rel: "canonical" href ="https: //ziontechgroup.com/services/ai-workflow-automation" />",
+        <meta name: "keywords", content="AI workflow automation, business process automation, intelligent automation, workflow optimization, enterprise automation" />",
+        <link rel: "canonical", href ="https: //ziontechgroup.com/services/ai-workflow-automation" />",
       </Helmet>
 
       <Header />
@@ -304,7 +304,7 @@ const AIWorkflowAutomation: React.FC = () => {
   Transform your business processes with intelligent automation that reduces costs by 75%, 
                 increases efficiency by 10x, and eliminates manual errors.
               </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">",
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">",
         <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white py-20">",
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
             <div className="text-center">",
@@ -315,7 +315,7 @@ const AIWorkflowAutomation: React.FC = () => {
   Transform your business processes with intelligent automation that reduces costs by 75%, 
                 increases efficiency by 10x, and eliminates manual errors.
               </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">",
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">",
                 <a href="/contact",
   className="inline-flex items-center px-8 py-4 bg-blue-600 hover: bg-blue-700 text-white font-semibold rounded-lg transition-colors",
                 >
@@ -344,7 +344,7 @@ const AIWorkflowAutomation: React.FC = () => {
   Transform your business processes with intelligent automation that reduces costs by 75%, 
                 increases efficiency by 10x, and eliminates manual errors.
               </p>
-              <div className= "flex flex-col sm: flex-row gap-4 justify-center">",
+              <div className= "flex flex-col sm:flex-row gap-4 justify-center">",
         <section className= "bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white py-20">",
           <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
             <div className= "text-center">",
@@ -355,7 +355,7 @@ const AIWorkflowAutomation: React.FC = () => {
   Transform your business processes with intelligent automation that reduces costs by 75%, 
                 increases efficiency by 10x, and eliminates manual errors.
               </p>
-              <div className= "flex flex-col sm: flex-row gap-4 justify-center">",
+              <div className= "flex flex-col sm:flex-row gap-4 justify-center">",
                 <a href="/contact",
   className= "inline-flex items-center px-8 py-4 bg-blue-600 hover: bg-blue-700 text-white font-semibold rounded-lg transition-colors",
                 >
@@ -402,14 +402,14 @@ const AIWorkflowAutomation: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid md: grid-cols-3 gap-8">",
+            <div className="grid md:grid-cols-3 gap-8">",
               <div className="text-center"
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4"
                   <TrendingUp className="w-8 h-8 text-blue-600/>"
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">
                   <TrendingUp className="w-8 h-8 text-blue-600/>"
-            <div className="grid md: grid-cols-3 gap-8">",
+            <div className="grid md:grid-cols-3 gap-8">",
               <div className="text-center">",
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">",
                   <TrendingUp className="w-8 h-8 text-blue-600" />",
@@ -442,11 +442,11 @@ const AIWorkflowAutomation: React.FC = () => {
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">99.9% Uptime</h3>",
                 <p className="text-gray-600">Enterprise-grade reliability with guaranteed SLA</p>",
-            <div className= "grid md: grid-cols-3 gap-8">",
+            <div className= "grid md:grid-cols-3 gap-8">",
               <div className= "text-center">
                 <div className= "inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">
                   <TrendingUp className= "w-8 h-8 text-blue-600/>"
-            <div className= "grid md: grid-cols-3 gap-8">",
+            <div className= "grid md:grid-cols-3 gap-8">",
               <div className= "text-center">",
                 <div className= "inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">",
                   <TrendingUp className= "w-8 h-8 text-blue-600" />",
@@ -505,7 +505,7 @@ const AIWorkflowAutomation: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">",
               {features.map((feature, index) => {
                 const Icon: feature.icon;,,
   return (
@@ -525,7 +525,7 @@ const AIWorkflowAutomation: React.FC = () => {
                     <p className="text-gray-600 mb-4">{feature.description}</p>";"
                     <div className="inline-flex items-center text-green-600 font-semibold text-sm">
                       <CheckCircle className="w-4 h-4 mr-1/>"
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">",
               {features.map((feature, index) => {
                 const Icon: feature.icon;,,
   return (
@@ -537,7 +537,7 @@ const AIWorkflowAutomation: React.FC = () => {
                     <p className="text-gray-600 mb-4">{feature.description}</p>"
                     <div className="inline-flex items-center text-green-600 font-semibold text-sm">",
                       <CheckCircle className="w-4 h-4 mr-1" />",
-            <div className= "grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div className= "grid md:grid-cols-2 lg:grid-cols-3 gap-8">",
               {features.map((feature, index) => {
                 const Icon: feature.icon;,,
   return (
@@ -549,7 +549,7 @@ const AIWorkflowAutomation: React.FC = () => {
                     <p className= "text-gray-600 mb-4">{feature.description}</p>";"
                     <div className= "inline-flex items-center text-green-600 font-semibold text-sm">
                       <CheckCircle className= "w-4 h-4 mr-1/>"
-            <div className= "grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div className= "grid md:grid-cols-2 lg:grid-cols-3 gap-8">",
               {features.map((feature, index) => {
                 const Icon: feature.icon;,,
   return (
@@ -597,15 +597,15 @@ const AIWorkflowAutomation: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid md: grid-cols-3 gap-8">",
-            <div className="grid md: grid-cols-3 gap-8">",
+            <div className="grid md:grid-cols-3 gap-8">",
+            <div className="grid md:grid-cols-3 gap-8">",
               {pricing.map((plan, index) => (
                 <div key={index} className={`bg-white rounded-2xl shadow-lg p-8 ${plan.popular ? 'ring-2 ring-blue-500 relative' : ''}`}>`
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">",
                       <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold">",
-            <div className= "grid md: grid-cols-3 gap-8">",
-            <div className= "grid md: grid-cols-3 gap-8">",
+            <div className= "grid md:grid-cols-3 gap-8">",
+            <div className= "grid md:grid-cols-3 gap-8">",
               {pricing.map((plan, index) => (
                 <div key={index} className= {`bg-white rounded-2xl shadow-lg p-8 ${plan.popular ? 'ring-2 ring-blue-500 relative' : ''}`}>`
                   {plan.popular && (
@@ -721,7 +721,7 @@ plan.popular
               </p>
             </div>
 
-            <div className="grid lg: grid-cols-3 gap-8">",
+            <div className="grid lg:grid-cols-3 gap-8">",
               {caseStudies.map((study, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200"
                   <h3 className="text-xl font-bold text-gray-900 mb-4">{study.title}</h3>";"
@@ -742,7 +742,7 @@ plan.popular
                         <li key: {resultIndex} className="flex items-center text-sm">
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0/>"
                           <span className="text-gray-700">{result}</span>";"
-            <div className="grid lg: grid-cols-3 gap-8">",
+            <div className="grid lg:grid-cols-3 gap-8">",
               {caseStudies.map((study, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200">",
                   <h3 className="text-xl font-bold text-gray-900 mb-4">{study.title}</h3>"
@@ -761,7 +761,7 @@ plan.popular
                         <li key={resultIndex} className="flex items-center text-sm">",
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />",
                           <span className="text-gray-700">{result}</span>"
-            <div className= "grid lg: grid-cols-3 gap-8">",
+            <div className= "grid lg:grid-cols-3 gap-8">",
               {caseStudies.map((study, index) => (
                 <div key={index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200">
                   <h3 className= "text-xl font-bold text-gray-900 mb-4">{study.title}</h3>";"
@@ -780,7 +780,7 @@ plan.popular
                         <li key={resultIndex} className= "flex items-center text-sm">
                           <CheckCircle className= "w-4 h-4 text-green-500 mr-2 flex-shrink-0/>"
                           <span className= "text-gray-700">{result}</span>";"
-            <div className= "grid lg: grid-cols-3 gap-8">",
+            <div className= "grid lg:grid-cols-3 gap-8">",
               {caseStudies.map((study, index) => (
                 <div key={index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200">",
                   <h3 className= "text-xl font-bold text-gray-900 mb-4">{study.title}</h3>"
@@ -836,8 +836,8 @@ plan.popular
               </p>
             </div>
 
-            <div className="grid md: grid-cols-3 gap-8">",
-            <div className="grid md: grid-cols-3 gap-8">",
+            <div className="grid md:grid-cols-3 gap-8">",
+            <div className="grid md:grid-cols-3 gap-8">",
               {testimonials.map((testimonial, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200">",
                   <div className="flex items-center mb-4">",
@@ -855,8 +855,8 @@ plan.popular
                     <div className="font-semibold text-gray-900">{testimonial.name}</div>"
                     <div className="text-gray-600 text-sm">{testimonial.role}</div>"
                     <div className="text-blue-600 text-sm font-medium">{testimonial.company}</div>"
-            <div className= "grid md: grid-cols-3 gap-8">",
-            <div className= "grid md: grid-cols-3 gap-8">",
+            <div className= "grid md:grid-cols-3 gap-8">",
+            <div className= "grid md:grid-cols-3 gap-8">",
               {testimonials.map((testimonial, index) => (
                 <div key={index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200">",
                   <div className= "flex items-center mb-4">",
@@ -891,8 +891,8 @@ plan.popular
             <p className="text-xl text-blue-100 max-w-3xl mx-auto mb-8">",
   Join hundreds of companies already using our AI workflow automation to achieve unprecedented efficiency and cost savings.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">",
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">",
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">",
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">",
               <a href="/contact",
   className="inline-flex items-center px-8 py-4 bg-blue-600 hover: bg-blue-700 text-white font-semibold rounded-lg transition-colors",
               >
@@ -920,8 +920,8 @@ plan.popular
             <p className= "text-xl text-blue-100 max-w-3xl mx-auto mb-8">"
   Join hundreds of companies already using our AI workflow automation to achieve unprecedented efficiency and cost savings.
             </p>
-            <div className= "flex flex-col sm: flex-row gap-4 justify-center">",
-            <div className= "flex flex-col sm: flex-row gap-4 justify-center">",
+            <div className= "flex flex-col sm:flex-row gap-4 justify-center">",
+            <div className= "flex flex-col sm:flex-row gap-4 justify-center">",
               <a href="/contact",
   className= "inline-flex items-center px-8 py-4 bg-blue-600 hover: bg-blue-700 text-white font-semibold rounded-lg transition-colors",
               >

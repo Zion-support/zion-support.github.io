@@ -141,7 +141,7 @@ const Partners: React.FC = () => {
         <title >Partners - Zion Tech Group</title>
         <meta name="description" content="Strategic partnerships with leading technology providers to deliver comprehensive AI and IT solutions." /><link rel="canonical" href="https://ziontechgroup.com/partners/>",
         <meta name="description" content="Strategic partnerships with leading technology providers to deliver comprehensive AI and IT solutions." />",
-        <link rel: "canonical" href ="https: //ziontechgroup.com/partners" />",
+        <link rel: "canonical", href ="https: //ziontechgroup.com/partners" />",
       </Helmet>
       
 <<<<<<< HEAD
@@ -183,9 +183,9 @@ const Partners: React.FC = () => {
         {/* Partners Grid */}
 <<<<<<< HEAD
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16">",
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">",
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">",
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16">",
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">",
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">",
             {partners.map((partner, index) => (
               <div key={index}
                 className="bg-white rounded-xl shadow-lg p-8 hover: shadow-xl transition-all duration-300 text-center",
@@ -202,9 +202,9 @@ const Partners: React.FC = () => {
                 <p className="text-gray-600 text-sm mb-4">",
 =======
         <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16">",
-          <div className= "grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">",
+          <div className= "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">",
         <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16">",
-          <div className= "grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">",
+          <div className= "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">",
             {partners.map((partner, index) => (
               <div key={index}
                 className= "bg-white rounded-xl shadow-lg p-8 hover: shadow-xl transition-all duration-300 text-center",
@@ -269,8 +269,8 @@ const Partners: React.FC = () => {
             </div>
             
 <<<<<<< HEAD
-            <div className="grid grid-cols-1 md: grid-cols-3 gap-8">",
-            <div className="grid grid-cols-1 md: grid-cols-3 gap-8">",
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">",
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">",
               {partnershipTypes.map((type, index) => (
                 <div key={index} className="text-center">",
                   <div className="text-4xl mb-4">{type.icon}</div>"
@@ -284,12 +284,12 @@ const Partners: React.FC = () => {
                     {type.benefits.map((benefit, benefitIndex) => (
                       <li key={benefitIndex} className="flex items-center"
                         <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20"
-                          <path fillRule: "evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd/>";,"
+                          <path fillRule: "evenodd", d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd/>";,"
                       <li key={benefitIndex} className="flex items-center">",
                         <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">",
 =======
-            <div className= "grid grid-cols-1 md: grid-cols-3 gap-8">",
-            <div className= "grid grid-cols-1 md: grid-cols-3 gap-8">",
+            <div className= "grid grid-cols-1 md:grid-cols-3 gap-8">",
+            <div className= "grid grid-cols-1 md:grid-cols-3 gap-8">",
               {partnershipTypes.map((type, index) => (
                 <div key={index} className= "text-center">",
                   <div className= "text-4xl mb-4">{type.icon}</div>"
@@ -303,11 +303,11 @@ const Partners: React.FC = () => {
                     {type.benefits.map((benefit, benefitIndex) => (
                       <li key={benefitIndex} className= "flex items-center">
                         <svg className= "w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule: "evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd/>";,"
+                          <path fillRule: "evenodd", d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd/>";,"
                       <li key={benefitIndex} className= "flex items-center">",
                         <svg className= "w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">",
 >>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
-                          <path fillRule: "evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule ="evenodd" />",
+                          <path fillRule: "evenodd", d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule ="evenodd" />",
                         </svg>
                         {benefit}
                       </li>
@@ -332,8 +332,8 @@ const Partners: React.FC = () => {
             <p className="text-xl text-blue-100 mb-8">",;,"
   Join our partner ecosystem and unlock new opportunities for growth and innovation.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">",
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">",
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">",
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">",
               <a href="/contact",;,"
   className="inline-flex items-center px-8 py-3 bg-white text-blue-600 rounded-lg hover: bg-gray-100 transition-colors font-medium",
               >
@@ -353,8 +353,8 @@ const Partners: React.FC = () => {
             <p className= "text-xl text-blue-100 mb-8">"
   Join our partner ecosystem and unlock new opportunities for growth and innovation.
             </p>
-            <div className= "flex flex-col sm: flex-row gap-4 justify-center">",
-            <div className= "flex flex-col sm: flex-row gap-4 justify-center">",
+            <div className= "flex flex-col sm:flex-row gap-4 justify-center">",
+            <div className= "flex flex-col sm:flex-row gap-4 justify-center">",
               <a href="/contact",;,"
   className= "inline-flex items-center px-8 py-3 bg-white text-blue-600 rounded-lg hover: bg-gray-100 transition-colors font-medium",
               >

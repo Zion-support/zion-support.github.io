@@ -6,7 +6,7 @@ const Privacy: React.FC = () => {
     <>
       <Helmet >
         <title >Privacy Policy - Zion Tech Group</title>
-        <meta name: "description" content ="Learn how Zion Tech Group collects, uses, and protects your personal information." />"
+        <meta name: "description", content ="Learn how Zion Tech Group collects, uses, and protects your personal information." />"
         <meta name="description" content="Learn how Zion Tech Group collects, uses, and protects your personal information." />
       </Helmet>
       

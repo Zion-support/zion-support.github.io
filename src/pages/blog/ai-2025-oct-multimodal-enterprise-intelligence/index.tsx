@@ -9,8 +9,8 @@ const MultimodalEnterpriseIntelligence: () => {
       <Helmet >
         <title >Multimodal Enterprise Intelligence 2025: Vision, Language & Audio AI Convergence | Zion Tech Group</title>,
         <meta name: "description",
-  content: "Revolutionary multimodal AI systems combining vision, language, and audio processing for enterprise applications. Achieve 97% accuracy with unified intelligence platforms." /><meta name: "keywords",
-  content: "multimodal AI, enterprise intelligence, computer vision, NLP, audio AI, unified AI platform, GPT-4V, Claude Vision, DALL-E 3" /></Helmet>"
+  content: "Revolutionary multimodal AI systems combining vision, language, and audio processing for enterprise applications. Achieve 97% accuracy with unified intelligence platforms.", /><meta name: "keywords",
+  content: "multimodal AI, enterprise intelligence, computer vision, NLP, audio AI, unified AI platform, GPT-4V, Claude Vision, DALL-E 3", /></Helmet>"
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">",
         <Header />
 
@@ -105,13 +105,13 @@ const MultimodalEnterpriseIntelligence: () => {
             {/* Key Metrics */}
             <div className="bg-gradient-to-r from-purple-900/40 to-pink-900/40 rounded-2xl p-8 border border-purple-500/30"
               <h2 className="text-2xl font-bold text-white mb-6">📊 Multimodal AI Impact Metrics</h2>"
-              <div className="grid md: grid-cols-3 gap-6">",
+              <div className="grid md:grid-cols-3 gap-6">",
                 <div className="text-center"
                   <div className="text-4xl font-bold text-purple-400 mb-2">97%</div>"
                   <div className="text-sm">Cross-Modal Accuracy</div>"
             <div className="bg-gradient-to-r from-purple-900/40 to-pink-900/40 rounded-2xl p-8 border border-purple-500/30">",
               <h2 className="text-2xl font-bold text-white mb-6">📊 Multimodal AI Impact Metrics</h2>",
-              <div className="grid md: grid-cols-3 gap-6">",
+              <div className="grid md:grid-cols-3 gap-6">",
                 <div className="text-center">",
                   <div className="text-4xl font-bold text-purple-400 mb-2">97%</div>",
                   <div className="text-sm">Cross-Modal Accuracy</div>",
@@ -127,13 +127,13 @@ const MultimodalEnterpriseIntelligence: () => {
             {/* Key Metrics */}
             <div className= "bg-gradient-to-r from-purple-900/40 to-pink-900/40 rounded-2xl p-8 border border-purple-500/30">
               <h2 className= "text-2xl font-bold text-white mb-6">📊 Multimodal AI Impact Metrics</h2>"
-              <div className= "grid md: grid-cols-3 gap-6">",
+              <div className= "grid md:grid-cols-3 gap-6">",
                 <div className= "text-center">
                   <div className= "text-4xl font-bold text-purple-400 mb-2">97%</div>"
                   <div className= "text-sm">Cross-Modal Accuracy</div>"
             <div className= "bg-gradient-to-r from-purple-900/40 to-pink-900/40 rounded-2xl p-8 border border-purple-500/30">",
               <h2 className= "text-2xl font-bold text-white mb-6">📊 Multimodal AI Impact Metrics</h2>",
-              <div className= "grid md: grid-cols-3 gap-6">",
+              <div className= "grid md:grid-cols-3 gap-6">",
                 <div className= "text-center">",
                   <div className= "text-4xl font-bold text-purple-400 mb-2">97%</div>",
                   <div className= "text-sm">Cross-Modal Accuracy</div>",
@@ -461,7 +461,7 @@ const MultimodalEnterpriseIntelligence: () => {
             <section >
               <h2 className="text-3xl font-bold text-white mb-6">💰 Enterprise ROI: Multimodal AI</h2>",
               <div className="bg-gradient-to-r from-green-900/40 to-blue-900/40 rounded-xl p-8 border border-green-500/30"
-                <div className="grid md: grid-cols-2 gap-6">",
+                <div className="grid md:grid-cols-2 gap-6">",
                   <div >
                     <h3 className="text-xl font-bold text-white mb-4">Investment</h3>"
                     <ul className="space-y-2 text-sm"
@@ -482,7 +482,7 @@ const MultimodalEnterpriseIntelligence: () => {
                         <strong className="text-white">$550K</strong>"
               <h2 className="text-3xl font-bold text-white mb-6">💰 Enterprise ROI: Multimodal AI</h2>",
               <div className="bg-gradient-to-r from-green-900/40 to-blue-900/40 rounded-xl p-8 border border-green-500/30">",
-                <div className="grid md: grid-cols-2 gap-6">",
+                <div className="grid md:grid-cols-2 gap-6">",
                   <div >
                     <h3 className="text-xl font-bold text-white mb-4">Investment</h3>",
                     <ul className="space-y-2 text-sm">",
@@ -503,7 +503,7 @@ const MultimodalEnterpriseIntelligence: () => {
                         <strong className="text-white">$550K</strong>",
               <h2 className= "text-3xl font-bold text-white mb-6">💰 Enterprise ROI: Multimodal AI</h2>",
               <div className= "bg-gradient-to-r from-green-900/40 to-blue-900/40 rounded-xl p-8 border border-green-500/30">
-                <div className= "grid md: grid-cols-2 gap-6">",
+                <div className= "grid md:grid-cols-2 gap-6">",
                   <div >
                     <h3 className= "text-xl font-bold text-white mb-4">Investment</h3>"
                     <ul className= "space-y-2 text-sm">
@@ -524,7 +524,7 @@ const MultimodalEnterpriseIntelligence: () => {
                         <strong className= "text-white">$550K</strong>"
               <h2 className= "text-3xl font-bold text-white mb-6">💰 Enterprise ROI: Multimodal AI</h2>",
               <div className= "bg-gradient-to-r from-green-900/40 to-blue-900/40 rounded-xl p-8 border border-green-500/30">",
-                <div className= "grid md: grid-cols-2 gap-6">",
+                <div className= "grid md:grid-cols-2 gap-6">",
                   <div >
                     <h3 className= "text-xl font-bold text-white mb-4">Investment</h3>",
                     <ul className= "space-y-2 text-sm">",
@@ -779,8 +779,8 @@ const MultimodalEnterpriseIntelligence: () => {
   Join the Fortune 500 companies achieving 97% accuracy and $2.3B+ in value creation. 
                 Schedule your free consultation today.
               </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">",
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">",
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">",
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">",
                 <Link to: "/contact",
   className="bg-white text-purple-600 hover: bg-zion-slate-light px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105 inline-flex items-center justify-center gap-2",
                 >
@@ -800,8 +800,8 @@ const MultimodalEnterpriseIntelligence: () => {
   Join the Fortune 500 companies achieving 97% accuracy and $2.3B+ in value creation. 
                 Schedule your free consultation today.
               </p>
-              <div className= "flex flex-col sm: flex-row gap-4 justify-center">",
-              <div className= "flex flex-col sm: flex-row gap-4 justify-center">",
+              <div className= "flex flex-col sm:flex-row gap-4 justify-center">",
+              <div className= "flex flex-col sm:flex-row gap-4 justify-center">",
                 <Link to: "/contact",
   className= "bg-white text-purple-600 hover: bg-zion-slate-light px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105 inline-flex items-center justify-center gap-2",
                 >

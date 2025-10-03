@@ -113,7 +113,7 @@ const DocumentationPage: React.FC = () => {
         {/* Documentation Sections */}
         <section className="py-20">"
           <div className="container mx-auto px-6">"
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">"
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">"
               {documentationSections.map((section, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-sm hover: shadow-lg transition-shadow">"
                   <div className="text-4xl mb-4">{section.icon}</div>"
@@ -121,7 +121,7 @@ const DocumentationPage: React.FC = () => {
                   <p className="text-gray-600 mb-6">{section.description}</p>"
                   <ul className="space-y-2">"
                     {section.links.map((link, linkIndex) => (
-                      <li key={linkIndex}>
+                      <li key="{linkIndex}">
                         <Link 
                           to={link.href}
                           className="text-blue-600 hover: text-blue-800 transition-colors text-sm
@@ -147,7 +147,7 @@ const DocumentationPage: React.FC = () => {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md: grid-cols-2 gap-8">"
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">"
               <div className="bg-gray-50 p-8 rounded-xl">"
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Quick Start Guides</h3>"
                 <ul className="space-y-2 text-gray-600">"
@@ -201,7 +201,7 @@ const DocumentationPage: React.FC = () => {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md: grid-cols-3 gap-8">"
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">"
               <div className="bg-white p-8 rounded-xl shadow-sm text-center">"
                 <div className="text-4xl mb-4">💬</div>"
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Live Chat</h3>"
@@ -248,7 +248,7 @@ const DocumentationPage: React.FC = () => {
             <p className="text-xl mb-8 text-gray-300 max-w-2xl mx-auto">"
               Explore our solutions and start building with our comprehensive documentation and support.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">"
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <Link 
                 to="/services" 
                 className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors

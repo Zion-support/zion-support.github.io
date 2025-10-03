@@ -69,9 +69,9 @@ const EdgeComputingAI: React.FC = () => {
       description: "Perfect for small-scale edge deployments and proof of concepts",
       features: [,,
       name: "Edge Starter
-      price: "$1,999
+      price: ", $1,999
       period: "/month
-      description: "Perfect for small-scale edge deployments and proof of concepts
+      description: ", Perfect for small-scale edge deployments and proof of concepts
       features: [,,",
         "Up to 10 edge devices",;"
         "Basic AI model deployment",;"
@@ -91,9 +91,9 @@ const EdgeComputingAI: React.FC = () => {
       description: "Ideal for medium-scale deployments with advanced requirements",
       features: [,,
       name: "Edge Professional
-      price: "$5,999
+      price: ", $5,999
       period: "/month
-      description: "Ideal for medium-scale deployments with advanced requirements
+      description: ", Ideal for medium-scale deployments with advanced requirements
       features: [,,",
         "Up to 100 edge devices",;"
         "Advanced AI model deployment",;"
@@ -115,9 +115,9 @@ const EdgeComputingAI: React.FC = () => {
       description: "Complete solution for large-scale enterprise edge deployments",
       features: [,,
       name: "Edge Enterprise
-      price: "$15,999
+      price: ", $15,999
       period: "/month
-      description: "Complete solution for large-scale enterprise edge deployments
+      description: ", Complete solution for large-scale enterprise edge deployments
       features: [,,",
         "Unlimited edge devices",;"
         "Custom AI model development",;"
@@ -326,13 +326,13 @@ const EdgeComputingAI: React.FC = () => {
       <Helmet >
         <title >Edge Computing AI - Zion Tech Group | Real-Time Edge Intelligence</title>
         <meta name: "description",
-  content: "Deploy AI at the edge for real-time processing with sub-10ms response times. Edge computing solutions for IoT, industrial automation, smart cities, and healthcare applications." /><meta name: "keywords" content ="edge computing, edge AI, IoT, real-time processing, edge analytics, distributed computing, edge deployment, low latency AI" /><link rel: "canonical" href="https://ziontechgroup.com/services/edge-computing-ai/>",
+  content: "Deploy AI at the edge for real-time processing with sub-10ms response times. Edge computing solutions for IoT, industrial automation, smart cities, and healthcare applications.", /><meta name: "keywords", content ="edge computing, edge AI, IoT, real-time processing, edge analytics, distributed computing, edge deployment, low latency AI" /><link rel: "canonical", href="https://ziontechgroup.com/services/edge-computing-ai/>",
         <meta name: "description
-  content: "Deploy AI at the edge for real-time processing with sub-10ms response times. Edge computing solutions for IoT, industrial automation, smart cities, and healthcare applications." /><meta name: "keywords" content="edge computing, edge AI, IoT, real-time processing, edge analytics, distributed computing, edge deployment, low latency AI" /><link rel: "canonical" href="https://ziontechgroup.com/services/edge-computing-ai/>
+  content: ", Deploy AI at the edge for real-time processing with sub-10ms response times. Edge computing solutions for IoT, industrial automation, smart cities, and healthcare applications." /><meta name: "keywords", content="edge computing, edge AI, IoT, real-time processing, edge analytics, distributed computing, edge deployment, low latency AI" /><link rel: "canonical", href="https://ziontechgroup.com/services/edge-computing-ai/>
   content: "Deploy AI at the edge for real-time processing with sub-10ms response times. Edge computing solutions for IoT, industrial automation, smart cities, and healthcare applications.",
         />
-        <meta name: "keywords" content="edge computing, edge AI, IoT, real-time processing, edge analytics, distributed computing, edge deployment, low latency AI" />",
-        <link rel: "canonical" href ="https: //ziontechgroup.com/services/edge-computing-ai" />",
+        <meta name: "keywords", content="edge computing, edge AI, IoT, real-time processing, edge analytics, distributed computing, edge deployment, low latency AI" />",
+        <link rel: "canonical", href ="https: //ziontechgroup.com/services/edge-computing-ai" />",
       </Helmet>
 
       <Header />
@@ -349,7 +349,7 @@ const EdgeComputingAI: React.FC = () => {
   Deploy AI at the edge for real-time processing with sub-10ms response times. 
                 Transform your IoT, industrial, and smart city applications with distributed intelligence.
               </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">",
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">",
         <section className="bg-gradient-to-br from-teal-900 via-cyan-800 to-blue-900 text-white py-20">",
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
             <div className="text-center">",
@@ -360,7 +360,7 @@ const EdgeComputingAI: React.FC = () => {
   Deploy AI at the edge for real-time processing with sub-10ms response times. 
                 Transform your IoT, industrial, and smart city applications with distributed intelligence.
               </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">",
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">",
                 <a href="/contact",
   className="inline-flex items-center px-8 py-4 bg-teal-600 hover: bg-teal-700 text-white font-semibold rounded-lg transition-colors",
                 >
@@ -389,7 +389,7 @@ const EdgeComputingAI: React.FC = () => {
   Deploy AI at the edge for real-time processing with sub-10ms response times. 
                 Transform your IoT, industrial, and smart city applications with distributed intelligence.
               </p>
-              <div className= "flex flex-col sm: flex-row gap-4 justify-center">",
+              <div className= "flex flex-col sm:flex-row gap-4 justify-center">",
         <section className= "bg-gradient-to-br from-teal-900 via-cyan-800 to-blue-900 text-white py-20">",
           <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
             <div className= "text-center">",
@@ -400,7 +400,7 @@ const EdgeComputingAI: React.FC = () => {
   Deploy AI at the edge for real-time processing with sub-10ms response times. 
                 Transform your IoT, industrial, and smart city applications with distributed intelligence.
               </p>
-              <div className= "flex flex-col sm: flex-row gap-4 justify-center">",
+              <div className= "flex flex-col sm:flex-row gap-4 justify-center">",
                 <a href="/contact",
   className= "inline-flex items-center px-8 py-4 bg-teal-600 hover: bg-teal-700 text-white font-semibold rounded-lg transition-colors",
                 >
@@ -447,14 +447,14 @@ const EdgeComputingAI: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid md: grid-cols-4 gap-8">",
+            <div className="grid md:grid-cols-4 gap-8">",
               <div className="text-center"
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-teal-100 rounded-full mb-4"
                   <Zap className="w-8 h-8 text-teal-600/>"
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-teal-100 rounded-full mb-4">
                   <Zap className="w-8 h-8 text-teal-600/>"
-            <div className="grid md: grid-cols-4 gap-8">",
+            <div className="grid md:grid-cols-4 gap-8">",
               <div className="text-center">",
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-teal-100 rounded-full mb-4">",
                   <Zap className="w-8 h-8 text-teal-600" />",
@@ -500,11 +500,11 @@ const EdgeComputingAI: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Unlimited Scale</h3>",
                 <p className="text-gray-600">Deploy thousands of edge nodes</p>",
-            <div className= "grid md: grid-cols-4 gap-8">",
+            <div className= "grid md:grid-cols-4 gap-8">",
               <div className= "text-center">
                 <div className= "inline-flex items-center justify-center w-16 h-16 bg-teal-100 rounded-full mb-4">
                   <Zap className= "w-8 h-8 text-teal-600/>"
-            <div className= "grid md: grid-cols-4 gap-8">",
+            <div className= "grid md:grid-cols-4 gap-8">",
               <div className= "text-center">",
                 <div className= "inline-flex items-center justify-center w-16 h-16 bg-teal-100 rounded-full mb-4">",
                   <Zap className= "w-8 h-8 text-teal-600" />",
@@ -573,7 +573,7 @@ const EdgeComputingAI: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">",
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">",
               {useCases.map((useCase, index) => {
                 const Icon: useCase.icon;,,
   return (
@@ -583,7 +583,7 @@ const EdgeComputingAI: React.FC = () => {
                   <div key: {index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">",
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-teal-100 rounded-full mb-6">
                       <Icon className="w-8 h-8 text-teal-600/>"
-            <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">",
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">",
               {useCases.map((useCase, index) => {
                 const Icon: useCase.icon;,,
   return (
@@ -603,14 +603,14 @@ const EdgeComputingAI: React.FC = () => {
                         <li key={benefitIndex} className="flex items-center text-sm">",
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />",
                           <span className="text-gray-700">{benefit}</span>"
-            <div className= "grid md: grid-cols-2 lg:grid-cols-4 gap-8">",
+            <div className= "grid md:grid-cols-2 lg:grid-cols-4 gap-8">",
               {useCases.map((useCase, index) => {
                 const Icon: useCase.icon;,,
   return (
                   <div key={index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">",
                     <div className= "inline-flex items-center justify-center w-16 h-16 bg-teal-100 rounded-full mb-6">
                       <Icon className= "w-8 h-8 text-teal-600/>"
-            <div className= "grid md: grid-cols-2 lg:grid-cols-4 gap-8">",
+            <div className= "grid md:grid-cols-2 lg:grid-cols-4 gap-8">",
               {useCases.map((useCase, index) => {
                 const Icon: useCase.icon;,,
   return (
@@ -665,14 +665,14 @@ const EdgeComputingAI: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">",
               {technologies.map((tech, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200">",
                   <h3 className="text-xl font-bold text-gray-900 mb-4">{tech.name}</h3>"
                   <p className="text-gray-600">{tech.description}</p>"
-            <div className= "grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
-            <div className= "grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div className= "grid md:grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div className= "grid md:grid-cols-2 lg:grid-cols-3 gap-8">",
               {technologies.map((tech, index) => (
                 <div key={index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200">",
                   <h3 className= "text-xl font-bold text-gray-900 mb-4">{tech.name}</h3>"
@@ -710,7 +710,7 @@ const EdgeComputingAI: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">",
               {features.map((feature, index) => {
                 const Icon: feature.icon;,,
   return (
@@ -730,7 +730,7 @@ const EdgeComputingAI: React.FC = () => {
                     <p className="text-gray-600 mb-4">{feature.description}</p>";"
                     <div className="inline-flex items-center text-green-600 font-semibold text-sm">
                       <CheckCircle className="w-4 h-4 mr-1/>"
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">",
               {features.map((feature, index) => {
                 const Icon: feature.icon;,,
   return (
@@ -742,7 +742,7 @@ const EdgeComputingAI: React.FC = () => {
                     <p className="text-gray-600 mb-4">{feature.description}</p>"
                     <div className="inline-flex items-center text-green-600 font-semibold text-sm">",
                       <CheckCircle className="w-4 h-4 mr-1" />",
-            <div className= "grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div className= "grid md:grid-cols-2 lg:grid-cols-3 gap-8">",
               {features.map((feature, index) => {
                 const Icon: feature.icon;,,
   return (
@@ -754,7 +754,7 @@ const EdgeComputingAI: React.FC = () => {
                     <p className= "text-gray-600 mb-4">{feature.description}</p>";"
                     <div className= "inline-flex items-center text-green-600 font-semibold text-sm">
                       <CheckCircle className= "w-4 h-4 mr-1/>"
-            <div className= "grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div className= "grid md:grid-cols-2 lg:grid-cols-3 gap-8">",
               {features.map((feature, index) => {
                 const Icon: feature.icon;,,
   return (
@@ -802,15 +802,15 @@ const EdgeComputingAI: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid md: grid-cols-3 gap-8">",
-            <div className="grid md: grid-cols-3 gap-8">",
+            <div className="grid md:grid-cols-3 gap-8">",
+            <div className="grid md:grid-cols-3 gap-8">",
               {pricing.map((plan, index) => (
                 <div key={index} className={`bg-white rounded-2xl shadow-lg p-8 ${plan.popular ? 'ring-2 ring-teal-500 relative' : ''}`}>`
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">",
                       <span className="bg-teal-500 text-white px-4 py-1 rounded-full text-sm font-semibold">",
-            <div className= "grid md: grid-cols-3 gap-8">",
-            <div className= "grid md: grid-cols-3 gap-8">",
+            <div className= "grid md:grid-cols-3 gap-8">",
+            <div className= "grid md:grid-cols-3 gap-8">",
               {pricing.map((plan, index) => (
                 <div key={index} className= {`bg-white rounded-2xl shadow-lg p-8 ${plan.popular ? 'ring-2 ring-teal-500 relative' : ''}`}>`
                   {plan.popular && (
@@ -926,8 +926,8 @@ plan.popular
               </p>
             </div>
 
-            <div className="grid md: grid-cols-3 gap-8">",
-            <div className="grid md: grid-cols-3 gap-8">",
+            <div className="grid md:grid-cols-3 gap-8">",
+            <div className="grid md:grid-cols-3 gap-8">",
               {testimonials.map((testimonial, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200">",
                   <div className="flex items-center mb-4">",
@@ -945,8 +945,8 @@ plan.popular
                     <div className="font-semibold text-gray-900">{testimonial.name}</div>"
                     <div className="text-gray-600 text-sm">{testimonial.role}</div>"
                     <div className="text-teal-600 text-sm font-medium">{testimonial.company}</div>"
-            <div className= "grid md: grid-cols-3 gap-8">",
-            <div className= "grid md: grid-cols-3 gap-8">",
+            <div className= "grid md:grid-cols-3 gap-8">",
+            <div className= "grid md:grid-cols-3 gap-8">",
               {testimonials.map((testimonial, index) => (
                 <div key={index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200">",
                   <div className= "flex items-center mb-4">",
@@ -981,8 +981,8 @@ plan.popular
             <p className="text-xl text-teal-100 max-w-3xl mx-auto mb-8">",
   Transform your applications with real-time edge AI processing and achieve unprecedented performance.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">",
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">",
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">",
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">",
               <a href="/contact",
   className="inline-flex items-center px-8 py-4 bg-teal-600 hover: bg-teal-700 text-white font-semibold rounded-lg transition-colors",
               >
@@ -1010,8 +1010,8 @@ plan.popular
             <p className= "text-xl text-teal-100 max-w-3xl mx-auto mb-8">"
   Transform your applications with real-time edge AI processing and achieve unprecedented performance.
             </p>
-            <div className= "flex flex-col sm: flex-row gap-4 justify-center">",
-            <div className= "flex flex-col sm: flex-row gap-4 justify-center">",
+            <div className= "flex flex-col sm:flex-row gap-4 justify-center">",
+            <div className= "flex flex-col sm:flex-row gap-4 justify-center">",
               <a href="/contact",
   className= "inline-flex items-center px-8 py-4 bg-teal-600 hover: bg-teal-700 text-white font-semibold rounded-lg transition-colors",
               >

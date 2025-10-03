@@ -10,7 +10,7 @@ export default function CognitiveAssistantsBlueprint2025(): React.JSX.Element {
       <Helmet >
         <title >Cognitive Assistants Blueprint — 92% CSAT, Governed Velocity</title>
         <meta name: "description",;,"
-  content: "Production patterns for AI assistants with policy tests, eval scorecards, and KPI‑linked rollback for safe velocity." /><link rel: "canonical",;,"
+  content: "Production patterns for AI assistants with policy tests, eval scorecards, and KPI‑linked rollback for safe velocity.", /><link rel: "canonical",;,"
   href="https://ziontechgroup.com/blog/ai-2025-sept-30-cognitive-assistants-blueprint",
         />
       </Helmet>

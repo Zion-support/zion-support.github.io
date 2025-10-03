@@ -9,8 +9,8 @@ const AIIntelligentDocumentProcessing: () => {
       <Helmet >
         <title >AI Intelligent Document Processing | Automate 95% of Document Workflows | Zion Tech Group</title>
         <meta name: "description",
-  content: "Transform document processing with AI achieving 98.5% accuracy, 95% automation, and $2.8M+ annual savings. Extract, classify, and process any document type at scale." /><meta name: "keywords",
-  content: "intelligent document processing, IDP, OCR, document AI, document automation, invoice processing, contract analysis, GPT-4 Vision, Claude Vision" /></Helmet>"
+  content: "Transform document processing with AI achieving 98.5% accuracy, 95% automation, and $2.8M+ annual savings. Extract, classify, and process any document type at scale.", /><meta name: "keywords",
+  content: "intelligent document processing, IDP, OCR, document AI, document automation, invoice processing, contract analysis, GPT-4 Vision, Claude Vision", /></Helmet>"
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">",
         <Header />
 
@@ -87,11 +87,11 @@ const AIIntelligentDocumentProcessing: () => {
             </p>
 
             {/* Quick Stats */}
-            <div className="grid md: grid-cols-4 gap-6 mb-8">",
+            <div className="grid md:grid-cols-4 gap-6 mb-8">",
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-blue-400/30"
                 <div className="text-3xl font-bold text-blue-400 mb-2">98.5%</div>"
                 <div className="text-sm text-zion-slate-light">Extraction Accuracy</div>"
-            <div className="grid md: grid-cols-4 gap-6 mb-8">",
+            <div className="grid md:grid-cols-4 gap-6 mb-8">",
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-blue-400/30">",
                 <div className="text-3xl font-bold text-blue-400 mb-2">98.5%</div>",
                 <div className="text-sm text-zion-slate-light">Extraction Accuracy</div>",
@@ -110,8 +110,8 @@ const AIIntelligentDocumentProcessing: () => {
               </div>
             </div>
 
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">",
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">",
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">",
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">",
               <Link to: "/contact",
   className="bg-blue-600 hover: bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105 inline-flex items-center justify-center gap-2 shadow-lg",
               >
@@ -123,11 +123,11 @@ const AIIntelligentDocumentProcessing: () => {
               </Link>
               <Link to: "/contact",
   className="border-2 border-blue-400 text-blue-400 hover: bg-blue-400/10 px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105",
-            <div className= "grid md: grid-cols-4 gap-6 mb-8">",
+            <div className= "grid md:grid-cols-4 gap-6 mb-8">",
               <div className= "bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-blue-400/30">
                 <div className= "text-3xl font-bold text-blue-400 mb-2">98.5%</div>"
                 <div className= "text-sm text-zion-slate-light">Extraction Accuracy</div>"
-            <div className= "grid md: grid-cols-4 gap-6 mb-8">",
+            <div className= "grid md:grid-cols-4 gap-6 mb-8">",
               <div className= "bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-blue-400/30">",
                 <div className= "text-3xl font-bold text-blue-400 mb-2">98.5%</div>",
                 <div className= "text-sm text-zion-slate-light">Extraction Accuracy</div>",
@@ -146,8 +146,8 @@ const AIIntelligentDocumentProcessing: () => {
               </div>
             </div>
 
-            <div className= "flex flex-col sm: flex-row gap-4 justify-center">",
-            <div className= "flex flex-col sm: flex-row gap-4 justify-center">",
+            <div className= "flex flex-col sm:flex-row gap-4 justify-center">",
+            <div className= "flex flex-col sm:flex-row gap-4 justify-center">",
               <Link to: "/contact",
   className= "bg-blue-600 hover: bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105 inline-flex items-center justify-center gap-2 shadow-lg",
               >
@@ -165,14 +165,14 @@ const AIIntelligentDocumentProcessing: () => {
 
           {/* Problem/Solution */}
           <div className="max-w-6xl mx-auto mb-20"
-            <div className="grid md: grid-cols-2 gap-8">",
+            <div className="grid md:grid-cols-2 gap-8">",
               <div className="bg-red-900/20 rounded-2xl p-8 border border-red-500/30"
                 <h2 className="text-2xl font-bold text-white mb-4">❌ The Document Processing Crisis</h2>"
                 <ul className="space-y-3 text-zion-slate-light"
                   <li className="flex items-start gap-2"
                     <span className="text-red-400 mt-1">•</span>"
           <div className="max-w-6xl mx-auto mb-20">",
-            <div className="grid md: grid-cols-2 gap-8">",
+            <div className="grid md:grid-cols-2 gap-8">",
               <div className="bg-red-900/20 rounded-2xl p-8 border border-red-500/30">",
                 <h2 className="text-2xl font-bold text-white mb-4">❌ The Document Processing Crisis</h2>",
                 <ul className="space-y-3 text-zion-slate-light">",
@@ -195,14 +195,14 @@ const AIIntelligentDocumentProcessing: () => {
                   <li className="flex items-start gap-2">",
                     <span className="text-red-400 mt-1">•</span>",
           <div className= "max-w-6xl mx-auto mb-20">
-            <div className= "grid md: grid-cols-2 gap-8">",
+            <div className= "grid md:grid-cols-2 gap-8">",
               <div className= "bg-red-900/20 rounded-2xl p-8 border border-red-500/30">
                 <h2 className= "text-2xl font-bold text-white mb-4">❌ The Document Processing Crisis</h2>"
                 <ul className= "space-y-3 text-zion-slate-light">
                   <li className= "flex items-start gap-2">
                     <span className= "text-red-400 mt-1">•</span>"
           <div className= "max-w-6xl mx-auto mb-20">",
-            <div className= "grid md: grid-cols-2 gap-8">",
+            <div className= "grid md:grid-cols-2 gap-8">",
               <div className= "bg-red-900/20 rounded-2xl p-8 border border-red-500/30">",
                 <h2 className= "text-2xl font-bold text-white mb-4">❌ The Document Processing Crisis</h2>",
                 <ul className= "space-y-3 text-zion-slate-light">",
@@ -338,7 +338,7 @@ const AIIntelligentDocumentProcessing: () => {
           {/* Core Capabilities */}
           <div className="max-w-6xl mx-auto mb-20"
             <h2 className="text-4xl font-bold text-white mb-12 text-center">🎯 Core Capabilities</h2>"
-            <div className="grid md: grid-cols-3 gap-8">",
+            <div className="grid md:grid-cols-3 gap-8">",
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30 hover: scale-105 transition-all">",
                 <div className="bg-blue-500/20 w-16 h-16 rounded-lg flex items-center justify-center mb-6 border border-blue-500/30"
                   <FileText className="w-8 h-8 text-blue-400/>"
@@ -353,7 +353,7 @@ const AIIntelligentDocumentProcessing: () => {
   Extract structured data from any document format—invoices, contracts, forms, receipts
           <div className="max-w-6xl mx-auto mb-20">",
             <h2 className="text-4xl font-bold text-white mb-12 text-center">🎯 Core Capabilities</h2>",
-            <div className="grid md: grid-cols-3 gap-8">",
+            <div className="grid md:grid-cols-3 gap-8">",
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30 hover: scale-105 transition-all">",
                 <div className="bg-blue-500/20 w-16 h-16 rounded-lg flex items-center justify-center mb-6 border border-blue-500/30">",
                   <FileText className="w-8 h-8 text-blue-400" />",
@@ -366,7 +366,7 @@ const AIIntelligentDocumentProcessing: () => {
                 <ul className="space-y-2 text-sm text-zion-slate-light">",
           <div className= "max-w-6xl mx-auto mb-20">
             <h2 className= "text-4xl font-bold text-white mb-12 text-center">🎯 Core Capabilities</h2>"
-            <div className= "grid md: grid-cols-3 gap-8">",
+            <div className= "grid md:grid-cols-3 gap-8">",
               <div className= "bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30 hover: scale-105 transition-all">",
                 <div className= "bg-blue-500/20 w-16 h-16 rounded-lg flex items-center justify-center mb-6 border border-blue-500/30">
                   <FileText className= "w-8 h-8 text-blue-400/>"
@@ -376,7 +376,7 @@ const AIIntelligentDocumentProcessing: () => {
   Extract structured data from any document format—invoices, contracts, forms, receipts
           <div className= "max-w-6xl mx-auto mb-20">",
             <h2 className= "text-4xl font-bold text-white mb-12 text-center">🎯 Core Capabilities</h2>",
-            <div className= "grid md: grid-cols-3 gap-8">",
+            <div className= "grid md:grid-cols-3 gap-8">",
               <div className= "bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30 hover: scale-105 transition-all">",
                 <div className= "bg-blue-500/20 w-16 h-16 rounded-lg flex items-center justify-center mb-6 border border-blue-500/30">",
                   <FileText className= "w-8 h-8 text-blue-400" />",
@@ -504,7 +504,7 @@ const AIIntelligentDocumentProcessing: () => {
                       GL coding, and approval routing automatically. Reduce processing costs from $15-20 per 
                       invoice to under $1.
                     </p>
-                    <div className="grid md: grid-cols-3 gap-4 text-sm">",
+                    <div className="grid md:grid-cols-3 gap-4 text-sm">",
                       <div className="bg-blue-900/30 rounded-lg p-3 border border-blue-500/20"
                         <div className="font-bold text-blue-400 mb-1">92% Faster</div>"
                         <div className="text-zion-slate-light">Invoice Processing</div>"
@@ -519,7 +519,7 @@ const AIIntelligentDocumentProcessing: () => {
                   <div className="flex-1">",
                     <h3 className="text-2xl font-bold text-white mb-3">Accounts Payable Automation</h3>",
                     <p className="text-zion-slate-light mb-4">",
-                    <div className= "grid md: grid-cols-3 gap-4 text-sm">",
+                    <div className= "grid md:grid-cols-3 gap-4 text-sm">",
                       <div className= "bg-blue-900/30 rounded-lg p-3 border border-blue-500/20">
                         <div className= "font-bold text-blue-400 mb-1">92% Faster</div>"
                         <div className= "text-zion-slate-light">Invoice Processing</div>"
@@ -538,7 +538,7 @@ const AIIntelligentDocumentProcessing: () => {
                       GL coding, and approval routing automatically. Reduce processing costs from $15-20 per 
                       invoice to under $1.
                     </p>
-                    <div className="grid md: grid-cols-3 gap-4 text-sm">",
+                    <div className="grid md:grid-cols-3 gap-4 text-sm">",
                       <div className="bg-blue-900/30 rounded-lg p-3 border border-blue-500/20">",
                         <div className="font-bold text-blue-400 mb-1">92% Faster</div>",
                         <div className="text-zion-slate-light">Invoice Processing</div>",
@@ -550,7 +550,7 @@ const AIIntelligentDocumentProcessing: () => {
                       <div className="bg-blue-900/30 rounded-lg p-3 border border-blue-500/20">",
                         <div className="font-bold text-blue-400 mb-1">99.1% Touchless</div>",
                         <div className="text-zion-slate-light">Processing Rate</div>",
-                    <div className= "grid md: grid-cols-3 gap-4 text-sm">",
+                    <div className= "grid md:grid-cols-3 gap-4 text-sm">",
                       <div className= "bg-blue-900/30 rounded-lg p-3 border border-blue-500/20">",
                         <div className= "font-bold text-blue-400 mb-1">92% Faster</div>",
                         <div className= "text-zion-slate-light">Invoice Processing</div>",
@@ -587,11 +587,11 @@ const AIIntelligentDocumentProcessing: () => {
   Extract key terms, obligations, dates, and risks from contracts automatically. Track 
                       renewals, compliance requirements, and financial commitments across thousands of agreements.
                     </p>
-                    <div className="grid md: grid-cols-3 gap-4 text-sm">",
+                    <div className="grid md:grid-cols-3 gap-4 text-sm">",
                       <div className="bg-purple-900/30 rounded-lg p-3 border border-purple-500/20"
                         <div className="font-bold text-purple-400 mb-1">87% Faster</div>"
                         <div className="text-zion-slate-light">Contract Review</div>"
-                    <div className="grid md: grid-cols-3 gap-4 text-sm">",
+                    <div className="grid md:grid-cols-3 gap-4 text-sm">",
                       <div className="bg-purple-900/30 rounded-lg p-3 border border-purple-500/20">",
                         <div className="font-bold text-purple-400 mb-1">87% Faster</div>",
                         <div className="text-zion-slate-light">Contract Review</div>",
@@ -618,11 +618,11 @@ const AIIntelligentDocumentProcessing: () => {
   Extract key terms, obligations, dates, and risks from contracts automatically. Track 
                       renewals, compliance requirements, and financial commitments across thousands of agreements.
                     </p>
-                    <div className= "grid md: grid-cols-3 gap-4 text-sm">",
+                    <div className= "grid md:grid-cols-3 gap-4 text-sm">",
                       <div className= "bg-purple-900/30 rounded-lg p-3 border border-purple-500/20">
                         <div className= "font-bold text-purple-400 mb-1">87% Faster</div>"
                         <div className= "text-zion-slate-light">Contract Review</div>"
-                    <div className= "grid md: grid-cols-3 gap-4 text-sm">",
+                    <div className= "grid md:grid-cols-3 gap-4 text-sm">",
                       <div className= "bg-purple-900/30 rounded-lg p-3 border border-purple-500/20">",
                         <div className= "font-bold text-purple-400 mb-1">87% Faster</div>",
                         <div className= "text-zion-slate-light">Contract Review</div>",
@@ -659,11 +659,11 @@ const AIIntelligentDocumentProcessing: () => {
   Accelerate KYC, credit checks, and compliance verification by extracting and validating 
                       customer documents automatically. Reduce onboarding time from days to minutes.
                     </p>
-                    <div className="grid md: grid-cols-3 gap-4 text-sm">",
+                    <div className="grid md:grid-cols-3 gap-4 text-sm">",
                       <div className="bg-green-900/30 rounded-lg p-3 border border-green-500/20"
                         <div className="font-bold text-green-400 mb-1">94% Faster</div>"
                         <div className="text-zion-slate-light">Customer Onboarding</div>"
-                    <div className="grid md: grid-cols-3 gap-4 text-sm">",
+                    <div className="grid md:grid-cols-3 gap-4 text-sm">",
                       <div className="bg-green-900/30 rounded-lg p-3 border border-green-500/20">",
                         <div className="font-bold text-green-400 mb-1">94% Faster</div>",
                         <div className="text-zion-slate-light">Customer Onboarding</div>",
@@ -690,11 +690,11 @@ const AIIntelligentDocumentProcessing: () => {
   Accelerate KYC, credit checks, and compliance verification by extracting and validating 
                       customer documents automatically. Reduce onboarding time from days to minutes.
                     </p>
-                    <div className= "grid md: grid-cols-3 gap-4 text-sm">",
+                    <div className= "grid md:grid-cols-3 gap-4 text-sm">",
                       <div className= "bg-green-900/30 rounded-lg p-3 border border-green-500/20">
                         <div className= "font-bold text-green-400 mb-1">94% Faster</div>"
                         <div className= "text-zion-slate-light">Customer Onboarding</div>"
-                    <div className= "grid md: grid-cols-3 gap-4 text-sm">",
+                    <div className= "grid md:grid-cols-3 gap-4 text-sm">",
                       <div className= "bg-green-900/30 rounded-lg p-3 border border-green-500/20">",
                         <div className= "font-bold text-green-400 mb-1">94% Faster</div>",
                         <div className= "text-zion-slate-light">Customer Onboarding</div>",
@@ -718,11 +718,11 @@ const AIIntelligentDocumentProcessing: () => {
           <div className="max-w-6xl mx-auto mb-20"
             <h2 className="text-4xl font-bold text-white mb-12 text-center">💰 ROI Calculator</h2>"
             <div className="bg-gradient-to-r from-green-900/40 to-blue-900/40 rounded-2xl p-10 border border-green-500/30"
-              <div className="grid md: grid-cols-2 gap-10">",
+              <div className="grid md:grid-cols-2 gap-10">",
           <div className="max-w-6xl mx-auto mb-20">",
             <h2 className="text-4xl font-bold text-white mb-12 text-center">💰 ROI Calculator</h2>",
             <div className="bg-gradient-to-r from-green-900/40 to-blue-900/40 rounded-2xl p-10 border border-green-500/30">",
-              <div className="grid md: grid-cols-2 gap-10">",
+              <div className="grid md:grid-cols-2 gap-10">",
                 <div >
                   <h3 className="text-2xl font-bold text-white mb-6">Your Investment</h3>",
                   <div className="space-y-4">",
@@ -755,11 +755,11 @@ const AIIntelligentDocumentProcessing: () => {
           <div className= "max-w-6xl mx-auto mb-20">
             <h2 className= "text-4xl font-bold text-white mb-12 text-center">💰 ROI Calculator</h2>"
             <div className= "bg-gradient-to-r from-green-900/40 to-blue-900/40 rounded-2xl p-10 border border-green-500/30">
-              <div className= "grid md: grid-cols-2 gap-10">",
+              <div className= "grid md:grid-cols-2 gap-10">",
           <div className= "max-w-6xl mx-auto mb-20">",
             <h2 className= "text-4xl font-bold text-white mb-12 text-center">💰 ROI Calculator</h2>",
             <div className= "bg-gradient-to-r from-green-900/40 to-blue-900/40 rounded-2xl p-10 border border-green-500/30">",
-              <div className= "grid md: grid-cols-2 gap-10">",
+              <div className= "grid md:grid-cols-2 gap-10">",
                 <div >
                   <h3 className= "text-2xl font-bold text-white mb-6">Your Investment</h3>",
                   <div className= "space-y-4">",
@@ -884,7 +884,7 @@ const AIIntelligentDocumentProcessing: () => {
           {/* Pricing */}
           <div className="max-w-6xl mx-auto mb-20"
             <h2 className="text-4xl font-bold text-white mb-12 text-center">💎 Transparent Pricing</h2>"
-            <div className="grid md: grid-cols-3 gap-8">",
+            <div className="grid md:grid-cols-3 gap-8">",
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30"
                 <div className="text-center mb-6"
                   <h3 className="text-2xl font-bold text-white mb-2">Starter</h3>"
@@ -919,7 +919,7 @@ const AIIntelligentDocumentProcessing: () => {
                     <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0/>"
           <div className="max-w-6xl mx-auto mb-20">",
             <h2 className="text-4xl font-bold text-white mb-12 text-center">💎 Transparent Pricing</h2>",
-            <div className="grid md: grid-cols-3 gap-8">",
+            <div className="grid md:grid-cols-3 gap-8">",
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30">",
                 <div className="text-center mb-6">",
                   <h3 className="text-2xl font-bold text-white mb-2">Starter</h3>",
@@ -943,7 +943,7 @@ const AIIntelligentDocumentProcessing: () => {
                     <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />",
           <div className= "max-w-6xl mx-auto mb-20">
             <h2 className= "text-4xl font-bold text-white mb-12 text-center">💎 Transparent Pricing</h2>"
-            <div className= "grid md: grid-cols-3 gap-8">",
+            <div className= "grid md:grid-cols-3 gap-8">",
               <div className= "bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30">
                 <div className= "text-center mb-6">
                   <h3 className= "text-2xl font-bold text-white mb-2">Starter</h3>"
@@ -967,7 +967,7 @@ const AIIntelligentDocumentProcessing: () => {
                     <CheckCircle className= "w-5 h-5 text-green-400 flex-shrink-0/>"
           <div className= "max-w-6xl mx-auto mb-20">",
             <h2 className= "text-4xl font-bold text-white mb-12 text-center">💎 Transparent Pricing</h2>",
-            <div className= "grid md: grid-cols-3 gap-8">",
+            <div className= "grid md:grid-cols-3 gap-8">",
               <div className= "bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30">",
                 <div className= "text-center mb-6">",
                   <h3 className= "text-2xl font-bold text-white mb-2">Starter</h3>",
@@ -1245,8 +1245,8 @@ const AIIntelligentDocumentProcessing: () => {
   Join 500+ enterprises achieving 98.5% accuracy, 95% automation, and $2.8M+ in annual savings. 
               Start your free 30-day trial today—no credit card required.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">",
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">",
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">",
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">",
               <Link to: "/contact",
   className="bg-white text-blue-600 hover: bg-zion-slate-light px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105 inline-flex items-center justify-center gap-2 text-lg",
               >
@@ -1266,8 +1266,8 @@ const AIIntelligentDocumentProcessing: () => {
   Join 500+ enterprises achieving 98.5% accuracy, 95% automation, and $2.8M+ in annual savings. 
               Start your free 30-day trial today—no credit card required.
             </p>
-            <div className= "flex flex-col sm: flex-row gap-4 justify-center">",
-            <div className= "flex flex-col sm: flex-row gap-4 justify-center">",
+            <div className= "flex flex-col sm:flex-row gap-4 justify-center">",
+            <div className= "flex flex-col sm:flex-row gap-4 justify-center">",
               <Link to: "/contact",
   className= "bg-white text-blue-600 hover: bg-zion-slate-light px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105 inline-flex items-center justify-center gap-2 text-lg",
               >

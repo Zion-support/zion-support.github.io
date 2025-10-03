@@ -69,9 +69,9 @@ const BlockchainWeb3: React.FC = () => {
       description: "Perfect for startups and small projects entering the Web3 space",
       features: [,,
       name: "Startup
-      price: "$8,500
+      price: ", $8,500
       period: "/month
-      description: "Perfect for startups and small projects entering the Web3 space
+      description: ", Perfect for startups and small projects entering the Web3 space
       features: [,,",
         "Basic smart contract development",;"
         "Single blockchain integration",;"
@@ -92,9 +92,9 @@ const BlockchainWeb3: React.FC = () => {
       description: "Ideal for growing projects with complex blockchain requirements",
       features: [,,
       name: "Growth
-      price: "$25,000
+      price: ", $25,000
       period: "/month
-      description: "Ideal for growing projects with complex blockchain requirements
+      description: ", Ideal for growing projects with complex blockchain requirements
       features: [,,",
         "Advanced smart contract development",;"
         "Multi-chain integration (5 networks)",;"
@@ -118,9 +118,9 @@ const BlockchainWeb3: React.FC = () => {
       description: "Complete solution for large-scale blockchain and Web3 implementations",
       features: [,,
       name: "Enterprise
-      price: "$75,000
+      price: ", $75,000
       period: "/month
-      description: "Complete solution for large-scale blockchain and Web3 implementations
+      description: ", Complete solution for large-scale blockchain and Web3 implementations
       features: [,,",
         "Enterprise-grade smart contract suite",;"
         "Unlimited blockchain integrations",;"
@@ -323,13 +323,13 @@ const BlockchainWeb3: React.FC = () => {
       <Helmet >
         <title >Blockchain & Web3 Services - Zion Tech Group | DeFi, NFT, DAO Solutions</title>
         <meta name: "description",
-  content: "Expert blockchain and Web3 services including DeFi protocols, NFT marketplaces, DAO governance, and smart contract development. Enterprise-grade security and multi-chain integration." /><meta name: "keywords" content ="blockchain development, Web3 services, DeFi protocols, NFT marketplace, DAO governance, smart contracts, cryptocurrency development" /><link rel: "canonical" href="https://ziontechgroup.com/services/blockchain-web3/>",
+  content: "Expert blockchain and Web3 services including DeFi protocols, NFT marketplaces, DAO governance, and smart contract development. Enterprise-grade security and multi-chain integration.", /><meta name: "keywords", content ="blockchain development, Web3 services, DeFi protocols, NFT marketplace, DAO governance, smart contracts, cryptocurrency development" /><link rel: "canonical", href="https://ziontechgroup.com/services/blockchain-web3/>",
         <meta name: "description
-  content: "Expert blockchain and Web3 services including DeFi protocols, NFT marketplaces, DAO governance, and smart contract development. Enterprise-grade security and multi-chain integration." /><meta name: "keywords" content="blockchain development, Web3 services, DeFi protocols, NFT marketplace, DAO governance, smart contracts, cryptocurrency development" /><link rel: "canonical" href="https://ziontechgroup.com/services/blockchain-web3/>
+  content: ", Expert blockchain and Web3 services including DeFi protocols, NFT marketplaces, DAO governance, and smart contract development. Enterprise-grade security and multi-chain integration." /><meta name: "keywords", content="blockchain development, Web3 services, DeFi protocols, NFT marketplace, DAO governance, smart contracts, cryptocurrency development" /><link rel: "canonical", href="https://ziontechgroup.com/services/blockchain-web3/>
   content: "Expert blockchain and Web3 services including DeFi protocols, NFT marketplaces, DAO governance, and smart contract development. Enterprise-grade security and multi-chain integration.",
         />
-        <meta name: "keywords" content="blockchain development, Web3 services, DeFi protocols, NFT marketplace, DAO governance, smart contracts, cryptocurrency development" />",
-        <link rel: "canonical" href ="https: //ziontechgroup.com/services/blockchain-web3" />",
+        <meta name: "keywords", content="blockchain development, Web3 services, DeFi protocols, NFT marketplace, DAO governance, smart contracts, cryptocurrency development" />",
+        <link rel: "canonical", href ="https: //ziontechgroup.com/services/blockchain-web3" />",
       </Helmet>
 
       <Header />
@@ -346,7 +346,7 @@ const BlockchainWeb3: React.FC = () => {
   Expert blockchain and Web3 services including DeFi protocols, NFT marketplaces
                 DAO governance, and enterprise-grade smart contract development with multi-chain integration.
               </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">",
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">",
         <section className="bg-gradient-to-br from-indigo-900 via-indigo-800 to-purple-900 text-white py-20">",
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
             <div className="text-center">",
@@ -357,7 +357,7 @@ const BlockchainWeb3: React.FC = () => {
   Expert blockchain and Web3 services including DeFi protocols, NFT marketplaces
                 DAO governance, and enterprise-grade smart contract development with multi-chain integration.
               </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">",
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">",
                 <a href="/contact",
   className="inline-flex items-center px-8 py-4 bg-indigo-600 hover: bg-indigo-700 text-white font-semibold rounded-lg transition-colors",
                 >
@@ -386,7 +386,7 @@ const BlockchainWeb3: React.FC = () => {
   Expert blockchain and Web3 services including DeFi protocols, NFT marketplaces
                 DAO governance, and enterprise-grade smart contract development with multi-chain integration.
               </p>
-              <div className= "flex flex-col sm: flex-row gap-4 justify-center">",
+              <div className= "flex flex-col sm:flex-row gap-4 justify-center">",
         <section className= "bg-gradient-to-br from-indigo-900 via-indigo-800 to-purple-900 text-white py-20">",
           <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
             <div className= "text-center">",
@@ -397,7 +397,7 @@ const BlockchainWeb3: React.FC = () => {
   Expert blockchain and Web3 services including DeFi protocols, NFT marketplaces
                 DAO governance, and enterprise-grade smart contract development with multi-chain integration.
               </p>
-              <div className= "flex flex-col sm: flex-row gap-4 justify-center">",
+              <div className= "flex flex-col sm:flex-row gap-4 justify-center">",
                 <a href="/contact",
   className= "inline-flex items-center px-8 py-4 bg-indigo-600 hover: bg-indigo-700 text-white font-semibold rounded-lg transition-colors",
                 >
@@ -444,14 +444,14 @@ const BlockchainWeb3: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid md: grid-cols-4 gap-8">",
+            <div className="grid md:grid-cols-4 gap-8">",
               <div className="text-center"
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-indigo-100 rounded-full mb-4"
                   <Shield className="w-8 h-8 text-indigo-600/>"
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-indigo-100 rounded-full mb-4">
                   <Shield className="w-8 h-8 text-indigo-600/>"
-            <div className="grid md: grid-cols-4 gap-8">",
+            <div className="grid md:grid-cols-4 gap-8">",
               <div className="text-center">",
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-indigo-100 rounded-full mb-4">",
                   <Shield className="w-8 h-8 text-indigo-600" />",
@@ -497,11 +497,11 @@ const BlockchainWeb3: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Web3 Ready</h3>",
                 <p className="text-gray-600">Future-proof solutions</p>",
-            <div className= "grid md: grid-cols-4 gap-8">",
+            <div className= "grid md:grid-cols-4 gap-8">",
               <div className= "text-center">
                 <div className= "inline-flex items-center justify-center w-16 h-16 bg-indigo-100 rounded-full mb-4">
                   <Shield className= "w-8 h-8 text-indigo-600/>"
-            <div className= "grid md: grid-cols-4 gap-8">",
+            <div className= "grid md:grid-cols-4 gap-8">",
               <div className= "text-center">",
                 <div className= "inline-flex items-center justify-center w-16 h-16 bg-indigo-100 rounded-full mb-4">",
                   <Shield className= "w-8 h-8 text-indigo-600" />",
@@ -570,7 +570,7 @@ const BlockchainWeb3: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">",
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">",
               {services.map((service, index) => {
                 const Icon: service.icon;,,
   return (
@@ -580,7 +580,7 @@ const BlockchainWeb3: React.FC = () => {
                   <div key: {index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">",
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-indigo-100 rounded-full mb-6">
                       <Icon className="w-8 h-8 text-indigo-600/>"
-            <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">",
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">",
               {services.map((service, index) => {
                 const Icon: service.icon;,,
   return (
@@ -601,14 +601,14 @@ const BlockchainWeb3: React.FC = () => {
                         <li key={benefitIndex} className="flex items-center text-sm">",
                           <CheckCircle className="w-4 h-4 text-indigo-500 mr-2 flex-shrink-0" />",
                           <span className="text-gray-700">{benefit}</span>"
-            <div className= "grid md: grid-cols-2 lg:grid-cols-4 gap-8">",
+            <div className= "grid md:grid-cols-2 lg:grid-cols-4 gap-8">",
               {services.map((service, index) => {
                 const Icon: service.icon;,,
   return (
                   <div key={index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">",
                     <div className= "inline-flex items-center justify-center w-16 h-16 bg-indigo-100 rounded-full mb-6">
                       <Icon className= "w-8 h-8 text-indigo-600/>"
-            <div className= "grid md: grid-cols-2 lg:grid-cols-4 gap-8">",
+            <div className= "grid md:grid-cols-2 lg:grid-cols-4 gap-8">",
               {services.map((service, index) => {
                 const Icon: service.icon;,,
   return (
@@ -664,7 +664,7 @@ const BlockchainWeb3: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">",
               {features.map((feature, index) => {
                 const Icon: feature.icon;,,
   return (
@@ -684,7 +684,7 @@ const BlockchainWeb3: React.FC = () => {
                     <p className="text-gray-600 mb-4">{feature.description}</p>";"
                     <div className="inline-flex items-center text-indigo-600 font-semibold text-sm">
                       <CheckCircle className="w-4 h-4 mr-1/>"
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">",
               {features.map((feature, index) => {
                 const Icon: feature.icon;,,
   return (
@@ -696,7 +696,7 @@ const BlockchainWeb3: React.FC = () => {
                     <p className="text-gray-600 mb-4">{feature.description}</p>"
                     <div className="inline-flex items-center text-indigo-600 font-semibold text-sm">",
                       <CheckCircle className="w-4 h-4 mr-1" />",
-            <div className= "grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div className= "grid md:grid-cols-2 lg:grid-cols-3 gap-8">",
               {features.map((feature, index) => {
                 const Icon: feature.icon;,,
   return (
@@ -708,7 +708,7 @@ const BlockchainWeb3: React.FC = () => {
                     <p className= "text-gray-600 mb-4">{feature.description}</p>";"
                     <div className= "inline-flex items-center text-indigo-600 font-semibold text-sm">
                       <CheckCircle className= "w-4 h-4 mr-1/>"
-            <div className= "grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div className= "grid md:grid-cols-2 lg:grid-cols-3 gap-8">",
               {features.map((feature, index) => {
                 const Icon: feature.icon;,,
   return (
@@ -756,7 +756,7 @@ const BlockchainWeb3: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-2 md: grid-cols-3 lg:grid-cols-4 gap-6">",
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">",
               {technologies.map((tech, index) => (
                 <div key={index} className="bg-white p-6 rounded-xl shadow-md border border-gray-200 text-center hover: shadow-lg transition-shadow">",
                   <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mx-auto mb-3"
@@ -764,7 +764,7 @@ const BlockchainWeb3: React.FC = () => {
                 <div key: {index} className="bg-white p-6 rounded-xl shadow-md border border-gray-200 text-center hover: shadow-lg transition-shadow">",
                   <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mx-auto mb-3">
                     <Network className="w-6 h-6 text-indigo-600/>"
-            <div className="grid grid-cols-2 md: grid-cols-3 lg:grid-cols-4 gap-6">",
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">",
               {technologies.map((tech, index) => (
                 <div key={index} className="bg-white p-6 rounded-xl shadow-md border border-gray-200 text-center hover: shadow-lg transition-shadow">",
                   <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mx-auto mb-3">",
@@ -772,12 +772,12 @@ const BlockchainWeb3: React.FC = () => {
                   </div>
                   <div className="font-semibold text-gray-900 mb-1">{tech.name}</div>"
                   <div className="text-sm text-gray-600">{tech.type}</div>"
-            <div className= "grid grid-cols-2 md: grid-cols-3 lg:grid-cols-4 gap-6">",
+            <div className= "grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">",
               {technologies.map((tech, index) => (
                 <div key={index} className= "bg-white p-6 rounded-xl shadow-md border border-gray-200 text-center hover: shadow-lg transition-shadow">",
                   <div className= "w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mx-auto mb-3">
                     <Network className= "w-6 h-6 text-indigo-600/>"
-            <div className= "grid grid-cols-2 md: grid-cols-3 lg:grid-cols-4 gap-6">",
+            <div className= "grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">",
               {technologies.map((tech, index) => (
                 <div key={index} className= "bg-white p-6 rounded-xl shadow-md border border-gray-200 text-center hover: shadow-lg transition-shadow">",
                   <div className= "w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mx-auto mb-3">",
@@ -818,15 +818,15 @@ const BlockchainWeb3: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid md: grid-cols-3 gap-8">",
-            <div className="grid md: grid-cols-3 gap-8">",
+            <div className="grid md:grid-cols-3 gap-8">",
+            <div className="grid md:grid-cols-3 gap-8">",
               {pricing.map((plan, index) => (
                 <div key={index} className={`bg-white rounded-2xl shadow-lg p-8 ${plan.popular ? 'ring-2 ring-indigo-500 relative' : ''}`}>`
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">",
                       <span className="bg-indigo-500 text-white px-4 py-1 rounded-full text-sm font-semibold">",
-            <div className= "grid md: grid-cols-3 gap-8">",
-            <div className= "grid md: grid-cols-3 gap-8">",
+            <div className= "grid md:grid-cols-3 gap-8">",
+            <div className= "grid md:grid-cols-3 gap-8">",
               {pricing.map((plan, index) => (
                 <div key={index} className= {`bg-white rounded-2xl shadow-lg p-8 ${plan.popular ? 'ring-2 ring-indigo-500 relative' : ''}`}>`
                   {plan.popular && (
@@ -942,8 +942,8 @@ plan.popular
               </p>
             </div>
 
-            <div className="grid md: grid-cols-3 gap-8">",
-            <div className="grid md: grid-cols-3 gap-8">",
+            <div className="grid md:grid-cols-3 gap-8">",
+            <div className="grid md:grid-cols-3 gap-8">",
               {testimonials.map((testimonial, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200">",
                   <div className="flex items-center mb-4">",
@@ -961,8 +961,8 @@ plan.popular
                     <div className="font-semibold text-gray-900">{testimonial.name}</div>"
                     <div className="text-gray-600 text-sm">{testimonial.role}</div>"
                     <div className="text-indigo-600 text-sm font-medium">{testimonial.company}</div>"
-            <div className= "grid md: grid-cols-3 gap-8">",
-            <div className= "grid md: grid-cols-3 gap-8">",
+            <div className= "grid md:grid-cols-3 gap-8">",
+            <div className= "grid md:grid-cols-3 gap-8">",
               {testimonials.map((testimonial, index) => (
                 <div key={index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200">",
                   <div className= "flex items-center mb-4">",
@@ -997,8 +997,8 @@ plan.popular
             <p className="text-xl text-indigo-100 max-w-3xl mx-auto mb-8">",
   Join hundreds of companies already using our blockchain and Web3 services to build the future of decentralized applications.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">",
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">",
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">",
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">",
               <a href="/contact",
   className="inline-flex items-center px-8 py-4 bg-indigo-600 hover: bg-indigo-700 text-white font-semibold rounded-lg transition-colors",
               >
@@ -1026,8 +1026,8 @@ plan.popular
             <p className= "text-xl text-indigo-100 max-w-3xl mx-auto mb-8">"
   Join hundreds of companies already using our blockchain and Web3 services to build the future of decentralized applications.
             </p>
-            <div className= "flex flex-col sm: flex-row gap-4 justify-center">",
-            <div className= "flex flex-col sm: flex-row gap-4 justify-center">",
+            <div className= "flex flex-col sm:flex-row gap-4 justify-center">",
+            <div className= "flex flex-col sm:flex-row gap-4 justify-center">",
               <a href="/contact",
   className= "inline-flex items-center px-8 py-4 bg-indigo-600 hover: bg-indigo-700 text-white font-semibold rounded-lg transition-colors",
               >

@@ -9,8 +9,8 @@ const HealthcareAITransformation: () => {
       <Helmet >
         <title >Healthcare AI Transformation: $124M Saved, 3.8M Patients Served | Zion Tech Group</title>,
         <meta name: "description",
-  content: "Major healthcare network achieves $124M cost savings and 87% faster patient processing through comprehensive AI transformation. 3.8M patients, 450 facilities, 96% satisfaction." /><meta name: "keywords",
-  content: "healthcare AI, medical AI transformation, patient care automation, healthcare cost reduction, clinical decision support" /></Helmet>"
+  content: "Major healthcare network achieves $124M cost savings and 87% faster patient processing through comprehensive AI transformation. 3.8M patients, 450 facilities, 96% satisfaction.", /><meta name: "keywords",
+  content: "healthcare AI, medical AI transformation, patient care automation, healthcare cost reduction, clinical decision support", /></Helmet>"
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">",
         <Header />
 
@@ -81,11 +81,11 @@ const HealthcareAITransformation: () => {
             </p>
 
             {/* Key Metrics Banner */}
-            <div className="grid md: grid-cols-4 gap-6">",
+            <div className="grid md:grid-cols-4 gap-6">",
               <div className="bg-green-900/40 rounded-xl p-6 border border-green-500/30 text-center"
                 <div className="text-4xl font-bold text-green-400 mb-2">$124M</div>"
                 <div className="text-sm text-zion-slate-light">Annual Cost Savings</div>"
-            <div className="grid md: grid-cols-4 gap-6">",
+            <div className="grid md:grid-cols-4 gap-6">",
               <div className="bg-green-900/40 rounded-xl p-6 border border-green-500/30 text-center">",
                 <div className="text-4xl font-bold text-green-400 mb-2">$124M</div>",
                 <div className="text-sm text-zion-slate-light">Annual Cost Savings</div>",
@@ -101,11 +101,11 @@ const HealthcareAITransformation: () => {
               <div className="bg-purple-900/40 rounded-xl p-6 border border-purple-500/30 text-center">",
                 <div className="text-4xl font-bold text-purple-400 mb-2">3.8M</div>",
                 <div className="text-sm text-zion-slate-light">Patients Served/Year</div>",
-            <div className= "grid md: grid-cols-4 gap-6">",
+            <div className= "grid md:grid-cols-4 gap-6">",
               <div className= "bg-green-900/40 rounded-xl p-6 border border-green-500/30 text-center">
                 <div className= "text-4xl font-bold text-green-400 mb-2">$124M</div>"
                 <div className= "text-sm text-zion-slate-light">Annual Cost Savings</div>"
-            <div className= "grid md: grid-cols-4 gap-6">",
+            <div className= "grid md:grid-cols-4 gap-6">",
               <div className= "bg-green-900/40 rounded-xl p-6 border border-green-500/30 text-center">",
                 <div className= "text-4xl font-bold text-green-400 mb-2">$124M</div>",
                 <div className= "text-sm text-zion-slate-light">Annual Cost Savings</div>",
@@ -131,7 +131,7 @@ const HealthcareAITransformation: () => {
             <section >
               <h2 className="text-3xl font-bold text-white mb-6">🏥 Client Profile</h2>"
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-zion-cyan/30"
-                <div className="grid md: grid-cols-2 gap-8">",
+                <div className="grid md:grid-cols-2 gap-8">",
                   <div >
                     <h3 className="text-xl font-bold text-white mb-4">Healthcare Network Overview</h3>"
                     <ul className="space-y-2"
@@ -170,7 +170,7 @@ const HealthcareAITransformation: () => {
                         <span className="text-red-400 mt-1">•</span>"
               <h2 className="text-3xl font-bold text-white mb-6">🏥 Client Profile</h2>",
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-zion-cyan/30">",
-                <div className="grid md: grid-cols-2 gap-8">",
+                <div className="grid md:grid-cols-2 gap-8">",
                   <div >
                     <h3 className="text-xl font-bold text-white mb-4">Healthcare Network Overview</h3>",
                     <ul className="space-y-2">",
@@ -212,7 +212,7 @@ const HealthcareAITransformation: () => {
             <section >
               <h2 className= "text-3xl font-bold text-white mb-6">🏥 Client Profile</h2>"
               <div className= "bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-zion-cyan/30">
-                <div className= "grid md: grid-cols-2 gap-8">",
+                <div className= "grid md:grid-cols-2 gap-8">",
                   <div >
                     <h3 className= "text-xl font-bold text-white mb-4">Healthcare Network Overview</h3>"
                     <ul className= "space-y-2">
@@ -251,7 +251,7 @@ const HealthcareAITransformation: () => {
                         <span className= "text-red-400 mt-1">•</span>"
               <h2 className= "text-3xl font-bold text-white mb-6">🏥 Client Profile</h2>",
               <div className= "bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-zion-cyan/30">",
-                <div className= "grid md: grid-cols-2 gap-8">",
+                <div className= "grid md:grid-cols-2 gap-8">",
                   <div >
                     <h3 className= "text-xl font-bold text-white mb-4">Healthcare Network Overview</h3>",
                     <ul className= "space-y-2">",
@@ -306,14 +306,14 @@ const HealthcareAITransformation: () => {
                 decision support, administrative automation, and predictive care across all 450 facilities.
               </p>
               
-              <div className="grid md: grid-cols-2 gap-6">",
+              <div className="grid md:grid-cols-2 gap-6">",
                 <div className="bg-gradient-to-br from-blue-900/40 to-cyan-900/40 rounded-xl p-6 border border-blue-500/30"
                   <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2"
                     <Heart className="w-6 h-6 text-blue-400/>,"
   AI-Powered Patient Intake
                   </h3>
                   <p className="mb-4">,"
-              <div className= "grid md: grid-cols-2 gap-6">",
+              <div className= "grid md:grid-cols-2 gap-6">",
                 <div className= "bg-gradient-to-br from-blue-900/40 to-cyan-900/40 rounded-xl p-6 border border-blue-500/30">
                   <h3 className= "text-xl font-bold text-white mb-4 flex items-center gap-2">
                     <Heart className= "w-6 h-6 text-blue-400/>,"
@@ -344,7 +344,7 @@ const HealthcareAITransformation: () => {
                     </li>"
                     <li className="flex items-center gap-2">
                       <CheckCircle className="w-4 h-4 text-green-400/>"
-              <div className="grid md: grid-cols-2 gap-6">",
+              <div className="grid md:grid-cols-2 gap-6">",
                 <div className="bg-gradient-to-br from-blue-900/40 to-cyan-900/40 rounded-xl p-6 border border-blue-500/30">",
                   <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">",
                     <Heart className="w-6 h-6 text-blue-400" />",
@@ -362,7 +362,7 @@ const HealthcareAITransformation: () => {
                     </li>
                     <li className= "flex items-center gap-2">
                       <CheckCircle className= "w-4 h-4 text-green-400/>"
-              <div className= "grid md: grid-cols-2 gap-6">",
+              <div className= "grid md:grid-cols-2 gap-6">",
                 <div className= "bg-gradient-to-br from-blue-900/40 to-cyan-900/40 rounded-xl p-6 border border-blue-500/30">",
                   <h3 className= "text-xl font-bold text-white mb-4 flex items-center gap-2">",
                     <Heart className= "w-6 h-6 text-blue-400" />",
@@ -656,7 +656,7 @@ const HealthcareAITransformation: () => {
               <h2 className="text-3xl font-bold text-white mb-6">📊 Transformational Results</h2>"
               <div className="bg-gradient-to-r from-green-900/40 to-blue-900/40 rounded-xl p-8 border-2 border-green-500/40 mb-8"
                 <h3 className="text-2xl font-bold text-white mb-6 text-center">💰 Financial Impact (Annual)</h3>"
-                <div className="grid md: grid-cols-3 gap-6">",
+                <div className="grid md:grid-cols-3 gap-6">",
                   <div className="text-center"
                     <div className="text-5xl font-bold text-green-400 mb-2">$124M</div>"
                     <div className="text-lg text-white font-semibold mb-1">Total Savings</div>"
@@ -664,7 +664,7 @@ const HealthcareAITransformation: () => {
               <h2 className="text-3xl font-bold text-white mb-6">📊 Transformational Results</h2>",
               <div className="bg-gradient-to-r from-green-900/40 to-blue-900/40 rounded-xl p-8 border-2 border-green-500/40 mb-8">",
                 <h3 className="text-2xl font-bold text-white mb-6 text-center">💰 Financial Impact (Annual)</h3>",
-                <div className="grid md: grid-cols-3 gap-6">",
+                <div className="grid md:grid-cols-3 gap-6">",
                   <div className="text-center">",
                     <div className="text-5xl font-bold text-green-400 mb-2">$124M</div>",
                     <div className="text-lg text-white font-semibold mb-1">Total Savings</div>",
@@ -682,7 +682,7 @@ const HealthcareAITransformation: () => {
               <h2 className= "text-3xl font-bold text-white mb-6">📊 Transformational Results</h2>"
               <div className= "bg-gradient-to-r from-green-900/40 to-blue-900/40 rounded-xl p-8 border-2 border-green-500/40 mb-8">
                 <h3 className= "text-2xl font-bold text-white mb-6 text-center">💰 Financial Impact (Annual)</h3>"
-                <div className= "grid md: grid-cols-3 gap-6">",
+                <div className= "grid md:grid-cols-3 gap-6">",
                   <div className= "text-center">
                     <div className= "text-5xl font-bold text-green-400 mb-2">$124M</div>"
                     <div className= "text-lg text-white font-semibold mb-1">Total Savings</div>"
@@ -690,7 +690,7 @@ const HealthcareAITransformation: () => {
               <h2 className= "text-3xl font-bold text-white mb-6">📊 Transformational Results</h2>",
               <div className= "bg-gradient-to-r from-green-900/40 to-blue-900/40 rounded-xl p-8 border-2 border-green-500/40 mb-8">",
                 <h3 className= "text-2xl font-bold text-white mb-6 text-center">💰 Financial Impact (Annual)</h3>",
-                <div className= "grid md: grid-cols-3 gap-6">",
+                <div className= "grid md:grid-cols-3 gap-6">",
                   <div className= "text-center">",
                     <div className= "text-5xl font-bold text-green-400 mb-2">$124M</div>",
                     <div className= "text-lg text-white font-semibold mb-1">Total Savings</div>",
@@ -709,12 +709,12 @@ const HealthcareAITransformation: () => {
                 </div>
               </div>
 
-              <div className="grid md: grid-cols-2 gap-6">",
+              <div className="grid md:grid-cols-2 gap-6">",
                 <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-blue-500/30"
                   <h3 className="text-xl font-bold text-white mb-4">⚡ Operational Efficiency</h3>"
                   <ul className="space-y-3"
                     <li className="flex justify-between"
-              <div className="grid md: grid-cols-2 gap-6">",
+              <div className="grid md:grid-cols-2 gap-6">",
                 <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-blue-500/30">",
                   <h3 className="text-xl font-bold text-white mb-4">⚡ Operational Efficiency</h3>",
                   <ul className="space-y-3">",
@@ -737,12 +737,12 @@ const HealthcareAITransformation: () => {
                     <li className="flex justify-between">",
                       <span >Staff Productivity</span>
                       <span className="text-blue-400 font-bold">142% ↑</span>",
-              <div className= "grid md: grid-cols-2 gap-6">",
+              <div className= "grid md:grid-cols-2 gap-6">",
                 <div className= "bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-blue-500/30">
                   <h3 className= "text-xl font-bold text-white mb-4">⚡ Operational Efficiency</h3>"
                   <ul className= "space-y-3">
                     <li className= "flex justify-between">
-              <div className= "grid md: grid-cols-2 gap-6">",
+              <div className= "grid md:grid-cols-2 gap-6">",
                 <div className= "bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-blue-500/30">",
                   <h3 className= "text-xl font-bold text-white mb-4">⚡ Operational Efficiency</h3>",
                   <ul className= "space-y-3">",
@@ -823,8 +823,7 @@ const HealthcareAITransformation: () => {
             <section className="bg-gradient-to-r from-blue-900/60 to-purple-900/60 rounded-2xl p-10 border-2 border-blue-500/40"
               <div className="text-center mb-6"
                 <div className="text-6xl mb-4">💬</div>"
-                <p className="text-2xl text-white font-semibold italic mb-6"
-                  "This AI transformation has been nothing short of revolutionary for our network. "
+                <p className="text-2xl text-white font-semibold italic mb-6"This AI transformation has been nothing short of revolutionary for our network. "
                   We're providing better care, faster service, and spending $124M less per year. ;';';
             <section className="bg-gradient-to-r from-blue-900/60 to-purple-900/60 rounded-2xl p-10 border-2 border-blue-500/40">",
               <div className="text-center mb-6">",
@@ -880,8 +879,8 @@ const HealthcareAITransformation: () => {
                 professionals with AI? Schedule a consultation to explore how we can transform 
                 your organization.
               </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">",
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">",
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">",
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">",
                 <Link to: "/contact",
   className="inline-flex items-center justify-center gap-2 bg-red-500 hover: bg-red-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg",
                 >
@@ -896,8 +895,8 @@ const HealthcareAITransformation: () => {
                 >
                   <TrendingUp className="w-5 h-5/>"
                   <TrendingUp className="w-5 h-5" />",
-              <div className= "flex flex-col sm: flex-row gap-4 justify-center">",
-              <div className= "flex flex-col sm: flex-row gap-4 justify-center">",
+              <div className= "flex flex-col sm:flex-row gap-4 justify-center">",
+              <div className= "flex flex-col sm:flex-row gap-4 justify-center">",
                 <Link to: "/contact",
   className= "inline-flex items-center justify-center gap-2 bg-red-500 hover: bg-red-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg",
                 >

@@ -11,7 +11,7 @@ export default function RuntimeRollbackV2(): React.JSX.Element {
       <Helmet >
         <title >AI Runtime Rollback v2 — Instant, KPI‑Linked Recovery</title>
         <meta name: "description",;,"
-  content: "Blueprint for instant rollback triggered by KPI‑linked canaries and policy tests." /><link ,";,"
+  content: "Blueprint for instant rollback triggered by KPI‑linked canaries and policy tests.", /><link ,";,"
   rel: "canonical",;,"
   href="https://ziontechgroup.com/blog/ai-2025-oct-01-runtime-rollback-v2",
         />

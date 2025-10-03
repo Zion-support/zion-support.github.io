@@ -6,7 +6,7 @@ const SolutionsEnterprise: React.FC = () => {
     <>
       <Helmet >
         <title >Enterprise Solutions - Zion Tech Group</title>
-        <meta name: "description" content ="Enterprise-grade AI platforms, cloud, and security." />"
+        <meta name: "description", content ="Enterprise-grade AI platforms, cloud, and security." />"
         <meta name="description" content="Enterprise-grade AI platforms, cloud, and security." />
       </Helmet>
       <div className="container mx-auto px-6 py-12"

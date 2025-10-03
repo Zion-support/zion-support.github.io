@@ -116,8 +116,8 @@ const AIIncidentResponsePlaybooks2025: React.FC = () => {
   We help teams design budgeted actions, wire approvals, and ship safe automations fast.
           </p>
           <div className="flex flex-wrap justify-center gap-4"
-            <a title: "Internal link" href="/contact" className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover: bg-blue-700 transition-colors">Talk to an Expert</a>",
-            <a title: "Internal link" href="/services/ai-autonomous-operations" className="border border-gray-600 text-white px-8 py-3 rounded-lg font-semibold hover: bg-gray-800 transition-colors">Explore Services</a>",
+            <a title: "Internal link", href="/contact" className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover: bg-blue-700 transition-colors">Talk to an Expert</a>",
+            <a title: "Internal link", href="/services/ai-autonomous-operations" className="border border-gray-600 text-white px-8 py-3 rounded-lg font-semibold hover: bg-gray-800 transition-colors">Explore Services</a>",
           <div className="flex flex-wrap justify-center gap-4">",
 =======
         <div className= "mt-12 text-center bg-gray-900 text-white rounded-lg p-8">",
@@ -126,12 +126,12 @@ const AIIncidentResponsePlaybooks2025: React.FC = () => {
   We help teams design budgeted actions, wire approvals, and ship safe automations fast.
           </p>
           <div className= "flex flex-wrap justify-center gap-4">
-            <a title: "Internal link" href="/contact" className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover: bg-blue-700 transition-colors">Talk to an Expert</a>",
-            <a title: "Internal link" href="/services/ai-autonomous-operations" className="border border-gray-600 text-white px-8 py-3 rounded-lg font-semibold hover: bg-gray-800 transition-colors">Explore Services</a>",
+            <a title: "Internal link", href="/contact" className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover: bg-blue-700 transition-colors">Talk to an Expert</a>",
+            <a title: "Internal link", href="/services/ai-autonomous-operations" className="border border-gray-600 text-white px-8 py-3 rounded-lg font-semibold hover: bg-gray-800 transition-colors">Explore Services</a>",
           <div className= "flex flex-wrap justify-center gap-4">",
 >>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
-            <a title: "Internal link" href="/contact" className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover: bg-blue-700 transition-colors">Talk to an Expert</a>",
-            <a title: "Internal link" href="/services/ai-autonomous-operations" className ="border border-gray-600 text-white px-8 py-3 rounded-lg font-semibold hover: bg-gray-800 transition-colors">Explore Services</a>",
+            <a title: "Internal link", href="/contact" className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover: bg-blue-700 transition-colors">Talk to an Expert</a>",
+            <a title: "Internal link", href="/services/ai-autonomous-operations" className ="border border-gray-600 text-white px-8 py-3 rounded-lg font-semibold hover: bg-gray-800 transition-colors">Explore Services</a>",
           </div>
         </div>
       </div>

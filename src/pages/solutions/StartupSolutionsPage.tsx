@@ -38,7 +38,7 @@ const StartupSolutionsPage: React.FC = () => {
       title: "Funding Support",
       description: "Technical documentation and demos to support your fundraising efforts and investor presentations.",
       icon: "💰",
-      features: ["Technical Due Diligence", "Demo Development", "Documentation", "Investor Presentations"],
+      features: ["Technical Documentation", "Demo Development", "Investor Presentations", "Due Diligence Support"],
     }
   ];
 

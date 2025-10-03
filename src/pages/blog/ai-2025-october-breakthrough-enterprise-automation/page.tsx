@@ -4,11 +4,11 @@ const EnterpriseAutomation2025: () => {
     <>
       <Helmet >
         <title >AI-Powered Enterprise Automation 2025: Complete Implementation Guide | Zion Tech Group</title>,
-        <meta name: "description" content ="Transform your enterprise with AI automation in 2025. Complete guide covering implementation strategies, ROI optimization, and real-world case studies for 400%+ efficiency gains." /><meta property: "og:title" content="AI-Powered Enterprise Automation 2025: Complete Implementation Guide" />"
-        <meta property: "og:description" content ="Transform your enterprise with AI automation in 2025. Complete guide covering implementation strategies, ROI optimization, and real-world case studies for 400%+ efficiency gains." />"
-        <meta name="description" content="Transform your enterprise with AI automation in 2025. Complete guide covering implementation strategies, ROI optimization, and real-world case studies for 400%+ efficiency gains." /><meta property: "og:title" content="AI-Powered Enterprise Automation 2025: Complete Implementation Guide" />
-        <meta property: "og:description" content="Transform your enterprise with AI automation in 2025. Complete guide covering implementation strategies, ROI optimization, and real-world case studies for 400%+ efficiency gains." />
-        <link rel: "canonical" href="https://ziontechgroup.com/blog/ai-2025-october-breakthrough-enterprise-automation/>",
+        <meta name: "description", content ="Transform your enterprise with AI automation in 2025. Complete guide covering implementation strategies, ROI optimization, and real-world case studies for 400%+ efficiency gains." /><meta property: "og:title", content="AI-Powered Enterprise Automation 2025: Complete Implementation Guide" />"
+        <meta property: "og:description", content ="Transform your enterprise with AI automation in 2025. Complete guide covering implementation strategies, ROI optimization, and real-world case studies for 400%+ efficiency gains." />"
+        <meta name="description" content="Transform your enterprise with AI automation in 2025. Complete guide covering implementation strategies, ROI optimization, and real-world case studies for 400%+ efficiency gains." /><meta property: "og:title", content="AI-Powered Enterprise Automation 2025: Complete Implementation Guide" />
+        <meta property: "og:description", content="Transform your enterprise with AI automation in 2025. Complete guide covering implementation strategies, ROI optimization, and real-world case studies for 400%+ efficiency gains." />
+        <link rel: "canonical", href="https://ziontechgroup.com/blog/ai-2025-october-breakthrough-enterprise-automation/>",
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark"
@@ -17,7 +17,7 @@ const EnterpriseAutomation2025: () => {
       <div className= "min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">
         <div className= "bg-white/10 backdrop-blur-lg border-b border-white/20">
           <div className= "container mx-auto px-6 py-4">
-            <Link to: "/" className ="text-white hover: text-zion-cyan transition-colors">← Back to Home</Link>",
+            <Link to: "/", className ="text-white hover: text-zion-cyan transition-colors">← Back to Home</Link>",
           </div>
         </div>
 
@@ -39,14 +39,14 @@ const EnterpriseAutomation2025: () => {
             
             <h1 className= "text-4xl md: text-6xl font-bold text-white mb-6 leading-tight">"
   AI-Powered Enterprise Automation 2025: <span className= "bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">",
-        <meta name: "description" content ="Transform your enterprise with AI automation in 2025. Complete guide covering implementation strategies, ROI optimization, and real-world case studies for 400%+ efficiency gains." />",
+        <meta name: "description", content ="Transform your enterprise with AI automation in 2025. Complete guide covering implementation strategies, ROI optimization, and real-world case studies for 400%+ efficiency gains." />",
             "
             <h1 className="text-4xl md: text-6xl font-bold text-white mb-6 leading-tight">
   AI-Powered Enterprise Automation 2025: <span className="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">",
         <meta name="description" content="Transform your enterprise with AI automation in 2025. Complete guide covering implementation strategies, ROI optimization, and real-world case studies for 400%+ efficiency gains." />",
-        <meta property: "og: title" content="AI-Powered Enterprise Automation 2025: Complete Implementation Guide" />",
-        <meta property: "og: description" content="Transform your enterprise with AI automation in 2025. Complete guide covering implementation strategies, ROI optimization, and real-world case studies for 400%+ efficiency gains." />",
-        <link rel: "canonical" href="https: //ziontechgroup.com/blog/ai-2025-october-breakthrough-enterprise-automation" />",
+        <meta property: "og: title", content="AI-Powered Enterprise Automation 2025: Complete Implementation Guide" />",
+        <meta property: "og: description", content="Transform your enterprise with AI automation in 2025. Complete guide covering implementation strategies, ROI optimization, and real-world case studies for 400%+ efficiency gains." />",
+        <link rel: "canonical", href="https: //ziontechgroup.com/blog/ai-2025-october-breakthrough-enterprise-automation" />",
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">",
@@ -55,7 +55,7 @@ const EnterpriseAutomation2025: () => {
       <div className= "min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">",
         <div className= "bg-white/10 backdrop-blur-lg border-b border-white/20">",
           <div className= "container mx-auto px-6 py-4">",
-            <Link to: "/" className ="text-white hover: text-zion-cyan transition-colors">← Back to Home</Link>",
+            <Link to: "/", className ="text-white hover: text-zion-cyan transition-colors">← Back to Home</Link>",
           </div>
         </div>
 
@@ -160,11 +160,11 @@ const EnterpriseAutomation2025: () => {
                   </p>
                 </div>
                 
-                <div className="grid md: grid-cols-3 gap-6 mb-8">",
+                <div className="grid md:grid-cols-3 gap-6 mb-8">",
                   <div className="bg-white/10 rounded-xl p-6 text-center"
                     <div className="text-3xl font-bold text-emerald-400 mb-2">400%+</div>"
                     <div className="text-white text-sm">Efficiency Gains</div>"
-                <div className="grid md: grid-cols-3 gap-6 mb-8">",
+                <div className="grid md:grid-cols-3 gap-6 mb-8">",
                   <div className="bg-white/10 rounded-xl p-6 text-center">",
                     <div className="text-3xl font-bold text-emerald-400 mb-2">400%+</div>",
                     <div className="text-white text-sm">Efficiency Gains</div>",
@@ -176,11 +176,11 @@ const EnterpriseAutomation2025: () => {
                   <div className="bg-white/10 rounded-xl p-6 text-center">",
                     <div className="text-3xl font-bold text-blue-400 mb-2">95%</div>",
                     <div className="text-white text-sm">Faster Decisions</div>",
-                <div className= "grid md: grid-cols-3 gap-6 mb-8">",
+                <div className= "grid md:grid-cols-3 gap-6 mb-8">",
                   <div className= "bg-white/10 rounded-xl p-6 text-center">
                     <div className= "text-3xl font-bold text-emerald-400 mb-2">400%+</div>"
                     <div className= "text-white text-sm">Efficiency Gains</div>"
-                <div className= "grid md: grid-cols-3 gap-6 mb-8">",
+                <div className= "grid md:grid-cols-3 gap-6 mb-8">",
                   <div className= "bg-white/10 rounded-xl p-6 text-center">",
                     <div className= "text-3xl font-bold text-emerald-400 mb-2">400%+</div>",
                     <div className= "text-white text-sm">Efficiency Gains</div>",
@@ -323,8 +323,8 @@ const EnterpriseAutomation2025: () => {
   Join 200+ companies that have achieved 400%+ efficiency gains with our proven AI automation framework. 
                     Get a free consultation and custom implementation roadmap.
                   </p>
-                  <div className="flex flex-col sm: flex-row gap-4 justify-center">",
-                  <div className="flex flex-col sm: flex-row gap-4 justify-center">",
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center">",
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center">",
                     <Link to: "/contact",
   className="bg-emerald-500 text-white px-8 py-4 rounded-lg font-semibold hover: bg-emerald-600 transition-colors inline-flex items-center justify-center gap-2",
                     >
@@ -344,8 +344,8 @@ const EnterpriseAutomation2025: () => {
   Join 200+ companies that have achieved 400%+ efficiency gains with our proven AI automation framework. 
                     Get a free consultation and custom implementation roadmap.
                   </p>
-                  <div className= "flex flex-col sm: flex-row gap-4 justify-center">",
-                  <div className= "flex flex-col sm: flex-row gap-4 justify-center">",
+                  <div className= "flex flex-col sm:flex-row gap-4 justify-center">",
+                  <div className= "flex flex-col sm:flex-row gap-4 justify-center">",
                     <Link to: "/contact",
   className= "bg-emerald-500 text-white px-8 py-4 rounded-lg font-semibold hover: bg-emerald-600 transition-colors inline-flex items-center justify-center gap-2",
                     >

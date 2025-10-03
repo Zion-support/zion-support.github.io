@@ -13,8 +13,8 @@ const AIContentGenerator: React.FC = () => {
     <>
       <Helmet >
         <title >AI Content Generator Pro - Zion Tech Group</title>
-        <meta name: "description" content ="Generate high-quality blog posts, social media content, and marketing copy with advanced AI. Includes SEO optimization and brand voice training." /></Helmet>"
-        <meta name: "description" content ="Generate high-quality blog posts, social media content, and marketing copy with advanced AI. Includes SEO optimization and brand voice training." />",
+        <meta name: "description", content ="Generate high-quality blog posts, social media content, and marketing copy with advanced AI. Includes SEO optimization and brand voice training." /></Helmet>"
+        <meta name: "description", content ="Generate high-quality blog posts, social media content, and marketing copy with advanced AI. Includes SEO optimization and brand voice training." />",
         <meta name="description" content="Generate high-quality blog posts, social media content, and marketing copy with advanced AI. Includes SEO optimization and brand voice training." /></Helmet>
         <meta name="description" content="Generate high-quality blog posts, social media content, and marketing copy with advanced AI. Includes SEO optimization and brand voice training." />",
       </Helmet>
@@ -47,9 +47,9 @@ const AIContentGenerator: React.FC = () => {
                 <span className="text-3xl font-bold text-blue-600">Starting at $29/month</span>",
               </div>
               <p className="text-gray-600 mb-6">Perfect for content creators, marketers, and businesses looking to scale their content production.</p>"
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">",
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">",
               <p className="text-gray-600 mb-6">Perfect for content creators, marketers, and businesses looking to scale their content production.</p>",
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">",
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">",
                 <a href="tel: +13024640950",
   className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover: bg-blue-700 transition-colors text-center",
                 >
@@ -81,9 +81,9 @@ const AIContentGenerator: React.FC = () => {
                 <span className= "text-3xl font-bold text-blue-600">Starting at $29/month</span>",
               </div>
               <p className= "text-gray-600 mb-6">Perfect for content creators, marketers, and businesses looking to scale their content production.</p>"
-              <div className= "flex flex-col sm: flex-row gap-4 justify-center">",
+              <div className= "flex flex-col sm:flex-row gap-4 justify-center">",
               <p className= "text-gray-600 mb-6">Perfect for content creators, marketers, and businesses looking to scale their content production.</p>",
-              <div className= "flex flex-col sm: flex-row gap-4 justify-center">",
+              <div className= "flex flex-col sm:flex-row gap-4 justify-center">",
                 <a href="tel: +13024640950",
   className= "bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover: bg-blue-700 transition-colors text-center",
                 >
@@ -101,7 +101,7 @@ const AIContentGenerator: React.FC = () => {
           {/* Features */}
           <section className="mb-16"
             <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Key Features</h2>"
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">",
               <div className="bg-white rounded-lg shadow-lg p-6"
                 <div className="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4"
                   <FileText className="w-6 h-6 text-blue-600/>"
@@ -110,7 +110,7 @@ const AIContentGenerator: React.FC = () => {
                   <FileText className="w-6 h-6 text-blue-600/>"
           <section className="mb-16">",
             <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Key Features</h2>",
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">",
               <div className="bg-white rounded-lg shadow-lg p-6">",
                 <div className="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">",
                   <FileText className="w-6 h-6 text-blue-600" />",
@@ -192,13 +192,13 @@ const AIContentGenerator: React.FC = () => {
                 <p className="text-gray-600">Built-in quality checks ensure content meets your standards before publication.</p>",
           <section className= "mb-16">
             <h2 className= "text-3xl font-bold text-center text-gray-900 mb-12">Key Features</h2>"
-            <div className= "grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div className= "grid md:grid-cols-2 lg:grid-cols-3 gap-8">",
               <div className= "bg-white rounded-lg shadow-lg p-6">
                 <div className= "bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
                   <FileText className= "w-6 h-6 text-blue-600/>"
           <section className= "mb-16">",
             <h2 className= "text-3xl font-bold text-center text-gray-900 mb-12">Key Features</h2>",
-            <div className= "grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div className= "grid md:grid-cols-2 lg:grid-cols-3 gap-8">",
               <div className= "bg-white rounded-lg shadow-lg p-6">",
                 <div className= "bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">",
                   <FileText className= "w-6 h-6 text-blue-600" />",
@@ -266,7 +266,7 @@ const AIContentGenerator: React.FC = () => {
           {/* Pricing */}
           <section className="mb-16"
             <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Pricing Plans</h2>"
-            <div className="grid md: grid-cols-3 gap-8">",
+            <div className="grid md:grid-cols-3 gap-8">",
               <div className="bg-white rounded-lg shadow-lg p-8"
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Starter</h3>"
                 <div className="text-3xl font-bold text-blue-600 mb-6">$29/month</div>"
@@ -298,7 +298,7 @@ const AIContentGenerator: React.FC = () => {
                     <CheckCircle className="w-5 h-5 text-green-500 mr-3/>"
           <section className="mb-16">",
             <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Pricing Plans</h2>",
-            <div className="grid md: grid-cols-3 gap-8">",
+            <div className="grid md:grid-cols-3 gap-8">",
               <div className="bg-white rounded-lg shadow-lg p-8">",
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Starter</h3>",
                 <div className="text-3xl font-bold text-blue-600 mb-6">$29/month</div>",
@@ -324,7 +324,7 @@ const AIContentGenerator: React.FC = () => {
   className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover: bg-blue-700 transition-colors text-center block",
           <section className= "mb-16">
             <h2 className= "text-3xl font-bold text-center text-gray-900 mb-12">Pricing Plans</h2>"
-            <div className= "grid md: grid-cols-3 gap-8">",
+            <div className= "grid md:grid-cols-3 gap-8">",
               <div className= "bg-white rounded-lg shadow-lg p-8">
                 <h3 className= "text-2xl font-bold text-gray-900 mb-4">Starter</h3>"
                 <div className= "text-3xl font-bold text-blue-600 mb-6">$29/month</div>"
@@ -345,7 +345,7 @@ const AIContentGenerator: React.FC = () => {
                     <CheckCircle className= "w-5 h-5 text-green-500 mr-3/>"
           <section className= "mb-16">",
             <h2 className= "text-3xl font-bold text-center text-gray-900 mb-12">Pricing Plans</h2>",
-            <div className= "grid md: grid-cols-3 gap-8">",
+            <div className= "grid md:grid-cols-3 gap-8">",
               <div className= "bg-white rounded-lg shadow-lg p-8">",
                 <h3 className= "text-2xl font-bold text-gray-900 mb-4">Starter</h3>",
                 <div className= "text-3xl font-bold text-blue-600 mb-6">$29/month</div>",
@@ -621,8 +621,8 @@ const AIContentGenerator: React.FC = () => {
               <p className="text-lg text-gray-600 mb-8">",
   Contact us today for a free consultation and to discuss your content generation needs.
               </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">",
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">",
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">",
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">",
                 <a href="tel: +13024640950",
   className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover: bg-blue-700 transition-colors text-center",
                 >
@@ -636,8 +636,8 @@ const AIContentGenerator: React.FC = () => {
               <p className= "text-lg text-gray-600 mb-8">"
   Contact us today for a free consultation and to discuss your content generation needs.
               </p>
-              <div className= "flex flex-col sm: flex-row gap-4 justify-center">",
-              <div className= "flex flex-col sm: flex-row gap-4 justify-center">",
+              <div className= "flex flex-col sm:flex-row gap-4 justify-center">",
+              <div className= "flex flex-col sm:flex-row gap-4 justify-center">",
                 <a href="tel: +13024640950",
   className= "bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover: bg-blue-700 transition-colors text-center",
                 >

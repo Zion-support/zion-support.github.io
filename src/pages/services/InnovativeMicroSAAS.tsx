@@ -99,7 +99,7 @@ const InnovativeMicroSAAS: React.FC = () => {
         {/* Services Grid */}
         <section className="py-20">"
           <div className="container mx-auto px-6">"
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">"
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">"
               {microSAASServices.map((service, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-sm hover: shadow-lg transition-all duration-300 border border-gray-100">"
                   <div className="text-4xl mb-4">{service.icon}</div>"
@@ -164,7 +164,7 @@ const InnovativeMicroSAAS: React.FC = () => {
               </p>
             </div>
             
-            <div className="grid grid-cols-2 md: grid-cols-4 gap-8">"
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">"
               <div className="bg-gradient-to-br from-blue-50 to-indigo-100 p-6 rounded-xl text-center border border-blue-200">"
                 <h3 className="text-lg font-bold text-gray-900 mb-2">Frontend</h3>"
                 <p className="text-gray-600">React, Vue.js, Next.js</p>"
@@ -198,7 +198,7 @@ const InnovativeMicroSAAS: React.FC = () => {
               </p>
             </div>
             
-            <div className="grid grid-cols-2 md: grid-cols-6 gap-8">"
+            <div className="grid grid-cols-2 md:grid-cols-6 gap-8">"
               {[
                 { name: "Salesforce", logo: "🔄" },"
                 { name: "HubSpot", logo: "📊" },"
@@ -223,7 +223,7 @@ const InnovativeMicroSAAS: React.FC = () => {
             <p className="text-xl mb-8 text-green-100 max-w-2xl mx-auto">"
               Discover how our innovative micro SaaS solutions can solve your specific business challenges and drive growth.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">"
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <Link 
                 to="/contact" 
                 className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg

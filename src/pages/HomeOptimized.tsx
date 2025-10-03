@@ -21,48 +21,48 @@ const HomeOptimized: () => {
           Zion Tech Group - Leading AI & IT Solutions | Transform Your Business
         </title>
         <meta name: "description",
-  content: "Zion Tech Group delivers cutting-edge AI and IT solutions that transform businesses. Enterprise security, AI innovation, and expert consulting services." /><meta name: "keywords",
-  content: "AI solutions, IT consulting, cybersecurity, machine learning, cloud infrastructure, digital transformation" /><meta property: "og:title",
-  content: "Zion Tech Group - Leading AI & IT Solutions" /><meta ,"
+  content: "Zion Tech Group delivers cutting-edge AI and IT solutions that transform businesses. Enterprise security, AI innovation, and expert consulting services.", /><meta name: "keywords",
+  content: "AI solutions, IT consulting, cybersecurity, machine learning, cloud infrastructure, digital transformation", /><meta property: "og:title",
+  content: "Zion Tech Group - Leading AI & IT Solutions", /><meta ,"
   property: "og:description",
-  content: "Transform your business with cutting-edge AI and IT solutions" /><meta property="og:type" content="website" />"
-        <meta property: "og:url" content="https://ziontechgroup.com" />"
-        <meta name: "twitter:card" content ="summary_large_image" />"
+  content: "Transform your business with cutting-edge AI and IT solutions", /><meta property="og:type" content="website" />"
+        <meta property: "og:url", content="https://ziontechgroup.com" />"
+        <meta name: "twitter:card", content ="summary_large_image" />"
         <meta name: "twitter:title",
-  content: "Zion Tech Group - Leading AI & IT Solutions" /><meta ,"
+  content: "Zion Tech Group - Leading AI & IT Solutions", /><meta ,"
   name: "twitter:description",
-  content: "Transform your business with cutting-edge AI and IT solutions" /><link rel: "canonical" href ="https://ziontechgroup.com/>",
+  content: "Transform your business with cutting-edge AI and IT solutions", /><link rel: "canonical", href ="https://ziontechgroup.com/>",
   property: "og: title",
         <meta name: "description
-  content: "Zion Tech Group delivers cutting-edge AI and IT solutions that transform businesses. Enterprise security, AI innovation, and expert consulting services." /><meta name: "keywords
-  content: "AI solutions, IT consulting, cybersecurity, machine learning, cloud infrastructure, digital transformation" /><meta property: "og:title
-  content: "Zion Tech Group - Leading AI & IT Solutions" /><meta ,
+  content: ", Zion Tech Group delivers cutting-edge AI and IT solutions that transform businesses. Enterprise security, AI innovation, and expert consulting services." /><meta name: "keywords
+  content: ", AI solutions, IT consulting, cybersecurity, machine learning, cloud infrastructure, digital transformation" /><meta property: "og:title
+  content: ", Zion Tech Group - Leading AI & IT Solutions" /><meta ,
   property: "og:description
-  content: "Transform your business with cutting-edge AI and IT solutions" /><meta property="og:type" content="website" />
-        <meta property: "og:url" content="https://ziontechgroup.com" />
-        <meta name: "twitter:card" content="summary_large_image" />
+  content: ", Transform your business with cutting-edge AI and IT solutions" /><meta property="og:type" content="website" />
+        <meta property: "og:url", content="https://ziontechgroup.com" />
+        <meta name: "twitter:card", content="summary_large_image" />
         <meta name: "twitter:title
-  content: "Zion Tech Group - Leading AI & IT Solutions" /><meta ,
+  content: ", Zion Tech Group - Leading AI & IT Solutions" /><meta ,
   name: "twitter:description
-  content: "Transform your business with cutting-edge AI and IT solutions" /><link rel: "canonical" href ="https://ziontechgroup.com/>
+  content: ", Transform your business with cutting-edge AI and IT solutions" /><link rel: "canonical", href ="https://ziontechgroup.com/>
   property: "og: title
-  content: "Zion Tech Group - Leading AI & IT Solutions",
+  content: ", Zion Tech Group - Leading AI & IT Solutions",
         />
         <meta property: "og: description",
   content: "Transform your business with cutting-edge AI and IT solutions",
         />
-        <meta property: "og: type" content="website" />",
-        <meta property: "og: url" content="https://ziontechgroup.com" />",
-        <meta name: "twitter: card" content ="summary_large_image" />",
+        <meta property: "og: type", content="website" />",
+        <meta property: "og: url", content="https://ziontechgroup.com" />",
+        <meta name: "twitter: card", content ="summary_large_image" />",
         <meta name: "twitter: title",
-        <meta name: "twitter: card" content="summary_large_image" />",
+        <meta name: "twitter: card", content="summary_large_image" />",
         <meta name: "twitter: title
-  content: "Zion Tech Group - Leading AI & IT Solutions",
+  content: ", Zion Tech Group - Leading AI & IT Solutions",
         />
         <meta name: "twitter: description",
   content: "Transform your business with cutting-edge AI and IT solutions",
         />
-        <link rel: "canonical" href ="https: //ziontechgroup.com" />",
+        <link rel: "canonical", href ="https: //ziontechgroup.com" />",
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">",
@@ -154,8 +154,8 @@ const HomeOptimized: () => {
             </p>
 
             {/* Stats */}
-            <div className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-12 max-w-2xl mx-auto">",
-            <div className= "grid grid-cols-2 md: grid-cols-4 gap-8 mb-12 max-w-2xl mx-auto">",
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12 max-w-2xl mx-auto">",
+            <div className= "grid grid-cols-2 md:grid-cols-4 gap-8 mb-12 max-w-2xl mx-auto">",
               {[
                 { value: "500+", label: "Projects Delivered" }";"
                 { value: "99.9%", label: "Uptime SLA" }";"
@@ -164,10 +164,10 @@ const HomeOptimized: () => {
               ].map((stat, index) => (
                 <div key={index} className="text-center group hover: scale-105 transition-all duration-300">",
                   <div className="text-3xl font-bold text-zion-cyan group-hover: text-zion-blue-light transition-colors">",
-            <div className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-12 max-w-2xl mx-auto">",
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12 max-w-2xl mx-auto">",
                 <div key={index} className= "text-center group hover: scale-105 transition-all duration-300">",
                   <div className= "text-3xl font-bold text-zion-cyan group-hover: text-zion-blue-light transition-colors">",
-            <div className= "grid grid-cols-2 md: grid-cols-4 gap-8 mb-12 max-w-2xl mx-auto">",
+            <div className= "grid grid-cols-2 md:grid-cols-4 gap-8 mb-12 max-w-2xl mx-auto">",
               {[
                 { value: "500+", label: "Projects Delivered" },"
                 { value: "99.9%", label: "Uptime SLA" },"
@@ -188,8 +188,8 @@ const HomeOptimized: () => {
               ))}
             </div>
 
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">",
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">",
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">",
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">",
               <Link to: "/services",
   className="btn-primary flex items-center justify-center gap-2 group",
               >
@@ -197,9 +197,9 @@ const HomeOptimized: () => {
                 <ArrowRight className="w-5 h-5 group-hover: translate-x-1 transition-transform/>",
                 <ArrowRight className="w-5 h-5 group-hover: translate-x-1 transition-transform" />",
               </Link>
-              <Link to: "/contact" className="btn-secondary">",
-            <div className= "flex flex-col sm: flex-row gap-4 justify-center">",
-            <div className= "flex flex-col sm: flex-row gap-4 justify-center">",
+              <Link to: "/contact", className="btn-secondary">",
+            <div className= "flex flex-col sm:flex-row gap-4 justify-center">",
+            <div className= "flex flex-col sm:flex-row gap-4 justify-center">",
               <Link to: "/services",
   className= "btn-primary flex items-center justify-center gap-2 group",
               >
@@ -207,7 +207,7 @@ const HomeOptimized: () => {
                 <ArrowRight className= "w-5 h-5 group-hover: translate-x-1 transition-transform/>",
                 <ArrowRight className= "w-5 h-5 group-hover: translate-x-1 transition-transform" />",
               </Link>
-              <Link to: "/contact" className= "btn-secondary">"
+              <Link to: "/contact", className= "btn-secondary">"
   Get Started
               </Link>
             </div>
@@ -256,8 +256,8 @@ const HomeOptimized: () => {
             </p>
           </div>
 
-          <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">",
-          <div className= "grid md: grid-cols-2 lg:grid-cols-4 gap-8">",
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">",
+          <div className= "grid md:grid-cols-2 lg:grid-cols-4 gap-8">",
             {[
               {
                 icon: Shield,,
@@ -301,9 +301,9 @@ const HomeOptimized: () => {
               }
             ].map((feature, index) => (
               <div key={index} className="card group hover: scale-105 transition-all duration-300 hover:shadow-2xl">",
-          <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">",
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">",
               <div key={index} className= "card group hover: scale-105 transition-all duration-300 hover:shadow-2xl">",
-          <div className= "grid md: grid-cols-2 lg:grid-cols-4 gap-8">",
+          <div className= "grid md:grid-cols-2 lg:grid-cols-4 gap-8">",
             {[
               {
                 icon: Shield,,
@@ -335,8 +335,8 @@ const HomeOptimized: () => {
               }
             ].map((feature, index) => (
               <div key={index} className="card group hover: scale-105 transition-all duration-300 hover:shadow-2xl">",
-                <div className={`bg-zion-${feature.color}/20 w-16 h-16 rounded-lg flex items-center justify-center mb-6 group-hover:bg-zion-${feature.color}/30 transition-colors border border-zion-${feature.color}/30 shadow-lg`}>`
-                  <feature .icon className={`w-8 h-8 text-zion-${feature.color}-light group-hover:scale-110 transition-transform duration-300`} />`
+                <div className="{`bg-zion-${feature.color}/20 w-16 h-16 rounded-lg flex items-center justify-center mb-6 group-hover:bg-zion-${feature.color}/30 transition-colors border border-zion-${feature.color}/30 shadow-lg`}">`
+                  <feature .icon className="{`w-8 h-8 text-zion-${feature.color}-light group-hover:scale-110 transition-transform duration-300`} /">`
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">",
                   {feature.title}
@@ -382,9 +382,9 @@ const HomeOptimized: () => {
         <section className="container mx-auto px-6 py-16 relative z-10"
           <div className="flex items-center justify-between mb-8"
             <h3 className="text-3xl font-bold text-white">Latest Insights</h3>"
-            <Link to: "/insights" className ="text-zion-cyan hover: underline">View all</Link>",
+            <Link to: "/insights", className ="text-zion-cyan hover: underline">View all</Link>",
           </div>
-          <div className="grid md: grid-cols-4 gap-6">",
+          <div className="grid md:grid-cols-4 gap-6">",
             {latestInsights.slice(0, 4).map((item) => (
               <article key={item.id} className="card hover: scale-105 transition-all duration-300 hover:shadow-2xl">",
                 <div className="p-6"
@@ -395,9 +395,9 @@ const HomeOptimized: () => {
         <section className="container mx-auto px-6 py-16 relative z-10">",
           <div className="flex items-center justify-between mb-8">",
             <h3 className="text-3xl font-bold text-white">Latest Insights</h3>",
-            <Link to: "/insights" className ="text-zion-cyan hover: underline">View all</Link>",
+            <Link to: "/insights", className ="text-zion-cyan hover: underline">View all</Link>",
           </div>
-          <div className="grid md: grid-cols-4 gap-6">",
+          <div className="grid md:grid-cols-4 gap-6">",
             {latestInsights.slice(0, 4).map((item) => (
               <article key={item.id} className="card hover: scale-105 transition-all duration-300 hover:shadow-2xl">",
                 <div className="p-6">",
@@ -408,9 +408,9 @@ const HomeOptimized: () => {
         <section className= "container mx-auto px-6 py-16 relative z-10">
           <div className= "flex items-center justify-between mb-8">
             <h3 className= "text-3xl font-bold text-white">Latest Insights</h3>"
-            <Link to: "/insights" className ="text-zion-cyan hover: underline">View all</Link>",
+            <Link to: "/insights", className ="text-zion-cyan hover: underline">View all</Link>",
           </div>
-          <div className= "grid md: grid-cols-4 gap-6">",
+          <div className= "grid md:grid-cols-4 gap-6">",
             {latestInsights.slice(0, 4).map((item) => (
               <article key={item.id} className= "card hover: scale-105 transition-all duration-300 hover:shadow-2xl">",
                 <div className= "p-6">
@@ -421,9 +421,9 @@ const HomeOptimized: () => {
         <section className= "container mx-auto px-6 py-16 relative z-10">",
           <div className= "flex items-center justify-between mb-8">",
             <h3 className= "text-3xl font-bold text-white">Latest Insights</h3>",
-            <Link to: "/insights" className ="text-zion-cyan hover: underline">View all</Link>",
+            <Link to: "/insights", className ="text-zion-cyan hover: underline">View all</Link>",
           </div>
-          <div className= "grid md: grid-cols-4 gap-6">",
+          <div className= "grid md:grid-cols-4 gap-6">",
             {latestInsights.slice(0, 4).map((item) => (
               <article key={item.id} className= "card hover: scale-105 transition-all duration-300 hover:shadow-2xl">",
                 <div className= "p-6">",
@@ -462,8 +462,8 @@ const HomeOptimized: () => {
               </p>
             </div>
 
-            <div className="grid md: grid-cols-3 gap-8">",
-            <div className= "grid md: grid-cols-3 gap-8">",
+            <div className="grid md:grid-cols-3 gap-8">",
+            <div className= "grid md:grid-cols-3 gap-8">",
               {[
                 {
                   name: "Sarah Johnson",
@@ -483,10 +483,10 @@ const HomeOptimized: () => {
               ].map((testimonial, index) => (
                 <div key={index} className="card text-center hover: scale-105 transition-all duration-300 hover:shadow-2xl">",
                   <div className="flex justify-center mb-4"
-            <div className="grid md: grid-cols-3 gap-8">",
+            <div className="grid md:grid-cols-3 gap-8">",
                 <div key={index} className= "card text-center hover: scale-105 transition-all duration-300 hover:shadow-2xl">",
                   <div className= "flex justify-center mb-4">
-            <div className= "grid md: grid-cols-3 gap-8">",
+            <div className= "grid md:grid-cols-3 gap-8">",
               {[
                 {
                   name: "Sarah Johnson",,"
@@ -559,8 +559,8 @@ const HomeOptimized: () => {
   Join thousands of companies that trust Zion Tech Group for their
               technology needs. Let&apos;s build something amazing together.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">",
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">",
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">",
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">",
               <Link to: "/contact",
   className="bg-white text-zion-blue hover: bg-zion-slate-light px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2 group",
               >
@@ -580,8 +580,8 @@ const HomeOptimized: () => {
   Join thousands of companies that trust Zion Tech Group for their
               technology needs. Let&apos;s build something amazing together.
             </p>
-            <div className= "flex flex-col sm: flex-row gap-4 justify-center">",
-            <div className= "flex flex-col sm: flex-row gap-4 justify-center">",
+            <div className= "flex flex-col sm:flex-row gap-4 justify-center">",
+            <div className= "flex flex-col sm:flex-row gap-4 justify-center">",
               <Link to: "/contact",
   className= "bg-white text-zion-blue hover: bg-zion-slate-light px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2 group",
               >

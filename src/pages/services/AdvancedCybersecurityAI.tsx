@@ -9,8 +9,8 @@ const AdvancedCybersecurityAI: () => {
       <Helmet >
         <title >Advanced Cybersecurity AI Platform | Next-Gen Threat Detection & Response | Zion Tech Group</title>
         <meta name: "description",
-  content: "AI-powered cybersecurity platform with 99.92% threat detection accuracy. Real-time protection, autonomous incident response, and predictive security intelligence." /><meta name: "keywords",
-  content: "cybersecurity AI, threat detection, incident response, SIEM, EDR, security automation, AI security" /></Helmet>"
+  content: "AI-powered cybersecurity platform with 99.92% threat detection accuracy. Real-time protection, autonomous incident response, and predictive security intelligence.", /><meta name: "keywords",
+  content: "cybersecurity AI, threat detection, incident response, SIEM, EDR, security automation, AI security", /></Helmet>"
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">",
         <Header />
 
@@ -80,7 +80,7 @@ const AdvancedCybersecurityAI: () => {
             </p>
 
             {/* Key Metrics Banner */}
-            <div className="grid md: grid-cols-4 gap-6">",
+            <div className="grid md:grid-cols-4 gap-6">",
               <div className="bg-red-900/40 rounded-xl p-6 border border-red-500/30 text-center hover: scale-105 transition-transform">",
                 <div className="text-4xl font-bold text-red-400 mb-2">99.92%</div>"
                 <div className="text-sm text-zion-slate-light">Threat Detection</div>"
@@ -96,7 +96,7 @@ const AdvancedCybersecurityAI: () => {
               <div className="bg-purple-900/40 rounded-xl p-6 border border-purple-500/30 text-center hover: scale-105 transition-transform">",
                 <div className="text-4xl font-bold text-purple-400 mb-2">&lt;5s</div>"
                 <div className="text-sm text-zion-slate-light">Response Time</div>"
-            <div className="grid md: grid-cols-4 gap-6">",
+            <div className="grid md:grid-cols-4 gap-6">",
               <div className="bg-red-900/40 rounded-xl p-6 border border-red-500/30 text-center hover: scale-105 transition-transform">",
                 <div className="text-4xl font-bold text-red-400 mb-2">99.92%</div>",
                 <div className="text-sm text-zion-slate-light">Threat Detection</div>",
@@ -112,7 +112,7 @@ const AdvancedCybersecurityAI: () => {
               <div className="bg-purple-900/40 rounded-xl p-6 border border-purple-500/30 text-center hover: scale-105 transition-transform">",
                 <div className="text-4xl font-bold text-purple-400 mb-2">&lt;5s</div>",
                 <div className="text-sm text-zion-slate-light">Response Time</div>",
-            <div className= "grid md: grid-cols-4 gap-6">",
+            <div className= "grid md:grid-cols-4 gap-6">",
               <div className= "bg-red-900/40 rounded-xl p-6 border border-red-500/30 text-center hover: scale-105 transition-transform">",
                 <div className= "text-4xl font-bold text-red-400 mb-2">99.92%</div>"
                 <div className= "text-sm text-zion-slate-light">Threat Detection</div>"
@@ -128,7 +128,7 @@ const AdvancedCybersecurityAI: () => {
               <div className= "bg-purple-900/40 rounded-xl p-6 border border-purple-500/30 text-center hover: scale-105 transition-transform">",
                 <div className= "text-4xl font-bold text-purple-400 mb-2">&lt;5s</div>"
                 <div className= "text-sm text-zion-slate-light">Response Time</div>"
-            <div className= "grid md: grid-cols-4 gap-6">",
+            <div className= "grid md:grid-cols-4 gap-6">",
               <div className= "bg-red-900/40 rounded-xl p-6 border border-red-500/30 text-center hover: scale-105 transition-transform">",
                 <div className= "text-4xl font-bold text-red-400 mb-2">99.92%</div>",
                 <div className= "text-sm text-zion-slate-light">Threat Detection</div>",
@@ -159,7 +159,7 @@ const AdvancedCybersecurityAI: () => {
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-red-500/30"
               </h2>"
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-red-500/30">
-                <div className="grid md: grid-cols-2 gap-8">",
+                <div className="grid md:grid-cols-2 gap-8">",
                   <div >
                     <h3 className="text-xl font-bold text-white mb-4">🔴 Security Challenges</h3>"
                     <ul className="space-y-3"
@@ -178,7 +178,7 @@ const AdvancedCybersecurityAI: () => {
   The Modern Threat Landscape
               </h2>
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-red-500/30">",
-                <div className="grid md: grid-cols-2 gap-8">",
+                <div className="grid md:grid-cols-2 gap-8">",
                   <div >
                     <h3 className="text-xl font-bold text-white mb-4">🔴 Security Challenges</h3>",
                     <ul className="space-y-3">",
@@ -200,7 +200,7 @@ const AdvancedCybersecurityAI: () => {
   The Modern Threat Landscape
               </h2>
               <div className= "bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-red-500/30">
-                <div className= "grid md: grid-cols-2 gap-8">",
+                <div className= "grid md:grid-cols-2 gap-8">",
                   <div >
                     <h3 className= "text-xl font-bold text-white mb-4">🔴 Security Challenges</h3>"
                     <ul className= "space-y-3">
@@ -219,7 +219,7 @@ const AdvancedCybersecurityAI: () => {
   The Modern Threat Landscape
               </h2>
               <div className= "bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-red-500/30">",
-                <div className= "grid md: grid-cols-2 gap-8">",
+                <div className= "grid md:grid-cols-2 gap-8">",
                   <div >
                     <h3 className= "text-xl font-bold text-white mb-4">🔴 Security Challenges</h3>",
                     <ul className= "space-y-3">",
@@ -307,12 +307,12 @@ const AdvancedCybersecurityAI: () => {
                 <Lock className="w-8 h-8 text-blue-400/>,"
   Platform Features
               </h2>"
-              <div className="grid md: grid-cols-2 gap-6">",
+              <div className="grid md:grid-cols-2 gap-6">",
               <h2 className= "text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Lock className= "w-8 h-8 text-blue-400/>,"
   Platform Features
               </h2>
-              <div className= "grid md: grid-cols-2 gap-6">",
+              <div className= "grid md:grid-cols-2 gap-6">",
                 {[
                   {
                     title: "AI-Powered Threat Detection",,"
@@ -353,7 +353,7 @@ const AdvancedCybersecurityAI: () => {
                 <Lock className="w-8 h-8 text-blue-400" />",
   Platform Features
               </h2>
-              <div className="grid md: grid-cols-2 gap-6">",
+              <div className="grid md:grid-cols-2 gap-6">",
                   <div key={index} className= "bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-zion-cyan/20 hover: border-zion-cyan/50 transition-all">",
                     <div className= "text-4xl mb-4">{feature.icon}</div>";"
                     <h3 className= "text-xl font-bold text-white mb-3">{feature.title}</h3>";"
@@ -362,7 +362,7 @@ const AdvancedCybersecurityAI: () => {
                 <Lock className= "w-8 h-8 text-blue-400" />",
   Platform Features
               </h2>
-              <div className= "grid md: grid-cols-2 gap-6">",
+              <div className= "grid md:grid-cols-2 gap-6">",
                 {[
                   {
                     title: "AI-Powered Threat Detection",,"
@@ -512,12 +512,12 @@ const AdvancedCybersecurityAI: () => {
                 <DollarSign className="w-8 h-8 text-green-400/>,"
   Pricing & Packages
               </h2>"
-              <div className="grid md: grid-cols-3 gap-6">",
+              <div className="grid md:grid-cols-3 gap-6">",
               <h2 className= "text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <DollarSign className= "w-8 h-8 text-green-400/>,"
   Pricing & Packages
               </h2>
-              <div className= "grid md: grid-cols-3 gap-6">",
+              <div className= "grid md:grid-cols-3 gap-6">",
                 {[
                   {
                     name: "Business Protection",,"
@@ -538,12 +538,12 @@ const AdvancedCybersecurityAI: () => {
                 <DollarSign className="w-8 h-8 text-green-400" />",
   Pricing & Packages
               </h2>
-              <div className="grid md: grid-cols-3 gap-6">",
+              <div className="grid md:grid-cols-3 gap-6">",
               <h2 className= "text-3xl font-bold text-white mb-6 flex items-center gap-3">",
                 <DollarSign className= "w-8 h-8 text-green-400" />",
   Pricing & Packages
               </h2>
-              <div className= "grid md: grid-cols-3 gap-6">",
+              <div className= "grid md:grid-cols-3 gap-6">",
                 {[
                   {
                     name: "Business Protection",,"

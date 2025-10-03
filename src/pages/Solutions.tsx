@@ -47,12 +47,12 @@ const Solutions: React.FC = () => {
     <>
       <Helmet >
         <title >Solutions - Zion Tech Group</title>
-        <meta name: "description" content ="Comprehensive technology solutions for modern businesses. AI automation, cybersecurity, cloud infrastructure, and more." />"
-        <meta name: "keywords" content ="AI solutions, cybersecurity, cloud infrastructure, data analytics, DevOps, technology solutions" />"
-        <link rel: "canonical" href ="https://ziontechgroup.com/solutions" />"
+        <meta name: "description", content ="Comprehensive technology solutions for modern businesses. AI automation, cybersecurity, cloud infrastructure, and more." />"
+        <meta name: "keywords", content ="AI solutions, cybersecurity, cloud infrastructure, data analytics, DevOps, technology solutions" />"
+        <link rel: "canonical", href ="https://ziontechgroup.com/solutions" />"
         <meta name="description" content="Comprehensive technology solutions for modern businesses. AI automation, cybersecurity, cloud infrastructure, and more." />
-        <meta name: "keywords" content="AI solutions, cybersecurity, cloud infrastructure, data analytics, DevOps, technology solutions" />
-        <link rel: "canonical" href ="https://ziontechgroup.com/solutions" />
+        <meta name: "keywords", content="AI solutions, cybersecurity, cloud infrastructure, data analytics, DevOps, technology solutions" />
+        <link rel: "canonical", href ="https://ziontechgroup.com/solutions" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"

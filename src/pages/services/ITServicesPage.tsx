@@ -63,7 +63,7 @@ const ITServicesPage: React.FC = () => {
         {/* Services Grid */}
         <section className="py-20">"
           <div className="container mx-auto px-6">"
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">"
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">"
               {itServices.map((service, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-sm hover: shadow-lg transition-shadow">"
                   <div className="text-4xl mb-4">{service.icon}</div>"
@@ -100,7 +100,7 @@ const ITServicesPage: React.FC = () => {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md: grid-cols-3 gap-8">"
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">"
               <div className="text-center">"
                 <div className="text-4xl mb-4">🛡️</div>"
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Enterprise Security</h3>"
@@ -138,7 +138,7 @@ const ITServicesPage: React.FC = () => {
               </p>
             </div>
             
-            <div className="grid grid-cols-2 md: grid-cols-4 gap-8">"
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">"
               <div className="bg-white p-6 rounded-xl shadow-sm text-center">"
                 <h3 className="text-lg font-bold text-gray-900 mb-2">Cloud Providers</h3>"
                 <p className="text-gray-600">AWS, Azure, Google Cloud</p>"
@@ -169,7 +169,7 @@ const ITServicesPage: React.FC = () => {
             <p className="text-xl mb-8 text-purple-100 max-w-2xl mx-auto">"
               Let's discuss how our IT services can improve your infrastructure performance and security.';
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">"
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <Link 
                 to="/contact" 
                 className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors

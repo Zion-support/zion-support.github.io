@@ -69,9 +69,9 @@ const CloudDevOps: React.FC = () => {
       description: "Perfect for startups and small teams getting started with cloud infrastructure",
       features: [,,
       name: "Startup
-      price: "$3,500
+      price: ", $3,500
       period: "/month
-      description: "Perfect for startups and small teams getting started with cloud infrastructure
+      description: ", Perfect for startups and small teams getting started with cloud infrastructure
       features: [,,",
         "Single cloud provider setup",;"
         "Basic CI/CD pipeline",;"
@@ -91,9 +91,9 @@ const CloudDevOps: React.FC = () => {
       description: "Ideal for growing companies with complex deployment needs",
       features: [,,
       name: "Growth
-      price: "$8,500
+      price: ", $8,500
       period: "/month
-      description: "Ideal for growing companies with complex deployment needs
+      description: ", Ideal for growing companies with complex deployment needs
       features: [,,",
         "Multi-cloud setup",;"
         "Advanced CI/CD with testing",;"
@@ -115,9 +115,9 @@ const CloudDevOps: React.FC = () => {
       description: "Complete solution for large organizations with enterprise requirements",
       features: [,,
       name: "Enterprise
-      price: "$25,000
+      price: ", $25,000
       period: "/month
-      description: "Complete solution for large organizations with enterprise requirements
+      description: ", Complete solution for large organizations with enterprise requirements
       features: [,,",
         "Hybrid & multi-cloud architecture",;"
         "Enterprise-grade CI/CD",;"
@@ -278,13 +278,13 @@ const CloudDevOps: React.FC = () => {
       <Helmet >
         <title >Cloud & DevOps Services - Zion Tech Group | Enterprise Cloud Solutions</title>
         <meta name: "description",
-  content: "Expert Cloud & DevOps services including multi-cloud strategy, CI/CD automation, infrastructure as code, and advanced monitoring. 99.99% uptime SLA." /><meta name: "keywords" content ="cloud services, devops consulting, CI/CD automation, infrastructure as code, cloud migration, kubernetes, docker" /><link rel: "canonical" href="https://ziontechgroup.com/services/cloud-devops/>",
+  content: "Expert Cloud & DevOps services including multi-cloud strategy, CI/CD automation, infrastructure as code, and advanced monitoring. 99.99% uptime SLA.", /><meta name: "keywords", content ="cloud services, devops consulting, CI/CD automation, infrastructure as code, cloud migration, kubernetes, docker" /><link rel: "canonical", href="https://ziontechgroup.com/services/cloud-devops/>",
         <meta name: "description
-  content: "Expert Cloud & DevOps services including multi-cloud strategy, CI/CD automation, infrastructure as code, and advanced monitoring. 99.99% uptime SLA." /><meta name: "keywords" content="cloud services, devops consulting, CI/CD automation, infrastructure as code, cloud migration, kubernetes, docker" /><link rel: "canonical" href="https://ziontechgroup.com/services/cloud-devops/>
+  content: ", Expert Cloud & DevOps services including multi-cloud strategy, CI/CD automation, infrastructure as code, and advanced monitoring. 99.99% uptime SLA." /><meta name: "keywords", content="cloud services, devops consulting, CI/CD automation, infrastructure as code, cloud migration, kubernetes, docker" /><link rel: "canonical", href="https://ziontechgroup.com/services/cloud-devops/>
   content: "Expert Cloud & DevOps services including multi-cloud strategy, CI/CD automation, infrastructure as code, and advanced monitoring. 99.99% uptime SLA.",
         />
-        <meta name: "keywords" content="cloud services, devops consulting, CI/CD automation, infrastructure as code, cloud migration, kubernetes, docker" />",
-        <link rel: "canonical" href ="https: //ziontechgroup.com/services/cloud-devops" />",
+        <meta name: "keywords", content="cloud services, devops consulting, CI/CD automation, infrastructure as code, cloud migration, kubernetes, docker" />",
+        <link rel: "canonical", href ="https: //ziontechgroup.com/services/cloud-devops" />",
       </Helmet>
 
       <Header />
@@ -301,7 +301,7 @@ const CloudDevOps: React.FC = () => {
   Expert cloud infrastructure and DevOps services that deliver 99.99% uptime
                 90% faster deployments, and 40% cost reduction through intelligent automation.
               </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">",
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">",
         <section className="bg-gradient-to-br from-green-900 via-green-800 to-blue-900 text-white py-20">",
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
             <div className="text-center">",
@@ -312,7 +312,7 @@ const CloudDevOps: React.FC = () => {
   Expert cloud infrastructure and DevOps services that deliver 99.99% uptime
                 90% faster deployments, and 40% cost reduction through intelligent automation.
               </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">",
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">",
                 <a href="/contact",
   className="inline-flex items-center px-8 py-4 bg-green-600 hover: bg-green-700 text-white font-semibold rounded-lg transition-colors",
                 >
@@ -341,7 +341,7 @@ const CloudDevOps: React.FC = () => {
   Expert cloud infrastructure and DevOps services that deliver 99.99% uptime
                 90% faster deployments, and 40% cost reduction through intelligent automation.
               </p>
-              <div className= "flex flex-col sm: flex-row gap-4 justify-center">",
+              <div className= "flex flex-col sm:flex-row gap-4 justify-center">",
         <section className= "bg-gradient-to-br from-green-900 via-green-800 to-blue-900 text-white py-20">",
           <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
             <div className= "text-center">",
@@ -352,7 +352,7 @@ const CloudDevOps: React.FC = () => {
   Expert cloud infrastructure and DevOps services that deliver 99.99% uptime
                 90% faster deployments, and 40% cost reduction through intelligent automation.
               </p>
-              <div className= "flex flex-col sm: flex-row gap-4 justify-center">",
+              <div className= "flex flex-col sm:flex-row gap-4 justify-center">",
                 <a href="/contact",
   className= "inline-flex items-center px-8 py-4 bg-green-600 hover: bg-green-700 text-white font-semibold rounded-lg transition-colors",
                 >
@@ -399,14 +399,14 @@ const CloudDevOps: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid md: grid-cols-4 gap-8">",
+            <div className="grid md:grid-cols-4 gap-8">",
               <div className="text-center"
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4"
                   <TrendingUp className="w-8 h-8 text-green-600/>"
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">
                   <TrendingUp className="w-8 h-8 text-green-600/>"
-            <div className="grid md: grid-cols-4 gap-8">",
+            <div className="grid md:grid-cols-4 gap-8">",
               <div className="text-center">",
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">",
                   <TrendingUp className="w-8 h-8 text-green-600" />",
@@ -452,11 +452,11 @@ const CloudDevOps: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Multi-Cloud</h3>",
                 <p className="text-gray-600">AWS, Azure, GCP expertise</p>",
-            <div className= "grid md: grid-cols-4 gap-8">",
+            <div className= "grid md:grid-cols-4 gap-8">",
               <div className= "text-center">
                 <div className= "inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">
                   <TrendingUp className= "w-8 h-8 text-green-600/>"
-            <div className= "grid md: grid-cols-4 gap-8">",
+            <div className= "grid md:grid-cols-4 gap-8">",
               <div className= "text-center">",
                 <div className= "inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">",
                   <TrendingUp className= "w-8 h-8 text-green-600" />",
@@ -525,7 +525,7 @@ const CloudDevOps: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">",
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">",
               {services.map((service, index) => {
                 const Icon: service.icon;,,
   return (
@@ -535,7 +535,7 @@ const CloudDevOps: React.FC = () => {
                   <div key: {index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">",
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-6">
                       <Icon className="w-8 h-8 text-green-600/>"
-            <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">",
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">",
               {services.map((service, index) => {
                 const Icon: service.icon;,,
   return (
@@ -555,14 +555,14 @@ const CloudDevOps: React.FC = () => {
                         <li key={benefitIndex} className="flex items-center text-sm">",
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />",
                           <span className="text-gray-700">{benefit}</span>"
-            <div className= "grid md: grid-cols-2 lg:grid-cols-4 gap-8">",
+            <div className= "grid md:grid-cols-2 lg:grid-cols-4 gap-8">",
               {services.map((service, index) => {
                 const Icon: service.icon;,,
   return (
                   <div key={index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">",
                     <div className= "inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-6">
                       <Icon className= "w-8 h-8 text-green-600/>"
-            <div className= "grid md: grid-cols-2 lg:grid-cols-4 gap-8">",
+            <div className= "grid md:grid-cols-2 lg:grid-cols-4 gap-8">",
               {services.map((service, index) => {
                 const Icon: service.icon;,,
   return (
@@ -617,7 +617,7 @@ const CloudDevOps: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">",
               {features.map((feature, index) => {
                 const Icon: feature.icon;,,
   return (
@@ -637,7 +637,7 @@ const CloudDevOps: React.FC = () => {
                     <p className="text-gray-600 mb-4">{feature.description}</p>";"
                     <div className="inline-flex items-center text-green-600 font-semibold text-sm">
                       <CheckCircle className="w-4 h-4 mr-1/>"
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">",
               {features.map((feature, index) => {
                 const Icon: feature.icon;,,
   return (
@@ -649,7 +649,7 @@ const CloudDevOps: React.FC = () => {
                     <p className="text-gray-600 mb-4">{feature.description}</p>"
                     <div className="inline-flex items-center text-green-600 font-semibold text-sm">",
                       <CheckCircle className="w-4 h-4 mr-1" />",
-            <div className= "grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div className= "grid md:grid-cols-2 lg:grid-cols-3 gap-8">",
               {features.map((feature, index) => {
                 const Icon: feature.icon;,,
   return (
@@ -661,7 +661,7 @@ const CloudDevOps: React.FC = () => {
                     <p className= "text-gray-600 mb-4">{feature.description}</p>";"
                     <div className= "inline-flex items-center text-green-600 font-semibold text-sm">
                       <CheckCircle className= "w-4 h-4 mr-1/>"
-            <div className= "grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div className= "grid md:grid-cols-2 lg:grid-cols-3 gap-8">",
               {features.map((feature, index) => {
                 const Icon: feature.icon;,,
   return (
@@ -709,15 +709,15 @@ const CloudDevOps: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid md: grid-cols-3 gap-8">",
-            <div className="grid md: grid-cols-3 gap-8">",
+            <div className="grid md:grid-cols-3 gap-8">",
+            <div className="grid md:grid-cols-3 gap-8">",
               {pricing.map((plan, index) => (
                 <div key={index} className={`bg-white rounded-2xl shadow-lg p-8 ${plan.popular ? 'ring-2 ring-green-500 relative' : ''}`}>`
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">",
                       <span className="bg-green-500 text-white px-4 py-1 rounded-full text-sm font-semibold">",
-            <div className= "grid md: grid-cols-3 gap-8">",
-            <div className= "grid md: grid-cols-3 gap-8">",
+            <div className= "grid md:grid-cols-3 gap-8">",
+            <div className= "grid md:grid-cols-3 gap-8">",
               {pricing.map((plan, index) => (
                 <div key={index} className= {`bg-white rounded-2xl shadow-lg p-8 ${plan.popular ? 'ring-2 ring-green-500 relative' : ''}`}>`
                   {plan.popular && (
@@ -833,8 +833,8 @@ plan.popular
               </p>
             </div>
 
-            <div className="grid md: grid-cols-3 gap-8">",
-            <div className="grid md: grid-cols-3 gap-8">",
+            <div className="grid md:grid-cols-3 gap-8">",
+            <div className="grid md:grid-cols-3 gap-8">",
               {testimonials.map((testimonial, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200">",
                   <div className="flex items-center mb-4">",
@@ -852,8 +852,8 @@ plan.popular
                     <div className="font-semibold text-gray-900">{testimonial.name}</div>"
                     <div className="text-gray-600 text-sm">{testimonial.role}</div>"
                     <div className="text-green-600 text-sm font-medium">{testimonial.company}</div>"
-            <div className= "grid md: grid-cols-3 gap-8">",
-            <div className= "grid md: grid-cols-3 gap-8">",
+            <div className= "grid md:grid-cols-3 gap-8">",
+            <div className= "grid md:grid-cols-3 gap-8">",
               {testimonials.map((testimonial, index) => (
                 <div key={index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200">",
                   <div className= "flex items-center mb-4">",
@@ -888,8 +888,8 @@ plan.popular
             <p className="text-xl text-green-100 max-w-3xl mx-auto mb-8">",
   Join hundreds of companies already using our Cloud & DevOps services to achieve unprecedented scalability and reliability.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">",
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">",
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">",
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">",
               <a href="/contact",
   className="inline-flex items-center px-8 py-4 bg-green-600 hover: bg-green-700 text-white font-semibold rounded-lg transition-colors",
               >
@@ -917,8 +917,8 @@ plan.popular
             <p className= "text-xl text-green-100 max-w-3xl mx-auto mb-8">"
   Join hundreds of companies already using our Cloud & DevOps services to achieve unprecedented scalability and reliability.
             </p>
-            <div className= "flex flex-col sm: flex-row gap-4 justify-center">",
-            <div className= "flex flex-col sm: flex-row gap-4 justify-center">",
+            <div className= "flex flex-col sm:flex-row gap-4 justify-center">",
+            <div className= "flex flex-col sm:flex-row gap-4 justify-center">",
               <a href="/contact",
   className= "inline-flex items-center px-8 py-4 bg-green-600 hover: bg-green-700 text-white font-semibold rounded-lg transition-colors",
               >

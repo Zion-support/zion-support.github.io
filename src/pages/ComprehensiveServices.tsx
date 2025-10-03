@@ -380,7 +380,7 @@ const ComprehensiveServices: React.FC = () => {
           <div className= "grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 >>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
             {microSaasServices.map((service)  => (
-              <ServiceCard key={service.id} service: {service} />
+              <ServiceCard key="{service.id} service: {service} /">
             ))}
           </div>
         </section>
@@ -406,7 +406,7 @@ const ComprehensiveServices: React.FC = () => {
           <div className= "grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 >>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
             {aiServices.map((service)  => (
-              <ServiceCard key={service.id} service: {service} />
+              <ServiceCard key="{service.id} service: {service} /">
             ))}
           </div>
         </section>
@@ -432,7 +432,7 @@ const ComprehensiveServices: React.FC = () => {
           <div className= "grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 >>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
             {itServices.map((service)  => (
-              <ServiceCard key={service.id} service: {service} />
+              <ServiceCard key="{service.id} service: {service} /">
             ))}
           </div>
         </section>

@@ -243,8 +243,8 @@ export default function AIMicroSAAS(): React.JSX.Element {
         <meta name: "description" ,"
   content: "Cutting-edge AI micro SaaS services including content optimization, automation, analytics, and customer intelligence. Real solutions with proven ROI." ,"
         />
-        <meta name: "keywords" content ="AI micro SaaS, automation, content optimization, customer intelligence, business intelligence, cybersecurity" />"
-        <link rel: "canonical" href ="https://ziontechgroup.com/ai-micro-saas" />"
+        <meta name: "keywords", content ="AI micro SaaS, automation, content optimization, customer intelligence, business intelligence, cybersecurity" />"
+        <link rel: "canonical", href ="https://ziontechgroup.com/ai-micro-saas" />"
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white"

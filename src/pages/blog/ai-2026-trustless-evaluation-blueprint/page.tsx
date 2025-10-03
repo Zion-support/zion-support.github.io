@@ -10,7 +10,7 @@ export default function AITrustlessEvaluationBlueprint2026(): React.JSX.Element 
       <Helmet >
         <title >AI 2026: Trustless Evaluation Blueprint</title>,,
         <meta name: "description",;,"
-  content: "Cryptographically verifiable evals, signed datasets, and reproducible pipelines for zero‑trust AI validation." /><link rel: "canonical",;,"
+  content: "Cryptographically verifiable evals, signed datasets, and reproducible pipelines for zero‑trust AI validation.", /><link rel: "canonical",;,"
   href="https://ziontechgroup.com/blog/ai-2026-trustless-evaluation-blueprint",
         />
       </Helmet>

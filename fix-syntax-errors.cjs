@@ -3,117 +3,78 @@
 const fs = require('fs');
 const path = require('path');
 
-// Common syntax error patterns to fix
-const fixes = [
-  // Fix extra semicolons in JSX attributes
-  { pattern: /className="([^"]*)"\s*;"/g, replacement: 'className="$1"' },
-  { pattern: /className="([^"]*)"\s*;,\s*"/g, replacement: 'className="$1"' },
-  { pattern: /className="([^"]*)"\s*;,\s*$/gm, replacement: 'className="$1"' },
+// Function to fix common syntax errors
+function fixSyntaxErrors(content) {
+  // Fix missing quotes around className attributes
+  content = content.replace(/className=([^"'\s][^"'>]*[^"'\s])\s*>/g, 'className="$1">');
+  content = content.replace(/className=([^"'\s][^"'>]*[^"'\s])\s*\/>/g, 'className="$1" />');
   
-  // Fix extra commas in JSX
-  { pattern: />\s*;,\s*$/gm, replacement: '>' },
-  { pattern: />\s*;,\s*</gm, replacement: '><' },
+  // Fix missing quotes around other JSX attributes
+  content = content.replace(/(\w+)=([^"'\s][^"'>]*[^"'\s])\s*>/g, '$1="$2">');
+  content = content.replace(/(\w+)=([^"'\s][^"'>]*[^"'\s])\s*\/>/g, '$1="$2" />');
   
-  // Fix unterminated string literals
-  { pattern: /"\s*;\s*$/gm, replacement: '"' },
-  { pattern: /"\s*;,\s*$/gm, replacement: '"' },
+  // Fix missing commas after object properties
+  content = content.replace(/(\w+):\s*"([^"]*)"\s*([^,}\s])/g, '$1: "$2", $3');
   
-  // Fix import statements
-  { pattern: /import\s+([^;]+);';/g, replacement: "import $1';" },
-  { pattern: /import\s+([^;]+);,\s*$/gm, replacement: "import $1;" },
+  // Fix malformed JSX with extra quotes
+  content = content.replace(/className="([^"]*)"\s*"/g, 'className="$1"');
   
-  // Fix function declarations
-  { pattern: /const\s+([^=]+)=\s*\(\)\s*=>\s*{,\s*$/gm, replacement: 'const $1 = () => {' },
+  // Fix spaces in Tailwind classes (remove spaces before colons)
+  content = content.replace(/sm:\s+flex/g, 'sm:flex');
+  content = content.replace(/md:\s+grid/g, 'md:grid');
+  content = content.replace(/lg:\s+grid/g, 'lg:grid');
   
-  // Fix JSX closing tags
-  { pattern: /<\/div>\s*;,\s*$/gm, replacement: '</div>' },
-  { pattern: /<\/section>\s*;,\s*$/gm, replacement: '</section>' },
-  { pattern: /<\/h[1-6]>\s*;,\s*$/gm, replacement: (match) => match.replace(/;,\s*$/, '') },
-  
-  // Fix meta tags
-  { pattern: /<meta[^>]*>\s*;,\s*$/gm, replacement: (match) => match.replace(/;,\s*$/, '') },
-  
-  // Fix Helmet tags
-  { pattern: /<\/Helmet>\s*;,\s*$/gm, replacement: '</Helmet>' },
-];
+  return content;
+}
 
-function fixFile(filePath) {
+// Function to process a file
+function processFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
-    let fixedContent = content;
+    const fixedContent = fixSyntaxErrors(content);
     
-    // Apply all fixes
-    fixes.forEach(fix => {
-      if (typeof fix.replacement === 'function') {
-        fixedContent = fixedContent.replace(fix.pattern, fix.replacement);
-      } else {
-        fixedContent = fixedContent.replace(fix.pattern, fix.replacement);
-      }
-    });
-    
-    // Only write if content changed
-    if (fixedContent !== content) {
+    if (content !== fixedContent) {
       fs.writeFileSync(filePath, fixedContent, 'utf8');
       console.log(`Fixed: ${filePath}`);
       return true;
     }
     return false;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
 }
 
-function walkDirectory(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {
-  const files = [];
+// Function to recursively find TypeScript/TSX files
+function findTsxFiles(dir, files = []) {
+  const items = fs.readdirSync(dir);
   
-  function walk(currentDir) {
-    const items = fs.readdirSync(currentDir);
+  for (const item of items) {
+    const fullPath = path.join(dir, item);
+    const stat = fs.statSync(fullPath);
     
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        walk(fullPath);
-      } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
-        files.push(fullPath);
-      }
+    if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+      findTsxFiles(fullPath, files);
+    } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
+      files.push(fullPath);
     }
   }
   
-  walk(dir);
   return files;
 }
 
 // Main execution
+console.log('Starting syntax error fixes...');
+
 const srcDir = path.join(__dirname, 'src');
-const appDir = path.join(__dirname, 'app');
+const files = findTsxFiles(srcDir);
 
-let totalFixed = 0;
-
-// Fix files in src directory
-if (fs.existsSync(srcDir)) {
-  const srcFiles = walkDirectory(srcDir);
-  console.log(`Found ${srcFiles.length} files in src directory`);
-  
-  for (const file of srcFiles) {
-    if (fixFile(file)) {
-      totalFixed++;
-    }
+let fixedCount = 0;
+for (const file of files) {
+  if (processFile(file)) {
+    fixedCount++;
   }
 }
 
-// Fix files in app directory
-if (fs.existsSync(appDir)) {
-  const appFiles = walkDirectory(appDir);
-  console.log(`Found ${appFiles.length} files in app directory`);
-  
-  for (const file of appFiles) {
-    if (fixFile(file)) {
-      totalFixed++;
-    }
-  }
-}
-
-console.log(`\nTotal files fixed: ${totalFixed}`);
+console.log(`\nFixed ${fixedCount} files out of ${files.length} total files.`);
+console.log('Syntax error fixes completed!');

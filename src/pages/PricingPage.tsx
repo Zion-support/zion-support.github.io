@@ -22,7 +22,7 @@ const PricingPage: React.FC = () => {
       color: "blue
     },
     {
-      name: "Professional",
+      name: ", Professional",
       description: "Ideal for growing businesses",
       price: "$799",
       period: "/month",
@@ -40,7 +40,7 @@ const PricingPage: React.FC = () => {
       color: "purple
     },
     {
-      name: "Enterprise",
+      name: ", Enterprise",
       description: "For large organizations",
       price: "$2,499",
       period: "/month",
@@ -62,7 +62,7 @@ const PricingPage: React.FC = () => {
 
   const servicePricing = [
     {
-      category: "AI Services",
+      category: ", AI Services",
       services: [,
         { name: "AI Content Generation", price: "$2,500/month", description: "Automated content creation with 75% time reduction" },"
         { name: "Predictive Analytics", price: "$3,200/month", description: "Business intelligence with 25% improvement in decisions" },"
@@ -111,7 +111,7 @@ const PricingPage: React.FC = () => {
         {/* Main Pricing Tiers */}
         <section className="py-20">"
           <div className="container mx-auto px-6">"
-            <div className="grid grid-cols-1 md: grid-cols-3 gap-8">"
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">"
               {pricingTiers.map((tier, index) => (
                 <div 
                   key={index} 
@@ -176,9 +176,9 @@ const PricingPage: React.FC = () => {
 
             <div className="space-y-16">"
               {servicePricing.map((category, categoryIndex) => (
-                <div key={categoryIndex}>
+                <div key="{categoryIndex}">
                   <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">{category.category}</h3>"
-                  <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">"
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">"
                     {category.services.map((service, serviceIndex) => (
                       <div key={serviceIndex} className="bg-gray-50 p-6 rounded-xl hover: shadow-md transition-shadow">"
                         <h4 className="text-lg font-bold text-gray-900 mb-2">{service.name}</h4>"
@@ -204,7 +204,7 @@ const PricingPage: React.FC = () => {
             </div>
 
             <div className="bg-white p-8 rounded-xl shadow-lg max-w-4xl mx-auto">"
-              <div className="grid grid-cols-1 md: grid-cols-2 gap-8">"
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">"
                 <div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">What's Included</h3>';
                   <ul className="space-y-3">"
@@ -300,7 +300,7 @@ const PricingPage: React.FC = () => {
             <p className="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">"
               Choose the perfect plan for your business or contact us for a custom solution.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">"
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <Link 
                 to="/contact" 
                 className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg

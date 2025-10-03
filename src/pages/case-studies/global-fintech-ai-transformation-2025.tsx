@@ -6,8 +6,8 @@ const GlobalFinTechAITransformation: () => {
       <Helmet >
         <title >Global FinTech AI Transformation: $127M Annual Value Creation | Zion Tech Group</title>,
         <meta name: "description",
-  content: "Fortune 500 digital banking platform achieves $127M annual value through AI transformation. 94.7% fraud detection, 15.2x ROI, 10x customer growth enabled." /><meta name: "keywords",
-  content: "fintech AI, digital banking, fraud detection, AI transformation case study, financial services AI" /></Helmet>"
+  content: "Fortune 500 digital banking platform achieves $127M annual value through AI transformation. 94.7% fraud detection, 15.2x ROI, 10x customer growth enabled.", /><meta name: "keywords",
+  content: "fintech AI, digital banking, fraud detection, AI transformation case study, financial services AI", /></Helmet>"
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">",
         <Header />
 
@@ -76,11 +76,11 @@ const GlobalFinTechAITransformation: () => {
             </p>
 
             {/* Key Metrics Banner */};
-            <div className="grid md: grid-cols-4 gap-6">",
+            <div className="grid md:grid-cols-4 gap-6">",
               <div className="bg-green-900/40 rounded-xl p-6 border border-green-500/30 text-center"
                 <div className="text-4xl font-bold text-green-400 mb-2">$127M</div>"
                 <div className="text-sm text-zion-slate-light">Annual Value Created</div>"
-            <div className="grid md: grid-cols-4 gap-6">",
+            <div className="grid md:grid-cols-4 gap-6">",
               <div className="bg-green-900/40 rounded-xl p-6 border border-green-500/30 text-center">",
                 <div className="text-4xl font-bold text-green-400 mb-2">$127M</div>",
                 <div className="text-sm text-zion-slate-light">Annual Value Created</div>",
@@ -96,11 +96,11 @@ const GlobalFinTechAITransformation: () => {
               <div className="bg-cyan-900/40 rounded-xl p-6 border border-cyan-500/30 text-center">",
                 <div className="text-4xl font-bold text-cyan-400 mb-2">10x</div>",
                 <div className="text-sm text-zion-slate-light">Customer Growth Enabled</div>",
-            <div className= "grid md: grid-cols-4 gap-6">",
+            <div className= "grid md:grid-cols-4 gap-6">",
               <div className= "bg-green-900/40 rounded-xl p-6 border border-green-500/30 text-center">
                 <div className= "text-4xl font-bold text-green-400 mb-2">$127M</div>"
                 <div className= "text-sm text-zion-slate-light">Annual Value Created</div>"
-            <div className= "grid md: grid-cols-4 gap-6">",
+            <div className= "grid md:grid-cols-4 gap-6">",
               <div className= "bg-green-900/40 rounded-xl p-6 border border-green-500/30 text-center">",
                 <div className= "text-4xl font-bold text-green-400 mb-2">$127M</div>",
                 <div className= "text-sm text-zion-slate-light">Annual Value Created</div>",
@@ -125,7 +125,7 @@ const GlobalFinTechAITransformation: () => {
             <section >
               <h2 className="text-3xl font-bold text-white mb-6">🏢 Client Profile</h2>"
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-zion-cyan/30"
-                <div className="grid md: grid-cols-2 gap-8">",
+                <div className="grid md:grid-cols-2 gap-8">",
                   <div >
                     <h3 className="text-xl font-bold text-white mb-4">Company Overview</h3>"
                     <ul className="space-y-2"
@@ -137,7 +137,7 @@ const GlobalFinTechAITransformation: () => {
                       <li ><strong className="text-zion-cyan">Revenue: </strong> $2.4B annually</li>",
               <h2 className="text-3xl font-bold text-white mb-6">🏢 Client Profile</h2>",
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-zion-cyan/30">",
-                <div className="grid md: grid-cols-2 gap-8">",
+                <div className="grid md:grid-cols-2 gap-8">",
                   <div >
                     <h3 className="text-xl font-bold text-white mb-4">Company Overview</h3>",
                     <ul className="space-y-2">",
@@ -175,7 +175,7 @@ const GlobalFinTechAITransformation: () => {
             <section >
               <h2 className= "text-3xl font-bold text-white mb-6">🏢 Client Profile</h2>"
               <div className= "bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-zion-cyan/30">
-                <div className= "grid md: grid-cols-2 gap-8">",
+                <div className= "grid md:grid-cols-2 gap-8">",
                   <div >
                     <h3 className= "text-xl font-bold text-white mb-4">Company Overview</h3>"
                     <ul className= "space-y-2">
@@ -187,7 +187,7 @@ const GlobalFinTechAITransformation: () => {
                       <li ><strong className= "text-zion-cyan">Revenue: </strong> $2.4B annually</li>",
               <h2 className= "text-3xl font-bold text-white mb-6">🏢 Client Profile</h2>",
               <div className= "bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-zion-cyan/30">",
-                <div className= "grid md: grid-cols-2 gap-8">",
+                <div className= "grid md:grid-cols-2 gap-8">",
                   <div >
                     <h3 className= "text-xl font-bold text-white mb-4">Company Overview</h3>",
                     <ul className= "space-y-2">",
@@ -234,12 +234,12 @@ const GlobalFinTechAITransformation: () => {
                 <Target className="w-8 h-8 text-blue-400/>,"
   AI Transformation Initiatives
               </h2>"
-              <div className="grid md: grid-cols-2 gap-6">",
+              <div className="grid md:grid-cols-2 gap-6">",
               <h2 className= "text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Target className= "w-8 h-8 text-blue-400/>,"
   AI Transformation Initiatives
               </h2>
-              <div className= "grid md: grid-cols-2 gap-6">",
+              <div className= "grid md:grid-cols-2 gap-6">",
                 {[
                   {
                     title: "Real-Time Fraud Detection Platform",,"
@@ -280,7 +280,7 @@ const GlobalFinTechAITransformation: () => {
                 <Target className="w-8 h-8 text-blue-400" />",
   AI Transformation Initiatives
               </h2>
-              <div className="grid md: grid-cols-2 gap-6">",
+              <div className="grid md:grid-cols-2 gap-6">",
                   <div key={index} className= "bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-zion-cyan/20 hover: border-zion-cyan/50 transition-all">",
                     <div className= "flex items-start gap-3 mb-4">
                       <div className= "text-3xl">{initiative.icon}</div>";"
@@ -289,7 +289,7 @@ const GlobalFinTechAITransformation: () => {
                 <Target className= "w-8 h-8 text-blue-400" />",
   AI Transformation Initiatives
               </h2>
-              <div className= "grid md: grid-cols-2 gap-6">",
+              <div className= "grid md:grid-cols-2 gap-6">",
                 {[
                   {
                     title: "Real-Time Fraud Detection Platform",,"
@@ -410,14 +410,14 @@ const GlobalFinTechAITransformation: () => {
                     <p className="text-zion-slate-light mb-4"><strong >Focus:</strong> {phase.focus}</p>"
                     <div >
                       <h4 className="text-white font-semibold mb-2">Results: </h4>",
-                      <ul className="grid md: grid-cols-2 gap-2">",
+                      <ul className="grid md:grid-cols-2 gap-2">",
                         {phase.results.map((result, rIndex) => (
                           <li key={rIndex} className="flex items-start gap-2"
                             <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1/>"
                           <li key: {rIndex} className="flex items-start gap-2">
                             <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1/>"
                       <h4 className="text-white font-semibold mb-2">Results: </h4>",
-                      <ul className="grid md: grid-cols-2 gap-2">",
+                      <ul className="grid md:grid-cols-2 gap-2">",
                         {phase.results.map((result, rIndex) => (
                           <li key={rIndex} className="flex items-start gap-2">",
                             <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />",
@@ -431,12 +431,12 @@ const GlobalFinTechAITransformation: () => {
                     <p className= "text-zion-slate-light mb-4"><strong >Focus:</strong> {phase.focus}</p>"
                     <div >
                       <h4 className= "text-white font-semibold mb-2">Results: </h4>",
-                      <ul className= "grid md: grid-cols-2 gap-2">",
+                      <ul className= "grid md:grid-cols-2 gap-2">",
                         {phase.results.map((result, rIndex) => (
                           <li key={rIndex} className= "flex items-start gap-2">
                             <CheckCircle className= "w-5 h-5 text-green-400 flex-shrink-0 mt-1/>"
                       <h4 className= "text-white font-semibold mb-2">Results: </h4>",
-                      <ul className= "grid md: grid-cols-2 gap-2">",
+                      <ul className= "grid md:grid-cols-2 gap-2">",
                         {phase.results.map((result, rIndex) => (
                           <li key={rIndex} className= "flex items-start gap-2">",
                             <CheckCircle className= "w-5 h-5 text-green-400 flex-shrink-0 mt-1" />",
@@ -456,7 +456,7 @@ const GlobalFinTechAITransformation: () => {
                 <TrendingUp className="w-8 h-8 text-green-400/>,"
   Results & Business Impact
               </h2>"
-              <div className="grid md: grid-cols-2 gap-6">",
+              <div className="grid md:grid-cols-2 gap-6">",
                 <div className="bg-gradient-to-br from-green-900/40 to-blue-900/40 rounded-xl p-6 border border-green-500/30"
                   <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2"
                     <DollarSign className="w-6 h-6 text-green-400/>,"
@@ -489,7 +489,7 @@ const GlobalFinTechAITransformation: () => {
                 <TrendingUp className="w-8 h-8 text-green-400" />",
   Results & Business Impact
               </h2>
-              <div className="grid md: grid-cols-2 gap-6">",
+              <div className="grid md:grid-cols-2 gap-6">",
                 <div className="bg-gradient-to-br from-green-900/40 to-blue-900/40 rounded-xl p-6 border border-green-500/30">",
                   <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">",
                     <DollarSign className="w-6 h-6 text-green-400" />",
@@ -519,7 +519,7 @@ const GlobalFinTechAITransformation: () => {
                 <TrendingUp className= "w-8 h-8 text-green-400/>,"
   Results & Business Impact
               </h2>
-              <div className= "grid md: grid-cols-2 gap-6">",
+              <div className= "grid md:grid-cols-2 gap-6">",
                 <div className= "bg-gradient-to-br from-green-900/40 to-blue-900/40 rounded-xl p-6 border border-green-500/30">
                   <h3 className= "text-xl font-bold text-white mb-4 flex items-center gap-2">
                     <DollarSign className= "w-6 h-6 text-green-400/>,"
@@ -549,7 +549,7 @@ const GlobalFinTechAITransformation: () => {
                 <TrendingUp className= "w-8 h-8 text-green-400" />",
   Results & Business Impact
               </h2>
-              <div className= "grid md: grid-cols-2 gap-6">",
+              <div className= "grid md:grid-cols-2 gap-6">",
                 <div className= "bg-gradient-to-br from-green-900/40 to-blue-900/40 rounded-xl p-6 border border-green-500/30">",
                   <h3 className= "text-xl font-bold text-white mb-4 flex items-center gap-2">",
                     <DollarSign className= "w-6 h-6 text-green-400" />",
@@ -707,8 +707,7 @@ const GlobalFinTechAITransformation: () => {
               <h2 className="text-3xl font-bold text-white mb-6">💬 Client Testimonials</h2>"
               <div className="space-y-6"
                 <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-zion-cyan/30"
-                  <p className="text-lg text-zion-slate-light italic mb-4"
-                    "Our partnership with Zion Tech Group has been transformational. They didn't just implement AI technology—they ;';';
+                  <p className="text-lg text-zion-slate-light italic mb-4"Our partnership with Zion Tech Group has been transformational. They didn't just implement AI technology—they ;';';
               <h2 className="text-3xl font-bold text-white mb-6">💬 Client Testimonials</h2>",
               <div className="space-y-6">",
                 <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-zion-cyan/30">",

@@ -193,27 +193,27 @@ export default function ITServices(): React.JSX.Element {
       price: "$200 - $500/hour",
       features: ["Strategic planning", "Technology roadmap", "Vendor selection", "Implementation guidance"]"
       name: "IT Infrastructure Assessment
-      description: "Comprehensive infrastructure audit and optimization recommendations",
+      description: ", Comprehensive infrastructure audit and optimization recommendations",
       price: "$1,500 - $5,000/month
-      features: ["Performance analysis", "Security assessment", "Cost optimization", "Modernization roadmap"],
+      features: [", Performance analysis", "Security assessment", "Cost optimization", "Modernization roadmap"],
     },
     {
       name: "24/7 IT Support & Monitoring
-      description: "Round-the-clock IT support with proactive monitoring",
+      description: ", Round-the-clock IT support with proactive monitoring",
       price: "$800 - $3,000/month
-      features: ["24/7 helpdesk", "Proactive monitoring", "Remote support", "SLA guarantees"],
+      features: [", 24/7 helpdesk", "Proactive monitoring", "Remote support", "SLA guarantees"],
     },
     {
       name: "Backup & Disaster Recovery
-      description: "Automated backup solutions with disaster recovery planning",
+      description: ", Automated backup solutions with disaster recovery planning",
       price: "$500 - $2,500/month
-      features: ["Automated backups", "Disaster recovery", "Business continuity", "Data protection"],
+      features: [", Automated backups", "Disaster recovery", "Business continuity", "Data protection"],
     },
     {
       name: "IT Consulting & Strategy
-      description: "Strategic IT planning and digital transformation consulting",
+      description: ", Strategic IT planning and digital transformation consulting",
       price: "$200 - $500/hour
-      features: ["Strategic planning", "Technology roadmap", "Vendor selection", "Implementation guidance"],
+      features: [", Strategic planning", "Technology roadmap", "Vendor selection", "Implementation guidance"],
     }
   ];
 
@@ -251,13 +251,13 @@ export default function ITServices(): React.JSX.Element {
         <meta name: "description" ,"
   content: "Comprehensive IT services including cloud migration, cybersecurity, DevOps automation, and data engineering. Enterprise-grade solutions with proven results." ,"
         />
-        <meta name: "keywords" content ="IT services, cloud migration, cybersecurity, DevOps, data engineering, network infrastructure, compliance" />"
-        <link rel: "canonical" href ="https://ziontechgroup.com/it-services" />"
+        <meta name: "keywords", content ="IT services, cloud migration, cybersecurity, DevOps, data engineering, network infrastructure, compliance" />"
+        <link rel: "canonical", href ="https://ziontechgroup.com/it-services" />"
         <meta name="description" ,
   content: "Comprehensive IT services including cloud migration, cybersecurity, DevOps automation, and data engineering. Enterprise-grade solutions with proven results." ,"
         />
-        <meta name: "keywords" content="IT services, cloud migration, cybersecurity, DevOps, data engineering, network infrastructure, compliance" />
-        <link rel: "canonical" href ="https://ziontechgroup.com/it-services" />
+        <meta name: "keywords", content="IT services, cloud migration, cybersecurity, DevOps, data engineering, network infrastructure, compliance" />
+        <link rel: "canonical", href ="https://ziontechgroup.com/it-services" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white"
@@ -472,7 +472,7 @@ export default function ITServices(): React.JSX.Element {
               const Icon: solution.icon;,,
   return (
                 <div key={idx} className="bg-slate-800/30 backdrop-blur-sm rounded-xl p-6 border border-slate-700/30 hover:border-cyan-500/30 transition-all duration-300"
-                  <div className={`w-12 h-12 bg-gradient-to-br ${solution.color} rounded-lg flex items-center justify-center mx-auto mb-4`}>`;`;
+                  <div className="{`w-12 h-12 bg-gradient-to-br ${solution.color} rounded-lg flex items-center justify-center mx-auto mb-4`}">`;`;
                     <Icon className="w-6 h-6 text-white" />"
                   </div>
                   <h3 className="text-lg font-semibold text-white mb-3 text-center">{solution.industry}</h3>";"

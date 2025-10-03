@@ -63,11 +63,11 @@ export default function Blog(): React.JSX.Element {
       image: "/api/placeholder/400/250",
       title: "How AI Workflow Automation Transformed a Fortune 500 Company",
       excerpt: "Discover how our AI workflow automation solution reduced manual processes by 80% and increased operational efficiency by 300% for a leading financial services company.
-      content: "Full case study content here...
+      content: ", Full case study content here...
       author: "Sarah Johnson
-      date: "2025-01-15
+      date: ", 2025-01-15
       readTime: "8 min read
-      category: "Case Studies
+      category: ", Case Studies
       tags: ["AI", "Automation", "Case Study", "Financial Services"],
       image: "/api/placeholder/400/250
       featured: true,,
@@ -75,7 +75,7 @@ export default function Blog(): React.JSX.Element {
     },
     {
       id: 7,,
-      title: "Serverless AI Inference: The Cost Optimization Playbook",
+      title: ", Serverless AI Inference: The Cost Optimization Playbook",
       excerpt: "Cut inference spend 40–70% with adaptive batching, warm pools, and tiered quality without hurting P95.",
       content: "Full article content here...",
       author: "Zion Tech Group Team",
@@ -86,11 +86,11 @@ export default function Blog(): React.JSX.Element {
       image: "/api/placeholder/400/250",
       title: "Serverless AI Inference: The Cost Optimization Playbook",
       excerpt: "Cut inference spend 40–70% with adaptive batching, warm pools, and tiered quality without hurting P95.
-      content: "Full article content here...
+      content: ", Full article content here...
       author: "Zion Tech Group Team
-      date: "2025-09-29
+      date: ", 2025-09-29
       readTime: "9 min read
-      category: "AI Solutions
+      category: ", AI Solutions
       tags: ["Serverless", "Inference", "Cost"],
       image: "/api/placeholder/400/250
       featured: true,,
@@ -98,7 +98,7 @@ export default function Blog(): React.JSX.Element {
     },
     {
       id: 8,,
-      title: "RAG Architectures That Actually Work in Production",
+      title: ", RAG Architectures That Actually Work in Production",
       excerpt: "Proven patterns for chunking, freshness, hybrid search, and evals that keep quality high.",
       content: "Full article content here...",
       author: "Zion Tech Group Team",
@@ -109,11 +109,11 @@ export default function Blog(): React.JSX.Element {
       image: "/api/placeholder/400/250",
       title: "RAG Architectures That Actually Work in Production",
       excerpt: "Proven patterns for chunking, freshness, hybrid search, and evals that keep quality high.
-      content: "Full article content here...
+      content: ", Full article content here...
       author: "Zion Tech Group Team
-      date: "2025-09-28
+      date: ", 2025-09-28
       readTime: "12 min read
-      category: "AI Solutions
+      category: ", AI Solutions
       tags: ["RAG", "Vector Search", "Evals"],
       image: "/api/placeholder/400/250
       featured: true,,
@@ -121,7 +121,7 @@ export default function Blog(): React.JSX.Element {
     },
     {
       id: 9,,
-      title: "Secure GenAI: Policy‑First Guardrails That Scale",
+      title: ", Secure GenAI: Policy‑First Guardrails That Scale",
       excerpt: "Prompt isolation, PII redaction, and network egress controls—ship safely without slowing teams.",
       content: "Full article content here...",
       author: "Zion Tech Group Team",
@@ -132,11 +132,11 @@ export default function Blog(): React.JSX.Element {
       image: "/api/placeholder/400/250",
       title: "Secure GenAI: Policy‑First Guardrails That Scale",
       excerpt: "Prompt isolation, PII redaction, and network egress controls—ship safely without slowing teams.
-      content: "Full article content here...
+      content: ", Full article content here...
       author: "Zion Tech Group Team
-      date: "2025-09-27
+      date: ", 2025-09-27
       readTime: "8 min read
-      category: "Technology
+      category: ", Technology
       tags: ["GenAI", "Security", "Compliance"],
       image: "/api/placeholder/400/250
       featured: false,,
@@ -144,7 +144,7 @@ export default function Blog(): React.JSX.Element {
     },
     {
       id: 2,,
-      title: "The Future of AI-Powered Customer Support: A Complete Guide",
+      title: ", The Future of AI-Powered Customer Support: A Complete Guide",
       excerpt: "Explore the latest trends in AI customer support and learn how virtual assistants are revolutionizing customer service across industries.",
       content: "Full article content here...",
       author: "Michael Chen",
@@ -155,11 +155,11 @@ export default function Blog(): React.JSX.Element {
       image: "/api/placeholder/400/250",
       title: "The Future of AI-Powered Customer Support: A Complete Guide",
       excerpt: "Explore the latest trends in AI customer support and learn how virtual assistants are revolutionizing customer service across industries.
-      content: "Full article content here...
+      content: ", Full article content here...
       author: "Michael Chen
-      date: "2025-01-12
+      date: ", 2025-01-12
       readTime: "12 min read
-      category: "AI Solutions
+      category: ", AI Solutions
       tags: ["AI", "Customer Support", "Virtual Assistant", "Trends"],
       image: "/api/placeholder/400/250
       featured: true,,
@@ -167,7 +167,7 @@ export default function Blog(): React.JSX.Element {
     },
     {
       id: 3,,
-      title: "Building Scalable Cloud Infrastructure: Best Practices 2025",
+      title: ", Building Scalable Cloud Infrastructure: Best Practices 2025",
       excerpt: "Learn the essential strategies for building robust, scalable cloud infrastructure that can handle modern business demands.",
       content: "Full article content here...",
       author: "Emily Rodriguez",
@@ -178,11 +178,11 @@ export default function Blog(): React.JSX.Element {
       image: "/api/placeholder/400/250",
       title: "Building Scalable Cloud Infrastructure: Best Practices 2025",
       excerpt: "Learn the essential strategies for building robust, scalable cloud infrastructure that can handle modern business demands.
-      content: "Full article content here...
+      content: ", Full article content here...
       author: "Emily Rodriguez
-      date: "2025-01-10
+      date: ", 2025-01-10
       readTime: "15 min read
-      category: "Technology
+      category: ", Technology
       tags: ["Cloud", "Infrastructure", "Scalability", "DevOps"],
       image: "/api/placeholder/400/250
       featured: false,,
@@ -190,7 +190,7 @@ export default function Blog(): React.JSX.Element {
     },
     {
       id: 4,,
-      title: "AI Data Analytics: Transforming Raw Data into Business Gold",
+      title: ", AI Data Analytics: Transforming Raw Data into Business Gold",
       excerpt: "See how machine learning and predictive analytics are helping businesses make data-driven decisions that drive real results.",
       content: "Full article content here...",
       author: "David Kim",
@@ -201,11 +201,11 @@ export default function Blog(): React.JSX.Element {
       image: "/api/placeholder/400/250",
       title: "AI Data Analytics: Transforming Raw Data into Business Gold",
       excerpt: "See how machine learning and predictive analytics are helping businesses make data-driven decisions that drive real results.
-      content: "Full article content here...
+      content: ", Full article content here...
       author: "David Kim
-      date: "2025-01-08
+      date: ", 2025-01-08
       readTime: "10 min read
-      category: "AI Solutions
+      category: ", AI Solutions
       tags: ["AI", "Data Analytics", "Machine Learning", "Business Intelligence"],
       image: "/api/placeholder/400/250
       featured: false,,
@@ -213,7 +213,7 @@ export default function Blog(): React.JSX.Element {
     },
     {
       id: 5,,
-      title: "Cybersecurity in the Age of AI: Protecting Your Digital Assets",
+      title: ", Cybersecurity in the Age of AI: Protecting Your Digital Assets",
       excerpt: "Understand the evolving threat landscape and learn how AI-powered security solutions can protect your business from modern cyber threats.",
       content: "Full article content here...",
       author: "Lisa Wang",
@@ -224,11 +224,11 @@ export default function Blog(): React.JSX.Element {
       image: "/api/placeholder/400/250",
       title: "Cybersecurity in the Age of AI: Protecting Your Digital Assets",
       excerpt: "Understand the evolving threat landscape and learn how AI-powered security solutions can protect your business from modern cyber threats.
-      content: "Full article content here...
+      content: ", Full article content here...
       author: "Lisa Wang
-      date: "2025-01-05
+      date: ", 2025-01-05
       readTime: "14 min read
-      category: "Technology
+      category: ", Technology
       tags: ["Cybersecurity", "AI", "Security", "Threat Detection"],
       image: "/api/placeholder/400/250
       featured: false,,
@@ -236,7 +236,7 @@ export default function Blog(): React.JSX.Element {
     },
     {
       id: 6,,
-      title: "Healthcare Industry Transformation: AI-Powered Patient Care",
+      title: ", Healthcare Industry Transformation: AI-Powered Patient Care",
       excerpt: "Explore how AI is revolutionizing healthcare delivery, from diagnostic assistance to personalized treatment plans.",
       content: "Full article content here...",
       author: "Dr. James Wilson",
@@ -247,11 +247,11 @@ export default function Blog(): React.JSX.Element {
       image: "/api/placeholder/400/250",
       title: "Healthcare Industry Transformation: AI-Powered Patient Care",
       excerpt: "Explore how AI is revolutionizing healthcare delivery, from diagnostic assistance to personalized treatment plans.
-      content: "Full article content here...
+      content: ", Full article content here...
       author: "Dr. James Wilson
-      date: "2025-01-03
+      date: ", 2025-01-03
       readTime: "11 min read
-      category: "Industry Insights
+      category: ", Industry Insights
       tags: ["AI", "Healthcare", "Patient Care", "Medical Technology"],
       image: "/api/placeholder/400/250
       featured: false,,
@@ -261,7 +261,7 @@ export default function Blog(): React.JSX.Element {
 
   // Map content entries into this page's structure;';
       id: 1,,
-      title: "How AI Workflow Automation Transformed a Fortune 500 Company",,
+      title: ", How AI Workflow Automation Transformed a Fortune 500 Company",,
       excerpt: "Discover how our AI workflow automation solution reduced manual processes by 80% and increased operational efficiency by 300% for a leading financial services company.",,
       content: "Full case study content here...",,
       author: "Sarah Johnson",,
@@ -448,43 +448,43 @@ default: return "text-gray-400 bg-gray-500/10 border-gray-500/30";"
       <Helmet >
         <title >Blog & Insights - Zion Tech Group | AI & Technology Expertise</title>
         <meta name: "description",
-  content: "Stay updated with the latest insights on AI, technology trends, case studies, and industry best practices from Zion Tech Group experts." /><meta property: "og:title" content ="Blog & Insights - Zion Tech Group" />"
+  content: "Stay updated with the latest insights on AI, technology trends, case studies, and industry best practices from Zion Tech Group experts.", /><meta property: "og:title", content ="Blog & Insights - Zion Tech Group" />"
         <meta property: "og:description",
-  content: "Latest insights on AI and technology trends" /><meta property="og:type" content="website" />"
-        <meta property: "og:url" content="https://ziontechgroup.com/blog" />"
-        <meta name: "twitter:card" content="summary_large_image" />"
-        <meta name: "twitter:title" content ="Blog & Insights - Zion Tech Group" />"
+  content: "Latest insights on AI and technology trends", /><meta property="og:type" content="website" />"
+        <meta property: "og:url", content="https://ziontechgroup.com/blog" />"
+        <meta name: "twitter:card", content="summary_large_image" />"
+        <meta name: "twitter:title", content ="Blog & Insights - Zion Tech Group" />"
         <meta name: "twitter:description",
-  content: "Latest insights on AI and technology trends" /><link rel: "canonical" href ="https://ziontechgroup.com/blog/>",
+  content: "Latest insights on AI and technology trends", /><link rel: "canonical", href ="https://ziontechgroup.com/blog/>",
   content: "Stay updated with the latest insights on AI, technology trends, case studies, and industry best practices from Zion Tech Group experts.",
         />
-        <meta property: "og: title" content ="Blog & Insights - Zion Tech Group" />",
+        <meta property: "og: title", content ="Blog & Insights - Zion Tech Group" />",
         <meta property: "og: description",
         <meta name: "description
-  content: "Stay updated with the latest insights on AI, technology trends, case studies, and industry best practices from Zion Tech Group experts." /><meta property: "og:title" content="Blog & Insights - Zion Tech Group" />
+  content: ", Stay updated with the latest insights on AI, technology trends, case studies, and industry best practices from Zion Tech Group experts." /><meta property: "og:title", content="Blog & Insights - Zion Tech Group" />
         <meta property: "og:description
-  content: "Latest insights on AI and technology trends" /><meta property="og:type" content="website" />
-        <meta property: "og:url" content="https://ziontechgroup.com/blog" />
-        <meta name: "twitter:card" content="summary_large_image" />
-        <meta name: "twitter:title" content="Blog & Insights - Zion Tech Group" />
+  content: ", Latest insights on AI and technology trends" /><meta property="og:type" content="website" />
+        <meta property: "og:url", content="https://ziontechgroup.com/blog" />
+        <meta name: "twitter:card", content="summary_large_image" />
+        <meta name: "twitter:title", content="Blog & Insights - Zion Tech Group" />
         <meta name: "twitter:description
-  content: "Latest insights on AI and technology trends" /><link rel: "canonical" href ="https://ziontechgroup.com/blog/>
+  content: ", Latest insights on AI and technology trends" /><link rel: "canonical", href ="https://ziontechgroup.com/blog/>
   content: "Stay updated with the latest insights on AI, technology trends, case studies, and industry best practices from Zion Tech Group experts.",
         />
-        <meta property: "og: title" content="Blog & Insights - Zion Tech Group" />",
+        <meta property: "og: title", content="Blog & Insights - Zion Tech Group" />",
         <meta property: "og: description
-  content: "Latest insights on AI and technology trends",
+  content: ", Latest insights on AI and technology trends",
         />
-        <meta property: "og: type" content="website" />",
-        <meta property: "og: url" content="https://ziontechgroup.com/blog" />",
-        <meta name: "twitter: card" content="summary_large_image" />",
-        <meta name: "twitter: title" content ="Blog & Insights - Zion Tech Group" />",
+        <meta property: "og: type", content="website" />",
+        <meta property: "og: url", content="https://ziontechgroup.com/blog" />",
+        <meta name: "twitter: card", content="summary_large_image" />",
+        <meta name: "twitter: title", content ="Blog & Insights - Zion Tech Group" />",
         <meta name: "twitter: description",
-        <meta name: "twitter: title" content="Blog & Insights - Zion Tech Group" />",
+        <meta name: "twitter: title", content="Blog & Insights - Zion Tech Group" />",
         <meta name: "twitter: description
-  content: "Latest insights on AI and technology trends",
+  content: ", Latest insights on AI and technology trends",
         />
-        <link rel: "canonical" href="https: //ziontechgroup.com/blog" />",
+        <link rel: "canonical", href="https: //ziontechgroup.com/blog" />",
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">",
@@ -496,7 +496,7 @@ default: return "text-gray-400 bg-gray-500/10 border-gray-500/30";"
                 <div className="text-sm font-semibold">🚀 Fresh: Governance Quickstart + Privacy‑First Agents</div>",
                 <div className="text-xs text-white/90">Ship KPI‑linked guardrails and private assistants under real budgets.</div>"
               </div>
-              <a title: "Internal link" href="/blog/ai-governance-scorecards-quickstart-2026" className="bg-white text-gray-900 px-4 py-2 rounded-lg font-semibold hover: bg-gray-100 transition-colors whitespace-nowrap">",
+              <a title: "Internal link", href="/blog/ai-governance-scorecards-quickstart-2026" className="bg-white text-gray-900 px-4 py-2 rounded-lg font-semibold hover: bg-gray-100 transition-colors whitespace-nowrap">",
         <div className="border-b border-white/10">",
           <div className="max-w-7xl mx-auto px-6">",
               <div className="mt-4 mb-2 rounded-xl bg-gradient-to-r from-fuchsia-600 to-purple-600 p-4 text-white flex items-center justify-between">",
@@ -504,7 +504,7 @@ default: return "text-gray-400 bg-gray-500/10 border-gray-500/30";"
                 <div className="text-sm font-semibold">🚀 Fresh: Governance Quickstart + Privacy‑First Agents</div>",
                 <div className="text-xs text-white/90">Ship KPI‑linked guardrails and private assistants under real budgets.</div>",
               </div>
-              <a title: "Internal link" href="/blog/ai-governance-scorecards-quickstart-2026" className ="bg-white text-gray-900 px-4 py-2 rounded-lg font-semibold hover: bg-gray-100 transition-colors whitespace-nowrap">",
+              <a title: "Internal link", href="/blog/ai-governance-scorecards-quickstart-2026" className ="bg-white text-gray-900 px-4 py-2 rounded-lg font-semibold hover: bg-gray-100 transition-colors whitespace-nowrap">",
       <div className= "min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">",
         {/* New Content Promo Banner */}
         <div className= "border-b border-white/10">
@@ -514,7 +514,7 @@ default: return "text-gray-400 bg-gray-500/10 border-gray-500/30";"
                 <div className= "text-sm font-semibold">🚀 Fresh: Governance Quickstart + Privacy‑First Agents</div>",
                 <div className= "text-xs text-white/90">Ship KPI‑linked guardrails and private assistants under real budgets.</div>"
               </div>
-              <a title: "Internal link" href="/blog/ai-governance-scorecards-quickstart-2026" className="bg-white text-gray-900 px-4 py-2 rounded-lg font-semibold hover: bg-gray-100 transition-colors whitespace-nowrap">",
+              <a title: "Internal link", href="/blog/ai-governance-scorecards-quickstart-2026" className="bg-white text-gray-900 px-4 py-2 rounded-lg font-semibold hover: bg-gray-100 transition-colors whitespace-nowrap">",
         <div className= "border-b border-white/10">",
           <div className= "max-w-7xl mx-auto px-6">",
               <div className= "mt-4 mb-2 rounded-xl bg-gradient-to-r from-fuchsia-600 to-purple-600 p-4 text-white flex items-center justify-between">",
@@ -522,7 +522,7 @@ default: return "text-gray-400 bg-gray-500/10 border-gray-500/30";"
                 <div className= "text-sm font-semibold">🚀 Fresh: Governance Quickstart + Privacy‑First Agents</div>",
                 <div className= "text-xs text-white/90">Ship KPI‑linked guardrails and private assistants under real budgets.</div>",
               </div>
-              <a title: "Internal link" href="/blog/ai-governance-scorecards-quickstart-2026" className ="bg-white text-gray-900 px-4 py-2 rounded-lg font-semibold hover: bg-gray-100 transition-colors whitespace-nowrap">"
+              <a title: "Internal link", href="/blog/ai-governance-scorecards-quickstart-2026" className ="bg-white text-gray-900 px-4 py-2 rounded-lg font-semibold hover: bg-gray-100 transition-colors whitespace-nowrap">"
   Read the latest
               </a>
             </div>
@@ -533,24 +533,24 @@ default: return "text-gray-400 bg-gray-500/10 border-gray-500/30";"
         <div className="border-b border-white/10"
           <div className="max-w-7xl mx-auto px-6"
               <div className="mt-4 mb-2 rounded-xl bg-gradient-to-r from-cyan-600 to-blue-600 p-4 text-white flex items-center gap-3 flex-wrap"
-                <a title: "Internal link" href="/blog/ai-e2e-tracing-2025" className="bg-white text-gray-900 px-3 py-2 rounded-lg font-semibold hover: bg-gray-100 transition-colors whitespace-nowrap">E2E AI Tracing</a>",
-                <a title: "Internal link" href="/blog/edge-personalization-2025" className="bg-white text-gray-900 px-3 py-2 rounded-lg font-semibold hover: bg-gray-100 transition-colors whitespace-nowrap">Edge Personalization</a>",
-                <a title: "Internal link" href="/blog/policy-tests-quickstart-2025" className="bg-white text-gray-900 px-3 py-2 rounded-lg font-semibold hover: bg-gray-100 transition-colors whitespace-nowrap">Policy Tests Quickstart</a>",
+                <a title: "Internal link", href="/blog/ai-e2e-tracing-2025" className="bg-white text-gray-900 px-3 py-2 rounded-lg font-semibold hover: bg-gray-100 transition-colors whitespace-nowrap">E2E AI Tracing</a>",
+                <a title: "Internal link", href="/blog/edge-personalization-2025" className="bg-white text-gray-900 px-3 py-2 rounded-lg font-semibold hover: bg-gray-100 transition-colors whitespace-nowrap">Edge Personalization</a>",
+                <a title: "Internal link", href="/blog/policy-tests-quickstart-2025" className="bg-white text-gray-900 px-3 py-2 rounded-lg font-semibold hover: bg-gray-100 transition-colors whitespace-nowrap">Policy Tests Quickstart</a>",
         <div className="border-b border-white/10">",
           <div className="max-w-7xl mx-auto px-6">",
               <div className="mt-4 mb-2 rounded-xl bg-gradient-to-r from-cyan-600 to-blue-600 p-4 text-white flex items-center gap-3 flex-wrap">",
         <div className= "border-b border-white/10">
           <div className= "max-w-7xl mx-auto px-6">
               <div className= "mt-4 mb-2 rounded-xl bg-gradient-to-r from-cyan-600 to-blue-600 p-4 text-white flex items-center gap-3 flex-wrap">
-                <a title: "Internal link" href="/blog/ai-e2e-tracing-2025" className="bg-white text-gray-900 px-3 py-2 rounded-lg font-semibold hover: bg-gray-100 transition-colors whitespace-nowrap">E2E AI Tracing</a>",
-                <a title: "Internal link" href="/blog/edge-personalization-2025" className="bg-white text-gray-900 px-3 py-2 rounded-lg font-semibold hover: bg-gray-100 transition-colors whitespace-nowrap">Edge Personalization</a>",
-                <a title: "Internal link" href="/blog/policy-tests-quickstart-2025" className="bg-white text-gray-900 px-3 py-2 rounded-lg font-semibold hover: bg-gray-100 transition-colors whitespace-nowrap">Policy Tests Quickstart</a>",
+                <a title: "Internal link", href="/blog/ai-e2e-tracing-2025" className="bg-white text-gray-900 px-3 py-2 rounded-lg font-semibold hover: bg-gray-100 transition-colors whitespace-nowrap">E2E AI Tracing</a>",
+                <a title: "Internal link", href="/blog/edge-personalization-2025" className="bg-white text-gray-900 px-3 py-2 rounded-lg font-semibold hover: bg-gray-100 transition-colors whitespace-nowrap">Edge Personalization</a>",
+                <a title: "Internal link", href="/blog/policy-tests-quickstart-2025" className="bg-white text-gray-900 px-3 py-2 rounded-lg font-semibold hover: bg-gray-100 transition-colors whitespace-nowrap">Policy Tests Quickstart</a>",
         <div className= "border-b border-white/10">",
           <div className= "max-w-7xl mx-auto px-6">",
               <div className= "mt-4 mb-2 rounded-xl bg-gradient-to-r from-cyan-600 to-blue-600 p-4 text-white flex items-center gap-3 flex-wrap">",
-                <a title: "Internal link" href="/blog/ai-e2e-tracing-2025" className="bg-white text-gray-900 px-3 py-2 rounded-lg font-semibold hover: bg-gray-100 transition-colors whitespace-nowrap">E2E AI Tracing</a>",
-                <a title: "Internal link" href="/blog/edge-personalization-2025" className="bg-white text-gray-900 px-3 py-2 rounded-lg font-semibold hover: bg-gray-100 transition-colors whitespace-nowrap">Edge Personalization</a>",
-                <a title: "Internal link" href="/blog/policy-tests-quickstart-2025" className ="bg-white text-gray-900 px-3 py-2 rounded-lg font-semibold hover: bg-gray-100 transition-colors whitespace-nowrap">Policy Tests Quickstart</a>",
+                <a title: "Internal link", href="/blog/ai-e2e-tracing-2025" className="bg-white text-gray-900 px-3 py-2 rounded-lg font-semibold hover: bg-gray-100 transition-colors whitespace-nowrap">E2E AI Tracing</a>",
+                <a title: "Internal link", href="/blog/edge-personalization-2025" className="bg-white text-gray-900 px-3 py-2 rounded-lg font-semibold hover: bg-gray-100 transition-colors whitespace-nowrap">Edge Personalization</a>",
+                <a title: "Internal link", href="/blog/policy-tests-quickstart-2025" className ="bg-white text-gray-900 px-3 py-2 rounded-lg font-semibold hover: bg-gray-100 transition-colors whitespace-nowrap">Policy Tests Quickstart</a>",
               </div>
           </div>
         </div>
@@ -612,15 +612,15 @@ default: return "text-gray-400 bg-gray-500/10 border-gray-500/30";"
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />",
                 <input type="text",
   placeholder="Search articles...",
-  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
+  value="{searchTerm}
+                  onChange={(e) ="> setSearchTerm(e.target.value)}
                   className="w-full pl-10 pr-4 py-3 bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg text-white placeholder-zion-slate-light focus: outline-none focus:ring-2 focus:ring-zion-cyan",
                 />
               </div>
               <div className="flex flex-wrap gap-2">",
                 {categories.map((category) => (
-                  <button key={category}
-                    onClick={()  => setSelectedCategory(category)}
+                  <button key="{category}
+                    onClick={()  ="> setSelectedCategory(category)}
                     className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${`,`;,`;
           <div className= "max-w-4xl mx-auto mb-12">
             <div className= "flex flex-col md: flex-row gap-4 mb-8">",
@@ -632,15 +632,15 @@ default: return "text-gray-400 bg-gray-500/10 border-gray-500/30";"
                 <Search className= "absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />",
                 <input type="text",
   placeholder="Search articles...",
-  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
+  value="{searchTerm}
+                  onChange={(e) ="> setSearchTerm(e.target.value)}
                   className= "w-full pl-10 pr-4 py-3 bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg text-white placeholder-zion-slate-light focus: outline-none focus:ring-2 focus:ring-zion-cyan",
                 />
               </div>
               <div className= "flex flex-wrap gap-2">",
                 {categories.map((category) => (
-                  <button key={category}
-                    onClick={()  => setSelectedCategory(category)}
+                  <button key="{category}
+                    onClick={()  ="> setSelectedCategory(category)}
                     className= {`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${`,`;,`;
   selectedCategory: == category,
                         ? "bg-zion-cyan text-white"
@@ -662,14 +662,14 @@ selectedCategory: == "All" && searchTerm == = " && (",
 <div className="grid md:grid-cols-2 gap-8"
 <div className="mb-16">",
 <h2 className="text-2xl font-bold text-white mb-8">Featured Articles</h2>",
-<div className="grid md: grid-cols-2 gap-8">,",
+<div className="grid md:grid-cols-2 gap-8">,",
 selectedCategory: == "All" && searchTerm == = " && (",
 <div className= "mb-16">
 <h2 className= "text-2xl font-bold text-white mb-8">Featured Articles</h2>"
 <div className= "grid md:grid-cols-2 gap-8">
 <div className= "mb-16">",
 <h2 className= "text-2xl font-bold text-white mb-8">Featured Articles</h2>",
-<div className= "grid md: grid-cols-2 gap-8">,",
+<div className= "grid md:grid-cols-2 gap-8">,",
 {featuredPosts.map((post) => {
 const CategoryIcon: getCategoryIcon(post.category);,,
   const categoryColor: getCategoryColor(post.category);,,
@@ -679,7 +679,7 @@ const CategoryIcon: getCategoryIcon(post.category);,,
                       className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover: bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl group",
                     >
                       <div className="flex items-center justify-between mb-4"
-                        <div className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium border ${categoryColor}`}>`
+                        <div className="{`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium border ${categoryColor}`}">`
                           <CategoryIcon className="w-3 h-3 mr-1/>"
                           {post.category}
                         </div>
@@ -689,7 +689,7 @@ const CategoryIcon: getCategoryIcon(post.category);,,
                         <div className="flex items-center text-zion-slate-light text-sm">
                           <TrendingUp className="w-4 h-4 mr-1/>"
                       <div className="flex items-center justify-between mb-4">",
-                        <div className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium border ${categoryColor}`}>`
+                        <div className="{`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium border ${categoryColor}`}">`
                           <CategoryIcon className="w-3 h-3 mr-1" />",
                           {post.category}
                         </div>
@@ -842,19 +842,19 @@ const CategoryIcon: getCategoryIcon(post.category);,,
             <h2 className="text-2xl font-bold text-white mb-8"
               {selectedCategory !== "All" || searchTerm ? "Search Results" : "Latest Articles"}"
             </h2>
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">",
             <h2 className="text-2xl font-bold text-white mb-8">",
               {selectedCategory !== "All" || searchTerm ? "Search Results" : "Latest Articles"}"
             </h2>
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">",
             <h2 className= "text-2xl font-bold text-white mb-8">
               {selectedCategory !== "All" || searchTerm ? "Search Results" : "Latest Articles"}"
             </h2>
-            <div className= "grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div className= "grid md:grid-cols-2 lg:grid-cols-3 gap-8">",
             <h2 className= "text-2xl font-bold text-white mb-8">",
               {selectedCategory !== "All" || searchTerm ? "Search Results" : "Latest Articles"}"
             </h2>
-            <div className= "grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div className= "grid md:grid-cols-2 lg:grid-cols-3 gap-8">",
               {regularPosts.map((post)  => {
                 const CategoryIcon: getCategoryIcon(post.category);,,
   const categoryColor: getCategoryColor(post.category);,,
@@ -863,7 +863,7 @@ const CategoryIcon: getCategoryIcon(post.category);,,
                     className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover: bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl group",
                   >
                     <div className="flex items-center justify-between mb-4"
-                      <div className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium border ${categoryColor}`}>`
+                      <div className="{`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium border ${categoryColor}`}">`
                         <CategoryIcon className="w-3 h-3 mr-1/>"
                         {post.category}
                       </div>
@@ -873,7 +873,7 @@ const CategoryIcon: getCategoryIcon(post.category);,,
                       <div className="flex items-center text-zion-slate-light text-xs">
                         <TrendingUp className="w-3 h-3 mr-1/>"
                     <div className="flex items-center justify-between mb-4">",
-                      <div className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium border ${categoryColor}`}>`
+                      <div className="{`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium border ${categoryColor}`}">`
                         <CategoryIcon className="w-3 h-3 mr-1" />",
                         {post.category}
                       </div>
@@ -996,7 +996,7 @@ const CategoryIcon: getCategoryIcon(post.category);,,
                 <div className= "text-zion-slate-light mb-4">"
   No articles found matching your criteria.
                 </div>
-                <button onClick={()  => {,,
+                <button onClick="{()  ="> {,,
   setSelectedCategory("All");"
                     setSearchTerm(");"
                   }}

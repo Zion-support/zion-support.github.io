@@ -10,7 +10,7 @@ export default function AIAutonomousControlPlanes2025(): React.JSX.Element {
       <Helmet >
         <title >AI 2025: Autonomous Control Planes — Budgets, Gates, Rollback</title>,,
         <meta name: "description",;,"
-  content: "Design budget-aware, policy-gated AI platforms with instant rollback and KPI-linked guardrails." /><link rel: "canonical",;,"
+  content: "Design budget-aware, policy-gated AI platforms with instant rollback and KPI-linked guardrails.", /><link rel: "canonical",;,"
   href="https://ziontechgroup.com/blog/ai-2025-sept-30-autonomous-control-planes",
         />
       </Helmet>

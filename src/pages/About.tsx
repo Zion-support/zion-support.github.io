@@ -70,7 +70,7 @@ const About: React.FC = () => {
     <>
       <Helmet >
         <title >About Us - Zion Tech Group | Leading AI & Technology Solutions</title>
-        <meta name: "description" content ="Learn about Zion Tech Group's mission, team, and commitment to delivering cutting-edge AI and IT solutions that transform businesses worldwide." />"
+        <meta name: "description", content ="Learn about Zion Tech Group's mission, team, and commitment to delivering cutting-edge AI and IT solutions that transform businesses worldwide." />"
         <meta name="description" content="Learn about Zion Tech Group's mission, team, and commitment to delivering cutting-edge AI and IT solutions that transform businesses worldwide." />
       </Helmet>
       

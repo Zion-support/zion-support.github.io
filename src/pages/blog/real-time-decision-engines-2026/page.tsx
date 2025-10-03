@@ -10,7 +10,7 @@ export default function RealTimeDecisionEngines2026(): React.JSX.Element {
       <Helmet >
         <title >Real‑Time Decision Engines 2026 — 10M/sec under 1ms</title>
         <meta name: "description",;,"
-  content: "Achieve 10M decisions/sec under 1ms with warm pools, intent prefetching, and layered caches." /><link rel: "canonical",;,"
+  content: "Achieve 10M decisions/sec under 1ms with warm pools, intent prefetching, and layered caches.", /><link rel: "canonical",;,"
   href="https://ziontechgroup.com/blog/real-time-decision-engines-2026",
         />
       </Helmet>

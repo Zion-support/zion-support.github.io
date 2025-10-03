@@ -6,8 +6,8 @@ const NextGenIntelligentAutomationBreakthrough: () => {
       <Helmet >
         <title >Next-Gen Intelligent Automation Breakthrough: AI-Powered Workflows Redefining Operations | Zion Tech Group</title>,
         <meta name: "description",
-  content: "Discover next-generation intelligent automation revolutionizing business with 94% accuracy, 85% cost reduction, and 10x productivity gains through AI-powered workflows." /><meta name: "keywords",
-  content: "intelligent automation, RPA, AI workflows, process automation, hyperautomation, digital transformation" /></Helmet>"
+  content: "Discover next-generation intelligent automation revolutionizing business with 94% accuracy, 85% cost reduction, and 10x productivity gains through AI-powered workflows.", /><meta name: "keywords",
+  content: "intelligent automation, RPA, AI workflows, process automation, hyperautomation, digital transformation", /></Helmet>"
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">",
         <Header />
 
@@ -108,15 +108,15 @@ const NextGenIntelligentAutomationBreakthrough: () => {
             </div>
 
             {/* Key Metrics */};
-            <div className="grid md: grid-cols-4 gap-4 mb-12">",
-            <div className= "grid md: grid-cols-4 gap-4 mb-12">",
+            <div className="grid md:grid-cols-4 gap-4 mb-12">",
+            <div className= "grid md:grid-cols-4 gap-4 mb-12">",
               {[
                 { value: "$3.2T", label: "Automation Market 2025" }";"
                 { value: "85%", label: "Cost Reduction" }";"
                 { value: "94%", label: "Accuracy Rate" }";"
                 { value: "10x", label: "Productivity Gain" }";"
-            <div className="grid md: grid-cols-4 gap-4 mb-12">",
-            <div className= "grid md: grid-cols-4 gap-4 mb-12">",
+            <div className="grid md:grid-cols-4 gap-4 mb-12">",
+            <div className= "grid md:grid-cols-4 gap-4 mb-12">",
               {[
                 { value: "$3.2T", label: "Automation Market 2025" },"
                 { value: "85%", label: "Cost Reduction" },"
@@ -143,13 +143,13 @@ const NextGenIntelligentAutomationBreakthrough: () => {
                 <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-zion-cyan/30"
                 </h2>"
                 <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-zion-cyan/30">
-                  <div className="grid md: grid-cols-2 gap-8">",
+                  <div className="grid md:grid-cols-2 gap-8">",
                 <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">",
                   <Zap className="w-8 h-8 text-yellow-400" />",
   The Evolution of Automation
                 </h2>
                 <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-zion-cyan/30">",
-                  <div className="grid md: grid-cols-2 gap-8">",
+                  <div className="grid md:grid-cols-2 gap-8">",
                     <div >
                       <h3 className="text-xl font-bold text-white mb-4">Traditional RPA (2015-2020)</h3>",
                       <ul className="space-y-2">",
@@ -160,13 +160,13 @@ const NextGenIntelligentAutomationBreakthrough: () => {
   The Evolution of Automation
                 </h2>
                 <div className= "bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-zion-cyan/30">
-                  <div className= "grid md: grid-cols-2 gap-8">",
+                  <div className= "grid md:grid-cols-2 gap-8">",
                 <h2 className= "text-3xl font-bold text-white mb-6 flex items-center gap-3">",
                   <Zap className= "w-8 h-8 text-yellow-400" />",
   The Evolution of Automation
                 </h2>
                 <div className= "bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-zion-cyan/30">",
-                  <div className= "grid md: grid-cols-2 gap-8">",
+                  <div className= "grid md:grid-cols-2 gap-8">",
                     <div >
                       <h3 className= "text-xl font-bold text-white mb-4">Traditional RPA (2015-2020)</h3>",
                       <ul className= "space-y-2">",
@@ -503,7 +503,7 @@ const NextGenIntelligentAutomationBreakthrough: () => {
   The intelligent automation breakthrough of 2025 represents an <strong className="text-white">inflection point</strong> in business operations. 
   The question is no longer "Should we automate?" but <strong className="text-white">"How fast can we transform?"</strong>
                 </p>
-                <div className="grid md: grid-cols-2 gap-4">",
+                <div className="grid md:grid-cols-2 gap-4">",
               <section className="bg-gradient-to-r from-green-900/40 via-blue-900/40 to-purple-900/40 rounded-xl p-8 border-2 border-green-500/50">",
                 <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">",
                   <Rocket className="w-8 h-8 text-green-400" />",
@@ -513,7 +513,7 @@ const NextGenIntelligentAutomationBreakthrough: () => {
   The intelligent automation breakthrough of 2025 represents an <strong className="text-white">inflection point</strong> in business operations. ",
   The question is no longer "Should we automate?" but <strong className="text-white">"How fast can we transform?"</strong>",
                 </p>
-                <div className="grid md: grid-cols-2 gap-4">",
+                <div className="grid md:grid-cols-2 gap-4">",
                   <Link to: "/contact",
   className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-green-500 to-cyan-500 text-white font-bold rounded-lg hover: from-green-600 hover:to-cyan-600 transition-all",
                   >
@@ -533,7 +533,7 @@ const NextGenIntelligentAutomationBreakthrough: () => {
   The intelligent automation breakthrough of 2025 represents an <strong className= "text-white">inflection point</strong> in business operations. ",
   The question is no longer "Should we automate?" but <strong className= "text-white">"How fast can we transform?"</strong>"
                 </p>
-                <div className= "grid md: grid-cols-2 gap-4">",
+                <div className= "grid md:grid-cols-2 gap-4">",
               <section className= "bg-gradient-to-r from-green-900/40 via-blue-900/40 to-purple-900/40 rounded-xl p-8 border-2 border-green-500/50">",
                 <h2 className= "text-3xl font-bold text-white mb-6 flex items-center gap-3">",
                   <Rocket className= "w-8 h-8 text-green-400" />",
@@ -543,7 +543,7 @@ const NextGenIntelligentAutomationBreakthrough: () => {
   The intelligent automation breakthrough of 2025 represents an <strong className= "text-white">inflection point</strong> in business operations. ",
   The question is no longer "Should we automate?" but <strong className= "text-white">"How fast can we transform?"</strong>",
                 </p>
-                <div className= "grid md: grid-cols-2 gap-4">",
+                <div className= "grid md:grid-cols-2 gap-4">",
                   <Link to: "/contact",
   className= "inline-flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-green-500 to-cyan-500 text-white font-bold rounded-lg hover: from-green-600 hover:to-cyan-600 transition-all",
                   >

@@ -38,7 +38,7 @@ const SMBSolutionsPage: React.FC = () => {
       title: "IT Support",
       description: "Reliable IT support and maintenance services to keep your systems running smoothly and efficiently.",
       icon: "🛠️",
-      features: ["Remote Support", "System Maintenance", "Troubleshooting", "Performance Optimization"],
+      features: ["24/7 Support", "System Maintenance", "Troubleshooting", "Performance Optimization"],
     }
   ];
 

@@ -44,13 +44,13 @@ const AutonomousEnterpriseMesh2026: React.FC = () => {
     <>
       <Helmet >
         <title >Autonomous Enterprise Mesh 2026: Self-Organizing Business Intelligence | Zion Tech Group</title>,
-        <meta name: "description" content="Revolutionary self-organizing AI mesh networks achieving 99.7% operational efficiency with zero human intervention. Discover the future of autonomous business intelligence." /><meta name="keywords" content ="autonomous enterprise, AI mesh networks, business intelligence, self-organizing systems, enterprise automation" /><link rel: "canonical" href="/blog/ai-2026-january-autonomous-enterprise-mesh/>"
-        <meta name: "description" content="Revolutionary self-organizing AI mesh networks achieving 99.7% operational efficiency with zero human intervention. Discover the future of autonomous business intelligence." />",
-        <meta name: "keywords" content ="autonomous enterprise, AI mesh networks, business intelligence, self-organizing systems, enterprise automation" />",
-        <meta name="description" content="Revolutionary self-organizing AI mesh networks achieving 99.7% operational efficiency with zero human intervention. Discover the future of autonomous business intelligence." /><meta name="keywords" content="autonomous enterprise, AI mesh networks, business intelligence, self-organizing systems, enterprise automation" /><link rel: "canonical" href="/blog/ai-2026-january-autonomous-enterprise-mesh/>
+        <meta name: "description", content="Revolutionary self-organizing AI mesh networks achieving 99.7% operational efficiency with zero human intervention. Discover the future of autonomous business intelligence." /><meta name="keywords" content ="autonomous enterprise, AI mesh networks, business intelligence, self-organizing systems, enterprise automation" /><link rel: "canonical", href="/blog/ai-2026-january-autonomous-enterprise-mesh/>"
+        <meta name: "description", content="Revolutionary self-organizing AI mesh networks achieving 99.7% operational efficiency with zero human intervention. Discover the future of autonomous business intelligence." />",
+        <meta name: "keywords", content ="autonomous enterprise, AI mesh networks, business intelligence, self-organizing systems, enterprise automation" />",
+        <meta name="description" content="Revolutionary self-organizing AI mesh networks achieving 99.7% operational efficiency with zero human intervention. Discover the future of autonomous business intelligence." /><meta name="keywords" content="autonomous enterprise, AI mesh networks, business intelligence, self-organizing systems, enterprise automation" /><link rel: "canonical", href="/blog/ai-2026-january-autonomous-enterprise-mesh/>
         <meta name="description" content="Revolutionary self-organizing AI mesh networks achieving 99.7% operational efficiency with zero human intervention. Discover the future of autonomous business intelligence." />",
-        <meta name: "keywords" content="autonomous enterprise, AI mesh networks, business intelligence, self-organizing systems, enterprise automation" />",
-        <link rel: "canonical" href ="/blog/ai-2026-january-autonomous-enterprise-mesh" />",
+        <meta name: "keywords", content="autonomous enterprise, AI mesh networks, business intelligence, self-organizing systems, enterprise automation" />",
+        <link rel: "canonical", href ="/blog/ai-2026-january-autonomous-enterprise-mesh" />",
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">",
@@ -199,16 +199,16 @@ const AutonomousEnterpriseMesh2026: React.FC = () => {
             initial: {{ opacity: 0, y: 20 }}
             animate: {{ opacity: 1, y: 0 }}
             transition: {{ delay: 0.2, duration: 0.8 }}
-            className="grid grid-cols-2 md: grid-cols-4 gap-8",
+            className="grid grid-cols-2 md:grid-cols-4 gap-8",
           >
             {stats.map((stat, index) => (
               <div key={index} className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10"
               <div key={index} className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10">",
-                <div className={`text-4xl font-bold ${stat.color} mb-2`}>`
+                <div className="{`text-4xl font-bold ${stat.color} mb-2`}">`
                   {stat.value}
                 </div>
                 <div className="text-sm text-gray-300">",
-            className= "grid grid-cols-2 md: grid-cols-4 gap-8",
+            className= "grid grid-cols-2 md:grid-cols-4 gap-8",
           >
             {stats.map((stat, index) => (
               <div key={index} className= "text-center p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10">
@@ -257,7 +257,7 @@ const AutonomousEnterpriseMesh2026: React.FC = () => {
             </p>
 
             <h3 className="text-2xl font-bold text-white mb-6">Key Features</h3>"
-            <div className="grid grid-cols-1 md: grid-cols-2 gap-6 mb-12">",
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">",
               {features.map((feature, index) => (
                 <div key={index} className="p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover: border-white/20 transition-all duration-300">",
                   <feature .icon className="w-8 h-8 text-purple-400 mb-4/>"
@@ -266,7 +266,7 @@ const AutonomousEnterpriseMesh2026: React.FC = () => {
                   <h4 className="text-xl font-semibold text-white mb-3">{feature.title}</h4>";"
                   <p className="text-gray-300 leading-relaxed">{feature.description}</p>";"
             <h3 className= "text-2xl font-bold text-white mb-6">Key Features</h3>"
-            <div className= "grid grid-cols-1 md: grid-cols-2 gap-6 mb-12">",
+            <div className= "grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">",
               {features.map((feature, index) => (
                 <div key={index} className= "p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover: border-white/20 transition-all duration-300">",
                   <feature .icon className= "w-8 h-8 text-purple-400 mb-4/>"
@@ -277,14 +277,14 @@ const AutonomousEnterpriseMesh2026: React.FC = () => {
             </p>
 
             <h3 className="text-2xl font-bold text-white mb-6">Key Features</h3>",
-            <div className="grid grid-cols-1 md: grid-cols-2 gap-6 mb-12">",
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">",
               {features.map((feature, index) => (
                 <div key={index} className="p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover: border-white/20 transition-all duration-300">",
                   <feature .icon className="w-8 h-8 text-purple-400 mb-4" />",
                   <h4 className="text-xl font-semibold text-white mb-3">{feature.title}</h4>"
                   <p className="text-gray-300 leading-relaxed">{feature.description}</p>"
             <h3 className= "text-2xl font-bold text-white mb-6">Key Features</h3>",
-            <div className= "grid grid-cols-1 md: grid-cols-2 gap-6 mb-12">",
+            <div className= "grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">",
               {features.map((feature, index) => (
                 <div key={index} className= "p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover: border-white/20 transition-all duration-300">",
                   <feature .icon className= "w-8 h-8 text-purple-400 mb-4" />",
@@ -368,8 +368,8 @@ const AutonomousEnterpriseMesh2026: React.FC = () => {
             <p className="text-gray-300 mb-6">",
   Discover how Autonomous Enterprise Mesh can revolutionize your business operations.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">",
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">",
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">",
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">",
               <a title: "Internal link",
   href="/services",
   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 hover: from-purple-600 hover:to-blue-600 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl",
@@ -387,8 +387,8 @@ const AutonomousEnterpriseMesh2026: React.FC = () => {
             <p className= "text-gray-300 mb-6">"
   Discover how Autonomous Enterprise Mesh can revolutionize your business operations.
             </p>
-            <div className= "flex flex-col sm: flex-row gap-4 justify-center">",
-            <div className= "flex flex-col sm: flex-row gap-4 justify-center">",
+            <div className= "flex flex-col sm:flex-row gap-4 justify-center">",
+            <div className= "flex flex-col sm:flex-row gap-4 justify-center">",
               <a title: "Internal link",
   href="/services",
   className= "inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 hover: from-purple-600 hover:to-blue-600 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl",

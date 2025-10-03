@@ -69,9 +69,9 @@ const IoTEdgeComputing: React.FC = () => {
       description: "Perfect for IoT projects in development and testing phases",
       features: [,,
       name: "Development
-      price: "$5,000
+      price: ", $5,000
       period: "/month
-      description: "Perfect for IoT projects in development and testing phases
+      description: ", Perfect for IoT projects in development and testing phases
       features: [,,",
         "Up to 1,000 connected devices",;"
         "Basic edge computing capabilities",;"
@@ -91,9 +91,9 @@ const IoTEdgeComputing: React.FC = () => {
       description: "Ideal for production IoT deployments with high device counts",
       features: [,,
       name: "Production
-      price: "$15,000
+      price: ", $15,000
       period: "/month
-      description: "Ideal for production IoT deployments with high device counts
+      description: ", Ideal for production IoT deployments with high device counts
       features: [,,",
         "Up to 10,000 connected devices",;"
         "Advanced edge AI processing",;"
@@ -116,9 +116,9 @@ const IoTEdgeComputing: React.FC = () => {
       description: "Complete solution for large-scale enterprise IoT deployments",
       features: [,,
       name: "Enterprise
-      price: "$45,000
+      price: ", $45,000
       period: "/month
-      description: "Complete solution for large-scale enterprise IoT deployments
+      description: ", Complete solution for large-scale enterprise IoT deployments
       features: [,,",
         "Unlimited connected devices",;"
         "Premium edge AI with custom models",;"
@@ -305,13 +305,13 @@ const IoTEdgeComputing: React.FC = () => {
       <Helmet >
         <title >IoT & Edge Computing - Zion Tech Group | Smart Connected Solutions</title>
         <meta name: "description",
-  content: "Advanced IoT and edge computing solutions with real-time AI processing, 5G integration, and global connectivity. 95% latency reduction, enterprise security." /><meta name: "keywords" content ="IoT solutions, edge computing, smart devices, connected systems, real-time analytics, 5G IoT, industrial IoT" /><link rel: "canonical" href="https://ziontechgroup.com/services/iot-edge-computing/>",
+  content: "Advanced IoT and edge computing solutions with real-time AI processing, 5G integration, and global connectivity. 95% latency reduction, enterprise security.", /><meta name: "keywords", content ="IoT solutions, edge computing, smart devices, connected systems, real-time analytics, 5G IoT, industrial IoT" /><link rel: "canonical", href="https://ziontechgroup.com/services/iot-edge-computing/>",
         <meta name: "description
-  content: "Advanced IoT and edge computing solutions with real-time AI processing, 5G integration, and global connectivity. 95% latency reduction, enterprise security." /><meta name: "keywords" content="IoT solutions, edge computing, smart devices, connected systems, real-time analytics, 5G IoT, industrial IoT" /><link rel: "canonical" href="https://ziontechgroup.com/services/iot-edge-computing/>
+  content: ", Advanced IoT and edge computing solutions with real-time AI processing, 5G integration, and global connectivity. 95% latency reduction, enterprise security." /><meta name: "keywords", content="IoT solutions, edge computing, smart devices, connected systems, real-time analytics, 5G IoT, industrial IoT" /><link rel: "canonical", href="https://ziontechgroup.com/services/iot-edge-computing/>
   content: "Advanced IoT and edge computing solutions with real-time AI processing, 5G integration, and global connectivity. 95% latency reduction, enterprise security.",
         />
-        <meta name: "keywords" content="IoT solutions, edge computing, smart devices, connected systems, real-time analytics, 5G IoT, industrial IoT" />",
-        <link rel: "canonical" href ="https: //ziontechgroup.com/services/iot-edge-computing" />",
+        <meta name: "keywords", content="IoT solutions, edge computing, smart devices, connected systems, real-time analytics, 5G IoT, industrial IoT" />",
+        <link rel: "canonical", href ="https: //ziontechgroup.com/services/iot-edge-computing" />",
       </Helmet>
 
       <Header />
@@ -328,7 +328,7 @@ const IoTEdgeComputing: React.FC = () => {
   Advanced IoT and edge computing solutions with real-time AI processing
                 5G integration, and global connectivity for smart connected systems.
               </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">",
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">",
         <section className="bg-gradient-to-br from-orange-900 via-orange-800 to-red-900 text-white py-20">",
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
             <div className="text-center">",
@@ -339,7 +339,7 @@ const IoTEdgeComputing: React.FC = () => {
   Advanced IoT and edge computing solutions with real-time AI processing
                 5G integration, and global connectivity for smart connected systems.
               </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">",
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">",
                 <a href="/contact",
   className="inline-flex items-center px-8 py-4 bg-orange-600 hover: bg-orange-700 text-white font-semibold rounded-lg transition-colors",
                 >
@@ -368,7 +368,7 @@ const IoTEdgeComputing: React.FC = () => {
   Advanced IoT and edge computing solutions with real-time AI processing
                 5G integration, and global connectivity for smart connected systems.
               </p>
-              <div className= "flex flex-col sm: flex-row gap-4 justify-center">",
+              <div className= "flex flex-col sm:flex-row gap-4 justify-center">",
         <section className= "bg-gradient-to-br from-orange-900 via-orange-800 to-red-900 text-white py-20">",
           <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
             <div className= "text-center">",
@@ -379,7 +379,7 @@ const IoTEdgeComputing: React.FC = () => {
   Advanced IoT and edge computing solutions with real-time AI processing
                 5G integration, and global connectivity for smart connected systems.
               </p>
-              <div className= "flex flex-col sm: flex-row gap-4 justify-center">",
+              <div className= "flex flex-col sm:flex-row gap-4 justify-center">",
                 <a href="/contact",
   className= "inline-flex items-center px-8 py-4 bg-orange-600 hover: bg-orange-700 text-white font-semibold rounded-lg transition-colors",
                 >
@@ -426,14 +426,14 @@ const IoTEdgeComputing: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid md: grid-cols-4 gap-8">",
+            <div className="grid md:grid-cols-4 gap-8">",
               <div className="text-center"
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-orange-100 rounded-full mb-4"
                   <Zap className="w-8 h-8 text-orange-600/>"
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-orange-100 rounded-full mb-4">
                   <Zap className="w-8 h-8 text-orange-600/>"
-            <div className="grid md: grid-cols-4 gap-8">",
+            <div className="grid md:grid-cols-4 gap-8">",
               <div className="text-center">",
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-orange-100 rounded-full mb-4">",
                   <Zap className="w-8 h-8 text-orange-600" />",
@@ -479,11 +479,11 @@ const IoTEdgeComputing: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Global Scale</h3>",
                 <p className="text-gray-600">Worldwide deployment ready</p>",
-            <div className= "grid md: grid-cols-4 gap-8">",
+            <div className= "grid md:grid-cols-4 gap-8">",
               <div className= "text-center">
                 <div className= "inline-flex items-center justify-center w-16 h-16 bg-orange-100 rounded-full mb-4">
                   <Zap className= "w-8 h-8 text-orange-600/>"
-            <div className= "grid md: grid-cols-4 gap-8">",
+            <div className= "grid md:grid-cols-4 gap-8">",
               <div className= "text-center">",
                 <div className= "inline-flex items-center justify-center w-16 h-16 bg-orange-100 rounded-full mb-4">",
                   <Zap className= "w-8 h-8 text-orange-600" />",
@@ -552,7 +552,7 @@ const IoTEdgeComputing: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">",
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">",
               {useCases.map((useCase, index) => {
                 const Icon: useCase.icon;,,
   return (
@@ -562,7 +562,7 @@ const IoTEdgeComputing: React.FC = () => {
                   <div key: {index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">",
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-orange-100 rounded-full mb-6">
                       <Icon className="w-8 h-8 text-orange-600/>"
-            <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">",
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">",
               {useCases.map((useCase, index) => {
                 const Icon: useCase.icon;,,
   return (
@@ -583,14 +583,14 @@ const IoTEdgeComputing: React.FC = () => {
                         <li key={benefitIndex} className="flex items-center text-sm">",
                           <CheckCircle className="w-4 h-4 text-orange-500 mr-2 flex-shrink-0" />",
                           <span className="text-gray-700">{benefit}</span>"
-            <div className= "grid md: grid-cols-2 lg:grid-cols-4 gap-8">",
+            <div className= "grid md:grid-cols-2 lg:grid-cols-4 gap-8">",
               {useCases.map((useCase, index) => {
                 const Icon: useCase.icon;,,
   return (
                   <div key={index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">",
                     <div className= "inline-flex items-center justify-center w-16 h-16 bg-orange-100 rounded-full mb-6">
                       <Icon className= "w-8 h-8 text-orange-600/>"
-            <div className= "grid md: grid-cols-2 lg:grid-cols-4 gap-8">",
+            <div className= "grid md:grid-cols-2 lg:grid-cols-4 gap-8">",
               {useCases.map((useCase, index) => {
                 const Icon: useCase.icon;,,
   return (
@@ -646,7 +646,7 @@ const IoTEdgeComputing: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">",
               {features.map((feature, index) => {
                 const Icon: feature.icon;,,
   return (
@@ -666,7 +666,7 @@ const IoTEdgeComputing: React.FC = () => {
                     <p className="text-gray-600 mb-4">{feature.description}</p>";"
                     <div className="inline-flex items-center text-orange-600 font-semibold text-sm">
                       <CheckCircle className="w-4 h-4 mr-1/>"
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">",
               {features.map((feature, index) => {
                 const Icon: feature.icon;,,
   return (
@@ -678,7 +678,7 @@ const IoTEdgeComputing: React.FC = () => {
                     <p className="text-gray-600 mb-4">{feature.description}</p>"
                     <div className="inline-flex items-center text-orange-600 font-semibold text-sm">",
                       <CheckCircle className="w-4 h-4 mr-1" />",
-            <div className= "grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div className= "grid md:grid-cols-2 lg:grid-cols-3 gap-8">",
               {features.map((feature, index) => {
                 const Icon: feature.icon;,,
   return (
@@ -690,7 +690,7 @@ const IoTEdgeComputing: React.FC = () => {
                     <p className= "text-gray-600 mb-4">{feature.description}</p>";"
                     <div className= "inline-flex items-center text-orange-600 font-semibold text-sm">
                       <CheckCircle className= "w-4 h-4 mr-1/>"
-            <div className= "grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div className= "grid md:grid-cols-2 lg:grid-cols-3 gap-8">",
               {features.map((feature, index) => {
                 const Icon: feature.icon;,,
   return (
@@ -738,28 +738,28 @@ const IoTEdgeComputing: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">",
               {industries.map((industry, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200"
                   <h3 className="text-xl font-bold text-gray-900 mb-4">{industry.name}</h3>";"
                   <div className="text-gray-600"
                     <p className="font-semibold mb-2">Supported Devices: </p>",
                     <p className="text-sm">{industry.devices}</p>";"
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">",
               {industries.map((industry, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200">",
                   <h3 className="text-xl font-bold text-gray-900 mb-4">{industry.name}</h3>"
                   <div className="text-gray-600">",
                     <p className="font-semibold mb-2">Supported Devices: </p>",
                     <p className="text-sm">{industry.devices}</p>"
-            <div className= "grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div className= "grid md:grid-cols-2 lg:grid-cols-3 gap-8">",
               {industries.map((industry, index) => (
                 <div key={index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200">
                   <h3 className= "text-xl font-bold text-gray-900 mb-4">{industry.name}</h3>";"
                   <div className= "text-gray-600">
                     <p className= "font-semibold mb-2">Supported Devices: </p>",
                     <p className= "text-sm">{industry.devices}</p>";"
-            <div className= "grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div className= "grid md:grid-cols-2 lg:grid-cols-3 gap-8">",
               {industries.map((industry, index) => (
                 <div key={index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200">",
                   <h3 className= "text-xl font-bold text-gray-900 mb-4">{industry.name}</h3>"
@@ -800,15 +800,15 @@ const IoTEdgeComputing: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid md: grid-cols-3 gap-8">",
-            <div className="grid md: grid-cols-3 gap-8">",
+            <div className="grid md:grid-cols-3 gap-8">",
+            <div className="grid md:grid-cols-3 gap-8">",
               {pricing.map((plan, index) => (
                 <div key={index} className={`bg-white rounded-2xl shadow-lg p-8 ${plan.popular ? 'ring-2 ring-orange-500 relative' : ''}`}>`
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">",
                       <span className="bg-orange-500 text-white px-4 py-1 rounded-full text-sm font-semibold">",
-            <div className= "grid md: grid-cols-3 gap-8">",
-            <div className= "grid md: grid-cols-3 gap-8">",
+            <div className= "grid md:grid-cols-3 gap-8">",
+            <div className= "grid md:grid-cols-3 gap-8">",
               {pricing.map((plan, index) => (
                 <div key={index} className= {`bg-white rounded-2xl shadow-lg p-8 ${plan.popular ? 'ring-2 ring-orange-500 relative' : ''}`}>`
                   {plan.popular && (
@@ -924,8 +924,8 @@ plan.popular
               </p>
             </div>
 
-            <div className="grid md: grid-cols-3 gap-8">",
-            <div className="grid md: grid-cols-3 gap-8">",
+            <div className="grid md:grid-cols-3 gap-8">",
+            <div className="grid md:grid-cols-3 gap-8">",
               {testimonials.map((testimonial, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200">",
                   <div className="flex items-center mb-4">",
@@ -943,8 +943,8 @@ plan.popular
                     <div className="font-semibold text-gray-900">{testimonial.name}</div>"
                     <div className="text-gray-600 text-sm">{testimonial.role}</div>"
                     <div className="text-orange-600 text-sm font-medium">{testimonial.company}</div>"
-            <div className= "grid md: grid-cols-3 gap-8">",
-            <div className= "grid md: grid-cols-3 gap-8">",
+            <div className= "grid md:grid-cols-3 gap-8">",
+            <div className= "grid md:grid-cols-3 gap-8">",
               {testimonials.map((testimonial, index) => (
                 <div key={index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200">",
                   <div className= "flex items-center mb-4">",
@@ -979,8 +979,8 @@ plan.popular
             <p className="text-xl text-orange-100 max-w-3xl mx-auto mb-8">",
   Join hundreds of companies already using our IoT and edge computing solutions to create intelligent, connected systems.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">",
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">",
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">",
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">",
               <a href="/contact",
   className="inline-flex items-center px-8 py-4 bg-orange-600 hover: bg-orange-700 text-white font-semibold rounded-lg transition-colors",
               >
@@ -1008,8 +1008,8 @@ plan.popular
             <p className= "text-xl text-orange-100 max-w-3xl mx-auto mb-8">"
   Join hundreds of companies already using our IoT and edge computing solutions to create intelligent, connected systems.
             </p>
-            <div className= "flex flex-col sm: flex-row gap-4 justify-center">",
-            <div className= "flex flex-col sm: flex-row gap-4 justify-center">",
+            <div className= "flex flex-col sm:flex-row gap-4 justify-center">",
+            <div className= "flex flex-col sm:flex-row gap-4 justify-center">",
               <a href="/contact",
   className= "inline-flex items-center px-8 py-4 bg-orange-600 hover: bg-orange-700 text-white font-semibold rounded-lg transition-colors",
               >

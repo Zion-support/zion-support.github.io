@@ -10,8 +10,8 @@ const RealTimeAIInferenceOptimization2025: () => {
           Real-Time AI Inference Optimization: Cut Latency by 85% | Zion Tech Group,
         </title>
         <meta name: "description",
-  content: "Production-tested techniques to reduce AI inference latency by 85%. Model quantization, batching strategies, and hardware acceleration for sub-50ms response times." /><meta name: "keywords",
-  content: "AI inference, model optimization, latency reduction, quantization, GPU optimization, real-time AI" /><link rel: "canonical",
+  content: "Production-tested techniques to reduce AI inference latency by 85%. Model quantization, batching strategies, and hardware acceleration for sub-50ms response times.", /><meta name: "keywords",
+  content: "AI inference, model optimization, latency reduction, quantization, GPU optimization, real-time AI", /><link rel: "canonical",
   href="https://ziontechgroup.com/blog/real-time-ai-inference-optimization-2025",
         />
       </Helmet>
@@ -418,11 +418,11 @@ const RealTimeAIInferenceOptimization2025: () => {
   Choose the right hardware for your workload to maximize performance per dollar.
                   </p>
 
-                  <div className="grid md: grid-cols-2 gap-4">",
+                  <div className="grid md:grid-cols-2 gap-4">",
                     <div className="bg-slate-900/50 p-4 rounded border border-slate-600"
                       <p className="text-cyan-400 font-semibold mb-2">NVIDIA GPUs</p>"
                       <ul className="text-sm text-gray-300 space-y-1"
-                  <div className="grid md: grid-cols-2 gap-4">",
+                  <div className="grid md:grid-cols-2 gap-4">",
                     <div className="bg-slate-900/50 p-4 rounded border border-slate-600">",
                       <p className="text-cyan-400 font-semibold mb-2">NVIDIA GPUs</p>",
                       <ul className="text-sm text-gray-300 space-y-1">",
@@ -435,11 +435,11 @@ const RealTimeAIInferenceOptimization2025: () => {
   Choose the right hardware for your workload to maximize performance per dollar.
                   </p>
 
-                  <div className= "grid md: grid-cols-2 gap-4">",
+                  <div className= "grid md:grid-cols-2 gap-4">",
                     <div className= "bg-slate-900/50 p-4 rounded border border-slate-600">
                       <p className= "text-cyan-400 font-semibold mb-2">NVIDIA GPUs</p>"
                       <ul className= "text-sm text-gray-300 space-y-1">
-                  <div className= "grid md: grid-cols-2 gap-4">",
+                  <div className= "grid md:grid-cols-2 gap-4">",
                     <div className= "bg-slate-900/50 p-4 rounded border border-slate-600">",
                       <p className= "text-cyan-400 font-semibold mb-2">NVIDIA GPUs</p>",
                       <ul className= "text-sm text-gray-300 space-y-1">",
@@ -576,11 +576,11 @@ const RealTimeAIInferenceOptimization2025: () => {
             <section className="mb-12"
               <div className="bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 p-8 rounded-lg border border-emerald-500/30"
                 <h2 className="text-3xl font-bold text-white mb-6">Measured Performance Improvements</h2>"
-                <div className="grid md: grid-cols-2 gap-6">",
+                <div className="grid md:grid-cols-2 gap-6">",
             <section className="mb-12">",
               <div className="bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 p-8 rounded-lg border border-emerald-500/30">",
                 <h2 className="text-3xl font-bold text-white mb-6">Measured Performance Improvements</h2>",
-                <div className="grid md: grid-cols-2 gap-6">",
+                <div className="grid md:grid-cols-2 gap-6">",
                   <div >
                     <p className="text-5xl font-bold text-emerald-400 mb-2">85%</p>",
                     <p className="text-gray-300">Reduction in P95 latency (780ms → 120ms)</p>",
@@ -599,11 +599,11 @@ const RealTimeAIInferenceOptimization2025: () => {
             <section className= "mb-12">
               <div className= "bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 p-8 rounded-lg border border-emerald-500/30">
                 <h2 className= "text-3xl font-bold text-white mb-6">Measured Performance Improvements</h2>"
-                <div className= "grid md: grid-cols-2 gap-6">",
+                <div className= "grid md:grid-cols-2 gap-6">",
             <section className= "mb-12">",
               <div className= "bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 p-8 rounded-lg border border-emerald-500/30">",
                 <h2 className= "text-3xl font-bold text-white mb-6">Measured Performance Improvements</h2>",
-                <div className= "grid md: grid-cols-2 gap-6">",
+                <div className= "grid md:grid-cols-2 gap-6">",
                   <div >
                     <p className= "text-5xl font-bold text-emerald-400 mb-2">85%</p>",
                     <p className= "text-gray-300">Reduction in P95 latency (780ms → 120ms)</p>",

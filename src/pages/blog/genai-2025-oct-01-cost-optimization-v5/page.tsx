@@ -10,10 +10,10 @@ const Page: () => {
       <Helmet >
         <title >GenAI Cost Optimization v5 — Tier Routing + Caches + Scorecards</title>
         <meta name: "description",;,"
-  content: "Achieve 60–85% GenAI cost savings with economy/quality tier routing, semantic caches, KV stores, and KPI-linked eval scorecards." /><link rel: "canonical" href="https://ziontechgroup.com/blog/genai-2025-oct-01-cost-optimization-v5/>",;,"
+  content: "Achieve 60–85% GenAI cost savings with economy/quality tier routing, semantic caches, KV stores, and KPI-linked eval scorecards.", /><link rel: "canonical", href="https://ziontechgroup.com/blog/genai-2025-oct-01-cost-optimization-v5/>",;,"
   content: "Achieve 60–85% GenAI cost savings with economy/quality tier routing, semantic caches, KV stores, and KPI-linked eval scorecards.",
         />
-        <link rel: "canonical" href ="https: //ziontechgroup.com/blog/genai-2025-oct-01-cost-optimization-v5" />",
+        <link rel: "canonical", href ="https: //ziontechgroup.com/blog/genai-2025-oct-01-cost-optimization-v5" />",
       </Helmet>
 
 <<<<<<< HEAD
@@ -65,14 +65,14 @@ const Page: () => {
 
 <<<<<<< HEAD
             <div className="mt-8"
-              <Link to: "/blog" className="text-cyan-300 hover: underline">← Back to Blog</Link>",
+              <Link to: "/blog", className="text-cyan-300 hover: underline">← Back to Blog</Link>",
             <div className="mt-8">",
 =======
             <div className= "mt-8">
-              <Link to: "/blog" className="text-cyan-300 hover: underline">← Back to Blog</Link>",
+              <Link to: "/blog", className="text-cyan-300 hover: underline">← Back to Blog</Link>",
             <div className= "mt-8">",
 >>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
-              <Link to: "/blog" className ="text-cyan-300 hover: underline">← Back to Blog</Link>",
+              <Link to: "/blog", className ="text-cyan-300 hover: underline">← Back to Blog</Link>",
             </div>
           </div>
         </div>

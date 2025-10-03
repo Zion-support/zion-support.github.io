@@ -58,25 +58,25 @@ return (
 <div className="max-w-3xl mx-auto pt-20"
 <h1 className="text-3xl font-bold mb-4">Article not found</h1>"
 <p className="text-zion-slate-light mb-6">The post you are looking for does not exist or has been moved.</p>"
-<Link to: "/blog" className="text-zion-cyan hover:underline inline-flex items-center gap-2"
+<Link to: "/blog", className="text-zion-cyan hover:underline inline-flex items-center gap-2"
 <ArrowLeft className="w-4 h-4" />"
 <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white p-8">",
 <div className="max-w-3xl mx-auto pt-20">",
 <h1 className="text-3xl font-bold mb-4">Article not found</h1>",
 <p className="text-zion-slate-light mb-6">The post you are looking for does not exist or has been moved.</p>",
-<Link to: "/blog" className ="text-zion-cyan hover: underline inline-flex items-center gap-2">,",
+<Link to: "/blog", className ="text-zion-cyan hover: underline inline-flex items-center gap-2">,",
 <ArrowLeft className="w-4 h-4" />",
 <div className= "min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white p-8">
 <div className= "max-w-3xl mx-auto pt-20">
 <h1 className= "text-3xl font-bold mb-4">Article not found</h1>"
 <p className= "text-zion-slate-light mb-6">The post you are looking for does not exist or has been moved.</p>"
-<Link to: "/blog" className="text-zion-cyan hover:underline inline-flex items-center gap-2">
+<Link to: "/blog", className="text-zion-cyan hover:underline inline-flex items-center gap-2">
 <ArrowLeft className= "w-4 h-4" />"
 <div className= "min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white p-8">",
 <div className= "max-w-3xl mx-auto pt-20">",
 <h1 className= "text-3xl font-bold mb-4">Article not found</h1>",
 <p className= "text-zion-slate-light mb-6">The post you are looking for does not exist or has been moved.</p>",
-<Link to: "/blog" className ="text-zion-cyan hover: underline inline-flex items-center gap-2">,",
+<Link to: "/blog", className ="text-zion-cyan hover: underline inline-flex items-center gap-2">,",
 <ArrowLeft className= "w-4 h-4" />",
   Back to Blog
 </Link>
@@ -90,21 +90,21 @@ return (
     <>
       <Helmet >
         <title >{article.title} | Zion Tech Group</title>
-        <meta name="description" content={article.description} />";"
-        <meta property: "og:title" content={article.title} />";"
-        <meta property: "og:description" content={article.description} />";"
-        <meta property: "og:type" content="article" />"
-        <meta name: "description" content={article.description} />"
-        <meta property: "og:type" content="article" />
-        <meta name="description" content={article.description} />"
-        <meta property: "og:title" content={article.title} />"
-        <meta property: "og:description" content={article.description} />"
-        <meta property: "og: type" content="article" />",
+        <meta name="description" content="{article.description} /">";"
+        <meta property: "og:title", content="{article.title} /">";"
+        <meta property: "og:description", content="{article.description} /">";"
+        <meta property: "og:type", content="article" />"
+        <meta name: "description", content="{article.description} /">"
+        <meta property: "og:type", content="article" />
+        <meta name="description" content="{article.description} /">"
+        <meta property: "og:title", content="{article.title} /">"
+        <meta property: "og:description", content="{article.description} /">"
+        <meta property: "og: type", content="article" />",
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">",
         <Header />
         <div className="max-w-4xl mx-auto px-6 py-24"
-          <Link to: "/blog" className ="text-zion-cyan hover: text-zion-blue-light mb-8 inline-flex items-center gap-2 transition-colors">",
+          <Link to: "/blog", className ="text-zion-cyan hover: text-zion-blue-light mb-8 inline-flex items-center gap-2 transition-colors">",
             <ArrowLeft className="w-4 h-4/>,"
   Back to Blog
           </Link>
@@ -113,7 +113,7 @@ return (
             <div className="mb-6"
               <span className="inline-block px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-sm font-medium rounded-full border border-zion-cyan/30"
         <div className="max-w-4xl mx-auto px-6 py-24">",
-          <Link to: "/blog" className ="text-zion-cyan hover: text-zion-blue-light mb-8 inline-flex items-center gap-2 transition-colors">",
+          <Link to: "/blog", className ="text-zion-cyan hover: text-zion-blue-light mb-8 inline-flex items-center gap-2 transition-colors">",
             <ArrowLeft className="w-4 h-4" />",
   Back to Blog
           </Link>
@@ -124,7 +124,7 @@ return (
       <div className= "min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">",
         <Header />
         <div className= "max-w-4xl mx-auto px-6 py-24">
-          <Link to: "/blog" className ="text-zion-cyan hover: text-zion-blue-light mb-8 inline-flex items-center gap-2 transition-colors">",
+          <Link to: "/blog", className ="text-zion-cyan hover: text-zion-blue-light mb-8 inline-flex items-center gap-2 transition-colors">",
             <ArrowLeft className= "w-4 h-4/>,"
   Back to Blog
           </Link>
@@ -133,7 +133,7 @@ return (
             <div className= "mb-6">
               <span className= "inline-block px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-sm font-medium rounded-full border border-zion-cyan/30">
         <div className= "max-w-4xl mx-auto px-6 py-24">",
-          <Link to: "/blog" className ="text-zion-cyan hover: text-zion-blue-light mb-8 inline-flex items-center gap-2 transition-colors">",
+          <Link to: "/blog", className ="text-zion-cyan hover: text-zion-blue-light mb-8 inline-flex items-center gap-2 transition-colors">",
             <ArrowLeft className= "w-4 h-4" />",
   Back to Blog
           </Link>

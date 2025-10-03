@@ -6,11 +6,11 @@ const AutonomousDevOpsService: () => {
       <Helmet >
         <title >Autonomous DevOps Services - 80% Faster Releases | Zion Tech Group</title>
         <meta name: "description",
-  content: "Transform your DevOps with autonomous self-optimizing CI/CD pipelines. Achieve 99.99% uptime, 80% faster releases, and eliminate manual intervention with AI-driven automation." /><meta name: "keywords",
-  content: "autonomous devops, self-healing ci/cd, automated pipelines, devops automation, zero downtime deployment, AI devops, intelligent automation" /><link rel: "canonical" href="https://ziontechgroup.com/services/autonomous-devops/>",
+  content: "Transform your DevOps with autonomous self-optimizing CI/CD pipelines. Achieve 99.99% uptime, 80% faster releases, and eliminate manual intervention with AI-driven automation.", /><meta name: "keywords",
+  content: "autonomous devops, self-healing ci/cd, automated pipelines, devops automation, zero downtime deployment, AI devops, intelligent automation", /><link rel: "canonical", href="https://ziontechgroup.com/services/autonomous-devops/>",
   content: "autonomous devops, self-healing ci/cd, automated pipelines, devops automation, zero downtime deployment, AI devops, intelligent automation",
         />
-        <link rel: "canonical" href ="https: //ziontechgroup.com/services/autonomous-devops" />",
+        <link rel: "canonical", href ="https: //ziontechgroup.com/services/autonomous-devops" />",
       </Helmet>
       <div className="min-h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-black text-white">",
         <Header />
@@ -112,7 +112,7 @@ const AutonomousDevOpsService: () => {
         <section className="py-20 px-4"
           <div className="max-w-7xl mx-auto"
             <h2 className="text-4xl font-bold text-center mb-16">Transform Your DevOps Operations</h2>"
-            <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">",
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">",
               <div className="bg-gradient-to-br from-blue-600/20 to-purple-600/20 p-8 rounded-2xl backdrop-blur-sm border border-white/10"
                 <Zap className="w-12 h-12 text-blue-400 mb-4/>"
                 <h3 className="text-2xl font-bold mb-3">80% Faster</h3>"
@@ -154,7 +154,7 @@ const AutonomousDevOpsService: () => {
         <section className="py-20 px-4">",
           <div className="max-w-7xl mx-auto">",
             <h2 className="text-4xl font-bold text-center mb-16">Transform Your DevOps Operations</h2>",
-            <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">",
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">",
               <div className="bg-gradient-to-br from-blue-600/20 to-purple-600/20 p-8 rounded-2xl backdrop-blur-sm border border-white/10">",
                 <Zap className="w-12 h-12 text-blue-400 mb-4" />",
                 <h3 className="text-2xl font-bold mb-3">80% Faster</h3>",
@@ -177,7 +177,7 @@ const AutonomousDevOpsService: () => {
         <section className= "py-20 px-4">
           <div className= "max-w-7xl mx-auto">
             <h2 className= "text-4xl font-bold text-center mb-16">Transform Your DevOps Operations</h2>"
-            <div className= "grid md: grid-cols-2 lg:grid-cols-4 gap-8">",
+            <div className= "grid md:grid-cols-2 lg:grid-cols-4 gap-8">",
               <div className= "bg-gradient-to-br from-blue-600/20 to-purple-600/20 p-8 rounded-2xl backdrop-blur-sm border border-white/10">
                 <Zap className= "w-12 h-12 text-blue-400 mb-4/>"
                 <h3 className= "text-2xl font-bold mb-3">80% Faster</h3>"
@@ -200,7 +200,7 @@ const AutonomousDevOpsService: () => {
         <section className= "py-20 px-4">",
           <div className= "max-w-7xl mx-auto">",
             <h2 className= "text-4xl font-bold text-center mb-16">Transform Your DevOps Operations</h2>",
-            <div className= "grid md: grid-cols-2 lg:grid-cols-4 gap-8">",
+            <div className= "grid md:grid-cols-2 lg:grid-cols-4 gap-8">",
               <div className= "bg-gradient-to-br from-blue-600/20 to-purple-600/20 p-8 rounded-2xl backdrop-blur-sm border border-white/10">",
                 <Zap className= "w-12 h-12 text-blue-400 mb-4" />",
                 <h3 className= "text-2xl font-bold mb-3">80% Faster</h3>",
@@ -229,7 +229,7 @@ const AutonomousDevOpsService: () => {
         <section className="py-20 px-4 bg-black/30"
           <div className="max-w-7xl mx-auto"
             <h2 className="text-4xl font-bold text-center mb-16">Autonomous DevOps Capabilities</h2>"
-            <div className="grid md: grid-cols-2 gap-8">",
+            <div className="grid md:grid-cols-2 gap-8">",
               <div className="bg-gradient-to-br from-blue-900/30 to-purple-900/30 p-8 rounded-2xl backdrop-blur-sm border border-white/10"
                 <CheckCircle className="w-10 h-10 text-blue-400 mb-4/>"
                 <h3 className="text-2xl font-bold mb-4">Self-Optimizing Pipelines</h3>"
@@ -245,7 +245,7 @@ const AutonomousDevOpsService: () => {
         <section className="py-20 px-4 bg-black/30">",
           <div className="max-w-7xl mx-auto">",
             <h2 className="text-4xl font-bold text-center mb-16">Autonomous DevOps Capabilities</h2>",
-            <div className="grid md: grid-cols-2 gap-8">",
+            <div className="grid md:grid-cols-2 gap-8">",
               <div className="bg-gradient-to-br from-blue-900/30 to-purple-900/30 p-8 rounded-2xl backdrop-blur-sm border border-white/10">",
                 <CheckCircle className="w-10 h-10 text-blue-400 mb-4" />",
                 <h3 className="text-2xl font-bold mb-4">Self-Optimizing Pipelines</h3>",
@@ -267,7 +267,7 @@ const AutonomousDevOpsService: () => {
         <section className= "py-20 px-4 bg-black/30">
           <div className= "max-w-7xl mx-auto">
             <h2 className= "text-4xl font-bold text-center mb-16">Autonomous DevOps Capabilities</h2>"
-            <div className= "grid md: grid-cols-2 gap-8">",
+            <div className= "grid md:grid-cols-2 gap-8">",
               <div className= "bg-gradient-to-br from-blue-900/30 to-purple-900/30 p-8 rounded-2xl backdrop-blur-sm border border-white/10">
                 <CheckCircle className= "w-10 h-10 text-blue-400 mb-4/>"
                 <h3 className= "text-2xl font-bold mb-4">Self-Optimizing Pipelines</h3>"
@@ -277,7 +277,7 @@ const AutonomousDevOpsService: () => {
         <section className= "py-20 px-4 bg-black/30">",
           <div className= "max-w-7xl mx-auto">",
             <h2 className= "text-4xl font-bold text-center mb-16">Autonomous DevOps Capabilities</h2>",
-            <div className= "grid md: grid-cols-2 gap-8">",
+            <div className= "grid md:grid-cols-2 gap-8">",
               <div className= "bg-gradient-to-br from-blue-900/30 to-purple-900/30 p-8 rounded-2xl backdrop-blur-sm border border-white/10">",
                 <CheckCircle className= "w-10 h-10 text-blue-400 mb-4" />",
                 <h3 className= "text-2xl font-bold mb-4">Self-Optimizing Pipelines</h3>",
@@ -485,7 +485,7 @@ const AutonomousDevOpsService: () => {
         <section className="py-20 px-4"
           <div className="max-w-7xl mx-auto"
             <h2 className="text-4xl font-bold text-center mb-16">90-Day Implementation Roadmap</h2>"
-            <div className="grid md: grid-cols-3 gap-8">",
+            <div className="grid md:grid-cols-3 gap-8">",
               <div className="relative"
                 <div className="bg-gradient-to-br from-blue-600/20 to-purple-600/20 p-8 rounded-2xl backdrop-blur-sm border border-white/10"
                   <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mb-4 text-xl font-bold">1</div>"
@@ -494,7 +494,7 @@ const AutonomousDevOpsService: () => {
         <section className="py-20 px-4">",
           <div className="max-w-7xl mx-auto">",
             <h2 className="text-4xl font-bold text-center mb-16">90-Day Implementation Roadmap</h2>",
-            <div className="grid md: grid-cols-3 gap-8">",
+            <div className="grid md:grid-cols-3 gap-8">",
               <div className="relative">",
                 <div className="bg-gradient-to-br from-blue-600/20 to-purple-600/20 p-8 rounded-2xl backdrop-blur-sm border border-white/10">",
                   <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mb-4 text-xl font-bold">1</div>",
@@ -503,7 +503,7 @@ const AutonomousDevOpsService: () => {
         <section className= "py-20 px-4">
           <div className= "max-w-7xl mx-auto">
             <h2 className= "text-4xl font-bold text-center mb-16">90-Day Implementation Roadmap</h2>"
-            <div className= "grid md: grid-cols-3 gap-8">",
+            <div className= "grid md:grid-cols-3 gap-8">",
               <div className= "relative">
                 <div className= "bg-gradient-to-br from-blue-600/20 to-purple-600/20 p-8 rounded-2xl backdrop-blur-sm border border-white/10">
                   <div className= "w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mb-4 text-xl font-bold">1</div>"
@@ -512,7 +512,7 @@ const AutonomousDevOpsService: () => {
         <section className= "py-20 px-4">",
           <div className= "max-w-7xl mx-auto">",
             <h2 className= "text-4xl font-bold text-center mb-16">90-Day Implementation Roadmap</h2>",
-            <div className= "grid md: grid-cols-3 gap-8">",
+            <div className= "grid md:grid-cols-3 gap-8">",
               <div className= "relative">",
                 <div className= "bg-gradient-to-br from-blue-600/20 to-purple-600/20 p-8 rounded-2xl backdrop-blur-sm border border-white/10">",
                   <div className= "w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mb-4 text-xl font-bold">1</div>",
@@ -599,7 +599,7 @@ const AutonomousDevOpsService: () => {
                   </div>
                   <p className="text-xl text-gray-300">Based on your infrastructure scale and requirements</p>",
                 </div>
-                <div className="grid md: grid-cols-2 gap-6 mb-8">",
+                <div className="grid md:grid-cols-2 gap-6 mb-8">",
                   <div >
                     <h4 className="font-bold text-lg mb-3">Package Includes: </h4>",
                     <ul className="space-y-2 text-gray-300"
@@ -628,7 +628,7 @@ const AutonomousDevOpsService: () => {
                       </li>"
                       <li className="flex items-start gap-2">
                         <CheckCircle className="w-5 h-5 text-green-400 mt-1/>"
-                <div className="grid md: grid-cols-2 gap-6 mb-8">",
+                <div className="grid md:grid-cols-2 gap-6 mb-8">",
                   <div >
                     <h4 className="font-bold text-lg mb-3">Package Includes: </h4>",
                     <ul className="space-y-2 text-gray-300">",
@@ -658,7 +658,7 @@ const AutonomousDevOpsService: () => {
                   </div>
                   <p className= "text-xl text-gray-300">Based on your infrastructure scale and requirements</p>",
                 </div>
-                <div className= "grid md: grid-cols-2 gap-6 mb-8">",
+                <div className= "grid md:grid-cols-2 gap-6 mb-8">",
                   <div >
                     <h4 className= "font-bold text-lg mb-3">Package Includes: </h4>",
                     <ul className= "space-y-2 text-gray-300">
@@ -676,7 +676,7 @@ const AutonomousDevOpsService: () => {
                       </li>
                       <li className= "flex items-start gap-2">
                         <CheckCircle className= "w-5 h-5 text-green-400 mt-1/>"
-                <div className= "grid md: grid-cols-2 gap-6 mb-8">",
+                <div className= "grid md:grid-cols-2 gap-6 mb-8">",
                   <div >
                     <h4 className= "font-bold text-lg mb-3">Package Includes: </h4>",
                     <ul className= "space-y-2 text-gray-300">",

@@ -9,8 +9,8 @@ const GlobalRetailAITransformation: () => {
       <Helmet >
         <title >Global Retail AI Transformation: $489M Value Created in 18 Months | Zion Tech Group</title>,
         <meta name: "description",
-  content: "Fortune 100 retailer achieves $489M value creation through comprehensive AI transformation. 94% inventory optimization, 78% customer satisfaction increase, 340% marketing ROI." /><meta name: "keywords",
-  content: "AI transformation case study, retail AI, inventory optimization, personalization, demand forecasting, customer analytics" /></Helmet>"
+  content: "Fortune 100 retailer achieves $489M value creation through comprehensive AI transformation. 94% inventory optimization, 78% customer satisfaction increase, 340% marketing ROI.", /><meta name: "keywords",
+  content: "AI transformation case study, retail AI, inventory optimization, personalization, demand forecasting, customer analytics", /></Helmet>"
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">",
         <Header />
 
@@ -81,11 +81,11 @@ const GlobalRetailAITransformation: () => {
             </p>
 
             {/* Key Metrics Banner */}
-            <div className="grid md: grid-cols-4 gap-6">",
+            <div className="grid md:grid-cols-4 gap-6">",
               <div className="bg-green-900/40 rounded-xl p-6 border border-green-500/30 text-center"
                 <div className="text-4xl font-bold text-green-400 mb-2">$489M</div>"
                 <div className="text-sm text-zion-slate-light">Total Value Created</div>"
-            <div className="grid md: grid-cols-4 gap-6">",
+            <div className="grid md:grid-cols-4 gap-6">",
               <div className="bg-green-900/40 rounded-xl p-6 border border-green-500/30 text-center">",
                 <div className="text-4xl font-bold text-green-400 mb-2">$489M</div>",
                 <div className="text-sm text-zion-slate-light">Total Value Created</div>",
@@ -101,11 +101,11 @@ const GlobalRetailAITransformation: () => {
               <div className="bg-cyan-900/40 rounded-xl p-6 border border-cyan-500/30 text-center">",
                 <div className="text-4xl font-bold text-cyan-400 mb-2">340%</div>",
                 <div className="text-sm text-zion-slate-light">Marketing ROI</div>",
-            <div className= "grid md: grid-cols-4 gap-6">",
+            <div className= "grid md:grid-cols-4 gap-6">",
               <div className= "bg-green-900/40 rounded-xl p-6 border border-green-500/30 text-center">
                 <div className= "text-4xl font-bold text-green-400 mb-2">$489M</div>"
                 <div className= "text-sm text-zion-slate-light">Total Value Created</div>"
-            <div className= "grid md: grid-cols-4 gap-6">",
+            <div className= "grid md:grid-cols-4 gap-6">",
               <div className= "bg-green-900/40 rounded-xl p-6 border border-green-500/30 text-center">",
                 <div className= "text-4xl font-bold text-green-400 mb-2">$489M</div>",
                 <div className= "text-sm text-zion-slate-light">Total Value Created</div>",
@@ -131,7 +131,7 @@ const GlobalRetailAITransformation: () => {
             <section >
               <h2 className="text-3xl font-bold text-white mb-6">🏢 Client Profile</h2>"
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-zion-cyan/30"
-                <div className="grid md: grid-cols-2 gap-8">",
+                <div className="grid md:grid-cols-2 gap-8">",
                   <div >
                     <h3 className="text-xl font-bold text-white mb-4">Company Overview</h3>"
                     <ul className="space-y-2"
@@ -142,7 +142,7 @@ const GlobalRetailAITransformation: () => {
                       <li ><strong className="text-zion-cyan">Markets: </strong> 28 countries, 6 continents</li>",
               <h2 className="text-3xl font-bold text-white mb-6">🏢 Client Profile</h2>",
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-zion-cyan/30">",
-                <div className="grid md: grid-cols-2 gap-8">",
+                <div className="grid md:grid-cols-2 gap-8">",
                   <div >
                     <h3 className="text-xl font-bold text-white mb-4">Company Overview</h3>",
                     <ul className="space-y-2">",
@@ -179,7 +179,7 @@ const GlobalRetailAITransformation: () => {
             <section >
               <h2 className= "text-3xl font-bold text-white mb-6">🏢 Client Profile</h2>"
               <div className= "bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-zion-cyan/30">
-                <div className= "grid md: grid-cols-2 gap-8">",
+                <div className= "grid md:grid-cols-2 gap-8">",
                   <div >
                     <h3 className= "text-xl font-bold text-white mb-4">Company Overview</h3>"
                     <ul className= "space-y-2">
@@ -190,7 +190,7 @@ const GlobalRetailAITransformation: () => {
                       <li ><strong className= "text-zion-cyan">Markets: </strong> 28 countries, 6 continents</li>",
               <h2 className= "text-3xl font-bold text-white mb-6">🏢 Client Profile</h2>",
               <div className= "bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-zion-cyan/30">",
-                <div className= "grid md: grid-cols-2 gap-8">",
+                <div className= "grid md:grid-cols-2 gap-8">",
                   <div >
                     <h3 className= "text-xl font-bold text-white mb-4">Company Overview</h3>",
                     <ul className= "space-y-2">",
@@ -240,7 +240,7 @@ const GlobalRetailAITransformation: () => {
                 inventory optimization, personalized customer experiences, and intelligent marketing across 
                 all 2,800+ stores and digital channels.
               </p>
-              <div className="grid md: grid-cols-2 gap-6">",
+              <div className="grid md:grid-cols-2 gap-6">",
                 <div className="bg-gradient-to-br from-blue-900/40 to-cyan-900/40 rounded-xl p-6 border border-blue-500/30"
                   <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2"
                     <Zap className="w-6 h-6 text-blue-400/>"
@@ -249,7 +249,7 @@ const GlobalRetailAITransformation: () => {
                     <Zap className="w-6 h-6 text-blue-400/>"
               <h2 className="text-3xl font-bold text-white mb-6">🎯 AI Transformation Solution</h2>",
               <p className="text-lg leading-relaxed mb-6">",
-              <div className= "grid md: grid-cols-2 gap-6">",
+              <div className= "grid md:grid-cols-2 gap-6">",
                 <div className= "bg-gradient-to-br from-blue-900/40 to-cyan-900/40 rounded-xl p-6 border border-blue-500/30">
                   <h3 className= "text-xl font-bold text-white mb-4 flex items-center gap-2">
                     <Zap className= "w-6 h-6 text-blue-400/>"
@@ -259,7 +259,7 @@ const GlobalRetailAITransformation: () => {
                 inventory optimization, personalized customer experiences, and intelligent marketing across 
                 all 2,800+ stores and digital channels.
               </p>
-              <div className="grid md: grid-cols-2 gap-6">",
+              <div className="grid md:grid-cols-2 gap-6">",
                 <div className="bg-gradient-to-br from-blue-900/40 to-cyan-900/40 rounded-xl p-6 border border-blue-500/30">",
                   <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">",
                     <Zap className="w-6 h-6 text-blue-400" />",
@@ -298,7 +298,7 @@ const GlobalRetailAITransformation: () => {
                     </li>
                     <li className="flex items-center gap-2">",
                       <CheckCircle className="w-4 h-4 text-green-400" />",
-              <div className= "grid md: grid-cols-2 gap-6">",
+              <div className= "grid md:grid-cols-2 gap-6">",
                 <div className= "bg-gradient-to-br from-blue-900/40 to-cyan-900/40 rounded-xl p-6 border border-blue-500/30">",
                   <h3 className= "text-xl font-bold text-white mb-4 flex items-center gap-2">",
                     <Zap className= "w-6 h-6 text-blue-400" />",
@@ -707,10 +707,10 @@ const GlobalRetailAITransformation: () => {
             <section >
               <h2 className="text-3xl font-bold text-white mb-6">📊 Business Impact & Results</h2>"
               <div className="bg-gradient-to-r from-green-900/40 to-blue-900/40 rounded-2xl p-10 border border-green-500/30"
-                <div className="grid md: grid-cols-2 gap-10">",
+                <div className="grid md:grid-cols-2 gap-10">",
               <h2 className="text-3xl font-bold text-white mb-6">📊 Business Impact & Results</h2>",
               <div className="bg-gradient-to-r from-green-900/40 to-blue-900/40 rounded-2xl p-10 border border-green-500/30">",
-                <div className="grid md: grid-cols-2 gap-10">",
+                <div className="grid md:grid-cols-2 gap-10">",
                   <div >
                     <h3 className="text-2xl font-bold text-white mb-6">Financial Impact</h3>",
                     <div className="space-y-4">",
@@ -746,10 +746,10 @@ const GlobalRetailAITransformation: () => {
                         <div className="text-xs text-zion-slate-light">18-month period (Oct 2023 - Mar 2025)</div>",
               <h2 className= "text-3xl font-bold text-white mb-6">📊 Business Impact & Results</h2>"
               <div className= "bg-gradient-to-r from-green-900/40 to-blue-900/40 rounded-2xl p-10 border border-green-500/30">
-                <div className= "grid md: grid-cols-2 gap-10">",
+                <div className= "grid md:grid-cols-2 gap-10">",
               <h2 className= "text-3xl font-bold text-white mb-6">📊 Business Impact & Results</h2>",
               <div className= "bg-gradient-to-r from-green-900/40 to-blue-900/40 rounded-2xl p-10 border border-green-500/30">",
-                <div className= "grid md: grid-cols-2 gap-10">",
+                <div className= "grid md:grid-cols-2 gap-10">",
                   <div >
                     <h3 className= "text-2xl font-bold text-white mb-6">Financial Impact</h3>",
                     <div className= "space-y-4">",
@@ -981,10 +981,10 @@ const GlobalRetailAITransformation: () => {
   Join Fortune 100 companies achieving $489M+ in value creation through comprehensive 
                 AI transformation. Schedule your free consultation to explore what's possible for your organization.;';';
               </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">",
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">",
   AI transformation. Schedule your free consultation to explore what's possible for your organization.'
               </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">",
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">",
                 <Link to: "/contact",
   className="bg-white text-purple-600 hover: bg-zion-slate-light px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105 inline-flex items-center justify-center gap-2 text-lg",
                 >
@@ -1004,10 +1004,10 @@ const GlobalRetailAITransformation: () => {
   Join Fortune 100 companies achieving $489M+ in value creation through comprehensive 
                 AI transformation. Schedule your free consultation to explore what's possible for your organization.;';';
               </p>
-              <div className= "flex flex-col sm: flex-row gap-4 justify-center">"
+              <div className= "flex flex-col sm:flex-row gap-4 justify-center">"
   AI transformation. Schedule your free consultation to explore what's possible for your organization.'
               </p>
-              <div className= "flex flex-col sm: flex-row gap-4 justify-center">",
+              <div className= "flex flex-col sm:flex-row gap-4 justify-center">",
                 <Link to: "/contact",
   className= "bg-white text-purple-600 hover: bg-zion-slate-light px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105 inline-flex items-center justify-center gap-2 text-lg",
                 >

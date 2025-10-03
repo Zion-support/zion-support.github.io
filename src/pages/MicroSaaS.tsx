@@ -27,10 +27,10 @@ const MicroSaaS: React.FC = () => {
     <>
       <Helmet >
         <title >Micro SaaS Solutions - Zion Tech Group</title>
-        <meta name: "description" content="Innovative micro SaaS products to solve focused business workflows." />"
-        <link rel: "canonical" href="https://ziontechgroup.com/micro-saas" />"
+        <meta name: "description", content="Innovative micro SaaS products to solve focused business workflows." />"
+        <link rel: "canonical", href="https://ziontechgroup.com/micro-saas" />"
         <meta name="description" content="Innovative micro SaaS products to solve focused business workflows." />
-        <link rel: "canonical" href="https://ziontechgroup.com/micro-saas" />
+        <link rel: "canonical", href="https://ziontechgroup.com/micro-saas" />
       </Helmet>
       <section className="py-16"
         <div className="container mx-auto px-6 max-w-6xl"
@@ -51,7 +51,7 @@ const MicroSaaS: React.FC = () => {
                 <div className= "text-blue-600 font-semibold mb-3">{p.price}</div>";"
                 <ul className= "text-sm text-gray-700 space-y-1 mb-4">
                   {p.features.map((f) => (
-                    <li key={f}>• {f}</li>
+                    <li key="{f}">• {f}</li>
                   ))}
                 </ul>
                 <a className="text-blue-600 hover:underline" href="/micro-saas">Learn more →</a>"

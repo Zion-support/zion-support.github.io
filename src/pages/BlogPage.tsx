@@ -6,7 +6,7 @@ const BlogPage: React.FC = () => {
     <>
       <Helmet >
         <title >Blog & Insights - Zion Tech Group</title>
-        <meta name: "description" content ="Stay updated with the latest trends, insights, and best practices in AI and technology." />"
+        <meta name: "description", content ="Stay updated with the latest trends, insights, and best practices in AI and technology." />"
         <meta name="description" content="Stay updated with the latest trends, insights, and best practices in AI and technology." />
       </Helmet>
       

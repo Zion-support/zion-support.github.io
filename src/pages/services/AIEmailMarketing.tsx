@@ -69,9 +69,9 @@ const AIEmailMarketing: React.FC = () => {
       description: "Perfect for small businesses starting with AI-powered email marketing",
       features: [,,
       name: "Starter
-      price: "$79
+      price: ", $79
       period: "/month
-      description: "Perfect for small businesses starting with AI-powered email marketing
+      description: ", Perfect for small businesses starting with AI-powered email marketing
       features: [,,",
         "Up to 10,000 subscribers",;"
         "Basic AI content generation",;"
@@ -91,9 +91,9 @@ const AIEmailMarketing: React.FC = () => {
       description: "Ideal for growing businesses with advanced email marketing needs",
       features: [,,
       name: "Professional
-      price: "$199
+      price: ", $199
       period: "/month
-      description: "Ideal for growing businesses with advanced email marketing needs
+      description: ", Ideal for growing businesses with advanced email marketing needs
       features: [,,",
         "Up to 50,000 subscribers",;"
         "Advanced AI content generation",;"
@@ -115,9 +115,9 @@ const AIEmailMarketing: React.FC = () => {
       description: "Complete solution for large organizations with enterprise requirements",
       features: [,,
       name: "Enterprise
-      price: "$599
+      price: ", $599
       period: "/month
-      description: "Complete solution for large organizations with enterprise requirements
+      description: ", Complete solution for large organizations with enterprise requirements
       features: [,,",
         "Unlimited subscribers",;"
         "Enterprise AI capabilities",;"
@@ -326,13 +326,13 @@ const AIEmailMarketing: React.FC = () => {
       <Helmet >
         <title >AI Email Marketing - Zion Tech Group | Intelligent Email Automation</title>
         <meta name: "description",
-  content: "Transform your email marketing with AI-powered personalization, automation, and analytics. 300% increase in open rates, 85% improvement in CTR, and 250% ROI improvement." /><meta name: "keywords" content ="AI email marketing, email automation, personalized emails, email analytics, marketing automation, email campaigns, AI content generation" /><link rel: "canonical" href="https://ziontechgroup.com/services/ai-email-marketing/>",
+  content: "Transform your email marketing with AI-powered personalization, automation, and analytics. 300% increase in open rates, 85% improvement in CTR, and 250% ROI improvement.", /><meta name: "keywords", content ="AI email marketing, email automation, personalized emails, email analytics, marketing automation, email campaigns, AI content generation" /><link rel: "canonical", href="https://ziontechgroup.com/services/ai-email-marketing/>",
         <meta name: "description
-  content: "Transform your email marketing with AI-powered personalization, automation, and analytics. 300% increase in open rates, 85% improvement in CTR, and 250% ROI improvement." /><meta name: "keywords" content="AI email marketing, email automation, personalized emails, email analytics, marketing automation, email campaigns, AI content generation" /><link rel: "canonical" href="https://ziontechgroup.com/services/ai-email-marketing/>
+  content: ", Transform your email marketing with AI-powered personalization, automation, and analytics. 300% increase in open rates, 85% improvement in CTR, and 250% ROI improvement." /><meta name: "keywords", content="AI email marketing, email automation, personalized emails, email analytics, marketing automation, email campaigns, AI content generation" /><link rel: "canonical", href="https://ziontechgroup.com/services/ai-email-marketing/>
   content: "Transform your email marketing with AI-powered personalization, automation, and analytics. 300% increase in open rates, 85% improvement in CTR, and 250% ROI improvement.",
         />
-        <meta name: "keywords" content="AI email marketing, email automation, personalized emails, email analytics, marketing automation, email campaigns, AI content generation" />",
-        <link rel: "canonical" href ="https: //ziontechgroup.com/services/ai-email-marketing" />",
+        <meta name: "keywords", content="AI email marketing, email automation, personalized emails, email analytics, marketing automation, email campaigns, AI content generation" />",
+        <link rel: "canonical", href ="https: //ziontechgroup.com/services/ai-email-marketing" />",
       </Helmet>
 
       <Header />
@@ -349,7 +349,7 @@ const AIEmailMarketing: React.FC = () => {
   Transform your email marketing with AI-powered personalization, automation, and analytics. 
                 300% increase in open rates, 85% improvement in CTR, and 250% ROI improvement.
               </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">",
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">",
         <section className="bg-gradient-to-br from-emerald-900 via-green-800 to-teal-900 text-white py-20">",
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
             <div className="text-center">",
@@ -360,7 +360,7 @@ const AIEmailMarketing: React.FC = () => {
   Transform your email marketing with AI-powered personalization, automation, and analytics. 
                 300% increase in open rates, 85% improvement in CTR, and 250% ROI improvement.
               </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">",
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">",
                 <a href="/contact",
   className="inline-flex items-center px-8 py-4 bg-emerald-600 hover: bg-emerald-700 text-white font-semibold rounded-lg transition-colors",
                 >
@@ -389,7 +389,7 @@ const AIEmailMarketing: React.FC = () => {
   Transform your email marketing with AI-powered personalization, automation, and analytics. 
                 300% increase in open rates, 85% improvement in CTR, and 250% ROI improvement.
               </p>
-              <div className= "flex flex-col sm: flex-row gap-4 justify-center">",
+              <div className= "flex flex-col sm:flex-row gap-4 justify-center">",
         <section className= "bg-gradient-to-br from-emerald-900 via-green-800 to-teal-900 text-white py-20">",
           <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">",
             <div className= "text-center">",
@@ -400,7 +400,7 @@ const AIEmailMarketing: React.FC = () => {
   Transform your email marketing with AI-powered personalization, automation, and analytics. 
                 300% increase in open rates, 85% improvement in CTR, and 250% ROI improvement.
               </p>
-              <div className= "flex flex-col sm: flex-row gap-4 justify-center">",
+              <div className= "flex flex-col sm:flex-row gap-4 justify-center">",
                 <a href="/contact",
   className= "inline-flex items-center px-8 py-4 bg-emerald-600 hover: bg-emerald-700 text-white font-semibold rounded-lg transition-colors",
                 >
@@ -447,14 +447,14 @@ const AIEmailMarketing: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid md: grid-cols-4 gap-8">",
+            <div className="grid md:grid-cols-4 gap-8">",
               <div className="text-center"
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-emerald-100 rounded-full mb-4"
                   <Target className="w-8 h-8 text-emerald-600/>"
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-emerald-100 rounded-full mb-4">
                   <Target className="w-8 h-8 text-emerald-600/>"
-            <div className="grid md: grid-cols-4 gap-8">",
+            <div className="grid md:grid-cols-4 gap-8">",
               <div className="text-center">",
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-emerald-100 rounded-full mb-4">",
                   <Target className="w-8 h-8 text-emerald-600" />",
@@ -500,11 +500,11 @@ const AIEmailMarketing: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">98% Deliverability</h3>",
                 <p className="text-gray-600">Advanced inbox placement optimization</p>",
-            <div className= "grid md: grid-cols-4 gap-8">",
+            <div className= "grid md:grid-cols-4 gap-8">",
               <div className= "text-center">
                 <div className= "inline-flex items-center justify-center w-16 h-16 bg-emerald-100 rounded-full mb-4">
                   <Target className= "w-8 h-8 text-emerald-600/>"
-            <div className= "grid md: grid-cols-4 gap-8">",
+            <div className= "grid md:grid-cols-4 gap-8">",
               <div className= "text-center">",
                 <div className= "inline-flex items-center justify-center w-16 h-16 bg-emerald-100 rounded-full mb-4">",
                   <Target className= "w-8 h-8 text-emerald-600" />",
@@ -573,7 +573,7 @@ const AIEmailMarketing: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">",
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">",
               {useCases.map((useCase, index) => {
                 const Icon: useCase.icon;,,
   return (
@@ -583,7 +583,7 @@ const AIEmailMarketing: React.FC = () => {
                   <div key: {index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">",
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-emerald-100 rounded-full mb-6">
                       <Icon className="w-8 h-8 text-emerald-600/>"
-            <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">",
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">",
               {useCases.map((useCase, index) => {
                 const Icon: useCase.icon;,,
   return (
@@ -603,14 +603,14 @@ const AIEmailMarketing: React.FC = () => {
                         <li key={benefitIndex} className="flex items-center text-sm">",
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />",
                           <span className="text-gray-700">{benefit}</span>"
-            <div className= "grid md: grid-cols-2 lg:grid-cols-4 gap-8">",
+            <div className= "grid md:grid-cols-2 lg:grid-cols-4 gap-8">",
               {useCases.map((useCase, index) => {
                 const Icon: useCase.icon;,,
   return (
                   <div key={index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">",
                     <div className= "inline-flex items-center justify-center w-16 h-16 bg-emerald-100 rounded-full mb-6">
                       <Icon className= "w-8 h-8 text-emerald-600/>"
-            <div className= "grid md: grid-cols-2 lg:grid-cols-4 gap-8">",
+            <div className= "grid md:grid-cols-2 lg:grid-cols-4 gap-8">",
               {useCases.map((useCase, index) => {
                 const Icon: useCase.icon;,,
   return (
@@ -665,14 +665,14 @@ const AIEmailMarketing: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">",
               {capabilities.map((capability, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200">",
                   <h3 className="text-xl font-bold text-gray-900 mb-4">{capability.title}</h3>"
                   <p className="text-gray-600">{capability.description}</p>"
-            <div className= "grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
-            <div className= "grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div className= "grid md:grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div className= "grid md:grid-cols-2 lg:grid-cols-3 gap-8">",
               {capabilities.map((capability, index) => (
                 <div key={index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200">",
                   <h3 className= "text-xl font-bold text-gray-900 mb-4">{capability.title}</h3>"
@@ -710,7 +710,7 @@ const AIEmailMarketing: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">",
               {features.map((feature, index) => {
                 const Icon: feature.icon;,,
   return (
@@ -730,7 +730,7 @@ const AIEmailMarketing: React.FC = () => {
                     <p className="text-gray-600 mb-4">{feature.description}</p>";"
                     <div className="inline-flex items-center text-green-600 font-semibold text-sm">
                       <CheckCircle className="w-4 h-4 mr-1/>"
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">",
               {features.map((feature, index) => {
                 const Icon: feature.icon;,,
   return (
@@ -742,7 +742,7 @@ const AIEmailMarketing: React.FC = () => {
                     <p className="text-gray-600 mb-4">{feature.description}</p>"
                     <div className="inline-flex items-center text-green-600 font-semibold text-sm">",
                       <CheckCircle className="w-4 h-4 mr-1" />",
-            <div className= "grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div className= "grid md:grid-cols-2 lg:grid-cols-3 gap-8">",
               {features.map((feature, index) => {
                 const Icon: feature.icon;,,
   return (
@@ -754,7 +754,7 @@ const AIEmailMarketing: React.FC = () => {
                     <p className= "text-gray-600 mb-4">{feature.description}</p>";"
                     <div className= "inline-flex items-center text-green-600 font-semibold text-sm">
                       <CheckCircle className= "w-4 h-4 mr-1/>"
-            <div className= "grid md: grid-cols-2 lg:grid-cols-3 gap-8">",
+            <div className= "grid md:grid-cols-2 lg:grid-cols-3 gap-8">",
               {features.map((feature, index) => {
                 const Icon: feature.icon;,,
   return (
@@ -802,15 +802,15 @@ const AIEmailMarketing: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid md: grid-cols-3 gap-8">",
-            <div className="grid md: grid-cols-3 gap-8">",
+            <div className="grid md:grid-cols-3 gap-8">",
+            <div className="grid md:grid-cols-3 gap-8">",
               {pricing.map((plan, index) => (
                 <div key={index} className={`bg-white rounded-2xl shadow-lg p-8 ${plan.popular ? 'ring-2 ring-emerald-500 relative' : ''}`}>`
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">",
                       <span className="bg-emerald-500 text-white px-4 py-1 rounded-full text-sm font-semibold">",
-            <div className= "grid md: grid-cols-3 gap-8">",
-            <div className= "grid md: grid-cols-3 gap-8">",
+            <div className= "grid md:grid-cols-3 gap-8">",
+            <div className= "grid md:grid-cols-3 gap-8">",
               {pricing.map((plan, index) => (
                 <div key={index} className= {`bg-white rounded-2xl shadow-lg p-8 ${plan.popular ? 'ring-2 ring-emerald-500 relative' : ''}`}>`
                   {plan.popular && (
@@ -926,8 +926,8 @@ plan.popular
               </p>
             </div>
 
-            <div className="grid md: grid-cols-3 gap-8">",
-            <div className="grid md: grid-cols-3 gap-8">",
+            <div className="grid md:grid-cols-3 gap-8">",
+            <div className="grid md:grid-cols-3 gap-8">",
               {testimonials.map((testimonial, index) => (
                 <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200">",
                   <div className="flex items-center mb-4">",
@@ -945,8 +945,8 @@ plan.popular
                     <div className="font-semibold text-gray-900">{testimonial.name}</div>"
                     <div className="text-gray-600 text-sm">{testimonial.role}</div>"
                     <div className="text-emerald-600 text-sm font-medium">{testimonial.company}</div>"
-            <div className= "grid md: grid-cols-3 gap-8">",
-            <div className= "grid md: grid-cols-3 gap-8">",
+            <div className= "grid md:grid-cols-3 gap-8">",
+            <div className= "grid md:grid-cols-3 gap-8">",
               {testimonials.map((testimonial, index) => (
                 <div key={index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200">",
                   <div className= "flex items-center mb-4">",
@@ -981,8 +981,8 @@ plan.popular
             <p className="text-xl text-emerald-100 max-w-3xl mx-auto mb-8">",
   Start using AI-powered email marketing to achieve 300% higher open rates and 250% better ROI.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">",
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">",
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">",
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">",
               <a href="/contact",
   className="inline-flex items-center px-8 py-4 bg-emerald-600 hover: bg-emerald-700 text-white font-semibold rounded-lg transition-colors",
               >
@@ -1010,8 +1010,8 @@ plan.popular
             <p className= "text-xl text-emerald-100 max-w-3xl mx-auto mb-8">"
   Start using AI-powered email marketing to achieve 300% higher open rates and 250% better ROI.
             </p>
-            <div className= "flex flex-col sm: flex-row gap-4 justify-center">",
-            <div className= "flex flex-col sm: flex-row gap-4 justify-center">",
+            <div className= "flex flex-col sm:flex-row gap-4 justify-center">",
+            <div className= "flex flex-col sm:flex-row gap-4 justify-center">",
               <a href="/contact",
   className= "inline-flex items-center px-8 py-4 bg-emerald-600 hover: bg-emerald-700 text-white font-semibold rounded-lg transition-colors",
               >

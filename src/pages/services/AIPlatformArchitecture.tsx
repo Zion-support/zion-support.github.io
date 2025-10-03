@@ -39,23 +39,23 @@ const AIPlatformArchitecture: React.FC = () => {
         </div>
 
 <<<<<<< HEAD
-        <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16">",
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">",
           <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover: border-blue-500/50 transition-all duration-300">",
             <div className="text-6xl mb-6">🏗️</div>";,"
             <h3 className="text-2xl font-bold text-white mb-4">Scalable Infrastructure</h3>";,"
             <p className="text-gray-300 mb-6"
-        <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16">",
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">",
           <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover: border-blue-500/50 transition-all duration-300">",
             <div className="text-6xl mb-6">🏗️</div>",
             <h3 className="text-2xl font-bold text-white mb-4">Scalable Infrastructure</h3>",
             <p className="text-gray-300 mb-6">",;,"
 =======
-        <div className= "grid md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16">",
+        <div className= "grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">",
           <div className= "bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover: border-blue-500/50 transition-all duration-300">",
             <div className= "text-6xl mb-6">🏗️</div>";,"
             <h3 className= "text-2xl font-bold text-white mb-4">Scalable Infrastructure</h3>";,"
             <p className= "text-gray-300 mb-6">
-        <div className= "grid md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16">",
+        <div className= "grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">",
           <div className= "bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover: border-blue-500/50 transition-all duration-300">",
             <div className= "text-6xl mb-6">🏗️</div>",
             <h3 className= "text-2xl font-bold text-white mb-4">Scalable Infrastructure</h3>",
