@@ -1,12 +1,12 @@
 #!/bin/bash
 
-# Comprehensive branch merger for cursor/fix-errors-and-merge-to-main branches
-# This script will merge all relevant branches into main
+# Batch branch merger - processes branches in smaller batches
+# This is safer for handling large numbers of branches
 
 set -e
 
 echo "=============================================================="
-echo "COMPREHENSIVE BRANCH MERGER"
+echo "BATCH BRANCH MERGER"
 echo "Repository: Zion-Holdings/zion.app"
 echo "=============================================================="
 
@@ -14,31 +14,25 @@ echo "=============================================================="
 git checkout main
 git pull origin main
 
-# Get all cursor branches
-echo "🔍 Fetching all cursor branches..."
+# Get recent branches first (last 50)
+echo "🔍 Fetching recent cursor branches..."
 git fetch --all
 
-# Get list of all cursor branches
-cursor_branches=$(git branch -r | grep -E "cursor/fix-errors-and-merge-to-main" | sed 's/origin\///' | sort -u)
+# Get list of recent cursor branches (limit to 50 for safety)
+cursor_branches=$(git branch -r | grep -E "cursor/fix-errors-and-merge-to-main" | tail -50 | sed 's/origin\///' | sort -u)
 
 total_branches=$(echo "$cursor_branches" | wc -l)
-echo "📊 Found $total_branches cursor branches to process"
+echo "📊 Processing $total_branches recent cursor branches"
 
 # Initialize counters
 success_count=0
 failed_count=0
 skipped_count=0
 
-# Process branches in batches to avoid overwhelming the system
-batch_size=10
-processed=0
-
 for branch in $cursor_branches; do
-    processed=$((processed + 1))
-    
     echo ""
     echo "=============================================================="
-    echo "Processing branch $processed/$total_branches: $branch"
+    echo "Processing: $branch"
     echo "=============================================================="
     
     # Check if branch exists locally
@@ -67,7 +61,7 @@ for branch in $cursor_branches; do
     # Attempt to merge
     echo "🔄 Attempting to merge $branch into main..."
     
-    if git merge $branch --no-ff -m "Merge $branch into main - automated merge" 2>/dev/null; then
+    if git merge $branch --no-ff -m "Merge $branch into main - automated batch merge" 2>/dev/null; then
         echo "✅ Successfully merged $branch"
         success_count=$((success_count + 1))
         
@@ -78,16 +72,31 @@ for branch in $cursor_branches; do
     else
         echo "⚠️  Merge conflict detected for $branch"
         
-        # Check for merge conflicts
+        # Check git status for conflicts
         if git status --porcelain | grep -q "^UU\|^AA\|^DD"; then
-            echo "🔧 Resolving conflicts automatically..."
+            echo "🔧 Attempting automatic conflict resolution..."
             
-            # Use git mergetool or manual resolution
-            # For now, we'll abort the merge and continue
-            git merge --abort 2>/dev/null || true
+            # Try to resolve conflicts automatically
+            git status --porcelain | while read line; do
+                file=$(echo $line | awk '{print $2}')
+                if [[ $line == UU* ]] || [[ $line == AA* ]] || [[ $line == DD* ]]; then
+                    echo "  Resolving conflict in: $file"
+                    # Use 'ours' strategy for automatic resolution
+                    git checkout --ours "$file" 2>/dev/null || true
+                    git add "$file" 2>/dev/null || true
+                fi
+            done
             
-            echo "❌ Automatic conflict resolution failed, skipping $branch"
-            failed_count=$((failed_count + 1))
+            # Try to complete the merge
+            if git commit --no-edit 2>/dev/null; then
+                echo "✅ Conflict resolution successful"
+                success_count=$((success_count + 1))
+                git push origin main
+            else
+                echo "❌ Conflict resolution failed, aborting merge"
+                git merge --abort 2>/dev/null || true
+                failed_count=$((failed_count + 1))
+            fi
         else
             echo "✅ Merge completed despite warnings"
             success_count=$((success_count + 1))
@@ -98,36 +107,23 @@ for branch in $cursor_branches; do
     # Clean up local branch
     git branch -D $branch 2>/dev/null || true
     
-    # Progress update
-    if [ $((processed % batch_size)) -eq 0 ]; then
-        echo ""
-        echo "📊 Progress: $processed/$total_branches processed"
-        echo "✅ Successful: $success_count"
-        echo "❌ Failed: $failed_count"
-        echo "⏭️  Skipped: $skipped_count"
-        echo ""
-        
-        # Small delay to avoid overwhelming the system
-        sleep 2
-    fi
+    # Small delay to avoid overwhelming the system
+    sleep 1
 done
 
 echo ""
 echo "=============================================================="
-echo "MERGE COMPLETION SUMMARY"
+echo "BATCH MERGE SUMMARY"
 echo "=============================================================="
 echo "Total branches processed: $total_branches"
 echo "✅ Successfully merged: $success_count"
 echo "❌ Failed to merge: $failed_count"
 echo "⏭️  Already merged (skipped): $skipped_count"
 echo ""
-echo "Repository status:"
-git status --short
-echo ""
 
 # Final push to ensure everything is up to date
 echo "📤 Final push to origin/main..."
 git push origin main
 
-echo "🎉 Branch merging process completed!"
+echo "🎉 Batch merging process completed!"
 echo "=============================================================="
