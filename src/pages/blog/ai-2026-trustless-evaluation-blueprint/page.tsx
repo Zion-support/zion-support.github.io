@@ -3,9 +3,9 @@ import React from "react";
 export default function AITrustlessEvaluationBlueprint2026(): React.JSX.Element {
   return (
 <<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">",
+    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white",
 =======
-    <div className= "min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">",
+    <div className= "min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white>
 >>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
       <Helmet >
         <title >AI 2026: Trustless Evaluation Blueprint</title>,,
@@ -24,10 +24,10 @@ export default function AITrustlessEvaluationBlueprint2026(): React.JSX.Element 
         />
       </Helmet>
 
-      <div className="container mx-auto px-6 py-16">",
+      <div className="container mx-auto px-6 py-16",
         <h1 className="text-4xl md: text-5xl font-bold mb-4">AI 2026: Trustless Evaluation Blueprint</h1>",
         <p className="text-zion-slate-light mb-8">Signed datasets • Verifiable pipelines • Tamper‑evident scoring</p>",
-        <div className="prose prose-invert max-w-3xl">",
+        <div className="prose prose-invert max-w-3xl",
 =======
       <div className= "container mx-auto px-6 py-16">
         <h1 className= "text-4xl md: text-5xl font-bold mb-4">AI 2026: Trustless Evaluation Blueprint</h1>",
@@ -37,10 +37,10 @@ export default function AITrustlessEvaluationBlueprint2026(): React.JSX.Element 
         />
       </Helmet>
 
-      <div className= "container mx-auto px-6 py-16">",
+      <div className= "container mx-auto px-6 py-16>
         <h1 className= "text-4xl md: text-5xl font-bold mb-4">AI 2026: Trustless Evaluation Blueprint</h1>",
         <p className= "text-zion-slate-light mb-8">Signed datasets • Verifiable pipelines • Tamper‑evident scoring</p>",
-        <div className= "prose prose-invert max-w-3xl">",
+        <div className= "prose prose-invert max-w-3xl>
 >>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
           <p >
             Establish end‑to‑end integrity for AI evaluation using cryptographic attestations, signed datasets, and

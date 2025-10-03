@@ -97,21 +97,21 @@ const PricingPage: React.FC = () => {
         <meta name="description" content="Transparent pricing for AI services, micro SaaS solutions, and comprehensive IT services from Zion Tech Group." />"
       </Helmet>
       
-      <div className="min-h-screen bg-gray-50">"
+      <div className="min-h-screen bg-gray-50"
         {/* Header */}
-        <section className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-800 text-white py-16">"
-          <div className="container mx-auto px-6 text-center">"
+        <section className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-800 text-white py-16"
+          <div className="container mx-auto px-6 text-center"
             <h1 className="text-4xl md: text-5xl font-bold mb-4">Transparent Pricing</h1>"
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto">"
+            <p className="text-xl text-blue-100 max-w-3xl mx-auto"
               Choose the perfect plan for your business needs. All plans include our commitment to quality, security, and innovation.
             </p>
           </div>
         </section>
 
         {/* Main Pricing Tiers */}
-        <section className="py-20">"
-          <div className="container mx-auto px-6">"
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">"
+        <section className="py-20"
+          <div className="container mx-auto px-6"
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8"
               {pricingTiers.map((tier, index) => (
                 <div 
                   key={index} 
@@ -122,26 +122,26 @@ const PricingPage: React.FC = () => {
                   }`}`;
                 >
                   {tier.popular && (
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">"
-                      <span className="bg-gradient-to-r from-purple-600 to-violet-600 text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center">"
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"
+                      <span className="bg-gradient-to-r from-purple-600 to-violet-600 text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center"
                         <Star className="w-4 h-4 mr-1" />"
                         Most Popular
                       </span>
                     </div>
                   )}
                   
-                  <div className="text-center mb-8">"
+                  <div className="text-center mb-8"
                     <h3 className="text-2xl font-bold text-gray-900 mb-2">{tier.name}</h3>"
                     <p className="text-gray-600 mb-4">{tier.description}</p>"
-                    <div className="flex items-baseline justify-center">"
+                    <div className="flex items-baseline justify-center"
                       <span className="text-4xl font-bold text-gray-900">{tier.price}</span>"
                       <span className="text-gray-600 ml-1">{tier.period}</span>"
                     </div>
                   </div>
 
-                  <ul className="space-y-4 mb-8">"
+                  <ul className="space-y-4 mb-8"
                     {tier.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center">"
+                      <li key={featureIndex} className="flex items-center"
                         <Check className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />"
                         <span className="text-gray-700">{feature}</span>"
                       </li>
@@ -165,22 +165,22 @@ const PricingPage: React.FC = () => {
         </section>
 
         {/* Service-Specific Pricing */}
-        <section className="py-20 bg-white">"
-          <div className="container mx-auto px-6">"
-            <div className="text-center mb-16">"
+        <section className="py-20 bg-white"
+          <div className="container mx-auto px-6"
+            <div className="text-center mb-16"
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Service-Specific Pricing</h2>"
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">"
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto"
                 Detailed pricing for individual services. Custom packages available for enterprise clients.
               </p>
             </div>
 
-            <div className="space-y-16">"
+            <div className="space-y-16"
               {servicePricing.map((category, categoryIndex) => (
                 <div key="{categoryIndex}">
                   <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">{category.category}</h3>"
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">"
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
                     {category.services.map((service, serviceIndex) => (
-                      <div key={serviceIndex} className="bg-gray-50 p-6 rounded-xl hover: shadow-md transition-shadow">"
+                      <div key={serviceIndex} className="bg-gray-50 p-6 rounded-xl hover: shadow-md transition-shadow"
                         <h4 className="text-lg font-bold text-gray-900 mb-2">{service.name}</h4>"
                         <p className="text-2xl font-bold text-blue-600 mb-3">{service.price}</p>"
                         <p className="text-gray-600 text-sm">{service.description}</p>"
@@ -194,41 +194,41 @@ const PricingPage: React.FC = () => {
         </section>
 
         {/* Enterprise Pricing */}
-        <section className="py-20 bg-gray-50">"
-          <div className="container mx-auto px-6">"
-            <div className="text-center mb-16">"
+        <section className="py-20 bg-gray-50"
+          <div className="container mx-auto px-6"
+            <div className="text-center mb-16"
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Enterprise Solutions</h2>"
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">"
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto"
                 Custom solutions for large organizations with specific requirements and compliance needs.
               </p>
             </div>
 
-            <div className="bg-white p-8 rounded-xl shadow-lg max-w-4xl mx-auto">"
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">"
+            <div className="bg-white p-8 rounded-xl shadow-lg max-w-4xl mx-auto"
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8"
                 <div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">What's Included</h3>';
-                  <ul className="space-y-3">"
-                    <li className="flex items-center">"
+                  <ul className="space-y-3"
+                    <li className="flex items-center"
                       <Check className="w-5 h-5 text-green-500 mr-3" />"
                       <span className="text-gray-700">Custom AI model development</span>"
                     </li>
-                    <li className="flex items-center">"
+                    <li className="flex items-center"
                       <Check className="w-5 h-5 text-green-500 mr-3" />"
                       <span className="text-gray-700">Dedicated infrastructure</span>"
                     </li>
-                    <li className="flex items-center">"
+                    <li className="flex items-center"
                       <Check className="w-5 h-5 text-green-500 mr-3" />"
                       <span className="text-gray-700">24/7 dedicated support</span>"
                     </li>
-                    <li className="flex items-center">"
+                    <li className="flex items-center"
                       <Check className="w-5 h-5 text-green-500 mr-3" />"
                       <span className="text-gray-700">Compliance management</span>"
                     </li>
-                    <li className="flex items-center">"
+                    <li className="flex items-center"
                       <Check className="w-5 h-5 text-green-500 mr-3" />"
                       <span className="text-gray-700">White-label solutions</span>"
                     </li>
-                    <li className="flex items-center">"
+                    <li className="flex items-center"
                       <Check className="w-5 h-5 text-green-500 mr-3" />"
                       <span className="text-gray-700">SLA guarantees</span>"
                     </li>
@@ -236,19 +236,19 @@ const PricingPage: React.FC = () => {
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">Contact Sales</h3>"
-                  <p className="text-gray-600 mb-6">"
+                  <p className="text-gray-600 mb-6"
                     Get a custom quote tailored to your organization's specific needs and requirements.';
                   </p>
-                  <div className="space-y-4">"
-                    <div className="flex items-center">"
+                  <div className="space-y-4"
+                    <div className="flex items-center"
                       <span className="text-sm text-gray-500 w-20">Email: </span>"
                       <span className="text-gray-900">kleber@ziontechgroup.com</span>"
                     </div>
-                    <div className="flex items-center">"
+                    <div className="flex items-center"
                       <span className="text-sm text-gray-500 w-20">Phone: </span>"
                       <span className="text-gray-900">+1 302 464 0950</span>"
                     </div>
-                    <div className="flex items-center">"
+                    <div className="flex items-center"
                       <span className="text-sm text-gray-500 w-20">Address: </span>"
                       <span className="text-gray-900">364 E Main St STE 1008<br />Middletown DE 19709</span>"
                     </div>
@@ -266,13 +266,13 @@ const PricingPage: React.FC = () => {
         </section>
 
         {/* FAQ Section */}"
-        <section className="py-20 bg-white">"
-          <div className="container mx-auto px-6">"
-            <div className="text-center mb-16">"
+        <section className="py-20 bg-white"
+          <div className="container mx-auto px-6"
+            <div className="text-center mb-16"
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>"
             </div>
 
-            <div className="max-w-3xl mx-auto space-y-8">"
+            <div className="max-w-3xl mx-auto space-y-8"
               <div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Can I change my plan anytime?</h3>"
                 <p className="text-gray-600">Yes, you can upgrade or downgrade your plan at any time. Changes take effect at the next billing cycle.</p>"
@@ -294,13 +294,13 @@ const PricingPage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">"
-          <div className="container mx-auto px-6 text-center">"
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white"
+          <div className="container mx-auto px-6 text-center"
             <h2 className="text-4xl font-bold mb-4">Ready to Get Started?</h2>"
-            <p className="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">"
+            <p className="text-xl mb-8 text-blue-100 max-w-2xl mx-auto"
               Choose the perfect plan for your business or contact us for a custom solution.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">"
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"
               <Link 
                 to="/contact" 
                 className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg

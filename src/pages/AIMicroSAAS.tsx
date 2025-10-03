@@ -1,10 +1,5 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
-import { Users, CheckCircle, ArrowRight, DollarSign, Clock, Star, TrendingUp, Lock, Smartphone, Cloud, Database, Cpu, Target, Rocket, FileText } from "lucide-react";
-
-export default function AIMicroSAAS(): React.JSX.Element {
-  const microSaaSServices = [
-    {
       id: "ai-content-optimizer",
       name: "AI Content Optimizer Pro",
       blurb: "AI-powered content creation and optimization platform for marketing teams",
@@ -17,43 +12,8 @@ export default function AIMicroSAAS(): React.JSX.Element {
         "SEO optimization with real-time keyword analysis",
         "Brand voice consistency across all content",
         "A/B testing and performance analytics",
-        "Multi-language content generation",
-        "Content calendar and scheduling"
-      ]
     },
     {
-      id: "smart-analytics-dashboard",
-      name: "Smart Analytics Dashboard",
-      blurb: "Comprehensive analytics platform with AI-driven insights for data-driven decisions",
-      price: "$199 - $999/month",
-      eta: "2-3 weeks",
-      category: "Analytics",
-      icon: TrendingUp,
-      features: [
-        "Real-time data visualization and reporting",
-        "AI-powered predictive analytics",
-        "Custom dashboard creation",
-        "Automated report generation",
-        "Multi-platform data integration",
-        "Advanced filtering and segmentation"
-      ]
-    },
-    {
-      id: "ai-customer-support",
-      name: "AI Customer Support Suite",
-      blurb: "Intelligent customer service automation with natural language processing",
-      price: "$399 - $1,999/month",
-      eta: "3-4 weeks",
-      category: "Customer Service",
-      icon: Users,
-      features: [
-        "24/7 AI-powered chatbot",
-        "Natural language processing",
-        "Ticket routing and prioritization",
-        "Sentiment analysis and escalation",
-        "Knowledge base integration",
-        "Performance analytics and insights"
-      ]
     },
     {
       id: "automated-workflow-engine",
@@ -92,150 +52,6 @@ export default function AIMicroSAAS(): React.JSX.Element {
           </div>
         </section>
 
-        {/* Services Grid */}
-        <section className="py-20">
-          <div className="container mx-auto px-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-              {microSaaSServices.map((service) => (
-                <div key={service.id} className="bg-white p-8 rounded-xl shadow-sm hover:shadow-lg transition-shadow">
-                  <div className="flex items-center mb-4">
-                    <service.icon className="w-8 h-8 text-blue-600 mr-3" />
-                    <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
-                      {service.category}
-                    </span>
-                  </div>
-                  
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{service.name}</h3>
-                  <p className="text-gray-600 mb-4">{service.blurb}</p>
-                  
-                  <div className="flex items-center justify-between mb-6">
-                    <div className="flex items-center text-green-600">
-                      <DollarSign className="w-4 h-4 mr-1" />
-                      <span className="font-semibold">{service.price}</span>
-                    </div>
-<<<<<<< HEAD
-                    <div className="flex-1"
-                      <div className="flex items-center gap-2 mb-2"
-                        <span className="text-xs font-semibold text-cyan-400 bg-cyan-400/20 px-2 py-1 rounded-full"
-                          {service.category}
-                        </span>
-                        <span className="text-xs text-slate-400">•</span>"
-                        <span className="text-xs text-slate-400">{service.marketSize}</span>";"
-                      </div>
-                      <h3 className="text-xl font-semibold text-white mb-2">{service.name}</h3>";"
-                      <p className="text-slate-300 mb-4">{service.blurb}</p>";"
-                    </div>
-                  </div>
-
-                  <div className="space-y-4 mb-6"
-                    <div >
-                      <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>"
-                      <ul className="space-y-1"
-                        {service.features.slice(0, 3).map((feature, idx) => (
-                          <li key={idx} className="flex items-center text-sm text-slate-300"
-                            <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />"
-        <section className= "container mx-auto px-6 py-12">
-          <div className= "grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {microSaaSServices.map((service)  => {
-              const Icon: service.icon;,,
-  return (
-                <div key={service.id} className= "bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300">
-                  <div className= "flex items-start gap-4 mb-6">
-                    <div className= "w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center flex-shrink-0">
-                      <Icon className= "w-8 h-8 text-white" />"
-                    </div>
-                    <div className= "flex-1">
-                      <div className= "flex items-center gap-2 mb-2">
-                        <span className= "text-xs font-semibold text-cyan-400 bg-cyan-400/20 px-2 py-1 rounded-full">
-                          {service.category}
-                        </span>
-                        <span className= "text-xs text-slate-400">•</span>"
-                        <span className= "text-xs text-slate-400">{service.marketSize}</span>";"
-                      </div>
-                      <h3 className= "text-xl font-semibold text-white mb-2">{service.name}</h3>";"
-                      <p className= "text-slate-300 mb-4">{service.blurb}</p>";"
-                    </div>
-                  </div>
-
-                  <div className= "space-y-4 mb-6">
-                    <div >
-                      <h4 className= "text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>"
-                      <ul className= "space-y-1">
-                        {service.features.slice(0, 3).map((feature, idx) => (
-                          <li key={idx} className= "flex items-center text-sm text-slate-300">
-                            <CheckCircle className= "w-3 h-3 text-green-400 mr-2 flex-shrink-0" />"
-                            <span >{feature}</span>
-                          </li>
-                        ))}
-                        {service.features.length > 3 && (
-                          <li className="text-xs text-slate-400 ml-5"
-                          <li className= "text-xs text-slate-400 ml-5">
-                            +{service.features.length - 3} more features
-                          </li>
-                        )}
-                      </ul>
-                    </div>
-
-                    <div >
-                      <h4 className="text-sm font-semibold text-fuchsia-400 mb-2">Proven Benefits:</h4>"
-                      <ul className="space-y-1"
-                        {service.benefits.map((benefit, idx) => (
-                          <li key={idx} className="flex items-center text-sm text-slate-300"
-                            <TrendingUp className="w-3 h-3 text-fuchsia-400 mr-2 flex-shrink-0" />"
-                      <h4 className= "text-sm font-semibold text-fuchsia-400 mb-2">Proven Benefits:</h4>"
-                      <ul className= "space-y-1">
-                        {service.benefits.map((benefit, idx) => (
-                          <li key={idx} className= "flex items-center text-sm text-slate-300">
-                            <TrendingUp className= "w-3 h-3 text-fuchsia-400 mr-2 flex-shrink-0" />"
-                            <span >{benefit}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-
-                  <div className="flex items-center justify-between mb-6"
-                    <div className="text-left"
-                      <div className="text-lg font-semibold text-cyan-400">{service.price}</div>";"
-                      <div className="text-sm text-slate-400">{service.eta} deployment</div>";"
-                    </div>
-                    <a href={service.link}
-                      className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300",
-                    >
-                      Get Started
-                      <ArrowRight className="w-4 h-4" />"
-                    </a>
-                  </div>
-
-                  <div className="pt-4 border-t border-slate-700/50"
-                    <div className="flex flex-wrap gap-2"
-                      {service.useCases.map((useCase, idx) => (
-                        <span key={idx} className="text-xs bg-slate-700/50 text-slate-300 px-2 py-1 rounded"
-                  <div className= "flex items-center justify-between mb-6">
-                    <div className= "text-left">
-                      <div className= "text-lg font-semibold text-cyan-400">{service.price}</div>";"
-                      <div className= "text-sm text-slate-400">{service.eta} deployment</div>";"
-                    </div>
-                    <a href={service.link}
-                      className= "inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300",
-                    >
-                      Get Started
-                      <ArrowRight className= "w-4 h-4" />"
-                    </a>
-                  </div>
-
-                  <div className= "pt-4 border-t border-slate-700/50">
-                    <div className= "flex flex-wrap gap-2">
-                      {service.useCases.map((useCase, idx) => (
-                        <span key={idx} className= "text-xs bg-slate-700/50 text-slate-300 px-2 py-1 rounded">
-                          {useCase}
-                        </span>
-                      ))}
-=======
-                    <div className="flex items-center text-gray-500">
-                      <Clock className="w-4 h-4 mr-1" />
-                      <span>{service.eta}</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-3950
                     </div>
                   </div>
                   
