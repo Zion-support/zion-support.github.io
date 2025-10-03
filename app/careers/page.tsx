@@ -33,42 +33,80 @@ const CareersPage: React.FC = () => {
                 </span>
               </div>
               
-              <div className="border-l-4 border-orange-500 pl-4">
+              <div className="border-l-4 border-green-500 pl-4">
                 <h4 className="text-xl font-medium text-gray-900">Frontend Developer</h4>
                 <p className="text-gray-600 mt-2">
-                  Create beautiful and responsive user interfaces for our products.
+                  Create beautiful and responsive user interfaces using React and modern web technologies.
                 </p>
-                <span className="inline-block mt-2 px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">
-                  Full-time • Remote
+                <span className="inline-block mt-2 px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">
+                  Full-time • On-site
                 </span>
               </div>
             </div>
           </div>
           
           <div className="bg-white rounded-lg shadow-md p-6">
-            <h3 className="text-2xl font-semibold text-gray-800 mb-6">Why Work With Us?</h3>
-            <ul className="space-y-3 text-gray-600">
-              <li className="flex items-center">
-                <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                Competitive salary and benefits
-              </li>
-              <li className="flex items-center">
-                <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                Flexible work arrangements
-              </li>
-              <li className="flex items-center">
-                <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                Opportunities for growth and learning
-              </li>
-              <li className="flex items-center">
-                <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                Innovative and collaborative environment
-              </li>
-              <li className="flex items-center">
-                <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                Cutting-edge technology stack
-              </li>
-            </ul>
+            <h3 className="text-2xl font-semibold text-gray-800 mb-6">Why Join Zion Tech?</h3>
+            
+            <div className="space-y-4">
+              <div className="flex items-start">
+                <div className="flex-shrink-0">
+                  <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
+                    <span className="text-blue-600 text-sm">🚀</span>
+                  </div>
+                </div>
+                <div className="ml-3">
+                  <h4 className="text-lg font-medium text-gray-900">Innovation First</h4>
+                  <p className="text-gray-600">Work on cutting-edge AI and technology solutions</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start">
+                <div className="flex-shrink-0">
+                  <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
+                    <span className="text-green-600 text-sm">💡</span>
+                  </div>
+                </div>
+                <div className="ml-3">
+                  <h4 className="text-lg font-medium text-gray-900">Learning & Growth</h4>
+                  <p className="text-gray-600">Continuous learning opportunities and professional development</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start">
+                <div className="flex-shrink-0">
+                  <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center">
+                    <span className="text-purple-600 text-sm">🤝</span>
+                  </div>
+                </div>
+                <div className="ml-3">
+                  <h4 className="text-lg font-medium text-gray-900">Collaborative Culture</h4>
+                  <p className="text-gray-600">Work with talented individuals in a supportive environment</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div className="mt-12 bg-white rounded-lg shadow-md p-8">
+          <h3 className="text-2xl font-semibold text-gray-800 mb-6">Ready to Join Our Team?</h3>
+          <p className="text-gray-600 mb-6">
+            Send us your resume and let us know how you can contribute to our mission of revolutionizing 
+            enterprise technology through AI and innovation.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <a 
+              href="mailto:careers@ziontech.com" 
+              className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors"
+            >
+              Apply Now
+            </a>
+            <a 
+              href="/contact" 
+              className="inline-flex items-center px-6 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 transition-colors"
+            >
+              Learn More
+            </a>
           </div>
         </div>
       </div>

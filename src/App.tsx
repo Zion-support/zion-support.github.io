@@ -1,27 +1,66 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 
-export default function App() {
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="max-w-4xl mx-auto px-4 py-8">
-        <div className="bg-white rounded-lg shadow-lg p-8">
-          <div className="text-center mb-8">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">App</h1>
-            <p className="text-xl text-gray-600 mb-6">Revolutionary AI Breakthrough</p>
-            <div className="flex justify-center space-x-4">
-              <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">BREAKTHROUGH</span>
-              <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">AI</span>
-              <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">ENTERPRISE</span>
-            </div>
-          </div>
-          
-          <div className="prose max-w-none">
-            <p className="text-lg text-gray-700 mb-6">
-              This page is currently under development. Please check back soon for the complete content.
-            </p>
+// Import pages
+import Home from './pages/Home';
+import About from './pages/About';
+import Services from './pages/Services';
+
+// Simple Error Boundary
+class ErrorBoundary extends React.Component<
+  { children: React.ReactNode; fallback?: React.ReactNode },
+  { hasError: boolean }
+> {
+  constructor(props: any) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError(error: Error) {
+    return { hasError: true };
+  }
+
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return this.props.fallback || (
+        <div className="min-h-screen flex items-center justify-center bg-gray-50">
+          <div className="text-center">
+            <h1 className="text-2xl font-bold text-gray-900 mb-4">Something went wrong</h1>
+            <p className="text-gray-600 mb-4">We're sorry, but something unexpected happened.</p>
+            <button 
+              onClick={() => window.location.reload()}
+              className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700"
+            >
+              Reload Page
+            </button>
           </div>
         </div>
-      </div>
-    </div>
+      );
+    }
+
+    return this.props.children;
+  }
+}
+
+function App() {
+  return (
+    <HelmetProvider>
+      <ErrorBoundary>
+        <Router>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/services" element={<Services />} />
+          </Routes>
+        </Router>
+      </ErrorBoundary>
+    </HelmetProvider>
   );
 }
+
+export default App;

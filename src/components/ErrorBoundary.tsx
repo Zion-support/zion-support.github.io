@@ -20,36 +20,40 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('Uncaught error:', error, errorInfo);
+    console.error('ErrorBoundary caught an error:', error, errorInfo);
   }
 
   public render() {
     if (this.state.hasError) {
       return (
-        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-red-50 to-orange-50">
-          <div className="max-w-md w-full mx-4">
-            <div className="bg-white rounded-2xl shadow-xl p-8 text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-red-100 mb-4">
-                <AlertTriangle className="w-8 h-8 text-red-600" />
-              </div>
-              <h1 className="text-2xl font-bold text-gray-900 mb-2">
-                Oops! Something went wrong
-              </h1>
-              <p className="text-gray-600 mb-6">
-                We're sorry for the inconvenience. Please try refreshing the page.
-              </p>
-              <div className="space-y-3">
-                <button
-                  onClick={() => window.location.reload()}
-                  className="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors">
-                  Refresh Page
-                </button>
-                <a
-                  href="/"
-                  className="block w-full border-2 border-red-600 text-red-600 hover:bg-red-50 font-semibold py-3 px-6 rounded-lg transition-colors">
-                  Go to Homepage
-                </a>
-              </div>
+        <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
+          <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center">
+            <div className="mb-6">
+              <AlertTriangle className="mx-auto h-16 w-16 text-red-500" />
+            </div>
+            
+            <h1 className="text-2xl font-bold text-gray-900 mb-4">
+              Something went wrong
+            </h1>
+            
+            <p className="text-gray-600 mb-6">
+              We're sorry, but something unexpected happened. Please try refreshing the page.
+            </p>
+
+            <div className="space-y-3">
+              <button
+                onClick={() => window.location.reload()}
+                className="w-full px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
+              >
+                Reload Page
+              </button>
+              
+              <button
+                onClick={() => window.history.back()}
+                className="w-full px-4 py-2 border border-gray-300 text-gray-700 rounded-md hover:bg-gray-50 transition-colors"
+              >
+                Go Back
+              </button>
             </div>
           </div>
         </div>
