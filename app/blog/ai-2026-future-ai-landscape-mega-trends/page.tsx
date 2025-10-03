@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { Metadata } from 'next';
 import { Link } from 'react-router-dom';
 import { Calendar, Clock, User, ArrowRight, TrendingUp, Brain, Zap, Shield, Globe, Target } from 'lucide-react';

@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { ArrowRight, Code, Zap, Shield } from 'lucide-react';
 
 export default function December2025AutonomousCodeGenerationRevolutionBanner() {

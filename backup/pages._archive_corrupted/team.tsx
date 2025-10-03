@@ -1,5 +1,5 @@
 
-import React from 'react';
+// import React from 'react';
 interface TeamProps {
   // Add props here as needed
 }

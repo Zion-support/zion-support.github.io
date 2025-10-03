@@ -1,5 +1,5 @@
 
-import React from 'react';
+// import React from 'react';
 import SEO from '../components/SEO';
 import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';

@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 
 export const metadata = {
   title: 'Cut Generative AI Costs by 85%: The Definitive Enterprise Cost Optimization Guide',

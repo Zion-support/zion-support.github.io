@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 // Metadata handled by React Helmet
 import fs from 'fs';
 import path from 'path';

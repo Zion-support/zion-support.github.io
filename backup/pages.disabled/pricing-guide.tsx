@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { motion } from 'framer-motion';
 import SEO from '../components/SEO';
 import { Button } from '../components/ui/Button';
@@ -198,7 +198,7 @@ initial={ opacity: 0, y: 20 }
           <div className=\'grid grid-cols-1 md:grid-cols-2 gap-8\' />
             {pricingFactors.map((factor, index) => (
               <motion.div;}
-import React from 'react';}
+// import React from 'react';}
 import { motion  } from 'framer-motion';
 import { Button  } from '../components/ui/Button';
 import { Card  } from '../components/ui/Card';

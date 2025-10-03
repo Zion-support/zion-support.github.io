@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { ArrowRight, Brain, Cloud, Network, Phone, Mail, User, Heart, Info } from 'lucide-react';
 
 // Common interfaces for better type safety

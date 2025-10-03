@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import Head from 'next/head';
 import { Car as CarIcon } from 'lucide-react';
 import { Phone, Mail, MapPin, Check, ArrowRight, Star } from 'lucide-react';

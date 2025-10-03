@@ -134,7 +134,7 @@ export const NotificationItem:React.FC<NotificationItemProps> = ({ ;
       </div>;
     </div>;
   ),;
-},; import React from 'react';
+},; // import React from 'react';
 //Use the centralized icon wrapper to avoid missing icons export const getTypeIcon = (type: NotificationType) => {
   switch (type) {
   case 'message': 

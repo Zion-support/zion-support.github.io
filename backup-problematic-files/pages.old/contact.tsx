@@ -16,7 +16,7 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-import React from 'react';
+// import React from 'react';
 
 interface ContactProps {
   className?: string;

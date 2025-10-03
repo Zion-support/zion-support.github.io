@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 // Metadata handled by React Helmet
 import { BarChart3, CheckCircle, ArrowRight, DollarSign, Clock } from 'lucide-react';
 

@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import Head from 'next/head';
 import { Link } from 'react-router-dom';
 import { Boxes, Wrench, Activity, CheckCircle, Phone, Mail, MapPin } from 'lucide-react';

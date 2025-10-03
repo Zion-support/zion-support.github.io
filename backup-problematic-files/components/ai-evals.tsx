@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import Head from 'next/head';
 import { Check, ShieldCheck, TrendingUp, Clock, Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
 import QuantumHolographicMatrixBackground from '../components/ui/QuantumHolographicMatrixBackground';

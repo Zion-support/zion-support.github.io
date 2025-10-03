@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { Link } from 'react-router-dom';
 import { Trophy, DollarSign, Factory, CheckCircle, ArrowRight, Sparkles } from 'lucide-react';
 

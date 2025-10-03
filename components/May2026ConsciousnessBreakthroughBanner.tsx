@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 
 const May2026ConsciousnessBreakthroughBanner: React.FC = () => {
   return (

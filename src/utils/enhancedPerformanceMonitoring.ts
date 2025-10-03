@@ -63,7 +63,7 @@ class EnhancedPerformanceMonitor {
   private processNavigationTiming(entry: PerformanceNavigationTiming): void {
     const metrics: Partial<PerformanceMetrics> = {
       loadTime: entry.loadEventEnd - entry.loadEventStart,
-      timeToInteractive: entry.domInteractive - entry.navigationStart,
+      timeToInteractive: entry.domInteractive - entry.fetchStart,
       timestamp: Date.now()
     };
 

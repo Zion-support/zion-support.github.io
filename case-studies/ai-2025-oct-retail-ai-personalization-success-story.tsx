@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ShoppingBag, TrendingUp, Users, DollarSign, Target, Zap, CheckCircle, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
