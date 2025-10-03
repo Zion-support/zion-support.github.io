@@ -165,7 +165,7 @@ class EnhancedAccessibility {
     const inputs = document.querySelectorAll('input, textarea, select');
     inputs.forEach((input) => {
       if (!input.getAttribute('aria-label') && !input.getAttribute('aria-labelledby')) {
-        const label = document.querySelector(`label[for="${input.id}"]`);"
+        const label = document.querySelector(`label[for="${input.id}"]`);
         if (label) {
           input.setAttribute('aria-labelledby', label.id || `label-${input.id}`);
         }
@@ -305,7 +305,7 @@ class EnhancedAccessibility {
       'input:not([disabled])',
       'select:not([disabled])',
       'textarea:not([disabled])',
-      '[tabindex]:not([tabindex="-1"])'"
+      '[tabindex]:not([tabindex="-1"])'
     ].join(', ');
 
     return Array.from(document.querySelectorAll(focusableSelectors)) as HTMLElement[];
