@@ -362,42 +362,42 @@ class MultiAgentCoordinator {
               <div className="space-y-4">
                 {[
                   {
-                    phase: "Phase 1: Foundation",
-                    duration: "Weeks 1-4",
+                    phase: "Phase 1: Foundation
+                    duration: "Weeks 1-4
                     items: [
-                      "Core orchestration infrastructure",
-                      "Basic model registry and routing",
-                      "Simple workflow execution engine",
+                      "Core orchestration infrastructure
+                      "Basic model registry and routing
+                      "Simple workflow execution engine
                       "Monitoring and logging setup"
                     ]
                   },
                   {
-                    phase: "Phase 2: Enhancement",
-                    duration: "Weeks 5-8",
+                    phase: "Phase 2: Enhancement
+                    duration: "Weeks 5-8
                     items: [
-                      "Multi-model coordination",
-                      "Advanced workflow patterns",
-                      "Resource optimization",
+                      "Multi-model coordination
+                      "Advanced workflow patterns
+                      "Resource optimization
                       "Quality gates and validation"
                     ]
                   },
                   {
-                    phase: "Phase 3: Advanced Features",
-                    duration: "Weeks 9-12",
+                    phase: "Phase 3: Advanced Features
+                    duration: "Weeks 9-12
                     items: [
-                      "Multi-agent collaboration",
-                      "Adaptive execution strategies",
-                      "Cost optimization algorithms",
+                      "Multi-agent collaboration
+                      "Adaptive execution strategies
+                      "Cost optimization algorithms
                       "Enterprise governance integration"
                     ]
                   },
                   {
-                    phase: "Phase 4: Production Hardening",
-                    duration: "Weeks 13-16",
+                    phase: "Phase 4: Production Hardening
+                    duration: "Weeks 13-16
                     items: [
-                      "High availability and failover",
-                      "Security hardening",
-                      "Performance tuning at scale",
+                      "High availability and failover
+                      "Security hardening
+                      "Performance tuning at scale
                       "Comprehensive documentation"
                     ]
                   }

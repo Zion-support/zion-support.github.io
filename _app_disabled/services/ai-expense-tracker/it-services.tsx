@@ -34,8 +34,8 @@ import {
   Network
 } from 'lucide-react'
 const contactInfo = {
-  phone: "+1 302 464 0950",
-  email: "kleber@ziontechgroup.com",
+  phone: "+1 302 464 0950
+  email: "kleber@ziontechgroup.com
   address: "364 E Main St STE 1008 Middletown DE 19709"
 }
 const itServices = [
@@ -274,39 +274,39 @@ const itServices = [
 ]
 const industries = [
   {
-    title: "Healthcare & Medical",
-    description: "HIPAA-compliant IT solutions for healthcare providers and medical facilities",
-    icon: "🏥",
+    title: "Healthcare & Medical
+    description: "HIPAA-compliant IT solutions for healthcare providers and medical facilities
+    icon: "🏥
     useCases: ["Electronic Health Records", "Telemedicine platforms", "Medical imaging systems", "Patient data security"]
   },
   {
-    title: "Financial Services",
-    description: "Secure, compliant IT infrastructure for banks, credit unions, and financial institutions",
-    icon: "🏦",
+    title: "Financial Services
+    description: "Secure, compliant IT infrastructure for banks, credit unions, and financial institutions
+    icon: "🏦
     useCases: ["Core banking systems", "Payment processing", "Risk management", "Regulatory compliance"]
   },
   {
-    title: "E-commerce & Retail",
-    description: "Scalable IT solutions for online retailers and brick-and-mortar stores",
-    icon: "🛒",
+    title: "E-commerce & Retail
+    description: "Scalable IT solutions for online retailers and brick-and-mortar stores
+    icon: "🛒
     useCases: ["E-commerce platforms", "Inventory management", "Payment gateways", "Customer analytics"]
   },
   {
-    title: "Manufacturing",
-    description: "Industrial IT solutions for manufacturing and production facilities",
-    icon: "🏭",
+    title: "Manufacturing
+    description: "Industrial IT solutions for manufacturing and production facilities
+    icon: "🏭
     useCases: ["ERP systems", "Production monitoring", "Supply chain management", "Quality control"]
   },
   {
-    title: "Education & Training",
-    description: "IT infrastructure for schools, universities, and training organizations",
-    icon: "🎓",
+    title: "Education & Training
+    description: "IT infrastructure for schools, universities, and training organizations
+    icon: "🎓
     useCases: ["Learning management systems", "Student information systems", "Campus networks", "Online learning platforms"]
   },
   {
-    title: "Government & Public Sector",
-    description: "Secure, compliant IT solutions for government agencies and public organizations",
-    icon: "🏛️",
+    title: "Government & Public Sector
+    description: "Secure, compliant IT solutions for government agencies and public organizations
+    icon: "🏛️
     useCases: ["Citizen services", "Document management", "Security compliance", "Digital transformation"]
 
 ]
@@ -551,22 +551,22 @@ export default function ITServicesPage() {
               {[
                 {
                   icon: Award,
-                  title: "Certified Experts",
+                  title: "Certified Experts
                   description: "Certified professionals with 10+ years of experience"
                 },
                 {
                   icon: Shield,
-                  title: "Security First",
+                  title: "Security First
                   description: "Enterprise-grade security and compliance standards"
                 },
                 {
                   icon: DollarSign,
-                  title: "Cost Effective",
+                  title: "Cost Effective
                   description: "50% lower costs than traditional IT providers"
                 },
                 {
                   icon: Clock,
-                  title: "24/7 Support",
+                  title: "24/7 Support
                   description: "Round-the-clock monitoring and support services"
 
               ].map((item, index) => (

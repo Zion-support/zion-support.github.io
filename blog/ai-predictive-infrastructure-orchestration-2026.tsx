@@ -123,17 +123,17 @@ const AIPredictiveInfrastructureOrchestration2026 = () => {
                 <pre className="text-sm text-cyan-400 overflow-x-auto">
 {`# Example: Predictive Scaling
 prediction = {
-  "next_24h_peak": "2025-09-30 18:00:00",
-  "predicted_load": "85% capacity",
-  "recommended_action": "scale_up",
-  "confidence": "99.7%",
+  "next_24h_peak": "2025-09-30 18:00:00
+  "predicted_load": "85% capacity
+  "recommended_action": "scale_up
+  "confidence": "99.7%
   "cost_impact": "$124/hour"
 }
 
 # AI automatically scales 15min before spike
 orchestrator.predict_and_scale(
-    prediction_window="24h",
-    scaling_lead_time="15min",
+    prediction_window="24h
+    scaling_lead_time="15min
     cost_optimization=True
 )
 # Result: Zero performance degradation

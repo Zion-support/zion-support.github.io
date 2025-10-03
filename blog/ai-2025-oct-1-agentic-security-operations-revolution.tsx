@@ -1,14 +1,14 @@
 import React from "react";
 
 export const metadata = {
-  title: "Agentic Security Operations: AI-Powered Autonomous Threat Detection & Response | October 2025",
-  description: "Explore how agentic AI is revolutionizing cybersecurity operations. Discover autonomous threat detection, real-time response systems, and the $284B opportunity in AI-powered security operations.",
-  date: "2025-10-01",
-  author: "Zion Tech Group",
-  category: "AI Security",
+  title: "Agentic Security Operations: AI-Powered Autonomous Threat Detection & Response | October 2025
+  description: "Explore how agentic AI is revolutionizing cybersecurity operations. Discover autonomous threat detection, real-time response systems, and the $284B opportunity in AI-powered security operations.
+  date: "2025-10-01
+  author: "Zion Tech Group
+  category: "AI Security
   tags: ["Agentic AI", "Cybersecurity", "Autonomous Security", "Threat Detection", "AI Security Operations"],
   featured: true,
-  readTime: "14 min read",
+  readTime: "14 min read
 };
 
 const AgenticSecurityOperationsRevolution: React.FC = () => {

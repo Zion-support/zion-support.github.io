@@ -270,11 +270,11 @@ export default function AICostOptimization2025() {
                 <p className="text-sm mb-2">Tag every API call with user, team, project, and feature.</p>
                 <div className="bg-gray-100 dark:bg-gray-900 p-3 rounded text-xs">
                   <pre>{`{
-  "request_id": "req_abc123",
-  "user_id": "user_456",
-  "team": "product",
-  "feature": "chat_assistant",
-  "model": "gpt-4-turbo",
+  "request_id": "req_abc123
+  "user_id": "user_456
+  "team": "product
+  "feature": "chat_assistant
+  "model": "gpt-4-turbo
   "tokens_in": 350,
   "tokens_out": 1200,
   "cost_usd": 0.045

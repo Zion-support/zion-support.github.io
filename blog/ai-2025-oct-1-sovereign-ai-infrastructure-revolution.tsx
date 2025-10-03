@@ -1,14 +1,14 @@
 import React from "react";
 
 export const metadata = {
-  title: "Sovereign AI Infrastructure Revolution: Building Nation-Scale AI Systems | October 2025",
-  description: "Discover how sovereign AI infrastructure is reshaping national technology independence. Learn about nation-scale AI deployments, data sovereignty frameworks, and the $847B market opportunity in sovereign AI systems.",
-  date: "2025-10-01",
-  author: "Zion Tech Group",
-  category: "AI Infrastructure",
+  title: "Sovereign AI Infrastructure Revolution: Building Nation-Scale AI Systems | October 2025
+  description: "Discover how sovereign AI infrastructure is reshaping national technology independence. Learn about nation-scale AI deployments, data sovereignty frameworks, and the $847B market opportunity in sovereign AI systems.
+  date: "2025-10-01
+  author: "Zion Tech Group
+  category: "AI Infrastructure
   tags: ["Sovereign AI", "National Infrastructure", "Data Sovereignty", "AI Independence", "Enterprise AI"],
   featured: true,
-  readTime: "12 min read",
+  readTime: "12 min read
 };
 
 const SovereignAIInfrastructureRevolution: React.FC = () => {

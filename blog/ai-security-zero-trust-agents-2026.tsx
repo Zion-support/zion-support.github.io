@@ -142,11 +142,11 @@ const AISecurityZeroTrustAgents2026 = () => {
             <h3>Tool Manifest</h3>
             <pre className="bg-gray-900 text-gray-100 p-4 rounded overflow-x-auto text-sm">
 {`{
-  "tool_id": "database_query",
-  "version": "2.1.0",
+  "tool_id": "database_query
+  "version": "2.1.0
   "attestation": {
-    "signature": "sha256:abc123...",
-    "signer": "security@company.com",
+    "signature": "sha256:abc123...
+    "signer": "security@company.com
     "timestamp": "2026-09-15T10:30:00Z"
   },
   "permissions": {
@@ -154,7 +154,7 @@ const AISecurityZeroTrustAgents2026 = () => {
     "write": [],
     "apis": ["read_only_db"]
   },
-  "risk_level": "low",
+  "risk_level": "low
   "requires_approval": false
 }`}
             </pre>
@@ -258,14 +258,14 @@ const AISecurityZeroTrustAgents2026 = () => {
             <h3>Audit Trail Example</h3>
             <pre className="bg-gray-900 text-gray-100 p-4 rounded overflow-x-auto text-sm">
 {`{
-  "session_id": "sess_abc123",
-  "agent_id": "support_agent_v2",
-  "user_id": "user_12345",
-  "timestamp": "2026-09-30T14:23:15Z",
-  "action": "database_write",
-  "target": "customers.notes",
+  "session_id": "sess_abc123
+  "agent_id": "support_agent_v2
+  "user_id": "user_12345
+  "timestamp": "2026-09-30T14:23:15Z
+  "action": "database_write
+  "target": "customers.notes
   "parameters": {
-    "customer_id": "cust_67890",
+    "customer_id": "cust_67890
     "note": "Called regarding billing issue"
   },
   "risk_score": 15,
