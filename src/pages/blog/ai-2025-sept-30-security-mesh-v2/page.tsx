@@ -1,17 +1,43 @@
+import React from 'react';
+import { Helmet } from 'react-helmet';
+import { Link } from 'react-router-dom';
+
 export default function Page() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto p-6">
-        <h1 className="text-4xl font-bold mb-6">Page</h1>
-        <p className="text-gray-300 mb-8">
-          Content coming soon...
-        </p>
-=======
-        <div className="text-center">
-          <a href="/blog" className="text-cyan-300 underline hover:text-cyan-200">
-            Back to Blog
-          </a>
-        </div>
+      <Helmet>
+        <title>Blog Post</title>
+        <meta name="description" content="Blog post content" />
+        <link rel="canonical" href="https://ziontechgroup.com/blog" />
+      </Helmet>
+      
+      <div className="container mx-auto px-6 py-12">
+        <article className="max-w-4xl mx-auto">
+          <header className="mb-8">
+            <h1 className="text-4xl font-bold text-center mb-4">Blog Post</h1>
+            <p className="text-xl text-gray-300 text-center">Blog post content</p>
+          </header>
+          
+          <div className="prose prose-lg max-w-none text-gray-300">
+            <p className="mb-4">detect drift in seconds. Pair these with budget-aware actions and KPI-linked canaries to
+          auto-contain incidents without slowing delivery.</p>
+            
+            
+            <ul className="list-disc list-inside space-y-2 my-6">
+              <li>Signed outputs and attested toolchains</li>
+              <li>Runtime verifiers with budgeted actions and approvals</li>
+              <li>Inline egress control and policy tests in CI</li>
+              <li>Deterministic rollback on canary or budget breach</li>
+            </ul>
+            
+            
+            <div className="mt-8 pt-8 border-t border-gray-700">
+              <Link to="/blog" className="text-cyan-300 underline hover:text-cyan-200 transition-colors">
+                ← Back to Blog
+              </Link>
+            </div>
+          </div>
+        </article>
       </div>
     </div>
   );

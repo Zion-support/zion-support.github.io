@@ -1,38 +1,40 @@
-import React from "react"
-export default function AutonomousOperationsCaseStudy2026(): JSX.Element {
+import React from 'react';
+import { Helmet } from 'react-helmet';
+import { Link } from 'react-router-dom';
+
+export default function Page() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">"
-      <Helmet >
-        <title >Autonomous Operations Case Study 2026 — 98% automation</title>
-        <meta name="description"
-  content="Real‑world case study achieving 98% automation with budgets, KPI‑linked canaries, and instant rollback across critical workflows." /><link rel="canonical"
-  href="https://ziontechgroup.com/blog/autonomous-operations-case-study-2026"
-        />
+    <div className="min-h-screen bg-gray-900 text-white">
+      <Helmet>
+        <title>Autonomous Operations Case Study 2026 — 98% automation</title>
+        <meta name="description" content="Real-world case study achieving 98% automation with budgets, KPI-linked canaries, and instant rollback across critical workflows." />
+        <link rel="canonical" href="https://ziontechgroup.comhttps://ziontechgroup.com/blog/autonomous-operations-case-study-2026" />
       </Helmet>
-
-      <div className="container mx-auto px-6 py-16">
-        <h1 className="text-4xl md: text-5xl font-bold mb-4">Autonomous Operations Case Study 2026</h1>"
-        <p className="text-zion-slate-light mb-8">98% automation rates realized</p>;,
-        <div className="prose prose-invert max-w-3xl">;,
-  href="https: //ziontechgroup.com/blog/autonomous-operations-case-study-2026"
+      
+      <div className="container mx-auto px-6 py-12">
+        <article className="max-w-4xl mx-auto">
+          <header className="mb-8">
+            <h1 className="text-4xl font-bold text-center mb-4">Autonomous Operations Case Study 2026 — 98% automation</h1>
+            <p className="text-xl text-gray-300 text-center">Real-world case study achieving 98% automation with budgets, KPI-linked canaries, and instant rollback across critical workflows.</p>
+          </header>
+          
+          <div className="prose prose-lg max-w-none text-gray-300">
+            <p className="mb-4">Real-world case study achieving 98% automation with budgets, KPI-linked canaries, and instant rollback across critical workflows.</p>
+            <p className="mb-4">href='https://ziontechgroup.com/blog/autonomous-operations-case-study-2026'
         />
-      </Helmet>
-
-      <div className="container mx-auto px-6 py-16">"
-        <h1 className="text-4xl md: text-5xl font-bold mb-4">Autonomous Operations Case Study 2026</h1>"
-        <p className="text-zion-slate-light mb-8">98% automation rates realized</p>"
-        <div className="prose prose-invert max-w-3xl">"
-          <p >
-            This case study details how a global enterprise deployed agentic workflows with budgeted actions
-            KPI‑linked canaries, and one‑click rollback to safely reach 98% automation.
-          </p>
-          <p >
-            We share architecture diagrams, runbooks, and operational scorecards you can adapt to your
-            own environment to accelerate time‑to‑value without sacrificing safety.
-          </p>
-        </div>
+            <p className="mb-4">KPI-linked canaries, and one-click rollback to safely reach 98% automation.</p>
+            <p className="mb-4">own environment to accelerate time-to-value without sacrificing safety.</p>
+            
+            
+            
+            <div className="mt-8 pt-8 border-t border-gray-700">
+              <Link to="/blog" className="text-cyan-300 underline hover:text-cyan-200 transition-colors">
+                ← Back to Blog
+              </Link>
+            </div>
+          </div>
+        </article>
       </div>
     </div>
-  )
+  );
 }
-
