@@ -376,5 +376,6 @@ Enhanced Accessibility Report:
 export const enhancedAccessibility = new EnhancedAccessibility();
 
 // Auto-initialize in browser environment
+if (typeof window !== 'undefined') {
   enhancedAccessibility.initialize();
 }

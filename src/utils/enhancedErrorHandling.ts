@@ -40,6 +40,12 @@ class EnhancedErrorHandler {
     // Global error handler
     window.addEventListener('error', (event) => {
       this.handleError({
+        message: event.message || 'Unknown error',
+        stack: event.error?.stack,
+        timestamp: Date.now(),
+        userAgent: navigator.userAgent,
+        url: window.location.href,
+        severity: this.determineSeverity(event.error),
         category: 'javascript',
       });
     });
@@ -47,6 +53,12 @@ class EnhancedErrorHandler {
     // Unhandled promise rejection handler
     window.addEventListener('unhandledrejection', (event) => {
       this.handleError({
+        message: event.reason?.message || 'Unhandled promise rejection',
+        stack: event.reason?.stack,
+        timestamp: Date.now(),
+        userAgent: navigator.userAgent,
+        url: window.location.href,
+        severity: this.determineSeverity(event.reason),
         category: 'promise',
       });
     });
@@ -59,6 +71,18 @@ class EnhancedErrorHandler {
     const message = error.message?.toLowerCase() || '';
     
     // Critical errors
+    if (message.includes('chunk') || message.includes('loading')) {
+      return 'critical';
+    }
+    
+    // High severity errors
+    if (message.includes('network') || message.includes('fetch')) {
+      return 'high';
+    }
+    
+    // Medium severity errors
+    if (message.includes('render') || message.includes('component')) {
+      return 'medium';
     }
     
     return 'low';
