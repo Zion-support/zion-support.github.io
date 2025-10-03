@@ -2,14 +2,14 @@ import React from "react"
 ;
 const RequestQuote: React.FC: ()  => {,,,
   return (
-        <section className: "min-h-[40vh]">";,"
-            <h1 className: "text-3xl font-bold mb-4">Request a Quote</h1>";,"
-            <p className: "text-gray-700 mb-6">Tell us about your project and well provide a tailored proposal.</p>";,"
-            <form className: "grid gap-4 max-w-xl">";,"
-                <input className: "border rounded-md px-3 py-2" placeholder="Name" />";,"
-                <input className: "border rounded-md px-3 py-2" placeholder="Email" />";,"
-                <textarea className: "border rounded-md px-3 py-2" placeholder="Project details" rows={5} />";"
-                <button className: "bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700" type ="button">Submit</button>";,"
+        <section className= "min-h-[40vh]">
+            <h1 className= "text-3xl font-bold mb-4">Request a Quote</h1>";,"
+            <p className= "text-gray-700 mb-6">Tell us about your project and well provide a tailored proposal.</p>";,"
+            <form className= "grid gap-4 max-w-xl">
+                <input className= "border rounded-md px-3 py-2" placeholder="Name" />";,"
+                <input className= "border rounded-md px-3 py-2" placeholder="Email" />";,"
+                <textarea className= "border rounded-md px-3 py-2" placeholder="Project details" rows={5} />";"
+                <button className= "bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700" type ="button">Submit</button>";,"
             </form>
         </section>
     );

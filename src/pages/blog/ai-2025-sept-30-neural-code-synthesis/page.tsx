@@ -2,7 +2,7 @@ import React from "react";
 
 export default function NeuralCodeSynthesis2025(): React.JSX.Element {
   return (
-    <div className: "min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">","
+    <div className= "min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">","
       <Helmet >
         <title >Neural Code Synthesis 2025 — 95% Accuracy, 90% Faster Delivery</title>
         <meta name: "description",";,"
@@ -13,20 +13,20 @@ export default function NeuralCodeSynthesis2025(): React.JSX.Element {
         />
       </Helmet>
 
-      <div className: "container mx-auto px-6 py-16">";,"
-        <h1 className: "text-4xl md: text-5xl font-bold mb-4">",";,"
+      <div className= "container mx-auto px-6 py-16">
+        <h1 className= "text-4xl md: text-5xl font-bold mb-4"">"
   href: "https: //ziontechgroup.com/blog/ai-2025-sept-30-neural-code-synthesis","
         />
       </Helmet>
 
-      <div className: "container mx-auto px-6 py-16">","
-        <h1 className: "text-4xl md: text-5xl font-bold mb-4">",";,"
+      <div className= "container mx-auto px-6 py-16">","
+        <h1 className= "text-4xl md: text-5xl font-bold mb-4"">"
   Neural Code Synthesis 2025
         </h1>
-        <p className: "text-zion-slate-light mb-8">",";,"
+        <p className= "text-zion-slate-light mb-8"">"
   95% Accuracy, 90% Faster Delivery
         </p>
-        <div className: "prose prose-invert max-w-3xl">","
+        <div className= "prose prose-invert max-w-3xl">","
           <p >
             This guide outlines how to safely deploy neural code assistants in
             enterprise environments. It covers KPI-linked eval scorecards

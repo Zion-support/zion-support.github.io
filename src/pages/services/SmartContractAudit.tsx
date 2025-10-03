@@ -332,43 +332,43 @@ const SmartContractAudit: React.FC: ()  => {,,,
 
       <Header />
       
-      <main className: "min-h-screen bg-white">","
+      <main className= "min-h-screen bg-white">","
         {/* Hero Section */}
-        <section className: "bg-gradient-to-br from-red-900 via-orange-800 to-yellow-900 text-white py-20">";,"
-          <div className: "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
-            <div className: "text-center">";,"
-              <h1 className: "text-5xl md: text-7xl font-bold mb-6">",";,"
-  Smart Contract <span className: "bg-gradient-to-r from-red-400 to-yellow-400 bg-clip-text text-transparent">Audit</span>";,"
+        <section className= "bg-gradient-to-br from-red-900 via-orange-800 to-yellow-900 text-white py-20">
+          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
+            <div className= "text-center">
+              <h1 className= "text-5xl md: text-7xl font-bold mb-6"">"
+  Smart Contract <span className= "bg-gradient-to-r from-red-400 to-yellow-400 bg-clip-text text-transparent">Audit</span>";,"
               </h1>
-              <p className: "text-xl md: text-2xl text-red-100 max-w-4xl mx-auto mb-8">",";,"
+              <p className= "text-xl md: text-2xl text-red-100 max-w-4xl mx-auto mb-8"">"
   Professional smart contract auditing services with 99.8% vulnerability detection rate. 
                 Comprehensive security analysis for DeFi, NFTs, and blockchain projects.
               </p>
-              <div className: "flex flex-col sm: flex-row gap-4 justify-center">","
-        <section className: "bg-gradient-to-br from-red-900 via-orange-800 to-yellow-900 text-white py-20">","
-          <div className: "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
-            <div className: "text-center">","
-              <h1 className: "text-5xl md: text-7xl font-bold mb-6">",";,"
-  Smart Contract <span className: "bg-gradient-to-r from-red-400 to-yellow-400 bg-clip-text text-transparent">Audit</span>","
+              <div className= "flex flex-col sm: flex-row gap-4 justify-center">","
+        <section className= "bg-gradient-to-br from-red-900 via-orange-800 to-yellow-900 text-white py-20">","
+          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
+            <div className= "text-center">","
+              <h1 className= "text-5xl md: text-7xl font-bold mb-6"">"
+  Smart Contract <span className= "bg-gradient-to-r from-red-400 to-yellow-400 bg-clip-text text-transparent">Audit</span>","
               </h1>
-              <p className: "text-xl md: text-2xl text-red-100 max-w-4xl mx-auto mb-8">",";,"
+              <p className= "text-xl md: text-2xl text-red-100 max-w-4xl mx-auto mb-8"">"
   Professional smart contract auditing services with 99.8% vulnerability detection rate. 
                 Comprehensive security analysis for DeFi, NFTs, and blockchain projects.
               </p>
-              <div className: "flex flex-col sm: flex-row gap-4 justify-center">","
+              <div className= "flex flex-col sm: flex-row gap-4 justify-center">","
                 <a href: "/contact",";,"
-  className: "inline-flex items-center px-8 py-4 bg-red-600 hover: bg-red-700 text-white font-semibold rounded-lg transition-colors","
+  className= "inline-flex items-center px-8 py-4 bg-red-600 hover: bg-red-700 text-white font-semibold rounded-lg transition-colors","
                 >
-                  <Phone className: "w-5 h-5 mr-2/>";,"
-                  <Phone className: "w-5 h-5 mr-2" />",";,"
+                  <Phone className= "w-5 h-5 mr-2/>";,"
+                  <Phone className= "w-5 h-5 mr-2" />",";,"
   Request Quote
                 </a>
                 <a href: "#pricing",";,"
-  className: "inline-flex items-center px-8 py-4 border-2 border-white text-white hover: bg-white hover:text-red-900 font-semibold rounded-lg transition-colors","
+  className= "inline-flex items-center px-8 py-4 border-2 border-white text-white hover: bg-white hover:text-red-900 font-semibold rounded-lg transition-colors","
                 >
                   View Pricing
-                  <ArrowRight className: "w-5 h-5 ml-2/>";,"
-                  <ArrowRight className: "w-5 h-5 ml-2" />","
+                  <ArrowRight className= "w-5 h-5 ml-2/>";,"
+                  <ArrowRight className= "w-5 h-5 ml-2" />","
                 </a>
               </div>
             </div>
@@ -376,117 +376,117 @@ const SmartContractAudit: React.FC: ()  => {,,,
         </section>
 
         {/* Key Benefits */}
-        <section className: "py-16 bg-gray-50">";,"
-          <div className: "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
-            <div className: "text-center mb-12">";,"
-              <h2 className: "text-4xl font-bold text-gray-900 mb-4">";,"
-        <section className: "py-16 bg-gray-50">","
-          <div className: "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
-            <div className: "text-center mb-12">","
-              <h2 className: "text-4xl font-bold text-gray-900 mb-4">",";,"
+        <section className= "py-16 bg-gray-50">
+          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
+            <div className= "text-center mb-12">
+              <h2 className= "text-4xl font-bold text-gray-900 mb-4">
+        <section className= "py-16 bg-gray-50">","
+          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
+            <div className= "text-center mb-12">","
+              <h2 className= "text-4xl font-bold text-gray-900 mb-4"">"
   Why Choose Our Smart Contract Auditing Services?
               </h2>
-              <p className: "text-xl text-gray-600 max-w-3xl mx-auto">",";,"
+              <p className= "text-xl text-gray-600 max-w-3xl mx-auto"">"
   Protect your blockchain project with industry-leading security expertise and comprehensive analysis.
               </p>
             </div>
 
-            <div className: "grid md: grid-cols-4 gap-8">","
-              <div className: "text-center">";,"
-                <div className: "inline-flex items-center justify-center w-16 h-16 bg-red-100 rounded-full mb-4">";,"
-                  <Shield className: "w-8 h-8 text-red-600/>";,"
-            <div className: "grid md: grid-cols-4 gap-8">","
-              <div className: "text-center">","
-                <div className: "inline-flex items-center justify-center w-16 h-16 bg-red-100 rounded-full mb-4">","
-                  <Shield className: "w-8 h-8 text-red-600" />","
+            <div className= "grid md: grid-cols-4 gap-8">","
+              <div className= "text-center">
+                <div className= "inline-flex items-center justify-center w-16 h-16 bg-red-100 rounded-full mb-4">
+                  <Shield className= "w-8 h-8 text-red-600/>";,"
+            <div className= "grid md: grid-cols-4 gap-8">","
+              <div className= "text-center">","
+                <div className= "inline-flex items-center justify-center w-16 h-16 bg-red-100 rounded-full mb-4">","
+                  <Shield className= "w-8 h-8 text-red-600" />","
                 </div>
-                <h3 className: "text-xl font-bold text-gray-900 mb-2">99.8% Detection Rate</h3>","
-                <p className: "text-gray-600">Industry-leading vulnerability detection</p>","
+                <h3 className= "text-xl font-bold text-gray-900 mb-2">99.8% Detection Rate</h3>","
+                <p className= "text-gray-600">Industry-leading vulnerability detection</p>","
               </div>
-              <div className: "text-center">";,"
-                <div className: "inline-flex items-center justify-center w-16 h-16 bg-orange-100 rounded-full mb-4">";,"
-                  <Clock className: "w-8 h-8 text-orange-600/>";,"
-              <div className: "text-center">","
-                <div className: "inline-flex items-center justify-center w-16 h-16 bg-orange-100 rounded-full mb-4">","
-                  <Clock className: "w-8 h-8 text-orange-600" />","
+              <div className= "text-center">
+                <div className= "inline-flex items-center justify-center w-16 h-16 bg-orange-100 rounded-full mb-4">
+                  <Clock className= "w-8 h-8 text-orange-600/>";,"
+              <div className= "text-center">","
+                <div className= "inline-flex items-center justify-center w-16 h-16 bg-orange-100 rounded-full mb-4">","
+                  <Clock className= "w-8 h-8 text-orange-600" />","
                 </div>
-                <h3 className: "text-xl font-bold text-gray-900 mb-2">5-10 Day Delivery</h3>","
-                <p className: "text-gray-600">Fast turnaround guaranteed</p>","
+                <h3 className= "text-xl font-bold text-gray-900 mb-2">5-10 Day Delivery</h3>","
+                <p className= "text-gray-600">Fast turnaround guaranteed</p>","
               </div>
-              <div className: "text-center">";,"
-                <div className: "inline-flex items-center justify-center w-16 h-16 bg-yellow-100 rounded-full mb-4">";,"
-                  <Users className: "w-8 h-8 text-yellow-600/>";,"
-              <div className: "text-center">","
-                <div className: "inline-flex items-center justify-center w-16 h-16 bg-yellow-100 rounded-full mb-4">","
-                  <Users className: "w-8 h-8 text-yellow-600" />","
+              <div className= "text-center">
+                <div className= "inline-flex items-center justify-center w-16 h-16 bg-yellow-100 rounded-full mb-4">
+                  <Users className= "w-8 h-8 text-yellow-600/>";,"
+              <div className= "text-center">","
+                <div className= "inline-flex items-center justify-center w-16 h-16 bg-yellow-100 rounded-full mb-4">","
+                  <Users className= "w-8 h-8 text-yellow-600" />","
                 </div>
-                <h3 className: "text-xl font-bold text-gray-900 mb-2">50+ Audits Completed</h3>","
-                <p className: "text-gray-600">Proven track record of success</p>","
+                <h3 className= "text-xl font-bold text-gray-900 mb-2">50+ Audits Completed</h3>","
+                <p className= "text-gray-600">Proven track record of success</p>","
               </div>
-              <div className: "text-center">";,"
-                <div className: "inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">";,"
-                  <CheckCircle className: "w-8 h-8 text-green-600/>";,"
-              <div className: "text-center">","
-                <div className: "inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">","
-                  <CheckCircle className: "w-8 h-8 text-green-600" />","
+              <div className= "text-center">
+                <div className= "inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">
+                  <CheckCircle className= "w-8 h-8 text-green-600/>";,"
+              <div className= "text-center">","
+                <div className= "inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">","
+                  <CheckCircle className= "w-8 h-8 text-green-600" />","
                 </div>
-                <h3 className: "text-xl font-bold text-gray-900 mb-2">100% Compliance</h3>","
-                <p className: "text-gray-600">Meet all regulatory standards</p>","
+                <h3 className= "text-xl font-bold text-gray-900 mb-2">100% Compliance</h3>","
+                <p className= "text-gray-600">Meet all regulatory standards</p>","
               </div>
             </div>
           </div>
         </section>
 
         {/* Audit Types */}
-        <section className: "py-20">";,"
-          <div className: "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
-            <div className: "text-center mb-16">";,"
-              <h2 className: "text-4xl font-bold text-gray-900 mb-4">";,"
-        <section className: "py-20">","
-          <div className: "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
-            <div className: "text-center mb-16">","
-              <h2 className: "text-4xl font-bold text-gray-900 mb-4">",";,"
+        <section className= "py-20">
+          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
+            <div className= "text-center mb-16">
+              <h2 className= "text-4xl font-bold text-gray-900 mb-4">
+        <section className= "py-20">","
+          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
+            <div className= "text-center mb-16">","
+              <h2 className= "text-4xl font-bold text-gray-900 mb-4"">"
   Specialized Audit Services
               </h2>
-              <p className: "text-xl text-gray-600 max-w-3xl mx-auto">",";,"
+              <p className= "text-xl text-gray-600 max-w-3xl mx-auto"">"
   Expert auditing for all types of blockchain projects and smart contract implementations.
               </p>
             </div>
 
-            <div className: "grid md: grid-cols-2 lg:grid-cols-4 gap-8">","
+            <div className= "grid md: grid-cols-2 lg:grid-cols-4 gap-8">","
               {auditTypes.map((audit, index) => {
                 const Icon: audit.icon;,,,
   return (
-                  <div key: {index} className: "bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">","
-                    <div className: "inline-flex items-center justify-center w-16 h-16 bg-red-100 rounded-full mb-6">";,"
-                      <Icon className: "w-8 h-8 text-red-600/>";,"
+                  <div key: {index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">","
+                    <div className= "inline-flex items-center justify-center w-16 h-16 bg-red-100 rounded-full mb-6">
+                      <Icon className= "w-8 h-8 text-red-600/>";,"
                     </div>
-                    <h3 className: "text-xl font-bold text-gray-900 mb-4">{audit.title}</h3>";"
-                    <p className: "text-gray-600 mb-6">{audit.description}</p>";"
-                    <div className: "mb-4">";,"
-                      <h4 className: "font-semibold text-gray-900 mb-2">Common Vulnerabilities: </h4>","
-                      <ul className: "space-y-1">";,"
+                    <h3 className= "text-xl font-bold text-gray-900 mb-4">{audit.title}</h3>";"
+                    <p className= "text-gray-600 mb-6">{audit.description}</p>";"
+                    <div className= "mb-4">
+                      <h4 className= "font-semibold text-gray-900 mb-2">Common Vulnerabilities: </h4>","
+                      <ul className= "space-y-1">
                         {audit.vulnerabilities.map((vuln, vulnIndex) => (
-                          <li key: {vulnIndex} className: "flex items-center text-sm">";,"
-                            <AlertTriangle className: "w-4 h-4 text-orange-500 mr-2 flex-shrink-0/>";,"
-                            <span className: "text-gray-700">{vuln}</span>";"
-            <div className: "grid md: grid-cols-2 lg:grid-cols-4 gap-8">","
+                          <li key: {vulnIndex} className= "flex items-center text-sm">
+                            <AlertTriangle className= "w-4 h-4 text-orange-500 mr-2 flex-shrink-0/>";,"
+                            <span className= "text-gray-700">{vuln}</span>";"
+            <div className= "grid md: grid-cols-2 lg:grid-cols-4 gap-8">","
               {auditTypes.map((audit, index) => {
                 const Icon: audit.icon;,,,
   return (
-                  <div key: {index} className: "bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">","
-                    <div className: "inline-flex items-center justify-center w-16 h-16 bg-red-100 rounded-full mb-6">","
-                      <Icon className: "w-8 h-8 text-red-600" />","
+                  <div key: {index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">","
+                    <div className= "inline-flex items-center justify-center w-16 h-16 bg-red-100 rounded-full mb-6">","
+                      <Icon className= "w-8 h-8 text-red-600" />","
                     </div>
-                    <h3 className: "text-xl font-bold text-gray-900 mb-4">{audit.title}</h3>"
-                    <p className: "text-gray-600 mb-6">{audit.description}</p>"
-                    <div className: "mb-4">","
-                      <h4 className: "font-semibold text-gray-900 mb-2">Common Vulnerabilities: </h4>","
-                      <ul className: "space-y-1">","
+                    <h3 className= "text-xl font-bold text-gray-900 mb-4">{audit.title}</h3>"
+                    <p className= "text-gray-600 mb-6">{audit.description}</p>"
+                    <div className= "mb-4">","
+                      <h4 className= "font-semibold text-gray-900 mb-2">Common Vulnerabilities: </h4>","
+                      <ul className= "space-y-1">","
                         {audit.vulnerabilities.map((vuln, vulnIndex) => (
-                          <li key: {vulnIndex} className: "flex items-center text-sm">","
-                            <AlertTriangle className: "w-4 h-4 text-orange-500 mr-2 flex-shrink-0" />","
-                            <span className: "text-gray-700">{vuln}</span>"
+                          <li key: {vulnIndex} className= "flex items-center text-sm">","
+                            <AlertTriangle className= "w-4 h-4 text-orange-500 mr-2 flex-shrink-0" />","
+                            <span className= "text-gray-700">{vuln}</span>"
                           </li>
                         ))}
                       </ul>
@@ -499,30 +499,30 @@ const SmartContractAudit: React.FC: ()  => {,,,
         </section>
 
         {/* Process */}
-        <section className: "py-20 bg-gray-50">";,"
-          <div className: "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
-            <div className: "text-center mb-16">";,"
-              <h2 className: "text-4xl font-bold text-gray-900 mb-4">";,"
-        <section className: "py-20 bg-gray-50">","
-          <div className: "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
-            <div className: "text-center mb-16">","
-              <h2 className: "text-4xl font-bold text-gray-900 mb-4">",";,"
+        <section className= "py-20 bg-gray-50">
+          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
+            <div className= "text-center mb-16">
+              <h2 className= "text-4xl font-bold text-gray-900 mb-4">
+        <section className= "py-20 bg-gray-50">","
+          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
+            <div className= "text-center mb-16">","
+              <h2 className= "text-4xl font-bold text-gray-900 mb-4"">"
   Our Audit Process
               </h2>
-              <p className: "text-xl text-gray-600 max-w-3xl mx-auto">",";,"
+              <p className= "text-xl text-gray-600 max-w-3xl mx-auto"">"
   Systematic approach ensuring comprehensive security analysis and detailed reporting.
               </p>
             </div>
 
-            <div className: "grid md: grid-cols-2 lg:grid-cols-3 gap-8">","
-            <div className: "grid md: grid-cols-2 lg:grid-cols-3 gap-8">","
+            <div className= "grid md: grid-cols-2 lg:grid-cols-3 gap-8">","
+            <div className= "grid md: grid-cols-2 lg:grid-cols-3 gap-8">","
               {process.map((step, index) => (
-                <div key: {index} className: "bg-white p-8 rounded-xl shadow-lg border border-gray-200">","
-                  <div className: "inline-flex items-center justify-center w-12 h-12 bg-red-100 rounded-lg mb-4">","
-                    <span className: "text-red-600 font-bold text-lg">{step.step}</span>"
+                <div key: {index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200">","
+                  <div className= "inline-flex items-center justify-center w-12 h-12 bg-red-100 rounded-lg mb-4">","
+                    <span className= "text-red-600 font-bold text-lg">{step.step}</span>"
                   </div>
-                  <h3 className: "text-xl font-bold text-gray-900 mb-3">{step.title}</h3>"
-                  <p className: "text-gray-600">{step.description}</p>"
+                  <h3 className= "text-xl font-bold text-gray-900 mb-3">{step.title}</h3>"
+                  <p className= "text-gray-600">{step.description}</p>"
                 </div>
               ))}
             </div>
@@ -530,45 +530,45 @@ const SmartContractAudit: React.FC: ()  => {,,,
         </section>
 
         {/* Features */}
-        <section className: "py-20">";,"
-          <div className: "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
-            <div className: "text-center mb-16">";,"
-              <h2 className: "text-4xl font-bold text-gray-900 mb-4">";,"
-        <section className: "py-20">","
-          <div className: "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
-            <div className: "text-center mb-16">","
-              <h2 className: "text-4xl font-bold text-gray-900 mb-4">",";,"
+        <section className= "py-20">
+          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
+            <div className= "text-center mb-16">
+              <h2 className= "text-4xl font-bold text-gray-900 mb-4">
+        <section className= "py-20">","
+          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
+            <div className= "text-center mb-16">","
+              <h2 className= "text-4xl font-bold text-gray-900 mb-4"">"
   Advanced Security Analysis
               </h2>
-              <p className: "text-xl text-gray-600 max-w-3xl mx-auto">",";,"
+              <p className= "text-xl text-gray-600 max-w-3xl mx-auto"">"
   Comprehensive security testing using cutting-edge tools and expert manual review.
               </p>
             </div>
 
-            <div className: "grid md: grid-cols-2 lg:grid-cols-3 gap-8">","
+            <div className= "grid md: grid-cols-2 lg:grid-cols-3 gap-8">","
               {features.map((feature, index) => {
                 const Icon: feature.icon;,,,
   return (
-                  <div key: {index} className: "bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">","
-                    <div className: "inline-flex items-center justify-center w-12 h-12 bg-red-100 rounded-lg mb-4">";,"
-                      <Icon className: "w-6 h-6 text-red-600/>";,"
+                  <div key: {index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">","
+                    <div className= "inline-flex items-center justify-center w-12 h-12 bg-red-100 rounded-lg mb-4">
+                      <Icon className= "w-6 h-6 text-red-600/>";,"
                     </div>
-                    <h3 className: "text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>";"
-                    <p className: "text-gray-600 mb-4">{feature.description}</p>";"
-                    <div className: "inline-flex items-center text-green-600 font-semibold text-sm">";,"
-                      <CheckCircle className: "w-4 h-4 mr-1/>";,"
-            <div className: "grid md: grid-cols-2 lg:grid-cols-3 gap-8">","
+                    <h3 className= "text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>";"
+                    <p className= "text-gray-600 mb-4">{feature.description}</p>";"
+                    <div className= "inline-flex items-center text-green-600 font-semibold text-sm">
+                      <CheckCircle className= "w-4 h-4 mr-1/>";,"
+            <div className= "grid md: grid-cols-2 lg:grid-cols-3 gap-8">","
               {features.map((feature, index) => {
                 const Icon: feature.icon;,,,
   return (
-                  <div key: {index} className: "bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">","
-                    <div className: "inline-flex items-center justify-center w-12 h-12 bg-red-100 rounded-lg mb-4">","
-                      <Icon className: "w-6 h-6 text-red-600" />","
+                  <div key: {index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">","
+                    <div className= "inline-flex items-center justify-center w-12 h-12 bg-red-100 rounded-lg mb-4">","
+                      <Icon className= "w-6 h-6 text-red-600" />","
                     </div>
-                    <h3 className: "text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>"
-                    <p className: "text-gray-600 mb-4">{feature.description}</p>"
-                    <div className: "inline-flex items-center text-green-600 font-semibold text-sm">","
-                      <CheckCircle className: "w-4 h-4 mr-1" />","
+                    <h3 className= "text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>"
+                    <p className= "text-gray-600 mb-4">{feature.description}</p>"
+                    <div className= "inline-flex items-center text-green-600 font-semibold text-sm">","
+                      <CheckCircle className= "w-4 h-4 mr-1" />","
                       {feature.benefit}
                     </div>
                   </div>
@@ -579,53 +579,53 @@ const SmartContractAudit: React.FC: ()  => {,,,
         </section>
 
         {/* Pricing */}
-        <section id: "pricing" className="py-20 bg-gray-50">";,"
-          <div className: "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
-            <div className: "text-center mb-16">";,"
-              <h2 className: "text-4xl font-bold text-gray-900 mb-4">";,"
+        <section id: "pricing" className="py-20 bg-gray-50">
+          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
+            <div className= "text-center mb-16">
+              <h2 className= "text-4xl font-bold text-gray-900 mb-4">
         <section id: "pricing" className ="py-20 bg-gray-50">","
-          <div className: "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
-            <div className: "text-center mb-16">","
-              <h2 className: "text-4xl font-bold text-gray-900 mb-4">",";,"
+          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
+            <div className= "text-center mb-16">","
+              <h2 className= "text-4xl font-bold text-gray-900 mb-4"">"
   Transparent Pricing for Every Project Size
               </h2>
-              <p className: "text-xl text-gray-600 max-w-3xl mx-auto">",";,"
+              <p className= "text-xl text-gray-600 max-w-3xl mx-auto"">"
   Choose the audit package that fits your smart contract complexity and security requirements.
               </p>
             </div>
 
-            <div className: "grid md: grid-cols-3 gap-8">","
-            <div className: "grid md: grid-cols-3 gap-8">","
+            <div className= "grid md: grid-cols-3 gap-8">","
+            <div className= "grid md: grid-cols-3 gap-8">","
               {pricing.map((plan, index) => (
-                <div key: {index} className: {`bg-white rounded-2xl shadow-lg p-8 ${plan.popular ? 'ring-2 ring-red-500 relative' : ''}`}>`
+                <div key: {index} className= {`bg-white rounded-2xl shadow-lg p-8 ${plan.popular ? 'ring-2 ring-red-500 relative' : ''}`}>`
                   {plan.popular && (
-                    <div className: "absolute -top-4 left-1/2 transform -translate-x-1/2">","
-                      <span className: "bg-red-500 text-white px-4 py-1 rounded-full text-sm font-semibold">",";,"
+                    <div className= "absolute -top-4 left-1/2 transform -translate-x-1/2">","
+                      <span className= "bg-red-500 text-white px-4 py-1 rounded-full text-sm font-semibold"">"
   Most Popular
                       </span>
                     </div>
                   )}
-                  <div className: "text-center mb-8">","
-                    <h3 className: "text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>"
-                    <div className: "flex items-center justify-center mb-2">","
-                      <span className: "text-4xl font-bold text-gray-900">{plan.price}</span>"
-                      <span className: "text-gray-600 ml-1">/{plan.period}</span>"
+                  <div className= "text-center mb-8">","
+                    <h3 className= "text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>"
+                    <div className= "flex items-center justify-center mb-2">","
+                      <span className= "text-4xl font-bold text-gray-900">{plan.price}</span>"
+                      <span className= "text-gray-600 ml-1">/{plan.period}</span>"
                     </div>
-                    <p className: "text-gray-600">{plan.description}</p>"
+                    <p className= "text-gray-600">{plan.description}</p>"
                   </div>
-                  <ul className: "space-y-4 mb-8">","
+                  <ul className= "space-y-4 mb-8">","
                     {plan.features.map((feature, featureIndex) => (
-                      <li key: {featureIndex} className: "flex items-center">";,"
-                        <CheckCircle className: "w-5 h-5 text-green-500 mr-3 flex-shrink-0/>";,"
-                        <span className: "text-gray-700">{feature}</span>";"
-                      <li key: {featureIndex} className: "flex items-center">","
-                        <CheckCircle className: "w-5 h-5 text-green-500 mr-3 flex-shrink-0" />","
-                        <span className: "text-gray-700">{feature}</span>"
+                      <li key: {featureIndex} className= "flex items-center">
+                        <CheckCircle className= "w-5 h-5 text-green-500 mr-3 flex-shrink-0/>";,"
+                        <span className= "text-gray-700">{feature}</span>";"
+                      <li key: {featureIndex} className= "flex items-center">","
+                        <CheckCircle className= "w-5 h-5 text-green-500 mr-3 flex-shrink-0" />","
+                        <span className= "text-gray-700">{feature}</span>"
                       </li>
                     ))}
                   </ul>
                   <a href: "/contact",";,"
-  className: {,,
+  className= {,,
 `w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${`
 plan.popular
 ? 'bg-red-600 text-white hover: bg-red-700',';,
@@ -639,52 +639,52 @@ plan.popular
               ))}
             </div>
 
-            <div className: "text-center mt-12">","
-              <p className: "text-gray-600 mb-4">Need a custom audit solution?</p>","
+            <div className= "text-center mt-12">","
+              <p className= "text-gray-600 mb-4">Need a custom audit solution?</p>","
               <a href: "/contact",";,"
-  className: "inline-flex items-center text-red-600 hover: text-red-700 font-semibold","
+  className= "inline-flex items-center text-red-600 hover: text-red-700 font-semibold","
               >
                 Contact our Security Team
-                <ArrowRight className: "w-4 h-4 ml-1/>";,"
-                <ArrowRight className: "w-4 h-4 ml-1" />","
+                <ArrowRight className= "w-4 h-4 ml-1/>";,"
+                <ArrowRight className= "w-4 h-4 ml-1" />","
               </a>
             </div>
           </div>
         </section>
 
         {/* Testimonials */}
-        <section className: "py-20">";,"
-          <div className: "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
-            <div className: "text-center mb-16">";,"
-              <h2 className: "text-4xl font-bold text-gray-900 mb-4">";,"
-        <section className: "py-20">","
-          <div className: "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
-            <div className: "text-center mb-16">","
-              <h2 className: "text-4xl font-bold text-gray-900 mb-4">",";,"
+        <section className= "py-20">
+          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
+            <div className= "text-center mb-16">
+              <h2 className= "text-4xl font-bold text-gray-900 mb-4">
+        <section className= "py-20">","
+          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
+            <div className= "text-center mb-16">","
+              <h2 className= "text-4xl font-bold text-gray-900 mb-4"">"
   What Our Clients Say
               </h2>
-              <p className: "text-xl text-gray-600 max-w-3xl mx-auto">",";,"
+              <p className= "text-xl text-gray-600 max-w-3xl mx-auto"">"
   Join dozens of successful blockchain projects that trust our security expertise.
               </p>
             </div>
 
-            <div className: "grid md: grid-cols-3 gap-8">","
-            <div className: "grid md: grid-cols-3 gap-8">","
+            <div className= "grid md: grid-cols-3 gap-8">","
+            <div className= "grid md: grid-cols-3 gap-8">","
               {testimonials.map((testimonial, index) => (
-                <div key: {index} className: "bg-white p-8 rounded-xl shadow-lg border border-gray-200">","
-                  <div className: "flex items-center mb-4">","
+                <div key: {index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200">","
+                  <div className= "flex items-center mb-4">","
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key: {i} className: "w-5 h-5 text-yellow-400 fill-current/>";,"
-                      <Star key: {i} className: "w-5 h-5 text-yellow-400 fill-current" />","
+                      <Star key: {i} className= "w-5 h-5 text-yellow-400 fill-current/>";,"
+                      <Star key: {i} className= "w-5 h-5 text-yellow-400 fill-current" />","
                     ))}
                   </div>
-                  <blockquote className: "text-gray-700 mb-6 italic">","
+                  <blockquote className= "text-gray-700 mb-6 italic">","
                     "{testimonial.content}"
                   </blockquote>
                   <div >
-                    <div className: "font-semibold text-gray-900">{testimonial.name}</div>"
-                    <div className: "text-gray-600 text-sm">{testimonial.role}</div>"
-                    <div className: "text-red-600 text-sm font-medium">{testimonial.company}</div>"
+                    <div className= "font-semibold text-gray-900">{testimonial.name}</div>"
+                    <div className= "text-gray-600 text-sm">{testimonial.role}</div>"
+                    <div className= "text-red-600 text-sm font-medium">{testimonial.company}</div>"
                   </div>
                 </div>
               ))}
@@ -693,32 +693,32 @@ plan.popular
         </section>
 
         {/* CTA Section */}
-        <section className: "py-20 bg-gradient-to-br from-red-900 via-orange-800 to-yellow-900 text-white">";,"
-          <div className: "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">","
-            <h2 className: "text-4xl font-bold mb-6">";,"
-        <section className: "py-20 bg-gradient-to-br from-red-900 via-orange-800 to-yellow-900 text-white">","
-          <div className: "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">","
-            <h2 className: "text-4xl font-bold mb-6">",";,"
+        <section className= "py-20 bg-gradient-to-br from-red-900 via-orange-800 to-yellow-900 text-white">
+          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">","
+            <h2 className= "text-4xl font-bold mb-6">
+        <section className= "py-20 bg-gradient-to-br from-red-900 via-orange-800 to-yellow-900 text-white">","
+          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">","
+            <h2 className= "text-4xl font-bold mb-6"">"
   Ready to Secure Your Smart Contracts?
             </h2>
-            <p className: "text-xl text-red-100 max-w-3xl mx-auto mb-8">",";,"
+            <p className= "text-xl text-red-100 max-w-3xl mx-auto mb-8"">"
   Protect your blockchain project with professional smart contract auditing from certified security experts.
             </p>
-            <div className: "flex flex-col sm: flex-row gap-4 justify-center">","
-            <div className: "flex flex-col sm: flex-row gap-4 justify-center">","
+            <div className= "flex flex-col sm: flex-row gap-4 justify-center">","
+            <div className= "flex flex-col sm: flex-row gap-4 justify-center">","
               <a href: "/contact",";,"
-  className: "inline-flex items-center px-8 py-4 bg-red-600 hover: bg-red-700 text-white font-semibold rounded-lg transition-colors","
+  className= "inline-flex items-center px-8 py-4 bg-red-600 hover: bg-red-700 text-white font-semibold rounded-lg transition-colors","
               >
-                <Phone className: "w-5 h-5 mr-2/>";,"
-                <Phone className: "w-5 h-5 mr-2" />",";,"
+                <Phone className= "w-5 h-5 mr-2/>";,"
+                <Phone className= "w-5 h-5 mr-2" />",";,"
   Request Free Quote
               </a>
               <a href: "/case-studies",";,"
-  className: "inline-flex items-center px-8 py-4 border-2 border-white text-white hover: bg-white hover:text-red-900 font-semibold rounded-lg transition-colors","
+  className= "inline-flex items-center px-8 py-4 border-2 border-white text-white hover: bg-white hover:text-red-900 font-semibold rounded-lg transition-colors","
               >
                 View Audit Reports
-                <ArrowRight className: "w-5 h-5 ml-2/>";,"
-                <ArrowRight className: "w-5 h-5 ml-2" />","
+                <ArrowRight className= "w-5 h-5 ml-2/>";,"
+                <ArrowRight className= "w-5 h-5 ml-2" />","
               </a>
             </div>
           </div>
