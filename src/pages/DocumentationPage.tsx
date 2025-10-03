@@ -9,10 +9,10 @@ const DocumentationPage: React.FC  = () => {
       description: "Quick start guides and tutorials to help you get up and running with our solutions.","
       icon: "🚀","
       links: [,
-        { title: "Quick Start Guide", href: "/docs/quick-start" },"
-        { title: "Installation Guide", href: "/docs/installation" },"
-        { title: "First Steps Tutorial", href: "/docs/first-steps" },"
-        { title: "Basic Configuration", href: "/docs/configuration" }"
+        { title: "Quick Start Guide", href="/docs/quick-start" },"
+        { title: "Installation Guide", href="/docs/installation" },"
+        { title: "First Steps Tutorial", href="/docs/first-steps" },"
+        { title: "Basic Configuration", href="/docs/configuration" }"
       ]
     },
     {
@@ -20,10 +20,10 @@ const DocumentationPage: React.FC  = () => {
       description: "Comprehensive API reference and integration guides for developers.","
       icon: "🔌","
       links: [,
-        { title: "API Reference", href: "/docs/api-reference" },"
-        { title: "Authentication", href: "/docs/authentication" },"
-        { title: "Rate Limits", href: "/docs/rate-limits" },"
-        { title: "SDK Downloads", href: "/docs/sdk" }"
+        { title: "API Reference", href="/docs/api-reference" },"
+        { title: "Authentication", href="/docs/authentication" },"
+        { title: "Rate Limits", href="/docs/rate-limits" },"
+        { title: "SDK Downloads", href="/docs/sdk" }"
       ]
     },
     {
@@ -31,10 +31,10 @@ const DocumentationPage: React.FC  = () => {
       description: "Step-by-step guides for using our platform features and capabilities.","
       icon: "📖","
       links: [,
-        { title: "Dashboard Guide", href: "/docs/dashboard" },"
-        { title: "Analytics Setup", href: "/docs/analytics" },"
-        { title: "Automation Workflows", href: "/docs/workflows" },"
-        { title: "Integration Setup", href: "/docs/integrations" }"
+        { title: "Dashboard Guide", href="/docs/dashboard" },"
+        { title: "Analytics Setup", href="/docs/analytics" },"
+        { title: "Automation Workflows", href="/docs/workflows" },"
+        { title: "Integration Setup", href="/docs/integrations" }"
       ]
     },
     {
@@ -42,10 +42,10 @@ const DocumentationPage: React.FC  = () => {
       description: "Resources and tools for developers building with our platform.","
       icon: "👨‍💻","
       links: [,
-        { title: "Code Examples", href: "/docs/examples" },"
-        { title: "Best Practices", href: "/docs/best-practices" },"
-        { title: "Testing Guide", href: "/docs/testing" },"
-        { title: "Troubleshooting", href: "/docs/troubleshooting" }"
+        { title: "Code Examples", href="/docs/examples" },"
+        { title: "Best Practices", href="/docs/best-practices" },"
+        { title: "Testing Guide", href="/docs/testing" },"
+        { title: "Troubleshooting", href="/docs/troubleshooting" }"
       ]
     },
     {
@@ -53,10 +53,10 @@ const DocumentationPage: React.FC  = () => {
       description: "Security guidelines, compliance information, and best practices.","
       icon: "🔒","
       links: [,
-        { title: "Security Overview", href: "/docs/security" },"
-        { title: "Data Privacy", href: "/docs/privacy" },"
-        { title: "Compliance Guide", href: "/docs/compliance" },"
-        { title: "Security Best Practices", href: "/docs/security-best-practices" }"
+        { title: "Security Overview", href="/docs/security" },"
+        { title: "Data Privacy", href="/docs/privacy" },"
+        { title: "Compliance Guide", href="/docs/compliance" },"
+        { title: "Security Best Practices", href="/docs/security-best-practices" }"
       ]
     },
     {
@@ -64,10 +64,10 @@ const DocumentationPage: React.FC  = () => {
       description: "Get help, connect with the community, and find additional resources.","
       icon: "🤝","
       links: [,
-        { title: "Support Center", href: "/docs/support" },"
-        { title: "Community Forum", href: "/docs/community" },"
-        { title: "FAQ", href: "/docs/faq" },"
-        { title: "Contact Support", href: "/contact" }"
+        { title: "Support Center", href="/docs/support" },"
+        { title: "Community Forum", href="/docs/community" },"
+        { title: "FAQ", href="/docs/faq" },"
+        { title: "Contact Support", href="/contact" }"
       ]
     }
   ];
@@ -98,7 +98,7 @@ const DocumentationPage: React.FC  = () => {
                 <input
                   type="text"
                   placeholder="Search documentation..."
-                  className="w-full px-4 py-3 pl-12 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent",
+                  className="w-full px-4 py-3 pl-12 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent
                 />
                 <div className="absolute left-4 top-3.5 text-gray-400">"
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">"
@@ -124,7 +124,7 @@ const DocumentationPage: React.FC  = () => {
                       <li key={linkIndex}>
                         <Link 
                           to={link.href}
-                          className="text-blue-600 hover: text-blue-800 transition-colors text-sm",
+                          className="text-blue-600 hover: text-blue-800 transition-colors text-sm
                         >
                           {link.title} →
                         </Link>
@@ -208,7 +208,7 @@ const DocumentationPage: React.FC  = () => {
                 <p className="text-gray-600 mb-4">Get instant help from our support team</p>"
                 <Link 
                   to="/contact" 
-                  className="text-blue-600 font-semibold hover: text-blue-800 transition-colors",
+                  className="text-blue-600 font-semibold hover: text-blue-800 transition-colors
                 >
                   Start Chat →
                 </Link>
@@ -220,7 +220,7 @@ const DocumentationPage: React.FC  = () => {
                 <p className="text-gray-600 mb-4">Send us your questions and we'll respond quickly</p>';
                 <Link 
                   to="/contact" 
-                  className="text-blue-600 font-semibold hover: text-blue-800 transition-colors",
+                  className="text-blue-600 font-semibold hover: text-blue-800 transition-colors
                 >
                   Send Email →
                 </Link>
@@ -232,7 +232,7 @@ const DocumentationPage: React.FC  = () => {
                 <p className="text-gray-600 mb-4">Speak directly with our technical experts</p>"
                 <Link 
                   to="/contact" 
-                  className="text-blue-600 font-semibold hover: text-blue-800 transition-colors",
+                  className="text-blue-600 font-semibold hover: text-blue-800 transition-colors
                 >
                   Call Us →
                 </Link>
@@ -251,13 +251,13 @@ const DocumentationPage: React.FC  = () => {
             <div className="flex flex-col sm: flex-row gap-4 justify-center">"
               <Link 
                 to="/services" 
-                className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover: bg-blue-700 transition-colors",
+                className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors
               >
                 Explore Services
               </Link>
               <Link 
                 to="/contact" 
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover: bg-white hover:text-gray-800 transition-colors",
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-800 transition-colors
               >
                 Contact Support
               </Link>
