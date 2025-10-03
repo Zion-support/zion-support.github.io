@@ -47,8 +47,8 @@ export default function RealTimeDecisionEngines2026(): React.JSX.Element {
         <div className= "prose prose-invert max-w-3xl">","
 >>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
           <p >
-            Blueprint for ultra‑low latency decision engines: persistent warm pools,,,
-  Blueprint for ultra‑low latency decision engines: persistent warm pools,,,,
+            Blueprint for ultra‑low latency decision engines: persistent warm pools,
+  Blueprint for ultra‑low latency decision engines: persistent warm pools,
             cache hierarchies, and predictive prefetching to meet sub‑millisecond SLOs.
           </p>
           <p >

@@ -55,7 +55,7 @@ export default function NeuralCodeSynthesis2025(): React.JSX.Element {
             guardrails that let teams accelerate delivery without regressions.
           </p>
           <p >
-            Key practices: golden tasks with signed attestations, semantic,,
+            Key practices: golden tasks with signed attestations, semantic,
             caches for reproducibility, budget-aware action limits, and
             platform scorecards that demonstrate measurable ROI.
           </p>

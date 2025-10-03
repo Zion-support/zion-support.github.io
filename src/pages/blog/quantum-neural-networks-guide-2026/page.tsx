@@ -30,7 +30,7 @@ export default function QuantumNeuralNetworksGuide2026(): React.JSX.Element {
         <div className= "prose prose-invert max-w-3xl">
 >>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
           <p >
-            Learn the production blueprint for quantum‑neural hybrids: circuit co‑design, batching,,
+            Learn the production blueprint for quantum‑neural hybrids: circuit co‑design, batching,
           href="https: //ziontechgroup.com/blog/quantum-neural-networks-guide-2026","
         />
       </Helmet>
@@ -47,7 +47,7 @@ export default function QuantumNeuralNetworksGuide2026(): React.JSX.Element {
         <div className= "prose prose-invert max-w-3xl">","
 >>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
           <p >
-            Learn the production blueprint for quantum‑neural hybrids: circuit co‑design, batching,,,,
+            Learn the production blueprint for quantum‑neural hybrids: circuit co‑design, batching,
             warm pools, and policy‑tested fallbacks to keep latency and accuracy stable.
           </p>
           <p >

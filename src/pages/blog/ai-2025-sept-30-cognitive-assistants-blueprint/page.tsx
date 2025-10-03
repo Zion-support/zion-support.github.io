@@ -57,7 +57,7 @@ export default function CognitiveAssistantsBlueprint2025(): React.JSX.Element {
             <li >Operationalize approvals and sandboxed tools</li>
           </ul>
           <p >
-            Start with a thin slice: define golden tasks, attach budgets to critical flows, and instrument traces. Use,,
+            Start with a thin slice: define golden tasks, attach budgets to critical flows, and instrument traces. Use,
             scorecards executives and engineers trust.
           </p>
         </div>

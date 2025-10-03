@@ -8,7 +8,7 @@ const DocumentationPage: React.FC  = () => {
       title: "Getting Started","
       description: "Quick start guides and tutorials to help you get up and running with our solutions.","
       icon: "🚀","
-      links: [,
+      links: [
         { title: "Quick Start Guide", href="/docs/quick-start" },"
         { title: "Installation Guide", href="/docs/installation" },"
         { title: "First Steps Tutorial", href="/docs/first-steps" },"
@@ -19,7 +19,7 @@ const DocumentationPage: React.FC  = () => {
       title: "API Documentation","
       description: "Comprehensive API reference and integration guides for developers.","
       icon: "🔌","
-      links: [,
+      links: [
         { title: "API Reference", href="/docs/api-reference" },"
         { title: "Authentication", href="/docs/authentication" },"
         { title: "Rate Limits", href="/docs/rate-limits" },"
@@ -30,7 +30,7 @@ const DocumentationPage: React.FC  = () => {
       title: "User Guides","
       description: "Step-by-step guides for using our platform features and capabilities.","
       icon: "📖","
-      links: [,
+      links: [
         { title: "Dashboard Guide", href="/docs/dashboard" },"
         { title: "Analytics Setup", href="/docs/analytics" },"
         { title: "Automation Workflows", href="/docs/workflows" },"
@@ -41,7 +41,7 @@ const DocumentationPage: React.FC  = () => {
       title: "Developer Resources","
       description: "Resources and tools for developers building with our platform.","
       icon: "👨‍💻","
-      links: [,
+      links: [
         { title: "Code Examples", href="/docs/examples" },"
         { title: "Best Practices", href="/docs/best-practices" },"
         { title: "Testing Guide", href="/docs/testing" },"
@@ -52,7 +52,7 @@ const DocumentationPage: React.FC  = () => {
       title: "Security & Compliance","
       description: "Security guidelines, compliance information, and best practices.","
       icon: "🔒","
-      links: [,
+      links: [
         { title: "Security Overview", href="/docs/security" },"
         { title: "Data Privacy", href="/docs/privacy" },"
         { title: "Compliance Guide", href="/docs/compliance" },"
@@ -63,7 +63,7 @@ const DocumentationPage: React.FC  = () => {
       title: "Support & Community","
       description: "Get help, connect with the community, and find additional resources.","
       icon: "🤝","
-      links: [,
+      links: [
         { title: "Support Center", href="/docs/support" },"
         { title: "Community Forum", href="/docs/community" },"
         { title: "FAQ", href="/docs/faq" },"
