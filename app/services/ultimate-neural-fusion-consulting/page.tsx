@@ -306,14 +306,14 @@ export default function UltimateNeuralFusionConsulting() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">"
                 <Link 
-                  href="/contact" "
-                  className="bg-gradient-to-r from-purple-500 to-cyan-500 text-white py-4 px-8 rounded-xl font-bold hover:from-purple-600 hover:to-cyan-600 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-purple-500/25""
+                  href="/[^"]*"
+                  className="bg-gradient-to-r from-purple-500 to-cyan-500 text-white py-4 px-8 rounded-xl font-bold hover:from-purple-600 hover:to-cyan-600 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-purple-500/25"
                 >
                   Start Your Transformation
                 </Link>
                 <Link 
-                  href="/case-studies/ai-2026-ultimate-neural-fusion-100-billion-success" "
-                  className="bg-gray-700 text-white py-4 px-8 rounded-xl font-bold hover:bg-gray-600 transition-all duration-300 border border-gray-600""
+                  href="/[^"]*"
+                  className="bg-gray-700 text-white py-4 px-8 rounded-xl font-bold hover:bg-gray-600 transition-all duration-300 border border-gray-600"
                 >
                   View Success Stories
                 </Link>

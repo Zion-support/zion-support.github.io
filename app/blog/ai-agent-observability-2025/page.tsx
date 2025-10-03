@@ -14,13 +14,13 @@ export default function AIAgentObservability2025Page() {
       <Head>
         <title>AI Agent Observability 2025: Metrics, Traces, and Safety Signals | Zion Tech Group</title>
         <meta
-          name="description""
-          content="A practical guide to AI agent observability in 2025: telemetry for prompts, tools, episodes, safety budgets, reliability SLOs, and incident response.""
+          name="description"
+          content="A practical guide to AI agent observability in 2025: telemetry for prompts, tools, episodes, safety budgets, reliability SLOs, and incident response."
         />
         <meta property="og:title" content="AI Agent Observability 2025: Metrics, Traces, and Safety Signals" />"
         <meta
-          property="og:description""
-          content="Instrumentation patterns for prompts, tools, episodes, safety budgets, reliability SLOs, and incident response.""
+          property="og:description"
+          content="Instrumentation patterns for prompts, tools, episodes, safety budgets, reliability SLOs, and incident response."
         />
         <meta name="twitter:card" content="summary_large_image" />"
         <link rel="canonical" href="https://ziontechgroup.com/blog/ai-agent-observability-2025" />"

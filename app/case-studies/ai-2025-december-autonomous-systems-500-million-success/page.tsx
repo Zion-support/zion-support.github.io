@@ -232,7 +232,7 @@ export default function December2025AutonomousSystems500MSuccess() {
             <blockquote className="text-xl text-gray-300 mb-6 italic">"
               "The December 2025 autonomous systems implementation has transformed our entire enterprise. "
               We've achieved $500M in ROI while achieving 99.99% automation across all operations. 
-              This is the future of business operations.""
+              This is the future of business operations."
             </blockquote>
             <div className="flex items-center gap-4">"
               <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center">"
@@ -285,8 +285,8 @@ export default function December2025AutonomousSystems500MSuccess() {
                 and generate unprecedented ROI.
               </p>
               <Link 
-                href="/contact" "
-                className="inline-block bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50""
+                href="/[^"]*"
+                className="inline-block bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50"
               >
                 Start Your Transformation
               </Link>
@@ -296,15 +296,15 @@ export default function December2025AutonomousSystems500MSuccess() {
               <h3 className="text-xl font-bold text-white mb-4">Related Resources</h3>"
               <div className="space-y-3">"
                 <Link 
-                  href="/blog/ai-2025-december-advanced-autonomous-systems" "
-                  className="block p-4 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-lg border border-blue-500/30 hover:border-blue-400/50 transition-colors""
+                  href="/[^"]*"
+                  className="block p-4 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-lg border border-blue-500/30 hover:border-blue-400/50 transition-colors"
                 >
                   <div className="font-semibold text-blue-400">December 2025 Autonomous Systems</div>"
                   <div className="text-sm text-gray-300">Complete technical overview</div>"
                 </Link>
                 <Link 
-                  href="/blog/ai-2025-december-quantum-computing-breakthrough" "
-                  className="block p-4 bg-gradient-to-r from-purple-500/20 to-indigo-500/20 rounded-lg border border-purple-500/30 hover:border-purple-400/50 transition-colors""
+                  href="/[^"]*"
+                  className="block p-4 bg-gradient-to-r from-purple-500/20 to-indigo-500/20 rounded-lg border border-purple-500/30 hover:border-purple-400/50 transition-colors"
                 >
                   <div className="font-semibold text-purple-400">Quantum Computing Breakthrough</div>"
                   <div className="text-sm text-gray-300">Next-generation computing</div>"

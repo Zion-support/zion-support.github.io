@@ -354,14 +354,14 @@ export default function AI20262027RevolutionaryBreakthroughComprehensiveGuide() 
         </p>
         <div className="flex flex-wrap justify-center gap-4">"
           <Link 
-            href="/contact" "
-            className="bg-white text-orange-600 px-8 py-4 rounded-full text-lg font-bold hover:bg-gray-100 transition-colors""
+            href="/[^"]*"
+            className="bg-white text-orange-600 px-8 py-4 rounded-full text-lg font-bold hover:bg-gray-100 transition-colors"
           >
             Start Your Transformation
           </Link>
           <Link 
-            href="/case-studies" "
-            className="bg-orange-600 text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-orange-700 transition-colors border-2 border-white""
+            href="/[^"]*"
+            className="bg-orange-600 text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-orange-700 transition-colors border-2 border-white"
           >
             View Success Stories
           </Link>

@@ -65,14 +65,14 @@ export default function Fortune500AI2027TranscendentIntelligenceInfiniteSuccess(
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <a 
-                href="/contact" "
-                className="bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1""
+                href="/[^"]*"
+                className="bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
               >
                 Achieve Infinite Success
               </a>
               <a 
-                href="/services" "
-                className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300""
+                href="/[^"]*"
+                className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
               >
                 Explore Transcendent Services
               </a>
@@ -314,7 +314,7 @@ export default function Fortune500AI2027TranscendentIntelligenceInfiniteSuccess(
             </div>
             
             <blockquote className="text-3xl md:text-4xl font-bold text-white mb-8 leading-relaxed">"
-              "Transcendent Intelligence has revolutionized our entire organization. We've achieved infinite value creation that transcends traditional business limitations. The universal consciousness integration has transformed how we operate across all dimensions of reality.""
+              "Transcendent Intelligence has revolutionized our entire organization. We've achieved infinite value creation that transcends traditional business limitations. The universal consciousness integration has transformed how we operate across all dimensions of reality."
             </blockquote>
             
             <div className="flex items-center justify-center gap-4">"
@@ -338,14 +338,14 @@ export default function Fortune500AI2027TranscendentIntelligenceInfiniteSuccess(
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">"
             <a 
-              href="/contact" "
-              className="bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50""
+              href="/[^"]*"
+              className="bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50"
             >
               Start Your Transcendent Journey
             </a>
             <a 
-              href="/services" "
-              className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300""
+              href="/[^"]*"
+              className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               Explore Transcendent Solutions
             </a>

@@ -25,7 +25,7 @@ export default function AIDevOpsAutomationRevolution2025Page() {
                 </p>
               </div>
 
-  Unified observability platform powered by AI that correlates data across logs, metrics, and traces to provide instant root cause analysis. Natural language interface lets you ask questions like "Why was API latency high at 3PM?" and get immediate, actionable insights with remediation recommendations.""
+  Unified observability platform powered by AI that correlates data across logs, metrics, and traces to provide instant root cause analysis. Natural language interface lets you ask questions like "Why was API latency high at 3PM?" and get immediate, actionable insights with remediation recommendations."
                 </p>
               </div>
             </div>

@@ -355,14 +355,14 @@ export default function Fortune500AI2026TransformationPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">"
             <a 
-              href="/contact" "
-              className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50""
+              href="/[^"]*"
+              className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50"
             >
               Schedule Transformation Consultation
             </a>
             <a 
-              href="/case-studies" "
-              className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300""
+              href="/[^"]*"
+              className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               View More Success Stories
             </a>

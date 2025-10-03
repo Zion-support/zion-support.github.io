@@ -213,14 +213,14 @@ export default function AIEnterpriseTransformationUltimateGuide2025() {
                   Get a personalized AI transformation strategy for your enterprise.
                 </p>
                 <Link 
-                  href="/services" "
-                  className="block bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold text-center hover:bg-gray-100 transition-colors mb-4""
+                  href="/[^"]*"
+                  className="block bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold text-center hover:bg-gray-100 transition-colors mb-4"
                 >
                   Get Free Consultation
                 </Link>
                 <Link 
-                  href="/case-studies" "
-                  className="block border-2 border-white/30 text-white px-6 py-3 rounded-lg font-semibold text-center hover:bg-white/10 transition-colors""
+                  href="/[^"]*"
+                  className="block border-2 border-white/30 text-white px-6 py-3 rounded-lg font-semibold text-center hover:bg-white/10 transition-colors"
                 >
                   View Case Studies
                 </Link>

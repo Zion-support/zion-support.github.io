@@ -225,14 +225,14 @@ export default function AI2027QuantumEnterpriseSolutions() {
               </p>
               <div className="space-y-4">"
                 <Link 
-                  href="/contact" "
-                  className="block w-full bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center""
+                  href="/[^"]*"
+                  className="block w-full bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center"
                 >
                   Request Consultation
                 </Link>
                 <Link 
-                  href="/case-studies/ai-2027-quantum-breakthrough-success" "
-                  className="block w-full border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors text-center""
+                  href="/[^"]*"
+                  className="block w-full border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors text-center"
                 >
                   View Success Story
                 </Link>

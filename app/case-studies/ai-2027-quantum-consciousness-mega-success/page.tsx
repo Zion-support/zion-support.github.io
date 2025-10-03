@@ -221,7 +221,7 @@ export default function AI2027QuantumConsciousnessMegaSuccess() {
           <blockquote className="text-lg text-gray-700 italic mb-4">"
             "The quantum consciousness AI implementation has been the most transformative "
             technology initiative in our company's history. We've achieved results that 
-            were previously impossible, and the competitive advantage is extraordinary.""
+            were previously impossible, and the competitive advantage is extraordinary."
           </blockquote>
           <div className="text-sm text-gray-600">"
             <strong>CEO, Fortune 500 Technology Leader</strong><br />
@@ -266,8 +266,8 @@ export default function AI2027QuantumConsciousnessMegaSuccess() {
           </div>
           <br />
           <Link 
-            href="/contact" "
-            className="inline-block bg-gradient-to-r from-green-500 to-emerald-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-green-600 hover:to-emerald-600 transition-all""
+            href="/[^"]*"
+            className="inline-block bg-gradient-to-r from-green-500 to-emerald-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-green-600 hover:to-emerald-600 transition-all"
           >
             Start Your Quantum Transformation
           </Link>
@@ -289,14 +289,14 @@ export default function AI2027QuantumConsciousnessMegaSuccess() {
           </p>
           <div className="flex gap-4">"
             <Link 
-              href="/contact" "
-              className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors""
+              href="/[^"]*"
+              className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
             >
               Get Started Today
             </Link>
             <Link 
-              href="/blog/ai-2027-quantum-consciousness-fusion" "
-              className="bg-gray-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-700 transition-colors""
+              href="/[^"]*"
+              className="bg-gray-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-700 transition-colors"
             >
               Learn More About Quantum AI
             </Link>

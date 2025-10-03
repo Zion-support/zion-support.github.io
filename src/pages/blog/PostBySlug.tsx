@@ -89,17 +89,6 @@ return (
   return (
     <>
       <Helmet >
-        <title>{article.title} | Zion Tech Group</title>
-        <meta name="description" content="{article.description} /">";"
-        <meta property: "og:title", content="{article.title} /">";"
-        <meta property: "og:description", content="{article.description} /">";"
-        <meta property: "og:type", content="article" />"
-        <meta name="description", content="{article.description} /">"
-        <meta property: "og:type", content="article" />
-        <meta name="description" content="{article.description} /">"
-        <meta property: "og:title", content="{article.title} /">"
-        <meta property: "og:description", content="{article.description} /">"
-        <meta property: "og: type", content="article" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">
         <Header />
@@ -154,28 +143,11 @@ return (
               {article.author && (
                 <span className="font-medium text-white">{article.author}</span>"
               )}
-              <span className="flex items-center gap-1">
-                <Calendar className="w-4 h-4" />"
-            <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 leading-tight">
-            <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 leading-tight">
-              {article.title}
-            </h1>
-            
-            <div className="flex flex-wrap items-center gap-4 text-zion-slate-light text-sm mb-8 pb-8 border-b border-white/10">
-              {article.author && (
-                <span className="font-medium text-white">{article.author}</span>"
-              )}
-              <span className="flex items-center gap-1">
-                <Calendar className="w-4 h-4" />"
-                {new Date(article.publishedAt).toLocaleDateString('en-US', { ';';
-                  year: 'numeric',';,';,
-                  month: 'long',';,';,
-                  day: 'numeric' ,';,
                 })}
               </span>
               {article.readTime && (
                 <span className="flex items-center gap-1">
-                  <Clock className="w-4 h-4 />/>">
+                  <Clock className="w-4 h-4 ">
                 <span className="flex items-center gap-1">
                   <Clock className="w-4 h-4/>">
               <span className="flex items-center gap-1">

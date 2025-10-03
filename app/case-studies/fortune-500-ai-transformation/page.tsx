@@ -297,7 +297,7 @@ export default function Page() {
 						<blockquote className="text-lg text-gray-800 italic mb-4">"
 							"Zion Tech Group's AI transformation exceeded all our expectations. The $50M annual savings and 95% automation "
 							rate have fundamentally changed how we operate. We've not only reduced costs but also accelerated innovation 
-							and improved customer satisfaction. This partnership has been transformational for our entire organization.""
+							and improved customer satisfaction. This partnership has been transformational for our entire organization."
 						</blockquote>
 						<div className="flex items-center gap-4">"
 							<div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-500 rounded-full flex items-center justify-center">"
@@ -325,14 +325,14 @@ export default function Page() {
 						</p>
 						<div className="flex flex-col sm:flex-row gap-4 justify-center">"
 							<a 
-								href="/contact" "
-								className="bg-white text-green-600 font-bold py-3 px-8 rounded-xl hover:bg-gray-100 transition-colors""
+								href="/[^"]*"
+								className="bg-white text-green-600 font-bold py-3 px-8 rounded-xl hover:bg-gray-100 transition-colors"
 							>
 								Get Transformation Assessment
 							</a>
 							<a 
-								href="/services" "
-								className="border-2 border-white text-white font-bold py-3 px-8 rounded-xl hover:bg-white hover:text-green-600 transition-colors""
+								href="/[^"]*"
+								className="border-2 border-white text-white font-bold py-3 px-8 rounded-xl hover:bg-white hover:text-green-600 transition-colors"
 							>
 								Explore AI Services
 							</a>

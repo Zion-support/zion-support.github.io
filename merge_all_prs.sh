@@ -1,91 +1,125 @@
 #!/bin/bash
 
-# Script to merge all open PRs into main branch
+# Comprehensive PR merge script
 set -e
 
-echo "🚀 Starting PR merge process..."
+echo "🚀 Starting comprehensive PR merge process..."
 
-# Get all cursor branches
-CURSOR_BRANCHES=$(git branch -r | grep "origin/cursor/" | sed 's/origin\///')
-
-# Counter for tracking progress
-count=0
-total=$(echo "$CURSOR_BRANCHES" | wc -l)
-
-echo "📊 Found $total cursor branches to process"
-
-# Process each branch
-for branch in $CURSOR_BRANCHES; do
-    count=$((count + 1))
-    echo ""
-    echo "🔄 Processing branch $count/$total: $branch"
+# Function to merge a branch with conflict resolution
+merge_branch() {
+    local branch=$1
+    echo "📦 Attempting to merge branch: $branch"
     
-    # Checkout the branch
-    if git checkout "$branch" 2>/dev/null; then
-        echo "✅ Checked out $branch"
+    # Fetch the branch
+    git fetch origin "$branch" || { echo "❌ Failed to fetch $branch"; return 1; }
+    
+    # Try to merge
+    if git merge "origin/$branch" --no-ff -m "Merge $branch into main" 2>/dev/null; then
+        echo "✅ Successfully merged $branch"
+        return 0
+    else
+        echo "⚠️  Merge conflict in $branch, attempting to resolve..."
         
-        # Pull latest changes
-        if git pull origin "$branch" 2>/dev/null; then
-            echo "✅ Pulled latest changes for $branch"
+        # List files with conflicts
+        conflict_files=$(git diff --name-only --diff-filter=U 2>/dev/null || echo "")
+        
+        if [ -n "$conflict_files" ]; then
+            echo "🔧 Resolving conflicts in: $conflict_files"
             
-            # Switch back to main
-            git checkout main
-            
-            # Try to merge
-            if git merge "$branch" --no-ff -m "Merge $branch into main" 2>/dev/null; then
-                echo "✅ Successfully merged $branch into main"
-            else
-                echo "⚠️  Merge conflict in $branch - attempting to resolve..."
+            # For each conflicted file, try to resolve automatically
+            for file in $conflict_files; do
+                echo "  📝 Processing: $file"
                 
-                # Check for conflicts
-                if git status --porcelain | grep -q "^UU\|^AA\|^DD"; then
-                    echo "🔧 Resolving conflicts in $branch..."
-                    
-                    # Auto-resolve conflicts by preferring the incoming changes
-                    git status --porcelain | grep "^UU\|^AA\|^DD" | cut -c4- | while read file; do
-                        if [ -f "$file" ]; then
-                            echo "   Resolving conflict in $file"
-                            # Use incoming changes (from the branch)
-                            git checkout --theirs "$file" 2>/dev/null || true
-                            git add "$file" 2>/dev/null || true
+                # Check if file exists
+                if [ -f "$file" ]; then
+                    # Try to resolve common conflicts
+                    if grep -q "<<<<<<< HEAD" "$file"; then
+                        echo "    🔄 Resolving merge conflicts in $file"
+                        
+                        # For vite.config.ts - keep the simpler version
+                        if [ "$file" = "vite.config.ts" ]; then
+                            git checkout --theirs "$file" 2>/dev/null || git checkout --ours "$file" 2>/dev/null || true
                         fi
-                    done
-                    
-                    # Complete the merge
-                    if git commit --no-edit 2>/dev/null; then
-                        echo "✅ Resolved conflicts and merged $branch"
-                    else
-                        echo "❌ Failed to resolve conflicts for $branch - skipping"
-                        git merge --abort 2>/dev/null || true
+                        
+                        # For other files, try to resolve by keeping the incoming version
+                        git checkout --theirs "$file" 2>/dev/null || git checkout --ours "$file" 2>/dev/null || true
+                        
+                        # Remove conflict markers
+                        sed -i '/<<<<<<< HEAD/,/>>>>>>> /d' "$file" 2>/dev/null || true
+                        sed -i '/=======/d' "$file" 2>/dev/null || true
+                        
+                        # Stage the resolved file
+                        git add "$file" 2>/dev/null || true
                     fi
-                else
-                    echo "❌ Merge failed for $branch - skipping"
-                    git merge --abort 2>/dev/null || true
                 fi
+            done
+            
+            # Try to commit the merge
+            if git commit --no-edit 2>/dev/null; then
+                echo "✅ Successfully resolved conflicts and merged $branch"
+                return 0
+            else
+                echo "❌ Failed to resolve conflicts for $branch, aborting merge"
+                git merge --abort 2>/dev/null || true
+                return 1
             fi
         else
-            echo "❌ Failed to pull $branch - skipping"
+            echo "❌ No conflict files found, aborting merge"
+            git merge --abort 2>/dev/null || true
+            return 1
         fi
+    fi
+}
+
+# Get list of recent cursor branches
+echo "📋 Getting list of cursor branches..."
+branches=$(git branch -r | grep "cursor/fix-errors-and-merge-to-main" | sort -V | tail -20)
+
+# Counter for tracking progress
+total=$(echo "$branches" | wc -l)
+current=0
+successful=0
+failed=0
+
+echo "📊 Found $total branches to process"
+
+# Process each branch
+for branch in $branches; do
+    current=$((current + 1))
+    echo ""
+    echo "🔄 [$current/$total] Processing: $branch"
+    
+    # Clean branch name (remove origin/ prefix)
+    clean_branch=${branch#origin/}
+    
+    if merge_branch "$clean_branch"; then
+        successful=$((successful + 1))
+        echo "✅ Branch $clean_branch merged successfully"
     else
-        echo "❌ Failed to checkout $branch - skipping"
+        failed=$((failed + 1))
+        echo "❌ Failed to merge $clean_branch"
     fi
     
-    # Progress indicator
-    echo "📈 Progress: $count/$total branches processed"
+    # Pause briefly to avoid overwhelming the system
+    sleep 1
 done
 
 echo ""
-echo "🎉 PR merge process completed!"
-echo "📊 Processed $count branches"
+echo "📊 Merge Summary:"
+echo "  ✅ Successful: $successful"
+echo "  ❌ Failed: $failed"
+echo "  📦 Total: $total"
 
-# Push the merged changes
-echo "🚀 Pushing merged changes to origin/main..."
+# Push all changes to main
+echo ""
+echo "🚀 Pushing all changes to main..."
 if git push origin main; then
-    echo "✅ Successfully pushed all merged changes to origin/main"
+    echo "✅ Successfully pushed all changes to main"
 else
-    echo "❌ Failed to push changes to origin/main"
+    echo "❌ Failed to push to main"
     exit 1
 fi
 
 echo ""
-echo "✨ All done! All open PRs have been merged into main branch."
+echo "🎉 Comprehensive PR merge process completed!"
+echo "📊 Final stats: $successful successful merges, $failed failures"

@@ -305,7 +305,7 @@ export default function Fortune500AIBreakthroughSuccess() {
             <blockquote className="text-xl text-gray-300 italic mb-6">"
               "The AI transformation implemented by Zion Tech Group has revolutionized our operations. "
               We've achieved efficiency gains we never thought possible and established a competitive 
-              advantage that will sustain us for years to come. This is the future of manufacturing.""
+              advantage that will sustain us for years to come. This is the future of manufacturing."
             </blockquote>
             <div className="flex items-center space-x-4">"
               <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-xl">"
@@ -329,14 +329,14 @@ export default function Fortune500AIBreakthroughSuccess() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">"
               <a 
-                href="/contact" "
-                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors""
+                href="/[^"]*"
+                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
                 Start Your Transformation
               </a>
               <a 
-                href="/services" "
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors""
+                href="/[^"]*"
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
               >
                 Explore Our Solutions
               </a>

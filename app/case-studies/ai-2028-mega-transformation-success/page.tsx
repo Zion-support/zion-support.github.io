@@ -290,7 +290,7 @@ export default function AI2028MegaTransformationSuccess() {
             "The AI 2028 transformation with Zion Tech Group has been nothing short of revolutionary. "
             We've achieved results that exceeded our wildest expectations - $200M in ROI, 99.9% automation, 
             and a complete transformation of our business model. This partnership has positioned us as 
-            the industry leader and set us up for sustained growth for decades to come.""
+            the industry leader and set us up for sustained growth for decades to come."
           </blockquote>
           <div className="flex items-center gap-4">"
             <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-semibold">"
@@ -319,14 +319,14 @@ export default function AI2028MegaTransformationSuccess() {
           </p>
           <div className="flex gap-4 justify-center">"
             <Link 
-              href="/contact" "
-              className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors""
+              href="/[^"]*"
+              className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Get Your Transformation Started
             </Link>
             <Link 
-              href="/services/ai-autonomous-operations-2026" "
-              className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors""
+              href="/[^"]*"
+              className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
             >
               Explore Our Services
             </Link>

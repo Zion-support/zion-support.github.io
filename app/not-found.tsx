@@ -57,9 +57,9 @@ export default function NotFound() {
         <div className="mb-12 max-w-2xl mx-auto">"
           <div className="relative">"
             <input
-              type="text""
-              placeholder="Search for AI services, articles, or case studies...""
-              className="w-full px-6 py-4 rounded-lg border-2 border-gray-200 focus:border-blue-500 focus:outline-none text-gray-900 text-lg""
+              type="text"
+              placeholder="Search for AI services, articles, or case studies..."
+              className="w-full px-6 py-4 rounded-lg border-2 border-gray-200 focus:border-blue-500 focus:outline-none text-gray-900 text-lg"
               onKeyPress={(e) => {
                 if (e.key === 'Enter') {
                   const searchTerm = (e.target as HTMLInputElement).value;
@@ -85,7 +85,7 @@ export default function NotFound() {
               <Link
                 key={page.href}
                 href={page.href}
-                className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-200 group""
+                className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-200 group"
               >
                 <div className="text-4xl mb-4">{page.icon}</div>"
                 <h4 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">"
@@ -102,14 +102,14 @@ export default function NotFound() {
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">"
           <Link
-            href="/""
-            className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl""
+            href="/"
+            className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl"
           >
             ← Back to Home
           </Link>
           <a
-            href="tel:+13024640950""
-            className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-600 hover:text-white transition-colors""
+            href="tel:+13024640950"
+            className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-600 hover:text-white transition-colors"
           >
             Call Support: +1 302 464 0950
           </a>
@@ -125,15 +125,15 @@ export default function NotFound() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">"
             <a
-              href="mailto:kleber@ziontechgroup.com""
-              className="inline-flex items-center gap-2 text-blue-600 font-semibold hover:text-blue-700 transition-colors""
+              href="mailto:kleber@ziontechgroup.com"
+              className="inline-flex items-center gap-2 text-blue-600 font-semibold hover:text-blue-700 transition-colors"
             >
               📧 Email: kleber@ziontechgroup.com
             </a>
             <span className="hidden sm:inline text-gray-400">|</span>"
             <a
-              href="tel:+13024640950""
-              className="inline-flex items-center gap-2 text-blue-600 font-semibold hover:text-blue-700 transition-colors""
+              href="tel:+13024640950"
+              className="inline-flex items-center gap-2 text-blue-600 font-semibold hover:text-blue-700 transition-colors"
             >
               📞 Phone: +1 302 464 0950
             </a>
@@ -146,8 +146,8 @@ export default function NotFound() {
           <p className="mt-2">"
             If you believe this is an error, please{' '}
             <a
-              href="mailto:kleber@ziontechgroup.com""
-              className="text-blue-600 hover:text-blue-700 font-semibold""
+              href="mailto:kleber@ziontechgroup.com"
+              className="text-blue-600 hover:text-blue-700 font-semibold"
             >
               contact our support team
             </a>

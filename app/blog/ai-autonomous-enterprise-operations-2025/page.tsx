@@ -150,7 +150,7 @@ const AutonomousOpsFramework = {
   aiAgents: "LangChain + OpenAI GPT-4 + Custom Models"
   monitoring: "Prometheus + Grafana + Jaeger Tracing"
   governance: "Open Policy Agent (OPA) + Custom Rules"
-  dataLayer: "Apache Kafka + Apache Spark + Vector DBs""
+  dataLayer: "Apache Kafka + Apache Spark + Vector DBs"
 };
 
 // Implementation Pattern
@@ -218,14 +218,14 @@ class AutonomousAgent {
 						</p>
 						<div className="flex flex-col sm:flex-row gap-4 justify-center">"
 							<a 
-								href="/contact" "
-								className="bg-white text-blue-600 font-bold py-3 px-8 rounded-xl hover:bg-gray-100 transition-colors""
+								href="/[^"]*"
+								className="bg-white text-blue-600 font-bold py-3 px-8 rounded-xl hover:bg-gray-100 transition-colors"
 							>
 								Get Free Assessment
 							</a>
 							<a 
-								href="/case-studies" "
-								className="border-2 border-white text-white font-bold py-3 px-8 rounded-xl hover:bg-white hover:text-blue-600 transition-colors""
+								href="/[^"]*"
+								className="border-2 border-white text-white font-bold py-3 px-8 rounded-xl hover:bg-white hover:text-blue-600 transition-colors"
 							>
 								View Success Stories
 							</a>

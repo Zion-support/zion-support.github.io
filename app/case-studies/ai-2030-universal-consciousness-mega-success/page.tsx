@@ -212,7 +212,7 @@ export default function AI2030UniversalConsciousnessMegaSuccess() {
 
           <h2>Collective Testimonial</h2>
           <blockquote className="border-l-4 border-green-500 pl-6 italic text-lg">"
-            "Zion Tech Group's Universal Consciousness Platform has transformed human existence beyond imagination. The $100B annual value is remarkable, but the universal peace, prosperity, and human flourishing achieved is truly transcendent. We've eliminated all human suffering and achieved perfect human potential through this revolutionary technology.""
+            "Zion Tech Group's Universal Consciousness Platform has transformed human existence beyond imagination. The $100B annual value is remarkable, but the universal peace, prosperity, and human flourishing achieved is truly transcendent. We've eliminated all human suffering and achieved perfect human potential through this revolutionary technology."
           </blockquote>
           <p className="text-right text-gray-400 mt-4">"
             — <strong>Universal Humanity Collective Leadership</strong>

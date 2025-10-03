@@ -276,7 +276,7 @@ export default function AI2027RevolutionaryBreakthroughSuccess() {
               "The AI 2027 Revolutionary Breakthrough implementation has been transformative for our organization. "
               Achieving $1.2B ROI in just 18 months exceeded our wildest expectations. The 95% automation rate 
               has allowed us to focus on strategic initiatives while our AI systems handle day-to-day operations 
-              with unprecedented efficiency.""
+              with unprecedented efficiency."
             </blockquote>
             <div className="flex items-center gap-4">"
               <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-xl">"
@@ -327,14 +327,14 @@ export default function AI2027RevolutionaryBreakthroughSuccess() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <Link
-                href="/contact""
-                className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors""
+                href="/contact"
+                className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
                 Get Started Today
               </Link>
               <Link
-                href="/blog/ai-2027-autonomous-enterprise-revolution""
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors""
+                href="/blog/ai-2027-autonomous-enterprise-revolution"
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors"
               >
                 Learn More About AI 2027
               </Link>

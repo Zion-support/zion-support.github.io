@@ -88,7 +88,6 @@ class EnhancedAccessibility {
   private setupKeyboardNavigation(): void {
     if (!this.config.enableKeyboardNavigation) return;
 
-    document.addEventListener('keydown', (event) => {
       // Skip links and form elements
       if (event.target instanceof HTMLAnchorElement || 
           event.target instanceof HTMLInputElement ||
@@ -164,8 +163,6 @@ class EnhancedAccessibility {
   private enhanceFormLabels(): void {
     const inputs = document.querySelectorAll('input, textarea, select');
     inputs.forEach((input) => {
-      if (!input.getAttribute('aria-label') && !input.getAttribute('aria-labelledby')) {
-        const label = document.querySelector(`label[for="${input.id}"]`);"
         if (label) {
           input.setAttribute('aria-labelledby', label.id || `label-${input.id}`);
         }
@@ -174,22 +171,10 @@ class EnhancedAccessibility {
   }
 
   private addSkipLinks(): void {
-    const skipLinks = document.createElement('div');
-    skipLinks.className = 'skip-links';
-    skipLinks.innerHTML = `
-      <a href="#main-content" class="skip-link">Skip to main content</a>"
-      <a href="#navigation" class="skip-link">Skip to navigation</a>"
-    `;
     document.body.insertBefore(skipLinks, document.body.firstChild);
   }
 
   private setupHighContrast(): void {
-    if (!this.config.enableHighContrast) return;
-
-    // Check for high contrast mode preference
-    if (window.matchMedia('(prefers-contrast: high)').matches) {
-      document.body.classList.add('high-contrast');
-    }
 
     // Listen for changes in contrast preference
     window.matchMedia('(prefers-contrast: high)').addEventListener('change', (e) => {
@@ -205,12 +190,6 @@ class EnhancedAccessibility {
     if (!this.config.enableFocusManagement) return;
 
     // Add focus indicators
-    document.addEventListener('focusin', (event) => {
-      (event.target as HTMLElement).classList.add('focus-visible');
-    });
-
-    document.addEventListener('focusout', (event) => {
-      (event.target as HTMLElement).classList.remove('focus-visible');
     });
   }
 
@@ -254,12 +233,6 @@ class EnhancedAccessibility {
   }
 
   private setupMotionReduction(): void {
-    if (!this.config.enableMotionReduction) return;
-
-    // Check for reduced motion preference
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      document.body.classList.add('reduced-motion');
-    }
 
     // Listen for changes in motion preference
     window.matchMedia('(prefers-reduced-motion: reduce)').addEventListener('change', (e) => {
@@ -275,9 +248,6 @@ class EnhancedAccessibility {
     if (!this.config.enableVoiceControl) return;
 
     // Add voice control support
-    document.addEventListener('keydown', (event) => {
-      if (event.ctrlKey && event.key === 'v') {
-        this.activateVoiceControl();
       }
     });
   }
@@ -299,14 +269,6 @@ class EnhancedAccessibility {
   }
 
   private getFocusableElements(): HTMLElement[] {
-    const focusableSelectors = [
-      'a[href]',
-      'button:not([disabled])',
-      'input:not([disabled])',
-      'select:not([disabled])',
-      'textarea:not([disabled])',
-      '[tabindex]:not([tabindex="-1"])'"
-    ].join(', ');
 
     return Array.from(document.querySelectorAll(focusableSelectors)) as HTMLElement[];
   }
@@ -414,6 +376,5 @@ Enhanced Accessibility Report:
 export const enhancedAccessibility = new EnhancedAccessibility();
 
 // Auto-initialize in browser environment
-if (typeof window !== 'undefined') {
   enhancedAccessibility.initialize();
 }

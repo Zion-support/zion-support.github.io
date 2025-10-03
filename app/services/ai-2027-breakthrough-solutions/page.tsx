@@ -515,14 +515,14 @@ export default function AI2027BreakthroughSolutions() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">"
           <a
-            href="tel:+13024640950""
-            className="bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition-colors shadow-lg""
+            href="tel:+13024640950"
+            className="bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition-colors shadow-lg"
           >
             Call +1 302 464 0950
           </a>
           <a
-            href="mailto:kleber@ziontechgroup.com""
-            className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white hover:text-purple-600 transition-colors""
+            href="mailto:kleber@ziontechgroup.com"
+            className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white hover:text-purple-600 transition-colors"
           >
             Get Free Consultation
           </a>

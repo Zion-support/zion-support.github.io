@@ -182,7 +182,7 @@ export default function Fortune500AIRevolutionSuccess() {
               <div className="bg-gradient-to-r from-blue-500/10 to-cyan-500/10 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/20 mb-12">"
                 <h3 className="text-2xl font-bold text-blue-400 mb-6">Client Testimonial</h3>"
                 <blockquote className="text-xl text-gray-300 italic mb-4">"
-                  "The January 2025 Advanced AI Revolution transformed our entire organization. We achieved $2.8 billion in ROI while achieving 99.9% operational autonomy. This isn't just automation—it's complete business transformation.""
+                  "The January 2025 Advanced AI Revolution transformed our entire organization. We achieved $2.8 billion in ROI while achieving 99.9% operational autonomy. This isn't just automation—it's complete business transformation."
                 </blockquote>
                 <cite className="text-blue-400 font-semibold">— Chief Technology Officer, Fortune 500 Manufacturing Company</cite>"
               </div>
@@ -195,14 +195,14 @@ export default function Fortune500AIRevolutionSuccess() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">"
                   <a 
-                    href="/contact" "
-                    className="bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-400 hover:to-red-500 text-white font-bold py-3 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-orange-500/50 transform hover:-translate-y-1""
+                    href="/[^"]*"
+                    className="bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-400 hover:to-red-500 text-white font-bold py-3 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-orange-500/50 transform hover:-translate-y-1"
                   >
                     Start Your Transformation →
                   </a>
                   <a 
-                    href="/blog/ai-2025-january-advanced-ai-revolution" "
-                    className="border-2 border-orange-500 text-orange-400 hover:bg-orange-500 hover:text-white font-bold py-3 px-8 rounded-xl transition-all duration-300""
+                    href="/[^"]*"
+                    className="border-2 border-orange-500 text-orange-400 hover:bg-orange-500 hover:text-white font-bold py-3 px-8 rounded-xl transition-all duration-300"
                   >
                     Read Full Guide
                   </a>

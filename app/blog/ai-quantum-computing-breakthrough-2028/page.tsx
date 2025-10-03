@@ -245,14 +245,14 @@ export default function AIQuantumComputingBreakthrough2028() {
           </p>
           <div className="flex gap-4 justify-center">"
             <Link 
-              href="/contact" "
-              className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors""
+              href="/[^"]*"
+              className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Get Quantum AI Consultation
             </Link>
             <Link 
-              href="/services/ai-quantum-computing" "
-              className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors""
+              href="/[^"]*"
+              className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
             >
               Explore Quantum Services
             </Link>

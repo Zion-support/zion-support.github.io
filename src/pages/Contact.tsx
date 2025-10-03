@@ -25,14 +25,14 @@ const Contact: React.FC = () => {
                   <input 
                     type="email" 
                     className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-purple-500"
-                    placeholder="your@email.com" />
+                    placeholder="your@email.com" 
                   />
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">Message</label>
                   <textarea 
                     className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-purple-500 h-32"
-                    placeholder="Tell us about your project..." />
+                    placeholder="Tell us about your project..." 
                   />
                 </div>
                 <button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300">
