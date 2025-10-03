@@ -7,7 +7,7 @@ export const metadata = {
 
 export default function Page() {
 	return (
-		<main className="max-w-3xl mx-auto px-4 py-12 prose prose-invert">
+		<main className="max-w-3xl mx-auto px-4 py-12 prose prose-invert">"
 			<h1>Autonomous Infrastructure 2025</h1>
 			<p>
 				Design production infrastructure that provisions, heals, and scales automatically with
@@ -21,12 +21,12 @@ export default function Page() {
 			</ul>
 			<p>
 				Next, explore Edge experiments and GenAI routing:
-				<Link href="/blog/edge-2025-zero-pii-experiments"> Edge Experiments 2025</Link>
+				<Link href="/blog/edge-2025-zero-pii-experiments"> Edge Experiments 2025</Link>"
 				{' '}and{' '}
-				<Link href="/blog/genai-2025-routing-caches-v1"> GenAI Routing v1 (2025)</Link>.
+				<Link href="/blog/genai-2025-routing-caches-v1"> GenAI Routing v1 (2025)</Link>."
 			</p>
 			<p>
-				Continue exploring in our <Link href="/blog">Blog</Link>.
+				Continue exploring in our <Link href="/blog">Blog</Link>."
 			</p>
 		</main>
 	);

@@ -17,12 +17,12 @@ export const metadata = {
 
 export default function AIEnterpriseAutonomousAgents2026() {
   return (
-    <div className="max-w-4xl mx-auto px-4 py-8">
-      <Link href="/blog" className="text-blue-600 hover:text-blue-800 mb-6 inline-block">← Back to Blog</Link>
-      <h1 className="text-4xl font-bold text-gray-900 mb-3">AI Enterprise Autonomous Agents 2026</h1>
-      <div className="text-gray-600 mb-8">Published: September 30, 2025 • 18 min read • Implementation Guide</div>
+    <div className="max-w-4xl mx-auto px-4 py-8">"
+      <Link href="/blog" className="text-blue-600 hover:text-blue-800 mb-6 inline-block">← Back to Blog</Link>"
+      <h1 className="text-4xl font-bold text-gray-900 mb-3">AI Enterprise Autonomous Agents 2026</h1>"
+      <div className="text-gray-600 mb-8">Published: September 30, 2025 • 18 min read • Implementation Guide</div>"
 
-      <div className="prose prose-lg max-w-none">
+      <div className="prose prose-lg max-w-none">"
         <p>
           This guide outlines a practical approach to design, govern, and scale enterprise‑grade autonomous agents. It focuses
           on reliability, safety, and ROI with policy guardrails, online evaluations, and value stream analytics.
@@ -44,10 +44,10 @@ export default function AIEnterpriseAutonomousAgents2026() {
           <li>Expand coverage; report ROI with cost and reliability dashboards</li>
         </ol>
 
-        <div className="bg-green-50 border-l-4 border-green-600 p-6 rounded">
-          <h3 className="m-0">Need an accelerated rollout?</h3>
-          <p className="m-0">We implement guardrails, evals, and scorecards to scale autonomous agents safely.</p>
-          <Link href="/services" className="inline-block mt-3 bg-green-600 hover:bg-green-700 text-white px-5 py-3 rounded">Explore Services</Link>
+        <div className="bg-green-50 border-l-4 border-green-600 p-6 rounded">"
+          <h3 className="m-0">Need an accelerated rollout?</h3>"
+          <p className="m-0">We implement guardrails, evals, and scorecards to scale autonomous agents safely.</p>"
+          <Link href="/services" className="inline-block mt-3 bg-green-600 hover:bg-green-700 text-white px-5 py-3 rounded">Explore Services</Link>"
         </div>
       </div>
     </div>

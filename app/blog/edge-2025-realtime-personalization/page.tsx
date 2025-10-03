@@ -7,10 +7,10 @@ export const metadata = {
 
 export default function Page() {
   return (
-    <main className="max-w-3xl mx-auto px-4 py-12">
-      <h1 className="text-4xl font-bold mb-4">Realtime Personalization at the Edge</h1>
-      <p className="text-gray-600 mb-6">Deliver private, sub‑100ms experiences with edge feature flags and scoped IDs.</p>
-      <div className="prose prose-invert">
+    <main className="max-w-3xl mx-auto px-4 py-12">"
+      <h1 className="text-4xl font-bold mb-4">Realtime Personalization at the Edge</h1>"
+      <p className="text-gray-600 mb-6">Deliver private, sub‑100ms experiences with edge feature flags and scoped IDs.</p>"
+      <div className="prose prose-invert">"
         <p>
           Use edge‑deployed feature flags and on‑device telemetry to personalize experiences without PII. Achieve
           predictable latency and compliance while improving conversion.

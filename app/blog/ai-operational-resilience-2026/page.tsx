@@ -14,18 +14,18 @@ export const metadata = {
 
 export default function Page() {
 	return (
-		<div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
-			<div className="max-w-3xl mx-auto px-4 py-12">
-				<div className="mb-8 text-sm text-blue-700">September 30, 2025 • 14 min read</div>
-				<h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+		<div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">"
+			<div className="max-w-3xl mx-auto px-4 py-12">"
+				<div className="mb-8 text-sm text-blue-700">September 30, 2025 • 14 min read</div>"
+				<h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">"
 					AI Operational Resilience 2026: Designing for Failure and Recovery
 				</h1>
-				<p className="text-xl text-gray-700 mb-8">
+				<p className="text-xl text-gray-700 mb-8">"
 					Build AI platforms that withstand dependency failures, model regressions, and traffic spikes.
 					Use policy tests, isolation boundaries, and automated recovery to sustain customer trust.
 				</p>
 
-				<div className="prose prose-lg max-w-none">
+				<div className="prose prose-lg max-w-none">"
 					<h2>Reliability Principles</h2>
 					<ul>
 						<li>Policy tests as code for safety, privacy, and cost budgets</li>
@@ -51,14 +51,14 @@ export default function Page() {
 					</ul>
 				</div>
 
-				<div className="mt-10 p-6 bg-white rounded-xl border border-gray-200">
-					<h3 className="text-xl font-semibold mb-2">Next up</h3>
-					<ul className="list-disc pl-6 text-blue-700">
+				<div className="mt-10 p-6 bg-white rounded-xl border border-gray-200">"
+					<h3 className="text-xl font-semibold mb-2">Next up</h3>"
+					<ul className="list-disc pl-6 text-blue-700">"
 						<li>
-							<Link href="/content-hub">Explore the Content Hub</Link>
+							<Link href="/content-hub">Explore the Content Hub</Link>"
 						</li>
 						<li>
-							<Link href="/blog/ai-2027-cost-optimization-playbook">AI 2027 Cost Optimization Playbook</Link>
+							<Link href="/blog/ai-2027-cost-optimization-playbook">AI 2027 Cost Optimization Playbook</Link>"
 						</li>
 					</ul>
 				</div>

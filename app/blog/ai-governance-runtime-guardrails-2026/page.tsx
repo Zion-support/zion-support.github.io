@@ -7,14 +7,14 @@ export const metadata = {
 
 export default function AIGovernanceRuntimeGuardrails2026() {
   return (
-    <div className="min-h-screen bg-slate-950 text-white">
-      <main className="max-w-4xl mx-auto px-6 py-16">
-        <h1 className="text-4xl font-extrabold mb-4">AI Governance Runtime Guardrails 2026</h1>
-        <p className="text-white/70 mb-8">Inline policy checks and live canaries without slowing teams.</p>
+    <div className="min-h-screen bg-slate-950 text-white">"
+      <main className="max-w-4xl mx-auto px-6 py-16">"
+        <h1 className="text-4xl font-extrabold mb-4">AI Governance Runtime Guardrails 2026</h1>"
+        <p className="text-white/70 mb-8">Inline policy checks and live canaries without slowing teams.</p>"
 
-        <section className="space-y-6">
-          <p className="text-slate-300">Ship fast with governance that runs in-line with production traffic. Wire policy checks, KPI-linked canaries, and rollback triggers so releases stay safe and velocity remains high.</p>
-          <ul className="list-disc list-inside space-y-2 text-slate-300">
+        <section className="space-y-6">"
+          <p className="text-slate-300">Ship fast with governance that runs in-line with production traffic. Wire policy checks, KPI-linked canaries, and rollback triggers so releases stay safe and velocity remains high.</p>"
+          <ul className="list-disc list-inside space-y-2 text-slate-300">"
             <li>Inline policy checks at critical decision points</li>
             <li>KPI-linked canaries that block regressions before users feel them</li>
             <li>Instant rollback triggers tied to error/quality budgets</li>
