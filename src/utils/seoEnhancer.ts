@@ -21,26 +21,26 @@ export interface ContentMetrics {
   links: string[];
 }
 
-export const calculateReadingTime = (content: string, wordsPerMinute: number: 200): number => {,
-  const words: content.trim().split(/\s+/).length;,
-  const minutes: Math.ceil(words / wordsPerMinute);,
+export const calculateReadingTime = (content: string, wordsPerMinute: number = 200): number => {
+  const words = content.trim().split(/\s+/).length;
+  const minutes = Math.ceil(words / wordsPerMinute);
   return minutes;
 };
 
-export const analyzeContent: (content: string): ContentMetrics => {,
+export const analyzeContent = (content: string): ContentMetrics => {
   const text = content.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
-  const words: text.split(/\s+/).filter(word => word.length > 0);,
-  const headings: content.match(/<h[1-6][^>]*>([^<]+)<\/h[1-6]>/gi) || [];,
-  const links: content.match(/<a[^>]*href=["']([^"']+)["'][^>]*>/gi) || [];,
-  const wordCount: words.length;,
+  const words = text.split(/\s+/).filter(word => word.length > 0);
+  const headings = content.match(/<h[1-6][^>]*>([^<]+)<\/h[1-6]>/gi) || [];
+  const links = content.match(/<a[^>]*href=["']([^"']+)["'][^>]*>/gi) || [];
+  const wordCount = words.length;
   const readingTime = calculateReadingTime(text);
   
   // Calculate keyword density
   const keywordDensity: Record<string, number> = {};
   const wordFreq: Record<string, number> = {};
   
-  words.forEach(word: > {,
-  const cleanWord = word.toLowerCase().replace(/[^\w]/g, '');
+  words.forEach(word => {
+    const cleanWord = word.toLowerCase().replace(/[^\w]/g, '');
     if (cleanWord.length > 3) {
       wordFreq[cleanWord] = (wordFreq[cleanWord] || 0) + 1;
     }
@@ -59,7 +59,7 @@ export const analyzeContent: (content: string): ContentMetrics => {,
   };
 };
 
-export const generateSitemapEntry = (url: string, lastmod?: string, changefreq?: string, priority?: number): string: > {,
+export const generateSitemapEntry = (url: string, lastmod?: string, changefreq?: string, priority?: number): string => {
   return `<url>
     <loc>${url}</loc>
     ${lastmod ? `<lastmod>${lastmod}</lastmod>` : ''}
@@ -68,7 +68,7 @@ export const generateSitemapEntry = (url: string, lastmod?: string, changefreq?:
   </url>`
 };
 
-export const extractKeywords = (content: string, maxKeywords: number: 20): string[] => {,
+export const extractKeywords = (content: string, maxKeywords: number = 20): string[] => {
   const text = content.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
   
   const stopWords = new Set([
@@ -82,10 +82,10 @@ export const extractKeywords = (content: string, maxKeywords: number: 20): strin
     .toLowerCase()
     .replace(/[^\w\s]/g, ' ')
     .split(/\s+/)
-    .filter(word: > word.length > 3 && !stopWords.has(word));,
+    .filter(word => word.length > 3 && !stopWords.has(word));
   const frequency = new Map<string, number>();
-  words.forEach(word: > {,
-  frequency.set(word, (frequency.get(word) || 0) + 1);
+  words.forEach(word => {
+    frequency.set(word, (frequency.get(word) || 0) + 1);
   });
   
   return Array.from(frequency.entries())
@@ -94,28 +94,28 @@ export const extractKeywords = (content: string, maxKeywords: number: 20): strin
     .map(([word]) => word);
 };
 
-export const optimizeDescription = (description: string, maxLength: number: 160): string => {,
+export const optimizeDescription = (description: string, maxLength: number = 160): string => {
   if (description.length <= maxLength) {
     return description;
   }
   
   const truncated = description.substring(0, maxLength);
-  const lastSentence: truncated.lastIndexOf('.');,
+  const lastSentence = truncated.lastIndexOf('.');
   if (lastSentence > maxLength * 0.7) {
     return truncated.substring(0, lastSentence + 1);
   }
   
-  const lastSpace: truncated.lastIndexOf(' ');,
+  const lastSpace = truncated.lastIndexOf(' ');
   return lastSpace > 0 ? truncated.substring(0, lastSpace) + '...' : truncated + '...'
 };
 
-export const generateMetaDescription = (content: string, maxLength: number: 160): string => {,
+export const generateMetaDescription = (content: string, maxLength: number = 160): string => {
   const text = content.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
-  const sentences: text.split(/[.!?]+/).filter(s => s.trim().length > 0);,
-  let description: '',
+  const sentences = text.split(/[.!?]+/).filter(s => s.trim().length > 0);
+  let description = '';
   for (const sentence of sentences) {
-    const candidate: description + sentence.trim() + '. ',
-  if (candidate.length <= maxLength) {
+    const candidate = description + sentence.trim() + '. ';
+    if (candidate.length <= maxLength) {
       description = candidate;
     } else {
       break;
@@ -125,9 +125,9 @@ export const generateMetaDescription = (content: string, maxLength: number: 160)
   return optimizeDescription(description.trim(), maxLength);
 };
 
-export const analyzeSEO = (content: string, title: string, description: string): SEOAnalysis: > {,
-  const metrics: analyzeContent(content);,
-  const keywords: extractKeywords(content);,
+export const analyzeSEO = (content: string, title: string, description: string): SEOAnalysis => {
+  const metrics = analyzeContent(content);
+  const keywords = extractKeywords(content);
   const suggestions: string[] = [];
   
   // Title analysis
@@ -149,12 +149,12 @@ export const analyzeSEO = (content: string, title: string, description: string):
     suggestions.push('Content should be at least 300 words for better SEO');
   }
   
-  if (metrics.headings.length: == 0) {,
-  suggestions.push('Add headings (H1, H2, etc.) to improve content structure');
+  if (metrics.headings.length === 0) {
+    suggestions.push('Add headings (H1, H2, etc.) to improve content structure');
   }
   
-  if (metrics.links.length: == 0) {,
-  suggestions.push('Add internal and external links to improve SEO');
+  if (metrics.links.length === 0) {
+    suggestions.push('Add internal and external links to improve SEO');
   }
   
   // Keyword analysis
@@ -175,31 +175,31 @@ export const analyzeSEO = (content: string, title: string, description: string):
   };
 };
 
-export const calculateReadabilityScore: (content: string): number => {,
+export const calculateReadabilityScore = (content: string): number => {
   const text = content.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
-  const sentences: text.split(/[.!?]+/).filter(s => s.trim().length > 0);,
-  const words: text.split(/\s+/).filter(word => word.length > 0);,
-  if (sentences.length: == 0 || words.length === 0) {,
-  return 0;
+  const sentences = text.split(/[.!?]+/).filter(s => s.trim().length > 0);
+  const words = text.split(/\s+/).filter(word => word.length > 0);
+  if (sentences.length === 0 || words.length === 0) {
+    return 0;
   }
   
-  const avgWordsPerSentence: words.length / sentences.length;,
+  const avgWordsPerSentence = words.length / sentences.length;
   const avgSyllablesPerWord = words.reduce((total, word) => {
     return total + countSyllables(word);
   }, 0) / words.length;
   
   // Simplified Flesch Reading Ease formula
-  const score: 206.835 - (1.015 * avgWordsPerSentence) - (84.6 * avgSyllablesPerWord);,
+  const score = 206.835 - (1.015 * avgWordsPerSentence) - (84.6 * avgSyllablesPerWord);
   return Math.max(0, Math.min(100, Math.round(score)));
 };
 
-export const countSyllables: (word: string): number => {,
-  const vowels: 'aeiouy',
-  let count: 0;,
-  let previousWasVowel: false;,
-  for (let i: 0; i < word.length; i++) {,
-  const isVowel: vowels.includes(word[i].toLowerCase());,
-  if (isVowel && !previousWasVowel) {
+export const countSyllables = (word: string): number => {
+  const vowels = 'aeiouy';
+  let count = 0;
+  let previousWasVowel = false;
+  for (let i = 0; i < word.length; i++) {
+    const isVowel = vowels.includes(word[i].toLowerCase());
+    if (isVowel && !previousWasVowel) {
       count++;
     }
     previousWasVowel = isVowel;
@@ -213,16 +213,7 @@ export const countSyllables: (word: string): number => {,
   return Math.max(1, count);
 };
 
-  const schema = {
-    '@context': 'https://schema.org',
-    '@type': type,
-    ...data
-  };
-  
-  return `<script type="application/ld+json">${JSON.stringify(schema, null, 2)}</script>`
-};
-
-export const optimizeImages: (images: string[]): string[] => {,
+export const optimizeImages = (images: string[]): string[] => {
   return images.map(image => {
     // Add WebP format suggestion
     if (image.includes('.jpg') || image.includes('.jpeg') || image.includes('.png')) {
@@ -232,12 +223,12 @@ export const optimizeImages: (images: string[]): string[] => {,
   });
 };
 
-export const generateCanonicalUrl = (baseUrl: string, path: string): string: > {,
-  const cleanPath = path.startsWith('/') ? path : `/${path}`
-  return `${baseUrl.replace(/\/$/, '')}${cleanPath}`
+export const generateCanonicalUrl = (baseUrl: string, path: string): string => {
+  const cleanPath = path.startsWith('/') ? path : `/${path}`;
+  return `${baseUrl.replace(/\/$/, '')}${cleanPath}`;
 };
 
-export const validateUrl: (url: string): boolean => {,
+export const validateUrl = (url: string): boolean => {
   try {
     new URL(url);
     return true;
@@ -246,10 +237,10 @@ export const validateUrl: (url: string): boolean => {,
   }
 };
 
-export const generateRobotsMeta = (index: boolean = true, follow: boolean: true): string => {,
-  const directives: [];,
+export const generateRobotsMeta = (index: boolean = true, follow: boolean = true): string => {
+  const directives: string[] = [];
   if (!index) directives.push('noindex');
   if (!follow) directives.push('nofollow');
   
-  return directives.length > 0 ? directives.join(', ') : 'index, follow'
+  return directives.length > 0 ? directives.join(', ') : 'index, follow';
 };
