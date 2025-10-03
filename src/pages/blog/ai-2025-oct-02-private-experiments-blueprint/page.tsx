@@ -1,34 +1,45 @@
 import React from 'react';
-import React from 'react';
-import React from 'react';
-const PrivateExperimentsBlueprint2025: React.FC = () => {
-  return (
-  import React from 'react';'
+import { Helmet } from 'react-helmet';
+import { Link } from 'react-router-dom';
 
-const PrivateExperimentsBlueprint2025: React.FC = () => {
+export default function Page() {
   return (
-      <h1>Private Experiments Blueprint: Zero‑PII Testing at the Edge</h1>,,
-      <p>
-        Learn how to run high‑velocity experiments without centralizing PII using edge‑signed configs
-        scoped anonymous identifiers, and on‑device attribution. Achieve <strong>&lt;100ms</strong> decisioning
-        with production‑grade guardrails.
-      </p>
-      <h2>What you will build</h2>
-      <ul>
-        <li>Scoped, rotating user identifiers without PII</li>
-        <li>Signed feature configs validated at the edge</li>
-        <li>Budgeted experiment routes and automatic rollbacks</li>
-      </ul>
-      <h2>Architecture</h2>
-      <p>
-        Decisions are evaluated at the edge using pre‑fetched, signed configuration bundles.
-        User identity is represented by non‑reversible, per‑surface IDs. Telemetry is aggregated using
-        privacy‑preserving counters and uploaded in batches.
-      </p>
-    </article>
+    <div className="min-h-screen bg-gray-900 text-white">
+      <Helmet>
+        <title>Blog Post</title>
+        <meta name="description" content="Blog post content" />
+        <link rel="canonical" href="https://ziontechgroup.com/blog" />
+      </Helmet>
+      
+      <div className="container mx-auto px-6 py-12">
+        <article className="max-w-4xl mx-auto">
+          <header className="mb-8">
+            <h1 className="text-4xl font-bold text-center mb-4">Blog Post</h1>
+            <p className="text-xl text-gray-300 text-center">Blog post content</p>
+          </header>
+          
+          <div className="prose prose-lg max-w-none text-gray-300">
+            <p className="mb-4">scoped anonymous identifiers, and on-device attribution. Achieve</p>
+            <p className="mb-4">with production-grade guardrails.</p>
+            <p className="mb-4">User identity is represented by non-reversible, per-surface IDs. Telemetry is aggregated using
+        privacy-preserving counters and uploaded in batches.</p>
+            
+            
+            <ul className="list-disc list-inside space-y-2 my-6">
+              <li>Scoped, rotating user identifiers without PII</li>
+              <li>Signed feature configs validated at the edge</li>
+              <li>Budgeted experiment routes and automatic rollbacks</li>
+            </ul>
+            
+            
+            <div className="mt-8 pt-8 border-t border-gray-700">
+              <Link to="/blog" className="text-cyan-300 underline hover:text-cyan-200 transition-colors">
+                ← Back to Blog
+              </Link>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
   );
-};
-
-export default PrivateExperimentsBlueprint2025;
-
-;
+}
