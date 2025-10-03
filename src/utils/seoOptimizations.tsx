@@ -94,17 +94,6 @@ export const seoUtils = {
       "@type": "Person",
       "name": article.author
     },
-<<<<<<< HEAD
-    "datePublished": article.datePublished,"
-    "dateModified": article.dateModified,"
-    "image": article.image,"
-    "url": article.url,"
-    "publisher": {"
-      "@type": "Organization","
-      "name": "Zion Tech Group","
-      "logo": {"
-        "@type": "ImageObject","
-=======
     "datePublished": article.datePublished,
     "dateModified": article.dateModified,
     "image": article.image,
@@ -114,7 +103,6 @@ export const seoUtils = {
       "name": "Zion Tech Group",
       "logo": {
         "@type": "ImageObject",
->>>>>>> cursor/fix-errors-and-merge-to-main-229c
         "url": "https://zion.app/logo.png"
       }
     }
