@@ -24,11 +24,11 @@ export default function AI2026EnterpriseAutomationRevolution() {
           Transform Your Business Operations with Next-Generation AI-Powered Automation
         </p>
         <div className="text-left">
-          <span>Published: January 2026<
-          <span>•<
-          <span>12 min read<
-          <span>•<
-          <span>Industry Leading<
+          <span>Published: January 2026</span>
+          <span>•</span>
+          <span>12 min read</span>
+          <span>•</span>
+          <span>Industry Leading</span>
         </div>
       </div>
 
@@ -76,13 +76,13 @@ export default function AI2026EnterpriseAutomationRevolution() {
 
       {/* Core Automation Technologies */}
 <<<<<<< HEAD
-      <div className="text-left">"
+      <div className="text-left">
         <h2 className="text-left">Core Automation Technologies</h2>"
-        <div className="text-left">"
-          <div className="text-left">"
-            <div className="text-left">"
-              <div className="text-left">"
-                <Zap className="text-left" />"
+        <div className="text-left">
+          <div className="text-left">
+            <div className="text-left">
+              <div className="text-left">
+                <Zap className="text-left" />
 =======
       <div className="text-left">
         <h2 className="text-left">Core Automation Technologies</h2>
@@ -206,11 +206,11 @@ export default function AI2026EnterpriseAutomationRevolution() {
 
       {/* Implementation Framework */}
 <<<<<<< HEAD
-      <div className="text-left">"
+      <div className="text-left">
         <h2 className="text-left">Implementation Framework</h2>"
-        <div className="text-left">"
-          <div className="text-left">"
-            <div className="text-left">"
+        <div className="text-left">
+          <div className="text-left">
+            <div className="text-left">
 =======
       <div className="text-left">
         <h2 className="text-left">Implementation Framework</h2>
@@ -267,19 +267,19 @@ export default function AI2026EnterpriseAutomationRevolution() {
             <ul className="text-left">
               <li className="text-left">
                 <TrendingUp className="text-left" />
-                <span>60-80% reduction in manual tasks<
+                <span>60-80% reduction in manual tasks</span>
               </li>
               <li className="text-left">
                 <Zap className="text-left" />
-                <span>300% increase in process speed<
+                <span>300% increase in process speed</span>
               </li>
               <li className="text-left">
                 <BarChart3 className="text-left" />
-                <span>40-60% cost reduction<
+                <span>40-60% cost reduction</span>
               </li>
               <li className="text-left">
                 <Shield className="text-left" />
-                <span>99.9% accuracy improvement<
+                <span>99.9% accuracy improvement</span>
               </li>
             </ul>
           </div>
@@ -290,16 +290,16 @@ export default function AI2026EnterpriseAutomationRevolution() {
             </p>
             <div className="text-left">
               <div className="text-left">
-                <span>Monthly Savings:<
-                <span className="text-left">$150,000<
+                <span>Monthly Savings:</span>
+                <span className="text-left">$150,000</span>
               </div>
               <div className="text-left">
-                <span>Annual ROI:<
-                <span className="text-left">1,800%<
+                <span>Annual ROI:</span>
+                <span className="text-left">1,800%</span>
               </div>
               <div className="text-left">
-                <span>Payback Period:<
-                <span className="text-left">2.1 months<
+                <span>Payback Period:</span>
+                <span className="text-left">2.1 months</span>
               </div>
             </div>
           </div>

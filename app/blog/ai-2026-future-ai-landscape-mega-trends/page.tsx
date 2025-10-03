@@ -39,15 +39,15 @@ export default function AI2026FutureLandscapeMegaTrends() {
         <div className="text-left">
           <div className="text-left">
             <User className="text-left" />
-            <span>Zion Tech Group<
+            <span>Zion Tech Group</span>
           </div>
           <div className="text-left">
             <Calendar className="text-left" />
-            <span>January 15, 2026<
+            <span>January 15, 2026</span>
           </div>
           <div className="text-left">
             <Clock className="text-left" />
-            <span>12 min read<
+            <span>12 min read</span>
           </div>
         </div>
 
@@ -62,8 +62,8 @@ export default function AI2026FutureLandscapeMegaTrends() {
         </div>
 
         {/* Main Content */}
-<div className="text-left">"
-          <div className="text-left">"origin/cursor/fix-errors-and-merge-to-main-0638
+<div className="text-left">
+          <div className="text-left">origin/cursor/fix-errors-and-merge-to-main-0638
             {/* Executive Summary */}
             <div className="text-left">
               <h2 className="text-left">

@@ -22,7 +22,7 @@ export default function QuantumNeuralSuperintelligence2026() {
             </div>
             <h1 className="text-left">
               AI 2026: Quantum Neural
-              <span className="text-left"> Superintelligence<
+              <span className="text-left"> Superintelligence</span>
             </h1>
             <p className="text-left">
               Witness the convergence of quantum computing and neural networks in a revolutionary breakthrough that creates 
@@ -52,7 +52,7 @@ export default function QuantumNeuralSuperintelligence2026() {
       <div className="text-left">
         <div className="text-left">
           <h2 className="text-left">
-            The <span className="text-left">Quantum Revolution<
+            The <span className="text-left">Quantum Revolution</span>
           </h2>
           <div className="text-left">
             <div className="text-left">
@@ -93,7 +93,7 @@ export default function QuantumNeuralSuperintelligence2026() {
       <div className="text-left">
         <div className="text-left">
           <h2 className="text-left">
-            <span className="text-left">Quantum Performance<
+            <span className="text-left">Quantum Performance</span>
           </h2>
           <div className="text-left">
             <div className="text-left">
@@ -132,7 +132,7 @@ export default function QuantumNeuralSuperintelligence2026() {
       <div className="text-left">
         <div className="text-left">
           <h2 className="text-left">
-            The <span className="text-left">Quantum Architecture<
+            The <span className="text-left">Quantum Architecture</span>
           </h2>
           <div className="text-left">
             <div>
@@ -144,19 +144,19 @@ export default function QuantumNeuralSuperintelligence2026() {
               <ul className="text-left">
                 <li className="text-left">
                   <div className="text-left"></div>
-                  <span className="text-left">Quantum entanglement for instant information transfer<
+                  <span className="text-left">Quantum entanglement for instant information transfer</span>
                 </li>
                 <li className="text-left">
                   <div className="text-left"></div>
-                  <span className="text-left">Superposition-based neural weight optimization<
+                  <span className="text-left">Superposition-based neural weight optimization</span>
                 </li>
                 <li className="text-left">
                   <div className="text-left"></div>
-                  <span className="text-left">Quantum tunneling for breakthrough solutions<
+                  <span className="text-left">Quantum tunneling for breakthrough solutions</span>
                 </li>
                 <li className="text-left">
                   <div className="text-left"></div>
-                  <span className="text-left">Quantum error correction for perfect reliability<
+                  <span className="text-left">Quantum error correction for perfect reliability</span>
                 </li>
               </ul>
             </div>
@@ -164,39 +164,39 @@ export default function QuantumNeuralSuperintelligence2026() {
               <h4 className="text-left">Quantum Capabilities Matrix</h4>
               <div className="text-left">
                 <div className="text-left">
-                  <span className="text-left">Quantum Processing Power<
+                  <span className="text-left">Quantum Processing Power</span>
                   <div className="text-left">
                     <div className="text-left">
                       <div className="text-left"></div>
                     </div>
-                    <span className="text-left">∞<
+                    <span className="text-left">∞</span>
                   </div>
                 </div>
                 <div className="text-left">
-                  <span className="text-left">Neural Complexity<
+                  <span className="text-left">Neural Complexity</span>
                   <div className="text-left">
                     <div className="text-left">
                       <div className="text-left"></div>
                     </div>
-                    <span className="text-left">99%<
+                    <span className="text-left">99%</span>
                   </div>
                 </div>
                 <div className="text-left">
-                  <span className="text-left">Solution Discovery<
+                  <span className="text-left">Solution Discovery</span>
                   <div className="text-left">
                     <div className="text-left">
                       <div className="text-left"></div>
                     </div>
-                    <span className="text-left">100%<
+                    <span className="text-left">100%</span>
                   </div>
                 </div>
                 <div className="text-left">
-                  <span className="text-left">Quantum Stability<
+                  <span className="text-left">Quantum Stability</span>
                   <div className="text-left">
                     <div className="text-left">
                       <div className="text-left"></div>
                     </div>
-                    <span className="text-left">99.9%<
+                    <span className="text-left">99.9%</span>
                   </div>
                 </div>
               </div>
@@ -209,7 +209,7 @@ export default function QuantumNeuralSuperintelligence2026() {
       <div className="text-left">
         <div className="text-left">
           <h2 className="text-left">
-            <span className="text-left">Revolutionary Applications<
+            <span className="text-left">Revolutionary Applications</span>
           </h2>
           <div className="text-left">
             <div className="text-left">

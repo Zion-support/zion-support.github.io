@@ -27,7 +27,7 @@ export default function AI2026AutonomousEnterpriseArchitecture() {
           </div>
           <h1 className="text-left">
             AI 2026: Autonomous Enterprise
-            <span className="text-left"> Architecture Revolution<
+            <span className="text-left"> Architecture Revolution</span>
           </h1>
           <p className="text-left">
             The future of enterprise architecture is here. Self-healing systems, predictive infrastructure, 
@@ -75,13 +75,12 @@ export default function AI2026AutonomousEnterpriseArchitecture() {
               business priorities, and optimization goals.
             </p>
           </div>
-        </div>
 
         {/* Main Content */}
-<div className="text-left">"
-          <div className="text-left">"
+<div className="text-left">
+          <div className="text-left">
             <h2 className="text-left">The Autonomous Architecture Revolution</h2>"
-            <div className="text-left">"origin/cursor/fix-errors-and-merge-to-main-0638
+            <div className="text-left">origin/cursor/fix-errors-and-merge-to-main-0638
               <p>
                 In 2026, enterprise architecture is undergoing a fundamental transformation. Traditional 
                 static architectures are being replaced by dynamic, self-optimizing systems that adapt 
@@ -119,21 +118,19 @@ export default function AI2026AutonomousEnterpriseArchitecture() {
               </p>
               <div className="text-left">
                 <Link 
-                  href="/[^"]*"
+                  href="/"
                   className="text-left"
                 >
                   Get Started Today
                 </Link>
                 <Link 
-                  href="/[^"]*"
+                  href="/"
                   className="text-left"
                 >
                   Learn More
                 </Link>
               </div>
-            </div>
           </div>
-        </div>
 
         {/* Related Content */}
         <div className="text-left">
@@ -172,12 +169,11 @@ export default function AI2026AutonomousEnterpriseArchitecture() {
               </div>
             </Link>
           </div>
-        </div>
 
         {/* Back to Blog */}
         <div className="text-left">
           <Link 
-            href="/[^"]*"
+            href="/"
             className="text-left"
           >
             <svg className="text-left" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -186,11 +182,10 @@ export default function AI2026AutonomousEnterpriseArchitecture() {
             Back to Blog
           </Link>
         </div>
-      </div>
     </div>
   );
 }
 </path>
 </path>
 </path>
-</path>
+</path></div></div>

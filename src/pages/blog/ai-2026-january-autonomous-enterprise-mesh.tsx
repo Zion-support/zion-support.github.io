@@ -26,9 +26,7 @@ const AutonomousEnterpriseMesh2026: React.FC = () => {
       title= "Autonomous Security",,"
       title= "Autonomous Security",,"
       description: "Self-healing security systems that adapt to threats automatically
-    }],
-;
-
+    }],;
   const stats: [,
   ];
 
@@ -45,115 +43,115 @@ const AutonomousEnterpriseMesh2026: React.FC = () => {
         <link rel: "canonical", href ="/blog/ai-2026-january-autonomous-enterprise-mesh" />
       </Helmet>
 
-      <div className="text-left">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-        <div className="text-left">
-          <div className="text-left"></div>
-          <div className="text-left">
-        <div className="text-left">
-          <div className="text-left"></div>
-          <div className="text-left">
-      <div className="text-left">
+        <div className="relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent"></div>
+          <div className="relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 pt-20 pb-16">
+        <div className="relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent"></div>
+          <div className="relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 pt-20 pb-16">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-        <div className="text-left">
-          <div className="text-left"></div>
-          <div className="text-left">
-        <div className="text-left">
-          <div className="text-left"></div>
-          <div className="text-left">
+        <div className="relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent"></div>
+          <div className="relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 pt-20 pb-16">
+        <div className="relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent"></div>
+          <div className="relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 pt-20 pb-16">
             <motion .div
               initial: {{ opacity: 0, y: 20 }}
               animate: {{ opacity: 1, y: 0 }}
               transition: {{ duration: 0.8 }}
               className="text-center
-            >
-              <div className="text-left">
-                <span className="text-left">🚀<
+            >"
+              <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500/20 to-blue-500/20 backdrop-blur-sm border border-purple-500/30 rounded-full text-sm font-semibold text-purple-300 mb-6">
+                <span className="mr-2">🚀</span>
   January 15, 2026 - Revolutionary Breakthrough
               </div>
               
-              <h1 className="text-left">
+              <h1 className="text-5xl md: text-7xl font-bold bg-gradient-to-r from-white via-purple-200 to-blue-200 bg-clip-text text-transparent mb-6">
   Autonomous Enterprise Mesh 2026
               </h1>
               
-              <p className="text-left">
-              <h1 className="text-left">
+              <p className="text-xl md: text-2xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
+              <h1 className="text-5xl md: text-7xl font-bold bg-gradient-to-r from-white via-purple-200 to-blue-200 bg-clip-text text-transparent mb-6">
   Autonomous Enterprise Mesh 2026
               </h1>
               
-              <p className="text-left">
+              <p className="text-xl md: text-2xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
               className="text-center
-            >
-              <div className="text-left">
-                <span className="text-left">🚀<
+            >"
+              <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500/20 to-blue-500/20 backdrop-blur-sm border border-purple-500/30 rounded-full text-sm font-semibold text-purple-300 mb-6">
+                <span className="mr-2">🚀</span>
   January 15, 2026 - Revolutionary Breakthrough
               </div>
               
-              <h1 className="text-left">"
+              <h1 className="text-5xl md: text-7xl font-bold bg-gradient-to-r from-white via-purple-200 to-blue-200 bg-clip-text text-transparent mb-6">"
   Autonomous Enterprise Mesh 2026
               </h1>
               
-              <p className="text-left">
-              <h1 className="text-left">"
+              <p className="text-xl md: text-2xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
+              <h1 className="text-5xl md: text-7xl font-bold bg-gradient-to-r from-white via-purple-200 to-blue-200 bg-clip-text text-transparent mb-6">"
   Autonomous Enterprise Mesh 2026
               </h1>
               
-              <p className="text-left">"
+              <p className="text-xl md: text-2xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">"
   Revolutionary self-organizing AI mesh networks achieving 99.7% operational efficiency 
                 with zero human intervention. The future of business intelligence is here.
               </p>
 
-              <div className="text-left">
-                <div className="text-left">
-                  <Clock className="text-left"
+              <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-400 mb-8">
+                <div className="flex items-center">
+                  <Clock className="w-4 h-4 mr-2 ,"
   12 min read
                 </div>
-                <div className="text-left">
-                  <User className="text-left"
+                <div className="flex items-center">
+                  <User className="w-4 h-4 mr-2 ,"
   AI Research Team
                 </div>
-                <div className="text-left">
-                  <Tag className="text-left"
+                <div className="flex items-center">
+                  <Tag className="w-4 h-4 mr-2 "
                 </div>
-                <div className="text-left">
+                <div className="flex items-center">
                   <User className="w-4 h-4 mr-2/>,
   AI Research Team
-                </div>
-                <div className="text-left">
-                  <Tag className="text-left">
-              <div className="text-left">
-                <div className="text-left">
-                  <Clock className="text-left" />
+                </div>"
+                <div className="flex items-center">
+                  <Tag className="w-4 h-4 mr-2/>">
+              <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-400 mb-8">
+                <div className="flex items-center">
+                  <Clock className="w-4 h-4 mr-2" />
   12 min read
                 </div>
-                <div className="text-left">
-                  <User className="text-left" />
+                <div className="flex items-center">
+                  <User className="w-4 h-4 mr-2" />
   AI Research Team
                 </div>
-                <div className="text-left">
-                  <Tag className="text-left" />
-              <div className="text-left">
-                <div className="text-left">
-                  <Clock className="text-left"
+                <div className="flex items-center">
+                  <Tag className="w-4 h-4 mr-2" />
+              <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-400 mb-8">
+                <div className="flex items-center">
+                  <Clock className="w-4 h-4 mr-2/>,"
   12 min read
                 </div>
-                <div className="text-left">
-                  <User className="text-left"
+                <div className="flex items-center">
+                  <User className="w-4 h-4 mr-2/>,"
   AI Research Team
                 </div>
-                <div className="text-left">
-                  <Tag className="text-left">
-              <div className="text-left">
-                <div className="text-left">
-                  <Clock className="text-left" />
+                <div className="flex items-center">
+                  <Tag className="w-4 h-4 mr-2/>">
+              <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-400 mb-8">
+                <div className="flex items-center">
+                  <Clock className="w-4 h-4 mr-2" />
   12 min read
                 </div>
-                <div className="text-left">
-                  <User className="text-left" />
+                <div className="flex items-center">
+                  <User className="w-4 h-4 mr-2" />
   AI Research Team
                 </div>
-                <div className="text-left">
-                  <Tag className="text-left" />
+                <div className="flex items-center">
+                  <Tag className="w-4 h-4 mr-2" />
   Enterprise AI
                 </div>
               </div>
@@ -162,53 +160,53 @@ const AutonomousEnterpriseMesh2026: React.FC = () => {
   href="#content
   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl
               >
-                Read the Full Article
-                <ArrowRight className="text-left">
+                Read the Full Article"
+                <ArrowRight className="ml-2 w-5 h-5 " />
               <a title= "Internal link
   href="#content
   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl
               >
-                Read the Full Article
-                <ArrowRight className="text-left">
-                <ArrowRight className="text-left" />
+                Read the Full Article"
+                <ArrowRight className="ml-2 w-5 h-5 " />
+                <ArrowRight className="ml-2 w-5 h-5" />
   href="#content
   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl
               >
-                Read the Full Article
-                <ArrowRight className="text-left">
-                <ArrowRight className="text-left" />
+                Read the Full Article"
+                <ArrowRight className="ml-2 w-5 h-5 " />
+                <ArrowRight className="ml-2 w-5 h-5" />
               </a>
             </motion.div>
           </div>
         </div>
 
         {/* Stats Section */}
-        <div className="text-left">
-        <div className="text-left">
-        <div className="text-left">
-        <div className="text-left">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16">
           <motion .div
             initial: {{ opacity: 0, y: 20 }}
             animate: {{ opacity: 1, y: 0 }}
             transition: {{ delay: 0.2, duration: 0.8 }}
             className="grid grid-cols-2 md:grid-cols-4 gap-8
           >
-            {stats.map((stat, index) => (
-              <div key={index} className="text-left">
-              <div key={index} className="text-left">
-                <div className="text-left">`
+            {stats.map((stat, index) => ("
+              <div key={index} className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10">
+              <div key={index} className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10">
+                <div className="{`text-4xl font-bold ${stat.color} mb-2`}">`
                   {stat.value}
                 </div>
-                <div className="text-left">
+                <div className="text-sm text-gray-300">
             className="grid grid-cols-2 md:grid-cols-4 gap-8
           >
-            {stats.map((stat, index) => (
-              <div key={index} className="text-left">
-              <div key={index} className="text-left">
+            {stats.map((stat, index) => ("
+              <div key={index} className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10">
+              <div key={index} className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10">
                 <div className= {`text-4xl font-bold ${stat.color} mb-2`}>`
                   {stat.value}
                 </div>
-                <div className="text-left">
+                <div className="text-sm text-gray-300">
                   {stat.label}
                 </div>
               </div>
@@ -217,87 +215,87 @@ const AutonomousEnterpriseMesh2026: React.FC = () => {
         </div>
 
         {/* Main Content */}
-        <div id="content" className="text-left">
-        <div id="content" className="text-left">
+        <div id="content" className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 pb-20">
+        <div id="content" className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 pb-20">
           <motion .div
             initial: {{ opacity: 0, y: 20 }}
             animate: {{ opacity: 1, y: 0 }}
             transition: {{ delay: 0.4, duration: 0.8 }}
             className="prose prose-lg prose-invert max-w-none
-          >
-            <h2 className="text-left">The Dawn of Autonomous Enterprise Intelligence</h2>"
-            <p className="text-left">
-            <h2 className="text-left">The Dawn of Autonomous Enterprise Intelligence</h2>
-            <p className="text-left">
+          >"
+            <h2 className="text-3xl font-bold text-white mb-6">The Dawn of Autonomous Enterprise Intelligence</h2>"
+            <p className="text-gray-300 mb-6 leading-relaxed">
+            <h2 className="text-3xl font-bold text-white mb-6">The Dawn of Autonomous Enterprise Intelligence</h2>
+            <p className="text-gray-300 mb-6 leading-relaxed">
             className="prose prose-lg prose-invert max-w-none
-          >
-            <h2 className="text-left">The Dawn of Autonomous Enterprise Intelligence</h2>"
-            <p className="text-left">
-            <h2 className="text-left">The Dawn of Autonomous Enterprise Intelligence</h2>
-            <p className="text-left">"
+          >"
+            <h2 className="text-3xl font-bold text-white mb-6">The Dawn of Autonomous Enterprise Intelligence</h2>"
+            <p className="text-gray-300 mb-6 leading-relaxed">
+            <h2 className="text-3xl font-bold text-white mb-6">The Dawn of Autonomous Enterprise Intelligence</h2>
+            <p className="text-gray-300 mb-6 leading-relaxed">"
   In January 2026, we witnessed the most profound transformation in enterprise technology since the advent of the internet. 
               The Autonomous Enterprise Mesh represents a paradigm shift from traditional hierarchical business structures to 
               self-organizing, intelligent networks that operate with unprecedented efficiency and autonomy.
             </p>
 
-            <p className="text-left">
-            <p className="text-left">"
+            <p className="text-gray-300 mb-8 leading-relaxed">
+            <p className="text-gray-300 mb-8 leading-relaxed">"
   This revolutionary technology enables businesses to achieve 99.7% operational efficiency through AI systems that 
               autonomously form optimal network topologies, share collective intelligence, and continuously optimize business 
               processes without any human intervention. The results speak for themselves: 89% cost reduction, 1000x scalability,
               and zero human error operations.
             </p>
 
-            <h3 className="text-left">Key Features</h3>
-            <div className="text-left">
+            <h3 className="text-2xl font-bold text-white mb-6">Key Features</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
               {features.map((feature, index) => (
               processes without any human intervention. The results speak for themselves: 89% cost reduction, 1000x scalability, ,,
               and zero human error operations.
             </p>
 
-            <h3 className="text-left">Key Features</h3>
-            <div className="text-left">
+            <h3 className="text-2xl font-bold text-white mb-6">Key Features</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
               {features.map((feature, index) => (
-                <div key={index} className="text-left">
-                  <feature .icon className="text-left" />
-                  <h4 className="text-left">{feature.title}</h4>"
-                  <p className="text-left">{feature.description}</p>"
-            <h3 className="text-left">Key Features</h3>
-            <div className="text-left">
+                <div key={index} className="p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:border-white/20 transition-all duration-300">
+                  <feature .icon className="w-8 h-8 text-purple-400 mb-4" />
+                  <h4 className="text-xl font-semibold text-white mb-3">{feature.title}</h4>"
+                  <p className="text-gray-300 leading-relaxed">{feature.description}</p>"
+            <h3 className="text-2xl font-bold text-white mb-6">Key Features</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
               {features.map((feature, index) => (
-                <div key={index} className="text-left">
-                  <feature .icon className="text-left" />
-                  <h4 className="text-left">{feature.title}</h4>"
-                  <p className="text-left">{feature.description}</p>"
+                <div key={index} className="p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:border-white/20 transition-all duration-300">
+                  <feature .icon className="w-8 h-8 text-purple-400 mb-4" />
+                  <h4 className="text-xl font-semibold text-white mb-3">{feature.title}</h4>"
+                  <p className="text-gray-300 leading-relaxed">{feature.description}</p>"
                 </div>
               ))}
             </div>
 
-            <h3 className="text-left">Real-World Impact</h3>
-            <p className="text-left">
-            <h3 className="text-left">Real-World Impact</h3>
-            <p className="text-left">
-            <h3 className="text-left">Real-World Impact</h3>
-            <p className="text-left">
-            <h3 className="text-left">Real-World Impact</h3>
-            <p className="text-left">"
+            <h3 className="text-2xl font-bold text-white mb-6">Real-World Impact</h3>
+            <p className="text-gray-300 mb-6 leading-relaxed">
+            <h3 className="text-2xl font-bold text-white mb-6">Real-World Impact</h3>
+            <p className="text-gray-300 mb-6 leading-relaxed">
+            <h3 className="text-2xl font-bold text-white mb-6">Real-World Impact</h3>
+            <p className="text-gray-300 mb-6 leading-relaxed">
+            <h3 className="text-2xl font-bold text-white mb-6">Real-World Impact</h3>
+            <p className="text-gray-300 mb-6 leading-relaxed">"
   Fortune 100 companies implementing the Autonomous Enterprise Mesh have reported unprecedented results. 
               One manufacturing giant achieved complete operational autonomy across 127 factories, managing 47,000+ AI devices 
               with zero human intervention while maintaining 99.99% uptime and delivering a 3,733% ROI.
             </p>
 
-            <div className="text-left">
-              <h4 className="text-left">Case Study: Global Manufacturing Transformation</h4>
-              <ul className="text-left">
-            <div className="text-left">
-              <h4 className="text-left">Case Study: Global Manufacturing Transformation</h4>
-              <ul className="text-left">
-            <div className="text-left">
-              <h4 className="text-left">Case Study: Global Manufacturing Transformation</h4>
-              <ul className="text-left">
-            <div className="text-left">
-              <h4 className="text-left">Case Study: Global Manufacturing Transformation</h4>
-              <ul className="text-left">
+            <div className="bg-gradient-to-r from-purple-500/10 to-blue-500/10 border border-purple-500/20 rounded-xl p-8 mb-8">
+              <h4 className="text-xl font-semibold text-white mb-4">Case Study: Global Manufacturing Transformation</h4>
+              <ul className="text-gray-300 space-y-2">
+            <div className="bg-gradient-to-r from-purple-500/10 to-blue-500/10 border border-purple-500/20 rounded-xl p-8 mb-8">
+              <h4 className="text-xl font-semibold text-white mb-4">Case Study: Global Manufacturing Transformation</h4>
+              <ul className="text-gray-300 space-y-2">
+            <div className="bg-gradient-to-r from-purple-500/10 to-blue-500/10 border border-purple-500/20 rounded-xl p-8 mb-8">
+              <h4 className="text-xl font-semibold text-white mb-4">Case Study: Global Manufacturing Transformation</h4>
+              <ul className="text-gray-300 space-y-2">
+            <div className="bg-gradient-to-r from-purple-500/10 to-blue-500/10 border border-purple-500/20 rounded-xl p-8 mb-8">
+              <h4 className="text-xl font-semibold text-white mb-4">Case Study: Global Manufacturing Transformation</h4>
+              <ul className="text-gray-300 space-y-2">
                 <li >• 127 factories converted to autonomous operations</li>
                 <li >• 47,000+ AI devices managed without human oversight</li>
                 <li >• 99.99% uptime across all operations</li>
@@ -311,8 +309,8 @@ const AutonomousEnterpriseMesh2026: React.FC = () => {
               unprecedented competitive advantages, while those that resist will find themselves increasingly obsolete.
             </p>
 
-            <p className="text-left">
-            <p className="text-left">"
+            <p className="text-gray-300 mb-8 leading-relaxed">
+            <p className="text-gray-300 mb-8 leading-relaxed">"
   The era of human-dependent business operations is ending. The future belongs to self-organizing, intelligent systems 
               that can adapt, learn, and optimize in real-time. The Autonomous Enterprise Mesh is not just the future—it's the present, '
               and it's transforming businesses today.'
@@ -321,59 +319,59 @@ const AutonomousEnterpriseMesh2026: React.FC = () => {
         </div>
 
         {/* CTA Section */}
-        <div className="text-left">
-        <div className="text-left">
-        <div className="text-left">
-        <div className="text-left">
+        <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 pb-20">
+        <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 pb-20">
+        <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 pb-20">
+        <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 pb-20">
           <motion .div
             initial: {{ opacity: 0, y: 20 }}
             animate: {{ opacity: 1, y: 0 }}
             transition: {{ delay: 0.6, duration: 0.8 }}
             className="text-center p-8 bg-gradient-to-r from-purple-500/10 to-blue-500/10 border border-purple-500/20 rounded-xl
-          >
-            <h3 className="text-left">Ready to Transform Your Enterprise?</h3>
-            <p className="text-left">
+          >"
+            <h3 className="text-2xl font-bold text-white mb-4">Ready to Transform Your Enterprise?</h3>
+            <p className="text-gray-300 mb-6">
   Discover how Autonomous Enterprise Mesh can revolutionize your business operations.
             </p>
-            <div className="text-left">
-            <div className="text-left">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a title= "Internal link
   href="/services
   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl
               >
-                Explore Our Services
-                <ArrowRight className="text-left">
-                <ArrowRight className="text-left" />
+                Explore Our Services"
+                <ArrowRight className="ml-2 w-5 h-5 " />
+                <ArrowRight className="ml-2 w-5 h-5" />
               </a>
               <a title= "Internal link
   href="/contact
-  className="inline-flex items-center px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 hover:border-white/30 text-white font-semibold rounded-xl transition-all duration-300
+  className="inline-flex items-center px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 hover:border-white/30 text-white font-semibold rounded-xl transition-all duration-300"
             className="text-center p-8 bg-gradient-to-r from-purple-500/10 to-blue-500/10 border border-purple-500/20 rounded-xl
-          >
-            <h3 className="text-left">Ready to Transform Your Enterprise?</h3>
-            <p className="text-left">"
+          >"
+            <h3 className="text-2xl font-bold text-white mb-4">Ready to Transform Your Enterprise?</h3>
+            <p className="text-gray-300 mb-6">"
   Discover how Autonomous Enterprise Mesh can revolutionize your business operations.
             </p>
-            <div className="text-left">
-            <div className="text-left">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a title= "Internal link
   href="/services
   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl
               >
-                Explore Our Services
-                <ArrowRight className="text-left">
-                <ArrowRight className="text-left" />
+                Explore Our Services"
+                <ArrowRight className="ml-2 w-5 h-5 " />
+                <ArrowRight className="ml-2 w-5 h-5" />
               </a>
               <a title= "Internal link
   href="/contact
-  className="inline-flex items-center px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 hover:border-white/30 text-white font-semibold rounded-xl transition-all duration-300>
+  className="inline-flex items-center px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 hover:border-white/30 text-white font-semibold rounded-xl transition-all duration-300>"
               <a title= "Internal link
   href="/services
   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl
               >
-                Explore Our Services
-                <ArrowRight className="text-left">
-                <ArrowRight className="text-left" />
+                Explore Our Services"
+                <ArrowRight className="ml-2 w-5 h-5 " />
+                <ArrowRight className="ml-2 w-5 h-5" />
               </a>
               <a title= "Internal link
   href="/contact
@@ -389,4 +387,4 @@ const AutonomousEnterpriseMesh2026: React.FC = () => {
   );
 };
 
-export default AutonomousEnterpriseMesh2026;
+export default AutonomousEnterpriseMesh2026;"

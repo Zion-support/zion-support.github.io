@@ -16,10 +16,10 @@ export default function AIAutonomousRobotics2026() {
         <div className="text-left">
           <span className="text-left">
             NEW 2026
-          <
+          </span>
           <span className="text-left">
             BREAKTHROUGH
-          <
+          </span>
         </div>
         <h1 className="text-left">
           AI Autonomous Robotics 2026: The Future of Intelligent Automation
@@ -27,15 +27,15 @@ export default function AIAutonomousRobotics2026() {
         <div className="text-left">
           <div className="text-left">
             <Clock className="text-left" />
-            <span>32 min read<
+            <span>32 min read</span>
           </div>
           <div className="text-left">
             <Bot className="text-left" />
-            <span>Robotics<
+            <span>Robotics</span>
           </div>
           <div className="text-left">
             <TrendingUp className="text-left" />
-            <span>Automation<
+            <span>Automation</span>
           </div>
         </div>
       </div>
@@ -92,16 +92,16 @@ export default function AIAutonomousRobotics2026() {
 
       {/* Main Content */}
 <<<<<<< HEAD
-      <div className="text-left">"
+      <div className="text-left">
         <h2 className="text-left">The Autonomous Robotics Revolution</h2>"
-        <p className="text-left">"
+        <p className="text-left">
           AI autonomous robotics represents the convergence of artificial intelligence, machine learning, and advanced robotics technologies. These systems can perceive their environment, make intelligent decisions, and execute complex tasks with minimal human intervention, opening up unprecedented possibilities for automation and efficiency.
         </p>
 
         <h3 className="text-left">Core Technologies</h3>"
-        <div className="text-left">"
+        <div className="text-left">
           <h4 className="text-left">1. Advanced Perception Systems</h4>"
-          <p className="text-left">"
+          <p className="text-left">
 =======
       <div className="text-left">
         <h2 className="text-left">The Autonomous Robotics Revolution</h2>
@@ -154,11 +154,11 @@ export default function AIAutonomousRobotics2026() {
 
 <<<<<<< HEAD
         <h3 className="text-left">Industry Applications</h3>"
-        <div className="text-left">"
-          <div className="text-left">"
-            <div className="text-left">"
-              <div className="text-left">"
-                <Bot className="text-left" />"
+        <div className="text-left">
+          <div className="text-left">
+            <div className="text-left">
+              <div className="text-left">
+                <Bot className="text-left" />
 =======
         <h3 className="text-left">Industry Applications</h3>
 
@@ -227,10 +227,10 @@ export default function AIAutonomousRobotics2026() {
 
 <<<<<<< HEAD
         <h3 className="text-left">Implementation Framework</h3>"
-        <div className="text-left">"
+        <div className="text-left">
           <h4 className="text-left">Phase 1: Assessment & Planning (Months 1-3)</h4>"
-          <div className="text-left">"
-            <div className="text-left">"
+          <div className="text-left">
+            <div className="text-left">
               <h5 className="text-left">Process Analysis</h5>"
               <p className="text-left">Identify automation opportunities and requirements</p>"
 =======
@@ -293,9 +293,9 @@ export default function AIAutonomousRobotics2026() {
 
 <<<<<<< HEAD
         <h3 className="text-left">Success Stories</h3>"
-        <div className="text-left">"
+        <div className="text-left">
           <h4 className="text-left">Global Automotive Manufacturer</h4>"
-          <p className="text-left">"
+          <p className="text-left">
 =======
         <h3 className="text-left">Success Stories</h3>
 
@@ -323,7 +323,7 @@ export default function AIAutonomousRobotics2026() {
 
 <<<<<<< HEAD
         <h3 className="text-left">Future Trends</h3>"
-        <p className="text-left">"
+        <p className="text-left">
 =======
         <h3 className="text-left">Future Trends</h3>
 
@@ -343,7 +343,7 @@ export default function AIAutonomousRobotics2026() {
 
 <<<<<<< HEAD
         <h3 className="text-left">Getting Started</h3>"
-        <p className="text-left">"
+        <p className="text-left">
 =======
         <h3 className="text-left">Getting Started</h3>
 

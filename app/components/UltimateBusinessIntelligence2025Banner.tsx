@@ -10,7 +10,7 @@ const UltimateBusinessIntelligence2025Banner = () => {
   const content = [
     {
       id: 'ultimate-business-intelligence-revolution',
-      title= 'AI 2025: The Ultimate Business Intelligence Revolution',
+      title: 'AI 2025: The Ultimate Business Intelligence Revolution',
       description: 'Transform your enterprise with next-generation AI-powered business intelligence that delivers unprecedented insights and competitive advantage.',
       url: '/blog/ai-2025-ultimate-business-intelligence-revolution-ultimate-breakthrough',
       type: 'Blog Post',
@@ -25,7 +25,7 @@ const UltimateBusinessIntelligence2025Banner = () => {
     },
     {
       id: 'fortune-500-business-intelligence-success',
-      title= 'Fortune 500 Ultimate Business Intelligence Success',
+      title: 'Fortune 500 Ultimate Business Intelligence Success',
       description: 'How a $15.2B manufacturing giant achieved unprecedented business intelligence transformation with AI-powered analytics.',
       url: '/case-studies/fortune-500-ultimate-business-intelligence-30000-roi-success-story',
       type: 'Case Study',
@@ -40,7 +40,7 @@ const UltimateBusinessIntelligence2025Banner = () => {
     },
     {
       id: 'business-intelligence-implementation-guide',
-      title= 'AI 2025 Ultimate Business Intelligence Implementation Guide',
+      title: 'AI 2025 Ultimate Business Intelligence Implementation Guide',
       description: 'Complete roadmap to 30,000% ROI through revolutionary AI-powered business intelligence transformation.',
       url: '/resources/ai-2025-ultimate-business-intelligence-implementation-guide',
       type: 'Implementation Guide',
@@ -80,9 +80,9 @@ const UltimateBusinessIntelligence2025Banner = () => {
   const currentContent = content[currentSlide];
 
   return (
-    <div className="text-left">"
+    <div className="text-left">
       {/* Animated Background */}
-      <div className="text-left">"
+      <div className="text-left">
         <div className="text-left"></div>"
         <div className="text-left"></div>"
         <div className="text-left"></div>"
@@ -90,13 +90,13 @@ const UltimateBusinessIntelligence2025Banner = () => {
         <div className="text-left"></div>"
       </div>
 
-      <div className="text-left">"
-        <div className="text-left">"
-          <div className="text-left">"
-            <div className="text-left">"
+      <div className="text-left">
+        <div className="text-left">
+          <div className="text-left">
+            <div className="text-left">
               🚀 NEW BREAKTHROUGH
             </div>
-            <div className="text-left">"
+            <div className="text-left">
               Ultimate Business Intelligence 2025
             </div>
           </div>
@@ -111,39 +111,39 @@ const UltimateBusinessIntelligence2025Banner = () => {
           </button>
         </div>
 
-        <div className="text-left">"
-          <div className="text-left">"
-            <div className="text-left">"
-              <h2 className="text-left">"
+        <div className="text-left">
+          <div className="text-left">
+            <div className="text-left">
+              <h2 className="text-left">
                 {currentContent.title}
               </h2>
-              <p className="text-left">"
+              <p className="text-left">
                 {currentContent.description}
               </p>
             </div>
 
             {/* Success Metrics */}
-            <div className="text-left">"
-              <div className="text-left">"
+            <div className="text-left">
+              <div className="text-left">
                 <div className="text-left">{currentContent.metrics.roi}</div>"
                 <div className="text-left">ROI</div>"
               </div>
-              <div className="text-left">"
+              <div className="text-left">
                 <div className="text-left">{currentContent.metrics.savings}</div>"
                 <div className="text-left">Annual Savings</div>"
               </div>
-              <div className="text-left">"
+              <div className="text-left">
                 <div className="text-left">{currentContent.metrics.accuracy}</div>"
                 <div className="text-left">Accuracy</div>"
               </div>
-              <div className="text-left">"
+              <div className="text-left">
                 <div className="text-left">{currentContent.metrics.speed || currentContent.metrics.timeline}</div>"
                 <div className="text-left">{currentContent.metrics.speed ? 'Faster' : 'Timeline'}</div>"
               </div>
             </div>
 
             {/* Action Buttons */}
-            <div className="text-left">"
+            <div className="text-left">
               <Link
                 href={currentContent.url}
                 className="text-left"
@@ -159,23 +159,23 @@ const UltimateBusinessIntelligence2025Banner = () => {
             </div>
 
             {/* Content Type Badge */}
-            <div className="text-left">"
-              <span className="text-left">"
+            <div className="text-left">
+              <span className="text-left">
                 {currentContent.type}
-              <
-              <span className="text-left">"
+              </span>
+              <span className="text-left">
                 {currentContent.readingTime}
-              <
+              </span>
               {currentContent.featured && (
-                <span className="text-left">"
+                <span className="text-left">
                   FEATURED
-                <
+                </span>
               )}
             </div>
           </div>
 
           {/* Content Preview Cards */}
-          <div className="text-left">"
+          <div className="text-left">
             <h3 className="text-left">Featured Content</h3>"
             {content.map((item, index) => (
               <div
@@ -185,16 +185,16 @@ const UltimateBusinessIntelligence2025Banner = () => {
                 }`}
                 onClick={() => setCurrentSlide(index)}
               >
-                <div className="text-left">"
-                  <div className="text-left">"
+                <div className="text-left">
+                  <div className="text-left">
                     <h4 className="text-left">{item.title}</h4>"
-                    <div className="text-left">"
-                      <span>{item.type}<
-                      <span>•<
-                      <span>{item.readingTime}<
+                    <div className="text-left">
+                      <span>{item.type}</span>
+                      <span>•</span>
+                      <span>{item.readingTime}</span>
                     </div>
                   </div>
-                  <div className="text-left">"
+                  <div className="text-left">
                     <div className="text-left">{item.metrics.roi}</div>"
                     <div className="text-left">ROI</div>"
                   </div>
@@ -205,7 +205,7 @@ const UltimateBusinessIntelligence2025Banner = () => {
         </div>
 
         {/* Progress Indicators */}
-        <div className="text-left">"
+        <div className="text-left">
           {content.map((_, index) => (
             <button
               key={index}

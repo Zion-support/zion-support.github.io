@@ -12,8 +12,7 @@ const ConsensusIntelligenceBreakthroughBanner: React.FC = () => {
           with unprecedented accuracy and efficiency.
         </p>
       </div>
-    </div>
   );
 };
 
-export default ConsensusIntelligenceBreakthroughBanner;
+export default ConsensusIntelligenceBreakthroughBanner;</div>

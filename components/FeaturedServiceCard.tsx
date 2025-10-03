@@ -32,7 +32,6 @@ export default function FeaturedServiceCard({
         <h3 className="text-left">{title}</h3>
         <p className="text-left">{description}</p>
         <div className="text-left">{price}</div>
-      </div>
       
       <ul className="text-left">
         {features.map((feature, index) => (
@@ -59,4 +58,4 @@ export default function FeaturedServiceCard({
       </Link>
     </div>
   );
-}
+}</div>

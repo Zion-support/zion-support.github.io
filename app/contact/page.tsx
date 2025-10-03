@@ -2,69 +2,66 @@ import React from 'react';
 
 const ContactPage: React.FC = () => {
   return (
-    <div className="text-left">
-      <div className="text-left">
-        <h1 className="text-left">
+    <div className="min-h-screen bg-slate-50 py-16">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold text-gray-900 mb-8 text-center">
           Contact Us
         </h1>
-        <div className="text-left">
-          <div className="text-left">
-            <h3 className="text-left">Get in Touch</h3>
-            <form className="text-left">
+        <div className="max-w-4xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <h3 className="text-xl font-semibold mb-4">Get in Touch</h3>
+            <form className="space-y-4">
               <div>
-                <label className="text-left">
+                <label className="block text-sm font-medium text-gray-700 mb-2">
                   Name
                 </label>
                 <input
                   type="text"
-                  className="text-left"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
               </div>
               <div>
-                <label className="text-left">
+                <label className="block text-sm font-medium text-gray-700 mb-2">
                   Email
                 </label>
                 <input
                   type="email"
-                  className="text-left"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
               </div>
               <div>
-                <label className="text-left">
+                <label className="block text-sm font-medium text-gray-700 mb-2">
                   Message
                 </label>
                 <textarea
                   rows={4}
-                  className="text-left"
-                ></textarea>
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
               </div>
               <button
                 type="submit"
-                className="text-left"
-              >
+                className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg font-semibold transition-colors">
                 Send Message
               </button>
             </form>
           </div>
-          <div className="text-left">
-            <h3 className="text-left">Contact Information</h3>
-            <div className="text-left">
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <h3 className="text-xl font-semibold mb-4">Contact Information</h3>
+            <div className="space-y-4">
               <div>
-                <h4 className="text-left">Email</h4>
-                <p className="text-left">info@ziontech.com</p>
+                <h4 className="font-medium text-gray-900">Email</h4>
+                <p className="text-gray-600">info@ziontech.com</p>
               </div>
               <div>
-                <h4 className="text-left">Phone</h4>
-                <p className="text-left">(555) 123-4567</p>
+                <h4 className="font-medium text-gray-900">Phone</h4>
+                <p className="text-gray-600">(555) 123-4567</p>
               </div>
               <div>
-                <h4 className="text-left">Address</h4>
-                <p className="text-left">
+                <h4 className="font-medium text-gray-900">Address</h4>
+                <p className="text-gray-600">
                   123 Tech Street<br />
                   Innovation City, IC 12345
                 </p>
               </div>
-            </div>
           </div>
         </div>
       </div>

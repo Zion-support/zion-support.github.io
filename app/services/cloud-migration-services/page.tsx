@@ -34,7 +34,6 @@ export default function CloudMigrationServicesPage() {
               Get Migration Quote
             </a>
           </div>
-        </div>
       </section>
 
       {/* Cloud Providers Section */}
@@ -89,9 +88,8 @@ export default function CloudMigrationServicesPage() {
                 </li>
               </ul>
               <div className="text-left">
-                <span className="text-left">Starting at $2,999<
+                <span className="text-left">Starting at $2,999</span>
               </div>
-            </div>
 
             {/* Azure Migration */}
             <div className="text-left">
@@ -131,9 +129,8 @@ export default function CloudMigrationServicesPage() {
                 </li>
               </ul>
               <div className="text-left">
-                <span className="text-left">Starting at $3,499<
+                <span className="text-left">Starting at $3,499</span>
               </div>
-            </div>
 
             {/* Google Cloud Migration */}
             <div className="text-left">
@@ -176,11 +173,9 @@ export default function CloudMigrationServicesPage() {
                 </li>
               </ul>
               <div className="text-left">
-                <span className="text-left">Starting at $2,999<
+                <span className="text-left">Starting at $2,999</span>
               </div>
-            </div>
           </div>
-        </div>
       </section>
 
       {/* Migration Process Section */}
@@ -221,7 +216,6 @@ export default function CloudMigrationServicesPage() {
               <h3 className="text-left">Optimization</h3>
               <p className="text-left">Performance tuning, cost optimization, and ongoing support.</p>
             </div>
-          </div>
         </div>
       </section>
 
@@ -282,7 +276,7 @@ export default function CloudMigrationServicesPage() {
             {/* Enterprise */}
             <div className="text-left">
               <div className="text-left">
-                <span className="text-left">Most Popular<
+                <span className="text-left">Most Popular</span>
               </div>
               <div className="text-left">
                 <h3 className="text-left">Enterprise</h3>
@@ -375,7 +369,6 @@ export default function CloudMigrationServicesPage() {
                 Contact Sales
               </a>
             </div>
-          </div>
 
           <div className="text-left">
             <p className="text-left">
@@ -385,7 +378,6 @@ export default function CloudMigrationServicesPage() {
               <strong>Market Average:</strong> Cloud migration services range from $2,999-15,999 based on complexity
             </p>
           </div>
-        </div>
       </section>
 
       {/* CTA Section */}
@@ -411,8 +403,6 @@ export default function CloudMigrationServicesPage() {
               Get Migration Quote
             </a>
           </div>
-        </div>
       </section>
-    </div>
   );
-}
+}</div></div></div></div></div></div></div></div></div></div>

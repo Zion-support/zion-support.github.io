@@ -34,7 +34,6 @@ export default function AIContentGeneratorPage() {
               Get a Quote
             </a>
           </div>
-        </div>
       </section>
 
       {/* Features Section */}
@@ -134,7 +133,6 @@ export default function AIContentGeneratorPage() {
                 <li>• ROI measurement</li>
               </ul>
             </div>
-          </div>
         </div>
       </section>
 
@@ -195,7 +193,7 @@ export default function AIContentGeneratorPage() {
             {/* Professional Plan */}
             <div className="text-left">
               <div className="text-left">
-                <span className="text-left">Most Popular<
+                <span className="text-left">Most Popular</span>
               </div>
               <div className="text-left">
                 <h3 className="text-left">Professional</h3>
@@ -288,7 +286,6 @@ export default function AIContentGeneratorPage() {
                 Contact Sales
               </a>
             </div>
-          </div>
 
           <div className="text-left">
             <p className="text-left">
@@ -298,7 +295,6 @@ export default function AIContentGeneratorPage() {
               <strong>Market Average:</strong> $29-199/month for AI content generation services
             </p>
           </div>
-        </div>
       </section>
 
       {/* CTA Section */}
@@ -324,8 +320,6 @@ export default function AIContentGeneratorPage() {
               Get Started Today
             </a>
           </div>
-        </div>
       </section>
-    </div>
   );
-}
+}</div></div></div></div></div></div>
