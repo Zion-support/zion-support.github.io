@@ -95,7 +95,12 @@ export default [
       'all-automations-reports/**',
       'accessibility-reports/**',
       'backup-banner-components/**',
-      'blog/**',
+      'app/blog/**',
+      'app/components/NewContentPromotionalBanner2026.tsx',
+      'app/components/NewestContent2025Banner.tsx',
+      'app/components/September30NewContent2025Banner.tsx',
+      'app/components/UltimateBusinessIntelligence2025Banner.tsx',
+      'app/components/UltimateBusinessIntelligenceShowcase2025.tsx',
       'apps/**',
       'api/**',
       'advanced-*.js',
@@ -130,9 +135,8 @@ export default [
       'cache/**',
       '*.js',
       '*.cjs',
-      '*.tsx',
-      '*.ts',
       '!src/**',
+      '!app/**',
       '!package.json',
       '!package-lock.json',
       '!tsconfig.json',
@@ -153,7 +157,7 @@ export default [
 
   // Simplified TypeScript configuration (non type-aware)
   {
-    files: ["src/**/*.{ts,tsx}"],
+    files: ["src/**/*.{ts,tsx}", "app/**/*.{ts,tsx}"],
     languageOptions: {
       parser: tsParser,
       parserOptions: {

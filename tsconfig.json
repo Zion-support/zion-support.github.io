@@ -33,6 +33,17 @@
     }
   },
   "include": ["src", "app"],
-  "exclude": ["app/blog/**/*"],
+  "exclude": [
+    "app/blog/**/*",
+    "app/components/**/*",
+    "app/contact/**/*",
+    "app/enterprise/**/*",
+    "app/guides/**/*",
+    "app/services/**/*",
+    "app/services-advertising/**/*",
+    "app/not-found.tsx",
+    "app/page-minimal.tsx",
+    "app/page-optimized.tsx"
+  ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
