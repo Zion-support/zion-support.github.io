@@ -198,22 +198,22 @@ const industries = [
 
 export default function CaseStudiesPage() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50">"
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-green-600 to-blue-600 py-20">
-        <div className="container mx-auto px-6 text-center">
-          <h1 className="text-5xl font-bold text-white mb-6">
+      <section className="bg-gradient-to-r from-green-600 to-blue-600 py-20">"
+        <div className="container mx-auto px-6 text-center">"
+          <h1 className="text-5xl font-bold text-white mb-6">"
             Success Stories & Case Studies
           </h1>
-          <p className="text-xl text-green-100 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl text-green-100 mb-8 max-w-3xl mx-auto">"
             Real-world AI transformation success stories from Fortune 500 companies and enterprise clients. 
             See how our solutions deliver measurable results.
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
+          <div className="flex flex-wrap justify-center gap-4">"
             {industries.map((industry) => (
               <span
                 key={industry.name}
-                className="bg-white/20 text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-white/30 transition-colors cursor-pointer"
+                className="bg-white/20 text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-white/30 transition-colors cursor-pointer""
               >
                 {industry.name} ({industry.count})
               </span>
@@ -223,37 +223,37 @@ export default function CaseStudiesPage() {
       </section>
 
       {/* Featured Case Study */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-6">
-          <div className="bg-gradient-to-r from-green-50 to-blue-50 rounded-2xl p-8 mb-16">
-            <div className="flex items-center gap-2 mb-4">
-              <span className="bg-green-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+      <section className="py-16 bg-white">"
+        <div className="container mx-auto px-6">"
+          <div className="bg-gradient-to-r from-green-50 to-blue-50 rounded-2xl p-8 mb-16">"
+            <div className="flex items-center gap-2 mb-4">"
+              <span className="bg-green-600 text-white px-3 py-1 rounded-full text-sm font-medium">"
                 Featured Success Story
               </span>
-              <span className="text-gray-600 text-sm">Fortune 500 Client</span>
-              <span className="text-gray-600 text-sm">•</span>
-              <span className="text-gray-600 text-sm">18 months</span>
+              <span className="text-gray-600 text-sm">Fortune 500 Client</span>"
+              <span className="text-gray-600 text-sm">•</span>"
+              <span className="text-gray-600 text-sm">18 months</span>"
             </div>
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">"
               {caseStudies[0].title}
             </h2>
-            <p className="text-xl text-gray-600 mb-6 max-w-3xl">
+            <p className="text-xl text-gray-600 mb-6 max-w-3xl">"
               {caseStudies[0].excerpt}
             </p>
-            <div className="flex flex-wrap gap-4 mb-6">
+            <div className="flex flex-wrap gap-4 mb-6">"
               {Object.entries(caseStudies[0].results).map(([key, value]) => (
-                <span key={key} className="bg-white text-green-600 px-4 py-2 rounded-full text-sm font-medium">
+                <span key={key} className="bg-white text-green-600 px-4 py-2 rounded-full text-sm font-medium">"
                   {key.replace(/([A-Z])/g, ' $1').trim()}: {value}
                 </span>
               ))}
             </div>
             <Link
               href={`/case-studies/${caseStudies[0].slug}`}
-              className="inline-flex items-center bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
+              className="inline-flex items-center bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors""
             >
               Read Full Case Study
-              <svg className="w-5 h-5 ml-2" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+              <svg className="w-5 h-5 ml-2" fill="currentColor" viewBox="0 0 20 20">"
+                <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />"
               </svg>
             </Link>
           </div>
@@ -261,47 +261,47 @@ export default function CaseStudiesPage() {
       </section>
 
       {/* Case Studies Grid */}
-      <section className="py-16">
-        <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
+      <section className="py-16">"
+        <div className="container mx-auto px-6">"
+          <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">"
             All Success Stories
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">"
             {caseStudies.slice(1).map((study) => (
-              <article key={study.slug} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
-                <div className="h-48 bg-gradient-to-br from-green-500 to-blue-600 flex items-center justify-center">
-                  <div className="text-white text-center">
-                    <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-2">
-                      <span className="text-3xl">{study.image}</span>
+              <article key={study.slug} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">"
+                <div className="h-48 bg-gradient-to-br from-green-500 to-blue-600 flex items-center justify-center">"
+                  <div className="text-white text-center">"
+                    <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-2">"
+                      <span className="text-3xl">{study.image}</span>"
                     </div>
-                    <p className="text-sm font-medium">{study.industry}</p>
+                    <p className="text-sm font-medium">{study.industry}</p>"
                   </div>
                 </div>
-                <div className="p-6">
-                  <div className="flex items-center gap-2 mb-3">
+                <div className="p-6">"
+                  <div className="flex items-center gap-2 mb-3">"
                     <span className={`bg-${study.color}-100 text-${study.color}-800 px-2 py-1 rounded-full text-xs font-medium`}>
                       {study.industry}
                     </span>
-                    <span className="text-gray-500 text-sm">{study.company}</span>
+                    <span className="text-gray-500 text-sm">{study.company}</span>"
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">"
                     {study.title}
                   </h3>
-                  <p className="text-gray-600 mb-4 line-clamp-3">
+                  <p className="text-gray-600 mb-4 line-clamp-3">"
                     {study.excerpt}
                   </p>
-                  <div className="space-y-2 mb-4">
+                  <div className="space-y-2 mb-4">"
                     {Object.entries(study.results).slice(0, 2).map(([key, value]) => (
-                      <div key={key} className="text-sm text-green-600 font-medium">
+                      <div key={key} className="text-sm text-green-600 font-medium">"
                         ✓ {key.replace(/([A-Z])/g, ' $1').trim()}: {value}
                       </div>
                     ))}
                   </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-gray-500 text-sm">Success Story</span>
+                  <div className="flex items-center justify-between">"
+                    <span className="text-gray-500 text-sm">Success Story</span>"
                     <Link
                       href={`/case-studies/${study.slug}`}
-                      className="text-green-600 font-semibold hover:text-green-700 transition-colors"
+                      className="text-green-600 font-semibold hover:text-green-700 transition-colors""
                     >
                       Read More →
                     </Link>
@@ -314,32 +314,32 @@ export default function CaseStudiesPage() {
       </section>
 
       {/* Results Summary */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-6">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
+      <section className="py-16 bg-white">"
+        <div className="container mx-auto px-6">"
+          <div className="max-w-6xl mx-auto">"
+            <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">"
               Proven Results Across Industries
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div className="text-center">
-                <div className="text-4xl font-bold text-green-600 mb-2">$500M+</div>
-                <div className="text-gray-600 font-medium">Total Client Savings</div>
-                <div className="text-sm text-gray-500 mt-2">Across all implementations</div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">"
+              <div className="text-center">"
+                <div className="text-4xl font-bold text-green-600 mb-2">$500M+</div>"
+                <div className="text-gray-600 font-medium">Total Client Savings</div>"
+                <div className="text-sm text-gray-500 mt-2">Across all implementations</div>"
               </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-blue-600 mb-2">95%</div>
-                <div className="text-gray-600 font-medium">Average Efficiency Gain</div>
-                <div className="text-sm text-gray-500 mt-2">Process optimization</div>
+              <div className="text-center">"
+                <div className="text-4xl font-bold text-blue-600 mb-2">95%</div>"
+                <div className="text-gray-600 font-medium">Average Efficiency Gain</div>"
+                <div className="text-sm text-gray-500 mt-2">Process optimization</div>"
               </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-purple-600 mb-2">200+</div>
-                <div className="text-gray-600 font-medium">Successful Projects</div>
-                <div className="text-sm text-gray-500 mt-2">Enterprise clients</div>
+              <div className="text-center">"
+                <div className="text-4xl font-bold text-purple-600 mb-2">200+</div>"
+                <div className="text-gray-600 font-medium">Successful Projects</div>"
+                <div className="text-sm text-gray-500 mt-2">Enterprise clients</div>"
               </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-orange-600 mb-2">8</div>
-                <div className="text-gray-600 font-medium">Months Average ROI</div>
-                <div className="text-sm text-gray-500 mt-2">Payback period</div>
+              <div className="text-center">"
+                <div className="text-4xl font-bold text-orange-600 mb-2">8</div>"
+                <div className="text-gray-600 font-medium">Months Average ROI</div>"
+                <div className="text-sm text-gray-500 mt-2">Payback period</div>"
               </div>
             </div>
           </div>
@@ -347,24 +347,24 @@ export default function CaseStudiesPage() {
       </section>
 
       {/* Call to Action */}
-      <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600">
-        <div className="container mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">
+      <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600">"
+        <div className="container mx-auto px-6 text-center">"
+          <h2 className="text-3xl font-bold text-white mb-4">"
             Ready to Create Your Success Story?
           </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">"
             Join hundreds of successful companies that have transformed their operations with our AI solutions.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">"
             <Link
-              href="/services"
-              className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
+              href="/services""
+              className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors""
             >
               Explore Our Solutions
             </Link>
             <a
-              href="tel:+13024640950"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors"
+              href="tel:+13024640950""
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors""
             >
               Call +1 302 464 0950
             </a>

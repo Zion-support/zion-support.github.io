@@ -9,14 +9,14 @@ export const metadata = {
 
 export default function Page() {
 	return (
-		<main className="max-w-3xl mx-auto px-4 py-12">
-			<header className="mb-8">
-				<div className="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-semibold">NEW — Oct 1, 2025</div>
-				<h1 className="text-3xl md:text-4xl font-extrabold text-gray-900 mt-4">Agentic Analytics Platform</h1>
-				<p className="text-gray-600 mt-3">Real-time autonomous insights with governance, lineage, and 99.99% availability.</p>
+		<main className="max-w-3xl mx-auto px-4 py-12">"
+			<header className="mb-8">"
+				<div className="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-semibold">NEW — Oct 1, 2025</div>"
+				<h1 className="text-3xl md:text-4xl font-extrabold text-gray-900 mt-4">Agentic Analytics Platform</h1>"
+				<p className="text-gray-600 mt-3">Real-time autonomous insights with governance, lineage, and 99.99% availability.</p>"
 			</header>
 
-			<section className="prose prose-slate max-w-none">
+			<section className="prose prose-slate max-w-none">"
 				<p>
 					This guide details a production-ready agentic analytics platform that orchestrates data ingestion, transformation, feature computation, and insight delivery with autonomous agents. The reference design prioritizes reliability, observability, and compliance while reducing time-to-insight from hours to seconds.
 				</p>
@@ -31,8 +31,8 @@ export default function Page() {
 				</p>
 			</section>
 
-			<div className="mt-10">
-				<Link href="/blog" className="text-blue-600 font-semibold hover:text-blue-700">← Back to Blog</Link>
+			<div className="mt-10">"
+				<Link href="/blog" className="text-blue-600 font-semibold hover:text-blue-700">← Back to Blog</Link>"
 			</div>
 		</main>
 	);
