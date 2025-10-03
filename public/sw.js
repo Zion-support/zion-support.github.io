@@ -1,12 +1,11 @@
 
-const CACHE_NAME = 'zion-tech-v1';
+// Service Worker for caching and offline support
+const CACHE_NAME = 'zion-app-v1';
 const urlsToCache = [
   '/',
-  '/services',
-  '/contact',
-  '/about',
-  '/css/critical.css',
-  '/js/performance-optimizer.js'
+  '/static/css/main.css',
+  '/static/js/main.js',
+  '/static/js/vendor.js'
 ];
 
 self.addEventListener('install', (event) => {
@@ -20,12 +19,9 @@ self.addEventListener('fetch', (event) => {
   event.respondWith(
     caches.match(event.request)
       .then((response) => {
-        if (response) {
-          return response;
-        }
-        return fetch(event.request);
-      }
-    )
+        // Return cached version or fetch from network
+        return response || fetch(event.request);
+      })
   );
 });
 

@@ -1,5 +1,9 @@
 import React, { JSX, Suspense } from "react";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import '../app/globals.css';
+import { ErrorBoundary } from './components/ErrorBoundary';
+import { LoadingSpinner } from './components/LoadingSpinner';
+import { usePerformance } from './hooks/usePerformance';
 // 🌌🌌🌌 BREAKING: OCTOBER 2025 QUANTUM CONSCIOUSNESS SINGULARITY BREAKTHROUGH - ABSOLUTE #1 TOP PRIORITY! 🌌🌌🌌
 // 💎💎💎 JUST PUBLISHED: True Artificial Consciousness, Infinite Processing Power, $∞ Value Creation - REVOLUTIONARY BREAKTHROUGH! 💎💎💎
 import October2025QuantumConsciousnessSingularityBanner from "../components/October2025QuantumConsciousnessSingularityBanner";
@@ -35,8 +39,7 @@ function App(): JSX.Element {
   React.useEffect(() => {
     if (process.env.NODE_ENV === 'development') {
       logMetrics();
-      // eslint-disable-next-line no-console
-      console.log(`🎯 Performance Score: ${performanceScore}/100`);
+      // Performance score logged in development mode
     }
   }, [logMetrics, performanceScore]);
 
