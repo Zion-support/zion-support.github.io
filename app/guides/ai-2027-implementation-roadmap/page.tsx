@@ -322,21 +322,21 @@ export default function AI2027ImplementationRoadmap() {
           </div>
         </div>
 
-        <div className="text-center mb-8">"
+        <div className="text-center mb-8">
           <Link 
-            href="/[^"]*"
+            href="/contact"
             className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-bold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 inline-block">
             🚀 Get Your Custom Implementation Plan
           </Link>
         </div>
 
-        <div className="bg-gray-100 p-6 rounded-lg">"
-          <h3 className="text-lg font-bold mb-3">📞 Implementation Support</h3>"
-          <p className="text-gray-700 mb-4">"
+        <div className="bg-gray-100 p-6 rounded-lg">
+          <h3 className="text-lg font-bold mb-3">📞 Implementation Support</h3>
+          <p className="text-gray-700 mb-4">
             Ready to start your AI 2027 Advanced Neural Superintelligence implementation? 
             Our team of experts is standing by to provide comprehensive support throughout your journey.
           </p>
-          <div className="grid md:grid-cols-2 gap-4 text-sm">"
+          <div className="grid md:grid-cols-2 gap-4 text-sm">
             <div>
               <strong>Phone:</strong> +1 302 464 0950<br/>
               <strong>Email:</strong> implementation@ziontechgroup.com
