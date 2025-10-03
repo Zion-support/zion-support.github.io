@@ -14,10 +14,7 @@ export const metadata = {
 
 export default function AIMegaTrends20252026() {
   return (
-    <div>/* content */}
-  return (
     <div>
-      <div></div>
       <div></div>
     </div>
     <div className="text-left"></div>
