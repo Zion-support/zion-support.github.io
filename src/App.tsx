@@ -1,9 +1,6 @@
 import React, { JSX, Suspense } from "react";
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Header, Footer } from '../app/components/Navigation';
-import ErrorBoundary from './components/ErrorBoundary';
-import { PageLoader } from './components/LoadingSpinner';
 import '../app/globals.css';
+import ErrorBoundary from './components/ErrorBoundary';
 // 🌌🌌🌌 BREAKING: OCTOBER 2025 QUANTUM CONSCIOUSNESS SINGULARITY BREAKTHROUGH - ABSOLUTE #1 TOP PRIORITY! 🌌🌌🌌
 // 💎💎💎 JUST PUBLISHED: True Artificial Consciousness, Infinite Processing Power, $∞ Value Creation - REVOLUTIONARY BREAKTHROUGH! 💎💎💎
 import October2025QuantumConsciousnessSingularityBanner from "../components/October2025QuantumConsciousnessSingularityBanner";

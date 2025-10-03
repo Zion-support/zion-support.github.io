@@ -1,4 +1,3 @@
-import { memo } from 'react';
 
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg';

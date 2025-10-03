@@ -1,7 +1,6 @@
 import React from "react";
-import { createRoot } from "react-dom/client";
 import App from "./App";
-async function reportWebVitals() {
+async function reportWebVitals(): void {
   try {
     const { onCLS, onLCP, onFCP, onTTFB } = await import("web-vitals");
     const log = (metric: { name: string; value: number }) => {

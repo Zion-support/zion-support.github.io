@@ -1,4 +1,3 @@
-import { useEffect, useRef, useCallback } from 'react';
 
 export interface PerformanceMetrics {
   componentName: string;

@@ -1,4 +1,3 @@
-import { Zap } from "lucide-react";
 import React, { useMemo, useState } from "react";
 import BlogPromotionBanner from "../components/BlogPromotionBanner";
 
@@ -18,7 +17,7 @@ interface BlogPost {
 
 }
 
-export default function Blog(): React.JSX.Element {
+export default function Blog(): React.JSX.Element React.JSX.Element {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [searchTerm, setSearchTerm] = useState("");
 
