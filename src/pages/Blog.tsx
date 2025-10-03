@@ -1,41 +1,28 @@
-import { Zap } from "lucide-react";"
-import React, { useMemo, useState } from "react";"
-import BlogPromotionBanner from "../components/BlogPromotionBanner";"
-// const Footer: React.FC: ()  => null,
-// import Header from "../components/Header"
+import { Zap } from "lucide-react";
+import React, { useMemo, useState } from "react";
+import BlogPromotionBanner from "../components/BlogPromotionBanner";
 
 interface BlogPost {
-  id: number,,
-title: string,
-excerpt: string,,
-content: string,
-author: string,,
-date: string,
-readTime: string,,
-category: string,
-tags: string[],,
-image: string,
-featured: boolean,,
-views: number,
+  id: number;
+  title: string;
+  excerpt: string;
+  content: string;
+  author: string;
+  date: string;
+  readTime: string;
+  category: string;
+  tags: string[];
+  image: string;
+  featured: boolean;
+  views: number;
 
 }
 
 export default function Blog(): React.JSX.Element {
-  const [selectedCategory, setSelectedCategory] = useState("All");"
-  const [searchTerm, setSearchTerm] = useState(");"
+  const [selectedCategory, setSelectedCategory] = useState("All");
+  const [searchTerm, setSearchTerm] = useState("");
 
-  const categories: [,
-    "All",;"
-    "AI Strategy",;"
-    "Security",;"
-    "Edge Computing",;"
-    "GenAI",;"
-    "Data Engineering",;"
-    "Technology",;"
-    "AI Solutions",;"
-    "Case Studies",;"
-    "Industry Insights",;"
-    "Tutorials"
+  const categories = [
     "All",
     "AI Strategy",
     "Security",
@@ -46,12 +33,12 @@ export default function Blog(): React.JSX.Element {
     "AI Solutions",
     "Case Studies",
     "Industry Insights",
-    "Tutorials",
+    "Tutorials"
   ];
 
-  const staticPosts: BlogPost[]  = [,,
+  const staticPosts: BlogPost[] = [
     {
-      id: 1,,
+      id: 1,
       title: "How AI Workflow Automation Transformed a Fortune 500 Company",
       excerpt: "Discover how our AI workflow automation solution reduced manual processes by 80% and increased operational efficiency by 300% for a leading financial services company.",
       content: "Full case study content here...",
