@@ -55,54 +55,28 @@ const RealTimeCognitiveAutomationPage: React.FC = () => {
       
       <main>
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white py-20">
-          <div className="container mx-auto px-6">
-            <div className="text-center">
-              <h1 className="text-5xl font-bold mb-6">
-                Real-Time Cognitive Automation
-              </h1>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-                Transform your business operations with intelligent automation that thinks, learns, and adapts in real-time.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
-                  to="/contact" 
-                  className="bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
-                >
-                  Get Started
-                </Link>
-                <Link 
-                  to="/case-studies" 
-                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-900 transition-colors"
-                >
-                  View Case Studies
-                </Link>
-              </div>
-            </div>
+        <section className="bg-gradient-to-r from-indigo-600 to-blue-600 text-white py-16">
+          <div className="container mx-auto px-6 text-center">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">Real-Time Cognitive Automation</h1>
+            <p className="text-xl text-indigo-100 max-w-3xl mx-auto">
+              Transform your business operations with intelligent automation that thinks, learns, and adapts in real-time.
+            </p>
           </div>
         </section>
 
         {/* Features Grid */}
-        <section className="py-20 bg-white">
+        <section className="py-20">
           <div className="container mx-auto px-6">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Key Features</h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                Our cognitive automation solutions deliver unprecedented efficiency and intelligence
-              </p>
-            </div>
-            
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {automationFeatures.map((feature, index) => (
-                <div key={index} className="bg-gray-50 rounded-xl p-8 hover:shadow-lg transition-shadow">
+                <div key={index} className="bg-white p-8 rounded-xl shadow-sm hover:shadow-lg transition-shadow">
                   <div className="text-4xl mb-4">{feature.icon}</div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">{feature.title}</h3>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">{feature.title}</h3>
                   <p className="text-gray-600 mb-6">{feature.description}</p>
-                  
                   <ul className="space-y-2 mb-6">
-                    {feature.features.map((item, idx) => (
-                      <li key={idx} className="flex items-center text-gray-700">
-                        <span className="w-2 h-2 bg-indigo-600 rounded-full mr-3"></span>
+                    {feature.features.map((item, itemIndex) => (
+                      <li key={itemIndex} className="flex items-center text-sm text-gray-700">
+                        <span className="w-2 h-2 bg-indigo-500 rounded-full mr-3"></span>
                         {item}
                       </li>
                     ))}
@@ -121,36 +95,36 @@ const RealTimeCognitiveAutomationPage: React.FC = () => {
         </section>
 
         {/* Benefits Section */}
-        <section className="py-20 bg-indigo-600 text-white">
+        <section className="py-20 bg-white">
           <div className="container mx-auto px-6">
             <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold mb-4">Why Choose Cognitive Automation?</h2>
-              <p className="text-xl text-indigo-100 max-w-2xl mx-auto">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose Cognitive Automation?</h2>
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
                 Our cognitive automation solutions deliver unprecedented efficiency and intelligence
               </p>
             </div>
             
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center">
-                <div className="text-5xl mb-4">⚡</div>
-                <h3 className="text-xl font-bold mb-4">Real-Time Processing</h3>
-                <p className="text-indigo-100">
+                <div className="text-4xl mb-4">⚡</div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Real-Time Processing</h3>
+                <p className="text-gray-600">
                   Process and respond to data in real-time, enabling instant decision-making and immediate action.
                 </p>
               </div>
               
               <div className="text-center">
-                <div className="text-5xl mb-4">🧠</div>
-                <h3 className="text-xl font-bold mb-4">Intelligent Decision Making</h3>
-                <p className="text-indigo-100">
+                <div className="text-4xl mb-4">🎯</div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Intelligent Decision Making</h3>
+                <p className="text-gray-600">
                   AI-powered decision engines that learn from patterns and make optimal choices automatically.
                 </p>
               </div>
               
               <div className="text-center">
-                <div className="text-5xl mb-4">🔄</div>
-                <h3 className="text-xl font-bold mb-4">Continuous Learning</h3>
-                <p className="text-indigo-100">
+                <div className="text-4xl mb-4">📈</div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Continuous Learning</h3>
+                <p className="text-gray-600">
                   Systems that continuously improve and adapt based on new data and changing conditions.
                 </p>
               </div>
@@ -218,20 +192,9 @@ const RealTimeCognitiveAutomationPage: React.FC = () => {
             <p className="text-xl text-indigo-100 mb-8 max-w-2xl mx-auto">
               Start your cognitive automation journey today and experience unprecedented efficiency and intelligence.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to="/contact" 
-                className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-              >
-                Get Started
-              </Link>
-              <Link 
-                to="/demo" 
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors"
-              >
-                Schedule Demo
-              </Link>
-            </div>
+            <Link to="/contact" className="bg-white text-indigo-600 px-8 py-3 rounded-full text-lg font-semibold hover:bg-indigo-100 transition duration-300">
+              Get a Free Consultation
+            </Link>
           </div>
         </section>
       </main>
