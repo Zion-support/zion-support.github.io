@@ -29,7 +29,7 @@ const Fortune100AutonomousOperationsTransformation: () => {
           >
             <ArrowLeft className="w-4 h-4 mr-2 ">
             <ArrowLeft className="w-4 h-4 mr-2" />
-            <ArrowLeft className="w-4 h-4 mr-2" />>
+            <ArrowLeft className="w-4 h-4 mr-2" />
             <ArrowLeft className="w-4 h-4 mr-2" />
   Back to Case Studies
           </Link>
@@ -39,11 +39,11 @@ const Fortune100AutonomousOperationsTransformation: () => {
             <div className="flex items-center gap-4 mb-6 flex-wrap">
               <span className="px-4 py-2 bg-green-500/20 text-green-300 rounded-full text-sm font-semibold border border-green-500/30">
                 ✅ Completed • October 2025
-              </span>
+              <</span>
               <span className="px-4 py-2 bg-blue-500/20 text-blue-300 rounded-full text-sm font-semibold border border-blue-500/30">
                 🏦 Financial Services
-              </span>
-              <span className="text-blue-200">12-month transformation</span>
+              <</span>
+              <span className="text-blue-200">12-month transformation<</span>
             </div>
 
             <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 leading-tight">
@@ -54,11 +54,11 @@ const Fortune100AutonomousOperationsTransformation: () => {
             <div className="flex items-center gap-4 mb-6 flex-wrap">
               <span className="px-4 py-2 bg-green-500/20 text-green-300 rounded-full text-sm font-semibold border border-green-500/30">
                 ✅ Completed • October 2025
-              </span>
+              <</span>
               <span className="px-4 py-2 bg-blue-500/20 text-blue-300 rounded-full text-sm font-semibold border border-blue-500/30">
                 🏦 Financial Services
-              </span>
-              <span className="text-blue-200">12-month transformation</span>
+              <</span>
+              <span className="text-blue-200">12-month transformation<</span>
             </div>
 
             <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 leading-tight">"
@@ -66,7 +66,7 @@ const Fortune100AutonomousOperationsTransformation: () => {
             <h1 className="text-5xl md: text-6xl font-bold text-white mb-6 leading-tight">"
   Fortune 100 Enterprise: <span className="block text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400 mt-2">
                 $650M Value Creation Through Autonomous Business Operations
-              </span>
+              <</span>
             </h1>
 
             <p className="text-xl text-blue-200 leading-relaxed mb-8">
@@ -229,19 +229,19 @@ const Fortune100AutonomousOperationsTransformation: () => {
                 <ul className="space-y-3 text-red-100">
                   <li className="flex items-start gap-2">
                     <div className="w-2 h-2 bg-red-400 rounded-full mt-2"></div>
-                    <span>2.3M manual transactions per month across 15 countries</span>/span>
+                    <span>2.3M manual transactions per month across 15 countries<</span></span>
                   </li>
                   <li className="flex items-start gap-2">
                     <div className="w-2 h-2 bg-red-400 rounded-full mt-2"></div>
-                    <span>5-7 days average processing time for routine operations</span>/span>
+                    <span>5-7 days average processing time for routine operations<</span></span>
                   </li>
                   <li className="flex items-start gap-2">
                     <div className="w-2 h-2 bg-red-400 rounded-full mt-2"></div>
-                    <span>3,500+ employees in back-office operations</span>/span>
+                    <span>3,500+ employees in back-office operations<</span></span>
                   </li>
                   <li className="flex items-start gap-2">
                     <div className="w-2 h-2 bg-red-400 rounded-full mt-2"></div>
-                    <span>$420M annual operational costs with 15% YoY growth</span>/span>
+                    <span>$420M annual operational costs with 15% YoY growth<</span></span>
                   </li>
                   <li className="flex items-start gap-2">
                     <div className="w-2 h-2 bg-red-400 rounded-full mt-2"></div>
@@ -261,23 +261,23 @@ const Fortune100AutonomousOperationsTransformation: () => {
                 <ul className="space-y-3 text-red-100">
                   <li className="flex items-start gap-2">
                     <div className="w-2 h-2 bg-red-400 rounded-full mt-2"></div>
-                    <span>2.3M manual transactions per month across 15 countries</span>/span>
+                    <span>2.3M manual transactions per month across 15 countries<</span></span>
                   </li>
                   <li className="flex items-start gap-2">
                     <div className="w-2 h-2 bg-red-400 rounded-full mt-2"></div>
-                    <span>5-7 days average processing time for routine operations</span>/span>
+                    <span>5-7 days average processing time for routine operations<</span></span>
                   </li>
                   <li className="flex items-start gap-2">
                     <div className="w-2 h-2 bg-red-400 rounded-full mt-2"></div>
-                    <span>3,500+ employees in back-office operations</span>/span>
+                    <span>3,500+ employees in back-office operations<</span></span>
                   </li>
                   <li className="flex items-start gap-2">
                     <div className="w-2 h-2 bg-red-400 rounded-full mt-2"></div>
-                    <span>$420M annual operational costs with 15% YoY growth</span>/span>
+                    <span>$420M annual operational costs with 15% YoY growth<</span></span>
                   </li>
                   <li className="flex items-start gap-2">
                     <div className="w-2 h-2 bg-red-400 rounded-full mt-2"></div>
-                    <span>3.2% error rate costing $45M/year in remediation</span>/span>
+                    <span>3.2% error rate costing $45M/year in remediation<</span></span>
                   </li>
                 </ul>
               </div>
@@ -286,102 +286,91 @@ const Fortune100AutonomousOperationsTransformation: () => {
                 <h3 className="text-2xl font-bold text-white mb-4">Strategic Imperatives</h3>
                 <ul className="space-y-3 text-yellow-100">
                   <li className="flex items-start gap-2">
-                    <CheckCircle className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0 " / />> />>
-                    <span>Reduce operational costs by 60%+ within 18 months</span>/span>
+                    <CheckCircle className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0 ">
+                    <span>Reduce operational costs by 60%+ within 18 months<</span></span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <CheckCircle className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0 " / />> />>
-                    <span>Improve processing speed by 10x</span>/span>
+                    <CheckCircle className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0 ">
+                    <span>Improve processing speed by 10x<</span></span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <CheckCircle className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0 " / />> />>
-                    <span>Achieve 99.5%+ accuracy across all operations</span>/span>
+                    <CheckCircle className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0 ">
+                    <span>Achieve 99.5%+ accuracy across all operations<</span></span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <CheckCircle className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0 " / />> />>
-                    <span>Enable 24/7 global operations without offshore labor</span>/span>
+                    <CheckCircle className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0 ">
+                    <span>Enable 24/7 global operations without offshore labor<</span></span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <CheckCircle className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0 " / />> />
-                  </li>
+                    <CheckCircle className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0 "                  </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0/>
-                    <span>Improve processing speed by 10x</span>/span>
+                    <span>Improve processing speed by 10x<</span></span>
                   </li>
                   <li className="<li className="flex items-start gap-2">
                     <CheckCircle className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0/>
-                    <span>Achieve 99.5%+ accuracy across all operations</span>/span>
+                    <span>Achieve 99.5%+ accuracy across all operations<</span></span>
                   </li>
                   <li className="<li className="flex items-start gap-2">
                     <CheckCircle className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0/>
-                    <span>Enable 24/7 global operations without offshore labor</span>/span>
+                    <span>Enable 24/7 global operations without offshore labor<</span></span>
                   </li>
                   <li className="<li className="flex items-start gap-2">
-                    <CheckCircle className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0/>" / />> />>
+                    <CheckCircle className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0/>">
               <div className="bg-gradient-to-br from-yellow-900/40 to-amber-900/40 backdrop-blur-sm rounded-xl p-8 border border-yellow-400/30">
                 <h3 className="text-2xl font-bold text-white mb-4">Strategic Imperatives</h3>
                 <ul className="space-y-3 text-yellow-100">
                   <li className="flex items-start gap-2">
-                    <CheckCircle className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0" /> / />> />
-                    <span>Reduce operational costs by 60%+ within 18 months</span>/span>
+                    <CheckCircle className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0" />                    <span>Reduce operational costs by 60%+ within 18 months<</span></span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <CheckCircle className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0" /> / />> />
-                    <span>Improve processing speed by 10x</span>/span>
+                    <CheckCircle className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0" />                    <span>Improve processing speed by 10x<</span></span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <CheckCircle className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0" /> / />> />
-                    <span>Achieve 99.5%+ accuracy across all operations</span>/span>
+                    <CheckCircle className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0" />                    <span>Achieve 99.5%+ accuracy across all operations<</span></span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <CheckCircle className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0" /> / />> />
-                    <span>Enable 24/7 global operations without offshore labor</span>/span>
+                    <CheckCircle className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0" />                    <span>Enable 24/7 global operations without offshore labor<</span></span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <CheckCircle className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0" /> / />> />
+                    <CheckCircle className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0" />              <div className="bg-gradient-to-br from-yellow-900/40 to-amber-900/40 backdrop-blur-sm rounded-xl p-8 border border-yellow-400/30">
+                <h3 className="text-2xl font-bold text-white mb-4">Strategic Imperatives</h3>
+                <ul className="space-y-3 text-yellow-100">
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0/>">
+                    <span>Reduce operational costs by 60%+ within 18 months<</span></span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0/>">
+                    <span>Improve processing speed by 10x<</span></span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0/>">
+                    <span>Achieve 99.5%+ accuracy across all operations<</span></span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0/>">
+                    <span>Enable 24/7 global operations without offshore labor<</span></span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <CheckCircle className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0/>">
               <div className="bg-gradient-to-br from-yellow-900/40 to-amber-900/40 backdrop-blur-sm rounded-xl p-8 border border-yellow-400/30">
                 <h3 className="text-2xl font-bold text-white mb-4">Strategic Imperatives</h3>
                 <ul className="space-y-3 text-yellow-100">
                   <li className="flex items-start gap-2">
-                    <CheckCircle className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0/>" / />> />>
-                    <span>Reduce operational costs by 60%+ within 18 months</span>/span>
+                    <CheckCircle className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0" />                    <span>Reduce operational costs by 60%+ within 18 months<</span></span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <CheckCircle className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0/>" / />> />>
-                    <span>Improve processing speed by 10x</span>/span>
+                    <CheckCircle className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0" />                    <span>Improve processing speed by 10x<</span></span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <CheckCircle className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0/>" / />> />>
-                    <span>Achieve 99.5%+ accuracy across all operations</span>/span>
+                    <CheckCircle className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0" />                    <span>Achieve 99.5%+ accuracy across all operations<</span></span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <CheckCircle className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0/>" / />> />>
-                    <span>Enable 24/7 global operations without offshore labor</span>/span>
+                    <CheckCircle className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0" />                    <span>Enable 24/7 global operations without offshore labor<</span></span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <CheckCircle className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0/>" / />> />>
-              <div className="bg-gradient-to-br from-yellow-900/40 to-amber-900/40 backdrop-blur-sm rounded-xl p-8 border border-yellow-400/30">
-                <h3 className="text-2xl font-bold text-white mb-4">Strategic Imperatives</h3>
-                <ul className="space-y-3 text-yellow-100">
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0" /> / />> />
-                    <span>Reduce operational costs by 60%+ within 18 months</span>/span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0" /> / />> />
-                    <span>Improve processing speed by 10x</span>/span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0" /> / />> />
-                    <span>Achieve 99.5%+ accuracy across all operations</span>/span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0" /> / />> />
-                    <span>Enable 24/7 global operations without offshore labor</span>/span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0" /> / />> />
-                    <span>Maintain regulatory compliance across all jurisdictions</span>/span>
+                    <CheckCircle className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0" />                    <span>Maintain regulatory compliance across all jurisdictions<</span></span>
                   </li>
                 </ul>
               </div>
@@ -638,41 +627,38 @@ const Fortune100AutonomousOperationsTransformation: () => {
                 <h3 className="text-2xl font-bold text-white mb-6">Speed & Scale</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0 " / />> />>
+                    <CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0 ">
               <div className="bg-gradient-to-br from-blue-900/60 to-cyan-900/60 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30">
                 <h3 className="text-2xl font-bold text-white mb-6">Speed & Scale</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0/>" / />> />>
+                    <CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0/>">
             <div className="grid md:grid-cols-2 gap-8 mb-8">
               <div className="bg-gradient-to-br from-blue-900/60 to-cyan-900/60 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30">
                 <h3 className="text-2xl font-bold text-white mb-6">Speed & Scale</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" /> / />> />
-                    <div >
+                    <CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />                    <div >
                       <div className="text-white font-semibold">10x Faster Processing</div>
                       <div className="text-blue-200 text-sm">5 days → 12 hours average</div>
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0 " / />> />>
+                    <CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0 ">
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0/>" / />> />>
+                    <CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0/>">
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" /> / />> />
-                    <div >
+                    <CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />                    <div >
                       <div className="text-white font-semibold">&lt;100ms Decision Latency</div>
                       <div className="text-blue-200 text-sm">Real-time operations</div>
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0 " / />> />>
+                    <CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0 ">
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0/>" / />> />>
+                    <CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0/>">
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" /> / />> />
-                    <div >
+                    <CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />                    <div >
                       <div className="text-white font-semibold">2x Transaction Volume</div>
                       <div className="text-blue-200 text-sm">2.3M → 4.8M/month capacity</div>
             <div className="grid md:grid-cols-2 gap-8 mb-8">
@@ -680,32 +666,29 @@ const Fortune100AutonomousOperationsTransformation: () => {
                 <h3 className="text-2xl font-bold text-white mb-6">Speed & Scale</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0/>" / />> />>
+                    <CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0/>">
             <div className="grid md:grid-cols-2 gap-8 mb-8">
               <div className="bg-gradient-to-br from-blue-900/60 to-cyan-900/60 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30">
                 <h3 className="text-2xl font-bold text-white mb-6">Speed & Scale</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" /> / />> />
-                    <div >
+                    <CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />                    <div >
                       <div className="text-white font-semibold">10x Faster Processing</div>
                       <div className="text-blue-200 text-sm">5 days → 12 hours average</div>
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0/>" / />> />>
+                    <CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0/>">
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" /> / />> />
-                    <div >
+                    <CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />                    <div >
                       <div className="text-white font-semibold">&lt;100ms Decision Latency</div>
                       <div className="text-blue-200 text-sm">Real-time operations</div>
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0/>" / />> />>
+                    <CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0/>">
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" /> / />> />
-                    <div >
+                    <CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />                    <div >
                       <div className="text-white font-semibold">2x Transaction Volume</div>
                       <div className="text-blue-200 text-sm">2.3M → 4.8M/month capacity</div>
                     </div>
@@ -717,71 +700,70 @@ const Fortune100AutonomousOperationsTransformation: () => {
                 <h3 className="text-2xl font-bold text-white mb-6">Quality & Accuracy</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-purple-400 mt-1 flex-shrink-0 " / />> />>
+                    <CheckCircle className="w-5 h-5 text-purple-400 mt-1 flex-shrink-0 ">
               <div className="bg-gradient-to-br from-purple-900/60 to-pink-900/60 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30">
                 <h3 className="text-2xl font-bold text-white mb-6">Quality & Accuracy</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-purple-400 mt-1 flex-shrink-0/>" / />> />>
+                    <CheckCircle className="w-5 h-5 text-purple-400 mt-1 flex-shrink-0/>">
               <div className="bg-gradient-to-br from-purple-900/60 to-pink-900/60 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30">
                 <h3 className="text-2xl font-bold text-white mb-6">Quality & Accuracy</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-purple-400 mt-1 flex-shrink-0" /> / />> />
-                    <div >
+                    <CheckCircle className="w-5 h-5 text-purple-400 mt-1 flex-shrink-0" />                    <div >
                       <div className="text-white font-semibold">99.7% Accuracy</div>
                       <div className="text-purple-200 text-sm">Across all workflows</div>
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-purple-400 mt-1 flex-shrink-0 " / />> />>
+                    <CheckCircle className="w-5 h-5 text-purple-400 mt-1 flex-shrink-0 ">
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-purple-400 mt-1 flex-shrink-0/>" / />> />>
+                    <CheckCircle className="w-5 h-5 text-purple-400 mt-1 flex-shrink-0/>">
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-purple-400 mt-1 flex-shrink-0" /> / />> />
-                    <div >
+                    <CheckCircle className="w-5 h-5 text-purple-400 mt-1 flex-shrink-0" />                    <div >
                       <div className="text-white font-semibold">97% Error Reduction</div>
                       <div className="text-purple-200 text-sm">3.2% → 0.1% error rate</div>
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-purple-400 mt-1 flex-shrink-0 " / />> />>
+                    <CheckCircle className="w-5 h-5 text-purple-400 mt-1 flex-shrink-0 ">
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-purple-400 mt-1 flex-shrink-0/>" / />> />>
+                    <CheckCircle className="w-5 h-5 text-purple-400 mt-1 flex-shrink-0/>">
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-purple-400 mt-1 flex-shrink-0" /> / />> />
-                    <div >
+                    <CheckCircle className="w-5 h-5 text-purple-400 mt-1 flex-shrink-0" />                    <div >
                       <div className="text-white font-semibold">98.5% SLA Compliance</div>
                       <div className="text-purple-200 text-sm">vs. 87% baseline</div>
               <div className="bg-gradient-to-br from-purple-900/60 to-pink-900/60 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30">
                 <h3 className="text-2xl font-bold text-white mb-6">Quality & Accuracy</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-purple-400 mt-1 flex-shrink-0/>" / />> />>
+                    <CheckCircle className="w-5 h-5 text-purple-400 mt-1 flex-shrink-0/>">
               <div className="bg-gradient-to-br from-purple-900/60 to-pink-900/60 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30">
                 <h3 className="text-2xl font-bold text-white mb-6">Quality & Accuracy</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-purple-400 mt-1 flex-shrink-0" /> / />> />
-                    <div >
+                    <CheckCircle className="w-5 h-5 text-purple-400 mt-1 flex-shrink-0" />                    <div >
                       <div className="text-white font-semibold">99.7% Accuracy</div>
                       <div className="text-purple-200 text-sm">Across all workflows</div>
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-purple-400 mt-1 flex-shrink-0/>" / />> />>
+                    <CheckCircle className="w-5 h-5 text-purple-400 mt-1 flex-shrink-0" />
+                    <div>
+                      <div className="text-white font-semibold">99.8% Uptime</div>
+                      <div className="text-purple-200 text-sm">vs. 94% baseline</div>
+                    </div>
+                  </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-purple-400 mt-1 flex-shrink-0" /> / />> />
-                    <div >
+                    <CheckCircle className="w-5 h-5 text-purple-400 mt-1 flex-shrink-0" />
+                    <div>
                       <div className="text-white font-semibold">97% Error Reduction</div>
                       <div className="text-purple-200 text-sm">3.2% → 0.1% error rate</div>
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-purple-400 mt-1 flex-shrink-0/>" / />> />>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-purple-400 mt-1 flex-shrink-0" /> / />> />
-                    <div >
+                    <CheckCircle className="w-5 h-5 text-purple-400 mt-1 flex-shrink-0" />
+                    <div>
                       <div className="text-white font-semibold">98.5% SLA Compliance</div>
                       <div className="text-purple-200 text-sm">vs. 87% baseline</div>
                     </div>
@@ -799,11 +781,11 @@ const Fortune100AutonomousOperationsTransformation: () => {
                   <ul className="space-y-2 text-orange-100">
                     <li className="flex items-center gap-2">
                       <div className="w-2 h-2 bg-orange-400 rounded-full"></div>
-                      <span>NPS: +32 points (38 → 70)</span>/span>,
+                      <span>NPS: +32 points (38 → 70)<</span><</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <div className="w-2 h-2 bg-orange-400 rounded-full"></div>
-                      <span>CSAT: +28% (72% → 92%)</span>/span>,
+                      <span>CSAT: +28% (72% → 92%)<</span><</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <div className="w-2 h-2 bg-orange-400 rounded-full"></div>
@@ -815,11 +797,11 @@ const Fortune100AutonomousOperationsTransformation: () => {
                   <ul className="space-y-2 text-orange-100">
                     <li className="flex items-center gap-2">
                       <div className="w-2 h-2 bg-orange-400 rounded-full"></div>
-                      <span>NPS: +32 points (38 → 70)</span>/span>,
+                      <span>NPS: +32 points (38 → 70)<</span><</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <div className="w-2 h-2 bg-orange-400 rounded-full"></div>
-                      <span>CSAT: +28% (72% → 92%)</span>/span>,
+                      <span>CSAT: +28% (72% → 92%)<</span><</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <div className="w-2 h-2 bg-orange-400 rounded-full"></div>
@@ -831,11 +813,11 @@ const Fortune100AutonomousOperationsTransformation: () => {
                   <ul className="space-y-2 text-orange-100">
                     <li className="flex items-center gap-2">
                       <div className="w-2 h-2 bg-orange-400 rounded-full"></div>
-                      <span>NPS: +32 points (38 → 70)</span>/span>,
+                      <span>NPS: +32 points (38 → 70)<</span><</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <div className="w-2 h-2 bg-orange-400 rounded-full"></div>
-                      <span>CSAT: +28% (72% → 92%)</span>/span>,
+                      <span>CSAT: +28% (72% → 92%)<</span><</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <div className="w-2 h-2 bg-orange-400 rounded-full"></div>
@@ -847,15 +829,15 @@ const Fortune100AutonomousOperationsTransformation: () => {
                   <ul className="space-y-2 text-orange-100">
                     <li className="flex items-center gap-2">
                       <div className="w-2 h-2 bg-orange-400 rounded-full"></div>
-                      <span>NPS: +32 points (38 → 70)</span>/span>,
+                      <span>NPS: +32 points (38 → 70)<</span><</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <div className="w-2 h-2 bg-orange-400 rounded-full"></div>
-                      <span>CSAT: +28% (72% → 92%)</span>/span>,
+                      <span>CSAT: +28% (72% → 92%)<</span><</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <div className="w-2 h-2 bg-orange-400 rounded-full"></div>
-                      <span>First Contact Resolution: +45%</span>/span>,
+                      <span>First Contact Resolution: +45%<</span><</span>
                     </li>
                   </ul>
                 </div>
@@ -864,11 +846,11 @@ const Fortune100AutonomousOperationsTransformation: () => {
                   <ul className="space-y-2 text-red-100">
                     <li className="flex items-center gap-2">
                       <div className="w-2 h-2 bg-red-400 rounded-full"></div>
-                      <span>92% employee satisfaction</span>/span>
+                      <span>92% employee satisfaction<</span></span>
                     </li>
                     <li className="flex items-center gap-2">
                       <div className="w-2 h-2 bg-red-400 rounded-full"></div>
-                      <span>65% reduction in burnout</span>/span>
+                      <span>65% reduction in burnout<</span></span>
                     </li>
                     <li className="flex items-center gap-2">
                       <div className="w-2 h-2 bg-red-400 rounded-full"></div>
@@ -876,15 +858,15 @@ const Fortune100AutonomousOperationsTransformation: () => {
                   <ul className="space-y-2 text-red-100">
                     <li className="flex items-center gap-2">
                       <div className="w-2 h-2 bg-red-400 rounded-full"></div>
-                      <span>92% employee satisfaction</span>/span>
+                      <span>92% employee satisfaction<</span></span>
                     </li>
                     <li className="flex items-center gap-2">
                       <div className="w-2 h-2 bg-red-400 rounded-full"></div>
-                      <span>65% reduction in burnout</span>/span>
+                      <span>65% reduction in burnout<</span></span>
                     </li>
                     <li className="flex items-center gap-2">
                       <div className="w-2 h-2 bg-red-400 rounded-full"></div>
-                      <span>2,500+ employees reskilled</span>/span>
+                      <span>2,500+ employees reskilled<</span></span>
                     </li>
                   </ul>
                 </div>
@@ -901,15 +883,15 @@ const Fortune100AutonomousOperationsTransformation: () => {
                 <ul className="space-y-3 text-blue-100">
                   <li className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
-                    <span><strong>Executive Sponsorship: </strong> C-suite commitment with quarterly business reviews and protected budget</span>,
+                    <span><strong>Executive Sponsorship: </strong> C-suite commitment with quarterly business reviews and protected budget<<</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
-                    <span><strong>Change Management: </strong> Transparent communication, comprehensive training, reskilling programs</span>,
+                    <span><strong>Change Management: </strong> Transparent communication, comprehensive training, reskilling programs<<</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
-                    <span><strong>Technology Choices: </strong> Cloud-native, open-source, best-of-breed, modular design</span>,
+                    <span><strong>Technology Choices: </strong> Cloud-native, open-source, best-of-breed, modular design<<</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
@@ -921,15 +903,15 @@ const Fortune100AutonomousOperationsTransformation: () => {
                 <ul className="space-y-3 text-blue-100">
                   <li className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
-                    <span><strong>Executive Sponsorship: </strong> C-suite commitment with quarterly business reviews and protected budget</span>,
+                    <span><strong>Executive Sponsorship: </strong> C-suite commitment with quarterly business reviews and protected budget<<</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
-                    <span><strong>Change Management: </strong> Transparent communication, comprehensive training, reskilling programs</span>,
+                    <span><strong>Change Management: </strong> Transparent communication, comprehensive training, reskilling programs<<</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
-                    <span><strong>Technology Choices: </strong> Cloud-native, open-source, best-of-breed, modular design</span>,
+                    <span><strong>Technology Choices: </strong> Cloud-native, open-source, best-of-breed, modular design<<</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
@@ -941,15 +923,15 @@ const Fortune100AutonomousOperationsTransformation: () => {
                 <ul className="space-y-3 text-blue-100">
                   <li className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
-                    <span><strong>Executive Sponsorship: </strong> C-suite commitment with quarterly business reviews and protected budget</span>,
+                    <span><strong>Executive Sponsorship: </strong> C-suite commitment with quarterly business reviews and protected budget<<</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
-                    <span><strong>Change Management: </strong> Transparent communication, comprehensive training, reskilling programs</span>,
+                    <span><strong>Change Management: </strong> Transparent communication, comprehensive training, reskilling programs<<</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
-                    <span><strong>Technology Choices: </strong> Cloud-native, open-source, best-of-breed, modular design</span>,
+                    <span><strong>Technology Choices: </strong> Cloud-native, open-source, best-of-breed, modular design<<</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
@@ -961,19 +943,19 @@ const Fortune100AutonomousOperationsTransformation: () => {
                 <ul className="space-y-3 text-blue-100">
                   <li className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
-                    <span><strong>Executive Sponsorship: </strong> C-suite commitment with quarterly business reviews and protected budget</span>,
+                    <span><strong>Executive Sponsorship: </strong> C-suite commitment with quarterly business reviews and protected budget<<</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
-                    <span><strong>Change Management: </strong> Transparent communication, comprehensive training, reskilling programs</span>,
+                    <span><strong>Change Management: </strong> Transparent communication, comprehensive training, reskilling programs<<</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
-                    <span><strong>Technology Choices: </strong> Cloud-native, open-source, best-of-breed, modular design</span>,
+                    <span><strong>Technology Choices: </strong> Cloud-native, open-source, best-of-breed, modular design<<</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
-                    <span><strong>Governance & Risk: </strong> Human-in-the-loop for high-risk decisions, comprehensive audit trails</span>,
+                    <span><strong>Governance & Risk: </strong> Human-in-the-loop for high-risk decisions, comprehensive audit trails<<</span>
                   </li>
                 </ul>
               </div>
@@ -983,15 +965,15 @@ const Fortune100AutonomousOperationsTransformation: () => {
                 <ul className="space-y-3 text-yellow-100">
                   <li className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-yellow-400 rounded-full mt-2 flex-shrink-0"></div>
-                    <span>Started with 5 high-value workflows instead of trying to automate everything at once</span>/span>
+                    <span>Started with 5 high-value workflows instead of trying to automate everything at once<</span></span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-yellow-400 rounded-full mt-2 flex-shrink-0"></div>
-                    <span>Involved employees in design rather than surprising them with automation</span>/span>
+                    <span>Involved employees in design rather than surprising them with automation<</span></span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-yellow-400 rounded-full mt-2 flex-shrink-0"></div>
-                    <span>Invested in data quality upfront to ensure accurate model training</span>/span>
+                    <span>Invested in data quality upfront to ensure accurate model training<</span></span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-yellow-400 rounded-full mt-2 flex-shrink-0"></div>
@@ -1000,19 +982,19 @@ const Fortune100AutonomousOperationsTransformation: () => {
                 <ul className="space-y-3 text-yellow-100">
                   <li className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-yellow-400 rounded-full mt-2 flex-shrink-0"></div>
-                    <span>Started with 5 high-value workflows instead of trying to automate everything at once</span>/span>
+                    <span>Started with 5 high-value workflows instead of trying to automate everything at once<</span></span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-yellow-400 rounded-full mt-2 flex-shrink-0"></div>
-                    <span>Involved employees in design rather than surprising them with automation</span>/span>
+                    <span>Involved employees in design rather than surprising them with automation<</span></span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-yellow-400 rounded-full mt-2 flex-shrink-0"></div>
-                    <span>Invested in data quality upfront to ensure accurate model training</span>/span>
+                    <span>Invested in data quality upfront to ensure accurate model training<</span></span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-yellow-400 rounded-full mt-2 flex-shrink-0"></div>
-                    <span>Business-led transformation rather than treating as IT project</span>/span>
+                    <span>Business-led transformation rather than treating as IT project<</span></span>
                   </li>
                 </ul>
               </div>
