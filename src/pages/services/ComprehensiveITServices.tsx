@@ -144,7 +144,7 @@ const ComprehensiveITServices: React.FC  = () => {
                   
                   <Link 
                     to="/contact" 
-                    className="block w-full text-center bg-gradient-to-r from-purple-600 to-violet-600 text-white px-6 py-3 rounded-lg font-semibold hover: from-purple-700 hover:to-violet-700 transition-all duration-300 shadow-md hover:shadow-lg",
+                    className="block w-full text-center bg-gradient-to-r from-purple-600 to-violet-600 text-white px-6 py-3 rounded-lg font-semibold hover: from-purple-700 hover:to-violet-700 transition-all duration-300 shadow-md hover:shadow-lg
                   >
                     Get Started
                   </Link>
@@ -231,13 +231,13 @@ const ComprehensiveITServices: React.FC  = () => {
             <div className="flex flex-col sm: flex-row gap-4 justify-center">"
               <Link 
                 to="/contact" 
-                className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover: bg-gray-100 transition-colors shadow-lg",
+                className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg
               >
                 Schedule Consultation
               </Link>
               <Link 
                 to="/case-studies" 
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover: bg-white hover:text-purple-600 transition-colors",
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors
               >
                 View Case Studies
               </Link>
