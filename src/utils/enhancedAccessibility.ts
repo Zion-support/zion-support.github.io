@@ -163,14 +163,19 @@ class EnhancedAccessibility {
   private enhanceFormLabels(): void {
     const inputs = document.querySelectorAll('input, textarea, select');
     inputs.forEach((input) => {
-        if (label) {
-          input.setAttribute('aria-labelledby', label.id || `label-${input.id}`);
-        }
+      const label = document.querySelector(`label[for="${input.id}"]`) as HTMLElement;
+      if (label) {
+        input.setAttribute('aria-labelledby', label.id || `label-${input.id}`);
       }
     });
   }
 
   private addSkipLinks(): void {
+    const skipLinks = document.createElement('div');
+    skipLinks.innerHTML = `
+      <a href="#main-content" class="skip-link">Skip to main content</a>
+      <a href="#navigation" class="skip-link">Skip to navigation</a>
+    `;
     document.body.insertBefore(skipLinks, document.body.firstChild);
   }
 
@@ -190,6 +195,14 @@ class EnhancedAccessibility {
     if (!this.config.enableFocusManagement) return;
 
     // Add focus indicators
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Tab') {
+        document.body.classList.add('keyboard-navigation');
+      }
+    });
+    
+    document.addEventListener('mousedown', () => {
+      document.body.classList.remove('keyboard-navigation');
     });
   }
 
@@ -248,7 +261,8 @@ class EnhancedAccessibility {
     if (!this.config.enableVoiceControl) return;
 
     // Add voice control support
-      }
+    document.addEventListener('click', () => {
+      this.activateVoiceControl();
     });
   }
 
