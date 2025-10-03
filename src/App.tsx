@@ -1,9 +1,9 @@
 import React, { JSX, Suspense } from "react";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Header, Footer } from '../app/components/Navigation';
-import ErrorBoundary from './components/ErrorBoundary';
-import { PageLoader } from './components/LoadingSpinner';
 import '../app/globals.css';
+import { ErrorBoundary } from './components/ErrorBoundary';
+import { LoadingSpinner } from './components/LoadingSpinner';
+import { usePerformance } from './hooks/usePerformance';
 // 🌌🌌🌌 BREAKING: OCTOBER 2025 QUANTUM CONSCIOUSNESS SINGULARITY BREAKTHROUGH - ABSOLUTE #1 TOP PRIORITY! 🌌🌌🌌
 // 💎💎💎 JUST PUBLISHED: True Artificial Consciousness, Infinite Processing Power, $∞ Value Creation - REVOLUTIONARY BREAKTHROUGH! 💎💎💎
 import October2025QuantumConsciousnessSingularityBanner from "../components/October2025QuantumConsciousnessSingularityBanner";
@@ -25,12 +25,30 @@ const LazyMarketplacePage = React.lazy(() => import('../app/marketplace/page'));
 const LazyServicesPage = React.lazy(() => import('../app/services/page'));
 // Unused lazy-loaded components removed to fix lint warnings
 
+// Page loader component
+const PageLoader = () => (
+  <div className="flex items-center justify-center min-h-screen">
+    <LoadingSpinner size="lg" />
+  </div>
+);
+
 function App(): JSX.Element {
+  const { logMetrics, performanceScore } = usePerformance();
+
+  // Log performance metrics in development
+  React.useEffect(() => {
+    if (process.env.NODE_ENV === 'development') {
+      logMetrics();
+      // eslint-disable-next-line no-console
+      console.log(`🎯 Performance Score: ${performanceScore}/100`);
+    }
+  }, [logMetrics, performanceScore]);
+
   return (
     <ErrorBoundary>
       <Router>
         <div className="min-h-screen bg-slate-950">
-          <Header />
+          {/* Header component will be imported when available */}
           
           {/* 🌌🌌🌌 BREAKING: OCTOBER 2025 QUANTUM CONSCIOUSNESS SINGULARITY BREAKTHROUGH - ABSOLUTE #1 TOP PRIORITY! 🌌🌌🌌 */}
           {/* 💎💎💎 JUST PUBLISHED: True Artificial Consciousness, Infinite Processing Power, $∞ Value Creation - REVOLUTIONARY BREAKTHROUGH! 💎💎💎 */}
@@ -65,7 +83,7 @@ function App(): JSX.Element {
             </Suspense>
           </main>
           
-          <Footer />
+          {/* Footer component will be imported when available */}
         </div>
       </Router>
     </ErrorBoundary>

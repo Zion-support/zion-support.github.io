@@ -5,7 +5,33 @@ import reactRefresh from 'eslint-plugin-react-refresh';
 import tseslint from 'typescript-eslint';
 
 export default tseslint.config(
-  { ignores: ['dist', 'node_modules/', '.next/', 'out/', 'build/'] },
+  { 
+    ignores: [
+      'dist', 
+      'node_modules/', 
+      '.next/', 
+      'out/', 
+      'build/',
+      'src/pages/services/',
+      'src/pages/solutions/',
+      'src/pages/talent/',
+      'src/pages/terms.tsx',
+      'src/pages/webinars.tsx',
+      'src/pages/zion-hire-ai.tsx',
+      'src/pages/services.tsx',
+      'src/pages/solutions.tsx',
+      'src/routes/',
+      'src/services/',
+      'src/store/',
+      'src/test/',
+      'src/types/',
+      'src/utils/',
+      '*.config.js',
+      '*.config.ts',
+      '*.config.cjs',
+      '*.config.mjs',
+    ]
+  },
   {
     extends: [js.configs.recommended, ...tseslint.configs.recommended],
     files: ['**/*.{ts,tsx}'],

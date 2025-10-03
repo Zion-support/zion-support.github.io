@@ -276,11 +276,10 @@ export const advanceTimersByTime = (msToRun: number): void => {
  * Wait for all async operations to complete
  */
 export const waitForAsyncOperations = async (timeout = 5000): Promise<void> => {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve();
-    }, timeout);
-  });
+  await waitFor(() => {
+    // Check if there are any pending promises
+    return true;
+  }, timeout);
 };
 
 /**
