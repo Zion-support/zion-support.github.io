@@ -17,7 +17,7 @@ class ErrorBoundary extends React.Component<
     this.state = { hasError: false };
   }
 
-  static getDerivedStateFromError() {
+  static getDerivedStateFromError(_error: Error) {
     return { hasError: true };
   }
 
@@ -51,11 +51,24 @@ function App() {
     <HelmetProvider>
       <ErrorBoundary>
         <Router>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/services" element={<Services />} />
-          </Routes>
+          <div className="min-h-screen bg-gray-50">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="*" element={
+                <div className="min-h-screen flex items-center justify-center">
+                  <div className="text-center">
+                    <h1 className="text-4xl font-bold text-gray-900 mb-4">404</h1>
+                    <p className="text-gray-600 mb-8">Page not found</p>
+                    <a href="/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+                      Go Home
+                    </a>
+                  </div>
+                </div>
+              } />
+            </Routes>
+          </div>
         </Router>
       </ErrorBoundary>
     </HelmetProvider>

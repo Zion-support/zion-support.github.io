@@ -23,13 +23,9 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
         if (entry.entryType === 'largest-contentful-paint') {
           setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
         } else if (entry.entryType === 'first-input') {
-          const fidEntry = entry as PerformanceEntry & { processingStart: number };
-          setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - entry.startTime }));
-        } else if (entry.entryType === 'layout-shift') {
-          const clsEntry = entry as PerformanceEntry & { hadRecentInput: boolean; value: number };
-          if (!clsEntry.hadRecentInput) {
-            setMetrics(prev => ({ ...prev, cls: (prev.cls || 0) + clsEntry.value }));
-          }
+          setMetrics(prev => ({ ...prev, fid: (entry as PerformanceEventTiming).processingStart - entry.startTime }));
+        } else if (entry.entryType === 'layout-shift' && !(entry as LayoutShift).hadRecentInput) {
+          setMetrics(prev => ({ ...prev, cls: (prev.cls || 0) + (entry as LayoutShift).value }));
         }
       });
     });
