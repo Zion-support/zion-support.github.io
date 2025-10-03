@@ -46,9 +46,9 @@ const NewContentPromotionalBanner2026: React.FC = () => {
     <div className="text-left">
       {/* Animated background effects */}
       <div className="text-left">
-        <div className="text-left"></div>"
-        <div className="text-left" style={{ animationDelay: '1s' }}></div>"
-        <div className="text-left" style={{ animationDelay: '2s' }}></div>"
+        <div className="text-left"></div>
+        <div className="text-left" style={{ animationDelay: '1s' }}></div>
+        <div className="text-left" style={{ animationDelay: '2s' }}></div>
       </div>
 
       <div className="text-left">
@@ -74,21 +74,21 @@ const NewContentPromotionalBanner2026: React.FC = () => {
           
           <p className="text-left">
             Explore cutting-edge AI strategies, implementation roadmaps, and security innovations 
-            that are delivering <span className="text-left">300%+ ROI< for enterprises worldwide"
+            that are delivering <span className="text-left">300%+ ROI</span> for enterprises worldwide
           </p>
 
           <div className="text-left">
             <div className="text-left">
               <TrendingUp className="text-left" />
-              <span className="text-left">10,000+ Readers<"
+              <span className="text-left">10,000+ Readers</span>
             </div>
             <div className="text-left">
               <Zap className="text-left" />
-              <span className="text-left">3 New Articles<"
+              <span className="text-left">3 New Articles</span>
             </div>
             <div className="text-left">
               <Target className="text-left" />
-              <span className="text-left">Proven Results<"
+              <span className="text-left">Proven Results</span>
             </div>
           </div>
         </div>
@@ -137,7 +137,7 @@ const NewContentPromotionalBanner2026: React.FC = () => {
                   href={`/blog/${content.slug}`}
                   className={`group/btn flex items-center justify-center gap-3 w-full bg-gradient-to-r ${content.color} hover:shadow-2xl text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 transform hover:-translate-y-1`}
                 >
-                  <span className="text-left">Read Full Article<"
+                  <span className="text-left">Read Full Article</span>
                   <ArrowRight className="text-left" />
                 </Link>
               </div>
@@ -160,9 +160,9 @@ const NewContentPromotionalBanner2026: React.FC = () => {
             </div>
             
             <p className="text-left">
-              Join 500+ enterprises achieving <span className="text-left">300% ROI<, "
-              <span className="text-left"> 85% automation<, and "
-              <span className="text-left"> complete digital transformation< with Zion Tech Group's AI solutions"
+              Join 500+ enterprises achieving <span className="text-left">300% ROI</span>, 
+              <span className="text-left">85% automation</span>, and 
+              <span className="text-left">complete digital transformation</span> with Zion Tech Group's AI solutions
             </p>
 
             <div className="text-left">
