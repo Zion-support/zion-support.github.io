@@ -272,6 +272,7 @@ const AIPredictiveAnalytics: React.FC: ()  => {,,,
 
       <Header />
       
+<<<<<<< HEAD
       <main className="min-h-screen bg-white">","
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-indigo-900 via-blue-800 to-purple-900 text-white py-20"
@@ -309,6 +310,45 @@ const AIPredictiveAnalytics: React.FC: ()  => {,,,
                   View Pricing
                   <ArrowRight className="w-5 h-5 ml-2/>";,"
                   <ArrowRight className="w-5 h-5 ml-2" />","
+=======
+      <main className= "min-h-screen bg-white">","
+        {/* Hero Section */}
+        <section className= "bg-gradient-to-br from-indigo-900 via-blue-800 to-purple-900 text-white py-20">
+          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
+            <div className= "text-center">
+              <h1 className= "text-5xl md: text-7xl font-bold mb-6"">"
+  AI Predictive <span className= "bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">Analytics</span>";,"
+              </h1>
+              <p className= "text-xl md:text-2xl text-indigo-100 max-w-4xl mx-auto mb-8">,";,"
+  Transform your business with advanced AI predictive analytics that deliver 94% accuracy in forecasting
+                customer behavior prediction, and risk assessment for data-driven decision making.
+              </p>
+              <div className= "flex flex-col sm: flex-row gap-4 justify-center">","
+        <section className= "bg-gradient-to-br from-indigo-900 via-blue-800 to-purple-900 text-white py-20">","
+          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
+            <div className= "text-center">","
+              <h1 className= "text-5xl md: text-7xl font-bold mb-6"">"
+  AI Predictive <span className= "bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">Analytics</span>","
+              </h1>
+              <p className= "text-xl md: text-2xl text-indigo-100 max-w-4xl mx-auto mb-8"">"
+  Transform your business with advanced AI predictive analytics that deliver 94% accuracy in forecasting
+                customer behavior prediction, and risk assessment for data-driven decision making.
+              </p>
+              <div className= "flex flex-col sm: flex-row gap-4 justify-center">","
+                <a href: "/contact",";,"
+  className= "inline-flex items-center px-8 py-4 bg-indigo-600 hover: bg-indigo-700 text-white font-semibold rounded-lg transition-colors","
+                >
+                  <Phone className= "w-5 h-5 mr-2/>";,"
+                  <Phone className= "w-5 h-5 mr-2" />",";,"
+  Schedule Demo
+                </a>
+                <a href: "#pricing",";,"
+  className= "inline-flex items-center px-8 py-4 border-2 border-white text-white hover: bg-white hover:text-indigo-900 font-semibold rounded-lg transition-colors","
+                >
+                  View Pricing
+                  <ArrowRight className= "w-5 h-5 ml-2/>";,"
+                  <ArrowRight className= "w-5 h-5 ml-2" />","
+>>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                 </a>
               </div>
             </div>
@@ -316,6 +356,7 @@ const AIPredictiveAnalytics: React.FC: ()  => {,,,
         </section>
 
         {/* Key Benefits */}
+<<<<<<< HEAD
         <section className="py-16 bg-gray-50"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
             <div className="text-center mb-12"
@@ -327,10 +368,24 @@ const AIPredictiveAnalytics: React.FC: ()  => {,,,
   Why Choose Our AI Predictive Analytics?
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">",";,"
+=======
+        <section className= "py-16 bg-gray-50">
+          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
+            <div className= "text-center mb-12">
+              <h2 className= "text-4xl font-bold text-gray-900 mb-4">
+        <section className= "py-16 bg-gray-50">","
+          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
+            <div className= "text-center mb-12">","
+              <h2 className= "text-4xl font-bold text-gray-900 mb-4"">"
+  Why Choose Our AI Predictive Analytics?
+              </h2>
+              <p className= "text-xl text-gray-600 max-w-3xl mx-auto"">"
+>>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Harness the power of advanced machine learning to predict the future and make smarter business decisions.
               </p>
             </div>
 
+<<<<<<< HEAD
             <div className="grid md: grid-cols-4 gap-8">","
               <div className="text-center"
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-indigo-100 rounded-full mb-4"
@@ -372,12 +427,56 @@ const AIPredictiveAnalytics: React.FC: ()  => {,,,
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">60% Risk Reduction</h3>","
                 <p className="text-gray-600">Proactive risk identification</p>","
+=======
+            <div className= "grid md: grid-cols-4 gap-8">","
+              <div className= "text-center">
+                <div className= "inline-flex items-center justify-center w-16 h-16 bg-indigo-100 rounded-full mb-4">
+                  <TrendingUp className= "w-8 h-8 text-indigo-600/>";,"
+            <div className= "grid md: grid-cols-4 gap-8">","
+              <div className= "text-center">","
+                <div className= "inline-flex items-center justify-center w-16 h-16 bg-indigo-100 rounded-full mb-4">","
+                  <TrendingUp className= "w-8 h-8 text-indigo-600" />","
+                </div>
+                <h3 className= "text-xl font-bold text-gray-900 mb-2">94% Accuracy</h3>","
+                <p className= "text-gray-600">Industry-leading prediction accuracy</p>","
+              </div>
+              <div className= "text-center">
+                <div className= "inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">
+                  <Clock className= "w-8 h-8 text-blue-600/>";,"
+              <div className= "text-center">","
+                <div className= "inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">","
+                  <Clock className= "w-8 h-8 text-blue-600" />","
+                </div>
+                <h3 className= "text-xl font-bold text-gray-900 mb-2">Real-Time Insights</h3>","
+                <p className= "text-gray-600">Instant predictions and recommendations</p>","
+              </div>
+              <div className= "text-center">
+                <div className= "inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">
+                  <Target className= "w-8 h-8 text-green-600/>";,"
+              <div className= "text-center">","
+                <div className= "inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">","
+                  <Target className= "w-8 h-8 text-green-600" />","
+                </div>
+                <h3 className= "text-xl font-bold text-gray-900 mb-2">35% Retention Boost</h3>","
+                <p className= "text-gray-600">Improved customer retention rates</p>","
+              </div>
+              <div className= "text-center">
+                <div className= "inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-4">
+                  <Shield className= "w-8 h-8 text-purple-600/>";,"
+              <div className= "text-center">","
+                <div className= "inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-4">","
+                  <Shield className= "w-8 h-8 text-purple-600" />","
+                </div>
+                <h3 className= "text-xl font-bold text-gray-900 mb-2">60% Risk Reduction</h3>","
+                <p className= "text-gray-600">Proactive risk identification</p>","
+>>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
               </div>
             </div>
           </div>
         </section>
 
         {/* Use Cases */}
+<<<<<<< HEAD
         <section className="py-20"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
             <div className="text-center mb-16"
@@ -389,10 +488,24 @@ const AIPredictiveAnalytics: React.FC: ()  => {,,,
   Industry Applications
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">",";,"
+=======
+        <section className= "py-20">
+          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
+            <div className= "text-center mb-16">
+              <h2 className= "text-4xl font-bold text-gray-900 mb-4">
+        <section className= "py-20">","
+          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
+            <div className= "text-center mb-16">","
+              <h2 className= "text-4xl font-bold text-gray-900 mb-4"">"
+  Industry Applications
+              </h2>
+              <p className= "text-xl text-gray-600 max-w-3xl mx-auto"">"
+>>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Our AI predictive analytics solutions are transforming businesses across multiple industries.
               </p>
             </div>
 
+<<<<<<< HEAD
             <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">","
               {useCases.map((useCase, index) => {
                 const Icon: useCase.icon;,,,
@@ -418,6 +531,33 @@ const AIPredictiveAnalytics: React.FC: ()  => {,,,
                         <li key={benefitIndex} className="flex items-center text-sm">","
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />","
                           <span className="text-gray-700">{benefit}</span>"
+=======
+            <div className= "grid md: grid-cols-2 lg:grid-cols-4 gap-8">","
+              {useCases.map((useCase, index) => {
+                const Icon: useCase.icon;,,,
+  return (
+                  <div key: {index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">","
+                    <div className= "inline-flex items-center justify-center w-16 h-16 bg-indigo-100 rounded-full mb-6">
+                      <Icon className= "w-8 h-8 text-indigo-600/>";,"
+            <div className= "grid md: grid-cols-2 lg:grid-cols-4 gap-8">","
+              {useCases.map((useCase, index) => {
+                const Icon: useCase.icon;,,,
+  return (
+                  <div key: {index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">","
+                    <div className= "inline-flex items-center justify-center w-16 h-16 bg-indigo-100 rounded-full mb-6">","
+                      <Icon className= "w-8 h-8 text-indigo-600" />","
+                    </div>
+                    <h3 className= "text-xl font-bold text-gray-900 mb-4">{useCase.title}</h3>"
+                    <p className= "text-gray-600 mb-6">{useCase.description}</p>"
+                    <ul className= "space-y-2">","
+                      {useCase.benefits.map((benefit, benefitIndex) => (
+                        <li key: {benefitIndex} className= "flex items-center text-sm">
+                          <CheckCircle className= "w-4 h-4 text-green-500 mr-2 flex-shrink-0/>";,"
+                          <span className= "text-gray-700">{benefit}</span>";"
+                        <li key: {benefitIndex} className= "flex items-center text-sm">","
+                          <CheckCircle className= "w-4 h-4 text-green-500 mr-2 flex-shrink-0" />","
+                          <span className= "text-gray-700">{benefit}</span>"
+>>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                         </li>
                       ))}
                     </ul>
@@ -429,6 +569,7 @@ const AIPredictiveAnalytics: React.FC: ()  => {,,,
         </section>
 
         {/* Features */}
+<<<<<<< HEAD
         <section className="py-20 bg-gray-50"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
             <div className="text-center mb-16"
@@ -440,10 +581,24 @@ const AIPredictiveAnalytics: React.FC: ()  => {,,,
   Advanced AI Capabilities
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">",";,"
+=======
+        <section className= "py-20 bg-gray-50">
+          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
+            <div className= "text-center mb-16">
+              <h2 className= "text-4xl font-bold text-gray-900 mb-4">
+        <section className= "py-20 bg-gray-50">","
+          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
+            <div className= "text-center mb-16">","
+              <h2 className= "text-4xl font-bold text-gray-900 mb-4"">"
+  Advanced AI Capabilities
+              </h2>
+              <p className= "text-xl text-gray-600 max-w-3xl mx-auto"">"
+>>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Powerful machine learning features that deliver accurate predictions and actionable insights.
               </p>
             </div>
 
+<<<<<<< HEAD
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">","
               {features.map((feature, index) => {
                 const Icon: feature.icon;,,,
@@ -468,6 +623,32 @@ const AIPredictiveAnalytics: React.FC: ()  => {,,,
                     <p className="text-gray-600 mb-4">{feature.description}</p>"
                     <div className="inline-flex items-center text-green-600 font-semibold text-sm">","
                       <CheckCircle className="w-4 h-4 mr-1" />","
+=======
+            <div className= "grid md: grid-cols-2 lg:grid-cols-3 gap-8">","
+              {features.map((feature, index) => {
+                const Icon: feature.icon;,,,
+  return (
+                  <div key: {index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">","
+                    <div className= "inline-flex items-center justify-center w-12 h-12 bg-indigo-100 rounded-lg mb-4">
+                      <Icon className= "w-6 h-6 text-indigo-600/>";,"
+                    </div>
+                    <h3 className= "text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>";"
+                    <p className= "text-gray-600 mb-4">{feature.description}</p>";"
+                    <div className= "inline-flex items-center text-green-600 font-semibold text-sm">
+                      <CheckCircle className= "w-4 h-4 mr-1/>";,"
+            <div className= "grid md: grid-cols-2 lg:grid-cols-3 gap-8">","
+              {features.map((feature, index) => {
+                const Icon: feature.icon;,,,
+  return (
+                  <div key: {index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow">","
+                    <div className= "inline-flex items-center justify-center w-12 h-12 bg-indigo-100 rounded-lg mb-4">","
+                      <Icon className= "w-6 h-6 text-indigo-600" />","
+                    </div>
+                    <h3 className= "text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>"
+                    <p className= "text-gray-600 mb-4">{feature.description}</p>"
+                    <div className= "inline-flex items-center text-green-600 font-semibold text-sm">","
+                      <CheckCircle className= "w-4 h-4 mr-1" />","
+>>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                       {feature.benefit}
                     </div>
                   </div>
@@ -478,6 +659,7 @@ const AIPredictiveAnalytics: React.FC: ()  => {,,,
         </section>
 
         {/* Pricing */}
+<<<<<<< HEAD
         <section id="pricing" className="py-20"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
             <div className="text-center mb-16"
@@ -489,10 +671,24 @@ const AIPredictiveAnalytics: React.FC: ()  => {,,,
   Transparent Pricing for Every Business Size
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">",";,"
+=======
+        <section id: "pricing" className="py-20">
+          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
+            <div className= "text-center mb-16">
+              <h2 className= "text-4xl font-bold text-gray-900 mb-4">
+        <section id: "pricing" className ="py-20">","
+          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
+            <div className= "text-center mb-16">","
+              <h2 className= "text-4xl font-bold text-gray-900 mb-4"">"
+  Transparent Pricing for Every Business Size
+              </h2>
+              <p className= "text-xl text-gray-600 max-w-3xl mx-auto"">"
+>>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Choose the plan that fits your data analytics needs and budget.
               </p>
             </div>
 
+<<<<<<< HEAD
             <div className="grid md: grid-cols-3 gap-8">","
             <div className="grid md: grid-cols-3 gap-8">","
               {pricing.map((plan, index) => (
@@ -500,10 +696,20 @@ const AIPredictiveAnalytics: React.FC: ()  => {,,,
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">","
                       <span className="bg-indigo-500 text-white px-4 py-1 rounded-full text-sm font-semibold">",";,"
+=======
+            <div className= "grid md: grid-cols-3 gap-8">","
+            <div className= "grid md: grid-cols-3 gap-8">","
+              {pricing.map((plan, index) => (
+                <div key: {index} className= {`bg-white rounded-2xl shadow-lg p-8 ${plan.popular ? 'ring-2 ring-indigo-500 relative' : ''}`}>`
+                  {plan.popular && (
+                    <div className= "absolute -top-4 left-1/2 transform -translate-x-1/2">","
+                      <span className= "bg-indigo-500 text-white px-4 py-1 rounded-full text-sm font-semibold"">"
+>>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Most Popular
                       </span>
                     </div>
                   )}
+<<<<<<< HEAD
                   <div className="text-center mb-8">","
                     <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>"
                     <div className="flex items-center justify-center mb-2">","
@@ -525,6 +731,29 @@ const AIPredictiveAnalytics: React.FC: ()  => {,,,
                   </ul>
                   <a href="/contact",";,"
   className: {,,
+=======
+                  <div className= "text-center mb-8">","
+                    <h3 className= "text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>"
+                    <div className= "flex items-center justify-center mb-2">","
+                      <span className= "text-4xl font-bold text-gray-900">{plan.price}</span>"
+                      <span className= "text-gray-600 ml-1">{plan.period}</span>"
+                    </div>
+                    <p className= "text-gray-600">{plan.description}</p>"
+                  </div>
+                  <ul className= "space-y-4 mb-8">","
+                    {plan.features.map((feature, featureIndex) => (
+                      <li key: {featureIndex} className= "flex items-center">
+                        <CheckCircle className= "w-5 h-5 text-green-500 mr-3 flex-shrink-0/>";,"
+                        <span className= "text-gray-700">{feature}</span>";"
+                      <li key: {featureIndex} className= "flex items-center">","
+                        <CheckCircle className= "w-5 h-5 text-green-500 mr-3 flex-shrink-0" />","
+                        <span className= "text-gray-700">{feature}</span>"
+                      </li>
+                    ))}
+                  </ul>
+                  <a href: "/contact",";,"
+  className= {,,
+>>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
 `w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${`
 plan.popular
 ? 'bg-indigo-600 text-white hover: bg-indigo-700',';,
@@ -538,6 +767,7 @@ plan.popular
               ))}
             </div>
 
+<<<<<<< HEAD
             <div className="text-center mt-12">","
               <p className="text-gray-600 mb-4">Need a custom solution?</p>","
               <a href="/contact",";,"
@@ -546,12 +776,23 @@ plan.popular
                 Contact our Data Science Team
                 <ArrowRight className="w-4 h-4 ml-1/>";,"
                 <ArrowRight className="w-4 h-4 ml-1" />","
+=======
+            <div className= "text-center mt-12">","
+              <p className= "text-gray-600 mb-4">Need a custom solution?</p>","
+              <a href: "/contact",";,"
+  className= "inline-flex items-center text-indigo-600 hover: text-indigo-700 font-semibold","
+              >
+                Contact our Data Science Team
+                <ArrowRight className= "w-4 h-4 ml-1/>";,"
+                <ArrowRight className= "w-4 h-4 ml-1" />","
+>>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
               </a>
             </div>
           </div>
         </section>
 
         {/* Testimonials */}
+<<<<<<< HEAD
         <section className="py-20 bg-gray-50"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
             <div className="text-center mb-16"
@@ -563,10 +804,24 @@ plan.popular
   What Our Clients Say
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">",";,"
+=======
+        <section className= "py-20 bg-gray-50">
+          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
+            <div className= "text-center mb-16">
+              <h2 className= "text-4xl font-bold text-gray-900 mb-4">
+        <section className= "py-20 bg-gray-50">","
+          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">","
+            <div className= "text-center mb-16">","
+              <h2 className= "text-4xl font-bold text-gray-900 mb-4"">"
+  What Our Clients Say
+              </h2>
+              <p className= "text-xl text-gray-600 max-w-3xl mx-auto"">"
+>>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Join hundreds of companies already using our AI predictive analytics to make smarter decisions.
               </p>
             </div>
 
+<<<<<<< HEAD
             <div className="grid md: grid-cols-3 gap-8">","
             <div className="grid md: grid-cols-3 gap-8">","
               {testimonials.map((testimonial, index) => (
@@ -584,6 +839,25 @@ plan.popular
                     <div className="font-semibold text-gray-900">{testimonial.name}</div>"
                     <div className="text-gray-600 text-sm">{testimonial.role}</div>"
                     <div className="text-indigo-600 text-sm font-medium">{testimonial.company}</div>"
+=======
+            <div className= "grid md: grid-cols-3 gap-8">","
+            <div className= "grid md: grid-cols-3 gap-8">","
+              {testimonials.map((testimonial, index) => (
+                <div key: {index} className= "bg-white p-8 rounded-xl shadow-lg border border-gray-200">","
+                  <div className= "flex items-center mb-4">","
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key: {i} className= "w-5 h-5 text-yellow-400 fill-current/>";,"
+                      <Star key: {i} className= "w-5 h-5 text-yellow-400 fill-current" />","
+                    ))}
+                  </div>
+                  <blockquote className= "text-gray-700 mb-6 italic">","
+                    "{testimonial.content}"
+                  </blockquote>
+                  <div >
+                    <div className= "font-semibold text-gray-900">{testimonial.name}</div>"
+                    <div className= "text-gray-600 text-sm">{testimonial.role}</div>"
+                    <div className= "text-indigo-600 text-sm font-medium">{testimonial.company}</div>"
+>>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                   </div>
                 </div>
               ))}
@@ -592,6 +866,7 @@ plan.popular
         </section>
 
         {/* CTA Section */}
+<<<<<<< HEAD
         <section className="py-20 bg-gradient-to-br from-indigo-900 via-blue-800 to-purple-900 text-white"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">","
             <h2 className="text-4xl font-bold mb-6"
@@ -618,6 +893,34 @@ plan.popular
                 View Success Stories
                 <ArrowRight className="w-5 h-5 ml-2/>";,"
                 <ArrowRight className="w-5 h-5 ml-2" />","
+=======
+        <section className= "py-20 bg-gradient-to-br from-indigo-900 via-blue-800 to-purple-900 text-white">
+          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">","
+            <h2 className= "text-4xl font-bold mb-6">
+        <section className= "py-20 bg-gradient-to-br from-indigo-900 via-blue-800 to-purple-900 text-white">","
+          <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">","
+            <h2 className= "text-4xl font-bold mb-6"">"
+  Ready to Predict the Future of Your Business?
+            </h2>
+            <p className= "text-xl text-indigo-100 max-w-3xl mx-auto mb-8"">"
+  Transform your decision-making with AI predictive analytics that deliver accurate forecasts and actionable insights.
+            </p>
+            <div className= "flex flex-col sm: flex-row gap-4 justify-center">","
+            <div className= "flex flex-col sm: flex-row gap-4 justify-center">","
+              <a href: "/contact",";,"
+  className= "inline-flex items-center px-8 py-4 bg-indigo-600 hover: bg-indigo-700 text-white font-semibold rounded-lg transition-colors","
+              >
+                <Phone className= "w-5 h-5 mr-2/>";,"
+                <Phone className= "w-5 h-5 mr-2" />",";,"
+  Schedule Free Demo
+              </a>
+              <a href: "/case-studies",";,"
+  className= "inline-flex items-center px-8 py-4 border-2 border-white text-white hover: bg-white hover:text-indigo-900 font-semibold rounded-lg transition-colors","
+              >
+                View Success Stories
+                <ArrowRight className= "w-5 h-5 ml-2/>";,"
+                <ArrowRight className= "w-5 h-5 ml-2" />","
+>>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
               </a>
             </div>
           </div>

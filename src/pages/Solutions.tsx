@@ -52,6 +52,7 @@ const Solutions: React.FC: ()  => {,,,
         <link rel: "canonical" href ="https://ziontechgroup.com/solutions" />";,"
       </Helmet>
 
+<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8"
@@ -72,6 +73,28 @@ const Solutions: React.FC: ()  => {,,,
                 </Link>
                 <Link to: "/services",";,"
   className="inline-flex items-center px-8 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 transition-colors","
+=======
+      <div className= "min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+        {/* Hero Section */}
+        <section className= "relative py-20 px-4 sm:px-6 lg:px-8">
+          <div className= "max-w-7xl mx-auto">
+            <div className= "text-center">
+              <h1 className= "text-4xl md:text-6xl font-bold text-gray-900 mb-6">,";,"
+  Technology Solutions
+              </h1>
+              <p className= "text-xl text-gray-600 mb-8 max-w-3xl mx-auto">,";,"
+  Comprehensive technology solutions designed to transform your business operations and drive growth.
+              </p>
+              <div className= "flex flex-col sm:flex-row gap-4 justify-center">
+                <Link to: "/contact",";,"
+  className= "inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors","
+                >
+                  Get Started
+                  <ArrowRight className= "ml-2 h-5 w-5" />";,"
+                </Link>
+                <Link to: "/services",";,"
+  className= "inline-flex items-center px-8 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 transition-colors","
+>>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                 >
                   View Services
                 </Link>
@@ -81,6 +104,7 @@ const Solutions: React.FC: ()  => {,,,
         </section>
 
         {/* Solutions Grid */}
+<<<<<<< HEAD
         <section className="py-20 px-4 sm:px-6 lg:px-8"
           <div className="max-w-7xl mx-auto"
             <div className="text-center mb-16"
@@ -88,10 +112,20 @@ const Solutions: React.FC: ()  => {,,,
   Our Solutions
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">,";,"
+=======
+        <section className= "py-20 px-4 sm:px-6 lg:px-8">
+          <div className= "max-w-7xl mx-auto">
+            <div className= "text-center mb-16">
+              <h2 className= "text-3xl md:text-4xl font-bold text-gray-900 mb-4">,";,"
+  Our Solutions
+              </h2>
+              <p className= "text-xl text-gray-600 max-w-3xl mx-auto">,";,"
+>>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Tailored technology solutions to meet your specific business needs and objectives.
               </p>
             </div>
 
+<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               {solutions.map((solution, index) => (
                 <div key={index} className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow"
@@ -100,10 +134,21 @@ const Solutions: React.FC: ()  => {,,,
                       <solution .icon className="h-8 w-8 text-blue-600" />";,"
                     </div>
                     <h3 className="text-xl font-semibold text-gray-900 ml-4"
+=======
+            <div className= "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {solutions.map((solution, index) => (
+                <div key: {index} className= "bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow">
+                  <div className= "flex items-center mb-6">
+                    <div className= "p-3 bg-blue-100 rounded-lg">
+                      <solution .icon className= "h-8 w-8 text-blue-600" />";,"
+                    </div>
+                    <h3 className= "text-xl font-semibold text-gray-900 ml-4">
+>>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                       {solution.title}
                     </h3>
                   </div>
                   
+<<<<<<< HEAD
                   <p className="text-gray-600 mb-6"
                     {solution.description}
                   </p>
@@ -112,6 +157,16 @@ const Solutions: React.FC: ()  => {,,,
                     {solution.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-700"
                         <CheckCircle className="h-5 w-5 text-green-500 mr-3" />";,"
+=======
+                  <p className= "text-gray-600 mb-6">
+                    {solution.description}
+                  </p>
+                  
+                  <ul className= "space-y-2">
+                    {solution.features.map((feature, featureIndex) => (
+                      <li key: {featureIndex} className= "flex items-center text-gray-700">
+                        <CheckCircle className= "h-5 w-5 text-green-500 mr-3" />";,"
+>>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
                         {feature}
                       </li>
                     ))}
@@ -123,6 +178,7 @@ const Solutions: React.FC: ()  => {,,,
         </section>
 
         {/* CTA Section */}
+<<<<<<< HEAD
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-blue-600"
           <div className="max-w-7xl mx-auto text-center"
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">,";,"
@@ -136,6 +192,21 @@ const Solutions: React.FC: ()  => {,,,
             >
               Contact Us Today
               <ArrowRight className="ml-2 h-5 w-5" />";,"
+=======
+        <section className= "py-20 px-4 sm:px-6 lg:px-8 bg-blue-600">
+          <div className= "max-w-7xl mx-auto text-center">
+            <h2 className= "text-3xl md:text-4xl font-bold text-white mb-4">,";,"
+  Ready to Transform Your Business?
+            </h2>
+            <p className= "text-xl text-blue-100 mb-8 max-w-3xl mx-auto">,";,"
+  Let our experts help you implement the right technology solutions for your business needs.
+            </p>
+            <Link to: "/contact",";,"
+  className= "inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-blue-600 bg-white hover:bg-gray-50 transition-colors","
+            >
+              Contact Us Today
+              <ArrowRight className= "ml-2 h-5 w-5" />";,"
+>>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
             </Link>
           </div>
         </section>
