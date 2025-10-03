@@ -1,4 +1,4 @@
-import React from 'react;
+import React from 'react';
 const AIPlatformArchitecture: React.FC = () => {
   return (
 <<<<<<< HEAD
@@ -12,7 +12,7 @@ const AIPlatformArchitecture: React.FC = () => {
         <div className= "text-center mb-16">
           <h1 className= "text-4xl md: text-5xl font-extrabold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">"
 >>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
-  import React from 'react;
+  import React from 'react';
 const AIPlatformArchitecture: React.FC = () => {
   return (
 <<<<<<< HEAD
@@ -129,6 +129,6 @@ const AIPlatformArchitecture: React.FC = () => {
       </div>
     </div>
   );
-};
+';
 
 export default AIPlatformArchitecture;

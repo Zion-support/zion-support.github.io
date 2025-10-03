@@ -1,5 +1,5 @@
-import React from 'react;
-import React from 'react;
+import React from 'react';
+import React from 'react';
 const AIIncidentResponsePlaybooks2025: React.FC = () => {
   return (
 <<<<<<< HEAD
@@ -76,7 +76,7 @@ const AIIncidentResponsePlaybooks2025: React.FC = () => {
     - rollback: restore_tokens if:canary_fails,,,
   telemetry: - emit: action.outcome,,
     - emit: time_to_contain,,
-`}`;`;
+```;`;
 <<<<<<< HEAD
           <pre className="text-sm overflow-x-auto",
 =======
@@ -91,7 +91,7 @@ const AIIncidentResponsePlaybooks2025: React.FC = () => {
     - rollback: restore_tokens if:canary_fails,,,
   telemetry: - emit: action.outcome,,,
     - emit: time_to_contain,,
-`}`
+```
           </pre>
 
           <h3 >Rollout Strategy</h3>
@@ -136,7 +136,7 @@ const AIIncidentResponsePlaybooks2025: React.FC = () => {
       </div>
     </div>
   );
-};
+`;
 
 export default AIIncidentResponsePlaybooks2025;
 

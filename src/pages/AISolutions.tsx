@@ -1,7 +1,7 @@
-import React from 'react;
-import { Link } from 'react-router-dom;
-import { Brain, Zap, Shield, Cloud, Database, Users, BarChart3, Cog, Target, Rocket } from 'lucide-react;
-import { Helmet } from 'react-helmet-async;
+import React from 'react';
+import { Link ' from 'react-router-dom';
+import { Brain, Zap, Shield, Cloud, Database, Users, BarChart3, Cog, Target, Rocket ' from 'lucide-react';
+import { Helmet ' from 'react-helmet-async';
 const AISolutions: React.FC = () => {
   const aiSolutions = [
     {
@@ -9,76 +9,76 @@ const AISolutions: React.FC = () => {
       title: 'Machine Learning & Deep Learning',
       description: 'Advanced AI models for predictive analytics, pattern recognition, and intelligent decision making.',
       features: ['Neural Networks', 'Predictive Analytics', 'Pattern Recognition', 'Automated Learning'],
-    },
+    ',
     {
       icon: Zap,
       title: 'AI Automation',
       description: 'Streamline business processes with intelligent automation solutions.',
       features: ['Process Automation', 'Workflow Optimization', 'Smart Decision Making', 'RPA Integration'],
-    },
+    ',
     {
       icon: Shield,
       title: 'AI-Powered Cybersecurity',
       description: 'Protect your digital assets with advanced AI-driven security solutions.',
       features: ['Threat Detection', 'Anomaly Detection', 'Automated Response', 'Risk Assessment'],
-    },
+    ',
     {
       icon: Cloud,
       title: 'Cloud AI Services',
       description: 'Scalable AI solutions delivered through cloud infrastructure.',
       features: ['Cloud ML Platforms', 'AI APIs', 'Scalable Computing', 'Edge AI'],
-    },
+    ',
     {
       icon: Database,
       title: 'Data Analytics & Intelligence',
       description: 'Transform raw data into actionable insights with AI-powered analytics.',
       features: ['Data Mining', 'Business Intelligence', 'Real-time Analytics', 'Data Visualization'],
-    },
+    ',
     {
       icon: Users,
       title: 'Conversational AI',
       description: 'Build intelligent chatbots and virtual assistants for enhanced customer experience.',
       features: ['Chatbots', 'Virtual Assistants', 'NLP Processing', 'Voice Recognition'],
-    },
+    ',
     {
       icon: BarChart3,
       title: 'Predictive Analytics',
       description: 'Forecast future trends and behaviors using advanced statistical models.',
       features: ['Trend Analysis', 'Risk Assessment', 'Demand Forecasting', 'Performance Optimization'],
-    },
+    ',
     {
       icon: Cog,
       title: 'AI Integration Services',
       description: 'Seamlessly integrate AI capabilities into your existing systems and workflows.',
       features: ['System Integration', 'API Development', 'Legacy Modernization', 'Custom Solutions'],
-    },
+    ',
     {
       icon: Target,
       title: 'Computer Vision',
       description: 'Enable machines to interpret and understand visual information from the world.',
       features: ['Image Recognition', 'Object Detection', 'Facial Recognition', 'Video Analysis'],
-    },
+    ',
     {
       icon: Rocket,
       title: 'AI Strategy Consulting',
       description: 'Strategic guidance for implementing AI solutions that drive business growth.',
       features: ['AI Roadmap', 'Technology Assessment', 'ROI Analysis', 'Change Management'],
-    },
+    ',
   ];
 
   const benefits = [
     {
       title: 'Increased Efficiency',
       description: 'Automate repetitive tasks and optimize workflows for maximum productivity.',
-      icon: '⚡},
+      icon: '⚡',
     {
       title: 'Enhanced Decision Making',
       description: 'Leverage data-driven insights for smarter business decisions.',
-      icon: '🧠},
+      icon: '🧠',
     {
       title: 'Cost Reduction',
       description: 'Reduce operational costs through intelligent automation and optimization.',
-      icon: '💰},
+      icon: '💰',
     {
       title: 'Competitive Advantage',
       description: 'Stay ahead of the competition with cutting-edge AI technologies.',
@@ -182,7 +182,7 @@ const AISolutions: React.FC = () => {
           </div>
         </section>
 
-        {/* CTA Section */}
+        {/* CTA Section */'},
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-700 text-white">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-4xl font-bold mb-4">
@@ -211,6 +211,6 @@ const AISolutions: React.FC = () => {
       </div>
     </>
   );
-};
+';
 
 export default AISolutions;

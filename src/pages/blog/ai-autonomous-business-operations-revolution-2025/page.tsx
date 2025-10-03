@@ -798,7 +798,7 @@ const AutonomousBusinessOperationsRevolution2025: () => {
       </div>
     </>
   );
-};
+';
 
 export default AutonomousBusinessOperationsRevolution2025;
 ;

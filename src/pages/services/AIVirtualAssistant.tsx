@@ -1,13 +1,13 @@
-import React from 'react;
-import { Helmet } from 'react-helmet-async;
-import { Globe } from 'lucide-react;
-import Header from '../../components/Header;
-import Footer from '../../components/Footer;
-import React from 'react;
-import { Helmet } from 'react-helmet-async;
-import { Globe } from 'lucide-react;
-import Header from '../../components/Header;
-import Footer from '../../components/Footer;
+import React from 'react';
+import { Helmet ' from 'react-helmet-async';
+import { Globe ' from 'lucide-react';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+import React from 'react';
+import { Helmet ' from 'react-helmet-async';
+import { Globe ' from 'lucide-react';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 const AIVirtualAssistant: React.FC = () => {
   const features: [,
     {
@@ -440,7 +440,7 @@ const AIVirtualAssistant: React.FC = () => {
       <Footer />
     </>
   );
-};
+';
 
 export default AIVirtualAssistant;
 

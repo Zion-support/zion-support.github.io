@@ -657,7 +657,7 @@ const EnterpriseAITransformationSuccessStrategies: () => {
       </div>
     </>
   );
-};
+';
 
 export default EnterpriseAITransformationSuccessStrategies;
 ;

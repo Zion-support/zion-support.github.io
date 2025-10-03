@@ -1,37 +1,37 @@
-import React from 'react;
-import { Helmet } from 'react-helmet-async;
+import React from 'react';
+import { Helmet ' from 'react-helmet-async';
 const AIServices: React.FC = () => {
   const services = [
     {
       name: 'RAG Chatbots for Documents',
       price: '$2,000 - $8,000/mo',
       features: ['Secure retrieval', 'Multi-source connectors', 'Guardrails', 'Analytics dashboard'],
-      link: 'https://ziontechgroup.com/services/ai-services},
+      link: 'https://ziontechgroup.com/services/ai-services'},'},,
     {
       name: 'Intelligent Document Processing (IDP)',
       price: '$1,500 - $6,000/mo',
       features: ['OCR + layout parsing', 'Entity extraction', 'Validation flows', 'Export to ERP/CRM'],
-      link: 'https://ziontechgroup.com/services/ai-services},
+      link: 'https://ziontechgroup.com/services/ai-services'},'},,
     {
       name: 'AI-Powered Workflow Automation',
       price: '$3,000 - $12,000/mo',
       features: ['Process mining', 'RPA integration', 'Decision automation', 'Performance monitoring'],
-      link: 'https://ziontechgroup.com/services/ai-services},
+      link: 'https://ziontechgroup.com/services/ai-services'},'},,
     {
       name: 'Predictive Analytics & Forecasting',
       price: '$2,500 - $10,000/mo',
       features: ['Time series analysis', 'Anomaly detection', 'Custom models', 'Real-time insights'],
-      link: 'https://ziontechgroup.com/services/ai-services},
+      link: 'https://ziontechgroup.com/services/ai-services'},'},,
     {
       name: 'AI Content Generation & Optimization',
       price: '$1,000 - $5,000/mo',
       features: ['Multi-language support', 'Brand voice training', 'SEO optimization', 'Content analytics'],
-      link: 'https://ziontechgroup.com/services/ai-services},
+      link: 'https://ziontechgroup.com/services/ai-services'},'},,
     {
       name: 'Computer Vision & Image Processing',
       price: '$2,000 - $8,000/mo',
       features: ['Object detection', 'Image classification', 'Quality control', 'Automated tagging'],
-      link: 'https://ziontechgroup.com/services/ai-services}
+      link: 'https://ziontechgroup.com/services/ai-services'},'},
   ];
 
   return (
@@ -125,7 +125,7 @@ const AIServices: React.FC = () => {
           </div>
         </section>
 
-        {/* CTA Section */}
+        {/* CTA Section */'
         <section className="py-20 bg-gray-900 text-white">
           <div className="container mx-auto px-6 text-center">
             <h2 className="text-4xl font-bold mb-4">Ready to Transform Your Business with AI?</h2>
@@ -151,6 +151,6 @@ const AIServices: React.FC = () => {
       </div>
     </>
   );
-};
+';
 
 export default AIServices;

@@ -358,6 +358,6 @@ const QuantumAIHybrid2025: () => {
       </div>
     </>
   );
-};
+';
 
 export default QuantumAIHybrid2025;

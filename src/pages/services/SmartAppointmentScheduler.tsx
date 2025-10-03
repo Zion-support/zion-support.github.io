@@ -1,5 +1,5 @@
-import React from 'react;
-import { Helmet } from 'react-helmet-async;
+import React from 'react';
+import { Helmet ' from 'react-helmet-async';
 import {
   Calendar,
   Users,
@@ -7,7 +7,7 @@ import {
   CreditCard,
   Shield,
   CheckCircle
-} from 'lucide-react;
+' from 'lucide-react';
 const SmartAppointmentScheduler: React.FC = () => {
   return (
     <>
@@ -211,6 +211,6 @@ const SmartAppointmentScheduler: React.FC = () => {
       </div>
     </>
   );
-};
+';
 
 export default SmartAppointmentScheduler;
