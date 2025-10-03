@@ -132,7 +132,6 @@ const SmartContractAudit: React.FC = () => {
       rating: 5,
       comment: "Outstanding service! They found issues we never knew existed and provided clear solutions."
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-a6db
   ];
 
   return (
@@ -329,7 +328,6 @@ const SmartContractAudit: React.FC = () => {
                       {testimonial.company}
                     </div>
                   </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-a6db
                 </div>
               ))}
             </div>
@@ -343,15 +341,21 @@ const SmartContractAudit: React.FC = () => {
               Ready to Secure Your Smart Contracts?
             </h2>
             <p className="text-xl text-red-100 max-w-3xl mx-auto mb-8">
-              Get a comprehensive audit and ensure your blockchain project is secure and optimized
+              Protect your blockchain project with professional smart contract auditing from certified security experts.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="/contact" className="bg-white text-red-900 px-8 py-3 rounded-lg font-semibold hover:bg-red-50 transition-colors flex items-center justify-center">
+              <a
+                href="/contact"
+                className="inline-flex items-center px-8 py-4 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-lg transition-colors"
+              >
                 <Phone className="w-5 h-5 mr-2" />
-                Get Free Quote
+                Request Free Quote
               </a>
-              <a href="/case-studies" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-red-900 transition-colors flex items-center justify-center">
-                View Case Studies
+              <a
+                href="/case-studies"
+                className="inline-flex items-center px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-red-900 font-semibold rounded-lg transition-colors"
+              >
+                View Audit Reports
                 <ArrowRight className="w-5 h-5 ml-2" />
               </a>
             </div>
