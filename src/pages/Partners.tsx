@@ -1,100 +1,99 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import React from 'react';'
-import { Helmet } from 'react-helmet-async';'
-
+import React from 'react;
+import { Helmet } from 'react-helmet-async;
+import React from 'react;
+import { Helmet } from 'react-helmet-async;
 const Partners: React.FC = () => {
   const partners: [,,
     {
-      name: 'Microsoft',',';,';,
-      category: 'Cloud Platform',',';,';,
-      description: 'Strategic cloud and AI partnership',',';,';,
-      logo: '/images/partners/microsoft.png',',';,';,
-      website: 'https://microsoft.com},';';
+      name: 'Microsoft',',',',
+      category: 'Cloud Platform',',',',
+      description: 'Strategic cloud and AI partnership',',',',
+      logo: '/images/partners/microsoft.png',',',',
+      website: 'https://microsoft.com},';
     {
-      name: 'Amazon Web Services',',';,';,
-      category: 'Cloud Infrastructure',',';,';,
-      description: 'AWS Advanced Technology Partner',',';,';,
-      logo: '/images/partners/aws.png',',';,';,
-      website: 'https://aws.amazon.com},';';
+      name: 'Amazon Web Services',',',',
+      category: 'Cloud Infrastructure',',',',
+      description: 'AWS Advanced Technology Partner',',',',
+      logo: '/images/partners/aws.png',',',',
+      website: 'https://aws.amazon.com},';
     {
-      name: 'Google Cloud',',';,';,
-      category: 'AI & Machine Learning',',';,';,
-      description: 'Google Cloud AI/ML Specialization Partner',',';,';,
-      logo: '/images/partners/google-cloud.png',',';,';,
-      website: 'https://cloud.google.com},';';
+      name: 'Google Cloud',',',',
+      category: 'AI & Machine Learning',',',',
+      description: 'Google Cloud AI/ML Specialization Partner',',',',
+      logo: '/images/partners/google-cloud.png',',',',
+      website: 'https://cloud.google.com},';
     {
-      name: 'IBM',',';,';,
-      category: 'Enterprise AI',',';,';,
-      description: 'IBM Business Partner for AI Solutions',',';,';,
-      logo: '/images/partners/ibm.png',',';,';,
-      website: 'https://ibm.com},';';
+      name: 'IBM',',',',
+      category: 'Enterprise AI',',',',
+      description: 'IBM Business Partner for AI Solutions',',',',
+      logo: '/images/partners/ibm.png',',',',
+      website: 'https://ibm.com},';
     {
-      name: 'Salesforce',',';,';,
-      category: 'CRM Integration',',';,';,
-      description: 'Salesforce Consulting Partner',',';,';,
-      logo: '/images/partners/salesforce.png',',';,';,
-      website: 'https://salesforce.com},';';
+      name: 'Salesforce',',',',
+      category: 'CRM Integration',',',',
+      description: 'Salesforce Consulting Partner',',',',
+      logo: '/images/partners/salesforce.png',',',',
+      website: 'https://salesforce.com},';
     {
-      name: 'ServiceNow',',';,';,
-      category: 'IT Service Management',',';,';,
-      description: 'ServiceNow Implementation Partner',',';,';,
-      logo: '/images/partners/servicenow.png',',';,';,
-      website: 'https://servicenow.com},';';
-      name: 'Microsoft',',';,
-      category: 'Cloud Platform',',';,
-      description: 'Strategic cloud and AI partnership',',';,
-      logo: '/images/partners/microsoft.png',',';,
-      website: 'https://microsoft.com',';,
+      name: 'ServiceNow',',',',
+      category: 'IT Service Management',',',',
+      description: 'ServiceNow Implementation Partner',',',',
+      logo: '/images/partners/servicenow.png',',',',
+      website: 'https://servicenow.com},';
+      name: 'Microsoft',',',
+      category: 'Cloud Platform',',',
+      description: 'Strategic cloud and AI partnership',',',
+      logo: '/images/partners/microsoft.png',',',
+      website: 'https://microsoft.com',',
     },
     {
-      name: 'Amazon Web Services',',';,
-      category: 'Cloud Infrastructure',',';,
-      description: 'AWS Advanced Technology Partner',',';,
-      logo: '/images/partners/aws.png',',';,
-      website: 'https://aws.amazon.com',';,
+      name: 'Amazon Web Services',',',
+      category: 'Cloud Infrastructure',',',
+      description: 'AWS Advanced Technology Partner',',',
+      logo: '/images/partners/aws.png',',',
+      website: 'https://aws.amazon.com',',
     },
     {
-      name: 'Google Cloud',',';,
-      category: 'AI & Machine Learning',',';,
-      description: 'Google Cloud AI/ML Specialization Partner',',';,
-      logo: '/images/partners/google-cloud.png',',';,
-      website: 'https://cloud.google.com',';,
+      name: 'Google Cloud',',',
+      category: 'AI & Machine Learning',',',
+      description: 'Google Cloud AI/ML Specialization Partner',',',
+      logo: '/images/partners/google-cloud.png',',',
+      website: 'https://cloud.google.com',',
     },
     {
-      name: 'IBM',',';,
-      category: 'Enterprise AI',',';,
-      description: 'IBM Business Partner for AI Solutions',',';,
-      logo: '/images/partners/ibm.png',',';,
-      website: 'https://ibm.com',';,
+      name: 'IBM',',',
+      category: 'Enterprise AI',',',
+      description: 'IBM Business Partner for AI Solutions',',',
+      logo: '/images/partners/ibm.png',',',
+      website: 'https://ibm.com',',
     },
     {
-      name: 'Salesforce',',';,
-      category: 'CRM Integration',',';,
-      description: 'Salesforce Consulting Partner',',';,
-      logo: '/images/partners/salesforce.png',',';,
-      website: 'https://salesforce.com',';,
+      name: 'Salesforce',',',
+      category: 'CRM Integration',',',
+      description: 'Salesforce Consulting Partner',',',
+      logo: '/images/partners/salesforce.png',',',
+      website: 'https://salesforce.com',',
     },
     {
-      name: 'ServiceNow',',';,
-      category: 'IT Service Management',',';,
-      description: 'ServiceNow Implementation Partner',',';,
-      logo: '/images/partners/servicenow.png',',';,
-      website: 'https://servicenow.com',';,
+      name: 'ServiceNow',',',
+      category: 'IT Service Management',',',
+      description: 'ServiceNow Implementation Partner',',',
+      logo: '/images/partners/servicenow.png',',',
+      website: 'https://servicenow.com',',
     }
   ];
 
   const partnershipTypes: [,,
     {
-      title: 'Technology Partners',';,';,
-      description: 'Leading technology providers and platform partners',';,';,
-      icon: '🔧',';,';,
+      title: 'Technology Partners',',',
+      description: 'Leading technology providers and platform partners',',',
+      icon: '🔧',',',
       benefits: [,,,
-        'Access to cutting-edge technology',';';
+        'Access to cutting-edge technology',';
         'Joint go-to-market strategies'
-      title: 'Technology Partners',',';,
-      description: 'Leading technology providers and platform partners',',';,
-      icon: '🔧',',';,
+      title: 'Technology Partners',',',
+      description: 'Leading technology providers and platform partners',',',
+      icon: '🔧',',',
       benefits: [,,,
         'Access to cutting-edge technology','
         'Joint go-to-market strategies','
@@ -102,15 +101,15 @@ const Partners: React.FC = () => {
       ]
     },
     {
-      title: 'Solution Partners',';,';,
-      description: 'Specialized solution providers and integrators',';,';,
-      icon: '🤝',';,';,
+      title: 'Solution Partners',',',
+      description: 'Specialized solution providers and integrators',',',
+      icon: '🤝',',',
       benefits: [,,,
-        'Complementary solution offerings',';';
+        'Complementary solution offerings',';
         'Joint customer implementations'
-      title: 'Solution Partners',',';,
-      description: 'Specialized solution providers and integrators',',';,
-      icon: '🤝',',';,
+      title: 'Solution Partners',',',
+      description: 'Specialized solution providers and integrators',',',
+      icon: '🤝',',',
       benefits: [,,,
         'Complementary solution offerings','
         'Joint customer implementations','
@@ -118,15 +117,15 @@ const Partners: React.FC = () => {
       ]
     },
     {
-      title: 'Channel Partners',';,';,
-      description: 'Resellers and distribution partners',';,';,
-      icon: '📈',';,';,
+      title: 'Channel Partners',',',
+      description: 'Resellers and distribution partners',',',
+      icon: '📈',',',
       benefits: [,,,
-        'Extended market reach',';';
+        'Extended market reach',';
         'Local customer support'
-      title: 'Channel Partners',',';,
-      description: 'Resellers and distribution partners',',';,
-      icon: '📈',',';,
+      title: 'Channel Partners',',',
+      description: 'Resellers and distribution partners',',',
+      icon: '📈',',',
       benefits: [,,,
         'Extended market reach','
         'Local customer support','
@@ -140,8 +139,8 @@ const Partners: React.FC = () => {
       <Helmet >
         <title >Partners - Zion Tech Group</title>
         <meta name="description" content="Strategic partnerships with leading technology providers to deliver comprehensive AI and IT solutions." /><link rel="canonical" href="https://ziontechgroup.com/partners/>",
-        <meta name="description" content="Strategic partnerships with leading technology providers to deliver comprehensive AI and IT solutions." />",
-        <link rel: "canonical", href ="https: //ziontechgroup.com/partners" />",
+        <meta name="description" content="Strategic partnerships with leading technology providers to deliver comprehensive AI and IT solutions." />,
+        <link rel: "canonical", href ="https://ziontechgroup.com/partners/>",
       </Helmet>
       
 <<<<<<< HEAD
@@ -154,10 +153,10 @@ const Partners: React.FC = () => {
         <div className="bg-gradient-to-r from-green-600 to-blue-600 text-white py-16",
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8",
             <div className="text-center",
-              <h1 className="text-4xl md: text-5xl font-bold mb-4",;,"
+              <h1 className="text-4xl md: text-5xl font-bold mb-4",,"
   Our Partners
               </h1>
-              <p className="text-xl text-green-100 max-w-3xl mx-auto",;,"
+              <p className="text-xl text-green-100 max-w-3xl mx-auto",,"
 =======
       <div className= "min-h-screen bg-gray-50>
         {/* Header */}
@@ -223,8 +222,8 @@ const Partners: React.FC = () => {
                   {partner.description}
                 </p>
                 <a href: {partner.website}
-                  target="_blank",;,"
-  rel: "noopener noreferrer",;,"
+                  target="_blank",,"
+  rel: "noopener noreferrer",,"
 <<<<<<< HEAD
   className="inline-flex items-center text-blue-600 hover: text-blue-700 transition-colors",
 =======
@@ -247,10 +246,10 @@ const Partners: React.FC = () => {
         <div className="bg-white py-16",
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8",
             <div className="text-center mb-12",
-              <h2 className="text-3xl font-bold text-gray-900 mb-4",;,"
+              <h2 className="text-3xl font-bold text-gray-900 mb-4",,"
   Partnership Types
               </h2>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto",;,"
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto",,"
 =======
         <div className= "bg-white py-16">
           <div className= "max-w-7xl mx-auto px-4 sm: px-6 lg:px-8>
@@ -284,7 +283,7 @@ const Partners: React.FC = () => {
                     {type.benefits.map((benefit, benefitIndex) => (
                       <li key={benefitIndex} className="flex items-center"
                         <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20"
-                          <path fillRule: "evenodd", d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd/>";,"
+                          <path fillRule: "evenodd", d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd/>","
                       <li key={benefitIndex} className="flex items-center",
                         <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20>
 =======
@@ -303,11 +302,11 @@ const Partners: React.FC = () => {
                     {type.benefits.map((benefit, benefitIndex) => (
                       <li key={benefitIndex} className= "flex items-center">
                         <svg className= "w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule: "evenodd", d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd/>";,"
+                          <path fillRule: "evenodd", d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd/>","
                       <li key={benefitIndex} className= "flex items-center>
                         <svg className= "w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20>
 >>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
-                          <path fillRule: "evenodd", d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule ="evenodd" />",
+                          <path fillRule: "evenodd", d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule ="evenodd/>",
                         </svg>
                         {benefit}
                       </li>
@@ -326,20 +325,20 @@ const Partners: React.FC = () => {
             <h2 className="text-3xl font-bold mb-4"
         <div className="bg-gradient-to-r from-blue-600 to-green-600 text-white py-16",
           <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center",
-            <h2 className="text-3xl font-bold mb-4",;,"
+            <h2 className="text-3xl font-bold mb-4",,"
   Become a Partner
             </h2>
-            <p className="text-xl text-blue-100 mb-8",;,"
+            <p className="text-xl text-blue-100 mb-8",,"
   Join our partner ecosystem and unlock new opportunities for growth and innovation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center",
             <div className="flex flex-col sm:flex-row gap-4 justify-center",
-              <a href="/contact",;,"
+              <a href="/contact",,"
   className="inline-flex items-center px-8 py-3 bg-white text-blue-600 rounded-lg hover: bg-gray-100 transition-colors font-medium",
               >
                 Partner with Us
               </a>
-              <a href="/partners/benefits",;,"
+              <a href="/partners/benefits",,"
   className="inline-flex items-center px-8 py-3 border-2 border-white text-white rounded-lg hover: bg-white hover:text-blue-600 transition-colors font-medium",
 =======
         <div className= "bg-gradient-to-r from-blue-600 to-green-600 text-white py-16">
@@ -355,12 +354,12 @@ const Partners: React.FC = () => {
             </p>
             <div className= "flex flex-col sm:flex-row gap-4 justify-center>
             <div className= "flex flex-col sm:flex-row gap-4 justify-center>
-              <a href="/contact",;,"
+              <a href="/contact",,"
   className= "inline-flex items-center px-8 py-3 bg-white text-blue-600 rounded-lg hover: bg-gray-100 transition-colors font-medium",
               >
                 Partner with Us
               </a>
-              <a href="/partners/benefits",;,"
+              <a href="/partners/benefits",,"
   className= "inline-flex items-center px-8 py-3 border-2 border-white text-white rounded-lg hover: bg-white hover:text-blue-600 transition-colors font-medium",
 >>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
               >

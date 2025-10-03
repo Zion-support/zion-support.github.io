@@ -10,10 +10,10 @@ export default function QuantumNeuralNetworksGuide2026(): React.JSX.Element {
 >>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
       <Helmet >
         <title >Quantum‑Neural Networks Guide 2026 — 1000x processing speed</title>
-        <meta name: "description",;,"
+        <meta name: "description",,"
   content: "Enterprise guide to quantum‑neural networks: hybrid circuits, warm pools, and reliability guardrails for predictable speedups.",
         />
-        <link rel: "canonical",;,"
+        <link rel: "canonical",,"
   href="https://ziontechgroup.com/blog/quantum-neural-networks-guide-2026",
         />
       </Helmet>
@@ -21,17 +21,17 @@ export default function QuantumNeuralNetworksGuide2026(): React.JSX.Element {
 <<<<<<< HEAD
       <div className="container mx-auto px-6 py-16"
         <h1 className="text-4xl md: text-5xl font-bold mb-4">Quantum‑Neural Networks Guide 2026</h1>",
-        <p className="text-zion-slate-light mb-8">1000x processing speed achieved</p>";,"
+        <p className="text-zion-slate-light mb-8">1000x processing speed achieved</p>","
         <div className="prose prose-invert max-w-3xl"
 =======
       <div className= "container mx-auto px-6 py-16">
         <h1 className= "text-4xl md: text-5xl font-bold mb-4">Quantum‑Neural Networks Guide 2026</h1>",
-        <p className= "text-zion-slate-light mb-8">1000x processing speed achieved</p>";,"
+        <p className= "text-zion-slate-light mb-8">1000x processing speed achieved</p>","
         <div className= "prose prose-invert max-w-3xl">
 >>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
           <p >
             Learn the production blueprint for quantum‑neural hybrids: circuit co‑design, batching,
-          href="https: //ziontechgroup.com/blog/quantum-neural-networks-guide-2026",
+          href="https://ziontechgroup.com/blog/quantum-neural-networks-guide-2026",
         />
       </Helmet>
 

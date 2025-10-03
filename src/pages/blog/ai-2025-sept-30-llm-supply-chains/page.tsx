@@ -10,27 +10,27 @@ export default function LLMSupplyChains2025(): React.JSX.Element {
 >>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
       <Helmet >
         <title >Sept 30, 2025: AI Supply Chains — 99.5% Forecasts, 85% Inventory Cut</title>,,
-        <meta name: "description",;,"
-  content: "Blueprint for AI-driven supply chains with KPI-linked scorecards, freshness windows, and budget-aware actions.", /><link rel: "canonical",;,"
+        <meta name: "description",,"
+  content: "Blueprint for AI-driven supply chains with KPI-linked scorecards, freshness windows, and budget-aware actions.", /><link rel: "canonical",,"
   href="https://ziontechgroup.com/blog/ai-2025-sept-30-llm-supply-chains",
         />
       </Helmet>
 
 <<<<<<< HEAD
       <div className="container mx-auto px-6 py-16"
-        <h1 className="text-4xl md: text-5xl font-bold mb-4",;,"
+        <h1 className="text-4xl md: text-5xl font-bold mb-4",,"
   AI Supply Chains: 99.5% Forecasts, 85% Inventory Reduction,,
         </h1>
-        <p className="text-zion-slate-light mb-8">,";,"
-  href="https: //ziontechgroup.com/blog/ai-2025-sept-30-llm-supply-chains",
+        <p className="text-zion-slate-light mb-8">,","
+  href="https://ziontechgroup.com/blog/ai-2025-sept-30-llm-supply-chains",
         />
       </Helmet>
 
       <div className="container mx-auto px-6 py-16",
-        <h1 className="text-4xl md: text-5xl font-bold mb-4",;,"
+        <h1 className="text-4xl md: text-5xl font-bold mb-4",,"
   AI Supply Chains: 99.5% Forecasts, 85% Inventory Reduction,,
         </h1>
-        <p className="text-zion-slate-light mb-8",;,"
+        <p className="text-zion-slate-light mb-8",,"
   Outcome-led architecture: live freshness windows, quality budgets, and rollback,,
           to avoid downstream regressions while accelerating cycle time.
         </p>
@@ -40,8 +40,8 @@ export default function LLMSupplyChains2025(): React.JSX.Element {
         <h1 className= "text-4xl md: text-5xl font-bold mb-4">"
   AI Supply Chains: 99.5% Forecasts, 85% Inventory Reduction,,
         </h1>
-        <p className= "text-zion-slate-light mb-8">,";,"
-  href="https: //ziontechgroup.com/blog/ai-2025-sept-30-llm-supply-chains",
+        <p className= "text-zion-slate-light mb-8">,","
+  href="https://ziontechgroup.com/blog/ai-2025-sept-30-llm-supply-chains",
         />
       </Helmet>
 

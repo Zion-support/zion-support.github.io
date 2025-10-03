@@ -9,7 +9,7 @@ const Page: () => {
 >>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
       <Helmet >
         <title >Enterprise AI Platforms 2025: Architecture, SLAs, and ROI</title>,,
-        <meta name: "description",;,"
+        <meta name: "description",,"
   content: "Blueprint for building enterprise AI platforms: SLAs, guardrails, cost controls, and measurable ROI.",
         />
         <link rel: "canonical", href ="https://ziontechgroup.com/blog/ai-2025-oct-enterprise-ai-platforms/>",
@@ -18,18 +18,18 @@ const Page: () => {
 <<<<<<< HEAD
       <div className="container mx-auto px-6 py-12"
         <div className="max-w-3xl mx-auto"
-          <div className="mb-6 text-sm text-zion-slate-light">Platforms • 10 min read • 2025-10-01</div>";,"
+          <div className="mb-6 text-sm text-zion-slate-light">Platforms • 10 min read • 2025-10-01</div>","
           <h1 className="text-4xl font-bold mb-4">Enterprise AI Platforms 2025: Architecture, SLAs, and ROI</h1>",
-          <p className="text-zion-slate-light mb-6">,";,"
+          <p className="text-zion-slate-light mb-6">,","
 =======
       <div className= "container mx-auto px-6 py-12">
         <div className= "max-w-3xl mx-auto">
-          <div className= "mb-6 text-sm text-zion-slate-light">Platforms • 10 min read • 2025-10-01</div>";,"
+          <div className= "mb-6 text-sm text-zion-slate-light">Platforms • 10 min read • 2025-10-01</div>","
           <h1 className= "text-4xl font-bold mb-4">Enterprise AI Platforms 2025: Architecture, SLAs, and ROI</h1>",
-          <p className= "text-zion-slate-light mb-6">,";,"
+          <p className= "text-zion-slate-light mb-6">,","
 >>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   Production patterns that scale: golden paths, eval‑gated releases, cost guardrails, privacy‑first telemetry,,
-        <link rel: "canonical", href ="https: //ziontechgroup.com/blog/ai-2025-oct-enterprise-ai-platforms" />",
+        <link rel: "canonical", href ="https://ziontechgroup.com/blog/ai-2025-oct-enterprise-ai-platforms/>",
       </Helmet>
 
 <<<<<<< HEAD
@@ -37,7 +37,7 @@ const Page: () => {
         <div className="max-w-3xl mx-auto",
           <div className="mb-6 text-sm text-zion-slate-light">Platforms • 10 min read • 2025-10-01</div>",
           <h1 className="text-4xl font-bold mb-4">Enterprise AI Platforms 2025: Architecture, SLAs, and ROI</h1>",
-          <p className="text-zion-slate-light mb-6",;,"
+          <p className="text-zion-slate-light mb-6",,"
 =======
       <div className= "container mx-auto px-6 py-12>
         <div className= "max-w-3xl mx-auto>
@@ -52,7 +52,7 @@ const Page: () => {
 <<<<<<< HEAD
           <div className="space-y-6",
             <h2 className="text-2xl font-semibold">Reference Architecture</h2>",
-            <p className="text-zion-slate-light",;,"
+            <p className="text-zion-slate-light",,"
 =======
           <div className= "space-y-6>
             <h2 className= "text-2xl font-semibold">Reference Architecture</h2>",
@@ -76,7 +76,7 @@ const Page: () => {
 
 <<<<<<< HEAD
             <h2 className="text-2xl font-semibold">Cost Controls</h2>",
-            <p className="text-zion-slate-light",;,"
+            <p className="text-zion-slate-light",,"
 =======
             <h2 className= "text-2xl font-semibold">Cost Controls</h2>",
             <p className= "text-zion-slate-light">"

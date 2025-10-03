@@ -1,7 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
-
+import React from 'react;
+import { Link } from 'react-router-dom;
+import { Helmet } from 'react-helmet-async;
 const SMBSolutionsPage: React.FC = () => {
   const smbSolutions = [
     {
@@ -45,8 +44,7 @@ const SMBSolutionsPage: React.FC = () => {
     <>
       <Helmet>
         <title>SMB Solutions - Zion Tech Group</title>
-        <meta name="description" content="Cost-effective technology solutions designed for small and medium businesses including automation, cloud solutions, and business intelligence." />
-      </Helmet>
+        <meta name="description" content="Cost-effective technology solutions designed for small and medium businesses including automation, cloud solutions, and business intelligence." /></Helmet>
       
       <div className="min-h-screen bg-gray-50">
         {/* Header */}

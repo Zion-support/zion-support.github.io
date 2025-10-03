@@ -38,8 +38,7 @@ import { Helmet } from "react-helmet-async";
     <>
       <Helmet>
         <title>AI Micro-SaaS Solutions - Zion Tech Group</title>
-        <meta name="description" content="Discover our comprehensive suite of AI-powered micro-SaaS solutions designed to automate and optimize your business operations." />
-      </Helmet>
+        <meta name="description" content="Discover our comprehensive suite of AI-powered micro-SaaS solutions designed to automate and optimize your business operations." /></Helmet>
 
       <div className="min-h-screen bg-gray-50">
         {/* Header */}
@@ -58,7 +57,7 @@ import { Helmet } from "react-helmet-async";
                   <ul className="space-y-2 mb-6">
                     {service.features.map((feature, index) => (
                       <li key={index} className="flex items-center text-sm text-gray-700">
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0/>
                         {feature}
                       </li>
                     ))}
@@ -66,7 +65,7 @@ import { Helmet } from "react-helmet-async";
                   
                   <button className="w-full bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors flex items-center justify-center">
                     Get Started
-                    <ArrowRight className="w-4 h-4 ml-2" />
+                    <ArrowRight className="w-4 h-4 ml-2/>
                   </button>
                 </div>
               ))}
@@ -87,7 +86,7 @@ import { Helmet } from "react-helmet-async";
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center">
                 <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Lock className="w-8 h-8 text-blue-600" />
+                  <Lock className="w-8 h-8 text-blue-600/>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Enterprise Security</h3>
                 <p className="text-gray-600">
@@ -97,7 +96,7 @@ import { Helmet } from "react-helmet-async";
               
               <div className="text-center">
                 <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <TrendingUp className="w-8 h-8 text-green-600" />
+                  <TrendingUp className="w-8 h-8 text-green-600/>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Scalable Architecture</h3>
                 <p className="text-gray-600">
@@ -107,7 +106,7 @@ import { Helmet } from "react-helmet-async";
               
               <div className="text-center">
                 <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Database className="w-8 h-8 text-purple-600" />
+                  <Database className="w-8 h-8 text-purple-600/>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Easy Integration</h3>
                 <p className="text-gray-600">

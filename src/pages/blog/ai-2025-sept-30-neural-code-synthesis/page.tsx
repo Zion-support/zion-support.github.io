@@ -9,33 +9,33 @@ export default function NeuralCodeSynthesis2025(): React.JSX.Element {
 >>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
       <Helmet >
         <title >Neural Code Synthesis 2025 — 95% Accuracy, 90% Faster Delivery</title>
-        <meta name: "description",;,"
+        <meta name: "description",,"
   content: "Production blueprint for neural code assistants: policy tests, eval scorecards, and instant rollback for safe velocity.",
         />
-        <link rel: "canonical",;,"
+        <link rel: "canonical",,"
   href="https://ziontechgroup.com/blog/ai-2025-sept-30-neural-code-synthesis",
         />
       </Helmet>
 
 <<<<<<< HEAD
       <div className="container mx-auto px-6 py-16"
-        <h1 className="text-4xl md: text-5xl font-bold mb-4",;,"
-  href="https: //ziontechgroup.com/blog/ai-2025-sept-30-neural-code-synthesis",
+        <h1 className="text-4xl md: text-5xl font-bold mb-4",,"
+  href="https://ziontechgroup.com/blog/ai-2025-sept-30-neural-code-synthesis",
         />
       </Helmet>
 
       <div className="container mx-auto px-6 py-16",
-        <h1 className="text-4xl md: text-5xl font-bold mb-4",;,"
+        <h1 className="text-4xl md: text-5xl font-bold mb-4",,"
   Neural Code Synthesis 2025
         </h1>
-        <p className="text-zion-slate-light mb-8",;,"
+        <p className="text-zion-slate-light mb-8",,"
   95% Accuracy, 90% Faster Delivery
         </p>
         <div className="prose prose-invert max-w-3xl",
 =======
       <div className= "container mx-auto px-6 py-16">
         <h1 className= "text-4xl md: text-5xl font-bold mb-4">"
-  href="https: //ziontechgroup.com/blog/ai-2025-sept-30-neural-code-synthesis",
+  href="https://ziontechgroup.com/blog/ai-2025-sept-30-neural-code-synthesis",
         />
       </Helmet>
 

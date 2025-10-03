@@ -9,8 +9,8 @@ export default function AITrustlessEvaluationBlueprint2026(): React.JSX.Element 
 >>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
       <Helmet >
         <title >AI 2026: Trustless Evaluation Blueprint</title>,,
-        <meta name: "description",;,"
-  content: "Cryptographically verifiable evals, signed datasets, and reproducible pipelines for zero‑trust AI validation.", /><link rel: "canonical",;,"
+        <meta name: "description",,"
+  content: "Cryptographically verifiable evals, signed datasets, and reproducible pipelines for zero‑trust AI validation.", /><link rel: "canonical",,"
   href="https://ziontechgroup.com/blog/ai-2026-trustless-evaluation-blueprint",
         />
       </Helmet>
@@ -18,9 +18,9 @@ export default function AITrustlessEvaluationBlueprint2026(): React.JSX.Element 
 <<<<<<< HEAD
       <div className="container mx-auto px-6 py-16"
         <h1 className="text-4xl md: text-5xl font-bold mb-4">AI 2026: Trustless Evaluation Blueprint</h1>",
-        <p className="text-zion-slate-light mb-8">Signed datasets • Verifiable pipelines • Tamper‑evident scoring</p>";,"
-        <div className="prose prose-invert max-w-3xl">,";,"
-  href="https: //ziontechgroup.com/blog/ai-2026-trustless-evaluation-blueprint",
+        <p className="text-zion-slate-light mb-8">Signed datasets • Verifiable pipelines • Tamper‑evident scoring</p>","
+        <div className="prose prose-invert max-w-3xl">,","
+  href="https://ziontechgroup.com/blog/ai-2026-trustless-evaluation-blueprint",
         />
       </Helmet>
 
@@ -31,9 +31,9 @@ export default function AITrustlessEvaluationBlueprint2026(): React.JSX.Element 
 =======
       <div className= "container mx-auto px-6 py-16">
         <h1 className= "text-4xl md: text-5xl font-bold mb-4">AI 2026: Trustless Evaluation Blueprint</h1>",
-        <p className= "text-zion-slate-light mb-8">Signed datasets • Verifiable pipelines • Tamper‑evident scoring</p>";,"
-        <div className= "prose prose-invert max-w-3xl">,";,"
-  href="https: //ziontechgroup.com/blog/ai-2026-trustless-evaluation-blueprint",
+        <p className= "text-zion-slate-light mb-8">Signed datasets • Verifiable pipelines • Tamper‑evident scoring</p>","
+        <div className= "prose prose-invert max-w-3xl">,","
+  href="https://ziontechgroup.com/blog/ai-2026-trustless-evaluation-blueprint",
         />
       </Helmet>
 

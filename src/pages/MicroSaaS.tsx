@@ -1,26 +1,22 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
+import React from 'react;
+import { Helmet } from 'react-helmet-async;
 const MicroSaaS: React.FC = () => {
   const products = [
     {
       name: 'Email Deliverability Optimizer',
       price: '$149 - $799/mo',
       features: ['Reputation monitoring', 'Warm-up automation', 'SPF/DKIM/DMARC assistant', 'Seed testing'],
-      link: 'https://ziontechgroup.com/services/micro-saas',
-    },
+      link: 'https://ziontechgroup.com/services/micro-saas},
     {
       name: 'Sales Playbook Copilot',
       price: '$49 - $299/user/mo',
       features: ['Persona modeling', 'Sequence experiments', 'CRM sync', 'Deal risk alerts'],
-      link: 'https://ziontechgroup.com/services/micro-saas',
-    },
+      link: 'https://ziontechgroup.com/services/micro-saas},
     {
       name: 'Edge AI Inference Platform',
       price: '$499 - $2,499/mo',
       features: ['Model optimization', 'OTA updates', 'Fleet telemetry', 'A/B tests'],
-      link: 'https://ziontechgroup.com/services/micro-saas',
-    }
+      link: 'https://ziontechgroup.com/services/micro-saas}
   ];
 
   return (

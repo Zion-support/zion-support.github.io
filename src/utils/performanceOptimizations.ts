@@ -14,11 +14,11 @@ export const preloadCriticalResources = () => {
 
   criticalResources.forEach(resource => {
     const link = document.createElement('link');
-    link.rel = 'preload';
+    link.rel = 'preload;
     link.href = resource;
-    link.as = resource.endsWith('.woff2') ? 'font' : 'image';
+    link.as = resource.endsWith('.woff2') ? 'font' : 'image;
     if (resource.endsWith('.woff2')) {
-      link.crossOrigin = 'anonymous';
+      link.crossOrigin = 'anonymous;
     }
     document.head.appendChild(link);
   });
@@ -33,7 +33,7 @@ export const optimizeImages = () => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         const img = entry.target as HTMLImageElement;
-        img.src = img.dataset.src || '';
+        img.src = img.dataset.src || ';
         img.classList.remove('lazy');
         imageObserver.unobserve(img);
       }
@@ -145,7 +145,7 @@ export const bundleOptimizations = {
     if (typeof window === 'undefined') return;
     
     const link = document.createElement('link');
-    link.rel = 'prefetch';
+    link.rel = 'prefetch;
     link.href = url;
     document.head.appendChild(link);
   },
@@ -155,7 +155,7 @@ export const bundleOptimizations = {
     if (typeof window === 'undefined') return;
     
     const link = document.createElement('link');
-    link.rel = 'preconnect';
+    link.rel = 'preconnect;
     link.href = url;
     document.head.appendChild(link);
   }

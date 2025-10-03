@@ -10,8 +10,8 @@ export default function AutonomousOperationsCaseStudy2026(): React.JSX.Element {
 >>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
       <Helmet >
         <title >Autonomous Operations Case Study 2026 — 98% automation</title>
-        <meta name: "description",;,"
-  content: "Real‑world case study achieving 98% automation with budgets, KPI‑linked canaries, and instant rollback across critical workflows.", /><link rel: "canonical",;,"
+        <meta name: "description",,"
+  content: "Real‑world case study achieving 98% automation with budgets, KPI‑linked canaries, and instant rollback across critical workflows.", /><link rel: "canonical",,"
   href="https://ziontechgroup.com/blog/autonomous-operations-case-study-2026",
         />
       </Helmet>
@@ -19,9 +19,9 @@ export default function AutonomousOperationsCaseStudy2026(): React.JSX.Element {
 <<<<<<< HEAD
       <div className="container mx-auto px-6 py-16"
         <h1 className="text-4xl md: text-5xl font-bold mb-4">Autonomous Operations Case Study 2026</h1>",
-        <p className="text-zion-slate-light mb-8">98% automation rates realized</p>";,"
-        <div className="prose prose-invert max-w-3xl">,";,"
-  href="https: //ziontechgroup.com/blog/autonomous-operations-case-study-2026",
+        <p className="text-zion-slate-light mb-8">98% automation rates realized</p>","
+        <div className="prose prose-invert max-w-3xl">,","
+  href="https://ziontechgroup.com/blog/autonomous-operations-case-study-2026",
         />
       </Helmet>
 
@@ -32,9 +32,9 @@ export default function AutonomousOperationsCaseStudy2026(): React.JSX.Element {
 =======
       <div className= "container mx-auto px-6 py-16">
         <h1 className= "text-4xl md: text-5xl font-bold mb-4">Autonomous Operations Case Study 2026</h1>",
-        <p className= "text-zion-slate-light mb-8">98% automation rates realized</p>";,"
-        <div className= "prose prose-invert max-w-3xl">,";,"
-  href="https: //ziontechgroup.com/blog/autonomous-operations-case-study-2026",
+        <p className= "text-zion-slate-light mb-8">98% automation rates realized</p>","
+        <div className= "prose prose-invert max-w-3xl">,","
+  href="https://ziontechgroup.com/blog/autonomous-operations-case-study-2026",
         />
       </Helmet>
 

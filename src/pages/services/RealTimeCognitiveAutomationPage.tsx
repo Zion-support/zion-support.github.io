@@ -1,7 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
-
+import React from 'react;
+import { Link } from 'react-router-dom;
+import { Helmet } from 'react-helmet-async;
 const RealTimeCognitiveAutomationPage: React.FC = () => {
   const automationFeatures = [
     {
@@ -46,8 +45,7 @@ const RealTimeCognitiveAutomationPage: React.FC = () => {
     <>
       <Helmet>
         <title>Real-Time Cognitive Automation - Zion Tech Group</title>
-        <meta name="description" content="Advanced real-time cognitive automation solutions that combine AI, machine learning, and intelligent workflows for maximum business efficiency." />
-      </Helmet>
+        <meta name="description" content="Advanced real-time cognitive automation solutions that combine AI, machine learning, and intelligent workflows for maximum business efficiency." /></Helmet>
       
       <div className="min-h-screen bg-gray-50">
         {/* Header */}

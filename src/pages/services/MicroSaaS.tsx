@@ -1,6 +1,6 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+import React from 'react;
+import { Helmet } from 'react-helmet-async;
+import { Link } from 'react-router-dom;
 ;
 const MicroSaaS: React.FC = () => {
   return (
@@ -8,10 +8,9 @@ const MicroSaaS: React.FC = () => {
     <div className= "min-h-screen bg-white">
       <Helmet >
         <title >Micro SaaS Solutions – Zion Tech Group</title>
-        <meta name: "description", content ="Niche, subscription-based products: email deliverability, lead enrichment, vertical CRMs, and workflow bots." />"
-        <link rel: "canonical", href ="https://ziontechgroup.com/services/micro-saas" />"
-        <meta name="description" content="Niche, subscription-based products: email deliverability, lead enrichment, vertical CRMs, and workflow bots." />
-        <link rel: "canonical", href ="https://ziontechgroup.com/services/micro-saas" />
+        <meta name: "description", content ="Niche, subscription-based products: email deliverability, lead enrichment, vertical CRMs, and workflow bots./>"
+        <link rel: "canonical", href ="https://ziontechgroup.com/services/micro-saas/>"
+        <meta name="description" content="Niche, subscription-based products: email deliverability, lead enrichment, vertical CRMs, and workflow bots." /><link rel: "canonical", href ="https://ziontechgroup.com/services/micro-saas/>
       </Helmet>
 
       <section className="bg-gradient-to-br from-emerald-50 to-teal-50 py-16"

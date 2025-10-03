@@ -9,8 +9,8 @@ export default function GenAICostOptimizationBlueprint(): React.JSX.Element {
 >>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
       <Helmet >
         <title >GenAI Cost Optimization Blueprint — Tiers, Caches, Budgets</title>
-        <meta name: "description",;,"
-  content: "Quality tiers, semantic caches, and budget-aware routing delivering 40–70% savings with stable UX.", /><link rel: "canonical",;,"
+        <meta name: "description",,"
+  content: "Quality tiers, semantic caches, and budget-aware routing delivering 40–70% savings with stable UX.", /><link rel: "canonical",,"
   href="https://ziontechgroup.com/blog/genai-2025-oct-01-cost-optimization-blueprint",
         />
       </Helmet>
@@ -18,9 +18,9 @@ export default function GenAICostOptimizationBlueprint(): React.JSX.Element {
 <<<<<<< HEAD
       <div className="container mx-auto px-6 py-16"
         <h1 className="text-4xl md: text-5xl font-bold mb-4">GenAI Cost Optimization Blueprint</h1>",
-        <p className="text-zion-slate-light mb-8">Tiers, Caches, Budgets</p>";,"
-        <div className="prose prose-invert max-w-3xl">,";,"
-  href="https: //ziontechgroup.com/blog/genai-2025-oct-01-cost-optimization-blueprint",
+        <p className="text-zion-slate-light mb-8">Tiers, Caches, Budgets</p>","
+        <div className="prose prose-invert max-w-3xl">,","
+  href="https://ziontechgroup.com/blog/genai-2025-oct-01-cost-optimization-blueprint",
         />
       </Helmet>
 
@@ -31,9 +31,9 @@ export default function GenAICostOptimizationBlueprint(): React.JSX.Element {
 =======
       <div className= "container mx-auto px-6 py-16">
         <h1 className= "text-4xl md: text-5xl font-bold mb-4">GenAI Cost Optimization Blueprint</h1>",
-        <p className= "text-zion-slate-light mb-8">Tiers, Caches, Budgets</p>";,"
-        <div className= "prose prose-invert max-w-3xl">,";,"
-  href="https: //ziontechgroup.com/blog/genai-2025-oct-01-cost-optimization-blueprint",
+        <p className= "text-zion-slate-light mb-8">Tiers, Caches, Budgets</p>","
+        <div className= "prose prose-invert max-w-3xl">,","
+  href="https://ziontechgroup.com/blog/genai-2025-oct-01-cost-optimization-blueprint",
         />
       </Helmet>
 

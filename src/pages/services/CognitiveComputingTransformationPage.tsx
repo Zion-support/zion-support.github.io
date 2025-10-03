@@ -1,7 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
-
+import React from 'react;
+import { Link } from 'react-router-dom;
+import { Helmet } from 'react-helmet-async;
 const CognitiveComputingTransformationPage: React.FC = () => {
   const transformationServices = [
     {
@@ -46,8 +45,7 @@ const CognitiveComputingTransformationPage: React.FC = () => {
     <>
       <Helmet>
         <title>Cognitive Computing Transformation - Zion Tech Group</title>
-        <meta name="description" content="Transform your business with cognitive computing solutions that mimic human intelligence and decision-making processes." />"
-      </Helmet>
+        <meta name="description" content="Transform your business with cognitive computing solutions that mimic human intelligence and decision-making processes." /></Helmet>
       
       <div className="min-h-screen bg-gray-50">"
         {/* Header */}
@@ -221,7 +219,7 @@ const CognitiveComputingTransformationPage: React.FC = () => {
           <div className="container mx-auto px-6 text-center">"
             <h2 className="text-4xl font-bold mb-4">Ready for Cognitive Transformation?</h2>"
             <p className="text-xl mb-8 text-teal-100 max-w-2xl mx-auto">"
-              Let's discuss how cognitive computing can transform your business operations and drive innovation.';
+              Let's discuss how cognitive computing can transform your business operations and drive innovation.;
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <Link 

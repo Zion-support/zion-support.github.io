@@ -9,26 +9,26 @@ const Page: () => {
 >>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
       <Helmet >
         <title >Edge 2025: Consentless Experiments v3 (&lt;100ms)</title>,,
-        <meta name: "description",;,"
+        <meta name: "description",,"
   content: "Scoped IDs, on‑device metrics, and DP noise enabling compliant A/B at &lt;100ms — v3 blueprint.", /><link rel: "canonical", href ="https://ziontechgroup.com/blog/edge-2025-oct-01-private-consentless-experiments/>",
       </Helmet>
 
 <<<<<<< HEAD
       <div className="container mx-auto px-6 py-12"
         <div className="max-w-3xl mx-auto"
-          <div className="mb-6 text-sm text-zion-slate-light">Analytics • 7 min read • 2025-10-01</div>";,"
+          <div className="mb-6 text-sm text-zion-slate-light">Analytics • 7 min read • 2025-10-01</div>","
           <h1 className="text-4xl font-bold mb-4">Edge 2025: Consentless Experiments v3</h1>",
-          <p className="text-zion-slate-light mb-6">,";,"
+          <p className="text-zion-slate-light mb-6">,","
 =======
       <div className= "container mx-auto px-6 py-12">
         <div className= "max-w-3xl mx-auto">
-          <div className= "mb-6 text-sm text-zion-slate-light">Analytics • 7 min read • 2025-10-01</div>";,"
+          <div className= "mb-6 text-sm text-zion-slate-light">Analytics • 7 min read • 2025-10-01</div>","
           <h1 className= "text-4xl font-bold mb-4">Edge 2025: Consentless Experiments v3</h1>",
-          <p className= "text-zion-slate-light mb-6">,";,"
+          <p className= "text-zion-slate-light mb-6">,","
 >>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
   content: "Scoped IDs, on‑device metrics, and DP noise enabling compliant A/B at &lt;100ms — v3 blueprint.",
         />
-        <link rel: "canonical", href ="https: //ziontechgroup.com/blog/edge-2025-oct-01-private-consentless-experiments" />",
+        <link rel: "canonical", href ="https://ziontechgroup.com/blog/edge-2025-oct-01-private-consentless-experiments/>",
       </Helmet>
 
 <<<<<<< HEAD
@@ -36,7 +36,7 @@ const Page: () => {
         <div className="max-w-3xl mx-auto",
           <div className="mb-6 text-sm text-zion-slate-light">Analytics • 7 min read • 2025-10-01</div>",
           <h1 className="text-4xl font-bold mb-4">Edge 2025: Consentless Experiments v3</h1>",
-          <p className="text-zion-slate-light mb-6",;,"
+          <p className="text-zion-slate-light mb-6",,"
 =======
       <div className= "container mx-auto px-6 py-12>
         <div className= "max-w-3xl mx-auto>

@@ -1,6 +1,6 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+import React from 'react;
+import { Helmet } from 'react-helmet-async;
+import { Link } from 'react-router-dom;
 ;
 const AIServices: React.FC = () => {
   return (
@@ -8,10 +8,9 @@ const AIServices: React.FC = () => {
     <div className= "min-h-screen bg-white">
       <Helmet >
         <title >AI Services – Zion Tech Group</title>
-        <meta name: "description", content ="Applied AI solutions: RAG chatbots, IDP, Predictive Analytics, Vision, and MLOps. Transparent pricing and fast delivery." />"
-        <link rel: "canonical", href ="https://ziontechgroup.com/services/ai-services" />"
-        <meta name="description" content="Applied AI solutions: RAG chatbots, IDP, Predictive Analytics, Vision, and MLOps. Transparent pricing and fast delivery." />
-        <link rel: "canonical", href ="https://ziontechgroup.com/services/ai-services" />
+        <meta name: "description", content ="Applied AI solutions: RAG chatbots, IDP, Predictive Analytics, Vision, and MLOps. Transparent pricing and fast delivery./>"
+        <link rel: "canonical", href ="https://ziontechgroup.com/services/ai-services/>"
+        <meta name="description" content="Applied AI solutions: RAG chatbots, IDP, Predictive Analytics, Vision, and MLOps. Transparent pricing and fast delivery." /><link rel: "canonical", href ="https://ziontechgroup.com/services/ai-services/>
       </Helmet>
 
       <section className="bg-gradient-to-br from-blue-50 to-indigo-50 py-16"

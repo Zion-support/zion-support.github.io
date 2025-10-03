@@ -1,8 +1,7 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
-import { Check, Star } from 'lucide-react'';
-
+import React from 'react;
+import { Link } from 'react-router-dom;
+import { Helmet } from 'react-helmet-async;
+import { Check, Star } from 'lucide-react';
 const PricingPage: React.FC = () => {
   const pricingTiers = [
     {
@@ -94,8 +93,7 @@ const PricingPage: React.FC = () => {
     <>
       <Helmet>
         <title>Pricing - Zion Tech Group</title>
-        <meta name="description" content="Transparent pricing for AI services, micro SaaS solutions, and comprehensive IT services from Zion Tech Group." />"
-      </Helmet>
+        <meta name="description" content="Transparent pricing for AI services, micro SaaS solutions, and comprehensive IT services from Zion Tech Group." /></Helmet>
       
       <div className="min-h-screen bg-gray-50"
         {/* Header */}
@@ -118,13 +116,12 @@ const PricingPage: React.FC = () => {
                   className={`relative bg-white p-8 rounded-xl shadow-lg hover: shadow-xl transition-all duration-300 border-2 ${,`;
                     tier.popular 
                       ? 'border-purple-500 transform scale-105' 
-                      : 'border-gray-200 hover: border-gray-300',
-                  }`}`;
+                      : 'border-gray-200 hover: border-gray-300}`}`;
                 >
                   {tier.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"
                       <span className="bg-gradient-to-r from-purple-600 to-violet-600 text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center"
-                        <Star className="w-4 h-4 mr-1" />"
+                        <Star className="w-4 h-4 mr-1/>"
                         Most Popular
                       </span>
                     </div>
@@ -142,7 +139,7 @@ const PricingPage: React.FC = () => {
                   <ul className="space-y-4 mb-8"
                     {tier.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center"
-                        <Check className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />"
+                        <Check className="w-5 h-5 text-green-500 mr-3 flex-shrink-0/>"
                         <span className="text-gray-700">{feature}</span>"
                       </li>
                     ))}
@@ -153,8 +150,7 @@ const PricingPage: React.FC = () => {
                     className={`block w-full text-center py-3 rounded-lg font-semibold transition-all duration-300 ${`;
                       tier.popular
                         ? 'bg-gradient-to-r from-purple-600 to-violet-600 text-white hover: from-purple-700 hover:to-violet-700 shadow-lg',
-                        : 'bg-gray-900 text-white hover:bg-gray-800',
-                    }`}`;
+                        : 'bg-gray-900 text-white hover:bg-gray-800}`}`;
                   >
                     Get Started
                   </Link>
@@ -206,30 +202,30 @@ const PricingPage: React.FC = () => {
             <div className="bg-white p-8 rounded-xl shadow-lg max-w-4xl mx-auto"
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8"
                 <div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">What's Included</h3>';
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">What's Included</h3>;
                   <ul className="space-y-3"
                     <li className="flex items-center"
-                      <Check className="w-5 h-5 text-green-500 mr-3" />"
+                      <Check className="w-5 h-5 text-green-500 mr-3/>"
                       <span className="text-gray-700">Custom AI model development</span>"
                     </li>
                     <li className="flex items-center"
-                      <Check className="w-5 h-5 text-green-500 mr-3" />"
+                      <Check className="w-5 h-5 text-green-500 mr-3/>"
                       <span className="text-gray-700">Dedicated infrastructure</span>"
                     </li>
                     <li className="flex items-center"
-                      <Check className="w-5 h-5 text-green-500 mr-3" />"
+                      <Check className="w-5 h-5 text-green-500 mr-3/>"
                       <span className="text-gray-700">24/7 dedicated support</span>"
                     </li>
                     <li className="flex items-center"
-                      <Check className="w-5 h-5 text-green-500 mr-3" />"
+                      <Check className="w-5 h-5 text-green-500 mr-3/>"
                       <span className="text-gray-700">Compliance management</span>"
                     </li>
                     <li className="flex items-center"
-                      <Check className="w-5 h-5 text-green-500 mr-3" />"
+                      <Check className="w-5 h-5 text-green-500 mr-3/>"
                       <span className="text-gray-700">White-label solutions</span>"
                     </li>
                     <li className="flex items-center"
-                      <Check className="w-5 h-5 text-green-500 mr-3" />"
+                      <Check className="w-5 h-5 text-green-500 mr-3/>"
                       <span className="text-gray-700">SLA guarantees</span>"
                     </li>
                   </ul>
@@ -237,7 +233,7 @@ const PricingPage: React.FC = () => {
                 <div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">Contact Sales</h3>"
                   <p className="text-gray-600 mb-6"
-                    Get a custom quote tailored to your organization's specific needs and requirements.';
+                    Get a custom quote tailored to your organization's specific needs and requirements.;
                   </p>
                   <div className="space-y-4"
                     <div className="flex items-center"
@@ -282,7 +278,7 @@ const PricingPage: React.FC = () => {
                 <p className="text-gray-600">Absolutely! We offer custom pricing for enterprise clients with specific requirements and large-scale implementations.</p>"
               </div>
               <div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">What's included in support?</h3>';
+                <h3 className="text-xl font-bold text-gray-900 mb-2">What's included in support?</h3>;
                 <p className="text-gray-600">All plans include email support. Professional and Enterprise plans include priority support, and Enterprise includes 24/7 dedicated support.</p>"
               </div>
               <div>

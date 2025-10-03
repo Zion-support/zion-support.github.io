@@ -1,6 +1,8 @@
 import React from "react"
 import { createRoot } from "react-dom/client"
-import App from "./AppSafe"
+import App from "./App"
+import { initializeSecurity } from "./utils/security"
+import { initializePerformanceMonitoring } from "./utils/performance"
 async function reportWebVitals() {
   try {
     const { onCLS, onLCP, onFCP, onTTFB } = await import("web-vitals");
@@ -36,6 +38,10 @@ const initializeApp = () => {
     console.error("Root container not found");
     return;
   }
+
+  // Initialize security and performance monitoring
+  initializeSecurity();
+  initializePerformanceMonitoring();
 
   const root = createRoot(container);
   

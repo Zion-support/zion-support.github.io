@@ -10,8 +10,8 @@ export default function GenAIQualityTiersV3(): React.JSX.Element {
 >>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
       <Helmet >
         <title >GenAI Quality Tiers v3 — 50% Savings, Stable UX</title>
-        <meta name: "description",;,"
-  content: "Tiered routing, semantic caches, and eval‑gated fallbacks to cut cost without hurting experience.", /><link rel: "canonical",;,"
+        <meta name: "description",,"
+  content: "Tiered routing, semantic caches, and eval‑gated fallbacks to cut cost without hurting experience.", /><link rel: "canonical",,"
   href="https://ziontechgroup.com/blog/genai-2025-oct-01-quality-tiers-v3",
         />
       </Helmet>
@@ -19,22 +19,22 @@ export default function GenAIQualityTiersV3(): React.JSX.Element {
 <<<<<<< HEAD
       <div className="container mx-auto px-6 py-16"
         <h1 className="text-4xl md: text-5xl font-bold mb-4">GenAI Quality Tiers v3</h1>",
-        <p className="text-zion-slate-light mb-8">,";,"
-  href="https: //ziontechgroup.com/blog/genai-2025-oct-01-quality-tiers-v3",
+        <p className="text-zion-slate-light mb-8">,","
+  href="https://ziontechgroup.com/blog/genai-2025-oct-01-quality-tiers-v3",
         />
       </Helmet>
 
       <div className="container mx-auto px-6 py-16",
         <h1 className="text-4xl md: text-5xl font-bold mb-4">GenAI Quality Tiers v3</h1>",
-        <p className="text-zion-slate-light mb-8",;,"
+        <p className="text-zion-slate-light mb-8",,"
   Tier Routing • Semantic Caches • Eval‑Gated Fallbacks
         </p>
         <div className="prose prose-invert max-w-3xl",
 =======
       <div className= "container mx-auto px-6 py-16">
         <h1 className= "text-4xl md: text-5xl font-bold mb-4">GenAI Quality Tiers v3</h1>",
-        <p className= "text-zion-slate-light mb-8">,";,"
-  href="https: //ziontechgroup.com/blog/genai-2025-oct-01-quality-tiers-v3",
+        <p className= "text-zion-slate-light mb-8">,","
+  href="https://ziontechgroup.com/blog/genai-2025-oct-01-quality-tiers-v3",
         />
       </Helmet>
 

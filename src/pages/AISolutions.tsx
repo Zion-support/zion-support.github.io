@@ -1,8 +1,7 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Brain, Zap, Shield, Cloud, Database, Users, BarChart3, Cog, Target, Rocket } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-
+import React from 'react;
+import { Link } from 'react-router-dom;
+import { Brain, Zap, Shield, Cloud, Database, Users, BarChart3, Cog, Target, Rocket } from 'lucide-react;
+import { Helmet } from 'react-helmet-async;
 const AISolutions: React.FC = () => {
   const aiSolutions = [
     {
@@ -71,32 +70,26 @@ const AISolutions: React.FC = () => {
     {
       title: 'Increased Efficiency',
       description: 'Automate repetitive tasks and optimize workflows for maximum productivity.',
-      icon: '⚡',
-    },
+      icon: '⚡},
     {
       title: 'Enhanced Decision Making',
       description: 'Leverage data-driven insights for smarter business decisions.',
-      icon: '🧠',
-    },
+      icon: '🧠},
     {
       title: 'Cost Reduction',
       description: 'Reduce operational costs through intelligent automation and optimization.',
-      icon: '💰',
-    },
+      icon: '💰},
     {
       title: 'Competitive Advantage',
       description: 'Stay ahead of the competition with cutting-edge AI technologies.',
-      icon: '🚀',
-    },
+      icon: '🚀},
   ];
 
   return (
     <>
       <Helmet>
         <title>AI Solutions - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive AI solutions including machine learning, automation, cybersecurity, and data analytics. Transform your business with cutting-edge artificial intelligence." />
-        <meta name="keywords" content="AI solutions, machine learning, artificial intelligence, automation, cybersecurity, data analytics, Zion Tech Group" />
-      </Helmet>
+        <meta name="description" content="Comprehensive AI solutions including machine learning, automation, cybersecurity, and data analytics. Transform your business with cutting-edge artificial intelligence." /><meta name="keywords" content="AI solutions, machine learning, artificial intelligence, automation, cybersecurity, data analytics, Zion Tech Group" /></Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
         {/* Hero Section */}
@@ -146,7 +139,7 @@ const AISolutions: React.FC = () => {
                 <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
                   <div className="flex items-center mb-4">
                     <div className="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center mr-4">
-                      <solution.icon className="w-6 h-6 text-blue-600" />
+                      <solution.icon className="w-6 h-6 text-blue-600/>
                     </div>
                     <h3 className="text-xl font-bold text-gray-900">{solution.title}</h3>
                   </div>

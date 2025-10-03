@@ -9,9 +9,9 @@ export default function CachePlaybookV3(): React.JSX.Element {
 >>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
       <Helmet >
         <title >GenAI Cache Playbook v3 — Semantic + Tiered Caches</title>
-        <meta name: "description",;,"
-  content: "Blend semantic + tiered caches with eval‑gated fallbacks to cut spend 60–80% while preserving UX KPIs.", /><link ,";,"
-  rel: "canonical",;,"
+        <meta name: "description",,"
+  content: "Blend semantic + tiered caches with eval‑gated fallbacks to cut spend 60–80% while preserving UX KPIs.", /><link ,","
+  rel: "canonical",,"
   href="https://ziontechgroup.com/blog/genai-2025-oct-02-cache-playbook-v3",
         />
       </Helmet>
@@ -19,9 +19,9 @@ export default function CachePlaybookV3(): React.JSX.Element {
 <<<<<<< HEAD
       <div className="container mx-auto px-6 py-16"
         <h1 className="text-4xl md: text-5xl font-bold mb-4">GenAI Cache Playbook v3</h1>",
-        <p className="text-zion-slate-light mb-8">Semantic + Tiered Caches</p>";,"
-        <div className="prose prose-invert max-w-3xl">,";,"
-  href="https: //ziontechgroup.com/blog/genai-2025-oct-02-cache-playbook-v3",
+        <p className="text-zion-slate-light mb-8">Semantic + Tiered Caches</p>","
+        <div className="prose prose-invert max-w-3xl">,","
+  href="https://ziontechgroup.com/blog/genai-2025-oct-02-cache-playbook-v3",
         />
       </Helmet>
 
@@ -32,9 +32,9 @@ export default function CachePlaybookV3(): React.JSX.Element {
 =======
       <div className= "container mx-auto px-6 py-16">
         <h1 className= "text-4xl md: text-5xl font-bold mb-4">GenAI Cache Playbook v3</h1>",
-        <p className= "text-zion-slate-light mb-8">Semantic + Tiered Caches</p>";,"
-        <div className= "prose prose-invert max-w-3xl">,";,"
-  href="https: //ziontechgroup.com/blog/genai-2025-oct-02-cache-playbook-v3",
+        <p className= "text-zion-slate-light mb-8">Semantic + Tiered Caches</p>","
+        <div className= "prose prose-invert max-w-3xl">,","
+  href="https://ziontechgroup.com/blog/genai-2025-oct-02-cache-playbook-v3",
         />
       </Helmet>
 

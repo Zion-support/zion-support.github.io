@@ -9,8 +9,8 @@ export default function OperationalTrustV4(): React.JSX.Element {
 >>>>>>> a5cf4052dc3904d78088a15d415db3ea2f6579b8
       <Helmet >
         <title >Operational Trust Scorecards v4 — SLIs → KPIs with Budgets</title>
-        <meta name: "description",;,"
-  content: "Live canaries, budgeted actions, and attested rollback wired to product KPIs.", /><link rel: "canonical",;,"
+        <meta name: "description",,"
+  content: "Live canaries, budgeted actions, and attested rollback wired to product KPIs.", /><link rel: "canonical",,"
   href="https://ziontechgroup.com/blog/ai-2025-oct-01-operational-trust-v4",
         />
       </Helmet>
@@ -18,9 +18,9 @@ export default function OperationalTrustV4(): React.JSX.Element {
 <<<<<<< HEAD
       <div className="container mx-auto px-6 py-16"
         <h1 className="text-4xl md: text-5xl font-bold mb-4">Operational Trust Scorecards v4</h1>",
-        <p className="text-zion-slate-light mb-8">SLIs → KPIs with Budgets</p>";,"
-        <div className="prose prose-invert max-w-3xl">,";,"
-  href="https: //ziontechgroup.com/blog/ai-2025-oct-01-operational-trust-v4",
+        <p className="text-zion-slate-light mb-8">SLIs → KPIs with Budgets</p>","
+        <div className="prose prose-invert max-w-3xl">,","
+  href="https://ziontechgroup.com/blog/ai-2025-oct-01-operational-trust-v4",
         />
       </Helmet>
 
@@ -31,9 +31,9 @@ export default function OperationalTrustV4(): React.JSX.Element {
 =======
       <div className= "container mx-auto px-6 py-16">
         <h1 className= "text-4xl md: text-5xl font-bold mb-4">Operational Trust Scorecards v4</h1>",
-        <p className= "text-zion-slate-light mb-8">SLIs → KPIs with Budgets</p>";,"
-        <div className= "prose prose-invert max-w-3xl">,";,"
-  href="https: //ziontechgroup.com/blog/ai-2025-oct-01-operational-trust-v4",
+        <p className= "text-zion-slate-light mb-8">SLIs → KPIs with Budgets</p>","
+        <div className= "prose prose-invert max-w-3xl">,","
+  href="https://ziontechgroup.com/blog/ai-2025-oct-01-operational-trust-v4",
         />
       </Helmet>
 

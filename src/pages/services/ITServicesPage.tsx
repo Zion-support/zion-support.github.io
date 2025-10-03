@@ -1,7 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
-
+import React from 'react;
+import { Link } from 'react-router-dom;
+import { Helmet } from 'react-helmet-async;
 const ITServicesPage: React.FC = () => {
   const itServices = [
     {
@@ -46,8 +45,7 @@ const ITServicesPage: React.FC = () => {
     <>
       <Helmet>
         <title>IT Services - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive IT services including cloud infrastructure, DevOps, security, and network management from Zion Tech Group." />"
-      </Helmet>
+        <meta name="description" content="Comprehensive IT services including cloud infrastructure, DevOps, security, and network management from Zion Tech Group." /></Helmet>
       
       <div className="min-h-screen bg-gray-50">"
         {/* Header */}
@@ -167,7 +165,7 @@ const ITServicesPage: React.FC = () => {
           <div className="container mx-auto px-6 text-center">"
             <h2 className="text-4xl font-bold mb-4">Ready to Optimize Your IT Infrastructure?</h2>"
             <p className="text-xl mb-8 text-purple-100 max-w-2xl mx-auto">"
-              Let's discuss how our IT services can improve your infrastructure performance and security.';
+              Let's discuss how our IT services can improve your infrastructure performance and security.;
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <Link 

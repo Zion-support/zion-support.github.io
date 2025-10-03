@@ -18,11 +18,11 @@ export default function AIAutonomousRoadmaps2027(): React.JSX.Element {
         <h1 className= "text-4xl md: text-5xl font-bold mb-4">AI 2027: Autonomous Roadmaps that Prove ROI</h1>",
         <p className= "text-zion-slate-light mb-8">Bets → KPIs → budgets → rollback</p>"
         <div className= "prose prose-invert max-w-3xl">
-        <meta name: "description", content ="Outcome‑led bets, KPI scorecards, budgets, and rollback — a practical 2027 roadmap system." />",
+        <meta name: "description", content ="Outcome‑led bets, KPI scorecards, budgets, and rollback — a practical 2027 roadmap system./>",
         <p className="text-zion-slate-light mb-8">Bets → KPIs → budgets → rollback</p>
         <div className="prose prose-invert max-w-3xl">
-        <meta name="description" content="Outcome‑led bets, KPI scorecards, budgets, and rollback — a practical 2027 roadmap system." />",
-        <link rel: "canonical", href ="https: //ziontechgroup.com/blog/ai-2027-autonomous-roadmaps" />",
+        <meta name="description" content="Outcome‑led bets, KPI scorecards, budgets, and rollback — a practical 2027 roadmap system." />,
+        <link rel: "canonical", href ="https://ziontechgroup.com/blog/ai-2027-autonomous-roadmaps/>",
       </Helmet>
 
       <div className="container mx-auto px-6 py-16",
