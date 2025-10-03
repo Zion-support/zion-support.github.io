@@ -1,6 +1,11 @@
 import React, { useState } from 'react';
+<<<<<<< HEAD
 import Link from 'next/link';
 import PromoBanner from './PromoBanner';
+=======
+import { Link } from 'react-router-dom';
+import { Menu, X } from 'lucide-react';
+>>>>>>> b0266c0c1be3ec9050e7ba803edc6a65b0904e57
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -83,7 +88,12 @@ const Header: React.FC = () => {
             </div>
           </div>
         )}
+<<<<<<< HEAD
       </nav>
+=======
+        </nav>
+      </div>
+>>>>>>> b0266c0c1be3ec9050e7ba803edc6a65b0904e57
     </header>
   );
 };

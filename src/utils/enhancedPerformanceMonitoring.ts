@@ -32,11 +32,11 @@ class EnhancedPerformanceMonitor {
   private metrics: PerformanceMetrics[] = [];
   private alerts: PerformanceAlert[] = [];
   private observers: PerformanceObserver[] = [];
-  // private isMonitoring = false;
+  private isMonitoring = false;
 
   constructor() {
     this.initializeObservers();
-  };
+  }
 
   private initializeObservers(): void {
     if (typeof window === 'undefined') return;
@@ -63,7 +63,7 @@ class EnhancedPerformanceMonitor {
   private processNavigationTiming(entry: PerformanceNavigationTiming): void {
     const metrics: Partial<PerformanceMetrics> = {
       loadTime: entry.loadEventEnd - entry.loadEventStart,
-      timeToInteractive: entry.domInteractive - entry.fetchStart,
+      timeToInteractive: entry.domInteractive - entry.navigationStart,
       timestamp: Date.now()
     };
 

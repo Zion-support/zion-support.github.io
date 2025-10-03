@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -13,6 +14,9 @@ export const metadata: Metadata = {
     authors: ['Zion Tech Group'],
   },
 };
+=======
+import { Helmet } from 'react-helmet-async';
+>>>>>>> b0266c0c1be3ec9050e7ba803edc6a65b0904e57
 
 export default function Fortune500AI2026MegaTransformationSuccess() {
   return (

@@ -1,6 +1,14 @@
 import React from 'react';
+<<<<<<< HEAD
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
+=======
+import { UnifiedBanner, bannerConfigurations } from './components/UnifiedBannerSystem';
+import { LazyWrapper } from './components/LazyLoader';
+import { SEOOptimizer } from './components/SEOOptimizer';
+import { AccessibilityEnhancer } from './components/AccessibilityEnhancer';
+import { PerformanceMonitor } from './components/PerformanceMonitor';
+>>>>>>> b0266c0c1be3ec9050e7ba803edc6a65b0904e57
 
 // Lazy load heavy components
 const UnifiedContentPromotion = dynamic(() => import('../components/UnifiedContentPromotion'), {

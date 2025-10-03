@@ -1,5 +1,4 @@
 import React from "react";
-import { Helmet } from "react-helmet-async";
 import {
   Mail,
   Phone,
@@ -12,6 +11,7 @@ import {
   Zap,
   Sparkles
 } from "lucide-react";
+import { Helmet } from "react-helmet";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 

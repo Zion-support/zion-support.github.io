@@ -25,4 +25,13 @@ export default function Page() {
       </p>
     </main>
   );
+<<<<<<< HEAD
 }
+=======
+}
+
+// @ts-nocheck
+import React from 'react';
+
+
+>>>>>>> b0266c0c1be3ec9050e7ba803edc6a65b0904e57

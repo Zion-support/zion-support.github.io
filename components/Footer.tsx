@@ -1,5 +1,10 @@
 import React from 'react';
+<<<<<<< HEAD
 import Link from 'next/link';
+=======
+import { Link } from 'react-router-dom';
+import { Globe, Mail, Phone, MapPin } from 'lucide-react';
+>>>>>>> b0266c0c1be3ec9050e7ba803edc6a65b0904e57
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();

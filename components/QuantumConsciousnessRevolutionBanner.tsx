@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
+=======
+import React, { JSX } from "react";
+>>>>>>> b0266c0c1be3ec9050e7ba803edc6a65b0904e57
 
 export default function QuantumConsciousnessRevolutionBanner() {
   return (

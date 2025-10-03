@@ -1,377 +1,353 @@
 /**
- * SEO Optimization Utilities
- * Comprehensive SEO tools and metadata management
+ * SEO Optimizer Utility
+ * Comprehensive SEO tools and meta tag management
  */
 
-import { Helmet } from 'react-helmet-async';
-
-// SEO metadata interface
-interface SEOProps {
-  title?: string;
-  description?: string;
-  keywords?: string;
-  image?: string;
-  url?: string;
-  type?: string;
+export interface SEOMetadata {
+  title: string;
+  description: string;
+  keywords?: string[];
   author?: string;
-  publishedTime?: string;
-  modifiedTime?: string;
-  section?: string;
-  tags?: string[];
-  canonical?: string;
-  noindex?: boolean;
-  nofollow?: boolean;
+  canonicalUrl?: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogImage?: string;
+  ogType?: string;
+  twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player';
+  twitterTitle?: string;
+  twitterDescription?: string;
+  twitterImage?: string;
+  structuredData?: Record<string, unknown>;
 }
 
-// Default SEO values
-const DEFAULT_SEO = {
-  title: 'Zion Tech Group - Advanced AI and IT Solutions',
-  description: 'Leading provider of AI-powered solutions, cloud infrastructure, and digital transformation services. Expert consulting in AI workflow automation, quantum computing, and edge AI.',
-  keywords: 'AI, artificial intelligence, cloud computing, IT solutions, digital transformation, AI automation, quantum computing, edge AI',
-  image: '/images/og-image.jpg',
-  url: typeof window !== 'undefined' ? window.location.href : '',
-  type: 'website',
-  author: 'Zion Tech Group'
-};
-
-// SEO component
-export const SEO: React.FC<SEOProps> = ({
-  title = DEFAULT_SEO.title,
-  description = DEFAULT_SEO.description,
-  keywords = DEFAULT_SEO.keywords,
-  image = DEFAULT_SEO.image,
-  url = DEFAULT_SEO.url,
-  type = DEFAULT_SEO.type,
-  author = DEFAULT_SEO.author,
-  publishedTime,
-  modifiedTime,
-  section,
-  tags,
-  canonical,
-  noindex = false,
-  nofollow = false
-}) => {
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
-  const fullImage = image.startsWith('http') ? image : `${window.location.origin}${image}`;
-  const canonicalUrl = canonical || url;
-
-  return (
-    <Helmet>
-      {/* Basic Meta Tags */}
-      <title>{fullTitle}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
-      <meta name="author" content={author} />
-      
-      {/* Robots */}
-      <meta name="robots" content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`} />
-      
-      {/* Canonical URL */}
-      <link rel="canonical" href={canonicalUrl} />
-      
-      {/* Open Graph */}
-      <meta property="og:title" content={fullTitle} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={fullImage} />
-      <meta property="og:url" content={url} />
-      <meta property="og:type" content={type} />
-      <meta property="og:site_name" content="Zion Tech Group" />
-      <meta property="og:locale" content="en_US" />
-      
-      {/* Twitter Card */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={fullTitle} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={fullImage} />
-      <meta name="twitter:site" content="@ziontechgroup" />
-      <meta name="twitter:creator" content="@ziontechgroup" />
-      
-      {/* Article specific */}
-      {type === 'article' && (
-        <>
-          {publishedTime && <meta property="article:published_time" content={publishedTime} />}
-          {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
-          {author && <meta property="article:author" content={author} />}
-          {section && <meta property="article:section" content={section} />}
-          {tags && tags.map(tag => (
-            <meta key={tag} property="article:tag" content={tag} />
-          ))}
-        </>
-      )}
-      
-      {/* Additional SEO */}
-      <meta name="theme-color" content="#1e40af" />
-      <meta name="msapplication-TileColor" content="#1e40af" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      
-      {/* Language */}
-      <html lang="en" />
-    </Helmet>
-  );
-};
-
-// Generate structured data
-export const generateStructuredData = (type: 'Organization' | 'Article' | 'Service' | 'FAQPage', data: any) => {
-  const baseSchema = {
-    '@context': 'https://schema.org',
-    '@type': type
-  };
-
-  switch (type) {
-    case 'Organization':
-      return {
-        ...baseSchema,
-        name: 'Zion Tech Group',
-        description: 'Leading provider of AI-powered solutions, cloud infrastructure, and digital transformation services.',
-        url: 'https://ziontechgroup.com',
-        logo: 'https://ziontechgroup.com/logo.png',
-        contactPoint: {
-          '@type': 'ContactPoint',
-          telephone: '+1-302-464-0950',
-          contactType: 'customer service',
-          availableLanguage: 'English'
-        },
-        address: {
-          '@type': 'PostalAddress',
-          streetAddress: '364 E Main St STE 1008',
-          addressLocality: 'Middletown',
-          addressRegion: 'DE',
-          postalCode: '19709',
-          addressCountry: 'US'
-        },
-        sameAs: [
-          'https://linkedin.com/company/zion-tech-group',
-          'https://twitter.com/ziontechgroup'
-        ],
-        foundingDate: '2020',
-        numberOfEmployees: '50-100',
-        services: [
-          'AI Workflow Automation',
-          'AI Virtual Assistant',
-          'AI Data Analytics',
-          'Quantum Computing Consulting',
-          'Edge AI Solutions',
-          'Zero Trust Security',
-          'Cybersecurity',
-          'Cloud Infrastructure'
-        ]
-      };
-
-    case 'Article':
-      return {
-        ...baseSchema,
-        headline: data.title,
-        description: data.description,
-        author: {
-          '@type': 'Person',
-          name: data.author || 'Zion Tech Group'
-        },
-        publisher: {
-          '@type': 'Organization',
-          name: 'Zion Tech Group',
-          logo: {
-            '@type': 'ImageObject',
-            url: 'https://ziontechgroup.com/logo.png'
-          }
-        },
-        datePublished: data.publishedTime,
-        dateModified: data.modifiedTime,
-        image: data.image,
-        url: data.url
-      };
-
-    case 'Service':
-      return {
-        ...baseSchema,
-        name: data.name,
-        description: data.description,
-        provider: {
-          '@type': 'Organization',
-          name: 'Zion Tech Group'
-        },
-        areaServed: 'Worldwide',
-        serviceType: data.category,
-        offers: {
-          '@type': 'Offer',
-          priceCurrency: 'USD',
-          availability: 'https://schema.org/InStock'
-        }
-      };
-
-    case 'FAQPage':
-      return {
-        ...baseSchema,
-        mainEntity: data.faqs.map((faq: any) => ({
-          '@type': 'Question',
-          name: faq.question,
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: faq.answer
-          }
-        }))
-      };
-
-    default:
-      return baseSchema;
-  }
-};
-
-// SEO utility functions
-export const generateMetaDescription = (content: string, maxLength: number = 160): string => {
-  const cleanContent = content
-    .replace(/<[^>]*>/g, '') // Remove HTML tags
-    .replace(/\s+/g, ' ') // Normalize whitespace
-    .trim();
-
-  if (cleanContent.length <= maxLength) {
-    return cleanContent;
-  }
-
-  return cleanContent.substring(0, maxLength - 3) + '...';
-};
-
-export const generateTitle = (pageTitle: string, siteName: string = 'Zion Tech Group'): string => {
-  if (pageTitle.includes(siteName)) {
-    return pageTitle;
-  }
-  return `${pageTitle} | ${siteName}`;
-};
-
-export const generateSlug = (text: string): string => {
-  return text
-    .toLowerCase()
-    .replace(/[^\w\s-]/g, '') // Remove special characters
-    .replace(/\s+/g, '-') // Replace spaces with hyphens
-    .replace(/--+/g, '-') // Replace multiple hyphens with single
-    .trim();
-};
-
-export const generateKeywords = (content: string, tags: string[] = []): string => {
-  const baseKeywords = [
-    'AI', 'artificial intelligence', 'cloud computing', 'IT solutions',
-    'digital transformation', 'automation', 'quantum computing', 'edge AI'
-  ];
-
-  // Extract keywords from content (simplified)
-  const contentKeywords = content
-    .toLowerCase()
-    .match(/\b\w{4,}\b/g) || [];
+export const generateMetaTags = (metadata: SEOMetadata): string => {
+  const tags: string[] = [];
   
-  // Get most common words
-  const wordCount = contentKeywords.reduce((acc, word) => {
-    acc[word] = (acc[word] || 0) + 1;
-    return acc;
-  }, {} as Record<string, number>);
+  // Basic meta tags
+  tags.push(`<title>${escapeHtml(metadata.title)}</title>`);
+  tags.push(`<meta name="description" content="${escapeHtml(metadata.description)}" />`);
+  
+  if (metadata.keywords && metadata.keywords.length > 0) {
+    tags.push(`<meta name="keywords" content="${metadata.keywords.join(', ')}" />`);
+  }
+  
+  if (metadata.author) {
+    tags.push(`<meta name="author" content="${escapeHtml(metadata.author)}" />`);
+  }
+  
+  if (metadata.canonicalUrl) {
+    tags.push(`<link rel="canonical" href="${escapeHtml(metadata.canonicalUrl)}" />`);
+  }
 
-  const topKeywords = Object.entries(wordCount)
-    .sort(([, a], [, b]) => b - a)
-    .slice(0, 10)
-    .map(([word]) => word);
+  // Open Graph tags
+  tags.push(`<meta property="og:title" content="${escapeHtml(metadata.ogTitle || metadata.title)}" />`);
+  tags.push(`<meta property="og:description" content="${escapeHtml(metadata.ogDescription || metadata.description)}" />`);
+  tags.push(`<meta property="og:type" content="${metadata.ogType || 'website'}" />`);
+  
+  if (metadata.ogImage) {
+    tags.push(`<meta property="og:image" content="${escapeHtml(metadata.ogImage)}" />`);
+  }
+  
+  if (metadata.canonicalUrl) {
+    tags.push(`<meta property="og:url" content="${escapeHtml(metadata.canonicalUrl)}" />`);
+  }
 
-  return [...baseKeywords, ...tags, ...topKeywords]
-    .filter((keyword, index, arr) => arr.indexOf(keyword) === index)
-    .join(', ');
+  // Twitter Card tags
+  tags.push(`<meta name="twitter:card" content="${metadata.twitterCard || 'summary_large_image'}" />`);
+  tags.push(`<meta name="twitter:title" content="${escapeHtml(metadata.twitterTitle || metadata.title)}" />`);
+  tags.push(`<meta name="twitter:description" content="${escapeHtml(metadata.twitterDescription || metadata.description)}" />`);
+  
+  if (metadata.twitterImage || metadata.ogImage) {
+    tags.push(`<meta name="twitter:image" content="${escapeHtml(metadata.twitterImage || metadata.ogImage || '')}" />`);
+  }
+  
+  return tags.join('\n');
 };
 
-// Breadcrumb generator
-export const generateBreadcrumbs = (path: string) => {
-  const segments = path.split('/').filter(Boolean);
-  const breadcrumbs = [
-    {
-      '@type': 'ListItem',
-      position: 1,
-      name: 'Home',
-      item: 'https://ziontechgroup.com'
-    }
-  ];
-
-  let currentPath = '';
-  segments.forEach((segment, index) => {
-    currentPath += `/${segment}`;
-    breadcrumbs.push({
-      '@type': 'ListItem',
-      position: index + 2,
-      name: segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' '),
-      item: `https://ziontechgroup.com${currentPath}`
-    });
-  });
-
-  return {
+/**
+ * Generate structured data (JSON-LD)
+ */
+export const generateStructuredData = (type: string, data: Record<string, unknown>): string => {
+  const structuredData = {
     '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: breadcrumbs
+    '@type': type,
+    ...data
+  } as Record<string, unknown>;
+  
+  return `<script type="application/ld+json">${JSON.stringify(structuredData, null, 2)}</script>`;
+};
+
+export const generateArticleStructuredData = (article: {
+  title: string;
+  description: string;
+  author: string;
+  publishDate: string;
+  modifiedDate?: string;
+  image?: string;
+  url: string;
+}): string => {
+  return generateStructuredData('Article', {
+    headline: article.title,
+    description: article.description,
+    author: {
+      '@type': 'Person',
+      name: article.author,
+    },
+    datePublished: article.publishDate,
+    dateModified: article.modifiedDate || article.publishDate,
+    image: article.image,
+    url: article.url,
+    publisher: {
+      '@type': 'Organization',
+      name: 'Zion Tech Group',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://ziontechgroup.com/logo.png',
+      }
+    }
+  });
+};
+
+export const generateBreadcrumbStructuredData = (breadcrumbs: Array<{ name: string; url: string }>): string => {
+  return generateStructuredData('BreadcrumbList', {
+    itemListElement: breadcrumbs.map((crumb, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: crumb.name,
+      item: crumb.url,
+    }))
+  });
+};
+
+export const generateOrganizationStructuredData = (): string => {
+  return generateStructuredData('Organization', {
+    name: 'Zion Tech Group',
+    url: 'https://ziontechgroup.com',
+    logo: 'https://ziontechgroup.com/logo.png',
+    description: 'Leading AI & IT Solutions provider transforming businesses worldwide',
+    sameAs: [
+      'https://twitter.com/ziontechgroup',
+      'https://linkedin.com/company/ziontechgroup',
+      'https://github.com/zion-holdings',
+    ],
+    contactPoint: {
+      '@type': 'ContactPoint',
+      telephone: '+1-800-ZION-TECH',
+      contactType: 'Customer Service',
+      email: 'contact@ziontechgroup.com',
+    }
+  });
+};
+
+export const generateFAQStructuredData = (faqs: Array<{ question: string; answer: string }>): string => {
+  return generateStructuredData('FAQPage', {
+    mainEntity: faqs.map((faq) => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.answer,
+      }
+    }))
+  });
+};
+
+export const generateSitemapXML = (urls: Array<{ loc: string; lastmod?: string; changefreq?: string; priority?: number }>): string => {
+  const urlsXml = urls
+    .map((url) => {
+      const lastmod = url.lastmod ? `<lastmod>${url.lastmod}</lastmod>` : '';
+      const changefreq = url.changefreq ? `<changefreq>${url.changefreq}</changefreq>` : '';
+      const priority = url.priority !== undefined ? `<priority>${url.priority}</priority>` : '';
+      return `<url>\n  <loc>${escapeHtml(url.loc)}</loc>\n  ${lastmod}\n  ${changefreq}\n  ${priority}\n</url>`;
+    })
+    .join('\n');
+    
+  return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urlsXml}\n</urlset>`;
+};
+
+export const generateRobotsTxt = (config: {
+  userAgent?: string;
+  disallow?: string[];
+  allow?: string[];
+  sitemap?: string;
+}): string => {
+  const lines: string[] = [];
+  lines.push(`User-agent: ${config.userAgent || '*'}`);
+  
+  if (config.disallow && config.disallow.length > 0) {
+    config.disallow.forEach((path) => lines.push(`Disallow: ${path}`));
+  }
+  
+  if (config.allow && config.allow.length > 0) {
+    config.allow.forEach((path) => lines.push(`Allow: ${path}`));
+  }
+  
+  if (config.sitemap) {
+    lines.push('');
+    lines.push(`Sitemap: ${config.sitemap}`);
+  }
+  
+  return lines.join('\n');
+};
+
+/**
+ * Optimize title for SEO
+ */
+export const optimizeTitle = (title: string, maxLength: number = 60): string => {
+  if (title.length <= maxLength) return title;
+  const truncated = title.substring(0, maxLength);
+  const lastSpace = truncated.lastIndexOf(' ');
+  return lastSpace > 0 ? truncated.substring(0, lastSpace) + '...' : truncated + '...';
+};
+
+/**
+ * Optimize description for SEO
+ */
+export const optimizeDescription = (description: string, maxLength: number = 160): string => {
+  if (description.length <= maxLength) return description;
+  const truncated = description.substring(0, maxLength);
+  const lastSpace = truncated.lastIndexOf(' ');
+  return lastSpace > 0 ? truncated.substring(0, lastSpace) + '...' : truncated + '...';
+};
+
+/**
+ * Extract keywords from content
+ */
+export const extractKeywords = (content: string, maxKeywords: number = 10): string[] => {
+  // Remove special characters and convert to lowercase
+  const cleaned = content.toLowerCase().replace(/[^a-z0-9\s]/g, '');
+  const words = cleaned.split(/\s+/);
+  const frequency = new Map<string, number>();
+  
+  words.forEach((word) => {
+    if (word.length > 3) {
+      frequency.set(word, (frequency.get(word) || 0) + 1);
+    }
+  });
+  
+  return Array.from(frequency.entries())
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, maxKeywords)
+    .map(([word]) => word);
+};
+
+/**
+ * Generate URL slug from title
+ */
+export const generateSlug = (title: string): string => {
+  return title
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+};
+
+export const validateSEOUrl = (url: string): { valid: boolean; issues: string[] } => {
+  const issues: string[] = [];
+  
+  if (url.length > 100) {
+    issues.push('URL is too long (>100 characters)');
+  }
+  
+  if (url.includes('_')) {
+    issues.push('URL contains underscores (use hyphens instead)');
+  }
+  
+  if (/[A-Z]/.test(url)) {
+    issues.push('URL contains uppercase letters');
+  }
+  
+  if (/\s/.test(url)) {
+    issues.push('URL contains spaces');
+  }
+  
+  if (url.split('/').filter(Boolean).length > 5) {
+    issues.push('URL has too many path segments (>5)');
+  }
+  
+  return {
+    valid: issues.length === 0,
+    issues
   };
 };
 
-// Sitemap generation helper
-export const generateSitemapEntry = (url: string, priority: number = 0.5, changefreq: string = 'monthly') => ({
-  url,
-  lastmod: new Date().toISOString().split('T')[0],
-  changefreq,
-  priority
-});
+/**
+ * Escape HTML for safe meta tag generation
+ */
+function escapeHtml(text: string): string {
+  const map: Record<string, string> = {
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&#039;'
+  };
+  return text.replace(/[&<>"']/g, (m) => map[m]);
+}
 
-// Page speed optimization
-export const optimizePageSpeed = () => {
-  // Preload critical resources
-  const criticalResources = [
-    '/fonts/inter-var.woff2',
-    '/styles/critical.css',
-    '/scripts/critical.js'
-  ];
-
-  criticalResources.forEach(resource => {
-    const link = document.createElement('link');
-    link.rel = 'preload';
-    link.href = resource;
-    link.as = resource.endsWith('.css') ? 'style' : 'script';
-    document.head.appendChild(link);
-  });
-
-  // Lazy load images
-  if ('IntersectionObserver' in window) {
-    const imageObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const img = entry.target as HTMLImageElement;
-          if (img.dataset.src) {
-            img.src = img.dataset.src;
-            img.removeAttribute('data-src');
-            imageObserver.unobserve(img);
-          }
-        }
-      });
-    });
-
-    document.querySelectorAll('img[data-src]').forEach(img => {
-      imageObserver.observe(img);
-    });
-  }
+/**
+ * Calculate reading time
+ */
+export const calculateReadingTime = (content: string, wordsPerMinute: number = 200): number => {
+  const words = content.trim().split(/\s+/).length;
+  return Math.ceil(words / wordsPerMinute);
 };
 
-// SEO performance tracking
-export const trackSEOMetrics = () => {
-  // Track Core Web Vitals
-  if ('web-vitals' in window) {
-    import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-      getCLS(console.log);
-      getFID(console.log);
-      getFCP(console.log);
-      getLCP(console.log);
-      getTTFB(console.log);
-    });
+/**
+ * Check content quality for SEO
+ */
+export const checkContentQuality = (
+  content: string,
+  title: string,
+): { score: number; issues: string[]; recommendations: string[] } => {
+  const issues: string[] = [];
+  const recommendations: string[] = [];
+  let score = 100;
+  
+  // Word count check
+  const wordCount = content.trim().split(/\s+/).length;
+  if (wordCount < 300) {
+    issues.push('Content is too short (<300 words)');
+    score -= 20;
   }
+  
+  // Keyword density check (title in content)
+  const titleWords = title.toLowerCase().split(/\s+/);
+  const contentLower = content.toLowerCase();
+  const titleInContent = titleWords.some((word) => contentLower.includes(word));
+  if (!titleInContent) {
+    issues.push('Title keywords not found in content');
+    score -= 15;
+  }
+  
+  // Heading check
+  if (!content.includes('#') && !content.includes('<h')) {
+    recommendations.push('Add headings to improve content structure');
+    score -= 10;
+  }
+  
+  // Link check
+  if (!content.includes('http') && !content.includes('[') && !content.includes('<a')) {
+    recommendations.push('Add internal/external links');
+    score -= 5;
+  }
+  
+  return { score: Math.max(0, score), issues, recommendations };
+};
 
-  // Track page load time
-  window.addEventListener('load', () => {
-    const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
-    console.log(`📊 Page Load Time: ${loadTime}ms`);
-    
-    if (typeof gtag !== 'undefined') {
-      gtag('event', 'page_load_time', {
-        value: loadTime,
-        event_category: 'Performance'
-      });
-    }
-  });
+export default {
+  generateMetaTags,
+  generateStructuredData,
+  generateArticleStructuredData,
+  generateBreadcrumbStructuredData,
+  generateOrganizationStructuredData,
+  generateFAQStructuredData,
+  generateSitemapXML,
+  generateRobotsTxt,
+  optimizeTitle,
+  optimizeDescription,
+  extractKeywords,
+  generateSlug,
+  validateSEOUrl,
+  calculateReadingTime,
+  checkContentQuality
 };

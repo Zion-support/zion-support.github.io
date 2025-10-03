@@ -1,6 +1,23 @@
 import React from 'react';
+<<<<<<< HEAD
 import Link from 'next/link';
 import { Metadata } from 'next';
+=======
+import { Link } from 'react-router-dom';
+import { 
+  ArrowRight, 
+  CheckCircle, 
+  Star, 
+  Users, 
+  Zap, 
+  TrendingUp,
+  Award,
+  Target,
+  Rocket,
+  DollarSign,
+  Percent
+} from 'lucide-react';
+>>>>>>> b0266c0c1be3ec9050e7ba803edc6a65b0904e57
 
 export const metadata: Metadata = {
   title: 'AI Success Stories & Case Studies | Zion Tech Group',
