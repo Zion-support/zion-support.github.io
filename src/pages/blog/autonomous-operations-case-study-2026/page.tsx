@@ -1,10 +1,9 @@
 // @ts-nocheck
 import React from "react";
 
-export default function AutonomousOperationsCaseStudy2026(): React.JSX.Element React.JSX.Element React.JSX.Element React.JSX.Element {
+export default function AutonomousOperationsCaseStudy2026(): React.JSX.Element {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white",
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white>
+    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
       <Helmet >
         <title >Autonomous Operations Case Study 2026 — 98% automation</title>
         <meta name="description",;,
@@ -13,29 +12,26 @@ export default function AutonomousOperationsCaseStudy2026(): React.JSX.Element R
         />
       </Helmet>
 
-      <div className="container mx-auto px-6 py-16">
-        <h1 className="text-4xl md: text-5xl font-bold mb-4">Autonomous Operations Case Study 2026</h1>",
-        <p className="text-zion-slate-light mb-8">98% automation rates realized</p>";,
-        <div className="prose prose-invert max-w-3xl">,";,
+      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+        <h1 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Autonomous Operations Case Study 2026</h1>",
+        <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">98% automation rates realized</p>";,
+        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,";,
   href="https: //ziontechgroup.com/blog/autonomous-operations-case-study-2026",
         />
       </Helmet>
 
-      <div className="container mx-auto px-6 py-16",
-        <h1 className="text-4xl md: text-5xl font-bold mb-4">Autonomous Operations Case Study 2026</h1>",
-        <p className="text-zion-slate-light mb-8">98% automation rates realized</p>",
-        <div className="prose prose-invert max-w-3xl",
-      <div className="container mx-auto px-6 py-16">
-        <h1 className="text-4xl md: text-5xl font-bold mb-4">Autonomous Operations Case Study 2026</h1>",
-        <p className="text-zion-slate-light mb-8">98% automation rates realized</p>";,
-        <div className="prose prose-invert max-w-3xl">,";,
+      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Autonomous Operations Case Study 2026</h1>",
+        <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">98% automation rates realized</p>",
+        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+        <h1 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Autonomous Operations Case Study 2026</h1>",
+        <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">98% automation rates realized</p>";,
+        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,";,
   href="https: //ziontechgroup.com/blog/autonomous-operations-case-study-2026",
         />
       </Helmet>
 
-      <div className="container mx-auto px-6 py-16>
-        <h1 className="text-4xl md: text-5xl font-bold mb-4">Autonomous Operations Case Study 2026</h1>",
-        <p className="text-zion-slate-light mb-8">98% automation rates realized</p>",
+      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Autonomous Operations Case Study 2026</h1>",
+        <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">98% automation rates realized</p>",
         <div className="prose prose-invert max-w-3xl>
           <p >
             This case study details how a global enterprise deployed agentic workflows with budgeted actions

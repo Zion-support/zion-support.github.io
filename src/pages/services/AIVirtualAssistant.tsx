@@ -76,83 +76,53 @@ const AIVirtualAssistant: React.FC = () => {
 
       <Header />
       
-      <main className="min-h-screen bg-white",
-        {/* Hero Section */}
-        <section className="bg-gradient-to-br from-purple-900 via-purple-800 to-pink-900 text-white py-20">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8",
-            <div className="text-center">
-              <h1 className="text-5xl md: text-7xl font-bold mb-6",
-  AI Virtual <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Assistant</h3>
+      <main className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <h1 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Assistant</h3>
               </h1>
-              <p className="text-xl md:text-2xl text-purple-100 max-w-4xl mx-auto mb-8">,
+              <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   Deploy AI-powered virtual assistants that handle customer inquiries 24/7 with 95% accuracy
                 support 120+ languages, and seamlessly integrate with your existing systems.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center",
-        <section className="bg-gradient-to-br from-purple-900 via-purple-800 to-pink-900 text-white py-20",
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8",
-            <div className="text-center",
-              <h1 className="text-5xl md: text-7xl font-bold mb-6",
-  AI Virtual <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Assistant</span>",
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Assistant</span>",
               </h1>
-              <p className="text-xl md: text-2xl text-purple-100 max-w-4xl mx-auto mb-8",
-  Deploy AI-powered virtual assistants that handle customer inquiries 24/7 with 95% accuracy
-                support 120+ languages, and seamlessly integrate with your existing systems.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center",
-                <a href="/contact",
-  className="inline-flex items-center px-8 py-4 bg-purple-600 hover: bg-purple-700 text-white font-semibold rounded-lg transition-colors",
-                >
-                  <Phone className="w-5 h-5 mr-2/>
-                  <Phone className="w-5 h-5 mr-2" />",
-                  <Phone className="w-5 h-5 mr-2/>
-                  <Phone className="w-5 h-5 mr-2" />
+              <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                  <Phone className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">",
+                  <Phone className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
   Schedule Demo
                 </a>
                 <a href="#pricing",
-  className="inline-flex items-center px-8 py-4 border-2 border-white text-white hover: bg-white hover:text-purple-900 font-semibold rounded-lg transition-colors",
-                >
+  className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                   View Pricing
-                  <ArrowRight className="w-5 h-5 ml-2/>
-                  <ArrowRight className="w-5 h-5 ml-2/>
-                  <ArrowRight className="w-5 h-5 ml-2" />",
-      <main className="min-h-screen bg-white>
-        {/* Hero Section */}
-        <section className="bg-gradient-to-br from-purple-900 via-purple-800 to-pink-900 text-white py-20">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8>
-            <div className="text-center">
-              <h1 className="text-5xl md: text-7xl font-bold mb-6">
-  AI Virtual <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Assistant</h3>
+                  <ArrowRight className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                  <ArrowRight className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">",
+      <main className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <h1 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+  AI Virtual <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Assistant</h3>
               </h1>
-              <p className="text-xl md:text-2xl text-purple-100 max-w-4xl mx-auto mb-8">,
+              <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,
   Deploy AI-powered virtual assistants that handle customer inquiries 24/7 with 95% accuracy
                 support 120+ languages, and seamlessly integrate with your existing systems.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center>
-        <section className="bg-gradient-to-br from-purple-900 via-purple-800 to-pink-900 text-white py-20>
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8>
-            <div className="text-center>
-              <h1 className="text-5xl md: text-7xl font-bold mb-6">
-  AI Virtual <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Assistant</span>",
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <h1 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+  AI Virtual <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Assistant</span>",
               </h1>
-              <p className="text-xl md: text-2xl text-purple-100 max-w-4xl mx-auto mb-8">
+              <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
   Deploy AI-powered virtual assistants that handle customer inquiries 24/7 with 95% accuracy
                 support 120+ languages, and seamlessly integrate with your existing systems.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center>
-                <a href="/contact",
-  className="inline-flex items-center px-8 py-4 bg-purple-600 hover: bg-purple-700 text-white font-semibold rounded-lg transition-colors",
-                >
-                  <Phone className="w-5 h-5 mr-2/>
-                  <Phone className="w-5 h-5 mr-2" />",
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                  <Phone className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">",
   Schedule Demo
                 </a>
                 <a href="#pricing",
-  className="inline-flex items-center px-8 py-4 border-2 border-white text-white hover: bg-white hover:text-purple-900 font-semibold rounded-lg transition-colors",
-                >
+  className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                   View Pricing
-                  <ArrowRight className="w-5 h-5 ml-2/>
-                  <ArrowRight className="w-5 h-5 ml-2" />",
+                  <ArrowRight className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">",
                 </a>
               </div>
             </div>
@@ -160,214 +130,145 @@ const AIVirtualAssistant: React.FC = () => {
         </section>
 
         {/* Key Benefits */}
-        <section className="py-16 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8",
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">
-        <section className="py-16 bg-gray-50",
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8",
-            <div className="text-center mb-12",
-              <h2 className="text-4xl font-bold text-gray-900 mb-4",
+        <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <h2 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+        <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <h2 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+        <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
   Why Choose Our AI Virtual Assistant?
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto",
-        <section className="py-16 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8>
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">
-        <section className="py-16 bg-gray-50>
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8>
-            <div className="text-center mb-12>
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">
-  Why Choose Our AI Virtual Assistant?
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
   Transform your customer experience with intelligent automation that never sleeps.
               </p>
             </div>
 
-            <div className="grid md:grid-cols-4 gap-8",
-              <div className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-4">
-                  <MessageCircle className="w-8 h-8 text-purple-600/>
-              <div className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-4">
-                  <MessageCircle className="w-8 h-8 text-purple-600/>
-            <div className="grid md:grid-cols-4 gap-8",
-              <div className="text-center",
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-4",
-                  <MessageCircle className="w-8 h-8 text-purple-600" />",
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                  <MessageCircle className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                  <MessageCircle className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">",
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">95% Accuracy</h3>",
-                <p className="text-gray-600">Industry-leading conversation understanding</p>",
+                <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">95% Accuracy</h3>",
+                <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Industry-leading conversation understanding</p>",
               </div>
-              <div className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">
-                  <Clock className="w-8 h-8 text-blue-600/>
-              <div className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">
-                  <Clock className="w-8 h-8 text-blue-600/>
-              <div className="text-center",
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4",
-                  <Clock className="w-8 h-8 text-blue-600" />",
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                  <Clock className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                  <Clock className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">",
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Instant Response</h3>",
-                <p className="text-gray-600">Sub-second response times 24/7</p>",
+                <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Instant Response</h3>",
+                <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Sub-second response times 24/7</p>",
               </div>
-              <div className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">
-                  <Globe className="w-8 h-8 text-green-600/>
-              <div className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">
-                  <Globe className="w-8 h-8 text-green-600/>
-              <div className="text-center",
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4",
-                  <Globe className="w-8 h-8 text-green-600" />",
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                  <Globe className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                  <Globe className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">",
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">120+ Languages</h3>",
-                <p className="text-gray-600">Global reach with real-time translation</p>",
+                <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">120+ Languages</h3>",
+                <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Global reach with real-time translation</p>",
               </div>
-              <div className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-orange-100 rounded-full mb-4">
-                  <Shield className="w-8 h-8 text-orange-600/>
-              <div className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-orange-100 rounded-full mb-4">
-                  <Shield className="w-8 h-8 text-orange-600/>
-              <div className="text-center",
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-orange-100 rounded-full mb-4",
-                  <Shield className="w-8 h-8 text-orange-600" />",
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                  <Shield className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                  <Shield className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">",
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Enterprise Security</h3>",
-                <p className="text-gray-600">Bank-grade encryption and compliance</p>",
-            <div className="grid md:grid-cols-4 gap-8>
-              <div className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-4">
-                  <MessageCircle className="w-8 h-8 text-purple-600/>
-            <div className="grid md:grid-cols-4 gap-8>
-              <div className="text-center>
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-4>
-                  <MessageCircle className="w-8 h-8 text-purple-600" />",
+                <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Enterprise Security</h3>",
+                <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Bank-grade encryption and compliance</p>",
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                  <MessageCircle className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                  <MessageCircle className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">",
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">95% Accuracy</h3>",
-                <p className="text-gray-600">Industry-leading conversation understanding</p>",
+                <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">95% Accuracy</h3>",
+                <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Industry-leading conversation understanding</p>",
               </div>
-              <div className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">
-                  <Clock className="w-8 h-8 text-blue-600/>
-              <div className="text-center>
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4>
-                  <Clock className="w-8 h-8 text-blue-600" />",
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                  <Clock className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">",
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Instant Response</h3>",
-                <p className="text-gray-600">Sub-second response times 24/7</p>",
+                <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Instant Response</h3>",
+                <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Sub-second response times 24/7</p>",
               </div>
-              <div className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">
-                  <Globe className="w-8 h-8 text-green-600/>
-              <div className="text-center>
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4>
-                  <Globe className="w-8 h-8 text-green-600" />",
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                  <Globe className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">",
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">120+ Languages</h3>",
-                <p className="text-gray-600">Global reach with real-time translation</p>",
+                <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">120+ Languages</h3>",
+                <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Global reach with real-time translation</p>",
               </div>
-              <div className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-orange-100 rounded-full mb-4">
-                  <Shield className="w-8 h-8 text-orange-600/>
-              <div className="text-center>
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-orange-100 rounded-full mb-4>
-                  <Shield className="w-8 h-8 text-orange-600" />",
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                  <Shield className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">",
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Enterprise Security</h3>",
-                <p className="text-gray-600">Bank-grade encryption and compliance</p>",
+                <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Enterprise Security</h3>",
+                <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Bank-grade encryption and compliance</p>",
               </div>
             </div>
           </div>
         </section>
 
         {/* Features */}
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8",
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">
-        <section className="py-20",
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8",
-            <div className="text-center mb-16",
-              <h2 className="text-4xl font-bold text-gray-900 mb-4",
+        <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <h2 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+        <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <h2 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+        <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
   Advanced AI Capabilities
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto",
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8>
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">
-        <section className="py-20>
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8>
-            <div className="text-center mb-16>
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">
-  Advanced AI Capabilities
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
   Powerful features that make your virtual assistant truly intelligent and effective.
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8",
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white"> {
+                const Icon: feature.icon;,,
+  return (
+                  <div key={index} className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                      <Icon className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">{feature.title}</h3>";
+                    <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">{feature.description}</p>";
+                    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                      <CheckCircle className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                      <Icon className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">{feature.title}</h3>";
+                    <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">{feature.description}</p>";
+                    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                      <CheckCircle className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white"> {
+                const Icon: feature.icon;,,
+  return (
+                  <div key={index} className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">",
+                    </div>
+                    <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">{feature.title}</h3>
+                    <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">{feature.description}</h3>
+                    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">",
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                      <Icon className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">{feature.title}</h3>";
+                    <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">{feature.description}</p>";
+                    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                      <CheckCircle className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
               {features.map((feature, index) => {
                 const Icon: feature.icon;,,
   return (
-                  <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow",
-                    <div className="inline-flex items-center justify-center w-12 h-12 bg-purple-100 rounded-lg mb-4">
-                      <Icon className="w-6 h-6 text-purple-600/>
+                  <div key={index} className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                      <Icon className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">",
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>";
-                    <p className="text-gray-600 mb-4">{feature.description}</p>";
-                    <div className="inline-flex items-center text-green-600 font-semibold text-sm">
-                      <CheckCircle className="w-4 h-4 mr-1/>
-                  <div key: {index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow",
-                    <div className="inline-flex items-center justify-center w-12 h-12 bg-purple-100 rounded-lg mb-4">
-                      <Icon className="w-6 h-6 text-purple-600/>
-                    </h3>
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>";
-                    <p className="text-gray-600 mb-4">{feature.description}</p>";
-                    <div className="inline-flex items-center text-green-600 font-semibold text-sm">
-                      <CheckCircle className="w-4 h-4 mr-1/>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8",
-              {features.map((feature, index) => {
-                const Icon: feature.icon;,,
-  return (
-                  <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow",
-                    <div className="inline-flex items-center justify-center w-12 h-12 bg-purple-100 rounded-lg mb-4",
-                      <Icon className="w-6 h-6 text-purple-600" />",
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
-                    <p className="text-gray-600 mb-4">{feature.description}</h3>
-                    <div className="inline-flex items-center text-green-600 font-semibold text-sm",
-                      <CheckCircle className="w-4 h-4 mr-1" />",
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8>
-              {features.map((feature, index) => {
-                const Icon: feature.icon;,,
-  return (
-                  <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow>
-                    <div className="inline-flex items-center justify-center w-12 h-12 bg-purple-100 rounded-lg mb-4">
-                      <Icon className="w-6 h-6 text-purple-600/>
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>";
-                    <p className="text-gray-600 mb-4">{feature.description}</p>";
-                    <div className="inline-flex items-center text-green-600 font-semibold text-sm">
-                      <CheckCircle className="w-4 h-4 mr-1/>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8>
-              {features.map((feature, index) => {
-                const Icon: feature.icon;,,
-  return (
-                  <div key={index} className="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover: shadow-xl transition-shadow>
-                    <div className="inline-flex items-center justify-center w-12 h-12 bg-purple-100 rounded-lg mb-4>
-                      <Icon className="w-6 h-6 text-purple-600" />",
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
-                    <p className="text-gray-600 mb-4">{feature.description}</h3>
-                    <div className="inline-flex items-center text-green-600 font-semibold text-sm>
-                      <CheckCircle className="w-4 h-4 mr-1" />",
+                    <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">{feature.title}</h3>
+                    <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">{feature.description}</h3>
+                    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">",
                       {feature.benefit}
                     </div>
                   </div>
@@ -378,61 +279,39 @@ const AIVirtualAssistant: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-br from-purple-900 via-purple-800 to-pink-900 text-white">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center",
-            <h2 className="text-4xl font-bold mb-6">
-        <section className="py-20 bg-gradient-to-br from-purple-900 via-purple-800 to-pink-900 text-white",
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center",
-            <h2 className="text-4xl font-bold mb-6",
-  Ready to Transform Your Customer Experience?
-            </h2>
-            <p className="text-xl text-purple-100 max-w-3xl mx-auto mb-8",
-  Join hundreds of companies already using our AI virtual assistant to provide exceptional customer service 24/7.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center",
-            <div className="flex flex-col sm:flex-row gap-4 justify-center",
-              <a href="/contact",
-  className="inline-flex items-center px-8 py-4 bg-purple-600 hover: bg-purple-700 text-white font-semibold rounded-lg transition-colors",
-              >
-                <Phone className="w-5 h-5 mr-2/>
-                <Phone className="w-5 h-5 mr-2" />",
-                <Phone className="w-5 h-5 mr-2/>
-                <Phone className="w-5 h-5 mr-2" />
+        <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+        <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <Phone className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">",
+                <Phone className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
   Schedule Free Demo
               </a>
               <a href="/case-studies",
-  className="inline-flex items-center px-8 py-4 border-2 border-white text-white hover: bg-white hover:text-purple-900 font-semibold rounded-lg transition-colors",
-              >
+  className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 View Success Stories
-                <ArrowRight className="w-5 h-5 ml-2/>
-                <ArrowRight className="w-5 h-5 ml-2/>
-                <ArrowRight className="w-5 h-5 ml-2" />",
-        <section className="py-20 bg-gradient-to-br from-purple-900 via-purple-800 to-pink-900 text-white">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center>
-            <h2 className="text-4xl font-bold mb-6">
-        <section className="py-20 bg-gradient-to-br from-purple-900 via-purple-800 to-pink-900 text-white>
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center>
-            <h2 className="text-4xl font-bold mb-6">
+                <ArrowRight className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <ArrowRight className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">",
+        <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+        <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <h2 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
   Ready to Transform Your Customer Experience?
             </h2>
-            <p className="text-xl text-purple-100 max-w-3xl mx-auto mb-8">
+            <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
   Join hundreds of companies already using our AI virtual assistant to provide exceptional customer service 24/7.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center>
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
               <a href="/contact",
-  className="inline-flex items-center px-8 py-4 bg-purple-600 hover: bg-purple-700 text-white font-semibold rounded-lg transition-colors",
-              >
-                <Phone className="w-5 h-5 mr-2/>
-                <Phone className="w-5 h-5 mr-2" />",
+  className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <Phone className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">",
   Schedule Free Demo
               </a>
               <a href="/case-studies",
-  className="inline-flex items-center px-8 py-4 border-2 border-white text-white hover: bg-white hover:text-purple-900 font-semibold rounded-lg transition-colors",
-              >
+  className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 View Success Stories
-                <ArrowRight className="w-5 h-5 ml-2/>
-                <ArrowRight className="w-5 h-5 ml-2" />",
+                <ArrowRight className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">",
               </a>
             </div>
           </div>

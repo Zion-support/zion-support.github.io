@@ -2,14 +2,13 @@ import React from "react
 ;
 const Help: React.FC = () => {
   return (
-        <section className="min-h-[40vh]">
-            <h1 className="text-3xl font-bold mb-4">Help Center</h1>";,
-            <p className="text-gray-700 mb-4">Find answers to common questions and get support.</p>";,
-            <ul className="list-disc pl-6 space-y-2 text-gray-700
-        <section className="min-h-[40vh]">
-            <h1 className="text-3xl font-bold mb-4">Help Center</h1>";,
-            <p className="text-gray-700 mb-4">Find answers to common questions and get support.</p>";,
-            <ul className="list-disc pl-6 space-y-2 text-gray-700">
+        <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <h1 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Help Center</h1>";,
+            <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Find answers to common questions and get support.</p>";,
+            <ul className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <h1 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Help Center</h1>";,
+            <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Find answers to common questions and get support.</p>";,
+            <ul className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 <li >Getting started with services</li>
                 <li >Security and privacy</li>
                 <li >Billing and subscriptions</li>

@@ -1,9 +1,8 @@
 import React from "react";
 
-export default function VerifiableEdgeAnalytics2026(): React.JSX.Element React.JSX.Element React.JSX.Element React.JSX.Element {
+export default function VerifiableEdgeAnalytics2026(): React.JSX.Element {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white",
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white>
+    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
       <Helmet >
         <title >Verifiable Edge Analytics 2026: Zero‑PII Insights with Attestations</title>,,
         <meta name="description",;,
@@ -12,31 +11,22 @@ export default function VerifiableEdgeAnalytics2026(): React.JSX.Element React.J
         />
       </Helmet>
 
-      <div className="container mx-auto px-6 py-16">
-        <h1 className="text-4xl md: text-5xl font-bold mb-4",;,
+      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+        <h1 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+      </Helmet>
+
+      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+        <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+        <h1 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
   href="https: //ziontechgroup.com/blog/verifiable-edge-analytics-2026",
         />
       </Helmet>
 
-      <div className="container mx-auto px-6 py-16",
-        <h1 className="text-4xl md: text-5xl font-bold mb-4",;,
+      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
   Verifiable Edge Analytics 2026
         </h1>
-        <p className="text-zion-slate-light mb-8",;,
-  Zero‑PII insights with signed attestations under 100ms
-        </p>
-        <div className="prose prose-invert max-w-3xl",
-      <div className="container mx-auto px-6 py-16">
-        <h1 className="text-4xl md: text-5xl font-bold mb-4">
-  href="https: //ziontechgroup.com/blog/verifiable-edge-analytics-2026",
-        />
-      </Helmet>
-
-      <div className="container mx-auto px-6 py-16>
-        <h1 className="text-4xl md: text-5xl font-bold mb-4">
-  Verifiable Edge Analytics 2026
-        </h1>
-        <p className="text-zion-slate-light mb-8">
+        <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
   Zero‑PII insights with signed attestations under 100ms
         </p>
         <div className="prose prose-invert max-w-3xl>
