@@ -3,6 +3,7 @@ import React from "react";
 
 export default function GenAICostTiersV3_2027(): React.JSX.Element {
 return (
+    <>
 <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
 <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
 <Helmet >
@@ -43,3 +44,5 @@ Add lightweight policy tests in CI and KPI‑linked canaries to keep regressions
 </div>
 );
 };
+    </>
+  </div>  </div>  </div>  </div>  </div>  </div>  </div>

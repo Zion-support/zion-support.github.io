@@ -3,6 +3,7 @@ import Header from "../../components/Header";
 const EnterpriseAITransformationSuccessStrategies: () => {
   return (
     <>
+    <>
       <Helmet >
         <title>Enterprise AI Transformation Success Strategies: 2025 Playbook | Zion Tech Group</title>,
         <meta name="description
@@ -128,14 +129,14 @@ const EnterpriseAITransformationSuccessStrategies: () => {
                 </h2>
                 <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-zion-cyan/30">
                   <p className="mb-4">,"
-  Enterprise AI transformation is no longer optional—it's a <strong className="text-white">competitive imperative</strong>. ,"
+  Enterprise AI transformation is no longer optional—it's a <strong className="text-white">competitive imperative</strong>. ,"'
   In 2025, companies that successfully implement AI are achieving <strong className="text-green-400">10x ROI</strong>"
                     <strong className="text-green-400"> 40% cost reductions</strong>, and <strong className="text-green-400">transformative business growth</strong>. ,"
   However, <strong className="text-red-400">73% of AI initiatives still fail</strong> to deliver expected value."
                 </h2>"
                 <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-zion-cyan/30">
                   <p className="mb-4">,
-  Enterprise AI transformation is no longer optional—it's a <strong className="text-white">competitive imperative</strong>. ,
+  Enterprise AI transformation is no longer optional—it's a <strong className="text-white">competitive imperative</strong>. ,'
   In 2025, companies that successfully implement AI are achieving <strong className="text-green-400">10x ROI</strong>
                     <strong className="text-green-400"> 40% cost reductions</strong>, and <strong className="text-green-400">transformative business growth</strong>. ,
   However, <strong className="text-red-400">73% of AI initiatives still fail</strong> to deliver expected value.
@@ -145,7 +146,7 @@ const EnterpriseAITransformationSuccessStrategies: () => {
                 </h2>
                 <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-zion-cyan/30">
                   <p className="mb-4">
-  Enterprise AI transformation is no longer optional—it's a <strong className="text-white">competitive imperative</strong>. 
+  Enterprise AI transformation is no longer optional—it's a <strong className="text-white">competitive imperative</strong>. '
   In 2025, companies that successfully implement AI are achieving <strong className="text-green-400">10x ROI</strong>, 
                     <strong className="text-green-400"> 40% cost reductions</strong>, and <strong className="text-green-400">transformative business growth</strong>. 
   However, <strong className="text-red-400">73% of AI initiatives still fail</strong> to deliver expected value.
@@ -157,7 +158,7 @@ const EnterpriseAITransformationSuccessStrategies: () => {
                 </h2>
                 <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-zion-cyan/30">
                   <p className="mb-4">,"
-  Enterprise AI transformation is no longer optional—it's a <strong className="text-white">competitive imperative</strong>. ,"
+  Enterprise AI transformation is no longer optional—it's a <strong className="text-white">competitive imperative</strong>. ,"'
   In 2025, companies that successfully implement AI are achieving <strong className="text-green-400">10x ROI</strong>"
                     <strong className="text-green-400"> 40% cost reductions</strong>, and <strong className="text-green-400">transformative business growth</strong>. ,"
   However, <strong className="text-red-400">73% of AI initiatives still fail</strong> to deliver expected value."
@@ -167,7 +168,7 @@ const EnterpriseAITransformationSuccessStrategies: () => {
                 </h2>
                 <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-zion-cyan/30">
                   <p className="mb-4">"
-  Enterprise AI transformation is no longer optional—it's a <strong className="text-white">competitive imperative</strong>. 
+  Enterprise AI transformation is no longer optional—it's a <strong className="text-white">competitive imperative</strong>. '
   In 2025, companies that successfully implement AI are achieving <strong className="text-green-400">10x ROI</strong>, 
                     <strong className="text-green-400"> 40% cost reductions</strong>, and <strong className="text-green-400">transformative business growth</strong>. 
   However, <strong className="text-red-400">73% of AI initiatives still fail</strong> to deliver expected value.
@@ -276,6 +277,7 @@ const EnterpriseAITransformationSuccessStrategies: () => {
                         <div className="flex-1">
                           <h3 className="text-xl font-bold text-white mb-3">{pillar.pillar}</h3>
                           <p className="text-zion-slate-light">{pillar.description}</p>"
+    </>
                         </div>
                       </div>
                     </div>
@@ -611,3 +613,6 @@ const EnterpriseAITransformationSuccessStrategies: () => {
 };
 
 export default EnterpriseAITransformationSuccessStrategies;;
+  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>
+  </section>  </section>  </section>  </section>
+  </article>

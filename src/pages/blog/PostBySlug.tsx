@@ -34,12 +34,13 @@ export default function PostBySlug(): React.JSX.Element {
 
   if (!article) {
     return (
+    <>
       <div className="min-h-screen bg-gray-50">
         <Header />
         <div className="container mx-auto px-4 py-16">
           <div className="text-center">
             <h1 className="text-4xl font-bold text-gray-900 mb-4">Article Not Found</h1>
-            <p className="text-xl text-gray-600">The article you're looking for doesn't exist.</p>
+            <p className="text-xl text-gray-600">The article you're looking for doesn't exist.</p>'
           </div>
         </div>
       </div>
@@ -95,3 +96,5 @@ export default function PostBySlug(): React.JSX.Element {
     </div>
   );
 }
+    </>
+  </div>

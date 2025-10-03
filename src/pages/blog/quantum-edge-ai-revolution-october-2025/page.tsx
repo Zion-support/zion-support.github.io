@@ -1,6 +1,7 @@
 
 export default function QuantumEdgeAIRevolutionPage(): void {
   return (
+    <>
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-blue-950 to-slate-950">"
       <article className="container mx-auto px-6 py-16 max-w-4xl">"
         {/* Header */}
@@ -590,3 +591,8 @@ export default function QuantumEdgeAIRevolutionPage(): void {
     </div>
   );
 };
+  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>
+  </section>  </section>  </section>  </section>  </section>  </section>  </section>  </section>  </section>  </section>  </section>  </section>  </section>  </section>  </section>  </section>  </section>  </section>  </section>
+  </article>
+    </>
+  </header>

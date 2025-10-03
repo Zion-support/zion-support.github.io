@@ -3,6 +3,7 @@ import React from "react";
 
 export default function BreakingEnterpriseAIBreakthroughs2025(): React.JSX.Element {
   return (
+    <>
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
       <Helmet >
@@ -44,3 +45,5 @@ export default function BreakingEnterpriseAIBreakthroughs2025(): React.JSX.Eleme
     </div>
   );
 };
+    </>
+  </div>  </div>  </div>  </div>  </div>  </div>  </div>

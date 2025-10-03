@@ -3,6 +3,7 @@ import React from "react";
 
 export default function CachePlaybookV2(): React.JSX.Element {
 return (
+    <>
 <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
 <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
 <Helmet >
@@ -41,3 +42,5 @@ Gate cache routes with evals and trigger rollback when KPIs regress.
 </div>
 );
 };
+    </>
+  </div>  </div>  </div>  </div>  </div>  </div>  </div>

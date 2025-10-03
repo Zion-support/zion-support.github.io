@@ -2,6 +2,7 @@
 export default function CognitiveSearchEnterprise2025(): void {
   return (
     <>
+    <>
       <Helmet >
         <title>Cognitive Enterprise Search 2025 — 97% Answer Accuracy, 12x Faster Discovery, $124M+ Productivity Gains | Zion Tech Group</title>
         <meta name="description
@@ -343,7 +344,7 @@ export default function CognitiveSearchEnterprise2025(): void {
                     insights based on current tasks, upcoming meetings, or project activities.
                   </p>
                 </div>
-  Row-level security ensures users only access information they're authorized to see. Complete audit trails '
+  Row-level security ensures users only access information they're authorized to see. Complete audit trails ''
                     track all searches and access for compliance. Sensitive data remains encrypted and on-premises if required.
                   </p>
                 </div>
@@ -357,7 +358,7 @@ export default function CognitiveSearchEnterprise2025(): void {
               <h2 className="text-3xl font-bold mb-6 text-indigo-300">The Knowledge Competitive Advantage</h2>
               <p className="text-gray-300 mb-4 leading-relaxed">"
   Organizations that effectively leverage institutional knowledge make better decisions faster. Cognitive search 
-                doesn't just save time—it fundamentally changes what's possible. Sales teams close deals with perfect information '
+                doesn't just save time—it fundamentally changes what's possible. Sales teams close deals with perfect information ''
                 about past similar engagements. Engineers solve problems by finding solutions from across the organization. 
                 Leaders make data-driven decisions with comprehensive context.
               </p>
@@ -400,3 +401,8 @@ export default function CognitiveSearchEnterprise2025(): void {
     </>
   );
 };
+  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>  </div>
+  </section>  </section>  </section>  </section>  </section>  </section>  </section>  </section>  </section>  </section>  </section>
+  </article>
+    </>
+  </header>
