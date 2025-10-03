@@ -2,7 +2,7 @@
 import { lazy, Suspense, ComponentType } from 'react';
 
 // Lazy loading wrapper with loading state
-export const lazyLoad = <T extends ComponentType<any>>(
+export const lazyLoad = <T extends ComponentType<unknown>>(
   importFunc: () => Promise<{ default: T }>,
   fallback?: React.ReactNode
 ) => {
@@ -16,7 +16,7 @@ export const lazyLoad = <T extends ComponentType<any>>(
 };
 
 // Preload components for better UX
-export const preloadComponent = (importFunc: () => Promise<any>) => {
+export const preloadComponent = (importFunc: () => Promise<unknown>) => {
   return () => {
     importFunc();
     return null;
