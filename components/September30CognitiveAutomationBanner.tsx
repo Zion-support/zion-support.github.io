@@ -98,8 +98,7 @@ const September30CognitiveAutomationBanner = () => {
             <a
               key={index}
               href={item.link}
-              className="group relative bg-gradient-to-br from-slate-800/95 to-slate-900/95 backdrop-blur-lg border border-slate-700/50 rounded-3xl p-10 hover:border-cyan-500/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/30"
-            >
+              className="group relative bg-gradient-to-br from-slate-800/95 to-slate-900/95 backdrop-blur-lg border border-slate-700/50 rounded-3xl p-10 hover:border-cyan-500/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/30">
               {/* Tag */}
               <div className="absolute top-6 right-6">
                 <span className={`bg-gradient-to-r ${item.color} text-white text-xs font-bold px-4 py-2 rounded-full uppercase tracking-wider shadow-lg`}>
@@ -138,20 +137,17 @@ const September30CognitiveAutomationBanner = () => {
           <div className="inline-flex flex-col sm:flex-row gap-6">
             <a
               href="/blog/ai-2025-september-30-cognitive-automation-platform-revolution"
-              className="px-10 py-5 bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-bold text-lg rounded-2xl hover:from-cyan-500 hover:to-blue-500 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/50 shadow-lg"
-            >
+              className="px-10 py-5 bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-bold text-lg rounded-2xl hover:from-cyan-500 hover:to-blue-500 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/50 shadow-lg">
               Read Full Breakthrough Article →
             </a>
             <a
               href="/case-studies/ai-2025-september-30-global-manufacturing-cognitive-automation-18-billion-success"
-              className="px-10 py-5 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-bold text-lg rounded-2xl hover:from-green-500 hover:to-emerald-500 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-green-500/50 shadow-lg"
-            >
+              className="px-10 py-5 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-bold text-lg rounded-2xl hover:from-green-500 hover:to-emerald-500 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-green-500/50 shadow-lg">
               View $18B Success Story →
             </a>
             <a
               href="/contact"
-              className="px-10 py-5 bg-slate-800 text-white font-bold text-lg rounded-2xl border-2 border-cyan-500/50 hover:bg-slate-700 hover:border-cyan-400 transition-all duration-300 hover:scale-105 shadow-lg"
-            >
+              className="px-10 py-5 bg-slate-800 text-white font-bold text-lg rounded-2xl border-2 border-cyan-500/50 hover:bg-slate-700 hover:border-cyan-400 transition-all duration-300 hover:scale-105 shadow-lg">
               Get Your Free Demo
             </a>
           </div>

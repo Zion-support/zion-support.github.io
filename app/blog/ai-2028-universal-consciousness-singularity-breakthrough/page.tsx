@@ -197,14 +197,12 @@ export default function UniversalConsciousnessSingularityBreakthrough() {
           <div className="flex flex-wrap gap-4">"
             <Link 
               href="/[^"]*"
-              className="bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition-colors"
-            >
+              className="bg-indigo-600 text-white px-6 py-3 rounded-lg hover:bg-indigo-700 transition-colors">
               Explore Solutions
             </Link>
             <Link 
               href="/[^"]*"
-              className="bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-colors"
-            >
+              className="bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-colors">
               View Success Story
             </Link>
           </div>

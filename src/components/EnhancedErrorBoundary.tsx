@@ -170,8 +170,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                 </button>
                 <button
                   onClick={this.handleReportError}
-                  className="w-full border-2 border-red-600 text-red-600 hover:bg-red-50 font-semibold py-3 px-6 rounded-lg transition-colors"
-                >
+                  className="w-full border-2 border-red-600 text-red-600 hover:bg-red-50 font-semibold py-3 px-6 rounded-lg transition-colors">
                   Report Error
                 </button>
               </div>

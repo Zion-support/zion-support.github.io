@@ -31,16 +31,14 @@ const Header: React.FC = () => {
               <Link
                 key={item.name}
                 to={item.href}
-                className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
-              >
+                className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
                 {item.name}
               </Link>
             ))}
             
             <Link
               to="/contact"
-              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors"
-            >
+              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors">
               Get Started
             </Link>
           </div>

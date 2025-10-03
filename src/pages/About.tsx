@@ -269,13 +269,13 @@ const About: React.FC = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="tel:+13024640950" ,"
   className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center
-                >
+                >"
                   <Phone className="w-5 h-5 inline mr-2" />,"
   Call +1 302 464 0950
                 </a>
                 <a href="mailto:kleber@ziontechgroup.com" ,"
   className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors text-center
-                >
+                >"
                   <Mail className="w-5 h-5 inline mr-2" />,"
           <section className="text-center">
             <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-8 text-white">
@@ -286,13 +286,13 @@ const About: React.FC = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="tel:+13024640950" ,"
   className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center
-                >
+                >"
                   <Phone className="w-5 h-5 inline mr-2" />,"
   Call +1 302 464 0950
                 </a>
                 <a href="mailto:kleber@ziontechgroup.com" ,"
   className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors text-center
-                >
+                >"
                   <Mail className="w-5 h-5 inline mr-2" />,"
   Email Us Today
                 </a>

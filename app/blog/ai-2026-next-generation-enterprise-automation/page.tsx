@@ -219,14 +219,12 @@ export default function AINextGenEnterpriseAutomation2026() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               href="/[^"]*"
-              className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
-            >
+              className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1">
               Start Your Transformation
             </Link>
             <Link 
               href="/[^"]*"
-              className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
-            >
+              className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300">
               View Success Stories
             </Link>
           </div>
@@ -240,15 +238,13 @@ export default function AINextGenEnterpriseAutomation2026() {
             <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
               <Link 
                 href="/[^"]*"
-                className="flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors"
-              >
+                className="flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors">
                 <ArrowRight className="w-4 h-4 rotate-180" />
                 Back to Blog
               </Link>
               <Link 
                 href="/[^"]*"
-                className="flex items-center gap-2 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
-              >
+                className="flex items-center gap-2 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300">
                 Explore Our Services
                 <ArrowRight className="w-4 h-4" />
               </Link>

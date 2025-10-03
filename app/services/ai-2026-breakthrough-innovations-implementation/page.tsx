@@ -273,22 +273,19 @@ export default function AI2026BreakthroughInnovationsImplementationPage() {
         <div className="flex flex-wrap gap-4 justify-center">"
           <Link 
             href="/[^"]*"
-            className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-green-600 hover:to-emerald-600 transition-all flex items-center gap-2"
-          >
+            className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-green-600 hover:to-emerald-600 transition-all flex items-center gap-2">
             Start Implementation
             <ArrowRight className="w-5 h-5" />"
           </Link>
           <Link 
             href="/[^"]*"
-            className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all flex items-center gap-2"
-          >
+            className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all flex items-center gap-2">
             View Success Stories
             <ArrowRight className="w-5 h-5" />"
           </Link>
           <Link 
             href="/[^"]*"
-            className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-indigo-600 transition-all flex items-center gap-2"
-          >
+            className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-indigo-600 transition-all flex items-center gap-2">
             Read Full Analysis
             <ArrowRight className="w-5 h-5" />"
           </Link>

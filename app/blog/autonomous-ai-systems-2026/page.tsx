@@ -135,8 +135,7 @@ export default function AutonomousAISystems2026() {
             </p>
             <a 
               href="/[^"]*"
-              className="inline-block bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors"
-            >
+              className="inline-block bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors">
               Explore Autonomous AI Solutions
             </a>
           </div>

@@ -101,8 +101,7 @@ const October2025NewContentAIEthicsShowcase = () => {
               <Link
                 key={index}
                 to={item.link}
-                className="group relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border-2 border-purple-500/30 hover:border-yellow-400 transition-all duration-300 transform hover:scale-105 hover:-translate-y-2 shadow-2xl"
-              >
+                className="group relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 border-2 border-purple-500/30 hover:border-yellow-400 transition-all duration-300 transform hover:scale-105 hover:-translate-y-2 shadow-2xl">
                 {/* Badge */}
                 <div className="absolute top-4 right-4 px-3 py-1 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full text-xs font-bold">
                   {item.badge}
@@ -219,16 +218,14 @@ const October2025NewContentAIEthicsShowcase = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/guides/ai-ethics-implementation-quick-start-guide-2025"
-              className="px-10 py-5 bg-gradient-to-r from-yellow-400 to-orange-500 text-slate-900 rounded-xl font-black text-lg hover:from-yellow-300 hover:to-orange-400 transition-all transform hover:scale-105 shadow-2xl flex items-center justify-center gap-2"
-            >
+              className="px-10 py-5 bg-gradient-to-r from-yellow-400 to-orange-500 text-slate-900 rounded-xl font-black text-lg hover:from-yellow-300 hover:to-orange-400 transition-all transform hover:scale-105 shadow-2xl flex items-center justify-center gap-2">
               <Sparkles className="w-6 h-6" />
               <span>Start Your 30-Day Journey</span>
               <ArrowRight className="w-6 h-6" />
             </Link>
             <Link
               to="/contact"
-              className="px-10 py-5 bg-white/10 backdrop-blur-sm border-2 border-white/30 rounded-xl font-bold text-lg hover:bg-white/20 transition-all flex items-center justify-center gap-2"
-            >
+              className="px-10 py-5 bg-white/10 backdrop-blur-sm border-2 border-white/30 rounded-xl font-bold text-lg hover:bg-white/20 transition-all flex items-center justify-center gap-2">
               <span>Get Expert Assessment</span>
             </Link>
           </div>

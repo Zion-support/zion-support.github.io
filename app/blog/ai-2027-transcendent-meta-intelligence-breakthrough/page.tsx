@@ -242,14 +242,12 @@ export default function AI2027TranscendentMetaIntelligenceBreakthrough() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <Link 
                 href="/case-studies/ai-2027-transcendent-meta-intelligence-1-8-trillion-success"
-                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-              >
+                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
                 View Success Story
               </Link>
               <Link 
                 href="/services/ai-2027-transcendent-meta-intelligence-solutions"
-                className="bg-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors border border-white"
-              >
+                className="bg-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors border border-white">
                 Get Implementation Guide
               </Link>
             </div>

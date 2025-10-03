@@ -70,8 +70,7 @@ const January2025ContentShowcase: React.FC = () => {
           {contentItems.map((item, index) => (
             <div 
               key={index}
-              className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-purple-500/50 transition-all duration-300 group hover:transform hover:scale-105"
-            >
+              className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-purple-500/50 transition-all duration-300 group hover:transform hover:scale-105">
               <div className="flex items-center justify-between mb-4">
                 <span className="bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-sm font-medium">
                   {item.category}
@@ -100,8 +99,7 @@ const January2025ContentShowcase: React.FC = () => {
               
               <a 
                 href={item.link}
-                className="inline-block w-full text-center bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 group-hover:shadow-lg group-hover:shadow-purple-500/25"
-              >
+                className="inline-block w-full text-center bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 group-hover:shadow-lg group-hover:shadow-purple-500/25">
                 Read Article →
               </a>
             </div>
@@ -137,14 +135,12 @@ const January2025ContentShowcase: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="/newsletter"
-                className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
-              >
+                className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1">
                 Subscribe to Newsletter
               </a>
               <a 
                 href="/blog"
-                className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
-              >
+                className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300">
                 Browse All Content
               </a>
             </div>

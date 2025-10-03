@@ -41,6 +41,4 @@ export default function PolicyTestsQuickstart2025(): React.JSX.Element {
       </div>
     </div>
   );
-}
-
-;
+};

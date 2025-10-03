@@ -145,14 +145,12 @@ export default function AI2026QuantumEnhancedAnalytics() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link 
                   href="/[^"]*"
-                  className="px-8 py-3 bg-gradient-to-r from-cyan-600 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 text-center"
-                >
+                  className="px-8 py-3 bg-gradient-to-r from-cyan-600 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 text-center">
                   Get Quantum Analytics
                 </Link>
                 <Link 
                   href="/[^"]*"
-                  className="px-8 py-3 border border-purple-500 text-purple-400 font-semibold rounded-xl hover:bg-purple-500/10 transition-all duration-300 text-center"
-                >
+                  className="px-8 py-3 border border-purple-500 text-purple-400 font-semibold rounded-xl hover:bg-purple-500/10 transition-all duration-300 text-center">
                   Learn More
                 </Link>
               </div>
@@ -165,7 +163,6 @@ export default function AI2026QuantumEnhancedAnalytics() {
           <h2 className="text-3xl font-bold text-white text-center mb-8">Related Content</h2>
           <div className="grid md:grid-cols-3 gap-6">
             <Link href="/blog/ai-2026-quantum-computing-breakthrough" className="group">
-              <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-6 hover:border-cyan-500/50 transition-all duration-300">
                 <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
                   Quantum Computing Breakthrough
                 </h3>
@@ -176,7 +173,6 @@ export default function AI2026QuantumEnhancedAnalytics() {
             </Link>
 
             <Link href="/blog/ai-2026-quantum-machine-learning" className="group">
-              <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-6 hover:border-cyan-500/50 transition-all duration-300">
                 <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
                   Quantum Machine Learning
                 </h3>
@@ -187,7 +183,6 @@ export default function AI2026QuantumEnhancedAnalytics() {
             </Link>
 
             <Link href="/blog/ai-2026-quantum-optimization" className="group">
-              <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-6 hover:border-cyan-500/50 transition-all duration-300">
                 <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
                   Quantum Optimization
                 </h3>
@@ -203,8 +198,7 @@ export default function AI2026QuantumEnhancedAnalytics() {
         <div className="text-center mt-16">
           <Link 
             href="/[^"]*"
-            className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-slate-700 to-slate-800 text-white font-semibold rounded-xl hover:from-slate-600 hover:to-slate-700 transition-all duration-300"
-          >
+            className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-slate-700 to-slate-800 text-white font-semibold rounded-xl hover:from-slate-600 hover:to-slate-700 transition-all duration-300">
             <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
             </svg>

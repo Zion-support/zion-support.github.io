@@ -30,9 +30,9 @@ const AIAgentOrchestrationEnterprise2025: () => {
         <div className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-purple-600 py-16">
           <div className="absolute inset-0 bg-black/20"></div>
           <div className="container mx-auto px-6 relative z-10">
-            <Link to="/blog
+            <Link to="/blog">
   className="inline-flex items-center text-white/90 hover:text-white mb-8 transition-colors
-            >
+            >"
               <ArrowLeft className="w-4 h-4 mr-2 ">
               <ArrowLeft className="w-4 h-4 mr-2" />
               <ArrowLeft className="w-4 h-4 mr-2" />>
@@ -63,9 +63,9 @@ const AIAgentOrchestrationEnterprise2025: () => {
         <div className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-purple-600 py-16">
           <div className="absolute inset-0 bg-black/20"></div>
           <div className="container mx-auto px-6 relative z-10">
-            <Link to="/blog
+            <Link to="/blog">
   className="inline-flex items-center text-white/90 hover:text-white mb-8 transition-colors
-            >
+            >"
               <ArrowLeft className="w-4 h-4 mr-2 ">
               <ArrowLeft className="w-4 h-4 mr-2" />
   Back to Blog
@@ -91,11 +91,11 @@ const AIAgentOrchestrationEnterprise2025: () => {
               <div className="flex flex-wrap items-center gap-6 text-white/90">
                 <div className="flex items-center">
                   <Calendar className="w-5 h-5 mr-2 ">
-                  <span>October 1, 2025</span>/span>
+                  <span>October 1, 2025</span>
                 </div>
                 <div className="flex items-center">
                   <Clock className="w-5 h-5 mr-2 ">
-                  <span>12 min read</span>/span>
+                  <span>12 min read</span>
                 </div>
                 <div className="flex items-center">
                   <TrendingUp className="w-5 h-5 mr-2 ">
@@ -103,8 +103,8 @@ const AIAgentOrchestrationEnterprise2025: () => {
                 </div>
                 <div className="flex items-center">
                   <Clock className="w-5 h-5 mr-2/>
-                  <span>12 min read</span>/span>
-                </div>
+                  <span>12 min read</span>
+                </div>"
                 <div className="flex items-center">
                   <TrendingUp className="w-5 h-5 mr-2/>">
               <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 leading-tight">
@@ -114,11 +114,11 @@ const AIAgentOrchestrationEnterprise2025: () => {
               <div className="flex flex-wrap items-center gap-6 text-white/90">
                 <div className="flex items-center">
                   <Calendar className="w-5 h-5 mr-2" />
-                  <span>October 1, 2025</span>/span>
+                  <span>October 1, 2025</span>
                 </div>
                 <div className="flex items-center">
                   <Clock className="w-5 h-5 mr-2" />
-                  <span>12 min read</span>/span>
+                  <span>12 min read</span>
                 </div>
                 <div className="flex items-center">
                   <TrendingUp className="w-5 h-5 mr-2" />
@@ -129,11 +129,11 @@ const AIAgentOrchestrationEnterprise2025: () => {
               <div className="flex flex-wrap items-center gap-6 text-white/90">
                 <div className="flex items-center">
                   <Calendar className="w-5 h-5 mr-2/>">
-                  <span>October 1, 2025</span>/span>
+                  <span>October 1, 2025</span>
                 </div>
                 <div className="flex items-center">
                   <Clock className="w-5 h-5 mr-2/>">
-                  <span>12 min read</span>/span>
+                  <span>12 min read</span>
                 </div>
                 <div className="flex items-center">
                   <TrendingUp className="w-5 h-5 mr-2/>">
@@ -144,15 +144,15 @@ const AIAgentOrchestrationEnterprise2025: () => {
               <div className="flex flex-wrap items-center gap-6 text-white/90">
                 <div className="flex items-center">
                   <Calendar className="w-5 h-5 mr-2" />
-                  <span>October 1, 2025</span>/span>
+                  <span>October 1, 2025</span>
                 </div>
                 <div className="flex items-center">
                   <Clock className="w-5 h-5 mr-2" />
-                  <span>12 min read</span>/span>
+                  <span>12 min read</span>
                 </div>
                 <div className="flex items-center">
                   <TrendingUp className="w-5 h-5 mr-2" />
-                  <span>Production Ready</span>/span>
+                  <span>Production Ready</span>
                 </div>
               </div>
             </div>
@@ -340,7 +340,6 @@ const AIAgentOrchestrationEnterprise2025: () => {
               <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-lg border border-slate-700 mb-6">
                 <h3 className="text-2xl font-semibold text-white mb-4">Hierarchical Orchestration Model</h3>
                 <p className="text-gray-300 mb-6">
-              <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-lg border border-slate-700 mb-6">
                 <h3 className="text-2xl font-semibold text-white mb-4">Hierarchical Orchestration Model</h3>
                 <p className="text-gray-300 mb-6">
             <section className="mb-12">
@@ -349,7 +348,6 @@ const AIAgentOrchestrationEnterprise2025: () => {
   Production-Grade Architecture Patterns
               </h2>
 
-              <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-lg border border-slate-700 mb-6">
                 <h3 className="text-2xl font-semibold text-white mb-4">Hierarchical Orchestration Model</h3>
                 <p className="text-gray-300 mb-6">
   The most successful enterprise deployments use a three-tier hierarchy: </p>
@@ -358,7 +356,7 @@ const AIAgentOrchestrationEnterprise2025: () => {
                     <div className="flex-shrink-0 w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mr-4">
                       <span className="text-2xl">🎯</span>
                     </div>
-                    <div >
+                    <div>
                       <h4 className="text-lg font-semibold text-white mb-2">Orchestrator Layer</h4>"
                       <p className="text-gray-400">,"
   Master coordinators that decompose complex tasks, assign to specialist agents
@@ -370,7 +368,6 @@ const AIAgentOrchestrationEnterprise2025: () => {
   Production-Grade Architecture Patterns
               </h2>
 
-              <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-lg border border-slate-700 mb-6">
                 <h3 className="text-2xl font-semibold text-white mb-4">Hierarchical Orchestration Model</h3>
                 <p className="text-gray-300 mb-6">
             <section className="mb-12">
@@ -379,7 +376,6 @@ const AIAgentOrchestrationEnterprise2025: () => {
   Production-Grade Architecture Patterns
               </h2>
 
-              <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-lg border border-slate-700 mb-6">
                 <h3 className="text-2xl font-semibold text-white mb-4">Hierarchical Orchestration Model</h3>
                 <p className="text-gray-300 mb-6">"
   The most successful enterprise deployments use a three-tier hierarchy: </p>
@@ -388,7 +384,7 @@ const AIAgentOrchestrationEnterprise2025: () => {
                     <div className="flex-shrink-0 w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mr-4">
                       <span className="text-2xl">🎯</span>
                     </div>
-                    <div >
+                    <div>
                       <h4 className="text-lg font-semibold text-white mb-2">Orchestrator Layer</h4>"
                       <p className="text-gray-400">,"
   Master coordinators that decompose complex tasks, assign to specialist agents
@@ -404,14 +400,14 @@ const AIAgentOrchestrationEnterprise2025: () => {
                     <div className="flex-shrink-0 w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mr-4">
                       <span className="text-2xl">⚡</span>
                     </div>
-                    <div >
+                    <div>
                       <h4 className="text-lg font-semibold text-white mb-2">Specialist Agents</h4>
                       <p className="text-gray-400">
                   <div className="flex items-start">
                     <div className="flex-shrink-0 w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mr-4">
                       <span className="text-2xl">⚡</span>
                     </div>
-                    <div >
+                    <div>
                       <h4 className="text-lg font-semibold text-white mb-2">Specialist Agents</h4>
                       <p className="text-gray-400">"
   Domain-specific workers (data retrieval, analysis, code generation) that execute
@@ -424,14 +420,14 @@ const AIAgentOrchestrationEnterprise2025: () => {
                     <div className="flex-shrink-0 w-12 h-12 bg-emerald-500/20 rounded-lg flex items-center justify-center mr-4">
                       <span className="text-2xl">🛠️</span>
                     </div>
-                    <div >
+                    <div>
                       <h4 className="text-lg font-semibold text-white mb-2">Tool Layer</h4>
                       <p className="text-gray-400">
                   <div className="flex items-start">
                     <div className="flex-shrink-0 w-12 h-12 bg-emerald-500/20 rounded-lg flex items-center justify-center mr-4">
                       <span className="text-2xl">🛠️</span>
                     </div>
-                    <div >
+                    <div>
                       <h4 className="text-lg font-semibold text-white mb-2">Tool Layer</h4>
                       <p className="text-gray-400">"
   Sandboxed execution environment for API calls, database queries, and external integrations.
@@ -563,19 +559,19 @@ const AIAgentOrchestrationEnterprise2025: () => {
               <div className="bg-gradient-to-r from-emerald-500/20 to-blue-500/20 p-8 rounded-lg border border-emerald-500/30">
                 <h2 className="text-3xl font-bold text-white mb-6">Measured ROI & Business Impact</h2>
                 <div className="grid md:grid-cols-2 gap-6">
-                  <div >
+                  <div>
                     <p className="text-4xl font-bold text-emerald-400 mb-2">78%</p>
                     <p className="text-gray-300">Reduction in manual workflow execution time</p>
                   </div>
-                  <div >
+                  <div>
                     <p className="text-4xl font-bold text-blue-400 mb-2">$2.4M</p>
                     <p className="text-gray-300">Average annual cost savings per Fortune 500 deployment</p>
                   </div>
-                  <div >
+                  <div>
                     <p className="text-4xl font-bold text-purple-400 mb-2">99.97%</p>
                     <p className="text-gray-300">Uptime achieved in production environments</p>
                   </div>
-                  <div >
+                  <div>
                     <p className="text-4xl font-bold text-cyan-400 mb-2">3.2x</p>
                     <p className="text-gray-300">Improvement in developer productivity</p>
             <section className="mb-12">
@@ -586,19 +582,19 @@ const AIAgentOrchestrationEnterprise2025: () => {
               <div className="bg-gradient-to-r from-emerald-500/20 to-blue-500/20 p-8 rounded-lg border border-emerald-500/30">
                 <h2 className="text-3xl font-bold text-white mb-6">Measured ROI & Business Impact</h2>
                 <div className="grid md:grid-cols-2 gap-6">
-                  <div >
+                  <div>
                     <p className="text-4xl font-bold text-emerald-400 mb-2">78%</p>
                     <p className="text-gray-300">Reduction in manual workflow execution time</p>
                   </div>
-                  <div >
+                  <div>
                     <p className="text-4xl font-bold text-blue-400 mb-2">$2.4M</p>
                     <p className="text-gray-300">Average annual cost savings per Fortune 500 deployment</p>
                   </div>
-                  <div >
+                  <div>
                     <p className="text-4xl font-bold text-purple-400 mb-2">99.97%</p>
                     <p className="text-gray-300">Uptime achieved in production environments</p>
                   </div>
-                  <div >
+                  <div>
                     <p className="text-4xl font-bold text-cyan-400 mb-2">3.2x</p>
                     <p className="text-gray-300">Improvement in developer productivity</p>
                   </div>
@@ -618,7 +614,7 @@ const AIAgentOrchestrationEnterprise2025: () => {
                 to="/contact"
   className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors
                 >
-                  Schedule Architecture Review
+                  Schedule Architecture Review"
                   <ArrowLeft className="w-5 h-5 ml-2 rotate-180 ">
                   <ArrowLeft className="w-5 h-5 ml-2 rotate-180/>">
                   <ArrowLeft className="w-5 h-5 ml-2 rotate-180" />
@@ -633,7 +629,7 @@ const AIAgentOrchestrationEnterprise2025: () => {
                 to="/contact"
   className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors
                 >
-                  Schedule Architecture Review
+                  Schedule Architecture Review"
                   <ArrowLeft className="w-5 h-5 ml-2 rotate-180 ">
                   <ArrowLeft className="w-5 h-5 ml-2 rotate-180" />
                 </Link>
@@ -646,5 +642,4 @@ const AIAgentOrchestrationEnterprise2025: () => {
   );
 };
 
-export default AIAgentOrchestrationEnterprise2025;
-;
+export default AIAgentOrchestrationEnterprise2025;;

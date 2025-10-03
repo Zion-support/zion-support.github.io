@@ -83,7 +83,6 @@ const AutonomousBusinessOperationsRevolution2025: () => {
                 <div className="text-4xl font-bold text-green-300 mb-2">85%</div>
                 <div className="text-green-100 text-sm">Cost Reduction</div>
             <div className="grid md:grid-cols-4 gap-6 max-w-6xl mx-auto mb-12">
-              <div className="bg-gradient-to-br from-green-600/30 to-emerald-600/30 backdrop-blur-sm rounded-xl p-6 border border-green-400/40 text-center">
                 <div className="text-4xl font-bold text-green-300 mb-2">85%</div>
                 <div className="text-green-100 text-sm">Cost Reduction</div>
               </div>
@@ -99,23 +98,18 @@ const AutonomousBusinessOperationsRevolution2025: () => {
                 <div className="text-4xl font-bold text-orange-300 mb-2">90 Days</div>
                 <div className="text-orange-100 text-sm">To Production</div>
             <div className="grid md:grid-cols-4 gap-6 max-w-6xl mx-auto mb-12">
-              <div className="bg-gradient-to-br from-green-600/30 to-emerald-600/30 backdrop-blur-sm rounded-xl p-6 border border-green-400/40 text-center">
                 <div className="text-4xl font-bold text-green-300 mb-2">85%</div>
                 <div className="text-green-100 text-sm">Cost Reduction</div>
             <div className="grid md:grid-cols-4 gap-6 max-w-6xl mx-auto mb-12">
-              <div className="bg-gradient-to-br from-green-600/30 to-emerald-600/30 backdrop-blur-sm rounded-xl p-6 border border-green-400/40 text-center">
                 <div className="text-4xl font-bold text-green-300 mb-2">85%</div>
                 <div className="text-green-100 text-sm">Cost Reduction</div>
               </div>
-              <div className="bg-gradient-to-br from-blue-600/30 to-cyan-600/30 backdrop-blur-sm rounded-xl p-6 border border-blue-400/40 text-center">
                 <div className="text-4xl font-bold text-blue-300 mb-2">$500M+</div>
                 <div className="text-blue-100 text-sm">Annual Value</div>
               </div>
-              <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-6 border border-purple-400/40 text-center">
                 <div className="text-4xl font-bold text-purple-300 mb-2">99.7%</div>
                 <div className="text-purple-100 text-sm">Accuracy Rate</div>
               </div>
-              <div className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-6 border border-orange-400/40 text-center">
                 <div className="text-4xl font-bold text-orange-300 mb-2">90 Days</div>
                 <div className="text-orange-100 text-sm">To Production</div>
               </div>
@@ -128,7 +122,7 @@ const AutonomousBusinessOperationsRevolution2025: () => {
             <div className="text-center text-blue-200 mb-8">
               <span className="mr-6">📖 22 min read</span>
               <span className="mr-6">📅 October 1, 2025</span>
-              <span>✍️ Zion Tech Group Research Team</span>/span>
+              <span>✍️ Zion Tech Group Research Team</span>
             </div>
           </div>
         </section>
@@ -141,18 +135,15 @@ const AutonomousBusinessOperationsRevolution2025: () => {
             <h2 className="text-3xl font-bold text-white mb-6 flex items-center">
               <TrendingUp className="w-8 h-8 mr-3 text-blue-400/>">
         <section className="container mx-auto px-6 py-16 max-w-5xl">
-          <div className="bg-gradient-to-br from-blue-900/60 to-purple-900/60 backdrop-blur-sm rounded-2xl p-8 md: p-12 border-2 border-blue-400/50 mb-12">
             <h2 className="text-3xl font-bold text-white mb-6 flex items-center">
               <TrendingUp className="w-8 h-8 mr-3 text-blue-400" />
   Executive Summary
             </h2>
             <p className="text-xl text-blue-100 mb-6 leading-relaxed">
         <section className="container mx-auto px-6 py-16 max-w-5xl">
-          <div className="bg-gradient-to-br from-blue-900/60 to-purple-900/60 backdrop-blur-sm rounded-2xl p-8 md: p-12 border-2 border-blue-400/50 mb-12">
             <h2 className="text-3xl font-bold text-white mb-6 flex items-center">
               <TrendingUp className="w-8 h-8 mr-3 text-blue-400/>">
         <section className="container mx-auto px-6 py-16 max-w-5xl">
-          <div className="bg-gradient-to-br from-blue-900/60 to-purple-900/60 backdrop-blur-sm rounded-2xl p-8 md: p-12 border-2 border-blue-400/50 mb-12">
             <h2 className="text-3xl font-bold text-white mb-6 flex items-center">
               <TrendingUp className="w-8 h-8 mr-3 text-blue-400" />
   Executive Summary
@@ -170,7 +161,7 @@ const AutonomousBusinessOperationsRevolution2025: () => {
             <div className="grid md:grid-cols-2 gap-6 mt-8">
               <div className="flex items-start gap-3">
                 <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 mt-1" /> / />> />
-                <div >
+                <div>
                   <div className="text-white font-semibold mb-1">85% Cost Reduction</div>
                   <div className="text-blue-200 text-sm">Across finance, HR, and operations</div>
                 </div>
@@ -181,7 +172,7 @@ const AutonomousBusinessOperationsRevolution2025: () => {
                 <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 mt-1/>" / />> />>
               <div className="flex items-start gap-3">
                 <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 mt-1" /> / />> />
-                <div >
+                <div>
                   <div className="text-white font-semibold mb-1">&lt;100ms Decision Latency</div>
                   <div className="text-blue-200 text-sm">For critical business processes</div>
                 </div>
@@ -192,7 +183,7 @@ const AutonomousBusinessOperationsRevolution2025: () => {
                 <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 mt-1/>" / />> />>
               <div className="flex items-start gap-3">
                 <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 mt-1" /> / />> />
-                <div >
+                <div>
                   <div className="text-white font-semibold mb-1">$500M+ Annual Value</div>
                   <div className="text-blue-200 text-sm">For global enterprises</div>
                 </div>
@@ -203,7 +194,7 @@ const AutonomousBusinessOperationsRevolution2025: () => {
                 <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 mt-1/>" / />> />>
               <div className="flex items-start gap-3">
                 <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 mt-1" /> / />> />
-                <div >
+                <div>
                   <div className="text-white font-semibold mb-1">300-500% ROI</div>
                   <div className="text-blue-200 text-sm">Achieved within 18 months</div>
                 </div>
@@ -214,7 +205,7 @@ const AutonomousBusinessOperationsRevolution2025: () => {
                 <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 mt-1/>" / />> />>
               <div className="flex items-start gap-3">
                 <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 mt-1" /> / />> />
-                <div >
+                <div>
                   <div className="text-white font-semibold mb-1">40+ Autonomous Workflows</div>
                   <div className="text-blue-200 text-sm">Replacing manual operations</div>
                 </div>
@@ -225,7 +216,7 @@ const AutonomousBusinessOperationsRevolution2025: () => {
                 <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 mt-1/>" / />> />>
               <div className="flex items-start gap-3">
                 <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 mt-1" /> / />> />
-                <div >
+                <div>
                   <div className="text-white font-semibold mb-1">24/7 Global Operations</div>
                   <div className="text-blue-200 text-sm">Without human intervention</div>
             <div className="grid md:grid-cols-2 gap-6 mt-8">
@@ -234,7 +225,7 @@ const AutonomousBusinessOperationsRevolution2025: () => {
             <div className="grid md:grid-cols-2 gap-6 mt-8">
               <div className="flex items-start gap-3">
                 <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 mt-1" /> / />> />
-                <div >
+                <div>
                   <div className="text-white font-semibold mb-1">85% Cost Reduction</div>
                   <div className="text-blue-200 text-sm">Across finance, HR, and operations</div>
                 </div>
@@ -243,7 +234,7 @@ const AutonomousBusinessOperationsRevolution2025: () => {
                 <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 mt-1/>" / />> />>
               <div className="flex items-start gap-3">
                 <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 mt-1" /> / />> />
-                <div >
+                <div>
                   <div className="text-white font-semibold mb-1">&lt;100ms Decision Latency</div>
                   <div className="text-blue-200 text-sm">For critical business processes</div>
                 </div>
@@ -252,7 +243,7 @@ const AutonomousBusinessOperationsRevolution2025: () => {
                 <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 mt-1/>" / />> />>
               <div className="flex items-start gap-3">
                 <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 mt-1" /> / />> />
-                <div >
+                <div>
                   <div className="text-white font-semibold mb-1">$500M+ Annual Value</div>
                   <div className="text-blue-200 text-sm">For global enterprises</div>
                 </div>
@@ -261,7 +252,7 @@ const AutonomousBusinessOperationsRevolution2025: () => {
                 <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 mt-1/>" / />> />>
               <div className="flex items-start gap-3">
                 <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 mt-1" /> / />> />
-                <div >
+                <div>
                   <div className="text-white font-semibold mb-1">300-500% ROI</div>
                   <div className="text-blue-200 text-sm">Achieved within 18 months</div>
                 </div>
@@ -270,7 +261,7 @@ const AutonomousBusinessOperationsRevolution2025: () => {
                 <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 mt-1/>" / />> />>
               <div className="flex items-start gap-3">
                 <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 mt-1" /> / />> />
-                <div >
+                <div>
                   <div className="text-white font-semibold mb-1">40+ Autonomous Workflows</div>
                   <div className="text-blue-200 text-sm">Replacing manual operations</div>
                 </div>
@@ -279,7 +270,7 @@ const AutonomousBusinessOperationsRevolution2025: () => {
                 <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 mt-1/>" / />> />>
               <div className="flex items-start gap-3">
                 <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 mt-1" /> / />> />
-                <div >
+                <div>
                   <div className="text-white font-semibold mb-1">24/7 Global Operations</div>
                   <div className="text-blue-200 text-sm">Without human intervention</div>
                 </div>
@@ -315,15 +306,15 @@ const AutonomousBusinessOperationsRevolution2025: () => {
               <li className="flex items-start">
                 <Zap className="w-5 h-5 text-yellow-400 mr-3 mt-1 flex-shrink-0/>
                 <span><strong>Self-Optimize: </strong> Automatically adjust parameters for peak efficiency</span>,
-              </li>
+              </li>"
               <li className="flex items-start">
                 <Zap className="w-5 h-5 text-yellow-400 mr-3 mt-1 flex-shrink-0/>
                 <span><strong>Self-Heal: </strong> Detect and resolve issues before they impact operations</span>,
-              </li>
+              </li>"
               <li className="flex items-start">
                 <Zap className="w-5 h-5 text-yellow-400 mr-3 mt-1 flex-shrink-0/>
                 <span><strong>Self-Learn: </strong> Improve decision-making from every interaction</span>,
-              </li>
+              </li>"
               <li className="flex items-start">
                 <Zap className="w-5 h-5 text-yellow-400 mr-3 mt-1 flex-shrink-0/>">
           <div className="prose prose-invert prose-lg max-w-none">
@@ -416,7 +407,6 @@ const AutonomousBusinessOperationsRevolution2025: () => {
             <p className="text-blue-100 text-lg mb-6">,"
   Three critical factors have aligned to make ABO not just possible, but essential: </p>
             <div className="grid md:grid-cols-3 gap-6 mb-12">
-              <div className="bg-gradient-to-br from-blue-800/40 to-cyan-800/40 rounded-xl p-6 border border-blue-400/30">
                 <div className="text-3xl mb-3">🧠</div>
                 <h3 className="text-xl font-bold text-white mb-2">AI/ML Maturity</h3>
                 <p className="text-blue-200 text-sm">
@@ -430,7 +420,6 @@ const AutonomousBusinessOperationsRevolution2025: () => {
             <p className="text-blue-100 text-lg mb-6">
   Three critical factors have aligned to make ABO not just possible, but essential: </p>
             <div className="grid md:grid-cols-3 gap-6 mb-12">
-              <div className="bg-gradient-to-br from-blue-800/40 to-cyan-800/40 rounded-xl p-6 border border-blue-400/30">
                 <div className="text-3xl mb-3">🧠</div>
                 <h3 className="text-xl font-bold text-white mb-2">AI/ML Maturity</h3>
                 <p className="text-blue-200 text-sm">
@@ -452,21 +441,18 @@ const AutonomousBusinessOperationsRevolution2025: () => {
             <p className="text-blue-100 text-lg mb-6">"
   Three critical factors have aligned to make ABO not just possible, but essential: </p>
             <div className="grid md:grid-cols-3 gap-6 mb-12">
-              <div className="bg-gradient-to-br from-blue-800/40 to-cyan-800/40 rounded-xl p-6 border border-blue-400/30">
                 <div className="text-3xl mb-3">🧠</div>
                 <h3 className="text-xl font-bold text-white mb-2">AI/ML Maturity</h3>
                 <p className="text-blue-200 text-sm">"
   Large language models (LLMs) and advanced ML algorithms can now handle complex business logic
                 </p>
               </div>
-              <div className="bg-gradient-to-br from-purple-800/40 to-pink-800/40 rounded-xl p-6 border border-purple-400/30">
                 <div className="text-3xl mb-3">☁️</div>
                 <h3 className="text-xl font-bold text-white mb-2">Cloud Infrastructure</h3>
                 <p className="text-purple-200 text-sm">"
   Elastic, serverless architectures enable instant scaling
                 </p>
               </div>
-              <div className="bg-gradient-to-br from-green-800/40 to-emerald-800/40 rounded-xl p-6 border border-green-400/30">
                 <div className="text-3xl mb-3">📊</div>
                 <h3 className="text-xl font-bold text-white mb-2">Data Availability</h3>
                 <p className="text-green-200 text-sm">"
@@ -483,109 +469,106 @@ const AutonomousBusinessOperationsRevolution2025: () => {
               <div className="grid md:grid-cols-2 gap-4">
                 <div className="flex items-center gap-2 text-green-200">
                   <CheckCircle className="w-5 h-5 text-green-400 " / />> />>
-                  <span>85% reduction in operational costs</span>/span>
+                  <span>85% reduction in operational costs</span>
                 </div>
                 <div className="flex items-center gap-2 text-green-200">
                   <CheckCircle className="w-5 h-5 text-green-400 " / />> />>
-                  <span>10x faster processing times</span>/span>
+                  <span>10x faster processing times</span>
                 </div>
                 <div className="flex items-center gap-2 text-green-200">
                   <CheckCircle className="w-5 h-5 text-green-400 " / />> />>
-                  <span>99.7% accuracy rate</span>/span>
+                  <span>99.7% accuracy rate</span>
                 </div>
                 <div className="flex items-center gap-2 text-green-200">
                   <CheckCircle className="w-5 h-5 text-green-400 " / />> />
                 </div>
                 <div className="flex items-center gap-2 text-green-200">
                   <CheckCircle className="w-5 h-5 text-green-400/>
-                  <span>10x faster processing times</span>/span>
-                </div>
+                  <span>10x faster processing times</span>
+                </div>"
                 <div className=" / />> />flex items-center gap-2 text-green-200">
                   <CheckCircle className="w-5 h-5 text-green-400/>
-                  <span>99.7% accuracy rate</span>/span>
-                </div>
+                  <span>99.7% accuracy rate</span>
+                </div>"
                 <div className=" / />> />flex items-center gap-2 text-green-200">
                   <CheckCircle className="w-5 h-5 text-green-400/>" / />> />>
             <h2 className="text-3xl font-bold text-white mb-6">Real-World Impact: Fortune 100 Case Study</h2>
-            <div className="bg-gradient-to-br from-green-900/60 to-emerald-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-green-400/50 mb-8">
               <h3 className="text-2xl font-bold text-white mb-4">$650M Annual Value Creation</h3>
               <p className="text-green-100 mb-6">
   A Fortune 100 financial services company deployed our autonomous operations platform and achieved extraordinary results: </p>
               <div className="grid md:grid-cols-2 gap-4">
                 <div className="flex items-center gap-2 text-green-200">
                   <CheckCircle className="w-5 h-5 text-green-400" /> / />> />
-                  <span>85% reduction in operational costs</span>/span>
+                  <span>85% reduction in operational costs</span>
                 </div>
                 <div className="flex items-center gap-2 text-green-200">
                   <CheckCircle className="w-5 h-5 text-green-400" /> / />> />
-                  <span>10x faster processing times</span>/span>
+                  <span>10x faster processing times</span>
                 </div>
                 <div className="flex items-center gap-2 text-green-200">
                   <CheckCircle className="w-5 h-5 text-green-400" /> / />> />
-                  <span>99.7% accuracy rate</span>/span>
+                  <span>99.7% accuracy rate</span>
                 </div>
                 <div className="flex items-center gap-2 text-green-200">
                   <CheckCircle className="w-5 h-5 text-green-400" /> / />> />
-                  <span>40+ autonomous workflows deployed</span>/span>
+                  <span>40+ autonomous workflows deployed</span>
                 </div>
               </div>
               <div className="mt-6">
                 <Link to="/case-studies/fortune-100-autonomous-operations-transformation-2025" ,"
   className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-semibold transition-all
                 >
-                  Read Full Case Study
-                  <ArrowRight className="w-5 h-5 ">
-                  <ArrowRight className="w-5 h-5/>">
+                  Read Full Case Study"
+                  <ArrowRight className="w-5 h-5 " />
+                  <ArrowRight className="w-5 h-5/>" />
                   <ArrowRight className="w-5 h-5" />
             <h2 className="text-3xl font-bold text-white mb-6">Real-World Impact: Fortune 100 Case Study</h2>
-            <div className="bg-gradient-to-br from-green-900/60 to-emerald-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-green-400/50 mb-8">
               <h3 className="text-2xl font-bold text-white mb-4">$650M Annual Value Creation</h3>
               <p className="text-green-100 mb-6">,"
   A Fortune 100 financial services company deployed our autonomous operations platform and achieved extraordinary results: </p>
               <div className="grid md:grid-cols-2 gap-4">
                 <div className="flex items-center gap-2 text-green-200">
                   <CheckCircle className="w-5 h-5 text-green-400/>" / />> />>
-                  <span>85% reduction in operational costs</span>/span>
+                  <span>85% reduction in operational costs</span>
                 </div>
                 <div className="flex items-center gap-2 text-green-200">
                   <CheckCircle className="w-5 h-5 text-green-400/>" / />> />>
-                  <span>10x faster processing times</span>/span>
+                  <span>10x faster processing times</span>
                 </div>
                 <div className="flex items-center gap-2 text-green-200">
                   <CheckCircle className="w-5 h-5 text-green-400/>" / />> />>
-                  <span>99.7% accuracy rate</span>/span>
+                  <span>99.7% accuracy rate</span>
                 </div>
                 <div className="flex items-center gap-2 text-green-200">
                   <CheckCircle className="w-5 h-5 text-green-400/>" / />> />>
             <h2 className="text-3xl font-bold text-white mb-6">Real-World Impact: Fortune 100 Case Study</h2>
-            <div className="bg-gradient-to-br from-green-900/60 to-emerald-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-green-400/50 mb-8">
               <h3 className="text-2xl font-bold text-white mb-4">$650M Annual Value Creation</h3>
               <p className="text-green-100 mb-6">"
   A Fortune 100 financial services company deployed our autonomous operations platform and achieved extraordinary results: </p>
               <div className="grid md:grid-cols-2 gap-4">
                 <div className="flex items-center gap-2 text-green-200">
                   <CheckCircle className="w-5 h-5 text-green-400" /> / />> />
-                  <span>85% reduction in operational costs</span>/span>
+                  <span>85% reduction in operational costs</span>
                 </div>
                 <div className="flex items-center gap-2 text-green-200">
                   <CheckCircle className="w-5 h-5 text-green-400" /> / />> />
-                  <span>10x faster processing times</span>/span>
+                  <span>10x faster processing times</span>
                 </div>
                 <div className="flex items-center gap-2 text-green-200">
                   <CheckCircle className="w-5 h-5 text-green-400" /> / />> />
-                  <span>99.7% accuracy rate</span>/span>
+                  <span>99.7% accuracy rate</span>
                 </div>
                 <div className="flex items-center gap-2 text-green-200">
                   <CheckCircle className="w-5 h-5 text-green-400" /> / />> />
-                  <span>40+ autonomous workflows deployed</span>/span>
+                  <span>40+ autonomous workflows deployed</span>
                 </div>
               </div>
               <div className="mt-6">
                 <Link to="/case-studies/fortune-100-autonomous-operations-transformation-2025" ,"
   className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-semibold transition-all
                 >
-                  Read Full Case Study
-                  <ArrowRight className="w-5 h-5 ">
+                  Read Full Case Study"
+                  <ArrowRight className="w-5 h-5 " />
                   <ArrowRight className="w-5 h-5" />
                 </Link>
               </div>
@@ -599,38 +582,35 @@ const AutonomousBusinessOperationsRevolution2025: () => {
             <h2 className="text-3xl font-bold text-white mb-6">ROI Calculator</h2>
             <p className="text-blue-100 text-lg mb-6">
   Calculate the potential value for your organization: </p>
-            <div className="bg-gradient-to-br from-purple-900/60 to-blue-900/60 rounded-2xl p-8 border-2 border-purple-400/50 mb-8">
               <div className="grid md:grid-cols-3 gap-6 text-center">
-                <div >
+                <div>
                   <div className="text-purple-300 text-sm mb-2">Average 3-Year Investment</div>
                   <div className="text-3xl font-bold text-white">$10-25M</div>
                 </div>
-                <div >
+                <div>
                   <div className="text-blue-300 text-sm mb-2">Average 3-Year Value</div>
                   <div className="text-3xl font-bold text-white">$90-330M</div>
                 </div>
-                <div >
+                <div>
                   <div className="text-green-300 text-sm mb-2">Net ROI</div>
                   <div className="text-3xl font-bold text-white">300-1,200%</div>
             <h2 className="text-3xl font-bold text-white mb-6">ROI Calculator</h2>"
             <p className="text-blue-100 text-lg mb-6">,"
   Calculate the potential value for your organization: </p>
-            <div className="bg-gradient-to-br from-purple-900/60 to-blue-900/60 rounded-2xl p-8 border-2 border-purple-400/50 mb-8">
               <div className="grid md:grid-cols-3 gap-6 text-center">
             <h2 className="text-3xl font-bold text-white mb-6">ROI Calculator</h2>
             <p className="text-blue-100 text-lg mb-6">"
   Calculate the potential value for your organization: </p>
-            <div className="bg-gradient-to-br from-purple-900/60 to-blue-900/60 rounded-2xl p-8 border-2 border-purple-400/50 mb-8">
               <div className="grid md:grid-cols-3 gap-6 text-center">
-                <div >
+                <div>
                   <div className="text-purple-300 text-sm mb-2">Average 3-Year Investment</div>
                   <div className="text-3xl font-bold text-white">$10-25M</div>
                 </div>
-                <div >
+                <div>
                   <div className="text-blue-300 text-sm mb-2">Average 3-Year Value</div>
                   <div className="text-3xl font-bold text-white">$90-330M</div>
                 </div>
-                <div >
+                <div>
                   <div className="text-green-300 text-sm mb-2">Net ROI</div>
                   <div className="text-3xl font-bold text-white">300-1,200%</div>
                 </div>
@@ -651,22 +631,22 @@ const AutonomousBusinessOperationsRevolution2025: () => {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <Link to="/services/autonomous-business-operations
+              <Link to="/services/autonomous-business-operations">
   className="inline-flex items-center justify-center gap-2 bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-lg font-semibold text-lg transition-all shadow-lg hover:shadow-xl
-              >
+              >"
                 <Rocket className="w-5 h-5 ,"
   Explore Our Services>
-                <ArrowRight className="w-5 h-5/>">
+                <ArrowRight className="w-5 h-5/>" />
                 <Rocket className="w-5 h-5" />
-                <Rocket className="w-5 h-5/>,
+                <Rocket className="w-5 h-5/>,"
   Explore Our Services">
-                <ArrowRight className="w-5 h-5 ">
+                <ArrowRight className="w-5 h-5 " />
                 <Rocket className="w-5 h-5" />
   Explore Our Services
                 <ArrowRight className="w-5 h-5" />
               </Link>
               to="/contact"
-  className="inline-flex items-center justify-center gap-2 border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg transition-all>
+  className="inline-flex items-center justify-center gap-2 border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg transition-all>"
         <section className="container mx-auto px-6 py-16 max-w-5xl">
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-center">
             <h2 className="text-4xl font-bold text-white mb-6">"
@@ -678,12 +658,12 @@ const AutonomousBusinessOperationsRevolution2025: () => {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <Link to="/services/autonomous-business-operations
+              <Link to="/services/autonomous-business-operations">
   className="inline-flex items-center justify-center gap-2 bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-lg font-semibold text-lg transition-all shadow-lg hover:shadow-xl
-              >
+              >"
                 <Rocket className="w-5 h-5 ,"
   Explore Our Services>
-                <ArrowRight className="w-5 h-5/>">
+                <ArrowRight className="w-5 h-5/>" />
                 <Rocket className="w-5 h-5" />
   Explore Our Services
                 <ArrowRight className="w-5 h-5" />
@@ -694,7 +674,7 @@ const AutonomousBusinessOperationsRevolution2025: () => {
                 Schedule Consultation
               </Link>
             </div>
-
+"
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 max-w-xl mx-auto">
               <p className="text-white font-bold text-lg mb-2">🎁 Special Launch Offer</p>
               <p className="text-blue-100">
@@ -714,9 +694,9 @@ const AutonomousBusinessOperationsRevolution2025: () => {
         <section className="container mx-auto px-6 py-16 max-w-5xl">
           <h2 className="text-3xl font-bold text-white mb-8">Related Resources</h2>
           <div className="grid md:grid-cols-2 gap-6">
-            <Link to="/case-studies/fortune-100-autonomous-operations-transformation-2025
+            <Link to="/case-studies/fortune-100-autonomous-operations-transformation-2025">
   className="bg-gradient-to-br from-green-900/60 to-emerald-900/60 backdrop-blur-sm rounded-xl p-6 border border-green-400/30 hover:border-green-400/60 transition-all group
-            >
+            >"
               <div className="text-green-400 text-sm font-semibold mb-2 uppercase">Case Study</div>
               <h3 className="text-xl font-bold text-white mb-3 group-hover:text-green-300 transition-colors">
               <div className="text-green-400 text-sm font-semibold mb-2 uppercase">Case Study</div>
@@ -727,7 +707,7 @@ const AutonomousBusinessOperationsRevolution2025: () => {
   Complete transformation journey with implementation details, results, and lessons learned
               </p>
               <div className="flex items-center text-green-300 font-semibold text-sm">,"
-  Read Case Study <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform/>
+  Read Case Study <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform/>"
               <div className="flex items-center text-green-300 font-semibold text-sm">
   Read Case Study <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
         <section className="container mx-auto px-6 py-16 max-w-5xl">
@@ -736,9 +716,9 @@ const AutonomousBusinessOperationsRevolution2025: () => {
         <section className="container mx-auto px-6 py-16 max-w-5xl">
           <h2 className="text-3xl font-bold text-white mb-8">Related Resources</h2>
           <div className="grid md:grid-cols-2 gap-6">
-            <Link to="/case-studies/fortune-100-autonomous-operations-transformation-2025
+            <Link to="/case-studies/fortune-100-autonomous-operations-transformation-2025">
   className="bg-gradient-to-br from-green-900/60 to-emerald-900/60 backdrop-blur-sm rounded-xl p-6 border border-green-400/30 hover:border-green-400/60 transition-all group
-            >
+            >"
               <div className="text-green-400 text-sm font-semibold mb-2 uppercase">Case Study</div>
               <h3 className="text-xl font-bold text-white mb-3 group-hover:text-green-300 transition-colors">
               <div className="text-green-400 text-sm font-semibold mb-2 uppercase">Case Study</div>
@@ -749,15 +729,15 @@ const AutonomousBusinessOperationsRevolution2025: () => {
   Complete transformation journey with implementation details, results, and lessons learned
               </p>
               <div className="flex items-center text-green-300 font-semibold text-sm">,"
-  Read Case Study <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform/>
+  Read Case Study <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform/>"
               <div className="flex items-center text-green-300 font-semibold text-sm">"
   Read Case Study <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
               </div>
             </Link>
 
-            <Link to="/services/autonomous-business-operations
+            <Link to="/services/autonomous-business-operations">
   className="bg-gradient-to-br from-blue-900/60 to-purple-900/60 backdrop-blur-sm rounded-xl p-6 border border-blue-400/30 hover:border-blue-400/60 transition-all group
-            >
+            >"
               <div className="text-blue-400 text-sm font-semibold mb-2 uppercase">Service</div>
               <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-300 transition-colors">
               <div className="text-blue-400 text-sm font-semibold mb-2 uppercase">Service</div>
@@ -768,11 +748,11 @@ const AutonomousBusinessOperationsRevolution2025: () => {
   Deploy 40+ autonomous workflows in 90 days with guaranteed ROI
               </p>
               <div className="flex items-center text-blue-300 font-semibold text-sm">,"
-  Explore Service <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform/>
+  Explore Service <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform/>"
               <div className="flex items-center text-blue-300 font-semibold text-sm">
   Explore Service <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
   className="bg-gradient-to-br from-blue-900/60 to-purple-900/60 backdrop-blur-sm rounded-xl p-6 border border-blue-400/30 hover:border-blue-400/60 transition-all group
-            >
+            >"
               <div className="text-blue-400 text-sm font-semibold mb-2 uppercase">Service</div>
               <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-300 transition-colors">
               <div className="text-blue-400 text-sm font-semibold mb-2 uppercase">Service</div>
@@ -783,7 +763,7 @@ const AutonomousBusinessOperationsRevolution2025: () => {
   Deploy 40+ autonomous workflows in 90 days with guaranteed ROI
               </p>
               <div className="flex items-center text-blue-300 font-semibold text-sm">,"
-  Explore Service <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform/>
+  Explore Service <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform/>"
               <div className="flex items-center text-blue-300 font-semibold text-sm">"
   Explore Service <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
               </div>
@@ -795,5 +775,4 @@ const AutonomousBusinessOperationsRevolution2025: () => {
   );
 };
 
-export default AutonomousBusinessOperationsRevolution2025;
-;
+export default AutonomousBusinessOperationsRevolution2025;;

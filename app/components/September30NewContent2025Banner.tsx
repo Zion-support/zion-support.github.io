@@ -155,8 +155,7 @@ const September30NewContent2025Banner: React.FC = () => {
                 {/* CTA Button */}
                 <Link
                   href={`/blog/${article.slug}`}
-                  className="group/btn flex items-center justify-center gap-2 w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 transform hover:-translate-y-1"
-                >
+                  className="group/btn flex items-center justify-center gap-2 w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 transform hover:-translate-y-1">
                   <span>Read Full Article</span>
                   <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-2 transition-transform duration-300" />"
                 </Link>
@@ -170,8 +169,7 @@ const September30NewContent2025Banner: React.FC = () => {
           {newArticles.slice(3).map((article, index) => (
             <div 
               key={article.id}
-              className="group relative bg-white/5 backdrop-blur-xl rounded-3xl border border-white/10 hover:border-purple-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/30"
-            >
+              className="group relative bg-white/5 backdrop-blur-xl rounded-3xl border border-white/10 hover:border-purple-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/30">
               {/* Card glow effect */}
               <div className="absolute inset-0 bg-gradient-to-br from-purple-500/0 via-fuchsia-500/0 to-pink-500/0 group-hover:from-purple-500/10 group-hover:via-fuchsia-500/10 group-hover:to-pink-500/10 transition-all duration-500"></div>"
               <div className="relative p-8">"
@@ -217,8 +215,7 @@ const September30NewContent2025Banner: React.FC = () => {
                 {/* CTA Button */}
                 <Link
                   href={`/blog/${article.slug}`}
-                  className="group/btn flex items-center justify-center gap-2 w-full bg-gradient-to-r from-purple-500 to-fuchsia-600 hover:from-purple-400 hover:to-fuchsia-500 text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
-                >
+                  className="group/btn flex items-center justify-center gap-2 w-full bg-gradient-to-r from-purple-500 to-fuchsia-600 hover:from-purple-400 hover:to-fuchsia-500 text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1">
                   <span>Read Full Article</span>
                   <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-2 transition-transform duration-300" />"
                 </Link>
@@ -241,15 +238,13 @@ const September30NewContent2025Banner: React.FC = () => {
               <div className="flex flex-col sm:flex-row gap-6 justify-center">"
                 <Link
                   href="/blog"
-                  className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-5 px-10 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 flex items-center justify-center gap-3 text-lg"
-                >
+                  className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-5 px-10 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 flex items-center justify-center gap-3 text-lg">
                   <Sparkles className="w-6 h-6" />"
                   <span>Explore All Articles</span>
                 </Link>
                 <Link
                   href="/contact"
-                  className="border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-bold py-5 px-10 rounded-xl transition-all duration-300 flex items-center justify-center gap-3 text-lg"
-                >
+                  className="border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-bold py-5 px-10 rounded-xl transition-all duration-300 flex items-center justify-center gap-3 text-lg">
                   <span>Schedule Expert Consultation</span>
                   <ArrowRight className="w-6 h-6" />"
                 </Link>

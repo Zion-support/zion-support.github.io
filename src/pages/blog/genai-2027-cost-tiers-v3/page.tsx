@@ -42,6 +42,4 @@ Add lightweight policy tests in CI and KPI‑linked canaries to keep regressions
 </div>
 </div>
 );
-}
-
-;
+};

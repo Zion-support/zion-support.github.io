@@ -239,8 +239,7 @@ export default function AI2027QuantumConsciousnessFusion() {
           <br />
           <Link 
             href="/[^"]*"
-            className="inline-block bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-indigo-600 transition-all"
-          >
+            className="inline-block bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-indigo-600 transition-all">
             Secure Your Quantum Access
           </Link>
         </div>
@@ -261,14 +260,12 @@ export default function AI2027QuantumConsciousnessFusion() {
           <div className="flex gap-4">"
             <Link 
               href="/[^"]*"
-              className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
-            >
+              className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors">
               Get Quantum Access
             </Link>
             <Link 
               href="/[^"]*"
-              className="bg-gray-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-700 transition-colors"
-            >
+              className="bg-gray-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-700 transition-colors">
               View Success Stories
             </Link>
           </div>

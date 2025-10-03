@@ -30,9 +30,9 @@ const RealTimeAIInferenceOptimization2025: () => {
         <div className="relative overflow-hidden bg-gradient-to-r from-indigo-600 to-cyan-600 py-16">
           <div className="absolute inset-0 bg-black/20"></div>
           <div className="container mx-auto px-6 relative z-10">
-            <Link to="/blog
+            <Link to="/blog">
   className="inline-flex items-center text-white/90 hover:text-white mb-8 transition-colors
-            >
+            >"
               <ArrowLeft className="w-4 h-4 mr-2 ">
               <ArrowLeft className="w-4 h-4 mr-2" />
               <ArrowLeft className="w-4 h-4 mr-2" />>
@@ -63,9 +63,9 @@ const RealTimeAIInferenceOptimization2025: () => {
         <div className="relative overflow-hidden bg-gradient-to-r from-indigo-600 to-cyan-600 py-16">
           <div className="absolute inset-0 bg-black/20"></div>
           <div className="container mx-auto px-6 relative z-10">
-            <Link to="/blog
+            <Link to="/blog">
   className="inline-flex items-center text-white/90 hover:text-white mb-8 transition-colors
-            >
+            >"
               <ArrowLeft className="w-4 h-4 mr-2 ">
               <ArrowLeft className="w-4 h-4 mr-2" />
   Back to Blog
@@ -91,11 +91,11 @@ const RealTimeAIInferenceOptimization2025: () => {
               <div className="flex flex-wrap items-center gap-6 text-white/90">
                 <div className="flex items-center">
                   <Calendar className="w-5 h-5 mr-2 ">
-                  <span>October 1, 2025</span>/span>
+                  <span>October 1, 2025</span>
                 </div>
                 <div className="flex items-center">
                   <Clock className="w-5 h-5 mr-2 ">
-                  <span>10 min read</span>/span>
+                  <span>10 min read</span>
                 </div>
                 <div className="flex items-center">
                   <TrendingUp className="w-5 h-5 mr-2 ">
@@ -103,8 +103,8 @@ const RealTimeAIInferenceOptimization2025: () => {
                 </div>
                 <div className="flex items-center">
                   <Clock className="w-5 h-5 mr-2/>
-                  <span>10 min read</span>/span>
-                </div>
+                  <span>10 min read</span>
+                </div>"
                 <div className="flex items-center">
                   <TrendingUp className="w-5 h-5 mr-2/>">
               <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 leading-tight">
@@ -114,11 +114,11 @@ const RealTimeAIInferenceOptimization2025: () => {
               <div className="flex flex-wrap items-center gap-6 text-white/90">
                 <div className="flex items-center">
                   <Calendar className="w-5 h-5 mr-2" />
-                  <span>October 1, 2025</span>/span>
+                  <span>October 1, 2025</span>
                 </div>
                 <div className="flex items-center">
                   <Clock className="w-5 h-5 mr-2" />
-                  <span>10 min read</span>/span>
+                  <span>10 min read</span>
                 </div>
                 <div className="flex items-center">
                   <TrendingUp className="w-5 h-5 mr-2" />
@@ -129,11 +129,11 @@ const RealTimeAIInferenceOptimization2025: () => {
               <div className="flex flex-wrap items-center gap-6 text-white/90">
                 <div className="flex items-center">
                   <Calendar className="w-5 h-5 mr-2/>">
-                  <span>October 1, 2025</span>/span>
+                  <span>October 1, 2025</span>
                 </div>
                 <div className="flex items-center">
                   <Clock className="w-5 h-5 mr-2/>">
-                  <span>10 min read</span>/span>
+                  <span>10 min read</span>
                 </div>
                 <div className="flex items-center">
                   <TrendingUp className="w-5 h-5 mr-2/>">
@@ -144,15 +144,15 @@ const RealTimeAIInferenceOptimization2025: () => {
               <div className="flex flex-wrap items-center gap-6 text-white/90">
                 <div className="flex items-center">
                   <Calendar className="w-5 h-5 mr-2" />
-                  <span>October 1, 2025</span>/span>
+                  <span>October 1, 2025</span>
                 </div>
                 <div className="flex items-center">
                   <Clock className="w-5 h-5 mr-2" />
-                  <span>10 min read</span>/span>
+                  <span>10 min read</span>
                 </div>
                 <div className="flex items-center">
                   <TrendingUp className="w-5 h-5 mr-2" />
-                  <span>High Impact</span>/span>
+                  <span>High Impact</span>
                 </div>
               </div>
             </div>
@@ -373,7 +373,6 @@ const RealTimeAIInferenceOptimization2025: () => {
 
               <div className="space-y-8">
                 {/* Quantization */}
-                <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-lg border border-slate-700">
                   <h3 className="text-2xl font-semibold text-white mb-4 flex items-center">
                     <span className="text-3xl mr-3">📉</span>
   Model Quantization (INT8/INT4)
@@ -409,7 +408,6 @@ const RealTimeAIInferenceOptimization2025: () => {
                 </div>
 
                 {/* Hardware Acceleration */}
-                <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-lg border border-slate-700">
                   <h3 className="text-2xl font-semibold text-white mb-4 flex items-center">
                     <span className="text-3xl mr-3">🚀</span>
   Specialized Hardware Acceleration
@@ -426,7 +424,6 @@ const RealTimeAIInferenceOptimization2025: () => {
                     <div className="bg-slate-900/50 p-4 rounded border border-slate-600">
                       <p className="text-cyan-400 font-semibold mb-2">NVIDIA GPUs</p>
                       <ul className="text-sm text-gray-300 space-y-1">
-                <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-lg border border-slate-700">
                   <h3 className="text-2xl font-semibold text-white mb-4 flex items-center">
                     <span className="text-3xl mr-3">🚀</span>
   Specialized Hardware Acceleration
@@ -488,13 +485,10 @@ const RealTimeAIInferenceOptimization2025: () => {
                 </div>
 
                 {/* Caching Strategy */}
-                <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-lg border border-slate-700">
                   <h3 className="text-2xl font-semibold text-white mb-4 flex items-center">
                     <Database className="w-6 h-6 mr-3 text-emerald-400 ">
-                <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-lg border border-slate-700">
                   <h3 className="text-2xl font-semibold text-white mb-4 flex items-center">
                     <Database className="w-6 h-6 mr-3 text-emerald-400/>">
-                <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-lg border border-slate-700">
                   <h3 className="text-2xl font-semibold text-white mb-4 flex items-center">
                     <Database className="w-6 h-6 mr-3 text-emerald-400" />
   Intelligent Caching Layers
@@ -506,19 +500,17 @@ const RealTimeAIInferenceOptimization2025: () => {
                   <div className="bg-slate-900/50 p-5 rounded-lg border border-slate-600">
                     <p className="text-emerald-400 font-semibold mb-3">Multi-Tier Caching Strategy: </p>
                     <div className="space-y-3">
-                      <div >
+                      <div>
                         <p className="text-white font-medium">L1: In-Memory Cache (Redis)</p>
                         <p className="text-sm text-gray-400">
                   <div className="bg-slate-900/50 p-5 rounded-lg border border-slate-600">
                     <p className="text-emerald-400 font-semibold mb-3">Multi-Tier Caching Strategy: </p>
                     <div className="space-y-3">
-                      <div >
+                      <div>
                         <p className="text-white font-medium">L1: In-Memory Cache (Redis)</p>
                         <p className="text-sm text-gray-400">
-                <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-lg border border-slate-700">
                   <h3 className="text-2xl font-semibold text-white mb-4 flex items-center">
                     <Database className="w-6 h-6 mr-3 text-emerald-400/>">
-                <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-lg border border-slate-700">
                   <h3 className="text-2xl font-semibold text-white mb-4 flex items-center">
                     <Database className="w-6 h-6 mr-3 text-emerald-400" />
   Intelligent Caching Layers
@@ -530,19 +522,19 @@ const RealTimeAIInferenceOptimization2025: () => {
                   <div className="bg-slate-900/50 p-5 rounded-lg border border-slate-600">
                     <p className="text-emerald-400 font-semibold mb-3">Multi-Tier Caching Strategy: </p>
                     <div className="space-y-3">
-                      <div >
+                      <div>
                         <p className="text-white font-medium">L1: In-Memory Cache (Redis)</p>
                         <p className="text-sm text-gray-400">
                   <div className="bg-slate-900/50 p-5 rounded-lg border border-slate-600">
                     <p className="text-emerald-400 font-semibold mb-3">Multi-Tier Caching Strategy: </p>
                     <div className="space-y-3">
-                      <div >
+                      <div>
                         <p className="text-white font-medium">L1: In-Memory Cache (Redis)</p>
                         <p className="text-sm text-gray-400">"
   Hash-based exact match for repeated queries. 1-2ms lookup time. TTL: 5-15 minutes.,,
                         </p>
                       </div>
-                      <div >
+                      <div>
                         <p className="text-white font-medium">L2: Vector Similarity Cache (Pinecone/Weaviate)</p>
                         <p className="text-sm text-gray-400">
                         <p className="text-white font-medium">L2: Vector Similarity Cache (Pinecone/Weaviate)</p>
@@ -554,7 +546,7 @@ const RealTimeAIInferenceOptimization2025: () => {
   Semantic search with 0.95+ cosine similarity threshold. 10-30ms lookup. TTL: 1 hour.,,
                         </p>
                       </div>
-                      <div >
+                      <div>
                         <p className="text-white font-medium">L3: Model Inference (Fallback)</p>
                         <p className="text-sm text-gray-400">
                         <p className="text-white font-medium">L3: Model Inference (Fallback)</p>
@@ -581,19 +573,19 @@ const RealTimeAIInferenceOptimization2025: () => {
               <div className="bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 p-8 rounded-lg border border-emerald-500/30">
                 <h2 className="text-3xl font-bold text-white mb-6">Measured Performance Improvements</h2>
                 <div className="grid md:grid-cols-2 gap-6">
-                  <div >
+                  <div>
                     <p className="text-5xl font-bold text-emerald-400 mb-2">85%</p>
                     <p className="text-gray-300">Reduction in P95 latency (780ms → 120ms)</p>
                   </div>
-                  <div >
+                  <div>
                     <p className="text-5xl font-bold text-cyan-400 mb-2">5.2x</p>
                     <p className="text-gray-300">Throughput increase with dynamic batching</p>
                   </div>
-                  <div >
+                  <div>
                     <p className="text-5xl font-bold text-blue-400 mb-2">$87K</p>
                     <p className="text-gray-300">Monthly GPU cost savings (per 1M requests/day)</p>
                   </div>
-                  <div >
+                  <div>
                     <p className="text-5xl font-bold text-purple-400 mb-2">99.8%</p>
                     <p className="text-gray-300">Model accuracy retained after optimization</p>
             <section className="mb-12">
@@ -604,19 +596,19 @@ const RealTimeAIInferenceOptimization2025: () => {
               <div className="bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 p-8 rounded-lg border border-emerald-500/30">
                 <h2 className="text-3xl font-bold text-white mb-6">Measured Performance Improvements</h2>
                 <div className="grid md:grid-cols-2 gap-6">
-                  <div >
+                  <div>
                     <p className="text-5xl font-bold text-emerald-400 mb-2">85%</p>
                     <p className="text-gray-300">Reduction in P95 latency (780ms → 120ms)</p>
                   </div>
-                  <div >
+                  <div>
                     <p className="text-5xl font-bold text-cyan-400 mb-2">5.2x</p>
                     <p className="text-gray-300">Throughput increase with dynamic batching</p>
                   </div>
-                  <div >
+                  <div>
                     <p className="text-5xl font-bold text-blue-400 mb-2">$87K</p>
                     <p className="text-gray-300">Monthly GPU cost savings (per 1M requests/day)</p>
                   </div>
-                  <div >
+                  <div>
                     <p className="text-5xl font-bold text-purple-400 mb-2">99.8%</p>
                     <p className="text-gray-300">Model accuracy retained after optimization</p>
                   </div>
@@ -636,7 +628,7 @@ const RealTimeAIInferenceOptimization2025: () => {
                 to="/contact"
   className="inline-flex items-center px-8 py-4 bg-white text-indigo-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors
                 >
-                  Get Performance Audit
+                  Get Performance Audit"
                   <ArrowLeft className="w-5 h-5 ml-2 rotate-180 ">
                   <ArrowLeft className="w-5 h-5 ml-2 rotate-180/>">
                   <ArrowLeft className="w-5 h-5 ml-2 rotate-180" />
@@ -651,7 +643,7 @@ const RealTimeAIInferenceOptimization2025: () => {
                 to="/contact"
   className="inline-flex items-center px-8 py-4 bg-white text-indigo-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors
                 >
-                  Get Performance Audit
+                  Get Performance Audit"
                   <ArrowLeft className="w-5 h-5 ml-2 rotate-180 ">
                   <ArrowLeft className="w-5 h-5 ml-2 rotate-180" />
                 </Link>
@@ -664,5 +656,4 @@ const RealTimeAIInferenceOptimization2025: () => {
   );
 };
 
-export default RealTimeAIInferenceOptimization2025;
-;
+export default RealTimeAIInferenceOptimization2025;;

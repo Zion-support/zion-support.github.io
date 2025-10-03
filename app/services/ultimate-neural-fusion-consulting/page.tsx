@@ -113,7 +113,6 @@ export default function UltimateNeuralFusionConsulting() {
           <section className="mb-16">"
             <h2 className="text-4xl font-bold text-white mb-8">Implementation Process</h2>"
             <div className="grid md:grid-cols-3 gap-8">"
-              <div className="bg-gradient-to-br from-purple-900/30 to-indigo-900/30 rounded-2xl p-6 border border-purple-500/20">"
                 <div className="text-4xl mb-4">📊</div>"
                 <h3 className="text-2xl font-bold text-white mb-4">Assessment & Analysis</h3>"
                 <p className="text-gray-300 mb-4">"
@@ -127,7 +126,6 @@ export default function UltimateNeuralFusionConsulting() {
                 </ul>
               </div>
 
-              <div className="bg-gradient-to-br from-cyan-900/30 to-blue-900/30 rounded-2xl p-6 border border-cyan-500/20">"
                 <div className="text-4xl mb-4">🔧</div>"
                 <h3 className="text-2xl font-bold text-white mb-4">Implementation & Integration</h3>"
                 <p className="text-gray-300 mb-4">"
@@ -141,7 +139,6 @@ export default function UltimateNeuralFusionConsulting() {
                 </ul>
               </div>
 
-              <div className="bg-gradient-to-br from-green-900/30 to-emerald-900/30 rounded-2xl p-6 border border-green-500/20">"
                 <div className="text-4xl mb-4">🚀</div>"
                 <h3 className="text-2xl font-bold text-white mb-4">Optimization & Scaling</h3>"
                 <p className="text-gray-300 mb-4">"
@@ -201,7 +198,6 @@ export default function UltimateNeuralFusionConsulting() {
           <section className="mb-16">"
             <h2 className="text-4xl font-bold text-white mb-8">Investment Options</h2>"
             <div className="grid md:grid-cols-3 gap-8">"
-              <div className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl p-8 border border-gray-700">"
                 <h3 className="text-2xl font-bold text-white mb-4">Enterprise Assessment</h3>"
                 <div className="text-4xl font-bold text-gray-400 mb-6">$50,000</div>"
                 <ul className="space-y-3 mb-8">"
@@ -307,14 +303,12 @@ export default function UltimateNeuralFusionConsulting() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">"
                 <Link 
                   href="/[^"]*"
-                  className="bg-gradient-to-r from-purple-500 to-cyan-500 text-white py-4 px-8 rounded-xl font-bold hover:from-purple-600 hover:to-cyan-600 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-purple-500/25"
-                >
+                  className="bg-gradient-to-r from-purple-500 to-cyan-500 text-white py-4 px-8 rounded-xl font-bold hover:from-purple-600 hover:to-cyan-600 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-purple-500/25">
                   Start Your Transformation
                 </Link>
                 <Link 
                   href="/[^"]*"
-                  className="bg-gray-700 text-white py-4 px-8 rounded-xl font-bold hover:bg-gray-600 transition-all duration-300 border border-gray-600"
-                >
+                  className="bg-gray-700 text-white py-4 px-8 rounded-xl font-bold hover:bg-gray-600 transition-all duration-300 border border-gray-600">
                   View Success Stories
                 </Link>
               </div>

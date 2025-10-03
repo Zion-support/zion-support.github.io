@@ -47,7 +47,7 @@ const CognitiveComputingTransformation: React.FC = () => {
                 </span>"
                 <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-bold bg-green-500 text-white shadow-lg">
                   <Award className="w-4 h-4 mr-2/>
-                  $1.2B+ VALUE
+                  $1.2B+ VALUE"
                 </span>">
                 <span className="text-purple-300 text-sm">Published: October 1, 2025</span>
               </div>
@@ -172,11 +172,11 @@ const CognitiveComputingTransformation: React.FC = () => {
               </p>
               
               <div className="flex items-center gap-4 text-sm text-purple-200">
-                <span>📖 15 minute read</span>/span>
-                <span>•</span>/span>
-                <span>🎯 Enterprise Strategy</span>/span>
-                <span>•</span>/span>
-                <span>⚡ Implementation Guide</span>/span>
+                <span>📖 15 minute read</span>
+                <span>•</span>
+                <span>🎯 Enterprise Strategy</span>
+                <span>•</span>
+                <span>⚡ Implementation Guide</span>
               </div>
             </div>
           </div>
@@ -189,19 +189,19 @@ const CognitiveComputingTransformation: React.FC = () => {
         <div className="bg-white/5 backdrop-blur-sm border-y border-white/10 py-8">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-              <div >
+              <div>
                 <div className="text-3xl font-bold text-green-400 mb-1">98.5%</div>
                 <div className="text-sm text-purple-200">Decision Accuracy</div>
               </div>
-              <div >
+              <div>
                 <div className="text-3xl font-bold text-yellow-400 mb-1">$1.2B+</div>
                 <div className="text-sm text-purple-200">Annual Value</div>
               </div>
-              <div >
+              <div>
                 <div className="text-3xl font-bold text-pink-400 mb-1">92%</div>
                 <div className="text-sm text-purple-200">Faster Problem-Solving</div>
               </div>
-              <div >
+              <div>
                 <div className="text-3xl font-bold text-blue-400 mb-1">3,675%</div>
                 <div className="text-sm text-purple-200">ROI Over 3 Years</div>
         <div className="bg-white/5 backdrop-blur-sm border-y border-white/10 py-8">
@@ -210,19 +210,19 @@ const CognitiveComputingTransformation: React.FC = () => {
         <div className="bg-white/5 backdrop-blur-sm border-y border-white/10 py-8">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-              <div >
+              <div>
                 <div className="text-3xl font-bold text-green-400 mb-1">98.5%</div>
                 <div className="text-sm text-purple-200">Decision Accuracy</div>
               </div>
-              <div >
+              <div>
                 <div className="text-3xl font-bold text-yellow-400 mb-1">$1.2B+</div>
                 <div className="text-sm text-purple-200">Annual Value</div>
               </div>
-              <div >
+              <div>
                 <div className="text-3xl font-bold text-pink-400 mb-1">92%</div>
                 <div className="text-sm text-purple-200">Faster Problem-Solving</div>
               </div>
-              <div >
+              <div>
                 <div className="text-3xl font-bold text-blue-400 mb-1">3,675%</div>
                 <div className="text-sm text-purple-200">ROI Over 3 Years</div>
               </div>
@@ -452,7 +452,7 @@ const CognitiveComputingTransformation: React.FC = () => {
                         {capability.features.map((feature, i) => (
                           <li key={i} className="flex items-start gap-2 text-purple-100">
                             <span className="text-green-400 mt-1">✓</span>
-                            <span>{feature}</span>/span>
+                            <span>{feature}</span>
                           </li>
                         ))}
                       </ul>
@@ -554,7 +554,7 @@ const CognitiveComputingTransformation: React.FC = () => {
                   ].map((app, idx) => (
                     <div key={idx} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:border-purple-500/50 transition-all">
                       <div className="flex items-start justify-between mb-4">
-                        <div >
+                        <div>
                           <h3 className="text-xl font-bold text-white mb-1">{app.title}</h3>
                           <p className="text-sm text-purple-300">{app.industry} Use Case</p>"
                         </div>
@@ -570,7 +570,7 @@ const CognitiveComputingTransformation: React.FC = () => {
                             <div className="text-sm font-bold text-green-300">{value}</div>
                     <div key={idx} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:border-purple-500/50 transition-all">
                       <div className="flex items-start justify-between mb-4">
-                        <div >
+                        <div>
                           <h3 className="text-xl font-bold text-white mb-1">{app.title}</h3>
                           <p className="text-sm text-purple-300">{app.industry} Use Case</p>"
                         </div>
@@ -651,7 +651,7 @@ const CognitiveComputingTransformation: React.FC = () => {
                   ].map((phase, idx) => (
                     <div key={idx} className="bg-gradient-to-r from-purple-900/30 to-blue-900/30 border-l-4 border-purple-500 rounded-lg p-6">
                       <div className="flex items-start justify-between mb-3">
-                        <div >
+                        <div>
                           <h3 className="text-lg font-bold text-white mb-1">{phase.phase}</h3>
                           <p className="text-sm text-purple-300">{phase.duration}</p>"
                         </div>
@@ -660,7 +660,7 @@ const CognitiveComputingTransformation: React.FC = () => {
                       <p className="text-purple-100 text-sm">{phase.objectives}</p>"
                     <div key={idx} className="bg-gradient-to-r from-purple-900/30 to-blue-900/30 border-l-4 border-purple-500 rounded-lg p-6">
                       <div className="flex items-start justify-between mb-3">
-                        <div >
+                        <div>
                           <h3 className="text-lg font-bold text-white mb-1">{phase.phase}</h3>
                           <p className="text-sm text-purple-300">{phase.duration}</p>"
                         </div>
@@ -678,10 +678,10 @@ const CognitiveComputingTransformation: React.FC = () => {
                   <div className="bg-gradient-to-br from-red-900/20 to-orange-900/20 border border-red-500/30 rounded-xl p-6">
                     <h3 className="text-xl font-bold text-white mb-4">Total 3-Year Investment</h3>
                     <ul className="space-y-2 text-purple-100">
-                      <li className="flex justify-between"><span>Infrastructure: </span>/span><span className="font-bold">$12-18M</span></li>
-                      <li className="flex justify-between"><span>Implementation: </span>/span><span className="font-bold">$20-30M</span></li>
-                      <li className="flex justify-between"><span>Change Management: </span>/span><span className="font-bold">$5-8M</span></li>
-                      <li className="flex justify-between"><span>Operations: </span>/span><span className="font-bold">$15-20M</span></li>
+                      <li className="flex justify-between"><span>Infrastructure: </span><span className="font-bold">$12-18M</span></li>
+                      <li className="flex justify-between"><span>Implementation: </span><span className="font-bold">$20-30M</span></li>
+                      <li className="flex justify-between"><span>Change Management: </span><span className="font-bold">$5-8M</span></li>
+                      <li className="flex justify-between"><span>Operations: </span><span className="font-bold">$15-20M</span></li>
                       <li className="flex justify-between pt-2 border-t border-red-500/30"><span className="font-bold">Total: </span><span className="font-bold text-xl">$52-76M</span></li>
                     </ul>
                   </div>
@@ -689,73 +689,67 @@ const CognitiveComputingTransformation: React.FC = () => {
                   <div className="bg-gradient-to-br from-green-900/20 to-emerald-900/20 border border-green-500/30 rounded-xl p-6">
                     <h3 className="text-xl font-bold text-white mb-4">3-Year Value Creation</h3>
                     <ul className="space-y-2 text-purple-100">
-                      <li className="flex justify-between"><span>Efficiency gains: </span>/span><span className="font-bold text-green-300">$840M</span></li>
-                      <li className="flex justify-between"><span>Revenue growth: </span>/span><span className="font-bold text-green-300">$1.2B</span></li>
-                      <li className="flex justify-between"><span>Risk reduction: </span>/span><span className="font-bold text-green-300">$450M</span></li>
-                      <li className="flex justify-between"><span>CX improvement: </span>/span><span className="font-bold text-green-300">$380M</span></li>
+                      <li className="flex justify-between"><span>Efficiency gains: </span><span className="font-bold text-green-300">$840M</span></li>
+                      <li className="flex justify-between"><span>Revenue growth: </span><span className="font-bold text-green-300">$1.2B</span></li>
+                      <li className="flex justify-between"><span>Risk reduction: </span><span className="font-bold text-green-300">$450M</span></li>
+                      <li className="flex justify-between"><span>CX improvement: </span><span className="font-bold text-green-300">$380M</span></li>
                       <li className="flex justify-between pt-2 border-t border-green-500/30"><span className="font-bold">Total Value: </span><span className="font-bold text-xl text-green-300">$2.87B</span></li>
                 <h2 className="text-3xl font-bold text-white mb-6">ROI & Business Case</h2>
                 <div className="grid md:grid-cols-2 gap-6 mb-6">
-                  <div className="bg-gradient-to-br from-red-900/20 to-orange-900/20 border border-red-500/30 rounded-xl p-6">
                     <h3 className="text-xl font-bold text-white mb-4">Total 3-Year Investment</h3>
                     <ul className="space-y-2 text-purple-100">
-                      <li className="flex justify-between"><span>Infrastructure: </span>/span><span className="font-bold">$12-18M</span></li>
-                      <li className="flex justify-between"><span>Implementation: </span>/span><span className="font-bold">$20-30M</span></li>
-                      <li className="flex justify-between"><span>Change Management: </span>/span><span className="font-bold">$5-8M</span></li>
-                      <li className="flex justify-between"><span>Operations: </span>/span><span className="font-bold">$15-20M</span></li>
+                      <li className="flex justify-between"><span>Infrastructure: </span><span className="font-bold">$12-18M</span></li>
+                      <li className="flex justify-between"><span>Implementation: </span><span className="font-bold">$20-30M</span></li>
+                      <li className="flex justify-between"><span>Change Management: </span><span className="font-bold">$5-8M</span></li>
+                      <li className="flex justify-between"><span>Operations: </span><span className="font-bold">$15-20M</span></li>
                       <li className="flex justify-between pt-2 border-t border-red-500/30"><span className="font-bold">Total: </span><span className="font-bold text-xl">$52-76M</span></li>
                     </ul>
                   </div>
                   
-                  <div className="bg-gradient-to-br from-green-900/20 to-emerald-900/20 border border-green-500/30 rounded-xl p-6">
                     <h3 className="text-xl font-bold text-white mb-4">3-Year Value Creation</h3>
                     <ul className="space-y-2 text-purple-100">
-                      <li className="flex justify-between"><span>Efficiency gains: </span>/span><span className="font-bold text-green-300">$840M</span></li>
-                      <li className="flex justify-between"><span>Revenue growth: </span>/span><span className="font-bold text-green-300">$1.2B</span></li>
-                      <li className="flex justify-between"><span>Risk reduction: </span>/span><span className="font-bold text-green-300">$450M</span></li>
-                      <li className="flex justify-between"><span>CX improvement: </span>/span><span className="font-bold text-green-300">$380M</span></li>
+                      <li className="flex justify-between"><span>Efficiency gains: </span><span className="font-bold text-green-300">$840M</span></li>
+                      <li className="flex justify-between"><span>Revenue growth: </span><span className="font-bold text-green-300">$1.2B</span></li>
+                      <li className="flex justify-between"><span>Risk reduction: </span><span className="font-bold text-green-300">$450M</span></li>
+                      <li className="flex justify-between"><span>CX improvement: </span><span className="font-bold text-green-300">$380M</span></li>
                       <li className="flex justify-between pt-2 border-t border-green-500/30"><span className="font-bold">Total Value: </span><span className="font-bold text-xl text-green-300">$2.87B</span></li>
                 <h2 className="text-3xl font-bold text-white mb-6">ROI & Business Case</h2>"
                 <div className="grid md:grid-cols-2 gap-6 mb-6">
-                  <div className="bg-gradient-to-br from-red-900/20 to-orange-900/20 border border-red-500/30 rounded-xl p-6">
                     <h3 className="text-xl font-bold text-white mb-4">Total 3-Year Investment</h3>
                     <ul className="space-y-2 text-purple-100">
-                      <li className="flex justify-between"><span>Infrastructure: </span>/span><span className="font-bold">$12-18M</span></li>
-                      <li className="flex justify-between"><span>Implementation: </span>/span><span className="font-bold">$20-30M</span></li>
-                      <li className="flex justify-between"><span>Change Management: </span>/span><span className="font-bold">$5-8M</span></li>
-                      <li className="flex justify-between"><span>Operations: </span>/span><span className="font-bold">$15-20M</span></li>
+                      <li className="flex justify-between"><span>Infrastructure: </span><span className="font-bold">$12-18M</span></li>
+                      <li className="flex justify-between"><span>Implementation: </span><span className="font-bold">$20-30M</span></li>
+                      <li className="flex justify-between"><span>Change Management: </span><span className="font-bold">$5-8M</span></li>
+                      <li className="flex justify-between"><span>Operations: </span><span className="font-bold">$15-20M</span></li>
                       <li className="flex justify-between pt-2 border-t border-red-500/30"><span className="font-bold">Total: </span><span className="font-bold text-xl">$52-76M</span></li>
                     </ul>
                   </div>
                   
-                  <div className="bg-gradient-to-br from-green-900/20 to-emerald-900/20 border border-green-500/30 rounded-xl p-6">
                     <h3 className="text-xl font-bold text-white mb-4">3-Year Value Creation</h3>
                     <ul className="space-y-2 text-purple-100">
-                      <li className="flex justify-between"><span>Efficiency gains: </span>/span><span className="font-bold text-green-300">$840M</span></li>
-                      <li className="flex justify-between"><span>Revenue growth: </span>/span><span className="font-bold text-green-300">$1.2B</span></li>
-                      <li className="flex justify-between"><span>Risk reduction: </span>/span><span className="font-bold text-green-300">$450M</span></li>
-                      <li className="flex justify-between"><span>CX improvement: </span>/span><span className="font-bold text-green-300">$380M</span></li>
+                      <li className="flex justify-between"><span>Efficiency gains: </span><span className="font-bold text-green-300">$840M</span></li>
+                      <li className="flex justify-between"><span>Revenue growth: </span><span className="font-bold text-green-300">$1.2B</span></li>
+                      <li className="flex justify-between"><span>Risk reduction: </span><span className="font-bold text-green-300">$450M</span></li>
+                      <li className="flex justify-between"><span>CX improvement: </span><span className="font-bold text-green-300">$380M</span></li>
                       <li className="flex justify-between pt-2 border-t border-green-500/30"><span className="font-bold">Total Value: </span><span className="font-bold text-xl text-green-300">$2.87B</span></li>
                 <h2 className="text-3xl font-bold text-white mb-6">ROI & Business Case</h2>
                 <div className="grid md:grid-cols-2 gap-6 mb-6">
-                  <div className="bg-gradient-to-br from-red-900/20 to-orange-900/20 border border-red-500/30 rounded-xl p-6">
                     <h3 className="text-xl font-bold text-white mb-4">Total 3-Year Investment</h3>
                     <ul className="space-y-2 text-purple-100">
-                      <li className="flex justify-between"><span>Infrastructure: </span>/span><span className="font-bold">$12-18M</span></li>
-                      <li className="flex justify-between"><span>Implementation: </span>/span><span className="font-bold">$20-30M</span></li>
-                      <li className="flex justify-between"><span>Change Management: </span>/span><span className="font-bold">$5-8M</span></li>
-                      <li className="flex justify-between"><span>Operations: </span>/span><span className="font-bold">$15-20M</span></li>
+                      <li className="flex justify-between"><span>Infrastructure: </span><span className="font-bold">$12-18M</span></li>
+                      <li className="flex justify-between"><span>Implementation: </span><span className="font-bold">$20-30M</span></li>
+                      <li className="flex justify-between"><span>Change Management: </span><span className="font-bold">$5-8M</span></li>
+                      <li className="flex justify-between"><span>Operations: </span><span className="font-bold">$15-20M</span></li>
                       <li className="flex justify-between pt-2 border-t border-red-500/30"><span className="font-bold">Total: </span><span className="font-bold text-xl">$52-76M</span></li>
                     </ul>
                   </div>
                   
-                  <div className="bg-gradient-to-br from-green-900/20 to-emerald-900/20 border border-green-500/30 rounded-xl p-6">
                     <h3 className="text-xl font-bold text-white mb-4">3-Year Value Creation</h3>
                     <ul className="space-y-2 text-purple-100">
-                      <li className="flex justify-between"><span>Efficiency gains: </span>/span><span className="font-bold text-green-300">$840M</span></li>
-                      <li className="flex justify-between"><span>Revenue growth: </span>/span><span className="font-bold text-green-300">$1.2B</span></li>
-                      <li className="flex justify-between"><span>Risk reduction: </span>/span><span className="font-bold text-green-300">$450M</span></li>
-                      <li className="flex justify-between"><span>CX improvement: </span>/span><span className="font-bold text-green-300">$380M</span></li>
+                      <li className="flex justify-between"><span>Efficiency gains: </span><span className="font-bold text-green-300">$840M</span></li>
+                      <li className="flex justify-between"><span>Revenue growth: </span><span className="font-bold text-green-300">$1.2B</span></li>
+                      <li className="flex justify-between"><span>Risk reduction: </span><span className="font-bold text-green-300">$450M</span></li>
+                      <li className="flex justify-between"><span>CX improvement: </span><span className="font-bold text-green-300">$380M</span></li>
                       <li className="flex justify-between pt-2 border-t border-green-500/30"><span className="font-bold">Total Value: </span><span className="font-bold text-xl text-green-300">$2.87B</span></li>
                     </ul>
                   </div>
@@ -763,26 +757,26 @@ const CognitiveComputingTransformation: React.FC = () => {
                 
                 <div className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 border border-purple-500/30 rounded-xl p-8 text-center">
                   <div className="grid grid-cols-2 gap-8">
-                    <div >
+                    <div>
                       <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400 mb-2">
   3,675% ROI
                       </div>
                       <div className="text-purple-200">Over 3 Years</div>
                     </div>
-                    <div >
+                    <div>
                       <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-400 mb-2">
   7-9 Months
                       </div>
                       <div className="text-purple-200">Payback Period</div>
                 <div className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 border border-purple-500/30 rounded-xl p-8 text-center">
                   <div className="grid grid-cols-2 gap-8">
-                    <div >
+                    <div>
                       <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400 mb-2">"
   3,675% ROI
                       </div>
                       <div className="text-purple-200">Over 3 Years</div>
                     </div>
-                    <div >
+                    <div>
                       <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-400 mb-2">"
   7-9 Months
                       </div>
@@ -802,12 +796,12 @@ const CognitiveComputingTransformation: React.FC = () => {
               to="/contact"
   className="inline-flex items-center px-8 py-4 rounded-xl font-bold text-white bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 shadow-xl hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105 group
               >
-                Schedule Assessment
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform 
+                Schedule Assessment"
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform "
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
-              <Link to="/services/cognitive-computing-transformation
-  className="inline-flex items-center px-8 py-4 rounded-xl font-bold text-white bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 transition-all duration-300 hover:scale-105>
+              <Link to="/services/cognitive-computing-transformation">
+  className="inline-flex items-center px-8 py-4 rounded-xl font-bold text-white bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 transition-all duration-300 hover:scale-105>"
           <div className="mt-16 bg-gradient-to-r from-purple-900/50 to-pink-900/50 border border-purple-500/30 rounded-2xl p-8 text-center">
             <h2 className="text-3xl font-bold text-white mb-4">Transform Your Enterprise with Cognitive AI</h2>"
             <p className="text-purple-100 mb-6 max-w-2xl mx-auto">,"
@@ -822,11 +816,11 @@ const CognitiveComputingTransformation: React.FC = () => {
               to="/contact"
   className="inline-flex items-center px-8 py-4 rounded-xl font-bold text-white bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 shadow-xl hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105 group
               >
-                Schedule Assessment
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform 
+                Schedule Assessment"
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform "
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
-              <Link to="/services/cognitive-computing-transformation
+              <Link to="/services/cognitive-computing-transformation">
   className="inline-flex items-center px-8 py-4 rounded-xl font-bold text-white bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 transition-all duration-300 hover:scale-105
               >
                 Explore Services
@@ -834,16 +828,16 @@ const CognitiveComputingTransformation: React.FC = () => {
             </div>
           </div>
           
-          {/* Related Content */}
+          {/* Related Content */}"
           <div className="mt-16">
             <h2 className="text-2xl font-bold text-white mb-6">Related Content</h2>"
             <div className="grid md:grid-cols-2 gap-6">
           <div className="mt-16">
             <h2 className="text-2xl font-bold text-white mb-6">Related Content</h2>
             <div className="grid md:grid-cols-2 gap-6">
-              <Link to="/blog/ai-2025-multiagent-enterprise-orchestration-revolution
+              <Link to="/blog/ai-2025-multiagent-enterprise-orchestration-revolution">
   className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:border-purple-500/50 transition-all group
-              >
+              >"
                 <div className="flex items-center gap-3 mb-3">
                   <Brain className="w-6 h-6 text-blue-400 ">
                   <span className="text-sm font-semibold text-purple-300">BLOG POST</span>"
@@ -866,9 +860,9 @@ const CognitiveComputingTransformation: React.FC = () => {
           <div className="mt-16">
             <h2 className="text-2xl font-bold text-white mb-6">Related Content</h2>
             <div className="grid md:grid-cols-2 gap-6">
-              <Link to="/blog/ai-2025-multiagent-enterprise-orchestration-revolution
+              <Link to="/blog/ai-2025-multiagent-enterprise-orchestration-revolution">
   className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:border-purple-500/50 transition-all group
-              >
+              >"
                 <div className="flex items-center gap-3 mb-3">
                   <Brain className="w-6 h-6 text-blue-400/>">
                   <span className="text-sm font-semibold text-purple-300">BLOG POST</span>"
@@ -886,9 +880,9 @@ const CognitiveComputingTransformation: React.FC = () => {
                 </p>
               </Link>
               
-              <Link to="/case-studies/global-telecom-cognitive-transformation-4-7-billion
+              <Link to="/case-studies/global-telecom-cognitive-transformation-4-7-billion">
   className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:border-purple-500/50 transition-all group
-              >
+              >"
                 <div className="flex items-center gap-3 mb-3">
                   <Award className="w-6 h-6 text-green-400 ">
                   <span className="text-sm font-semibold text-purple-300">CASE STUDY</span>"
@@ -906,7 +900,7 @@ const CognitiveComputingTransformation: React.FC = () => {
                 </h3>
                 <p className="text-purple-100 text-sm">
   className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:border-purple-500/50 transition-all group
-              >
+              >"
                 <div className="flex items-center gap-3 mb-3">
                   <Award className="w-6 h-6 text-green-400/>">
                   <span className="text-sm font-semibold text-purple-300">CASE STUDY</span>"
@@ -931,5 +925,4 @@ const CognitiveComputingTransformation: React.FC = () => {
   );
 };
 
-export default CognitiveComputingTransformation;
-;
+export default CognitiveComputingTransformation;;

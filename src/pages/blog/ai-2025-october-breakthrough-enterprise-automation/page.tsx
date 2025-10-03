@@ -88,21 +88,21 @@ const EnterpriseAutomation2025: () => {
             </p>
             
             <div className="flex flex-wrap justify-center gap-4 text-sm text-zion-slate">
-              <div className="flex items-center"><Clock className="w-4 h-4 mr-2/>18 min read</div>
-              <div className="flex items-center"><Users className="w-4 h-4 mr-2/>Enterprise Strategy</div>
+              <div className="flex items-center"><Clock className="w-4 h-4 mr-2/>18 min read</div>"
+              <div className="flex items-center"><Users className="w-4 h-4 mr-2/>Enterprise Strategy</div>"
               <div className="flex items-center"><CheckCircle className="w-4 h-4 mr-2/>Featured</div>
             </div>
           </div>
 
-                    comprehensive AI automation strategies are seeing <strong >400-600% efficiency gains</strong>
+                    comprehensive AI automation strategies are seeing <strong >400-600% efficiency gains</strong>"
             <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">
             <div className="flex flex-wrap justify-center gap-4 text-sm text-zion-slate">
-              <div className="flex items-center"><Clock className="w-4 h-4 mr-2/>18 min read</div>
-              <div className="flex items-center"><Users className="w-4 h-4 mr-2/>Enterprise Strategy</div>
+              <div className="flex items-center"><Clock className="w-4 h-4 mr-2/>18 min read</div>"
+              <div className="flex items-center"><Users className="w-4 h-4 mr-2/>Enterprise Strategy</div>"
               <div className="flex items-center"><CheckCircle className="w-4 h-4 mr-2/>Featured</div>
             </div>
           </div>
-
+"
           <article className=" / />> />max-w-4xl mx-auto">
             <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 md: p-12 border border-white/10">
               <section className="mb-12">
@@ -315,13 +315,13 @@ const EnterpriseAutomation2025: () => {
                     to="/contact"
   className="bg-emerald-500 text-white px-8 py-4 rounded-lg font-semibold hover:bg-emerald-600 transition-colors inline-flex items-center justify-center gap-2
                     >
-                      Start Your Transformation
-                      <ArrowRight className="w-5 h-5 ">
-                      <ArrowRight className="w-5 h-5/>">
+                      Start Your Transformation"
+                      <ArrowRight className="w-5 h-5 " />
+                      <ArrowRight className="w-5 h-5/>" />
                       <ArrowRight className="w-5 h-5" />
                     </Link>
                     <Link to="/case-studies"
-  className="border border-emerald-400 text-emerald-400 px-8 py-4 rounded-lg font-semibold hover:bg-emerald-400 hover:text-white transition-colors>
+  className="border border-emerald-400 text-emerald-400 px-8 py-4 rounded-lg font-semibold hover:bg-emerald-400 hover:text-white transition-colors>"
               <section className="text-center">
                 <div className="bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 border border-emerald-400/30 rounded-xl p-8">
                   <h2 className="text-2xl font-bold text-white mb-4">"
@@ -336,8 +336,8 @@ const EnterpriseAutomation2025: () => {
                     to="/contact"
   className="bg-emerald-500 text-white px-8 py-4 rounded-lg font-semibold hover:bg-emerald-600 transition-colors inline-flex items-center justify-center gap-2
                     >
-                      Start Your Transformation
-                      <ArrowRight className="w-5 h-5 ">
+                      Start Your Transformation"
+                      <ArrowRight className="w-5 h-5 " />
                       <ArrowRight className="w-5 h-5" />
                     </Link>
                     <Link to="/case-studies"

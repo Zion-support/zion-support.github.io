@@ -183,14 +183,12 @@ export default function AIMetaCognitiveReasoning2026() {
           <div className="flex flex-col sm:flex-row gap-4">"
             <Link 
               href="/[^"]*"
-              className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-indigo-700 transition-all duration-200 text-center"
-            >
+              className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-indigo-700 transition-all duration-200 text-center">
               Schedule Consultation
             </Link>
             <Link 
               href="/[^"]*"
-              className="bg-white border-2 border-purple-600 text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-all duration-200 text-center"
-            >
+              className="bg-white border-2 border-purple-600 text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-all duration-200 text-center">
               Explore AI Services
             </Link>
           </div>

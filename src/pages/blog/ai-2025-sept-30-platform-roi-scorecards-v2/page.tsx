@@ -45,6 +45,4 @@ export default function PlatformRoiScorecardsV2(): React.JSX.Element {
       </div>
     </div>
   );
-}
-
-;
+};

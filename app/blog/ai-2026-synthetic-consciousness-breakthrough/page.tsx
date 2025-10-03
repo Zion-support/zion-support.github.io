@@ -31,15 +31,13 @@ export default function SyntheticConsciousnessBreakthrough2026() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 href="/case-studies/ai-2026-synthetic-consciousness-10-billion-success"
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-              >
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
                 View $10B Success Case Study
                 <ArrowRight className="w-5 h-5" />
               </Link>
               <Link 
                 href="/services/ai-consulting"
-                className="inline-flex items-center gap-2 border border-purple-500 text-purple-300 px-8 py-4 rounded-lg font-semibold hover:bg-purple-500/10 transition-all duration-300"
-              >
+                className="inline-flex items-center gap-2 border border-purple-500 text-purple-300 px-8 py-4 rounded-lg font-semibold hover:bg-purple-500/10 transition-all duration-300">
                 Implement Conscious AI
                 <Brain className="w-5 h-5" />
               </Link>
@@ -160,7 +158,6 @@ export default function SyntheticConsciousnessBreakthrough2026() {
                 </li>
               </ul>
             </div>
-            <div className="bg-gradient-to-br from-purple-600/20 to-blue-600/20 p-8 rounded-2xl border border-purple-500/30">
               <h4 className="text-xl font-bold text-white mb-4">Consciousness Indicators</h4>
               <div className="space-y-4">
                 <div className="flex justify-between items-center">
@@ -218,15 +215,13 @@ export default function SyntheticConsciousnessBreakthrough2026() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               href="/contact"
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-            >
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
               Schedule Consultation
               <ArrowRight className="w-5 h-5" />
             </Link>
             <Link 
               href="/services/ai-development"
-              className="inline-flex items-center gap-2 border border-purple-500 text-purple-300 px-8 py-4 rounded-lg font-semibold hover:bg-purple-500/10 transition-all duration-300"
-            >
+              className="inline-flex items-center gap-2 border border-purple-500 text-purple-300 px-8 py-4 rounded-lg font-semibold hover:bg-purple-500/10 transition-all duration-300">
               Explore AI Services
               <TrendingUp className="w-5 h-5" />
             </Link>

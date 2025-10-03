@@ -299,15 +299,13 @@ export default function QuantumComputing2026CommercialBreakthrough() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link 
                   href="/contact"
-                  className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center gap-2"
-                >
+                  className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center gap-2">
                   Start Your Quantum Journey
                   <ArrowRight className="w-4 h-4" />
                 </Link>
                 <Link 
                   href="/services/quantum-computing"
-                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors flex items-center justify-center gap-2"
-                >
+                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors flex items-center justify-center gap-2">
                   Explore Quantum Services
                   <ArrowRight className="w-4 h-4" />
                 </Link>

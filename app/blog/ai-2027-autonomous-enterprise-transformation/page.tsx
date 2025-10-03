@@ -154,14 +154,12 @@ export default function AI2027AutonomousEnterpriseTransformation() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link 
                   href="/[^"]*"
-                  className="px-8 py-3 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-semibold rounded-xl hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 text-center"
-                >
+                  className="px-8 py-3 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-semibold rounded-xl hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 text-center">
                   Start Transformation
                 </Link>
                 <Link 
                   href="/[^"]*"
-                  className="px-8 py-3 border border-emerald-500 text-emerald-400 font-semibold rounded-xl hover:bg-emerald-500/10 transition-all duration-300 text-center"
-                >
+                  className="px-8 py-3 border border-emerald-500 text-emerald-400 font-semibold rounded-xl hover:bg-emerald-500/10 transition-all duration-300 text-center">
                   Learn More
                 </Link>
               </div>
@@ -171,7 +169,6 @@ export default function AI2027AutonomousEnterpriseTransformation() {
 
         {/* Benefits Section */}
         <div className="mt-16 grid md:grid-cols-2 gap-8">
-          <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-8">
             <h3 className="text-2xl font-bold text-white mb-6">Key Benefits</h3>
             <ul className="space-y-4">
               <li className="flex items-start space-x-3">
@@ -209,7 +206,6 @@ export default function AI2027AutonomousEnterpriseTransformation() {
             </ul>
           </div>
 
-          <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-8">
             <h3 className="text-2xl font-bold text-white mb-6">Implementation Areas</h3>
             <ul className="space-y-4">
               <li className="flex items-start space-x-3">
@@ -253,7 +249,6 @@ export default function AI2027AutonomousEnterpriseTransformation() {
           <h2 className="text-3xl font-bold text-white text-center mb-8">Related Content</h2>
           <div className="grid md:grid-cols-3 gap-6">
             <Link href="/blog/ai-2026-autonomous-enterprise-architecture" className="group">
-              <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-6 hover:border-emerald-500/50 transition-all duration-300">
                 <h3 className="text-xl font-bold text-white mb-3 group-hover:text-emerald-400 transition-colors">
                   Autonomous Enterprise Architecture
                 </h3>
@@ -264,7 +259,6 @@ export default function AI2027AutonomousEnterpriseTransformation() {
             </Link>
 
             <Link href="/blog/ai-2027-autonomous-governance" className="group">
-              <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-6 hover:border-emerald-500/50 transition-all duration-300">
                 <h3 className="text-xl font-bold text-white mb-3 group-hover:text-emerald-400 transition-colors">
                   Autonomous Governance
                 </h3>
@@ -275,7 +269,6 @@ export default function AI2027AutonomousEnterpriseTransformation() {
             </Link>
 
             <Link href="/blog/ai-2027-self-optimizing-businesses" className="group">
-              <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-6 hover:border-emerald-500/50 transition-all duration-300">
                 <h3 className="text-xl font-bold text-white mb-3 group-hover:text-emerald-400 transition-colors">
                   Self-Optimizing Businesses
                 </h3>
@@ -291,8 +284,7 @@ export default function AI2027AutonomousEnterpriseTransformation() {
         <div className="text-center mt-16">
           <Link 
             href="/[^"]*"
-            className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-slate-700 to-slate-800 text-white font-semibold rounded-xl hover:from-slate-600 hover:to-slate-700 transition-all duration-300"
-          >
+            className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-slate-700 to-slate-800 text-white font-semibold rounded-xl hover:from-slate-600 hover:to-slate-700 transition-all duration-300">
             <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
             </svg>

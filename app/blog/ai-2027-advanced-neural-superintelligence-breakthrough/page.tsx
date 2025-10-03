@@ -233,8 +233,7 @@ export default function AI2027AdvancedNeuralSuperintelligenceBreakthrough() {
         <div className="text-center mb-8">"
           <Link 
             href="/[^"]*"
-            className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-bold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 inline-block"
-          >
+            className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-bold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 inline-block">
             🚀 Start Your AI 2027 Transformation Today
           </Link>
         </div>

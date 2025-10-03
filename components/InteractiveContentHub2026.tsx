@@ -135,8 +135,7 @@ const InteractiveContentHub2026: React.FC = () => {
           {content[activeTab as keyof typeof content].map((item, index) => (
             <div 
               key={index}
-              className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-purple-500/50 transition-all duration-300 group hover:transform hover:scale-105"
-            >
+              className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-purple-500/50 transition-all duration-300 group hover:transform hover:scale-105">
               <div className="text-6xl mb-6 group-hover:scale-110 transition-transform duration-300">
                 {item.icon}
               </div>
@@ -161,8 +160,7 @@ const InteractiveContentHub2026: React.FC = () => {
               
               <a 
                 href={item.link}
-                className="inline-block bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 w-full text-center group-hover:shadow-lg group-hover:shadow-purple-500/50"
-              >
+                className="inline-block bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 w-full text-center group-hover:shadow-lg group-hover:shadow-purple-500/50">
                 Explore Now →
               </a>
             </div>
@@ -209,8 +207,7 @@ const InteractiveContentHub2026: React.FC = () => {
             </div>
             <a 
               href="/contact"
-              className="inline-block bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 w-full text-center"
-            >
+              className="inline-block bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 w-full text-center">
               Get Detailed Analysis
             </a>
           </div>
@@ -242,8 +239,7 @@ const InteractiveContentHub2026: React.FC = () => {
             </div>
             <a 
               href="/case-studies"
-              className="inline-block bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 w-full text-center mt-6"
-            >
+              className="inline-block bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 w-full text-center mt-6">
               View All Success Stories
             </a>
           </div>
@@ -262,20 +258,17 @@ const InteractiveContentHub2026: React.FC = () => {
             <div className="flex flex-wrap justify-center gap-4">
               <a 
                 href="/contact"
-                className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
-              >
+                className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1">
                 Get Free Consultation
               </a>
               <a 
                 href="/services"
-                className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 transform hover:-translate-y-1"
-              >
+                className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 transform hover:-translate-y-1">
                 Explore Services
               </a>
               <a 
                 href="/blog"
-                className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
-              >
+                className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300">
                 Read Latest Content
               </a>
             </div>

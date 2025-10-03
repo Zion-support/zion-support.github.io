@@ -54,8 +54,7 @@ const BlogArticleLayout: React.FC<BlogArticleLayoutProps> = ({
               {tags.map(tag => (
                 <span
                   key={tag}
-                  className="px-3 py-1 bg-blue-600/20 text-blue-300 rounded-full text-sm"
-                >
+                  className="px-3 py-1 bg-blue-600/20 text-blue-300 rounded-full text-sm">
                   {tag}
                 </span>
               ))}

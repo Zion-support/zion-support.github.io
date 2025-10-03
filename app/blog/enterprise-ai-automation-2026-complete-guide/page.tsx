@@ -270,14 +270,12 @@ export default function EnterpriseAIAutomationGuide() {
               <div className="flex flex-col sm:flex-row gap-4">"
                 <a 
                   href="/[^"]*"
-                  className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
-                >
+                  className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1">
                   Start Your Automation Journey
                 </a>
                 <a 
                   href="/[^"]*"
-                  className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
-                >
+                  className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300">
                   View Success Stories
                 </a>
               </div>

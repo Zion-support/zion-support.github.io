@@ -126,8 +126,7 @@ interface ContentShowcaseProps {
         <div className="text-center mt-12">
           <Link
             href="/content-hub"
-            className="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl"
-          >
+            className="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl">
             Explore All Content
           </Link>
         </div>

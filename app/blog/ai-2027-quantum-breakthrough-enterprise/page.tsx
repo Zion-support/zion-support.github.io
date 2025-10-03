@@ -264,20 +264,17 @@ export default function AI2027QuantumBreakthroughEnterprise() {
           <div className="flex flex-wrap gap-4">"
             <Link 
               href="/[^"]*"
-              className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-indigo-600 transition-colors"
-            >
+              className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-indigo-600 transition-colors">
               Get Quantum AI Solutions
             </Link>
             <Link 
               href="/[^"]*"
-              className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-600 transition-colors"
-            >
+              className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-600 transition-colors">
               View Success Stories
             </Link>
             <Link 
               href="/[^"]*"
-              className="bg-gray-800 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-900 transition-colors"
-            >
+              className="bg-gray-800 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-900 transition-colors">
               Contact Quantum Experts
             </Link>
           </div>

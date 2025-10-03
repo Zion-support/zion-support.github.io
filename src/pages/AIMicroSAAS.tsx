@@ -1,5 +1,4 @@
-import { Users, CheckCircle, ArrowRight, DollarSign, Clock, Star, TrendingUp, Lock, Smartphone, Cloud, Database, Cpu, Target, Rocket } from "lucide-react"
-;
+import { Users, CheckCircle, ArrowRight, DollarSign, Clock, Star, TrendingUp, Lock, Smartphone, Cloud, Database, Cpu, Target, Rocket } from "lucide-react";
 export default function AIMicroSAAS(): React.JSX.Element {
   const microSaaSServices: [,
     {
@@ -179,11 +178,11 @@ export default function AIMicroSAAS(): React.JSX.Element {
             <div className="flex items-center justify-center gap-6 text-sm text-blue-200">
               <div className="flex items-center">
                 <CheckCircle className="h-4 w-4 text-green-400 mr-2" /> / />> />"
-                <span>Quick Deployment</span>/span>
+                <span>Quick Deployment</span>
               </div>
               <div className="flex items-center">
                 <CheckCircle className="h-4 w-4 text-green-400 mr-2" /> / />> />"
-                <span>Proven ROI</span>/span>
+                <span>Proven ROI</span>
               </div>
               <div className="flex items-center">
                 <CheckCircle className="h-4 w-4 text-green-400 mr-2" /> / />> />"
@@ -205,15 +204,15 @@ export default function AIMicroSAAS(): React.JSX.Element {
             <div className="flex items-center justify-center gap-6 text-sm text-blue-200">
               <div className="flex items-center">
                 <CheckCircle className="h-4 w-4 text-green-400 mr-2" /> / />> />"
-                <span>Quick Deployment</span>/span>
+                <span>Quick Deployment</span>
               </div>
               <div className="flex items-center">
                 <CheckCircle className="h-4 w-4 text-green-400 mr-2" /> / />> />"
-                <span>Proven ROI</span>/span>
+                <span>Proven ROI</span>
               </div>
               <div className="flex items-center">
                 <CheckCircle className="h-4 w-4 text-green-400 mr-2" /> / />> />"
-                <span>24/7 Support</span>/span>
+                <span>24/7 Support</span>
               </div>
             </div>
           </div>
@@ -239,7 +238,7 @@ export default function AIMicroSAAS(): React.JSX.Element {
                   </div>
 
                   <div className="space-y-4 mb-6">
-                    <div >
+                    <div>
                       <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>"
                       <ul className="space-y-1"
                         {service.features.slice(0, 3).map((feature, idx) => (
@@ -269,13 +268,13 @@ export default function AIMicroSAAS(): React.JSX.Element {
                   </div>
 
                   <div className="space-y-4 mb-6">
-                    <div >
+                    <div>
                       <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>"
                       <ul className="space-y-1">
                         {service.features.slice(0, 3).map((feature, idx) => (
                           <li key={idx} className="flex items-center text-sm text-slate-300">
                             <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" /> / />> />"
-                            <span>{feature}</span>/span>
+                            <span>{feature}</span>
                           </li>
                         ))}
                         {service.features.length > 3 && (
@@ -287,7 +286,7 @@ export default function AIMicroSAAS(): React.JSX.Element {
                       </ul>
                     </div>
 
-                    <div >
+                    <div>
                       <h4 className="text-sm font-semibold text-fuchsia-400 mb-2">Proven Benefits:</h4>"
                       <ul className="space-y-1"
                         {service.benefits.map((benefit, idx) => (
@@ -298,7 +297,7 @@ export default function AIMicroSAAS(): React.JSX.Element {
                         {service.benefits.map((benefit, idx) => (
                           <li key={idx} className="flex items-center text-sm text-slate-300">
                             <TrendingUp className="w-3 h-3 text-fuchsia-400 mr-2 flex-shrink-0" />"
-                            <span>{benefit}</span>/span>
+                            <span>{benefit}</span>
                           </li>
                         ))}
                       </ul>
@@ -309,7 +308,7 @@ export default function AIMicroSAAS(): React.JSX.Element {
                     <a href={service.link}
                       className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300
                     >
-                      Get Started
+                      Get Started"
                       <ArrowRight className="w-4 h-4" />"
                     </a>
                   </div>
@@ -326,7 +325,7 @@ export default function AIMicroSAAS(): React.JSX.Element {
                     <a href={service.link}
                       className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300
                     >
-                      Get Started
+                      Get Started"
                       <ArrowRight className="w-4 h-4" />"
                     </a>
                   </div>
@@ -373,7 +372,7 @@ export default function AIMicroSAAS(): React.JSX.Element {
                   {service.features.map((feature, fIdx) => (
                     <div key={fIdx} className="flex items-center text-xs text-slate-400">
                       <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" /> / />> />"
-                      <span>{feature}</span>/span>
+                      <span>{feature}</span>
                     </div>
                   ))}
                 </div>
@@ -398,21 +397,21 @@ export default function AIMicroSAAS(): React.JSX.Element {
             </div>
             
             <div className="grid md:grid-cols-3 gap-6 text-center">
-              <div >
+              <div>
                 <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <Clock className="w-6 h-6 text-cyan-400" />"
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Fast Implementation</h3>
                 <p className="text-sm text-slate-300">Deploy in 1-4 weeks with our proven methodology</p>"
               </div>
-              <div >
+              <div>
                 <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <DollarSign className="w-6 h-6 text-blue-400" />"
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Proven ROI</h3>
                 <p className="text-sm text-slate-300">Average 300% ROI within first 6 months</p>"
               </div>
-              <div >
+              <div>
                 <div className="w-12 h-12 bg-fuchsia-500/20 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <Star className="w-6 h-6 text-fuchsia-400" />"
                 </div>
@@ -425,34 +424,34 @@ export default function AIMicroSAAS(): React.JSX.Element {
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
                 <a href="tel:+13024640950" ,"
   className="inline-flex items-center gap-2 bg-white text-slate-900 px-6 py-3 rounded-lg font-semibold hover:bg-slate-100 transition-colors
-                >
+                >"
                   <Smartphone className="w-4 h-4" />"
                   +1 302 464 0950
                 </a>
                 <a href="mailto:kleber@ziontechgroup.com" ,"
   className="inline-flex items-center gap-2 bg-slate-700 text-white px-6 py-3 rounded-lg font-semibold hover:bg-slate-600 transition-colors
-                >
+                >"
                   <MessageSquare className="w-4 h-4" />,"
   kleber@ziontechgroup.com
                 </a>
               </div>
               <p className="text-sm text-slate-400">,"
             <div className="grid md:grid-cols-3 gap-6 text-center">
-              <div >
+              <div>
                 <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <Clock className="w-6 h-6 text-cyan-400" />"
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Fast Implementation</h3>
                 <p className="text-sm text-slate-300">Deploy in 1-4 weeks with our proven methodology</p>"
               </div>
-              <div >
+              <div>
                 <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <DollarSign className="w-6 h-6 text-blue-400" />"
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Proven ROI</h3>
                 <p className="text-sm text-slate-300">Average 300% ROI within first 6 months</p>"
               </div>
-              <div >
+              <div>
                 <div className="w-12 h-12 bg-fuchsia-500/20 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <Star className="w-6 h-6 text-fuchsia-400" />"
                 </div>
@@ -465,13 +464,13 @@ export default function AIMicroSAAS(): React.JSX.Element {
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
                 <a href="tel:+13024640950" ,"
   className="inline-flex items-center gap-2 bg-white text-slate-900 px-6 py-3 rounded-lg font-semibold hover:bg-slate-100 transition-colors
-                >
+                >"
                   <Smartphone className="w-4 h-4" />"
                   +1 302 464 0950
                 </a>
                 <a href="mailto:kleber@ziontechgroup.com" ,"
   className="inline-flex items-center gap-2 bg-slate-700 text-white px-6 py-3 rounded-lg font-semibold hover:bg-slate-600 transition-colors
-                >
+                >"
                   <MessageSquare className="w-4 h-4" />,"
   kleber@ziontechgroup.com
                 </a>
@@ -485,5 +484,4 @@ export default function AIMicroSAAS(): React.JSX.Element {
       </div>
     </>
   );
-}
-;
+};

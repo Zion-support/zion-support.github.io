@@ -338,8 +338,7 @@ export default function AIBusinessIntelligence2025() {
             </ul>
             <Link
               href="/contact"
-              className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold text-center block hover:bg-blue-700 transition-colors"
-            >
+              className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold text-center block hover:bg-blue-700 transition-colors">
               Get Started
             </Link>
           </div>
@@ -387,8 +386,7 @@ export default function AIBusinessIntelligence2025() {
             </ul>
             <Link
               href="/contact"
-              className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold text-center block hover:bg-blue-700 transition-colors"
-            >
+              className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold text-center block hover:bg-blue-700 transition-colors">
               Get Started
             </Link>
           </div>
@@ -431,8 +429,7 @@ export default function AIBusinessIntelligence2025() {
             </ul>
             <Link
               href="/contact"
-              className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold text-center block hover:bg-blue-700 transition-colors"
-            >
+              className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold text-center block hover:bg-blue-700 transition-colors">
               Contact Sales
             </Link>
           </div>
@@ -547,8 +544,7 @@ export default function AIBusinessIntelligence2025() {
           <div className="text-center mt-8">"
             <Link
               href="/contact"
-              className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-50 transition-colors inline-block"
-            >
+              className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-50 transition-colors inline-block">
               Get Your Custom ROI Analysis
             </Link>
           </div>
@@ -564,14 +560,12 @@ export default function AIBusinessIntelligence2025() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">"
           <Link
             href="/contact"
-            className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors"
-          >
+            className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors">
             Get Free Consultation
           </Link>
           <a
             href="tel:+13024640950"
-            className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-600 hover:text-white transition-colors"
-          >
+            className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-600 hover:text-white transition-colors">
             Call +1 302 464 0950
           </a>
         </div>

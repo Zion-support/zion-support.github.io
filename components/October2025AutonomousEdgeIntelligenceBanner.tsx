@@ -8,8 +8,7 @@ const October2025AutonomousEdgeIntelligenceBanner: React.FC = () => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-      className="relative overflow-hidden bg-gradient-to-br from-cyan-900 via-blue-900 to-indigo-900 rounded-2xl p-8 md:p-12 my-8 shadow-2xl"
-    >
+      className="relative overflow-hidden bg-gradient-to-br from-cyan-900 via-blue-900 to-indigo-900 rounded-2xl p-8 md:p-12 my-8 shadow-2xl">
       {/* Animated background effect */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.5),transparent_50%)] animate-pulse" />
@@ -21,8 +20,7 @@ const October2025AutonomousEdgeIntelligenceBanner: React.FC = () => {
           <motion.div
             animate={{ rotate: 360 }}
             transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-            className="bg-cyan-500/20 p-3 rounded-lg"
-          >
+            className="bg-cyan-500/20 p-3 rounded-lg">
             <Cpu className="w-8 h-8 text-cyan-400" />
           </motion.div>
           <div>
@@ -57,8 +55,7 @@ const October2025AutonomousEdgeIntelligenceBanner: React.FC = () => {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: index * 0.1 }}
-              className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-cyan-400/30"
-            >
+              className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-cyan-400/30">
               <div className="flex items-center gap-2 mb-2">
                 <metric.icon className="w-4 h-4 text-cyan-400" />
                 <span className="text-cyan-300 text-sm font-medium">{metric.label}</span>
@@ -80,8 +77,7 @@ const October2025AutonomousEdgeIntelligenceBanner: React.FC = () => {
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.3 + index * 0.1 }}
-              className="flex items-center gap-3 bg-white/5 rounded-lg p-3 border border-cyan-400/20"
-            >
+              className="flex items-center gap-3 bg-white/5 rounded-lg p-3 border border-cyan-400/20">
               <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse" />
               <span className="text-cyan-100 font-medium">{feature}</span>
             </motion.div>
@@ -94,8 +90,7 @@ const October2025AutonomousEdgeIntelligenceBanner: React.FC = () => {
             href="/blog/ai-2025-october-autonomous-edge-intelligence-breakthrough"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="inline-flex items-center justify-center gap-2 bg-cyan-500 hover:bg-cyan-400 text-white font-bold py-4 px-8 rounded-xl transition-all shadow-lg hover:shadow-cyan-500/50"
-          >
+            className="inline-flex items-center justify-center gap-2 bg-cyan-500 hover:bg-cyan-400 text-white font-bold py-4 px-8 rounded-xl transition-all shadow-lg hover:shadow-cyan-500/50">
             Read Full Article
             <ArrowRight className="w-5 h-5" />
           </motion.a>
@@ -103,8 +98,7 @@ const October2025AutonomousEdgeIntelligenceBanner: React.FC = () => {
             href="/services/edge-ai-platform"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-8 rounded-xl transition-all border-2 border-cyan-400/50 backdrop-blur-sm"
-          >
+            className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-8 rounded-xl transition-all border-2 border-cyan-400/50 backdrop-blur-sm">
             Explore Edge AI Platform
             <ArrowRight className="w-5 h-5" />
           </motion.a>

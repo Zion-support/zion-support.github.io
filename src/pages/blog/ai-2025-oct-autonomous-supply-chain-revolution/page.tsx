@@ -14,9 +14,9 @@ export default function AutonomousSupplyChainRevolution2025(): void {
 
       <article className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
         <div className="container mx-auto px-4 py-12 max-w-4xl">
-          <Link to="/blog
+          <Link to="/blog">
   className="inline-flex items-center text-blue-400 hover:text-blue-300 mb-8 transition-colors
-          >
+          >"
             <ArrowLeft className="mr-2 h-4 w-4 ">
             <ArrowLeft className="mr-2 h-4 w-4" />
             <ArrowLeft className="mr-2 h-4 w-4/>">
@@ -40,9 +40,9 @@ export default function AutonomousSupplyChainRevolution2025(): void {
             <p className="text-xl text-gray-300 leading-relaxed">
       <article className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
         <div className="container mx-auto px-4 py-12 max-w-4xl">
-          <Link to="/blog
+          <Link to="/blog">
   className="inline-flex items-center text-blue-400 hover:text-blue-300 mb-8 transition-colors
-          >
+          >"
             <ArrowLeft className="mr-2 h-4 w-4 ">
             <ArrowLeft className="mr-2 h-4 w-4" />
   Back to Blog
@@ -92,15 +92,15 @@ export default function AutonomousSupplyChainRevolution2025(): void {
                 <li className="flex items-start gap-3">
                   <TrendingUp className="h-6 w-6 text-green-400 mt-1 flex-shrink-0/>
                   <span><strong>99.2% Forecast Accuracy: </strong> AI predicts demand with unprecedented precision across SKUs and regions</span>,
-                </li>
+                </li>"
                 <li className="flex items-start gap-3">
                   <Zap className="h-6 w-6 text-yellow-400 mt-1 flex-shrink-0/>
                   <span><strong>78% Cost Reduction: </strong> Autonomous optimization eliminates waste and maximizes efficiency</span>,
-                </li>
+                </li>"
                 <li className="flex items-start gap-3">
                   <DollarSign className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0/>
                   <span><strong>$1.8B+ Total Value: </strong> Average annual savings and revenue gains for enterprise deployments</span>,
-                </li>
+                </li>"
                 <li className="flex items-start gap-3">
                   <Globe className="h-6 w-6 text-blue-400 mt-1 flex-shrink-0/>">
           <div className="prose prose-invert prose-lg max-w-none">
@@ -283,19 +283,16 @@ export default function AutonomousSupplyChainRevolution2025(): void {
             <section className="mb-12">
               <h2 className="text-3xl font-bold mb-6 text-blue-300">Enterprise Success Stories</h2>
               <div className="grid md:grid-cols-2 gap-6 mb-8">
-                <div className="bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-xl p-6 border border-blue-500/30">
                   <h3 className="text-2xl font-bold mb-4 text-blue-300">Global Retail Corporation</h3>
                   <ul className="space-y-3 text-gray-300">
             <section className="mb-12">
               <h2 className="text-3xl font-bold mb-6 text-blue-300">Enterprise Success Stories</h2>"
               <div className="grid md:grid-cols-2 gap-6 mb-8">
-                <div className="bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-xl p-6 border border-blue-500/30">
                   <h3 className="text-2xl font-bold mb-4 text-blue-300">Global Retail Corporation</h3>
                   <ul className="space-y-3 text-gray-300">
             <section className="mb-12">
               <h2 className="text-3xl font-bold mb-6 text-blue-300">Enterprise Success Stories</h2>
               <div className="grid md:grid-cols-2 gap-6 mb-8">
-                <div className="bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-xl p-6 border border-blue-500/30">
                   <h3 className="text-2xl font-bold mb-4 text-blue-300">Global Retail Corporation</h3>
                   <ul className="space-y-3 text-gray-300">
                     <li >• $2.4B annual revenue increase from availability improvements</li>
@@ -308,7 +305,6 @@ export default function AutonomousSupplyChainRevolution2025(): void {
                 <div className="bg-gradient-to-br from-cyan-500/20 to-teal-500/20 rounded-xl p-6 border border-cyan-500/30">
                   <h3 className="text-2xl font-bold mb-4 text-cyan-300">Manufacturing Leader</h3>
                   <ul className="space-y-3 text-gray-300">
-                <div className="bg-gradient-to-br from-cyan-500/20 to-teal-500/20 rounded-xl p-6 border border-cyan-500/30">
                   <h3 className="text-2xl font-bold mb-4 text-cyan-300">Manufacturing Leader</h3>
                   <ul className="space-y-3 text-gray-300">
                     <li >• $890M avoided disruption costs through predictive risk management</li>
@@ -417,13 +413,13 @@ export default function AutonomousSupplyChainRevolution2025(): void {
               to="/contact"
   className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all shadow-lg
               >
-                Schedule Your Supply Chain AI Assessment
+                Schedule Your Supply Chain AI Assessment"
                 <ArrowLeft className="ml-2 h-5 w-5 rotate-180 ">
                 <ArrowLeft className="ml-2 h-5 w-5 rotate-180/>">
                 <ArrowLeft className="ml-2 h-5 w-5 rotate-180" />
   className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all shadow-lg
               >
-                Schedule Your Supply Chain AI Assessment
+                Schedule Your Supply Chain AI Assessment"
                 <ArrowLeft className="ml-2 h-5 w-5 rotate-180 ">
                 <ArrowLeft className="ml-2 h-5 w-5 rotate-180" />
               </Link>
@@ -433,5 +429,4 @@ export default function AutonomousSupplyChainRevolution2025(): void {
       </article>
     </>
   );
-}
-;
+};

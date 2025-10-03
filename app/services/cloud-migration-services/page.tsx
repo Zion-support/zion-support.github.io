@@ -23,14 +23,12 @@ export default function CloudMigrationServicesPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="tel:+13024640950"
-              className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors shadow-lg hover:shadow-xl"
-            >
+              className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors shadow-lg hover:shadow-xl">
               Call +1 302 464 0950
             </a>
             <a
               href="mailto:kleber@ziontechgroup.com?subject=Cloud Migration Services Inquiry"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors"
-            >
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors">
               Get Migration Quote
             </a>
           </div>
@@ -273,8 +271,7 @@ export default function CloudMigrationServicesPage() {
               </ul>
               <a
                 href="mailto:kleber@ziontechgroup.com?subject=Small Business Cloud Migration"
-                className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center block"
-              >
+                className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center block">
                 Get Quote
               </a>
             </div>
@@ -323,8 +320,7 @@ export default function CloudMigrationServicesPage() {
               </ul>
               <a
                 href="mailto:kleber@ziontechgroup.com?subject=Enterprise Cloud Migration"
-                className="w-full bg-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-purple-700 transition-colors text-center block"
-              >
+                className="w-full bg-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-purple-700 transition-colors text-center block">
                 Get Quote
               </a>
             </div>
@@ -370,8 +366,7 @@ export default function CloudMigrationServicesPage() {
               </ul>
               <a
                 href="mailto:kleber@ziontechgroup.com?subject=Custom Cloud Migration Solution"
-                className="w-full bg-green-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-green-700 transition-colors text-center block"
-              >
+                className="w-full bg-green-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-green-700 transition-colors text-center block">
                 Contact Sales
               </a>
             </div>
@@ -400,14 +395,12 @@ export default function CloudMigrationServicesPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="tel:+13024640950"
-              className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors shadow-lg hover:shadow-xl"
-            >
+              className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors shadow-lg hover:shadow-xl">
               Call +1 302 464 0950
             </a>
             <a
               href="mailto:kleber@ziontechgroup.com?subject=Cloud Migration Services Inquiry"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors"
-            >
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors">
               Get Migration Quote
             </a>
           </div>

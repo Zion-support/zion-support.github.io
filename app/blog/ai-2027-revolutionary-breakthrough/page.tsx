@@ -189,14 +189,12 @@ export default function AIRevolutionaryBreakthrough2027() {
           <div className="flex flex-col sm:flex-row gap-4">"
             <Link 
               href="/[^"]*"
-              className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center"
-            >
+              className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center">
               Schedule Consultation
             </Link>
             <Link 
               href="/[^"]*"
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors text-center"
-            >
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors text-center">
               View Success Stories
             </Link>
           </div>

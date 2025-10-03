@@ -47,7 +47,7 @@ const MultiAgentEnterpriseOrchestration: React.FC = () => {
                 </span>"
                 <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-bold bg-green-500 text-white shadow-lg">
                   <Award className="w-4 h-4 mr-2/>
-                  $847M+ VALUE
+                  $847M+ VALUE"
                 </span>">
                 <span className="text-purple-300 text-sm">Published: October 1, 2025</span>
               </div>
@@ -174,11 +174,11 @@ const MultiAgentEnterpriseOrchestration: React.FC = () => {
               </p>
               
               <div className="flex items-center gap-4 text-sm text-purple-200">
-                <span>📖 12 minute read</span>/span>
-                <span>•</span>/span>
-                <span>🎯 Enterprise AI Strategy</span>/span>
-                <span>•</span>/span>
-                <span>⚡ Actionable Insights</span>/span>
+                <span>📖 12 minute read</span>
+                <span>•</span>
+                <span>🎯 Enterprise AI Strategy</span>
+                <span>•</span>
+                <span>⚡ Actionable Insights</span>
               </div>
             </div>
           </div>
@@ -191,19 +191,19 @@ const MultiAgentEnterpriseOrchestration: React.FC = () => {
         <div className="bg-white/5 backdrop-blur-sm border-y border-white/10 py-8">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-              <div >
+              <div>
                 <div className="text-3xl font-bold text-green-400 mb-1">97.8%</div>
                 <div className="text-sm text-purple-200">Automation Rate</div>
               </div>
-              <div >
+              <div>
                 <div className="text-3xl font-bold text-yellow-400 mb-1">$847M+</div>
                 <div className="text-sm text-purple-200">Annual Value</div>
               </div>
-              <div >
+              <div>
                 <div className="text-3xl font-bold text-pink-400 mb-1">89%</div>
                 <div className="text-sm text-purple-200">Cost Reduction</div>
               </div>
-              <div >
+              <div>
                 <div className="text-3xl font-bold text-blue-400 mb-1">1000+</div>
                 <div className="text-sm text-purple-200">Coordinated Agents</div>
         <div className="bg-white/5 backdrop-blur-sm border-y border-white/10 py-8">
@@ -212,19 +212,19 @@ const MultiAgentEnterpriseOrchestration: React.FC = () => {
         <div className="bg-white/5 backdrop-blur-sm border-y border-white/10 py-8">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-              <div >
+              <div>
                 <div className="text-3xl font-bold text-green-400 mb-1">97.8%</div>
                 <div className="text-sm text-purple-200">Automation Rate</div>
               </div>
-              <div >
+              <div>
                 <div className="text-3xl font-bold text-yellow-400 mb-1">$847M+</div>
                 <div className="text-sm text-purple-200">Annual Value</div>
               </div>
-              <div >
+              <div>
                 <div className="text-3xl font-bold text-pink-400 mb-1">89%</div>
                 <div className="text-sm text-purple-200">Cost Reduction</div>
               </div>
-              <div >
+              <div>
                 <div className="text-3xl font-bold text-blue-400 mb-1">1000+</div>
                 <div className="text-sm text-purple-200">Coordinated Agents</div>
               </div>
@@ -294,7 +294,6 @@ const MultiAgentEnterpriseOrchestration: React.FC = () => {
                     <li className="flex items-start gap-3 text-purple-100">
                       <span className="text-red-400 mt-1">✗</span>"
                 "
-                <div className="bg-gradient-to-br from-red-900/20 to-orange-900/20 border border-red-500/30 rounded-xl p-6 mb-6">
                   <h3 className="text-xl font-bold text-white mb-4">Why Traditional AI Falls Short</h3>
                   <ul className="space-y-3">
                     <li className="flex items-start gap-3 text-purple-100">
@@ -316,7 +315,6 @@ const MultiAgentEnterpriseOrchestration: React.FC = () => {
   The Multi-Agent Revolution
                 </h2>
                 
-                <div className="bg-gradient-to-br from-red-900/20 to-orange-900/20 border border-red-500/30 rounded-xl p-6 mb-6">
                   <h3 className="text-xl font-bold text-white mb-4">Why Traditional AI Falls Short</h3>
                   <ul className="space-y-3">
                     <li className="flex items-start gap-3 text-purple-100">
@@ -340,7 +338,6 @@ const MultiAgentEnterpriseOrchestration: React.FC = () => {
   The Multi-Agent Revolution
                 </h2>
                 
-                <div className="bg-gradient-to-br from-red-900/20 to-orange-900/20 border border-red-500/30 rounded-xl p-6 mb-6">
                   <h3 className="text-xl font-bold text-white mb-4">Why Traditional AI Falls Short</h3>
                   <ul className="space-y-3">
                     <li className="flex items-start gap-3 text-purple-100">
@@ -362,7 +359,6 @@ const MultiAgentEnterpriseOrchestration: React.FC = () => {
   The Multi-Agent Revolution
                 </h2>
                 
-                <div className="bg-gradient-to-br from-red-900/20 to-orange-900/20 border border-red-500/30 rounded-xl p-6 mb-6">
                   <h3 className="text-xl font-bold text-white mb-4">Why Traditional AI Falls Short</h3>
                   <ul className="space-y-3">
                     <li className="flex items-start gap-3 text-purple-100">
@@ -405,14 +401,13 @@ const MultiAgentEnterpriseOrchestration: React.FC = () => {
                     <li className="flex items-start gap-3 text-purple-100">
                       <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0/>
                       <span><strong>Autonomous coordination: </strong> Self-organizing teams with 99.7% accuracy</span>,
-                    </li>
+                    </li>"
                     <li className=" / />> />flex items-start gap-3 text-purple-100">
                       <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0/>
                       <span><strong>Dynamic scaling: </strong> Automatic resource allocation based on demand</span>,
-                    </li>
+                    </li>"
                     <li className=" / />> />flex items-start gap-3 text-purple-100">
                       <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0/>" / />> />>
-                <div className="bg-gradient-to-br from-green-900/20 to-emerald-900/20 border border-green-500/30 rounded-xl p-6">
                   <h3 className="text-xl font-bold text-white mb-4">The Multi-Agent Advantage</h3>
                   <ul className="space-y-3">
                     <li className="flex items-start gap-3 text-purple-100">
@@ -429,7 +424,6 @@ const MultiAgentEnterpriseOrchestration: React.FC = () => {
                     </li>
                     <li className="flex items-start gap-3 text-purple-100">
                       <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" /> / />> />
-                <div className="bg-gradient-to-br from-green-900/20 to-emerald-900/20 border border-green-500/30 rounded-xl p-6">
                   <h3 className="text-xl font-bold text-white mb-4">The Multi-Agent Advantage</h3>
                   <ul className="space-y-3">
                     <li className="flex items-start gap-3 text-purple-100">
@@ -446,7 +440,6 @@ const MultiAgentEnterpriseOrchestration: React.FC = () => {
                     </li>
                     <li className="flex items-start gap-3 text-purple-100">
                       <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0/>" / />> />>
-                <div className="bg-gradient-to-br from-green-900/20 to-emerald-900/20 border border-green-500/30 rounded-xl p-6">
                   <h3 className="text-xl font-bold text-white mb-4">The Multi-Agent Advantage</h3>
                   <ul className="space-y-3">
                     <li className="flex items-start gap-3 text-purple-100">
@@ -571,7 +564,7 @@ const MultiAgentEnterpriseOrchestration: React.FC = () => {
                         </ul>
                       </div>
                       
-                      <div >
+                      <div>
                         <p className="text-sm font-semibold text-green-300 mb-2">Results Achieved: </p>
                         <div className="grid grid-cols-2 gap-2"
                           {application.results.map((result, i) => (
@@ -611,19 +604,18 @@ const MultiAgentEnterpriseOrchestration: React.FC = () => {
                 </h2>
                 "
                 <div className="grid md:grid-cols-2 gap-6">
-                  <div className="bg-gradient-to-br from-red-900/20 to-orange-900/20 border border-red-500/30 rounded-xl p-6">
                     <h3 className="text-xl font-bold text-white mb-4">Year 1 Investment</h3>
                     <ul className="space-y-3 text-purple-100">
                       <li className="flex justify-between">
-                        <span>Infrastructure: </span>/span>,
+                        <span>Infrastructure: </span>,
                         <span className="font-bold">$3-6M</span>"
                       </li>
                       <li className="flex justify-between">
-                        <span>Development: </span>/span>,
+                        <span>Development: </span>,
                         <span className="font-bold">$4-8M</span>"
                       </li>
                       <li className="flex justify-between">
-                        <span>Training: </span>/span>,
+                        <span>Training: </span>,
                         <span className="font-bold">$1-2M</span>"
                       </li>
                       <li className="flex justify-between pt-3 border-t border-red-500/30">
@@ -635,19 +627,18 @@ const MultiAgentEnterpriseOrchestration: React.FC = () => {
                 </h2>
                 
                 <div className="grid md:grid-cols-2 gap-6">
-                  <div className="bg-gradient-to-br from-red-900/20 to-orange-900/20 border border-red-500/30 rounded-xl p-6">
                     <h3 className="text-xl font-bold text-white mb-4">Year 1 Investment</h3>
                     <ul className="space-y-3 text-purple-100">
                       <li className="flex justify-between">
-                        <span>Infrastructure: </span>/span>,
+                        <span>Infrastructure: </span>,
                         <span className="font-bold">$3-6M</span>
                       </li>
                       <li className="flex justify-between">
-                        <span>Development: </span>/span>,
+                        <span>Development: </span>,
                         <span className="font-bold">$4-8M</span>
                       </li>
                       <li className="flex justify-between">
-                        <span>Training: </span>/span>,
+                        <span>Training: </span>,
                         <span className="font-bold">$1-2M</span>
                       </li>
                       <li className="flex justify-between pt-3 border-t border-red-500/30">
@@ -659,19 +650,18 @@ const MultiAgentEnterpriseOrchestration: React.FC = () => {
                 </h2>
                 
                 <div className="grid md:grid-cols-2 gap-6">
-                  <div className="bg-gradient-to-br from-red-900/20 to-orange-900/20 border border-red-500/30 rounded-xl p-6">
                     <h3 className="text-xl font-bold text-white mb-4">Year 1 Investment</h3>
                     <ul className="space-y-3 text-purple-100">
                       <li className="flex justify-between">
-                        <span>Infrastructure: </span>/span>,
+                        <span>Infrastructure: </span>,
                         <span className="font-bold">$3-6M</span>"
                       </li>
                       <li className="flex justify-between">
-                        <span>Development: </span>/span>,
+                        <span>Development: </span>,
                         <span className="font-bold">$4-8M</span>"
                       </li>
                       <li className="flex justify-between">
-                        <span>Training: </span>/span>,
+                        <span>Training: </span>,
                         <span className="font-bold">$1-2M</span>"
                       </li>
                       <li className="flex justify-between pt-3 border-t border-red-500/30">
@@ -683,19 +673,18 @@ const MultiAgentEnterpriseOrchestration: React.FC = () => {
                 </h2>
                 
                 <div className="grid md:grid-cols-2 gap-6">
-                  <div className="bg-gradient-to-br from-red-900/20 to-orange-900/20 border border-red-500/30 rounded-xl p-6">
                     <h3 className="text-xl font-bold text-white mb-4">Year 1 Investment</h3>
                     <ul className="space-y-3 text-purple-100">
                       <li className="flex justify-between">
-                        <span>Infrastructure: </span>/span>,
+                        <span>Infrastructure: </span>,
                         <span className="font-bold">$3-6M</span>
                       </li>
                       <li className="flex justify-between">
-                        <span>Development: </span>/span>,
+                        <span>Development: </span>,
                         <span className="font-bold">$4-8M</span>
                       </li>
                       <li className="flex justify-between">
-                        <span>Training: </span>/span>,
+                        <span>Training: </span>,
                         <span className="font-bold">$1-2M</span>
                       </li>
                       <li className="flex justify-between pt-3 border-t border-red-500/30">
@@ -705,73 +694,69 @@ const MultiAgentEnterpriseOrchestration: React.FC = () => {
                     </ul>
                   </div>
                   
-                  <div className="bg-gradient-to-br from-green-900/20 to-emerald-900/20 border border-green-500/30 rounded-xl p-6">
                     <h3 className="text-xl font-bold text-white mb-4">Year 1 Returns</h3>
                     <ul className="space-y-3 text-purple-100">
                       <li className="flex justify-between">
-                        <span>Cost savings: </span>/span>,
+                        <span>Cost savings: </span>,
                         <span className="font-bold text-green-300">$234M</span>"
                       </li>
                       <li className="flex justify-between">
-                        <span>Revenue growth: </span>/span>,
+                        <span>Revenue growth: </span>,
                         <span className="font-bold text-green-300">$340M</span>"
                       </li>
                       <li className="flex justify-between">
-                        <span>Risk reduction: </span>/span>,
+                        <span>Risk reduction: </span>,
                         <span className="font-bold text-green-300">$127M</span>"
                       </li>
                       <li className="flex justify-between pt-3 border-t border-green-500/30">
                         <span className="font-bold">Total Value: </span>
                         <span className="font-bold text-xl text-green-300">$701M</span>"
-                  <div className="bg-gradient-to-br from-green-900/20 to-emerald-900/20 border border-green-500/30 rounded-xl p-6">
                     <h3 className="text-xl font-bold text-white mb-4">Year 1 Returns</h3>
                     <ul className="space-y-3 text-purple-100">
                       <li className="flex justify-between">
-                        <span>Cost savings: </span>/span>,
+                        <span>Cost savings: </span>,
                         <span className="font-bold text-green-300">$234M</span>
                       </li>
                       <li className="flex justify-between">
-                        <span>Revenue growth: </span>/span>,
+                        <span>Revenue growth: </span>,
                         <span className="font-bold text-green-300">$340M</span>
                       </li>
                       <li className="flex justify-between">
-                        <span>Risk reduction: </span>/span>,
+                        <span>Risk reduction: </span>,
                         <span className="font-bold text-green-300">$127M</span>
                       </li>
                       <li className="flex justify-between pt-3 border-t border-green-500/30">
                         <span className="font-bold">Total Value: </span>
                         <span className="font-bold text-xl text-green-300">$701M</span>
-                  <div className="bg-gradient-to-br from-green-900/20 to-emerald-900/20 border border-green-500/30 rounded-xl p-6">
                     <h3 className="text-xl font-bold text-white mb-4">Year 1 Returns</h3>
                     <ul className="space-y-3 text-purple-100">
                       <li className="flex justify-between">
-                        <span>Cost savings: </span>/span>,
+                        <span>Cost savings: </span>,
                         <span className="font-bold text-green-300">$234M</span>"
                       </li>
                       <li className="flex justify-between">
-                        <span>Revenue growth: </span>/span>,
+                        <span>Revenue growth: </span>,
                         <span className="font-bold text-green-300">$340M</span>"
                       </li>
                       <li className="flex justify-between">
-                        <span>Risk reduction: </span>/span>,
+                        <span>Risk reduction: </span>,
                         <span className="font-bold text-green-300">$127M</span>"
                       </li>
                       <li className="flex justify-between pt-3 border-t border-green-500/30">
                         <span className="font-bold">Total Value: </span>
                         <span className="font-bold text-xl text-green-300">$701M</span>"
-                  <div className="bg-gradient-to-br from-green-900/20 to-emerald-900/20 border border-green-500/30 rounded-xl p-6">
                     <h3 className="text-xl font-bold text-white mb-4">Year 1 Returns</h3>
                     <ul className="space-y-3 text-purple-100">
                       <li className="flex justify-between">
-                        <span>Cost savings: </span>/span>,
+                        <span>Cost savings: </span>,
                         <span className="font-bold text-green-300">$234M</span>
                       </li>
                       <li className="flex justify-between">
-                        <span>Revenue growth: </span>/span>,
+                        <span>Revenue growth: </span>,
                         <span className="font-bold text-green-300">$340M</span>
                       </li>
                       <li className="flex justify-between">
-                        <span>Risk reduction: </span>/span>,
+                        <span>Risk reduction: </span>,
                         <span className="font-bold text-green-300">$127M</span>
                       </li>
                       <li className="flex justify-between pt-3 border-t border-green-500/30">
@@ -805,12 +790,12 @@ const MultiAgentEnterpriseOrchestration: React.FC = () => {
               to="/contact"
   className="inline-flex items-center px-8 py-4 rounded-xl font-bold text-white bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 shadow-xl hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105 group
               >
-                Schedule Assessment
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform 
+                Schedule Assessment"
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform "
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
-              <Link to="/services
-  className="inline-flex items-center px-8 py-4 rounded-xl font-bold text-white bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 transition-all duration-300 hover:scale-105>
+              <Link to="/services">
+  className="inline-flex items-center px-8 py-4 rounded-xl font-bold text-white bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 transition-all duration-300 hover:scale-105>"
           <div className="mt-16 bg-gradient-to-r from-purple-900/50 to-pink-900/50 border border-purple-500/30 rounded-2xl p-8 text-center">
             <h2 className="text-3xl font-bold text-white mb-4">Ready to Deploy Multi-Agent Orchestration?</h2>"
             <p className="text-purple-100 mb-6 max-w-2xl mx-auto">,"
@@ -825,11 +810,11 @@ const MultiAgentEnterpriseOrchestration: React.FC = () => {
               to="/contact"
   className="inline-flex items-center px-8 py-4 rounded-xl font-bold text-white bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 shadow-xl hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105 group
               >
-                Schedule Assessment
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform 
+                Schedule Assessment"
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform "
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
-              <Link to="/services
+              <Link to="/services">
   className="inline-flex items-center px-8 py-4 rounded-xl font-bold text-white bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 transition-all duration-300 hover:scale-105
               >
                 Explore Services
@@ -837,16 +822,16 @@ const MultiAgentEnterpriseOrchestration: React.FC = () => {
             </div>
           </div>
           
-          {/* Related Content */}
+          {/* Related Content */}"
           <div className="mt-16">
             <h2 className="text-2xl font-bold text-white mb-6">Related Content</h2>"
             <div className="grid md:grid-cols-2 gap-6">
           <div className="mt-16">
             <h2 className="text-2xl font-bold text-white mb-6">Related Content</h2>
             <div className="grid md:grid-cols-2 gap-6">
-              <Link to="/blog/ai-2025-cognitive-computing-enterprise-transformation
+              <Link to="/blog/ai-2025-cognitive-computing-enterprise-transformation">
   className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:border-purple-500/50 transition-all group
-              >
+              >"
                 <div className="flex items-center gap-3 mb-3">
                   <Brain className="w-6 h-6 text-pink-400 ">
                   <span className="text-sm font-semibold text-purple-300">BLOG POST</span>"
@@ -869,9 +854,9 @@ const MultiAgentEnterpriseOrchestration: React.FC = () => {
           <div className="mt-16">
             <h2 className="text-2xl font-bold text-white mb-6">Related Content</h2>
             <div className="grid md:grid-cols-2 gap-6">
-              <Link to="/blog/ai-2025-cognitive-computing-enterprise-transformation
+              <Link to="/blog/ai-2025-cognitive-computing-enterprise-transformation">
   className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:border-purple-500/50 transition-all group
-              >
+              >"
                 <div className="flex items-center gap-3 mb-3">
                   <Brain className="w-6 h-6 text-pink-400/>">
                   <span className="text-sm font-semibold text-purple-300">BLOG POST</span>"
@@ -889,9 +874,9 @@ const MultiAgentEnterpriseOrchestration: React.FC = () => {
                 </p>
               </Link>
               
-              <Link to="/case-studies/global-telecom-cognitive-transformation-4-7-billion
+              <Link to="/case-studies/global-telecom-cognitive-transformation-4-7-billion">
   className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:border-purple-500/50 transition-all group
-              >
+              >"
                 <div className="flex items-center gap-3 mb-3">
                   <Award className="w-6 h-6 text-green-400 ">
                   <span className="text-sm font-semibold text-purple-300">CASE STUDY</span>"
@@ -909,7 +894,7 @@ const MultiAgentEnterpriseOrchestration: React.FC = () => {
                 </h3>
                 <p className="text-purple-100 text-sm">
   className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:border-purple-500/50 transition-all group
-              >
+              >"
                 <div className="flex items-center gap-3 mb-3">
                   <Award className="w-6 h-6 text-green-400/>">
                   <span className="text-sm font-semibold text-purple-300">CASE STUDY</span>"
@@ -934,5 +919,4 @@ const MultiAgentEnterpriseOrchestration: React.FC = () => {
   );
 };
 
-export default MultiAgentEnterpriseOrchestration;
-;
+export default MultiAgentEnterpriseOrchestration;;

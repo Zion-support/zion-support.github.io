@@ -187,8 +187,7 @@ export default function AIMegaTrends20252026() {
           </p>
           <Link 
             href="/contact"
-            className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-          >
+            className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
             Start Your Transformation
           </Link>
         </div>
@@ -199,15 +198,13 @@ export default function AIMegaTrends20252026() {
         <div className="grid md:grid-cols-2 gap-4">
           <Link 
             href="/services/quantum-analytics"
-            className="block p-4 border rounded-lg hover:shadow-md transition-shadow"
-          >
+            className="block p-4 border rounded-lg hover:shadow-md transition-shadow">
             <h4 className="font-bold text-blue-600">Quantum Analytics 1000x Performance</h4>
             <p className="text-gray-600 text-sm">Discover how quantum computing revolutionizes data analytics</p>
           </Link>
           <Link 
             href="/case-studies/enterprise-success"
-            className="block p-4 border rounded-lg hover:shadow-md transition-shadow"
-          >
+            className="block p-4 border rounded-lg hover:shadow-md transition-shadow">
             <h4 className="font-bold text-green-600">$500M Global Enterprise Success</h4>
             <p className="text-gray-600 text-sm">Real-world transformation case study with massive ROI</p>
           </Link>

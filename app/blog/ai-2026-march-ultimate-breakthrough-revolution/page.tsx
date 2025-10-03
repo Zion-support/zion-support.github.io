@@ -139,14 +139,12 @@ export default function MarchUltimateBreakthroughRevolution() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">"
           <a 
             href="/[^"]*"
-            className="bg-white text-purple-600 hover:bg-gray-100 font-bold py-3 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl"
-          >
+            className="bg-white text-purple-600 hover:bg-gray-100 font-bold py-3 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl">
             Get Started Today
           </a>
           <a 
             href="/[^"]*"
-            className="border-2 border-white text-white hover:bg-white hover:text-purple-600 font-bold py-3 px-8 rounded-xl transition-all duration-300"
-          >
+            className="border-2 border-white text-white hover:bg-white hover:text-purple-600 font-bold py-3 px-8 rounded-xl transition-all duration-300">
             View Success Stories
           </a>
         </div>

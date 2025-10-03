@@ -45,6 +45,4 @@ export default function EdgeRateLimiterBlueprint2026(): React.JSX.Element {
       </div>
     </div>
   );
-}
-
-;
+};

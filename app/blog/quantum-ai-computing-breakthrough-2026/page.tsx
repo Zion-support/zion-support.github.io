@@ -228,7 +228,6 @@ export default function QuantumAIComputingBreakthrough2026() {
           </h2>
           
           <div className="grid md:grid-cols-3 gap-8">"
-            <div className="bg-gradient-to-br from-cyan-900/30 to-cyan-800/20 rounded-2xl p-8 border border-cyan-500/30">"
               <div className="text-4xl mb-4">🚀</div>"
               <h3 className="text-xl font-bold mb-4 text-cyan-400">Phase 1: Foundation (Q1 2026)</h3>"
               <ul className="space-y-2 text-sm text-gray-400">"
@@ -239,7 +238,6 @@ export default function QuantumAIComputingBreakthrough2026() {
               </ul>
             </div>
 
-            <div className="bg-gradient-to-br from-purple-900/30 to-purple-800/20 rounded-2xl p-8 border border-purple-500/30">"
               <div className="text-4xl mb-4">⚡</div>"
               <h3 className="text-xl font-bold mb-4 text-purple-400">Phase 2: Scale (Q2-Q3 2026)</h3>"
               <ul className="space-y-2 text-sm text-gray-400">"
@@ -250,7 +248,6 @@ export default function QuantumAIComputingBreakthrough2026() {
               </ul>
             </div>
 
-            <div className="bg-gradient-to-br from-blue-900/30 to-blue-800/20 rounded-2xl p-8 border border-blue-500/30">"
               <div className="text-4xl mb-4">🎯</div>"
               <h3 className="text-xl font-bold mb-4 text-blue-400">Phase 3: Optimize (Q4 2026)</h3>"
               <ul className="space-y-2 text-sm text-gray-400">"
@@ -276,14 +273,12 @@ export default function QuantumAIComputingBreakthrough2026() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <a 
                 href="/[^"]*"
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50"
-              >
+                className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50">
                 Start Quantum Journey
               </a>
               <a 
                 href="/[^"]*"
-                className="border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
-              >
+                className="border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300">
                 View Quantum Success Stories
               </a>
             </div>

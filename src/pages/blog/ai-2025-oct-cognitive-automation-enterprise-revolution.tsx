@@ -13,9 +13,8 @@ const CognitiveAutomationEnterpriseRevolution: () => {
         <article className="container mx-auto px-6 py-20">
         <article className="container mx-auto px-6 py-20">
           {/* Back Link */};
-          <Link to="/blog
-  className="inline-flex items-center text-zion-cyan hover:text-zion-blue-light mb-8 transition-colors"
-          >
+          <Link to="/blog">
+  className="inline-flex items-center text-zion-cyan hover:text-zion-blue-light mb-8 transition-colors">
             <ArrowLeft className="w-4 h-4 mr-2 ">
             <ArrowLeft className="w-4 h-4 mr-2" />
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">
@@ -24,9 +23,8 @@ const CognitiveAutomationEnterpriseRevolution: () => {
         <article className="container mx-auto px-6 py-20">
         <article className="container mx-auto px-6 py-20">
           {/* Back Link */};
-          <Link to="/blog
-  className="inline-flex items-center text-zion-cyan hover:text-zion-blue-light mb-8 transition-colors"
-          >
+          <Link to="/blog">
+  className="inline-flex items-center text-zion-cyan hover:text-zion-blue-light mb-8 transition-colors">
             <ArrowLeft className="w-4 h-4 mr-2 ">
             <ArrowLeft className="w-4 h-4 mr-2" />
             <ArrowLeft className="w-4 h-4 mr-2" />>
@@ -355,7 +353,7 @@ Real-world implementations across industries are delivering transformational res
                     <li className="flex items-start gap-2">
                       <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0/>
                       <span><strong>$12M annual savings</strong> in back-office operations</span>
-                    </li>
+                    </li>"
                     <li className="<li className="flex items-start gap-2">
                       <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />
               <h2 className="text-3xl font-bold text-white mb-6">📊 Proven Business Impact</h2>
@@ -431,7 +429,7 @@ Real-world implementations across industries are delivering transformational res
                     <li className="flex items-start gap-2">
                       <CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0/>
                       <span><strong>62% improvement</strong> in patient appointment scheduling efficiency</span>
-                    </li>
+                    </li>"
                     <li className="<li className="flex items-start gap-2">
                       <CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />
                 <div className="bg-blue-900/40 rounded-xl p-6 border border-blue-500/30">
@@ -495,7 +493,7 @@ Real-world implementations across industries are delivering transformational res
                     <li className="flex items-start gap-2">
                       <CheckCircle className="w-5 h-5 text-purple-400 mt-1 flex-shrink-0/>
                       <span><strong>35% improvement</strong> in supply chain optimization</span>
-                    </li>
+                    </li>"
                     <li className="<li className="flex items-start gap-2">
                       <CheckCircle className="w-5 h-5 text-purple-400 mt-1 flex-shrink-0" />
                 <div className="bg-purple-900/40 rounded-xl p-6 border border-purple-500/30">
@@ -559,7 +557,7 @@ Real-world implementations across industries are delivering transformational res
                     <li className="flex items-start gap-2">
                       <CheckCircle className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0/>
                       <span><strong>2.4x increase</strong> in customer satisfaction scores</span>
-                    </li>
+                    </li>"
                     <li className="<li className="flex items-start gap-2">
                       <CheckCircle className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />
                 <div className="bg-cyan-900/40 rounded-xl p-6 border border-cyan-500/30">
@@ -624,7 +622,7 @@ Real-world implementations across industries are delivering transformational res
                     <div className="bg-cyan-500/20 rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
                       <span className="text-2xl font-bold text-cyan-400">1</span>
                     </div>
-                    <div >
+                    <div>
                       <h3 className="text-2xl font-bold text-white mb-3">Discovery & Assessment (Weeks 1-3)</h3>
                       <p className="mb-4">,"
   Identify high-value automation opportunities through process mining, stakeholder interviews
@@ -648,7 +646,7 @@ Real-world implementations across industries are delivering transformational res
                     <div className="bg-cyan-500/20 rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
                       <span className="text-2xl font-bold text-cyan-400">1</span>
                     </div>
-                    <div >
+                    <div>
                       <h3 className="text-2xl font-bold text-white mb-3">Discovery & Assessment (Weeks 1-3)</h3>
                       <p className="mb-4">,"
   Identify high-value automation opportunities through process mining, stakeholder interviews
@@ -672,7 +670,7 @@ Real-world implementations across industries are delivering transformational res
                     <div className="bg-purple-500/20 rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
                       <span className="text-2xl font-bold text-purple-400">2</span>
                     </div>
-                    <div >
+                    <div>
                       <h3 className="text-2xl font-bold text-white mb-3">Design & Architecture (Weeks 4-6)</h3>
                       <p className="mb-4">
   Architect scalable cognitive automation solutions integrated with existing systems. 
@@ -684,7 +682,7 @@ Real-world implementations across industries are delivering transformational res
                     <div className="bg-purple-500/20 rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
                       <span className="text-2xl font-bold text-purple-400">2</span>
                     </div>
-                    <div >
+                    <div>
                       <h3 className="text-2xl font-bold text-white mb-3">Design & Architecture (Weeks 4-6)</h3>
                       <p className="mb-4">"
   Architect scalable cognitive automation solutions integrated with existing systems. 
@@ -705,7 +703,7 @@ Real-world implementations across industries are delivering transformational res
                     <div className="bg-pink-500/20 rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
                       <span className="text-2xl font-bold text-pink-400">3</span>
                     </div>
-                    <div >
+                    <div>
                       <h3 className="text-2xl font-bold text-white mb-3">Pilot Development (Weeks 7-12)</h3>
                       <p className="mb-4">
   Build and train AI models on historical data. Develop automation workflows with 
@@ -717,7 +715,7 @@ Real-world implementations across industries are delivering transformational res
                     <div className="bg-pink-500/20 rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
                       <span className="text-2xl font-bold text-pink-400">3</span>
                     </div>
-                    <div >
+                    <div>
                       <h3 className="text-2xl font-bold text-white mb-3">Pilot Development (Weeks 7-12)</h3>
                       <p className="mb-4">"
   Build and train AI models on historical data. Develop automation workflows with 
@@ -738,7 +736,7 @@ Real-world implementations across industries are delivering transformational res
                     <div className="bg-blue-500/20 rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
                       <span className="text-2xl font-bold text-blue-400">4</span>
                     </div>
-                    <div >
+                    <div>
                       <h3 className="text-2xl font-bold text-white mb-3">Validation & Optimization (Weeks 13-16)</h3>
                       <p className="mb-4">
   Measure accuracy, performance, and business outcomes. Fine-tune models based on 
@@ -750,7 +748,7 @@ Real-world implementations across industries are delivering transformational res
                     <div className="bg-blue-500/20 rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
                       <span className="text-2xl font-bold text-blue-400">4</span>
                     </div>
-                    <div >
+                    <div>
                       <h3 className="text-2xl font-bold text-white mb-3">Validation & Optimization (Weeks 13-16)</h3>
                       <p className="mb-4">"
   Measure accuracy, performance, and business outcomes. Fine-tune models based on 
@@ -771,7 +769,7 @@ Real-world implementations across industries are delivering transformational res
                     <div className="bg-green-500/20 rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
                       <span className="text-2xl font-bold text-green-400">5</span>
                     </div>
-                    <div >
+                    <div>
                       <h3 className="text-2xl font-bold text-white mb-3">Enterprise Rollout (Weeks 17-24)</h3>
                       <p className="mb-4">
   Deploy to production with phased rollout plan. Train end users and support teams. 
@@ -783,7 +781,7 @@ Real-world implementations across industries are delivering transformational res
                     <div className="bg-green-500/20 rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
                       <span className="text-2xl font-bold text-green-400">5</span>
                     </div>
-                    <div >
+                    <div>
                       <h3 className="text-2xl font-bold text-white mb-3">Enterprise Rollout (Weeks 17-24)</h3>
                       <p className="mb-4">"
   Deploy to production with phased rollout plan. Train end users and support teams. 
@@ -804,7 +802,7 @@ Real-world implementations across industries are delivering transformational res
                     <div className="bg-yellow-500/20 rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
                       <span className="text-2xl font-bold text-yellow-400">6</span>
                     </div>
-                    <div >
+                    <div>
                       <h3 className="text-2xl font-bold text-white mb-3">Continuous Improvement (Ongoing)</h3>
                       <p className="mb-4">
   Monitor performance metrics, gather user feedback, and continuously enhance models. 
@@ -816,7 +814,7 @@ Real-world implementations across industries are delivering transformational res
                     <div className="bg-yellow-500/20 rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
                       <span className="text-2xl font-bold text-yellow-400">6</span>
                     </div>
-                    <div >
+                    <div>
                       <h3 className="text-2xl font-bold text-white mb-3">Continuous Improvement (Ongoing)</h3>
                       <p className="mb-4">"
   Monitor performance metrics, gather user feedback, and continuously enhance models. 
@@ -864,30 +862,30 @@ Real-world implementations across industries are delivering transformational res
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 to="/contact"
   className="inline-flex items-center justify-center gap-2 bg-purple-500 hover:bg-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg
-                >
+                >"
                   <Rocket className="w-5 h-5 ">
                   <Rocket className="w-5 h-5" />
                   <Rocket className="w-5 h-5/>">
                   <Rocket className="w-5 h-5" />
   Schedule Consultation
                 </Link>
-                <Link to="/services
+                <Link to="/services">
   className="inline-flex items-center justify-center gap-2 border-2 border-purple-400 text-purple-300 hover:bg-purple-500/20 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105
-                >
+                >"
                   <TrendingUp className="w-5 h-5" />>
                   <TrendingUp className="w-5 h-5" />
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 to="/contact"
   className="inline-flex items-center justify-center gap-2 bg-purple-500 hover:bg-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg
-                >
+                >"
                   <Rocket className="w-5 h-5 ">
                   <Rocket className="w-5 h-5" />
   Schedule Consultation
                 </Link>
-                <Link to="/services
+                <Link to="/services">
   className="inline-flex items-center justify-center gap-2 border-2 border-purple-400 text-purple-300 hover:bg-purple-500/20 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105
-                >
+                >"
                   <TrendingUp className="w-5 h-5" />>
                   <TrendingUp className="w-5 h-5" />
                   <TrendingUp className="w-5 h-5/>">
@@ -903,5 +901,4 @@ Real-world implementations across industries are delivering transformational res
   );
 };
 
-export default CognitiveAutomationEnterpriseRevolution;
-;
+export default CognitiveAutomationEnterpriseRevolution;;

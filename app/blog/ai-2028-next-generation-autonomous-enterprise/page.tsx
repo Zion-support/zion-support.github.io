@@ -127,8 +127,7 @@ export default function AI2028NextGenerationAutonomousEnterprise() {
           </p>
           <Link 
             href="/[^"]*"
-            className="inline-block bg-white text-green-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-          >
+            className="inline-block bg-white text-green-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
             Schedule Your Transformation Consultation
           </Link>
         </div>
@@ -138,15 +137,13 @@ export default function AI2028NextGenerationAutonomousEnterprise() {
           <div className="grid md:grid-cols-2 gap-4">"
             <Link 
               href="/[^"]*"
-              className="block p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors"
-            >
+              className="block p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
               <h5 className="font-semibold text-blue-600 mb-2">AI 2027 Quantum Breakthrough</h5>"
               <p className="text-sm text-gray-600">Discover our quantum AI revolution</p>"
             </Link>
             <Link 
               href="/[^"]*"
-              className="block p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors"
-            >
+              className="block p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
               <h5 className="font-semibold text-blue-600 mb-2">$1.2B Success Story</h5>"
               <p className="text-sm text-gray-600">Real-world transformation results</p>"
             </Link>

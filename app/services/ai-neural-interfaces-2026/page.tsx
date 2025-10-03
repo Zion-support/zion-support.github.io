@@ -212,20 +212,17 @@ export default function AINeuralInterfacesService() {
             <div className="space-y-4">"
               <a
                 href="tel:+13024640950"
-                className="block w-full bg-purple-600 text-white text-center py-3 rounded-lg font-bold hover:bg-purple-700 transition-colors"
-              >
+                className="block w-full bg-purple-600 text-white text-center py-3 rounded-lg font-bold hover:bg-purple-700 transition-colors">
                 📞 Call +1 302 464 0950
               </a>
               <a
                 href="mailto:kleber@ziontechgroup.com"
-                className="block w-full border-2 border-purple-600 text-purple-600 text-center py-3 rounded-lg font-bold hover:bg-purple-600 hover:text-white transition-colors"
-              >
+                className="block w-full border-2 border-purple-600 text-purple-600 text-center py-3 rounded-lg font-bold hover:bg-purple-600 hover:text-white transition-colors">
                 📧 Schedule Demo
               </a>
               <Link
                 href="/case-studies/ai-neural-interface-success-2026"
-                className="block w-full text-purple-600 text-center py-2 font-semibold hover:underline"
-              >
+                className="block w-full text-purple-600 text-center py-2 font-semibold hover:underline">
                 View Success Stories →
               </Link>
             </div>
@@ -243,14 +240,12 @@ export default function AINeuralInterfacesService() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">"
             <a
               href="tel:+13024640950"
-              className="bg-white text-purple-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors"
-            >
+              className="bg-white text-purple-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors">
               📞 Call +1 302 464 0950
             </a>
             <a
               href="mailto:kleber@ziontechgroup.com"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-600 transition-colors"
-            >
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-600 transition-colors">
               🧠 Schedule Neural Demo
             </a>
           </div>
@@ -302,14 +297,12 @@ export default function AINeuralInterfacesService() {
         <div className="flex gap-4">"
           <Link
             href="/services"
-            className="text-purple-600 hover:text-purple-800 font-semibold"
-          >
+            className="text-purple-600 hover:text-purple-800 font-semibold">
             View All Services →
           </Link>
           <Link
             href="/case-studies"
-            className="text-blue-600 hover:text-blue-800 font-semibold"
-          >
+            className="text-blue-600 hover:text-blue-800 font-semibold">
             View Success Stories →
           </Link>
         </div>

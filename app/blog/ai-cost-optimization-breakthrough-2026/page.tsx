@@ -63,14 +63,12 @@ export default function AICostOptimizationBreakthrough2026() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <a 
                 href="#optimization-strategies"
-                className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
-              >
+                className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1">
                 Explore Optimization Strategies
               </a>
               <a 
                 href="/[^"]*"
-                className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
-              >
+                className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300">
                 Get Cost Optimization Audit
               </a>
             </div>
@@ -459,14 +457,12 @@ export default function AICostOptimizationBreakthrough2026() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="tel:+13024640950"
-                  className="bg-white text-green-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all hover:scale-105 shadow-lg"
-                >
+                  className="bg-white text-green-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all hover:scale-105 shadow-lg">
                   📞 Call +1 302 464 0950
                 </a>
                 <a
                   href="/contact"
-                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-green-600 transition-all hover:scale-105"
-                >
+                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-green-600 transition-all hover:scale-105">
                   Get Free Cost Optimization Audit
                 </a>
               </div>

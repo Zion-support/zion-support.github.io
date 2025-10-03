@@ -9,8 +9,7 @@ export default function October2025CodeGenerationRevolutionBanner() {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-      className="relative overflow-hidden bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-950 rounded-2xl shadow-2xl mb-12 border border-purple-500/20"
-    >
+      className="relative overflow-hidden bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-950 rounded-2xl shadow-2xl mb-12 border border-purple-500/20">
       {/* Animated background effects */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -inset-[100%] opacity-30">
@@ -101,15 +100,13 @@ export default function October2025CodeGenerationRevolutionBanner() {
             <div className="flex flex-wrap gap-4">
               <Link
                 to="/blog/ai-2025-oct-next-gen-code-generation-revolution"
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold px-8 py-3 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
-              >
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold px-8 py-3 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
                 Read Full Article
                 <TrendingUp className="w-5 h-5" />
               </Link>
               <Link
                 to="/contact"
-                className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white font-semibold px-8 py-3 rounded-lg transition-all duration-300 border border-white/20"
-              >
+                className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white font-semibold px-8 py-3 rounded-lg transition-all duration-300 border border-white/20">
                 Get Started
                 <Zap className="w-5 h-5" />
               </Link>

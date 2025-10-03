@@ -466,14 +466,12 @@ const autonomousConfig = {
           <div className="flex flex-col sm:flex-row gap-4">"
             <a
               href="/services/ai-autonomous-operations"
-              className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-            >
+              className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
               Explore Our Services
             </a>
             <a
               href="/contact"
-              className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
-            >
+              className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
               Get Free Consultation
             </a>
           </div>

@@ -41,14 +41,12 @@ export default function EnterpriseAITransformation2026CompleteGuide() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <a 
                 href="#transformation-framework" "
-                className="bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-emerald-500/50 transform hover:-translate-y-1"
-              >
+                className="bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-emerald-500/50 transform hover:-translate-y-1">
                 Explore Framework →
               </a>
               <a 
                 href="/[^"]*"
-                className="border-2 border-emerald-500 text-emerald-400 hover:bg-emerald-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
-              >
+                className="border-2 border-emerald-500 text-emerald-400 hover:bg-emerald-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300">
                 Get Implementation Support
               </a>
             </div>
@@ -248,14 +246,12 @@ export default function EnterpriseAITransformation2026CompleteGuide() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <a 
                 href="/[^"]*"
-                className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50"
-              >
+                className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50">
                 Get Free Assessment
               </a>
               <a 
                 href="/[^"]*"
-                className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
-              >
+                className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300">
                 View Success Stories
               </a>
             </div>
@@ -303,8 +299,7 @@ export default function EnterpriseAITransformation2026CompleteGuide() {
               </div>
               <a 
                 href="/[^"]*"
-                className="inline-block text-purple-400 hover:text-purple-300 font-semibold transition-colors duration-300"
-              >
+                className="inline-block text-purple-400 hover:text-purple-300 font-semibold transition-colors duration-300">
                 Read Full Case Study →
               </a>
             </div>
@@ -336,8 +331,7 @@ export default function EnterpriseAITransformation2026CompleteGuide() {
               </div>
               <a 
                 href="/[^"]*"
-                className="inline-block text-purple-400 hover:text-purple-300 font-semibold transition-colors duration-300"
-              >
+                className="inline-block text-purple-400 hover:text-purple-300 font-semibold transition-colors duration-300">
                 Read Full Case Study →
               </a>
             </div>
@@ -357,14 +351,12 @@ export default function EnterpriseAITransformation2026CompleteGuide() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">"
             <a 
               href="/[^"]*"
-              className="bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-emerald-500/50"
-            >
+              className="bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-emerald-500/50">
               Start Transformation
             </a>
             <a 
               href="/[^"]*"
-              className="border-2 border-emerald-500 text-emerald-400 hover:bg-emerald-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
-            >
+              className="border-2 border-emerald-500 text-emerald-400 hover:bg-emerald-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300">
               Explore More Guides
             </a>
           </div>

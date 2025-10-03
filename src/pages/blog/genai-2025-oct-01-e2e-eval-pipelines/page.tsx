@@ -41,6 +41,4 @@ export default function GenAIE2EEvalPipelines(): React.JSX.Element {
       </div>
     </div>
   );
-}
-
-;
+};

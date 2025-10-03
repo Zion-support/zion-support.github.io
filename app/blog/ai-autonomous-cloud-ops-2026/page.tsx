@@ -188,14 +188,12 @@ export default function AIAutonomousCloudOps2026() {
             <div className="flex flex-col sm:flex-row gap-4">"
               <Link
                 href="/services/ai-autonomous-cloud-ops"
-                className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-              >
+                className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
                 Explore Our Services
               </Link>
               <a
                 href="tel:+13024640950"
-                className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
-              >
+                className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
                 Call +1 302 464 0950
               </a>
             </div>

@@ -241,14 +241,12 @@ export default function AI2027QuantumEnhancedMachineLearning() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">"
             <Link
               href="/services/ai-quantum-computing"
-              className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-            >
+              className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
               Explore Quantum AI Services
             </Link>
             <a
               href="tel:+13024640950"
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
-            >
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors">
               Call +1 302 464 0950
             </a>
           </div>

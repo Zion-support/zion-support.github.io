@@ -13,9 +13,8 @@ const MultimodalEnterpriseIntelligence: () => {
         <article className="container mx-auto px-6 py-20">
         <article className="container mx-auto px-6 py-20">
           {/* Back Link */};
-          <Link to="/blog
-  className="inline-flex items-center text-zion-cyan hover:text-zion-blue-light mb-8 transition-colors"
-          >
+          <Link to="/blog">
+  className="inline-flex items-center text-zion-cyan hover:text-zion-blue-light mb-8 transition-colors">
             <ArrowLeft className="w-4 h-4 mr-2 ">
             <ArrowLeft className="w-4 h-4 mr-2" />
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">
@@ -24,9 +23,8 @@ const MultimodalEnterpriseIntelligence: () => {
         <article className="container mx-auto px-6 py-20">
         <article className="container mx-auto px-6 py-20">
           {/* Back Link */};
-          <Link to="/blog
-  className="inline-flex items-center text-zion-cyan hover:text-zion-blue-light mb-8 transition-colors"
-          >
+          <Link to="/blog">
+  className="inline-flex items-center text-zion-cyan hover:text-zion-blue-light mb-8 transition-colors">
             <ArrowLeft className="w-4 h-4 mr-2 ">
             <ArrowLeft className="w-4 h-4 mr-2" />
             <ArrowLeft className="w-4 h-4 mr-2" />>
@@ -89,10 +87,10 @@ const MultimodalEnterpriseIntelligence: () => {
             <div className="flex items-center gap-6 mt-8 text-zion-slate-light">
               <div className="flex items-center gap-2">
                 <Brain className="w-5 h-5 text-zion-cyan" />
-                <span>Dr. Sarah Chen, AI Research Director</span>/span>
+                <span>Dr. Sarah Chen, AI Research Director</span>
               </div>
-              <span>•</span>/span>
-              <span>October 1, 2025</span>/span>
+              <span>•</span>
+              <span>October 1, 2025</span>
             </div>
           </div>
 
@@ -312,41 +310,41 @@ const MultimodalEnterpriseIntelligence: () => {
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3">
                     <Zap className="w-5 h-5 text-zion-cyan mt-1 flex-shrink-0 ">
-                    <div >
+                    <div>
                       <strong className="text-white">Vision Models:</strong> GPT-4V, Claude 3.5 Sonnet Vision"
                       LLaVA 1.6, BLIP-2 for image understanding and generation
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
                     <Zap className="w-5 h-5 text-purple-400 mt-1 flex-shrink-0 ">
-                    <div >
+                    <div>
                       <strong className="text-white">Language Models:</strong> GPT-4 Turbo, Claude 3.5 Sonnet"
                       Llama 3.1 405B for text processing and reasoning
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
                     <Zap className="w-5 h-5 text-pink-400 mt-1 flex-shrink-0 ">
-                    <div >
+                    <div>
               <h2 className="text-3xl font-bold text-white mb-4">🏗️ Enterprise Multimodal Architecture</h2>
               <div className="bg-gradient-to-r from-zion-blue/10 to-purple-900/10 rounded-xl p-6 border border-zion-cyan/30">
                 <h3 className="text-xl font-bold text-white mb-4">Production-Ready Stack (Oct 2025)</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3">
-                    <Zap className="w-5 h-5 text-zion-cyan mt-1 flex-shrink-0/>
+                    <Zap className="w-5 h-5 text-zion-cyan mt-1 flex-shrink-0/>"
                     <div >">
                       <strong className="text-white">Vision Models:</strong> GPT-4V, Claude 3.5 Sonnet Vision
                       LLaVA 1.6, BLIP-2 for image understanding and generation
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
-                    <Zap className="w-5 h-5 text-purple-400 mt-1 flex-shrink-0/>
+                    <Zap className="w-5 h-5 text-purple-400 mt-1 flex-shrink-0/>"
                     <div >">
                       <strong className="text-white">Language Models:</strong> GPT-4 Turbo, Claude 3.5 Sonnet
                       Llama 3.1 405B for text processing and reasoning
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
-                    <Zap className="w-5 h-5 text-pink-400 mt-1 flex-shrink-0/>
+                    <Zap className="w-5 h-5 text-pink-400 mt-1 flex-shrink-0/>"
                     <div >">
                       <strong className="text-white">Audio Models: </strong> Whisper v3, AudioCraft, MusicGen 
                       for speech, sound, and audio generation
@@ -354,9 +352,9 @@ const MultimodalEnterpriseIntelligence: () => {
                   </li>
                   <li className="flex items-start gap-3">
                     <Zap className="w-5 h-5 text-green-400 mt-1 flex-shrink-0 ">
-                    <div >
+                    <div>
                   <li className="flex items-start gap-3">
-                    <Zap className="w-5 h-5 text-green-400 mt-1 flex-shrink-0/>
+                    <Zap className="w-5 h-5 text-green-400 mt-1 flex-shrink-0/>"
                     <div >">
                       <strong className="text-white">Orchestration: </strong> LangChain, LlamaIndex, custom 
               <h2 className="text-3xl font-bold text-white mb-4">🏗️ Enterprise Multimodal Architecture</h2>
@@ -365,28 +363,28 @@ const MultimodalEnterpriseIntelligence: () => {
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3">
                     <Zap className="w-5 h-5 text-zion-cyan mt-1 flex-shrink-0" />
-                    <div >
+                    <div>
                       <strong className="text-white">Vision Models: </strong> GPT-4V, Claude 3.5 Sonnet Vision, 
                       LLaVA 1.6, BLIP-2 for image understanding and generation
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
                     <Zap className="w-5 h-5 text-purple-400 mt-1 flex-shrink-0" />
-                    <div >
+                    <div>
                       <strong className="text-white">Language Models: </strong> GPT-4 Turbo, Claude 3.5 Sonnet, 
                       Llama 3.1 405B for text processing and reasoning
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
                     <Zap className="w-5 h-5 text-pink-400 mt-1 flex-shrink-0" />
-                    <div >
+                    <div>
                       <strong className="text-white">Audio Models: </strong> Whisper v3, AudioCraft, MusicGen 
                       for speech, sound, and audio generation
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
                     <Zap className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />
-                    <div >
+                    <div>
                       <strong className="text-white">Orchestration: </strong> LangChain, LlamaIndex, custom 
               <h2 className="text-3xl font-bold text-white mb-4">🏗️ Enterprise Multimodal Architecture</h2>"
               <div className="bg-gradient-to-r from-zion-blue/10 to-purple-900/10 rounded-xl p-6 border border-zion-cyan/30">
@@ -394,28 +392,28 @@ const MultimodalEnterpriseIntelligence: () => {
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3">
                     <Zap className="w-5 h-5 text-zion-cyan mt-1 flex-shrink-0/>">
-                    <div >
+                    <div>
                       <strong className="text-white">Vision Models:</strong> GPT-4V, Claude 3.5 Sonnet Vision"
                       LLaVA 1.6, BLIP-2 for image understanding and generation
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
                     <Zap className="w-5 h-5 text-purple-400 mt-1 flex-shrink-0/>">
-                    <div >
+                    <div>
                       <strong className="text-white">Language Models:</strong> GPT-4 Turbo, Claude 3.5 Sonnet"
                       Llama 3.1 405B for text processing and reasoning
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
                     <Zap className="w-5 h-5 text-pink-400 mt-1 flex-shrink-0/>">
-                    <div >
+                    <div>
                       <strong className="text-white">Audio Models: </strong> Whisper v3, AudioCraft, MusicGen 
                       for speech, sound, and audio generation
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
                     <Zap className="w-5 h-5 text-green-400 mt-1 flex-shrink-0/>">
-                    <div >
+                    <div>
                       <strong className="text-white">Orchestration: </strong> LangChain, LlamaIndex, custom 
               <h2 className="text-3xl font-bold text-white mb-4">🏗️ Enterprise Multimodal Architecture</h2>
               <div className="bg-gradient-to-r from-zion-blue/10 to-purple-900/10 rounded-xl p-6 border border-zion-cyan/30">
@@ -423,28 +421,28 @@ const MultimodalEnterpriseIntelligence: () => {
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3">
                     <Zap className="w-5 h-5 text-zion-cyan mt-1 flex-shrink-0" />
-                    <div >
+                    <div>
                       <strong className="text-white">Vision Models: </strong> GPT-4V, Claude 3.5 Sonnet Vision, 
                       LLaVA 1.6, BLIP-2 for image understanding and generation
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
                     <Zap className="w-5 h-5 text-purple-400 mt-1 flex-shrink-0" />
-                    <div >
+                    <div>
                       <strong className="text-white">Language Models: </strong> GPT-4 Turbo, Claude 3.5 Sonnet, 
                       Llama 3.1 405B for text processing and reasoning
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
                     <Zap className="w-5 h-5 text-pink-400 mt-1 flex-shrink-0" />
-                    <div >
+                    <div>
                       <strong className="text-white">Audio Models: </strong> Whisper v3, AudioCraft, MusicGen 
                       for speech, sound, and audio generation
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
                     <Zap className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />
-                    <div >
+                    <div>
                       <strong className="text-white">Orchestration: </strong> LangChain, LlamaIndex, custom 
                       pipelines for unified multimodal workflows
                     </div>
@@ -458,19 +456,19 @@ const MultimodalEnterpriseIntelligence: () => {
               <h2 className="text-3xl font-bold text-white mb-6">💰 Enterprise ROI: Multimodal AI</h2>
               <div className="bg-gradient-to-r from-green-900/40 to-blue-900/40 rounded-xl p-8 border border-green-500/30">
                 <div className="grid md:grid-cols-2 gap-6">
-                  <div >
+                  <div>
                     <h3 className="text-xl font-bold text-white mb-4">Investment</h3>
                     <ul className="space-y-2 text-sm">
                       <li className="flex justify-between">
-                        <span>Platform licensing: </span>/span>,
+                        <span>Platform licensing: </span>,
                         <span className="text-white font-semibold">$180K/year</span>"
                       </li>
                       <li className="flex justify-between">
-                        <span>Implementation: </span>/span>,
+                        <span>Implementation: </span>,
                         <span className="text-white font-semibold">$250K one-time</span>"
                       </li>
                       <li className="flex justify-between">
-                        <span>Training & support: </span>/span>,
+                        <span>Training & support: </span>,
                         <span className="text-white font-semibold">$120K/year</span>"
                       </li>
                       <li className="flex justify-between border-t border-white/20 pt-2 mt-2">
@@ -479,19 +477,19 @@ const MultimodalEnterpriseIntelligence: () => {
               <h2 className="text-3xl font-bold text-white mb-6">💰 Enterprise ROI: Multimodal AI</h2>
               <div className="bg-gradient-to-r from-green-900/40 to-blue-900/40 rounded-xl p-8 border border-green-500/30">
                 <div className="grid md:grid-cols-2 gap-6">
-                  <div >
+                  <div>
                     <h3 className="text-xl font-bold text-white mb-4">Investment</h3>
                     <ul className="space-y-2 text-sm">
                       <li className="flex justify-between">
-                        <span>Platform licensing: </span>/span>,
+                        <span>Platform licensing: </span>,
                         <span className="text-white font-semibold">$180K/year</span>
                       </li>
                       <li className="flex justify-between">
-                        <span>Implementation: </span>/span>,
+                        <span>Implementation: </span>,
                         <span className="text-white font-semibold">$250K one-time</span>
                       </li>
                       <li className="flex justify-between">
-                        <span>Training & support: </span>/span>,
+                        <span>Training & support: </span>,
                         <span className="text-white font-semibold">$120K/year</span>
                       </li>
                       <li className="flex justify-between border-t border-white/20 pt-2 mt-2">
@@ -500,19 +498,19 @@ const MultimodalEnterpriseIntelligence: () => {
               <h2 className="text-3xl font-bold text-white mb-6">💰 Enterprise ROI: Multimodal AI</h2>
               <div className="bg-gradient-to-r from-green-900/40 to-blue-900/40 rounded-xl p-8 border border-green-500/30">
                 <div className="grid md:grid-cols-2 gap-6">
-                  <div >
+                  <div>
                     <h3 className="text-xl font-bold text-white mb-4">Investment</h3>
                     <ul className="space-y-2 text-sm">
                       <li className="flex justify-between">
-                        <span>Platform licensing: </span>/span>,
+                        <span>Platform licensing: </span>,
                         <span className="text-white font-semibold">$180K/year</span>"
                       </li>
                       <li className="flex justify-between">
-                        <span>Implementation: </span>/span>,
+                        <span>Implementation: </span>,
                         <span className="text-white font-semibold">$250K one-time</span>"
                       </li>
                       <li className="flex justify-between">
-                        <span>Training & support: </span>/span>,
+                        <span>Training & support: </span>,
                         <span className="text-white font-semibold">$120K/year</span>"
                       </li>
                       <li className="flex justify-between border-t border-white/20 pt-2 mt-2">
@@ -521,19 +519,19 @@ const MultimodalEnterpriseIntelligence: () => {
               <h2 className="text-3xl font-bold text-white mb-6">💰 Enterprise ROI: Multimodal AI</h2>
               <div className="bg-gradient-to-r from-green-900/40 to-blue-900/40 rounded-xl p-8 border border-green-500/30">
                 <div className="grid md:grid-cols-2 gap-6">
-                  <div >
+                  <div>
                     <h3 className="text-xl font-bold text-white mb-4">Investment</h3>
                     <ul className="space-y-2 text-sm">
                       <li className="flex justify-between">
-                        <span>Platform licensing: </span>/span>,
+                        <span>Platform licensing: </span>,
                         <span className="text-white font-semibold">$180K/year</span>
                       </li>
                       <li className="flex justify-between">
-                        <span>Implementation: </span>/span>,
+                        <span>Implementation: </span>,
                         <span className="text-white font-semibold">$250K one-time</span>
                       </li>
                       <li className="flex justify-between">
-                        <span>Training & support: </span>/span>,
+                        <span>Training & support: </span>,
                         <span className="text-white font-semibold">$120K/year</span>
                       </li>
                       <li className="flex justify-between border-t border-white/20 pt-2 mt-2">
@@ -542,19 +540,19 @@ const MultimodalEnterpriseIntelligence: () => {
                       </li>
                     </ul>
                   </div>
-                  <div >
+                  <div>
                     <h3 className="text-xl font-bold text-white mb-4">Returns (Year 1)</h3>
                     <ul className="space-y-2 text-sm">
                       <li className="flex justify-between">
-                        <span>Process automation savings: </span>/span>,
+                        <span>Process automation savings: </span>,
                         <span className="text-green-400 font-semibold">$1.8M</span>"
                       </li>
                       <li className="flex justify-between">
-                        <span>Quality improvement value=</span>/span>,
+                        <span>Quality improvement value=</span>,
                         <span className="text-green-400 font-semibold">$920K</span>"
                       </li>
                       <li className="flex justify-between">
-                        <span>Productivity gains: </span>/span>,
+                        <span>Productivity gains: </span>,
                         <span className="text-green-400 font-semibold">$1.2M</span>"
                       </li>
                       <li className="flex justify-between border-t border-white/20 pt-2 mt-2">
@@ -563,15 +561,15 @@ const MultimodalEnterpriseIntelligence: () => {
                     <h3 className="text-xl font-bold text-white mb-4">Returns (Year 1)</h3>
                     <ul className="space-y-2 text-sm">
                       <li className="flex justify-between">
-                        <span>Process automation savings: </span>/span>,
+                        <span>Process automation savings: </span>,
                         <span className="text-green-400 font-semibold">$1.8M</span>
                       </li>
                       <li className="flex justify-between">
-                        <span>Quality improvement value=</span>/span>,
+                        <span>Quality improvement value=</span>,
                         <span className="text-green-400 font-semibold">$920K</span>
                       </li>
                       <li className="flex justify-between">
-                        <span>Productivity gains: </span>/span>,
+                        <span>Productivity gains: </span>,
                         <span className="text-green-400 font-semibold">$1.2M</span>
                       </li>
                       <li className="flex justify-between border-t border-white/20 pt-2 mt-2">
@@ -580,15 +578,15 @@ const MultimodalEnterpriseIntelligence: () => {
                     <h3 className="text-xl font-bold text-white mb-4">Returns (Year 1)</h3>
                     <ul className="space-y-2 text-sm">
                       <li className="flex justify-between">
-                        <span>Process automation savings: </span>/span>,
+                        <span>Process automation savings: </span>,
                         <span className="text-green-400 font-semibold">$1.8M</span>"
                       </li>
                       <li className="flex justify-between">
-                        <span>Quality improvement value=</span>/span>,
+                        <span>Quality improvement value=</span>,
                         <span className="text-green-400 font-semibold">$920K</span>"
                       </li>
                       <li className="flex justify-between">
-                        <span>Productivity gains: </span>/span>,
+                        <span>Productivity gains: </span>,
                         <span className="text-green-400 font-semibold">$1.2M</span>"
                       </li>
                       <li className="flex justify-between border-t border-white/20 pt-2 mt-2">
@@ -597,15 +595,15 @@ const MultimodalEnterpriseIntelligence: () => {
                     <h3 className="text-xl font-bold text-white mb-4">Returns (Year 1)</h3>
                     <ul className="space-y-2 text-sm">
                       <li className="flex justify-between">
-                        <span>Process automation savings: </span>/span>,
+                        <span>Process automation savings: </span>,
                         <span className="text-green-400 font-semibold">$1.8M</span>
                       </li>
                       <li className="flex justify-between">
-                        <span>Quality improvement value=</span>/span>,
+                        <span>Quality improvement value=</span>,
                         <span className="text-green-400 font-semibold">$920K</span>
                       </li>
                       <li className="flex justify-between">
-                        <span>Productivity gains: </span>/span>,
+                        <span>Productivity gains: </span>,
                         <span className="text-green-400 font-semibold">$1.2M</span>
                       </li>
                       <li className="flex justify-between border-t border-white/20 pt-2 mt-2">
@@ -647,11 +645,11 @@ const MultimodalEnterpriseIntelligence: () => {
                   <ul className="space-y-2 ml-4">
                     <li className="flex items-start gap-2">
                       <span className="text-zion-cyan mt-1">▸</span>
-                      <span>Assess current systems and identify high-impact use cases</span>/span>
+                      <span>Assess current systems and identify high-impact use cases</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-zion-cyan mt-1">▸</span>
-                      <span>Select multimodal platform (GPT-4V, Claude Vision, or custom)</span>/span>
+                      <span>Select multimodal platform (GPT-4V, Claude Vision, or custom)</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-zion-cyan mt-1">▸</span>
@@ -669,15 +667,15 @@ const MultimodalEnterpriseIntelligence: () => {
                   <ul className="space-y-2 ml-4">
                     <li className="flex items-start gap-2">
                       <span className="text-zion-cyan mt-1">▸</span>
-                      <span>Assess current systems and identify high-impact use cases</span>/span>
+                      <span>Assess current systems and identify high-impact use cases</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-zion-cyan mt-1">▸</span>
-                      <span>Select multimodal platform (GPT-4V, Claude Vision, or custom)</span>/span>
+                      <span>Select multimodal platform (GPT-4V, Claude Vision, or custom)</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-zion-cyan mt-1">▸</span>
-                      <span>Set up data pipelines and preprocessing workflows</span>/span>
+                      <span>Set up data pipelines and preprocessing workflows</span>
                     </li>
                   </ul>
                 </div>
@@ -692,11 +690,11 @@ const MultimodalEnterpriseIntelligence: () => {
                   <ul className="space-y-2 ml-4">
                     <li className="flex items-start gap-2">
                       <span className="text-purple-400 mt-1">▸</span>
-                      <span>Deploy pilot in controlled environment (1-2 use cases)</span>/span>
+                      <span>Deploy pilot in controlled environment (1-2 use cases)</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-purple-400 mt-1">▸</span>
-                      <span>Gather user feedback and measure accuracy/performance</span>/span>
+                      <span>Gather user feedback and measure accuracy/performance</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-purple-400 mt-1">▸</span>
@@ -710,15 +708,15 @@ const MultimodalEnterpriseIntelligence: () => {
                   <ul className="space-y-2 ml-4">
                     <li className="flex items-start gap-2">
                       <span className="text-purple-400 mt-1">▸</span>
-                      <span>Deploy pilot in controlled environment (1-2 use cases)</span>/span>
+                      <span>Deploy pilot in controlled environment (1-2 use cases)</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-purple-400 mt-1">▸</span>
-                      <span>Gather user feedback and measure accuracy/performance</span>/span>
+                      <span>Gather user feedback and measure accuracy/performance</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-purple-400 mt-1">▸</span>
-                      <span>Refine prompts and fine-tune models as needed</span>/span>
+                      <span>Refine prompts and fine-tune models as needed</span>
                     </li>
                   </ul>
                 </div>
@@ -733,11 +731,11 @@ const MultimodalEnterpriseIntelligence: () => {
                   <ul className="space-y-2 ml-4">
                     <li className="flex items-start gap-2">
                       <span className="text-green-400 mt-1">▸</span>
-                      <span>Roll out to production across all identified use cases</span>/span>
+                      <span>Roll out to production across all identified use cases</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-green-400 mt-1">▸</span>
-                      <span>Implement monitoring, alerting, and continuous improvement</span>/span>
+                      <span>Implement monitoring, alerting, and continuous improvement</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-green-400 mt-1">▸</span>
@@ -751,15 +749,15 @@ const MultimodalEnterpriseIntelligence: () => {
                   <ul className="space-y-2 ml-4">
                     <li className="flex items-start gap-2">
                       <span className="text-green-400 mt-1">▸</span>
-                      <span>Roll out to production across all identified use cases</span>/span>
+                      <span>Roll out to production across all identified use cases</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-green-400 mt-1">▸</span>
-                      <span>Implement monitoring, alerting, and continuous improvement</span>/span>
+                      <span>Implement monitoring, alerting, and continuous improvement</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-green-400 mt-1">▸</span>
-                      <span>Train teams and establish best practices</span>/span>
+                      <span>Train teams and establish best practices</span>
                     </li>
                   </ul>
                 </div>
@@ -779,15 +777,15 @@ const MultimodalEnterpriseIntelligence: () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 to="/contact"
   className="bg-white text-purple-600 hover:bg-zion-slate-light px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105 inline-flex items-center justify-center gap-2
-                >
+                >"
                   <TrendingUp className="w-5 h-5" />>
                   <TrendingUp className="w-5 h-5" />
                   <TrendingUp className="w-5 h-5/>">
                   <TrendingUp className="w-5 h-5" />
   Schedule Free Consultation
                 </Link>
-                <Link to="/services
-  className="border-2 border-white text-white hover:bg-white/10 px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105>
+                <Link to="/services">
+  className="border-2 border-white text-white hover:bg-white/10 px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105>"
             <section className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-8 text-center">
               <h2 className="text-3xl font-bold text-white mb-4">"
   Ready to Transform Your Enterprise with Multimodal AI?
@@ -800,12 +798,12 @@ const MultimodalEnterpriseIntelligence: () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 to="/contact"
   className="bg-white text-purple-600 hover:bg-zion-slate-light px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105 inline-flex items-center justify-center gap-2
-                >
+                >"
                   <TrendingUp className="w-5 h-5" />>
                   <TrendingUp className="w-5 h-5" />
   Schedule Free Consultation
                 </Link>
-                <Link to="/services
+                <Link to="/services">
   className= "border-2 border-white text-white hover:bg-white/10 px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105
                 >
                   View All AI Services
@@ -819,5 +817,4 @@ const MultimodalEnterpriseIntelligence: () => {
   );
 };
 
-export default MultimodalEnterpriseIntelligence;
-;
+export default MultimodalEnterpriseIntelligence;;

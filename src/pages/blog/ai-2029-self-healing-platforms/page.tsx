@@ -43,6 +43,4 @@ export default function AI2029SelfHealingPlatforms(): React.JSX.Element {
       </div>
     </div>
   );
-}
-
-;
+};

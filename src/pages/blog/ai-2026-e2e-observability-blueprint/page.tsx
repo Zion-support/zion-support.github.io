@@ -44,6 +44,4 @@ export default function AIE2EObservabilityBlueprint2026(): React.JSX.Element {
       </div>
     </div>
   );
-}
-
-;
+};

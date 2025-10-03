@@ -39,14 +39,12 @@ export default function NextGenAutonomousIntelligenceRevolutionPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">"
               <Link 
                 href="/[^"]*"
-                className="bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
-              >
+                className="bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1">
                 View $5.2B Success Story →
               </Link>
               <Link 
                 href="/[^"]*"
-                className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
-              >
+                className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300">
                 Get Started Today
               </Link>
             </div>
@@ -293,19 +291,15 @@ export default function NextGenAutonomousIntelligenceRevolutionPage() {
             </p>
 
             <div className="grid md:grid-cols-2 gap-6 mb-8">"
-              <div className="bg-gradient-to-br from-purple-50 to-indigo-50 p-6 rounded-lg border border-purple-200">"
                 <h4 className="text-lg font-bold text-gray-900 mb-3">Universal Business Consciousness</h4>"
                 <p className="text-gray-700">Complete understanding across all business domains</p>"
               </div>
-              <div className="bg-gradient-to-br from-indigo-50 to-purple-50 p-6 rounded-lg border border-indigo-200">"
                 <h4 className="text-lg font-bold text-gray-900 mb-3">Infinite Scalability</h4>"
                 <p className="text-gray-700">Systems that grow and adapt without limits</p>"
               </div>
-              <div className="bg-gradient-to-br from-cyan-50 to-blue-50 p-6 rounded-lg border border-cyan-200">"
                 <h4 className="text-lg font-bold text-gray-900 mb-3">Transcendent Performance</h4>"
                 <p className="text-gray-700">Capabilities beyond current human comprehension</p>"
               </div>
-              <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-lg border border-green-200">"
                 <h4 className="text-lg font-bold text-gray-900 mb-3">Autonomous Evolution</h4>"
                 <p className="text-gray-700">Self-improving systems with continuous optimization</p>"
               </div>
@@ -319,14 +313,12 @@ export default function NextGenAutonomousIntelligenceRevolutionPage() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">"
                 <Link 
                   href="/[^"]*"
-                  className="bg-white text-purple-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg transform hover:-translate-y-1"
-                >
+                  className="bg-white text-purple-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg transform hover:-translate-y-1">
                   Start Your Transformation
                 </Link>
                 <Link 
                   href="/[^"]*"
-                  className="border-2 border-white text-white hover:bg-white hover:text-purple-600 font-bold py-4 px-8 rounded-xl transition-all duration-300"
-                >
+                  className="border-2 border-white text-white hover:bg-white hover:text-purple-600 font-bold py-4 px-8 rounded-xl transition-all duration-300">
                   View Success Story
                 </Link>
               </div>

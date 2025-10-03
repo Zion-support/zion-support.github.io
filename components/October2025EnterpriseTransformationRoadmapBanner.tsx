@@ -8,8 +8,7 @@ const October2025EnterpriseTransformationRoadmapBanner: React.FC = () => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: 0.4 }}
-      className="relative overflow-hidden bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 rounded-2xl p-8 md:p-12 my-8 shadow-2xl"
-    >
+      className="relative overflow-hidden bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 rounded-2xl p-8 md:p-12 my-8 shadow-2xl">
       {/* Animated background effect */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(16,185,129,0.5),transparent_50%)] animate-pulse" />
@@ -23,8 +22,7 @@ const October2025EnterpriseTransformationRoadmapBanner: React.FC = () => {
               y: [0, -10, 0]
             }}
             transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-            className="bg-emerald-500/20 p-3 rounded-lg"
-          >
+            className="bg-emerald-500/20 p-3 rounded-lg">
             <Rocket className="w-8 h-8 text-emerald-400" />
           </motion.div>
           <div>
@@ -65,8 +63,7 @@ const October2025EnterpriseTransformationRoadmapBanner: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 + index * 0.1 }}
-                className="bg-gradient-to-br from-emerald-500/20 to-teal-500/20 rounded-lg p-4 border border-emerald-400/30"
-              >
+                className="bg-gradient-to-br from-emerald-500/20 to-teal-500/20 rounded-lg p-4 border border-emerald-400/30">
                 <div className="flex items-center gap-2 mb-2">
                   <div className="w-8 h-8 bg-emerald-500/30 rounded-full flex items-center justify-center text-emerald-300 font-bold">
                     {index + 1}
@@ -97,8 +94,7 @@ const October2025EnterpriseTransformationRoadmapBanner: React.FC = () => {
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.4 + index * 0.1 }}
-                  className="flex items-center gap-2 text-emerald-100"
-                >
+                  className="flex items-center gap-2 text-emerald-100">
                   <CheckCircle className="w-5 h-5 text-emerald-400 flex-shrink-0" />
                   <span>{item}</span>
                 </motion.div>
@@ -119,8 +115,7 @@ const October2025EnterpriseTransformationRoadmapBanner: React.FC = () => {
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.4 + index * 0.1 }}
-                  className="flex justify-between items-center bg-white/5 rounded-lg p-3"
-                >
+                  className="flex justify-between items-center bg-white/5 rounded-lg p-3">
                   <span className="text-emerald-200">{result.metric}</span>
                   <span className="text-xl font-bold text-white">{result.value}</span>
                 </motion.div>
@@ -141,8 +136,7 @@ const October2025EnterpriseTransformationRoadmapBanner: React.FC = () => {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.6 + index * 0.1 }}
-              className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-emerald-400/30"
-            >
+              className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-emerald-400/30">
               <div className="text-emerald-300 font-semibold mb-2 text-sm">{story.company}</div>
               <div className="text-white font-bold">{story.result}</div>
             </motion.div>
@@ -155,8 +149,7 @@ const October2025EnterpriseTransformationRoadmapBanner: React.FC = () => {
             href="/guides/enterprise-ai-transformation-roadmap-2025"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-white font-bold py-4 px-8 rounded-xl transition-all shadow-lg hover:shadow-emerald-500/50"
-          >
+            className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-white font-bold py-4 px-8 rounded-xl transition-all shadow-lg hover:shadow-emerald-500/50">
             Download Complete Guide
             <ArrowRight className="w-5 h-5" />
           </motion.a>
@@ -164,8 +157,7 @@ const October2025EnterpriseTransformationRoadmapBanner: React.FC = () => {
             href="/contact"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-8 rounded-xl transition-all border-2 border-emerald-400/50 backdrop-blur-sm"
-          >
+            className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-8 rounded-xl transition-all border-2 border-emerald-400/50 backdrop-blur-sm">
             Schedule Consultation
             <ArrowRight className="w-5 h-5" />
           </motion.a>

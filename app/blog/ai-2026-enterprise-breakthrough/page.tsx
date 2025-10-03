@@ -267,14 +267,12 @@ export default function AI2026EnterpriseBreakthrough() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <Link 
                 href="/[^"]*"
-                className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-              >
+                className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
                 View Success Stories
               </Link>
               <Link 
                 href="/[^"]*"
-                className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
-              >
+                className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
                 Start Your AI Journey
               </Link>
             </div>
@@ -296,7 +294,6 @@ export default function AI2026EnterpriseBreakthrough() {
               </div>
             </Link>
             <Link href="/blog/quantum-computing-breakthrough-2026" className="group">"
-              <div className="bg-gradient-to-br from-slate-800/50 to-gray-800/50 rounded-xl p-6 hover:from-slate-700/50 hover:to-gray-700/50 transition-all">"
                 <h4 className="text-lg font-semibold text-white group-hover:text-blue-400 mb-2">"
                   Quantum Computing Breakthrough 2026
                 </h4>

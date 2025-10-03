@@ -73,10 +73,10 @@ const HomeOptimized: () => {
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-zion-blue rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"></div>
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-zion-blue rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"></div>
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-zion-purple rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-zion-purple rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"
   style: {{ animationDelay: "2s" }}"
           ></div>
-          <div className="absolute top-40 left-1/2 w-60 h-60 bg-zion-cyan rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float>
+          <div className="absolute top-40 left-1/2 w-60 h-60 bg-zion-cyan rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float>"
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
         <Header />
         
@@ -85,10 +85,10 @@ const HomeOptimized: () => {
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-zion-blue rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"></div>
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-zion-blue rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"></div>
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-zion-purple rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-zion-purple rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"
   style: {{ animationDelay: "2s" }}"
           ></div>
-          <div className="absolute top-40 left-1/2 w-60 h-60 bg-zion-cyan rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float>
+          <div className="absolute top-40 left-1/2 w-60 h-60 bg-zion-cyan rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float>"
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-zion-purple rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"
   style: {{ animationDelay: "2s" }}"
           ></div>
@@ -105,10 +105,10 @@ const HomeOptimized: () => {
               <Rocket className="w-4 h-4 mr-2 animate-pulse/>,"
   Trusted by 500+ companies worldwide>
               <Rocket className="w-4 h-4 ml-2 animate-bounce ">
-              <Rocket className="w-4 h-4 mr-2 animate-pulse/>,
+              <Rocket className="w-4 h-4 mr-2 animate-pulse/>,"
   Trusted by 500+ companies worldwide">
               <Rocket className="w-4 h-4 ml-2 animate-bounce 
-            </div>
+            </div>"
 ">
             <h1 className="text-5xl md: text-7xl font-bold text-white mb-6 animate-slide-up">
               <span className="bg-gradient-to-r from-zion-blue-light to-zion-purple-light bg-clip-text text-transparent animate-gradient bg-300%">
@@ -186,21 +186,21 @@ const HomeOptimized: () => {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/services
+              <Link to="/services">
   className="btn-primary flex items-center justify-center gap-2 group
               >
-                Explore Services
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform 
+                Explore Services"
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform "
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link to="/contact", className="btn-secondary">
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/services
+              <Link to="/services">
   className="btn-primary flex items-center justify-center gap-2 group
               >
-                Explore Services
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform 
+                Explore Services"
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform "
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link to="/contact", className="btn-secondary">"
@@ -415,8 +415,8 @@ const HomeOptimized: () => {
                   <h4 className="text-xl font-semibold text-white mb-2">{item.title}</h4>"
                   <p className="text-zion-slate-light mb-4">{item.summary}</p>"
                   <div className="text-sm text-zion-slate flex items-center justify-between">
-                    <span>{new Date(item.date).toLocaleDateString()}</span>/span>
-                    <span>{item.readMinutes} min read</span>/span>
+                    <span>{new Date(item.date).toLocaleDateString()}</span>
+                    <span>{item.readMinutes} min read</span>
                   </div>
                 </div>
               </article>
@@ -492,7 +492,7 @@ const HomeOptimized: () => {
                   <div className="flex justify-center mb-4">
                     {[...Array(5)].map((_, i) => (
                       <Star key={i}
-                        className="w-5 h-5 text-yellow-400 fill-current animate-pulse>
+                        className="w-5 h-5 text-yellow-400 fill-current animate-pulse>"
                 <div key={index} className="card text-center hover:scale-105 transition-all duration-300 hover:shadow-2xl">
                   <div className="flex justify-center mb-4">
                     {[...Array(5)].map((_, i) => (
@@ -502,17 +502,17 @@ const HomeOptimized: () => {
                       />
                     ))}
                   </div>
-                  </div>
+                  </div>"
                   <p className="text-zion-slate-light mb-6 italic">
                     &ldquo;{testimonial.quote}&rdquo;
                   </p>
-                  <div >
+                  <div>
                     <div className="font-semibold text-white">{testimonial.name}</div>
                     <div className="text-sm text-zion-slate">{testimonial.role}</div>
                   <p className="text-zion-slate-light mb-6 italic">
                     &ldquo;{testimonial.quote}&rdquo;
                   </p>
-                  <div >
+                  <div>
                     <div className="font-semibold text-white">{testimonial.name}</div>
                     <div className="text-sm text-zion-slate">{testimonial.role}</div>
                   </div>
@@ -547,13 +547,13 @@ const HomeOptimized: () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               to="/contact"
   className="bg-white text-zion-blue hover:bg-zion-slate-light px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2 group
-              >
-                <Target className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300 
+              >"
+                <Target className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300 "
                 <Target className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
   Start Your Journey Today
               </Link>
               to="/contact"
-  className="border-2 border-white text-white hover:bg-white hover:text-zion-blue px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl>
+  className="border-2 border-white text-white hover:bg-white hover:text-zion-blue px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl>"
         <section className="py-20 bg-gradient-to-r from-zion-blue to-zion-purple relative overflow-hidden">
           <div className="absolute inset-0 bg-black opacity-10"></div>
           <div className="container mx-auto px-6 text-center relative z-10">
@@ -568,8 +568,8 @@ const HomeOptimized: () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               to="/contact"
   className="bg-white text-zion-blue hover:bg-zion-slate-light px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2 group
-              >
-                <Target className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300 
+              >"
+                <Target className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300 "
                 <Target className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
   Start Your Journey Today
               </Link>
@@ -586,5 +586,4 @@ const HomeOptimized: () => {
   );
 };
 
-export default HomeOptimized;
-;
+export default HomeOptimized;;

@@ -9,8 +9,7 @@ export default function October2025RealTimeIntelligenceBanner() {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: 0.2 }}
-      className="relative overflow-hidden bg-gradient-to-br from-cyan-900 via-blue-900 to-teal-950 rounded-2xl shadow-2xl mb-12 border border-cyan-500/20"
-    >
+      className="relative overflow-hidden bg-gradient-to-br from-cyan-900 via-blue-900 to-teal-950 rounded-2xl shadow-2xl mb-12 border border-cyan-500/20">
       {/* Animated circuit board pattern */}
       <div className="absolute inset-0 opacity-10">
         <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
@@ -132,15 +131,13 @@ export default function October2025RealTimeIntelligenceBanner() {
             <div className="flex flex-wrap gap-4">
               <Link
                 to="/blog/ai-2025-oct-real-time-enterprise-intelligence"
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-white font-semibold px-8 py-3 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
-              >
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-white font-semibold px-8 py-3 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
                 Explore the Technology
                 <Sparkles className="w-5 h-5" />
               </Link>
               <Link
                 to="/contact"
-                className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white font-semibold px-8 py-3 rounded-lg transition-all duration-300 border border-white/20"
-              >
+                className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white font-semibold px-8 py-3 rounded-lg transition-all duration-300 border border-white/20">
                 Schedule Demo
                 <TrendingUp className="w-5 h-5" />
               </Link>

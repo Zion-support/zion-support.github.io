@@ -530,8 +530,7 @@ export default function QuantumEdgeAIRevolutionPage(): void {
               <div className="flex flex-col sm:flex-row gap-4">"
                 <a title= "Internal link>"
   href="/contact"
-  className="inline-flex items-center justify-center px-8 py-4 font-bold text-white bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 shadow-lg hover:shadow-cyan-500/50"
-                >
+  className="inline-flex items-center justify-center px-8 py-4 font-bold text-white bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 shadow-lg hover:shadow-cyan-500/50">
                   Schedule Consultation →
                 </a>
                 <a title= "Internal link>"
@@ -541,8 +540,7 @@ export default function QuantumEdgeAIRevolutionPage(): void {
   className="inline-flex items-center justify-center px-8 py-4 font-bold text-cyan-300 border-2 border-cyan-500 rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300"
                 <a title= "Internal link>"
   href="/case-studies/quantum-edge-ai-manufacturing-success-2025"
-  className="inline-flex items-center justify-center px-8 py-4 font-bold text-cyan-300 border-2 border-cyan-500 rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300"
-                >
+  className="inline-flex items-center justify-center px-8 py-4 font-bold text-cyan-300 border-2 border-cyan-500 rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300">
                   View Success Story →
                 </a>
               </div>
@@ -591,5 +589,4 @@ export default function QuantumEdgeAIRevolutionPage(): void {
       </article>
     </div>
   );
-}
-;
+};

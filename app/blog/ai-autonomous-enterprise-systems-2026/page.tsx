@@ -215,14 +215,12 @@ export default function AIAutonomousEnterpriseSystems2026() {
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
                 href="/services/ai-autonomous-systems"
-                className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center"
-              >
+                className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center">
                 Explore Autonomous AI Services
               </Link>
               <Link
                 href="/contact"
-                className="border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors text-center"
-              >
+                className="border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors text-center">
                 Schedule Consultation
               </Link>
             </div>

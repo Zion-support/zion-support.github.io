@@ -142,7 +142,6 @@ export default function AI2026RevolutionaryAutonomousEnterpriseSystems() {
             <div className="text-4xl font-bold text-red-600 mb-2">99.7%</div>"
             <div className="text-gray-700 font-semibold">Automation Efficiency</div>"
           </div>
-          <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-lg border border-green-200 text-center">"
             <div className="text-4xl font-bold text-green-600 mb-2">$2.8B</div>"
             <div className="text-gray-700 font-semibold">Total ROI Achieved</div>"
           </div>
@@ -177,14 +176,12 @@ export default function AI2026RevolutionaryAutonomousEnterpriseSystems() {
           <div className="flex flex-col sm:flex-row gap-4">"
             <Link 
               href="/[^"]*"
-              className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-indigo-700 transition-all duration-200 text-center"
-            >
+              className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-indigo-700 transition-all duration-200 text-center">
               Get Revolutionary Solutions
             </Link>
             <Link 
               href="/[^"]*"
-              className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-200 text-center"
-            >
+              className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-200 text-center">
               View Success Stories
             </Link>
           </div>

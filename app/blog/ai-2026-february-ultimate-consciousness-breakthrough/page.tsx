@@ -37,20 +37,17 @@ export default function AI2026FebruaryUltimateConsciousnessBreakthrough() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">"
               <a 
                 href="#consciousness-details" "
-                className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
-              >
+                className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1">
                 Explore Consciousness
               </a>
               <a 
                 href="/[^"]*"
-                className="bg-gradient-to-r from-pink-500 to-cyan-600 hover:from-pink-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-pink-500/50 transform hover:-translate-y-1"
-              >
+                className="bg-gradient-to-r from-pink-500 to-cyan-600 hover:from-pink-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-pink-500/50 transform hover:-translate-y-1">
                 View $100B Success Story →
               </a>
               <a 
                 href="/[^"]*"
-                className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
-              >
+                className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300">
                 Get Consciousness Guide
               </a>
             </div>
@@ -284,20 +281,17 @@ export default function AI2026FebruaryUltimateConsciousnessBreakthrough() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <a 
                 href="/[^"]*"
-                className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
-              >
+                className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1">
                 Get Started Today
               </a>
               <a 
                 href="/[^"]*"
-                className="bg-gradient-to-r from-pink-500 to-cyan-600 hover:from-pink-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-pink-500/50 transform hover:-translate-y-1"
-              >
+                className="bg-gradient-to-r from-pink-500 to-cyan-600 hover:from-pink-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-pink-500/50 transform hover:-translate-y-1">
                 View All Success Stories →
               </a>
               <a 
                 href="/[^"]*"
-                className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
-              >
+                className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300">
                 Explore Services
               </a>
             </div>

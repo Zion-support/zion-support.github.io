@@ -43,6 +43,4 @@ export default function EdgeZeroPIIAnalytics2026(): React.JSX.Element {
       </div>
     </div>
   );
-}
-
-;
+};

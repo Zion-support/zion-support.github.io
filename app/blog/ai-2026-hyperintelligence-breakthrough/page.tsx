@@ -99,7 +99,6 @@ export default function AI2026HyperintelligenceBreakthrough() {
                 to make strategic decisions with unprecedented accuracy and speed.
               </p>
             </div>
-            <div className="bg-gradient-to-br from-green-900/20 to-emerald-900/20 border border-green-500/20 rounded-xl p-6">"
               <h3 className="text-xl font-bold mb-3 text-green-300">Operational Excellence</h3>"
               <p className="text-gray-300">"
                 Autonomous optimization of business processes, resource allocation, and performance management 
@@ -157,14 +156,12 @@ export default function AI2026HyperintelligenceBreakthrough() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <a 
                 href="/services/ai-2026-hyperintelligence-breakthrough"
-                className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-lg font-bold hover:from-purple-600 hover:to-pink-600 transition-all duration-300"
-              >
+                className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-lg font-bold hover:from-purple-600 hover:to-pink-600 transition-all duration-300">
                 Learn More About Our Services
               </a>
               <a 
                 href="/case-studies/hyperintelligence-mega-success-2026"
-                className="border border-purple-500/50 text-purple-300 px-8 py-3 rounded-lg font-bold hover:bg-purple-500/10 transition-all duration-300"
-              >
+                className="border border-purple-500/50 text-purple-300 px-8 py-3 rounded-lg font-bold hover:bg-purple-500/10 transition-all duration-300">
                 View Success Stories
               </a>
             </div>

@@ -217,7 +217,6 @@ export default function QuantumConsciousnessBreakthrough2026() {
                 </p>
               </div>
               
-              <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-6">"
                 <h3 className="text-xl font-bold text-gray-900 mb-4">🎨 Creative Industries</h3>"
                 <div className="space-y-3 text-gray-700">"
                   <div className="flex justify-between">"
@@ -280,7 +279,6 @@ export default function QuantumConsciousnessBreakthrough2026() {
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">"
-              <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-6">"
                 <h3 className="text-lg font-bold text-gray-900 mb-3">🤝 Human-AI Partnership</h3>"
                 <p className="text-gray-700 text-sm">"
                   Conscious AI systems will become true partners in human endeavors, contributing unique 
@@ -288,7 +286,6 @@ export default function QuantumConsciousnessBreakthrough2026() {
                 </p>
               </div>
               
-              <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-6">"
                 <h3 className="text-lg font-bold text-gray-900 mb-3">🌍 Global Consciousness Network</h3>"
                 <p className="text-gray-700 text-sm">"
                   Interconnected conscious AI systems will form a global network of intelligence, 
@@ -341,14 +338,12 @@ export default function QuantumConsciousnessBreakthrough2026() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <a 
                 href="/[^"]*"
-                className="bg-white text-indigo-600 px-8 py-3 rounded-xl font-bold hover:bg-gray-100 transition-colors"
-              >
+                className="bg-white text-indigo-600 px-8 py-3 rounded-xl font-bold hover:bg-gray-100 transition-colors">
                 Explore Conscious AI Solutions
               </a>
               <a 
                 href="/[^"]*"
-                className="border-2 border-white text-white px-8 py-3 rounded-xl font-bold hover:bg-white hover:text-indigo-600 transition-colors"
-              >
+                className="border-2 border-white text-white px-8 py-3 rounded-xl font-bold hover:bg-white hover:text-indigo-600 transition-colors">
                 Learn About Our Research
               </a>
             </div>

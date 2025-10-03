@@ -8,8 +8,7 @@ const October2025CognitiveAutomationMasteryBanner: React.FC = () => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: 0.2 }}
-      className="relative overflow-hidden bg-gradient-to-br from-purple-900 via-violet-900 to-fuchsia-900 rounded-2xl p-8 md:p-12 my-8 shadow-2xl"
-    >
+      className="relative overflow-hidden bg-gradient-to-br from-purple-900 via-violet-900 to-fuchsia-900 rounded-2xl p-8 md:p-12 my-8 shadow-2xl">
       {/* Animated background effect */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_70%,rgba(168,85,247,0.5),transparent_50%)] animate-pulse" />
@@ -24,8 +23,7 @@ const October2025CognitiveAutomationMasteryBanner: React.FC = () => {
               rotate: [0, 5, -5, 0]
             }}
             transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-            className="bg-purple-500/20 p-3 rounded-lg"
-          >
+            className="bg-purple-500/20 p-3 rounded-lg">
             <Brain className="w-8 h-8 text-purple-400" />
           </motion.div>
           <div>
@@ -61,8 +59,7 @@ const October2025CognitiveAutomationMasteryBanner: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 + index * 0.1 }}
-              className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-purple-400/30 hover:border-purple-400/60 transition-all"
-            >
+              className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-purple-400/30 hover:border-purple-400/60 transition-all">
               <div className="flex items-center gap-2 mb-2">
                 <Target className="w-4 h-4 text-purple-400" />
                 <span className="text-purple-300 text-sm font-medium">{metric.label}</span>
@@ -89,8 +86,7 @@ const October2025CognitiveAutomationMasteryBanner: React.FC = () => {
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.4 + index * 0.1 }}
-                className="bg-gradient-to-br from-purple-500/20 to-fuchsia-500/20 rounded-lg p-4 border border-purple-400/30"
-              >
+                className="bg-gradient-to-br from-purple-500/20 to-fuchsia-500/20 rounded-lg p-4 border border-purple-400/30">
                 <div className="text-purple-300 font-semibold mb-1">{story.industry}</div>
                 <div className="text-xl font-bold text-white">{story.result}</div>
               </motion.div>
@@ -111,8 +107,7 @@ const October2025CognitiveAutomationMasteryBanner: React.FC = () => {
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.5 + index * 0.1 }}
-              className="flex items-center gap-2 bg-white/5 rounded-lg p-3 border border-purple-400/20"
-            >
+              className="flex items-center gap-2 bg-white/5 rounded-lg p-3 border border-purple-400/20">
               <div className="w-2 h-2 bg-purple-400 rounded-full animate-pulse" />
               <span className="text-purple-100 text-sm font-medium">{tech}</span>
             </motion.div>
@@ -125,8 +120,7 @@ const October2025CognitiveAutomationMasteryBanner: React.FC = () => {
             href="/blog/ai-2025-october-cognitive-automation-mastery"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-purple-500 to-fuchsia-500 hover:from-purple-400 hover:to-fuchsia-400 text-white font-bold py-4 px-8 rounded-xl transition-all shadow-lg hover:shadow-purple-500/50"
-          >
+            className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-purple-500 to-fuchsia-500 hover:from-purple-400 hover:to-fuchsia-400 text-white font-bold py-4 px-8 rounded-xl transition-all shadow-lg hover:shadow-purple-500/50">
             Discover Cognitive Automation
             <ArrowRight className="w-5 h-5" />
           </motion.a>
@@ -134,8 +128,7 @@ const October2025CognitiveAutomationMasteryBanner: React.FC = () => {
             href="/services/cognitive-automation"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-8 rounded-xl transition-all border-2 border-purple-400/50 backdrop-blur-sm"
-          >
+            className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-8 rounded-xl transition-all border-2 border-purple-400/50 backdrop-blur-sm">
             View Platform
             <ArrowRight className="w-5 h-5" />
           </motion.a>

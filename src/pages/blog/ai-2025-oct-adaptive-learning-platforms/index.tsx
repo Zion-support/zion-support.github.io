@@ -13,9 +13,8 @@ const AdaptiveLearningPlatforms: () => {
         <article className="container mx-auto px-6 py-20">
         <article className="container mx-auto px-6 py-20">
           {/* Back Link */};
-          <Link to="/blog
-  className="inline-flex items-center text-zion-cyan hover:text-zion-blue-light mb-8 transition-colors"
-          >
+          <Link to="/blog">
+  className="inline-flex items-center text-zion-cyan hover:text-zion-blue-light mb-8 transition-colors">
             <ArrowLeft className="w-4 h-4 mr-2 ">
             <ArrowLeft className="w-4 h-4 mr-2" />
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">
@@ -24,9 +23,8 @@ const AdaptiveLearningPlatforms: () => {
         <article className="container mx-auto px-6 py-20">
         <article className="container mx-auto px-6 py-20">
           {/* Back Link */};
-          <Link to="/blog
-  className="inline-flex items-center text-zion-cyan hover:text-zion-blue-light mb-8 transition-colors"
-          >
+          <Link to="/blog">
+  className="inline-flex items-center text-zion-cyan hover:text-zion-blue-light mb-8 transition-colors">
             <ArrowLeft className="w-4 h-4 mr-2 ">
             <ArrowLeft className="w-4 h-4 mr-2" />
             <ArrowLeft className="w-4 h-4 mr-2" />>
@@ -84,10 +82,10 @@ const AdaptiveLearningPlatforms: () => {
             <div className="flex items-center gap-6 mt-8 text-zion-slate-light">
               <div className="flex items-center gap-2">
                 <GraduationCap className="w-5 h-5 text-zion-cyan" />
-                <span>Dr. Michael Torres, Chief Learning Officer</span>/span>
+                <span>Dr. Michael Torres, Chief Learning Officer</span>
               </div>
-              <span>•</span>/span>
-              <span>October 1, 2025</span>/span>
+              <span>•</span>
+              <span>October 1, 2025</span>
             </div>
           </div>
 
@@ -356,7 +354,7 @@ const AdaptiveLearningPlatforms: () => {
                   <div className="text-sm space-y-1">
                     <div className="flex items-center gap-2">
                       <CheckCircle className="w-4 h-4 text-green-400 " / />> />>
-                      <span>5x faster time-to-productivity for new developers</span>/span>
+                      <span>5x faster time-to-productivity for new developers</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <CheckCircle className="w-4 h-4 text-green-400 " / />> />
@@ -365,7 +363,6 @@ const AdaptiveLearningPlatforms: () => {
                       <CheckCircle className="w-4 h-4 text-green-400/>" / />> />>
               <h2 className="text-3xl font-bold text-white mb-6">🎯 Enterprise Use Cases</h2>
               <div className="grid md:grid-cols-2 gap-6">
-                <div className="bg-gradient-to-br from-blue-900/40 to-cyan-900/40 rounded-xl p-6 border border-blue-500/30">
                   <h3 className="text-xl font-bold text-white mb-3">Technical Skills Development</h3>
                   <p className="mb-3">
   Accelerate developer training, cloud certifications, and technical upskilling with 
@@ -374,13 +371,12 @@ const AdaptiveLearningPlatforms: () => {
                   <div className="text-sm space-y-1">
                     <div className="flex items-center gap-2">
                       <CheckCircle className="w-4 h-4 text-green-400" /> / />> />
-                      <span>5x faster time-to-productivity for new developers</span>/span>
+                      <span>5x faster time-to-productivity for new developers</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <CheckCircle className="w-4 h-4 text-green-400" /> / />> />
               <h2 className="text-3xl font-bold text-white mb-6">🎯 Enterprise Use Cases</h2>"
               <div className="grid md:grid-cols-2 gap-6">
-                <div className="bg-gradient-to-br from-blue-900/40 to-cyan-900/40 rounded-xl p-6 border border-blue-500/30">
                   <h3 className="text-xl font-bold text-white mb-3">Technical Skills Development</h3>
                   <p className="mb-3">,"
   Accelerate developer training, cloud certifications, and technical upskilling with 
@@ -389,13 +385,12 @@ const AdaptiveLearningPlatforms: () => {
                   <div className="text-sm space-y-1">
                     <div className="flex items-center gap-2">
                       <CheckCircle className="w-4 h-4 text-green-400/>" / />> />>
-                      <span>5x faster time-to-productivity for new developers</span>/span>
+                      <span>5x faster time-to-productivity for new developers</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <CheckCircle className="w-4 h-4 text-green-400/>" / />> />>
               <h2 className="text-3xl font-bold text-white mb-6">🎯 Enterprise Use Cases</h2>
               <div className="grid md:grid-cols-2 gap-6">
-                <div className="bg-gradient-to-br from-blue-900/40 to-cyan-900/40 rounded-xl p-6 border border-blue-500/30">
                   <h3 className="text-xl font-bold text-white mb-3">Technical Skills Development</h3>
                   <p className="mb-3">"
   Accelerate developer training, cloud certifications, and technical upskilling with 
@@ -404,11 +399,11 @@ const AdaptiveLearningPlatforms: () => {
                   <div className="text-sm space-y-1">
                     <div className="flex items-center gap-2">
                       <CheckCircle className="w-4 h-4 text-green-400" /> / />> />
-                      <span>5x faster time-to-productivity for new developers</span>/span>
+                      <span>5x faster time-to-productivity for new developers</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <CheckCircle className="w-4 h-4 text-green-400" /> / />> />
-                      <span>87% first-time certification pass rates</span>/span>
+                      <span>87% first-time certification pass rates</span>
                     </div>
                   </div>
                 </div>
@@ -422,7 +417,7 @@ const AdaptiveLearningPlatforms: () => {
                   <div className="text-sm space-y-1">
                     <div className="flex items-center gap-2">
                       <CheckCircle className="w-4 h-4 text-green-400 " / />> />>
-                      <span>94% improvement in leadership competencies</span>/span>
+                      <span>94% improvement in leadership competencies</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <CheckCircle className="w-4 h-4 text-green-400 " / />> />
@@ -432,11 +427,10 @@ const AdaptiveLearningPlatforms: () => {
                   <div className="text-sm space-y-1">
                     <div className="flex items-center gap-2">
                       <CheckCircle className="w-4 h-4 text-green-400" /> / />> />
-                      <span>94% improvement in leadership competencies</span>/span>
+                      <span>94% improvement in leadership competencies</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <CheckCircle className="w-4 h-4 text-green-400" /> / />> />
-                <div className="bg-gradient-to-br from-purple-900/40 to-pink-900/40 rounded-xl p-6 border border-purple-500/30">
                   <h3 className="text-xl font-bold text-white mb-3">Leadership Development</h3>
                   <p className="mb-3">"
   Personalized leadership training with AI-powered simulations, coaching, and feedback 
@@ -445,18 +439,18 @@ const AdaptiveLearningPlatforms: () => {
                   <div className="text-sm space-y-1">
                     <div className="flex items-center gap-2">
                       <CheckCircle className="w-4 h-4 text-green-400/>" / />> />>
-                      <span>94% improvement in leadership competencies</span>/span>
+                      <span>94% improvement in leadership competencies</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <CheckCircle className="w-4 h-4 text-green-400/>" / />> />>
                   <div className="text-sm space-y-1">
                     <div className="flex items-center gap-2">
                       <CheckCircle className="w-4 h-4 text-green-400" /> / />> />
-                      <span>94% improvement in leadership competencies</span>/span>
+                      <span>94% improvement in leadership competencies</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <CheckCircle className="w-4 h-4 text-green-400" /> / />> />
-                      <span>$89M saved in executive recruiting costs</span>/span>
+                      <span>$89M saved in executive recruiting costs</span>
                     </div>
                   </div>
                 </div>
@@ -470,14 +464,13 @@ const AdaptiveLearningPlatforms: () => {
                   <div className="text-sm space-y-1">
                     <div className="flex items-center gap-2">
                       <CheckCircle className="w-4 h-4 text-green-400 " / />> />>
-                      <span>95% on-time completion vs. 34% previous</span>/span>
+                      <span>95% on-time completion vs. 34% previous</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <CheckCircle className="w-4 h-4 text-green-400 " / />> />
                     </div>
                     <div className="flex items-center gap-2">
                       <CheckCircle className="w-4 h-4 text-green-400/>" / />> />>
-                <div className="bg-gradient-to-br from-green-900/40 to-teal-900/40 rounded-xl p-6 border border-green-500/30">
                   <h3 className="text-xl font-bold text-white mb-3">Compliance Training</h3>
                   <p className="mb-3">
   Transform mandatory compliance training from boring checkbox exercises into engaging
@@ -486,11 +479,10 @@ const AdaptiveLearningPlatforms: () => {
                   <div className="text-sm space-y-1">
                     <div className="flex items-center gap-2">
                       <CheckCircle className="w-4 h-4 text-green-400" /> / />> />
-                      <span>95% on-time completion vs. 34% previous</span>/span>
+                      <span>95% on-time completion vs. 34% previous</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <CheckCircle className="w-4 h-4 text-green-400" /> / />> />
-                <div className="bg-gradient-to-br from-green-900/40 to-teal-900/40 rounded-xl p-6 border border-green-500/30">
                   <h3 className="text-xl font-bold text-white mb-3">Compliance Training</h3>
                   <p className="mb-3">,"
   Transform mandatory compliance training from boring checkbox exercises into engaging
@@ -499,11 +491,10 @@ const AdaptiveLearningPlatforms: () => {
                   <div className="text-sm space-y-1">
                     <div className="flex items-center gap-2">
                       <CheckCircle className="w-4 h-4 text-green-400/>" / />> />>
-                      <span>95% on-time completion vs. 34% previous</span>/span>
+                      <span>95% on-time completion vs. 34% previous</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <CheckCircle className="w-4 h-4 text-green-400/>" / />> />>
-                <div className="bg-gradient-to-br from-green-900/40 to-teal-900/40 rounded-xl p-6 border border-green-500/30">
                   <h3 className="text-xl font-bold text-white mb-3">Compliance Training</h3>
                   <p className="mb-3">"
   Transform mandatory compliance training from boring checkbox exercises into engaging
@@ -512,11 +503,11 @@ const AdaptiveLearningPlatforms: () => {
                   <div className="text-sm space-y-1">
                     <div className="flex items-center gap-2">
                       <CheckCircle className="w-4 h-4 text-green-400" /> / />> />
-                      <span>95% on-time completion vs. 34% previous</span>/span>
+                      <span>95% on-time completion vs. 34% previous</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <CheckCircle className="w-4 h-4 text-green-400" /> / />> />
-                      <span>92% knowledge retention after 6 months</span>/span>
+                      <span>92% knowledge retention after 6 months</span>
                     </div>
                   </div>
                 </div>
@@ -530,7 +521,7 @@ const AdaptiveLearningPlatforms: () => {
                   <div className="text-sm space-y-1">
                     <div className="flex items-center gap-2">
                       <CheckCircle className="w-4 h-4 text-green-400 " / />> />>
-                      <span>78% increase in quota attainment</span>/span>
+                      <span>78% increase in quota attainment</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <CheckCircle className="w-4 h-4 text-green-400 " / />> />
@@ -540,11 +531,10 @@ const AdaptiveLearningPlatforms: () => {
                   <div className="text-sm space-y-1">
                     <div className="flex items-center gap-2">
                       <CheckCircle className="w-4 h-4 text-green-400" /> / />> />
-                      <span>78% increase in quota attainment</span>/span>
+                      <span>78% increase in quota attainment</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <CheckCircle className="w-4 h-4 text-green-400" /> / />> />
-                <div className="bg-gradient-to-br from-orange-900/40 to-red-900/40 rounded-xl p-6 border border-orange-500/30">
                   <h3 className="text-xl font-bold text-white mb-3">Sales Enablement</h3>
                   <p className="mb-3">"
   AI-driven sales training with personalized product knowledge, objection handling, and 
@@ -553,18 +543,18 @@ const AdaptiveLearningPlatforms: () => {
                   <div className="text-sm space-y-1">
                     <div className="flex items-center gap-2">
                       <CheckCircle className="w-4 h-4 text-green-400/>" / />> />>
-                      <span>78% increase in quota attainment</span>/span>
+                      <span>78% increase in quota attainment</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <CheckCircle className="w-4 h-4 text-green-400/>" / />> />>
                   <div className="text-sm space-y-1">
                     <div className="flex items-center gap-2">
                       <CheckCircle className="w-4 h-4 text-green-400" /> / />> />
-                      <span>78% increase in quota attainment</span>/span>
+                      <span>78% increase in quota attainment</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <CheckCircle className="w-4 h-4 text-green-400" /> / />> />
-                      <span>$156M incremental revenue in Year 1</span>/span>
+                      <span>$156M incremental revenue in Year 1</span>
                     </div>
                   </div>
                 </div>
@@ -576,23 +566,23 @@ const AdaptiveLearningPlatforms: () => {
               <h2 className="text-3xl font-bold text-white mb-6">💰 Enterprise ROI Analysis</h2>"
               <div className="bg-gradient-to-r from-green-900/40 to-blue-900/40 rounded-xl p-8 border border-green-500/30">
                 <div className="grid md:grid-cols-2 gap-8">
-                  <div >
+                  <div>
                     <h3 className="text-xl font-bold text-white mb-4">Investment (1,000 learners)</h3>
                     <ul className="space-y-2 text-sm">
                       <li className="flex justify-between">
-                        <span>Platform licensing: </span>/span>,
+                        <span>Platform licensing: </span>,
                         <span className="text-white font-semibold">$240K/year</span>"
                       </li>
                       <li className="flex justify-between">
-                        <span>Content migration: </span>/span>,
+                        <span>Content migration: </span>,
                         <span className="text-white font-semibold">$180K one-time</span>"
                       </li>
                       <li className="flex justify-between">
-                        <span>Integration & training: </span>/span>,
+                        <span>Integration & training: </span>,
                         <span className="text-white font-semibold">$120K one-time</span>"
                       </li>
                       <li className="flex justify-between">
-                        <span>Ongoing support: </span>/span>,
+                        <span>Ongoing support: </span>,
                         <span className="text-white font-semibold">$60K/year</span>"
                       </li>
                       <li className="flex justify-between border-t border-white/20 pt-2 mt-2">
@@ -601,23 +591,23 @@ const AdaptiveLearningPlatforms: () => {
               <h2 className="text-3xl font-bold text-white mb-6">💰 Enterprise ROI Analysis</h2>
               <div className="bg-gradient-to-r from-green-900/40 to-blue-900/40 rounded-xl p-8 border border-green-500/30">
                 <div className="grid md:grid-cols-2 gap-8">
-                  <div >
+                  <div>
                     <h3 className="text-xl font-bold text-white mb-4">Investment (1,000 learners)</h3>
                     <ul className="space-y-2 text-sm">
                       <li className="flex justify-between">
-                        <span>Platform licensing: </span>/span>,
+                        <span>Platform licensing: </span>,
                         <span className="text-white font-semibold">$240K/year</span>
                       </li>
                       <li className="flex justify-between">
-                        <span>Content migration: </span>/span>,
+                        <span>Content migration: </span>,
                         <span className="text-white font-semibold">$180K one-time</span>
                       </li>
                       <li className="flex justify-between">
-                        <span>Integration & training: </span>/span>,
+                        <span>Integration & training: </span>,
                         <span className="text-white font-semibold">$120K one-time</span>
                       </li>
                       <li className="flex justify-between">
-                        <span>Ongoing support: </span>/span>,
+                        <span>Ongoing support: </span>,
                         <span className="text-white font-semibold">$60K/year</span>
                       </li>
                       <li className="flex justify-between border-t border-white/20 pt-2 mt-2">
@@ -626,23 +616,23 @@ const AdaptiveLearningPlatforms: () => {
               <h2 className="text-3xl font-bold text-white mb-6">💰 Enterprise ROI Analysis</h2>"
               <div className="bg-gradient-to-r from-green-900/40 to-blue-900/40 rounded-xl p-8 border border-green-500/30">
                 <div className="grid md:grid-cols-2 gap-8">
-                  <div >
+                  <div>
                     <h3 className="text-xl font-bold text-white mb-4">Investment (1,000 learners)</h3>
                     <ul className="space-y-2 text-sm">
                       <li className="flex justify-between">
-                        <span>Platform licensing: </span>/span>,
+                        <span>Platform licensing: </span>,
                         <span className="text-white font-semibold">$240K/year</span>"
                       </li>
                       <li className="flex justify-between">
-                        <span>Content migration: </span>/span>,
+                        <span>Content migration: </span>,
                         <span className="text-white font-semibold">$180K one-time</span>"
                       </li>
                       <li className="flex justify-between">
-                        <span>Integration & training: </span>/span>,
+                        <span>Integration & training: </span>,
                         <span className="text-white font-semibold">$120K one-time</span>"
                       </li>
                       <li className="flex justify-between">
-                        <span>Ongoing support: </span>/span>,
+                        <span>Ongoing support: </span>,
                         <span className="text-white font-semibold">$60K/year</span>"
                       </li>
                       <li className="flex justify-between border-t border-white/20 pt-2 mt-2">
@@ -651,23 +641,23 @@ const AdaptiveLearningPlatforms: () => {
               <h2 className="text-3xl font-bold text-white mb-6">💰 Enterprise ROI Analysis</h2>
               <div className="bg-gradient-to-r from-green-900/40 to-blue-900/40 rounded-xl p-8 border border-green-500/30">
                 <div className="grid md:grid-cols-2 gap-8">
-                  <div >
+                  <div>
                     <h3 className="text-xl font-bold text-white mb-4">Investment (1,000 learners)</h3>
                     <ul className="space-y-2 text-sm">
                       <li className="flex justify-between">
-                        <span>Platform licensing: </span>/span>,
+                        <span>Platform licensing: </span>,
                         <span className="text-white font-semibold">$240K/year</span>
                       </li>
                       <li className="flex justify-between">
-                        <span>Content migration: </span>/span>,
+                        <span>Content migration: </span>,
                         <span className="text-white font-semibold">$180K one-time</span>
                       </li>
                       <li className="flex justify-between">
-                        <span>Integration & training: </span>/span>,
+                        <span>Integration & training: </span>,
                         <span className="text-white font-semibold">$120K one-time</span>
                       </li>
                       <li className="flex justify-between">
-                        <span>Ongoing support: </span>/span>,
+                        <span>Ongoing support: </span>,
                         <span className="text-white font-semibold">$60K/year</span>
                       </li>
                       <li className="flex justify-between border-t border-white/20 pt-2 mt-2">
@@ -676,26 +666,26 @@ const AdaptiveLearningPlatforms: () => {
                       </li>
                     </ul>
                   </div>
-                  <div >
+                  <div>
                     <h3 className="text-xl font-bold text-white mb-4">Value Created (Year 1)</h3>
                     <ul className="space-y-2 text-sm">
                       <li className="flex justify-between">
-                        <span>Reduced training time (67%):</span>/span>
+                        <span>Reduced training time (67%):</span>
                         <span className="text-green-400 font-semibold">$2.1M</span>
                       </li>
                       <li className="flex justify-between">
-                        <span>Faster time-to-productivity: </span>/span>,
+                        <span>Faster time-to-productivity: </span>,
                         <span className="text-green-400 font-semibold">$1.8M</span>"
                       <li className="flex justify-between">
-                        <span>Faster time-to-productivity: </span>/span>,
+                        <span>Faster time-to-productivity: </span>,
                         <span className="text-green-400 font-semibold">$1.8M</span>
                       </li>
                       <li className="flex justify-between">
-                        <span>Improved performance (+34%):</span>/span>
+                        <span>Improved performance (+34%):</span>
                         <span className="text-green-400 font-semibold">$2.4M</span>
                       </li>
                       <li className="flex justify-between">
-                        <span>Reduced turnover (18%):</span>/span>
+                        <span>Reduced turnover (18%):</span>
                         <span className="text-green-400 font-semibold">$1.3M</span>
                       </li>
                       <li className="flex justify-between border-t border-white/20 pt-2 mt-2">
@@ -707,22 +697,22 @@ const AdaptiveLearningPlatforms: () => {
                     <h3 className="text-xl font-bold text-white mb-4">Value Created (Year 1)</h3>
                     <ul className="space-y-2 text-sm">
                       <li className="flex justify-between">
-                        <span>Reduced training time (67%):</span>/span>
+                        <span>Reduced training time (67%):</span>
                         <span className="text-green-400 font-semibold">$2.1M</span>
                       </li>
                       <li className="flex justify-between">
-                        <span>Faster time-to-productivity: </span>/span>,
+                        <span>Faster time-to-productivity: </span>,
                         <span className="text-green-400 font-semibold">$1.8M</span>"
                       <li className="flex justify-between">
-                        <span>Faster time-to-productivity: </span>/span>,
+                        <span>Faster time-to-productivity: </span>,
                         <span className="text-green-400 font-semibold">$1.8M</span>
                       </li>
                       <li className="flex justify-between">
-                        <span>Improved performance (+34%):</span>/span>
+                        <span>Improved performance (+34%):</span>
                         <span className="text-green-400 font-semibold">$2.4M</span>
                       </li>
                       <li className="flex justify-between">
-                        <span>Reduced turnover (18%):</span>/span>
+                        <span>Reduced turnover (18%):</span>
                         <span className="text-green-400 font-semibold">$1.3M</span>
                       </li>
                       <li className="flex justify-between border-t border-white/20 pt-2 mt-2">
@@ -833,7 +823,7 @@ const AdaptiveLearningPlatforms: () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 to="/contact"
   className="bg-white text-blue-600 hover:bg-zion-slate-light px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105 inline-flex items-center justify-center gap-2
-                >
+                >"
                   <Target className="w-5 h-5 ">
                   <Target className="w-5 h-5" />
                   <Target className="w-5 h-5/>">
@@ -841,7 +831,7 @@ const AdaptiveLearningPlatforms: () => {
   Request Demo
                 </Link>
                 <Link to="/case-studies"
-  className="border-2 border-white text-white hover:bg-white/10 px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105>
+  className="border-2 border-white text-white hover:bg-white/10 px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105>"
             <section className="bg-gradient-to-r from-blue-600 to-cyan-600 rounded-2xl p-8 text-center">
               <h2 className="text-3xl font-bold text-white mb-4">"
   Transform Your Workforce with AI Adaptive Learning
@@ -854,7 +844,7 @@ const AdaptiveLearningPlatforms: () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 to="/contact"
   className="bg-white text-blue-600 hover:bg-zion-slate-light px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105 inline-flex items-center justify-center gap-2
-                >
+                >"
                   <Target className="w-5 h-5 ">
                   <Target className="w-5 h-5" />
   Request Demo
@@ -873,5 +863,4 @@ const AdaptiveLearningPlatforms: () => {
   );
 };
 
-export default AdaptiveLearningPlatforms;
-;
+export default AdaptiveLearningPlatforms;;

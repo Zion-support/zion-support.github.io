@@ -271,7 +271,6 @@ export default function HyperAutonomousEnterpriseSystems2026() {
                 </p>
               </div>
               
-              <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-6">"
                 <h3 className="text-lg font-bold text-gray-900 mb-3">🌐 Ecosystem Integration</h3>"
                 <p className="text-gray-700 text-sm">"
                   Hyper-autonomous systems will seamlessly integrate across entire business ecosystems, 
@@ -297,14 +296,12 @@ export default function HyperAutonomousEnterpriseSystems2026() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <a 
                 href="/[^"]*"
-                className="bg-white text-purple-600 px-8 py-3 rounded-xl font-bold hover:bg-gray-100 transition-colors"
-              >
+                className="bg-white text-purple-600 px-8 py-3 rounded-xl font-bold hover:bg-gray-100 transition-colors">
                 Get Free Consultation
               </a>
               <a 
                 href="/[^"]*"
-                className="border-2 border-white text-white px-8 py-3 rounded-xl font-bold hover:bg-white hover:text-purple-600 transition-colors"
-              >
+                className="border-2 border-white text-white px-8 py-3 rounded-xl font-bold hover:bg-white hover:text-purple-600 transition-colors">
                 View Success Stories
               </a>
             </div>

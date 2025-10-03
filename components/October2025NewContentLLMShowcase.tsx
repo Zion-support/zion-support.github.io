@@ -97,8 +97,7 @@ const October2025NewContentLLMShowcase = () => {
               <Link
                 key={index}
                 to={item.link}
-                className="group relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 hover:border-gray-600 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl"
-              >
+                className="group relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 hover:border-gray-600 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl">
                 {/* Gradient Accent */}
                 <div className={`absolute top-0 left-0 w-full h-1 bg-gradient-to-r ${item.color} rounded-t-2xl`}></div>
                 
@@ -137,8 +136,7 @@ const October2025NewContentLLMShowcase = () => {
                   {item.tags.map((tag, idx) => (
                     <span
                       key={idx}
-                      className="px-3 py-1 bg-gray-700/50 text-gray-300 text-xs font-medium rounded-full"
-                    >
+                      className="px-3 py-1 bg-gray-700/50 text-gray-300 text-xs font-medium rounded-full">
                       {tag}
                     </span>
                   ))}
@@ -183,8 +181,7 @@ const October2025NewContentLLMShowcase = () => {
         <div className="mt-12 text-center">
           <Link
             to="/contact"
-            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 font-bold text-lg rounded-full hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105"
-          >
+            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 font-bold text-lg rounded-full hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105">
             <Rocket className="w-6 h-6 mr-2" />
             Start Your Transformation Today
             <ArrowRight className="w-6 h-6 ml-2" />

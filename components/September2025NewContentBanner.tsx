@@ -70,8 +70,7 @@ const September2025NewContentBanner = () => {
             <a
               key={index}
               href={item.link}
-              className="group relative bg-gradient-to-br from-slate-800/90 to-slate-900/90 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-8 hover:border-purple-500/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20"
-            >
+              className="group relative bg-gradient-to-br from-slate-800/90 to-slate-900/90 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-8 hover:border-purple-500/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20">
               {/* Tag */}
               <div className="absolute top-4 right-4">
                 <span className={`bg-gradient-to-r ${item.color} text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider`}>
@@ -110,14 +109,12 @@ const September2025NewContentBanner = () => {
           <div className="inline-flex flex-col sm:flex-row gap-4">
             <a
               href="/blog"
-              className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/50"
-            >
+              className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/50">
               Explore All Articles
             </a>
             <a
               href="/case-studies"
-              className="px-8 py-4 bg-slate-800 text-white font-bold rounded-xl border-2 border-purple-500/50 hover:bg-slate-700 transition-all duration-300 hover:scale-105 hover:border-purple-400"
-            >
+              className="px-8 py-4 bg-slate-800 text-white font-bold rounded-xl border-2 border-purple-500/50 hover:bg-slate-700 transition-all duration-300 hover:scale-105 hover:border-purple-400">
               View Case Studies
             </a>
           </div>

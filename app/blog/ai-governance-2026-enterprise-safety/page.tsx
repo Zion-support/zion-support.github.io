@@ -444,14 +444,12 @@ export default function AIGovernance2026EnterpriseSafety() {
             <div className="flex flex-wrap justify-center gap-4">"
               <a 
                 href="/[^"]*"
-                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-              >
+                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
                 Get Governance Assessment
               </a>
               <a 
                 href="/[^"]*"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
-              >
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
                 Explore Governance Services
               </a>
             </div>

@@ -28,14 +28,12 @@ export default function AISpaceTechnologyServices() {
         <div className="flex flex-col sm:flex-row gap-4">"
           <a
             href="tel:+13024640950"
-            className="bg-indigo-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-indigo-700 transition-colors shadow-lg"
-          >
+            className="bg-indigo-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-indigo-700 transition-colors shadow-lg">
             Call +1 302 464 0950
           </a>
           <a
             href="mailto:kleber@ziontechgroup.com"
-            className="border-2 border-indigo-600 text-indigo-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-indigo-600 hover:text-white transition-colors"
-          >
+            className="border-2 border-indigo-600 text-indigo-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-indigo-600 hover:text-white transition-colors">
             Get Free Consultation
           </a>
         </div>
@@ -180,14 +178,12 @@ export default function AISpaceTechnologyServices() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">"
           <a
             href="tel:+13024640950"
-            className="bg-indigo-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-indigo-700 transition-colors shadow-lg"
-          >
+            className="bg-indigo-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-indigo-700 transition-colors shadow-lg">
             Call +1 302 464 0950
           </a>
           <a
             href="mailto:kleber@ziontechgroup.com"
-            className="border-2 border-indigo-600 text-indigo-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-indigo-600 hover:text-white transition-colors"
-          >
+            className="border-2 border-indigo-600 text-indigo-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-indigo-600 hover:text-white transition-colors">
             Get Free Consultation
           </a>
         </div>

@@ -254,14 +254,12 @@ export default function AINeuromorphicEnterpriseComputing2026() {
           <div className="flex flex-col sm:flex-row gap-4">"
             <Link 
               href="/[^"]*"
-              className="bg-gradient-to-r from-red-600 to-pink-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-red-700 hover:to-pink-700 transition-all duration-200 text-center"
-            >
+              className="bg-gradient-to-r from-red-600 to-pink-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-red-700 hover:to-pink-700 transition-all duration-200 text-center">
               Start Neuromorphic Journey
             </Link>
             <Link 
               href="/[^"]*"
-              className="bg-white border-2 border-red-600 text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-red-50 transition-all duration-200 text-center"
-            >
+              className="bg-white border-2 border-red-600 text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-red-50 transition-all duration-200 text-center">
               Explore AI Services
             </Link>
           </div>

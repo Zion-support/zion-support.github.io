@@ -138,8 +138,7 @@ const AdvancedContentDiscoveryHub: React.FC = () => {
           {filteredContent.map((item) => (
             <div 
               key={item.id} 
-              className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100"
-            >
+              className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
               <div className="p-6">
                 {/* Category Badge */}
                 <div className="flex items-center justify-between mb-4">
@@ -175,8 +174,7 @@ const AdvancedContentDiscoveryHub: React.FC = () => {
                 {/* Action Button */}
                 <Link 
                   href={item.url}
-                  className="inline-flex items-center bg-gradient-to-r from-blue-500 to-purple-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
-                >
+                  className="inline-flex items-center bg-gradient-to-r from-blue-500 to-purple-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105">
                   {item.type === 'service' ? 'Explore Service' : 'Read More'}
                   <span className="ml-2">→</span>
                 </Link>
@@ -245,8 +243,7 @@ const AdvancedContentDiscoveryHub: React.FC = () => {
           <div className="bg-gradient-to-r from-green-500 to-blue-500 p-1 rounded-full inline-block">
             <Link 
               href="/contact"
-              className="bg-white text-gray-900 px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-50 transition-all duration-300 inline-flex items-center"
-            >
+              className="bg-white text-gray-900 px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-50 transition-all duration-300 inline-flex items-center">
               🚀 Get Personalized Recommendations
               <span className="ml-2">→</span>
             </Link>

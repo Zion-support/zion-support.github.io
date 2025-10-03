@@ -381,14 +381,12 @@ export default function AI2028OmnipotentSuperintelligenceBreakthrough() {
           <div className="flex flex-col sm:flex-row gap-4">"
             <Link 
               href="/[^"]*"
-              className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-6 py-3 rounded-lg font-semibold text-center hover:from-indigo-600 hover:to-purple-600 transition-all"
-            >
+              className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-6 py-3 rounded-lg font-semibold text-center hover:from-indigo-600 hover:to-purple-600 transition-all">
               Schedule Universal Consultation
             </Link>
             <Link 
               href="/[^"]*"
-              className="bg-white border border-gray-300 text-gray-700 px-6 py-3 rounded-lg font-semibold text-center hover:bg-gray-50 transition-all"
-            >
+              className="bg-white border border-gray-300 text-gray-700 px-6 py-3 rounded-lg font-semibold text-center hover:bg-gray-50 transition-all">
               View Universal Success Story
             </Link>
           </div>

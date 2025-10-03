@@ -64,15 +64,13 @@ export default function RevolutionaryBreakthroughs2025() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <a 
                 href="#breakthrough-technologies" "
-                className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1 flex items-center justify-center gap-2"
-              >
+                className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1 flex items-center justify-center gap-2">
                 <Sparkles className="w-5 h-5" />"
                 Explore Breakthroughs
               </a>
               <a 
                 href="/[^"]*"
-                className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2"
-              >
+                className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2">
                 <span>Get Implementation Guide</span>
                 <ArrowRight className="w-5 h-5" />"
               </a>
@@ -99,8 +97,7 @@ export default function RevolutionaryBreakthroughs2025() {
               return (
                 <div
                   key={breakthrough.id}
-                  className="group bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/20"
-                >
+                  className="group bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/20">
                   {/* Card Header */}
                   <div className="flex items-start justify-between mb-6">"
                     <div className="text-5xl group-hover:scale-110 transition-transform duration-300">"
@@ -157,8 +154,7 @@ export default function RevolutionaryBreakthroughs2025() {
                   {/* CTA Button */}
                   <a
                     href={`/blog/${breakthrough.slug}`}
-                    className="group/btn flex items-center justify-center gap-2 w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 transform hover:-translate-y-1"
-                  >
+                    className="group/btn flex items-center justify-center gap-2 w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 transform hover:-translate-y-1">
                     <IconComponent className="w-4 h-4" />"
                     <span>Explore Breakthrough</span>
                     <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" />"
@@ -188,8 +184,7 @@ export default function RevolutionaryBreakthroughs2025() {
               return (
                 <div
                   key={service.id}
-                  className="group bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/20"
-                >
+                  className="group bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/20">
                   <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">"
                     {service.icon}
                   </div>
@@ -239,8 +234,7 @@ export default function RevolutionaryBreakthroughs2025() {
 
                   <a
                     href="/contact"
-                    className="group/btn flex items-center justify-center gap-2 w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
-                  >
+                    className="group/btn flex items-center justify-center gap-2 w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1">
                     <IconComponent className="w-4 h-4" />"
                     <span>Get Started</span>
                     <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" />"
@@ -268,8 +262,7 @@ export default function RevolutionaryBreakthroughs2025() {
             {latestCaseStudies2025.map((caseStudy, index) => (
               <div
                 key={caseStudy.id}
-                className="group bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/20"
-              >
+                className="group bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/20">
                 <div className="flex items-start gap-4 mb-6">"
                   <div className="text-4xl group-hover:scale-110 transition-transform duration-300">"
                     {caseStudy.icon}
@@ -317,8 +310,7 @@ export default function RevolutionaryBreakthroughs2025() {
 
                 <a
                   href={`/case-studies/${caseStudy.slug}`}
-                  className="group/btn flex items-center justify-center gap-2 w-full bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
-                >
+                  className="group/btn flex items-center justify-center gap-2 w-full bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1">
                   <span>View Full Case Study</span>
                   <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" />"
                 </a>
@@ -344,15 +336,13 @@ export default function RevolutionaryBreakthroughs2025() {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">"
                   <a
                     href="/contact"
-                    className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 flex items-center justify-center gap-2"
-                  >
+                    className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 flex items-center justify-center gap-2">
                     <Sparkles className="w-5 h-5" />"
                     <span>Get Early Access</span>
                   </a>
                   <a
                     href="/contact"
-                    className="border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2"
-                  >
+                    className="border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2">
                     <span>Schedule Consultation</span>
                     <ArrowRight className="w-5 h-5" />"
                   </a>

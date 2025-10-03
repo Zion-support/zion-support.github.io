@@ -41,6 +41,4 @@ export default function ZeroPIIExperimentsV22025(): React.JSX.Element {
       </div>
     </div>
   );
-}
-
-;
+};

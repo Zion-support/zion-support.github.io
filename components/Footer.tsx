@@ -76,8 +76,7 @@ const Footer: React.FC = () => {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-gray-400 hover:text-white transition-colors"
-                  >
+                    className="text-gray-400 hover:text-white transition-colors">
                     {link.name}
                   </Link>
                 </li>
@@ -93,8 +92,7 @@ const Footer: React.FC = () => {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-gray-400 hover:text-white transition-colors"
-                  >
+                    className="text-gray-400 hover:text-white transition-colors">
                     {link.name}
                   </Link>
                 </li>
@@ -110,8 +108,7 @@ const Footer: React.FC = () => {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-gray-400 hover:text-white transition-colors"
-                  >
+                    className="text-gray-400 hover:text-white transition-colors">
                     {link.name}
                   </Link>
                 </li>

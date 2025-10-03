@@ -85,8 +85,7 @@ export default function NotFound() {
               <Link
                 key={page.href}
                 href={page.href}
-                className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-200 group"
-              >
+                className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-200 group">
                 <div className="text-4xl mb-4">{page.icon}</div>"
                 <h4 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">"
                   {page.title}
@@ -103,14 +102,12 @@ export default function NotFound() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">"
           <Link
             href="/"
-            className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl"
-          >
+            className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl">
             ← Back to Home
           </Link>
           <a
             href="tel:+13024640950"
-            className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-600 hover:text-white transition-colors"
-          >
+            className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-600 hover:text-white transition-colors">
             Call Support: +1 302 464 0950
           </a>
         </div>
@@ -126,15 +123,13 @@ export default function NotFound() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">"
             <a
               href="mailto:kleber@ziontechgroup.com"
-              className="inline-flex items-center gap-2 text-blue-600 font-semibold hover:text-blue-700 transition-colors"
-            >
+              className="inline-flex items-center gap-2 text-blue-600 font-semibold hover:text-blue-700 transition-colors">
               📧 Email: kleber@ziontechgroup.com
             </a>
             <span className="hidden sm:inline text-gray-400">|</span>"
             <a
               href="tel:+13024640950"
-              className="inline-flex items-center gap-2 text-blue-600 font-semibold hover:text-blue-700 transition-colors"
-            >
+              className="inline-flex items-center gap-2 text-blue-600 font-semibold hover:text-blue-700 transition-colors">
               📞 Phone: +1 302 464 0950
             </a>
           </div>
@@ -147,8 +142,7 @@ export default function NotFound() {
             If you believe this is an error, please{' '}
             <a
               href="mailto:kleber@ziontechgroup.com"
-              className="text-blue-600 hover:text-blue-700 font-semibold"
-            >
+              className="text-blue-600 hover:text-blue-700 font-semibold">
               contact our support team
             </a>
           </p>

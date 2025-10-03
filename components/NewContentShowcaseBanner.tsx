@@ -64,8 +64,7 @@ const NewContentShowcaseBanner: React.FC = () => {
           {newContent.map((content, index) => (
             <div 
               key={index}
-              className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100 overflow-hidden"
-            >
+              className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100 overflow-hidden">
               {/* Featured badge */}
               {content.featured && (
                 <div className="absolute top-4 right-4 z-10">
@@ -102,8 +101,7 @@ const NewContentShowcaseBanner: React.FC = () => {
                 {/* CTA */}
                 <Link 
                   href={content.href}
-                  className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium text-sm transition-colors duration-200"
-                >
+                  className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium text-sm transition-colors duration-200">
                   Read More
                   <ArrowRight className="ml-1 w-4 h-4" />
                 </Link>
@@ -161,15 +159,13 @@ const NewContentShowcaseBanner: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 href="/blog"
-                className="inline-flex items-center px-8 py-3 bg-white text-blue-600 font-semibold rounded-xl hover:bg-blue-50 transition-colors duration-200"
-              >
+                className="inline-flex items-center px-8 py-3 bg-white text-blue-600 font-semibold rounded-xl hover:bg-blue-50 transition-colors duration-200">
                 Explore All Content
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link 
                 href="/case-studies"
-                className="inline-flex items-center px-8 py-3 bg-white/20 backdrop-blur-sm text-white font-semibold rounded-xl border border-white/30 hover:bg-white/30 transition-colors duration-200"
-              >
+                className="inline-flex items-center px-8 py-3 bg-white/20 backdrop-blur-sm text-white font-semibold rounded-xl border border-white/30 hover:bg-white/30 transition-colors duration-200">
                 View Case Studies
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>

@@ -45,6 +45,4 @@ export default function GenAICostOptimizationV4(): React.JSX.Element {
       </div>
     </div>
   );
-}
-
-;
+};

@@ -208,8 +208,7 @@ export default function AIAutonomousBusinessSystems2026() {
           </p>
           <Link 
             href="/[^"]*"
-            className="bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
-          >
+            className="bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
             Explore Autonomous Operations
           </Link>
         </div>

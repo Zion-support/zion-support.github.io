@@ -88,7 +88,6 @@ export default function AI2026EnterpriseAutomationRevolution() {
         <h2 className="text-3xl font-bold text-gray-900 mb-6">Core Automation Technologies</h2>
         
         <div className="grid md:grid-cols-2 gap-8">
-          <div className="bg-gradient-to-br from-blue-50 to-purple-50 p-8 rounded-2xl border border-blue-200">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
                 <Zap className="w-6 h-6 text-white" />
@@ -315,14 +314,12 @@ export default function AI2026EnterpriseAutomationRevolution() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
             href="/case-studies/ai-enterprise-automation-success-2026"
-            className="bg-white text-orange-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
-          >
+            className="bg-white text-orange-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors">
             View Success Stories
           </Link>
           <a
             href="tel:+13024640950"
-            className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-orange-600 transition-colors"
-          >
+            className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-orange-600 transition-colors">
             Get Automation Assessment
           </a>
         </div>

@@ -14,9 +14,9 @@ export default function AutonomousInfrastructureHealing2025(): void {
 
       <article className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
         <div className="container mx-auto px-4 py-12 max-w-4xl">
-          <Link to="/blog
+          <Link to="/blog">
   className="inline-flex items-center text-purple-400 hover:text-purple-300 mb-8 transition-colors
-          >
+          >"
             <ArrowLeft className="mr-2 h-4 w-4 ">
             <ArrowLeft className="mr-2 h-4 w-4" />
             <ArrowLeft className="mr-2 h-4 w-4/>">
@@ -40,9 +40,9 @@ export default function AutonomousInfrastructureHealing2025(): void {
             <p className="text-xl text-gray-300 leading-relaxed">
       <article className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
         <div className="container mx-auto px-4 py-12 max-w-4xl">
-          <Link to="/blog
+          <Link to="/blog">
   className="inline-flex items-center text-purple-400 hover:text-purple-300 mb-8 transition-colors
-          >
+          >"
             <ArrowLeft className="mr-2 h-4 w-4 ">
             <ArrowLeft className="mr-2 h-4 w-4" />
   Back to Blog
@@ -88,11 +88,11 @@ export default function AutonomousInfrastructureHealing2025(): void {
                 <li className="flex items-start gap-3">
                   <Zap className="h-6 w-6 text-yellow-400 mt-1 flex-shrink-0/>
                   <span><strong>99.97% Uptime: </strong> Autonomous healing resolves 94% of incidents before user impact</span>,
-                </li>
+                </li>"
                 <li className="flex items-start gap-3">
                   <Shield className="h-6 w-6 text-green-400 mt-1 flex-shrink-0/>
                   <span><strong>Sub-Second Response: </strong> AI detects and remediates issues in under 850ms average</span>,
-                </li>
+                </li>"
                 <li className="flex items-start gap-3">
                   <TrendingUp className="h-6 w-6 text-blue-400 mt-1 flex-shrink-0/>">
           <div className="prose prose-invert prose-lg max-w-none">
@@ -251,19 +251,16 @@ export default function AutonomousInfrastructureHealing2025(): void {
             <section className="mb-12">
               <h2 className="text-3xl font-bold mb-6 text-purple-300">Enterprise Implementation Results</h2>
               <div className="grid md:grid-cols-2 gap-6 mb-8">
-                <div className="bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-xl p-6 border border-purple-500/30">
                   <h3 className="text-2xl font-bold mb-4 text-purple-300">Global Financial Services</h3>
                   <ul className="space-y-3 text-gray-300">
             <section className="mb-12">
               <h2 className="text-3xl font-bold mb-6 text-purple-300">Enterprise Implementation Results</h2>"
               <div className="grid md:grid-cols-2 gap-6 mb-8">
-                <div className="bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-xl p-6 border border-purple-500/30">
                   <h3 className="text-2xl font-bold mb-4 text-purple-300">Global Financial Services</h3>
                   <ul className="space-y-3 text-gray-300">
             <section className="mb-12">
               <h2 className="text-3xl font-bold mb-6 text-purple-300">Enterprise Implementation Results</h2>
               <div className="grid md:grid-cols-2 gap-6 mb-8">
-                <div className="bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-xl p-6 border border-purple-500/30">
                   <h3 className="text-2xl font-bold mb-4 text-purple-300">Global Financial Services</h3>
                   <ul className="space-y-3 text-gray-300">
                     <li >• 99.99% uptime across 4,500 services</li>
@@ -275,7 +272,6 @@ export default function AutonomousInfrastructureHealing2025(): void {
                 <div className="bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-xl p-6 border border-blue-500/30">
                   <h3 className="text-2xl font-bold mb-4 text-blue-300">E-Commerce Platform</h3>
                   <ul className="space-y-3 text-gray-300">
-                <div className="bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-xl p-6 border border-blue-500/30">
                   <h3 className="text-2xl font-bold mb-4 text-blue-300">E-Commerce Platform</h3>
                   <ul className="space-y-3 text-gray-300">
                     <li >• 99.96% availability during peak seasons</li>
@@ -373,7 +369,7 @@ export default function AutonomousInfrastructureHealing2025(): void {
               to="/contact"
   className="inline-flex items-center px-8 py-4 bg-white text-purple-600 rounded-lg font-bold text-lg hover:bg-purple-50 transition-colors
               >
-                Start Your Reliability Transformation
+                Start Your Reliability Transformation"
                 <Zap className="ml-2 h-5 w-5 ">
                 <Zap className="ml-2 h-5 w-5/>">
                 <Zap className="ml-2 h-5 w-5" />
@@ -385,7 +381,7 @@ export default function AutonomousInfrastructureHealing2025(): void {
               to="/contact"
   className="inline-flex items-center px-8 py-4 bg-white text-purple-600 rounded-lg font-bold text-lg hover:bg-purple-50 transition-colors
               >
-                Start Your Reliability Transformation
+                Start Your Reliability Transformation"
                 <Zap className="ml-2 h-5 w-5 ">
                 <Zap className="ml-2 h-5 w-5" />
               </Link>
@@ -395,5 +391,4 @@ export default function AutonomousInfrastructureHealing2025(): void {
       </article>
     </>
   );
-}
-;
+};

@@ -355,14 +355,12 @@ export default function AIQuantumNeuralNetworks2026() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">"
             <Link
               href="/services"
-              className="bg-white text-purple-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors shadow-lg"
-            >
+              className="bg-white text-purple-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors shadow-lg">
               Explore Quantum AI Services
             </Link>
             <a
               href="tel:+13024640950"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-purple-900 transition-colors"
-            >
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-purple-900 transition-colors">
               Call +1 302 464 0950
             </a>
           </div>

@@ -16,8 +16,7 @@ export default function AI2026ImplementationRoadmap() {
         <div className="max-w-4xl mx-auto px-4 py-4">"
           <Link 
             href="/[^"]*"
-            className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
-          >
+            className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium">
             <ArrowLeft className="w-4 h-4 mr-2" />"
             Back to Home
           </Link>
@@ -387,14 +386,12 @@ export default function AI2026ImplementationRoadmap() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <Link 
                 href="/case-studies/fortune-500-ai-transformation-success"
-                className="bg-white text-blue-600 px-8 py-4 rounded-full font-bold hover:bg-gray-100 transition-colors"
-              >
+                className="bg-white text-blue-600 px-8 py-4 rounded-full font-bold hover:bg-gray-100 transition-colors">
                 View Success Stories
               </Link>
               <Link 
                 href="/tools/ai-roi-calculator"
-                className="border-2 border-white text-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-blue-600 transition-colors"
-              >
+                className="border-2 border-white text-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-blue-600 transition-colors">
                 Calculate Your ROI
               </Link>
             </div>

@@ -179,8 +179,7 @@ export default function InteractiveContentDiscovery2026() {
             <Link
               key={item.id}
               href={item.url}
-              className="group block bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-200 overflow-hidden"
-            >
+              className="group block bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-200 overflow-hidden">
               {/* Featured Badge */}
               {item.featured && (
                 <div className="absolute top-4 right-4 z-10">
@@ -260,8 +259,7 @@ export default function InteractiveContentDiscovery2026() {
                   setSelectedCategory('all');
                   setSelectedROI('all');
                 }}
-                className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-400 hover:to-indigo-500 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300"
-              >
+                className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-400 hover:to-indigo-500 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300">
                 Clear All Filters
               </button>
             )}

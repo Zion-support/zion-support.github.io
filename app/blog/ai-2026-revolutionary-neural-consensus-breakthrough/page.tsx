@@ -44,14 +44,12 @@ export default function AI2026RevolutionaryNeuralConsensusBreakthrough() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">"
               <a 
                 href="#breakthrough-details" "
-                className="bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
-              >
+                className="bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1">
                 Discover Breakthrough
               </a>
               <a 
                 href="/[^"]*"
-                className="bg-gradient-to-r from-indigo-500 to-cyan-600 hover:from-indigo-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 transform hover:-translate-y-1"
-              >
+                className="bg-gradient-to-r from-indigo-500 to-cyan-600 hover:from-indigo-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 transform hover:-translate-y-1">
                 View $500B Success Story →
               </a>
             </div>
@@ -235,7 +233,6 @@ export default function AI2026RevolutionaryNeuralConsensusBreakthrough() {
           </div>
           
           <div className="grid md:grid-cols-2 gap-8">"
-            <div className="bg-gradient-to-br from-purple-900/20 to-indigo-900/20 rounded-xl p-8 border border-purple-500/20">"
               <div className="flex items-center gap-3 mb-6">"
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-lg flex items-center justify-center">"
                   <span className="text-xl font-bold">F100</span>"
@@ -261,7 +258,6 @@ export default function AI2026RevolutionaryNeuralConsensusBreakthrough() {
               </div>
             </div>
             
-            <div className="bg-gradient-to-br from-indigo-900/20 to-cyan-900/20 rounded-xl p-8 border border-indigo-500/20">"
               <div className="flex items-center gap-3 mb-6">"
                 <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-cyan-500 rounded-lg flex items-center justify-center">"
                   <span className="text-xl font-bold">F50</span>"
@@ -303,14 +299,12 @@ export default function AI2026RevolutionaryNeuralConsensusBreakthrough() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">"
             <a 
               href="/[^"]*"
-              className="bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
-            >
+              className="bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1">
               Get Started Today
             </a>
             <a 
               href="/[^"]*"
-              className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
-            >
+              className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300">
               View Success Story
             </a>
           </div>

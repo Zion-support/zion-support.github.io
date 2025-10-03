@@ -304,7 +304,6 @@ export default function AIAutomation2026CompleteGuide() {
           <section className="mb-12">"
             <h2 className="text-3xl font-bold text-white mb-6">Industry-Specific Automation Strategies</h2>"
             <div className="grid md:grid-cols-2 gap-8">"
-              <div className="bg-gradient-to-br from-blue-900/30 to-cyan-900/30 rounded-xl p-6">"
                 <h3 className="text-xl font-semibold text-blue-400 mb-4">Financial Services</h3>"
                 <ul className="text-gray-300 space-y-2 text-sm">"
                   <li>• Automated fraud detection and prevention</li>
@@ -319,7 +318,6 @@ export default function AIAutomation2026CompleteGuide() {
                 </div>
               </div>
 
-              <div className="bg-gradient-to-br from-green-900/30 to-emerald-900/30 rounded-xl p-6">"
                 <h3 className="text-xl font-semibold text-green-400 mb-4">Healthcare</h3>"
                 <ul className="text-gray-300 space-y-2 text-sm">"
                   <li>• Patient data management and analysis</li>
@@ -334,7 +332,6 @@ export default function AIAutomation2026CompleteGuide() {
                 </div>
               </div>
 
-              <div className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 rounded-xl p-6">"
                 <h3 className="text-xl font-semibold text-purple-400 mb-4">Manufacturing</h3>"
                 <ul className="text-gray-300 space-y-2 text-sm">"
                   <li>• Predictive maintenance and quality control</li>
@@ -391,7 +388,6 @@ export default function AIAutomation2026CompleteGuide() {
                 </div>
               </div>
 
-              <div className="bg-gradient-to-br from-blue-900/30 to-cyan-900/30 rounded-xl p-6">"
                 <h3 className="text-lg font-semibold text-blue-400 mb-4">Quality Metrics</h3>"
                 <div className="space-y-3">"
                   <div className="flex justify-between">"
@@ -413,7 +409,6 @@ export default function AIAutomation2026CompleteGuide() {
                 </div>
               </div>
 
-              <div className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 rounded-xl p-6">"
                 <h3 className="text-lg font-semibold text-purple-400 mb-4">Financial Metrics</h3>"
                 <div className="space-y-3">"
                   <div className="flex justify-between">"
@@ -450,14 +445,12 @@ export default function AIAutomation2026CompleteGuide() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <Link 
                 href="/[^"]*"
-                className="bg-white text-emerald-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-              >
+                className="bg-white text-emerald-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
                 View Automation Success Stories
               </Link>
               <Link 
                 href="/[^"]*"
-                className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-emerald-600 transition-colors"
-              >
+                className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-emerald-600 transition-colors">
                 Start Your Automation Journey
               </Link>
             </div>
@@ -479,7 +472,6 @@ export default function AIAutomation2026CompleteGuide() {
               </div>
             </Link>
             <Link href="/blog/autonomous-agents-2026" className="group">"
-              <div className="bg-gradient-to-br from-slate-800/50 to-gray-800/50 rounded-xl p-6 hover:from-slate-700/50 hover:to-gray-700/50 transition-all">"
                 <h4 className="text-lg font-semibold text-white group-hover:text-emerald-400 mb-2">"
                   Autonomous Agents 2026
                 </h4>

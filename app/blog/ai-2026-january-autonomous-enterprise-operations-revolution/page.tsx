@@ -176,14 +176,12 @@ export default function January2026AutonomousEnterpriseOperationsRevolution() {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">"
                   <Link 
                     href="/[^"]*"
-                    className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-                  >
+                    className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
                     Schedule Consultation
                   </Link>
                   <Link 
                     href="/[^"]*"
-                    className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
-                  >
+                    className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
                     View Services
                   </Link>
                 </div>
@@ -198,14 +196,12 @@ export default function January2026AutonomousEnterpriseOperationsRevolution() {
           <div className="flex justify-between">"
             <Link 
               href="/[^"]*"
-              className="flex items-center text-blue-400 hover:text-blue-300 transition-colors"
-            >
+              className="flex items-center text-blue-400 hover:text-blue-300 transition-colors">
               ← Back to Blog
             </Link>
             <Link 
               href="/[^"]*"
-              className="flex items-center text-blue-400 hover:text-blue-300 transition-colors"
-            >
+              className="flex items-center text-blue-400 hover:text-blue-300 transition-colors">
               Next Article →
             </Link>
           </div>

@@ -41,14 +41,12 @@ export default function AIAutonomousOperationsService() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <a 
                 href="/[^"]*"
-                className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
-              >
+                className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1">
                 Get Started Today
               </a>
               <a 
                 href="#features" "
-                className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
-              >
+                className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300">
                 Explore Features
               </a>
             </div>
@@ -232,8 +230,7 @@ export default function AIAutonomousOperationsService() {
                 </ul>
                 <a 
                   href="/[^"]*"
-                  className="w-full bg-blue-500 hover:bg-blue-400 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center block"
-                >
+                  className="w-full bg-blue-500 hover:bg-blue-400 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center block">
                   Get Started
                 </a>
               </div>
@@ -268,8 +265,7 @@ export default function AIAutonomousOperationsService() {
                 </ul>
                 <a 
                   href="/[^"]*"
-                  className="w-full bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center block"
-                >
+                  className="w-full bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center block">
                   Get Started
                 </a>
               </div>
@@ -301,8 +297,7 @@ export default function AIAutonomousOperationsService() {
                 </ul>
                 <a 
                   href="/[^"]*"
-                  className="w-full bg-green-500 hover:bg-green-400 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center block"
-                >
+                  className="w-full bg-green-500 hover:bg-green-400 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center block">
                   Contact Sales
                 </a>
               </div>
@@ -318,14 +313,12 @@ export default function AIAutonomousOperationsService() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <a 
                 href="/[^"]*"
-                className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50"
-              >
+                className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50">
                 Get Free Consultation
               </a>
               <a 
                 href="/[^"]*"
-                className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
-              >
+                className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300">
                 View Case Studies
               </a>
             </div>

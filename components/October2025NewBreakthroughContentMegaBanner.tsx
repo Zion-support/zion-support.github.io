@@ -61,8 +61,7 @@ const October2025NewBreakthroughContentMegaBanner: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
+          className="text-center mb-16">
           <motion.div
             animate={{ 
               scale: [1, 1.05, 1],
@@ -73,8 +72,7 @@ const October2025NewBreakthroughContentMegaBanner: React.FC = () => {
               repeat: Infinity,
               ease: "easeInOut"
             }}
-            className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-600/20 to-pink-600/20 border border-purple-500/30 rounded-full mb-6"
-          >
+            className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-600/20 to-pink-600/20 border border-purple-500/30 rounded-full mb-6">
             <Sparkles className="w-5 h-5 text-purple-400" />
             <span className="text-purple-300 font-bold text-sm uppercase tracking-wider">
               🚀🚀🚀 JUST PUBLISHED: OCTOBER 1, 2025 🚀🚀🚀
@@ -112,8 +110,7 @@ const October2025NewBreakthroughContentMegaBanner: React.FC = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
                 whileHover={{ scale: 1.05, y: -10 }}
-                className="group relative bg-gradient-to-br from-slate-900/80 to-slate-800/80 backdrop-blur-xl border border-purple-500/20 rounded-2xl p-8 hover:border-purple-400/50 transition-all duration-300 overflow-hidden"
-              >
+                className="group relative bg-gradient-to-br from-slate-900/80 to-slate-800/80 backdrop-blur-xl border border-purple-500/20 rounded-2xl p-8 hover:border-purple-400/50 transition-all duration-300 overflow-hidden">
                 {/* Animated gradient background */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${item.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500`} />
                 
@@ -170,8 +167,7 @@ const October2025NewBreakthroughContentMegaBanner: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
-          className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 backdrop-blur-xl border border-purple-500/30 rounded-2xl p-8 text-center"
-        >
+          className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 backdrop-blur-xl border border-purple-500/30 rounded-2xl p-8 text-center">
           <h3 className="text-3xl font-bold text-white mb-6">
             🔥 Combined Enterprise Impact 🔥
           </h3>
@@ -201,14 +197,12 @@ const October2025NewBreakthroughContentMegaBanner: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1 }}
-          className="text-center mt-12"
-        >
+          className="text-center mt-12">
           <motion.a
             href="/services"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 text-white font-bold text-lg rounded-full hover:shadow-2xl hover:shadow-purple-500/50 transition-all duration-300"
-          >
+            className="inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 text-white font-bold text-lg rounded-full hover:shadow-2xl hover:shadow-purple-500/50 transition-all duration-300">
             <TrendingUp className="w-6 h-6" />
             <span>Transform Your Enterprise Today</span>
             <ArrowRight className="w-6 h-6" />

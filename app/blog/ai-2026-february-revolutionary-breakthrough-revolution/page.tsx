@@ -37,14 +37,12 @@ export default function AI2026FebruaryRevolutionaryBreakthroughPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">"
               <Link 
                 href="/[^"]*"
-                className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
-              >
+                className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1">
                 Get Started Today
               </Link>
               <Link 
                 href="/[^"]*"
-                className="bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
-              >
+                className="bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1">
                 View $3B Success Story →
               </Link>
             </div>
@@ -243,7 +241,6 @@ export default function AI2026FebruaryRevolutionaryBreakthroughPage() {
               Proven Success Stories
             </h2>
             <div className="grid md:grid-cols-2 gap-8">"
-              <div className="bg-gradient-to-br from-green-900/30 to-emerald-900/30 rounded-xl p-8 border border-green-500/20">"
                 <h3 className="text-2xl font-bold mb-4 text-green-400">Fortune 100 Manufacturing</h3>"
                 <p className="text-gray-300 mb-4">"
                   Achieved $3B ROI through autonomous operations, 99.9% automation, and 
@@ -285,14 +282,12 @@ export default function AI2026FebruaryRevolutionaryBreakthroughPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <Link 
                 href="/[^"]*"
-                className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
-              >
+                className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1">
                 Start Your Transformation
               </Link>
               <Link 
                 href="/[^"]*"
-                className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
-              >
+                className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300">
                 View Success Story
               </Link>
             </div>

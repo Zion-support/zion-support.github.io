@@ -42,6 +42,4 @@ export default function AICostOptimizationPlaybook2027(): React.JSX.Element {
       </div>
     </div>
   );
-}
-
-;
+};

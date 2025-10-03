@@ -141,8 +141,7 @@ export default function RevolutionaryContentCarousel() {
                   {/* CTA Button */}
                   <Link 
                     href={slide.url}
-                    className="inline-block bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-4 rounded-full text-lg font-bold hover:from-yellow-500 hover:to-orange-600 transition-all transform hover:scale-105 shadow-lg"
-                  >
+                    className="inline-block bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-4 rounded-full text-lg font-bold hover:from-yellow-500 hover:to-orange-600 transition-all transform hover:scale-105 shadow-lg">
                     Discover More →
                   </Link>
                 </div>

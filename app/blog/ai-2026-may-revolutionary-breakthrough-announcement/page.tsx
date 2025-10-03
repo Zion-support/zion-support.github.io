@@ -52,14 +52,12 @@ export default function May2026RevolutionaryBreakthroughPage() {
           <div className="flex flex-col sm:flex-row gap-4">
             <a 
               href="/[^"]*"
-              className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-green-500/50"
-            >
+              className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-green-500/50">
               Contact Us Today
             </a>
             <a 
               href="/[^"]*"
-              className="border-2 border-green-500 text-green-600 hover:bg-green-500 hover:text-white font-bold py-3 px-6 rounded-lg transition-all duration-300"
-            >
+              className="border-2 border-green-500 text-green-600 hover:bg-green-500 hover:text-white font-bold py-3 px-6 rounded-lg transition-all duration-300">
               View $50B Success Story
             </a>
           </div>

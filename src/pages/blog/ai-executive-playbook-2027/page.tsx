@@ -43,6 +43,4 @@ export default function AIExecutivePlaybook2027(): React.JSX.Element {
       </div>
     </div>
   );
-}
-
-;
+};

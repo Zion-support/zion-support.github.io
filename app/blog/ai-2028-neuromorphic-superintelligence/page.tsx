@@ -146,8 +146,7 @@ export default function AI2028NeuromorphicSuperintelligence() {
           </p>
           <Link 
             href="/[^"]*"
-            className="inline-block bg-white text-cyan-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-          >
+            className="inline-block bg-white text-cyan-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
             Schedule Your Neuromorphic Consultation
           </Link>
         </div>
@@ -157,15 +156,13 @@ export default function AI2028NeuromorphicSuperintelligence() {
           <div className="grid md:grid-cols-2 gap-4">"
             <Link 
               href="/[^"]*"
-              className="block p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors"
-            >
+              className="block p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
               <h5 className="font-semibold text-blue-600 mb-2">AI 2028 Autonomous Enterprise</h5>"
               <p className="text-sm text-gray-600">99.9% autonomous operations breakthrough</p>"
             </Link>
             <Link 
               href="/[^"]*"
-              className="block p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors"
-            >
+              className="block p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
               <h5 className="font-semibold text-blue-600 mb-2">AI 2028 Success Stories</h5>"
               <p className="text-sm text-gray-600">Real-world transformation results</p>"
             </Link>

@@ -42,14 +42,12 @@ export default function NeuralConsciousnessFusionBreakthrough() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">"
               <Link 
                 href="/[^"]*"
-                className="bg-gradient-to-r from-purple-500 to-cyan-600 hover:from-purple-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
-              >
+                className="bg-gradient-to-r from-purple-500 to-cyan-600 hover:from-purple-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1">
                 Get Neural Consciousness AI →
               </Link>
               <Link 
                 href="/[^"]*"
-                className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 transform hover:-translate-y-1"
-              >
+                className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 transform hover:-translate-y-1">
                 View $100B Success Story →
               </Link>
             </div>
@@ -174,8 +172,7 @@ export default function NeuralConsciousnessFusionBreakthrough() {
             <div className="text-center mt-12">"
               <Link 
                 href="/contact"
-                className="inline-block bg-gradient-to-r from-purple-500 to-cyan-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:from-purple-400 hover:to-cyan-500 transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
-              >
+                className="inline-block bg-gradient-to-r from-purple-500 to-cyan-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:from-purple-400 hover:to-cyan-500 transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1">
                 Implement Neural Consciousness AI →
               </Link>
             </div>

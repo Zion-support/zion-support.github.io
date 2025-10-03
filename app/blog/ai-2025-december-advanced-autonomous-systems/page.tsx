@@ -190,8 +190,7 @@ export default function December2025AdvancedAutonomousSystems() {
               </p>
               <Link 
                 href="/[^"]*"
-                className="inline-block bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50"
-              >
+                className="inline-block bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50">
                 Get Started Today
               </Link>
             </div>
@@ -201,15 +200,13 @@ export default function December2025AdvancedAutonomousSystems() {
               <div className="space-y-3">"
                 <Link 
                   href="/[^"]*"
-                  className="block p-4 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-lg border border-green-500/30 hover:border-green-400/50 transition-colors"
-                >
+                  className="block p-4 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-lg border border-green-500/30 hover:border-green-400/50 transition-colors">
                   <div className="font-semibold text-green-400">$500M Success Story</div>"
                   <div className="text-sm text-gray-300">Fortune 100 company achieves massive ROI</div>"
                 </Link>
                 <Link 
                   href="/[^"]*"
-                  className="block p-4 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-lg border border-cyan-500/30 hover:border-cyan-400/50 transition-colors"
-                >
+                  className="block p-4 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-lg border border-cyan-500/30 hover:border-cyan-400/50 transition-colors">
                   <div className="font-semibold text-cyan-400">Quantum Computing Breakthrough</div>"
                   <div className="text-sm text-gray-300">Next-generation computing capabilities</div>"
                 </Link>

@@ -59,8 +59,7 @@ export default function October2025CuttingEdgeContentBanner2() {
             <Link
               key={index}
               href={article.link}
-              className="group relative bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-purple-500/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20"
-            >
+              className="group relative bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-purple-500/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20">
               {/* Icon and New Badge */}
               <div className="flex items-center justify-between mb-4">
                 <span className="text-5xl">{article.icon}</span>
@@ -115,8 +114,7 @@ export default function October2025CuttingEdgeContentBanner2() {
             </div>
             <Link
               href="/contact"
-              className="whitespace-nowrap bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-500 hover:to-cyan-500 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-purple-500/50 hover:scale-105"
-            >
+              className="whitespace-nowrap bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-500 hover:to-cyan-500 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 shadow-lg hover:shadow-purple-500/50 hover:scale-105">
               Get Started
             </Link>
           </div>

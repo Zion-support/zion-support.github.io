@@ -170,14 +170,12 @@ export default function AI2026HyperAutomationRevolution() {
           <div className="flex gap-4">"
             <Link 
               href="/[^"]*"
-              className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-red-600 hover:to-orange-600 transition-all"
-            >
+              className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-red-600 hover:to-orange-600 transition-all">
               Start Transformation
             </Link>
             <Link 
               href="/[^"]*"
-              className="border border-red-500 text-red-600 px-6 py-3 rounded-lg font-semibold hover:bg-red-50 transition-all"
-            >
+              className="border border-red-500 text-red-600 px-6 py-3 rounded-lg font-semibold hover:bg-red-50 transition-all">
               View Success Stories
             </Link>
           </div>
