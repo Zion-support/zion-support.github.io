@@ -191,9 +191,9 @@ export class PerformanceMonitor {
       timestamp: new Date().toISOString(),
       url: window.location.href,
       userAgent: navigator.userAgent,
-        thresholds: this.config.thresholds,
-        violations: this.checkThresholds()
-      };
+      thresholds: this.config.thresholds,
+      violations: this.checkThresholds()
+    };
 
     // In development, log to console
     if (import.meta.env.DEV) {
@@ -215,7 +215,7 @@ export class PerformanceMonitor {
     const thresholds = this.config.thresholds;
 
     if (metrics.loadTime && metrics.loadTime > thresholds.loadTime) {
-        violations.push(`Load time ${metrics.loadTime}ms exceeds threshold ${thresholds.loadTime}ms`);
+      violations.push(`Load time ${metrics.loadTime}ms exceeds threshold ${thresholds.loadTime}ms`);
     }
 
     if (metrics.firstContentfulPaint && metrics.firstContentfulPaint > thresholds.firstContentfulPaint) {
@@ -227,7 +227,7 @@ export class PerformanceMonitor {
     }
 
     if (metrics.firstInputDelay && metrics.firstInputDelay > thresholds.firstInputDelay) {
-        violations.push(`FID ${metrics.firstInputDelay}ms exceeds threshold ${thresholds.firstInputDelay}ms`);
+      violations.push(`FID ${metrics.firstInputDelay}ms exceeds threshold ${thresholds.firstInputDelay}ms`);
     }
 
     if (metrics.cumulativeLayoutShift && metrics.cumulativeLayoutShift > thresholds.cumulativeLayoutShift) {
@@ -235,7 +235,7 @@ export class PerformanceMonitor {
     }
 
     return violations;
-  };
+  }
 
   private async sendToAnalytics(report: any): Promise<void> {
     try {
@@ -245,8 +245,8 @@ export class PerformanceMonitor {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify(report)
-        });
-      } catch (error) {
+      });
+    } catch (error) {
       console.error('Failed to send performance metrics:', error);
     }
   }
@@ -256,8 +256,8 @@ export class PerformanceMonitor {
       const existingReports = JSON.parse(localStorage.getItem('performance-reports') || '[]');
       existingReports.unshift(report);
       existingReports.splice(50); // Keep only last 50 reports
-        localStorage.setItem('performance-reports', JSON.stringify(existingReports));
-      } catch (error) {
+      localStorage.setItem('performance-reports', JSON.stringify(existingReports));
+    } catch (error) {
       console.error('Failed to store performance metrics locally:', error);
     }
   }
@@ -308,7 +308,7 @@ export class ImageOptimizer {
       height?: number;
       quality?: number;
       format?: 'webp' | 'avif' | 'jpeg' | 'png';
-    } = {}
+    } = {};
   ): Promise<string> {
     const { width, height, quality = 80, format = 'webp' } = options;
 
@@ -322,10 +322,10 @@ export class ImageOptimizer {
     const extension = src.split('.').pop();
 
     const srcset = sizes
-        .map(size => `${baseSrc}-${size}w.${extension} ${size}w`)
+      .map(size => `${baseSrc}-${size}w.${extension} ${size}w`)
       .join(', ');
 
-    return `<img src="${src}" srcset="${srcset}" alt="${alt}" loading="lazy"/>`;
+    return `<img src="${src}" srcset="${srcset}" alt="${alt}" loading="lazy" />`;
   }
 
   static preloadCriticalImages(imageUrls: string[]): void {
@@ -335,9 +335,9 @@ export class ImageOptimizer {
       link.as = 'image';
       link.href = url;
       document.head.appendChild(link);
-      });
-    }
+    });
   }
+}
 
 /**
  * Bundle analysis utilities
@@ -349,7 +349,7 @@ export class BundleAnalyzer {
       
       // Analyze loaded scripts
       const scripts = document.querySelectorAll('script[src]');
-        console.log(`Scripts loaded: ${scripts.length}`);
+      console.log(`Scripts loaded: ${scripts.length}`);
       
       // Analyze loaded stylesheets
       const styles = document.querySelectorAll('link[rel="stylesheet"]');
@@ -359,9 +359,9 @@ export class BundleAnalyzer {
       const resources = performance.getEntriesByType('resource');
       const totalSize = resources.reduce((sum, resource) => {
         return sum + ((resource as any).transferSize || 0);
-      }, 0);
+      `, 0);
       
-        console.log(`Total resource size: ${(totalSize / 1024 / 1024).toFixed(2)} MB`);
+      console.log(`Total resource size: ${(totalSize / 1024 / 1024).toFixed(2)} MB`);
       console.log(`Total resources: ${resources.length}`);
     }
   }
@@ -390,6 +390,6 @@ export function initializePerformanceMonitoring(config?: PerformanceConfig): Per
 export default {
   PerformanceMonitor,
   ImageOptimizer,
-    BundleAnalyzer,
-    initializePerformanceMonitoring
-  };
+  BundleAnalyzer,
+  initializePerformanceMonitoring
+};
