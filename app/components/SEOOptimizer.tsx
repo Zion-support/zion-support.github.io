@@ -6,9 +6,6 @@ import {
   setStructuredData,
   setCanonicalUrl,
   setPageTitle,
-  setMetaDescription,
-  setKeywords,
-  setRobotsMeta,
   setLanguage,
   setViewport,
   schemaGenerators,
@@ -71,7 +68,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       author: 'Zion Tech Group',
       robots: seoData.robots
         ? Object.entries(seoData.robots)
-            .filter(([_, value]) => value !== undefined)
+            .filter(([, value]) => value !== undefined)
             .map(([key, value]) => (value ? key : `no${key}`))
             .join(', ')
         : 'index, follow',
