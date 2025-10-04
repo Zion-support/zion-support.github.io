@@ -3,8 +3,15 @@ import { Link, Routes, Route } from 'react-router-dom';
 import AutonomousOperations from './services/AutonomousOperations';
 import CybersecurityAI from './services/CybersecurityAI';
 
+interface Service {
+  title: string;
+  description: string;
+  icon: string;
+  href: string;
+}
+
 const Services: React.FC = () => {
-  const services = [
+  const services: Service[] = [
     {
       title: 'AI Autonomous Operations',
       description: 'Self-healing infrastructure and autonomous operations that reduce costs by 70% and achieve 99.9% uptime.',
@@ -52,7 +59,7 @@ const Services: React.FC = () => {
   );
 };
 
-const ServicesMain: React.FC<{ services: any[] }> = ({ services }) => {
+const ServicesMain: React.FC<{ services: Service[] }> = ({ services }) => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
