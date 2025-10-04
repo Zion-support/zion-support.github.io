@@ -62,11 +62,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {
     const enhancedInfo = getEnhancedPerformanceInfo();
     const updatedMetrics: Partial<EnhancedMetrics> = {
       ...enhancedInfo,
-<<<<<<< HEAD
-      [metric.name.toLowerCase()]: metric.value
-=======
       [metric.name]: metric.value
->>>>>>> cursor/fix-errors-and-merge-to-main-0571
     };
     
     setMetrics(prev => ({
