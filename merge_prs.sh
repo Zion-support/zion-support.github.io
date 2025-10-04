@@ -1,65 +1,73 @@
 #!/bin/bash
 
 # Script to merge open PRs into main branch
-set -e
+# This script will attempt to merge the open PRs we identified
 
 echo "Starting PR merge process..."
 
-# List of PR branches to merge (consolidated list)
+# List of PR branches to merge (from the open PRs we found)
 PR_BRANCHES=(
-    "origin/cursor/fix-errors-and-merge-to-main-07f8"
-    "origin/cursor/fix-errors-and-merge-to-main-0c7f"
-    "origin/cursor/fix-errors-and-merge-to-main-13d2"
-    "origin/cursor/fix-errors-and-merge-to-main-2888"
-    "origin/cursor/fix-errors-and-merge-to-main-5a08"
-    "origin/cursor/fix-errors-and-merge-to-main-ccc6"
-    "origin/cursor/fix-errors-and-merge-to-main-ceea"
-    "origin/cursor/fix-errors-and-merge-to-main-cfd3"
-    "origin/cursor/fix-errors-and-merge-to-main-f578"
-    "origin/cursor/fix-errors-and-merge-to-main-f7b4"
-    "origin/cursor/fix-errors-and-merge-to-main-fa2a"
-    "origin/cursor/fix-errors-and-merge-to-main-0571"
-    "origin/cursor/fix-errors-and-merge-to-main-5e24"
-    "origin/cursor/fix-errors-and-merge-to-main-631d"
-    "origin/cursor/fix-errors-and-merge-to-main-69c7"
-    "origin/cursor/fix-errors-and-merge-to-main-849a"
-    "origin/cursor/fix-errors-and-merge-to-main-ac42"
-    "origin/cursor/fix-errors-and-merge-to-main-d6cf"
-    "origin/cursor/fix-errors-and-merge-to-main-e6fc"
-    "origin/cursor/fix-errors-and-merge-to-main-eb9b"
-    "origin/cursor/fix-errors-and-merge-to-main-f51c"
+    "origin/cursor/build-and-deploy-with-vite-and-netlify-8b37"
+    "origin/cursor/fix-errors-and-merge-to-main-fcbd"
+    "origin/cursor/fix-errors-and-merge-to-main-e6e1"
+    "origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-44c4"
+    "origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f3e7"
+    "origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-d21e"
+    "origin/cursor/fix-web-application-console-errors-0bf5"
 )
 
-# Ensure we're on main branch
-git checkout main
-
-# Fetch latest changes
-git fetch origin
-
-# Try to merge each branch
-for branch in "${PR_BRANCHES[@]}"; do
-    echo "Attempting to merge $branch..."
+# Function to merge a branch
+merge_branch() {
+    local branch=$1
+    echo "Attempting to merge branch: $branch"
     
     # Check if branch exists
     if git show-ref --verify --quiet refs/remotes/$branch; then
         echo "Branch $branch exists, attempting merge..."
         
         # Try to merge
-        if git merge --no-ff $branch; then
+        if git merge $branch --no-ff -m "Merge $branch into main"; then
             echo "Successfully merged $branch"
+            return 0
         else
-            echo "Merge conflict in $branch, attempting to resolve..."
-            # Check for conflicts
-            if git status --porcelain | grep -q "^UU\|^AA\|^DD"; then
-                echo "Conflicts detected, resolving automatically..."
-                # Try to resolve conflicts automatically
-                git add .
-                git commit -m "Resolve merge conflicts from $branch"
+            echo "Merge conflict or error with $branch"
+            # Check if there are conflicts
+            if git status --porcelain | grep -q "^UU"; then
+                echo "Merge conflicts detected in $branch"
+                git merge --abort
             fi
+            return 1
         fi
     else
-        echo "Branch $branch does not exist, skipping..."
+        echo "Branch $branch does not exist"
+        return 1
     fi
+}
+
+# Main merge process
+echo "Starting merge process for ${#PR_BRANCHES[@]} branches..."
+
+successful_merges=0
+failed_merges=0
+
+for branch in "${PR_BRANCHES[@]}"; do
+    if merge_branch "$branch"; then
+        ((successful_merges++))
+    else
+        ((failed_merges++))
+    fi
+    echo "---"
 done
 
-echo "PR merge process completed!"
+echo "Merge process completed!"
+echo "Successful merges: $successful_merges"
+echo "Failed merges: $failed_merges"
+
+# Push changes if any merges were successful
+if [ $successful_merges -gt 0 ]; then
+    echo "Pushing changes to remote..."
+    git push origin main
+    echo "Changes pushed successfully!"
+else
+    echo "No successful merges to push"
+fi
