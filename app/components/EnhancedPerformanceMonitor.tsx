@@ -1,9 +1,9 @@
 import React, { useEffect, useState, useCallback, useRef } from 'react';
-import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
+import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
 
 interface EnhancedMetrics {
   cls: number;
-  fid: number;
+  inp: number;
   fcp: number;
   lcp: number;
   ttfb: number;
@@ -18,7 +18,7 @@ interface EnhancedMetrics {
 
 interface PerformanceThresholds {
   cls: number;
-  fid: number;
+  inp: number;
   fcp: number;
   lcp: number;
   ttfb: number;
@@ -34,7 +34,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {
   const [history, setHistory] = useState<PerformanceHistory[]>([]);
   const [thresholds] = useState<PerformanceThresholds>({
     cls: 0.1,
-    fid: 100,
+    inp: 200,
     fcp: 1800,
     lcp: 2500,
     ttfb: 800
@@ -59,10 +59,33 @@ const EnhancedPerformanceMonitor: React.FC = () => {
   }, []);
 
   const handleMetric = useCallback((metric: any) => {
-    const enhancedMetrics = {
-      [metric.name]: metric.value,
+    const enhancedMetrics: EnhancedMetrics = {
+      cls: 0,
+      inp: 0,
+      fcp: 0,
+      lcp: 0,
+      ttfb: 0,
       ...getEnhancedPerformanceInfo()
     };
+    
+    // Map metric name to our interface
+    switch (metric.name) {
+      case 'CLS':
+        enhancedMetrics.cls = metric.value;
+        break;
+      case 'INP':
+        enhancedMetrics.inp = metric.value;
+        break;
+      case 'FCP':
+        enhancedMetrics.fcp = metric.value;
+        break;
+      case 'LCP':
+        enhancedMetrics.lcp = metric.value;
+        break;
+      case 'TTFB':
+        enhancedMetrics.ttfb = metric.value;
+        break;
+    }
     
     setMetrics(prev => ({
       ...prev,
@@ -96,11 +119,11 @@ const EnhancedPerformanceMonitor: React.FC = () => {
   };
 
   useEffect(() => {
-    getCLS(handleMetric);
-    getFID(handleMetric);
-    getFCP(handleMetric);
-    getLCP(handleMetric);
-    getTTFB(handleMetric);
+    onCLS(handleMetric);
+    onINP(handleMetric);
+    onFCP(handleMetric);
+    onLCP(handleMetric);
+    onTTFB(handleMetric);
 
     // Enhanced performance monitoring
     const observer = new PerformanceObserver((list) => {
@@ -155,9 +178,9 @@ const EnhancedPerformanceMonitor: React.FC = () => {
               </span>
             </div>
             <div className="flex justify-between">
-              <span>FID:</span>
-              <span className={getStatusColor(metrics.fid, thresholds.fid)}>
-                {getStatusIcon(metrics.fid, thresholds.fid)} {metrics.fid?.toFixed(1)}ms
+              <span>INP:</span>
+              <span className={getStatusColor(metrics.inp, thresholds.inp)}>
+                {getStatusIcon(metrics.inp, thresholds.inp)} {metrics.inp?.toFixed(1)}ms
               </span>
             </div>
             <div className="flex justify-between">
