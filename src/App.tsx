@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import { motion } from 'framer-motion';
-import SEO from './components/SEO';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import Header from './components/Header';
 import Footer from './components/Footer';
