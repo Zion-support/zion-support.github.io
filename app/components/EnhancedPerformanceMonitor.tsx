@@ -34,10 +34,6 @@ const EnhancedPerformanceMonitor: React.FC = () => {
   const [history, setHistory] = useState<PerformanceHistory[]>([]);
   const [thresholds] = useState<PerformanceThresholds>({
     cls: 0.1,
-<<<<<<< HEAD
-    inp: 200,
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-5e24
     fcp: 1800,
     lcp: 2500,
     ttfb: 800,
@@ -63,16 +59,10 @@ const EnhancedPerformanceMonitor: React.FC = () => {
   }, []);
 
   const handleMetric = useCallback((metric: any) => {
-<<<<<<< HEAD
     const enhancedInfo = getEnhancedPerformanceInfo();
     const updatedMetrics: Partial<EnhancedMetrics> = {
       ...enhancedInfo,
-      [metric.name]: metric.value
-=======
-    const enhancedMetrics: EnhancedMetrics = {
-      [metric.name.toLowerCase()]: metric.value,
-      ...getEnhancedPerformanceInfo()
->>>>>>> cursor/fix-errors-and-merge-to-main-5e24
+      [metric.name.toLowerCase()]: metric.value
     };
     
     setMetrics(prev => ({
@@ -115,17 +105,10 @@ const EnhancedPerformanceMonitor: React.FC = () => {
 
   useEffect(() => {
     onCLS(handleMetric);
-<<<<<<< HEAD
-    onINP(handleMetric);
-    onFCP(handleMetric);
-    onLCP(handleMetric);
-    onTTFB(handleMetric);
-=======
     onFCP(handleMetric);
     onLCP(handleMetric);
     onTTFB(handleMetric);
     onINP(handleMetric);
->>>>>>> cursor/fix-errors-and-merge-to-main-5e24
 
     // Enhanced performance monitoring
     const observer = new PerformanceObserver((list) => {
@@ -181,13 +164,8 @@ const EnhancedPerformanceMonitor: React.FC = () => {
             </div>
             <div className="flex justify-between">
               <span>INP:</span>
-<<<<<<< HEAD
-              <span className={getStatusColor(metrics.inp, thresholds.inp)}>
-                {getStatusIcon(metrics.inp, thresholds.inp)} {metrics.inp?.toFixed(1)}ms
-=======
               <span className={getStatusColor(metrics.inp || 0, thresholds.inp)}>
                 {getStatusIcon(metrics.inp || 0, thresholds.inp)} {metrics.inp?.toFixed(1)}ms
->>>>>>> cursor/fix-errors-and-merge-to-main-5e24
               </span>
             </div>
             <div className="flex justify-between">
