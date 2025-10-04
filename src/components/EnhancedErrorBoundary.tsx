@@ -1,217 +1,188 @@
-/**
- * Enhanced Error Boundary Component
- * Comprehensive error handling with performance monitoring and user feedback
- */
-
-import { Component, ErrorInfo, ReactNode } from 'react';
+import React, { Component, ErrorInfo, ReactNode } from 'react';
 
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
-  showDetails?: boolean;
+  enableReporting?: boolean;
 }
 
 interface State {
   hasError: boolean;
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
-  errorId: string;
+  error?: Error;
+  errorInfo?: ErrorInfo;
 }
 
 class EnhancedErrorBoundary extends Component<Props, State> {
-  private retryCount = 0;
-  private maxRetries = 3;
-
   constructor(props: Props) {
     super(props);
-    this.state = {
-      hasError: false,
-      error: null,
-      errorInfo: null,
-      errorId: '',
-    };
+    this.state = { hasError: false };
   }
 
-  static getDerivedStateFromError(error: Error): Partial<State> {
-    // Generate unique error ID
-    const errorId = `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-
-    return {
-      hasError: true,
-      error,
-      errorId,
-    };
+  static getDerivedStateFromError(error: Error): State {
+    return { hasError: true, error };
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    const { onError } = this.props;
-    const { errorId } = this.state;
-
-    // Update state with error info
     this.setState({ errorInfo });
 
-    // Log error details
-    const errorDetails = {
-      errorId,
+    // Log error to console in development
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Error caught by ErrorBoundary:', error);
+      console.error('Error Info:', errorInfo);
+    }
+
+    // Report error to external service in production
+    if (this.props.enableReporting && process.env.NODE_ENV === 'production') {
+      this.reportError(error, errorInfo);
+    }
+
+    // Call custom error handler if provided
+    if (this.props.onError) {
+      this.props.onError(error, errorInfo);
+    }
+  }
+
+  private reportError = (error: Error, errorInfo: ErrorInfo) => {
+    // In a real application, you would send this to your error reporting service
+    // Example: Sentry, LogRocket, Bugsnag, etc.
+    const errorReport = {
       message: error.message,
       stack: error.stack,
       componentStack: errorInfo.componentStack,
       timestamp: new Date().toISOString(),
       userAgent: navigator.userAgent,
-      url: window.location.href,
-      retryCount: this.retryCount,
+      url: window.location.href
     };
 
-    // Log to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Error Boundary caught an error:', errorDetails);
-    }
-
-    // Log error for debugging
-    console.log('Error boundary caught error:', {
-      error_id: errorId,
-      error_message: error.message,
-      error_stack: error.stack?.substring(0, 500),
-      component_stack: errorInfo.componentStack?.substring(0, 500) || '',
-      retry_count: this.retryCount,
-    });
-
-    // Call custom error handler
-    if (onError) {
-      onError(error, errorInfo);
-    }
-  }
-
-  handleRetry = () => {
-    if (this.retryCount < this.maxRetries) {
-      this.retryCount++;
-      this.setState({
-        hasError: false,
-        error: null,
-        errorInfo: null,
-        errorId: '',
-      });
-
-      // Log retry attempt
-      console.log('Error boundary retry:', {
-        error_id: this.state.errorId,
-        retry_count: this.retryCount,
-      });
-    }
+    // For now, just log to console
+    console.error('Error Report:', errorReport);
+    
+    // In production, you would send this to your error reporting service:
+    // errorReportingService.captureException(error, { extra: errorReport });
   };
 
-  handleReportError = () => {
-    const { error, errorInfo, errorId } = this.state;
+  private handleRetry = () => {
+    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
+  };
 
-    // In a real application, this would send to an error reporting service
-    const errorReport = {
-      errorId,
-      message: error?.message,
-      stack: error?.stack,
-      componentStack: errorInfo?.componentStack,
-      timestamp: new Date().toISOString(),
-      userAgent: navigator.userAgent,
-      url: window.location.href,
-    };
-
-    // Log error report
-    console.log('Error boundary report:', {
-      error_id: errorId,
-      reported: true,
-    });
-
-    // For demo purposes, copy to clipboard
-    if (navigator.clipboard) {
-      navigator.clipboard.writeText(JSON.stringify(errorReport, null, 2));
-      alert('Error details copied to clipboard');
-    } else {
-      console.log('Error Report:', errorReport);
-      alert('Error details logged to console');
-    }
+  private handleReload = () => {
+    window.location.reload();
   };
 
   render() {
-    const { hasError, error, errorId } = this.state;
-    const { children, fallback, showDetails } = this.props;
-
-    if (hasError) {
-      // Use custom fallback if provided
-      if (fallback) {
-        return fallback;
+    if (this.state.hasError) {
+      // Custom fallback UI
+      if (this.props.fallback) {
+        return this.props.fallback;
       }
 
       // Default error UI
       return (
-        <div className='min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8'>
-          <div className='sm:mx-auto sm:w-full sm:max-w-md'>
-            <div className='bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10'>
-              <div className='text-center'>
-                <div className='mx-auto h-12 w-12 text-red-600'>
-                  <svg fill='none' viewBox='0 0 24 24' stroke='currentColor'>
-                    <path
-                      strokeLinecap='round'
-                      strokeLinejoin='round'
-                      strokeWidth={2}
-                      d='M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z'
-                    />
-                  </svg>
-                </div>
-                <h2 className='mt-4 text-2xl font-bold text-gray-900'>
-                  Something went wrong
-                </h2>
-                <p className='mt-2 text-sm text-gray-600'>
-                  We're sorry, but something unexpected happened. Our team has
-                  been notified.
-                </p>
+        <div className="error-boundary" style={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
+          minHeight: '50vh',
+          padding: '2rem',
+          textAlign: 'center',
+          backgroundColor: '#f8f9fa',
+          border: '1px solid #dee2e6',
+          borderRadius: '8px',
+          margin: '1rem'
+        }}>
+          <div style={{ fontSize: '4rem', marginBottom: '1rem' }}>⚠️</div>
+          <h2 style={{ color: '#dc3545', marginBottom: '1rem' }}>
+            Something went wrong
+          </h2>
+          <p style={{ color: '#6c757d', marginBottom: '2rem', maxWidth: '500px' }}>
+            We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
+          </p>
+          
+          <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center' }}>
+            <button
+              onClick={this.handleRetry}
+              style={{
+                padding: '0.75rem 1.5rem',
+                backgroundColor: '#007bff',
+                color: 'white',
+                border: 'none',
+                borderRadius: '4px',
+                cursor: 'pointer',
+                fontSize: '1rem'
+              }}
+            >
+              Try Again
+            </button>
+            <button
+              onClick={this.handleReload}
+              style={{
+                padding: '0.75rem 1.5rem',
+                backgroundColor: '#6c757d',
+                color: 'white',
+                border: 'none',
+                borderRadius: '4px',
+                cursor: 'pointer',
+                fontSize: '1rem'
+              }}
+            >
+              Reload Page
+            </button>
+          </div>
 
-                {showDetails && error && (
-                  <div className='mt-4 p-4 bg-red-50 border border-red-200 rounded-md'>
-                    <h3 className='text-sm font-medium text-red-800'>
-                      Error Details
-                    </h3>
-                    <p className='mt-1 text-sm text-red-700'>
-                      Error ID: {errorId}
-                    </p>
-                    <p className='mt-1 text-sm text-red-700'>
-                      Message: {error.message}
-                    </p>
+          {process.env.NODE_ENV === 'development' && this.state.error && (
+            <details style={{ 
+              marginTop: '2rem', 
+              textAlign: 'left', 
+              backgroundColor: '#f8f9fa',
+              padding: '1rem',
+              borderRadius: '4px',
+              border: '1px solid #dee2e6',
+              maxWidth: '100%',
+              overflow: 'auto'
+            }}>
+              <summary style={{ cursor: 'pointer', fontWeight: 'bold', marginBottom: '0.5rem' }}>
+                Error Details (Development Only)
+              </summary>
+              <div style={{ fontSize: '0.875rem' }}>
+                <div style={{ marginBottom: '1rem' }}>
+                  <strong>Error:</strong> {this.state.error.message}
+                </div>
+                <div style={{ marginBottom: '1rem' }}>
+                  <strong>Stack:</strong>
+                  <pre style={{ 
+                    backgroundColor: '#e9ecef', 
+                    padding: '0.5rem', 
+                    borderRadius: '4px',
+                    overflow: 'auto',
+                    fontSize: '0.75rem'
+                  }}>
+                    {this.state.error.stack}
+                  </pre>
+                </div>
+                {this.state.errorInfo && (
+                  <div>
+                    <strong>Component Stack:</strong>
+                    <pre style={{ 
+                      backgroundColor: '#e9ecef', 
+                      padding: '0.5rem', 
+                      borderRadius: '4px',
+                      overflow: 'auto',
+                      fontSize: '0.75rem'
+                    }}>
+                      {this.state.errorInfo.componentStack}
+                    </pre>
                   </div>
                 )}
-
-                <div className='mt-6 space-y-3'>
-                  {this.retryCount < this.maxRetries && (
-                    <button
-                      onClick={this.handleRetry}
-                      className='w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500'
-                    >
-                      Try Again ({this.maxRetries - this.retryCount} attempts
-                      left)
-                    </button>
-                  )}
-
-                  <button
-                    onClick={this.handleReportError}
-                    className='w-full flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500'
-                  >
-                    Report Error
-                  </button>
-
-                  <button
-                    onClick={() => window.location.reload()}
-                    className='w-full flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500'
-                  >
-                    Reload Page
-                  </button>
-                </div>
               </div>
-            </div>
-          </div>
+            </details>
+          )}
         </div>
       );
     }
 
-    return children;
+    return this.props.children;
   }
 }
 
