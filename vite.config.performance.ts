@@ -35,11 +35,8 @@ export default defineConfig({
     chunkSizeWarningLimit: 1000,
     
     // Rollup options for better code splitting
-    rollupOptions: {/* content */}
-      output: {/* content */}
-        // Manual chunks for better caching
-        manualChunks: {/* content */}
-          // Vendor chunks
+    rollupOptions:       output:         // Manual chunks for better caching
+        manualChunks:           // Vendor chunks
           'vendor-react': ['react', 'react-dom', 'react-router-dom'],
           'vendor-ui': ['lucide-react', 'framer-motion'],
           'vendor-utils': ['clsx', 'tailwind-merge'],
@@ -63,18 +60,14 @@ export default defineConfig({
     
     // Minification options
     minify: 'terser',
-    terserOptions: {/* content */}
-      compress: {/* content */}
-        drop_console: true,
+    terserOptions:       compress:         drop_console: true,
         drop_debugger: true,
         pure_funcs: ['console.log', 'console.info', 'console.debug'],
         passes: 2
       },
-      mangle: {/* content */}
-        safari10: true
+      mangle:         safari10: true
       },
-      format: {/* content */}
-        comments: false
+      format:         comments: false
       }
     },
     
@@ -92,8 +85,7 @@ export default defineConfig({
   },
   
   // Optimize dependencies
-  optimizeDeps: {/* content */}
-    include: [
+  optimizeDeps:     include: [
       'react',
       'react-dom',
       'react-router-dom',
@@ -104,28 +96,24 @@ export default defineConfig({
   },
   
   // Server configuration
-  server: {/* content */}
-    port: 3000,
+  server:     port: 3000,
     strictPort: false,
     host: true,
     open: false,
     // HMR configuration
-    hmr: {/* content */}
-      overlay: true
+    hmr:       overlay: true
     }
   },
   
   // Preview configuration
-  preview: {/* content */}
-    port: 4173,
+  preview:     port: 4173,
     strictPort: false,
     host: true,
     open: false
   },
   
   // Performance hints
-  esbuild: {/* content */}
-    // Minify identifiers
+  esbuild:     // Minify identifiers
     minifyIdentifiers: true,
     // Minify syntax
     minifySyntax: true,
@@ -138,14 +126,10 @@ export default defineConfig({
   },
   
   // CSS configuration
-  css: {/* content */}
-    devSourcemap: true,
-    modules: {/* content */}
-      localsConvention: 'camelCaseOnly'
+  css:     devSourcemap: true,
+    modules:       localsConvention: 'camelCaseOnly'
     },
-    preprocessorOptions: {/* content */}
-      scss: {/* content */}
-        additionalData: `@import "./src/styles/variables.scss";`
+    preprocessorOptions:       scss:         additionalData: `@import "./src/styles/variables.scss";`
       }
     }
   }

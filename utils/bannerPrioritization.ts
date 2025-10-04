@@ -33,7 +33,7 @@ export class BannerPrioritizationEngine {
   /**
    * Calculate dynamic priority based on multiple factors
    */
-  private calculateDynamicPriority(banner: BannerMetadata): number {/* content */}
+  private calculateDynamicPriority(banner: BannerMetadata): number {
     const now = new Date();
     const ageInDays = (now.getTime() - banner.publishDate.getTime()) / (1000 * 60 * 60 * 24);
     
@@ -50,10 +50,10 @@ export class BannerPrioritizationEngine {
   /**
    * Get prioritized banners for rendering
    */
-  getPrioritizedBanners(limit?: number): BannerMetadata[] {/* content */}
+  getPrioritizedBanners(limit?: number): BannerMetadata[] {
     const sortedBanners = Array.from(this.banners.values())
       .filter(banner => banner.isVisible)
-      .map(banner => ({/* content */}
+      .map(banner => ({
         ...banner,
         dynamicPriority: this.calculateDynamicPriority(banner)
       }))
@@ -65,7 +65,7 @@ export class BannerPrioritizationEngine {
   /**
    * Get banners by load strategy
    */
-  getBannersByLoadStrategy(strategy: 'immediate' | 'lazy' | 'on-demand'): BannerMetadata[] {/* content */}
+  getBannersByLoadStrategy(strategy: 'immediate' | 'lazy' | 'on-demand'): BannerMetadata[] {
     return Array.from(this.banners.values())
       .filter(banner => banner.loadStrategy === strategy && banner.isVisible);
   }
@@ -73,9 +73,9 @@ export class BannerPrioritizationEngine {
   /**
    * Update banner visibility based on performance metrics
    */
-  updateBannerVisibility(bannerId: string, isVisible: boolean): void {/* content */}
+  updateBannerVisibility(bannerId: string, isVisible: boolean): void {
     const banner = this.banners.get(bannerId);
-    if (banner) {/* content */}
+    if (banner) {
       banner.isVisible = isVisible;
       this.banners.set(bannerId, banner);
     }
@@ -84,7 +84,7 @@ export class BannerPrioritizationEngine {
   /**
    * Get banners for above-the-fold rendering
    */
-  getAboveFoldBanners(): BannerMetadata[] {/* content */}
+  getAboveFoldBanners(): BannerMetadata[] {
     return this.getPrioritizedBanners(this.visibilityThreshold)
       .filter(banner => banner.loadStrategy === 'immediate');
   }
@@ -92,7 +92,7 @@ export class BannerPrioritizationEngine {
   /**
    * Get lazy-load banners
    */
-  getLazyLoadBanners(): BannerMetadata[] {/* content */}
+  getLazyLoadBanners(): BannerMetadata[] {
     return this.getPrioritizedBanners()
       .filter(banner => banner.loadStrategy === 'lazy');
   }
@@ -100,13 +100,13 @@ export class BannerPrioritizationEngine {
   /**
    * Archive old banners (older than 90 days)
    */
-  archiveOldBanners(): void {/* content */}
+  archiveOldBanners(): void {
     const now = new Date();
     const archiveThresholdDays = 90;
 
-    this.banners.forEach((banner, id) => {/* content */}
+    this.banners.forEach((banner, id) => {
       const ageInDays = (now.getTime() - banner.publishDate.getTime()) / (1000 * 60 * 60 * 24);
-      if (ageInDays > archiveThresholdDays) {/* content */}
+      if (ageInDays > archiveThresholdDays) {
         banner.isVisible = false;
         banner.loadStrategy = 'on-demand';
         this.banners.set(id, banner);
@@ -117,7 +117,7 @@ export class BannerPrioritizationEngine {
   /**
    * Get total value of visible banners
    */
-  getTotalVisibleValue(): number {/* content */}
+  getTotalVisibleValue(): number {
     return Array.from(this.banners.values())
       .filter(banner => banner.isVisible)
       .reduce((sum, banner) => sum + banner.value, 0);
@@ -126,22 +126,22 @@ export class BannerPrioritizationEngine {
   /**
    * Get banner statistics
    */
-  getStatistics() {/* content */}
+  getStatistics() {
     const all = Array.from(this.banners.values());
     const visible = all.filter(b => b.isVisible);
     
-    return {/* content */}
+    return {
       total: all.length,
       visible: visible.length,
       hidden: all.length - visible.length,
       totalValue: this.getTotalVisibleValue(),
-      byCategory: {/* content */}
+      byCategory: {
         service: visible.filter(b => b.category === 'service').length,
         'case-study': visible.filter(b => b.category === 'case-study').length,
         blog: visible.filter(b => b.category === 'blog').length,
         showcase: visible.filter(b => b.category === 'showcase').length,
       },
-      byLoadStrategy: {/* content */}
+      byLoadStrategy: {
         immediate: visible.filter(b => b.loadStrategy === 'immediate').length,
         lazy: visible.filter(b => b.loadStrategy === 'lazy').length,
         'on-demand': visible.filter(b => b.loadStrategy === 'on-demand').length,
@@ -154,9 +154,9 @@ export class BannerPrioritizationEngine {
 export const bannerEngine = new BannerPrioritizationEngine();
 
 // Initialize with some example banners
-export function initializeBannerEngine() {/* content */}
+export function initializeBannerEngine() {
   // October 2025 Content
-  bannerEngine.registerBanner({/* content */}
+  bannerEngine.registerBanner({
     id: 'rtim-2025',
     component: 'October2025RealTimeIntelligenceMeshBanner',
     priority: 100,
@@ -167,7 +167,7 @@ export function initializeBannerEngine() {/* content */}
     loadStrategy: 'immediate'
   });
 
-  bannerEngine.registerBanner({/* content */}
+  bannerEngine.registerBanner({
     id: 'cognitive-hyperautomation-2025',
     component: 'October2025CognitiveHyperautomationBanner',
     priority: 100,
@@ -178,7 +178,7 @@ export function initializeBannerEngine() {/* content */}
     loadStrategy: 'immediate'
   });
 
-  bannerEngine.registerBanner({/* content */}
+  bannerEngine.registerBanner({
     id: 'fintech-success-2025',
     component: 'October2025FinTechSuccessBanner',
     priority: 95,
@@ -189,7 +189,7 @@ export function initializeBannerEngine() {/* content */}
     loadStrategy: 'immediate'
   });
 
-  bannerEngine.registerBanner({/* content */}
+  bannerEngine.registerBanner({
     id: 'digital-transformation-2025',
     component: 'October2025DigitalTransformationPlatformBanner',
     priority: 90,
@@ -200,7 +200,7 @@ export function initializeBannerEngine() {/* content */}
     loadStrategy: 'lazy'
   });
 
-  bannerEngine.registerBanner({/* content */}
+  bannerEngine.registerBanner({
     id: 'autonomous-superintelligence-2025',
     component: 'October2025AutonomousSuperintelligenceBanner',
     priority: 95,
