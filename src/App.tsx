@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import { motion } from 'framer-motion';
@@ -9,6 +9,14 @@ import SEOHead from './components/SEOHead';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import { LoadingSpinner } from './components/LoadingSpinner';
+
+// Import our new comprehensive optimization components
+import EnhancedAccessibilityMonitor from '../app/components/EnhancedAccessibilityMonitor';
+import AdvancedPerformanceMonitor from '../app/components/AdvancedPerformanceMonitor';
+import SEOOptimizer from '../app/components/SEOOptimizer';
+import UltimateErrorBoundary from '../app/components/UltimateErrorBoundary';
+import ComprehensiveMonitoringDashboard from '../app/components/ComprehensiveMonitoringDashboard';
+import { initializeOptimizer } from '../utils/comprehensiveOptimizer';
 
 // Animation variants
 const pageVariants = {
@@ -68,6 +76,28 @@ class ErrorBoundary extends React.Component<{ children: React.ReactNode; fallbac
 }
 
 function App() {
+  // Initialize comprehensive optimizer
+  useEffect(() => {
+    initializeOptimizer({
+      accessibility: {
+        autoFix: true,
+        announceChanges: true,
+        respectMotionPreferences: true
+      },
+      performance: {
+        enableLazyLoading: true,
+        preloadCritical: true,
+        optimizeScroll: true,
+        monitorMemory: true
+      },
+      seo: {
+        autoOptimize: true,
+        generateStructuredData: true,
+        optimizeMetaTags: true
+      }
+    });
+  }, []);
+
   return (
     <HelmetProvider>
       <ErrorBoundary fallback={<div>Error occurred</div>}>
@@ -80,9 +110,49 @@ function App() {
           />
           <AccessibilityEnhancer />
           
+          {/* Comprehensive Optimization Components */}
+          <SEOOptimizer 
+            seoData={{
+              title: 'Zion Tech Group - Advanced AI and IT Solutions',
+              description: 'Leading provider of advanced AI and IT solutions for modern businesses. Expert services in AI automation, cybersecurity, cloud infrastructure, and digital transformation.',
+              keywords: ['AI solutions', 'IT services', 'cybersecurity', 'cloud computing', 'digital transformation', 'automation', 'machine learning'],
+              canonicalUrl: window.location.href,
+              ogImage: '/images/zion-tech-group-og.jpg',
+              twitterImage: '/images/zion-tech-group-twitter.jpg',
+              robots: {
+                index: true,
+                follow: true
+              }
+            }}
+            autoOptimize={true}
+            showAudit={process.env.NODE_ENV === 'development'}
+          />
+          
+          {/* Development-only monitoring components */}
+          {process.env.NODE_ENV === 'development' && (
+            <>
+              <EnhancedAccessibilityMonitor 
+                showInProduction={false}
+                autoFix={true}
+              />
+              <AdvancedPerformanceMonitor />
+              <ComprehensiveMonitoringDashboard 
+                showInProduction={false}
+                refreshInterval={30000}
+              />
+            </>
+          )}
+          
           <div className="min-h-screen bg-gray-50">
-            <EnhancedErrorBoundary fallback={<div>Enhanced error occurred</div>}>
-              <Header />
+            <UltimateErrorBoundary 
+              fallback={<div>Ultimate error occurred</div>}
+              showDetails={process.env.NODE_ENV === 'development'}
+              onError={(error, errorInfo) => {
+                console.error('Ultimate error caught:', error, errorInfo);
+              }}
+            >
+              <EnhancedErrorBoundary fallback={<div>Enhanced error occurred</div>}>
+                <Header />
 
               {/* Main Content */}
               <motion.main
@@ -134,7 +204,8 @@ function App() {
               
               {/* Footer */}
               <Footer />
-            </EnhancedErrorBoundary>
+              </EnhancedErrorBoundary>
+            </UltimateErrorBoundary>
           </div>
         </Router>
       </ErrorBoundary>

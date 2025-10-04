@@ -3,9 +3,8 @@
 
 
 
-export const advancedITInfrastructureExpansion2025V2 = [
-  
-    name: 'Autonomous DevOps Platform',
+export const advancedITInfrastructureExpansion2025V2 = [{
+  name: 'Autonomous DevOps Platform',
     description: 'Self - managing DevOps automation platform',
     category: 'Cloud & FinOps',
     pricing: '$399 / month',
@@ -376,7 +375,7 @@ export const advancedITInfrastructureExpansion2025V2 = [
     ],
   },
   
-    features: [
+    features: [;
       'Identity verification'
       'Access control'
       'Threat detection'
@@ -638,7 +637,6 @@ export const advancedITInfrastructureExpansion2025V2 = [
     category: 'Cybersecurity',
     pricing: '$599 / month',
     features: [;
-
       'Identity verification',
       'Access control',
       'Threat detection',
@@ -655,7 +653,7 @@ export const advancedITInfrastructureExpansion2025V2 = [
 ];
 ;
 
-export const advancedITInfrastructureExpansion2025V2 = [;
+export const advancedITInfrastructureExpansion2025V2 = [
   {;
     name: 'Autonomous DevOps Platform',;
     description: 'Self-managing DevOps automation platform',;

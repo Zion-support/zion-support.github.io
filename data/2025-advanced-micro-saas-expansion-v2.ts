@@ -3,9 +3,8 @@
 
 
 
-export const advancedMicroSaasExpansion2025V2 = [
-  
-    name: 'AI Content Factory Pro',
+export const advancedMicroSaasExpansion2025V2 = [{
+  name: 'AI Content Factory Pro',
     description: 'Advanced AI - powered content creation and management platform',
     category: 'AI & Data',
     pricing: '$299 / month',
@@ -252,7 +251,7 @@ export const advancedMicroSaasExpansion2025V2 = [
   }
 ];
 
-export const advancedMicroSaasExpansion2025V2 = [;
+export const advancedMicroSaasExpansion2025V2 = [
   {;
     name: 'AI Content Factory Pro',;
     description: 'Advanced AI-powered content creation and management platform',;
@@ -424,7 +423,7 @@ export const advancedMicroSaasExpansion2025V2 = [;
       'Real-time monitoringThreat intelligenceAutomated responseIncident management';
     ];
 
-export const advancedMicroSaasExpansion2025V2 = [;
+export const advancedMicroSaasExpansion2025V2 = [
   {;
     name: 'AI Content Factory Pro',;
     description: 'Advanced AI-powered content creation and management platform',;
@@ -602,7 +601,7 @@ export const advancedMicroSaasExpansion2025V2 = [;
 ];      'Real - time monitoring_threat intelligence_automated response_incident management';
     ];
 
-export const advancedMicroSaasExpansion2025V2 = [;
+export const advancedMicroSaasExpansion2025V2 = [
   {;
     name: 'AI Content Factory Pro',;
     description: 'Advanced AI-powered content creation and management platform',;
@@ -779,7 +778,7 @@ export const advancedMicroSaasExpansion2025V2 = [;
 ];
 ;
 
-export const advancedMicroSaasExpansion2025V2 = [;
+export const advancedMicroSaasExpansion2025V2 = [
   {;
     name: 'AI Content Factory Pro',;
     description: 'Advanced AI-powered content creation and management platform',;
