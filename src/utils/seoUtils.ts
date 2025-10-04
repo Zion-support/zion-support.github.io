@@ -3,13 +3,7 @@
  * Separated from seoOptimizations.tsx to fix React fast refresh warnings
  */
 
-// Extend Window interface for Google Analytics
-declare global {
-  interface Window {
-    gtag?: (...args: unknown[]) => void;
-    dataLayer?: unknown[];
-  }
-}
+// gtag is already declared globally in src/types/global.d.ts
 
 // Google Analytics utilities
 export const googleAnalytics = {
