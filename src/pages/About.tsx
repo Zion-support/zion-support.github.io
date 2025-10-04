@@ -4,8 +4,6 @@ import {
   Target,
   Shield,
   TrendingUp,
-  Users,
-  Award,
   Globe
 } from 'lucide-react'
 
