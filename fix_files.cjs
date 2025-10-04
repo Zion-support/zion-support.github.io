@@ -1,4 +1,8 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
+const fs = require('fs');
+const path = require('path');
+
+// Fix EnhancedErrorBoundary.tsx
+const errorBoundaryContent = `import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react';
 
 interface Props {
@@ -29,7 +33,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     return {
       hasError: true,
       error,
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+      errorId: \`error_\${Date.now()}_\${Math.random().toString(36).substr(2, 9)}\`
     };
   }
 
@@ -70,7 +74,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
   getSessionId = (): string => {
     let sessionId = sessionStorage.getItem('sessionId');
     if (!sessionId) {
-      sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+      sessionId = \`session_\${Date.now()}_\${Math.random().toString(36).substr(2, 9)}\`;
       sessionStorage.setItem('sessionId', sessionId);
     }
     return sessionId;
@@ -102,18 +106,18 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       timestamp: new Date().toISOString()
     };
     
-    const subject = encodeURIComponent(`Error Report - ${this.state.errorId}`);
-    const body = encodeURIComponent(`
-Error ID: ${this.state.errorId}
-Error Message: ${this.state.error?.message}
-URL: ${window.location.href}
-Timestamp: ${new Date().toISOString()}
+    const subject = encodeURIComponent(\`Error Report - \${this.state.errorId}\`);
+    const body = encodeURIComponent(\`
+Error ID: \${this.state.errorId}
+Error Message: \${this.state.error?.message}
+URL: \${window.location.href}
+Timestamp: \${new Date().toISOString()}
 Please describe what you were doing when this error occurred: [Your description here]
 
-Stack Trace: ${this.state.error?.stack}
-    `);
+Stack Trace: \${this.state.error?.stack}
+    \`);
     
-    window.open(`mailto:kleber@ziontechgroup.com?subject=${subject}&body=${body}`);
+    window.open(\`mailto:kleber@ziontechgroup.com?subject=\${subject}&body=\${body}\`);
   };
 
   render() {
@@ -203,4 +207,7 @@ Stack Trace: ${this.state.error?.stack}
   }
 }
 
-export default EnhancedErrorBoundary;
+export default EnhancedErrorBoundary;`;
+
+fs.writeFileSync('/workspace/src/components/EnhancedErrorBoundary.tsx', errorBoundaryContent);
+console.log('Fixed EnhancedErrorBoundary.tsx');

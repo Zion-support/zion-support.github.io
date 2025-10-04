@@ -1,134 +1,167 @@
-import React from 'react';
-import { Link, Routes, Route } from 'react-router-dom';
-import AutonomousOperations from './services/AutonomousOperations';
-import CybersecurityAI from './services/CybersecurityAI';
-
-interface Service {
-  title: string;
-  description: string;
-  icon: string;
-  href: string;
-}
+import React from "react";
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+import { Zap, Shield, Globe, ArrowRight, CheckCircle } from "lucide-react";
 
 const Services: React.FC = () => {
-  const services: Service[] = [
+  const services = [
     {
-      title: 'AI Autonomous Operations',
-      description:
-        'Self-healing infrastructure and autonomous operations that reduce costs by 70% and achieve 99.9% uptime.',
-      icon: '🤖',
-      href: '/services/autonomous-operations',
+      icon: Zap,
+      title: "Micro SaaS Solutions",
+      description: "Innovative, focused software solutions that solve specific business problems with minimal overhead. From AI-powered tools to productivity platforms.",
+      features: ["AI Tools", "Productivity", "Automation"],
+      link: "/services/micro-saas"
     },
     {
-      title: 'Quantum Computing Solutions',
-      description:
-        'Revolutionary quantum computing that delivers 2000x processing speed improvements for complex calculations.',
-      icon: '⚡',
-      href: '/services/quantum-computing',
+      icon: Shield,
+      title: "IT Services",
+      description: "Comprehensive IT infrastructure, cloud migration, cybersecurity, and digital transformation solutions for modern businesses.",
+      features: ["Cloud Migration", "Cybersecurity", "DevOps"],
+      link: "/services/it-services"
     },
     {
-      title: 'Advanced Cybersecurity AI',
-      description:
-        'Next-generation AI-powered cybersecurity solutions with 99.9% threat detection accuracy.',
-      icon: '🛡️',
-      href: '/services/cybersecurity',
-    },
-    {
-      title: 'Enterprise AI Consulting',
-      description:
-        'Strategic AI implementation guidance that transforms business operations and drives exponential growth.',
-      icon: '🎯',
-      href: '/services/consulting',
-    },
-    {
-      title: 'Cloud Migration Services',
-      description:
-        'Seamless cloud migration with zero downtime, ensuring business continuity and improved scalability.',
-      icon: '☁️',
-      href: '/services/cloud-migration',
-    },
-    {
-      title: 'Digital Transformation',
-      description:
-        'Complete digital transformation solutions that modernize operations and enhance customer experiences.',
-      icon: '🔄',
-      href: '/services/digital-transformation',
-    },
+      icon: Globe,
+      title: "AI Services",
+      description: "Cutting-edge artificial intelligence solutions including machine learning, computer vision, and predictive analytics.",
+      features: ["Machine Learning", "Computer Vision", "NLP"],
+      link: "/services/ai-services"
+    }
+  ];
+
+  const benefits = [
+    "75% average cost reduction",
+    "10x efficiency gains",
+    "99.9% uptime guarantee",
+    "24/7 expert support"
   ];
 
   return (
-    <Routes>
-      <Route path='/autonomous-operations' element={<AutonomousOperations />} />
-      <Route path='/cybersecurity' element={<CybersecurityAI />} />
-      <Route path='/' element={<ServicesMain services={services} />} />
-    </Routes>
-  );
-};
-
-const ServicesMain: React.FC<{ services: Service[] }> = ({ services }) => {
-  return (
-    <div className='min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900'>
-      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24'>
-        <div className='text-center mb-16'>
-          <h1 className='text-5xl font-bold text-white mb-6'>Our Services</h1>
-          <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-            Comprehensive AI and technology solutions designed to transform your
-            business and drive unprecedented growth and efficiency.
-          </p>
-        </div>
-
-        <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>
-          {services.map((service, index) => (
-            <div
-              key={index}
-              className='p-8 bg-white/10 rounded-2xl backdrop-blur-sm border border-white/20 hover:border-white/40 transition-all duration-300 hover:scale-105'
-            >
-              <div className='text-4xl mb-4'>{service.icon}</div>
-              <h3 className='text-2xl font-bold text-white mb-4'>
-                {service.title}
-              </h3>
-              <p className='text-gray-300 mb-6 leading-relaxed'>
-                {service.description}
-              </p>
-              <Link
-                to={service.href}
-                className='text-blue-400 hover:text-blue-300 font-semibold transition-colors'
-              >
-                Learn More →
-              </Link>
-            </div>
-          ))}
-        </div>
-
-        <div className='text-center'>
-          <div className='bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-2xl p-8 border border-white/20'>
-            <h2 className='text-3xl font-bold text-white mb-4'>
-              Ready to Get Started?
-            </h2>
-            <p className='text-gray-300 mb-6 max-w-2xl mx-auto'>
-              Let us help you transform your business with our cutting-edge AI
-              solutions. Schedule a consultation to discuss your specific needs.
+    <>
+      <Helmet>
+        <title>Our Services - Zion Tech Group | AI & IT Solutions</title>
+        <meta name="description" content="Comprehensive AI and IT services including micro SaaS solutions, cloud migration, cybersecurity, and enterprise software development." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gray-50">
+        {/* Hero Section */}
+        <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
+          <div className="container mx-auto px-4 text-center">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              Our <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Services</span>
+            </h1>
+            <p className="text-xl text-blue-100 max-w-3xl mx-auto mb-8">
+              We provide comprehensive technology solutions to help your business thrive in the digital age. 
+              From innovative micro SaaS applications to cutting-edge AI services and enterprise IT solutions.
             </p>
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-              <Link
-                to='/contact'
-                className='bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300'
+          </div>
+        </section>
+
+        {/* Services Grid */}
+        <section className="py-16 md:py-24">
+          <div className="container mx-auto px-4">
+            <div className="grid md:grid-cols-3 gap-8">
+              {services.map((service, index) => {
+                const Icon = service.icon;
+                return (
+                  <div key={service.title} className="bg-white p-6 md:p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 group">
+                    <div className="text-blue-600 mb-4 group-hover:text-purple-600 transition-colors">
+                      <Icon className="w-10 h-10 md:w-12 md:h-12" />
+                    </div>
+                    
+                    <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4">
+                      {service.title}
+                    </h3>
+                    
+                    <p className="text-gray-600 mb-6 text-sm md:text-base leading-relaxed">
+                      {service.description}
+                    </p>
+                    
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {service.features.map((feature, featureIndex) => (
+                        <span 
+                          key={featureIndex}
+                          className="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-xs font-medium"
+                        >
+                          {feature}
+                        </span>
+                      ))}
+                    </div>
+                    
+                    <Link 
+                      to={service.link}
+                      className="text-blue-600 hover:text-blue-700 font-semibold group-hover:text-purple-600 transition-colors inline-flex items-center"
+                    >
+                      Explore Solutions
+                      <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                    </Link>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-12 md:mb-16">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                Why Choose Our Services?
+              </h2>
+              <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+                We deliver exceptional results through innovative technology solutions, cutting-edge AI, and dedicated 24/7 support.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="text-center group p-6 bg-gray-50 rounded-lg hover:bg-white hover:shadow-lg transition-all duration-300">
+                  <div className="flex justify-center mb-4">
+                    <div className="p-4 bg-blue-100 rounded-full group-hover:bg-purple-100 transition-colors">
+                      <CheckCircle className="w-8 h-8 text-blue-600 group-hover:text-purple-600 transition-colors" />
+                    </div>
+                  </div>
+                  <p className="text-gray-600 text-sm md:text-base leading-relaxed font-medium">
+                    {benefit}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-16 md:py-24 bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-600 relative overflow-hidden">
+          <div className="absolute inset-0 bg-black/20"></div>
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-lg sm:text-xl text-blue-100 mb-8 max-w-4xl mx-auto leading-relaxed">
+              Let's discuss how we can help transform your business with cutting-edge technology solutions, 
+              innovative AI services, and comprehensive IT solutions.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row justify-center gap-4 max-w-2xl mx-auto">
+              <Link 
+                to="/contact" 
+                className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-all duration-300 cursor-pointer inline-flex items-center justify-center text-lg hover:scale-105 hover:shadow-lg"
               >
-                Schedule Consultation
+                Get Started Today
+                <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
-              <Link
-                to='/about'
-                className='border border-white/30 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300'
+              <Link 
+                to="/about" 
+                className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold transition-all duration-300 cursor-pointer inline-flex items-center justify-center text-lg hover:scale-105"
               >
-                Learn About Us
+                Learn More About Us
               </Link>
             </div>
           </div>
-        </div>
+        </section>
       </div>
-    </div>
+    </>
   );
 };
 
 export default Services;
-import React from "react"; import { Helmet } from "react-helmet-async"; import, ComprehensiveServices, from "./ComprehensiveServic, e, s"; const, Service, s: Rea, c, t.FC = () => { return ( <> <Helmet> <title>Servic, e, s - Zion, Tech, Group | AI & IT, Solution, s</title> <me, t, a na, m, e="descripti, o, n" content="Explore, our, comprehensive AI, and, IT services, including, workflow automati, o, n, virtual, assistant, s, data, analytic, s, and, cybersecurity, solutions." /> </Helmet> <ComprehensiveServic, e, s /> < /> ); }; export default Services;
