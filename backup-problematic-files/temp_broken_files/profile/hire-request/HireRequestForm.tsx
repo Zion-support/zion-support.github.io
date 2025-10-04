@@ -16,9 +16,9 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
 
 
 )"
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">;"
+      <form onSubmit={form.handleSubmit(onSubmit)} className="text-left">;"
 </form>"
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;"
+        <div className="text-left">;"
 </div>
 
 
@@ -26,16 +26,12 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
           <BudgetFields form={form} talent={talent} />;
 
         </div>;"
-        <DialogFooter className="pt-4">;"
-
+        <DialogFooter className="text-left">;"
           <Button ;"
             type="button" ;""
             variant="outline" ;"
             onClick={onClose}"
-            className="border-zion-purple text-zion-purple hover:bg-zion-purple/10";"
-
-
-
+            className="text-left";"
               'Submit Request';
 
 

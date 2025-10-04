@@ -1,11 +1,11 @@
 {
   "name": "Zion Tech Group - AI & Technology Solutions",
   "short_name": "Zion Tech",
-  "description": "Leading AI, cloud, and digital transformation solutions for modern enterprises",
+  "description": "Cutting-edge AI, cloud, and digital transformation solutions for modern enterprises",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#0f172a",
-  "theme_color": "#3b82f6",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
   "orientation": "portrait-primary",
   "scope": "/",
   "lang": "en",
@@ -40,23 +40,27 @@
       "purpose": "any maskable"
     }
   ],
-  "shortcuts": [
+  "screenshots": [
     {
-      "name": "Contact Us",
-      "short_name": "Contact",
-      "description": "Get in touch with our team",
-      "url": "/contact",
-      "icons": [
-        {
-          "src": "/favicon-32x32.png",
-          "sizes": "32x32"
-        }
-      ]
+      "src": "/screenshot-desktop.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Desktop view of Zion Tech Group website"
     },
+    {
+      "src": "/screenshot-mobile.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Mobile view of Zion Tech Group website"
+    }
+  ],
+  "shortcuts": [
     {
       "name": "Services",
       "short_name": "Services",
-      "description": "View our AI and IT services",
+      "description": "View our AI and technology services",
       "url": "/services",
       "icons": [
         {
@@ -66,10 +70,10 @@
       ]
     },
     {
-      "name": "Case Studies",
-      "short_name": "Cases",
-      "description": "Read our success stories",
-      "url": "/case-studies",
+      "name": "Contact",
+      "short_name": "Contact",
+      "description": "Get in touch with us",
+      "url": "/contact",
       "icons": [
         {
           "src": "/favicon-32x32.png",
@@ -77,23 +81,5 @@
         }
       ]
     }
-  ],
-  "screenshots": [
-    {
-      "src": "/screenshot-desktop.png",
-      "sizes": "1280x720",
-      "type": "image/png",
-      "form_factor": "wide",
-      "label": "Zion Tech Group Desktop View"
-    },
-    {
-      "src": "/screenshot-mobile.png",
-      "sizes": "390x844",
-      "type": "image/png",
-      "form_factor": "narrow",
-      "label": "Zion Tech Group Mobile View"
-    }
-  ],
-  "related_applications": [],
-  "prefer_related_applications": false
+  ]
 }

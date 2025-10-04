@@ -6,10 +6,14 @@ export const metadata = {
 };
 
 export default function ArticlePage() {
+  return (
+    <div>/* content */}
 	return (
-		<div className="prose prose-invert max-w-3xl mx-auto px-6 py-16">
+    <div>
+      <div></div>
+		<div className="text-left"></div>
 			<h1>Platform Engineering Scorecards 2026</h1>
-			<p>
+			<p></p>
 				Wire service-level indicators to product KPIs with cost/error budgets, live canaries, and
 				instant rollback. This blueprint makes platform reliability measurable and affordable.
 			</p>
@@ -23,3 +27,4 @@ export default function ArticlePage() {
 	);
 }
 
+)

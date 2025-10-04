@@ -9,7 +9,11 @@ export const metadata = {
 
 export default function FederatedLearningEnterpriseImplementation2025() {
   return (
-    <>
+    <div>/* content */}
+  return (
+    <div>
+      <div></div>
+    <div></div>
       <Head>
         <title>Federated Machine Learning 2025: Enterprise Implementation with 97% Accuracy & Privacy Preservation | Zion Tech Group</title>
         <meta name="description" content="Complete guide to deploying federated learning systems that train on distributed data while preserving privacy. Achieve 97% accuracy without centralized data, 80% faster compliance, and GDPR/HIPAA ready architectures." />
@@ -18,30 +22,30 @@ export default function FederatedLearningEnterpriseImplementation2025() {
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-950 via-emerald-950 to-teal-950 text-white">
-        <main className="container mx-auto px-6 py-12">
-          <nav className="mb-8">
-            <a href="/blog" className="text-emerald-400 hover:text-emerald-300 transition-colors">
+      <div className="text-left"></div>
+        <main className="text-left">
+          <nav className="text-left">
+            <a href="/blog" className="text-left"></a>
               ← Back to Blog
             </a>
           </nav>
           
-          <article className="max-w-4xl mx-auto">
-            <header className="mb-12">
-              <div className="flex items-center gap-3 mb-4">
-                <span className="px-3 py-1 bg-emerald-400/20 text-emerald-400 text-sm rounded-full border border-emerald-400/30">
+          <article className="text-left"></a>
+            <header className="text-left">
+              <div className="text-left"></div>
+                <span className="text-left"></span>
                   Federated Machine Learning
-                </span>
-                <span className="text-white/60 text-sm">October 16, 2025</span>
-                <span className="text-white/60 text-sm">•</span>
-                <span className="text-white/60 text-sm">25 min read</span>
+                <
+                <span className="text-left">October 16, 2025<
+                <span className="text-left">•<
+                <span className="text-left">25 min read<
               </div>
               
-              <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
+              <h1 className="text-left">
                 Federated Machine Learning 2025: Enterprise Implementation with 97% Accuracy & Privacy Preservation
               </h1>
               
-              <p className="text-xl text-white/80 leading-relaxed">
+              <p className="text-left"></p>
                 Train powerful ML models across distributed data without ever centralizing sensitive information. Leading enterprises 
                 are deploying federated learning systems that achieve 97% accuracy while maintaining GDPR/HIPAA compliance, reducing 
                 compliance costs by 80%, and enabling cross-organizational AI collaboration. This comprehensive guide covers architecture 
@@ -49,64 +53,64 @@ export default function FederatedLearningEnterpriseImplementation2025() {
               </p>
             </header>
             
-            <div className="prose prose-invert prose-lg max-w-none">
-              <div className="bg-gradient-to-r from-emerald-500/20 to-teal-500/20 border border-emerald-400/30 rounded-xl p-8 mb-8">
-                <h2 className="text-2xl font-bold text-emerald-300 mb-4">🔐 Why Federated Learning is Transforming Enterprise AI</h2>
-                <p className="text-white/90 mb-4">
+            <div className="text-left"></div>
+              <div className="text-left"></div>
+                <h2 className="text-left">🔐 Why Federated Learning is Transforming Enterprise AI</h2>
+                <p className="text-left"></p>
                   Traditional centralized ML requires aggregating sensitive data, creating compliance nightmares and security risks. 
                   Federated learning enables:
                 </p>
-                <ul className="space-y-2 text-white/80">
-                  <li className="flex items-start">
-                    <span className="text-emerald-400 mr-2">✓</span>
-                    <span><strong className="text-white">97% model accuracy</strong> without centralizing sensitive data</span>
+                <ul className="text-left">
+                  <li className="text-left">
+                    <span className="text-left">✓<
+                    <span><strong className="text-left">97% model accuracy</strong> without centralizing sensitive data<
                   </li>
-                  <li className="flex items-start">
-                    <span className="text-emerald-400 mr-2">✓</span>
-                    <span><strong className="text-white">80% faster compliance</strong> with GDPR, HIPAA, and privacy regulations</span>
+                  <li className="text-left">
+                    <span className="text-left">✓<
+                    <span><strong className="text-left">80% faster compliance</strong> with GDPR, HIPAA, and privacy regulations<
                   </li>
-                  <li className="flex items-start">
-                    <span className="text-emerald-400 mr-2">✓</span>
-                    <span><strong className="text-white">10x larger training datasets</strong> through cross-org collaboration</span>
+                  <li className="text-left">
+                    <span className="text-left">✓<
+                    <span><strong className="text-left">10x larger training datasets</strong> through cross-org collaboration<
                   </li>
-                  <li className="flex items-start">
-                    <span className="text-emerald-400 mr-2">✓</span>
-                    <span><strong className="text-white">95% reduction in data transfer costs</strong> by training at the edge</span>
+                  <li className="text-left">
+                    <span className="text-left">✓<
+                    <span><strong className="text-left">95% reduction in data transfer costs</strong> by training at the edge<
                   </li>
-                  <li className="flex items-start">
-                    <span className="text-emerald-400 mr-2">✓</span>
-                    <span><strong className="text-white">Zero data exposure risk</strong> with differential privacy guarantees</span>
+                  <li className="text-left">
+                    <span className="text-left">✓<
+                    <span><strong className="text-left">Zero data exposure risk</strong> with differential privacy guarantees<
                   </li>
                 </ul>
               </div>
 
-              <h2 className="text-3xl font-bold text-emerald-300 mt-12 mb-6">Federated Learning Architecture Fundamentals</h2>
+              <h2 className="text-left">Federated Learning Architecture Fundamentals</h2>
               
-              <h3 className="text-2xl font-semibold text-emerald-300 mt-8 mb-4">Core Components</h3>
-              <p className="text-white/80 mb-4">
+              <h3 className="text-left">Core Components</h3>
+              <p className="text-left"></p>
                 A production federated learning system consists of:
               </p>
-              <ul className="space-y-3 text-white/80 mb-6">
-                <li className="flex items-start">
-                  <span className="text-emerald-400 mr-2">1.</span>
-                  <strong className="text-white">Central Server:</strong> Orchestrates training rounds and aggregates model updates
+              <ul className="text-left">
+                <li className="text-left">
+                  <span className="text-left">1.<
+                  <strong className="text-left">Central Server:</strong> Orchestrates training rounds and aggregates model updates
                 </li>
-                <li className="flex items-start">
-                  <span className="text-emerald-400 mr-2">2.</span>
-                  <strong className="text-white">Edge Clients:</strong> Train local models on private data
+                <li className="text-left">
+                  <span className="text-left">2.<
+                  <strong className="text-left">Edge Clients:</strong> Train local models on private data
                 </li>
-                <li className="flex items-start">
-                  <span className="text-emerald-400 mr-2">3.</span>
-                  <strong className="text-white">Secure Aggregation Protocol:</strong> Combines updates without exposing individual contributions
+                <li className="text-left">
+                  <span className="text-left">3.<
+                  <strong className="text-left">Secure Aggregation Protocol:</strong> Combines updates without exposing individual contributions
                 </li>
-                <li className="flex items-start">
-                  <span className="text-emerald-400 mr-2">4.</span>
-                  <strong className="text-white">Differential Privacy Layer:</strong> Adds calibrated noise to protect privacy
+                <li className="text-left">
+                  <span className="text-left">4.<
+                  <strong className="text-left">Differential Privacy Layer:</strong> Adds calibrated noise to protect privacy
                 </li>
               </ul>
 
-              <div className="bg-slate-900/50 border border-emerald-400/30 rounded-lg p-6 mb-6">
-                <pre className="text-sm text-white/90 overflow-x-auto">
+              <div className="text-left"></div>
+                <pre className="text-left"></p>
 {`# Central Federated Learning Server
 class FederatedServer:
     def __init__(self, model_architecture, num_clients):
@@ -119,8 +123,9 @@ class FederatedServer:
         selected_clients = random.sample(
             self.available_clients, 
             k=int(0.1 * self.num_clients)
-        )
-        
+  </div>
+  </div>
+)
         # Send global model to selected clients
         client_updates = []
         for client in selected_clients:
@@ -128,20 +133,24 @@ class FederatedServer:
             update = await client.train_local_model(
                 global_weights=self.global_model.get_weights(),
                 epochs=5
-            )
+  </div>
+  </div>
+)
             client_updates.append(update)
         
         # Aggregate client updates with secure aggregation
         aggregated_weights = self.federated_averaging(
             client_updates
-        )
-        
+  </div>
+  </div>
+)
         # Apply differential privacy
         private_weights = self.apply_differential_privacy(
             aggregated_weights,
             epsilon=1.0  # Privacy budget
-        )
-        
+  </div>
+  </div>
+)
         # Update global model
         self.global_model.set_weights(private_weights)
         self.round_number += 1
@@ -171,9 +180,9 @@ class FederatedServer:
                 </pre>
               </div>
 
-              <h3 className="text-2xl font-semibold text-emerald-300 mt-8 mb-4">Edge Client Implementation</h3>
-              <div className="bg-slate-900/50 border border-emerald-400/30 rounded-lg p-6 mb-6">
-                <pre className="text-sm text-white/90 overflow-x-auto">
+              <h3 className="text-left">Edge Client Implementation</h3>
+              <div className="text-left"></div>
+                <pre className="text-left"></p>
 {`# Federated Learning Edge Client
 class FederatedClient:
     def __init__(self, client_id, local_data):
@@ -194,8 +203,9 @@ class FederatedClient:
             batch_size=32,
             validation_split=0.2,
             verbose=0
-        )
-        
+  </div>
+  </div>
+)
         # Compute gradient update (difference from global model)
         local_weights = self.local_model.get_weights()
         gradient_update = [
@@ -207,9 +217,10 @@ class FederatedClient:
         clipped_update = self.clip_gradients(
             gradient_update, 
             max_norm=1.0
-        )
-        
-        return {
+  </div>
+  </div>
+)
+        return 
             'client_id': self.client_id,
             'weights': clipped_update,
             'num_samples': len(self.local_data['X']),
@@ -230,14 +241,14 @@ class FederatedClient:
                 </pre>
               </div>
 
-              <h2 className="text-3xl font-bold text-emerald-300 mt-12 mb-6">Differential Privacy Integration</h2>
+              <h2 className="text-left">Differential Privacy Integration</h2>
               
-              <p className="text-white/80 mb-4">
+              <p className="text-left"></p>
                 Differential privacy provides mathematical guarantees that individual data points cannot be identified:
               </p>
 
-              <div className="bg-slate-900/50 border border-emerald-400/30 rounded-lg p-6 mb-6">
-                <pre className="text-sm text-white/90 overflow-x-auto">
+              <div className="text-left"></div>
+                <pre className="text-left"></p>
 {`from opacus import PrivacyEngine
 import torch.nn as nn
 
@@ -264,8 +275,9 @@ class DifferentiallyPrivateFederation:
             epsilon=self.epsilon,
             delta=self.delta,
             sensitivity=sensitivity
-        )
-        
+  </div>
+  </div>
+)
         # Add Gaussian noise to each weight tensor
         private_weights = []
         for w in weights:
@@ -273,7 +285,9 @@ class DifferentiallyPrivateFederation:
                 loc=0.0,
                 scale=noise_scale * sensitivity,
                 size=w.shape
-            )
+  </div>
+  </div>
+)
             private_weights.append(w + noise)
         
         return private_weights
@@ -295,9 +309,10 @@ class DifferentiallyPrivateFederation:
             2 * num_rounds * np.log(1 / self.delta)
         ) * self.epsilon + num_rounds * self.epsilon * (
             np.exp(self.epsilon) - 1
-        )
-        
-        return {
+  </div>
+  </div>
+)
+        return 
             'total_epsilon': cumulative_epsilon,
             'rounds': num_rounds,
             'per_round_epsilon': self.epsilon
@@ -305,20 +320,19 @@ class DifferentiallyPrivateFederation:
                 </pre>
               </div>
 
-              <h2 className="text-3xl font-bold text-emerald-300 mt-12 mb-6">Secure Aggregation Protocol</h2>
+              <h2 className="text-left">Secure Aggregation Protocol</h2>
               
-              <p className="text-white/80 mb-4">
+              <p className="text-left"></p>
                 Secure aggregation ensures the server cannot see individual client updates, only the aggregated result:
               </p>
 
-              <div className="bg-slate-900/50 border border-emerald-400/30 rounded-lg p-6 mb-6">
-                <pre className="text-sm text-white/90 overflow-x-auto">
+              <div className="text-left"></div>
+                <pre className="text-left"></p>
 {`class SecureAggregation:
     """
     Implements secure multi-party computation for aggregation
     Based on Bonawitz et al. 2017 protocol
     """
-    
     def __init__(self, num_clients, threshold):
         self.num_clients = num_clients
         self.threshold = threshold  # Minimum clients for reconstruction
@@ -333,7 +347,9 @@ class DifferentiallyPrivateFederation:
                 shared_secret = diffie_hellman_exchange(
                     client_i_private=self.clients[i].private_key,
                     client_j_public=self.clients[j].public_key
-                )
+  </div>
+  </div>
+)
                 self.shares[(i, j)] = shared_secret
     
     def mask_update(self, client_id, gradient):
@@ -385,32 +401,37 @@ class DifferentiallyPrivateFederation:
                 </pre>
               </div>
 
-              <h2 className="text-3xl font-bold text-emerald-300 mt-12 mb-6">Production Deployment Architecture</h2>
+              <h2 className="text-left">Production Deployment Architecture</h2>
               
-              <div className="bg-gradient-to-r from-indigo-500/20 to-teal-500/20 border border-indigo-400/30 rounded-xl p-8 mb-8">
-                <h3 className="text-2xl font-bold text-indigo-300 mb-4">Complete Production System</h3>
-                <div className="bg-slate-900/50 border border-indigo-400/30 rounded-lg p-6">
-                  <pre className="text-sm text-white/90 overflow-x-auto">
+              <div className="text-left"></div>
+                <h3 className="text-left">Complete Production System</h3>
+                <div className="text-left"></div>
+                  <pre className="text-left"></p>
 {`# Production Federated Learning Platform
 class FederatedLearningPlatform:
     def __init__(self, config):
         self.server = FederatedServer(
             model_architecture=config.model,
             num_clients=config.num_clients
-        )
+  </div>
+  </div>
+)
         self.secure_agg = SecureAggregation(
             num_clients=config.num_clients,
             threshold=int(0.5 * config.num_clients)
-        )
+  </div>
+  </div>
+)
         self.privacy = DifferentiallyPrivateFederation(
             epsilon=config.epsilon,
             delta=config.delta
-        )
+  </div>
+  </div>
+)
         self.monitoring = FederatedMonitoring()
         
     async def run_training(self, num_rounds=100):
         """Execute federated training with monitoring"""
-        
         for round_num in range(num_rounds):
             start_time = time.time()
             
@@ -418,8 +439,9 @@ class FederatedLearningPlatform:
             selected_clients = await self.server.select_clients(
                 selection_strategy='random',
                 fraction=0.1
-            )
-            
+  </div>
+  </div>
+)
             # 2. Distribute global model
             await self.server.broadcast_model(selected_clients)
             
@@ -434,27 +456,31 @@ class FederatedLearningPlatform:
                 self.secure_agg.mask_update(
                     client.id, 
                     update['weights']
-                )
+  </div>
+  </div>
+)
                 for client, update in zip(selected_clients, local_updates)
             ]
             
             aggregated = self.secure_agg.aggregate_masked_updates(
                 masked_updates
-            )
-            
+  </div>
+  </div>
+)
             # 5. Apply differential privacy
             private_aggregated = self.privacy.apply_differential_privacy(
                 aggregated,
                 sensitivity=1.0
-            )
-            
+  </div>
+  </div>
+)
             # 6. Update global model
             self.server.global_model.set_weights(private_aggregated)
             
             # 7. Evaluate and monitor
             metrics = await self.server.evaluate_global_model()
             
-            self.monitoring.log_round({
+            self.monitoring.log_round(
                 'round': round_num,
                 'participants': len(selected_clients),
                 'accuracy': metrics['accuracy'],
@@ -486,19 +512,18 @@ class FederatedLearningPlatform:
                 </div>
               </div>
 
-              <h2 className="text-3xl font-bold text-emerald-300 mt-12 mb-6">Handling Real-World Challenges</h2>
+              <h2 className="text-left">Handling Real-World Challenges</h2>
               
-              <h3 className="text-2xl font-semibold text-emerald-300 mt-8 mb-4">1. Non-IID Data Distribution</h3>
-              <p className="text-white/80 mb-4">
+              <h3 className="text-left">1. Non-IID Data Distribution</h3>
+              <p className="text-left"></p>
                 Client data is often non-identically distributed, causing convergence issues:
               </p>
-              <div className="bg-slate-900/50 border border-emerald-400/30 rounded-lg p-6 mb-6">
-                <pre className="text-sm text-white/90 overflow-x-auto">
+              <div className="text-left"></div>
+                <pre className="text-left"></p>
 {`def handle_non_iid_data(server, clients):
     """
     Strategies for non-IID federated learning:
     """
-    
     # Strategy 1: Personalization layers
     # Keep final layers personalized per client
     for client in clients:
@@ -520,9 +545,9 @@ class FederatedLearningPlatform:
                 </pre>
               </div>
 
-              <h3 className="text-2xl font-semibold text-emerald-300 mt-8 mb-4">2. Client Dropout Resilience</h3>
-              <div className="bg-slate-900/50 border border-emerald-400/30 rounded-lg p-6 mb-6">
-                <pre className="text-sm text-white/90 overflow-x-auto">
+              <h3 className="text-left">2. Client Dropout Resilience</h3>
+              <div className="text-left"></div>
+                <pre className="text-left"></p>
 {`class ResilientFederatedTraining:
     def __init__(self, min_clients_per_round=10):
         self.min_clients = min_clients_per_round
@@ -530,13 +555,14 @@ class FederatedLearningPlatform:
         
     async def resilient_training_round(self, selected_clients):
         """Handle client failures and timeouts gracefully"""
-        
         # Set timeout for client responses
         tasks = [
             asyncio.wait_for(
                 client.train_local_model(),
                 timeout=self.timeout
-            )
+  </div>
+  </div>
+)
             for client in selected_clients
         ]
         
@@ -544,8 +570,9 @@ class FederatedLearningPlatform:
         results = await asyncio.gather(
             *tasks, 
             return_exceptions=True
-        )
-        
+  </div>
+  </div>
+)
         # Filter out failed clients
         successful_updates = [
             (client, result) 
@@ -558,22 +585,25 @@ class FederatedLearningPlatform:
             logger.warning(
                 f"Only {len(successful_updates)} clients completed. "
                 f"Retrying round..."
-            )
+  </div>
+  </div>
+)
             return await self.resilient_training_round(
                 self.select_more_clients()
-            )
-        
+  </div>
+  </div>
+)
         # Proceed with available updates
         return successful_updates`}
                 </pre>
               </div>
 
-              <h2 className="text-3xl font-bold text-emerald-300 mt-12 mb-6">Real-World Success Stories</h2>
+              <h2 className="text-left">Real-World Success Stories</h2>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                <div className="bg-gradient-to-br from-emerald-600/20 to-teal-600/20 border border-emerald-400/30 rounded-xl p-6">
-                  <h4 className="text-xl font-bold text-emerald-300 mb-3">Healthcare Consortium</h4>
-                  <ul className="space-y-2 text-white/80 text-sm">
+              <div className="text-left"></div>
+                <div className="text-left"></div>
+                  <h4 className="text-left">Healthcare Consortium</h4>
+                  <ul className="text-left">
                     <li>✓ 12 hospitals training shared diagnostic model</li>
                     <li>✓ 97% accuracy without sharing patient data</li>
                     <li>✓ 100% HIPAA compliance maintained</li>
@@ -582,9 +612,9 @@ class FederatedLearningPlatform:
                   </ul>
                 </div>
                 
-                <div className="bg-gradient-to-br from-blue-600/20 to-indigo-600/20 border border-blue-400/30 rounded-xl p-6">
-                  <h4 className="text-xl font-bold text-blue-300 mb-3">Financial Services Network</h4>
-                  <ul className="space-y-2 text-white/80 text-sm">
+                <div className="text-left"></div>
+                  <h4 className="text-left">Financial Services Network</h4>
+                  <ul className="text-left">
                     <li>✓ 45 banks collaborating on fraud detection</li>
                     <li>✓ 94% fraud detection accuracy (up from 78%)</li>
                     <li>✓ Zero customer data exposure</li>
@@ -594,60 +624,60 @@ class FederatedLearningPlatform:
                 </div>
               </div>
 
-              <h2 className="text-3xl font-bold text-emerald-300 mt-12 mb-6">Deployment Best Practices</h2>
+              <h2 className="text-left">Deployment Best Practices</h2>
               
-              <div className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-400/30 rounded-xl p-8 mb-8">
-                <h3 className="text-2xl font-bold text-green-300 mb-4">✓ Production Checklist</h3>
-                <ul className="space-y-4 text-white/80">
-                  <li className="flex items-start">
-                    <span className="text-green-400 mr-3 text-xl">1.</span>
-                    <div>
-                      <strong className="text-white">Privacy Budget Management:</strong> Set epsilon &lt; 1.0 for strong privacy, 
+              <div className="text-left"></div>
+                <h3 className="text-left">✓ Production Checklist</h3>
+                <ul className="text-left">
+                  <li className="text-left">
+                    <span className="text-left">1.<
+                    <div></div>
+                      <strong className="text-left">Privacy Budget Management:</strong> Set epsilon &lt; 1.0 for strong privacy, 
                       track cumulative privacy loss across rounds, implement privacy accounting dashboard.
                     </div>
                   </li>
-                  <li className="flex items-start">
-                    <span className="text-green-400 mr-3 text-xl">2.</span>
-                    <div>
-                      <strong className="text-white">Communication Efficiency:</strong> Implement gradient compression (top-k, quantization), 
+                  <li className="text-left">
+                    <span className="text-left">2.<
+                    <div></div>
+                      <strong className="text-left">Communication Efficiency:</strong> Implement gradient compression (top-k, quantization), 
                       reduce communication rounds through local epochs, use adaptive learning rates.
                     </div>
                   </li>
-                  <li className="flex items-start">
-                    <span className="text-green-400 mr-3 text-xl">3.</span>
-                    <div>
-                      <strong className="text-white">Client Authentication:</strong> Deploy certificate-based auth, implement client 
+                  <li className="text-left">
+                    <span className="text-left">3.<
+                    <div></div>
+                      <strong className="text-left">Client Authentication:</strong> Deploy certificate-based auth, implement client 
                       reputation scoring, detect and filter malicious updates.
                     </div>
                   </li>
-                  <li className="flex items-start">
-                    <span className="text-green-400 mr-3 text-xl">4.</span>
-                    <div>
-                      <strong className="text-white">Monitoring & Observability:</strong> Track convergence metrics per round, 
+                  <li className="text-left">
+                    <span className="text-left">4.<
+                    <div></div>
+                      <strong className="text-left">Monitoring & Observability:</strong> Track convergence metrics per round, 
                       monitor client participation rates, alert on privacy budget exhaustion.
                     </div>
                   </li>
                 </ul>
               </div>
 
-              <div className="bg-gradient-to-r from-emerald-500/20 to-teal-500/20 border border-emerald-400/30 rounded-xl p-8 mt-12">
-                <h3 className="text-2xl font-bold text-emerald-300 mb-4">🎯 Deploy Federated Learning in Your Organization</h3>
-                <p className="text-white/90 mb-6">
+              <div className="text-left"></div>
+                <h3 className="text-left">🎯 Deploy Federated Learning in Your Organization</h3>
+                <p className="text-left"></p>
                   Zion Tech Group specializes in enterprise federated learning implementations that achieve 97% accuracy 
                   while maintaining privacy compliance. We've deployed systems for healthcare, finance, and multi-party 
                   collaborations across industries.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4">
+                <div className="text-left"></div>
                   <a 
-                    href="/contact" 
-                    className="bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-3 rounded-lg font-semibold text-center transition-colors"
-                  >
+                    href="/contact"
+                    className="text-left"
+                  ></a>
                     Schedule Privacy-Preserving ML Consultation
                   </a>
                   <a 
-                    href="/services/enterprise-ai-solutions" 
-                    className="border border-emerald-400 text-emerald-300 hover:bg-emerald-500/10 px-6 py-3 rounded-lg font-semibold text-center transition-colors"
-                  >
+                    href="/services/enterprise-ai-solutions"
+                    className="text-left"
+                  ></a>
                     Explore Enterprise AI Services
                   </a>
                 </div>
@@ -659,3 +689,4 @@ class FederatedLearningPlatform:
     </>
   );
 }
+)

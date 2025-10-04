@@ -9,41 +9,50 @@ const AIPlatformArchitecture: React.FC = () => {
             AI Platform Architecture
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Build scalable, enterprise-grade AI platforms with our comprehensive 
-            architecture solutions and best practices.
+            Build scalable, enterprise-grade AI platforms with robust architecture 
+            that supports your organization's growth and innovation needs.
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-blue-500/50 transition-all duration-300">
-            <div className="text-6xl mb-6">🏗️</div>
-            <h3 className="text-2xl font-bold text-white mb-4">Scalable Infrastructure</h3>
+          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50">
+            <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-4">
+              <div className="w-6 h-6 bg-blue-400 rounded"></div>
+            </div>
+            <h3 className="text-xl font-bold text-white mb-3">Scalable Infrastructure</h3>
             <p className="text-gray-300 mb-6">
-              Cloud-native architecture designed for massive scale and high availability.
+              Cloud-native architecture that scales automatically with your AI workloads, 
+              ensuring optimal performance and cost efficiency.
             </p>
           </div>
 
-          <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-purple-500/50 transition-all duration-300">
-            <div className="text-6xl mb-6">🔧</div>
-            <h3 className="text-2xl font-bold text-white mb-4">Microservices Design</h3>
+          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50">
+            <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mb-4">
+              <div className="w-6 h-6 bg-purple-400 rounded"></div>
+            </div>
+            <h3 className="text-xl font-bold text-white mb-3">Data Pipeline Integration</h3>
             <p className="text-gray-300 mb-6">
-              Modular, containerized services that enable rapid development and deployment.
+              Seamless integration with existing data sources and pipelines, 
+              enabling real-time processing and insights generation.
             </p>
           </div>
 
-          <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-green-500/50 transition-all duration-300">
-            <div className="text-6xl mb-6">🔒</div>
-            <h3 className="text-2xl font-bold text-white mb-4">Enterprise Security</h3>
+          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50">
+            <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center mb-4">
+              <div className="w-6 h-6 bg-cyan-400 rounded"></div>
+            </div>
+            <h3 className="text-xl font-bold text-white mb-3">Security & Compliance</h3>
             <p className="text-gray-300 mb-6">
-              End-to-end security with encryption, access controls, and compliance frameworks.
+              Enterprise-grade security with compliance frameworks, 
+              ensuring your AI platform meets industry standards.
             </p>
           </div>
         </div>
 
         <div className="text-center">
-          <a title="Internal link" 
-            href="/contact" 
-            className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
+          <a 
+            href="/contact"
+            className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold rounded-xl transition-all transform hover:scale-105 shadow-xl"
           >
             Design Your AI Platform
           </a>

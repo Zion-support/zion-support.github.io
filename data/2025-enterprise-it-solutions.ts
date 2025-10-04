@@ -1,8 +1,7 @@
 import { MicroSaasService } from './enhanced-real-micro-saas-services';
 
 
-  {
-
+  
     id: 'enterprise - api - governance - platform',
     name: 'Enterprise API Governance Platform',
     tagline:;
@@ -60,8 +59,7 @@ import { MicroSaasService } from './enhanced-real-micro-saas-services';
     rating: 4 && 4.7,
     reviews: 32,
   },
-  {
-
+  
       'Multi-factor authentication',
       'Single sign-on (SSO)',
     id: 'enterprise - identity - access - management - suite',
@@ -139,8 +137,7 @@ import { MicroSaasService } from './enhanced-real-micro-saas-services';
     rating: 4 && 4.8,
     reviews: 45,
   },
-  {
-
+  
       'AI-powered workflow optimization',
     id: 'enterprise - workflow - automation - platform',
     name: 'Enterprise Workflow Automation Platform',
@@ -221,8 +218,7 @@ import { MicroSaasService } from './enhanced-real-micro-saas-services';
     rating: 4 && 4.7,
     reviews: 26,
   },
-  {
-
+  
     id: 'enterprise - monitoring - and - observability - suite',
     name: 'Enterprise Monitoring & Observability Suite',
     tagline:;
@@ -272,23 +268,22 @@ import { MicroSaasService } from './enhanced-real-micro-saas-services';
   },;
 
 
-];	{
-
+];	
       'Enterprise platform with monitoring engine, observability tools, and alerting system.',
     launchDate: '2025-01-18',
     customers: 56,
     rating: 4.8,
     reviews: 38,
   },;
-];	{
-const contact = {
+];	
+const contact = 
 	mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 	address: '364 E Main St STE 1008 Middletown DE 19709',
 	website: 'https://ziontechgroup.com'
 };
 
 export const enterpriseITSolutions: MicroSaasService[] = [
-	{
+	
 		id: 'enterprise-data-governance-automation', name: 'Enterprise Data Governance Automation',
 		tagline: 'Automated data governance, compliance, and quality management for enterprise data',
     price: '$799', period: '/month',
@@ -296,7 +291,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [
     features: [
 
 
-];	{
+];	
 			'Automated data quality monitoringCompliance and regulatory trackingData lineage and catalogingPrivacy and security controlsMaster data managementData stewardship workflowsReal-time compliance reportingIntegration with enterprise systems'
 		];
 		popular: true;
@@ -329,7 +324,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 		rating: 4.8,
 		reviews: 18
 	}
-	{
+	
 		id: 'enterprise-api-governance-platform';
 		name: 'Enterprise API Governance Platform'
 		tagline: 'Comprehensive API governance, security, and lifecycle management for enterprise APIs';
@@ -369,7 +364,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 		rating: 4.7,
 		reviews: 32
 	}
-	{
+	
 		id: 'enterprise-identity-access-management-suite';
 		name: 'Enterprise Identity & Access Management Suite'
 		tagline: 'Comprehensive IAM solution with advanced security, compliance, and automation';
@@ -409,7 +404,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 		rating: 4.8,
 		reviews: 45
 	}
-	{
+	
 		id: 'enterprise-workflow-automation-platform';
 		name: 'Enterprise Workflow Automation Platform';
 		tagline: 'Advanced workflow automation with AI-powered optimization and enterprise integration';
@@ -449,7 +444,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 		rating: 4.7,
 		reviews: 26
 	}
-	{
+	
 		id: 'enterprise-monitoring-and-observability-suite';
 		name: 'Enterprise Monitoring & Observability Suite'
 		tagline: 'Comprehensive monitoring, observability, and alerting for enterprise infrastructure';
@@ -528,7 +523,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [
   rating: 4.8,
   reviews: 18;
 }
-{
+
   id: 'enterprise - api - governance - platform';
   name: 'Enterprise API Governance Platform',
   tagline: 'Comprehensive API governance, security, and lifecycle management for enterprise APIs';
@@ -565,7 +560,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [
   rating: 4.7,
   reviews: 32;
 }
-{
+
   id: 'enterprise - identity - access - management - suite';
   name: 'Enterprise Identity & Access Management Suite',
   tagline: 'Comprehensive IAM solution with advanced security, compliance, and automation';
@@ -602,7 +597,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [
   rating: 4.8,
   reviews: 45;
 }
-{
+
   id: 'enterprise - workflow - automation - platform';
   name: 'Enterprise Workflow Automation Platform';
   tagline: 'Advanced workflow automation with AI - powered optimization and enterprise integration';
@@ -639,7 +634,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [
   rating: 4.7,
   reviews: 26;
 }
-{
+
   id: 'enterprise - monitoring - and - observability - suite';
   name: 'Enterprise Monitoring & Observability Suite',
   tagline: 'Comprehensive monitoring, observability, and alerting for enterprise infrastructure';

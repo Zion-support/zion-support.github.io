@@ -8,4 +8,3 @@ declare module 'next/link' {
   const Link: React.FC<LinkProps>;
   export default Link;
 }
-

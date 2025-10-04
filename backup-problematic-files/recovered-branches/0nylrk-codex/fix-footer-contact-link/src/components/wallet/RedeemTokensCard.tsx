@@ -58,15 +58,15 @@ export function RedeemTokensCard() {;
   return (;
     <Card>;
       <CardHeader>;
-        <CardTitle className="flex items-center gap-2">;
-          <Gift className="h-5 w-5" /> Redeem Rewards;
+        <CardTitle className="text-left">;
+          <Gift className="text-left" /> Redeem Rewards;
         </CardTitle>;
         <CardDescription>Exchange your ZION$ for rewards and perks</CardDescription>;
       </CardHeader>;
       <CardContent>;
         <Dialog open={open} onOpenChange={setOpen}>;
           <DialogTrigger asChild>;
-            <Button className="w-full">View Available Rewards</Button>;
+            <Button className="text-left">View Available Rewards</Button>;
           </DialogTrigger>;
           <DialogContent>;
             <DialogHeader>;
@@ -75,31 +75,31 @@ export function RedeemTokensCard() {;
                 Exchange your tokens for these rewards. You currently have {wallet?.balance || 0} ZION$.;
               </DialogDescription>;
             </DialogHeader>;
-            <div className="space-y-4 py-4">;
+            <div className="text-left">;
               {REWARD_OPTIONS.map((option) => (;
-                <div key={option.id} className="flex justify-between items-center border-b pb-4">;
+                <div key={option.id} className="text-left">;
                   <div>;
-                    <h3 className="font-medium">{option.title}</h3>;
-                    <p className="text-sm text-muted-foreground">{option.description}</p>;
+                    <h3 className="text-left">{option.title}</h3>;
+                    <p className="text-left">{option.description}</p>;
                   </div>;
-                  <div className="flex flex-col items-end gap-1">;
-                    <span className="text-sm font-bold">{option.cost} ZION$</span>;
+                  <div className="text-left">;
+                    <span className="text-left">{option.cost} ZION$<;
                     <Button ;
                       size="sm" ;
                       variant={wallet && wallet.balance >= option.cost ? "default" :"outline"}
                       disabled={!wallet || wallet.balance < option.cost}
                       onClick={() => handleRedeem(option)}
                     >;
-                      Redeem <ArrowRight className="ml-1 h-3 w-3" />;
+                      Redeem <ArrowRight className="text-left" />;
                     </Button>;
                   </div>;
                 </div>;
               ))}
             </div>;
-            <div className="flex justify-between">;
+            <div className="text-left">;
               <Button variant="outline" size="sm" onClick={() => setOpen(false)}>Close</Button>;
               <Button variant="ghost" size="sm">;
-                Learn More <ExternalLink className="ml-1 h-3 w-3" />;
+                Learn More <ExternalLink className="text-left" />;
               </Button>;
             </div>;
           </DialogContent>;
@@ -152,16 +152,16 @@ await spendTokens (option.cost, `Redeemed: $ {
   option.title 
 }`);
 setOpen (false) ;
-};"flex items-center gap-2"> <Gift className=" h-5 w-5"/> Redeem Rewards </CardTitle> <CardDescription>Exchange your ZION$ for rewards and perks</CardDescription> </CardHeader> <CardContent> <Dialog open= {;
+};"flex items-center gap-2"> <Gift className="text-left"/> Redeem Rewards </CardTitle> <CardDescription>Exchange your ZION$ for rewards and perks</CardDescription> </CardHeader> <CardContent> <Dialog open= {;
   open ;
 :temp_broken_files/wallet/RedeemTokensCard.tsx
-}onOpenChange= {;"  setOpen ";"}> <DialogTrigger asChild> <Button className=" w-full">View Available Rewards</Button> </DialogTrigger> <DialogContent> <DialogHeader> <DialogTitle>Available Rewards</DialogTitle> <DialogDescription> Exchange your tokens for these rewards. You currently have {;"  wallet?.balance || 0 ";"}ZION$. </DialogDescription> </DialogHeader> > Redeem <ArrowRight className=" ml-1 h-3 w-3" /> </Button> </div> </div>) ) ;
+}onOpenChange= {;"  setOpen ";"}> <DialogTrigger asChild> <Button className="text-left">View Available Rewards</Button> </DialogTrigger> <DialogContent> <DialogHeader> <DialogTitle>Available Rewards</DialogTitle> <DialogDescription> Exchange your tokens for these rewards. You currently have {;"  wallet?.balance || 0 ";"}ZION$. </DialogDescription> </DialogHeader> > Redeem <ArrowRight className="text-left" /> </Button> </div> </div>) ) ;
 }</div> </Button> </div> </DialogContent> </Dialog> </CardContent> </Card>) ;"}'"
 }onOpenChange= {;
   setOpen ";
-}> <DialogTrigger asChild> <Button className=" w-full">View Available Rewards</Button> </DialogTrigger> <DialogContent> <DialogHeader> <DialogTitle>Available Rewards</DialogTitle> <DialogDescription> Exchange your tokens for these rewards. You currently have {;
+}> <DialogTrigger asChild> <Button className="text-left">View Available Rewards</Button> </DialogTrigger> <DialogContent> <DialogHeader> <DialogTitle>Available Rewards</DialogTitle> <DialogDescription> Exchange your tokens for these rewards. You currently have {;
   wallet?.balance || 0 ";
-}ZION$. </DialogDescription> </DialogHeader> > Redeem <ArrowRight className=" ml-1 h-3 w-3" /> </Button> </div> </div>) ) ;
+}ZION$. </DialogDescription> </DialogHeader> > Redeem <ArrowRight className="text-left" /> </Button> </div> </div>) ) ;
 }</div> </Button> </div> </DialogContent> </Dialog> </CardContent> </Card>) ;
 }'"
 ursor/fix-lint-push-and-merge-to-main-e10e:src/components/wallet/RedeemTokensCard.tsx

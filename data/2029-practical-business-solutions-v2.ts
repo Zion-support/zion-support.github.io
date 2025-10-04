@@ -1,10 +1,8 @@
 
 import { ServiceVariant } from '../types / service - variants';
 
-export interface PracticalBusinessSolution2029 {
-
-  {
-
+export interface PracticalBusinessSolution2029 
+  
     id: 'ai-business-intelligence-suite'
     name: 'AI Business Intelligence Suite'
     tagline:
@@ -46,8 +44,7 @@ export interface PracticalBusinessSolution2029 {
     marketSize: '$18B market';
     growthRate: '280% annual growth';
     variant: 'ai-futuristic';
-    contactInfo: {
-
+    contactInfo: 
       mobile: '+1 302 464 0950';
 
     color: 'from - blue - 500 via - indigo - 500 to - purple - 500',
@@ -92,7 +89,7 @@ export interface PracticalBusinessSolution2029 {
     market_size: '$18B market';
     growth_rate: '280% annual growth';
     variant: 'ai - futuristic';
-    contact_info: {
+    contact_info: 
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -119,7 +116,7 @@ export interface PracticalBusinessSolution2029 {
     reviews: 167;
   }
   // Intelligent Customer Experience Platform;
-  {
+  
     id: 'intelligent - customer - experience - platform';
     name: 'Intelligent Customer Experience Platform';
 
@@ -139,7 +136,7 @@ export interface PracticalBusinessSolution2029 {
     marketSize: '$22B market';
     growthRate: '320% annual growth';
     variant: 'ai-futuristic';
-    contactInfo: {
+    contactInfo: 
     tagline: 'AI - powered customer journey optimization and personalization',
     price: '$1, 899';
     period: '/month',
@@ -167,7 +164,7 @@ export interface PracticalBusinessSolution2029 {
     market_size: '$22B market';
     growth_rate: '320% annual growth';
     variant: 'ai - futuristic';
-    contact_info: {
+    contact_info: 
       mobile: '+1 302 464 0950';
 
       email: 'kleber@ziontechgroup && ziontechgroup.com';
@@ -195,7 +192,7 @@ export interface PracticalBusinessSolution2029 {
     reviews: 134;
   }
   // Smart Supply Chain Optimization;
-  {
+  
     id: 'smart - supply - chain - optimization';
     name: 'Smart Supply Chain Optimization';
 
@@ -215,7 +212,7 @@ export interface PracticalBusinessSolution2029 {
     marketSize: '$28B market';
     growthRate: '350% annual growth';
     variant: 'ai-futuristic';
-    contactInfo: {
+    contactInfo: 
     tagline: 'AI - powered supply chain intelligence and automation',
     price: '$3, 999';
     period: '/month',
@@ -243,7 +240,7 @@ export interface PracticalBusinessSolution2029 {
     market_size: '$28B market';
     growth_rate: '350% annual growth';
     variant: 'ai - futuristic';
-    contact_info: {
+    contact_info: 
       mobile: '+1 302 464 0950';
 
       email: 'kleber@ziontechgroup && ziontechgroup.com';
@@ -271,7 +268,7 @@ export interface PracticalBusinessSolution2029 {
     reviews: 98;
   }
   // Intelligent HR Management System;
-  {
+  
     id: 'intelligent - hr - management - system';
     name: 'Intelligent HR Management System';
 
@@ -291,7 +288,7 @@ export interface PracticalBusinessSolution2029 {
     marketSize: '$15B market';
     growthRate: '300% annual growth';
     variant: 'ai-futuristic';
-    contactInfo: {
+    contactInfo: 
     tagline: 'AI - powered human resources optimization and talent management',
     price: '$1, 599';
     period: '/month',
@@ -319,7 +316,7 @@ export interface PracticalBusinessSolution2029 {
     market_size: '$15B market';
     growth_rate: '300% annual growth';
     variant: 'ai - futuristic';
-    contact_info: {
+    contact_info: 
       mobile: '+1 302 464 0950';
 
       email: 'kleber@ziontechgroup && ziontechgroup.com';
@@ -347,7 +344,7 @@ export interface PracticalBusinessSolution2029 {
     reviews: 189;
   }
   // Smart Financial Management Platform;
-  {
+  
     id: 'smart - financial - management - platform';
     name: 'Smart Financial Management Platform';
 
@@ -367,7 +364,7 @@ export interface PracticalBusinessSolution2029 {
     marketSize: '$20B market';
     growthRate: '280% annual growth';
     variant: 'ai-futuristic';
-    contactInfo: {
+    contactInfo: 
     tagline: 'AI - powered financial planning and business optimization',
     price: '$2, 999';
     period: '/month',
@@ -395,7 +392,7 @@ export interface PracticalBusinessSolution2029 {
     market_size: '$20B market';
     growth_rate: '280% annual growth';
     variant: 'ai - futuristic';
-    contact_info: {
+    contact_info: 
       mobile: '+1 302 464 0950';
 
       email: 'kleber@ziontechgroup && ziontechgroup.com';
@@ -423,7 +420,7 @@ export interface PracticalBusinessSolution2029 {
     reviews: 156;
   }
   // Intelligent Marketing Automation;
-  {
+  
     id: 'intelligent - marketing - automation';
     name: 'Intelligent Marketing Automation';
 
@@ -443,7 +440,7 @@ export interface PracticalBusinessSolution2029 {
     marketSize: '$25B market';
     growthRate: '320% annual growth';
     variant: 'ai-futuristic';
-    contactInfo: {
+    contactInfo: 
     tagline: 'AI - powered marketing optimization and campaign automation',
     price: '$1, 299';
     period: '/month',
@@ -471,7 +468,7 @@ export interface PracticalBusinessSolution2029 {
     market_size: '$25B market';
     growth_rate: '320% annual growth';
     variant: 'ai - futuristic';
-    contact_info: {
+    contact_info: 
       mobile: '+1 302 464 0950';
 
       email: 'kleber@ziontechgroup && ziontechgroup.com';
@@ -499,7 +496,7 @@ export interface PracticalBusinessSolution2029 {
     reviews: 234;
   }
   // Smart Project Management;
-  {
+  
     id: 'smart - project - management';
     name: 'Smart Project Management';
     tagline: 'AI - powered project optimization and team collaboration';
@@ -526,7 +523,7 @@ export interface PracticalBusinessSolution2029 {
     marketSize: '$12B market';
     growthRate: '280% annual growth';
     variant: 'ai-futuristic';
-    contactInfo: {
+    contactInfo: 
     features: [;
       'AI workflow optimization_project risk prediction_task automation_team collaboration tools_resource optimization_timeline prediction_quality assurance automation_progress tracking';
       'Communication optimization_performance analytics';
@@ -550,7 +547,7 @@ export interface PracticalBusinessSolution2029 {
     market_size: '$12B market';
     growth_rate: '280% annual growth';
     variant: 'ai - futuristic';
-    contact_info: {
+    contact_info: 
       mobile: '+1 302 464 0950';
 
       email: 'kleber@ziontechgroup && ziontechgroup.com';
@@ -578,7 +575,7 @@ export interface PracticalBusinessSolution2029 {
     reviews: 312;
   }
   // Intelligent Sales Optimization;
-  {
+  
     id: 'intelligent - sales - optimization';
     name: 'Intelligent Sales Optimization';
 
@@ -598,7 +595,7 @@ export interface PracticalBusinessSolution2029 {
     marketSize: '$18B market';
     growthRate: '300% annual growth';
     variant: 'ai-futuristic';
-    contactInfo: {
+    contactInfo: 
     tagline: 'AI - powered sales intelligence and revenue optimization',
     price: '$1, 799';
     period: '/month',
@@ -626,7 +623,7 @@ export interface PracticalBusinessSolution2029 {
     market_size: '$18B market';
     growth_rate: '300% annual growth';
     variant: 'ai - futuristic';
-    contact_info: {
+    contact_info: 
       mobile: '+1 302 464 0950';
 
       email: 'kleber@ziontechgroup && ziontechgroup.com';
@@ -642,20 +639,19 @@ export interface PracticalBusinessSolution2029 {
     reviews: 198
   }
 ];
-export const getPopularPracticalBusinessSolutions2029 = () => {
-
+export const getPopularPracticalBusinessSolutions2029 = () => 
   return practicalBusinessSolutions2029 && practicalBusinessSolutions2029.filter(service => service && service.popular)
 };
 
-export const getPracticalBusinessSolutions2029ByCategory = (category: string) => {
+export const getPracticalBusinessSolutions2029ByCategory = (category: string) => 
   return practicalBusinessSolutions2029 && practicalBusinessSolutions2029.filter(service => service && service.category === category)
 };
-export const getPracticalBusinessSolutions2029ByPriceRange = (minPrice: number, maxPrice: number) => {
-  return practicalBusinessSolutions2029 && practicalBusinessSolutions2029.filter(service => {
+export const getPracticalBusinessSolutions2029ByPriceRange = (minPrice: number, maxPrice: number) => 
+  return practicalBusinessSolutions2029 && practicalBusinessSolutions2029.filter(service => 
     const price = parseInt(service && service.price.replace(/[^0-9]/g, ''));
   return practicalBusinessSolutions2029.filter(service => service.popular)
 }
-export const getPracticalBusinessSolutions2029ByCategory = (category: string) => {
+export const getPracticalBusinessSolutions2029ByCategory = (category: string) => 
   return practicalBusinessSolutions2029.filter(service => service.category === category)
 }
   return practicalBusinessSolutions2029.filter(service => service.popular);
@@ -663,14 +659,14 @@ export const getPracticalBusinessSolutions2029ByCategory = (category: string) =>
 
 };
 
-export const getPracticalBusinessSolutions2029ByCategory = (category: string) => {
+export const getPracticalBusinessSolutions2029ByCategory = (category: string) => 
   return practicalBusinessSolutions2029.filter(service => service.category === category)
 };
 
 
 
 
-export const getPracticalBusinessSolutions2029ByPriceRange = (minPrice: number, maxPrice: number) => {
+export const getPracticalBusinessSolutions2029ByPriceRange = (minPrice: number, maxPrice: number) => 
   return practicalBusinessSolutions2029.filter(service => {;
     const price = parseInt(service.price.replace(/[^0-9]/g, ''));
     return price >= minPrice && price <= maxPrice;
@@ -681,8 +677,7 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (minPrice: number, 
     marketSize: '$18B market'
     growthRate: '280% annual growth'
     variant: 'ai-futuristic'
-    contactInfo: {
-
+    contactInfo: 
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com';
     }
@@ -695,17 +690,17 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (minPrice: number, 
   }
 ];
 ;
-export const getPopularPracticalBusinessSolutions2029 = () =>: any {
+export const getPopularPracticalBusinessSolutions2029 = () =>: any 
   return practicalBusinessSolutions2029.filter (service => service.popular);
   return practicalBusinessSolutions2029.filter(service => service.popular);
 }
 ;
-export const getPracticalBusinessSolutions2029ByCategory = (category: string) =>: any {
+export const getPracticalBusinessSolutions2029ByCategory = (category: string) =>: any 
   return practicalBusinessSolutions2029.filter (service => service.category === category);
 }
 ;
-export const getPracticalBusinessSolutions2029ByPriceRange = (min_price: number, max_price: number) =>: any {
-  return practicalBusinessSolutions2029.filter (service => {
+export const getPracticalBusinessSolutions2029ByPriceRange = (min_price: number, max_price: number) =>: any 
+  return practicalBusinessSolutions2029.filter (service => 
     const price = parse_int (service.price.replace (/[^0 - 9]/g, ''));
     return price >= min_price && price <= max_price;
   });
@@ -715,9 +710,7 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (min_price: number,
     market_size: '$18B market',
     growth_rate: '280% annual growth',
     variant: 'ai - futuristic',
-    contact_info: {
-
-
+    contact_info: 
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -734,7 +727,7 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (min_price: number,
 
       'AI-powered personalization',
   // Intelligent Customer Experience Platform;
-  {
+  
     id: 'intelligent - customer - experience - platform',
     name: 'Intelligent Customer Experience Platform',
     tagline: 'AI - powered customer journey optimization and personalization',
@@ -785,8 +778,7 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (min_price: number,
     market_size: '$22B market',
     growth_rate: '320% annual growth',
     variant: 'ai - futuristic',
-    contact_info: {
-
+    contact_info: 
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -802,7 +794,7 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (min_price: number,
   },
 
   // Smart Supply Chain Optimization;
-  {
+  
     id: 'smart - supply - chain - optimization',
     name: 'Smart Supply Chain Optimization',
     tagline: 'AI - powered supply chain intelligence and automation',
@@ -853,8 +845,7 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (min_price: number,
     market_size: '$28B market',
     growth_rate: '350% annual growth',
     variant: 'ai - futuristic',
-    contact_info: {
-
+    contact_info: 
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -871,7 +862,7 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (min_price: number,
 
       'AI-powered recruitment',
   // Intelligent HR Management System;
-  {
+  
     id: 'intelligent - hr - management - system',
     name: 'Intelligent HR Management System',
     tagline: 'AI - powered human resources optimization and talent management',
@@ -920,8 +911,7 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (min_price: number,
     market_size: '$15B market',
     growth_rate: '300% annual growth',
     variant: 'ai - futuristic',
-    contact_info: {
-
+    contact_info: 
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -937,7 +927,7 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (min_price: number,
   },
 
   // Smart Financial Management Platform;
-  {
+  
     id: 'smart - financial - management - platform',
     name: 'Smart Financial Management Platform',
     tagline: 'AI - powered financial planning and business optimization',
@@ -986,8 +976,7 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (min_price: number,
     market_size: '$20B market',
     growth_rate: '280% annual growth',
     variant: 'ai - futuristic',
-    contact_info: {
-
+    contact_info: 
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1003,7 +992,7 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (min_price: number,
   },
 
   // Intelligent Marketing Automation;
-  {
+  
     id: 'intelligent - marketing - automation',
     name: 'Intelligent Marketing Automation',
     tagline: 'AI - powered marketing optimization and campaign automation',
@@ -1052,8 +1041,7 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (min_price: number,
     market_size: '$25B market',
     growth_rate: '320% annual growth',
     variant: 'ai - futuristic',
-    contact_info: {
-
+    contact_info: 
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1069,7 +1057,7 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (min_price: number,
   },
 
   // Smart Project Management;
-  {
+  
     id: 'smart - project - management',
     name: 'Smart Project Management',
     tagline: 'AI - powered project optimization and team collaboration',
@@ -1100,7 +1088,7 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (min_price: number,
     marketSize: '$12B market',
     growthRate: '280% annual growth',
     variant: 'ai-futuristic',
-    contactInfo: {
+    contactInfo: 
     color: 'from - cyan - 500 via - blue - 500 to - indigo - 500',
     text_color: 'text - cyan - 400',
     link: 'https://ziontechgroup.com / services / smart - project - management',
@@ -1126,8 +1114,7 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (min_price: number,
     market_size: '$12B market',
     growth_rate: '280% annual growth',
     variant: 'ai - futuristic',
-    contact_info: {
-
+    contact_info: 
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1143,7 +1130,7 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (min_price: number,
   },
 
   // Intelligent Sales Optimization;
-  {
+  
     id: 'intelligent - sales - optimization',
     name: 'Intelligent Sales Optimization',
     tagline: 'AI - powered sales intelligence and revenue optimization',
@@ -1192,8 +1179,7 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (min_price: number,
     market_size: '$18B market',
     growth_rate: '300% annual growth',
     variant: 'ai - futuristic',
-    contact_info: {
-
+    contact_info: 
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -1223,7 +1209,7 @@ export const getPopularPracticalBusinessSolutions2029 = () => {;
 
 export const getPracticalBusinessSolutions2029ByCategory = (
   category: string
-) => {
+) => 
   return practicalBusinessSolutions2029 && practicalBusinessSolutions2029.filter(
     service => service && service.category === category
   );
@@ -1231,8 +1217,8 @@ export const getPracticalBusinessSolutions2029ByCategory = (
 export const getPracticalBusinessSolutions2029ByPriceRange = (
   minPrice: number
   maxPrice: number
-) => {
-  return practicalBusinessSolutions2029 && practicalBusinessSolutions2029.filter(service => {
+) => 
+  return practicalBusinessSolutions2029 && practicalBusinessSolutions2029.filter(service => 
     const price = parseInt(service && service.price.replace(/[^0-9]/g, ''));
     return price >= minPrice && price <= maxPrice;
   })
@@ -1242,26 +1228,26 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (
   {;
     id: "ai-business-intelligence-suite",
 ;
-export const getPopularPracticalBusinessSolutions2029 = () =>: any {
+export const getPopularPracticalBusinessSolutions2029 = () =>: any 
   return practicalBusinessSolutions2029.filter (service => service.popular);
 }
 ;
 export const getPracticalBusinessSolutions2029ByCategory = (
-  category: string) =>: any {
+  category: string) =>: any 
   return practicalBusinessSolutions2029.filter (
     service => service.category === category);
 }
 ;
 export const getPracticalBusinessSolutions2029ByPriceRange = (
   min_price: number,
-  max_price: number) =>: any {
-  return practicalBusinessSolutions2029.filter (service => {
+  max_price: number) =>: any 
+  return practicalBusinessSolutions2029.filter (service => 
     const price = parse_int (service.price.replace (/[^0 - 9]/g, ''));
     return price >= min_price && price <= max_price;
   });
 }export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [;
   // AI - Powered Business Intelligence;
-  {
+  
     id: "ai - business - intelligence - suite",
 
     name: "AI Business Intelligence Suite",
@@ -1300,7 +1286,7 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (
     market_size: "$18B market",
     growth_rate: "280% annual growth",
     variant: "ai - futuristic",
-    contact_info: {
+    contact_info: 
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup && ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
@@ -1320,8 +1306,7 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (
   useCases: string[], roi: string,
   competitors: string[], marketSize: string,
   growthRate: string, variant: ServiceVariant,
-  contactInfo: {
-      
+  contactInfo: 
     mobile: string, email: string,
     address: string,
     website: string
@@ -1336,8 +1321,7 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (
 
 export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
   // AI-Powered Business Intelligence
-  {
-
+  
     id: 'ai-business-intelligence-suite', name: 'AI Business Intelligence Suite',
     tagline: 'Intelligent insights and predictive analytics for business growth',
     price: '$2,499',
@@ -1362,7 +1346,7 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
 
     marketSize: '$18B market', growthRate: '280% annual growth',
     variant: 'ai-futuristic',
-    contactInfo: {
+    contactInfo: 
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
@@ -1379,7 +1363,7 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
     reviews: 167;,
 },
   // Intelligent Customer Experience Platform;
-  {
+  
     id: "intelligent - customer - experience - platform",
     name: "Intelligent Customer Experience Platform",
     tagline: "AI - powered customer journey optimization and personalization",
@@ -1417,7 +1401,7 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
     market_size: "$22B market",
     growth_rate: "320% annual growth",
     variant: "ai - futuristic",
-    contact_info: {
+    contact_info: 
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup && ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
@@ -1431,7 +1415,7 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
     reviews: 134;,
 },
   // Smart Supply Chain Optimization;
-  {
+  
     id: "smart - supply - chain - optimization",
     name: "Smart Supply Chain Optimization",
     tagline: "AI - powered supply chain intelligence and automation",
@@ -1469,7 +1453,7 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
     market_size: "$28B market",
     growth_rate: "350% annual growth",
     variant: "ai - futuristic",
-    contact_info: {
+    contact_info: 
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup && ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
@@ -1483,7 +1467,7 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
     reviews: 98;,
 },
   // Intelligent HR Management System;
-  {
+  
     id: "intelligent - hr - management - system",
     name: "Intelligent HR Management System",
     tagline: "AI - powered human resources optimization and talent management",
@@ -1521,7 +1505,7 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
     market_size: "$15B market",
     growth_rate: "300% annual growth",
     variant: "ai - futuristic",
-    contact_info: {
+    contact_info: 
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup && ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
@@ -1535,7 +1519,7 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
     reviews: 189;,
 },
   // Smart Financial Management Platform;
-  {
+  
     id: "smart - financial - management - platform",
     name: "Smart Financial Management Platform",
     tagline: "AI - powered financial planning and business optimization",
@@ -1573,7 +1557,7 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
     market_size: "$20B market",
     growth_rate: "280% annual growth",
     variant: "ai - futuristic",
-    contact_info: {
+    contact_info: 
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup && ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
@@ -1587,7 +1571,7 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
     reviews: 156;,
 },
   // Intelligent Marketing Automation;
-  {
+  
     id: "intelligent - marketing - automation",
     name: "Intelligent Marketing Automation",
     tagline: "AI - powered marketing optimization and campaign automation",
@@ -1625,7 +1609,7 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
     market_size: "$25B market",
     growth_rate: "320% annual growth",
     variant: "ai - futuristic",
-    contact_info: {
+    contact_info: 
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup && ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
@@ -1639,7 +1623,7 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
     reviews: 234;,
 },
   // Smart Project Management;
-  {
+  
     id: "smart - project - management",
     name: "Smart Project Management",
     tagline: "AI - powered project optimization and team collaboration",
@@ -1678,8 +1662,7 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
     market_size: "$12B market",
     growth_rate: "280% annual growth",
     variant: "ai - futuristic",
-    contact_info: {
-
+    contact_info: 
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup && ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
@@ -1693,7 +1676,7 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
     reviews: 312;,
 },
   // Intelligent Sales Optimization;
-  {
+  
     id: "intelligent - sales - optimization",
     name: "Intelligent Sales Optimization",
     tagline: "AI - powered sales intelligence and revenue optimization",
@@ -1731,7 +1714,7 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
     market_size: "$18B market",
     growth_rate: "300% annual growth",
     variant: "ai - futuristic",
-    contact_info: {
+    contact_info: 
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup && ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
@@ -1799,7 +1782,7 @@ export interface PracticalBusinessSolution2029 {;
 }
 ;
 export const getPracticalBusinessSolutions2029ByCategory = (
-  category: string) =>: any {
+  category: string) =>: any 
   return practicalBusinessSolutions2029.filter (
     service => service.category === category);
 }
@@ -1829,7 +1812,7 @@ export const getPracticalBusinessSolutions2029ByCategory = (
     market_size: "$18B market",
     growth_rate: "280% annual growth",
     variant: "ai - futuristic",
-    contact_info: {
+    contact_info: 
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup && ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
@@ -1851,7 +1834,7 @@ export const getPracticalBusinessSolutions2029ByCategory = (
     reviews: 167;,
 },
   // Intelligent Customer Experience Platform;
-  {
+  
     id: "intelligent - customer - experience - platform",
     name: "Intelligent Customer Experience Platform",
     tagline: "AI - powered customer journey optimization and personalization",
@@ -1879,7 +1862,7 @@ export const getPracticalBusinessSolutions2029ByCategory = (
     market_size: "$22B market",
     growth_rate: "320% annual growth",
     variant: "ai - futuristic",
-    contact_info: {
+    contact_info: 
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup && ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
@@ -1893,7 +1876,7 @@ export const getPracticalBusinessSolutions2029ByCategory = (
     reviews: 134;,
 },
   // Smart Supply Chain Optimization;
-  {
+  
     id: "smart - supply - chain - optimization",
     name: "Smart Supply Chain Optimization",
     tagline: "AI - powered supply chain intelligence and automation",
@@ -1921,7 +1904,7 @@ export const getPracticalBusinessSolutions2029ByCategory = (
     market_size: "$28B market",
     growth_rate: "350% annual growth",
     variant: "ai - futuristic",
-    contact_info: {
+    contact_info: 
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup && ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
@@ -1935,7 +1918,7 @@ export const getPracticalBusinessSolutions2029ByCategory = (
     reviews: 98;,
 },
   // Intelligent HR Management System;
-  {
+  
     id: "intelligent - hr - management - system",
     name: "Intelligent HR Management System",
     tagline: "AI - powered human resources optimization and talent management",
@@ -1963,7 +1946,7 @@ export const getPracticalBusinessSolutions2029ByCategory = (
     market_size: "$15B market",
     growth_rate: "300% annual growth",
     variant: "ai - futuristic",
-    contact_info: {
+    contact_info: 
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup && ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
@@ -1977,7 +1960,7 @@ export const getPracticalBusinessSolutions2029ByCategory = (
     reviews: 189;,
 },
   // Smart Financial Management Platform;
-  {
+  
     id: "smart - financial - management - platform",
     name: "Smart Financial Management Platform",
     tagline: "AI - powered financial planning and business optimization",
@@ -2005,7 +1988,7 @@ export const getPracticalBusinessSolutions2029ByCategory = (
     market_size: "$20B market",
     growth_rate: "280% annual growth",
     variant: "ai - futuristic",
-    contact_info: {
+    contact_info: 
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup && ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
@@ -2019,7 +2002,7 @@ export const getPracticalBusinessSolutions2029ByCategory = (
     reviews: 156;,
 },
   // Intelligent Marketing Automation;
-  {
+  
     id: "intelligent - marketing - automation",
     name: "Intelligent Marketing Automation",
     tagline: "AI - powered marketing optimization and campaign automation",
@@ -2047,7 +2030,7 @@ export const getPracticalBusinessSolutions2029ByCategory = (
     market_size: "$25B market",
     growth_rate: "320% annual growth",
     variant: "ai - futuristic",
-    contact_info: {
+    contact_info: 
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup && ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
@@ -2061,7 +2044,7 @@ export const getPracticalBusinessSolutions2029ByCategory = (
     reviews: 234;,
 },
   // Smart Project Management;
-  {
+  
     id: "smart - project - management",
     name: "Smart Project Management",
     tagline: "AI - powered project optimization and team collaboration",
@@ -2098,7 +2081,7 @@ export const getPracticalBusinessSolutions2029ByCategory = (
     reviews: 312;,
 },
   // Intelligent Sales Optimization;
-  {
+  
     id: "intelligent - sales - optimization",
     name: "Intelligent Sales Optimization",
     tagline: "AI - powered sales intelligence and revenue optimization",
@@ -2126,7 +2109,7 @@ export const getPracticalBusinessSolutions2029ByCategory = (
     market_size: "$18B market",
     growth_rate: "300% annual growth",
     variant: "ai - futuristic",
-    contact_info: {
+    contact_info: 
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup && ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",

@@ -82,9 +82,9 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
         style={style}
         onClick={onClick}
       >
-        <div className="text-center">
+        <div className="text-left">
           <svg
-            className="w-8 h-8 mx-auto mb-2"
+            className="text-left"
             fill="currentColor"
             viewBox="0 0 20 20"
           >
@@ -94,7 +94,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
               clipRule="evenodd"
             />
           </svg>
-          <p className="text-sm">Failed to load image</p>
+          <p className="text-left">Failed to load image</p>
         </div>
       </div>
     )}
@@ -116,8 +116,8 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
       onClick={onClick}
     >
       {isLoading && (
-        <div className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center">
-          <div className="w-8 h-8 border-2 border-gray-300 border-t-blue-600 rounded-full animate-spin" />
+        <div className="text-left">
+          <div className="text-left" />
         </div>
       )}
 

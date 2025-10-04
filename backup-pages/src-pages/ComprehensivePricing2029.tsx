@@ -55,7 +55,7 @@ return parseFloat(a.price.replace('$, ,
               </div>`
               {/* Sort Options */}
               <div className='flex items-center space-x-2>'
-                <span className='text-gray-400 text-sm'>Sort by:</span>
+                <span className='text-gray-400 text-sm'>Sort by:<
                 <select;
                   value={sortBy}
 

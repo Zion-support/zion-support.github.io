@@ -1,223 +1,260 @@
 import React from 'react';
-import Link from 'next/link';
-import dynamic from 'next/dynamic';
+import { UnifiedBanner, bannerConfigurations } from './components/UnifiedBannerSystem';
+import { LazyWrapper } from './components/LazyLoader';
+import { SEOOptimizer } from './components/SEOOptimizer';
+import { AccessibilityEnhancer } from './components/AccessibilityEnhancer';
+import { PerformanceMonitor } from './components/PerformanceMonitor';
 
-// Simplified imports - only essential components
-import ContentShowcase from '../components/ContentShowcase';
-import FeaturedServiceCard from '../components/FeaturedServiceCard';
-import SuccessStory from '../components/SuccessStory';
+// Lazy load heavy components
+const UnifiedContentPromotion = dynamic(() => import('../components/UnifiedContentPromotion'), 
+  loading: () => <div className="text-left"></div>"
+});
+
+const InteractiveAIROICalculator = dynamic(() => import('../components/InteractiveAIROICalculator'), 
+  loading: () => <div className="text-left"></div>"
+});
+
+const ContentShowcase = dynamic(() => import('../components/ContentShowcase'), 
+  loading: () => <div className="text-left"></div>"
+});
+
+const InteractiveContentShowcase2026 = dynamic(() => import('../components/InteractiveContentShowcase2026'), 
+  loading: () => <div className="text-left"></div>"
+});
 
 export const metadata = {
-  title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
-  description: 'Enterprise-grade AI, micro SaaS, and IT solutions. Build faster with Zion Tech Group.',
-  keywords: 'AI services, micro SaaS, IT services, cloud migration, DevOps, SRE, enterprise software',
-  authors: [{ name: 'Zion Tech Group' }],
+  title: 'Zion Tech Group — AI Enterprise Transformation & IT Services | 300% ROI Guaranteed',
+  description: 'Transform your enterprise with AI-powered solutions. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains. Expert AI consulting, autonomous systems, and digital transformation services.',
+  keywords: 'AI enterprise transformation, AI consulting, autonomous AI systems, enterprise AI services, digital transformation, AI implementation, AI ROI calculator, manufacturing AI, AI automation, AI strategy',
   openGraph: {
-    title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
-    description: 'Enterprise-grade AI, micro SaaS, and IT solutions. Build faster with Zion Tech Group.',
-    url: 'https://ziontechgroup.com',
-    siteName: 'Zion Tech Group',
-    locale: 'en_US',
+    title: 'Zion Tech Group — AI Enterprise Transformation & IT Services',
+    description: 'Transform your enterprise with AI-powered solutions. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains.',
     type: 'website',
+    url: 'https://ziontechgroup.com',
+    images: [{
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Zion Tech Group AI Enterprise Transformation',
+      },
+    ],
   },
-  twitter: {
+  twitter: 
     card: 'summary_large_image',
-    title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
-    description: 'Enterprise-grade AI, micro SaaS, and IT solutions. Build faster with Zion Tech Group.',
+    title: 'Zion Tech Group — AI Enterprise Transformation & IT Services',
+    description: 'Transform your enterprise with AI-powered solutions. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains.',
+    images: ['/og-image.jpg'],
+  },
+  robots: 
+    index: true,
+    follow: true,
+    googleBot: 
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
 };
 
 export default function HomePage() {
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Zion Tech Group",
-    "description": "Leading provider of AI-powered enterprise solutions and digital transformation services",
-    "url": "https://ziontechgroup.com",
-    "logo": "https://ziontechgroup.com/logo.png",
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+1-302-464-0950",
-      "contactType": "customer service",
+  return (
+    <div>/* content */}
+  const structuredData = 
+    "@context": "https://schema.org"
+    "@type": "Organization"
+    "name": "Zion Tech Group"
+    "description": "Leading provider of AI-powered enterprise solutions and digital transformation services"
+    "url": "https://ziontechgroup.com"
+    "logo": "https://ziontechgroup.com/logo.png"
+    "contactPoint": {"
+      "@type": "ContactPoint"
+      "telephone": "+1-302-464-0950"
+      "contactType": "customer service"
       "email": "kleber@ziontechgroup.com"
     },
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "364 E Main St STE 1008",
-      "addressLocality": "Middletown",
-      "addressRegion": "DE",
-      "postalCode": "19709",
+    "address": {"
+      "@type": "PostalAddress"
+      "streetAddress": "364 E Main St STE 1008"
+      "addressLocality": "Middletown"
+      "addressRegion": "DE"
+      "postalCode": "19709"
       "addressCountry": "US"
     },
-    "sameAs": [
-      "https://linkedin.com/company/zion-tech-group",
+    "sameAs": ["
+      "https://linkedin.com/company/zion-tech-group"
       "https://twitter.com/ziontechgroup"
     ],
-    "offers": {
-      "@type": "Offer",
-      "name": "AI Enterprise Transformation Services",
-      "description": "Transform your enterprise with AI-powered solutions achieving 300% ROI, 70% cost reduction, and 90% efficiency gains",
-      "price": "50000",
-      "priceCurrency": "USD",
+    "offers": {"
+      "@type": "Offer"
+      "name": "AI Enterprise Transformation Services"
+      "description": "Transform your enterprise with AI-powered solutions achieving 300% ROI, 70% cost reduction, and 90% efficiency gains"
+      "price": "50000"
+      "priceCurrency": "USD"
       "availability": "https://schema.org/InStock"
     }
   };
 
   return (
-    <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              Leading AI & Technology Solutions
-            </h1>
-            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              Transform your business with cutting-edge AI, micro SaaS, and enterprise IT solutions. 
-              Build faster, scale smarter, and achieve unprecedented results.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="/services" 
-                className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-              >
-                Explore Services
-              </Link>
-              <Link 
-                href="/contact" 
-                className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
-              >
-                Get Started
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+    <div>
+      <div></div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+      <div className="text-left"></div>
+        {/* Unified Content Promotion - Replaces multiple redundant banners */}</div>
+        <UnifiedContentPromotion />
 
-      {/* Featured Services */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Our Core Services
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Comprehensive solutions designed to accelerate your digital transformation
+        {/* Hero Section */}
+        <section className="text-left"></section>
+          <div className="text-left"></div>
+            <h1 className="text-left">
+              Transform Your Business with
+              <span className="text-left"></span>
+                {' '}AI-Powered Solutions
+              </span>
+            </h1>
+            <p className="text-left"></p>
+              Zion Tech Group delivers cutting-edge AI micro SaaS services, cloud automation, 
+              and enterprise IT solutions that drive growth, efficiency, and innovation.
             </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <FeaturedServiceCard
-              title="AI Services & Solutions"
-              description="Advanced artificial intelligence solutions including machine learning, deep learning, and AI automation."
-              icon="🤖"
-              href="/services/ai-services"
-              features={[
-                "Machine Learning Models",
-                "Deep Learning Systems", 
-                "AI Automation",
-                "Predictive Analytics"
-              ]}
-            />
-            
-            <FeaturedServiceCard
-              title="Micro SaaS Solutions"
-              description="Scalable software-as-a-service applications designed for rapid deployment and growth."
-              icon="⚡"
-              href="/services/micro-saas"
-              features={[
-                "Rapid Development",
-                "Scalable Architecture",
-                "Cloud-Native Design",
-                "API-First Approach"
-              ]}
-            />
-            
-            <FeaturedServiceCard
-              title="IT Services & Solutions"
-              description="Comprehensive IT infrastructure, cloud migration, and DevOps services."
-              icon="☁️"
-              href="/services/it-services"
-              features={[
-                "Cloud Migration",
-                "DevOps & SRE",
-                "Infrastructure Management",
-                "Security & Compliance"
-              ]}
-            />
+            <div className="text-left"></div>
+              <Link
+                href="/services"
+                className="text-left">
+                Explore Our Services
+              </Link>
+              <a
+                href="tel:+13024640950"
+                className="text-left"></a>
+                Call +1 302 464 0950
+              </a>
+            </div>
+            <div className="text-left"></div>
+              <div></div>
+                <div className="text-left">500+</div>"
+                <div className="text-left">Projects Delivered</div>"
+              </div>
+              <div></div>
+                <div className="text-left">99.9%</div>"
+                <div className="text-left">Uptime Guarantee</div>"
+              </div>
+              <div></div>
+                <div className="text-left">24/7</div>"
+                <div className="text-left">Expert Support</div>"
+              </div>
+              <div></div>
+                <div className="text-left">$2M+</div>"
+                <div className="text-left">Cost Savings</div>"
+              </div>
+            </div>
           </div>
         </section>
 
-      {/* Success Stories */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Success Stories
+        {/* Interactive AI ROI Calculator */}
+        <InteractiveAIROICalculator />
+
+        {/* Dynamic Content Showcase */}
+        <ContentShowcase />
+
+        {/* Interactive Content Showcase 2026 */}
+        <InteractiveContentShowcase2026 />
+
+        {/* Enhanced Newsletter Signup */}
+        <section className="text-left"></section>
+          <div className="text-left"></div>
+            <div className="text-left"></div>
+              {/* Newsletter Signup */}</div>
+              <div className="text-left"></div>
+                <h2 className="text-left">
+                  Stay Ahead with AI & Tech Insights
+                </h2>
+                <p className="text-left"></p>
+                  Get weekly updates on AI trends, tech innovations, and exclusive service offers
+                </p>
+                <div className="text-left"></div>
+                  <input
+                    type="email"
+                    placeholder="Enter your email"
+                    className="text-left"
+                  />
+                  <button className="text-left">
+                    Subscribe
+                  </button>
+                </div>
+                <p className="text-left"></p>
+                  Join 10,000+ professionals. Unsubscribe anytime.
+                </p>
+              </div>
+
+              {/* Content Highlights */}
+              <div className="text-left"></div>
+                <h3 className="text-left">Latest Content Highlights</h3>"
+                <div className="text-left"></div>
+                  <a href="/blog/ai-2026-enterprise-rag-guardrails" className="text-left"></a>
+                    <div className="text-left">🛡️</div>"
+                    <div></div>
+                      <h4 className="text-left">Enterprise RAG Guardrails 2026</h4>"
+                      <p className="text-left">Safe, reliable RAG with verifiable citations</p>"
+                    </div>
+                  </a>
+                  <a href="/blog/ai-2026-autonomous-enterprise-operations" className="text-left"></a>
+                    <div className="text-left">🏭</div>"
+                    <div></div>
+                      <h4 className="text-left">Autonomous Enterprise Operations 2026</h4>"
+                      <p className="text-left">90% efficiency, 300% ROI with guardrailed agents</p>"
+                    </div>
+                  </a>
+                  <a href="/blog/ai-cloud-cost-optimization-2025" className="text-left"></a>
+                    <div className="text-left">💸</div>"
+                    <div></div>
+                      <h4 className="text-left">AI Cloud Cost Optimization</h4>"
+                      <p className="text-left">Cut spend by 70–85% with smart routing</p>"
+                    </div>
+                  </a>
+                </div>
+                <div className="text-left"></div>
+                  <Link
+                    href="/blog"
+                    className="text-left">
+                    View All Content →
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="text-left"></section>
+          <div className="text-left"></div>
+            <h2 className="text-left">
+              Ready to Transform Your Business?
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Real results from our enterprise clients
+            <p className="text-left"></p>
+              Let's discuss how our AI and IT solutions can drive your success
             </p>
+            <div className="text-left"></div>
+              <a
+                href="tel:+13024640950"
+                className="text-left"></a>
+                Call +1 302 464 0950
+              </a>
+              <a
+                href="mailto:kleber@ziontechgroup.com"
+                className="text-left"></a>
+                Get Free Consultation
+              </a>
+            </div>
+            <div className="text-left"></div>
+              <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
+              <p>📧 kleber@ziontechgroup.com | 📞 +1 302 464 0950</p>
+            </div>
           </div>
-          
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <SuccessStory
-              title="Fortune 500 Manufacturing Transformation"
-              description="Implemented AI-powered predictive maintenance reducing downtime by 40% and saving $25M annually."
-              metrics={[
-                { label: "Downtime Reduction", value: "40%" },
-                { label: "Annual Savings", value: "$25M" },
-                { label: "ROI", value: "350%" }
-              ]}
-              industry="Manufacturing"
-            />
-            
-            <SuccessStory
-              title="Healthcare AI Platform Deployment"
-              description="Deployed comprehensive AI platform improving patient outcomes and operational efficiency."
-              metrics={[
-                { label: "Patient Satisfaction", value: "95%" },
-                { label: "Processing Speed", value: "3x Faster" },
-                { label: "Cost Reduction", value: "30%" }
-              ]}
-              industry="Healthcare"
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* Content Showcase */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <ContentShowcase />
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-blue-600">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Ready to Transform Your Business?
-          </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Join hundreds of enterprises already leveraging our AI and technology solutions.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/contact" 
-              className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-            >
-              Start Your Project
-            </Link>
-            <Link 
-              href="/case-studies" 
-              className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-            >
-              View Case Studies
-            </Link>
-          </div>
-        </div>
-      </section>
-    </div>
+        </section>
+      </div>
+    </>
   );
-}
+})

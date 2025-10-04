@@ -5,9 +5,6 @@
 ;
   return (<div>;
       <Head></Head>;<meta name="description" content="ApiDevelopmentChat service" />;"
-
-
-
 }
 return (;
 
@@ -16,13 +13,7 @@ return (;
       <Head>;
         <title > ApiDevelopmentChat - Zion Tech Solutions</title>;
         <meta name="description" content="ApiDevelopmentChat service" />{" "}"
-
-
   return (<div>;
       <Head>;
         <title>ApiDevelopmentChat - Zion Tech Solutions</title>;
         <meta name="description" content="ApiDevelopmentChat service" />{" "}"
-
-
-
-

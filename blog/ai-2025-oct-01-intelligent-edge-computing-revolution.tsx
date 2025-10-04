@@ -11,14 +11,18 @@ export const metadata = {
 
 export default function BlogPost() {
   return (
-    <article className="prose prose-invert max-w-none">
+    <div>/* content */}
+  return (
+    <div>
+      <div></div>
+    <article className="text-left"></a>
       <h1>⚡ Intelligent Edge Computing Revolution (2025): Real-Time AI at Scale</h1>
 
-      <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 border border-cyan-500/30 rounded-lg p-6 my-8">
-        <h3 className="text-2xl font-bold text-cyan-300 mt-0">🚀 Executive Overview</h3>
-        <p className="text-lg">
-          Deploy <strong>autonomous edge AI</strong> for sub-<span className="text-green-400 font-bold">5ms latency</span>,
-          <span className="text-green-400 font-bold"> 99.99% uptime</span>, and <span className="text-green-400 font-bold">90% cost reduction</span>.
+      <div className="text-left"></div>
+        <h3 className="text-left">🚀 Executive Overview</h3>
+        <p className="text-left"></p>
+          Deploy <strong>autonomous edge AI</strong> for sub-<span className="text-left">5ms latency<,
+          <span className="text-left"> 99.99% uptime<, and <span className="text-left">90% cost reduction<.
           This guide outlines a proven architecture, rollout plan, and ROI model for 2025.
         </p>
       </div>
@@ -61,16 +65,17 @@ export default function BlogPost() {
       </ol>
 
       <h2>💰 ROI Model</h2>
-      <p>
+      <p></p>
         Typical programs see <strong>4–12 month payback</strong> and multi-million annual savings from
         bandwidth, cloud egress, and defect reduction.
       </p>
 
-      <div className="bg-gradient-to-r from-emerald-600/20 to-green-600/20 border border-emerald-500/30 rounded-lg p-6 my-8">
-        <h3 className="text-2xl font-bold text-emerald-300 mt-0">Ready to launch?</h3>
-        <p className="text-lg">Our edge AI blueprint accelerates pilots to production with enterprise guardrails.</p>
+      <div className="text-left"></div>
+        <h3 className="text-left">Ready to launch?</h3>
+        <p className="text-left">Our edge AI blueprint accelerates pilots to production with enterprise guardrails.</p>
       </div>
     </article>
   );
 }
 
+)

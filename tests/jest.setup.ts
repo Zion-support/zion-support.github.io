@@ -5,11 +5,11 @@ import '@testing-library/jest-dom';
 // Node provides them under 'util'
 import { TextEncoder, TextDecoder } from 'util';
 
-if (!(global as any).TextEncoder) {
+if (!(global as any).TextEncoder) {/* content */}
   (global as any).TextEncoder = TextEncoder;
 }
 
-if (!(global as any).TextDecoder) {
+if (!(global as any).TextDecoder) {/* content */}
   (global as any).TextDecoder = TextDecoder as unknown as typeof window.TextDecoder;
 }
 

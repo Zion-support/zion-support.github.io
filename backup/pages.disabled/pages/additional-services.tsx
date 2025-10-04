@@ -8,13 +8,13 @@ export default function Index() {
         <title>index | Zion Tech Group</title>
         <meta name="description" content="index page" />
       </Head>
-      <div className="min-h-screen bg-gray-50 py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-gray-900 mb-6">
+      <div className="text-left">
+        <div className="text-left">
+          <div className="text-left">
+            <h1 className="text-left">
               index
             </h1>
-            <p className="text-xl text-gray-600">
+            <p className="text-left">
               This is the index page.
             </p>
           </div>

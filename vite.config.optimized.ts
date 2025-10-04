@@ -1,131 +1,43 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import { resolve } from 'path'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import { visualizer } from 'rollup-plugin-visualizer';
 
-// Optimized Vite configuration for better performance and smaller bundle size
 export default defineConfig({
   plugins: [
-    react({
-      jsxRuntime: 'automatic',
+    react(),
+    visualizer({
+      filename: './dist/stats.html',
+      open: false,
+      gzipSize: true,
+      brotliSize: true,
     }),
   ],
-  resolve: {
-    alias: {
-      '@': resolve(__dirname, 'src'),
-      '@components': resolve(__dirname, 'components'),
-      '@app': resolve(__dirname, 'app'),
-    },
-  },
   build: {
-    sourcemap: false,
+    target: 'es2015',
     minify: 'terser',
-    cssMinify: true,
+    sourcemap: false,
     rollupOptions: {
-      input: {
-        main: './index.html'
-      },
-      treeshake: {
-        moduleSideEffects: false,
-        propertyReadSideEffects: false,
-        tryCatchDeoptimization: false,
-        preset: 'smallest'
-      },
       output: {
-        // Simplified chunk splitting for better caching
-        manualChunks: (id) => {
-          if (id.includes('node_modules')) {
-            // Group React-related packages
-            if (id.includes('react') || id.includes('react-dom')) {
-              return 'vendor-react';
-            }
-            // Group UI libraries
-            if (id.includes('framer-motion') || id.includes('lucide-react')) {
-              return 'vendor-ui';
-            }
-            // Group utility libraries
-            if (id.includes('clsx') || id.includes('tailwind-merge') || id.includes('axios')) {
-              return 'vendor-utils';
-            }
-            // All other vendor packages
-            return 'vendor';
-          }
-          // App code chunks
-          if (id.includes('components/')) {
-            return 'components';
-          }
-          if (id.includes('app/')) {
-            return 'app';
-          }
-          return 'main';
-        },
-        chunkFileNames: 'assets/js/[name]-[hash].js',
-        entryFileNames: 'assets/js/main-[hash].js',
-        assetFileNames: (assetInfo) => {
-          const info = assetInfo.name.split('.');
-          const ext = info[info.length - 1];
-          if (/\.(css)$/.test(assetInfo.name)) {
-            return `assets/css/[name]-[hash].${ext}`;
-          }
-          return `assets/[name]-[hash].${ext}`;
+        manualChunks: {
+          'react-vendor': ['react', 'react-dom', 'react-router-dom'],
+          'ui-vendor': ['lucide-react', 'framer-motion'],
+          'blog-content': [
+            './blog/ai-autonomous-threat-response-2025',
+            './blog/ai-prompt-engineering-mastery-2025',
+            './blog/ai-synthetic-data-generation-2025',
+          ],
         },
       },
     },
-    // Optimize chunk size
-    chunkSizeWarningLimit: 500,
-    terserOptions: {
-      compress: {
+    terserOptions: {/* content */}
+      compress: {/* content */}
         drop_console: true,
         drop_debugger: true,
-        pure_funcs: ['console.log', 'console.info', 'console.debug'],
-        passes: 2,
-        unsafe: false,
-        dead_code: true,
-        unused: true,
-      },
-      mangle: {
-        safari10: true,
-        toplevel: true,
-      },
-      format: {
-        comments: false,
-        ascii_only: true,
       },
     },
+    chunkSizeWarningLimit: 1000,
   },
-  server: {
-    port: 3000,
-    open: true,
-    cors: true,
-    host: true,
+  optimizeDeps: {/* content */}
+    include: ['react', 'react-dom', 'react-router-dom'],
   },
-  preview: {
-    port: 3000,
-    open: true,
-    cors: true,
-    host: true,
-  },
-  optimizeDeps: {
-    include: [
-      'react',
-      'react-dom',
-      'react-router-dom',
-      'framer-motion',
-      'lucide-react',
-      'clsx',
-      'tailwind-merge',
-      'axios',
-    ],
-    exclude: ['@vite/client', '@vite/env'],
-  },
-  define: {
-    global: 'globalThis',
-  },
-  esbuild: {
-    target: 'es2020',
-    format: 'esm',
-    treeShaking: true,
-    minifyIdentifiers: true,
-    minifySyntax: true,
-    minifyWhitespace: true,
-  },
-})
+});

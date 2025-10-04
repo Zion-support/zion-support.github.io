@@ -1,26 +1,27 @@
-// @ts-nocheck
 import React from "react";
+import { Helmet } from "react-helmet-async";
 
 export default function ConsentlessFeatureFlagsV4(): React.JSX.Element {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+    <>
       <Helmet>
-        <title>Consentless Feature Flags v4 — Private Global Rollouts</title>
-        <meta name="description" content="Scoped IDs, signed configs, and on‑device metrics for zero‑PII progressive delivery worldwide." />
+        <title>Edge 2025: Consentless Feature Flags v4</title>
+        <meta name="description" content="Advanced feature flag implementation without user consent requirements." />
         <link rel="canonical" href="https://ziontechgroup.com/blog/edge-2025-oct-01-consentless-feature-flags-v4" />
       </Helmet>
 
-      <div className="container mx-auto px-6 py-16">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">Consentless Feature Flags v4</h1>
-        <p className="text-zion-slate-light mb-8">Private rollouts at &lt;100ms with scoped IDs, signed configs, and on‑device metrics.</p>
-        <div className="prose prose-invert max-w-3xl">
-          <p>
-            Deliver global, privacy‑preserving rollouts by segment, geo, and SLA. Use attestations,
-            DP‑hardened telemetry, and budgeted actions to keep velocity high without PII.
-          </p>
+      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+        <div className="container mx-auto px-6 py-16">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">Edge 2025: Consentless Feature Flags v4</h1>
+          <p className="text-zion-slate-light mb-8">Implement feature flags without compromising user privacy or requiring explicit consent.</p>
+          <div className="prose prose-invert max-w-3xl">
+            <p>
+              Deploy feature flags at scale while maintaining user privacy and regulatory compliance.
+              Our v4 implementation provides seamless feature management without consent barriers.
+            </p>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
-

@@ -52,17 +52,17 @@ export function AIEnhancementButton({;
       disabled={isEnhancing}
     >;
       {isEnhancing ? (;
-        <Loader2 className="h-3 w-3 animate-spin" />;
+        <Loader2 className="text-left" />;
       ) :(;
-        <Sparkles className="h-3 w-3" />;
+        <Sparkles className="text-left" />;
       )}
-      <span className="text-xs">{buttonText}</span>;
+      <span className="text-left">{buttonText}<;
     </Button>;
   ),;}
  currentContent;
 enhancementType;
 context);
-) : (<Sparkles className="h-3 w-3" />) ;
+) : (<Sparkles className="text-left" />) ;
 :temp_broken_files/resume-builder/forms/AIEnhancementButton.tsx
 }</Button>) ;"}"
 }</Button>) ;

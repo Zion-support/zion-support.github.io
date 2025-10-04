@@ -1,16 +1,13 @@
 
-export interface EmergingTechService {
-
+export interface EmergingTechService 
 export interface EmergingTechService {;
 
 import { ServiceVariant } from '../types/service-variants';
 
-export interface EmergingTechService {
-
+export interface EmergingTechService 
 export interface EmergingTechService {;
 
-export interface EmergingTechService {
-
+export interface EmergingTechService 
   id: string;
   name: string;
   tagline: string;
@@ -37,7 +34,7 @@ export interface EmergingTechService {
   market_size: string;
   growth_rate: string;
   variant: string;
-  contact_info: {
+  contact_info: 
     mobile: string;
     email: string;
     address: string;
@@ -45,8 +42,7 @@ export interface EmergingTechService {
     website: string;
   }
 
-  {
-
+  
       'Virtual experiences, Gaming, Education, Social interaction, Entertainment',
     ],
     roi: 'Metaverse companies report 1000x improvement in graphics quality and 500% increase in user engagement.',
@@ -55,8 +51,7 @@ export interface EmergingTechService {
     market_size: '$35.5B quantum metaverse market',
     growth_rate: '85% annual growth',
     variant: 'quantum - metaverse - enterprise',
-    contact_info: {
-
+    contact_info: 
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -86,7 +81,7 @@ export interface EmergingTechService {
 
     reviews: 11
 
-export interface EmergingTechService2025 {
+export interface EmergingTechService2025 
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -100,8 +95,7 @@ export interface EmergingTechService2025 {
   useCases: string[], roi: string,
   competitors: string[], marketSize: string,
   growthRate: string, variant: string,
-  contactInfo: {
-      
+  contactInfo: 
     mobile: string, email: string,
     address: string,
     website: string
@@ -116,8 +110,7 @@ export interface EmergingTechService2025 {
 
 export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
   // Space Mining Platform
-  {
-
+  
     id: 'space-mining-platform', name: 'Space Mining Platform',
     tagline: 'Revolutionary asteroid mining and space resource extraction',
     price: '$5,999',
@@ -140,8 +133,7 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     competitors: ['NASA, ESA, SpaceX, Blue Origin, Planetary Resources'];
     marketSize: '$3.5B space mining market', growthRate: '800% annual growth',
     variant: 'space-mining-enterprise',
-    contactInfo: {
-      
+    contactInfo: 
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -156,7 +148,7 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
   };
 
   // Quantum Bio-Computing Platform
-  {
+  
     id: 'quantum-bio-computing', name: 'Quantum Bio-Computing Platform',
     tagline: 'Revolutionary computing that combines quantum mechanics with biological systems',
     price: '$3,999',
@@ -177,8 +169,7 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     competitors: ['IBM Quantum, Google Quantum, D-Wave, Biological computing companies'];
     marketSize: '$8.5B quantum bio-computing market', growthRate: '600% annual growth',
     variant: 'quantum-bio-enterprise',
-    contactInfo: {
-      
+    contactInfo: 
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
@@ -192,7 +183,7 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
   };
 
   // Brain-Computer Interface Platform
-  {
+  
     id: 'brain-computer-interface', name: 'Brain-Computer Interface Platform',
     tagline: 'Direct neural interface for human-computer interaction',
     price: '$2,999',
@@ -213,8 +204,7 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     competitors: ['Neuralink, Kernel, CTRL-labs, OpenBCI'];
     marketSize: '$1.5B BCI market', growthRate: '300% annual growth',
     variant: 'bci-enterprise',
-    contactInfo: {
-      
+    contactInfo: 
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
@@ -228,7 +218,7 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
   };
 
   // Quantum Energy Platform
-  {
+  
     id: 'quantum-energy-platform', name: 'Quantum Energy Platform',
     tagline: 'Revolutionary energy solutions powered by quantum technology',
     price: '$4,999',
@@ -250,8 +240,7 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     competitors: ['Energy consulting firms, Energy management platforms, Grid optimization tools'];
     marketSize: '$25B quantum energy market', growthRate: '400% annual growth',
     variant: 'quantum-energy-enterprise',
-    contactInfo: {
-      
+    contactInfo: 
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
@@ -265,7 +254,7 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
   };
 
   // Autonomous Vehicle AI Platform
-  {
+  
     id: 'autonomous-vehicle-ai', name: 'Autonomous Vehicle AI Platform',
     tagline: 'Advanced AI systems for autonomous vehicle operation',
     price: '$1,999',
@@ -287,8 +276,7 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     competitors: ['Waymo, Tesla, Cruise, Aurora, Argo AI'];
     marketSize: '$65B autonomous vehicle market', growthRate: '56% annual growth',
     variant: 'autonomous-vehicle-enterprise',
-    contactInfo: {
-      
+    contactInfo: 
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
@@ -302,7 +290,7 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
   };
 
   // Quantum Materials Discovery Platform
-  {
+  
     id: 'quantum-materials-discovery', name: 'Quantum Materials Discovery Platform',
     tagline: 'Accelerate materials science with quantum computing',
     price: '$3,499',
@@ -323,8 +311,7 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     competitors: ['Materials consulting firms, Simulation platforms, Research tools'];
     marketSize: '$18B quantum materials market', growthRate: '500% annual growth',
     variant: 'quantum-materials-enterprise',
-    contactInfo: {
-      
+    contactInfo: 
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
@@ -338,7 +325,7 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
   };
 
   // Quantum Robotics Platform
-  {
+  
     id: 'quantum-robotics', name: 'Quantum Robotics Platform',
     tagline: 'Next-generation robotics powered by quantum computing',
     price: '$2,499',
@@ -360,8 +347,7 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     competitors: ['ABB Robotics, KUKA, FANUC, Universal Robots, Boston Dynamics'];
     marketSize: '$45B quantum robotics market', growthRate: '350% annual growth',
     variant: 'quantum-robotics-enterprise',
-    contactInfo: {
-      
+    contactInfo: 
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
@@ -375,7 +361,7 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
   };
 
   // Quantum Internet Security Platform
-  {
+  
     id: 'quantum-internet-security', name: 'Quantum Internet Security Platform',
     tagline: 'Unbreakable internet security with quantum technology',
     price: '$1,899',
@@ -396,8 +382,7 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     competitors: ['Traditional cybersecurity, Encryption tools, Security platforms'];
     marketSize: '$22B quantum internet market', growthRate: '450% annual growth',
     variant: 'quantum-internet-enterprise',
-    contactInfo: {
-      
+    contactInfo: 
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
@@ -411,7 +396,7 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
   };
 
   // Quantum Logistics Platform
-  {
+  
     id: 'quantum-logistics-optimization', name: 'Quantum Logistics Platform',
     tagline: 'Optimize supply chains with quantum computing power',
     price: '$1,299',
@@ -433,8 +418,7 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     competitors: ['Logistics platforms, Optimization tools, Supply chain management systems'];
     marketSize: '$15B quantum logistics market', growthRate: '380% annual growth',
     variant: 'quantum-logistics-enterprise',
-    contactInfo: {
-      
+    contactInfo: 
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
@@ -448,7 +432,7 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
   };
 
   // Metaverse AI Development Platform
-  {
+  
     id: 'metaverse-ai-development', name: 'Metaverse AI Development Platform',
     tagline: 'Build intelligent metaverse experiences with AI', price: '$799',
     period: '/month',
@@ -469,8 +453,7 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     competitors: ['Roblox, Unity, Unreal Engine, Meta, Decentraland'];
     marketSize: '$12B metaverse AI market', growthRate: '280% annual growth',
     variant: 'metaverse-ai-enterprise',
-    contactInfo: {
-      
+    contactInfo: 
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
@@ -484,7 +467,7 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
   };
 
   // Quantum Machine Learning Platform
-  {
+  
     id: 'quantum-machine-learning-platform', name: 'Quantum Machine Learning Platform',
     tagline: 'Unlock quantum advantage in machine learning',
     price: '$1,299',
@@ -505,8 +488,7 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     competitors: ['IBM Quantum, Google Quantum AI, AWS Braket, Azure Quantum'];
     marketSize: '$8.9B quantum computing market', growthRate: '45% annual growth',
     variant: 'quantum-ml-enterprise',
-    contactInfo: {
-      
+    contactInfo: 
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
@@ -519,7 +501,7 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
   };
 
   // Neuromorphic Computing Platform
-  {
+  
     id: 'neuromorphic-computing-platform', name: 'Neuromorphic Computing Platform',
     tagline: 'Brain-inspired computing for the future', price: '$899',
     period: '/month',
@@ -540,8 +522,7 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     competitors: ['Intel Loihi, BrainChip, IBM TrueNorth, SpiNNaker'];
     marketSize: '$6.8B neuromorphic computing market', growthRate: '38% annual growth',
     variant: 'neuromorphic-enterprise',
-    contactInfo: {
-      
+    contactInfo: 
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
@@ -554,7 +535,7 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
   };
 
   // Synthetic Biology Platform
-  {
+  
     id: 'synthetic-biology-platform', name: 'Synthetic Biology Platform',
     tagline: 'Design and engineer biological systems',
     price: '$1,199',
@@ -576,8 +557,7 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     competitors: ['Benchling, SnapGene, Geneious, Vector NTI'];
     marketSize: '$13.8B synthetic biology market', growthRate: '42% annual growth',
     variant: 'synthetic-biology-enterprise',
-    contactInfo: {
-      
+    contactInfo: 
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
@@ -590,7 +570,7 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
   };
 
   // Space Resource Mining Platform
-  {
+  
     id: 'quantum-metaverse-platform', name: 'Quantum Metaverse Platform',
     tagline: 'Experience the metaverse with quantum-enhanced capabilities', price: '$999',
     period: '/month',
@@ -610,8 +590,7 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     roi: 'Metaverse companies report 1000x improvement in graphics quality and 500% increase in user engagement.', competitors: ['No direct competitors - first quantum metaverse platform'],
     marketSize: '$35.5B quantum metaverse market', growthRate: '85% annual growth',
     variant: 'quantum-metaverse-enterprise',
-    contactInfo: {
-      
+    contactInfo: 
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'

@@ -5,28 +5,26 @@
     expect(screen.getByText('
   'Test Content')).toBeInTheDocument()})
   it('
-  'applies accessibility props correctly', () => {
-
-
+  'applies accessibility props correctly', () => 
         tabIndex={0}
       >
-        <span>Button: Text</span>
+        <span>Button: Text<
       </AccessibilityEnhancer>
 
   'tabindex''0')})
   it('
-  'handles keyboard events correctly', () => {
+  'handles keyboard events correctly', () => 
     const handleClick = vi.fn();
     render('
       <AccessibilityEnhancer role='button' onClick={handleClick} tabIndex={0}>
 
-        <span>Clickable Element</span>
+        <span>Clickable Element<
       </AccessibilityEnhancer>
     );
 
     expect(handleClick).toHaveBeenCalledTimes(2)})
   it('
-  'applies focus styles when focusable', () => {
+  'applies focus styles when focusable', () => 
     render(
       <AccessibilityEnhancer'
         role='button';
@@ -40,13 +38,13 @@
         tabIndex={0}
 
 
-        <span>Focusable Element</span>
+        <span>Focusable Element<
       </AccessibilityEnhancer>
 
 
-,
+
   focus: ring-,2,
-,
+
 
     const element = screen.getByRole('button');
     expect(element).toHaveClass(
@@ -56,12 +54,11 @@
     )});
 
 
-  it('disables focus when not focusable', () => {
-
+  it('disables focus when not focusable', () => 
     render(
       <AccessibilityEnhancer role="button" tabIndex={-1}>
 
-        <span>Non-focusable Element</span>
+        <span>Non-focusable Element<
 
       </AccessibilityEnhancer>
 

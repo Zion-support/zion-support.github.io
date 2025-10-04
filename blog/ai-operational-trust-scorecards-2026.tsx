@@ -8,9 +8,13 @@ export const metadata = {
 
 export default function BlogPost() {
   return (
-    <article className="prose prose-invert max-w-none">
+    <div>/* content */}
+  return (
+    <div>
+      <div></div>
+    <article className="text-left"></a>
       <h1>AI Operational Trust Scorecards 2026</h1>
-      <p>
+      <p></p>
         Establish measurable guardrails for autonomous and agentic systems by mapping
         service-level indicators (SLIs) to business KPIs. Use budget policies and
         error budgets to gate risky changes and enable rapid, safe rollout.
@@ -27,10 +31,10 @@ export default function BlogPost() {
         <li>Cost-per-resolution and latency budgets</li>
         <li>Task success and safety intervention rate</li>
       </ul>
-      <p>
+      <p></p>
         Start with a minimal scorecard, wire metrics into CI, and fail release candidates
         that exceed budget thresholds.
       </p>
     </article>
   );
-}
+})

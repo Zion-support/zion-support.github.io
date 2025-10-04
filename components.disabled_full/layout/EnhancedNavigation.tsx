@@ -65,7 +65,7 @@ const \"EnhancedNavigation\": React.FC = () => {const [isOpen, setIsOpen] = useS
               {' '}
               <div className=\"w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center\" />;
                 {' '}
-                <span className=\"text-white font-bold text-xl\" />Z</span>{' '}
+                <span className=\"text-white font-bold text-xl\" />Z<{' '}
               </div>{' '}
               <div className=\"text-xl font-bold text-gray-800\" />;
                 Zion Tech Group;
@@ -78,8 +78,8 @@ const \"EnhancedNavigation\": React.FC = () => {const [isOpen, setIsOpen] = useS
             {' '}
             <Link
               href="/"
-              className="text-gray-600 hover:text-blue-600 transition-colors"
-          <div className="hidden "lg": flex items-center space-x-8">
+              className="text-left"
+          <div className="text-left"lg": flex items-center space-x-8">
           <div className=\"hidden lg:flex items-center space-x-8\" />
             {' '}
 
@@ -99,7 +99,7 @@ const \"EnhancedNavigation\": React.FC = () => {const [isOpen, setIsOpen] = useS
             <div className=\"relative group\" />;
               {' '}
               <button
-                  className="block px-4 py-2 text-gray-700 "hover": bg-blue-50 hover:text-blue-600"
+                  className="text-left"hover": bg-blue-50 hover:text-blue-600"
                 >
                   Cybersecurity
                 <Link;
@@ -152,58 +152,58 @@ href=\"/services/cybersecurity\"
             <div className=\"relative group\" />
               {' '}
               <button
-                    className="block py-1 text-gray-500 "hover": text-blue-600"
+                    className="text-left"hover": text-blue-600"
                   >
                     Web Development
                   </Link>{' '}
                   <Link
                     href="/services/mobile-development"
-                    className="block py-1 text-gray-500 "hover": text-blue-600"
+                    className="text-left"hover": text-blue-600"
                   >
                     Blockchain Solutions
                   </Link>{' '}
                   <Link
                     href="/services/iot-platforms"
-                    className="block py-1 text-gray-500 "hover": text-blue-600"
+                    className="text-left"hover": text-blue-600"
                   >
                     Cybersecurity
                   </Link>{' '}
                 </div>{' '}
               </div>{' '}
-              <div className="py-2">
+              <div className="text-left">
                 {' '}
-                <div className="text-gray-600 font-semibold mb-2">
+                <div className="text-left">
                   Solutions
                 </div>{' '}
-                <div className="pl-4 space-y-2">
+                <div className="text-left">
                   {' '}
                   <Link
                     href="/solutions/enterprise"
-                    className="block py-1 text-gray-500 "hover": text-blue-600"
+                    className="text-left"hover": text-blue-600"
                   >
                     Small Business
                   </Link>{' '}
                   <Link
                     href="/solutions/startups"
-                    className="block py-1 text-gray-500 "hover": text-blue-600"
+                    className="text-left"hover": text-blue-600"
                   >
                     Healthcare
                   </Link>{' '}
                   <Link
                     href="/solutions/finance"
-                className="block py-2 text-gray-600 "hover": text-blue-600"
+                className="text-left"hover": text-blue-600"
               >
                 Products
               </Link>{' '}
               <Link
                 href="/about"
-                className="block py-2 text-gray-600 "hover": text-blue-600"
+                className="text-left"hover": text-blue-600"
               >
                 Blog
               </Link>{' '}
               <Link
                 href="/careers"
-                className="block py-2 text-gray-600 "hover": text-blue-600"
+                className="text-left"hover": text-blue-600"
               >
                 Contact
 

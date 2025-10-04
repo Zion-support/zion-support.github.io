@@ -6,7 +6,7 @@
   ]{ name:,
 
               <Bell className='h-6 w-6'  />'
-              <span className='absolute top-0 right-0 w-2 h-2 bg-red-500 rounded-full'></span>'
+              <span className='absolute top-0 right-0 w-2 h-2 bg-red-500 rounded-full'><'
             </button>''
             <button className='p-2 text-zion-slate-light hove,
     r:text-white transition-colors>'
@@ -83,7 +83,7 @@ import {
                 <span className={`text-sm font-medium ${`
 ';
                   stat.changeType === 'positive' ? 'text-green-400' : 'text-red-400'`}`}>{stat.change}
-                </span>`
+                <`
               </div>''
               <h3 className='text-2xl font-bold text-white mb-1'>{stat.value}</h3>''
               <p className='text-zion-slate-light text-sm'>{stat.title}</p>''
@@ -108,8 +108,8 @@ import {
   positive;`
   ' ? 'text-green-600;
   ': 'text-red-600`}`}>`
-                    <span>{stat.change}</span>''
-                    <span className='ml-1'>from last month</span>
+                    <span>{stat.change}<''
+                    <span className='ml-1'>from last month<
                   </div>'
                 </div>``
                 <div className={`p-3 rounded-lg bg-gradient-to-r ${stat.color}`}>''
@@ -134,7 +134,7 @@ import {
             </div>
 
                           {event.type}
-                        </span>
+                        <
                       </div>
                     </div>
                   </motion.div>

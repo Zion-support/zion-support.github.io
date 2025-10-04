@@ -40,7 +40,7 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
   ': 'Organization,            name:,
   Zion Tech Group', url: 'http,
     s://ziontechgroup.com,
-,
+
   logo: 'http,
     s://ziontechgroup.com/logo.png, description: description,            address: {
   '@type;
@@ -51,7 +51,7 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
   ': 'ContactPoint,              telephone:,
   +1-555-ZION-TECH', contactType: 'customer service,
 
-,
+
   'https: //linkedin.com/company/zion-tech-group, ,
   https: //github.com/zion-tech-group ]})}}      /></Head>
   )}

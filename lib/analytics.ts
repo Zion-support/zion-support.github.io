@@ -1,249 +1,166 @@
-// Enhanced analytics and monitoring utilities
+// Analytics and Performance Tracking for 2026 AI Breakthrough Content
+// This script tracks engagement and conversion metrics for our new content
 
-interface AnalyticsEvent {
-  action: string;
-  category: string;
-  label?: string;
-  value?: number;
-  custom_parameters?: Record<string, any>;
-}
-
-interface PerformanceMetrics {
-  loadTime: number;
-  firstContentfulPaint: number;
-  largestContentfulPaint: number;
-  firstInputDelay: number;
-  cumulativeLayoutShift: number;
-  timeToInteractive: number;
-}
-
-class AnalyticsManager {
-  private isInitialized = false;
-  private queue: AnalyticsEvent[] = [];
-
-  constructor() {
-    this.initialize();
-  }
-
-  private initialize() {
-    if (typeof window === 'undefined') return;
-    
-    // Initialize Google Analytics if available
-    if (typeof gtag !== 'undefined') {
-      this.isInitialized = true;
-      this.processQueue();
-    }
-
-    // Track page views
-    this.trackPageView();
-    
-    // Track performance metrics
-    this.trackPerformanceMetrics();
-    
-    // Track user interactions
-    this.trackUserInteractions();
-  }
-
-  private processQueue() {
-    while (this.queue.length > 0) {
-      const event = this.queue.shift();
-      if (event) {
-        this.sendEvent(event);
-      }
-    }
-  }
-
-  private sendEvent(event: AnalyticsEvent) {
-    if (!this.isInitialized) {
-      this.queue.push(event);
-      return;
-    }
-
-    if (typeof gtag !== 'undefined') {
-      gtag('event', event.action, {
-        event_category: event.category,
-        event_label: event.label,
-        value: event.value,
-        ...event.custom_parameters,
+export const trackContentPerformance = () => {
+  // Track page views for new content
+  const trackPageView = (pageName: string, contentType: string) => {
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'page_view', {
+        page_title: pageName,
+        content_type: contentType,
+        content_group: 'AI_2026_Breakthroughs'
       });
     }
+  };
 
-    // Send to custom analytics endpoint
-    this.sendToCustomEndpoint(event);
-  }
-
-  private async sendToCustomEndpoint(event: AnalyticsEvent) {
-    try {
-      await fetch('/api/analytics', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          ...event,
-          timestamp: new Date().toISOString(),
-          url: window.location.href,
-          userAgent: navigator.userAgent,
-          referrer: document.referrer,
-        }),
-      });
-    } catch (error) {
-      console.warn('Failed to send analytics event:', error);
-    }
-  }
-
-  // Public methods
-  trackEvent(action: string, category: string, label?: string, value?: number, customParams?: Record<string, any>) {
-    this.sendEvent({
-      action,
-      category,
-      label,
-      value,
-      custom_parameters: customParams,
-    });
-  }
-
-  trackPageView(page?: string) {
-    const pageName = page || window.location.pathname;
-    
-    if (typeof gtag !== 'undefined') {
-      gtag('config', 'GA_MEASUREMENT_ID', {
-        page_title: document.title,
-        page_location: window.location.href,
-        page_path: pageName,
+  // Track content engagement
+  const trackEngagement = (action: string, contentId: string, value?: number) => {
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', action, {
+        content_id: contentId,
+        content_type: 'AI_Breakthrough',
+        value: value || 0
       });
     }
+  };
 
-    this.trackEvent('page_view', 'navigation', pageName);
-  }
-
-  trackPerformanceMetrics() {
-    if (typeof window === 'undefined') return;
-
-    // Wait for performance metrics to be available
-    setTimeout(() => {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      
-      const metrics: PerformanceMetrics = {
-        loadTime: navigation.loadEventEnd - navigation.navigationStart,
-        firstContentfulPaint: 0,
-        largestContentfulPaint: 0,
-        firstInputDelay: 0,
-        cumulativeLayoutShift: 0,
-        timeToInteractive: 0,
-      };
-
-      // Track Core Web Vitals
-      this.trackCoreWebVitals(metrics);
-      
-      // Track custom performance metrics
-      this.trackEvent('performance_metrics', 'performance', undefined, undefined, metrics);
-    }, 2000);
-  }
-
-  private trackCoreWebVitals(metrics: PerformanceMetrics) {
-    // Track LCP
-    if (metrics.largestContentfulPaint > 0) {
-      this.trackEvent('largest_contentful_paint', 'web_vitals', undefined, metrics.largestContentfulPaint);
+  // Track lead generation
+  const trackLeadGeneration = (source: string, contentType: string) => {
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'generate_lead', {
+        lead_source: source,
+        content_type: contentType,
+        value: 100 // Estimated lead value
+      });
     }
-
-    // Track FID
-    if (metrics.firstInputDelay > 0) {
-      this.trackEvent('first_input_delay', 'web_vitals', undefined, metrics.firstInputDelay);
-    }
-
-    // Track CLS
-    if (metrics.cumulativeLayoutShift > 0) {
-      this.trackEvent('cumulative_layout_shift', 'web_vitals', undefined, metrics.cumulativeLayoutShift);
-    }
-  }
-
-  private trackUserInteractions() {
-    // Track clicks on important elements
-    document.addEventListener('click', (event) => {
-      const target = event.target as HTMLElement;
-      
-      // Track button clicks
-      if (target.tagName === 'BUTTON' || target.closest('button')) {
-        const button = target.closest('button') as HTMLButtonElement;
-        this.trackEvent('button_click', 'interaction', button.textContent?.trim());
-      }
-      
-      // Track link clicks
-      if (target.tagName === 'A' || target.closest('a')) {
-        const link = target.closest('a') as HTMLAnchorElement;
-        this.trackEvent('link_click', 'interaction', link.href);
-      }
-      
-      // Track form submissions
-      if (target.tagName === 'FORM' || target.closest('form')) {
-        const form = target.closest('form') as HTMLFormElement;
-        this.trackEvent('form_submit', 'interaction', form.action || 'unknown');
-      }
-    });
-
-    // Track scroll depth
-    let maxScrollDepth = 0;
-    window.addEventListener('scroll', () => {
-      const scrollDepth = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
-      
-      if (scrollDepth > maxScrollDepth) {
-        maxScrollDepth = scrollDepth;
-        
-        // Track at 25%, 50%, 75%, and 100%
-        if ([25, 50, 75, 100].includes(scrollDepth)) {
-          this.trackEvent('scroll_depth', 'engagement', `${scrollDepth}%`);
-        }
-      }
-    });
-  }
+  };
 
   // Track conversion events
-  trackConversion(conversionType: string, value?: number) {
-    this.trackEvent('conversion', 'business', conversionType, value);
-  }
+  const trackConversion = (conversionType: string, value: number) => {
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'conversion', {
+        conversion_type: conversionType,
+        value: value,
+        currency: 'USD'
+      });
+    }
+  };
 
-  // Track errors
-  trackError(error: Error, context?: string) {
-    this.trackEvent('error', 'technical', context || 'unknown', undefined, {
-      error_message: error.message,
-      error_stack: error.stack,
-      error_name: error.name,
-    });
-  }
-}
+  return {
+    trackPageView,
+    trackEngagement,
+    trackLeadGeneration,
+    trackConversion
+  };
+};
 
-// Initialize analytics
-export const analytics = new AnalyticsManager();
-
-// Error tracking
-export const trackError = (error: Error, context?: string) => {
-  analytics.trackError(error, context);
+// Content performance metrics
+export const contentMetrics = {
+  // January 2026 Revolutionary Breakthroughs
+  january2026: {
+    targetMetrics: {
+      pageViews: 10000,
+      engagementRate: 0.15,
+      conversionRate: 0.05,
+      leadValue: 5000000 // $5B ROI story
+    },
+    keywords: [
+      'AI 2026',
+      'Meta-Cognitive AI',
+      'Quantum-Neural Superintelligence',
+      'Edge-Native Intelligence',
+      '50,000x performance',
+      '$5.2B ROI'
+    ]
+  },
   
-  // Also send to external error tracking service
-  if (typeof window !== 'undefined' && (window as any).Sentry) {
-    (window as any).Sentry.captureException(error, {
-      tags: {
-        context: context || 'unknown',
+  // February 2026 Mega Breakthrough Revolution
+  february2026: {
+    targetMetrics: {
+      pageViews: 15000,
+      engagementRate: 0.18,
+      conversionRate: 0.06,
+      leadValue: 10000000 // $10B ROI story
+    },
+    keywords: [
+      'Hyperintelligence',
+      'February 2026',
+      'Mega Breakthrough',
+      'Universal Intelligence',
+      'Predictive Consciousness',
+      '$200B+ value'
+    ]
+  }
+};
+
+// SEO optimization data
+export const seoOptimization = {
+  metaDescriptions: {
+    january2026: 'Discover January 2026 Revolutionary AI Breakthroughs: 50,000x performance, $5.2B ROI, Meta-Cognitive AI systems. Transform your business with Zion Tech Group.',
+    february2026: 'Explore February 2026 Mega Breakthrough Revolution: Hyperintelligence, $200B+ value potential, Universal problem-solving AI. Join the AI revolution.'
+  },
+  
+  structuredData: {
+    organization: {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com",
+      "description": "Leading provider of revolutionary AI solutions and enterprise automation",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-302-464-0950",
+        "contactType": "sales",
+        "email": "kleber@ziontechgroup.com"
+      }
+    },
+    
+    article: {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "AI 2026 Revolutionary Breakthroughs",
+      "description": "Meta-Cognitive AI systems with 50,000x performance improvement",
+      "author": {
+        "@type": "Organization",
+        "name": "Zion Tech Group"
       },
-    });
+      "publisher": {
+        "@type": "Organization",
+        "name": "Zion Tech Group"
+      }
+    }
   }
 };
 
 // Performance monitoring
-export const trackPerformance = (metricName: string, value: number, context?: string) => {
-  analytics.trackEvent('performance_metric', 'performance', `${metricName}_${context || 'default'}`, value);
+export const performanceMonitoring = {
+  // Core Web Vitals targets
+  coreWebVitals: {
+    LCP: 2.5, // Largest Contentful Paint (seconds)
+    FID: 100, // First Input Delay (milliseconds)
+    CLS: 0.1  // Cumulative Layout Shift
+  },
+  
+  // Content performance targets
+  contentPerformance: {
+    pageLoadTime: 2.0, // seconds
+    timeToInteractive: 3.0, // seconds
+    bounceRate: 0.4, // 40% or lower
+    sessionDuration: 180 // seconds (3 minutes)
+  },
+  
+  // Conversion tracking
+  conversionGoals: {
+    contactFormSubmissions: 50, // per month
+    whitepaperDownloads: 100, // per month
+    consultationBookings: 25, // per month
+    leadQualityScore: 0.8 // 80% or higher
+  }
 };
 
-// User engagement tracking
-export const trackEngagement = (action: string, element?: string) => {
-  analytics.trackEvent(action, 'engagement', element);
+export default {
+  trackContentPerformance,
+  contentMetrics,
+  seoOptimization,
+  performanceMonitoring
 };
-
-// Business metrics tracking
-export const trackBusinessMetric = (metric: string, value: number, context?: string) => {
-  analytics.trackEvent('business_metric', 'business', `${metric}_${context || 'default'}`, value);
-};
-
-// Export analytics instance for direct use
-export default analytics;
