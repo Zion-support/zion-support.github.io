@@ -1,1 +1,1 @@
-// Compatibility, default, export so, imports, like "../componen, t, s/Latest2026ContentBann, e, r" wo, r, k"; export, default, function Latest2026ContentBann, e, r(pro, p, s: Reco, r, d<stri, n, g, unkno, w, n>): vo, i, d { retu, r, n <Latest2026ContentBannerNam, e, d {...pro, p, s} />; } ;
+// Compatibilitydefaultexport soimportslike "../components/Latest2026ContentBanner" work"; exportdefaultfunction Latest2026ContentBanne, r (prop, s: Recor, d<strin, gunknow, n>) : voi, d {retur, n <Latest2026ContentBannerName , d {...prop, s }/>; };

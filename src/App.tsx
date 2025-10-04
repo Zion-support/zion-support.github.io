@@ -94,6 +94,7 @@ const App = React.memo(function App(): React.JSX.Element {
   }, []);
 
   useEffect(() => {
+<<<<<<< HEAD
     try {
       if (enhancedSecurityManager && typeof (enhancedSecurityManager as SecurityManager).initialize === 'function') {
         (enhancedSecurityManager as SecurityManager).initialize?.();
@@ -149,6 +150,16 @@ const App = React.memo(function App(): React.JSX.Element {
       windowWithEnhancements.i18n = advancedI18n;
     } catch (error) {
       console.error('Error initializing enhancements:', error);
+=======
+    if (process.env.NODE_ENV === 'development') {
+      const handleKeyPress = (e: KeyboardEvent) => {
+        if (e.ctrlKey && e.shiftKey && e.key === 'P') {
+          togglePerformanceMonitor();
+        }
+      };
+      window.addEventListener('keydown', handleKeyPress);
+      return () => window.removeEventListener('keydown', handleKeyPress);
+>>>>>>> e01e43d0c93dff705d25015e1b19001d2377c295
     }
   }, []);
 
@@ -157,6 +168,7 @@ const App = React.memo(function App(): React.JSX.Element {
   }, []);
 
   return (
+<<<<<<< HEAD
     <EnhancedErrorBoundary>
       <SEOOptimizer title={seoDataForOptimizer.title} description={seoDataForOptimizer.description} canonicalUrl={seoDataForOptimizer.canonical} />
       <AdvancedAnalytics enableConversionTracking enablePerformanceTracking enableErrorTracking />
@@ -190,5 +202,65 @@ const App = React.memo(function App(): React.JSX.Element {
         <NotificationSystem notifications={notifications} onRemove={handleRemoveNotification} />
       </div>
     </EnhancedErrorBoundary>
+=======
+    <HelmetProvider>
+      <Router>
+        <div className="min-h-screen bg-gray-50">
+          <SEOHead />
+          <EnhancedErrorBoundary>
+            <Header />
+            <main className="flex-1">
+              <Suspense fallback={<LoadingSpinner />}>
+                <Routes>
+                  <Route path="/" element={<HomePage />} />
+                  <Route path="/about" element={<AboutPage />} />
+                  <Route path="/contact" element={<ContactPage />} />
+                  <Route path="/blog" element={<BlogPage />} />
+                  <Route path="/services" element={<ServicesPage />} />
+                  <Route path="/team" element={<TeamPage />} />
+                  <Route path="/privacy" element={<PrivacyPage />} />
+                  <Route path="/terms" element={<TermsPage />} />
+                </Routes>
+              </Suspense>
+            </main>
+            <Footer />
+            
+            {/* Performance Monitor Modal */}
+            {showPerformanceMonitor && (
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+                onClick={togglePerformanceMonitor}
+              >
+                <motion.div
+                  initial={{ scale: 0.9, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 1 }}
+                  exit={{ scale: 0.9, opacity: 0 }}
+                  className="bg-white rounded-lg p-6 max-w-2xl w-full mx-4"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  <div className="flex justify-between items-center mb-4">
+                    <h2 className="text-xl font-bold">Performance Monitor</h2>
+                    <button
+                      onClick={togglePerformanceMonitor}
+                      className="text-gray-500 hover:text-gray-700"
+                    >
+                      ✕
+                    </button>
+                  </div>
+                  <PerformanceMonitor />
+                </motion.div>
+              </motion.div>
+            )}
+            
+            {/* Performance Optimizer (hidden) */}
+            <PerformanceOptimizer />
+          </EnhancedErrorBoundary>
+        </div>
+      </Router>
+    </HelmetProvider>
+>>>>>>> e01e43d0c93dff705d25015e1b19001d2377c295
   );
 }

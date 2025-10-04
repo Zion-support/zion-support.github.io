@@ -1,1 +1,1 @@
-expo, r, t { defau, l, t } fr, o, m "../../componen, t, s/PromotionalBann, e, r"; ======= expo, r, t { defau, l, t } fr, o, m "../../componen, t, s/PromotionalBann, e, r";'; '
+expor, t {defaul, t }fro, m "../../components/PromotionalBanner"; ======= expor, t {default }from "../../components/PromotionalBanner";'; '
