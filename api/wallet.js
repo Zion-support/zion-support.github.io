@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-const { withErrorLogging } = require('./withErrorLogging.cjs');
-=======
 import { withErrorLogging } from './withErrorLogging.cjs';
->>>>>>> cursor/fix-errors-and-merge-to-main-e7ef
 
 async function handler(req, res) {
   if (req.method !== 'GET') {
@@ -12,43 +8,13 @@ async function handler(req, res) {
     return;
   }
 
-<<<<<<< HEAD
-  try {
-    const { userId } = req.query || {};
-    
-    if (!userId) {
-      res.statusCode = 400;
-      res.json({ error: 'User ID is required' });
-      return;
-    }
-
-    // Mock wallet data (in production, fetch from database)
-    const walletData = {
-      userId,
-      balance: 1000.00,
-      currency: 'USD',
-      transactions: [
-        {
-          id: 'tx_001',
-          amount: 100.00,
-          type: 'credit',
-          description: 'Service payment',
-          date: new Date().toISOString()
-        }
-      ]
-    };
-
-    res.statusCode = 200;
-    res.json(walletData);
-  } catch (err) {
-    res.statusCode = 500;
-    res.json({ error: err.message || 'Failed to fetch wallet' });
-  }
-}
-
-module.exports = withErrorLogging(handler);
-=======
   const { userId } = req.query || {};
+  
+  if (!userId) {
+    res.statusCode = 400;
+    res.json({ error: 'User ID is required' });
+    return;
+  }
 
   try {
     // Fetch wallet data logic here
@@ -74,4 +40,3 @@ module.exports = withErrorLogging(handler);
 }
 
 export default withErrorLogging(handler);
->>>>>>> cursor/fix-errors-and-merge-to-main-e7ef
