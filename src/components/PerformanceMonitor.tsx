@@ -1,12 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
 
-// Extend Window interface for gtag
-declare global {
-  interface Window {
-    gtag?: (command: string, targetId: string, config?: Record<string, unknown>) => void;
-  }
-}
+// gtag is already declared in src/types/global.d.ts
 
 interface PerformanceMetrics {
   cls: number | null;
