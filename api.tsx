@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Code, Shield, Zap, ArrowRight, ExternalLink } from 'lucide-react';
 
-const API: React.FC = () => {
+export default function API() {
   const endpoints = [
     {
       name: 'Content Management',
@@ -10,7 +10,7 @@ const API: React.FC = () => {
       endpoint: '/api/content',
       description: 'Retrieve all content items',
       parameters: ['limit', 'offset', 'category'],
-      response: 'Array of content objects'
+      response: 'JSON array of content objects'
     },
     {
       name: 'User Authentication',
@@ -24,15 +24,14 @@ const API: React.FC = () => {
       name: 'Analytics Data',
       method: 'GET',
       endpoint: '/api/analytics',
-      description: 'Get analytics data',
-      parameters: ['dateRange', 'metrics'],
+      description: 'Get analytics and metrics',
+      parameters: ['date_range', 'metrics'],
       response: 'Analytics data object'
     }
   ];
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Hero Section */}
       <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
@@ -44,7 +43,6 @@ const API: React.FC = () => {
         </div>
       </div>
 
-      {/* Features Section */}
       <div className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-8">
@@ -73,7 +71,6 @@ const API: React.FC = () => {
         </div>
       </div>
 
-      {/* API Endpoints Section */}
       <div className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">API Endpoints</h2>
@@ -117,7 +114,6 @@ const API: React.FC = () => {
         </div>
       </div>
 
-      {/* Getting Started Section */}
       <div className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
@@ -126,11 +122,11 @@ const API: React.FC = () => {
               Ready to integrate with our APIs? Get your API key and start building amazing applications.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact" className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300">
+              <Link href="/contact" className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300">
                 Get API Key
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
-              <Link to="/docs" className="inline-flex items-center px-8 py-3 border border-gray-300 text-gray-700 font-semibold rounded-lg hover:bg-gray-50 transition-all duration-300">
+              <Link href="/docs" className="inline-flex items-center px-8 py-3 border border-gray-300 text-gray-700 font-semibold rounded-lg hover:bg-gray-50 transition-all duration-300">
                 View Full Documentation
                 <ExternalLink className="ml-2 w-5 h-5" />
               </Link>
@@ -140,6 +136,4 @@ const API: React.FC = () => {
       </div>
     </div>
   );
-};
-
-export default API;
+}

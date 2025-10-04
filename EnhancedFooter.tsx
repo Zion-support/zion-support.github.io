@@ -4,7 +4,7 @@ import { Mail, Phone, MapPin, Linkedin, Twitter, Github, Facebook } from 'lucide
 
 const EnhancedFooter: React.FC = () => {
   const currentYear = new Date().getFullYear();
-  
+
   const services = [
     { name: 'AI Development', href: '/services/ai-development' },
     { name: 'Cloud Services', href: '/services/cloud-services' },
@@ -15,14 +15,14 @@ const EnhancedFooter: React.FC = () => {
     { name: 'IoT Platforms', href: '/services/iot-platforms' },
     { name: 'Cybersecurity', href: '/services/cybersecurity' },
   ];
-  
+
   const products = [
     { name: 'AI Solutions', href: '/products/ai-solutions' },
     { name: 'Cloud Platforms', href: '/products/cloud-platforms' },
     { name: 'Analytics Tools', href: '/products/analytics-tools' },
     { name: 'Security Suite', href: '/products/security-suite' },
   ];
-  
+
   const company = [
     { name: 'About Us', href: '/about' },
     { name: 'Our Team', href: '/about#team' },
@@ -30,7 +30,6 @@ const EnhancedFooter: React.FC = () => {
     { name: 'Blog', href: '/blog' },
     { name: 'Contact', href: '/contact' }
   ];
-
 
   return (
     <footer className="bg-gray-900 text-white">
@@ -61,47 +60,49 @@ const EnhancedFooter: React.FC = () => {
               </a>
             </div>
           </div>
-
           <div>
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
               {services.slice(0, 6).map((service) => (
                 <li key={service.name}>
-                  <Link to={service.href} className="text-gray-300 hover:text-white transition-colors">
-                    {service.name}
+                  <Link href={service.href}>
+                    <span className="text-gray-300 hover:text-white transition-colors">
+                      {service.name}
+                    </span>
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
-
           <div>
             <h3 className="text-lg font-semibold mb-4">Products</h3>
             <ul className="space-y-2">
               {products.map((product) => (
                 <li key={product.name}>
-                  <Link to={product.href} className="text-gray-300 hover:text-white transition-colors">
-                    {product.name}
+                  <Link href={product.href}>
+                    <span className="text-gray-300 hover:text-white transition-colors">
+                      {product.name}
+                    </span>
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
-
           <div>
             <h3 className="text-lg font-semibold mb-4">Company</h3>
             <ul className="space-y-2">
               {company.map((item) => (
                 <li key={item.name}>
-                  <Link to={item.href} className="text-gray-300 hover:text-white transition-colors">
-                    {item.name}
+                  <Link href={item.href}>
+                    <span className="text-gray-300 hover:text-white transition-colors">
+                      {item.name}
+                    </span>
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
         </div>
-
         <div className="border-t border-gray-700 mt-8 pt-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="flex items-center space-x-3">
@@ -127,21 +128,26 @@ const EnhancedFooter: React.FC = () => {
             </div>
           </div>
         </div>
-
         <div className="border-t border-gray-700 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-300 text-sm">
               &copy; {currentYear} Zion Tech Group. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link to="/legal/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">
-                Privacy Policy
+              <Link href="/legal/privacy">
+                <span className="text-gray-400 hover:text-white text-sm transition-colors">
+                  Privacy Policy
+                </span>
               </Link>
-              <Link to="/legal/terms" className="text-gray-400 hover:text-white text-sm transition-colors">
-                Terms of Service
+              <Link href="/legal/terms">
+                <span className="text-gray-400 hover:text-white text-sm transition-colors">
+                  Terms of Service
+                </span>
               </Link>
-              <Link to="/legal/cookies" className="text-gray-400 hover:text-white text-sm transition-colors">
-                Cookie Policy
+              <Link href="/legal/cookies">
+                <span className="text-gray-400 hover:text-white text-sm transition-colors">
+                  Cookie Policy
+                </span>
               </Link>
             </div>
           </div>

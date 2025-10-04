@@ -2,16 +2,38 @@ import React, { useState, useMemo } from 'react';
 import { motion  } from 'framer-motion';
 import { Link  } from 'react-router-dom';
 import { CheckCircle, 
+  Star, 
   Zap, 
+  Shield, 
   TrendingUp, 
   Brain, 
   Server, 
+  Globe, 
   ArrowRight, 
   Mail, 
   Phone, 
   MapPin, 
+  ExternalLink,
+  DollarSign,
+  CreditCard,
+  Wallet,
+  Coins,
+  PiggyBank,
+  Calculator,
+  BarChart3,
+  Target,
+  Award,
+  Users,
+  Clock,
+  Calendar,
+  Check,
+  X,
+  Crown,
   Rocket,
-  Cpu
+  Cpu,
+  Lock,
+  Heart,
+  Sparkles
  } from 'lucide-react';
 import { INNOVATIVE_SERVICES_2025  } from '@/data/innovativeServices2025';
 import { SEO  } from '@/components/SEO';
@@ -469,7 +491,7 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
           {filteredServices.length === 0 && (<div className="text-center py-16">
               <div className="text-slate-400 text-lg mb-4">No services found matching your criteria</div>
               <button
-                onClick={() => {
+                onClick={(: unknown) => {
                   setSelectedCategory('all');
                   setSelectedPricingModel('all');
                 }}
