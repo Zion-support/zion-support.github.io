@@ -73,4 +73,6 @@ const HomePage = React.memo(function HomePage() {
       </section>
     </div>
   );
-}
+});
+
+export default HomePage;
