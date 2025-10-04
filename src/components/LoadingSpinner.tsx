@@ -1,73 +1,58 @@
 import React from 'react';
 
 interface LoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg' | 'xl';
-  color?: 'blue' | 'white' | 'gray' | 'green' | 'purple';
-  text?: string;
-  className?: string;
-  fullScreen?: boolean;
+  size?: 'sm' | 'md' | 'lg';
+  message?: string;
 }
 
-const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
-  size = 'md',
-  color = 'blue',
-  text,
-  className = '',
-  fullScreen = false
+export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
+  size = 'md', 
+  message = 'Loading...' 
 }) => {
   const sizeClasses = {
-    sm: 'h-4 w-4',
-    md: 'h-8 w-8',
-    lg: 'h-12 w-12',
-    xl: 'h-16 w-16'
+    sm: 'w-8 h-8',
+    md: 'w-12 h-12',
+    lg: 'w-16 h-16',
   };
 
-  const colorClasses = {
-    blue: 'border-blue-600',
-    white: 'border-white',
-    gray: 'border-gray-600',
-    green: 'border-green-600',
-    purple: 'border-purple-600'
-  };
-
-  const textColorClasses = {
-    blue: 'text-blue-600',
-    white: 'text-white',
-    gray: 'text-gray-600',
-    green: 'text-green-600',
-    purple: 'text-purple-600'
-  };
-
-  const spinner = (
-    <div className={`flex flex-col items-center justify-center ${className}`}>
-      <div
-        className={`animate-spin rounded-full border-2 border-gray-200 ${sizeClasses[size]} ${colorClasses[color]}`}
-        style={{
-          borderTopColor: 'transparent',
-          borderRightColor: 'transparent'
-        }}
-        role="status"
-        aria-label="Loading"
-      >
-        <span className="sr-only">Loading...</span>
+  return (
+    <div className="flex flex-col items-center justify-center min-h-[200px]">
+      <div className={`${sizeClasses[size]} animate-spin`}>
+        <svg className="w-full h-full" viewBox="0 0 24 24">
+          <circle
+            className="opacity-25"
+            cx="12"
+            cy="12"
+            r="10"
+            stroke="currentColor"
+            strokeWidth="4"
+            fill="none"
+          />
+          <path
+            className="opacity-75"
+            fill="currentColor"
+            d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+          />
+        </svg>
       </div>
-      {text && (
-        <p className={`mt-2 text-sm ${textColorClasses[color]}`}>
-          {text}
-        </p>
+      {message && (
+        <p className="mt-4 text-gray-600 text-sm font-medium">{message}</p>
       )}
     </div>
   );
-
-  if (fullScreen) {
-    return (
-      <div className="fixed inset-0 bg-white bg-opacity-90 flex items-center justify-center z-50">
-        {spinner}
-      </div>
-    );
-  }
-
-  return spinner;
 };
+
+export const PageLoader: React.FC = () => {
+  return (
+    <div className="flex items-center justify-center min-h-screen bg-slate-950">
+      <div className="text-center">
+        <LoadingSpinner size="lg" />
+        <p className="mt-4 text-gray-400">Loading...</p>
+      </div>
+    </div>
+  );
+};
+
+PageLoader.displayName = 'PageLoader';
 
 export default LoadingSpinner;

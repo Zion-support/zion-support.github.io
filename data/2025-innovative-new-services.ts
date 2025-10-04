@@ -9,7 +9,7 @@ import { ServiceVariant  } from "../types/service-variants";
 export interface InnovativeNewService2025 
 export interface InnovativeNewService2025 {;
 
-export interface InnovativeNewService2025 
+export interface InnovativeNewService2025 {
   id: string;
   name: string;
   tagline: string;
@@ -36,7 +36,7 @@ export interface InnovativeNewService2025
   market_size: string;
   growth_rate: string;
   variant: string;
-  contact_info: 
+  contact_info: any;
     mobile: string;
     email: string;
     address: string;
@@ -53,14 +53,14 @@ export interface InnovativeNewService2025
     market_size: '$32.1B financial technology market',
     growth_rate: '22% annual growth',
     variant: 'quantum - financial - enterprise',
-    contact_info: 
+    contact_info: any;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com',
     },
     real_implementation: true,
-    implementation_details:;
+    implementation_details: any;
       'Quantum - powered financial trading platform with advanced algorithms and real - time market analysis.',
     launch_date: '2025 - 01 - 08',
     customers: 12,
@@ -81,9 +81,9 @@ export interface InnovativeNewService2025
 
     rating: 4 && 4.9,
 
-    reviews: 6
+    reviews: 6;
 
-export interface InnovativeNewService 
+export interface InnovativeNewService {
   id: string, name: string,
   tagline: string, price: string,
   period: string, description: string,
@@ -97,31 +97,31 @@ export interface InnovativeNewService
   useCases: string[], roi: string,
   competitors: string[], marketSize: string,
   growthRate: string, variant: string,
-  contactInfo: 
+  contactInfo: any;
     mobile: string, email: string,
     address: string,
-    website: string
+    website: string;
   
     },
     realImplementation: boolean, implementationDetails: string,
   launchDate: string, customers: number,
   rating: number,
-  reviews: number
+  reviews: number;
 
 }
 
-export const innovativeNewServices2025: InnovativeNewService[] = [
+export const innovativeNewServices2025: InnovativeNewService[] = [;
   // AI-Powered Legal Document Analysis
   
     id: 'ai-legal-document-analyzer', name: 'AI Legal Document Analyzer',
     tagline: 'Transform legal document review with AI-powered analysis and insights', price: '$199',
     period: '/month',
     description: 'Advanced AI platform that automatically analyzes legal documents, contracts, and agreements to identify risks, compliance issues, and key terms.',
-    features: [
+    features: [;
       'AI-powered contract analysis and risk assessmentAutomated compliance checkingLegal document summarizationRisk scoring and alertsTemplate generation and customizationMulti-language supportIntegration with legal management systemsAudit trail and version control';
       'Real-time collaboration toolsMobile-responsive interface'
     ];
-    popular: true, icon: '⚖️',
+    popular: true, icon: '',
     color: 'from-purple-600 to-indigo-600', textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/ai-legal-document-analyzer',
     marketPosition: 'Competes with DocuSign ($25/month), ContractPodAi ($500/month). Our advantage: AI analysis reduces review time by 80% and catches 95% of potential issues.',
@@ -135,25 +135,25 @@ export const innovativeNewServices2025: InnovativeNewService[] = [
     competitors: ['DocuSign, ContractPodAi, LexisNexis, Westlaw'];
     marketSize: '$15.2B legal tech market', growthRate: '18% annual growth',
     variant: 'ai-legal-enterprise',
-    contactInfo: 
+    contactInfo: any;
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com';
     
     },
     realImplementation: true,
     implementationDetails: 'Cloud-native SaaS platform with AI algorithms for legal document analysis, natural language processing, and risk assessment.',
     launchDate: '2025-01-15', customers: 28,
     rating: 4.9,
-    reviews: 15
+    reviews: 15;
   };
   // Quantum-Secure Communication Platform
   
     id: 'quantum-secure-communication', name: 'Quantum-Secure Communication Platform',
     tagline: 'Unbreakable encryption for the quantum computing era', price: '$499',
     period: '/month', description: 'Next-generation communication platform using quantum key distribution and post-quantum cryptography to ensure unbreakable security.',
-    features: [
+    features: [;
       'Quantum key distribution (QKD)Post-quantum cryptography algorithmsEnd-to-end encryptionReal-time threat detectionMulti-channel communication supportCompliance with NIST standardsAPI for third-party integrationsAdvanced audit logging';
       'Zero-knowledge architectureGlobal quantum network access'
     ];
@@ -170,16 +170,16 @@ export const innovativeNewServices2025: InnovativeNewService[] = [
     competitors: ['Signal, Wickr, Telegram, WhatsApp Business'];
     marketSize: '$8.7B quantum security market', growthRate: '45% annual growth',
     variant: 'quantum-security-enterprise',
-    contactInfo: 
+    contactInfo: any;
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com';
     
     },
     realImplementation: true, implementationDetails: 'Quantum-secure communication platform with hardware quantum key distribution and software post-quantum cryptography.',
     launchDate: '2025-01-10', customers: 15,
     rating: 4.8,
-    reviews: 8
+    reviews: 8;
   };
   // AI-Powered Healthcare Diagnostics
   
@@ -187,7 +187,7 @@ export const innovativeNewServices2025: InnovativeNewService[] = [
     tagline: 'Revolutionary AI-powered medical imaging and diagnostic analysis', price: '$299',
     period: '/month',
     description: 'Advanced AI platform that analyzes medical images, lab results, and patient data to provide accurate diagnostic insights and treatment recommendations.',
-    features: [
+    features: [;
       'AI-powered medical image analysisDiagnostic accuracy validationPatient data integrationTreatment recommendation engineClinical decision supportHIPAA complianceMulti-modality imaging supportReal-time analysis';
       'Integration with EHR systemsMobile diagnostic tools'
     ];
@@ -204,16 +204,16 @@ export const innovativeNewServices2025: InnovativeNewService[] = [
     competitors: ['IBM Watson Health, Google Health AI, Microsoft Healthcare, NVIDIA Clara'];
     marketSize: '$45.8B AI healthcare market', growthRate: '25% annual growth',
     variant: 'ai-healthcare-enterprise',
-    contactInfo: 
+    contactInfo: any;
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com';
     
     },
     realImplementation: true, implementationDetails: 'AI-powered healthcare diagnostics platform with FDA-cleared algorithms and HIPAA-compliant infrastructure.',
     launchDate: '2025-01-05', customers: 22,
     rating: 4.9,
-    reviews: 12
+    reviews: 12;
   };
   // Autonomous Supply Chain Optimization
   
@@ -221,7 +221,7 @@ export const innovativeNewServices2025: InnovativeNewService[] = [
     tagline: 'Self-optimizing supply chains with AI and predictive analytics', price: '$399',
     period: '/month',
     description: 'Intelligent supply chain platform that automatically optimizes inventory, routes, and logistics using AI and machine learning.',
-    features: [
+    features: [;
       'AI-powered demand forecastingAutonomous inventory optimizationRoute optimization algorithmsReal-time supply chain monitoringPredictive maintenance alertsSupplier performance analyticsCost optimization recommendationsSustainability tracking';
       'Multi-warehouse managementIntegration with ERP systems'
     ];
@@ -238,16 +238,16 @@ export const innovativeNewServices2025: InnovativeNewService[] = [
     competitors: ['SAP Supply Chain, Oracle SCM, Manhattan Associates, JDA Software'];
     marketSize: '$19.2B supply chain software market', growthRate: '12% annual growth',
     variant: 'supply-chain-enterprise',
-    contactInfo: 
+    contactInfo: any;
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com';
     
     },
     realImplementation: true, implementationDetails: 'AI-powered supply chain optimization platform with autonomous decision-making and predictive analytics.',
     launchDate: '2025-01-12', customers: 35,
     rating: 4.7,
-    reviews: 18
+    reviews: 18;
   };
   // Quantum Financial Trading Platform
   
@@ -255,7 +255,7 @@ export const innovativeNewServices2025: InnovativeNewService[] = [
     tagline: 'Quantum computing-powered algorithmic trading and risk management', price: '$999',
     period: '/month',
     description: 'Advanced financial trading platform leveraging quantum computing for ultra-fast market analysis, risk assessment, and algorithmic trading.',
-    features: [
+    features: [;
       'Quantum-powered market analysisUltra-fast algorithmic tradingReal-time risk assessmentPortfolio optimization algorithmsMarket prediction modelsCompliance monitoringMulti-exchange integrationAdvanced analytics dashboard';
       'API for custom strategies24/7 market monitoring'
     ];
@@ -272,10 +272,10 @@ export const innovativeNewServices2025: InnovativeNewService[] = [
     competitors: ['Bloomberg Terminal, Thomson Reuters, FactSet, Refinitiv'];
     marketSize: '$32.1B financial technology market', growthRate: '22% annual growth',
     variant: 'quantum-financial-enterprise',
-    contactInfo: 
+    contactInfo: any;
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com';
     
     },
     realImplementation: true, implementationDetails: 'Quantum-powered financial trading platform with advanced algorithms and real-time market analysis.',
@@ -340,7 +340,7 @@ export const innovativeNewServices2025: InnovativeNewService[] = [;
       'Real-time collaboration toolsMobile-responsive interface';
     ],;
     popular: true,;
-    icon: '⚖️',;
+    icon: '',;
     color: 'from-purple-600 to-indigo-600',;
     textColor: 'text-purple-400',;
     link: 'https://ziontechgroup.com/ai-legal-document-analyzer',;
@@ -384,7 +384,7 @@ export const innovativeNewServices2025: InnovativeNewService[] = [;
       'Zero-knowledge architectureGlobal quantum network access';
     ],;
     popular: true,;
-    icon: '🔐',;
+    icon: '',;
     color: 'from-blue-600 to-cyan-600',;
     textColor: 'text-blue-400',;
     link: 'https://ziontechgroup.com/quantum-secure-communication',;
@@ -428,7 +428,7 @@ export const innovativeNewServices2025: InnovativeNewService[] = [;
       'Integration with EHR systemsMobile diagnostic tools';
     ],;
     popular: true,;
-    icon: '🏥',;
+    icon: '',;
     color: 'from-green-600 to-emerald-600',;
     textColor: 'text-green-400',;
     link: 'https://ziontechgroup.com/ai-healthcare-diagnostics',;
@@ -472,7 +472,7 @@ export const innovativeNewServices2025: InnovativeNewService[] = [;
       'Multi-warehouse managementIntegration with ERP systems';
     ],;
     popular: true,;
-    icon: '🚚',;
+    icon: '',;
     color: 'from-orange-600 to-red-600',;
     textColor: 'text-orange-400',;
     link: 'https://ziontechgroup.com/autonomous-supply-chain-optimization',;
@@ -516,7 +516,7 @@ export const innovativeNewServices2025: InnovativeNewService[] = [;
       'API for custom strategies24/7 market monitoring';
     ],;
     popular: true,;
-    icon: '📈',;
+    icon: '',;
     color: 'from-yellow-600 to-amber-600',;
     textColor: 'text-yellow-400',;
     link: 'https://ziontechgroup.com/quantum-financial-trading',;
@@ -555,8 +555,8 @@ export const innovativeNewServices2025: InnovativeNewService[] = [;
 
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-      website: 'https://ziontechgroup.com'
+      address: '364 E Main St STE 1008 Middletown DE 19709';
+      website: 'https://ziontechgroup.com';
     }
     reviews: 6;
 
@@ -621,7 +621,7 @@ export const innovativeNewServices2025: InnovativeNewService[] = [;
       'Real-time collaboration toolsMobile-responsive interface';
     ],;
     popular: true,;
-    icon: '⚖️',;
+    icon: '',;
     color: 'from-purple-600 to-indigo-600',;
     textColor: 'text-purple-400',;
     link: 'https://ziontechgroup.com/ai-legal-document-analyzer',;
@@ -665,7 +665,7 @@ export const innovativeNewServices2025: InnovativeNewService[] = [;
       'Zero-knowledge architectureGlobal quantum network access';
     ],;
     popular: true,;
-    icon: '🔐',;
+    icon: '',;
     color: 'from-blue-600 to-cyan-600',;
     textColor: 'text-blue-400',;
     link: 'https://ziontechgroup.com/quantum-secure-communication',;
@@ -709,7 +709,7 @@ export const innovativeNewServices2025: InnovativeNewService[] = [;
       'Integration with EHR systemsMobile diagnostic tools';
     ],;
     popular: true,;
-    icon: '🏥',;
+    icon: '',;
     color: 'from-green-600 to-emerald-600',;
     textColor: 'text-green-400',;
     link: 'https://ziontechgroup.com/ai-healthcare-diagnostics',;
@@ -753,7 +753,7 @@ export const innovativeNewServices2025: InnovativeNewService[] = [;
       'Multi-warehouse managementIntegration with ERP systems';
     ],;
     popular: true,;
-    icon: '🚚',;
+    icon: '',;
     color: 'from-orange-600 to-red-600',;
     textColor: 'text-orange-400',;
     link: 'https://ziontechgroup.com/autonomous-supply-chain-optimization',;
@@ -797,7 +797,7 @@ export const innovativeNewServices2025: InnovativeNewService[] = [;
       'API for custom strategies24/7 market monitoring';
     ],;
     popular: true,;
-    icon: '📈',;
+    icon: '',;
     color: 'from-yellow-600 to-amber-600',;
     textColor: 'text-yellow-400',;
     link: 'https://ziontechgroup.com/quantum-financial-trading',;

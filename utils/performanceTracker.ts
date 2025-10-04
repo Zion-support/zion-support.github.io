@@ -22,57 +22,77 @@ export interface ResourceTiming {
 /**
  * Measure Core Web Vitals
  */
-export class PerformanceTracker   private metrics: Partial<PerformanceMetrics> = {};
+export class PerformanceTracker {
+  private metrics: Partial<PerformanceMetrics> = {};
   private observers: PerformanceObserver[] = [];
 
-  constructor()     this.initializeObservers();
+  constructor() {
+    this.initializeObservers();
   }
 
-  private initializeObservers()     // Observe Largest Contentful Paint
-    if ('PerformanceObserver' in window)       try         const lcpObserver = new PerformanceObserver((list) =>           const entries = list.getEntries();
+  private initializeObservers() {
+    // Observe Largest Contentful Paint
+    if ('PerformanceObserver' in window) {
+      try {
+        const lcpObserver = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
           const lastEntry = entries[entries.length - 1] as any;
           this.metrics.lcp = lastEntry.renderTime || lastEntry.loadTime;
         });
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
         this.observers.push(lcpObserver);
-      } catch (e)         console.warn('LCP observation not supported');
+      } catch (e) {
+        console.warn('LCP observation not supported');
       }
 
       // Observe First Input Delay
-      try         const fidObserver = new PerformanceObserver((list) =>           const entries = list.getEntries();
-          entries.forEach((entry: any) =>             this.metrics.fid = entry.processingStart - entry.startTime;
+      try {
+        const fidObserver = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          entries.forEach((entry: any) => {
+            this.metrics.fid = entry.processingStart - entry.startTime;
           });
         });
         fidObserver.observe({ entryTypes: ['first-input'] });
         this.observers.push(fidObserver);
-      } catch (e)         console.warn('FID observation not supported');
+      } catch (e) {
+        console.warn('FID observation not supported');
       }
 
       // Observe Cumulative Layout Shift
-      try         let clsValue = 0;
-        const clsObserver = new PerformanceObserver((list) =>           const entries = list.getEntries();
-          entries.forEach((entry: any) =>             if (!entry.hadRecentInput)               clsValue += entry.value;
+      try {
+        let clsValue = 0;
+        const clsObserver = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          entries.forEach((entry: any) => {
+            if (!entry.hadRecentInput) {
+              clsValue += entry.value;
               this.metrics.cls = clsValue;
             }
           });
         });
         clsObserver.observe({ entryTypes: ['layout-shift'] });
         this.observers.push(clsObserver);
-      } catch (e)         console.warn('CLS observation not supported');
+      } catch (e) {
+        console.warn('CLS observation not supported');
       }
     }
 
     // Measure First Contentful Paint and TTFB
-    if (window.performance && window.performance.timing)       window.addEventListener('load', () =>         const perfData = window.performance.timing;
+    if (window.performance && window.performance.timing) {
+      window.addEventListener('load', () => {
+        const perfData = window.performance.timing;
         const navigationStart = perfData.navigationStart;
 
         // Time to First Byte
         this.metrics.ttfb = perfData.responseStart - navigationStart;
 
         // Get FCP from Paint Timing API
-        if (window.performance.getEntriesByType)           const paintEntries = window.performance.getEntriesByType('paint');
+        if (window.performance.getEntriesByType) {
+          const paintEntries = window.performance.getEntriesByType('paint');
           const fcpEntry = paintEntries.find((entry) => entry.name === 'first-contentful-paint');
-          if (fcpEntry)             this.metrics.fcp = fcpEntry.startTime;
+          if (fcpEntry) {
+            this.metrics.fcp = fcpEntry.startTime;
           }
         }
       });
@@ -82,17 +102,21 @@ export class PerformanceTracker   private metrics: Partial<PerformanceMetrics> =
   /**
    * Get current performance metrics
    */
-  getMetrics(): Partial<PerformanceMetrics>     return { ...this.metrics };
+  getMetrics(): Partial<PerformanceMetrics> {
+    return { ...this.metrics };
   }
 
   /**
    * Get resource timing information
    */
-  getResourceTimings(): ResourceTiming[]     if (!window.performance || !window.performance.getEntriesByType)       return [];
+  getResourceTimings(): ResourceTiming[] {
+    if (!window.performance || !window.performance.getEntriesByType) {
+      return [];
     }
 
     const resources = window.performance.getEntriesByType('resource') as PerformanceResourceTiming[];
-    return resources.map((resource) => (      name: resource.name,
+    return resources.map((resource) => ({
+      name: resource.name,
       duration: resource.duration,
       size: resource.transferSize || 0,
       type: resource.initiatorType,
@@ -102,7 +126,9 @@ export class PerformanceTracker   private metrics: Partial<PerformanceMetrics> =
   /**
    * Get page load time
    */
-  getPageLoadTime(): number     if (!window.performance || !window.performance.timing)       return 0;
+  getPageLoadTime(): number {
+    if (!window.performance || !window.performance.timing) {
+      return 0;
     }
 
     const perfData = window.performance.timing;
@@ -112,7 +138,9 @@ export class PerformanceTracker   private metrics: Partial<PerformanceMetrics> =
   /**
    * Get DOM content loaded time
    */
-  getDOMContentLoadedTime(): number     if (!window.performance || !window.performance.timing)       return 0;
+  getDOMContentLoadedTime(): number {
+    if (!window.performance || !window.performance.timing) {
+      return 0;
     }
 
     const perfData = window.performance.timing;
@@ -122,7 +150,8 @@ export class PerformanceTracker   private metrics: Partial<PerformanceMetrics> =
   /**
    * Measure component render time
    */
-  measureComponentRender(componentName: string, callback: () => void)     const startTime = performance.now();
+  measureComponentRender(componentName: string, callback: () => void) {
+    const startTime = performance.now();
     callback();
     const endTime = performance.now();
     const duration = endTime - startTime;
@@ -134,7 +163,10 @@ export class PerformanceTracker   private metrics: Partial<PerformanceMetrics> =
   /**
    * Monitor memory usage (if available)
    */
-  getMemoryUsage(): any     if ('memory' in performance)       return         usedJSHeapSize: (performance as any).memory.usedJSHeapSize / 1048576, // Convert to MB
+  getMemoryUsage(): any {
+    if ('memory' in performance) {
+      return {
+        usedJSHeapSize: (performance as any).memory.usedJSHeapSize / 1048576, // Convert to MB
         totalJSHeapSize: (performance as any).memory.totalJSHeapSize / 1048576,
         jsHeapSizeLimit: (performance as any).memory.jsHeapSizeLimit / 1048576,
       };
@@ -145,15 +177,22 @@ export class PerformanceTracker   private metrics: Partial<PerformanceMetrics> =
   /**
    * Track custom user timing
    */
-  mark(name: string)     if (window.performance && window.performance.mark)       window.performance.mark(name);
+  mark(name: string) {
+    if (window.performance && window.performance.mark) {
+      window.performance.mark(name);
     }
   }
 
-  measure(name: string, startMark: string, endMark: string)     if (window.performance && window.performance.measure)       try         window.performance.measure(name, startMark, endMark);
+  measure(name: string, startMark: string, endMark: string) {
+    if (window.performance && window.performance.measure) {
+      try {
+        window.performance.measure(name, startMark, endMark);
         const measures = window.performance.getEntriesByName(name, 'measure');
-        if (measures.length > 0)           return measures[measures.length - 1].duration;
+        if (measures.length > 0) {
+          return measures[measures.length - 1].duration;
         }
-      } catch (e)         console.warn('Performance measurement failed', e);
+      } catch (e) {
+        console.warn('Performance measurement failed', e);
       }
     }
     return 0;
@@ -162,7 +201,8 @@ export class PerformanceTracker   private metrics: Partial<PerformanceMetrics> =
   /**
    * Generate performance report
    */
-  generateReport(): string     const metrics = this.getMetrics();
+  generateReport(): string {
+    const metrics = this.getMetrics();
     const resources = this.getResourceTimings();
     const memory = this.getMemoryUsage();
 
@@ -183,7 +223,8 @@ export class PerformanceTracker   private metrics: Partial<PerformanceMetrics> =
     const totalSize = resources.reduce((sum, r) => sum + r.size, 0);
     report += `Total Resource Size: ${(totalSize / 1024).toFixed(2)} KB\n\n`;
 
-    if (memory)       report += 'Memory Usage:\n';
+    if (memory) {
+      report += 'Memory Usage:\n';
       report += `- Used: ${memory.usedJSHeapSize.toFixed(2)} MB\n`;
       report += `- Total: ${memory.totalJSHeapSize.toFixed(2)} MB\n`;
       report += `- Limit: ${memory.jsHeapSizeLimit.toFixed(2)} MB\n`;
@@ -195,18 +236,22 @@ export class PerformanceTracker   private metrics: Partial<PerformanceMetrics> =
   /**
    * Check if metrics meet performance budgets
    */
-  checkPerformanceBudget(budget: Partial<PerformanceMetrics>): boolean     const metrics = this.getMetrics();
+  checkPerformanceBudget(budget: Partial<PerformanceMetrics>): boolean {
+    const metrics = this.getMetrics();
     let passes = true;
 
-    if (budget.lcp && metrics.lcp && metrics.lcp > budget.lcp)       console.warn(`LCP budget exceeded: ${metrics.lcp}ms > ${budget.lcp}ms`);
+    if (budget.lcp && metrics.lcp && metrics.lcp > budget.lcp) {
+      console.warn(`LCP budget exceeded: ${metrics.lcp}ms > ${budget.lcp}ms`);
       passes = false;
     }
 
-    if (budget.fid && metrics.fid && metrics.fid > budget.fid)       console.warn(`FID budget exceeded: ${metrics.fid}ms > ${budget.fid}ms`);
+    if (budget.fid && metrics.fid && metrics.fid > budget.fid) {
+      console.warn(`FID budget exceeded: ${metrics.fid}ms > ${budget.fid}ms`);
       passes = false;
     }
 
-    if (budget.cls && metrics.cls && metrics.cls > budget.cls)       console.warn(`CLS budget exceeded: ${metrics.cls} > ${budget.cls}`);
+    if (budget.cls && metrics.cls && metrics.cls > budget.cls) {
+      console.warn(`CLS budget exceeded: ${metrics.cls} > ${budget.cls}`);
       passes = false;
     }
 
@@ -216,26 +261,33 @@ export class PerformanceTracker   private metrics: Partial<PerformanceMetrics> =
   /**
    * Send metrics to analytics endpoint
    */
-  async sendToAnalytics(endpoint: string)     const metrics = this.getMetrics();
-    const data =       metrics,
+  async sendToAnalytics(endpoint: string) {
+    const metrics = this.getMetrics();
+    const data = {
+      metrics,
       timestamp: new Date().toISOString(),
       url: window.location.href,
       userAgent: navigator.userAgent,
     };
 
-    try       await fetch(endpoint,         method: 'POST',
-        headers:           'Content-Type': 'application/json',
+    try {
+      await fetch(endpoint, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
         },
         body: JSON.stringify(data),
       });
-    } catch (error)       console.error('Failed to send performance metrics', error);
+    } catch (error) {
+      console.error('Failed to send performance metrics', error);
     }
   }
 
   /**
    * Cleanup observers
    */
-  cleanup()     this.observers.forEach((observer) => observer.disconnect());
+  cleanup() {
+    this.observers.forEach((observer) => observer.disconnect());
     this.observers = [];
   }
 }
@@ -245,7 +297,9 @@ export class PerformanceTracker   private metrics: Partial<PerformanceMetrics> =
  */
 let trackerInstance: PerformanceTracker | null = null;
 
-export function getPerformanceTracker(): PerformanceTracker   if (!trackerInstance)     trackerInstance = new PerformanceTracker();
+export function getPerformanceTracker(): PerformanceTracker {
+  if (!trackerInstance) {
+    trackerInstance = new PerformanceTracker();
   }
   return trackerInstance;
 }
@@ -253,24 +307,29 @@ export function getPerformanceTracker(): PerformanceTracker   if (!trackerInstan
 /**
  * Performance budget recommendations
  */
-export const PERFORMANCE_BUDGETS =   EXCELLENT:     lcp: 2500, // 2.5s
+export const PERFORMANCE_BUDGETS = {
+  EXCELLENT: {
+    lcp: 2500, // 2.5s
     fid: 100, // 100ms
     cls: 0.1,
     ttfb: 600, // 600ms
   },
-  GOOD:     lcp: 4000, // 4s
+  GOOD: {
+    lcp: 4000, // 4s
     fid: 300, // 300ms
     cls: 0.25,
     ttfb: 1000, // 1s
   },
-  NEEDS_IMPROVEMENT:     lcp: 6000, // 6s
+  NEEDS_IMPROVEMENT: {
+    lcp: 6000, // 6s
     fid: 500, // 500ms
     cls: 0.5,
     ttfb: 1500, // 1.5s
   },
 };
 
-export default   PerformanceTracker,
+export default {
+  PerformanceTracker,
   getPerformanceTracker,
   PERFORMANCE_BUDGETS,
 };
