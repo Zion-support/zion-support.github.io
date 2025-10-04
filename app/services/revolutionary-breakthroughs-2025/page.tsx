@@ -359,4 +359,3 @@ const RevolutionaryBreakthroughs2025 = React.memo(function RevolutionaryBreakthr
     </div>
   );
 }</div></div>)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-edcb
