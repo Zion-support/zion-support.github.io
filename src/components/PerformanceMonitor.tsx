@@ -1,9 +1,16 @@
 import React, { useEffect, useState } from 'react';
-import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
+import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
+
+// Extend Window interface for gtag
+declare global {
+  interface Window {
+    gtag?: (command: string, targetId: string, config?: Record<string, unknown>) => void;
+  }
+}
 
 interface PerformanceMetrics {
   cls: number | null;
-  fid: number | null;
+  inp: number | null;
   fcp: number | null;
   lcp: number | null;
   ttfb: number | null;
@@ -20,7 +27,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 }) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     cls: null,
-    fid: null,
+    inp: null,
     fcp: null,
     lcp: null,
     ttfb: null
@@ -43,18 +50,18 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     };
 
     // Measure Core Web Vitals
-    getCLS(sendToAnalytics);
-    getFID(sendToAnalytics);
-    getFCP(sendToAnalytics);
-    getLCP(sendToAnalytics);
-    getTTFB(sendToAnalytics);
+    onCLS(sendToAnalytics);
+    onINP(sendToAnalytics);
+    onFCP(sendToAnalytics);
+    onLCP(sendToAnalytics);
+    onTTFB(sendToAnalytics);
 
     // Store metrics in state for debugging
-    getCLS((metric) => setMetrics(prev => ({ ...prev, cls: metric.value })));
-    getFID((metric) => setMetrics(prev => ({ ...prev, fid: metric.value })));
-    getFCP((metric) => setMetrics(prev => ({ ...prev, fcp: metric.value })));
-    getLCP((metric) => setMetrics(prev => ({ ...prev, lcp: metric.value })));
-    getTTFB((metric) => setMetrics(prev => ({ ...prev, ttfb: metric.value })));
+    onCLS((metric) => setMetrics(prev => ({ ...prev, cls: metric.value })));
+    onINP((metric) => setMetrics(prev => ({ ...prev, inp: metric.value })));
+    onFCP((metric) => setMetrics(prev => ({ ...prev, fcp: metric.value })));
+    onLCP((metric) => setMetrics(prev => ({ ...prev, lcp: metric.value })));
+    onTTFB((metric) => setMetrics(prev => ({ ...prev, ttfb: metric.value })));
 
     // Monitor resource loading performance
     if (typeof window !== 'undefined' && 'performance' in window) {
@@ -87,7 +94,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     return (
       <div className="fixed bottom-4 right-4 bg-black bg-opacity-75 text-white p-2 rounded text-xs font-mono z-50">
         <div>CLS: {metrics.cls?.toFixed(3) || 'N/A'}</div>
-        <div>FID: {metrics.fid?.toFixed(1) || 'N/A'}ms</div>
+        <div>INP: {metrics.inp?.toFixed(1) || 'N/A'}ms</div>
         <div>FCP: {metrics.fcp?.toFixed(1) || 'N/A'}ms</div>
         <div>LCP: {metrics.lcp?.toFixed(1) || 'N/A'}ms</div>
         <div>TTFB: {metrics.ttfb?.toFixed(1) || 'N/A'}ms</div>
