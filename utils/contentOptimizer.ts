@@ -181,7 +181,8 @@ export function generateSEORecommendations(
   });
   
   // Content recommendations
-  if (metrics.wordCount < 300)     recommendations.content.push('Add more content (aim for at least 300 words)');
+  if (metrics.wordCount < 300) {
+    recommendations.content.push('Add more content (aim for at least 300 words)');
   }
   
   if (metrics.seoScore < 70) {
@@ -268,7 +269,8 @@ export function generateStructuredData(data: {
 /**
  * Extract keywords from content
  */
-export function extractKeywords(text: string, count: number = 10): string[]   // Remove common stop words
+export function extractKeywords(text: string, count: number = 10): string[] {
+  // Remove common stop words
   const stopWords = new Set([
     'the', 'be', 'to', 'of', 'and', 'a', 'in', 'that', 'have', 'i',
     'it', 'for', 'not', 'on', 'with', 'he', 'as', 'you', 'do', 'at',

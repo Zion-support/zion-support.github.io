@@ -9,6 +9,8 @@
  * - Render performance tracking
  */
 
+import * as React from 'react';
+
 export interface PerformanceMetrics {
   componentName: string;
   renderTime: number;
@@ -315,9 +317,11 @@ export function usePerformanceMonitor(componentName: string) {
 export function withPerformanceMonitoring<P extends object>(
   Component: React.ComponentType<P>,
   componentName?: string
-): React.ComponentType<P>   const name = componentName || Component.displayName || Component.name || 'Unknown';
+): React.ComponentType<P> {
+  const name = componentName || Component.displayName || Component.name || 'Unknown';
   
-  return (props: P) =>     usePerformanceMonitor(name);
+  return (props: P) => {
+    usePerformanceMonitor(name);
     return React.createElement(Component, props);
   };
 }
